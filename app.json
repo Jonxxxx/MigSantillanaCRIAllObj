@@ -1,0 +1,31 @@
+{
+  "id": "7a6540b1-c7fd-4cf5-8b19-06888463cb08",
+  "name": "Migracion Santillana Costa Rica All Objects",
+  "publisher": "Excelia S.L.",
+  "version": "1.0.0.0",
+  "brief": "Migracion completa Santillana Costa Rica Business Central",
+  "description": "Migracion completa Santillana Costa Rica Dynamics Business Central",
+  "privacyStatement": "https://Excelia.com/",
+  "EULA": "https://Excelia.com/",
+  "help": "https://Excelia.com/",
+  "url": "https://Excelia.com/",
+  "logo": "jonxsoft_logo.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "27.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 70200028
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://Excelia.com/",
+  "runtime": "15.0",
+  "features": ["TranslationFile"],
+  "resourceExposurePolicy": {
+    "allowDebugging": false,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  }
+}

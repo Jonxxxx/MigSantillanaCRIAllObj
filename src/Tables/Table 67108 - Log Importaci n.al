@@ -1,0 +1,28 @@
+table 67108 "Log Importaci n"
+{
+
+    fields
+    {
+        field(1;Usuario;Code[50])
+        {
+        }
+        field(4;Secuencia;Integer)
+        {
+        }
+        field(5;Descripcion;Text[250])
+        {
+        }
+    }
+
+    keys
+    {
+        key(Key1;Usuario,Secuencia)
+        {
+        }
+    }
+
+    fieldgroups
+    {
+    }
+}
+
