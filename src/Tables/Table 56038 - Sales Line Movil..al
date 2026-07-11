@@ -300,70 +300,70 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Purchase Order No.';
             Editable = false;
-            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Header"."No." WHERE ("Document Type"=CONST(Order));
+            TableRelation = IF ("Drop Shipment" = CONST(true)) "Purchase Header"."No." WHERE("Document Type" = CONST(Order));
         }
         field(72; "Purch. Order Line No."; Integer)
         {
             Caption = 'Purch. Order Line No.';
             Editable = false;
-            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                            "Document No."=FIELD("Purchase Order No."));
+            TableRelation = IF ("Drop Shipment" = CONST(true)) "Purchase Line"."Line No." WHERE("Document Type" = CONST(Order),
+                                                                                            "Document No." = FIELD("Purchase Order No."));
         }
-        field(73;"Drop Shipment";Boolean)
+        field(73; "Drop Shipment"; Boolean)
         {
             Caption = 'Drop Shipment';
             Editable = true;
         }
-        field(74;"Gen. Bus. Posting Group";Code[10])
+        field(74; "Gen. Bus. Posting Group"; Code[10])
         {
             Caption = 'Gen. Bus. Posting Group';
             TableRelation = "Gen. Business Posting Group";
         }
-        field(75;"Gen. Prod. Posting Group";Code[10])
+        field(75; "Gen. Prod. Posting Group"; Code[10])
         {
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
         }
-        field(77;"VAT Calculation Type";Option)
+        field(77; "VAT Calculation Type"; Option)
         {
             Caption = 'Tax Calculation Type';
             Editable = false;
             OptionCaption = 'Normal VAT,Reverse Charge VAT,Full VAT,Sales Tax';
             OptionMembers = "Normal VAT","Reverse Charge VAT","Full VAT","Sales Tax";
         }
-        field(78;"Transaction Type";Code[10])
+        field(78; "Transaction Type"; Code[10])
         {
             Caption = 'Transaction Type';
             TableRelation = "Transaction Type";
         }
-        field(79;"Transport Method";Code[10])
+        field(79; "Transport Method"; Code[10])
         {
             Caption = 'Transport Method';
             TableRelation = "Transport Method";
         }
-        field(80;"Attached to Line No.";Integer)
+        field(80; "Attached to Line No."; Integer)
         {
             Caption = 'Attached to Line No.';
             Editable = false;
-            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=FIELD("Document Type"),
-                                                           "Document No."=FIELD("Document No."));
+            TableRelation = "Sales Line"."Line No." WHERE("Document Type" = FIELD("Document Type"),
+                                                           "Document No." = FIELD("Document No."));
         }
-        field(81;"Exit Point";Code[10])
+        field(81; "Exit Point"; Code[10])
         {
             Caption = 'Exit Point';
             TableRelation = "Entry/Exit Point";
         }
-        field(82;"Area";Code[10])
+        field(82; "Area"; Code[10])
         {
             Caption = 'Area';
             TableRelation = Area;
         }
-        field(83;"Transaction Specification";Code[10])
+        field(83; "Transaction Specification"; Code[10])
         {
             Caption = 'Transaction Specification';
             TableRelation = "Transaction Specification";
         }
-        field(85;"Tax Area Code";Code[20])
+        field(85; "Tax Area Code"; Code[20])
         {
             Caption = 'Tax Area Code';
             TableRelation = "Tax Area";
@@ -375,127 +375,127 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(86;"Tax Liable";Boolean)
+        field(86; "Tax Liable"; Boolean)
         {
             Caption = 'Tax Liable';
             Editable = false;
         }
-        field(87;"Tax Group Code";Code[10])
+        field(87; "Tax Group Code"; Code[10])
         {
             Caption = 'Tax Group Code';
             TableRelation = "Tax Group";
         }
-        field(89;"VAT Bus. Posting Group";Code[10])
+        field(89; "VAT Bus. Posting Group"; Code[10])
         {
             Caption = 'Tax Bus. Posting Group';
             TableRelation = "VAT Business Posting Group";
         }
-        field(90;"VAT Prod. Posting Group";Code[10])
+        field(90; "VAT Prod. Posting Group"; Code[10])
         {
             Caption = 'Tax Prod. Posting Group';
             TableRelation = "VAT Product Posting Group";
         }
-        field(91;"Currency Code";Code[10])
+        field(91; "Currency Code"; Code[10])
         {
             Caption = 'Currency Code';
             Editable = false;
             TableRelation = Currency;
         }
-        field(92;"Outstanding Amount (LCY)";Decimal)
+        field(92; "Outstanding Amount (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Outstanding Amount ($)';
             Editable = false;
         }
-        field(93;"Shipped Not Invoiced (LCY)";Decimal)
+        field(93; "Shipped Not Invoiced (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Shipped Not Invoiced ($)';
             Editable = false;
         }
-        field(95;"Reserved Quantity";Decimal)
+        field(95; "Reserved Quantity"; Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
-                                                                   "Source Ref. No."=FIELD("Line No."),
-                                                                   "Source Type"=CONST(37),
-                                                                   "Source Subtype"=FIELD("Document Type"),
-                                                                   "Reservation Status"=CONST(Reservation)));
+            CalcFormula = - Sum("Reservation Entry".Quantity WHERE("Source ID" = FIELD("Document No."),
+                                                                   "Source Ref. No." = FIELD("Line No."),
+                                                                   "Source Type" = CONST(37),
+                                                                   "Source Subtype" = FIELD("Document Type"),
+                                                                   "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Quantity';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(96;Reserve;Option)
+        field(96; Reserve; Option)
         {
             Caption = 'Reserve';
             OptionCaption = 'Never,Optional,Always';
             OptionMembers = Never,Optional,Always;
         }
-        field(97;"Blanket Order No.";Code[20])
+        field(97; "Blanket Order No."; Code[20])
         {
             Caption = 'Blanket Order No.';
-            TableRelation = "Sales Header"."No." WHERE ("Document Type"=CONST("Blanket Order"));
+            TableRelation = "Sales Header"."No." WHERE("Document Type" = CONST("Blanket Order"));
             //This property is currently not supported
             //TestTableRelation = false;
         }
-        field(98;"Blanket Order Line No.";Integer)
+        field(98; "Blanket Order Line No."; Integer)
         {
             Caption = 'Blanket Order Line No.';
-            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST("Blanket Order"),
-                                                           "Document No."=FIELD("Blanket Order No."));
+            TableRelation = "Sales Line"."Line No." WHERE("Document Type" = CONST("Blanket Order"),
+                                                           "Document No." = FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
-        field(99;"VAT Base Amount";Decimal)
+        field(99; "VAT Base Amount"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Tax Base Amount';
             Editable = false;
         }
-        field(100;"Unit Cost";Decimal)
+        field(100; "Unit Cost"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 2;
             Caption = 'Unit Cost';
             Editable = false;
         }
-        field(101;"System-Created Entry";Boolean)
+        field(101; "System-Created Entry"; Boolean)
         {
             Caption = 'System-Created Entry';
             Editable = false;
         }
-        field(103;"Line Amount";Decimal)
+        field(103; "Line Amount"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Line Amount';
         }
-        field(104;"VAT Difference";Decimal)
+        field(104; "VAT Difference"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Tax Difference';
             Editable = false;
         }
-        field(105;"Inv. Disc. Amount to Invoice";Decimal)
+        field(105; "Inv. Disc. Amount to Invoice"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Inv. Disc. Amount to Invoice';
             Editable = false;
         }
-        field(106;"VAT Identifier";Code[10])
+        field(106; "VAT Identifier"; Code[10])
         {
             Caption = 'VAT Identifier';
             Editable = false;
         }
-        field(107;"IC Partner Ref. Type";Option)
+        field(107; "IC Partner Ref. Type"; Option)
         {
             Caption = 'IC Partner Ref. Type';
             OptionCaption = ' ,G/L Account,Item,,,Charge (Item),Cross Reference,Common Item No.';
             OptionMembers = " ","G/L Account",Item,,,"Charge (Item)","Cross Reference","Common Item No.";
         }
-        field(108;"IC Partner Reference";Code[20])
+        field(108; "IC Partner Reference"; Code[20])
         {
             Caption = 'IC Partner Reference';
 
@@ -506,10 +506,10 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(109;"Prepayment %";Decimal)
+        field(109; "Prepayment %"; Decimal)
         {
             Caption = 'Prepayment %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             MaxValue = 100;
             MinValue = 0;
 
@@ -520,135 +520,135 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(110;"Prepmt. Line Amount";Decimal)
+        field(110; "Prepmt. Line Amount"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Prepmt. Line Amount';
             MinValue = 0;
         }
-        field(111;"Prepmt. Amt. Inv.";Decimal)
+        field(111; "Prepmt. Amt. Inv."; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Prepmt. Amt. Inv.';
             Editable = false;
         }
-        field(112;"Prepmt. Amt. Incl. VAT";Decimal)
+        field(112; "Prepmt. Amt. Incl. VAT"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepmt. Amt. Incl. Tax';
             Editable = false;
         }
-        field(113;"Prepayment Amount";Decimal)
+        field(113; "Prepayment Amount"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepayment Amount';
             Editable = false;
         }
-        field(114;"Prepmt. VAT Base Amt.";Decimal)
+        field(114; "Prepmt. VAT Base Amt."; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepmt. Tax Base Amt.';
             Editable = false;
         }
-        field(115;"Prepayment VAT %";Decimal)
+        field(115; "Prepayment VAT %"; Decimal)
         {
             Caption = 'Prepayment Tax %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             MinValue = 0;
         }
-        field(116;"Prepmt. VAT Calc. Type";Option)
+        field(116; "Prepmt. VAT Calc. Type"; Option)
         {
             Caption = 'Prepmt. Tax Calc. Type';
             Editable = false;
             OptionCaption = 'Normal VAT,Reverse Charge VAT,Full VAT,Sales Tax';
             OptionMembers = "Normal VAT","Reverse Charge VAT","Full VAT","Sales Tax";
         }
-        field(117;"Prepayment VAT Identifier";Code[10])
+        field(117; "Prepayment VAT Identifier"; Code[10])
         {
             Caption = 'Prepayment Tax Identifier';
             Editable = false;
         }
-        field(118;"Prepayment Tax Area Code";Code[20])
+        field(118; "Prepayment Tax Area Code"; Code[20])
         {
             Caption = 'Prepayment Tax Area Code';
             TableRelation = "Tax Area";
         }
-        field(119;"Prepayment Tax Liable";Boolean)
+        field(119; "Prepayment Tax Liable"; Boolean)
         {
             Caption = 'Prepayment Tax Liable';
         }
-        field(120;"Prepayment Tax Group Code";Code[10])
+        field(120; "Prepayment Tax Group Code"; Code[10])
         {
             Caption = 'Prepayment Tax Group Code';
             TableRelation = "Tax Group";
         }
-        field(121;"Prepmt Amt to Deduct";Decimal)
+        field(121; "Prepmt Amt to Deduct"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Prepmt Amt to Deduct';
             MinValue = 0;
         }
-        field(122;"Prepmt Amt Deducted";Decimal)
+        field(122; "Prepmt Amt Deducted"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Prepmt Amt Deducted';
             Editable = false;
         }
-        field(123;"Prepayment Line";Boolean)
+        field(123; "Prepayment Line"; Boolean)
         {
             Caption = 'Prepayment Line';
             Editable = false;
         }
-        field(124;"Prepmt. Amount Inv. Incl. VAT";Decimal)
+        field(124; "Prepmt. Amount Inv. Incl. VAT"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepmt. Amount Inv. Incl. Tax';
             Editable = false;
         }
-        field(129;"Prepmt. Amount Inv. (LCY)";Decimal)
+        field(129; "Prepmt. Amount Inv. (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Prepmt. Amount Inv. ($)';
             Editable = false;
         }
-        field(130;"IC Partner Code";Code[20])
+        field(130; "IC Partner Code"; Code[20])
         {
             Caption = 'IC Partner Code';
             TableRelation = "IC Partner";
         }
-        field(135;"Prepayment VAT Difference";Decimal)
+        field(135; "Prepayment VAT Difference"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepayment Tax Difference';
             Editable = false;
         }
-        field(136;"Prepmt VAT Diff. to Deduct";Decimal)
+        field(136; "Prepmt VAT Diff. to Deduct"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepmt Tax Diff. to Deduct';
             Editable = false;
         }
-        field(137;"Prepmt VAT Diff. Deducted";Decimal)
+        field(137; "Prepmt VAT Diff. Deducted"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Prepmt Tax Diff. Deducted';
             Editable = false;
         }
-        field(1001;"Job Task No.";Code[20])
+        field(1001; "Job Task No."; Code[20])
         {
             Caption = 'Job Task No.';
             Editable = false;
-            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
+            TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
         }
-        field(1002;"Job Contract Entry No.";Integer)
+        field(1002; "Job Contract Entry No."; Integer)
         {
             Caption = 'Job Contract Entry No.';
             Editable = false;
@@ -659,12 +659,12 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5402;"Variant Code";Code[10])
+        field(5402; "Variant Code"; Code[10])
         {
             Caption = 'Variant Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD("No."));
+            TableRelation = IF (Type = CONST(Item)) "Item Variant".Code WHERE("Item No." = FIELD("No."));
         }
-        field(5403;"Bin Code";Code[20])
+        field(5403; "Bin Code"; Code[20])
         {
             Caption = 'Bin Code';
 
@@ -681,24 +681,25 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5404;"Qty. per Unit of Measure";Decimal)
+        field(5404; "Qty. per Unit of Measure"; Decimal)
         {
             Caption = 'Qty. per Unit of Measure';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             InitValue = 1;
         }
-        field(5405;Planned;Boolean)
+        field(5405; Planned; Boolean)
         {
             Caption = 'Planned';
             Editable = false;
         }
-        field(5407;"Unit of Measure Code";Code[10])
+        field(5407; "Unit of Measure Code"; Code[10])
         {
             Caption = 'Unit of Measure Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."))
-                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE ("Resource No."=FIELD("No."))
-                            ELSE "Unit of Measure";
+            TableRelation = IF (Type = CONST(Item)) "Item Unit of Measure".Code WHERE("Item No." = FIELD("No."))
+            ELSE IF (Type = CONST(Resource)) "Resource Unit of Measure".Code WHERE("Resource No." = FIELD("No."))
+            ELSE
+            "Unit of Measure";
 
             trigger OnValidate()
             var
@@ -707,110 +708,110 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5415;"Quantity (Base)";Decimal)
+        field(5415; "Quantity (Base)"; Decimal)
         {
             Caption = 'Quantity (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(5416;"Outstanding Qty. (Base)";Decimal)
+        field(5416; "Outstanding Qty. (Base)"; Decimal)
         {
             Caption = 'Outstanding Qty. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5417;"Qty. to Invoice (Base)";Decimal)
+        field(5417; "Qty. to Invoice (Base)"; Decimal)
         {
             Caption = 'Qty. to Invoice (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(5418;"Qty. to Ship (Base)";Decimal)
+        field(5418; "Qty. to Ship (Base)"; Decimal)
         {
             Caption = 'Qty. to Ship (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(5458;"Qty. Shipped Not Invd. (Base)";Decimal)
+        field(5458; "Qty. Shipped Not Invd. (Base)"; Decimal)
         {
             Caption = 'Qty. Shipped Not Invd. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5460;"Qty. Shipped (Base)";Decimal)
+        field(5460; "Qty. Shipped (Base)"; Decimal)
         {
             Caption = 'Qty. Shipped (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5461;"Qty. Invoiced (Base)";Decimal)
+        field(5461; "Qty. Invoiced (Base)"; Decimal)
         {
             Caption = 'Qty. Invoiced (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5495;"Reserved Qty. (Base)";Decimal)
+        field(5495; "Reserved Qty. (Base)"; Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
-                                                                            "Source Ref. No."=FIELD("Line No."),
-                                                                            "Source Type"=CONST(37),
-                                                                            "Source Subtype"=FIELD("Document Type"),
-                                                                            "Reservation Status"=CONST(Reservation)));
+            CalcFormula = - Sum("Reservation Entry"."Quantity (Base)" WHERE("Source ID" = FIELD("Document No."),
+                                                                            "Source Ref. No." = FIELD("Line No."),
+                                                                            "Source Type" = CONST(37),
+                                                                            "Source Subtype" = FIELD("Document Type"),
+                                                                            "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Qty. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5600;"FA Posting Date";Date)
+        field(5600; "FA Posting Date"; Date)
         {
             Caption = 'FA Posting Date';
         }
-        field(5602;"Depreciation Book Code";Code[10])
+        field(5602; "Depreciation Book Code"; Code[10])
         {
             Caption = 'Depreciation Book Code';
             TableRelation = "Depreciation Book";
         }
-        field(5605;"Depr. until FA Posting Date";Boolean)
+        field(5605; "Depr. until FA Posting Date"; Boolean)
         {
             Caption = 'Depr. until FA Posting Date';
         }
-        field(5612;"Duplicate in Depreciation Book";Code[10])
+        field(5612; "Duplicate in Depreciation Book"; Code[10])
         {
             Caption = 'Duplicate in Depreciation Book';
             TableRelation = "Depreciation Book";
         }
-        field(5613;"Use Duplication List";Boolean)
+        field(5613; "Use Duplication List"; Boolean)
         {
             Caption = 'Use Duplication List';
         }
-        field(5700;"Responsibility Center";Code[10])
+        field(5700; "Responsibility Center"; Code[10])
         {
             Caption = 'Responsibility Center';
             Editable = false;
             TableRelation = "Responsibility Center";
         }
-        field(5701;"Out-of-Stock Substitution";Boolean)
+        field(5701; "Out-of-Stock Substitution"; Boolean)
         {
             Caption = 'Out-of-Stock Substitution';
             Editable = false;
         }
-        field(5702;"Substitution Available";Boolean)
+        field(5702; "Substitution Available"; Boolean)
         {
-            CalcFormula = Exist("Item Substitution" WHERE ("Type"=CONST(Item),
-                                                           "No."=FIELD("No."),
-                                                           "Substitute Type"=CONST(Item)));
+            CalcFormula = Exist("Item Substitution" WHERE("Type" = CONST(Item),
+                                                           "No." = FIELD("No."),
+                                                           "Substitute Type" = CONST(Item)));
             Caption = 'Substitution Available';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5703;"Originally Ordered No.";Code[20])
+        field(5703; "Originally Ordered No."; Code[20])
         {
             Caption = 'Originally Ordered No.';
-            TableRelation = IF (Type=CONST(Item)) Item;
+            TableRelation = IF (Type = CONST(Item)) Item;
         }
-        field(5704;"Originally Ordered Var. Code";Code[10])
+        field(5704; "Originally Ordered Var. Code"; Code[10])
         {
             Caption = 'Originally Ordered Var. Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD("Originally Ordered No."));
+            TableRelation = IF (Type = CONST(Item)) "Item Variant".Code WHERE("Item No." = FIELD("Originally Ordered No."));
         }
-        field(5705;"Cross-Reference No.";Code[20])
+        field(5705; "Cross-Reference No."; Code[20])
         {
             Caption = 'Cross-Reference No.';
 
@@ -820,137 +821,137 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5706;"Unit of Measure (Cross Ref.)";Code[10])
+        field(5706; "Unit of Measure (Cross Ref.)"; Code[10])
         {
             Caption = 'Unit of Measure (Cross Ref.)';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."));
+            TableRelation = IF (Type = CONST(Item)) "Item Unit of Measure".Code WHERE("Item No." = FIELD("No."));
         }
-        field(5707;"Cross-Reference Type";Option)
+        field(5707; "Cross-Reference Type"; Option)
         {
             Caption = 'Cross-Reference Type';
             OptionCaption = ' ,Customer,Vendor,Bar Code';
             OptionMembers = " ",Customer,Vendor,"Bar Code";
         }
-        field(5708;"Cross-Reference Type No.";Code[30])
+        field(5708; "Cross-Reference Type No."; Code[30])
         {
             Caption = 'Cross-Reference Type No.';
         }
-        field(5709;"Item Category Code";Code[10])
+        field(5709; "Item Category Code"; Code[10])
         {
             Caption = 'Item Category Code';
             TableRelation = "Item Category";
         }
-        field(5710;Nonstock;Boolean)
+        field(5710; Nonstock; Boolean)
         {
             Caption = 'Nonstock';
             Editable = false;
         }
-        field(5711;"Purchasing Code";Code[10])
+        field(5711; "Purchasing Code"; Code[10])
         {
             Caption = 'Purchasing Code';
             TableRelation = Purchasing;
         }
-        field(5712;"Product Group Code";Code[10])
+        field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE ("Item Category Code"=FIELD("Item Category Code"));
+            TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
-        field(5713;"Special Order";Boolean)
+        field(5713; "Special Order"; Boolean)
         {
             Caption = 'Special Order';
             Editable = false;
         }
-        field(5714;"Special Order Purchase No.";Code[20])
+        field(5714; "Special Order Purchase No."; Code[20])
         {
             Caption = 'Special Order Purchase No.';
-            TableRelation = IF (Special Order=CONST(true)) "Purchase Header"."No." WHERE ("Document Type"=CONST(Order));
+            TableRelation = IF ("Special Order" = CONST(true)) "Purchase Header"."No." WHERE("Document Type" = CONST(Order));
         }
-        field(5715;"Special Order Purch. Line No.";Integer)
+        field(5715; "Special Order Purch. Line No."; Integer)
         {
             Caption = 'Special Order Purch. Line No.';
-            TableRelation = IF (Special Order=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                            "Document No."=FIELD("Special Order Purchase No."));
+            TableRelation = IF ("Special Order" = CONST(true)) "Purchase Line"."Line No." WHERE("Document Type" = CONST(Order),
+                                                                                            "Document No." = FIELD("Special Order Purchase No."));
         }
-        field(5750;"Whse. Outstanding Qty. (Base)";Decimal)
+        field(5750; "Whse. Outstanding Qty. (Base)"; Decimal)
         {
             BlankZero = true;
-            CalcFormula = Sum("Warehouse Shipment Line"."Qty. Outstanding (Base)" WHERE ("Source Type"=CONST(37),
-                                                                                         "Source Subtype"=FIELD("Document Type"),
-                                                                                         "Source No."=FIELD("Document No."),
-                                                                                         "Source Line No."=FIELD("Line No.")));
+            CalcFormula = Sum("Warehouse Shipment Line"."Qty. Outstanding (Base)" WHERE("Source Type" = CONST(37),
+                                                                                         "Source Subtype" = FIELD("Document Type"),
+                                                                                         "Source No." = FIELD("Document No."),
+                                                                                         "Source Line No." = FIELD("Line No.")));
             Caption = 'Whse. Outstanding Qty. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5752;"Completely Shipped";Boolean)
+        field(5752; "Completely Shipped"; Boolean)
         {
             Caption = 'Completely Shipped';
             Editable = false;
         }
-        field(5790;"Requested Delivery Date";Date)
+        field(5790; "Requested Delivery Date"; Date)
         {
             Caption = 'Requested Delivery Date';
         }
-        field(5791;"Promised Delivery Date";Date)
+        field(5791; "Promised Delivery Date"; Date)
         {
             Caption = 'Promised Delivery Date';
         }
-        field(5792;"Shipping Time";DateFormula)
+        field(5792; "Shipping Time"; DateFormula)
         {
             Caption = 'Shipping Time';
         }
-        field(5793;"Outbound Whse. Handling Time";DateFormula)
+        field(5793; "Outbound Whse. Handling Time"; DateFormula)
         {
             Caption = 'Outbound Whse. Handling Time';
         }
-        field(5794;"Planned Delivery Date";Date)
+        field(5794; "Planned Delivery Date"; Date)
         {
             Caption = 'Planned Delivery Date';
         }
-        field(5795;"Planned Shipment Date";Date)
+        field(5795; "Planned Shipment Date"; Date)
         {
             Caption = 'Planned Shipment Date';
         }
-        field(5796;"Shipping Agent Code";Code[10])
+        field(5796; "Shipping Agent Code"; Code[10])
         {
             Caption = 'Shipping Agent Code';
             TableRelation = "Shipping Agent";
         }
-        field(5797;"Shipping Agent Service Code";Code[10])
+        field(5797; "Shipping Agent Service Code"; Code[10])
         {
             Caption = 'Shipping Agent Service Code';
-            TableRelation = "Shipping Agent Services".Code WHERE ("Shipping Agent Code"=FIELD("Shipping Agent Code"));
+            TableRelation = "Shipping Agent Services".Code WHERE("Shipping Agent Code" = FIELD("Shipping Agent Code"));
         }
-        field(5800;"Allow Item Charge Assignment";Boolean)
+        field(5800; "Allow Item Charge Assignment"; Boolean)
         {
             Caption = 'Allow Item Charge Assignment';
             InitValue = true;
         }
-        field(5801;"Qty. to Assign";Decimal)
+        field(5801; "Qty. to Assign"; Decimal)
         {
-            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. to Assign" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                                       "Document No."=FIELD("Document No."),
-                                                                                       "Document Line No."=FIELD("Line No.")));
+            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. to Assign" WHERE("Document Type" = FIELD("Document Type"),
+                                                                                       "Document No." = FIELD("Document No."),
+                                                                                       "Document Line No." = FIELD("Line No.")));
             Caption = 'Qty. to Assign';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5802;"Qty. Assigned";Decimal)
+        field(5802; "Qty. Assigned"; Decimal)
         {
-            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. Assigned" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                                      "Document No."=FIELD("Document No."),
-                                                                                      "Document Line No."=FIELD("Line No.")));
+            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. Assigned" WHERE("Document Type" = FIELD("Document Type"),
+                                                                                      "Document No." = FIELD("Document No."),
+                                                                                      "Document Line No." = FIELD("Line No.")));
             Caption = 'Qty Assig';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5803;"Return Qty. to Receive";Decimal)
+        field(5803; "Return Qty. to Receive"; Decimal)
         {
             Caption = 'Return Qty. to Receive';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
 
             trigger OnValidate()
             var
@@ -958,24 +959,24 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5804;"Return Qty. to Receive (Base)";Decimal)
+        field(5804; "Return Qty. to Receive (Base)"; Decimal)
         {
             Caption = 'Return Qty. to Receive (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(5805;"Return Qty. Rcd. Not Invd.";Decimal)
+        field(5805; "Return Qty. Rcd. Not Invd."; Decimal)
         {
             Caption = 'Return Qty. Rcd. Not Invd.';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5806;"Ret. Qty. Rcd. Not Invd.(Base)";Decimal)
+        field(5806; "Ret. Qty. Rcd. Not Invd.(Base)"; Decimal)
         {
             Caption = 'Ret. Qty. Rcd. Not Invd.(Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5807;"Return Rcd. Not Invd.";Decimal)
+        field(5807; "Return Rcd. Not Invd."; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
@@ -988,25 +989,25 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(5808;"Return Rcd. Not Invd. (LCY)";Decimal)
+        field(5808; "Return Rcd. Not Invd. (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Return Rcd. Not Invd. ($)';
             Editable = false;
         }
-        field(5809;"Return Qty. Received";Decimal)
+        field(5809; "Return Qty. Received"; Decimal)
         {
             Caption = 'Return Qty. Received';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5810;"Return Qty. Received (Base)";Decimal)
+        field(5810; "Return Qty. Received (Base)"; Decimal)
         {
             Caption = 'Return Qty. Received (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(5811;"Appl.-from Item Entry";Integer)
+        field(5811; "Appl.-from Item Entry"; Integer)
         {
             Caption = 'Appl.-from Item Entry';
             MinValue = 0;
@@ -1017,41 +1018,41 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(6600;"Return Receipt No.";Code[20])
+        field(6600; "Return Receipt No."; Code[20])
         {
             Caption = 'Return Receipt No.';
             Editable = false;
         }
-        field(6601;"Return Receipt Line No.";Integer)
+        field(6601; "Return Receipt Line No."; Integer)
         {
             Caption = 'Return Receipt Line No.';
             Editable = false;
         }
-        field(6608;"Return Reason Code";Code[10])
+        field(6608; "Return Reason Code"; Code[10])
         {
             Caption = 'Return Reason Code';
             TableRelation = "Return Reason";
         }
-        field(7001;"Allow Line Disc.";Boolean)
+        field(7001; "Allow Line Disc."; Boolean)
         {
             Caption = 'Allow Line Disc.';
             InitValue = true;
         }
-        field(7002;"Customer Disc. Group";Code[10])
+        field(7002; "Customer Disc. Group"; Code[10])
         {
             Caption = 'Customer Disc. Group';
             TableRelation = "Customer Discount Group";
         }
-        field(10000;"Package Tracking No.";Text[30])
+        field(10000; "Package Tracking No."; Text[30])
         {
             Caption = 'Package Tracking No.';
         }
-        field(25000;"Kit Item";Boolean)
+        field(25000; "Kit Item"; Boolean)
         {
             Caption = 'Kit Item';
             Editable = false;
         }
-        field(25001;"Build Kit";Boolean)
+        field(25001; "Build Kit"; Boolean)
         {
             Caption = 'Build Kit';
 
@@ -1065,82 +1066,82 @@ table 56038 "Sales Line Movil."
             begin
             end;
         }
-        field(50000;"Cod. Procedencia";Code[20])
+        field(50000; "Cod. Procedencia"; Code[20])
         {
             TableRelation = Procedencia;
         }
-        field(50001;"Cod. Edici n";Code[20])
+        field(50001; "Cod. Edici n"; Code[20])
         {
             TableRelation = Table50131;
         }
-        field(50002;Areas;Code[20])
+        field(50002; Areas; Code[20])
         {
             TableRelation = Table50132;
         }
-        field(50003;"No. Paginas";Decimal)
+        field(50003; "No. Paginas"; Decimal)
         {
         }
-        field(50004;ISBN;Text[30])
+        field(50004; ISBN; Text[30])
         {
         }
-        field(50005;"Componentes Prod.";Code[20])
+        field(50005; "Componentes Prod."; Code[20])
         {
             TableRelation = "Componentes Prod.";
         }
-        field(50006;"Nivel Educativo";Code[20])
+        field(50006; "Nivel Educativo"; Code[20])
         {
             TableRelation = Table50133;
         }
-        field(50007;Cursos;Code[20])
+        field(50007; Cursos; Code[20])
         {
             TableRelation = Cursos;
         }
-        field(50008;"Cantidad Inv. en Consignacion";Decimal)
+        field(50008; "Cantidad Inv. en Consignacion"; Decimal)
         {
         }
-        field(50009;"Cantidad Consignacion Devuelta";Decimal)
+        field(50009; "Cantidad Consignacion Devuelta"; Decimal)
         {
         }
-        field(50010;"No. Pedido Consignacion";Code[20])
+        field(50010; "No. Pedido Consignacion"; Code[20])
         {
         }
-        field(50011;"No. Linea Pedido Consignacion";Integer)
+        field(50011; "No. Linea Pedido Consignacion"; Integer)
         {
         }
-        field(50012;"No. Mov. Prod. Cosg. a Liq.";Integer)
+        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
         }
-        field(50013;"No. Estante";Code[20])
+        field(50013; "No. Estante"; Code[20])
         {
         }
-        field(50014;"Cod. Cupon";Code[20])
+        field(50014; "Cod. Cupon"; Code[20])
         {
             Caption = 'Coupon Code';
         }
-        field(50015;"No. Linea Cupon";Integer)
+        field(50015; "No. Linea Cupon"; Integer)
         {
             Caption = 'Coupon Line No.';
         }
-        field(50020;Temporal;Boolean)
+        field(50020; Temporal; Boolean)
         {
             Caption = 'Temp';
         }
-        field(34002500;"Anulada en TPV";Boolean)
+        field(34002500; "Anulada en TPV"; Boolean)
         {
             Caption = 'POS Void';
         }
-        field(34002501;"Precio anulacion TPV";Decimal)
+        field(34002501; "Precio anulacion TPV"; Decimal)
         {
             Caption = 'Void POS Price';
         }
-        field(34002502;"Cantidad anulacion TPV";Decimal)
+        field(34002502; "Cantidad anulacion TPV"; Decimal)
         {
             Caption = 'Void POS Qty.';
         }
-        field(34002503;"Cantidad agregada";Decimal)
+        field(34002503; "Cantidad agregada"; Decimal)
         {
         }
-        field(34002504;"Cod. Vendedor";Code[20])
+        field(34002504; "Cod. Vendedor"; Code[20])
         {
             Caption = 'Salesperson Code';
             TableRelation = "Salesperson/Purchaser";
@@ -1149,51 +1150,51 @@ table 56038 "Sales Line Movil."
 
     keys
     {
-        key(Key1;"Document Type","Document No.","Line No.")
+        key(Key1; "Document Type", "Document No.", "Line No.")
         {
-            SumIndexFields = Amount,"Amount Including VAT","Outstanding Amount","Shipped Not Invoiced","Outstanding Amount (LCY)","Shipped Not Invoiced (LCY)";
+            SumIndexFields = Amount, "Amount Including VAT", "Outstanding Amount", "Shipped Not Invoiced", "Outstanding Amount (LCY)", "Shipped Not Invoiced (LCY)";
         }
-        key(Key2;"Document No.","Line No.","Document Type")
+        key(Key2; "Document No.", "Line No.", "Document Type")
         {
         }
-        key(Key3;"Document Type",Type,"No.","Variant Code","Drop Shipment","Build Kit","Location Code","Shipment Date")
+        key(Key3; "Document Type", Type, "No.", "Variant Code", "Drop Shipment", "Build Kit", "Location Code", "Shipment Date")
         {
             SumIndexFields = "Outstanding Qty. (Base)";
         }
-        key(Key4;"Document Type","Bill-to Customer No.","Currency Code")
+        key(Key4; "Document Type", "Bill-to Customer No.", "Currency Code")
         {
-            SumIndexFields = "Outstanding Amount","Shipped Not Invoiced","Outstanding Amount (LCY)","Shipped Not Invoiced (LCY)","Return Rcd. Not Invd. (LCY)";
+            SumIndexFields = "Outstanding Amount", "Shipped Not Invoiced", "Outstanding Amount (LCY)", "Shipped Not Invoiced (LCY)", "Return Rcd. Not Invd. (LCY)";
         }
-        key(Key5;"Document Type","Blanket Order No.","Blanket Order Line No.")
-        {
-        }
-        key(Key6;"Document Type","Document No.","Location Code")
+        key(Key5; "Document Type", "Blanket Order No.", "Blanket Order Line No.")
         {
         }
-        key(Key7;"Document Type","Shipment No.","Shipment Line No.")
+        key(Key6; "Document Type", "Document No.", "Location Code")
         {
         }
-        key(Key8;Type,"No.","Variant Code","Drop Shipment","Location Code","Document Type","Shipment Date")
+        key(Key7; "Document Type", "Shipment No.", "Shipment Line No.")
+        {
+        }
+        key(Key8; Type, "No.", "Variant Code", "Drop Shipment", "Location Code", "Document Type", "Shipment Date")
         {
             MaintainSQLIndex = false;
         }
-        key(Key9;"Document Type","Sell-to Customer No.")
+        key(Key9; "Document Type", "Sell-to Customer No.")
         {
         }
-        key(Key10;"Job Contract Entry No.")
+        key(Key10; "Job Contract Entry No.")
         {
         }
-        key(Key11;Type,"Document No.","Document Type")
+        key(Key11; Type, "Document No.", "Document Type")
         {
             SumIndexFields = Quantity;
         }
-        key(Key12;"Document Type",Type,"No.","Variant Code","Drop Shipment","Location Code","Shipment Date")
+        key(Key12; "Document Type", Type, "No.", "Variant Code", "Drop Shipment", "Location Code", "Shipment Date")
         {
         }
-        key(Key13;"No.",Type,"Shipment Date","Location Code","Document Type")
+        key(Key13; "No.", Type, "Shipment Date", "Location Code", "Document Type")
         {
         }
-        key(Key14;"Location Code","Shipment Date")
+        key(Key14; "Location Code", "Shipment Date")
         {
         }
     }

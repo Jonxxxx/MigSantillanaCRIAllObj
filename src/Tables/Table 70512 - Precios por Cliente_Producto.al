@@ -13,9 +13,9 @@ table 70512 "Precios por Cliente_Producto"
         field(2; "Codigo ventas"; Code[20])
         {
             Caption = 'Sales Code';
-            TableRelation = IF (Tipo Venta=CONST("Customer Price Group")) "Customer Price Group"
-                            ELSE IF (Tipo Venta=CONST(Customer)) Customer
-                            ELSE IF (Tipo Venta=CONST(Campaign)) Campaign;
+            TableRelation = IF ("Tipo Venta" = CONST("Customer Price Group")) "Customer Price Group"
+            ELSE IF ("Tipo Venta" = CONST(Customer)) Customer
+            ELSE IF ("Tipo Venta" = CONST(Campaign)) Campaign;
         }
         field(3; "Cod. Divisa"; Code[10])
         {

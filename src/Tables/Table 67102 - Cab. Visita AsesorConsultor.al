@@ -23,7 +23,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             begin
 
                 /*
-                ///tableRelation: IF (Tipo Asesor/Consultor=CONST(Docente)) Docentes.No. ELSE IF (Tipo Asesor/Consultor=CONST(Proveedor)) Vendor.No.
+                ///tableRelation: IF ("Tipo Asesor/Consultor"=CONST(Docente)) Docentes.No. ELSE IF ("Tipo Asesor/Consultor"=CONST(Proveedor)) Vendor.No.
                 IF "Cod. Asesor/Consultor" <> '' THEN BEGIN
                   CASE "Tipo Asesor/Consultor" OF
                     "Tipo Asesor/Consultor"::Docente :

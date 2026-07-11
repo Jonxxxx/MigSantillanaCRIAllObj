@@ -34,8 +34,8 @@ table 67051 "Cab. Planif. Evento"
         }
         field(3; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
-                            ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
+            TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
+            ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
 
             trigger OnValidate()
             begin

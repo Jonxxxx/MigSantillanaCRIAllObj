@@ -97,20 +97,20 @@ table 56035 "Contenido Cajas Packing Reg."
         field(16; "No. Pedido"; Code[20])
         {
             Caption = 'N  Pedido';
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
-                                                                                    "Estado packing"=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true))
-                                                                                    ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false));
+            TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
+                                                                                    "Estado packing" = CONST(Listo))
+            ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true))
+            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false));
         }
         field(17; "No. Linea Pedido"; Integer)
         {
             Caption = 'Order Line No.';
             NotBlank = true;
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                         "Document No."=FIELD("No. Pedido"),
-                                                                                         "Type"=CONST(Item))
-                                                                                         ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"))
-                                                                                         ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"));
+            TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Line"."Line No." WHERE("Document Type" = CONST(Order),
+                                                                                         "Document No." = FIELD("No. Pedido"),
+                                                                                         "Type" = CONST(Item))
+            ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Line"."Line No." WHERE("Document No." = FIELD("No. Pedido"))
+            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Line"."Line No." WHERE("Document No." = FIELD("No. Pedido"));
 
             trigger OnValidate()
             var
@@ -118,26 +118,28 @@ table 56035 "Contenido Cajas Packing Reg."
                 recLinTransfer: Record 5741;
             begin
                 CASE "Tipo pedido" OF
-                  "Tipo pedido"::Venta : BEGIN
-                    IF recLinVta.GET(recLinVta."Document Type"::Order,"No. Pedido","No. Linea Pedido") THEN BEGIN
-                      "No. Producto"          := recLinVta."No.";
-                      Cantidad                := recLinVta.Quantity;
-                      "Cod. Unidad de Medida" := recLinVta."Unit of Measure Code";
-                      Descripcion             := recLinVta.Description;
-                    END;
-                  END;
-                  "Tipo pedido"::Consignacion,"Tipo pedido"::Transferencia : BEGIN
-                    IF recLinTransfer.GET("No. Pedido","No. Linea Pedido") THEN BEGIN
-                      "No. Producto"          := recLinTransfer."Item No.";
-                      Cantidad                := recLinTransfer.Quantity;
-                      "Cod. Unidad de Medida" := recLinTransfer."Unit of Measure Code";
-                      Descripcion             := recLinTransfer.Description;
-                    END;
-                  END;
-                  END;
+                    "Tipo pedido"::Venta:
+                        BEGIN
+                            IF recLinVta.GET(recLinVta."Document Type"::Order, "No. Pedido", "No. Linea Pedido") THEN BEGIN
+                                "No. Producto" := recLinVta."No.";
+                                Cantidad := recLinVta.Quantity;
+                                "Cod. Unidad de Medida" := recLinVta."Unit of Measure Code";
+                                Descripcion := recLinVta.Description;
+                            END;
+                        END;
+                    "Tipo pedido"::Consignacion, "Tipo pedido"::Transferencia:
+                        BEGIN
+                            IF recLinTransfer.GET("No. Pedido", "No. Linea Pedido") THEN BEGIN
+                                "No. Producto" := recLinTransfer."Item No.";
+                                Cantidad := recLinTransfer.Quantity;
+                                "Cod. Unidad de Medida" := recLinTransfer."Unit of Measure Code";
+                                Descripcion := recLinTransfer.Description;
+                            END;
+                        END;
+                END;
             end;
         }
-        field(20;"Tipo pedido";Option)
+        field(20; "Tipo pedido"; Option)
         {
             Caption = 'Tipo pedido';
             OptionCaption = 'Venta,Consignaci n,Transferencia';
@@ -147,10 +149,10 @@ table 56035 "Contenido Cajas Packing Reg."
 
     keys
     {
-        key(Key1;"No. Packing","No. Caja","No. Picking","No. Producto","No. Linea")
+        key(Key1; "No. Packing", "No. Caja", "No. Picking", "No. Producto", "No. Linea")
         {
         }
-        key(Key2;"No. Producto","No. Picking")
+        key(Key2; "No. Producto", "No. Picking")
         {
             SumIndexFields = Cantidad;
         }
@@ -162,29 +164,28 @@ table 56035 "Contenido Cajas Packing Reg."
 
     trigger OnDelete()
     begin
-        IF LinPack.GET("No. Packing","No. Caja") THEN
-          LinPack.TESTFIELD("Estado Caja",LinPack."Estado Caja"::Abierta);
+        IF LinPack.GET("No. Packing", "No. Caja") THEN
+            LinPack.TESTFIELD("Estado Caja", LinPack."Estado Caja"::Abierta);
 
 
-        IF RWAL.GET(RWAL."Activity Type"::Pick,"No. Picking","No. Linea Picking") THEN
-          BEGIN
-            RWAL.VALIDATE("No. Packing",'');
-            RWAL.VALIDATE("No. Caja",'');
-            RWAL.VALIDATE("No. Linea Packing",0);
+        IF RWAL.GET(RWAL."Activity Type"::Pick, "No. Picking", "No. Linea Picking") THEN BEGIN
+            RWAL.VALIDATE("No. Packing", '');
+            RWAL.VALIDATE("No. Caja", '');
+            RWAL.VALIDATE("No. Linea Packing", 0);
             RWAL.MODIFY(TRUE);
-          END;
+        END;
     end;
 
     trigger OnInsert()
     begin
-        IF LinPack.GET("No. Packing","No. Caja") THEN
-          LinPack.TESTFIELD("Estado Caja",LinPack."Estado Caja"::Abierta);
+        IF LinPack.GET("No. Packing", "No. Caja") THEN
+            LinPack.TESTFIELD("Estado Caja", LinPack."Estado Caja"::Abierta);
     end;
 
     trigger OnModify()
     begin
-        IF LinPack.GET("No. Packing","No. Caja") THEN
-          LinPack.TESTFIELD("Estado Caja",LinPack."Estado Caja"::Abierta);
+        IF LinPack.GET("No. Packing", "No. Caja") THEN
+            LinPack.TESTFIELD("Estado Caja", LinPack."Estado Caja"::Abierta);
     end;
 
     var

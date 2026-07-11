@@ -92,12 +92,12 @@ table 56030 "Cab. Packing"
         }
         field(12; "No. Pedido"; Code[20])
         {
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
-                                                                                    "Estado packing"=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true),
-                                                                                                                                                           "Estado packing"=CONST(Listo))
-                                                                                                                                                           ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false),
-                                                                                                                                                                                                                                   "Estado packing"=CONST(Listo));
+            TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
+                                                                                    "Estado packing" = CONST(Listo))
+            ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true),
+                                                                                                                                                           "Estado packing" = CONST(Listo))
+            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false),
+                                                                                                                                                                                                                                   "Estado packing" = CONST(Listo));
         }
         field(20; "Tipo pedido"; Option)
         {

@@ -248,8 +248,8 @@ table 56037 "Sales Header Movil."
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF (Bal.Account Type=CONST("G/L Account")) "G/L Account"
-                            ELSE IF (Bal. Account Type=CONST("Bank Account")) "Bank Account";
+            TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(57; Ship; Boolean)
         {
@@ -745,7 +745,7 @@ table 56037 "Sales Header Movil."
             Caption = 'Opportunity No.';
             TableRelation = IF (Document Type=FILTER(<>Order)) Opportunity."No." WHERE ("Contact No."=FIELD("Sell-to Contact No."),
                                                                                       "Closed"=CONST(false))
-                                                                                      ELSE IF (Document Type=CONST(Order)) Opportunity."No." WHERE ("Contact No."=FIELD("Sell-to Contact No."),
+                                                                                      ELSE IF ("Document Type"=CONST(Order)) Opportunity."No." WHERE ("Contact No."=FIELD("Sell-to Contact No."),
                                                                                                                                                   "Sales Document No."=FIELD("No."),
                                                                                                                                                   "Sales Document Type"=CONST(Order));
 

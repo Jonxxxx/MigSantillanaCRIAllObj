@@ -239,17 +239,17 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(12; "Cod. Local"; Code[20])
         {
-            TableRelation = IF (Grupo de Colegios=CONST(false)) "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
+            TableRelation = IF ("Grupo de Colegios" = CONST(false)) "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(13;"Cod. Turno";Code[20])
+        field(13; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(14;"Fecha Solicitud";Date)
+        field(14; "Fecha Solicitud"; Date)
         {
             Editable = false;
         }
-        field(15;"Cod. promotor";Code[20])
+        field(15; "Cod. promotor"; Code[20])
         {
             TableRelation = "Salesperson/Purchaser";
 
@@ -257,47 +257,45 @@ table 67055 "Solicitud de Taller - Evento"
             var
                 "P-R"Record 67044;
             begin
-                IF "Cod. promotor" <> '' THEN
-                   BEGIN
+                IF "Cod. promotor" <> '' THEN BEGIN
                     Promotor.GET("Cod. promotor");
                     "Nombre promotor" := Promotor.Name;
-                    "Tipo Solicitud"  := 1;
+                    "Tipo Solicitud" := 1;
 
                     "P-R".RESET;
-                    "P-R".SETRANGE("Cod. Promotor","Cod. promotor");
+                    "P-R".SETRANGE("Cod. Promotor", "Cod. promotor");
                     "P-R".FINDFIRST;
                     Ruta := "P-R"."Cod. Ruta";
                     APSSetup.GET();
-                    IF APSSetup."Cod. Dimension Delegacion" <> '' THEN
-                       BEGIN
+                    IF APSSetup."Cod. Dimension Delegacion" <> '' THEN BEGIN
                         DefDim.RESET;
-                        DefDim.SETRANGE("Table ID",13);
-                        DefDim.SETRANGE("No.","Cod. promotor");
-                        DefDim.SETRANGE("Dimension Code",APSSetup."Cod. Dimension Delegacion");
+                        DefDim.SETRANGE("Table ID", 13);
+                        DefDim.SETRANGE("No.", "Cod. promotor");
+                        DefDim.SETRANGE("Dimension Code", APSSetup."Cod. Dimension Delegacion");
                         DefDim.FINDFIRST;
 
                         DimVal.RESET;
-                        DimVal.SETRANGE("Dimension Code",APSSetup."Cod. Dimension Delegacion");
-                        DimVal.SETRANGE(Code,DefDim."Dimension Value Code");
+                        DimVal.SETRANGE("Dimension Code", APSSetup."Cod. Dimension Delegacion");
+                        DimVal.SETRANGE(Code, DefDim."Dimension Value Code");
                         DimVal.FINDFIRST;
                         Delegacion := DimVal.Code;
-                       END;
-                   END;
+                    END;
+                END;
             end;
         }
-        field(16;"Nombre promotor";Text[60])
+        field(16; "Nombre promotor"; Text[60])
         {
         }
-        field(17;"Telefono 1 Colegio";Text[30])
+        field(17; "Telefono 1 Colegio"; Text[30])
         {
             ExtendedDatatype = PhoneNo;
         }
-        field(18;Status;Option)
+        field(18; Status; Option)
         {
             OptionCaption = ' ,Sent by salesperson,Approved,Programmed,Voided,Rejected,Done';
             OptionMembers = " ","Enviada por promotor",Aprobada,Programada,Cancelada,Rechazada,Realizada;
         }
-        field(19;"Asistentes Esperados";Integer)
+        field(19; "Asistentes Esperados"; Integer)
         {
 
             trigger OnValidate()
@@ -305,13 +303,13 @@ table 67055 "Solicitud de Taller - Evento"
                 Actualiza_AsistEsperados;
             end;
         }
-        field(20;Observaciones;Text[200])
+        field(20; Observaciones; Text[200])
         {
         }
-        field(21;"Cod. Docente responsable";Code[20])
+        field(21; "Cod. Docente responsable"; Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                       "Pertenece al CDS"=CONST(true));
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                       "Pertenece al CDS" = CONST(true));
 
             trigger OnLookup()
             var
@@ -321,15 +319,15 @@ table 67055 "Solicitud de Taller - Evento"
 
                 //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),"Pertenece al CDS"=CONST(true))
                 IF "Tipo Responsable" = "Tipo Responsable"::CDS THEN BEGIN
-                  rColDoc.RESET;
-                  rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
-                  rColDoc.SETRANGE("Pertenece al CDS", TRUE);
-                  pColDoc.SETTABLEVIEW(rColDoc);
-                  pColDoc.LOOKUPMODE(TRUE);
-                  IF pColDoc.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                    pColDoc.GETRECORD(rColDoc);
-                    VALIDATE("Cod. Docente responsable",rColDoc."Cod. Docente");
-                  END;
+                    rColDoc.RESET;
+                    rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                    rColDoc.SETRANGE("Pertenece al CDS", TRUE);
+                    pColDoc.SETTABLEVIEW(rColDoc);
+                    pColDoc.LOOKUPMODE(TRUE);
+                    IF pColDoc.RUNMODAL = ACTION::LookupOK THEN BEGIN
+                        pColDoc.GETRECORD(rColDoc);
+                        VALIDATE("Cod. Docente responsable", rColDoc."Cod. Docente");
+                    END;
                 END;
             end;
 
@@ -337,176 +335,174 @@ table 67055 "Solicitud de Taller - Evento"
             var
                 ColDoc: Record 67043;
             begin
-                IF ExpositorDoc.GET("Cod. Docente responsable") THEN
-                   BEGIN
+                IF ExpositorDoc.GET("Cod. Docente responsable") THEN BEGIN
                     "Nombre responsable" := ExpositorDoc."Full Name";
                     "Telefono Responsable" := ExpositorDoc."Phone No.";
-                    "No. celular responsable"        := ExpositorDoc."Mobile Phone No.";
-                    "E-Mail Docente Responsable" :=  ExpositorDoc."E-Mail";
+                    "No. celular responsable" := ExpositorDoc."Mobile Phone No.";
+                    "E-Mail Docente Responsable" := ExpositorDoc."E-Mail";
                     ColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
                     ColDoc.SETRANGE("Cod. Docente", "Cod. Docente responsable");
-                    IF  ColDoc.FINDSET THEN BEGIN
-                      "Cod. Cargo Responsable"  := ColDoc."Cod. Cargo";
-                      "Descripci n Cargo Responsable"  := ColDoc."Descripcion Cargo";
+                    IF ColDoc.FINDSET THEN BEGIN
+                        "Cod. Cargo Responsable" := ColDoc."Cod. Cargo";
+                        "Descripci n Cargo Responsable" := ColDoc."Descripcion Cargo";
                     END;
-                   END;
+                END;
             end;
         }
-        field(22;"Nombre responsable";Text[80])
+        field(22; "Nombre responsable"; Text[80])
         {
         }
-        field(23;"No. celular responsable";Text[30])
+        field(23; "No. celular responsable"; Text[30])
         {
         }
-        field(24;"Objetivo promotor";Text[200])
+        field(24; "Objetivo promotor"; Text[200])
         {
         }
-        field(25;"Descripcion evento";Text[100])
+        field(25; "Descripcion evento"; Text[100])
         {
         }
-        field(26;"Evento programado";Boolean)
+        field(26; "Evento programado"; Boolean)
         {
         }
-        field(27;"Fecha invitacion";Date)
+        field(27; "Fecha invitacion"; Date)
         {
         }
-        field(28;"Horas programadas";Decimal)
+        field(28; "Horas programadas"; Decimal)
         {
         }
-        field(29;"Asistentes Reales";Integer)
+        field(29; "Asistentes Reales"; Integer)
         {
         }
-        field(30;"Eventos programados";Integer)
+        field(30; "Eventos programados"; Integer)
         {
         }
-        field(31;"Importe Gasto Expositor";Decimal)
+        field(31; "Importe Gasto Expositor"; Decimal)
         {
         }
-        field(32;"Importe Gasto mensajeria";Decimal)
+        field(32; "Importe Gasto mensajeria"; Decimal)
         {
         }
-        field(33;"ImporteGastos Impresion";Decimal)
+        field(33; "ImporteGastos Impresion"; Decimal)
         {
         }
-        field(34;"Importe Utiles";Decimal)
+        field(34; "Importe Utiles"; Decimal)
         {
         }
-        field(35;"Importe Atenciones";Decimal)
+        field(35; "Importe Atenciones"; Decimal)
         {
         }
-        field(36;"Otros Importes";Decimal)
+        field(36; "Otros Importes"; Decimal)
         {
         }
-        field(37;"No. Series";Code[10])
+        field(37; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
-        field(38;"Shortcut Dimension 1 Code";Code[20])
+        field(38; "Shortcut Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
             begin
-                ValidateShortcutDimCode(1,"Shortcut Dimension 1 Code");
+                ValidateShortcutDimCode(1, "Shortcut Dimension 1 Code");
             end;
         }
-        field(39;"Shortcut Dimension 2 Code";Code[20])
+        field(39; "Shortcut Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
             begin
-                ValidateShortcutDimCode(2,"Shortcut Dimension 2 Code");
+                ValidateShortcutDimCode(2, "Shortcut Dimension 2 Code");
             end;
         }
-        field(40;"Filtro Promotor";Code[20])
+        field(40; "Filtro Promotor"; Code[20])
         {
             FieldClass = FlowFilter;
-            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=FILTER(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
         }
-        field(41;"Filtro Colegio";Code[20])
+        field(41; "Filtro Colegio"; Code[20])
         {
             FieldClass = FlowFilter;
             TableRelation = Contact;
         }
-        field(42;"Nombre expositor";Text[60])
+        field(42; "Nombre expositor"; Text[60])
         {
         }
-        field(43;"KPI Status";BLOB)
+        field(43; "KPI Status"; BLOB)
         {
             Caption = 'Status';
             SubType = Bitmap;
         }
-        field(44;"Cod. objetivo promotor";Code[20])
+        field(44; "Cod. objetivo promotor"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Objetivos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
             trigger OnValidate()
             begin
-                IF "Cod. objetivo promotor" <> '' THEN
-                   BEGIN
+                IF "Cod. objetivo promotor" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::Objetivos);
-                    DA.SETRANGE(Codigo,"Cod. objetivo promotor");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Objetivos);
+                    DA.SETRANGE(Codigo, "Cod. objetivo promotor");
                     DA.FINDFIRST;
                     "Objetivo promotor" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(45;"Comentario Aprobado";Text[200])
+        field(45; "Comentario Aprobado"; Text[200])
         {
         }
-        field(46;"Comentario Programado";Text[200])
+        field(46; "Comentario Programado"; Text[200])
         {
         }
-        field(47;"Comentario Rechazado";Text[200])
+        field(47; "Comentario Rechazado"; Text[200])
         {
         }
-        field(48;"Comentario Cancelado";Text[200])
+        field(48; "Comentario Cancelado"; Text[200])
         {
         }
-        field(49;"Grupo de Negocio";Code[20])
+        field(49; "Grupo de Negocio"; Code[20])
         {
             Caption = 'Business Group';
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Grupo de Negocio"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
-        field(50;Referencia;Text[60])
+        field(50; Referencia; Text[60])
         {
         }
-        field(51;"Telefono Responsable";Text[30])
+        field(51; "Telefono Responsable"; Text[30])
         {
         }
-        field(52;"Celular Responsable";Text[30])
+        field(52; "Celular Responsable"; Text[30])
         {
         }
-        field(53;"Col. tiene equipo MM";Boolean)
+        field(53; "Col. tiene equipo MM"; Boolean)
         {
         }
-        field(54;Refrigerio;Boolean)
+        field(54; Refrigerio; Boolean)
         {
         }
-        field(55;Material;Boolean)
+        field(55; Material; Boolean)
         {
         }
-        field(56;Merchandising;Boolean)
+        field(56; Merchandising; Boolean)
         {
         }
-        field(57;"Desc. del Evento no existe";Text[100])
+        field(57; "Desc. del Evento no existe"; Text[100])
         {
             Caption = 'Non exist Event name';
         }
-        field(58;"Tipo de Expositor";Option)
+        field(58; "Tipo de Expositor"; Option)
         {
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
-        field(480;"Dimension Set ID";Integer)
+        field(480; "Dimension Set ID"; Integer)
         {
             Caption = 'Dimension Set ID';
             Editable = false;
@@ -517,46 +513,46 @@ table 67055 "Solicitud de Taller - Evento"
                 ShowDocDim;
             end;
         }
-        field(53501;"Codigo Distrito Colegio";Code[10])
+        field(53501; "Codigo Distrito Colegio"; Code[10])
         {
             Caption = 'Codigo Distrito Colegio';
             Description = 'Peru';
             Enabled = false;
         }
-        field(53502;Departamento;Text[30])
+        field(53502; Departamento; Text[30])
         {
             Caption = 'District';
             Description = 'Peru';
             Enabled = false;
         }
-        field(53503;"Nombre Distrito Colegio";Text[30])
+        field(53503; "Nombre Distrito Colegio"; Text[30])
         {
             Description = 'Peru';
             Enabled = false;
         }
-        field(53504;Provincia;Text[30])
+        field(53504; Provincia; Text[30])
         {
             Description = 'Peru';
             Enabled = false;
         }
-        field(53505;"Territory Code";Code[10])
+        field(53505; "Territory Code"; Code[10])
         {
             Caption = 'Territory Code';
             Description = 'Peru';
             Enabled = false;
             TableRelation = Territory;
         }
-        field(53506;"Country/Region Code";Code[10])
+        field(53506; "Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
             Description = 'Peru';
             Enabled = false;
             TableRelation = "Country/Region";
         }
-        field(67000;"Codigo Postal";Code[10])
+        field(67000; "Codigo Postal"; Code[10])
         {
         }
-        field(67001;"Post Code";Code[20])
+        field(67001; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = Contact."Post Code";
@@ -566,41 +562,41 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             begin
-                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(67002;City;Text[30])
+        field(67002; City; Text[30])
         {
             Caption = 'City';
             TableRelation = Contact.City;
 
             trigger OnValidate()
             begin
-                PostCode.ValidateCity(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidateCity(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(67003;County;Text[30])
+        field(67003; County; Text[30])
         {
             Caption = 'State';
         }
-        field(67004;"Direccion Colegio";Text[100])
+        field(67004; "Direccion Colegio"; Text[100])
         {
         }
-        field(67005;"Tipo Solicitud";Option)
+        field(67005; "Tipo Solicitud"; Option)
         {
             OptionCaption = 'School,Salesperson';
             OptionMembers = Colegio,Promotor;
         }
-        field(67006;Ruta;Code[20])
+        field(67006; Ruta; Code[20])
         {
         }
-        field(67007;"Asistencia promotor";Boolean)
+        field(67007; "Asistencia promotor"; Boolean)
         {
         }
-        field(67008;"Material para revisi n";Boolean)
+        field(67008; "Material para revisi n"; Boolean)
         {
         }
-        field(67009;"Editorial Competencia";Code[20])
+        field(67009; "Editorial Competencia"; Code[20])
         {
             TableRelation = Editoras.Code;
             ValidateTableRelation = false;
@@ -611,71 +607,71 @@ table 67055 "Solicitud de Taller - Evento"
             begin
                 "Nombre Editorial Competencia" := '';
                 IF ED.GET("Editorial Competencia") THEN
-                  "Nombre Editorial Competencia" := ED.Description;
+                    "Nombre Editorial Competencia" := ED.Description;
             end;
         }
-        field(67010;"Nombre Editorial Competencia";Text[80])
+        field(67010; "Nombre Editorial Competencia"; Text[80])
         {
         }
-        field(67011;"Art culo Competencia";Code[10])
+        field(67011; "Art culo Competencia"; Code[10])
         {
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Editorial Competencia"));
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Editorial Competencia"));
 
             trigger OnValidate()
             var
                 Lib: Record 67025;
             begin
                 "Desc.  Competencia" := '';
-                Lib.SETRANGE(Lib."Cod. Editorial","Editorial Competencia");
+                Lib.SETRANGE(Lib."Cod. Editorial", "Editorial Competencia");
                 Lib.SETRANGE(Lib."Cod. Libro", "Art culo Competencia");
                 IF Lib.FINDSET THEN
-                  "Desc.  Competencia" := Lib.Description;
+                    "Desc.  Competencia" := Lib.Description;
             end;
         }
-        field(67012;"Desc.  Competencia";Text[120])
+        field(67012; "Desc.  Competencia"; Text[120])
         {
         }
-        field(67013;"E-Mail Docente Responsable";Text[40])
+        field(67013; "E-Mail Docente Responsable"; Text[40])
         {
         }
-        field(67014;INI;Integer)
+        field(67014; INI; Integer)
         {
         }
-        field(67015;PRI;Integer)
+        field(67015; PRI; Integer)
         {
         }
-        field(67016;SEC;Integer)
+        field(67016; SEC; Integer)
         {
         }
-        field(67017;ING;Integer)
+        field(67017; ING; Integer)
         {
         }
-        field(67018;PLA;Integer)
+        field(67018; PLA; Integer)
         {
         }
-        field(67019;"Nivel Asistente";Integer)
+        field(67019; "Nivel Asistente"; Integer)
         {
-            CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
+            CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67020;"Grado Asistente";Integer)
+        field(67020; "Grado Asistente"; Integer)
         {
-            CalcFormula = Count("Solicitud -  Grado Asistente" WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
+            CalcFormula = Count("Solicitud -  Grado Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67021;"Especialidad Asistente";Integer)
+        field(67021; "Especialidad Asistente"; Integer)
         {
-            CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
+            CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67022;"Selecci n Editorial";Option)
+        field(67022; "Selecci n Editorial"; Option)
         {
             OptionCaption = 'Santillana,Competencia';
             OptionMembers = Santillana,Competencia;
         }
-        field(67023;"Art culo Grupo Santillana";Code[20])
+        field(67023; "Art culo Grupo Santillana"; Code[20])
         {
-            TableRelation = "Historico Adopciones"."Cod. producto" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = "Historico Adopciones"."Cod. producto" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnLookup()
             var
@@ -684,92 +680,91 @@ table 67055 "Solicitud de Taller - Evento"
             begin
 
                 Adop.FILTERGROUP(2);
-                Adop.SETRANGE("Cod. Colegio","Cod. Colegio");
+                Adop.SETRANGE("Cod. Colegio", "Cod. Colegio");
                 Adop.FILTERGROUP(0);
                 fAdop.SETTABLEVIEW(Adop);
                 fAdop.LOOKUPMODE(TRUE);
                 IF fAdop.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                  fAdop.GETRECORD(Adop);
-                  "Desc. Art culo Grupo Santillan" := Adop."Nombre Libro";
-                  "A o Adopci n" := Adop.Campana;
+                    fAdop.GETRECORD(Adop);
+                    "Desc. Art culo Grupo Santillan" := Adop."Nombre Libro";
+                    "A o Adopci n" := Adop.Campana;
                 END;
             end;
         }
-        field(67024;"Desc. Art culo Grupo Santillan";Text[80])
+        field(67024; "Desc. Art culo Grupo Santillan"; Text[80])
         {
         }
-        field(67025;"Horas por semana";Decimal)
+        field(67025; "Horas por semana"; Decimal)
         {
         }
-        field(67026;"A o Adopci n";Code[4])
+        field(67026; "A o Adopci n"; Code[4])
         {
         }
-        field(67027;ESI;Integer)
+        field(67027; ESI; Integer)
         {
         }
-        field(67028;GEN;Integer)
+        field(67028; GEN; Integer)
         {
         }
-        field(67029;IPR;Integer)
+        field(67029; IPR; Integer)
         {
         }
-        field(67030;IPS;Integer)
+        field(67030; IPS; Integer)
         {
         }
-        field(67031;PSE;Integer)
+        field(67031; PSE; Integer)
         {
         }
-        field(67032;"Tipo Responsable";Option)
+        field(67032; "Tipo Responsable"; Option)
         {
             OptionCaption = 'CDS,Otro';
             OptionMembers = CDS,Otro;
 
             trigger OnValidate()
             begin
-                   "Cod. Docente responsable"        :=  '';
-                   "Nombre responsable"              :=  '';
-                   "Cod. Cargo Responsable"          :=  '';
-                   "Descripci n Cargo Responsable"   :=  '';
-                   "Telefono Responsable"            :=  '';
-                   "No. celular responsable"         :=  '';
-                   "E-Mail Docente Responsable"      :=  '';
+                "Cod. Docente responsable" := '';
+                "Nombre responsable" := '';
+                "Cod. Cargo Responsable" := '';
+                "Descripci n Cargo Responsable" := '';
+                "Telefono Responsable" := '';
+                "No. celular responsable" := '';
+                "E-Mail Docente Responsable" := '';
             end;
         }
-        field(67033;"Telefono 2 Colegio";Text[30])
+        field(67033; "Telefono 2 Colegio"; Text[30])
         {
         }
-        field(67034;"Avisado al expositor";Boolean)
+        field(67034; "Avisado al expositor"; Boolean)
         {
         }
-        field(67035;"Cod. Cargo Responsable";Code[20])
+        field(67035; "Cod. Cargo Responsable"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Puestos de trabajo"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Cargo Responsable" <> '' THEN
-                   BEGIN
+                IF "Cod. Cargo Responsable" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Puestos de trabajo");
-                    DA.SETRANGE(Codigo,"Cod. Cargo Responsable");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
+                    DA.SETRANGE(Codigo, "Cod. Cargo Responsable");
                     DA.FINDFIRST;
                     "Descripci n Cargo Responsable" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(67036;"Descripci n Cargo Responsable";Text[60])
+        field(67036; "Descripci n Cargo Responsable"; Text[60])
         {
             Editable = false;
         }
-        field(67037;"Cod. evento programado";Code[20])
+        field(67037; "Cod. evento programado"; Code[20])
         {
-            TableRelation = Eventos."No." WHERE ("Tipo de Evento"=FIELD("Tipo de Evento"));
+            TableRelation = Eventos."No." WHERE("Tipo de Evento" = FIELD("Tipo de Evento"));
 
             trigger OnLookup()
             var
                 rEvExp: Record 67050;
                 pEvExp: Page67100;
-                            NewSecEvProg: Integer;
+                NewSecEvProg: Integer;
             begin
 
                 rEvExp.RESET;
@@ -778,22 +773,22 @@ table 67055 "Solicitud de Taller - Evento"
                 pEvExp.SETTABLEVIEW(rEvExp);
                 pEvExp.LOOKUPMODE(TRUE);
                 IF pEvExp.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                  pEvExp.GETRECORD(rEvExp);
+                    pEvExp.GETRECORD(rEvExp);
 
-                  IF ("Cod. evento programado" <> rEvExp."Cod. Evento") OR
-                     ("Cod. Expositor" <>   rEvExp."Cod. Expositor") OR
-                     ("Tipo de Expositor" <> rEvExp."Tipo de Expositor") THEN
-                    NewSecEvProg := ActualizaPlanif(rEvExp);
+                    IF ("Cod. evento programado" <> rEvExp."Cod. Evento") OR
+                       ("Cod. Expositor" <> rEvExp."Cod. Expositor") OR
+                       ("Tipo de Expositor" <> rEvExp."Tipo de Expositor") THEN
+                        NewSecEvProg := ActualizaPlanif(rEvExp);
 
-                  "Cod. evento programado"   := rEvExp."Cod. Evento";
-                  "Descripci n evento programado" :=  rEvExp."Descripcion Evento";
-                  "Tipo de Expositor"   := rEvExp."Tipo de Expositor";
-                  "Cod. Expositor" :=   rEvExp."Cod. Expositor";
-                  "Nombre expositor" :=  rEvExp."Nombre Expositor";
+                    "Cod. evento programado" := rEvExp."Cod. Evento";
+                    "Descripci n evento programado" := rEvExp."Descripcion Evento";
+                    "Tipo de Expositor" := rEvExp."Tipo de Expositor";
+                    "Cod. Expositor" := rEvExp."Cod. Expositor";
+                    "Nombre expositor" := rEvExp."Nombre Expositor";
 
-                   IF NewSecEvProg <> 0 THEN
-                     "Secuencia Cod. Evento Progr." := NewSecEvProg;
-                   MODIFY;
+                    IF NewSecEvProg <> 0 THEN
+                        "Secuencia Cod. Evento Progr." := NewSecEvProg;
+                    MODIFY;
 
                 END;
             end;
@@ -803,102 +798,101 @@ table 67055 "Solicitud de Taller - Evento"
                 ExpositorEvento: Record 67050;
                 rEvExp: Record 67050;
                 pEvExp: Page67100;
-                            Err0001: Label 'No existe ning n expositor para el evento programado %1.';
+                Err0001: Label 'No existe ning n expositor para el evento programado %1.';
                 CabPlanEvento: Record 67051;
                 Err002: Label 'Esta solicitud ya est  programada para el Evento: %1 Expositor: %2 (%3) Secuencia: %4';
                 NewSecEvProg: Integer;
             begin
-                IF "Cod. evento programado" <> '' THEN
-                   BEGIN
+                IF "Cod. evento programado" <> '' THEN BEGIN
                     //CabPlanEvento.RESET;
                     //CabPlanEvento.SETRANGE("No. Solicitud","No. Solicitud");
                     //IF CabPlanEvento.FINDSET THEN
                     //  ERROR(Err002, CabPlanEvento."Cod. Taller - Evento",CabPlanEvento.Expositor,CabPlanEvento."Tipo de Expositor",
                     //       CabPlanEvento.Secuencia);
 
-                    Evento.GET("Tipo de Evento","Cod. evento programado");
-                    "Descripci n evento programado":= Evento.Descripcion;
-                    VALIDATE("Tipo de Evento",Evento."Tipo de Evento");
+                    Evento.GET("Tipo de Evento", "Cod. evento programado");
+                    "Descripci n evento programado" := Evento.Descripcion;
+                    VALIDATE("Tipo de Evento", Evento."Tipo de Evento");
 
                     rEvExp.RESET;
                     rEvExp.SETRANGE(rEvExp."Cod. Evento", "Cod. evento programado");
                     rEvExp.SETRANGE(rEvExp."Tipo de Evento", "Tipo de Evento");
                     rEvExp.SETRANGE(rEvExp.Delegacion, Delegacion);
                     IF NOT rEvExp.FINDSET THEN
-                      ERROR(Err0001, "Cod. evento programado");
+                        ERROR(Err0001, "Cod. evento programado");
                     pEvExp.SETTABLEVIEW(rEvExp);
                     pEvExp.LOOKUPMODE(TRUE);
                     IF pEvExp.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                      pEvExp.GETRECORD(rEvExp);
+                        pEvExp.GETRECORD(rEvExp);
 
-                      IF ("Cod. evento programado" <> rEvExp."Cod. Evento") OR
-                         ("Cod. Expositor" <>   rEvExp."Cod. Expositor") OR
-                         ("Tipo de Expositor" <> rEvExp."Tipo de Expositor") THEN
-                        NewSecEvProg := ActualizaPlanif(rEvExp);
+                        IF ("Cod. evento programado" <> rEvExp."Cod. Evento") OR
+                           ("Cod. Expositor" <> rEvExp."Cod. Expositor") OR
+                           ("Tipo de Expositor" <> rEvExp."Tipo de Expositor") THEN
+                            NewSecEvProg := ActualizaPlanif(rEvExp);
 
-                      "Cod. evento programado"   := rEvExp."Cod. Evento";
-                      "Descripci n evento programado" :=  rEvExp."Descripcion Evento";
-                      "Tipo de Expositor"   := rEvExp."Tipo de Expositor";
-                      "Cod. Expositor" :=   rEvExp."Cod. Expositor";
-                      "Nombre expositor" :=  rEvExp."Nombre Expositor";
-                      IF NewSecEvProg <> 0 THEN
-                        "Secuencia Cod. Evento Progr." := NewSecEvProg;
-                      MODIFY;
+                        "Cod. evento programado" := rEvExp."Cod. Evento";
+                        "Descripci n evento programado" := rEvExp."Descripcion Evento";
+                        "Tipo de Expositor" := rEvExp."Tipo de Expositor";
+                        "Cod. Expositor" := rEvExp."Cod. Expositor";
+                        "Nombre expositor" := rEvExp."Nombre Expositor";
+                        IF NewSecEvProg <> 0 THEN
+                            "Secuencia Cod. Evento Progr." := NewSecEvProg;
+                        MODIFY;
                     END;
 
-                   END
+                END
                 ELSE
             end;
         }
-        field(67038;"Descripci n evento programado";Text[100])
+        field(67038; "Descripci n evento programado"; Text[100])
         {
             Editable = false;
         }
-        field(67039;"Evento dictado por (codigo)";Code[20])
+        field(67039; "Evento dictado por (codigo)"; Code[20])
         {
             TableRelation = IF (Evento dictado por (tipo)=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Evento dictado por (tipo)=CONST(Proveedor)) Vendor;
         }
-        field(67040;"Evento dictado por (nombre)";Text[80])
+        field(67040; "Evento dictado por (nombre)"; Text[80])
         {
         }
-        field(67041;"Existe evento";Boolean)
+        field(67041; "Existe evento"; Boolean)
         {
             InitValue = true;
 
             trigger OnValidate()
             begin
                 "Cod. evento" := '';
-                "Descripcion evento" :='';
+                "Descripcion evento" := '';
                 "Evento dictado por (tipo)" := 0;
                 "Evento dictado por (codigo)" := '';
                 "Evento dictado por (nombre)" := '';
             end;
         }
-        field(67042;"Evento dictado por (tipo)";Option)
+        field(67042; "Evento dictado por (tipo)"; Option)
         {
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
-        field(67043;"Grupo de Colegios";Boolean)
+        field(67043; "Grupo de Colegios"; Boolean)
         {
 
             trigger OnValidate()
             begin
-                   /*"Cod. Colegio/Grupo"             := '';
-                   "Nombre Colegio"           := '';
-                   "Direccion Colegio"        := '';
-                   "Codigo Distrito Colegio"  := '';
-                   "Nombre Distrito Colegio"  := '';
-                   "Telefono 1 Colegio"       := '';
-                   "Telefono 2 Colegio"       := '';
-                   */
+                /*"Cod. Colegio/Grupo"             := '';
+                "Nombre Colegio"           := '';
+                "Direccion Colegio"        := '';
+                "Codigo Distrito Colegio"  := '';
+                "Nombre Distrito Colegio"  := '';
+                "Telefono 1 Colegio"       := '';
+                "Telefono 2 Colegio"       := '';
+                */
 
             end;
         }
-        field(67044;"Asociacion/Grupo";Code[20])
+        field(67044; "Asociacion/Grupo"; Code[20])
         {
-            TableRelation = IF ("Cod. Colegio"=FILTER(<>'')) "Grupo - Colegios"."Cod. grupo" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = IF ("Cod. Colegio" = FILTER(<> '')) "Grupo - Colegios"."Cod. grupo" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             var
@@ -907,60 +901,60 @@ table 67055 "Solicitud de Taller - Evento"
             begin
                 //Busco los Docentes del Colegio
                 IF ("Asociacion/Grupo" <> '') THEN BEGIN
-                  rGrupoCOL.GET("Asociacion/Grupo");
-                  rGrupoCOL.CheckGrupo();
-                  wFiltroColegio := rGrupoCOL.GetColegios();
-                  CDS(wFiltroColegio);
+                    rGrupoCOL.GET("Asociacion/Grupo");
+                    rGrupoCOL.CheckGrupo();
+                    wFiltroColegio := rGrupoCOL.GetColegios();
+                    CDS(wFiltroColegio);
                 END;
             end;
         }
-        field(67045;"Usuario creaci n";Code[50])
+        field(67045; "Usuario creaci n"; Code[50])
         {
             Editable = false;
         }
-        field(67046;"Fecha Propuesta";Date)
+        field(67046; "Fecha Propuesta"; Date)
         {
         }
-        field(67047;"Fecha programada";Date)
+        field(67047; "Fecha programada"; Date)
         {
-            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE ("Cod. Taller - Evento"=FIELD("Cod. evento programado"),
-                                                                                             "Tipo de Expositor"=FIELD("Tipo de Expositor"),
-                                                                                             "Expositor"=FIELD("Cod. Expositor"),
-                                                                                             "Secuencia"=FIELD("Secuencia Cod. Evento Progr.")));
+            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. evento programado"),
+                                                                                             "Tipo de Expositor" = FIELD("Tipo de Expositor"),
+                                                                                             "Expositor" = FIELD("Cod. Expositor"),
+                                                                                             "Secuencia" = FIELD("Secuencia Cod. Evento Progr.")));
             FieldClass = FlowField;
         }
-        field(67048;"Secuencia Cod. Evento Progr.";Integer)
+        field(67048; "Secuencia Cod. Evento Progr."; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Solicitud")
+        key(Key1; "No. Solicitud")
         {
         }
-        key(Key2;"Cod. promotor","No. Solicitud")
+        key(Key2; "Cod. promotor", "No. Solicitud")
         {
         }
-        key(Key3;"Nombre promotor")
+        key(Key3; "Nombre promotor")
         {
         }
-        key(Key4;"Cod. Expositor")
+        key(Key4; "Cod. Expositor")
         {
         }
-        key(Key5;"Nombre expositor")
+        key(Key5; "Nombre expositor")
         {
         }
-        key(Key6;"Fecha Propuesta")
+        key(Key6; "Fecha Propuesta")
         {
         }
-        key(Key7;"Grupo de Negocio")
+        key(Key7; "Grupo de Negocio")
         {
         }
-        key(Key8;"Cod. Colegio")
+        key(Key8; "Cod. Colegio")
         {
         }
-        key(Key9;"Cod. promotor","Cod. Colegio")
+        key(Key9; "Cod. promotor", "Cod. Colegio")
         {
         }
     }
@@ -971,43 +965,41 @@ table 67055 "Solicitud de Taller - Evento"
 
     trigger OnInsert()
     begin
-        IF "No. Solicitud" = '' THEN
-           BEGIN
+        IF "No. Solicitud" = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Solic. T-E");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Solic. T-E",xRec."No. Series",0D,"No. Solicitud","No. Series");
-           END;
+            NoSeriesMgt.InitSeries(APSSetup."No. Serie Solic. T-E", xRec."No. Series", 0D, "No. Solicitud", "No. Series");
+        END;
 
         "Fecha Solicitud" := TODAY;
         "Usuario creaci n" := USERID;
 
         IF User.GET(USERID) THEN
-           IF User."Salespers./Purch. Code" <> '' THEN
-              VALIDATE("Cod. promotor",User."Salespers./Purch. Code");
+            IF User."Salespers./Purch. Code" <> '' THEN
+                VALIDATE("Cod. promotor", User."Salespers./Purch. Code");
     end;
 
     trigger OnModify()
     var
         rCabPlan: Record 67051;
     begin
-        IF FRBitMap.GET(Status) THEN
-           BEGIN
+        IF FRBitMap.GET(Status) THEN BEGIN
             FRBitMap.CALCFIELDS(Bitmap);
             "KPI Status" := FRBitMap.Bitmap;
-           END;
+        END;
 
         IF (Status = Status::Realizada) THEN BEGIN
-          IF rCabPlan.GET("No. Solicitud") THEN BEGIN
-            rCabPlan.Estado := rCabPlan.Estado::Realizado;
-            rCabPlan.MODIFY;
-          END;
+            IF rCabPlan.GET("No. Solicitud") THEN BEGIN
+                rCabPlan.Estado := rCabPlan.Estado::Realizado;
+                rCabPlan.MODIFY;
+            END;
         END;
 
         IF (Status = Status::Cancelada) OR (Status = Status::Rechazada) THEN BEGIN
-          IF rCabPlan.GET("No. Solicitud") THEN BEGIN
-            rCabPlan.Estado := rCabPlan.Estado::Anulado;
-            rCabPlan.MODIFY;
-          END;
+            IF rCabPlan.GET("No. Solicitud") THEN BEGIN
+                rCabPlan.Estado := rCabPlan.Estado::Anulado;
+                rCabPlan.MODIFY;
+            END;
         END;
     end;
 

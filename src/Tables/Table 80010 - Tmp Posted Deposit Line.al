@@ -24,11 +24,11 @@ table 80010 "Tmp Posted Deposit Line"
         field(4; "Account No."; Code[20])
         {
             Caption = 'Account No.';
-            TableRelation = IF (Account Type=CONST("G/L Account")) "G/L Account"
-                            ELSE IF (Account Type=CONST(Customer)) Customer
-                            ELSE IF (Account Type=CONST(Vendor)) Vendor
-                            ELSE IF (Account Type=CONST("Bank Account")) "Bank Account"
-                            ELSE IF (Account Type=CONST("IC Partner")) "IC Partner";
+            TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Account"
+            ELSE IF ("Account Type" = CONST(Customer)) Customer
+            ELSE IF ("Account Type" = CONST(Vendor)) Vendor
+            ELSE IF ("Account Type" = CONST("Bank Account")) "Bank Account"
+            ELSE IF ("Account Type" = CONST("IC Partner")) "IC Partner";
         }
         field(5; "Document Date"; Date)
         {
@@ -65,8 +65,8 @@ table 80010 "Tmp Posted Deposit Line"
         {
             Caption = 'Posting Group';
             Editable = false;
-            TableRelation = IF (Account Type=CONST(Customer)) "Customer Posting Group"
-                            ELSE IF (Account Type=CONST(Vendor)) "Vendor Posting Group";
+            TableRelation = IF ("Account Type" = CONST(Customer)) "Customer Posting Group"
+            ELSE IF ("Account Type" = CONST(Vendor)) "Vendor Posting Group";
         }
         field(12; "Shortcut Dimension 1 Code"; Code[20])
         {
@@ -92,10 +92,10 @@ table 80010 "Tmp Posted Deposit Line"
         field(16; "Entry No."; Integer)
         {
             Caption = 'Entry No.';
-            TableRelation = IF (Account Type=CONST("G/L Account")) "G/L Entry"
-                            ELSE IF (Account Type=CONST(Customer)) "Cust. Ledger Entry"
-                            ELSE IF (Account Type=CONST(Vendor)) "Vendor Ledger Entry"
-                            ELSE IF (Account Type=CONST("Bank Account")) "Bank Account Ledger Entry";
+            TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Entry"
+            ELSE IF ("Account Type" = CONST(Customer)) "Cust. Ledger Entry"
+            ELSE IF ("Account Type" = CONST(Vendor)) "Vendor Ledger Entry"
+            ELSE IF ("Account Type" = CONST("Bank Account")) "Bank Account Ledger Entry";
         }
     }
 

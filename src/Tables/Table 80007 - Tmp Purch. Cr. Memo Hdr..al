@@ -198,8 +198,8 @@ table 80007 "Tmp Purch. Cr. Memo Hdr."
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF (Bal.Account Type=CONST("G/L Account")) "G/L Account"
-                            ELSE IF (Bal. Account Type=CONST("Bank Account")) "Bank Account";
+            TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(60; Amount; Decimal)
         {

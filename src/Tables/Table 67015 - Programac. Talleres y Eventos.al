@@ -67,8 +67,8 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(10; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
-                            ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
+            TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
+            ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
         }
         field(11; "Nombre Expositor"; Text[60])
         {

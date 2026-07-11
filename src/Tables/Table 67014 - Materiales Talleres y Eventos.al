@@ -30,8 +30,8 @@ table 67014 "Materiales Talleres y Eventos"
         field(5; "Codigo Material"; Code[20])
         {
             NotBlank = true;
-            TableRelation = IF (Tipo de Material=CONST(Otro)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Materiales))
-                            ELSE IF (Tipo de Material=CONST(Producto)) Item;
+            TableRelation = IF ("Tipo de Material" = CONST(Otro)) "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Materiales))
+            ELSE IF ("Tipo de Material" = CONST(Producto)) Item;
 
             trigger OnValidate()
             begin
@@ -75,8 +75,8 @@ table 67014 "Materiales Talleres y Eventos"
         }
         field(11; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
-                            ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
+            TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
+            ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
         }
         field(12; "Tipo de Expositor"; Option)
         {
