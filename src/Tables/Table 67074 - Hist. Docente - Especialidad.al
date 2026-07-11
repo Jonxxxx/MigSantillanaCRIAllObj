@@ -26,13 +26,13 @@ table 67074 "Hist. Docente - Especialidad"
         }
         field(5; "Nombre Docente"; Text[60])
         {
-            CalcFormula = Lookup(Docentes."Full Name" WHERE(No.=FIELD(Cod. Docente)));
+            CalcFormula = Lookup(Docentes."Full Name" WHERE("No." = FIELD("Cod. Docente")));
             FieldClass = FlowField;
         }
-        field(6;"Descripcion especialidad";Text[100])
+        field(6; "Descripcion especialidad"; Text[100])
         {
         }
-        field(7;Campana;Integer)
+        field(7; Campana; Integer)
         {
             Caption = 'Campaign';
         }
@@ -40,7 +40,7 @@ table 67074 "Hist. Docente - Especialidad"
 
     keys
     {
-        key(Key1;Campana,"Cod. Docente","Cod. Nivel","Cod. grado","Cod. Especialidad")
+        key(Key1; Campana, "Cod. Docente", "Cod. Nivel", "Cod. grado", "Cod. Especialidad")
         {
         }
     }

@@ -6,7 +6,7 @@ table 67052 "Colegio - Adopciones Cab"
         field(1; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(2; "Cod. Local"; Code[20])
         {
@@ -25,7 +25,7 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(5; Turno; Code[20])
         {
@@ -33,17 +33,17 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(6; "Nombre Colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE(No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
-        field(7;"Descripcion Nivel";Text[100])
+        field(7; "Descripcion Nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(8;"Nombre Promotor";Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(9;"% Dto. Padres";Decimal)
@@ -178,7 +178,7 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(17;"Nombre editorial";Text[60])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE (Code=FIELD(Cod. Editorial)));
+            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
             Editable = false;
             FieldClass = FlowField;
         }

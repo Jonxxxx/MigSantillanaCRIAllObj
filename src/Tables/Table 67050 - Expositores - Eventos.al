@@ -6,7 +6,7 @@ table 67050 "Expositores - Eventos"
     {
         field(1; "Cod. Expositor"; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
 
             trigger OnValidate()

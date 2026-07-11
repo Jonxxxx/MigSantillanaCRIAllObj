@@ -4,7 +4,7 @@ page 56026 "Clasificacion devoluciones"
     PageType = Card;
     RefreshOnActivate = true;
     SourceTable = Table56025;
-    SourceTableView = WHERE(Closed = CONST(false));
+    SourceTableView = WHERE("Closed" = CONST(false));
 
     layout
     {
@@ -91,7 +91,7 @@ page 56026 "Clasificacion devoluciones"
             }
             part(Detalle; 56027)
             {
-                SubPageLink = No. Documento=FIELD(No.);
+                SubPageLink = No. Documento=FIELD("No.");
             }
         }
     }

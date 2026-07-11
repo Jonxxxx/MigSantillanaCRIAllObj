@@ -24,7 +24,7 @@ page 67074 "Cab. Muestras"
     SourceTable = Table5740;
     SourceTableView = SORTING(No.)
                       ORDER(Ascending)
-                      WHERE(Devolucion Consignacion=FILTER(No),
+                      WHERE("Devolucion Consignacion" = FILTER(No),
                             Pedido Consignacion=CONST(true));
 
     layout
@@ -34,17 +34,17 @@ page 67074 "Cab. Muestras"
             group(General)
             {
                 Caption = 'General';
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                     Editable = false;
 
                     trigger OnAssistEdit()
                     begin
                         IF AssistEdit(xRec) THEN
-                          CurrPage.UPDATE;
+                            CurrPage.UPDATE;
                     end;
                 }
-                field("Transfer-to Code";"Transfer-to Code")
+                field("Transfer-to Code"; "Transfer-to Code")
                 {
                     Editable = false;
 
@@ -52,56 +52,59 @@ page 67074 "Cab. Muestras"
                     begin
                         //006
                         IF Cliente.GET("Transfer-to Code") THEN
-                          IF Cliente.Blocked <> 0 THEN
-                            ERROR(Error003,Cliente.Blocked);
+                            IF Cliente.Blocked <> 0 THEN
+                                ERROR(Error003, Cliente.Blocked);
                         //006
                     end;
                 }
-                field("Transfer-from Code";"Transfer-from Code")
+                field("Transfer-from Code"; "Transfer-from Code")
                 {
                     Editable = false;
                 }
-                field("Cod. Ubicacion Alm. Origen";"Cod. Ubicacion Alm. Origen")
+                field("Cod. Ubicacion Alm. Origen"; "Cod. Ubicacion Alm. Origen")
                 {
                     Editable = false;
                 }
-                field("Desc. Ubic. Alm. Origen";"Desc. Ubic. Alm. Origen")
+                field("Desc. Ubic. Alm. Origen"; "Desc. Ubic. Alm. Origen")
                 {
                     Editable = false;
                 }
-                field("Cod. Ubicacion Alm. Destino";"Cod. Ubicacion Alm. Destino")
+                field("Cod. Ubicacion Alm. Destino"; "Cod. Ubicacion Alm. Destino")
                 {
                     Editable = false;
                 }
-                field("Desc. Ubic. Alm. Destino";"Desc. Ubic. Alm. Destino")
+                field("Desc. Ubic. Alm. Destino"; "Desc. Ubic. Alm. Destino")
                 {
                     Editable = false;
                 }
-                field(Cliente.Name;Cliente.Name)
+                field(Cliente.Name;
+                    Cliente.Name)
                 {
                     Caption = 'Nombre';
                     Editable = false;
                 }
-                field(Cliente.Address;Cliente.Address)
+                field(Cliente.Address;
+                    Cliente.Address)
                 {
                     Caption = 'Direccion';
                     Editable = false;
                 }
-                field(Cliente.City;Cliente.City)
+                field(Cliente.City;
+                    Cliente.City)
                 {
                     Caption = 'Ciudad';
                     Editable = false;
                 }
-                field("Saldo Cliente";"Saldo Cliente")
+                field("Saldo Cliente"; "Saldo Cliente")
                 {
                     Editable = false;
                 }
-                field("Importe Consignacion Orginal";"Importe Consignacion Orginal")
+                field("Importe Consignacion Orginal"; "Importe Consignacion Orginal")
                 {
                     Editable = false;
                     MultiLine = true;
                 }
-                field("Posting Date";"Posting Date")
+                field("Posting Date"; "Posting Date")
                 {
                     Editable = false;
 
@@ -110,48 +113,48 @@ page 67074 "Cab. Muestras"
                         PostingDateOnAfterValidate;
                     end;
                 }
-                field("External Document No.";"External Document No.")
+                field("External Document No."; "External Document No.")
                 {
                 }
-                field("In-Transit Code";"In-Transit Code")
-                {
-                    Editable = false;
-                }
-                field("Assigned User ID";"Assigned User ID")
+                field("In-Transit Code"; "In-Transit Code")
                 {
                     Editable = false;
                 }
-                field("Importe Consignacion";"Importe Consignacion")
+                field("Assigned User ID"; "Assigned User ID")
+                {
+                    Editable = false;
+                }
+                field("Importe Consignacion"; "Importe Consignacion")
                 {
                     Caption = 'Importe PVA';
                     Editable = false;
                 }
-                field("Cod. Vendedor";"Cod. Vendedor")
+                field("Cod. Vendedor"; "Cod. Vendedor")
                 {
                     Editable = false;
                 }
-                field("Pedido Consignacion";"Pedido Consignacion")
+                field("Pedido Consignacion"; "Pedido Consignacion")
                 {
                     Editable = false;
                 }
-                field(Status;Status)
+                field(Status; Status)
                 {
                     Enabled = false;
                 }
-                field("Limite de credito cliente";"Limite de credito cliente")
+                field("Limite de credito cliente"; "Limite de credito cliente")
                 {
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Saldo Cliente" +"Importe Consignacion Orginal";"Saldo Cliente" +"Importe Consignacion Orginal")
+                field("Saldo Cliente" +"Importe Consignacion Orginal"; "Saldo Cliente" +"Importe Consignacion Orginal")
                 {
                     Caption = 'Saldo estimado';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field(CREstimado;"Limite de credito cliente" - ("Saldo Cliente" +"Importe Consignacion Orginal"))
+                field(CREstimado; "Limite de credito cliente" - ("Saldo Cliente" + "Importe Consignacion Orginal"))
                 {
                     Caption = 'Credito Estimado';
                     Editable = false;
@@ -159,9 +162,9 @@ page 67074 "Cab. Muestras"
                     StyleExpr = TRUE;
                 }
             }
-            part(TransferLines;67076)
+            part(TransferLines; 67076)
             {
-                SubPageLink = Document No.=FIELD(No.),
+                SubPageLink = Document No.=FIELD("No."),
                               Derived From Line No.=CONST(0);
             }
             group("Transfer-from")
@@ -323,7 +326,7 @@ page 67074 "Cab. Muestras"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 5755;
-                                    RunPageLink = No.=FIELD(No.);
+                                    RunPageLink = No.=FIELD("No.");
                     ShortCutKey = 'F7';
                 }
                 action("Co&mments")
@@ -332,20 +335,20 @@ page 67074 "Cab. Muestras"
                     Image = ViewComments;
                     RunObject = Page 5750;
                                     RunPageLink = Document Type=CONST(Transfer Order),
-                                  No.=FIELD(No.);
+                                  No.=FIELD("No.");
                 }
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 5752;
-                                    RunPageLink = Transfer Order No.=FIELD(No.);
+                                    RunPageLink = Transfer Order No.=FIELD("No.");
                 }
                 action("Re&ceipts")
                 {
                     Caption = 'Re&ceipts';
                     Image = PostedReceipts;
                     RunObject = Page 5753;
-                                    RunPageLink = Transfer Order No.=FIELD(No.);
+                                    RunPageLink = Transfer Order No.=FIELD("No.");
                 }
                 action(Dimensions)
                 {
@@ -365,7 +368,7 @@ page 67074 "Cab. Muestras"
                     RunObject = Page 7341;
                                     RunPageLink = Source Type=CONST(5741),
                                   Source Subtype=CONST(0),
-                                  Source No.=FIELD(No.);
+                                  Source No.=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("&Whse. Receipts")
@@ -374,7 +377,7 @@ page 67074 "Cab. Muestras"
                     RunObject = Page 7342;
                                     RunPageLink = Source Type=CONST(5741),
                                   Source Subtype=CONST(1),
-                                  Source No.=FIELD(No.);
+                                  Source No.=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
@@ -382,7 +385,7 @@ page 67074 "Cab. Muestras"
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                                     RunPageLink = Source Document=FILTER(Inbound Transfer|Outbound Transfer),
-                                  Source No.=FIELD(No.);
+                                  Source No.=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }
             }

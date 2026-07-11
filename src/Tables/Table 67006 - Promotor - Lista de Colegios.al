@@ -24,21 +24,21 @@ table 67006 "Promotor - Lista de Colegios"
         }
         field(3; "Cod. Ruta"; Code[20])
         {
-            TableRelation = "Promotor - Rutas"."Cod. Ruta" WHERE(Cod. Promotor=FIELD(Cod. Promotor));
+            TableRelation = "Promotor - Rutas"."Cod. Ruta" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
 
             trigger OnValidate()
             begin
                 Rutas.RESET;
-                Rutas.SETRANGE("Tipo registro",Rutas."Tipo registro"::Rutas);
-                Rutas.SETRANGE(Codigo,"Cod. Ruta");
+                Rutas.SETRANGE("Tipo registro", Rutas."Tipo registro"::Rutas);
+                Rutas.SETRANGE(Codigo, "Cod. Ruta");
                 Rutas.FINDFIRST;
 
                 "Nombre Ruta" := Rutas.Descripcion;
             end;
         }
-        field(4;"Nombre Promotor";Text[60])
+        field(4; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5;"Nombre Colegio";Text[100])

@@ -11,16 +11,16 @@ page 56060 "Grupos de almacenes"
         {
             repeater(Group)
             {
-                field(Grupo;Grupo)
+                field(Grupo; Grupo)
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
             }
-            part(AlmacenesRelacionados;56061)
+            part(AlmacenesRelacionados; 56061)
             {
-                SubPageLink = Grupo=FIELD(Grupo);
+                SubPageLink = Grupo = FIELD("Grupo");
             }
         }
     }

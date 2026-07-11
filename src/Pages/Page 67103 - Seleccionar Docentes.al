@@ -72,7 +72,7 @@ page 67103 "Seleccionar Docentes"
         {
             part(; 67107)
             {
-                SubPageLink = Cod. Docente=FIELD(No.);
+                SubPageLink = Cod. Docente=FIELD("No.");
             }
         }
     }

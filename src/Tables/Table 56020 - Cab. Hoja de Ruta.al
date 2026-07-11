@@ -51,23 +51,23 @@ table 56020 "Cab. Hoja de Ruta"
         }
         field(10; Chofer; Code[20])
         {
-            TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE(Cod. Transportista=FIELD(Cod. Transportista));
+            TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE("Cod. Transportista" = FIELD("Cod. Transportista"));
 
             trigger OnValidate()
             begin
                 IF Cho.GET(Chofer) THEN
-                  "Nombre Chofer" := Cho.Nombre
+                    "Nombre Chofer" := Cho.Nombre
                 ELSE
-                  "Nombre Chofer" := '';
+                    "Nombre Chofer" := '';
             end;
         }
-        field(11;"Nombre Chofer";Text[100])
+        field(11; "Nombre Chofer"; Text[100])
         {
         }
-        field(12;Placa;Code[20])
+        field(12; Placa; Code[20])
         {
         }
-        field(13;"No. Ruta Distribucion";Code[10])
+        field(13; "No. Ruta Distribucion"; Code[10])
         {
             Caption = 'No. Ruta Distribuci n';
             Editable = true;
@@ -83,13 +83,13 @@ table 56020 "Cab. Hoja de Ruta"
                 //#29576
                 recLineaHojaRuta.SETRANGE(recLineaHojaRuta."No. Hoja Ruta", "No. Hoja Ruta");
                 IF recLineaHojaRuta.FINDSET THEN
-                  ERROR(Text001);
+                    ERROR(Text001);
 
                 IF recMaestroRuta.GET("No. Ruta Distribucion") THEN
-                  "Nombre de Ruta" := recMaestroRuta."Nombre de Ruta";
+                    "Nombre de Ruta" := recMaestroRuta."Nombre de Ruta";
             end;
         }
-        field(14;"Nombre de Ruta";Text[80])
+        field(14; "Nombre de Ruta"; Text[80])
         {
             Caption = 'Nombre de Ruta';
         }
@@ -97,7 +97,7 @@ table 56020 "Cab. Hoja de Ruta"
 
     keys
     {
-        key(Key1;"No. Hoja Ruta")
+        key(Key1; "No. Hoja Ruta")
         {
         }
     }
@@ -109,7 +109,7 @@ table 56020 "Cab. Hoja de Ruta"
     trigger OnDelete()
     begin
         LHR.RESET;
-        LHR.SETRANGE("No. Hoja Ruta","No. Hoja Ruta");
+        LHR.SETRANGE("No. Hoja Ruta", "No. Hoja Ruta");
         LHR.DELETEALL;
     end;
 
@@ -117,13 +117,12 @@ table 56020 "Cab. Hoja de Ruta"
     begin
         SalesSetup.GET;
         "Fecha Planificacion Transporte" := WORKDATE;
-        IF "No. Hoja Ruta" = '' THEN
-          BEGIN
+        IF "No. Hoja Ruta" = '' THEN BEGIN
             SalesSetup.GET;
             TestNoSeries;
-            NoSeriesMgt.InitSeries(GetNoSeriesCode,"No. Hoja Ruta",WORKDATE,"No. Hoja Ruta",
+            NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Hoja Ruta", WORKDATE, "No. Hoja Ruta",
                                     SalesSetup."No. Serie Hoja de Ruta");
-          END;
+        END;
     end;
 
     var

@@ -24,7 +24,7 @@ table 64823 Database
         }
         field(14; Company; Text[30])
         {
-            TableRelation = "Database Company"."Company Name" WHERE("Database Code" = FIELD(Code));
+            TableRelation = "Database Company"."Company Name" WHERE("Database Code" = FIELD("Code"));
             ValidateTableRelation = false;
         }
         field(15; UserID; Text[10])

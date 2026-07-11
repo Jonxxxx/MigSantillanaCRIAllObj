@@ -18,7 +18,7 @@ table 67010 "Tipos de Eventos"
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
             begin

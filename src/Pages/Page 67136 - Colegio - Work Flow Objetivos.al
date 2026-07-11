@@ -5,7 +5,7 @@ page 67136 "Colegio - Work Flow Objetivos"
     DeleteAllowed = false;
     PageType = ListPlus;
     SourceTable = Table67062;
-    SourceTableView = WHERE(Area = CONST(true));
+    SourceTableView = WHERE("Area" = CONST(true));
 
     layout
     {

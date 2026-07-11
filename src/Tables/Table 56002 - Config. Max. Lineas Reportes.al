@@ -11,12 +11,12 @@ table 56002 "Config. Max. Lineas Reportes"
         field(2; "Sales Report ID"; Integer)
         {
             Caption = 'Sales Report ID';
-            //TODO: Ver TableRelation = Object.ID WHERE (Type=CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE ("Type"=CONST(Report));
         }
         field(3; "Sales Report Name"; Text[80])
         {
-            //CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE(Object Type=CONST(Report),
-            //                                                            Object ID=FIELD(Sales Report ID)));
+            //CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE("Object Type"=CONST(Report),
+            //                                                            Object ID=FIELD("Sales Report ID")));
             Caption = 'Check Report Name';
             Editable = false;
             FieldClass = FlowField;

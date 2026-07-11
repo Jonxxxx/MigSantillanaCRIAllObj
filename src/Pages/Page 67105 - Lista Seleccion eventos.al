@@ -4,7 +4,7 @@ page 67105 "Lista Seleccion eventos"
     Caption = 'Selection of Events';
     PageType = List;
     SourceTable = Table67051;
-    SourceTableView = WHERE(Estado = CONST(" "));
+    SourceTableView = WHERE("Estado" = CONST(" "));
     UsageCategory = Lists;
 
     layout

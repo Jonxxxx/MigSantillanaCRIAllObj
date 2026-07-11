@@ -12,44 +12,44 @@ page 75004 "Imp.MdM Tabla"
         {
             group(General)
             {
-                field(Id;Id)
+                field(Id; Id)
                 {
                 }
-                field("Id Cab.";"Id Cab.")
+                field("Id Cab."; "Id Cab.")
                 {
                 }
-                field(Operacion;Operacion)
+                field(Operacion; Operacion)
                 {
                 }
-                field("Id Tabla";"Id Tabla")
+                field("Id Tabla"; "Id Tabla")
                 {
                 }
-                field(Code;Code)
+                field(Code; Code)
                 {
                 }
-                field("Code MdM";"Code MdM")
+                field("Code MdM"; "Code MdM")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field(Tipo;Tipo)
+                field(Tipo; Tipo)
                 {
                 }
-                field("Nombre Elemento";"Nombre Elemento")
+                field("Nombre Elemento"; "Nombre Elemento")
                 {
                 }
-                field(Visible;Visible)
+                field(Visible; Visible)
                 {
                 }
-                field(Procesado;Procesado)
+                field(Procesado; Procesado)
                 {
                 }
             }
-            part(Campos;75005)
+            part(Campos; 75005)
             {
                 Caption = 'Campos';
-                SubPageLink = Id Rel=FIELD(Id);
+                SubPageLink = Id Rel=FIELD("Id");
             }
         }
     }

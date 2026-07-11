@@ -57,7 +57,7 @@ page 67027 "Promotores - Ppto Vtas"
                 {
                     Caption = '&Equivalent Item card';
                     RunObject = Page "Item Card";
-                                    RunPageLink = No.=FIELD(Cod. producto equivalente);
+                                    RunPageLink = No.=FIELD("Cod. producto equivalente");
                 }
                 separator()
                 {

@@ -39,7 +39,7 @@ table 56033 "Cab. Packing Registrado"
         field(4; "Picking No."; Code[20])
         {
             Caption = 'No. Picking';
-            TableRelation = "Registered Whse. Activity Hdr."."No." WHERE(Type = FILTER(Pick));
+            TableRelation = "Registered Whse. Activity Hdr."."No." WHERE("Type" = FILTER(Pick));
 
             trigger OnValidate()
             begin
@@ -70,18 +70,18 @@ table 56033 "Cab. Packing Registrado"
         }
         field(8; "Total de Productos"; Decimal)
         {
-            CalcFormula = Sum("Contenido Cajas Packing Reg.".Cantidad WHERE(No. Packing=FIELD(No.)));
+            CalcFormula = Sum("Contenido Cajas Packing Reg.".Cantidad WHERE("No. Packing" = FIELD("No.")));
             Caption = 'Items Total';
             FieldClass = FlowField;
         }
-        field(9;"Hora Finalizacion";Time)
+        field(9; "Hora Finalizacion"; Time)
         {
             Caption = 'End Time';
         }
-        field(10;"Cantidad de Bultos";Integer)
+        field(10; "Cantidad de Bultos"; Integer)
         {
-            CalcFormula = Count("Lin. Packing Registrada" WHERE (No.=FIELD(No.),
-                                                                 No. Picking=FIELD(Picking No.)));
+            CalcFormula = Count("Lin. Packing Registrada" WHERE("No." = FIELD("No."),
+                                                                 No. Picking=FIELD("Picking No.")));
             Caption = 'Packages Qty.';
             FieldClass = FlowField;
         }
@@ -91,10 +91,10 @@ table 56033 "Cab. Packing Registrado"
         }
         field(12;"No. Pedido";Code[20])
         {
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE (Document Type=CONST(Order),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
                                                                                     Estado packing=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(true))
-                                                                                    ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(false));
+                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true))
+                                                                                    ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false));
         }
         field(20;"Tipo pedido";Option)
         {

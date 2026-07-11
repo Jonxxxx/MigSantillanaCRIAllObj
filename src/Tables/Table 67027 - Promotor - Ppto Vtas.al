@@ -7,7 +7,7 @@ table 67027 "Promotor - Ppto Vtas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -64,8 +64,8 @@ table 67027 "Promotor - Ppto Vtas"
         }
         field(10; "Cantidad Adoptada"; Decimal)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE(Cod. Promotor=FIELD(Cod. Promotor),
-                                                                                    Adopcion=FILTER(Conquista..Mantener),
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
+                                                                                    Adopcion = FILTER(Conquista .. Mantener),
                                                                                     Cod. Producto=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;

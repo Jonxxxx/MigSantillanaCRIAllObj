@@ -48,26 +48,26 @@ table 56042 "Choferes por Transportista"
         }
         field(6; "Chofer activo"; Boolean)
         {
-            CalcFormula = Lookup(Choferes.Activo WHERE(Cod. Chofer=FIELD(Cod. Chofer)));
+            CalcFormula = Lookup(Choferes.Activo WHERE("Cod. Chofer" = FIELD("Cod. Chofer")));
             FieldClass = FlowField;
         }
-        field(7;"Observaciones chofer";Text[100])
+        field(7; "Observaciones chofer"; Text[100])
         {
-            CalcFormula = Lookup(Choferes.Observaciones WHERE (Cod. Chofer=FIELD(Cod. Chofer)));
+            CalcFormula = Lookup(Choferes.Observaciones WHERE("Cod. Chofer" = FIELD("Cod. Chofer")));
             FieldClass = FlowField;
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Transportista","Cod. Chofer")
+        key(Key1; "Cod. Transportista", "Cod. Chofer")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Chofer","Nombre Chofer","Chofer activo","Observaciones chofer")
+        fieldgroup(DropDown; "Cod. Chofer", "Nombre Chofer", "Chofer activo", "Observaciones chofer")
         {
         }
     }

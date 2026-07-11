@@ -96,8 +96,8 @@ table 56023 "Lin. Hoja de Ruta Reg."
         field(18; "No. Factura"; Code[20])
         {
             Caption = 'Invoice No.';
-            TableRelation = "Sales Invoice Header" WHERE(Order No.=FIELD(No. Pedido),
-                                                          Sell-to Customer No.=FIELD(Cod. Cliente));
+            TableRelation = "Sales Invoice Header" WHERE("Order No." = FIELD("No. Pedido"),
+                                                          Sell-to Customer No.=FIELD("Cod. Cliente"));
         }
         field(19;Entregado;Boolean)
         {

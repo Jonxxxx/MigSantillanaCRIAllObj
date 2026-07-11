@@ -94,7 +94,7 @@ page 67116 "Hist Colegio - Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67001;
-                                    RunPageLink = No.=FIELD(Cod. Docente);
+                                    RunPageLink = No.=FIELD("Cod. Docente");
                 }
                 action(Adoption)
                 {

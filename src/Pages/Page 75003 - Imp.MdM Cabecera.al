@@ -12,63 +12,63 @@ page 75003 "Imp.MdM Cabecera"
         {
             group(General)
             {
-                field(Id;Id)
+                field(Id; Id)
                 {
                 }
-                field(Operacion;Operacion)
+                field(Operacion; Operacion)
                 {
                 }
-                field("Fecha Creacion";"Fecha Creacion")
+                field("Fecha Creacion"; "Fecha Creacion")
                 {
                 }
-                field(id_mensaje;id_mensaje)
+                field(id_mensaje; id_mensaje)
                 {
                 }
-                field(sistema_origen;sistema_origen)
+                field(sistema_origen; sistema_origen)
                 {
                 }
-                field(pais_origen;pais_origen)
+                field(pais_origen; pais_origen)
                 {
                 }
-                field(fecha_origen;fecha_origen)
+                field(fecha_origen; fecha_origen)
                 {
                 }
-                field(fecha;fecha)
+                field(fecha; fecha)
                 {
                 }
-                field(tipo;tipo)
+                field(tipo; tipo)
                 {
                 }
-                field(Entrada;Entrada)
+                field(Entrada; Entrada)
                 {
                 }
-                field(Traspasado;Traspasado)
+                field(Traspasado; Traspasado)
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
-                field("Estado Envio";"Estado Envio")
+                field("Estado Envio"; "Estado Envio")
                 {
                 }
-                field(Attempt;Attempt)
+                field(Attempt; Attempt)
                 {
                 }
-                field("Texto Error";"Texto Error")
+                field("Texto Error"; "Texto Error")
                 {
                     ColumnSpan = 2;
                     RowSpan = 2;
                 }
-                field("No Tablas";"No Tablas")
+                field("No Tablas"; "No Tablas")
                 {
                 }
-                field("No Tablas Procesadas";"No Tablas Procesadas")
+                field("No Tablas Procesadas"; "No Tablas Procesadas")
                 {
                 }
             }
-            part(;75017)
+            part(; 75017)
             {
-                SubPageLink = Id Cab.=FIELD(Id);
+                SubPageLink = Id Cab.=FIELD("Id");
             }
         }
     }

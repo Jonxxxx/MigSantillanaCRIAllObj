@@ -121,8 +121,8 @@ table 56026 "Lin. clas. devoluciones"
         field(12; Inventory; Decimal)
         {
             CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD("Item No."),
-                                                                  Variant Code=FIELD(Variant Filter),
-                                                                  Location Code=FIELD(Location Filter)));
+                                                                  Variant Code=FIELD("Variant Filter"),
+                                                                  Location Code=FIELD("Location Filter")));
             Caption = 'Quantity on Hand';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -131,8 +131,8 @@ table 56026 "Lin. clas. devoluciones"
         field(13;"Inventario en Consignacion";Decimal)
         {
             CalcFormula = Sum("Item Ledger Entry".Quantity WHERE ("Item No."=FIELD("Item No."),
-                                                                  Location Code=FIELD(Cod. Almacen Consignacion),
-                                                                  Posting Date=FIELD(Date Filter)));
+                                                                  Location Code=FIELD("Cod. Almacen Consignacion"),
+                                                                  Posting Date=FIELD("Date Filter")));
             DecimalPlaces = 0:5;
             FieldClass = FlowField;
         }

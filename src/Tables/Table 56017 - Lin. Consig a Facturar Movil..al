@@ -37,7 +37,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         field(7; "Location Code"; Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE(Use As In-Transit=CONST(false));
+            TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
         field(11; Description; Text[60])
         {

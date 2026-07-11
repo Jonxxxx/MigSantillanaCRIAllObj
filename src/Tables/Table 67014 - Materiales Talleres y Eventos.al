@@ -75,7 +75,7 @@ table 67014 "Materiales Talleres y Eventos"
         }
         field(11; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
         }
         field(12; "Tipo de Expositor"; Option)

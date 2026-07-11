@@ -17,13 +17,13 @@ table 56059 "Almacenes x Grupo"
         }
         field(10; "Nombre Grupo"; Text[50])
         {
-            CalcFormula = Lookup("Grupos de almacenes".Descripci n WHERE (Grupo=FIELD(Grupo)));
+            CalcFormula = Lookup("Grupos de almacenes".Descripci n WHERE ("Grupo"=FIELD("Grupo")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(11;"Nombre Almacen";Text[100])
         {
-            CalcFormula = Lookup(Location.Name WHERE (Code=FIELD(Almacen)));
+            CalcFormula = Lookup(Location.Name WHERE ("Code"=FIELD("Almacen")));
             Editable = false;
             FieldClass = FlowField;
         }

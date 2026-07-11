@@ -4,7 +4,7 @@ page 130407 "CAL Test Objects To Select"
     Editable = false;
     PageType = List;
     SourceTable = Table2000000001;
-    SourceTableView = WHERE(Type = FILTER(> TableData));
+    SourceTableView = WHERE("Type" = FILTER(> TableData));
 
     layout
     {

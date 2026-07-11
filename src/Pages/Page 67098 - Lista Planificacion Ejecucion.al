@@ -7,9 +7,9 @@ page 67098 "Lista Planificacion Ejecucion"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = Table67023;
-    SourceTableView = SORTING(Cod. Promotor,Semana)
+    SourceTableView = SORTING(Cod. Promotor, Semana)
                       ORDER(Descending)
-                      WHERE(Estado=FILTER(>' '));
+                      WHERE("Estado" = FILTER(> ' '));
 
     layout
     {
@@ -17,25 +17,25 @@ page 67098 "Lista Planificacion Ejecucion"
         {
             repeater()
             {
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Fecha Inicial";"Fecha Inicial")
+                field("Fecha Inicial"; "Fecha Inicial")
                 {
                 }
-                field("Fecha Final";"Fecha Final")
+                field("Fecha Final"; "Fecha Final")
                 {
                 }
-                field(Semana;Semana)
+                field(Semana; Semana)
                 {
                 }
-                field("Nombre promotor";"Nombre promotor")
+                field("Nombre promotor"; "Nombre promotor")
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
             }
@@ -49,10 +49,10 @@ page 67098 "Lista Planificacion Ejecucion"
     trigger OnOpenPage()
     begin
         IF gCodPromotor <> '' THEN
-           SETRANGE("Cod. Promotor",gCodPromotor);
+            SETRANGE("Cod. Promotor", gCodPromotor);
 
-        SETRANGE(Estado,1,2);
-        SETRANGE(Ano,DATE2DMY(TODAY,3));
+        SETRANGE(Estado, 1, 2);
+        SETRANGE(Ano, DATE2DMY(TODAY, 3));
     end;
 
     var

@@ -66,7 +66,7 @@ table 56202 "Historial MdE"
         {
             Caption = 'City';
             TableRelation = IF (Country/Region Code=CONST()) "Post Code".City
-                            ELSE IF (Country/Region Code=FILTER(<>'')) "Post Code".City WHERE (Country/Region Code=FIELD(Country/Region Code));
+                            ELSE IF (Country/Region Code=FILTER(<>'')) "Post Code".City WHERE ("Country/Region Code"=FIELD("Country/Region Code"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -80,7 +80,7 @@ table 56202 "Historial MdE"
         {
             Caption = 'ZIP Code';
             TableRelation = IF (Country/Region Code=CONST()) "Post Code"
-                            ELSE IF (Country/Region Code=FILTER(<>'')) "Post Code" WHERE (Country/Region Code=FIELD(Country/Region Code));
+                            ELSE IF (Country/Region Code=FILTER(<>'')) "Post Code" WHERE ("Country/Region Code"=FIELD("Country/Region Code"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -190,18 +190,18 @@ table 56202 "Historial MdE"
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
         }
         field(37;"Global Dimension 2 Code";Code[20])
         {
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
         }
         field(38;"Resource No.";Code[20])
         {
             Caption = 'Resource No.';
-            TableRelation = Resource WHERE (Type=CONST(Person));
+            TableRelation = Resource WHERE ("Type"=CONST(Person));
         }
         field(40;"Last Date Modified";Date)
         {
@@ -329,7 +329,7 @@ table 56202 "Historial MdE"
         }
         field(56235;"Valor Dimension";Code[20])
         {
-            TableRelation = "Dimension Value".Code WHERE (Dimension Code=FIELD(Cod. Dimension));
+            TableRelation = "Dimension Value".Code WHERE ("Dimension Code"=FIELD("Cod. Dimension"));
         }
         field(56236;"Fecha y hora aplicado";DateTime)
         {
@@ -340,7 +340,7 @@ table 56202 "Historial MdE"
         }
         field(56238;"Nombre completo";Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE ("No."=FIELD("No.")));
             FieldClass = FlowField;
         }
         field(56260;"Error proceso";Boolean)
@@ -371,7 +371,7 @@ table 56202 "Historial MdE"
         field(34002102;"Working Center";Code[10])
         {
             Caption = 'Working Center';
-            TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE (Empresa cotizaci n=FIELD(Company));
+            TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE ("Empresa cotizaci n"=FIELD("Company"));
         }
         field(34002103;"Full Name";Text[150])
         {

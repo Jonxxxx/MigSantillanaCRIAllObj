@@ -150,7 +150,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(11; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact."No." WHERE(Type = CONST(Company));
+            TableRelation = Contact."No." WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             var
@@ -231,7 +231,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         field(19; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Promotor=FIELD(Cod. promotor));
+                                                                  Cod. Promotor=FIELD("Cod. promotor"));
 
             trigger OnValidate()
             var
@@ -348,7 +348,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(30;"No. Asistentes Reales";Integer)
         {
-            CalcFormula = Count("Asis. Visitas Asesor/Consultor" WHERE (No. Visita=FIELD(No. Visita Asesor/Consultor)));
+            CalcFormula = Count("Asis. Visitas Asesor/Consultor" WHERE ("No. Visita"=FIELD("No. Visita Asesor/Consultor")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -443,12 +443,12 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(41;"Fecha programada";Date)
         {
-            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE (No. Visita=FIELD(No. Visita Asesor/Consultor)));
+            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE ("No. Visita"=FIELD("No. Visita Asesor/Consultor")));
             FieldClass = FlowField;
         }
         field(42;"Fecha realizada";Date)
         {
-            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Realizada" WHERE (No. Visita=FIELD(No. Visita Asesor/Consultor)));
+            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Realizada" WHERE ("No. Visita"=FIELD("No. Visita Asesor/Consultor")));
             FieldClass = FlowField;
         }
     }

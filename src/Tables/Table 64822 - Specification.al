@@ -57,60 +57,60 @@ table 64822 Specification
         }
         field(28; "Source Table No"; Integer)
         {
-            TableRelation = IF ("Source Design" = FILTER('')) AllObj."Object ID" WHERE(Object Type=CONST(Table))
-                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Source Design));
+            TableRelation = IF ("Source Design" = FILTER('')) AllObj."Object ID" WHERE("Object Type" = CONST(Table))
+            ELSE IF ("Source Design" = FILTER(<> '')) "Database Table"."Table No." WHERE("Database Code" = FIELD("Source Design"));
         }
-        field(29;"Source Table Name";Text[30])
+        field(29; "Source Table Name"; Text[30])
         {
             Editable = false;
         }
-        field(30;"Source Key";Text[80])
+        field(30; "Source Key"; Text[80])
         {
         }
-        field(31;"Source Key Fields";Text[250])
+        field(31; "Source Key Fields"; Text[250])
         {
             //This property is currently not supported
             //TestTableRelation = false;
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
         }
-        field(33;"Source Filter";Boolean)
+        field(33; "Source Filter"; Boolean)
         {
-            CalcFormula = Exist("Field Filter" WHERE (Specification No.=FIELD(No.),
-                                                      Type=CONST(Source Filter)));
+            CalcFormula = Exist("Field Filter" WHERE("Specification No." = FIELD("No."),
+                                                      Type = CONST(Source Filter)));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(35;"Source Flag Field";Integer)
+        field(35; "Source Flag Field"; Integer)
         {
         }
-        field(36;"Source Flag Field Name";Text[30])
+        field(36; "Source Flag Field Name"; Text[30])
         {
             Editable = false;
             FieldClass = Normal;
         }
-        field(37;"Source Counter Field";Integer)
+        field(37; "Source Counter Field"; Integer)
         {
         }
-        field(38;"Source Counter Name";Text[30])
+        field(38; "Source Counter Name"; Text[30])
         {
             Editable = false;
         }
-        field(39;"Dest. Design";Code[20])
+        field(39; "Dest. Design"; Code[20])
         {
             //TODO: Ver TableRelation = Database.Code;
         }
-        field(40;"Dest. Database";Code[20])
+        field(40; "Dest. Database"; Code[20])
         {
             //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(48;"Dest. Table No.";Integer)
+        field(48; "Dest. Table No."; Integer)
         {
-            TableRelation = IF (Dest. Design=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
-                            ELSE IF (Dest. Design=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Dest. Design));
+            TableRelation = IF (Dest.Design=FILTER('')) AllObj."Object ID" WHERE ("Object Type"=CONST(Table))
+                            ELSE IF (Dest. Design=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Dest. Design"));
         }
         field(49;"Dest. Table Name";Text[30])
         {
@@ -128,7 +128,7 @@ table 64822 Specification
         }
         field(53;"Dest. Filter";Boolean)
         {
-            CalcFormula = Exist("Field Filter" WHERE (Specification No.=FIELD(No.),
+            CalcFormula = Exist("Field Filter" WHERE ("Specification No."=FIELD("No."),
                                                       Type=CONST(Dest. Filter)));
             Editable = false;
             FieldClass = FlowField;
@@ -162,8 +162,8 @@ table 64822 Specification
         }
         field(62;"Action Table No.";Integer)
         {
-            TableRelation = IF ("Source Design"=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
-                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Source Design));
+            TableRelation = IF ("Source Design"=FILTER('')) AllObj."Object ID" WHERE ("Object Type"=CONST(Table))
+                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Source Design"));
         }
         field(63;"Action Table Name";Text[30])
         {
@@ -179,20 +179,20 @@ table 64822 Specification
         }
         field(67;"Sub Specifications";Boolean)
         {
-            CalcFormula = Exist(Specification WHERE (Main Spec.=FIELD(No.)));
+            CalcFormula = Exist(Specification WHERE ("Main Spec."=FIELD("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(68;"Field List";Boolean)
         {
-            CalcFormula = Exist("Field List" WHERE (Specification No.=FIELD(No.),
+            CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
                                                     List Type=CONST(Field Transfer List)));
             Editable = false;
             FieldClass = FlowField;
         }
         field(69;"Table-Linking";Boolean)
         {
-            CalcFormula = Exist("Field List" WHERE (Specification No.=FIELD(No.),
+            CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
                                                     List Type=CONST(Key Field Links)));
             Editable = false;
             FieldClass = FlowField;

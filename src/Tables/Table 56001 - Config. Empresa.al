@@ -390,7 +390,7 @@ table 56001 "Config. Empresa"
         field(91; "ID. Formato Recibo Ingreso"; Integer)
         {
             Caption = 'Income Receipt Format ID.';
-            //TODO: Ver //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(92; "Fecha Registro dia actual"; Boolean)
         {
@@ -435,25 +435,25 @@ table 56001 "Config. Empresa"
         {
             Caption = 'Sales Invoice Copy Report ID.';
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(101; "ID Reporte Copia Remision Vta."; Integer)
         {
             Caption = 'Sales Shippment Copy Report ID';
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(102; "ID Reporte Copia Nota Cr. Vta."; Integer)
         {
             Caption = 'Credit Memo Copy Report ID.';
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(103; "ID Reporte Copia Rem. Transf."; Integer)
         {
             Caption = 'Transfer Shipment Copy Report ID.';
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(104; "Productos nuevos bloqueados"; Boolean)
         {
@@ -501,7 +501,7 @@ table 56001 "Config. Empresa"
         {
             Caption = 'Income Receipt Format ID.';
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(113; "Directorio temporal etiquetas"; Text[100])
         {
@@ -511,7 +511,7 @@ table 56001 "Config. Empresa"
         field(114; "ID Reporte Comprobante Ret."; Integer)
         {
             Description = 'Per';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = FILTER(Report));
         }
         field(115; "Imprime Comprobante de Ingreso"; Boolean)
         {
@@ -785,7 +785,7 @@ table 56001 "Config. Empresa"
         field(56002; "Codeunit clas. devoluciones"; Integer)
         {
             Description = 'Clasificaci n devoluciones';
-            //TableRelation =  //TODO: Ver Object.ID WHERE(Type = CONST(Codeunit));
+            //TableRelation =  //TODO: Ver Object.ID WHERE("Type" = CONST(Codeunit));
         }
         field(56008; "Cod. divisa local MdX"; Code[10])
         {
@@ -820,12 +820,12 @@ table 56001 "Config. Empresa"
         field(56051; "ID Codeunit email packing"; Integer)
         {
             Description = '#842';
-            //TODO: Ver TableRelation = Object WHERE(Type = CONST(Codeunit));
+            //TODO: Ver TableRelation = Object WHERE("Type" = CONST(Codeunit));
         }
         field(56052; "E-mail notificaci n envio ped."; Text[30])
         {
             Description = '#842';
-            //TODO: Ver TableRelation =  Object.ID WHERE(Type = CONST(Codeunit));
+            //TODO: Ver TableRelation =  Object.ID WHERE("Type" = CONST(Codeunit));
         }
         field(56053; "Email GD Local"; Text[80])
         {

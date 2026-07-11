@@ -1,6 +1,6 @@
 page 67034 "Lista Colegio - Delegaciones"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
     SourceTable = Table67034;
@@ -12,29 +12,29 @@ page 67034 "Lista Colegio - Delegaciones"
         {
             repeater()
             {
-                field("No. Solicitud";"No. Solicitud")
+                field("No. Solicitud"; "No. Solicitud")
                 {
                     Visible = false;
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Cod. Local";"Cod. Local")
+                field("Cod. Local"; "Cod. Local")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field("Descripcion Nivel";"Descripcion Nivel")
+                field("Descripcion Nivel"; "Descripcion Nivel")
                 {
                 }
-                field("Descripcion Grado";"Descripcion Grado")
+                field("Descripcion Grado"; "Descripcion Grado")
                 {
                 }
             }
@@ -53,7 +53,7 @@ page 67034 "Lista Colegio - Delegaciones"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67047;
-                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }
             }

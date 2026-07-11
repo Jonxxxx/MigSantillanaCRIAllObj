@@ -28,7 +28,7 @@ table 67020 "Alumnos - Hijos"
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Code"; Code[20])
         {

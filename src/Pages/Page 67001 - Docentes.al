@@ -213,7 +213,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 21;
-                                    RunPageLink = No.=FIELD(No.);
+                                    RunPageLink = No.=FIELD("No.");
                 }
                 action("&Vendor Card")
                 {
@@ -223,7 +223,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 26;
-                                    RunPageLink = No.=FIELD(Cod. Proveedor);
+                                    RunPageLink = No.=FIELD("Cod. Proveedor");
                 }
                 separator()
                 {
@@ -237,7 +237,7 @@ page 67001 Docentes
                     PromotedIsBig = true;
                     RunObject = Page 124;
                                     RunPageLink = Table Name=CONST(15),
-                                  No.=FIELD(No.);
+                                  No.=FIELD("No.");
                 }
                 separator()
                 {
@@ -250,7 +250,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67045;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action(Hobbies)
                 {
@@ -260,7 +260,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67058;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 separator()
                 {
@@ -273,7 +273,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67063;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Workshop - Event")
                 {
@@ -283,7 +283,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67108;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
             }
             action("&Exponent")
@@ -291,7 +291,7 @@ page 67001 Docentes
                 Caption = '&Exponent';
                 Image = ContactReference;
                 RunObject = Page 67100;
-                                RunPageLink = Cod. Expositor=FIELD(Cod. Proveedor);
+                                RunPageLink = Cod. Expositor=FIELD("Cod. Proveedor");
             }
             group("&Historics")
             {
@@ -303,7 +303,7 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67113;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Teacher - Hobbies History")
                 {
@@ -312,7 +312,7 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67114;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Teacher - Specialties History")
                 {
@@ -321,7 +321,7 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67115;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("School - Teacher History")
                 {

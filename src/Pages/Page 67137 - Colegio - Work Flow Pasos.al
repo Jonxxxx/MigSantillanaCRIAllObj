@@ -4,7 +4,7 @@ page 67137 "Colegio - Work Flow Pasos"
     DeleteAllowed = false;
     PageType = ListPlus;
     SourceTable = Table67062;
-    SourceTableView = WHERE(Paso = CONST(true));
+    SourceTableView = WHERE("Paso" = CONST(true));
 
     layout
     {

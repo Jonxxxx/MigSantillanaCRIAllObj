@@ -23,7 +23,7 @@ table 67019 "Areas de interes padres"
         }
         field(3; "Nombre Padre"; Text[60])
         {
-            CalcFormula = Lookup(Padres."Full name" WHERE(DNI = FIELD(DNI Padre)));
+            CalcFormula = Lookup(Padres."Full name" WHERE("DNI" = FIELD("DNI Padre")));
             FieldClass = FlowField;
         }
         field(4; "Descripcion Area Interes"; Text[100])

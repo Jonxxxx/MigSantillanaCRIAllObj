@@ -34,7 +34,7 @@ table 67053 "Colegio - Adopciones Detalle"
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Cod. Local"; Code[20])
         {
@@ -90,12 +90,12 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(7;"Cod. Promotor";Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=CONST(Vendedor));
         }
         field(8;"Cod. Producto";Code[20])
         {
             NotBlank = true;
-            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE (Cod. Promotor=FIELD(Cod. Promotor));
+            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"));
 
             trigger OnValidate()
             begin
@@ -166,7 +166,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(12;"Nombre Editorial";Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE (Code=FIELD(Cod. Editorial)));
+            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
             Editable = false;
             FieldClass = FlowField;
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
@@ -177,12 +177,12 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(14;"Nombre Colegio";Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(15;"Descripcion Nivel";Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(16;"Descripcion Grado";Text[100])
@@ -227,7 +227,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(27;"Nombre Promotor";Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(28;Adopcion;Option)
@@ -450,7 +450,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(100;"Item - Item Category Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Item Category Code" WHERE (No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Item Category Code" WHERE ("No."=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(101;"Sales Price - Unit Price";Decimal)
@@ -465,12 +465,12 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(102;"Item - Product Group Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Product Group Code" WHERE (No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Product Group Code" WHERE ("No."=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103;"Item - Grado";Code[20])
         {
-            CalcFormula = Lookup(Item."Nivel Escolar (Grado)" WHERE (No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Nivel Escolar (Grado)" WHERE ("No."=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(104;"Fecha de entrega acordada";Date)

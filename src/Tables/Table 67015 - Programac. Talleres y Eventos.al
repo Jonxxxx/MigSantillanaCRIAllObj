@@ -26,7 +26,7 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(3; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             begin
@@ -36,7 +36,7 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -48,7 +48,7 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(5; "Description Tipo evento"; Text[100])
         {
-            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE(Codigo = FIELD(Tipo Evento)));
+            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE("Codigo" = FIELD("Tipo Evento")));
             FieldClass = FlowField;
         }
         field(6; "Description Taller"; Text[100])
@@ -67,7 +67,7 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(10; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
         }
         field(11; "Nombre Expositor"; Text[60])

@@ -5,7 +5,7 @@ table 67071 "Historico Promotor - Ppto Mt"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -44,8 +44,8 @@ table 67071 "Historico Promotor - Ppto Mt"
         }
         field(7; "Cantidad camp. anterior"; Decimal)
         {
-            CalcFormula = Sum("Hist. Promotor - Ppto Muestras".Quantity WHERE(Cod. Promotor=FIELD(Cod. Promotor),
-                                                                               Cod. Producto=FIELD(Cod. producto equivalente)));
+            CalcFormula = Sum("Hist. Promotor - Ppto Muestras".Quantity WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
+                                                                               Cod. Producto=FIELD("Cod. producto equivalente")));
             Caption = 'Qty. Last Campaign';
             Editable = false;
             FieldClass = FlowField;
@@ -56,7 +56,7 @@ table 67071 "Historico Promotor - Ppto Mt"
         }
         field(9;"Cantidad consumida";Decimal)
         {
-            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE (Cod. Promotor=FIELD(Cod. Promotor),
+            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"),
                                                                             Cod. Producto=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }

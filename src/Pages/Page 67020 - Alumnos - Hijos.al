@@ -92,14 +92,14 @@ page 67020 "Alumnos - Hijos"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67056;
-                                    RunPageLink = Code = FIELD(Code);
+                                    RunPageLink = Code = FIELD("Code");
                                     ShortCutKey = 'Shift+F7';
                 }
                 action("&Fathers")
                 {
                     Caption = '&Fathers';
                     RunObject = Page 67049;
-                                    RunPageLink = DNI=FIELD(DNI Padre);
+                                    RunPageLink = DNI=FIELD("DNI Padre");
                 }
                 action("&School")
                 {

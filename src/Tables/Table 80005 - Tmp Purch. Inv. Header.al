@@ -53,132 +53,132 @@ table 80005 "Tmp Purch. Inv. Header"
         field(12; "Ship-to Code"; Code[10])
         {
             Caption = 'Ship-to Code';
-            TableRelation = "Ship-to Address".Code WHERE(Customer No.=FIELD(Sell-to Customer No.));
+            TableRelation = "Ship-to Address".Code WHERE("Customer No." = FIELD("Sell-to Customer No."));
         }
-        field(13;"Ship-to Name";Text[50])
+        field(13; "Ship-to Name"; Text[50])
         {
             Caption = 'Ship-to Name';
         }
-        field(14;"Ship-to Name 2;Text[50])
+        field(14; "Ship-to Name 2;Text[50])
         {
             Caption = 'Ship-to Name 2';
         }
-        field(15;"Ship-to Address";Text[50])
+        field(15; "Ship-to Address"; Text[50])
         {
             Caption = 'Ship-to Address';
         }
-        field(16;"Ship-to Address 2;Text[50])
+        field(16; "Ship-to Address 2;Text[50])
         {
             Caption = 'Ship-to Address 2';
         }
-        field(17;"Ship-to City";Text[60])
+        field(17; "Ship-to City"; Text[60])
         {
             Caption = 'Ship-to City';
         }
-        field(18;"Ship-to Contact";Text[50])
+        field(18; "Ship-to Contact"; Text[50])
         {
             Caption = 'Ship-to Contact';
         }
-        field(19;"Order Date";Date)
+        field(19; "Order Date"; Date)
         {
             Caption = 'Order Date';
         }
-        field(20;"Posting Date";Date)
+        field(20; "Posting Date"; Date)
         {
             Caption = 'Posting Date';
         }
-        field(21;"Expected Receipt Date";Date)
+        field(21; "Expected Receipt Date"; Date)
         {
             Caption = 'Expected Receipt Date';
         }
-        field(22;"Posting Description";Text[50])
+        field(22; "Posting Description"; Text[50])
         {
             Caption = 'Posting Description';
         }
-        field(23;"Payment Terms Code";Code[10])
+        field(23; "Payment Terms Code"; Code[10])
         {
             Caption = 'Payment Terms Code';
             TableRelation = "Payment Terms";
         }
-        field(24;"Due Date";Date)
+        field(24; "Due Date"; Date)
         {
             Caption = 'Due Date';
         }
-        field(25;"Payment Discount %";Decimal)
+        field(25; "Payment Discount %"; Decimal)
         {
             Caption = 'Payment Discount %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(26;"Pmt. Discount Date";Date)
+        field(26; "Pmt. Discount Date"; Date)
         {
             Caption = 'Pmt. Discount Date';
         }
-        field(27;"Shipment Method Code";Code[10])
+        field(27; "Shipment Method Code"; Code[10])
         {
             Caption = 'Shipment Method Code';
             TableRelation = "Shipment Method";
         }
-        field(28;"Location Code";Code[10])
+        field(28; "Location Code"; Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE (Use As In-Transit=CONST(false));
+            TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
-        field(29;"Shortcut Dimension 1 Code";Code[20])
+        field(29; "Shortcut Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
-        field(30;"Shortcut Dimension 2 Code";Code[20])
+        field(30; "Shortcut Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
-        field(31;"Vendor Posting Group";Code[10])
+        field(31; "Vendor Posting Group"; Code[10])
         {
             Caption = 'Vendor Posting Group';
             Editable = false;
             TableRelation = "Vendor Posting Group";
         }
-        field(32;"Currency Code";Code[10])
+        field(32; "Currency Code"; Code[10])
         {
             Caption = 'Currency Code';
             Editable = false;
             TableRelation = Currency;
         }
-        field(33;"Currency Factor";Decimal)
+        field(33; "Currency Factor"; Decimal)
         {
             Caption = 'Currency Factor';
-            DecimalPlaces = 0:15;
+            DecimalPlaces = 0 : 15;
             MinValue = 0;
         }
-        field(35;"Prices Including VAT";Boolean)
+        field(35; "Prices Including VAT"; Boolean)
         {
             Caption = 'Prices Including VAT';
         }
-        field(37;"Invoice Disc. Code";Code[20])
+        field(37; "Invoice Disc. Code"; Code[20])
         {
             Caption = 'Invoice Disc. Code';
         }
-        field(41;"Language Code";Code[10])
+        field(41; "Language Code"; Code[10])
         {
             Caption = 'Language Code';
             TableRelation = Language;
         }
-        field(43;"Purchaser Code";Code[10])
+        field(43; "Purchaser Code"; Code[10])
         {
             Caption = 'Purchaser Code';
             TableRelation = "Salesperson/Purchaser";
         }
-        field(44;"Order No.";Code[20])
+        field(44; "Order No."; Code[20])
         {
             Caption = 'Order No.';
         }
-        field(46;Comment;Boolean)
+        field(46; Comment; Boolean)
         {
-            CalcFormula = Exist("Purch. Comment Line" WHERE (Document Type=CONST(Posted Invoice),
-                                                             No.=FIELD(No.),
+            CalcFormula = Exist("Purch. Comment Line" WHERE("Document Type" = CONST(Posted Invoice),
+                                                             No.=FIELD("No."),
                                                              Document Line No.=CONST(0)));
             Caption = 'Comment';
             Editable = false;
@@ -213,7 +213,7 @@ table 80005 "Tmp Purch. Inv. Header"
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Purch. Inv. Line".Amount WHERE (Document No.=FIELD(No.)));
+            CalcFormula = Sum("Purch. Inv. Line".Amount WHERE ("Document No."=FIELD("No.")));
             Caption = 'Amount';
             Editable = false;
             FieldClass = FlowField;
@@ -222,7 +222,7 @@ table 80005 "Tmp Purch. Inv. Header"
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Purch. Inv. Line"."Amount Including VAT" WHERE (Document No.=FIELD(No.)));
+            CalcFormula = Sum("Purch. Inv. Line"."Amount Including VAT" WHERE ("Document No."=FIELD("No.")));
             Caption = 'Amount Including Tax';
             Editable = false;
             FieldClass = FlowField;
@@ -353,7 +353,7 @@ table 80005 "Tmp Purch. Inv. Header"
         field(95;"Order Address Code";Code[10])
         {
             Caption = 'Order Address Code';
-            TableRelation = "Order Address".Code WHERE (Vendor No.=FIELD(Buy-from Vendor No.));
+            TableRelation = "Order Address".Code WHERE ("Vendor No."=FIELD("Buy-from Vendor No."));
         }
         field(97;"Entry Point";Code[10])
         {

@@ -1,6 +1,6 @@
 page 67011 "Lista Eventos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Talleres - Eventos";
     Editable = false;
     PageType = List;
@@ -13,37 +13,37 @@ page 67011 "Lista Eventos"
         {
             repeater()
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field("Tipo de Evento";"Tipo de Evento")
+                field("Tipo de Evento"; "Tipo de Evento")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field(Delegacion;Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Fecha creacion";"Fecha creacion")
+                field("Fecha creacion"; "Fecha creacion")
                 {
                 }
-                field("Capacidad de vacantes";"Capacidad de vacantes")
+                field("Capacidad de vacantes"; "Capacidad de vacantes")
                 {
                 }
-                field("Horas programadas";"Horas programadas")
+                field("Horas programadas"; "Horas programadas")
                 {
                 }
             }
         }
         area(factboxes)
         {
-            part(;67117)
+            part(; 67117)
             {
-                SubPageLink = Cod. Evento=FIELD(No.);
+                SubPageLink = Cod. Evento=FIELD("No.");
             }
         }
     }

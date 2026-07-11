@@ -10,7 +10,7 @@ table 67061 "Cab. Atenciones"
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             begin
@@ -370,7 +370,7 @@ table 67061 "Cab. Atenciones"
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
             begin
@@ -381,7 +381,7 @@ table 67061 "Cab. Atenciones"
         {
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
             begin
@@ -409,21 +409,21 @@ table 67061 "Cab. Atenciones"
         }
         field(39; Monto; Decimal)
         {
-            CalcFormula = Sum("Detalle Atenciones"."Monto total" WHERE(C digo Cab. Atenci n=FIELD(Codigo)));
+            CalcFormula = Sum("Detalle Atenciones"."Monto total" WHERE("C digo Cab. Atenci n" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
-        field(40;Atenciones;Integer)
+        field(40; Atenciones; Integer)
         {
-            CalcFormula = Count("Detalle Atenciones" WHERE (C digo Cab. Atenci n=FIELD(Codigo)));
+            CalcFormula = Count("Detalle Atenciones" WHERE("C digo Cab. Atenci n" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
-        field(41;"Fecha Recepci n Documento";Date)
+        field(41; "Fecha Recepci n Documento"; Date)
         {
         }
-        field(42;Documento;Code[20])
+        field(42; Documento; Code[20])
         {
         }
-        field(43;"Descripcion Objetivo";Text[100])
+        field(43; "Descripcion Objetivo"; Text[100])
         {
             Editable = false;
         }
@@ -431,7 +431,7 @@ table 67061 "Cab. Atenciones"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }
@@ -446,7 +446,7 @@ table 67061 "Cab. Atenciones"
         rDet: Record 67100;
     begin
         IF Estado = Estado::Realizada THEN
-          ERROR(error001);
+            ERROR(error001);
 
         rDet.SETRANGE("C digo Cab. Atenci n", Codigo);
         rDet.DELETEALL;
@@ -457,12 +457,11 @@ table 67061 "Cab. Atenciones"
         APSSetup: Record 67000;
         NoSeriesMgt: Codeunit 396;
     begin
-        IF Codigo = '' THEN
-           BEGIN
+        IF Codigo = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD(APSSetup."No. Serie Atenciones");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Atenciones",xRec."No. Series",0D,Codigo,"No. Series");
-           END;
+            NoSeriesMgt.InitSeries(APSSetup."No. Serie Atenciones", xRec."No. Series", 0D, Codigo, "No. Series");
+        END;
 
 
         "Fecha registro" := TODAY;
@@ -478,9 +477,9 @@ table 67061 "Cab. Atenciones"
         DimVal: Record 349;
         DA: Record 67002;
         PostCodeForm: Page367;
-                          formTerritory: Page429;
-                          DimMgt: Codeunit 408;
-                          DimForm: Page560;
+        formTerritory: Page429;
+        DimMgt: Codeunit 408;
+        DimForm: Page560;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin

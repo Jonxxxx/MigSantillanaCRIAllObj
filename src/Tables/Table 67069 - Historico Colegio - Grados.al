@@ -7,7 +7,7 @@ table 67069 "Historico Colegio - Grados"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(2; "Cod. Local"; Code[20])
         {

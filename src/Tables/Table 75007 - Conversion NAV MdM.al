@@ -46,14 +46,14 @@ table 75007 "Conversion NAV MdM"
         {
             TableRelation = IF ("Tipo registro" = CONST(Codigo Producto)) Item.No.
                             ELSE IF ("Tipo registro"=CONST(Idioma)) Language.Code
-                            ELSE IF ("Tipo registro"=CONST(Autor)) "Datos MDM".Codigo WHERE (Tipo=CONST(Autor))
+                            ELSE IF ("Tipo registro"=CONST(Autor)) "Datos MDM".Codigo WHERE ("Tipo"=CONST(Autor))
                             ELSE IF ("Tipo registro"=CONST(Pa s)) Country/Region.Code
                             ELSE IF ("Tipo registro"=CONST(Edici n)) Edicion.Codigo
                             ELSE IF ("Tipo registro"=CONST(Estado)) "Estado productos".C digo
-                            ELSE IF ("Tipo registro"=CONST(Nivel Escolar)) "Datos MDM".Codigo WHERE (Tipo=CONST(Grado))
+                            ELSE IF ("Tipo registro"=CONST(Nivel Escolar)) "Datos MDM".Codigo WHERE ("Tipo"=CONST(Grado))
                             ELSE IF ("Tipo registro"=CONST(Art culo Pack)) "Production BOM Line".No.
-                            ELSE IF ("Tipo registro"=CONST(Campa a)) "Datos MDM".Codigo WHERE (Tipo=CONST(Campa a))
-                            ELSE IF ("Tipo registro"=FILTER(Serie/M todo|Destino|Cuenta|Tipo Texto|Materia|Carga Horaria|Origen)) "Dimension Value".Code WHERE (Dimension Code=FIELD(Dim Code Filter));
+                            ELSE IF ("Tipo registro"=CONST(Campa a)) "Datos MDM".Codigo WHERE ("Tipo"=CONST(Campa a))
+                            ELSE IF ("Tipo registro"=FILTER(Serie/M todo|Destino|Cuenta|Tipo Texto|Materia|Carga Horaria|Origen)) "Dimension Value".Code WHERE ("Dimension Code"=FIELD("Dim Code Filter"));
 
             trigger OnValidate()
             var

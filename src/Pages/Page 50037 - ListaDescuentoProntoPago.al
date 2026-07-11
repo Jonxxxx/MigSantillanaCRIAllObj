@@ -12,7 +12,7 @@ page 50037 ListaDescuentoProntoPago
     SourceTable = Table21;
     SourceTableView = SORTING(Closed by Entry No.)
                       ORDER(Descending)
-                      WHERE(Open = CONST(false),
+                      WHERE("Open" = CONST(false),
                             Pmt. Disc. Given (LCY)=FILTER(>0),
                             No. Comprobante Fiscal DPP=FILTER(<>''));
     UsageCategory = Lists;

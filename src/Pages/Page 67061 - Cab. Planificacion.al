@@ -41,9 +41,9 @@ page 67061 "Cab. Planificacion"
             }
             part(; 67038)
             {
-                SubPageLink = Cod. Promotor=FIELD(Cod. Promotor),
-                              Semana=FIELD(Semana),
-                              Ano=FIELD(Ano);
+                SubPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
+                              Semana=FIELD("Semana"),
+                              Ano=FIELD("Ano");
             }
         }
     }

@@ -13,13 +13,13 @@ table 67117 "Productos Equiv. - Muestras"
         }
         field(3; "Nombre Producto"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE(No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Nombre Producto Docente";Text[100])
+        field(4; "Nombre Producto Docente"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD(Cod. Producto Docente)));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Producto Docente")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -27,7 +27,7 @@ table 67117 "Productos Equiv. - Muestras"
 
     keys
     {
-        key(Key1;"Cod. Producto","Cod. Producto Docente")
+        key(Key1; "Cod. Producto", "Cod. Producto Docente")
         {
         }
     }

@@ -85,7 +85,7 @@ page 67016 "Asistentes Talleres y Eventos"
                 field("Cod. Docente"; "Cod. Docente")
                 {
                     Editable = false;
-                    TableRelation = Docentes WHERE(Pertenece al CDS=CONST(true));
+                    TableRelation = Docentes WHERE("Pertenece al CDS" = CONST(true));
                 }
                 field("Nombre Docente"; "Nombre Docente")
                 {

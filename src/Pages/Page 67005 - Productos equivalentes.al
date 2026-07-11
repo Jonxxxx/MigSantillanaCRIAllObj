@@ -47,7 +47,7 @@ page 67005 "Productos equivalentes"
                 {
                     Caption = '&Equivalent Item card';
                     RunObject = Page "Item Card";
-                                    RunPageLink = No.=FIELD(Cod. Producto Anterior);
+                                    RunPageLink = No.=FIELD("Cod. Producto Anterior");
                 }
                 separator()
                 {

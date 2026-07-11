@@ -9,7 +9,7 @@ table 67049 "Padres - Aficiones"
         }
         field(2; "Nombre Padre"; Text[100])
         {
-            CalcFormula = Lookup(Padres."Full name" WHERE(DNI = FIELD(Cod. Padre)));
+            CalcFormula = Lookup(Padres."Full name" WHERE("DNI" = FIELD("Cod. Padre")));
             FieldClass = FlowField;
         }
         field(3; "Cod. aficion"; Code[20])

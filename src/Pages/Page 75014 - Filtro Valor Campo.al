@@ -95,7 +95,7 @@ page 75014 "Filtro Valor Campo"
         END
         ELSE BEGIN
             lwRecRf.OPEN(lwTableId);
-            lwFieldRf := lwRecRf.FIELD(lwFieldNo);
+            lwFieldRf := lwRecRf.FIELD("lwFieldNo");
             IF UPPERCASE(FORMAT(lwFieldRf.TYPE)) = 'BOOLEAN' THEN BEGIN
                 InsertReg(1, lwTableId, lwFieldNo, 'Sí', '');
                 InsertReg(2, lwTableId, lwFieldNo, 'No', '');
@@ -127,12 +127,12 @@ page 75014 "Filtro Valor Campo"
                         IF lwRecRf2.FINDSET THEN BEGIN
                             REPEAT
                                 lwId += 1;
-                                lwFieldRf2 := lwRecRf2.FIELD(lwIdfVal);
+                                lwFieldRf2 := lwRecRf2.FIELD("lwIdfVal");
                                 lwText := FORMAT(lwFieldRf2.VALUE);
                                 //lwText := COPYSTR(lwText, 1, MAXSTRLEN(Value));
                                 CLEAR(lwDescrpt);
                                 IF lwIdfDesc <> 0 THEN BEGIN
-                                    lwFieldRf2 := lwRecRf2.FIELD(lwIdfDesc);
+                                    lwFieldRf2 := lwRecRf2.FIELD("lwIdfDesc");
                                     lwDescrpt := FORMAT(lwFieldRf2.VALUE);
                                     lwDescrpt := COPYSTR(lwDescrpt, 1, MAXSTRLEN(Description));
                                 END;

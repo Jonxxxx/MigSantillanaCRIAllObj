@@ -116,7 +116,7 @@ table 64833 Scheduler
         }
         field(40; "Codeunit No."; Integer)
         {
-            TableRelation = AllObj."Object ID" WHERE(Object Type=CONST(Codeunit));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Codeunit));
 
             trigger OnValidate()
             begin

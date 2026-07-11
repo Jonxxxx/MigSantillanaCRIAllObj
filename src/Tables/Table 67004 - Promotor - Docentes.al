@@ -15,12 +15,12 @@ table 67004 "Promotor - Docentes"
         }
         field(3; "Nombre Docente"; Text[60])
         {
-            CalcFormula = Lookup(Docentes."Full Name" WHERE(No.=FIELD(Codigo Docente)));
+            CalcFormula = Lookup(Docentes."Full Name" WHERE("No." = FIELD("Codigo Docente")));
             FieldClass = FlowField;
         }
-        field(4;"Nombre Promotor";Text[60])
+        field(4; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5;"Nivel decision";Code[20])

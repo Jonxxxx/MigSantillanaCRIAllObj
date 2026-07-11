@@ -125,7 +125,7 @@ page 67090 "Lista Solicitudes T&E"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67064;
-                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }
             }

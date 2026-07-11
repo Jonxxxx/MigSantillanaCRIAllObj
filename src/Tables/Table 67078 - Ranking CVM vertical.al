@@ -13,7 +13,7 @@ table 67078 "Ranking CVM vertical"
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Cod. Local"; Code[20])
         {
@@ -34,7 +34,7 @@ table 67078 "Ranking CVM vertical"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -117,11 +117,11 @@ table 67078 "Ranking CVM vertical"
         field(110; Alumnado; Decimal)
         {
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD(Cod. Local),
+                                                                                    Cod. Local=FIELD("Cod. Local"),
                                                                                     Cod. Nivel=FIELD("Cod. Nivel"),
-                                                                                    Cod. Grado=FIELD(Cod. Grado),
+                                                                                    Cod. Grado=FIELD("Cod. Grado"),
                                                                                     Cod. Producto=FIELD("Cod. Producto"),
-                                                                                    Linea de negocio=FIELD(Linea de negocio)));
+                                                                                    Linea de negocio=FIELD("Linea de negocio")));
             Caption = 'Alumnado';
             FieldClass = FlowField;
         }

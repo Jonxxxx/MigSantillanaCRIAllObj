@@ -27,7 +27,7 @@ table 75004 "Imp.MdM Tabla"
         }
         field(12; Rename; Boolean)
         {
-            CalcFormula = Exist("Imp.MdM Campos" WHERE(Id Rel=FIELD(Id),
+            CalcFormula = Exist("Imp.MdM Campos" WHERE("Id Rel" = FIELD("Id"),
                                                         Renamed Val=FILTER(<>'')));
             Description = 'FlowField';
             Editable = false;

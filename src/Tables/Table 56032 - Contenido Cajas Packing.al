@@ -186,7 +186,7 @@ table 56032 "Contenido Cajas Packing"
         {
             Caption = 'Unit Of Measure Code';
             Editable = false;
-            TableRelation = "Item Unit of Measure".Code WHERE("Item No." = FIELD(No. Producto));
+            TableRelation = "Item Unit of Measure".Code WHERE("Item No." = FIELD("No. Producto"));
         }
         field(8; Cantidad; Decimal)
         {
@@ -273,8 +273,8 @@ table 56032 "Contenido Cajas Packing"
         field(10; "No. Linea Picking"; Integer)
         {
             Caption = 'Picking Line No.';
-            TableRelation = "Registered Whse. Activity Line"."Line No." WHERE(Activity Type=FILTER(Pick),
-                                                                               No.=FIELD(No. Picking),
+            TableRelation = "Registered Whse. Activity Line"."Line No." WHERE("Activity Type" = FILTER(Pick),
+                                                                               No.=FIELD("No. Picking"),
                                                                                Action Type=FILTER(Take));
 
             trigger OnValidate()
@@ -316,23 +316,23 @@ table 56032 "Contenido Cajas Packing"
         field(16;"No. Pedido";Code[20])
         {
             Caption = 'N  Pedido';
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE (Document Type=CONST(Order),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
                                                                                     Estado packing=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(true),
+                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true),
                                                                                                                                                            Estado packing=CONST(Listo))
-                                                                                                                                                           ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(false),
+                                                                                                                                                           ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false),
                                                                                                                                                                                                                                    Estado packing=CONST(Listo));
         }
         field(17;"No. Linea Pedido";Integer)
         {
             Caption = 'Order Line No.';
             NotBlank = true;
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE (Document Type=CONST(Order),
-                                                                                         Document No.=FIELD(No. Pedido),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE ("Document Type"=CONST(Order),
+                                                                                         Document No.=FIELD("No. Pedido"),
                                                                                          Type=CONST(Item))
-                                                                                         ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE (Document No.=FIELD(No. Pedido),
+                                                                                         ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"),
                                                                                                                                                                      Derived From Line No.=CONST(0))
-                                                                                                                                                                     ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE (Document No.=FIELD(No. Pedido),
+                                                                                                                                                                     ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"),
                                                                                                                                                                                                                                                   Derived From Line No.=CONST(0));
 
             trigger OnValidate()
@@ -362,8 +362,8 @@ table 56032 "Contenido Cajas Packing"
         }
         field(18;"No. Palet";Code[20])
         {
-            CalcFormula = Lookup("Lin. Packing"."No. Palet" WHERE (No.=FIELD(No. Packing),
-                                                                   No. Caja=FIELD(No. Caja)));
+            CalcFormula = Lookup("Lin. Packing"."No. Palet" WHERE ("No."=FIELD("No. Packing"),
+                                                                   No. Caja=FIELD("No. Caja")));
             Description = '#842';
             FieldClass = FlowField;
         }

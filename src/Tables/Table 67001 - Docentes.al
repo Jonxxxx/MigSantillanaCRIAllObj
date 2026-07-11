@@ -88,8 +88,8 @@ table 67001 Docentes
         }
         field(15; Comment; Boolean)
         {
-            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE(Table Name=CONST(Contact),
-                                                                  No.=FIELD(No.),
+            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
+                                                                  No.=FIELD("No."),
                                                                   Sub No.=CONST(0)));
             Caption = 'Comment';
             Editable = false;
@@ -239,7 +239,7 @@ table 67001 Docentes
             Caption = 'Sales Cycle Stage Filter';
             Enabled = false;
             FieldClass = FlowFilter;
-            TableRelation = "Sales Cycle Stage".Stage WHERE (Sales Cycle Code=FIELD(Sales Cycle Filter));
+            TableRelation = "Sales Cycle Stage".Stage WHERE ("Sales Cycle Code"=FIELD("Sales Cycle Filter"));
         }
         field(41;"To-do Status Filter";Option)
         {

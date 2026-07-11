@@ -25,7 +25,7 @@ table 67057 "Colegio - Lin. Jerarquia puest"
         field(3; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Local=FIELD(Cod. Local));
+                                                                  Cod. Local=FIELD("Cod. Local"));
         }
         field(4;"Cod. Turno";Code[20])
         {

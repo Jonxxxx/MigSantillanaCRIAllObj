@@ -40,7 +40,7 @@ table 56035 "Contenido Cajas Packing Reg."
         {
             Caption = 'Unit Of Measure Code';
             Editable = false;
-            TableRelation = "Item Unit of Measure".Code WHERE("Item No." = FIELD(No. Producto));
+            TableRelation = "Item Unit of Measure".Code WHERE("Item No." = FIELD("No. Producto"));
         }
         field(8; Cantidad; Decimal)
         {
@@ -54,8 +54,8 @@ table 56035 "Contenido Cajas Packing Reg."
         {
             Caption = 'Picking Line No.';
             NotBlank = true;
-            TableRelation = "Registered Whse. Activity Line"."Line No." WHERE(Activity Type=FILTER(Pick),
-                                                                               No.=FIELD(No. Picking),
+            TableRelation = "Registered Whse. Activity Line"."Line No." WHERE("Activity Type" = FILTER(Pick),
+                                                                               No.=FIELD("No. Picking"),
                                                                                No. Packing=FILTER(''),
                                                                                No. Caja=FILTER(''),
                                                                                No. Linea Packing=FILTER(0));
@@ -98,20 +98,20 @@ table 56035 "Contenido Cajas Packing Reg."
         field(16;"No. Pedido";Code[20])
         {
             Caption = 'N  Pedido';
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE (Document Type=CONST(Order),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
                                                                                     Estado packing=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(true))
-                                                                                    ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(false));
+                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true))
+                                                                                    ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false));
         }
         field(17;"No. Linea Pedido";Integer)
         {
             Caption = 'Order Line No.';
             NotBlank = true;
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE (Document Type=CONST(Order),
-                                                                                         Document No.=FIELD(No. Pedido),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE ("Document Type"=CONST(Order),
+                                                                                         Document No.=FIELD("No. Pedido"),
                                                                                          Type=CONST(Item))
-                                                                                         ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE (Document No.=FIELD(No. Pedido))
-                                                                                         ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE (Document No.=FIELD(No. Pedido));
+                                                                                         ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"))
+                                                                                         ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"));
 
             trigger OnValidate()
             var

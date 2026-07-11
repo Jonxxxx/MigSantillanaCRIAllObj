@@ -87,7 +87,7 @@ page 51003 "Ficha Cupon"
             }
             part(; 51004)
             {
-                SubPageLink = No. Cupon=FIELD(No. Cupon);
+                SubPageLink = No. Cupon=FIELD("No. Cupon");
                     SubPageView = SORTING(No. Cupon,Cod. Producto)
                               ORDER(Ascending);
             }
@@ -110,7 +110,7 @@ page 51003 "Ficha Cupon"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 51012;
-                RunPageLink = No. Cupon=FIELD(No. Cupon);
+                RunPageLink = No. Cupon=FIELD("No. Cupon");
                 RunPageView = SORTING(No. Lote cupon,Grupo Negocio,No. Cupon)
                               ORDER(Ascending);
             }

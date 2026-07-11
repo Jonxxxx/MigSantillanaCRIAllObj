@@ -64,11 +64,11 @@ table 67087 "Solicitud - Competencia"
         }
         field(9; "Description Santillana"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE(No.=FIELD(Cod. Libro Santillana)));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Libro Santillana")));
             Caption = 'Code pays/r gion';
             FieldClass = FlowField;
         }
-        field(10;"Nombre Editorial";Text[60])
+        field(10; "Nombre Editorial"; Text[60])
         {
             Caption = 'Code postal';
             TableRelation = "Post Code";
@@ -76,29 +76,29 @@ table 67087 "Solicitud - Competencia"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(11;Precio;Decimal)
+        field(11; Precio; Decimal)
         {
         }
-        field(12;"Carga horaria";Code[20])
+        field(12; "Carga horaria"; Code[20])
         {
             TableRelation = "Carga Horaria";
         }
-        field(13;"Tipo Ingles";Option)
+        field(13; "Tipo Ingles"; Option)
         {
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(14;"Horas a la semana";Decimal)
+        field(14; "Horas a la semana"; Decimal)
         {
         }
-        field(15;"A o Adopci n";Code[20])
+        field(15; "A o Adopci n"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Solicitud","Cod. Editorial","Cod. Libro")
+        key(Key1; "No. Solicitud", "Cod. Editorial", "Cod. Libro")
         {
         }
     }
@@ -114,19 +114,19 @@ table 67087 "Solicitud - Competencia"
     begin
 
         IF "Cod. Editorial" <> '' THEN
-          rLib.SETRANGE("Cod. Editorial", "Cod. Editorial");
+            rLib.SETRANGE("Cod. Editorial", "Cod. Editorial");
         fLib.SETTABLEVIEW(rLib);
         fLib.LOOKUPMODE(TRUE);
         IF fLib.RUNMODAL = ACTION::LookupOK THEN BEGIN
-          fLib.GETRECORD(rLib);
-          "Cod. Editorial" := rLib."Cod. Editorial";
-          "Cod. Libro" := rLib."Cod. Libro";
-          Nivel :=  rLib.Nivel;
-          Description := rLib.Description;
-          "Cod. Grado" := rLib."Cod. Grado";
-          "Carga horaria" := rLib."Carga horaria";
-          "Tipo Ingles" :=rLib."Tipo Ingles";
-          INSERT;
+            fLib.GETRECORD(rLib);
+            "Cod. Editorial" := rLib."Cod. Editorial";
+            "Cod. Libro" := rLib."Cod. Libro";
+            Nivel := rLib.Nivel;
+            Description := rLib.Description;
+            "Cod. Grado" := rLib."Cod. Grado";
+            "Carga horaria" := rLib."Carga horaria";
+            "Tipo Ingles" := rLib."Tipo Ingles";
+            INSERT;
         END;
     end;
 }

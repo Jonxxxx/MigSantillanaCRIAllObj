@@ -7,7 +7,7 @@ table 67070 "Historico Promotor - Ppto Vtas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin

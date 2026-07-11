@@ -4,7 +4,7 @@ page 67071 "Lista Programacion de eventos"
     Caption = 'Solicitud de Asistencia Técnico - Pedagógica';
     PageType = Card;
     SourceTable = Table67055;
-    SourceTableView = WHERE(Status = CONST(" "));
+    SourceTableView = WHERE("Status" = CONST(" "));
     UsageCategory = Lists;
 
     layout

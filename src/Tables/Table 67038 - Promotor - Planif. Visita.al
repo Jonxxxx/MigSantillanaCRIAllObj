@@ -8,32 +8,31 @@ table 67038 "Promotor - Planif. Visita"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Colegio"; Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE(Cod. Promotor=FIELD(Cod. Promotor));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
 
             trigger OnValidate()
             begin
                 BuscaCabecera;
                 CabPlanif.TESTFIELD(Semana);
                 Semana := CabPlanif.Semana;
-                IF "Cod. Colegio"<> '' THEN
-                   BEGIN
-                     Col.GET("Cod. Colegio");
-                     "Nombre Colegio" := Col.Name;
-                      Delegacion := Col.Delegacion;   //$001
-                   END;
+                IF "Cod. Colegio" <> '' THEN BEGIN
+                    Col.GET("Cod. Colegio");
+                    "Nombre Colegio" := Col.Name;
+                    Delegacion := Col.Delegacion;   //$001
+                END;
             end;
         }
-        field(3;Fecha;Date)
+        field(3; Fecha; Date)
         {
         }
-        field(4;"Nombre Colegio";Text[100])
+        field(4; "Nombre Colegio"; Text[100])
         {
         }
-        field(5;Estado;Option)
+        field(5; Estado; Option)
         {
             OptionCaption = ' ,Planned,Completed';
             OptionMembers = " ",Planificado,Completado;
@@ -42,40 +41,39 @@ table 67038 "Promotor - Planif. Visita"
             begin
 
 
-                IF Estado = Estado::Completado THEN
-                   BEGIN
+                IF Estado = Estado::Completado THEN BEGIN
                     TESTFIELD("Fecha Proxima Visita");
                     TESTFIELD("Estado Colegio");
-                   END;
+                END;
 
                 Fecha1.RESET;
-                Fecha1.SETRANGE("Period Type",0);
-                Fecha1.SETRANGE("Period Start","Fecha Proxima Visita");
+                Fecha1.SETRANGE("Period Type", 0);
+                Fecha1.SETRANGE("Period Start", "Fecha Proxima Visita");
                 Fecha1.FINDFIRST;
 
                 Fecha2.RESET;
-                Fecha2.SETRANGE("Period Type",1);
-                Fecha2.SETRANGE("Period Start",CALCDATE('-'+FORMAT(Fecha1."Period No."-1)+'D',Fecha1."Period Start"));
+                Fecha2.SETRANGE("Period Type", 1);
+                Fecha2.SETRANGE("Period Start", CALCDATE('-' + FORMAT(Fecha1."Period No." - 1) + 'D', Fecha1."Period Start"));
                 Fecha2.FINDFIRST;
 
                 CLEAR(CabPlanif);
-                CabPlanif.VALIDATE("Cod. Promotor","Cod. Promotor");
-                CabPlanif.VALIDATE(Fecha,Fecha2."Period Start");
-                CabPlanif.VALIDATE(Ano,DATE2DMY("Fecha Proxima Visita",3));
-                CabPlanif.VALIDATE(Semana,Fecha2."Period No.");
+                CabPlanif.VALIDATE("Cod. Promotor", "Cod. Promotor");
+                CabPlanif.VALIDATE(Fecha, Fecha2."Period Start");
+                CabPlanif.VALIDATE(Ano, DATE2DMY("Fecha Proxima Visita", 3));
+                CabPlanif.VALIDATE(Semana, Fecha2."Period No.");
                 IF CabPlanif.INSERT(TRUE) THEN;
 
                 CLEAR(PromPlanVisit);
-                PromPlanVisit.VALIDATE("Cod. Promotor","Cod. Promotor");
+                PromPlanVisit.VALIDATE("Cod. Promotor", "Cod. Promotor");
                 PromPlanVisit.Ano := CabPlanif.Ano;
                 PromPlanVisit.Semana := CabPlanif.Semana;
-                PromPlanVisit.Fecha  := CabPlanif.Fecha;
-                PromPlanVisit.VALIDATE("Cod. Colegio","Cod. Colegio");
-                PromPlanVisit.VALIDATE("Fecha Visita","Fecha Proxima Visita");
+                PromPlanVisit.Fecha := CabPlanif.Fecha;
+                PromPlanVisit.VALIDATE("Cod. Colegio", "Cod. Colegio");
+                PromPlanVisit.VALIDATE("Fecha Visita", "Fecha Proxima Visita");
                 PromPlanVisit.INSERT(TRUE);
             end;
         }
-        field(6;"Fecha Visita";Date)
+        field(6; "Fecha Visita"; Date)
         {
 
             trigger OnValidate()
@@ -86,7 +84,7 @@ table 67038 "Promotor - Planif. Visita"
                 BuscaCabecera;
                 IF ("Fecha Visita" < CabPlanif."Fecha Inicial") OR
                    ("Fecha Visita" > CabPlanif."Fecha Final") THEN
-                   ERROR(Err001,"Fecha Visita",CabPlanif.Semana);
+                    ERROR(Err001, "Fecha Visita", CabPlanif.Semana);
 
                 //$001 - Busca en la tabla fechas para evitar que la primera semana del a o aparezca como el a o anterior
                 recFechas.RESET;
@@ -96,25 +94,25 @@ table 67038 "Promotor - Planif. Visita"
                 //recFechas.SETRANGE("Period No.", Semana);
                 //IF recFechas.FINDFIRST THEN
                 IF recFechas.FINDLAST THEN
-                  Ano := DATE2DMY(recFechas."Period End", 3);
+                    Ano := DATE2DMY(recFechas."Period End", 3);
                 //$001
             end;
         }
-        field(7;"Hora Inicial Visita";Time)
+        field(7; "Hora Inicial Visita"; Time)
         {
         }
-        field(8;"Hora Final Visita";Time)
+        field(8; "Hora Final Visita"; Time)
         {
         }
-        field(9;"Fecha Proxima Visita";Date)
+        field(9; "Fecha Proxima Visita"; Date)
         {
         }
-        field(10;Comentario;Text[150])
+        field(10; Comentario; Text[150])
         {
         }
-        field(11;"Nombre Promotor";Text[60])
+        field(11; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(12;Ano;Integer)

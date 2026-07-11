@@ -76,8 +76,8 @@ table 67065 "Micro empresario"
         }
         field(38; Comment; Boolean)
         {
-            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE(Table Name=CONST(Contact),
-                                                                  No.=FIELD(No.),
+            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
+                                                                  No.=FIELD("No."),
                                                                   Sub No.=CONST(0)));
             Caption = 'Comment';
             Editable = false;
@@ -159,7 +159,7 @@ table 67065 "Micro empresario"
         field(5051;"Company No.";Code[20])
         {
             Caption = 'Company No.';
-            TableRelation = Contact WHERE (Type=CONST(Company));
+            TableRelation = Contact WHERE ("Type"=CONST(Company));
 
             trigger OnValidate()
             var

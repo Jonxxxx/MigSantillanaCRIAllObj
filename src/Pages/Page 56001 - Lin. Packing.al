@@ -71,11 +71,11 @@ page 56001 "Lin. Packing"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 56003;
-                RunPageLink = No. Packing=FIELD(No.),
-                              No. Caja=FIELD(No. Caja),
-                              No. Picking=FIELD(No. Picking),
-                              Tipo pedido=FIELD(Tipo pedido),
-                              No. Pedido=FIELD(No. Pedido);
+                RunPageLink = No. Packing=FIELD("No."),
+                              No. Caja=FIELD("No. Caja"),
+                              No. Picking=FIELD("No. Picking"),
+                              Tipo pedido=FIELD("Tipo pedido"),
+                              No. Pedido=FIELD("No. Pedido");
                 RunPageView = SORTING(No. Packing,No. Caja,No. Picking,No. Producto,No. Linea)
                               ORDER(Ascending);
                 ShortCutKey = 'Shift+Ctrl+D';

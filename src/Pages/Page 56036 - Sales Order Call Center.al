@@ -4,7 +4,7 @@ page 56036 "Sales Order Call Center"
     PageType = Document;
     RefreshOnActivate = true;
     SourceTable = Table36;
-    SourceTableView = WHERE(Document Type=FILTER(Order));
+    SourceTableView = WHERE("Document Type" = FILTER(Order));
 
     layout
     {
@@ -13,17 +13,17 @@ page 56036 "Sales Order Call Center"
             group(General)
             {
                 Caption = 'General';
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                     Importance = Promoted;
 
                     trigger OnAssistEdit()
                     begin
                         IF AssistEdit(xRec) THEN
-                          CurrPage.UPDATE;
+                            CurrPage.UPDATE;
                     end;
                 }
-                field("Sell-to Customer No.";"Sell-to Customer No.")
+                field("Sell-to Customer No."; "Sell-to Customer No.")
                 {
                     Importance = Promoted;
 
@@ -32,69 +32,69 @@ page 56036 "Sales Order Call Center"
                         SelltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Sell-to Contact No.";"Sell-to Contact No.")
+                field("Sell-to Contact No."; "Sell-to Contact No.")
                 {
                     Importance = Additional;
                 }
-                field("Sell-to Customer Name";"Sell-to Customer Name")
+                field("Sell-to Customer Name"; "Sell-to Customer Name")
                 {
                 }
-                field("Sell-to Address";"Sell-to Address")
-                {
-                    Importance = Additional;
-                }
-                field("Sell-to Address 2;"Sell-to Address 2")
+                field("Sell-to Address"; "Sell-to Address")
                 {
                     Importance = Additional;
                 }
-                field("Sell-to City";"Sell-to City")
+                field("Sell-to Address 2;"Sell -to Address 2")
+                {
+                    Importance = Additional;
+                }
+                field("Sell-to City"; "Sell-to City")
                 {
                 }
-                field("Sell-to County";"Sell-to County")
+                field("Sell-to County"; "Sell-to County")
                 {
                     Caption = 'Sell-to State / ZIP Code';
                 }
-                field("Sell-to Post Code";"Sell-to Post Code")
+                field("Sell-to Post Code"; "Sell-to Post Code")
                 {
                     Importance = Additional;
                 }
-                field("Sell-to Contact";"Sell-to Contact")
+                field("Sell-to Contact"; "Sell-to Contact")
                 {
                     Importance = Additional;
                 }
-                field("No. of Archived Versions";"No. of Archived Versions")
+                field("No. of Archived Versions"; "No. of Archived Versions")
                 {
                     Importance = Additional;
                 }
-                field("Posting Date";"Posting Date")
+                field("Posting Date"; "Posting Date")
                 {
                 }
-                field("Order Date";"Order Date")
+                field("Order Date"; "Order Date")
                 {
                     Importance = Promoted;
                 }
-                field("Shipment Date";"Shipment Date")
+                field("Shipment Date"; "Shipment Date")
                 {
                 }
-                field("Document Date";"Document Date")
+                field("Document Date"; "Document Date")
                 {
                 }
-                field("Requested Delivery Date";"Requested Delivery Date")
+                field("Requested Delivery Date"; "Requested Delivery Date")
                 {
                 }
-                field("Promised Delivery Date";"Promised Delivery Date")
-                {
-                    Importance = Additional;
-                }
-                field("Quote No.";"Quote No.")
+                field("Promised Delivery Date"; "Promised Delivery Date")
                 {
                     Importance = Additional;
                 }
-                field("External Document No.";"External Document No.")
+                field("Quote No."; "Quote No.")
+                {
+                    Importance = Additional;
+                }
+                field("External Document No."; "External Document No.")
                 {
                     Importance = Promoted;
                 }
-                field("Salesperson Code";"Salesperson Code")
+                field("Salesperson Code"; "Salesperson Code")
                 {
 
                     trigger OnValidate()
@@ -102,49 +102,49 @@ page 56036 "Sales Order Call Center"
                         SalespersonCodeOnAfterValidate;
                     end;
                 }
-                field("Campaign No.";"Campaign No.")
+                field("Campaign No."; "Campaign No.")
                 {
                     Importance = Additional;
                 }
-                field("Opportunity No.";"Opportunity No.")
+                field("Opportunity No."; "Opportunity No.")
                 {
                     Importance = Additional;
                 }
-                field("Responsibility Center";"Responsibility Center")
+                field("Responsibility Center"; "Responsibility Center")
                 {
                     Importance = Additional;
                 }
-                field("Assigned User ID";"Assigned User ID")
+                field("Assigned User ID"; "Assigned User ID")
                 {
                     Importance = Additional;
                 }
-                field("Tipo pedido";"Tipo pedido")
+                field("Tipo pedido"; "Tipo pedido")
                 {
                     Editable = false;
                 }
-                field(Status;Status)
+                field(Status; Status)
                 {
                     Importance = Promoted;
                 }
-                field("No. Comprobante Fiscal";"No. Comprobante Fiscal")
+                field("No. Comprobante Fiscal"; "No. Comprobante Fiscal")
                 {
                     Editable = false;
                 }
-                field("No. Serie NCF Facturas";"No. Serie NCF Facturas")
+                field("No. Serie NCF Facturas"; "No. Serie NCF Facturas")
                 {
                 }
-                field("VAT Registration No.";"VAT Registration No.")
+                field("VAT Registration No."; "VAT Registration No.")
                 {
                 }
             }
-            part(SalesLines;46)
+            part(SalesLines; 46)
             {
-                SubPageLink = Document No.=FIELD(No.);
+                SubPageLink = Document No.=FIELD("No.");
             }
             group(Invoicing)
             {
                 Caption = 'Invoicing';
-                field("Bill-to Customer No.";"Bill-to Customer No.")
+                field("Bill-to Customer No."; "Bill-to Customer No.")
                 {
                     Importance = Promoted;
 
@@ -153,40 +153,40 @@ page 56036 "Sales Order Call Center"
                         BilltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Location Code";"Location Code")
+                field("Location Code"; "Location Code")
                 {
                 }
-                field("Bill-to Contact No.";"Bill-to Contact No.")
-                {
-                    Importance = Additional;
-                }
-                field("Bill-to Name";"Bill-to Name")
-                {
-                }
-                field("Bill-to Address";"Bill-to Address")
+                field("Bill-to Contact No."; "Bill-to Contact No.")
                 {
                     Importance = Additional;
                 }
-                field("Bill-to Address 2;"Bill-to Address 2")
+                field("Bill-to Name"; "Bill-to Name")
+                {
+                }
+                field("Bill-to Address"; "Bill-to Address")
                 {
                     Importance = Additional;
                 }
-                field("Bill-to City";"Bill-to City")
+                field("Bill-to Address 2;"Bill -to Address 2")
+                {
+                    Importance = Additional;
+                }
+                field("Bill-to City"; "Bill-to City")
                 {
                 }
-                field("Bill-to County";"Bill-to County")
+                field("Bill-to County"; "Bill-to County")
                 {
                     Caption = 'State / ZIP Code';
                 }
-                field("Bill-to Post Code";"Bill-to Post Code")
+                field("Bill-to Post Code"; "Bill-to Post Code")
                 {
                     Importance = Additional;
                 }
-                field("Bill-to Contact";"Bill-to Contact")
+                field("Bill-to Contact"; "Bill-to Contact")
                 {
                     Importance = Additional;
                 }
-                field("Shortcut Dimension 1 Code";"Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
                 {
 
                     trigger OnValidate()
@@ -194,7 +194,7 @@ page 56036 "Sales Order Call Center"
                         ShortcutDimension1CodeOnAfterV;
                     end;
                 }
-                field("Shortcut Dimension 2 Code";"Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
                 {
 
                     trigger OnValidate()
@@ -202,104 +202,104 @@ page 56036 "Sales Order Call Center"
                         ShortcutDimension2CodeOnAfterV;
                     end;
                 }
-                field("Payment Terms Code";"Payment Terms Code")
+                field("Payment Terms Code"; "Payment Terms Code")
                 {
                     Importance = Promoted;
                 }
-                field("Due Date";"Due Date")
+                field("Due Date"; "Due Date")
                 {
                     Importance = Promoted;
                 }
-                field("Prices Including VAT";"Prices Including VAT")
+                field("Prices Including VAT"; "Prices Including VAT")
                 {
                 }
-                field("Payment Discount %";"Payment Discount %")
+                field("Payment Discount %"; "Payment Discount %")
                 {
                 }
-                field("Pmt. Discount Date";"Pmt. Discount Date")
+                field("Pmt. Discount Date"; "Pmt. Discount Date")
                 {
                 }
-                field("Payment Method Code";"Payment Method Code")
+                field("Payment Method Code"; "Payment Method Code")
                 {
                 }
-                field("Tax Liable";"Tax Liable")
-                {
-                    Importance = Promoted;
-                }
-                field("Tax Area Code";"Tax Area Code")
+                field("Tax Liable"; "Tax Liable")
                 {
                     Importance = Promoted;
                 }
-                field("Aprobado cobros";"Aprobado cobros")
+                field("Tax Area Code"; "Tax Area Code")
+                {
+                    Importance = Promoted;
+                }
+                field("Aprobado cobros"; "Aprobado cobros")
                 {
                 }
-                field("Pago recibido";"Pago recibido")
+                field("Pago recibido"; "Pago recibido")
                 {
                 }
             }
             group(Shipping)
             {
                 Caption = 'Shipping';
-                field("Ship-to Code";"Ship-to Code")
+                field("Ship-to Code"; "Ship-to Code")
                 {
                     Importance = Promoted;
                 }
-                field("Ship-to Name";"Ship-to Name")
+                field("Ship-to Name"; "Ship-to Name")
                 {
                 }
-                field("Ship-to Address";"Ship-to Address")
-                {
-                    Importance = Additional;
-                }
-                field("Ship-to Address 2;"Ship-to Address 2")
+                field("Ship-to Address"; "Ship-to Address")
                 {
                     Importance = Additional;
                 }
-                field("Ship-to City";"Ship-to City")
+                field("Ship-to Address 2;"Ship -to Address 2")
+                {
+                    Importance = Additional;
+                }
+                field("Ship-to City"; "Ship-to City")
                 {
                 }
-                field("Ship-to County";"Ship-to County")
+                field("Ship-to County"; "Ship-to County")
                 {
                     Caption = 'Ship-to State / ZIP Code';
                 }
-                field("Ship-to Post Code";"Ship-to Post Code")
+                field("Ship-to Post Code"; "Ship-to Post Code")
                 {
                     Importance = Promoted;
                 }
-                field("Ship-to Contact";"Ship-to Contact")
+                field("Ship-to Contact"; "Ship-to Contact")
                 {
                     Importance = Additional;
                 }
-                field("Ship-to UPS Zone";"Ship-to UPS Zone")
+                field("Ship-to UPS Zone"; "Ship-to UPS Zone")
                 {
                 }
-                field("Outbound Whse. Handling Time";"Outbound Whse. Handling Time")
-                {
-                    Importance = Additional;
-                }
-                field("Shipment Method Code";"Shipment Method Code")
-                {
-                }
-                field("Shipping Agent Code";"Shipping Agent Code")
+                field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
                 {
                     Importance = Additional;
                 }
-                field("Shipping Agent Service Code";"Shipping Agent Service Code")
+                field("Shipment Method Code"; "Shipment Method Code")
+                {
+                }
+                field("Shipping Agent Code"; "Shipping Agent Code")
                 {
                     Importance = Additional;
                 }
-                field("Shipping Time";"Shipping Time")
-                {
-                }
-                field("Late Order Shipping";"Late Order Shipping")
+                field("Shipping Agent Service Code"; "Shipping Agent Service Code")
                 {
                     Importance = Additional;
                 }
-                field("Package Tracking No.";"Package Tracking No.")
+                field("Shipping Time"; "Shipping Time")
+                {
+                }
+                field("Late Order Shipping"; "Late Order Shipping")
                 {
                     Importance = Additional;
                 }
-                field("Shipping Advice";"Shipping Advice")
+                field("Package Tracking No."; "Package Tracking No.")
+                {
+                    Importance = Additional;
+                }
+                field("Shipping Advice"; "Shipping Advice")
                 {
                     Importance = Promoted;
                 }
@@ -308,17 +308,17 @@ page 56036 "Sales Order Call Center"
             {
                 Caption = 'Foreign Trade';
                 Visible = false;
-                field("Currency Code";"Currency Code")
+                field("Currency Code"; "Currency Code")
                 {
                     Importance = Promoted;
 
                     trigger OnAssistEdit()
                     begin
                         CLEAR(ChangeExchangeRate);
-                        ChangeExchangeRate.SetParameter("Currency Code","Currency Factor","Posting Date");
+                        ChangeExchangeRate.SetParameter("Currency Code", "Currency Factor", "Posting Date");
                         IF ChangeExchangeRate.RUNMODAL = ACTION::OK THEN BEGIN
-                          VALIDATE("Currency Factor",ChangeExchangeRate.GetParameter);
-                          CurrPage.UPDATE;
+                            VALIDATE("Currency Factor", ChangeExchangeRate.GetParameter);
+                            CurrPage.UPDATE;
                         END;
                         CLEAR(ChangeExchangeRate);
                     end;
@@ -328,25 +328,25 @@ page 56036 "Sales Order Call Center"
                         CurrencyCodeOnAfterValidate;
                     end;
                 }
-                field("EU 3-Party Trade";"EU 3-Party Trade")
+                field("EU 3-Party Trade"; "EU 3-Party Trade")
                 {
                 }
-                field("Transaction Type";"Transaction Type")
+                field("Transaction Type"; "Transaction Type")
                 {
                 }
-                field("Transaction Specification";"Transaction Specification")
+                field("Transaction Specification"; "Transaction Specification")
                 {
                 }
-                field("Transport Method";"Transport Method")
+                field("Transport Method"; "Transport Method")
                 {
                 }
-                field("Exit Point";"Exit Point")
+                field("Exit Point"; "Exit Point")
                 {
                 }
                 field(Area;Area)
-                {
-                }
-            }
+        {
+        }
+    }
             group(Prepayment)
             {
                 Caption = 'Prepayment';
@@ -385,56 +385,56 @@ page 56036 "Sales Order Call Center"
         {
             part(;9080)
             {
-                SubPageLink = No.=FIELD(Sell-to Customer No.);
+                SubPageLink = No.=FIELD("Sell-to Customer No.");
                 Visible = true;
             }
             part(;9082)
             {
-                SubPageLink = No.=FIELD(Bill-to Customer No.);
+                SubPageLink = No.=FIELD("Bill-to Customer No.");
                 Visible = false;
             }
             part(;9084)
             {
-                SubPageLink = No.=FIELD(Sell-to Customer No.);
+                SubPageLink = No.=FIELD("Sell-to Customer No.");
                 Visible = false;
             }
             part(;9087)
             {
                 Provider = SalesLines;
-                SubPageLink = Document Type=FIELD(Document Type),
-                              Document No.=FIELD(Document No.),
-                              Line No.=FIELD(Line No.);
+                SubPageLink = Document Type=FIELD("Document Type"),
+                              Document No.=FIELD("Document No."),
+                              Line No.=FIELD("Line No.");
                 Visible = true;
             }
             part(;9089)
             {
                 Provider = SalesLines;
-                SubPageLink = No.=FIELD(No.);
+                SubPageLink = No.=FIELD("No.");
                 Visible = false;
             }
             part(;9092)
             {
                 SubPageLink = Table ID=CONST(36),
-                              Document Type=FIELD(Document Type),
-                              Document No.=FIELD(No.),
+                              Document Type=FIELD("Document Type"),
+                              Document No.=FIELD("No."),
                               Status=CONST(Open);
                 Visible = false;
             }
             part(;9108)
             {
                 Provider = SalesLines;
-                SubPageLink = No.=FIELD(No.);
+                SubPageLink = No.=FIELD("No.");
                 Visible = false;
             }
             part(;9109)
             {
                 Provider = SalesLines;
-                SubPageLink = No.=FIELD(No.);
+                SubPageLink = No.=FIELD("No.");
                 Visible = false;
             }
             part(;9081)
             {
-                SubPageLink = No.=FIELD(Bill-to Customer No.);
+                SubPageLink = No.=FIELD("Bill-to Customer No.");
                 Visible = false;
             }
             systempart(;Links)
@@ -491,7 +491,7 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Card';
                     Image = EditLines;
                     RunObject = Page 21;
-                                    RunPageLink = No.=FIELD(Sell-to Customer No.);
+                                    RunPageLink = No.=FIELD("Sell-to Customer No.");
                     ShortCutKey = 'Shift+F7';
                 }
                 action("Co&mments")
@@ -499,15 +499,15 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 67;
-                                    RunPageLink = Document Type=FIELD(Document Type),
-                                  No.=FIELD(No.),
+                                    RunPageLink = Document Type=FIELD("Document Type"),
+                                  No.=FIELD("No."),
                                   Document Line No.=CONST(0);
                 }
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 142;
-                                    RunPageLink = Order No.=FIELD(No.);
+                                    RunPageLink = Order No.=FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action(Invoices)
@@ -515,21 +515,21 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Invoices';
                     Image = Invoice;
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Order No.=FIELD(No.);
+                                    RunPageLink = Order No.=FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action("Prepa&yment Invoices")
                 {
                     Caption = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Prepayment Order No.=FIELD(No.);
+                                    RunPageLink = Prepayment Order No.=FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action("Prepayment Credi&t Memos")
                 {
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos"
-                                    RunPageLink = Prepayment Order No.=FIELD(No.);
+                                    RunPageLink = Prepayment Order No.=FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action(Dimensions)
@@ -563,8 +563,8 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Whse. Shipment Lines';
                     RunObject = Page 7341;
                                     RunPageLink = Source Type=CONST(37),
-                                  Source Subtype=FIELD(Document Type),
-                                  Source No.=FIELD(No.);
+                                  Source Subtype=FIELD("Document Type"),
+                                  Source No.=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
@@ -572,7 +572,7 @@ page 56036 "Sales Order Call Center"
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                                     RunPageLink = Source Document=CONST(Sales Order),
-                                  Source No.=FIELD(No.);
+                                  Source No.=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }
                 separator()

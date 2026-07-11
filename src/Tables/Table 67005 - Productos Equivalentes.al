@@ -13,23 +13,23 @@ table 67005 "Productos Equivalentes"
         }
         field(3; "Nombre Producto"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE(No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Nombre Producto Anterior";Text[100])
+        field(4; "Nombre Producto Anterior"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD(Cod. Producto Anterior)));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Producto Anterior")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5;"Cod. Producto Docente";Code[20])
+        field(5; "Cod. Producto Docente"; Code[20])
         {
             TableRelation = Item;
         }
-        field(6;"Nombre Producto Docenter";Text[100])
+        field(6; "Nombre Producto Docenter"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD(Cod. Producto Docente)));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Producto Docente")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -37,7 +37,7 @@ table 67005 "Productos Equivalentes"
 
     keys
     {
-        key(Key1;"Cod. Producto")
+        key(Key1; "Cod. Producto")
         {
         }
     }

@@ -74,7 +74,7 @@ page 67023 "Lista Editoras"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67024;
-                                    RunPageLink = Code = FIELD(Code);
+                                    RunPageLink = Code = FIELD("Code");
                                     ShortCutKey = 'Shift+F7';
                                     Visible = false;
                 }

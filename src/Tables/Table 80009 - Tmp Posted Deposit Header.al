@@ -46,13 +46,13 @@ table 80009 "Tmp Posted Deposit Header"
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(9; "Shortcut Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(10; "Bank Acc. Posting Group"; Code[10])
         {
@@ -90,9 +90,9 @@ table 80009 "Tmp Posted Deposit Header"
         }
         field(21; Comment; Boolean)
         {
-            CalcFormula = Exist("Bank Comment Line" WHERE(Table Name=CONST(Posted Deposit),
-                                                           Bank Account No.=FIELD(Bank Account No.),
-                                                           No.=FIELD(No.)));
+            CalcFormula = Exist("Bank Comment Line" WHERE("Table Name" = CONST(Posted Deposit),
+                                                           Bank Account No.=FIELD("Bank Account No."),
+                                                           No.=FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
@@ -101,7 +101,7 @@ table 80009 "Tmp Posted Deposit Header"
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Posted Deposit Line".Amount WHERE (Deposit No.=FIELD(No.)));
+            CalcFormula = Sum("Posted Deposit Line".Amount WHERE ("Deposit No."=FIELD("No.")));
             Caption = 'Total Deposit Lines';
             Editable = false;
             FieldClass = FlowField;

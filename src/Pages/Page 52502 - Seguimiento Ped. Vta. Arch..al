@@ -8,7 +8,7 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     SourceTable = Table5107;
     SourceTableView = SORTING(Ultima Version)
                       ORDER(Ascending)
-                      WHERE(Ultima Version=FILTER(Yes));
+                      WHERE("Ultima Version" = FILTER(Yes));
 
     layout
     {
@@ -16,52 +16,52 @@ page 52502 "Seguimiento Ped. Vta. Arch."
         {
             repeater()
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field("Posting Date";"Posting Date")
+                field("Posting Date"; "Posting Date")
                 {
                 }
-                field("Bill-to Customer No.";"Bill-to Customer No.")
+                field("Bill-to Customer No."; "Bill-to Customer No.")
                 {
                 }
-                field("Bill-to Name";"Bill-to Name")
+                field("Bill-to Name"; "Bill-to Name")
                 {
                 }
-                field("Requested Delivery Date";"Requested Delivery Date")
+                field("Requested Delivery Date"; "Requested Delivery Date")
                 {
                 }
-                field("Location Code";"Location Code")
+                field("Location Code"; "Location Code")
                 {
                 }
-                field("No. Envio de Almacen";"No. Envio de Almacen")
+                field("No. Envio de Almacen"; "No. Envio de Almacen")
                 {
                 }
-                field("No. Picking";"No. Picking")
+                field("No. Picking"; "No. Picking")
                 {
                 }
-                field("No. Picking Reg.";"No. Picking Reg.")
+                field("No. Picking Reg."; "No. Picking Reg.")
                 {
                 }
-                field("No. Packing";"No. Packing")
+                field("No. Packing"; "No. Packing")
                 {
                 }
-                field("No. Packing Reg.";"No. Packing Reg.")
+                field("No. Packing Reg."; "No. Packing Reg.")
                 {
                 }
-                field("No. Envio";"No. Envio")
+                field("No. Envio"; "No. Envio")
                 {
                 }
-                field("No. Hoja Ruta";"No. Hoja Ruta")
+                field("No. Hoja Ruta"; "No. Hoja Ruta")
                 {
                 }
-                field("No. Factura";"No. Factura")
+                field("No. Factura"; "No. Factura")
                 {
                 }
-                field("Order Date";"Order Date")
+                field("Order Date"; "Order Date")
                 {
                 }
-                field("Amount Including VAT";"Amount Including VAT")
+                field("Amount Including VAT"; "Amount Including VAT")
                 {
                 }
             }
@@ -84,12 +84,12 @@ page 52502 "Seguimiento Ped. Vta. Arch."
                     trigger OnAction()
                     begin
                         CASE "Document Type" OF
-                          "Document Type"::Order:
-                            PAGE.RUN(PAGE::"Sales Order Archive",Rec);
-                          "Document Type"::Quote:
-                            PAGE.RUN(PAGE::"Sales Quote Archive",Rec);
-                          "Document Type"::"Return Order":
-                            PAGE.RUN(PAGE::"Sales Return Order Archive",Rec);
+                            "Document Type"::Order:
+                                PAGE.RUN(PAGE::"Sales Order Archive", Rec);
+                            "Document Type"::Quote:
+                                PAGE.RUN(PAGE::"Sales Quote Archive", Rec);
+                            "Document Type"::"Return Order":
+                                PAGE.RUN(PAGE::"Sales Return Order Archive", Rec);
                         END;
                     end;
                 }
@@ -123,7 +123,7 @@ page 52502 "Seguimiento Ped. Vta. Arch."
         Error001: Label 'Date From must be specified';
         Error002: Label 'Date To Must be specified';
 
-    procedure PasarFechas(datPrmFechaIni: Date;datPrmFechaFin: Date)
+    procedure PasarFechas(datPrmFechaIni: Date; datPrmFechaFin: Date)
     begin
         FechaDesde := datPrmFechaIni;
         FechaHasta := datPrmFechaFin;
@@ -134,126 +134,123 @@ page 52502 "Seguimiento Ped. Vta. Arch."
 
         CLEAR(SH1);
         SH1.SETCURRENTKEY("Ultima Version");
-        SH1.SETRANGE("Ultima Version",TRUE);
-        SH1.SETRANGE("Posting Date",FechaDesde,FechaHasta);
-        IF SH1.FINDLAST THEN
-          BEGIN
+        SH1.SETRANGE("Ultima Version", TRUE);
+        SH1.SETRANGE("Posting Date", FechaDesde, FechaHasta);
+        IF SH1.FINDLAST THEN BEGIN
             Counter := 0;
             Window.OPEN(Text004);
             CounterTotal := SH1.COUNT;
             REPEAT
-              Counter := Counter + 1;
-              Window.UPDATE(1,SH1."No.");
-              Window.UPDATE(2,ROUND(Counter / CounterTotal * 10000,1));
-              SH.GET(SH1."Document Type",SH1."No.",SH1."Doc. No. Occurrence",SH1."Version No.");
-              SH."Ultima Version" := FALSE;
-              SH.MODIFY;
+                Counter := Counter + 1;
+                Window.UPDATE(1, SH1."No.");
+                Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
+                SH.GET(SH1."Document Type", SH1."No.", SH1."Doc. No. Occurrence", SH1."Version No.");
+                SH."Ultima Version" := FALSE;
+                SH.MODIFY;
             UNTIL SH1.NEXT = 0;
             Window.CLOSE;
-          END;
+        END;
 
         CLEAR(SH1);
-        SH1.SETRANGE("Document Type",SH."Document Type"::Order);
-        SH1.SETRANGE("Posting Date",FechaDesde,FechaHasta);
-        IF SH1.FINDSET THEN
-          BEGIN
+        SH1.SETRANGE("Document Type", SH."Document Type"::Order);
+        SH1.SETRANGE("Posting Date", FechaDesde, FechaHasta);
+        IF SH1.FINDSET THEN BEGIN
             Counter := 0;
             Window.OPEN(Text003);
             CounterTotal := SH1.COUNT;
             REPEAT
-              CLEAR(SH);
-              SH.RESET;
-              SH.SETRANGE("Document Type",SH1."Document Type");
-              SH.SETRANGE("No.",SH1."No.");
-              SH.SETRANGE("Posting Date",FechaDesde,FechaHasta);
-              IF SH.FINDLAST THEN
-                BEGIN
-                  Counter := Counter + 1;
-                  Window.UPDATE(1,SH1."No.");
-                  Window.UPDATE(2,ROUND(Counter / CounterTotal * 10000,1));
-                  //envio de almacen
-                  WHSL.RESET;
-                  WHSL.SETCURRENTKEY("No.","Source Type","Source Subtype","Source No.","Source Line No.");
-                  WHSL.SETRANGE("Source Type",37);
-                  WHSL.SETRANGE("Source No.",SH."No.");
-                  IF WHSL.FINDFIRST THEN
-                    SH."No. Envio de Almacen" := WHSL."No."
-                  ELSE
-                    SH."No. Envio de Almacen" := '';
+                CLEAR(SH);
+                SH.RESET;
+                SH.SETRANGE("Document Type", SH1."Document Type");
+                SH.SETRANGE("No.", SH1."No.");
+                SH.SETRANGE("Posting Date", FechaDesde, FechaHasta);
+                IF SH.FINDLAST THEN BEGIN
+                    Counter := Counter + 1;
+                    Window.UPDATE(1, SH1."No.");
+                    Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
+                    //envio de almacen
+                    WHSL.RESET;
+                    WHSL.SETCURRENTKEY("No.", "Source Type", "Source Subtype", "Source No.", "Source Line No.");
+                    WHSL.SETRANGE("Source Type", 37);
+                    WHSL.SETRANGE("Source No.", SH."No.");
+                    IF WHSL.FINDFIRST THEN
+                        SH."No. Envio de Almacen" := WHSL."No."
+                    ELSE
+                        SH."No. Envio de Almacen" := '';
 
-                  //Picking
-                  WHAl.RESET;
-                  WHAl.SETCURRENTKEY("Source Document","Source No.");
-                  WHAl.SETRANGE("Source Document",WHAl."Source Document"::"Sales Order");
-                  WHAl.SETRANGE("Source No.",SH."No.");
-                  IF WHAl.FINDFIRST THEN
-                    SH."No. Picking" := WHAl."No."
-                  ELSE
-                    SH."No. Picking" := '';
+                    //Picking
+                    WHAl.RESET;
+                    WHAl.SETCURRENTKEY("Source Document", "Source No.");
+                    WHAl.SETRANGE("Source Document", WHAl."Source Document"::"Sales Order");
+                    WHAl.SETRANGE("Source No.", SH."No.");
+                    IF WHAl.FINDFIRST THEN
+                        SH."No. Picking" := WHAl."No."
+                    ELSE
+                        SH."No. Picking" := '';
 
-                  //Packing Registrado
-                  CLEAR(RWAL);
-                  RWAL.SETCURRENTKEY("Source Document","Source No.");
-                  RWAL.SETRANGE("Source Document",RWAL."Source Document"::"Sales Order");
-                  RWAL.SETRANGE("Source No.",SH."No.");
-                  IF RWAL.FINDFIRST THEN
-                    SH."No. Picking Reg." := RWAL."No."
-                  ELSE
-                    SH."No. Picking Reg." := '';
+                    //Packing Registrado
+                    CLEAR(RWAL);
+                    RWAL.SETCURRENTKEY("Source Document", "Source No.");
+                    RWAL.SETRANGE("Source Document", RWAL."Source Document"::"Sales Order");
+                    RWAL.SETRANGE("Source No.", SH."No.");
+                    IF RWAL.FINDFIRST THEN
+                        SH."No. Picking Reg." := RWAL."No."
+                    ELSE
+                        SH."No. Picking Reg." := '';
 
 
-                  //Packing
-                  LP.RESET;
-                  LP.SETCURRENTKEY("No. Picking");
-                  LP.SETRANGE("No. Picking",RWAL."No.");
-                  IF LP.FINDFIRST THEN
-                    SH."No. Packing" := LP."No."
-                  ELSE
-                    SH."No. Packing" := '';
+                    //Packing
+                    LP.RESET;
+                    LP.SETCURRENTKEY("No. Picking");
+                    LP.SETRANGE("No. Picking", RWAL."No.");
+                    IF LP.FINDFIRST THEN
+                        SH."No. Packing" := LP."No."
+                    ELSE
+                        SH."No. Packing" := '';
 
-                  //Packing Registrado
-                  LPR.RESET;
-                  LPR.SETCURRENTKEY("No. Picking");
-                  LPR.SETRANGE(LPR."No. Picking",RWAL."No.");
-                  IF LPR.FINDFIRST THEN
-                    SH."No. Packing Reg." := LPR."No."
-                  ELSE
-                    SH."No. Packing Reg." := '';
-                  SH.MODIFY;
+                    //Packing Registrado
+                    LPR.RESET;
+                    LPR.SETCURRENTKEY("No. Picking");
+                    LPR.SETRANGE(LPR."No. Picking", RWAL."No.");
+                    IF LPR.FINDFIRST THEN
+                        SH."No. Packing Reg." := LPR."No."
+                    ELSE
+                        SH."No. Packing Reg." := '';
+                    SH.MODIFY;
 
-                  //Remision de venta
-                  SSH.RESET;
-                  SSH.SETCURRENTKEY("Order No.");
-                  SSH.SETRANGE("Order No.",SH."No.");
-                  IF SSH.FINDFIRST THEN
-                    SH."No. Envio" := SSH."No."
-                  ELSE
-                    SH."No. Envio" := '';
+                    //Remision de venta
+                    SSH.RESET;
+                    SSH.SETCURRENTKEY("Order No.");
+                    SSH.SETRANGE("Order No.", SH."No.");
+                    IF SSH.FINDFIRST THEN
+                        SH."No. Envio" := SSH."No."
+                    ELSE
+                        SH."No. Envio" := '';
 
-                  //Hoja de Ruta
-                  CLEAR(LHRR);
-                  LHRR.SETCURRENTKEY("No. Pedido");
-                  LHRR.SETRANGE(LHRR."No. Pedido",SH."No.");
-                  IF LHRR.FINDFIRST THEN
-                    SH."No. Hoja Ruta" := LHRR."No. Hoja Ruta";
+                    //Hoja de Ruta
+                    CLEAR(LHRR);
+                    LHRR.SETCURRENTKEY("No. Pedido");
+                    LHRR.SETRANGE(LHRR."No. Pedido", SH."No.");
+                    IF LHRR.FINDFIRST THEN
+                        SH."No. Hoja Ruta" := LHRR."No. Hoja Ruta";
 
-                  //Factura de venta
-                  SIH.RESET;
-                  SIH.SETCURRENTKEY("Order No.");
-                  SIH.SETRANGE(SIH."Order No.",SH."No.");
-                  IF SIH.FINDFIRST THEN
-                    SH."No. Factura" := SIH."No."
-                  ELSE
-                    SH."No. Factura" := '';
-                  SH."Ultima Version" := TRUE;
-                  SH.MODIFY;
-                  COMMIT
+                    //Factura de venta
+                    SIH.RESET;
+                    SIH.SETCURRENTKEY("Order No.");
+                    SIH.SETRANGE(SIH."Order No.", SH."No.");
+                    IF SIH.FINDFIRST THEN
+                        SH."No. Factura" := SIH."No."
+                    ELSE
+                        SH."No. Factura" := '';
+                    SH."Ultima Version" := TRUE;
+                    SH.MODIFY;
+                    COMMIT
                 END;
             UNTIL SH1.NEXT = 0;
             Window.CLOSE;
-          END;
+        END;
 
-        SETRANGE("Posting Date",FechaDesde,FechaHasta);
+        SETRANGE("Posting Date", FechaDesde, FechaHasta);
     end;
 }
 

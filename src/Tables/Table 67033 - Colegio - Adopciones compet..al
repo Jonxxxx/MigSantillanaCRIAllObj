@@ -26,7 +26,7 @@ table 67033 "Colegio - Adopciones compet."
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Cod. Local"; Code[20])
         {
@@ -70,7 +70,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -143,7 +143,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(12; "Nombre Editorial"; Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE(Code = FIELD(Cod. Editorial)));
+            CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             FieldClass = FlowField;
             TableRelation = "Post Code";
             ValidateTableRelation = false;
@@ -158,7 +158,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(15; "Descripcion Nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(16;"Descripcion Grado";Text[100])
@@ -169,12 +169,12 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(18;"Cantidad Alumnos";Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE (Cod. Editorial=FIELD(Cod. Editorial),
+            CalcFormula = Lookup("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
                                                                                           Cod. Colegio=FIELD("Cod. Colegio"),
-                                                                                          Cod. Local=FIELD(Cod. Local),
+                                                                                          Cod. Local=FIELD("Cod. Local"),
                                                                                           Cod. Nivel=FIELD("Cod. Nivel"),
-                                                                                          Cod. Grado=FIELD(Cod. Grado),
-                                                                                          Cod. Promotor=FIELD(Cod. Promotor),
+                                                                                          Cod. Grado=FIELD("Cod. Grado"),
+                                                                                          Cod. Promotor=FIELD("Cod. Promotor"),
                                                                                           Cod. Producto=FIELD("Cod. Producto")));
             DecimalPlaces = 0:0;
             FieldClass = FlowField;
@@ -212,7 +212,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(27;"Nombre Promotor";Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(28;Adopcion;Option)
@@ -405,7 +405,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(41;"Cod. Producto Editora";Code[20])
         {
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE (Cod. Editorial=FIELD(Cod. Editorial),
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
                                                                      Nivel=FIELD("Cod. Nivel"));
 
             trigger OnValidate()

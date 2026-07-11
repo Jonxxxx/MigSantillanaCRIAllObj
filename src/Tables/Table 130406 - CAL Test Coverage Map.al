@@ -23,23 +23,23 @@ table 130406 "CAL Test Coverage Map"
         }
         field(4; "Object Name"; Text[250])
         {
-            CalcFormula = Lookup(Object.Name WHERE(Type = FIELD(Object Type),
-                                                    ID=FIELD(Object ID)));
+            CalcFormula = Lookup(Object.Name WHERE("Type" = FIELD("Object Type"),
+                                                    ID = FIELD("Object ID")));
             Caption = 'Object Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5;"Hit by Test Codeunits";Integer)
+        field(5; "Hit by Test Codeunits"; Integer)
         {
-            CalcFormula = Count("CAL Test Coverage Map" WHERE (Object Type=FIELD(Object Type),
-                                                               Object ID=FIELD(Object ID)));
+            CalcFormula = Count("CAL Test Coverage Map" WHERE("Object Type" = FIELD("Object Type"),
+                                                               Object ID=FIELD("Object ID")));
             Caption = 'Hit by Test Codeunits';
             FieldClass = FlowField;
         }
         field(6;"Test Codeunit Name";Text[250])
         {
-            CalcFormula = Lookup(Object.Name WHERE (Type=CONST(Codeunit),
-                                                    ID=FIELD(Test Codeunit ID)));
+            CalcFormula = Lookup(Object.Name WHERE ("Type"=CONST(Codeunit),
+                                                    ID=FIELD("Test Codeunit ID")));
             Caption = 'Test Codeunit Name';
             Editable = false;
             FieldClass = FlowField;

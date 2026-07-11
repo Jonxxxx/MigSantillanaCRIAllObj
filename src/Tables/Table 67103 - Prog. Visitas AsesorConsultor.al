@@ -62,53 +62,53 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(16; "Estado Visita"; Option)
         {
-            CalcFormula = Lookup("Cab. Visita Asesor/Consultor".Estado WHERE(No. Visita Asesor/Consultor=FIELD(No. Visita)));
+            CalcFormula = Lookup("Cab. Visita Asesor/Consultor".Estado WHERE("No. Visita Asesor/Consultor" = FIELD("No. Visita")));
             Editable = false;
             FieldClass = FlowField;
             OptionCaption = 'Programada,Ejecutada';
             OptionMembers = Programada,Ejecutada;
         }
-        field(17;"Cod. Colegio";Code[20])
+        field(17; "Cod. Colegio"; Code[20])
         {
             Editable = false;
-            TableRelation = Contact."No." WHERE (Type=CONST(Company));
+            TableRelation = Contact."No." WHERE("Type" = CONST(Company));
         }
-        field(18;"Nombre Colegio";Text[100])
+        field(18; "Nombre Colegio"; Text[100])
         {
             Editable = false;
         }
-        field(19;"Fecha Realizada";Date)
+        field(19; "Fecha Realizada"; Date)
         {
         }
-        field(20;"Hora Inicio Realizada";Time)
+        field(20; "Hora Inicio Realizada"; Time)
         {
         }
-        field(21;"Hora Fin Realizada";Time)
+        field(21; "Hora Fin Realizada"; Time)
         {
         }
-        field(22;"Cod. Docente";Code[20])
+        field(22; "Cod. Docente"; Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnLookup()
             var
                 rColDoc: Record 67043;
                 pColDoc: Page67045;
-                             Cab: Record 67102;
+                Cab: Record 67102;
             begin
 
                 Cab.GET("No. Visita");
-                             Cab.TESTFIELD("Programa Seguimiento Uno a Uno",TRUE);
+                Cab.TESTFIELD("Programa Seguimiento Uno a Uno", TRUE);
 
 
-                             rColDoc.RESET;
-                             rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
-                             rColDoc.SETRANGE("Pertenece al CDS", TRUE);
-                             pColDoc.SETTABLEVIEW(rColDoc);
-                             pColDoc.LOOKUPMODE(TRUE);
-                             IF pColDoc.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                  pColDoc.GETRECORD(rColDoc);
-                  VALIDATE("Cod. Docente", rColDoc."Cod. Docente");
+                rColDoc.RESET;
+                rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                rColDoc.SETRANGE("Pertenece al CDS", TRUE);
+                pColDoc.SETTABLEVIEW(rColDoc);
+                pColDoc.LOOKUPMODE(TRUE);
+                IF pColDoc.RUNMODAL = ACTION::LookupOK THEN BEGIN
+                    pColDoc.GETRECORD(rColDoc);
+                    VALIDATE("Cod. Docente", rColDoc."Cod. Docente");
                 END;
             end;
 
@@ -118,23 +118,23 @@ table 67103 "Prog. Visitas Asesor/Consultor"
                 Cab: Record 67102;
             begin
                 Cab.GET("No. Visita");
-                Cab.TESTFIELD("Programa Seguimiento Uno a Uno",TRUE);
+                Cab.TESTFIELD("Programa Seguimiento Uno a Uno", TRUE);
 
                 IF "Cod. Docente" <> '' THEN BEGIN
-                  ColegioDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
-                  ColegioDoc.SETRANGE("Cod. Docente", "Cod. Docente");
-                  IF ColegioDoc.FINDSET THEN
-                    "Nombre Docente"  := ColegioDoc."Nombre docente";
+                    ColegioDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                    ColegioDoc.SETRANGE("Cod. Docente", "Cod. Docente");
+                    IF ColegioDoc.FINDSET THEN
+                        "Nombre Docente" := ColegioDoc."Nombre docente";
                 END
                 ELSE
-                  "Nombre Docente"  :=  '';
+                    "Nombre Docente" := '';
             end;
         }
-        field(23;"Nombre Docente";Text[100])
+        field(23; "Nombre Docente"; Text[100])
         {
             Editable = false;
         }
-        field(24;"Cod. Secci n";Code[20])
+        field(24; "Cod. Secci n"; Code[20])
         {
 
             trigger OnLookup()
@@ -142,7 +142,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
                 rColGrado: Record 67037;
                 pColGrado: Page67037;
             begin
-                
+
                 /*rColGrado.FILTERGROUP(2);
                 rColGrado.SETRANGE("Cod. Colegio","Cod. Colegio");
                 IF "Cod. Grado" <> '' THEN
@@ -163,10 +163,10 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
     keys
     {
-        key(Key1;"No. Visita","No. Linea")
+        key(Key1; "No. Visita", "No. Linea")
         {
         }
-        key(Key2;"Cod. Asesor/Consultor","Fecha Programada","No. Visita","Hora Inicio Programada","Hora Fin Programada","Delegaci n","Grupo Negocio")
+        key(Key2; "Cod. Asesor/Consultor", "Fecha Programada", "No. Visita", "Hora Inicio Programada", "Hora Fin Programada", "Delegaci n", "Grupo Negocio")
         {
         }
     }
@@ -189,25 +189,25 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         rRec.RESET;
         rRec.SETRANGE(rRec."No. Visita", "No. Visita");
         IF rRec.FINDLAST THEN
-          "No. Linea" := rRec."No. Linea" + 1
+            "No. Linea" := rRec."No. Linea" + 1
         ELSE
-          "No. Linea" := 1;
+            "No. Linea" := 1;
 
         IF "Fecha Programada" <> 0D THEN
-          IF rCab.GET("No. Visita") THEN
-            IF "Fecha Programada" < rCab."Fecha Registro" THEN
-              ERROR(STRSUBSTNO(Error001,"Fecha Programada",rCab."Fecha Registro"));
+            IF rCab.GET("No. Visita") THEN
+                IF "Fecha Programada" < rCab."Fecha Registro" THEN
+                    ERROR(STRSUBSTNO(Error001, "Fecha Programada", rCab."Fecha Registro"));
 
         IF rCab.GET("No. Visita") THEN BEGIN
-          "Tipo Asesor/Consultor"   := rCab."Tipo Asesor/Consultor";
-          "Cod. Asesor/Consultor"   := rCab."Cod. Asesor/Consultor";
-          "Nombre Asesor/Consultor" := rCab."Nombre Asesor/Consultor";
-          Delegaci n                := rCab.Delegaci n;
-          "Grupo Negocio"           := rCab."Grupo Negocio";
-          "Cod. promotor"           := rCab."Cod. promotor";
-          "Nombre promotor"         := rCab."Nombre promotor";
-          "Cod. Colegio"            := rCab."Cod. Colegio";
-          "Nombre Colegio"          := rCab."Nombre Colegio";
+            "Tipo Asesor/Consultor" := rCab."Tipo Asesor/Consultor";
+            "Cod. Asesor/Consultor" := rCab."Cod. Asesor/Consultor";
+            "Nombre Asesor/Consultor" := rCab."Nombre Asesor/Consultor";
+            Delegaci n := rCab.Delegaci n;
+            "Grupo Negocio" := rCab."Grupo Negocio";
+            "Cod. promotor" := rCab."Cod. promotor";
+            "Nombre promotor" := rCab."Nombre promotor";
+            "Cod. Colegio" := rCab."Cod. Colegio";
+            "Nombre Colegio" := rCab."Nombre Colegio";
         END;
     end;
 
@@ -223,9 +223,9 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         TESTFIELD("Hora Fin Programada");
 
         IF "Fecha Programada" <> 0D THEN
-          IF rCab.GET("No. Visita") THEN
-            IF "Fecha Programada" < rCab."Fecha Registro" THEN
-              ERROR(STRSUBSTNO(Error001,"Fecha Programada",rCab."Fecha Registro"));
+            IF rCab.GET("No. Visita") THEN
+                IF "Fecha Programada" < rCab."Fecha Registro" THEN
+                    ERROR(STRSUBSTNO(Error001, "Fecha Programada", rCab."Fecha Registro"));
     end;
 }
 

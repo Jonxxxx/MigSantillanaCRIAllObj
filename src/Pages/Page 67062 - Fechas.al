@@ -3,7 +3,7 @@ page 67062 Fechas
     Editable = false;
     PageType = ListPlus;
     SourceTable = Table2000000007;
-    SourceTableView = WHERE(Period Type=CONST(Week));
+    SourceTableView = WHERE("Period Type" = CONST(Week));
 
     layout
     {
@@ -11,17 +11,17 @@ page 67062 Fechas
         {
             repeater(General)
             {
-                field("Period Type";"Period Type")
+                field("Period Type"; "Period Type")
                 {
                 }
-                field("Period Start";"Period Start")
+                field("Period Start"; "Period Start")
                 {
                 }
-                field(NORMALDATE("Period End");NORMALDATE("Period End"))
+                field(NORMALDATE("Period End"); NORMALDATE("Period End"))
                 {
                     Caption = 'Period End';
                 }
-                field("Period No.";"Period No.")
+                field("Period No."; "Period No.")
                 {
                 }
             }

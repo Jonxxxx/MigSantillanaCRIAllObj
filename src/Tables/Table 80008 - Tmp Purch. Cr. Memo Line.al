@@ -38,7 +38,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(7;"Location Code";Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE (Use As In-Transit=CONST(false));
+            TableRelation = Location WHERE ("Use As In-Transit"=CONST(false));
         }
         field(8;"Posting Group";Code[10])
         {
@@ -149,13 +149,13 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
         }
         field(41;"Shortcut Dimension 2 Code";Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
         }
         field(45;"Job No.";Code[20])
         {
@@ -213,7 +213,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(80;"Attached to Line No.";Integer)
         {
             Caption = 'Attached to Line No.';
-            TableRelation = "Purch. Cr. Memo Line"."Line No." WHERE (Document No.=FIELD(Document No.));
+            TableRelation = "Purch. Cr. Memo Line"."Line No." WHERE ("Document No."=FIELD("Document No."));
         }
         field(81;"Entry Point";Code[10])
         {
@@ -261,15 +261,15 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(97;"Blanket Order No.";Code[20])
         {
             Caption = 'Blanket Order No.';
-            TableRelation = "Purchase Header"."No." WHERE (Document Type=CONST(Blanket Order));
+            TableRelation = "Purchase Header"."No." WHERE ("Document Type"=CONST(Blanket Order));
             //This property is currently not supported
             //TestTableRelation = false;
         }
         field(98;"Blanket Order Line No.";Integer)
         {
             Caption = 'Blanket Order Line No.';
-            TableRelation = "Purchase Line"."Line No." WHERE (Document Type=CONST(Blanket Order),
-                                                              Document No.=FIELD(Blanket Order No.));
+            TableRelation = "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
+                                                              Document No.=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -337,7 +337,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(1001;"Job Task No.";Code[20])
         {
             Caption = 'Job Task No.';
-            TableRelation = "Job Task"."Job Task No." WHERE (Job No.=FIELD(Job No.));
+            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
         }
         field(1002;"Job Line Type";Option)
         {
@@ -415,14 +415,14 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(5402;"Variant Code";Code[10])
         {
             Caption = 'Variant Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD(No.));
+            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD("No."));
         }
         field(5403;"Bin Code";Code[20])
         {
             Caption = 'Bin Code';
-            TableRelation = Bin.Code WHERE (Location Code=FIELD(Location Code),
-                                            Item Filter=FIELD(No.),
-                                            Variant Filter=FIELD(Variant Code));
+            TableRelation = Bin.Code WHERE ("Location Code"=FIELD("Location Code"),
+                                            Item Filter=FIELD("No."),
+                                            Variant Filter=FIELD("Variant Code"));
         }
         field(5404;"Qty. per Unit of Measure";Decimal)
         {
@@ -433,7 +433,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(5407;"Unit of Measure Code";Code[10])
         {
             Caption = 'Unit of Measure Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD(No.))
+            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."))
                             ELSE "Unit of Measure";
         }
         field(5415;"Quantity (Base)";Decimal)
@@ -505,7 +505,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(5706;"Unit of Measure (Cross Ref.)";Code[10])
         {
             Caption = 'Unit of Measure (Cross Ref.)';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD(No.));
+            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."));
         }
         field(5707;"Cross-Reference Type";Option)
         {
@@ -534,7 +534,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(5712;"Product Group Code";Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE (Item Category Code=FIELD(Item Category Code));
+            TableRelation = "Product Group".Code WHERE ("Item Category Code"=FIELD("Item Category Code"));
         }
         field(6608;"Return Reason Code";Code[10])
         {

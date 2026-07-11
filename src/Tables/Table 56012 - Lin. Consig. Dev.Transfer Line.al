@@ -202,25 +202,25 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(40; "Derived From Line No."; Integer)
         {
             Caption = 'Derived From Line No.';
-            TableRelation = "Transfer Line"."Line No." WHERE(Document No.=FIELD(Document No.));
+            TableRelation = "Transfer Line"."Line No." WHERE("Document No." = FIELD("Document No."));
         }
-        field(41;"Shipping Agent Code";Code[10])
+        field(41; "Shipping Agent Code"; Code[10])
         {
             Caption = 'Shipping Agent Code';
             TableRelation = "Shipping Agent";
         }
-        field(42;"Shipping Agent Service Code";Code[10])
+        field(42; "Shipping Agent Service Code"; Code[10])
         {
             Caption = 'Shipping Agent Service Code';
-            TableRelation = "Shipping Agent Services".Code WHERE (Shipping Agent Code=FIELD(Shipping Agent Code));
+            TableRelation = "Shipping Agent Services".Code WHERE("Shipping Agent Code" = FIELD("Shipping Agent Code"));
         }
-        field(50;"Reserved Quantity Inbnd.";Decimal)
+        field(50; "Reserved Quantity Inbnd."; Decimal)
         {
-            CalcFormula = Sum("Reservation Entry".Quantity WHERE (Source ID=FIELD(Document No.),
-                                                                  Source Ref. No.=FIELD(Line No.),
+            CalcFormula = Sum("Reservation Entry".Quantity WHERE("Source ID" = FIELD("Document No."),
+                                                                  Source Ref. No.=FIELD("Line No."),
                                                                   Source Type=CONST(5741),
                                                                   Source Subtype=CONST(1),
-                                                                  Source Prod. Order Line=FIELD(Derived From Line No.),
+                                                                  Source Prod. Order Line=FIELD("Derived From Line No."),
                                                                   Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Quantity Inbnd.';
             DecimalPlaces = 0:5;
@@ -229,11 +229,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         }
         field(51;"Reserved Quantity Outbnd.";Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry".Quantity WHERE (Source ID=FIELD(Document No.),
-                                                                   Source Ref. No.=FIELD(Line No.),
+            CalcFormula = -Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
+                                                                   Source Ref. No.=FIELD("Line No."),
                                                                    Source Type=CONST(5741),
                                                                    Source Subtype=CONST(0),
-                                                                   Source Prod. Order Line=FIELD(Derived From Line No.),
+                                                                   Source Prod. Order Line=FIELD("Derived From Line No."),
                                                                    Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Quantity Outbnd.';
             DecimalPlaces = 0:5;
@@ -242,11 +242,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         }
         field(52;"Reserved Qty. Inbnd. (Base)";Decimal)
         {
-            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE (Source ID=FIELD(Document No.),
-                                                                           Source Ref. No.=FIELD(Line No.),
+            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
+                                                                           Source Ref. No.=FIELD("Line No."),
                                                                            Source Type=CONST(5741),
                                                                            Source Subtype=CONST(1),
-                                                                           Source Prod. Order Line=FIELD(Derived From Line No.),
+                                                                           Source Prod. Order Line=FIELD("Derived From Line No."),
                                                                            Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Qty. Inbnd. (Base)';
             DecimalPlaces = 0:5;
@@ -255,11 +255,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         }
         field(53;"Reserved Qty. Outbnd. (Base)";Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE (Source ID=FIELD(Document No.),
-                                                                            Source Ref. No.=FIELD(Line No.),
+            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
+                                                                            Source Ref. No.=FIELD("Line No."),
                                                                             Source Type=CONST(5741),
                                                                             Source Subtype=CONST(0),
-                                                                            Source Prod. Order Line=FIELD(Derived From Line No.),
+                                                                            Source Prod. Order Line=FIELD("Derived From Line No."),
                                                                             Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Qty. Outbnd. (Base)';
             DecimalPlaces = 0:5;
@@ -272,11 +272,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         }
         field(55;"Reserved Quantity Shipped";Decimal)
         {
-            CalcFormula = Sum("Reservation Entry".Quantity WHERE (Source ID=FIELD(Document No.),
+            CalcFormula = Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
                                                                   Source Ref. No.=FILTER(<>0),
                                                                   Source Type=CONST(5741),
                                                                   Source Subtype=CONST(1),
-                                                                  Source Prod. Order Line=FIELD(Line No.),
+                                                                  Source Prod. Order Line=FIELD("Line No."),
                                                                   Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Quantity Shipped';
             DecimalPlaces = 0:5;
@@ -285,11 +285,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         }
         field(56;"Reserved Qty. Shipped (Base)";Decimal)
         {
-            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE (Source ID=FIELD(Document No.),
+            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
                                                                            Source Ref. No.=FILTER(<>0),
                                                                            Source Type=CONST(5741),
                                                                            Source Subtype=CONST(1),
-                                                                           Source Prod. Order Line=FIELD(Line No.),
+                                                                           Source Prod. Order Line=FIELD("Line No."),
                                                                            Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Qty. Shipped (Base)';
             DecimalPlaces = 0:5;
@@ -312,7 +312,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(5707;"Product Group Code";Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE (Item Category Code=FIELD(Item Category Code));
+            TableRelation = "Product Group".Code WHERE ("Item Category Code"=FIELD("Item Category Code"));
         }
         field(5752;"Completely Shipped";Boolean)
         {
@@ -335,16 +335,16 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(7300;"Transfer-from Bin Code";Code[20])
         {
             Caption = 'Transfer-from Bin Code';
-            TableRelation = "Bin Content"."Bin Code" WHERE (Location Code=FIELD(Transfer-from Code),
+            TableRelation = "Bin Content"."Bin Code" WHERE ("Location Code"=FIELD("Transfer-from Code"),
                                                             Item No.=FIELD("Item No."),
-                                                            Variant Code=FIELD(Variant Code));
+                                                            Variant Code=FIELD("Variant Code"));
         }
         field(7301;"Transfer-To Bin Code";Code[20])
         {
             Caption = 'Transfer-To Bin Code';
-            TableRelation = Bin.Code WHERE (Location Code=FIELD(Transfer-to Code),
+            TableRelation = Bin.Code WHERE ("Location Code"=FIELD("Transfer-to Code"),
                                             Item Filter=FIELD("Item No."),
-                                            Variant Filter=FIELD(Variant Code));
+                                            Variant Filter=FIELD("Variant Code"));
         }
         field(50000;"Precio Venta Consignacion";Decimal)
         {

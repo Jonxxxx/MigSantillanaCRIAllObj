@@ -7,7 +7,7 @@ table 56090 "Texto Configurable"
     {
         field(1; "Id. Tabla"; Integer)
         {
-            TableRelation = Object.ID WHERE(Type = CONST(TableData));
+            TableRelation = Object.ID WHERE("Type" = CONST(TableData));
         }
         field(2; "Secci n"; Option)
         {

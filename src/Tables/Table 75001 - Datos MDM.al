@@ -23,8 +23,8 @@ table 75001 "Datos MDM"
         field(4; "Codigo Relacionado"; Code[10])
         {
             Caption = 'Codigo Relacionado';
-            TableRelation = IF (Tipo = CONST(Grado)) "Datos MDM".Codigo WHERE(Tipo = CONST(Ciclo))
-            ELSE IF (Tipo = CONST(Ciclo)) "Datos MDM".Codigo WHERE(Tipo = CONST(Nivel));
+            TableRelation = IF (Tipo = CONST(Grado)) "Datos MDM".Codigo WHERE("Tipo" = CONST(Ciclo))
+            ELSE IF (Tipo = CONST(Ciclo)) "Datos MDM".Codigo WHERE("Tipo" = CONST(Nivel));
         }
         field(5; Bloqueado; Boolean)
         {

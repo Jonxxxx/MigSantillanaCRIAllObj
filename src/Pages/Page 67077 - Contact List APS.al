@@ -79,14 +79,14 @@ page 67077 "Contact List APS"
                     Caption = 'Card';
                     Image = EditLines;
                     RunObject = Page 5050;
-                    RunPageLink = No.=FIELD(No.);
+                    RunPageLink = No.=FIELD("No.");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("Relate&d Contacts")
                 {
                     Caption = 'Relate&d Contacts';
                     RunObject = Page 5052;
-                                    RunPageLink = Company No.=FIELD(Company No.);
+                                    RunPageLink = Company No.=FIELD("Company No.");
                 }
                 group("Comp&any")
                 {
@@ -95,19 +95,19 @@ page 67077 "Contact List APS"
                     {
                         Caption = 'Business Relations';
                         RunObject = Page 5061;
-                                        RunPageLink = Contact No.=FIELD(Company No.);
+                                        RunPageLink = Contact No.=FIELD("Company No.");
                     }
                     action("Industry Groups")
                     {
                         Caption = 'Industry Groups';
                         RunObject = Page 5067;
-                                        RunPageLink = Contact No.=FIELD(Company No.);
+                                        RunPageLink = Contact No.=FIELD("Company No.");
                     }
                     action("Web Sources")
                     {
                         Caption = 'Web Sources';
                         RunObject = Page 5070;
-                                        RunPageLink = Contact No.=FIELD(Company No.);
+                                        RunPageLink = Contact No.=FIELD("Company No.");
                     }
                 }
                 group("P&erson")
@@ -131,7 +131,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Mailing &Groups';
                     RunObject = Page 5064;
-                                    RunPageLink = Contact No.=FIELD(No.);
+                                    RunPageLink = Contact No.=FIELD("No.");
                 }
                 action("Pro&files")
                 {
@@ -151,14 +151,14 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 5053;
-                                    RunPageLink = No.=FIELD(No.);
+                                    RunPageLink = No.=FIELD("No.");
                     ShortCutKey = 'F7';
                 }
                 action("&Picture")
                 {
                     Caption = '&Picture';
                     RunObject = Page 5104;
-                                    RunPageLink = No.=FIELD(No.);
+                                    RunPageLink = No.=FIELD("No.");
                 }
                 action("Co&mments")
                 {
@@ -166,7 +166,7 @@ page 67077 "Contact List APS"
                     Image = ViewComments;
                     RunObject = Page 5072;
                                     RunPageLink = Table Name=CONST(Contact),
-                                  No.=FIELD(No.),
+                                  No.=FIELD("No."),
                                   Sub No.=CONST(0);
                 }
                 group("Alternati&ve Address")
@@ -177,13 +177,13 @@ page 67077 "Contact List APS"
                         Caption = 'Card';
                         Image = EditLines;
                         RunObject = Page 5056;
-                                        RunPageLink = Contact No.=FIELD(No.);
+                                        RunPageLink = Contact No.=FIELD("No.");
                     }
                     action("Date Ranges")
                     {
                         Caption = 'Date Ranges';
                         RunObject = Page 5059;
-                                        RunPageLink = Contact No.=FIELD(No.);
+                                        RunPageLink = Contact No.=FIELD("No.");
                     }
                 }
                 separator()
@@ -194,7 +194,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Interaction Log E&ntries';
                     RunObject = Page 5076;
-                                    RunPageLink = Contact Company No.=FIELD(Company No.),
+                                    RunPageLink = Contact Company No.=FIELD("Company No."),
                                   Contact No.=FILTER(<>''),
                                   Contact No.=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact Company No.,Contact No.);
@@ -204,7 +204,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Postponed &Interactions';
                     RunObject = Page 5082;
-                                    RunPageLink = Contact Company No.=FIELD(Company No.),
+                                    RunPageLink = Contact Company No.=FIELD("Company No."),
                                   Contact No.=FILTER(<>''),
                                   Contact No.=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact Company No.,Contact No.);
@@ -213,7 +213,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'T&o-dos';
                     RunObject = Page 5096;
-                                    RunPageLink = Contact Company No.=FIELD(Company No.),
+                                    RunPageLink = Contact Company No.=FIELD("Company No."),
                                   Contact No.=FIELD(FILTER(Lookup Contact No.)),
                                   System To-do Type=FILTER(Contact Attendee);
                     RunPageView = SORTING(Contact Company No.,Contact No.);
@@ -225,7 +225,7 @@ page 67077 "Contact List APS"
                     {
                         Caption = 'List';
                         RunObject = Page 5123;
-                                        RunPageLink = Contact Company No.=FIELD(Company No.),
+                                        RunPageLink = Contact Company No.=FIELD("Company No."),
                                       Contact No.=FILTER(<>''),
                                       Contact No.=FIELD(FILTER(Lookup Contact No.));
                         RunPageView = SORTING(Contact Company No.,Contact No.);
@@ -236,7 +236,7 @@ page 67077 "Contact List APS"
                     Caption = 'Segmen&ts';
                     Image = Segment;
                     RunObject = Page 5150;
-                                    RunPageLink = Contact Company No.=FIELD(Company No.),
+                                    RunPageLink = Contact Company No.=FIELD("Company No."),
                                   Contact No.=FILTER(<>''),
                                   Contact No.=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact No.,Segment No.);
@@ -250,7 +250,7 @@ page 67077 "Contact List APS"
                     Caption = 'Sales &Quotes';
                     Image = Quote;
                     RunObject = Page 41;
-                                    RunPageLink = Sell-to Contact No.=FIELD(No.);
+                                    RunPageLink = Sell-to Contact No.=FIELD("No.");
                     RunPageView = SORTING(Document Type,Sell-to Contact No.);
                 }
                 separator()
@@ -281,7 +281,7 @@ page 67077 "Contact List APS"
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     RunObject = Page 67045;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
                 action("<Action1000000000>")
                 {
@@ -290,7 +290,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     RunObject = Page 67037;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
                 action("<Action1000000003>")
                 {
@@ -333,7 +333,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     RunObject = Page 67026;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
                 separator()
                 {
@@ -345,7 +345,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     RunObject = Page 67165;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
                 action(Asistencia)
                 {
@@ -354,7 +354,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     RunObject = Page 67090;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
                 action("<Action1000000036>")
                 {
@@ -380,7 +380,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     RunObject = Page 67067;
-                                    RunPageLink = Cod. Colegio=FIELD(No.);
+                                    RunPageLink = Cod. Colegio=FIELD("No.");
                 }
             }
         }
@@ -511,7 +511,7 @@ page 67077 "Contact List APS"
                 Promoted = true;
                 PromotedCategory = New;
                 RunObject = Page 41;
-                                RunPageLink = Sell-to Contact No.=FIELD(No.);
+                                RunPageLink = Sell-to Contact No.=FIELD("No.");
                 RunPageMode = Create;
             }
         }

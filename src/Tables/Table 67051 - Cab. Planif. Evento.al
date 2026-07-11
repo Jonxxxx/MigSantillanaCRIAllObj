@@ -34,7 +34,7 @@ table 67051 "Cab. Planif. Evento"
         }
         field(3; Expositor; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
 
             trigger OnValidate()
@@ -56,7 +56,7 @@ table 67051 "Cab. Planif. Evento"
         }
         field(5; "Description Tipo evento"; Text[100])
         {
-            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE(Codigo = FIELD(Tipo Evento)));
+            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE("Codigo" = FIELD("Tipo Evento")));
             FieldClass = FlowField;
         }
         field(6; "Description Taller"; Text[100])
@@ -110,10 +110,10 @@ table 67051 "Cab. Planif. Evento"
         }
         field(19; "Total registrados"; Integer)
         {
-            CalcFormula = Count("Asistentes Talleres y Eventos" WHERE(Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                                                                       Tipo Evento=FIELD(Tipo Evento),
-                                                                       Cod. Expositor=FIELD(Expositor),
-                                                                       Secuencia=FIELD(Secuencia)));
+            CalcFormula = Count("Asistentes Talleres y Eventos" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                                                       Tipo Evento=FIELD("Tipo Evento"),
+                                                                       Cod. Expositor=FIELD("Expositor"),
+                                                                       Secuencia=FIELD("Secuencia")));
             FieldClass = FlowField;
         }
         field(20;Estado;Option)
@@ -231,17 +231,17 @@ table 67051 "Cab. Planif. Evento"
         }
         field(35;"Nombre Colegio";Text[90])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(36;"Distrito Colegio";Text[30])
         {
-            CalcFormula = Lookup(Contact.Distritos WHERE (No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Distritos WHERE ("No."=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(37;"Estado Solicitud";Option)
         {
-            CalcFormula = Lookup("Solicitud de Taller - Evento".Status WHERE (No. Solicitud=FIELD(No. Solicitud)));
+            CalcFormula = Lookup("Solicitud de Taller - Evento".Status WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
             FieldClass = FlowField;
             OptionCaption = ' ,Sent by salesperson,Approved,Programmed,Voided,Rejected,Done';
             OptionMembers = " ","Enviada por promotor",Aprobada,Programada,Cancelada,Rechazada,Realizada;

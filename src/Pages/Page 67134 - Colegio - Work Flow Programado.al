@@ -5,7 +5,7 @@ page 67134 "Colegio - Work Flow Programado"
     DelayedInsert = true;
     PageType = ListPlus;
     SourceTable = Table67062;
-    SourceTableView = WHERE(Programado = CONST(true));
+    SourceTableView = WHERE("Programado" = CONST(true));
 
     layout
     {

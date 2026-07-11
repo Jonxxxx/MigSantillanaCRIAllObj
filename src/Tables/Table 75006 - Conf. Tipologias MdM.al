@@ -53,13 +53,13 @@ table 75006 "Conf. Tipologias MdM"
         field(98; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Item Category".Code WHERE(Parent Category=FIELD(Tipologia));
+            TableRelation = "Item Category".Code WHERE("Parent Category" = FIELD("Tipologia"));
         }
-        field(1001;"Referencia 1;Code[20])
+        field(1001; "Referencia 1;Code[20])
         {
             CaptionClass = '75000,1';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(1),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(1),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -72,8 +72,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1002;"Referencia 2;Code[20])
         {
             CaptionClass = '75000,2';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(2),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(2),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -86,8 +86,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1003;"Referencia 3;Code[20])
         {
             CaptionClass = '75000,3';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(3),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(3),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -100,8 +100,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1004;"Referencia 4;Code[20])
         {
             CaptionClass = '75000,4';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(4),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(4),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -114,8 +114,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1005;"Referencia 5;Code[20])
         {
             CaptionClass = '75000,5';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(5),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(5),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -128,8 +128,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1006;"Referencia 6;Code[20])
         {
             CaptionClass = '75000,6';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(6),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(6),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -142,8 +142,8 @@ table 75006 "Conf. Tipologias MdM"
         field(1007;"Referencia 7;Code[20])
         {
             CaptionClass = '75000,7';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE (Id Filtro=CONST(7),
-                                                                        Filtro Tipologia=FIELD(Tipologia));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(7),
+                                                                        Filtro Tipologia=FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -254,7 +254,7 @@ table 75006 "Conf. Tipologias MdM"
 
         wRcRef.GETTABLE(Rec);
         lwIdF := 1000 + pwId;
-        wFieldRef := wRcRef.FIELD(lwIdF);
+        wFieldRef := wRcRef.FIELD("lwIdF");
         lwCode := wFieldRef.VALUE;
         IF lwCode = '' THEN BEGIN
           lwName := lrFiltroTipo.GetFiltDescrpt(pwId);

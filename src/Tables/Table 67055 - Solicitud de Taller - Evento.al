@@ -21,7 +21,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(3; "Cod. evento"; Code[20])
         {
-            TableRelation = Eventos."No." WHERE(Tipo de Evento=FIELD(Tipo de Evento));
+            TableRelation = Eventos."No." WHERE("Tipo de Evento" = FIELD("Tipo de Evento"));
 
             trigger OnLookup()
             var
@@ -136,7 +136,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(7; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Promotor=FIELD(Cod. promotor));
+                                                                  Cod. Promotor=FIELD("Cod. promotor"));
         }
         field(8;"Cod. Expositor";Code[20])
         {
@@ -163,7 +163,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(10;"Cod. Colegio";Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE (Cod. Promotor=FIELD(Cod. promotor));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE ("Cod. Promotor"=FIELD("Cod. promotor"));
 
             trigger OnValidate()
             var
@@ -409,7 +409,7 @@ table 67055 "Solicitud de Taller - Evento"
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
 
             trigger OnValidate()
             begin
@@ -420,7 +420,7 @@ table 67055 "Solicitud de Taller - Evento"
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
 
             trigger OnValidate()
             begin
@@ -430,7 +430,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(40;"Filtro Promotor";Code[20])
         {
             FieldClass = FlowFilter;
-            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=FILTER(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=FILTER(Vendedor));
         }
         field(41;"Filtro Colegio";Code[20])
         {
@@ -621,7 +621,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67011;"Art culo Competencia";Code[10])
         {
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE (Cod. Editorial=FIELD(Editorial Competencia));
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Editorial Competencia"));
 
             trigger OnValidate()
             var
@@ -657,17 +657,17 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67019;"Nivel Asistente";Integer)
         {
-            CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE (No. Solicitud=FIELD(No. Solicitud)));
+            CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67020;"Grado Asistente";Integer)
         {
-            CalcFormula = Count("Solicitud -  Grado Asistente" WHERE (No. Solicitud=FIELD(No. Solicitud)));
+            CalcFormula = Count("Solicitud -  Grado Asistente" WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67021;"Especialidad Asistente";Integer)
         {
-            CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE (No. Solicitud=FIELD(No. Solicitud)));
+            CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67022;"Selecci n Editorial";Option)
@@ -765,7 +765,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67037;"Cod. evento programado";Code[20])
         {
-            TableRelation = Eventos."No." WHERE (Tipo de Evento=FIELD(Tipo de Evento));
+            TableRelation = Eventos."No." WHERE ("Tipo de Evento"=FIELD("Tipo de Evento"));
 
             trigger OnLookup()
             var
@@ -858,7 +858,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67039;"Evento dictado por (codigo)";Code[20])
         {
-            TableRelation = IF (Evento dictado por (tipo)=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Evento dictado por (tipo)=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Evento dictado por (tipo)=CONST(Proveedor)) Vendor;
         }
         field(67040;"Evento dictado por (nombre)";Text[80])
@@ -925,10 +925,10 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67047;"Fecha programada";Date)
         {
-            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE (Cod. Taller - Evento=FIELD(Cod. evento programado),
-                                                                                             Tipo de Expositor=FIELD(Tipo de Expositor),
-                                                                                             Expositor=FIELD(Cod. Expositor),
-                                                                                             Secuencia=FIELD(Secuencia Cod. Evento Progr.)));
+            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE ("Cod. Taller - Evento"=FIELD("Cod. evento programado"),
+                                                                                             Tipo de Expositor=FIELD("Tipo de Expositor"),
+                                                                                             Expositor=FIELD("Cod. Expositor"),
+                                                                                             Secuencia=FIELD("Secuencia Cod. Evento Progr.")));
             FieldClass = FlowField;
         }
         field(67048;"Secuencia Cod. Evento Progr.";Integer)

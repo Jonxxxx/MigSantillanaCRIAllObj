@@ -16,7 +16,7 @@ table 64839 "Replicator Report List"
         }
         field(4; "Report ID"; Integer)
         {
-            //TODO: Ver TableRelation = Object.ID WHERE (Type=CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE ("Type"=CONST(Report));
 
             trigger OnValidate()
             begin
@@ -26,8 +26,8 @@ table 64839 "Replicator Report List"
         }
         field(5; "Report Name"; Text[30])
         {
-            CalcFormula = Lookup(Object.Name WHERE(Type = CONST(Report),
-                                                    ID = FIELD(Report ID)));
+            CalcFormula = Lookup(Object.Name WHERE("Type" = CONST(Report),
+                                                    ID = FIELD("Report ID")));
             Editable = false;
             FieldClass = FlowField;
         }

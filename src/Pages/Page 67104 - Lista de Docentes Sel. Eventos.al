@@ -50,11 +50,11 @@ page 67104 "Lista de Docentes Sel. Eventos"
         {
             part(PlanifEventLP; 67108)
             {
-                SubPageLink = Cod. Docente=FIELD(No.);
+                SubPageLink = Cod. Docente=FIELD("No.");
             }
             part(; 67107)
             {
-                SubPageLink = Cod. Docente=FIELD(No.);
+                SubPageLink = Cod. Docente=FIELD("No.");
             }
         }
     }

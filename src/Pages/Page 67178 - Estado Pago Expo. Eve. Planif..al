@@ -74,11 +74,11 @@ page 67178 "Estado Pago Expo. Eve. Planif."
             {
                 Caption = 'Programación';
                 Editable = false;
-                SubPageLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                              Tipo Evento=FIELD(Tipo Evento),
-                              Tipo de Expositor=FIELD(Tipo de Expositor),
-                              Expositor=FIELD(Expositor),
-                              Secuencia=FIELD(Secuencia);
+                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
+                              Tipo Evento=FIELD("Tipo Evento"),
+                              Tipo de Expositor=FIELD("Tipo de Expositor"),
+                              Expositor=FIELD("Expositor"),
+                              Secuencia=FIELD("Secuencia");
             }
         }
     }

@@ -8,7 +8,7 @@ table 80015 "Tmp Document Dimension"
         {
             Caption = 'Table ID';
             NotBlank = true;
-            TableRelation = AllObj."Object ID" WHERE(Object Type=CONST(Table));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Table));
         }
         field(2; "Document Type"; Option)
         {
@@ -34,16 +34,16 @@ table 80015 "Tmp Document Dimension"
         {
             Caption = 'Dimension Value Code';
             NotBlank = true;
-            TableRelation = "Dimension Value".Code WHERE(Dimension Code=FIELD(Dimension Code));
+            TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Dimension Code"));
         }
     }
 
     keys
     {
-        key(Key1;"Table ID","Document Type","Document No.","Line No.","Dimension Code")
+        key(Key1; "Table ID", "Document Type", "Document No.", "Line No.", "Dimension Code")
         {
         }
-        key(Key2;"Dimension Code","Dimension Value Code")
+        key(Key2; "Dimension Code", "Dimension Value Code")
         {
         }
     }

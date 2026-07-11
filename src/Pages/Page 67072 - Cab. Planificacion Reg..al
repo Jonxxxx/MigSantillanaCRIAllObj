@@ -5,7 +5,7 @@ page 67072 "Cab. Planificacion Reg."
     PageType = Card;
     SourceTable = Table67023;
     SourceTableView = SORTING(Cod. Promotor, Semana)
-                      WHERE(Estado = FILTER(> ' '));
+                      WHERE("Estado" = FILTER(> ' '));
 
     layout
     {
@@ -40,8 +40,8 @@ page 67072 "Cab. Planificacion Reg."
             part(sfVisitas; 67038)
             {
                 Editable = false;
-                SubPageLink = Cod. Promotor=FIELD(Cod. Promotor),
-                              Semana=FIELD(Semana),
+                SubPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
+                              Semana=FIELD("Semana"),
                               Estado=FILTER(>' ');
                 SubPageView = SORTING(Cod. Promotor,Cod. Colegio,Semana);
             }

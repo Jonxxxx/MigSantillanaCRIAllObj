@@ -22,23 +22,23 @@ table 56011 "Lin. Consignacion a Facturar"
         field(3; "Document No."; Code[20])
         {
             Caption = 'Document No.';
-            TableRelation = "Sales Header"."No." WHERE(Document Type=FIELD(Document Type));
+            TableRelation = "Sales Header"."No." WHERE("Document Type" = FIELD("Document Type"));
         }
-        field(4;"Line No.";Integer)
+        field(4; "Line No."; Integer)
         {
             Caption = 'Line No.';
         }
-        field(5;Type;Option)
+        field(5; Type; Option)
         {
             Caption = 'Type';
             OptionCaption = ' ,G/L Account,Item,Resource,Fixed Asset,Charge (Item)';
             OptionMembers = " ","G/L Account",Item,Resource,"Fixed Asset","Charge (Item)";
         }
-        field(6;"No.";Code[20])
+        field(6; "No."; Code[20])
         {
             Caption = 'No.';
-            TableRelation = IF (Type=CONST(" ")) "Standard Text"
-                            ELSE IF (Type=CONST(G/L Account)) "G/L Account"
+            TableRelation = IF (Type = CONST(" ")) "Standard Text"
+            ELSE IF (Type = CONST(G/L Account)) "G/L Account"
                             ELSE IF (Type=CONST(Item)) Item
                             ELSE IF (Type=CONST(Resource)) Resource
                             ELSE IF (Type=CONST(Fixed Asset)) "Fixed Asset"
@@ -56,7 +56,7 @@ table 56011 "Lin. Consignacion a Facturar"
         field(7;"Location Code";Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE (Use As In-Transit=CONST(false));
+            TableRelation = Location WHERE ("Use As In-Transit"=CONST(false));
         }
         field(11;Description;Text[60])
         {
@@ -136,8 +136,8 @@ table 56011 "Lin. Consignacion a Facturar"
         field(5407;"Unit of Measure Code";Code[10])
         {
             Caption = 'Unit of Measure Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD(No.))
-                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE (Resource No.=FIELD(No.))
+            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."))
+                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE ("Resource No."=FIELD("No."))
                             ELSE "Unit of Measure";
 
             trigger OnValidate()

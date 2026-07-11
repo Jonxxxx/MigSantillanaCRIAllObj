@@ -147,35 +147,35 @@ table 67017 Padres
         }
         field(26; "Areas de Interes"; Integer)
         {
-            CalcFormula = Count("Areas de interes padres" WHERE(DNI Padre=FIELD(DNI)));
+            CalcFormula = Count("Areas de interes padres" WHERE("DNI Padre" = FIELD("DNI")));
             FieldClass = FlowField;
         }
-        field(27;"Cant. Hijos";Integer)
+        field(27; "Cant. Hijos"; Integer)
         {
-            CalcFormula = Count("Alumnos - Hijos" WHERE (DNI Padre=FIELD(DNI)));
+            CalcFormula = Count("Alumnos - Hijos" WHERE("DNI Padre" = FIELD("DNI")));
             FieldClass = FlowField;
         }
-        field(28;"E-Mail";Text[80])
+        field(28; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(29;"E-Mail 2;Text[80])
+        field(29; "E-Mail 2;Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(30;"Cell Phone No.";Text[50])
+        field(30; "Cell Phone No."; Text[50])
         {
             Caption = 'Cell Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(31;"Salutation Code";Code[10])
+        field(31; "Salutation Code"; Code[10])
         {
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
-        field(32;"Full name";Text[150])
+        field(32; "Full name"; Text[150])
         {
             Caption = 'Full name';
             Editable = false;
@@ -185,25 +185,25 @@ table 67017 Padres
                 "Full name" := "First Name" + ' ' + "Middle Name" + ' ' + "Last Name" + ' ' + "Second Last Name";
             end;
         }
-        field(33;"Grado INI";Code[20])
+        field(33; "Grado INI"; Code[20])
         {
         }
-        field(34;"Fecha Nacimiento";Date)
+        field(34; "Fecha Nacimiento"; Date)
         {
         }
-        field(35;"Fecha creacion";Date)
+        field(35; "Fecha creacion"; Date)
         {
         }
-        field(36;"Ult. Fecha Actualizacion";Date)
+        field(36; "Ult. Fecha Actualizacion"; Date)
         {
         }
-        field(37;"Grado PRI";Code[20])
+        field(37; "Grado PRI"; Code[20])
         {
         }
-        field(38;"Grado SEC";Code[20])
+        field(38; "Grado SEC"; Code[20])
         {
         }
-        field(39;Status;Option)
+        field(39; Status; Option)
         {
             OptionCaption = ' ,Inactive';
             OptionMembers = " ",Inactivo;
@@ -212,7 +212,7 @@ table 67017 Padres
 
     keys
     {
-        key(Key1;DNI)
+        key(Key1; DNI)
         {
         }
     }
@@ -243,8 +243,9 @@ table 67017 Padres
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
-          MapMgt.MakeSelection(DATABASE::Contact,GETPOSITION)
-        ELSE MESSAGE(Text033);
+            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 }
 

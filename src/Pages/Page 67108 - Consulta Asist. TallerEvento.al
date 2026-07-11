@@ -78,7 +78,7 @@ page 67108 "Consulta Asist. Taller/Evento"
                 field("Cod. Docente"; "Cod. Docente")
                 {
                     Editable = false;
-                    TableRelation = Docentes WHERE(Pertenece al CDS=CONST(true));
+                    TableRelation = Docentes WHERE("Pertenece al CDS" = CONST(true));
                     Visible = false;
                 }
                 field("Nombre Docente"; "Nombre Docente")

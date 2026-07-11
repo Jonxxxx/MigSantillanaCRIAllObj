@@ -58,7 +58,7 @@ page 56000 Packing
             }
             part(; 56001)
             {
-                SubPageLink = No.=FIELD(No.);
+                SubPageLink = No.=FIELD("No.");
                     SubPageView = SORTING(No.)
                               ORDER(Ascending);
             }

@@ -84,7 +84,7 @@ page 67056 "Ficha de Alumnos"
                 {
                     Caption = '&Fathers';
                     RunObject = Page 67049;
-                                    RunPageLink = DNI=FIELD(DNI Padre);
+                                    RunPageLink = DNI=FIELD("DNI Padre");
                 }
                 action("&School")
                 {

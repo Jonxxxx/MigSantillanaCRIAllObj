@@ -49,66 +49,65 @@ table 67043 "Colegio - Docentes"
         }
         field(3; "Nombre colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE(No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Nombre docente";Text[100])
+        field(4; "Nombre docente"; Text[100])
         {
         }
-        field(5;"Cod. Cargo";Code[20])
+        field(5; "Cod. Cargo"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
-                IF "Cod. Cargo" <> '' THEN
-                   BEGIN
+                IF "Cod. Cargo" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Puestos de trabajo");
-                    DA.SETRANGE(Codigo,"Cod. Cargo");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
+                    DA.SETRANGE(Codigo, "Cod. Cargo");
                     DA.FINDFIRST;
                     "Descripcion Cargo" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(6;Principal;Boolean)
+        field(6; Principal; Boolean)
         {
             Caption = 'Default';
         }
-        field(7;"Cod. Nivel";Code[20])
+        field(7; "Cod. Nivel"; Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             begin
                 ColNiv.RESET;
-                ColNiv.SETRANGE("Cod. Colegio","Cod. Colegio");
-                ColNiv.SETRANGE("Cod. Nivel","Cod. Nivel");
+                ColNiv.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                ColNiv.SETRANGE("Cod. Nivel", "Cod. Nivel");
                 ColNiv.FINDFIRST;
-                   BEGIN
+                BEGIN
                     ColNiv.TESTFIELD(Ruta);
                     PromRuta.RESET;
-                    PromRuta.SETRANGE("Cod. Ruta",ColNiv.Ruta);
+                    PromRuta.SETRANGE("Cod. Ruta", ColNiv.Ruta);
                     PromRuta.FINDFIRST;
-                    VALIDATE("Cod. Promotor",PromRuta."Cod. Promotor");
-                   END;
+                    VALIDATE("Cod. Promotor", PromRuta."Cod. Promotor");
+                END;
 
                 NivelE.GET("Cod. Nivel");
                 "Descripcion Nivel" := NivelE.Descripci n;
             end;
         }
-        field(8;"Descripcion Nivel";Text[100])
+        field(8; "Descripcion Nivel"; Text[100])
         {
             Editable = false;
         }
-        field(9;"Cod. Promotor";Code[20])
+        field(9; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Promotor" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Promotor" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
         }
-        field(10;"Nombre Promotor";Text[60])
+        field(10; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             Editable = false;
             FieldClass = FlowField;
         }

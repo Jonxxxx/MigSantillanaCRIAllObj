@@ -4,7 +4,7 @@ page 130403 "CAL Test Get Codeunits"
     Editable = false;
     PageType = List;
     SourceTable = Table2000000058;
-    SourceTableView = WHERE(Object Type=CONST(Codeunit),
+    SourceTableView = WHERE("Object Type" = CONST(Codeunit),
                             Object Subtype=CONST(Test));
 
     layout
@@ -13,11 +13,11 @@ page 130403 "CAL Test Get Codeunits"
         {
             repeater()
             {
-                field("Object ID";"Object ID")
+                field("Object ID"; "Object ID")
                 {
                     ApplicationArea = All;
                 }
-                field("Object Name";"Object Name")
+                field("Object Name"; "Object Name")
                 {
                     ApplicationArea = All;
                 }

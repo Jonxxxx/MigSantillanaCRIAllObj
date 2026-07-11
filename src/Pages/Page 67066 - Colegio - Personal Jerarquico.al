@@ -29,7 +29,7 @@ page 67066 "Colegio - Personal Jerarquico"
             part(; 67067)
             {
                 SubPageLink = Cod. Colegio=FIELD("Cod. Colegio"),
-                              Cod. Docente=FIELD(Cod. Local),
+                              Cod. Docente=FIELD("Cod. Local"),
                               Nombre colegio=FIELD("Cod. Nivel"),
                               Nombre docente=FIELD("Cod. Turno");
             }

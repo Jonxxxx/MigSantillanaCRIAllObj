@@ -94,7 +94,7 @@ table 67036 "Colegio - Nivel"
         field(7; "Dto. Ticket Colegio"; Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD(Cod. Local),
+                                                                                    Cod. Local=FIELD("Cod. Local"),
                                                                                     Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
@@ -102,7 +102,7 @@ table 67036 "Colegio - Nivel"
         field(8;"Dto. Ticket Padres";Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                   Cod. Local=FIELD(Cod. Local),
+                                                                                   Cod. Local=FIELD("Cod. Local"),
                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
@@ -110,7 +110,7 @@ table 67036 "Colegio - Nivel"
         field(9;"Dto. Feria Colegio";Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                          Cod. Local=FIELD(Cod. Local),
+                                                                                          Cod. Local=FIELD("Cod. Local"),
                                                                                           Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
@@ -118,7 +118,7 @@ table 67036 "Colegio - Nivel"
         field(10;"Dto. Feria Padres";Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                         Cod. Local=FIELD(Cod. Local),
+                                                                                         Cod. Local=FIELD("Cod. Local"),
                                                                                          Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
@@ -202,7 +202,7 @@ table 67036 "Colegio - Nivel"
         field(17;"Dto. Docente";Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD(Cod. Local),
+                                                                                    Cod. Local=FIELD("Cod. Local"),
                                                                                     Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
@@ -255,7 +255,7 @@ table 67036 "Colegio - Nivel"
         }
         field(67005;"Nombre Promotor";Text[100])
         {
-            CalcFormula = Lookup(Vendor.Name WHERE (No.=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Vendor.Name WHERE ("No."=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
     }

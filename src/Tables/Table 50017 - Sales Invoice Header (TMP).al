@@ -514,7 +514,7 @@ table 50017 "Sales Invoice Header (TMP)"
         field(7000003; "Pay-at Code"; Code[20])
         {
             Caption = 'Pay-at Code';
-            //TODO: Ver TableRelation = Table7000014.Field2 WHERE(Field1 = FIELD("Bill-to Customer No."));
+            //TODO: Ver TableRelation = Table7000014.Field2 WHERE("Field1" = FIELD("Bill-to Customer No."));
         }
         field(99008509; "Date Sent"; Date)
         {

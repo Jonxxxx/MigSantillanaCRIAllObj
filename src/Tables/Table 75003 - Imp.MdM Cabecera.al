@@ -79,15 +79,15 @@ table 75003 "Imp.MdM Cabecera"
         }
         field(500; "No Tablas"; Integer)
         {
-            CalcFormula = Count("Imp.MdM Tabla" WHERE(Id Cab.=FIELD(Id)));
+            CalcFormula = Count("Imp.MdM Tabla" WHERE("Id Cab." = FIELD("Id")));
             Description = 'Flowfield';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(501;"No Tablas Procesadas";Integer)
+        field(501; "No Tablas Procesadas"; Integer)
         {
-            CalcFormula = Count("Imp.MdM Tabla" WHERE (Id Cab.=FIELD(Id),
-                                                       Procesado=CONST(true)));
+            CalcFormula = Count("Imp.MdM Tabla" WHERE("Id Cab." = FIELD("Id"),
+                                                       Procesado = CONST(true)));
             Description = 'Flowfield';
             Editable = false;
             FieldClass = FlowField;
@@ -96,7 +96,7 @@ table 75003 "Imp.MdM Cabecera"
 
     keys
     {
-        key(Key1;Id)
+        key(Key1; Id)
         {
         }
     }
@@ -132,28 +132,28 @@ table 75003 "Imp.MdM Cabecera"
     var
         cFileMng: Codeunit 419;
 
-    procedure GetIntDates(var pwNivel: Integer;var pwEstado: Integer;var pwNIntentos: Integer)
+    procedure GetIntDates(var pwNivel: Integer; var pwEstado: Integer; var pwNIntentos: Integer)
     begin
         // GetIntDates
-        
+
         /*
         pwNivel   := "Attempt No" DIV 10;
         pwEstado  := "Attempt No" MOD 10;
         pwNIntentos := (pwNivel * GetIntesntosXNivel) + pwEstado;
         */
-        
-        pwNIntentos  := Attempt;
-        GetIntDates2(pwNivel,pwEstado,pwNIntentos);
+
+        pwNIntentos := Attempt;
+        GetIntDates2(pwNivel, pwEstado, pwNIntentos);
 
     end;
 
-    procedure GetIntDates2(var pwNivel: Integer;var pwEstado: Integer;pwNIntentos: Integer)
+    procedure GetIntDates2(var pwNivel: Integer; var pwEstado: Integer; pwNIntentos: Integer)
     begin
         // GetIntDates2
         // Le decimos nosotros el intento
 
-        pwNivel     := ((pwNIntentos-1) DIV GetIntesntosXNivel) +1;
-        pwEstado    := ((pwNIntentos-1) MOD GetIntesntosXNivel) +1;
+        pwNivel := ((pwNIntentos - 1) DIV GetIntesntosXNivel) + 1;
+        pwEstado := ((pwNIntentos - 1) MOD GetIntesntosXNivel) + 1;
     end;
 
     procedure GetIntesntosXNivel(): Integer
@@ -163,15 +163,15 @@ table 75003 "Imp.MdM Cabecera"
         EXIT(5);
     end;
 
-    procedure NewIntentInc(var pwNivel: Integer;var pwEstado: Integer;var pwNIntentos: Integer)
+    procedure NewIntentInc(var pwNivel: Integer; var pwEstado: Integer; var pwNIntentos: Integer)
     begin
         // NewIntentInc
-        
-        Attempt +=1;
-        GetIntDates(pwNivel,pwEstado,pwNIntentos);
+
+        Attempt += 1;
+        GetIntDates(pwNivel, pwEstado, pwNIntentos);
         "Attempt No" := (pwNivel * 10) + pwEstado;
         "Last Attempt" := CURRENTDATETIME;
-        
+
         /*
         pwEstado += 1;
         IF pwEstado > GetIntesntosXNivel THEN BEGIN
@@ -193,7 +193,7 @@ table 75003 "Imp.MdM Cabecera"
     begin
         // NewIntent
 
-        NewIntentInc(lwNivel,lwEstado,lwNIntentos);
+        NewIntentInc(lwNivel, lwEstado, lwNIntentos);
     end;
 }
 

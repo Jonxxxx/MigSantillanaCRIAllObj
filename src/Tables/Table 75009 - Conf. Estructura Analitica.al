@@ -17,14 +17,14 @@ table 75009 "Conf. Estructura Analitica"
         }
         field(11; Nivel; Integer)
         {
-            CalcFormula = Lookup("Estructura Analitica".Nivel WHERE(Codigo = FIELD(Codigo)));
+            CalcFormula = Lookup("Estructura Analitica".Nivel WHERE("Codigo" = FIELD("Codigo")));
             Caption = 'Nivel';
             Editable = false;
             FieldClass = FlowField;
         }
         field(12; Descripcion; Text[100])
         {
-            CalcFormula = Lookup("Estructura Analitica".Descripcion WHERE(Codigo = FIELD(Codigo)));
+            CalcFormula = Lookup("Estructura Analitica".Descripcion WHERE("Codigo" = FIELD("Codigo")));
             Caption = 'Descripci n';
             Editable = false;
             FieldClass = FlowField;
@@ -33,7 +33,7 @@ table 75009 "Conf. Estructura Analitica"
         {
             BlankZero = true;
             Caption = 'Campo';
-            TableRelation = "Filtro Campo Buffer"."Field No" WHERE(Table Id=CONST(27),
+            TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27),
                                                                     Field No=FILTER(56022));
             //This property is currently not supported
             //TestTableRelation = false;
@@ -52,16 +52,16 @@ table 75009 "Conf. Estructura Analitica"
         }
         field(101;FieldName;Text[30])
         {
-            CalcFormula = Lookup(Field."Field Caption" WHERE (TableNo=CONST(27),
-                                                              No.=FIELD(Id Field)));
+            CalcFormula = Lookup(Field."Field Caption" WHERE ("TableNo"=CONST(27),
+                                                              No.=FIELD("Id Field")));
             Caption = 'Nombre Campo';
             Editable = false;
             FieldClass = FlowField;
         }
         field(110;Valor;Text[30])
         {
-            TableRelation = "Filtro Valor Campo Buffer".Value WHERE (Table Id=CONST(27),
-                                                                     Field No=FIELD(Id Field));
+            TableRelation = "Filtro Valor Campo Buffer".Value WHERE ("Table Id"=CONST(27),
+                                                                     Field No=FIELD("Id Field"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;

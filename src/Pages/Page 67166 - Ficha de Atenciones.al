@@ -99,7 +99,7 @@ page 67166 "Ficha de Atenciones"
             part(; 67168)
             {
                 Editable = wMod;
-                SubPageLink = Código Cab. Atención=FIELD(Codigo);
+                SubPageLink = Código Cab. Atención=FIELD("Codigo");
             }
         }
     }
@@ -255,7 +255,7 @@ page 67166 "Ficha de Atenciones"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 67169;
-                RunPageLink = No. Atención=FIELD(Codigo);
+                RunPageLink = No. Atención=FIELD("Codigo");
             }
         }
     }

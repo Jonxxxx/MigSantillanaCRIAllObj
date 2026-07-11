@@ -71,8 +71,8 @@ table 67021 "Expositores - aps"
         }
         field(14; Comment; Boolean)
         {
-            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE(Table Name=CONST(Contact),
-                                                                  No.=FIELD(No.),
+            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
+                                                                  No.=FIELD("No."),
                                                                   Sub No.=CONST(0)));
             Caption = 'Comment';
             Editable = false;
@@ -191,8 +191,8 @@ table 67021 "Expositores - aps"
         }
         field(36;"Eventos Planif. Pendiente Pago";Integer)
         {
-            CalcFormula = Count("Cab. Planif. Evento" WHERE (Pagado=CONST(false),
-                                                             Expositor=FIELD(No.),
+            CalcFormula = Count("Cab. Planif. Evento" WHERE ("Pagado"=CONST(false),
+                                                             Expositor=FIELD("No."),
                                                              Estado=FILTER(<>Anulado)));
             FieldClass = FlowField;
 
@@ -212,8 +212,8 @@ table 67021 "Expositores - aps"
         }
         field(37;"Eventos Planif. Pagados";Integer)
         {
-            CalcFormula = Count("Cab. Planif. Evento" WHERE (Pagado=CONST(true),
-                                                             Expositor=FIELD(No.),
+            CalcFormula = Count("Cab. Planif. Evento" WHERE ("Pagado"=CONST(true),
+                                                             Expositor=FIELD("No."),
                                                              Estado=FILTER(<>Anulado)));
             FieldClass = FlowField;
 
@@ -232,7 +232,7 @@ table 67021 "Expositores - aps"
         }
         field(38;"Tiene Eventos Planif";Boolean)
         {
-            CalcFormula = Exist("Cab. Planif. Evento" WHERE (Expositor=FIELD(No.),
+            CalcFormula = Exist("Cab. Planif. Evento" WHERE ("Expositor"=FIELD("No."),
                                                              Estado=FILTER(<>Anulado)));
             FieldClass = FlowField;
         }

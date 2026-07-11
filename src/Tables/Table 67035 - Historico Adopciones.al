@@ -16,7 +16,7 @@ table 67035 "Historico Adopciones"
         field(3; "Cod. Colegio"; Code[20])
         {
             Caption = 'C d. Colegio';
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(4; "Cod. Local"; Code[20])
         {
@@ -42,7 +42,7 @@ table 67035 "Historico Adopciones"
         field(8;"Cod. Promotor";Code[20])
         {
             Caption = 'C d. Promotor';
-            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=CONST(Vendedor));
         }
         field(9;"Cod. producto";Code[20])
         {
@@ -65,7 +65,7 @@ table 67035 "Historico Adopciones"
         }
         field(13;"Nombre Editorial";Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE (Code=FIELD(Cod. Editorial)));
+            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
             Caption = 'Nombre Editorial';
             FieldClass = FlowField;
             TableRelation = "Post Code";
@@ -77,20 +77,20 @@ table 67035 "Historico Adopciones"
         }
         field(15;"Nombre Colegio";Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
             Caption = 'Nombre Colegio';
             FieldClass = FlowField;
         }
         field(16;"Descripcion Nivel";Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             Caption = 'Descripcion Nivel';
             FieldClass = FlowField;
         }
         field(17;"Descripcion Grado";Text[100])
         {
             CalcFormula = Lookup("Datos auxiliares".Descripcion WHERE ("Tipo registro"=CONST(Grados),
-                                                                       Codigo=FIELD(Cod. Grado)));
+                                                                       Codigo=FIELD("Cod. Grado")));
             Caption = 'Descripcion Grado';
             FieldClass = FlowField;
         }
@@ -137,7 +137,7 @@ table 67035 "Historico Adopciones"
         }
         field(28;"Nombre Promotor";Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             Caption = 'Nombre Promotor';
             FieldClass = FlowField;
         }
@@ -201,7 +201,7 @@ table 67035 "Historico Adopciones"
         field(49;"Cod. Producto Editora";Code[20])
         {
             Caption = 'C d. Producto Editora';
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE (Cod. Editorial=FIELD(Cod. Editorial),
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
                                                                      Nivel=FIELD("Cod. Nivel"));
         }
         field(50;"Nombre Producto Editora";Text[100])
@@ -241,7 +241,7 @@ table 67035 "Historico Adopciones"
         }
         field(100;"Item - Item Category Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Item Category Code" WHERE (No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Item Category Code" WHERE ("No."=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(101;"Sales Price - Unit Price";Decimal)
@@ -253,7 +253,7 @@ table 67035 "Historico Adopciones"
         }
         field(102;"Item - Product Group Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Product Group Code" WHERE (No.=FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Product Group Code" WHERE ("No."=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103;"Item - Grado";Code[20])

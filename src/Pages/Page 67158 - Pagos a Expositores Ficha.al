@@ -10,32 +10,32 @@ page 67158 "Pagos a Expositores Ficha"
             group(General)
             {
                 Editable = wEdit;
-                field("Cod. Expositor";"Cod. Expositor")
+                field("Cod. Expositor"; "Cod. Expositor")
                 {
                 }
-                field("Nombre Expositor";"Nombre Expositor")
+                field("Nombre Expositor"; "Nombre Expositor")
                 {
                     Editable = false;
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Tipo Documento";"Tipo Documento")
+                field("Tipo Documento"; "Tipo Documento")
                 {
                 }
-                field("No. Documento";"No. Documento")
+                field("No. Documento"; "No. Documento")
                 {
                 }
-                field("Estado Pago";"Estado Pago")
+                field("Estado Pago"; "Estado Pago")
                 {
                 }
             }
-            part(Subform;67159)
+            part(Subform; 67159)
             {
                 Caption = 'Detalle';
                 Editable = wEdit;
                 Enabled = wEdit;
-                SubPageLink = ID Pago=FIELD(ID Pago);
+                SubPageLink = ID Pago=FIELD("ID Pago");
             }
         }
     }
@@ -62,17 +62,17 @@ page 67158 "Pagos a Expositores Ficha"
                         Error001: Label 'No se ha ingresado ningun evento en este pago.';
                     begin
                         CurrPage.SAVERECORD;
-                        CALCFIELDS(Importe,"Numero Eventos");
+                        CALCFIELDS(Importe, "Numero Eventos");
                         TESTFIELD("Cod. Expositor");
                         TESTFIELD(Fecha);
                         TESTFIELD("Tipo Documento");
                         TESTFIELD("No. Documento");
                         IF ("Numero Eventos" = 0) THEN
-                          ERROR(Error001);
-                        IF CONFIRM(STRSUBSTNO(Text001,Importe,"Numero Eventos")) THEN BEGIN
-                          "Estado Pago" := "Estado Pago"::Pagado;
-                          PagoEventos();
-                          Estado;
+                            ERROR(Error001);
+                        IF CONFIRM(STRSUBSTNO(Text001, Importe, "Numero Eventos")) THEN BEGIN
+                            "Estado Pago" := "Estado Pago"::Pagado;
+                            PagoEventos();
+                            Estado;
                         END;
                     end;
                 }
@@ -89,11 +89,11 @@ page 67158 "Pagos a Expositores Ficha"
                     var
                         Text001: Label 'Importe del pago: %1. \Eventos incluidos: %2. \¿Desea retroceder el pago?';
                     begin
-                        CALCFIELDS(Importe,"Numero Eventos");
-                        IF CONFIRM(STRSUBSTNO(Text001,Importe,"Numero Eventos")) THEN BEGIN
-                          "Estado Pago" := "Estado Pago"::Pendiente;
-                          RetrocederPagoEventos();
-                          Estado;
+                        CALCFIELDS(Importe, "Numero Eventos");
+                        IF CONFIRM(STRSUBSTNO(Text001, Importe, "Numero Eventos")) THEN BEGIN
+                            "Estado Pago" := "Estado Pago"::Pendiente;
+                            RetrocederPagoEventos();
+                            Estado;
                         END;
                     end;
                 }
@@ -109,8 +109,8 @@ page 67158 "Pagos a Expositores Ficha"
                     var
                         Text001: Label 'Importe del pago: %1. \Eventos incluidos: %2.';
                     begin
-                        CALCFIELDS(Importe,"Numero Eventos");
-                        MESSAGE(STRSUBSTNO(Text001,Importe,"Numero Eventos"));
+                        CALCFIELDS(Importe, "Numero Eventos");
+                        MESSAGE(STRSUBSTNO(Text001, Importe, "Numero Eventos"));
                     end;
                 }
             }
@@ -130,13 +130,13 @@ page 67158 "Pagos a Expositores Ficha"
 
     procedure Estado()
     begin
-        IF  "Estado Pago" = "Estado Pago"::Pendiente THEN BEGIN
-          wEdit := TRUE;
-          wPendiente := TRUE;
+        IF "Estado Pago" = "Estado Pago"::Pendiente THEN BEGIN
+            wEdit := TRUE;
+            wPendiente := TRUE;
         END
         ELSE BEGIN
-          wEdit := FALSE;
-          wPendiente  := FALSE;
+            wEdit := FALSE;
+            wPendiente := FALSE;
         END;
     end;
 }

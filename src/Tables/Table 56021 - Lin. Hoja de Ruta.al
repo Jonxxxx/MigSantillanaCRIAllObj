@@ -36,9 +36,9 @@ table 56021 "Lin. Hoja de Ruta"
         field(3; "No. Conduce"; Code[20])
         {
             Caption = 'Shipment No.';
-            TableRelation = IF (Tipo Envio=FILTER(Pedido Venta)) "Sales Shipment Header" WHERE (En Hoja de Ruta=FILTER(No),
+            TableRelation = IF (Tipo Envio=FILTER(Pedido Venta)) "Sales Shipment Header" WHERE ("En Hoja de Ruta"=FILTER(No),
                                                                                                 En Hoja de Ruta Registrada=FILTER(No))
-                                                                                                ELSE IF (Tipo Envio=FILTER(Transferencia)) "Transfer Shipment Header" WHERE (En Hoja de Ruta=FILTER(No),
+                                                                                                ELSE IF (Tipo Envio=FILTER(Transferencia)) "Transfer Shipment Header" WHERE ("En Hoja de Ruta"=FILTER(No),
                                                                                                                                                                              En Hoja de Ruta Registrada=FILTER(No));
 
             trigger OnValidate()

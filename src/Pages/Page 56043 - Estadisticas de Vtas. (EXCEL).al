@@ -63,7 +63,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
             field(wTipoCliente; wTipoCliente)
             {
                 Caption = 'Tipo Cliente';
-                TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(2));
+                TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
             }
             field(wGCN; wGCN)
             {
@@ -73,7 +73,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
             field(wLineaNegocio; wLineaNegocio)
             {
                 Caption = 'Tipo Cliente';
-                TableRelation = "Dimension Value".Code WHERE(Global Dimension No.=CONST(1));
+                TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
             }
             field(wCategoriaPedido; wCategoriaPedido)
             {

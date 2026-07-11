@@ -53,11 +53,11 @@ table 67025 "Libros Competencia"
         }
         field(8; "Description Santillana"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE(No.=FIELD(Cod. Libro Santillana)));
+            CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Libro Santillana")));
             Caption = 'Code pays/r gion';
             FieldClass = FlowField;
         }
-        field(9;"Nombre Editorial";Text[60])
+        field(9; "Nombre Editorial"; Text[60])
         {
             Caption = 'Code postal';
             TableRelation = "Post Code";
@@ -65,29 +65,29 @@ table 67025 "Libros Competencia"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(10;Precio;Decimal)
+        field(10; Precio; Decimal)
         {
         }
-        field(11;"Carga horaria";Code[20])
+        field(11; "Carga horaria"; Code[20])
         {
             TableRelation = "Carga Horaria";
         }
-        field(12;"Tipo Ingles";Option)
+        field(12; "Tipo Ingles"; Option)
         {
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(13;"A o Edici n";Date)
+        field(13; "A o Edici n"; Date)
         {
         }
-        field(14;"A o Uso";Date)
+        field(14; "A o Uso"; Date)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Editorial","Cod. Libro",Nivel)
+        key(Key1; "Cod. Editorial", "Cod. Libro", Nivel)
         {
         }
     }

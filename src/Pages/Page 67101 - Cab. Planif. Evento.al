@@ -78,11 +78,11 @@ page 67101 "Cab. Planif. Evento"
             }
             part(SubFormPTyE; 67015)
             {
-                SubPageLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                              Tipo Evento=FIELD(Tipo Evento),
-                              Tipo de Expositor=FIELD(Tipo de Expositor),
-                              Expositor=FIELD(Expositor),
-                              Secuencia=FIELD(Secuencia);
+                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
+                              Tipo Evento=FIELD("Tipo Evento"),
+                              Tipo de Expositor=FIELD("Tipo de Expositor"),
+                              Expositor=FIELD("Expositor"),
+                              Secuencia=FIELD("Secuencia");
                 SubPageView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor);
             }
         }
@@ -219,10 +219,10 @@ page 67101 "Cab. Planif. Evento"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67016;
-                                    RunPageLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                                  Tipo Evento=FIELD(Tipo Evento),
-                                  Secuencia=FIELD(Secuencia),
-                                  Cod. Expositor=FIELD(Expositor);
+                                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
+                                  Tipo Evento=FIELD("Tipo Evento"),
+                                  Secuencia=FIELD("Secuencia"),
+                                  Cod. Expositor=FIELD("Expositor");
                     Visible = false;
                 }
                 action("Distribution per Cost Centre")

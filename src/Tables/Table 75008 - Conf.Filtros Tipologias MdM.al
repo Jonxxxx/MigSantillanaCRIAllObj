@@ -21,7 +21,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
         }
         field(12; "Valor Id"; Integer)
         {
-            TableRelation = "Tipo Filtros Tipo. MdM Buffer".Id WHERE(Tipo = FIELD(Tipo));
+            TableRelation = "Tipo Filtros Tipo. MdM Buffer".Id WHERE("Tipo" = FIELD("Tipo"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;

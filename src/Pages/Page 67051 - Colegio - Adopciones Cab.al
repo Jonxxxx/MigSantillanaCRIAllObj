@@ -227,8 +227,8 @@ page 67051 "Colegio - Adopciones Cab"
             {
                 SubPageLink = Cod. Colegio=FIELD("Cod. Colegio"),
                               Cod. Nivel=FIELD(FILTER(Filtro Nivel)),
-                              Cod. Turno=FIELD(Turno),
-                              Cod. Promotor=FIELD(Cod. Promotor),
+                              Cod. Turno=FIELD("Turno"),
+                              Cod. Promotor=FIELD("Cod. Promotor"),
                               Linea de negocio=FIELD(FILTER(Filtro Linea de negocio)),
                               Serie=FIELD(FILTER(Filtro Serie)),
                               Sub Familia=FIELD(FILTER(Filtro Sub Familia));
@@ -251,7 +251,7 @@ page 67051 "Colegio - Adopciones Cab"
                     PromotedCategory = Category4;
                     PromotedIsBig = true;
                     RunObject = Page 5116;
-                                    RunPageLink = Code=FIELD(Cod. Promotor);
+                                    RunPageLink = Code=FIELD("Cod. Promotor");
                     ShortCutKey = 'Shift+F5';
                 }
                 action(FCol)

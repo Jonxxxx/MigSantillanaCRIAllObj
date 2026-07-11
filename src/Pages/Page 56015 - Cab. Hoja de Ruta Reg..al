@@ -46,7 +46,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
             }
             part(; 56016)
             {
-                SubPageLink = No. Hoja Ruta=FIELD(No. Hoja Ruta);
+                SubPageLink = No. Hoja Ruta=FIELD("No. Hoja Ruta");
                     SubPageView = SORTING(No. Hoja Ruta,No. Linea)
                               ORDER(Ascending);
             }

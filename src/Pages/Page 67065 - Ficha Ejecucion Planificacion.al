@@ -254,7 +254,7 @@ page 67065 "Ficha Ejecucion Planificacion"
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     RunObject = Page 67136;
-                    RunPageLink = Cod. Promotor=FIELD(Cod. Promotor),
+                    RunPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
                                   Cod. Colegio=FIELD("Cod. Colegio"),
                                   Area=CONST(true);
                 }
@@ -266,7 +266,7 @@ page 67065 "Ficha Ejecucion Planificacion"
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     RunObject = Page 67137;
-                                    RunPageLink = Cod. Promotor=FIELD(Cod. Promotor),
+                                    RunPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
                                   Cod. Colegio=FIELD("Cod. Colegio"),
                                   Paso=CONST(true);
                 }

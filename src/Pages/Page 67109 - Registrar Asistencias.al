@@ -89,10 +89,10 @@ page 67109 "Registrar Asistencias"
             {
                 Editable = false;
                 ShowFilter = false;
-                SubPageLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                              Tipo Evento=FIELD(Tipo Evento),
-                              Expositor=FIELD(Expositor),
-                              Secuencia=FIELD(Secuencia);
+                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
+                              Tipo Evento=FIELD("Tipo Evento"),
+                              Expositor=FIELD("Expositor"),
+                              Secuencia=FIELD("Secuencia");
             }
         }
     }
@@ -111,10 +111,10 @@ page 67109 "Registrar Asistencias"
                     Promoted = true;
                     PromotedIsBig = true;
                     RunObject = Page 67101;
-                                    RunPageLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                                  Tipo Evento=FIELD(Tipo Evento),
-                                  Expositor=FIELD(Expositor),
-                                  Secuencia=FIELD(Secuencia);
+                                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
+                                  Tipo Evento=FIELD("Tipo Evento"),
+                                  Expositor=FIELD("Expositor"),
+                                  Secuencia=FIELD("Secuencia");
                 }
                 action("Register Assistants")
                 {

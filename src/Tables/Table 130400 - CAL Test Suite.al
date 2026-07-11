@@ -18,16 +18,16 @@ table 130400 "CAL Test Suite"
         }
         field(3; "Tests to Execute"; Integer)
         {
-            CalcFormula = Count("CAL Test Line" WHERE(Test Suite=FIELD(Name),
+            CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
                                                        Line Type=CONST(Function),
                                                        Run=CONST(true)));
             Caption = 'Tests to Execute';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Tests not Executed";Integer)
+        field(4; "Tests not Executed"; Integer)
         {
-            CalcFormula = Count("CAL Test Line" WHERE (Test Suite=FIELD(Name),
+            CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
                                                        Line Type=CONST(Function),
                                                        Run=CONST(true),
                                                        Result=CONST(" ")));
@@ -35,9 +35,9 @@ table 130400 "CAL Test Suite"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5;Failures;Integer)
+        field(5; Failures; Integer)
         {
-            CalcFormula = Count("CAL Test Line" WHERE (Test Suite=FIELD(Name),
+            CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
                                                        Line Type=CONST(Function),
                                                        Run=CONST(true),
                                                        Result=CONST(Failure)));
@@ -45,20 +45,20 @@ table 130400 "CAL Test Suite"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(6;"Last Run";DateTime)
+        field(6; "Last Run"; DateTime)
         {
             Caption = 'Last Run';
             Editable = false;
         }
-        field(8;Export;Boolean)
+        field(8; Export; Boolean)
         {
             Caption = 'Export';
         }
-        field(21;Attachment;BLOB)
+        field(21; Attachment; BLOB)
         {
             Caption = 'Attachment';
         }
-        field(23;"Update Test Coverage Map";Boolean)
+        field(23; "Update Test Coverage Map"; Boolean)
         {
             Caption = 'Update Test Coverage Map';
         }
@@ -66,7 +66,7 @@ table 130400 "CAL Test Suite"
 
     keys
     {
-        key(Key1;Name)
+        key(Key1; Name)
         {
         }
     }
@@ -79,13 +79,13 @@ table 130400 "CAL Test Suite"
     var
         CALTestLine: Record 130401;
     begin
-        CALTestLine.SETRANGE("Test Suite",Name);
+        CALTestLine.SETRANGE("Test Suite", Name);
         CALTestLine.DELETEALL(TRUE);
     end;
 
     var
-        CouldNotExportErr: Label 'Could not export Unit Test XML definition.', Locked=true;
-        UTTxt: Label 'UT', Locked=true;
+        CouldNotExportErr: Label 'Could not export Unit Test XML definition.', Locked = true;
+        UTTxt: Label 'UT', Locked = true;
         CALTestSuiteXML: XMLport "130400;
                              CALTestResultsXML: XMLport "130401;
 

@@ -124,7 +124,7 @@ table 75000 "Configuracion MDM"
         }
         field(50; "Estado Inactivo"; Code[10])
         {
-            TableRelation = "Datos MDM".Codigo WHERE(Tipo = CONST(Estado));
+            TableRelation = "Datos MDM".Codigo WHERE("Tipo" = CONST(Estado));
         }
         field(100; "Serie Producto"; Code[10])
         {

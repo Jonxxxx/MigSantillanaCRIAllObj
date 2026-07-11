@@ -40,8 +40,8 @@ page 67173 "Prog. Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67176;
-                    RunPageLink = No. Visita=FIELD(No. Visita),
-                                  No. Linea Progr.=FIELD(No. Linea);
+                    RunPageLink = No. Visita=FIELD("No. Visita"),
+                                  No. Linea Progr.=FIELD("No. Linea");
                 }
             }
         }

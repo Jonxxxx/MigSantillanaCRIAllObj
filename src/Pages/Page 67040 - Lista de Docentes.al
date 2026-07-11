@@ -75,12 +75,12 @@ page 67040 "Lista de Docentes"
             part(PlanifEventLP; 67108)
             {
                 Editable = false;
-                SubPageLink = Cod. Docente=FIELD(No.);
+                SubPageLink = Cod. Docente=FIELD("No.");
             }
             part(; 67107)
             {
                 Editable = false;
-                SubPageLink = Cod. Docente=FIELD(No.);
+                SubPageLink = Cod. Docente=FIELD("No.");
             }
         }
     }
@@ -100,7 +100,7 @@ page 67040 "Lista de Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67045;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action(Hobbies)
                 {
@@ -110,7 +110,7 @@ page 67040 "Lista de Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67058;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 separator()
                 {
@@ -123,7 +123,7 @@ page 67040 "Lista de Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67063;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Workshop - Event")
                 {
@@ -133,7 +133,7 @@ page 67040 "Lista de Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67108;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
             }
             action("&Exponent")
@@ -141,7 +141,7 @@ page 67040 "Lista de Docentes"
                 Caption = '&Exponent';
                 Image = ContactReference;
                 RunObject = Page 67100;
-                                RunPageLink = Cod. Expositor=FIELD(Cod. Proveedor);
+                                RunPageLink = Cod. Expositor=FIELD("Cod. Proveedor");
             }
             group("<Action1000000017>")
             {
@@ -153,7 +153,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67113;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Teacher - Hobbies History")
                 {
@@ -162,7 +162,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67114;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("Teacher - Specialties History")
                 {
@@ -171,7 +171,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67115;
-                                    RunPageLink = Cod. Docente=FIELD(No.);
+                                    RunPageLink = Cod. Docente=FIELD("No.");
                 }
                 action("School - Teacher History")
                 {

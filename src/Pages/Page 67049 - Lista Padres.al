@@ -102,13 +102,13 @@ page 67049 "Lista Padres"
                 {
                     Caption = '&Interest area';
                     RunObject = Page 67019;
-                                    RunPageLink = DNI Padre=FIELD(DNI);
+                                    RunPageLink = DNI Padre=FIELD("DNI");
                 }
                 action("&Children")
                 {
                     Caption = '&Children';
                     RunObject = Page 67020;
-                                    RunPageLink = DNI Padre=FIELD(DNI);
+                                    RunPageLink = DNI Padre=FIELD("DNI");
                 }
             }
         }

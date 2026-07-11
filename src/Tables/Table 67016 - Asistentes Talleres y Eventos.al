@@ -23,7 +23,7 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(4; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             begin
@@ -33,7 +33,7 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(5; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -60,7 +60,7 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(11; "Cod. Expositor"; Code[20])
         {
-            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
+            TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
 
             trigger OnValidate()
@@ -132,11 +132,11 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(22; "Fecha programacion"; Date)
         {
-            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE(Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
-                                                                                             Tipo Evento=FIELD(Tipo Evento),
-                                                                                             Tipo de Expositor=FIELD(Tipo de Expositor),
-                                                                                             Secuencia=FIELD(Secuencia),
-                                                                                             No. Linea=FIELD(No Linea Programac.)));
+            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                                                                             Tipo Evento=FIELD("Tipo Evento"),
+                                                                                             Tipo de Expositor=FIELD("Tipo de Expositor"),
+                                                                                             Secuencia=FIELD("Secuencia"),
+                                                                                             No. Linea=FIELD("No Linea Programac.")));
             FieldClass = FlowField;
         }
         field(23;"Document ID";Text[20])

@@ -47,19 +47,19 @@ table 56022 "Cab. Hoja de Ruta Reg."
         }
         field(10; Chofer; Code[20])
         {
-            TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE(Cod. Transportista=FIELD(Cod. Transportista));
+            TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE("Cod. Transportista" = FIELD("Cod. Transportista"));
         }
-        field(11;"Nombre Chofer";Text[100])
+        field(11; "Nombre Chofer"; Text[100])
         {
         }
-        field(12;Placa;Code[20])
+        field(12; Placa; Code[20])
         {
         }
-        field(13;"Ruta de Distribucion";Code[10])
+        field(13; "Ruta de Distribucion"; Code[10])
         {
             Caption = '<Ruta de Distribuci n>';
         }
-        field(14;"Hoja de Ruta Origen";Code[20])
+        field(14; "Hoja de Ruta Origen"; Code[20])
         {
             Description = '#37066';
         }
@@ -67,7 +67,7 @@ table 56022 "Cab. Hoja de Ruta Reg."
 
     keys
     {
-        key(Key1;"No. Hoja Ruta")
+        key(Key1; "No. Hoja Ruta")
         {
         }
     }
@@ -80,13 +80,12 @@ table 56022 "Cab. Hoja de Ruta Reg."
     begin
         SalesSetup.GET;
         "Fecha Planificacion Transporte" := WORKDATE;
-        IF "No. Hoja Ruta" = '' THEN
-          BEGIN
+        IF "No. Hoja Ruta" = '' THEN BEGIN
             SalesSetup.GET;
             TestNoSeries;
-            NoSeriesMgt.InitSeries(GetNoSeriesCode,"No. Hoja Ruta",WORKDATE,"No. Hoja Ruta",
+            NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Hoja Ruta", WORKDATE, "No. Hoja Ruta",
                                     SalesSetup."No. Serie Hoja de Ruta");
-          END;
+        END;
     end;
 
     var

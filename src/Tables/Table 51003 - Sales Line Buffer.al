@@ -785,7 +785,7 @@ table 51003 "Sales Line Buffer"
         }
         field(5702; "Substitution Available"; Boolean)
         {
-            CalcFormula = Exist("Item Substitution" WHERE(Type = CONST(Item),
+            CalcFormula = Exist("Item Substitution" WHERE("Type" = CONST(Item),
                                                            "No." = FIELD("No."),
                                                            "Substitute Type" = CONST(Item)));
             Caption = 'Substitution Available';

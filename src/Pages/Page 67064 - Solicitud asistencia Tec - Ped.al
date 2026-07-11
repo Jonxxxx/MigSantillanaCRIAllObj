@@ -485,7 +485,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67089;
-                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                     Visible = wEquipos;
                 }
                 action("&Schedule")
@@ -564,7 +564,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67121;
-                                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                 }
                 action("&Libros a Presentar")
                 {
@@ -572,7 +572,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67130;
-                                    RunPageLink = Núm. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = Núm. Solicitud=FIELD("No. Solicitud");
                 }
                 action("&Competencia")
                 {
@@ -580,7 +580,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67131;
-                                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                 }
                 separator()
                 {
@@ -641,7 +641,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67122;
-                                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                 }
                 action("<Action1000000036>")
                 {
@@ -649,7 +649,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67123;
-                                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                 }
                 action("<Action1000000037>")
                 {
@@ -657,7 +657,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67124;
-                                    RunPageLink = No. Solicitud=FIELD(No. Solicitud);
+                                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
                 }
                 action("&Textos que utilizan")
                 {

@@ -7,7 +7,7 @@ page 52505 "Msj  Facturacion Electronica"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = Table52502;
-    SourceTableView = WHERE(Tipo Documento=FILTER(MA|MP|MR));
+    SourceTableView = WHERE("Tipo Documento" = FILTER(MA | MP | MR));
     UsageCategory = Lists;
 
     layout
@@ -16,28 +16,28 @@ page 52505 "Msj  Facturacion Electronica"
         {
             repeater(Group)
             {
-                field("Tipo Documento";"Tipo Documento")
+                field("Tipo Documento"; "Tipo Documento")
                 {
                 }
-                field(NoDocumento;NoDocumento)
+                field(NoDocumento; NoDocumento)
                 {
                 }
-                field("Fecha Doc";"Fecha Doc")
+                field("Fecha Doc"; "Fecha Doc")
                 {
                 }
-                field("Clave Doc";"Clave Doc")
+                field("Clave Doc"; "Clave Doc")
                 {
                 }
-                field("Consecutivo Doc";"Consecutivo Doc")
+                field("Consecutivo Doc"; "Consecutivo Doc")
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
-                field(Mensaje;Mensaje)
+                field(Mensaje; Mensaje)
                 {
                 }
-                field(Usuario;Usuario)
+                field(Usuario; Usuario)
                 {
                 }
             }
@@ -66,11 +66,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc SF  XML");
                     IF "Doc SF  XML".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc SF  XML";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,'Documento Sin Firma.xml',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc SF  XML";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, 'Documento Sin Firma.xml', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -88,11 +88,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc Firmado  XML");
                     IF "Doc Firmado  XML".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc Firmado  XML";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,'Documento Firmado.xml',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc Firmado  XML";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, 'Documento Firmado.xml', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -110,11 +110,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc Json envio  XML");
                     IF "Doc Json envio  XML".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc Json envio  XML";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,'Documento Json Enviado.txt',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc Json envio  XML";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, 'Documento Json Enviado.txt', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -132,11 +132,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc Json Respuesta  XML");
                     IF "Doc Json Respuesta  XML".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc Json Respuesta  XML";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,'Documento Json Recibido.txt',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc Json Respuesta  XML";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, 'Documento Json Recibido.txt', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -154,11 +154,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc Respuesta  XML");
                     IF "Doc Respuesta  XML".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc Respuesta  XML";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,'Documento Xml Respuesta.xml',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc Respuesta  XML";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, 'Documento Xml Respuesta.xml', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -176,11 +176,11 @@ page 52505 "Msj  Facturacion Electronica"
                 begin
                     CALCFIELDS("Doc Pdf Generado");
                     IF "Doc Pdf Generado".HASVALUE THEN BEGIN
-                      TempBlob.INIT;
-                      TempBlob.Blob := "Doc Pdf Generado";
-                      TempBlob.INSERT;
-                      FileManagment.BLOBExport(TempBlob,FORMAT("Tipo Documento")+'-'+"Clave Doc"+'.pdf',TRUE);
-                      TempBlob.DELETEALL;
+                        TempBlob.INIT;
+                        TempBlob.Blob := "Doc Pdf Generado";
+                        TempBlob.INSERT;
+                        FileManagment.BLOBExport(TempBlob, FORMAT("Tipo Documento") + '-' + "Clave Doc" + '.pdf', TRUE);
+                        TempBlob.DELETEALL;
                     END;
                 end;
             }

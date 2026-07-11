@@ -38,8 +38,8 @@ table 56034 "Lin. Packing Registrada"
         }
         field(8; "Total de Productos"; Decimal)
         {
-            CalcFormula = Sum("Contenido Cajas Packing Reg.".Cantidad WHERE(No. Packing=FIELD(No.),
-                                                                             No. Caja=FIELD(No. Caja)));
+            CalcFormula = Sum("Contenido Cajas Packing Reg.".Cantidad WHERE("No. Packing" = FIELD("No."),
+                                                                             No. Caja=FIELD("No. Caja")));
             Caption = 'Item total';
             FieldClass = FlowField;
         }
@@ -49,11 +49,11 @@ table 56034 "Lin. Packing Registrada"
         }
         field(10;"No. Pedido";Code[20])
         {
-            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE (Document Type=CONST(Order),
+            TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
                                                                                     Estado packing=CONST(Listo))
-                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(true),
+                                                                                    ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true),
                                                                                                                                                            Estado packing=CONST(Listo))
-                                                                                                                                                           ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE (Pedido Consignacion=CONST(false),
+                                                                                                                                                           ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false),
                                                                                                                                                                                                                                    Estado packing=CONST(Listo));
         }
         field(20;"Tipo pedido";Option)

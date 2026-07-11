@@ -4,7 +4,7 @@ page 56008 "Mov. Prod. Por Clientes"
     SourceTable = Table32;
     SourceTableView = SORTING(Entry No.)
                       ORDER(Ascending)
-                      WHERE(Source Type=FILTER(Customer));
+                      WHERE("Source Type" = FILTER(Customer));
 
     layout
     {
@@ -12,28 +12,28 @@ page 56008 "Mov. Prod. Por Clientes"
         {
             repeater(Group)
             {
-                field("Item No.";"Item No.")
+                field("Item No."; "Item No.")
                 {
                 }
-                field("Posting Date";"Posting Date")
+                field("Posting Date"; "Posting Date")
                 {
                 }
-                field("Source No.";"Source No.")
+                field("Source No."; "Source No.")
                 {
                 }
-                field("Document No.";"Document No.")
+                field("Document No."; "Document No.")
                 {
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
                 }
-                field("Location Code";"Location Code")
+                field("Location Code"; "Location Code")
                 {
                 }
-                field(Quantity;Quantity)
+                field(Quantity; Quantity)
                 {
                 }
-                field("Sales Amount (Actual)";"Sales Amount (Actual)")
+                field("Sales Amount (Actual)"; "Sales Amount (Actual)")
                 {
                 }
             }

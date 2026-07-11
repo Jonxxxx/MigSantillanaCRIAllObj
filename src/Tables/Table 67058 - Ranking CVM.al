@@ -13,7 +13,7 @@ table 67058 "Ranking CVM"
         field(2; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Cod. Local"; Code[20])
         {
@@ -33,7 +33,7 @@ table 67058 "Ranking CVM"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {

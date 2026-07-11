@@ -19,8 +19,8 @@ page 56064 "Gestion BackOrder - SL"
     SourceTable = Table37;
     SourceTableView = SORTING(Type, No., Variant Code, Drop Shipment, Location Code, Document Type, Shipment Date)
                       ORDER(Ascending)
-                      WHERE(Document Type=FILTER(Order),
-                            Type=FILTER(Item),
+                      WHERE("Document Type" = FILTER(Order),
+                            Type = FILTER(Item),
                             No.=FILTER(<>''),
                             Cantidad pendiente BO=FILTER(<>0),
                             Disponible BackOrder=FILTER(Yes));

@@ -7,7 +7,7 @@ table 67044 "Promotor - Rutas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Ruta"; Code[20])
         {
@@ -41,7 +41,7 @@ table 67044 "Promotor - Rutas"
         }
         field(4; "Nombre Promotor"; Text[100])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5;"Descripcion Ruta";Text[100])
@@ -50,11 +50,11 @@ table 67044 "Promotor - Rutas"
         field(6;"Cod. Supervisor";Code[20])
         {
             Caption = 'Superviser code';
-            TableRelation = Salesperson/Purchaser.Code WHERE (Tipo=CONST(Supervisor));
+            TableRelation = Salesperson/Purchaser.Code WHERE ("Tipo"=CONST(Supervisor));
         }
         field(7;"Nombre Supervisor";Text[100])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Supervisor)));
+            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Supervisor")));
             FieldClass = FlowField;
         }
         field(8;"Descripcion zona";Text[100])

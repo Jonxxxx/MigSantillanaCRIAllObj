@@ -5,7 +5,7 @@ page 56028 "Lista clas. devoluciones cer."
     Editable = false;
     PageType = List;
     SourceTable = Table56025;
-    SourceTableView = WHERE(Closed = CONST(true));
+    SourceTableView = WHERE("Closed" = CONST(true));
     UsageCategory = Lists;
 
     layout

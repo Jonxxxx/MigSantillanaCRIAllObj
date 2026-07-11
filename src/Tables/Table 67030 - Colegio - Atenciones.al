@@ -5,7 +5,7 @@ table 67030 "Colegio - Atenciones"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             begin
@@ -21,7 +21,7 @@ table 67030 "Colegio - Atenciones"
         }
         field(3; "Cod. promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin

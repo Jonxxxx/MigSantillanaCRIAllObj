@@ -42,7 +42,7 @@ table 130401 "CAL Test Line"
         {
             Caption = 'Test Codeunit';
             Editable = false;
-            TableRelation = IF (Line Type=CONST(Codeunit)) AllObjWithCaption."Object ID" WHERE (Object Type=CONST(Codeunit),
+            TableRelation = IF (Line Type=CONST(Codeunit)) AllObjWithCaption."Object ID" WHERE ("Object Type"=CONST(Codeunit),
                                                                                                 Object Subtype=CONST(Test));
 
             trigger OnValidate()
@@ -144,7 +144,7 @@ table 130401 "CAL Test Line"
         }
         field(13; "Hit Objects"; Integer)
         {
-            CalcFormula = Count("CAL Test Coverage Map" WHERE(Test Codeunit ID=FIELD(Test Codeunit)));
+            CalcFormula = Count("CAL Test Coverage Map" WHERE("Test Codeunit ID" = FIELD("Test Codeunit")));
             Caption = 'Hit Objects';
             Editable = false;
             FieldClass = FlowField;
@@ -153,10 +153,10 @@ table 130401 "CAL Test Line"
 
     keys
     {
-        key(Key1;"Test Suite","Line No.")
+        key(Key1; "Test Suite", "Line No.")
         {
         }
-        key(Key2;"Test Suite",Result,"Line Type",Run)
+        key(Key2; "Test Suite", Result, "Line Type", Run)
         {
         }
     }
@@ -173,7 +173,7 @@ table 130401 "CAL Test Line"
     trigger OnInsert()
     begin
         IF "Line Type" = "Line Type"::Codeunit THEN
-          CALTestMgt.RunSuite(Rec,FALSE);
+            CALTestMgt.RunSuite(Rec, FALSE);
     end;
 
     trigger OnModify()
@@ -181,12 +181,12 @@ table 130401 "CAL Test Line"
         IF ("Line Type" = "Line Type"::Codeunit) AND
            ("Test Codeunit" <> xRec."Test Codeunit")
         THEN
-          CALTestMgt.RunSuite(Rec,FALSE);
+            CALTestMgt.RunSuite(Rec, FALSE);
     end;
 
     var
         CALTestLine: Record 130401;
-        CannotChangeValueErr: Label 'You cannot change the value of the OnRun.', Locked=true;
+        CannotChangeValueErr: Label 'You cannot change the value of the OnRun.', Locked = true;
         CALTestMgt: Codeunit 130401;
 
     [Scope('Personalization')]
@@ -196,26 +196,26 @@ table 130401 "CAL Test Line"
         OutOfGroup: Boolean;
     begin
         IF NOT CALTestLine.Run THEN
-          EXIT;
+            EXIT;
         IF NOT ("Line Type" = "Line Type"::"Function") THEN
-          EXIT;
+            EXIT;
 
         CopyOfCALTestLine.COPY(CALTestLine);
         WITH CALTestLine DO BEGIN
-          RESET;
-          SETRANGE("Test Suite","Test Suite");
-          REPEAT
-            OutOfGroup :=
-              (NEXT(-1) = 0) OR
-              ("Test Codeunit" <> CopyOfCALTestLine."Test Codeunit");
+            RESET;
+            SETRANGE("Test Suite", "Test Suite");
+            REPEAT
+                OutOfGroup :=
+                  (NEXT(-1) = 0) OR
+                  ("Test Codeunit" <> CopyOfCALTestLine."Test Codeunit");
 
-            IF (("Line Type" IN ["Line Type"::Group,"Line Type"::Codeunit]) OR ("Function" = 'OnRun')) AND
-               NOT Run
-            THEN BEGIN
-              Run := TRUE;
-              MODIFY;
-            END;
-          UNTIL OutOfGroup;
+                IF (("Line Type" IN ["Line Type"::Group, "Line Type"::Codeunit]) OR ("Function" = 'OnRun')) AND
+                   NOT Run
+                THEN BEGIN
+                    Run := TRUE;
+                    MODIFY;
+                END;
+            UNTIL OutOfGroup;
         END;
         CALTestLine.COPY(CopyOfCALTestLine);
     end;
@@ -226,16 +226,16 @@ table 130401 "CAL Test Line"
         CopyOfCALTestLine: Record 130401;
     begin
         IF CALTestLine."Line Type" = "Line Type"::"Function" THEN
-          EXIT;
+            EXIT;
 
         CopyOfCALTestLine.COPY(CALTestLine);
         WITH CALTestLine DO BEGIN
-          RESET;
-          SETRANGE("Test Suite","Test Suite");
-          WHILE (NEXT <> 0) AND NOT ("Line Type" IN ["Line Type"::Group,CopyOfCALTestLine."Line Type"]) DO BEGIN
-            Run := CopyOfCALTestLine.Run;
-            MODIFY;
-          END;
+            RESET;
+            SETRANGE("Test Suite", "Test Suite");
+            WHILE (NEXT <> 0) AND NOT ("Line Type" IN ["Line Type"::Group, CopyOfCALTestLine."Line Type"]) DO BEGIN
+                Run := CopyOfCALTestLine.Run;
+                MODIFY;
+            END;
         END;
         CALTestLine.COPY(CopyOfCALTestLine);
     end;
@@ -246,14 +246,14 @@ table 130401 "CAL Test Line"
         CALTestLine: Record 130401;
     begin
         WITH CALTestLine DO BEGIN
-          COPY(Rec);
-          RESET;
-          SETRANGE("Test Suite","Test Suite");
+            COPY(Rec);
+            RESET;
+            SETRANGE("Test Suite", "Test Suite");
 
-          MinLineNo := "Line No.";
-          REPEAT
             MinLineNo := "Line No.";
-          UNTIL (Level < 2) OR (NEXT(-1) = 0);
+            REPEAT
+                MinLineNo := "Line No.";
+            UNTIL (Level < 2) OR (NEXT(-1) = 0);
         END;
     end;
 
@@ -263,13 +263,13 @@ table 130401 "CAL Test Line"
         CALTestLine: Record 130401;
     begin
         WITH CALTestLine DO BEGIN
-          COPY(Rec);
-          RESET;
-          SETRANGE("Test Suite","Test Suite");
+            COPY(Rec);
+            RESET;
+            SETRANGE("Test Suite", "Test Suite");
 
-          MaxLineNo := "Line No.";
-          WHILE (NEXT <> 0) AND (Level >= Rec.Level) DO
             MaxLineNo := "Line No.";
+            WHILE (NEXT <> 0) AND (Level >= Rec.Level) DO
+                MaxLineNo := "Line No.";
         END;
     end;
 
@@ -282,15 +282,15 @@ table 130401 "CAL Test Line"
         NoOfFunctions := 0;
 
         WITH CALTestLine DO BEGIN
-          COPY(Rec);
-          RESET;
-          SETRANGE("Test Suite","Test Suite");
-          MaxLineNo := "Line No.";
-          WHILE (NEXT <> 0) AND ("Line Type" = "Line Type"::"Function") DO BEGIN
+            COPY(Rec);
+            RESET;
+            SETRANGE("Test Suite", "Test Suite");
             MaxLineNo := "Line No.";
-            IF Run THEN
-              NoOfFunctions += 1;
-          END;
+            WHILE (NEXT <> 0) AND ("Line Type" = "Line Type"::"Function") DO BEGIN
+                MaxLineNo := "Line No.";
+                IF Run THEN
+                    NoOfFunctions += 1;
+            END;
         END;
     end;
 
@@ -301,43 +301,43 @@ table 130401 "CAL Test Line"
     begin
         CopyOfCALTestLine.COPY(Rec);
         RESET;
-        SETRANGE("Test Suite","Test Suite");
+        SETRANGE("Test Suite", "Test Suite");
         WHILE (NEXT <> 0) AND (Level > CopyOfCALTestLine.Level) DO
-          DELETE(TRUE);
+            DELETE(TRUE);
         COPY(CopyOfCALTestLine);
     end;
 
     [Scope('Personalization')]
-    procedure CalcTestResults(var Success: Integer;var Fail: Integer;var Skipped: Integer;var NotExecuted: Integer)
+    procedure CalcTestResults(var Success: Integer; var Fail: Integer; var Skipped: Integer; var NotExecuted: Integer)
     var
         CALTestLine: Record 130401;
     begin
-        CALTestLine.SETRANGE("Test Suite","Test Suite");
-        CALTestLine.SETFILTER("Function",'<>%1','OnRun');
-        CALTestLine.SETRANGE("Line Type","Line Type"::"Function");
+        CALTestLine.SETRANGE("Test Suite", "Test Suite");
+        CALTestLine.SETFILTER("Function", '<>%1', 'OnRun');
+        CALTestLine.SETRANGE("Line Type", "Line Type"::"Function");
 
-        CALTestLine.SETRANGE(Result,Result::Success);
+        CALTestLine.SETRANGE(Result, Result::Success);
         Success := CALTestLine.COUNT;
 
-        CALTestLine.SETRANGE(Result,Result::Failure);
+        CALTestLine.SETRANGE(Result, Result::Failure);
         Fail := CALTestLine.COUNT;
 
-        CALTestLine.SETRANGE(Result,Result::Skipped);
+        CALTestLine.SETRANGE(Result, Result::Skipped);
         Skipped := CALTestLine.COUNT;
 
-        CALTestLine.SETRANGE(Result,Result::" ");
+        CALTestLine.SETRANGE(Result, Result::" ");
         NotExecuted := CALTestLine.COUNT;
     end;
 
     local procedure UpdateLevelNo()
     begin
         CASE "Line Type" OF
-          "Line Type"::Group:
-            Level := 0;
-          "Line Type"::Codeunit:
-            Level := 1;
-          ELSE
-            Level := 2;
+            "Line Type"::Group:
+                Level := 0;
+            "Line Type"::Codeunit:
+                Level := 1;
+            ELSE
+                Level := 2;
         END;
     end;
 
@@ -346,11 +346,11 @@ table 130401 "CAL Test Line"
     var
         CALTestResult: Record 130405;
     begin
-        CALTestResult.SETRANGE("Codeunit ID","Test Codeunit");
+        CALTestResult.SETRANGE("Codeunit ID", "Test Codeunit");
         IF "Function" <> '' THEN
-          CALTestResult.SETRANGE("Function Name","Function");
+            CALTestResult.SETRANGE("Function Name", "Function");
         IF CALTestResult.FINDLAST THEN;
-        PAGE.RUN(PAGE::"CAL Test Results",CALTestResult);
+        PAGE.RUN(PAGE::"CAL Test Results", CALTestResult);
     end;
 }
 

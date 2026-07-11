@@ -53,7 +53,7 @@ table 56038 "Sales Line Movil."
         field(7;"Location Code";Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE (Use As In-Transit=CONST(false));
+            TableRelation = Location WHERE ("Use As In-Transit"=CONST(false));
         }
         field(8;"Posting Group";Code[10])
         {
@@ -198,13 +198,13 @@ table 56038 "Sales Line Movil."
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
         }
         field(41;"Shortcut Dimension 2 Code";Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
         }
         field(42;"Customer Price Group";Code[10])
         {
@@ -300,14 +300,14 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Purchase Order No.';
             Editable = false;
-            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Header"."No." WHERE (Document Type=CONST(Order));
+            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Header"."No." WHERE ("Document Type"=CONST(Order));
         }
         field(72;"Purch. Order Line No.";Integer)
         {
             Caption = 'Purch. Order Line No.';
             Editable = false;
-            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Line"."Line No." WHERE (Document Type=CONST(Order),
-                                                                                            Document No.=FIELD(Purchase Order No.));
+            TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
+                                                                                            Document No.=FIELD("Purchase Order No."));
         }
         field(73;"Drop Shipment";Boolean)
         {
@@ -345,8 +345,8 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Attached to Line No.';
             Editable = false;
-            TableRelation = "Sales Line"."Line No." WHERE (Document Type=FIELD(Document Type),
-                                                           Document No.=FIELD(Document No.));
+            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=FIELD("Document Type"),
+                                                           Document No.=FIELD("Document No."));
         }
         field(81;"Exit Point";Code[10])
         {
@@ -415,10 +415,10 @@ table 56038 "Sales Line Movil."
         }
         field(95;"Reserved Quantity";Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry".Quantity WHERE (Source ID=FIELD(Document No.),
-                                                                   Source Ref. No.=FIELD(Line No.),
+            CalcFormula = -Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
+                                                                   Source Ref. No.=FIELD("Line No."),
                                                                    Source Type=CONST(37),
-                                                                   Source Subtype=FIELD(Document Type),
+                                                                   Source Subtype=FIELD("Document Type"),
                                                                    Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Quantity';
             DecimalPlaces = 0:5;
@@ -434,15 +434,15 @@ table 56038 "Sales Line Movil."
         field(97;"Blanket Order No.";Code[20])
         {
             Caption = 'Blanket Order No.';
-            TableRelation = "Sales Header"."No." WHERE (Document Type=CONST(Blanket Order));
+            TableRelation = "Sales Header"."No." WHERE ("Document Type"=CONST(Blanket Order));
             //This property is currently not supported
             //TestTableRelation = false;
         }
         field(98;"Blanket Order Line No.";Integer)
         {
             Caption = 'Blanket Order Line No.';
-            TableRelation = "Sales Line"."Line No." WHERE (Document Type=CONST(Blanket Order),
-                                                           Document No.=FIELD(Blanket Order No.));
+            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
+                                                           Document No.=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -646,7 +646,7 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Job Task No.';
             Editable = false;
-            TableRelation = "Job Task"."Job Task No." WHERE (Job No.=FIELD(Job No.));
+            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
         }
         field(1002;"Job Contract Entry No.";Integer)
         {
@@ -662,7 +662,7 @@ table 56038 "Sales Line Movil."
         field(5402;"Variant Code";Code[10])
         {
             Caption = 'Variant Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD(No.));
+            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD("No."));
         }
         field(5403;"Bin Code";Code[20])
         {
@@ -696,8 +696,8 @@ table 56038 "Sales Line Movil."
         field(5407;"Unit of Measure Code";Code[10])
         {
             Caption = 'Unit of Measure Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD(No.))
-                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE (Resource No.=FIELD(No.))
+            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."))
+                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE ("Resource No."=FIELD("No."))
                             ELSE "Unit of Measure";
 
             trigger OnValidate()
@@ -748,10 +748,10 @@ table 56038 "Sales Line Movil."
         }
         field(5495;"Reserved Qty. (Base)";Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE (Source ID=FIELD(Document No.),
-                                                                            Source Ref. No.=FIELD(Line No.),
+            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
+                                                                            Source Ref. No.=FIELD("Line No."),
                                                                             Source Type=CONST(37),
-                                                                            Source Subtype=FIELD(Document Type),
+                                                                            Source Subtype=FIELD("Document Type"),
                                                                             Reservation Status=CONST(Reservation)));
             Caption = 'Reserved Qty. (Base)';
             DecimalPlaces = 0:5;
@@ -793,8 +793,8 @@ table 56038 "Sales Line Movil."
         }
         field(5702;"Substitution Available";Boolean)
         {
-            CalcFormula = Exist("Item Substitution" WHERE (Type=CONST(Item),
-                                                           No.=FIELD(No.),
+            CalcFormula = Exist("Item Substitution" WHERE ("Type"=CONST(Item),
+                                                           No.=FIELD("No."),
                                                            Substitute Type=CONST(Item)));
             Caption = 'Substitution Available';
             Editable = false;
@@ -808,7 +808,7 @@ table 56038 "Sales Line Movil."
         field(5704;"Originally Ordered Var. Code";Code[10])
         {
             Caption = 'Originally Ordered Var. Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD(Originally Ordered No.));
+            TableRelation = IF (Type=CONST(Item)) "Item Variant".Code WHERE ("Item No."=FIELD("Originally Ordered No."));
         }
         field(5705;"Cross-Reference No.";Code[20])
         {
@@ -823,7 +823,7 @@ table 56038 "Sales Line Movil."
         field(5706;"Unit of Measure (Cross Ref.)";Code[10])
         {
             Caption = 'Unit of Measure (Cross Ref.)';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD(No.));
+            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."));
         }
         field(5707;"Cross-Reference Type";Option)
         {
@@ -853,7 +853,7 @@ table 56038 "Sales Line Movil."
         field(5712;"Product Group Code";Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE (Item Category Code=FIELD(Item Category Code));
+            TableRelation = "Product Group".Code WHERE ("Item Category Code"=FIELD("Item Category Code"));
         }
         field(5713;"Special Order";Boolean)
         {
@@ -863,21 +863,21 @@ table 56038 "Sales Line Movil."
         field(5714;"Special Order Purchase No.";Code[20])
         {
             Caption = 'Special Order Purchase No.';
-            TableRelation = IF (Special Order=CONST(true)) "Purchase Header"."No." WHERE (Document Type=CONST(Order));
+            TableRelation = IF (Special Order=CONST(true)) "Purchase Header"."No." WHERE ("Document Type"=CONST(Order));
         }
         field(5715;"Special Order Purch. Line No.";Integer)
         {
             Caption = 'Special Order Purch. Line No.';
-            TableRelation = IF (Special Order=CONST(true)) "Purchase Line"."Line No." WHERE (Document Type=CONST(Order),
-                                                                                            Document No.=FIELD(Special Order Purchase No.));
+            TableRelation = IF (Special Order=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
+                                                                                            Document No.=FIELD("Special Order Purchase No."));
         }
         field(5750;"Whse. Outstanding Qty. (Base)";Decimal)
         {
             BlankZero = true;
-            CalcFormula = Sum("Warehouse Shipment Line"."Qty. Outstanding (Base)" WHERE (Source Type=CONST(37),
-                                                                                         Source Subtype=FIELD(Document Type),
-                                                                                         Source No.=FIELD(Document No.),
-                                                                                         Source Line No.=FIELD(Line No.)));
+            CalcFormula = Sum("Warehouse Shipment Line"."Qty. Outstanding (Base)" WHERE ("Source Type"=CONST(37),
+                                                                                         Source Subtype=FIELD("Document Type"),
+                                                                                         Source No.=FIELD("Document No."),
+                                                                                         Source Line No.=FIELD("Line No.")));
             Caption = 'Whse. Outstanding Qty. (Base)';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -920,7 +920,7 @@ table 56038 "Sales Line Movil."
         field(5797;"Shipping Agent Service Code";Code[10])
         {
             Caption = 'Shipping Agent Service Code';
-            TableRelation = "Shipping Agent Services".Code WHERE (Shipping Agent Code=FIELD(Shipping Agent Code));
+            TableRelation = "Shipping Agent Services".Code WHERE ("Shipping Agent Code"=FIELD("Shipping Agent Code"));
         }
         field(5800;"Allow Item Charge Assignment";Boolean)
         {
@@ -929,9 +929,9 @@ table 56038 "Sales Line Movil."
         }
         field(5801;"Qty. to Assign";Decimal)
         {
-            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. to Assign" WHERE (Document Type=FIELD(Document Type),
-                                                                                       Document No.=FIELD(Document No.),
-                                                                                       Document Line No.=FIELD(Line No.)));
+            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. to Assign" WHERE ("Document Type"=FIELD("Document Type"),
+                                                                                       Document No.=FIELD("Document No."),
+                                                                                       Document Line No.=FIELD("Line No.")));
             Caption = 'Qty. to Assign';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -939,9 +939,9 @@ table 56038 "Sales Line Movil."
         }
         field(5802;"Qty. Assigned";Decimal)
         {
-            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. Assigned" WHERE (Document Type=FIELD(Document Type),
-                                                                                      Document No.=FIELD(Document No.),
-                                                                                      Document Line No.=FIELD(Line No.)));
+            CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. Assigned" WHERE ("Document Type"=FIELD("Document Type"),
+                                                                                      Document No.=FIELD("Document No."),
+                                                                                      Document Line No.=FIELD("Line No.")));
             Caption = 'Qty Assig';
             DecimalPlaces = 0:5;
             Editable = false;

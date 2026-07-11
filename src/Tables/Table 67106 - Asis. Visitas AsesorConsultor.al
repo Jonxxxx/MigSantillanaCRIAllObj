@@ -64,11 +64,11 @@ table 67106 "Asis. Visitas Asesor/Consultor"
         }
         field(10; "Fecha programaci n"; Date)
         {
-            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE(No. Visita=FIELD(No. Visita)));
+            CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE("No. Visita" = FIELD("No. Visita")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(11;"Document ID";Text[20])
+        field(11; "Document ID"; Text[20])
         {
             Caption = 'Document ID';
             Editable = false;
@@ -83,7 +83,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
     keys
     {
-        key(Key1;"No. Visita","No. Linea Progr.","No. Linea")
+        key(Key1; "No. Visita", "No. Linea Progr.", "No. Linea")
         {
         }
     }
@@ -102,9 +102,9 @@ table 67106 "Asis. Visitas Asesor/Consultor"
         rRec.SETRANGE(rRec."No. Visita", "No. Visita");
         rRec.SETRANGE(rRec."No. Linea Progr.", "No. Linea Progr.");
         IF rRec.FINDLAST THEN
-          "No. Linea" := rRec."No. Linea" + 1
+            "No. Linea" := rRec."No. Linea" + 1
         ELSE
-          "No. Linea" := 1;
+            "No. Linea" := 1;
 
         "Fecha inscripcion" := TODAY;
     end;

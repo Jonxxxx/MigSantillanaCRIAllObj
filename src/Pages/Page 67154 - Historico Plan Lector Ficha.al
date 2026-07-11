@@ -51,9 +51,9 @@ page 67154 "Historico Plan Lector Ficha"
             part(Detalle; 67155)
             {
                 Caption = 'Detalle';
-                SubPageLink = Campaña = FIELD(Campaña),
+                SubPageLink = Campaña = FIELD("Campaña"),
                               Cod. Colegio=FIELD("Cod. Colegio"),
-                              Cod. Local=FIELD(Cod. Local),
+                              Cod. Local=FIELD("Cod. Local"),
                               Cod. Turno=FIELD("Cod. Turno");
             }
         }

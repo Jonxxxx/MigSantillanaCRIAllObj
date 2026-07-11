@@ -7,11 +7,11 @@ table 67039 "Promotor - Entrega Muestras"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE(Type = CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; Fecha; Date)
         {
@@ -90,14 +90,14 @@ table 67039 "Promotor - Entrega Muestras"
         }
         field(19; "Cantidad Presupuestada"; Decimal)
         {
-            CalcFormula = Lookup("Promotor - Ppto Muestras".Quantity WHERE(Cod. Promotor=FIELD(Cod. Promotor),
+            CalcFormula = Lookup("Promotor - Ppto Muestras".Quantity WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
                                                                             Cod. Producto=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(20;"Cantidad consumida";Decimal)
         {
-            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE (Cod. Promotor=FIELD(Cod. Promotor),
+            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"),
                                                                             Cod. Producto=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;

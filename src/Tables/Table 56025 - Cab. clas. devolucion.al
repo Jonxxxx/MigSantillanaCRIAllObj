@@ -60,27 +60,27 @@ table 56025 "Cab. clas. devolucion"
         }
         field(10; Comentario; Boolean)
         {
-            CalcFormula = Exist("Clas. dev. Comment Line" WHERE(No.=FIELD(No.)));
+            CalcFormula = Exist("Clas. dev. Comment Line" WHERE("No." = FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(11;"Cod. Almacen";Code[20])
+        field(11; "Cod. Almacen"; Code[20])
         {
             Caption = 'Location Code';
             TableRelation = Location;
         }
-        field(12;"Dev. Trans. generadas";Integer)
+        field(12; "Dev. Trans. generadas"; Integer)
         {
-            CalcFormula = Count("Docs. clas. devoluciones" WHERE (Tipo documento=CONST(Transferencia),
-                                                                  No. clas. devoluciones=FIELD(No.)));
+            CalcFormula = Count("Docs. clas. devoluciones" WHERE("Tipo documento" = CONST(Transferencia),
+                                                                  No. clas. devoluciones=FIELD("No.")));
             Caption = 'Dev. transferencia generadas';
             FieldClass = FlowField;
         }
         field(13;"Dev. ventas generadas";Integer)
         {
-            CalcFormula = Count("Docs. clas. devoluciones" WHERE (Tipo documento=CONST(Venta),
-                                                                  No. clas. devoluciones=FIELD(No.)));
+            CalcFormula = Count("Docs. clas. devoluciones" WHERE ("Tipo documento"=CONST(Venta),
+                                                                  No. clas. devoluciones=FIELD("No.")));
             Caption = 'Dev. ventas generadas';
             FieldClass = FlowField;
         }
