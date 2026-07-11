@@ -370,7 +370,7 @@ codeunit 50022 "Pedidos E-Commerce"
 
     end;
 
-    local procedure ValidaClienteProductosControlados(_SalesHeader Record: 36"): Boolean
+    local procedure ValidaClienteProductosControlados(_SalesHeader: Record 36): Boolean
     var
         Error101: Label 'Expiration date of the Control drug No. is expired in the Customer.';
         Error102: Label 'You must fill out the Drug Control No. in the Client in order to choose a Controlled product.';

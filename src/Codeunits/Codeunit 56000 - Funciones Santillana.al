@@ -95,7 +95,7 @@ codeunit 56000 "Funciones Santillana"
         EXIT(wDesc_Loc);
     end;
 
-    procedure InsertaInvConsig(SalesHeader Record: 36")
+    procedure InsertaInvConsig(SalesHeader: Record 36)
     var
         SalesLines: Record 37;
         SalesLine1Record: Record 37;
@@ -140,7 +140,7 @@ codeunit 56000 "Funciones Santillana"
             UNTIL Item.NEXT = 0;
     end;
 
-    procedure BuscaLineasPendientesEntrega(TransferHeader Record: 5740"): Boolean
+    procedure BuscaLineasPendientesEntrega(TransferHeader: Record 5740): Boolean
     var
         TransferLine: Record 5741;
         TransferLine1Record: Record 5741;
@@ -163,7 +163,7 @@ codeunit 56000 "Funciones Santillana"
             UNTIL TransferLine.NEXT = 0;
     end;
 
-    procedure BuscaLineasPendEntregaVenta(SalesHeader Record: 36"): Boolean
+    procedure BuscaLineasPendEntregaVenta(SalesHeader: Record 36): Boolean
     var
         SalesLine: Record 37;
         TransferLine1Record: Record 5741;
@@ -198,7 +198,7 @@ codeunit 56000 "Funciones Santillana"
         EXIT(NoPedidoTransferencia);
     end;
 
-    procedure InsertaInvConsigTransfer(TransHeader Record: 5740")
+    procedure InsertaInvConsigTransfer(TransHeader: Record 5740)
     var
         Item: Record 27;
         TransferLine: Record 5741;
@@ -243,7 +243,7 @@ codeunit 56000 "Funciones Santillana"
             UNTIL Item.NEXT = 0;
     end;
 
-    procedure CreaEmailPedidoVenta(SalesHeader Record: 36")
+    procedure CreaEmailPedidoVenta(SalesHeader: Record 36)
     var
         SenderName: Text[100];
         SenderAddress: Text[100];
@@ -295,7 +295,7 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure CreaEmailPedidoConsg(TransferHeader Record: 5740")
+    procedure CreaEmailPedidoConsg(TransferHeader: Record 5740)
     var
         SenderName: Text[100];
         SenderAddress: Text[100];
@@ -346,7 +346,7 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure ControlNoCopias(SalesHeader Record: 36; DocumentoImpreso: Option Picking)
+    procedure ControlNoCopias(SalesHeader: Record 36; DocumentoImpreso: Option Picking)
     begin
         IF DocumentoImpreso = 0 THEN
             SalesHeader."No. copias Picking" := SalesHeader."No. copias Picking" + 1;
@@ -354,14 +354,14 @@ codeunit 56000 "Funciones Santillana"
         COMMIT;
     end;
 
-    procedure ControlNoCopiasConsignacion(TransferHeader Record: 5740")
+    procedure ControlNoCopiasConsignacion(TransferHeader: Record 5740)
     begin
         TransferHeader."No. Copias impresas" := TransferHeader."No. Copias impresas" + 1;
         TransferHeader.MODIFY;
         COMMIT;
     end;
 
-    procedure ControlNoCopiasCosngRecepcion(TransferRecHeader Record: 5746")
+    procedure ControlNoCopiasCosngRecepcion(TransferRecHeader: Record 5746)
     begin
         TransferRecHeader."No. Copias imp. Recep." := TransferRecHeader."No. Copias imp. Recep." + 1;
         TransferRecHeader.MODIFY;
@@ -490,7 +490,7 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure ActualizaCantPendCons(ItemLedgerEntryFromJournal Record: 32")
+    procedure ActualizaCantPendCons(ItemLedgerEntryFromJournal: Record 32)
     var
         ItemLedgerEntry1Record: Record 32;
     begin
@@ -512,14 +512,14 @@ codeunit 56000 "Funciones Santillana"
         END;
     end;
 
-    procedure ControlNoCopiasNotaCredito(SalesCreditMemoHeader Record: 114")
+    procedure ControlNoCopiasNotaCredito(SalesCreditMemoHeader: Record 114)
     begin
         SalesCreditMemoHeader."No. Printed" := SalesCreditMemoHeader."No. Printed" + 1;
         SalesCreditMemoHeader.MODIFY;
         COMMIT;
     end;
 
-    procedure EnviaAConfirmarConsignacion(TransferHeader Record: 5740")
+    procedure EnviaAConfirmarConsignacion(TransferHeader: Record 5740)
     var
         SenderName: Text[100];
         SenderAddress: Text[100];
@@ -565,7 +565,7 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure EnviaAConfirmarPedidoVenta(SalesHeader Record: 36")
+    procedure EnviaAConfirmarPedidoVenta(SalesHeader: Record 36)
     var
         SenderName: Text[100];
         SenderAddress: Text[100];
@@ -611,7 +611,7 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure CalcAvailableCredit(CustNo: Code[20]; SalesHeaderActual Record: 36"): Decimal
+    procedure CalcAvailableCredit(CustNo: Code[20]; SalesHeaderActual: Record 36): Decimal
     var
         TotalAmountLCY: Decimal;
         Cliente: Record 18;
@@ -1035,7 +1035,7 @@ codeunit 56000 "Funciones Santillana"
         CLEAR(frmConsignacion);
     end;
 
-    procedure RegistraPacking(CabPack Record: 56030")
+    procedure RegistraPacking(CabPack: Record 56030)
     var
         linPack: Record 56031;
         CCP: Record 56032;
@@ -1227,7 +1227,7 @@ codeunit 56000 "Funciones Santillana"
         END; //-#854
     end;
 
-    procedure ReabrirCajaPacking(LinPacking Record: 56031")
+    procedure ReabrirCajaPacking(LinPacking: Record 56031)
     begin
         LinPacking."Estado Caja" := LinPacking."Estado Caja"::Abierta;
         LinPacking.MODIFY;

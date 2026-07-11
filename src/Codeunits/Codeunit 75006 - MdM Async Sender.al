@@ -28,7 +28,7 @@ codeunit 75006 "MdM Async Sender"
         wErrorDescription: Text;
         TOrigen: Label 'NAV_BOL';
 
-    procedure BuildXML(pwCab Record: 75003; pwTipo: Option Insert,Update,Delete,Error)
+    procedure BuildXML(pwCab: Record 75003; pwTipo: Option Insert,Update,Delete,Error)
     var
         lwNodeName: Text[30];
         lwTxt: Text[30];
@@ -108,7 +108,7 @@ codeunit 75006 "MdM Async Sender"
 
     end;
 
-    procedure BuildXMLError(pwCab Record: 75003; pwCode: Code[20]; pwDescription: Text)
+    procedure BuildXMLError(pwCab: Record 75003; pwCode: Code[20]; pwDescription: Text)
     begin
         // BuildXMLError
 
@@ -129,7 +129,7 @@ codeunit 75006 "MdM Async Sender"
 
     end;
 
-    procedure BuildXMLRequest(pwCab Record: 75003")
+    procedure BuildXMLRequest(pwCab: Record 75003)
     var
         lrLinImp: Record 75004;
         lrLinImpTmp Record: 75004" temporary;
@@ -366,16 +366,16 @@ codeunit 75006 "MdM Async Sender"
         ExitStatus := AddElement(XmlNode[pwIdNode], NodeName, NodeText, Prefix, NameSpace, XmlNode[pwIdNode + 1]);
     end;
 
-    procedure SaveNotification(prCab Record: 75003") wTxt: Text
+    procedure SaveNotification(prCab: Record 75003) wTxt: Text
     var
         lrCab2Record: Record 75003;
         lwOutStrm: OutStream;
         lwFile: File;
         lwsoapEnvelope: DotNet XmlElement;
-                            lrLinImp: Record 75004;
+        lrLinImp: Record 75004;
         lwOk: Boolean;
-                            lwValues: array[10] of Text;
-                            lwHavValues: array[10] of Boolean;
+        lwValues: array[10] of Text;
+        lwHavValues: array[10] of Boolean;
     begin
         // SaveNotification
 

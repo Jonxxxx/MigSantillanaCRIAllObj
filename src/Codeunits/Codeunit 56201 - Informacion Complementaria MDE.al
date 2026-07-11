@@ -117,7 +117,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     end;
 
-    procedure Ceco(var DimVal Record: 349; xRec Record: 349; TipoOper: Option Insert,Modify,Delete,Rename)
+    procedure Ceco(var DimVal Record: 349; xRec: Record 349; TipoOper: Option Insert,Modify,Delete,Rename)
     var
         vBlocked: Boolean;
     begin
@@ -176,7 +176,7 @@ codeunit 56201 "Informacion Complementaria MDE"
         MdEMgnt.CreateAsyncPostRequest('CECO', ConfSant."WS Informacion Compl. MdE", '', XmlDoc.OuterXml);
     end;
 
-    procedure HorariosCeco(DefaultDim Record: 352")
+    procedure HorariosCeco(DefaultDim: Record 352)
     var
         DimVal: Record 349;
         Contrato: Record 34002109;
@@ -226,7 +226,7 @@ codeunit 56201 "Informacion Complementaria MDE"
         MdEMgnt.CreateAsyncPostRequest('HORARIOSCECO', ConfSant."WS Informacion Compl. MdE", '', XmlDoc.OuterXml);
     end;
 
-    procedure ValidarDim(DefaultDim Record: 352")
+    procedure ValidarDim(DefaultDim: Record 352)
     begin
         IF DefaultDim."Dimension Code" IN [ConfSant."Dimension Departamento", ConfSant."Dimension Division", ConfSant."Dimension Area funcional"] THEN
             ERROR(Text002);
@@ -778,7 +778,7 @@ codeunit 56201 "Informacion Complementaria MDE"
         EXIT(3);
     end;
 
-    procedure ConceptoProrrateado(PS Record: 34002115; Periodo: Date) Acumulado: Decimal
+    procedure ConceptoProrrateado(PS: Record 34002115; Periodo: Date) Acumulado: Decimal
     var
         HistLinNom: Record 34002118;
         ConceptosProrr: Record 34002119;

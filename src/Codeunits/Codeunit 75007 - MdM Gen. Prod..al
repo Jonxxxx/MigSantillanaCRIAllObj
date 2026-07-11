@@ -681,7 +681,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure DeleteReg(prImp Record: 75004; var pwRecRef: RecordRef)
+    procedure DeleteReg(prImp: Record 75004; var pwRecRef: RecordRef)
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -714,7 +714,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure InsertReg(prImp Record: 75004; var pwRecRef: RecordRef)
+    procedure InsertReg(prImp: Record 75004; var pwRecRef: RecordRef)
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -817,7 +817,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure MdmManaged(prImp Record: 75004; var pwRecRef: RecordRef; pwMngd: Boolean) Updated: Boolean
+    procedure MdmManaged(prImp: Record 75004; var pwRecRef: RecordRef; pwMngd: Boolean) Updated: Boolean
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -1583,7 +1583,7 @@ codeunit 75007 "MdM Gen. Prod."
             cFuncMdm.SetConfTipologiaData(prProd, lrConfTip);
     end;
 
-    procedure FillTempFields(PrImp Record: 75004")
+    procedure FillTempFields(PrImp: Record 75004)
     begin
         // FillTempFields;
 

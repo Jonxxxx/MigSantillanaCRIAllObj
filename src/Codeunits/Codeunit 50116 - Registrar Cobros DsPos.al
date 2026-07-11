@@ -48,7 +48,7 @@ codeunit 50116 "Registrar Cobros DsPos"
         GeneralLedgerSetup: Record 98;
 
     [Scope('Personalization')]
-    procedure RegistrarCobrosFacturaTPV(SalesInvHeader Record: 112")
+    procedure RegistrarCobrosFacturaTPV(SalesInvHeader: Record 112)
     var
         Msg001: Label 'Liq. pago Doc. %1';
         Error001: Label 'No se ha liquidado Factura No. %1';
@@ -167,7 +167,7 @@ codeunit 50116 "Registrar Cobros DsPos"
     end;
 
     [Scope('Personalization')]
-    procedure RegistrarCobrosNotaCreditoTPV(SalesCrMemoHeader Record: 114")
+    procedure RegistrarCobrosNotaCreditoTPV(SalesCrMemoHeader: Record 114)
     var
         Msg001: Label 'Liq. pago Doc. %1';
         Errror001: Label 'No se ha liquidado NCR No. %1';
@@ -285,7 +285,7 @@ codeunit 50116 "Registrar Cobros DsPos"
     end;
 
     [Scope('Personalization')]
-    procedure RegistrarCobrosFacturaTPVManual(SalesInvHeader Record: 112")
+    procedure RegistrarCobrosFacturaTPVManual(SalesInvHeader: Record 112)
     var
         Msg001: Label 'Liq. pago Doc. %1';
         Error001: Label 'No existen líneas de pagos sic pendientes a liquidar para la factura %1';
@@ -416,7 +416,7 @@ codeunit 50116 "Registrar Cobros DsPos"
     end;
 
     [Scope('Personalization')]
-    procedure RegistrarCobrosNotaCreditoTPVManual(SalesCrMemoHeader Record: 114")
+    procedure RegistrarCobrosNotaCreditoTPVManual(SalesCrMemoHeader: Record 114)
     var
         Msg001: Label 'Liq. pago Doc. %1';
         Error001: Label 'No existen líneas de pagos sic pendientes a liquidar para nota credito %1';

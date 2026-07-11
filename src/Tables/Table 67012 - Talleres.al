@@ -113,7 +113,7 @@ table 67012 Talleres
         TipoEvento: Record 67010;
         NoSeriesMgt: Codeunit 396;
 
-    procedure AssistEdit(OldWS Record: 67012"): Boolean
+    procedure AssistEdit(OldWS: Record 67012): Boolean
     var
         WorkShop: Record 67012;
     begin

@@ -140,7 +140,7 @@ table 56025 "Cab. clas. devolucion"
         Err001: Label 'This document already have items received. To change the customer you must first delete all the lines and restart the receive';
         WHE: Record 7301;
 
-    procedure AssistEdit(CR Record: 56025"): Boolean
+    procedure AssistEdit(CR: Record 56025): Boolean
     begin
         WITH CR DO
          BEGIN

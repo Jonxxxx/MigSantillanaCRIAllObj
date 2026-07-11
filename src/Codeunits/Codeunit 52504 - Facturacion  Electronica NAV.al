@@ -2770,7 +2770,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END
     end;
 
-    procedure ComprobarDocumentoElectronicoLOG(Logs Record: 52502")
+    procedure ComprobarDocumentoElectronicoLOG(Logs: Record 52502)
     var
         iProcesa: DotNet Procesa;
                       xmlFactura: DotNet XmlDocument;

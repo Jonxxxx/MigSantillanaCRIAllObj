@@ -147,7 +147,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         EXIT(PostAndPrintQst);
     end;
 
-    local procedure PrintReceive(SalesHeader Record: 36")
+    local procedure PrintReceive(SalesHeader: Record 36)
     var
         ReturnRcptHeader: Record 6660;
     begin
@@ -161,7 +161,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
             ReturnRcptHeader.PrintRecords(FALSE);
     end;
 
-    local procedure PrintInvoice(SalesHeader Record: 36")
+    local procedure PrintInvoice(SalesHeader: Record 36)
     var
         SalesInvHeader: Record 112;
     begin
@@ -209,7 +209,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         // --
     end;
 
-    local procedure PrintShip(SalesHeader Record: 36")
+    local procedure PrintShip(SalesHeader: Record 36)
     var
         SalesShptHeader: Record 110;
     begin
@@ -223,7 +223,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
             SalesShptHeader.PrintRecords(FALSE);
     end;
 
-    local procedure PrintCrMemo(SalesHeader Record: 36")
+    local procedure PrintCrMemo(SalesHeader: Record 36)
     var
         SalesCrMemoHeader: Record 114;
     begin
@@ -250,7 +250,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
     begin
     end;
 
-    procedure FE_CR(SalesHeader Record: 36")
+    procedure FE_CR(SalesHeader: Record 36)
     var
         "**012**": Integer;
         cuFE: Codeunit 52504;
@@ -282,7 +282,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         // -- 001-YFC
     end;
 
-    procedure RegistroCobrosDsPos(SalesHeader Record: 36")
+    procedure RegistroCobrosDsPos(SalesHeader: Record 36)
     var
         ConfiEmpresa: Record 56001;
         RegisCobrDsPos: Codeunit 50116;

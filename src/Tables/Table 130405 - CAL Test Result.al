@@ -110,7 +110,7 @@ table 130405 "CAL Test Result"
     {
     }
 
-    procedure Add(SourceCALTestLine Record: 130401; TestRunNo: Integer)
+    procedure Add(SourceCALTestLine: Record 130401; TestRunNo: Integer)
     begin
         Initialize(TestRunNo, SourceCALTestLine."Test Codeunit", SourceCALTestLine."Function", SourceCALTestLine."Start Time");
         Update(SourceCALTestLine.Result = SourceCALTestLine.Result::Success, SourceCALTestLine."Finish Time");

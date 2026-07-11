@@ -130,7 +130,7 @@ codeunit 50111 "Validaciones de  Errores"
 
     end;
 
-    procedure ValidacionesCabeceraSIC(CabVentasSIC Record: 50111"): Boolean
+    procedure ValidacionesCabeceraSIC(CabVentasSIC: Record 50111): Boolean
     begin
 
         WITH CabVentasSIC DO BEGIN

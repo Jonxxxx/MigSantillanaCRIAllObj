@@ -145,7 +145,7 @@ codeunit 67001 "Generacion Words APS"
         EXIT(texNombre);
     end;
 
-    local procedure InsertarTablaProgamacion(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaProgamacion(recPrmSolicitud: Record 67055)
     var
         recProgramacion: Record 67015;
         intFila: Integer;
@@ -297,7 +297,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaAsistentes2(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaAsistentes2(recPrmSolicitud: Record 67055)
     var
         recAsistentes: Record 67016;
         intFila: Integer;
@@ -366,7 +366,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaMaterial2(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaMaterial2(recPrmSolicitud: Record 67055)
     var
         recMaterial: Record 67014;
         intFila: Integer;
@@ -413,7 +413,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    local procedure TraerGradoMaterial(recPrmMaterial Record: 67014"): Code[20]
+    local procedure TraerGradoMaterial(recPrmMaterial: Record 67014): Code[20]
     var
         recProducto: Record 27;
     begin
@@ -629,7 +629,7 @@ codeunit 67001 "Generacion Words APS"
             EXIT(recDelegacion.Name);
     end;
 
-    local procedure InsertarTablaAsistentes(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaAsistentes(recPrmSolicitud: Record 67055)
     var
         recAsistentes: Record 67016;
         intFila: Integer;
@@ -734,7 +734,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaTextos(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaTextos(recPrmSolicitud: Record 67055)
     var
         intFila: Integer;
         Text001: Label 'Textos que utilizan';
@@ -885,7 +885,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaCompetencia(recPrmSolicitud Record: 67055")
+    local procedure InsertarTablaCompetencia(recPrmSolicitud: Record 67055)
     var
         intFila: Integer;
         Text001: Label 'Textos de la Competencia';
@@ -1227,7 +1227,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    procedure GetHoraFinal(parProg Record: 67103") rtnHora: Time
+    procedure GetHoraFinal(parProg: Record 67103) rtnHora: Time
     var
         "Program"Record 67103;
     begin
@@ -1277,7 +1277,7 @@ codeunit 67001 "Generacion Words APS"
 
     end;
 
-    procedure GetTipoEvento(parProg Record: 67103") rtnTE: Code[20]
+    procedure GetTipoEvento(parProg: Record 67103) rtnTE: Code[20]
     var
         recCab: Record 67102;
     begin

@@ -52,7 +52,7 @@ codeunit 130411 "Sys. Warmup Scenarios"
         SalesHeader.MODIFY(TRUE);
     end;
 
-    local procedure CreateSalesLine(SalesHeader Record: 36; Item: Record 27)
+    local procedure CreateSalesLine(SalesHeader: Record 36; Item: Record 27)
     var
         SalesLine: Record 37;
     begin

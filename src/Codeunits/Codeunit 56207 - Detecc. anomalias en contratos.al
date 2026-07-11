@@ -107,7 +107,7 @@ codeunit 56207 "Detecc. anomalias en contratos"
             UNTIL lrContrato.NEXT = 0;
     end;
 
-    procedure UltimoContrato(lrContratoRef Record: 34002109"): Boolean
+    procedure UltimoContrato(lrContratoRef: Record 34002109): Boolean
     var
         lrContrato: Record 34002109;
     begin

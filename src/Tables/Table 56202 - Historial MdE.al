@@ -877,7 +877,7 @@ table 56202 "Historial MdE"
           UNTIL lrHistorial.NEXT=0;
     end;
 
-    procedure ControlContratos(lrContratoRef Record: 34002109")
+    procedure ControlContratos(lrContratoRef: Record 34002109)
     var
         lrContratos: Record 34002109;
         lrContratosAux: Record 34002109;

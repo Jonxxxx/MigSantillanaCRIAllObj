@@ -208,7 +208,7 @@ table 75007 "Conversion NAV MdM"
           END;
     end;
 
-    procedure LookUpDim(lwIdDim: Integer;lrDimVal Record: 349;lwDimCode: Code[20];lwOK: Boolean)
+    procedure LookUpDim(lwIdDim: Integer;lrDimVal: Record 349;lwDimCode: Code[20];lwOK: Boolean)
     begin
         // LookUpDim
 
@@ -277,7 +277,7 @@ table 75007 "Conversion NAV MdM"
         END;
     end;
 
-    procedure GetTipoTable(prImpTabl Record: 75004" temporary) pwTipo: Integer
+    procedure GetTipoTable(prImpTabl: Record 75004 temporary) pwTipo: Integer
     begin
         // GetTipoTable
 
@@ -319,7 +319,7 @@ table 75007 "Conversion NAV MdM"
         END;
     end;
 
-    procedure GetTipoField(prImpTabl Record: 75004" temporary;prField Record: 75005" temporary) pwTipo: Integer
+    procedure GetTipoField(prImpTabl: Record 75004 temporary;prField: Record 75005 temporary) pwTipo: Integer
     begin
         // GetTipoTable
 

@@ -9,7 +9,7 @@ codeunit 56204 "Async MdX Process Starter"
         StartAsyncSendPostRequest(Rec);
     end;
 
-    local procedure StartAsyncSendPostRequest(AsyncNAVProcessQueue Record: 56200")
+    local procedure StartAsyncSendPostRequest(AsyncNAVProcessQueue: Record 56200)
     var
         NewSessionId: Integer;
     begin

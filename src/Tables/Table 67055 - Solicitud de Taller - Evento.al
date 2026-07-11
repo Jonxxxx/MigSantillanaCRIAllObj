@@ -1035,7 +1035,7 @@ table 67055 "Solicitud de Taller - Evento"
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
         DimForm: Page560;
 
-    procedure AssistEdit(OldEvent Record: 67055"): Boolean
+    procedure AssistEdit(OldEvent: Record 67055): Boolean
     var
         WorkShop: Record 67012;
     begin
@@ -1517,7 +1517,7 @@ table 67055 "Solicitud de Taller - Evento"
     begin
     end;
 
-    procedure ActualizaPlanif(parExpEv Record: 67050") rtnSec: Integer
+    procedure ActualizaPlanif(parExpEv: Record 67050) rtnSec: Integer
     var
         CabPlanEvento: Record 67051;
         ProgTyE: Record 67015;

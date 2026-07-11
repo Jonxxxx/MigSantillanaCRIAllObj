@@ -35,7 +35,7 @@ table 67107 "Seguim.Visita Asesor/Consultor"
     {
     }
 
-    procedure InsertarSeguimiento(parVisita Record: 67102")
+    procedure InsertarSeguimiento(parVisita: Record 67102)
     begin
         "Visita Asesor/Consultor" := parVisita."No. Visita Asesor/Consultor";
         Estado := parVisita.Estado;

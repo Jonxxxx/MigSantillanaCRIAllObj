@@ -163,7 +163,7 @@ table 64833 Scheduler
         Sched: Record 64833;
         NoSeriesMgt: Codeunit 396;
 
-    procedure AssistEdit(OldSched Record: 64833"): Boolean
+    procedure AssistEdit(OldSched: Record 64833): Boolean
     begin
         WITH Sched DO BEGIN
             Sched := Rec;

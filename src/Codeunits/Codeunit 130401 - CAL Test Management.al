@@ -59,7 +59,7 @@ codeunit 130401 "CAL Test Management"
         EXIT(NOT AllObjWithCaption.ISEMPTY);
     end;
 
-    procedure GetTestCodeunitsSelection(CALTestSuite Record: 130400")
+    procedure GetTestCodeunitsSelection(CALTestSuite: Record 130400)
     var
         CALTestLine: Record 130401;
         AllObjWithCaption: Record 2000000058;
@@ -216,7 +216,7 @@ codeunit 130401 "CAL Test Management"
         END;
     end;
 
-    local procedure RefreshSuite(CALTestSuite Record: 130400; var AllObjWithCaption Record: 2000000058")
+    local procedure RefreshSuite(CALTestSuite: Record 130400; var AllObjWithCaption Record: 2000000058")
     var
         CALTestLine: Record 130401;
         LineNo: Integer;
@@ -236,7 +236,7 @@ codeunit 130401 "CAL Test Management"
         END;
     end;
 
-    procedure AddTestCodeunits(CALTestSuite Record: 130400; var AllObjWithCaption Record: 2000000058")
+    procedure AddTestCodeunits(CALTestSuite: Record 130400; var AllObjWithCaption Record: 2000000058")
     var
         TestLineNo: Integer;
     begin
@@ -345,7 +345,7 @@ codeunit 130401 "CAL Test Management"
             UNTIL CodeCoverage.NEXT = 0;
     end;
 
-    local procedure GetLineNoFilter(CALTestLine Record: 130401; Selection: Option ,"Function","Codeunit") LineNoFilter: Text
+    local procedure GetLineNoFilter(CALTestLine: Record 130401; Selection: Option ,"Function","Codeunit") LineNoFilter: Text
     var
         NoOfFunctions: Integer;
     begin

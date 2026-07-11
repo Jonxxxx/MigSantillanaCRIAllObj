@@ -244,7 +244,7 @@ codeunit 104000 "UPG.W1"
         DataExchField.DELETEALL;
     end;
 
-    local procedure CreateTenantWebServiceOData(TenantWebService Record: 2000000168")
+    local procedure CreateTenantWebServiceOData(TenantWebService: Record 2000000168)
     var
         TenantWebServiceOData: Record 6710;
         SelectText: Text;

@@ -48,7 +48,7 @@ table 67079 "Seguimiento Solicitud TE"
             "No. Cambio" := 1;
     end;
 
-    procedure InsertarSeguimiento(parSolicitud Record: 67055")
+    procedure InsertarSeguimiento(parSolicitud: Record 67055)
     begin
         "No. Solicitud" := parSolicitud."No. Solicitud";
         Status := parSolicitud.Status;

@@ -174,7 +174,7 @@ codeunit 55002 "Export Payments Formato EC"
         ExportPrnString(BatchHeaderRec);
     end;
 
-    procedure ExportElectronicPayment(GenJnlLine Record: 81; PaymentAmount: Decimal; SettleDate: Date): Code[30]
+    procedure ExportElectronicPayment(GenJnlLine: Record 81; PaymentAmount: Decimal; SettleDate: Date): Code[30]
     var
         Vendor: Record 23;
         VendorBankAcct: Record 288;

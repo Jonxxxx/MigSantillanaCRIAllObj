@@ -410,7 +410,7 @@ page 130401 "CAL Test Tool"
         LanguageWarningShown: Boolean;
         LanguageWarningMsg: Label 'Warning: The current language is not set to English (US). The tests may only contain captions in English (US), which will cause the tests to fail. Resolve the issue by switching the language or introducing translations in the test.';
 
-    local procedure ClearResults(CALTestSuite Record: 130400")
+    local procedure ClearResults(CALTestSuite: Record 130400)
     var
         CALTestLine: Record 130401;
     begin

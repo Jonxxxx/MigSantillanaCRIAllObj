@@ -593,7 +593,7 @@ codeunit 75001 "Gest. Maestros MdM"
         END;
     end;
 
-    procedure GestNotityUnid(prXUnid Record: 5404; prUnid Record: 5404; pwDelete: Boolean)
+    procedure GestNotityUnid(prXUnid: Record 5404; prUnid: Record 5404; pwDelete: Boolean)
     var
         lwPeso: Decimal;
         lrProd: Record 27;
@@ -625,7 +625,7 @@ codeunit 75001 "Gest. Maestros MdM"
         END;
     end;
 
-    procedure GestNotityPrec(prXrPrec Record: 7002; var prPrec Record: 7002; pwDelete: Boolean)
+    procedure GestNotityPrec(prXrPrec: Record 7002; var prPrec Record: 7002; pwDelete: Boolean)
     var
         lwPrecConImpt: array[2] of Decimal;
         lwPrecSinImpt: array[2] of Decimal;
@@ -831,7 +831,7 @@ codeunit 75001 "Gest. Maestros MdM"
         END;
     end;
 
-    procedure FindVatConf(prProd: Record 27; prPrec Record: 7002; var prVatSetup Record: 325") Result: Boolean
+    procedure FindVatConf(prProd: Record 27; prPrec: Record 7002; var prVatSetup Record: 325") Result: Boolean
     var
         lwGRIVAProd: Code[10];
         lwGRIVANeg: Code[10];
@@ -859,7 +859,7 @@ codeunit 75001 "Gest. Maestros MdM"
             CLEAR(prVatSetup);
     end;
 
-    procedure ConfPrecVta(prProd: Record 27; prPrec Record: 7002; var pwPrecConImpt: Decimal; var pwPrecSinImpt: Decimal; var pwDivisa: Code[10])
+    procedure ConfPrecVta(prProd: Record 27; prPrec: Record 7002; var pwPrecConImpt: Decimal; var pwPrecSinImpt: Decimal; var pwDivisa: Code[10])
     var
         lrVatSetup: Record 325;
         lrDiv: Record 4;

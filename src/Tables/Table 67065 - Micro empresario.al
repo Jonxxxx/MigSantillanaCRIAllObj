@@ -437,13 +437,13 @@ table 67065 "Micro empresario"
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         rRec: RecordRef;
 
-    procedure OnModify(xRec Record: 5050")
+    procedure OnModify(xRec: Record 5050)
     var
         OldCont: Record 5050;
     begin
     end;
 
-    procedure AssistEdit(OldCont Record: 67005"): Boolean
+    procedure AssistEdit(OldCont: Record 67005): Boolean
     begin
         /*WITH Cont DO BEGIN
           Cont := Rec;

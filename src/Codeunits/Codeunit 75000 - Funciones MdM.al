@@ -694,7 +694,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure GetDimEditable(prDefDim Record: 352; pwError: Boolean) wEditable: Boolean
+    procedure GetDimEditable(prDefDim: Record 352; pwError: Boolean) wEditable: Boolean
     var
         lwN: Integer;
         lrUserStp: Record 91;
@@ -729,7 +729,7 @@ codeunit 75000 "Funciones MdM"
             ERROR(ErrEditDim);
     end;
 
-    procedure GetDimValueEditable(prDimVal Record: 349; pwError: Boolean) wEditable: Boolean
+    procedure GetDimValueEditable(prDimVal: Record 349; pwError: Boolean) wEditable: Boolean
     var
         lwN: Integer;
         lrUserStp: Record 91;
@@ -1140,7 +1140,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasDocV(prSalesHd Record: 36")
+    procedure ContrlFechasDocV(prSalesHd: Record 36)
     var
         lrLin: Record 37;
     begin
@@ -1170,7 +1170,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasDocC(prPurchHd Record: 38")
+    procedure ContrlFechasDocC(prPurchHd: Record 38)
     var
         lrLin: Record 39;
     begin
@@ -1200,7 +1200,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasAlbC(prCabAlbC Record: 120")
+    procedure ContrlFechasAlbC(prCabAlbC: Record 120)
     var
         lrLin: Record 121;
         lrTmpBuff Record: 75016" temporary;
@@ -1228,7 +1228,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasAlbV(prCabAlbV Record: 110")
+    procedure ContrlFechasAlbV(prCabAlbV: Record 110)
     var
         lrLin: Record 111;
         lrTmpBuff Record: 75016" temporary;
@@ -1256,7 +1256,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasFactV(prCabFactV Record: 112")
+    procedure ContrlFechasFactV(prCabFactV: Record 112)
     var
         lrLin: Record 113;
         lrTmpBuff Record: 75016" temporary;
@@ -1283,7 +1283,7 @@ codeunit 75000 "Funciones MdM"
         END;
     end;
 
-    procedure ContrlFechasEns(prAssemHd Record: 910") Result: Boolean
+    procedure ContrlFechasEns(prAssemHd: Record 910) Result: Boolean
     var
         lrLin: Record 911;
         lrProd: Record 27;

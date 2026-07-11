@@ -63,7 +63,7 @@ codeunit 56003 "Factura Electronica"
         txt002: Label 'Folio successfully Voided';
         txt004: Label 'The Folio is not properly voided. Go to the XML file and check';
 
-    procedure Factura(rSIH Record: 112")
+    procedure Factura(rSIH: Record 112)
     var
         rSIL: Record 113;
         Ano: Integer;
@@ -391,9 +391,9 @@ codeunit 56003 "Factura Electronica"
 
     end;
 
-    procedure CreaXML(rSIH Record: 112")
+    procedure CreaXML(rSIH: Record 112)
     var
-        CurrNode: Automation ;
+        CurrNode: Automation;
         CurrNode1: Automation;
         CurrNode2: Automation;
         NewChild: Automation;
@@ -610,7 +610,7 @@ codeunit 56003 "Factura Electronica"
 
     end;
 
-    procedure NotaCR(rSCMH Record: 114")
+    procedure NotaCR(rSCMH: Record 114)
     var
         rSCML: Record 115;
         Ano: Integer;
@@ -859,7 +859,7 @@ codeunit 56003 "Factura Electronica"
 
     end;
 
-    procedure AnulaFactura(rSIH Record: 112")
+    procedure AnulaFactura(rSIH: Record 112)
     var
         rSIL: Record 113;
         Ano: Integer;
@@ -1097,7 +1097,7 @@ codeunit 56003 "Factura Electronica"
 
     end;
 
-    procedure AnulaNotaCR(rSCMH Record: 114")
+    procedure AnulaNotaCR(rSCMH: Record 114)
     var
         rSCML: Record 115;
         Ano: Integer;

@@ -68,7 +68,7 @@ codeunit 56203 "Async MdX NAV WS"
         END;
     end;
 
-    local procedure OnNewQueueInserted(AsyncNAVProcessQueue Record: 56200") Success: Boolean
+    local procedure OnNewQueueInserted(AsyncNAVProcessQueue: Record 56200) Success: Boolean
     begin
         EXIT(TRUE);
     end;

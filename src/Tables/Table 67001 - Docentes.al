@@ -699,7 +699,7 @@ table 67001 Docentes
         ELSE MESSAGE(Text033);
     end;
 
-    procedure AssistEdit(OldCont Record: 67001"): Boolean
+    procedure AssistEdit(OldCont: Record 67001): Boolean
     begin
         WITH Docente DO BEGIN
           Docente := Rec;

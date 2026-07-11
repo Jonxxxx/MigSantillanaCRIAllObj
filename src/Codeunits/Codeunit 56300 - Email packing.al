@@ -14,7 +14,7 @@ codeunit 56300 "Email packing"
         Body: BigText;
         SMTPmail: Codeunit 400;
 
-    procedure generaBody(parSalesHeader Record: 36")
+    procedure generaBody(parSalesHeader: Record 36)
     var
         rTextoConfig: Record 56090;
         rPick: Record 5773;
@@ -85,7 +85,7 @@ codeunit 56300 "Email packing"
             UNTIL rTextoConfig.NEXT = 0;
     end;
 
-    procedure EnvioMailPacking(parSalesHeader Record: 36")
+    procedure EnvioMailPacking(parSalesHeader: Record 36)
     var
         rCust: Record 18;
         Subject: Label 'Santillana-Prueba de envío';

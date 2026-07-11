@@ -332,7 +332,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    procedure SetSalesHeader(NewSalesHeader Record: 36")
+    procedure SetSalesHeader(NewSalesHeader: Record 36)
     begin
     end;
 
@@ -470,7 +470,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    local procedure CalcUnitCost(ItemLedgEntry Record: 32"): Decimal
+    local procedure CalcUnitCost(ItemLedgEntry: Record 32): Decimal
     var
         ValueEntry: Record 5802;
         UnitCost: Decimal;

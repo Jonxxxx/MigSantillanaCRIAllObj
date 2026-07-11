@@ -97,7 +97,7 @@ xmlport 75003 "Resp. Web Service MdM"
         //fecha          := FORMAT(CURRENTDATETIME,0,9);
     end;
 
-    procedure SetCab(prCab Record: 75003; pwError: Boolean; pwErrorText: Text)
+    procedure SetCab(prCab: Record 75003; pwError: Boolean; pwErrorText: Text)
     var
         lwFecha: DateTime;
     begin
