@@ -7,69 +7,69 @@ table 67039 "Promotor - Entrega Muestras"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
-        field(2;"Cod. Colegio";Code[20])
+        field(2; "Cod. Colegio"; Code[20])
         {
-            TableRelation = Contact WHERE (Type=CONST(Company));
+            TableRelation = Contact WHERE(Type = CONST(Company));
         }
-        field(3;Fecha;Date)
-        {
-        }
-        field(4;"Nombre Colegio";Text[60])
+        field(3; Fecha; Date)
         {
         }
-        field(5;Estado;Text[30])
+        field(4; "Nombre Colegio"; Text[60])
         {
         }
-        field(6;"Fecha Visita";Date)
+        field(5; Estado; Text[30])
         {
         }
-        field(7;"Hora Inicial Visita";Time)
+        field(6; "Fecha Visita"; Date)
         {
         }
-        field(8;"Hora Inicial Final";Time)
+        field(7; "Hora Inicial Visita"; Time)
         {
         }
-        field(9;"Fecha Proxima Visita";Date)
+        field(8; "Hora Inicial Final"; Time)
         {
         }
-        field(10;Comentario;Text[150])
+        field(9; "Fecha Proxima Visita"; Date)
         {
         }
-        field(11;"Fecha Devolucion Planificada";Date)
+        field(10; Comentario; Text[150])
         {
         }
-        field(12;"Fecha Devolucion Realizada";Date)
+        field(11; "Fecha Devolucion Planificada"; Date)
         {
         }
-        field(13;"Documento referencia";Code[20])
+        field(12; "Fecha Devolucion Realizada"; Date)
         {
         }
-        field(14;"No. pedido de venta";Code[20])
+        field(13; "Documento referencia"; Code[20])
         {
         }
-        field(15;Facturado;Boolean)
+        field(14; "No. pedido de venta"; Code[20])
         {
         }
-        field(16;Cantidad;Decimal)
+        field(15; Facturado; Boolean)
+        {
+        }
+        field(16; Cantidad; Decimal)
         {
 
             trigger OnValidate()
             begin
                 PromPptoMuestras.RESET;
-                PromPptoMuestras.SETRANGE("Cod. Promotor","Cod. Promotor");
-                PromPptoMuestras.SETRANGE("Cod. Producto","Cod. Producto");
+                PromPptoMuestras.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                PromPptoMuestras.SETRANGE("Cod. Producto", "Cod. Producto");
                 IF NOT PromPptoMuestras.FINDFIRST THEN
-                   ERROR(Err002,"Cod. Producto");
+                    ERROR(Err002, "Cod. Producto");
 
                 PromPptoMuestras.CALCFIELDS("Cantidad consumida");
                 IF (PromPptoMuestras."Cantidad consumida" + Cantidad > PromPptoMuestras.Quantity) AND
                    (PromPptoMuestras."Cantidad consumida" <> 0) OR (Cantidad > PromPptoMuestras.Quantity) THEN
-                   ERROR(Err001);
+                    ERROR(Err001);
             end;
         }
-        field(17;"Cod. Producto";Code[20])
+        field(17; "Cod. Producto"; Code[20])
         {
             TableRelation = Item;
 
@@ -79,26 +79,26 @@ table 67039 "Promotor - Entrega Muestras"
                 "Descripcion producto" := Prod.Description;
 
                 PromPptoMuestras.RESET;
-                PromPptoMuestras.SETRANGE("Cod. Promotor","Cod. Promotor");
-                PromPptoMuestras.SETRANGE("Cod. Producto","Cod. Producto");
+                PromPptoMuestras.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                PromPptoMuestras.SETRANGE("Cod. Producto", "Cod. Producto");
                 IF NOT PromPptoMuestras.FINDFIRST THEN
-                   ERROR(Err002,"Cod. Producto");
+                    ERROR(Err002, "Cod. Producto");
             end;
         }
-        field(18;"Descripcion producto";Text[100])
+        field(18; "Descripcion producto"; Text[100])
         {
         }
-        field(19;"Cantidad Presupuestada";Decimal)
+        field(19; "Cantidad Presupuestada"; Decimal)
         {
-            CalcFormula = Lookup("Promotor - Ppto Muestras".Quantity WHERE (Cod. Promotor=FIELD(Cod. Promotor),
-                                                                            Cod. Producto=FIELD(Cod. Producto)));
+            CalcFormula = Lookup("Promotor - Ppto Muestras".Quantity WHERE(Cod. Promotor=FIELD(Cod. Promotor),
+                                                                            Cod. Producto=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(20;"Cantidad consumida";Decimal)
         {
             CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE (Cod. Promotor=FIELD(Cod. Promotor),
-                                                                            Cod. Producto=FIELD(Cod. Producto)));
+                                                                            Cod. Producto=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }

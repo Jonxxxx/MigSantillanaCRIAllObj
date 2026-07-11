@@ -135,7 +135,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(7; "Cod. Nivel"; Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE(Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   Cod. Promotor=FIELD(Cod. promotor));
         }
         field(8;"Cod. Expositor";Code[20])
@@ -241,11 +241,11 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(12;"Cod. Local";Code[20])
         {
-            TableRelation = IF (Grupo de Colegios=CONST(false)) "Contact Alt. Address".Code WHERE (Contact No.=FIELD(Cod. Colegio));
+            TableRelation = IF (Grupo de Colegios=CONST(false)) "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
         }
         field(13;"Cod. Turno";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
         }
         field(14;"Fecha Solicitud";Date)
         {
@@ -312,7 +312,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(21;"Cod. Docente responsable";Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                        Pertenece al CDS=CONST(true));
 
             trigger OnLookup()
@@ -321,7 +321,7 @@ table 67055 "Solicitud de Taller - Evento"
                 pColDoc: Page67045;
             begin
 
-                //"Colegio - Docentes"."Cod. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio),Pertenece al CDS=CONST(true))
+                //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),Pertenece al CDS=CONST(true))
                 IF "Tipo Responsable" = "Tipo Responsable"::CDS THEN BEGIN
                   rColDoc.RESET;
                   rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
@@ -430,7 +430,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(40;"Filtro Promotor";Code[20])
         {
             FieldClass = FlowFilter;
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=FILTER(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=FILTER(Vendedor));
         }
         field(41;"Filtro Colegio";Code[20])
         {
@@ -447,7 +447,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(44;"Cod. objetivo promotor";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Objetivos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Objetivos));
 
             trigger OnValidate()
             begin
@@ -476,7 +476,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(49;"Grupo de Negocio";Code[20])
         {
             Caption = 'Business Group';
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grupo de Negocio));
         }
         field(50;Referencia;Text[60])
         {
@@ -677,7 +677,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67023;"Art culo Grupo Santillana";Code[20])
         {
-            TableRelation = "Historico Adopciones"."Cod. producto" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Historico Adopciones"."Cod. producto" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
 
             trigger OnLookup()
             var
@@ -745,7 +745,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67035;"Cod. Cargo Responsable";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
@@ -900,7 +900,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67044;"Asociacion/Grupo";Code[20])
         {
-            TableRelation = IF (Cod. Colegio=FILTER(<>'')) "Grupo - Colegios"."Cod. grupo" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = IF ("Cod. Colegio"=FILTER(<>'')) "Grupo - Colegios"."Cod. grupo" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             var

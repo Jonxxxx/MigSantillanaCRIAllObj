@@ -8,7 +8,7 @@ table 67009 "Rutas - CP"
         field(1; "Cod. Ruta"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Rutas));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Rutas));
 
             trigger OnValidate()
             begin

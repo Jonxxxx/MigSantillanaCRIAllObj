@@ -3,17 +3,17 @@ table 67117 "Productos Equiv. - Muestras"
 
     fields
     {
-        field(1;"Cod. Producto";Code[20])
+        field(1; "Cod. Producto"; Code[20])
         {
             TableRelation = Item;
         }
-        field(2;"Cod. Producto Docente";Code[20])
+        field(2; "Cod. Producto Docente"; Code[20])
         {
             TableRelation = Item;
         }
-        field(3;"Nombre Producto";Text[100])
+        field(3; "Nombre Producto"; Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD(Cod. Producto)));
+            CalcFormula = Lookup(Item.Description WHERE(No.=FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }

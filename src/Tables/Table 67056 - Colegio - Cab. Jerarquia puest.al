@@ -17,16 +17,16 @@ table 67056 "Colegio - Cab. Jerarquia puest"
         }
         field(2; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(3;"Cod. Nivel";Code[20])
+        field(3; "Cod. Nivel"; Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   Cod. Local=FIELD(Cod. Local));
         }
         field(4;"Cod. Turno";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
 
             trigger OnLookup()
             begin

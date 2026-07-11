@@ -1,11 +1,11 @@
 page 67032 "Tipo de Educacion"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Caption = 'Education type';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Tipo de educacion));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Tipo de educacion));
     UsageCategory = Administration;
 
     layout
@@ -14,10 +14,10 @@ page 67032 "Tipo de Educacion"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

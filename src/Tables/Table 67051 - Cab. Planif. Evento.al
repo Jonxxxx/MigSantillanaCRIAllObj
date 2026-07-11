@@ -224,19 +224,19 @@ table 67051 "Cab. Planif. Evento"
         }
         field(33;"Tipo Documento Pago";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(28));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(28));
         }
         field(34;"Fecha Pago";Date)
         {
         }
         field(35;"Nombre Colegio";Text[90])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(36;"Distrito Colegio";Text[30])
         {
-            CalcFormula = Lookup(Contact.Distritos WHERE (No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Distritos WHERE (No.=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(37;"Estado Solicitud";Option)

@@ -4,8 +4,8 @@ page 67084 "Equipos T&E"
     DataCaptionExpression = FORMAT("Tipo registro");
     PageType = Card;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Equipos T&E));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Equipos T&E));
 
     layout
     {
@@ -13,10 +13,10 @@ page 67084 "Equipos T&E"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

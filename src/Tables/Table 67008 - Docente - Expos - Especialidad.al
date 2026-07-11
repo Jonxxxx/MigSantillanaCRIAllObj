@@ -11,8 +11,8 @@ table 67008 "Docente - Expos - Especialidad"
         }
         field(2; "Cod. Docente/Expositor"; Code[20])
         {
-            TableRelation = IF (Tipo Registro=CONST(Docente)) Docentes
-                            ELSE IF (Tipo Registro=CONST(Expositor)) "Expositores - aps";
+            TableRelation = IF ("Tipo registro" = CONST(Docente)) Docentes
+            ELSE IF ("Tipo registro" = CONST(Expositor)) "Expositores - aps";
 
             trigger OnValidate()
             begin
@@ -29,7 +29,7 @@ table 67008 "Docente - Expos - Especialidad"
         field(3; "Cod. especialidad"; Code[20])
         {
             Caption = 'Specialism code';
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Especialidades));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Especialidades));
 
             trigger OnValidate()
             begin
@@ -56,7 +56,7 @@ table 67008 "Docente - Expos - Especialidad"
         }
         field(7; "Cod. grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
     }
 

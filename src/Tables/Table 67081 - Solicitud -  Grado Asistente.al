@@ -8,7 +8,7 @@ table 67081 "Solicitud -  Grado Asistente"
         }
         field(2; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
 
             trigger OnValidate()
             var

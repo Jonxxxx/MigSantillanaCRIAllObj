@@ -38,47 +38,47 @@ table 67063 "Plan Lector Cab."
         }
         field(3; "Cod. Local"; Code[10])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(4;"Descripcion Local";Text[50])
+        field(4; "Descripcion Local"; Text[50])
         {
             Editable = false;
         }
-        field(5;"Cod. Turno";Code[10])
+        field(5; "Cod. Turno"; Code[10])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
 
             trigger OnValidate()
             var
                 DA Record: 67002;
             begin
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::Turnos);
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::Turnos);
                 IF DA.FINDFIRST THEN
-                  "Descripcion Turno" := DA.Descripcion;
+                    "Descripcion Turno" := DA.Descripcion;
             end;
         }
-        field(6;"Descripcion Turno";Text[30])
+        field(6; "Descripcion Turno"; Text[30])
         {
             Editable = false;
         }
-        field(7;Distrito;Text[30])
+        field(7; Distrito; Text[30])
         {
             Editable = false;
         }
-        field(8;"Cod. Delegacion";Code[20])
+        field(8; "Cod. Delegacion"; Code[20])
         {
         }
-        field(9;"Descripci n Delegacion";Text[50])
+        field(9; "Descripci n Delegacion"; Text[50])
         {
         }
-        field(50;"Campa a";Code[20])
+        field(50; "Campa a"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Campa a","Cod. Colegio","Cod. Local","Cod. Turno")
+        key(Key1; "Campa a", "Cod. Colegio", "Cod. Local", "Cod. Turno")
         {
         }
     }
@@ -91,7 +91,7 @@ table 67063 "Plan Lector Cab."
     var
         Text001: Label 'You cannot rename a %1.';
     begin
-        ERROR(Text001,TABLECAPTION);
+        ERROR(Text001, TABLECAPTION);
     end;
 }
 

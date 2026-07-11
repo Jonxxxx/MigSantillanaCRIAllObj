@@ -3,8 +3,8 @@ page 67135 Pasos
     Caption = 'Steps';
     PageType = Card;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Paso));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Paso));
 
     layout
     {
@@ -12,10 +12,10 @@ page 67135 Pasos
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

@@ -1,10 +1,10 @@
 page 67008 Rutas
 {
-    ApplicationArea = Basic,"#Suite","#Service";
+    ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Routes APS';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = WHERE(Tipo registro=CONST(Rutas));
+    SourceTableView = WHERE("Tipo registro" = CONST(Rutas));
     UsageCategory = Administration;
 
     layout
@@ -13,16 +13,16 @@ page 67008 Rutas
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field(Delegacion;Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
-                field("Descripcion delegacion";"Descripcion delegacion")
+                field("Descripcion delegacion"; "Descripcion delegacion")
                 {
                 }
             }
@@ -46,7 +46,7 @@ page 67008 Rutas
                 {
                     Caption = '&Salesrep';
                     RunObject = Page 67048;
-                    RunPageLink = Cod. Ruta=FIELD(Codigo);
+                                    RunPageLink = Cod. Ruta=FIELD(Codigo);
                 }
             }
         }

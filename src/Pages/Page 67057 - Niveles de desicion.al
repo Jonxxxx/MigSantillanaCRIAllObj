@@ -1,11 +1,11 @@
 page 67057 "Niveles de desicion"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Caption = 'Decision level';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Nivel de decisión));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Nivel de decisión));
     UsageCategory = Administration;
 
     layout
@@ -14,10 +14,10 @@ page 67057 "Niveles de desicion"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

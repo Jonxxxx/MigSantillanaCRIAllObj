@@ -18,66 +18,66 @@ table 67054 "TMP Reportes APS"
         }
         field(4; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(5;"Cod. Nivel";Code[20])
+        field(5; "Cod. Nivel"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
         }
-        field(6;"Cod. Grado";Code[20])
+        field(6; "Cod. Grado"; Code[20])
         {
             NotBlank = true;
         }
-        field(7;"Cod. Turno";Code[20])
+        field(7; "Cod. Turno"; Code[20])
         {
         }
-        field(8;"Cod. Promotor";Code[20])
+        field(8; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
-        field(9;"Cod. Producto";Code[20])
+        field(9; "Cod. Producto"; Code[20])
         {
             NotBlank = true;
             TableRelation = Item;
         }
-        field(10;"Grupo de negocio";Code[20])
+        field(10; "Grupo de negocio"; Code[20])
         {
         }
-        field(11;"Linea de negocio";Code[20])
+        field(11; "Linea de negocio"; Code[20])
         {
         }
-        field(12;Familia;Code[20])
+        field(12; Familia; Code[20])
         {
         }
-        field(13;"Sub Familia";Code[20])
+        field(13; "Sub Familia"; Code[20])
         {
         }
-        field(14;Serie;Code[20])
+        field(14; Serie; Code[20])
         {
         }
-        field(15;"Cantidad Alumnos";Decimal)
+        field(15; "Cantidad Alumnos"; Decimal)
         {
             Caption = '2INI';
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
         }
-        field(16;Adopcion;Option)
+        field(16; Adopcion; Option)
         {
             Caption = '2INI';
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
         }
-        field(17;"Cant. Presupuestada";Integer)
+        field(17; "Cant. Presupuestada"; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Movimiento")
+        key(Key1; "No. Movimiento")
         {
         }
-        key(Key2;"Cod. Colegio","Grupo de negocio","Cod. Grado","Cod. Turno","Cod. Promotor","Cod. Producto")
+        key(Key2; "Cod. Colegio", "Grupo de negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto")
         {
         }
     }

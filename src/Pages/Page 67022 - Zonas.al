@@ -1,11 +1,11 @@
 page 67022 Zonas
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Caption = 'Zone';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Zonas));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Zonas));
     UsageCategory = Administration;
 
     layout
@@ -14,10 +14,10 @@ page 67022 Zonas
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

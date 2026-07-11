@@ -10,12 +10,12 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         }
         field(2; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(3;"Cod. Nivel";Code[20])
+        field(3; "Cod. Nivel"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             begin
@@ -23,22 +23,22 @@ table 67084 "Hist. Colegio - Adopciones Cab"
                 "Filtro Nivel" := Nivel."Filtros Combinaciones Niveles";
             end;
         }
-        field(4;"Cod. Promotor";Code[20])
+        field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
-        field(5;Turno;Code[20])
+        field(5; Turno; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(6;"Nombre Colegio";Text[100])
+        field(6; "Nombre Colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Name WHERE(No.=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(7;"Descripcion Nivel";Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD(Cod. Nivel)));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(8;"Nombre Promotor";Text[60])
@@ -191,7 +191,7 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         }
         field(20;"Filtro Grupo de Negocio";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grupo de Negocio));
         }
         field(21;"Filtro Sub Familia";Code[20])
         {

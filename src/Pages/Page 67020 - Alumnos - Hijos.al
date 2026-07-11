@@ -105,7 +105,7 @@ page 67020 "Alumnos - Hijos"
                 {
                     Caption = '&School';
                     RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD(Cod. Colegio);
+                                    RunPageLink = No.=FIELD("Cod. Colegio");
                 }
             }
         }

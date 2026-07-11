@@ -95,7 +95,7 @@ page 67036 "Colegio - Nivel"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67037;
-                    RunPageLink = Cod. Colegio=FIELD(Cod. Colegio);
+                    RunPageLink = Cod. Colegio=FIELD("Cod. Colegio");
                 }
             }
         }

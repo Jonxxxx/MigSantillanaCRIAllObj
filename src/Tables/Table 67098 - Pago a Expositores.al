@@ -74,7 +74,7 @@ table 67098 "Pago a Expositores"
         }
         field(9;"Tipo Documento";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(28));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(28));
         }
     }
 

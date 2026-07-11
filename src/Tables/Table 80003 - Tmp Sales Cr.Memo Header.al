@@ -510,7 +510,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(56001;"Collector Code";Code[10])
         {
             Caption = 'Collector code';
-            TableRelation = Salesperson/Purchaser WHERE (Collector=CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE (Collector=CONST(true));
         }
         field(56002;"Pre pedido";Boolean)
         {

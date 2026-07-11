@@ -1,11 +1,11 @@
 page 67059 Aficiones
 {
-    ApplicationArea = Basic,"#Suite","#Service";
+    ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Hobbies';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Aficiones));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Aficiones));
     UsageCategory = Administration;
 
     layout
@@ -14,10 +14,10 @@ page 67059 Aficiones
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

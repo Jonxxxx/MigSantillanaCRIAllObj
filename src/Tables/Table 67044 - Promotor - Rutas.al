@@ -7,41 +7,39 @@ table 67044 "Promotor - Rutas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
-        field(2;"Cod. Ruta";Code[20])
+        field(2; "Cod. Ruta"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Rutas));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Rutas));
 
             trigger OnValidate()
             begin
-                IF "Cod. Ruta" <> '' THEN
-                   BEGIN
+                IF "Cod. Ruta" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::Rutas);
-                    DA.SETRANGE(Codigo,"Cod. Ruta");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Rutas);
+                    DA.SETRANGE(Codigo, "Cod. Ruta");
                     DA.FINDFIRST;
                     "Descripcion Ruta" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(3;"Cod. Zona";Code[20])
+        field(3; "Cod. Zona"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Zonas));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Zonas));
 
             trigger OnValidate()
             begin
-                IF "Cod. Zona" <> '' THEN
-                   BEGIN
+                IF "Cod. Zona" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::Zonas);
-                    DA.SETRANGE(Codigo,"Cod. Zona");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Zonas);
+                    DA.SETRANGE(Codigo, "Cod. Zona");
                     DA.FINDFIRST;
                     "Descripcion zona" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(4;"Nombre Promotor";Text[100])
+        field(4; "Nombre Promotor"; Text[100])
         {
             CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE (Code=FIELD(Cod. Promotor)));
             FieldClass = FlowField;

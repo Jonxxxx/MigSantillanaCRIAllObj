@@ -90,7 +90,7 @@ page 67056 "Ficha de Alumnos"
                 {
                     Caption = '&School';
                     RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD(Cod. Colegio);
+                                    RunPageLink = No.=FIELD("Cod. Colegio");
                 }
             }
         }

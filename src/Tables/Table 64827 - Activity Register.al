@@ -22,11 +22,11 @@ table 64827 "Activity Register"
         }
         field(6; "Source Database"; Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
         }
         field(7; "Dest. Database"; Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
         }
         field(8; "Source Counter"; BigInteger)
         {

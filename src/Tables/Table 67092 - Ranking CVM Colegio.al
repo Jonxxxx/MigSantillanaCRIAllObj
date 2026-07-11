@@ -6,36 +6,36 @@ table 67092 "Ranking CVM Colegio"
 
     fields
     {
-        field(1;"Cod. Colegio";Code[20])
+        field(1; "Cod. Colegio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Contact WHERE (Type=CONST(Company));
+            TableRelation = Contact WHERE(Type = CONST(Company));
         }
-        field(2;"Grupo de Negocio";Code[20])
+        field(2; "Grupo de Negocio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
         }
-        field(3;"CVM GN";Code[3])
+        field(3; "CVM GN"; Code[3])
         {
         }
-        field(4;INI;Code[3])
+        field(4; INI; Code[3])
         {
         }
-        field(5;PRI;Code[3])
+        field(5; PRI; Code[3])
         {
         }
-        field(6;SEC;Code[3])
+        field(6; SEC; Code[3])
         {
         }
-        field(7;"% Compra";Decimal)
+        field(7; "% Compra"; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Grupo de Negocio","CVM GN")
+        key(Key1; "Cod. Colegio", "Grupo de Negocio", "CVM GN")
         {
         }
     }

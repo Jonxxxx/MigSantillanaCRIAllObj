@@ -21,28 +21,28 @@ table 67035 "Historico Adopciones"
         field(4; "Cod. Local"; Code[20])
         {
             Caption = 'C d. Local';
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(5;"Cod. Nivel";Code[20])
+        field(5; "Cod. Nivel"; Code[20])
         {
             Caption = 'C d. Nivel';
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
         }
-        field(6;"Cod. Grado";Code[20])
+        field(6; "Cod. Grado"; Code[20])
         {
             Caption = 'C d. Grado';
-            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
-                                                                   Cod. Nivel=FIELD(Cod. Nivel));
+            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                   Cod. Nivel=FIELD("Cod. Nivel"));
         }
         field(7;"Cod. Turno";Code[20])
         {
             Caption = 'C d. Turno';
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
         }
         field(8;"Cod. Promotor";Code[20])
         {
             Caption = 'C d. Promotor';
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=CONST(Vendedor));
         }
         field(9;"Cod. producto";Code[20])
         {
@@ -56,7 +56,7 @@ table 67035 "Historico Adopciones"
         field(11;"Cod. Equiv. Santillana";Code[20])
         {
             Caption = 'C d. Equiv. Santillana';
-            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE (Cod. Producto=FIELD(Cod. producto));
+            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
         }
         field(12;"Descripcion Equiv. Santillana";Text[100])
         {
@@ -77,19 +77,19 @@ table 67035 "Historico Adopciones"
         }
         field(15;"Nombre Colegio";Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
             Caption = 'Nombre Colegio';
             FieldClass = FlowField;
         }
         field(16;"Descripcion Nivel";Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD(Cod. Nivel)));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
             Caption = 'Descripcion Nivel';
             FieldClass = FlowField;
         }
         field(17;"Descripcion Grado";Text[100])
         {
-            CalcFormula = Lookup("Datos auxiliares".Descripcion WHERE (Tipo registro=CONST(Grados),
+            CalcFormula = Lookup("Datos auxiliares".Descripcion WHERE ("Tipo registro"=CONST(Grados),
                                                                        Codigo=FIELD(Cod. Grado)));
             Caption = 'Descripcion Grado';
             FieldClass = FlowField;
@@ -129,7 +129,7 @@ table 67035 "Historico Adopciones"
         field(26;"Cod. Libro Equivalente";Code[20])
         {
             Caption = 'Cod. Libro Equivalente';
-            TableRelation = "Productos Equivalentes" WHERE (Cod. Producto=FIELD(Cod. producto));
+            TableRelation = "Productos Equivalentes" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
         }
         field(27;"Adopciones Camp. Anterior";Integer)
         {
@@ -196,13 +196,13 @@ table 67035 "Historico Adopciones"
         field(48;"Motivo perdida adopcion";Text[60])
         {
             Caption = 'Motivo perdida adopcion';
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
         }
         field(49;"Cod. Producto Editora";Code[20])
         {
             Caption = 'C d. Producto Editora';
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE (Cod. Editorial=FIELD(Cod. Editorial),
-                                                                     Nivel=FIELD(Cod. Nivel));
+                                                                     Nivel=FIELD("Cod. Nivel"));
         }
         field(50;"Nombre Producto Editora";Text[100])
         {
@@ -225,7 +225,7 @@ table 67035 "Historico Adopciones"
         field(54;Materia;Code[10])
         {
             Caption = 'Mater a';
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Materia));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Materia));
 
             trigger OnLookup()
             var
@@ -241,7 +241,7 @@ table 67035 "Historico Adopciones"
         }
         field(100;"Item - Item Category Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Item Category Code" WHERE (No.=FIELD(Cod. producto)));
+            CalcFormula = Lookup(Item."Item Category Code" WHERE (No.=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(101;"Sales Price - Unit Price";Decimal)
@@ -253,7 +253,7 @@ table 67035 "Historico Adopciones"
         }
         field(102;"Item - Product Group Code";Code[20])
         {
-            CalcFormula = Lookup(Item."Product Group Code" WHERE (No.=FIELD(Cod. producto)));
+            CalcFormula = Lookup(Item."Product Group Code" WHERE (No.=FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103;"Item - Grado";Code[20])

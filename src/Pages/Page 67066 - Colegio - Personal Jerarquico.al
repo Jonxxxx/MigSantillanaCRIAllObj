@@ -10,28 +10,28 @@ page 67066 "Colegio - Personal Jerarquico"
             group(General)
             {
                 Caption = 'General';
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Cod. Local";"Cod. Local")
+                field("Cod. Local"; "Cod. Local")
                 {
                 }
-                field("Cod. Turno";"Cod. Turno")
+                field("Cod. Turno"; "Cod. Turno")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
             }
-            part(;67067)
+            part(; 67067)
             {
-                SubPageLink = Cod. Colegio=FIELD(Cod. Colegio),
+                SubPageLink = Cod. Colegio=FIELD("Cod. Colegio"),
                               Cod. Docente=FIELD(Cod. Local),
-                              Nombre colegio=FIELD(Cod. Nivel),
-                              Nombre docente=FIELD(Cod. Turno);
+                              Nombre colegio=FIELD("Cod. Nivel"),
+                              Nombre docente=FIELD("Cod. Turno");
             }
         }
     }

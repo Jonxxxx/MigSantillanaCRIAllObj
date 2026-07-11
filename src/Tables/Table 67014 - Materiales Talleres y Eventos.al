@@ -30,7 +30,7 @@ table 67014 "Materiales Talleres y Eventos"
         field(5; "Codigo Material"; Code[20])
         {
             NotBlank = true;
-            TableRelation = IF (Tipo de Material=CONST(Otro)) "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Materiales))
+            TableRelation = IF (Tipo de Material=CONST(Otro)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Materiales))
                             ELSE IF (Tipo de Material=CONST(Producto)) Item;
 
             trigger OnValidate()

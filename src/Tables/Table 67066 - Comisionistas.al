@@ -365,28 +365,28 @@ table 67066 Comisionistas
         }
         field(5069;"No. of Job Responsibilities";Integer)
         {
-            CalcFormula = Count("Contact Job Responsibility" WHERE (Contact No.=FIELD(No.)));
+            CalcFormula = Count("Contact Job Responsibility" WHERE ("Contact No."=FIELD(No.)));
             Caption = 'No. of Job Responsibilities';
             Editable = false;
             FieldClass = FlowField;
         }
         field(5070;"No. of Industry Groups";Integer)
         {
-            CalcFormula = Count("Contact Industry Group" WHERE (Contact No.=FIELD(Company No.)));
+            CalcFormula = Count("Contact Industry Group" WHERE ("Contact No."=FIELD(Company No.)));
             Caption = 'No. of Industry Groups';
             Editable = false;
             FieldClass = FlowField;
         }
         field(5071;"No. of Business Relations";Integer)
         {
-            CalcFormula = Count("Contact Business Relation" WHERE (Contact No.=FIELD(Company No.)));
+            CalcFormula = Count("Contact Business Relation" WHERE ("Contact No."=FIELD(Company No.)));
             Caption = 'No. of Business Relations';
             Editable = false;
             FieldClass = FlowField;
         }
         field(5072;"No. of Mailing Groups";Integer)
         {
-            CalcFormula = Count("Contact Mailing Group" WHERE (Contact No.=FIELD(No.)));
+            CalcFormula = Count("Contact Mailing Group" WHERE ("Contact No."=FIELD(No.)));
             Caption = 'No. of Mailing Groups';
             Editable = false;
             FieldClass = FlowField;

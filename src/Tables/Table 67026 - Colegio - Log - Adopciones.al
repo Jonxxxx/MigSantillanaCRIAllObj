@@ -17,26 +17,26 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(3; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(4;"Cod. Nivel";Code[20])
+        field(4; "Cod. Nivel"; Code[20])
         {
             NotBlank = true;
             TableRelation = "Nivel Educativo APS";
         }
-        field(5;"Cod. Grado";Code[20])
+        field(5; "Cod. Grado"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
-                                                                   Cod. Turno=FIELD(Cod. Turno));
+            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                   Cod. Turno=FIELD("Cod. Turno"));
         }
         field(6;"Cod. Turno";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
         }
         field(7;"Cod. Promotor";Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE (Tipo=CONST(Vendedor));
         }
         field(8;"Cod. Producto";Code[20])
         {
@@ -49,7 +49,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(10;"Cod. Equiv. Santillana";Code[20])
         {
-            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE (Cod. Producto=FIELD(Cod. Producto));
+            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
         }
         field(11;"Descripcion Equiv. Santillana";Text[100])
         {
@@ -66,12 +66,12 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(14;"Nombre Colegio";Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(15;"Descripcion Nivel";Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD(Cod. Nivel)));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(16;"Descripcion Grado";Text[100])
@@ -101,7 +101,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(24;"Cod. Motivo perdida adopcion";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
         }
         field(27;"Nombre Promotor";Text[60])
         {
@@ -148,12 +148,12 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(39;"Motivo perdida adopcion";Text[60])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
         }
         field(41;"Cod. Producto Editora";Code[20])
         {
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE (Cod. Editorial=FIELD(Cod. Editorial),
-                                                                     Nivel=FIELD(Cod. Nivel));
+                                                                     Nivel=FIELD("Cod. Nivel"));
         }
         field(42;"Nombre Producto Editora";Text[100])
         {
@@ -172,7 +172,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(46;Materia;Code[10])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Materia));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Materia));
 
             trigger OnLookup()
             var

@@ -8,11 +8,11 @@ table 67038 "Promotor - Planif. Visita"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
-        field(2;"Cod. Colegio";Code[20])
+        field(2; "Cod. Colegio"; Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE (Cod. Promotor=FIELD(Cod. Promotor));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE(Cod. Promotor=FIELD(Cod. Promotor));
 
             trigger OnValidate()
             begin
@@ -127,11 +127,11 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(14;"Local";Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE (Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
         }
         field(15;Turno;Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
         }
         field(16;Nivel;Code[20])
         {
@@ -139,7 +139,7 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(17;"Persona atendio";Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             begin
@@ -163,7 +163,7 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(19;Cargo;Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
@@ -186,7 +186,7 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(22;Tarea;Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Tareas));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tareas));
 
             trigger OnValidate()
             begin
@@ -202,7 +202,7 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(24;Objetivo;Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Objetivos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Objetivos));
 
             trigger OnValidate()
             begin
@@ -230,7 +230,7 @@ table 67038 "Promotor - Planif. Visita"
         {
             Caption = 'School status';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Estado Colegio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Estado Colegio));
         }
     }
 

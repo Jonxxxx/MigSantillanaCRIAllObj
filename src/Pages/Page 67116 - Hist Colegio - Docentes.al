@@ -80,7 +80,7 @@ page 67116 "Hist Colegio - Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 5050;
-                    RunPageLink = No.=FIELD(Cod. Colegio);
+                    RunPageLink = No.=FIELD("Cod. Colegio");
                     ShortCutKey = 'Shift+F5';
                 }
             }

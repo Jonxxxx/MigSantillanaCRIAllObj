@@ -1,9 +1,9 @@
 page 67167 "Lista Atenciones"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = WHERE(Tipo registro=CONST(Atenciones));
+    SourceTableView = WHERE("Tipo registro" = CONST(Atenciones));
     UsageCategory = Lists;
 
     layout
@@ -12,13 +12,13 @@ page 67167 "Lista Atenciones"
         {
             repeater(Group)
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Costo Unitario";"Costo Unitario")
+                field("Costo Unitario"; "Costo Unitario")
                 {
                 }
             }

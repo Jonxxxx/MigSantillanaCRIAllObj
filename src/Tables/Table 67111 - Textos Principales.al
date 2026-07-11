@@ -16,7 +16,7 @@ table 67111 "Textos Principales"
         field(3; "Grupo de Negocio"; Code[20])
         {
             Editable = false;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
 
             trigger OnLookup()
             var

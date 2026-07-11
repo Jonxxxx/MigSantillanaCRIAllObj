@@ -11,61 +11,61 @@ table 67069 "Historico Colegio - Grados"
         }
         field(2; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(3;"Cod. Nivel";Code[20])
+        field(3; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Nivel Educativo APS";
         }
-        field(4;"Cod. Turno";Code[20])
+        field(4; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(5;"Cod. Grado";Code[20])
+        field(5; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
-        field(6;Seccion;Code[10])
-        {
-        }
-        field(7;"Cantidad Secciones";Integer)
+        field(6; Seccion; Code[10])
         {
         }
-        field(8;"Cantidad Alumnos";Integer)
+        field(7; "Cantidad Secciones"; Integer)
+        {
+        }
+        field(8; "Cantidad Alumnos"; Integer)
         {
 
             trigger OnValidate()
             begin
                 ColAdopcionD.RESET;
-                ColAdopcionD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                ColAdopcionD.SETRANGE("Cod. Nivel","Cod. Nivel");
-                ColAdopcionD.SETRANGE("Cod. Grado","Cod. Grado");
-                ColAdopcionD.SETRANGE("Cod. Turno","Cod. Turno");
-                ColAdopcionD.SETRANGE(Seccion,Seccion);
-                IF ColAdopcionD.FINDSET(TRUE,FALSE) THEN
-                   REPEAT
-                    ColAdopcionD."Cantidad Alumnos" := "Cantidad Alumnos";
-                    ColAdopcionD.MODIFY;
-                   UNTIL ColAdopcionD.NEXT = 0;
+                ColAdopcionD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                ColAdopcionD.SETRANGE("Cod. Nivel", "Cod. Nivel");
+                ColAdopcionD.SETRANGE("Cod. Grado", "Cod. Grado");
+                ColAdopcionD.SETRANGE("Cod. Turno", "Cod. Turno");
+                ColAdopcionD.SETRANGE(Seccion, Seccion);
+                IF ColAdopcionD.FINDSET(TRUE, FALSE) THEN
+                    REPEAT
+                        ColAdopcionD."Cantidad Alumnos" := "Cantidad Alumnos";
+                        ColAdopcionD.MODIFY;
+                    UNTIL ColAdopcionD.NEXT = 0;
             end;
         }
-        field(9;"Cantidad Docentes";Integer)
+        field(9; "Cantidad Docentes"; Integer)
         {
         }
-        field(10;"Lista Utiles";Boolean)
+        field(10; "Lista Utiles"; Boolean)
         {
         }
-        field(11;"Lista Competencia";Boolean)
+        field(11; "Lista Competencia"; Boolean)
         {
         }
-        field(12;"Horas Ingles";Decimal)
+        field(12; "Horas Ingles"; Decimal)
         {
         }
-        field(13;"Fecha Decision";Date)
+        field(13; "Fecha Decision"; Date)
         {
             Caption = 'Decision Date';
         }
-        field(20;Campana;Code[4])
+        field(20; Campana; Code[4])
         {
             Caption = 'Campa a';
             TableRelation = Campaign;
@@ -74,14 +74,14 @@ table 67069 "Historico Colegio - Grados"
 
     keys
     {
-        key(Key1;Campana,"Cod. Colegio","Cod. Nivel","Cod. Turno","Cod. Grado",Seccion)
+        key(Key1; Campana, "Cod. Colegio", "Cod. Nivel", "Cod. Turno", "Cod. Grado", Seccion)
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Nivel","Cod. Grado")
+        fieldgroup(DropDown; "Cod. Nivel", "Cod. Grado")
         {
         }
     }
@@ -89,14 +89,14 @@ table 67069 "Historico Colegio - Grados"
     trigger OnDelete()
     begin
         ColAdopcionD.RESET;
-        ColAdopcionD.SETRANGE("Cod. Colegio","Cod. Colegio");
-        ColAdopcionD.SETRANGE("Cod. Nivel","Cod. Nivel");
-        ColAdopcionD.SETRANGE("Cod. Grado","Cod. Grado");
-        ColAdopcionD.SETRANGE("Cod. Turno","Cod. Turno");
-        ColAdopcionD.SETRANGE(Seccion,Seccion);
-        ColAdopcionD.SETRANGE(Adopcion,1,5);
+        ColAdopcionD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+        ColAdopcionD.SETRANGE("Cod. Nivel", "Cod. Nivel");
+        ColAdopcionD.SETRANGE("Cod. Grado", "Cod. Grado");
+        ColAdopcionD.SETRANGE("Cod. Turno", "Cod. Turno");
+        ColAdopcionD.SETRANGE(Seccion, Seccion);
+        ColAdopcionD.SETRANGE(Adopcion, 1, 5);
         IF ColAdopcionD.FINDFIRST THEN
-           ERROR(Err001);
+            ERROR(Err001);
     end;
 
     var

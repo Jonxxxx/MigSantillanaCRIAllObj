@@ -14,7 +14,7 @@ table 67060 "Temp Reportes APS"
         }
         field(25; "Descripcion nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD(Cod. Nivel)));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE (C digo=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -34,7 +34,7 @@ table 67060 "Temp Reportes APS"
         }
         field(56;"Descripcion producto";Text[100])
         {
-            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD(Cod. producto)));
+            CalcFormula = Lookup(Item.Description WHERE (No.=FIELD("Cod. Producto")));
             Caption = 'Descripci n producto';
             Editable = false;
             FieldClass = FlowField;

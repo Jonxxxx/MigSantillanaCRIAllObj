@@ -52,7 +52,7 @@ table 64835 "Replicator Setup"
         }
         field(30; "Local Database Code"; Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -66,7 +66,7 @@ table 64835 "Replicator Setup"
         }
         field(31; "Central Database Code"; Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;

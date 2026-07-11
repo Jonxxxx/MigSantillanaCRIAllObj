@@ -14,7 +14,7 @@ table 67049 "Padres - Aficiones"
         }
         field(3; "Cod. aficion"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Aficiones));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Aficiones));
 
             trigger OnValidate()
             begin

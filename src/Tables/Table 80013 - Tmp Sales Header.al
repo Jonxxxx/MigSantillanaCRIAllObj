@@ -219,7 +219,7 @@ table 80013 "Tmp Sales Header"
         field(43;"Salesperson Code";Code[10])
         {
             Caption = 'Salesperson Code';
-            TableRelation = Salesperson/Purchaser WHERE (Collector=CONST(false));
+            TableRelation = "Salesperson/Purchaser" WHERE (Collector=CONST(false));
 
             trigger OnValidate()
             var
@@ -757,9 +757,9 @@ table 80013 "Tmp Sales Header"
         field(5055;"Opportunity No.";Code[20])
         {
             Caption = 'Opportunity No.';
-            TableRelation = IF (Document Type=FILTER(<>Order)) Opportunity."No." WHERE (Contact No.=FIELD(Sell-to Contact No.),
+            TableRelation = IF (Document Type=FILTER(<>Order)) Opportunity."No." WHERE ("Contact No."=FIELD(Sell-to Contact No.),
                                                                                       Closed=CONST(false))
-                                                                                      ELSE IF (Document Type=CONST(Order)) Opportunity."No." WHERE (Contact No.=FIELD(Sell-to Contact No.),
+                                                                                      ELSE IF (Document Type=CONST(Order)) Opportunity."No." WHERE ("Contact No."=FIELD(Sell-to Contact No.),
                                                                                                                                                   Sales Document No.=FIELD(No.),
                                                                                                                                                   Sales Document Type=CONST(Order));
 
@@ -984,7 +984,7 @@ table 80013 "Tmp Sales Header"
         field(56001;"Collector Code";Code[10])
         {
             Caption = 'Collector code';
-            TableRelation = Salesperson/Purchaser WHERE (Collector=CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE (Collector=CONST(true));
         }
         field(56002;"Pre pedido";Boolean)
         {

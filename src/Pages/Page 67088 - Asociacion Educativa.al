@@ -1,9 +1,9 @@
 page 67088 "Asociacion Educativa"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = WHERE(Tipo registro=CONST(Asociacion educativa));
+    SourceTableView = WHERE("Tipo registro" = CONST(Asociacion educativa));
     UsageCategory = Administration;
 
     layout
@@ -12,10 +12,10 @@ page 67088 "Asociacion Educativa"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

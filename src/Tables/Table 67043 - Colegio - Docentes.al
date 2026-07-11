@@ -49,7 +49,7 @@ table 67043 "Colegio - Docentes"
         }
         field(3; "Nombre colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE(No.=FIELD(Cod. Colegio)));
+            CalcFormula = Lookup(Contact.Name WHERE(No.=FIELD("Cod. Colegio")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -58,7 +58,7 @@ table 67043 "Colegio - Docentes"
         }
         field(5;"Cod. Cargo";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
@@ -78,7 +78,7 @@ table 67043 "Colegio - Docentes"
         }
         field(7;"Cod. Nivel";Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             begin
@@ -104,7 +104,7 @@ table 67043 "Colegio - Docentes"
         }
         field(9;"Cod. Promotor";Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Promotor" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Promotor" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
         }
         field(10;"Nombre Promotor";Text[60])
         {
@@ -117,7 +117,7 @@ table 67043 "Colegio - Docentes"
         }
         field(12;"Cod. Local";Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE (Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
         }
         field(13;"Pertenece al CDS";Boolean)
         {
@@ -127,7 +127,7 @@ table 67043 "Colegio - Docentes"
         }
         field(15;"Nivel decision";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Nivel de decisi n));
 
             trigger OnValidate()
             begin

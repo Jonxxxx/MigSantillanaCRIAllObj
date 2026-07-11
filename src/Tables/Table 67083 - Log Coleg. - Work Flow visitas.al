@@ -36,13 +36,13 @@ table 67083 "Log Coleg. - Work Flow visitas"
         }
         field(11; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
     }
 
     keys
     {
-        key(Key1;Fecha,"Cod. Promotor","Cod. Colegio",Secuencia)
+        key(Key1; Fecha, "Cod. Promotor", "Cod. Colegio", Secuencia)
         {
         }
     }

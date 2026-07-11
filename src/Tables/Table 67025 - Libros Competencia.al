@@ -20,7 +20,7 @@ table 67025 "Libros Competencia"
         }
         field(5; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
 
             trigger OnValidate()
             begin
@@ -34,7 +34,7 @@ table 67025 "Libros Competencia"
         }
         field(6; "Grupo de Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
 
             trigger OnValidate()
             begin

@@ -10,7 +10,7 @@ table 67019 "Areas de interes padres"
         }
         field(2; "Cod. Area Interes"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Areas de inter s));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Areas de inter s));
 
             trigger OnValidate()
             begin

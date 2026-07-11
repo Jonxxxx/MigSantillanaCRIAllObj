@@ -20,7 +20,7 @@ table 67088 "Solicitud - Proposici n Fechas"
         }
         field(6; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
 
             trigger OnValidate()
             var

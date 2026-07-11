@@ -3,8 +3,8 @@ page 67068 "Area Principal"
     Caption = 'Main area';
     PageType = Card;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Area principal));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Area principal));
 
     layout
     {
@@ -12,10 +12,10 @@ page 67068 "Area Principal"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

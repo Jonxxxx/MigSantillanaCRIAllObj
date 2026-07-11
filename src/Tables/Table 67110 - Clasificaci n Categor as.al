@@ -13,7 +13,7 @@ table 67110 "Clasificaci n Categor as"
         }
         field(3; "Cod. Afinidad"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(30));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(30));
         }
         field(4; "Categor a"; Code[2])
         {

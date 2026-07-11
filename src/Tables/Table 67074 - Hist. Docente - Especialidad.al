@@ -17,12 +17,12 @@ table 67074 "Hist. Docente - Especialidad"
         field(3; "Cod. grado"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(4; "Cod. Especialidad"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Especialidades));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Especialidades));
         }
         field(5; "Nombre Docente"; Text[60])
         {

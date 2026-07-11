@@ -81,7 +81,7 @@ page 56069 "Crea Cupones en Lote"
             part(Lineas; 56070)
             {
                 SubPageLink = Lote = FIELD(Lote);
-                SubPageView = SORTING(Cod. Producto)
+                SubPageView = SORTING("Cod. Producto")
                               ORDER(Ascending);
             }
         }

@@ -299,7 +299,7 @@ table 67001 Docentes
         }
         field(51;"Tipo de colegio";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Tipos de colegios));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipos de colegios));
 
             trigger OnValidate()
             begin
@@ -316,7 +316,7 @@ table 67001 Docentes
         }
         field(53;"Tipo educacion";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Tipo de educacion));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipo de educacion));
 
             trigger OnValidate()
             begin
@@ -330,7 +330,7 @@ table 67001 Docentes
         }
         field(54;"Orden religiosa";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Orden religiosa));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Orden religiosa));
 
             trigger OnValidate()
             begin
@@ -385,7 +385,7 @@ table 67001 Docentes
         field(66;"Job Type Code";Code[20])
         {
             Caption = 'Job Type Code';
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
@@ -435,7 +435,7 @@ table 67001 Docentes
         }
         field(78;"Nivel decision";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Nivel de decisi n));
 
             trigger OnValidate()
             begin
@@ -464,7 +464,7 @@ table 67001 Docentes
         }
         field(82;"Tipo de contacto";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Tipos de contactos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipos de contactos));
 
             trigger OnValidate()
             begin

@@ -20,51 +20,47 @@ table 67036 "Colegio - Nivel"
         }
         field(2; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(3;"Cod. Nivel";Code[20])
+        field(3; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Nivel Educativo APS";
         }
-        field(4;Turno;Code[20])
+        field(4; Turno; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(5;"Categoria colegio";Code[10])
+        field(5; "Categoria colegio"; Code[10])
         {
         }
-        field(6;Ruta;Code[20])
+        field(6; Ruta; Code[20])
         {
 
             trigger OnLookup()
             begin
                 ConfAPS.GET();
-                IF ConfAPS."Activar control de C.P." THEN
-                   BEGIN
+                IF ConfAPS."Activar control de C.P." THEN BEGIN
                     RD.RESET;
-                    RD.SETRANGE("Post Code","Post Code");
+                    RD.SETRANGE("Post Code", "Post Code");
                     Rutas.SETTABLEVIEW(RD);
                     Rutas.SETRECORD(RD);
                     Rutas.LOOKUPMODE(TRUE);
-                    IF Rutas.RUNMODAL = ACTION::LookupOK THEN
-                       BEGIN
+                    IF Rutas.RUNMODAL = ACTION::LookupOK THEN BEGIN
                         Rutas.GETRECORD(RD);
-                        VALIDATE(Ruta,RD."Cod. Ruta");
-                       END;
-                   END
-                ELSE
-                   BEGIN
+                        VALIDATE(Ruta, RD."Cod. Ruta");
+                    END;
+                END
+                ELSE BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::Rutas);
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Rutas);
                     Rutas2.SETTABLEVIEW(DA);
                     Rutas2.SETRECORD(DA);
                     Rutas2.LOOKUPMODE(TRUE);
-                    IF Rutas2.RUNMODAL = ACTION::LookupOK THEN
-                       BEGIN
+                    IF Rutas2.RUNMODAL = ACTION::LookupOK THEN BEGIN
                         Rutas2.GETRECORD(DA);
-                        VALIDATE(Ruta,DA.Codigo);
-                       END;
-                   END;
+                        VALIDATE(Ruta, DA.Codigo);
+                    END;
+                END;
 
                 CLEAR(Rutas);
                 CLEAR(Rutas2);
@@ -73,60 +69,57 @@ table 67036 "Colegio - Nivel"
             trigger OnValidate()
             begin
                 ConfAPS.GET();
-                IF Ruta <> '' THEN
-                   BEGIN
-                    IF ConfAPS."Activar control de C.P." THEN
-                       BEGIN
+                IF Ruta <> '' THEN BEGIN
+                    IF ConfAPS."Activar control de C.P." THEN BEGIN
                         "P-Ruta".RESET;
-                        "P-Ruta".SETRANGE("Cod. Ruta",Ruta);
+                        "P-Ruta".SETRANGE("Cod. Ruta", Ruta);
                         IF "P-Ruta".FINDFIRST THEN
-                           "Cod. Promotor" := "P-Ruta"."Cod. Promotor";
-                       END
-                    ELSE
-                       BEGIN
+                            "Cod. Promotor" := "P-Ruta"."Cod. Promotor";
+                    END
+                    ELSE BEGIN
                         DA.RESET;
-                        DA.SETRANGE("Tipo registro",DA."Tipo registro"::Rutas);
-                        DA.SETRANGE(Codigo,Ruta);
+                        DA.SETRANGE("Tipo registro", DA."Tipo registro"::Rutas);
+                        DA.SETRANGE(Codigo, Ruta);
                         DA.FINDFIRST;
-                       END;
+                    END;
 
                     CLEAR("P-LC");
-                    "P-LC".VALIDATE("Cod. Promotor","P-Ruta"."Cod. Promotor");
-                    "P-LC".VALIDATE("Cod. Colegio","Cod. Colegio");
-                    "P-LC".VALIDATE("Cod. Ruta",Ruta);
+                    "P-LC".VALIDATE("Cod. Promotor", "P-Ruta"."Cod. Promotor");
+                    "P-LC".VALIDATE("Cod. Colegio", "Cod. Colegio");
+                    "P-LC".VALIDATE("Cod. Ruta", Ruta);
                     IF "P-LC".INSERT(TRUE) THEN;
-                   END;
+                END;
             end;
         }
-        field(7;"Dto. Ticket Colegio";Decimal)
+        field(7; "Dto. Ticket Colegio"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Colegio" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                     Cod. Local=FIELD(Cod. Local),
-                                                                                    Cod. Nivel=FIELD(Cod. Nivel)));
+                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(8;"Dto. Ticket Padres";Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                                    Cod. Local=FIELD(Cod. Local),
-                                                                                   Cod. Nivel=FIELD(Cod. Nivel)));
+                                                                                   Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(9;"Dto. Feria Colegio";Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                                           Cod. Local=FIELD(Cod. Local),
-                                                                                          Cod. Nivel=FIELD(Cod. Nivel)));
+                                                                                          Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(10;"Dto. Feria Padres";Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                                          Cod. Local=FIELD(Cod. Local),
-                                                                                         Cod. Nivel=FIELD(Cod. Nivel)));
+                                                                                         Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -208,9 +201,9 @@ table 67036 "Colegio - Nivel"
         }
         field(17;"Dto. Docente";Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                                     Cod. Local=FIELD(Cod. Local),
-                                                                                    Cod. Nivel=FIELD(Cod. Nivel)));
+                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -244,14 +237,14 @@ table 67036 "Colegio - Nivel"
         }
         field(67001;"Total adopcion";Decimal)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
-                                                                                       Cod. Nivel=FIELD(Cod. Nivel)));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
+                                                                                       Cod. Nivel=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(67002;"Total adopcion real";Decimal)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
-                                                                                    Cod. Nivel=FIELD(Cod. Nivel)));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
+                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(67003;"Nombre Colegio";Text[100])

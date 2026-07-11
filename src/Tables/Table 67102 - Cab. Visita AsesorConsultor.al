@@ -62,7 +62,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(6; "Grupo Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
         }
         field(7; "Fecha Registro"; Date)
         {
@@ -230,7 +230,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(19; "Cod. Nivel"; Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE(Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   Cod. Promotor=FIELD(Cod. promotor));
 
             trigger OnValidate()
@@ -266,7 +266,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(22;"Cod. Persona Contacto";Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                        Pertenece al CDS=CONST(true));
 
             trigger OnLookup()
@@ -313,7 +313,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(24;"Cod. Cargo Persona Contacto";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             var
@@ -361,7 +361,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(33;"C d. Objetivo Visita";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Objetivos));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Objetivos));
 
             trigger OnValidate()
             var

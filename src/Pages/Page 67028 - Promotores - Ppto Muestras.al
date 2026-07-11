@@ -47,7 +47,7 @@ page 67028 "Promotores - Ppto Muestras"
                 {
                     Caption = '&Item card';
                     RunObject = Page "Item Card";
-                    RunPageLink = No.=FIELD(Cod. Producto);
+                    RunPageLink = No.=FIELD("Cod. Producto");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("&Equivalent Item card")

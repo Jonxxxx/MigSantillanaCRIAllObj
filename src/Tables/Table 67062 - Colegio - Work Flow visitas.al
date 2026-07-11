@@ -60,13 +60,13 @@ table 67062 "Colegio - Work Flow visitas"
         }
         field(10; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Colegio",Secuencia,Programado,Paso,"Area")
+        key(Key1; "Cod. Promotor", "Cod. Colegio", Secuencia, Programado, Paso, "Area")
         {
         }
     }
@@ -82,10 +82,10 @@ table 67062 "Colegio - Work Flow visitas"
     begin
 
         IF Paso THEN
-          ERROR(Texto001);
+            ERROR(Texto001);
 
         IF Area THEN
-           ERROR(Texto002);
+            ERROR(Texto002);
     end;
 
     trigger OnInsert()
@@ -119,30 +119,30 @@ table 67062 "Colegio - Work Flow visitas"
     var
         rLog Record: 67083;
     begin
-        IF NOT rLog.GET(TODAY,"Cod. Promotor","Cod. Colegio",Secuencia) THEN BEGIN
-          rLog.INIT;
-          rLog.Fecha          := TODAY;
-          rLog."Cod. Promotor":=  "Cod. Promotor";
-          rLog."Cod. Colegio" := "Cod. Colegio";
-          rLog.Secuencia      := Secuencia;
-          rLog.Resultado      := Resultado;
-          rLog.Programado     := Programado;
-          rLog.Paso           := Paso;
-          rLog.Detalle        := Detalle;
-          rLog.Mantenimiento  := Mantenimiento;
-          rLog.Conquista      := Conquista;
-          rLog.Area           := Area;
-          rLog.INSERT;
+        IF NOT rLog.GET(TODAY, "Cod. Promotor", "Cod. Colegio", Secuencia) THEN BEGIN
+            rLog.INIT;
+            rLog.Fecha := TODAY;
+            rLog."Cod. Promotor" := "Cod. Promotor";
+            rLog."Cod. Colegio" := "Cod. Colegio";
+            rLog.Secuencia := Secuencia;
+            rLog.Resultado := Resultado;
+            rLog.Programado := Programado;
+            rLog.Paso := Paso;
+            rLog.Detalle := Detalle;
+            rLog.Mantenimiento := Mantenimiento;
+            rLog.Conquista := Conquista;
+            rLog.Area := Area;
+            rLog.INSERT;
         END
         ELSE BEGIN
-          rLog.Resultado      := Resultado;
-          rLog.Programado     := Programado;
-          rLog.Paso           := Paso;
-          rLog.Detalle        := Detalle;
-          rLog.Mantenimiento  := Mantenimiento;
-          rLog.Conquista      := Conquista;
-          rLog.Area           := Area;
-          rLog.MODIFY;
+            rLog.Resultado := Resultado;
+            rLog.Programado := Programado;
+            rLog.Paso := Paso;
+            rLog.Detalle := Detalle;
+            rLog.Mantenimiento := Mantenimiento;
+            rLog.Conquista := Conquista;
+            rLog.Area := Area;
+            rLog.MODIFY;
         END;
     end;
 }

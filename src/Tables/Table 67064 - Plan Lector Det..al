@@ -65,7 +65,7 @@ table 67064 "Plan Lector Det."
         }
         field(14; "Modalidad Lectura 1; Code[10])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Estado Colegio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Estado Colegio));
         }
         field(17; "Total Obras Compradas x Alumno"; Integer)
         {

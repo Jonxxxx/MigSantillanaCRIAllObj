@@ -26,7 +26,7 @@ table 67059 "Equipos Talleres y Eventos"
         field(5; "Codigo Equipo"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Equipos T&E));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Equipos T&E));
 
             trigger OnValidate()
             begin

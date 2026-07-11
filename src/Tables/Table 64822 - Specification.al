@@ -45,20 +45,20 @@ table 64822 Specification
         }
         field(19; "Source Design"; Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
         }
         field(20; "Source Database"; Code[20])
         {
             NotBlank = true;
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
-            ValidateTableRelation = false;
+            //ValidateTableRelation = false;
         }
         field(28; "Source Table No"; Integer)
         {
-            TableRelation = IF (Source Design=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
-                            ELSE IF (Source Design=FILTER(<>'')) "Database Table"."Table No." WHERE (Database Code=FIELD(Source Design));
+            TableRelation = IF ("Source Design" = FILTER('')) AllObj."Object ID" WHERE(Object Type=CONST(Table))
+                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Source Design));
         }
         field(29;"Source Table Name";Text[30])
         {
@@ -98,11 +98,11 @@ table 64822 Specification
         }
         field(39;"Dest. Design";Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
         }
         field(40;"Dest. Database";Code[20])
         {
-            TableRelation = Database.Code;
+            //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -110,7 +110,7 @@ table 64822 Specification
         field(48;"Dest. Table No.";Integer)
         {
             TableRelation = IF (Dest. Design=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
-                            ELSE IF (Dest. Design=FILTER(<>'')) "Database Table"."Table No." WHERE (Database Code=FIELD(Dest. Design));
+                            ELSE IF (Dest. Design=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Dest. Design));
         }
         field(49;"Dest. Table Name";Text[30])
         {
@@ -162,8 +162,8 @@ table 64822 Specification
         }
         field(62;"Action Table No.";Integer)
         {
-            TableRelation = IF (Source Design=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
-                            ELSE IF (Source Design=FILTER(<>'')) "Database Table"."Table No." WHERE (Database Code=FIELD(Source Design));
+            TableRelation = IF ("Source Design"=FILTER('')) AllObj."Object ID" WHERE (Object Type=CONST(Table))
+                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD(Source Design));
         }
         field(63;"Action Table Name";Text[30])
         {

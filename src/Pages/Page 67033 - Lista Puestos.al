@@ -1,11 +1,11 @@
 page 67033 "Lista Puestos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Caption = 'Jobs';
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = SORTING(Tipo registro,Codigo)
-                      WHERE(Tipo registro=CONST(Puestos de trabajo));
+    SourceTableView = SORTING(Tipo registro, Codigo)
+                      WHERE("Tipo registro" = CONST(Puestos de trabajo));
     UsageCategory = Administration;
 
     layout
@@ -14,13 +14,13 @@ page 67033 "Lista Puestos"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Aplica Jerarquia Colegio";"Aplica Jerarquia Colegio")
+                field("Aplica Jerarquia Colegio"; "Aplica Jerarquia Colegio")
                 {
                     Visible = false;
                 }

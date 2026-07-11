@@ -7,53 +7,56 @@ table 67070 "Historico Promotor - Ppto Vtas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
 
             trigger OnValidate()
             begin
                 IF Prom.GET("Cod. Promotor") THEN
-                   "Nombre Promotor" := Prom.Name;
+                    "Nombre Promotor" := Prom.Name;
             end;
         }
-        field(2;"Cod. Producto";Code[20])
+        field(2; "Cod. Producto"; Code[20])
         {
             TableRelation = Item;
 
             trigger OnValidate()
             begin
                 IF Item.GET("Cod. Producto") THEN
-                   "Item Description" := Item.Description;
+                    "Item Description" := Item.Description;
 
                 IF ProdEquivalente.GET("Cod. Producto") THEN
-                   "Cod. producto equivalente" := ProdEquivalente."Cod. Producto Anterior";
+                    "Cod. producto equivalente" := ProdEquivalente."Cod. Producto Anterior";
             end;
         }
-        field(3;"Nombre Promotor";Text[60])
+        field(3; "Nombre Promotor"; Text[60])
         {
         }
-        field(4;"Item Description";Text[100])
+        field(4; "Item Description"; Text[100])
         {
             Caption = 'Item Description';
         }
-        field(5;Quantity;Decimal)
+        field(5; Quantity; Decimal)
         {
             Caption = 'Quantity';
         }
-        field(6;"Cantidad camp. anterior";Decimal)
+        field(6; "Cantidad camp. anterior"; Decimal)
         {
         }
-        field(7;"Cod. producto equivalente";Code[20])
+        field(7; "Cod. producto equivalente"; Code[20])
         {
             TableRelation = Item;
         }
-        field(8;Adopcion;Code[1])
+        field(8; Adopcion; Code[1])
         {
-            ValuesAllowed = C;M;P;R;
+            ValuesAllowed = C;
+            M;
+            P;
+            R;
         }
-        field(9;"Adopcion anterior";Code[1])
+        field(9; "Adopcion anterior"; Code[1])
         {
         }
-        field(20;"Campa a";Code[4])
+        field(20; "Campa a"; Code[4])
         {
             TableRelation = Campaign;
         }
@@ -61,7 +64,7 @@ table 67070 "Historico Promotor - Ppto Vtas"
 
     keys
     {
-        key(Key1;"Campa a","Cod. Promotor","Cod. Producto")
+        key(Key1; "Campa a", "Cod. Promotor", "Cod. Producto")
         {
         }
     }

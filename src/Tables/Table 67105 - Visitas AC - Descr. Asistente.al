@@ -9,8 +9,8 @@ table 67105 "Visitas A/C - Descr. Asistente"
         field(2; Codigo; Code[20])
         {
             TableRelation = IF (Tipo = CONST(Nivel)) "Nivel Educativo APS".C digo
-                            ELSE IF (Tipo=CONST(Especialidad)) "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Especialidades))
-                            ELSE IF (Tipo=CONST(Grado)) "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grados));
+                            ELSE IF (Tipo=CONST(Especialidad)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Especialidades))
+                            ELSE IF (Tipo=CONST(Grado)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grados));
 
             trigger OnValidate()
             var

@@ -16,7 +16,7 @@ table 67075 "Hist. Docente - Aficiones"
         }
         field(3;"Cod. aficion";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Aficiones));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Aficiones));
 
             trigger OnValidate()
             begin

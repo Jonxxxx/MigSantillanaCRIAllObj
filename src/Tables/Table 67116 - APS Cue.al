@@ -38,12 +38,12 @@ table 67116 "APS Cue"
         }
         field(8;"Colegio - Adopciones";Integer)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE (Cod. Colegio=FIELD(Cod. Colegio)));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(9;"Colegio - Total";Integer)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE (Cod. Colegio=FIELD(Cod. Colegio)));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
     }

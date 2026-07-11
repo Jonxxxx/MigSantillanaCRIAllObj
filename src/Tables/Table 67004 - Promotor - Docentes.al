@@ -25,7 +25,7 @@ table 67004 "Promotor - Docentes"
         }
         field(5;"Nivel decision";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Nivel de decisi n));
 
             trigger OnValidate()
             begin
@@ -40,7 +40,7 @@ table 67004 "Promotor - Docentes"
         }
         field(6;"Cod. Cargo";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin

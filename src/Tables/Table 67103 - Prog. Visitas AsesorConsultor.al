@@ -20,7 +20,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(6; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(8; "No. asistentes"; Integer)
         {
@@ -49,7 +49,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         field(13; "Grupo Negocio"; Code[20])
         {
             Editable = false;
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
         }
         field(14; "Cod. promotor"; Code[20])
         {
@@ -88,7 +88,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(22;"Cod. Docente";Code[20])
         {
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE (Cod. Colegio=FIELD(Cod. Colegio));
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
 
             trigger OnLookup()
             var

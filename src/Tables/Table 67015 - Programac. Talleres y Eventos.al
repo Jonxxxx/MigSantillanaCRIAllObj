@@ -36,55 +36,54 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
 
             trigger OnValidate()
             begin
-                IF "Cod. Promotor" <> '' THEN
-                   BEGIN
+                IF "Cod. Promotor" <> '' THEN BEGIN
                     Prom.GET("Cod. Promotor");
-                    "Nombre Promotor":= Prom.Name;
-                   END;
+                    "Nombre Promotor" := Prom.Name;
+                END;
             end;
         }
-        field(5;"Description Tipo evento";Text[100])
+        field(5; "Description Tipo evento"; Text[100])
         {
-            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE (Codigo=FIELD(Tipo Evento)));
+            CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE(Codigo = FIELD(Tipo Evento)));
             FieldClass = FlowField;
         }
-        field(6;"Description Taller";Text[100])
+        field(6; "Description Taller"; Text[100])
         {
         }
-        field(7;"Nombre Colegio";Text[60])
+        field(7; "Nombre Colegio"; Text[60])
         {
         }
-        field(8;"Nombre Promotor";Text[60])
+        field(8; "Nombre Promotor"; Text[60])
         {
         }
-        field(9;"Tipo de Expositor";Option)
+        field(9; "Tipo de Expositor"; Option)
         {
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
-        field(10;Expositor;Code[20])
+        field(10; Expositor; Code[20])
         {
             TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
         }
-        field(11;"Nombre Expositor";Text[60])
+        field(11; "Nombre Expositor"; Text[60])
         {
         }
-        field(12;Avisado;Boolean)
+        field(12; Avisado; Boolean)
         {
         }
-        field(13;"Fecha inscripcion";Date)
+        field(13; "Fecha inscripcion"; Date)
         {
             Editable = false;
         }
-        field(14;"Fecha programacion";Date)
+        field(14; "Fecha programacion"; Date)
         {
         }
-        field(15;"Fecha de realizacion";Date)
+        field(15; "Fecha de realizacion"; Date)
         {
 
             trigger OnValidate()
@@ -92,51 +91,51 @@ table 67015 "Programac. Talleres y Eventos"
                 Err001: Label 'La fecha de realizaci n no puede ser menor que la fecha de programaci n.';
             begin
                 IF "Fecha programacion" <> 0D THEN
-                  IF "Fecha de realizacion" < "Fecha programacion" THEN
-                     ERROR(Err001);
+                    IF "Fecha de realizacion" < "Fecha programacion" THEN
+                        ERROR(Err001);
             end;
         }
-        field(16;"Asistentes esperados";Integer)
+        field(16; "Asistentes esperados"; Integer)
         {
             Caption = 'Expected Attendees';
         }
-        field(17;"Nro. De asistentes reales";Integer)
+        field(17; "Nro. De asistentes reales"; Integer)
         {
             Caption = 'Real Attendees';
             Editable = true;
             FieldClass = Normal;
         }
-        field(18;"Horas dictadas";Decimal)
+        field(18; "Horas dictadas"; Decimal)
         {
 
             trigger OnValidate()
             begin
                 //TESTFIELD("Hora de Inicio");
                 //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 60000 * 60);
-                "Horas Pedag gicas" := ROUND("Horas dictadas" * 60 / 40,1);
+                "Horas Pedag gicas" := ROUND("Horas dictadas" * 60 / 40, 1);
             end;
         }
-        field(19;"Horas Pedag gicas";Decimal)
+        field(19; "Horas Pedag gicas"; Decimal)
         {
             Editable = false;
         }
-        field(20;Observacion;Text[150])
+        field(20; Observacion; Text[150])
         {
         }
-        field(21;"Fecha Solicitud";Date)
+        field(21; "Fecha Solicitud"; Date)
         {
         }
-        field(22;Objetivo;Code[20])
+        field(22; Objetivo; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Objetivos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
         }
-        field(23;"Descripcion observacion";Text[100])
-        {
-        }
-        field(24;Secuencia;Integer)
+        field(23; "Descripcion observacion"; Text[100])
         {
         }
-        field(25;Estado;Option)
+        field(24; Secuencia; Integer)
+        {
+        }
+        field(25; Estado; Option)
         {
             Caption = 'Status';
             OptionCaption = ' ,Done,Cancelled';
@@ -144,12 +143,12 @@ table 67015 "Programac. Talleres y Eventos"
 
             trigger OnValidate()
             begin
-                CabPEvento.GET("Cod. Taller - Evento",Expositor,Secuencia);
+                CabPEvento.GET("Cod. Taller - Evento", Expositor, Secuencia);
                 IF (CabPEvento.Estado <> Estado) AND (CabPEvento.Estado > 0) THEN
-                   ERROR(STRSUBSTNO(Err001,FIELDCAPTION(Estado)));
+                    ERROR(STRSUBSTNO(Err001, FIELDCAPTION(Estado)));
             end;
         }
-        field(26;"Hora de Inicio";Time)
+        field(26; "Hora de Inicio"; Time)
         {
             Caption = 'Starting date';
 
@@ -160,7 +159,7 @@ table 67015 "Programac. Talleres y Eventos"
                 Horas;
             end;
         }
-        field(27;"Hora Final";Time)
+        field(27; "Hora Final"; Time)
         {
 
             trigger OnValidate()
@@ -168,41 +167,41 @@ table 67015 "Programac. Talleres y Eventos"
                 Horas;
             end;
         }
-        field(28;"No. Linea";Integer)
+        field(28; "No. Linea"; Integer)
         {
         }
-        field(29;"Fecha propuesta";Date)
+        field(29; "Fecha propuesta"; Date)
         {
         }
-        field(30;"Hora Inicio Propuesta";Time)
+        field(30; "Hora Inicio Propuesta"; Time)
         {
             Editable = false;
         }
-        field(31;"Hora Fin Propuesta";Time)
+        field(31; "Hora Fin Propuesta"; Time)
         {
             Editable = false;
         }
-        field(32;"Cod. Grado";Code[20])
+        field(32; "Cod. Grado"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE (Tipo registro=CONST(Grados));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Taller - Evento","Tipo Evento","Tipo de Expositor",Expositor,Secuencia,"No. Linea")
+        key(Key1; "Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor, Secuencia, "No. Linea")
         {
         }
-        key(Key2;"Cod. Colegio","Fecha inscripcion")
+        key(Key2; "Cod. Colegio", "Fecha inscripcion")
         {
         }
-        key(Key3;"Fecha programacion","Cod. Colegio","Hora de Inicio")
+        key(Key3; "Fecha programacion", "Cod. Colegio", "Hora de Inicio")
         {
         }
-        key(Key4;Expositor,"Fecha programacion")
+        key(Key4; Expositor, "Fecha programacion")
         {
         }
-        key(Key5;"Fecha programacion","Nombre Colegio","Hora de Inicio")
+        key(Key5; "Fecha programacion", "Nombre Colegio", "Hora de Inicio")
         {
         }
     }
@@ -218,43 +217,43 @@ table 67015 "Programac. Talleres y Eventos"
         rAsist2Record 67016;
     begin
         "Fecha inscripcion" := TODAY;
-        "Fecha Solicitud"   := TODAY;
+        "Fecha Solicitud" := TODAY;
 
-        rRec.SETRANGE(rRec."Cod. Taller - Evento","Cod. Taller - Evento");
-        rRec.SETRANGE(rRec."Tipo Evento","Tipo Evento");
-        rRec.SETRANGE(rRec."Tipo de Expositor","Tipo de Expositor");
-        rRec.SETRANGE(rRec.Expositor,Expositor);
-        rRec.SETRANGE(rRec.Secuencia,Secuencia);
+        rRec.SETRANGE(rRec."Cod. Taller - Evento", "Cod. Taller - Evento");
+        rRec.SETRANGE(rRec."Tipo Evento", "Tipo Evento");
+        rRec.SETRANGE(rRec."Tipo de Expositor", "Tipo de Expositor");
+        rRec.SETRANGE(rRec.Expositor, Expositor);
+        rRec.SETRANGE(rRec.Secuencia, Secuencia);
         IF rRec.FINDLAST THEN
-          "No. Linea" := rRec."No. Linea" + 1
+            "No. Linea" := rRec."No. Linea" + 1
         ELSE
-         "No. Linea" := 1;
+            "No. Linea" := 1;
 
 
         CabPEvento.RESET;
-        CabPEvento.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-        CabPEvento.SETRANGE(Expositor,Expositor);
+        CabPEvento.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+        CabPEvento.SETRANGE(Expositor, Expositor);
         IF CabPEvento.FINDLAST THEN
-           "Description Taller" := CabPEvento."Description Taller";
+            "Description Taller" := CabPEvento."Description Taller";
 
 
         IF "No. Linea" > 1 THEN BEGIN
-          //Si la anterior programacion ya tiene asistentes inscritos, los incluimos en la programacion actual
-          //Solo ocurrir  cuando se a ade una programaci n y ya se inscribieron a los asistentes.
-          rAsist.SETRANGE(rAsist."Cod. Taller - Evento", rRec."Cod. Taller - Evento");
-          rAsist.SETRANGE(rAsist."Cod. Expositor", rRec.Expositor);
-          rAsist.SETRANGE(rAsist.Secuencia,  rRec.Secuencia);
-          rAsist.SETRANGE(rAsist."Tipo de Expositor",  rRec."Tipo de Expositor");
-          rAsist.SETRANGE(rAsist."Tipo Evento",    rRec."Tipo Evento");
-          rAsist.SETRANGE("No Linea Programac.", rRec."No. Linea");
-          IF rAsist.FINDSET THEN
-            REPEAT
-              rAsist2 := rAsist;
-              rAsist2."No Linea Programac." := "No. Linea";
-              rAsist2.Confirmado            := FALSE;
-              rAsist2.Asistio               := FALSE;
-              rAsist2.INSERT;
-            UNTIL rAsist.NEXT=0;
+            //Si la anterior programacion ya tiene asistentes inscritos, los incluimos en la programacion actual
+            //Solo ocurrir  cuando se a ade una programaci n y ya se inscribieron a los asistentes.
+            rAsist.SETRANGE(rAsist."Cod. Taller - Evento", rRec."Cod. Taller - Evento");
+            rAsist.SETRANGE(rAsist."Cod. Expositor", rRec.Expositor);
+            rAsist.SETRANGE(rAsist.Secuencia, rRec.Secuencia);
+            rAsist.SETRANGE(rAsist."Tipo de Expositor", rRec."Tipo de Expositor");
+            rAsist.SETRANGE(rAsist."Tipo Evento", rRec."Tipo Evento");
+            rAsist.SETRANGE("No Linea Programac.", rRec."No. Linea");
+            IF rAsist.FINDSET THEN
+                REPEAT
+                    rAsist2 := rAsist;
+                    rAsist2."No Linea Programac." := "No. Linea";
+                    rAsist2.Confirmado := FALSE;
+                    rAsist2.Asistio := FALSE;
+                    rAsist2.INSERT;
+                UNTIL rAsist.NEXT = 0;
         END;
     end;
 
@@ -271,13 +270,13 @@ table 67015 "Programac. Talleres y Eventos"
     begin
 
         IF "Hora de Inicio" > "Hora Final" THEN
-         IF ("Hora de Inicio" <> 0T) AND ("Hora Final" <> 0T) THEN
-          ERROR(Err001);
+            IF ("Hora de Inicio" <> 0T) AND ("Hora Final" <> 0T) THEN
+                ERROR(Err001);
 
         IF ("Hora de Inicio" <> 0T) AND ("Hora Final" <> 0T) THEN
-          VALIDATE("Horas dictadas", ROUND(("Hora Final" - "Hora de Inicio") / 3600000,0.01))
+            VALIDATE("Horas dictadas", ROUND(("Hora Final" - "Hora de Inicio") / 3600000, 0.01))
         ELSE
-          VALIDATE("Horas dictadas",0);
+            VALIDATE("Horas dictadas", 0);
     end;
 }
 

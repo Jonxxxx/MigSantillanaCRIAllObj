@@ -33,110 +33,106 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(5; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
 
             trigger OnValidate()
             begin
-                IF "Cod. Promotor" <> '' THEN
-                   BEGIN
+                IF "Cod. Promotor" <> '' THEN BEGIN
                     Prom.GET("Cod. Promotor");
-                    "Nombre Promotor":= Prom.Name;
-                   END;
+                    "Nombre Promotor" := Prom.Name;
+                END;
             end;
         }
-        field(6;"Description Tipo evento";Text[100])
+        field(6; "Description Tipo evento"; Text[100])
         {
         }
-        field(7;"Description Taller";Text[100])
+        field(7; "Description Taller"; Text[100])
         {
         }
-        field(8;"Nombre Colegio";Text[100])
+        field(8; "Nombre Colegio"; Text[100])
         {
         }
-        field(9;"Nombre Promotor";Text[60])
+        field(9; "Nombre Promotor"; Text[60])
         {
         }
-        field(10;Secuencia;Integer)
+        field(10; Secuencia; Integer)
         {
         }
-        field(11;"Cod. Expositor";Code[20])
+        field(11; "Cod. Expositor"; Code[20])
         {
             TableRelation = IF (Tipo de Expositor=CONST(Docente)) Docentes WHERE (Expositor=CONST(true))
                             ELSE IF (Tipo de Expositor=CONST(Proveedor)) Vendor;
 
             trigger OnValidate()
             begin
-                IF "Tipo de Expositor" = 0 THEN
-                   BEGIN
+                IF "Tipo de Expositor" = 0 THEN BEGIN
                     Expos.GET("Cod. Expositor");
                     "Nombre Expositor" := Expos."Full Name";
-                   END
-                ELSE
-                   BEGIN
+                END
+                ELSE BEGIN
                     Vend.GET("Cod. Expositor");
                     "Nombre Expositor" := Vend.Name;
-                   END
+                END
             end;
         }
-        field(12;"Nombre Expositor";Text[60])
+        field(12; "Nombre Expositor"; Text[60])
         {
         }
-        field(13;Confirmado;Boolean)
+        field(13; Confirmado; Boolean)
         {
         }
-        field(14;"Fecha inscripcion";Date)
+        field(14; "Fecha inscripcion"; Date)
         {
         }
-        field(15;"Fecha del Evento";Date)
+        field(15; "Fecha del Evento"; Date)
         {
         }
-        field(16;"Fecha de realizacion";Date)
+        field(16; "Fecha de realizacion"; Date)
         {
         }
-        field(17;"Cod. Docente";Code[20])
+        field(17; "Cod. Docente"; Code[20])
         {
             TableRelation = Docentes;
 
             trigger OnValidate()
             begin
-                IF "Cod. Docente" <> '' THEN
-                   BEGIN
+                IF "Cod. Docente" <> '' THEN BEGIN
                     Prof.GET("Cod. Docente");
-                    "Nombre Docente":= Prof."Full Name";
+                    "Nombre Docente" := Prof."Full Name";
                     "Document ID" := Prof."Document ID";
                     Inscrito := TRUE;
-                   END;
+                END;
             end;
         }
-        field(18;"Nombre Docente";Text[60])
+        field(18; "Nombre Docente"; Text[60])
         {
         }
-        field(19;Asistio;Boolean)
+        field(19; Asistio; Boolean)
         {
             Caption = 'Attended';
 
             trigger OnValidate()
             begin
                 IF (NOT Confirmado) AND (Asistio) THEN
-                   Confirmado := Asistio;
+                    Confirmado := Asistio;
 
                 IF (Asistio) AND ("No. Solicitud" <> '') THEN BEGIN
-                  Inscrito := Asistio;
-                  Confirmado := Asistio;
+                    Inscrito := Asistio;
+                    Confirmado := Asistio;
                 END;
             end;
         }
-        field(20;"Tipo de Expositor";Option)
+        field(20; "Tipo de Expositor"; Option)
         {
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
-        field(21;Inscrito;Boolean)
+        field(21; Inscrito; Boolean)
         {
         }
-        field(22;"Fecha programacion";Date)
+        field(22; "Fecha programacion"; Date)
         {
-            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE (Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
+            CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE(Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
                                                                                              Tipo Evento=FIELD(Tipo Evento),
                                                                                              Tipo de Expositor=FIELD(Tipo de Expositor),
                                                                                              Secuencia=FIELD(Secuencia),

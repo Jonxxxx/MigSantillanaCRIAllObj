@@ -17,54 +17,53 @@ table 67030 "Colegio - Atenciones"
         }
         field(2; "Cod. Atencion"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE(Tipo registro=CONST(Atenciones));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Atenciones));
         }
         field(3; "Cod. promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser WHERE (Tipo=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE(Tipo = CONST(Vendedor));
 
             trigger OnValidate()
             begin
-                IF "Cod. promotor" <> '' THEN
-                   BEGIN
+                IF "Cod. promotor" <> '' THEN BEGIN
                     Com.GET("Cod. promotor");
                     "Nombre Comercial" := Com.Name;
-                   END;
+                END;
             end;
         }
-        field(4;"Cod. Delegacion";Code[20])
+        field(4; "Cod. Delegacion"; Code[20])
         {
         }
-        field(5;"Cod. Nivel";Code[20])
+        field(5; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Nivel Educativo";
         }
-        field(6;"Cod. Turno";Code[20])
+        field(6; "Cod. Turno"; Code[20])
         {
         }
-        field(7;"Description Atencion";Text[100])
+        field(7; "Description Atencion"; Text[100])
         {
         }
-        field(8;"Nombre Colegio";Text[60])
+        field(8; "Nombre Colegio"; Text[60])
         {
         }
-        field(9;"Nombre Comercial";Text[60])
+        field(9; "Nombre Comercial"; Text[60])
         {
         }
-        field(10;"Fecha Entrega";Date)
+        field(10; "Fecha Entrega"; Date)
         {
         }
-        field(11;Cantidad;Integer)
+        field(11; Cantidad; Integer)
         {
         }
-        field(12;"Costo Unitario";Decimal)
+        field(12; "Costo Unitario"; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Atencion")
+        key(Key1; "Cod. Colegio", "Cod. Atencion")
         {
         }
     }

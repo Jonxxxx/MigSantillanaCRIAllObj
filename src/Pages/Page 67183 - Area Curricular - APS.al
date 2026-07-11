@@ -2,7 +2,7 @@ page 67183 "Area Curricular - APS"
 {
     PageType = List;
     SourceTable = Table67002;
-    SourceTableView = WHERE(Tipo registro=CONST(29));
+    SourceTableView = WHERE("Tipo registro" = CONST(29));
 
     layout
     {
@@ -10,10 +10,10 @@ page 67183 "Area Curricular - APS"
         {
             repeater(Group)
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

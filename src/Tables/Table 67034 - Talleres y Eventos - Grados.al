@@ -47,18 +47,18 @@ table 67034 "Talleres y Eventos - Grados"
         }
         field(3; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE(Contact No.=FIELD(Cod. Colegio));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(4;"Cod. Nivel";Code[20])
+        field(4; "Cod. Nivel"; Code[20])
         {
-            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   Cod. Local=FIELD(Cod. Local));
         }
         field(5;"Cod. Grado";Code[60])
         {
-            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE (Cod. Colegio=FIELD(Cod. Colegio),
+            TableRelation = "Colegio - Grados"."Cod. Grado" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
                                                                    Cod. Local=FIELD(Cod. Local),
-                                                                   Cod. Nivel=FIELD(Cod. Nivel));
+                                                                   Cod. Nivel=FIELD("Cod. Nivel"));
         }
         field(8;"Nombre Colegio";Text[60])
         {
