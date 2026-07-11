@@ -4,7 +4,7 @@ page 67022 Zonas
     Caption = 'Zone';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Zonas));
     UsageCategory = Administration;
 

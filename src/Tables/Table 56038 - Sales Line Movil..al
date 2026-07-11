@@ -1072,11 +1072,11 @@ table 56038 "Sales Line Movil."
         }
         field(50001; "Cod. Edici n"; Code[20])
         {
-            TableRelation = Table50131;
+            TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            TableRelation = Table50132;
+            TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1090,7 +1090,7 @@ table 56038 "Sales Line Movil."
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            TableRelation = Table50133;
+            TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {

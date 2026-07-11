@@ -4,7 +4,7 @@ page 67032 "Tipo de Educacion"
     Caption = 'Education type';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Tipo de educacion"));
     UsageCategory = Administration;
 

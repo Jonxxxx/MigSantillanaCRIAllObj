@@ -3,7 +3,7 @@ page 67079 "Promotores - Lista de Colegios"
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
     SourceTable = 67006;
-    SourceTableView = SORTING(Nombre Colegio);
+    SourceTableView = SORTING("Nombre Colegio");
     UsageCategory = Lists;
 
     layout

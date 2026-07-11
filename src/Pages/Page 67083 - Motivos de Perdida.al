@@ -4,7 +4,7 @@ page 67083 "Motivos de Perdida"
     Caption = 'Cause of loosing';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Motivos Perdida"));
     UsageCategory = Administration;
 

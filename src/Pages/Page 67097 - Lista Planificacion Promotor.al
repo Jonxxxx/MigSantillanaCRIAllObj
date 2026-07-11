@@ -8,7 +8,7 @@ page 67097 "Lista Planificacion Promotor"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 67023;
-    SourceTableView = SORTING(Cod. Promotor, Semana)
+    SourceTableView = SORTING("Cod. Promotor", Semana)
                       ORDER(Descending);
     UsageCategory = Lists;
 

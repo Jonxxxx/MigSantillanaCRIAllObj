@@ -4,7 +4,7 @@ page 67060 Especialidades
     Caption = 'Specialties';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Especialidades));
     UsageCategory = Administration;
 

@@ -743,11 +743,11 @@ table 56037 "Sales Header Movil."
         field(5055; "Opportunity No."; Code[20])
         {
             Caption = 'Opportunity No.';
-            TableRelation = IF (Document Type=FILTER(<>Order)) Opportunity."No." WHERE ("Contact No."=FIELD("Sell-to Contact No."),
-                                                                                      "Closed"=CONST(false))
-                                                                                      ELSE IF ("Document Type"=CONST(Order)) Opportunity."No." WHERE ("Contact No."=FIELD("Sell-to Contact No."),
-                                                                                                                                                  "Sales Document No."=FIELD("No."),
-                                                                                                                                                  "Sales Document Type"=CONST(Order));
+            TableRelation = IF ("Document Type" = FILTER(<> Order)) Opportunity."No." WHERE("Contact No." = FIELD("Sell-to Contact No."),
+                                                                                      "Closed" = CONST(false))
+            ELSE IF ("Document Type" = CONST(Order)) Opportunity."No." WHERE("Contact No." = FIELD("Sell-to Contact No."),
+                                                                                                                                                  "Sales Document No." = FIELD("No."),
+                                                                                                                                                  "Sales Document Type" = CONST(Order));
 
             trigger OnValidate()
             var
@@ -756,367 +756,367 @@ table 56037 "Sales Header Movil."
             begin
             end;
         }
-        field(5700;"Responsibility Center";Code[10])
+        field(5700; "Responsibility Center"; Code[10])
         {
             Caption = 'Responsibility Center';
             TableRelation = "Responsibility Center";
         }
-        field(5750;"Shipping Advice";Option)
+        field(5750; "Shipping Advice"; Option)
         {
             Caption = 'Shipping Advice';
             OptionCaption = 'Partial,Complete';
             OptionMembers = Partial,Complete;
         }
-        field(5752;"Completely Shipped";Boolean)
+        field(5752; "Completely Shipped"; Boolean)
         {
-            CalcFormula = Min("Sales Line"."Completely Shipped" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                       "Document No."=FIELD("No."),
-                                                                       "Type"=FILTER(<>' '),
-                                                                       "Location Code"=FIELD("Location Filter")));
+            CalcFormula = Min("Sales Line"."Completely Shipped" WHERE("Document Type" = FIELD("Document Type"),
+                                                                       "Document No." = FIELD("No."),
+                                                                       "Type" = FILTER(<> ' '),
+                                                                       "Location Code" = FIELD("Location Filter")));
             Caption = 'Completely Shipped';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5753;"Posting from Whse. Ref.";Integer)
+        field(5753; "Posting from Whse. Ref."; Integer)
         {
             Caption = 'Posting from Whse. Ref.';
         }
-        field(5754;"Location Filter";Code[10])
+        field(5754; "Location Filter"; Code[10])
         {
             Caption = 'Location Filter';
             FieldClass = FlowFilter;
             TableRelation = Location;
         }
-        field(5790;"Requested Delivery Date";Date)
+        field(5790; "Requested Delivery Date"; Date)
         {
             Caption = 'Requested Delivery Date';
         }
-        field(5791;"Promised Delivery Date";Date)
+        field(5791; "Promised Delivery Date"; Date)
         {
             Caption = 'Promised Delivery Date';
         }
-        field(5792;"Shipping Time";DateFormula)
+        field(5792; "Shipping Time"; DateFormula)
         {
             Caption = 'Shipping Time';
         }
-        field(5793;"Outbound Whse. Handling Time";DateFormula)
+        field(5793; "Outbound Whse. Handling Time"; DateFormula)
         {
             Caption = 'Outbound Whse. Handling Time';
         }
-        field(5794;"Shipping Agent Service Code";Code[10])
+        field(5794; "Shipping Agent Service Code"; Code[10])
         {
             Caption = 'Shipping Agent Service Code';
-            TableRelation = "Shipping Agent Services".Code WHERE ("Shipping Agent Code"=FIELD("Shipping Agent Code"));
+            TableRelation = "Shipping Agent Services".Code WHERE("Shipping Agent Code" = FIELD("Shipping Agent Code"));
         }
-        field(5795;"Late Order Shipping";Boolean)
+        field(5795; "Late Order Shipping"; Boolean)
         {
-            CalcFormula = Exist("Sales Line" WHERE ("Document Type"=FIELD("Document Type"),
-                                                    "Sell-to Customer No."=FIELD("Sell-to Customer No."),
-                                                    "Document No."=FIELD("No."),
-                                                    "Shipment Date"=FIELD("Date Filter"),
-                                                    "Outstanding Quantity"=FILTER(<>0)));
+            CalcFormula = Exist("Sales Line" WHERE("Document Type" = FIELD("Document Type"),
+                                                    "Sell-to Customer No." = FIELD("Sell-to Customer No."),
+                                                    "Document No." = FIELD("No."),
+                                                    "Shipment Date" = FIELD("Date Filter"),
+                                                    "Outstanding Quantity" = FILTER(<> 0)));
             Caption = 'Late Order Shipping';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5796;"Date Filter";Date)
+        field(5796; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(5800;Receive;Boolean)
+        field(5800; Receive; Boolean)
         {
             Caption = 'Receive';
         }
-        field(5801;"Return Receipt No.";Code[20])
+        field(5801; "Return Receipt No."; Code[20])
         {
             Caption = 'Return Receipt No.';
         }
-        field(5802;"Return Receipt No. Series";Code[10])
+        field(5802; "Return Receipt No. Series"; Code[10])
         {
             Caption = 'Return Receipt No. Series';
             TableRelation = "No. Series";
         }
-        field(5803;"Last Return Receipt No.";Code[20])
+        field(5803; "Last Return Receipt No."; Code[20])
         {
             Caption = 'Last Return Receipt No.';
             Editable = false;
             TableRelation = "Return Receipt Header";
         }
-        field(7001;"Allow Line Disc.";Boolean)
+        field(7001; "Allow Line Disc."; Boolean)
         {
             Caption = 'Allow Line Disc.';
         }
-        field(7200;"Get Shipment Used";Boolean)
+        field(7200; "Get Shipment Used"; Boolean)
         {
             Caption = 'Get Shipment Used';
             Editable = false;
         }
-        field(8725;Signature;BLOB)
+        field(8725; Signature; BLOB)
         {
             Caption = 'Signature';
             SubType = Bitmap;
         }
-        field(9000;"Assigned User ID";Code[20])
+        field(9000; "Assigned User ID"; Code[20])
         {
             Caption = 'Assigned User ID';
             TableRelation = "User Setup";
         }
-        field(10005;"Ship-to UPS Zone";Code[2])
+        field(10005; "Ship-to UPS Zone"; Code[2])
         {
             Caption = 'Ship-to UPS Zone';
         }
-        field(10009;"Outstanding Amount ($)";Decimal)
+        field(10009; "Outstanding Amount ($)"; Decimal)
         {
-            CalcFormula = Sum("Sales Line"."Outstanding Amount (LCY)" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                             "Document No."=FIELD("No.")));
+            CalcFormula = Sum("Sales Line"."Outstanding Amount (LCY)" WHERE("Document Type" = FIELD("Document Type"),
+                                                                             "Document No." = FIELD("No.")));
             Caption = 'Outstanding Amount ($)';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(10015;"Tax Exemption No.";Text[30])
+        field(10015; "Tax Exemption No."; Text[30])
         {
             Caption = 'Tax Exemption No.';
         }
-        field(10018;"STE Transaction ID";Text[20])
+        field(10018; "STE Transaction ID"; Text[20])
         {
             Caption = 'STE Transaction ID';
             Editable = false;
         }
-        field(12600;"Prepmt. Include Tax";Boolean)
+        field(12600; "Prepmt. Include Tax"; Boolean)
         {
             Caption = 'Prepmt. Include Tax';
         }
-        field(50000;"Estado distribucion";Option)
+        field(50000; "Estado distribucion"; Option)
         {
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho",Entregado;
         }
-        field(50008;"No. copias Picking";Integer)
+        field(50008; "No. copias Picking"; Integer)
         {
             Caption = 'No. Printed Picking';
             Editable = false;
         }
-        field(50009;"Nota de Credito";Boolean)
+        field(50009; "Nota de Credito"; Boolean)
         {
         }
-        field(50010;"Tipo de Venta";Option)
+        field(50010; "Tipo de Venta"; Option)
         {
             OptionCaption = 'Invoice,Consignation,Sample,Donations';
             OptionMembers = Factura,Consignacion,Muestras,Donaciones;
         }
-        field(50011;"No. Bultos";Integer)
+        field(50011; "No. Bultos"; Integer)
         {
         }
-        field(50012;"Cantidad para devolucion";Decimal)
+        field(50012; "Cantidad para devolucion"; Decimal)
         {
         }
-        field(50013;"Cantidad en lineas";Decimal)
+        field(50013; "Cantidad en lineas"; Decimal)
         {
-            CalcFormula = Sum("Sales Line".Quantity WHERE ("Document Type"=FIELD("Document Type"),
-                                                           "Document No."=FIELD("No."),
-                                                           "Type"=FILTER(Item)));
+            CalcFormula = Sum("Sales Line".Quantity WHERE("Document Type" = FIELD("Document Type"),
+                                                           "Document No." = FIELD("No."),
+                                                           "Type" = FILTER(Item)));
             FieldClass = FlowField;
         }
-        field(50014;"PO Box address";Text[50])
+        field(50014; "PO Box address"; Text[50])
         {
             Caption = 'PO Box address';
         }
-        field(53000;"ID Cajero";Code[20])
+        field(53000; "ID Cajero"; Code[20])
         {
             Caption = 'Cashier ID';
         }
-        field(53001;"Hora creacion";Time)
+        field(53001; "Hora creacion"; Time)
         {
             Caption = 'Creation time';
         }
-        field(53002;"Tipo pedido";Option)
+        field(53002; "Tipo pedido"; Option)
         {
             Caption = 'Order type';
             OptionCaption = 'Order Type';
             OptionMembers = " ",TPV,Fact_comprimida;
         }
-        field(53003;TPV;Code[20])
+        field(53003; TPV; Code[20])
         {
         }
-        field(53004;"Factura comprimida";Code[20])
+        field(53004; "Factura comprimida"; Code[20])
         {
             Caption = 'Compressed invoice';
         }
-        field(53005;"Importe ITBIS Incl.";Decimal)
+        field(53005; "Importe ITBIS Incl."; Decimal)
         {
-            CalcFormula = Sum("Formas de Pago".Field30 WHERE ("Field1"=FIELD("Document Type"),
-                                                              "Field3"=FIELD("No.")));
+            CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
+                                                              "Field3" = FIELD("No.")));
             FieldClass = FlowField;
         }
-        field(53006;"Venta a credito";Boolean)
+        field(53006; "Venta a credito"; Boolean)
         {
         }
-        field(53007;"Importe a liquidar";Decimal)
+        field(53007; "Importe a liquidar"; Decimal)
         {
         }
-        field(53008;Tienda;Code[20])
+        field(53008; Tienda; Code[20])
         {
             TableRelation = "Bancos tienda";
         }
-        field(53009;"Factura en Historico";Boolean)
+        field(53009; "Factura en Historico"; Boolean)
         {
-            CalcFormula = Exist("Sales Invoice Header" WHERE ("No."=FIELD("Posting No.")));
+            CalcFormula = Exist("Sales Invoice Header" WHERE("No." = FIELD("Posting No.")));
             Caption = 'Invoice Posted';
             FieldClass = FlowField;
         }
-        field(56000;"Pedido Consignacion";Boolean)
+        field(56000; "Pedido Consignacion"; Boolean)
         {
         }
-        field(56001;"Collector Code";Code[10])
+        field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            TableRelation = "Salesperson/Purchaser" WHERE ("Collector"=CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
-        field(56002;"Pre pedido";Boolean)
+        field(56002; "Pre pedido"; Boolean)
         {
             Caption = 'Pre Order';
         }
-        field(56003;"Devolucion Consignacion";Boolean)
+        field(56003; "Devolucion Consignacion"; Boolean)
         {
         }
-        field(56004;"Cod. Cupon";Code[20])
+        field(56004; "Cod. Cupon"; Code[20])
         {
             Caption = 'Coupon Code';
         }
-        field(56005;"Siguiente No.";Code[20])
+        field(56005; "Siguiente No."; Code[20])
         {
-            CalcFormula = Lookup("No. Series Line"."Last No. Used" WHERE ("Series Code"=FIELD("No. Serie NCF Facturas")));
+            CalcFormula = Lookup("No. Series Line"."Last No. Used" WHERE("Series Code" = FIELD("No. Serie NCF Facturas")));
             FieldClass = FlowField;
         }
-        field(56006;"Cod. Colegio";Code[20])
+        field(56006; "Cod. Colegio"; Code[20])
         {
             Caption = 'School Code';
-            TableRelation = Contact WHERE ("Type"=FILTER(Company));
+            TableRelation = Contact WHERE("Type" = FILTER(Company));
         }
-        field(56007;"Nombre Colegio";Text[40])
+        field(56007; "Nombre Colegio"; Text[40])
         {
             Caption = 'School Name';
         }
-        field(56008;"Re facturacion";Boolean)
+        field(56008; "Re facturacion"; Boolean)
         {
         }
-        field(56010;CAE;Text[160])
-        {
-            Description = 'FEG_1.0';
-        }
-        field(56011;"Respuesta CAE";Text[100])
+        field(56010; CAE; Text[160])
         {
             Description = 'FEG_1.0';
         }
-        field(56012;pIdSat;Text[50])
+        field(56011; "Respuesta CAE"; Text[100])
         {
             Description = 'FEG_1.0';
         }
-        field(56013;"No. Resolucion";Code[30])
+        field(56012; pIdSat; Text[50])
+        {
+            Description = 'FEG_1.0';
+        }
+        field(56013; "No. Resolucion"; Code[30])
         {
             Caption = 'Resolution No.';
             Description = 'FEG_1.0';
         }
-        field(56014;"Fecha Resolucion";Date)
+        field(56014; "Fecha Resolucion"; Date)
         {
             Caption = 'Resolution Date';
             Description = 'FEG_1.0';
         }
-        field(56015;"Serie Desde";Code[20])
+        field(56015; "Serie Desde"; Code[20])
         {
             Caption = 'Series From';
             Description = 'FEG_1.0';
         }
-        field(56016;"Serie hasta";Code[20])
+        field(56016; "Serie hasta"; Code[20])
         {
             Caption = 'Serie To';
             Description = 'FEG_1.0';
         }
-        field(56017;"Serie Resolucion";Code[20])
+        field(56017; "Serie Resolucion"; Code[20])
         {
             Caption = 'Resolution Serie';
             Description = 'FEG_1.0';
         }
-        field(56018;CAEC;Text[160])
+        field(56018; CAEC; Text[160])
         {
             Description = 'FEG_1.0';
         }
-        field(56020;"No aplica Derechos de Autor";Boolean)
+        field(56020; "No aplica Derechos de Autor"; Boolean)
         {
             Caption = 'Apply Author Copyright';
         }
-        field(56021;Promocion;Boolean)
+        field(56021; Promocion; Boolean)
         {
             Caption = 'Promotion';
         }
-        field(34003001;"No. Serie NCF Facturas";Code[10])
+        field(34003001; "No. Serie NCF Facturas"; Code[10])
         {
             Caption = 'Invoice FDN Serial No.';
             TableRelation = "No. Series";
         }
-        field(34003002;"No. Comprobante Fiscal";Code[30])
+        field(34003002; "No. Comprobante Fiscal"; Code[30])
         {
             Caption = 'Fiscal Document No.';
         }
-        field(34003003;"No. Comprobante Fiscal Rel.";Code[30])
+        field(34003003; "No. Comprobante Fiscal Rel."; Code[30])
         {
             Caption = 'Related FDN';
         }
-        field(34003004;"Razon anulacion NCF";Code[20])
+        field(34003004; "Razon anulacion NCF"; Code[20])
         {
             Caption = 'Reason to void FDN';
             TableRelation = "Razones Anulacion NCF";
         }
-        field(34003005;"No. Serie NCF Abonos";Code[10])
+        field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
             Caption = 'Credit Memo NCF Serial No.';
             TableRelation = "No. Series";
         }
-        field(34003006;"Cod. Clasificacion Gastos";Code[2])
+        field(34003006; "Cod. Clasificacion Gastos"; Code[2])
         {
             Caption = 'Expense Clasification Code';
         }
-        field(99008500;"Date Received";Date)
+        field(99008500; "Date Received"; Date)
         {
             Caption = 'Date Received';
         }
-        field(99008501;"Time Received";Time)
+        field(99008501; "Time Received"; Time)
         {
             Caption = 'Time Received';
         }
-        field(99008502;"BizTalk Request for Sales Qte.";Boolean)
+        field(99008502; "BizTalk Request for Sales Qte."; Boolean)
         {
             Caption = 'BizTalk Request for Sales Qte.';
         }
-        field(99008503;"BizTalk Sales Order";Boolean)
+        field(99008503; "BizTalk Sales Order"; Boolean)
         {
             Caption = 'BizTalk Sales Order';
         }
-        field(99008509;"Date Sent";Date)
+        field(99008509; "Date Sent"; Date)
         {
             Caption = 'Date Sent';
         }
-        field(99008510;"Time Sent";Time)
+        field(99008510; "Time Sent"; Time)
         {
             Caption = 'Time Sent';
         }
-        field(99008513;"BizTalk Sales Quote";Boolean)
+        field(99008513; "BizTalk Sales Quote"; Boolean)
         {
             Caption = 'BizTalk Sales Quote';
         }
-        field(99008514;"BizTalk Sales Order Cnfmn.";Boolean)
+        field(99008514; "BizTalk Sales Order Cnfmn."; Boolean)
         {
             Caption = 'BizTalk Sales Order Cnfmn.';
         }
-        field(99008518;"Customer Quote No.";Code[20])
+        field(99008518; "Customer Quote No."; Code[20])
         {
             Caption = 'Customer Quote No.';
         }
-        field(99008519;"Customer Order No.";Code[20])
+        field(99008519; "Customer Order No."; Code[20])
         {
             Caption = 'Customer Order No.';
         }
-        field(99008521;"BizTalk Document Sent";Boolean)
+        field(99008521; "BizTalk Document Sent"; Boolean)
         {
             Caption = 'BizTalk Document Sent';
         }
@@ -1124,46 +1124,46 @@ table 56037 "Sales Header Movil."
 
     keys
     {
-        key(Key1;"Document Type","No.")
+        key(Key1; "Document Type", "No.")
         {
         }
-        key(Key2;"No.","Document Type")
+        key(Key2; "No.", "Document Type")
         {
         }
-        key(Key3;"Document Type","Sell-to Customer No.","No.")
+        key(Key3; "Document Type", "Sell-to Customer No.", "No.")
         {
         }
-        key(Key4;"Document Type","Combine Shipments","Bill-to Customer No.","Currency Code")
+        key(Key4; "Document Type", "Combine Shipments", "Bill-to Customer No.", "Currency Code")
         {
         }
-        key(Key5;"Sell-to Customer No.","External Document No.")
+        key(Key5; "Sell-to Customer No.", "External Document No.")
         {
         }
-        key(Key6;"Document Type","Sell-to Contact No.")
+        key(Key6; "Document Type", "Sell-to Contact No.")
         {
         }
-        key(Key7;"Bill-to Contact No.")
+        key(Key7; "Bill-to Contact No.")
         {
         }
-        key(Key8;"ID Cajero","Tipo pedido")
+        key(Key8; "ID Cajero", "Tipo pedido")
         {
         }
-        key(Key9;"External Document No.")
+        key(Key9; "External Document No.")
         {
         }
-        key(Key10;"Document Type","Sell-to Customer No.",Status)
+        key(Key10; "Document Type", "Sell-to Customer No.", Status)
         {
         }
-        key(Key11;"Posting Date")
+        key(Key11; "Posting Date")
         {
         }
-        key(Key12;"Requested Delivery Date")
+        key(Key12; "Requested Delivery Date")
         {
         }
-        key(Key13;"Promised Delivery Date")
+        key(Key13; "Promised Delivery Date")
         {
         }
-        key(Key14;"Shipment Date")
+        key(Key14; "Shipment Date")
         {
         }
     }

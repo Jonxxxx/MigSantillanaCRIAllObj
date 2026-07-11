@@ -4,7 +4,7 @@ page 67013 Materiales
     Caption = 'Materials';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Materiales));
     UsageCategory = Administration;
 

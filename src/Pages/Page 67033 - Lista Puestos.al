@@ -4,7 +4,7 @@ page 67033 "Lista Puestos"
     Caption = 'Jobs';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Puestos de trabajo"));
     UsageCategory = Administration;
 

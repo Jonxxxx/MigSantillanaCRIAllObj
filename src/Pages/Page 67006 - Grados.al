@@ -4,7 +4,7 @@ page 67006 Grados
     Caption = 'Grades';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Grados));
     UsageCategory = Administration;
 

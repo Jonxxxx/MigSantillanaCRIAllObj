@@ -20,7 +20,7 @@ table 67115 "Hist. Textos Principales"
 
             trigger OnLookup()
             var
-                GpoNegocio: Page67093;
+                GpoNegocio: Page 67093;
             begin
             end;
         }

@@ -7,7 +7,7 @@ page 67098 "Lista Planificacion Ejecucion"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 67023;
-    SourceTableView = SORTING(Cod. Promotor, Semana)
+    SourceTableView = SORTING("Cod. Promotor", Semana)
                       ORDER(Descending)
                       WHERE("Estado" = FILTER(> ' '));
 

@@ -4,7 +4,7 @@ page 75010 "Conf. Campos Relacionados"
     Caption = 'Configuración Campos Relacionados';
     PageType = List;
     SourceTable = 75010;
-    SourceTableView = SORTING(Id Fld Origen, Valor Origen);
+    SourceTableView = SORTING("Id Fld Origen", Valor Origen);
     UsageCategory = Administration;
 
     layout

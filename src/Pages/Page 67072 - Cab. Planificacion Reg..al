@@ -4,7 +4,7 @@ page 67072 "Cab. Planificacion Reg."
     Editable = false;
     PageType = Card;
     SourceTable = 67023;
-    SourceTableView = SORTING(Cod. Promotor, Semana)
+    SourceTableView = SORTING("Cod. Promotor", Semana)
                       WHERE("Estado" = FILTER(> ' '));
 
     layout

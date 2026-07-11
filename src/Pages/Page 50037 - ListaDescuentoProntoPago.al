@@ -10,7 +10,7 @@ page 50037 ListaDescuentoProntoPago
     PageType = List;
     Permissions = TableData 21 = r;
     SourceTable = 21;
-    SourceTableView = SORTING(Closed by Entry No.)
+    SourceTableView = SORTING("Closed by Entry No.")
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),
                             Pmt. Disc. Given (LCY)=FILTER(>0),

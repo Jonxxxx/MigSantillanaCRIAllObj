@@ -5,7 +5,7 @@ page 67090 "Lista Solicitudes T&E"
     Editable = false;
     PageType = List;
     SourceTable = 67055;
-    SourceTableView = SORTING(Fecha Propuesta);
+    SourceTableView = SORTING("Fecha Propuesta");
     UsageCategory = Lists;
 
     layout

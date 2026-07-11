@@ -389,7 +389,7 @@ table 80007 "Tmp Purch. Cr. Memo Hdr."
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            TableRelation = Table2000000002;
+            TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
 

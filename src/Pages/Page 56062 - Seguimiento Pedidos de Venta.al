@@ -8,7 +8,7 @@ page 56062 "Seguimiento Pedidos de Venta"
     Editable = false;
     PageType = List;
     SourceTable = 36;
-    SourceTableView = SORTING(Document Type, No.)
+    SourceTableView = SORTING("Document Type", No.)
                       ORDER(Ascending)
                       WHERE("Document Type" = FILTER(Order));
 

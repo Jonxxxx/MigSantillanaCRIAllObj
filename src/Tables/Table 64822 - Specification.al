@@ -110,7 +110,7 @@ table 64822 Specification
         field(48; "Dest. Table No."; Integer)
         {
             TableRelation = IF (Dest.Design=FILTER('')) AllObj."Object ID" WHERE ("Object Type"=CONST(Table))
-                            ELSE IF (Dest. Design=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Dest. Design"));
+                            ELSE IF ("Dest. Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Dest. Design"));
         }
         field(49;"Dest. Table Name";Text[30])
         {

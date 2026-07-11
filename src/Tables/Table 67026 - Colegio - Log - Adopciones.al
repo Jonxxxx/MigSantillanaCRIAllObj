@@ -163,7 +163,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(44;"Carga horaria";Code[20])
         {
-            TableRelation = Table62031;
+            TableRelation = 62031;
         }
         field(45;"Tipo Ingles";Option)
         {

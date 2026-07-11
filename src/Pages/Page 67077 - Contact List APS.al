@@ -7,7 +7,7 @@ page 67077 "Contact List APS"
     PageType = List;
     PromotedActionCategories = 'Home,Actions,Navigate,Report,APS';
     SourceTable = 5050;
-    SourceTableView = SORTING(Company Name, Company No., Type, Name);
+    SourceTableView = SORTING("Company Name", Company No., Type, Name);
 
     layout
     {

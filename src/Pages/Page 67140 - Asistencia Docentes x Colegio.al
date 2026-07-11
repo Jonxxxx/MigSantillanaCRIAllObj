@@ -7,7 +7,7 @@ page 67140 "Asistencia Docentes x Colegio"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 67055;
-    SourceTableView = SORTING(No. Solicitud)
+    SourceTableView = SORTING("No. Solicitud")
                       WHERE("Status" = CONST(Realizada));
 
     layout

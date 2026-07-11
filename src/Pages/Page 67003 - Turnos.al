@@ -4,7 +4,7 @@ page 67003 Turnos
     Caption = 'Shifts';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Turnos));
     UsageCategory = Administration;
 

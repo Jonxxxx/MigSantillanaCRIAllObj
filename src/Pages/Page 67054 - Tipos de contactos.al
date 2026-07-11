@@ -4,7 +4,7 @@ page 67054 "Tipos de contactos"
     Caption = 'Types of contacts';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING(Tipo registro, Codigo)
+    SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Tipos de contactos"));
     UsageCategory = Administration;
 

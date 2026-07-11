@@ -406,7 +406,7 @@ table 80005 "Tmp Purch. Inv. Header"
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            TableRelation = Table2000000002;
+            TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
 

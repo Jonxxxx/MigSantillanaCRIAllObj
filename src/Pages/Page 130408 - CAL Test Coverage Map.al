@@ -5,7 +5,7 @@ page 130408 "CAL Test Coverage Map"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 130406;
-    SourceTableView = SORTING(Object Type, Object ID);
+    SourceTableView = SORTING("Object Type", Object ID);
 
     layout
     {
