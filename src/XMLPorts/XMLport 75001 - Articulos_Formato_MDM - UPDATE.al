@@ -6007,7 +6007,7 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
         cGestM.GetOutStrm(wOutStrm)
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport "75003")
+    procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 

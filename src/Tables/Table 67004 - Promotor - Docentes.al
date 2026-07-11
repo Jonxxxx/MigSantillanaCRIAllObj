@@ -74,12 +74,12 @@ table 67004 "Promotor - Docentes"
     }
 
     var
-        DA Record: 67002;
-        ColNiv Record: 67036;
-        NivelE Record: 67022;
-        PromRuta Record: 67044;
+        DA: Record 67002;
+        ColNiv: Record 67036;
+        NivelE: Record 67022;
+        PromRuta: Record 67044;
         Promotor: Record 13;
-        Docente Record: 67001;
+        Docente: Record 67001;
         Cargo: Page67033;
 }
 

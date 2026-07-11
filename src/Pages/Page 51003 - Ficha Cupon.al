@@ -118,7 +118,7 @@ page 51003 "Ficha Cupon"
     }
 
     var
-        rCabCupon Record: 51009;
-        ConfSant Record: 56001;
+        rCabCupon: Record 51009;
+        ConfSant: Record 56001;
 }
 

@@ -66,7 +66,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR Record: 56025;
+                    CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Clasifica devoluciones", TRUE, FALSE, CR);
@@ -82,7 +82,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR Record: 56025;
+                    CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Listado clas. devoluciones", TRUE, FALSE, CR);
@@ -98,7 +98,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR Record: 56025;
+                    CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Documentos generados clas. dev", TRUE, FALSE, CR);

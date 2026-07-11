@@ -38,12 +38,12 @@ codeunit 60000 "Cambiar UMP"
 
     var
         recProducto: Record 27;
-        recMovProd Record: 32;
-        recUM Record: 204;
+        recMovProd: Record 32;
+        recUM: Record 204;
 
     procedure InsertarUMP(codPrmProducto: Code[20]; codPrmUnidad: Code[20])
     var
-        recUMP Record: 5404;
+        recUMP: Record 5404;
     begin
         IF NOT recUMP.GET(codPrmProducto, codPrmUnidad) THEN BEGIN
             recUMP.INIT;

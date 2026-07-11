@@ -139,7 +139,7 @@ table 75010 "Conf. Campos Relacionados"
 
     local procedure GestDupl()
     var
-        lrConfCR Record: 75010;
+        lrConfCR: Record 75010;
     begin
         // GestDupl
 

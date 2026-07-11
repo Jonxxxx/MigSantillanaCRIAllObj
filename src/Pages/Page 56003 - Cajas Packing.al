@@ -96,9 +96,9 @@ page 56003 "Cajas Packing"
 
     var
         txt001: Label 'Box Closed';
-        LinPack Record: 56031;
+        LinPack: Record 56031;
         txt002: Label 'Confirm that you want to close the box';
-        CCP Record: 56032;
+        CCP: Record 56032;
         FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;

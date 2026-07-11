@@ -12,8 +12,8 @@ codeunit 130404 "CAL Test Project Mgt."
 
     procedure Export(CALTestSuiteName: Code[10]): Boolean
     var
-        CALTestSuite Record: 130400;
-        CALTestLine Record: 130401;
+        CALTestSuite: Record 130400;
+        CALTestLine: Record 130401;
         ProjectXML: DotNet XmlDocument;
         DocumentElement: DotNet XmlNode;
         TestNode: DotNet XmlNode;
@@ -53,8 +53,8 @@ codeunit 130404 "CAL Test Project Mgt."
 
     procedure Import()
     var
-        CALTestSuite Record: 130400;
-        AllObjWithCaption Record: 2000000058;
+        CALTestSuite: Record 130400;
+        AllObjWithCaption: Record 2000000058;
         CALTestManagement: Codeunit 130401;
         ProjectXML: DotNet XmlDocument;
         DocumentElement: DotNet XmlNode;

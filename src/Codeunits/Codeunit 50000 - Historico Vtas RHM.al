@@ -82,12 +82,12 @@ codeunit 50000 "Historico Vtas RHM"
     end;
 
     var
-        SIH Record: 112;
-        SIL Record: 113;
-        SCMH Record: 114;
-        SCML2Record 115;
-        Tmp Record: 59001;
-        Facturas Record: 59000;
-        CLE Record: 21;
+        SIH: Record 112;
+        SIL: Record 113;
+        SCMH: Record 114;
+        SCML2Record: Record 115;
+        Tmp: Record 59001;
+        Facturas: Record 59000;
+        CLE: Record 21;
 }
 

@@ -5,12 +5,12 @@ codeunit 52505 MACROmodin
 
     trigger OnRun()
     var
-        r36Record 36;
-        r112Record 112;
-        r114Record 114;
+        r36Record: Record 36;
+        r112Record: Record 112;
+        r114Record: Record 114;
         kk: Integer;
-        lrSH Record: 36;
-        lrTransCaja Record: 34002523;
+        lrSH: Record 36;
+        lrTransCaja: Record 34002523;
     begin
         r112.GET('VFR4-001726');
         r112."Liquidado TPV" := TRUE;
@@ -89,8 +89,8 @@ codeunit 52505 MACROmodin
 
     procedure Eliminar(pTipo: Option Factura,NCR; pDoc: Code[20])
     var
-        lrCF Record: 36;
-        lrLF Record: 37;
+        lrCF: Record 36;
+        lrLF: Record 37;
     begin
         IF pTipo = pTipo::Factura THEN
             lrCF.GET(lrCF."Document Type"::Invoice, pDoc)

@@ -573,7 +573,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
 
     trigger OnDelete()
     var
-        PurchDocLineComments Record: 43;
+        PurchDocLineComments: Record 43;
     begin
     end;
 
@@ -582,7 +582,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
 
     procedure GetCurrencyCode(): Code[10]
     var
-        PurchCrMemoHeader Record: 124;
+        PurchCrMemoHeader: Record 124;
     begin
         IF "Document No." = PurchCrMemoHeader."No." THEN
           EXIT(PurchCrMemoHeader."Currency Code");
@@ -601,7 +601,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        PurchCrMemoHeader Record: 124;
+        PurchCrMemoHeader: Record 124;
     begin
         IF NOT PurchCrMemoHeader.GET("Document No.") THEN
           PurchCrMemoHeader.INIT;

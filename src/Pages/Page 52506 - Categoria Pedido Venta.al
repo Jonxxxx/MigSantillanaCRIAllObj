@@ -40,7 +40,7 @@ page 52506 "Categoria Pedido Venta"
     procedure GetSelectionFilter(): Text
     var
         SelectionFilterManagement: Codeunit 46;
-        CategoriaPedidoVenta Record: 52503;
+        CategoriaPedidoVenta: Record 52503;
         RecordRef: RecordRef;
     begin
         CurrPage.SETSELECTIONFILTER(CategoriaPedidoVenta);

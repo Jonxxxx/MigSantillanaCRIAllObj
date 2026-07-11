@@ -12,9 +12,9 @@ table 67098 "Pago a Expositores"
 
             trigger OnLookup()
             var
-                recExp Record: 67021;
+                recExp: Record 67021;
                 Err001: Label 'No puede modificar el Expositor ya que el pago contiene lineas que no pertenecen a este Expositor. ';
-                rDetalle Record: 67099;
+                rDetalle: Record 67099;
             begin
 
                 IF PAGE.RUNMODAL(0, recExp) = ACTION::LookupOK THEN BEGIN
@@ -32,8 +32,8 @@ table 67098 "Pago a Expositores"
             trigger OnValidate()
             var
                 Err001: Label 'No puede modificar el Expositor ya que el pago contiene lineas que no pertenecen a este Expositor. ';
-                rDetalle Record: 67099;
-                rExp Record: 67021;
+                rDetalle: Record 67099;
+                rExp: Record 67021;
             begin
 
                 "Nombre Expositor" := '';
@@ -91,7 +91,7 @@ table 67098 "Pago a Expositores"
 
     trigger OnDelete()
     var
-        rDetalle Record: 67099;
+        rDetalle: Record 67099;
         Err001: Label 'No se permite eliminar pagos realizados.';
     begin
 
@@ -104,7 +104,7 @@ table 67098 "Pago a Expositores"
 
     trigger OnInsert()
     var
-        recPagos Record: 67098;
+        recPagos: Record 67098;
     begin
 
         Fecha := WORKDATE;
@@ -117,8 +117,8 @@ table 67098 "Pago a Expositores"
 
     procedure PagoEventos()
     var
-        rDet Record: 67099;
-        rPlanEv Record: 67051;
+        rDet: Record 67099;
+        rPlanEv: Record 67051;
         Error001: Label 'El evento %1 con secuencia %2 ya fue pagado anteriormente.';
     begin
 
@@ -137,8 +137,8 @@ table 67098 "Pago a Expositores"
 
     procedure RetrocederPagoEventos()
     var
-        rDet Record: 67099;
-        rPlanEv Record: 67051;
+        rDet: Record 67099;
+        rPlanEv: Record 67051;
     begin
 
         rDet.SETRANGE("ID Pago", "ID Pago");

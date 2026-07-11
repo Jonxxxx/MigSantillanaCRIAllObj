@@ -829,7 +829,7 @@ tableextension 70000110 tableextension70000110 extends "Item Journal Line"
 
 
     var
-        ProdOrderComponent Record: 5407;
+        ProdOrderComponent: Record 5407;
 
 
     //Unsupported feature: Property Modification (TextConstString) on "RevaluationPerEntryNotAllowedErr(Variable 1050)".

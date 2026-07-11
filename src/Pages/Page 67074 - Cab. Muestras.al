@@ -525,7 +525,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     var
-                        BinContent Record: 7302;
+                        BinContent: Record 7302;
                         GetBinContent: Report "7391;
                     begin
                         BinContent.SETRANGE("Location Code","Transfer-from Code");
@@ -690,18 +690,18 @@ page 67074 "Cab. Muestras"
     end;
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         CFuncSantillana: Codeunit 56000;
-        rTransHeader Record: 5740;
+        rTransHeader: Record 5740;
         NombreCliente: Text[200];
         DireccionCliente: Text[200];
         "**003**": Integer;
         Cliente: Record 18;
         cuManejaParametros: Codeunit 34002500;
         I: Integer;
-        TransferHeader Record: 5740;
-        TransferLine Record: 5741;
-        DefDim Record: 352;
+        TransferHeader: Record 5740;
+        TransferLine: Record 5741;
+        DefDim: Record 352;
         wCantidad: Decimal;
         wPrecio: Decimal;
         wCantidadAenviar: Decimal;
@@ -712,7 +712,7 @@ page 67074 "Cab. Muestras"
         CodColegio: Code[20];
         CodAlmFrom: Code[20];
         CodAlmTo: Code[20];
-        Bins Record: 7354;
+        Bins: Record 7354;
         Msg001: Label 'Samples had been posted successfully';
 
     procedure RecibeParametros(AlmOrigen: Code[20];AlmDestino: Code[20];Comercial: Code[20];Colegio: Code[20])

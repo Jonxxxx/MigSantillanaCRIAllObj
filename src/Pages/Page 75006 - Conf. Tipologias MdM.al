@@ -21,7 +21,7 @@ page 75006 "Conf. Tipologias MdM"
 
                     trigger OnValidate()
                     var
-                        lrItemCat Record: 5722;
+                        lrItemCat: Record 5722;
                     begin
 
                         IF lrItemCat.GET(Tipologia) THEN BEGIN
@@ -119,7 +119,7 @@ page 75006 "Conf. Tipologias MdM"
 
     trigger OnOpenPage()
     var
-        lrConfF Record: 75008;
+        lrConfF: Record 75008;
         lwNo: Integer;
     begin
         wEditable := cFunMdm.GetEditable;

@@ -114,8 +114,8 @@ page 56001 "Lin. Packing"
 
     var
         txt0001: Label 'Confirm that you want to delete the selected box';
-        LinPack Record: 56031;
-        ConfSant Record: 56001;
+        LinPack: Record 56031;
+        ConfSant: Record 56001;
         txt005: Label 'Confirm that you want to open the box';
 
     procedure ReabrirCaja()

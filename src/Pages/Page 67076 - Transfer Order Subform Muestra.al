@@ -69,7 +69,7 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnDrillDown()
                     var
-                        TransShptLine Record: 5745;
+                        TransShptLine: Record 5745;
                     begin
                         TESTFIELD("Document No.");
                         TESTFIELD("Item No.");
@@ -89,7 +89,7 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnDrillDown()
                     var
-                        TransRcptLine Record: 5747;
+                        TransRcptLine: Record 5747;
                     begin
                         TESTFIELD("Document No.");
                         TESTFIELD("Item No.");

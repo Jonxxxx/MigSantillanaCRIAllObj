@@ -48,7 +48,7 @@ xmlport 58010 "Importa cambios salario"
     }
 
     var
-        Emp Record: 5200;
-        PerfSal Record: 34002115;
+        Emp: Record 5200;
+        PerfSal: Record 34002115;
 }
 

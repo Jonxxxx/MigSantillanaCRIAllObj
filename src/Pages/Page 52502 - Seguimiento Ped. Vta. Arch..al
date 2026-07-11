@@ -103,23 +103,23 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     end;
 
     var
-        WHSL Record: 7321;
-        WHAl Record: 5767;
-        RWAL Record: 5773;
-        LP Record: 56031;
-        LPR Record: 56034;
+        WHSL: Record 7321;
+        WHAl: Record 5767;
+        RWAL: Record 5773;
+        LP: Record 56031;
+        LPR: Record 56034;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
-        SH Record: 5107;
+        SH: Record 5107;
         SSH: Record 110;
-        SIH Record: 112;
+        SIH: Record 112;
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        SH1Record 5107;
+        SH1Record: Record 5107;
         FechaDesde: Date;
         FechaHasta: Date;
         Text004: Label 'Checking Orders #1########## @2@@@@@@@@@@@@@';
-        LHRR Record: 56023;
+        LHRR: Record 56023;
         Error001: Label 'Date From must be specified';
         Error002: Label 'Date To Must be specified';
 

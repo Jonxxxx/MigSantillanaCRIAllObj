@@ -32,7 +32,7 @@ codeunit 50300 "Notificar Errores Colas"
 
     var
         Doc: InStream;
-        ConfEmpresa Record: 56001;
+        ConfEmpresa: Record 56001;
         Error01: Label 'Error Cola Proyecto -';
         Error02: Label 'Error: ';
 
@@ -40,8 +40,8 @@ codeunit 50300 "Notificar Errores Colas"
     var
         SMTPMail: Codeunit 400;
         SendOK: Boolean;
-        GLSetup Record: 98;
-        CompanyInfo Record: 79;
+        GLSetup: Record 98;
+        CompanyInfo: Record 79;
         SMTP_ERROR: Label 'Error : %1';
     begin
         CompanyInfo.GET;

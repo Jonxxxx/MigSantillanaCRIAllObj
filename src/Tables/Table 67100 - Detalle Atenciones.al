@@ -15,8 +15,8 @@ table 67100 "Detalle Atenciones"
             trigger OnLookup()
             var
                 pgAte: Page67167;
-                rAte Record: 67002;
-                rCab Record: 67061;
+                rAte: Record 67002;
+                rCab: Record 67061;
             begin
                 IF Tipo = Tipo::Atenci n THEN BEGIN
                     rAte.FILTERGROUP(2);
@@ -81,7 +81,7 @@ table 67100 "Detalle Atenciones"
 
     trigger OnInsert()
     var
-        rDet Record: 67100;
+        rDet: Record 67100;
     begin
 
         rDet.SETRANGE("C digo Cab. Atenci n", "C digo Cab. Atenci n");

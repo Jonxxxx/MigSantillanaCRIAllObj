@@ -15,7 +15,7 @@ table 67006 "Promotor - Lista de Colegios"
 
             trigger OnValidate()
             var
-                recCP Record: 225;
+                recCP: Record 225;
             begin
                 Colegio.GET("Cod. Colegio");
 
@@ -71,6 +71,6 @@ table 67006 "Promotor - Lista de Colegios"
 
     var
         Colegio: Record 5050;
-        Rutas Record: 67002;
+        Rutas: Record 67002;
 }
 

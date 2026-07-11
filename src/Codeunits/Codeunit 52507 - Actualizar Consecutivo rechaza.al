@@ -21,7 +21,7 @@ codeunit 52507 "Actualizar Consecutivo rechaza"
 
     procedure ActualizarConsecutivoFE()
     var
-        SIH Record: 112;
+        SIH: Record 112;
         FE_nav: Codeunit 52504;
         i: Integer;
     begin

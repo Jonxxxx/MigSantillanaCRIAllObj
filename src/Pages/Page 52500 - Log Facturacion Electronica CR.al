@@ -204,8 +204,8 @@ page 52500 "Log Facturacion Electronica CR"
                 trigger OnAction()
                 var
                     FE: Codeunit 52504;
-                    lrSCMH Record: 114;
-                    lrSH Record: 36;
+                    lrSCMH: Record 114;
+                    lrSH: Record 36;
                 begin
                     //+#217374
                     //... Si el documento viene de POS, no debe enviarse por e-mail.

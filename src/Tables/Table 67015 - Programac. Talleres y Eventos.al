@@ -212,9 +212,9 @@ table 67015 "Programac. Talleres y Eventos"
 
     trigger OnInsert()
     var
-        rRec Record: 67015;
-        rAsist Record: 67016;
-        rAsist2Record 67016;
+        rRec: Record 67015;
+        rAsist: Record 67016;
+        rAsist2Record: Record 67016;
     begin
         "Fecha inscripcion" := TODAY;
         "Fecha Solicitud" := TODAY;
@@ -260,8 +260,8 @@ table 67015 "Programac. Talleres y Eventos"
     var
         Col: Record 5050;
         Prom: Record 13;
-        TyE Record: 67011;
-        CabPEvento Record: 67051;
+        TyE: Record 67011;
+        CabPEvento: Record 67051;
         Err001: Label 'You must change the %1 to '' '' in the Header to modify this line';
 
     procedure Horas()

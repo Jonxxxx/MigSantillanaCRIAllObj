@@ -1014,7 +1014,7 @@ tableextension 70000048 tableextension70000048 extends "Purchase Header"
 
     local procedure StorePurchCommentLineToTemp(var TempPurchCommentLine Record: 43" temporary)
     var
-        PurchCommentLine Record: 43;
+        PurchCommentLine: Record 43;
     begin
         PurchCommentLine.SETRANGE("Document Type", "Document Type");
         PurchCommentLine.SETRANGE("No.", "No.");
@@ -1027,7 +1027,7 @@ tableextension 70000048 tableextension70000048 extends "Purchase Header"
 
     local procedure RestorePurchCommentLine(var TempPurchCommentLine Record: 43" temporary; OldDocumentLineNo: Integer; NewDocumentLineNo: Integer)
     var
-        PurchCommentLine Record: 43;
+        PurchCommentLine: Record 43;
     begin
         TempPurchCommentLine.SETRANGE("Document Type", "Document Type");
         TempPurchCommentLine.SETRANGE("No.", "No.");
@@ -1047,7 +1047,7 @@ tableextension 70000048 tableextension70000048 extends "Purchase Header"
 
     local procedure UpdatePrepmtAmounts(var PurchaseLine Record: 39")
     var
-        Currency Record: 4;
+        Currency: Record 4;
     begin
         Currency.Initialize("Currency Code");
         IF "Document Type" = "Document Type"::Order THEN BEGIN

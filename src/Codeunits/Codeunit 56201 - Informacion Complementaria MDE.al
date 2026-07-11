@@ -11,7 +11,7 @@ codeunit 56201 "Informacion Complementaria MDE"
     end;
 
     var
-        ConfSant Record: 56001;
+        ConfSant: Record 56001;
         ExcelBuffer Record: 370" temporary;
         MdEMgnt: Codeunit 56202;
         XmlDoc: DotNet XmlDocument;
@@ -24,11 +24,11 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     procedure IRM(FromDate: Date; ToDate: Date; Filtro_Empleado: Text[100]; SendToExcel: Boolean)
     var
-        HistLinNom Record: 34002118;
-        Employee Record: 5200;
-        LinAporEmp Record: 34002122;
-        PerfilSalarial Record: 34002115;
-        ProvisionesNom Record: 56100;
+        HistLinNom: Record 34002118;
+        Employee: Record 5200;
+        LinAporEmp: Record 34002122;
+        PerfilSalarial: Record 34002115;
+        ProvisionesNom: Record 56100;
         MdEMgnt: Codeunit 56202;
         Response: Text;
         ImportesIRM: array[20] of Decimal;
@@ -178,8 +178,8 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     procedure HorariosCeco(DefaultDim Record: 352")
     var
-        DimVal Record: 349;
-        Contrato Record: 34002109;
+        DimVal: Record 349;
+        Contrato: Record 34002109;
         GradoOcu: Decimal;
     begin
         IF DefaultDim."Table ID" <> DATABASE::Employee THEN
@@ -234,8 +234,8 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     procedure CT(Filtro_Empleado: Text[100])
     var
-        Employee Record: 5200;
-        PerfSal Record: 34002115;
+        Employee: Record 5200;
+        PerfSal: Record 34002115;
         ImportesCT: array[20] of Decimal;
     begin
         ConfSant.GET;
@@ -357,7 +357,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure BodyIRM(EmployeeNo: Code[20]; ImportesIRM: array[20] of Decimal; FromDate: Date; ToDate: Date; FTE: Decimal; Status: Text[1])
     var
-        EquivVavMde Record: 56201;
+        EquivVavMde: Record 56201;
         XmlNode2: DotNet XmlNode;
         XmlNode3: DotNet XmlNode;
     begin
@@ -411,7 +411,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure BodyIRMExcel(EmployeeNo: Code[20]; ImportesIRM: array[20] of Decimal; FromDate: Date; ToDate: Date; FTE: Decimal; Status: Text[1])
     var
-        EquivVavMde Record: 56201;
+        EquivVavMde: Record 56201;
     begin
         // nivel 2
         ExcelBuffer.NewRow;
@@ -512,7 +512,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure BodyCT(EmployeeNo: Code[20]; ImportesCT: array[20] of Decimal)
     var
-        EquivVavMde Record: 56201;
+        EquivVavMde: Record 56201;
         XmlNode2: DotNet XmlNode;
         XmlNode3: DotNet XmlNode;
     begin
@@ -557,7 +557,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure CalcConcepto(Concepto: Code[20]; MdEType: Option IRM,CT; var Importes: array[20] of Decimal; ImporteConcepto: Decimal): Boolean
     var
-        EquivNavMde Record: 56201;
+        EquivNavMde: Record 56201;
     begin
         IF ImporteConcepto = 0 THEN
             EXIT;
@@ -605,7 +605,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure GetEmployeeFTE(EmployeeNo: Code[20]; FromDate: Date; ToDate: Date) FTE: Decimal
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
         DaysOfMonth: Integer;
         DaysWorked: Integer;
         lFechaInicioContratoAnterior: Date;
@@ -717,7 +717,7 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     local procedure GetEmployeeFTEOld(EmployeeNo: Code[20]; Fecha: Date) FTE: Decimal
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
         FirstMonthDate: Date;
         LastMonthDate: Date;
         DaysOfMonth: Integer;
@@ -780,12 +780,12 @@ codeunit 56201 "Informacion Complementaria MDE"
 
     procedure ConceptoProrrateado(PS Record: 34002115; Periodo: Date) Acumulado: Decimal
     var
-        HistLinNom Record: 34002118;
-        ConceptosProrr Record: 34002119;
-        Fecha Record: 2000000007;
-        Empleado Record: 5200;
-        ConfNomina Record: 34002103;
-        ConfContabilidad Record: 98;
+        HistLinNom: Record 34002118;
+        ConceptosProrr: Record 34002119;
+        Fecha: Record 2000000007;
+        Empleado: Record 5200;
+        ConfNomina: Record 34002103;
+        ConfContabilidad: Record 98;
         CalculoFechas: Codeunit 34002104;
         Anos: Integer;
         Meses: Integer;

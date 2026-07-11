@@ -44,8 +44,8 @@ table 56032 "Contenido Cajas Packing"
 
             trigger OnValidate()
             var
-                recLinVta Record: 37;
-                recLinTransfer Record: 5741;
+                recLinVta: Record 37;
+                recLinTransfer: Record 5741;
             begin
                 //Codigo de barras
                 IF (STRLEN(FORMAT("Cod. Barras"))) > 5 THEN BEGIN
@@ -194,8 +194,8 @@ table 56032 "Contenido Cajas Packing"
 
             trigger OnValidate()
             var
-                recLinVta Record: 37;
-                recLinTransfer Record: 5741;
+                recLinVta: Record 37;
+                recLinTransfer: Record 5741;
             begin
                 //+#854
                 IF NOT FuncSant.TieneGestionAlmacen THEN BEGIN
@@ -337,8 +337,8 @@ table 56032 "Contenido Cajas Packing"
 
             trigger OnValidate()
             var
-                recLinVta Record: 37;
-                recLinTransfer Record: 5741;
+                recLinVta: Record 37;
+                recLinTransfer: Record 5741;
             begin
                 CASE "Tipo pedido" OF
                   "Tipo pedido"::Venta : BEGIN
@@ -419,16 +419,16 @@ table 56032 "Contenido Cajas Packing"
 
     var
         Prod: Record 27;
-        LinPack Record: 56031;
-        RWAL Record: 5773;
-        ICR Record: 5717;
-        RWAL1Record 5773;
+        LinPack: Record 56031;
+        RWAL: Record 5773;
+        ICR: Record 5717;
+        RWAL1Record: Record 5773;
         wCant: Decimal;
         txt001: Label 'Barcode Not Found';
         txt002: Label 'Quantity %1 is greater than the remaining tiems to pack in the Posted Picking %2';
         Error001: Label 'Qty. can not exceed the Picking Quantity';
         wCant1: Decimal;
-        CCP Record: 56032;
+        CCP: Record 56032;
         CantPendEmp: Decimal;
         CantFaltante: Decimal;
         FuncSant: Codeunit 56000;

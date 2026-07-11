@@ -145,7 +145,7 @@ table 67016 "Asistentes Talleres y Eventos"
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
             end;
         }
@@ -174,7 +174,7 @@ table 67016 "Asistentes Talleres y Eventos"
     trigger OnInsert()
     var
         wAsistentesEsp: Integer;
-        rSol Record: 67055;
+        rSol: Record 67055;
     begin
         CabPlanEvent.RESET;
         CabPlanEvent.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
@@ -218,17 +218,17 @@ table 67016 "Asistentes Talleres y Eventos"
     end;
 
     var
-        CabPlanEvent Record: 67051;
+        CabPlanEvent: Record 67051;
         Col: Record 5050;
         Prom: Record 13;
-        TyE Record: 67011;
-        Prof Record: 67001;
-        ProgTyE Record: 67015;
-        Expos Record: 67001;
-        Vend Record: 23;
-        Asist Record: 67016;
+        TyE: Record 67011;
+        Prof: Record 67001;
+        ProgTyE: Record 67015;
+        Expos: Record 67001;
+        Vend: Record 23;
+        Asist: Record 67016;
         Err001: Label 'Teachers Total exceeds the capacity for the Event';
         Err002: Label 'Line can not be deleted because it is marked with% 1% %2';
-        rProgEv Record: 67015;
+        rProgEv: Record 67015;
 }
 

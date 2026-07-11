@@ -126,7 +126,7 @@ xmlport 50003 "Importar Adopciones"
 
     var
         ConvertFecha: Date;
-        Adop Record: 50008;
+        Adop: Record 50008;
         ConvertDecimal: Decimal;
         TipoAdopcion: Integer;
 }

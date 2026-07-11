@@ -81,8 +81,8 @@ page 56004 "Cab. Packing Registrado"
 
                 trigger OnAction()
                 var
-                    ConfSant Record: 56001;
-                    CabPackReg Record: 56033;
+                    ConfSant: Record 56001;
+                    CabPackReg: Record 56033;
                 begin
                     ConfSant.GET;
                     ConfSant.TESTFIELD("ID Reporte Etiqueta de Caja");
@@ -109,7 +109,7 @@ page 56004 "Cab. Packing Registrado"
                     Command: Text[200];
                     Result: Text[200];
                     ErrorMSg: Text[200];
-                    UsrSetUp Record: 91;
+                    UsrSetUp: Record 91;
                     [RunOnClient]
                     Persona: DotNet Person;
                 begin

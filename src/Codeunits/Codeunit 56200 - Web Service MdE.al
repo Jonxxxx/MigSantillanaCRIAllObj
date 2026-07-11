@@ -9,7 +9,7 @@ codeunit 56200 "Web Service MdE"
         NS: ;
 
     [Scope('Personalization')]
-    procedure Empleado(mae: XMLport "56200;var result: XMLport "56201")
+    procedure Empleado(mae: XMLport "56200;var result: XMLport 56201)
     var
         IsOk: Boolean;
         id_mensaje: Text[36];

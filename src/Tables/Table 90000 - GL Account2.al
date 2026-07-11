@@ -29,8 +29,8 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                GLEntry Record: 17;
-                GLBudgetEntry Record: 96;
+                GLEntry: Record 17;
+                GLBudgetEntry: Record 96;
             begin
             end;
         }
@@ -208,7 +208,7 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                ConflictGLAcc Record: 15;
+                ConflictGLAcc: Record 15;
             begin
             end;
         }
@@ -218,7 +218,7 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                ConflictGLAcc Record: 15;
+                ConflictGLAcc: Record 15;
             begin
             end;
         }
@@ -228,7 +228,7 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                ConflictGLAcc Record: 15;
+                ConflictGLAcc: Record 15;
             begin
             end;
         }
@@ -251,7 +251,7 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                GenBusPostingGrp Record: 250;
+                GenBusPostingGrp: Record 250;
             begin
             end;
         }
@@ -262,7 +262,7 @@ table 90000 "G/L Account2"
 
             trigger OnValidate()
             var
-                GenProdPostingGrp Record: 251;
+                GenProdPostingGrp: Record 251;
             begin
             end;
         }
@@ -485,11 +485,11 @@ table 90000 "G/L Account2"
 
     trigger OnDelete()
     var
-        GLBudgetEntry Record: 96;
-        CommentLine Record: 97;
-        ExtTextHeader Record: 279;
-        AnalysisViewEntry Record: 365;
-        AnalysisViewBudgetEntry Record: 366;
+        GLBudgetEntry: Record 96;
+        CommentLine: Record 97;
+        ExtTextHeader: Record 279;
+        AnalysisViewEntry: Record 365;
+        AnalysisViewBudgetEntry: Record 366;
         MoveEntries: Codeunit 361;
     begin
     end;
@@ -497,7 +497,7 @@ table 90000 "G/L Account2"
     var
         Text000: Label 'You cannot change %1 because there are one or more ledger entries associated with this account.';
         Text001: Label 'You cannot change %1 because this account is part of one or more budgets.';
-        GLSetup Record: 98;
+        GLSetup: Record 98;
         DimMgt: Codeunit 408;
         GLSetupRead: Boolean;
         Text002: Label 'There is another %1: %2; which refers to the same %3, but with a different %4: %5.';

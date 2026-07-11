@@ -35,8 +35,8 @@ page 56130 "Maestro de Rutas"
 
                 trigger OnAction()
                 var
-                    recRutas Record: 56070;
-                    recDetalleRutas Record: 56071;
+                    recRutas: Record 56070;
+                    recDetalleRutas: Record 56071;
                 begin
                     recDetalleRutas.RESET;
                     recDetalleRutas.SETRANGE(recDetalleRutas.Code, recRutas.Codigo);

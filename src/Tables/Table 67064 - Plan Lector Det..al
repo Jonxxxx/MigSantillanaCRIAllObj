@@ -127,7 +127,7 @@ table 67064 "Plan Lector Det."
 
     trigger OnDelete()
     var
-        DetPL Record: 67064;
+        DetPL: Record 67064;
     begin
         DetPL.RESET;
         DetPL.SETRANGE(Campa a, Campa a);

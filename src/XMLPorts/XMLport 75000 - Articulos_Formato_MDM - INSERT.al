@@ -5111,7 +5111,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
         cGestM.GetOutStrm(wOutStrm)
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport "75003")
+    procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 

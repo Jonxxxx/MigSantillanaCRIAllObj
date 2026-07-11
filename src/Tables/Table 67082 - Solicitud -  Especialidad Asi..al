@@ -12,7 +12,7 @@ table 67082 "Solicitud -  Especialidad Asi."
 
             trigger OnValidate()
             var
-                DA Record: 67002;
+                DA: Record 67002;
             begin
                 IF "Cod. Especialidad" <> '' THEN BEGIN
                     DA.RESET;

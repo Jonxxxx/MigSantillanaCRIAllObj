@@ -232,14 +232,14 @@ table 67017 Padres
     end;
 
     var
-        PostCode Record: 225;
+        PostCode: Record 225;
         Col: Record 5050;
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
-        DA Record: 67002;
+        DA: Record 67002;
 
     procedure DisplayMap()
     var
-        MapPoint Record: 800;
+        MapPoint: Record 800;
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN

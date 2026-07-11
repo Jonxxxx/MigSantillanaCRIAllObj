@@ -53,7 +53,7 @@ tableextension 70000047 tableextension70000047 extends "Detailed Cust. Ledg. Ent
     procedure GetLastEntryNo(): Integer
     var
         [SecurityFiltering(SecurityFilter::Ignored)]
-        DetailedCustLedgEntryLocal Record: 379;
+        DetailedCustLedgEntryLocal: Record 379;
     begin
         IF DetailedCustLedgEntryLocal.FINDLAST THEN;
         EXIT(DetailedCustLedgEntryLocal."Entry No.");

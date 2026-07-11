@@ -58,9 +58,9 @@ page 56031 "Actualiza NIT"
     var
         NuevoNit: Code[30];
         NoFact: Code[30];
-        SIH Record: 112;
+        SIH: Record 112;
         TipoDoc: Integer;
-        SCMH Record: 114;
+        SCMH: Record 114;
 
     procedure RecibeNoFac(NoFact_Loc: Code[20]; TipoDoc_Loc: Integer)
     begin

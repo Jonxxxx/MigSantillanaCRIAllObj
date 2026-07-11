@@ -39,7 +39,7 @@ table 67079 "Seguimiento Solicitud TE"
 
     trigger OnInsert()
     var
-        SegSol Record: 67079;
+        SegSol: Record 67079;
     begin
         SegSol.SETRANGE("No. Solicitud", "No. Solicitud");
         IF SegSol.FINDLAST THEN

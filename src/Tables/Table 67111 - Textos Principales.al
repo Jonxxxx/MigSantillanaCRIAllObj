@@ -68,7 +68,7 @@ table 67111 "Textos Principales"
 
     trigger OnInsert()
     var
-        APSSetup Record: 67000;
+        APSSetup: Record 67000;
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);

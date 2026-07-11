@@ -170,7 +170,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     trigger OnAction()
                     var
                         pAsistentes: Page67177;
-                                         rProg Record: 67103;
+                                         rProg: Record 67103;
                                          Err001: Label 'Antes de inscribir docentes, tiene que registrar las fechas y horario de la visita.';
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
@@ -310,7 +310,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure ValidaDistrCC()
     var
-        Distr Record: 67104;
+        Distr: Record 67104;
         Err001: Label 'Debe realizar la distribución de los centros de costo';
         Err002: Label 'No se ha realizado la distribución de los centros de costo correctamente';
         Porc: Decimal;
@@ -330,8 +330,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure ValidaFechaHorarios()
     var
-        rProg Record: 67103;
-        rProg2Record 67103;
+        rProg: Record 67103;
+        rProg2Record: Record 67103;
         Err001: Label 'No se ha realizado el registro de fechas y horario de visitas.';
         Err002: Label 'Revise el registro de fechas y horario de visitas. No se permite solapamientos.';
         Err003: Label 'Revise el registro de fechas y horario de visitas. Es obligatorio ingresar la fecha, hora de inicio y hora fin.';
@@ -375,7 +375,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure Act_AsistentesReales()
     var
-        rAsis Record: 67106;
+        rAsis: Record 67106;
         Asist: Integer;
     begin
         /*

@@ -6,7 +6,7 @@ codeunit 75003 "Web Service MdM"
     end;
 
     [Scope('Personalization')]
-    procedure insert(mensaje: XMLport "75000;var result: XMLport "75003")
+    procedure insert(mensaje: XMLport "75000;var result: XMLport 75003)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;
@@ -25,7 +25,7 @@ codeunit 75003 "Web Service MdM"
     procedure update(mensaje: XMLport "75001;
 
     var
-        result: XMLport "75003")
+        result: XMLport 75003)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;
@@ -44,7 +44,7 @@ codeunit 75003 "Web Service MdM"
     procedure delete(mensaje: XMLport "75002;
 
     var
-        result: XMLport "75003")
+        result: XMLport 75003)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;

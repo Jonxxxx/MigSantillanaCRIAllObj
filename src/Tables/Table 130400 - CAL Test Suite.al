@@ -77,7 +77,7 @@ table 130400 "CAL Test Suite"
 
     trigger OnDelete()
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         CALTestLine.SETRANGE("Test Suite",Name);
         CALTestLine.DELETEALL(TRUE);
@@ -91,8 +91,8 @@ table 130400 "CAL Test Suite"
 
     procedure ExportTestSuiteSetup()
     var
-        CALTestSuite Record: 130400;
-        TempBlob Record: 99008535;
+        CALTestSuite: Record 130400;
+        TempBlob: Record 99008535;
         FileMgt: Codeunit 419;
         OStream: OutStream;
     begin
@@ -111,7 +111,7 @@ table 130400 "CAL Test Suite"
 
     procedure ImportTestSuiteSetup()
     var
-        TempBlob Record: 99008535;
+        TempBlob: Record 99008535;
         FileMgt: Codeunit 419;
         IStream: InStream;
     begin
@@ -123,8 +123,8 @@ table 130400 "CAL Test Suite"
 
     procedure ExportTestSuiteResult()
     var
-        CALTestSuite Record: 130400;
-        TempBlob Record: 99008535;
+        CALTestSuite: Record 130400;
+        TempBlob: Record 99008535;
         FileMgt: Codeunit 419;
         OStream: OutStream;
     begin
@@ -143,7 +143,7 @@ table 130400 "CAL Test Suite"
 
     procedure ImportTestSuiteResult()
     var
-        TempBlob Record: 99008535;
+        TempBlob: Record 99008535;
         FileMgt: Codeunit 419;
         IStream: InStream;
     begin

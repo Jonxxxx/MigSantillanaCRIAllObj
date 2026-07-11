@@ -50,7 +50,7 @@ tableextension 70000049 tableextension70000049 extends "Detailed Vendor Ledg. En
     procedure GetLastEntryNo(): Integer
     var
         [SecurityFiltering(SecurityFilter::Ignored)]
-        DetailedVendorLedgEntryLocal Record: 380;
+        DetailedVendorLedgEntryLocal: Record 380;
     begin
         IF DetailedVendorLedgEntryLocal.FINDLAST THEN;
         EXIT(DetailedVendorLedgEntryLocal."Entry No.");

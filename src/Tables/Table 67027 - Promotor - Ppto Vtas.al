@@ -86,6 +86,6 @@ table 67027 "Promotor - Ppto Vtas"
     var
         Prom: Record 13;
         Item: Record 27;
-        ProdEquivalente Record: 67005;
+        ProdEquivalente: Record 67005;
 }
 

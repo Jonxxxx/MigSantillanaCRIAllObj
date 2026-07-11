@@ -9,7 +9,7 @@ codeunit 75006 "MdM Async Sender"
     end;
 
     var
-        rConfMdM Record: 75000;
+        rConfMdM: Record 75000;
         txtRet: Label 'http://retornoAsincrono.santillanaBus';
         XmlDoc: DotNet XmlDocument;
         XmlNode: array[10] of DotNet XmlNode;
@@ -131,9 +131,9 @@ codeunit 75006 "MdM Async Sender"
 
     procedure BuildXMLRequest(pwCab Record: 75003")
     var
-        lrLinImp Record: 75004;
+        lrLinImp: Record 75004;
         lrLinImpTmp Record: 75004" temporary;
-        lrLinField Record: 75005;
+        lrLinField: Record 75005;
         lwCod: Text;
         lwCodMdM: Text;
         lcText001: Label 'Tablas_Referencia';
@@ -368,11 +368,11 @@ codeunit 75006 "MdM Async Sender"
 
     procedure SaveNotification(prCab Record: 75003") wTxt: Text
     var
-        lrCab2Record 75003;
+        lrCab2Record: Record 75003;
         lwOutStrm: OutStream;
         lwFile: File;
         lwsoapEnvelope: DotNet XmlElement;
-                            lrLinImp Record: 75004;
+                            lrLinImp: Record 75004;
         lwOk: Boolean;
                             lwValues: array[10] of Text;
                             lwHavValues: array[10] of Boolean;
@@ -483,7 +483,7 @@ codeunit 75006 "MdM Async Sender"
 
     procedure GestFileText(pwFilename: Text) wTxt: Text
     var
-        lrCab2Record 75003;
+        lrCab2Record: Record 75003;
         lwInStrm: InStream;
         lwFile: File;
         lwBuffer: Text[1024];

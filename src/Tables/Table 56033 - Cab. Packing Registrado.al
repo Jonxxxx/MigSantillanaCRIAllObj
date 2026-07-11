@@ -137,10 +137,10 @@ table 56033 "Cab. Packing Registrado"
 
     var
         NoSeriesMgt: Codeunit 396;
-        ConfSant Record: 56001;
-        LinPack Record: 56031;
+        ConfSant: Record 56001;
+        LinPack: Record 56031;
         LoginMgt: Codeunit 418;
-        CCP Record: 56032;
+        CCP: Record 56032;
         txt001: Label 'Picking No. cannot be changed while exists boxes with content in the current Packing';
 }
 

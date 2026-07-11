@@ -8,13 +8,13 @@ codeunit 56051 "Cancelar reservas Call Center"
 
     procedure CancelarReservaCallCenter()
     var
-        rConf Record: 56001;
-        rSalesHeader Record: 36;
-        rSalesLine Record: 37;
+        rConf: Record 56001;
+        rSalesHeader: Record 36;
+        rSalesLine: Record 37;
         lText001: Label 'Se borrarán las reservas de los pedidos de Call Center con fecha hasta día %1 (incluido). ¿Desea continuar?';
         wFecha: Date;
         ReservEngineMgt: Codeunit 99000831;
-        ReservEntry Record: 337;
+        ReservEntry: Record 337;
         ReserveSalesLine: Codeunit 99000832;
         lText002: Label 'Proceso finalizado';
     begin

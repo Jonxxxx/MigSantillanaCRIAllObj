@@ -606,14 +606,14 @@ table 80003 "Tmp Sales Cr.Memo Header"
     end;
 
     var
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoHeader: Record 114;
         SalesCommentLine: Record 44;
-        CustLedgEntry Record: 21;
-        PostCode Record: 225;
+        CustLedgEntry: Record 21;
+        PostCode: Record 225;
         PostSalesLinesDelete: Codeunit 363;
         "*** DSLoc ***": Integer;
-        ConfSantillana Record: 56001;
-        Localizacion Record: 34003011;
-        GpoContableCte Record: 92;
+        ConfSantillana: Record 56001;
+        Localizacion: Record 34003011;
+        GpoContableCte: Record 92;
 }
 

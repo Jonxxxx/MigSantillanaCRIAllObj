@@ -64,8 +64,8 @@ codeunit 56050 "Clasificacion devoluciones"
     var
         Text001: Label 'El documento de devolución %1 debe estar cerrado.';
         Text002: Label 'El documento de devolución %1 no debe estar procesado.';
-        recUsuAlm Record: 7301;
-        recCfgSantillana Record: 56001;
+        recUsuAlm: Record 7301;
+        recCfgSantillana: Record 56001;
         Text003: Label 'El documento de devolución %1 no contiene líneas.';
         recTmpProd Record: 86000" temporary;
         recTmpFact Record: 86001" temporary;
@@ -87,7 +87,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure GenerarTablaTempProductos(var recPrmCabDev Record: 56025")
     var
-        recLinDev Record: 56026;
+        recLinDev: Record 56026;
     begin
 
         //Genera una tabla con los productos y las cantidades totales que se deben devolver
@@ -176,7 +176,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure GenerarTransfer(var recPrmCabDev Record: 56025; codPrmAlmDestino: Code[10]; codPrmProd: Code[20]; decPrmCdad: Decimal)
     var
-        recLinDev Record: 56026;
+        recLinDev: Record 56026;
         codTrans: Code[20];
     begin
         recTmpTransfer.RESET;
@@ -192,7 +192,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarCabTrans(var recPrmCabDev Record: 56025; codPrmAlmDestino: Code[10]): Code[20]
     var
-        recCabTrans Record: 5740;
+        recCabTrans: Record 5740;
     begin
         recCabTrans.INIT;
         recCabTrans."Devolucion Consignacion" := TRUE;
@@ -219,7 +219,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarLinTrans(codPrmTrans: Code[20]; codPrmProd: Code[20]; decPrmCdad: Decimal)
     var
-        recLinTrans Record: 5741;
+        recLinTrans: Record 5741;
         intLinea: Integer;
     begin
 
@@ -431,7 +431,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarCabDev(var recPrmCabDev Record: 56025; blmPrmLiquidarCdad: Boolean; codPrmFactOrigen: Code[20]; blnPrmPendiente: Boolean; codPrmAlmacen: Code[10]): Code[20]
     var
-        recCabVta Record: 36;
+        recCabVta: Record 36;
         recDocDim: Integer;
     begin
 
@@ -471,7 +471,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarLinDev(codPrmDoc: Code[20]; var recPrmFacProd Record: 86001" temporary; decPrmCdad: Decimal)
     var
-        recLinVta Record: 37;
+        recLinVta: Record 37;
         recDocDim: Integer;
         intLinea: Integer;
     begin
@@ -497,11 +497,11 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure GenerarTablaTempFacturas(var recPrmCabDev Record: 56025")
     var
-        recCabFac Record: 112;
-        recMovCli Record: 21;
-        recLinFac Record: 113;
-        recMovValor Record: 5802;
-        recMovProd Record: 32;
+        recCabFac: Record 112;
+        recMovCli: Record 21;
+        recLinFac: Record 113;
+        recMovValor: Record 5802;
+        recMovProd: Record 32;
         decCdadADev: Decimal;
     begin
         //Genera una tabla temoral con las facturas que podemos liquidar
@@ -587,7 +587,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarDocRelacionado(codPrmDev: Code[20]; intPrmTipo: Integer; codPrmDoc: Code[20])
     var
-        recDocRel Record: 56013;
+        recDocRel: Record 56013;
     begin
         recDocRel.INIT;
         recDocRel."No. clas. devoluciones" := codPrmDev;
@@ -598,7 +598,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure LanzarCabDev(codPrmDoc: Code[20])
     var
-        recCabVta Record: 36;
+        recCabVta: Record 36;
         cduLanzar: Codeunit 414;
     begin
         IF codPrmDoc <> '' THEN BEGIN
@@ -610,7 +610,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure TraerPracesados(var recPrmCabPre Record: 56025"): Integer
     var
-        recDev Record: 56025;
+        recDev: Record 56025;
     begin
         recDev.RESET;
         recDev.COPYFILTERS(recPrmCabPre);
@@ -662,7 +662,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure TraerFacturaAntiguaNoLiquidada(codPrmCliente: Code[20]): Code[20]
     var
-        recMovCli Record: 21;
+        recMovCli: Record 21;
     begin
         //Selecciona la factura mas antigua que no se haya liquidado
         recMovCli.RESET;
@@ -685,7 +685,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure TraerVendedor(codPrmFacLiq: Code[20]; var recPrmCabVta Record: 36")
     var
-        recFacVta Record: 112;
+        recFacVta: Record 112;
     begin
         IF recFacVta.GET(codPrmFacLiq) THEN
             IF recFacVta."Salesperson Code" <> '' THEN
@@ -694,7 +694,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure TraerNumFiscal(codPrmFac: Code[20]): Code[40]
     var
-        recCabFac Record: 112;
+        recCabFac: Record 112;
     begin
         IF recCabFac.GET(codPrmFac) THEN
             EXIT(recCabFac."No. Comprobante Fiscal");

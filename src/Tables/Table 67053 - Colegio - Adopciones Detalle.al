@@ -556,33 +556,33 @@ table 67053 "Colegio - Adopciones Detalle"
     end;
 
     var
-        ConfAPS Record: 67000;
-        ColNiv Record: 67036;
-        Editora Record: 67024;
-        GradoCol Record: 67037;
+        ConfAPS: Record 67000;
+        ColNiv: Record 67036;
+        Editora: Record 67024;
+        GradoCol: Record 67037;
         Item: Record 27;
-        ProdEq Record: 67005;
-        CabAdopciones Record: 67052;
-        DA Record: 67002;
-        ColegioAdopciones Record: 67026;
-        ColegioAdopciones2Record 67026;
-        DimVal Record: 349;
+        ProdEq: Record 67005;
+        CabAdopciones: Record 67052;
+        DA: Record 67002;
+        ColegioAdopciones: Record 67026;
+        ColegioAdopciones2Record: Record 67026;
+        DimVal: Record 349;
         DimForm: Page560;
                      LibroComp: Page67025;
-                     DefDim Record: 352;
-                     ProdEdit Record: 67025;
-                     Nivel Record: 67022;
+                     DefDim: Record 352;
+                     ProdEdit: Record 67025;
+                     Nivel: Record 67022;
                      Err001: Label 'This item has Status of adopted by Santillana';
 
     procedure BuscaHistorico()
     var
-        Adopciones Record: 67026;
-        Adopciones2Record 67026;
-        AdopcionesD Record: 67053;
-        HAdopciones Record: 67035;
-        Editoriales Record: 67024;
-        GradosCol Record: 67037;
-        PptoPromotor Record: 67027;
+        Adopciones: Record 67026;
+        Adopciones2Record: Record 67026;
+        AdopcionesD: Record 67053;
+        HAdopciones: Record 67035;
+        Editoriales: Record 67024;
+        GradosCol: Record 67037;
+        PptoPromotor: Record 67027;
         Camp: Integer;
         UpdateActivo: Boolean;
     begin
@@ -669,8 +669,8 @@ table 67053 "Colegio - Adopciones Detalle"
 
     procedure ActualizaAdopcion(lItem: Record 27)
     var
-        PromRuta Record: 67044;
-        ColAdopcion Record: 67053;
+        PromRuta: Record 67044;
+        ColAdopcion: Record 67053;
     begin
         Editora.SETRANGE(Santillana,TRUE);
         Editora.FINDFIRST;

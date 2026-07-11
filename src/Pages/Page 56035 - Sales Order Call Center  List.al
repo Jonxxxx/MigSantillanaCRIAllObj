@@ -434,7 +434,7 @@ page 56035 "Sales Order Call Center  List"
                     var
                         ICInOutboxMgt: Codeunit 427;
                         ApprovalMgt: Codeunit 1535;
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN
@@ -491,7 +491,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                         ApprovalMgt: Codeunit 1535;
                     begin
                         /*//fes mig
@@ -521,7 +521,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                         ApprovalMgt: Codeunit 1535;
                     begin
                         /*//fes
@@ -603,6 +603,6 @@ page 56035 "Sales Order Call Center  List"
         Text001: Label 'There are non posted Prepayment Amounts on %1 %2.';
         Text002: Label 'There are unpaid Prepayment Invoices related to %1 %2.';
         Cust: Record 18;
-        SH Record: 36;
+        SH: Record 36;
 }
 

@@ -25,7 +25,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rEvExp Record: 67050;
+                rEvExp: Record 67050;
                 pEvExp: Page67100;
             begin
 
@@ -48,8 +48,8 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ExpositorEvento Record: 67050;
-                rEvExp Record: 67050;
+                ExpositorEvento: Record 67050;
+                rEvExp: Record 67050;
                 pEvExp: Page67100;
             begin
                 IF "Cod. evento" <> '' THEN BEGIN
@@ -167,9 +167,9 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                PromotorRutas Record: 67044;
-                ColegioNivel Record: 67036;
-                Docente Record: 67001;
+                PromotorRutas: Record 67044;
+                ColegioNivel: Record 67036;
+                Docente: Record 67001;
                 wINI: Integer;
                 wPRI: Integer;
                 wSEC: Integer;
@@ -180,7 +180,7 @@ table 67055 "Solicitud de Taller - Evento"
                 wPSE: Integer;
                 wIPR: Integer;
                 wIPS: Integer;
-                rGrupoCOL Record: 67089;
+                rGrupoCOL: Record 67089;
                 wFiltroColegio: Text[1024];
             begin
 
@@ -317,7 +317,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rColDoc Record: 67043;
+                rColDoc: Record 67043;
                 pColDoc: Page67045;
             begin
 
@@ -337,7 +337,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ColDoc Record: 67043;
+                ColDoc: Record 67043;
             begin
                 IF ExpositorDoc.GET("Cod. Docente responsable") THEN
                    BEGIN
@@ -609,7 +609,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ED Record: 67024;
+                ED: Record 67024;
             begin
                 "Nombre Editorial Competencia" := '';
                 IF ED.GET("Editorial Competencia") THEN
@@ -625,7 +625,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                Lib Record: 67025;
+                Lib: Record 67025;
             begin
                 "Desc.  Competencia" := '';
                 Lib.SETRANGE(Lib."Cod. Editorial","Editorial Competencia");
@@ -681,7 +681,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                Adop Record: 67035;
+                Adop: Record 67035;
                 fAdop: Page67035;
             begin
 
@@ -769,7 +769,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rEvExp Record: 67050;
+                rEvExp: Record 67050;
                 pEvExp: Page67100;
                             NewSecEvProg: Integer;
             begin
@@ -802,11 +802,11 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ExpositorEvento Record: 67050;
-                rEvExp Record: 67050;
+                ExpositorEvento: Record 67050;
+                rEvExp: Record 67050;
                 pEvExp: Page67100;
                             Err0001: Label 'No existe ning n expositor para el evento programado %1.';
-                CabPlanEvento Record: 67051;
+                CabPlanEvento: Record 67051;
                 Err002: Label 'Esta solicitud ya est  programada para el Evento: %1 Expositor: %2 (%3) Secuencia: %4';
                 NewSecEvProg: Integer;
             begin
@@ -904,7 +904,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                rGrupoCOL Record: 67089;
+                rGrupoCOL: Record 67089;
                 wFiltroColegio: Text[1024];
             begin
                 //Busco los Docentes del Colegio
@@ -990,7 +990,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     trigger OnModify()
     var
-        rCabPlan Record: 67051;
+        rCabPlan: Record 67051;
     begin
         IF FRBitMap.GET(Status) THEN
            BEGIN
@@ -1014,22 +1014,22 @@ table 67055 "Solicitud de Taller - Evento"
     end;
 
     var
-        SolEvento Record: 67055;
-        User Record: 91;
-        Evento Record: 67011;
-        APSSetup Record: 67000;
-        TipoEvento Record: 67010;
-        ExpositorDoc Record: 67001;
-        ExpositorProv Record: 23;
+        SolEvento: Record 67055;
+        User: Record 91;
+        Evento: Record 67011;
+        APSSetup: Record 67000;
+        TipoEvento: Record 67010;
+        ExpositorDoc: Record 67001;
+        ExpositorProv: Record 23;
         Colegio: Record 5050;
         Promotor: Record 13;
-        FRBitMap Record: 67032;
-        DA Record: 67002;
-        ColDocentes Record: 67043;
-        ATE Record: 67016;
-        DefDim Record: 352;
-        DimVal Record: 349;
-        PostCode Record: 225;
+        FRBitMap: Record 67032;
+        DA: Record 67002;
+        ColDocentes: Record 67043;
+        ATE: Record 67016;
+        DefDim: Record 352;
+        DimVal: Record 349;
+        PostCode: Record 225;
         NoSeriesMgt: Codeunit 396;
         DimMgt: Codeunit 408;
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
@@ -1037,7 +1037,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure AssistEdit(OldEvent Record: 67055"): Boolean
     var
-        WorkShop Record: 67012;
+        WorkShop: Record 67012;
     begin
         WITH SolEvento DO BEGIN
             SolEvento := Rec;
@@ -1055,7 +1055,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure CreateDim(Type1: Integer; No1: Code[20]; Type2: Integer; No2: Code[20]; Type3: Integer; No3: Code[20]; Type4: Integer; No4: Code[20]; Type5: Integer; No5: Code[20])
     var
-        SourceCodeSetup Record: 242;
+        SourceCodeSetup: Record 242;
         TableID: array[10] of Integer;
         No: array[10] of Code[20];
         OldDimSetID: Integer;
@@ -1136,12 +1136,12 @@ table 67055 "Solicitud de Taller - Evento"
     var
         Err001: Label 'Debe asignar un evento programado.';
         Err002: Label 'El evento programado no existe.';
-        Ev Record: 67051;
-        rProgramac Record: 67015;
+        Ev: Record 67051;
+        rProgramac: Record 67015;
         Error004: Label 'No ha realizado la programaci n de fechas.';
         Error005: Label 'En la programaci n de fechas es obligatorio indicar los siguientes campos: Fecha programaci n, Hora de Inicio y Hora Final.';
-        rCab Record: 67051;
-        rGrupo Record: 67089;
+        rCab: Record 67051;
+        rGrupo: Record 67089;
         Err003: Label 'No existe el grupo de colegio %1';
         Err006: Label 'No existe el colegio %1';
         rCol: Record 5050;
@@ -1186,7 +1186,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Valida_Aprobado()
     var
-        Distr Record: 67086;
+        Distr: Record 67086;
         Porc: Decimal;
         Err001: Label 'Debe realizar la distribuci n de los centros de costo';
         Err002: Label 'No se han realizado la distribuci n de los centros de costo correctamente';
@@ -1210,17 +1210,17 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Valida_Enviado()
     var
-        rNiveles Record: 67080;
-        rGrados Record: 67081;
-        rEsp Record: 67082;
+        rNiveles: Record 67080;
+        rGrados: Record 67081;
+        rEsp: Record 67082;
         Error001: Label 'No ha indicado los Niveles de los asistentes.';
         Error002: Label 'No ha indicado los Grados de los asistentes.';
         Error003: Label 'No ha indicado las especialidades de los asistentes.';
-        rFechasProp Record: 67088;
+        rFechasProp: Record 67088;
         Error004: Label 'No ha realizado la proposici n de fechas.';
         Error005: Label 'En la proposicion de fechas es obligatorio indicar los siguientes campos: fecha, hora de inicio y hora fin';
-        rTipoEve Record: 67010;
-        rLibrosPres Record: 67085;
+        rTipoEve: Record 67010;
+        rLibrosPres: Record 67085;
         Error006: Label 'Es obligatorio ingresar los libros a presentar.';
         wFec: Date;
         Error007: Label 'Se ha ingresado m s de una fecha diferente. ';
@@ -1297,9 +1297,9 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Crear_Planificacion()
     var
-        CabPlanEvento Record: 67051;
-        FechasProp Record: 67088;
-        ProgTyE Record: 67015;
+        CabPlanEvento: Record 67051;
+        FechasProp: Record 67088;
+        ProgTyE: Record 67015;
     begin
 
         CabPlanEvento.RESET;
@@ -1346,7 +1346,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Tiene_Planificacion(): Boolean
     var
-        CabPlanEvento Record: 67051;
+        CabPlanEvento: Record 67051;
     begin
         CabPlanEvento.RESET;
         CabPlanEvento.SETRANGE("No. Solicitud", "No. Solicitud");
@@ -1355,8 +1355,8 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Valida_Realizado()
     var
-        rProgramac Record: 67015;
-        rCab Record: 67051;
+        rProgramac: Record 67015;
+        rCab: Record 67051;
         Error004: Label 'No ha realizado la programaci n de fechas.';
         Error005: Label 'En la programaci n, no se ha indicado las horas dictadas ';
     begin
@@ -1382,8 +1382,8 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Actualiza_AsistEsperados()
     var
-        CabPlanEvento Record: 67051;
-        ProgTyE Record: 67015;
+        CabPlanEvento: Record 67051;
+        ProgTyE: Record 67015;
     begin
         CabPlanEvento.RESET;
         CabPlanEvento.SETRANGE("Tipo Evento", "Tipo de Evento");
@@ -1411,7 +1411,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure GetFechaPropuesta() rtnFecha: Date
     var
-        PropFechas Record: 67088;
+        PropFechas: Record 67088;
     begin
 
         CLEAR(rtnFecha);
@@ -1423,8 +1423,8 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure GetFechaProgramada() rtnFecha: Date
     var
-        recCabPlan Record: 67051;
-        recProgramacion Record: 67015;
+        recCabPlan: Record 67051;
+        recProgramacion: Record 67015;
     begin
         CLEAR(rtnFecha);
         recCabPlan.RESET;
@@ -1443,8 +1443,8 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure CDS(FiltroColegio: Text[1024])
     var
-        Docente Record: 67001;
-        ColDocentes Record: 67043;
+        Docente: Record 67001;
+        ColDocentes: Record 67043;
         wINI: Integer;
         wPRI: Integer;
         wSEC: Integer;
@@ -1519,14 +1519,14 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure ActualizaPlanif(parExpEv Record: 67050") rtnSec: Integer
     var
-        CabPlanEvento Record: 67051;
-        ProgTyE Record: 67015;
-        Asistentes Record: 67016;
-        CabPlanEventoNEW Record: 67051;
-        ProgTyENEW Record: 67015;
-        AsistentesNEW Record: 67016;
-        MatTallerEvento Record: 67014;
-        MatTallerEventoNEW Record: 67014;
+        CabPlanEvento: Record 67051;
+        ProgTyE: Record 67015;
+        Asistentes: Record 67016;
+        CabPlanEventoNEW: Record 67051;
+        ProgTyENEW: Record 67015;
+        AsistentesNEW: Record 67016;
+        MatTallerEvento: Record 67014;
+        MatTallerEventoNEW: Record 67014;
     begin
 
         rtnSec := 0;

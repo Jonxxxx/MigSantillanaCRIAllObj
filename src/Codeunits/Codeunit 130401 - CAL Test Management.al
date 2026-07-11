@@ -50,7 +50,7 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure DoesTestCodeunitExist(ID: Integer): Boolean
     var
-        AllObjWithCaption Record: 2000000058;
+        AllObjWithCaption: Record 2000000058;
     begin
         AllObjWithCaption.RESET;
         AllObjWithCaption.SETRANGE("Object ID", ID);
@@ -61,10 +61,10 @@ codeunit 130401 "CAL Test Management"
 
     procedure GetTestCodeunitsSelection(CALTestSuite Record: 130400")
     var
-        CALTestLine Record: 130401;
-        AllObjWithCaption Record: 2000000058;
+        CALTestLine: Record 130401;
+        AllObjWithCaption: Record 2000000058;
         TempAllObjWithCaption Record: 2000000058" temporary;
-        CALTestCoverageMap Record: 130406;
+        CALTestCoverageMap: Record 130406;
         CALTestGetCodeunits: Page130403;
         Selection: Integer;
     begin
@@ -101,7 +101,7 @@ codeunit 130401 "CAL Test Management"
 
     local procedure GetTestCodeunits(var ToAllObjWithCaption Record: 2000000058"): Boolean
     var
-        FromAllObjWithCaption Record: 2000000058;
+        FromAllObjWithCaption: Record 2000000058;
     begin
         WITH ToAllObjWithCaption DO BEGIN
             FromAllObjWithCaption.SETRANGE("Object Type", "Object Type"::Codeunit);
@@ -176,7 +176,7 @@ codeunit 130401 "CAL Test Management"
 
     local procedure GetTotalTestCodeunitIDs(var "Object"Record 2000000001; var TestCodeunitID Record: 2000000026"): Integer
     var
-        CALTestCoverageMap Record: 130406;
+        CALTestCoverageMap: Record 130406;
     begin
         REPEAT
             CALTestCoverageMap.RESET;
@@ -195,7 +195,7 @@ codeunit 130401 "CAL Test Management"
 
     local procedure GetLastTestLineNo(TestSuiteName: Code[10]) LineNo: Integer
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         CALTestLine.SETRANGE("Test Suite", TestSuiteName);
         IF CALTestLine.FINDLAST THEN
@@ -204,7 +204,7 @@ codeunit 130401 "CAL Test Management"
 
     procedure CreateNewSuite(var NewSuiteName: Code[10])
     var
-        CALTestSuite Record: 130400;
+        CALTestSuite: Record 130400;
     begin
         WITH CALTestSuite DO BEGIN
             NewSuiteName := DefaultTxt;
@@ -218,7 +218,7 @@ codeunit 130401 "CAL Test Management"
 
     local procedure RefreshSuite(CALTestSuite Record: 130400; var AllObjWithCaption Record: 2000000058")
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
         LineNo: Integer;
     begin
         WITH CALTestLine DO BEGIN
@@ -276,8 +276,8 @@ codeunit 130401 "CAL Test Management"
 
     local procedure AddTestLine(TestSuiteName: Code[10]; TestCodeunitId: Integer; LineNo: Integer)
     var
-        CALTestLine Record: 130401;
-        AllObj Record: 2000000038;
+        CALTestLine: Record 130401;
+        AllObj: Record 2000000038;
         "Object"Record 2000000001;
         CodeunitIsValid: Boolean;
     begin
@@ -319,7 +319,7 @@ codeunit 130401 "CAL Test Management"
 
     local procedure TestLineExists(TestSuiteName: Code[10]; TestCodeunitId: Integer): Boolean
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         CALTestLine.SETRANGE("Test Suite", TestSuiteName);
         CALTestLine.SETRANGE("Test Codeunit", TestCodeunitId);
@@ -329,8 +329,8 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure ExtendTestCoverage(TestCodeunitId: Integer)
     var
-        CodeCoverage Record: 2000000049;
-        CALTestCoverageMap Record: 130406;
+        CodeCoverage: Record 2000000049;
+        CALTestCoverageMap: Record 130406;
     begin
         CodeCoverage.SETRANGE("Line Type", CodeCoverage."Line Type"::Object);
         IF CodeCoverage.FINDSET THEN
@@ -373,7 +373,7 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure RunSelected(var CurrCALTestLine Record: 130401")
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
         CodeunitIsMarked: Boolean;
         LastCodeunitID: Integer;
         LineNoFilter: Text;
@@ -412,7 +412,7 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure RunSuiteYesNo(var CurrCALTestLine Record: 130401")
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
         Selection: Option ,"Function","Codeunit";
         LineNoFilter: Text;
     begin
@@ -436,7 +436,7 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure RunSuite(var CALTestLine Record: 130401; IsTestMode: Boolean)
     var
-        CALTestLine2Record 130401;
+        CALTestLine2Record: Record 130401;
         CALTestRunner: Codeunit 130400;
     begin
         IF IsTestMode THEN BEGIN
@@ -477,8 +477,8 @@ codeunit 130401 "CAL Test Management"
     [Scope('Personalization')]
     procedure EnableTestToRun()
     var
-        CALTestEnabledCodeunit Record: 130403;
-        AllObjWithCaption Record: 2000000058;
+        CALTestEnabledCodeunit: Record 130403;
+        AllObjWithCaption: Record 2000000058;
     begin
         CALTestEnabledCodeunit.DELETEALL;
         AllObjWithCaption.SETRANGE("Object Type", AllObjWithCaption."Object Type"::Codeunit);
@@ -536,7 +536,7 @@ codeunit 130401 "CAL Test Management"
 
     procedure ImportTestToRun(FileName: Text; Clean: Boolean)
     var
-        CALTestEnabledCodeunit Record: 130403;
+        CALTestEnabledCodeunit: Record 130403;
         CALImportEnabledCodeunit: XMLport "130402;
         InStream: InStream;
         File: File;

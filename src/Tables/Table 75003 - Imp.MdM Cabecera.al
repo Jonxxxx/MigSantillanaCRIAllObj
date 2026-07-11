@@ -107,8 +107,8 @@ table 75003 "Imp.MdM Cabecera"
 
     trigger OnDelete()
     var
-        lrImp Record: 75004;
-        lrFields Record: 75005;
+        lrImp: Record 75004;
+        lrFields: Record 75005;
     begin
 
         // Borramos los registros derivados

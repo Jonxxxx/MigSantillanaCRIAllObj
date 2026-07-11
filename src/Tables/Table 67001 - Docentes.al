@@ -114,7 +114,7 @@ table 67001 Docentes
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
                 IF "Document ID" <> '' THEN
                    BEGIN
@@ -537,7 +537,7 @@ table 67001 Docentes
 
             trigger OnValidate()
             var
-                Vend Record: 23;
+                Vend: Record 23;
             begin
                 IF "Cod. Proveedor" <> '' THEN
                    BEGIN
@@ -605,18 +605,18 @@ table 67001 Docentes
 
     trigger OnDelete()
     var
-        Todo Record: 5080;
-        SegLine Record: 5077;
-        ContIndustGrp Record: 5058;
-        ContactWebSource Record: 5060;
-        ContJobResp Record: 5067;
-        ContMailingGrp Record: 5056;
-        ContProfileAnswer Record: 5089;
-        RMCommentLine Record: 5061;
-        ContAltAddr Record: 5051;
-        ContAltAddrDateRange Record: 5052;
-        InteractLogEntry Record: 5065;
-        Opp Record: 5092;
+        Todo: Record 5080;
+        SegLine: Record 5077;
+        ContIndustGrp: Record 5058;
+        ContactWebSource: Record 5060;
+        ContJobResp: Record 5067;
+        ContMailingGrp: Record 5056;
+        ContProfileAnswer: Record 5089;
+        RMCommentLine: Record 5061;
+        ContAltAddr: Record 5051;
+        ContAltAddrDateRange: Record 5052;
+        InteractLogEntry: Record 5065;
+        Opp: Record 5092;
         CampaignTargetGrMgt: Codeunit 7030;
     begin
         //CreditCards.DeleteByContact(Rec);
@@ -660,11 +660,11 @@ table 67001 Docentes
         Text007: Label '%1 cannot be changed because there are one or more related people linked to the contact.';
         Text009: Label 'The %2 record of the %1 has been created.';
         Text010: Label 'The %2 record of the %1 is not linked with any other table.';
-        APSSetup Record: 67000;
-        Docente Record: 67001;
-        JobType Record: 67002;
-        PostCode Record: 225;
-        ColDoc Record: 67043;
+        APSSetup: Record 67000;
+        Docente: Record 67001;
+        JobType: Record 67002;
+        PostCode: Record 225;
+        ColDoc: Record 67043;
         RecRef: RecordRef;
         xRecRef: RecordRef;
         NoSeriesMgt: Codeunit 396;
@@ -679,19 +679,19 @@ table 67001 Docentes
         Text032: Label 'The length of %1 is %2 character(s)longer than the maximum length allowed for the %1 field.';
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         rRec: RecordRef;
-        DA Record: 67002;
+        DA: Record 67002;
         Text034: Label 'There is al ready a %1 %2 associated with %3 %45';
-        territory Record: 286;
-        PostCodeRec Record: 225;
+        territory: Record 286;
+        PostCodeRec: Record 225;
         PostCodeForm: Page367;
                           formTerritory: Page429;
-                          RECcOUNTRY Record: 9;
-                          ColDocente Record: 67043;
+                          RECcOUNTRY: Record 9;
+                          ColDocente: Record 67043;
                           Text035: Label 'There are records associated with this Teacher, review them in% 1';
 
     procedure DisplayMap()
     var
-        MapPoint Record: 800;
+        MapPoint: Record 800;
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN

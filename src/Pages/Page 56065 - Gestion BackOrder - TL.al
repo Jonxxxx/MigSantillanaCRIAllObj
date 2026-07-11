@@ -309,7 +309,7 @@ page 56065 "Gestion BackOrder - TL"
 
     var
         SalesInfoPaneMgt: Codeunit 7171;
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -319,11 +319,11 @@ page 56065 "Gestion BackOrder - TL"
         Text002: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         PrevTime: Time;
-        TH Record: 5740;
-        TL Record: 5741;
-        WHSL Record: 7321;
+        TH: Record 5740;
+        TL: Record 5741;
+        WHSL: Record 7321;
         Text004: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        TL1Record 5741;
+        TL1Record: Record 5741;
         PedTrans: Page5740;
                       Text006: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
 }

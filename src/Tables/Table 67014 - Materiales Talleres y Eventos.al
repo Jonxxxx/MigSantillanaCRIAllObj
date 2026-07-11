@@ -97,8 +97,8 @@ table 67014 "Materiales Talleres y Eventos"
     }
 
     var
-        Evento Record: 67011;
-        DA Record: 67002;
+        Evento: Record 67011;
+        DA: Record 67002;
         Item: Record 27;
 }
 

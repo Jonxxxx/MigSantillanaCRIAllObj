@@ -71,8 +71,8 @@ page 50000 "Pantalla Scanner manual"
         DescPro: Text[200];
         wCantidad: Decimal;
         cCodBarras: Code[20];
-        rUdadMedProd Record: 5404;
-        rTransferLine Record: 5741;
+        rUdadMedProd: Record 5404;
+        rTransferLine: Record 5741;
         txt0001: Label 'Producto no se encuentra en Lineas de Transferencia %1 %2';
         txt0002: Label 'No se encuentra el codigo de barra %2';
         Text19049871: Label 'No. Documento';
@@ -86,7 +86,7 @@ page 50000 "Pantalla Scanner manual"
 
     procedure BuscarEnPedido()
     var
-        rItemCrossRe Record: 5717;
+        rItemCrossRe: Record 5717;
         rItem: Record 27;
     begin
         IF cCodBarras <> '' THEN BEGIN
@@ -117,7 +117,7 @@ page 50000 "Pantalla Scanner manual"
 
     local procedure cCodBarrasOnDeactivate()
     var
-        rItemCrossRe Record: 5717;
+        rItemCrossRe: Record 5717;
         rItem: Record 27;
     begin
         rItemCrossRe.RESET;

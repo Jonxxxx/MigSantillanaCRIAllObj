@@ -42,8 +42,8 @@ table 67058 "Ranking CVM"
 
             trigger OnValidate()
             var
-                DefDim Record: 352;
-                ConfAPS Record: 67000;
+                DefDim: Record 352;
+                ConfAPS: Record 67000;
             begin
                 ConfAPS.GET();
                 IF ConfAPS."Cod. Dimension Serie" <> '' THEN BEGIN

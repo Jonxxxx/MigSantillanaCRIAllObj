@@ -156,17 +156,17 @@ table 67011 Eventos
     end;
 
     var
-        Evento Record: 67011;
-        TipoEvento Record: 67010;
+        Evento: Record 67011;
+        TipoEvento: Record 67010;
         NoSeriesMgt: Codeunit 396;
-        DA Record: 67002;
-        ConfAPS Record: 67000;
-        DimVal Record: 349;
+        DA: Record 67002;
+        ConfAPS: Record 67000;
+        DimVal: Record 349;
         DimForm: Page560;
 
     procedure AssistEdit(OldEvent Record: 67011"): Boolean
     var
-        WorkShop Record: 67012;
+        WorkShop: Record 67012;
     begin
         WITH Evento DO BEGIN
             Evento := Rec;

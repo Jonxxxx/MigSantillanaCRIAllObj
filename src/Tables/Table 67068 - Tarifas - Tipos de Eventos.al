@@ -12,7 +12,7 @@ table 67068 "Tarifas - Tipos de Eventos"
 
             trigger OnLookup()
             var
-                recPostCode Record: 225;
+                recPostCode: Record 225;
             begin
                 /*Peru
                 IF PAGE.RUNMODAL(0,recPostCode) = ACTION::LookupOK THEN BEGIN

@@ -270,7 +270,7 @@ tableextension 70000084 tableextension70000084 extends "Warehouse Activity Line"
 
     procedure TestNonSpecificItemTracking()
     var
-        ItemJournalLine Record: 83;
+        ItemJournalLine: Record 83;
         WhseSNRequired: Boolean;
         WhseLNRequired: Boolean;
         SNRequired: Boolean;

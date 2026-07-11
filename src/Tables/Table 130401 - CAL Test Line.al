@@ -47,7 +47,7 @@ table 130401 "CAL Test Line"
 
             trigger OnValidate()
             var
-                AllObjWithCaption Record: 2000000058;
+                AllObjWithCaption: Record 2000000058;
             begin
                 IF "Test Codeunit" = 0 THEN
                     EXIT;
@@ -185,14 +185,14 @@ table 130401 "CAL Test Line"
     end;
 
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
         CannotChangeValueErr: Label 'You cannot change the value of the OnRun.', Locked=true;
         CALTestMgt: Codeunit 130401;
 
     [Scope('Personalization')]
     procedure UpdateGroup(var CALTestLine Record: 130401")
     var
-        CopyOfCALTestLine Record: 130401;
+        CopyOfCALTestLine: Record 130401;
         OutOfGroup: Boolean;
     begin
         IF NOT CALTestLine.Run THEN
@@ -223,7 +223,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure UpdateChildren(var CALTestLine Record: 130401")
     var
-        CopyOfCALTestLine Record: 130401;
+        CopyOfCALTestLine: Record 130401;
     begin
         IF CALTestLine."Line Type" = "Line Type"::"Function" THEN
           EXIT;
@@ -243,7 +243,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure GetMinCodeunitLineNo() MinLineNo: Integer
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         WITH CALTestLine DO BEGIN
           COPY(Rec);
@@ -260,7 +260,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure GetMaxGroupLineNo() MaxLineNo: Integer
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         WITH CALTestLine DO BEGIN
           COPY(Rec);
@@ -276,7 +276,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure GetMaxCodeunitLineNo(var NoOfFunctions: Integer) MaxLineNo: Integer
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         TESTFIELD("Test Codeunit");
         NoOfFunctions := 0;
@@ -297,7 +297,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure DeleteChildren()
     var
-        CopyOfCALTestLine Record: 130401;
+        CopyOfCALTestLine: Record 130401;
     begin
         CopyOfCALTestLine.COPY(Rec);
         RESET;
@@ -310,7 +310,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure CalcTestResults(var Success: Integer;var Fail: Integer;var Skipped: Integer;var NotExecuted: Integer)
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         CALTestLine.SETRANGE("Test Suite","Test Suite");
         CALTestLine.SETFILTER("Function",'<>%1','OnRun');
@@ -344,7 +344,7 @@ table 130401 "CAL Test Line"
     [Scope('Personalization')]
     procedure ShowTestResults()
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
     begin
         CALTestResult.SETRANGE("Codeunit ID","Test Codeunit");
         IF "Function" <> '' THEN

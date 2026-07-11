@@ -320,7 +320,7 @@ tableextension 70000002 tableextension70000002 extends "Sales Shipment Header"
     [Scope('Personalization')]
     procedure ExportEDocument()
     var
-        TempBlob Record: 99008535;
+        TempBlob: Record 99008535;
         FileManagement: Codeunit 419;
     begin
         CALCFIELDS("Signed Document XML");

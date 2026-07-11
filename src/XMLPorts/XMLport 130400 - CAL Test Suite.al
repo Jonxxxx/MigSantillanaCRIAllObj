@@ -64,7 +64,7 @@ xmlport 130400 "CAL Test Suite"
 
                         trigger OnAfterInsertRecord()
                         var
-                            CopyOfCALTestLine Record: 130401;
+                            CopyOfCALTestLine: Record 130401;
                         begin
                             IF ("<CAL Test Line>"."Test Codeunit" <> 0) AND
                                ("<CAL Test Line>"."Function" = '')
@@ -118,7 +118,7 @@ xmlport 130400 "CAL Test Suite"
     }
 
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
         CALTestMgt: Codeunit 130401;
 }
 

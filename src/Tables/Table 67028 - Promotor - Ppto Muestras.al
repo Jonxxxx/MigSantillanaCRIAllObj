@@ -82,6 +82,6 @@ table 67028 "Promotor - Ppto Muestras"
     var
         Item: Record 27;
         Prom: Record 13;
-        ProdEquivalente Record: 67005;
+        ProdEquivalente: Record 67005;
 }
 

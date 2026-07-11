@@ -77,8 +77,8 @@ table 67059 "Equipos Talleres y Eventos"
     end;
 
     var
-        Evento Record: 67011;
-        DA Record: 67002;
+        Evento: Record 67011;
+        DA: Record 67002;
         Item: Record 27;
 }
 

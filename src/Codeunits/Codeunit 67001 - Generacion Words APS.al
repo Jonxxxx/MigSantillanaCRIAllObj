@@ -19,8 +19,8 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordSolicitudAsistencia(codPrmSolicitud: Code[20])
     var
-        recCfgAPS Record: 67000;
-        recSolicitud Record: 67055;
+        recCfgAPS: Record 67000;
+        recSolicitud: Record 67055;
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
@@ -147,13 +147,13 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure InsertarTablaProgamacion(recPrmSolicitud Record: 67055")
     var
-        recProgramacion Record: 67015;
+        recProgramacion: Record 67015;
         intFila: Integer;
         Text001: Label 'Propuesto';
         Text002: Label 'Fecha';
         Text003: Label 'Hora inicio';
         Text004: Label 'Hora final';
-        recCabPlan Record: 67051;
+        recCabPlan: Record 67051;
         Text005: Label 'Programado';
         Text006: Label 'Solo C.C.';
         Text007: Label 'Grado';
@@ -299,14 +299,14 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure InsertarTablaAsistentes2(recPrmSolicitud Record: 67055")
     var
-        recAsistentes Record: 67016;
+        recAsistentes: Record 67016;
         intFila: Integer;
         Text001: Label 'Asistentes';
         Text002: Label 'Cód. docente';
         Text003: Label 'Nombre';
         Text004: Label 'Nivel';
-        recProgramacion Record: 67015;
-        recCabPlan Record: 67051;
+        recProgramacion: Record 67015;
+        recCabPlan: Record 67051;
     begin
         //CPMCR-CEC+
         /*
@@ -368,7 +368,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure InsertarTablaMaterial2(recPrmSolicitud Record: 67055")
     var
-        recMaterial Record: 67014;
+        recMaterial: Record 67014;
         intFila: Integer;
         Text001: Label 'Material';
         Text002: Label 'Código';
@@ -424,7 +424,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionTurno(codPrmTurno: Code[20]): Text[100]
     var
-        recTurno Record: 67002;
+        recTurno: Record 67002;
     begin
         IF recTurno.GET(recTurno."Tipo registro"::Turnos, codPrmTurno) THEN
             EXIT(recTurno.Descripcion);
@@ -432,7 +432,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionLocal(codPrmColegio: Code[20]; codPrmLocal: Code[20]): Text[250]
     var
-        recLocal Record: 5051;
+        recLocal: Record 5051;
     begin
         IF recLocal.GET(codPrmColegio, codPrmLocal) THEN
             EXIT(recLocal.Code + ' - ' + recLocal."Company Name" + ' - ' + recLocal.Address + ' - ' + recLocal.City);
@@ -440,7 +440,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionNivel(codPrmNivel: Code[20]): Text[100]
     var
-        recNivel Record: 67022;
+        recNivel: Record 67022;
     begin
         IF recNivel.GET(codPrmNivel) THEN
             EXIT(recNivel.Descripción);
@@ -448,7 +448,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionTipoEvento(codPrmTipoEvento: Code[20]): Text[100]
     var
-        recTipoEvento Record: 67010;
+        recTipoEvento: Record 67010;
     begin
         IF recTipoEvento.GET(codPrmTipoEvento) THEN
             EXIT(recTipoEvento.Descripcion);
@@ -456,8 +456,8 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerNivelDocente(codPrmDocente: Code[20]): Text[100]
     var
-        recDocente Record: 67001;
-        recNivel Record: 67022;
+        recDocente: Record 67001;
+        recNivel: Record 67022;
     begin
         IF recDocente.GET(codPrmDocente) THEN
             IF recNivel.GET(recDocente."Nivel Docente") THEN
@@ -504,8 +504,8 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordPPFF(codPrmSolicitud: Code[20])
     var
-        recCfgAPS Record: 67000;
-        recSolicitud Record: 67055;
+        recCfgAPS: Record 67000;
+        recSolicitud: Record 67055;
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
@@ -519,8 +519,8 @@ codeunit 67001 "Generacion Words APS"
         texRuta: Text[1024];
         Text002: Label 'El documento Word se ha generado y guardado en la ruta: ';
         tipoPlantilla: Option Solicitud,PPFF,VisitasCA;
-        recCabPlan Record: 67051;
-        recProgramacion Record: 67015;
+        recCabPlan: Record 67051;
+        recProgramacion: Record 67015;
         textFechaProg: Text[30];
         textHoraInicio: Text[30];
         textHoraFin: Text[30];
@@ -621,7 +621,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure TraerDescripcionDelegacion(codDelegacion: Code[20]): Text[100]
     var
-        recDelegacion Record: 349;
+        recDelegacion: Record 349;
     begin
         IF codDelegacion = '' THEN
             EXIT('');
@@ -631,17 +631,17 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure InsertarTablaAsistentes(recPrmSolicitud Record: 67055")
     var
-        recAsistentes Record: 67016;
+        recAsistentes: Record 67016;
         intFila: Integer;
         Text001: Label 'Asistentes';
         Text002: Label 'Especialidad';
         Text003: Label 'Grado';
         Text004: Label 'Nivel';
-        recProgramacion Record: 67015;
-        recCabPlan Record: 67051;
-        recNivel Record: 67080;
-        recGrado Record: 67081;
-        recEspec Record: 67082;
+        recProgramacion: Record 67015;
+        recCabPlan: Record 67051;
+        recNivel: Record 67080;
+        recGrado: Record 67081;
+        recEspec: Record 67082;
         lineas: Integer;
         nCol: Integer;
     begin
@@ -741,13 +741,13 @@ codeunit 67001 "Generacion Words APS"
         Text002: Label 'Editorial';
         Text003: Label 'Cód. Artículo';
         Text004: Label 'Descripción';
-        recAdop Record: 67035;
-        rGrupoCOL Record: 67089;
+        recAdop: Record 67035;
+        rGrupoCOL: Record 67089;
         Text005: Label 'Grado';
         Text006: Label 'Hras. por sem.';
         nCol: Integer;
         wCount: Integer;
-        recAdop2Record 67035;
+        recAdop2Record: Record 67035;
     begin
         //CPMCR-CEC+
         /*
@@ -895,7 +895,7 @@ codeunit 67001 "Generacion Words APS"
         Text005: Label 'Hras. por sem.';
         Text006: Label 'Año de la Comp.';
         nCol: Integer;
-        recCompetencia Record: 67087;
+        recCompetencia: Record 67087;
     begin
         //CPMCR-CEC+
         /*
@@ -969,7 +969,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordVisitasCA(parConsultor: Code[20]; parNomConsultor: Text[90]; parFecha1: Date; parFecha2: Date; parDelegacion: Code[20]; parLn: Code[20]; parEstado: Option " ",Programada,Ejecutada)
     var
-        recCfgAPS Record: 67000;
+        recCfgAPS: Record 67000;
         recColegio: Record 5050;
         texPlantillaDot: Text[255];
         texNombreCampo: Text[100];
@@ -981,9 +981,9 @@ codeunit 67001 "Generacion Words APS"
         texRuta: Text[1024];
         Text002: Label 'El documento Word se ha generado y guardado en la ruta: ';
         tipoPlantilla: Option Solicitud,PPFF,VisitasCA;
-        recCab Record: 67102;
+        recCab: Record 67102;
         ToFile: Text[255];
-        Prog Record: 67103;
+        Prog: Record 67103;
         wAntVisita: Code[20];
         wAntFecha: Date;
         wAntCodigo: Code[20];
@@ -1098,12 +1098,12 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure InsertarTablaVisitas(var Prog Record: 67103; parCodigo: Code[20]; parNombre: Text[80]; parFecha1: Date; parFecha2: Date; var intFila: Integer; totalvis: Integer)
     var
-        recProgramacion Record: 67015;
+        recProgramacion: Record 67015;
         Text001: Label 'Propuesto';
         Text002: Label 'Fecha';
         Text003: Label 'Hora inicio';
         Text004: Label 'Hora final';
-        recCabPlan Record: 67051;
+        recCabPlan: Record 67051;
         Text005: Label 'Programado';
         Text006: Label 'Solo C.C.';
         Text007: Label 'Grado';
@@ -1279,7 +1279,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GetTipoEvento(parProg Record: 67103") rtnTE: Code[20]
     var
-        recCab Record: 67102;
+        recCab: Record 67102;
     begin
         CLEAR(rtnTE);
         IF recCab.GET(parProg."No. Visita") THEN
@@ -1307,7 +1307,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GetDistrito(parVisita: Code[20]) rtnValue: Text[30]
     var
-        rVisita Record: 67102;
+        rVisita: Record 67102;
     begin
 
         CLEAR(rtnValue);

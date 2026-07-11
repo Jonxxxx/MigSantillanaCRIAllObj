@@ -517,7 +517,7 @@ table 80005 "Tmp Purch. Inv. Header"
 
             trigger OnValidate()
             var
-                rVendorPostingGr Record: 93;
+                rVendorPostingGr: Record 93;
             begin
             end;
         }
@@ -586,10 +586,10 @@ table 80005 "Tmp Purch. Inv. Header"
     }
 
     var
-        PurchInvHeader Record: 122;
-        PurchCommentLine Record: 43;
-        VendLedgEntry Record: 25;
-        PostCode Record: 225;
+        PurchInvHeader: Record 122;
+        PurchCommentLine: Record 43;
+        VendLedgEntry: Record 25;
+        PostCode: Record 225;
         PostPurchLinesDelete: Codeunit 364;
         DimMgt: Codeunit 408;
 }

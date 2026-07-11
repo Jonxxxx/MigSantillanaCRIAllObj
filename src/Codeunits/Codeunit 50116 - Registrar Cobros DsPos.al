@@ -23,29 +23,29 @@ codeunit 50116 "Registrar Cobros DsPos"
     var
         dImporte: Integer;
         ImporteNeto: Integer;
-        ConfigEmpresa Record: 56001;
-        rBankAccountLedgerEntry Record: 271;
+        ConfigEmpresa: Record 56001;
+        rBankAccountLedgerEntry: Record 271;
         ImporteLiquidadoBanco: Decimal;
         ImporteTotalSic: Decimal;
         Message001: Label 'The invoice %1 has already been paid.';
         Message002: Label 'The sales credit memo %1 has already been settled.';
         Error003: Label '%1 está desactivado en Config. Santillana.';
-        GenJnlLine Record: 81;
+        GenJnlLine: Record 81;
         GenJnlPostLine: Codeunit 12;
-        OldCustLedgEntry Record: 21;
+        OldCustLedgEntry: Record 21;
         NoLin: Integer;
-        MediosdePagoMG Record: 50113;
-        ConfMediosdepagos Record: 50110;
-        Bancostienda Record: 34002504;
-        SIH Record: 112;
-        SCRM Record: 114;
+        MediosdePagoMG: Record 50113;
+        ConfMediosdepagos: Record 50110;
+        Bancostienda: Record 34002504;
+        SIH: Record 112;
+        SCRM: Record 114;
         MontoIva: Decimal;
-        MedPagoSIC Record: 50113;
+        MedPagoSIC: Record 50113;
         CustEntryApplyPostedEntries: Codeunit 226;
-        DetailedCustLedgEntry Record: 379;
-        BankAccountLedgerEntry Record: 271;
-        CustLedgerEntry Record: 21;
-        GeneralLedgerSetup Record: 98;
+        DetailedCustLedgEntry: Record 379;
+        BankAccountLedgerEntry: Record 271;
+        CustLedgerEntry: Record 21;
+        GeneralLedgerSetup: Record 98;
 
     [Scope('Personalization')]
     procedure RegistrarCobrosFacturaTPV(SalesInvHeader Record: 112")
@@ -545,13 +545,13 @@ codeunit 50116 "Registrar Cobros DsPos"
 
     procedure ProcesaNoLiquidados()
     var
-        SalesInvoiceHeader Record: 112;
-        SalesCrMemoHeader Record: 114;
-        BankAccountLedgerEntry Record: 271;
+        SalesInvoiceHeader: Record 112;
+        SalesCrMemoHeader: Record 114;
+        BankAccountLedgerEntry: Record 271;
         ImporteLiquidado: Decimal;
         FechaInicio: Date;
         CantidadDocs: Integer;
-        MediosdePagoSIC Record: 50113;
+        MediosdePagoSIC: Record 50113;
     begin
         //SANTINAV-7551+ //LDP //04/02/2025
         //Facturas+

@@ -28,7 +28,7 @@ page 130415 "Semi-Manual Test Wizard"
 
                         trigger OnDrillDown()
                         var
-                            AllObjWithCaption Record: 2000000058;
+                            AllObjWithCaption: Record 2000000058;
                             GetSemiManualTestCodeunits: Page130416;
                         begin
                             GetSemiManualTestCodeunits.LOOKUPMODE := TRUE;
@@ -101,7 +101,7 @@ page 130415 "Semi-Manual Test Wizard"
 
                 trigger OnAction()
                 var
-                    SemiManualExecutionLog Record: 130416;
+                    SemiManualExecutionLog: Record 130416;
                     FileManagement: Codeunit 419;
                     File: File;
                     OutStream: OutStream;
@@ -185,7 +185,7 @@ page 130415 "Semi-Manual Test Wizard"
     end;
 
     var
-        SemiManualExecutionLog Record: 130416;
+        SemiManualExecutionLog: Record 130416;
         StepHeading: Text;
         ManualSteps: Text;
         CodeunitId: Integer;
@@ -196,7 +196,7 @@ page 130415 "Semi-Manual Test Wizard"
 
     local procedure LoadTest()
     var
-        AllObjWithCaption Record: 2000000058;
+        AllObjWithCaption: Record 2000000058;
     begin
         TestExecuting := FALSE;
         IF CodeunitId <= 0 THEN

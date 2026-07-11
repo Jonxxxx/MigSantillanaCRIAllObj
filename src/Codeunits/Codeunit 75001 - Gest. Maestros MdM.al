@@ -16,15 +16,15 @@ codeunit 75001 "Gest. Maestros MdM"
         cAsynMng: Codeunit 75005;
         cTrasp: Codeunit 75007;
         cNotifPrec: Codeunit 75008;
-        rConfMdM Record: 75000;
+        rConfMdM: Record 75000;
         rImp Record: 75004" temporary;
         rCab Record: 75003" temporary;
-        rCabRl Record: 75003;
+        rCabRl: Record 75003;
         rField Record: 75005" temporary;
         Text001: Label 'El tipo de dato %1 no está permitido en la importación de datos. Campo %2';
-        rConvNM Record: 75007;
-        rConfSant Record: 56001;
-        rConfCont Record: 98;
+        rConvNM: Record 75007;
+        rConfSant: Record 56001;
+        rConfCont: Record 98;
         wIds: array[3] of Integer;
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
         wDia: Dialog;
@@ -58,7 +58,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure ImpCabExcel()
     var
-        lrCabR Record: 75003;
+        lrCabR: Record 75003;
     begin
         // ImpCabExcel
 
@@ -243,7 +243,7 @@ codeunit 75001 "Gest. Maestros MdM"
         rCab.DOC.CREATEOUTSTREAM(pwOutStrm);
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport "75003")
+    procedure GestMessageXML(var pxResp: XMLport 75003)
     var
         lwError: Boolean;
         lwErrorText: Text;
@@ -277,7 +277,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     local procedure GetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwTipo: Option Ancho,Alto,Peso) wValor: Decimal
     var
-        lrUnid Record: 5404;
+        lrUnid: Record 5404;
     begin
         // GetUnid
         // Devuelve elementos de la unidad de medida
@@ -313,8 +313,8 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure PasarAReal(var prCab Record: 75003" temporary; var prImp Record: 75004" temporary; var prField Record: 75005" temporary; pwTraspasa: Boolean)
     var
-        lrImpR Record: 75004;
-        lrFieldR Record: 75005;
+        lrImpR: Record 75004;
+        lrFieldR: Record 75005;
         lwDesde: Integer;
         lwHasta: Integer;
     begin
@@ -372,8 +372,8 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        lrObjects Record: 2000000001;
-        lrObjects2Record 2000000058;
+        lrObjects: Record 2000000001;
+        lrObjects2Record: Record 2000000058;
     begin
         // GetTableCaption
         // Devuelve el caption de la tabla
@@ -407,7 +407,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure GetFieldCaption(pwTableId: Integer; pwFieldId: Integer) wText: Text
     var
-        lrFields Record: 2000000041;
+        lrFields: Record 2000000041;
         LTEXT0001: Label 'Ancho';
         LTEXT0002: Label 'Alto';
         LTEXT0003: Label 'Peso';
@@ -630,7 +630,7 @@ codeunit 75001 "Gest. Maestros MdM"
         lwPrecConImpt: array[2] of Decimal;
         lwPrecSinImpt: array[2] of Decimal;
         lrProd: Record 27;
-        lrPrec Record: 7002;
+        lrPrec: Record 7002;
         lrPrTmp Record: 7002" temporary;
         lwEnc: Boolean;
         lwCambs: array[10] of Boolean;
@@ -753,7 +753,7 @@ codeunit 75001 "Gest. Maestros MdM"
     var
         lwPrecConImpt: Decimal;
         lwPrecSinImpt: Decimal;
-        lrPrec Record: 7002;
+        lrPrec: Record 7002;
         lwCambs: array[10] of Boolean;
         lwDivisa: Code[10];
         lwFechaPrec: Date;
@@ -790,7 +790,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure GetPrecioVta(prProd: Record 27; pwFecha: Date; var pwPrecConImpt: Decimal; var pwPrecSinImpt: Decimal; var pwDivisa: Code[10]) wEnc: Boolean
     var
-        lrPrec Record: 7002;
+        lrPrec: Record 7002;
     begin
 
         // GetPrecioVta
@@ -861,8 +861,8 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure ConfPrecVta(prProd: Record 27; prPrec Record: 7002; var pwPrecConImpt: Decimal; var pwPrecSinImpt: Decimal; var pwDivisa: Code[10])
     var
-        lrVatSetup Record: 325;
-        lrDiv Record: 4;
+        lrVatSetup: Record 325;
+        lrDiv: Record 4;
     begin
         // ConfPrecVta
 
@@ -1063,7 +1063,7 @@ codeunit 75001 "Gest. Maestros MdM"
     var
         lwCod: Code[21];
         lwCod2: Code[21];
-        lrConfEA Record: 75009;
+        lrConfEA: Record 75009;
         lwN: Integer;
         lwFId: Integer;
         lwRecR: RecordRef;
@@ -1113,7 +1113,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure SetCamposRelacionados(var prProd: Record 27) Result: Boolean
     var
-        lrCampRel Record: 75010;
+        lrCampRel: Record 75010;
         lrCRlTmp Record: 75010" temporary;
         lrFieldsTmp Record: 2000000026" temporary;
         lwIdFieldOr: Integer;
@@ -1207,7 +1207,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure SetCamposRelacionados2(var prProd: Record 27; var prTmpField Record: 75005" temporary) Result: Boolean
     var
-        lrCampRel Record: 75010;
+        lrCampRel: Record 75010;
         lrCRlTmp Record: 75010" temporary;
         lrFieldsTmp Record: 2000000026" temporary;
         lwIdFieldOr: Integer;

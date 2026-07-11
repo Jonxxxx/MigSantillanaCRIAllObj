@@ -12,7 +12,7 @@ codeunit 56002 "NAS  - Santillana"
     var
         RunAM: Text[3];
         Parameter: Text[2];
-        EstatusNAS Record: 52500;
+        EstatusNAS: Record 52500;
         xx: Text[250];
         xx1: Integer;
         xx2: Text[250];

@@ -76,6 +76,6 @@ table 67070 "Historico Promotor - Ppto Vtas"
     var
         Prom: Record 13;
         Item: Record 27;
-        ProdEquivalente Record: 67005;
+        ProdEquivalente: Record 67005;
 }
 

@@ -354,25 +354,25 @@ page 56064 "Gestion BackOrder - SL"
 
     var
         SalesInfoPaneMgt: Codeunit 7171;
-        SalesLine Record: 37;
+        SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit 414;
-        salesheader Record: 36;
-        AppTemp Record: 464;
+        salesheader: Record 36;
+        AppTemp: Record 464;
         ApprovalMgt: Codeunit 1535;
         EstatusPed: Option Abierto,Lanzado,"Aprobación pendiente","Anticipo pendiente";
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
         PrevTime: Time;
-        SalesLine2Record 37;
-        WHSL Record: 7321;
+        SalesLine2Record: Record 37;
+        WHSL: Record 7321;
         CantidadDis: Decimal;
-        SH Record: 36;
-        AppEnt Record: 454;
-        AppEnt1Record 454;
-        AppEnt2Record 454;
-        SL Record: 37;
+        SH: Record 36;
+        AppEnt: Record 454;
+        AppEnt1Record: Record 454;
+        AppEnt2Record: Record 454;
+        SL: Record 37;
         PedVta: Page42;
                     Error001: Label 'Qty. to Adjust cannot be grater than the availability';
         Error002: Label 'User does not have permision to approve quantities in sales orders';

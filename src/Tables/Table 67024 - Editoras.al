@@ -98,6 +98,6 @@ table 67024 Editoras
     }
 
     var
-        PostCode Record: 225;
+        PostCode: Record 225;
 }
 

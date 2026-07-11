@@ -89,7 +89,7 @@ page 67178 "Estado Pago Expo. Eve. Planif."
 
     trigger OnAfterGetRecord()
     var
-        recCostos Record: 67086;
+        recCostos: Record 67086;
     begin
         wTextCostos := '';
         IF "No. Solicitud" <> '' THEN BEGIN

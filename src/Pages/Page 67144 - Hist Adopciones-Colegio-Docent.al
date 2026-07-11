@@ -56,9 +56,9 @@ page 67144 "Hist Adopciones-Colegio-Docent"
     }
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         Item: Record 27;
-        DefDim Record: 352;
+        DefDim: Record 352;
         TextoEncabezado: array[30] of Text[30];
         DimValue: Text[60];
         i: Integer;

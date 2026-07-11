@@ -8,8 +8,8 @@ codeunit 52501 "Calcular Nuevos Campo FA"
     end;
 
     var
-        rFAsset Record: 5600;
-        rFALentry Record: 5601;
+        rFAsset: Record 5600;
+        rFALentry: Record 5601;
         pFAList: Page5601;
 
     procedure CalcularFechaAdquisicion(pActivo: Code[20]): Date

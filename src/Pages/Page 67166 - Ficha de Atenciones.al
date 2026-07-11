@@ -158,9 +158,9 @@ page 67166 "Ficha de Atenciones"
                 trigger OnAction()
                 var
                     fPed: Page9349;
-                    rPed Record: 5107;
-                    rLin Record: 5108;
-                    rDetAt Record: 67100;
+                    rPed: Record 5107;
+                    rLin: Record 5108;
+                    rDetAt: Record 67100;
                 begin
                     rPed.FILTERGROUP(2);
                     rPed.SETRANGE("Document Type", rPed."Document Type"::Order);
@@ -201,10 +201,10 @@ page 67166 "Ficha de Atenciones"
                 trigger OnAction()
                 var
                     fPed: Page5752;
-                    rPed Record: 5744;
-                    rLin Record: 5745;
-                    rDetAt Record: 67100;
-                    rSalesPrice Record: 7002;
+                    rPed: Record 5744;
+                    rLin: Record 5745;
+                    rDetAt: Record 67100;
+                    rSalesPrice: Record 7002;
                 begin
                     fPed.LOOKUPMODE(TRUE);
                     fPed.EDITABLE(FALSE);
@@ -288,7 +288,7 @@ page 67166 "Ficha de Atenciones"
 
     procedure ValidaDistrCC()
     var
-        Distr Record: 67101;
+        Distr: Record 67101;
         Err001: Label 'Debe realizar la distribución de los centros de costo';
         Err002: Label 'No se han realizado la distribución de los centros de costo correctamente';
         Porc: Decimal;

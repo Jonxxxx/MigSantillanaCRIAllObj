@@ -35,7 +35,7 @@ codeunit 56203 "Async MdX NAV WS"
 
     local procedure TryCreateNewQueue(ProcessCode: Code[50]; ProcessURLWS: Text[150]; ProcessSoapAction: Text[50]; ProcessData: Text; var QueueId: Integer) Success: Boolean
     var
-        AsyncNAVProcessQueue Record: 56200;
+        AsyncNAVProcessQueue: Record 56200;
     begin
         WITH AsyncNAVProcessQueue DO BEGIN
             INIT;
@@ -56,7 +56,7 @@ codeunit 56203 "Async MdX NAV WS"
 
     local procedure TryGetQueueStatus(QueueId: Integer; var Status: Text) Success: Boolean
     var
-        AsyncNAVProcessQueue Record: 56200;
+        AsyncNAVProcessQueue: Record 56200;
     begin
         WITH AsyncNAVProcessQueue DO BEGIN
             IF GET(QueueId) THEN BEGIN

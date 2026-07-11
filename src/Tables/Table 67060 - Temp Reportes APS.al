@@ -89,8 +89,8 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionLinNeg(): Text[50]
     var
-        recCfgAPS Record: 67000;
-        recDimValue Record: 349;
+        recCfgAPS: Record 67000;
+        recDimValue: Record 349;
     begin
         recCfgAPS.GET;
         recCfgAPS.TESTFIELD(recCfgAPS."Cod. Dimension Lin. Negocio");
@@ -101,8 +101,8 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionFamilia(): Text[50]
     var
-        recCfgAPS Record: 67000;
-        recDimValue Record: 349;
+        recCfgAPS: Record 67000;
+        recDimValue: Record 349;
     begin
         recCfgAPS.GET;
         recCfgAPS.TESTFIELD(recCfgAPS."Cod. Dimension Familia");
@@ -113,8 +113,8 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionSubFamilia(): Text[50]
     var
-        recCfgAPS Record: 67000;
-        recDimValue Record: 349;
+        recCfgAPS: Record 67000;
+        recDimValue: Record 349;
     begin
         recCfgAPS.GET;
         recCfgAPS.TESTFIELD(recCfgAPS."Cod. Dimension Sub Familia");

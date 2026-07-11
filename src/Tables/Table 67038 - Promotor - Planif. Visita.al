@@ -80,7 +80,7 @@ table 67038 "Promotor - Planif. Visita"
 
             trigger OnValidate()
             var
-                recFechas Record: 2000000007;
+                recFechas: Record 2000000007;
             begin
 
                 BuscaCabecera;
@@ -268,15 +268,15 @@ table 67038 "Promotor - Planif. Visita"
 
     var
         Col: Record 5050;
-        CabPlanif Record: 67023;
+        CabPlanif: Record 67023;
         Err001: Label 'The date %1 is out of range allowed for the week %2';
-        PersCol Record: 67043;
-        DA Record: 67002;
-        Docente Record: 67001;
+        PersCol: Record 67043;
+        DA: Record 67002;
+        Docente: Record 67001;
         Err002: Label 'You can''t delete lines with School with completed dates';
-        Fecha1Record 2000000007;
-        Fecha2Record 2000000007;
-        PromPlanVisit Record: 67038;
+        Fecha1Record: Record 2000000007;
+        Fecha2Record: Record 2000000007;
+        PromPlanVisit: Record 67038;
 
     procedure BuscaCabecera()
     begin

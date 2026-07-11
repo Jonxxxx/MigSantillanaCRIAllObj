@@ -58,9 +58,9 @@ page 67119 "Adopciones - Colegio - MRK 2"
     end;
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         Item: Record 27;
-        DefDim Record: 352;
+        DefDim: Record 352;
         TextoEncabezado: array[30] of Text[30];
         DimValue: Text[60];
         i: Integer;
@@ -69,8 +69,8 @@ page 67119 "Adopciones - Colegio - MRK 2"
 
     procedure RecibeParametros(CodDoc: Code[20]; CodCol: Code[20])
     var
-        ColAdopDetalle Record: 67053;
-        Grados Record: 67002;
+        ColAdopDetalle: Record 67053;
+        Grados: Record 67002;
     begin
         gCodColegio := CodCol;
         gCodDocente := CodDoc;

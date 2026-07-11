@@ -100,7 +100,7 @@ page 56090 "Lista Pedidos Ecommerce"
                 trigger OnAction()
                 var
                     ModificarPedidosEcommerce: Report "50000;
-                    CabVentaNopCommerce Record: 50100;
+                    CabVentaNopCommerce: Record 50100;
                 begin
                     CabVentaNopCommerce := Rec;
                     CurrPage.SETSELECTIONFILTER(CabVentaNopCommerce);

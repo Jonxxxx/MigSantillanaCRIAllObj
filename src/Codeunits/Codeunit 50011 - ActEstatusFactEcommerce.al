@@ -7,7 +7,7 @@ codeunit 50011 ActEstatusFactEcommerce
     end;
 
     var
-        SIH Record: 112;
+        SIH: Record 112;
 
     procedure EnProceso(SIH_Record 112")
     begin

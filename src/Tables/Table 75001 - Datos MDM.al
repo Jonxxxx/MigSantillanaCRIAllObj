@@ -64,8 +64,8 @@ table 75001 "Datos MDM"
     procedure SincronizaDatosAuxAPS(pwBorra: Boolean)
     var
         lwEnc: Boolean;
-        lrDatAux Record: 67002;
-        lrNivelEd Record: 56005;
+        lrDatAux: Record 67002;
+        lrNivelEd: Record 56005;
         lwIdAPS: Integer;
     begin
         // SincronizaDatosAuxAPS

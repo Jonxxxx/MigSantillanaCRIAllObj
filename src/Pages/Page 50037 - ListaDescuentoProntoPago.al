@@ -101,9 +101,9 @@ page 50037 ListaDescuentoProntoPago
     end;
 
     var
-        DetailedCustLedgEntry Record: 379;
+        DetailedCustLedgEntry: Record 379;
         ReporteDPPv2: Report "50047;
                           ReporteDPPXclientev2: Report "50048;
-                          CustLedgEntry Record: 21;
+                          CustLedgEntry: Record 21;
 }
 

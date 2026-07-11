@@ -96,15 +96,15 @@ page 67085 "Estadistica Adopciones"
     }
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         TextoEncabezado: array[30] of Text[30];
         DimValue: Text[60];
         i: Integer;
 
     procedure RecibeParametros(CodCol: Code[20])
     var
-        ColAdopDetalle Record: 67053;
-        Grados Record: 67002;
+        ColAdopDetalle: Record 67053;
+        Grados: Record 67002;
     begin
         ConfAPS.GET();
         ConfAPS.TESTFIELD("Dim para Estad. Adopciones");

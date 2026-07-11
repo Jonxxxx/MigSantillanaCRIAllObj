@@ -12,6 +12,6 @@ codeunit 52508 "Reinicia colas con error"
     end;
 
     var
-        JobQueueEntry Record: 472;
+        JobQueueEntry: Record 472;
 }
 

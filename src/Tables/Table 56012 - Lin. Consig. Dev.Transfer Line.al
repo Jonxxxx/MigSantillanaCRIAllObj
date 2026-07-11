@@ -391,13 +391,13 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
 
     trigger OnDelete()
     var
-        ItemChargeAssgntPurch Record: 5805;
+        ItemChargeAssgntPurch: Record 5805;
     begin
     end;
 
     trigger OnInsert()
     var
-        TransLine2Record 5741;
+        TransLine2Record: Record 5741;
     begin
     end;
 
@@ -412,11 +412,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         Text009: Label 'No items are currently in transit.';
         Text010: Label 'Change %1 from %2 to %3?';
         Text011: Label 'Outbound,Inbound';
-        TransferRoute Record: 5742;
+        TransferRoute: Record 5742;
         Item: Record 27;
-        TransHeader Record: 5740;
-        Location Record: 14;
-        Bin Record: 7354;
+        TransHeader: Record 5740;
+        Location: Record 14;
+        Bin: Record 7354;
         DimMgt: Codeunit 408;
         WhseValidateSourceLine: Codeunit 5777;
         ReserveTransferLine: Codeunit 99000836;
@@ -467,7 +467,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
 
     procedure CreateDim(Type1: Integer;No1: Code[20])
     var
-        SourceCodeSetup Record: 242;
+        SourceCodeSetup: Record 242;
         TableID: array [10] of Integer;
         No: array [10] of Code[20];
     begin

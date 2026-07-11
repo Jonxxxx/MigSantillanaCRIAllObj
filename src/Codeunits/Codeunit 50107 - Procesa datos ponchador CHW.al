@@ -29,12 +29,12 @@ codeunit 50107 "Procesa datos ponchador CHW"
     end;
 
     var
-        Empl Record: 5200;
-        tmpLogReloj Record: 34002177;
-        LogReloj Record: 34002177;
+        Empl: Record 5200;
+        tmpLogReloj: Record 34002177;
+        LogReloj: Record 34002177;
         Text000: Label 'End of processing';
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        DatosPonchador Record: 50109;
+        DatosPonchador: Record 50109;
         FuncionesNom: Codeunit 34002104;
         wFecha: Date;
         wHora: Time;

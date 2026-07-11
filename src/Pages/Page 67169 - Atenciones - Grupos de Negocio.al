@@ -32,8 +32,8 @@ page 67169 "Atenciones - Grupos de Negocio"
 
     trigger OnOpenPage()
     var
-        DistrCentros Record: 67086;
-        UserSetup Record: 91;
+        DistrCentros: Record 67086;
+        UserSetup: Record 91;
     begin
 
 
@@ -43,7 +43,7 @@ page 67169 "Atenciones - Grupos de Negocio"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rDist Record: 67101;
+        rDist: Record 67101;
         wPorc: Decimal;
         Err001: Label 'El porcentaje de los centros de coste no deben ser mayores de 100.';
         Err002: Label 'El porcentaje de los centros de coste no deben ser menores de 0.';
@@ -63,9 +63,9 @@ page 67169 "Atenciones - Grupos de Negocio"
     end;
 
     var
-        ColAdopciones Record: 67053;
-        Editoras Record: 67024;
-        da Record: 67002;
+        ColAdopciones: Record 67053;
+        Editoras: Record 67024;
+        da: Record 67002;
         TotalGen: Decimal;
         Total: Decimal;
         Porciento: Decimal;
@@ -83,13 +83,13 @@ page 67169 "Atenciones - Grupos de Negocio"
 
     procedure RecibeParametros(CodCol: Code[20]; CodSol: Code[20]; CodEve: Code[20]; TipoEve: Code[20]; CodExpositor: Code[20]; Sec: Integer; Grupo: Boolean; modif: Boolean; CodGrupo: Code[20])
     var
-        rGrupoCOL Record: 67089;
+        rGrupoCOL: Record 67089;
     begin
     end;
 
     procedure Calcular()
     var
-        DistrCentros Record: 67101;
+        DistrCentros: Record 67101;
     begin
 
 

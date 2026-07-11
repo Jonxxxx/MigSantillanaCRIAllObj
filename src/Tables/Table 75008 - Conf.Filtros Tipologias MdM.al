@@ -91,7 +91,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     procedure GetFiltDescrpt(pwNo: Integer) Result: Text
     var
-        lrConfF Record: 75008;
+        lrConfF: Record 75008;
     begin
         // GetFiltDescrpt
 
@@ -129,7 +129,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     procedure ContDupl()
     var
-        lrCnfFlt Record: 75008;
+        lrCnfFlt: Record 75008;
     begin
         // ContDupl
         // Comprueba duplicidades

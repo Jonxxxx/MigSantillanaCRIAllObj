@@ -45,30 +45,30 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
     end;
 
     var
-        SH Record: 36;
+        SH: Record 36;
         SSH: Record 110;
         SalesPostPrint_WMS: Codeunit 50113;
-        SH2Record 36;
-        SalesInvHeader Record: 112;
-        SalesInvHeader2Record 112;
+        SH2Record: Record 36;
+        SalesInvHeader: Record 112;
+        SalesInvHeader2Record: Record 112;
         Customer: Record 18;
         I: Integer;
         Registrar: Boolean;
         TipoBloqueo: Option " ",Ship,Invoice,All;
         CustomerNo: Code[20];
-        SalesLine2Record 37;
+        SalesLine2Record: Record 37;
         Item: Record 27;
         RegistrarVentasenLoteDsPOS: Codeunit 34002522;
         Text002: Label 'Registrada Correctamente';
         Numlogs: Integer;
-        rCabLog Record: 34002533;
+        rCabLog: Record 34002533;
         Transfer_SIC: Codeunit 50110;
         StarDate: Date;
         Fecha: Date;
-        SH_Record 36;
-        SL_Record 37;
-        CabVentasSIC Record: 50111;
-        MediosdePagosSIC Record: 50113;
+        SH_Record: Record 36;
+        SL_Record: Record 37;
+        CabVentasSIC: Record 50111;
+        MediosdePagosSIC: Record 50113;
         Importe: Decimal;
         wFechaProceso: Date;
         contador: Integer;
@@ -76,8 +76,8 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraFactura()
     var
-        LineasVentasSIC Record: 50112;
-        SalesLine Record: 37;
+        LineasVentasSIC: Record 50112;
+        SalesLine: Record 37;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
         Text002: Label 'Error en los medios de pagos  | %1  | %2  | %3';
@@ -384,14 +384,14 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraFacturaManual()
     var
-        LineasVentasSIC Record: 50112;
-        SalesLine Record: 37;
+        LineasVentasSIC: Record 50112;
+        SalesLine: Record 37;
         Text001_: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
         Text002_: Label 'Error en los medios de pagos  | %1  | %2  | %3';
-        rCabLog Record: 34002533;
+        rCabLog: Record 34002533;
         CduPOS: Codeunit 34002502;
-        recTPV Record: 34002501;
+        recTPV: Record 34002501;
         Seleccion: Integer;
         PagFecha: Page34002559;
         Text000: Label 'Registrar Facturas en su Fecha.,Solicitar Nueva Fecha de Registro.';
@@ -442,7 +442,7 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     local procedure LineasAEnviar(): Boolean
     var
-        SL_Record 37;
+        SL_Record: Record 37;
     begin
         SL_.RESET;
         SL_.SETRANGE("Document Type", SH."Document Type");
@@ -459,8 +459,8 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraNotaCR()
     var
-        LineasVentasSIC Record: 50112;
-        SalesLine Record: 37;
+        LineasVentasSIC: Record 50112;
+        SalesLine: Record 37;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
         Text002: Label 'Error en los medios de pagos  | %1  | %2  | %3';
@@ -612,21 +612,21 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistrarCobrosSCR2(DocNum: Code[20])
     var
-        GenJnlLine Record: 81;
-        GenJnlLine2Record 81;
+        GenJnlLine: Record 81;
+        GenJnlLine2Record: Record 81;
         GenJnlPostLine: Codeunit 12;
-        OldCustLedgEntry Record: 21;
+        OldCustLedgEntry: Record 21;
         NoLin: Integer;
         dImporte: Integer;
         ImporteNeto: Integer;
-        MediosdePagoMG Record: 50113;
-        ConfMediosdepagos Record: 50110;
-        SalesInvoiceLine Record: 113;
+        MediosdePagoMG: Record 50113;
+        ConfMediosdepagos: Record 50110;
+        SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
-        Bancostienda Record: 34002504;
-        SIH Record: 112;
-        SIH2Record 112;
-        SIL Record: 113;
+        Bancostienda: Record 34002504;
+        SIH: Record 112;
+        SIH2Record: Record 112;
+        SIL: Record 113;
     begin
 
         NoLin := 0;
@@ -709,14 +709,14 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure CrearPago(NumDoc: Code[20]; NumRDoc: Code[20]; LCode: Code[20])
     var
-        CabVentasSIC Record: 50111;
-        LineasVentasSIC Record: 50112;
-        MPSIC Record: 50113;
-        MPSIC2Record 50113;
-        MPSIC3Record 50113;
-        SalesHeader Record: 36;
+        CabVentasSIC: Record 50111;
+        LineasVentasSIC: Record 50112;
+        MPSIC: Record 50113;
+        MPSIC2Record: Record 50113;
+        MPSIC3Record: Record 50113;
+        SalesHeader: Record 36;
         NumSIC: Code[20];
-        MPSIC4Record 50113;
+        MPSIC4Record: Record 50113;
         Import: Decimal;
     begin
 
@@ -815,13 +815,13 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraFacturaVs2()
     var
-        LineasVentasSIC Record: 50112;
+        LineasVentasSIC: Record 50112;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
-        SL_Record 37;
+        SL_Record: Record 37;
         propina: Decimal;
         Text002: Label 'Error en los medios de pagos  | %1  | %2  | %3';
-        MediosdePagosSIC Record: 50113;
-        SH_Record 36;
+        MediosdePagosSIC: Record 50113;
+        SH_Record: Record 36;
         Error001: Label 'Cant. líneas no permitidas para registro';
         Error002: Label 'Montos en tablas no coinciden';
         Error003: Label 'Imp. med. pagos no coincide con cabecera';
@@ -832,12 +832,12 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         ImporteSalesLine: Decimal;
         Text003: Label 'El documento fue instertado correctamente Documento No. ';
         Error006: Label 'No Existe "No. Documento" = %1, en tabla intermedia "Cab. Ventas SIC';
-        ConfigEmpresa Record: 56001;
-        MediosdePagoSIC Record: 50113;
-        SalesLine Record: 37;
+        ConfigEmpresa: Record 56001;
+        MediosdePagoSIC: Record 50113;
+        SalesLine: Record 37;
         CantidadLin: Integer;
-        SalesInvoiceHeader Record: 112;
-        SalesCrMemoHeader Record: 114;
+        SalesInvoiceHeader: Record 112;
+        SalesCrMemoHeader: Record 114;
         Error007: Label '''%1, = %2, existe en Historico';
     begin
         //002+ ////Nueva version de funcion registrar pedidos dspos

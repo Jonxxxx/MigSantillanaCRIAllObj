@@ -21,7 +21,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Prof Record: 67001;
+                Prof: Record 67001;
             begin
 
                 IF "Cod. Docente" <> '' THEN BEGIN
@@ -75,7 +75,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
             end;
         }
@@ -94,7 +94,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
     trigger OnInsert()
     var
-        rRec Record: 67106;
+        rRec: Record 67106;
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
     begin
 

@@ -43,8 +43,8 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ICPartner Record: 413;
-                ItemCrossReference Record: 5717;
+                ICPartner: Record 413;
+                ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -91,7 +91,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
             end;
         }
@@ -112,7 +112,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
             end;
         }
@@ -190,7 +190,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
             end;
         }
@@ -232,7 +232,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                Currency2Record 4;
+                Currency2Record: Record 4;
             begin
             end;
         }
@@ -251,7 +251,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                Currency2Record 4;
+                Currency2Record: Record 4;
             begin
             end;
         }
@@ -370,8 +370,8 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                TaxArea Record: 318;
-                HeaderTaxArea Record: 318;
+                TaxArea: Record 318;
+                HeaderTaxArea: Record 318;
             begin
             end;
         }
@@ -501,8 +501,8 @@ table 56038 "Sales Line Movil."
 
             trigger OnLookup()
             var
-                ICGLAccount Record: 410;
-                ItemCrossReference Record: 5717;
+                ICGLAccount: Record 410;
+                ItemCrossReference: Record 5717;
             begin
             end;
         }
@@ -515,8 +515,8 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                GenPostingSetup Record: 252;
-                GLAcc Record: 15;
+                GenPostingSetup: Record 252;
+                GLAcc: Record 15;
             begin
             end;
         }
@@ -655,7 +655,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                JobPlanningLine Record: 1003;
+                JobPlanningLine: Record 1003;
             begin
             end;
         }
@@ -702,8 +702,8 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                UnitOfMeasureTranslation Record: 5402;
-                ResUnitofMeasure Record: 205;
+                UnitOfMeasureTranslation: Record 5402;
+                ResUnitofMeasure: Record 205;
             begin
             end;
         }
@@ -816,7 +816,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ReturnedCrossRef Record: 5717;
+                ReturnedCrossRef: Record 5717;
             begin
             end;
         }
@@ -954,7 +954,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
             end;
         }
@@ -984,7 +984,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                Currency2Record 4;
+                Currency2Record: Record 4;
             begin
             end;
         }
@@ -1013,7 +1013,7 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
             end;
         }
@@ -1057,9 +1057,9 @@ table 56038 "Sales Line Movil."
 
             trigger OnValidate()
             var
-                KitReservEntry Record: 337;
-                WhseShptLine Record: 7321;
-                WhseActivLine Record: 5767;
+                KitReservEntry: Record 337;
+                WhseShptLine: Record 7321;
+                WhseActivLine: Record 5767;
                 CapableToPromise: Codeunit 99000886;
                 KitUnitPrice: Decimal;
             begin
@@ -1212,7 +1212,7 @@ table 56038 "Sales Line Movil."
 
     trigger OnInsert()
     var
-        SL Record: 37;
+        SL: Record 37;
     begin
     end;
 
@@ -1234,37 +1234,37 @@ table 56038 "Sales Line Movil."
         Text020: Label 'You cannot return more than %1 units.';
         Text021: Label 'You cannot return more than %1 base units.';
         Text026: Label 'You cannot change %1 if the item charge has already been posted.';
-        CurrExchRate Record: 330;
-        SalesHeader Record: 36;
-        SalesLine2Record 37;
-        TempSalesLine Record: 37;
-        GLAcc Record: 15;
+        CurrExchRate: Record 330;
+        SalesHeader: Record 36;
+        SalesLine2Record: Record 37;
+        TempSalesLine: Record 37;
+        GLAcc: Record 15;
         Item: Record 27;
-        Resource Record: 156;
-        Currency Record: 4;
-        ItemTranslation Record: 30;
-        Res Record: 156;
-        ResCost Record: 202;
-        WorkType Record: 200;
-        JobLedgEntry Record: 169;
-        VATPostingSetup Record: 325;
-        StdTxt Record: 7;
-        GenBusPostingGrp Record: 250;
-        GenProdPostingGrp Record: 251;
-        ReservEntry Record: 337;
-        ItemVariant Record: 5401;
-        UnitOfMeasure Record: 204;
-        FA Record: 5600;
-        ShippingAgentServices Record: 5790;
-        NonstockItem Record: 5718;
-        PurchasingCode Record: 5721;
-        SKU Record: 5700;
-        ItemCharge Record: 5800;
-        ItemChargeAssgntSales Record: 5809;
-        InvtSetup Record: 313;
-        Location Record: 14;
-        ReturnReason Record: 6635;
-        SalesTaxDifference Record: 10012;
+        Resource: Record 156;
+        Currency: Record 4;
+        ItemTranslation: Record 30;
+        Res: Record 156;
+        ResCost: Record 202;
+        WorkType: Record 200;
+        JobLedgEntry: Record 169;
+        VATPostingSetup: Record 325;
+        StdTxt: Record 7;
+        GenBusPostingGrp: Record 250;
+        GenProdPostingGrp: Record 251;
+        ReservEntry: Record 337;
+        ItemVariant: Record 5401;
+        UnitOfMeasure: Record 204;
+        FA: Record 5600;
+        ShippingAgentServices: Record 5790;
+        NonstockItem: Record 5718;
+        PurchasingCode: Record 5721;
+        SKU: Record 5700;
+        ItemCharge: Record 5800;
+        ItemChargeAssgntSales: Record 5809;
+        InvtSetup: Record 313;
+        Location: Record 14;
+        ReturnReason: Record 6635;
+        SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -1288,12 +1288,12 @@ table 56038 "Sales Line Movil."
         PlannedShipmentDateCalculated: Boolean;
         PlannedDeliveryDateCalculated: Boolean;
         Text028: Label 'You cannot change the %1 when the %2 has been filled in.';
-        ItemCategory Record: 5722;
+        ItemCategory: Record 5722;
         Text029: Label 'must be positive';
         Text030: Label 'must be negative';
         Text031: Label 'You must either specify %1 or %2.';
         CalendarMgmt: Codeunit 7600;
-        CalChange Record: 7602;
+        CalChange: Record 7602;
         Text034: Label 'The value of %1 field must be a whole number for the item included in the service item group if the %2 field in the Service Item Groups window contains a check mark.';
         Text035: Label 'Warehouse ';
         Text036: Label 'Inventory ';
@@ -1324,12 +1324,12 @@ table 56038 "Sales Line Movil."
         Text050: Label 'You''d reached the limit of sales lines allowed for a sales document.';
         Err001: Label 'This user is not allowed to modify %1';
         "*** Santillana ***": Integer;
-        CustPostGr Record: 92;
+        CustPostGr: Record 92;
         "*** DSPos ***": Integer;
         cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este c digo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';
-        Users Record: 91;
+        Users: Record 91;
 }
 

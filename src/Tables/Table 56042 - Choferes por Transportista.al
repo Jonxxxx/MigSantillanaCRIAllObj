@@ -73,7 +73,7 @@ table 56042 "Choferes por Transportista"
     }
 
     var
-        SA Record: 291;
-        Cho Record: 56041;
+        SA: Record 291;
+        Cho: Record 56041;
 }
 

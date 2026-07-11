@@ -44,7 +44,7 @@ table 56030 "Cab. Packing"
 
             trigger OnValidate()
             var
-                lrActividadAlmacenRegistrada Record: 5772;
+                lrActividadAlmacenRegistrada: Record 5772;
             begin
                 CP.RESET;
                 CP.SETRANGE("No.", '<>%1');
@@ -146,12 +146,12 @@ table 56030 "Cab. Packing"
 
     var
         NoSeriesMgt: Codeunit 396;
-        ConfSant Record: 56001;
-        LinPack Record: 56031;
+        ConfSant: Record 56001;
+        LinPack: Record 56031;
         LoginMgt: Codeunit 418;
-        CCP Record: 56032;
+        CCP: Record 56032;
         txt001: Label 'Picking No. cannot be changed while exists boxes with content in the current Packing';
-        CP Record: 56030;
+        CP: Record 56030;
         txt002: Label 'Packing No. %1 already has selected the Picking No. %2';
 }
 

@@ -87,7 +87,7 @@ table 56031 "Lin. Packing"
     end;
 
     var
-        CP Record: 56032;
+        CP: Record 56032;
         FuncSant: Codeunit 56000;
         ContCaja: Page56041;
 

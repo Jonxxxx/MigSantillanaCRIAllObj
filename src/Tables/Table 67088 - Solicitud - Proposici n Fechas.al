@@ -24,8 +24,8 @@ table 67088 "Solicitud - Proposici n Fechas"
 
             trigger OnValidate()
             var
-                rSol Record: 67055;
-                rColGrados Record: 67037;
+                rSol: Record 67055;
+                rColGrados: Record 67037;
             begin
 
                 "No. asistentes" := 0;
@@ -60,8 +60,8 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnDelete()
     var
-        rProp Record: 67088;
-        rSol Record: 67055;
+        rProp: Record 67088;
+        rSol: Record 67055;
     begin
 
         IF ("No. Solicitud" <> '') AND ("No. Linea" <> 0) THEN BEGIN
@@ -78,9 +78,9 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnInsert()
     var
-        rRec Record: 67088;
-        rProp Record: 67088;
-        rSol Record: 67055;
+        rRec: Record 67088;
+        rProp: Record 67088;
+        rSol: Record 67055;
         Error001: Label 'La fecha propuesta (%1) es inferior a la fecha de solicitud (%2).';
     begin
 
@@ -106,8 +106,8 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnModify()
     var
-        rProp Record: 67088;
-        rSol Record: 67055;
+        rProp: Record 67088;
+        rSol: Record 67055;
         Error001: Label 'La fecha propuesta (%1) es inferior a la fecha de solicitud (%2).';
     begin
 

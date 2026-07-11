@@ -582,7 +582,7 @@ table 80001 "Tmp Sales Invoice Line"
 
     procedure GetCurrencyCode(): Code[10]
     var
-        SalesInvHeader Record: 112;
+        SalesInvHeader: Record 112;
     begin
         IF "Document No." = SalesInvHeader."No." THEN
           EXIT(SalesInvHeader."Currency Code");
@@ -601,7 +601,7 @@ table 80001 "Tmp Sales Invoice Line"
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        SalesInvHeader Record: 112;
+        SalesInvHeader: Record 112;
     begin
         IF NOT SalesInvHeader.GET("Document No.") THEN
           SalesInvHeader.INIT;

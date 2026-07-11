@@ -169,7 +169,7 @@ page 67071 "Lista Programacion de eventos"
     end;
 
     var
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         SalesPerson: Record 13;
         CodPromotor: Code[20];
         [InDataSet]

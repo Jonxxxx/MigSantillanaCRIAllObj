@@ -57,7 +57,7 @@ page 56041 "Contenido Cajas"
     }
 
     var
-        LinPack Record: 56031;
+        LinPack: Record 56031;
         txt001: Label 'Box Closed';
         txt002: Label 'Confirm that you want to close the box';
 

@@ -179,11 +179,11 @@ table 56021 "Lin. Hoja de Ruta"
 
             trigger OnValidate()
             var
-                SIH Record: 112;
+                SIH: Record 112;
                 Text001: Label 'Factura existe en una hoja de ruta ya Registrada, en que NO ENTREGADA no esta marcado';
                 Text002: Label 'Factura existe en una hoja de ruta aun no registrada, en que NO ENTREGADA no esta marcado';
                 recCabHojaRuta: Record 56020;
-                recRutaDistribucion Record: 56071;
+                recRutaDistribucion: Record 56071;
             begin
                 //FAA #9148 ++
                 //#12396++
@@ -253,21 +253,21 @@ table 56021 "Lin. Hoja de Ruta"
         SHH: Record 110;
         Error001: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
         Error002: Label 'This Guide No. already exists in the Posted Route Sheet %1, Line %2';
-        LHRR Record: 56023;
+        LHRR: Record 56023;
         Error003: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
-        LHR Record: 56021;
+        LHR: Record 56021;
         Error004: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
-        CHRR Record: 56022;
-        TSH Record: 5744;
+        CHRR: Record 56022;
+        TSH: Record 5744;
 
     procedure NumGuia()
     var
         CHR: Record 56020;
-        SA Record: 291;
-        NosSeries Record: 308;
+        SA: Record 291;
+        NosSeries: Record 308;
         NoSerieMagmt: Codeunit 396;
-        LHR Record: 56021;
-        LHRR Record: 56023;
+        LHR: Record 56021;
+        LHRR: Record 56023;
     begin
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");
@@ -299,8 +299,8 @@ table 56021 "Lin. Hoja de Ruta"
     var
         Text001: Label 'Factura existe en una hoja de ruta ya Registrada, en que NO ENTREGADA no esta marcado';
         Text002: Label 'Factura existe en una hoja de ruta aun no registrada, en que NO ENTREGADA no esta marcado';
-        recLinHojaRutaReg Record: 56023;
-        recLinHojaRuta Record: 56021;
+        recLinHojaRutaReg: Record 56023;
+        recLinHojaRuta: Record 56021;
     begin
         //#29576
         recLinHojaRutaReg.RESET;
@@ -332,9 +332,9 @@ table 56021 "Lin. Hoja de Ruta"
 
     procedure ActualizarLineas(codNoHojaRuta: Code[20];codRutaDistribucion: Code[20])
     var
-        recHistFacturas Record: 112;
+        recHistFacturas: Record 112;
         recClientes: Record 18;
-        recLinHojaRutas2Record 56021;
+        recLinHojaRutas2Record: Record 56021;
         intControl: Integer;
         Text100: Label 'No se ha encontrado ninguna factura con la Ruta Seleccionada en la Cabecera.';
     begin

@@ -44,6 +44,6 @@ xmlport 58012 "Importa dim depto en empleados"
     }
 
     var
-        Empl Record: 5200;
+        Empl: Record 5200;
 }
 

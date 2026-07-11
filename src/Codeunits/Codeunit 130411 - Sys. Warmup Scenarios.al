@@ -12,7 +12,7 @@ codeunit 130411 "Sys. Warmup Scenarios"
     var
         Customer: Record 18;
         Item: Record 27;
-        SalesHeader Record: 36;
+        SalesHeader: Record 36;
     begin
         IF NOT Customer.FINDFIRST THEN
             EXIT;
@@ -54,7 +54,7 @@ codeunit 130411 "Sys. Warmup Scenarios"
 
     local procedure CreateSalesLine(SalesHeader Record: 36; Item: Record 27)
     var
-        SalesLine Record: 37;
+        SalesLine: Record 37;
     begin
         SalesLine.VALIDATE("Document Type", SalesHeader."Document Type");
         SalesLine.VALIDATE("Document No.", SalesHeader."No.");

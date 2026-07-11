@@ -68,8 +68,8 @@ page 67112 "Solic. Planif. Taller/Evento"
 
                     trigger OnAction()
                     var
-                        CabPlanEvent Record: 67051;
-                        CabPlanEvent2Record 67051;
+                        CabPlanEvent: Record 67051;
+                        CabPlanEvent2Record: Record 67051;
                         PlanEvent: Page67102;
                     begin
                         /*
@@ -130,7 +130,7 @@ page 67112 "Solic. Planif. Taller/Evento"
     end;
 
     var
-        CabPlanEvento Record: 67051;
+        CabPlanEvento: Record 67051;
         SelDoc: Page67103;
                     TotDocentes: Integer;
                     TotSeleccionados: Integer;
@@ -154,8 +154,8 @@ page 67112 "Solic. Planif. Taller/Evento"
 
     procedure AbrirPagAsistentes()
     var
-        ATE Record: 67016;
-        ATE2Record 67016;
+        ATE: Record 67016;
+        ATE2Record: Record 67016;
         PagATE: Page67016;
     begin
         //MESSAGE('%1',Rec);

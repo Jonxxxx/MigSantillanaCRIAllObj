@@ -50,16 +50,16 @@ page 67145 "Ranking CVM"
     procedure CalcularRanking(CodCol: Code[20])
     var
         Colegio: Record 5050;
-        ColCateg Record: 67091;
-        HistColAdopciones Record: 67035;
-        TarifVta Record: 7002;
+        ColCateg: Record 67091;
+        HistColAdopciones: Record 67035;
+        TarifVta: Record 7002;
         Porciento: Decimal;
         Total: Decimal;
         TotalGpoNivel: Decimal;
         wAntGpo: Code[20];
-        Config Record: 67000;
-        HistColCateg Record: 67093;
-        ColAdopciones Record: 67053;
+        Config: Record 67000;
+        HistColCateg: Record 67093;
+        ColAdopciones: Record 67053;
         ultCamp: Code[20];
         Text001: Label 'Ranking CVM (calculado con datos de la temporada: %1)';
     begin

@@ -79,8 +79,8 @@ page 67139 "Solicitud -Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        MatTyE Record: 67014;
-                        MatTyE2Record 67014;
+                        MatTyE: Record 67014;
+                        MatTyE2Record: Record 67014;
                         PgMatTyE: Page67014;
                     begin
                         MatTyE.RESET;
@@ -124,8 +124,8 @@ page 67139 "Solicitud -Cab. Planif. Evento"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rProg Record: 67015;
-        rSol Record: 67055;
+        rProg: Record 67015;
+        rSol: Record 67055;
     begin
         /*
         IF "No. Solicitud" <> '' THEN BEGIN
@@ -148,7 +148,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
     end;
 
     var
-        Fecha Record: 2000000007;
-        Evento Record: 67011;
+        Fecha: Record 2000000007;
+        Evento: Record 67011;
 }
 

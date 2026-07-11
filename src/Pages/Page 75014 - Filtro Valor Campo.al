@@ -58,7 +58,7 @@ page 75014 "Filtro Valor Campo"
         lwText: Text;
         lwDescrpt: Text;
         lwCodDim: Code[20];
-        lrValDim Record: 349;
+        lrValDim: Record 349;
     begin
         // RellenaTemp
 
@@ -229,7 +229,7 @@ page 75014 "Filtro Valor Campo"
 
     procedure TestCampo(pwIdTable: Integer; pwIdField: Integer)
     var
-        lrFields Record: 2000000041;
+        lrFields: Record 2000000041;
         lwIdDim: Integer;
     begin
         // TestCampo

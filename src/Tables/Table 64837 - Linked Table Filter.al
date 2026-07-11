@@ -41,10 +41,10 @@ table 64837 "Linked Table Filter"
     }
 
     var
-        DbFields Record: 64829;
+        DbFields: Record 64829;
         "Fields"Record 2000000041;
-        Specification Record: 64822;
-        MainSpecification Record: 64822;
+        Specification: Record 64822;
+        MainSpecification: Record 64822;
         xInteger: Integer;
 }
 

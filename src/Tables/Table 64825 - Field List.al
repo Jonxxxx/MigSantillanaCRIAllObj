@@ -40,8 +40,8 @@ table 64825 "Field List"
     }
 
     var
-        Specification Record: 64822;
+        Specification: Record 64822;
         "Fields"Record 2000000041;
-        DBFields Record: 64829;
+        DBFields: Record 64829;
 }
 

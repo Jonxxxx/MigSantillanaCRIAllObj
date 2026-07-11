@@ -9,8 +9,8 @@ codeunit 104152 "Upgrade EFT"
     [UpgradePerCompany]
     procedure UpgradeGenJournalLineEFTSequenceNo()
     var
-        EFTExport Record: 10810;
-        GenJournalLine Record: 81;
+        EFTExport: Record 10810;
+        GenJournalLine: Record 81;
         UpgradeTagMgt: Codeunit 9999;
         UpgradeTags: Codeunit 9998;
     begin

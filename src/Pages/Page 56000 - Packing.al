@@ -172,15 +172,15 @@ page 56000 Packing
     end;
 
     var
-        LinPack Record: 56031;
+        LinPack: Record 56031;
         NoLinea: Integer;
         txt001: Label 'Confirm that you want to create a new box';
-        ConfSant Record: 56001;
+        ConfSant: Record 56001;
         NoSerMang: Codeunit 396;
         FuncSant: Codeunit 56000;
         txt002: Label 'Confirm that you want to post';
         txt003: Label 'The packing was successfully posted';
-        CabPack Record: 56030;
+        CabPack: Record 56030;
         txt004: Label 'Antes de registrar, el palet tiene que estar cerrado.';
         [InDataSet]
         TieneGestionAlmacen: Boolean;
@@ -188,7 +188,7 @@ page 56000 Packing
     procedure AbrirPalet()
     var
         NoSeriesMgt: Codeunit 396;
-        ConfSant Record: 56001;
+        ConfSant: Record 56001;
     begin
 
         //+#842

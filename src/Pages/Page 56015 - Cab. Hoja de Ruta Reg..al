@@ -124,8 +124,8 @@ page 56015 "Cab. Hoja de Ruta Reg."
     }
 
     var
-        CHRR Record: 56022;
-        UserSetUp Record: 91;
+        CHRR: Record 56022;
+        UserSetUp: Record 91;
         Error001: Label 'User cannot void Route Guide';
 }
 

@@ -42,8 +42,8 @@ table 64836 "Field Filter"
 
     var
         "Fields"Record 2000000041;
-        DBFields Record: 64829;
-        Specification Record: 64822;
+        DBFields: Record 64829;
+        Specification: Record 64822;
         DbDesign: Code[20];
         TableNo: Integer;
 }

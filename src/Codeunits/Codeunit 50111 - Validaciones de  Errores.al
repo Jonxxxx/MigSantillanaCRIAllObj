@@ -16,8 +16,8 @@ codeunit 50111 "Validaciones de  Errores"
         ValidarMedPag: Boolean;
         Errores: Text[250];
         Text01: Label 'Campos en blanco: ';
-        CabVentasSIC Record: 50111;
-        SH Record: 36;
+        CabVentasSIC: Record 50111;
+        SH: Record 36;
 
     procedure ValidacionesCabecera(): Boolean
     begin

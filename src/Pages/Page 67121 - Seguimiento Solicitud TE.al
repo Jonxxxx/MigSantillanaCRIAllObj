@@ -44,7 +44,7 @@ page 67121 "Seguimiento Solicitud TE"
 
     trigger OnAfterGetRecord()
     var
-        rSolicitud Record: 67055;
+        rSolicitud: Record 67055;
     begin
 
         CLEAR(wComentario);

@@ -3,7 +3,7 @@ codeunit 56006 "Corrige devol"
 
     trigger OnRun()
     var
-        rLinDev Record: 37;
+        rLinDev: Record 37;
     begin
         rLinDev.SETRANGE("Document Type", rLinDev."Document Type"::"Return Order");
         rLinDev.SETRANGE("Line No.", 20000);

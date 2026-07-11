@@ -12,7 +12,7 @@ table 67080 "Solicitud -  Nivel Asistente"
 
             trigger OnValidate()
             var
-                Nivel Record: 67022;
+                Nivel: Record 67022;
             begin
                 IF "Cod. Nivel" <> '' THEN BEGIN
                     Nivel.GET("Cod. Nivel");

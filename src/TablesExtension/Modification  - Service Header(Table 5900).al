@@ -351,7 +351,7 @@ tableextension 70000088 tableextension70000088 extends "Service Header"
 
     local procedure StoreServiceCommentLineToTemp(var TempServiceCommentLine Record: 5906" temporary)
     var
-        ServiceCommentLine Record: 5906;
+        ServiceCommentLine: Record 5906;
     begin
         ServiceCommentLine.SETRANGE("Table Name", ServiceCommentLine."Table Name"::"Service Header");
         ServiceCommentLine.SETRANGE("Table Subtype", "Document Type");
@@ -365,7 +365,7 @@ tableextension 70000088 tableextension70000088 extends "Service Header"
 
     local procedure RestoreServiceCommentLine(var TempServiceCommentLine Record: 5906" temporary;OldDocumentLineNo: Integer;NewDocumentLineNo: Integer)
     var
-        ServiceCommentLine Record: 5906;
+        ServiceCommentLine: Record 5906;
     begin
         TempServiceCommentLine.SETRANGE("Table Name", TempServiceCommentLine."Table Name"::"Service Header");
         TempServiceCommentLine.SETRANGE("Table Subtype", "Document Type");

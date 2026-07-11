@@ -58,8 +58,8 @@ page 130400 "CAL Test Suites"
 
                     trigger OnAction()
                     var
-                        CALTestSuite Record: 130400;
-                        CALTestLine Record: 130401;
+                        CALTestSuite: Record 130400;
+                        CALTestLine: Record 130401;
                     begin
                         IF CALTestSuite.FINDSET THEN
                             REPEAT

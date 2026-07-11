@@ -24,7 +24,7 @@ page 130401 "CAL Test Tool"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    CALTestSuite Record: 130400;
+                    CALTestSuite: Record 130400;
                 begin
                     CALTestSuite.Name := CurrentSuiteName;
                     IF PAGE.RUNMODAL(0, CALTestSuite) <> ACTION::LookupOK THEN
@@ -80,7 +80,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnDrillDown()
                     var
-                        CALTestCoverageMap Record: 130406;
+                        CALTestCoverageMap: Record 130406;
                     begin
                         CALTestCoverageMap.ShowHitObjects("Test Codeunit");
                     end;
@@ -174,7 +174,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnAction()
                     var
-                        CALTestLine Record: 130401;
+                        CALTestLine: Record 130401;
                     begin
                         CurrPage.SETSELECTIONFILTER(CALTestLine);
                         CALTestLine.DELETEALL(TRUE);
@@ -212,7 +212,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnAction()
                     var
-                        CALTestLine Record: 130401;
+                        CALTestLine: Record 130401;
                         CALTestMgt: Codeunit 130401;
                     begin
                         WarnNonEnglishLanguage;
@@ -234,7 +234,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnAction()
                     var
-                        SelectedCALTestLine Record: 130401;
+                        SelectedCALTestLine: Record 130401;
                         CALTestMgt: Codeunit 130401;
                     begin
                         WarnNonEnglishLanguage;
@@ -254,7 +254,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnAction()
                     var
-                        CALTestLine Record: 130401;
+                        CALTestLine: Record 130401;
                     begin
                         CALTestLine := Rec;
                         ClearResults(CALTestSuite);
@@ -289,7 +289,7 @@ page 130401 "CAL Test Tool"
 
                     trigger OnAction()
                     var
-                        CALTestCoverageMap Record: 130406;
+                        CALTestCoverageMap: Record 130406;
                     begin
                         CALTestCoverageMap.Show;
                     end;
@@ -391,7 +391,7 @@ page 130401 "CAL Test Tool"
     end;
 
     var
-        CALTestSuite Record: 130400;
+        CALTestSuite: Record 130400;
         LanguageWarningNotification: Notification;
         CurrentSuiteName: Code[10];
         Skipped: Integer;
@@ -412,7 +412,7 @@ page 130401 "CAL Test Tool"
 
     local procedure ClearResults(CALTestSuite Record: 130400")
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         IF CALTestSuite.Name <> '' THEN
             CALTestLine.SETRANGE("Test Suite", CALTestSuite.Name);
@@ -425,7 +425,7 @@ page 130401 "CAL Test Tool"
 
     local procedure FindError(Which: Code[10])
     var
-        CALTestLine Record: 130401;
+        CALTestLine: Record 130401;
     begin
         CALTestLine.COPY(Rec);
         CALTestLine.SETRANGE(Result, Result::Failure);
@@ -435,7 +435,7 @@ page 130401 "CAL Test Tool"
 
     local procedure CreateTestSuite(var NewSuiteName: Code[10])
     var
-        CALTestSuite Record: 130400;
+        CALTestSuite: Record 130400;
         CALTestMgt: Codeunit 130401;
     begin
         CALTestMgt.CreateNewSuite(NewSuiteName);

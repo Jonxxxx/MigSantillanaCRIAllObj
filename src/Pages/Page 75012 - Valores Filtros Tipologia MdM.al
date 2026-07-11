@@ -36,11 +36,11 @@ page 75012 "Valores Filtros Tipologia MdM"
 
     procedure RellenaTabla(pwIdFiltro: Integer)
     var
-        lrFiltroTipo Record: 75008;
-        lrDatosMdM Record: 75001;
+        lrFiltroTipo: Record 75008;
+        lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
-        lrValDim Record: 349;
-        lrCodGrProd Record: 5723;
+        lrValDim: Record 349;
+        lrCodGrProd: Record 5723;
     begin
         // RellenaTabla
 

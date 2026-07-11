@@ -192,7 +192,7 @@ page 67040 "Lista de Docentes"
     end;
 
     var
-        Docente Record: 67001;
+        Docente: Record 67001;
 
     local procedure LookupOKOnPush()
     begin

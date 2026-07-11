@@ -286,8 +286,8 @@ page 56037 "Captura Productos"
 
     procedure InsertaProducto()
     var
-        rSalesLine2Record 37;
-        rSalesLine Record: 37;
+        rSalesLine2Record: Record 37;
+        rSalesLine: Record 37;
         NoLinea: Integer;
         lText001: Label 'ERROR: La cantidad introducida (%1) supera la disponibilidad (%2)';
     begin

@@ -50,6 +50,6 @@ table 67074 "Hist. Docente - Especialidad"
     }
 
     var
-        DA Record: 67002;
+        DA: Record 67002;
 }
 

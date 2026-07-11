@@ -78,7 +78,7 @@ table 56034 "Lin. Packing Registrada"
     }
 
     var
-        CPR Record: 56035;
+        CPR: Record 56035;
         ContCaja: Page56041;
 
     procedure ContenidoCaja()

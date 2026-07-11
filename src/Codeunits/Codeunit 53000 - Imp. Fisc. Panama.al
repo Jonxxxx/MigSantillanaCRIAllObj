@@ -16,8 +16,8 @@ codeunit 53000 "Imp. Fisc. Panama"
 
     var
         Text014: Label '                                                                  ';
-        ConfSant Record: 56001;
-        UserSetUp Record: 91;
+        ConfSant: Record 56001;
+        UserSetUp: Record 91;
         ano: Text[30];
         mes: Text[30];
         dia: Text[30];

@@ -89,12 +89,12 @@ page 67038 "Promotor - Planif. Visitas"
     procedure CargaEntregaMuestras()
     var
         Promotor: Record 13;
-        Alm Record: 14;
-        PromEM Record: 5740;
-        PromEM2Record 5740;
+        Alm: Record 14;
+        PromEM: Record 5740;
+        PromEM2Record: Record 5740;
         fPromEM: Page67074;
-        Bins Record: 7354;
-        Bins2Record 7354;
+        Bins: Record 7354;
+        Bins2Record: Record 7354;
         Colegio: Record 5050;
     begin
 
@@ -179,12 +179,12 @@ page 67038 "Promotor - Planif. Visitas"
     procedure CargaDevolucionMuestras()
     var
         Promotor: Record 13;
-        Alm Record: 14;
-        PromEM Record: 5740;
-        PromEM2Record 5740;
+        Alm: Record 14;
+        PromEM: Record 5740;
+        PromEM2Record: Record 5740;
         fPromEM: Page67074;
-        Bins Record: 7354;
-        Bins2Record 7354;
+        Bins: Record 7354;
+        Bins2Record: Record 7354;
         Colegio: Record 5050;
     begin
 
@@ -251,7 +251,7 @@ page 67038 "Promotor - Planif. Visitas"
 
     procedure AbreVisita()
     var
-        PromPV Record: 67038;
+        PromPV: Record 67038;
         fPromPV: Page67065;
     begin
         CurrPage.SETSELECTIONFILTER(PromPV);

@@ -11,12 +11,12 @@ codeunit 75005 "MdM Async Manager"
 
     var
         rTmp Record: 75003" temporary;
-        rConfMdM Record: 75000;
-        rConfSant Record: 56001;
+        rConfMdM: Record 75000;
+        rConfSant: Record 56001;
         rAsSender: Codeunit 75006;
         cGest: Codeunit 75001;
         cTrasp: Codeunit 75007;
-        rCab Record: 75003;
+        rCab: Record 75003;
 
     procedure FindCabs()
     var
@@ -150,7 +150,7 @@ codeunit 75005 "MdM Async Manager"
 
     procedure BorraRegsAntiguos()
     var
-        lrCab Record: 75003;
+        lrCab: Record 75003;
         lwFechaB: DateTime;
         lwDias: Text;
     begin
@@ -182,7 +182,7 @@ codeunit 75005 "MdM Async Manager"
 
     procedure SetHoldQ()
     var
-        lrCab2Record 75003;
+        lrCab2Record: Record 75003;
     begin
         // SetHoldQ
 

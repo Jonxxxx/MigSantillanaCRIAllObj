@@ -91,7 +91,7 @@ table 56022 "Cab. Hoja de Ruta Reg."
 
     var
         NoSeriesMgt: Codeunit 396;
-        SalesSetup Record: 311;
+        SalesSetup: Record 311;
 
     procedure TestNoSeries()
     begin

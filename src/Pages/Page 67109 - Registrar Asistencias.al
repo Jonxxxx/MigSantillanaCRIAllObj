@@ -147,8 +147,8 @@ page 67109 "Registrar Asistencias"
 
     var
         PagAsistentes: Page67110;
-                           Fecha Record: 2000000007;
-                           CabPlanEvent Record: 67051;
+                           Fecha: Record 2000000007;
+                           CabPlanEvent: Record 67051;
                            gCodExpositor: Code[20];
                            gTipoExpositor: Integer;
                            gCodEvento: Code[20];

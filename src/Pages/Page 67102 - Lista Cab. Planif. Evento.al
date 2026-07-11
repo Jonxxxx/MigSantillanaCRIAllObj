@@ -93,8 +93,8 @@ page 67102 "Lista Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        Evento Record: 67011;
-                        CabPlanEvent Record: 67051;
+                        Evento: Record 67011;
+                        CabPlanEvent: Record 67051;
                         fCabPlanEvent: Page67101;
                         Seq: Integer;
                         IndSkip: Boolean;
@@ -150,8 +150,8 @@ page 67102 "Lista Cab. Planif. Evento"
     end;
 
     var
-        Fecha Record: 2000000007;
-        CabPlanEvent Record: 67051;
+        Fecha: Record 2000000007;
+        CabPlanEvent: Record 67051;
         gCodExpositor: Code[20];
         gTipoExpositor: Integer;
         gCodEvento: Code[20];

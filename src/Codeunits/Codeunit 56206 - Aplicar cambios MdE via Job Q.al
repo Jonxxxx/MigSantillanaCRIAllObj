@@ -8,8 +8,8 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
 
     trigger OnRun()
     var
-        MdEHistory Record: 56202;
-        MdEHistory2Record 56202;
+        MdEHistory: Record 56202;
+        MdEHistory2Record: Record 56202;
         IsOk: Boolean;
         DescErrorArray: array[10] of Text;
         TipoErrorArray: array[10] of Text;
@@ -57,8 +57,8 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
 
     procedure SendNotification(var MdEHistory Record: 56202")
     var
-        ConfEmp Record: 56001;
-        RecordLink Record: 2000000068;
+        ConfEmp: Record 56001;
+        RecordLink: Record 2000000068;
         RecRef: RecordRef;
     begin
         ConfEmp.GET;

@@ -60,8 +60,8 @@ page 67136 "Colegio - Work Flow Objetivos"
     end;
 
     var
-        CWF Record: 67062;
-        DatosAux Record: 67002;
+        CWF: Record 67062;
+        DatosAux: Record 67002;
         Sec: Integer;
 }
 

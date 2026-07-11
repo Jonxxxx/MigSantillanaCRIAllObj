@@ -120,11 +120,11 @@ table 56015 "Cab. Identificaci n Devoluci n"
 
     var
         NoSeriesMgt: Codeunit 396;
-        SalesSetup Record: 311;
+        SalesSetup: Record 311;
         Cust: Record 18;
-        LID Record: 56016;
+        LID: Record 56016;
         txt001: Label 'You can not change the amount of packages you have created lines';
-        WE Record: 7301;
+        WE: Record 7301;
 
     procedure TestNoSeries()
     begin

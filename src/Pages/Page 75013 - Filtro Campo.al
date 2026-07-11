@@ -45,7 +45,7 @@ page 75013 "Filtro Campo"
 
     procedure RellenaTemp(pwTableId: Integer)
     var
-        lrFields Record: 2000000041;
+        lrFields: Record 2000000041;
         lwId: Integer;
         lwIDFld: Integer;
         lwName: Text;
@@ -82,7 +82,7 @@ page 75013 "Filtro Campo"
 
     procedure TestCampo(pwIdTable: Integer; pwIdField: Integer)
     var
-        lrFields Record: 2000000041;
+        lrFields: Record 2000000041;
         lwIdDim: Integer;
     begin
         // TestCampo

@@ -2235,7 +2235,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
         cGestM.GetOutStrm(wOutStrm)
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport "75003")
+    procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 

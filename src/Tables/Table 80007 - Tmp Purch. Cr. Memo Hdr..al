@@ -504,7 +504,7 @@ table 80007 "Tmp Purch. Cr. Memo Hdr."
 
             trigger OnValidate()
             var
-                rVendorPostingGr Record: 93;
+                rVendorPostingGr: Record 93;
             begin
             end;
         }
@@ -575,10 +575,10 @@ table 80007 "Tmp Purch. Cr. Memo Hdr."
     end;
 
     var
-        PurchCrMemoHeader Record: 124;
-        PurchCommentLine Record: 43;
-        VendLedgEntry Record: 25;
-        PostCode Record: 225;
+        PurchCrMemoHeader: Record 124;
+        PurchCommentLine: Record 43;
+        VendLedgEntry: Record 25;
+        PostCode: Record 225;
         PostPurchLinesDelete: Codeunit 364;
         DimMgt: Codeunit 408;
 }

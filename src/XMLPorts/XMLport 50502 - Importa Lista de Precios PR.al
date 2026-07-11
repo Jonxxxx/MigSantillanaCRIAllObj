@@ -75,7 +75,7 @@ xmlport 50502 "Importa Lista de Precios PR"
     }
 
     var
-        SP Record: 7002;
-        SP2Record 7002;
+        SP: Record 7002;
+        SP2Record: Record 7002;
 }
 

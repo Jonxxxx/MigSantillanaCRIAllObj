@@ -73,7 +73,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
                 /*IF "Document ID" <> '' THEN
                    BEGIN
@@ -121,7 +121,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                Territory Record: 286;
+                Territory: Record 286;
             begin
             end;
         }
@@ -268,7 +268,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                rVendor Record: 23;
+                rVendor: Record 23;
             begin
                 IF rVendor.GET("Cod. Responsable") THEN BEGIN
                     "Nombre responsable" := rVendor.Name;
@@ -289,7 +289,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnLookup()
             var
-                rSol Record: 67055;
+                rSol: Record 67055;
                 fSol: Page67090;
             begin
 
@@ -309,7 +309,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                rSol Record: 67055;
+                rSol: Record 67055;
             begin
 
                 IF rSol.GET("No. Solicitud") THEN BEGIN
@@ -328,7 +328,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                DA Record: 67002;
+                DA: Record 67002;
             begin
 
 
@@ -443,7 +443,7 @@ table 67061 "Cab. Atenciones"
     trigger OnDelete()
     var
         error001: Label 'No se permite eliminar una atenci n realizada.';
-        rDet Record: 67100;
+        rDet: Record 67100;
     begin
         IF Estado = Estado::Realizada THEN
           ERROR(error001);
@@ -454,7 +454,7 @@ table 67061 "Cab. Atenciones"
 
     trigger OnInsert()
     var
-        APSSetup Record: 67000;
+        APSSetup: Record 67000;
         NoSeriesMgt: Codeunit 396;
     begin
         IF Codigo = '' THEN
@@ -470,13 +470,13 @@ table 67061 "Cab. Atenciones"
     end;
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         Contact: Record 5050;
-        territory Record: 286;
-        PostCode Record: 225;
-        Country Record: 9;
-        DimVal Record: 349;
-        DA Record: 67002;
+        territory: Record 286;
+        PostCode: Record 225;
+        Country: Record 9;
+        DimVal: Record 349;
+        DA: Record 67002;
         PostCodeForm: Page367;
                           formTerritory: Page429;
                           DimMgt: Codeunit 408;

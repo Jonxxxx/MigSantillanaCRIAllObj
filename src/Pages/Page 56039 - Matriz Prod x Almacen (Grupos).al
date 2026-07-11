@@ -583,7 +583,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     end;
 
     var
-        ItemLedgerEntry Record: 32;
+        ItemLedgerEntry: Record 32;
         MatrixRecords: array [32] of 4456059;
         MatrixHeader: Text[250];
         ShowColumnName: Boolean;
@@ -730,11 +730,11 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
 
     procedure CambiarGrupo()
     var
-        lrAlmacenesPorGrupo Record: 56059;
+        lrAlmacenesPorGrupo: Record 56059;
         lContador: Integer;
         MatrixColumns1: array [32] of Text[1024];
         MatrixRecords1: array [32] of 4456059;
-        MatrixRecord1Record 56059;
+        MatrixRecord1Record: Record 56059;
         lCuantos: Integer;
         TextL001: Label 'El grupo %1 contiene %2 almacenes. Sólo se mostrarán %3';
     begin

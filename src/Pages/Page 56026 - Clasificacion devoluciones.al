@@ -173,11 +173,11 @@ page 56026 "Clasificacion devoluciones"
     end;
 
     var
-        CD Record: 56026;
-        CD2Record 56026;
-        ICR Record: 5717;
+        CD: Record 56026;
+        CD2Record: Record 56026;
+        ICR: Record 5717;
         Item: Record 27;
-        CDR Record: 56025;
+        CDR: Record 56025;
         Cant: Integer;
         Err001: Label 'Quantity can''t be negative or zero';
         Desc: Text[60];

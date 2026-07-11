@@ -45,7 +45,7 @@ page 52504 "Corregir Texto Documento Elect"
         Nombre: Text[100];
         Cedula: Code[20];
         Correo: Text;
-        SIH Record: 112;
+        SIH: Record 112;
         Modificado: Boolean;
 
     procedure TraerDatos(_DocNumber: Code[20]; _Nombre: Text[100]; _Cedula: Code[20]; _Correo: Text)

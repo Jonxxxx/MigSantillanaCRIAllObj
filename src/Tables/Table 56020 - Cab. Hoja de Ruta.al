@@ -77,8 +77,8 @@ table 56020 "Cab. Hoja de Ruta"
             var
                 Text001: Label 'Primero deberara borrar las lineas que ha creado con N mero de ruta';
                 recCabHojaruta: Record 56020;
-                recLineaHojaRuta Record: 56021;
-                recMaestroRuta Record: 56070;
+                recLineaHojaRuta: Record 56021;
+                recMaestroRuta: Record 56070;
             begin
                 //#29576
                 recLineaHojaRuta.SETRANGE(recLineaHojaRuta."No. Hoja Ruta", "No. Hoja Ruta");
@@ -128,10 +128,10 @@ table 56020 "Cab. Hoja de Ruta"
 
     var
         NoSeriesMgt: Codeunit 396;
-        SalesSetup Record: 311;
-        LHR Record: 56021;
-        ShipAg Record: 291;
-        Cho Record: 56041;
+        SalesSetup: Record 311;
+        LHR: Record 56021;
+        ShipAg: Record 291;
+        Cho: Record 56041;
 
     procedure TestNoSeries()
     begin

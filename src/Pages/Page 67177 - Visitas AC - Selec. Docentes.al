@@ -18,7 +18,7 @@ page 67177 "Visitas A/C - Selec. Docentes"
 
                     trigger OnValidate()
                     var
-                        AsistEvento Record: 67106;
+                        AsistEvento: Record 67106;
                         Err001: Label 'No se permite deseleccionar. Este Docente ya fue inscrito.';
                     begin
 
@@ -114,7 +114,7 @@ page 67177 "Visitas A/C - Selec. Docentes"
 
     trigger OnAfterGetRecord()
     var
-        AsistEvento Record: 67106;
+        AsistEvento: Record 67106;
     begin
         Seleccionar := FALSE;
         AsistEvento.RESET;
@@ -126,7 +126,7 @@ page 67177 "Visitas A/C - Selec. Docentes"
 
     trigger OnOpenPage()
     var
-        rGrupoCOL Record: 67089;
+        rGrupoCOL: Record 67089;
     begin
 
         SETRANGE("Cod. Colegio", gCodCol);
@@ -152,8 +152,8 @@ page 67177 "Visitas A/C - Selec. Docentes"
 
     local procedure OKOnPush()
     var
-        Programacion Record: 67103;
-        Asistentes Record: 67106;
+        Programacion: Record 67103;
+        Asistentes: Record 67106;
     begin
 
         MARKEDONLY(TRUE);

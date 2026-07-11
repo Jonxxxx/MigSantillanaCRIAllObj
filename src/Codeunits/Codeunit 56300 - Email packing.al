@@ -16,9 +16,9 @@ codeunit 56300 "Email packing"
 
     procedure generaBody(parSalesHeader Record: 36")
     var
-        rTextoConfig Record: 56090;
-        rPick Record: 5773;
-        rPack Record: 56034;
+        rTextoConfig: Record 56090;
+        rPick: Record 5773;
+        rPack: Record 56034;
         nCajas: Integer;
         nPalets: Integer;
         rTempPack Record: 56034" temporary;
@@ -89,7 +89,7 @@ codeunit 56300 "Email packing"
     var
         rCust: Record 18;
         Subject: Label 'Santillana-Prueba de envío';
-        rConf Record: 56001;
+        rConf: Record 56001;
     begin
 
 

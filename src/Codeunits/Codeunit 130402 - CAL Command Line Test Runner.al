@@ -5,8 +5,8 @@ codeunit 130402 "CAL Command Line Test Runner"
 
     trigger OnRun()
     var
-        CALTestEnabledCodeunit Record: 130403;
-        CALTestResult Record: 130405;
+        CALTestEnabledCodeunit: Record 130403;
+        CALTestResult: Record 130405;
         CodeCoverageMgt: Codeunit 9990;
         CALTestMgt: Codeunit 130401;
     begin
@@ -32,7 +32,7 @@ codeunit 130402 "CAL Command Line Test Runner"
 
     trigger OnBeforeTestRun(CodeunitID: Integer; CodeunitName: Text; FunctionName: Text; FunctionTestPermissions: TestPermissions): Boolean
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
     begin
         IF FunctionName = '' THEN
             EXIT(TRUE);
@@ -49,7 +49,7 @@ codeunit 130402 "CAL Command Line Test Runner"
 
     trigger OnAfterTestRun(CodeunitID: Integer; CodeunitName: Text; FunctionName: Text; FunctionTestPermissions: TestPermissions; Success: Boolean)
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
     begin
         IF FunctionName = '' THEN
             EXIT;

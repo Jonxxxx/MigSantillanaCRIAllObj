@@ -74,7 +74,7 @@ page 130407 "CAL Test Objects To Select"
     end;
 
     var
-        CALTestCoverageMap Record: 130406;
+        CALTestCoverageMap: Record 130406;
 
     local procedure CountTestCodeunits(): Integer
     begin

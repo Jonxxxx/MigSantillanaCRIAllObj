@@ -45,6 +45,6 @@ xmlport 58013 "cta Empleados"
     }
 
     var
-        DistCta Record: 34002108;
+        DistCta: Record 34002108;
 }
 

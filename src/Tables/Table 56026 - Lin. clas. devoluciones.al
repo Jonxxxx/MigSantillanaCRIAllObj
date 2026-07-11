@@ -41,7 +41,7 @@ table 56026 "Lin. clas. devoluciones"
 
             trigger OnValidate()
             var
-                ItemLedgEntry Record: 32;
+                ItemLedgEntry: Record 32;
             begin
                 IF Quantity <= 0 THEN
                     ERROR(Err001);
@@ -53,8 +53,8 @@ table 56026 "Lin. clas. devoluciones"
 
             trigger OnValidate()
             var
-                UnitOfMeasureTranslation Record: 5402;
-                ResUnitofMeasure Record: 205;
+                UnitOfMeasureTranslation: Record 5402;
+                ResUnitofMeasure: Record 205;
             begin
             end;
         }
@@ -69,7 +69,7 @@ table 56026 "Lin. clas. devoluciones"
 
             trigger OnValidate()
             var
-                ReturnedCrossRef Record: 5717;
+                ReturnedCrossRef: Record 5717;
             begin
                 ReturnedCrossRef.INIT;
                 IF "Cross-Reference No." <> '' THEN BEGIN
@@ -206,8 +206,8 @@ table 56026 "Lin. clas. devoluciones"
 
     procedure CrossReferenceNoLookUp()
     var
-        ItemCrossReference Record: 5717;
-        ICGLAcc Record: 410;
+        ItemCrossReference: Record 5717;
+        ICGLAcc: Record 410;
     begin
         ItemCrossReference.RESET;
         ItemCrossReference.SETCURRENTKEY("Cross-Reference No.");

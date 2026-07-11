@@ -86,8 +86,8 @@ page 67079 "Promotores - Lista de Colegios"
     end;
 
     var
-        Col Record: 67006;
-        PromPlan Record: 67038;
+        Col: Record 67006;
+        PromPlan: Record 67038;
         Promotor: Code[20];
         gAno: Integer;
         Sem: Integer;

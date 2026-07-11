@@ -123,7 +123,7 @@ table 80009 "Tmp Posted Deposit Header"
     }
 
     var
-        BankCommentLine Record: 10122;
+        BankCommentLine: Record 10122;
         PostedDepositDelete: Codeunit 10144;
 }
 

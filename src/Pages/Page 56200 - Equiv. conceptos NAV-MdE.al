@@ -292,7 +292,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
     end;
 
     var
-        EquivNavMdE Record: 56201;
+        EquivNavMdE: Record 56201;
         BooleanArray: array [20] of Boolean;
         ColumnNameArray: array [20] of Text[20];
         NoColumns: Integer;

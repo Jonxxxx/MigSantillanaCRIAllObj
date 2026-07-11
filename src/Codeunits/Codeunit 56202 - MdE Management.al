@@ -11,11 +11,11 @@ codeunit 56202 "MdE Management"
     end;
 
     var
-        ConfSant Record: 56001;
+        ConfSant: Record 56001;
         ErrorInsert: Label 'Sólo se puede crear "%1" desde el MdE.';
         ErrorModify: Label 'Sólo se puede modificar "%1" de la tabla "%2" desde el MdE.';
         ErrorDelete: Label 'Sólo se puede borrar "%1" desde el MdE.';
-        AsyncProcQueue Record: 56200;
+        AsyncProcQueue: Record 56200;
 
     procedure CreateAsyncPostRequest(ProcessCode: Code[50]; Url: Text[150]; SoapAction: Text[250]; Content: Text): Text
     var
@@ -141,7 +141,7 @@ codeunit 56202 "MdE Management"
 
     procedure Employee_Modify(var Rec Record: 5200; var xRec Record: 5200")
     var
-        ConfCont Record: 98;
+        ConfCont: Record 98;
     begin
         ConfSant.GET;
 

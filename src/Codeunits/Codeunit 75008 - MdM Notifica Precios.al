@@ -20,7 +20,7 @@ codeunit 75008 "MdM Notifica Precios"
     var
         Text001: Label 'Precio';
         cGestMaestros: Codeunit 75001;
-        rConfMdM Record: 75000;
+        rConfMdM: Record 75000;
         Text002: Label 'MdM. Activa Notificación precios de producto ';
 
     procedure GetParam(pwIdProd: Code[20]) Result: Text
@@ -52,7 +52,7 @@ codeunit 75008 "MdM Notifica Precios"
     procedure GestPrecio2()
     var
         lwFecha: Date;
-        lrPrecFt Record: 75011;
+        lrPrecFt: Record 75011;
         lwPrd: Code[20];
         lrProd: Record 27;
     begin
@@ -81,7 +81,7 @@ codeunit 75008 "MdM Notifica Precios"
     var
         lwFecha: Date;
         lwFecha2: Date;
-        lrJQueueE Record: 472;
+        lrJQueueE: Record 472;
         lwExist: Boolean;
         lwOk: Boolean;
     begin
@@ -174,7 +174,7 @@ codeunit 75008 "MdM Notifica Precios"
     var
         lwFecha: Date;
         lwExist: Boolean;
-        lrPrecFt Record: 75011;
+        lrPrecFt: Record 75011;
         lrRecRf: RecordRef;
         lwOK: Boolean;
         lwDel2: Boolean;
@@ -232,7 +232,7 @@ codeunit 75008 "MdM Notifica Precios"
     var
         lwFecha: Date;
         lwFecha2: Date;
-        lrJQueueE Record: 472;
+        lrJQueueE: Record 472;
         lwExist: Boolean;
         lwOk: Boolean;
         lwIdCdUn: Integer;

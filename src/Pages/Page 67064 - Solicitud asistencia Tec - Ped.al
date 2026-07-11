@@ -466,7 +466,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     trigger OnAction()
                     var
                         pPropFechas: Page67132;
-                        rPropFechas Record: 67088;
+                        rPropFechas: Record 67088;
                     begin
                         TESTFIELD("No. Solicitud");
 
@@ -498,8 +498,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        CabPlanEvent Record: 67051;
-                        CabPlanEvent2Record 67051;
+                        CabPlanEvent: Record 67051;
+                        CabPlanEvent2Record: Record 67051;
                         SolicPlan: Page67112;
                                        pCabPlan: Page67139;
                     begin
@@ -531,7 +531,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     trigger OnAction()
                     var
                         pAsistentes: Page67133;
-                                         CabPlanEvent Record: 67051;
+                                         CabPlanEvent: Record 67051;
                     begin
                         TESTFIELD("No. Solicitud");
                                          TESTFIELD("Tipo de Evento");
@@ -670,8 +670,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     trigger OnAction()
                     var
                         pTextos: Page67141;
-                                     rAdop Record: 67035;
-                                     rGrupoCOL Record: 67089;
+                                     rAdop: Record 67035;
+                                     rGrupoCOL: Record 67089;
                     begin
                         TESTFIELD("No. Solicitud");
                                      TESTFIELD("Cod. Colegio");
@@ -703,7 +703,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     trigger OnAction()
                     var
                         Selection: Integer;
-                        SegSol Record: 67079;
+                        SegSol: Record 67079;
                     begin
                         IF (userPromotor) AND (Status > 0) THEN
                           EXIT;
@@ -838,7 +838,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
     end;
 
     var
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         SalesPerson: Record 13;
         CodPromotor: Code[20];
         Text000: Label ',&Approve,&Reject';
@@ -1009,8 +1009,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
     procedure Act_AsistentesReales()
     var
-        CabPlanEvent Record: 67051;
-        rProg Record: 67015;
+        CabPlanEvent: Record 67051;
+        rProg: Record 67015;
         Asist: Integer;
     begin
 

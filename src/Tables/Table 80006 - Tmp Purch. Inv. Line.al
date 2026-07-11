@@ -614,7 +614,7 @@ table 80006 "Tmp Purch. Inv. Line"
 
     trigger OnDelete()
     var
-        PurchDocLineComments Record: 43;
+        PurchDocLineComments: Record 43;
     begin
     end;
 
@@ -623,7 +623,7 @@ table 80006 "Tmp Purch. Inv. Line"
 
     procedure GetCurrencyCode(): Code[10]
     var
-        PurchInvHeader Record: 122;
+        PurchInvHeader: Record 122;
     begin
         IF "Document No." = PurchInvHeader."No." THEN
           EXIT(PurchInvHeader."Currency Code");
@@ -642,7 +642,7 @@ table 80006 "Tmp Purch. Inv. Line"
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        PurchInvHeader Record: 122;
+        PurchInvHeader: Record 122;
     begin
         IF NOT PurchInvHeader.GET("Document No.") THEN
           PurchInvHeader.INIT;

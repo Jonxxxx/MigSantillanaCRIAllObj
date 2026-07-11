@@ -257,15 +257,15 @@ table 67067 "Historico Colegio - Nivel"
     }
 
     var
-        ConfAPS Record: 67000;
+        ConfAPS: Record 67000;
         Col: Record 5050;
-        PostCode Record: 225;
-        DA Record: 67002;
-        ColAdopcion Record: 67053;
+        PostCode: Record 225;
+        DA: Record 67002;
+        ColAdopcion: Record 67053;
         "P-LC"Record 67006;
         "P-Ruta"Record 67044;
-        RD Record: 67009;
-        Nivel Record: 56005;
+        RD: Record 67009;
+        Nivel: Record 56005;
         Rutas: Page67009;
                    Rutas2: Page67008;
                    Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';

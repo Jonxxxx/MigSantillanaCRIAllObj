@@ -111,7 +111,7 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     var
-                        recLinHojaRuta Record: 56021;
+                        recLinHojaRuta: Record 56021;
                     begin
                         recLinHojaRuta.ActualizarLineas("No. Hoja Ruta", "No. Ruta Distribucion");
                     end;
@@ -121,14 +121,14 @@ page 56009 "Cab. Hoja de Ruta"
     }
 
     var
-        LHR Record: 56021;
-        CHRR Record: 56022;
-        LHRR Record: 56023;
+        LHR: Record 56021;
+        CHRR: Record 56022;
+        LHRR: Record 56023;
         NoSeriesMngm: Codeunit 396;
-        SRS Record: 311;
+        SRS: Record 311;
         txt001: Label 'Confirm that you want to post the Route Sheet';
         txt002: Label 'Confirm that you want to Post and Print the Route Sheet';
-        LHRR1Record 56023;
+        LHRR1Record: Record 56023;
         FunSant: Codeunit 56000;
         rCHRL: Record 56020;
 }

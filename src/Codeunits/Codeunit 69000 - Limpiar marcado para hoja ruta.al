@@ -25,6 +25,6 @@ codeunit 69000 "Limpiar marcado para hoja ruta"
 
     var
         r110: Record 110;
-        r5744Record 5744;
+        r5744Record: Record 5744;
 }
 

@@ -38,37 +38,37 @@ codeunit 56000 "Funciones Santillana"
         NoPedidoTransferencia: Code[20];
         Cliente: Record 18;
         NoLinea: Integer;
-        ConfSantillana Record: 56001;
+        ConfSantillana: Record 56001;
         txt001: Label 'From Customer:';
         Cantidad: Integer;
-        TransferReceiptHeader Record: 5746;
-        TransferReceiptLine Record: 5747;
-        ItemLedgerEntryCons Record: 32;
-        MailSetup Record: 409;
+        TransferReceiptHeader: Record 5746;
+        TransferReceiptLine: Record 5747;
+        ItemLedgerEntryCons: Record 32;
+        MailSetup: Record 409;
         SMTP: Codeunit 400;
-        UserSetup Record: 56000;
-        UserSetUp1Record 56000;
+        UserSetup: Record 56000;
+        UserSetUp1Record: Record 56000;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        rSalesLines Record: 37;
+        rSalesLines: Record 37;
         UltimoLote: Integer;
-        rConfTPV Record: 34002500;
-        rGenJournalLine Record: 81;
-        rCustLedgerEntry Record: 21;
+        rConfTPV: Record 34002500;
+        rGenJournalLine: Record 81;
+        rCustLedgerEntry: Record 21;
         rItem: Record 27;
-        rICR Record: 5717;
+        rICR: Record 5717;
         wDesc: Decimal;
         NoSerMang: Codeunit 396;
         Error002: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
         Error003: Label 'Existe, al menos, una línea con "%1" = %2 sin "%3" ("%4" = %5). Antes de registrar tiene que asociar la factura a esa línea.';
-        TransHeader Record: 5740;
-        TransferLine Record: 5741;
+        TransHeader: Record 5740;
+        TransferLine: Record 5741;
         NoLin: Integer;
-        NewTransLine Record: 5741;
+        NewTransLine: Record 5741;
         DocDim: Codeunit 408;
-        Prueba Record: 56022;
+        Prueba: Record 56022;
         Error004: Label 'El estado no se puede pasar a pendiente, ya existe packing para este pedido (%1).';
         Error005: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
         Error006: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
@@ -76,8 +76,8 @@ codeunit 56000 "Funciones Santillana"
 
     procedure CalcrPrecio(ItemNo: Code[20]; CodCliente: Code[20]; CodUndMed: Code[20]; Fecha: Date): Decimal
     var
-        SalesPrice Record: 7002;
-        SalesDisc Record: 7004;
+        SalesPrice: Record 7002;
+        SalesDisc: Record 7004;
         wPrecio_Loc: Decimal;
     begin
         BuscaTarifa(ItemNo, CodCliente, wDesc, wPrecio_Loc);
@@ -86,7 +86,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure CalcDesc(ItemNo: Code[20]; CodCliente: Code[20]; CodUndMed: Code[20]; Fecha: Date): Decimal
     var
-        SalesLineDisc Record: 7004;
+        SalesLineDisc: Record 7004;
         Item: Record 27;
         wDesc_Loc: Decimal;
         wPrecio_Loc: Decimal;
@@ -97,8 +97,8 @@ codeunit 56000 "Funciones Santillana"
 
     procedure InsertaInvConsig(SalesHeader Record: 36")
     var
-        SalesLines Record: 37;
-        SalesLine1Record 37;
+        SalesLines: Record 37;
+        SalesLine1Record: Record 37;
         Item: Record 27;
         Item1: Record 27;
         Cliente: Record 18;
@@ -142,8 +142,8 @@ codeunit 56000 "Funciones Santillana"
 
     procedure BuscaLineasPendientesEntrega(TransferHeader Record: 5740"): Boolean
     var
-        TransferLine Record: 5741;
-        TransferLine1Record 5741;
+        TransferLine: Record 5741;
+        TransferLine1Record: Record 5741;
         txt001: Label 'Existen lineas de pedidos pendientes de entrega para Cod. producto %1 Almacen %2 en el pedido %3';
     begin
         //Entramos en el bucle de las lineas de la transferencia actual
@@ -165,8 +165,8 @@ codeunit 56000 "Funciones Santillana"
 
     procedure BuscaLineasPendEntregaVenta(SalesHeader Record: 36"): Boolean
     var
-        SalesLine Record: 37;
-        TransferLine1Record 5741;
+        SalesLine: Record 37;
+        TransferLine1Record: Record 5741;
         txt001: Label 'Existen lineas de pedidos pendientes de entrega para Cod. producto %1 Almacen %2 en el pedido %3';
     begin
         //Entramos en el bucle de las lineas de la transferencia actual
@@ -201,8 +201,8 @@ codeunit 56000 "Funciones Santillana"
     procedure InsertaInvConsigTransfer(TransHeader Record: 5740")
     var
         Item: Record 27;
-        TransferLine Record: 5741;
-        TransferLine1Record 5741;
+        TransferLine: Record 5741;
+        TransferLine1Record: Record 5741;
         Item1: Record 27;
     begin
         TransHeader.TESTFIELD("Transfer-from Code");
@@ -250,7 +250,7 @@ codeunit 56000 "Funciones Santillana"
         Recipient: Text[1024];
         Subject: Text[100];
         Body: Text[1024];
-        SalesHeader1Record 36;
+        SalesHeader1Record: Record 36;
     begin
         /*
         ConfSantillana.GET;
@@ -302,7 +302,7 @@ codeunit 56000 "Funciones Santillana"
         Recipient: Text[1024];
         Subject: Text[100];
         Body: Text[1024];
-        TransferHeader1Record 5740;
+        TransferHeader1Record: Record 5740;
     begin
         /*
         ConfSantillana.GET;
@@ -373,17 +373,17 @@ codeunit 56000 "Funciones Santillana"
         NoRecepcion: Code[20];
         CFuncSantillana: Codeunit 56000;
         NoPedidoActual: Code[20];
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
-        TransHeader1Record 5740;
-        SalesLine1Record 37;
-        TransRecHeader Record: 5746;
-        TransRecLines Record: 5747;
-        TransRecHeader1Record 5746;
-        TransRecLines1Record 5747;
-        ItemLedgerEntry Record: 32;
-        rLinCons Record: 56011;
-        rLinCons1Record 56011;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
+        TransHeader1Record: Record 5740;
+        SalesLine1Record: Record 37;
+        TransRecHeader: Record 5746;
+        TransRecLines: Record 5747;
+        TransRecHeader1Record: Record 5746;
+        TransRecLines1Record: Record 5747;
+        ItemLedgerEntry: Record 32;
+        rLinCons: Record 56011;
+        rLinCons1Record: Record 56011;
         frmLinConsig: Page56052;
     begin
         NoPedidoActual := CFuncSantillana.EnviaNoTransferencia;
@@ -492,7 +492,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure ActualizaCantPendCons(ItemLedgerEntryFromJournal Record: 32")
     var
-        ItemLedgerEntry1Record 32;
+        ItemLedgerEntry1Record: Record 32;
     begin
         TransferReceiptHeader.RESET;
         TransferReceiptHeader.SETRANGE(TransferReceiptHeader."No.", ItemLedgerEntryFromJournal."Document No.");
@@ -526,7 +526,7 @@ codeunit 56000 "Funciones Santillana"
         Recipient: Text[1024];
         Subject: Text[100];
         Body: Text[1024];
-        TransferHeader1Record 5740;
+        TransferHeader1Record: Record 5740;
     begin
         /*
         ConfSantillana.GET;
@@ -572,7 +572,7 @@ codeunit 56000 "Funciones Santillana"
         Recipient: Text[1024];
         Subject: Text[100];
         Body: Text[1024];
-        SalesHeader1Record 36;
+        SalesHeader1Record: Record 36;
     begin
 
         ConfSantillana.GET;
@@ -615,8 +615,8 @@ codeunit 56000 "Funciones Santillana"
     var
         TotalAmountLCY: Decimal;
         Cliente: Record 18;
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
         wPendiente: Decimal;
         wCreditoDisponible: Decimal;
         wPendienteActual: Decimal;
@@ -685,20 +685,20 @@ codeunit 56000 "Funciones Santillana"
         rSalesperson: Record 13;
         rContacto: Record 5050;
         I: Integer;
-        rCabCupon Record: 51009;
-        rLinCupon Record: 51010;
+        rCabCupon: Record 51009;
+        rLinCupon: Record 51010;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
         CounterOK: Integer;
-        rConfEmpresa Record: 56001;
+        rConfEmpresa: Record 56001;
         cuNoSerMangm: Codeunit 396;
         rCreaCupLot: Record 51011;
-        rCabCupon1Record 51009;
-        rAnoEscolar Record: 51013;
+        rCabCupon1Record: Record 51009;
+        rAnoEscolar: Record 51013;
         rCrearCuponPorLote: Record 51011;
         NoSeries: Code[20];
-        rVendPorColegio Record: 51014;
+        rVendPorColegio: Record 51014;
         Error001: Label 'You Must complete Salesperson Code';
         Error002: Label 'You must complete School Code';
         Error003: Label 'You must complete Valid From';
@@ -711,8 +711,8 @@ codeunit 56000 "Funciones Santillana"
         Error007: Label 'The Salesperson %1 is not included in School - Salespersons %2';
         txt001: Label 'Confirm that you want generate the coupons';
         Error009: Label 'Debe especificar una descripción';
-        GrupoNegCuponReg Record: 51017;
-        GrupoNegCupon Record: 51016;
+        GrupoNegCuponReg: Record 51017;
+        GrupoNegCupon: Record 51016;
     begin
         UltimoLote := UltLoteCupon + 1;
 
@@ -805,7 +805,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure UltLoteCupon(): Integer
     var
-        rCabCupon Record: 51009;
+        rCabCupon: Record 51009;
     begin
         rCabCupon.SETCURRENTKEY("No. Lote");
         IF rCabCupon.FINDLAST THEN
@@ -852,9 +852,9 @@ codeunit 56000 "Funciones Santillana"
 
     procedure AddProdCupon(CodCuponDesde: Code[20]; CodCuponHasta: Code[20]; CodProd: Code[20])
     var
-        rCabCupon Record: 51009;
-        rLinCupon Record: 51010;
-        rCabCupon1Record 51009;
+        rCabCupon: Record 51009;
+        rLinCupon: Record 51010;
+        rCabCupon1Record: Record 51009;
     begin
         Counter := 0;
         CounterTotal := 0;
@@ -884,8 +884,8 @@ codeunit 56000 "Funciones Santillana"
 
     procedure BuscaTarifa(CodProducto: Code[20]; CodCliente: Code[20]; var wDesc_Loc: Decimal; var wPrecio_Loc: Decimal)
     var
-        rSalesHeader_Loc Record: 36;
-        rSalesLines_Loc Record: 37;
+        rSalesHeader_Loc: Record 36;
+        rSalesLines_Loc: Record 37;
     begin
         IF rItem.GET(CodProducto) THEN BEGIN
             rSalesHeader_Loc.RESET;
@@ -947,19 +947,19 @@ codeunit 56000 "Funciones Santillana"
         NoRecepcion: Code[20];
         CFuncSantillana: Codeunit 56000;
         NoPedidoActual: Code[20];
-        SalesHeader Record: 36;
-        TransferLines Record: 5741;
-        TransHeader1Record 5740;
-        TransferLine1Record 5741;
-        TransRecHeader Record: 5746;
-        TransRecLines Record: 5747;
-        TransRecHeader1Record 5746;
-        TransRecLines1Record 5747;
+        SalesHeader: Record 36;
+        TransferLines: Record 5741;
+        TransHeader1Record: Record 5740;
+        TransferLine1Record: Record 5741;
+        TransRecHeader: Record 5746;
+        TransRecLines: Record 5747;
+        TransRecHeader1Record: Record 5746;
+        TransRecLines1Record: Record 5747;
         NoLinea: Integer;
-        ItemLedgerEntry Record: 32;
-        rLinCons Record: 56012;
-        rLinCons1Record 56012;
-        rLinCons2Record 56012;
+        ItemLedgerEntry: Record 32;
+        rLinCons: Record 56012;
+        rLinCons1Record: Record 56012;
+        rLinCons2Record: Record 56012;
         frmConsignacion: Page56049;
     begin
         NoPedidoActual := CFuncSantillana.EnviaNoTransferencia;
@@ -1037,24 +1037,24 @@ codeunit 56000 "Funciones Santillana"
 
     procedure RegistraPacking(CabPack Record: 56030")
     var
-        linPack Record: 56031;
-        CCP Record: 56032;
+        linPack: Record 56031;
+        CCP: Record 56032;
         txt001: Label 'There is nothing to post';
-        CabPackReg Record: 56033;
-        LinPackReg Record: 56034;
-        CCPR Record: 56035;
-        RWhseActLine Record: 5773;
-        rWhseActHdr Record: 5772;
-        WSH Record: 7320;
+        CabPackReg: Record 56033;
+        LinPackReg: Record 56034;
+        CCPR: Record 56035;
+        RWhseActLine: Record 5773;
+        rWhseActHdr: Record 5772;
+        WSH: Record 7320;
         NoPacking: Code[20];
         NoPick: Code[20];
-        RWhseActLine1Record 5773;
+        RWhseActLine1Record: Record 5773;
         PackCompleto: Boolean;
         CantBultos: Integer;
         CantAEmpac: Decimal;
         CantPenEmpac: Decimal;
-        SalesOrder Record: 36;
-        SalesLineOrder Record: 37;
+        SalesOrder: Record 36;
+        SalesLineOrder: Record 37;
         TMPSLO Record: 37" temporary;
     begin
         ConfSantillana.GET;
@@ -1235,13 +1235,13 @@ codeunit 56000 "Funciones Santillana"
 
     procedure RegHojaEnv(CHR: Record 56020; Imprime: Boolean)
     var
-        LHR Record: 56021;
-        CHRR Record: 56022;
-        LHRR Record: 56023;
+        LHR: Record 56021;
+        CHRR: Record 56022;
+        LHRR: Record 56023;
         NoSeriesMngm: Codeunit 396;
-        SRS Record: 311;
-        LHRR2Record 56023;
-        SIH Record: 112;
+        SRS: Record 311;
+        LHRR2Record: Record 56023;
+        SIH: Record 112;
         ActEstatusFactEcommerce: Codeunit 50011;
     begin
         SRS.GET;
@@ -1307,7 +1307,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure TieneGestionAlmacen(): Boolean
     var
-        RWhseActLine Record: 5773;
+        RWhseActLine: Record 5773;
     begin
         //+#854
         RWhseActLine.RESET;
@@ -1319,7 +1319,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure CorrigeContrato()
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
         NuevaFechaInicio: Date;
     begin
         Contrato.GET('1015', 100);
@@ -1334,7 +1334,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure ActualizarConsecutivoFE()
     var
-        SIH Record: 112;
+        SIH: Record 112;
     begin
         //002-YFC
 
@@ -1356,12 +1356,12 @@ codeunit 56000 "Funciones Santillana"
 
     procedure CreaQRFE(No: Code[20])
     var
-        CompanyInformation Record: 79;
-        TempBlob Record: 99008535;
+        CompanyInformation: Record 79;
+        TempBlob: Record 99008535;
         QRCodeInput: Text[1024];
         QRCodeFileName: Text[1024];
-        SIH Record: 112;
-        SCrMH Record: 114;
+        SIH: Record 112;
+        SCrMH: Record 114;
     begin
         //003+
         CompanyInformation.GET;

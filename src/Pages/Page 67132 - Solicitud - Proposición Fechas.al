@@ -35,8 +35,8 @@ page 67132 "Solicitud - Proposición Fechas"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rProp Record: 67088;
-        rSol Record: 67055;
+        rProp: Record 67088;
+        rSol: Record 67055;
         TieneGrado: Boolean;
         wAsis: Integer;
         Err001: Label 'El número de asistentes definidos supera al número de asistentes esperados de la solicitud';

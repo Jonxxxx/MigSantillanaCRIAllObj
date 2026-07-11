@@ -48,7 +48,7 @@ page 75008 "Conf.Filtros Tipologias MdM"
 
     var
         cFunMdm: Codeunit 75000;
-        rCampos Record: 75008;
+        rCampos: Record 75008;
         wEditable: Boolean;
 }
 

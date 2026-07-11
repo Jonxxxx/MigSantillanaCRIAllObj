@@ -60,8 +60,8 @@ page 56005 "Lin. Packing Registrada"
     }
 
     var
-        ConfSant Record: 56001;
-        LinPackReg Record: 56034;
+        ConfSant: Record 56001;
+        LinPackReg: Record 56034;
 
     procedure ContenidoCajas()
     begin

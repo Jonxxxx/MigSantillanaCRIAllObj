@@ -217,7 +217,7 @@ page 67016 "Asistentes Talleres y Eventos"
     end;
 
     var
-        CabPlanEvento Record: 67051;
+        CabPlanEvento: Record 67051;
         SelDoc: Page67103;
         TotDocentes: Integer;
         gCodTaller: Code[20];
@@ -225,7 +225,7 @@ page 67016 "Asistentes Talleres y Eventos"
         gSec: Integer;
         gTipoEvento: Code[20];
         gNoSolicitud: Code[20];
-        ProgEvento Record: 67015;
+        ProgEvento: Record 67015;
         gTipoExp: Option Docente,Proveedor;
         gLinProg: Integer;
         wAsistentesAsistieron: Integer;
@@ -271,7 +271,7 @@ page 67016 "Asistentes Talleres y Eventos"
 
     procedure RecibeProgEvento(lLinProg: Integer)
     var
-        gProgEvento Record: 67015;
+        gProgEvento: Record 67015;
     begin
 
         gLinProg := lLinProg;

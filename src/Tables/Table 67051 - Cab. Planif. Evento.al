@@ -123,7 +123,7 @@ table 67051 "Cab. Planif. Evento"
 
             trigger OnValidate()
             var
-                ProgEvent Record: 67015;
+                ProgEvent: Record 67015;
             begin
                 ProgEvent.RESET;
                 ProgEvent.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
@@ -304,22 +304,22 @@ table 67051 "Cab. Planif. Evento"
     end;
 
     var
-        Exposit Record: 67001;
-        Vend Record: 23;
-        TyE Record: 67011;
-        TipoEvent Record: 67010;
-        CabPlanEvent Record: 67051;
-        ConfAPS Record: 67000;
-        DimVal Record: 349;
-        MatTallerEvento Record: 67014;
-        ProgTallerEvento Record: 67015;
-        Asistentes Record: 67016;
+        Exposit: Record 67001;
+        Vend: Record 23;
+        TyE: Record 67011;
+        TipoEvent: Record 67010;
+        CabPlanEvent: Record 67051;
+        ConfAPS: Record 67000;
+        DimVal: Record 349;
+        MatTallerEvento: Record 67014;
+        ProgTallerEvento: Record 67015;
+        Asistentes: Record 67016;
         DimForm: Page560;
 
     procedure CalculaMonto() rtnImporte: Decimal
     var
-        rTar Record: 67068;
-        rSol Record: 67055;
+        rTar: Record 67068;
+        rSol: Record 67055;
         rCol: Record 5050;
     begin
         rtnImporte := 0;
@@ -352,7 +352,7 @@ table 67051 "Cab. Planif. Evento"
 
     procedure GetHoras() rtnHoras: Decimal
     var
-        rProg Record: 67015;
+        rProg: Record 67015;
     begin
 
         rtnHoras := 0;
@@ -370,7 +370,7 @@ table 67051 "Cab. Planif. Evento"
 
     procedure GetGrupos() rtnGrupos: Integer
     var
-        rProg Record: 67015;
+        rProg: Record 67015;
     begin
 
         rtnGrupos := 0;

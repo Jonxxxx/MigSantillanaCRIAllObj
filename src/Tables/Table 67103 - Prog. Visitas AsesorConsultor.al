@@ -92,9 +92,9 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColDoc Record: 67043;
+                rColDoc: Record 67043;
                 pColDoc: Page67045;
-                             Cab Record: 67102;
+                             Cab: Record 67102;
             begin
 
                 Cab.GET("No. Visita");
@@ -114,8 +114,8 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnValidate()
             var
-                ColegioDoc Record: 67043;
-                Cab Record: 67102;
+                ColegioDoc: Record 67043;
+                Cab: Record 67102;
             begin
                 Cab.GET("No. Visita");
                 Cab.TESTFIELD("Programa Seguimiento Uno a Uno",TRUE);
@@ -139,7 +139,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColGrado Record: 67037;
+                rColGrado: Record 67037;
                 pColGrado: Page67037;
             begin
                 
@@ -177,8 +177,8 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
     trigger OnInsert()
     var
-        rRec Record: 67103;
-        rCab Record: 67102;
+        rRec: Record 67103;
+        rCab: Record 67102;
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
     begin
 
@@ -214,7 +214,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
     trigger OnModify()
     var
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
-        rCab Record: 67102;
+        rCab: Record 67102;
     begin
 
 

@@ -100,8 +100,8 @@ table 67069 "Historico Colegio - Grados"
     end;
 
     var
-        DA Record: 67002;
-        ColAdopcionD Record: 67053;
+        DA: Record 67002;
+        ColAdopcionD: Record 67053;
         Err001: Label 'This School = Grade already has Adopctions registered. You can''t delete it';
 }
 

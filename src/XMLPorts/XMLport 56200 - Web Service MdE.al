@@ -1036,10 +1036,10 @@ xmlport 56200 "Web Service MdE"
     end;
 
     var
-        ConfSant Record: 56001;
-        Employee Record: 5200;
-        MdEHistory Record: 56202;
-        EmpCotiz Record: 34002100;
+        ConfSant: Record 56001;
+        Employee: Record 5200;
+        MdEHistory: Record 56202;
+        EmpCotiz: Record 34002100;
         MdEMgnt: Codeunit 56202;
         EmployeeNo: Code[20];
         DescErrorArray: array[10] of Text;
@@ -1074,7 +1074,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure CreateEmployee(FromModifyEmployee: Boolean)
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
         Create: Boolean;
         NoOrden: Integer;
         Found: Boolean;
@@ -1235,7 +1235,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure ModifyEmployee()
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
         Found: Boolean;
         Recontratacion: Boolean;
     begin
@@ -1398,7 +1398,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure DeleteEmployee()
     var
-        Contrato Record: 34002109;
+        Contrato: Record 34002109;
     begin
         EmployeeNo := Numero_persona_sistema_loca;
         IF NOT Employee.GET(EmployeeNo) THEN BEGIN
@@ -1673,7 +1673,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure UpdateCodeField(var CodeVar: Code[100]; NewValue: Text; TableRel: Integer; NodeName: Text[80]; FieldCaption: Text[80]; FieldLenght: Integer; DimensionCode: Code[20])
     var
-        DefaultDim Record: 352;
+        DefaultDim: Record 352;
     begin
         IF STRLEN(NewValue) > FieldLenght THEN
             AddError(STRSUBSTNO(ErrorTamanoCampo, NodeName, NewValue, FieldCaption, FieldLenght), ErrorTipoDatos)
@@ -1730,15 +1730,15 @@ xmlport 56200 "Web Service MdE"
 
     local procedure ValidateTableRel(NewValue: Text[200]; TableRel: Integer; NodeName: Text[80]; DimensionCode: Code[20])
     var
-        rPais Record: 9;
-        rCodPostal Record: 225;
-        rContrato Record: 5211;
-        rCentro Record: 34002101;
-        rPuesto Record: 34002110;
-        rMotivoBaja Record: 5217;
-        rDptos Record: 34002135;
-        rDim Record: 348;
-        rDimVal Record: 349;
+        rPais: Record 9;
+        rCodPostal: Record 225;
+        rContrato: Record 5211;
+        rCentro: Record 34002101;
+        rPuesto: Record 34002110;
+        rMotivoBaja: Record 5217;
+        rDptos: Record 34002135;
+        rDim: Record 348;
+        rDimVal: Record 349;
     begin
         CASE TableRel OF
             DATABASE::"Country/Region":

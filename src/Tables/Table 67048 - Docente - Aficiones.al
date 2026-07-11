@@ -44,6 +44,6 @@ table 67048 "Docente - Aficiones"
     }
 
     var
-        DA Record: 67002;
+        DA: Record 67002;
 }
 

@@ -146,13 +146,13 @@ table 64823 Database
     end;
 
     var
-        Specification Record: 64822;
-        SpecFields Record: 64825;
-        ToDo Record: 64826;
-        Log Record: 64827;
+        Specification: Record 64822;
+        SpecFields: Record 64825;
+        ToDo: Record 64826;
+        Log: Record 64827;
         "Table"Record 64828;
         "Field"Record 64829;
-        Accounts Record: 64830;
+        Accounts: Record 64830;
         "Keys"Record 64831;
 }
 

@@ -320,13 +320,13 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
 
     var
         SalesInfoPaneMgt: Codeunit 7171;
-        SalesLine Record: 37;
+        SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit 414;
-        salesheader Record: 36;
-        AppTemp Record: 464;
+        salesheader: Record 36;
+        AppTemp: Record 464;
         ApprovalMgt: Codeunit 1535;
         EstatusPed: Option Abierto,Lanzado,"Aprobación pendiente","Anticipo pendiente";
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -336,11 +336,11 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
         Text002: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         PrevTime: Time;
-        SalesLine2Record 37;
-        WHSL Record: 7321;
-        SL Record: 37;
+        SalesLine2Record: Record 37;
+        WHSL: Record 7321;
+        SL: Record 37;
         PedVta: Page42;
-        SH Record: 36;
+        SH: Record 36;
         Text004: Label 'Se revisarán todos los pedidos y se borrarán aquellos que no tengan cantidad pendiente para enviar. ¿Continuar?';
 
     procedure BorrarPedidosNoPdtes()

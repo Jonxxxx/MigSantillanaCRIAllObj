@@ -103,7 +103,7 @@ tableextension 70000013 tableextension70000013 extends "G/L Account"
 
     procedure CheckGenProdPostingGroup()
     var
-        GeneralLedgerSetup Record: 98;
+        GeneralLedgerSetup: Record 98;
         IsHandled: Boolean;
     begin
         IsHandled := FALSE;
@@ -121,7 +121,7 @@ tableextension 70000013 tableextension70000013 extends "G/L Account"
 
     local procedure CheckOrdersPrepmtToDeduct(FldCaption: Text)
     var
-        GeneralPostingSetup Record: 252;
+        GeneralPostingSetup: Record 252;
     begin
         GeneralPostingSetup.FILTERGROUP(-1);
         GeneralPostingSetup.SETRANGE("Sales Prepayments Account", "No.");

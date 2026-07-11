@@ -102,6 +102,6 @@ tableextension 70000072 tableextension70000072 extends "FA Journal Line"
 
 
     var
-        Currency Record: 4;
+        Currency: Record 4;
 }
 

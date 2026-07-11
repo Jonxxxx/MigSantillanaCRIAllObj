@@ -205,18 +205,18 @@ table 67026 "Colegio - Log - Adopciones"
     }
 
     var
-        ConfAPS Record: 67000;
-        ColNiv Record: 67036;
-        Editora Record: 67024;
-        GradoCol Record: 67037;
+        ConfAPS: Record 67000;
+        ColNiv: Record 67036;
+        Editora: Record 67024;
+        GradoCol: Record 67037;
         Item: Record 27;
-        ProdEq Record: 67005;
-        CabAdopciones Record: 67052;
-        DA Record: 67002;
-        ColegioAdopciones Record: 67026;
-        ColegioAdopciones2Record 67026;
-        DimVal Record: 349;
+        ProdEq: Record 67005;
+        CabAdopciones: Record 67052;
+        DA: Record 67002;
+        ColegioAdopciones: Record 67026;
+        ColegioAdopciones2Record: Record 67026;
+        DimVal: Record 349;
         DimForm: Page560;
-                     DefDim Record: 352;
+                     DefDim: Record 352;
 }
 

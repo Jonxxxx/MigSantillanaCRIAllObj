@@ -523,7 +523,7 @@ table 80004 "Tmp Sales Cr.Memo Line"
 
     procedure GetCurrencyCode(): Code[10]
     var
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoHeader: Record 114;
     begin
         IF "Document No." = SalesCrMemoHeader."No." THEN
           EXIT(SalesCrMemoHeader."Currency Code");
@@ -542,7 +542,7 @@ table 80004 "Tmp Sales Cr.Memo Line"
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoHeader: Record 114;
     begin
         IF NOT SalesCrMemoHeader.GET("Document No.") THEN
           SalesCrMemoHeader.INIT;

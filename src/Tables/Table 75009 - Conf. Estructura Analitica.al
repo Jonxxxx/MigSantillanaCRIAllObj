@@ -96,7 +96,7 @@ table 75009 "Conf. Estructura Analitica"
 
     procedure CompDupl()
     var
-        lrConfAn Record: 75009;
+        lrConfAn: Record 75009;
     begin
         // CompDupl
         // Comprueba Duplicidad

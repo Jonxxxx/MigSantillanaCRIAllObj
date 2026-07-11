@@ -53,7 +53,7 @@ table 67083 "Log Coleg. - Work Flow visitas"
 
     trigger OnModify()
     var
-        CWF Record: 67062;
+        CWF: Record 67062;
     begin
     end;
 }

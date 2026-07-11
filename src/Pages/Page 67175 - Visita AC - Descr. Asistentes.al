@@ -27,7 +27,7 @@ page 67175 "Visita A/C - Descr. Asistentes"
     var
         wVisita: Code[20];
         Err001: Label 'No se ha definido la visita.';
-        rVisita Record: 67102;
+        rVisita: Record 67102;
     begin
         CASE GETFILTER(Tipo) OF
             'Nivel':

@@ -164,10 +164,10 @@ page 67065 "Ficha Ejecucion Planificacion"
 
                     trigger OnAction()
                     var
-                        Planif Record: 67038;
-                        Planif2Record 67038;
-                        CabPlanifReg Record: 67054;
-                        recWFprog Record: 67062;
+                        Planif: Record 67038;
+                        Planif2Record: Record 67038;
+                        CabPlanifReg: Record 67054;
+                        recWFprog: Record 67062;
                         Texto001: Label '¿Desea cerrar la visita sin programar?';
                         Error001: Label 'Proceso cancelado por el usuario.';
                     begin
@@ -212,7 +212,7 @@ page 67065 "Ficha Ejecucion Planificacion"
 
                     trigger OnAction()
                     var
-                        WF Record: 67062;
+                        WF: Record 67062;
                         Texto001: Label 'Ya está marcado como programado. ¿Desea quitar la marca?';
                         Texto002: Label '¿Desea marcar como programado?';
                         Error001: Label 'No se permite realizar esta acción. La visita está registrada.';
@@ -301,10 +301,10 @@ page 67065 "Ficha Ejecucion Planificacion"
 
     procedure ValidaObjetivos(pAccion: Option Registrar,Salir)
     var
-        recWFobj Record: 67062;
+        recWFobj: Record 67062;
         Texto001: Label '¿Desea %1 sin marcar objetivos?';
         Error001: Label 'Acción cancelada por el usuario.';
-        recWFprog Record: 67062;
+        recWFprog: Record 67062;
     begin
 
         recWFprog.RESET;
@@ -331,8 +331,8 @@ page 67065 "Ficha Ejecucion Planificacion"
     var
         Texto001: Label '¿Desea %1 sin marcar pasos?';
         Error001: Label 'Acción cancelada por el usuario.';
-        recWFobj Record: 67062;
-        recWFpasos Record: 67062;
+        recWFobj: Record 67062;
+        recWFpasos: Record 67062;
         Texto002: Label '¿Desea %1 sin marcar algún paso más?';
     begin
 

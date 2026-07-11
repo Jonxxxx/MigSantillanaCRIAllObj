@@ -85,6 +85,6 @@ table 67071 "Historico Promotor - Ppto Mt"
     var
         Item: Record 27;
         Prom: Record 13;
-        ProdEquivalente Record: 67005;
+        ProdEquivalente: Record 67005;
 }
 

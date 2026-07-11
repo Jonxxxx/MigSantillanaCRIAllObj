@@ -84,8 +84,8 @@ page 53000 "Tareas Impresora Fiscal"
     end;
 
     var
-        UserSetUp Record: 91;
-        ConfSant Record: 56001;
+        UserSetUp: Record 91;
+        ConfSant: Record 56001;
         cuImpFisc: Codeunit 53000;
         FechaDesde: Date;
         FechaHasta: Date;

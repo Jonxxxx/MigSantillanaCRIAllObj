@@ -88,14 +88,14 @@ page 67149 "Plan Lector Ficha"
     end;
 
     var
-        recConf Record: 67000;
+        recConf: Record 67000;
 
     procedure Cargar(CodColegio: Code[20];CodLocal: Code[20];CodTurno: Code[20];Camp: Code[20])
     var
-        recGrados Record: 67037;
-        recPL Record: 67064;
+        recGrados: Record 67037;
+        recPL: Record 67064;
         Texto001: Label 'Si realiza la carga de datos, se borrarán los datos existentes. ¿Desea continuar?';
-        recAdop Record: 67053;
+        recAdop: Record 67053;
     begin
 
         recPL.RESET;

@@ -141,14 +141,14 @@ table 67020 "Alumnos - Hijos"
     }
 
     var
-        Father Record: 67017;
-        PostCode Record: 225;
+        Father: Record 67017;
+        PostCode: Record 225;
         Msg001: Label 'Do you wish to copy the address from the father?';
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
 
     procedure DisplayMap()
     var
-        MapPoint Record: 800;
+        MapPoint: Record 800;
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN

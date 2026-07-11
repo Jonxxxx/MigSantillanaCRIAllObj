@@ -245,14 +245,14 @@ table 64822 Specification
     }
 
     var
-        FieldList Record: 64825;
-        FieldFilter Record: 64836;
-        LinkedTableFilter Record: 64837;
-        DB Record: 64823;
-        Spec Record: 64822;
-        ReplicatorSetup Record: 64835;
-        DatabaseTables Record: 64828;
-        AllObj Record: 2000000038;
+        FieldList: Record 64825;
+        FieldFilter: Record 64836;
+        LinkedTableFilter: Record 64837;
+        DB: Record 64823;
+        Spec: Record 64822;
+        ReplicatorSetup: Record 64835;
+        DatabaseTables: Record 64828;
+        AllObj: Record 2000000038;
         NoSeriesMgt: Codeunit 396;
 }
 

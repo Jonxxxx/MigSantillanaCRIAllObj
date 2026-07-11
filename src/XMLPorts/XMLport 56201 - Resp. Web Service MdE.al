@@ -118,7 +118,7 @@ xmlport 56201 "Resp. Web Service MdE"
 
     procedure SetInfo(var New_id_mensaje: Text[36]; var New_Tipo: Text[20]; var FechaOrigen: Text[30]; var PaisOrigen: Text[20]): Text
     var
-        ConfSant Record: 56001;
+        ConfSant: Record 56001;
         XmlDomMngt: Codeunit 6224;
         XmlDoc: DotNet XmlDocument;
         XmlNode: DotNet XmlNode;

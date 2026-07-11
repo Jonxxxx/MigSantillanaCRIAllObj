@@ -11,7 +11,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     trigger OnRun()
     var
-        SalesHeader Record: 36;
+        SalesHeader: Record 36;
     begin
         SalesHeader.COPY(Rec);
         Code(SalesHeader);
@@ -25,12 +25,12 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         ReceiveInvoiceQst: Label '&Receive,&Invoice,Receive &and Invoice';
         SendReportAsEmail: Boolean;
         i: Integer;
-        rConfEmp Record: 56001;
+        rConfEmp: Record 56001;
 
     [Scope('Internal')]
     procedure PostAndEmail(var ParmSalesHeader Record: 36")
     var
-        SalesHeader Record: 36;
+        SalesHeader: Record 36;
     begin
         SendReportAsEmail := TRUE;
         SalesHeader.COPY(ParmSalesHeader);
@@ -40,7 +40,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     local procedure "Code"(var SalesHeader Record: 36")
     var
-        SalesSetup Record: 311;
+        SalesSetup: Record 311;
         SalesPostViaJobQueue: Codeunit 88;
         HideDialog: Boolean;
     begin
@@ -149,7 +149,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     local procedure PrintReceive(SalesHeader Record: 36")
     var
-        ReturnRcptHeader Record: 6660;
+        ReturnRcptHeader: Record 6660;
     begin
         ReturnRcptHeader."No." := SalesHeader."Last Return Receipt No.";
         IF ReturnRcptHeader.FIND THEN;
@@ -163,7 +163,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     local procedure PrintInvoice(SalesHeader Record: 36")
     var
-        SalesInvHeader Record: 112;
+        SalesInvHeader: Record 112;
     begin
         IF SalesHeader."Last Posting No." = '' THEN
             SalesInvHeader."No." := SalesHeader."No."
@@ -225,7 +225,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     local procedure PrintCrMemo(SalesHeader Record: 36")
     var
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoHeader: Record 114;
     begin
         IF SalesHeader."Last Posting No." = '' THEN
             SalesCrMemoHeader."No." := SalesHeader."No."
@@ -255,9 +255,9 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         "**012**": Integer;
         cuFE: Codeunit 52504;
         txtResp: array[7] of Text[1024];
-        rSIH Record: 112;
+        rSIH: Record 112;
         NoFactReg: Code[20];
-        rSCMH Record: 114;
+        rSCMH: Record 114;
     begin
         // ++ 001-YFC
 
@@ -284,10 +284,10 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
 
     procedure RegistroCobrosDsPos(SalesHeader Record: 36")
     var
-        ConfiEmpresa Record: 56001;
+        ConfiEmpresa: Record 56001;
         RegisCobrDsPos: Codeunit 50116;
-        rSIH Record: 112;
-        rSCMH Record: 114;
+        rSIH: Record 112;
+        rSCMH: Record 114;
     begin
         ConfiEmpresa.GET;
         IF ((SalesHeader."Document Type" = SalesHeader."Document Type"::Order) OR

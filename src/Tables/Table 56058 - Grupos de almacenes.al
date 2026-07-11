@@ -29,7 +29,7 @@ table 56058 "Grupos de almacenes"
     trigger OnDelete()
     var
         TextL001: Label 'No podemos eliminar el grupo ya que est  definido en la tabla de almacenes x grupo';
-        lrAxG Record: 56059;
+        lrAxG: Record 56059;
     begin
         lrAxG.RESET;
         lrAxG.SETRANGE(Grupo, Grupo);

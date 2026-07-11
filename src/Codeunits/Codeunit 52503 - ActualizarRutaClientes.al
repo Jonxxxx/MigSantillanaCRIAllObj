@@ -35,8 +35,8 @@ codeunit 52503 ActualizarRutaClientes
 
     var
         recClientes: Record 18;
-        recCodPostal Record: 225;
-        recRutasDistribucion Record: 56071;
+        recCodPostal: Record 225;
+        recRutasDistribucion: Record 56071;
         ldgVentana: Dialog;
         vContador: Integer;
         vContadorT: Integer;

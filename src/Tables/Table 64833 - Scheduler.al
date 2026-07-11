@@ -158,9 +158,9 @@ table 64833 Scheduler
     end;
 
     var
-        tags Record: 64834;
-        ReplicatorSetup Record: 64835;
-        Sched Record: 64833;
+        tags: Record 64834;
+        ReplicatorSetup: Record 64835;
+        Sched: Record 64833;
         NoSeriesMgt: Codeunit 396;
 
     procedure AssistEdit(OldSched Record: 64833"): Boolean

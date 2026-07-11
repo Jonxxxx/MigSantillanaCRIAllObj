@@ -2175,7 +2175,7 @@ tableextension 70000044 tableextension70000044 extends "Sales Header"
 
     local procedure UpdatePrepmtAmounts(var SalesLine Record: 37")
     var
-        Currency Record: 4;
+        Currency: Record 4;
     begin
         Currency.Initialize("Currency Code");
         IF "Document Type" = "Document Type"::Order THEN BEGIN

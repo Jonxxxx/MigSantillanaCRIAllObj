@@ -57,11 +57,11 @@ table 70512 "Precios por Cliente_Producto"
     }
 
     var
-        CustPriceGr Record: 6;
+        CustPriceGr: Record 6;
         Text000: Label '%1 cannot be after %2';
         Cust: Record 18;
         Text001: Label '%1 must be blank.';
-        Campaign Record: 5071;
+        Campaign: Record 5071;
         Item: Record 27;
         Text002: Label 'You can only change the %1 and %2 from the Campaign Card when %3 = %4';
 }

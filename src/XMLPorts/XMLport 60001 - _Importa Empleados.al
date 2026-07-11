@@ -394,15 +394,15 @@ xmlport 60001 "_Importa Empleados"
     }
 
     var
-        Empl Record: 5200;
-        esqsal Record: 34002115;
-        contra Record: 34002109;
-        CARGOS Record: 34002110;
-        DistCta Record: 34002108;
-        DefDim Record: 352;
-        DimVal Record: 349;
-        Departamento Record: 34002135;
-        SubDepartamento Record: 34002136;
+        Empl: Record 5200;
+        esqsal: Record 34002115;
+        contra: Record 34002109;
+        CARGOS: Record 34002110;
+        DistCta: Record 34002108;
+        DefDim: Record 352;
+        DimVal: Record 349;
+        Departamento: Record 34002135;
+        SubDepartamento: Record 34002136;
         Sucursal: Code[10];
         found: Integer;
 }

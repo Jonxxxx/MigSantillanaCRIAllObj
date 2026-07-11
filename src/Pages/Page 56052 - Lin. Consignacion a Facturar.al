@@ -150,14 +150,14 @@ page 56052 "Lin. Consignacion a Facturar"
 
     var
         NoPedido: Code[20];
-        SalesLine1Record 37;
-        SalesLine Record: 37;
+        SalesLine1Record: Record 37;
+        SalesLine: Record 37;
         rConsAFact Record: 56011" temporary;
         NoLinea: Integer;
-        SH Record: 36;
+        SH: Record 36;
         rLinCons Record: 56011" temporary;
         rItem: Record 27;
-        rLCF Record: 56011;
+        rLCF: Record 56011;
         FuncSant: Codeunit 56000;
         PageActDesc: Page56053;
         Window: Dialog;

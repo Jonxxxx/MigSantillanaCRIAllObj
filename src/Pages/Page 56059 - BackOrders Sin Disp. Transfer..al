@@ -248,7 +248,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
 
     var
         SalesInfoPaneMgt: Codeunit 7171;
-        UserSetup Record: 91;
+        UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -258,12 +258,12 @@ page 56059 "BackOrders Sin Disp. Transfer."
         Text002: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         PrevTime: Time;
-        TL Record: 5741;
-        TH Record: 5740;
+        TL: Record 5741;
+        TH: Record 5740;
         estatusTrans: Option Abierto,Lanzado;
         ReleaseTransfDoc: Codeunit 5708;
-        TL1Record 5741;
-        WHSL Record: 7321;
+        TL1Record: Record 5741;
+        WHSL: Record 7321;
         PedTrans: Page5740;
 }
 

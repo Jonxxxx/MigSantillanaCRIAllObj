@@ -118,7 +118,7 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         var
-                            TempBlob Record: 99008535;
+                            TempBlob: Record 99008535;
                         begin
                             CALCFIELDS(DOC);
                             IF NOT DOC.HASVALUE THEN
@@ -135,7 +135,7 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         var
-                            TempBlob Record: 99008535;
+                            TempBlob: Record 99008535;
                         begin
                             CALCFIELDS("Send XML");
                             IF NOT "Send XML".HASVALUE THEN
@@ -152,7 +152,7 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         var
-                            TempBlob Record: 99008535;
+                            TempBlob: Record 99008535;
                         begin
                             CALCFIELDS("Send XML Reply");
                             IF NOT "Send XML Reply".HASVALUE THEN

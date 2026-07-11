@@ -12,9 +12,9 @@ table 67120 "Encuesta TIC"
 
             trigger OnLookup()
             var
-                APSSetup Record: 67000;
-                DefDim Record: 352;
-                DimVal Record: 349;
+                APSSetup: Record 67000;
+                DefDim: Record 352;
+                DimVal: Record 349;
                 DimForm: Page560;
             begin
                 APSSetup.GET();
@@ -35,8 +35,8 @@ table 67120 "Encuesta TIC"
 
             trigger OnValidate()
             var
-                APSSetup Record: 67000;
-                DimVal Record: 349;
+                APSSetup: Record 67000;
+                DimVal: Record 349;
             begin
                 APSSetup.GET();
                 APSSetup.TESTFIELD(APSSetup."Cod. Dimension Delegacion");
@@ -276,8 +276,8 @@ table 67120 "Encuesta TIC"
 
     trigger OnInsert()
     var
-        Encuesta Record: 67120;
-        Config Record: 67000;
+        Encuesta: Record 67120;
+        Config: Record 67000;
     begin
         IF Encuesta.FINDLAST THEN
           ID := Encuesta.ID + 1

@@ -154,7 +154,7 @@ page 67090 "Lista Solicitudes T&E"
         CodPromotor: Code[20];
         wFechaProp: Date;
         wFechaProg: Date;
-        recUsuario Record: 91;
+        recUsuario: Record 91;
 
     procedure RecibeParam(CodProm: Code[20])
     begin

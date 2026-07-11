@@ -9,7 +9,7 @@ table 67090 "Grupo - Colegios"
 
             trigger OnValidate()
             var
-                rGrupo Record: 67089;
+                rGrupo: Record 67089;
             begin
                 IF rGrupo.GET("Cod. grupo") THEN
                     "Nombre Grupo" := rGrupo.Descripci n;
@@ -48,7 +48,7 @@ table 67090 "Grupo - Colegios"
 
     trigger OnInsert()
     var
-        rRec Record: 67090;
+        rRec: Record 67090;
     begin
         TESTFIELD("Cod. grupo");
         TESTFIELD("Cod. Colegio");

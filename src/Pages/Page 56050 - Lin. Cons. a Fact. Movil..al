@@ -137,7 +137,7 @@ page 56050 "Lin. Cons. a Fact. Movil."
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         rLinCons Record: 56017" temporary;
         rItem: Record 27;
-        rLCF Record: 56017;
+        rLCF: Record 56017;
         NoCliente: Code[20];
         Cust: Record 18;
 
@@ -149,15 +149,15 @@ page 56050 "Lin. Cons. a Fact. Movil."
     procedure LlenaTabla()
     var
         NoPedidoActual: Code[20];
-        SalesHeader Record: 36;
+        SalesHeader: Record 36;
         SalesLine Record: 37" temporary;
-        TransHeader1Record 5740;
-        SalesLine1Record 37;
-        TransRecHeader Record: 5746;
-        TransRecLines Record: 5747;
-        TransRecHeader1Record 5746;
-        TransRecLines1Record 5747;
-        ItemLedgerEntry Record: 32;
+        TransHeader1Record: Record 5740;
+        SalesLine1Record: Record 37;
+        TransRecHeader: Record 5746;
+        TransRecLines: Record 5747;
+        TransRecHeader1Record: Record 5746;
+        TransRecLines1Record: Record 5747;
+        ItemLedgerEntry: Record 32;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

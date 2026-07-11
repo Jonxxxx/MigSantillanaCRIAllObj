@@ -175,17 +175,17 @@ codeunit 56047 "APS Paso 2"
     end;
 
     var
-        T34002809Record 67009;
-        T34002826Record 67026;
-        T34002835Record 67035;
-        T34002852Record 67052;
-        T34002853Record 67053;
-        TTEMP34002809Record 67087;
-        TTEMP34002826Record 67088;
-        TTEMP34002835Record 67089;
-        TTEMP34002852Record 67090;
-        TTEMP34002853Record 67091;
-        rCompany Record: 2000000006;
+        T34002809Record: Record 67009;
+        T34002826Record: Record 67026;
+        T34002835Record: Record 67035;
+        T34002852Record: Record 67052;
+        T34002853Record: Record 67053;
+        TTEMP34002809Record: Record 67087;
+        TTEMP34002826Record: Record 67088;
+        TTEMP34002835Record: Record 67089;
+        TTEMP34002852Record: Record 67090;
+        TTEMP34002853Record: Record 67091;
+        rCompany: Record 2000000006;
         wCamp: Code[20];
 }
 

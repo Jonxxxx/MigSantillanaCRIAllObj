@@ -60,7 +60,7 @@ codeunit 56007 "Funciones MOI"
 
     procedure EstaEnLicencia(): Boolean
     var
-        lrPermisosLicencia Record: 2000000043;
+        lrPermisosLicencia: Record 2000000043;
     begin
         //Abre una pagina para preguntar si un objeto en cuestion está en la licencia.
         CLEAR(gpPaginaMOI);

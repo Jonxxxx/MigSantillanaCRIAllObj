@@ -98,8 +98,8 @@ table 67002 "Datos auxiliares"
     }
 
     var
-        ConfAPS Record: 67000;
-        DimVal Record: 349;
+        ConfAPS: Record 67000;
+        DimVal: Record 349;
         DimForm: Page560;
 }
 

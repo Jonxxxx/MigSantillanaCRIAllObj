@@ -161,7 +161,7 @@ table 67043 "Colegio - Docentes"
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
             end;
         }
@@ -231,11 +231,11 @@ table 67043 "Colegio - Docentes"
     end;
 
     var
-        DA Record: 67002;
-        ColNiv Record: 67036;
-        NivelE Record: 67022;
-        PromRuta Record: 67044;
-        Docente Record: 67001;
+        DA: Record 67002;
+        ColNiv: Record 67036;
+        NivelE: Record 67022;
+        PromRuta: Record 67044;
+        Docente: Record 67001;
         recColegio: Record 5050;
         Cargo: Page67033;
 }

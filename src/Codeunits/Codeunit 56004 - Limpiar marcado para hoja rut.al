@@ -28,6 +28,6 @@ codeunit 56004 "Limpiar marcado para hoja rut"
 
     var
         r110: Record 110;
-        r5744Record 5744;
+        r5744Record: Record 5744;
 }
 

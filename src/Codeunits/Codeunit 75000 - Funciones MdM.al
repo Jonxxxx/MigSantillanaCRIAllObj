@@ -17,15 +17,15 @@ codeunit 75000 "Funciones MdM"
     end;
 
     var
-        wConfMdM Record: 75000;
-        GLSetup Record: 98;
+        wConfMdM: Record 75000;
+        GLSetup: Record 98;
         GLSetupRead: Boolean;
         ErrEditDim: Label 'No puede editar esta dimensión predeterminada para este producto, se gestiona por el MdM.';
         ErrEditDim2: Label 'No puede editar esta dimensión, se gestiona por MdM.';
         ErrEditTable: Label 'No puede editar %1. Se gestiona por MdM';
         ErrISBN: Label 'El código ISBN %1 No es correcto';
         ErrFieldM: Label 'Debe de rellenar el valor %1';
-        lrDim Record: 348;
+        lrDim: Record 348;
         rTmpBuff Record: 75016" temporary;
 
     procedure GetTotalGestDim(): Integer
@@ -50,7 +50,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDimValueC(pwCodProd: Code[20]; pwCode: Code[20]): Code[20]
     var
-        lrDefDim Record: 352;
+        lrDefDim: Record 352;
     begin
         // GetDimValueC
         // Devuelve el valor de una dimension determinada (por Codigo)
@@ -108,7 +108,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDimCodeName(pwTipoDim: Option SerieMetodo,Destino,Cuenta,TipoTexto,Materia,CargaHoraria,Origen): Text[30]
     var
-        lrDim Record: 348;
+        lrDim: Record 348;
         lwDimCode: Code[20];
     begin
         // GetDimCodeName
@@ -122,7 +122,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDimValueName(pwCodProd: Code[20]; pwTipoDim: Option SerieMetodo,Destino,Cuenta,TipoTexto,Materia,CargaHoraria,Origen): Text[50]
     var
-        lrDimVal Record: 349;
+        lrDimVal: Record 349;
         lwDimValue: Code[20];
         lwDimCode: Code[20];
     begin
@@ -180,7 +180,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure TestDimValC(pwDimCode: Code[20]; pwValue: Code[20])
     var
-        lrDimVal Record: 349;
+        lrDimVal: Record 349;
     begin
         // TestDimValC
         // Comprueba que exista el valor de dimensión
@@ -202,7 +202,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ExistDimValC(pwDimCode: Code[20]; pwValue: Code[20]) Result: Boolean
     var
-        lrDimVal Record: 349;
+        lrDimVal: Record 349;
     begin
         // ExistDimValC
         // Devuelve true si existe el valor de dimensión
@@ -224,7 +224,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ValidaDimValC(var prProd: Record 27; pwDimCode: Code[20]; pwValue: Code[20])
     var
-        lrDefDim Record: 352;
+        lrDefDim: Record 352;
         lwExists: Boolean;
     begin
         // ValidaDimValC
@@ -290,7 +290,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDimValueLookupC(pwDimCode: Code[20]; pwDefault: Code[20]) wCode: Code[20]
     var
-        lrDimVal Record: 349;
+        lrDimVal: Record 349;
         lwOK: Boolean;
     begin
         // GetDimValueLookupC
@@ -349,8 +349,8 @@ codeunit 75000 "Funciones MdM"
 
     procedure ShowDimC(prProd: Record 27; pwDimCode: Code[20])
     var
-        lrDefDim Record: 352;
-        lrDimVal Record: 349;
+        lrDefDim: Record 352;
+        lrDimVal: Record 349;
         lwPag: Page540;
         lwEnc: Boolean;
     begin
@@ -398,7 +398,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure SetTipoDim(pwCode: Code[20]; pwTipoDim: Option SerieMetodo,Destino,Cuenta,TipoTexto,Materia,CargaHoraria,Origen)
     var
-        lrDim Record: 348;
+        lrDim: Record 348;
     begin
         // SetTipoDim
         // Define el valor "Tipo MdM" de la tabla de Dimensiones en virtud del valor de configuración
@@ -529,7 +529,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetBarCode(prProd: Record 27): Code[20]
     var
-        lwRecRef Record: 5717;
+        lwRecRef: Record 5717;
     begin
         // GetBarCode
 
@@ -545,7 +545,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDatDescrp(pwTipo: Integer; pwCode: Code[20]) wDesc: Text[100]
     var
-        lrDat Record: 75001;
+        lrDat: Record 75001;
     begin
         // GetDatDescrp
         // Devuelve la descripción de un dato de la tabla Datos MdM
@@ -560,7 +560,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEstrcturaAnaliticaDescr(prProd: Record 27) wDesc: Text[100]
     var
-        lrEsct Record: 75002;
+        lrEsct: Record 75002;
     begin
         // GetEstrcturaAnaliticaDescr
         // Devuelve la descripción de la estructura analitica
@@ -573,7 +573,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetIdiomaDesc(prProd: Record 27) wDesc: Text[50]
     var
-        lrLang Record: 8;
+        lrLang: Record 8;
     begin
         // GetIdiomaDesc
         // Devuelve la descripción del idioma
@@ -586,7 +586,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetTipologiaDesc(prProd: Record 27) wDesc: Text
     var
-        lrItemCat Record: 5722;
+        lrItemCat: Record 5722;
     begin
         // GetTipologiaDesc     ***Revisar aqui***
 
@@ -597,7 +597,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetPaisDesc(prProd: Record 27) wDesc: Text
     var
-        lrCountry Record: 9;
+        lrCountry: Record 9;
     begin
         // GetPaisDesc
 
@@ -607,7 +607,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDatosAuxDesc(pwTipo: Option Aficiones,"Areas de interés",Atenciones,"Canal de venta",Especialidades,Grados,Materiales,"Nivel de decisión","Puestos de trabajo",Rutas,"Tipo de educacion","Tipos de colegios","Tipos de contactos",Turnos,Zonas,"Linea Negocio","Sub familia",Objetivos,Tareas,"Motivos Perdida","Orden religiosa","Asociacion educativa",Materia,"Grupo de Negocio","Equipos T&E","Iniciales Almacen"; pwCode: Code[20]) Result: Text
     var
-        lrDatosAux Record: 67002;
+        lrDatosAux: Record 67002;
     begin
         // GetDatosAuxDesc
         // Devuelve descripcion de Datos Auxiliares (APS)
@@ -619,7 +619,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEAN(prProd: Record 27) wEan: Text
     var
-        lrCrossRef Record: 5717;
+        lrCrossRef: Record 5717;
     begin
         // GetEAN
 
@@ -636,7 +636,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEditable() wEditable: Boolean
     var
-        lrUserStp Record: 91;
+        lrUserStp: Record 91;
         Usuario: Text[30];
     begin
 
@@ -673,7 +673,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEditableP(prProd: Record 27; pwAut: Boolean) wEditable: Boolean
     var
-        lrUserStp Record: 91;
+        lrUserStp: Record 91;
     begin
         // GetEditableP
         // Determina si los campos MdM son editables en un producto
@@ -697,7 +697,7 @@ codeunit 75000 "Funciones MdM"
     procedure GetDimEditable(prDefDim Record: 352; pwError: Boolean) wEditable: Boolean
     var
         lwN: Integer;
-        lrUserStp Record: 91;
+        lrUserStp: Record 91;
         lrItem: Record 27;
     begin
         // GetDimEditable
@@ -732,7 +732,7 @@ codeunit 75000 "Funciones MdM"
     procedure GetDimValueEditable(prDimVal Record: 349; pwError: Boolean) wEditable: Boolean
     var
         lwN: Integer;
-        lrUserStp Record: 91;
+        lrUserStp: Record 91;
     begin
         // GetDimValueEditable
         // Determina un valor de dimensión es editable
@@ -759,10 +759,10 @@ codeunit 75000 "Funciones MdM"
 
     procedure SetConfTipologiaMdM(var prProd: Record 27; pwTipologia: Code[10]; pwValores: array[10] of Code[20]) Result: Boolean
     var
-        lrConfTip Record: 75006;
-        lrItemCat Record: 5722;
+        lrConfTip: Record 75006;
+        lrItemCat: Record 5722;
         lwNo: Integer;
-        lrFiltroTipo Record: 75008;
+        lrFiltroTipo: Record 75008;
     begin
         // SetConfTipologiaMdM
         // Tener en cuenta que no se hace Modify en la tabla
@@ -806,8 +806,8 @@ codeunit 75000 "Funciones MdM"
 
     procedure ConfiguraTipologiaMdM(var prProd: Record 27) Result: Boolean
     var
-        lrConv Record: 75007;
-        lrFiltroTipo Record: 75008;
+        lrConv: Record 75007;
+        lrFiltroTipo: Record 75008;
         lwNo: Integer;
         lwValores: array[20] of Code[20];
     begin
@@ -833,7 +833,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ShowSalesPrice(var prProd: Record 27)
     var
-        lrSPrice Record: 7002;
+        lrSPrice: Record 7002;
     begin
         // ShowSalesPrice
 
@@ -1084,9 +1084,9 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDefDimesions(var prProd: Record 27)
     var
-        lrDefDim Record: 352;
-        lrDefDim2Record 352;
-        lrDefDim3Record 352;
+        lrDefDim: Record 352;
+        lrDefDim2Record: Record 352;
+        lrDefDim3Record: Record 352;
     begin
         // GetDefDimesions
         // Añadimos dimensiones por defecto
@@ -1142,7 +1142,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasDocV(prSalesHd Record: 36")
     var
-        lrLin Record: 37;
+        lrLin: Record 37;
     begin
         // ContrlFechasDocV
         // #209115 JPT 03/04/2019
@@ -1172,7 +1172,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasDocC(prPurchHd Record: 38")
     var
-        lrLin Record: 39;
+        lrLin: Record 39;
     begin
         // ContrlFechasDocC
         // #209115 JPT 03/04/2019
@@ -1202,7 +1202,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasAlbC(prCabAlbC Record: 120")
     var
-        lrLin Record: 121;
+        lrLin: Record 121;
         lrTmpBuff Record: 75016" temporary;
     begin
         // ContrlFechaAlbC
@@ -1230,7 +1230,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasAlbV(prCabAlbV Record: 110")
     var
-        lrLin Record: 111;
+        lrLin: Record 111;
         lrTmpBuff Record: 75016" temporary;
     begin
         // ContrlFechaAlbV
@@ -1258,7 +1258,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasFactV(prCabFactV Record: 112")
     var
-        lrLin Record: 113;
+        lrLin: Record 113;
         lrTmpBuff Record: 75016" temporary;
     begin
         // ContrlFechasFactV
@@ -1285,7 +1285,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure ContrlFechasEns(prAssemHd Record: 910") Result: Boolean
     var
-        lrLin Record: 911;
+        lrLin: Record 911;
         lrProd: Record 27;
         lrTmpFechasBuff Record: 75016" temporary;
         lrTmpf2Record 75016" temporary;
@@ -1385,7 +1385,7 @@ codeunit 75000 "Funciones MdM"
     var
         lrTmpFechasBuff Record: 75016" temporary;
         lrTmpf2Record 75016" temporary;
-        lrBoomC Record: 90;
+        lrBoomC: Record 90;
         lrProd2: Record 27;
         lwBEntrada: Boolean;
         lwBComerc: Boolean;

@@ -235,7 +235,7 @@ tableextension 70000037 tableextension70000037 extends "Item Ledger Entry"
     [Scope('Personalization')]
     procedure CalculateRemainingInventoryValue(ItemLedgEntryNo: Integer; ItemLedgEntryQty: Decimal; RemQty: Decimal; IncludeExpectedCost: Boolean; ValuationDate: Date; PostingDate: Date): Decimal
     var
-        ValueEntry Record: 5802;
+        ValueEntry: Record 5802;
         AdjustedCost: Decimal;
         TotalQty: Decimal;
     begin

@@ -11,8 +11,8 @@ codeunit 75009 "MdM Macros"
     end;
 
     var
-        GLSetup Record: 98;
-        rConfMdM Record: 75000;
+        GLSetup: Record 98;
+        rConfMdM: Record 75000;
         wCont: Integer;
         wTotal: Integer;
         wStep: Integer;
@@ -69,7 +69,7 @@ codeunit 75009 "MdM Macros"
 
     procedure GetDefDimesions(pwIdTabla: Integer; pwNo: Code[20]; pwDimcode: Code[20]) Result: Code[20]
     var
-        lrDefDim Record: 352;
+        lrDefDim: Record 352;
     begin
         // GetDefDimesions
         // Añadimos dimensiones por defecto
@@ -125,7 +125,7 @@ codeunit 75009 "MdM Macros"
 
     procedure BorraDescrpEAN()
     var
-        lrRefC Record: 5717;
+        lrRefC: Record 5717;
     begin
         // BorraDescrpEAN
         // Borra la descripción de todas las referencias cruzadas
@@ -140,9 +140,9 @@ codeunit 75009 "MdM Macros"
 
     procedure RellenaUnidadEnPrecios()
     var
-        lrPreV Record: 7002;
-        lrPreV2Record 7002;
-        lrPreV3Record 7002;
+        lrPreV: Record 7002;
+        lrPreV2Record: Record 7002;
+        lrPreV3Record: Record 7002;
         lrProd: Record 27;
     begin
         // RellenaUnidadEnPrecios
@@ -254,7 +254,7 @@ codeunit 75009 "MdM Macros"
 
     procedure CambioFechaFin(itemNo: Text)
     var
-        preciosVenta Record: 7002;
+        preciosVenta: Record 7002;
         endDate: Text;
     begin
         //+#278368

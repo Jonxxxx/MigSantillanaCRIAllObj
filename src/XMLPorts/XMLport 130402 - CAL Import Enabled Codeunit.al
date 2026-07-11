@@ -48,7 +48,7 @@ xmlport 130402 "CAL Import Enabled Codeunit"
 
     local procedure CodeunitIsEnabled(CodeunitId: Integer): Boolean
     var
-        CALTestEnabledCodeunit Record: 130403;
+        CALTestEnabledCodeunit: Record 130403;
     begin
         CALTestEnabledCodeunit.SETRANGE("Test Codeunit ID", CodeunitId);
         EXIT(NOT CALTestEnabledCodeunit.ISEMPTY);

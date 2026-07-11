@@ -67,7 +67,7 @@ table 75004 "Imp.MdM Tabla"
 
     trigger OnDelete()
     var
-        lrFields Record: 75005;
+        lrFields: Record 75005;
     begin
 
         // Borramos todos los campos relacionados
@@ -80,7 +80,7 @@ table 75004 "Imp.MdM Tabla"
     var
         cFuncMdM: Codeunit 75000;
         cGenProd: Codeunit 75007;
-        ConfMdM Record: 75000;
+        ConfMdM: Record 75000;
         Text0001: Label 'Dim. ';
         Text0002: Label 'Alto';
         Text0003: Label 'Ancho';
@@ -90,7 +90,7 @@ table 75004 "Imp.MdM Tabla"
 
     procedure GetTableName() TableName: Text[50]
     var
-        lrTables Record: 2000000001;
+        lrTables: Record 2000000001;
     begin
         // GetTableName
 
@@ -103,7 +103,7 @@ table 75004 "Imp.MdM Tabla"
 
     procedure GetFieldName(pwFieldNo: Integer) FieldName: Text[50]
     var
-        rlFields Record: 2000000041;
+        rlFields: Record 2000000041;
     begin
         // GetFieldName
 
@@ -132,8 +132,8 @@ table 75004 "Imp.MdM Tabla"
 
     procedure ValidaCampos()
     var
-        lrField Record: 75005;
-        lrField2Record 2000000041;
+        lrField: Record 75005;
+        lrField2Record: Record 2000000041;
         lrRF: FieldRef;
         lwType: Option;
         lwIntT: Integer;
@@ -277,7 +277,7 @@ table 75004 "Imp.MdM Tabla"
     var
         lrPK: KeyRef;
         lwN: Integer;
-        lrField Record: 75005;
+        lrField: Record 75005;
         lwRecRef: RecordRef;
         lwField2: FieldRef;
         lwCod: Code[20];

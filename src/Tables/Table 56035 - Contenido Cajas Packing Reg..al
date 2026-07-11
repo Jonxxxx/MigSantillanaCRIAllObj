@@ -115,8 +115,8 @@ table 56035 "Contenido Cajas Packing Reg."
 
             trigger OnValidate()
             var
-                recLinVta Record: 37;
-                recLinTransfer Record: 5741;
+                recLinVta: Record 37;
+                recLinTransfer: Record 5741;
             begin
                 CASE "Tipo pedido" OF
                   "Tipo pedido"::Venta : BEGIN
@@ -190,7 +190,7 @@ table 56035 "Contenido Cajas Packing Reg."
 
     var
         Prod: Record 27;
-        LinPack Record: 56031;
-        RWAL Record: 5773;
+        LinPack: Record 56031;
+        RWAL: Record 5773;
 }
 

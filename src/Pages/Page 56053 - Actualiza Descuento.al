@@ -39,7 +39,7 @@ page 56053 "Actualiza Descuento"
     var
         NoPedido: Code[20];
         PorcDesc: Decimal;
-        LCF Record: 56011;
+        LCF: Record 56011;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

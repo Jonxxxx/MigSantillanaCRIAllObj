@@ -9,7 +9,6 @@ codeunit 50001 "Funciones varias"
     // 001       12-01-2024       LDP     SANTINAV-5520: Problemas con Facturas Venta POS
     // 002         18-09-2025      LDP     SANTINAV-8394: Crear campo ŽCanal de Venta en cabecera de pedidos y agregarlo al reporte de estadísticas
 
-    Permissions =;
 
     trigger OnRun()
     begin
@@ -27,8 +26,8 @@ codeunit 50001 "Funciones varias"
     end;
 
     var
-        Empleado Record: 5200;
-        Contratos Record: 34002109;
+        Empleado: Record 5200;
+        Contratos: Record 34002109;
         CantRegistrosActualizados: Integer;
         CantRegMod: Integer;
 
@@ -44,7 +43,7 @@ codeunit 50001 "Funciones varias"
 
     procedure ActualizarConsecutivoFE()
     var
-        SIH Record: 112;
+        SIH: Record 112;
     begin
 
         SIH.RESET;
@@ -63,8 +62,8 @@ codeunit 50001 "Funciones varias"
 
     local procedure ActualizaCategoriaProducto()
     var
-        Utility Record: 50019;
-        ItemCategory Record: 5722;
+        Utility: Record 50019;
+        ItemCategory: Record 5722;
     begin
         Utility.RESET;
         Utility.SETFILTER(Code, '<>%1', '');
@@ -84,9 +83,9 @@ codeunit 50001 "Funciones varias"
 
     local procedure Facturas_ActualizarCodeColegioPos()
     var
-        SalesInvoiceHeader Record: 112;
-        CabVentasSIC Record: 50111;
-        SIH Record: 112;
+        SalesInvoiceHeader: Record 112;
+        CabVentasSIC: Record 50111;
+        SIH: Record 112;
         Contact: Record 5050;
     begin
         CantRegistrosActualizados := 0;
@@ -126,9 +125,9 @@ codeunit 50001 "Funciones varias"
 
     local procedure NCR_ActualizarCodeColegioPos()
     var
-        SalesCrMemoHeader Record: 114;
-        CabVentasSIC Record: 50111;
-        CRMH Record: 114;
+        SalesCrMemoHeader: Record 114;
+        CabVentasSIC: Record 50111;
+        CRMH: Record 114;
         Contact: Record 5050;
     begin
         CantRegistrosActualizados := 0;
@@ -170,9 +169,9 @@ codeunit 50001 "Funciones varias"
 
     local procedure SH_ActualizarCodeColegioPos()
     var
-        SalesHeader Record: 36;
-        CabVentasSIC Record: 50111;
-        SH Record: 36;
+        SalesHeader: Record 36;
+        CabVentasSIC: Record 50111;
+        SH: Record 36;
         Contact: Record 5050;
     begin
 
@@ -218,12 +217,12 @@ codeunit 50001 "Funciones varias"
 
     procedure BuscaDimension(DocumentNo: Code[20]): Code[20]
     var
-        SalesInvoiceHeader Record: 112;
-        DimensionSetEntry Record: 480;
-        DimensionValue Record: 349;
+        SalesInvoiceHeader: Record 112;
+        DimensionSetEntry: Record 480;
+        DimensionValue: Record 349;
         DimValName: Code[20];
-        SalesCrMemoHeader Record: 114;
-        ConfigEmpresa Record: 56001;
+        SalesCrMemoHeader: Record 114;
+        ConfigEmpresa: Record 56001;
         DimSetId: Integer;
     begin
         //002+

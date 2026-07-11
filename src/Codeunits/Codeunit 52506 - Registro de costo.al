@@ -14,9 +14,9 @@ codeunit 52506 "Registro de costo"
     var
         PrimeraVez: Boolean;
         PrimeraVez2: Boolean;
-        PostValueEntrytoGL Record: 5811;
+        PostValueEntrytoGL: Record 5811;
         PostInventoryCosttoGL: Report 1002;
-        Date Record: 2000000007;
+        Date: Record 2000000007;
         Hor: Time;
         Archivo: File;
 

@@ -378,7 +378,7 @@ tableextension 70000079 tableextension70000079 extends "Transfer Shipment Header
     [Scope('Personalization')]
     procedure ExportEDocument()
     var
-        TempBlob Record: 99008535;
+        TempBlob: Record 99008535;
         FileManagement: Codeunit 419;
     begin
         CALCFIELDS("Signed Document XML");

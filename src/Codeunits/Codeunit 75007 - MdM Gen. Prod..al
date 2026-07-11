@@ -25,14 +25,14 @@ codeunit 75007 "MdM Gen. Prod."
         cFileMng: Codeunit 419;
         cAsynMng: Codeunit 75005;
         cGestMdM: Codeunit 75001;
-        rConfMdM Record: 75000;
+        rConfMdM: Record 75000;
         NoSeriesMgt: Codeunit 396;
-        rImp Record: 75004;
-        rCab Record: 75003;
-        rField Record: 75005;
+        rImp: Record 75004;
+        rCab: Record 75003;
+        rField: Record 75005;
         Text001: Label 'El tipo de dato %1 no está permitido en la importación de datos. Campo %2';
         rTmpField Record: 75005" temporary;
-        rConvNM Record: 75007;
+        rConvNM: Record 75007;
         wIds: array[3] of Integer;
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
         wDia: Dialog;
@@ -44,8 +44,8 @@ codeunit 75007 "MdM Gen. Prod."
     procedure "Code"(var prCab Record: 75003")
     var
         Item: Record 27;
-        lrCabR Record: 75003;
-        lrLinBom Record: 90;
+        lrCabR: Record 75003;
+        lrLinBom: Record 90;
         RecRef: RecordRef;
         FieRef: FieldRef;
         lwKeyRef: KeyRef;
@@ -489,7 +489,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure SetRefCruz(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwEan: Code[20]; pwDescrip: Text)
     var
-        lrRef Record: 5717;
+        lrRef: Record 5717;
     begin
         // SetRefCruz
         // Crea y actualiza una referencia cruzada si no existe
@@ -524,7 +524,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure SetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwTipo: Option Ancho,Alto,Peso; pwValor: Decimal)
     var
-        lrUnid Record: 5404;
+        lrUnid: Record 5404;
     begin
         // SetUnid
         // Determina elementos de la unidad de medida
@@ -557,7 +557,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure GetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwTipo: Option Ancho,Alto,Peso) wValor: Decimal
     var
-        lrUnid Record: 5404;
+        lrUnid: Record 5404;
     begin
         // GetUnid
         // Devuelve elementos de la unidad de medida
@@ -580,7 +580,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure SetPrecioVta(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwFecha: Date; pwPrecio: Decimal; pwImpInc: Boolean)
     var
-        lrPrec Record: 7002;
+        lrPrec: Record 7002;
         lwExits: Boolean;
         lwIgual: Boolean;
         lwFecha2: Date;
@@ -641,7 +641,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure SetProdBOMValue(pwCodItem: Code[20]; pwCod: Code[20]; pwSetVal: Boolean; pwUnidades: Decimal)
     var
-        lrLinBOM Record: 90;
+        lrLinBOM: Record 90;
         lwLinNo: Integer;
     begin
         // SetProdBOMValue
@@ -888,7 +888,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure SetCommentLine(pwCodPro: Code[20]; pwComment: Text)
     var
-        lrComntLine Record: 97;
+        lrComntLine: Record 97;
         lwNxtLine: Integer;
         lwComment2: Text;
         lwMax: Integer;
@@ -1279,8 +1279,8 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        lrObjects Record: 2000000001;
-        lrObjects2Record 2000000058;
+        lrObjects: Record 2000000001;
+        lrObjects2Record: Record 2000000058;
     begin
         // GetTableCaption
         // Devuelve el caption de la tabla
@@ -1308,7 +1308,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure GetFieldCaption(pwTableId: Integer; pwFieldId: Integer) wText: Text
     var
-        lrFields Record: 2000000041;
+        lrFields: Record 2000000041;
         LTEXT0001: Label 'Ancho';
         LTEXT0002: Label 'Alto';
         LTEXT0003: Label 'Peso';
@@ -1431,7 +1431,7 @@ codeunit 75007 "MdM Gen. Prod."
     procedure GestAutor(var prProd: Record 27; pwValue: Code[20]) Result: Boolean
     var
         lwAutorCatalogo: Boolean;
-        lrField2Record 75005;
+        lrField2Record: Record 75005;
     begin
         // GestAutor
 
@@ -1458,7 +1458,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure BuscaSigumOrden(pwCodBom: Code[20]) wNum: Integer
     var
-        lrBomItem Record: 90;
+        lrBomItem: Record 90;
     begin
         // BuscaSigumOrden
 
@@ -1482,7 +1482,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure GestSerieTip(var prImp Record: 75004") wSerie: Code[10]
     var
-        lrConfTip Record: 75006;
+        lrConfTip: Record 75006;
     begin
         // GestSerieTip
         // Buscamos la serie en la configuración tipologia
@@ -1495,7 +1495,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure FindFieldValue(pwId1: Integer; pwId2: Integer; pwIdField: Integer) wValue: Text
     var
-        lrField2Record 75005;
+        lrField2Record: Record 75005;
     begin
         // FindFieldValue
 
@@ -1512,10 +1512,10 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure FindTipoConf(var prImp Record: 75004; var prConfTip Record: 75006") Result: Boolean
     var
-        lrprImp2Record 75004;
+        lrprImp2Record: Record 75004;
         lwId1: Integer;
         lwId2: Integer;
-        lrFiltroTipo Record: 75008;
+        lrFiltroTipo: Record 75008;
         lwFieldNo: Integer;
         lwTip: Code[20];
         lwNo: Integer;
@@ -1569,9 +1569,9 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure ConfiguraTipologiaMdM(var prProd: Record 27; var prImp Record: 75004") Result: Boolean
     var
-        lrConfTip Record: 75006;
-        lrConv Record: 75007;
-        lrFiltroTipo Record: 75008;
+        lrConfTip: Record 75006;
+        lrConv: Record 75007;
+        lrFiltroTipo: Record 75008;
         lwNo: Integer;
         lwValores: array[20] of Code[20];
     begin

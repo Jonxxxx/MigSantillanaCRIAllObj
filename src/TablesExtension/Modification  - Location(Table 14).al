@@ -91,10 +91,10 @@ tableextension 70000012 tableextension70000012 extends Location
 
     procedure GetSATAddress() LocationAddress: Text
     var
-        SATState Record: 27026;
-        SATMunicipality Record: 27027;
-        SATLocality Record: 27028;
-        SATSuburb Record: 27029;
+        SATState: Record 27026;
+        SATMunicipality: Record 27027;
+        SATLocality: Record 27028;
+        SATSuburb: Record 27029;
     begin
         IF SATState.GET("SAT State Code") THEN
             LocationAddress := SATState.Description;

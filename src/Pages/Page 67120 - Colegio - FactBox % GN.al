@@ -38,7 +38,7 @@ page 67120 "Colegio - FactBox % GN"
 
     procedure TraerPorcentaje(): Decimal
     var
-        recDetAdop Record: 67053;
+        recDetAdop: Record 67053;
         decTotalColegio: Decimal;
         decTotalNivel: Decimal;
     begin
@@ -67,7 +67,7 @@ page 67120 "Colegio - FactBox % GN"
 
     procedure TraerPrecioUnitarioProducto(codPrmProducto: Code[20]): Decimal
     var
-        recPrecios Record: 7002;
+        recPrecios: Record 7002;
     begin
         recPrecios.RESET;
         recPrecios.SETRANGE("Item No.", codPrmProducto);

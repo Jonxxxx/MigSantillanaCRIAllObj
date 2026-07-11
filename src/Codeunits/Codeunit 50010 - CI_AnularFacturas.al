@@ -10,14 +10,14 @@ codeunit 50010 CI_AnularFacturas
 
     var
         CorrectPostedSalesInvoice: Codeunit 1303;
-        SalesHeader Record: 36;
-        SalesHeader2Record 36;
-        SalesInvoiceHeader Record: 112;
-        NotasCRaCorregirTEMPORAL Record: 50015;
-        NotasCRaCorregirTEMPORAL2Record 50015;
-        SalesCrMemoHeader Record: 114;
-        SIH Record: 112;
-        SCMH Record: 114;
+        SalesHeader: Record 36;
+        SalesHeader2Record: Record 36;
+        SalesInvoiceHeader: Record 112;
+        NotasCRaCorregirTEMPORAL: Record 50015;
+        NotasCRaCorregirTEMPORAL2Record: Record 50015;
+        SalesCrMemoHeader: Record 114;
+        SIH: Record 112;
+        SCMH: Record 114;
 
     local procedure AnularFacturas()
     begin

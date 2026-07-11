@@ -59,7 +59,7 @@ page 56025 "Lista clas. devoluciones"
 
                     trigger OnAction()
                     var
-                        CPD Record: 56025;
+                        CPD: Record 56025;
                     begin
                         CLEAR(CPD);
                         CPD.INSERT(TRUE);

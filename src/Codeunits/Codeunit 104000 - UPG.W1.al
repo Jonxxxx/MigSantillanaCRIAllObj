@@ -76,7 +76,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpgradeReportSelections()
     var
-        ReportSelections Record: 77;
+        ReportSelections: Record 77;
     begin
         WITH ReportSelections DO BEGIN
             IF NOT GET(Usage::"S.Arch.Blanket", '1') THEN
@@ -88,7 +88,7 @@ codeunit 104000 "UPG.W1"
 
     local procedure InsertReportSelections(ReportUsage: Integer; ReportSequence: Code[10]; ReportID: Integer)
     var
-        ReportSelections Record: 77;
+        ReportSelections: Record 77;
     begin
         WITH ReportSelections DO BEGIN
             INIT;
@@ -102,7 +102,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpgradeSalesSetup()
     var
-        SalesReceivablesSetup Record: 311;
+        SalesReceivablesSetup: Record 311;
     begin
         IF SalesReceivablesSetup.GET THEN BEGIN
             SalesReceivablesSetup."Archive Orders" := SalesReceivablesSetup."Archive Quotes and Orders";
@@ -115,7 +115,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpgradePurchSetup()
     var
-        PurchPayablesSetup Record: 312;
+        PurchPayablesSetup: Record 312;
     begin
         IF PurchPayablesSetup.GET THEN BEGIN
             PurchPayablesSetup."Archive Orders" := PurchPayablesSetup."Archive Quotes and Orders";
@@ -128,8 +128,8 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateO365EmailSetup()
     var
-        O365EmailSetup Record: 2118;
-        NewO365EmailSetup Record: 2118;
+        O365EmailSetup: Record 2118;
+        NewO365EmailSetup: Record 2118;
         TempO365EmailSetup Record: 2118" temporary;
         IntegrationManagement: Codeunit 5150;
     begin
@@ -162,8 +162,8 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateSalesQuoteEntityBuffer()
     var
-        SalesQuoteEntityBuffer Record: 5505;
-        SalesHeader Record: 36;
+        SalesQuoteEntityBuffer: Record 5505;
+        SalesHeader: Record 36;
     begin
         SalesHeader.SETAUTOCALCFIELDS("Last Email Sent Time", "Last Email Sent Status");
 
@@ -180,7 +180,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdatePulseEventSettings()
     var
-        O365C2GraphEventSettings Record: 2162;
+        O365C2GraphEventSettings: Record 2162;
     begin
         IF NOT O365C2GraphEventSettings.GET THEN
             EXIT;
@@ -193,7 +193,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateVATRateChangeSetup()
     var
-        VATRateChangeSetup Record: 550;
+        VATRateChangeSetup: Record 550;
     begin
         IF VATRateChangeSetup.GET THEN BEGIN
             VATRateChangeSetup."Ignore Status on Service Docs." := TRUE;
@@ -204,8 +204,8 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateUnpostedNotificationsForAllUsers()
     var
-        MyNotifications Record: 1518;
-        FilterBlob Record: 99008535;
+        MyNotifications: Record 1518;
+        FilterBlob: Record 99008535;
         InstructionMgt: Codeunit 1330;
         OutStream: OutStream;
     begin
@@ -224,7 +224,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerDatabase]
     procedure UpgradePermissionSets()
     var
-        PermissionSet Record: 2000000004;
+        PermissionSet: Record 2000000004;
         PermissionManager: Codeunit 9002;
     begin
         PermissionSet.SETRANGE(Hash, '');
@@ -237,8 +237,8 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure CleanupDataExch()
     var
-        DataExch Record: 1220;
-        DataExchField Record: 1221;
+        DataExch: Record 1220;
+        DataExchField: Record 1221;
     begin
         DataExch.DELETEALL;
         DataExchField.DELETEALL;
@@ -246,7 +246,7 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreateTenantWebServiceOData(TenantWebService Record: 2000000168")
     var
-        TenantWebServiceOData Record: 6710;
+        TenantWebServiceOData: Record 6710;
         SelectText: Text;
     begin
         TenantWebServiceOData.INIT;
@@ -259,8 +259,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreateTenantWebServiceColumn(TenantWebServiceRecordId: RecordID; FieldNumber: Integer; DataItem: Integer)
     var
-        TenantWebServiceColumns Record: 6711;
-        FieldTable Record: 2000000041;
+        TenantWebServiceColumns: Record 6711;
+        FieldTable: Record 2000000041;
         ODataUtility: Codeunit 6710;
         FieldNameConverted: Text;
     begin
@@ -311,9 +311,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBICustomerList()
     var
-        TenantWebService Record: 2000000168;
+        TenantWebService: Record 2000000168;
         Customer: Record 18;
-        DetailedCustLedgEntry Record: 379;
+        DetailedCustLedgEntry: Record 379;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -342,9 +342,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIVendorList()
     var
-        Vendor Record: 23;
-        DetailedVendorLedgEntry Record: 380;
-        TenantWebService Record: 2000000168;
+        Vendor: Record 23;
+        DetailedVendorLedgEntry: Record 380;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -374,9 +374,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIJobList()
     var
-        JobLedgerEntry Record: 169;
-        TenantWebService Record: 2000000168;
-        Job Record: 167;
+        JobLedgerEntry: Record 169;
+        TenantWebService: Record 2000000168;
+        Job: Record 167;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -396,9 +396,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBISalesList()
     var
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
-        TenantWebService Record: 2000000168;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -420,9 +420,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIPurchaseList()
     var
-        PurchaseHeader Record: 38;
-        PurchaseLine Record: 39;
-        TenantWebService Record: 2000000168;
+        PurchaseHeader: Record 38;
+        PurchaseLine: Record 39;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -447,8 +447,8 @@ codeunit 104000 "UPG.W1"
     local procedure CreatePowerBIItemPurchaseList()
     var
         Item: Record 27;
-        ItemLedgerEntry Record: 32;
-        TenantWebService Record: 2000000168;
+        ItemLedgerEntry: Record 32;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -469,8 +469,8 @@ codeunit 104000 "UPG.W1"
     local procedure CreatePowerBIItemSalesList()
     var
         Item: Record 27;
-        ValueEntry Record: 5802;
-        TenantWebService Record: 2000000168;
+        ValueEntry: Record 5802;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -488,9 +488,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIGLAmountList()
     var
-        GLAccount Record: 15;
-        GLEntry Record: 17;
-        TenantWebService Record: 2000000168;
+        GLAccount: Record 15;
+        GLEntry: Record 17;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -510,9 +510,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIGLBudgetedAmountList()
     var
-        GLAccount Record: 15;
-        GLBudgetEntry Record: 96;
-        TenantWebService Record: 2000000168;
+        GLAccount: Record 15;
+        GLBudgetEntry: Record 96;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -531,9 +531,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBITopCustOverviewWebService()
     var
-        CustLedgerEntry Record: 21;
+        CustLedgerEntry: Record 21;
         Customer: Record 18;
-        TenantWebService Record: 2000000168;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -558,11 +558,11 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBISalesHdrCustWebService()
     var
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
         Item: Record 27;
         Customer: Record 18;
-        TenantWebService Record: 2000000168;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -604,8 +604,8 @@ codeunit 104000 "UPG.W1"
     local procedure CreatePowerBICustItemLedgEntWebService()
     var
         Customer: Record 18;
-        ItemLedgerEntry Record: 32;
-        TenantWebService Record: 2000000168;
+        ItemLedgerEntry: Record 32;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -626,8 +626,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBICustLedgerEntriesWebService()
     var
-        CustLedgerEntry Record: 21;
-        TenantWebService Record: 2000000168;
+        CustLedgerEntry: Record 21;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -656,8 +656,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIVendorLedgerEntriesWebService()
     var
-        VendorLedgerEntry Record: 25;
-        TenantWebService Record: 2000000168;
+        VendorLedgerEntry: Record 25;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -680,11 +680,11 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIPurchaseHdrVendorWebService()
     var
-        PurchaseHeader Record: 38;
-        PurchaseLine Record: 39;
+        PurchaseHeader: Record 38;
+        PurchaseLine: Record 39;
         Item: Record 27;
-        Vendor Record: 23;
-        TenantWebService Record: 2000000168;
+        Vendor: Record 23;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -723,9 +723,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIVendItemLedgEntWebService()
     var
-        Vendor Record: 23;
-        ItemLedgerEntry Record: 32;
-        TenantWebService Record: 2000000168;
+        Vendor: Record 23;
+        ItemLedgerEntry: Record 32;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
         metaData: DotNet QueryMetadataReader;
     begin
@@ -746,8 +746,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIAgedAccPayableWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -772,8 +772,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIAgedAccReceivableWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -800,8 +800,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIAgedInventoryChartWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -824,8 +824,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIJobActBudgPriceWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -844,8 +844,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIJobProfitabilityWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -864,8 +864,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIJobActBudgCostWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -884,8 +884,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBISalesPipelineWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -908,8 +908,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBITop5OpportunitiesWebService()
     var
-        PowerBIChartBuffer Record: 6305;
-        TenantWebService Record: 2000000168;
+        PowerBIChartBuffer: Record 6305;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -930,7 +930,7 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIWorkDateCalcWebService()
     var
-        TenantWebService Record: 2000000168;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -943,8 +943,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure CreatePowerBIReportLabelsWebService()
     var
-        PowerBIReportLabels Record: 6306;
-        TenantWebService Record: 2000000168;
+        PowerBIReportLabels: Record 6306;
+        TenantWebService: Record 2000000168;
         WebServiceManagement: Codeunit 9750;
     begin
         WebServiceManagement.CreateTenantWebService(
@@ -962,7 +962,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure CreateJobWebServices()
     var
-        TenantWebService Record: 2000000168;
+        TenantWebService: Record 2000000168;
     begin
         TenantWebService.INIT;
         TenantWebService."Object Type" := TenantWebService."Object Type"::Page;
@@ -1047,7 +1047,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateCheckFieldSetup()
     var
-        IntrastatJnlLine Record: 263;
+        IntrastatJnlLine: Record 263;
     begin
         InsertCheckFieldSetup(IntrastatJnlLine.FIELDNO("Tariff No."));
         InsertCheckFieldSetup(IntrastatJnlLine.FIELDNO("Country/Region Code"));
@@ -1058,7 +1058,7 @@ codeunit 104000 "UPG.W1"
 
     local procedure InsertCheckFieldSetup(FieldNumber: Integer)
     var
-        IntrastatCheckFieldSetup Record: 8451;
+        IntrastatCheckFieldSetup: Record 8451;
     begin
         WITH IntrastatCheckFieldSetup DO BEGIN
             INIT;
@@ -1096,9 +1096,9 @@ codeunit 104000 "UPG.W1"
     [Normal]
     local procedure UpgradeSalesInvoiceEntityAggregate()
     var
-        SalesInvoiceEntityAggregate Record: 5475;
-        SalesHeader Record: 36;
-        SalesInvoiceHeader Record: 112;
+        SalesInvoiceEntityAggregate: Record 5475;
+        SalesHeader: Record 36;
+        SalesInvoiceHeader: Record 112;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1133,9 +1133,9 @@ codeunit 104000 "UPG.W1"
     [Normal]
     local procedure UpgradePurchInvEntityAggregate()
     var
-        PurchInvEntityAggregate Record: 5477;
-        PurchaseHeader Record: 38;
-        PurchInvHeader Record: 122;
+        PurchInvEntityAggregate: Record 5477;
+        PurchaseHeader: Record 38;
+        PurchInvHeader: Record 122;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1170,8 +1170,8 @@ codeunit 104000 "UPG.W1"
     [Normal]
     local procedure UpgradeSalesOrderEntityBuffer()
     var
-        SalesOrderEntityBuffer Record: 5495;
-        SalesHeader Record: 36;
+        SalesOrderEntityBuffer: Record 5495;
+        SalesHeader: Record 36;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1196,8 +1196,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpgradeSalesQuoteEntityBuffer()
     var
-        SalesQuoteEntityBuffer Record: 5505;
-        SalesHeader Record: 36;
+        SalesQuoteEntityBuffer: Record 5505;
+        SalesHeader: Record 36;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1222,9 +1222,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpgradeSalesCrMemoEntityBuffer()
     var
-        SalesCrMemoEntityBuffer Record: 5507;
-        SalesHeader Record: 36;
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoEntityBuffer: Record 5507;
+        SalesHeader: Record 36;
+        SalesCrMemoHeader: Record 114;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1258,8 +1258,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpdateSalesDocumentFields(SourceRecordRef: RecordRef; TargetRecordRef: RecordRef; SellTo: Boolean; BillTo: Boolean; ShipTo: Boolean)
     var
-        SalesHeader Record: 36;
-        SalesOrderEntityBuffer Record: 5495;
+        SalesHeader: Record 36;
+        SalesOrderEntityBuffer: Record 5495;
         Customer: Record 18;
         CodeFieldRef: FieldRef;
         IdFieldRef: FieldRef;
@@ -1302,10 +1302,10 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpdatePurchaseDocumentFields(var SourceRecordRef: RecordRef; var TargetRecordRef: RecordRef; PayTo: Boolean; ShipTo: Boolean)
     var
-        PurchaseHeader Record: 38;
-        PurchInvEntityAggregate Record: 5477;
-        Vendor Record: 23;
-        Currency Record: 4;
+        PurchaseHeader: Record 38;
+        PurchInvEntityAggregate: Record 5477;
+        Vendor: Record 23;
+        Currency: Record 4;
         CodeFieldRef: FieldRef;
         IdFieldRef: FieldRef;
         EmptyGuid: Guid;
@@ -1361,10 +1361,10 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpgradeWorkDescripiton()
     var
-        SalesHeader Record: 36;
+        SalesHeader: Record 36;
         SalesShipmentHeader: Record 110;
-        SalesInvoiceHeader Record: 112;
-        SalesCrMemoHeader Record: 114;
+        SalesInvoiceHeader: Record 112;
+        SalesCrMemoHeader: Record 114;
     begin
         IF SalesHeader.FINDSET THEN
             REPEAT
@@ -1444,7 +1444,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpdateJobs()
     var
-        Job Record: 167;
+        Job: Record 167;
         UpgradeTagMgt: Codeunit 9999;
         UpgradeTags: Codeunit 9998;
         IntegrationManagement: Codeunit 5150;
@@ -1468,7 +1468,7 @@ codeunit 104000 "UPG.W1"
     [UpgradePerCompany]
     procedure UpgradeVATReportSetup()
     var
-        VATReportSetup Record: 743;
+        VATReportSetup: Record 743;
         UpgradeTagMgt: Codeunit 9999;
         UpgradeTags: Codeunit 9998;
         DateFormulaText: Text;
@@ -1494,8 +1494,8 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpgradeSalesOrderShipmentMethod()
     var
-        SalesOrderEntityBuffer Record: 5495;
-        SalesHeader Record: 36;
+        SalesOrderEntityBuffer: Record 5495;
+        SalesHeader: Record 36;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1521,9 +1521,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure UpgradeSalesCrMemoShipmentMethod()
     var
-        SalesCrMemoEntityBuffer Record: 5507;
-        SalesHeader Record: 36;
-        SalesCrMemoHeader Record: 114;
+        SalesCrMemoEntityBuffer: Record 5507;
+        SalesHeader: Record 36;
+        SalesCrMemoHeader: Record 114;
         UpgradeTags: Codeunit 9998;
         UpgradeTagMgt: Codeunit 9999;
         SourceRecordRef: RecordRef;
@@ -1559,9 +1559,9 @@ codeunit 104000 "UPG.W1"
 
     local procedure CopySalesDocumentShipmentMethodFields(var SourceRecordRef: RecordRef; var TargetRecordRef: RecordRef)
     var
-        SalesHeader Record: 36;
-        SalesOrderEntityBuffer Record: 5495;
-        ShipmentMethod Record: 10;
+        SalesHeader: Record 36;
+        SalesOrderEntityBuffer: Record 5495;
+        ShipmentMethod: Record 10;
         CodeFieldRef: FieldRef;
         IdFieldRef: FieldRef;
         EmptyGuid: Guid;

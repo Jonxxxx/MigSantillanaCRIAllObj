@@ -84,24 +84,24 @@ table 67034 "Talleres y Eventos - Grados"
 
     var
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
-        SolEvento Record: 67055;
-        Evento Record: 67011;
-        APSSetup Record: 67000;
-        TipoEvento Record: 67010;
+        SolEvento: Record 67055;
+        Evento: Record 67011;
+        APSSetup: Record 67000;
+        TipoEvento: Record 67010;
         Colegio: Record 5050;
         Promotor: Record 13;
-        Expositor Record: 67021;
-        FRBitMap Record: 67032;
-        DA Record: 67002;
-        Docente Record: 67001;
-        ColDocentes Record: 67043;
-        ATE Record: 67016;
+        Expositor: Record 67021;
+        FRBitMap: Record 67032;
+        DA: Record 67002;
+        Docente: Record 67001;
+        ColDocentes: Record 67043;
+        ATE: Record 67016;
         NoSeriesMgt: Codeunit 396;
         DimMgt: Codeunit 408;
 
     procedure DisplayMap()
     var
-        MapPoint Record: 800;
+        MapPoint: Record 800;
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN

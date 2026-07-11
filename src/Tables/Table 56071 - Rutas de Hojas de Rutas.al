@@ -12,7 +12,7 @@ table 56071 "Rutas de Hojas de Rutas"
 
             trigger OnValidate()
             var
-                recMaestrosRutas Record: 56070;
+                recMaestrosRutas: Record 56070;
             begin
 
                 IF recMaestrosRutas.GET(Code) THEN
@@ -31,7 +31,7 @@ table 56071 "Rutas de Hojas de Rutas"
 
             trigger OnValidate()
             var
-                recCodigoPostal Record: 225;
+                recCodigoPostal: Record 225;
             begin
 
                 recCodigoPostal.SETFILTER(Code, CP);

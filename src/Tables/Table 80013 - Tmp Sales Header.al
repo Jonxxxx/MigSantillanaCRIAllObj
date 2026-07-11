@@ -33,7 +33,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                Opp Record: 5092;
+                Opp: Record 5092;
             begin
             end;
         }
@@ -82,7 +82,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                SellToCustTemplate Record: 5105;
+                SellToCustTemplate: Record 5105;
             begin
             end;
         }
@@ -195,8 +195,8 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                SalesLine Record: 37;
-                Currency Record: 4;
+                SalesLine: Record 37;
+                Currency: Record 4;
                 JobPostLine: Codeunit 1001;
                 RecalculatePrice: Boolean;
             begin
@@ -223,7 +223,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                ApprovalEntry Record: 454;
+                ApprovalEntry: Record 454;
             begin
             end;
         }
@@ -533,7 +533,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                TempCustLedgEntry Record: 21;
+                TempCustLedgEntry: Record 21;
             begin
             end;
         }
@@ -641,7 +641,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                PaymentTerms Record: 3;
+                PaymentTerms: Record 3;
             begin
             end;
         }
@@ -697,7 +697,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                SellToCustTemplate Record: 5105;
+                SellToCustTemplate: Record 5105;
             begin
             end;
         }
@@ -709,15 +709,15 @@ table 80013 "Tmp Sales Header"
             trigger OnLookup()
             var
                 Cont: Record 5050;
-                ContBusinessRelation Record: 5054;
+                ContBusinessRelation: Record 5054;
             begin
             end;
 
             trigger OnValidate()
             var
-                ContBusinessRelation Record: 5054;
+                ContBusinessRelation: Record 5054;
                 Cont: Record 5050;
-                Opportunity Record: 5092;
+                Opportunity: Record 5092;
                 ChangeLogMgt: Codeunit 423;
                 RecRef: RecordRef;
                 xRecRef: RecordRef;
@@ -732,13 +732,13 @@ table 80013 "Tmp Sales Header"
             trigger OnLookup()
             var
                 Cont: Record 5050;
-                ContBusinessRelation Record: 5054;
+                ContBusinessRelation: Record 5054;
             begin
             end;
 
             trigger OnValidate()
             var
-                ContBusinessRelation Record: 5054;
+                ContBusinessRelation: Record 5054;
                 Cont: Record 5050;
             begin
             end;
@@ -750,7 +750,7 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                BillToCustTemplate Record: 5105;
+                BillToCustTemplate: Record 5105;
             begin
             end;
         }
@@ -765,8 +765,8 @@ table 80013 "Tmp Sales Header"
 
             trigger OnValidate()
             var
-                Opportunity Record: 5092;
-                SalesHeader Record: 36;
+                Opportunity: Record 5092;
+                SalesHeader: Record 36;
             begin
             end;
         }
@@ -1139,7 +1139,7 @@ table 80013 "Tmp Sales Header"
 
     trigger OnDelete()
     var
-        Opp Record: 5092;
+        Opp: Record 5092;
         TempOpportunityEntry Record: 5093" temporary;
     begin
     end;
@@ -1184,35 +1184,35 @@ table 80013 "Tmp Sales Header"
         Text067: Label '%1 %4 with amount of %2 has already been authorized on %3 and is not expired yet. You must void the previous authorization before you can re-authorize this %1.';
         Text068: Label 'There is nothing to void.';
         Text069: Label 'The selected operation cannot complete with the specified %1.';
-        SalesSetup Record: 311;
-        GLSetup Record: 98;
-        GLAcc Record: 15;
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
-        CustLedgEntry Record: 21;
+        SalesSetup: Record 311;
+        GLSetup: Record 98;
+        GLAcc: Record 15;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
+        CustLedgEntry: Record 21;
         Cust: Record 18;
-        PaymentTerms Record: 3;
-        PaymentMethod Record: 289;
-        CurrExchRate Record: 330;
+        PaymentTerms: Record 3;
+        PaymentMethod: Record 289;
+        CurrExchRate: Record 330;
         SalesCommentLine: Record 44;
-        ShipToAddr Record: 222;
-        PostCode Record: 225;
-        BankAcc Record: 270;
+        ShipToAddr: Record 222;
+        PostCode: Record 225;
+        BankAcc: Record 270;
         SalesShptHeader: Record 110;
-        SalesInvHeader Record: 112;
-        SalesCrMemoHeader Record: 114;
-        ReturnRcptHeader Record: 6660;
-        SalesInvHeaderPrepmt Record: 112;
-        SalesCrMemoHeaderPrepmt Record: 114;
-        GenBusPostingGrp Record: 250;
-        GenJnILine Record: 81;
-        RespCenter Record: 5714;
-        InvtSetup Record: 313;
-        Location Record: 14;
-        WhseRequest Record: 5765;
-        ShippingAgentService Record: 5790;
+        SalesInvHeader: Record 112;
+        SalesCrMemoHeader: Record 114;
+        ReturnRcptHeader: Record 6660;
+        SalesInvHeaderPrepmt: Record 112;
+        SalesCrMemoHeaderPrepmt: Record 114;
+        GenBusPostingGrp: Record 250;
+        GenJnILine: Record 81;
+        RespCenter: Record 5714;
+        InvtSetup: Record 313;
+        Location: Record 14;
+        WhseRequest: Record 5765;
+        ShippingAgentService: Record 5790;
         TempReqLine Record: 246" temporary;
-        SalesTaxDifference Record: 10012;
+        SalesTaxDifference: Record 10012;
         UserMgt: Codeunit 5700;
         NoSeriesMgt: Codeunit 396;
         CustCheckCreditLimit: Codeunit 312;
@@ -1231,7 +1231,7 @@ table 80013 "Tmp Sales Header"
         Text037: Label 'Contact %1 %2 is not related to customer %3.';
         Text038: Label 'Contact %1 %2 is related to a different company than customer %3.';
         Text039: Label 'Contact %1 %2 is not related to a customer.';
-        ReservEntry Record: 337;
+        ReservEntry: Record 337;
         TempReservEntry Record: 337" temporary;
         Text040: Label 'A won opportunity is linked to this order.\';
         Text041: Label 'It has to be changed to status Lost before the Order can be deleted.\';
@@ -1245,7 +1245,7 @@ table 80013 "Tmp Sales Header"
         Text048: Label 'Sales quote %1 has already been assigned to opportunity %2. Would you like to reassign this quote?';
         Text049: Label 'The %1 field cannot be blank because this quote is linked to an opportunity.';
         InsertMode: Boolean;
-        CompanyInfo Record: 79;
+        CompanyInfo: Record 79;
         Text050: Label 'If %1 is %2 in sales order no. %3, then all sales lines where type is %4 must use the same location.';
         HideCreditCheckDialogue: Boolean;
         Text051: Label 'The sales %1 %2 already exists.';
@@ -1262,23 +1262,23 @@ table 80013 "Tmp Sales Header"
         Text064: Label 'The warehouse shipment was not created because the Shipping Advice field is set to Complete, and item no. %1 is not available in location code %2.\\You can create the warehouse shipment by either changing the Shipping Advice field to Partial in sales order no. %3, or filling in the warehouse shipment document manually.';
         USText001: Label '%1 %2 has an applied payment in journal %3, %4 line %5';
         "*** Santillana ***": Integer;
-        SantSetup Record: 56001;
-        SalesLine1Record 37;
-        GenBusPostGrp Record: 250;
+        SantSetup: Record 56001;
+        SalesLine1Record: Record 37;
+        GenBusPostGrp: Record 250;
         Cliente: Record 18;
         Error0001: Label 'No puede modificar un pedido tipo TPV o Factura comprimida';
         txt001: Label 'Se eliminaran las l neas de ventas del pedido, confirma que desea continuar';
         Error002: Label 'Existe otro pedido tipo Consignacion para este cliente - No. Pedido %1';
         Error003: Label 'Existe un pedido de Devolucion de consignacion en borrador para este cliente - No. Pedido %1';
-        Tienda Record: 34002504;
-        TPV Record: 34002503;
-        TransferHeader Record: 5740;
+        Tienda: Record 34002504;
+        TPV: Record 34002503;
+        TransferHeader: Record 5740;
         "**002**": Integer;
-        rDefDim Record: 352;
+        rDefDim: Record 352;
         rContacto: Record 5050;
         "**005**": Integer;
-        rNoSeries Record: 308;
+        rNoSeries: Record 308;
         "**006**": Integer;
-        rPagosTPV Record: 34002515;
+        rPagosTPV: Record 34002515;
 }
 

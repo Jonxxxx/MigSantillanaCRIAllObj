@@ -471,30 +471,30 @@ table 67033 "Colegio - Adopciones compet."
     end;
 
     var
-        ConfAPS Record: 67000;
-        ColNiv Record: 67036;
-        Editora Record: 67024;
-        GradoCol Record: 67037;
+        ConfAPS: Record 67000;
+        ColNiv: Record 67036;
+        Editora: Record 67024;
+        GradoCol: Record 67037;
         Item: Record 27;
-        ProdEq Record: 67005;
-        CabAdopciones Record: 67052;
-        DA Record: 67002;
-        ColegioAdopciones Record: 67026;
-        ColegioAdopciones2Record 67026;
-        DimVal Record: 349;
+        ProdEq: Record 67005;
+        CabAdopciones: Record 67052;
+        DA: Record 67002;
+        ColegioAdopciones: Record 67026;
+        ColegioAdopciones2Record: Record 67026;
+        DimVal: Record 349;
         DimForm: Page560;
-                     DefDim Record: 352;
-                     ProdEdit Record: 67025;
+                     DefDim: Record 352;
+                     ProdEdit: Record 67025;
 
     procedure BuscaHistorico()
     var
-        Adopciones Record: 67026;
-        Adopciones2Record 67026;
-        AdopcionesD Record: 67053;
-        HAdopciones Record: 67035;
-        Editoriales Record: 67024;
-        GradosCol Record: 67037;
-        PptoPromotor Record: 67027;
+        Adopciones: Record 67026;
+        Adopciones2Record: Record 67026;
+        AdopcionesD: Record 67053;
+        HAdopciones: Record 67035;
+        Editoriales: Record 67024;
+        GradosCol: Record 67037;
+        PptoPromotor: Record 67027;
         Camp: Integer;
     begin
         /*

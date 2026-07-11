@@ -27,23 +27,23 @@ codeunit 52502 "Utilitario para corregir cosas"
     end;
 
     var
-        SL Record: 37;
-        HistDeposits Record: 10144;
-        HistMovimientos Record: 17;
+        SL: Record 37;
+        HistDeposits: Record 10144;
+        HistMovimientos: Record 17;
         Fecha: Date;
         CorrectPostedSalesInvoice: Codeunit 1303;
-        SalesHeader Record: 36;
-        SalesHeader2Record 36;
-        SalesInvoiceHeader Record: 112;
-        NotasCRaCorregirTEMPORAL Record: 50015;
-        NotasCRaCorregirTEMPORAL2Record 50015;
-        SalesCrMemoHeader Record: 114;
-        SIH Record: 112;
-        SCMH Record: 114;
+        SalesHeader: Record 36;
+        SalesHeader2Record: Record 36;
+        SalesInvoiceHeader: Record 112;
+        NotasCRaCorregirTEMPORAL: Record 50015;
+        NotasCRaCorregirTEMPORAL2Record: Record 50015;
+        SalesCrMemoHeader: Record 114;
+        SIH: Record 112;
+        SCMH: Record 114;
 
     procedure EliminaMetaData()
     var
-        ObjMeta Record: 2000000071;
+        ObjMeta: Record 2000000071;
     begin
         ObjMeta.RESET;
         ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
@@ -53,8 +53,8 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure CorregirDatosEmpleado()
     var
-        Empleado Record: 5200;
-        Contratos Record: 34002109;
+        Empleado: Record 5200;
+        Contratos: Record 34002109;
     begin
         IF Empleado.FINDSET THEN
             REPEAT
@@ -84,7 +84,7 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure CorregirEmailSIH(Doc: Code[10]; Email: Text)
     var
-        SIH Record: 112;
+        SIH: Record 112;
     begin
         IF SIH.GET(Doc) THEN BEGIN
             SIH."E-Mail" := Email;
@@ -96,21 +96,21 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure LlenaConfigNom()
     var
-        PerfilSal Record: 34002115;
-        Emp Record: 5200;
-        Emp2Record 5200;
-        Emp3Record 5200;
-        Depto Record: 34002135;
-        Puestos Record: 34002110;
-        Puestos2Record 34002110;
-        HistoricoCabnomina Record: 34002117;
-        HistoricoCabnominaOut Record: 34002117;
-        HistoricoLinnomina Record: 34002118;
-        HistoricoLinnominaOut Record: 34002118;
-        CabAportesEmpresas Record: 34002121;
-        CabAportesEmpresasOut Record: 34002121;
-        LinAportesEmpresas Record: 34002122;
-        LinAportesEmpresasOut Record: 34002122;
+        PerfilSal: Record 34002115;
+        Emp: Record 5200;
+        Emp2Record: Record 5200;
+        Emp3Record: Record 5200;
+        Depto: Record 34002135;
+        Puestos: Record 34002110;
+        Puestos2Record: Record 34002110;
+        HistoricoCabnomina: Record 34002117;
+        HistoricoCabnominaOut: Record 34002117;
+        HistoricoLinnomina: Record 34002118;
+        HistoricoLinnominaOut: Record 34002118;
+        CabAportesEmpresas: Record 34002121;
+        CabAportesEmpresasOut: Record 34002121;
+        LinAportesEmpresas: Record 34002122;
+        LinAportesEmpresasOut: Record 34002122;
     begin
 
         /*
@@ -249,7 +249,7 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure EliminaAppovEntry()
     var
-        ApprovalEntry Record: 454;
+        ApprovalEntry: Record 454;
     begin
         ApprovalEntry.GET(4378);
         ApprovalEntry.DELETE;
@@ -257,18 +257,18 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure ActualizafechaDocComp(NoDoc: Code[20]; Fecha: Date)
     var
-        PIH_Record 122;
-        PIL_Record 123;
-        MovCont_Record 17;
-        VatEntry_Record 254;
-        Vend Record: 25;
-        DVend Record: 380;
-        ResEntry_Record 203;
-        JLE_Record 169;
-        JPLI_Record 1022;
-        VE Record: 5802;
-        ILE Record: 32;
-        WHE Record: 7312;
+        PIH_Record: Record 122;
+        PIL_Record: Record 123;
+        MovCont_Record: Record 17;
+        VatEntry_Record: Record 254;
+        Vend: Record 25;
+        DVend: Record 380;
+        ResEntry_Record: Record 203;
+        JLE_Record: Record 169;
+        JPLI_Record: Record 1022;
+        VE: Record 5802;
+        ILE: Record 32;
+        WHE: Record 7312;
     begin
         IF CONFIRM('Confirma', FALSE) THEN BEGIN
 
@@ -378,18 +378,18 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure ActualizafechaDocVenta(NoDoc: Code[20]; Fecha: Date)
     var
-        SIH_Record 112;
-        SIL_Record 113;
-        MovCont_Record 17;
-        VatEntry_Record 254;
-        MovCust Record: 21;
-        DMovCust Record: 379;
-        ResEntry_Record 203;
-        JLE_Record 169;
-        JPLI_Record 1022;
-        VE Record: 5802;
-        ILE Record: 32;
-        WHE Record: 7312;
+        SIH_Record: Record 112;
+        SIL_Record: Record 113;
+        MovCont_Record: Record 17;
+        VatEntry_Record: Record 254;
+        MovCust: Record 21;
+        DMovCust: Record 379;
+        ResEntry_Record: Record 203;
+        JLE_Record: Record 169;
+        JPLI_Record: Record 1022;
+        VE: Record 5802;
+        ILE: Record 32;
+        WHE: Record 7312;
     begin
         IF CONFIRM('Confirma', FALSE) THEN BEGIN
 
@@ -499,19 +499,19 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure ActualizafechaDocpagos(EntryNo_: Integer; Fecha: Date)
     var
-        SIH_Record 112;
-        SIL_Record 113;
-        MovCont_Record 17;
-        VatEntry_Record 254;
-        MovCust Record: 21;
-        DMovCust Record: 379;
-        ResEntry_Record 203;
-        JLE_Record 169;
-        JPLI_Record 1022;
-        VE Record: 5802;
-        ILE Record: 32;
-        WHE Record: 7312;
-        BankAccountLedgerEntry Record: 271;
+        SIH_Record: Record 112;
+        SIL_Record: Record 113;
+        MovCont_Record: Record 17;
+        VatEntry_Record: Record 254;
+        MovCust: Record 21;
+        DMovCust: Record 379;
+        ResEntry_Record: Record 203;
+        JLE_Record: Record 169;
+        JPLI_Record: Record 1022;
+        VE: Record 5802;
+        ILE: Record 32;
+        WHE: Record 7312;
+        BankAccountLedgerEntry: Record 271;
     begin
         IF CONFIRM('Confirma', FALSE) THEN BEGIN
 
@@ -576,21 +576,21 @@ codeunit 52502 "Utilitario para corregir cosas"
         ConvertImporte2: Decimal;
         ConvertPrecio: Decimal;
         Totales: Integer;
-        LineasVentasSIC Record: 50112;
+        LineasVentasSIC: Record 50112;
         TotContador: Integer;
         codproducto: Code[20];
         Insertar: Boolean;
         Item: Record 27;
-        SalesHeader Record: 36;
-        CabVentasSIC Record: 50111;
-        ConfigCajaElectronica Record: 50114;
+        SalesHeader: Record 36;
+        CabVentasSIC: Record 50111;
+        ConfigCajaElectronica: Record 50114;
         findline: Boolean;
-        SalesLine2Record 37;
-        SalesLine Record: 37;
-        UnitofMeasure Record: 204;
+        SalesLine2Record: Record 37;
+        SalesLine: Record 37;
+        UnitofMeasure: Record 204;
         NegativeInt: Option Default,No,Yes;
         Itembloq: Boolean;
-        LineasVentasSIC_2Record 50112;
+        LineasVentasSIC_2Record: Record 50112;
     begin
         // IF GUIALLOWED THEN
         //   Ventana.OPEN(Text001);
@@ -750,20 +750,20 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     local procedure ActualizafechaPedVenta(NoDoc: Code[20]; Fecha: Date)
     var
-        SIH_Record 112;
-        SIL_Record 113;
-        MovCont_Record 17;
-        VatEntry_Record 254;
-        MovCust Record: 21;
-        DMovCust Record: 379;
-        ResEntry_Record 203;
-        JLE_Record 169;
-        JPLI_Record 1022;
-        VE Record: 5802;
-        ILE Record: 32;
-        WHE Record: 7312;
-        SalesHeader Record: 36;
-        SalesLine Record: 37;
+        SIH_Record: Record 112;
+        SIL_Record: Record 113;
+        MovCont_Record: Record 17;
+        VatEntry_Record: Record 254;
+        MovCust: Record 21;
+        DMovCust: Record 379;
+        ResEntry_Record: Record 203;
+        JLE_Record: Record 169;
+        JPLI_Record: Record 1022;
+        VE: Record 5802;
+        ILE: Record 32;
+        WHE: Record 7312;
+        SalesHeader: Record 36;
+        SalesLine: Record 37;
     begin
         /*IF CONFIRM('Confirma',FALSE) THEN
           BEGIN*/
@@ -878,20 +878,20 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure RegistrarCobrosSCR2(DocNum: Code[20]; Fecha: Date)
     var
-        GenJnlLine Record: 81;
-        GenJnlLine2Record 81;
+        GenJnlLine: Record 81;
+        GenJnlLine2Record: Record 81;
         GenJnlPostLine: Codeunit 12;
-        OldCustLedgEntry Record: 21;
+        OldCustLedgEntry: Record 21;
         NoLin: Integer;
         dImporte: Integer;
         ImporteNeto: Integer;
-        MediosdePagoMG Record: 50113;
-        ConfMediosdepagos Record: 50110;
-        SalesInvoiceLine Record: 113;
+        MediosdePagoMG: Record 50113;
+        ConfMediosdepagos: Record 50110;
+        SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
-        Bancostienda Record: 34002504;
-        SIH Record: 112;
-        SIL Record: 113;
+        Bancostienda: Record 34002504;
+        SIH: Record 112;
+        SIL: Record 113;
     begin
 
         NoLin := 0;

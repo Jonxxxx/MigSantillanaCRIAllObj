@@ -173,7 +173,7 @@ table 80011 "Tmp Check Ledger Entry"
 
     procedure GetCurrencyCodeFromBank(): Code[10]
     var
-        BankAcc Record: 270;
+        BankAcc: Record 270;
     begin
         IF ("Bank Account No." = BankAcc."No.") THEN
           EXIT(BankAcc."Currency Code")

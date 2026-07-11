@@ -105,7 +105,7 @@ page 67101 "Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        ProgTyE Record: 67015;
+                        ProgTyE: Record 67015;
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin
@@ -172,8 +172,8 @@ page 67101 "Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        MatTyE Record: 67014;
-                        MatTyE2Record 67014;
+                        MatTyE: Record 67014;
+                        MatTyE2Record: Record 67014;
                         PgMatTyE: Page67014;
                     begin
                         MatTyE.RESET;
@@ -252,7 +252,7 @@ page 67101 "Cab. Planif. Evento"
     }
 
     var
-        Fecha Record: 2000000007;
-        Evento Record: 67011;
+        Fecha: Record 2000000007;
+        Evento: Record 67011;
 }
 

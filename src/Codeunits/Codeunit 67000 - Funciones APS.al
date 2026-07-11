@@ -6,9 +6,9 @@ codeunit 67000 "Funciones APS"
     end;
 
     var
-        APSSetup Record: 67000;
+        APSSetup: Record 67000;
         Colegio: Record 5050;
-        Fecha Record: 2000000007;
+        Fecha: Record 2000000007;
         FechaInicioMes: Date;
         AnoInicio: Integer;
         MesInicio: Integer;
@@ -54,7 +54,7 @@ codeunit 67000 "Funciones APS"
 
     procedure ColCalcInvMuestras(CodColegio: Code[20]): Decimal
     var
-        BC Record: 7302;
+        BC: Record 7302;
         Colegio: Record 5050;
         Inventario: Decimal;
     begin
@@ -108,9 +108,9 @@ codeunit 67000 "Funciones APS"
     procedure LlenaPromotorColegios(CodPromotor: Code[20])
     var
         Promotor: Record 13;
-        PromListaCol Record: 67006;
-        RutaProm Record: 67044;
-        ColegioNivel Record: 67036;
+        PromListaCol: Record 67006;
+        RutaProm: Record 67044;
+        ColegioNivel: Record 67036;
         Colegio: Record 5050;
     begin
         //Primero se verifican los valores actuales por si han
@@ -172,15 +172,15 @@ codeunit 67000 "Funciones APS"
 
     procedure InsertaAdopciones(CodCol: Code[20]; CodNivel: Code[20]; CodPromotor: Code[20]; CodTurno: Code[20])
     var
-        AdopcionesD Record: 67053;
-        HAdopciones Record: 67035;
+        AdopcionesD: Record 67053;
+        HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor Record: 67027;
-        GradosCol Record: 67037;
-        Editoriales Record: 67024;
-        Nivel Record: 67022;
-        DimVal Record: 349;
-        DefDim Record: 352;
+        PptoPromotor: Record 67027;
+        GradosCol: Record 67037;
+        Editoriales: Record 67024;
+        Nivel: Record 67022;
+        DimVal: Record 349;
+        DefDim: Record 352;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

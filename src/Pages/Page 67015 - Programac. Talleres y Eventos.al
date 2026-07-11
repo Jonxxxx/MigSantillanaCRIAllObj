@@ -133,7 +133,7 @@ page 67015 "Programac. Talleres y Eventos"
     }
 
     var
-        rAsistentes Record: 67016;
+        rAsistentes: Record 67016;
         pAsistentes: Page67016;
 }
 

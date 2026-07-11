@@ -121,8 +121,8 @@ page 56062 "Seguimiento Pedidos de Venta"
 
     trigger OnOpenPage()
     var
-        LHR Record: 56021;
-        LHRR Record: 56023;
+        LHR: Record 56021;
+        LHRR: Record 56023;
     begin
         SH.RESET;
         SH.SETRANGE("Document Type",SH."Document Type"::Order);
@@ -216,18 +216,18 @@ page 56062 "Seguimiento Pedidos de Venta"
     end;
 
     var
-        WHSL Record: 7321;
-        WHAl Record: 5767;
-        RWAL Record: 5773;
-        LP Record: 56031;
-        LPR Record: 56034;
+        WHSL: Record 7321;
+        WHAl: Record 5767;
+        RWAL: Record 5773;
+        LP: Record 56031;
+        LPR: Record 56034;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        SH Record: 36;
+        SH: Record 36;
         SSH: Record 110;
-        SIH Record: 112;
+        SIH: Record 112;
         Contac: Record 5050;
 }
 

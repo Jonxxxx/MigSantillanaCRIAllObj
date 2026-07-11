@@ -35,7 +35,7 @@ table 67009 "Rutas - CP"
 
             trigger OnValidate()
             var
-                PostCode Record: 225;
+                PostCode: Record 225;
             begin
             end;
         }
@@ -56,7 +56,7 @@ table 67009 "Rutas - CP"
 
             trigger OnValidate()
             var
-                Territory Record: 286;
+                Territory: Record 286;
             begin
             end;
         }
@@ -117,20 +117,20 @@ table 67009 "Rutas - CP"
     end;
 
     var
-        DA Record: 67002;
-        PostCodeRec Record: 225;
+        DA: Record 67002;
+        PostCodeRec: Record 225;
         Colegio: Record 5050;
-        PromRutas Record: 67044;
-        PLC Record: 67006;
+        PromRutas: Record 67044;
+        PLC: Record 67006;
         Rutas: Page67008;
-        ConfAPS Record: 67000;
-        DimVal Record: 349;
+        ConfAPS: Record 67000;
+        DimVal: Record 349;
         DimForm: Page560;
         PostCodeForm: Page367;
         formTerritory: Page429;
-        RECcOUNTRY Record: 9;
-        territory Record: 286;
-        PostCode Record: 225;
+        RECcOUNTRY: Record 9;
+        territory: Record 286;
+        PostCode: Record 225;
 
     procedure AsignarColegios()
     begin

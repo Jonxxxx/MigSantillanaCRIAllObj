@@ -72,8 +72,8 @@ table 67008 "Docente - Expos - Especialidad"
     }
 
     var
-        Docente Record: 67001;
-        Expositor Record: 67021;
-        DA Record: 67002;
+        Docente: Record 67001;
+        Expositor: Record 67021;
+        DA: Record 67002;
 }
 

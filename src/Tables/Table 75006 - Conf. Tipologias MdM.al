@@ -183,8 +183,8 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure TestDupl()
     var
-        lrConfTipo Record: 75006;
-        lrFiltroTipo Record: 75008;
+        lrConfTipo: Record 75006;
+        lrFiltroTipo: Record 75008;
         lwNo: Integer;
     begin
         // TestDupl
@@ -207,11 +207,11 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure ValidaReferencia(pwId: Integer;pwValor: Code[20])
     var
-        lrFiltroTipo Record: 75008;
-        lrDatosMdM Record: 75001;
+        lrFiltroTipo: Record 75008;
+        lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
-        lrValDim Record: 349;
-        lrProdGroup Record: 5723;
+        lrValDim: Record 349;
+        lrProdGroup: Record 5723;
     begin
         // ValidaReferencia
         // Valida que el valor sea Correcto
@@ -243,7 +243,7 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure TestFieldRef(pwId: Integer)
     var
-        lrFiltroTipo Record: 75008;
+        lrFiltroTipo: Record 75008;
         wRcRef: RecordRef;
         wFieldRef: FieldRef;
         lwIdF: Integer;
@@ -264,7 +264,7 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure TesAlltFieldsRef()
     var
-        lrFiltroTipo Record: 75008;
+        lrFiltroTipo: Record 75008;
         lrNo: Integer;
     begin
         // TesAlltFieldsRef

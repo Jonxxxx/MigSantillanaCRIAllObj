@@ -7,13 +7,13 @@ codeunit 56001 "Trae Inv. Consig"
     end;
 
     var
-        SalesLine1Record 37;
-        SalesLine Record: 37;
+        SalesLine1Record: Record 37;
+        SalesLine: Record 37;
         NoPedidoActual: Code[20];
         CFuncSantillana: Codeunit 56000;
-        TransRecLines Record: 5747;
+        TransRecLines: Record 5747;
         NoLinea: Integer;
-        ItemLedgerEntry Record: 32;
+        ItemLedgerEntry: Record 32;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

@@ -8,12 +8,12 @@ codeunit 56207 "Detecc. anomalias en contratos"
 
     procedure DeteccionAnomaliasEnContratos()
     var
-        lrEmployee Record: 5200;
+        lrEmployee: Record 5200;
         lWindow: Dialog;
         TextL001: Label 'Revisando contratos del empleado ###########1';
         lExigirContinuidadContratos: Boolean;
         lRevisarContratoIndefinidoQueSeaUltimo: Boolean;
-        lrAuditoria Record: 56102;
+        lrAuditoria: Record 56102;
     begin
         //+#269159
         //... Se realizará un recorrido por empleados.
@@ -37,8 +37,8 @@ codeunit 56207 "Detecc. anomalias en contratos"
 
     procedure RevisarContratosEmpleado(pCodEmpleado: Code[15]; pExigirContinuidadContratos: Boolean; pRevisarContratoIndefinidoQueSeaUltimo: Boolean)
     var
-        lrContrato Record: 34002109;
-        lrAuditoria Record: 56102;
+        lrContrato: Record 34002109;
+        lrAuditoria: Record 56102;
         lFechaFinalAnterior: Date;
         lModificar: Boolean;
         lFechaInicio: Date;
@@ -109,7 +109,7 @@ codeunit 56207 "Detecc. anomalias en contratos"
 
     procedure UltimoContrato(lrContratoRef Record: 34002109"): Boolean
     var
-        lrContrato Record: 34002109;
+        lrContrato: Record 34002109;
     begin
         lrContrato.RESET;
         lrContrato.SETCURRENTKEY("No. empleado", "No. Orden");

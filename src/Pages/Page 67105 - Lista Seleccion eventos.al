@@ -19,7 +19,7 @@ page 67105 "Lista Seleccion eventos"
 
                     trigger OnValidate()
                     var
-                        rProgEv Record: 67015;
+                        rProgEv: Record 67015;
                     begin
                         IF Seleccionado THEN BEGIN
                             rProgEv.RESET;
@@ -144,7 +144,7 @@ page 67105 "Lista Seleccion eventos"
     end;
 
     var
-        AsistEvento Record: 67016;
+        AsistEvento: Record 67016;
         Seleccionado: Boolean;
         gCodDocente: Code[20];
 

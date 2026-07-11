@@ -146,7 +146,7 @@ table 56202 "Historial MdE"
 
             trigger OnValidate()
             var
-                Contratos Record: 34002109;
+                Contratos: Record 34002109;
             begin
                 TESTFIELD(Company);
                 Empresa.GET(Company);
@@ -455,15 +455,15 @@ table 56202 "Historial MdE"
 
     trigger OnDelete()
     var
-        Contrato Record: 34002109;
-        PerfilSal Record: 34002115;
-        HistNom Record: 34002117;
+        Contrato: Record 34002109;
+        PerfilSal: Record 34002115;
+        HistNom: Record 34002117;
     begin
     end;
 
     trigger OnInsert()
     var
-        MdEemployee Record: 56202;
+        MdEemployee: Record 56202;
     begin
         MdEemployee.SETRANGE("No.", "No.");
         IF MdEemployee.FINDLAST THEN
@@ -486,11 +486,11 @@ table 56202 "Historial MdE"
     end;
 
     var
-        PostCode Record: 225;
-        Empresa Record: 34002100;
-        Cargo Record: 34002110;
-        TipoContrato Record: 5211;
-        Contrato Record: 34002109;
+        PostCode: Record 225;
+        Empresa: Record 34002100;
+        Cargo: Record 34002110;
+        TipoContrato: Record 5211;
+        Contrato: Record 34002109;
         ErrorTipoDatos: Label 'Error de datos';
         ErrorInsert: Label 'No se puede crear el %1 para el empleado %2.';
         ErrorInsertEmployee: Label ' Revise que, si est  enviando un alta nueva, el n mero de serie asignado a recursos humanos en Dynamics NAV est  correctamente configurado.';
@@ -502,7 +502,7 @@ table 56202 "Historial MdE"
 
     procedure ApplyToEmployee()
     var
-        Employee Record: 5200;
+        Employee: Record 5200;
     begin
         Employee.GET("No.");
 
@@ -803,7 +803,7 @@ table 56202 "Historial MdE"
 
     local procedure UpdateDimension(EmployeeNo: Code[20];DimensionCode: Code[20];DimensionValue: Code[20])
     var
-        DefaultDim Record: 352;
+        DefaultDim: Record 352;
     begin
         IF DefaultDim.GET(DATABASE::Employee,EmployeeNo,DimensionCode) THEN BEGIN
           DefaultDim."Dimension Value Code" := DimensionValue;
@@ -833,8 +833,8 @@ table 56202 "Historial MdE"
 
     procedure ControlPendientes()
     var
-        lrHistorial Record: 56202;
-        lrHistorialAux Record: 56202;
+        lrHistorial: Record 56202;
+        lrHistorialAux: Record 56202;
     begin
         //+#269159
         //... Si para el nuevo contrato no est  definida la fecha de finalizaci n, investigaremos si hay alguna duplicidad:
@@ -879,9 +879,9 @@ table 56202 "Historial MdE"
 
     procedure ControlContratos(lrContratoRef Record: 34002109")
     var
-        lrContratos Record: 34002109;
-        lrContratosAux Record: 34002109;
-        lrContratosBck Record: 56101;
+        lrContratos: Record 34002109;
+        lrContratosAux: Record 34002109;
+        lrContratosBck: Record 56101;
     begin
         //+#269159
         //... Si para el nuevo contrato no est  definida la fecha de finalizaci n, investigaremos si hay alguna duplicidad:

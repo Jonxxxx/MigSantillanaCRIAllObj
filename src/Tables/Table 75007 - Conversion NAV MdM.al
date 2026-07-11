@@ -59,7 +59,7 @@ table 75007 "Conversion NAV MdM"
             var
                 lwIdDim: Integer;
                 lwDimCode: Code[20];
-                lrDimVal Record: 349;
+                lrDimVal: Record 349;
             begin
                 
                 
@@ -99,12 +99,12 @@ table 75007 "Conversion NAV MdM"
     var
         cFunMdM: Codeunit 75000;
         Text001: Label 'La longitud m xima para %1 es %2';
-        rConfMdM Record: 75000;
+        rConfMdM: Record 75000;
 
     procedure GetNav2MdM(pTipo: Integer;pNavCode: Code[20];pwTest: Boolean): Code[20]
     var
         lwOK: Boolean;
-        lrConv Record: 75007;
+        lrConv: Record 75007;
     begin
         // GetNav2MdM
         // Si se pasa pwTest como true, validar  que el valor exista realmente
@@ -127,7 +127,7 @@ table 75007 "Conversion NAV MdM"
 
     procedure GetMdm2NAV(pTipo: Integer;pMdMCode: Code[20];var pNavCode: Code[20];pwForce: Boolean;pwError: Boolean) wOK: Boolean
     var
-        lrConv Record: 75007;
+        lrConv: Record 75007;
     begin
         // GetMdm2NAV
         // Tener en cuenta que pwError y pwForce No son compatibles obviamente
@@ -152,7 +152,7 @@ table 75007 "Conversion NAV MdM"
 
     procedure SetNav2Mdm(pTipo: Integer;pNavCode: Code[20];pMdMCode: Code[20]) Rslt: Boolean
     var
-        lrConv Record: 75007;
+        lrConv: Record 75007;
     begin
 
         Rslt := (pMdMCode <> '') AND (pNavCode <> '') AND (pNavCode <> pMdMCode);

@@ -76,7 +76,7 @@ page 67104 "Lista de Docentes Sel. Eventos"
 
                     trigger OnAction()
                     var
-                        ProgTyE Record: 67015;
+                        ProgTyE: Record 67015;
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin

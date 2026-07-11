@@ -14,7 +14,7 @@ table 56025 "Cab. clas. devolucion"
 
             trigger OnValidate()
             var
-                CD2Record 56026;
+                CD2Record: Record 56026;
             begin
                 IF "Customer no." <> '' THEN BEGIN
                     Cust.GET("Customer no.");
@@ -133,12 +133,12 @@ table 56025 "Cab. clas. devolucion"
 
     var
         Cust: Record 18;
-        CD Record: 56026;
-        ConfEmpresa Record: 56001;
+        CD: Record 56026;
+        ConfEmpresa: Record 56001;
         NoSeriesMgt: Codeunit 396;
         Text001: Label 'The customer will be changed in the lines, do you want to continue?';
         Err001: Label 'This document already have items received. To change the customer you must first delete all the lines and restart the receive';
-        WHE Record: 7301;
+        WHE: Record 7301;
 
     procedure AssistEdit(CR Record: 56025"): Boolean
     begin

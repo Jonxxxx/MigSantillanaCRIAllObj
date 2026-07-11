@@ -14,9 +14,9 @@ codeunit 130400 "CAL Test Runner"
     end;
 
     var
-        CALTestSuite Record: 130400;
-        CALTestLine Record: 130401;
-        CALTestLineFunction Record: 130401;
+        CALTestSuite: Record 130400;
+        CALTestLine: Record 130401;
+        CALTestLineFunction: Record 130401;
         CALTestMgt: Codeunit 130401;
         CALTestRunnerPublisher: Codeunit 130403;
         Window: Dialog;
@@ -49,7 +49,7 @@ codeunit 130400 "CAL Test Runner"
 
     local procedure RunTests()
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
         CodeCoverageMgt: Codeunit 9990;
     begin
         WITH CALTestLine DO BEGIN
@@ -215,7 +215,7 @@ codeunit 130400 "CAL Test Runner"
 
     procedure UpdateTestFunctionLine(IsSuccess: Boolean)
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
     begin
         WITH CALTestLineFunction DO BEGIN
             IF IsSuccess THEN

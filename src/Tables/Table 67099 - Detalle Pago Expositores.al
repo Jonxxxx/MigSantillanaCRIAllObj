@@ -21,9 +21,9 @@ table 67099 "Detalle Pago Expositores"
 
             trigger OnLookup()
             var
-                recCabPlanif Record: 67051;
+                recCabPlanif: Record 67051;
                 pgCabPlanif: Page67161;
-                recCabPago Record: 67098;
+                recCabPago: Record 67098;
             begin
                 recCabPago.RESET;
                 recCabPago.SETRANGE("ID Pago", "ID Pago");
@@ -75,8 +75,8 @@ table 67099 "Detalle Pago Expositores"
 
     trigger OnInsert()
     var
-        recCabPago Record: 67098;
-        rDet Record: 67099;
+        recCabPago: Record 67098;
+        rDet: Record 67099;
     begin
         IF recCabPago.GET("ID Pago") THEN
             "Cod. Expositor" := recCabPago."Cod. Expositor";

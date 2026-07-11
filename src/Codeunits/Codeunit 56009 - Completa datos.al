@@ -165,15 +165,15 @@ codeunit 56009 "Completa datos"
     end;
 
     var
-        VLE Record: 25;
-        DVLE Record: 380;
-        AjustDiv Record: 56060;
-        DSE Record: 480;
+        VLE: Record 25;
+        DVLE: Record 380;
+        AjustDiv: Record 56060;
+        DSE: Record 480;
         I: Integer;
         N: Integer;
-        adopcion1Record 67053;
-        adopcion2Record 50008;
-        adopcion3Record 50008;
-        DetailCustomer Record: 379;
+        adopcion1Record: Record 67053;
+        adopcion2Record: Record 50008;
+        adopcion3Record: Record 50008;
+        DetailCustomer: Record 379;
 }
 

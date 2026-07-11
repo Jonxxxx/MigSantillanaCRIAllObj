@@ -11,8 +11,8 @@ table 67063 "Plan Lector Cab."
             trigger OnValidate()
             var
                 Colegio: Record 5050;
-                DimVal Record: 349;
-                ConfAPS Record: 67000;
+                DimVal: Record 349;
+                ConfAPS: Record 67000;
             begin
                 Colegio.SETRANGE(Colegio."No.", "Cod. Colegio");
                 IF Colegio.FINDFIRST THEN BEGIN
@@ -50,7 +50,7 @@ table 67063 "Plan Lector Cab."
 
             trigger OnValidate()
             var
-                DA Record: 67002;
+                DA: Record 67002;
             begin
                 DA.SETRANGE("Tipo registro", DA."Tipo registro"::Turnos);
                 IF DA.FINDFIRST THEN

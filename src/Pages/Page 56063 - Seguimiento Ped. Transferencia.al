@@ -93,9 +93,9 @@ page 56063 "Seguimiento Ped. Transferencia"
 
     trigger OnOpenPage()
     var
-        LHR Record: 56021;
-        LHRR Record: 56023;
-        TSH Record: 5744;
+        LHR: Record 56021;
+        LHRR: Record 56023;
+        TSH: Record 5744;
     begin
         TH.RESET;
         IF TH.FINDSET THEN BEGIN
@@ -184,16 +184,16 @@ page 56063 "Seguimiento Ped. Transferencia"
     end;
 
     var
-        WHSL Record: 7321;
-        WHAl Record: 5767;
-        RWAL Record: 5773;
-        LP Record: 56031;
-        LPR Record: 56034;
+        WHSL: Record 7321;
+        WHAl: Record 5767;
+        RWAL: Record 5773;
+        LP: Record 56031;
+        LPR: Record 56034;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
-        TH Record: 5740;
-        TSH Record: 5744;
+        TH: Record 5740;
+        TSH: Record 5744;
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Contac: Record 5050;
         OrderTracking: Page56081;

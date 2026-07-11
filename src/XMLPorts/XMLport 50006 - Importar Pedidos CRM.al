@@ -587,8 +587,8 @@ xmlport 50006 "Importar Pedidos CRM"
     end;
 
     var
-        SH Record: 36;
-        SL Record: 37;
+        SH: Record 36;
+        SL: Record 37;
         ConvertFecha: Date;
         ConvertDecimal: Decimal;
         Nolinea: Integer;
@@ -596,10 +596,10 @@ xmlport 50006 "Importar Pedidos CRM"
         ReemplazarDecimal: DotNet String;
         NuevoValor: Text;
         StrParam: Text[1024];
-        _pedidos Record: 36;
+        _pedidos: Record 36;
         Tex01: Label 'Proceso Finalizado';
-        ConfigEmpresa Record: 56001;
-        NoSeriesLine Record: 309;
+        ConfigEmpresa: Record 56001;
+        NoSeriesLine: Record 309;
         Serie: Code[20];
         Prefijo: Text[10];
         Customer: Record 18;

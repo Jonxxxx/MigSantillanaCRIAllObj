@@ -34,7 +34,7 @@ table 56090 "Texto Configurable"
 
     trigger OnInsert()
     var
-        rConf Record: 56090;
+        rConf: Record 56090;
     begin
         rConf.SETRANGE("Id. Tabla", "Id. Tabla");
         rConf.SETRANGE(Secci n, Secci n);

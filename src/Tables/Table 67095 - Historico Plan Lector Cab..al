@@ -11,8 +11,8 @@ table 67095 "Historico Plan Lector Cab."
             trigger OnValidate()
             var
                 Colegio: Record 5050;
-                DimVal Record: 349;
-                ConfAPS Record: 67000;
+                DimVal: Record 349;
+                ConfAPS: Record 67000;
             begin
             end;
         }

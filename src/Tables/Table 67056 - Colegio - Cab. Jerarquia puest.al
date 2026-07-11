@@ -62,8 +62,8 @@ table 67056 "Colegio - Cab. Jerarquia puest"
 
     var
         Colegio: Record 5050;
-        Empleado Record: 67001;
-        DA Record: 67002;
+        Empleado: Record 67001;
+        DA: Record 67002;
         Turnos: Page67003;
                     Grados: Page67006;
 }

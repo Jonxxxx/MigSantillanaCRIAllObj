@@ -40,7 +40,7 @@ table 56070 "Maestro de Rutas"
     end;
 
     var
-        recRutasDistribucion Record: 56071;
+        recRutasDistribucion: Record 56071;
         Error001: Label 'Este Codigo de Ruta tiene Lineas asociadas.';
         Error002: Label 'No se puede renombrar el Codigo de la ruta, ya que peude tener Documentos asociados';
 }

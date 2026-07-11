@@ -110,11 +110,11 @@ page 67075 "Seleccionar Productos Muestras"
     end;
 
     var
-        BC Record: 7302;
-        TH Record: 5740;
-        TL Record: 5741;
-        TransLine2Record 5741;
-        PPM Record: 67028;
+        BC: Record 7302;
+        TH: Record 5740;
+        TL: Record 5741;
+        TransLine2Record: Record 5741;
+        PPM: Record 67028;
         Seleccionar: Boolean;
         NoDocumento: Code[20];
 

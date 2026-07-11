@@ -63,7 +63,7 @@ page 67173 "Prog. Visitas Asesor/Consultor"
 
     var
         wVisita: Code[20];
-        rVisita Record: 67102;
+        rVisita: Record 67102;
         Err001: Label 'No se ha definido la visita.';
 }
 

@@ -230,13 +230,13 @@ page 67052 "Colegio - Adopciones Detalles"
     end;
 
     var
-        HAdopciones Record: 67035;
+        HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor Record: 67027;
+        PptoPromotor: Record 67027;
         TempAdopciones Record: 67026" temporary;
-        GradosCol Record: 67037;
-        Editoriales Record: 67024;
-        SP Record: 7002;
+        GradosCol: Record 67037;
+        Editoriales: Record 67024;
+        SP: Record 7002;
         Cust: Record 18;
         NoMov: Integer;
         gCodCol: Code[20];
@@ -291,9 +291,9 @@ page 67052 "Colegio - Adopciones Detalles"
 
     procedure AdopCompetencia()
     var
-        ColAdopCompet Record: 67033;
+        ColAdopCompet: Record 67033;
         fColAdopCompet: Page67092;
-        ColAdopDet Record: 67053;
+        ColAdopDet: Record 67053;
     begin
         fColAdopCompet.RecibeParametros("Cod. Colegio", "Cod. Promotor", "Cod. Producto", "Cod. Nivel", "Cod. Grado");
         fColAdopCompet.RUN;

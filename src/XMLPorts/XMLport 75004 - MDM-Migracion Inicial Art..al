@@ -1124,7 +1124,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
                                 trigger OnBeforePassVariable()
                                 var
-                                    lrLinBom Record: 90;
+                                    lrLinBom: Record 90;
                                 begin
                                     CLEAR(lrLinBom);
                                     lrLinBom.SETRANGE("Parent Item No.", Item."No.");
@@ -1214,7 +1214,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
                             trigger OnBeforePassVariable()
                             var
-                                lrCommentLine Record: 97;
+                                lrCommentLine: Record 97;
                             begin
 
 
@@ -1464,9 +1464,9 @@ xmlport 75004 "MDM-Migracion Inicial Art."
     end;
 
     var
-        rConfMdM Record: 75000;
-        rConvNavMdM Record: 75007;
-        VatSetup Record: 325;
+        rConfMdM: Record 75000;
+        rConvNavMdM: Record 75007;
+        VatSetup: Record 325;
         cFunMdM: Codeunit 75000;
         Text001: Label 'La longitud de %1 No puede ser superior a %2 en Producto %3';
         Text002: Label 'EAN';
@@ -1561,7 +1561,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
     procedure SetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10])
     var
-        lrUnid Record: 5404;
+        lrUnid: Record 5404;
     begin
         // SetUnid
 
@@ -1591,7 +1591,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
     procedure SePrecioVta(pwFecha: Date) wEnc: Boolean
     var
-        lrPrec Record: 7002;
+        lrPrec: Record 7002;
         lwPrecioConImp: Decimal;
         lwPrecioSinImp: Decimal;
         lwDivisa: Code[10];

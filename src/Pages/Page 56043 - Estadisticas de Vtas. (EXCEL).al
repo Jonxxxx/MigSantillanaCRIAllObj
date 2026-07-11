@@ -81,7 +81,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    CategoriaPedidoVenta Record: 52503;
+                    CategoriaPedidoVenta: Record 52503;
                     CategoriaPedidoVentaPage: Page52506;
                 begin
                     CLEAR(CategoriaPedidoVentaPage);
@@ -102,7 +102,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    ConfigEmpresa Record: 56001;
+                    ConfigEmpresa: Record 56001;
                 begin
                     //008+
                     ConfigEmpresa.GET;
@@ -147,7 +147,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
                     lFile: Text[100];
                     TextL005: Label 'No se ha creado el archivo por no haber datos que mostrar';
                     lFile0: Text[100];
-                    lrMySession Record: 2000000110;
+                    lrMySession: Record 2000000110;
                     TextL006: Label 'EstadisticasVentas';
                 begin
                     lRuta := 'C:\Libros Excel';
@@ -252,8 +252,8 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
         wProducto2: Code[20];
         wCategoriaPedido: Code[250];
         wCanalVenta: Code[20];
-        DimensionSetEntry Record: 480;
-        DimensionValue Record: 349;
+        DimensionSetEntry: Record 480;
+        DimensionValue: Record 349;
         DimensionValuePage: Page537;
 }
 

@@ -667,20 +667,20 @@ table 80000 "Tmp Sales Invoice Header"
     }
 
     var
-        SalesInvHeader Record: 112;
+        SalesInvHeader: Record 112;
         SalesCommentLine: Record 44;
-        CustLedgEntry Record: 21;
-        PostCode Record: 225;
+        CustLedgEntry: Record 21;
+        PostCode: Record 225;
         PostSalesLinesDelete: Codeunit 363;
         DimMgt: Codeunit 408;
         "*** DSLoc ***": Integer;
-        ConfSantillana Record: 56001;
-        Localizacion Record: 34003011;
-        GpoContableCte Record: 92;
+        ConfSantillana: Record 56001;
+        Localizacion: Record 34003011;
+        GpoContableCte: Record 92;
 
     procedure PrintRecords(ShowRequestForm: Boolean)
     var
-        ReportSelection Record: 77;
+        ReportSelection: Record 77;
     begin
     end;
 
@@ -696,7 +696,7 @@ table 80000 "Tmp Sales Invoice Header"
 
     procedure LookupAdjmtValueEntries()
     var
-        ValueEntry Record: 5802;
+        ValueEntry: Record 5802;
     begin
     end;
 }

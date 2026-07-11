@@ -11,7 +11,7 @@ codeunit 130410 "Sys. Warmup Test Runner"
     [EventSubscriber(ObjectType::Codeunit, 40, 'OnAfterCompanyOpen', '', true, true)]
     local procedure WarmUpOnAfterCompanyOpen()
     var
-        O365GettingStarted Record: 1309;
+        O365GettingStarted: Record 1309;
         CompanyInformationMgt: Codeunit 1306;
         PermissionManager: Codeunit 9002;
     begin

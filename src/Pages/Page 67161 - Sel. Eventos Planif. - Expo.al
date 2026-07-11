@@ -68,7 +68,7 @@ page 67161 "Sel. Eventos Planif. - Expo"
 
     trigger OnAfterGetRecord()
     var
-        recCostos Record: 67086;
+        recCostos: Record 67086;
     begin
         wTextCostos := '';
         IF "No. Solicitud" <> '' THEN BEGIN

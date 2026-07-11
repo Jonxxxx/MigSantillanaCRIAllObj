@@ -17,7 +17,7 @@ codeunit 50110 Transfer_SIC
 
     trigger OnRun()
     var
-        PrueSIH Record: 112;
+        PrueSIH: Record 112;
         FE_nav: Codeunit 52504;
         intentos: Integer;
         enviados: Integer;
@@ -91,28 +91,28 @@ codeunit 50110 Transfer_SIC
     end;
 
     var
-        CabVentasSIC Record: 50111;
-        CabVentasSIC_2Record 50111;
-        LineasVentasSIC Record: 50112;
-        LineasVentasSIC_2Record 50112;
-        LineasVentasSIC_3Record 50112;
-        MediosdePagoSIC Record: 50113;
-        SalesHeader Record: 36;
-        SalesHeader2Record 36;
-        SH Record: 36;
-        SalesLine Record: 37;
-        SalesLine2Record 37;
-        SalesLine4Record 37;
+        CabVentasSIC: Record 50111;
+        CabVentasSIC_2Record: Record 50111;
+        LineasVentasSIC: Record 50112;
+        LineasVentasSIC_2Record: Record 50112;
+        LineasVentasSIC_3Record: Record 50112;
+        MediosdePagoSIC: Record 50113;
+        SalesHeader: Record 36;
+        SalesHeader2Record: Record 36;
+        SH: Record 36;
+        SalesLine: Record 37;
+        SalesLine2Record: Record 37;
+        SalesLine4Record: Record 37;
         GenJnlPostLine: Codeunit 12;
-        GenJnlLine Record: 81;
-        PaymentMethod Record: 289;
-        SalesInvoiceHeader Record: 112;
-        SalesInvoiceLine Record: 113;
+        GenJnlLine: Record 81;
+        PaymentMethod: Record 289;
+        SalesInvoiceHeader: Record 112;
+        SalesInvoiceLine: Record 113;
         Item: Record 27;
-        EquiClienteFromHotel Record: 50006;
+        EquiClienteFromHotel: Record 50006;
         ConvertImporte: Decimal;
         ConverDimension: Code[10];
-        DimensionSetEntry Record: 480;
+        DimensionSetEntry: Record 480;
         FechaVencimiento: Date;
         NCF: Code[19];
         NCFR: Code[19];
@@ -124,40 +124,40 @@ codeunit 50110 Transfer_SIC
         Customer: Record 18;
         NoEmpleadoAfiliado: Code[20];
         TipoBloqueo: Option " ",Ship,Invoice,All;
-        IUM_Record 5404;
-        UnitofMeasure Record: 204;
+        IUM_Record: Record 5404;
+        UnitofMeasure: Record 204;
         Contador: Integer;
         TotContador: Integer;
         Ventana: Dialog;
         ContadorPrueba: Integer;
         findline: Boolean;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
-        GLAccount Record: 15;
-        ConfigEmpresa Record: 50000;
+        GLAccount: Record 15;
+        ConfigEmpresa: Record 50000;
         codproducto: Code[20];
         NegativeInt: Option Default,No,Yes;
         Turno: Integer;
         Nos: Label 'VNR14-000027|VNR14-000027|VNR14-000027|VNR14-000028|VNR14-000028|VNR15-000026|VNR15-000027|VNR15-000027|VNR15-000027|VNR15-000028|VNR15-000028|VNR18-000015|VNR19-000015|VNR19-000016|VNR19-000016|VNR20-000023|VNR20-000024|VNR6-000016|VNR6-000017|VNR7-000016|VNR7-000017|VNR8-000028|VNR8-000028|VNR8-000028|VNR8-000029|VNR8-000030';
         Itembloq: Boolean;
         Insertar: Boolean;
-        ConfigCajaElectronica Record: 50114;
+        ConfigCajaElectronica: Record 50114;
         RegistraPedidosVtaSIC_BC: Codeunit 50112;
-        ConfDSPoS Record: 56001;
-        GenLedSetup Record: 98;
-        Cajeros Record: 34002505;
+        ConfDSPoS: Record 56001;
+        GenLedSetup: Record 98;
+        Cajeros: Record 34002505;
         Contact: Record 5050;
         MediPagoSicExiste: Boolean;
-        MedPagoSic Record: 50113;
+        MedPagoSic: Record 50113;
 
     local procedure TransferCabecera()
     var
         ConvertFecha: Date;
         ConvertTasaCambio: Decimal;
         ConvertFecha1: Date;
-        MPSIC_Record 50113;
-        ConfMedPagICG_Record 50110;
-        ConfigCajaElectronica Record: 50114;
-        MPSIC_2Record 50113;
+        MPSIC_Record: Record 50113;
+        ConfMedPagICG_Record: Record 50110;
+        ConfigCajaElectronica: Record 50114;
+        MPSIC_2Record: Record 50113;
     begin
         IF GUIALLOWED THEN BEGIN
             ConfDSPoS.GET;
@@ -748,7 +748,7 @@ codeunit 50110 Transfer_SIC
 
     local procedure VerificaVtasDuplicadas(NoDoc: Code[20]; TipoDoc: Integer): Boolean
     var
-        SH Record: 36;
+        SH: Record 36;
         SalesShipmentHeader: Record 110;
         Txt001: Label 'Deleting Ticket    #1########## @2@@@@@@@@@@@@@\Deleting Ticket    #3########## @4@@@@@@@@@@@@@\Compressing NCr    #5########## @6@@@@@@@@@@@@@\Deleting NCr    #7########## @8@@@@@@@@@@@@@';
         DocumentoExiste: Boolean;
@@ -1044,7 +1044,7 @@ codeunit 50110 Transfer_SIC
         String: Text;
         SubStr: Text;
         Pos: Integer;
-        EquiaConeptosFromHote Record: 50007;
+        EquiaConeptosFromHote: Record 50007;
     begin
 
 
@@ -1067,12 +1067,12 @@ codeunit 50110 Transfer_SIC
     procedure InsertLineaPropina(NoDoc: Code[20]; Doctype: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order")
     var
         NoLinea: Integer;
-        SalesLine Record: 37;
-        SalesLine2Record 37;
-        SalesLine3Record 37;
+        SalesLine: Record 37;
+        SalesLine2Record: Record 37;
+        SalesLine3Record: Record 37;
         Monto: Decimal;
         Propina: Decimal;
-        SL Record: 36;
+        SL: Record 36;
     begin
 
         IF ConfigEmpresa.GET THEN;
@@ -1155,10 +1155,10 @@ codeunit 50110 Transfer_SIC
 
     local procedure EliminarDocumento()
     var
-        SH Record: 36;
-        SH2Record 36;
-        SL Record: 37;
-        EquivalenciaClienteFromHotel2Record 50006;
+        SH: Record 36;
+        SH2Record: Record 36;
+        SL: Record 37;
+        EquivalenciaClienteFromHotel2Record: Record 50006;
     begin
 
 
@@ -1219,10 +1219,10 @@ codeunit 50110 Transfer_SIC
 
     procedure ActualizarMediodepago()
     var
-        MPSIC_Record 50113;
-        ConfMedPagICG_Record 50110;
-        SL Record: 36;
-        SIH Record: 112;
+        MPSIC_Record: Record 50113;
+        ConfMedPagICG_Record: Record 50110;
+        SL: Record 36;
+        SIH: Record 112;
     begin
 
 
@@ -1357,33 +1357,33 @@ codeunit 50110 Transfer_SIC
 
     procedure CambiaNoBorrador()
     var
-        MovCont Record: 17;
-        MovCont_Out Record: 17;
-        MovITBIS Record: 254;
-        MovProd Record: 32;
-        ValueEntry Record: 5802;
-        MovCte Record: 21;
-        MovCteDet Record: 379;
-        MovContout Record: 17;
-        MovITBISout Record: 254;
-        MovProdout Record: 32;
-        ValueEntryout Record: 5802;
-        MovCteout Record: 21;
-        MovCteDetout Record: 379;
-        SIH Record: 112;
-        SIL Record: 113;
-        SIL_Out Record: 113;
-        SIH_out Record: 112;
+        MovCont: Record 17;
+        MovCont_Out: Record 17;
+        MovITBIS: Record 254;
+        MovProd: Record 32;
+        ValueEntry: Record 5802;
+        MovCte: Record 21;
+        MovCteDet: Record 379;
+        MovContout: Record 17;
+        MovITBISout: Record 254;
+        MovProdout: Record 32;
+        ValueEntryout: Record 5802;
+        MovCteout: Record 21;
+        MovCteDetout: Record 379;
+        SIH: Record 112;
+        SIL: Record 113;
+        SIL_Out: Record 113;
+        SIH_out: Record 112;
         Fecha: Date;
         SIH_outNo: Code[20];
         SIH_outOrderNo: Code[20];
-        CabVentasSIC Record: 50112;
-        BankALE Record: 271;
-        BankALE_Out Record: 271;
-        SH_Record 36;
-        SL Record: 37;
-        SL_Out Record: 37;
-        SH_out Record: 36;
+        CabVentasSIC: Record 50112;
+        BankALE: Record 271;
+        BankALE_Out: Record 271;
+        SH_Record: Record 36;
+        SL: Record 37;
+        SL_Out: Record 37;
+        SH_out: Record 36;
     begin
         SH_.RESET;
         SH_.SETRANGE("No.", 'VNR9-000087');
@@ -1633,16 +1633,16 @@ codeunit 50110 Transfer_SIC
 
     procedure RecalclularImporteLineas()
     var
-        SalesLine Record: 37;
+        SalesLine: Record 37;
         ImporteLinSIC: Decimal;
         ImporteMPSIC: Decimal;
         ImporteSalesLine: Decimal;
-        RecCabVentasSIC Record: 50111;
-        RecLineasVentasSIC Record: 50112;
-        RecMediosdePagoSIC Record: 50113;
-        RecSalesHeader Record: 36;
+        RecCabVentasSIC: Record 50111;
+        RecLineasVentasSIC: Record 50112;
+        RecMediosdePagoSIC: Record 50113;
+        RecSalesHeader: Record 36;
         Transfer_SIC: Codeunit 50110;
-        SalesLine_Record 37;
+        SalesLine_Record: Record 37;
         DocType: Integer;
         Error002: Label 'Montos en tablas no coinciden';
         Error003: Label 'Imp. med. pagos no coincide con cabecera';
@@ -1733,14 +1733,14 @@ codeunit 50110 Transfer_SIC
         ConvertPrecio: Decimal;
         CantLineas: Integer;
         NoLinea: Integer;
-        _CabVentasSIC Record: 50112;
-        SalesLine_Record 37;
-        _SalesHeader Record: 36;
-        LineasVentasSIC_Record 50113;
-        ConfSantillana Record: 56001;
+        _CabVentasSIC: Record 50112;
+        SalesLine_Record: Record 37;
+        _SalesHeader: Record 36;
+        LineasVentasSIC_Record: Record 50113;
+        ConfSantillana: Record 56001;
         NoNextLinea: Integer;
-        SalesHeader_Record 36;
-        GLAccount_Record 15;
+        SalesHeader_Record: Record 36;
+        GLAccount_Record: Record 15;
         CantTotalProducto: Integer;
         ImporteIVAIncTotal: Decimal;
         ImporteTotal: Decimal;
@@ -1751,7 +1751,7 @@ codeunit 50110 Transfer_SIC
         ConvertPrecio_: Decimal;
         I: Integer;
         ConvertFechaSalesLine: Date;
-        LinVentasSicMod Record: 50113;
+        LinVentasSicMod: Record 50113;
     begin
         GenLedSetup.GET;
 

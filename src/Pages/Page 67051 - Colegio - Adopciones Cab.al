@@ -41,7 +41,7 @@ page 67051 "Colegio - Adopciones Cab"
                     trigger OnLookup(var Text: Text): Boolean
                     var
                         Colegio: Record 5050;
-                        BC Record: 7302;
+                        BC: Record 7302;
                         BCPage: Page7304;
                     begin
                         Colegio.GET("Cod. Colegio");
@@ -329,19 +329,19 @@ page 67051 "Colegio - Adopciones Cab"
     end;
 
     var
-        Adopciones Record: 67026;
-        Adopciones2Record 67026;
-        AdopcionesD Record: 67053;
-        HAdopciones Record: 67035;
+        Adopciones: Record 67026;
+        Adopciones2Record: Record 67026;
+        AdopcionesD: Record 67053;
+        HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor Record: 67027;
+        PptoPromotor: Record 67027;
         TempAdopciones Record: 67026" temporary;
-        GradosCol Record: 67037;
-        Editoriales Record: 67024;
-        ConfAPS Record: 67000;
-        Nivel Record: 67022;
-        DefDim Record: 352;
-        DimVal Record: 349;
+        GradosCol: Record 67037;
+        Editoriales: Record 67024;
+        ConfAPS: Record 67000;
+        Nivel: Record 67022;
+        DefDim: Record 352;
+        DimVal: Record 349;
         FuncAPS: Codeunit 67000;
         Table_ID: Integer;
         MigratedTables: Integer;

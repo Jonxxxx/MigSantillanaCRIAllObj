@@ -97,7 +97,7 @@ table 67021 "Expositores - aps"
 
             trigger OnValidate()
             var
-                VATRegNoFormat Record: 381;
+                VATRegNoFormat: Record 381;
             begin
             end;
         }
@@ -199,7 +199,7 @@ table 67021 "Expositores - aps"
             trigger OnLookup()
             var
                 pgCabPlanif: Page67178;
-                                 rCabPlanif Record: 67051;
+                                 rCabPlanif: Record 67051;
             begin
 
                 rCabPlanif.SETRANGE(rCabPlanif.Expositor,"No.");
@@ -220,7 +220,7 @@ table 67021 "Expositores - aps"
             trigger OnLookup()
             var
                 pgCabPlanif: Page67178;
-                                 rCabPlanif Record: 67051;
+                                 rCabPlanif: Record 67051;
             begin
                 rCabPlanif.SETRANGE(rCabPlanif.Expositor,"No.");
                                  rCabPlanif.SETRANGE(rCabPlanif.Pagado,TRUE);
@@ -257,18 +257,18 @@ table 67021 "Expositores - aps"
 
     trigger OnDelete()
     var
-        Todo Record: 5080;
-        SegLine Record: 5077;
-        ContIndustGrp Record: 5058;
-        ContactWebSource Record: 5060;
-        ContJobResp Record: 5067;
-        ContMailingGrp Record: 5056;
-        ContProfileAnswer Record: 5089;
-        RMCommentLine Record: 5061;
-        ContAltAddr Record: 5051;
-        ContAltAddrDateRange Record: 5052;
-        InteractLogEntry Record: 5065;
-        Opp Record: 5092;
+        Todo: Record 5080;
+        SegLine: Record 5077;
+        ContIndustGrp: Record 5058;
+        ContactWebSource: Record 5060;
+        ContJobResp: Record 5067;
+        ContMailingGrp: Record 5056;
+        ContProfileAnswer: Record 5089;
+        RMCommentLine: Record 5061;
+        ContAltAddr: Record 5051;
+        ContAltAddrDateRange: Record 5052;
+        InteractLogEntry: Record 5065;
+        Opp: Record 5092;
         CampaignTargetGrMgt: Codeunit 7030;
     begin
     end;
@@ -283,10 +283,10 @@ table 67021 "Expositores - aps"
         Text007: Label '%1 cannot be changed because there are one or more related people linked to the contact.';
         Text009: Label 'The %2 record of the %1 has been created.';
         Text010: Label 'The %2 record of the %1 is not linked with any other table.';
-        RMSetup Record: 5079;
-        Cont Record: 67000;
-        ContBusRel Record: 5054;
-        PostCode Record: 225;
+        RMSetup: Record 5079;
+        Cont: Record 67000;
+        ContBusRel: Record 5054;
+        PostCode: Record 225;
         RecRef: RecordRef;
         xRecRef: RecordRef;
         NoSeriesMgt: Codeunit 396;

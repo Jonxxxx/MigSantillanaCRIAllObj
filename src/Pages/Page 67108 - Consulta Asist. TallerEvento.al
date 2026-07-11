@@ -128,7 +128,7 @@ page 67108 "Consulta Asist. Taller/Evento"
     end;
 
     var
-        CabPlanEvento Record: 67051;
+        CabPlanEvento: Record 67051;
         SelDoc: Page67103;
         TotDocentes: Integer;
         TotSeleccionados: Integer;

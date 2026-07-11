@@ -98,6 +98,6 @@ table 64835 "Replicator Setup"
     }
 
     var
-        Database2Record 64823;
+        Database2Record: Record 64823;
 }
 

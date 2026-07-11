@@ -69,7 +69,7 @@ table 130406 "CAL Test Coverage Map"
     [Scope('Personalization')]
     procedure ShowHitObjects(TestCodeunitID: Integer)
     var
-        CALTestCoverageMap Record: 130406;
+        CALTestCoverageMap: Record 130406;
     begin
         CALTestCoverageMap.SETRANGE("Test Codeunit ID",TestCodeunitID);
         CALTestCoverageMap.Show;
@@ -78,7 +78,7 @@ table 130406 "CAL Test Coverage Map"
     [Scope('Personalization')]
     procedure ShowTestCodeunits()
     var
-        CALTestCoverageMap Record: 130406;
+        CALTestCoverageMap: Record 130406;
     begin
         CALTestCoverageMap.SETRANGE("Object Type","Object Type");
         CALTestCoverageMap.SETRANGE("Object ID","Object ID");

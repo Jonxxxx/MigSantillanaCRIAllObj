@@ -52,8 +52,8 @@ page 67100 "Expositores - Eventos"
 
                     trigger OnAction()
                     var
-                        CabPlanEvent Record: 67051;
-                        CabPlanEvent2Record 67051;
+                        CabPlanEvent: Record 67051;
+                        CabPlanEvent2Record: Record 67051;
                         PlanEvent: Page67102;
                     begin
                         PlanEvent.RecibeParametros("Cod. Expositor", "Tipo de Expositor", "Cod. Evento", CabPlanEvent."Tipo Evento");

@@ -18,10 +18,10 @@ codeunit 56003 "Factura Electronica"
     var
         XmlNode: Automation;
         TempInstream: InStream;
-        rCodAlmacen Record: 14;
-        rConfSant Record: 56001;
+        rCodAlmacen: Record 14;
+        rConfSant: Record 56001;
         Moneda: Code[20];
-        rGLS Record: 98;
+        rGLS: Record 98;
         Tasa: Decimal;
         txtTasa: Text[30];
         txtValorNeto: Text[30];
@@ -30,7 +30,7 @@ codeunit 56003 "Factura Electronica"
         DtoLin: Decimal;
         DtoFact: Decimal;
         txtDtoFact: Text[30];
-        rVatEntry Record: 254;
+        rVatEntry: Record 254;
         Exento: Decimal;
         txtExento: Text[30];
         CabEnvio: Text[900];
@@ -48,7 +48,7 @@ codeunit 56003 "Factura Electronica"
         Encontrado: Boolean;
         Serie: Code[10];
         Text003: Label 'The digital stamp was not generated correctly. Go to the registered invoice and try to generate it.';
-        rNoSeriesLine Record: 309;
+        rNoSeriesLine: Record 309;
         p1: Text[1024];
         p2: Text[1024];
         TG: Code[1];
@@ -65,7 +65,7 @@ codeunit 56003 "Factura Electronica"
 
     procedure Factura(rSIH Record: 112")
     var
-        rSIL Record: 113;
+        rSIL: Record 113;
         Ano: Integer;
         Mes: Integer;
         Dia: Integer;
@@ -321,7 +321,7 @@ codeunit 56003 "Factura Electronica"
         Ano: Integer;
         Mes: Integer;
         Dia: Integer;
-        rSIH Record: 112;
+        rSIH: Record 112;
     begin
         //CPMCR-CEC+
         /*
@@ -399,7 +399,7 @@ codeunit 56003 "Factura Electronica"
         NewChild: Automation;
         xmlProcessingInst: Automation;
         xmlMgt: Codeunit 6224;
-        rSIL Record: 113;
+        rSIL: Record 113;
     begin
 
         rConfSant.GET;
@@ -612,13 +612,13 @@ codeunit 56003 "Factura Electronica"
 
     procedure NotaCR(rSCMH Record: 114")
     var
-        rSCML Record: 115;
+        rSCML: Record 115;
         Ano: Integer;
         Mes: Integer;
         Dia: Integer;
         Folder: Text[1024];
         Nombre: Text[30];
-        rSIH Record: 112;
+        rSIH: Record 112;
     begin
         rSCMH.TESTFIELD("No. Comprobante Fiscal Rel.");
         DtoLin := 0;
@@ -861,7 +861,7 @@ codeunit 56003 "Factura Electronica"
 
     procedure AnulaFactura(rSIH Record: 112")
     var
-        rSIL Record: 113;
+        rSIL: Record 113;
         Ano: Integer;
         Mes: Integer;
         Dia: Integer;
@@ -1099,13 +1099,13 @@ codeunit 56003 "Factura Electronica"
 
     procedure AnulaNotaCR(rSCMH Record: 114")
     var
-        rSCML Record: 115;
+        rSCML: Record 115;
         Ano: Integer;
         Mes: Integer;
         Dia: Integer;
         Folder: Text[1024];
         Nombre: Text[30];
-        rSIH Record: 112;
+        rSIH: Record 112;
     begin
         /*
         //CPMCR-CEC+

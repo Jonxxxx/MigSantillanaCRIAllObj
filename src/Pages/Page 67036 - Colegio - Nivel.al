@@ -155,7 +155,7 @@ page 67036 "Colegio - Nivel"
     end;
 
     var
-        PromRuta Record: 67044;
+        PromRuta: Record 67044;
         gColegio: Code[30];
         gCity: Code[30];
         gCounty: Code[30];

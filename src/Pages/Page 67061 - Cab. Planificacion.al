@@ -145,12 +145,12 @@ page 67061 "Cab. Planificacion"
     end;
 
     var
-        CommercialSetup Record: 67000;
-        CabPlanifReg Record: 67023;
-        User Record: 91;
+        CommercialSetup: Record 67000;
+        CabPlanifReg: Record 67023;
+        User: Record 91;
         Promotor: Record 13;
-        Planif Record: 67038;
-        Planif2Record 67038;
+        Planif: Record 67038;
+        Planif2Record: Record 67038;
         Text001: Label 'The planning has been posted';
         [InDataSet]
         PromEditable: Boolean;

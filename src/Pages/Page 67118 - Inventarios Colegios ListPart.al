@@ -15,7 +15,7 @@ page 67118 "Inventarios Colegios ListPart"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    BC Record: 7302;
+                    BC: Record 7302;
                     BCPage: Page7304;
                 begin
                     BC.RESET;

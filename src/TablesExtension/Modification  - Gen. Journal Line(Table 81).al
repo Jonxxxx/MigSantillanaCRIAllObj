@@ -2279,7 +2279,7 @@ tableextension 70000108 tableextension70000108 extends "Gen. Journal Line"
 
     local procedure CalcVATAmountLCY(): Decimal
     var
-        LCYCurrency Record: 4;
+        LCYCurrency: Record 4;
         VATAmountLCY: Decimal;
     begin
         IF "Currency Code" = '' THEN

@@ -6,11 +6,11 @@ codeunit 55002 "Export Payments Formato EC"
     end;
 
     var
-        Vendor Record: 23;
-        BankAccount Record: 270;
-        CompanyInformation Record: 79;
-        VendorBankAccount Record: 288;
-        CheckLedgerEntry Record: 272;
+        Vendor: Record 23;
+        BankAccount: Record 270;
+        CompanyInformation: Record 79;
+        VendorBankAccount: Record 288;
+        CheckLedgerEntry: Record 272;
         CheckManagement: Codeunit 367;
         RBMgt: Codeunit 419;
         TotalFileDebit: Decimal;
@@ -176,10 +176,10 @@ codeunit 55002 "Export Payments Formato EC"
 
     procedure ExportElectronicPayment(GenJnlLine Record: 81; PaymentAmount: Decimal; SettleDate: Date): Code[30]
     var
-        Vendor Record: 23;
-        VendorBankAcct Record: 288;
+        Vendor: Record 23;
+        VendorBankAcct: Record 288;
         Customer: Record 18;
-        CustBankAcct Record: 287;
+        CustBankAcct: Record 287;
         AcctType: Text[1];
         AcctNo: Code[20];
         AcctName: Text[30];

@@ -1357,11 +1357,11 @@ xmlport 58008 "Carga datos nomina"
     }
 
     var
-        Empl Record: 5200;
-        esqsal Record: 34002115;
-        contra Record: 34002109;
-        CARGOS Record: 34002110;
-        Depart Record: 34002135;
-        SubDe Record: 34002136;
+        Empl: Record 5200;
+        esqsal: Record 34002115;
+        contra: Record 34002109;
+        CARGOS: Record 34002110;
+        Depart: Record 34002135;
+        SubDe: Record 34002136;
 }
 

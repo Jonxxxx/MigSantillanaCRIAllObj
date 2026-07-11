@@ -90,9 +90,9 @@ page 67096 "Estadistica Ranking Nivel"
 
     var
         Colegio: Record 5050;
-        ColRankNiv Record: 67046;
-        ColAdopciones Record: 67053;
-        TarifVta Record: 7002;
+        ColRankNiv: Record 67046;
+        ColAdopciones: Record 67053;
+        TarifVta: Record 7002;
         Porciento: Decimal;
         Total: Decimal;
         TotalGpoNivel: Decimal;

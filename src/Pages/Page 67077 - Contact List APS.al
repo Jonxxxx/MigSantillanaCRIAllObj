@@ -119,7 +119,7 @@ page 67077 "Contact List APS"
 
                         trigger OnAction()
                         var
-                            ContJobResp Record: 5067;
+                            ContJobResp: Record 5067;
                         begin
                             TESTFIELD(Type,Type::Person);
                             ContJobResp.SETRANGE("Contact No.","No.");
@@ -406,7 +406,7 @@ page 67077 "Contact List APS"
 
                     trigger OnAction()
                     var
-                        ContactWebSource Record: 5060;
+                        ContactWebSource: Record 5060;
                     begin
                         ContactWebSource.SETRANGE("Contact No.","Company No.");
                         IF PAGE.RUNMODAL(PAGE::"Web Source Launch",ContactWebSource) = ACTION::LookupOK THEN
@@ -599,9 +599,9 @@ page 67077 "Contact List APS"
 
     var
         Cont: Record 5050;
-        RutaProm Record: 67044;
-        ColNivel Record: 67036;
-        User Record: 91;
+        RutaProm: Record 67044;
+        ColNivel: Record 67036;
+        User: Record 91;
         [InDataSet]
         "No.Emphasize": Boolean;
         [InDataSet]

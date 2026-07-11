@@ -98,6 +98,6 @@ table 67025 "Libros Competencia"
 
     var
         Item: Record 27;
-        DA Record: 67002;
+        DA: Record 67002;
 }
 

@@ -95,7 +95,7 @@ table 67062 "Colegio - Work Flow visitas"
 
     trigger OnModify()
     var
-        CWF Record: 67062;
+        CWF: Record 67062;
     begin
         //IF Paso THEN
         //   BEGIN
@@ -117,7 +117,7 @@ table 67062 "Colegio - Work Flow visitas"
 
     procedure InsertLog()
     var
-        rLog Record: 67083;
+        rLog: Record 67083;
     begin
         IF NOT rLog.GET(TODAY, "Cod. Promotor", "Cod. Colegio", Secuencia) THEN BEGIN
             rLog.INIT;

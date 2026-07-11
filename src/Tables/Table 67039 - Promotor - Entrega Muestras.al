@@ -131,8 +131,8 @@ table 67039 "Promotor - Entrega Muestras"
 
     var
         Prod: Record 27;
-        PromPlanifVisit Record: 67038;
-        PromPptoMuestras Record: 67028;
+        PromPlanifVisit: Record 67038;
+        PromPptoMuestras: Record 67028;
         Err001: Label 'The sum o the samples for this salesperson exceed the budget''s quantity';
         Err002: Label 'Item %1 is not in the budget for this Salesperson';
 }

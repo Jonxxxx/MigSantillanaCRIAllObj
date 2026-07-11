@@ -57,7 +57,7 @@ table 80015 "Tmp Document Dimension"
         Text001: Label 'You have changed a dimension.\\';
         Text002: Label 'Do you want to update the lines?';
         Text003: Label 'You may have changed a dimension.\\Do you want to update the lines?';
-        GLSetup Record: 98;
+        GLSetup: Record 98;
         DimMgt: Codeunit 408;
         UpdateLine: Option NotSet,Update,DoNotUpdate;
         Text004: Label 'You have changed one or more dimensions on the %1, which is already shipped. When you post the line with the changed dimension to the general ledger, amounts on the Inventory Interim account will be out of balance when reported per dimension.\\Do you want to keep the changed dimension?';

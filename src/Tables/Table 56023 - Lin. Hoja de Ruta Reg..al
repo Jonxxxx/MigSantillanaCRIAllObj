@@ -141,10 +141,10 @@ table 56023 "Lin. Hoja de Ruta Reg."
     procedure NumGuia()
     var
         CHR: Record 56020;
-        SA Record: 291;
-        NosSeries Record: 308;
+        SA: Record 291;
+        NosSeries: Record 308;
         NoSerieMagmt: Codeunit 396;
-        LHR Record: 56021;
+        LHR: Record 56021;
     begin
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");

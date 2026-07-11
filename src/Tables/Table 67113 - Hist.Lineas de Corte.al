@@ -12,7 +12,7 @@ table 67113 "Hist.Lineas de Corte"
 
             trigger OnValidate()
             var
-                da Record: 67002;
+                da: Record 67002;
             begin
             end;
         }
@@ -26,16 +26,16 @@ table 67113 "Hist.Lineas de Corte"
 
             trigger OnLookup()
             var
-                DimVal Record: 349;
+                DimVal: Record 349;
                 DimForm: Page560;
-                APSSetup Record: 67000;
+                APSSetup: Record 67000;
             begin
             end;
 
             trigger OnValidate()
             var
-                DimVal Record: 349;
-                APSSetup Record: 67000;
+                DimVal: Record 349;
+                APSSetup: Record 67000;
             begin
             end;
         }
@@ -130,7 +130,7 @@ table 67113 "Hist.Lineas de Corte"
 
     trigger OnInsert()
     var
-        APSSetup Record: 67000;
+        APSSetup: Record 67000;
     begin
     end;
 }

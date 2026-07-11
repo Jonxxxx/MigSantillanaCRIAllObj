@@ -24,7 +24,7 @@ codeunit 50022 "Pedidos E-Commerce"
     var
         SalespersonPurchaser: Record 13;
         OfertaIncluida: Boolean;
-        ConfSantillana Record: 56001;
+        ConfSantillana: Record 56001;
         Identificacion: Code[20];
         RNC_Cedula: Text[25];
         rContacto: Record 5050;
@@ -32,20 +32,20 @@ codeunit 50022 "Pedidos E-Commerce"
         ValidarError: Boolean;
         Error01: Label 'La cédula no tiene el formato correspondiente a ninguno de los tipo de identificación: física, jurídica, DIMEX y NITE';
         NotificarError: Codeunit 50300;
-        ConfEmpresa Record: 56001;
+        ConfEmpresa: Record 56001;
         Error02: Label 'Error en la Cola de  Pedidos E-Commerce';
         PrimerValor: Code[1];
 
     procedure CreaFacturasyNCr()
     var
-        CabVtaSFA Record: 50100;
-        CabVtaSFA2Record 50100;
-        LinVtaSFA Record: 50101;
-        CabVentaOut Record: 36;
-        LinVentaOut Record: 37;
-        LinVtaSFO Record: 50101;
-        SIH Record: 112;
-        Location Record: 14;
+        CabVtaSFA: Record 50100;
+        CabVtaSFA2Record: Record 50100;
+        LinVtaSFA: Record 50101;
+        CabVentaOut: Record 36;
+        LinVentaOut: Record 37;
+        LinVtaSFO: Record 50101;
+        SIH: Record 112;
+        Location: Record 14;
         Comments: Record 44;
         ReleaseSalesDoc: Codeunit 414;
         Contador: Integer;
@@ -374,9 +374,9 @@ codeunit 50022 "Pedidos E-Commerce"
     var
         Error101: Label 'Expiration date of the Control drug No. is expired in the Customer.';
         Error102: Label 'You must fill out the Drug Control No. in the Client in order to choose a Controlled product.';
-        ShiptoAddress Record: 222;
+        ShiptoAddress: Record 222;
         Item: Record 27;
-        SalesLine Record: 37;
+        SalesLine: Record 37;
         Customer: Record 18;
         Valido: Boolean;
     begin

@@ -156,7 +156,7 @@ table 130405 "CAL Test Result"
 
     local procedure GetNextNo(): Integer
     var
-        CALTestResult Record: 130405;
+        CALTestResult: Record 130405;
     begin
         IF CALTestResult.FINDLAST THEN
             EXIT(CALTestResult."No." + 1);
@@ -180,7 +180,7 @@ table 130405 "CAL Test Result"
 
     local procedure SetCodeunitName()
     var
-        AllObjWithCaption Record: 2000000058;
+        AllObjWithCaption: Record 2000000058;
     begin
         AllObjWithCaption.SETRANGE("Object Type", AllObjWithCaption."Object Type"::Codeunit);
         AllObjWithCaption.SETRANGE("Object ID", "Codeunit ID");

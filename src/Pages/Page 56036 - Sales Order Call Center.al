@@ -638,7 +638,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        StdCustSalesCode Record: 172;
+                        StdCustSalesCode: Record 172;
                     begin
                         StdCustSalesCode.InsertSalesLines(Rec);
                     end;
@@ -791,7 +791,7 @@ page 56036 "Sales Order Call Center"
                     var
                         ICInOutboxMgt: Codeunit 427;
                         ApprovalMgt: Codeunit 1535;
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN
@@ -854,7 +854,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                         ApprovalMgt: Codeunit 1535;
                     begin
                         /*//fes mig
@@ -884,7 +884,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        PurchaseHeader Record: 38;
+                        PurchaseHeader: Record 38;
                         ApprovalMgt: Codeunit 1535;
                     begin
                         /*//fes mig
@@ -937,7 +937,7 @@ page 56036 "Sales Order Call Center"
 
                         trigger OnAction()
                         var
-                            PurchaseHeader Record: 38;
+                            PurchaseHeader: Record 38;
                             SalesPostYNPrepmt: Codeunit 443;
                         begin
                             /*//fes mig
@@ -954,7 +954,7 @@ page 56036 "Sales Order Call Center"
 
                         trigger OnAction()
                         var
-                            PurchaseHeader Record: 38;
+                            PurchaseHeader: Record 38;
                             SalesPostYNPrepmt: Codeunit 443;
                         begin
                             /*//fes mig
@@ -971,7 +971,7 @@ page 56036 "Sales Order Call Center"
 
                         trigger OnAction()
                         var
-                            PurchaseHeader Record: 38;
+                            PurchaseHeader: Record 38;
                             SalesPostYNPrepmt: Codeunit 443;
                         begin
                             /*//fes mig
@@ -988,7 +988,7 @@ page 56036 "Sales Order Call Center"
 
                         trigger OnAction()
                         var
-                            PurchaseHeader Record: 38;
+                            PurchaseHeader: Record 38;
                             SalesPostYNPrepmt: Codeunit 443;
                         begin
                             /*//fes mig
@@ -1123,7 +1123,7 @@ page 56036 "Sales Order Call Center"
                           DocPrint: Codeunit 229;
                           ArchiveManagement: Codeunit 5063;
                           SalesInfoPaneMgt: Codeunit 7171;
-                          SalesSetup Record: 311;
+                          SalesSetup: Record 311;
                           ChangeExchangeRate: Page511;
                           UserMgt: Codeunit 5700;
                           Usage: Option "Order Confirmation","Work Order","Pick Ticket";
@@ -1137,11 +1137,11 @@ page 56036 "Sales Order Call Center"
         BillToCommentBtnVisible: Boolean;
         [InDataSet]
         SalesHistoryStnVisible: Boolean;
-        SH Record: 36;
+        SH: Record 36;
         GestBO: Boolean;
         AjusBO: Report "56036;
-                    AppTemp Record: 464;
-                    SalesLine Record: 37;
+                    AppTemp: Record 464;
+                    SalesLine: Record 37;
                     ReleaseSalesDoc: Codeunit 414;
                     pgProductos: Page56037;
 

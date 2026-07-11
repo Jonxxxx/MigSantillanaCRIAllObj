@@ -109,13 +109,13 @@ table 67012 Talleres
     end;
 
     var
-        APSSetup Record: 67000;
-        TipoEvento Record: 67010;
+        APSSetup: Record 67000;
+        TipoEvento: Record 67010;
         NoSeriesMgt: Codeunit 396;
 
     procedure AssistEdit(OldWS Record: 67012"): Boolean
     var
-        WorkShop Record: 67012;
+        WorkShop: Record 67012;
     begin
         /*
         WITH WorkShop DO BEGIN

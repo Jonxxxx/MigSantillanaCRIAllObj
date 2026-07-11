@@ -18,8 +18,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Doc Record: 67001;
-                Prov Record: 23;
+                Doc: Record 67001;
+                Prov: Record 23;
             begin
 
                 /*
@@ -83,7 +83,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 fSol: Page67090;
-                rSol Record: 67055;
+                rSol: Record 67055;
             begin
 
                 IF "Tipo Visita" = "Tipo Visita"::Solicitada THEN BEGIN
@@ -105,7 +105,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                rSol Record: 67055;
+                rSol: Record 67055;
                 Err001: Label 'Solo se permite ingresar el No. Solicitud en una visita de Tipo Solicitada.';
                 Err002: Label 'La solicitud seleccionada no es del cod. expositor %1.';
                 Err003: Label 'La solicitud ingresada no se encuentra en estado Programada.';
@@ -194,7 +194,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                ColNivel Record: 67036;
+                ColNivel: Record 67036;
                 pgColNivel: Page67180;
             begin
 
@@ -214,7 +214,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                rVendor Record: 23;
+                rVendor: Record 23;
             begin
                 IF "Cod. promotor" <> '' THEN BEGIN
                     IF rVendor.GET("Cod. promotor") THEN
@@ -235,7 +235,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                ColNivel Record: 67036;
+                ColNivel: Record 67036;
             begin
                 ColNivel.RESET;
                 ColNivel.SETRANGE("Cod. Colegio", "Cod. Colegio");
@@ -271,7 +271,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColDoc Record: 67043;
+                rColDoc: Record 67043;
                 pColDoc: Page67045;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN BEGIN
@@ -290,8 +290,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Doc Record: 67001;
-                ColDoc Record: 67043;
+                Doc: Record 67001;
+                ColDoc: Record 67043;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
                   IF Doc.GET("Cod. Persona Contacto") THEN BEGIN
@@ -317,7 +317,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                DA Record: 67002;
+                DA: Record 67002;
             begin
                 IF "Cod. Cargo Persona Contacto" <> '' THEN BEGIN
                   DA.RESET;
@@ -365,7 +365,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                DA Record: 67002;
+                DA: Record 67002;
             begin
                 IF "C d. Objetivo Visita" <> '' THEN BEGIN
                   DA.RESET;
@@ -397,7 +397,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rEvExp Record: 67050;
+                rEvExp: Record 67050;
                 pEvExp: Page67100;
             begin
                 rEvExp.RESET;
@@ -417,7 +417,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                rEvExp Record: 67050;
+                rEvExp: Record 67050;
                 err001: Label 'El cod. evento no est  asociado con el consultor %1.';
             begin
                 rEvExp.RESET;
@@ -468,10 +468,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         Err001: Label 'No se permite eliminar visitas con estado Ejecutada.';
         Text001: Label ' Est  seguro que desea eliminar la visita?';
-        rProg Record: 67103;
-        rAsis Record: 67106;
-        rCC Record: 67104;
-        rDescAsis Record: 67105;
+        rProg: Record 67103;
+        rAsis: Record 67106;
+        rCC: Record 67104;
+        rDescAsis: Record 67105;
     begin
 
 
@@ -495,9 +495,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     trigger OnInsert()
     var
-        APSSetup Record: 67000;
+        APSSetup: Record 67000;
         NoSeriesMgt: Codeunit 396;
-        Seg Record: 67107;
+        Seg: Record 67107;
     begin
 
         IF "No. Visita Asesor/Consultor" = '' THEN BEGIN
@@ -515,10 +515,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     trigger OnModify()
     var
-        rProg Record: 67103;
+        rProg: Record 67103;
         act: Boolean;
-        rDoc Record: 67001;
-        Seg Record: 67107;
+        rDoc: Record 67001;
+        Seg: Record 67107;
     begin
 
         rProg.SETRANGE("No. Visita","No. Visita Asesor/Consultor");
@@ -560,10 +560,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     procedure TraerNGyE(parSolicitud: Code[20])
     var
-        rNivel Record: 67080;
-        rGrado Record: 67081;
-        rEspec Record: 67082;
-        rNGE Record: 67105;
+        rNivel: Record 67080;
+        rGrado: Record 67081;
+        rEspec: Record 67082;
+        rNGE: Record 67105;
     begin
 
         IF "No. Visita Asesor/Consultor" <> '' THEN BEGIN
@@ -609,9 +609,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     procedure TraerProgramac(parSolicitud: Code[20])
     var
-        rProgVisita Record: 67103;
-        rProgSolic Record: 67015;
-        rCabPlanif Record: 67051;
+        rProgVisita: Record 67103;
+        rProgSolic: Record 67015;
+        rCabPlanif: Record 67051;
     begin
 
         IF "No. Visita Asesor/Consultor" <> '' THEN BEGIN
