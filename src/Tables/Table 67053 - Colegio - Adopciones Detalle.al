@@ -49,16 +49,15 @@ table 67053 "Colegio - Adopciones Detalle"
         {
             NotBlank = true;
             TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                   Cod. Turno=FIELD("Cod. Turno"));
+                                                                   "Cod. Turno" = FIELD("Cod. Turno"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Grado" <> '' THEN
-                   BEGIN
+                IF "Cod. Grado" <> '' THEN BEGIN
                     Nivel.GET("Cod. Nivel");
                     GradoCol.RESET;
-                    GradoCol.SETRANGE("Cod. Colegio","Cod. Colegio");
-                    GradoCol.SETRANGE("Cod. Local","Cod. Local");
+                    GradoCol.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                    GradoCol.SETRANGE("Cod. Local", "Cod. Local");
                     /*
                     IF Nivel."Verificaci n cruzada" THEN
                        BEGIN
@@ -72,115 +71,109 @@ table 67053 "Colegio - Adopciones Detalle"
                        END
                     ELSE
                     */
-                       BEGIN
-                        GradoCol.SETRANGE("Cod. Nivel","Cod. Nivel");
-                        GradoCol.SETRANGE("Cod. Grado","Cod. Grado");
-                        GradoCol.SETRANGE("Cod. Turno","Cod. Turno");
+                    BEGIN
+                        GradoCol.SETRANGE("Cod. Nivel", "Cod. Nivel");
+                        GradoCol.SETRANGE("Cod. Grado", "Cod. Grado");
+                        GradoCol.SETRANGE("Cod. Turno", "Cod. Turno");
                         IF GradoCol.FINDFIRST THEN
-                    //       BEGIN
-                           "Cantidad Alumnos" := GradoCol."Cantidad Alumnos";
-                       END;
-                   END;
+                            //       BEGIN
+                            "Cantidad Alumnos" := GradoCol."Cantidad Alumnos";
+                    END;
+                END;
 
             end;
         }
-        field(6;"Cod. Turno";Code[20])
+        field(6; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(7;"Cod. Promotor";Code[20])
+        field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
-        field(8;"Cod. Producto";Code[20])
+        field(8; "Cod. Producto"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"));
+            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Producto" <> '' THEN
-                   BEGIN
+                IF "Cod. Producto" <> '' THEN BEGIN
                     ConfAPS.GET();
                     Item.GET("Cod. Producto");
                     "Descripcion producto" := Item.Description;
-                    VALIDATE("Cod. Grado",Item."Nivel Escolar (Grado)");
-                    VALIDATE("Cod. Nivel",Item."Nivel Educativo APS");
-                    VALIDATE("Grupo de Negocio",Item."Grupo de Negocio");
-                    IF ProdEq.GET("Cod. Producto") THEN
-                       BEGIN
+                    VALIDATE("Cod. Grado", Item."Nivel Escolar (Grado)");
+                    VALIDATE("Cod. Nivel", Item."Nivel Educativo APS");
+                    VALIDATE("Grupo de Negocio", Item."Grupo de Negocio");
+                    IF ProdEq.GET("Cod. Producto") THEN BEGIN
                         "Cod. Equiv. Santillana" := ProdEq."Cod. Producto Anterior";
                         "Descripcion Equiv. Santillana" := ProdEq."Nombre Producto Anterior";
-                       END;
-                    IF ConfAPS."Cod. Dimension Lin. Negocio" <> '' THEN
-                       BEGIN
+                    END;
+                    IF ConfAPS."Cod. Dimension Lin. Negocio" <> '' THEN BEGIN
                         DefDim.RESET;
-                        DefDim.SETRANGE("Table ID",27);
-                        DefDim.SETRANGE("No.","Cod. Producto");
-                        DefDim.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Lin. Negocio");
+                        DefDim.SETRANGE("Table ID", 27);
+                        DefDim.SETRANGE("No.", "Cod. Producto");
+                        DefDim.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Lin. Negocio");
                         IF DefDim.FINDFIRST THEN
-                           "Linea de negocio" := DefDim."Dimension Value Code";
-                       END;
-                    IF ConfAPS."Cod. Dimension Familia" <> '' THEN
-                       BEGIN
+                            "Linea de negocio" := DefDim."Dimension Value Code";
+                    END;
+                    IF ConfAPS."Cod. Dimension Familia" <> '' THEN BEGIN
                         DefDim.RESET;
-                        DefDim.SETRANGE("Table ID",27);
-                        DefDim.SETRANGE("No.","Cod. Producto");
-                        DefDim.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Familia");
+                        DefDim.SETRANGE("Table ID", 27);
+                        DefDim.SETRANGE("No.", "Cod. Producto");
+                        DefDim.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Familia");
                         IF DefDim.FINDFIRST THEN
-                           Familia := DefDim."Dimension Value Code";
-                       END;
-                    IF ConfAPS."Cod. Dimension Sub Familia" <> '' THEN
-                       BEGIN
+                            Familia := DefDim."Dimension Value Code";
+                    END;
+                    IF ConfAPS."Cod. Dimension Sub Familia" <> '' THEN BEGIN
                         DefDim.RESET;
-                        DefDim.SETRANGE("Table ID",27);
-                        DefDim.SETRANGE("No.","Cod. Producto");
-                        DefDim.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Sub Familia");
+                        DefDim.SETRANGE("Table ID", 27);
+                        DefDim.SETRANGE("No.", "Cod. Producto");
+                        DefDim.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Sub Familia");
                         IF DefDim.FINDFIRST THEN
-                           "Sub Familia" := DefDim."Dimension Value Code";
-                       END;
-                    IF ConfAPS."Cod. Dimension Serie" <> '' THEN
-                       BEGIN
+                            "Sub Familia" := DefDim."Dimension Value Code";
+                    END;
+                    IF ConfAPS."Cod. Dimension Serie" <> '' THEN BEGIN
                         DefDim.RESET;
-                        DefDim.SETRANGE("Table ID",27);
-                        DefDim.SETRANGE("No.","Cod. Producto");
-                        DefDim.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Serie");
+                        DefDim.SETRANGE("Table ID", 27);
+                        DefDim.SETRANGE("No.", "Cod. Producto");
+                        DefDim.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Serie");
                         IF DefDim.FINDFIRST THEN
-                           Serie := DefDim."Dimension Value Code";
-                       END;
-                   END;
+                            Serie := DefDim."Dimension Value Code";
+                    END;
+                END;
 
                 BuscaHistorico;
             end;
         }
-        field(9;Seccion;Code[20])
+        field(9; Seccion; Code[20])
         {
             NotBlank = true;
         }
-        field(10;"Cod. Equiv. Santillana";Code[20])
+        field(10; "Cod. Equiv. Santillana"; Code[20])
         {
-            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
+            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE("Cod. Producto" = FIELD("Cod. Producto"));
         }
-        field(11;"Descripcion Equiv. Santillana";Text[100])
+        field(11; "Descripcion Equiv. Santillana"; Text[100])
         {
         }
-        field(12;"Nombre Editorial";Text[100])
+        field(12; "Nombre Editorial"; Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
+            CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             Editable = false;
             FieldClass = FlowField;
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
         }
-        field(13;"Descripcion producto";Text[100])
+        field(13; "Descripcion producto"; Text[100])
         {
         }
-        field(14;"Nombre Colegio";Text[100])
+        field(14; "Nombre Colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
-        field(15;"Descripcion Nivel";Text[100])
+        field(15; "Descripcion Nivel"; Text[100])
         {
             CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
@@ -442,7 +435,7 @@ table 67053 "Colegio - Adopciones Detalle"
         {
             AutoFormatType = 2;
             CalcFormula = Max("Sales Price"."Unit Price" WHERE ("Item No."=FIELD("Cod. Producto"),
-                                                                Ending Date=FILTER('')));
+                                                                "Ending Date"=FILTER('')));
             Caption = 'Unit Price';
             Editable = false;
             FieldClass = FlowField;
@@ -457,7 +450,7 @@ table 67053 "Colegio - Adopciones Detalle"
         {
             AutoFormatType = 2;
             CalcFormula = Max("Sales Price"."Unit Price" WHERE ("Item No."=FIELD("Cod. Producto"),
-                                                                Ending Date=FILTER('')));
+                                                                "Ending Date"=FILTER('')));
             Caption = 'Unit Price';
             Editable = false;
             FieldClass = FlowField;

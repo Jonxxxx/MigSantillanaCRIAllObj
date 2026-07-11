@@ -53,10 +53,10 @@ page 67139 "Solicitud -Cab. Planif. Evento"
             part(SubFormPTyE; 67015)
             {
                 SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                              Tipo Evento=FIELD("Tipo Evento"),
-                              Tipo de Expositor=FIELD("Tipo de Expositor"),
-                              Expositor=FIELD("Expositor"),
-                              Secuencia=FIELD("Secuencia");
+                              "Tipo Evento"=FIELD("Tipo Evento"),
+                              "Tipo de Expositor"=FIELD("Tipo de Expositor"),
+                              "Expositor"=FIELD("Expositor"),
+                              "Secuencia"=FIELD("Secuencia");
                 SubPageView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor);
             }
         }

@@ -43,7 +43,7 @@ page 56005 "Lin. Packing Registrada"
                 Caption = '&Box Content';
                 RunObject = Page 56006;
                 RunPageLink = No. Packing=FIELD("No."),
-                              No. Caja=FIELD("No. Caja");
+                              "No. Caja"=FIELD("No. Caja");
                 RunPageView = SORTING(No. Packing,No. Caja,No. Picking,No. Producto,No. Linea)
                               ORDER(Ascending);
             }

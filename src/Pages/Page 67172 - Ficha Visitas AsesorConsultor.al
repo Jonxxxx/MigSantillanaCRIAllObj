@@ -210,7 +210,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     RunObject = Page 67175;
                                     RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  Tipo=CONST(Nivel);
+                                  "Tipo"=CONST(Nivel);
                 }
                 action("Grado Asistente")
                 {
@@ -219,7 +219,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     RunObject = Page 67175;
                                     RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  Tipo=CONST(Grado);
+                                  "Tipo"=CONST(Grado);
                 }
                 action("Especialidad Asistente")
                 {
@@ -228,7 +228,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     RunObject = Page 67175;
                                     RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  Tipo=CONST(Especialidad);
+                                  "Tipo"=CONST(Especialidad);
                 }
                 action(Ranking)
                 {

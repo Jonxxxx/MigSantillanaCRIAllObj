@@ -111,12 +111,12 @@ table 67051 "Cab. Planif. Evento"
         field(19; "Total registrados"; Integer)
         {
             CalcFormula = Count("Asistentes Talleres y Eventos" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
-                                                                       Tipo Evento=FIELD("Tipo Evento"),
-                                                                       Cod. Expositor=FIELD("Expositor"),
-                                                                       Secuencia=FIELD("Secuencia")));
+                                                                       "Tipo Evento" = FIELD("Tipo Evento"),
+                                                                       "Cod. Expositor" = FIELD("Expositor"),
+                                                                       "Secuencia" = FIELD("Secuencia")));
             FieldClass = FlowField;
         }
-        field(20;Estado;Option)
+        field(20; Estado; Option)
         {
             OptionCaption = ' ,Done,Cancelled';
             OptionMembers = " ",Realizado,Anulado;
@@ -126,48 +126,45 @@ table 67051 "Cab. Planif. Evento"
                 ProgEvent: Record 67015;
             begin
                 ProgEvent.RESET;
-                ProgEvent.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                ProgEvent.SETRANGE("Tipo Evento","Tipo Evento");
-                ProgEvent.SETRANGE(Expositor,Expositor);
-                ProgEvent.SETRANGE(Secuencia,Secuencia);
-                IF ProgEvent.COUNT > 1 THEN
-                   BEGIN
+                ProgEvent.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                ProgEvent.SETRANGE("Tipo Evento", "Tipo Evento");
+                ProgEvent.SETRANGE(Expositor, Expositor);
+                ProgEvent.SETRANGE(Secuencia, Secuencia);
+                IF ProgEvent.COUNT > 1 THEN BEGIN
                     IF ProgEvent.FINDSET THEN
-                       REPEAT
-                        ProgEvent.TESTFIELD(Estado);
-                       UNTIL ProgEvent.NEXT = 0;
-                   END
-                ELSE
-                   BEGIN
-                    IF ProgEvent.FINDFIRST THEN
-                       BEGIN
+                        REPEAT
+                            ProgEvent.TESTFIELD(Estado);
+                        UNTIL ProgEvent.NEXT = 0;
+                END
+                ELSE BEGIN
+                    IF ProgEvent.FINDFIRST THEN BEGIN
                         IF Estado > 0 THEN
-                           ProgEvent.TESTFIELD(Estado,Estado);
-                       END;
-                   END;
+                            ProgEvent.TESTFIELD(Estado, Estado);
+                    END;
+                END;
             end;
         }
-        field(21;"No. Solicitud";Code[20])
+        field(21; "No. Solicitud"; Code[20])
         {
         }
-        field(22;"Cod. Colegio";Code[20])
+        field(22; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact;
         }
-        field(23;"Cod. Promotor";Code[20])
+        field(23; "Cod. Promotor"; Code[20])
         {
             TableRelation = "Salesperson/Purchaser";
         }
-        field(24;"Fecha Programada";Date)
+        field(24; "Fecha Programada"; Date)
         {
         }
-        field(25;"Fecha Realizada";Date)
+        field(25; "Fecha Realizada"; Date)
         {
         }
-        field(26;"Cod. Nivel";Code[20])
+        field(26; "Cod. Nivel"; Code[20])
         {
         }
-        field(27;Delegacion;Code[20])
+        field(27; Delegacion; Code[20])
         {
 
             trigger OnLookup()
@@ -176,16 +173,15 @@ table 67051 "Cab. Planif. Evento"
                 ConfAPS.TESTFIELD(ConfAPS."Cod. Dimension Delegacion");
 
                 DimVal.RESET;
-                DimVal.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Delegacion");
-                DimVal.SETRANGE("Dimension Value Type",DimVal."Dimension Value Type"::Standard);
+                DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Delegacion");
+                DimVal.SETRANGE("Dimension Value Type", DimVal."Dimension Value Type"::Standard);
                 DimForm.SETTABLEVIEW(DimVal);
                 DimForm.SETRECORD(DimVal);
                 DimForm.LOOKUPMODE(TRUE);
-                IF DimForm.RUNMODAL = ACTION::LookupOK THEN
-                   BEGIN
+                IF DimForm.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     DimForm.GETRECORD(DimVal);
-                    VALIDATE(Delegacion,DimVal.Code);
-                   END;
+                    VALIDATE(Delegacion, DimVal.Code);
+                END;
 
                 CLEAR(DimForm);
             end;
@@ -195,65 +191,64 @@ table 67051 "Cab. Planif. Evento"
                 ConfAPS.GET();
                 ConfAPS.TESTFIELD(ConfAPS."Cod. Dimension Delegacion");
 
-                IF Delegacion <> '' THEN
-                   BEGIN
+                IF Delegacion <> '' THEN BEGIN
                     DimVal.RESET;
-                    DimVal.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Delegacion");
-                    DimVal.SETRANGE("Dimension Value Type",DimVal."Dimension Value Type"::Standard);
-                    DimVal.SETRANGE(Code,Delegacion);
+                    DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Delegacion");
+                    DimVal.SETRANGE("Dimension Value Type", DimVal."Dimension Value Type"::Standard);
+                    DimVal.SETRANGE(Code, Delegacion);
                     DimVal.FINDFIRST;
                     "Descripcion Delegacion" := DimVal.Name;
-                   END;
+                END;
             end;
         }
-        field(28;"Descripcion Delegacion";Text[60])
+        field(28; "Descripcion Delegacion"; Text[60])
         {
             Caption = 'Descripci n Delegaci n';
         }
-        field(29;"Asistentes reales";Integer)
+        field(29; "Asistentes reales"; Integer)
         {
         }
-        field(30;Pagado;Boolean)
+        field(30; Pagado; Boolean)
         {
         }
-        field(31;"Importe pago";Decimal)
+        field(31; "Importe pago"; Decimal)
         {
         }
-        field(32;"No. Documento Pago";Code[20])
+        field(32; "No. Documento Pago"; Code[20])
         {
         }
-        field(33;"Tipo Documento Pago";Code[20])
+        field(33; "Tipo Documento Pago"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(28));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(28));
         }
-        field(34;"Fecha Pago";Date)
+        field(34; "Fecha Pago"; Date)
         {
         }
-        field(35;"Nombre Colegio";Text[90])
+        field(35; "Nombre Colegio"; Text[90])
         {
-            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
-        field(36;"Distrito Colegio";Text[30])
+        field(36; "Distrito Colegio"; Text[30])
         {
-            CalcFormula = Lookup(Contact.Distritos WHERE ("No."=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Distritos WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
-        field(37;"Estado Solicitud";Option)
+        field(37; "Estado Solicitud"; Option)
         {
-            CalcFormula = Lookup("Solicitud de Taller - Evento".Status WHERE ("No. Solicitud"=FIELD("No. Solicitud")));
+            CalcFormula = Lookup("Solicitud de Taller - Evento".Status WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
             OptionCaption = ' ,Sent by salesperson,Approved,Programmed,Voided,Rejected,Done';
             OptionMembers = " ","Enviada por promotor",Aprobada,Programada,Cancelada,Rechazada,Realizada;
         }
-        field(38;"Grupo Negocio";Code[20])
+        field(38; "Grupo Negocio"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Taller - Evento",Expositor,Secuencia)
+        key(Key1; "Cod. Taller - Evento", Expositor, Secuencia)
         {
         }
     }
@@ -265,40 +260,40 @@ table 67051 "Cab. Planif. Evento"
     trigger OnDelete()
     begin
         Asistentes.RESET;
-        Asistentes.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
+        Asistentes.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
         //Asistentes.SETRANGE("Tipo Evento","Tipo Evento");
-        Asistentes.SETRANGE("Cod. Expositor",Expositor);
-        Asistentes.SETRANGE(Secuencia,Secuencia);
-        IF Asistentes.FINDSET(TRUE,FALSE) THEN
-           REPEAT
-            Asistentes.TESTFIELD(Asistio,FALSE);
-            Asistentes.DELETE;
-           UNTIL Asistentes.NEXT = 0;
+        Asistentes.SETRANGE("Cod. Expositor", Expositor);
+        Asistentes.SETRANGE(Secuencia, Secuencia);
+        IF Asistentes.FINDSET(TRUE, FALSE) THEN
+            REPEAT
+                Asistentes.TESTFIELD(Asistio, FALSE);
+                Asistentes.DELETE;
+            UNTIL Asistentes.NEXT = 0;
 
         MatTallerEvento.RESET;
-        MatTallerEvento.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
+        MatTallerEvento.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
         //MatTallerEvento.SETRANGE("Tipo Evento","Tipo Evento");
         MatTallerEvento.SETRANGE(Expositor, Expositor);
-        MatTallerEvento.SETRANGE(Secuencia,Secuencia);
-        IF MatTallerEvento.FINDSET(TRUE,FALSE) THEN
-           MatTallerEvento.DELETEALL;
+        MatTallerEvento.SETRANGE(Secuencia, Secuencia);
+        IF MatTallerEvento.FINDSET(TRUE, FALSE) THEN
+            MatTallerEvento.DELETEALL;
 
         ProgTallerEvento.RESET;
-        ProgTallerEvento.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
+        ProgTallerEvento.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
         //ProgTallerEvento.SETRANGE("Tipo Evento","Tipo Evento");
         ProgTallerEvento.SETRANGE(Expositor, Expositor);
-        ProgTallerEvento.SETRANGE(Secuencia,Secuencia);
-        IF ProgTallerEvento.FINDSET(TRUE,FALSE) THEN
-           ProgTallerEvento.DELETEALL;
+        ProgTallerEvento.SETRANGE(Secuencia, Secuencia);
+        IF ProgTallerEvento.FINDSET(TRUE, FALSE) THEN
+            ProgTallerEvento.DELETEALL;
     end;
 
     trigger OnInsert()
     begin
         CabPlanEvent.RESET;
-        CabPlanEvent.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-        CabPlanEvent.SETRANGE(Expositor,Expositor);
+        CabPlanEvent.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+        CabPlanEvent.SETRANGE(Expositor, Expositor);
         IF NOT CabPlanEvent.FINDLAST THEN
-           CabPlanEvent.INIT;
+            CabPlanEvent.INIT;
 
         Secuencia := CabPlanEvent.Secuencia + 1;
     end;

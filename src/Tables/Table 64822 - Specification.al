@@ -77,7 +77,7 @@ table 64822 Specification
         field(33; "Source Filter"; Boolean)
         {
             CalcFormula = Exist("Field Filter" WHERE("Specification No." = FIELD("No."),
-                                                      Type = CONST(Source Filter)));
+                                                      "Type" = CONST(Source Filter)));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -129,7 +129,7 @@ table 64822 Specification
         field(53;"Dest. Filter";Boolean)
         {
             CalcFormula = Exist("Field Filter" WHERE ("Specification No."=FIELD("No."),
-                                                      Type=CONST(Dest. Filter)));
+                                                      "Type"=CONST(Dest. Filter)));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -186,14 +186,14 @@ table 64822 Specification
         field(68;"Field List";Boolean)
         {
             CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
-                                                    List Type=CONST(Field Transfer List)));
+                                                    "List Type"=CONST(Field Transfer List)));
             Editable = false;
             FieldClass = FlowField;
         }
         field(69;"Table-Linking";Boolean)
         {
             CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
-                                                    List Type=CONST(Key Field Links)));
+                                                    "List Type"=CONST(Key Field Links)));
             Editable = false;
             FieldClass = FlowField;
         }

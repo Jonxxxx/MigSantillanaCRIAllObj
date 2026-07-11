@@ -80,26 +80,26 @@ table 67066 Comisionistas
         field(38; Comment; Boolean)
         {
             CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
-                                                                  No.=FIELD("No."),
-                                                                  Sub No.=CONST(0)));
+                                                                  "No." = FIELD("No."),
+                                                                  "Sub No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(54;"Last Date Modified";Date)
+        field(54; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(84;"Fax No.";Text[30])
+        field(84; "Fax No."; Text[30])
         {
             Caption = 'Fax No.';
         }
-        field(85;"Telex Answer Back";Text[20])
+        field(85; "Telex Answer Back"; Text[20])
         {
             Caption = 'Telex Answer Back';
         }
-        field(86;"VAT Registration No.";Text[20])
+        field(86; "VAT Registration No."; Text[20])
         {
             Caption = 'VAT Registration No.';
 
@@ -109,12 +109,12 @@ table 67066 Comisionistas
             begin
             end;
         }
-        field(89;Picture;BLOB)
+        field(89; Picture; BLOB)
         {
             Caption = 'Picture';
             SubType = Bitmap;
         }
-        field(91;"Post Code";Code[20])
+        field(91; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = "Post Code";
@@ -122,35 +122,35 @@ table 67066 Comisionistas
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(92;County;Text[30])
+        field(92; County; Text[30])
         {
             Caption = 'State';
         }
-        field(102;"E-Mail";Text[80])
+        field(102; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(103;"Home Page";Text[80])
+        field(103; "Home Page"; Text[80])
         {
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
-        field(107;"No. Series";Code[10])
+        field(107; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
-        field(5050;Type;Option)
+        field(5050; Type; Option)
         {
             Caption = 'Type';
             OptionCaption = 'Company,Person';
             OptionMembers = Company,Person;
         }
-        field(5051;"Company No.";Code[20])
+        field(5051; "Company No."; Code[20])
         {
             Caption = 'Company No.';
-            TableRelation = Contact WHERE ("Type"=CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             var
@@ -165,17 +165,17 @@ table 67066 Comisionistas
                 xRecRef: RecordRef;
             begin
                 IF "Company No." = xRec."Company No." THEN
-                  EXIT;
-                
+                    EXIT;
+
                 xRecRef.GETTABLE(Rec);
-                
-                TESTFIELD(Type,Type::Person);
-                
+
+                TESTFIELD(Type, Type::Person);
+
                 SegLine.SETCURRENTKEY("Contact No.");
-                SegLine.SETRANGE("Contact No.","No.");
+                SegLine.SETRANGE("Contact No.", "No.");
                 IF SegLine.FIND('-') THEN
-                  ERROR(Text012,FIELDCAPTION("Company No."));
-                
+                    ERROR(Text012, FIELDCAPTION("Company No."));
+
                 /*
                 IF Cont.GET("Company No.") THEN
                   InheritCompanyToPersonData(Cont,xRec."Company No." = '')
@@ -249,12 +249,12 @@ table 67066 Comisionistas
 
             end;
         }
-        field(5052;"Company Name";Text[70])
+        field(5052; "Company Name"; Text[70])
         {
             Caption = 'Company Name';
             Editable = false;
         }
-        field(5053;"Lookup Contact No.";Code[20])
+        field(5053; "Lookup Contact No."; Code[20])
         {
             Caption = 'Lookup Contact No.';
             Editable = false;
@@ -263,12 +263,12 @@ table 67066 Comisionistas
             trigger OnValidate()
             begin
                 IF Type = Type::Company THEN
-                  "Lookup Contact No." := ''
+                    "Lookup Contact No." := ''
                 ELSE
-                  "Lookup Contact No." := "No.";
+                    "Lookup Contact No." := "No.";
             end;
         }
-        field(5054;"First Name";Text[30])
+        field(5054; "First Name"; Text[30])
         {
             Caption = 'First Name';
 
@@ -278,7 +278,7 @@ table 67066 Comisionistas
                 //ProcessNameChange;
             end;
         }
-        field(5055;"Middle Name";Text[30])
+        field(5055; "Middle Name"; Text[30])
         {
             Caption = 'Middle Name';
 
@@ -288,7 +288,7 @@ table 67066 Comisionistas
                 //ProcessNameChange;
             end;
         }
-        field(5056;Surname;Text[30])
+        field(5056; Surname; Text[30])
         {
             Caption = 'Surname';
 
@@ -298,47 +298,47 @@ table 67066 Comisionistas
                 //ProcessNameChange;
             end;
         }
-        field(5058;"Job Title";Text[30])
+        field(5058; "Job Title"; Text[30])
         {
             Caption = 'Job Title';
         }
-        field(5059;Initials;Text[30])
+        field(5059; Initials; Text[30])
         {
             Caption = 'Initials';
         }
-        field(5060;"Extension No.";Text[30])
+        field(5060; "Extension No."; Text[30])
         {
             Caption = 'Extension No.';
         }
-        field(5061;"Mobile Phone No.";Text[30])
+        field(5061; "Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(5062;Pager;Text[30])
+        field(5062; Pager; Text[30])
         {
             Caption = 'Pager';
         }
-        field(5063;"Organizational Level Code";Code[10])
+        field(5063; "Organizational Level Code"; Code[10])
         {
             Caption = 'Organizational Level Code';
             TableRelation = "Organizational Level";
         }
-        field(5064;"Exclude from Segment";Boolean)
+        field(5064; "Exclude from Segment"; Boolean)
         {
             Caption = 'Exclude from Segment';
         }
-        field(5065;"Date Filter";Date)
+        field(5065; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(5066;"Next To-do Date";Date)
+        field(5066; "Next To-do Date"; Date)
         {
             CalcFormula = Min(To-do.Date WHERE ("Contact Company No."=FIELD("Company No."),
-                                                Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                Closed=CONST(false),
-                                                System To-do Type=CONST(Contact Attendee)));
+                                                "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                "Closed"=CONST(false),
+                                                "System To-do Type"=CONST(Contact Attendee)));
             Caption = 'Next To-do Date';
             Editable = false;
             FieldClass = FlowField;
@@ -346,9 +346,9 @@ table 67066 Comisionistas
         field(5067;"Last Date Attempted";Date)
         {
             CalcFormula = Max("Interaction Log Entry".Date WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                  Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                  Initiated By=CONST(Us),
-                                                                  Postponed=CONST(false)));
+                                                                  "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                  "Initiated By"=CONST(Us),
+                                                                  "Postponed"=CONST(false)));
             Caption = 'Last Date Attempted';
             Editable = false;
             FieldClass = FlowField;
@@ -356,9 +356,9 @@ table 67066 Comisionistas
         field(5068;"Date of Last Interaction";Date)
         {
             CalcFormula = Max("Interaction Log Entry".Date WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                  Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                  Attempt Failed=CONST(false),
-                                                                  Postponed=CONST(false)));
+                                                                  "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                  "Attempt Failed"=CONST(false),
+                                                                  "Postponed"=CONST(false)));
             Caption = 'Date of Last Interaction';
             Editable = false;
             FieldClass = FlowField;
@@ -398,10 +398,10 @@ table 67066 Comisionistas
         field(5074;"No. of Interactions";Integer)
         {
             CalcFormula = Count("Interaction Log Entry" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                               Canceled=CONST(false),
-                                                               Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                               Date=FIELD("Date Filter"),
-                                                               Postponed=CONST(false)));
+                                                               "Canceled"=CONST(false),
+                                                               "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                               "Date"=FIELD("Date Filter"),
+                                                               "Postponed"=CONST(false)));
             Caption = 'No. of Interactions';
             Editable = false;
             FieldClass = FlowField;
@@ -410,10 +410,10 @@ table 67066 Comisionistas
         {
             AutoFormatType = 1;
             CalcFormula = Sum("Interaction Log Entry"."Cost (LCY)" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                          Canceled=CONST(false),
-                                                                          Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                          Date=FIELD("Date Filter"),
-                                                                          Postponed=CONST(false)));
+                                                                          "Canceled"=CONST(false),
+                                                                          "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                          "Date"=FIELD("Date Filter"),
+                                                                          "Postponed"=CONST(false)));
             Caption = 'Cost ($)';
             Editable = false;
             FieldClass = FlowField;
@@ -421,10 +421,10 @@ table 67066 Comisionistas
         field(5077;"Duration (Min.)";Decimal)
         {
             CalcFormula = Sum("Interaction Log Entry"."Duration (Min.)" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                               Canceled=CONST(false),
-                                                                               Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                               Date=FIELD("Date Filter"),
-                                                                               Postponed=CONST(false)));
+                                                                               "Canceled"=CONST(false),
+                                                                               "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                               "Date"=FIELD("Date Filter"),
+                                                                               "Postponed"=CONST(false)));
             Caption = 'Duration (Min.)';
             DecimalPlaces = 0:0;
             Editable = false;
@@ -433,10 +433,10 @@ table 67066 Comisionistas
         field(5078;"No. of Opportunities";Integer)
         {
             CalcFormula = Count("Opportunity Entry" WHERE ("Active"=CONST(true),
-                                                           Contact Company No.=FIELD("Company No."),
-                                                           Estimated Close Date=FIELD("Date Filter"),
-                                                           Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                           Action Taken=FIELD("Action Taken Filter")));
+                                                           "Contact Company No."=FIELD("Company No."),
+                                                           "Estimated Close Date"=FIELD("Date Filter"),
+                                                           "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                           "Action Taken"=FIELD("Action Taken Filter")));
             Caption = 'No. of Opportunities';
             Editable = false;
             FieldClass = FlowField;
@@ -445,10 +445,10 @@ table 67066 Comisionistas
         {
             AutoFormatType = 1;
             CalcFormula = Sum("Opportunity Entry"."Estimated Value (LCY)" WHERE ("Active"=CONST(true),
-                                                                                 Contact Company No.=FIELD("Company No."),
-                                                                                 Estimated Close Date=FIELD("Date Filter"),
-                                                                                 Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                                 Action Taken=FIELD("Action Taken Filter")));
+                                                                                 "Contact Company No."=FIELD("Company No."),
+                                                                                 "Estimated Close Date"=FIELD("Date Filter"),
+                                                                                 "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                                 "Action Taken"=FIELD("Action Taken Filter")));
             Caption = 'Estimated Value ($)';
             Editable = false;
             FieldClass = FlowField;
@@ -457,10 +457,10 @@ table 67066 Comisionistas
         {
             AutoFormatType = 1;
             CalcFormula = Sum("Opportunity Entry"."Calcd. Current Value (LCY)" WHERE ("Active"=CONST(true),
-                                                                                      Contact Company No.=FIELD("Company No."),
-                                                                                      Estimated Close Date=FIELD("Date Filter"),
-                                                                                      Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                                                      Action Taken=FIELD("Action Taken Filter")));
+                                                                                      "Contact Company No."=FIELD("Company No."),
+                                                                                      "Estimated Close Date"=FIELD("Date Filter"),
+                                                                                      "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                                                      "Action Taken"=FIELD("Action Taken Filter")));
             Caption = 'Calcd. Current Value ($)';
             Editable = false;
             FieldClass = FlowField;
@@ -468,20 +468,20 @@ table 67066 Comisionistas
         field(5082;"Opportunity Entry Exists";Boolean)
         {
             CalcFormula = Exist("Opportunity Entry" WHERE ("Active"=CONST(true),
-                                                           Contact Company No.=FIELD("Company No."),
-                                                           Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                                           Sales Cycle Code=FIELD("Sales Cycle Filter"),
-                                                           Sales Cycle Stage=FIELD("Sales Cycle Stage Filter"),
-                                                           Salesperson Code=FIELD("Salesperson Filter"),
-                                                           Campaign No.=FIELD("Campaign Filter"),
-                                                           Action Taken=FIELD("Action Taken Filter"),
+                                                           "Contact Company No."=FIELD("Company No."),
+                                                           "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                                           "Sales Cycle Code"=FIELD("Sales Cycle Filter"),
+                                                           "Sales Cycle Stage"=FIELD("Sales Cycle Stage Filter"),
+                                                           "Salesperson Code"=FIELD("Salesperson Filter"),
+                                                           "Campaign No."=FIELD("Campaign Filter"),
+                                                           "Action Taken"=FIELD("Action Taken Filter"),
                                                            Estimated Value (LCY)=FIELD("Estimated Value Filter"),
                                                            Calcd. Current Value (LCY)=FIELD("Calcd. Current Value Filter"),
-                                                           Completed %=FIELD("Completed % Filter"),
-                                                           Chances of Success %=FIELD("Chances of Success % Filter"),
-                                                           Probability %=FIELD("Probability % Filter"),
-                                                           Estimated Close Date=FIELD("Date Filter"),
-                                                           Close Opportunity Code=FIELD("Close Opportunity Filter")));
+                                                           "Completed %"=FIELD("Completed % Filter"),
+                                                           "Chances of Success %"=FIELD("Chances of Success % Filter"),
+                                                           "Probability %"=FIELD("Probability % Filter"),
+                                                           "Estimated Close Date"=FIELD("Date Filter"),
+                                                           "Close Opportunity Code"=FIELD("Close Opportunity Filter")));
             Caption = 'Opportunity Entry Exists';
             Editable = false;
             FieldClass = FlowField;
@@ -489,14 +489,14 @@ table 67066 Comisionistas
         field(5083;"To-do Entry Exists";Boolean)
         {
             CalcFormula = Exist(To-do WHERE ("Contact Company No."=FIELD("Company No."),
-                                             Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                             Team Code=FIELD("Team Filter"),
-                                             Salesperson Code=FIELD("Salesperson Filter"),
-                                             Campaign No.=FIELD("Campaign Filter"),
-                                             Date=FIELD("Date Filter"),
-                                             Status=FIELD("To-do Status Filter"),
-                                             Priority=FIELD("Priority Filter"),
-                                             Closed=FIELD("To-do Closed Filter")));
+                                             "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                             "Team Code"=FIELD("Team Filter"),
+                                             "Salesperson Code"=FIELD("Salesperson Filter"),
+                                             "Campaign No."=FIELD("Campaign Filter"),
+                                             "Date"=FIELD("Date Filter"),
+                                             "Status"=FIELD("To-do Status Filter"),
+                                             "Priority"=FIELD("Priority Filter"),
+                                             "Closed"=FIELD("To-do Closed Filter")));
             Caption = 'To-do Entry Exists';
             Editable = false;
             FieldClass = FlowField;

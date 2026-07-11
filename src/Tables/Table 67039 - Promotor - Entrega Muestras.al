@@ -91,14 +91,14 @@ table 67039 "Promotor - Entrega Muestras"
         field(19; "Cantidad Presupuestada"; Decimal)
         {
             CalcFormula = Lookup("Promotor - Ppto Muestras".Quantity WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
-                                                                            Cod. Producto=FIELD("Cod. Producto")));
+                                                                            "Cod. Producto" = FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(20;"Cantidad consumida";Decimal)
+        field(20; "Cantidad consumida"; Decimal)
         {
-            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"),
-                                                                            Cod. Producto=FIELD("Cod. Producto")));
+            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
+                                                                            "Cod. Producto" = FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -106,7 +106,7 @@ table 67039 "Promotor - Entrega Muestras"
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Colegio","Cod. Producto",Fecha)
+        key(Key1; "Cod. Promotor", "Cod. Colegio", "Cod. Producto", Fecha)
         {
             SumIndexFields = Cantidad;
         }
@@ -118,14 +118,14 @@ table 67039 "Promotor - Entrega Muestras"
 
     trigger OnInsert()
     begin
-        PromPlanifVisit.SETRANGE("Cod. Promotor","Cod. Promotor");
-        PromPlanifVisit.SETRANGE("Cod. Colegio","Cod. Colegio");
-        PromPlanifVisit.SETRANGE(Fecha,Fecha);
+        PromPlanifVisit.SETRANGE("Cod. Promotor", "Cod. Promotor");
+        PromPlanifVisit.SETRANGE("Cod. Colegio", "Cod. Colegio");
+        PromPlanifVisit.SETRANGE(Fecha, Fecha);
         PromPlanifVisit.FINDFIRST;
 
-        "Fecha Visita"         := PromPlanifVisit."Fecha Visita";
-        "Hora Inicial Visita"  := PromPlanifVisit."Hora Inicial Visita";
-        "Hora Inicial Final"   := PromPlanifVisit."Hora Final Visita";
+        "Fecha Visita" := PromPlanifVisit."Fecha Visita";
+        "Hora Inicial Visita" := PromPlanifVisit."Hora Inicial Visita";
+        "Hora Inicial Final" := PromPlanifVisit."Hora Final Visita";
         "Fecha Proxima Visita" := PromPlanifVisit."Fecha Proxima Visita";
     end;
 

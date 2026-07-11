@@ -6,7 +6,7 @@ table 67063 "Plan Lector Cab."
         field(1; "Cod. Colegio"; Code[10])
         {
             TableRelation = Contact WHERE("Type" = CONST(Company),
-                                           Tipo educacion=CONST(true));
+                                           "Tipo educacion" = CONST(true));
 
             trigger OnValidate()
             var

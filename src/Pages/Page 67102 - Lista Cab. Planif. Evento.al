@@ -129,9 +129,9 @@ page 67102 "Lista Cab. Planif. Evento"
                     PromotedIsBig = true;
                     RunObject = Page 67101;
                     RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  Tipo Evento=FIELD("Tipo Evento"),
-                                  Expositor=FIELD("Expositor"),
-                                  Secuencia=FIELD("Secuencia");
+                                  "Tipo Evento"=FIELD("Tipo Evento"),
+                                  "Expositor"=FIELD("Expositor"),
+                                  "Secuencia"=FIELD("Secuencia");
                 }
             }
         }

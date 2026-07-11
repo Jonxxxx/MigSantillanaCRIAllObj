@@ -25,85 +25,81 @@ table 67057 "Colegio - Lin. Jerarquia puest"
         field(3; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Local=FIELD("Cod. Local"));
+                                                                  "Cod. Local" = FIELD("Cod. Local"));
         }
-        field(4;"Cod. Turno";Code[20])
+        field(4; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(5;"Cod. Cargo";Code[20])
+        field(5; "Cod. Cargo"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
 
             trigger OnLookup()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Puestos de trabajo");
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
                 Cargo.SETTABLEVIEW(DA);
                 Cargo.SETRECORD(DA);
                 Cargo.LOOKUPMODE(TRUE);
-                IF Cargo.RUNMODAL = ACTION::LookupOK THEN
-                   BEGIN
+                IF Cargo.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     Cargo.GETRECORD(DA);
                     "Cod. Cargo" := DA.Codigo;
                     Empleado.GET("Cod. Empleado");
-                    IF "Cod. Cargo" <> Empleado."Job Type Code" THEN
-                       BEGIN
-                        Empleado.VALIDATE(Empleado."Job Type Code","Cod. Cargo");
+                    IF "Cod. Cargo" <> Empleado."Job Type Code" THEN BEGIN
+                        Empleado.VALIDATE(Empleado."Job Type Code", "Cod. Cargo");
                         Empleado.MODIFY;
-                       END;
-                   END;
+                    END;
+                END;
 
                 CLEAR(Cargo);
             end;
 
             trigger OnValidate()
             begin
-                IF "Cod. Cargo" <> '' THEN
-                   BEGIN
+                IF "Cod. Cargo" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Puestos de trabajo");
-                    DA.SETRANGE(Codigo,"Cod. Cargo");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
+                    DA.SETRANGE(Codigo, "Cod. Cargo");
                     DA.FINDFIRST;
 
                     "Descripcion Cargo" := DA.Descripcion;
 
-                   END
+                END
             end;
         }
-        field(6;"Cod. Empleado";Code[20])
+        field(6; "Cod. Empleado"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"));
+            TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Empleado" <> '' THEN
-                   BEGIN
+                IF "Cod. Empleado" <> '' THEN BEGIN
                     Empleado.GET("Cod. Empleado");
                     "Nombre Empleado" := Empleado."Full Name";
-                    VALIDATE("Cod. Cargo",Empleado."Job Type Code");
-                   END;
+                    VALIDATE("Cod. Cargo", Empleado."Job Type Code");
+                END;
             end;
         }
-        field(7;"Nombre Colegio";Text[100])
+        field(7; "Nombre Colegio"; Text[100])
         {
         }
-        field(8;"Descripcion Cargo";Text[100])
+        field(8; "Descripcion Cargo"; Text[100])
         {
         }
-        field(9;"Nombre Empleado";Text[60])
+        field(9; "Nombre Empleado"; Text[60])
         {
             Editable = false;
         }
-        field(10;Seleccionar;Boolean)
+        field(10; Seleccionar; Boolean)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Local","Cod. Nivel","Cod. Turno","Cod. Cargo","Cod. Empleado")
+        key(Key1; "Cod. Colegio", "Cod. Local", "Cod. Nivel", "Cod. Turno", "Cod. Cargo", "Cod. Empleado")
         {
         }
     }

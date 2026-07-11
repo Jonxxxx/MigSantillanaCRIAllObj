@@ -114,9 +114,9 @@ table 80011 "Tmp Check Ledger Entry"
         {
             Caption = 'Statement Line No.';
             TableRelation = IF (Statement Status=FILTER(Bank Acc. Entry Applied|Check Entry Applied)) "Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
-                                                                                                                                         Statement No.=FIELD("Statement No."))
+                                                                                                                                         "Statement No."=FIELD("Statement No."))
                                                                                                                                          ELSE IF (Statement Status=CONST(Closed)) "Posted Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
-                                                                                                                                                                                                                            Statement No.=FIELD("Statement No."));
+                                                                                                                                                                                                                            "Statement No."=FIELD("Statement No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }

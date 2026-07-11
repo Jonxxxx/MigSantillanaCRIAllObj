@@ -41,8 +41,8 @@ page 67072 "Cab. Planificacion Reg."
             {
                 Editable = false;
                 SubPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
-                              Semana=FIELD("Semana"),
-                              Estado=FILTER(>' ');
+                              "Semana"=FIELD("Semana"),
+                              "Estado"=FILTER(>' ');
                 SubPageView = SORTING(Cod. Promotor,Cod. Colegio,Semana);
             }
         }

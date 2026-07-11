@@ -25,7 +25,7 @@ page 67074 "Cab. Muestras"
     SourceTableView = SORTING(No.)
                       ORDER(Ascending)
                       WHERE("Devolucion Consignacion" = FILTER(No),
-                            Pedido Consignacion=CONST(true));
+                            "Pedido Consignacion" = CONST(true));
 
     layout
     {
@@ -165,7 +165,7 @@ page 67074 "Cab. Muestras"
             part(TransferLines; 67076)
             {
                 SubPageLink = Document No.=FIELD("No."),
-                              Derived From Line No.=CONST(0);
+                              "Derived From Line No."=CONST(0);
             }
             group("Transfer-from")
             {
@@ -335,7 +335,7 @@ page 67074 "Cab. Muestras"
                     Image = ViewComments;
                     RunObject = Page 5750;
                                     RunPageLink = Document Type=CONST(Transfer Order),
-                                  No.=FIELD("No.");
+                                  "No."=FIELD("No.");
                 }
                 action("S&hipments")
                 {
@@ -367,8 +367,8 @@ page 67074 "Cab. Muestras"
                     Caption = 'Whse. Shi&pments';
                     RunObject = Page 7341;
                                     RunPageLink = Source Type=CONST(5741),
-                                  Source Subtype=CONST(0),
-                                  Source No.=FIELD("No.");
+                                  "Source Subtype"=CONST(0),
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("&Whse. Receipts")
@@ -376,8 +376,8 @@ page 67074 "Cab. Muestras"
                     Caption = '&Whse. Receipts';
                     RunObject = Page 7342;
                                     RunPageLink = Source Type=CONST(5741),
-                                  Source Subtype=CONST(1),
-                                  Source No.=FIELD("No.");
+                                  "Source Subtype"=CONST(1),
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
@@ -385,7 +385,7 @@ page 67074 "Cab. Muestras"
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                                     RunPageLink = Source Document=FILTER(Inbound Transfer|Outbound Transfer),
-                                  Source No.=FIELD("No.");
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }
             }

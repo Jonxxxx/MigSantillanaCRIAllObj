@@ -121,66 +121,66 @@ table 56026 "Lin. clas. devoluciones"
         field(12; Inventory; Decimal)
         {
             CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD("Item No."),
-                                                                  Variant Code=FIELD("Variant Filter"),
-                                                                  Location Code=FIELD("Location Filter")));
+                                                                  "Variant Code" = FIELD("Variant Filter"),
+                                                                  "Location Code" = FIELD("Location Filter")));
             Caption = 'Quantity on Hand';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(13;"Inventario en Consignacion";Decimal)
+        field(13; "Inventario en Consignacion"; Decimal)
         {
-            CalcFormula = Sum("Item Ledger Entry".Quantity WHERE ("Item No."=FIELD("Item No."),
-                                                                  Location Code=FIELD("Cod. Almacen Consignacion"),
-                                                                  Posting Date=FIELD("Date Filter")));
-            DecimalPlaces = 0:5;
+            CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD("Item No."),
+                                                                  "Location Code" = FIELD("Cod. Almacen Consignacion"),
+                                                                  "Posting Date" = FIELD("Date Filter")));
+            DecimalPlaces = 0 : 5;
             FieldClass = FlowField;
         }
-        field(14;"Cod. Almacen Consignacion";Code[20])
+        field(14; "Cod. Almacen Consignacion"; Code[20])
         {
             TableRelation = Location;
         }
-        field(15;"Date Filter";Date)
+        field(15; "Date Filter"; Date)
         {
             FieldClass = FlowFilter;
         }
-        field(16;"Location Filter";Code[10])
+        field(16; "Location Filter"; Code[10])
         {
             Caption = 'Location Filter';
             FieldClass = FlowFilter;
             TableRelation = Location;
         }
-        field(17;"Variant Filter";Code[10])
+        field(17; "Variant Filter"; Code[10])
         {
             Caption = 'Variant Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Item Variant".Code WHERE ("Item No."=FIELD("Item No."));
+            TableRelation = "Item Variant".Code WHERE("Item No." = FIELD("Item No."));
         }
-        field(18;"Receiving Time";Time)
+        field(18; "Receiving Time"; Time)
         {
         }
-        field(19;Processed;Boolean)
+        field(19; Processed; Boolean)
         {
             Caption = 'Processed';
         }
-        field(21;"External Doc. Number";Code[20])
+        field(21; "External Doc. Number"; Code[20])
         {
             Caption = 'External Doc. Number';
         }
-        field(22;Comentario;Text[250])
+        field(22; Comentario; Text[250])
         {
         }
-        field(23;"Con defecto";Boolean)
+        field(23; "Con defecto"; Boolean)
         {
         }
-        field(24;Recuperable;Boolean)
+        field(24; Recuperable; Boolean)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Documento","Line No.")
+        key(Key1; "No. Documento", "Line No.")
         {
         }
     }
@@ -211,10 +211,10 @@ table 56026 "Lin. clas. devoluciones"
     begin
         ItemCrossReference.RESET;
         ItemCrossReference.SETCURRENTKEY("Cross-Reference No.");
-        ItemCrossReference.SETRANGE("Cross-Reference No.","Cross-Reference No.");
+        ItemCrossReference.SETRANGE("Cross-Reference No.", "Cross-Reference No.");
 
-        IF PAGE.RUNMODAL(PAGE::"Cross Reference List",ItemCrossReference) = ACTION::LookupOK THEN
-           VALIDATE("Cross-Reference No.",ItemCrossReference."Cross-Reference No.");
+        IF PAGE.RUNMODAL(PAGE::"Cross Reference List", ItemCrossReference) = ACTION::LookupOK THEN
+            VALIDATE("Cross-Reference No.", ItemCrossReference."Cross-Reference No.");
     end;
 }
 

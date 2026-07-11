@@ -97,19 +97,19 @@ table 56023 "Lin. Hoja de Ruta Reg."
         {
             Caption = 'Invoice No.';
             TableRelation = "Sales Invoice Header" WHERE("Order No." = FIELD("No. Pedido"),
-                                                          Sell-to Customer No.=FIELD("Cod. Cliente"));
+                                                          "Sell-to Customer No." = FIELD("Cod. Cliente"));
         }
-        field(19;Entregado;Boolean)
+        field(19; Entregado; Boolean)
         {
             Editable = false;
         }
-        field(20;"Fecha Entrega";Date)
+        field(20; "Fecha Entrega"; Date)
         {
         }
-        field(21;"Causa No Entrega";Text[250])
+        field(21; "Causa No Entrega"; Text[250])
         {
         }
-        field(23;"No Orden";Code[20])
+        field(23; "No Orden"; Code[20])
         {
             DataClassification = ToBeClassified;
             Description = 'SANTINAV-3077';
@@ -118,13 +118,13 @@ table 56023 "Lin. Hoja de Ruta Reg."
 
     keys
     {
-        key(Key1;"No. Hoja Ruta","No. Linea")
+        key(Key1; "No. Hoja Ruta", "No. Linea")
         {
         }
-        key(Key2;"No. Guia")
+        key(Key2; "No. Guia")
         {
         }
-        key(Key3;"No. Pedido")
+        key(Key3; "No. Pedido")
         {
         }
     }
@@ -149,19 +149,17 @@ table 56023 "Lin. Hoja de Ruta Reg."
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");
         SA.GET(CHR."Cod. Transportista");
-        IF SA."No. Serie Guias" <> '' THEN
-          BEGIN
-            IF "No. Guia" = '' THEN
-              BEGIN
-                "No. Guia" := NoSerieMagmt.GetNextNo(SA."No. Serie Guias",WORKDATE,TRUE);
+        IF SA."No. Serie Guias" <> '' THEN BEGIN
+            IF "No. Guia" = '' THEN BEGIN
+                "No. Guia" := NoSerieMagmt.GetNextNo(SA."No. Serie Guias", WORKDATE, TRUE);
                 LHR.RESET;
                 LHR.SETCURRENTKEY("No. Guia");
-                LHR.SETRANGE("No. Guia","No. Guia");
+                LHR.SETRANGE("No. Guia", "No. Guia");
                 IF LHR.FINDFIRST THEN
-                  ERROR(Error001,"No. Guia",LHR."No. Linea");
+                    ERROR(Error001, "No. Guia", LHR."No. Linea");
                 MODIFY;
-              END;
-          END;
+            END;
+        END;
     end;
 }
 

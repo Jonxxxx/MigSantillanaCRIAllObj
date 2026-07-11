@@ -166,8 +166,8 @@ page 67077 "Contact List APS"
                     Image = ViewComments;
                     RunObject = Page 5072;
                                     RunPageLink = Table Name=CONST(Contact),
-                                  No.=FIELD("No."),
-                                  Sub No.=CONST(0);
+                                  "No."=FIELD("No."),
+                                  "Sub No."=CONST(0);
                 }
                 group("Alternati&ve Address")
                 {
@@ -195,8 +195,8 @@ page 67077 "Contact List APS"
                     Caption = 'Interaction Log E&ntries';
                     RunObject = Page 5076;
                                     RunPageLink = Contact Company No.=FIELD("Company No."),
-                                  Contact No.=FILTER(<>''),
-                                  Contact No.=FIELD(FILTER(Lookup Contact No.));
+                                  "Contact No."=FILTER(<>''),
+                                  "Contact No."=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact Company No.,Contact No.);
                     ShortCutKey = 'Ctrl+F7';
                 }
@@ -205,8 +205,8 @@ page 67077 "Contact List APS"
                     Caption = 'Postponed &Interactions';
                     RunObject = Page 5082;
                                     RunPageLink = Contact Company No.=FIELD("Company No."),
-                                  Contact No.=FILTER(<>''),
-                                  Contact No.=FIELD(FILTER(Lookup Contact No.));
+                                  "Contact No."=FILTER(<>''),
+                                  "Contact No."=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact Company No.,Contact No.);
                 }
                 action("T&o-dos")
@@ -214,8 +214,8 @@ page 67077 "Contact List APS"
                     Caption = 'T&o-dos';
                     RunObject = Page 5096;
                                     RunPageLink = Contact Company No.=FIELD("Company No."),
-                                  Contact No.=FIELD(FILTER(Lookup Contact No.)),
-                                  System To-do Type=FILTER(Contact Attendee);
+                                  "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+                                  "System To-do Type"=FILTER(Contact Attendee);
                     RunPageView = SORTING(Contact Company No.,Contact No.);
                 }
                 group("Oppo&rtunities")
@@ -226,8 +226,8 @@ page 67077 "Contact List APS"
                         Caption = 'List';
                         RunObject = Page 5123;
                                         RunPageLink = Contact Company No.=FIELD("Company No."),
-                                      Contact No.=FILTER(<>''),
-                                      Contact No.=FIELD(FILTER(Lookup Contact No.));
+                                      "Contact No."=FILTER(<>''),
+                                      "Contact No."=FIELD(FILTER(Lookup Contact No.));
                         RunPageView = SORTING(Contact Company No.,Contact No.);
                     }
                 }
@@ -237,8 +237,8 @@ page 67077 "Contact List APS"
                     Image = Segment;
                     RunObject = Page 5150;
                                     RunPageLink = Contact Company No.=FIELD("Company No."),
-                                  Contact No.=FILTER(<>''),
-                                  Contact No.=FIELD(FILTER(Lookup Contact No.));
+                                  "Contact No."=FILTER(<>''),
+                                  "Contact No."=FIELD(FILTER(Lookup Contact No.));
                     RunPageView = SORTING(Contact No.,Segment No.);
                 }
                 separator()

@@ -19,8 +19,8 @@ table 130400 "CAL Test Suite"
         field(3; "Tests to Execute"; Integer)
         {
             CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
-                                                       Line Type=CONST(Function),
-                                                       Run=CONST(true)));
+                                                       "Line Type" = CONST(Function),
+                                                       "Run" = CONST(true)));
             Caption = 'Tests to Execute';
             Editable = false;
             FieldClass = FlowField;
@@ -28,9 +28,9 @@ table 130400 "CAL Test Suite"
         field(4; "Tests not Executed"; Integer)
         {
             CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
-                                                       Line Type=CONST(Function),
-                                                       Run=CONST(true),
-                                                       Result=CONST(" ")));
+                                                       "Line Type" = CONST(Function),
+                                                       "Run" = CONST(true),
+                                                       "Result" = CONST(" ")));
             Caption = 'Tests not Executed';
             Editable = false;
             FieldClass = FlowField;
@@ -38,9 +38,9 @@ table 130400 "CAL Test Suite"
         field(5; Failures; Integer)
         {
             CalcFormula = Count("CAL Test Line" WHERE("Test Suite" = FIELD("Name"),
-                                                       Line Type=CONST(Function),
-                                                       Run=CONST(true),
-                                                       Result=CONST(Failure)));
+                                                       "Line Type" = CONST(Function),
+                                                       "Run" = CONST(true),
+                                                       "Result" = CONST(Failure)));
             Caption = 'Failures';
             Editable = false;
             FieldClass = FlowField;

@@ -182,8 +182,8 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(46; Comment; Boolean)
         {
             CalcFormula = Exist("Sales Comment Line" WHERE("Document Type" = CONST(Posted Credit Memo),
-                                                            No.=FIELD("No."),
-                                                            Document Line No.=CONST(0)));
+                                                            "No."=FIELD("No."),
+                                                            "Document Line No."=CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;

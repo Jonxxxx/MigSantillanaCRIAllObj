@@ -271,7 +271,7 @@ table 80006 "Tmp Purch. Inv. Line"
         {
             Caption = 'Blanket Order Line No.';
             TableRelation = "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
-                                                              Document No.=FIELD("Blanket Order No."));
+                                                              "Document No."=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -427,8 +427,8 @@ table 80006 "Tmp Purch. Inv. Line"
         {
             Caption = 'Bin Code';
             TableRelation = Bin.Code WHERE ("Location Code"=FIELD("Location Code"),
-                                            Item Filter=FIELD("No."),
-                                            Variant Filter=FIELD("Variant Code"));
+                                            "Item Filter"=FIELD("No."),
+                                            "Variant Filter"=FIELD("Variant Code"));
         }
         field(5404;"Qty. per Unit of Measure";Decimal)
         {
@@ -565,8 +565,8 @@ table 80006 "Tmp Purch. Inv. Line"
         {
             Caption = 'Operation No.';
             TableRelation = "Prod. Order Routing Line"."Operation No." WHERE ("Status"=FILTER(Released..),
-                                                                              Prod. Order No.=FIELD("Prod. Order No."),
-                                                                              Routing No.=FIELD("Routing No."));
+                                                                              "Prod. Order No."=FIELD("Prod. Order No."),
+                                                                              "Routing No."=FIELD("Routing No."));
         }
         field(99000752;"Work Center No.";Code[20])
         {
@@ -577,7 +577,7 @@ table 80006 "Tmp Purch. Inv. Line"
         {
             Caption = 'Prod. Order Line No.';
             TableRelation = "Prod. Order Line"."Line No." WHERE ("Status"=FILTER(Released..),
-                                                                 Prod. Order No.=FIELD("Prod. Order No."));
+                                                                 "Prod. Order No."=FIELD("Prod. Order No."));
         }
         field(99000755;"Overhead Rate";Decimal)
         {

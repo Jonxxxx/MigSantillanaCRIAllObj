@@ -62,9 +62,9 @@ page 67112 "Solic. Planif. Taller/Evento"
                     PromotedIsBig = true;
                     RunObject = Page 67016;
                     RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  Tipo Evento=FIELD("Tipo Evento"),
-                                  Secuencia=FIELD("Secuencia"),
-                                  Cod. Expositor=FIELD("Expositor");
+                                  "Tipo Evento"=FIELD("Tipo Evento"),
+                                  "Secuencia"=FIELD("Secuencia"),
+                                  "Cod. Expositor"=FIELD("Expositor");
 
                     trigger OnAction()
                     var

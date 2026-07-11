@@ -91,8 +91,8 @@ table 80009 "Tmp Posted Deposit Header"
         field(21; Comment; Boolean)
         {
             CalcFormula = Exist("Bank Comment Line" WHERE("Table Name" = CONST(Posted Deposit),
-                                                           Bank Account No.=FIELD("Bank Account No."),
-                                                           No.=FIELD("No.")));
+                                                           "Bank Account No."=FIELD("Bank Account No."),
+                                                           "No."=FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;

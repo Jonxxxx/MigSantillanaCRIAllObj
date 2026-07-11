@@ -170,8 +170,8 @@ table 80007 "Tmp Purch. Cr. Memo Hdr."
         field(46; Comment; Boolean)
         {
             CalcFormula = Exist("Purch. Comment Line" WHERE("Document Type" = CONST(Posted Credit Memo),
-                                                             No.=FIELD("No."),
-                                                             Document Line No.=CONST(0)));
+                                                             "No."=FIELD("No."),
+                                                             "Document Line No."=CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;

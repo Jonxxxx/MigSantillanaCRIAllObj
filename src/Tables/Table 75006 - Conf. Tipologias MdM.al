@@ -59,7 +59,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             CaptionClass = '75000,1';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(1),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -69,11 +69,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(1, "Referencia 1");
             end;
         }
-        field(1002;"Referencia 2;Code[20])
+        field(1002; "Referencia 2;Code[20])
         {
             CaptionClass = '75000,2';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(2),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(2),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -83,11 +83,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(2, "Referencia 2");
             end;
         }
-        field(1003;"Referencia 3;Code[20])
+        field(1003; "Referencia 3;Code[20])
         {
             CaptionClass = '75000,3';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(3),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(3),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -97,11 +97,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(3, "Referencia 3");
             end;
         }
-        field(1004;"Referencia 4;Code[20])
+        field(1004; "Referencia 4;Code[20])
         {
             CaptionClass = '75000,4';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(4),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(4),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -111,11 +111,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(4, "Referencia 4");
             end;
         }
-        field(1005;"Referencia 5;Code[20])
+        field(1005; "Referencia 5;Code[20])
         {
             CaptionClass = '75000,5';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(5),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(5),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -125,11 +125,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(5, "Referencia 5");
             end;
         }
-        field(1006;"Referencia 6;Code[20])
+        field(1006; "Referencia 6;Code[20])
         {
             CaptionClass = '75000,6';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(6),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(6),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -139,11 +139,11 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(6, "Referencia 6");
             end;
         }
-        field(1007;"Referencia 7;Code[20])
+        field(1007; "Referencia 7;Code[20])
         {
             CaptionClass = '75000,7';
-            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE ("Id Filtro"=CONST(7),
-                                                                        Filtro Tipologia=FIELD("Tipologia"));
+            TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(7),
+                                                                        "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -157,7 +157,7 @@ table 75006 "Conf. Tipologias MdM"
 
     keys
     {
-        key(Key1;Id)
+        key(Key1; Id)
         {
         }
     }
@@ -194,18 +194,18 @@ table 75006 "Conf. Tipologias MdM"
         TESTFIELD(Tipologia);
         lrConfTipo.SETRANGE(Tipologia, Tipologia);
         FOR lwNo := 1 TO lrFiltroTipo.MaxId DO BEGIN
-          IF lrFiltroTipo.GET(lwNo) THEN BEGIN
-            TestFieldRef(lwNo);
-            lrConfTipo.SetFilterRef(lwNo, GetRefValue(lwNo));
-          END;
+            IF lrFiltroTipo.GET(lwNo) THEN BEGIN
+                TestFieldRef(lwNo);
+                lrConfTipo.SetFilterRef(lwNo, GetRefValue(lwNo));
+            END;
         END;
 
-        lrConfTipo.SETFILTER(Id      , '<>%1', Id);
+        lrConfTipo.SETFILTER(Id, '<>%1', Id);
         IF lrConfTipo.FINDFIRST THEN
-          ERROR(Text0001, lrConfTipo.GETFILTERS);
+            ERROR(Text0001, lrConfTipo.GETFILTERS);
     end;
 
-    procedure ValidaReferencia(pwId: Integer;pwValor: Code[20])
+    procedure ValidaReferencia(pwId: Integer; pwValor: Code[20])
     var
         lrFiltroTipo: Record 75008;
         lrDatosMdM: Record 75001;
@@ -217,27 +217,31 @@ table 75006 "Conf. Tipologias MdM"
         // Valida que el valor sea Correcto
 
         IF pwValor = '' THEN
-          EXIT;
+            EXIT;
 
         IF lrFiltroTipo.GET(pwId) THEN BEGIN
-          CASE lrFiltroTipo.Tipo OF
-            lrFiltroTipo.Tipo::Dimension : BEGIN
-               lwCodDim := cFunMdm.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
-               lrValDim.GET(lwCodDim, pwValor);
-            END;
-            lrFiltroTipo.Tipo::"Dato MdM" : BEGIN
-              CLEAR(lrDatosMdM);
-              lrDatosMdM.GET(lrFiltroTipo."Valor Id", pwValor);
-            END;
-            lrFiltroTipo.Tipo::Otros : BEGIN
-              CASE lrFiltroTipo."Valor Id" OF
-                1 : BEGIN // Product Group
-                      CLEAR(lrProdGroup);
-                      lrProdGroup.GET(Tipologia, pwValor);
+            CASE lrFiltroTipo.Tipo OF
+                lrFiltroTipo.Tipo::Dimension:
+                    BEGIN
+                        lwCodDim := cFunMdm.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
+                        lrValDim.GET(lwCodDim, pwValor);
                     END;
-              END;
+                lrFiltroTipo.Tipo::"Dato MdM":
+                    BEGIN
+                        CLEAR(lrDatosMdM);
+                        lrDatosMdM.GET(lrFiltroTipo."Valor Id", pwValor);
+                    END;
+                lrFiltroTipo.Tipo::Otros:
+                    BEGIN
+                        CASE lrFiltroTipo."Valor Id" OF
+                            1:
+                                BEGIN // Product Group
+                                    CLEAR(lrProdGroup);
+                                    lrProdGroup.GET(Tipologia, pwValor);
+                                END;
+                        END;
+                    END;
             END;
-          END;
         END;
     end;
 
@@ -257,8 +261,8 @@ table 75006 "Conf. Tipologias MdM"
         wFieldRef := wRcRef.FIELD("lwIdF");
         lwCode := wFieldRef.VALUE;
         IF lwCode = '' THEN BEGIN
-          lwName := lrFiltroTipo.GetFiltDescrpt(pwId);
-          ERROR(Text0002, lwName);
+            lwName := lrFiltroTipo.GetFiltDescrpt(pwId);
+            ERROR(Text0002, lwName);
         END;
     end;
 
@@ -272,8 +276,8 @@ table 75006 "Conf. Tipologias MdM"
 
         TESTFIELD(Tipologia);
         FOR lrNo := 1 TO lrFiltroTipo.MaxId DO BEGIN
-          IF lrFiltroTipo.GET(lrNo) THEN
-            TestFieldRef(lrNo);
+            IF lrFiltroTipo.GET(lrNo) THEN
+                TestFieldRef(lrNo);
         END;
     end;
 
@@ -283,28 +287,42 @@ table 75006 "Conf. Tipologias MdM"
         // Devuelve el valor del registro
 
         CASE pwId OF
-          1 : Result := "Referencia 1;
-          2 : Result := "Referencia 2;
-          3 : Result := "Referencia 3;
-          4 : Result := "Referencia 4;
-          5 : Result := "Referencia 5;
-          6 : Result := "Referencia 6;
-          7 : Result := "Referencia 7;
+            1:
+                Result := "Referencia 1;
+          2:
+              Result := "Referencia 2;
+          3:
+              Result := "Referencia 3;
+          4:
+              Result := "Referencia 4;
+          5:
+              Result := "Referencia 5;
+          6:
+              Result := "Referencia 6;
+          7:
+              Result := "Referencia 7;
         END;
     end;
 
-    procedure SetFilterRef(pwId: Integer;pwValue: Code[20])
+    procedure SetFilterRef(pwId: Integer; pwValue: Code[20])
     begin
         // SetFilterRef
 
         CASE pwId OF
-          1 : SETRANGE("Referencia 1", pwValue);
-          2 : SETRANGE("Referencia 2", pwValue);
-          3 : SETRANGE("Referencia 3", pwValue);
-          4 : SETRANGE("Referencia 4", pwValue);
-          5 : SETRANGE("Referencia 5", pwValue);
-          6 : SETRANGE("Referencia 6", pwValue);
-          7 : SETRANGE("Referencia 7", pwValue);
+            1:
+                SETRANGE("Referencia 1", pwValue);
+            2:
+                SETRANGE("Referencia 2", pwValue);
+            3:
+                SETRANGE("Referencia 3", pwValue);
+            4:
+                SETRANGE("Referencia 4", pwValue);
+            5:
+                SETRANGE("Referencia 5", pwValue);
+            6:
+                SETRANGE("Referencia 6", pwValue);
+            7:
+                SETRANGE("Referencia 7", pwValue);
         END;
     end;
 }

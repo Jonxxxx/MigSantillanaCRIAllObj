@@ -32,56 +32,56 @@ table 67035 "Historico Adopciones"
         {
             Caption = 'C d. Grado';
             TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                   Cod. Nivel=FIELD("Cod. Nivel"));
+                                                                   "Cod. Nivel" = FIELD("Cod. Nivel"));
         }
-        field(7;"Cod. Turno";Code[20])
+        field(7; "Cod. Turno"; Code[20])
         {
             Caption = 'C d. Turno';
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(8;"Cod. Promotor";Code[20])
+        field(8; "Cod. Promotor"; Code[20])
         {
             Caption = 'C d. Promotor';
-            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
-        field(9;"Cod. producto";Code[20])
+        field(9; "Cod. producto"; Code[20])
         {
             Caption = 'C d. producto';
             TableRelation = Item;
         }
-        field(10;Seccion;Code[20])
+        field(10; Seccion; Code[20])
         {
             Caption = 'Secci n';
         }
-        field(11;"Cod. Equiv. Santillana";Code[20])
+        field(11; "Cod. Equiv. Santillana"; Code[20])
         {
             Caption = 'C d. Equiv. Santillana';
-            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
+            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE("Cod. Producto" = FIELD("Cod. Producto"));
         }
-        field(12;"Descripcion Equiv. Santillana";Text[100])
+        field(12; "Descripcion Equiv. Santillana"; Text[100])
         {
             Caption = 'Descripci n Equiv. Santillana';
             TableRelation = "Country/Region";
         }
-        field(13;"Nombre Editorial";Text[100])
+        field(13; "Nombre Editorial"; Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
+            CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             Caption = 'Nombre Editorial';
             FieldClass = FlowField;
             TableRelation = "Post Code";
             ValidateTableRelation = false;
         }
-        field(14;"Nombre Libro";Text[100])
+        field(14; "Nombre Libro"; Text[100])
         {
             Caption = 'Nombre Libro';
         }
-        field(15;"Nombre Colegio";Text[100])
+        field(15; "Nombre Colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             Caption = 'Nombre Colegio';
             FieldClass = FlowField;
         }
-        field(16;"Descripcion Nivel";Text[100])
+        field(16; "Descripcion Nivel"; Text[100])
         {
             CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             Caption = 'Descripcion Nivel';
@@ -90,7 +90,7 @@ table 67035 "Historico Adopciones"
         field(17;"Descripcion Grado";Text[100])
         {
             CalcFormula = Lookup("Datos auxiliares".Descripcion WHERE ("Tipo registro"=CONST(Grados),
-                                                                       Codigo=FIELD("Cod. Grado")));
+                                                                       "Codigo"=FIELD("Cod. Grado")));
             Caption = 'Descripcion Grado';
             FieldClass = FlowField;
         }
@@ -202,7 +202,7 @@ table 67035 "Historico Adopciones"
         {
             Caption = 'C d. Producto Editora';
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                     Nivel=FIELD("Cod. Nivel"));
+                                                                     "Nivel"=FIELD("Cod. Nivel"));
         }
         field(50;"Nombre Producto Editora";Text[100])
         {

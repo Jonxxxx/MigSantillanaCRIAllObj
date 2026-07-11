@@ -227,8 +227,8 @@ page 56035 "Sales Order Call Center  List"
                     Image = ViewComments;
                     RunObject = Page 67;
                     RunPageLink = Document Type=FIELD("Document Type"),
-                                  No.=FIELD("No."),
-                                  Document Line No.=CONST(0);
+                                  "No."=FIELD("No."),
+                                  "Document Line No."=CONST(0);
                 }
                 action("S&hipments")
                 {
@@ -290,8 +290,8 @@ page 56035 "Sales Order Call Center  List"
                     Caption = 'Whse. Shipment Lines';
                     RunObject = Page 7341;
                                     RunPageLink = Source Type=CONST(37),
-                                  Source Subtype=FIELD("Document Type"),
-                                  Source No.=FIELD("No.");
+                                  "Source Subtype"=FIELD("Document Type"),
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
@@ -299,7 +299,7 @@ page 56035 "Sales Order Call Center  List"
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                                     RunPageLink = Source Document=CONST(Sales Order),
-                                  Source No.=FIELD("No.");
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }
                 separator()

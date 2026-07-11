@@ -237,7 +237,7 @@ page 67001 Docentes
                     PromotedIsBig = true;
                     RunObject = Page 124;
                                     RunPageLink = Table Name=CONST(15),
-                                  No.=FIELD("No.");
+                                  "No."=FIELD("No.");
                 }
                 separator()
                 {

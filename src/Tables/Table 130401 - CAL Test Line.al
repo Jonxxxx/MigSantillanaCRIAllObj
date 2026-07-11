@@ -43,7 +43,7 @@ table 130401 "CAL Test Line"
             Caption = 'Test Codeunit';
             Editable = false;
             TableRelation = IF (Line Type=CONST(Codeunit)) AllObjWithCaption."Object ID" WHERE ("Object Type"=CONST(Codeunit),
-                                                                                                Object Subtype=CONST(Test));
+                                                                                                "Object Subtype"=CONST(Test));
 
             trigger OnValidate()
             var

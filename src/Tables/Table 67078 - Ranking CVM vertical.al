@@ -117,11 +117,11 @@ table 67078 "Ranking CVM vertical"
         field(110; Alumnado; Decimal)
         {
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD("Cod. Local"),
-                                                                                    Cod. Nivel=FIELD("Cod. Nivel"),
-                                                                                    Cod. Grado=FIELD("Cod. Grado"),
-                                                                                    Cod. Producto=FIELD("Cod. Producto"),
-                                                                                    Linea de negocio=FIELD("Linea de negocio")));
+                                                                                    "Cod. Local" = FIELD("Cod. Local"),
+                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel"),
+                                                                                    "Cod. Grado" = FIELD("Cod. Grado"),
+                                                                                    "Cod. Producto" = FIELD("Cod. Producto"),
+                                                                                    "Linea de negocio" = FIELD("Linea de negocio")));
             Caption = 'Alumnado';
             FieldClass = FlowField;
         }
@@ -129,7 +129,7 @@ table 67078 "Ranking CVM vertical"
 
     keys
     {
-        key(Key1;"Cod. Docente","Cod. Colegio","Cod. Local","Cod. Producto","Cod. Grado")
+        key(Key1; "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado")
         {
         }
     }

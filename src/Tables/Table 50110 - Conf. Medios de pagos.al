@@ -25,7 +25,7 @@ table 50110 "Conf. Medios de pagos"
             Caption = 'Account No.';
             DataClassification = ToBeClassified;
             TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Account" WHERE("Account Type" = CONST(Posting),
-                                                                                      Blocked = CONST(false))
+                                                                                      "Blocked" = CONST(false))
             ELSE IF ("Account Type" = CONST(Customer)) Customer
             ELSE IF ("Account Type" = CONST(Vendor)) Vendor
             ELSE IF ("Account Type" = CONST("Bank Account")) "Bank Account"

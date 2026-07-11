@@ -45,32 +45,32 @@ table 67028 "Promotor - Ppto Muestras"
         field(7; "Cantidad camp. anterior"; Decimal)
         {
             CalcFormula = Sum("Hist. Promotor - Ppto Muestras".Quantity WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
-                                                                               Cod. Producto=FIELD("Cod. producto equivalente")));
+                                                                               "Cod. Producto" = FIELD("Cod. producto equivalente")));
             Caption = 'Qty. Last Campaign';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(8;"Cod. producto equivalente";Code[20])
+        field(8; "Cod. producto equivalente"; Code[20])
         {
             TableRelation = Item;
         }
-        field(9;"Cantidad consumida";Decimal)
+        field(9; "Cantidad consumida"; Decimal)
         {
-            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"),
-                                                                            Cod. Producto=FIELD("Cod. Producto")));
+            CalcFormula = Sum("Promotor - Entrega Muestras".Cantidad WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
+                                                                            "Cod. Producto" = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
-        field(10;"Cantidad seleccionada";Decimal)
+        field(10; "Cantidad seleccionada"; Decimal)
         {
         }
-        field(11;"No. documento";Code[20])
+        field(11; "No. documento"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Producto")
+        key(Key1; "Cod. Promotor", "Cod. Producto")
         {
         }
     }

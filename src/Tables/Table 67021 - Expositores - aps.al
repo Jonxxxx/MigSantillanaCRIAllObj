@@ -72,26 +72,26 @@ table 67021 "Expositores - aps"
         field(14; Comment; Boolean)
         {
             CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
-                                                                  No.=FIELD("No."),
-                                                                  Sub No.=CONST(0)));
+                                                                  "No." = FIELD("No."),
+                                                                  "Sub No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(15;"Last Date Modified";Date)
+        field(15; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(16;"Fax No.";Text[30])
+        field(16; "Fax No."; Text[30])
         {
             Caption = 'Fax No.';
         }
-        field(17;"Telex Answer Back";Text[20])
+        field(17; "Telex Answer Back"; Text[20])
         {
             Caption = 'Telex Answer Back';
         }
-        field(18;"Document ID";Code[20])
+        field(18; "Document ID"; Code[20])
         {
             Caption = 'Document ID';
 
@@ -101,12 +101,12 @@ table 67021 "Expositores - aps"
             begin
             end;
         }
-        field(19;Picture;BLOB)
+        field(19; Picture; BLOB)
         {
             Caption = 'Picture';
             SubType = Bitmap;
         }
-        field(20;"Post Code";Code[20])
+        field(20; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = "Post Code";
@@ -116,141 +116,141 @@ table 67021 "Expositores - aps"
 
             trigger OnValidate()
             begin
-                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(21;County;Text[30])
+        field(21; County; Text[30])
         {
             Caption = 'State';
         }
-        field(22;"E-Mail";Text[80])
+        field(22; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(23;"Home Page";Text[80])
+        field(23; "Home Page"; Text[80])
         {
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
-        field(24;Twitter;Text[30])
+        field(24; Twitter; Text[30])
         {
         }
-        field(25;Facebook;Text[80])
+        field(25; Facebook; Text[80])
         {
         }
-        field(26;"BB Pin";Text[10])
+        field(26; "BB Pin"; Text[10])
         {
         }
-        field(27;"No. Series";Code[10])
+        field(27; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
-        field(28;"Mobile Phone No.";Text[30])
+        field(28; "Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(29;"Date Filter";Date)
+        field(29; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(30;"Cost (LCY)";Decimal)
+        field(30; "Cost (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Cost ($)';
             Editable = false;
         }
-        field(31;"E-Mail 2;Text[80])
+        field(31; "E-Mail 2;Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(32;"Se entrego carne";Boolean)
+        field(32; "Se entrego carne"; Boolean)
         {
             Caption = 'Carnet delivered';
         }
-        field(33;"Pertenece al CDS";Boolean)
+        field(33; "Pertenece al CDS"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF "Pertenece al CDS" THEN
-                   "Ult. fecha activacion" := TODAY;
+                    "Ult. fecha activacion" := TODAY;
             end;
         }
-        field(34;"Ano inscripcion CDS";Code[4])
+        field(34; "Ano inscripcion CDS"; Code[4])
         {
             Caption = 'Subscription year CDS';
             Numeric = true;
         }
-        field(35;"Ult. fecha activacion";Date)
+        field(35; "Ult. fecha activacion"; Date)
         {
         }
-        field(36;"Eventos Planif. Pendiente Pago";Integer)
+        field(36; "Eventos Planif. Pendiente Pago"; Integer)
         {
-            CalcFormula = Count("Cab. Planif. Evento" WHERE ("Pagado"=CONST(false),
-                                                             Expositor=FIELD("No."),
-                                                             Estado=FILTER(<>Anulado)));
+            CalcFormula = Count("Cab. Planif. Evento" WHERE("Pagado" = CONST(false),
+                                                             "Expositor" = FIELD("No."),
+                                                             "Estado" = FILTER(<> Anulado)));
             FieldClass = FlowField;
 
             trigger OnLookup()
             var
                 pgCabPlanif: Page67178;
-                                 rCabPlanif: Record 67051;
+                rCabPlanif: Record 67051;
             begin
 
-                rCabPlanif.SETRANGE(rCabPlanif.Expositor,"No.");
-                                 rCabPlanif.SETRANGE(rCabPlanif.Pagado,FALSE);
-                                 pgCabPlanif.SETTABLEVIEW(rCabPlanif);
-                                 pgCabPlanif.EDITABLE(FALSE);
-                                 pgCabPlanif.LOOKUPMODE(TRUE);
-                                 pgCabPlanif.RUN;
+                rCabPlanif.SETRANGE(rCabPlanif.Expositor, "No.");
+                rCabPlanif.SETRANGE(rCabPlanif.Pagado, FALSE);
+                pgCabPlanif.SETTABLEVIEW(rCabPlanif);
+                pgCabPlanif.EDITABLE(FALSE);
+                pgCabPlanif.LOOKUPMODE(TRUE);
+                pgCabPlanif.RUN;
             end;
         }
-        field(37;"Eventos Planif. Pagados";Integer)
+        field(37; "Eventos Planif. Pagados"; Integer)
         {
-            CalcFormula = Count("Cab. Planif. Evento" WHERE ("Pagado"=CONST(true),
-                                                             Expositor=FIELD("No."),
-                                                             Estado=FILTER(<>Anulado)));
+            CalcFormula = Count("Cab. Planif. Evento" WHERE("Pagado" = CONST(true),
+                                                             "Expositor" = FIELD("No."),
+                                                             "Estado" = FILTER(<> Anulado)));
             FieldClass = FlowField;
 
             trigger OnLookup()
             var
                 pgCabPlanif: Page67178;
-                                 rCabPlanif: Record 67051;
+                rCabPlanif: Record 67051;
             begin
-                rCabPlanif.SETRANGE(rCabPlanif.Expositor,"No.");
-                                 rCabPlanif.SETRANGE(rCabPlanif.Pagado,TRUE);
-                                 pgCabPlanif.SETTABLEVIEW(rCabPlanif);
-                                 pgCabPlanif.EDITABLE(FALSE);
-                                 pgCabPlanif.LOOKUPMODE(TRUE);
-                                 pgCabPlanif.RUN;
+                rCabPlanif.SETRANGE(rCabPlanif.Expositor, "No.");
+                rCabPlanif.SETRANGE(rCabPlanif.Pagado, TRUE);
+                pgCabPlanif.SETTABLEVIEW(rCabPlanif);
+                pgCabPlanif.EDITABLE(FALSE);
+                pgCabPlanif.LOOKUPMODE(TRUE);
+                pgCabPlanif.RUN;
             end;
         }
-        field(38;"Tiene Eventos Planif";Boolean)
+        field(38; "Tiene Eventos Planif"; Boolean)
         {
-            CalcFormula = Exist("Cab. Planif. Evento" WHERE ("Expositor"=FIELD("No."),
-                                                             Estado=FILTER(<>Anulado)));
+            CalcFormula = Exist("Cab. Planif. Evento" WHERE("Expositor" = FIELD("No."),
+                                                             "Estado" = FILTER(<> Anulado)));
             FieldClass = FlowField;
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Document ID")
+        key(Key2; "Document ID")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.",Name,Field53503,Field53502,City,"Document ID")
+        fieldgroup(DropDown; "No.", Name, Field53503, Field53502, City, "Document ID")
         {
         }
     }

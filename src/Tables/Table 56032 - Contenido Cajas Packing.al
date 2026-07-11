@@ -274,66 +274,65 @@ table 56032 "Contenido Cajas Packing"
         {
             Caption = 'Picking Line No.';
             TableRelation = "Registered Whse. Activity Line"."Line No." WHERE("Activity Type" = FILTER(Pick),
-                                                                               No.=FIELD("No. Picking"),
-                                                                               Action Type=FILTER(Take));
+                                                                               "No." = FIELD("No. Picking"),
+                                                                               "Action Type" = FILTER(Take));
 
             trigger OnValidate()
             begin
-                IF RWAL.GET(RWAL."Activity Type"::Pick,"No. Picking","No. Linea Picking") THEN
-                  BEGIN
+                IF RWAL.GET(RWAL."Activity Type"::Pick, "No. Picking", "No. Linea Picking") THEN BEGIN
                     "No. Producto" := RWAL."Item No.";
                     //Cantidad := RWAL.Quantity;
                     "Cod. Unidad de Medida" := RWAL."Unit of Measure Code";
                     Descripcion := RWAL.Description;
                     "No. Linea Picking" := RWAL."Line No.";
-                    RWAL.VALIDATE("No. Packing","No. Packing");
-                    RWAL.VALIDATE("No. Caja","No. Caja");
-                   // RWAL.VALIDATE("No. Linea Packing","No. Linea");
+                    RWAL.VALIDATE("No. Packing", "No. Packing");
+                    RWAL.VALIDATE("No. Caja", "No. Caja");
+                    // RWAL.VALIDATE("No. Linea Packing","No. Linea");
                     RWAL.MODIFY(TRUE);
-                  END;
+                END;
             end;
         }
-        field(11;"Peso Calculado";Decimal)
+        field(11; "Peso Calculado"; Decimal)
         {
             Caption = 'Calculated weight';
         }
-        field(12;"Peso de la Caja";Decimal)
+        field(12; "Peso de la Caja"; Decimal)
         {
             Caption = 'Calculated weight';
         }
-        field(13;"Peso real";Decimal)
+        field(13; "Peso real"; Decimal)
         {
             Caption = 'Real weight';
         }
-        field(14;Diferencia;Decimal)
+        field(14; Diferencia; Decimal)
         {
             Caption = 'Diference';
         }
-        field(15;"Serie de etiquetas";Code[20])
+        field(15; "Serie de etiquetas"; Code[20])
         {
             Caption = 'Tag Series';
         }
-        field(16;"No. Pedido";Code[20])
+        field(16; "No. Pedido"; Code[20])
         {
             Caption = 'N  Pedido';
             TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
-                                                                                    Estado packing=CONST(Listo))
+                                                                                    "Estado packing"=CONST(Listo))
                                                                                     ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true),
-                                                                                                                                                           Estado packing=CONST(Listo))
+                                                                                                                                                           "Estado packing"=CONST(Listo))
                                                                                                                                                            ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false),
-                                                                                                                                                                                                                                   Estado packing=CONST(Listo));
+                                                                                                                                                                                                                                   "Estado packing"=CONST(Listo));
         }
-        field(17;"No. Linea Pedido";Integer)
+        field(17; "No. Linea Pedido"; Integer)
         {
             Caption = 'Order Line No.';
             NotBlank = true;
             TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                         Document No.=FIELD("No. Pedido"),
-                                                                                         Type=CONST(Item))
+                                                                                         "Document No."=FIELD("No. Pedido"),
+                                                                                         "Type"=CONST(Item))
                                                                                          ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"),
-                                                                                                                                                                     Derived From Line No.=CONST(0))
+                                                                                                                                                                     "Derived From Line No."=CONST(0))
                                                                                                                                                                      ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Line"."Line No." WHERE ("Document No."=FIELD("No. Pedido"),
-                                                                                                                                                                                                                                                  Derived From Line No.=CONST(0));
+                                                                                                                                                                                                                                                  "Derived From Line No."=CONST(0));
 
             trigger OnValidate()
             var
@@ -363,7 +362,7 @@ table 56032 "Contenido Cajas Packing"
         field(18;"No. Palet";Code[20])
         {
             CalcFormula = Lookup("Lin. Packing"."No. Palet" WHERE ("No."=FIELD("No. Packing"),
-                                                                   No. Caja=FIELD("No. Caja")));
+                                                                   "No. Caja"=FIELD("No. Caja")));
             Description = '#842';
             FieldClass = FlowField;
         }

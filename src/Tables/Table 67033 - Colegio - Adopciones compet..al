@@ -170,12 +170,12 @@ table 67033 "Colegio - Adopciones compet."
         field(18;"Cantidad Alumnos";Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                                          Cod. Colegio=FIELD("Cod. Colegio"),
-                                                                                          Cod. Local=FIELD("Cod. Local"),
-                                                                                          Cod. Nivel=FIELD("Cod. Nivel"),
-                                                                                          Cod. Grado=FIELD("Cod. Grado"),
-                                                                                          Cod. Promotor=FIELD("Cod. Promotor"),
-                                                                                          Cod. Producto=FIELD("Cod. Producto")));
+                                                                                          "Cod. Colegio"=FIELD("Cod. Colegio"),
+                                                                                          "Cod. Local"=FIELD("Cod. Local"),
+                                                                                          "Cod. Nivel"=FIELD("Cod. Nivel"),
+                                                                                          "Cod. Grado"=FIELD("Cod. Grado"),
+                                                                                          "Cod. Promotor"=FIELD("Cod. Promotor"),
+                                                                                          "Cod. Producto"=FIELD("Cod. Producto")));
             DecimalPlaces = 0:0;
             FieldClass = FlowField;
         }
@@ -406,7 +406,7 @@ table 67033 "Colegio - Adopciones compet."
         field(41;"Cod. Producto Editora";Code[20])
         {
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                     Nivel=FIELD("Cod. Nivel"));
+                                                                     "Nivel"=FIELD("Cod. Nivel"));
 
             trigger OnValidate()
             begin

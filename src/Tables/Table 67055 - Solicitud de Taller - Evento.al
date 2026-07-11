@@ -136,34 +136,32 @@ table 67055 "Solicitud de Taller - Evento"
         field(7; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Promotor=FIELD("Cod. promotor"));
+                                                                  "Cod. Promotor" = FIELD("Cod. promotor"));
         }
-        field(8;"Cod. Expositor";Code[20])
+        field(8; "Cod. Expositor"; Code[20])
         {
 
             trigger OnValidate()
             begin
-                IF ExpositorDoc.GET("Cod. Expositor") THEN
-                   BEGIN
+                IF ExpositorDoc.GET("Cod. Expositor") THEN BEGIN
                     "Nombre expositor" := ExpositorDoc."Full Name";
-                    "Tipo de Expositor"   := 0;
-                   END
+                    "Tipo de Expositor" := 0;
+                END
                 ELSE
-                IF ExpositorProv.GET("Cod. Expositor") THEN
-                   BEGIN
-                    "Nombre expositor" := ExpositorProv.Name;
-                    "Tipo de Expositor"   := 0;
-                   END
-                ELSE
-                   ERROR(Err001);
+                    IF ExpositorProv.GET("Cod. Expositor") THEN BEGIN
+                        "Nombre expositor" := ExpositorProv.Name;
+                        "Tipo de Expositor" := 0;
+                    END
+                    ELSE
+                        ERROR(Err001);
             end;
         }
-        field(9;Sala;Code[10])
+        field(9; Sala; Code[10])
         {
         }
-        field(10;"Cod. Colegio";Code[20])
+        field(10; "Cod. Colegio"; Code[20])
         {
-            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE ("Cod. Promotor"=FIELD("Cod. promotor"));
+            TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE("Cod. Promotor" = FIELD("Cod. promotor"));
 
             trigger OnValidate()
             var
@@ -185,61 +183,61 @@ table 67055 "Solicitud de Taller - Evento"
             begin
 
                 //inicializamos los valores del responsable
-                "Tipo Responsable"                  := 0;
-                "Cod. Docente responsable"          := '';
-                "Nombre responsable"                := '';
-                "Cod. Cargo Responsable"            := '';
-                "Descripci n Cargo Responsable"     := '';
-                "Telefono Responsable"              := '';
-                "No. celular responsable"           := '';
-                "E-Mail Docente Responsable"        := '';
+                "Tipo Responsable" := 0;
+                "Cod. Docente responsable" := '';
+                "Nombre responsable" := '';
+                "Cod. Cargo Responsable" := '';
+                "Descripci n Cargo Responsable" := '';
+                "Telefono Responsable" := '';
+                "No. celular responsable" := '';
+                "E-Mail Docente Responsable" := '';
 
                 IF "Cod. Colegio" <> '' THEN BEGIN
-                  wFiltroColegio :=  "Cod. Colegio";
-                  Colegio.GET("Cod. Colegio");
-                //Peru  Delegacion       := Colegio.Delegacion;
-                  "Nombre Colegio" := Colegio.Name;
-                  "Codigo Distrito Colegio"  := Colegio.City;
-                //Peru  Departamento     := Colegio.Departamento;
-                //Peru  "Nombre Distrito Colegio"        := Colegio.Distritos;
-                //Peru  Provincia        := Colegio.Provincia;
-                  "Territory Code" := Colegio."Territory Code";
-                  "Country/Region Code" := Colegio."Country/Region Code";
-                //Peru  "Codigo Postal" := Colegio."Codigo Postal";
-                  "Post Code" := Colegio."Post Code";
-                  City := Colegio.City;
-                  County := Colegio.County;
-                  "Direccion Colegio" := Colegio.Address;
-                  Referencia   := Colegio."Address 2;
+                    wFiltroColegio := "Cod. Colegio";
+                    Colegio.GET("Cod. Colegio");
+                    //Peru  Delegacion       := Colegio.Delegacion;
+                    "Nombre Colegio" := Colegio.Name;
+                    "Codigo Distrito Colegio" := Colegio.City;
+                    //Peru  Departamento     := Colegio.Departamento;
+                    //Peru  "Nombre Distrito Colegio"        := Colegio.Distritos;
+                    //Peru  Provincia        := Colegio.Provincia;
+                    "Territory Code" := Colegio."Territory Code";
+                    "Country/Region Code" := Colegio."Country/Region Code";
+                    //Peru  "Codigo Postal" := Colegio."Codigo Postal";
+                    "Post Code" := Colegio."Post Code";
+                    City := Colegio.City;
+                    County := Colegio.County;
+                    "Direccion Colegio" := Colegio.Address;
+                    Referencia := Colegio."Address 2;
                   "Telefono 1 Colegio" := Colegio."Phone No.";
-                  "Telefono 2 Colegio" := Colegio."Mobile Phone No.";
+                    "Telefono 2 Colegio" := Colegio."Mobile Phone No.";
 
-                  // Buscamos el nivel
+                    // Buscamos el nivel
 
-                  "Cod. Nivel" := '';
-                  "Cod. Turno" := '';
-                  "Cod. Local" := '';
-                  PromotorRutas.RESET;
-                  PromotorRutas.SETRANGE("Cod. Promotor", "Cod. promotor");
-                  IF PromotorRutas.FINDSET THEN BEGIN
-                    ColegioNivel.RESET;
-                    ColegioNivel.SETRANGE("Cod. Colegio","Cod. Colegio");
-                    ColegioNivel.SETRANGE(Ruta, PromotorRutas."Cod. Ruta");
-                    IF ColegioNivel.FINDSET THEN BEGIN
-                      "Cod. Nivel" := ColegioNivel."Cod. Nivel";
-                      "Cod. Turno" := ColegioNivel.Turno;
-                      "Cod. Local" := ColegioNivel."Cod. Local";
+                    "Cod. Nivel" := '';
+                    "Cod. Turno" := '';
+                    "Cod. Local" := '';
+                    PromotorRutas.RESET;
+                    PromotorRutas.SETRANGE("Cod. Promotor", "Cod. promotor");
+                    IF PromotorRutas.FINDSET THEN BEGIN
+                        ColegioNivel.RESET;
+                        ColegioNivel.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        ColegioNivel.SETRANGE(Ruta, PromotorRutas."Cod. Ruta");
+                        IF ColegioNivel.FINDSET THEN BEGIN
+                            "Cod. Nivel" := ColegioNivel."Cod. Nivel";
+                            "Cod. Turno" := ColegioNivel.Turno;
+                            "Cod. Local" := ColegioNivel."Cod. Local";
+                        END;
                     END;
-                  END;
-                   //Busco los Docentes del Colegio
-                  CDS(wFiltroColegio);
+                    //Busco los Docentes del Colegio
+                    CDS(wFiltroColegio);
                 END;
             end;
         }
-        field(11;"Nombre Colegio";Text[60])
+        field(11; "Nombre Colegio"; Text[60])
         {
         }
-        field(12;"Cod. Local";Code[20])
+        field(12; "Cod. Local"; Code[20])
         {
             TableRelation = IF (Grupo de Colegios=CONST(false)) "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
         }
@@ -313,7 +311,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(21;"Cod. Docente responsable";Code[20])
         {
             TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                       Pertenece al CDS=CONST(true));
+                                                                       "Pertenece al CDS"=CONST(true));
 
             trigger OnLookup()
             var
@@ -321,7 +319,7 @@ table 67055 "Solicitud de Taller - Evento"
                 pColDoc: Page67045;
             begin
 
-                //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),Pertenece al CDS=CONST(true))
+                //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),"Pertenece al CDS"=CONST(true))
                 IF "Tipo Responsable" = "Tipo Responsable"::CDS THEN BEGIN
                   rColDoc.RESET;
                   rColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
@@ -926,9 +924,9 @@ table 67055 "Solicitud de Taller - Evento"
         field(67047;"Fecha programada";Date)
         {
             CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE ("Cod. Taller - Evento"=FIELD("Cod. evento programado"),
-                                                                                             Tipo de Expositor=FIELD("Tipo de Expositor"),
-                                                                                             Expositor=FIELD("Cod. Expositor"),
-                                                                                             Secuencia=FIELD("Secuencia Cod. Evento Progr.")));
+                                                                                             "Tipo de Expositor"=FIELD("Tipo de Expositor"),
+                                                                                             "Expositor"=FIELD("Cod. Expositor"),
+                                                                                             "Secuencia"=FIELD("Secuencia Cod. Evento Progr.")));
             FieldClass = FlowField;
         }
         field(67048;"Secuencia Cod. Evento Progr.";Integer)

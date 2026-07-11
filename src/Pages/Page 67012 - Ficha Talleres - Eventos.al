@@ -79,8 +79,8 @@ page 67012 "Ficha Talleres - Eventos"
                     PromotedIsBig = true;
                     RunObject = Page 67014;
                                     RunPageLink = Cod. Taller - Evento=FIELD("No."),
-                                  Tipo Evento=FIELD("Tipo de Evento"),
-                                  Secuencia=CONST(0);
+                                  "Tipo Evento"=FIELD("Tipo de Evento"),
+                                  "Secuencia"=CONST(0);
                 }
             }
         }

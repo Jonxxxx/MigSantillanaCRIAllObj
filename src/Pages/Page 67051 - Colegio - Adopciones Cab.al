@@ -226,12 +226,12 @@ page 67051 "Colegio - Adopciones Cab"
             part(TmpAdopciones; 67052)
             {
                 SubPageLink = Cod. Colegio=FIELD("Cod. Colegio"),
-                              Cod. Nivel=FIELD(FILTER(Filtro Nivel)),
-                              Cod. Turno=FIELD("Turno"),
-                              Cod. Promotor=FIELD("Cod. Promotor"),
-                              Linea de negocio=FIELD(FILTER(Filtro Linea de negocio)),
-                              Serie=FIELD(FILTER(Filtro Serie)),
-                              Sub Familia=FIELD(FILTER(Filtro Sub Familia));
+                              "Cod. Nivel"=FIELD(FILTER(Filtro Nivel)),
+                              "Cod. Turno"=FIELD("Turno"),
+                              "Cod. Promotor"=FIELD("Cod. Promotor"),
+                              "Linea de negocio"=FIELD(FILTER(Filtro Linea de negocio)),
+                              "Serie"=FIELD(FILTER(Filtro Serie)),
+                              "Sub Familia"=FIELD(FILTER(Filtro Sub Familia));
             }
         }
     }

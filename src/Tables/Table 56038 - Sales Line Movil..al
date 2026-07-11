@@ -307,7 +307,7 @@ table 56038 "Sales Line Movil."
             Caption = 'Purch. Order Line No.';
             Editable = false;
             TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                            Document No.=FIELD("Purchase Order No."));
+                                                                                            "Document No."=FIELD("Purchase Order No."));
         }
         field(73;"Drop Shipment";Boolean)
         {
@@ -346,7 +346,7 @@ table 56038 "Sales Line Movil."
             Caption = 'Attached to Line No.';
             Editable = false;
             TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=FIELD("Document Type"),
-                                                           Document No.=FIELD("Document No."));
+                                                           "Document No."=FIELD("Document No."));
         }
         field(81;"Exit Point";Code[10])
         {
@@ -416,10 +416,10 @@ table 56038 "Sales Line Movil."
         field(95;"Reserved Quantity";Decimal)
         {
             CalcFormula = -Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
-                                                                   Source Ref. No.=FIELD("Line No."),
-                                                                   Source Type=CONST(37),
-                                                                   Source Subtype=FIELD("Document Type"),
-                                                                   Reservation Status=CONST(Reservation)));
+                                                                   "Source Ref. No."=FIELD("Line No."),
+                                                                   "Source Type"=CONST(37),
+                                                                   "Source Subtype"=FIELD("Document Type"),
+                                                                   "Reservation Status"=CONST(Reservation)));
             Caption = 'Reserved Quantity';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -442,7 +442,7 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Blanket Order Line No.';
             TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
-                                                           Document No.=FIELD("Blanket Order No."));
+                                                           "Document No."=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -749,10 +749,10 @@ table 56038 "Sales Line Movil."
         field(5495;"Reserved Qty. (Base)";Decimal)
         {
             CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
-                                                                            Source Ref. No.=FIELD("Line No."),
-                                                                            Source Type=CONST(37),
-                                                                            Source Subtype=FIELD("Document Type"),
-                                                                            Reservation Status=CONST(Reservation)));
+                                                                            "Source Ref. No."=FIELD("Line No."),
+                                                                            "Source Type"=CONST(37),
+                                                                            "Source Subtype"=FIELD("Document Type"),
+                                                                            "Reservation Status"=CONST(Reservation)));
             Caption = 'Reserved Qty. (Base)';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -794,8 +794,8 @@ table 56038 "Sales Line Movil."
         field(5702;"Substitution Available";Boolean)
         {
             CalcFormula = Exist("Item Substitution" WHERE ("Type"=CONST(Item),
-                                                           No.=FIELD("No."),
-                                                           Substitute Type=CONST(Item)));
+                                                           "No."=FIELD("No."),
+                                                           "Substitute Type"=CONST(Item)));
             Caption = 'Substitution Available';
             Editable = false;
             FieldClass = FlowField;
@@ -869,15 +869,15 @@ table 56038 "Sales Line Movil."
         {
             Caption = 'Special Order Purch. Line No.';
             TableRelation = IF (Special Order=CONST(true)) "Purchase Line"."Line No." WHERE ("Document Type"=CONST(Order),
-                                                                                            Document No.=FIELD("Special Order Purchase No."));
+                                                                                            "Document No."=FIELD("Special Order Purchase No."));
         }
         field(5750;"Whse. Outstanding Qty. (Base)";Decimal)
         {
             BlankZero = true;
             CalcFormula = Sum("Warehouse Shipment Line"."Qty. Outstanding (Base)" WHERE ("Source Type"=CONST(37),
-                                                                                         Source Subtype=FIELD("Document Type"),
-                                                                                         Source No.=FIELD("Document No."),
-                                                                                         Source Line No.=FIELD("Line No.")));
+                                                                                         "Source Subtype"=FIELD("Document Type"),
+                                                                                         "Source No."=FIELD("Document No."),
+                                                                                         "Source Line No."=FIELD("Line No.")));
             Caption = 'Whse. Outstanding Qty. (Base)';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -930,8 +930,8 @@ table 56038 "Sales Line Movil."
         field(5801;"Qty. to Assign";Decimal)
         {
             CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. to Assign" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                                       Document No.=FIELD("Document No."),
-                                                                                       Document Line No.=FIELD("Line No.")));
+                                                                                       "Document No."=FIELD("Document No."),
+                                                                                       "Document Line No."=FIELD("Line No.")));
             Caption = 'Qty. to Assign';
             DecimalPlaces = 0:5;
             Editable = false;
@@ -940,8 +940,8 @@ table 56038 "Sales Line Movil."
         field(5802;"Qty. Assigned";Decimal)
         {
             CalcFormula = Sum("Item Charge Assignment (Sales)"."Qty. Assigned" WHERE ("Document Type"=FIELD("Document Type"),
-                                                                                      Document No.=FIELD("Document No."),
-                                                                                      Document Line No.=FIELD("Line No.")));
+                                                                                      "Document No."=FIELD("Document No."),
+                                                                                      "Document Line No."=FIELD("Line No.")));
             Caption = 'Qty Assig';
             DecimalPlaces = 0:5;
             Editable = false;

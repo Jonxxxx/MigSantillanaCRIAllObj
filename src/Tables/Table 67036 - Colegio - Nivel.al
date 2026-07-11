@@ -94,58 +94,57 @@ table 67036 "Colegio - Nivel"
         field(7; "Dto. Ticket Colegio"; Decimal)
         {
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD("Cod. Local"),
-                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
+                                                                                    "Cod. Local" = FIELD("Cod. Local"),
+                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(8;"Dto. Ticket Padres";Decimal)
+        field(8; "Dto. Ticket Padres"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                   Cod. Local=FIELD("Cod. Local"),
-                                                                                   Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                   "Cod. Local" = FIELD("Cod. Local"),
+                                                                                   "Cod. Nivel" = FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(9;"Dto. Feria Colegio";Decimal)
+        field(9; "Dto. Feria Colegio"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                          Cod. Local=FIELD("Cod. Local"),
-                                                                                          Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                          "Cod. Local" = FIELD("Cod. Local"),
+                                                                                          "Cod. Nivel" = FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(10;"Dto. Feria Padres";Decimal)
+        field(10; "Dto. Feria Padres"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                         Cod. Local=FIELD("Cod. Local"),
-                                                                                         Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                         "Cod. Local" = FIELD("Cod. Local"),
+                                                                                         "Cod. Nivel" = FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(11;Adoptado;Option)
+        field(11; Adoptado; Option)
         {
             OptionCaption = ' ,Yes,No';
             OptionMembers = " ","S ",No;
 
             trigger OnValidate()
             begin
-                IF Adoptado = 1 THEN
-                   BEGIN
+                IF Adoptado = 1 THEN BEGIN
                     ColAdopcion.RESET;
-                    ColAdopcion.SETRANGE("Cod. Colegio","Cod. Colegio");
-                    ColAdopcion.SETRANGE("Cod. Turno",Turno);
-                    ColAdopcion.SETRANGE("Cod. Nivel","Cod. Nivel");
-                    ColAdopcion.SETRANGE(Adopcion,1,2);
+                    ColAdopcion.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                    ColAdopcion.SETRANGE("Cod. Turno", Turno);
+                    ColAdopcion.SETRANGE("Cod. Nivel", "Cod. Nivel");
+                    ColAdopcion.SETRANGE(Adopcion, 1, 2);
                     IF NOT ColAdopcion.FINDFIRST THEN
-                       ERROR(STRSUBSTNO(Err001,Adoptado,ColAdopcion.GETFILTERS));
-                   END;
+                        ERROR(STRSUBSTNO(Err001, Adoptado, ColAdopcion.GETFILTERS));
+                END;
             end;
         }
-        field(12;"Estatus observado";Boolean)
+        field(12; "Estatus observado"; Boolean)
         {
         }
-        field(13;City;Text[30])
+        field(13; City; Text[30])
         {
             Caption = 'City';
 
@@ -161,7 +160,7 @@ table 67036 "Colegio - Nivel"
                 VALIDATE("Codigo Postal");
             end;
         }
-        field(14;"Post Code";Code[20])
+        field(14; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             //This property is currently not supported
@@ -181,7 +180,7 @@ table 67036 "Colegio - Nivel"
                 VALIDATE("Codigo Postal");
             end;
         }
-        field(15;County;Text[30])
+        field(15; County; Text[30])
         {
             Caption = 'State';
 
@@ -195,87 +194,87 @@ table 67036 "Colegio - Nivel"
                 VALIDATE("Codigo Postal");
             end;
         }
-        field(16;"Cod. Promotor";Code[20])
+        field(16; "Cod. Promotor"; Code[20])
         {
             TableRelation = "Salesperson/Purchaser";
         }
-        field(17;"Dto. Docente";Decimal)
+        field(17; "Dto. Docente"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD("Cod. Local"),
-                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                    "Cod. Local" = FIELD("Cod. Local"),
+                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(53502;Departamento;Text[30])
+        field(53502; Departamento; Text[30])
         {
             Caption = 'District';
         }
-        field(53503;Distritos;Text[30])
+        field(53503; Distritos; Text[30])
         {
         }
-        field(53504;Provincia;Text[30])
+        field(53504; Provincia; Text[30])
         {
         }
-        field(53505;"Territory Code";Code[10])
+        field(53505; "Territory Code"; Code[10])
         {
             Caption = 'Territory Code';
             TableRelation = Territory;
         }
-        field(53506;"Country/Region Code";Code[10])
+        field(53506; "Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(67000;"Codigo Postal";Code[20])
+        field(67000; "Codigo Postal"; Code[20])
         {
 
             trigger OnValidate()
             begin
-                   //"Codigo Postal" := County + "Post Code" + City;
+                //"Codigo Postal" := County + "Post Code" + City;
             end;
         }
-        field(67001;"Total adopcion";Decimal)
+        field(67001; "Total adopcion"; Decimal)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                       Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                       "Cod. Nivel" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(67002;"Total adopcion real";Decimal)
+        field(67002; "Total adopcion real"; Decimal)
         {
-            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                    Cod. Nivel=FIELD("Cod. Nivel")));
+            CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(67003;"Nombre Colegio";Text[100])
+        field(67003; "Nombre Colegio"; Text[100])
         {
         }
-        field(67004;Correspondencia;Boolean)
+        field(67004; Correspondencia; Boolean)
         {
         }
-        field(67005;"Nombre Promotor";Text[100])
+        field(67005; "Nombre Promotor"; Text[100])
         {
-            CalcFormula = Lookup(Vendor.Name WHERE ("No."=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup(Vendor.Name WHERE("No." = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Nivel",Turno,Ruta)
+        key(Key1; "Cod. Colegio", "Cod. Nivel", Turno, Ruta)
         {
         }
-        key(Key2;"Cod. Nivel")
+        key(Key2; "Cod. Nivel")
         {
         }
-        key(Key3;"Cod. Promotor","Categoria colegio")
+        key(Key3; "Cod. Promotor", "Categoria colegio")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Colegio","Cod. Nivel",Turno)
+        fieldgroup(DropDown; "Cod. Colegio", "Cod. Nivel", Turno)
         {
         }
     }
@@ -296,7 +295,7 @@ table 67036 "Colegio - Nivel"
         RD: Record 67009;
         Nivel: Record 56005;
         Rutas: Page67009;
-                   Rutas2: Page67008;
-                   Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';
+        Rutas2: Page67008;
+        Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';
 }
 

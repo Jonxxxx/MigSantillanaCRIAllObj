@@ -34,7 +34,7 @@ table 75009 "Conf. Estructura Analitica"
             BlankZero = true;
             Caption = 'Campo';
             TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27),
-                                                                    Field No=FILTER(56022));
+                                                                    "Field No" = FILTER(56022));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -42,26 +42,26 @@ table 75009 "Conf. Estructura Analitica"
             trigger OnValidate()
             begin
                 IF "Id Field" <> 0 THEN BEGIN
-                  // De momento limitados los ids de campos
-                  IF NOT ("Id Field" IN [56022]) THEN
-                    ERROR(Text001, "Id Field");
+                    // De momento limitados los ids de campos
+                    IF NOT ("Id Field" IN [56022]) THEN
+                        ERROR(Text001, "Id Field");
                 END;
-                pFiltrCmp.TestCampo(27,"Id Field");
+                pFiltrCmp.TestCampo(27, "Id Field");
                 Valor := '';
             end;
         }
-        field(101;FieldName;Text[30])
+        field(101; FieldName; Text[30])
         {
-            CalcFormula = Lookup(Field."Field Caption" WHERE ("TableNo"=CONST(27),
-                                                              No.=FIELD("Id Field")));
+            CalcFormula = Lookup(Field."Field Caption" WHERE("TableNo" = CONST(27),
+                                                              "No." = FIELD("Id Field")));
             Caption = 'Nombre Campo';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(110;Valor;Text[30])
+        field(110; Valor; Text[30])
         {
-            TableRelation = "Filtro Valor Campo Buffer".Value WHERE ("Table Id"=CONST(27),
-                                                                     Field No=FIELD("Id Field"));
+            TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
+                                                                     "Field No" = FIELD("Id Field"));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -70,7 +70,7 @@ table 75009 "Conf. Estructura Analitica"
 
     keys
     {
-        key(Key1;Id)
+        key(Key1; Id)
         {
         }
     }
@@ -91,7 +91,7 @@ table 75009 "Conf. Estructura Analitica"
 
     var
         pFiltrCmp: Page75014;
-                       Text001: Label 'El campo %1 No est  permitido';
+        Text001: Label 'El campo %1 No est  permitido';
         Text002: Label 'Ya existe el registro';
 
     procedure CompDupl()
@@ -102,11 +102,11 @@ table 75009 "Conf. Estructura Analitica"
         // Comprueba Duplicidad
 
         CLEAR(lrConfAn);
-        lrConfAn.SETRANGE(Codigo    , Codigo);
+        lrConfAn.SETRANGE(Codigo, Codigo);
         lrConfAn.SETRANGE("Id Field", "Id Field");
-        lrConfAn.SETFILTER(Id, '<>%1' , Id);
+        lrConfAn.SETFILTER(Id, '<>%1', Id);
         IF lrConfAn.FINDFIRST THEN
-          ERROR(Text002);
+            ERROR(Text002);
     end;
 }
 

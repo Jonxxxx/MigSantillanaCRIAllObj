@@ -191,8 +191,8 @@ table 80000 "Tmp Sales Invoice Header"
         field(46; Comment; Boolean)
         {
             CalcFormula = Exist("Sales Comment Line" WHERE("Document Type" = CONST(Posted Invoice),
-                                                            No.=FIELD("No."),
-                                                            Document Line No.=CONST(0)));
+                                                            "No."=FIELD("No."),
+                                                            "Document Line No."=CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;

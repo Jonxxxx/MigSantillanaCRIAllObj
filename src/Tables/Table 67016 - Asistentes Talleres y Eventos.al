@@ -133,13 +133,13 @@ table 67016 "Asistentes Talleres y Eventos"
         field(22; "Fecha programacion"; Date)
         {
             CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
-                                                                                             Tipo Evento=FIELD("Tipo Evento"),
-                                                                                             Tipo de Expositor=FIELD("Tipo de Expositor"),
-                                                                                             Secuencia=FIELD("Secuencia"),
-                                                                                             No. Linea=FIELD("No Linea Programac.")));
+                                                                                             "Tipo Evento" = FIELD("Tipo Evento"),
+                                                                                             "Tipo de Expositor" = FIELD("Tipo de Expositor"),
+                                                                                             "Secuencia" = FIELD("Secuencia"),
+                                                                                             "No. Linea" = FIELD("No Linea Programac.")));
             FieldClass = FlowField;
         }
-        field(23;"Document ID";Text[20])
+        field(23; "Document ID"; Text[20])
         {
             Caption = 'Document ID';
 
@@ -149,14 +149,14 @@ table 67016 "Asistentes Talleres y Eventos"
             begin
             end;
         }
-        field(24;"No Linea Programac.";Integer)
+        field(24; "No Linea Programac."; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Solicitud","Cod. Taller - Evento","Cod. Expositor",Secuencia,"No Linea Programac.","Cod. Docente")
+        key(Key1; "No. Solicitud", "Cod. Taller - Evento", "Cod. Expositor", Secuencia, "No Linea Programac.", "Cod. Docente")
         {
         }
     }
@@ -168,7 +168,7 @@ table 67016 "Asistentes Talleres y Eventos"
     trigger OnDelete()
     begin
         IF Asistio THEN
-           ERROR(STRSUBSTNO(Err002,FIELDCAPTION(Asistio),Asistio));
+            ERROR(STRSUBSTNO(Err002, FIELDCAPTION(Asistio), Asistio));
     end;
 
     trigger OnInsert()
@@ -177,17 +177,17 @@ table 67016 "Asistentes Talleres y Eventos"
         rSol: Record 67055;
     begin
         CabPlanEvent.RESET;
-        CabPlanEvent.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-        CabPlanEvent.SETRANGE(Expositor,"Cod. Expositor");
-        CabPlanEvent.SETRANGE(Secuencia,Secuencia);
-        CabPlanEvent.SETRANGE("Tipo Evento","Tipo Evento");
+        CabPlanEvent.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+        CabPlanEvent.SETRANGE(Expositor, "Cod. Expositor");
+        CabPlanEvent.SETRANGE(Secuencia, Secuencia);
+        CabPlanEvent.SETRANGE("Tipo Evento", "Tipo Evento");
         CabPlanEvent.FINDFIRST;
 
 
-        "Fecha del Evento"  := CabPlanEvent."Fecha Inicio";
+        "Fecha del Evento" := CabPlanEvent."Fecha Inicio";
         "Fecha inscripcion" := TODAY;
-        VALIDATE("Cod. Colegio",CabPlanEvent."Cod. Colegio");
-        VALIDATE("Cod. Promotor",CabPlanEvent."Cod. Promotor");
+        VALIDATE("Cod. Colegio", CabPlanEvent."Cod. Colegio");
+        VALIDATE("Cod. Promotor", CabPlanEvent."Cod. Promotor");
 
 
         rProgEv.SETRANGE(rProgEv."Cod. Taller - Evento", "Cod. Taller - Evento");
@@ -199,22 +199,22 @@ table 67016 "Asistentes Talleres y Eventos"
         rProgEv.FINDFIRST;
 
         IF CabPlanEvent."No. Solicitud" <> '' THEN BEGIN
-          rSol.GET(CabPlanEvent."No. Solicitud");
-          wAsistentesEsp := rSol."Asistentes Esperados";
+            rSol.GET(CabPlanEvent."No. Solicitud");
+            wAsistentesEsp := rSol."Asistentes Esperados";
         END
         ELSE
-         wAsistentesEsp := CabPlanEvent."Asistentes esperados";
+            wAsistentesEsp := CabPlanEvent."Asistentes esperados";
 
         Asist.RESET;
-        Asist.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-        Asist.SETRANGE("Tipo Evento","Tipo Evento");
-        Asist.SETRANGE("Cod. Expositor","Cod. Expositor");
-        Asist.SETRANGE(Secuencia,Secuencia);
+        Asist.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+        Asist.SETRANGE("Tipo Evento", "Tipo Evento");
+        Asist.SETRANGE("Cod. Expositor", "Cod. Expositor");
+        Asist.SETRANGE(Secuencia, Secuencia);
         //Asist.SETRANGE("Fecha programacion","Fecha programacion");
         Asist.SETRANGE("No Linea Programac.", "No Linea Programac.");
         //IF CabPlanEvent."Asistentes esperados" < Asist.COUNT +1 THEN
-        IF wAsistentesEsp < Asist.COUNT +1 THEN
-          ERROR(Err001);
+        IF wAsistentesEsp < Asist.COUNT + 1 THEN
+            ERROR(Err001);
     end;
 
     var

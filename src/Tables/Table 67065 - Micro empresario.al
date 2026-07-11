@@ -77,26 +77,26 @@ table 67065 "Micro empresario"
         field(38; Comment; Boolean)
         {
             CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
-                                                                  No.=FIELD("No."),
-                                                                  Sub No.=CONST(0)));
+                                                                  "No." = FIELD("No."),
+                                                                  "Sub No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(54;"Last Date Modified";Date)
+        field(54; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(84;"Fax No.";Text[30])
+        field(84; "Fax No."; Text[30])
         {
             Caption = 'Fax No.';
         }
-        field(85;"Telex Answer Back";Text[20])
+        field(85; "Telex Answer Back"; Text[20])
         {
             Caption = 'Telex Answer Back';
         }
-        field(86;"VAT Registration No.";Text[20])
+        field(86; "VAT Registration No."; Text[20])
         {
             Caption = 'VAT Registration No.';
 
@@ -106,12 +106,12 @@ table 67065 "Micro empresario"
             begin
             end;
         }
-        field(89;Picture;BLOB)
+        field(89; Picture; BLOB)
         {
             Caption = 'Picture';
             SubType = Bitmap;
         }
-        field(91;"Post Code";Code[20])
+        field(91; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = "Post Code";
@@ -121,29 +121,29 @@ table 67065 "Micro empresario"
 
             trigger OnValidate()
             begin
-                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(92;County;Text[30])
+        field(92; County; Text[30])
         {
             Caption = 'State';
         }
-        field(102;"E-Mail";Text[80])
+        field(102; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(103;"Home Page";Text[80])
+        field(103; "Home Page"; Text[80])
         {
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
-        field(107;"No. Series";Code[10])
+        field(107; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
-        field(5050;Type;Option)
+        field(5050; Type; Option)
         {
             Caption = 'Type';
             OptionCaption = 'Company,Person';
@@ -152,14 +152,14 @@ table 67065 "Micro empresario"
             trigger OnValidate()
             begin
                 IF CurrFieldNo <> 0 THEN BEGIN
-                  MODIFY;
+                    MODIFY;
                 END;
             end;
         }
-        field(5051;"Company No.";Code[20])
+        field(5051; "Company No."; Code[20])
         {
             Caption = 'Company No.';
-            TableRelation = Contact WHERE ("Type"=CONST(Company));
+            TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
             var
@@ -175,18 +175,18 @@ table 67065 "Micro empresario"
             begin
             end;
         }
-        field(5052;"Company Name";Text[70])
+        field(5052; "Company Name"; Text[70])
         {
             Caption = 'Company Name';
             Editable = false;
         }
-        field(5053;"Lookup Contact No.";Code[20])
+        field(5053; "Lookup Contact No."; Code[20])
         {
             Caption = 'Lookup Contact No.';
             Editable = false;
             TableRelation = Contact;
         }
-        field(5054;"First Name";Text[30])
+        field(5054; "First Name"; Text[30])
         {
             Caption = 'First Name';
 
@@ -196,7 +196,7 @@ table 67065 "Micro empresario"
                 //ProcessNameChange;
             end;
         }
-        field(5055;"Middle Name";Text[30])
+        field(5055; "Middle Name"; Text[30])
         {
             Caption = 'Middle Name';
 
@@ -206,7 +206,7 @@ table 67065 "Micro empresario"
                 //ProcessNameChange;
             end;
         }
-        field(5056;Surname;Text[30])
+        field(5056; Surname; Text[30])
         {
             Caption = 'Surname';
 
@@ -216,166 +216,166 @@ table 67065 "Micro empresario"
                 //ProcessNameChange;
             end;
         }
-        field(5058;"Job Title";Text[30])
+        field(5058; "Job Title"; Text[30])
         {
             Caption = 'Job Title';
         }
-        field(5059;Initials;Text[30])
+        field(5059; Initials; Text[30])
         {
             Caption = 'Initials';
         }
-        field(5060;"Extension No.";Text[30])
+        field(5060; "Extension No."; Text[30])
         {
             Caption = 'Extension No.';
         }
-        field(5061;"Mobile Phone No.";Text[30])
+        field(5061; "Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(5062;Pager;Text[30])
+        field(5062; Pager; Text[30])
         {
             Caption = 'Pager';
         }
-        field(5063;"Organizational Level Code";Code[10])
+        field(5063; "Organizational Level Code"; Code[10])
         {
             Caption = 'Organizational Level Code';
             TableRelation = "Organizational Level";
         }
-        field(5064;"Exclude from Segment";Boolean)
+        field(5064; "Exclude from Segment"; Boolean)
         {
             Caption = 'Exclude from Segment';
         }
-        field(5073;"External ID";Code[20])
+        field(5073; "External ID"; Code[20])
         {
             Caption = 'External ID';
         }
-        field(5100;"Correspondence Type";Option)
+        field(5100; "Correspondence Type"; Option)
         {
             Caption = 'Correspondence Type';
             OptionCaption = ' ,Hard Copy,E-Mail,Fax';
             OptionMembers = " ","Hard Copy","E-Mail",Fax;
         }
-        field(5101;"Salutation Code";Code[10])
+        field(5101; "Salutation Code"; Code[10])
         {
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
-        field(5104;"Last Time Modified";Time)
+        field(5104; "Last Time Modified"; Time)
         {
             Caption = 'Last Time Modified';
         }
-        field(5105;"E-Mail 2;Text[80])
+        field(5105; "E-Mail 2;Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(50000;"% Descuento Cupon";Decimal)
+        field(50000; "% Descuento Cupon"; Decimal)
         {
             Caption = 'Coupon Discount %';
         }
-        field(56000;"Tipo de colegio";Code[10])
+        field(56000; "Tipo de colegio"; Code[10])
         {
         }
-        field(56001;"Nivel Escolar";Code[10])
+        field(56001; "Nivel Escolar"; Code[10])
         {
         }
-        field(56002;"Tipo educacion";Code[10])
+        field(56002; "Tipo educacion"; Code[10])
         {
         }
-        field(56003;"Orden religiosa";Code[10])
+        field(56003; "Orden religiosa"; Code[10])
         {
         }
-        field(56004;Bilingue;Boolean)
+        field(56004; Bilingue; Boolean)
         {
         }
-        field(56005;"Sistema educativo";Code[10])
+        field(56005; "Sistema educativo"; Code[10])
         {
         }
-        field(56006;Plan;Code[10])
+        field(56006; Plan; Code[10])
         {
         }
-        field(56007;Turno;Code[10])
+        field(56007; Turno; Code[10])
         {
         }
-        field(56008;Gerencia;Code[10])
+        field(56008; Gerencia; Code[10])
         {
         }
-        field(56009;Delegado;Code[10])
+        field(56009; Delegado; Code[10])
         {
         }
-        field(56010;Asesor;Code[10])
+        field(56010; Asesor; Code[10])
         {
         }
-        field(56011;Ruta;Code[10])
+        field(56011; Ruta; Code[10])
         {
         }
-        field(56012;"Canal de compra";Code[10])
+        field(56012; "Canal de compra"; Code[10])
         {
         }
-        field(56013;"Nombre canal";Text[30])
+        field(56013; "Nombre canal"; Text[30])
         {
         }
-        field(56015;Comisionista;Code[20])
+        field(56015; Comisionista; Code[20])
         {
         }
-        field(56016;"Fecha decision";Date)
+        field(56016; "Fecha decision"; Date)
         {
         }
-        field(56017;"Fecha lista";Date)
+        field(56017; "Fecha lista"; Date)
         {
         }
-        field(56018;Periodo;Code[10])
+        field(56018; Periodo; Code[10])
         {
         }
-        field(56019;Grupo;Code[10])
+        field(56019; Grupo; Code[10])
         {
         }
-        field(56020;"Tipo de texto";Code[10])
+        field(56020; "Tipo de texto"; Code[10])
         {
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Search Name")
+        key(Key2; "Search Name")
         {
         }
-        key(Key3;"Company Name","Company No.",Type,Name)
+        key(Key3; "Company Name", "Company No.", Type, Name)
         {
         }
-        key(Key4;"Company No.")
+        key(Key4; "Company No.")
         {
         }
-        key(Key5;"Territory Code")
+        key(Key5; "Territory Code")
         {
         }
-        key(Key6;"Salesperson Code")
+        key(Key6; "Salesperson Code")
         {
         }
-        key(Key7;"VAT Registration No.")
+        key(Key7; "VAT Registration No.")
         {
         }
-        key(Key8;Name)
+        key(Key8; Name)
         {
         }
-        key(Key9;City)
+        key(Key9; City)
         {
         }
-        key(Key10;"Post Code")
+        key(Key10; "Post Code")
         {
         }
-        key(Key11;"Phone No.")
+        key(Key11; "Phone No.")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.",Name,Type,City,"Post Code","Phone No.")
+        fieldgroup(DropDown; "No.", Name, Type, City, "Post Code", "Phone No.")
         {
         }
     }
@@ -467,8 +467,9 @@ table 67065 "Micro empresario"
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
-          MapMgt.MakeSelection(DATABASE::Contact,GETPOSITION)
-        ELSE MESSAGE(Text033);
+            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 }
 

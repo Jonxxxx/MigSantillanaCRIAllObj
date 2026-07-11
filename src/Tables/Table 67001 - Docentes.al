@@ -89,26 +89,26 @@ table 67001 Docentes
         field(15; Comment; Boolean)
         {
             CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
-                                                                  No.=FIELD("No."),
-                                                                  Sub No.=CONST(0)));
+                                                                  "No." = FIELD("No."),
+                                                                  "Sub No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(16;"Last Date Modified";Date)
+        field(16; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(17;"Fax No.";Text[30])
+        field(17; "Fax No."; Text[30])
         {
             Caption = 'Fax No.';
         }
-        field(18;"Telex Answer Back";Text[20])
+        field(18; "Telex Answer Back"; Text[20])
         {
             Caption = 'Telex Answer Back';
         }
-        field(19;"Document ID";Text[20])
+        field(19; "Document ID"; Text[20])
         {
             Caption = 'Document ID';
 
@@ -116,23 +116,22 @@ table 67001 Docentes
             var
                 VATRegNoFormat: Record 381;
             begin
-                IF "Document ID" <> '' THEN
-                   BEGIN
+                IF "Document ID" <> '' THEN BEGIN
                     Docente.RESET;
-                    Docente.SETFILTER("No.",'<>%1',"No.");
-                    Docente.SETRANGE("Tipo documento","Tipo documento");
-                    Docente.SETRANGE("Document ID","Document ID");
+                    Docente.SETFILTER("No.", '<>%1', "No.");
+                    Docente.SETRANGE("Tipo documento", "Tipo documento");
+                    Docente.SETRANGE("Document ID", "Document ID");
                     IF Docente.FINDFIRST THEN
-                       ERROR(Text034,FIELDCAPTION("Document ID"),"Document ID",TABLECAPTION,Docente."No.");
-                   END;
+                        ERROR(Text034, FIELDCAPTION("Document ID"), "Document ID", TABLECAPTION, Docente."No.");
+                END;
             end;
         }
-        field(20;Picture;BLOB)
+        field(20; Picture; BLOB)
         {
             Caption = 'Picture';
             SubType = Bitmap;
         }
-        field(21;"Post Code";Code[20])
+        field(21; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = "Post Code";
@@ -142,84 +141,84 @@ table 67001 Docentes
 
             trigger OnValidate()
             begin
-                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(22;County;Text[30])
+        field(22; County; Text[30])
         {
             Caption = 'State';
         }
-        field(23;"E-Mail";Text[80])
+        field(23; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(24;"Home Page";Text[80])
+        field(24; "Home Page"; Text[80])
         {
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
-        field(25;Twitter;Text[30])
+        field(25; Twitter; Text[30])
         {
             ExtendedDatatype = URL;
         }
-        field(26;Facebook;Text[80])
+        field(26; Facebook; Text[80])
         {
             ExtendedDatatype = URL;
         }
-        field(27;"BB Pin";Text[10])
+        field(27; "BB Pin"; Text[10])
         {
         }
-        field(28;"No. Series";Code[10])
+        field(28; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
-        field(29;"Job Title";Text[60])
+        field(29; "Job Title"; Text[60])
         {
             Caption = 'Job Title';
         }
-        field(30;Initials;Text[30])
+        field(30; Initials; Text[30])
         {
             Caption = 'Initials';
         }
-        field(31;"Extension No.";Text[30])
+        field(31; "Extension No."; Text[30])
         {
             Caption = 'Extension No.';
         }
-        field(32;"Mobile Phone No.";Text[30])
+        field(32; "Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(33;Pager;Text[30])
+        field(33; Pager; Text[30])
         {
             Caption = 'Pager';
         }
-        field(34;"Date Filter";Date)
+        field(34; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(35;"External ID";Code[20])
+        field(35; "External ID"; Code[20])
         {
             Caption = 'External ID';
         }
-        field(36;"Salesperson Filter";Code[10])
+        field(36; "Salesperson Filter"; Code[10])
         {
             Caption = 'Salesperson Filter';
             Enabled = false;
             FieldClass = FlowFilter;
             TableRelation = "Salesperson/Purchaser";
         }
-        field(37;"Campaign Filter";Code[20])
+        field(37; "Campaign Filter"; Code[20])
         {
             Caption = 'Campaign Filter';
             Enabled = false;
             FieldClass = FlowFilter;
             TableRelation = Campaign;
         }
-        field(38;"Action Taken Filter";Option)
+        field(38; "Action Taken Filter"; Option)
         {
             Caption = 'Action Taken Filter';
             Enabled = false;
@@ -227,21 +226,21 @@ table 67001 Docentes
             OptionCaption = ' ,Next,Previous,Updated,Jumped,Won,Lost';
             OptionMembers = " ",Next,Previous,Updated,Jumped,Won,Lost;
         }
-        field(39;"Sales Cycle Filter";Code[10])
+        field(39; "Sales Cycle Filter"; Code[10])
         {
             Caption = 'Sales Cycle Filter';
             Enabled = false;
             FieldClass = FlowFilter;
             TableRelation = "Sales Cycle";
         }
-        field(40;"Sales Cycle Stage Filter";Integer)
+        field(40; "Sales Cycle Stage Filter"; Integer)
         {
             Caption = 'Sales Cycle Stage Filter';
             Enabled = false;
             FieldClass = FlowFilter;
-            TableRelation = "Sales Cycle Stage".Stage WHERE ("Sales Cycle Code"=FIELD("Sales Cycle Filter"));
+            TableRelation = "Sales Cycle Stage".Stage WHERE("Sales Cycle Code" = FIELD("Sales Cycle Filter"));
         }
-        field(41;"To-do Status Filter";Option)
+        field(41; "To-do Status Filter"; Option)
         {
             Caption = 'To-do Status Filter';
             Enabled = false;
@@ -249,13 +248,13 @@ table 67001 Docentes
             OptionCaption = 'Not Started,In Progress,Completed,Waiting,Postponed';
             OptionMembers = "Not Started","In Progress",Completed,Waiting,Postponed;
         }
-        field(42;"To-do Closed Filter";Boolean)
+        field(42; "To-do Closed Filter"; Boolean)
         {
             Caption = 'To-do Closed Filter';
             Enabled = false;
             FieldClass = FlowFilter;
         }
-        field(43;"Priority Filter";Option)
+        field(43; "Priority Filter"; Option)
         {
             Caption = 'Priority Filter';
             Enabled = false;
@@ -263,226 +262,224 @@ table 67001 Docentes
             OptionCaption = 'Low,Normal,High';
             OptionMembers = Low,Normal,High;
         }
-        field(44;"Customer no.";Code[20])
+        field(44; "Customer no."; Code[20])
         {
             Caption = 'Customer No.';
             FieldClass = FlowFilter;
             TableRelation = Customer;
         }
-        field(45;"Correspondence Type";Option)
+        field(45; "Correspondence Type"; Option)
         {
             Caption = 'Correspondence Type';
             OptionCaption = ' ,Hard Copy,E-Mail,Fax';
             OptionMembers = " ","Hard Copy","E-Mail",Fax;
         }
-        field(46;"Salutation Code";Code[10])
+        field(46; "Salutation Code"; Code[10])
         {
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
-        field(47;"Search E-Mail";Code[100])
+        field(47; "Search E-Mail"; Code[100])
         {
             Caption = 'Search E-Mail';
         }
-        field(48;"Last Time Modified";Time)
+        field(48; "Last Time Modified"; Time)
         {
             Caption = 'Last Time Modified';
         }
-        field(49;"E-Mail 2;Text[80])
+        field(49; "E-Mail 2;Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(50;"% Descuento Cupon";Decimal)
+        field(50; "% Descuento Cupon"; Decimal)
         {
             Caption = 'Coupon Discount %';
         }
-        field(51;"Tipo de colegio";Code[20])
+        field(51; "Tipo de colegio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipos de colegios));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipos de colegios));
 
             trigger OnValidate()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Tipos de colegios");
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Tipos de colegios");
                 IF "Tipo de colegio" <> '' THEN
-                   DA.SETRANGE(Codigo,"Tipo de colegio");
+                    DA.SETRANGE(Codigo, "Tipo de colegio");
 
                 DA.FINDFIRST;
             end;
         }
-        field(52;"Nivel Escolar";Code[10])
+        field(52; "Nivel Escolar"; Code[10])
         {
         }
-        field(53;"Tipo educacion";Code[20])
+        field(53; "Tipo educacion"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipo de educacion));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipo de educacion));
 
             trigger OnValidate()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Tipo de educacion");
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Tipo de educacion");
                 IF "Tipo de colegio" <> '' THEN
-                   DA.SETRANGE(Codigo,"Tipo de colegio");
+                    DA.SETRANGE(Codigo, "Tipo de colegio");
 
                 DA.FINDFIRST;
             end;
         }
-        field(54;"Orden religiosa";Code[20])
+        field(54; "Orden religiosa"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Orden religiosa));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Orden religiosa));
 
             trigger OnValidate()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Orden religiosa");
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Orden religiosa");
                 IF "Orden religiosa" <> '' THEN
-                   DA.SETRANGE(Codigo,"Orden religiosa");
+                    DA.SETRANGE(Codigo, "Orden religiosa");
 
                 DA.FINDFIRST;
             end;
         }
-        field(55;Bilingue;Boolean)
+        field(55; Bilingue; Boolean)
         {
         }
-        field(56;"Sistema educativo";Code[10])
+        field(56; "Sistema educativo"; Code[10])
         {
         }
-        field(57;Plan;Code[10])
+        field(57; Plan; Code[10])
         {
         }
-        field(58;Sexo;Option)
+        field(58; Sexo; Option)
         {
             Caption = 'Sex';
             OptionCaption = 'Female,Male';
             OptionMembers = Femenino,Masculino;
         }
-        field(59;"Nivel Docente";Code[20])
+        field(59; "Nivel Docente"; Code[20])
         {
             Caption = 'Teacher''s level';
             TableRelation = "Nivel Educativo APS";
         }
-        field(60;"Usuario Lectores en red";Boolean)
+        field(60; "Usuario Lectores en red"; Boolean)
         {
         }
-        field(61;"Recibe correos";Boolean)
+        field(61; "Recibe correos"; Boolean)
         {
         }
-        field(62;"Recibe llamadas";Boolean)
+        field(62; "Recibe llamadas"; Boolean)
         {
         }
-        field(63;"Recibe email";Boolean)
+        field(63; "Recibe email"; Boolean)
         {
         }
-        field(64;Jubilado;Boolean)
+        field(64; Jubilado; Boolean)
         {
         }
-        field(65;"Dia Nacimiento";Integer)
+        field(65; "Dia Nacimiento"; Integer)
         {
             MaxValue = 31;
             MinValue = 1;
         }
-        field(66;"Job Type Code";Code[20])
+        field(66; "Job Type Code"; Code[20])
         {
             Caption = 'Job Type Code';
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
 
             trigger OnValidate()
             begin
-                IF "Job Type Code" <>'' THEN
-                   BEGIN
-                    JobType.SETRANGE("Tipo registro",JobType."Tipo registro"::"Puestos de trabajo");
-                    JobType.SETRANGE(Codigo,"Job Type Code");
+                IF "Job Type Code" <> '' THEN BEGIN
+                    JobType.SETRANGE("Tipo registro", JobType."Tipo registro"::"Puestos de trabajo");
+                    JobType.SETRANGE(Codigo, "Job Type Code");
                     JobType.FINDFIRST;
                     "Job Title" := JobType.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(67;"Pertenece al CDS";Boolean)
+        field(67; "Pertenece al CDS"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF "Pertenece al CDS" THEN
-                   "Ult. fecha activacion" := TODAY;
+                    "Ult. fecha activacion" := TODAY;
             end;
         }
-        field(68;"Mes Nacimiento";Integer)
+        field(68; "Mes Nacimiento"; Integer)
         {
             MaxValue = 12;
             MinValue = 1;
         }
-        field(69;"Ano Nacimiento";Integer)
+        field(69; "Ano Nacimiento"; Integer)
         {
             Caption = 'Born year';
             MaxValue = 2450;
             MinValue = 1950;
         }
-        field(70;"Ano inscripcion CDS";Code[4])
+        field(70; "Ano inscripcion CDS"; Code[4])
         {
             Caption = 'Subscription year CDS';
             Numeric = true;
         }
-        field(71;"Cod. CDS";Code[20])
+        field(71; "Cod. CDS"; Code[20])
         {
         }
-        field(76;Hijos;Boolean)
+        field(76; Hijos; Boolean)
         {
         }
-        field(77;"Frecuencia uso email";Option)
+        field(77; "Frecuencia uso email"; Option)
         {
             OptionMembers = Diario,"Fines de semana","Menos de una vez por semana";
         }
-        field(78;"Nivel decision";Code[20])
+        field(78; "Nivel decision"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Nivel de decisi n));
 
             trigger OnValidate()
             begin
-                IF "Nivel decision" <> '' THEN
-                   BEGIN
+                IF "Nivel decision" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Nivel de decisi n");
-                    DA.SETRANGE(Codigo,"Nivel decision");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Nivel de decisi n");
+                    DA.SETRANGE(Codigo, "Nivel decision");
                     DA.FINDFIRST;
-                   END;
+                END;
             end;
         }
-        field(79;"Envio correspondencia";Option)
+        field(79; "Envio correspondencia"; Option)
         {
             OptionCaption = 'School,Self';
             OptionMembers = Colegio,Particular;
         }
-        field(80;"Situacion general";Option)
+        field(80; "Situacion general"; Option)
         {
             OptionCaption = 'Active,Inactive';
             OptionMembers = Activo,Inactivo;
         }
-        field(81;"Tipo documento";Code[20])
+        field(81; "Tipo documento"; Code[20])
         {
             TableRelation = "Tipos de documentos personales";
         }
-        field(82;"Tipo de contacto";Code[20])
+        field(82; "Tipo de contacto"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Tipos de contactos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipos de contactos));
 
             trigger OnValidate()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Tipos de contactos");
-                DA.SETRANGE(Codigo,"Tipo de contacto");
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Tipos de contactos");
+                DA.SETRANGE(Codigo, "Tipo de contacto");
                 IF DA.FINDFIRST THEN
-                   "Desc Tipo de contacto" := DA.Descripcion;
+                    "Desc Tipo de contacto" := DA.Descripcion;
             end;
         }
-        field(83;"Ult. fecha activacion";Date)
+        field(83; "Ult. fecha activacion"; Date)
         {
         }
-        field(84;"Se entrego carne";Boolean)
+        field(84; "Se entrego carne"; Boolean)
         {
             Caption = 'Carnet delivered';
         }
-        field(85;"First Name";Text[30])
+        field(85; "First Name"; Text[30])
         {
             Caption = 'First Name';
 
@@ -491,7 +488,7 @@ table 67001 Docentes
                 VALIDATE("Full Name");
             end;
         }
-        field(86;"Middle Name";Text[30])
+        field(86; "Middle Name"; Text[30])
         {
             Caption = 'Middle Name';
 
@@ -500,7 +497,7 @@ table 67001 Docentes
                 VALIDATE("Full Name");
             end;
         }
-        field(87;"Last Name";Text[30])
+        field(87; "Last Name"; Text[30])
         {
             Caption = 'Last Name';
 
@@ -509,7 +506,7 @@ table 67001 Docentes
                 VALIDATE("Full Name");
             end;
         }
-        field(88;"Second Last Name";Text[30])
+        field(88; "Second Last Name"; Text[30])
         {
             Caption = 'Second Last Name';
 
@@ -518,20 +515,20 @@ table 67001 Docentes
                 VALIDATE("Full Name");
             end;
         }
-        field(89;Status;Option)
+        field(89; Status; Option)
         {
             OptionCaption = ' ,Inactive';
             OptionMembers = " ",Inactivo;
         }
-        field(90;"Desc Tipo de contacto";Text[60])
+        field(90; "Desc Tipo de contacto"; Text[60])
         {
             Caption = 'Type of contact description';
             Editable = false;
         }
-        field(91;"Referencia Direccion";Text[100])
+        field(91; "Referencia Direccion"; Text[100])
         {
         }
-        field(92;"Cod. Proveedor";Code[20])
+        field(92; "Cod. Proveedor"; Code[20])
         {
             TableRelation = Vendor;
 
@@ -539,8 +536,7 @@ table 67001 Docentes
             var
                 Vend: Record 23;
             begin
-                IF "Cod. Proveedor" <> '' THEN
-                   BEGIN
+                IF "Cod. Proveedor" <> '' THEN BEGIN
                     Vend.GET("Cod. Proveedor");
                     "Document ID" := Vend."VAT Registration No.";
                     "Full Name" := Vend.Name;
@@ -548,7 +544,7 @@ table 67001 Docentes
                     "Address 2" := Vend."Address 2;
                     City := Vend.City;
                     "Phone No." := Vend."Phone No.";
-                //    "Work No." := vend."Work No.";
+                    //    "Work No." := vend."Work No.";
                     "Territory Code" := Vend."Territory Code";
                     "Language Code" := Vend."Language Code";
                     "Country/Region Code" := Vend."Country/Region Code";
@@ -556,49 +552,49 @@ table 67001 Docentes
                     County := Vend.County;
                     "E-Mail" := Vend."E-Mail";
                     "Home Page" := Vend."Home Page";
-                //    "Extension No." := vend."Extension No.";
-                //    "Mobile Phone No." := vend."Mobile Phone No.";
+                    //    "Extension No." := vend."Extension No.";
+                    //    "Mobile Phone No." := vend."Mobile Phone No.";
                     /*
                     VALIDATE("Distrito Code",Vend."Distrito Code");
                     VALIDATE(Departamento,Vend.Departamento);
                     VALIDATE(Distritos,Distritos);
                     VALIDATE(Provincia,Vend.Provincia);
                     */
-                   END;
+                END;
 
             end;
         }
-        field(93;"Cod. Cliente";Code[20])
+        field(93; "Cod. Cliente"; Code[20])
         {
             TableRelation = Customer;
         }
-        field(94;Expositor;Boolean)
+        field(94; Expositor; Boolean)
         {
         }
-        field(95;"Usuario creaci n";Code[50])
+        field(95; "Usuario creaci n"; Code[50])
         {
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Full Name")
+        key(Key2; "Full Name")
         {
         }
-        key(Key3;Initials,"Job Title","No. 2")
+        key(Key3; Initials, "Job Title", "No. 2")
         {
         }
-        key(Key4;"Document ID")
+        key(Key4; "Document ID")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.","Full Name","Document ID","Pertenece al CDS")
+        fieldgroup(DropDown; "No.", "Full Name", "Document ID", "Pertenece al CDS")
         {
         }
     }
@@ -620,17 +616,17 @@ table 67001 Docentes
         CampaignTargetGrMgt: Codeunit 7030;
     begin
         //CreditCards.DeleteByContact(Rec);
-        ColDoc.SETRANGE("Cod. Docente","No.");
+        ColDoc.SETRANGE("Cod. Docente", "No.");
         IF ColDoc.FINDFIRST THEN
-           ERROR(STRSUBSTNO(Text035,ColDoc.TABLECAPTION));
+            ERROR(STRSUBSTNO(Text035, ColDoc.TABLECAPTION));
     end;
 
     trigger OnInsert()
     begin
         APSSetup.GET;
         IF "No." = '' THEN BEGIN
-          APSSetup.TESTFIELD("No. Serie Profesores");
-          NoSeriesMgt.InitSeries(APSSetup."No. Serie Profesores",xRec."No. Series",0D,"No.","No. Series");
+            APSSetup.TESTFIELD("No. Serie Profesores");
+            NoSeriesMgt.InitSeries(APSSetup."No. Serie Profesores", xRec."No. Series", 0D, "No.", "No. Series");
         END;
         "Ano inscripcion CDS" := FORMAT(APSSetup.Campana);
 
@@ -640,14 +636,14 @@ table 67001 Docentes
     trigger OnModify()
     begin
         ColDocente.RESET;
-        ColDocente.SETRANGE("Cod. Docente","No.");
-        IF ColDocente.FINDSET(TRUE,FALSE) THEN
-           REPEAT
-            ColDocente."Nombre docente"   := "Full Name";
-            ColDocente."Apellido paterno" := "Last Name";
-            ColDocente."Pertenece al CDS" := "Pertenece al CDS";
-            ColDocente.MODIFY;
-           UNTIL ColDocente.NEXT = 0;
+        ColDocente.SETRANGE("Cod. Docente", "No.");
+        IF ColDocente.FINDSET(TRUE, FALSE) THEN
+            REPEAT
+                ColDocente."Nombre docente" := "Full Name";
+                ColDocente."Apellido paterno" := "Last Name";
+                ColDocente."Pertenece al CDS" := "Pertenece al CDS";
+                ColDocente.MODIFY;
+            UNTIL ColDocente.NEXT = 0;
     end;
 
     var
@@ -684,10 +680,10 @@ table 67001 Docentes
         territory: Record 286;
         PostCodeRec: Record 225;
         PostCodeForm: Page367;
-                          formTerritory: Page429;
-                          RECcOUNTRY: Record 9;
-                          ColDocente: Record 67043;
-                          Text035: Label 'There are records associated with this Teacher, review them in% 1';
+        formTerritory: Page429;
+        RECcOUNTRY: Record 9;
+        ColDocente: Record 67043;
+        Text035: Label 'There are records associated with this Teacher, review them in% 1';
 
     procedure DisplayMap()
     var
@@ -695,29 +691,30 @@ table 67001 Docentes
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
-          MapMgt.MakeSelection(DATABASE::Docentes,GETPOSITION)
-        ELSE MESSAGE(Text033);
+            MapMgt.MakeSelection(DATABASE::Docentes, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 
     procedure AssistEdit(OldCont: Record 67001): Boolean
     begin
         WITH Docente DO BEGIN
-          Docente := Rec;
-          APSSetup.GET;
-          APSSetup.TESTFIELD("No. Serie Profesores");
-          IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Profesores",OldCont."No. Series","No. Series") THEN BEGIN
+            Docente := Rec;
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Profesores");
-            NoSeriesMgt.SetSeries("No.");
-            Rec := Docente;
-            EXIT(TRUE);
-          END;
+            IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Profesores", OldCont."No. Series", "No. Series") THEN BEGIN
+                APSSetup.GET;
+                APSSetup.TESTFIELD("No. Serie Profesores");
+                NoSeriesMgt.SetSeries("No.");
+                Rec := Docente;
+                EXIT(TRUE);
+            END;
         END;
     end;
 
     procedure GetApellidosNombre(): Text[250]
     begin
-        EXIT("Last Name"+' '+"Second Last Name"+', '+"First Name"+' '+"Middle Name");
+        EXIT("Last Name" + ' ' + "Second Last Name" + ', ' + "First Name" + ' ' + "Middle Name");
     end;
 }
 

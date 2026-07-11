@@ -117,34 +117,34 @@ table 67097 "Historico Ranking CVM vertical"
         field(110; Alumnado; Decimal)
         {
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                                    Cod. Local=FIELD("Cod. Local"),
-                                                                                    Cod. Nivel=FIELD("Cod. Nivel"),
-                                                                                    Cod. Grado=FIELD("Cod. Grado"),
-                                                                                    Cod. Producto=FIELD("Cod. Producto"),
-                                                                                    Linea de negocio=FIELD("Linea de negocio")));
+                                                                                    "Cod. Local" = FIELD("Cod. Local"),
+                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel"),
+                                                                                    "Cod. Grado" = FIELD("Cod. Grado"),
+                                                                                    "Cod. Producto" = FIELD("Cod. Producto"),
+                                                                                    "Linea de negocio" = FIELD("Linea de negocio")));
             Caption = 'Alumnado';
             FieldClass = FlowField;
         }
-        field(200;"Campa a";Code[4])
+        field(200; "Campa a"; Code[4])
         {
         }
-        field(500;"Nombre y Apellidos Docente";Text[150])
+        field(500; "Nombre y Apellidos Docente"; Text[150])
         {
         }
-        field(501;"Nombre Colegio";Text[100])
+        field(501; "Nombre Colegio"; Text[100])
         {
         }
-        field(502;"Distrito Colegio";Text[30])
+        field(502; "Distrito Colegio"; Text[30])
         {
         }
-        field(503;"Delegacion Colegio";Code[20])
+        field(503; "Delegacion Colegio"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Campa a","Cod. Docente","Cod. Colegio","Cod. Local","Cod. Producto","Cod. Grado")
+        key(Key1; "Campa a", "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado")
         {
         }
     }

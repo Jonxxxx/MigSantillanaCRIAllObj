@@ -14,7 +14,7 @@ page 50037 ListaDescuentoProntoPago
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),
                             Pmt. Disc. Given (LCY)=FILTER(>0),
-                            No. Comprobante Fiscal DPP=FILTER(<>''));
+                            "No. Comprobante Fiscal DPP"=FILTER(<>''));
     UsageCategory = Lists;
 
     layout

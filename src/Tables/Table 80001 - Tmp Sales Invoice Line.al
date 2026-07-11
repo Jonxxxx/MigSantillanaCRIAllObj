@@ -275,7 +275,7 @@ table 80001 "Tmp Sales Invoice Line"
         {
             Caption = 'Blanket Order Line No.';
             TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
-                                                           Document No.=FIELD("Blanket Order No."));
+                                                           "Document No."=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -360,8 +360,8 @@ table 80001 "Tmp Sales Invoice Line"
         {
             Caption = 'Bin Code';
             TableRelation = Bin.Code WHERE ("Location Code"=FIELD("Location Code"),
-                                            Item Filter=FIELD("No."),
-                                            Variant Filter=FIELD("Variant Code"));
+                                            "Item Filter"=FIELD("No."),
+                                            "Variant Filter"=FIELD("Variant Code"));
         }
         field(5404;"Qty. per Unit of Measure";Decimal)
         {

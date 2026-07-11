@@ -82,24 +82,24 @@ table 56030 "Cab. Packing"
         field(9; "Cantidad de Bultos"; Integer)
         {
             CalcFormula = Count("Lin. Packing" WHERE("No." = FIELD("No."),
-                                                      No. Picking=FIELD("Picking No.")));
+                                                      "No. Picking" = FIELD("Picking No.")));
             Caption = 'Packages Qty.';
             FieldClass = FlowField;
         }
-        field(11;"No. Palet Abierto";Code[20])
+        field(11; "No. Palet Abierto"; Code[20])
         {
             Caption = 'Open Palet No.';
         }
-        field(12;"No. Pedido";Code[20])
+        field(12; "No. Pedido"; Code[20])
         {
             TableRelation = IF (Tipo pedido=CONST(Venta)) "Sales Header"."No." WHERE ("Document Type"=CONST(Order),
-                                                                                    Estado packing=CONST(Listo))
+                                                                                    "Estado packing"=CONST(Listo))
                                                                                     ELSE IF (Tipo pedido=CONST(Consignacion)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(true),
-                                                                                                                                                           Estado packing=CONST(Listo))
+                                                                                                                                                           "Estado packing"=CONST(Listo))
                                                                                                                                                            ELSE IF (Tipo pedido=CONST(Transferencia)) "Transfer Header"."No." WHERE ("Pedido Consignacion"=CONST(false),
-                                                                                                                                                                                                                                   Estado packing=CONST(Listo));
+                                                                                                                                                                                                                                   "Estado packing"=CONST(Listo));
         }
-        field(20;"Tipo pedido";Option)
+        field(20; "Tipo pedido"; Option)
         {
             OptionCaption = 'Venta,Consignaci n,Transferencia';
             OptionMembers = Venta,Consignacion,Transferencia;
@@ -107,14 +107,14 @@ table 56030 "Cab. Packing"
             trigger OnValidate()
             begin
                 IF xRec."Tipo pedido" <> "Tipo pedido" THEN
-                  CLEAR("No. Pedido");
+                    CLEAR("No. Pedido");
             end;
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }
@@ -126,7 +126,7 @@ table 56030 "Cab. Packing"
     trigger OnDelete()
     begin
         LinPack.RESET;
-        LinPack.SETRANGE("No.","No.");
+        LinPack.SETRANGE("No.", "No.");
         LinPack.DELETEALL(TRUE);
     end;
 
@@ -135,13 +135,12 @@ table 56030 "Cab. Packing"
         "Fecha Apertura" := WORKDATE;
         "Cod. Empleado" := USERID;
 
-        IF "No." = '' THEN
-          BEGIN
+        IF "No." = '' THEN BEGIN
             ConfSant.GET;
             ConfSant.TESTFIELD("No. Serie Packing");
-            NoSeriesMgt.InitSeries(ConfSant."No. Serie Packing","No.","Fecha Apertura","No.",
+            NoSeriesMgt.InitSeries(ConfSant."No. Serie Packing", "No.", "Fecha Apertura", "No.",
                                     ConfSant."No. Serie Packing");
-          END;
+        END;
     end;
 
     var

@@ -27,7 +27,7 @@ table 64839 "Replicator Report List"
         field(5; "Report Name"; Text[30])
         {
             CalcFormula = Lookup(Object.Name WHERE("Type" = CONST(Report),
-                                                    ID = FIELD("Report ID")));
+                                                    "ID" = FIELD("Report ID")));
             Editable = false;
             FieldClass = FlowField;
         }

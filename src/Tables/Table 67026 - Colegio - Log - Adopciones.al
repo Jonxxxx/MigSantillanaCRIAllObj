@@ -28,48 +28,48 @@ table 67026 "Colegio - Log - Adopciones"
         {
             NotBlank = true;
             TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                   Cod. Turno=FIELD("Cod. Turno"));
+                                                                   "Cod. Turno" = FIELD("Cod. Turno"));
         }
-        field(6;"Cod. Turno";Code[20])
+        field(6; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
-        field(7;"Cod. Promotor";Code[20])
+        field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE ("Tipo"=CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
-        field(8;"Cod. Producto";Code[20])
-        {
-            NotBlank = true;
-            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE ("Cod. Promotor"=FIELD("Cod. Promotor"));
-        }
-        field(9;Seccion;Code[20])
+        field(8; "Cod. Producto"; Code[20])
         {
             NotBlank = true;
+            TableRelation = "Promotor - Ppto Vtas"."Cod. Producto" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
         }
-        field(10;"Cod. Equiv. Santillana";Code[20])
+        field(9; Seccion; Code[20])
         {
-            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE ("Cod. Producto"=FIELD("Cod. Producto"));
+            NotBlank = true;
         }
-        field(11;"Descripcion Equiv. Santillana";Text[100])
+        field(10; "Cod. Equiv. Santillana"; Code[20])
+        {
+            TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE("Cod. Producto" = FIELD("Cod. Producto"));
+        }
+        field(11; "Descripcion Equiv. Santillana"; Text[100])
         {
         }
-        field(12;"Nombre Editorial";Text[100])
+        field(12; "Nombre Editorial"; Text[100])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
+            CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             FieldClass = FlowField;
             TableRelation = "Post Code";
             ValidateTableRelation = false;
         }
-        field(13;"Descripcion producto";Text[100])
+        field(13; "Descripcion producto"; Text[100])
         {
         }
-        field(14;"Nombre Colegio";Text[100])
+        field(14; "Nombre Colegio"; Text[100])
         {
-            CalcFormula = Lookup(Contact.Name WHERE ("No."=FIELD("Cod. Colegio")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
-        field(15;"Descripcion Nivel";Text[100])
+        field(15; "Descripcion Nivel"; Text[100])
         {
             CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
             FieldClass = FlowField;
@@ -153,7 +153,7 @@ table 67026 "Colegio - Log - Adopciones"
         field(41;"Cod. Producto Editora";Code[20])
         {
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                     Nivel=FIELD("Cod. Nivel"));
+                                                                     "Nivel"=FIELD("Cod. Nivel"));
         }
         field(42;"Nombre Producto Editora";Text[100])
         {

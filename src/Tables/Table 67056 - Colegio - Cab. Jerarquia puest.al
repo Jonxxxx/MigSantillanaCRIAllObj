@@ -22,36 +22,35 @@ table 67056 "Colegio - Cab. Jerarquia puest"
         field(3; "Cod. Nivel"; Code[20])
         {
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
-                                                                  Cod. Local=FIELD("Cod. Local"));
+                                                                  "Cod. Local" = FIELD("Cod. Local"));
         }
-        field(4;"Cod. Turno";Code[20])
+        field(4; "Cod. Turno"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Turnos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
 
             trigger OnLookup()
             begin
                 DA.RESET;
-                DA.SETRANGE("Tipo registro",DA."Tipo registro"::Turnos);
+                DA.SETRANGE("Tipo registro", DA."Tipo registro"::Turnos);
                 Turnos.SETTABLEVIEW(DA);
                 Turnos.SETRECORD(DA);
                 Turnos.LOOKUPMODE(TRUE);
-                IF Turnos.RUNMODAL = ACTION::LookupOK THEN
-                   BEGIN
+                IF Turnos.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     Turnos.GETRECORD(DA);
                     "Cod. Turno" := DA.Codigo;
-                   END;
+                END;
 
                 CLEAR(Turnos);
             end;
         }
-        field(5;"Nombre Colegio";Text[60])
+        field(5; "Nombre Colegio"; Text[60])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio")
+        key(Key1; "Cod. Colegio")
         {
         }
     }
@@ -65,6 +64,6 @@ table 67056 "Colegio - Cab. Jerarquia puest"
         Empleado: Record 67001;
         DA: Record 67002;
         Turnos: Page67003;
-                    Grados: Page67006;
+        Grados: Page67006;
 }
 

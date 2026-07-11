@@ -87,7 +87,7 @@ table 75003 "Imp.MdM Cabecera"
         field(501; "No Tablas Procesadas"; Integer)
         {
             CalcFormula = Count("Imp.MdM Tabla" WHERE("Id Cab." = FIELD("Id"),
-                                                       Procesado = CONST(true)));
+                                                       "Procesado" = CONST(true)));
             Description = 'Flowfield';
             Editable = false;
             FieldClass = FlowField;

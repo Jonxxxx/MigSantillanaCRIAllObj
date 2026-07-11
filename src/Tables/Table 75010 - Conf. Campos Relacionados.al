@@ -30,10 +30,10 @@ table 75010 "Conf. Campos Relacionados"
         field(110; "Valor Origen"; Text[100])
         {
             TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
-                                                                     Field No=FIELD("Id Fld Origen"));
-                                                                         //This property is currently not supported
-                                                                         //TestTableRelation = false;
-                                                                         ValidateTableRelation = false;
+                                                                     "Field No" = FIELD("Id Fld Origen"));
+            //This property is currently not supported
+            //TestTableRelation = false;
+            ValidateTableRelation = false;
 
             trigger OnValidate()
             begin
@@ -60,10 +60,10 @@ table 75010 "Conf. Campos Relacionados"
         field(210; "Valor Destino"; Text[100])
         {
             TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
-                                                                     Field No=FIELD("Id Fld Destino"));
-                                                                         //This property is currently not supported
-                                                                         //TestTableRelation = false;
-                                                                         ValidateTableRelation = false;
+                                                                     "Field No" = FIELD("Id Fld Destino"));
+            //This property is currently not supported
+            //TestTableRelation = false;
+            ValidateTableRelation = false;
 
             trigger OnValidate()
             begin

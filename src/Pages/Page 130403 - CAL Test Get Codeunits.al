@@ -5,7 +5,7 @@ page 130403 "CAL Test Get Codeunits"
     PageType = List;
     SourceTable = Table2000000058;
     SourceTableView = WHERE("Object Type" = CONST(Codeunit),
-                            Object Subtype=CONST(Test));
+                            "Object Subtype" = CONST(Test));
 
     layout
     {

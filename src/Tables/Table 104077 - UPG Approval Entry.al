@@ -44,49 +44,49 @@ table 104077 "UPG Approval Entry"
         field(13; Comment; Boolean)
         {
             CalcFormula = Exist("Approval Comment Line" WHERE("Table ID" = FIELD("Table ID"),
-                                                               Document Type=FIELD("Document Type"),
-                                                               Document No.=FIELD("Document No.")));
+                                                               "Document Type" = FIELD("Document Type"),
+                                                               "Document No." = FIELD("Document No.")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(14;"Due Date";Date)
+        field(14; "Due Date"; Date)
         {
         }
-        field(15;Amount;Decimal)
+        field(15; Amount; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
         }
-        field(16;"Amount (LCY)";Decimal)
+        field(16; "Amount (LCY)"; Decimal)
         {
             AutoFormatType = 1;
         }
-        field(17;"Currency Code";Code[10])
+        field(17; "Currency Code"; Code[10])
         {
             TableRelation = Currency;
         }
-        field(18;"Approval Type";Option)
+        field(18; "Approval Type"; Option)
         {
             OptionMembers = " ","Sales Pers./Purchaser",Approver;
         }
-        field(19;"Limit Type";Option)
+        field(19; "Limit Type"; Option)
         {
             OptionMembers = "Approval Limits","Credit Limits","Request Limits","No Limits";
         }
-        field(20;"Available Credit Limit (LCY)";Decimal)
+        field(20; "Available Credit Limit (LCY)"; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Table ID","Document Type","Document No.","Sequence No.")
+        key(Key1; "Table ID", "Document Type", "Document No.", "Sequence No.")
         {
         }
-        key(Key2;"Approver ID",Status)
+        key(Key2; "Approver ID", Status)
         {
         }
-        key(Key3;"Sender ID")
+        key(Key3; "Sender ID")
         {
         }
     }

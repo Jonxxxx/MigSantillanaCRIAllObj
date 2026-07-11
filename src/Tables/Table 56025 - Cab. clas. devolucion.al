@@ -73,22 +73,22 @@ table 56025 "Cab. clas. devolucion"
         field(12; "Dev. Trans. generadas"; Integer)
         {
             CalcFormula = Count("Docs. clas. devoluciones" WHERE("Tipo documento" = CONST(Transferencia),
-                                                                  No. clas. devoluciones=FIELD("No.")));
+                                                                  "No. clas. devoluciones" = FIELD("No.")));
             Caption = 'Dev. transferencia generadas';
             FieldClass = FlowField;
         }
-        field(13;"Dev. ventas generadas";Integer)
+        field(13; "Dev. ventas generadas"; Integer)
         {
-            CalcFormula = Count("Docs. clas. devoluciones" WHERE ("Tipo documento"=CONST(Venta),
-                                                                  No. clas. devoluciones=FIELD("No.")));
+            CalcFormula = Count("Docs. clas. devoluciones" WHERE("Tipo documento" = CONST(Venta),
+                                                                  "No. clas. devoluciones" = FIELD("No.")));
             Caption = 'Dev. ventas generadas';
             FieldClass = FlowField;
         }
-        field(14;"Usuario clasificacion";Code[20])
+        field(14; "Usuario clasificacion"; Code[20])
         {
             Caption = 'Usuario clasificaci n';
         }
-        field(15;"Fecha hora clasificacion";DateTime)
+        field(15; "Fecha hora clasificacion"; DateTime)
         {
             Caption = 'Fecha hora clasificaci n';
         }
@@ -96,7 +96,7 @@ table 56025 "Cab. clas. devolucion"
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }
@@ -108,27 +108,27 @@ table 56025 "Cab. clas. devolucion"
     trigger OnDelete()
     begin
         CD.RESET;
-        CD.SETRANGE("No. Documento","No.");
+        CD.SETRANGE("No. Documento", "No.");
         IF CD.FIND('-') THEN
-           CD.DELETEALL(TRUE);
+            CD.DELETEALL(TRUE);
     end;
 
     trigger OnInsert()
     begin
         IF "No." = '' THEN BEGIN
-          ConfEmpresa.GET;
-          ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
-          NoSeriesMgt.InitSeries(ConfEmpresa."No. Serie Pre Devolucion",ConfEmpresa."No. Serie Pre Devolucion",0D,"No.",
-                                 ConfEmpresa."No. Serie Pre Devolucion");
+            ConfEmpresa.GET;
+            ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
+            NoSeriesMgt.InitSeries(ConfEmpresa."No. Serie Pre Devolucion", ConfEmpresa."No. Serie Pre Devolucion", 0D, "No.",
+                                   ConfEmpresa."No. Serie Pre Devolucion");
         END;
 
-        "User id"         := USERID;
+        "User id" := USERID;
         "Receipt date" := WORKDATE;
 
-        WHE.SETRANGE("User ID",USERID);
-        WHE.SETRANGE(Default,TRUE);
+        WHE.SETRANGE("User ID", USERID);
+        WHE.SETRANGE(Default, TRUE);
         WHE.FINDFIRST;
-        VALIDATE("Cod. Almacen",WHE."Location Code");
+        VALIDATE("Cod. Almacen", WHE."Location Code");
     end;
 
     var
@@ -142,19 +142,17 @@ table 56025 "Cab. clas. devolucion"
 
     procedure AssistEdit(CR: Record 56025): Boolean
     begin
-        WITH CR DO
-         BEGIN
-          COPY(Rec);
-          ConfEmpresa.GET;
-          ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
-          IF NoSeriesMgt.SelectSeries(ConfEmpresa."No. Serie Pre Devolucion",ConfEmpresa."No. Serie Pre Devolucion",
-                                      ConfEmpresa."No. Serie Pre Devolucion") THEN
-             BEGIN
-            NoSeriesMgt.SetSeries("No.");
-            Rec := CR;
+        WITH CR DO BEGIN
+            COPY(Rec);
+            ConfEmpresa.GET;
+            ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
+            IF NoSeriesMgt.SelectSeries(ConfEmpresa."No. Serie Pre Devolucion", ConfEmpresa."No. Serie Pre Devolucion",
+                                        ConfEmpresa."No. Serie Pre Devolucion") THEN BEGIN
+                NoSeriesMgt.SetSeries("No.");
+                Rec := CR;
 
-            EXIT(TRUE);
-          END;
+                EXIT(TRUE);
+            END;
         END;
     end;
 }

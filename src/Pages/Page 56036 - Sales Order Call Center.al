@@ -402,8 +402,8 @@ page 56036 "Sales Order Call Center"
             {
                 Provider = SalesLines;
                 SubPageLink = Document Type=FIELD("Document Type"),
-                              Document No.=FIELD("Document No."),
-                              Line No.=FIELD("Line No.");
+                              "Document No."=FIELD("Document No."),
+                              "Line No."=FIELD("Line No.");
                 Visible = true;
             }
             part(;9089)
@@ -415,9 +415,9 @@ page 56036 "Sales Order Call Center"
             part(;9092)
             {
                 SubPageLink = Table ID=CONST(36),
-                              Document Type=FIELD("Document Type"),
-                              Document No.=FIELD("No."),
-                              Status=CONST(Open);
+                              "Document Type"=FIELD("Document Type"),
+                              "Document No."=FIELD("No."),
+                              "Status"=CONST(Open);
                 Visible = false;
             }
             part(;9108)
@@ -500,8 +500,8 @@ page 56036 "Sales Order Call Center"
                     Image = ViewComments;
                     RunObject = Page 67;
                                     RunPageLink = Document Type=FIELD("Document Type"),
-                                  No.=FIELD("No."),
-                                  Document Line No.=CONST(0);
+                                  "No."=FIELD("No."),
+                                  "Document Line No."=CONST(0);
                 }
                 action("S&hipments")
                 {
@@ -563,8 +563,8 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Whse. Shipment Lines';
                     RunObject = Page 7341;
                                     RunPageLink = Source Type=CONST(37),
-                                  Source Subtype=FIELD("Document Type"),
-                                  Source No.=FIELD("No.");
+                                  "Source Subtype"=FIELD("Document Type"),
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
@@ -572,7 +572,7 @@ page 56036 "Sales Order Call Center"
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                                     RunPageLink = Source Document=CONST(Sales Order),
-                                  Source No.=FIELD("No.");
+                                  "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }
                 separator()

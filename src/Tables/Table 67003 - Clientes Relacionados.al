@@ -44,58 +44,58 @@ table 67003 "Clientes Relacionados"
         {
             AutoFormatType = 1;
             CalcFormula = Sum("Detailed Cust. Ledg. Entry".Amount WHERE("Customer No." = FIELD("Cod. Cliente Relacionado"),
-                                                                         Initial Entry Global Dim. 1=FIELD("Global Dimension 1 Filter"),
-                                                                         Initial Entry Global Dim. 2=FIELD("Global Dimension 2 Filter"),
-                                                                         Currency Code=FIELD("Currency Filter"),
-                                                                         Posting Date=FIELD("Date Filter")));
+                                                                         "Initial Entry Global Dim. 1" = FIELD("Global Dimension 1 Filter"),
+                                                                         "Initial Entry Global Dim. 2" = FIELD("Global Dimension 2 Filter"),
+                                                                         "Currency Code" = FIELD("Currency Filter"),
+                                                                         "Posting Date" = FIELD("Date Filter")));
             Caption = 'Balance';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(6;"Balance (LCY)";Decimal)
+        field(6; "Balance (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            CalcFormula = Sum("Detailed Cust. Ledg. Entry"."Amount (LCY)" WHERE ("Customer No."=FIELD("Cod. Cliente Relacionado"),
-                                                                                 Initial Entry Global Dim. 1=FIELD("Global Dimension 1 Filter"),
-                                                                                 Initial Entry Global Dim. 2=FIELD("Global Dimension 2 Filter"),
-                                                                                 Currency Code=FIELD("Currency Filter"),
-                                                                                 Posting Date=FIELD("Date Filter")));
+            CalcFormula = Sum("Detailed Cust. Ledg. Entry"."Amount (LCY)" WHERE("Customer No." = FIELD("Cod. Cliente Relacionado"),
+                                                                                 "Initial Entry Global Dim. 1" = FIELD("Global Dimension 1 Filter"),
+                                                                                 "Initial Entry Global Dim. 2" = FIELD("Global Dimension 2 Filter"),
+                                                                                 "Currency Code" = FIELD("Currency Filter"),
+                                                                                 "Posting Date" = FIELD("Date Filter")));
             Caption = 'Balance ($)';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(7;"Global Dimension 1 Code";Code[20])
+        field(7; "Global Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
-        field(8;"Global Dimension 2 Code";Code[20])
+        field(8; "Global Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
-        field(9;"Date Filter";Date)
+        field(9; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(10;"Global Dimension 1 Filter";Code[20])
+        field(10; "Global Dimension 1 Filter"; Code[20])
         {
             CaptionClass = '1,3,1';
             Caption = 'Global Dimension 1 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
-        field(11;"Global Dimension 2 Filter";Code[20])
+        field(11; "Global Dimension 2 Filter"; Code[20])
         {
             CaptionClass = '1,3,2';
             Caption = 'Global Dimension 2 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
-        field(12;"Currency Filter";Code[10])
+        field(12; "Currency Filter"; Code[10])
         {
             Caption = 'Currency Filter';
             FieldClass = FlowFilter;
@@ -105,7 +105,7 @@ table 67003 "Clientes Relacionados"
 
     keys
     {
-        key(Key1;"Cod. Cliente","Cod. Cliente Relacionado")
+        key(Key1; "Cod. Cliente", "Cod. Cliente Relacionado")
         {
         }
     }

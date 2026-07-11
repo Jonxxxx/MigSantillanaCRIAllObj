@@ -65,8 +65,8 @@ table 67027 "Promotor - Ppto Vtas"
         field(10; "Cantidad Adoptada"; Decimal)
         {
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"),
-                                                                                    Adopcion = FILTER(Conquista .. Mantener),
-                                                                                    Cod. Producto=FIELD("Cod. Producto")));
+                                                                                    "Adopcion" = FILTER(Conquista .. Mantener),
+                                                                                    "Cod. Producto" = FIELD("Cod. Producto")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -74,7 +74,7 @@ table 67027 "Promotor - Ppto Vtas"
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Producto")
+        key(Key1; "Cod. Promotor", "Cod. Producto")
         {
         }
     }
