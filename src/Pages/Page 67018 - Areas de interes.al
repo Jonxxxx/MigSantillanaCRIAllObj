@@ -5,7 +5,7 @@ page 67018 "Areas de interes"
     PageType = List;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Areas de interés));
+                      WHERE("Tipo registro" = CONST("Areas de interés"));
     UsageCategory = Administration;
 
     layout

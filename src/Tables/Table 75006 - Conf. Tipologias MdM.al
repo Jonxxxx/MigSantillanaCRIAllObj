@@ -55,7 +55,7 @@ table 75006 "Conf. Tipologias MdM"
             Caption = 'Product Group Code';
             TableRelation = "Item Category".Code WHERE("Parent Category" = FIELD("Tipologia"));
         }
-        field(1001; "Referencia 1;Code[20])
+        field(1001; "Referencia 1"; Code[20])
         {
             CaptionClass = '75000,1';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(1),
@@ -69,7 +69,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(1, "Referencia 1");
             end;
         }
-        field(1002; "Referencia 2;Code[20])
+        field(1002; "Referencia 2"; Code[20])
         {
             CaptionClass = '75000,2';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(2),
@@ -83,7 +83,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(2, "Referencia 2");
             end;
         }
-        field(1003; "Referencia 3;Code[20])
+        field(1003; "Referencia 3"; Code[20])
         {
             CaptionClass = '75000,3';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(3),
@@ -97,7 +97,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(3, "Referencia 3");
             end;
         }
-        field(1004; "Referencia 4;Code[20])
+        field(1004; "Referencia 4"; Code[20])
         {
             CaptionClass = '75000,4';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(4),
@@ -111,7 +111,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(4, "Referencia 4");
             end;
         }
-        field(1005; "Referencia 5;Code[20])
+        field(1005; "Referencia 5"; Code[20])
         {
             CaptionClass = '75000,5';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(5),
@@ -125,7 +125,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(5, "Referencia 5");
             end;
         }
-        field(1006; "Referencia 6;Code[20])
+        field(1006; "Referencia 6"; Code[20])
         {
             CaptionClass = '75000,6';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(6),
@@ -139,7 +139,7 @@ table 75006 "Conf. Tipologias MdM"
                 ValidaReferencia(6, "Referencia 6");
             end;
         }
-        field(1007; "Referencia 7;Code[20])
+        field(1007; "Referencia 7"; Code[20])
         {
             CaptionClass = '75000,7';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(7),

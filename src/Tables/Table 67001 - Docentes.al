@@ -20,7 +20,7 @@ table 67001 Docentes
                 END;
             end;
         }
-        field(2; "No. 2; Code[20])
+        field(2; "No. 2"; Code[20])
         {
         }
         field(3; "Full Name"; Text[70])
@@ -36,7 +36,7 @@ table 67001 Docentes
         {
             Caption = 'Search Name';
         }
-        field(5; "Name 2; Text[100])
+        field(5; "Name 2"; Text[100])
         {
             Caption = 'Name 2';
         }
@@ -44,7 +44,7 @@ table 67001 Docentes
         {
             Caption = 'Address';
         }
-        field(7; "Address 2; Text[50])
+        field(7; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -287,7 +287,7 @@ table 67001 Docentes
         {
             Caption = 'Last Time Modified';
         }
-        field(49; "E-Mail 2;Text[80])
+        field(49; "E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
@@ -298,7 +298,7 @@ table 67001 Docentes
         }
         field(51; "Tipo de colegio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipos de colegios));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipos de colegios"));
 
             trigger OnValidate()
             begin
@@ -315,7 +315,7 @@ table 67001 Docentes
         }
         field(53; "Tipo educacion"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipo de educacion));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipo de educacion"));
 
             trigger OnValidate()
             begin
@@ -329,7 +329,7 @@ table 67001 Docentes
         }
         field(54; "Orden religiosa"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Orden religiosa));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Orden religiosa"));
 
             trigger OnValidate()
             begin
@@ -384,7 +384,7 @@ table 67001 Docentes
         field(66; "Job Type Code"; Code[20])
         {
             Caption = 'Job Type Code';
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin
@@ -433,7 +433,7 @@ table 67001 Docentes
         }
         field(78; "Nivel decision"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
             begin
@@ -461,7 +461,7 @@ table 67001 Docentes
         }
         field(82; "Tipo de contacto"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tipos de contactos));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipos de contactos"));
 
             trigger OnValidate()
             begin

@@ -24,7 +24,7 @@ table 67024 Editoras
         {
             Caption = 'Address';
         }
-        field(5; "Address 2; Text[50])
+        field(5; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }

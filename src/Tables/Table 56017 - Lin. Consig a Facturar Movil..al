@@ -43,7 +43,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         {
             Caption = 'Description';
         }
-        field(12; "Description 2; Text[60])
+        field(12; "Description 2"; Text[60])
         {
             Caption = 'Description 2';
         }

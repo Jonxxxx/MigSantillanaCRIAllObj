@@ -35,7 +35,7 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(5; "Cod. Cargo"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin
@@ -109,7 +109,7 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(15;"Nivel decision";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Nivel de decisi n));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Nivel de decisi n"));
 
             trigger OnValidate()
             begin
@@ -160,7 +160,7 @@ table 67076 "Hist. Colegio - Docentes"
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(35;"Docente - E-Mail 2;Text[80])
+        field(35;"Docente - E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;

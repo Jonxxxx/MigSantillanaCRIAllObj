@@ -474,7 +474,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(49;"Grupo de Negocio";Code[20])
         {
             Caption = 'Business Group';
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Grupo de Negocio"));
         }
         field(50;Referencia;Text[60])
         {
@@ -743,7 +743,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67035;"Cod. Cargo Responsable";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin

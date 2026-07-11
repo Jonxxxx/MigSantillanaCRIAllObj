@@ -19,7 +19,7 @@ table 67065 "Micro empresario"
         {
             Caption = 'Search Name';
         }
-        field(4; "Name 2; Text[100])
+        field(4; "Name 2"; Text[100])
         {
             Caption = 'Name 2';
         }
@@ -27,7 +27,7 @@ table 67065 "Micro empresario"
         {
             Caption = 'Address';
         }
-        field(6; "Address 2; Text[50])
+        field(6; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -265,7 +265,7 @@ table 67065 "Micro empresario"
         {
             Caption = 'Last Time Modified';
         }
-        field(5105; "E-Mail 2;Text[80])
+        field(5105; "E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;

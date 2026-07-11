@@ -59,7 +59,7 @@ table 67020 "Alumnos - Hijos"
         {
             Caption = 'Address';
         }
-        field(10; "Address 2; Text[50])
+        field(10; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }

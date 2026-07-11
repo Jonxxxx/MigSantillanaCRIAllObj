@@ -55,11 +55,11 @@ table 80014 "Tmp Sales Line"
         {
             Caption = 'No.';
             TableRelation = IF (Type = CONST(" ")) "Standard Text"
-            ELSE IF (Type = CONST(G/L Account)) "G/L Account"
-                            ELSE IF (Type=CONST(Item)) Item
-                            ELSE IF (Type=CONST(Resource)) Resource
-                            ELSE IF (Type=CONST(Fixed Asset)) "Fixed Asset"
-                            ELSE IF (Type=CONST("Charge (Item)")) "Item Charge";
+            ELSE IF (Type = CONST("G/L Account")) "G/L Account"
+            ELSE IF (Type = CONST(Item)) Item
+            ELSE IF (Type = CONST(Resource)) Resource
+            ELSE IF (Type = CONST("Fixed Asset")) "Fixed Asset"
+            ELSE IF (Type = CONST("Charge (Item)")) "Item Charge";
 
             trigger OnValidate()
             var
@@ -70,19 +70,19 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(7;"Location Code";Code[10])
+        field(7; "Location Code"; Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE ("Use As In-Transit"=CONST(false));
+            TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
-        field(8;"Posting Group";Code[10])
+        field(8; "Posting Group"; Code[10])
         {
             Caption = 'Posting Group';
             Editable = false;
-            TableRelation = IF (Type=CONST(Item)) "Inventory Posting Group"
-                            ELSE IF (Type=CONST(Fixed Asset)) "FA Posting Group";
+            TableRelation = IF (Type = CONST(Item)) "Inventory Posting Group"
+            ELSE IF (Type = CONST("Fixed Asset")) "FA Posting Group";
         }
-        field(10;"Shipment Date";Date)
+        field(10; "Shipment Date"; Date)
         {
             Caption = 'Shipment Date';
 
@@ -92,22 +92,22 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(11;Description;Text[60])
+        field(11; Description; Text[60])
         {
             Caption = 'Description';
         }
-        field(12;"Description 2;Text[60])
+        field(12; "Description 2"; Text[60])
         {
             Caption = 'Description 2';
         }
-        field(13;"Unit of Measure";Text[10])
+        field(13; "Unit of Measure"; Text[10])
         {
             Caption = 'Unit of Measure';
         }
-        field(15;Quantity;Decimal)
+        field(15; Quantity; Decimal)
         {
             Caption = 'Quantity';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
 
             trigger OnValidate()
             var
@@ -115,20 +115,20 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(16;"Outstanding Quantity";Decimal)
+        field(16; "Outstanding Quantity"; Decimal)
         {
             Caption = 'Outstanding Quantity';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(17;"Qty. to Invoice";Decimal)
+        field(17; "Qty. to Invoice"; Decimal)
         {
             Caption = 'Qty. to Invoice';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(18;"Qty. to Ship";Decimal)
+        field(18; "Qty. to Ship"; Decimal)
         {
             Caption = 'Qty. to Ship';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
 
             trigger OnValidate()
             var
@@ -136,77 +136,77 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(22;"Unit Price";Decimal)
+        field(22; "Unit Price"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 2;
             CaptionClass = GetCaptionClass(FIELDNO("Unit Price"));
             Caption = 'Unit Price';
         }
-        field(23;"Unit Cost (LCY)";Decimal)
+        field(23; "Unit Cost (LCY)"; Decimal)
         {
             AutoFormatType = 2;
             Caption = 'Unit Cost ($)';
         }
-        field(25;"VAT %";Decimal)
+        field(25; "VAT %"; Decimal)
         {
             Caption = 'Tax %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(27;"Line Discount %";Decimal)
+        field(27; "Line Discount %"; Decimal)
         {
             Caption = 'Line Discount %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(28;"Line Discount Amount";Decimal)
+        field(28; "Line Discount Amount"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Line Discount Amount';
         }
-        field(29;Amount;Decimal)
+        field(29; Amount; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Amount';
             Editable = false;
         }
-        field(30;"Amount Including VAT";Decimal)
+        field(30; "Amount Including VAT"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Amount Including Tax';
             Editable = false;
         }
-        field(32;"Allow Invoice Disc.";Boolean)
+        field(32; "Allow Invoice Disc."; Boolean)
         {
             Caption = 'Allow Invoice Disc.';
             InitValue = true;
         }
-        field(34;"Gross Weight";Decimal)
+        field(34; "Gross Weight"; Decimal)
         {
             Caption = 'Gross Weight';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(35;"Net Weight";Decimal)
+        field(35; "Net Weight"; Decimal)
         {
             Caption = 'Net Weight';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(36;"Units per Parcel";Decimal)
+        field(36; "Units per Parcel"; Decimal)
         {
             Caption = 'Units per Parcel';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(37;"Unit Volume";Decimal)
+        field(37; "Unit Volume"; Decimal)
         {
             Caption = 'Unit Volume';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(38;"Appl.-to Item Entry";Integer)
+        field(38; "Appl.-to Item Entry"; Integer)
         {
             Caption = 'Appl.-to Item Entry';
 
@@ -216,36 +216,36 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(40;"Shortcut Dimension 1 Code";Code[20])
+        field(40; "Shortcut Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,2,1';
             Caption = 'Shortcut Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
-        field(41;"Shortcut Dimension 2 Code";Code[20])
+        field(41; "Shortcut Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,2,2';
             Caption = 'Shortcut Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
-        field(42;"Customer Price Group";Code[10])
+        field(42; "Customer Price Group"; Code[10])
         {
             Caption = 'Customer Price Group';
             Editable = false;
             TableRelation = "Customer Price Group";
         }
-        field(45;"Job No.";Code[20])
+        field(45; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             Editable = false;
             TableRelation = Job;
         }
-        field(52;"Work Type Code";Code[10])
+        field(52; "Work Type Code"; Code[10])
         {
             Caption = 'Work Type Code';
             TableRelation = "Work Type";
         }
-        field(57;"Outstanding Amount";Decimal)
+        field(57; "Outstanding Amount"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
@@ -258,13 +258,13 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(58;"Qty. Shipped Not Invoiced";Decimal)
+        field(58; "Qty. Shipped Not Invoiced"; Decimal)
         {
             Caption = 'Qty. Shipped Not Invoiced';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(59;"Shipped Not Invoiced";Decimal)
+        field(59; "Shipped Not Invoiced"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
@@ -277,54 +277,54 @@ table 80014 "Tmp Sales Line"
             begin
             end;
         }
-        field(60;"Quantity Shipped";Decimal)
+        field(60; "Quantity Shipped"; Decimal)
         {
             Caption = 'Quantity Shipped';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(61;"Quantity Invoiced";Decimal)
+        field(61; "Quantity Invoiced"; Decimal)
         {
             Caption = 'Quantity Invoiced';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(63;"Shipment No.";Code[20])
+        field(63; "Shipment No."; Code[20])
         {
             Caption = 'Shipment No.';
             Editable = false;
         }
-        field(64;"Shipment Line No.";Integer)
+        field(64; "Shipment Line No."; Integer)
         {
             Caption = 'Shipment Line No.';
             Editable = false;
         }
-        field(67;"Profit %";Decimal)
+        field(67; "Profit %"; Decimal)
         {
             Caption = 'Profit %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(68;"Bill-to Customer No.";Code[20])
+        field(68; "Bill-to Customer No."; Code[20])
         {
             Caption = 'Bill-to Customer No.';
             Editable = false;
             TableRelation = Customer;
         }
-        field(69;"Inv. Discount Amount";Decimal)
+        field(69; "Inv. Discount Amount"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
             Caption = 'Inv. Discount Amount';
             Editable = false;
         }
-        field(71;"Purchase Order No.";Code[20])
+        field(71; "Purchase Order No."; Code[20])
         {
             Caption = 'Purchase Order No.';
             Editable = false;
             TableRelation = IF (Drop Shipment=CONST(true)) "Purchase Header"."No." WHERE ("Document Type"=CONST(Order));
         }
-        field(72;"Purch. Order Line No.";Integer)
+        field(72; "Purch. Order Line No."; Integer)
         {
             Caption = 'Purch. Order Line No.';
             Editable = false;
@@ -456,14 +456,14 @@ table 80014 "Tmp Sales Line"
         field(97;"Blanket Order No.";Code[20])
         {
             Caption = 'Blanket Order No.';
-            TableRelation = "Sales Header"."No." WHERE ("Document Type"=CONST(Blanket Order));
+            TableRelation = "Sales Header"."No." WHERE ("Document Type"=CONST("Blanket Order"));
             //This property is currently not supported
             //TestTableRelation = false;
         }
         field(98;"Blanket Order Line No.";Integer)
         {
             Caption = 'Blanket Order Line No.';
-            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST(Blanket Order),
+            TableRelation = "Sales Line"."Line No." WHERE ("Document Type"=CONST("Blanket Order"),
                                                            "Document No."=FIELD("Blanket Order No."));
             //This property is currently not supported
             //TestTableRelation = false;

@@ -55,7 +55,7 @@ table 67087 "Solicitud - Competencia"
         }
         field(7; "Grupo de Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(8; "Cod. Libro Santillana"; Code[20])
         {

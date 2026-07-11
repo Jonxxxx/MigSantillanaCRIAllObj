@@ -334,7 +334,7 @@ page 67074 "Cab. Muestras"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5750;
-                                    RunPageLink = Document Type=CONST(Transfer Order),
+                                    RunPageLink = Document Type=CONST("Transfer Order"),
                                   "No."=FIELD("No.");
                 }
                 action("S&hipments")

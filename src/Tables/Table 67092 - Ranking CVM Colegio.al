@@ -14,7 +14,7 @@ table 67092 "Ranking CVM Colegio"
         field(2; "Grupo de Negocio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(3; "CVM GN"; Code[3])
         {

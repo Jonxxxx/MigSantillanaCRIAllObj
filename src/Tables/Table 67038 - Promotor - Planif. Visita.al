@@ -161,7 +161,7 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(19;Cargo;Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin
@@ -228,7 +228,7 @@ table 67038 "Promotor - Planif. Visita"
         {
             Caption = 'School status';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Estado Colegio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Estado Colegio"));
         }
     }
 

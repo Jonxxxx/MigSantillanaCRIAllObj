@@ -53,7 +53,7 @@ table 67017 Padres
         {
             Caption = 'Address';
         }
-        field(8; "Address 2; Text[50])
+        field(8; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -160,7 +160,7 @@ table 67017 Padres
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(29; "E-Mail 2;Text[80])
+        field(29; "E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;

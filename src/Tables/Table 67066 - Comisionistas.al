@@ -27,7 +27,7 @@ table 67066 Comisionistas
         {
             Caption = 'Search Name';
         }
-        field(4; "Name 2; Text[100])
+        field(4; "Name 2"; Text[100])
         {
             Caption = 'Name 2';
         }
@@ -35,7 +35,7 @@ table 67066 Comisionistas
         {
             Caption = 'Address';
         }
-        field(6; "Address 2; Text[50])
+        field(6; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -338,7 +338,7 @@ table 67066 Comisionistas
             CalcFormula = Min(To-do.Date WHERE ("Contact Company No."=FIELD("Company No."),
                                                 "Contact No."=FIELD(FILTER(Lookup Contact No.)),
                                                 "Closed"=CONST(false),
-                                                "System To-do Type"=CONST(Contact Attendee)));
+                                                "System To-do Type"=CONST("Contact Attendee")));
             Caption = 'Next To-do Date';
             Editable = false;
             FieldClass = FlowField;
@@ -618,7 +618,7 @@ table 67066 Comisionistas
         {
             Caption = 'Last Time Modified';
         }
-        field(5105;"E-Mail 2;Text[80])
+        field(5105;"E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;

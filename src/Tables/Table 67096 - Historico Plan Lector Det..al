@@ -32,26 +32,26 @@ table 67096 "Historico Plan Lector Det."
         field(8; "Cantidad Docentes"; Integer)
         {
         }
-        field(9; "Edit. 1;Code[10])
+        field(9; "Edit. 1"; Code[10])
         {
         }
-        field(10; "Cant. x Alum 1;Integer)
+        field(10; "Cant. x Alum 1"; Integer)
         {
         }
-        field(11; "Edit. 2; Code[10])
+        field(11; "Edit. 2"; Code[10])
         {
         }
-        field(12; "Cant. x Alum 2; Integer)
+        field(12; "Cant. x Alum 2"; Integer)
         {
         }
-        field(13; "Tipo Lectura 1;Option)
+        field(13; "Tipo Lectura 1"; Option)
         {
             OptionCaption = ' ,Colectiva,Libre';
             OptionMembers = " ",Colectiva,Libre;
         }
-        field(14; "Modalidad Lectura 1;Code[10])
+        field(14; "Modalidad Lectura 1"; Code[10])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Estado Colegio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Estado Colegio"));
         }
         field(17; "Total Obras Compradas x Alumno"; Integer)
         {
@@ -69,20 +69,20 @@ table 67096 "Historico Plan Lector Det."
         {
             Editable = false;
         }
-        field(23; "Edit. 3; Code[10])
+        field(23; "Edit. 3"; Code[10])
         {
             TableRelation = Editoras.Code;
             ValidateTableRelation = false;
         }
-        field(24; "Cant. x Alum 3; Integer)
+        field(24; "Cant. x Alum 3"; Integer)
         {
         }
-        field(25; "Edit. 4; Code[10])
+        field(25; "Edit. 4"; Code[10])
         {
             TableRelation = Editoras.Code;
             ValidateTableRelation = false;
         }
-        field(26; "Cant. x Alum 4; Integer)
+        field(26; "Cant. x Alum 4"; Integer)
         {
         }
         field(50; "Campa a"; Code[4])

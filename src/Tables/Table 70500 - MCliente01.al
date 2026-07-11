@@ -7,11 +7,11 @@ table 70500 MCliente01
         {
             Description = 'Tipo de tratamiento del cliente (Sr., Don, etc)';
         }
-        field(3; "Nombre 1;Text[100])
+        field(3; "Nombre 1"; Text[100])
         {
             Description = 'Nombre del cliente';
         }
-        field(4; "Nombre 2; Text[100])
+        field(4; "Nombre 2"; Text[100])
         {
             Description = 'Nombre Adicional';
         }
@@ -76,7 +76,7 @@ table 70500 MCliente01
         {
             Description = 'En caso de que el deudor o proveedor pertenezca a un grupo de empresas, se puede introducir aqu  una clave de grupo. La clave de grupo puede asignarse libremente. Si se forma un matchcode mediante esta clave de grupo, podr  efectuar evaluaciones a nivel de grupo de empresas.';
         }
-        field(23; "N  ident.fis.1;Text[30])
+        field(23; "N  ident.fis.1"; Text[30])
         {
             Description = 'Indica el n mero de identificaci n fiscal.';
         }
@@ -120,7 +120,7 @@ table 70500 MCliente01
         {
             Description = 'Clave de ramo industrial. Un ramo es una divisi n por empresas seg n el centro de gravedad de su actividad econ mica. Se utiliza la clave de ramo para limitar las evaluaciones (p. ej.,  ndice de datos maestros de acreedor). Se pueden utilizar como ramos,';
         }
-        field(34; "C digo ramo 1;Text[10])
+        field(34; "C digo ramo 1"; Text[10])
         {
             Description = 'Indica un c digo que identifica un vocamente el ramo (o los ramos) del cliente.';
         }
@@ -208,7 +208,7 @@ table 70500 MCliente01
         {
             Description = 'Moneda del cliente de un  rea de ventas. En la organizaci n de ventas indicada se liquida al cliente en esta moneda.';
         }
-        field(56; "Cta.en deudor2; Text[12])
+        field(56; "Cta.en deudor2"; Text[12])
         {
             Description = 'Este campo contiene nuestro n mero de cuenta con el cliente o proveedor.';
         }

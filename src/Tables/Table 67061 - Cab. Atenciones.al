@@ -98,7 +98,7 @@ table 67061 "Cab. Atenciones"
             Caption = 'Address';
             Editable = false;
         }
-        field(12; "Address 2;Text[50])
+        field(12; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
             Editable = false;
@@ -349,7 +349,7 @@ table 67061 "Cab. Atenciones"
         field(31; "Grupo de Negocio"; Code[20])
         {
             Editable = false;
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
             trigger OnLookup()
             var

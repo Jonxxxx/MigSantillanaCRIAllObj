@@ -255,10 +255,10 @@ table 67120 "Encuesta TIC"
         field(34;"Especificar PC labor. Internet";Integer)
         {
         }
-        field(35;"PC laboratorio2;Integer)
+        field(35;"PC laboratorio2"; Integer)
         {
         }
-        field(36;"PC laboratorio3;Integer)
+        field(36;"PC laboratorio3"; Integer)
         {
         }
     }

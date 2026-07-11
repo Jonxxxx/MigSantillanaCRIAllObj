@@ -4,7 +4,7 @@ page 67068 "Area Principal"
     PageType = Card;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Area principal));
+                      WHERE("Tipo registro" = CONST("Area principal"));
 
     layout
     {

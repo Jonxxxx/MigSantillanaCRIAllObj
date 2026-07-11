@@ -5,7 +5,7 @@ page 67033 "Lista Puestos"
     PageType = List;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Puestos de trabajo));
+                      WHERE("Tipo registro" = CONST("Puestos de trabajo"));
     UsageCategory = Administration;
 
     layout

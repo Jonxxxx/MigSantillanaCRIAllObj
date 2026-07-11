@@ -221,43 +221,43 @@ table 70000 "Plantilla Queen Mat. Comerc."
         {
             Description = 'Poner la misma que fecha puesta en venta';
         }
-        field(52;"TEMATICA WEB 1;Text[30])
+        field(52;"TEMATICA WEB 1"; Text[30])
         {
             Description = 'Bolsillo.\'
                           'acio.\'
                           '';
         }
-        field(53;"TEMATICA WEB 2;Text[30])
+        field(53;"TEMATICA WEB 2"; Text[30])
         {
             Description = 'Rom ntica\'
                           'acio.\'
                           '';
         }
-        field(54;"TEMATICA WEB 3;Text[30])
+        field(54;"TEMATICA WEB 3"; Text[30])
         {
             Description = 'Juvenil\'
                           'acio.\'
                           '';
         }
-        field(55;"TEMATICA WEB 4;Text[30])
+        field(55;"TEMATICA WEB 4"; Text[30])
         {
             Description = 'Infantil\'
                           'acio.\'
                           '';
         }
-        field(56;"TEMATICA WEB 5;Text[30])
+        field(56;"TEMATICA WEB 5"; Text[30])
         {
             Description = 'Ebook\'
                           'acio.\'
                           '';
         }
-        field(57;"TEMATICA WEB 6;Text[30])
+        field(57;"TEMATICA WEB 6"; Text[30])
         {
             Description = 'App\'
                           'acio.\'
                           '';
         }
-        field(58;"FECHA PUBL 1;Code[10])
+        field(58;"FECHA PUBL 1"; Code[10])
         {
             Description = 'Lo mismo que en fecha primera fact.';
         }

@@ -196,7 +196,7 @@ table 67035 "Historico Adopciones"
         field(48;"Motivo perdida adopcion";Text[60])
         {
             Caption = 'Motivo perdida adopcion';
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
         }
         field(49;"Cod. Producto Editora";Code[20])
         {

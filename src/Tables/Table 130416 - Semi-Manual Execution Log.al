@@ -9,19 +9,19 @@ table 130416 "Semi-Manual Execution Log"
         {
             Caption = 'Time stamp';
         }
-        field(2; "Step description 1;Text[250])
+        field(2; "Step description 1"; Text[250])
         {
             Caption = 'Step description 1';
         }
-        field(3; "Step description 2; Text[250])
+        field(3; "Step description 2"; Text[250])
         {
             Caption = 'Step description 2';
         }
-        field(4; "Step description 3; Text[250])
+        field(4; "Step description 3"; Text[250])
         {
             Caption = 'Step description 3';
         }
-        field(5; "Step description 4; Text[250])
+        field(5; "Step description 4"; Text[250])
         {
             Caption = 'Step description 4';
         }

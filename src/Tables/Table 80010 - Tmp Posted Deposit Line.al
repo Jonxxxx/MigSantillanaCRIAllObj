@@ -24,11 +24,11 @@ table 80010 "Tmp Posted Deposit Line"
         field(4; "Account No."; Code[20])
         {
             Caption = 'Account No.';
-            TableRelation = IF (Account Type=CONST(G/L Account)) "G/L Account"
+            TableRelation = IF (Account Type=CONST("G/L Account")) "G/L Account"
                             ELSE IF (Account Type=CONST(Customer)) Customer
                             ELSE IF (Account Type=CONST(Vendor)) Vendor
-                            ELSE IF (Account Type=CONST(Bank Account)) "Bank Account"
-                            ELSE IF (Account Type=CONST(IC Partner)) "IC Partner";
+                            ELSE IF (Account Type=CONST("Bank Account")) "Bank Account"
+                            ELSE IF (Account Type=CONST("IC Partner")) "IC Partner";
         }
         field(5; "Document Date"; Date)
         {
@@ -92,10 +92,10 @@ table 80010 "Tmp Posted Deposit Line"
         field(16; "Entry No."; Integer)
         {
             Caption = 'Entry No.';
-            TableRelation = IF (Account Type=CONST(G/L Account)) "G/L Entry"
+            TableRelation = IF (Account Type=CONST("G/L Account")) "G/L Entry"
                             ELSE IF (Account Type=CONST(Customer)) "Cust. Ledger Entry"
                             ELSE IF (Account Type=CONST(Vendor)) "Vendor Ledger Entry"
-                            ELSE IF (Account Type=CONST(Bank Account)) "Bank Account Ledger Entry";
+                            ELSE IF (Account Type=CONST("Bank Account")) "Bank Account Ledger Entry";
         }
     }
 

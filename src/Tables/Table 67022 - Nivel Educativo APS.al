@@ -19,7 +19,7 @@ table 67022 "Nivel Educativo APS"
         }
         field(5; "Grupo de Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
     }
 

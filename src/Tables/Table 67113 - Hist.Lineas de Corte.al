@@ -8,7 +8,7 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(2; "Linea Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
             trigger OnValidate()
             var

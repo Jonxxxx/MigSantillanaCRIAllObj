@@ -38,11 +38,11 @@ table 56011 "Lin. Consignacion a Facturar"
         {
             Caption = 'No.';
             TableRelation = IF (Type = CONST(" ")) "Standard Text"
-            ELSE IF (Type = CONST(G/L Account)) "G/L Account"
-                            ELSE IF (Type=CONST(Item)) Item
-                            ELSE IF (Type=CONST(Resource)) Resource
-                            ELSE IF (Type=CONST(Fixed Asset)) "Fixed Asset"
-                            ELSE IF (Type=CONST("Charge (Item)")) "Item Charge";
+            ELSE IF (Type = CONST("G/L Account")) "G/L Account"
+            ELSE IF (Type = CONST(Item)) Item
+            ELSE IF (Type = CONST(Resource)) Resource
+            ELSE IF (Type = CONST("Fixed Asset")) "Fixed Asset"
+            ELSE IF (Type = CONST("Charge (Item)")) "Item Charge";
 
             trigger OnValidate()
             var
@@ -53,27 +53,27 @@ table 56011 "Lin. Consignacion a Facturar"
             begin
             end;
         }
-        field(7;"Location Code";Code[10])
+        field(7; "Location Code"; Code[10])
         {
             Caption = 'Location Code';
-            TableRelation = Location WHERE ("Use As In-Transit"=CONST(false));
+            TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
-        field(11;Description;Text[60])
+        field(11; Description; Text[60])
         {
             Caption = 'Description';
         }
-        field(12;"Description 2;Text[60])
+        field(12; "Description 2"; Text[60])
         {
             Caption = 'Description 2';
         }
-        field(13;"Unit of Measure";Text[10])
+        field(13; "Unit of Measure"; Text[10])
         {
             Caption = 'Unit of Measure';
         }
-        field(15;Quantity;Decimal)
+        field(15; Quantity; Decimal)
         {
             Caption = 'Quantity';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
 
             trigger OnValidate()
             var
@@ -81,64 +81,65 @@ table 56011 "Lin. Consignacion a Facturar"
             begin
             end;
         }
-        field(22;"Unit Price";Decimal)
+        field(22; "Unit Price"; Decimal)
         {
             AutoFormatType = 2;
             Caption = 'Unit Price';
         }
-        field(27;"Line Discount %";Decimal)
+        field(27; "Line Discount %"; Decimal)
         {
             Caption = 'Line Discount %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(28;"Line Discount Amount";Decimal)
+        field(28; "Line Discount Amount"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Line Discount Amount';
         }
-        field(29;Amount;Decimal)
+        field(29; Amount; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Amount';
             Editable = false;
         }
-        field(30;"Amount Including VAT";Decimal)
+        field(30; "Amount Including VAT"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Amount Including Tax';
             Editable = false;
         }
-        field(31;"Cantidad Inv. en Consignacion";Decimal)
+        field(31; "Cantidad Inv. en Consignacion"; Decimal)
         {
         }
-        field(32;"Cantidad Consignacion Devuelta";Decimal)
+        field(32; "Cantidad Consignacion Devuelta"; Decimal)
         {
         }
-        field(33;"No. Pedido Consignacion";Code[20])
+        field(33; "No. Pedido Consignacion"; Code[20])
         {
         }
-        field(34;"No. Linea Pedido Consignacion";Integer)
+        field(34; "No. Linea Pedido Consignacion"; Integer)
         {
         }
-        field(35;"No. Mov. Prod. Cosg. a Liq.";Integer)
+        field(35; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
         }
-        field(36;"ID Usuario";Code[20])
+        field(36; "ID Usuario"; Code[20])
         {
             Caption = 'User ID';
         }
-        field(37;Marcada;Boolean)
+        field(37; Marcada; Boolean)
         {
             Caption = 'Marked';
         }
-        field(5407;"Unit of Measure Code";Code[10])
+        field(5407; "Unit of Measure Code"; Code[10])
         {
             Caption = 'Unit of Measure Code';
-            TableRelation = IF (Type=CONST(Item)) "Item Unit of Measure".Code WHERE ("Item No."=FIELD("No."))
-                            ELSE IF (Type=CONST(Resource)) "Resource Unit of Measure".Code WHERE ("Resource No."=FIELD("No."))
-                            ELSE "Unit of Measure";
+            TableRelation = IF (Type = CONST(Item)) "Item Unit of Measure".Code WHERE("Item No." = FIELD("No."))
+            ELSE IF (Type = CONST(Resource)) "Resource Unit of Measure".Code WHERE("Resource No." = FIELD("No."))
+            ELSE
+            "Unit of Measure";
 
             trigger OnValidate()
             var
@@ -147,28 +148,28 @@ table 56011 "Lin. Consignacion a Facturar"
             begin
             end;
         }
-        field(50000;"Cantidad a Facturar";Integer)
+        field(50000; "Cantidad a Facturar"; Integer)
         {
             Caption = 'Qty. To Invoice';
 
             trigger OnValidate()
             begin
                 IF "Cantidad a Facturar" > Quantity THEN
-                  ERROR(Error001);
+                    ERROR(Error001);
             end;
         }
     }
 
     keys
     {
-        key(Key1;"Document Type","Document No.","ID Usuario","Line No.")
+        key(Key1; "Document Type", "Document No.", "ID Usuario", "Line No.")
         {
         }
     }
 
     fieldgroups
     {
-    }    
+    }
 
     var
         Text000: Label 'You cannot delete the order line because it is associated with purchase order %1 line %2.';
@@ -413,23 +414,23 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    procedure CreateDim(Type1: Integer;No1: Code[20];Type2: Integer;No2: Code[20];Type3: Integer;No3: Code[20])
+    procedure CreateDim(Type1: Integer; No1: Code[20]; Type2: Integer; No2: Code[20]; Type3: Integer; No3: Code[20])
     var
         SourceCodeSetup: Record 242;
-        TableID: array [10] of Integer;
-        No: array [10] of Code[20];
+        TableID: array[10] of Integer;
+        No: array[10] of Code[20];
     begin
     end;
 
-    procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
     end;
 
-    procedure LookupShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure LookupShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
     end;
 
-    procedure ShowShortcutDimCode(var ShortcutDimCode: array [8] of Code[20])
+    procedure ShowShortcutDimCode(var ShortcutDimCode: array[8] of Code[20])
     begin
     end;
 
@@ -489,11 +490,11 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    local procedure DeleteItemChargeAssgnt(DocType: Option;DocNo: Code[20];DocLineNo: Integer)
+    local procedure DeleteItemChargeAssgnt(DocType: Option; DocNo: Code[20]; DocLineNo: Integer)
     begin
     end;
 
-    local procedure DeleteChargeChargeAssgnt(DocType: Option;DocNo: Code[20];DocLineNo: Integer)
+    local procedure DeleteChargeChargeAssgnt(DocType: Option; DocNo: Code[20]; DocLineNo: Integer)
     begin
     end;
 
@@ -511,7 +512,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    procedure UpdateVATOnLines(QtyType: Option General,Invoicing,Shipping;var SalesHeader Record: 36;var SalesLine Record: 37;var VATAmountLine Record: 290")
+    procedure UpdateVATOnLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
     var
         TempVATAmountLineRemainder Record: 290" temporary;
         Currency: Record 4;
@@ -528,7 +529,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    procedure CalcVATAmountLines(QtyType: Option General,Invoicing,Shipping;var SalesHeader Record: 36;var SalesLine Record: 37;var VATAmountLine Record: 290")
+    procedure CalcVATAmountLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
     var
         PrevVatAmountLine: Record 290;
         Currency: Record 4;
@@ -624,7 +625,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    local procedure GetAbsMin(QtyToHandle: Decimal;QtyHandled: Decimal): Decimal
+    local procedure GetAbsMin(QtyToHandle: Decimal; QtyHandled: Decimal): Decimal
     begin
     end;
 
@@ -699,7 +700,7 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    procedure CalcSalesTaxLines(var SalesHeader Record: 36;var SalesLine Record: 37")
+    procedure CalcSalesTaxLines(var SalesHeader Record: 36; var SalesLine Record: 37")
     var
         TaxArea: Record 318;
     begin

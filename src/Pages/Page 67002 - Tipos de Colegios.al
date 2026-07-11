@@ -5,7 +5,7 @@ page 67002 "Tipos de Colegios"
     PageType = List;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Tipos de colegios));
+                      WHERE("Tipo registro" = CONST("Tipos de colegios"));
     UsageCategory = Administration;
 
     layout

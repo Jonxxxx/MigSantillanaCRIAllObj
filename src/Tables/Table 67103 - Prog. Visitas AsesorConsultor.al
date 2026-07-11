@@ -49,7 +49,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         field(13; "Grupo Negocio"; Code[20])
         {
             Editable = false;
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(14; "Cod. promotor"; Code[20])
         {

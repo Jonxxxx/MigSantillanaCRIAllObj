@@ -28,7 +28,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         {
             Caption = 'Name';
         }
-        field(6; "Bill-to Name 2; Text[50])
+        field(6; "Bill-to Name 2"; Text[50])
         {
             Caption = 'Name 2';
         }
@@ -36,7 +36,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         {
             Caption = 'Address';
         }
-        field(8; "Bill-to Address 2; Text[50])
+        field(8; "Bill-to Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -61,7 +61,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         {
             Caption = 'Ship-to Name';
         }
-        field(14; "Ship-to Name 2;Text[50])
+        field(14; "Ship-to Name 2"; Text[50])
         {
             Caption = 'Ship-to Name 2';
         }
@@ -69,7 +69,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         {
             Caption = 'Ship-to Address';
         }
-        field(16; "Ship-to Address 2;Text[50])
+        field(16; "Ship-to Address 2"; Text[50])
         {
             Caption = 'Ship-to Address 2';
         }
@@ -181,114 +181,114 @@ table 80003 "Tmp Sales Cr.Memo Header"
         }
         field(46; Comment; Boolean)
         {
-            CalcFormula = Exist("Sales Comment Line" WHERE("Document Type" = CONST(Posted Credit Memo),
-                                                            "No."=FIELD("No."),
-                                                            "Document Line No."=CONST(0)));
+            CalcFormula = Exist("Sales Comment Line" WHERE("Document Type" = CONST("Posted Credit Memo"),
+                                                            "No." = FIELD("No."),
+                                                            "Document Line No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(47;"No. Printed";Integer)
+        field(47; "No. Printed"; Integer)
         {
             Caption = 'No. Printed';
             Editable = false;
         }
-        field(51;"On Hold";Code[3])
+        field(51; "On Hold"; Code[3])
         {
             Caption = 'On Hold';
         }
-        field(52;"Applies-to Doc. Type";Option)
+        field(52; "Applies-to Doc. Type"; Option)
         {
             Caption = 'Applies-to Doc. Type';
             OptionCaption = ' ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund';
             OptionMembers = " ",Payment,Invoice,"Credit Memo","Finance Charge Memo",Reminder,Refund;
         }
-        field(53;"Applies-to Doc. No.";Code[20])
+        field(53; "Applies-to Doc. No."; Code[20])
         {
             Caption = 'Applies-to Doc. No.';
         }
-        field(55;"Bal. Account No.";Code[20])
+        field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF (Bal. Account Type=CONST(G/L Account)) "G/L Account"
-                            ELSE IF (Bal. Account Type=CONST(Bank Account)) "Bank Account";
+            TableRelation = IF (Bal.Account Type=CONST("G/L Account")) "G/L Account"
+                            ELSE IF (Bal. Account Type=CONST("Bank Account")) "Bank Account";
         }
-        field(60;Amount;Decimal)
+        field(60; Amount; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Sales Cr.Memo Line".Amount WHERE ("Document No."=FIELD("No.")));
+            CalcFormula = Sum("Sales Cr.Memo Line".Amount WHERE("Document No." = FIELD("No.")));
             Caption = 'Amount';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(61;"Amount Including VAT";Decimal)
+        field(61; "Amount Including VAT"; Decimal)
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            CalcFormula = Sum("Sales Cr.Memo Line"."Amount Including VAT" WHERE ("Document No."=FIELD("No.")));
+            CalcFormula = Sum("Sales Cr.Memo Line"."Amount Including VAT" WHERE("Document No." = FIELD("No.")));
             Caption = 'Amount Including Tax';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(70;"VAT Registration No.";Text[20])
+        field(70; "VAT Registration No."; Text[20])
         {
             Caption = 'VAT Registration No.';
         }
-        field(73;"Reason Code";Code[10])
+        field(73; "Reason Code"; Code[10])
         {
             Caption = 'Reason Code';
             TableRelation = "Reason Code";
         }
-        field(74;"Gen. Bus. Posting Group";Code[10])
+        field(74; "Gen. Bus. Posting Group"; Code[10])
         {
             Caption = 'Gen. Bus. Posting Group';
             TableRelation = "Gen. Business Posting Group";
         }
-        field(75;"EU 3-Party Trade";Boolean)
+        field(75; "EU 3-Party Trade"; Boolean)
         {
             Caption = 'EU 3-Party Trade';
         }
-        field(76;"Transaction Type";Code[10])
+        field(76; "Transaction Type"; Code[10])
         {
             Caption = 'Transaction Type';
             TableRelation = "Transaction Type";
         }
-        field(77;"Transport Method";Code[10])
+        field(77; "Transport Method"; Code[10])
         {
             Caption = 'Transport Method';
             TableRelation = "Transport Method";
         }
-        field(78;"VAT Country/Region Code";Code[10])
+        field(78; "VAT Country/Region Code"; Code[10])
         {
             Caption = 'VAT Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(79;"Sell-to Customer Name";Text[50])
+        field(79; "Sell-to Customer Name"; Text[50])
         {
             Caption = 'Sell-to Customer Name';
         }
-        field(80;"Sell-to Customer Name 2;Text[50])
+        field(80; "Sell-to Customer Name 2"; Text[50])
         {
             Caption = 'Sell-to Customer Name 2';
         }
-        field(81;"Sell-to Address";Text[50])
+        field(81; "Sell-to Address"; Text[50])
         {
             Caption = 'Sell-to Address';
         }
-        field(82;"Sell-to Address 2;Text[50])
+        field(82; "Sell-to Address 2"; Text[50])
         {
             Caption = 'Sell-to Address 2';
         }
-        field(83;"Sell-to City";Text[60])
+        field(83; "Sell-to City"; Text[60])
         {
             Caption = 'Sell-to City';
         }
-        field(84;"Sell-to Contact";Text[50])
+        field(84; "Sell-to Contact"; Text[50])
         {
             Caption = 'Sell-to Contact';
         }
-        field(85;"Bill-to Post Code";Code[20])
+        field(85; "Bill-to Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             TableRelation = "Post Code";
@@ -296,16 +296,16 @@ table 80003 "Tmp Sales Cr.Memo Header"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(86;"Bill-to County";Text[30])
+        field(86; "Bill-to County"; Text[30])
         {
             Caption = 'State';
         }
-        field(87;"Bill-to Country/Region Code";Code[10])
+        field(87; "Bill-to Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(88;"Sell-to Post Code";Code[20])
+        field(88; "Sell-to Post Code"; Code[20])
         {
             Caption = 'Sell-to ZIP Code';
             TableRelation = "Post Code";
@@ -313,16 +313,16 @@ table 80003 "Tmp Sales Cr.Memo Header"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(89;"Sell-to County";Text[30])
+        field(89; "Sell-to County"; Text[30])
         {
             Caption = 'Sell-to State';
         }
-        field(90;"Sell-to Country/Region Code";Code[10])
+        field(90; "Sell-to Country/Region Code"; Code[10])
         {
             Caption = 'Sell-to Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(91;"Ship-to Post Code";Code[20])
+        field(91; "Ship-to Post Code"; Code[20])
         {
             Caption = 'Ship-to ZIP Code';
             TableRelation = "Post Code";
@@ -330,69 +330,69 @@ table 80003 "Tmp Sales Cr.Memo Header"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(92;"Ship-to County";Text[30])
+        field(92; "Ship-to County"; Text[30])
         {
             Caption = 'Ship-to State';
         }
-        field(93;"Ship-to Country/Region Code";Code[10])
+        field(93; "Ship-to Country/Region Code"; Code[10])
         {
             Caption = 'Ship-to Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(94;"Bal. Account Type";Option)
+        field(94; "Bal. Account Type"; Option)
         {
             Caption = 'Bal. Account Type';
             OptionCaption = 'G/L Account,Bank Account';
             OptionMembers = "G/L Account","Bank Account";
         }
-        field(97;"Exit Point";Code[10])
+        field(97; "Exit Point"; Code[10])
         {
             Caption = 'Exit Point';
             TableRelation = "Entry/Exit Point";
         }
-        field(98;Correction;Boolean)
+        field(98; Correction; Boolean)
         {
             Caption = 'Correction';
         }
-        field(99;"Document Date";Date)
+        field(99; "Document Date"; Date)
         {
             Caption = 'Document Date';
         }
-        field(100;"External Document No.";Code[20])
+        field(100; "External Document No."; Code[20])
         {
             Caption = 'External Document No.';
         }
-        field(101;"Area";Code[10])
+        field(101; "Area"; Code[10])
         {
             Caption = 'Area';
             TableRelation = Area;
         }
-        field(102;"Transaction Specification";Code[10])
+        field(102; "Transaction Specification"; Code[10])
         {
             Caption = 'Transaction Specification';
             TableRelation = "Transaction Specification";
         }
-        field(104;"Payment Method Code";Code[10])
+        field(104; "Payment Method Code"; Code[10])
         {
             Caption = 'Payment Method Code';
             TableRelation = "Payment Method";
         }
-        field(107;"Pre-Assigned No. Series";Code[10])
+        field(107; "Pre-Assigned No. Series"; Code[10])
         {
             Caption = 'Pre-Assigned No. Series';
             TableRelation = "No. Series";
         }
-        field(108;"No. Series";Code[10])
+        field(108; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
-        field(111;"Pre-Assigned No.";Code[20])
+        field(111; "Pre-Assigned No."; Code[20])
         {
             Caption = 'Pre-Assigned No.';
         }
-        field(112;"User ID";Code[20])
+        field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
             TableRelation = Table2000000002;
@@ -406,162 +406,162 @@ table 80003 "Tmp Sales Cr.Memo Header"
                 LoginMgt.LookupUserID("User ID");
             end;
         }
-        field(113;"Source Code";Code[10])
+        field(113; "Source Code"; Code[10])
         {
             Caption = 'Source Code';
             TableRelation = "Source Code";
         }
-        field(114;"Tax Area Code";Code[20])
+        field(114; "Tax Area Code"; Code[20])
         {
             Caption = 'Tax Area Code';
             TableRelation = "Tax Area";
         }
-        field(115;"Tax Liable";Boolean)
+        field(115; "Tax Liable"; Boolean)
         {
             Caption = 'Tax Liable';
         }
-        field(116;"VAT Bus. Posting Group";Code[10])
+        field(116; "VAT Bus. Posting Group"; Code[10])
         {
             Caption = 'Tax Bus. Posting Group';
             TableRelation = "VAT Business Posting Group";
         }
-        field(119;"VAT Base Discount %";Decimal)
+        field(119; "VAT Base Discount %"; Decimal)
         {
             Caption = 'VAT Base Discount %';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(134;"Prepmt. Cr. Memo No. Series";Code[10])
+        field(134; "Prepmt. Cr. Memo No. Series"; Code[10])
         {
             Caption = 'Prepmt. Cr. Memo No. Series';
             TableRelation = "No. Series";
         }
-        field(136;"Prepayment Credit Memo";Boolean)
+        field(136; "Prepayment Credit Memo"; Boolean)
         {
             Caption = 'Prepayment Credit Memo';
         }
-        field(137;"Prepayment Order No.";Code[20])
+        field(137; "Prepayment Order No."; Code[20])
         {
             Caption = 'Prepayment Order No.';
         }
-        field(827;"Credit Card No.";Code[20])
+        field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            TableRelation = Table827 WHERE ("Field6"=FIELD("Bill-to Customer No."));
+            TableRelation = Table827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
-        field(5050;"Campaign No.";Code[20])
+        field(5050; "Campaign No."; Code[20])
         {
             Caption = 'Campaign No.';
             TableRelation = Campaign;
         }
-        field(5052;"Sell-to Contact No.";Code[20])
+        field(5052; "Sell-to Contact No."; Code[20])
         {
             Caption = 'Sell-to Contact No.';
             TableRelation = Contact;
         }
-        field(5053;"Bill-to Contact No.";Code[20])
+        field(5053; "Bill-to Contact No."; Code[20])
         {
             Caption = 'Bill-to Contact No.';
             TableRelation = Contact;
         }
-        field(5700;"Responsibility Center";Code[10])
+        field(5700; "Responsibility Center"; Code[10])
         {
             Caption = 'Responsibility Center';
             TableRelation = "Responsibility Center";
         }
-        field(5900;"Service Mgt. Document";Boolean)
+        field(5900; "Service Mgt. Document"; Boolean)
         {
             Caption = 'Service Mgt. Document';
         }
-        field(6601;"Return Order No.";Code[20])
+        field(6601; "Return Order No."; Code[20])
         {
             Caption = 'Return Order No.';
         }
-        field(6602;"Return Order No. Series";Code[10])
+        field(6602; "Return Order No. Series"; Code[10])
         {
             Caption = 'Return Order No. Series';
             TableRelation = "No. Series";
         }
-        field(7001;"Allow Line Disc.";Boolean)
+        field(7001; "Allow Line Disc."; Boolean)
         {
             Caption = 'Allow Line Disc.';
         }
-        field(7200;"Get Return Receipt Used";Boolean)
+        field(7200; "Get Return Receipt Used"; Boolean)
         {
             Caption = 'Get Return Receipt Used';
         }
-        field(10005;"Ship-to UPS Zone";Code[2])
+        field(10005; "Ship-to UPS Zone"; Code[2])
         {
             Caption = 'Ship-to UPS Zone';
         }
-        field(10015;"Tax Exemption No.";Text[30])
+        field(10015; "Tax Exemption No."; Text[30])
         {
             Caption = 'Tax Exemption No.';
         }
-        field(10018;"STE Transaction ID";Text[20])
+        field(10018; "STE Transaction ID"; Text[20])
         {
             Caption = 'STE Transaction ID';
             Editable = false;
         }
-        field(56000;"Pedido Consignacion";Boolean)
+        field(56000; "Pedido Consignacion"; Boolean)
         {
         }
-        field(56001;"Collector Code";Code[10])
+        field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            TableRelation = "Salesperson/Purchaser" WHERE ("Collector"=CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
-        field(56002;"Pre pedido";Boolean)
+        field(56002; "Pre pedido"; Boolean)
         {
             Caption = 'Pre Order';
         }
-        field(56003;"Devolucion Consignacion";Boolean)
+        field(56003; "Devolucion Consignacion"; Boolean)
         {
         }
-        field(56006;"Cod. Colegio";Code[20])
+        field(56006; "Cod. Colegio"; Code[20])
         {
             Caption = 'School Code';
-            TableRelation = Contact WHERE ("Type"=FILTER(Company));
+            TableRelation = Contact WHERE("Type" = FILTER(Company));
         }
-        field(56007;"Nombre Colegio";Text[120])
+        field(56007; "Nombre Colegio"; Text[120])
         {
             Caption = 'School Name';
         }
-        field(56008;"Re facturacion";Boolean)
+        field(56008; "Re facturacion"; Boolean)
         {
         }
-        field(34003001;"No. Serie NCF Abonos2;Code[10])
+        field(34003001; "No. Serie NCF Abonos2"; Code[10])
         {
             TableRelation = "No. Series";
         }
-        field(34003002;"No. Comprobante Fiscal";Code[19])
+        field(34003002; "No. Comprobante Fiscal"; Code[19])
         {
         }
-        field(34003003;"No. Comprobante Fiscal Rel.";Code[19])
+        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
         {
         }
-        field(34003004;"Razon anulacion NCF";Code[20])
+        field(34003004; "Razon anulacion NCF"; Code[20])
         {
             TableRelation = "Razones Anulacion NCF";
         }
-        field(34003005;"No. Serie NCF Abonos";Code[10])
+        field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
             TableRelation = "No. Series";
         }
-        field(99008509;"Date Sent";Date)
+        field(99008509; "Date Sent"; Date)
         {
             Caption = 'Date Sent';
         }
-        field(99008510;"Time Sent";Time)
+        field(99008510; "Time Sent"; Time)
         {
             Caption = 'Time Sent';
         }
-        field(99008517;"BizTalk Sales Credit Memo";Boolean)
+        field(99008517; "BizTalk Sales Credit Memo"; Boolean)
         {
             Caption = 'BizTalk Sales Credit Memo';
         }
-        field(99008521;"BizTalk Document Sent";Boolean)
+        field(99008521; "BizTalk Document Sent"; Boolean)
         {
             Caption = 'BizTalk Document Sent';
         }
@@ -569,32 +569,32 @@ table 80003 "Tmp Sales Cr.Memo Header"
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Pre-Assigned No.")
+        key(Key2; "Pre-Assigned No.")
         {
         }
-        key(Key3;"Sell-to Customer No.","External Document No.")
+        key(Key3; "Sell-to Customer No.", "External Document No.")
         {
         }
-        key(Key4;"Return Order No.")
+        key(Key4; "Return Order No.")
         {
         }
-        key(Key5;"Sell-to Customer No.","No.")
+        key(Key5; "Sell-to Customer No.", "No.")
         {
         }
-        key(Key6;"Prepayment Order No.")
+        key(Key6; "Prepayment Order No.")
         {
         }
-        key(Key7;"No. Comprobante Fiscal")
+        key(Key7; "No. Comprobante Fiscal")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.","Sell-to Customer No.","Bill-to Customer No.","Posting Date","Posting Description")
+        fieldgroup(DropDown; "No.", "Sell-to Customer No.", "Bill-to Customer No.", "Posting Date", "Posting Description")
         {
         }
     }

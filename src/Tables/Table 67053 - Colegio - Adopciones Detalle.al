@@ -205,7 +205,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(24;"Cod. Motivo perdida adopcion";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
 
             trigger OnValidate()
             begin
@@ -346,7 +346,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(39;"Motivo perdida adopcion";Text[60])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Motivos Perdida));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
 
             trigger OnValidate()
             begin

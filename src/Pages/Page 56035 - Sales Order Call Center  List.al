@@ -298,7 +298,7 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
-                                    RunPageLink = Source Document=CONST(Sales Order),
+                                    RunPageLink = Source Document=CONST("Sales Order"),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }

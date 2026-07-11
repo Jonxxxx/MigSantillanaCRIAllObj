@@ -375,7 +375,7 @@ page 56002 "Configuracion Santillana"
                 }
                 field("Tipo Impuesto FE"; "Tipo Impuesto FE")
                 {
-                    TableRelation = "Catalogo Parametros FE-DGT".Codigo WHERE("Tipo Parametro" = CONST(Tipo Impuesto));
+                    TableRelation = "Catalogo Parametros FE-DGT".Codigo WHERE("Tipo Parametro" = CONST("Tipo Impuesto"));
                 }
             }
             group("Carga Pedios - CRM")

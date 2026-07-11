@@ -37,7 +37,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Name';
         }
-        field(6; "Bill-to Name 2; Text[50])
+        field(6; "Bill-to Name 2"; Text[50])
         {
             Caption = 'Name 2';
         }
@@ -45,7 +45,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Address';
         }
-        field(8; "Bill-to Address 2; Text[50])
+        field(8; "Bill-to Address 2"; Text[50])
         {
             Caption = 'Address 2';
         }
@@ -76,7 +76,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Ship-to Name';
         }
-        field(14; "Ship-to Name 2;Text[50])
+        field(14; "Ship-to Name 2"; Text[50])
         {
             Caption = 'Ship-to Name 2';
         }
@@ -84,7 +84,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Ship-to Address';
         }
-        field(16; "Ship-to Address 2;Text[50])
+        field(16; "Ship-to Address 2"; Text[50])
         {
             Caption = 'Ship-to Address 2';
         }
@@ -248,8 +248,8 @@ table 56037 "Sales Header Movil."
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF (Bal.Account Type=CONST(G/L Account)) "G/L Account"
-                            ELSE IF (Bal. Account Type=CONST(Bank Account)) "Bank Account";
+            TableRelation = IF (Bal.Account Type=CONST("G/L Account")) "G/L Account"
+                            ELSE IF (Bal. Account Type=CONST("Bank Account")) "Bank Account";
         }
         field(57; Ship; Boolean)
         {
@@ -359,7 +359,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Sell-to Customer Name';
         }
-        field(80; "Sell-to Customer Name 2;Text[50])
+        field(80; "Sell-to Customer Name 2"; Text[50])
         {
             Caption = 'Sell-to Customer Name 2';
         }
@@ -367,7 +367,7 @@ table 56037 "Sales Header Movil."
         {
             Caption = 'Sell-to Address';
         }
-        field(82; "Sell-to Address 2;Text[50])
+        field(82; "Sell-to Address 2"; Text[50])
         {
             Caption = 'Sell-to Address 2';
         }

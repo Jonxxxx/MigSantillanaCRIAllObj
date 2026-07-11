@@ -13,7 +13,7 @@ table 67046 "Colegio - Ranking - Nivel"
         field(2; "Grupo de Negocio"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(3; "Cod. Nivel"; Code[20])
         {

@@ -191,7 +191,7 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         }
         field(20;"Filtro Grupo de Negocio";Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grupo de Negocio));
+            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Grupo de Negocio"));
         }
         field(21;"Filtro Sub Familia";Code[20])
         {

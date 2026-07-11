@@ -6,7 +6,7 @@ page 67138 "Estados colegios"
     PageType = List;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Estado Colegio));
+                      WHERE("Tipo registro" = CONST("Estado Colegio"));
     UsageCategory = Administration;
 
     layout

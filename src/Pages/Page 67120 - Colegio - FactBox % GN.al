@@ -4,7 +4,7 @@ page 67120 "Colegio - FactBox % GN"
     PageType = ListPart;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Grupo de Negocio));
+                      WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
     layout
     {

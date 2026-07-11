@@ -33,7 +33,7 @@ table 67057 "Colegio - Lin. Jerarquia puest"
         }
         field(5; "Cod. Cargo"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Puestos de trabajo));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnLookup()
             begin

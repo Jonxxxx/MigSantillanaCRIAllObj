@@ -5,7 +5,7 @@ page 67032 "Tipo de Educacion"
     PageType = List;
     SourceTable = Table67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
-                      WHERE("Tipo registro" = CONST(Tipo de educacion));
+                      WHERE("Tipo registro" = CONST("Tipo de educacion"));
     UsageCategory = Administration;
 
     layout
