@@ -1,7 +1,7 @@
 page 67078 "Promotores - Docentes"
 {
     PageType = Card;
-    SourceTable = Table67004;
+    SourceTable = 67004;
 
     layout
     {
@@ -9,16 +9,16 @@ page 67078 "Promotores - Docentes"
         {
             repeater()
             {
-                field("Codigo Docente";"Codigo Docente")
+                field("Codigo Docente"; "Codigo Docente")
                 {
                 }
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                 }
-                field("Nombre Promotor";"Nombre Promotor")
+                field("Nombre Promotor"; "Nombre Promotor")
                 {
                 }
             }

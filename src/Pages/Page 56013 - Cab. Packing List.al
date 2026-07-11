@@ -13,7 +13,7 @@ page 56013 "Cab. Packing List"
     CardPageID = Packing;
     Editable = false;
     PageType = List;
-    SourceTable = Table56030;
+    SourceTable = 56030;
     UsageCategory = Lists;
 
     layout

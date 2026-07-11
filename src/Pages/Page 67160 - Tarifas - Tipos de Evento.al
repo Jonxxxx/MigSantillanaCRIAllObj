@@ -1,7 +1,7 @@
 page 67160 "Tarifas - Tipos de Evento"
 {
     PageType = List;
-    SourceTable = Table67068;
+    SourceTable = 67068;
 
     layout
     {
@@ -9,19 +9,19 @@ page 67160 "Tarifas - Tipos de Evento"
         {
             repeater(Group)
             {
-                field("Tipo Evento";"Tipo Evento")
+                field("Tipo Evento"; "Tipo Evento")
                 {
                 }
-                field(Distrito;Distrito)
+                field(Distrito; Distrito)
                 {
                 }
-                field(Pago;Pago)
+                field(Pago; Pago)
                 {
                 }
-                field("Tipo Pago";"Tipo Pago")
+                field("Tipo Pago"; "Tipo Pago")
                 {
                 }
-                field(Monto;Monto)
+                field(Monto; Monto)
                 {
                 }
             }

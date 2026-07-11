@@ -1,7 +1,7 @@
 page 67166 "Ficha de Atenciones"
 {
     PageType = Card;
-    SourceTable = Table67061;
+    SourceTable = 67061;
 
     layout
     {
@@ -157,7 +157,7 @@ page 67166 "Ficha de Atenciones"
 
                 trigger OnAction()
                 var
-                    fPed: Page9349;
+                    fPed: Page 9349;
                     rPed: Record 5107;
                     rLin: Record 5108;
                     rDetAt: Record 67100;
@@ -200,7 +200,7 @@ page 67166 "Ficha de Atenciones"
 
                 trigger OnAction()
                 var
-                    fPed: Page5752;
+                    fPed: Page 5752;
                     rPed: Record 5744;
                     rLin: Record 5745;
                     rDetAt: Record 67100;

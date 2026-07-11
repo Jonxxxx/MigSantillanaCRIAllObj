@@ -3,7 +3,7 @@ page 56090 "Lista Pedidos Ecommerce"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = List;
-    SourceTable = Table50100;
+    SourceTable = 50100;
     UsageCategory = Lists;
 
     layout

@@ -679,8 +679,8 @@ table 67001 Docentes
         Text034: Label 'There is al ready a %1 %2 associated with %3 %45';
         territory: Record 286;
         PostCodeRec: Record 225;
-        PostCodeForm: Page367;
-        formTerritory: Page429;
+        PostCodeForm: Page 367;
+        formTerritory: Page 429;
         RECcOUNTRY: Record 9;
         ColDocente: Record 67043;
         Text035: Label 'There are records associated with this Teacher, review them in% 1';

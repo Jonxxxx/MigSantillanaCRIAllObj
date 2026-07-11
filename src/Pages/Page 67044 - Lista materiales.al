@@ -1,9 +1,9 @@
 page 67044 "Lista materiales"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = Table67013;
+    SourceTable = 67013;
     UsageCategory = Lists;
 
     layout
@@ -12,10 +12,10 @@ page 67044 "Lista materiales"
         {
             repeater()
             {
-                field("Cod. Editorial";"Cod. Editorial")
+                field("Cod. Editorial"; "Cod. Editorial")
                 {
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
             }

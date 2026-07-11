@@ -3,7 +3,7 @@ page 67001 Docentes
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Teachers';
     PageType = Card;
-    SourceTable = Table67001;
+    SourceTable = 67001;
 
     layout
     {

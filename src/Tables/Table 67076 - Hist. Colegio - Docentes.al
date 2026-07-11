@@ -189,6 +189,6 @@ table 67076 "Hist. Colegio - Docentes"
         PromRuta: Record 67044;
         Promotor: Record 13;
         Docente: Record 67001;
-        Cargo: Page67033;
+        Cargo: Page 67033;
 }
 

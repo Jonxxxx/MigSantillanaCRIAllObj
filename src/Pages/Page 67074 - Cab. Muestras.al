@@ -21,7 +21,7 @@ page 67074 "Cab. Muestras"
     Caption = 'Transfer Order';
     PageType = Card;
     RefreshOnActivate = true;
-    SourceTable = Table5740;
+    SourceTable = 5740;
     SourceTableView = SORTING(No.)
                       ORDER(Ascending)
                       WHERE("Devolucion Consignacion" = FILTER(No),
@@ -569,7 +569,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     var
-                        SelProdMuestras: Page67075;
+                        SelProdMuestras: Page 67075;
                                              Promotor: Record 13;
                     begin
                         /*Promotor.RESET;

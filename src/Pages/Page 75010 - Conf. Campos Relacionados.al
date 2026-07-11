@@ -1,10 +1,10 @@
 page 75010 "Conf. Campos Relacionados"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Caption = 'Configuración Campos Relacionados';
     PageType = List;
-    SourceTable = Table75010;
-    SourceTableView = SORTING(Id Fld Origen,Valor Origen);
+    SourceTable = 75010;
+    SourceTableView = SORTING(Id Fld Origen, Valor Origen);
     UsageCategory = Administration;
 
     layout
@@ -13,28 +13,28 @@ page 75010 "Conf. Campos Relacionados"
         {
             repeater(Group)
             {
-                field(Id;Id)
+                field(Id; Id)
                 {
                     Visible = false;
                 }
-                field("Id Fld Origen";"Id Fld Origen")
+                field("Id Fld Origen"; "Id Fld Origen")
                 {
                 }
-                field(GetNomCampo(0);GetNomCampo(0))
+                field(GetNomCampo(0); GetNomCampo(0))
                 {
                     Caption = 'Nombre Campo Origen';
                 }
-                field("Valor Origen";"Valor Origen")
+                field("Valor Origen"; "Valor Origen")
                 {
                 }
-                field("Id Fld Destino";"Id Fld Destino")
+                field("Id Fld Destino"; "Id Fld Destino")
                 {
                 }
-                field(GetNomCampo(1);GetNomCampo(1))
+                field(GetNomCampo(1); GetNomCampo(1))
                 {
                     Caption = 'Nombre Campo Destino';
                 }
-                field("Valor Destino";"Valor Destino")
+                field("Valor Destino"; "Valor Destino")
                 {
                 }
             }

@@ -1,14 +1,14 @@
 page 67097 "Lista Planificacion Promotor"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     CardPageID = "Cab. Planificacion";
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67023;
-    SourceTableView = SORTING(Cod. Promotor,Semana)
+    SourceTable = 67023;
+    SourceTableView = SORTING(Cod. Promotor, Semana)
                       ORDER(Descending);
     UsageCategory = Lists;
 
@@ -18,25 +18,25 @@ page 67097 "Lista Planificacion Promotor"
         {
             repeater()
             {
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Fecha Inicial";"Fecha Inicial")
+                field("Fecha Inicial"; "Fecha Inicial")
                 {
                 }
-                field("Fecha Final";"Fecha Final")
+                field("Fecha Final"; "Fecha Final")
                 {
                 }
-                field(Semana;Semana)
+                field(Semana; Semana)
                 {
                 }
-                field("Nombre promotor";"Nombre promotor")
+                field("Nombre promotor"; "Nombre promotor")
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
             }
@@ -50,9 +50,9 @@ page 67097 "Lista Planificacion Promotor"
     trigger OnOpenPage()
     begin
         IF gCodPromotor <> '' THEN
-           SETRANGE("Cod. Promotor",gCodPromotor);
+            SETRANGE("Cod. Promotor", gCodPromotor);
 
-        SETRANGE(Ano,DATE2DMY(TODAY,3));
+        SETRANGE(Ano, DATE2DMY(TODAY, 3));
     end;
 
     var

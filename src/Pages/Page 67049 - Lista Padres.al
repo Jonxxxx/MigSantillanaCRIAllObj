@@ -6,7 +6,7 @@ page 67049 "Lista Padres"
     DataCaptionFields = DNI, "First Name";
     Editable = false;
     PageType = List;
-    SourceTable = Table67017;
+    SourceTable = 67017;
     UsageCategory = Lists;
 
     layout

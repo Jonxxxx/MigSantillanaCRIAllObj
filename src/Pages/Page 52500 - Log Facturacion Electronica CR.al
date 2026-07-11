@@ -15,7 +15,7 @@ page 52500 "Log Facturacion Electronica CR"
     LinksAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table52502;
+    SourceTable = 52502;
     UsageCategory = Lists;
 
     layout

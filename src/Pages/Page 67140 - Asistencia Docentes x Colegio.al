@@ -6,7 +6,7 @@ page 67140 "Asistencia Docentes x Colegio"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67055;
+    SourceTable = 67055;
     SourceTableView = SORTING(No. Solicitud)
                       WHERE("Status" = CONST(Realizada));
 

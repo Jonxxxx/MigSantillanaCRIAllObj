@@ -1,7 +1,7 @@
 page 67019 "Areas de interes padres"
 {
     PageType = Card;
-    SourceTable = Table67019;
+    SourceTable = 67019;
 
     layout
     {
@@ -9,18 +9,18 @@ page 67019 "Areas de interes padres"
         {
             repeater()
             {
-                field("DNI Padre";"DNI Padre")
+                field("DNI Padre"; "DNI Padre")
                 {
                     Visible = false;
                 }
-                field("Cod. Area Interes";"Cod. Area Interes")
+                field("Cod. Area Interes"; "Cod. Area Interes")
                 {
                 }
-                field("Nombre Padre";"Nombre Padre")
+                field("Nombre Padre"; "Nombre Padre")
                 {
                     Editable = false;
                 }
-                field("Descripcion Area Interes";"Descripcion Area Interes")
+                field("Descripcion Area Interes"; "Descripcion Area Interes")
                 {
                     Editable = false;
                 }

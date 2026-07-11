@@ -4,7 +4,7 @@ page 56050 "Lin. Cons. a Fact. Movil."
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table56017;
+    SourceTable = 56017;
 
     layout
     {

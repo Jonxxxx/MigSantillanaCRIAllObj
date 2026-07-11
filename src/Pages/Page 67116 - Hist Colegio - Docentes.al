@@ -4,7 +4,7 @@ page 67116 "Hist Colegio - Docentes"
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
     Editable = false;
     PageType = List;
-    SourceTable = Table67076;
+    SourceTable = 67076;
     UsageCategory = History;
 
     layout
@@ -107,7 +107,7 @@ page 67116 "Hist Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        Estad: Page67119;
+                        Estad: Page 67119;
                     begin
                         Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
                         Estad.RUN;
@@ -127,7 +127,7 @@ page 67116 "Hist Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        RankingDocente: Page67144;
+                        RankingDocente: Page 67144;
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");

@@ -5,7 +5,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
     ModifyAllowed = false;
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = Table67051;
+    SourceTable = 67051;
 
     layout
     {
@@ -81,7 +81,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
                     var
                         MatTyE: Record 67014;
                         MatTyE2Record: Record 67014;
-                        PgMatTyE: Page67014;
+                        PgMatTyE: Page 67014;
                     begin
                         MatTyE.RESET;
                         MatTyE.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");

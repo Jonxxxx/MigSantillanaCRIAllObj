@@ -4,7 +4,7 @@ page 56067 "Chofer por Transportista"
 
     Caption = 'Chofer por Transportista';
     PageType = List;
-    SourceTable = Table56042;
+    SourceTable = 56042;
 
     layout
     {
@@ -12,19 +12,19 @@ page 56067 "Chofer por Transportista"
         {
             repeater(Group)
             {
-                field("Cod. Chofer";"Cod. Chofer")
+                field("Cod. Chofer"; "Cod. Chofer")
                 {
                 }
-                field("Nombre Chofer";"Nombre Chofer")
+                field("Nombre Chofer"; "Nombre Chofer")
                 {
                 }
-                field("No. Licencia";"No. Licencia")
+                field("No. Licencia"; "No. Licencia")
                 {
                 }
-                field("Chofer activo";"Chofer activo")
+                field("Chofer activo"; "Chofer activo")
                 {
                 }
-                field("Observaciones chofer";"Observaciones chofer")
+                field("Observaciones chofer"; "Observaciones chofer")
                 {
                 }
             }

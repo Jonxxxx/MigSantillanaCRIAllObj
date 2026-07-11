@@ -3,7 +3,7 @@ page 67051 "Colegio - Adopciones Cab"
     PageType = Document;
     PromotedActionCategories = 'New,Process,Report,Shortcuts';
     RefreshOnActivate = true;
-    SourceTable = Table67052;
+    SourceTable = 67052;
 
     layout
     {
@@ -42,7 +42,7 @@ page 67051 "Colegio - Adopciones Cab"
                     var
                         Colegio: Record 5050;
                         BC: Record 7302;
-                        BCPage: Page7304;
+                        BCPage: Page 7304;
                     begin
                         Colegio.GET("Cod. Colegio");
                         BC.RESET;
@@ -278,7 +278,7 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnAction()
                     var
-                        Estad: Page67085;
+                        Estad: Page 67085;
                     begin
                         Estad.RecibeParametros("Cod. Colegio");
                         Estad.RUN;
@@ -359,8 +359,8 @@ page 67051 "Colegio - Adopciones Cab"
         CounterTotal: Integer;
         Counter: Integer;
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';
-        Turnos: Page67003;
-                    DimForm: Page560;
+        Turnos: Page 67003;
+                    DimForm: Page 560;
                     Filtro: Text[100];
 
     procedure RecibeParametros(CodCol: Code[20]; CodNivel: Code[20]; CodPromotor: Code[20]; CodRuta: Code[20]; CodTurno: Code[20])

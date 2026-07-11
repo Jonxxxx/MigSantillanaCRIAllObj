@@ -5,7 +5,7 @@ page 51003 "Ficha Cupon"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = Table51009;
+    SourceTable = 51009;
 
     layout
     {

@@ -2,7 +2,7 @@ page 67110 "Consulta Planif. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     PageType = ListPart;
-    SourceTable = Table67015;
+    SourceTable = 67015;
 
     layout
     {
@@ -72,7 +72,7 @@ page 67110 "Consulta Planif. Taller/Evento"
 
     var
         CabPlanEvento: Record 67051;
-        SelDoc: Page67103;
+        SelDoc: Page 67103;
         TotDocentes: Integer;
         TotSeleccionados: Integer;
         TotReg: Integer;
@@ -81,7 +81,7 @@ page 67110 "Consulta Planif. Taller/Evento"
     var
         ATE: Record 67016;
         ATE2Record: Record 67016;
-        PagATE: Page67016;
+        PagATE: Page 67016;
     begin
         //MESSAGE('%1',Rec);
         ATE.RESET;

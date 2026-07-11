@@ -1,7 +1,7 @@
 page 52510 "Pruebas RF"
 {
     PageType = Card;
-    SourceTable = Table5050;
+    SourceTable = 5050;
 
     layout
     {
@@ -9,13 +9,13 @@ page 52510 "Pruebas RF"
         {
             group(General)
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field(Name;Name)
+                field(Name; Name)
                 {
                 }
-                field(Address;Address)
+                field(Address; Address)
                 {
                 }
             }

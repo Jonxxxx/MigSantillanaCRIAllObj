@@ -2,7 +2,7 @@ page 67020 "Alumnos - Hijos"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = Table67020;
+    SourceTable = 67020;
 
     layout
     {

@@ -26,7 +26,7 @@ table 67055 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 rEvExp: Record 67050;
-                pEvExp: Page67100;
+                pEvExp: Page 67100;
             begin
 
                 IF "Existe evento" THEN BEGIN
@@ -50,7 +50,7 @@ table 67055 "Solicitud de Taller - Evento"
             var
                 ExpositorEvento: Record 67050;
                 rEvExp: Record 67050;
-                pEvExp: Page67100;
+                pEvExp: Page 67100;
             begin
                 IF "Cod. evento" <> '' THEN BEGIN
                     Evento.GET("Tipo de Evento", "Cod. evento");
@@ -314,7 +314,7 @@ table 67055 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 rColDoc: Record 67043;
-                pColDoc: Page67045;
+                pColDoc: Page 67045;
             begin
 
                 //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),"Pertenece al CDS"=CONST(true))
@@ -676,7 +676,7 @@ table 67055 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 Adop: Record 67035;
-                fAdop: Page67035;
+                fAdop: Page 67035;
             begin
 
                 Adop.FILTERGROUP(2);
@@ -763,7 +763,7 @@ table 67055 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 rEvExp: Record 67050;
-                pEvExp: Page67100;
+                pEvExp: Page 67100;
                 NewSecEvProg: Integer;
             begin
 
@@ -797,7 +797,7 @@ table 67055 "Solicitud de Taller - Evento"
             var
                 ExpositorEvento: Record 67050;
                 rEvExp: Record 67050;
-                pEvExp: Page67100;
+                pEvExp: Page 67100;
                 Err0001: Label 'No existe ning n expositor para el evento programado %1.';
                 CabPlanEvento: Record 67051;
                 Err002: Label 'Esta solicitud ya est  programada para el Evento: %1 Expositor: %2 (%3) Secuencia: %4';
@@ -1023,7 +1023,7 @@ table 67055 "Solicitud de Taller - Evento"
         NoSeriesMgt: Codeunit 396;
         DimMgt: Codeunit 408;
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
-        DimForm: Page560;
+        DimForm: Page 560;
 
     procedure AssistEdit(OldEvent: Record 67055): Boolean
     var

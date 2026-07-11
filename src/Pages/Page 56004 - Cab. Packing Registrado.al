@@ -15,7 +15,7 @@ page 56004 "Cab. Packing Registrado"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Document;
-    SourceTable = Table56033;
+    SourceTable = 56033;
     UsageCategory = History;
 
     layout

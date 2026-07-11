@@ -3,7 +3,7 @@ page 130407 "CAL Test Objects To Select"
     Caption = 'CAL Test Objects To Select';
     Editable = false;
     PageType = List;
-    SourceTable = Table2000000001;
+    SourceTable = 2000000001;
     SourceTableView = WHERE("Type" = FILTER(> TableData));
 
     layout

@@ -118,6 +118,6 @@ table 67044 "Promotor - Rutas"
         DA: Record 67002;
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page560;
+        DimForm: Page 560;
 }
 

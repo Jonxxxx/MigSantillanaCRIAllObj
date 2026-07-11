@@ -3,7 +3,7 @@ page 56061 "Productos x Almacen Subform"
     // 001 RRT 02.06.2014
 
     PageType = ListPart;
-    SourceTable = Table56059;
+    SourceTable = 56059;
 
     layout
     {
@@ -11,10 +11,10 @@ page 56061 "Productos x Almacen Subform"
         {
             repeater(Group)
             {
-                field(Almacen;Almacen)
+                field(Almacen; Almacen)
                 {
                 }
-                field("Nombre Almacen";"Nombre Almacen")
+                field("Nombre Almacen"; "Nombre Almacen")
                 {
                 }
             }

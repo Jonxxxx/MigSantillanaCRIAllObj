@@ -122,12 +122,12 @@ table 67009 "Rutas - CP"
         Colegio: Record 5050;
         PromRutas: Record 67044;
         PLC: Record 67006;
-        Rutas: Page67008;
+        Rutas: Page 67008;
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page560;
-        PostCodeForm: Page367;
-        formTerritory: Page429;
+        DimForm: Page 560;
+        PostCodeForm: Page 367;
+        formTerritory: Page 429;
         RECcOUNTRY: Record 9;
         territory: Record 286;
         PostCode: Record 225;

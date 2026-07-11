@@ -6,7 +6,7 @@ page 75017 "Lista Imp.Mdm Tabla"
     LinksAllowed = true;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = Table75004;
+    SourceTable = 75004;
 
     layout
     {

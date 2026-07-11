@@ -3,7 +3,7 @@ page 56026 "Clasificacion devoluciones"
     Caption = 'Returns classification';
     PageType = Card;
     RefreshOnActivate = true;
-    SourceTable = Table56025;
+    SourceTable = 56025;
     SourceTableView = WHERE("Closed" = CONST(false));
 
     layout

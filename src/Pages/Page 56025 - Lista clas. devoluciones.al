@@ -4,7 +4,7 @@ page 56025 "Lista clas. devoluciones"
     Caption = 'Returns classification list';
     CardPageID = "Clasificacion devoluciones";
     PageType = List;
-    SourceTable = Table56025;
+    SourceTable = 56025;
     SourceTableView = WHERE("Closed" = CONST(false));
     UsageCategory = Lists;
 

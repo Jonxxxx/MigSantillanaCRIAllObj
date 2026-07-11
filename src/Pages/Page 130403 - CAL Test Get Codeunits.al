@@ -3,7 +3,7 @@ page 130403 "CAL Test Get Codeunits"
     Caption = 'CAL Test Get Codeunits';
     Editable = false;
     PageType = List;
-    SourceTable = Table2000000058;
+    SourceTable = 2000000058;
     SourceTableView = WHERE("Object Type" = CONST(Codeunit),
                             "Object Subtype" = CONST(Test));
 

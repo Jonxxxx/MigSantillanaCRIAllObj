@@ -4,7 +4,7 @@ page 67102 "Lista Cab. Planif. Evento"
     Editable = false;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = Table67051;
+    SourceTable = 67051;
     UsageCategory = Lists;
 
     layout
@@ -95,7 +95,7 @@ page 67102 "Lista Cab. Planif. Evento"
                     var
                         Evento: Record 67011;
                         CabPlanEvent: Record 67051;
-                        fCabPlanEvent: Page67101;
+                        fCabPlanEvent: Page 67101;
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin

@@ -4,7 +4,7 @@ page 75005 "Imp.MdM Campos"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = Table75005;
+    SourceTable = 75005;
     SourceTableView = SORTING(Id Rel, Orden, Id);
 
     layout

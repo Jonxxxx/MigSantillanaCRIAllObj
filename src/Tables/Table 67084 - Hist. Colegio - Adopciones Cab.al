@@ -273,7 +273,7 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         Err001: Label 'You must delete the lines before delete this record';
         DimVal: Record 349;
         AdopcionesD: Record 67053;
-        DimForm: Page560;
+        DimForm: Page 560;
                      Msg001: Label 'There''s a change in the discount, do you wish to update the lines?';
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';
 }

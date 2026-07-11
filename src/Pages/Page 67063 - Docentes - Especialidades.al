@@ -1,7 +1,7 @@
 page 67063 "Docentes - Especialidades"
 {
     PageType = Card;
-    SourceTable = Table67018;
+    SourceTable = 67018;
 
     layout
     {
@@ -9,24 +9,24 @@ page 67063 "Docentes - Especialidades"
         {
             repeater()
             {
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                     Visible = false;
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Cod. Especialidad";"Cod. Especialidad")
+                field("Cod. Especialidad"; "Cod. Especialidad")
                 {
                 }
-                field("Descripcion especialidad";"Descripcion especialidad")
+                field("Descripcion especialidad"; "Descripcion especialidad")
                 {
                     Editable = false;
                 }
-                field("Cod. grado";"Cod. grado")
+                field("Cod. grado"; "Cod. grado")
                 {
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                     Editable = false;
                 }

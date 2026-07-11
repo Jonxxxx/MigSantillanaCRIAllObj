@@ -2,7 +2,7 @@ page 75008 "Conf.Filtros Tipologias MdM"
 {
     Caption = 'Campos Filtro Tipologias MdM';
     PageType = List;
-    SourceTable = Table75008;
+    SourceTable = 75008;
 
     layout
     {

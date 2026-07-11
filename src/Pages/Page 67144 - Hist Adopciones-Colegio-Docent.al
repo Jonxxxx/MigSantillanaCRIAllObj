@@ -5,7 +5,7 @@ page 67144 "Hist Adopciones-Colegio-Docent"
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     Editable = false;
     PageType = List;
-    SourceTable = Table67097;
+    SourceTable = 67097;
     SourceTableView = SORTING(Campaña, Cod. Docente, Cod. Colegio, Cod. Local, Cod. Producto, Cod. Grado);
     UsageCategory = History;
 

@@ -10,7 +10,7 @@ page 130401 "CAL Test Tool"
     ModifyAllowed = true;
     PageType = Worksheet;
     SaveValues = true;
-    SourceTable = Table130401;
+    SourceTable = 130401;
     UsageCategory = Administration;
 
     layout

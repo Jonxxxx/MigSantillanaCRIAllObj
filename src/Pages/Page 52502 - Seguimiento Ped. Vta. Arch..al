@@ -5,7 +5,7 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = Table5107;
+    SourceTable = 5107;
     SourceTableView = SORTING(Ultima Version)
                       ORDER(Ascending)
                       WHERE("Ultima Version" = FILTER(Yes));

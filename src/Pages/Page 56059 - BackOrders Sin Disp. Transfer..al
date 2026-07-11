@@ -18,7 +18,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table5741;
+    SourceTable = 5741;
     SourceTableTemporary = true;
     UsageCategory = Lists;
 
@@ -264,6 +264,6 @@ page 56059 "BackOrders Sin Disp. Transfer."
         ReleaseTransfDoc: Codeunit 5708;
         TL1Record: Record 5741;
         WHSL: Record 7321;
-        PedTrans: Page5740;
+        PedTrans: Page 5740;
 }
 

@@ -12,7 +12,7 @@ page 56014 "Cab. Packing Reg. List"
     CardPageID = "Cab. Packing Registrado";
     Editable = false;
     PageType = List;
-    SourceTable = Table56033;
+    SourceTable = 56033;
 
     layout
     {

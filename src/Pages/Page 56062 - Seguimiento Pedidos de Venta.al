@@ -7,7 +7,7 @@ page 56062 "Seguimiento Pedidos de Venta"
     Caption = 'Order Management';
     Editable = false;
     PageType = List;
-    SourceTable = Table36;
+    SourceTable = 36;
     SourceTableView = SORTING(Document Type, No.)
                       ORDER(Ascending)
                       WHERE("Document Type" = FILTER(Order));
@@ -102,7 +102,7 @@ page 56062 "Seguimiento Pedidos de Venta"
 
                     trigger OnAction()
                     var
-                        OrderTracking: Page56081;
+                        OrderTracking: Page 56081;
                     begin
                         //+#117
                         OrderTracking.SetDoc(1, "No.");

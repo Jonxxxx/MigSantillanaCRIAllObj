@@ -2,7 +2,7 @@ page 56020 "Sales Header Movil."
 {
     Editable = false;
     PageType = Document;
-    SourceTable = Table56037;
+    SourceTable = 56037;
 
     layout
     {

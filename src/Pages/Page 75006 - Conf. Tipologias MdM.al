@@ -4,7 +4,7 @@ page 75006 "Conf. Tipologias MdM"
     Caption = 'Conf. Tipologias MdM';
     DelayedInsert = true;
     PageType = List;
-    SourceTable = Table75006;
+    SourceTable = 75006;
     UsageCategory = Administration;
 
     layout

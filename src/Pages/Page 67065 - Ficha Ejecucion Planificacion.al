@@ -5,7 +5,7 @@ page 67065 "Ficha Ejecucion Planificacion"
     InsertAllowed = false;
     PageType = Card;
     PromotedActionCategories = 'New,Process,Report,Samples';
-    SourceTable = Table67038;
+    SourceTable = 67038;
 
     layout
     {
@@ -288,7 +288,7 @@ page 67065 "Ficha Ejecucion Planificacion"
 
     var
         Text001: Label 'The planning has been posted';
-        Muestras: Page67038;
+        Muestras: Page 67038;
     [InDataSet]
 
     TipoCDS: Boolean;

@@ -3,7 +3,7 @@ page 56021 "Sales Header Movil. List"
     CardPageID = "Sales Header Movil.";
     Editable = false;
     PageType = List;
-    SourceTable = Table56037;
+    SourceTable = 56037;
 
     layout
     {

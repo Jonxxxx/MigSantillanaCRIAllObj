@@ -3,7 +3,7 @@ page 67072 "Cab. Planificacion Reg."
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     Editable = false;
     PageType = Card;
-    SourceTable = Table67023;
+    SourceTable = 67023;
     SourceTableView = SORTING(Cod. Promotor, Semana)
                       WHERE("Estado" = FILTER(> ' '));
 

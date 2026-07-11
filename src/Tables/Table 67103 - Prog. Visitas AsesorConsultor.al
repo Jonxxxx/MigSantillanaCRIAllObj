@@ -93,7 +93,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
             trigger OnLookup()
             var
                 rColDoc: Record 67043;
-                pColDoc: Page67045;
+                pColDoc: Page 67045;
                 Cab: Record 67102;
             begin
 
@@ -140,7 +140,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
             trigger OnLookup()
             var
                 rColGrado: Record 67037;
-                pColGrado: Page67037;
+                pColGrado: Page 67037;
             begin
 
                 /*rColGrado.FILTERGROUP(2);

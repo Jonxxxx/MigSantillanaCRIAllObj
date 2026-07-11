@@ -46,8 +46,8 @@ table 67046 "Colegio - Ranking - Nivel"
         "P-Ruta"Record 67044;
         RD: Record 67009;
         Nivel: Record 56005;
-        Turnos: Page67003;
-        Rutas: Page67009;
-        Rutas2: Page67008;
+        Turnos: Page 67003;
+        Rutas: Page 67009;
+        Rutas2: Page 67008;
 }
 

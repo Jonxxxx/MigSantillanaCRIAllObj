@@ -5,7 +5,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
     InsertAllowed = false;
     PageType = List;
     PromotedActionCategories = 'New,Process,Report,Show';
-    SourceTable = Table34002111;
+    SourceTable = 34002111;
     UsageCategory = Lists;
 
     layout

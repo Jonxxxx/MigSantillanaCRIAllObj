@@ -3,7 +3,7 @@ page 67023 "Lista Editoras"
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Editoras";
     PageType = List;
-    SourceTable = Table67024;
+    SourceTable = 67024;
     UsageCategory = Lists;
 
     layout

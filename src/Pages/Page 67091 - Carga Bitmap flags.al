@@ -1,8 +1,8 @@
 page 67091 "Carga Bitmap flags"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67032;
+    SourceTable = 67032;
     UsageCategory = Administration;
 
     layout
@@ -11,10 +11,10 @@ page 67091 "Carga Bitmap flags"
         {
             repeater(Group)
             {
-                field(Status;Status)
+                field(Status; Status)
                 {
                 }
-                field(Bitmap;Bitmap)
+                field(Bitmap; Bitmap)
                 {
                 }
             }

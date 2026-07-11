@@ -1,8 +1,8 @@
 page 67053 "Tipos de documentos personales"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67045;
+    SourceTable = 67045;
     UsageCategory = Administration;
 
     layout
@@ -11,16 +11,16 @@ page 67053 "Tipos de documentos personales"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Tipo Factura";"Tipo Factura")
+                field("Tipo Factura"; "Tipo Factura")
                 {
                 }
-                field("Tax Identification Type";"Tax Identification Type")
+                field("Tax Identification Type"; "Tax Identification Type")
                 {
                 }
             }

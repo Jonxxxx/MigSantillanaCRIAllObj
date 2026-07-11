@@ -6,7 +6,7 @@ page 67155 "Historico Plan Lector Subpage"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67096;
+    SourceTable = 67096;
     UsageCategory = History;
 
     layout

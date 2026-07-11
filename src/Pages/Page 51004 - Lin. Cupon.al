@@ -2,7 +2,7 @@ page 51004 "Lin. Cupon"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = Table51010;
+    SourceTable = 51010;
 
     layout
     {
@@ -10,22 +10,22 @@ page 51004 "Lin. Cupon"
         {
             repeater(Group)
             {
-                field("Cod. Producto";"Cod. Producto")
+                field("Cod. Producto"; "Cod. Producto")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Precio Venta";"Precio Venta")
+                field("Precio Venta"; "Precio Venta")
                 {
                 }
-                field("% Descuento";"% Descuento")
+                field("% Descuento"; "% Descuento")
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("Cantidad Pendiente";"Cantidad Pendiente")
+                field("Cantidad Pendiente"; "Cantidad Pendiente")
                 {
                 }
             }

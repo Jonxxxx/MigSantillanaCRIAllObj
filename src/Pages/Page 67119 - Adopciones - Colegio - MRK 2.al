@@ -5,7 +5,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
     Caption = 'School - Adoptions';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     PageType = Card;
-    SourceTable = Table67078;
+    SourceTable = 67078;
     SourceTableView = SORTING(Cod. Docente, Cod. Colegio, Cod. Local, Cod. Producto);
 
     layout

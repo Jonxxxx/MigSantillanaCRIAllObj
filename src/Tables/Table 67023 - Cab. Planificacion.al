@@ -151,7 +151,7 @@ table 67023 "Cab. Planificacion"
         Date2Record: Record 2000000007;
         PPV: Record 67038;
         PPV2Record: Record 67038;
-        fFechas: Page67062;
+        fFechas: Page 67062;
         Sem: Label 'W';
         Err001: Label '%1 can''t be %2';
         Err002: Label 'You can''t delete lines with School with completed dates';

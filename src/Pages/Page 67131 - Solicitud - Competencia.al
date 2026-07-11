@@ -1,7 +1,7 @@
 page 67131 "Solicitud - Competencia"
 {
     PageType = List;
-    SourceTable = Table67087;
+    SourceTable = 67087;
 
     layout
     {
@@ -9,31 +9,31 @@ page 67131 "Solicitud - Competencia"
         {
             repeater(Group)
             {
-                field("Cod. Editorial";"Cod. Editorial")
+                field("Cod. Editorial"; "Cod. Editorial")
                 {
                 }
-                field("Cod. Libro";"Cod. Libro")
+                field("Cod. Libro"; "Cod. Libro")
                 {
                 }
-                field(Nivel;Nivel)
+                field(Nivel; Nivel)
                 {
                 }
-                field(Description;Description)
-                {
-                    Editable = false;
-                }
-                field("Cod. Grado";"Cod. Grado")
+                field(Description; Description)
                 {
                     Editable = false;
                 }
-                field("Nombre Editorial";"Nombre Editorial")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                     Editable = false;
                 }
-                field("Horas a la semana";"Horas a la semana")
+                field("Nombre Editorial"; "Nombre Editorial")
+                {
+                    Editable = false;
+                }
+                field("Horas a la semana"; "Horas a la semana")
                 {
                 }
-                field("Año Adopción";"Año Adopción")
+                field("Año Adopción"; "Año Adopción")
                 {
                 }
             }

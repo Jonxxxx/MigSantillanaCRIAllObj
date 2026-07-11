@@ -7,7 +7,7 @@ page 67121 "Seguimiento Solicitud TE"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67079;
+    SourceTable = 67079;
 
     layout
     {

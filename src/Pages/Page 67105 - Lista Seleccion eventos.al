@@ -3,7 +3,7 @@ page 67105 "Lista Seleccion eventos"
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Selection of Events';
     PageType = List;
-    SourceTable = Table67051;
+    SourceTable = 67051;
     SourceTableView = WHERE("Estado" = CONST(" "));
     UsageCategory = Lists;
 

@@ -15,7 +15,7 @@ table 67120 "Encuesta TIC"
                 APSSetup: Record 67000;
                 DefDim: Record 352;
                 DimVal: Record 349;
-                DimForm: Page560;
+                DimForm: Page 560;
             begin
                 APSSetup.GET();
                 APSSetup.TESTFIELD(APSSetup."Cod. Dimension Delegacion");

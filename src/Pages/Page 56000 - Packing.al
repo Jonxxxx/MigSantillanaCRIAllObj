@@ -11,7 +11,7 @@ page 56000 Packing
     // #4191  PLB  30/09/2014  Añadido atajo de teclado a "Crear caja" -> Mayús+Ctrl+N
 
     PageType = Document;
-    SourceTable = Table56030;
+    SourceTable = 56030;
 
     layout
     {

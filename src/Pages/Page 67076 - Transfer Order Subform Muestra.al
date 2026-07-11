@@ -6,7 +6,7 @@ page 67076 "Transfer Order Subform Muestra"
     LinksAllowed = false;
     MultipleNewLines = true;
     PageType = ListPart;
-    SourceTable = Table5741;
+    SourceTable = 5741;
 
     layout
     {

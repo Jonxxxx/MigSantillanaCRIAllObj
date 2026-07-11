@@ -1,7 +1,7 @@
 page 67158 "Pagos a Expositores Ficha"
 {
     PageType = Card;
-    SourceTable = Table67098;
+    SourceTable = 67098;
 
     layout
     {

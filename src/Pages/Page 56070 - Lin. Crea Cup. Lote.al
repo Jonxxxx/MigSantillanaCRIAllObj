@@ -1,7 +1,7 @@
 page 56070 "Lin. Crea Cup. Lote"
 {
     PageType = ListPart;
-    SourceTable = Table51011;
+    SourceTable = 51011;
 
     layout
     {
@@ -9,16 +9,16 @@ page 56070 "Lin. Crea Cup. Lote"
         {
             repeater(Group)
             {
-                field("Cod. Producto";"Cod. Producto")
+                field("Cod. Producto"; "Cod. Producto")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("% Descuento";"% Descuento")
+                field("% Descuento"; "% Descuento")
                 {
                 }
             }

@@ -1,7 +1,7 @@
 page 67149 "Plan Lector Ficha"
 {
     PageType = Card;
-    SourceTable = Table67063;
+    SourceTable = 67063;
 
     layout
     {

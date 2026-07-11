@@ -4,7 +4,7 @@ page 56028 "Lista clas. devoluciones cer."
     Caption = 'Closed returns classification';
     Editable = false;
     PageType = List;
-    SourceTable = Table56025;
+    SourceTable = 56025;
     SourceTableView = WHERE("Closed" = CONST(true));
     UsageCategory = Lists;
 

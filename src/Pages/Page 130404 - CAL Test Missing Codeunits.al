@@ -8,7 +8,7 @@ page 130404 "CAL Test Missing Codeunits"
     ModifyAllowed = false;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = Table2000000026;
+    SourceTable = 2000000026;
     SourceTableTemporary = true;
 
     layout

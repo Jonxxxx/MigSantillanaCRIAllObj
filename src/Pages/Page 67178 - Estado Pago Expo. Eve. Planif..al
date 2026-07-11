@@ -5,7 +5,7 @@ page 67178 "Estado Pago Expo. Eve. Planif."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67051;
+    SourceTable = 67051;
 
     layout
     {

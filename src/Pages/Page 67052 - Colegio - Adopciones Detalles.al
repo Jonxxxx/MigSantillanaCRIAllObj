@@ -1,7 +1,7 @@
 page 67052 "Colegio - Adopciones Detalles"
 {
     PageType = ListPart;
-    SourceTable = Table67053;
+    SourceTable = 67053;
 
     layout
     {
@@ -284,7 +284,7 @@ page 67052 "Colegio - Adopciones Detalles"
 
     procedure FichaProducto()
     var
-        ItemCard: Page30;
+        ItemCard: Page 30;
     begin
         Rec.OpenItem;
     end;
@@ -292,7 +292,7 @@ page 67052 "Colegio - Adopciones Detalles"
     procedure AdopCompetencia()
     var
         ColAdopCompet: Record 67033;
-        fColAdopCompet: Page67092;
+        fColAdopCompet: Page 67092;
         ColAdopDet: Record 67053;
     begin
         fColAdopCompet.RecibeParametros("Cod. Colegio", "Cod. Promotor", "Cod. Producto", "Cod. Nivel", "Cod. Grado");

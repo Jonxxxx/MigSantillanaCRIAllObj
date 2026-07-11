@@ -2,7 +2,7 @@ page 67015 "Programac. Talleres y Eventos"
 {
     AutoSplitKey = true;
     PageType = ListPart;
-    SourceTable = Table67015;
+    SourceTable = 67015;
 
     layout
     {
@@ -134,6 +134,6 @@ page 67015 "Programac. Talleres y Eventos"
 
     var
         rAsistentes: Record 67016;
-        pAsistentes: Page67016;
+        pAsistentes: Page 67016;
 }
 

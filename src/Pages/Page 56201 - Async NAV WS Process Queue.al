@@ -1,10 +1,10 @@
 page 56201 "Async NAV WS Process Queue"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table56200;
+    SourceTable = 56200;
     UsageCategory = Lists;
 
     layout
@@ -13,22 +13,22 @@ page 56201 "Async NAV WS Process Queue"
         {
             repeater(Group)
             {
-                field("Process Code";"Process Code")
+                field("Process Code"; "Process Code")
                 {
                 }
-                field("Process Status";"Process Status")
+                field("Process Status"; "Process Status")
                 {
                 }
-                field("Process End Date & Time";"Process End Date & Time")
+                field("Process End Date & Time"; "Process End Date & Time")
                 {
                 }
-                field("Process User Id";"Process User Id")
+                field("Process User Id"; "Process User Id")
                 {
                 }
-                field("URL Web Service";"URL Web Service")
+                field("URL Web Service"; "URL Web Service")
                 {
                 }
-                field("Soap Action";"Soap Action")
+                field("Soap Action"; "Soap Action")
                 {
                 }
             }

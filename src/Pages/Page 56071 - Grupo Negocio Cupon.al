@@ -2,7 +2,7 @@ page 56071 "Grupo Negocio Cupon"
 {
     Editable = false;
     PageType = List;
-    SourceTable = Table51017;
+    SourceTable = 51017;
 
     layout
     {
@@ -10,10 +10,10 @@ page 56071 "Grupo Negocio Cupon"
         {
             repeater(Group)
             {
-                field("Grupo Negocio";"Grupo Negocio")
+                field("Grupo Negocio"; "Grupo Negocio")
                 {
                 }
-                field("No. Cupon";"No. Cupon")
+                field("No. Cupon"; "No. Cupon")
                 {
                 }
             }

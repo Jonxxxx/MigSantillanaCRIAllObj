@@ -1,7 +1,7 @@
 page 51011 "Grupo Negocio - Cupon Lote"
 {
     PageType = List;
-    SourceTable = Table51016;
+    SourceTable = 51016;
 
     layout
     {
@@ -9,7 +9,7 @@ page 51011 "Grupo Negocio - Cupon Lote"
         {
             repeater(Group)
             {
-                field("Grupo Negocio";"Grupo Negocio")
+                field("Grupo Negocio"; "Grupo Negocio")
                 {
                 }
             }

@@ -5,7 +5,7 @@ page 67040 "Lista de Docentes"
     CardPageID = Docentes;
     Editable = false;
     PageType = List;
-    SourceTable = Table67001;
+    SourceTable = 67001;
     UsageCategory = Lists;
 
     layout

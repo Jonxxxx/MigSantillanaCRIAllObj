@@ -309,7 +309,7 @@ table 67051 "Cab. Planif. Evento"
         MatTallerEvento: Record 67014;
         ProgTallerEvento: Record 67015;
         Asistentes: Record 67016;
-        DimForm: Page560;
+        DimForm: Page 560;
 
     procedure CalculaMonto() rtnImporte: Decimal
     var

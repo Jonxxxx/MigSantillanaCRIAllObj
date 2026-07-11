@@ -1,8 +1,8 @@
 page 75009 "Conf. Estructura Analitica"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table75009;
+    SourceTable = 75009;
     UsageCategory = Administration;
 
     layout
@@ -11,26 +11,26 @@ page 75009 "Conf. Estructura Analitica"
         {
             repeater(Group)
             {
-                field(Id;Id)
+                field(Id; Id)
                 {
                     Visible = false;
                 }
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Nivel;Nivel)
+                field(Nivel; Nivel)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Id Field";"Id Field")
+                field("Id Field"; "Id Field")
                 {
                 }
-                field(FieldName;FieldName)
+                field(FieldName; FieldName)
                 {
                 }
-                field(Valor;Valor)
+                field(Valor; Valor)
                 {
                 }
             }

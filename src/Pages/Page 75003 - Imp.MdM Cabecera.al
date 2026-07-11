@@ -4,7 +4,7 @@ page 75003 "Imp.MdM Cabecera"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = Table75003;
+    SourceTable = 75003;
 
     layout
     {

@@ -2,7 +2,7 @@ page 67145 "Ranking CVM"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = Table67092;
+    SourceTable = 67092;
     SourceTableTemporary = true;
 
     layout

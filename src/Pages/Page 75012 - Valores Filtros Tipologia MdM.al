@@ -2,7 +2,7 @@ page 75012 "Valores Filtros Tipologia MdM"
 {
     Editable = false;
     PageType = List;
-    SourceTable = Table75012;
+    SourceTable = 75012;
     SourceTableTemporary = true;
 
     layout

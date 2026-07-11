@@ -1,9 +1,9 @@
 page 67042 "Lista de Tipos de enventos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = Table67010;
+    SourceTable = 67010;
     UsageCategory = Lists;
 
     layout
@@ -12,10 +12,10 @@ page 67042 "Lista de Tipos de enventos"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

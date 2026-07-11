@@ -1,7 +1,7 @@
 page 67170 "Documentos operac. comerciales"
 {
     PageType = List;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = WHERE("Tipo registro" = CONST(28));
 
     layout

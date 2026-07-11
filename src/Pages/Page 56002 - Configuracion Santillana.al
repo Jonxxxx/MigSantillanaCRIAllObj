@@ -19,7 +19,7 @@ page 56002 "Configuracion Santillana"
     ApplicationArea = Basic, Suite;
     Caption = 'Santillana Setup';
     PageType = Card;
-    SourceTable = Table56001;
+    SourceTable = 56001;
     UsageCategory = Administration;
 
     layout

@@ -2,7 +2,7 @@ page 67036 "Colegio - Nivel"
 {
     DelayedInsert = true;
     PageType = Card;
-    SourceTable = Table67036;
+    SourceTable = 67036;
 
     layout
     {
@@ -74,7 +74,7 @@ page 67036 "Colegio - Nivel"
 
                     trigger OnAction()
                     var
-                        fAdopciones: Page67051;
+                        fAdopciones: Page 67051;
                     begin
                         PromRuta.SETRANGE("Cod. Ruta", Ruta);
                         PromRuta.FINDFIRST;

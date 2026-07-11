@@ -90,7 +90,7 @@ table 75009 "Conf. Estructura Analitica"
     end;
 
     var
-        pFiltrCmp: Page75014;
+        pFiltrCmp: Page 75014;
         Text001: Label 'El campo %1 No est  permitido';
         Text002: Label 'Ya existe el registro';
 

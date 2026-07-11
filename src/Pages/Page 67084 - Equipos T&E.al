@@ -3,7 +3,7 @@ page 67084 "Equipos T&E"
     Caption = 'Equipment Workshops and Events';
     DataCaptionExpression = FORMAT("Tipo registro");
     PageType = Card;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
                       WHERE("Tipo registro" = CONST("Equipos T&E"));
 

@@ -1,7 +1,7 @@
 page 67066 "Colegio - Personal Jerarquico"
 {
     PageType = Card;
-    SourceTable = Table67056;
+    SourceTable = 67056;
 
     layout
     {

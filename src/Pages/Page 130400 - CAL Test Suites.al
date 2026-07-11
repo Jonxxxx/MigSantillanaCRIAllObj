@@ -3,7 +3,7 @@ page 130400 "CAL Test Suites"
     Caption = 'CAL Test Suites';
     PageType = List;
     SaveValues = true;
-    SourceTable = Table130400;
+    SourceTable = 130400;
 
     layout
     {

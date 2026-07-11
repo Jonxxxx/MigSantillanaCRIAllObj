@@ -4,7 +4,7 @@ page 130416 "Get Semi-Manual Test Codeunits"
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
-    SourceTable = Table2000000058;
+    SourceTable = 2000000058;
     SourceTableView = WHERE("Object Type" = CONST(Codeunit));
 
     layout

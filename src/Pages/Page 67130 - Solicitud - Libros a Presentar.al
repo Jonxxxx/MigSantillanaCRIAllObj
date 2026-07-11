@@ -1,7 +1,7 @@
 page 67130 "Solicitud - Libros a Presentar"
 {
     PageType = List;
-    SourceTable = Table67085;
+    SourceTable = 67085;
 
     layout
     {
@@ -9,16 +9,16 @@ page 67130 "Solicitud - Libros a Presentar"
         {
             repeater(Group)
             {
-                field("Cod. Producto";"Cod. Producto")
+                field("Cod. Producto"; "Cod. Producto")
                 {
                 }
-                field("Descripción Producto";"Descripción Producto")
+                field("Descripción Producto"; "Descripción Producto")
                 {
                 }
-                field("Horas por semana";"Horas por semana")
+                field("Horas por semana"; "Horas por semana")
                 {
                 }
-                field("Año adopción";"Año adopción")
+                field("Año adopción"; "Año adopción")
                 {
                 }
             }

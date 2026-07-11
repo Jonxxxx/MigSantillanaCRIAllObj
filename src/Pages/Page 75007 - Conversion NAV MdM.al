@@ -1,10 +1,10 @@
 page 75007 "Conversion NAV MdM"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     DelayedInsert = true;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = Table75007;
+    SourceTable = 75007;
     UsageCategory = Administration;
 
     layout
@@ -13,13 +13,13 @@ page 75007 "Conversion NAV MdM"
         {
             repeater(Group)
             {
-                field("Tipo Registro";"Tipo Registro")
+                field("Tipo Registro"; "Tipo Registro")
                 {
                 }
-                field("Codigo MdM";"Codigo MdM")
+                field("Codigo MdM"; "Codigo MdM")
                 {
                 }
-                field("Codigo NAV";"Codigo NAV")
+                field("Codigo NAV"; "Codigo NAV")
                 {
                 }
             }

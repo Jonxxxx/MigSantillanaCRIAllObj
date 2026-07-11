@@ -5,7 +5,7 @@ page 67147 "Log Coleg. - Work Flow visitas"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67083;
+    SourceTable = 67083;
 
     layout
     {
@@ -13,38 +13,38 @@ page 67147 "Log Coleg. - Work Flow visitas"
         {
             repeater(Group)
             {
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field(Secuencia;Secuencia)
+                field(Secuencia; Secuencia)
                 {
                 }
-                field(Resultado;Resultado)
+                field(Resultado; Resultado)
                 {
                 }
-                field(Programado;Programado)
+                field(Programado; Programado)
                 {
                 }
-                field(Paso;Paso)
+                field(Paso; Paso)
                 {
                 }
-                field(Detalle;Detalle)
+                field(Detalle; Detalle)
                 {
                 }
-                field(Mantenimiento;Mantenimiento)
+                field(Mantenimiento; Mantenimiento)
                 {
                 }
-                field(Conquista;Conquista)
+                field(Conquista; Conquista)
                 {
                 }
                 field(Area;Area)
-                {
-                }
-            }
+        {
         }
+    }
+}
     }
 
     actions

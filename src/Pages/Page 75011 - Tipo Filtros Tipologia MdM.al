@@ -4,7 +4,7 @@ page 75011 "Tipo Filtros Tipologia MdM"
 
     Editable = false;
     PageType = List;
-    SourceTable = Table75015;
+    SourceTable = 75015;
     SourceTableTemporary = true;
 
     layout

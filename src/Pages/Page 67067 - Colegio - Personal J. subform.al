@@ -2,7 +2,7 @@ page 67067 "Colegio - Personal J. subform"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = Table67043;
+    SourceTable = 67043;
 
     layout
     {
@@ -10,28 +10,28 @@ page 67067 "Colegio - Personal J. subform"
         {
             repeater()
             {
-                field("Nombre colegio";"Nombre colegio")
+                field("Nombre colegio"; "Nombre colegio")
                 {
                     Visible = false;
                 }
-                field("Aplica Jerarquia Puestos";"Aplica Jerarquia Puestos")
+                field("Aplica Jerarquia Puestos"; "Aplica Jerarquia Puestos")
                 {
                 }
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                 }
-                field("Nombre docente";"Nombre docente")
-                {
-                    Editable = false;
-                }
-                field("Cod. Cargo";"Cod. Cargo")
-                {
-                }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Nombre docente"; "Nombre docente")
                 {
                     Editable = false;
                 }
-                field("Descripcion Nivel";"Descripcion Nivel")
+                field("Cod. Cargo"; "Cod. Cargo")
+                {
+                }
+                field("Cod. Nivel"; "Cod. Nivel")
+                {
+                    Editable = false;
+                }
+                field("Descripcion Nivel"; "Descripcion Nivel")
                 {
                 }
             }

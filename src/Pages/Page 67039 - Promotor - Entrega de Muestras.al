@@ -1,7 +1,7 @@
 page 67039 "Promotor - Entrega de Muestras"
 {
     PageType = Card;
-    SourceTable = Table67039;
+    SourceTable = 67039;
 
     layout
     {
@@ -9,35 +9,35 @@ page 67039 "Promotor - Entrega de Muestras"
         {
             repeater()
             {
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                     Visible = false;
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
-                field("Fecha Visita";"Fecha Visita")
+                field("Fecha Visita"; "Fecha Visita")
                 {
                 }
-                field("Hora Inicial Visita";"Hora Inicial Visita")
+                field("Hora Inicial Visita"; "Hora Inicial Visita")
                 {
                 }
-                field("Hora Inicial Final";"Hora Inicial Final")
+                field("Hora Inicial Final"; "Hora Inicial Final")
                 {
                 }
-                field("Fecha Proxima Visita";"Fecha Proxima Visita")
+                field("Fecha Proxima Visita"; "Fecha Proxima Visita")
                 {
                 }
-                field(Comentario;Comentario)
+                field(Comentario; Comentario)
                 {
                 }
             }

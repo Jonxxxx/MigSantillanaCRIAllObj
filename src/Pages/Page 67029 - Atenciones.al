@@ -1,7 +1,7 @@
 page 67029 Atenciones
 {
     PageType = Card;
-    SourceTable = Table67029;
+    SourceTable = 67029;
 
     layout
     {
@@ -9,13 +9,13 @@ page 67029 Atenciones
         {
             repeater()
             {
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field("Cod. Producto";"Cod. Producto")
+                field("Cod. Producto"; "Cod. Producto")
                 {
                 }
-                field("Nombre Promotor";"Nombre Promotor")
+                field("Nombre Promotor"; "Nombre Promotor")
                 {
                 }
             }

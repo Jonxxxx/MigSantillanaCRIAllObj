@@ -3,7 +3,7 @@ page 67033 "Lista Puestos"
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Jobs';
     PageType = List;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
                       WHERE("Tipo registro" = CONST("Puestos de trabajo"));
     UsageCategory = Administration;

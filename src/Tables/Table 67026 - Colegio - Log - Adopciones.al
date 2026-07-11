@@ -176,7 +176,7 @@ table 67026 "Colegio - Log - Adopciones"
 
             trigger OnLookup()
             var
-                Materia: Page67086;
+                Materia: Page 67086;
             begin
             end;
         }
@@ -216,7 +216,7 @@ table 67026 "Colegio - Log - Adopciones"
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2Record: Record 67026;
         DimVal: Record 349;
-        DimForm: Page560;
+        DimForm: Page 560;
                      DefDim: Record 352;
 }
 

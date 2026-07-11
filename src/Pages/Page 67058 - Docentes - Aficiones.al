@@ -1,7 +1,7 @@
 page 67058 "Docentes - Aficiones"
 {
     PageType = Card;
-    SourceTable = Table67048;
+    SourceTable = 67048;
 
     layout
     {
@@ -9,19 +9,19 @@ page 67058 "Docentes - Aficiones"
         {
             repeater()
             {
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                     Visible = false;
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. aficion";"Cod. aficion")
+                field("Cod. aficion"; "Cod. aficion")
                 {
                 }
-                field("Descripcion aficion";"Descripcion aficion")
+                field("Descripcion aficion"; "Descripcion aficion")
                 {
                     Editable = false;
                 }

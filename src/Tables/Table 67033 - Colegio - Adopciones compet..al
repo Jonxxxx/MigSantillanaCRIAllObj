@@ -482,7 +482,7 @@ table 67033 "Colegio - Adopciones compet."
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2Record: Record 67026;
         DimVal: Record 349;
-        DimForm: Page560;
+        DimForm: Page 560;
                      DefDim: Record 352;
                      ProdEdit: Record 67025;
 

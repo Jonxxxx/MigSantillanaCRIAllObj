@@ -290,7 +290,7 @@ table 67061 "Cab. Atenciones"
             trigger OnLookup()
             var
                 rSol: Record 67055;
-                fSol: Page67090;
+                fSol: Page 67090;
             begin
 
                 fSol.SETTABLEVIEW(rSol);
@@ -353,7 +353,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnLookup()
             var
-                GpoNegocio: Page67093;
+                GpoNegocio: Page 67093;
             begin
                 DA.RESET;
                 DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Grupo de Negocio");
@@ -476,10 +476,10 @@ table 67061 "Cab. Atenciones"
         Country: Record 9;
         DimVal: Record 349;
         DA: Record 67002;
-        PostCodeForm: Page367;
-        formTerritory: Page429;
+        PostCodeForm: Page 367;
+        formTerritory: Page 429;
         DimMgt: Codeunit 408;
-        DimForm: Page560;
+        DimForm: Page 560;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin

@@ -5,7 +5,7 @@ page 56037 "Captura Productos"
     ModifyAllowed = false;
     PageType = List;
     PromotedActionCategories = 'Nuevo,Proceso,Informes,Linea De Negocio,Formato,Varios,Category7,Category,Category9,Category10';
-    SourceTable = Table27;
+    SourceTable = 27;
 
     layout
     {
@@ -274,7 +274,7 @@ page 56037 "Captura Productos"
     var
         _Doc: Code[20];
         Text001: Label 'Producto capturado.';
-        pgCantidad: Page56038;
+        pgCantidad: Page 56038;
         _Cantidad: Decimal;
         Text002: Label 'Cancelado por el usuario';
         SalesInfoPaneMgt: Codeunit 7171;

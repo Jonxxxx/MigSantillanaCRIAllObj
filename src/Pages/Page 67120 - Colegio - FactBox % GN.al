@@ -2,7 +2,7 @@ page 67120 "Colegio - FactBox % GN"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
                       WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 

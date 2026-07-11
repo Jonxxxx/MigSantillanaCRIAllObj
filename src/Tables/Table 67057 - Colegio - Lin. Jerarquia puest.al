@@ -114,6 +114,6 @@ table 67057 "Colegio - Lin. Jerarquia puest"
         Turno: Record 67003;
         Empleado: Record 67001;
         DA: Record 67002;
-        Cargo: Page67033;
+        Cargo: Page 67033;
 }
 

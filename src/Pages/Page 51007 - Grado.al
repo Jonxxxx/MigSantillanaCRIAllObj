@@ -2,7 +2,7 @@ page 51007 Grado
 {
     Caption = 'Grade';
     PageType = List;
-    SourceTable = Table51012;
+    SourceTable = 51012;
 
     layout
     {
@@ -10,10 +10,10 @@ page 51007 Grado
         {
             repeater()
             {
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

@@ -1,7 +1,7 @@
 page 67168 "Detalle Atenciones"
 {
     PageType = List;
-    SourceTable = Table67100;
+    SourceTable = 67100;
 
     layout
     {
@@ -9,22 +9,22 @@ page 67168 "Detalle Atenciones"
         {
             repeater(Group)
             {
-                field(Tipo;Tipo)
+                field(Tipo; Tipo)
                 {
                 }
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("Precio Unitario";"Precio Unitario")
+                field("Precio Unitario"; "Precio Unitario")
                 {
                 }
-                field("Monto total";"Monto total")
+                field("Monto total"; "Monto total")
                 {
                 }
             }

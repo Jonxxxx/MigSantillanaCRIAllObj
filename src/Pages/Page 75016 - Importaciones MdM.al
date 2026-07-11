@@ -5,7 +5,7 @@ page 75016 "Importaciones MdM"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table75003;
+    SourceTable = 75003;
     SourceTableView = SORTING(Id)
                       ORDER(Descending);
     UsageCategory = Tasks;

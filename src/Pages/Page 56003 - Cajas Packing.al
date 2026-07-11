@@ -14,7 +14,7 @@ page 56003 "Cajas Packing"
     DelayedInsert = true;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = Table56032;
+    SourceTable = 56032;
 
     layout
     {

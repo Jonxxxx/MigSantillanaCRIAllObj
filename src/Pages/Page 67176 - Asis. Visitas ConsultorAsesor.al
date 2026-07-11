@@ -3,7 +3,7 @@ page 67176 "Asis. Visitas Consultor/Asesor"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table67106;
+    SourceTable = 67106;
 
     layout
     {
@@ -11,28 +11,28 @@ page 67176 "Asis. Visitas Consultor/Asesor"
         {
             repeater(Group)
             {
-                field("Fecha programación";"Fecha programación")
+                field("Fecha programación"; "Fecha programación")
                 {
                 }
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                 }
-                field("Document ID";"Document ID")
+                field("Document ID"; "Document ID")
                 {
                 }
-                field("Fecha inscripcion";"Fecha inscripcion")
+                field("Fecha inscripcion"; "Fecha inscripcion")
                 {
                 }
-                field(Inscrito;Inscrito)
+                field(Inscrito; Inscrito)
                 {
                 }
-                field(Confirmado;Confirmado)
+                field(Confirmado; Confirmado)
                 {
                 }
-                field(Asistio;Asistio)
+                field(Asistio; Asistio)
                 {
                 }
             }

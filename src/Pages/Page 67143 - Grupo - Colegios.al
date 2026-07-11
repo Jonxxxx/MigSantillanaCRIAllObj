@@ -1,7 +1,7 @@
 page 67143 "Grupo - Colegios"
 {
     PageType = List;
-    SourceTable = Table67090;
+    SourceTable = 67090;
 
     layout
     {
@@ -9,10 +9,10 @@ page 67143 "Grupo - Colegios"
         {
             repeater(Group)
             {
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
             }

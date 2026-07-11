@@ -3,7 +3,7 @@ page 67034 "Lista Colegio - Delegaciones"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = Table67034;
+    SourceTable = 67034;
     UsageCategory = Lists;
 
     layout

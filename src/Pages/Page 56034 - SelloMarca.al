@@ -3,7 +3,7 @@ page 56034 "Sello/Marca"
     // #6357  PLB   05/11/2014  Se ha creado la page
 
     PageType = List;
-    SourceTable = Table56003;
+    SourceTable = 56003;
 
     layout
     {
@@ -11,10 +11,10 @@ page 56034 "Sello/Marca"
         {
             repeater(Group)
             {
-                field("Cod. Sello/Marca";"Cod. Sello/Marca")
+                field("Cod. Sello/Marca"; "Cod. Sello/Marca")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

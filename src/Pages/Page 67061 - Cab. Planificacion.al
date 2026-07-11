@@ -2,7 +2,7 @@ page 67061 "Cab. Planificacion"
 {
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     PageType = Card;
-    SourceTable = Table67023;
+    SourceTable = 67023;
 
     layout
     {
@@ -65,7 +65,7 @@ page 67061 "Cab. Planificacion"
 
                     trigger OnAction()
                     var
-                        SelCol: Page67079;
+                        SelCol: Page 67079;
                     begin
 
                         SelCol.RecibeParametros("Cod. Promotor",Ano,Semana);

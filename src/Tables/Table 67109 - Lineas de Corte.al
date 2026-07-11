@@ -27,7 +27,7 @@ table 67109 "Lineas de Corte"
             trigger OnLookup()
             var
                 DimVal: Record 349;
-                DimForm: Page560;
+                DimForm: Page 560;
                 APSSetup: Record 67000;
             begin
 

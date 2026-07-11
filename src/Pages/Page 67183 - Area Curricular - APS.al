@@ -1,7 +1,7 @@
 page 67183 "Area Curricular - APS"
 {
     PageType = List;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = WHERE("Tipo registro" = CONST(29));
 
     layout

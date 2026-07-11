@@ -162,7 +162,7 @@ table 67011 Eventos
         DA: Record 67002;
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page560;
+        DimForm: Page 560;
 
     procedure AssistEdit(OldEvent: Record 67011): Boolean
     var

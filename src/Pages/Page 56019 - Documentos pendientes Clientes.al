@@ -2,7 +2,7 @@ page 56019 "Documentos pendientes Clientes"
 {
     Editable = false;
     PageType = List;
-    SourceTable = Table56027;
+    SourceTable = 56027;
 
     layout
     {
@@ -10,43 +10,43 @@ page 56019 "Documentos pendientes Clientes"
         {
             repeater(Group)
             {
-                field("Cod. Cliente";"Cod. Cliente")
+                field("Cod. Cliente"; "Cod. Cliente")
                 {
                 }
-                field(Nombre;Nombre)
+                field(Nombre; Nombre)
                 {
                 }
-                field("Tipo Documento";"Tipo Documento")
+                field("Tipo Documento"; "Tipo Documento")
                 {
                 }
-                field("No. Documento";"No. Documento")
+                field("No. Documento"; "No. Documento")
                 {
                 }
-                field("Fecha Registro";"Fecha Registro")
+                field("Fecha Registro"; "Fecha Registro")
                 {
                 }
-                field("Fecha Vencimiento";"Fecha Vencimiento")
+                field("Fecha Vencimiento"; "Fecha Vencimiento")
                 {
                 }
-                field("Importe inicial";"Importe inicial")
+                field("Importe inicial"; "Importe inicial")
                 {
                 }
-                field("Importe Pendiente";"Importe Pendiente")
+                field("Importe Pendiente"; "Importe Pendiente")
                 {
                 }
-                field("Cod. Divisa";"Cod. Divisa")
+                field("Cod. Divisa"; "Cod. Divisa")
                 {
                 }
-                field("Fecha Ult. Actualizacion";"Fecha Ult. Actualizacion")
+                field("Fecha Ult. Actualizacion"; "Fecha Ult. Actualizacion")
                 {
                 }
-                field("No. Doc. Externo";"No. Doc. Externo")
+                field("No. Doc. Externo"; "No. Doc. Externo")
                 {
                 }
-                field("Importe inicial ($)";"Importe inicial ($)")
+                field("Importe inicial ($)"; "Importe inicial ($)")
                 {
                 }
-                field("Importe Pendiente ($)";"Importe Pendiente ($)")
+                field("Importe Pendiente ($)"; "Importe Pendiente ($)")
                 {
                 }
             }

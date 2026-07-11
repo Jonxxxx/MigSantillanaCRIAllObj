@@ -6,7 +6,7 @@ page 67154 "Historico Plan Lector Ficha"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = Table67095;
+    SourceTable = 67095;
     UsageCategory = History;
 
     layout

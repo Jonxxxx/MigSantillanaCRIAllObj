@@ -1,7 +1,7 @@
 page 67159 "Pagos a Expositores Subform"
 {
     PageType = List;
-    SourceTable = Table67099;
+    SourceTable = 67099;
 
     layout
     {
@@ -9,23 +9,23 @@ page 67159 "Pagos a Expositores Subform"
         {
             repeater(Group)
             {
-                field("Cod. Evento";"Cod. Evento")
+                field("Cod. Evento"; "Cod. Evento")
                 {
                 }
-                field("Descripción Evento";"Descripción Evento")
+                field("Descripción Evento"; "Descripción Evento")
                 {
                 }
-                field(Secuencia;Secuencia)
+                field(Secuencia; Secuencia)
                 {
                 }
-                field("Tipo Evento";"Tipo Evento")
+                field("Tipo Evento"; "Tipo Evento")
                 {
                 }
-                field("Cod. Expositor";"Cod. Expositor")
+                field("Cod. Expositor"; "Cod. Expositor")
                 {
                     Editable = false;
                 }
-                field("Monto a Pagar";"Monto a Pagar")
+                field("Monto a Pagar"; "Monto a Pagar")
                 {
                 }
             }

@@ -1,9 +1,9 @@
 page 67014 "Materiales Talleres y Eventos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     AutoSplitKey = true;
     PageType = List;
-    SourceTable = Table67014;
+    SourceTable = 67014;
     UsageCategory = Administration;
 
     layout
@@ -12,32 +12,32 @@ page 67014 "Materiales Talleres y Eventos"
         {
             repeater()
             {
-                field("Cod. Taller - Evento";"Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
                 {
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Taller";"Description Taller")
+                field("Description Taller"; "Description Taller")
                 {
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Evento";"Tipo Evento")
+                field("Tipo Evento"; "Tipo Evento")
                 {
                 }
-                field("Tipo de Material";"Tipo de Material")
+                field("Tipo de Material"; "Tipo de Material")
                 {
                 }
-                field("Codigo Material";"Codigo Material")
+                field("Codigo Material"; "Codigo Material")
                 {
                 }
-                field("Description Material";"Description Material")
+                field("Description Material"; "Description Material")
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("Costo Unitario";"Costo Unitario")
+                field("Costo Unitario"; "Costo Unitario")
                 {
                 }
             }

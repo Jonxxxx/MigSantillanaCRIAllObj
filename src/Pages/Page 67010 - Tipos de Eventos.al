@@ -1,8 +1,8 @@
 page 67010 "Tipos de Eventos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67010;
+    SourceTable = 67010;
     UsageCategory = Administration;
 
     layout
@@ -11,16 +11,16 @@ page 67010 "Tipos de Eventos"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Ingresar grados";"Ingresar grados")
+                field("Ingresar grados"; "Ingresar grados")
                 {
                 }
-                field("Ingresar libros a presentar";"Ingresar libros a presentar")
+                field("Ingresar libros a presentar"; "Ingresar libros a presentar")
                 {
                 }
             }

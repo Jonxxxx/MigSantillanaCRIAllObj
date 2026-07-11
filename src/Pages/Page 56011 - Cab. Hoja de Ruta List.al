@@ -4,7 +4,7 @@ page 56011 "Cab. Hoja de Ruta List"
     CardPageID = "Cab. Hoja de Ruta";
     Editable = false;
     PageType = List;
-    SourceTable = Table56020;
+    SourceTable = 56020;
     UsageCategory = Lists;
 
     layout

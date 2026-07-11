@@ -5,7 +5,7 @@ page 50111 "Lista Lineas Ventas SIC"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table50112;
+    SourceTable = 50112;
 
     layout
     {
@@ -13,61 +13,61 @@ page 50111 "Lista Lineas Ventas SIC"
         {
             repeater(Group)
             {
-                field("Tipo documento";"Tipo documento")
+                field("Tipo documento"; "Tipo documento")
                 {
                 }
-                field("No. documento";"No. documento")
+                field("No. documento"; "No. documento")
                 {
                 }
-                field("No. linea";"No. linea")
+                field("No. linea"; "No. linea")
                 {
                 }
-                field("Cod. Cliente";"Cod. Cliente")
+                field("Cod. Cliente"; "Cod. Cliente")
                 {
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field("Cod. Moneda";"Cod. Moneda")
+                field("Cod. Moneda"; "Cod. Moneda")
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("Importe descuento";"Importe descuento")
+                field("Importe descuento"; "Importe descuento")
                 {
                 }
-                field("Precio de venta";"Precio de venta")
+                field("Precio de venta"; "Precio de venta")
                 {
                 }
-                field("Unidad de medida";"Unidad de medida")
+                field("Unidad de medida"; "Unidad de medida")
                 {
                 }
-                field(Importe;Importe)
+                field(Importe; Importe)
                 {
                 }
-                field("Importe ITBIS Incluido";"Importe ITBIS Incluido")
+                field("Importe ITBIS Incluido"; "Importe ITBIS Incluido")
                 {
                 }
-                field(codproducto;codproducto)
+                field(codproducto; codproducto)
                 {
                 }
-                field(Transferido;Transferido)
+                field(Transferido; Transferido)
                 {
                 }
-                field(ITBIS;ITBIS)
+                field(ITBIS; ITBIS)
                 {
                 }
-                field("Location Code";"Location Code")
+                field("Location Code"; "Location Code")
                 {
                 }
-                field(Origen;Origen)
+                field(Origen; Origen)
                 {
                 }
-                field(Cupon;Cupon)
+                field(Cupon; Cupon)
                 {
                 }
-                field("No. documento SIC";"No. documento SIC")
+                field("No. documento SIC"; "No. documento SIC")
                 {
                 }
             }

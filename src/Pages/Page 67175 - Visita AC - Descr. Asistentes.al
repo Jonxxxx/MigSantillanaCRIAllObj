@@ -1,7 +1,7 @@
 page 67175 "Visita A/C - Descr. Asistentes"
 {
     PageType = List;
-    SourceTable = Table67105;
+    SourceTable = 67105;
 
     layout
     {

@@ -5,7 +5,7 @@ page 67164 "Consulta Progr. Taller y Eve."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67015;
+    SourceTable = 67015;
 
     layout
     {
@@ -13,17 +13,17 @@ page 67164 "Consulta Progr. Taller y Eve."
         {
             repeater(Group)
             {
-                field("Fecha programacion";"Fecha programacion")
+                field("Fecha programacion"; "Fecha programacion")
                 {
                 }
-                field(FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final");FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"))
+                field(FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"); FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"))
                 {
                     Caption = 'Horario';
                 }
-                field("Horas dictadas";"Horas dictadas")
+                field("Horas dictadas"; "Horas dictadas")
                 {
                 }
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
             }

@@ -17,7 +17,7 @@ page 56065 "Gestion BackOrder - TL"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table5741;
+    SourceTable = 5741;
     SourceTableView = SORTING("Item No.")
                       ORDER(Ascending)
                       WHERE("Item No." = FILTER(<> ''),
@@ -324,7 +324,7 @@ page 56065 "Gestion BackOrder - TL"
         WHSL: Record 7321;
         Text004: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         TL1Record: Record 5741;
-        PedTrans: Page5740;
+        PedTrans: Page 5740;
         Text006: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
 }
 

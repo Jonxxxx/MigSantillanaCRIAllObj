@@ -1,7 +1,7 @@
 page 67172 "Ficha Visitas Asesor/Consultor"
 {
     PageType = Card;
-    SourceTable = Table67102;
+    SourceTable = 67102;
 
     layout
     {
@@ -169,7 +169,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        pAsistentes: Page67177;
+                        pAsistentes: Page 67177;
                                          rProg: Record 67103;
                                          Err001: Label 'Antes de inscribir docentes, tiene que registrar las fechas y horario de la visita.';
                     begin
@@ -195,7 +195,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        GpoNegDistrib: Page67174;
+                        GpoNegDistrib: Page 67174;
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
                         TESTFIELD("Cod. Colegio");
@@ -240,7 +240,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        pgRanking: Page67145;
+                        pgRanking: Page 67145;
                     begin
                         TESTFIELD("Cod. Colegio");
                         pgRanking.CalcularRanking("Cod. Colegio");

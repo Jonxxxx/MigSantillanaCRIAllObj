@@ -3,7 +3,7 @@ page 67013 Materiales
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Materials';
     PageType = List;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = SORTING(Tipo registro, Codigo)
                       WHERE("Tipo registro" = CONST(Materiales));
     UsageCategory = Administration;

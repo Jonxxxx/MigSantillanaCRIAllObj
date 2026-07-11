@@ -9,7 +9,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     LinksAllowed = false;
     ModifyAllowed = false;
     PageType = Worksheet;
-    SourceTable = Table27;
+    SourceTable = 27;
 
     layout
     {

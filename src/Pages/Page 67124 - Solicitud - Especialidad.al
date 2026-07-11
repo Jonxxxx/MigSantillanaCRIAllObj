@@ -1,7 +1,7 @@
 page 67124 "Solicitud - Especialidad"
 {
     PageType = List;
-    SourceTable = Table67082;
+    SourceTable = 67082;
 
     layout
     {
@@ -9,10 +9,10 @@ page 67124 "Solicitud - Especialidad"
         {
             repeater(Group)
             {
-                field("Cod. Especialidad";"Cod. Especialidad")
+                field("Cod. Especialidad"; "Cod. Especialidad")
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
             }

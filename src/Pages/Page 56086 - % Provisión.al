@@ -2,9 +2,9 @@ page 56086 "% Provisión"
 {
     // 001 CAT 20/02/14  #144 Configuración de los porcentajes de insolvencias
 
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table56086;
+    SourceTable = 56086;
     UsageCategory = Lists;
 
     layout
@@ -13,13 +13,13 @@ page 56086 "% Provisión"
         {
             repeater(Group)
             {
-                field("Desde día";"Desde día")
+                field("Desde día"; "Desde día")
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field("% Provisión";"% Provisión")
+                field("% Provisión"; "% Provisión")
                 {
                 }
             }

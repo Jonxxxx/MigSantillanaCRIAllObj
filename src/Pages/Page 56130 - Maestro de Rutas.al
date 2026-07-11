@@ -4,7 +4,7 @@ page 56130 "Maestro de Rutas"
 
     Caption = 'Maestro de Rutas';
     PageType = List;
-    SourceTable = Table56070;
+    SourceTable = 56070;
 
     layout
     {

@@ -4,7 +4,7 @@ page 67134 "Colegio - Work Flow Programado"
     Caption = 'School - programming Work flow';
     DelayedInsert = true;
     PageType = ListPlus;
-    SourceTable = Table67062;
+    SourceTable = 67062;
     SourceTableView = WHERE("Programado" = CONST(true));
 
     layout

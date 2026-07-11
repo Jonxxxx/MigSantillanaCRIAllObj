@@ -82,7 +82,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                fSol: Page67090;
+                fSol: Page 67090;
                 rSol: Record 67055;
             begin
 
@@ -195,7 +195,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 ColNivel: Record 67036;
-                pgColNivel: Page67180;
+                pgColNivel: Page 67180;
             begin
 
                 ColNivel.RESET;
@@ -272,7 +272,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 rColDoc: Record 67043;
-                pColDoc: Page67045;
+                pColDoc: Page 67045;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN BEGIN
                     rColDoc.RESET;
@@ -398,7 +398,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 rEvExp: Record 67050;
-                pEvExp: Page67100;
+                pEvExp: Page 67100;
             begin
                 rEvExp.RESET;
                 IF "Tipo Evento" <> '' THEN

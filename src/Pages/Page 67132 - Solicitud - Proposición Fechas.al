@@ -2,7 +2,7 @@ page 67132 "Solicitud - Proposición Fechas"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = Table67088;
+    SourceTable = 67088;
 
     layout
     {

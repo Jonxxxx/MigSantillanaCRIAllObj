@@ -3,7 +3,7 @@ page 75001 "Datos MDM"
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = Table75001;
+    SourceTable = 75001;
     UsageCategory = Administration;
 
     layout

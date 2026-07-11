@@ -1,7 +1,7 @@
 page 67031 "Carga Horaria"
 {
     PageType = Card;
-    SourceTable = Table67031;
+    SourceTable = 67031;
 
     layout
     {
@@ -9,10 +9,10 @@ page 67031 "Carga Horaria"
         {
             repeater()
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

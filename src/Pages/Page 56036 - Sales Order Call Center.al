@@ -3,7 +3,7 @@ page 56036 "Sales Order Call Center"
     Caption = 'Sales Order';
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = Table36;
+    SourceTable = 36;
     SourceTableView = WHERE("Document Type" = FILTER(Order));
 
     layout
@@ -549,7 +549,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        ApprovalEntries: Page658;
+                        ApprovalEntries: Page 658;
                     begin
                         ApprovalEntries.Setfilters(DATABASE::"Sales Header","Document Type","No.");
                         ApprovalEntries.RUN;
@@ -584,7 +584,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        SalesPlanPage: Page99000883;
+                        SalesPlanPage: Page 99000883;
                     begin
                         SalesPlanPage.SetSalesOrder("No.");
                         SalesPlanPage.RUNMODAL;
@@ -1124,7 +1124,7 @@ page 56036 "Sales Order Call Center"
                           ArchiveManagement: Codeunit 5063;
                           SalesInfoPaneMgt: Codeunit 7171;
                           SalesSetup: Record 311;
-                          ChangeExchangeRate: Page511;
+                          ChangeExchangeRate: Page 511;
                           UserMgt: Codeunit 5700;
                           Usage: Option "Order Confirmation","Work Order","Pick Ticket";
                           Text001: Label 'There are non posted Prepayment Amounts on %1 %2.';
@@ -1143,7 +1143,7 @@ page 56036 "Sales Order Call Center"
                     AppTemp: Record 464;
                     SalesLine: Record 37;
                     ReleaseSalesDoc: Codeunit 414;
-                    pgProductos: Page56037;
+                    pgProductos: Page 56037;
 
     procedure UpdateAllowed(): Boolean
     begin

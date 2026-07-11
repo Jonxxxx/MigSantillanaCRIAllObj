@@ -5,7 +5,7 @@ page 130405 "CAL Test Results"
     ModifyAllowed = false;
     PageType = List;
     PromotedActionCategories = 'New,Process,Report,Call Stack';
-    SourceTable = Table130405;
+    SourceTable = 130405;
 
     layout
     {

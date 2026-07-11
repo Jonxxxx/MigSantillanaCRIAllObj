@@ -2,7 +2,7 @@ page 56029 Edicion
 {
     Caption = 'Edition';
     PageType = List;
-    SourceTable = Table56007;
+    SourceTable = 56007;
 
     layout
     {
@@ -10,10 +10,10 @@ page 56029 Edicion
         {
             repeater(Group)
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

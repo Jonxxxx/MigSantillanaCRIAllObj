@@ -6,7 +6,7 @@ page 67109 "Registrar Asistencias"
     ModifyAllowed = false;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = Table67051;
+    SourceTable = 67051;
 
     layout
     {
@@ -146,7 +146,7 @@ page 67109 "Registrar Asistencias"
     end;
 
     var
-        PagAsistentes: Page67110;
+        PagAsistentes: Page 67110;
                            Fecha: Record 2000000007;
                            CabPlanEvent: Record 67051;
                            gCodExpositor: Code[20];

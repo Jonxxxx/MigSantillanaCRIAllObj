@@ -3,7 +3,7 @@ page 67163 "Asignación Cod. Promotor"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table91;
+    SourceTable = 91;
 
     layout
     {
@@ -11,11 +11,11 @@ page 67163 "Asignación Cod. Promotor"
         {
             repeater(Group)
             {
-                field("User ID";"User ID")
+                field("User ID"; "User ID")
                 {
                     Editable = false;
                 }
-                field("Salespers./Purch. Code";"Salespers./Purch. Code")
+                field("Salespers./Purch. Code"; "Salespers./Purch. Code")
                 {
                 }
             }

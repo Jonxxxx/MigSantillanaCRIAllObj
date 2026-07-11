@@ -6,7 +6,7 @@ page 75013 "Filtro Campo"
 
     Editable = false;
     PageType = ConfirmationDialog;
-    SourceTable = Table75013;
+    SourceTable = 75013;
     SourceTableTemporary = true;
 
     layout

@@ -2,7 +2,7 @@ page 56027 "Subform clas. devoluciones"
 {
     Caption = 'Returns classification subform';
     PageType = ListPart;
-    SourceTable = Table56026;
+    SourceTable = 56026;
     SourceTableView = WHERE("Processed" = CONST(false));
 
     layout

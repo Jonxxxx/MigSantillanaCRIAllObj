@@ -414,7 +414,7 @@ table 67053 "Colegio - Adopciones Detalle"
 
             trigger OnLookup()
             var
-                Materia: Page67086;
+                Materia: Page 67086;
             begin
             end;
         }
@@ -560,8 +560,8 @@ table 67053 "Colegio - Adopciones Detalle"
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2Record: Record 67026;
         DimVal: Record 349;
-        DimForm: Page560;
-                     LibroComp: Page67025;
+        DimForm: Page 560;
+                     LibroComp: Page 67025;
                      DefDim: Record 352;
                      ProdEdit: Record 67025;
                      Nivel: Record 67022;
@@ -643,7 +643,7 @@ table 67053 "Colegio - Adopciones Detalle"
 
     procedure OpenItem()
     var
-        ItemCard: Page30;
+        ItemCard: Page 30;
     begin
         Item.GET("Cod. Producto");
         IF ISSERVICETIER THEN

@@ -1,12 +1,12 @@
 page 67127 "Historico Colegio - Grados"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67069;
+    SourceTable = 67069;
     UsageCategory = History;
 
     layout
@@ -15,46 +15,46 @@ page 67127 "Historico Colegio - Grados"
         {
             repeater(Group)
             {
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Cod. Local";"Cod. Local")
+                field("Cod. Local"; "Cod. Local")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Cod. Turno";"Cod. Turno")
+                field("Cod. Turno"; "Cod. Turno")
                 {
                 }
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field(Seccion;Seccion)
+                field(Seccion; Seccion)
                 {
                 }
-                field("Cantidad Secciones";"Cantidad Secciones")
+                field("Cantidad Secciones"; "Cantidad Secciones")
                 {
                 }
-                field("Cantidad Alumnos";"Cantidad Alumnos")
+                field("Cantidad Alumnos"; "Cantidad Alumnos")
                 {
                 }
-                field("Cantidad Docentes";"Cantidad Docentes")
+                field("Cantidad Docentes"; "Cantidad Docentes")
                 {
                 }
-                field("Lista Utiles";"Lista Utiles")
+                field("Lista Utiles"; "Lista Utiles")
                 {
                 }
-                field("Lista Competencia";"Lista Competencia")
+                field("Lista Competencia"; "Lista Competencia")
                 {
                 }
-                field("Horas Ingles";"Horas Ingles")
+                field("Horas Ingles"; "Horas Ingles")
                 {
                 }
-                field("Fecha Decision";"Fecha Decision")
+                field("Fecha Decision"; "Fecha Decision")
                 {
                 }
-                field(Campana;Campana)
+                field(Campana; Campana)
                 {
                 }
             }

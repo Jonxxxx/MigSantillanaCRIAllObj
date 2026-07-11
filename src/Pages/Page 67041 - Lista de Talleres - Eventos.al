@@ -1,10 +1,10 @@
 page 67041 "Lista de Talleres - Eventos"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Talleres - Eventos";
     Editable = false;
     PageType = List;
-    SourceTable = Table67011;
+    SourceTable = 67011;
     UsageCategory = Lists;
 
     layout
@@ -13,58 +13,58 @@ page 67041 "Lista de Talleres - Eventos"
         {
             repeater()
             {
-                field("No.";"No.")
+                field("No."; "No.")
                 {
                 }
-                field("Tipo de Evento";"Tipo de Evento")
+                field("Tipo de Evento"; "Tipo de Evento")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field(Delegacion;Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
-                field(Categoria;Categoria)
+                field(Categoria; Categoria)
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field(Expositores;Expositores)
+                field(Expositores; Expositores)
                 {
                 }
-                field(Sala;Sala)
+                field(Sala; Sala)
                 {
                 }
-                field("Fecha creacion";"Fecha creacion")
+                field("Fecha creacion"; "Fecha creacion")
                 {
                 }
-                field("Horas programadas";"Horas programadas")
+                field("Horas programadas"; "Horas programadas")
                 {
                 }
-                field("Capacidad de vacantes";"Capacidad de vacantes")
+                field("Capacidad de vacantes"; "Capacidad de vacantes")
                 {
                 }
-                field("Eventos programados";"Eventos programados")
+                field("Eventos programados"; "Eventos programados")
                 {
                 }
-                field("Importe Gasto Expositor";"Importe Gasto Expositor")
+                field("Importe Gasto Expositor"; "Importe Gasto Expositor")
                 {
                 }
-                field("Importe Gasto mensajeria";"Importe Gasto mensajeria")
+                field("Importe Gasto mensajeria"; "Importe Gasto mensajeria")
                 {
                 }
-                field("ImporteGastos Impresion";"ImporteGastos Impresion")
+                field("ImporteGastos Impresion"; "ImporteGastos Impresion")
                 {
                 }
-                field("Importe Utiles";"Importe Utiles")
+                field("Importe Utiles"; "Importe Utiles")
                 {
                 }
-                field("Importe Atenciones";"Importe Atenciones")
+                field("Importe Atenciones"; "Importe Atenciones")
                 {
                 }
-                field("Otros Importes";"Otros Importes")
+                field("Otros Importes"; "Otros Importes")
                 {
                 }
             }

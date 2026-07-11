@@ -3,7 +3,7 @@ page 75002 "Estructura Analitica"
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Estructura Analitica';
     PageType = List;
-    SourceTable = Table75002;
+    SourceTable = 75002;
     UsageCategory = Administration;
 
     layout

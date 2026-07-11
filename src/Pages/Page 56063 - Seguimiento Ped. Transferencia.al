@@ -7,7 +7,7 @@ page 56063 "Seguimiento Ped. Transferencia"
     Caption = 'Transfer Order Management';
     Editable = false;
     PageType = List;
-    SourceTable = Table5740;
+    SourceTable = 5740;
 
     layout
     {
@@ -196,6 +196,6 @@ page 56063 "Seguimiento Ped. Transferencia"
         TSH: Record 5744;
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Contac: Record 5050;
-        OrderTracking: Page56081;
+        OrderTracking: Page 56081;
 }
 

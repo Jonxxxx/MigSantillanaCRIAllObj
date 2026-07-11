@@ -1,12 +1,12 @@
 page 67114 "Hist. Docentes - Aficiones"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67075;
+    SourceTable = 67075;
     UsageCategory = History;
 
     layout
@@ -15,22 +15,22 @@ page 67114 "Hist. Docentes - Aficiones"
         {
             repeater()
             {
-                field(Campana;Campana)
+                field(Campana; Campana)
                 {
                 }
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                     Visible = false;
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. aficion";"Cod. aficion")
+                field("Cod. aficion"; "Cod. aficion")
                 {
                 }
-                field("Descripcion aficion";"Descripcion aficion")
+                field("Descripcion aficion"; "Descripcion aficion")
                 {
                     Editable = false;
                 }

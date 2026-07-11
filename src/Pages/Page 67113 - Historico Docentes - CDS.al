@@ -1,9 +1,9 @@
 page 67113 "Historico Docentes - CDS"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = List;
-    SourceTable = Table67072;
+    SourceTable = 67072;
     UsageCategory = History;
 
     layout
@@ -12,23 +12,23 @@ page 67113 "Historico Docentes - CDS"
         {
             repeater(Group)
             {
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                     Visible = false;
                 }
-                field(Campana;Campana)
+                field(Campana; Campana)
                 {
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Pertenece al CDS";"Pertenece al CDS")
+                field("Pertenece al CDS"; "Pertenece al CDS")
                 {
                 }
-                field("Cod. CDS";"Cod. CDS")
+                field("Cod. CDS"; "Cod. CDS")
                 {
                 }
-                field("Ult. fecha activacion";"Ult. fecha activacion")
+                field("Ult. fecha activacion"; "Ult. fecha activacion")
                 {
                 }
             }

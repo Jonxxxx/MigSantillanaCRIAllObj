@@ -10,7 +10,7 @@ page 56081 "Order Tracking Navigation"
     Caption = 'Navigate';
     PageType = NavigatePage;
     SaveValues = true;
-    SourceTable = Table56053;
+    SourceTable = 56053;
     SourceTableTemporary = true;
 
     layout

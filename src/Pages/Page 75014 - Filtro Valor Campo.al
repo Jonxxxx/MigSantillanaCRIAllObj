@@ -6,7 +6,7 @@ page 75014 "Filtro Valor Campo"
 
     Editable = false;
     PageType = List;
-    SourceTable = Table75014;
+    SourceTable = 75014;
     SourceTableTemporary = true;
 
     layout

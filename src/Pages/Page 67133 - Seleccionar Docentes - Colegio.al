@@ -1,7 +1,7 @@
 page 67133 "Seleccionar Docentes - Colegio"
 {
     PageType = List;
-    SourceTable = Table67043;
+    SourceTable = 67043;
     SourceTableView = WHERE("Pertenece al CDS" = CONST(true));
 
     layout

@@ -19,7 +19,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table37;
+    SourceTable = 37;
     SourceTableTemporary = true;
     UsageCategory = Lists;
 
@@ -339,7 +339,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
         SalesLine2Record: Record 37;
         WHSL: Record 7321;
         SL: Record 37;
-        PedVta: Page42;
+        PedVta: Page 42;
         SH: Record 36;
         Text004: Label 'Se revisarán todos los pedidos y se borrarán aquellos que no tengan cantidad pendiente para enviar. ¿Continuar?';
 

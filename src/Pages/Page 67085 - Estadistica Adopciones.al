@@ -2,7 +2,7 @@ page 67085 "Estadistica Adopciones"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = Table67013;
+    SourceTable = 67013;
     SourceTableTemporary = true;
 
     layout

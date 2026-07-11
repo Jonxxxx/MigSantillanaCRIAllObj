@@ -9,7 +9,7 @@ page 50037 ListaDescuentoProntoPago
     ModifyAllowed = false;
     PageType = List;
     Permissions = TableData 21 = r;
-    SourceTable = Table21;
+    SourceTable = 21;
     SourceTableView = SORTING(Closed by Entry No.)
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),

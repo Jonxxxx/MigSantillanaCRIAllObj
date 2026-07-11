@@ -4,7 +4,7 @@ page 67181 "Seguim.Visita Asesor/Consultor"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67107;
+    SourceTable = 67107;
 
     layout
     {
@@ -12,19 +12,19 @@ page 67181 "Seguim.Visita Asesor/Consultor"
         {
             repeater(Group)
             {
-                field("No. Cambio";"No. Cambio")
+                field("No. Cambio"; "No. Cambio")
                 {
                 }
-                field(Estado;Estado)
+                field(Estado; Estado)
                 {
                 }
-                field(Fecha;Fecha)
+                field(Fecha; Fecha)
                 {
                 }
-                field(Usuario;Usuario)
+                field(Usuario; Usuario)
                 {
                 }
-                field(Hora;Hora)
+                field(Hora; Hora)
                 {
                 }
             }

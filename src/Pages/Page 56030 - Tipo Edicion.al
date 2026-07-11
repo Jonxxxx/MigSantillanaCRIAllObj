@@ -2,7 +2,7 @@ page 56030 "Tipo Edicion"
 {
     Caption = 'Edtion Type';
     PageType = List;
-    SourceTable = Table56004;
+    SourceTable = 56004;
 
     layout
     {
@@ -10,10 +10,10 @@ page 56030 "Tipo Edicion"
         {
             repeater(Group)
             {
-                field("Cod. Tipo Edicion";"Cod. Tipo Edicion")
+                field("Cod. Tipo Edicion"; "Cod. Tipo Edicion")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

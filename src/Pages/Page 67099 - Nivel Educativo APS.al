@@ -1,8 +1,8 @@
 page 67099 "Nivel Educativo APS"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67022;
+    SourceTable = 67022;
     UsageCategory = Administration;
 
     layout
@@ -11,13 +11,13 @@ page 67099 "Nivel Educativo APS"
         {
             repeater(Group)
             {
-                field(Código;Código)
+                field(Código; Código)
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field("Grupo de Negocio";"Grupo de Negocio")
+                field("Grupo de Negocio"; "Grupo de Negocio")
                 {
                 }
             }

@@ -2,16 +2,16 @@ page 67106 "Planificacion Evento ListPart"
 {
     Caption = 'Planned Events';
     PageType = CardPart;
-    SourceTable = Table67051;
+    SourceTable = 67051;
 
     layout
     {
         area(content)
         {
-            field("Asistentes esperados";"Asistentes esperados")
+            field("Asistentes esperados"; "Asistentes esperados")
             {
             }
-            field("Total registrados";"Total registrados")
+            field("Total registrados"; "Total registrados")
             {
             }
         }

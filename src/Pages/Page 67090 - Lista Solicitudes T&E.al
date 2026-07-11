@@ -4,7 +4,7 @@ page 67090 "Lista Solicitudes T&E"
     CardPageID = "Solicitud asistencia Tec - Ped";
     Editable = false;
     PageType = List;
-    SourceTable = Table67055;
+    SourceTable = 67055;
     SourceTableView = SORTING(Fecha Propuesta);
     UsageCategory = Lists;
 

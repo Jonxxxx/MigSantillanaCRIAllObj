@@ -5,7 +5,7 @@ page 56069 "Crea Cupones en Lote"
     ApplicationArea = Basic, Suite, Service;
     DelayedInsert = false;
     PageType = List;
-    SourceTable = Table51015;
+    SourceTable = 51015;
     UsageCategory = Tasks;
 
     layout

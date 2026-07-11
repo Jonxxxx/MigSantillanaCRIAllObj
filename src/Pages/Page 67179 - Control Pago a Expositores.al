@@ -1,7 +1,7 @@
 page 67179 "Control Pago a Expositores"
 {
     PageType = List;
-    SourceTable = Table67021;
+    SourceTable = 67021;
 
     layout
     {

@@ -294,8 +294,8 @@ table 67036 "Colegio - Nivel"
         "P-Ruta"Record 67044;
         RD: Record 67009;
         Nivel: Record 56005;
-        Rutas: Page67009;
-        Rutas2: Page67008;
+        Rutas: Page 67009;
+        Rutas2: Page 67008;
         Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';
 }
 

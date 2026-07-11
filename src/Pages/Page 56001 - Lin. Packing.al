@@ -16,7 +16,7 @@ page 56001 "Lin. Packing"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = Table56031;
+    SourceTable = 56031;
     SourceTableView = SORTING(No.)
                       ORDER(Ascending);
 

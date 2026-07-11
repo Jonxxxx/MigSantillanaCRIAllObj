@@ -1,12 +1,12 @@
 page 67126 "Historico Colegio - Nivel"
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67067;
+    SourceTable = 67067;
     UsageCategory = History;
 
     layout
@@ -15,79 +15,79 @@ page 67126 "Historico Colegio - Nivel"
         {
             repeater(Group)
             {
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Cod. Local";"Cod. Local")
+                field("Cod. Local"; "Cod. Local")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field(Turno;Turno)
+                field(Turno; Turno)
                 {
                 }
-                field("Categoria colegio";"Categoria colegio")
+                field("Categoria colegio"; "Categoria colegio")
                 {
                 }
-                field(Ruta;Ruta)
+                field(Ruta; Ruta)
                 {
                 }
-                field("Dto. Ticket Colegio";"Dto. Ticket Colegio")
+                field("Dto. Ticket Colegio"; "Dto. Ticket Colegio")
                 {
                 }
-                field("Dto. Ticket Padres";"Dto. Ticket Padres")
+                field("Dto. Ticket Padres"; "Dto. Ticket Padres")
                 {
                 }
-                field("Dto. Feria Colegio";"Dto. Feria Colegio")
+                field("Dto. Feria Colegio"; "Dto. Feria Colegio")
                 {
                 }
-                field("Dto. Feria Padres";"Dto. Feria Padres")
+                field("Dto. Feria Padres"; "Dto. Feria Padres")
                 {
                 }
-                field(Adoptado;Adoptado)
+                field(Adoptado; Adoptado)
                 {
                 }
-                field("Estatus observado";"Estatus observado")
+                field("Estatus observado"; "Estatus observado")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field("Dto. Docente";"Dto. Docente")
+                field("Dto. Docente"; "Dto. Docente")
                 {
                 }
-                field(Campana;Campana)
+                field(Campana; Campana)
                 {
                 }
-                field("Distrito Code";"Distrito Code")
+                field("Distrito Code"; "Distrito Code")
                 {
                 }
-                field(Departamento;Departamento)
+                field(Departamento; Departamento)
                 {
                 }
-                field(Distritos;Distritos)
+                field(Distritos; Distritos)
                 {
                 }
-                field(Provincia;Provincia)
+                field(Provincia; Provincia)
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Codigo Postal";"Codigo Postal")
+                field("Codigo Postal"; "Codigo Postal")
                 {
                 }
             }

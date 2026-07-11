@@ -5,7 +5,7 @@ page 67162 "Consulta Distrib. Centro Costo"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67086;
+    SourceTable = 67086;
 
     layout
     {
@@ -13,13 +13,13 @@ page 67162 "Consulta Distrib. Centro Costo"
         {
             repeater(Group)
             {
-                field(Código;Código)
+                field(Código; Código)
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field(Porcentaje;Porcentaje)
+                field(Porcentaje; Porcentaje)
                 {
                 }
             }

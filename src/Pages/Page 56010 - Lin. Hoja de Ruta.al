@@ -10,7 +10,7 @@ page 56010 "Lin. Hoja de Ruta"
 
     AutoSplitKey = true;
     PageType = ListPart;
-    SourceTable = Table56021;
+    SourceTable = 56021;
 
     layout
     {

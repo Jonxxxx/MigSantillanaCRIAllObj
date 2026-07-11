@@ -1,7 +1,7 @@
 page 50029 "Condiciones de la venta"
 {
     PageType = List;
-    SourceTable = Table50029;
+    SourceTable = 50029;
 
     layout
     {
@@ -9,13 +9,13 @@ page 50029 "Condiciones de la venta"
         {
             repeater(Group)
             {
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field("Condicion de la Venta";"Condicion de la Venta")
+                field("Condicion de la Venta"; "Condicion de la Venta")
                 {
                 }
-                field(Inactivo;Inactivo)
+                field(Inactivo; Inactivo)
                 {
                 }
             }

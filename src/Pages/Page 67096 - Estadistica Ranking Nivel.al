@@ -2,7 +2,7 @@ page 67096 "Estadistica Ranking Nivel"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = Table67041;
+    SourceTable = 67041;
     SourceTableTemporary = true;
 
     layout

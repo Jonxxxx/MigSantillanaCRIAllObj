@@ -3,7 +3,7 @@ page 67108 "Consulta Asist. Taller/Evento"
     Caption = 'View Assist. Workshop/Events';
     Editable = false;
     PageType = ListPart;
-    SourceTable = Table67016;
+    SourceTable = 67016;
 
     layout
     {
@@ -129,7 +129,7 @@ page 67108 "Consulta Asist. Taller/Evento"
 
     var
         CabPlanEvento: Record 67051;
-        SelDoc: Page67103;
+        SelDoc: Page 67103;
         TotDocentes: Integer;
         TotSeleccionados: Integer;
         texAsistio: Text[30];

@@ -16,7 +16,7 @@ page 56064 "Gestion BackOrder - SL"
     Caption = 'Sales Lines BackOrder Mgt. ';
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table37;
+    SourceTable = 37;
     SourceTableView = SORTING(Type, No., Variant Code, Drop Shipment, Location Code, Document Type, Shipment Date)
                       ORDER(Ascending)
                       WHERE("Document Type" = FILTER(Order),
@@ -373,7 +373,7 @@ page 56064 "Gestion BackOrder - SL"
         AppEnt1Record: Record 454;
         AppEnt2Record: Record 454;
         SL: Record 37;
-        PedVta: Page42;
+        PedVta: Page 42;
         Error001: Label 'Qty. to Adjust cannot be grater than the availability';
         Error002: Label 'User does not have permision to approve quantities in sales orders';
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';

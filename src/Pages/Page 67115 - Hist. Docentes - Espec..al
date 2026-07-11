@@ -1,12 +1,12 @@
 page 67115 "Hist. Docentes - Espec."
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67074;
+    SourceTable = 67074;
     UsageCategory = History;
 
     layout
@@ -15,27 +15,27 @@ page 67115 "Hist. Docentes - Espec."
         {
             repeater()
             {
-                field(Campana;Campana)
+                field(Campana; Campana)
                 {
                 }
-                field("Cod. Docente";"Cod. Docente")
+                field("Cod. Docente"; "Cod. Docente")
                 {
                     Visible = false;
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Cod. Especialidad";"Cod. Especialidad")
+                field("Cod. Especialidad"; "Cod. Especialidad")
                 {
                 }
-                field("Descripcion especialidad";"Descripcion especialidad")
+                field("Descripcion especialidad"; "Descripcion especialidad")
                 {
                     Editable = false;
                 }
-                field("Cod. grado";"Cod. grado")
+                field("Cod. grado"; "Cod. grado")
                 {
                 }
-                field("Nombre Docente";"Nombre Docente")
+                field("Nombre Docente"; "Nombre Docente")
                 {
                     Editable = false;
                 }

@@ -2,7 +2,7 @@ page 67118 "Inventarios Colegios ListPart"
 {
     Caption = 'Sample Inventory';
     PageType = CardPart;
-    SourceTable = Table5050;
+    SourceTable = 5050;
 
     layout
     {
@@ -16,7 +16,7 @@ page 67118 "Inventarios Colegios ListPart"
                 trigger OnLookup(var Text: Text): Boolean
                 var
                     BC: Record 7302;
-                    BCPage: Page7304;
+                    BCPage: Page 7304;
                 begin
                     BC.RESET;
                     BC.SETRANGE("Location Code", "Samples Location Code");

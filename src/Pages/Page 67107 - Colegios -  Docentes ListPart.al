@@ -2,7 +2,7 @@ page 67107 "Colegios -  Docentes ListPart"
 {
     Caption = 'Schoold - Teachers';
     PageType = ListPart;
-    SourceTable = Table67043;
+    SourceTable = 67043;
 
     layout
     {
@@ -10,23 +10,23 @@ page 67107 "Colegios -  Docentes ListPart"
         {
             repeater()
             {
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Nombre colegio";"Nombre colegio")
+                field("Nombre colegio"; "Nombre colegio")
                 {
                 }
-                field("Cod. Cargo";"Cod. Cargo")
+                field("Cod. Cargo"; "Cod. Cargo")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                     Visible = false;
                 }
-                field("Nombre Promotor";"Nombre Promotor")
+                field("Nombre Promotor"; "Nombre Promotor")
                 {
                 }
             }

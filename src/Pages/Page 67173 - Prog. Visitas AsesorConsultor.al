@@ -2,7 +2,7 @@ page 67173 "Prog. Visitas Asesor/Consultor"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = Table67103;
+    SourceTable = 67103;
 
     layout
     {

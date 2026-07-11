@@ -1,7 +1,7 @@
 page 50113 "Conf. Medios de pagos"
 {
     PageType = List;
-    SourceTable = Table50110;
+    SourceTable = 50110;
 
     layout
     {
@@ -9,25 +9,25 @@ page 50113 "Conf. Medios de pagos"
         {
             repeater(Group)
             {
-                field("Cod. med. pago";"Cod. med. pago")
+                field("Cod. med. pago"; "Cod. med. pago")
                 {
                 }
-                field(Credito;Credito)
+                field(Credito; Credito)
                 {
                 }
-                field("Account Type";"Account Type")
+                field("Account Type"; "Account Type")
                 {
                 }
-                field("Account No.";"Account No.")
+                field("Account No."; "Account No.")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Cod. Forma Pago";"Cod. Forma Pago")
+                field("Cod. Forma Pago"; "Cod. Forma Pago")
                 {
                 }
-                field("ID Agrupacion";"ID Agrupacion")
+                field("ID Agrupacion"; "ID Agrupacion")
                 {
                 }
             }

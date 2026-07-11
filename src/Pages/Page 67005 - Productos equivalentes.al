@@ -2,7 +2,7 @@ page 67005 "Productos equivalentes"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67005;
+    SourceTable = 67005;
     UsageCategory = Administration;
 
     layout

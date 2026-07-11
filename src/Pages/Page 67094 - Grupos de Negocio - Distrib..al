@@ -4,7 +4,7 @@ page 67094 "Grupos de Negocio - Distrib."
     InsertAllowed = false;
     LinksAllowed = false;
     PageType = List;
-    SourceTable = Table67086;
+    SourceTable = 67086;
 
     layout
     {

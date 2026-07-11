@@ -4,7 +4,7 @@ page 67169 "Atenciones - Grupos de Negocio"
     InsertAllowed = false;
     LinksAllowed = false;
     PageType = List;
-    SourceTable = Table67101;
+    SourceTable = 67101;
 
     layout
     {

@@ -4,7 +4,7 @@ page 56016 "Lin. Hoja de Ruta Reg."
     // JMB - 16/05/2016 (#50366): Se muestra el campo Nº factura en los detalle de la linea
 
     PageType = ListPart;
-    SourceTable = Table56023;
+    SourceTable = 56023;
 
     layout
     {
@@ -12,71 +12,71 @@ page 56016 "Lin. Hoja de Ruta Reg."
         {
             repeater(Group)
             {
-                field("No. Conduce";"No. Conduce")
+                field("No. Conduce"; "No. Conduce")
                 {
                 }
-                field("Cod. Cliente";"Cod. Cliente")
+                field("Cod. Cliente"; "Cod. Cliente")
                 {
                 }
-                field("Nombre Cliente";"Nombre Cliente")
+                field("Nombre Cliente"; "Nombre Cliente")
                 {
                 }
-                field("Cantidad de Bultos";"Cantidad de Bultos")
+                field("Cantidad de Bultos"; "Cantidad de Bultos")
                 {
                 }
-                field(Peso;Peso)
-                {
-                    Visible = false;
-                }
-                field("Unidad Medida";"Unidad Medida")
-                {
-                }
-                field(Valor;Valor)
+                field(Peso; Peso)
                 {
                     Visible = false;
                 }
-                field("No. Guia";"No. Guia")
+                field("Unidad Medida"; "Unidad Medida")
+                {
+                }
+                field(Valor; Valor)
                 {
                     Visible = false;
                 }
-                field("No. Factura";"No. Factura")
-                {
-                }
-                field(Comentarios;Comentarios)
-                {
-                }
-                field("Fecha Entrega Requerida";"Fecha Entrega Requerida")
+                field("No. Guia"; "No. Guia")
                 {
                     Visible = false;
                 }
-                field("Condiciones de Envio";"Condiciones de Envio")
+                field("No. Factura"; "No. Factura")
+                {
+                }
+                field(Comentarios; Comentarios)
+                {
+                }
+                field("Fecha Entrega Requerida"; "Fecha Entrega Requerida")
                 {
                     Visible = false;
                 }
-                field("No. Pedido";"No. Pedido")
-                {
-                }
-                field("Fecha Pedido";"Fecha Pedido")
+                field("Condiciones de Envio"; "Condiciones de Envio")
                 {
                     Visible = false;
                 }
-                field("No entregado";"No entregado")
+                field("No. Pedido"; "No. Pedido")
+                {
+                }
+                field("Fecha Pedido"; "Fecha Pedido")
                 {
                     Visible = false;
                 }
-                field(Entregado;Entregado)
+                field("No entregado"; "No entregado")
+                {
+                    Visible = false;
+                }
+                field(Entregado; Entregado)
                 {
                     Editable = false;
                 }
-                field("Fecha Entrega";"Fecha Entrega")
+                field("Fecha Entrega"; "Fecha Entrega")
                 {
                     Editable = false;
                 }
-                field("Causa No Entrega";"Causa No Entrega")
+                field("Causa No Entrega"; "Causa No Entrega")
                 {
                     Editable = false;
                 }
-                field("No Orden";"No Orden")
+                field("No Orden"; "No Orden")
                 {
                 }
             }

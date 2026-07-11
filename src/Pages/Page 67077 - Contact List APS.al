@@ -6,7 +6,7 @@ page 67077 "Contact List APS"
     Editable = false;
     PageType = List;
     PromotedActionCategories = 'Home,Actions,Navigate,Report,APS';
-    SourceTable = Table5050;
+    SourceTable = 5050;
     SourceTableView = SORTING(Company Name, Company No., Type, Name);
 
     layout
@@ -318,7 +318,7 @@ page 67077 "Contact List APS"
 
                     trigger OnAction()
                     var
-                        pgRanking: Page67145;
+                        pgRanking: Page 67145;
                     begin
                         TESTFIELD("No.");
                         pgRanking.CalcularRanking("No.");
@@ -608,7 +608,7 @@ page 67077 "Contact List APS"
         NameEmphasize: Boolean;
         [InDataSet]
         NameIndent: Integer;
-        PageColNivel: Page67036;
+        PageColNivel: Page 67036;
 
     local procedure NoOnFormat()
     begin

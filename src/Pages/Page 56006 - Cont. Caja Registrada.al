@@ -5,7 +5,7 @@ page 56006 "Cont. Caja Registrada"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table56035;
+    SourceTable = 56035;
 
     layout
     {
@@ -13,25 +13,25 @@ page 56006 "Cont. Caja Registrada"
         {
             repeater(Group)
             {
-                field("No. Producto";"No. Producto")
+                field("No. Producto"; "No. Producto")
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("Cod. Barras";"Cod. Barras")
+                field("Cod. Barras"; "Cod. Barras")
                 {
                 }
-                field("Cod. Unidad de Medida";"Cod. Unidad de Medida")
+                field("Cod. Unidad de Medida"; "Cod. Unidad de Medida")
                 {
                 }
-                field(Cantidad;Cantidad)
+                field(Cantidad; Cantidad)
                 {
                 }
-                field("No. Picking";"No. Picking")
+                field("No. Picking"; "No. Picking")
                 {
                 }
-                field("No. Linea Picking";"No. Linea Picking")
+                field("No. Linea Picking"; "No. Linea Picking")
                 {
                 }
             }

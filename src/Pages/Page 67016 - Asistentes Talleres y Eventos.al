@@ -4,7 +4,7 @@ page 67016 "Asistentes Talleres y Eventos"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = Card;
-    SourceTable = Table67016;
+    SourceTable = 67016;
     UsageCategory = Tasks;
 
     layout
@@ -218,7 +218,7 @@ page 67016 "Asistentes Talleres y Eventos"
 
     var
         CabPlanEvento: Record 67051;
-        SelDoc: Page67103;
+        SelDoc: Page 67103;
         TotDocentes: Integer;
         gCodTaller: Code[20];
         gCodExpositor: Code[20];

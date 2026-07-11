@@ -1,7 +1,7 @@
 page 67025 "Libros Competencia"
 {
     PageType = List;
-    SourceTable = Table67025;
+    SourceTable = 67025;
 
     layout
     {
@@ -9,43 +9,43 @@ page 67025 "Libros Competencia"
         {
             repeater()
             {
-                field("Cod. Editorial";"Cod. Editorial")
+                field("Cod. Editorial"; "Cod. Editorial")
                 {
                     TableRelation = Editoras;
                 }
-                field("Cod. Libro";"Cod. Libro")
+                field("Cod. Libro"; "Cod. Libro")
                 {
                 }
-                field(Nivel;Nivel)
+                field(Nivel; Nivel)
                 {
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
                 }
-                field("Grupo de Negocio";"Grupo de Negocio")
+                field("Grupo de Negocio"; "Grupo de Negocio")
                 {
                 }
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field("Cod. Libro Santillana";"Cod. Libro Santillana")
+                field("Cod. Libro Santillana"; "Cod. Libro Santillana")
                 {
                 }
-                field("Description Santillana";"Description Santillana")
+                field("Description Santillana"; "Description Santillana")
                 {
                     Editable = false;
                 }
-                field("Nombre Editorial";"Nombre Editorial")
+                field("Nombre Editorial"; "Nombre Editorial")
                 {
                     Visible = false;
                 }
-                field(Precio;Precio)
+                field(Precio; Precio)
                 {
                 }
-                field("Año Edición";"Año Edición")
+                field("Año Edición"; "Año Edición")
                 {
                 }
-                field("Año Uso";"Año Uso")
+                field("Año Uso"; "Año Uso")
                 {
                 }
             }

@@ -89,6 +89,6 @@ table 67054 "TMP Reportes APS"
     var
         Promotor: Record 13;
         date: Record 2000000007;
-        fFechas: Page67062;
+        fFechas: Page 67062;
 }
 

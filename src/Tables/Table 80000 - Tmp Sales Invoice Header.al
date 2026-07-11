@@ -686,7 +686,7 @@ table 80000 "Tmp Sales Invoice Header"
 
     procedure Navigate()
     var
-        NavigateForm: Page344;
+        NavigateForm: Page 344;
     begin
     end;
 

@@ -6,7 +6,7 @@ page 56005 "Lin. Packing Registrada"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = Table56034;
+    SourceTable = 56034;
 
     layout
     {

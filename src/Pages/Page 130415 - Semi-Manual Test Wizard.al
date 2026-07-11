@@ -5,7 +5,7 @@ page 130415 "Semi-Manual Test Wizard"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = NavigatePage;
-    SourceTable = Table130415;
+    SourceTable = 130415;
     SourceTableTemporary = true;
 
     layout
@@ -29,7 +29,7 @@ page 130415 "Semi-Manual Test Wizard"
                         trigger OnDrillDown()
                         var
                             AllObjWithCaption: Record 2000000058;
-                            GetSemiManualTestCodeunits: Page130416;
+                            GetSemiManualTestCodeunits: Page 130416;
                         begin
                             GetSemiManualTestCodeunits.LOOKUPMODE := TRUE;
                             IF GetSemiManualTestCodeunits.RUNMODAL = ACTION::LookupOK THEN BEGIN

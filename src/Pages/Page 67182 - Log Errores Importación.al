@@ -4,7 +4,7 @@ page 67182 "Log Errores Importación"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67108;
+    SourceTable = 67108;
 
     layout
     {
@@ -12,7 +12,7 @@ page 67182 "Log Errores Importación"
         {
             repeater(Group)
             {
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

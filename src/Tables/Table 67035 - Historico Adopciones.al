@@ -229,7 +229,7 @@ table 67035 "Historico Adopciones"
 
             trigger OnLookup()
             var
-                Materia: Page67086;
+                Materia: Page 67086;
             begin
             end;
         }

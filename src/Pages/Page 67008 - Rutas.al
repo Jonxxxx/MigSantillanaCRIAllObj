@@ -3,7 +3,7 @@ page 67008 Rutas
     ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Routes APS';
     PageType = List;
-    SourceTable = Table67002;
+    SourceTable = 67002;
     SourceTableView = WHERE("Tipo registro" = CONST(Rutas));
     UsageCategory = Administration;
 

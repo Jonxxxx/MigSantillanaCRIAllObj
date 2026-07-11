@@ -4,7 +4,7 @@ page 56049 "Consignacion a Facturar"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table56012;
+    SourceTable = 56012;
 
     layout
     {

@@ -6,7 +6,7 @@ page 67152 "Consulta Últ. Ranking General"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67094;
+    SourceTable = 67094;
     SourceTableView = SORTING(Reporte, Campaña, Delegación, No. Orden)
                       WHERE("Reporte" = CONST(General));
 

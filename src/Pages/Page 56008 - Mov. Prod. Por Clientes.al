@@ -1,7 +1,7 @@
 page 56008 "Mov. Prod. Por Clientes"
 {
     PageType = List;
-    SourceTable = Table32;
+    SourceTable = 32;
     SourceTableView = SORTING(Entry No.)
                       ORDER(Ascending)
                       WHERE("Source Type" = FILTER(Customer));

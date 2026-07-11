@@ -2,7 +2,7 @@ page 67062 Fechas
 {
     Editable = false;
     PageType = ListPlus;
-    SourceTable = Table2000000007;
+    SourceTable = 2000000007;
     SourceTableView = WHERE("Period Type" = CONST(Week));
 
     layout

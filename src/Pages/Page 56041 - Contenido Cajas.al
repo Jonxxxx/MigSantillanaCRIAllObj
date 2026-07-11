@@ -1,7 +1,7 @@
 page 56041 "Contenido Cajas"
 {
     PageType = List;
-    SourceTable = Table56032;
+    SourceTable = 56032;
 
     layout
     {

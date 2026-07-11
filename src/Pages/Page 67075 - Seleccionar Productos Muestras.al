@@ -14,7 +14,7 @@ page 67075 "Seleccionar Productos Muestras"
     //    END;
 
     PageType = ListPlus;
-    SourceTable = Table7302;
+    SourceTable = 7302;
 
     layout
     {

@@ -2,7 +2,7 @@ page 67017 "Ficha Padres"
 {
     Caption = 'Father Card';
     PageType = Card;
-    SourceTable = Table67017;
+    SourceTable = 67017;
 
     layout
     {

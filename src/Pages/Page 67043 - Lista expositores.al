@@ -4,7 +4,7 @@ page 67043 "Lista expositores"
     CardPageID = Distribuidor;
     Editable = false;
     PageType = List;
-    SourceTable = Table67021;
+    SourceTable = 67021;
     UsageCategory = Lists;
 
     layout

@@ -1,7 +1,7 @@
 page 67180 "Promotores - Colegio - Nivel"
 {
     PageType = List;
-    SourceTable = Table67036;
+    SourceTable = 67036;
 
     layout
     {
@@ -9,19 +9,19 @@ page 67180 "Promotores - Colegio - Nivel"
         {
             repeater(Group)
             {
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field(Turno;Turno)
+                field(Turno; Turno)
                 {
                 }
-                field("Cod. Promotor";"Cod. Promotor")
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field("Nombre Promotor";"Nombre Promotor")
+                field("Nombre Promotor"; "Nombre Promotor")
                 {
                 }
             }

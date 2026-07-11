@@ -1,7 +1,7 @@
 page 67024 "Ficha Editoras"
 {
     PageType = Card;
-    SourceTable = Table67024;
+    SourceTable = 67024;
 
     layout
     {

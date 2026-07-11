@@ -20,7 +20,7 @@ table 75010 "Conf. Campos Relacionados"
 
             trigger OnValidate()
             var
-                lrFiltrCmp: Page75014;
+                lrFiltrCmp: Page 75014;
             begin
                 Controles;
                 lrFiltrCmp.TestCampo(IdTbl, "Id Fld Origen");
@@ -50,7 +50,7 @@ table 75010 "Conf. Campos Relacionados"
 
             trigger OnValidate()
             var
-                lrFiltrCmp: Page75014;
+                lrFiltrCmp: Page 75014;
             begin
                 Controles;
                 lrFiltrCmp.TestCampo(IdTbl, "Id Fld Destino");

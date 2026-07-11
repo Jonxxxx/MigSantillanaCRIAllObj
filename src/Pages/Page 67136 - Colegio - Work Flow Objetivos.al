@@ -4,7 +4,7 @@ page 67136 "Colegio - Work Flow Objetivos"
     Caption = 'School - programming Work flow';
     DeleteAllowed = false;
     PageType = ListPlus;
-    SourceTable = Table67062;
+    SourceTable = 67062;
     SourceTableView = WHERE("Area" = CONST(true));
 
     layout

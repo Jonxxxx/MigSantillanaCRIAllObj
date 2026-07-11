@@ -3,7 +3,7 @@ page 56052 "Lin. Consignacion a Facturar"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = Table56011;
+    SourceTable = 56011;
 
     layout
     {
@@ -159,7 +159,7 @@ page 56052 "Lin. Consignacion a Facturar"
         rItem: Record 27;
         rLCF: Record 56011;
         FuncSant: Codeunit 56000;
-        PageActDesc: Page56053;
+        PageActDesc: Page 56053;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

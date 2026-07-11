@@ -11,7 +11,7 @@ page 52506 "Categoria Pedido Venta"
     ApplicationArea = Basic, Suite;
     Caption = 'Sales Order Category';
     PageType = List;
-    SourceTable = Table52503;
+    SourceTable = 52503;
 
     layout
     {

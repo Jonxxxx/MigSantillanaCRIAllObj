@@ -1,7 +1,7 @@
 page 67123 "Solicitud - Grado Asistentes"
 {
     PageType = List;
-    SourceTable = Table67081;
+    SourceTable = 67081;
 
     layout
     {
@@ -9,13 +9,13 @@ page 67123 "Solicitud - Grado Asistentes"
         {
             repeater(Group)
             {
-                field("Cod. Grado";"Cod. Grado")
+                field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field("No. Asistentes";"No. Asistentes")
+                field("No. Asistentes"; "No. Asistentes")
                 {
                 }
             }

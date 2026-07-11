@@ -5,7 +5,7 @@ page 67148 "Productos Muestras"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPlus;
-    SourceTable = Table7302;
+    SourceTable = 7302;
 
     layout
     {

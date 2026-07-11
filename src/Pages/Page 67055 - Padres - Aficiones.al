@@ -1,7 +1,7 @@
 page 67055 "Padres - Aficiones"
 {
     PageType = Card;
-    SourceTable = Table67049;
+    SourceTable = 67049;
 
     layout
     {
@@ -9,16 +9,16 @@ page 67055 "Padres - Aficiones"
         {
             repeater()
             {
-                field("Cod. Padre";"Cod. Padre")
+                field("Cod. Padre"; "Cod. Padre")
                 {
                 }
-                field("Nombre Padre";"Nombre Padre")
+                field("Nombre Padre"; "Nombre Padre")
                 {
                 }
-                field("Cod. aficion";"Cod. aficion")
+                field("Cod. aficion"; "Cod. aficion")
                 {
                 }
-                field("Descripcion aficion";"Descripcion aficion")
+                field("Descripcion aficion"; "Descripcion aficion")
                 {
                 }
             }

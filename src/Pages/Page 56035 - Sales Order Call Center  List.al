@@ -12,7 +12,7 @@ page 56035 "Sales Order Call Center  List"
     CardPageID = "Sales Order Call Center";
     Editable = false;
     PageType = List;
-    SourceTable = Table36;
+    SourceTable = 36;
 
     layout
     {
@@ -276,7 +276,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ApprovalEntries: Page658;
+                        ApprovalEntries: Page 658;
                     begin
                         ApprovalEntries.Setfilters(DATABASE::"Sales Header","Document Type","No.");
                         ApprovalEntries.RUN;
@@ -311,7 +311,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        SalesPlanPage: Page99000883;
+                        SalesPlanPage: Page 99000883;
                     begin
                         SalesPlanPage.SetSalesOrder("No.");
                         SalesPlanPage.RUNMODAL;

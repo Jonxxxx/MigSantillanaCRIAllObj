@@ -3,7 +3,7 @@ page 67045 "Lista Colegio - Docentes"
     ApplicationArea = Basic, Suite, Service;
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
     PageType = List;
-    SourceTable = Table67043;
+    SourceTable = 67043;
     UsageCategory = Lists;
 
     layout
@@ -133,7 +133,7 @@ page 67045 "Lista Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        Estad: Page67119;
+                        Estad: Page 67119;
                     begin
                         Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
                         Estad.RUN;
@@ -153,7 +153,7 @@ page 67045 "Lista Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        RankingDocente: Page67119;
+                        RankingDocente: Page 67119;
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");

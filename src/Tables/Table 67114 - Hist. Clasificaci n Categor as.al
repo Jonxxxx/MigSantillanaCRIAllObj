@@ -9,7 +9,7 @@ table 67114 "Hist. Clasificaci n Categor as"
         field(2; Potencial; Option)
         {
             OptionCaption = ' ,1,2,3,4';
-            OptionMembers = " ","1","2","3","4;
+            OptionMembers = " ","1","2","3","4";
         }
         field(3; "Cod. Afinidad"; Code[20])
         {

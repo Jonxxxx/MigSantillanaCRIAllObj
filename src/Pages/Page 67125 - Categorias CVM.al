@@ -4,7 +4,7 @@ page 67125 "Categorias CVM"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = Table67091;
+    SourceTable = 67091;
 
     layout
     {
@@ -12,22 +12,22 @@ page 67125 "Categorias CVM"
         {
             repeater(Group)
             {
-                field(Campaña;Campaña)
+                field(Campaña; Campaña)
                 {
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field("Grupo Negocio";"Grupo Negocio")
+                field("Grupo Negocio"; "Grupo Negocio")
                 {
                 }
-                field("Cod. Nivel";"Cod. Nivel")
+                field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field(Categoria;Categoria)
+                field(Categoria; Categoria)
                 {
                 }
             }

@@ -3,7 +3,7 @@ page 56060 "Grupos de almacenes"
     // 001 RRT 02.06.2014
 
     PageType = List;
-    SourceTable = Table56058;
+    SourceTable = 56058;
 
     layout
     {

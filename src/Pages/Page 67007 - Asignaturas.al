@@ -1,8 +1,8 @@
 page 67007 Asignaturas
 {
-    ApplicationArea = Basic,Suite,Service;
+    ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = Table67007;
+    SourceTable = 67007;
     UsageCategory = Administration;
 
     layout
@@ -11,22 +11,22 @@ page 67007 Asignaturas
         {
             repeater()
             {
-                field(Code;Code)
+                field(Code; Code)
                 {
                 }
-                field(Description;Description)
+                field(Description; Description)
                 {
                 }
-                field(Nivel;Nivel)
+                field(Nivel; Nivel)
                 {
                 }
-                field(Turno;Turno)
+                field(Turno; Turno)
                 {
                 }
-                field(Grado;Grado)
+                field(Grado; Grado)
                 {
                 }
-                field("Carga horaria";"Carga horaria")
+                field("Carga horaria"; "Carga horaria")
                 {
                 }
             }

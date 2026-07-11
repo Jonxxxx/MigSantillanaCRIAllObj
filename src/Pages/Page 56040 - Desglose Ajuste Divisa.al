@@ -1,7 +1,7 @@
 page 56040 "Desglose Ajuste Divisa"
 {
     PageType = List;
-    SourceTable = Table56060;
+    SourceTable = 56060;
 
     layout
     {
@@ -9,34 +9,34 @@ page 56040 "Desglose Ajuste Divisa"
         {
             repeater(Group)
             {
-                field("Cod. Divisa";"Cod. Divisa")
+                field("Cod. Divisa"; "Cod. Divisa")
                 {
                 }
-                field("Grupo Contable";"Grupo Contable")
+                field("Grupo Contable"; "Grupo Contable")
                 {
                 }
-                field("Fecha Registro";"Fecha Registro")
+                field("Fecha Registro"; "Fecha Registro")
                 {
                 }
-                field("Dimension SET ID";"Dimension SET ID")
+                field("Dimension SET ID"; "Dimension SET ID")
                 {
                 }
-                field("No. Mov. Detallado Prov";"No. Mov. Detallado Prov")
+                field("No. Mov. Detallado Prov"; "No. Mov. Detallado Prov")
                 {
                 }
-                field("No. Mov. Proveedor";"No. Mov. Proveedor")
+                field("No. Mov. Proveedor"; "No. Mov. Proveedor")
                 {
                 }
-                field("No. Documento";"No. Documento")
+                field("No. Documento"; "No. Documento")
                 {
                 }
-                field(Tipo;Tipo)
+                field(Tipo; Tipo)
                 {
                 }
-                field(Importe;Importe)
+                field(Importe; Importe)
                 {
                 }
-                field("Tipo Movimiento";"Tipo Movimiento")
+                field("Tipo Movimiento"; "Tipo Movimiento")
                 {
                 }
             }
@@ -55,7 +55,7 @@ page 56040 "Desglose Ajuste Divisa"
 
                 trigger OnAction()
                 begin
-                    REPORT.RUNMODAL(56031,TRUE,FALSE);
+                    REPORT.RUNMODAL(56031, TRUE, FALSE);
                 end;
             }
         }

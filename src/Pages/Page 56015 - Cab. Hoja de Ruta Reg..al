@@ -5,7 +5,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
 
     Editable = false;
     PageType = Document;
-    SourceTable = Table56022;
+    SourceTable = 56022;
 
     layout
     {

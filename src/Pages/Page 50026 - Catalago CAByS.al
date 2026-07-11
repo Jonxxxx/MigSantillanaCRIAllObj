@@ -1,9 +1,9 @@
 page 50026 "Catalago CAByS"
 {
-    ApplicationArea = Basic,Suite;
+    ApplicationArea = Basic, Suite;
     Caption = 'Catálago CAByS';
     PageType = List;
-    SourceTable = Table50026;
+    SourceTable = 50026;
     UsageCategory = Administration;
 
     layout
@@ -12,19 +12,19 @@ page 50026 "Catalago CAByS"
         {
             repeater(Group)
             {
-                field("Codigo CABYS";"Codigo CABYS")
+                field("Codigo CABYS"; "Codigo CABYS")
                 {
                 }
-                field(Descripción;Descripción)
+                field(Descripción; Descripción)
                 {
                 }
-                field("Tipo CABYS";"Tipo CABYS")
+                field("Tipo CABYS"; "Tipo CABYS")
                 {
                 }
-                field("Tarifa IVA";"Tarifa IVA")
+                field("Tarifa IVA"; "Tarifa IVA")
                 {
                 }
-                field("Tipo Impuesto";"Tipo Impuesto")
+                field("Tipo Impuesto"; "Tipo Impuesto")
                 {
                 }
             }

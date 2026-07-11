@@ -4,7 +4,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
     InsertAllowed = false;
     LinksAllowed = false;
     PageType = List;
-    SourceTable = Table67104;
+    SourceTable = 67104;
 
     layout
     {

@@ -2,7 +2,7 @@ page 51012 "Grupo Negocio Reg."
 {
     Editable = false;
     PageType = List;
-    SourceTable = Table51017;
+    SourceTable = 51017;
 
     layout
     {
@@ -10,7 +10,7 @@ page 51012 "Grupo Negocio Reg."
         {
             repeater(Group)
             {
-                field("Grupo Negocio";"Grupo Negocio")
+                field("Grupo Negocio"; "Grupo Negocio")
                 {
                 }
             }

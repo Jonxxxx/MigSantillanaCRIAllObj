@@ -236,6 +236,6 @@ table 67043 "Colegio - Docentes"
         PromRuta: Record 67044;
         Docente: Record 67001;
         recColegio: Record 5050;
-        Cargo: Page67033;
+        Cargo: Page 67033;
 }
 

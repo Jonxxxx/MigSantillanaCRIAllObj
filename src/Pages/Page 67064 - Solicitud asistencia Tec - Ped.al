@@ -10,7 +10,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
     Caption = 'Solicitud de Asistencia Técnico - Pedagógica';
     PageType = Card;
     PromotedActionCategories = 'Nuevo,Proceso,Reporte,Asistentes';
-    SourceTable = Table67055;
+    SourceTable = 67055;
 
     layout
     {
@@ -34,7 +34,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     trigger OnLookup(var Text: Text): Boolean
                     var
                         rVendedor: Record 13;
-                        fVendedor: Page14;
+                        fVendedor: Page 14;
                     begin
 
                         IF userPromotor THEN BEGIN
@@ -465,7 +465,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        pPropFechas: Page67132;
+                        pPropFechas: Page 67132;
                         rPropFechas: Record 67088;
                     begin
                         TESTFIELD("No. Solicitud");
@@ -500,8 +500,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     var
                         CabPlanEvent: Record 67051;
                         CabPlanEvent2Record: Record 67051;
-                        SolicPlan: Page67112;
-                                       pCabPlan: Page67139;
+                        SolicPlan: Page 67112;
+                                       pCabPlan: Page 67139;
                     begin
 
                         TESTFIELD("No. Solicitud");
@@ -530,7 +530,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        pAsistentes: Page67133;
+                        pAsistentes: Page 67133;
                                          CabPlanEvent: Record 67051;
                     begin
                         TESTFIELD("No. Solicitud");
@@ -596,7 +596,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        GpoNegDistrib: Page67094;
+                        GpoNegDistrib: Page 67094;
                                            modif: Boolean;
                     begin
                         TESTFIELD("No. Solicitud");
@@ -624,7 +624,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        pgRanking: Page67145;
+                        pgRanking: Page 67145;
                     begin
                         TESTFIELD("Cod. Colegio");
                         pgRanking.CalcularRanking("Cod. Colegio");
@@ -669,7 +669,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                     trigger OnAction()
                     var
-                        pTextos: Page67141;
+                        pTextos: Page 67141;
                                      rAdop: Record 67035;
                                      rGrupoCOL: Record 67089;
                     begin

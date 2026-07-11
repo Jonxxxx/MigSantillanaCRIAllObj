@@ -82,7 +82,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
                 trigger OnLookup(var Text: Text): Boolean
                 var
                     CategoriaPedidoVenta: Record 52503;
-                    CategoriaPedidoVentaPage: Page52506;
+                    CategoriaPedidoVentaPage: Page 52506;
                 begin
                     CLEAR(CategoriaPedidoVentaPage);
                     CLEAR(CategoriaPedidoVenta);
@@ -254,6 +254,6 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
         wCanalVenta: Code[20];
         DimensionSetEntry: Record 480;
         DimensionValue: Record 349;
-        DimensionValuePage: Page537;
+        DimensionValuePage: Page 537;
 }
 

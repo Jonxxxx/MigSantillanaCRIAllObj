@@ -3,7 +3,7 @@ page 67184 "Seleccion Tipo Eventos"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = ListPlus;
-    SourceTable = Table67010;
+    SourceTable = 67010;
     SourceTableTemporary = true;
 
     layout
@@ -12,13 +12,13 @@ page 67184 "Seleccion Tipo Eventos"
         {
             group(General)
             {
-                field(Seleccionar;Seleccionar)
+                field(Seleccionar; Seleccionar)
                 {
                 }
-                field(Codigo;Codigo)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripcion;Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

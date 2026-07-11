@@ -110,7 +110,7 @@ table 67087 "Solicitud - Competencia"
     procedure Libros()
     var
         rLib: Record 67025;
-        fLib: Page67025;
+        fLib: Page 67025;
     begin
 
         IF "Cod. Editorial" <> '' THEN
