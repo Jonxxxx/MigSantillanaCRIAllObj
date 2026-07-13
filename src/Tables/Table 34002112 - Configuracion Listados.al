@@ -5,7 +5,7 @@ table 34002112 "Configuracion Listados"
     {
         field(1; "ID Reporte"; Integer)
         {
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(2; "No. Columna"; Integer)
         {
@@ -56,8 +56,8 @@ table 34002112 "Configuracion Listados"
         }
         field(9; "Nombre Reporte"; Text[150])
         {
-            CalcFormula = Lookup(Object.Name WHERE(Type = CONST(Report),
-                                                    ID = FIELD("ID Reporte")));
+            //TODO: Ver CalcFormula = Lookup(Object.Name WHERE(Type = CONST(Report),
+            //TODO: Ver                                        ID = FIELD("ID Reporte")));
             Editable = false;
             FieldClass = FlowField;
         }

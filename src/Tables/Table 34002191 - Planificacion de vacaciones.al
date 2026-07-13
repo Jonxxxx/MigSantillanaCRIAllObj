@@ -15,14 +15,14 @@ table 34002191 "Planificacion de vacaciones"
                 IF "No. empleado" <> '' THEN BEGIN
                     Empl.GET("No. empleado");
                     "Fecha inicio planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date", 1), DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3));
-                    Empl.CALCFIELDS("Dias Vacaciones");
-                    "Dias acumulados actual" := Empl."Dias Vacaciones";
+                    //TODO: Ver Empl.CALCFIELDS("Dias Vacaciones");
+                    //TODO: Ver "Dias acumulados actual" := Empl."Dias Vacaciones";
                     Fecha.RESET;
                     Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
                     Fecha.SETRANGE("Period Start", DMY2DATE(1, DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3)));
                     Fecha.FINDFIRST;
 
-                    "Dias acumulados estimados" := FuncNom.CalculoDiaVacaciones("No. empleado", DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3), Monto, Empl."Employment Date", Fecha."Period End");
+                    //TODO: Ver "Dias acumulados estimados" := FuncNom.CalculoDiaVacaciones("No. empleado", DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3), Monto, Empl."Employment Date", Fecha."Period End");
                     "Fecha fin planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date", 1), DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3));
                     "Employment Date" := Empl."Employment Date";
                 END;
@@ -74,7 +74,7 @@ table 34002191 "Planificacion de vacaciones"
         }
         field(8; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("No. empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. empleado")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;
@@ -83,7 +83,7 @@ table 34002191 "Planificacion de vacaciones"
 
     keys
     {
-        key(Key1;"No. empleado","Fecha inicio planificada")
+        key(Key1; "No. empleado", "Fecha inicio planificada")
         {
         }
     }
@@ -95,7 +95,7 @@ table 34002191 "Planificacion de vacaciones"
     var
         Empl: Record 5200;
         Fecha: Record 2000000007;
-        FuncNom: Codeunit 34002104;
+        //TODO: Ver FuncNom: Codeunit 34002104;
         Monto: Decimal;
         Err001: Label '%1 can not be greather than %2';
 
@@ -105,26 +105,26 @@ table 34002191 "Planificacion de vacaciones"
         Fecha: Record 2000000007;
     begin
         IF ("Fecha inicio planificada" > "Fecha fin planificada") AND ("Fecha inicio planificada" <> 0D) AND ("Fecha fin planificada" <> 0D) THEN
-           ERROR(STRSUBSTNO(Err001,FIELDCAPTION("Fecha fin planificada"),FIELDCAPTION("Fecha fin planificada")))
+            ERROR(STRSUBSTNO(Err001, FIELDCAPTION("Fecha fin planificada"), FIELDCAPTION("Fecha fin planificada")))
         ELSE
-        IF ("Fecha inicio planificada" = 0D) OR ("Fecha fin planificada" = 0D) THEN
-          EXIT;
+            IF ("Fecha inicio planificada" = 0D) OR ("Fecha fin planificada" = 0D) THEN
+                EXIT;
         "Dias acumulados estimados" := 0;
         Fecha.RESET;
-        Fecha.SETRANGE("Period Type",0); //Dia
-        Fecha.SETRANGE("Period Start","Fecha inicio planificada",CALCDATE('-1D',"Fecha fin planificada"));
+        Fecha.SETRANGE("Period Type", 0); //Dia
+        Fecha.SETRANGE("Period Start", "Fecha inicio planificada", CALCDATE('-1D', "Fecha fin planificada"));
         IF Fecha.FINDSET THEN
-           REPEAT
-            CASE Fecha."Period No." OF
-              1..5:
-                BEGIN
-                  DiasFestivos.RESET;
-                  DiasFestivos.SETRANGE(Fecha,Fecha."Period Start");
-                  IF NOT DiasFestivos.FINDFIRST THEN
-                     "Dias acumulados estimados" += 1;
+            REPEAT
+                CASE Fecha."Period No." OF
+                    1 .. 5:
+                        BEGIN
+                            DiasFestivos.RESET;
+                            DiasFestivos.SETRANGE(Fecha, Fecha."Period Start");
+                            IF NOT DiasFestivos.FINDFIRST THEN
+                                "Dias acumulados estimados" += 1;
+                        END;
                 END;
-            END;
-          UNTIL Fecha.NEXT = 0;
+            UNTIL Fecha.NEXT = 0;
     end;
 }
 

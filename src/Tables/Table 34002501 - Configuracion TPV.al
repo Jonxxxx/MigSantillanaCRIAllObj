@@ -113,7 +113,7 @@ table 34002501 "Configuracion TPV"
         {
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                              Fecha = FIELD("Filtro fecha"),
-                                                                             "Tipo transaccion" = FILTER(Cobro TPV|Anulacion)));
+                                                                             "Tipo transaccion" = FILTER("Cobro TPV" | Anulacion)));
             Caption = 'Importe cobros Tienda';
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
@@ -132,7 +132,7 @@ table 34002501 "Configuracion TPV"
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                              "Cod. TPV" = FIELD("Id TPV"),
                                                                              Fecha = FIELD("Filtro fecha"),
-                                                                             "Tipo transaccion" = FILTER(Cobro TPV|Anulacion)));
+                                                                             "Tipo transaccion" = FILTER("Cobro TPV" | Anulacion)));
             Caption = 'Importe cobros';
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
@@ -175,7 +175,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
+            //TODO: Ver lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -199,7 +199,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
+            //TODO: Ver //TODO: Ver lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -249,7 +249,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
+            //TODO: Ver lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -274,7 +274,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
+            //TODO: Ver lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...

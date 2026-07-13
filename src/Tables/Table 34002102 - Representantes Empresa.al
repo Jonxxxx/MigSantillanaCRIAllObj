@@ -53,10 +53,10 @@ table 34002102 "Representantes Empresa"
             trigger OnValidate()
             begin
                 Emp.RESET;
-                Emp.SETRANGE("Document ID", "RNC/CED");
+                //TODO: Ver Emp.SETRANGE("Document ID", "RNC/CED");
                 IF Emp.FINDFIRST THEN BEGIN
                     "Job Title" := Emp."Job Title";
-                    Nombre := Emp."Full Name";
+                    //TODO: Ver Nombre := Emp."Full Name";
                     Address := Emp.Address;
                     "C.P." := Emp."Post Code";
                     Teléfono := Emp."Phone No.";

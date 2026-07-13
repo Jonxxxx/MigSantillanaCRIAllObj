@@ -36,16 +36,16 @@ table 34002122 "Lin. Aportes Empresas"
         }
         field(11; "Apellidos y Nombre"; Text[100])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("No. Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. Empleado")));
             FieldClass = FlowField;
         }
-        field(12;"Tipo Nomina";Option)
+        field(12; "Tipo Nomina"; Option)
         {
             Description = 'Normal,Regalía,Bonificación';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
             OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
         }
-        field(13;"Job No.";Code[20])
+        field(13; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             DataClassification = ToBeClassified;
@@ -58,13 +58,13 @@ table 34002122 "Lin. Aportes Empresas"
             begin
             end;
         }
-        field(14;"Tipo de nomina";Code[20])
+        field(14; "Tipo de nomina"; Code[20])
         {
             Caption = 'Payroll type';
             DataClassification = ToBeClassified;
             TableRelation = "Tipos de nominas";
         }
-        field(480;"Dimension Set ID";Integer)
+        field(480; "Dimension Set ID"; Integer)
         {
             Caption = 'Dimension Set ID';
             Editable = false;
@@ -74,13 +74,13 @@ table 34002122 "Lin. Aportes Empresas"
 
     keys
     {
-        key(Key1;"Período","Tipo de nomina","No. Empleado","Job No.","No. orden")
+        key(Key1; "Período", "Tipo de nomina", "No. Empleado", "Job No.", "No. orden")
         {
         }
-        key(Key2;"No. Documento","Empresa cotización","Período","No. Empleado","Concepto Salarial","No. orden")
+        key(Key2; "No. Documento", "Empresa cotización", "Período", "No. Empleado", "Concepto Salarial", "No. orden")
         {
         }
-        key(Key3;"No. Empleado","Período","Concepto Salarial")
+        key(Key3; "No. Empleado", "Período", "Concepto Salarial")
         {
             SumIndexFields = Importe;
         }
@@ -91,12 +91,12 @@ table 34002122 "Lin. Aportes Empresas"
     }
 
     var
-        DimMgt: Codeunit 408;
+    //TODO: Ver DimMgt: Codeunit 408;
 
     procedure ShowDimensions()
     begin
         TESTFIELD("No. orden");
-        DimMgt.ShowDimensionSet("Dimension Set ID",STRSUBSTNO('%1 %2 %3',TABLECAPTION,"No. Documento","No. Empleado"));
+        //TODO: Ver DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Empleado"));
     end;
 }
 

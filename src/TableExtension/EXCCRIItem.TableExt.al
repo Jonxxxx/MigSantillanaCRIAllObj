@@ -7,15 +7,15 @@ tableextension 50012 EXCCRIItem extends Item
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-                EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+            //TODO: Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if not Blocked then
                         if not EXCCRIUserSetup."Desbloquea Productos" then
                             Error(EXCCRIItemUnlockPermissionErr)
                         else begin
-                            EXCCRIValidateCampaignRequirements.Maestros(Database::Item, "No.");
-                            EXCCRIValidateCampaignRequirements.Dimensiones(Database::Item, "No.", 0, 0);
+                            //TODO: Ver EXCCRIValidateCampaignRequirements.Maestros(Database::Item, "No.");
+                            //TODO: Ver EXCCRIValidateCampaignRequirements.Dimensiones(Database::Item, "No.", 0, 0);
                         end;
                 end else
                     Error(EXCCRIItemUnlockPermissionErr);
@@ -78,7 +78,7 @@ tableextension 50012 EXCCRIItem extends Item
         {
             Caption = 'Qty. on Pre Sales Order';
             FieldClass = FlowField;
-            CalcFormula = sum("Sales Line"."Outstanding Qty. (Base)" where("Document Type" = const("Pre Order"), Type = const(Item), "No." = field("No."), "Shortcut Dimension 1 Code" = field("Global Dimension 1 Filter"), "Shortcut Dimension 2 Code" = field("Global Dimension 2 Filter"), "Location Code" = field("Location Filter"), "Drop Shipment" = field("Drop Shipment Filter"), "Variant Code" = field("Variant Filter"), "Shipment Date" = field("Date Filter")));
+            //TODO: Ver CalcFormula = sum("Sales Line"."Outstanding Qty. (Base)" where("Document Type" = const("Pre Order"), Type = const(Item), "No." = field("No."), "Shortcut Dimension 1 Code" = field("Global Dimension 1 Filter"), "Shortcut Dimension 2 Code" = field("Global Dimension 2 Filter"), "Location Code" = field("Location Filter"), "Drop Shipment" = field("Drop Shipment Filter"), "Variant Code" = field("Variant Filter"), "Shipment Date" = field("Date Filter")));
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
@@ -91,7 +91,7 @@ tableextension 50012 EXCCRIItem extends Item
         field(50007; "Carga horaria"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = 62031;
+            //TODO: Ver TableRelation = 62031;
         }
         field(50008; "Tipo Ingles"; Option)
         {
@@ -242,7 +242,7 @@ tableextension 50012 EXCCRIItem extends Item
 
             trigger OnValidate()
             begin
-                EXCCRIMdMFunctions.SetEstadoProd(Rec);
+                //TODO: Ver EXCCRIMdMFunctions.SetEstadoProd(Rec);
             end;
         }
         field(56009; Obra; Text[50])
@@ -506,7 +506,7 @@ tableextension 50012 EXCCRIItem extends Item
         {
             Caption = 'Campaign';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos MDM".Codigo where(Tipo = const(Campaña), Bloqueado = const(false));
+            //TODO: Ver TableRelation = "Datos MDM".Codigo where(Tipo = const(Campaña), Bloqueado = const(false));
         }
         field(75012; EAN; Code[20])
         {
@@ -526,19 +526,19 @@ tableextension 50012 EXCCRIItem extends Item
 
     trigger OnInsert()
     begin
-        EXCCRIMdMFunctions.GetDefDimesions(Rec);
+        //TODO: Ver EXCCRIMdMFunctions.GetDefDimesions(Rec);
     end;
 
     trigger OnModify()
     begin
-        if not EXCCRIModifiedByMdM then
-            EXCCRIMdMManagement.GestNotityProd(xRec, Rec);
+        //TODO: Ver if not EXCCRIModifiedByMdM then
+        //TODO: Ver EXCCRIMdMManagement.GestNotityProd(xRec, Rec);
     end;
 
     trigger OnDelete()
     begin
-        if not EXCCRIMdMFunctions.GetEditableP(Rec, false) then
-            EXCCRIMdMFunctions.SetEditableError(TableCaption());
+        //TODO: Ver if not EXCCRIMdMFunctions.GetEditableP(Rec, false) then
+        //TODO: Ver EXCCRIMdMFunctions.SetEditableError(TableCaption());
     end;
 
     procedure GetLineaNegocio(): Code[20]
@@ -597,7 +597,7 @@ tableextension 50012 EXCCRIItem extends Item
 
     var
         EXCCRIMdMFunctions: Codeunit 75000;
-        EXCCRIMdMManagement: Codeunit 75001;
+        //TODO: Ver EXCCRIMdMManagement: Codeunit 75001;
         EXCCRIModifiedByMdM: Boolean;
         EXCCRIItemUnlockPermissionErr: Label 'The user does not have permission to unblock items.';
         EXCCRIInactivePermissionErr: Label 'You do not have the permissions required to activate or deactivate the item.';

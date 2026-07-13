@@ -8,7 +8,7 @@ table 34002201 "ent - aaa - Disponible"
         {
             Caption = 'Training type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
 
             trigger OnValidate()
             begin
@@ -35,7 +35,7 @@ table 34002201 "ent - aaa - Disponible"
         {
             Caption = 'Trainer code';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Area curricular));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(6; "Fecha creacion"; Date)
         {
@@ -92,25 +92,25 @@ table 34002201 "ent - aaa - Disponible"
     begin
         IF Codigo = '' THEN BEGIN
             HumanResSetup.GET;
-            HumanResSetup.TESTFIELD("No. serie entrenamientos");
-            NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", 0D, Codigo, "No. Series");
+            //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
+            //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", 0D, Codigo, "No. Series");
         END;
     end;
 
     var
         TiposEntrenamientos: Record 34002151;
         HumanResSetup: Record 5218;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 
     [Scope('Personalization')]
     procedure AssistEdit(): Boolean
     begin
         HumanResSetup.GET;
-        HumanResSetup.TESTFIELD("No. serie entrenamientos");
-        IF NoSeriesMgt.SelectSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", "No. Series") THEN BEGIN
-            NoSeriesMgt.SetSeries(Codigo);
-            EXIT(TRUE);
-        END;
+        //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
+        //TODO: Ver IF NoSeriesMgt.SelectSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", "No. Series") THEN BEGIN
+        //TODO: Ver     NoSeriesMgt.SetSeries(Codigo);
+        //TODO: Ver     EXIT(TRUE);
+        //TODO: Ver END;
     end;
 }
 

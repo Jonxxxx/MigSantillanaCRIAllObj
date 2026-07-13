@@ -13,13 +13,13 @@ table 34002202 "Programacion entrenamiento"
         {
             Caption = 'Training type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(3; "Cod. entrenamiento"; Code[20])
         {
             Caption = 'Training code';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
 
             trigger OnValidate()
             begin
@@ -56,7 +56,7 @@ table 34002202 "Programacion entrenamiento"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            "Nombre Instructor" := Employee."Full Name";
+                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");
@@ -218,7 +218,7 @@ table 34002202 "Programacion entrenamiento"
         {
             Caption = 'Knowledge area code';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Area curricular));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(31; Sala; Code[20])
         {

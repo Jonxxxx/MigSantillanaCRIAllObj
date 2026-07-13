@@ -242,8 +242,8 @@ table 34002503 Tiendas
             trigger OnValidate()
             begin
 
-                IF NOT "Permite Anulaciones en POS" THEN
-                    cFunciones.DeconfiguraAnulaciones(Rec);
+                //TODO: Ver IF NOT "Permite Anulaciones en POS" THEN
+                //TODO: Ver    cFunciones.DeconfiguraAnulaciones(Rec);
             end;
         }
         field(34002576; "Instancia Completa SQL"; Text[250])
@@ -271,7 +271,7 @@ table 34002503 Tiendas
         {
             Caption = 'Cuenta Excención IVA';
             Description = 'DsPOS Standard';
-            TableRelation = "G/L Account".No. WHERE("Account Type" = CONST(Posting));
+            TableRelation = "G/L Account"."No." WHERE("Account Type" = CONST(Posting));
 
             trigger OnValidate()
             var
@@ -351,7 +351,7 @@ table 34002503 Tiendas
         rBanco: Record 270;
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a petición del usuario';
-        Error002: ;
-        cFunciones: Codeunit 34002503;
+    //TODO: Ver Error002: '';
+    //TODO: Ver cFunciones: Codeunit 34002503;
 }
 

@@ -56,10 +56,10 @@ table 34002108 "Distrib. Ingreso Pagos Elect."
     trigger OnInsert()
     begin
         Emp.GET("No. empleado");
-        IF Emp."Forma de Cobro" <> 3 THEN BEGIN
-            Emp."Forma de Cobro" := 3;
-            Emp.MODIFY;
-        END;
+        //TODO: Ver IF Emp."Forma de Cobro" <> 3 THEN BEGIN
+        //TODO: Ver     Emp."Forma de Cobro" := 3;
+        //TODO: Ver Emp.MODIFY;
+        //TODO: Ver END;
     end;
 
     var

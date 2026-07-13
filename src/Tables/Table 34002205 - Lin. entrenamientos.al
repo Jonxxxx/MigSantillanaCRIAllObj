@@ -13,7 +13,7 @@ table 34002205 "Lin. entrenamientos"
         {
             Caption = 'Training type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(3; Disponible; Code[20])
         {
@@ -54,7 +54,7 @@ table 34002205 "Lin. entrenamientos"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            "Nombre Instructor" := Employee."Full Name";
+                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");
@@ -191,7 +191,7 @@ table 34002205 "Lin. entrenamientos"
         {
             Caption = 'Knowledge area code';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Area curricular));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(36; Sala; Code[20])
         {

@@ -202,84 +202,84 @@ table 34003004 "Archivo Transferencia ITBIS"
         }
         field(60; CantidadNCF; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B02*')));
             Caption = 'Cantidad NCFs Emitidos de F.C.';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(61; TotalMontoFacturado; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B02*')));
             Caption = 'Total Monto Facturado';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(62; TotalITBISFacturado; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."ITBIS Pagado" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."ITBIS Pagado" WHERE(NCF = FILTER('B02*')));
             Caption = 'Total ITBIS Facturado';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(63; ImpuestoSelectivoAlConsumo; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Selectivo" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Selectivo" WHERE(NCF = FILTER('B02*')));
             Caption = 'Impuesto Selectivo al Consumo';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(64; TotalOtrosImpuestosTasas; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto otros" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto otros" WHERE(NCF = FILTER('B02*')));
             Caption = 'Total Otros Impuestos/Tasas';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(65; TotalMontoPropinaLegal; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Propina" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Propina" WHERE(NCF = FILTER('B02*')));
             Caption = 'Total Monto Propina Legal';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(66; MontoEfectivo; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Efectivo" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Efectivo" WHERE(NCF = FILTER('B02*')));
             Caption = 'Efectivo';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(67; MontoChequeTransDeposito; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Cheque" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Cheque" WHERE(NCF = FILTER('B02*')));
             Caption = 'Cheque/Transferencia/Deposito';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(68; MontoTarjeta; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto tarjetas" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto tarjetas" WHERE(NCF = FILTER('B02*')));
             Caption = 'Tarjeta Debito/Credito';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(69; MontoCredito; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta a credito" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta a credito" WHERE(NCF = FILTER('B02*')));
             Caption = 'Venta a Credito';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(70; MontoBonosCertificados; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta bonos" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta bonos" WHERE(NCF = FILTER('B02*')));
             Caption = 'Bonos o Certificados de regalos';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
         }
         field(71; MontoPermuta; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta Permuta" WHERE(NCF = FILTER(B02*)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta Permuta" WHERE(NCF = FILTER('B02*')));
             Caption = 'Permuta';
             Description = 'Consumidor Final';
             FieldClass = FlowField;
@@ -291,226 +291,240 @@ table 34003004 "Archivo Transferencia ITBIS"
         }
         field(73; "Monto B01 y E31 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B01*|E31*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B01*|E31*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes válido para Crédito Fiscal (01 y 31) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(74; "Cant B01 y E31 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B01*|E31*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B01*|E31*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes válido para Crédito Fiscal (01 y 31) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(75; "Monto B02 y E32 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B02*|E32*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B02*|E32*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Consumo (02 y 32) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(76; "Cant B02 y E32 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B02*|E32*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B02*|E32*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Consumo (02 y 32) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(77; "Monto B03 y E33 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B03*|E33*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B03*|E33*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Nota de Débito (03 y 33) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(78; "Cant B03 y E33 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B03*|E33*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B03*|E33*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Nota de Débito (03 y 33) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(79; "Monto B04 y E34 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B04*|E34*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B04*|E34*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Nota de Crédito (04 y 34) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(80; "Cant B04 y E34 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B04*|E34*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B04*|E34*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Nota de Crédito (04 y 34) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(81; "Monto B12 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B12*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B12*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Registro ­nico de Ingresos (12) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(82; "Cant B12 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B12*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B12*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobantes Registro ­nico de Ingresos (12) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(83; "Monto B14 y E44 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B14*|E44*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B14*|E44*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante de Regímenes Especiales (14 y 44) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(84; "Cant B14 y E44 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B14*|E44*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B14*|E44*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante de Regímenes Especiales (14 y 44) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(85; "Monto B15 y E45 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B15*|E45*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B15*|E45*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante Gubernamentales (15 y 45) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(86; "Cant B15 y E45 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B15*|E45*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B15*|E45*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante Gubernamentales (15 y 45) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(87; "Monto B16 y E46 IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B16*|E46*),
-                                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B16*|E46*'),
+                                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante para exportaciones (16 y 46) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(88; "Cant B16 y E46 IT-1"; Integer)
         {
-            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER(B16*|E46*),
-                                                                     "Codigo reporte"=CONST(607)));
+            CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B16*|E46*'),
+                                                                     "Codigo reporte" = CONST('607')));
             Caption = 'Comprobante para exportaciones (16 y 46) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(89; "MontoEfectivo IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Efectivo" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Efectivo" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'Efectivo';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(90; "MontoChequeTransferencia IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Cheque" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto Cheque" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'Cheque / Transferencia';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(91; "MontoTarjeta IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto tarjetas" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto tarjetas" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'Tarjeta débito / crédito ';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(92; "MontoCredito IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta a credito" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta a credito" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'A Credito';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(93; "MontoBonosCertificado IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta bonos" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta bonos" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'Bonos o Certificado de Regalo';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(94; "MontoPermuta IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta Permuta" WHERE("Codigo reporte" = CONST(607)));
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Venta Permuta" WHERE("Codigo reporte" = CONST('607')));
             Caption = 'Permutas';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(95; "Monto Operacional IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(01 | 1)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(01 | 1)));*/
             Caption = 'Ingresos por Operaciones(No Financieros)';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(96; "Monto Financiero IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(02 | 2)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(02 | 2)));*/
             Caption = 'Ingresos Financieros';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(97; "Monto Extraordinarios IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(03 | 3)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(03 | 3)));*/
             Caption = 'Ingresos Extraordinarios';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(98; "Monto Arrendamiento IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(04 | 4)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(04 | 4)));*/
             Caption = 'Ingreso por Arrendamiento';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(99; "Monto VentaActivo IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(05 | 5)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(05 | 5)));*/
             Caption = 'Ingreso por Venta de Activos Depreciables';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(100; "Monto IngresoOtros IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST(607),
-                                                                                     "de ingreso" = FILTER(06 | 6)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
+                                                                                     "de ingreso" = FILTER(06 | 6)));*/
             Caption = 'Otros Ingresos';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(101; "MontoEspecial IT-1"; Decimal)
         {
-            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER(B14*|E44*),
-                                                                                     "Codigo reporte"=CONST(606)));
+            //TODO: Ver
+            /*
+            CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B14*|E44*'),
+                                                                                     "Codigo reporte" = CONST(606)));*/
             Caption = 'Total Facturas en Comprobantes Fiscales para Regímenes Especiales';
             FieldClass = FlowField;
         }

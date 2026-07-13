@@ -142,57 +142,57 @@ table 34002164 Elegibles
         field(24; Comment; Boolean)
         {
             CalcFormula = Exist("Human Resource Comment Line" WHERE("Table Name" = CONST(Employee),
-                                                                     No.=FIELD("No.")));
+                                                                     "No." = FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(25;"Last Date Modified";Date)
+        field(25; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(27;"Global Dimension 1 Filter";Code[20])
+        field(27; "Global Dimension 1 Filter"; Code[20])
         {
             CaptionClass = '1,3,1';
             Caption = 'Global Dimension 1 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
-        field(28;"Global Dimension 2 Filter";Code[20])
+        field(28; "Global Dimension 2 Filter"; Code[20])
         {
             CaptionClass = '1,3,2';
             Caption = 'Global Dimension 2 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
-        field(29;Extension;Text[30])
+        field(29; Extension; Text[30])
         {
             Caption = 'Extension';
         }
-        field(30;"URL Linkedin";Text[80])
+        field(30; "URL Linkedin"; Text[80])
         {
             DataClassification = ToBeClassified;
         }
-        field(31;"URL Facebook";Text[80])
+        field(31; "URL Facebook"; Text[80])
         {
             DataClassification = ToBeClassified;
         }
-        field(32;"Company E-Mail";Text[80])
+        field(32; "Company E-Mail"; Text[80])
         {
             Caption = 'Company E-Mail';
         }
-        field(33;Title;Text[30])
+        field(33; Title; Text[30])
         {
             Caption = 'Title';
         }
-        field(34;"No. Series";Code[20])
+        field(34; "No. Series"; Code[20])
         {
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
-        field(35;"Second Last Name";Text[30])
+        field(35; "Second Last Name"; Text[30])
         {
             Caption = 'Second Last Name';
 
@@ -201,7 +201,7 @@ table 34002164 Elegibles
                 VALIDATE("Lugar nacimiento");
             end;
         }
-        field(36;"Full Name";Text[50])
+        field(36; "Full Name"; Text[50])
         {
             Caption = 'Full Name';
 
@@ -210,60 +210,60 @@ table 34002164 Elegibles
                 "Lugar nacimiento" := "First Name" + ' ' + "Middle Name" + ' ' + "Last Name" + ' ' + Nacionalidad;
             end;
         }
-        field(37;"Document Type";Option)
+        field(37; "Document Type"; Option)
         {
             Caption = 'Document Type';
             OptionCaption = 'SS,Passport,Residence ID,Work Permission';
             OptionMembers = "Cédula",Pasaporte,"Tarj. residencia","Permiso de Trabajo";
         }
-        field(38;"Document ID";Text[15])
+        field(38; "Document ID"; Text[15])
         {
             Caption = 'Document ID';
 
             trigger OnValidate()
             begin
                 Candidato.RESET;
-                Candidato.SETFILTER("No.",'<>%1',"No.");
-                Candidato.SETRANGE("Document ID","Document ID");
+                Candidato.SETFILTER("No.", '<>%1', "No.");
+                Candidato.SETRANGE("Document ID", "Document ID");
                 IF Candidato.FINDFIRST THEN
-                   ERROR(STRSUBSTNO(Err003,FIELDCAPTION("Document Type"),Candidato."No.",Candidato."Full Name"));
+                    ERROR(STRSUBSTNO(Err003, FIELDCAPTION("Document Type"), Candidato."No.", Candidato."Full Name"));
 
-                IF "Document Type" = "Document Type"::Cédula THEN
-                   IF NOT FuncNominas.ValidarCedula(DELCHR("Document ID",'=','-')) THEN
-                      ERROR(STRSUBSTNO(Err004,"Document Type"));
+                //TODO: Ver IF "Document Type" = "Document Type"::Cédula THEN
+                //TODO: Ver IF NOT FuncNominas.ValidarCedula(DELCHR("Document ID", '=', '-')) THEN
+                //TODO: Ver ERROR(STRSUBSTNO(Err004, "Document Type"));
             end;
         }
-        field(40;Nacionalidad;Code[10])
+        field(40; Nacionalidad; Code[10])
         {
             TableRelation = "Country/Region";
         }
-        field(41;"Lugar nacimiento";Text[30])
+        field(41; "Lugar nacimiento"; Text[30])
         {
         }
-        field(42;"Estado civil";Option)
+        field(42; "Estado civil"; Option)
         {
             Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a";
         }
-        field(44;"No. Seguridad Social";Code[10])
+        field(44; "No. Seguridad Social"; Code[10])
         {
         }
-        field(45;"Experiencia 1";Text[150])
-        {
-            DataClassification = ToBeClassified;
-        }
-        field(46;"Experiencia 2";Text[150])
+        field(45; "Experiencia 1"; Text[150])
         {
             DataClassification = ToBeClassified;
         }
-        field(47;Status;Option)
+        field(46; "Experiencia 2"; Text[150])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(47; Status; Option)
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
             OptionCaption = 'Elegible,Descartado,Contratado';
             OptionMembers = Elegible,Descartado,Contratado;
         }
-        field(34002108;"Job Type Code";Code[15])
+        field(34002108; "Job Type Code"; Code[15])
         {
             Caption = 'Job type code';
             DataClassification = ToBeClassified;
@@ -275,29 +275,28 @@ table 34002164 Elegibles
             begin
 
                 Cargo.RESET;
-                Cargo.SETRANGE(Código,"Job Type Code") ;
-                IF Cargo.FINDFIRST THEN
-                   BEGIN
-                     "Job Title"       := Cargo.Descripción;
-                //     "Cod. Supervisor" := Cargo."Cod. Supervisor";
-                   END;
+                Cargo.SETRANGE(Código, "Job Type Code");
+                IF Cargo.FINDFIRST THEN BEGIN
+                    "Job Title" := Cargo.Descripción;
+                    //     "Cod. Supervisor" := Cargo."Cod. Supervisor";
+                END;
             end;
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Search Name")
+        key(Key2; "Search Name")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.","First Name","Last Name","Phone No.")
+        fieldgroup(DropDown; "No.", "First Name", "Last Name", "Phone No.")
         {
         }
     }
@@ -308,49 +307,48 @@ table 34002164 Elegibles
         PerfilSal: Record 34002115;
         HistNom: Record 34002117;
     begin
-        AlternativeAddr.SETRANGE("Employee No.","No.");
+        AlternativeAddr.SETRANGE("Employee No.", "No.");
         AlternativeAddr.DELETEALL;
 
-        EmployeeQualification.SETRANGE("Employee No.","No.");
+        EmployeeQualification.SETRANGE("Employee No.", "No.");
         EmployeeQualification.DELETEALL;
 
-        Relative.SETRANGE("Employee No.","No.");
+        Relative.SETRANGE("Employee No.", "No.");
         Relative.DELETEALL;
 
-        MiscArticleInformation.SETRANGE("Employee No.","No.");
+        MiscArticleInformation.SETRANGE("Employee No.", "No.");
         MiscArticleInformation.DELETEALL;
 
-        ConfidentialInformation.SETRANGE("Employee No.","No.");
+        ConfidentialInformation.SETRANGE("Employee No.", "No.");
         ConfidentialInformation.DELETEALL;
 
-        HumanResComment.SETRANGE("No.","No.");
+        HumanResComment.SETRANGE("No.", "No.");
         HumanResComment.DELETEALL;
 
-        DimMgt.DeleteDefaultDim(DATABASE::Employee,"No.");
+        //TODO: Ver DimMgt.DeleteDefaultDim(DATABASE::Employee, "No.");
     end;
 
     trigger OnInsert()
     begin
         //Para cuando el numerador de empleados es comun a las empresas
         ConfNominas.GET();
-        IF (ConfNominas."Habilitar numeradores globales")AND ("No." = '') THEN
-           BEGIN
-             Numeradorescomunes.FINDFIRST;
-             Numeradorescomunes.TESTFIELD("No. serie candidatos");
-             "No." := INCSTR(Numeradorescomunes."No. serie candidatos");
-             Numeradorescomunes."No. serie candidatos" := "No.";
-             Numeradorescomunes.MODIFY;
-           END
+        IF (ConfNominas."Habilitar numeradores globales") AND ("No." = '') THEN BEGIN
+            Numeradorescomunes.FINDFIRST;
+            Numeradorescomunes.TESTFIELD("No. serie candidatos");
+            "No." := INCSTR(Numeradorescomunes."No. serie candidatos");
+            Numeradorescomunes."No. serie candidatos" := "No.";
+            Numeradorescomunes.MODIFY;
+        END
         ELSE
-        IF "No." = '' THEN BEGIN
-          HumanResSetup.GET;
-          HumanResSetup.TESTFIELD("Candidate Nos.");
-          NoSeriesMgt.InitSeries(HumanResSetup."Candidate Nos.",xRec."No. Series",0D,"No.","No. Series");
-        END;
+            IF "No." = '' THEN BEGIN
+                HumanResSetup.GET;
+                //TODO: Ver HumanResSetup.TESTFIELD("Candidate Nos.");
+                //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."Candidate Nos.",xRec."No. Series",0D,"No.","No. Series");
+            END;
 
-        DimMgt.UpdateDefaultDim(
-          DATABASE::Employee,"No.",
-          "Global Dimension 1 Filter","Global Dimension 2 Filter");
+        //TODO: Ver DimMgt.UpdateDefaultDim(
+        //TODO: Ver   DATABASE::Employee, "No.",
+        //TODO: Ver   "Global Dimension 1 Filter", "Global Dimension 2 Filter");
     end;
 
     trigger OnModify()
@@ -378,12 +376,12 @@ table 34002164 Elegibles
         SalespersonPurchaser: Record 13;
         ConfNominas: Record 34002103;
         Numeradorescomunes: Record 34002182;
-        NoSeriesMgt: Codeunit 396;
-        DimMgt: Codeunit 408;
+        NoSeriesMgt: Codeunit "No. Series";
+        //TODO: Ver DimMgt: Codeunit 408;
         Text000: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         Err001: Label 'This Account No. already exist for candidate %1';
         Err002: Label 'This employee has posted payroll, you can not delete it';
-        FuncNominas: Codeunit 34002104;
+        //TODO: Ver FuncNominas: Codeunit 34002104;
         Err003: Label 'This %1 already exist for the candidate %2 %3';
         Err004: Label '$1 is invalid, please verify';
 
@@ -405,16 +403,19 @@ table 34002164 Elegibles
         END;
         */
         WITH Candidato DO BEGIN
-          Candidato := Rec;
-          HumanResSetup.GET;
-          HumanResSetup.TESTFIELD("Candidate Nos.");
-          IF NoSeriesMgt.SelectSeries(HumanResSetup."Candidate Nos.",OldEmployee."No. Series","No. Series") THEN BEGIN
+            Candidato := Rec;
             HumanResSetup.GET;
-            HumanResSetup.TESTFIELD("Employee Nos.");
-            NoSeriesMgt.SetSeries("No.");
-            Rec := Candidato;
-            EXIT(TRUE);
-          END;
+            //TODO: Ver HumanResSetup.TESTFIELD("Candidate Nos.");
+            //TODO: Ver 
+            /*
+            IF NoSeriesMgt.SelectSeries(HumanResSetup."Candidate Nos.", OldEmployee."No. Series", "No. Series") THEN BEGIN
+                HumanResSetup.GET;
+                HumanResSetup.TESTFIELD("Employee Nos.");
+                NoSeriesMgt.SetSeries("No.");
+                Rec := Candidato;
+                EXIT(TRUE);
+            END;
+            */
         END;
 
     end;
@@ -422,15 +423,15 @@ table 34002164 Elegibles
     procedure FullName(): Text[100]
     begin
         IF "Middle Name" = '' THEN
-          EXIT("First Name" + ' ' + "Last Name")
+            EXIT("First Name" + ' ' + "Last Name")
         ELSE
-          EXIT("First Name" + ' ' + "Middle Name" + ' ' + "Last Name");
+            EXIT("First Name" + ' ' + "Middle Name" + ' ' + "Last Name");
     end;
 
-    procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        DimMgt.ValidateDimValueCode(FieldNumber,ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::Employee,"No.",FieldNumber,ShortcutDimCode);
+        //TODO: Ver DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        //TODO: Ver DimMgt.SaveDefaultDim(DATABASE::Employee, "No.", FieldNumber, ShortcutDimCode);
         MODIFY;
     end;
 
@@ -440,9 +441,9 @@ table 34002164 Elegibles
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
-          MapMgt.SetupDefault
+            MapMgt.SetupDefault
         ELSE
-          MESSAGE(Text000);
+            MESSAGE(Text000);
     end;
 }
 

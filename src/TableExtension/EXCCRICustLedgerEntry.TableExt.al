@@ -21,7 +21,7 @@ tableextension 50009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
         field(56026; "Importe provisionado"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = -sum("G/L Entry".Amount where("No. Mov. cliente provisionado" = field("Entry No."), "Document Date" = field("Date Filter")));
+            CalcFormula = - sum("G/L Entry".Amount where("No. Mov. cliente provisionado" = field("Entry No."), "Document Date" = field("Date Filter")));
             Editable = false;
         }
         field(56027; "Fecha ult. provision"; Date)
@@ -62,10 +62,10 @@ tableextension 50009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
             EXCCRIDueDate := "Posting Date";
 
         CalcFields("Remaining Amt. (LCY)");
-        EXCCRIProvisionSetup.SetRange("Desde día", 0, parFecha - EXCCRIDueDate);
+        EXCCRIProvisionSetup.SetRange("Desde dia", 0, parFecha - EXCCRIDueDate);
         if EXCCRIProvisionSetup.FindLast() then begin
-            parPorcentaje := EXCCRIProvisionSetup."% Provisión";
-            exit(Round("Remaining Amt. (LCY)" * EXCCRIProvisionSetup."% Provisión" / 100));
+            parPorcentaje := EXCCRIProvisionSetup."% Provision";
+            exit(Round("Remaining Amt. (LCY)" * EXCCRIProvisionSetup."% Provision" / 100));
         end;
 
         exit(0);

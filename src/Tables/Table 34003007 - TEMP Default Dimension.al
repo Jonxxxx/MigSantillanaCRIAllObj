@@ -11,13 +11,13 @@ table 34003007 "TEMP Default Dimension"
 
             trigger OnLookup()
             var
-                TempObject: Record 2000000001 temporary;
+            //TODO: Ver TempObject: Record 2000000001 temporary;
             begin
             end;
 
             trigger OnValidate()
             var
-                TempObject: Record 2000000001 temporary;
+            //TODO: Ver TempObject: Record 2000000001 temporary;
             begin
             end;
         }

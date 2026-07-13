@@ -105,8 +105,8 @@ table 34002111 "Conceptos salariales"
         }
         field(12; "No. Cuenta Cuota Obrera"; Text[20])
         {
-            TableRelation = IF ("Tipo Cuenta Cuota Obrera" = CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF ("Tipo Cuenta Cuota Obrera" = CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Obrera" = CONST(Cuenta)) "G/L Account"."No."
+            ELSE IF ("Tipo Cuenta Cuota Obrera" = CONST(Proveedor)) Vendor."No.";
 
             trigger OnValidate()
             begin
@@ -191,8 +191,8 @@ table 34002111 "Conceptos salariales"
         }
         field(23; "No. Cuenta Cuota Patronal"; Code[20])
         {
-            TableRelation = IF ("Tipo Cuenta Cuota Patronal" = CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF ("Tipo Cuenta Cuota Patronal" = CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Patronal" = CONST(Cuenta)) "G/L Account"."No."
+            ELSE IF ("Tipo Cuenta Cuota Patronal" = CONST(Proveedor)) Vendor."No.";
         }
         field(24; "Tipo Cuenta Contrapartida CO"; Option)
         {
@@ -201,8 +201,8 @@ table 34002111 "Conceptos salariales"
         }
         field(25; "No. Cuenta Contrapartida CO"; Code[20])
         {
-            TableRelation = IF ("Tipo Cuenta Contrapartida CO" = CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF ("Tipo Cuenta Contrapartida CO" = CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CO" = CONST(Cuenta)) "G/L Account"."No."
+            ELSE IF ("Tipo Cuenta Contrapartida CO" = CONST(Proveedor)) Vendor."No.";
 
             trigger OnValidate()
             begin
@@ -219,8 +219,8 @@ table 34002111 "Conceptos salariales"
         }
         field(27; "No. Cuenta Contrapartida CP"; Code[20])
         {
-            TableRelation = IF ("Tipo Cuenta Contrapartida CP" = CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF ("Tipo Cuenta Contrapartida CP" = CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CP" = CONST(Cuenta)) "G/L Account"."No."
+            ELSE IF ("Tipo Cuenta Contrapartida CP" = CONST(Proveedor)) Vendor."No.";
 
             trigger OnValidate()
             begin

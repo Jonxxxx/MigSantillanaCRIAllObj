@@ -11,7 +11,7 @@ table 34002169 "DSPayroll Cue"
         }
         field(2; Loans; Integer)
         {
-            CalcFormula = Count("Histórico Cab. Préstamo" WHERE(Pendiente = CONST(Yes)));
+            CalcFormula = Count("Histórico Cab. Préstamo" WHERE(Pendiente = CONST(True)));
             Caption = 'Pending Loans';
             Editable = false;
             FieldClass = FlowField;
@@ -25,7 +25,7 @@ table 34002169 "DSPayroll Cue"
         }
         field(4; "Active Contracts"; Integer)
         {
-            CalcFormula = Count(Contratos WHERE(Activo = CONST(Yes)));
+            CalcFormula = Count(Contratos WHERE(Activo = CONST(True)));
             Caption = 'Active contracts';
             Editable = false;
             FieldClass = FlowField;
@@ -39,15 +39,15 @@ table 34002169 "DSPayroll Cue"
         }
         field(6; "Employees with wire transfer"; Integer)
         {
-            CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST(Transferencia Banc.),
-                                                "Calcular Nomina"=CONST(Yes)));
+            //TODO: Ver CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST("Transferencia Banc."),
+            //TODO: Ver                                     "Calcular Nomina" = CONST(True)));
             Caption = 'Employees with wire transfer';
             Editable = false;
             FieldClass = FlowField;
         }
         field(7; "Employees with check"; Integer)
         {
-            CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST(Cheque)));
+            //TODO: Ver CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST(Cheque)));
             Caption = 'Employees with check';
             Editable = false;
             FieldClass = FlowField;
@@ -92,8 +92,8 @@ table 34002169 "DSPayroll Cue"
         }
         field(13; "Birthday of the month"; Integer)
         {
-            CalcFormula = Count(Employee WHERE("Mes Nacimiento" = FIELD("Birth Month filter"),
-                                                Status = CONST(Active)));
+            //TODO: Ver CalcFormula = Count(Employee WHERE("Mes Nacimiento" = FIELD("Birth Month filter"),
+            //TODO: Ver                                    Status = CONST(Active)));
             Caption = 'Birthday of the month';
             FieldClass = FlowField;
 
@@ -115,8 +115,8 @@ table 34002169 "DSPayroll Cue"
         }
         field(16; "Contract to expire"; Integer)
         {
-            CalcFormula = Count(Contratos WHERE("Fecha finalización" = FIELD(FILTER(Date Filter)),
-                                                 Activo=CONST(Yes)));
+            CalcFormula = Count(Contratos WHERE("Fecha finalización" = FIELD(FILTER("Date Filter")),
+                                                 Activo = CONST(True)));
             Caption = 'Contract to expire';
             FieldClass = FlowField;
         }

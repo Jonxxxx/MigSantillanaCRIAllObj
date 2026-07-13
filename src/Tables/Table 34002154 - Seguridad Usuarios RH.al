@@ -17,7 +17,7 @@ table 34002154 "Seguridad Usuarios RH"
             var
                 UserMgt: Codeunit 418;
             begin
-                UserMgt.LookupUserID("User ID");
+                //TODO: Ver UserMgt.LookupUserID("User ID");
                 VALIDATE("User ID");
             end;
 
@@ -25,7 +25,7 @@ table 34002154 "Seguridad Usuarios RH"
             var
                 UserMgt: Codeunit 418;
             begin
-                UserMgt.ValidateUserID("User ID");
+                //TODO: Ver UserMgt.ValidateUserID("User ID");
                 User.RESET;
                 User.SETRANGE("User Name", "User ID");
                 IF User.FINDFIRST THEN

@@ -71,12 +71,12 @@ table 34002113 "Perfil Salario x Cargo"
         Percept: Record 5200;
         RegLinConvenio: Record 34002113;
         LinConvFormula: Record 34002113;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
+        //TODO: Ver Scanner: Codeunit 34002106;
+        //TODO: Ver Parser: Codeunit 34002105;
+        //TODO: Ver Calculadora: Codeunit 34002107;
         ConfNominas: Record 34002103;
         ok: Boolean;
         Msg001: Label 'The Concept %1 was not found in the table %2, please verify';
-        FormConcSalariales: Page 34002110;
+    //TODO: Ver FormConcSalariales: Page 34002110;
 }
 

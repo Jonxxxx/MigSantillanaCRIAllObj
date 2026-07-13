@@ -25,10 +25,10 @@ table 34002172 "Payroll - Job Journal Line"
             begin
                 Empleados.GET("No. empleado");
                 Empleados.TESTFIELD("Resource No.");
-                Empleados.TESTFIELD("Distribuir salario en proyecto", FALSE);
+                //TODO: Ver Empleados.TESTFIELD("Distribuir salario en proyecto", FALSE);
 
-                "Apellidos y Nombre" := Empleados."Full Name";
-                "Puesto trabajo" := Empleados."Job Type Code";
+                //TODO: Ver "Apellidos y Nombre" := Empleados."Full Name";
+                //TODO: Ver "Puesto trabajo" := Empleados."Job Type Code";
 
                 VALIDATE("Resource No.", Empleados."Resource No.");
             end;
@@ -275,6 +275,6 @@ table 34002172 "Payroll - Job Journal Line"
         Empresa: Record 34002100;
         Empleados: Record 5200;
         WorkType: Record 200;
-        DimMgt: Codeunit 408;
+    //TODO: Ver DimMgt: Codeunit 408;
 }
 

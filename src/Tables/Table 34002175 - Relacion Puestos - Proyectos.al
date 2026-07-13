@@ -43,8 +43,8 @@ table 34002175 "Relacion Puestos - Proyectos"
         }
         field(7; "Job Task Name"; Text[60])
         {
-            CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
-                                                               "Task No." = FIELD("Job Task No.")));
+            //TODO: Ver CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
+            //TODO: Ver                                                    "Task No." = FIELD("Job Task No.")));
             Caption = 'Job Task No.';
             FieldClass = FlowField;
         }

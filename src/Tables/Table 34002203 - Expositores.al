@@ -8,15 +8,16 @@ table 34002203 Expositores
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
-            TableRelation = IF (Tipo = CONST(Interno)) Employee.No.
-                            ELSE IF (Tipo = CONST(Externo)) Vendor.No.;
+            //TODO: Ver 
+            /*TableRelation = IF (Tipo = CONST(Interno)) Employee.No.
+                            ELSE IF (Tipo = CONST(Externo)) Vendor.No.;*/
 
             trigger OnValidate()
             begin
                 IF Tipo = 0 THEN BEGIN
                     Emp.GET("No.");
-                    Name := Emp."Full Name";
-                    "Document ID" := Emp."Document ID";
+                    //TODO: Ver Name := Emp."Full Name";
+                    //TODO: Ver "Document ID" := Emp."Document ID";
                     Address := Emp.Address;
                     "Address 2" := Emp."Address 2";
                     City := Emp.City;
@@ -120,24 +121,24 @@ table 34002203 Expositores
         field(14; Comment; Boolean)
         {
             CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
-                                                                  No.=FIELD("No."),
-                                                                  "Sub No."=CONST(0)));
+                                                                  "No." = FIELD("No."),
+                                                                  "Sub No." = CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(15;"Last Date Modified";Date)
+        field(15; "Last Date Modified"; Date)
         {
             Caption = 'Last Date Modified';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(16;"Fax No.";Text[30])
+        field(16; "Fax No."; Text[30])
         {
             Caption = 'Fax No.';
             DataClassification = ToBeClassified;
         }
-        field(18;"Document ID";Code[20])
+        field(18; "Document ID"; Code[20])
         {
             Caption = 'Document ID';
             DataClassification = ToBeClassified;
@@ -148,13 +149,13 @@ table 34002203 Expositores
             begin
             end;
         }
-        field(19;Picture;BLOB)
+        field(19; Picture; BLOB)
         {
             Caption = 'Picture';
             DataClassification = ToBeClassified;
             SubType = Bitmap;
         }
-        field(20;"Post Code";Code[20])
+        field(20; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             DataClassification = ToBeClassified;
@@ -165,54 +166,54 @@ table 34002203 Expositores
 
             trigger OnValidate()
             begin
-                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(21;County;Text[30])
+        field(21; County; Text[30])
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
         }
-        field(22;"E-Mail";Text[80])
+        field(22; "E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             DataClassification = ToBeClassified;
             ExtendedDatatype = EMail;
         }
-        field(23;"Home Page";Text[80])
+        field(23; "Home Page"; Text[80])
         {
             Caption = 'Home Page';
             DataClassification = ToBeClassified;
             ExtendedDatatype = URL;
         }
-        field(24;Twitter;Text[30])
+        field(24; Twitter; Text[30])
         {
             Caption = 'Twitter';
             DataClassification = ToBeClassified;
         }
-        field(25;Facebook;Text[80])
+        field(25; Facebook; Text[80])
         {
             Caption = 'Facebook';
             DataClassification = ToBeClassified;
         }
-        field(26;"E-Mail 2";Text[80])
+        field(26; "E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             DataClassification = ToBeClassified;
             ExtendedDatatype = EMail;
         }
-        field(27;"No. Series";Code[10])
+        field(27; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }
-        field(29;"Date Filter";Date)
+        field(29; "Date Filter"; Date)
         {
             Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
-        field(30;"Cost (LCY)";Decimal)
+        field(30; "Cost (LCY)"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Cost ($)';
@@ -223,10 +224,10 @@ table 34002203 Expositores
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Document ID")
+        key(Key2; "Document ID")
         {
         }
     }

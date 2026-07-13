@@ -28,6 +28,8 @@ table 34002500 "Configuracion General DsPOS"
             Description = 'DsPOS Standard';
             OptionMembers = ,"Republica Dominicana",Bolivia,Paraguay,Ecuador,Guatemala,Salvador,Honduras,Mexico,"Costa Rica";
 
+            //TODO: Ver 
+            /*
             trigger OnValidate()
             var
                 cFDominicana: Codeunit 34002504;
@@ -50,6 +52,7 @@ table 34002500 "Configuracion General DsPOS"
                         cFParaguay.VaciaCampos_Pais;
                 END;
             end;
+            */
         }
         field(34002572; "Nombre Divisa Local"; Text[50])
         {

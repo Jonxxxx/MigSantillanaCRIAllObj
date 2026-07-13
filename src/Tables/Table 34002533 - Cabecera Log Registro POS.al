@@ -22,47 +22,47 @@ table 34002533 "Cabecera Log Registro POS"
         }
         field(6; Errores; Boolean)
         {
-            CalcFormula = Exist("Detalle Log Registro DsPOS" WHERE(Error = CONST(Yes),
+            CalcFormula = Exist("Detalle Log Registro DsPOS" WHERE(Error = CONST(true),
                                                                     "No. Log" = FIELD("No. Log")));
             FieldClass = FlowField;
         }
         field(7; "No. Facturas Registradas"; Integer)
         {
             CalcFormula = Count("Detalle Log Registro DsPOS" WHERE("Tipo Documento" = CONST(Factura),
-                                                                    Registrado = CONST(Yes),
-                                                                    Error = CONST(No),
+                                                                    Registrado = CONST(true),
+                                                                    Error = CONST(false),
                                                                     "No. Log" = FIELD("No. Log")));
             FieldClass = FlowField;
         }
         field(8; "No. Facturas Liquidadas"; Integer)
         {
             CalcFormula = Count("Detalle Log Registro DsPOS" WHERE("Tipo Documento" = CONST(Factura),
-                                                                    Liquidado = CONST(Yes),
-                                                                    Error = CONST(No),
+                                                                    Liquidado = CONST(true),
+                                                                    Error = CONST(false),
                                                                     "No. Log" = FIELD("No. Log")));
             FieldClass = FlowField;
         }
         field(9; "No. NC Registradas"; Integer)
         {
-            CalcFormula = Count("Detalle Log Registro DsPOS" WHERE("Tipo Documento" = CONST(Nota Credito),
-                                                                    Registrado=CONST(Yes),
-                                                                    Error=CONST(No),
-                                                                    "No. Log"=FIELD("No. Log")));
+            CalcFormula = Count("Detalle Log Registro DsPOS" WHERE("Tipo Documento" = CONST("Nota Credito"),
+                                                                    Registrado = CONST(true),
+                                                                    Error = CONST(false),
+                                                                    "No. Log" = FIELD("No. Log")));
             FieldClass = FlowField;
         }
-        field(10;"No. NC Liquidadas";Integer)
+        field(10; "No. NC Liquidadas"; Integer)
         {
-            CalcFormula = Count("Detalle Log Registro DsPOS" WHERE ("Tipo Documento"=CONST(Nota Credito),
-                                                                    Liquidado=CONST(Yes),
-                                                                    Error=CONST(No),
-                                                                    "No. Log"=FIELD("No. Log")));
+            CalcFormula = Count("Detalle Log Registro DsPOS" WHERE("Tipo Documento" = CONST("Nota Credito"),
+                                                                    Liquidado = CONST(true),
+                                                                    Error = CONST(false),
+                                                                    "No. Log" = FIELD("No. Log")));
             FieldClass = FlowField;
         }
     }
 
     keys
     {
-        key(Key1;"No. Log")
+        key(Key1; "No. Log")
         {
         }
     }
@@ -78,9 +78,9 @@ table 34002533 "Cabecera Log Registro POS"
 
         rLog.RESET;
         IF rLog.FINDLAST THEN
-          "No. Log" := rLog."No. Log" + 1
+            "No. Log" := rLog."No. Log" + 1
         ELSE
-          "No. Log" := 1;
+            "No. Log" := 1;
     end;
 }
 

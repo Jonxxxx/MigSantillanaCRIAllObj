@@ -17,7 +17,7 @@ table 34002198 "Lin. Prestamos cooperativa"
         {
             Caption = 'Loan type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de préstamo"));
         }
         field(5; "Fecha Transaccion"; Date)
         {
@@ -99,7 +99,7 @@ table 34002198 "Lin. Prestamos cooperativa"
         CabPrestamo.GET("No. Prestamo");
 
         "Tipo prestamo" := CabPrestamo."Tipo prestamo";
-        "Código Empleado" := CabPrestamo."Employee No.";
+        //TODO: Ver "Código Empleado" := CabPrestamo."Employee No.";
     end;
 
     var

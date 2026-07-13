@@ -18,17 +18,17 @@ table 34002174 "Payroll - Job Journal Template"
         field(5; "Test Report ID"; Integer)
         {
             Caption = 'Test Report ID';
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(6; "Page ID"; Integer)
         {
             Caption = 'Page ID';
-            TableRelation = Object.ID WHERE(Type = CONST(Page));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Page));
         }
         field(7; "Posting Report ID"; Integer)
         {
             Caption = 'Posting Report ID';
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(8; "Force Posting Report"; Boolean)
         {

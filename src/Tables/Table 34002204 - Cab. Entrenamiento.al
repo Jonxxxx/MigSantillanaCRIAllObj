@@ -13,7 +13,7 @@ table 34002204 "Cab. Entrenamiento"
         {
             Caption = 'Training type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(3; Disponible; Code[20])
         {
@@ -59,7 +59,7 @@ table 34002204 "Cab. Entrenamiento"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            "Nombre Instructor" := Employee."Full Name";
+                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");
@@ -180,7 +180,7 @@ table 34002204 "Cab. Entrenamiento"
         {
             Caption = 'Knowledge area code';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Area curricular));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(26; Sala; Code[20])
         {
@@ -278,8 +278,8 @@ table 34002204 "Cab. Entrenamiento"
     begin
         IF "No. entrenamiento" = '' THEN BEGIN
             HumanResSetup.GET;
-            HumanResSetup.TESTFIELD("No. serie acciones personal");
-            NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. serie", 0D, "No. entrenamiento", "No. serie");
+            //TODO: Ver HumanResSetup.TESTFIELD("No. serie acciones personal");
+            //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. serie", 0D, "No. entrenamiento", "No. serie");
         END;
     end;
 
@@ -287,7 +287,7 @@ table 34002204 "Cab. Entrenamiento"
         Employee: Record 5200;
         Vendor: Record 23;
         HumanResSetup: Record 5218;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 
     procedure Horas()
     var
@@ -323,21 +323,21 @@ table 34002204 "Cab. Entrenamiento"
     begin
         HumanResSetup.GET;
         TestNoSerie;
-        IF NoSeriesMgt.SelectSeries(TraeCodNoSerie, "No. entrenamiento", "No. entrenamiento") THEN BEGIN
-            TestNoSerie;
-            NoSeriesMgt.SetSeries("No. entrenamiento");
-            EXIT(TRUE);
-        END;
+        //TODO: Ver IF NoSeriesMgt.SelectSeries(TraeCodNoSerie, "No. entrenamiento", "No. entrenamiento") THEN BEGIN
+        //TODO: Ver TestNoSerie;
+        //TODO: Ver NoSeriesMgt.SetSeries("No. entrenamiento");
+        //TODO: Ver EXIT(TRUE);
+        //TODO: Ver END;
     end;
 
     local procedure TestNoSerie(): Boolean
     begin
-        HumanResSetup.TESTFIELD("No. serie entrenamientos");
+        //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
     end;
 
     local procedure TraeCodNoSerie(): Code[20]
     begin
-        EXIT(HumanResSetup."No. serie entrenamientos");
+        //TODO: Ver EXIT(HumanResSetup."No. serie entrenamientos");
     end;
 }
 

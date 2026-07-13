@@ -24,17 +24,17 @@ table 34002177 "Punch log"
         }
         field(7; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cod. Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             FieldClass = FlowField;
         }
-        field(8;"Job Title";Text[60])
+        field(8; "Job Title"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD("Cod. Empleado")));
+            CalcFormula = Lookup(Employee."Job Title" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Job Title';
             FieldClass = FlowField;
         }
-        field(9;"Job No.";Code[20])
+        field(9; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             TableRelation = Job;
@@ -42,38 +42,37 @@ table 34002177 "Punch log"
             trigger OnValidate()
             begin
                 IF "Job No." = '' THEN BEGIN
-                  VALIDATE("Job Task No.",'');
+                    VALIDATE("Job Task No.", '');
                 END;
 
                 Job.GET("Job No.");
                 Job.TestBlocked;
                 Job.TESTFIELD("Bill-to Customer No.");
                 Cust.GET(Job."Bill-to Customer No.");
-                VALIDATE("Job Task No.",'');
+                VALIDATE("Job Task No.", '');
             end;
         }
-        field(10;"Job Task No.";Code[20])
+        field(10; "Job Task No."; Code[20])
         {
             Caption = 'Job Task No.';
-            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
+            TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
 
             trigger OnValidate()
             var
                 JobTask: Record 1001;
             begin
                 TESTFIELD("Job No.");
-                IF "Job Task No." <> '' THEN
-                   BEGIN
-                    JobTask.GET("Job No.","Job Task No.");
-                    JobTask.TESTFIELD("Job Task Type",JobTask."Job Task Type"::Posting);
-                   END;
+                IF "Job Task No." <> '' THEN BEGIN
+                    JobTask.GET("Job No.", "Job Task No.");
+                    JobTask.TESTFIELD("Job Task Type", JobTask."Job Task Type"::Posting);
+                END;
             end;
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Empleado","Fecha registro","Hora registro")
+        key(Key1; "Cod. Empleado", "Fecha registro", "Hora registro")
         {
         }
     }

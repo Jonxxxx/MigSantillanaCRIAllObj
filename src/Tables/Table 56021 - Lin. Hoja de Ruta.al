@@ -259,7 +259,7 @@ table 56021 "Lin. Hoja de Ruta"
         CHR: Record 56020;
         SA: Record 291;
         NosSeries: Record 308;
-        //TODO Ver: NoSerieMagmt: Codeunit 396;
+        //TODO Ver: NoSerieMagmt: Codeunit "No. Series";
         LHR: Record 56021;
         LHRR: Record 56023;
     begin

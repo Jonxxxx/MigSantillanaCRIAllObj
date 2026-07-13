@@ -23,7 +23,7 @@ table 34002507 "Grupos Cajeros"
         {
             Caption = 'Cash Customer';
             Description = 'DsPOS Standar';
-            TableRelation = Customer.No.;
+            TableRelation = Customer."No.";
         }
     }
 

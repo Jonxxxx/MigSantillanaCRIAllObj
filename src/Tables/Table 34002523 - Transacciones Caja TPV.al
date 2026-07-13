@@ -172,9 +172,9 @@ table 34002523 "Transacciones Caja TPV"
 
     procedure AsignarTurno(): Integer
     var
-        cduControl: Codeunit 34002521;
+    //TODO: Ver cduControl: Codeunit 34002521;
     begin
-        "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
+        //TODO: Ver "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
     end;
 }
 

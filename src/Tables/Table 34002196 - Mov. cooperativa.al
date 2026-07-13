@@ -49,11 +49,11 @@ table 34002196 "Mov. cooperativa"
         }
         field(8; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No."=FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }
-        field(9;"Concepto salarial";Code[20])
+        field(9; "Concepto salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = "Conceptos salariales".Código;
@@ -68,14 +68,14 @@ table 34002196 "Mov. cooperativa"
 
     keys
     {
-        key(Key1;"No. Movimiento")
+        key(Key1; "No. Movimiento")
         {
         }
-        key(Key2;"No. documento","Tipo transaccion")
+        key(Key2; "No. documento", "Tipo transaccion")
         {
             SumIndexFields = Importe;
         }
-        key(Key3;"Employee No.","Tipo transaccion","Fecha registro")
+        key(Key3; "Employee No.", "Tipo transaccion", "Fecha registro")
         {
             SumIndexFields = Importe;
         }

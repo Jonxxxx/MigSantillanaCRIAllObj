@@ -1,27 +1,27 @@
-table 56086 "% Provisi n"
+table 56086 "% Provision"
 {
     // 001 CAT 20/02/14  #144 Configuraci n de los porcentajes de insolvencias
 
 
     fields
     {
-        field(1; "Desde d a"; Integer)
+        field(1; "Desde dia"; Integer)
         {
         }
         field(2; "Descripcion"; Text[30])
         {
         }
-        field(3; "% Provisi n"; Decimal)
+        field(3; "% Provision"; Decimal)
         {
         }
-        field(4; "Importe provisi n"; Decimal)
+        field(4; "Importe Provision"; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1; "Desde d a")
+        key(Key1; "Desde dia")
         {
         }
     }

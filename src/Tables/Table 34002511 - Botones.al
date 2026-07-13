@@ -148,7 +148,7 @@ table 34002511 Botones
             Caption = 'Tender';
             Description = 'DsPOS Standar';
             TableRelation = "Formas de Pago" WHERE("Tipo Tarjeta" = FILTER(''),
-                                                    "Efectivo Local" = CONST(No));
+                                                    "Efectivo Local" = CONST(False));
 
             trigger OnValidate()
             var
@@ -194,19 +194,19 @@ table 34002511 Botones
         field(34002511; "No."; Code[20])
         {
             Description = 'DsPOS Standar';
-            TableRelation = IF (Tipo = CONST(G/L Account)) "G/L Account"
-                            ELSE IF (Tipo=CONST(Item)) Item
-                            ELSE IF (Tipo=CONST(Resource)) Resource
-                            ELSE IF (Tipo=CONST(Fixed Asset)) "Fixed Asset";
+            TableRelation = IF (Tipo = CONST("G/L Account")) "G/L Account"
+            ELSE IF (Tipo = CONST(Item)) Item
+            ELSE IF (Tipo = CONST(Resource)) Resource
+            ELSE IF (Tipo = CONST("Fixed Asset")) "Fixed Asset";
         }
-        field(34002513;"Tipo Accion";Option)
+        field(34002513; "Tipo Accion"; Option)
         {
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = ',Action,Mandatory,Line Action';
             OptionMembers = ,"Acción",Obligatoria,"Acción Línea";
         }
-        field(34002515;Orden;Integer)
+        field(34002515; Orden; Integer)
         {
             Description = 'DsPOS Standar';
 
@@ -214,7 +214,7 @@ table 34002511 Botones
             begin
 
                 IF Orden < 0 THEN
-                  ERROR(Error007);
+                    ERROR(Error007);
 
                 ComprobarOrden;
             end;
@@ -223,16 +223,16 @@ table 34002511 Botones
 
     keys
     {
-        key(Key1;"ID Menu","ID boton")
+        key(Key1; "ID Menu", "ID boton")
         {
         }
-        key(Key2;Pago)
+        key(Key2; Pago)
         {
         }
-        key(Key3;"Tipo Accion",Orden)
+        key(Key3; "Tipo Accion", Orden)
         {
         }
-        key(Key4;Accion)
+        key(Key4; Accion)
         {
         }
     }
@@ -245,8 +245,10 @@ table 34002511 Botones
     begin
 
         CASE TRUE OF
-          Activo:ERROR(Error010);
-          "Tipo Accion" = "Tipo Accion"::Obligatoria:ERROR(Error011);
+            Activo:
+                ERROR(Error010);
+            "Tipo Accion" = "Tipo Accion"::Obligatoria:
+                ERROR(Error011);
         END;
     end;
 
@@ -256,20 +258,20 @@ table 34002511 Botones
     begin
 
         rBotones.RESET;
-        rBotones.SETRANGE("ID Menu" , "ID Menu");
+        rBotones.SETRANGE("ID Menu", "ID Menu");
         IF rBotones.FINDLAST THEN
-          "ID boton" := rBotones."ID boton" + 1
+            "ID boton" := rBotones."ID boton" + 1
         ELSE
-          "ID boton" := 1;
+            "ID boton" := 1;
 
         IF "Tipo Accion" <> "Tipo Accion"::Obligatoria THEN BEGIN
-          rBotones.RESET;
-          rBotones.SETCURRENTKEY("Tipo Accion",Orden);
-          rBotones.SETRANGE("Tipo Accion","Tipo Accion");
-          IF rBotones.FINDLAST THEN
-            Orden := rBotones.Orden + 1
-          ELSE
-            Orden := 1;
+            rBotones.RESET;
+            rBotones.SETCURRENTKEY("Tipo Accion", Orden);
+            rBotones.SETRANGE("Tipo Accion", "Tipo Accion");
+            IF rBotones.FINDLAST THEN
+                Orden := rBotones.Orden + 1
+            ELSE
+                Orden := 1;
         END;
     end;
 
@@ -277,11 +279,15 @@ table 34002511 Botones
     begin
 
         CASE TRUE OF
-          (xRec.Activo) AND NOT(Activo):EXIT;
-          Activo AND NOT(xRec.Activo):EXIT;
-          Activo AND xRec.Activo:ERROR(Error009);
-          (("Tipo Accion" = "Tipo Accion"::Obligatoria) AND
-          ((Etiqueta = xRec.Etiqueta) AND (Seguridad=xRec.Seguridad))):ERROR(Error012);
+            (xRec.Activo) AND NOT (Activo):
+                EXIT;
+            Activo AND NOT (xRec.Activo):
+                EXIT;
+            Activo AND xRec.Activo:
+                ERROR(Error009);
+            (("Tipo Accion" = "Tipo Accion"::Obligatoria) AND
+          ((Etiqueta = xRec.Etiqueta) AND (Seguridad = xRec.Seguridad))):
+                ERROR(Error012);
         END;
     end;
 
@@ -306,19 +312,22 @@ table 34002511 Botones
     begin
 
         CASE TRUE OF
-          ((Orden = 0) AND ("Tipo Accion"="Tipo Accion"::Obligatoria)):EXIT;
-          (Orden <> 0) AND ("Tipo Accion" = "Tipo Accion"::Obligatoria):ERROR(Error008);
-          ((Orden = 0) AND Activo) AND NOT("Tipo Accion" = "Tipo Accion"::Obligatoria):ERROR(Error005);
+            ((Orden = 0) AND ("Tipo Accion" = "Tipo Accion"::Obligatoria)):
+                EXIT;
+            (Orden <> 0) AND ("Tipo Accion" = "Tipo Accion"::Obligatoria):
+                ERROR(Error008);
+            ((Orden = 0) AND Activo) AND NOT ("Tipo Accion" = "Tipo Accion"::Obligatoria):
+                ERROR(Error005);
         END;
 
         rBotones.RESET;
-        rBotones.SETRANGE("ID Menu"   ,"ID Menu");
-        rBotones.SETRANGE(Orden       , Orden);
-        rBotones.SETFILTER("ID boton" , '<>%1', "ID boton");
-        rBotones.SETRANGE(Activo      , TRUE);
-        rBotones.SETRANGE("Tipo Accion","Tipo Accion");
+        rBotones.SETRANGE("ID Menu", "ID Menu");
+        rBotones.SETRANGE(Orden, Orden);
+        rBotones.SETFILTER("ID boton", '<>%1', "ID boton");
+        rBotones.SETRANGE(Activo, TRUE);
+        rBotones.SETRANGE("Tipo Accion", "Tipo Accion");
         IF rBotones.FINDFIRST THEN
-          ERROR(Error004,Orden);
+            ERROR(Error004, Orden);
     end;
 }
 

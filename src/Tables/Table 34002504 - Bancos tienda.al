@@ -38,7 +38,7 @@ table 34002504 "Bancos tienda"
         }
         field(40; "Nombre Banco"; Text[100])
         {
-            CalcFormula = Lookup("Bank Account".Name WHERE(No.=FIELD("Cod. Banco")));
+            CalcFormula = Lookup("Bank Account".Name WHERE("No." = FIELD("Cod. Banco")));
             Caption = 'Bank Name';
             Description = 'DsPOS Standar';
             Editable = false;
@@ -48,16 +48,16 @@ table 34002504 "Bancos tienda"
 
     keys
     {
-        key(Key1;"Cod. Tienda","Cod. Divisa")
+        key(Key1; "Cod. Tienda", "Cod. Divisa")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;Field34002500,Field34002501)
-        {
-        }
+        //TODO: Ver fieldgroup(DropDown; Field34002500, Field34002501)
+        //TODO: Ver {
+        //TODO: Ver }
     }
 
     trigger OnDelete()
@@ -69,6 +69,6 @@ table 34002504 "Bancos tienda"
     var
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a petición del usuario';
-        Error002: ;
+    //TODO: Ver Error002: ;
 }
 

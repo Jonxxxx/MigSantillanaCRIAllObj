@@ -13,8 +13,8 @@ table 34002146 "Histórico Cab. Préstamo"
                 ConfNominas.GET;
                 IF "No. Préstamo" = '' THEN BEGIN
                     ConfNominas.TESTFIELD("No. serie CxC");
-                    GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
-                                          "No. Préstamo", ConfNominas."No. serie reg. CxC");
+                    //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
+                    //TODO: Ver                      "No. Préstamo", ConfNominas."No. serie reg. CxC");
                 END;
             end;
         }
@@ -101,10 +101,10 @@ table 34002146 "Histórico Cab. Préstamo"
         }
         field(23; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             FieldClass = FlowField;
         }
-        field(24;"Motivo de cierre";Text[250])
+        field(24; "Motivo de cierre"; Text[250])
         {
             Caption = 'Cause of close';
         }
@@ -112,13 +112,13 @@ table 34002146 "Histórico Cab. Préstamo"
 
     keys
     {
-        key(Key1;"No. Préstamo")
+        key(Key1; "No. Préstamo")
         {
         }
-        key(Key2;"Employee No.",Pendiente)
+        key(Key2; "Employee No.", Pendiente)
         {
         }
-        key(Key3;"Employee No.","No. Préstamo")
+        key(Key3; "Employee No.", "No. Préstamo")
         {
         }
     }
@@ -129,6 +129,6 @@ table 34002146 "Histórico Cab. Préstamo"
 
     var
         ConfNominas: Record 34002103;
-        GestNoSerie: Codeunit 396;
+        GestNoSerie: Codeunit "No. Series";
 }
 

@@ -181,12 +181,15 @@ table 34002115 "Perfil Salarial"
 
             trigger OnLookup()
             begin
+                //TODO: Ver 
+                /*
                 FormConcSalariales.LOOKUPMODE(TRUE);
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     FormConcSalariales.GETRECORD(ConcepSalar);
                     "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Código;
                     CLEAR(FormConcSalariales);
                 END;
+                */
             end;
 
             trigger OnValidate()
@@ -198,8 +201,8 @@ table 34002115 "Perfil Salarial"
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
                         Regconceptos.Formula := Rec."Fórmula cálculo";
-                        Scanner.RUN(Regconceptos);
-                        Parser.RUN(Regconceptos);
+                        //TODO: Ver Scanner.RUN(Regconceptos);
+                        //TODO: Ver Parser.RUN(Regconceptos);
                     END;
 
                     //    RegLinPerSal.SETCURRENTKEY("Perfil salarial","Concepto salarial","No. empleado");
@@ -239,7 +242,7 @@ table 34002115 "Perfil Salarial"
                             END;
                         UNTIL Regpolaca.NEXT = 0;
 
-                    Calculadora.RUN;
+                    //TODO: Ver Calculadora.RUN;
                     Regconceptos.GET('resultado');
                     Importe := ROUND(Regconceptos.Valor, 0.01);
                 END;
@@ -413,8 +416,8 @@ table 34002115 "Perfil Salarial"
     trigger OnInsert()
     begin
         Empleado.GET("No. empleado");
-        Cargo := Empleado."Job Type Code";
-        "Empresa cotización" := Empleado.Company;
+        //TODO: Ver Cargo := Empleado."Job Type Code";
+        //TODO: Ver "Empresa cotización" := Empleado.Company;
 
         RegLinPerSal.RESET;
         RegLinPerSal.SETRANGE("No. empleado", "No. empleado");
@@ -439,10 +442,10 @@ table 34002115 "Perfil Salarial"
         Empleado: Record 5200;
         Percept: Record 5200;
         TiposCot: Record 34002129;
-        FormConcSalariales: Page 34002110;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
+        //TODO: Ver FormConcSalariales: Page 34002110;
+        //TODO: Ver Scanner: Codeunit 34002106;
+        //TODO: Ver Parser: Codeunit 34002105;
+        //TODO: Ver Calculadora: Codeunit 34002107;
         ConfNominas: Record 34002103;
         ok: Boolean;
         Text001: Label 'CM';

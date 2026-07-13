@@ -106,6 +106,8 @@ table 34002118 "Historico Lin. nomina"
             begin
                 Fórmula := UPPERCASE(Fórmula);
 
+                //TODO: Ver 
+                /*
                 IF Fórmula <> '' THEN BEGIN
                     Regconceptos.Formula := DELCHR(Rec.Fórmula, '=', ' ');
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
@@ -152,6 +154,7 @@ table 34002118 "Historico Lin. nomina"
                     Regconceptos.GET('resultado');
                     Total := Regconceptos.Valor;
                 END;
+                */
             end;
         }
         field(23; Imprimir; Boolean)
@@ -205,36 +208,36 @@ table 34002118 "Historico Lin. nomina"
         {
             CaptionClass = '4,2,1';
             Caption = 'Sub-Department';
-            TableRelation = Sub-Departamentos.Codigo WHERE ("Cod. Departamento"=FIELD("Departamento"));
+            TableRelation = "Sub-Departamentos".Codigo WHERE("Cod. Departamento" = FIELD("Departamento"));
         }
-        field(35;"Aplica para Regalia";Boolean)
+        field(35; "Aplica para Regalia"; Boolean)
         {
             Caption = 'Apply for EOY Salary';
         }
-        field(39;"Cotiza FICA";Boolean)
+        field(39; "Cotiza FICA"; Boolean)
         {
             CaptionClass = '4,8,1';
         }
-        field(40;"ISR compensado";Decimal)
+        field(40; "ISR compensado"; Decimal)
         {
         }
-        field(43;"Aporte Voluntario";Decimal)
+        field(43; "Aporte Voluntario"; Decimal)
         {
         }
-        field(44;"Excluir de listados";Boolean)
+        field(44; "Excluir de listados"; Boolean)
         {
         }
-        field(45;Comentario;Text[100])
+        field(45; Comentario; Text[100])
         {
             Caption = 'Comment';
         }
-        field(46;"Tipo de nomina";Code[20])
+        field(46; "Tipo de nomina"; Code[20])
         {
             Caption = 'Payroll type';
             DataClassification = ToBeClassified;
             TableRelation = "Tipos de nominas";
         }
-        field(50;"Job No.";Code[20])
+        field(50; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             DataClassification = ToBeClassified;
@@ -247,14 +250,14 @@ table 34002118 "Historico Lin. nomina"
             begin
             end;
         }
-        field(155;"Frecuencia de pago";Option)
+        field(155; "Frecuencia de pago"; Option)
         {
             Caption = 'Payment frequency';
             DataClassification = ToBeClassified;
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
-        field(480;"Dimension Set ID";Integer)
+        field(480; "Dimension Set ID"; Integer)
         {
             Caption = 'Dimension Set ID';
             Editable = false;
@@ -264,40 +267,40 @@ table 34002118 "Historico Lin. nomina"
 
     keys
     {
-        key(Key1;"No. empleado","Tipo de nomina","Período","No. Orden")
+        key(Key1; "No. empleado", "Tipo de nomina", "Período", "No. Orden")
         {
-            SumIndexFields = "Importe Base",Total,"Parcial divisa-adicional";
+            SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key2;"No. empleado","Período","Tipo Nómina","Cotiza ISR","Texto Informativo")
+        key(Key2; "No. empleado", "Período", "Tipo Nómina", "Cotiza ISR", "Texto Informativo")
         {
-            SumIndexFields = "Importe Base",Total,"Parcial divisa-adicional";
+            SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key3;"No. empleado","Tipo concepto","Período","Concepto salarial")
+        key(Key3; "No. empleado", "Tipo concepto", "Período", "Concepto salarial")
         {
-            SumIndexFields = Total,"Parcial divisa-adicional";
+            SumIndexFields = Total, "Parcial divisa-adicional";
         }
-        key(Key4;"No. empleado","Período","Salario Base","No. Documento")
+        key(Key4; "No. empleado", "Período", "Salario Base", "No. Documento")
         {
-            SumIndexFields = "Importe Base",Total,"Parcial divisa-adicional";
+            SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key5;"No. Documento","No. empleado","Período",Cantidad)
+        key(Key5; "No. Documento", "No. empleado", "Período", Cantidad)
         {
-            SumIndexFields = "Importe Base",Total,"Parcial divisa-adicional";
+            SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key6;"No. empleado","Tipo concepto","Período","Texto Informativo",Total)
+        key(Key6; "No. empleado", "Tipo concepto", "Período", "Texto Informativo", Total)
         {
-            SumIndexFields = "Importe Base",Total,"Parcial divisa-adicional";
+            SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key7;"Concepto salarial","Período")
-        {
-        }
-        key(Key8;Departamento,"Sub-Departamento","No. empleado","Período")
+        key(Key7; "Concepto salarial", "Período")
         {
         }
-        key(Key9;"No. empleado","Tipo Nómina","Período","Tipo concepto","Concepto salarial")
+        key(Key8; Departamento, "Sub-Departamento", "No. empleado", "Período")
         {
         }
-        key(Key10;"Período",Departamento,"Sub-Departamento","Concepto salarial")
+        key(Key9; "No. empleado", "Tipo Nómina", "Período", "Tipo concepto", "Concepto salarial")
+        {
+        }
+        key(Key10; "Período", Departamento, "Sub-Departamento", "Concepto salarial")
         {
         }
     }
@@ -317,15 +320,15 @@ table 34002118 "Historico Lin. nomina"
         Regconceptos: Record 34002144;
         Regpolaca: Record 34002143;
         RegLinPerSal: Record 34002118;
-        DimMgt: Codeunit 408;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
+    //TODO: Ver DimMgt: Codeunit 408;
+    //TODO: Ver Scanner: Codeunit 34002106;
+    //TODO: Ver Parser: Codeunit 34002105;
+    //TODO: Ver Calculadora: Codeunit 34002107;
 
     procedure ShowDimensions()
     begin
         TESTFIELD("No. Orden");
-        DimMgt.ShowDimensionSet("Dimension Set ID",STRSUBSTNO('%1 %2 %3',TABLECAPTION,"No. Documento","No. Orden"));
+        //TODO: Ver  DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Orden"));
     end;
 
     local procedure RecalculaAportePatronal()
@@ -335,14 +338,13 @@ table 34002118 "Historico Lin. nomina"
     begin
         LinAporteEmp.RESET;
         LinAporteEmp.SETRANGE("No. Empleado");
-        LinAporteEmp.SETRANGE("Tipo de nomina","Tipo de nomina");
-        LinAporteEmp.SETRANGE("Concepto Salarial","Concepto salarial");
-        IF LinAporteEmp.FINDFIRST THEN
-           BEGIN
-            BaseCalculo := ROUND("Importe Base" * LinAporteEmp."% Cotizable" / 100,0.01);
+        LinAporteEmp.SETRANGE("Tipo de nomina", "Tipo de nomina");
+        LinAporteEmp.SETRANGE("Concepto Salarial", "Concepto salarial");
+        IF LinAporteEmp.FINDFIRST THEN BEGIN
+            BaseCalculo := ROUND("Importe Base" * LinAporteEmp."% Cotizable" / 100, 0.01);
             LinAporteEmp.Importe := BaseCalculo;
             LinAporteEmp.MODIFY;
-           END;
+        END;
     end;
 }
 

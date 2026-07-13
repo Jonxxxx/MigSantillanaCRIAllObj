@@ -18,7 +18,7 @@ table 34002509 "Menus TPV"
         field(34002502; "Cantidad de botones"; Integer)
         {
             CalcFormula = Count(Botones WHERE("ID Menu" = FIELD("Menu ID"),
-                                               Activo = CONST(Yes)));
+                                               Activo = CONST(True)));
             Caption = 'Quantity of buttons';
             Description = 'DsPOS Standar';
             FieldClass = FlowField;

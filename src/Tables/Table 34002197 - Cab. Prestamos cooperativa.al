@@ -16,7 +16,7 @@ table 34002197 "Cab. Prestamos cooperativa"
                 IF "No. Prestamo" <> xRec."No. Prestamo" THEN BEGIN
                     ConfNominas.GET;
                     ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-                    NoSeriesMgt.TestManual(ConfNominas."No. serie Sol. Prest. Coop.");
+                    //TODO: Ver NoSeriesMgt.TestManual(ConfNominas."No. serie Sol. Prest. Coop.");
                 END;
             end;
         }
@@ -48,7 +48,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         field(5; "Tipo prestamo"; Code[20])
         {
             Caption = 'Loan type';
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de préstamo"));
         }
         field(6; Importe; Decimal)
         {
@@ -82,11 +82,11 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No."=FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }
-        field(14;"Concepto Salarial";Code[20])
+        field(14; "Concepto Salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = "Conceptos salariales".Código;
@@ -95,10 +95,10 @@ table 34002197 "Cab. Prestamos cooperativa"
 
     keys
     {
-        key(Key1;"No. Prestamo")
+        key(Key1; "No. Prestamo")
         {
         }
-        key(Key2;"Employee No.","No. Prestamo")
+        key(Key2; "Employee No.", "No. Prestamo")
         {
         }
     }
@@ -110,9 +110,9 @@ table 34002197 "Cab. Prestamos cooperativa"
     trigger OnInsert()
     begin
         IF "No. Prestamo" = '' THEN BEGIN
-          ConfNominas.GET;
-          ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-          NoSeriesMgt.InitSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",0D,"No. Prestamo",ConfNominas."No. serie Sol. Prest. Coop.");
+            ConfNominas.GET;
+            ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
+            //TODO: Ver NoSeriesMgt.InitSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",0D,"No. Prestamo",ConfNominas."No. serie Sol. Prest. Coop.");
         END;
     end;
 
@@ -120,17 +120,17 @@ table 34002197 "Cab. Prestamos cooperativa"
         ConfNominas: Record 34002103;
         Miembroscooperativa: Record 34002195;
         Employee: Record 5200;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 
     [Scope('Personalization')]
     procedure AssistEdit(): Boolean
     begin
         ConfNominas.GET;
         ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-        IF NoSeriesMgt.SelectSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.") THEN BEGIN
-          NoSeriesMgt.SetSeries("No. Prestamo");
-          EXIT(TRUE);
-        END;
+        //TODO: Ver IF NoSeriesMgt.SelectSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.") THEN BEGIN
+        //TODO: Ver   NoSeriesMgt.SetSeries("No. Prestamo");
+        //TODO: Ver   EXIT(TRUE);
+        //TODO: Ver END;
     end;
 }
 

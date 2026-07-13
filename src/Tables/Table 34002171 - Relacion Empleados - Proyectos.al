@@ -11,8 +11,8 @@ table 34002171 "Relacion Empleados - Proyectos"
 
             trigger OnValidate()
             begin
-                IF Employee.GET("Employee No.") THEN
-                    "Full name" := Employee."Full Name";
+                //TODO: Ver IF Employee.GET("Employee No.") THEN
+                //TODO: Ver     "Full name" := Employee."Full Name";
             end;
         }
         field(2; "Job No."; Code[20])
@@ -44,18 +44,18 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(6; "Job Description"; Text[60])
         {
-            CalcFormula = Lookup(Job.Description WHERE(No.=FIELD("Job No.")));
+            CalcFormula = Lookup(Job.Description WHERE("No." = FIELD("Job No.")));
             Caption = 'Job Description';
             FieldClass = FlowField;
         }
-        field(7;"Job Task Name";Text[60])
+        field(7; "Job Task Name"; Text[60])
         {
-            CalcFormula = Lookup("Job Task".Description WHERE ("Job No."=FIELD("Job No."),
-                                                               "Task No."=FIELD("Job Task No.")));
+            //TODO: Ver CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
+            //TODO: Ver                                                   "Task No." = FIELD("Job Task No.")));
             Caption = 'Job Task No.';
             FieldClass = FlowField;
         }
-        field(8;"% to distribute";Decimal)
+        field(8; "% to distribute"; Decimal)
         {
             Caption = '% to distribute';
 
@@ -67,20 +67,20 @@ table 34002171 "Relacion Empleados - Proyectos"
                 TotDistrib := 0;
 
                 RelEmp_Job.RESET;
-                RelEmp_Job.SETRANGE("Employee No.","Employee No.");
-                RelEmp_Job.SETFILTER("Job No.",'<>%1',"Job No.");
+                RelEmp_Job.SETRANGE("Employee No.", "Employee No.");
+                RelEmp_Job.SETFILTER("Job No.", '<>%1', "Job No.");
                 IF RelEmp_Job.FINDSET THEN
-                   REPEAT
-                    TotDistrib += RelEmp_Job."% to distribute";
-                   UNTIL RelEmp_Job.NEXT = 0;
+                    REPEAT
+                        TotDistrib += RelEmp_Job."% to distribute";
+                    UNTIL RelEmp_Job.NEXT = 0;
 
                 TotDistrib += "% to distribute";
 
                 IF TotDistrib > 100 THEN
-                   ERROR(STRSUBSTNO(Err001,FIELDCAPTION("% to distribute")));
+                    ERROR(STRSUBSTNO(Err001, FIELDCAPTION("% to distribute")));
             end;
         }
-        field(9;"Concepto salarial";Code[20])
+        field(9; "Concepto salarial"; Code[20])
         {
             Caption = 'Wage Code';
             TableRelation = "Conceptos salariales".Código;
@@ -88,21 +88,21 @@ table 34002171 "Relacion Empleados - Proyectos"
             trigger OnValidate()
             begin
                 IF ConcepSalar.GET("Concepto salarial") THEN
-                   "Descripción concepto" := ConcepSalar.Descripción;
+                    "Descripción concepto" := ConcepSalar.Descripción;
             end;
         }
-        field(10;Precio;Decimal)
+        field(10; Precio; Decimal)
         {
             Caption = 'Unit price';
         }
-        field(11;"Full name";Text[60])
+        field(11; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(12;"Descripción concepto";Text[60])
+        field(12; "Descripción concepto"; Text[60])
         {
             Caption = 'Wage description';
             Editable = false;
@@ -111,7 +111,7 @@ table 34002171 "Relacion Empleados - Proyectos"
 
     keys
     {
-        key(Key1;"Employee No.","Job No.","Job Task No.")
+        key(Key1; "Employee No.", "Job No.", "Job Task No.")
         {
         }
     }
@@ -123,10 +123,10 @@ table 34002171 "Relacion Empleados - Proyectos"
     trigger OnInsert()
     begin
         PerfilSalario.RESET;
-        PerfilSalario.SETRANGE("No. empleado","Employee No.");
-        PerfilSalario.SETRANGE("Salario Base",TRUE);
+        PerfilSalario.SETRANGE("No. empleado", "Employee No.");
+        PerfilSalario.SETRANGE("Salario Base", TRUE);
         IF PerfilSalario.FINDFIRST THEN
-           "Job Unit Price" := PerfilSalario.Importe;
+            "Job Unit Price" := PerfilSalario.Importe;
     end;
 
     var

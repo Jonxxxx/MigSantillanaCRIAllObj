@@ -17,7 +17,7 @@ table 34002200 "Hist. Lin. Prest. cooperativa"
         {
             Caption = 'Loan type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de préstamo"));
         }
         field(5; "Fecha Transaccion"; Date)
         {

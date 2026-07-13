@@ -13,7 +13,7 @@ table 34002206 "Asistentes entrenamientos"
         {
             Caption = 'Training type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo Entrenamiento));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(4; "Fecha programacion"; Date)
         {
@@ -45,7 +45,7 @@ table 34002206 "Asistentes entrenamientos"
                     0: // Empleado
                         BEGIN
                             Emp.GET("Cod. Instructor");
-                            "Nombre Instructor" := Emp."Full Name";
+                            //TODO: Ver "Nombre Instructor" := Emp."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");
@@ -70,8 +70,8 @@ table 34002206 "Asistentes entrenamientos"
             begin
                 IF "No. empleado" <> '' THEN BEGIN
                     Emp.GET("No. empleado");
-                    "Nombre completo" := Emp."Full Name";
-                    "Document ID" := Emp."Document ID";
+                    //TODO: Ver "Nombre completo" := Emp."Full Name";
+                    //TODO: Ver "Document ID" := Emp."Document ID";
                 END;
             end;
         }

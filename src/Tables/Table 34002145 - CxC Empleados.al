@@ -1,7 +1,7 @@
 table 34002145 "CxC Empleados"
 {
-    DrillDownPageID = 58102;
-    LookupPageID = 58102;
+    //TODO: Ver DrillDownPageID = 58102;
+    //TODO: Ver LookupPageID = 58102;
 
     fields
     {
@@ -19,7 +19,7 @@ table 34002145 "CxC Empleados"
         }
         field(2; "Código Empleado"; Code[20])
         {
-            TableRelation = Employee WHERE("Calcular Nomina" = CONST(Yes));
+            //TODO: Ver TableRelation = Employee WHERE("Calcular Nomina" = CONST(True));
 
             trigger OnValidate()
             begin
@@ -60,9 +60,9 @@ table 34002145 "CxC Empleados"
                 Empl.GET("Código Empleado");
                 //IF "Tipo CxC" = "Tipo CxC"::Factura THEN
                 //   BEGIN
-                Empl.TESTFIELD("Código Cliente");
+                //TODO: Ver Empl.TESTFIELD("Código Cliente");
                 CLE.SETCURRENTKEY("Customer No.", Open, Positive, "Due Date", "Currency Code");
-                CLE.SETRANGE("Customer No.", Empl."Código Cliente");
+                //TODO: Ver CLE.SETRANGE("Customer No.", Empl."Código Cliente");
                 CLE.SETRANGE(Open, TRUE);
                 IF CLE.FINDFIRST THEN BEGIN
                     LiqMovsClientes.LOOKUPMODE(TRUE);
@@ -95,7 +95,7 @@ table 34002145 "CxC Empleados"
                     "Tipo Contrapartida"::Cliente:
                         BEGIN
                             Empl.GET("Código Empleado");
-                            "Cta. Contrapartida" := Empl."Código Cliente";
+                            //TODO: Ver "Cta. Contrapartida" := Empl."Código Cliente";
                         END;
                 END;
             end;
@@ -168,7 +168,7 @@ table 34002145 "CxC Empleados"
         }
         field(21; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Código Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Código Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -176,7 +176,7 @@ table 34002145 "CxC Empleados"
 
     keys
     {
-        key(Key1;"No. Préstamo")
+        key(Key1; "No. Préstamo")
         {
         }
     }
@@ -188,11 +188,10 @@ table 34002145 "CxC Empleados"
     trigger OnInsert()
     begin
         ConfNominas.GET;
-        IF "No. Préstamo" = '' THEN
-        BEGIN
-          ConfNominas.GET;
-          ConfNominas.TESTFIELD("No. serie CxC");
-          GestNoSerie.InitSeries(ConfNominas."No. serie CxC",ConfNominas."No. serie CxC",0D,"No. Préstamo",ConfNominas."No. serie CxC");
+        IF "No. Préstamo" = '' THEN BEGIN
+            ConfNominas.GET;
+            ConfNominas.TESTFIELD("No. serie CxC");
+            //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie CxC", ConfNominas."No. serie CxC", 0D, "No. Préstamo", ConfNominas."No. serie CxC");
 
         END;
         Pendiente := TRUE;
@@ -203,12 +202,12 @@ table 34002145 "CxC Empleados"
         CLE: Record 21;
         LinEsqPercep: Record 34002115;
         LiqMovsClientes: Page 232;
-                             CGCta: Record 15;
-                             Clie: Record 18;
-                             Prov: Record 23;
-                             ConfNominas: Record 34002103;
-                             GestNoSerie: Codeunit 396;
-                             Err001: Label 'You must specify as Balance Account a Bank or Vendor';
+        CGCta: Record 15;
+        Clie: Record 18;
+        Prov: Record 23;
+        ConfNominas: Record 34002103;
+        GestNoSerie: Codeunit "No. Series";
+        Err001: Label 'You must specify as Balance Account a Bank or Vendor';
         Err002: Label 'You can''t do loans to this employee, %1 is already out of the company';
         Err003: Label 'You can''t specify Loan payment when Discount % is used';
         Err004: Label 'You can''t specify  Discount % when Loan paymen is used';
@@ -217,28 +216,30 @@ table 34002145 "CxC Empleados"
     begin
         ConfNominas.GET;
         TestNoSerie;
-        IF GestNoSerie.SelectSeries(TraeCodNoSerie,CxCEmpleadosAnt."No. Préstamo","No. Préstamo") THEN
-        BEGIN
-          ConfNominas.GET;
-          TestNoSerie;
-          GestNoSerie.SetSeries("No. Préstamo");
-          EXIT(TRUE);
+        //TODO: Ver 
+        /*
+        IF GestNoSerie.SelectSeries(TraeCodNoSerie, CxCEmpleadosAnt."No. Préstamo", "No. Préstamo") THEN BEGIN
+            ConfNominas.GET;
+            TestNoSerie;
+            GestNoSerie.SetSeries("No. Préstamo");
+            EXIT(TRUE);
         END;
+        */
     end;
 
     local procedure TestNoSerie(): Boolean
     begin
         CASE "Tipo CxC" OF
-          "Tipo CxC"::Préstamo:
-            ConfNominas.TESTFIELD("No. serie CxC");
+            "Tipo CxC"::Préstamo:
+                ConfNominas.TESTFIELD("No. serie CxC");
         END;
     end;
 
     local procedure TraeCodNoSerie(): Code[10]
     begin
         CASE "Tipo CxC" OF
-          "Tipo CxC"::Préstamo:
-            EXIT(ConfNominas."No. serie CxC");
+            "Tipo CxC"::Préstamo:
+                EXIT(ConfNominas."No. serie CxC");
         END;
     end;
 }

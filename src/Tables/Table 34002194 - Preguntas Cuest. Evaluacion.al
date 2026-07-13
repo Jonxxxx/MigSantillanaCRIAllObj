@@ -68,42 +68,42 @@ table 34002194 "Preguntas Cuest. Evaluacion"
         }
         field(6; "Contact Company Name"; Text[50])
         {
-            CalcFormula = Lookup(Contact."Company Name" WHERE(No.=FIELD("Contact No.")));
+            CalcFormula = Lookup(Contact."Company Name" WHERE("No." = FIELD("Contact No.")));
             Caption = 'Contact Company Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(7;"Contact Name";Text[50])
+        field(7; "Contact Name"; Text[50])
         {
-            CalcFormula = Lookup(Contact.Name WHERE (No.=FIELD("Contact No.")));
+            CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Contact No.")));
             Caption = 'Contact Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(8;"Profile Questionnaire Priority";Option)
+        field(8; "Profile Questionnaire Priority"; Option)
         {
             Caption = 'Profile Questionnaire Priority';
             Editable = false;
             OptionCaption = 'Very Low,Low,Normal,High,Very High';
             OptionMembers = "Very Low",Low,Normal,High,"Very High";
         }
-        field(9;"Answer Priority";Option)
+        field(9; "Answer Priority"; Option)
         {
             Caption = 'Answer Priority';
             OptionCaption = 'Very Low (Hidden),Low,Normal,High,Very High';
             OptionMembers = "Very Low (Hidden)",Low,Normal,High,"Very High";
         }
-        field(10;"Last Date Updated";Date)
+        field(10; "Last Date Updated"; Date)
         {
             Caption = 'Last Date Updated';
         }
-        field(11;"Questions Answered (%)";Decimal)
+        field(11; "Questions Answered (%)"; Decimal)
         {
             BlankZero = true;
             Caption = 'Questions Answered (%)';
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
         }
-        field(5088;"Profile Questionnaire Value";Text[250])
+        field(5088; "Profile Questionnaire Value"; Text[250])
         {
             Caption = 'Profile Questionnaire Value';
         }
@@ -111,13 +111,13 @@ table 34002194 "Preguntas Cuest. Evaluacion"
 
     keys
     {
-        key(Key1;"Contact No.","Profile Questionnaire Code","Line No.")
+        key(Key1; "Contact No.", "Profile Questionnaire Code", "Line No.")
         {
         }
-        key(Key2;"Contact No.","Answer Priority","Profile Questionnaire Priority")
+        key(Key2; "Contact No.", "Answer Priority", "Profile Questionnaire Priority")
         {
         }
-        key(Key3;"Profile Questionnaire Code","Line No.")
+        key(Key3; "Profile Questionnaire Code", "Line No.")
         {
         }
     }

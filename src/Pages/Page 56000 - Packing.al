@@ -56,10 +56,10 @@ page 56000 Packing
                     Editable = false;
                 }
             }
-            part(; 56001)
+            part(PageLin; 56001)
             {
-                SubPageLink = No.=FIELD("No.");
-                    SubPageView = SORTING(No.)
+                SubPageLink = "No." = FIELD("No.");
+                SubPageView = SORTING("No.")
                               ORDER(Ascending);
             }
         }
@@ -176,7 +176,7 @@ page 56000 Packing
         NoLinea: Integer;
         txt001: Label 'Confirm that you want to create a new box';
         ConfSant: Record 56001;
-        NoSerMang: Codeunit 396;
+        NoSerMang: Codeunit "No. Series";
         FuncSant: Codeunit 56000;
         txt002: Label 'Confirm that you want to post';
         txt003: Label 'The packing was successfully posted';

@@ -68,7 +68,7 @@ table 34002186 "Rel. Empleados Evaluacion"
             Caption = 'No.';
             TableRelation = IF ("Link to Table" = CONST(Customer)) Customer
             ELSE IF ("Link to Table" = CONST(Vendor)) Vendor
-            ELSE IF ("Link to Table" = CONST(Bank Account)) "Bank Account";
+            ELSE IF ("Link to Table" = CONST("Bank Account")) "Bank Account";
         }
         field(5; "Business Relation Description"; Text[50])
         {

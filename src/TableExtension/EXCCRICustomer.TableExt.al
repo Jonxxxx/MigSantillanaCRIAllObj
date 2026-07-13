@@ -22,15 +22,15 @@ tableextension 50008 EXCCRICustomer extends Customer
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-                EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+            //TODO: Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if Blocked <> Blocked::All then
                         if not EXCCRIUserSetup."Desbloquea Clientes" then
                             Error(EXCCRICustomerUnlockPermissionErr)
                         else begin
-                            EXCCRIValidateCampaignRequirements.Maestros(Database::Customer, "No.");
-                            EXCCRIValidateCampaignRequirements.Dimensiones(Database::Customer, "No.", 0, 0);
+                            //TODO: Ver EXCCRIValidateCampaignRequirements.Maestros(Database::Customer, "No.");
+                            //TODO: Ver EXCCRIValidateCampaignRequirements.Dimensiones(Database::Customer, "No.", 0, 0);
                         end;
                 end else
                     Error(EXCCRICustomerUnlockPermissionErr);
@@ -43,8 +43,8 @@ tableextension 50008 EXCCRICustomer extends Customer
                 EXCCRIPostCode: Record "Post Code";
                 EXCCRIDistributionRoute: Record 56071;
             begin
-                if EXCCRIPostCode.Get("Post Code", City) then
-                    "Address 2" := EXCCRIPostCode.Colonia;
+                //TODO: Ver if EXCCRIPostCode.Get("Post Code", City) then
+                //TODO: Ver     "Address 2" := EXCCRIPostCode.Colonia;
 
                 EXCCRIDistributionRoute.SetFilter(CP, "Post Code");
                 if EXCCRIDistributionRoute.FindFirst() then
@@ -74,7 +74,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(50005; "Prioridad entrega consignacion"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Baja, Media, Alta;
+            OptionMembers = Baja,Media,Alta;
             OptionCaption = 'Low,Medium,High';
         }
         field(50006; "Precios en Conduce de envio"; Boolean)
@@ -95,7 +95,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(50010; "Tipo de Venta"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Factura, Consignacion, " ";
+            OptionMembers = Factura,Consignacion," ";
         }
         field(50011; "Admite Pendientes en Pedidos"; Boolean)
         {
@@ -150,7 +150,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         {
             Caption = 'Packing Required';
             DataClassification = ToBeClassified;
-            OptionMembers = " ", "No Verificable", "Verificable Siempre", Verificable;
+            OptionMembers = " ","No Verificable","Verificable Siempre",Verificable;
             OptionCaption = ' ,Not Verifiable,Always Verifiable,Verifiable';
         }
         field(56003; APS; Code[20])
@@ -200,7 +200,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(56027; "Saldo provision"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = -sum("G/L Entry".Amount where("Source Type" = const(Customer), "Source No." = field("No."), "Posting Date" = field("Date Filter"), "No. Mov. cliente provisionado" = filter(>0)));
+            CalcFormula = - sum("G/L Entry".Amount where("Source Type" = const(Customer), "Source No." = field("No."), "Posting Date" = field("Date Filter"), "No. Mov. cliente provisionado" = filter(> 0)));
         }
         field(56028; "Ruta Distribucion"; Code[10])
         {

@@ -124,7 +124,7 @@ page 56009 "Cab. Hoja de Ruta"
         LHR: Record 56021;
         CHRR: Record 56022;
         LHRR: Record 56023;
-        NoSeriesMngm: Codeunit 396;
+        NoSeriesMngm: Codeunit "No. Series";
         SRS: Record 311;
         txt001: Label 'Confirm that you want to post the Route Sheet';
         txt002: Label 'Confirm that you want to Post and Print the Route Sheet';

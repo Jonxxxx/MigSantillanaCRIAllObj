@@ -71,21 +71,25 @@ table 34002528 "Lin. declaracion caja"
         }
         field(80; "Importe calculado"; Decimal)
         {
+            //TODO: Ver 
+            /*
             CalcFormula = Sum("Transacciones Caja TPV".Importe WHERE("Cod. tienda" = FIELD("No. tienda"),
                                                                       "Cod. TPV" = FIELD("No. TPV"),
                                                                       Fecha = FIELD("Fecha"),
                                                                       "No. turno" = FIELD("No. turno"),
-                                                                      "de pago" = FIELD("Forma de pago")));
+                                                                      "de pago" = FIELD("Forma de pago")));*/
             Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
         field(90; "Importe calculado (DL)"; Decimal)
         {
+            //TODO: Ver 
+            /*
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("No. tienda"),
                                                                              "Cod. TPV" = FIELD("No. TPV"),
                                                                              Fecha = FIELD("Fecha"),
                                                                              "No. turno" = FIELD("No. turno"),
-                                                                             "de pago" = FIELD("Forma de pago")));
+                                                                             "de pago" = FIELD("Forma de pago")));*/
             Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
@@ -204,7 +208,7 @@ table 34002528 "Lin. declaracion caja"
     var
         recCurrExchRate: Record 330;
         recArqueo: Record 34002526;
-        frmArqueo: Page 34002538;
+        //TODO: Ver frmArqueo: Page 34002538;
         Error001: Label 'La forma de pago %1 no requiere recuento.';
     begin
         IF NOT "Requiere recueto" THEN
@@ -216,6 +220,8 @@ table 34002528 "Lin. declaracion caja"
         recArqueo.SETRANGE(Fecha, Fecha);
         recArqueo.SETRANGE("No. turno", "No. turno");
         recArqueo.SETRANGE("Forma de pago", "Forma de pago");
+        //TODO: Ver 
+        /*
         CLEAR(frmArqueo);
         frmArqueo.LOOKUPMODE := TRUE;
         frmArqueo.SETTABLEVIEW(recArqueo);
@@ -227,6 +233,7 @@ table 34002528 "Lin. declaracion caja"
                 "Importe contado (DL)" := ROUND(recCurrExchRate.ExchangeAmtFCYToLCY(Fecha, "Cod. divisa", "Importe contado", "Factor divisa"));
             MODIFY;
         END;
+        */
     end;
 
     procedure TraerDiferencia(): Decimal

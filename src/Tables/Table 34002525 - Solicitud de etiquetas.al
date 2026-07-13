@@ -10,7 +10,7 @@ table 34002525 "Solicitud de etiquetas"
         {
             Caption = 'Report ID';
             Description = 'DsPOS Standar';
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(34002501; Usuario; Code[20])
         {
@@ -44,17 +44,20 @@ table 34002525 "Solicitud de etiquetas"
 
             trigger OnValidate()
             var
-                rItemCrossRef: Record 5717;
+                //TODO: Ver rItemCrossRef: Record 5717;
                 rItem: Record 27;
             begin
+                //TODO: Ver 
+                /*
                 rItemCrossRef.RESET;
                 rItemCrossRef.SETCURRENTKEY(rItemCrossRef."Cross-Reference No.");
-                rItemCrossRef.SETRANGE("Cross-Reference No.", "Cod. barra");
+                //TODO: Ver rItemCrossRef.SETRANGE("Cross-Reference No.", "Cod. barra");
                 IF rItemCrossRef.FIND('-') THEN BEGIN
                     rItem.GET(rItemCrossRef."Item No.");
                     "No. producto" := rItemCrossRef."Item No.";
                     "Descripcion producto" := rItem.Description
                 END;
+                */
             end;
         }
         field(34002507; "No. producto"; Code[20])

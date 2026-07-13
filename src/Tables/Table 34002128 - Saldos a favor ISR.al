@@ -24,7 +24,7 @@ table 34002128 "Saldos a favor ISR"
         }
         field(5; "Full Name"; Text[50])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cód. Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cód. Empleado")));
             Caption = 'Full Name';
             Editable = false;
             FieldClass = FlowField;
@@ -33,7 +33,7 @@ table 34002128 "Saldos a favor ISR"
 
     keys
     {
-        key(Key1;"Cód. Empleado",Ano)
+        key(Key1; "Cód. Empleado", Ano)
         {
         }
     }
@@ -46,7 +46,7 @@ table 34002128 "Saldos a favor ISR"
     begin
         BKISR.TRANSFERFIELDS(Rec);
         IF NOT BKISR.INSERT THEN
-          BKISR.MODIFY;
+            BKISR.MODIFY;
     end;
 
     var

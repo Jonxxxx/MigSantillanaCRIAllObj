@@ -96,86 +96,86 @@ table 34002100 "Empresas Cotización"
         field(19; "ID  Volante Pago"; Integer)
         {
             Description = 'Oficial,Oficial abrev.,Factura,Matriz';
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(20; Comentario; Boolean)
         {
-            CalcFormula = Exist("Comentarios nómina" WHERE(Tipo = CONST(Empresa cotización),
-                                                            Código=FIELD("Empresa cotización")));
+            CalcFormula = Exist("Comentarios nómina" WHERE(Tipo = CONST("Empresa cotización"),
+                                                            Código = FIELD("Empresa cotización")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(21;"Global Dimension 1 Code";Code[20])
+        field(21; "Global Dimension 1 Code"; Code[20])
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
             begin
-                ValidateShortcutDimCode(1,"Global Dimension 1 Code");
+                ValidateShortcutDimCode(1, "Global Dimension 1 Code");
             end;
         }
-        field(22;"Global Dimension 2 Code";Code[20])
+        field(22; "Global Dimension 2 Code"; Code[20])
         {
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
             begin
-                ValidateShortcutDimCode(2,"Global Dimension 2 Code");
+                ValidateShortcutDimCode(2, "Global Dimension 2 Code");
             end;
         }
-        field(23;"Ult. No. Contabilización";Code[10])
+        field(23; "Ult. No. Contabilización"; Code[10])
         {
         }
-        field(24;Fax;Text[30])
+        field(24; Fax; Text[30])
         {
         }
-        field(25;"E-Mail";Text[60])
+        field(25; "E-Mail"; Text[60])
         {
         }
-        field(26;"ID RNL";Text[16])
+        field(26; "ID RNL"; Text[16])
         {
         }
-        field(27;"ID TSS";Code[16])
+        field(27; "ID TSS"; Code[16])
         {
         }
-        field(28;"Tipo Empresa de Trabajo";Option)
+        field(28; "Tipo Empresa de Trabajo"; Option)
         {
             Description = 'General,Hotel,Zona Franca,Agrícola';
             OptionMembers = General,Hotel,"Zona Franca";
         }
-        field(29;"Tipo Pago Nomina";Option)
+        field(29; "Tipo Pago Nomina"; Option)
         {
             Caption = 'Payroll payment type';
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
-        field(30;"Tasa de Riesgo (%)";Decimal)
+        field(30; "Tasa de Riesgo (%)"; Decimal)
         {
         }
-        field(31;"Salario Mínimo TSS";Decimal)
+        field(31; "Salario Mínimo TSS"; Decimal)
         {
             Caption = 'Minimun Salary TSS';
         }
-        field(32;"Employer Identification Number";Code[9])
+        field(32; "Employer Identification Number"; Code[9])
         {
             Description = 'Para Puerto Rico';
         }
-        field(33;"Identificador Empresa";Code[5])
+        field(33; "Identificador Empresa"; Code[5])
         {
         }
-        field(34;"Path archivo Nomina";Text[250])
+        field(34; "Path archivo Nomina"; Text[250])
         {
         }
-        field(56063;"Email Envia Boleta de Pago";Text[100])
+        field(56063; "Email Envia Boleta de Pago"; Text[100])
         {
             DataClassification = ToBeClassified;
             Description = 'SANTINAV-4392';
         }
-        field(56064;"Password Email Boleta Pago";Text[30])
+        field(56064; "Password Email Boleta Pago"; Text[30])
         {
             DataClassification = ToBeClassified;
             Description = 'SANTINAV-4392';
@@ -184,7 +184,7 @@ table 34002100 "Empresas Cotización"
 
     keys
     {
-        key(Key1;"Empresa cotización")
+        key(Key1; "Empresa cotización")
         {
         }
     }
@@ -215,7 +215,7 @@ table 34002100 "Empresas Cotización"
     trigger OnModify()
     begin
         IF NOT CONFIRM('Quiere guardar las modificaciones ') THEN
-          Rec := xRec;
+            Rec := xRec;
     end;
 
     var
@@ -228,17 +228,17 @@ table 34002100 "Empresas Cotización"
         CentroTrab: Record 34002101;
         DimMgt: Codeunit 408;
 
-    procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        DimMgt.ValidateDimValueCode(FieldNumber,ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización","Empresa cotización",FieldNumber,ShortcutDimCode);
+        DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización", "Empresa cotización", FieldNumber, ShortcutDimCode);
         MODIFY;
     end;
 
-    procedure LookupShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure LookupShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        DimMgt.LookupDimValueCode(FieldNumber,ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización","Empresa cotización",FieldNumber,ShortcutDimCode);
+        DimMgt.LookupDimValueCode(FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización", "Empresa cotización", FieldNumber, ShortcutDimCode);
     end;
 
     procedure SpecialRelation("Nº de campo": Integer)
@@ -247,16 +247,16 @@ table 34002100 "Empresas Cotización"
 
     procedure Domicilio() DomicilioUdad: Text[50]
     begin
-        IF Dirección <>'' THEN
-          DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ',Dirección)+ Número,1,50);
+        IF Dirección <> '' THEN
+            DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Dirección) + Número, 1, 50);
         IF "Código Postal" <> '' THEN
-          DomicilioUdad := COPYSTR(DomicilioUdad + ', '+ "Código Postal",1,50);
-        IF Municipio<>'' THEN
-          DomicilioUdad := COPYSTR(DomicilioUdad + ' Esc. ' + Municipio,1,50);
+            DomicilioUdad := COPYSTR(DomicilioUdad + ', ' + "Código Postal", 1, 50);
+        IF Municipio <> '' THEN
+            DomicilioUdad := COPYSTR(DomicilioUdad + ' Esc. ' + Municipio, 1, 50);
         IF Provincia <> '' THEN
-          DomicilioUdad := COPYSTR(DomicilioUdad + ' ' + Provincia+'º',1,50);
+            DomicilioUdad := COPYSTR(DomicilioUdad + ' ' + Provincia + 'º', 1, 50);
         IF Teléfono <> '' THEN
-          DomicilioUdad := COPYSTR(DomicilioUdad + ' ' + Teléfono+'ª',1,50);
+            DomicilioUdad := COPYSTR(DomicilioUdad + ' ' + Teléfono + 'ª', 1, 50);
     end;
 }
 

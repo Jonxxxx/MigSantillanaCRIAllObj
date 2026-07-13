@@ -47,6 +47,8 @@ table 34002119 "Conceptos Salariales Provision"
             var
                 ConcepSalar: Record 34002111;
             begin
+                //TODO: Ver 
+                /*
                 FormConcSalariales.LOOKUPMODE(TRUE);
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     CLEAR(ConcepSalar);
@@ -54,6 +56,7 @@ table 34002119 "Conceptos Salariales Provision"
                     "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Código;
                     CLEAR(FormConcSalariales);
                 END;
+                */
             end;
 
             trigger OnValidate()
@@ -68,8 +71,8 @@ table 34002119 "Conceptos Salariales Provision"
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
                         Regconceptos.Formula := "Fórmula cálculo";
-                        Scanner.RUN(Regconceptos);
-                        Parser.RUN(Regconceptos);
+                        //TODO: Ver Scanner.RUN(Regconceptos);
+                        //TODO: Ver Parser.RUN(Regconceptos);
                     END;
 
                     Regconceptos.Concepto := 'resultado';
@@ -110,8 +113,8 @@ table 34002119 "Conceptos Salariales Provision"
         RegFormula: Record 34002143 temporary;
         Regconceptos: Record 34002144;
         Regpolaca: Record 34002143 temporary;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        FormConcSalariales: Page 34002110;
+    //TODO: Ver Scanner: Codeunit 34002106;
+    //TODO: Ver Parser: Codeunit 34002105;
+    //TODO: Ver FormConcSalariales: Page 34002110;
 }
 

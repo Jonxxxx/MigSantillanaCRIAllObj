@@ -15,7 +15,7 @@ table 34002166 AFP
         }
         field(3; "Reporte Planilla"; Integer)
         {
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
     }
 

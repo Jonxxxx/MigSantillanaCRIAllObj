@@ -76,8 +76,8 @@ table 34002117 "Historico Cab. nomina"
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
                                                                    "Tipo Nómina" = FIELD("Tipo Nomina"),
-                                                                   "Cotiza ISR" = CONST(Yes),
-                                                                   "Texto Informativo" = CONST(No)));
+                                                                   "Cotiza ISR" = CONST(true),
+                                                                   "Texto Informativo" = CONST(false)));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
@@ -133,23 +133,27 @@ table 34002117 "Historico Cab. nomina"
         }
         field(100; "Total deducciones"; Decimal)
         {
+            //TODO: Ver 
+            /*
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
                                                                    "de nomina" = FIELD("Tipo de nomina"),
                                                                    "Tipo concepto" = CONST(Deducciones),
                                                                    Total = FILTER(<> 0),
-                                                                   "Texto Informativo" = CONST(No)));
+                                                                   "Texto Informativo" = CONST(No)));*/
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
         field(101; "Total Ingresos"; Decimal)
         {
+            //TODO: Ver 
+            /*
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
                                                                    "de nomina" = FIELD("Tipo de nomina"),
                                                                    "Tipo concepto" = CONST(Ingresos),
                                                                    Total = FILTER(<> 0),
-                                                                   "Texto Informativo" = CONST(No)));
+                                                                   "Texto Informativo" = CONST(No)));*/
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
@@ -184,7 +188,7 @@ table 34002117 "Historico Cab. nomina"
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. Documento" = FIELD("Empresa cotización"),
                                                                    "No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
-                                                                   "Salario Base" = CONST(Yes)));
+                                                                   "Salario Base" = CONST(True)));
             FieldClass = FlowField;
         }
         field(152; "Tipo Empleado"; Option)
@@ -231,9 +235,9 @@ table 34002117 "Historico Cab. nomina"
         field(161; "Sub-Departamento"; Code[20])
         {
             Caption = 'Sub-Department';
-            TableRelation = Sub-Departamentos.Codigo WHERE ("Cod. Departamento"=FIELD("Departamento"));
+            TableRelation = "Sub-Departamentos".Codigo WHERE("Cod. Departamento" = FIELD("Departamento"));
         }
-        field(480;"Dimension Set ID";Integer)
+        field(480; "Dimension Set ID"; Integer)
         {
             Caption = 'Dimension Set ID';
             Editable = false;
@@ -243,28 +247,28 @@ table 34002117 "Historico Cab. nomina"
 
     keys
     {
-        key(Key1;Ano,"No. empleado","Período","Job No.","Tipo de nomina")
+        key(Key1; Ano, "No. empleado", "Período", "Job No.", "Tipo de nomina")
         {
         }
-        key(Key2;Ano,"Período","No. empleado")
+        key(Key2; Ano, "Período", "No. empleado")
         {
         }
-        key(Key3;"No. empleado",Ano,"Período","Tipo de nomina")
+        key(Key3; "No. empleado", Ano, "Período", "Tipo de nomina")
         {
         }
-        key(Key4;"No. Documento",Ano,"Período","No. empleado","Tipo de nomina")
+        key(Key4; "No. Documento", Ano, "Período", "No. empleado", "Tipo de nomina")
         {
         }
-        key(Key5;"Período","Shortcut Dimension 1 Code",Nombre)
+        key(Key5; "Período", "Shortcut Dimension 1 Code", Nombre)
         {
         }
-        key(Key6;Nombre)
+        key(Key6; Nombre)
         {
         }
-        key(Key7;"Forma de Cobro",Departamento,"Sub-Departamento")
+        key(Key7; "Forma de Cobro", Departamento, "Sub-Departamento")
         {
         }
-        key(Key8;Departamento,"Sub-Departamento")
+        key(Key8; Departamento, "Sub-Departamento")
         {
         }
     }
@@ -296,14 +300,14 @@ table 34002117 "Historico Cab. nomina"
         DimSet: Record 480;
     begin
         LinNomina.RESET;
-        LinNomina.SETRANGE("No. empleado","No. empleado");
-        LinNomina.SETRANGE(Período,Período);
-        LinNomina.SETRANGE("Tipo de nomina","Tipo de nomina");
-        LinNomina.SETRANGE("Job No.","Job No.");
-        IF LinNomina.FINDSET(TRUE,FALSE) THEN
-           REPEAT
-            LinNomina.DELETE();
-           UNTIL LinNomina.NEXT = 0;
+        LinNomina.SETRANGE("No. empleado", "No. empleado");
+        LinNomina.SETRANGE(Período, Período);
+        LinNomina.SETRANGE("Tipo de nomina", "Tipo de nomina");
+        LinNomina.SETRANGE("Job No.", "Job No.");
+        IF LinNomina.FINDSET(TRUE, FALSE) THEN
+            REPEAT
+                LinNomina.DELETE();
+            UNTIL LinNomina.NEXT = 0;
         DELETE;
     end;
 
@@ -315,24 +319,24 @@ table 34002117 "Historico Cab. nomina"
         //TraeDivisa
         ConfNominas.GET('');
         IF ConfNominas."Concepto Incentivos" <> '' THEN BEGIN
-          "Cód. divisa" := ConfNominas."Concepto Incentivos";
-          CalculoInvertido := FALSE;
+            "Cód. divisa" := ConfNominas."Concepto Incentivos";
+            CalculoInvertido := FALSE;
         END ELSE BEGIN
-          "Cód. divisa" := ConfNominas."Incidencias Dto. Nomina";
-          CalculoInvertido := TRUE;
+            "Cód. divisa" := ConfNominas."Incidencias Dto. Nomina";
+            CalculoInvertido := TRUE;
         END;
         IF "Cód. divisa" <> '' THEN BEGIN
-          Divisa.GET("Cód. divisa");
-          Divisa.TESTFIELD("Amount Rounding Precision");
+            Divisa.GET("Cód. divisa");
+            Divisa.TESTFIELD("Amount Rounding Precision");
         END;
 
         IF CalculoInvertido THEN
-          Divisa.InitRoundingPrecision;
+            Divisa.InitRoundingPrecision;
     end;
 
     procedure ShowDimensions()
     begin
-        DimMgt.ShowDimensionSet("Dimension Set ID",STRSUBSTNO('%1 %2 %3',TABLECAPTION,"No. Documento","No. empleado"));
+        DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. empleado"));
     end;
 }
 

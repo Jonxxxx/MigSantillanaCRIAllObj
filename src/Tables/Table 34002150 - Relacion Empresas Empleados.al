@@ -25,8 +25,10 @@ table 34002150 "Relacion Empresas Empleados"
             trigger OnLookup()
             var
                 Empl: Record 5200;
-                frmListaEmpl: Page 34002202;
+            //TODO: Ver frmListaEmpl: Page 34002202;
             begin
+                //TODO: Ver
+                /*
                 frmListaEmpl.ParamCompany(Empresa);
                 frmListaEmpl.LOOKUPMODE(TRUE);
                 IF frmListaEmpl.RUNMODAL = ACTION::LookupOK THEN BEGIN
@@ -36,7 +38,7 @@ table 34002150 "Relacion Empresas Empleados"
                         MODIFY(TRUE);
                 END;
 
-                CLEAR(frmListaEmpl);
+                CLEAR(frmListaEmpl);*/
             end;
         }
     }

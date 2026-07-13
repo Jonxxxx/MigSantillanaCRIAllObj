@@ -115,7 +115,7 @@ table 34002159 "Hist. Acciones de personal"
         {
             Caption = 'New department';
             DataClassification = ToBeClassified;
-            TableRelation = Departamentos WHERE(Inhabilitado = CONST(No));
+            TableRelation = Departamentos WHERE(Inhabilitado = CONST(False));
         }
         field(19; "Nombre depto. nuevo"; Text[60])
         {
@@ -442,14 +442,14 @@ table 34002159 "Hist. Acciones de personal"
         AccP: Record 34002114;
         Cargos: Record 34002110;
         NivelesCargos: Record 34002120;
-        NivelCargo: Page 34002166;
+        //TODO: Ver NivelCargo: Page 34002166;
         Depto: Record 34002135;
         Empresas: Record 2000000006;
         Autorizacion: Record 34002154;
         Err002: Label 'Document can not be deleted';
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        FuncNominas: Codeunit 34002104;
+        //TODO: Ver FuncNominas: Codeunit 34002104;
         Err004: Label '$1 is invalid, please verify';
 }
 

@@ -290,9 +290,11 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'G/L account for other payments';
             DataClassification = ToBeClassified;
-            TableRelation = IF ("Tipo Cta.Otros Pagos" = CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF ("Tipo Cta. Otros Pagos" = CONST(Banco)) "Bank Account".No.
-                            ELSE IF ("Tipo Cta. Otros Pagos" = CONST(Proveedor)) Vendor.No.;
+            //TODO: Ver 
+            /*
+            TableRelation = IF ("Tipo Cta.Otros Pagos" = CONST(Cuenta)) "G/L Account"."No."
+            ELSE IF ("Tipo Cta. Otros Pagos" = CONST(Banco)) "Bank Account"."No."
+            ELSE IF ("Tipo Cta. Otros Pagos" = CONST(Proveedor)) Vendor."No.";*/
         }
         field(49; "Web Page TSS"; Text[150])
         {
@@ -366,7 +368,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Payroll calculation codeunit';
             DataClassification = ToBeClassified;
-            TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
         }
         field(62; "Nomina de Pais"; Code[10])
         {
@@ -400,7 +402,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Codeunit Electronic files';
             DataClassification = ToBeClassified;
-            TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
         }
         field(68; "Dimension Empleado"; Code[20])
         {
@@ -445,7 +447,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Payroll report ID';
             DataClassification = ToBeClassified;
-            TableRelation = Object.ID WHERE(Type = CONST(Report));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
         field(72; "Proceso recalculo ISR automat."; Boolean)
         {
@@ -505,7 +507,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'ID Xmlport to import time attendance';
             DataClassification = ToBeClassified;
-            TableRelation = Object.ID WHERE(Type = CONST(XMLport));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(XMLport));
         }
         field(89; "Tiempo minimo prest. coop."; DateFormula)
         {
@@ -556,7 +558,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Time attendance Process CU';
             DataClassification = ToBeClassified;
-            TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
         }
         field(99; "Completar horas ponchador"; Boolean)
         {

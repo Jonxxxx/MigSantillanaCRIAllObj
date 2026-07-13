@@ -14,9 +14,9 @@ table 34002188 "Rating Evaluacion"
         {
             Caption = 'Profile Questionnaire Line No.';
             NotBlank = true;
-            TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
-                                                                             Type = CONST(Question),
-                                                                             "Class. Field" = CONST(Rating));
+            //TODO: Ver TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
+            //TODO: Ver                                                                  Type = CONST(Question),
+            //TODO: Ver                                                                  "Class. Field" = CONST(Rating));
         }
         field(3; "Rating Profile Quest. Code"; Code[20])
         {

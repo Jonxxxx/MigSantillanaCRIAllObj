@@ -15,8 +15,8 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
                 ConfNominas.GET;
                 IF "No. Prestamo" = '' THEN BEGIN
                     ConfNominas.TESTFIELD("No. serie CxC");
-                    GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
-                                          "No. Prestamo", ConfNominas."No. serie reg. CxC");
+                    //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
+                    //TODO: Ver                       "No. Prestamo", ConfNominas."No. serie reg. CxC");
                 END;
             end;
         }
@@ -42,7 +42,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         {
             Caption = 'Loan type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST("Tipo de préstamo"));
         }
         field(6; Importe; Decimal)
         {
@@ -75,46 +75,46 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No."=FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }
-        field(14;"Concepto Salarial";Code[20])
+        field(14; "Concepto Salarial"; Code[20])
         {
             Caption = 'Wage Code';
             DataClassification = ToBeClassified;
             TableRelation = "Conceptos salariales".Código;
         }
-        field(15;"Importe Pendiente";Decimal)
+        field(15; "Importe Pendiente"; Decimal)
         {
-            CalcFormula = Sum("Mov. cooperativa".Importe WHERE ("No. documento"=FIELD("No. Prestamo"),
-                                                                "Tipo transaccion"=FILTER(>Aporte)));
+            CalcFormula = Sum("Mov. cooperativa".Importe WHERE("No. documento" = FIELD("No. Prestamo"),
+                                                                "Tipo transaccion" = FILTER(> Aporte)));
             Caption = 'Remaining amount';
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
-        field(16;Pendiente;Boolean)
+        field(16; Pendiente; Boolean)
         {
             Caption = 'Open';
             Editable = true;
         }
-        field(17;"Motivo de cierre";Text[250])
+        field(17; "Motivo de cierre"; Text[250])
         {
             Caption = 'Reason to close';
         }
-        field(18;"No. Solicitud prestamo";Code[20])
+        field(18; "No. Solicitud prestamo"; Code[20])
         {
             Caption = 'Loan Serial No.';
             DataClassification = ToBeClassified;
         }
-        field(25;Status;Option)
+        field(25; Status; Option)
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
             OptionCaption = 'Active,Paused,Completed';
             OptionMembers = Activo,Pausado,Completado;
         }
-        field(26;"Fecha de pausa";Date)
+        field(26; "Fecha de pausa"; Date)
         {
             Caption = 'Pause date';
             DataClassification = ToBeClassified;
@@ -123,13 +123,13 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
 
     keys
     {
-        key(Key1;"No. Prestamo")
+        key(Key1; "No. Prestamo")
         {
         }
-        key(Key2;"Employee No.","No. Prestamo")
+        key(Key2; "Employee No.", "No. Prestamo")
         {
         }
-        key(Key3;"Employee No.","Fecha Inicio Deduccion")
+        key(Key3; "Employee No.", "Fecha Inicio Deduccion")
         {
         }
     }
@@ -140,6 +140,6 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
 
     var
         ConfNominas: Record 34002103;
-        GestNoSerie: Codeunit 396;
+        GestNoSerie: Codeunit "No. Series";
 }
 

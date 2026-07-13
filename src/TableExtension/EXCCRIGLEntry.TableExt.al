@@ -38,6 +38,8 @@ tableextension 50007 EXCCRIGLEntry extends "G/L Entry"
 
     keys
     {
+        //TODO: Ver 
+        /*
         key(EXCCRIProvisionedCustomer; "No. Mov. cliente provisionado", "Document Date")
         {
             SumIndexFields = Amount;
@@ -45,6 +47,6 @@ tableextension 50007 EXCCRIGLEntry extends "G/L Entry"
         key(EXCCRISourceProvisioned; "Source No.", "Document Date", "No. Mov. cliente provisionado", "Source Type")
         {
             SumIndexFields = Amount;
-        }
+        }*/
     }
 }

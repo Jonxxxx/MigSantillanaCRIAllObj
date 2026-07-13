@@ -215,18 +215,18 @@ table 34002176 "Payroll Letters"
 
     end;
 
-    local procedure GetWordXML(var TempBlob: Record 99008535)
+    local procedure GetWordXML(var TempBlob: Codeunit "Temp Blob")
     var
         OutStr: OutStream;
     begin
         TESTFIELD("Report ID");
-        TempBlob.Blob.CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
+        //TODO: Ver TempBlob.Blob.CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
         OutStr.WRITETEXT(REPORT.WORDXMLPART("Report ID"));
     end;
 
     procedure ExportSchema(DefaultFileName: Text; ShowFileDialog: Boolean): Text
     var
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
         FileMgt: Codeunit 419;
     begin
         TESTFIELD(Type, Type::Word);
@@ -234,18 +234,21 @@ table 34002176 "Payroll Letters"
         IF DefaultFileName = '' THEN
             DefaultFileName := '*.xml';
 
-        GetWordXML(TempBlob);
-        IF TempBlob.Blob.HASVALUE THEN
-            EXIT(FileMgt.BLOBExport(TempBlob, DefaultFileName, ShowFileDialog));
+        //TODO: Ver GetWordXML(TempBlob);
+        //TODO: Ver IF TempBlob.Blob.HASVALUE THEN
+        EXIT(FileMgt.BLOBExport(TempBlob, DefaultFileName, ShowFileDialog));
     end;
 
     procedure EditLayout()
     begin
 
+        //TODO: Ver 
+        /*
         CASE Type OF
             Type::Word:
                 CODEUNIT.RUN(CODEUNIT::"Edit MS Word Report Layout", Rec);
         END;
+        */
     end;
 
     local procedure GetFileExtension(): Text[4]

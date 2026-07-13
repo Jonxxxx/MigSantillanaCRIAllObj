@@ -61,35 +61,35 @@ table 34002192 "Employee Profile Answer"
         }
         field(7; "Employee Full Name"; Text[50])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Employee Full Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(8;"Profile Questionnaire Priority";Option)
+        field(8; "Profile Questionnaire Priority"; Option)
         {
             Caption = 'Profile Questionnaire Priority';
             Editable = false;
             OptionCaption = 'Very Low,Low,Normal,High,Very High';
             OptionMembers = "Very Low",Low,Normal,High,"Very High";
         }
-        field(9;"Answer Priority";Option)
+        field(9; "Answer Priority"; Option)
         {
             Caption = 'Answer Priority';
             OptionCaption = 'Very Low (Hidden),Low,Normal,High,Very High';
             OptionMembers = "Very Low (Hidden)",Low,Normal,High,"Very High";
         }
-        field(10;"Last Date Updated";Date)
+        field(10; "Last Date Updated"; Date)
         {
             Caption = 'Last Date Updated';
         }
-        field(11;"Questions Answered (%)";Decimal)
+        field(11; "Questions Answered (%)"; Decimal)
         {
             BlankZero = true;
             Caption = 'Questions Answered (%)';
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
         }
-        field(5088;"Profile Questionnaire Value";Text[250])
+        field(5088; "Profile Questionnaire Value"; Text[250])
         {
             Caption = 'Profile Questionnaire Value';
         }
@@ -97,13 +97,13 @@ table 34002192 "Employee Profile Answer"
 
     keys
     {
-        key(Key1;"Employee No.","Profile Questionnaire Code","Line No.")
+        key(Key1; "Employee No.", "Profile Questionnaire Code", "Line No.")
         {
         }
-        key(Key2;"Employee No.","Answer Priority","Profile Questionnaire Priority")
+        key(Key2; "Employee No.", "Answer Priority", "Profile Questionnaire Priority")
         {
         }
-        key(Key3;"Profile Questionnaire Code","Line No.")
+        key(Key3; "Profile Questionnaire Code", "Line No.")
         {
         }
     }
@@ -117,13 +117,13 @@ table 34002192 "Employee Profile Answer"
         Employee: Record 5200;
         ProfileQuestnLine: Record 34002185;
     begin
-        ProfileQuestnLine.GET("Profile Questionnaire Code",QuestionLineNo);
-        ProfileQuestnLine.TESTFIELD("Auto Employee Classification",FALSE);
+        ProfileQuestnLine.GET("Profile Questionnaire Code", QuestionLineNo);
+        ProfileQuestnLine.TESTFIELD("Auto Employee Classification", FALSE);
 
         IF PartOfRating THEN BEGIN
-          DELETE;
-          UpdateEmpClassification.UpdateRating("Employee No.");
-          INSERT;
+            DELETE;
+            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
+            INSERT;
         END;
 
         //Esto es para poner la ult. hora de modif. Employee.TouchEmployee("Employee No.");
@@ -137,33 +137,33 @@ table 34002192 "Employee Profile Answer"
         ProfileQuestnLine2: Record 34002185;
         ProfileQuestnLine3: Record 34002185;
     begin
-        ProfileQuestnLine.GET("Profile Questionnaire Code","Line No.");
-        ProfileQuestnLine.TESTFIELD(Type,ProfileQuestnLine.Type::Answer);
+        ProfileQuestnLine.GET("Profile Questionnaire Code", "Line No.");
+        ProfileQuestnLine.TESTFIELD(Type, ProfileQuestnLine.Type::Answer);
 
-        ProfileQuestnLine2.GET("Profile Questionnaire Code",QuestionLineNo);
-        ProfileQuestnLine2.TESTFIELD("Auto Employee Classification",FALSE);
+        ProfileQuestnLine2.GET("Profile Questionnaire Code", QuestionLineNo);
+        ProfileQuestnLine2.TESTFIELD("Auto Employee Classification", FALSE);
 
         IF NOT ProfileQuestnLine2."Multiple Answers" THEN BEGIN
-          EmpProfileAnswer.RESET;
-          ProfileQuestnLine3.RESET;
-          ProfileQuestnLine3.SETRANGE("Profile Questionnaire Code","Profile Questionnaire Code");
-          ProfileQuestnLine3.SETRANGE(Type,ProfileQuestnLine3.Type::Question);
-          ProfileQuestnLine3.SETFILTER("Line No.",'>%1',ProfileQuestnLine2."Line No.");
-          IF ProfileQuestnLine3.FINDFIRST THEN
-            EmpProfileAnswer.SETRANGE(
-              "Line No.",ProfileQuestnLine2."Line No.",ProfileQuestnLine3."Line No.")
-          ELSE
-            EmpProfileAnswer.SETFILTER("Line No.",'>%1',ProfileQuestnLine2."Line No.");
-          EmpProfileAnswer.SETRANGE("Employee No.","Employee No.");
-          EmpProfileAnswer.SETRANGE("Profile Questionnaire Code","Profile Questionnaire Code");
-          IF NOT EmpProfileAnswer.ISEMPTY THEN
-            ERROR(Text000,ProfileQuestnLine2.FIELDCAPTION("Multiple Answers"));
+            EmpProfileAnswer.RESET;
+            ProfileQuestnLine3.RESET;
+            ProfileQuestnLine3.SETRANGE("Profile Questionnaire Code", "Profile Questionnaire Code");
+            ProfileQuestnLine3.SETRANGE(Type, ProfileQuestnLine3.Type::Question);
+            ProfileQuestnLine3.SETFILTER("Line No.", '>%1', ProfileQuestnLine2."Line No.");
+            IF ProfileQuestnLine3.FINDFIRST THEN
+                EmpProfileAnswer.SETRANGE(
+                  "Line No.", ProfileQuestnLine2."Line No.", ProfileQuestnLine3."Line No.")
+            ELSE
+                EmpProfileAnswer.SETFILTER("Line No.", '>%1', ProfileQuestnLine2."Line No.");
+            EmpProfileAnswer.SETRANGE("Employee No.", "Employee No.");
+            EmpProfileAnswer.SETRANGE("Profile Questionnaire Code", "Profile Questionnaire Code");
+            IF NOT EmpProfileAnswer.ISEMPTY THEN
+                ERROR(Text000, ProfileQuestnLine2.FIELDCAPTION("Multiple Answers"));
         END;
 
         IF PartOfRating THEN BEGIN
-          INSERT;
-          UpdateEmpClassification.UpdateRating("Employee No.");
-          DELETE;
+            INSERT;
+            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
+            DELETE;
         END;
 
         //Esto es para poner la ult. hora de modif. Employee.TouchEmployee("Employee No.");
@@ -194,7 +194,7 @@ table 34002192 "Employee Profile Answer"
 
     var
         Text000: Label 'This Question does not allow %1.';
-        UpdateEmpClassification: Report 34002170;
+    //TODO: Ver UpdateEmpClassification: Report 34002170;
 
     [Scope('Personalization')]
     procedure Question(): Text[50]
