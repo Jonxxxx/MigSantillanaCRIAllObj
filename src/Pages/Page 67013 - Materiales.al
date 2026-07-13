@@ -12,7 +12,7 @@ page 67013 Materiales
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

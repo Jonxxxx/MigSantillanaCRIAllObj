@@ -967,6 +967,8 @@ xmlport 56200 "Web Service MdE"
         }
     }
 
+    //TOOD: Ver 
+    /*
     trigger OnInitXmlPort()
     begin
         GLOBALLANGUAGE := 2058; // ESM (es-MX)
@@ -1074,7 +1076,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure CreateEmployee(FromModifyEmployee: Boolean)
     var
-        Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 34002109;
         Create: Boolean;
         NoOrden: Integer;
         Found: Boolean;
@@ -1094,122 +1096,7 @@ xmlport 56200 "Web Service MdE"
             Employee.RESET;
         END;
 
-        //-#81969
-        /*
-        // Campos tabla 5200 "Employee"
-        Employee.Company := EmpCotiz."Empresa cotización";
-        UpdateTextField(Employee."Numero de persona", Numero_persona, 0, 'Numero_persona', Employee.FIELDCAPTION("Numero de persona"),MAXSTRLEN(Employee."Numero de persona"));
-        Employee."First Name" := COPYSTR(Nombre, 1, MAXSTRLEN(Employee."First Name"));
-        Employee."Last Name" := COPYSTR(Primer_apellido, 1, MAXSTRLEN(Employee."Last Name"));
-        Employee."Second Last Name" := COPYSTR(Segundo_apellido, 1, MAXSTRLEN(Employee."Second Last Name"));
-        IF IsOk THEN
-          Employee.VALIDATE("Full Name");
         
-        UpdateDateField(Employee."Employment Date", Fecha_antiguedad_reconocida, 0, 'Fecha_antiguedad_reconocida', Employee.FIELDCAPTION("Employment Date"));
-        UpdateOptField(Employee."Document Type", Tipo_documento, 0, 'Tipo_documento', Employee.FIELDCAPTION("Document Type"));
-        UpdateTextField(Employee."Document ID", Numero_documento, 0, 'Numero_documento', Employee.FIELDCAPTION("Document ID"),MAXSTRLEN(Employee."Document ID"));
-        UpdateOptField(Employee.Gender, Genero, 0, 'Genero', Employee.FIELDCAPTION(Gender));
-        UpdateOptField(Employee."Estado civil", Estado_civil, 0, 'Estado_civil', Employee.FIELDCAPTION("Estado civil"));
-        UpdateDateField(Employee."Birth Date", Fecha_nacimiento, 0, 'Fecha_nacimiento', Employee.FIELDCAPTION("Birth Date"));
-        UpdateTextField(Employee."Lugar nacimiento", COPYSTR(Provincia_nacimiento + '-' + Pais_nacimiento,1,MAXSTRLEN(Employee."Lugar nacimiento")),
-         0, 'Provincia_nacimiento y Pais_nacimiento', Employee.FIELDCAPTION("Lugar nacimiento"),MAXSTRLEN(Employee."Lugar nacimiento"));
-        
-        IF IsOk THEN
-          Employee.VALIDATE("Birth Date");
-        
-        UpdateCodeField(Employee.Nacionalidad, Nacionalidad, DATABASE::"Country/Region", 'Nacionalidad', Employee.FIELDCAPTION(Nacionalidad),MAXSTRLEN(Employee.Nacionalidad),'');
-        UpdateCodeField(Employee."Country/Region Code", Pais, DATABASE::"Country/Region", 'Pais', Employee.FIELDCAPTION("Country/Region Code"),MAXSTRLEN(Employee."Country/Region Code"),'');
-        UpdateTextField(Employee.Address, Nombre_calle, 0, 'Nombre_calle', Employee.FIELDCAPTION(Address),MAXSTRLEN(Employee.Address));
-        UpdateTextField(Employee.City, Ciudad, 0, 'Ciudad', Employee.FIELDCAPTION(City),MAXSTRLEN(Employee.City));
-        UpdateCodeField(Employee."Post Code", Codigo_postal, DATABASE::"Post Code", 'Codigo_postal', Employee.FIELDCAPTION("Post Code"),MAXSTRLEN(Employee."Post Code"),'');
-        UpdateTextField(Employee.County, Provincia, 0, 'Provincia', Employee.FIELDCAPTION(County),MAXSTRLEN(Employee.County));
-        UpdateTextField(Employee."E-Mail", Direccion, 0, 'Direccion', Employee.FIELDCAPTION("E-Mail"),MAXSTRLEN(Employee."E-Mail"));
-        UpdateTextField(Employee."Phone No.", Numero_telefono, 0, 'Numero_telefono', Employee.FIELDCAPTION("Phone No."),MAXSTRLEN(Employee."Phone No."));
-        
-        IF ConfSant."Posicion MdE" = ConfSant."Posicion MdE"::"Puesto laboral" THEN
-          UpdateCodeField(Employee."Job Type Code", Posicion, DATABASE::"Puestos laborales", 'Posicion', Employee.FIELDCAPTION("Job Type Code"),MAXSTRLEN(Employee."Job Type Code"),'');
-        UpdateCodeField(Employee."Working Center", Centro_trabajo, DATABASE::"Centros de Trabajo", 'Centro_trabajo', Employee.FIELDCAPTION("Working Center"),MAXSTRLEN(Employee."Working Center"),'');
-        UpdateOptField(Employee.Categoria, Categoria_grupo, 0, 'Categoria_grupo', Employee.FIELDCAPTION(Categoria));
-        UpdateCodeField(Employee."Emplymt. Contract Code", Tipo_contrato_grupo, DATABASE::"Employment Contract", 'Tipo_contrato_grupo', Employee.FIELDCAPTION("Emplymt. Contract Code"),MAXSTRLEN(Employee."Emplymt. Contract Code"),'');
-        
-        // Campos configurables (division)
-        IF ConfSant."Departamento MdE" = ConfSant."Departamento MdE"::Division THEN
-          UpdateCodeField(Employee.Departamento, Departamento, DATABASE::Departamentos, 'Departamento', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        IF ConfSant."Division MdE" = ConfSant."Division MdE"::Division THEN
-          UpdateCodeField(Employee.Departamento, Division, DATABASE::Departamentos, 'Division', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        IF ConfSant."Area funcional MdE" = ConfSant."Area funcional MdE"::Division THEN
-          UpdateCodeField(Employee.Departamento, Area_funcional_grupo, DATABASE::Departamentos, 'Area_funcional_grupo', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        
-        IF NOT IsOk THEN
-          EXIT;
-        
-        Employee."Calcular Nomina" := TRUE;
-        
-        Employee.SetFromMde(TRUE);
-        IF Create THEN BEGIN
-          IF NOT Employee.INSERT(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorInsert+ErrorInsertEmployee,Employee.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END
-        ELSE BEGIN
-          IF NOT Employee.MODIFY(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorModify,Employee.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END;
-        
-        IF Employee."Job Type Code" <> '' THEN BEGIN
-          Employee.VALIDATE("Job Type Code");
-          IF NOT Employee.MODIFY(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorModify,Employee.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END;
-        
-        EmployeeNo := Employee."No.";
-        
-        // Campos configurables (dimension)
-        IF ConfSant."Departamento MdE" = ConfSant."Departamento MdE"::Dimension THEN
-          UpdateCodeField(CodeValue, Departamento, DATABASE::"Dimension Value", 'Departamento', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Departamento"),MAXSTRLEN(CodeValue),ConfSant."Dimension Departamento");
-        IF ConfSant."Division MdE" = ConfSant."Division MdE"::Dimension THEN
-          UpdateCodeField(CodeValue, Division, DATABASE::"Dimension Value", 'Division', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Division"),MAXSTRLEN(CodeValue),ConfSant."Dimension Division");
-        IF ConfSant."Area funcional MdE" = ConfSant."Area funcional MdE"::Dimension THEN
-          UpdateCodeField(CodeValue, Area_funcional_grupo, DATABASE::"Dimension Value", 'Area_funcional_grupo', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Area funcional"),MAXSTRLEN(CodeValue),ConfSant."Dimension Area funcional");
-        
-        Employee.FIND; // refrescamos empleado, puede haberse actualizado con la actualización de una dimensión global
-        
-        // Campos tabla 34002109 "Contratos"
-        Contrato.SETRANGE("No. empleado", EmployeeNo);
-        IF Contrato.FINDLAST THEN
-          NoOrden := Contrato."No. Orden" + 100
-        ELSE
-          NoOrden := 100;
-        
-        Contrato.INIT;
-        Contrato."No. empleado" := EmployeeNo;
-        Contrato."No. Orden" := NoOrden;
-        Contrato.VALIDATE("Cód. contrato", Employee."Emplymt. Contract Code");
-        Contrato."Tipo Pago Nomina" := EmpCotiz."Tipo Pago Nomina";
-        Contrato.SetFromMde(TRUE);
-        IF NOT Contrato.INSERT(TRUE) THEN BEGIN
-          AddError(STRSUBSTNO(ErrorInsert,Contrato.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-          EXIT;
-        END;
-        
-        UpdateDateField(Contrato."Fecha inicio", Fecha_inicio_contrato, 0, 'Fecha_inicio_contrato', Contrato.FIELDCAPTION("Fecha inicio"));
-        IF IsOk THEN
-          Contrato.VALIDATE("Fecha inicio");
-        UpdateDateField(Contrato."Fecha finalización", Fecha_fin_contrato, 0, 'Fecha_fin_contrato', Contrato.FIELDCAPTION("Fecha finalización"));
-        IF IsOk THEN BEGIN
-          Contrato.VALIDATE("Fecha finalización");
-          Contrato.SetFromMde(TRUE);
-          IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorModify,Contrato.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END;
-        */
 
         CreateDefaultDim := FALSE;
         UpdateMdEHistory;
@@ -1235,7 +1122,7 @@ xmlport 56200 "Web Service MdE"
 
     local procedure ModifyEmployee()
     var
-        Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 34002109;
         Found: Boolean;
         Recontratacion: Boolean;
     begin
@@ -1247,6 +1134,7 @@ xmlport 56200 "Web Service MdE"
 
         // Cuando recibimos un UPDATE y el empleado está de baja (o no hay línea de contrato) se entiende que es
         // una recontratación, si el motivo es una alta nueva, daremos el correspondiente error
+        
         Contrato.SETRANGE("No. empleado", EmployeeNo);
         Recontratacion := NOT Contrato.FIND('+');
         IF NOT Recontratacion AND (Contrato."Fecha finalización" <> 0D) THEN
@@ -1258,125 +1146,9 @@ xmlport 56200 "Web Service MdE"
                 CreateEmployee(TRUE);
             EXIT;
         END;
+       
 
-        //+#81969
-        /*
-        // Campos tabla 5200 "Employee"
-        IF Employee."Numero de persona" <> Numero_persona THEN
-          UpdateTextField(Employee."Numero de persona", Numero_persona, 0, 'Numero_persona', Employee.FIELDCAPTION("Numero de persona"),MAXSTRLEN(Employee."Numero de persona"));
-        IF Modified(M_nombre) THEN
-          Employee."First Name" := COPYSTR(Nombre, 1, MAXSTRLEN(Employee."First Name"));
-        IF Modified(M_primer_apellido) THEN
-          Employee."Last Name" := COPYSTR(Primer_apellido, 1, MAXSTRLEN(Employee."Last Name"));
-        IF Modified(M_segundo_apellido) THEN
-          Employee."Second Last Name" := COPYSTR(Segundo_apellido, 1, MAXSTRLEN(Employee."Second Last Name"));
-        Employee.VALIDATE("Full Name");
         
-        IF Modified(M_fecha_antiguedad_reconoci) THEN
-          UpdateDateField(Employee."Employment Date", Fecha_antiguedad_reconocida, 0, 'Fecha_antiguedad_reconocida', Employee.FIELDCAPTION("Employment Date"));
-        
-        IF Modified(M_tipo_documento) THEN
-          UpdateOptField(Employee."Document Type", Tipo_documento, 0, 'Tipo_documento', Employee.FIELDCAPTION("Document Type"));
-        IF Modified(M_numero_documento) THEN
-          UpdateTextField(Employee."Document ID", Numero_documento, 0, 'Numero_documento', Employee.FIELDCAPTION("Document ID"),MAXSTRLEN(Employee."Document ID"));
-        
-        IF Modified(M_genero) THEN
-          UpdateOptField(Employee.Gender, Genero, 0, 'Genero', Employee.FIELDCAPTION(Gender));
-        IF Modified(M_estado_civil) THEN
-          UpdateOptField(Employee."Estado civil", Estado_civil, 0, 'Estado_civil', Employee.FIELDCAPTION("Estado civil"));
-        IF Modified(M_fecha_nacimiento) THEN
-          UpdateDateField(Employee."Birth Date", Fecha_nacimiento, 0, 'Fecha_nacimiento', Employee.FIELDCAPTION("Birth Date"));
-        IF Modified(M_provincia_nacimiento) OR Modified(M_pais_nacimiento) THEN
-          UpdateTextField(Employee."Lugar nacimiento", COPYSTR(Provincia_nacimiento + '-' + Pais_nacimiento,1,MAXSTRLEN(Employee."Lugar nacimiento")),
-            0, 'Provincia_nacimiento y Pais_nacimiento', Employee.FIELDCAPTION("Lugar nacimiento"),MAXSTRLEN(Employee."Lugar nacimiento"));
-        
-        IF Modified(M_nacionalidad) THEN
-          UpdateCodeField(Employee.Nacionalidad, Nacionalidad, DATABASE::"Country/Region", 'Nacionalidad', Employee.FIELDCAPTION(Nacionalidad),MAXSTRLEN(Employee.Nacionalidad),'');
-        IF Modified(M_pais) THEN
-          UpdateCodeField(Employee."Country/Region Code", Pais, DATABASE::"Country/Region", 'Pais', Employee.FIELDCAPTION("Country/Region Code"),MAXSTRLEN(Employee."Country/Region Code"),'');
-        IF Modified(M_nombre_calle) THEN
-          UpdateTextField(Employee.Address, Nombre_calle, 0, 'Nombre_calle', Employee.FIELDCAPTION(Address),MAXSTRLEN(Employee.Address));
-        IF Modified(M_ciudad) THEN
-          UpdateTextField(Employee.City, Ciudad, 0, 'Ciudad', Employee.FIELDCAPTION(City),MAXSTRLEN(Employee.City));
-        IF Modified(M_codigo_postal) THEN
-          UpdateCodeField(Employee."Post Code", Codigo_postal, DATABASE::"Post Code", 'Codigo_postal', Employee.FIELDCAPTION("Post Code"),MAXSTRLEN(Employee."Post Code"),'');
-        IF Modified(M_provincia) THEN
-          UpdateTextField(Employee.County, Provincia, 0, 'Provincia', Employee.FIELDCAPTION(County),MAXSTRLEN(Employee.County));
-        
-        IF Modified(M_direccion) THEN
-          UpdateTextField(Employee."E-Mail", Direccion, 0, 'Direccion', Employee.FIELDCAPTION("E-Mail"),MAXSTRLEN(Employee."E-Mail"));
-        IF Modified(M_numero_telefono) THEN
-          UpdateTextField(Employee."Phone No.", Numero_telefono, 0, 'Numero_telefono', Employee.FIELDCAPTION("Phone No."),MAXSTRLEN(Employee."Phone No."));
-        
-        IF Modified(M_posicion) THEN
-          IF ConfSant."Posicion MdE" = ConfSant."Posicion MdE"::"Puesto laboral" THEN
-            UpdateCodeField(Employee."Job Type Code", Posicion, DATABASE::"Puestos laborales", 'Posicion', Employee.FIELDCAPTION("Job Type Code"),MAXSTRLEN(Employee."Job Type Code"),'');
-        
-        IF Modified(M_centro_trabajo) THEN
-          UpdateCodeField(Employee."Working Center", Centro_trabajo, DATABASE::"Centros de Trabajo", 'Centro_trabajo', Employee.FIELDCAPTION("Working Center"),MAXSTRLEN(Employee."Working Center"),'');
-        IF Modified(M_Categoria_grupo) THEN
-          UpdateOptField(Employee.Categoria, Categoria_grupo, 0, 'Categoria_grupo', Employee.FIELDCAPTION(Categoria));
-        IF Modified(M_tipo_contrato_grupo) THEN
-          UpdateCodeField(Employee."Emplymt. Contract Code", Tipo_contrato_grupo, DATABASE::"Employment Contract", 'Tipo_contrato_grupo', Employee.FIELDCAPTION("Emplymt. Contract Code"),MAXSTRLEN(Employee."Emplymt. Contract Code"),'');
-        
-        // Campos configurables (division)
-        IF Modified(M_departamento) AND (ConfSant."Departamento MdE" = ConfSant."Departamento MdE"::Division) THEN
-          UpdateCodeField(Employee.Departamento, Departamento, DATABASE::Departamentos, 'Departamento', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        IF Modified(M_division) AND (ConfSant."Division MdE" = ConfSant."Division MdE"::Division) THEN
-          UpdateCodeField(Employee.Departamento, Division, DATABASE::Departamentos, 'Division', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        IF Modified(M_area_funcional_grupo) AND (ConfSant."Area funcional MdE" = ConfSant."Area funcional MdE"::Division) THEN
-          UpdateCodeField(Employee.Departamento, Area_funcional_grupo, DATABASE::Departamentos, 'Area_funcional_grupo', Employee.FIELDCAPTION(Departamento),MAXSTRLEN(Employee.Departamento),'');
-        
-        IF NOT IsOk THEN
-          EXIT;
-        
-        Employee.SetFromMde(TRUE);
-        IF NOT Employee.MODIFY(TRUE) THEN BEGIN
-          AddError(STRSUBSTNO(ErrorModify,Employee.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-          EXIT;
-        END;
-        
-        // Campos configurables (dimension)
-        IF Modified(M_departamento) AND (ConfSant."Departamento MdE" = ConfSant."Departamento MdE"::Dimension) THEN
-          UpdateCodeField(CodeValue, Departamento, DATABASE::"Dimension Value", 'Departamento', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Departamento"),MAXSTRLEN(CodeValue),ConfSant."Dimension Departamento");
-        IF Modified(M_division) AND (ConfSant."Division MdE" = ConfSant."Division MdE"::Dimension) THEN
-          UpdateCodeField(CodeValue, Division, DATABASE::"Dimension Value", 'Division', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Division"),MAXSTRLEN(CodeValue),ConfSant."Dimension Division");
-        IF Modified(M_area_funcional_grupo) AND (ConfSant."Area funcional MdE" = ConfSant."Area funcional MdE"::Dimension) THEN
-          UpdateCodeField(CodeValue, Area_funcional_grupo, DATABASE::"Dimension Value", 'Area_funcional_grupo', STRSUBSTNO(DimensionTxt,ConfSant."Dimension Area funcional"),MAXSTRLEN(CodeValue),ConfSant."Dimension Area funcional");
-        
-        // Campos tabla 34002109 "Contratos"
-        Contrato.SETRANGE("No. empleado", Employee."No.");
-        IF NOT Contrato.FIND('+') THEN BEGIN
-          AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', Numero_persona), ErrorTipoDatos);
-          EXIT;
-        END;
-        
-        IF Modified(M_fecha_inicio_contrato) THEN
-          UpdateDateField(Contrato."Fecha inicio", Fecha_inicio_contrato, 0, 'Fecha_inicio_contrato', Contrato.FIELDCAPTION("Fecha inicio"));
-        IF Modified(M_fecha_fin_contrato) THEN
-          UpdateDateField(Contrato."Fecha finalización", Fecha_fin_contrato, 0, 'Fecha_fin_contrato', Contrato.FIELDCAPTION("Fecha finalización"));
-        IF Modified(M_tipo_baja) THEN
-          UpdateCodeField(Contrato."Motivo baja", Tipo_baja, DATABASE::"Grounds for Termination", 'Tipo_baja', Contrato.FIELDCAPTION("Motivo baja"),MAXSTRLEN(Contrato."Motivo baja"),'');
-        IF (Contrato."Fecha finalización" <> 0D) AND (Contrato."Fecha inicio" > Contrato."Fecha finalización") THEN BEGIN
-          AddError(STRSUBSTNO(ErrorFechas, Contrato."Fecha inicio", Contrato."Fecha finalización"), ErrorTipoDatos);
-          EXIT;
-        END;
-        IF Modified(M_tipo_contrato_grupo) THEN
-          Contrato.VALIDATE("Cód. contrato", Employee."Emplymt. Contract Code");
-        
-        IF IsOk THEN BEGIN
-          IF Modified(M_fecha_inicio_contrato) THEN
-            Contrato.VALIDATE("Fecha inicio");
-          IF Modified(M_fecha_fin_contrato) THEN
-            Contrato.VALIDATE("Fecha finalización");
-          Contrato.SetFromMde(TRUE);
-          IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorModify,Contrato.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END;
-        */
-
         CreateDefaultDim := FALSE;
         UpdateMdEHistory;
         CreateDefaultDim := TRUE;
@@ -1390,7 +1162,7 @@ xmlport 56200 "Web Service MdE"
             EXIT;
         END;
 
-        MdEHistory.ModifyEmployee(Employee);
+        //TOOD: Ver MdEHistory.ModifyEmployee(Employee);
         IsOk := MdEHistory.GetErrors(DescErrorArray, TipoErrorArray);
         //-#81969
 
@@ -1398,11 +1170,11 @@ xmlport 56200 "Web Service MdE"
 
     local procedure DeleteEmployee()
     var
-        Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 34002109;
     begin
         EmployeeNo := Numero_persona_sistema_loca;
         IF NOT Employee.GET(EmployeeNo) THEN BEGIN
-            Employee.SETRANGE("Numero de persona", Numero_persona);
+            //TOOD: Ver Employee.SETRANGE("Numero de persona", Numero_persona);
             IF NOT Employee.FIND('-') THEN BEGIN
                 AddError(STRSUBSTNO(ErrorEmployeeDoNotExist, 'Numero_persona', Numero_persona), ErrorTipoDatos);
                 EXIT;
@@ -1410,33 +1182,7 @@ xmlport 56200 "Web Service MdE"
             EmployeeNo := Employee."No.";
         END;
 
-        //+#81969
-        /*
-        Contrato.SETRANGE("No. empleado", EmployeeNo);
-        IF NOT Contrato.FIND('+') THEN BEGIN
-          AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', Numero_persona), ErrorTipoDatos);
-          EXIT;
-        END;
         
-        IF Modified(M_fecha_fin_contrato) THEN BEGIN
-          UpdateDateField(Contrato."Fecha finalización", Fecha_fin_contrato, 0, 'Fecha_fin_contrato', Contrato.FIELDCAPTION("Fecha finalización"));
-          IF IsOk THEN
-            Contrato.VALIDATE("Fecha finalización");
-        END;
-        IF Modified(M_tipo_baja) THEN
-          UpdateCodeField(Contrato."Motivo baja", Tipo_baja, DATABASE::"Grounds for Termination", 'Tipo_baja', Contrato.FIELDCAPTION("Motivo baja"),MAXSTRLEN(Contrato."Motivo baja"),'');
-        
-        IF IsOk THEN BEGIN
-          //Contrato.Activo := FALSE; // el usuario lo manipulará manualmente
-          Contrato.VALIDATE(Finalizado, TRUE);
-          Contrato.SetFromMde(TRUE);
-          IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
-            AddError(STRSUBSTNO(ErrorModify,Contrato.TABLECAPTION,Numero_persona), ErrorTipoDatos);
-            EXIT;
-          END;
-        END;
-        */
-
         CreateDefaultDim := FALSE;
         UpdateMdEHistory;
         CreateDefaultDim := TRUE;
@@ -1450,7 +1196,7 @@ xmlport 56200 "Web Service MdE"
             EXIT;
         END;
 
-        MdEHistory.DeleteEmployee(Employee);
+        //TOOD: Ver MdEHistory.DeleteEmployee(Employee);
         IsOk := MdEHistory.GetErrors(DescErrorArray, TipoErrorArray);
         //-#81969
 
@@ -1493,6 +1239,7 @@ xmlport 56200 "Web Service MdE"
     procedure CreateAsyncResponse()
     var
         XmlDomMgnt: Codeunit 6224;
+        
         XmlNsMgr: DotNet XmlNamespaceManager;
         XmlDoc: DotNet XmlDocument;
         XmlNode: DotNet XmlNode;
@@ -1504,6 +1251,7 @@ xmlport 56200 "Web Service MdE"
         XmlNode6: DotNet XmlNode;
         XmlNode7: DotNet XmlNode;
         XmlNode8: DotNet XmlNode;
+        
         MyDT: DateTime;
         i: Integer;
         Response: Text;
@@ -1581,15 +1329,7 @@ xmlport 56200 "Web Service MdE"
         XmlDomMgnt.AddElement(XmlNode1, 'body', '', NS, XmlNode2);
 
         // nivel 2
-        /*
-            XmlDomMgnt.AddElement(XmlNode2,'Sociedad',ConfSant."Cod. sociedad maestros Santill",NS,XmlNode3);
-            XmlDomMgnt.AddElement(XmlNode2,'EmpleadoSF',Numero_persona,NS,XmlNode3);
-            XmlDomMgnt.AddElement(XmlNode2,'EmpleadoSL',EmployeeNo,NS,XmlNode3);
-            XmlDomMgnt.AddElement(XmlNode2,'Estado',GetEstado(IsOk),NS,XmlNode3); //5: Failed, 4: Successful, 2: Pending
-        
-            XmlDomMgnt.AddElement(XmlNode2,'FechaIniRepl',FORMAT(MyDT,0,9),NS,XmlNode3); //hoy?
-            XmlDomMgnt.AddElement(XmlNode2,'FechaProcRepl',FORMAT(MyDT,0,9),NS,XmlNode3); //hoy?
-        */
+       
         IF IsOk THEN
             XmlDomMgnt.AddElement(XmlNode2, 'ok', '', NS, XmlNode3)
         ELSE
@@ -2088,5 +1828,6 @@ xmlport 56200 "Web Service MdE"
             END;
         END;
     end;
+    */
 }
 

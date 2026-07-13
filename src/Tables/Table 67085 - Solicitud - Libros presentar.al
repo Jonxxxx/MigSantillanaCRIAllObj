@@ -15,10 +15,10 @@ table 67085 "Solicitud - Libros presentar"
                 Item: Record 27;
             begin
                 IF Item.GET("Cod. Producto") THEN
-                    "Descripci n Producto" := Item.Description;
+                    "Descripcion Producto" := Item.Description;
             end;
         }
-        field(3; "Descripci n Producto"; Text[100])
+        field(3; "Descripcion Producto"; Text[100])
         {
         }
         field(4; "Horas por semana"; Decimal)

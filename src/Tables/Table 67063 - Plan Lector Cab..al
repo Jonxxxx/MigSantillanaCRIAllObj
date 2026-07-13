@@ -5,8 +5,8 @@ table 67063 "Plan Lector Cab."
     {
         field(1; "Cod. Colegio"; Code[10])
         {
-            TableRelation = Contact WHERE("Type" = CONST(Company),
-                                           "Tipo educacion" = CONST(true));
+            //TODO: Ver TableRelation = Contact WHERE("Type" = CONST(Company),
+            //TODO: Ver                               "Tipo educacion" = CONST(true));
 
             trigger OnValidate()
             var
@@ -17,16 +17,16 @@ table 67063 "Plan Lector Cab."
                 Colegio.SETRANGE(Colegio."No.", "Cod. Colegio");
                 IF Colegio.FINDFIRST THEN BEGIN
                     "Nombre Colegio" := Colegio.Name;
-                    Distrito := Colegio.Distritos;
-                    "Cod. Delegacion" := Colegio.Delegacion;
+                    //TODO: Ver Distrito := Colegio.Distritos;
+                    //TODO: Ver "Cod. Delegacion" := Colegio.Delegacion;
                     ConfAPS.GET;
                     ConfAPS.TESTFIELD("Cod. Dimension Delegacion");
                     DimVal.RESET;
                     DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Delegacion");
                     DimVal.SETRANGE("Dimension Value Type", DimVal."Dimension Value Type"::Standard);
-                    DimVal.SETRANGE(Code, Colegio.Delegacion);
+                    //TODO: Ver DimVal.SETRANGE(Code, Colegio.Delegacion);
                     IF DimVal.FINDFIRST THEN
-                        "Descripci n Delegacion" := DimVal.Name;
+                        "Descripcion Delegacion" := DimVal.Name;
 
 
                 END;
@@ -68,17 +68,17 @@ table 67063 "Plan Lector Cab."
         field(8; "Cod. Delegacion"; Code[20])
         {
         }
-        field(9; "Descripci n Delegacion"; Text[50])
+        field(9; "Descripcion Delegacion"; Text[50])
         {
         }
-        field(50; "Campa a"; Code[20])
+        field(50; "Campana"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1; "Campa a", "Cod. Colegio", "Cod. Local", "Cod. Turno")
+        key(Key1; "Campana", "Cod. Colegio", "Cod. Local", "Cod. Turno")
         {
         }
     }

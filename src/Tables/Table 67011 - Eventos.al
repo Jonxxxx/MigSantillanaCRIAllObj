@@ -122,11 +122,11 @@ table 67011 Eventos
         }
         field(20; "Descripcion Delegacion"; Text[60])
         {
-            Caption = 'Descripci n Delegaci n';
+            Caption = 'Descripcion Delegacion';
         }
         field(21; "Descripcion Tipo Evento"; Text[60])
         {
-            Caption = 'Descripci n Tipo Evento';
+            Caption = 'Descripcion Tipo Evento';
         }
     }
 
@@ -149,7 +149,7 @@ table 67011 Eventos
         IF "No." = '' THEN BEGIN
             ConfAPS.GET;
             ConfAPS.TESTFIELD("No. Serie Eventos");
-            NoSeriesMgt.InitSeries(ConfAPS."No. Serie Eventos", xRec."No. Series", 0D, "No.", "No. Series");
+            //TODO: Ver NoSeriesMgt.InitSeries(ConfAPS."No. Serie Eventos", xRec."No. Series", 0D, "No.", "No. Series");
         END;
 
         "Fecha creacion" := TODAY;
@@ -158,11 +158,11 @@ table 67011 Eventos
     var
         Evento: Record 67011;
         TipoEvento: Record 67010;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         DA: Record 67002;
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page 560;
+        DimForm: Page "Dimension Value List";
 
     procedure AssistEdit(OldEvent: Record 67011): Boolean
     var
@@ -172,13 +172,13 @@ table 67011 Eventos
             Evento := Rec;
             ConfAPS.GET;
             ConfAPS.TESTFIELD("No. Serie Profesores");
-            IF NoSeriesMgt.SelectSeries(ConfAPS."No. Serie Eventos", OldEvent."No. Series", "No. Series") THEN BEGIN
-                ConfAPS.GET;
-                ConfAPS.TESTFIELD("No. Serie Eventos");
-                NoSeriesMgt.SetSeries("No.");
-                Rec := Evento;
-                EXIT(TRUE);
-            END;
+            //TODO: Ver IF NoSeriesMgt.SelectSeries(ConfAPS."No. Serie Eventos", OldEvent."No. Series", "No. Series") THEN BEGIN
+            ConfAPS.GET;
+            ConfAPS.TESTFIELD("No. Serie Eventos");
+            //TODO: Ver     NoSeriesMgt.SetSeries("No.");
+            Rec := Evento;
+            EXIT(TRUE);
+            //TODO: Ver END;
         END;
     end;
 }

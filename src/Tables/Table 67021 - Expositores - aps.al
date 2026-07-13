@@ -250,9 +250,9 @@ table 67021 "Expositores - aps"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "No.", Name, Field53503, Field53502, City, "Document ID")
-        {
-        }
+        //TODO: Ver fieldgroup(DropDown; "No.", Name, Field53503, Field53502, City, "Document ID")
+        //TODO: Ver {
+        //TODO: Ver }
     }
 
     trigger OnDelete()
@@ -269,7 +269,7 @@ table 67021 "Expositores - aps"
         ContAltAddrDateRange: Record 5052;
         InteractLogEntry: Record 5065;
         Opp: Record 5092;
-        CampaignTargetGrMgt: Codeunit 7030;
+    //TODO: Ver CampaignTargetGrMgt: Codeunit 7030;
     begin
     end;
 
@@ -289,9 +289,9 @@ table 67021 "Expositores - aps"
         PostCode: Record 225;
         RecRef: RecordRef;
         xRecRef: RecordRef;
-        NoSeriesMgt: Codeunit 396;
-        ChangeLogMgt: Codeunit 423;
-        CampaignMgt: Codeunit 7030;
+        NoSeriesMgt: Codeunit "No. Series";
+        //TODO: Ver ChangeLogMgt: Codeunit 423;
+        //TODO: Ver CampaignMgt: Codeunit 7030;
         ContChanged: Boolean;
         SkipDefaults: Boolean;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';

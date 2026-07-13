@@ -268,7 +268,7 @@ table 50008 "Colegio - Adopciones Detalle2"
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2: Record 67026;
         DimVal: Record 349;
-        DimForm: Page 560;
+        DimForm: Page "Dimension Value List";
         LibroComp: Page 67025;
         DefDim: Record 352;
         ProdEdit: Record 67025;

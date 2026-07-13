@@ -8,7 +8,7 @@ page 67036 "Colegio - Nivel"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

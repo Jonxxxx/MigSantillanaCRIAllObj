@@ -18,7 +18,7 @@ page 56035 "Sales Order Call Center  List"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

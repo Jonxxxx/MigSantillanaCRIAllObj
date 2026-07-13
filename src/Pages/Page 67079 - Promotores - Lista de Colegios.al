@@ -10,7 +10,7 @@ page 67079 "Promotores - Lista de Colegios"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 IndentationControls = "Cod. Colegio";
                 field(Seleccionar; Seleccionar)

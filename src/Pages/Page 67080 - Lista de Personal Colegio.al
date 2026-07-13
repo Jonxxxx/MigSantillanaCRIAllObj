@@ -10,7 +10,7 @@ page 67080 "Lista de Personal Colegio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

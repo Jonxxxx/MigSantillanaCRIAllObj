@@ -10,11 +10,13 @@ page 50037 ListaDescuentoProntoPago
     PageType = List;
     Permissions = TableData 21 = r;
     SourceTable = 21;
+    //TODO: Ver 
+    /*
     SourceTableView = SORTING("Closed by Entry No.")
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),
-                            Pmt. Disc. Given (LCY)=FILTER(>0),
-                            "No. Comprobante Fiscal DPP"=FILTER(<>''));
+                            "Pmt. Disc. Given (LCY)"=FILTER(>0),
+                            "No. Comprobante Fiscal DPP"=FILTER(<>''));*/
     UsageCategory = Lists;
 
     layout
@@ -23,27 +25,27 @@ page 50037 ListaDescuentoProntoPago
         {
             repeater(Group)
             {
-                field("Customer No.";"Customer No.")
+                field("Customer No."; "Customer No.")
                 {
                 }
-                field("Salesperson Code";"Salesperson Code")
+                field("Salesperson Code"; "Salesperson Code")
                 {
                 }
-                field(DetailedCustLedgEntry."Posting Date";DetailedCustLedgEntry."Posting Date")
+                field("Posting Date"; DetailedCustLedgEntry."Posting Date")
                 {
                     Caption = 'Fecha Registro';
                 }
-                field(DetailedCustLedgEntry."Document No.";DetailedCustLedgEntry."Document No.")
+                field("Document No."; DetailedCustLedgEntry."Document No.")
                 {
                     Caption = 'Documento DPP';
                 }
-                field("Pmt. Disc. Given (LCY)";"Pmt. Disc. Given (LCY)")
+                field("Pmt. Disc. Given (LCY)"; "Pmt. Disc. Given (LCY)")
                 {
                 }
-                field("No. Comprobante Fiscal DPP";"No. Comprobante Fiscal DPP")
+                field("No. Comprobante Fiscal DPP"; "No. Comprobante Fiscal DPP")
                 {
                 }
-                field("Fecha vencimiento NCF DPP";"Fecha vencimiento NCF DPP")
+                field("Fecha vencimiento NCF DPP"; "Fecha vencimiento NCF DPP")
                 {
                 }
             }
@@ -66,11 +68,11 @@ page 50037 ListaDescuentoProntoPago
                 trigger OnAction()
                 begin
                     CLEAR(CustLedgEntry);
-                    CLEAR(ReporteDPPv2);
+                    //TODO: Ver CLEAR(ReporteDPPv2);
 
                     CurrPage.SETSELECTIONFILTER(CustLedgEntry);
-                    ReporteDPPv2.SETTABLEVIEW(CustLedgEntry);
-                    ReporteDPPv2.RUNMODAL;
+                    //TODO: Ver ReporteDPPv2.SETTABLEVIEW(CustLedgEntry);
+                    //TODO: Ver ReporteDPPv2.RUNMODAL;
                 end;
             }
             action("Discount Soon Payment by customer v2")
@@ -84,9 +86,9 @@ page 50037 ListaDescuentoProntoPago
 
                 trigger OnAction()
                 begin
-                    CLEAR(ReporteDPPXclientev2);
+                    //TODO: Ver CLEAR(ReporteDPPXclientev2);
 
-                    ReporteDPPXclientev2.RUNMODAL;
+                    //TODO: Ver ReporteDPPXclientev2.RUNMODAL;
                 end;
             }
         }
@@ -95,15 +97,15 @@ page 50037 ListaDescuentoProntoPago
     trigger OnAfterGetRecord()
     begin
         DetailedCustLedgEntry.RESET;
-        DetailedCustLedgEntry.SETRANGE("Cust. Ledger Entry No.","Closed by Entry No.");
-        DetailedCustLedgEntry.SETRANGE("Entry Type",DetailedCustLedgEntry."Entry Type"::"Payment Discount");
+        DetailedCustLedgEntry.SETRANGE("Cust. Ledger Entry No.", "Closed by Entry No.");
+        DetailedCustLedgEntry.SETRANGE("Entry Type", DetailedCustLedgEntry."Entry Type"::"Payment Discount");
         IF DetailedCustLedgEntry.FINDFIRST THEN;
     end;
 
     var
         DetailedCustLedgEntry: Record 379;
-        ReporteDPPv2: Report "50047;
-                          ReporteDPPXclientev2: Report "50048;
-                          CustLedgEntry: Record 21;
+        //TODO: Ver ReporteDPPv2: Report 50047;
+        //TODO: Ver ReporteDPPXclientev2: Report 50048;
+        CustLedgEntry: Record 21;
 }
 

@@ -9,8 +9,8 @@ table 75001 "Datos MDM"
         field(1; Tipo; Option)
         {
             Caption = 'Tipo';
-            OptionCaption = 'Tipo Producto,Soporte,Editora,Nivel,Plan Editorial,Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edici n,Estado,Campa a';
-            OptionMembers = "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,"Campa a";
+            OptionCaption = 'Tipo Producto,Soporte,Editora,Nivel,Plan Editorial,Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,Campana';
+            OptionMembers = "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,"Campana";
         }
         field(2; Codigo; Code[10])
         {
@@ -18,7 +18,7 @@ table 75001 "Datos MDM"
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Descripci n';
+            Caption = 'Descripcion';
         }
         field(4; "Codigo Relacionado"; Code[10])
         {
@@ -90,9 +90,9 @@ table 75001 "Datos MDM"
                     ELSE BEGIN
                         IF NOT lwEnc THEN BEGIN
                             CLEAR(lrNivelEd);
-                            lrNivelEd.C digo := Codigo;
+                            lrNivelEd.Codigo := Codigo;
                         END;
-                        lrNivelEd.Descripci n := Descripcion;
+                        lrNivelEd.Descripcion := Descripcion;
                         IF lwEnc THEN
                             lrNivelEd.MODIFY(TRUE)
                         ELSE

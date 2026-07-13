@@ -20,51 +20,49 @@ table 67004 "Promotor - Docentes"
         }
         field(4; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(5;"Nivel decision";Code[20])
+        field(5; "Nivel decision"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Nivel de decisi n"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
             begin
-                IF "Nivel decision" <> '' THEN
-                   BEGIN
+                IF "Nivel decision" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Nivel de decisi n");
-                    DA.SETRANGE(Codigo,"Nivel decision");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Nivel de decisi n");
+                    DA.SETRANGE(Codigo, "Nivel decision");
                     DA.FINDFIRST;
-                   END;
+                END;
             end;
         }
-        field(6;"Cod. Cargo";Code[20])
+        field(6; "Cod. Cargo"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Puestos de trabajo"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Cargo" <> '' THEN
-                   BEGIN
+                IF "Cod. Cargo" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Puestos de trabajo");
-                    DA.SETRANGE(Codigo,"Cod. Cargo");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
+                    DA.SETRANGE(Codigo, "Cod. Cargo");
                     DA.FINDFIRST;
                     "Descripcion Cargo" := DA.Descripcion;
-                   END;
+                END;
             end;
         }
-        field(7;"Descripcion Cargo";Text[60])
+        field(7; "Descripcion Cargo"; Text[60])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Codigo Docente","Cod. Promotor")
+        key(Key1; "Codigo Docente", "Cod. Promotor")
         {
         }
-        key(Key2;"Cod. Promotor","Codigo Docente")
+        key(Key2; "Cod. Promotor", "Codigo Docente")
         {
         }
     }

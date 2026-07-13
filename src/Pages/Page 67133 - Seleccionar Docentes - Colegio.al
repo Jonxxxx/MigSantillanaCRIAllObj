@@ -8,7 +8,7 @@ page 67133 "Seleccionar Docentes - Colegio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Seleccionar; Seleccionar)
                 {

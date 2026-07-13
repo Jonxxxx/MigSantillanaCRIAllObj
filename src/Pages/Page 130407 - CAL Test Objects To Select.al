@@ -10,7 +10,7 @@ page 130407 "CAL Test Objects To Select"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Type; Type)
                 {

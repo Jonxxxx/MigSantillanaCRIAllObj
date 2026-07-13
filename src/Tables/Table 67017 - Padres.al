@@ -240,12 +240,12 @@ table 67017 Padres
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-        MapMgt: Codeunit 802;
+    //TODO: Ver MapMgt: Codeunit 802;
     begin
-        IF MapPoint.FIND('-') THEN
-            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
-        ELSE
-            MESSAGE(Text033);
+        //TODO: Ver IF MapPoint.FIND('-') THEN
+        //TODO: Ver     MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        //TODO: Ver ELSE
+        //TODO: Ver    MESSAGE(Text033);
     end;
 }
 

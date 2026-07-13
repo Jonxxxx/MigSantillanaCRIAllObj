@@ -10,7 +10,7 @@ page 67034 "Lista Colegio - Delegaciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Solicitud"; "No. Solicitud")
                 {

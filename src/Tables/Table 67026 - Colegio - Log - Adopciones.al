@@ -36,7 +36,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -71,108 +71,108 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(15; "Descripcion Nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripcion WHERE("Codigo" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(16;"Descripcion Grado";Text[100])
+        field(16; "Descripcion Grado"; Text[100])
         {
         }
-        field(17;"Fecha Adopcion";Date)
+        field(17; "Fecha Adopcion"; Date)
         {
         }
-        field(18;"Cantidad Alumnos";Decimal)
+        field(18; "Cantidad Alumnos"; Decimal)
         {
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
         }
-        field(19;"% Dto. Padres";Decimal)
-        {
-        }
-        field(20;"% Dto. Colegio";Decimal)
+        field(19; "% Dto. Padres"; Decimal)
         {
         }
-        field(21;"% Dto. Docente";Decimal)
+        field(20; "% Dto. Colegio"; Decimal)
         {
         }
-        field(22;"% Dto. Feria Padres";Decimal)
+        field(21; "% Dto. Docente"; Decimal)
         {
         }
-        field(23;"% Dto. Feria Colegio";Decimal)
+        field(22; "% Dto. Feria Padres"; Decimal)
         {
         }
-        field(24;"Cod. Motivo perdida adopcion";Code[20])
+        field(23; "% Dto. Feria Colegio"; Decimal)
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
         }
-        field(27;"Nombre Promotor";Text[60])
+        field(24; "Cod. Motivo perdida adopcion"; Code[20])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Motivos Perdida"));
+        }
+        field(27; "Nombre Promotor"; Text[60])
+        {
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(28;Adopcion;Option)
+        field(28; Adopcion; Option)
         {
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
         }
-        field(29;"Adopcion anterior";Option)
+        field(29; "Adopcion anterior"; Option)
         {
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
         }
-        field(30;Santillana;Boolean)
+        field(30; Santillana; Boolean)
         {
         }
-        field(31;Usuario;Code[20])
+        field(31; Usuario; Code[20])
         {
         }
-        field(32;"Ano adopcion";Integer)
+        field(32; "Ano adopcion"; Integer)
         {
             Caption = 'Year of decition';
         }
-        field(33;"Linea de negocio";Code[20])
+        field(33; "Linea de negocio"; Code[20])
         {
         }
-        field(34;Familia;Code[20])
+        field(34; Familia; Code[20])
         {
         }
-        field(35;"Sub Familia";Code[20])
+        field(35; "Sub Familia"; Code[20])
         {
         }
-        field(36;Serie;Code[20])
+        field(36; Serie; Code[20])
         {
         }
-        field(37;"Fecha Ult. Modificacion";Date)
+        field(37; "Fecha Ult. Modificacion"; Date)
         {
         }
-        field(38;"Adopcion Real";Decimal)
+        field(38; "Adopcion Real"; Decimal)
         {
         }
-        field(39;"Motivo perdida adopcion";Text[60])
+        field(39; "Motivo perdida adopcion"; Text[60])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Motivos Perdida"));
         }
-        field(41;"Cod. Producto Editora";Code[20])
+        field(41; "Cod. Producto Editora"; Code[20])
         {
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                     "Nivel"=FIELD("Cod. Nivel"));
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Cod. Editorial"),
+                                                                     "Nivel" = FIELD("Cod. Nivel"));
         }
-        field(42;"Nombre Producto Editora";Text[100])
-        {
-        }
-        field(43;"Grupo de Negocio";Code[20])
+        field(42; "Nombre Producto Editora"; Text[100])
         {
         }
-        field(44;"Carga horaria";Code[20])
+        field(43; "Grupo de Negocio"; Code[20])
         {
-            TableRelation = 62031;
         }
-        field(45;"Tipo Ingles";Option)
+        field(44; "Carga horaria"; Code[20])
+        {
+            //TOOD: Ver TableRelation = 62031;
+        }
+        field(45; "Tipo Ingles"; Option)
         {
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(46;Materia;Code[10])
+        field(46; Materia; Code[10])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Materia));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Materia));
 
             trigger OnLookup()
             var
@@ -180,22 +180,22 @@ table 67026 "Colegio - Log - Adopciones"
             begin
             end;
         }
-        field(47;"Mes de Lectura";Option)
+        field(47; "Mes de Lectura"; Option)
         {
             OptionCaption = ' ,January,February,March,April,May,Jun,July,August,September,October,November,December';
             OptionMembers = " ",Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         }
-        field(48;Secuencia;Integer)
+        field(48; Secuencia; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;Secuencia)
+        key(Key1; Secuencia)
         {
         }
-        key(Key2;"Cod. Colegio","Cod. Local","Cod. Nivel","Cod. Grado")
+        key(Key2; "Cod. Colegio", "Cod. Local", "Cod. Nivel", "Cod. Grado")
         {
         }
     }
@@ -216,7 +216,7 @@ table 67026 "Colegio - Log - Adopciones"
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2Record: Record 67026;
         DimVal: Record 349;
-        DimForm: Page 560;
-                     DefDim: Record 352;
+        //TOOD: Ver DimForm: Page 560;
+        DefDim: Record 352;
 }
 

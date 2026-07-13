@@ -54,11 +54,11 @@ table 67010 "Tipos de Eventos"
     }
 
     var
-        DimMgt: Codeunit 408;
+    //TODO: Ver DimMgt: Codeunit DimensionManagement;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        //TODO: Ver DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
         //DimMgt.SaveDefaultDim(DATABASE::Customer,"No.",FieldNumber,ShortcutDimCode);
         //MODIFY;
     end;

@@ -77,7 +77,7 @@ table 67025 "Libros Competencia"
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(13; "A o Edici n"; Date)
+        field(13; "A o Edicion"; Date)
         {
         }
         field(14; "A o Uso"; Date)

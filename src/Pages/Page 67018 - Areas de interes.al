@@ -12,7 +12,7 @@ page 67018 "Areas de interes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

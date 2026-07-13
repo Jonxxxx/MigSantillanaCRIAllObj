@@ -5,8 +5,8 @@ table 67095 "Historico Plan Lector Cab."
     {
         field(1; "Cod. Colegio"; Code[10])
         {
-            TableRelation = Contact WHERE("Type" = CONST(Company),
-                                           "Tipo educacion" = CONST(true));
+            //TODO Ver: TableRelation = Contact WHERE("Type" = CONST(Company),
+            //TODO Ver:                               "Tipo educacion" = CONST(true));
 
             trigger OnValidate()
             var
@@ -43,17 +43,17 @@ table 67095 "Historico Plan Lector Cab."
         field(8; "Cod. Delegacion"; Code[20])
         {
         }
-        field(9; "Descripci n Delegacion"; Text[50])
+        field(9; "Descripcion Delegacion"; Text[50])
         {
         }
-        field(50; "Campa a"; Code[4])
+        field(50; "Campana"; Code[4])
         {
         }
     }
 
     keys
     {
-        key(Key1; "Campa a", "Cod. Colegio", "Cod. Local", "Cod. Turno")
+        key(Key1; "Campana", "Cod. Colegio", "Cod. Local", "Cod. Turno")
         {
         }
     }

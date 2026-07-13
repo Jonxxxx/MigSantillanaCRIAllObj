@@ -11,7 +11,7 @@ page 67011 "Lista Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

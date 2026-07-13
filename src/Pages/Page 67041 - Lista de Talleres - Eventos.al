@@ -11,7 +11,7 @@ page 67041 "Lista de Talleres - Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

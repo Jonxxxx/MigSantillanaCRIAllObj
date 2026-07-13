@@ -5,7 +5,7 @@ table 67071 "Historico Promotor - Ppto Mt"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -66,7 +66,7 @@ table 67071 "Historico Promotor - Ppto Mt"
         field(11; "No. documento"; Code[20])
         {
         }
-        field(20; "Campa a"; Code[4])
+        field(20; "Campana"; Code[4])
         {
         }
     }

@@ -187,7 +187,7 @@ page 56000 Packing
 
     procedure AbrirPalet()
     var
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         ConfSant: Record 56001;
     begin
 

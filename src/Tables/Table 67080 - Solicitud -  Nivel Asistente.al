@@ -16,11 +16,11 @@ table 67080 "Solicitud -  Nivel Asistente"
             begin
                 IF "Cod. Nivel" <> '' THEN BEGIN
                     Nivel.GET("Cod. Nivel");
-                    Descripci n := Nivel.Descripci n;
+                    Descripcion := Nivel.Descripcion;
                 END;
             end;
         }
-        field(3; "Descripci n"; Text[80])
+        field(3; "Descripcion"; Text[80])
         {
         }
         field(4; "No. Asistentes"; Integer)

@@ -5,19 +5,19 @@ table 56029 "Zonas de cobro"
 
     fields
     {
-        field(10;"Cod. zona";Code[20])
+        field(10; "Cod. zona"; Code[20])
         {
             Caption = 'C d. zona';
         }
-        field(20;Descripcion;Text[60])
+        field(20; Descripcion; Text[60])
         {
-            Caption = 'Descripci n';
+            Caption = 'Descripcion';
         }
     }
 
     keys
     {
-        key(Key1;"Cod. zona")
+        key(Key1; "Cod. zona")
         {
         }
     }

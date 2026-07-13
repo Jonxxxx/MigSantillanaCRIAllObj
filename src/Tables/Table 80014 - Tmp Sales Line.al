@@ -64,7 +64,7 @@ table 80014 "Tmp Sales Line"
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                ItemCrossReference: Record 5717;
+                //TODO: Ver ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -526,7 +526,7 @@ table 80014 "Tmp Sales Line"
             trigger OnLookup()
             var
                 ICGLAccount: Record 410;
-                ItemCrossReference: Record 5717;
+            //TODO: Ver ItemCrossReference: Record 5717;
             begin
             end;
         }
@@ -846,12 +846,6 @@ table 80014 "Tmp Sales Line"
         field(5705; "Cross-Reference No."; Code[20])
         {
             Caption = 'Cross-Reference No.';
-
-            trigger OnValidate()
-            var
-                ReturnedCrossRef: Record 5717;
-            begin
-            end;
         }
         field(5706; "Unit of Measure (Cross Ref.)"; Code[10])
         {
@@ -886,7 +880,7 @@ table 80014 "Tmp Sales Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(5713; "Special Order"; Boolean)
         {
@@ -1102,13 +1096,13 @@ table 80014 "Tmp Sales Line"
         {
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edici n"; Code[20])
+        field(50001; "Cod. Edicion"; Code[20])
         {
-            TableRelation = 50131;
+            //TODO: Ver TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            TableRelation = 50132;
+            //TODO: Ver TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1122,7 +1116,7 @@ table 80014 "Tmp Sales Line"
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            TableRelation = 50133;
+            //TODO: Ver TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
@@ -1290,7 +1284,7 @@ table 80014 "Tmp Sales Line"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        SalesTaxDifference: Record 10012;
+        //TODO: Ver SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -1301,7 +1295,7 @@ table 80014 "Tmp Sales Line"
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -1353,13 +1347,13 @@ table 80014 "Tmp Sales Line"
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
         cManejaParametros: Codeunit 34002500;
-        txt001: Label 'Este c digo de producto ya ha sido introducido previamente';
+        txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]
     var
-        "Field"Record 2000000041;
+        "Field": Record 2000000041;
     begin
         Field.GET(DATABASE::"Sales Line", FieldNumber);
         EXIT(Field."Field Caption");
@@ -1367,7 +1361,7 @@ table 80014 "Tmp Sales Line"
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        SalesHeader2Record: Record 36;
+        SalesHeader2: Record 36;
     begin
         IF SalesHeader2.GET("Document Type", "Document No.") THEN;
         IF SalesHeader2."Prices Including VAT" THEN

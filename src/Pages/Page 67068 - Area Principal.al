@@ -10,7 +10,7 @@ page 67068 "Area Principal"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

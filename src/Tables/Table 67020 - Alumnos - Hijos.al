@@ -16,8 +16,8 @@ table 67020 "Alumnos - Hijos"
                     Father.GET("DNI Padre");
                     IF CONFIRM(Msg001, TRUE) THEN BEGIN
                         Address := Father.Address;
-                        "Address 2" := Father."Address 2;
-                        VALIDATE(City, Father.City);
+                        //TODO: Ver "Address 2" := Father."Address 2;
+                        //TODO: Ver VALIDATE(City, Father.City);
                         VALIDATE("Post Code", Father."Post Code");
                         VALIDATE(County, Father.County);
                     END;
@@ -149,12 +149,12 @@ table 67020 "Alumnos - Hijos"
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-        MapMgt: Codeunit 802;
+    //TODO: Ver  MapMgt: Codeunit 802;
     begin
-        IF MapPoint.FIND('-') THEN
-            MapMgt.SetupDefault
-        ELSE
-            MESSAGE(Text033);
+        //TODO: Ver IF MapPoint.FIND('-') THEN
+        //TODO: Ver     MapMgt.SetupDefault
+        //TODO: Ver ELSE
+        //TODO: Ver     MESSAGE(Text033);
     end;
 }
 

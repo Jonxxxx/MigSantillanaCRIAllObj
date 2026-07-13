@@ -10,7 +10,7 @@ table 56030 "Cab. Packing"
     // #2945       JML     14/07/2014    A ado consignaciones y transferencias.
 
     Caption = 'Packing Header';
-    LookupPageID = 56047;
+    //TODO Ver: LookupPageID = 56047;
 
     fields
     {
@@ -24,12 +24,12 @@ table 56030 "Cab. Packing"
 
             trigger OnLookup()
             begin
-                LoginMgt.ValidateUserID("Cod. Empleado");
+                //TODO Ver: LoginMgt.ValidateUserID("Cod. Empleado");
             end;
 
             trigger OnValidate()
             begin
-                LoginMgt.ValidateUserID("Cod. Empleado");
+                //TODO Ver: LoginMgt.ValidateUserID("Cod. Empleado");
             end;
         }
         field(3; "No. Mesa"; Code[20])
@@ -92,12 +92,14 @@ table 56030 "Cab. Packing"
         }
         field(12; "No. Pedido"; Code[20])
         {
+            //TODO Ver: 
+            /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
                                                                                     "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true),
-                                                                                                                                                           "Estado packing" = CONST(Listo))
-            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false),
-                                                                                                                                                                                                                                   "Estado packing" = CONST(Listo));
+                                                                                    "Estado packing" = CONST(Listo))
+            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false),            
+            "Estado packing" = CONST(Listo));*/
         }
         field(20; "Tipo pedido"; Option)
         {
@@ -138,13 +140,13 @@ table 56030 "Cab. Packing"
         IF "No." = '' THEN BEGIN
             ConfSant.GET;
             ConfSant.TESTFIELD("No. Serie Packing");
-            NoSeriesMgt.InitSeries(ConfSant."No. Serie Packing", "No.", "Fecha Apertura", "No.",
-                                    ConfSant."No. Serie Packing");
+            //TODO Ver: NoSeriesMgt.InitSeries(ConfSant."No. Serie Packing", "No.", "Fecha Apertura", "No.",
+            //TODO Ver:                         ConfSant."No. Serie Packing");
         END;
     end;
 
     var
-        NoSeriesMgt: Codeunit 396;
+        //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
         ConfSant: Record 56001;
         LinPack: Record 56031;
         LoginMgt: Codeunit 418;

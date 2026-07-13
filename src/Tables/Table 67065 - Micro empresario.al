@@ -169,7 +169,7 @@ table 67065 "Micro empresario"
                 InteractLogEntry: Record 5065;
                 SegLine: Record 5077;
                 SalesHeader: Record 36;
-                ChangeLogMgt: Codeunit 423;
+                //TODO: Ver ChangeLogMgt: Codeunit 423;
                 RecRef: RecordRef;
                 xRecRef: RecordRef;
             begin
@@ -394,7 +394,7 @@ table 67065 "Micro empresario"
         ContAltAddrDateRange: Record 5052;
         InteractLogEntry: Record 5065;
         Opp: Record 5092;
-        CampaignTargetGrMgt: Codeunit 7030;
+    //TODO: Ver CampaignTargetGrMgt: Codeunit 7030;
     begin
     end;
 
@@ -419,11 +419,11 @@ table 67065 "Micro empresario"
         PostCode: Record 225;
         RecRef: RecordRef;
         xRecRef: RecordRef;
-        DuplMgt: Codeunit 5060;
-        NoSeriesMgt: Codeunit 396;
-        ChangeLogMgt: Codeunit 423;
-        UpdateCustVendBank: Codeunit 5055;
-        CampaignMgt: Codeunit 7030;
+        //TODO: Ver DuplMgt: Codeunit 5060;
+        //TODO: Ver NoSeriesMgt: Codeunit "No. Series";
+        //TODO: Ver ChangeLogMgt: Codeunit 423;
+        //TODO: Ver UpdateCustVendBank: Codeunit 5055;
+        //TODO: Ver CampaignMgt: Codeunit 7030;
         ContChanged: Boolean;
         SkipDefaults: Boolean;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';
@@ -436,12 +436,6 @@ table 67065 "Micro empresario"
         Text032: Label 'The length of %1 is %2 character(s)longer than the maximum length allowed for the %1 field.';
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         rRec: RecordRef;
-
-    procedure OnModify(xRec: Record 5050)
-    var
-        OldCont: Record 5050;
-    begin
-    end;
 
     procedure AssistEdit(OldCont: Record 67005): Boolean
     begin
@@ -464,12 +458,12 @@ table 67065 "Micro empresario"
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-        MapMgt: Codeunit 802;
+    //TODO: Ver MapMgt: Codeunit 802;
     begin
-        IF MapPoint.FIND('-') THEN
-            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
-        ELSE
-            MESSAGE(Text033);
+        //TODO: Ver IF MapPoint.FIND('-') THEN
+        //TODO: Ver     MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        //TODO: Ver ELSE
+        //TODO: Ver    MESSAGE(Text033);
     end;
 }
 

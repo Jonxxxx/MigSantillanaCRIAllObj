@@ -8,7 +8,7 @@ page 67110 "Consulta Planif. Taller/Evento"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Fecha inscripcion"; "Fecha inscripcion")
                 {

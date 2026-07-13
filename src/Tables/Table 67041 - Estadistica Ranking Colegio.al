@@ -19,7 +19,7 @@ table 67041 "Estadistica Ranking Colegio"
         field(3; "Cod. Nivel"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Nivel Educativo APS".C digo;
+            TableRelation = "Nivel Educativo APS".Codigo;
         }
         field(4; "Categoria colegio"; Code[4])
         {

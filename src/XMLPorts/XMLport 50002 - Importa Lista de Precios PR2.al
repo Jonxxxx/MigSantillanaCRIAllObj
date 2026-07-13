@@ -7,11 +7,11 @@ xmlport 50002 "Importa Lista de Precios PR2"
     {
         textelement(Lista_de_Precios)
         {
-            tableelement(Table7002; Table7002)
+            tableelement("Sales Price"; 7002)
             {
                 AutoUpdate = true;
                 XmlName = 'recSalesPrice';
-                SourceTableView = SORTING(Field1, Field13, Field2, Field4, Field3, Field5700, Field5400, Field14);
+                //SourceTableView = SORTING(Field1, Field13, Field2, Field4, Field3, Field5700, Field5400, Field14);
                 fieldelement(SalesType; "Sales Price"."Sales Type")
                 {
                 }
@@ -33,6 +33,8 @@ xmlport 50002 "Importa Lista de Precios PR2"
                 {
 
                     trigger OnAfterAssignField()
+                    var
+                        SP2: Record 7002;
                     begin
                         SP2.RESET;
                         SP2.SETRANGE("Sales Type", SP2."Sales Type"::"Customer Price Group");

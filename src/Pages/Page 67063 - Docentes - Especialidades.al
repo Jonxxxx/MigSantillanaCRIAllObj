@@ -7,7 +7,7 @@ page 67063 "Docentes - Especialidades"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Docente"; "Cod. Docente")
                 {

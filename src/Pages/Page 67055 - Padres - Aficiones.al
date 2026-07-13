@@ -7,7 +7,7 @@ page 67055 "Padres - Aficiones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Padre"; "Cod. Padre")
                 {

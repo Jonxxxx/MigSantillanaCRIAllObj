@@ -541,8 +541,8 @@ table 67001 Docentes
                     "Document ID" := Vend."VAT Registration No.";
                     "Full Name" := Vend.Name;
                     Address := Vend.Address;
-                    "Address 2" := Vend."Address 2;
-                    City := Vend.City;
+                    //TODO: Ver "Address 2" := Vend."Address 2;
+                    //TODO: Ver City := Vend.City;
                     "Phone No." := Vend."Phone No.";
                     //    "Work No." := vend."Work No.";
                     "Territory Code" := Vend."Territory Code";
@@ -613,7 +613,7 @@ table 67001 Docentes
         ContAltAddrDateRange: Record 5052;
         InteractLogEntry: Record 5065;
         Opp: Record 5092;
-        CampaignTargetGrMgt: Codeunit 7030;
+    //TODO: Ver CampaignTargetGrMgt: Codeunit 7030;
     begin
         //CreditCards.DeleteByContact(Rec);
         ColDoc.SETRANGE("Cod. Docente", "No.");
@@ -626,7 +626,7 @@ table 67001 Docentes
         APSSetup.GET;
         IF "No." = '' THEN BEGIN
             APSSetup.TESTFIELD("No. Serie Profesores");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Profesores", xRec."No. Series", 0D, "No.", "No. Series");
+            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Profesores", xRec."No. Series", 0D, "No.", "No. Series");
         END;
         "Ano inscripcion CDS" := FORMAT(APSSetup.Campana);
 
@@ -640,8 +640,8 @@ table 67001 Docentes
         IF ColDocente.FINDSET(TRUE, FALSE) THEN
             REPEAT
                 ColDocente."Nombre docente" := "Full Name";
-                ColDocente."Apellido paterno" := "Last Name";
-                ColDocente."Pertenece al CDS" := "Pertenece al CDS";
+                //TODO: Ver ColDocente."Apellido paterno" := "Last Name";
+                //TODO: Ver ColDocente."Pertenece al CDS" := "Pertenece al CDS";
                 ColDocente.MODIFY;
             UNTIL ColDocente.NEXT = 0;
     end;
@@ -663,8 +663,8 @@ table 67001 Docentes
         ColDoc: Record 67043;
         RecRef: RecordRef;
         xRecRef: RecordRef;
-        NoSeriesMgt: Codeunit 396;
-        ChangeLogMgt: Codeunit 423;
+        NoSeriesMgt: Codeunit "No. Series";
+        //TODO: Ver ChangeLogMgt: Codeunit 423;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';
         Text019: Label 'The %2 record of the %1 already has the %3 with %4 %5.';
         Text020: Label 'Do you want to create a contact %1 %2 as a customer using a customer template?';
@@ -688,12 +688,12 @@ table 67001 Docentes
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-        MapMgt: Codeunit 802;
+    //TODO: Ver MapMgt: Codeunit 802;
     begin
-        IF MapPoint.FIND('-') THEN
-            MapMgt.MakeSelection(DATABASE::Docentes, GETPOSITION)
-        ELSE
-            MESSAGE(Text033);
+        //TODO: Ver IF MapPoint.FIND('-') THEN
+        //TODO: Ver    MapMgt.MakeSelection(DATABASE::Docentes, GETPOSITION)
+        //TODO: Ver ELSE
+        //TODO: Ver     MESSAGE(Text033);
     end;
 
     procedure AssistEdit(OldCont: Record 67001): Boolean
@@ -702,13 +702,13 @@ table 67001 Docentes
             Docente := Rec;
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Profesores");
-            IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Profesores", OldCont."No. Series", "No. Series") THEN BEGIN
-                APSSetup.GET;
-                APSSetup.TESTFIELD("No. Serie Profesores");
-                NoSeriesMgt.SetSeries("No.");
-                Rec := Docente;
-                EXIT(TRUE);
-            END;
+            //TODO: Ver IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Profesores", OldCont."No. Series", "No. Series") THEN BEGIN
+            APSSetup.GET;
+            APSSetup.TESTFIELD("No. Serie Profesores");
+            //TODO: Ver NoSeriesMgt.SetSeries("No.");
+            Rec := Docente;
+            EXIT(TRUE);
+            //TODO: Ver END;
         END;
     end;
 

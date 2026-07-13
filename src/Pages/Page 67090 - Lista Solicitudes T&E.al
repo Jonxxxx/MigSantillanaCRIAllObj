@@ -12,7 +12,7 @@ page 67090 "Lista Solicitudes T&E"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Solicitud"; "No. Solicitud")
                 {

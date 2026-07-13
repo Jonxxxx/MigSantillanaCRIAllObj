@@ -12,7 +12,7 @@ page 56028 "Lista clas. devoluciones cer."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 Editable = false;
                 field("No."; "No.")

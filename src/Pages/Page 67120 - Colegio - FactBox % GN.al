@@ -10,7 +10,7 @@ page 67120 "Colegio - FactBox % GN"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Descripcion; Descripcion)
                 {

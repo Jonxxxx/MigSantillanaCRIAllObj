@@ -3,18 +3,18 @@ table 67101 "Atenciones -Dis. Centros Costo"
 
     fields
     {
-        field(1;"No. Atenci n";Code[20])
+        field(1; "No. Atencion"; Code[20])
         {
         }
-        field(2;"C digo";Code[20])
-        {
-            Editable = false;
-        }
-        field(3;"Descripci n";Text[60])
+        field(2; "Codigo"; Code[20])
         {
             Editable = false;
         }
-        field(4;Porcentaje;Decimal)
+        field(3; "Descripcion"; Text[60])
+        {
+            Editable = false;
+        }
+        field(4; Porcentaje; Decimal)
         {
             Caption = '%';
             MaxValue = 100;
@@ -24,7 +24,7 @@ table 67101 "Atenciones -Dis. Centros Costo"
 
     keys
     {
-        key(Key1;"No. Atenci n","C digo")
+        key(Key1; "No. Atencion", "Codigo")
         {
         }
     }

@@ -7,7 +7,7 @@ page 67095 "Colegio - Ranking - Nivel"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

@@ -33,7 +33,7 @@ table 67058 "Ranking CVM"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -485,7 +485,7 @@ table 67058 "Ranking CVM"
         {
             Caption = '5VA';
         }
-        field(88; "Descripci n producto"; Text[100])
+        field(88; "Descripcion producto"; Text[100])
         {
         }
         field(89; "Edicion Coleccion"; Code[20])

@@ -9,7 +9,7 @@ page 67005 "Productos equivalentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Producto"; "Cod. Producto")
                 {

@@ -143,12 +143,14 @@ table 56023 "Lin. Hoja de Ruta Reg."
         CHR: Record 56020;
         SA: Record 291;
         NosSeries: Record 308;
-        NoSerieMagmt: Codeunit 396;
+        //TODO Ver: NoSerieMagmt: Codeunit 396;
         LHR: Record 56021;
     begin
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");
         SA.GET(CHR."Cod. Transportista");
+        //TODO Ver: 
+        /*
         IF SA."No. Serie Guias" <> '' THEN BEGIN
             IF "No. Guia" = '' THEN BEGIN
                 "No. Guia" := NoSerieMagmt.GetNextNo(SA."No. Serie Guias", WORKDATE, TRUE);
@@ -160,6 +162,7 @@ table 56023 "Lin. Hoja de Ruta Reg."
                 MODIFY;
             END;
         END;
+        */
     end;
 }
 

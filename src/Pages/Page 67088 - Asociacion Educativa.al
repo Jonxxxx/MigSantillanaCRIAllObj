@@ -10,7 +10,7 @@ page 67088 "Asociacion Educativa"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

@@ -8,7 +8,7 @@ page 51007 Grado
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Grado"; "Cod. Grado")
                 {

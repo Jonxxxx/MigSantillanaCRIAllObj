@@ -12,7 +12,7 @@ page 67022 Zonas
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

@@ -8,7 +8,7 @@ page 67107 "Colegios -  Docentes ListPart"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

@@ -12,7 +12,7 @@ table 56015 "Cab. Identificaci n Devoluci n"
             trigger OnValidate()
             begin
                 SalesSetup.GET;
-                NoSeriesMgt.TestManual(SalesSetup."No. Serie Ident. Devolucion");
+                //TODO: Ver NoSeriesMgt.TestManual(SalesSetup."No. Serie Ident. Devolucion");
             end;
         }
         field(2; "Id. Usuario"; Code[20])
@@ -113,13 +113,13 @@ table 56015 "Cab. Identificaci n Devoluci n"
         IF "No. Ident. Devolucion" = '' THEN BEGIN
             SalesSetup.GET;
             TestNoSeries;
-            NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Ident. Devolucion", "Fecha Registro", "No. Ident. Devolucion",
-                                    SalesSetup."No. Serie Ident. Devolucion");
+            //TODO: Ver NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Ident. Devolucion", "Fecha Registro", "No. Ident. Devolucion",
+            //TODO: Ver                        SalesSetup."No. Serie Ident. Devolucion");
         END;
     end;
 
     var
-        NoSeriesMgt: Codeunit 396;
+        //TODO: Ver NoSeriesMgt: Codeunit "No. Series";
         SalesSetup: Record 311;
         Cust: Record 18;
         LID: Record 56016;
@@ -128,13 +128,13 @@ table 56015 "Cab. Identificaci n Devoluci n"
 
     procedure TestNoSeries()
     begin
-        SalesSetup.TESTFIELD("No. Serie Ident. Devolucion");
-        SalesSetup.TESTFIELD(SalesSetup."No. Serie Ident. Dev. Reg.");
+        //TODO: Ver SalesSetup.TESTFIELD("No. Serie Ident. Devolucion");
+        //TODO: Ver SalesSetup.TESTFIELD(SalesSetup."No. Serie Ident. Dev. Reg.");
     end;
 
     local procedure GetNoSeriesCode(): Code[10]
     begin
-        EXIT(SalesSetup."No. Serie Ident. Devolucion");
+        //TODO: Ver  EXIT(SalesSetup."No. Serie Ident. Devolucion");
     end;
 }
 

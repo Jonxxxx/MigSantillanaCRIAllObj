@@ -24,10 +24,10 @@ table 56025 "Cab. clas. devolucion"
                 IF ("Customer no." <> xRec."Customer no.") AND
                    (xRec."Customer no." <> '') THEN
                     IF CONFIRM(Text001, FALSE) THEN BEGIN
-                        CD2.RESET;
-                        CD2.SETRANGE("No. Documento", "No.");
-                        IF CD2.FINDFIRST THEN
-                            ERROR(Err001);
+                        //TODO Ver: CD2.RESET;
+                        //TODO Ver: CD2.SETRANGE("No. Documento", "No.");
+                        //TODO Ver: IF CD2.FINDFIRST THEN
+                        ERROR(Err001);
                     END;
             end;
         }
@@ -118,8 +118,8 @@ table 56025 "Cab. clas. devolucion"
         IF "No." = '' THEN BEGIN
             ConfEmpresa.GET;
             ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
-            NoSeriesMgt.InitSeries(ConfEmpresa."No. Serie Pre Devolucion", ConfEmpresa."No. Serie Pre Devolucion", 0D, "No.",
-                                   ConfEmpresa."No. Serie Pre Devolucion");
+            //TODO Ver: NoSeriesMgt.InitSeries(ConfEmpresa."No. Serie Pre Devolucion", ConfEmpresa."No. Serie Pre Devolucion", 0D, "No.",
+            //TODO Ver:                                    ConfEmpresa."No. Serie Pre Devolucion");
         END;
 
         "User id" := USERID;
@@ -135,7 +135,7 @@ table 56025 "Cab. clas. devolucion"
         Cust: Record 18;
         CD: Record 56026;
         ConfEmpresa: Record 56001;
-        NoSeriesMgt: Codeunit 396;
+        //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
         Text001: Label 'The customer will be changed in the lines, do you want to continue?';
         Err001: Label 'This document already have items received. To change the customer you must first delete all the lines and restart the receive';
         WHE: Record 7301;
@@ -146,6 +146,8 @@ table 56025 "Cab. clas. devolucion"
             COPY(Rec);
             ConfEmpresa.GET;
             ConfEmpresa.TESTFIELD("No. Serie Pre Devolucion");
+            //TODO Ver: 
+            /*
             IF NoSeriesMgt.SelectSeries(ConfEmpresa."No. Serie Pre Devolucion", ConfEmpresa."No. Serie Pre Devolucion",
                                         ConfEmpresa."No. Serie Pre Devolucion") THEN BEGIN
                 NoSeriesMgt.SetSeries("No.");
@@ -153,6 +155,7 @@ table 56025 "Cab. clas. devolucion"
 
                 EXIT(TRUE);
             END;
+            */
         END;
     end;
 }

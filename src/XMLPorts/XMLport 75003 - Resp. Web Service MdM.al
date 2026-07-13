@@ -86,14 +86,14 @@ xmlport 75003 "Resp. Web Service MdM"
     }
 
     var
-        CAsyncMng: Codeunit 75005;
+        //TODO: Ver CAsyncMng: Codeunit 75005;
         TOrigen: Label 'NAV_BOL';
 
     procedure SetInfo()
     begin
         // SetInfo
 
-        sistema_origen := CAsyncMng.GetSistemaOrigen;
+        //TODO: Ver sistema_origen := CAsyncMng.GetSistemaOrigen;
         //fecha          := FORMAT(CURRENTDATETIME,0,9);
     end;
 

@@ -11,7 +11,7 @@ page 130402 "CAL Test Codeunits"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Object ID"; "Object ID")
                 {

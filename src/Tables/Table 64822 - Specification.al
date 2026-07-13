@@ -1,8 +1,8 @@
 table 64822 Specification
 {
     DataCaptionFields = "No.", Description;
-    DrillDownPageID = 64832;
-    LookupPageID = 64832;
+    //TODO: Ver DrillDownPageID = 64832;
+    //TODO: Ver LookupPageID = 64832;
 
     fields
     {
@@ -105,137 +105,139 @@ table 64822 Specification
             //TODO: Ver TableRelation = Database.Code;
             //This property is currently not supported
             //TestTableRelation = false;
-            ValidateTableRelation = false;
+            //ValidateTableRelation = false;
         }
         field(48; "Dest. Table No."; Integer)
         {
-            TableRelation = IF (Dest.Design=FILTER('')) AllObj."Object ID" WHERE ("Object Type"=CONST(Table))
-                            ELSE IF ("Dest. Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Dest. Design"));
+            TableRelation = IF ("Dest. Design" = FILTER('')) AllObj."Object ID" WHERE("Object Type" = CONST(Table))
+            ELSE IF ("Dest. Design" = FILTER(<> '')) "Database Table"."Table No." WHERE("Database Code" = FIELD("Dest. Design"));
         }
-        field(49;"Dest. Table Name";Text[30])
+        field(49; "Dest. Table Name"; Text[30])
         {
             Editable = false;
         }
-        field(50;"Dest. Key";Text[80])
+        field(50; "Dest. Key"; Text[80])
         {
         }
-        field(51;"Dest. Key Fields";Text[250])
+        field(51; "Dest. Key Fields"; Text[250])
         {
             //This property is currently not supported
             //TestTableRelation = false;
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
         }
-        field(53;"Dest. Filter";Boolean)
+        field(53; "Dest. Filter"; Boolean)
         {
-            CalcFormula = Exist("Field Filter" WHERE ("Specification No."=FIELD("No."),
-                                                      "Type"=CONST("Dest. Filter")));
+            CalcFormula = Exist("Field Filter" WHERE("Specification No." = FIELD("No."),
+                                                      "Type" = CONST("Dest. Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(54;"Main Spec.";Code[20])
+        field(54; "Main Spec."; Code[20])
         {
             TableRelation = Specification;
         }
-        field(55;"Dest. Update SC.";Code[20])
+        field(55; "Dest. Update SC."; Code[20])
         {
             TableRelation = Specification."No.";
         }
-        field(56;"Dest. Return Changes";Boolean)
+        field(56; "Dest. Return Changes"; Boolean)
         {
         }
-        field(57;"Log Changes";Boolean)
+        field(57; "Log Changes"; Boolean)
         {
         }
-        field(58;"Source UserID Field";Integer)
+        field(58; "Source UserID Field"; Integer)
         {
         }
-        field(59;"Source UserID Name";Text[30])
+        field(59; "Source UserID Name"; Text[30])
         {
             Editable = false;
         }
-        field(60;"Commit per";Integer)
+        field(60; "Commit per"; Integer)
         {
         }
-        field(61;"Buffer Size (Records)";Integer)
+        field(61; "Buffer Size (Records)"; Integer)
         {
         }
-        field(62;"Action Table No.";Integer)
+        field(62; "Action Table No."; Integer)
         {
-            TableRelation = IF ("Source Design"=FILTER('')) AllObj."Object ID" WHERE ("Object Type"=CONST(Table))
-                            ELSE IF ("Source Design"=FILTER(<>'')) "Database Table"."Table No." WHERE ("Database Code"=FIELD("Source Design"));
+            TableRelation = IF ("Source Design" = FILTER('')) AllObj."Object ID" WHERE("Object Type" = CONST(Table))
+            ELSE IF ("Source Design" = FILTER(<> '')) "Database Table"."Table No." WHERE("Database Code" = FIELD("Source Design"));
         }
-        field(63;"Action Table Name";Text[30])
-        {
-        }
-        field(64;"Move Actions";Boolean)
+        field(63; "Action Table Name"; Text[30])
         {
         }
-        field(65;"Dest. Check SC. No.";Integer)
+        field(64; "Move Actions"; Boolean)
         {
         }
-        field(66;"Dest. Check SC. Name";Text[30])
+        field(65; "Dest. Check SC. No."; Integer)
         {
         }
-        field(67;"Sub Specifications";Boolean)
+        field(66; "Dest. Check SC. Name"; Text[30])
         {
-            CalcFormula = Exist(Specification WHERE ("Main Spec."=FIELD("No.")));
-            Editable = false;
-            FieldClass = FlowField;
         }
-        field(68;"Field List";Boolean)
+        field(67; "Sub Specifications"; Boolean)
         {
-            CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
-                                                    "List Type"=CONST("Field Transfer List")));
+            CalcFormula = Exist(Specification WHERE("Main Spec." = FIELD("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(69;"Table-Linking";Boolean)
+        field(68; "Field List"; Boolean)
         {
-            CalcFormula = Exist("Field List" WHERE ("Specification No."=FIELD("No."),
-                                                    "List Type"=CONST("Key Field Links")));
+            CalcFormula = Exist("Field List" WHERE("Specification No." = FIELD("No."),
+                                                    "List Type" = CONST("Field Transfer List")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(70;"No. Series";Code[10])
+        field(69; "Table-Linking"; Boolean)
+        {
+            CalcFormula = Exist("Field List" WHERE("Specification No." = FIELD("No."),
+                                                    "List Type" = CONST("Key Field Links")));
+            Editable = false;
+            FieldClass = FlowField;
+        }
+        field(70; "No. Series"; Code[10])
         {
         }
-        field(71;"Changes Only (from SQL)";Boolean)
+        field(71; "Changes Only (from SQL)"; Boolean)
         {
         }
-        field(80;Text;Text[50])
+        field(80; Text; Text[50])
         {
         }
-        field(81;"Code";Code[50])
+        field(81; "Code"; Code[50])
         {
         }
-        field(82;"Integer";Integer)
+        field(82; "Integer"; Integer)
         {
         }
-        field(83;Decimal;Decimal)
+        field(83; Decimal; Decimal)
         {
         }
-        field(84;Date;Date)
+        field(84; Date; Date)
         {
         }
-        field(85;Time;Time)
+        field(85; Time; Time)
         {
         }
+        //TODO: Ver 
+        /*
         field(86;Option;Option)
         {
-            OptionMembers = '';
-        }
-        field(87;Boolean;Boolean)
+            OptionMembers =  '';
+        }*/
+        field(87; Boolean; Boolean)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Replicator Group Code","Seq. No.",Enabled)
+        key(Key2; "Replicator Group Code", "Seq. No.", Enabled)
         {
         }
     }
@@ -253,6 +255,6 @@ table 64822 Specification
         ReplicatorSetup: Record 64835;
         DatabaseTables: Record 64828;
         AllObj: Record 2000000038;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 }
 

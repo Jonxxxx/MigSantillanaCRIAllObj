@@ -10,7 +10,7 @@ page 67093 "Grupos de Negocio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

@@ -7,7 +7,7 @@ page 67070 "Clientes relacionados"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Cliente"; "Cod. Cliente")
                 {

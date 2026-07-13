@@ -9,7 +9,7 @@ page 67027 "Promotores - Ppto Vtas"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

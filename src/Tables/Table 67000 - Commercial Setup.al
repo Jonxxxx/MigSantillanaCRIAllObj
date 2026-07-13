@@ -10,96 +10,96 @@ table 67000 "Commercial Setup"
 
     fields
     {
-        field(1;"Code";Code[10])
+        field(1; "Code"; Code[10])
         {
         }
-        field(2;"No. Serie Profesores";Code[20])
-        {
-            TableRelation = "No. Series";
-        }
-        field(3;"No. Serie Eventos";Code[20])
+        field(2; "No. Serie Profesores"; Code[20])
         {
             TableRelation = "No. Series";
         }
-        field(4;"No. Serie Talleres";Code[20])
+        field(3; "No. Serie Eventos"; Code[20])
         {
             TableRelation = "No. Series";
         }
-        field(5;"Cod. Dimension APS";Code[20])
+        field(4; "No. Serie Talleres"; Code[20])
+        {
+            TableRelation = "No. Series";
+        }
+        field(5; "Cod. Dimension APS"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(6;"No. Serie CDS";Code[20])
+        field(6; "No. Serie CDS"; Code[20])
         {
             TableRelation = "No. Series";
         }
-        field(7;Campana;Code[4])
+        field(7; Campana; Code[4])
         {
             Caption = 'Campaign';
         }
-        field(8;"Gpo. contable prod. ventas";Code[20])
+        field(8; "Gpo. contable prod. ventas"; Code[20])
         {
             Caption = 'Sales Item posting group';
             TableRelation = "Inventory Posting Group";
         }
-        field(9;"Gpo. contable prod. obsequios";Code[20])
+        field(9; "Gpo. contable prod. obsequios"; Code[20])
         {
             Caption = 'Gift Item posting group';
             TableRelation = "Inventory Posting Group";
         }
-        field(10;"Cod. Alm. Muestras";Code[20])
+        field(10; "Cod. Alm. Muestras"; Code[20])
         {
             TableRelation = Location;
         }
-        field(11;"Cod. Dimension Lin. Negocio";Code[20])
+        field(11; "Cod. Dimension Lin. Negocio"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(12;"Cod. Dimension Familia";Code[20])
+        field(12; "Cod. Dimension Familia"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(13;"Cod. Dimension Sub Familia";Code[20])
+        field(13; "Cod. Dimension Sub Familia"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(14;"Cod. Dimension Serie";Code[20])
+        field(14; "Cod. Dimension Serie"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(15;"Cod. Dimension Delegacion";Code[20])
+        field(15; "Cod. Dimension Delegacion"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(16;"Cod. Dimension Dist. Geo.";Code[20])
+        field(16; "Cod. Dimension Dist. Geo."; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(17;"Ruta archivos electronicos";Text[250])
+        field(17; "Ruta archivos electronicos"; Text[250])
         {
         }
-        field(18;"No. Serie Solic. T-E";Code[20])
+        field(18; "No. Serie Solic. T-E"; Code[20])
         {
             Caption = 'No. Serie Request T&E';
             TableRelation = "No. Series";
         }
-        field(19;"Movilidad Activada";Boolean)
+        field(19; "Movilidad Activada"; Boolean)
         {
         }
-        field(20;"Activar control de C.P.";Boolean)
+        field(20; "Activar control de C.P."; Boolean)
         {
             Caption = 'Activate Post Code control';
         }
-        field(21;"Dim para Estad. Adopciones";Code[20])
+        field(21; "Dim para Estad. Adopciones"; Code[20])
         {
             TableRelation = Dimension;
         }
-        field(30;"Plantilla Word sol. asis. tec.";BLOB)
+        field(30; "Plantilla Word sol. asis. tec."; BLOB)
         {
             Caption = 'Plantilla Word Solicitud de Asistencia T cnica Pedag gica';
             Description = '$001';
         }
-        field(40;"Ruta Word sol. asis. tex.";Text[250])
+        field(40; "Ruta Word sol. asis. tex."; Text[250])
         {
             Caption = 'Ruta Word Solicitud de Asistencia T cnica Pedag gica';
             Description = '$001';
@@ -107,51 +107,51 @@ table 67000 "Commercial Setup"
             trigger OnValidate()
             begin
                 IF "Ruta Word sol. asis. tex."[STRLEN("Ruta Word sol. asis. tex.")] <> '\' THEN
-                  "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex."+'\';
+                    "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex." + '\';
             end;
         }
-        field(41;"Plantilla Word ficha de PPFF";BLOB)
+        field(41; "Plantilla Word ficha de PPFF"; BLOB)
         {
             Caption = 'Plantilla Word ficha de PPFF';
         }
-        field(42;"Ruta Word ficha de PPFF";Text[250])
+        field(42; "Ruta Word ficha de PPFF"; Text[250])
         {
             Caption = 'Ruta Word ficha de PPFF';
 
             trigger OnValidate()
             begin
                 IF "Ruta Word sol. asis. tex."[STRLEN("Ruta Word sol. asis. tex.")] <> '\' THEN
-                  "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex."+'\';
+                    "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex." + '\';
             end;
         }
-        field(43;"Campa a Ranking Solicitud";Option)
+        field(43; "Campana Ranking Solicitud"; Option)
         {
             OptionCaption = 'Vigente, ltima Cerrada';
             OptionMembers = Vigente," ltima Cerrada";
         }
-        field(44;"No. Serie Atenciones";Code[20])
+        field(44; "No. Serie Atenciones"; Code[20])
         {
             TableRelation = "No. Series";
         }
-        field(45;"No. Serie Visita Asesor/Consu.";Code[20])
+        field(45; "No. Serie Visita Asesor/Consu."; Code[20])
         {
             TableRelation = "No. Series";
         }
-        field(46;"Plantilla Word Visitas C/A";BLOB)
+        field(46; "Plantilla Word Visitas C/A"; BLOB)
         {
             Caption = 'Plantilla Word Visitas C/A';
         }
-        field(47;"Ruta Word Visitas C/A";Text[250])
+        field(47; "Ruta Word Visitas C/A"; Text[250])
         {
             Caption = 'Ruta Word Visitas C/A';
 
             trigger OnValidate()
             begin
                 IF "Ruta Word sol. asis. tex."[STRLEN("Ruta Word sol. asis. tex.")] <> '\' THEN
-                  "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex."+'\';
+                    "Ruta Word sol. asis. tex." := "Ruta Word sol. asis. tex." + '\';
             end;
         }
-        field(48;"Reg. masivo P. L. realizado";Boolean)
+        field(48; "Reg. masivo P. L. realizado"; Boolean)
         {
             Editable = true;
         }
@@ -159,7 +159,7 @@ table 67000 "Commercial Setup"
 
     keys
     {
-        key(Key1;"Code")
+        key(Key1; "Code")
         {
         }
     }

@@ -206,8 +206,8 @@ table 80005 "Tmp Purch. Inv. Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            //TODO: Ver TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            //TODO: Ver ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(60; Amount; Decimal)
         {
@@ -406,7 +406,7 @@ table 80005 "Tmp Purch. Inv. Header"
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            TableRelation = 2000000002;
+            //TODO: Ver TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
 
@@ -414,7 +414,7 @@ table 80005 "Tmp Purch. Inv. Header"
             var
                 LoginMgt: Codeunit 418;
             begin
-                LoginMgt.LookupUserID("User ID");
+                //TODO: Ver LoginMgt.LookupUserID("User ID");
             end;
         }
         field(113; "Source Code"; Code[10])
@@ -502,7 +502,7 @@ table 80005 "Tmp Purch. Inv. Header"
         field(10020; "1099 Code"; Code[10])
         {
             Caption = '1099 Code';
-            TableRelation = "IRS 1099 Form-Box";
+            //TODO: Ver TableRelation = "IRS 1099 Form-Box";
         }
         field(34003001; "Tipo Retencion"; Option)
         {
@@ -537,7 +537,7 @@ table 80005 "Tmp Purch. Inv. Header"
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Clasification Code';
-            TableRelation = "Clasificacion Gastos";
+            //TODO: Ver TableRelation = "Clasificacion Gastos";
         }
         field(99008500; "Date Received"; Date)
         {
@@ -591,6 +591,6 @@ table 80005 "Tmp Purch. Inv. Header"
         VendLedgEntry: Record 25;
         PostCode: Record 225;
         PostPurchLinesDelete: Codeunit 364;
-        DimMgt: Codeunit 408;
+    //TODO: Ver  DimMgt: Codeunit DimensionManagement;
 }
 

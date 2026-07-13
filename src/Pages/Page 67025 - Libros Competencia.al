@@ -7,7 +7,7 @@ page 67025 "Libros Competencia"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Editorial"; "Cod. Editorial")
                 {

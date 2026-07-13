@@ -11,7 +11,7 @@ page 67081 "Promotor - Objetivos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

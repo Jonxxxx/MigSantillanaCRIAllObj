@@ -7,7 +7,7 @@ page 67052 "Colegio - Adopciones Detalles"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Editorial"; "Cod. Editorial")
                 {

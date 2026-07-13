@@ -2,11 +2,12 @@ xmlport 58009 "Importa Puestos laborales"
 {
     Format = VariableText;
 
+    /* TODO: Ver
     schema
     {
         textelement(ImportaPuestosLaborales)
         {
-            tableelement(Table34002110;Table34002110)
+            tableelement("Puestos laborales"; 34002110)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(Codigo;"Puestos laborales"."Código")
@@ -18,6 +19,7 @@ xmlport 58009 "Importa Puestos laborales"
             }
         }
     }
+    */
 
     requestpage
     {

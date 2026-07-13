@@ -9,7 +9,7 @@ page 67145 "Ranking CVM"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

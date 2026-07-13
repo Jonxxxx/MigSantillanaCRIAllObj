@@ -19,11 +19,11 @@ table 67081 "Solicitud -  Grado Asistente"
                     DA.SETRANGE("Tipo registro", DA."Tipo registro"::Grados);
                     DA.SETRANGE(Codigo, "Cod. Grado");
                     DA.FINDFIRST;
-                    Descripci n := DA.Descripcion;
+                    Descripcion := DA.Descripcion;
                 END;
             end;
         }
-        field(3; "Descripci n"; Text[80])
+        field(3; "Descripcion"; Text[80])
         {
         }
         field(4; "No. Asistentes"; Integer)

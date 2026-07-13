@@ -12,7 +12,8 @@ xmlport 75004 "MDM-Migracion Inicial Art."
     Encoding = UTF16;
     Format = Xml;
     FormatEvaluate = Xml;
-
+    /*
+    TODO: Ver
     schema
     {
         textelement(mensaje)
@@ -30,7 +31,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                     MaxOccurs = Once;
                     MinOccurs = Once;
                     XmlName = 'Articulos';
-                    tableelement(Table27; Table27)
+                    tableelement(Item; Item)
                     {
                         MaxOccurs = Unbounded;
                         MinOccurs = Once;
@@ -1387,6 +1388,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                 }
             }
         }
+        
     }
 
     requestpage
@@ -1442,13 +1444,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                             // La fecha de alta con el que se van a cargar en el MdM los productos que se migren de NAV, será a uno del mes en el que se lance el proceso de migración
                                             // Fecha_Alta        := FORMAT(CALCDATE('<CM>', TODAY));
 
-        /*
-        FormatoDigital    := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Formato Digital",'', wObligaCampos);
-        PesoDigitalUnidad := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Peso Digital Unidad",'', wObligaCampos);
-        PesoDigitalValor  := '0';
-        TipoProteccion    := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Tipo Protección",'', wObligaCampos);
-        */
-
+        
         Vendible := BolFormatXML(TRUE); // Este valor siempre será True.
 
         // Se reporta 01/01/2016 a piñon
@@ -1601,42 +1597,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
         CLEAR(lwPrecioConImp);
         CLEAR(lwPrecioSinImp);
 
-        /*
-        CLEAR(VatSetup);
-        CLEAR(lrPrec);
-        lrPrec.SETRANGE("Item No.", Item."No.");
-        //lrPrec.SETRANGE("Sales Type", lrPrec."Sales Type"::"Customer Price Group");
-        lrPrec.SETRANGE("Sales Type", lrPrec."Sales Type"::"All Customers");
-        lrPrec.SETFILTER("Currency Code", '%1', '');
-        lrPrec.SETRANGE("Unit of Measure Code", Item."Base Unit of Measure");
-        lrPrec.SETFILTER("Starting Date", '<=%1', pwFecha);
-        lrPrec.SETFILTER("Ending Date",'>%1|%2', pwFecha,0D);
-        wEnc := lrPrec.FINDLAST;
-        IF NOT wEnc  THEN BEGIN
-          lrPrec.SETRANGE("Sales Type", lrPrec."Sales Type"::"Customer Price Group");
-          wEnc := lrPrec.FINDLAST;
-        END;
-        IF wEnc THEN BEGIN
-          IF lrPrec."VAT Bus. Posting Gr. (Price)" <> '' THEN
-            VatSetup.SETRANGE("VAT Bus. Posting Group", lrPrec."VAT Bus. Posting Gr. (Price)")
-          ELSE IF Item."VAT Bus. Posting Gr. (Price)" <> '' THEN
-            VatSetup.SETRANGE("VAT Bus. Posting Group", Item."VAT Bus. Posting Gr. (Price)")
-          ELSE
-            VatSetup.SETRANGE("VAT Bus. Posting Group", rConfMdM."VAT Bus. Posting Group");
-          VatSetup.SETRANGE("VAT Prod. Posting Group", Item."VAT Prod. Posting Group");
-          IF NOT VatSetup.FINDFIRST THEN
-            CLEAR(VatSetup);
         
-          IF lrPrec."Price Includes VAT" THEN BEGIN
-            lwPrecioConImp := lrPrec."Unit Price";
-            lwPrecioSinImp := lwPrecioConImp / (1 + VatSetup."VAT %");
-          END
-          ELSE BEGIN
-            lwPrecioSinImp := lrPrec."Unit Price";
-            lwPrecioConImp := lwPrecioSinImp * (1 + VatSetup."VAT %");
-          END;
-        END;
-        */
 
         wEnc := cGestMdm.GetPrecioVta(Item, pwFecha, lwPrecioConImp, lwPrecioSinImp, lwDivisa);
 
@@ -1710,5 +1671,6 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                 Result := TRUE;
         END;
     end;
+    */
 }
 

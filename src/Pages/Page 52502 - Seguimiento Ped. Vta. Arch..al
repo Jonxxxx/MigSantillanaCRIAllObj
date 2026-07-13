@@ -14,7 +14,7 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

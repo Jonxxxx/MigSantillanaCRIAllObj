@@ -40,7 +40,7 @@ page 130401 "CAL Test Tool"
                     CurrentSuiteNameOnAfterValidat;
                 end;
             }
-            repeater()
+            repeater(General)
             {
                 IndentationColumn = NameIndent;
                 IndentationControls = Name;

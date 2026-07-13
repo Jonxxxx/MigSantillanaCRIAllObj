@@ -49,12 +49,14 @@ table 56031 "Lin. Packing"
         }
         field(10; "No. Pedido"; Code[20])
         {
+            //TODO Ver: 
+            /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
                                                                                     "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true),
-                                                                                                                                                           "Estado packing" = CONST(Listo))
+                                                                                    "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false),
-                                                                                                                                                                                                                                   "Estado packing" = CONST(Listo));
+                                                                                    "Estado packing" = CONST(Listo));*/
         }
         field(20; "Tipo pedido"; Option)
         {
@@ -104,7 +106,7 @@ table 56031 "Lin. Packing"
 
     procedure AbrirCaja()
     begin
-        FuncSant.ReabrirCajaPacking(Rec);
+        //TODO Ver: FuncSant.ReabrirCajaPacking(Rec);
         /*
         CP.SETRANGE("No. Packing","No.");
         CP.SETRANGE("No. Caja","No. Caja");

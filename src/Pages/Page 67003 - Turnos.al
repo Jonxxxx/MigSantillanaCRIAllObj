@@ -12,7 +12,7 @@ page 67003 Turnos
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

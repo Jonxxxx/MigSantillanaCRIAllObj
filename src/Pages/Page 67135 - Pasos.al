@@ -10,7 +10,7 @@ page 67135 Pasos
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

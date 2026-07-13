@@ -11,7 +11,7 @@ page 67116 "Hist Colegio - Docentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

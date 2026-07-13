@@ -79,12 +79,6 @@ table 80013 "Tmp Sales Header"
         {
             Caption = 'Ship-to Code';
             TableRelation = "Ship-to Address".Code WHERE("Customer No." = FIELD("Sell-to Customer No."));
-
-            trigger OnValidate()
-            var
-                SellToCustTemplate: Record 5105;
-            begin
-            end;
         }
         field(13; "Ship-to Name"; Text[50])
         {
@@ -219,7 +213,7 @@ table 80013 "Tmp Sales Header"
         field(43; "Salesperson Code"; Code[10])
         {
             Caption = 'Salesperson Code';
-            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(false));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(false));
 
             trigger OnValidate()
             var
@@ -262,8 +256,8 @@ table 80013 "Tmp Sales Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            //TODO: Ver TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            //TODO: Ver ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(57; Ship; Boolean)
         {
@@ -662,7 +656,7 @@ table 80013 "Tmp Sales Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            TableRelation = Table827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Ver TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5043; "No. of Archived Versions"; Integer)
         {
@@ -693,11 +687,11 @@ table 80013 "Tmp Sales Header"
         field(5051; "Sell-to Customer Template Code"; Code[10])
         {
             Caption = 'Sell-to Customer Template Code';
-            TableRelation = "Customer Template";
+            //TODO: Ver TableRelation = "Customer Template";
 
             trigger OnValidate()
             var
-                SellToCustTemplate: Record 5105;
+            //TODO: Ver SellToCustTemplate: Record 5105;
             begin
             end;
         }
@@ -746,11 +740,11 @@ table 80013 "Tmp Sales Header"
         field(5054; "Bill-to Customer Template Code"; Code[10])
         {
             Caption = 'Bill-to Customer Template Code';
-            TableRelation = "Customer Template";
+            //TODO: Ver TableRelation = "Customer Template";
 
             trigger OnValidate()
             var
-                BillToCustTemplate: Record 5105;
+            //TODO: Ver BillToCustTemplate: Record 5105;
             begin
             end;
         }
@@ -958,8 +952,8 @@ table 80013 "Tmp Sales Header"
         }
         field(53005; "Importe ITBIS Incl."; Decimal)
         {
-            CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
-                                                              "Field3" = FIELD("No.")));
+            //TODO: Ver CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
+            //TODO: Ver                                                   "Field3" = FIELD("No.")));
             FieldClass = FlowField;
         }
         field(53006; "Venta a credito"; Boolean)
@@ -970,7 +964,7 @@ table 80013 "Tmp Sales Header"
         }
         field(53008; Tienda; Code[20])
         {
-            TableRelation = "Bancos tienda";
+            //TODO: Ver TableRelation = "Bancos tienda";
         }
         field(53009; "Factura en Historico"; Boolean)
         {
@@ -984,7 +978,7 @@ table 80013 "Tmp Sales Header"
         field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
         field(56002; "Pre pedido"; Boolean)
         {
@@ -1030,7 +1024,7 @@ table 80013 "Tmp Sales Header"
         field(34003004; "Razon anulacion NCF"; Code[20])
         {
             Caption = 'Reason to void FDN';
-            TableRelation = "Razones Anulacion NCF";
+            //TODO: Ver TableRelation = "Razones Anulacion NCF";
         }
         field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
@@ -1137,13 +1131,6 @@ table 80013 "Tmp Sales Header"
     {
     }
 
-    trigger OnDelete()
-    var
-        Opp: Record 5092;
-        TempOpportunityEntry Record: 5093" temporary;
-    begin
-    end;
-
     trigger OnRename()
     begin
         ERROR(Text003, TABLECAPTION);
@@ -1211,16 +1198,16 @@ table 80013 "Tmp Sales Header"
         Location: Record 14;
         WhseRequest: Record 5765;
         ShippingAgentService: Record 5790;
-        TempReqLine Record: 246" temporary;
-        SalesTaxDifference: Record 10012;
+        TempReqLine: Record 246 temporary;
+        //TODO: Ver SalesTaxDifference: Record 10012;
         UserMgt: Codeunit 5700;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         CustCheckCreditLimit: Codeunit 312;
         TransferExtendedText: Codeunit 378;
         GenJnlApply: Codeunit 225;
         SalesPost: Codeunit 80;
         CustEntrySetApplID: Codeunit 101;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         WhseSourceHeader: Codeunit 5781;
         ArchiveManagement: Codeunit 5063;
         SalesLineReserve: Codeunit 99000832;
@@ -1232,7 +1219,7 @@ table 80013 "Tmp Sales Header"
         Text038: Label 'Contact %1 %2 is related to a different company than customer %3.';
         Text039: Label 'Contact %1 %2 is not related to a customer.';
         ReservEntry: Record 337;
-        TempReservEntry Record: 337" temporary;
+        TempReservEntry: Record 337 temporary;
         Text040: Label 'A won opportunity is linked to this order.\';
         Text041: Label 'It has to be changed to status Lost before the Order can be deleted.\';
         Text042: Label 'Do you want to change the status for this opportunity now?';
@@ -1270,8 +1257,8 @@ table 80013 "Tmp Sales Header"
         txt001: Label 'Se eliminaran las l neas de ventas del pedido, confirma que desea continuar';
         Error002: Label 'Existe otro pedido tipo Consignacion para este cliente - No. Pedido %1';
         Error003: Label 'Existe un pedido de Devolucion de consignacion en borrador para este cliente - No. Pedido %1';
-        Tienda: Record 34002504;
-        TPV: Record 34002503;
+        //TODO: Ver Tienda: Record 34002504;
+        //TODO: Ver TPV: Record 34002503;
         TransferHeader: Record 5740;
         "**002**": Integer;
         rDefDim: Record 352;
@@ -1279,6 +1266,6 @@ table 80013 "Tmp Sales Header"
         "**005**": Integer;
         rNoSeries: Record 308;
         "**006**": Integer;
-        rPagosTPV: Record 34002515;
+    //TODO: Ver rPagosTPV: Record 34002515;
 }
 

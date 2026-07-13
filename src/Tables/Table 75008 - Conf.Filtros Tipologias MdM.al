@@ -64,7 +64,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
     procedure GetIdName() Result: Text
     var
         lwN: Integer;
-        lrTmpDts Record: 75001" temporary;
+        lrTmpDts: Record 75001 temporary;
     begin
         // GetIdName
 
@@ -73,7 +73,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
         CASE Tipo OF
             Tipo::Dimension:
                 BEGIN
-                    Result := cFunMdM.GetDimNameField("Valor Id");
+                    //TODO: Ver Result := cFunMdM.GetDimNameField("Valor Id");
                 END;
             Tipo::"Dato MdM":
                 BEGIN
@@ -84,7 +84,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
                 END;
             Tipo::Otros:
                 BEGIN
-                    Result := cFunMdM.GetOtrosName("Valor Id");
+                    //TODO: Ver Result := cFunMdM.GetOtrosName("Valor Id");
                 END;
         END;
     end;

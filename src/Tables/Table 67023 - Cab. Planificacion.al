@@ -5,7 +5,7 @@ table 67023 "Cab. Planificacion"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor | Supervisor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor | Supervisor));
 
             trigger OnValidate()
             begin
@@ -35,18 +35,18 @@ table 67023 "Cab. Planificacion"
             trigger OnLookup()
             begin
 
-                date1.RESET;
-                date1.SETRANGE("Period Type", 1); //Semana
-                date1.SETRANGE("Period Start", TODAY, CALCDATE('+2' + Sem, TODAY));
+                //TODO: Ver date1.RESET;
+                //TODO: Ver date1.SETRANGE("Period Type", 1); //Semana
+                //TODO: Ver date1.SETRANGE("Period Start", TODAY, CALCDATE('+2' + Sem, TODAY));
                 //date1.SETRANGE("Period Start",CALCDATE('+1' + Sem,TODAY),CALCDATE('+2' + Sem,TODAY));
-                date1.FINDSET;
+                //TODO: Ver date1.FINDSET;
 
-                fFechas.SETTABLEVIEW(date1);
+                //TODO: Ver fFechas.SETTABLEVIEW(date1);
                 //fFechas.SETRECORD(date1);
                 fFechas.LOOKUPMODE(TRUE);
                 IF fFechas.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                    fFechas.GETRECORD(date1);
-                    VALIDATE(Semana, date1."Period No.");
+                    //TODO: Ver fFechas.GETRECORD(date1);
+                    //TODO: Ver VALIDATE(Semana, date1."Period No.");
                 END;
 
                 CLEAR(fFechas);
@@ -55,14 +55,14 @@ table 67023 "Cab. Planificacion"
             trigger OnValidate()
             begin
 
-                date1.RESET;
-                date1.SETRANGE("Period Type", date1."Period Type"::Week);
-                date1.SETRANGE("Period Start", CALCDATE('-2' + Sem, WORKDATE), CALCDATE('+52' + Sem, WORKDATE));
-                date1.SETRANGE("Period No.", Semana);
-                date1.FINDFIRST;
+                //TODO: Ver date1.RESET;
+                //TODO: Ver date1.SETRANGE("Period Type", date1."Period Type"::Week);
+                //TODO: Ver date1.SETRANGE("Period Start", CALCDATE('-2' + Sem, WORKDATE), CALCDATE('+52' + Sem, WORKDATE));
+                //TODO: Ver date1.SETRANGE("Period No.", Semana);
+                //TODO: Ver date1.FINDFIRST;
 
-                "Fecha Inicial" := date1."Period Start";
-                "Fecha Final" := NORMALDATE(date1."Period End");
+                //TODO: Ver "Fecha Inicial" := date1."Period Start";
+                //TODO: Ver "Fecha Final" := NORMALDATE(date1."Period End");
 
                 IF INSERT(TRUE) THEN;
                 /*
@@ -127,6 +127,8 @@ table 67023 "Cab. Planificacion"
         IF Estado > 1 THEN
             ERROR(STRSUBSTNO(Err001, FIELDNAME(Estado), Estado));
 
+        //TODO: Ver 
+        /*
         PPV2.RESET;
         PPV2.SETRANGE("Cod. Promotor", "Cod. Promotor");
         PPV2.SETRANGE(Semana, Semana);
@@ -135,7 +137,7 @@ table 67023 "Cab. Planificacion"
                 IF PPV2.Estado = 2 THEN
                     ERROR(Err002);
                 PPV2.DELETE(TRUE);
-            UNTIL PPV2.NEXT = 0;
+            UNTIL PPV2.NEXT = 0;*/
     end;
 
     trigger OnInsert()

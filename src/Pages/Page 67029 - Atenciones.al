@@ -7,7 +7,7 @@ page 67029 Atenciones
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

@@ -12,7 +12,7 @@ page 67059 Aficiones
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

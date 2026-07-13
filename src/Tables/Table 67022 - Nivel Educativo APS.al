@@ -5,10 +5,10 @@ table 67022 "Nivel Educativo APS"
 
     fields
     {
-        field(1; "C digo"; Code[20])
+        field(1; "Codigo"; Code[20])
         {
         }
-        field(2; "Descripci n"; Text[100])
+        field(2; "Descripcion"; Text[100])
         {
         }
         field(3; "Verificaci n cruzada"; Boolean)
@@ -25,14 +25,14 @@ table 67022 "Nivel Educativo APS"
 
     keys
     {
-        key(Key1; "C digo")
+        key(Key1; "Codigo")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "C digo", "Descripci n")
+        fieldgroup(DropDown; "Codigo", "Descripcion")
         {
         }
     }

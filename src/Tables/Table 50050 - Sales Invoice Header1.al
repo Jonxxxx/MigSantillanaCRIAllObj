@@ -4,7 +4,7 @@ table 50050 "Sales Invoice Header1"
     // ------------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------------
-    // No.             Firma         Fecha           Descripci n
+    // No.             Firma         Fecha           Descripcion
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migraci n Costa Rica. Corregir error compilaci n.
     // DSLoc1.01   GRN     13/08/2011    Para imprimir formatos de facturas segun Gpo. Contable

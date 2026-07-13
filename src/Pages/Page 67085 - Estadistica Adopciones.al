@@ -9,7 +9,7 @@ page 67085 "Estadistica Adopciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Sub Familia"; "Sub Familia")
                 {

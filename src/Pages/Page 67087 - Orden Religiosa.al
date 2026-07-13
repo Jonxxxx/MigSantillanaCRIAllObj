@@ -10,7 +10,7 @@ page 67087 "Orden Religiosa"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

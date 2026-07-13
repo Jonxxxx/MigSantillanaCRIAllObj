@@ -100,7 +100,7 @@ table 75010 "Conf. Campos Relacionados"
 
     var
         Text001: Label 'Los Valores %1 y %2 No pueden ser iguales';
-        cGestMaest: Codeunit 75001;
+        //TODO: Ver cGestMaest: Codeunit 75001;
         Text002: Label 'Ya existe un registro %1  %2  %3';
 
     procedure Controles()
@@ -129,7 +129,7 @@ table 75010 "Conf. Campos Relacionados"
         IF lwIdF = 0 THEN
             EXIT;
 
-        Result := cGestMaest.GetFieldCaption(IdTbl, lwIdF);
+        //TODO: Ver Result := cGestMaest.GetFieldCaption(IdTbl, lwIdF);
     end;
 
     local procedure IdTbl() Resullt: Integer

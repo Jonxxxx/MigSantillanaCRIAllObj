@@ -10,7 +10,7 @@ page 67111 "Adopciones - Colegio - MRK"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Producto"; "Cod. Producto")
                 {

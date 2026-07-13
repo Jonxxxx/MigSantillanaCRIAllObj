@@ -1,7 +1,7 @@
 table 64824 "Replicator Group"
 {
-    DrillDownPageID = 64824;
-    LookupPageID = 64824;
+    //TODO: Ver DrillDownPageID = 64824;
+    //TODO: Ver LookupPageID = 64824;
 
     fields
     {

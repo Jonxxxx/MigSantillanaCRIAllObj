@@ -15,7 +15,7 @@ page 67098 "Lista Planificacion Ejecucion"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

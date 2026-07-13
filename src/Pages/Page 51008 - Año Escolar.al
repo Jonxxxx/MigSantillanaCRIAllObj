@@ -10,7 +10,7 @@ page 51008 "Año Escolar"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Ano"; "Cod. Ano")
                 {

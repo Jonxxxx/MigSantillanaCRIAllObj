@@ -7,7 +7,7 @@ page 67030 "Atenciones Colegios"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Atencion"; "Cod. Atencion")
                 {

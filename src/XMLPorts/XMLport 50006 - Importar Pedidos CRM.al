@@ -269,21 +269,26 @@ xmlport 50006 "Importar Pedidos CRM"
 
                             SH.VALIDATE("Bill-to Customer No.", ConfigEmpresa."Cliente CRM");
 
+                            //TOOD: Ver 
+                            /*
                             IF cod_colegio <> '' THEN BEGIN
                                 SH.VALIDATE("Cod. Colegio", cod_colegio);
                             END ELSE
-                                SH.VALIDATE("Cod. Colegio", Customer."Cod. Colegio");
+                                SH.VALIDATE("Cod. Colegio", Customer."Cod. Colegio");*/
 
                             SH.VALIDATE("External Document No.", doc_externo);
                             SH.VALIDATE("Location Code", ConfigEmpresa."Almacen CRM");
 
                             //Obtengo el Colegio para datos del vendedor+
+                            //TOOD: Ver 
+                            /*
                             IF (cod_colegio <> '') AND (cod_vendedor = '') THEN BEGIN
                                 IF Contact.GET(cod_colegio) THEN;
                             END ELSE
                                 IF (cod_colegio = '') AND (cod_vendedor = '') THEN BEGIN
                                     IF Contact.GET(Customer."Cod. Colegio") THEN;
                                 END;
+                                */
 
                             IF cod_vendedor <> '' THEN BEGIN
                                 SH.VALIDATE("Salesperson Code", cod_vendedor);
@@ -347,11 +352,13 @@ xmlport 50006 "Importar Pedidos CRM"
                                 SH.VALIDATE("Bill-to Post Code", Customer."Post Code");
                             END;
 
+                            //TOOD: Ver 
+                            /*
                             IF email_fact <> '' THEN BEGIN
                                 SH.VALIDATE("E-Mail-FE", email_fact);
                             END ELSE BEGIN
                                 SH.VALIDATE("E-Mail-FE", Customer."E-Mail");
-                            END;
+                            END;*/
 
                             IF telefono_celular_fact <> '' THEN BEGIN
                                 SH.VALIDATE("Sell-to Phone No.", telefono_celular_fact);
@@ -521,22 +528,25 @@ xmlport 50006 "Importar Pedidos CRM"
 
                             CLEAR(ConvertDecimal);
                             EVALUATE(ConvertDecimal, cantidad);
-                            SL.VALIDATE("Cantidad Solicitada", ConvertDecimal);
+
+                            //TOOD: Ver SL.VALIDATE("Cantidad Solicitada", ConvertDecimal);
 
                             IF precio_unitario_sinIVA <> '' THEN BEGIN
                                 CLEAR(ConvertDecimal);
-                                ReemplazarDecimal := precio_unitario_sinIVA;
-                                NuevoValor := ReemplazarDecimal.Replace('.', ',');
+                                //TOOD: Ver ReemplazarDecimal := precio_unitario_sinIVA;
+                                //TOOD: Ver NuevoValor := ReemplazarDecimal.Replace('.', ',');
 
                                 EVALUATE(ConvertDecimal, NuevoValor);
                                 SL.VALIDATE("Unit Price", ConvertDecimal);
                             END;
 
+                            //TOOD: Ver 
+                            /*
                             IF (SL."Cantidad Solicitada" = 0) THEN BEGIN
                                 CLEAR(ConvertDecimal);
                                 EVALUATE(ConvertDecimal, cantidad);
                                 SL.VALIDATE(SL."Cantidad Solicitada", ConvertDecimal);
-                            END;
+                            END;*/
 
                             IF (importe_dto <> '') AND (importe_dto <> '0') THEN BEGIN
                                 CLEAR(ConvertDecimal);
@@ -548,11 +558,13 @@ xmlport 50006 "Importar Pedidos CRM"
                             //IF grupo_registroIVA_product <> '' THEN
                             //  SL.VALIDATE("VAT Prod. Posting Group" ,grupo_registroIVA_product);
 
+                            //TOOD: Ver 
+                            /*
                             IF SL."Cantidad Solicitada" = 0 THEN BEGIN
                                 CLEAR(ConvertDecimal);
                                 EVALUATE(ConvertDecimal, cantidad);
                                 SL.VALIDATE("Cantidad Solicitada", ConvertDecimal);
-                            END;
+                            END;*/
 
                             SL.INSERT;
                             COMMIT;
@@ -593,7 +605,7 @@ xmlport 50006 "Importar Pedidos CRM"
         ConvertDecimal: Decimal;
         Nolinea: Integer;
         NoDoc_anterior: Code[20];
-        ReemplazarDecimal: DotNet String;
+        //TOOD: Ver ReemplazarDecimal: DotNet String;
         NuevoValor: Text;
         StrParam: Text[1024];
         _pedidos: Record 36;

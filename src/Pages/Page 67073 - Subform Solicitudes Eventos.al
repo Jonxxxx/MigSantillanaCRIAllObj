@@ -7,7 +7,7 @@ page 67073 "Subform Solicitudes Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Tipo de Evento"; "Tipo de Evento")
                 {

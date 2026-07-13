@@ -10,7 +10,7 @@ page 67046 "Lista Colegio - Asignatura"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Codigo Colegio"; "Codigo Colegio")
                 {

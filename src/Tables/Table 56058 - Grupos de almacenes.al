@@ -10,7 +10,7 @@ table 56058 "Grupos de almacenes"
         field(1; Grupo; Code[10])
         {
         }
-        field(2; "Descripci n"; Text[50])
+        field(2; "Descripcion"; Text[50])
         {
         }
     }
@@ -32,7 +32,7 @@ table 56058 "Grupos de almacenes"
         lrAxG: Record 56059;
     begin
         lrAxG.RESET;
-        lrAxG.SETRANGE(Grupo, Grupo);
+        //TODO: Ver lrAxG.SETRANGE(Grupo, Grupo);
         IF lrAxG.COUNT > 0 THEN
             ERROR(TextL001);
     end;

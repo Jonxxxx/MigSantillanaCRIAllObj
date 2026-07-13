@@ -8,7 +8,7 @@ page 67050 "Promotor - Niveles"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

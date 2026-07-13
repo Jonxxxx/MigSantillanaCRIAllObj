@@ -7,7 +7,7 @@ page 67103 "Seleccionar Docentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Seleccionar; Seleccionar)
                 {

@@ -9,7 +9,7 @@ page 67037 "Colegio - Grados"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

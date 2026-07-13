@@ -13,7 +13,7 @@ page 67077 "Contact List APS"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 IndentationColumn = NameIndent;
                 IndentationControls = Name;

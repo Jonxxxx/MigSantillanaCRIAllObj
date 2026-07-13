@@ -7,7 +7,7 @@ table 67039 "Promotor - Entrega Muestras"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Colegio"; Code[20])
         {

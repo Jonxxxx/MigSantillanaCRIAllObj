@@ -7,7 +7,7 @@ page 67019 "Areas de interes padres"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("DNI Padre"; "DNI Padre")
                 {

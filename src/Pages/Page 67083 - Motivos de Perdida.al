@@ -12,7 +12,7 @@ page 67083 "Motivos de Perdida"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

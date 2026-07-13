@@ -12,7 +12,7 @@ page 56025 "Lista clas. devoluciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

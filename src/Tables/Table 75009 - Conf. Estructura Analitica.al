@@ -12,7 +12,7 @@ table 75009 "Conf. Estructura Analitica"
         }
         field(10; Codigo; Code[21])
         {
-            Caption = 'C digo';
+            Caption = 'Codigo';
             TableRelation = "Estructura Analitica";
         }
         field(11; Nivel; Integer)
@@ -25,7 +25,7 @@ table 75009 "Conf. Estructura Analitica"
         field(12; Descripcion; Text[100])
         {
             CalcFormula = Lookup("Estructura Analitica".Descripcion WHERE("Codigo" = FIELD("Codigo")));
-            Caption = 'Descripci n';
+            Caption = 'Descripcion';
             Editable = false;
             FieldClass = FlowField;
         }

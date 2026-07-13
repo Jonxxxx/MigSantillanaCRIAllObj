@@ -11,7 +11,7 @@ page 67026 "Colegio - Adopciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

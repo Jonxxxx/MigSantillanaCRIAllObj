@@ -55,7 +55,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         {
             Editable = false;
         }
-        field(5; "Delegaci n"; Code[20])
+        field(5; "Delegacion"; Code[20])
         {
             Editable = false;
             TableRelation = "Dimension Value".Code;
@@ -127,7 +127,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     "Grupo Negocio" := rSol."Grupo de Negocio";
                     "Tipo Evento" := rSol."Tipo de Evento";
                     "Cod. evento" := rSol."Cod. evento";
-                    "Descripci n evento" := rSol."Descripcion evento";
+                    "Descripcion evento" := rSol."Descripcion evento";
                     "Cod. Nivel" := rSol."Cod. Nivel";
 
                     VALIDATE("Cod. Colegio", rSol."Cod. Colegio");
@@ -139,7 +139,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     "Tel fono 1 Persona Contacto" := rSol."Telefono Responsable";
                     "Tel fono 2 Persona Contacto" := rSol."No. celular responsable";
                     "Cod. Cargo Persona Contacto" := rSol."Cod. Cargo Responsable";
-                    "Desc. Cargo Persona Contacto" := rSol."Descripci n Cargo Responsable";
+                    "Desc. Cargo Persona Contacto" := rSol."Descripcion Cargo Responsable";
                     "E-mail Persona Contacto" := rSol."E-Mail Docente Responsable";
 
                     TraerNGyE(rSol."No. Solicitud");
@@ -159,9 +159,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
                 IF "Cod. Colegio" <> '' THEN BEGIN
                     Colegio.GET("Cod. Colegio");
-                    Delegaci n := Colegio.Delegacion;
+                    //TODO: Ver Delegacion := Colegio.Delegacion;
                     "Nombre Colegio" := Colegio.Name;
-                    "Distrito Colegio" := Colegio.Distritos;
+                    //TODO: Ver "Distrito Colegio" := Colegio.Distritos;
                     "Direcci n Colegio" := Colegio.Address;
                     "Tel fono 1 Colegio" := Colegio."Phone No.";
                     "Tel fono 2 Colegio" := Colegio."Mobile Phone No.";
@@ -403,14 +403,14 @@ table 67102 "Cab. Visita Asesor/Consultor"
                 rEvExp.RESET;
                 IF "Tipo Evento" <> '' THEN
                     rEvExp.SETRANGE(rEvExp."Tipo de Evento", "Tipo Evento");
-                rEvExp.SETRANGE(rEvExp.Delegacion, Delegaci n);
+                rEvExp.SETRANGE(rEvExp.Delegacion, Delegacion);
                 rEvExp.SETRANGE(rEvExp."Cod. Expositor", "Cod. Asesor/Consultor");
                 pEvExp.SETTABLEVIEW(rEvExp);
                 pEvExp.LOOKUPMODE(TRUE);
                 IF pEvExp.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     pEvExp.GETRECORD(rEvExp);
                     "Cod. evento" := rEvExp."Cod. Evento";
-                    "Descripci n evento" := rEvExp."Descripcion Evento";
+                    "Descripcion evento" := rEvExp."Descripcion Evento";
                     "Tipo Evento" := rEvExp."Tipo de Evento";
                 END;
             end;
@@ -423,18 +423,18 @@ table 67102 "Cab. Visita Asesor/Consultor"
                 rEvExp.RESET;
                 IF "Tipo Evento" <> '' THEN
                     rEvExp.SETRANGE(rEvExp."Tipo de Evento", "Tipo Evento");
-                rEvExp.SETRANGE(rEvExp.Delegacion, Delegaci n);
+                rEvExp.SETRANGE(rEvExp.Delegacion, Delegacion);
                 rEvExp.SETRANGE(rEvExp."Cod. Expositor", "Cod. Asesor/Consultor");
                 rEvExp.SETRANGE(rEvExp."Cod. Evento", "Cod. evento");
                 IF rEvExp.FINDSET THEN BEGIN
-                    "Descripci n evento" := rEvExp."Descripcion Evento";
+                    "Descripcion evento" := rEvExp."Descripcion Evento";
                     "Tipo Evento" := rEvExp."Tipo de Evento";
                 END
                 ELSE
                     ERROR(STRSUBSTNO(err001, "Cod. Asesor/Consultor"));
             end;
         }
-        field(39; "Descripci n evento"; Text[100])
+        field(39; "Descripcion evento"; Text[100])
         {
             Editable = false;
         }
@@ -496,14 +496,14 @@ table 67102 "Cab. Visita Asesor/Consultor"
     trigger OnInsert()
     var
         APSSetup: Record 67000;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         Seg: Record 67107;
     begin
 
         IF "No. Visita Asesor/Consultor" = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Visita Asesor/Consu.");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Visita Asesor/Consu.", xRec."No. Series", 0D, "No. Visita Asesor/Consultor", "No. Series");
+            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Visita Asesor/Consu.", xRec."No. Series", 0D, "No. Visita Asesor/Consultor", "No. Series");
         END;
 
         Seg.InsertarSeguimiento(Rec);
@@ -527,7 +527,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                 //rProg."Tipo Asesor/Consultor"   := "Tipo Asesor/Consultor";
                 rProg."Cod. Asesor/Consultor" := "Cod. Asesor/Consultor";
                 rProg."Nombre Asesor/Consultor" := "Nombre Asesor/Consultor";
-                rProg.Delegaci n := Delegaci n;
+                rProg.Delegacion := Delegacion;
                 rProg."Grupo Negocio" := "Grupo Negocio";
                 rProg."Cod. promotor" := "Cod. promotor";
                 rProg."Nombre promotor" := "Nombre promotor";
@@ -579,7 +579,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     rNGE."No. Visita" := "No. Visita Asesor/Consultor";
                     rNGE.Tipo := rNGE.Tipo::Nivel;
                     rNGE.Codigo := rNivel."Cod. Nivel";
-                    rNGE.Descripci n := rNivel.Descripci n;
+                    rNGE.Descripcion := rNivel.Descripcion;
                     rNGE.INSERT;
                 UNTIL rNivel.NEXT = 0;
 
@@ -590,7 +590,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     rNGE."No. Visita" := "No. Visita Asesor/Consultor";
                     rNGE.Tipo := rNGE.Tipo::Grado;
                     rNGE.Codigo := rGrado."Cod. Grado";
-                    rNGE.Descripci n := rGrado.Descripci n;
+                    rNGE.Descripcion := rGrado.Descripcion;
                     rNGE.INSERT;
                 UNTIL rGrado.NEXT = 0;
 
@@ -601,7 +601,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     rNGE."No. Visita" := "No. Visita Asesor/Consultor";
                     rNGE.Tipo := rNGE.Tipo::Especialidad;
                     rNGE.Codigo := rEspec."Cod. Especialidad";
-                    rNGE.Descripci n := rEspec.Descripci n;
+                    rNGE.Descripcion := rEspec.Descripcion;
                     rNGE.INSERT;
                 UNTIL rEspec.NEXT = 0;
         END;

@@ -17,13 +17,13 @@ table 56059 "Almacenes x Grupo"
         }
         field(10; "Nombre Grupo"; Text[50])
         {
-            CalcFormula = Lookup("Grupos de almacenes".Descripci n WHERE ("Grupo"=FIELD("Grupo")));
+            //TODO: Ver CalcFormula = Lookup("Grupos de almacenes".Descripcion WHERE ("Grupo"=FIELD("Grupo")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(11;"Nombre Almacen";Text[100])
+        field(11; "Nombre Almacen"; Text[100])
         {
-            CalcFormula = Lookup(Location.Name WHERE ("Code"=FIELD("Almacen")));
+            CalcFormula = Lookup(Location.Name WHERE("Code" = FIELD("Almacen")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -31,10 +31,10 @@ table 56059 "Almacenes x Grupo"
 
     keys
     {
-        key(Key1;Grupo,Almacen)
+        key(Key1; Grupo, Almacen)
         {
         }
-        key(Key2;Almacen,Grupo)
+        key(Key2; Almacen, Grupo)
         {
         }
     }
@@ -48,9 +48,9 @@ table 56059 "Almacenes x Grupo"
         TextL001: Label 'Un grupo no puede tener mas de %2 almacenes relacionados.';
         lrAxG: Record 56059;
     begin
-        lrAxG.SETRANGE(Grupo,Grupo);
+        lrAxG.SETRANGE(Grupo, Grupo);
         IF lrAxG.COUNT >= (32 + 1) THEN
-          ERROR(TextL001,Grupo,32);
+            ERROR(TextL001, Grupo, 32);
     end;
 }
 

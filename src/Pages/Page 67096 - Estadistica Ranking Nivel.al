@@ -9,7 +9,7 @@ page 67096 "Estadistica Ranking Nivel"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

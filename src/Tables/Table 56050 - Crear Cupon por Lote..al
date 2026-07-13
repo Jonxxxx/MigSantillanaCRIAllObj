@@ -57,7 +57,7 @@ table 56050 "Crear Cupon por Lote."
                 END;
             end;
         }
-        field(11; "Campa a"; Code[20])
+        field(11; "Campana"; Code[20])
         {
             Caption = 'Campaing';
             TableRelation = Campaign;

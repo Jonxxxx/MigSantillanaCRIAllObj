@@ -17,7 +17,7 @@ table 67061 "Cab. Atenciones"
                 IF Contact.GET("Cod. Colegio") THEN BEGIN
                     "Nombre Colegio" := Contact.Name;
                     Address := Contact.Address;
-                    "Address 2" := Contact."Address 2;
+                    "Address 2" := Contact."Address 2";
                     City := Contact.City;
                     "Territory Code" := Contact."Territory Code";
                     "Country/Region Code" := Contact."Country/Region Code";
@@ -65,7 +65,7 @@ table 67061 "Cab. Atenciones"
         }
         field(8; "Tipo documento"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(28));
+            //TODO: Ver TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
         }
         field(9; "Document ID"; Text[20])
         {
@@ -133,7 +133,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                "Country/Region"Record 9;
+                "Country/Region": Record 9;
             begin
                 IF Country.GET("Country/Region Code") THEN
                     Pais := Country.Name;
@@ -409,12 +409,12 @@ table 67061 "Cab. Atenciones"
         }
         field(39; Monto; Decimal)
         {
-            CalcFormula = Sum("Detalle Atenciones"."Monto total" WHERE("C digo Cab. Atenci n" = FIELD("Codigo")));
+            CalcFormula = Sum("Detalle Atenciones"."Monto total" WHERE("Codigo Cab. Atencion" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
         field(40; Atenciones; Integer)
         {
-            CalcFormula = Count("Detalle Atenciones" WHERE("C digo Cab. Atenci n" = FIELD("Codigo")));
+            CalcFormula = Count("Detalle Atenciones" WHERE("Codigo Cab. Atencion" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
         field(41; "Fecha Recepci n Documento"; Date)
@@ -442,25 +442,25 @@ table 67061 "Cab. Atenciones"
 
     trigger OnDelete()
     var
-        error001: Label 'No se permite eliminar una atenci n realizada.';
+        error001: Label 'No se permite eliminar una Atencion realizada.';
         rDet: Record 67100;
     begin
         IF Estado = Estado::Realizada THEN
             ERROR(error001);
 
-        rDet.SETRANGE("C digo Cab. Atenci n", Codigo);
+        rDet.SETRANGE("Codigo Cab. Atencion", Codigo);
         rDet.DELETEALL;
     end;
 
     trigger OnInsert()
     var
         APSSetup: Record 67000;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
     begin
         IF Codigo = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD(APSSetup."No. Serie Atenciones");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Atenciones", xRec."No. Series", 0D, Codigo, "No. Series");
+            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Atenciones", xRec."No. Series", 0D, Codigo, "No. Series");
         END;
 
 
@@ -478,12 +478,12 @@ table 67061 "Cab. Atenciones"
         DA: Record 67002;
         PostCodeForm: Page 367;
         formTerritory: Page 429;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         DimForm: Page 560;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        //TODO: Ver DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
         //DimMgt.SaveDefaultDim(DATABASE::Customer,"No.",FieldNumber,ShortcutDimCode);
         MODIFY;
     end;

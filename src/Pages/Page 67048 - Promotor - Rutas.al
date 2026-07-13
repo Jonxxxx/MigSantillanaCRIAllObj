@@ -9,7 +9,7 @@ page 67048 "Promotor - Rutas"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

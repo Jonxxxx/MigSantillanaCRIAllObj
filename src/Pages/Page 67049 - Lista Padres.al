@@ -13,7 +13,7 @@ page 67049 "Lista Padres"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(DNI; DNI)
                 {

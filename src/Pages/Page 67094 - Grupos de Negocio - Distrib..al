@@ -10,7 +10,7 @@ page 67094 "Grupos de Negocio - Distrib."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Código; Código)
                 {

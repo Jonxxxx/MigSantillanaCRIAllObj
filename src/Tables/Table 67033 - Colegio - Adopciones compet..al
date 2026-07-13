@@ -70,7 +70,7 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TOOD: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -158,45 +158,45 @@ table 67033 "Colegio - Adopciones compet."
         }
         field(15; "Descripcion Nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripcion WHERE("Codigo" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(16;"Descripcion Grado";Text[100])
+        field(16; "Descripcion Grado"; Text[100])
         {
         }
-        field(17;"Fecha Adopcion";Date)
+        field(17; "Fecha Adopcion"; Date)
         {
         }
-        field(18;"Cantidad Alumnos";Decimal)
+        field(18; "Cantidad Alumnos"; Decimal)
         {
-            CalcFormula = Lookup("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                                          "Cod. Colegio"=FIELD("Cod. Colegio"),
-                                                                                          "Cod. Local"=FIELD("Cod. Local"),
-                                                                                          "Cod. Nivel"=FIELD("Cod. Nivel"),
-                                                                                          "Cod. Grado"=FIELD("Cod. Grado"),
-                                                                                          "Cod. Promotor"=FIELD("Cod. Promotor"),
-                                                                                          "Cod. Producto"=FIELD("Cod. Producto")));
-            DecimalPlaces = 0:0;
+            CalcFormula = Lookup("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE("Cod. Editorial" = FIELD("Cod. Editorial"),
+                                                                                          "Cod. Colegio" = FIELD("Cod. Colegio"),
+                                                                                          "Cod. Local" = FIELD("Cod. Local"),
+                                                                                          "Cod. Nivel" = FIELD("Cod. Nivel"),
+                                                                                          "Cod. Grado" = FIELD("Cod. Grado"),
+                                                                                          "Cod. Promotor" = FIELD("Cod. Promotor"),
+                                                                                          "Cod. Producto" = FIELD("Cod. Producto")));
+            DecimalPlaces = 0 : 0;
             FieldClass = FlowField;
         }
-        field(19;"% Dto. Padres";Decimal)
+        field(19; "% Dto. Padres"; Decimal)
         {
         }
-        field(20;"% Dto. Colegio";Decimal)
+        field(20; "% Dto. Colegio"; Decimal)
         {
         }
-        field(21;"% Dto. Docente";Decimal)
+        field(21; "% Dto. Docente"; Decimal)
         {
         }
-        field(22;"% Dto. Feria Padres";Decimal)
+        field(22; "% Dto. Feria Padres"; Decimal)
         {
         }
-        field(23;"% Dto. Feria Colegio";Decimal)
+        field(23; "% Dto. Feria Colegio"; Decimal)
         {
         }
-        field(24;"Cod. Motivo perdida adopcion";Code[20])
+        field(24; "Cod. Motivo perdida adopcion"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Motivos Perdida"));
 
             trigger OnValidate()
             begin
@@ -210,12 +210,12 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(27;"Nombre Promotor";Text[60])
+        field(27; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(28;Adopcion;Option)
+        field(28; Adopcion; Option)
         {
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
@@ -266,22 +266,22 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(29;"Adopcion anterior";Option)
+        field(29; "Adopcion anterior"; Option)
         {
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
         }
-        field(30;Santillana;Boolean)
+        field(30; Santillana; Boolean)
         {
         }
-        field(31;Usuario;Code[20])
+        field(31; Usuario; Code[20])
         {
         }
-        field(32;"Ano adopcion";Integer)
+        field(32; "Ano adopcion"; Integer)
         {
             Caption = 'Year of decition';
         }
-        field(33;"Linea de negocio";Code[20])
+        field(33; "Linea de negocio"; Code[20])
         {
 
             trigger OnLookup()
@@ -307,7 +307,7 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(34;Familia;Code[20])
+        field(34; Familia; Code[20])
         {
 
             trigger OnLookup()
@@ -332,7 +332,7 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(35;"Sub Familia";Code[20])
+        field(35; "Sub Familia"; Code[20])
         {
 
             trigger OnLookup()
@@ -357,7 +357,7 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(36;Serie;Code[20])
+        field(36; Serie; Code[20])
         {
 
             trigger OnLookup()
@@ -382,15 +382,15 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(37;"Fecha Ult. Modificacion";Date)
+        field(37; "Fecha Ult. Modificacion"; Date)
         {
         }
-        field(38;"Adopcion Real";Integer)
+        field(38; "Adopcion Real"; Integer)
         {
         }
-        field(39;"Motivo perdida adopcion";Text[60])
+        field(39; "Motivo perdida adopcion"; Text[60])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Motivos Perdida"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Motivos Perdida"));
 
             trigger OnValidate()
             begin
@@ -403,37 +403,36 @@ table 67033 "Colegio - Adopciones compet."
 
             end;
         }
-        field(41;"Cod. Producto Editora";Code[20])
+        field(41; "Cod. Producto Editora"; Code[20])
         {
-            TableRelation = "Libros Competencia"."Cod. Libro" WHERE ("Cod. Editorial"=FIELD("Cod. Editorial"),
-                                                                     "Nivel"=FIELD("Cod. Nivel"));
+            TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Cod. Editorial"),
+                                                                     "Nivel" = FIELD("Cod. Nivel"));
 
             trigger OnValidate()
             begin
-                IF "Cod. Producto Editora" <> '' THEN
-                   BEGIN
-                    ProdEdit.GET("Cod. Editorial","Cod. Producto Editora","Cod. Nivel");
+                IF "Cod. Producto Editora" <> '' THEN BEGIN
+                    ProdEdit.GET("Cod. Editorial", "Cod. Producto Editora", "Cod. Nivel");
                     "Nombre Producto Editora" := ProdEdit.Description;
-                   END;
+                END;
             end;
         }
-        field(42;"Nombre Producto Editora";Text[100])
+        field(42; "Nombre Producto Editora"; Text[100])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Producto","Cod. Editorial","Cod. Producto Editora","Cod. Nivel")
+        key(Key1; "Cod. Colegio", "Cod. Producto", "Cod. Editorial", "Cod. Producto Editora", "Cod. Nivel")
         {
         }
-        key(Key2;"Cod. Colegio","Cod. Nivel","Cod. Grado","Linea de negocio",Familia,"Sub Familia",Serie,"Cod. Producto")
+        key(Key2; "Cod. Colegio", "Cod. Nivel", "Cod. Grado", "Linea de negocio", Familia, "Sub Familia", Serie, "Cod. Producto")
         {
         }
-        key(Key3;"Cod. Colegio","Cod. Promotor","Cod. Producto")
+        key(Key3; "Cod. Colegio", "Cod. Promotor", "Cod. Producto")
         {
         }
-        key(Key4;"Cod. Colegio","Cod. Nivel","Sub Familia")
+        key(Key4; "Cod. Colegio", "Cod. Nivel", "Sub Familia")
         {
         }
     }
@@ -444,7 +443,7 @@ table 67033 "Colegio - Adopciones compet."
 
     trigger OnDelete()
     begin
-        TESTFIELD(Adopcion,0);
+        TESTFIELD(Adopcion, 0);
     end;
 
     trigger OnInsert()
@@ -452,19 +451,18 @@ table 67033 "Colegio - Adopciones compet."
         "Fecha Adopcion" := TODAY;
 
         CabAdopciones.RESET;
-        CabAdopciones.SETRANGE("Cod. Colegio","Cod. Colegio");
-        CabAdopciones.SETRANGE("Cod. Local","Cod. Local");
-        CabAdopciones.SETRANGE("Cod. Nivel","Cod. Nivel");
-        CabAdopciones.SETRANGE("Cod. Promotor","Cod. Promotor");
-        CabAdopciones.SETRANGE(Turno,"Cod. Turno");
-        IF CabAdopciones.FINDFIRST THEN
-           BEGIN
-            "% Dto. Padres"        := CabAdopciones."% Dto. Padres";
-            "% Dto. Colegio"       := CabAdopciones."% Dto. Colegio";
-            "% Dto. Docente"       := CabAdopciones."% Dto. Docente";
-            "% Dto. Feria Padres"  := CabAdopciones."% Dto. Feria Padres";
+        CabAdopciones.SETRANGE("Cod. Colegio", "Cod. Colegio");
+        CabAdopciones.SETRANGE("Cod. Local", "Cod. Local");
+        CabAdopciones.SETRANGE("Cod. Nivel", "Cod. Nivel");
+        CabAdopciones.SETRANGE("Cod. Promotor", "Cod. Promotor");
+        CabAdopciones.SETRANGE(Turno, "Cod. Turno");
+        IF CabAdopciones.FINDFIRST THEN BEGIN
+            "% Dto. Padres" := CabAdopciones."% Dto. Padres";
+            "% Dto. Colegio" := CabAdopciones."% Dto. Colegio";
+            "% Dto. Docente" := CabAdopciones."% Dto. Docente";
+            "% Dto. Feria Padres" := CabAdopciones."% Dto. Feria Padres";
             "% Dto. Feria Colegio" := CabAdopciones."% Dto. Feria Colegio";
-           END;
+        END;
 
         Item.GET("Cod. Producto");
         "Descripcion producto" := Item.Description;
@@ -482,9 +480,9 @@ table 67033 "Colegio - Adopciones compet."
         ColegioAdopciones: Record 67026;
         ColegioAdopciones2Record: Record 67026;
         DimVal: Record 349;
-        DimForm: Page 560;
-                     DefDim: Record 352;
-                     ProdEdit: Record 67025;
+        //TOOD: Ver DimForm: Page 560;
+        DefDim: Record 352;
+        ProdEdit: Record 67025;
 
     procedure BuscaHistorico()
     var
@@ -522,7 +520,7 @@ table 67033 "Colegio - Adopciones compet."
                 Item.GET(PptoPromotor."Cod. Producto");
                 ConfAPS.testfield(Campana);
                 evaluate(camp,ConfAPS.Campana);
-                HAdopciones.SETRANGE(Campa a,);
+                HAdopciones.SETRANGE(Campana,);
                 HAdopciones.SETRANGE("Cod. Colegio",gCodCol);
                 HAdopciones.SETRANGE("Cod. Nivel",gCodNivel);
                 IF PptoPromotor."Cod. producto equivalente" <> '' THEN

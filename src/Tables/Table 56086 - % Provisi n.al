@@ -5,23 +5,23 @@ table 56086 "% Provisi n"
 
     fields
     {
-        field(1;"Desde d a";Integer)
+        field(1; "Desde d a"; Integer)
         {
         }
-        field(2;"Descripci n";Text[30])
+        field(2; "Descripcion"; Text[30])
         {
         }
-        field(3;"% Provisi n";Decimal)
+        field(3; "% Provisi n"; Decimal)
         {
         }
-        field(4;"Importe provisi n";Decimal)
+        field(4; "Importe provisi n"; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Desde d a")
+        key(Key1; "Desde d a")
         {
         }
     }

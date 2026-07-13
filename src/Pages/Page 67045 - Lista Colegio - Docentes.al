@@ -10,7 +10,7 @@ page 67045 "Lista Colegio - Docentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Colegio"; "Cod. Colegio")
                 {

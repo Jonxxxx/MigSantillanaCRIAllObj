@@ -10,7 +10,7 @@ page 67035 "Colegio - Historico adopciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

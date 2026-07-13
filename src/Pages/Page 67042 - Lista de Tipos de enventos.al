@@ -10,7 +10,7 @@ page 67042 "Lista de Tipos de enventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

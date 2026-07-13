@@ -57,7 +57,7 @@ table 67120 "Encuesta TIC"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = Salesperson/Purchaser.Code;
+            TableRelation = "Salesperson/Purchaser".Code;
 
             trigger OnValidate()
             var
@@ -65,19 +65,19 @@ table 67120 "Encuesta TIC"
             begin
                 Promotor := '';
                 IF "Cod. Promotor" <> '' THEN BEGIN
-                  Promo.GET("Cod. Promotor");
-                  Promotor := Promo.Name;
+                    Promo.GET("Cod. Promotor");
+                    Promotor := Promo.Name;
                 END;
             end;
         }
-        field(5;Promotor;Text[100])
+        field(5; Promotor; Text[100])
         {
             Editable = false;
         }
-        field(6;"Campa a";Code[10])
+        field(6; "Campana"; Code[10])
         {
         }
-        field(7;"Cod. Colegio";Code[20])
+        field(7; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact."No.";
 
@@ -85,70 +85,70 @@ table 67120 "Encuesta TIC"
             var
                 Col: Record 5050;
             begin
-                Delegacion       := '';
-                Colegio  := '';
+                Delegacion := '';
+                Colegio := '';
                 Distrito := '';
                 IF "Cod. Colegio" <> '' THEN BEGIN
-                  Col.GET("Cod. Colegio");
-                  VALIDATE("Cod. Delegacion",Col.Delegacion);
-                  Colegio  := Col.Name;
-                  Distrito := Col.Distritos;
+                    Col.GET("Cod. Colegio");
+                    //TODO: Ver VALIDATE("Cod. Delegacion", Col.Delegacion);
+                    Colegio := Col.Name;
+                    //TODO: Ver Distrito := Col.Distritos;
                 END
             end;
         }
-        field(8;Colegio;Text[100])
+        field(8; Colegio; Text[100])
         {
             Editable = false;
         }
-        field(9;Distrito;Text[30])
+        field(9; Distrito; Text[30])
         {
             Editable = false;
         }
-        field(10;"Coordinador TIC";Text[50])
+        field(10; "Coordinador TIC"; Text[50])
         {
         }
-        field(11;Correo;Text[30])
+        field(11; Correo; Text[30])
         {
         }
-        field(12;Celular;Text[30])
+        field(12; Celular; Text[30])
         {
         }
-        field(13;"Tiene Equipos";Boolean)
+        field(13; "Tiene Equipos"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF NOT "Tiene Equipos" THEN BEGIN
-                  Computadora                  := 0;
-                  Portatiles                   := 0;
-                  TV                           := 0;
-                  "Pizarra interactiva"        := 0;
-                  "Proyectores multimedia"     := 0;
-                  Otros                        := '';
-                  "Aulas con Equipos"          := 0;
-                  "Cantidad Aulas con Equipos" := 0;
+                    Computadora := 0;
+                    Portatiles := 0;
+                    TV := 0;
+                    "Pizarra interactiva" := 0;
+                    "Proyectores multimedia" := 0;
+                    Otros := '';
+                    "Aulas con Equipos" := 0;
+                    "Cantidad Aulas con Equipos" := 0;
                 END;
             end;
         }
-        field(14;Computadora;Integer)
+        field(14; Computadora; Integer)
         {
         }
-        field(15;Portatiles;Integer)
+        field(15; Portatiles; Integer)
         {
         }
-        field(16;TV;Integer)
+        field(16; TV; Integer)
         {
         }
-        field(17;"Pizarra interactiva";Integer)
+        field(17; "Pizarra interactiva"; Integer)
         {
         }
-        field(18;"Proyectores multimedia";Integer)
+        field(18; "Proyectores multimedia"; Integer)
         {
         }
-        field(19;Otros;Text[100])
+        field(19; Otros; Text[100])
         {
         }
-        field(20;"Aulas con Equipos";Option)
+        field(20; "Aulas con Equipos"; Option)
         {
             OptionCaption = ' ,En todas,En algunas';
             OptionMembers = " ","En todas","En algunas";
@@ -156,69 +156,69 @@ table 67120 "Encuesta TIC"
             trigger OnValidate()
             begin
                 IF "Aulas con Equipos" = 0 THEN
-                  "Cantidad Aulas con Equipos" := 0;
+                    "Cantidad Aulas con Equipos" := 0;
             end;
         }
-        field(21;"Cantidad Aulas con Equipos";Integer)
+        field(21; "Cantidad Aulas con Equipos"; Integer)
         {
 
             trigger OnValidate()
             begin
                 IF "Cantidad Aulas con Equipos" <> 0 THEN
-                  TESTFIELD("Aulas con Equipos");
+                    TESTFIELD("Aulas con Equipos");
             end;
         }
-        field(22;"Tiene Intranet";Boolean)
+        field(22; "Tiene Intranet"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF NOT "Tiene Intranet" THEN
-                  "Uso principal intranet"   := 0;
+                    "Uso principal intranet" := 0;
             end;
         }
-        field(23;"Uso principal intranet";Option)
+        field(23; "Uso principal intranet"; Option)
         {
             OptionCaption = ' ,Matricula,Comunicacion con PP.FF.,Agenda,Bancos de recursos didacticos,Banco de datos,Comunicacion con alumnnos,Aula virtual,Otros';
             OptionMembers = " ",Matricula,"Comunicacion con PP.FF.",Agenda,"Bancos de recursos didacticos","Banco de datos","Comunicacion con alumnnos","Aula virtual",Otros;
         }
-        field(24;"Tiene Internet";Boolean)
+        field(24; "Tiene Internet"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF NOT "Tiene Internet" THEN BEGIN
-                  "En laboratorio"              := FALSE;
-                  "Cantidad laboratorios"       := 0;
-                  "Aulas con Internet"          := 0;
-                  "Cantidad Aulas con Internet"  := 0;
-                  "Sala Profesores"             := FALSE;
-                  "Otros zonas"               := '';
+                    "En laboratorio" := FALSE;
+                    "Cantidad laboratorios" := 0;
+                    "Aulas con Internet" := 0;
+                    "Cantidad Aulas con Internet" := 0;
+                    "Sala Profesores" := FALSE;
+                    "Otros zonas" := '';
                 END;
             end;
         }
-        field(25;"Tiene WIFI";Boolean)
+        field(25; "Tiene WIFI"; Boolean)
         {
         }
-        field(26;"En laboratorio";Boolean)
+        field(26; "En laboratorio"; Boolean)
         {
 
             trigger OnValidate()
             begin
                 IF NOT "En laboratorio" THEN
-                  "Cantidad laboratorios" := 0;
+                    "Cantidad laboratorios" := 0;
             end;
         }
-        field(27;"Cantidad laboratorios";Integer)
+        field(27; "Cantidad laboratorios"; Integer)
         {
 
             trigger OnValidate()
             begin
                 IF "Cantidad laboratorios" <> 0 THEN
-                  TESTFIELD("En laboratorio");
+                    TESTFIELD("En laboratorio");
             end;
         }
-        field(28;"Aulas con Internet";Option)
+        field(28; "Aulas con Internet"; Option)
         {
             OptionCaption = ' ,En todas,En algunas';
             OptionMembers = " ","En todas","En algunas";
@@ -226,46 +226,46 @@ table 67120 "Encuesta TIC"
             trigger OnValidate()
             begin
                 IF "Aulas con Internet" = 0 THEN
-                  "Cantidad Aulas con Internet" := 0;
+                    "Cantidad Aulas con Internet" := 0;
             end;
         }
-        field(29;"Cantidad Aulas con Internet";Integer)
+        field(29; "Cantidad Aulas con Internet"; Integer)
         {
 
             trigger OnValidate()
             begin
                 IF "Cantidad Aulas con Internet" <> 0 THEN
-                  TESTFIELD("Aulas con Internet");
+                    TESTFIELD("Aulas con Internet");
             end;
         }
-        field(30;"Sala Profesores";Boolean)
+        field(30; "Sala Profesores"; Boolean)
         {
         }
-        field(31;"Otros zonas";Text[100])
+        field(31; "Otros zonas"; Text[100])
         {
         }
-        field(32;"PC laboratorio";Integer)
+        field(32; "PC laboratorio"; Integer)
         {
         }
-        field(33;"PC laboratorio internet";Option)
+        field(33; "PC laboratorio internet"; Option)
         {
             OptionCaption = ' ,Todas,Solo una,Ninguna';
             OptionMembers = " ",Todas,"Solo una",Ninguna;
         }
-        field(34;"Especificar PC labor. Internet";Integer)
+        field(34; "Especificar PC labor. Internet"; Integer)
         {
         }
-        field(35;"PC laboratorio2"; Integer)
+        field(35; "PC laboratorio2"; Integer)
         {
         }
-        field(36;"PC laboratorio3"; Integer)
+        field(36; "PC laboratorio3"; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;ID)
+        key(Key1; ID)
         {
         }
     }
@@ -280,12 +280,12 @@ table 67120 "Encuesta TIC"
         Config: Record 67000;
     begin
         IF Encuesta.FINDLAST THEN
-          ID := Encuesta.ID + 1
+            ID := Encuesta.ID + 1
         ELSE
-          ID += 1;
+            ID += 1;
 
         Config.GET;
-        Campa a := FORMAT(Config.Campana);
+        Campana := FORMAT(Config.Campana);
     end;
 }
 

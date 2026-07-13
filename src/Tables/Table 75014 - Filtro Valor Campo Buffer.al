@@ -8,35 +8,35 @@ table 75014 "Filtro Valor Campo Buffer"
 
     fields
     {
-        field(1;"Table Id";Integer)
+        field(1; "Table Id"; Integer)
         {
         }
-        field(2;"Field No";Integer)
+        field(2; "Field No"; Integer)
         {
         }
-        field(3;Id;Integer)
+        field(3; Id; Integer)
         {
         }
-        field(10;Value;Text[100])
+        field(10; Value; Text[100])
         {
             Caption = 'Valor';
         }
-        field(11;Description;Text[100])
+        field(11; Description; Text[100])
         {
-            Caption = 'Descripci n';
+            Caption = 'Descripcion';
         }
     }
 
     keys
     {
-        key(Key1;Id)
+        key(Key1; Id)
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;Value,Description)
+        fieldgroup(DropDown; Value, Description)
         {
         }
     }

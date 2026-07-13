@@ -9,7 +9,7 @@ page 67141 "Colegio - Textos que utilizan"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

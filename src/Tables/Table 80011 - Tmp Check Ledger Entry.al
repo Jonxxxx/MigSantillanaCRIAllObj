@@ -40,7 +40,7 @@ table 80011 "Tmp Check Ledger Entry"
         }
         field(8; Amount; Decimal)
         {
-            AutoFormatExpression = GetCurrencyCodeFromBank;
+            //TODO: Ver AutoFormatExpression = GetCurrencyCodeFromBank;
             AutoFormatType = 1;
             Caption = 'Amount';
         }
@@ -85,12 +85,14 @@ table 80011 "Tmp Check Ledger Entry"
         field(16; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
+            //TODO: Ver 
+            /*
             TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
             ELSE IF ("Bal. Account Type" = CONST(Customer)) Customer
             ELSE IF ("Bal. Account Type" = CONST(Vendor)) Vendor
             ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account"
             ELSE IF ("Bal. Account Type" = CONST("Fixed Asset")) "Fixed Asset"
-            ELSE IF ("Bal. Account Type" = CONST(Employee)) Employee;
+            ELSE IF ("Bal. Account Type" = CONST(Employee)) Employee;*/
         }
         field(17; Open; Boolean)
         {
@@ -105,41 +107,45 @@ table 80011 "Tmp Check Ledger Entry"
         field(19; "Statement No."; Code[20])
         {
             Caption = 'Statement No.';
-            TableRelation = IF ("Statement Status" = FILTER(Bank Acc.Entry Applied|Check Entry Applied)) "Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."))
-                            ELSE IF ("Statement Status"=CONST(Closed)) "Posted Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."));
+            //TODO: Ver 
+            /*
+            TableRelation = IF ("Statement Status" = FILTER("Bank Acc.Entry Applied"|"Check Entry Applied")) "Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."))
+                            ELSE IF ("Statement Status"=CONST(Closed)) "Posted Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."));*/
             //This property is currently not supported
             //TestTableRelation = false;
         }
-        field(20;"Statement Line No.";Integer)
+        field(20; "Statement Line No."; Integer)
         {
             Caption = 'Statement Line No.';
-            TableRelation = IF ("Statement Status"=FILTER(Bank Acc. Entry Applied|Check Entry Applied)) "Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
-                                                                                                                                         "Statement No."=FIELD("Statement No."))
-                                                                                                                                         ELSE IF ("Statement Status"=CONST(Closed)) "Posted Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
-                                                                                                                                                                                                                            "Statement No."=FIELD("Statement No."));
+            //TODO: Ver 
+            /*
+            TableRelation = IF ("Statement Status"=FILTER("Bank Acc. Entry Applied"|"Check Entry Applied")) "Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
+                                                                                        "Statement No."=FIELD("Statement No."))
+                                                                                ELSE IF ("Statement Status"=CONST(Closed)) "Posted Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
+                                                                                                                                                                "Statement No."=FIELD("Statement No."));*/
             //This property is currently not supported
             //TestTableRelation = false;
         }
-        field(21;"User ID";Code[20])
+        field(21; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            TableRelation = 2000000002;
+            //TODO: Ver TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;           
         }
-        field(22;"External Document No.";Code[20])
+        field(22; "External Document No."; Code[20])
         {
             Caption = 'External Document No.';
         }
-        field(10005;"Trace No.";Code[30])
+        field(10005; "Trace No."; Code[30])
         {
             Caption = 'Trace No.';
         }
-        field(10006;"Transmission File Name";Text[30])
+        field(10006; "Transmission File Name"; Text[30])
         {
             Caption = 'Transmission File Name';
         }
-        field(34003001;Beneficiario;Text[250])
+        field(34003001; Beneficiario; Text[250])
         {
             Caption = 'Beneficiary';
         }
@@ -147,22 +153,22 @@ table 80011 "Tmp Check Ledger Entry"
 
     keys
     {
-        key(Key1;"Entry No.")
+        key(Key1; "Entry No.")
         {
         }
-        key(Key2;"Bank Account No.","Check Date")
+        key(Key2; "Bank Account No.", "Check Date")
         {
         }
-        key(Key3;"Bank Account No.","Entry Status","Check No.")
+        key(Key3; "Bank Account No.", "Entry Status", "Check No.")
         {
         }
-        key(Key4;"Bank Account Ledger Entry No.")
+        key(Key4; "Bank Account Ledger Entry No.")
         {
         }
-        key(Key5;"Bank Account No.",Open)
+        key(Key5; "Bank Account No.", Open)
         {
         }
-        key(Key6;"Document No.","Posting Date")
+        key(Key6; "Document No.", "Posting Date")
         {
         }
     }
@@ -176,12 +182,12 @@ table 80011 "Tmp Check Ledger Entry"
         BankAcc: Record 270;
     begin
         IF ("Bank Account No." = BankAcc."No.") THEN
-          EXIT(BankAcc."Currency Code")
+            EXIT(BankAcc."Currency Code")
         ELSE
-        IF BankAcc.GET("Bank Account No.") THEN
-          EXIT(BankAcc."Currency Code")
-        ELSE
-          EXIT('');
+            IF BankAcc.GET("Bank Account No.") THEN
+                EXIT(BankAcc."Currency Code")
+            ELSE
+                EXIT('');
     end;
 }
 

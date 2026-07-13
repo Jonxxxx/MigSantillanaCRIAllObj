@@ -33,7 +33,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                     end;
                 }
             }
-            repeater()
+            repeater(General)
             {
                 IndentationColumn = 1;
                 ShowAsTree = true;

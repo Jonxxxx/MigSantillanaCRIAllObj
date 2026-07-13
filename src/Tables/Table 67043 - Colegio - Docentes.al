@@ -40,7 +40,7 @@ table 67043 "Colegio - Docentes"
                     "Docente - Document ID" := Docente."Document ID";
                     "Docente - E-Mail" := Docente."E-Mail";
                     "Docente - Mobile Phone No." := Docente."Mobile Phone No.";
-                    "Docente - E-Mail 2" := Docente."E-Mail 2;
+                    "Docente - E-Mail 2" := Docente."E-Mail 2";
                     "Docente - Tipo documento" := Docente."Tipo documento";
                 END
                 ELSE
@@ -94,7 +94,7 @@ table 67043 "Colegio - Docentes"
                 END;
 
                 NivelE.GET("Cod. Nivel");
-                "Descripcion Nivel" := NivelE.Descripci n;
+                "Descripcion Nivel" := NivelE.Descripcion;
             end;
         }
         field(8; "Descripcion Nivel"; Text[100])
@@ -107,54 +107,53 @@ table 67043 "Colegio - Docentes"
         }
         field(10; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(11;"Aplica Jerarquia Puestos";Boolean)
+        field(11; "Aplica Jerarquia Puestos"; Boolean)
         {
         }
-        field(12;"Cod. Local";Code[20])
+        field(12; "Cod. Local"; Code[20])
         {
-            TableRelation = "Contact Alt. Address".Code WHERE ("Contact No."=FIELD("Cod. Colegio"));
+            TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
-        field(13;"Pertenece al CDS";Boolean)
-        {
-        }
-        field(14;"Descripcion Cargo";Text[60])
+        field(13; "Pertenece al CDS"; Boolean)
         {
         }
-        field(15;"Nivel decision";Code[20])
+        field(14; "Descripcion Cargo"; Text[60])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Nivel de decisi n"));
+        }
+        field(15; "Nivel decision"; Code[20])
+        {
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
             begin
-                IF "Nivel decision" <> '' THEN
-                   BEGIN
+                IF "Nivel decision" <> '' THEN BEGIN
                     DA.RESET;
-                    DA.SETRANGE("Tipo registro",DA."Tipo registro"::"Nivel de decisi n");
-                    DA.SETRANGE(Codigo,"Nivel decision");
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Nivel de decisi n");
+                    DA.SETRANGE(Codigo, "Nivel decision");
                     DA.FINDFIRST;
-                   END;
+                END;
             end;
         }
-        field(16;City;Text[30])
+        field(16; City; Text[30])
         {
             Caption = 'City';
         }
-        field(20;"Apellido paterno";Text[30])
+        field(20; "Apellido paterno"; Text[30])
         {
         }
-        field(30;"Distrito colegio";Text[30])
+        field(30; "Distrito colegio"; Text[30])
         {
         }
-        field(31;"Docente - Phone No.";Text[30])
+        field(31; "Docente - Phone No."; Text[30])
         {
             Caption = 'Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(32;"Docente - Document ID";Text[20])
+        field(32; "Docente - Document ID"; Text[20])
         {
             Caption = 'Document ID';
 
@@ -164,52 +163,52 @@ table 67043 "Colegio - Docentes"
             begin
             end;
         }
-        field(33;"Docente - E-Mail";Text[80])
+        field(33; "Docente - E-Mail"; Text[80])
         {
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
-        field(34;"Docente - Mobile Phone No.";Text[30])
+        field(34; "Docente - Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
-        field(35;"Docente - E-Mail 2"; Text[80])
+        field(35; "Docente - E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(36;"Docente - Tipo documento";Code[20])
+        field(36; "Docente - Tipo documento"; Code[20])
         {
             TableRelation = "Tipos de documentos personales";
         }
-        field(37;TEMP;Boolean)
+        field(37; TEMP; Boolean)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Local","Cod. Docente")
+        key(Key1; "Cod. Colegio", "Cod. Local", "Cod. Docente")
         {
         }
-        key(Key2;"Pertenece al CDS","Cod. Colegio","Apellido paterno")
+        key(Key2; "Pertenece al CDS", "Cod. Colegio", "Apellido paterno")
         {
         }
-        key(Key3;"Pertenece al CDS","Cod. Promotor","Apellido paterno")
+        key(Key3; "Pertenece al CDS", "Cod. Promotor", "Apellido paterno")
         {
         }
-        key(Key4;"Pertenece al CDS","Cod. Promotor","Cod. Colegio")
+        key(Key4; "Pertenece al CDS", "Cod. Promotor", "Cod. Colegio")
         {
         }
-        key(Key5;"Pertenece al CDS","Cod. Promotor","Distrito colegio")
+        key(Key5; "Pertenece al CDS", "Cod. Promotor", "Distrito colegio")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Colegio","Cod. Docente","Nombre docente","Nombre colegio")
+        fieldgroup(DropDown; "Cod. Colegio", "Cod. Docente", "Nombre docente", "Nombre colegio")
         {
         }
     }
@@ -217,14 +216,14 @@ table 67043 "Colegio - Docentes"
     trigger OnInsert()
     begin
         IF "Cod. Colegio" <> '' THEN BEGIN
-          recColegio.GET("Cod. Colegio");
-          City := recColegio.City;
-        /*
-          Distritos := recColegio.Distritos;
-          "Distrito colegio" := recColegio.Distritos;
-        */
-          "Nombre colegio"   := recColegio.Name;
-        
+            recColegio.GET("Cod. Colegio");
+            City := recColegio.City;
+            /*
+              Distritos := recColegio.Distritos;
+              "Distrito colegio" := recColegio.Distritos;
+            */
+            "Nombre colegio" := recColegio.Name;
+
         END;
 
     end;

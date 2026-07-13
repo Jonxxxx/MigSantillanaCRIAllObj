@@ -19,11 +19,11 @@ table 67082 "Solicitud -  Especialidad Asi."
                     DA.SETRANGE("Tipo registro", DA."Tipo registro"::Especialidades);
                     DA.SETRANGE(Codigo, "Cod. Especialidad");
                     DA.FINDFIRST;
-                    Descripci n := DA.Descripcion;
+                    Descripcion := DA.Descripcion;
                 END;
             end;
         }
-        field(3; "Descripci n"; Text[80])
+        field(3; "Descripcion"; Text[80])
         {
         }
     }

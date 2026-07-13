@@ -6,7 +6,7 @@ xmlport 58010 "Importa cambios salario"
     {
         textelement(ImportaCambiosSalario)
         {
-            tableelement(Table2000000026; Table2000000026)
+            tableelement(Table2000000026; 2000000026)
             {
                 AutoReplace = false;
                 AutoSave = false;
@@ -21,7 +21,7 @@ xmlport 58010 "Importa cambios salario"
 
                 trigger OnBeforeInsertRecord()
                 begin
-
+                    /* TODO: Ver
                     IF Emp.GET(CodEmp) THEN BEGIN
                         PerfSal.RESET;
                         PerfSal.SETRANGE("No. empleado", Emp."No.");
@@ -30,6 +30,7 @@ xmlport 58010 "Importa cambios salario"
                         EVALUATE(PerfSal.Importe, sal);
                         PerfSal.MODIFY;
                     END;
+                    */
                 end;
             }
         }
@@ -49,6 +50,6 @@ xmlport 58010 "Importa cambios salario"
 
     var
         Emp: Record 5200;
-        PerfSal: Record 34002115;
+    //PerfSal: Record 34002115;
 }
 

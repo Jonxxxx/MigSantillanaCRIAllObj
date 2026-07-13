@@ -11,7 +11,7 @@ page 130416 "Get Semi-Manual Test Codeunits"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Object ID"; "Object ID")
                 {

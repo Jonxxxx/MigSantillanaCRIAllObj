@@ -40,7 +40,7 @@ page 56081 "Order Tracking Navigation"
                     end;
                 }
             }
-            repeater()
+            repeater(General)
             {
                 Editable = false;
                 IndentationColumn = Indentation;

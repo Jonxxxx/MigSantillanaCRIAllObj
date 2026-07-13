@@ -11,7 +11,7 @@ page 67148 "Productos Muestras"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Item No."; "Item No.")
                 {

@@ -4,22 +4,22 @@ table 56100 "Provisiones nominas"
 
     fields
     {
-        field(1;"Cod. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
             Caption = 'Code';
             DataClassification = ToBeClassified;
             TableRelation = Employee;
         }
-        field(2;Periodo;Date)
+        field(2; Periodo; Date)
         {
             DataClassification = ToBeClassified;
         }
-        field(3;"Concepto Salarial";Code[20])
+        field(3; "Concepto Salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales";
+            //TODO: Ver TableRelation = "Conceptos salariales";
         }
-        field(4;"Importe provisionado";Decimal)
+        field(4; "Importe provisionado"; Decimal)
         {
             DataClassification = ToBeClassified;
         }
@@ -27,7 +27,7 @@ table 56100 "Provisiones nominas"
 
     keys
     {
-        key(Key1;"Cod. Empleado",Periodo,"Concepto Salarial")
+        key(Key1; "Cod. Empleado", Periodo, "Concepto Salarial")
         {
         }
     }

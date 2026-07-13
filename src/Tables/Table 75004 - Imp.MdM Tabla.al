@@ -44,7 +44,7 @@ table 75004 "Imp.MdM Tabla"
         }
         field(41; Visible; Option)
         {
-            OptionMembers = Ind,"S ",No;
+            OptionMembers = Ind,"Si",No;
         }
         field(50; "Nombre Elemento"; Text[50])
         {
@@ -79,7 +79,7 @@ table 75004 "Imp.MdM Tabla"
 
     var
         cFuncMdM: Codeunit 75000;
-        cGenProd: Codeunit 75007;
+        //TODO: Ver cGenProd: Codeunit 75007;
         ConfMdM: Record 75000;
         Text0001: Label 'Dim. ';
         Text0002: Label 'Alto';
@@ -88,17 +88,20 @@ table 75004 "Imp.MdM Tabla"
         wRecRef: RecordRef;
         ft: Integer;
 
+
     procedure GetTableName() TableName: Text[50]
     var
-        lrTables: Record 2000000001;
+    //TODO: Ver lrTables: Record 2000000001;
     begin
         // GetTableName
-
+        //TODO: Ver 
+        /*
         CLEAR(lrTables);
         lrTables.SETRANGE(Type, lrTables.Type::Table);
         lrTables.SETRANGE(ID, "Id Tabla");
         IF lrTables.FIND('-') THEN
             TableName := lrTables.Name;
+            */
     end;
 
     procedure GetFieldName(pwFieldNo: Integer) FieldName: Text[50]
@@ -127,8 +130,8 @@ table 75004 "Imp.MdM Tabla"
                             -103:
                                 FieldName := Text0004;  // Peso
                                                         // Dimensiones
-                            -299 .. -200:
-                                FieldName := Text0001 + cFuncMdM.GetDimCode(ABS("Id Tabla" + 200), FALSE);
+                                                        //TODO: Ver -299 .. -200:
+                                                        //TODO: Ver    FieldName := Text0001 + cFuncMdM.GetDimCode(ABS("Id Tabla" + 200), FALSE);
                         END;
                     END;
             END;
@@ -157,6 +160,8 @@ table 75004 "Imp.MdM Tabla"
                         //lrField2.Type := lrRF.TYPE;
 
                         lrRF := wRecRef.FIELD(lrField."Id Field");
+                        //TODO: Ver 
+                        /*
                         CASE lrField2.Type OF
                             lrField2.Type::Integer:
                                 BEGIN
@@ -164,6 +169,7 @@ table 75004 "Imp.MdM Tabla"
                                     lrRF.VALIDATE(lwIntT);
                                 END;
                         END;
+                        */
                     END;
                 END;
             UNTIL lrField.NEXT = 0;
@@ -232,7 +238,7 @@ table 75004 "Imp.MdM Tabla"
             349:
                 BEGIN
                     lwId := ABS(Tipo + 200);
-                    wText := cFuncMdM.GetDimCode(lwId, FALSE); // Dimensiones MdM
+                    //TODO: Ver wText := cFuncMdM.GetDimCode(lwId, FALSE); // Dimensiones MdM
                 END;
             ELSE
                 wText := FORMAT(Tipo);
@@ -247,7 +253,7 @@ table 75004 "Imp.MdM Tabla"
 
         IF EVALUATE(lwBool, pwVisibleTx) THEN BEGIN
             IF lwBool THEN
-                Visible := Visible::S
+                Visible := Visible::"Si"
             ELSE
                 Visible := Visible::No
         END
@@ -261,7 +267,7 @@ table 75004 "Imp.MdM Tabla"
         Value := '';
 
         CASE Visible OF
-            Visible::S:
+            Visible::Si:
                 Value := FORMAT(TRUE);
             Visible::No:
                 Value := FORMAT(FALSE);
@@ -275,7 +281,7 @@ table 75004 "Imp.MdM Tabla"
         IF Visible = Visible::Ind THEN
             Value := pwDef
         ELSE
-            Value := (Visible = Visible::S);
+            Value := (Visible = Visible::Si);
     end;
 
     procedure GetBloqueadoTx() Value: Text
@@ -286,7 +292,7 @@ table 75004 "Imp.MdM Tabla"
         Value := '';
 
         CASE Visible OF
-            Visible::S:
+            Visible::Si:
                 Value := FORMAT(FALSE);
             Visible::No:
                 Value := FORMAT(TRUE);
@@ -321,17 +327,20 @@ table 75004 "Imp.MdM Tabla"
         FOR lwN := 1 TO lrPK.FIELDCOUNT DO BEGIN
             lwField2 := lrPK.FIELDINDEX(lwN);
             IF lrField.GET(Id, lwField2.NUMBER) THEN BEGIN // Los campos de la clave primaria deben de existir
-                cGenProd.SetFieldValue(lwField2, lrField.Value, FALSE); // Por defecto No validamos la clave primaria
+                //TODO Ver: cGenProd.SetFieldValue(lwField2, lrField.Value, FALSE); // Por defecto No validamos la clave primaria
             END
             ELSE BEGIN
-                CASE lwField2.NUMBER OF
-                    GetIdTipoField:
-                        cGenProd.SetFieldValue(lwField2, GetTipoText, FALSE); // Por defecto No validamos la clave primaria
-                    GetIdCodeField:
-                        cGenProd.SetFieldValue(lwField2, Code, FALSE);
-                    GetIdDescField:
-                        cGenProd.SetFieldValue(lwField2, Descripcion, FALSE);
-                END;
+                //TODO Ver: 
+                /*
+                    CASE lwField2.NUMBER OF
+                        GetIdTipoField:
+                            cGenProd.SetFieldValue(lwField2, GetTipoText, FALSE); // Por defecto No validamos la clave primaria
+                        GetIdCodeField:
+                            cGenProd.SetFieldValue(lwField2, Code, FALSE);
+                        GetIdDescField:
+                            cGenProd.SetFieldValue(lwField2, Descripcion, FALSE);
+                    END;
+                    */
             END;
         END;
 

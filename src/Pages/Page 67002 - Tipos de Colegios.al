@@ -12,7 +12,7 @@ page 67002 "Tipos de Colegios"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

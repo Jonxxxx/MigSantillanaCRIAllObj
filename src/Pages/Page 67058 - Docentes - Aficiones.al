@@ -7,7 +7,7 @@ page 67058 "Docentes - Aficiones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Docente"; "Cod. Docente")
                 {

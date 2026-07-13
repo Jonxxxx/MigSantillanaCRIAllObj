@@ -7,7 +7,7 @@ xmlport 60001 "_Importa Empleados"
     {
         textelement(ImportaEmpleados)
         {
-            tableelement(Table2000000026; Table2000000026)
+            tableelement(Table2000000026; 2000000026)
             {
                 XmlName = 'Empleados';
                 textelement(CodEmpl)
@@ -203,6 +203,9 @@ xmlport 60001 "_Importa Empleados"
                 Empl."First Name" := Nomb;
                 Empl."Middle Name" := Nomb2;
                 Empl."Last Name" := Ape1;
+
+                /*
+                //TODO: Ver 
                 Empl."Second Last Name" := Ape2;
 
                 Empl.VALIDATE("First Name");
@@ -308,72 +311,17 @@ xmlport 60001 "_Importa Empleados"
                     Empl."Tipo Empleado" := 0
                 ELSE
                     Empl."Tipo Empleado" := 1;
+                    */
 
                 IF NOT Empl.INSERT THEN
                     Empl.MODIFY;
 
                 Empl.VALIDATE("Emplymt. Contract Code", '100');
 
-                /*
-                IF STRPOS(tipoempl,'Fi') <> 0 THEN
-                   BEGIN
-                //    contra.VALIDATE("No. empleado",CodEmpl);
-                //    contra.VALIDATE("Cód. contrato",'100');
-                    Empl.VALIDATE("Emplymt. Contract Code",'100');
-                //    IF contra.INSERT THEN;
-                   END
-                ELSE
-                   BEGIN
-                //    contra.VALIDATE("No. empleado",CodEmpl);
-                //    contra.VALIDATE("Cód. contrato",'101');
-                    Empl.VALIDATE("Emplymt. Contract Code",'101');
-                //    IF contra.INSERT THEN;
-                   END;
-                */
-                //Empl.VALIDATE("Job Type Code",CARGOS.Código);
+
 
                 Empl.MODIFY;
-                /*
-                DimVal.SETRANGE("Dimension Code",'EMPLEADOS');
-                DimVal.SETRANGE(Code,DimEmp);
-                IF DimVal.FINDFIRST THEN
-                   BEGIN
-                    IF DimVal.Name = '' THEN
-                       BEGIN
-                        DimVal.Name := Empl."Full Name";
-                        DimVal.MODIFY;
-                       END;
-                   END
-                ELSE
-                  BEGIN
-                   CLEAR(DimVal);
-                   DimVal."Dimension Code" := 'EMPLEADOS';
-                   DimVal.Code := DimEmp;
-                   DimVal.Name := Empl."Full Name";
-                   DimVal.INSERT;
-                  END;
-                
-                CLEAR(DefDim);
-                DefDim."Table ID" := 5200;
-                DefDim."No." := Empl."No.";
-                DefDim.VALIDATE("Dimension Code",'DEPARTAMENTO');
-                DefDim.VALIDATE("Dimension Value Code",DimDepto);
-                IF DefDim.INSERT(TRUE) THEN;
-                
-                CLEAR(DefDim);
-                DefDim."Table ID" := 5200;
-                DefDim."No." := Empl."No.";
-                DefDim.VALIDATE("Dimension Code",'LINEA_NEGOCIO');
-                DefDim.VALIDATE("Dimension Value Code",DimLin);
-                IF DefDim.INSERT(TRUE) THEN;
-                
-                CLEAR(DefDim);
-                DefDim."Table ID" := 5200;
-                DefDim."No." := Empl."No.";
-                DefDim.VALIDATE("Dimension Code",'EMPLEADOS');
-                DefDim.VALIDATE("Dimension Value Code",DimEmp);
-                IF DefDim.INSERT(TRUE) THEN;
-                */
+
 
                 COMMIT;
 
@@ -395,6 +343,8 @@ xmlport 60001 "_Importa Empleados"
 
     var
         Empl: Record 5200;
+        /*
+        //TODO: Ver 
         esqsal: Record 34002115;
         contra: Record 34002109;
         CARGOS: Record 34002110;
@@ -402,7 +352,7 @@ xmlport 60001 "_Importa Empleados"
         DefDim: Record 352;
         DimVal: Record 349;
         Departamento: Record 34002135;
-        SubDepartamento: Record 34002136;
+        SubDepartamento: Record 34002136;*/
         Sucursal: Code[10];
         found: Integer;
 }

@@ -13,7 +13,7 @@ page 67114 "Hist. Docentes - Aficiones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

@@ -9,7 +9,7 @@ page 56027 "Subform clas. devoluciones"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Item No."; "Item No.")
                 {

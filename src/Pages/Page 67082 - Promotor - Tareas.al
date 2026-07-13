@@ -11,7 +11,7 @@ page 67082 "Promotor - Tareas"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

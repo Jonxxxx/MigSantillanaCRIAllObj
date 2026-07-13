@@ -25,7 +25,7 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(5; Turno; Code[20])
         {
@@ -38,162 +38,152 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         }
         field(7; "Descripcion Nivel"; Text[100])
         {
-            CalcFormula = Lookup("Nivel Educativo APS".Descripci n WHERE ("C digo"=FIELD("Cod. Nivel")));
+            CalcFormula = Lookup("Nivel Educativo APS".Descripcion WHERE("Codigo" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(8;"Nombre Promotor";Text[60])
+        field(8; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(9;"% Dto. Padres";Decimal)
+        field(9; "% Dto. Padres"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                IF "% Dto. Padres" <> xRec."% Dto. Padres" THEN
-                   BEGIN
-                    IF CONFIRM(Msg001,FALSE) THEN
-                       BEGIN
+                IF "% Dto. Padres" <> xRec."% Dto. Padres" THEN BEGIN
+                    IF CONFIRM(Msg001, FALSE) THEN BEGIN
                         AdopcionesD.RESET;
-                        AdopcionesD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                        AdopcionesD.SETRANGE("Cod. Local","Cod. Local");
-                //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
-                        AdopcionesD.SETRANGE("Cod. Turno",Turno);
-                        AdopcionesD.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        IF AdopcionesD.FINDSET(TRUE,FALSE) THEN
-                           REPEAT
-                            AdopcionesD."% Dto. Padres" := "% Dto. Padres";
-                            AdopcionesD.MODIFY;
-                           UNTIL AdopcionesD.NEXT =0;
-                       END;
-                   END;
+                        AdopcionesD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        AdopcionesD.SETRANGE("Cod. Local", "Cod. Local");
+                        //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
+                        AdopcionesD.SETRANGE("Cod. Turno", Turno);
+                        AdopcionesD.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        IF AdopcionesD.FINDSET(TRUE, FALSE) THEN
+                            REPEAT
+                                AdopcionesD."% Dto. Padres" := "% Dto. Padres";
+                                AdopcionesD.MODIFY;
+                            UNTIL AdopcionesD.NEXT = 0;
+                    END;
+                END;
             end;
         }
-        field(10;"% Dto. Colegio";Decimal)
+        field(10; "% Dto. Colegio"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                IF "% Dto. Colegio" <> xRec."% Dto. Colegio" THEN
-                   BEGIN
-                    IF CONFIRM(Msg001,FALSE) THEN
-                       BEGIN
+                IF "% Dto. Colegio" <> xRec."% Dto. Colegio" THEN BEGIN
+                    IF CONFIRM(Msg001, FALSE) THEN BEGIN
                         AdopcionesD.RESET;
-                        AdopcionesD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                        AdopcionesD.SETRANGE("Cod. Local","Cod. Local");
-                //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
-                        AdopcionesD.SETRANGE("Cod. Turno",Turno);
-                        AdopcionesD.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        IF AdopcionesD.FINDSET(TRUE,FALSE) THEN
-                           REPEAT
-                            AdopcionesD."% Dto. Colegio" := "% Dto. Colegio";
-                            AdopcionesD.MODIFY;
-                           UNTIL AdopcionesD.NEXT =0;
-                       END;
-                   END;
+                        AdopcionesD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        AdopcionesD.SETRANGE("Cod. Local", "Cod. Local");
+                        //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
+                        AdopcionesD.SETRANGE("Cod. Turno", Turno);
+                        AdopcionesD.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        IF AdopcionesD.FINDSET(TRUE, FALSE) THEN
+                            REPEAT
+                                AdopcionesD."% Dto. Colegio" := "% Dto. Colegio";
+                                AdopcionesD.MODIFY;
+                            UNTIL AdopcionesD.NEXT = 0;
+                    END;
+                END;
             end;
         }
-        field(11;"% Dto. Docente";Decimal)
+        field(11; "% Dto. Docente"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                IF "% Dto. Docente" <> xRec."% Dto. Docente" THEN
-                   BEGIN
-                    IF CONFIRM(Msg001,FALSE) THEN
-                       BEGIN
+                IF "% Dto. Docente" <> xRec."% Dto. Docente" THEN BEGIN
+                    IF CONFIRM(Msg001, FALSE) THEN BEGIN
                         AdopcionesD.RESET;
-                        AdopcionesD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                        AdopcionesD.SETRANGE("Cod. Local","Cod. Local");
-                //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
-                        AdopcionesD.SETRANGE("Cod. Turno",Turno);
-                        AdopcionesD.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        IF AdopcionesD.FINDSET(TRUE,FALSE) THEN
-                           REPEAT
-                            AdopcionesD."% Dto. Docente" := "% Dto. Docente";
-                            AdopcionesD.MODIFY;
-                           UNTIL AdopcionesD.NEXT =0;
-                       END;
-                   END;
+                        AdopcionesD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        AdopcionesD.SETRANGE("Cod. Local", "Cod. Local");
+                        //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
+                        AdopcionesD.SETRANGE("Cod. Turno", Turno);
+                        AdopcionesD.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        IF AdopcionesD.FINDSET(TRUE, FALSE) THEN
+                            REPEAT
+                                AdopcionesD."% Dto. Docente" := "% Dto. Docente";
+                                AdopcionesD.MODIFY;
+                            UNTIL AdopcionesD.NEXT = 0;
+                    END;
+                END;
             end;
         }
-        field(12;"% Dto. Feria Padres";Decimal)
+        field(12; "% Dto. Feria Padres"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                IF "% Dto. Feria Padres" <> xRec."% Dto. Feria Padres" THEN
-                   BEGIN
-                    IF CONFIRM(Msg001,FALSE) THEN
-                       BEGIN
+                IF "% Dto. Feria Padres" <> xRec."% Dto. Feria Padres" THEN BEGIN
+                    IF CONFIRM(Msg001, FALSE) THEN BEGIN
                         AdopcionesD.RESET;
-                        AdopcionesD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                        AdopcionesD.SETRANGE("Cod. Local","Cod. Local");
-                //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
-                        AdopcionesD.SETRANGE("Cod. Turno",Turno);
-                        AdopcionesD.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        IF AdopcionesD.FINDSET(TRUE,FALSE) THEN
-                           REPEAT
-                            AdopcionesD."% Dto. Feria Padres" := "% Dto. Feria Padres";
-                            AdopcionesD.MODIFY;
-                           UNTIL AdopcionesD.NEXT =0;
-                       END;
-                   END;
+                        AdopcionesD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        AdopcionesD.SETRANGE("Cod. Local", "Cod. Local");
+                        //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
+                        AdopcionesD.SETRANGE("Cod. Turno", Turno);
+                        AdopcionesD.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        IF AdopcionesD.FINDSET(TRUE, FALSE) THEN
+                            REPEAT
+                                AdopcionesD."% Dto. Feria Padres" := "% Dto. Feria Padres";
+                                AdopcionesD.MODIFY;
+                            UNTIL AdopcionesD.NEXT = 0;
+                    END;
+                END;
             end;
         }
-        field(13;"% Dto. Feria Colegio";Decimal)
+        field(13; "% Dto. Feria Colegio"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                IF "% Dto. Feria Colegio" <> xRec."% Dto. Feria Colegio" THEN
-                   BEGIN
-                    IF CONFIRM(Msg001,FALSE) THEN
-                       BEGIN
+                IF "% Dto. Feria Colegio" <> xRec."% Dto. Feria Colegio" THEN BEGIN
+                    IF CONFIRM(Msg001, FALSE) THEN BEGIN
                         AdopcionesD.RESET;
-                        AdopcionesD.SETRANGE("Cod. Colegio","Cod. Colegio");
-                        AdopcionesD.SETRANGE("Cod. Local","Cod. Local");
-                //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
-                        AdopcionesD.SETRANGE("Cod. Turno",Turno);
-                        AdopcionesD.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        IF AdopcionesD.FINDSET(TRUE,FALSE) THEN
-                           REPEAT
-                            AdopcionesD."% Dto. Feria Colegio" := "% Dto. Feria Colegio";
-                            AdopcionesD.MODIFY;
-                           UNTIL AdopcionesD.NEXT =0;
-                       END;
-                   END;
+                        AdopcionesD.SETRANGE("Cod. Colegio", "Cod. Colegio");
+                        AdopcionesD.SETRANGE("Cod. Local", "Cod. Local");
+                        //        AdopcionesD.SETRANGE("Cod. Nivel",gCodNivel);
+                        AdopcionesD.SETRANGE("Cod. Turno", Turno);
+                        AdopcionesD.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        IF AdopcionesD.FINDSET(TRUE, FALSE) THEN
+                            REPEAT
+                                AdopcionesD."% Dto. Feria Colegio" := "% Dto. Feria Colegio";
+                                AdopcionesD.MODIFY;
+                            UNTIL AdopcionesD.NEXT = 0;
+                    END;
+                END;
             end;
         }
-        field(14;Usuario;Code[20])
+        field(14; Usuario; Code[20])
         {
         }
-        field(15;Santillana;Boolean)
+        field(15; Santillana; Boolean)
         {
         }
-        field(16;"Cod. Editorial";Code[20])
+        field(16; "Cod. Editorial"; Code[20])
         {
             TableRelation = Editoras;
         }
-        field(17;"Nombre editorial";Text[60])
+        field(17; "Nombre editorial"; Text[60])
         {
-            CalcFormula = Lookup(Editoras.Description WHERE ("Code"=FIELD("Cod. Editorial")));
+            CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(18;"Filtro fecha";Date)
+        field(18; "Filtro fecha"; Date)
         {
             FieldClass = FlowFilter;
         }
-        field(19;"Filtro Linea de negocio";Code[20])
+        field(19; "Filtro Linea de negocio"; Code[20])
         {
         }
-        field(20;"Filtro Grupo de Negocio";Code[20])
+        field(20; "Filtro Grupo de Negocio"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST("Grupo de Negocio"));
+            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
-        field(21;"Filtro Sub Familia";Code[20])
+        field(21; "Filtro Sub Familia"; Code[20])
         {
 
             trigger OnLookup()
@@ -201,50 +191,49 @@ table 67084 "Hist. Colegio - Adopciones Cab"
                 ConfAPS.GET();
                 ConfAPS.TESTFIELD("Cod. Dimension Sub Familia");
                 DimVal.RESET;
-                DimVal.SETRANGE("Dimension Code",ConfAPS."Cod. Dimension Sub Familia");
-                DimVal.SETRANGE("Dimension Value Type",DimVal."Dimension Value Type"::Standard);
+                DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Sub Familia");
+                DimVal.SETRANGE("Dimension Value Type", DimVal."Dimension Value Type"::Standard);
                 DimForm.SETTABLEVIEW(DimVal);
                 DimForm.SETRECORD(DimVal);
                 DimForm.LOOKUPMODE(TRUE);
-                IF DimForm.RUNMODAL = ACTION::LookupOK THEN
-                   BEGIN
+                IF DimForm.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     DimForm.GETRECORD(DimVal);
-                    VALIDATE("Filtro Sub Familia",DimVal.Code);
-                   END;
+                    VALIDATE("Filtro Sub Familia", DimVal.Code);
+                END;
 
                 CLEAR(DimForm);
             end;
         }
-        field(22;"Filtro Serie";Code[20])
+        field(22; "Filtro Serie"; Code[20])
         {
         }
-        field(23;Adopcion;Option)
+        field(23; Adopcion; Option)
         {
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquest,Keep,Lost,Retired;
         }
-        field(24;"Filtro Nivel";Code[20])
+        field(24; "Filtro Nivel"; Code[20])
         {
             TableRelation = "Nivel Educativo APS";
         }
-        field(25;Campana;Code[20])
+        field(25; Campana; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Colegio","Cod. Promotor",Turno)
+        key(Key1; "Cod. Colegio", "Cod. Promotor", Turno)
         {
         }
-        key(Key2;"Cod. Promotor","Cod. Colegio")
+        key(Key2; "Cod. Promotor", "Cod. Colegio")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Colegio","Nombre Colegio","Cod. Nivel","Descripcion Nivel","Cod. Promotor","Nombre Promotor")
+        fieldgroup(DropDown; "Cod. Colegio", "Nombre Colegio", "Cod. Nivel", "Descripcion Nivel", "Cod. Promotor", "Nombre Promotor")
         {
         }
     }
@@ -252,13 +241,13 @@ table 67084 "Hist. Colegio - Adopciones Cab"
     trigger OnDelete()
     begin
         AdopcionDet.RESET;
-        AdopcionDet.SETRANGE("Cod. Colegio","Cod. Colegio");
-        AdopcionDet.SETRANGE("Cod. Local","Cod. Local");
-        AdopcionDet.SETRANGE("Cod. Nivel","Cod. Nivel");
-        AdopcionDet.SETRANGE("Cod. Turno",Turno);
-        AdopcionDet.SETRANGE("Cod. Promotor","Cod. Promotor");
+        AdopcionDet.SETRANGE("Cod. Colegio", "Cod. Colegio");
+        AdopcionDet.SETRANGE("Cod. Local", "Cod. Local");
+        AdopcionDet.SETRANGE("Cod. Nivel", "Cod. Nivel");
+        AdopcionDet.SETRANGE("Cod. Turno", Turno);
+        AdopcionDet.SETRANGE("Cod. Promotor", "Cod. Promotor");
         IF AdopcionDet.FINDFIRST THEN
-           ERROR(Err001);
+            ERROR(Err001);
     end;
 
     var
@@ -274,7 +263,7 @@ table 67084 "Hist. Colegio - Adopciones Cab"
         DimVal: Record 349;
         AdopcionesD: Record 67053;
         DimForm: Page 560;
-                     Msg001: Label 'There''s a change in the discount, do you wish to update the lines?';
+        Msg001: Label 'There''s a change in the discount, do you wish to update the lines?';
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';
 }
 

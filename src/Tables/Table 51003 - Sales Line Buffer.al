@@ -1055,7 +1055,7 @@ table 51003 "Sales Line Buffer"
         {
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edici n"; Code[20])
+        field(50001; "Cod. Edicion"; Code[20])
         {
             //TODO: Ver TableRelation = Table50131;
         }
@@ -1228,7 +1228,7 @@ table 51003 "Sales Line Buffer"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Ver SalesTaxDifference: Record 10012;
+        //TODO: Ver //TODO: Ver SalesTaxDifference: Record 10012;
         //TODO Ver 0 referencias
         /*
         PriceCalcMgt: Codeunit 7000;
@@ -1241,7 +1241,7 @@ table 51003 "Sales Line Buffer"
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        DimMgt: Codeunit 408;
+        DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -1293,7 +1293,7 @@ table 51003 "Sales Line Buffer"
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
         //TODO: Ver cManejaParametros: Codeunit 34002500;
-        txt001: Label 'Este c digo de producto ya ha sido introducido previamente';
+        txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]
     var

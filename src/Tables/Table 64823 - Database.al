@@ -1,8 +1,8 @@
-table 64823 Database
+table 64823 EXCCRIDatabase
 {
     DataCaptionFields = "Code", Description;
-    DrillDownPageID = 64833;
-    LookupPageID = 64833;
+    //TODO: Ver DrillDownPageID = 64833;
+    //TODO: Ver LookupPageID = 64833;
 
     fields
     {
@@ -150,9 +150,9 @@ table 64823 Database
         SpecFields: Record 64825;
         ToDo: Record 64826;
         Log: Record 64827;
-        "Table"Record 64828;
-        "Field"Record 64829;
+        "Table": Record 64828;
+        "Field": Record 64829;
         Accounts: Record 64830;
-        "Keys"Record 64831;
+        "Keys": Record 64831;
 }
 

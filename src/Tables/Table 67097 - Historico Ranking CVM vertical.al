@@ -34,7 +34,7 @@ table 67097 "Historico Ranking CVM vertical"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
@@ -96,7 +96,7 @@ table 67097 "Historico Ranking CVM vertical"
         field(12; Serie; Code[20])
         {
         }
-        field(88; "Descripci n producto"; Text[100])
+        field(88; "Descripcion producto"; Text[100])
         {
         }
         field(89; "Edicion Coleccion"; Code[20])
@@ -125,7 +125,7 @@ table 67097 "Historico Ranking CVM vertical"
             Caption = 'Alumnado';
             FieldClass = FlowField;
         }
-        field(200; "Campa a"; Code[4])
+        field(200; "Campana"; Code[4])
         {
         }
         field(500; "Nombre y Apellidos Docente"; Text[150])
@@ -144,7 +144,7 @@ table 67097 "Historico Ranking CVM vertical"
 
     keys
     {
-        key(Key1; "Campa a", "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado")
+        key(Key1; "Campana", "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado")
         {
         }
     }

@@ -8,7 +8,7 @@ page 67020 "Alumnos - Hijos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("DNI Padre"; "DNI Padre")
                 {

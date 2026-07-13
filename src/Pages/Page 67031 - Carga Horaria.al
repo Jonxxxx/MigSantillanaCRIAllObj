@@ -7,7 +7,7 @@ page 67031 "Carga Horaria"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

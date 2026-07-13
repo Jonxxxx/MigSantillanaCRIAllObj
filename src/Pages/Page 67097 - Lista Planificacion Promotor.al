@@ -16,7 +16,7 @@ page 67097 "Lista Planificacion Promotor"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

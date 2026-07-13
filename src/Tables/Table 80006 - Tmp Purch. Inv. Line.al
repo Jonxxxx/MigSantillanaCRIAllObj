@@ -541,7 +541,7 @@ table 80006 "Tmp Purch. Inv. Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(6608; "Return Reason Code"; Code[10])
         {
@@ -620,7 +620,7 @@ table 80006 "Tmp Purch. Inv. Line"
     end;
 
     var
-        DimMgt: Codeunit 408;
+    //TODO: Ver DimMgt: Codeunit DimensionManagement;
 
     procedure GetCurrencyCode(): Code[10]
     var
@@ -635,7 +635,7 @@ table 80006 "Tmp Purch. Inv. Line"
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]
     var
-        "Field"Record 2000000041;
+        "Field": Record 2000000041;
     begin
         Field.GET(DATABASE::"Purch. Inv. Line", FieldNumber);
         EXIT(Field."Field Caption");

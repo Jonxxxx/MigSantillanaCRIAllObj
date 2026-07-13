@@ -7,7 +7,7 @@ page 67039 "Promotor - Entrega de Muestras"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

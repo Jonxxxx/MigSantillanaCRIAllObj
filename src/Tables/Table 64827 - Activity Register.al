@@ -1,7 +1,7 @@
 table 64827 "Activity Register"
 {
-    DrillDownPageID = 64827;
-    LookupPageID = 64827;
+    //TODO: Ver DrillDownPageID = 64827;
+    //TODO: Ver LookupPageID = 64827;
 
     fields
     {

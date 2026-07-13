@@ -41,7 +41,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         {
             Editable = false;
         }
-        field(12; "Delegaci n"; Code[20])
+        field(12; "Delegacion"; Code[20])
         {
             Editable = false;
             TableRelation = "Dimension Value".Code;
@@ -134,7 +134,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         {
             Editable = false;
         }
-        field(24; "Cod. Secci n"; Code[20])
+        field(24; "Cod. Seccion"; Code[20])
         {
 
             trigger OnLookup()
@@ -153,7 +153,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
                 pColGrado.EDITABLE(FALSE);
                 IF pColGrado.RUNMODAL = ACTION::LookupOK THEN BEGIN
                   pColGrado.GETRECORD(rColGrado);
-                  "Cod. Secci n" := rColGrado.Seccion;
+                  "Cod. Seccion" := rColGrado.Seccion;
                 END;
                 */
 
@@ -166,7 +166,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         key(Key1; "No. Visita", "No. Linea")
         {
         }
-        key(Key2; "Cod. Asesor/Consultor", "Fecha Programada", "No. Visita", "Hora Inicio Programada", "Hora Fin Programada", "Delegaci n", "Grupo Negocio")
+        key(Key2; "Cod. Asesor/Consultor", "Fecha Programada", "No. Visita", "Hora Inicio Programada", "Hora Fin Programada", "Delegacion", "Grupo Negocio")
         {
         }
     }
@@ -202,7 +202,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
             "Tipo Asesor/Consultor" := rCab."Tipo Asesor/Consultor";
             "Cod. Asesor/Consultor" := rCab."Cod. Asesor/Consultor";
             "Nombre Asesor/Consultor" := rCab."Nombre Asesor/Consultor";
-            Delegaci n := rCab.Delegaci n;
+            Delegacion := rCab.Delegacion;
             "Grupo Negocio" := rCab."Grupo Negocio";
             "Cod. promotor" := rCab."Cod. promotor";
             "Nombre promotor" := rCab."Nombre promotor";

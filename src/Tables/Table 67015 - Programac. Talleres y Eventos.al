@@ -36,7 +36,7 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -248,11 +248,11 @@ table 67015 "Programac. Talleres y Eventos"
             rAsist.SETRANGE("No Linea Programac.", rRec."No. Linea");
             IF rAsist.FINDSET THEN
                 REPEAT
-                    rAsist2 := rAsist;
-                    rAsist2."No Linea Programac." := "No. Linea";
-                    rAsist2.Confirmado := FALSE;
-                    rAsist2.Asistio := FALSE;
-                    rAsist2.INSERT;
+                //TODO: Ver rAsist2 := rAsist;
+                //TODO: Ver rAsist2."No Linea Programac." := "No. Linea";
+                //TODO: Ver rAsist2.Confirmado := FALSE;
+                //TODO: Ver rAsist2.Asistio := FALSE;
+                //TODO: Ver rAsist2.INSERT;
                 UNTIL rAsist.NEXT = 0;
         END;
     end;

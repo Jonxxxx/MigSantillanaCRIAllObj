@@ -6,7 +6,7 @@ xmlport 58013 "cta Empleados"
     {
         textelement(ImpCtaEmpleados)
         {
-            tableelement(Table2000000026; Table2000000026)
+            tableelement(Table2000000026; 2000000026)
             {
                 AutoReplace = false;
                 AutoSave = false;
@@ -21,12 +21,14 @@ xmlport 58013 "cta Empleados"
 
                 trigger OnBeforeInsertRecord()
                 begin
-
+                    /*
+                    //TODO: Ver 
                     DistCta."Cod. Banco" := '017';
                     DistCta."No. empleado" := CodEmpl;
                     DistCta."Tipo Cuenta" := 1;
                     DistCta."Numero Cuenta" := ctaban;
                     IF DistCta.INSERT THEN;
+                    */
                 end;
             }
         }
@@ -45,6 +47,6 @@ xmlport 58013 "cta Empleados"
     }
 
     var
-        DistCta: Record 34002108;
+    //TODO: Ver DistCta: Record 34002108;
 }
 

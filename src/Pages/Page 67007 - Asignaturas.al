@@ -9,7 +9,7 @@ page 67007 Asignaturas
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Code; Code)
                 {

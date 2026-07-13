@@ -37,7 +37,7 @@ table 67099 "Detalle Pago Expositores"
                     "Cod. Expositor" := recCabPago."Cod. Expositor";
                     "Num. Solicitud" := recCabPlanif."No. Solicitud";
                     "Cod. Evento" := recCabPlanif."Cod. Taller - Evento";
-                    "Descripci n Evento" := recCabPlanif."Description Taller";
+                    "Descripcion Evento" := recCabPlanif."Description Taller";
                     Secuencia := recCabPlanif.Secuencia;
                     "Tipo Evento" := recCabPlanif."Tipo Evento";
                     "Monto a Pagar" := recCabPlanif.CalculaMonto();
@@ -51,7 +51,7 @@ table 67099 "Detalle Pago Expositores"
         field(8; "Monto a Pagar"; Decimal)
         {
         }
-        field(9; "Descripci n Evento"; Text[60])
+        field(9; "Descripcion Evento"; Text[60])
         {
             Editable = false;
         }

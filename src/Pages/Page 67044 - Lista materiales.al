@@ -10,7 +10,7 @@ page 67044 "Lista materiales"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Editorial"; "Cod. Editorial")
                 {

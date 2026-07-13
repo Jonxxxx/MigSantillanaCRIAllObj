@@ -67,6 +67,8 @@ table 56026 "Lin. clas. devoluciones"
                 CrossReferenceNoLookUp;
             end;
 
+            //TODO Ver: 
+            /*
             trigger OnValidate()
             var
                 ReturnedCrossRef: Record 5717;
@@ -81,16 +83,9 @@ table 56026 "Lin. clas. devoluciones"
 
                     IF ReturnedCrossRef."Variant Code" <> '' THEN
                         VALIDATE("Variant Code", ReturnedCrossRef."Variant Code");
-                END;
-                /*
-                IF ReturnedCrossRef."quantity" <> '' THEN
-                   Quantity := ReturnedCrossRef."quantity";
-                
-                IF ReturnedCrossRef."item no." <> '' THEN
-                  "Item No." := ReturnedCrossRef."item no.";
-                */
-
+                END;                
             end;
+            */
         }
         field(9; "Customer No."; Code[20])
         {
@@ -103,9 +98,9 @@ table 56026 "Lin. clas. devoluciones"
                 Cust: Record 18;
             begin
                 Cust.GET("Customer No.");
-                Cust.TESTFIELD("Cod. Almacen Consignacion");
+                //TODO Ver: Cust.TESTFIELD("Cod. Almacen Consignacion");
                 "Customer name" := Cust.Name;
-                "Cod. Almacen Consignacion" := Cust."Cod. Almacen Consignacion";
+                //TODO Ver: "Cod. Almacen Consignacion" := Cust."Cod. Almacen Consignacion";
             end;
         }
         field(10; "Customer name"; Text[60])
@@ -206,15 +201,15 @@ table 56026 "Lin. clas. devoluciones"
 
     procedure CrossReferenceNoLookUp()
     var
-        ItemCrossReference: Record 5717;
+        //TODO: Ver ItemCrossReference: Record 5717;
         ICGLAcc: Record 410;
     begin
-        ItemCrossReference.RESET;
-        ItemCrossReference.SETCURRENTKEY("Cross-Reference No.");
-        ItemCrossReference.SETRANGE("Cross-Reference No.", "Cross-Reference No.");
+        //TODO Ver: ItemCrossReference.RESET;
+        //TODO Ver: ItemCrossReference.SETCURRENTKEY("Cross-Reference No.");
+        //TODO Ver: ItemCrossReference.SETRANGE("Cross-Reference No.", "Cross-Reference No.");
 
-        IF PAGE.RUNMODAL(PAGE::"Cross Reference List", ItemCrossReference) = ACTION::LookupOK THEN
-            VALIDATE("Cross-Reference No.", ItemCrossReference."Cross-Reference No.");
+        //TODO Ver: IF PAGE.RUNMODAL(PAGE::"Cross Reference List", ItemCrossReference) = ACTION::LookupOK THEN
+        //TODO Ver:     VALIDATE("Cross-Reference No.", ItemCrossReference."Cross-Reference No.");
     end;
 }
 

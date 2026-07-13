@@ -18,7 +18,7 @@ table 67046 "Colegio - Ranking - Nivel"
         field(3; "Cod. Nivel"; Code[20])
         {
             NotBlank = true;
-            TableRelation = "Nivel Educativo APS".C digo;
+            TableRelation = "Nivel Educativo APS".Codigo;
         }
         field(4; "Categoria colegio"; Code[4])
         {
@@ -42,8 +42,8 @@ table 67046 "Colegio - Ranking - Nivel"
         Col: Record 5050;
         PostCode: Record 225;
         DA: Record 67002;
-        "P-LC"Record 67006;
-        "P-Ruta"Record 67044;
+        //TODO: Ver "P-LC"Record 67006;
+        //TODO: Ver "P-Ruta"Record 67044;
         RD: Record 67009;
         Nivel: Record 56005;
         Turnos: Page 67003;

@@ -7,7 +7,7 @@ page 51010 "Vendedores por Colegio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Vendedor"; "Cod. Vendedor")
                 {

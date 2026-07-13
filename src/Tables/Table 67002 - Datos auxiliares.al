@@ -62,7 +62,7 @@ table 67002 "Datos auxiliares"
         }
         field(8; "Descripcion delegacion"; Text[100])
         {
-            Caption = 'Descripci n delegaci n';
+            Caption = 'Descripcion Delegacion';
             Editable = false;
         }
         field(9; "Orden en informes"; Integer)
@@ -100,6 +100,6 @@ table 67002 "Datos auxiliares"
     var
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page 560;
+        DimForm: Page "Dimension Value List";
 }
 

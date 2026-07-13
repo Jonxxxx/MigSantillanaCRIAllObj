@@ -47,7 +47,7 @@ table 56011 "Lin. Consignacion a Facturar"
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                ItemCrossReference: Record 5717;
+                //TODO: Ver ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -219,7 +219,7 @@ table 56011 "Lin. Consignacion a Facturar"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        SalesTaxDifference: Record 10012;
+        //TODO: Ver SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -230,7 +230,7 @@ table 56011 "Lin. Consignacion a Facturar"
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -282,7 +282,7 @@ table 56011 "Lin. Consignacion a Facturar"
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
         cManejaParametros: Codeunit 34002500;
-        txt001: Label 'Este c digo de producto ya ha sido introducido previamente';
+        txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';
         rSalesHeader: Record 36;
@@ -451,12 +451,6 @@ table 56011 "Lin. Consignacion a Facturar"
     begin
     end;
 
-    local procedure GetFieldCaption(FieldNumber: Integer): Text[100]
-    var
-        "Field"Record 2000000041;
-    begin
-    end;
-
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
         SalesHeader2Record: Record 36;
@@ -509,37 +503,6 @@ table 56011 "Lin. Consignacion a Facturar"
     end;
 
     procedure SuspendStatusCheck(Suspend: Boolean)
-    begin
-    end;
-
-    procedure UpdateVATOnLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
-    var
-        TempVATAmountLineRemainder Record: 290" temporary;
-        Currency: Record 4;
-        RecRef: RecordRef;
-        xRecRef: RecordRef;
-        ChangeLogMgt: Codeunit 423;
-        NewAmount: Decimal;
-        NewAmountIncludingVAT: Decimal;
-        NewVATBaseAmount: Decimal;
-        VATAmount: Decimal;
-        VATDifference: Decimal;
-        InvDiscAmount: Decimal;
-        LineAmountToInvoice: Decimal;
-    begin
-    end;
-
-    procedure CalcVATAmountLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
-    var
-        PrevVatAmountLine: Record 290;
-        Currency: Record 4;
-        Cust: Record 18;
-        CustPostingGroup: Record 92;
-        SalesTaxCalculate: Codeunit 398;
-        QtyToHandle: Decimal;
-        SalesSetup: Record 311;
-        RoundingLineInserted: Boolean;
-        TotalVATAmount: Decimal;
     begin
     end;
 
@@ -604,7 +567,7 @@ table 56011 "Lin. Consignacion a Facturar"
 
     procedure CrossReferenceNoLookUp()
     var
-        ItemCrossReference: Record 5717;
+        //TODO: Ver ItemCrossReference: Record 5717;
         ICGLAcc: Record 410;
     begin
     end;
@@ -630,14 +593,6 @@ table 56011 "Lin. Consignacion a Facturar"
     end;
 
     procedure SetHideValidationDialog(NewHideValidationDialog: Boolean)
-    begin
-    end;
-
-    local procedure CheckApplFromItemLedgEntry(var ItemLedgEntry Record: 32")
-    var
-        QtyBase: Decimal;
-        QtyNotReturned: Decimal;
-        QtyReturned: Decimal;
     begin
     end;
 
@@ -697,12 +652,6 @@ table 56011 "Lin. Consignacion a Facturar"
     end;
 
     procedure GetTempKitSalesLines()
-    begin
-    end;
-
-    procedure CalcSalesTaxLines(var SalesHeader Record: 36; var SalesLine Record: 37")
-    var
-        TaxArea: Record 318;
     begin
     end;
 

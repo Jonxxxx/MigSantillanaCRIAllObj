@@ -8,7 +8,7 @@ page 67112 "Solic. Planif. Taller/Evento"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Fecha inscripcion"; "Fecha inscripcion")
                 {

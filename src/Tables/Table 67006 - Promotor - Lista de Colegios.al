@@ -38,33 +38,33 @@ table 67006 "Promotor - Lista de Colegios"
         }
         field(4; "Nombre Promotor"; Text[60])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(5;"Nombre Colegio";Text[100])
+        field(5; "Nombre Colegio"; Text[100])
         {
         }
-        field(6;"Nombre Ruta";Text[60])
+        field(6; "Nombre Ruta"; Text[60])
         {
         }
-        field(7;Seleccionar;Boolean)
+        field(7; Seleccionar; Boolean)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Colegio")
+        key(Key1; "Cod. Promotor", "Cod. Colegio")
         {
         }
-        key(Key2;"Nombre Colegio")
+        key(Key2; "Nombre Colegio")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Colegio","Nombre Colegio","Cod. Promotor","Nombre Promotor")
+        fieldgroup(DropDown; "Cod. Colegio", "Nombre Colegio", "Cod. Promotor", "Nombre Promotor")
         {
         }
     }

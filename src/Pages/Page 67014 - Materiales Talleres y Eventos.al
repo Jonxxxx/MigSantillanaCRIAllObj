@@ -10,7 +10,7 @@ page 67014 "Materiales Talleres y Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Taller - Evento"; "Cod. Taller - Evento")
                 {

@@ -25,7 +25,7 @@ table 56071 "Rutas de Hojas de Rutas"
         }
         field(5; CP; Code[20])
         {
-            Caption = 'C digo Postal';
+            Caption = 'Codigo Postal';
             TableRelation = "Post Code".Code;
             ValidateTableRelation = true;
 
@@ -40,7 +40,7 @@ table 56071 "Rutas de Hojas de Rutas"
                     City := recCodigoPostal.City;
                     "Region Code" := recCodigoPostal."Country/Region Code";
                     Country := recCodigoPostal.County;
-                    Colonia := recCodigoPostal.Colonia;
+                    //TODO: Ver Colonia := recCodigoPostal.Colonia;
                     IF recCodigoPostal."Country/Region Code" = '' THEN
                         "Region Code" := 'CR';
                 END;

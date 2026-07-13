@@ -1,9 +1,9 @@
-table 67110 "Clasificaci n Categor as"
+table 67110 "Clasificacion Categorias"
 {
 
     fields
     {
-        field(1; "Campa a"; Integer)
+        field(1; "Campana"; Integer)
         {
         }
         field(2; Potencial; Option)
@@ -13,9 +13,9 @@ table 67110 "Clasificaci n Categor as"
         }
         field(3; "Cod. Afinidad"; Code[20])
         {
-            TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(30));
+            //TODO: Ver TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('30'));
         }
-        field(4; "Categor a"; Code[2])
+        field(4; "Categoria"; Code[2])
         {
         }
     }
@@ -37,7 +37,7 @@ table 67110 "Clasificaci n Categor as"
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);
-        EVALUATE(Campa a, APSSetup.Campana);
+        EVALUATE(Campana, APSSetup.Campana);
     end;
 }
 

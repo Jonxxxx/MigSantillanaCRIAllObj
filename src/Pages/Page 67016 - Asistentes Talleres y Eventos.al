@@ -11,7 +11,7 @@ page 67016 "Asistentes Talleres y Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Solicitud"; "No. Solicitud")
                 {

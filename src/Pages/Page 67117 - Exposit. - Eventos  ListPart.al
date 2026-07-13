@@ -8,7 +8,7 @@ page 67117 "Exposit. - Eventos  ListPart"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Evento"; "Cod. Evento")
                 {

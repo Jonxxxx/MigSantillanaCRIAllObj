@@ -8,7 +8,7 @@ page 67069 "Sub familia"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

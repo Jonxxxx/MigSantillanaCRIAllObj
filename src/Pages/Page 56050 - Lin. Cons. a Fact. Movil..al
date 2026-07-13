@@ -10,7 +10,7 @@ page 56050 "Lin. Cons. a Fact. Movil."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

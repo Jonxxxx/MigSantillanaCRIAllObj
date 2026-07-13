@@ -6,7 +6,7 @@ table 67089 "Grupo de Colegios"
         field(1; "Cod. Grupo"; Code[20])
         {
         }
-        field(2; "Descripci n"; Text[80])
+        field(2; "Descripcion"; Text[80])
         {
         }
     }

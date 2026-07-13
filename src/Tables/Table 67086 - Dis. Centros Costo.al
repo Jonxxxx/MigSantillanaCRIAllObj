@@ -6,10 +6,10 @@ table 67086 "Dis. Centros Costo"
         field(1; "No. Solicitud"; Code[20])
         {
         }
-        field(2; "C digo"; Code[20])
+        field(2; "Codigo"; Code[20])
         {
         }
-        field(3; "Descripci n"; Text[60])
+        field(3; "Descripcion"; Text[60])
         {
         }
         field(4; Porcentaje; Decimal)
@@ -36,7 +36,7 @@ table 67086 "Dis. Centros Costo"
 
     keys
     {
-        key(Key1; "No. Solicitud", "Cod. Taller - Evento", Expositor, Secuencia, "C digo")
+        key(Key1; "No. Solicitud", "Cod. Taller - Evento", Expositor, Secuencia, "Codigo")
         {
         }
     }

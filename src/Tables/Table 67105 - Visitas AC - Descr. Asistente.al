@@ -8,9 +8,9 @@ table 67105 "Visitas A/C - Descr. Asistente"
         }
         field(2; Codigo; Code[20])
         {
-            TableRelation = IF (Tipo = CONST(Nivel)) "Nivel Educativo APS".C digo
-                            ELSE IF (Tipo=CONST(Especialidad)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Especialidades))
-                            ELSE IF (Tipo=CONST(Grado)) "Datos auxiliares".Codigo WHERE ("Tipo registro"=CONST(Grados));
+            TableRelation = IF (Tipo = CONST(Nivel)) "Nivel Educativo APS".Codigo
+            ELSE IF (Tipo = CONST(Especialidad)) "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Especialidades))
+            ELSE IF (Tipo = CONST(Grado)) "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
 
             trigger OnValidate()
             var
@@ -23,7 +23,7 @@ table 67105 "Visitas A/C - Descr. Asistente"
                         Tipo::Nivel:
                             BEGIN
                                 Nivel.GET(Codigo);
-                                Descripci n := Nivel.Descripci n;
+                                Descripcion := Nivel.Descripcion;
                             END;
                         Tipo::Grado:
                             BEGIN
@@ -31,7 +31,7 @@ table 67105 "Visitas A/C - Descr. Asistente"
                                 DA.SETRANGE("Tipo registro", DA."Tipo registro"::Grados);
                                 DA.SETRANGE(Codigo, Codigo);
                                 DA.FINDFIRST;
-                                Descripci n := DA.Descripcion;
+                                Descripcion := DA.Descripcion;
                             END;
                         Tipo::Especialidad:
                             BEGIN
@@ -39,15 +39,15 @@ table 67105 "Visitas A/C - Descr. Asistente"
                                 DA.SETRANGE("Tipo registro", DA."Tipo registro"::Especialidades);
                                 DA.SETRANGE(Codigo, Codigo);
                                 DA.FINDFIRST;
-                                Descripci n := DA.Descripcion;
+                                Descripcion := DA.Descripcion;
                             END;
                     END;
                 END
                 ELSE
-                    Descripci n := '';
+                    Descripcion := '';
             end;
         }
-        field(3; "Descripci n"; Text[80])
+        field(3; "Descripcion"; Text[80])
         {
         }
         field(4; "No. Asistentes"; Integer)

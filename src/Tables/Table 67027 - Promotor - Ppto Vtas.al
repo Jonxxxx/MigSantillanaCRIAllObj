@@ -7,7 +7,7 @@ table 67027 "Promotor - Ppto Vtas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TOOD: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin
@@ -24,9 +24,9 @@ table 67027 "Promotor - Ppto Vtas"
                 IF Item.GET("Cod. Producto") THEN
                     "Item Description" := Item.Description;
 
-                Item.TESTFIELD("Nivel Escolar (Grado)");
-                Item.TESTFIELD("Nivel Educativo APS");
-                Item.TESTFIELD("Grupo de Negocio");
+                //TOOD: Ver Item.TESTFIELD("Nivel Escolar (Grado)");
+                //TOOD: Ver Item.TESTFIELD("Nivel Educativo APS");
+                //TOOD: Ver Item.TESTFIELD("Grupo de Negocio");
 
                 IF ProdEquivalente.GET("Cod. Producto") THEN
                     "Cod. producto equivalente" := ProdEquivalente."Cod. Producto Anterior";
@@ -54,10 +54,7 @@ table 67027 "Promotor - Ppto Vtas"
         }
         field(8; Adopcion; Code[1])
         {
-            ValuesAllowed = C;
-            M;
-            P;
-            R;
+            ValuesAllowed = 'C,M,P,R';
         }
         field(9; "Adopcion anterior"; Code[1])
         {

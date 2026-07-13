@@ -12,7 +12,7 @@ page 67033 "Lista Puestos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

@@ -7,7 +7,7 @@ page 67078 "Promotores - Docentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Codigo Docente"; "Codigo Docente")
                 {

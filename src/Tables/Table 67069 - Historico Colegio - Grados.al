@@ -67,7 +67,7 @@ table 67069 "Historico Colegio - Grados"
         }
         field(20; Campana; Code[4])
         {
-            Caption = 'Campa a';
+            Caption = 'Campana';
             TableRelation = Campaign;
         }
     }

@@ -6,7 +6,7 @@ table 56002 "Config. Max. Lineas Reportes"
         field(1; Country; Code[10])
         {
             Caption = 'Country';
-            //TODO: Ver TableRelation = "Parametros Loc. x Pa s";
+            //TODO: Ver TableRelation = "Parametros Loc. x Pais";
         }
         field(2; "Sales Report ID"; Integer)
         {

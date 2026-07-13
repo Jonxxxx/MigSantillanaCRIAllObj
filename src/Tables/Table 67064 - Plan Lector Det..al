@@ -71,7 +71,7 @@ table 67064 "Plan Lector Det."
         {
             Editable = false;
         }
-        field(19; "Universo de T tulos u Obras"; Integer)
+        field(19; "Universo de Titulos u Obras"; Integer)
         {
             Editable = false;
         }
@@ -109,14 +109,14 @@ table 67064 "Plan Lector Det."
                 Totales;
             end;
         }
-        field(50; "Campa a"; Code[20])
+        field(50; "Campana"; Code[20])
         {
         }
     }
 
     keys
     {
-        key(Key1; "Campa a", "Cod. Colegio", "Cod. Local", "Cod. Turno", "Cod. Nivel", "Cod. Grado")
+        key(Key1; "Campana", "Cod. Colegio", "Cod. Local", "Cod. Turno", "Cod. Nivel", "Cod. Grado")
         {
         }
     }
@@ -130,7 +130,7 @@ table 67064 "Plan Lector Det."
         DetPL: Record 67064;
     begin
         DetPL.RESET;
-        DetPL.SETRANGE(Campa a, Campa a);
+        DetPL.SETRANGE(Campana, Campana);
         DetPL.SETRANGE("Cod. Colegio", "Cod. Colegio");
         DetPL.SETRANGE("Cod. Local", "Cod. Local");
         DetPL.SETRANGE("Cod. Turno", "Cod. Turno");
@@ -139,10 +139,10 @@ table 67064 "Plan Lector Det."
 
     procedure Totales()
     begin
-        "Total Obras Compradas x Alumno" := "Cant. x Alum 1" + "Cant. x Alum 2" + "Cant. x Alum 3" + "Cant. x Alum 4;
-        "Universo de T tulos u Obras" := "Total Obras Compradas x Alumno" * "Cantidad Alumnos";
-        IF "Universo de T tulos u Obras" <> 0 THEN
-            "Porc. Afinidad" := ROUND(("Adopci n real" / "Universo de T tulos u Obras" * 100), 1)
+        "Total Obras Compradas x Alumno" := "Cant. x Alum 1" + "Cant. x Alum 2" + "Cant. x Alum 3" + "Cant. x Alum 4";
+        "Universo de Titulos u Obras" := "Total Obras Compradas x Alumno" * "Cantidad Alumnos";
+        IF "Universo de Titulos u Obras" <> 0 THEN
+            "Porc. Afinidad" := ROUND(("Adopci n real" / "Universo de Titulos u Obras" * 100), 1)
         ELSE
             "Porc. Afinidad" := 0;
     end;

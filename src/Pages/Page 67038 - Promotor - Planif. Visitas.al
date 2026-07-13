@@ -7,7 +7,7 @@ page 67038 "Promotor - Planif. Visitas"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

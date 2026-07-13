@@ -10,7 +10,7 @@ page 67169 "Atenciones - Grupos de Negocio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Código; Código)
                 {

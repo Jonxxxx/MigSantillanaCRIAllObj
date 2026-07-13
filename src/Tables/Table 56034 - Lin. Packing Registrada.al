@@ -49,12 +49,15 @@ table 56034 "Lin. Packing Registrada"
         }
         field(10; "No. Pedido"; Code[20])
         {
+            //TODO Ver: 
+            /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
                                                                                     "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true),
-                                                                                                                                                           "Estado packing" = CONST(Listo))
+                                                                                    "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false),
-                                                                                                                                                                                                                                   "Estado packing" = CONST(Listo));
+                                                                                    "Estado packing" = CONST(Listo));
+                                                                                    */
         }
         field(20; "Tipo pedido"; Option)
         {

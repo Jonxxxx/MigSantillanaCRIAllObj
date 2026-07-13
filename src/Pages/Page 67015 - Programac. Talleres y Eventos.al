@@ -8,7 +8,7 @@ page 67015 "Programac. Talleres y Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Taller - Evento"; "Cod. Taller - Evento")
                 {

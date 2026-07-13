@@ -12,7 +12,7 @@ page 51005 "Lista Cupon"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Cupon"; "No. Cupon")
                 {

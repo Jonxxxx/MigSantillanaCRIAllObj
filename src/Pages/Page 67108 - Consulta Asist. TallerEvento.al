@@ -9,7 +9,7 @@ page 67108 "Consulta Asist. Taller/Evento"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Solicitud"; "No. Solicitud")
                 {

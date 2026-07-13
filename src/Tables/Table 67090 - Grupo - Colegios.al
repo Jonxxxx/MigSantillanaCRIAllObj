@@ -12,7 +12,7 @@ table 67090 "Grupo - Colegios"
                 rGrupo: Record 67089;
             begin
                 IF rGrupo.GET("Cod. grupo") THEN
-                    "Nombre Grupo" := rGrupo.Descripci n;
+                    "Nombre Grupo" := rGrupo.Descripcion;
             end;
         }
         field(3; "Nombre Grupo"; Text[80])

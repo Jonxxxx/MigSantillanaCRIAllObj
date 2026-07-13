@@ -187,7 +187,7 @@ table 67055 "Solicitud de Taller - Evento"
                 "Cod. Docente responsable" := '';
                 "Nombre responsable" := '';
                 "Cod. Cargo Responsable" := '';
-                "Descripci n Cargo Responsable" := '';
+                "Descripcion Cargo Responsable" := '';
                 "Telefono Responsable" := '';
                 "No. celular responsable" := '';
                 "E-Mail Docente Responsable" := '';
@@ -208,8 +208,8 @@ table 67055 "Solicitud de Taller - Evento"
                     City := Colegio.City;
                     County := Colegio.County;
                     "Direccion Colegio" := Colegio.Address;
-                    Referencia := Colegio."Address 2;
-                  "Telefono 1 Colegio" := Colegio."Phone No.";
+                    Referencia := Colegio."Address 2";
+                    "Telefono 1 Colegio" := Colegio."Phone No.";
                     "Telefono 2 Colegio" := Colegio."Mobile Phone No.";
 
                     // Buscamos el nivel
@@ -255,7 +255,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                "P-R"Record 67044;
+                "P-R": Record 67044;
             begin
                 IF "Cod. promotor" <> '' THEN BEGIN
                     Promotor.GET("Cod. promotor");
@@ -344,7 +344,7 @@ table 67055 "Solicitud de Taller - Evento"
                     ColDoc.SETRANGE("Cod. Docente", "Cod. Docente responsable");
                     IF ColDoc.FINDSET THEN BEGIN
                         "Cod. Cargo Responsable" := ColDoc."Cod. Cargo";
-                        "Descripci n Cargo Responsable" := ColDoc."Descripcion Cargo";
+                        "Descripcion Cargo Responsable" := ColDoc."Descripcion Cargo";
                     END;
                 END;
             end;
@@ -425,7 +425,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(40; "Filtro Promotor"; Code[20])
         {
             FieldClass = FlowFilter;
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
         }
         field(41; "Filtro Colegio"; Code[20])
         {
@@ -725,7 +725,7 @@ table 67055 "Solicitud de Taller - Evento"
                 "Cod. Docente responsable" := '';
                 "Nombre responsable" := '';
                 "Cod. Cargo Responsable" := '';
-                "Descripci n Cargo Responsable" := '';
+                "Descripcion Cargo Responsable" := '';
                 "Telefono Responsable" := '';
                 "No. celular responsable" := '';
                 "E-Mail Docente Responsable" := '';
@@ -748,11 +748,11 @@ table 67055 "Solicitud de Taller - Evento"
                     DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
                     DA.SETRANGE(Codigo, "Cod. Cargo Responsable");
                     DA.FINDFIRST;
-                    "Descripci n Cargo Responsable" := DA.Descripcion;
+                    "Descripcion Cargo Responsable" := DA.Descripcion;
                 END;
             end;
         }
-        field(67036; "Descripci n Cargo Responsable"; Text[60])
+        field(67036; "Descripcion Cargo Responsable"; Text[60])
         {
             Editable = false;
         }
@@ -781,7 +781,7 @@ table 67055 "Solicitud de Taller - Evento"
                         NewSecEvProg := ActualizaPlanif(rEvExp);
 
                     "Cod. evento programado" := rEvExp."Cod. Evento";
-                    "Descripci n evento programado" := rEvExp."Descripcion Evento";
+                    "Descripcion evento programado" := rEvExp."Descripcion Evento";
                     "Tipo de Expositor" := rEvExp."Tipo de Expositor";
                     "Cod. Expositor" := rEvExp."Cod. Expositor";
                     "Nombre expositor" := rEvExp."Nombre Expositor";
@@ -811,7 +811,7 @@ table 67055 "Solicitud de Taller - Evento"
                     //       CabPlanEvento.Secuencia);
 
                     Evento.GET("Tipo de Evento", "Cod. evento programado");
-                    "Descripci n evento programado" := Evento.Descripcion;
+                    "Descripcion evento programado" := Evento.Descripcion;
                     VALIDATE("Tipo de Evento", Evento."Tipo de Evento");
 
                     rEvExp.RESET;
@@ -831,7 +831,7 @@ table 67055 "Solicitud de Taller - Evento"
                             NewSecEvProg := ActualizaPlanif(rEvExp);
 
                         "Cod. evento programado" := rEvExp."Cod. Evento";
-                        "Descripci n evento programado" := rEvExp."Descripcion Evento";
+                        "Descripcion evento programado" := rEvExp."Descripcion Evento";
                         "Tipo de Expositor" := rEvExp."Tipo de Expositor";
                         "Cod. Expositor" := rEvExp."Cod. Expositor";
                         "Nombre expositor" := rEvExp."Nombre Expositor";
@@ -841,17 +841,17 @@ table 67055 "Solicitud de Taller - Evento"
                     END;
 
                 END
-                ELSE
+
             end;
         }
-        field(67038; "Descripci n evento programado"; Text[100])
+        field(67038; "Descripcion evento programado"; Text[100])
         {
             Editable = false;
         }
         field(67039; "Evento dictado por (codigo)"; Code[20])
         {
-            TableRelation = IF (Evento dictado por (tipo)=CONST(Docente)) Docentes WHERE ("Expositor"=CONST(true))
-                            ELSE IF (Evento dictado por (tipo)=CONST(Proveedor)) Vendor;
+            TableRelation = IF ("Evento dictado por (tipo)" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
+            ELSE IF ("Evento dictado por (tipo)" = CONST(Proveedor)) Vendor;
         }
         field(67040; "Evento dictado por (nombre)"; Text[80])
         {
@@ -968,7 +968,7 @@ table 67055 "Solicitud de Taller - Evento"
         IF "No. Solicitud" = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Solic. T-E");
-            NoSeriesMgt.InitSeries(APSSetup."No. Serie Solic. T-E", xRec."No. Series", 0D, "No. Solicitud", "No. Series");
+            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Solic. T-E", xRec."No. Series", 0D, "No. Solicitud", "No. Series");
         END;
 
         "Fecha Solicitud" := TODAY;
@@ -1020,8 +1020,8 @@ table 67055 "Solicitud de Taller - Evento"
         DefDim: Record 352;
         DimVal: Record 349;
         PostCode: Record 225;
-        NoSeriesMgt: Codeunit 396;
-        DimMgt: Codeunit 408;
+        NoSeriesMgt: Codeunit "No. Series";
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
         DimForm: Page 560;
 
@@ -1033,13 +1033,15 @@ table 67055 "Solicitud de Taller - Evento"
             SolEvento := Rec;
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Solic. T-E");
+            //TODO: Ver 
+            /*
             IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Solic. T-E", OldEvent."No. Series", "No. Series") THEN BEGIN
                 APSSetup.GET;
                 APSSetup.TESTFIELD("No. Serie Solic. T-E");
                 NoSeriesMgt.SetSeries("No. Solicitud");
                 Rec := SolEvento;
                 EXIT(TRUE);
-            END;
+            END;*/
         END;
     end;
 
@@ -1072,13 +1074,13 @@ table 67055 "Solicitud de Taller - Evento"
         //    "Shortcut Dimension 1 Code","Shortcut Dimension 2 Code");
 
         OldDimSetID := "Dimension Set ID";
-        "Dimension Set ID" :=
-          DimMgt.GetDefaultDimID(TableID, No, SourceCodeSetup.Sales, "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code", 0, 0);
+        //TODO: Ver "Dimension Set ID" :=
+        //TODO: Ver   DimMgt.GetDefaultDimID(TableID, No, SourceCodeSetup.Sales, "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code", 0, 0);
     end;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     var
-        ChangeLogMgt: Codeunit 423;
+        //TODO: Ver ChangeLogMgt: Codeunit 423;
         RecRef: RecordRef;
         xRecRef: RecordRef;
         OldDimSetID: Integer;
@@ -1095,7 +1097,7 @@ table 67055 "Solicitud de Taller - Evento"
         //  DimMgt.SaveTempDim(FieldNumber,ShortcutDimCode);
 
         OldDimSetID := "Dimension Set ID";
-        DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Set ID");
+        //TODO: Ver DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Set ID");
         IF "No. Solicitud" <> '' THEN
             MODIFY;
     end;
@@ -1114,10 +1116,10 @@ table 67055 "Solicitud de Taller - Evento"
 
 
         OldDimSetID := "Dimension Set ID";
-        "Dimension Set ID" :=
-          DimMgt.EditDimensionSet2(
-            "Dimension Set ID", STRSUBSTNO('%1 %2', 0, "No. Solicitud"),
-            "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code");
+        //TODO: Ver "Dimension Set ID" :=
+        //TODO: Ver   DimMgt.EditDimensionSet2(
+        //TODO: Ver     "Dimension Set ID", STRSUBSTNO('%1 %2', 0, "No. Solicitud"),
+        //TODO: Ver     "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code");
         IF OldDimSetID <> "Dimension Set ID" THEN
             MODIFY;
     end;

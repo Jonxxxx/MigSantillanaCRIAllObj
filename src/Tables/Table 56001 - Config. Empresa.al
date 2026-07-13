@@ -27,7 +27,7 @@ table 56001 "Config. Empresa"
         field(2; Country; Code[10])
         {
             Caption = 'Country';
-            //TODO: Ver TableRelation = "Parametros Loc. x Pa s";
+            //TODO: Ver TableRelation = "Parametros Loc. x Pais";
         }
         field(3; "Titulo E-mail Pedido de Venta"; Text[30])
         {

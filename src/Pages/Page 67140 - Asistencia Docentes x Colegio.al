@@ -14,7 +14,7 @@ page 67140 "Asistencia Docentes x Colegio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No. Solicitud"; "No. Solicitud")
                 {

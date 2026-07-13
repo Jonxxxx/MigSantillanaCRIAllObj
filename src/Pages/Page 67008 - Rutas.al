@@ -11,7 +11,7 @@ page 67008 Rutas
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

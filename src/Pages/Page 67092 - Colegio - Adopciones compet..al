@@ -8,7 +8,7 @@ page 67092 "Colegio - Adopciones compet."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Editorial"; "Cod. Editorial")
                 {

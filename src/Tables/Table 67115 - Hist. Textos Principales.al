@@ -43,14 +43,14 @@ table 67115 "Hist. Textos Principales"
             Caption = 'Product Group Code';
             Editable = false;
             Enabled = false;
-            TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(8; "Dim Subfamilia"; Code[20])
         {
             Editable = false;
             Enabled = false;
         }
-        field(9; "Campa a"; Integer)
+        field(9; "Campana"; Integer)
         {
         }
     }

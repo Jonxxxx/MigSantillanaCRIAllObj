@@ -1,0 +1,714 @@
+table 34002133 "Acciones de personal"
+{
+    Caption = 'Personnel activities';
+    //TODO: Ver DrillDownPageID = 34002170;
+    //TODO: Ver LookupPageID = 34002170;
+
+    fields
+    {
+        field(1; "Tipo de accion"; Option)
+        {
+            Caption = 'Action type';
+            OptionCaption = ' ,Ingreso,Cambio,Salida';
+            OptionMembers = " ",Ingreso,Cambio,Salida;
+        }
+        field(2; "Cod. accion"; Code[20])
+        {
+            Caption = 'Action code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Tipos de acciones personal".Codigo WHERE(Tipo de accion=FIELD(Tipo de accion));
+
+            trigger OnValidate()
+            begin
+                AccP.GET("Tipo de accion", "Cod. accion");
+                "Descripcion accion" := AccP.Descripcion;
+            end;
+        }
+        field(3; "No. empleado"; Code[20])
+        {
+            Caption = 'Employee no.';
+            TableRelation = IF (Tipo de accion=CONST(Ingreso)) Elegibles WHERE (Status=CONST(Elegible))
+                            ELSE IF (Tipo de accion=FILTER(<>Ingreso)) Employee;
+
+            trigger OnValidate()
+            begin
+                IF "Tipo de accion" <> "Tipo de accion"::Ingreso THEN BEGIN
+                    Emp.GET("No. empleado");
+                    VALIDATE("First Name", Emp."First Name");
+                    VALIDATE("Middle Name", Emp."Middle Name");
+                    VALIDATE("Last Name", Emp."Last Name");
+                    VALIDATE("Second Last Name", Emp."Second Last Name");
+
+                    "ID Documento" := Emp."Document ID";
+                    "Cargo actual" := Emp."Job Type Code";
+                    "Nuevo cargo" := "Cargo actual";
+                    "Descripcion cargo actual" := Emp."Job Title";
+                    Emp.CALCFIELDS(Salario);
+                    "Sueldo actual" := Emp.Salario;
+                    Emp.CALCFIELDS("Desc. Departamento");
+                    VALIDATE("Departamento actual", Emp.Departamento);
+                    "Departamento nuevo" := "Departamento actual";
+                    "Ubicacion actual" := Emp."Working Center";
+                    Emp.CALCFIELDS(Cuenta);
+                    "Numero cuenta actual" := Emp.Cuenta;
+                    "Nivel actual" := Emp."Employee Level";
+                    "Tipo de contrato" := Emp."Emplymt. Contract Code";
+                    "Document Type" := Emp."Document Type";
+                    Address := Emp.Address;
+                    "Address 2" := Emp."Address 2";
+                    City := Emp.City;
+                    "Post Code" := Emp."Post Code";
+                    County := Emp.County;
+                    "Country/Region Code" := Emp."Country/Region Code";
+                    //"URL Linkedin" :=
+                    //"URL Facebook" :=
+                    Gender := Emp.Gender;
+                    "Lugar nacimiento" := Emp."Lugar nacimiento";
+                    "Estado civil" := Emp."Estado civil";
+                END
+                ELSE BEGIN
+                    Cand.GET("No. empleado");
+                    "Cod. elegible" := Cand."No.";
+                    VALIDATE("First Name", Cand."First Name");
+                    VALIDATE("Middle Name", Cand."Middle Name");
+                    VALIDATE("Last Name", Cand."Last Name");
+                    VALIDATE("Second Last Name", Cand."Second Last Name");
+                    "Document Type" := Cand."Document Type";
+                    VALIDATE("ID Documento", Cand."Document ID");
+                    Address := Cand.Address;
+                    "Address 2" := Cand."Address 2";
+                    City := Cand.City;
+                    "Post Code" := Cand."Post Code";
+                    County := Cand.County;
+                    "Country/Region Code" := Cand."Country/Region Code";
+                    //"URL Linkedin" :=  Emp.u
+                    //"URL Facebook" :=
+                    Gender := Cand.Gender;
+                    "Lugar nacimiento" := Cand."Lugar nacimiento";
+                    "Estado civil" := Cand."Estado civil";
+                END;
+
+                Beneficiospuestoslaborales.RESET;
+                //Beneficiospuestoslaborales.SETRANGE("Cod. cargo","Nuevo cargo");
+                IF Beneficiospuestoslaborales.FINDSET THEN
+                    REPEAT
+                        Seleccionbeneficios.INIT;
+                        Seleccionbeneficios."No. documento" := "No.";
+                        Seleccionbeneficios."Cod. Empleado" := "No. empleado";
+                        Seleccionbeneficios."Tipo Beneficio" := Beneficiospuestoslaborales."Tipo Beneficio";
+                        Seleccionbeneficios.Codigo := Beneficiospuestoslaborales.Codigo;
+                        Seleccionbeneficios.Descripcion := Beneficiospuestoslaborales.Descripcion;
+                        IF NOT Seleccionbeneficios.INSERT THEN
+                            Seleccionbeneficios.MODIFY;
+                    UNTIL Beneficiospuestoslaborales.NEXT = 0;
+            end;
+        }
+        field(4; "Nombre completo"; Text[60])
+        {
+            Caption = 'Name';
+            Editable = false;
+
+            trigger OnValidate()
+            begin
+                "Nombre completo" := "First Name" + ' ' + "Middle Name" + ' ' + "Last Name" + ' ' + "Second Last Name";
+            end;
+        }
+        field(5; "ID Documento"; Code[15])
+        {
+            Caption = 'Document ID';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            var
+                Empresas: Record "2000000006";
+            begin
+                IF "Document Type" = "Document Type"::Cédula THEN
+                    IF NOT FuncNominas.ValidarCedula(DELCHR("ID Documento", '=', '-')) THEN
+                        ERROR(STRSUBSTNO(Err004, "Document Type"));
+
+                IF "Tipo de accion" = "Tipo de accion"::Ingreso THEN BEGIN
+                    IF ConfNominas."Multiempresa activo" THEN
+                        Empresas.SETRANGE(Name, COMPANYNAME);
+                    Empresas.FIND('-');
+                    REPEAT
+                        CLEAR(Emp);
+                        IF ConfNominas."Multiempresa activo" THEN
+                            Emp.CHANGECOMPANY(Empresas.Name);
+                        Emp.SETRANGE("Document ID", "ID Documento");
+                        IF Emp.FINDFIRST THEN
+                            ERROR(STRSUBSTNO(Err003, FIELDCAPTION("ID Documento"), Emp.TABLECAPTION, Emp."No.", Empresas.TABLECAPTION, Empresas.Name));
+                    UNTIL Empresas.NEXT = 0;
+                END;
+            end;
+        }
+        field(6; "Descripcion accion"; Text[60])
+        {
+            Caption = 'Action description';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(7; "Fecha accion"; Date)
+        {
+            Caption = 'Action date';
+            Editable = false;
+        }
+        field(8; "Fecha efectividad"; Date)
+        {
+            Caption = 'Efectivity date';
+        }
+        field(9; Comentario; Text[250])
+        {
+            Caption = 'Comments';
+        }
+        field(10; "Cargo actual"; Code[20])
+        {
+            Caption = 'Actual job position';
+            TableRelation = "Puestos laborales".Código WHERE(Cod. departamento=FIELD(Departamento actual));
+        }
+        field(11;"Descripcion cargo actual";Text[60])
+        {
+            Caption = 'Actual job description';
+            Editable = false;
+        }
+        field(12;"Nuevo cargo";Code[20])
+        {
+            Caption = 'New job code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Puestos laborales".Código WHERE (Cod. departamento=FIELD(Departamento nuevo));
+
+            trigger OnValidate()
+            begin
+                IF "Nuevo cargo" <> '' THEN
+                  BEGIN
+                    Cargos.GET("Departamento nuevo","Nuevo cargo");
+                    "Descripcion cargo nuevo" := Cargos.Descripción;
+                    NivelesCargos.RESET;
+                    NivelesCargos.SETRANGE("Cod. Nivel",Cargos."Cod. nivel");
+                    NivelesCargos.FINDSET;
+                    IF NivelesCargos.COUNT > 1 THEN
+                       BEGIN
+                        NivelCargo.SETTABLEVIEW(NivelesCargos);
+                        NivelCargo.LOOKUPMODE(TRUE);
+                        IF PAGE.RUNMODAL(0,NivelesCargos) = ACTION::LookupOK THEN
+                           "Nivel nuevo" := NivelesCargos."Cod. Nivel";
+                       END
+                    ELSE
+                      "Nivel nuevo" := NivelesCargos."Cod. Nivel";
+                
+                   Cargos.CALCFIELDS("Total Empleados");
+                   IF (Cargos."Total Empleados" >= Cargos."Maximo de posiciones") AND (Cargos."Maximo de posiciones" <> 0) THEN
+                      ERROR(Err006);
+                  END;
+                
+                /*
+                IF (xRec."Nuevo cargo" <> "Nuevo cargo") AND (xRec."Nuevo cargo" <> '') THEN
+                   BEGIN
+                     IF CONFIRM(STRSUBSTNO(Msg002,FIELDCAPTION( "Nuevo cargo"))) THEN
+                        BEGIN
+                          Seleccionbeneficios.RESET;
+                          Seleccionbeneficios.SETRANGE("Cod. Empleado","No. empleado");
+                          IF Seleccionbeneficios.FINDSET THEN
+                            Seleccionbeneficios.DELETEALL;
+                        END;
+                  END;
+                */
+
+            end;
+        }
+        field(13;"Descripcion cargo nuevo";Text[60])
+        {
+            Caption = 'New job description';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(14;"Sueldo actual";Decimal)
+        {
+            Caption = 'Actual salary';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(15;"Sueldo Nuevo";Decimal)
+        {
+            Caption = 'New salary';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                Cargos.RESET;
+                IF ("Cargo actual" <> "Nuevo cargo") AND ("Nuevo cargo" <> '') THEN
+                    Cargos.GET("Departamento nuevo","Nuevo cargo")
+                ELSE
+                    Cargos.GET("Departamento actual","Cargo actual");
+
+                NivelesCargos.RESET;
+                NivelesCargos.SETRANGE("Cod. Nivel",Cargos."Cod. nivel");
+                NivelesCargos.FINDFIRST;
+                IF ("Sueldo Nuevo" < NivelesCargos."Importe mínimo") OR
+                   ("Sueldo Nuevo" > NivelesCargos."Importe máximo") THEN
+                   IF NOT CONFIRM(STRSUBSTNO(Err005,FIELDCAPTION("Sueldo Nuevo"),NivelesCargos.FIELDCAPTION("Importe mínimo"),NivelesCargos."Importe mínimo",NivelesCargos.FIELDCAPTION("Importe máximo"),NivelesCargos."Importe máximo")) THEN
+                      ERROR('');
+            end;
+        }
+        field(16;"Departamento actual";Code[20])
+        {
+            Caption = 'Actual departament code';
+            DataClassification = ToBeClassified;
+            Editable = false;
+
+            trigger OnValidate()
+            begin
+                IF Depto.GET("Departamento actual") THEN
+                   "Nombre  depto. actual" := Depto.Descripcion;
+            end;
+        }
+        field(17;"Nombre  depto. actual";Text[60])
+        {
+            Caption = 'Actual department name';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(18;"Departamento nuevo";Code[20])
+        {
+            Caption = 'New department';
+            DataClassification = ToBeClassified;
+            TableRelation = Departamentos WHERE (Inhabilitado=CONST(No));
+
+            trigger OnValidate()
+            begin
+                IF Depto.GET("Departamento nuevo") THEN
+                   "Nombre depto. nuevo" := Depto.Descripcion;
+
+                IF "Departamento nuevo" <> xRec."Departamento nuevo" THEN
+                   BEGIN
+                    "Nuevo cargo" := '';
+                    "Descripcion cargo nuevo" := '';
+                  END;
+            end;
+        }
+        field(19;"Nombre depto. nuevo";Text[60])
+        {
+            Caption = 'New department name';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(20;"Ubicacion actual";Code[20])
+        {
+            Caption = 'Actual office';
+            DataClassification = ToBeClassified;
+            Editable = false;
+            TableRelation = "Centros de Trabajo"."Centro de trabajo";
+        }
+        field(21;"Ubicacion nueva";Code[20])
+        {
+            Caption = 'New office';
+            DataClassification = ToBeClassified;
+            TableRelation = "Centros de Trabajo"."Centro de trabajo";
+        }
+        field(22;"Empresa nueva";Text[30])
+        {
+            Caption = 'New company';
+            DataClassification = ToBeClassified;
+            TableRelation = Company;
+        }
+        field(23;"Numero cuenta actual";Code[15])
+        {
+            Caption = 'Actual account no.';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(24;"Numero cuenta nueva";Code[15])
+        {
+            Caption = 'New account no.';
+            DataClassification = ToBeClassified;
+        }
+        field(25;"Nivel actual";Code[20])
+        {
+            Caption = 'Actual level';
+            DataClassification = ToBeClassified;
+        }
+        field(26;"Nivel nuevo";Code[20])
+        {
+            Caption = 'New level';
+            DataClassification = ToBeClassified;
+            Editable = false;
+        }
+        field(27;"Tipo de contrato";Code[20])
+        {
+            Caption = 'Contract type code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Employment Contract";
+
+            trigger OnValidate()
+            begin
+                IF EmpContract.GET("Tipo de contrato") THEN
+                   "Duracion contrato" := EmpContract.Duracion;
+            end;
+        }
+        field(28;"Preparado por";Code[50])
+        {
+            Caption = 'Prepared by';
+            DataClassification = ToBeClassified;
+            Editable = false;
+            TableRelation = "User Setup";
+        }
+        field(29;"Revisado por";Code[50])
+        {
+            Caption = 'Reviewed by';
+            DataClassification = ToBeClassified;
+            Editable = false;
+            TableRelation = "User Setup";
+        }
+        field(30;"Autorizado por";Code[50])
+        {
+            Caption = 'Authorized by';
+            DataClassification = ToBeClassified;
+            Editable = false;
+            TableRelation = "User Setup";
+        }
+        field(31;"No. serie";Code[20])
+        {
+            Caption = 'Serial no.';
+            DataClassification = ToBeClassified;
+        }
+        field(32;"No.";Code[20])
+        {
+            Caption = 'No.';
+            DataClassification = ToBeClassified;
+        }
+        field(33;"Document Type";Option)
+        {
+            Caption = 'Document Type';
+            DataClassification = ToBeClassified;
+            OptionCaption = 'SS,Passport,Residence ID,Work Permission';
+            OptionMembers = "Cédula",Pasaporte,"Tarj.residen.comunitario","Perm.Trabajo",,"N.I.Extranjero","N.I.F.";
+        }
+        field(34;Preaviso;Boolean)
+        {
+            Caption = 'Notice';
+            DataClassification = ToBeClassified;
+        }
+        field(35;Cesantia;Boolean)
+        {
+            Caption = 'Unemployment';
+            DataClassification = ToBeClassified;
+        }
+        field(36;Regalia;Boolean)
+        {
+            Caption = 'Christmas salary';
+            DataClassification = ToBeClassified;
+        }
+        field(37;"Duracion contrato";DateFormula)
+        {
+            Caption = 'Contract''s duration';
+            DataClassification = ToBeClassified;
+        }
+        field(38;"First Name";Text[30])
+        {
+            Caption = 'First Name';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                VALIDATE("Nombre completo");
+            end;
+        }
+        field(39;"Middle Name";Text[30])
+        {
+            Caption = 'Middle Name';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                VALIDATE("Nombre completo");
+            end;
+        }
+        field(40;"Last Name";Text[30])
+        {
+            Caption = 'Last Name';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                VALIDATE("Nombre completo");
+            end;
+        }
+        field(41;"Second Last Name";Text[30])
+        {
+            Caption = 'Second Last Name';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                VALIDATE("Nombre completo");
+            end;
+        }
+        field(42;"Cod. elegible";Code[20])
+        {
+            Caption = 'Eligible code';
+            DataClassification = ToBeClassified;
+        }
+        field(43;Address;Text[60])
+        {
+            Caption = 'Address';
+            DataClassification = ToBeClassified;
+        }
+        field(44;"Address 2";Text[60])
+        {
+            Caption = 'Address 2';
+            DataClassification = ToBeClassified;
+        }
+        field(45;City;Text[30])
+        {
+            Caption = 'City';
+            DataClassification = ToBeClassified;
+
+            trigger OnValidate()
+            begin
+                PostCode.ValidateCity(City,"Post Code",County,"Country/Region Code",TRUE);
+                //GRN PostCode.ValidateCity(City,"Post Code");
+            end;
+        }
+        field(46;"Post Code";Code[20])
+        {
+            Caption = 'ZIP Code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Post Code";
+            //This property is currently not supported
+            //TestTableRelation = false;
+            ValidateTableRelation = false;
+
+            trigger OnValidate()
+            begin
+                PostCode.ValidatePostCode(City,"Post Code",County,"Country/Region Code",TRUE);
+                //GRN PostCode.ValidatePostCode(City,"Post Code");
+            end;
+        }
+        field(47;County;Text[30])
+        {
+            Caption = 'State';
+            DataClassification = ToBeClassified;
+        }
+        field(48;"Country/Region Code";Code[10])
+        {
+            Caption = 'Country/Region Code';
+            DataClassification = ToBeClassified;
+            TableRelation = Country/Region;
+        }
+        field(49;"URL Linkedin";Text[80])
+        {
+            Caption = 'Linkedin URL';
+            DataClassification = ToBeClassified;
+        }
+        field(50;"URL Facebook";Text[80])
+        {
+            Caption = 'Facebook URL';
+            DataClassification = ToBeClassified;
+        }
+        field(51;Gender;Option)
+        {
+            Caption = 'Gender';
+            DataClassification = ToBeClassified;
+            OptionCaption = ' ,Female,Male';
+            OptionMembers = " ",Female,Male;
+        }
+        field(52;"Lugar nacimiento";Text[30])
+        {
+            Caption = 'Birth place';
+            DataClassification = ToBeClassified;
+        }
+        field(53;"Estado civil";Option)
+        {
+            Caption = 'Civil status';
+            DataClassification = ToBeClassified;
+            Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
+            OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a";
+        }
+        field(54;"Comentario 2";Text[250])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(56;"Cod. Banco";Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "Bancos ACH Nomina";
+        }
+        field(57;"Fecha expiracion";Date)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(58;"Numero tarjeta";Code[16])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(59;"Importe tarjeta";Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(60;"Banco tarjeta";Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "Bancos ACH Nomina";
+        }
+        field(61;"Cod. Supervisor";Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = Employee;
+
+            trigger OnValidate()
+            begin
+                IF Emp.GET("Cod. Supervisor") THEN
+                   "Nombre Supervisor" := Emp."Full Name";
+            end;
+        }
+        field(62;"Nombre Supervisor";Text[60])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(63;"Fecha de inicio";Date)
+        {
+            Caption = 'Starting date';
+            DataClassification = ToBeClassified;
+        }
+        field(64;"Fecha final";Date)
+        {
+            Caption = 'Ending date';
+            DataClassification = ToBeClassified;
+        }
+        field(65;"Cause of Inactivity Code";Code[10])
+        {
+            Caption = 'Cause of Inactivity Code';
+            DataClassification = ToBeClassified;
+            TableRelation = "Cause of Inactivity";
+        }
+        field(66;"Tipo de miembro";Option)
+        {
+            Caption = 'Member type';
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+            OptionCaption = 'Member, Partner';
+            OptionMembers = Miembro,Socio;
+        }
+        field(67;"1ra Quincena";Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+        }
+        field(68;"2da Quincena";Boolean)
+        {
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+        }
+        field(69;"Fecha inscripcion";Date)
+        {
+            Caption = 'Enrollment date';
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+        }
+        field(70;"Tipo de aporte";Option)
+        {
+            Caption = 'Contribution type';
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+            OptionCaption = 'Fix,Percentage';
+            OptionMembers = Fijo,Porcentual;
+        }
+        field(71;Importe;Decimal)
+        {
+            Caption = 'Amount';
+            DataClassification = ToBeClassified;
+            Description = 'Cooperativa';
+        }
+        field(72;"Proximo no. empleado";Code[20])
+        {
+            Caption = 'Next Employee no.';
+            DataClassification = ToBeClassified;
+        }
+    }
+
+    keys
+    {
+        key(Key1;"No.")
+        {
+        }
+    }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown;"Tipo de accion","Cod. accion")
+        {
+        }
+    }
+
+    trigger OnDelete()
+    begin
+
+        IF CONFIRM(STRSUBSTNO(Msg001,TABLECAPTION),FALSE) THEN
+           DELETE;
+    end;
+
+    trigger OnInsert()
+    begin
+        "Preparado por" := USERID;
+        "Fecha accion" := TODAY;
+        //Para cuando el numerador de empleados es comun a las empresas
+        ConfNominas.GET();
+        IF (ConfNominas."Habilitar numeradores globales") AND ("No." = '') THEN
+           BEGIN
+             Numeradorescomunes.FINDFIRST;
+             Numeradorescomunes.TESTFIELD("No. serie acciones");
+             "No." := INCSTR(Numeradorescomunes."No. serie acciones");
+             Numeradorescomunes."No. serie acciones" := "No.";
+             Numeradorescomunes.MODIFY;
+           END
+        ELSE
+        IF "No." = '' THEN BEGIN
+          HumanResSetup.GET;
+          HumanResSetup.TESTFIELD("No. serie acciones personal");
+          NoSeriesMgt.InitSeries(HumanResSetup."No. serie acciones personal",xRec."No. serie",0D,"No.","No. serie");
+        END;
+
+
+        Beneficiospuestoslaborales.RESET;
+        //Beneficiospuestoslaborales.SETRANGE("Cod. cargo","Nuevo cargo");
+        IF Beneficiospuestoslaborales.FINDSET THEN
+           REPEAT
+             Seleccionbeneficios.INIT;
+             Seleccionbeneficios."No. documento" := "No.";
+             Seleccionbeneficios."Cod. Empleado" := "No. empleado";
+             Seleccionbeneficios."Tipo Beneficio" := Beneficiospuestoslaborales."Tipo Beneficio";
+             Seleccionbeneficios.Codigo := Beneficiospuestoslaborales.Codigo;
+             Seleccionbeneficios.Descripcion := Beneficiospuestoslaborales.Descripcion;
+             IF Seleccionbeneficios.INSERT THEN;
+           UNTIL Beneficiospuestoslaborales.NEXT = 0;
+    end;
+
+    var
+        HumanResSetup: Record "5218";
+        Contrato: Record "34002109";
+        Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
+        Emp: Record "5200";
+        Cand: Record "34002164";
+        AccP: Record "34002114";
+        Cargos: Record "34002110";
+        NivelesCargos: Record "34002120";
+        Depto: Record "34002135";
+        EmpContract: Record "5211";
+        Empresas: Record "2000000006";
+        Autorizacion: Record "34002154";
+        Err002: Label 'Document can not be deleted';
+        PostCode: Record "225";
+        ConfNominas: Record "34002103";
+        Numeradorescomunes: Record "34002182";
+        Beneficiospuestoslaborales: Record "34002152";
+        Seleccionbeneficios: Record "34002156";
+        NivelCargo: Page "34002166";
+                        NoSeriesMgt: Codeunit "396";
+                        Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
+        FuncNominas: Codeunit "34002104";
+        Err004: Label '$1 is invalid, please verify';
+        Err005: Label 'The %1 is out of the limits for this level. %2 %3, %4 %5, do you want to continue?';
+        Err006: Label 'The maximum number of vacancies for this position has already been reached. No more people can be assigned to this position.';
+        Msg001: Label 'Are you sure you want to delete the %1?';
+        Msg002: Label 'The selection of %1 has been changed, the selected benefits will be eliminated and new values will be re-used, do you want to continue?';
+}
+

@@ -12,7 +12,7 @@ page 67060 Especialidades
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

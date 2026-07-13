@@ -6,7 +6,7 @@ xmlport 58012 "Importa dim depto en empleados"
     {
         textelement(ImportaDimDepartamento)
         {
-            tableelement(Table2000000026; Table2000000026)
+            tableelement(Table2000000026; 2000000026)
             {
                 AutoReplace = false;
                 AutoSave = false;

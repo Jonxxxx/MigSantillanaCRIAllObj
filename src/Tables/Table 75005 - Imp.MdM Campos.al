@@ -70,12 +70,12 @@ table 75005 "Imp.MdM Campos"
     end;
 
     var
-        cTrasp: Codeunit 75007;
+    //TODO Ver: cTrasp: Codeunit 75007;
 
     procedure SetOrden()
     var
         lwOrden: Integer;
-        lwMdMTabla Record: 75004" temporary;
+        lwMdMTabla: Record 75004 temporary;
         lwRecRef: RecordRef;
         lwPKIds: array[10] of Integer;
         lwTotal: Integer;
@@ -104,7 +104,7 @@ table 75005 "Imp.MdM Campos"
             ELSE BEGIN
                 IF "Table Id" > 0 THEN BEGIN
                     lwRecRef.OPEN("Table Id");
-                    lwTotal := cTrasp.FindPrimKeyIdField(lwRecRef, lwPKIds);
+                    //TODO Ver: lwTotal := cTrasp.FindPrimKeyIdField(lwRecRef, lwPKIds);
                     FOR lwN := 1 TO lwTotal DO BEGIN
                         IF lwPKIds[lwN] = "Id Field" THEN
                             lwOrden := lwN;
@@ -129,8 +129,8 @@ table 75005 "Imp.MdM Campos"
         // GetValue
 
         wValue := DELCHR(Value, '<>');
-        IF cTrasp.EsNulo(wValue) THEN
-            wValue := '';
+        //TODO Ver: IF cTrasp.EsNulo(wValue) THEN
+        //TODO Ver:     wValue := '';
     end;
 }
 

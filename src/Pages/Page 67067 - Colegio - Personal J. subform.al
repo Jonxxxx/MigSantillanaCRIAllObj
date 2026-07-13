@@ -8,7 +8,7 @@ page 67067 "Colegio - Personal J. subform"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Nombre colegio"; "Nombre colegio")
                 {

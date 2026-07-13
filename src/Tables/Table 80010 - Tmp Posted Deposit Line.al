@@ -1,14 +1,14 @@
 table 80010 "Tmp Posted Deposit Line"
 {
     Caption = 'Posted Deposit Line';
-    LookupPageID = 10148;
+    //TODO: Ver LookupPageID = 10148;
 
     fields
     {
         field(1; "Deposit No."; Code[20])
         {
             Caption = 'Deposit No.';
-            TableRelation = "Posted Deposit Header";
+            //TODO: Ver TableRelation = "Posted Deposit Header";
         }
         field(2; "Line No."; Integer)
         {

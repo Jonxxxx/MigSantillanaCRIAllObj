@@ -41,7 +41,7 @@ table 70500 MCliente01
         }
         field(12; "Cod.postal empresa"; Text[10])
         {
-            Description = 'C digo postal de la empresa (en caso de clientes import.) C digo postal que se asigna directamente a una empresa.';
+            Description = 'Codigo postal de la empresa (en caso de clientes import.) Codigo postal que se asigna directamente a una empresa.';
         }
         field(13; Idioma; Text[20])
         {
@@ -90,11 +90,11 @@ table 70500 MCliente01
         }
         field(26; "Pais (Banco)"; Text[20])
         {
-            Description = 'Identifica el pa s en el cual tiene su sede el banco.';
+            Description = 'Identifica el Pais en el cual tiene su sede el banco.';
         }
         field(27; "Clave banco"; Text[15])
         {
-            Description = 'En este campo se indica la clave bajo la cual se almacenan los datos bancarios en el pa s correspondiente.';
+            Description = 'En este campo se indica la clave bajo la cual se almacenan los datos bancarios en el Pais correspondiente.';
         }
         field(28; "Cuenta bancaria"; Text[18])
         {
@@ -106,7 +106,7 @@ table 70500 MCliente01
         }
         field(30; "Clave de control"; Text[30])
         {
-            Description = 'Este campo contiene una clave de verificaci n para la combinaci n del c digo bancario y el n mero de la cuenta bancaria.';
+            Description = 'Este campo contiene una clave de verificaci n para la combinaci n del Codigo bancario y el n mero de la cuenta bancaria.';
         }
         field(31; Iban; Text[34])
         {
@@ -120,9 +120,9 @@ table 70500 MCliente01
         {
             Description = 'Clave de ramo industrial. Un ramo es una divisi n por empresas seg n el centro de gravedad de su actividad econ mica. Se utiliza la clave de ramo para limitar las evaluaciones (p. ej.,  ndice de datos maestros de acreedor). Se pueden utilizar como ramos,';
         }
-        field(34; "C digo ramo 1"; Text[10])
+        field(34; "Codigo ramo 1"; Text[10])
         {
-            Description = 'Indica un c digo que identifica un vocamente el ramo (o los ramos) del cliente.';
+            Description = 'Indica un Codigo que identifica un vocamente el ramo (o los ramos) del cliente.';
         }
         field(35; "Cuenta asociada"; Text[10])
         {
@@ -194,7 +194,7 @@ table 70500 MCliente01
         }
         field(52; "Oficina ventas"; Text[10])
         {
-            Description = 'Delegaci n (p. ej. una sucursal) responsable de la comercializaci n de determinados productos y servicios en una determinada zona geogr fica.';
+            Description = 'Delegacion (p. ej. una sucursal) responsable de la comercializaci n de determinados productos y servicios en una determinada zona geogr fica.';
         }
         field(53; "Gr.vendedores"; Text[10])
         {
@@ -216,13 +216,13 @@ table 70500 MCliente01
         {
             Description = 'Prioridad de entrega asignada a una posici n.01 URGENTE02 NORMAL';
         }
-        field(58; "Condici n expedici n"; Text[30])
+        field(58; "Condici n expEdicion"; Text[30])
         {
-            Description = 'Estrategia general de expedici n con la que se entregan mercanc as del proveedor al cliente.';
+            Description = 'Estrategia general de expEdicion con la que se entregan mercanc as del proveedor al cliente.';
         }
         field(59; "Relevante ARE"; Text[30])
         {
-            Description = 'Este indicador gestiona el proceso de la gesti n ARE (acuse de recibo de entrega). La gesti n ARE se activa al conectar el indicador "relevante para ARE" en la vista de expedici n para el cliente y al asignarlo a un tipo de posici n de entrega en el Customizing.';
+            Description = 'Este indicador gestiona el proceso de la gesti n ARE (acuse de recibo de entrega). La gesti n ARE se activa al conectar el indicador "relevante para ARE" en la vista de expEdicion para el cliente y al asignarlo a un tipo de posici n de entrega en el Customizing.';
         }
         field(60; "Agrupamiento de pedidos"; Text[30])
         {
@@ -262,11 +262,11 @@ table 70500 MCliente01
         }
         field(69; "Class. Fiscal para el deudor"; Text[30])
         {
-            Description = 'Identifica la obligaci n fiscal del cliente de acuerdo con la estructura fiscal de su pa s. Exento, no exento, IGIC, etc.Qu  hay que mandar?';
+            Description = 'Identifica la obligaci n fiscal del cliente de acuerdo con la estructura fiscal de su Pais. Exento, no exento, IGIC, etc.Qu  hay que mandar?';
         }
-        field(70; "C digo Cliente Santillana"; Text[10])
+        field(70; "Codigo Cliente Santillana"; Text[10])
         {
-            Description = 'C digo de cliente interno SAP';
+            Description = 'Codigo de cliente interno SAP';
         }
         field(71; "Tipo de cliente"; Text[10])
         {
@@ -295,7 +295,7 @@ table 70500 MCliente01
 
     keys
     {
-        key(Key1; "C digo Cliente Santillana")
+        key(Key1; "Codigo Cliente Santillana")
         {
         }
     }

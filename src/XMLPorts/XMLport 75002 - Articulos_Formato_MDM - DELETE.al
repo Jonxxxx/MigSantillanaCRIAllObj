@@ -14,7 +14,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
             MaxOccurs = Once;
             MinOccurs = Once;
             XmlName = 'mensaje';
-            tableelement(tmpcab; Table75003)
+            tableelement(tmpcab; 75003)
             {
                 MaxOccurs = Once;
                 MinOccurs = Once;
@@ -98,7 +98,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
                 begin
                     lwOK := EVALUATE(TmpCab."Fecha Creacion", fecha_origen);
                     lwOK := EVALUATE(TmpCab.fecha, fecha);
-                    cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
+                    //TODO: Ver cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
                 end;
             }
             textelement(body)
@@ -2175,11 +2175,11 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
     trigger OnPreXmlPort()
     begin
-        cGestM.AddMstRegHeader(2, 0);
+        //TODO: Ver cGestM.AddMstRegHeader(2, 0);
     end;
 
     var
-        cGestM: Codeunit 75001;
+        //TODO: Ver cGestM: Codeunit 75001;
         wTblInsertd: Boolean;
 
     procedure AddMstReg(pwIdTabla: Integer; pwTipo: Integer; pwCode: Code[30]; pwNombreElemento: Text)
@@ -2210,7 +2210,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
             lwOper := 1; // Update
 
         //cGestM.AddMstReg2(lwOper, pwIdTabla ,pwTipo ,pwCode, '', pwNombreElemento, '', pwValMdM);
-        cGestM.AddMstReg2(lwOper, pwIdTabla, pwTipo, pwCode, '', pwNombreElemento, '', FALSE);
+        //TODO: Ver cGestM.AddMstReg2(lwOper, pwIdTabla, pwTipo, pwCode, '', pwNombreElemento, '', FALSE);
     end;
 
     procedure AddMstRegField(pwIdField: Integer; pwValue: Text; pwNombreElemento: Text)
@@ -2224,22 +2224,22 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
     begin
         // AddMstRegField2
 
-        IF wTblInsertd THEN
-            cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
+        //TODO: Ver IF wTblInsertd THEN
+        //TODO: Ver cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
     end;
 
     procedure GetOutStrm(var wOutStrm: OutStream)
     begin
         // GetOutStrm
 
-        cGestM.GetOutStrm(wOutStrm)
+        //TODO: Ver cGestM.GetOutStrm(wOutStrm)
     end;
 
     procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 
-        cGestM.GestMessageXML(pxResp);
+        //TODO: Ver cGestM.GestMessageXML(pxResp);
     end;
 
     procedure AsegDato(pwDato: Text)

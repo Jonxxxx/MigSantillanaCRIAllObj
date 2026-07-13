@@ -20,7 +20,7 @@ page 67075 "Seleccionar Productos Muestras"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Seleccionar; Seleccionar)
                 {

@@ -9,7 +9,7 @@ page 67009 "Rutas - Distribucion Geo."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Ruta"; "Cod. Ruta")
                 {

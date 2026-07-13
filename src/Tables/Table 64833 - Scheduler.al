@@ -1,8 +1,8 @@
 table 64833 Scheduler
 {
     DataCaptionFields = "No.", Description;
-    DrillDownPageID = 64847;
-    LookupPageID = 64847;
+    //TODO: Ver DrillDownPageID = 64847;
+    //TODO: Ver LookupPageID = 64847;
 
     fields
     {
@@ -154,14 +154,14 @@ table 64833 Scheduler
         ReplicatorSetup.GET;
         IF "No." = '' THEN
             ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-        NoSeriesMgt.InitSeries(ReplicatorSetup."Scheduler Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        //TODO: Ver NoSeriesMgt.InitSeries(ReplicatorSetup."Scheduler Nos.", xRec."No. Series", 0D, "No.", "No. Series");
     end;
 
     var
         tags: Record 64834;
         ReplicatorSetup: Record 64835;
         Sched: Record 64833;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 
     procedure AssistEdit(OldSched: Record 64833): Boolean
     begin
@@ -169,13 +169,13 @@ table 64833 Scheduler
             Sched := Rec;
             ReplicatorSetup.GET;
             ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-            IF NoSeriesMgt.SelectSeries(ReplicatorSetup."Scheduler Nos.", OldSched."No. Series", "No. Series") THEN BEGIN
-                ReplicatorSetup.GET;
-                ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-                NoSeriesMgt.SetSeries("No.");
-                Rec := Sched;
-                EXIT(TRUE);
-            END;
+            //TODO: Ver IF NoSeriesMgt.SelectSeries(ReplicatorSetup."Scheduler Nos.", OldSched."No. Series", "No. Series") THEN BEGIN
+            ReplicatorSetup.GET;
+            ReplicatorSetup.TESTFIELD("Scheduler Nos.");
+            //TODO: Ver NoSeriesMgt.SetSeries("No.");
+            Rec := Sched;
+            EXIT(TRUE);
+            //TODO: Ver END;
         END;
     end;
 }

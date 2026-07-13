@@ -7,21 +7,21 @@ table 75012 "Valores Filtros Tipologia MdM"
 
     fields
     {
-        field(1;Id;Integer)
+        field(1; Id; Integer)
         {
         }
-        field(2;"Id Filtro";Integer)
+        field(2; "Id Filtro"; Integer)
         {
         }
-        field(3;"Code";Code[20])
+        field(3; "Code"; Code[20])
         {
-            Caption = 'C digo';
+            Caption = 'Codigo';
         }
-        field(5;Description;Text[50])
+        field(5; Description; Text[50])
         {
-            Caption = 'Descripci n';
+            Caption = 'Descripcion';
         }
-        field(10;"Filtro Tipologia";Code[10])
+        field(10; "Filtro Tipologia"; Code[10])
         {
             Description = 'FlowFilter';
             FieldClass = FlowFilter;
@@ -31,14 +31,14 @@ table 75012 "Valores Filtros Tipologia MdM"
 
     keys
     {
-        key(Key1;Id)
+        key(Key1; Id)
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Code",Description)
+        fieldgroup(DropDown; "Code", Description)
         {
         }
     }

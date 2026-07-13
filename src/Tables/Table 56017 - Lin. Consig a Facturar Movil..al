@@ -28,7 +28,7 @@ table 56017 "Lin. Consig a Facturar Movil."
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                ItemCrossReference: Record 5717;
+                //TODO: Ver ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -186,7 +186,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         Text026: Label 'You cannot change %1 if the item charge has already been posted.';
         CurrExchRate: Record 330;
         SalesHeader: Record 36;
-        SalesLine2Record: Record 37;
+        SalesLine2: Record 37;
         TempSalesLine: Record 37;
         GLAcc: Record 15;
         Item: Record 27;
@@ -214,7 +214,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        SalesTaxDifference: Record 10012;
+        //TODO: Ver SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -225,7 +225,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -277,7 +277,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
         cManejaParametros: Codeunit 34002500;
-        txt001: Label 'Este c digo de producto ya ha sido introducido previamente';
+        txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';
         rSalesHeader: Record 36;
@@ -324,7 +324,7 @@ table 56017 "Lin. Consig a Facturar Movil."
     local procedure SelectItemEntry(CurrentFieldNo: Integer)
     var
         ItemLedgEntry: Record 32;
-        SalesLine3Record: Record 37;
+        SalesLine3: Record 37;
     begin
     end;
 
@@ -358,7 +358,7 @@ table 56017 "Lin. Consig a Facturar Movil."
 
     local procedure UpdateVATAmounts()
     var
-        SalesLine2Record: Record 37;
+        SalesLine2: Record 37;
         TotalLineAmount: Decimal;
         TotalInvDiscAmount: Decimal;
         TotalAmount: Decimal;
@@ -448,13 +448,13 @@ table 56017 "Lin. Consig a Facturar Movil."
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]
     var
-        "Field"Record 2000000041;
+        Field: Record 2000000041;
     begin
     end;
 
     local procedure GetCaptionClass(FieldNumber: Integer): Text[80]
     var
-        SalesHeader2Record: Record 36;
+        SalesHeader2: Record 36;
     begin
     end;
 
@@ -507,13 +507,13 @@ table 56017 "Lin. Consig a Facturar Movil."
     begin
     end;
 
-    procedure UpdateVATOnLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
+    procedure UpdateVATOnLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader: Record 36; var SalesLine: Record 37; var VATAmountLine: Record 290)
     var
-        TempVATAmountLineRemainder Record: 290" temporary;
+        TempVATAmountLineRemainder: Record 290 temporary;
         Currency: Record 4;
         RecRef: RecordRef;
         xRecRef: RecordRef;
-        ChangeLogMgt: Codeunit 423;
+        //ChangeLogMgt: Codeunit 423;
         NewAmount: Decimal;
         NewAmountIncludingVAT: Decimal;
         NewVATBaseAmount: Decimal;
@@ -524,7 +524,7 @@ table 56017 "Lin. Consig a Facturar Movil."
     begin
     end;
 
-    procedure CalcVATAmountLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader Record: 36; var SalesLine Record: 37; var VATAmountLine Record: 290")
+    procedure CalcVATAmountLines(QtyType: Option General,Invoicing,Shipping; var SalesHeader: Record 36; var SalesLine: Record 37; var VATAmountLine: Record 290)
     var
         PrevVatAmountLine: Record 290;
         Currency: Record 4;
@@ -550,7 +550,7 @@ table 56017 "Lin. Consig a Facturar Movil."
 
     local procedure CheckWarehouse()
     var
-        Location2Record: Record 14;
+        Location2: Record 14;
         WhseSetup: Record 5769;
         ShowDialog: Option " ",Message,Error;
         DialogText: Text[50];
@@ -599,7 +599,7 @@ table 56017 "Lin. Consig a Facturar Movil."
 
     procedure CrossReferenceNoLookUp()
     var
-        ItemCrossReference: Record 5717;
+        //TODO: Ver ItemCrossReference: Record 5717;
         ICGLAcc: Record 410;
     begin
     end;
@@ -628,7 +628,7 @@ table 56017 "Lin. Consig a Facturar Movil."
     begin
     end;
 
-    local procedure CheckApplFromItemLedgEntry(var ItemLedgEntry Record: 32")
+    local procedure CheckApplFromItemLedgEntry(var ItemLedgEntry: Record 32)
     var
         QtyBase: Decimal;
         QtyNotReturned: Decimal;
@@ -695,7 +695,7 @@ table 56017 "Lin. Consig a Facturar Movil."
     begin
     end;
 
-    procedure CalcSalesTaxLines(var SalesHeader Record: 36; var SalesLine Record: 37")
+    procedure CalcSalesTaxLines(var SalesHeader: Record 36; var SalesLine: Record 37)
     var
         TaxArea: Record 318;
     begin

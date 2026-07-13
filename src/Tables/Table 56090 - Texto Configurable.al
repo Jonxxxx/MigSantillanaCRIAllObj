@@ -7,9 +7,9 @@ table 56090 "Texto Configurable"
     {
         field(1; "Id. Tabla"; Integer)
         {
-            TableRelation = Object.ID WHERE("Type" = CONST(TableData));
+            //TODO: Ver TableRelation = Object.ID WHERE("Type" = CONST(TableData));
         }
-        field(2; "Secci n"; Option)
+        field(2; "Seccion"; Option)
         {
             OptionMembers = Cabecera,Detalle,Pie;
         }
@@ -23,7 +23,7 @@ table 56090 "Texto Configurable"
 
     keys
     {
-        key(Key1; "Id. Tabla", "Secci n", "No. Linea")
+        key(Key1; "Id. Tabla", "Seccion", "No. Linea")
         {
         }
     }
@@ -37,7 +37,7 @@ table 56090 "Texto Configurable"
         rConf: Record 56090;
     begin
         rConf.SETRANGE("Id. Tabla", "Id. Tabla");
-        rConf.SETRANGE(Secci n, Secci n);
+        rConf.SETRANGE(Seccion, Seccion);
         IF rConf.FINDLAST THEN
             "No. Linea" := rConf."No. Linea" + 1
         ELSE

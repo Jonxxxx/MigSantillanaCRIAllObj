@@ -54,11 +54,13 @@ table 56035 "Contenido Cajas Packing Reg."
         {
             Caption = 'Picking Line No.';
             NotBlank = true;
+            //TODO Ver: 
+            /*
             TableRelation = "Registered Whse. Activity Line"."Line No." WHERE("Activity Type" = FILTER(Pick),
                                                                                "No." = FIELD("No. Picking"),
                                                                                "No. Packing" = FILTER(''),
                                                                                "No. Caja" = FILTER(''),
-                                                                               "No. Linea Packing" = FILTER(0));
+                                                                               "No. Linea Packing" = FILTER(0));*/
 
             trigger OnValidate()
             begin
@@ -67,9 +69,9 @@ table 56035 "Contenido Cajas Packing Reg."
                     Cantidad := RWAL.Quantity;
                     "Cod. Unidad de Medida" := RWAL."Unit of Measure Code";
                     Descripcion := RWAL.Description;
-                    RWAL.VALIDATE("No. Packing", "No. Packing");
-                    RWAL.VALIDATE("No. Caja", "No. Caja");
-                    RWAL.VALIDATE("No. Linea Packing", "No. Linea");
+                    //TODO Ver: RWAL.VALIDATE("No. Packing", "No. Packing");
+                    //TODO Ver: RWAL.VALIDATE("No. Caja", "No. Caja");
+                    //TODO Ver: RWAL.VALIDATE("No. Linea Packing", "No. Linea");
                     RWAL.MODIFY(TRUE);
                 END;
             end;
@@ -97,10 +99,12 @@ table 56035 "Contenido Cajas Packing Reg."
         field(16; "No. Pedido"; Code[20])
         {
             Caption = 'N  Pedido';
+            //TODO Ver: 
+            /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
                                                                                     "Estado packing" = CONST(Listo))
             ELSE IF ("Tipo pedido" = CONST(Consignacion)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(true))
-            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false));
+            ELSE IF ("Tipo pedido" = CONST(Transferencia)) "Transfer Header"."No." WHERE("Pedido Consignacion" = CONST(false));*/
         }
         field(17; "No. Linea Pedido"; Integer)
         {
@@ -169,9 +173,9 @@ table 56035 "Contenido Cajas Packing Reg."
 
 
         IF RWAL.GET(RWAL."Activity Type"::Pick, "No. Picking", "No. Linea Picking") THEN BEGIN
-            RWAL.VALIDATE("No. Packing", '');
-            RWAL.VALIDATE("No. Caja", '');
-            RWAL.VALIDATE("No. Linea Packing", 0);
+            //TODO Ver: RWAL.VALIDATE("No. Packing", '');
+            //TODO Ver: RWAL.VALIDATE("No. Caja", '');
+            //TODO Ver: RWAL.VALIDATE("No. Linea Packing", 0);
             RWAL.MODIFY(TRUE);
         END;
     end;

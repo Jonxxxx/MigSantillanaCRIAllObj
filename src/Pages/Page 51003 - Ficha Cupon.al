@@ -19,8 +19,8 @@ page 51003 "Ficha Cupon"
 
                     trigger OnAssistEdit()
                     begin
-                        IF AssistEdit(xRec) THEN
-                            CurrPage.UPDATE;
+                        //IF AssistEdit(xRec) THEN
+                        //    CurrPage.UPDATE;
                     end;
                 }
                 field("Cod. Colegio"; "Cod. Colegio")
@@ -85,10 +85,10 @@ page 51003 "Ficha Cupon"
                 {
                 }
             }
-            part(; 51004)
+            part(PagePartLinCupon; 51004)
             {
-                SubPageLink = No. Cupon=FIELD("No. Cupon");
-                    SubPageView = SORTING(No. Cupon,Cod. Producto)
+                SubPageLink = "No. Cupon" = FIELD("No. Cupon");
+                SubPageView = SORTING("No. Cupon", "Cod. Producto")
                               ORDER(Ascending);
             }
         }
@@ -110,8 +110,8 @@ page 51003 "Ficha Cupon"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 51012;
-                RunPageLink = No. Cupon=FIELD("No. Cupon");
-                RunPageView = SORTING(No. Lote cupon,Grupo Negocio,No. Cupon)
+                RunPageLink = "No. Cupon" = FIELD("No. Cupon");
+                RunPageView = SORTING("No. Lote cupon", "Grupo Negocio", "No. Cupon")
                               ORDER(Ascending);
             }
         }

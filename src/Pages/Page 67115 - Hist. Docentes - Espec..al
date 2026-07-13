@@ -13,7 +13,7 @@ page 67115 "Hist. Docentes - Espec."
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campana; Campana)
                 {

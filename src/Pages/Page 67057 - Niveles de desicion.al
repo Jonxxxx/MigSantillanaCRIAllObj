@@ -12,7 +12,7 @@ page 67057 "Niveles de desicion"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

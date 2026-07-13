@@ -211,7 +211,7 @@ table 75006 "Conf. Tipologias MdM"
         lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
         lrValDim: Record 349;
-        lrProdGroup: Record 5723;
+    //TODO Ver: lrProdGroup: Record 5723;
     begin
         // ValidaReferencia
         // Valida que el valor sea Correcto
@@ -223,7 +223,7 @@ table 75006 "Conf. Tipologias MdM"
             CASE lrFiltroTipo.Tipo OF
                 lrFiltroTipo.Tipo::Dimension:
                     BEGIN
-                        lwCodDim := cFunMdm.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
+                        //TODO Ver: lwCodDim := cFunMdm.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
                         lrValDim.GET(lwCodDim, pwValor);
                     END;
                 lrFiltroTipo.Tipo::"Dato MdM":
@@ -236,8 +236,8 @@ table 75006 "Conf. Tipologias MdM"
                         CASE lrFiltroTipo."Valor Id" OF
                             1:
                                 BEGIN // Product Group
-                                    CLEAR(lrProdGroup);
-                                    lrProdGroup.GET(Tipologia, pwValor);
+                                    //TODO Ver: CLEAR(lrProdGroup);
+                                    //TODO Ver: lrProdGroup.GET(Tipologia, pwValor);
                                 END;
                         END;
                     END;
@@ -288,19 +288,19 @@ table 75006 "Conf. Tipologias MdM"
 
         CASE pwId OF
             1:
-                Result := "Referencia 1;
-          2:
-              Result := "Referencia 2;
-          3:
-              Result := "Referencia 3;
-          4:
-              Result := "Referencia 4;
-          5:
-              Result := "Referencia 5;
-          6:
-              Result := "Referencia 6;
-          7:
-              Result := "Referencia 7;
+                Result := "Referencia 1";
+            2:
+                Result := "Referencia 2";
+            3:
+                Result := "Referencia 3";
+            4:
+                Result := "Referencia 4";
+            5:
+                Result := "Referencia 5";
+            6:
+                Result := "Referencia 6";
+            7:
+                Result := "Referencia 7";
         END;
     end;
 

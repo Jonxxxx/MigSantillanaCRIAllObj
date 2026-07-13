@@ -67,7 +67,7 @@ table 67009 "Rutas - CP"
 
             trigger OnValidate()
             var
-                "Country/Region"Record 9;
+                "Country/Region": Record 9;
             begin
             end;
         }
@@ -125,7 +125,7 @@ table 67009 "Rutas - CP"
         Rutas: Page 67008;
         ConfAPS: Record 67000;
         DimVal: Record 349;
-        DimForm: Page 560;
+        DimForm: Page "Dimension Value List";
         PostCodeForm: Page 367;
         formTerritory: Page 429;
         RECcOUNTRY: Record 9;

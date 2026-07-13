@@ -12,7 +12,7 @@ page 67032 "Tipo de Educacion"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

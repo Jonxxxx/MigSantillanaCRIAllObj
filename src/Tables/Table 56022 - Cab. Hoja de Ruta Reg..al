@@ -83,24 +83,24 @@ table 56022 "Cab. Hoja de Ruta Reg."
         IF "No. Hoja Ruta" = '' THEN BEGIN
             SalesSetup.GET;
             TestNoSeries;
-            NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Hoja Ruta", WORKDATE, "No. Hoja Ruta",
-                                    SalesSetup."No. Serie Hoja de Ruta");
+            //TODO Ver: NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Hoja Ruta", WORKDATE, "No. Hoja Ruta",
+            //TODO Ver:                        SalesSetup."No. Serie Hoja de Ruta");
         END;
     end;
 
     var
-        NoSeriesMgt: Codeunit 396;
+        //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
         SalesSetup: Record 311;
 
     procedure TestNoSeries()
     begin
-        SalesSetup.TESTFIELD("No. Serie Hoja de Ruta");
-        SalesSetup.TESTFIELD("No. Serie Hoja de Ruta Reg.");
+        //TODO Ver:  SalesSetup.TESTFIELD("No. Serie Hoja de Ruta");
+        //TODO Ver: SalesSetup.TESTFIELD("No. Serie Hoja de Ruta Reg.");
     end;
 
     local procedure GetNoSeriesCode(): Code[10]
     begin
-        EXIT(SalesSetup."No. Serie Hoja de Ruta");
+        //TODO Ver: EXIT(SalesSetup."No. Serie Hoja de Ruta");
     end;
 }
 

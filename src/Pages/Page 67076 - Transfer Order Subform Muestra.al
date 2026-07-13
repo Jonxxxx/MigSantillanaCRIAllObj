@@ -12,7 +12,7 @@ page 67076 "Transfer Order Subform Muestra"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Item No."; "Item No.")
                 {

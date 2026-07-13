@@ -217,160 +217,160 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(50; "Reserved Quantity Inbnd."; Decimal)
         {
             CalcFormula = Sum("Reservation Entry".Quantity WHERE("Source ID" = FIELD("Document No."),
-                                                                  "Source Ref. No."=FIELD("Line No."),
-                                                                  "Source Type"=CONST(5741),
-                                                                  "Source Subtype"=CONST(1),
-                                                                  "Source Prod. Order Line"=FIELD("Derived From Line No."),
-                                                                  "Reservation Status"=CONST(Reservation)));
+                                                                  "Source Ref. No." = FIELD("Line No."),
+                                                                  "Source Type" = CONST(5741),
+                                                                  "Source Subtype" = CONST(1),
+                                                                  "Source Prod. Order Line" = FIELD("Derived From Line No."),
+                                                                  "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Quantity Inbnd.';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(51;"Reserved Quantity Outbnd.";Decimal)
+        field(51; "Reserved Quantity Outbnd."; Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
-                                                                   "Source Ref. No."=FIELD("Line No."),
-                                                                   "Source Type"=CONST(5741),
-                                                                   "Source Subtype"=CONST(0),
-                                                                   "Source Prod. Order Line"=FIELD("Derived From Line No."),
-                                                                   "Reservation Status"=CONST(Reservation)));
+            CalcFormula = - Sum("Reservation Entry".Quantity WHERE("Source ID" = FIELD("Document No."),
+                                                                   "Source Ref. No." = FIELD("Line No."),
+                                                                   "Source Type" = CONST(5741),
+                                                                   "Source Subtype" = CONST(0),
+                                                                   "Source Prod. Order Line" = FIELD("Derived From Line No."),
+                                                                   "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Quantity Outbnd.';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(52;"Reserved Qty. Inbnd. (Base)";Decimal)
+        field(52; "Reserved Qty. Inbnd. (Base)"; Decimal)
         {
-            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
-                                                                           "Source Ref. No."=FIELD("Line No."),
-                                                                           "Source Type"=CONST(5741),
-                                                                           "Source Subtype"=CONST(1),
-                                                                           "Source Prod. Order Line"=FIELD("Derived From Line No."),
-                                                                           "Reservation Status"=CONST(Reservation)));
+            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE("Source ID" = FIELD("Document No."),
+                                                                           "Source Ref. No." = FIELD("Line No."),
+                                                                           "Source Type" = CONST(5741),
+                                                                           "Source Subtype" = CONST(1),
+                                                                           "Source Prod. Order Line" = FIELD("Derived From Line No."),
+                                                                           "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Qty. Inbnd. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(53;"Reserved Qty. Outbnd. (Base)";Decimal)
+        field(53; "Reserved Qty. Outbnd. (Base)"; Decimal)
         {
-            CalcFormula = -Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
-                                                                            "Source Ref. No."=FIELD("Line No."),
-                                                                            "Source Type"=CONST(5741),
-                                                                            "Source Subtype"=CONST(0),
-                                                                            "Source Prod. Order Line"=FIELD("Derived From Line No."),
-                                                                            "Reservation Status"=CONST(Reservation)));
+            CalcFormula = - Sum("Reservation Entry"."Quantity (Base)" WHERE("Source ID" = FIELD("Document No."),
+                                                                            "Source Ref. No." = FIELD("Line No."),
+                                                                            "Source Type" = CONST(5741),
+                                                                            "Source Subtype" = CONST(0),
+                                                                            "Source Prod. Order Line" = FIELD("Derived From Line No."),
+                                                                            "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Qty. Outbnd. (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(54;"Shipping Time";DateFormula)
+        field(54; "Shipping Time"; DateFormula)
         {
             Caption = 'Shipping Time';
         }
-        field(55;"Reserved Quantity Shipped";Decimal)
+        field(55; "Reserved Quantity Shipped"; Decimal)
         {
-            CalcFormula = Sum("Reservation Entry".Quantity WHERE ("Source ID"=FIELD("Document No."),
-                                                                  "Source Ref. No."=FILTER(<>0),
-                                                                  "Source Type"=CONST(5741),
-                                                                  "Source Subtype"=CONST(1),
-                                                                  "Source Prod. Order Line"=FIELD("Line No."),
-                                                                  "Reservation Status"=CONST(Reservation)));
+            CalcFormula = Sum("Reservation Entry".Quantity WHERE("Source ID" = FIELD("Document No."),
+                                                                  "Source Ref. No." = FILTER(<> 0),
+                                                                  "Source Type" = CONST(5741),
+                                                                  "Source Subtype" = CONST(1),
+                                                                  "Source Prod. Order Line" = FIELD("Line No."),
+                                                                  "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Quantity Shipped';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(56;"Reserved Qty. Shipped (Base)";Decimal)
+        field(56; "Reserved Qty. Shipped (Base)"; Decimal)
         {
-            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE ("Source ID"=FIELD("Document No."),
-                                                                           "Source Ref. No."=FILTER(<>0),
-                                                                           "Source Type"=CONST(5741),
-                                                                           "Source Subtype"=CONST(1),
-                                                                           "Source Prod. Order Line"=FIELD("Line No."),
-                                                                           "Reservation Status"=CONST(Reservation)));
+            CalcFormula = Sum("Reservation Entry"."Quantity (Base)" WHERE("Source ID" = FIELD("Document No."),
+                                                                           "Source Ref. No." = FILTER(<> 0),
+                                                                           "Source Type" = CONST(5741),
+                                                                           "Source Subtype" = CONST(1),
+                                                                           "Source Prod. Order Line" = FIELD("Line No."),
+                                                                           "Reservation Status" = CONST(Reservation)));
             Caption = 'Reserved Qty. Shipped (Base)';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(57;"ID Usuario";Code[20])
+        field(57; "ID Usuario"; Code[20])
         {
             Caption = 'User ID';
         }
-        field(58;Marcada;Boolean)
+        field(58; Marcada; Boolean)
         {
             Caption = 'Marked';
         }
-        field(5704;"Item Category Code";Code[10])
+        field(5704; "Item Category Code"; Code[10])
         {
             Caption = 'Item Category Code';
             TableRelation = "Item Category";
         }
-        field(5707;"Product Group Code";Code[10])
+        field(5707; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            TableRelation = "Product Group".Code WHERE ("Item Category Code"=FIELD("Item Category Code"));
+            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
-        field(5752;"Completely Shipped";Boolean)
+        field(5752; "Completely Shipped"; Boolean)
         {
             Caption = 'Completely Shipped';
             Editable = false;
         }
-        field(5753;"Completely Received";Boolean)
+        field(5753; "Completely Received"; Boolean)
         {
             Caption = 'Completely Received';
             Editable = false;
         }
-        field(5793;"Outbound Whse. Handling Time";DateFormula)
+        field(5793; "Outbound Whse. Handling Time"; DateFormula)
         {
             Caption = 'Outbound Whse. Handling Time';
         }
-        field(5794;"Inbound Whse. Handling Time";DateFormula)
+        field(5794; "Inbound Whse. Handling Time"; DateFormula)
         {
             Caption = 'Inbound Whse. Handling Time';
         }
-        field(7300;"Transfer-from Bin Code";Code[20])
+        field(7300; "Transfer-from Bin Code"; Code[20])
         {
             Caption = 'Transfer-from Bin Code';
-            TableRelation = "Bin Content"."Bin Code" WHERE ("Location Code"=FIELD("Transfer-from Code"),
-                                                            "Item No."=FIELD("Item No."),
-                                                            "Variant Code"=FIELD("Variant Code"));
+            TableRelation = "Bin Content"."Bin Code" WHERE("Location Code" = FIELD("Transfer-from Code"),
+                                                            "Item No." = FIELD("Item No."),
+                                                            "Variant Code" = FIELD("Variant Code"));
         }
-        field(7301;"Transfer-To Bin Code";Code[20])
+        field(7301; "Transfer-To Bin Code"; Code[20])
         {
             Caption = 'Transfer-To Bin Code';
-            TableRelation = Bin.Code WHERE ("Location Code"=FIELD("Transfer-to Code"),
-                                            "Item Filter"=FIELD("Item No."),
-                                            "Variant Filter"=FIELD("Variant Code"));
+            TableRelation = Bin.Code WHERE("Location Code" = FIELD("Transfer-to Code"),
+                                            "Item Filter" = FIELD("Item No."),
+                                            "Variant Filter" = FIELD("Variant Code"));
         }
-        field(50000;"Precio Venta Consignacion";Decimal)
+        field(50000; "Precio Venta Consignacion"; Decimal)
         {
         }
-        field(50001;"Descuento % Consignacion";Decimal)
+        field(50001; "Descuento % Consignacion"; Decimal)
         {
         }
-        field(50002;"Importe Consignacion";Decimal)
+        field(50002; "Importe Consignacion"; Decimal)
         {
         }
-        field(50003;"Importe Consignacion Original";Decimal)
+        field(50003; "Importe Consignacion Original"; Decimal)
         {
         }
-        field(50010;"No. Pedido Consignacion";Code[20])
+        field(50010; "No. Pedido Consignacion"; Code[20])
         {
         }
-        field(50011;"No. Linea Pedido Consignacion";Integer)
+        field(50011; "No. Linea Pedido Consignacion"; Integer)
         {
         }
-        field(50012;"No. Mov. Prod. Cosg. a Liq.";Integer)
+        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
         }
-        field(50014;"Cantidad Devuelta";Decimal)
+        field(50014; "Cantidad Devuelta"; Decimal)
         {
         }
-        field(99000755;"Planning Flexibility";Option)
+        field(99000755; "Planning Flexibility"; Option)
         {
             Caption = 'Planning Flexibility';
             OptionCaption = 'Unlimited,None';
@@ -380,7 +380,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
 
     keys
     {
-        key(Key1;"Document No.","Line No.")
+        key(Key1; "Document No.", "Line No.")
         {
         }
     }
@@ -417,7 +417,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         TransHeader: Record 5740;
         Location: Record 14;
         Bin: Record 7354;
-        DimMgt: Codeunit 408;
+        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         WhseValidateSourceLine: Codeunit 5777;
         ReserveTransferLine: Codeunit 99000836;
         CheckDateConflict: Codeunit 99000815;
@@ -465,29 +465,29 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
     begin
     end;
 
-    procedure CreateDim(Type1: Integer;No1: Code[20])
+    procedure CreateDim(Type1: Integer; No1: Code[20])
     var
         SourceCodeSetup: Record 242;
-        TableID: array [10] of Integer;
-        No: array [10] of Code[20];
+        TableID: array[10] of Integer;
+        No: array[10] of Code[20];
     begin
     end;
 
-    procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
     end;
 
-    procedure LookupShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
+    procedure LookupShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
     end;
 
-    procedure ShowShortcutDimCode(var ShortcutDimCode: array [8] of Code[20])
+    procedure ShowShortcutDimCode(var ShortcutDimCode: array[8] of Code[20])
     begin
     end;
 
     local procedure CheckItemAvailable(CalledByFieldNo: Integer)
     var
-        //ItemCheckAvail: Codeunit 311;
+    //ItemCheckAvail: Codeunit 311;
     begin
     end;
 
@@ -513,7 +513,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
     begin
     end;
 
-    local procedure CheckWarehouse(LocationCode: Code[10];Receive: Boolean)
+    local procedure CheckWarehouse(LocationCode: Code[10]; Receive: Boolean)
     var
         ShowDialog: Option " ",Message,Error;
         DialogText: Text[50];
@@ -524,11 +524,11 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
     begin
     end;
 
-    local procedure GetBin(LocationCode: Code[10];BinCode: Code[20])
+    local procedure GetBin(LocationCode: Code[10]; BinCode: Code[20])
     begin
     end;
 
-    local procedure GetDefaultBin(FromLocationCode: Code[10];ToLocationCode: Code[10])
+    local procedure GetDefaultBin(FromLocationCode: Code[10]; ToLocationCode: Code[10])
     begin
     end;
 }

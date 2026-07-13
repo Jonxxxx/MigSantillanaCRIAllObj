@@ -12,7 +12,7 @@ page 67054 "Tipos de contactos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

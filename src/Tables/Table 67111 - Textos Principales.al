@@ -43,14 +43,14 @@ table 67111 "Textos Principales"
             Caption = 'Product Group Code';
             Editable = false;
             Enabled = false;
-            TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(8; "Dim Subfamilia"; Code[20])
         {
             Editable = false;
             Enabled = false;
         }
-        field(9; "Campa a"; Integer)
+        field(9; "Campana"; Integer)
         {
         }
     }
@@ -72,7 +72,7 @@ table 67111 "Textos Principales"
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);
-        EVALUATE(Campa a, APSSetup.Campana);
+        EVALUATE(Campana, APSSetup.Campana);
     end;
 }
 

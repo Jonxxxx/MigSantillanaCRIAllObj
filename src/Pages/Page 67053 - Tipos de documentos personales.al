@@ -9,7 +9,7 @@ page 67053 "Tipos de documentos personales"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

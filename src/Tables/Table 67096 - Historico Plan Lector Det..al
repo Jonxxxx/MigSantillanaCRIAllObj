@@ -57,7 +57,7 @@ table 67096 "Historico Plan Lector Det."
         {
             Editable = false;
         }
-        field(19; "Universo de T tulos u Obras"; Integer)
+        field(19; "Universo de Titulos u Obras"; Integer)
         {
             Editable = false;
         }
@@ -85,14 +85,14 @@ table 67096 "Historico Plan Lector Det."
         field(26; "Cant. x Alum 4"; Integer)
         {
         }
-        field(50; "Campa a"; Code[4])
+        field(50; "Campana"; Code[4])
         {
         }
     }
 
     keys
     {
-        key(Key1; "Campa a", "Cod. Colegio", "Cod. Local", "Cod. Turno", "Cod. Nivel", "Cod. Grado")
+        key(Key1; "Campana", "Cod. Colegio", "Cod. Local", "Cod. Turno", "Cod. Nivel", "Cod. Grado")
         {
         }
     }

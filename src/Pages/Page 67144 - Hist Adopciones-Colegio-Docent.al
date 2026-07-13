@@ -13,7 +13,7 @@ page 67144 "Hist Adopciones-Colegio-Docent"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Campaña; Campaña)
                 {

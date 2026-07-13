@@ -2,12 +2,12 @@ xmlport 52000 "Config. nomina can"
 {
     Direction = Import;
     Format = VariableText;
-
+    /* TODO: Ver
     schema
     {
         textelement(ConfigNominaCan)
         {
-            tableelement(Table34002103;Table34002103)
+            tableelement(Table34002103; 34002103)
             {
                 XmlName = 'ConfiguracionNominas';
                 fieldelement(CN_Codigo;"Configuración nominas".Codigo)
@@ -1289,5 +1289,6 @@ xmlport 52000 "Config. nomina can"
         {
         }
     }
+    */
 }
 

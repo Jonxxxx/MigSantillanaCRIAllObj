@@ -34,7 +34,7 @@ table 67054 "TMP Reportes APS"
         }
         field(8; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(9; "Cod. Producto"; Code[20])
         {

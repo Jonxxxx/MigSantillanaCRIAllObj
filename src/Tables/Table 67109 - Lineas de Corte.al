@@ -3,7 +3,7 @@ table 67109 "Lineas de Corte"
 
     fields
     {
-        field(1; "Campa a"; Integer)
+        field(1; "Campana"; Integer)
         {
         }
         field(2; "Linea Negocio"; Code[20])
@@ -139,13 +139,13 @@ table 67109 "Lineas de Corte"
 
     keys
     {
-        key(Key1; "Campa a", "Linea Negocio", Categoria, Delegacion)
+        key(Key1; "Campana", "Linea Negocio", Categoria, Delegacion)
         {
         }
-        key(Key2; "Campa a", "Linea Negocio", Delegacion)
+        key(Key2; "Campana", "Linea Negocio", Delegacion)
         {
         }
-        key(Key3; "Campa a", Delegacion, Categoria)
+        key(Key3; "Campana", Delegacion, Categoria)
         {
         }
     }
@@ -160,7 +160,7 @@ table 67109 "Lineas de Corte"
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);
-        EVALUATE(Campa a, APSSetup.Campana);
+        EVALUATE(Campana, APSSetup.Campana);
     end;
 }
 

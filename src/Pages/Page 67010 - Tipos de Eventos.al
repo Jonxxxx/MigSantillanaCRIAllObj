@@ -9,7 +9,7 @@ page 67010 "Tipos de Eventos"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Codigo; Codigo)
                 {

@@ -3,7 +3,7 @@ table 67100 "Detalle Atenciones"
 
     fields
     {
-        field(1; "C digo Cab. Atenci n"; Code[20])
+        field(1; "Codigo Cab. Atencion"; Code[20])
         {
         }
         field(2; "No. Linea"; Integer)
@@ -18,7 +18,7 @@ table 67100 "Detalle Atenciones"
                 rAte: Record 67002;
                 rCab: Record 67061;
             begin
-                IF Tipo = Tipo::Atenci n THEN BEGIN
+                IF Tipo = Tipo::Atencion THEN BEGIN
                     rAte.FILTERGROUP(2);
                     rAte.SETRANGE("Tipo registro", rAte."Tipo registro"::Atenciones);
                     rAte.FILTERGROUP(0);
@@ -28,7 +28,7 @@ table 67100 "Detalle Atenciones"
                     IF pgAte.RUNMODAL = ACTION::LookupOK THEN BEGIN
                         pgAte.GETRECORD(rAte);
                         Codigo := rAte.Codigo;
-                        Descripci n := rAte.Descripcion;
+                        Descripcion := rAte.Descripcion;
                         Cantidad := 1;
                         "Precio Unitario" := rAte."Costo Unitario";
                         "Monto total" := "Precio Unitario";
@@ -37,7 +37,7 @@ table 67100 "Detalle Atenciones"
                 END;
             end;
         }
-        field(4; "Descripci n"; Text[100])
+        field(4; "Descripcion"; Text[100])
         {
         }
         field(5; Cantidad; Decimal)
@@ -62,14 +62,14 @@ table 67100 "Detalle Atenciones"
         }
         field(8; Tipo; Option)
         {
-            OptionCaption = 'Atenci n,Pedido';
-            OptionMembers = "Atenci n",Pedido;
+            OptionCaption = 'Atencion,Pedido';
+            OptionMembers = "Atencion",Pedido;
         }
     }
 
     keys
     {
-        key(Key1; "C digo Cab. Atenci n", "No. Linea")
+        key(Key1; "Codigo Cab. Atencion", "No. Linea")
         {
             SumIndexFields = "Monto total";
         }
@@ -84,7 +84,7 @@ table 67100 "Detalle Atenciones"
         rDet: Record 67100;
     begin
 
-        rDet.SETRANGE("C digo Cab. Atenci n", "C digo Cab. Atenci n");
+        rDet.SETRANGE("Codigo Cab. Atencion", "Codigo Cab. Atencion");
         IF rDet.FINDLAST THEN
             "No. Linea" := rDet."No. Linea" + 1
         ELSE

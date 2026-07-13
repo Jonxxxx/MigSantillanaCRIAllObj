@@ -2,7 +2,7 @@ table 67066 Comisionistas
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;
-    LookupPageID = 5052;
+    //TODO: Ver LookupPageID = 5052;
 
     fields
     {
@@ -13,8 +13,8 @@ table 67066 Comisionistas
             trigger OnValidate()
             begin
                 IF "No." <> xRec."No." THEN BEGIN
-                    RMSetup.GET;
-                    NoSeriesMgt.TestManual(RMSetup."Contact Nos.");
+                    //TODO: Ver RMSetup.GET;
+                    //TODO: Ver NoSeriesMgt.TestManual(RMSetup."Contact Nos.");
                     "No. Series" := '';
                 END;
             end;
@@ -335,141 +335,159 @@ table 67066 Comisionistas
         }
         field(5066; "Next To-do Date"; Date)
         {
-            CalcFormula = Min(To-do.Date WHERE ("Contact Company No."=FIELD("Company No."),
+            //TODO: Ver 
+            /*
+            CalcFormula = Min("To-do.Date" WHERE ("Contact Company No."=FIELD("Company No."),
                                                 "Contact No."=FIELD(FILTER(Lookup Contact No.)),
                                                 "Closed"=CONST(false),
-                                                "System To-do Type"=CONST("Contact Attendee")));
+                                                "System To-do Type"=CONST("Contact Attendee")));*/
             Caption = 'Next To-do Date';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5067;"Last Date Attempted";Date)
+        field(5067; "Last Date Attempted"; Date)
         {
-            CalcFormula = Max("Interaction Log Entry".Date WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                  "Contact No."=FIELD(FILTER(Lookup Contact No.)),
-                                                                  "Initiated By"=CONST(Us),
-                                                                  "Postponed"=CONST(false)));
+            CalcFormula = Max("Interaction Log Entry".Date WHERE("Contact Company No." = FIELD("Company No."),
+                                                                  "Contact No." = FIELD(FILTER("Lookup Contact No.")),
+                                                                  "Initiated By" = CONST(Us),
+                                                                  "Postponed" = CONST(false)));
             Caption = 'Last Date Attempted';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5068;"Date of Last Interaction";Date)
+        field(5068; "Date of Last Interaction"; Date)
         {
-            CalcFormula = Max("Interaction Log Entry".Date WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                  "Contact No."=FIELD(FILTER(Lookup Contact No.)),
-                                                                  "Attempt Failed"=CONST(false),
-                                                                  "Postponed"=CONST(false)));
+            CalcFormula = Max("Interaction Log Entry".Date WHERE("Contact Company No." = FIELD("Company No."),
+                                                                  "Contact No." = FIELD(FILTER("Lookup Contact No.")),
+                                                                  "Attempt Failed" = CONST(false),
+                                                                  "Postponed" = CONST(false)));
             Caption = 'Date of Last Interaction';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5069;"No. of Job Responsibilities";Integer)
+        field(5069; "No. of Job Responsibilities"; Integer)
         {
-            CalcFormula = Count("Contact Job Responsibility" WHERE ("Contact No."=FIELD("No.")));
+            CalcFormula = Count("Contact Job Responsibility" WHERE("Contact No." = FIELD("No.")));
             Caption = 'No. of Job Responsibilities';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5070;"No. of Industry Groups";Integer)
+        field(5070; "No. of Industry Groups"; Integer)
         {
-            CalcFormula = Count("Contact Industry Group" WHERE ("Contact No."=FIELD("Company No.")));
+            CalcFormula = Count("Contact Industry Group" WHERE("Contact No." = FIELD("Company No.")));
             Caption = 'No. of Industry Groups';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5071;"No. of Business Relations";Integer)
+        field(5071; "No. of Business Relations"; Integer)
         {
-            CalcFormula = Count("Contact Business Relation" WHERE ("Contact No."=FIELD("Company No.")));
+            CalcFormula = Count("Contact Business Relation" WHERE("Contact No." = FIELD("Company No.")));
             Caption = 'No. of Business Relations';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5072;"No. of Mailing Groups";Integer)
+        field(5072; "No. of Mailing Groups"; Integer)
         {
-            CalcFormula = Count("Contact Mailing Group" WHERE ("Contact No."=FIELD("No.")));
+            CalcFormula = Count("Contact Mailing Group" WHERE("Contact No." = FIELD("No.")));
             Caption = 'No. of Mailing Groups';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5073;"External ID";Code[20])
+        field(5073; "External ID"; Code[20])
         {
             Caption = 'External ID';
         }
-        field(5074;"No. of Interactions";Integer)
+        field(5074; "No. of Interactions"; Integer)
         {
-            CalcFormula = Count("Interaction Log Entry" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                               "Canceled"=CONST(false),
-                                                               "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+            //TODO: Ver 
+            /*
+            CalcFormula = Count("Interaction Log Entry" WHERE("Contact Company No." = FIELD("Company No."),
+                                                               "Canceled" = CONST(false),
+                                                               "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                "Date"=FIELD("Date Filter"),
-                                                               "Postponed"=CONST(false)));
+                                                               "Postponed"=CONST(false)));*/
             Caption = 'No. of Interactions';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5076;"Cost (LCY)";Decimal)
+        field(5076; "Cost (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            CalcFormula = Sum("Interaction Log Entry"."Cost (LCY)" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                          "Canceled"=CONST(false),
-                                                                          "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+            //TODO: Ver 
+            /*
+            CalcFormula = Sum("Interaction Log Entry"."Cost (LCY)" WHERE("Contact Company No." = FIELD("Company No."),
+                                                                          "Canceled" = CONST(false),
+                                                                          "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                           "Date"=FIELD("Date Filter"),
                                                                           "Postponed"=CONST(false)));
+                                                                          */
             Caption = 'Cost ($)';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5077;"Duration (Min.)";Decimal)
+        field(5077; "Duration (Min.)"; Decimal)
         {
-            CalcFormula = Sum("Interaction Log Entry"."Duration (Min.)" WHERE ("Contact Company No."=FIELD("Company No."),
-                                                                               "Canceled"=CONST(false),
-                                                                               "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+            //TODO: Ver 
+            /*
+            CalcFormula = Sum("Interaction Log Entry"."Duration (Min.)" WHERE("Contact Company No." = FIELD("Company No."),
+                                                                               "Canceled" = CONST(false),
+                                                                               "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                                "Date"=FIELD("Date Filter"),
-                                                                               "Postponed"=CONST(false)));
+                                                                               "Postponed"=CONST(false)));*/
             Caption = 'Duration (Min.)';
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5078;"No. of Opportunities";Integer)
+        field(5078; "No. of Opportunities"; Integer)
         {
-            CalcFormula = Count("Opportunity Entry" WHERE ("Active"=CONST(true),
-                                                           "Contact Company No."=FIELD("Company No."),
-                                                           "Estimated Close Date"=FIELD("Date Filter"),
-                                                           "Contact No."=FIELD(FILTER(Lookup Contact No.)),
-                                                           "Action Taken"=FIELD("Action Taken Filter")));
+            //TODO: Ver 
+            /*
+            CalcFormula = Count("Opportunity Entry" WHERE("Active" = CONST(true),
+                                                           "Contact Company No." = FIELD("Company No."),
+                                                           "Estimated Close Date" = FIELD("Date Filter"),
+                                                           "Contact No." = FIELD(FILTER(Lookup Contact No.)),
+                                                           "Action Taken"=FIELD("Action Taken Filter")));*/
             Caption = 'No. of Opportunities';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5079;"Estimated Value (LCY)";Decimal)
+        field(5079; "Estimated Value (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            CalcFormula = Sum("Opportunity Entry"."Estimated Value (LCY)" WHERE ("Active"=CONST(true),
-                                                                                 "Contact Company No."=FIELD("Company No."),
-                                                                                 "Estimated Close Date"=FIELD("Date Filter"),
-                                                                                 "Contact No."=FIELD(FILTER(Lookup Contact No.)),
-                                                                                 "Action Taken"=FIELD("Action Taken Filter")));
+            //TODO: Ver 
+            /*
+            CalcFormula = Sum("Opportunity Entry"."Estimated Value (LCY)" WHERE("Active" = CONST(true),
+                                                                                 "Contact Company No." = FIELD("Company No."),
+                                                                                 "Estimated Close Date" = FIELD("Date Filter"),
+                                                                                 "Contact No." = FIELD(FILTER(Lookup Contact No.)),
+                                                                                 "Action Taken"=FIELD("Action Taken Filter")));*/
             Caption = 'Estimated Value ($)';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5080;"Calcd. Current Value (LCY)";Decimal)
+        field(5080; "Calcd. Current Value (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            CalcFormula = Sum("Opportunity Entry"."Calcd. Current Value (LCY)" WHERE ("Active"=CONST(true),
-                                                                                      "Contact Company No."=FIELD("Company No."),
-                                                                                      "Estimated Close Date"=FIELD("Date Filter"),
-                                                                                      "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+            //TODO: Ver 
+            /*
+            CalcFormula = Sum("Opportunity Entry"."Calcd. Current Value (LCY)" WHERE("Active" = CONST(true),
+                                                                                      "Contact Company No." = FIELD("Company No."),
+                                                                                      "Estimated Close Date" = FIELD("Date Filter"),
+                                                                                      "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                                       "Action Taken"=FIELD("Action Taken Filter")));
+                                                                                      */
             Caption = 'Calcd. Current Value ($)';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5082;"Opportunity Entry Exists";Boolean)
+        field(5082; "Opportunity Entry Exists"; Boolean)
         {
-            CalcFormula = Exist("Opportunity Entry" WHERE ("Active"=CONST(true),
-                                                           "Contact Company No."=FIELD("Company No."),
-                                                           "Contact No."=FIELD(FILTER(Lookup Contact No.)),
+            //TODO: Ver 
+            /*
+            CalcFormula = Exist("Opportunity Entry" WHERE("Active" = CONST(true),
+                                                           "Contact Company No." = FIELD("Company No."),
+                                                           "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                            "Sales Cycle Code"=FIELD("Sales Cycle Filter"),
                                                            "Sales Cycle Stage"=FIELD("Sales Cycle Stage Filter"),
                                                            "Salesperson Code"=FIELD("Salesperson Filter"),
@@ -481,13 +499,15 @@ table 67066 Comisionistas
                                                            "Chances of Success %"=FIELD("Chances of Success % Filter"),
                                                            "Probability %"=FIELD("Probability % Filter"),
                                                            "Estimated Close Date"=FIELD("Date Filter"),
-                                                           "Close Opportunity Code"=FIELD("Close Opportunity Filter")));
+                                                           "Close Opportunity Code"=FIELD("Close Opportunity Filter")));*/
             Caption = 'Opportunity Entry Exists';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5083;"To-do Entry Exists";Boolean)
+        field(5083; "To-do Entry Exists"; Boolean)
         {
+            //TODO: Ver 
+            /*
             CalcFormula = Exist(To-do WHERE ("Contact Company No."=FIELD("Company No."),
                                              "Contact No."=FIELD(FILTER(Lookup Contact No.)),
                                              "Team Code"=FIELD("Team Filter"),
@@ -496,243 +516,243 @@ table 67066 Comisionistas
                                              "Date"=FIELD("Date Filter"),
                                              "Status"=FIELD("To-do Status Filter"),
                                              "Priority"=FIELD("Priority Filter"),
-                                             "Closed"=FIELD("To-do Closed Filter")));
+                                             "Closed"=FIELD("To-do Closed Filter")));*/
             Caption = 'To-do Entry Exists';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(5084;"Salesperson Filter";Code[10])
+        field(5084; "Salesperson Filter"; Code[10])
         {
             Caption = 'Salesperson Filter';
             FieldClass = FlowFilter;
             TableRelation = "Salesperson/Purchaser";
         }
-        field(5085;"Campaign Filter";Code[20])
+        field(5085; "Campaign Filter"; Code[20])
         {
             Caption = 'Campaign Filter';
             FieldClass = FlowFilter;
             TableRelation = Campaign;
         }
-        field(5087;"Action Taken Filter";Option)
+        field(5087; "Action Taken Filter"; Option)
         {
             Caption = 'Action Taken Filter';
             FieldClass = FlowFilter;
             OptionCaption = ' ,Next,Previous,Updated,Jumped,Won,Lost';
             OptionMembers = " ",Next,Previous,Updated,Jumped,Won,Lost;
         }
-        field(5088;"Sales Cycle Filter";Code[10])
+        field(5088; "Sales Cycle Filter"; Code[10])
         {
             Caption = 'Sales Cycle Filter';
             FieldClass = FlowFilter;
             TableRelation = "Sales Cycle";
         }
-        field(5089;"Sales Cycle Stage Filter";Integer)
+        field(5089; "Sales Cycle Stage Filter"; Integer)
         {
             Caption = 'Sales Cycle Stage Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Sales Cycle Stage".Stage WHERE ("Sales Cycle Code"=FIELD("Sales Cycle Filter"));
+            TableRelation = "Sales Cycle Stage".Stage WHERE("Sales Cycle Code" = FIELD("Sales Cycle Filter"));
         }
-        field(5090;"Probability % Filter";Decimal)
+        field(5090; "Probability % Filter"; Decimal)
         {
             Caption = 'Probability % Filter';
-            DecimalPlaces = 1:1;
+            DecimalPlaces = 1 : 1;
             FieldClass = FlowFilter;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(5091;"Completed % Filter";Decimal)
+        field(5091; "Completed % Filter"; Decimal)
         {
             Caption = 'Completed % Filter';
-            DecimalPlaces = 1:1;
+            DecimalPlaces = 1 : 1;
             FieldClass = FlowFilter;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(5092;"Estimated Value Filter";Decimal)
+        field(5092; "Estimated Value Filter"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Estimated Value Filter';
             FieldClass = FlowFilter;
         }
-        field(5093;"Calcd. Current Value Filter";Decimal)
+        field(5093; "Calcd. Current Value Filter"; Decimal)
         {
             AutoFormatType = 1;
             Caption = 'Calcd. Current Value Filter';
             FieldClass = FlowFilter;
         }
-        field(5094;"Chances of Success % Filter";Decimal)
+        field(5094; "Chances of Success % Filter"; Decimal)
         {
             Caption = 'Chances of Success % Filter';
-            DecimalPlaces = 0:0;
+            DecimalPlaces = 0 : 0;
             FieldClass = FlowFilter;
             MaxValue = 100;
             MinValue = 0;
         }
-        field(5095;"To-do Status Filter";Option)
+        field(5095; "To-do Status Filter"; Option)
         {
             Caption = 'To-do Status Filter';
             FieldClass = FlowFilter;
             OptionCaption = 'Not Started,In Progress,Completed,Waiting,Postponed';
             OptionMembers = "Not Started","In Progress",Completed,Waiting,Postponed;
         }
-        field(5096;"To-do Closed Filter";Boolean)
+        field(5096; "To-do Closed Filter"; Boolean)
         {
             Caption = 'To-do Closed Filter';
             FieldClass = FlowFilter;
         }
-        field(5097;"Priority Filter";Option)
+        field(5097; "Priority Filter"; Option)
         {
             Caption = 'Priority Filter';
             FieldClass = FlowFilter;
             OptionCaption = 'Low,Normal,High';
             OptionMembers = Low,Normal,High;
         }
-        field(5098;"Team Filter";Code[10])
+        field(5098; "Team Filter"; Code[10])
         {
             Caption = 'Team Filter';
             FieldClass = FlowFilter;
             TableRelation = Team;
         }
-        field(5099;"Close Opportunity Filter";Code[10])
+        field(5099; "Close Opportunity Filter"; Code[10])
         {
             Caption = 'Close Opportunity Filter';
             FieldClass = FlowFilter;
             TableRelation = "Close Opportunity Code";
         }
-        field(5100;"Correspondence Type";Option)
+        field(5100; "Correspondence Type"; Option)
         {
             Caption = 'Correspondence Type';
             OptionCaption = ' ,Hard Copy,E-Mail,Fax';
             OptionMembers = " ","Hard Copy","E-Mail",Fax;
         }
-        field(5101;"Salutation Code";Code[10])
+        field(5101; "Salutation Code"; Code[10])
         {
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
-        field(5102;"Search E-Mail";Code[80])
+        field(5102; "Search E-Mail"; Code[80])
         {
             Caption = 'Search E-Mail';
         }
-        field(5104;"Last Time Modified";Time)
+        field(5104; "Last Time Modified"; Time)
         {
             Caption = 'Last Time Modified';
         }
-        field(5105;"E-Mail 2"; Text[80])
+        field(5105; "E-Mail 2"; Text[80])
         {
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(50000;"% Descuento Cupon";Decimal)
+        field(50000; "% Descuento Cupon"; Decimal)
         {
             Caption = 'Coupon Discount %';
         }
-        field(56000;"Tipo de colegio";Code[10])
+        field(56000; "Tipo de colegio"; Code[10])
         {
         }
-        field(56001;"Nivel Escolar";Code[10])
+        field(56001; "Nivel Escolar"; Code[10])
         {
         }
-        field(56002;"Tipo educacion";Code[10])
+        field(56002; "Tipo educacion"; Code[10])
         {
         }
-        field(56003;"Orden religiosa";Code[10])
+        field(56003; "Orden religiosa"; Code[10])
         {
         }
-        field(56004;Bilingue;Boolean)
+        field(56004; Bilingue; Boolean)
         {
         }
-        field(56005;"Sistema educativo";Code[10])
+        field(56005; "Sistema educativo"; Code[10])
         {
         }
-        field(56006;Plan;Code[10])
+        field(56006; Plan; Code[10])
         {
         }
-        field(56007;Turno;Code[10])
+        field(56007; Turno; Code[10])
         {
         }
-        field(56008;Gerencia;Code[10])
+        field(56008; Gerencia; Code[10])
         {
         }
-        field(56009;Delegado;Code[10])
+        field(56009; Delegado; Code[10])
         {
         }
-        field(56010;Asesor;Code[10])
+        field(56010; Asesor; Code[10])
         {
         }
-        field(56011;Ruta;Code[10])
+        field(56011; Ruta; Code[10])
         {
         }
-        field(56012;"Canal de compra";Code[10])
+        field(56012; "Canal de compra"; Code[10])
         {
         }
-        field(56013;"Nombre canal";Text[30])
+        field(56013; "Nombre canal"; Text[30])
         {
         }
-        field(56014;Microempresario;Code[20])
+        field(56014; Microempresario; Code[20])
         {
             TableRelation = "Cab. Identificaci n Devoluci n";
         }
-        field(56016;"Fecha decision";Date)
+        field(56016; "Fecha decision"; Date)
         {
         }
-        field(56017;"Fecha lista";Date)
+        field(56017; "Fecha lista"; Date)
         {
         }
-        field(56018;Periodo;Code[10])
+        field(56018; Periodo; Code[10])
         {
         }
-        field(56019;Grupo;Code[10])
+        field(56019; Grupo; Code[10])
         {
         }
-        field(56020;"Tipo de texto";Code[10])
+        field(56020; "Tipo de texto"; Code[10])
         {
         }
     }
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
-        key(Key2;"Search Name")
+        key(Key2; "Search Name")
         {
         }
-        key(Key3;"Company Name","Company No.",Type,Name)
+        key(Key3; "Company Name", "Company No.", Type, Name)
         {
         }
-        key(Key4;"Company No.")
+        key(Key4; "Company No.")
         {
         }
-        key(Key5;"Territory Code")
+        key(Key5; "Territory Code")
         {
         }
-        key(Key6;"Salesperson Code")
+        key(Key6; "Salesperson Code")
         {
         }
-        key(Key7;"VAT Registration No.")
+        key(Key7; "VAT Registration No.")
         {
         }
-        key(Key8;"Search E-Mail")
+        key(Key8; "Search E-Mail")
         {
         }
-        key(Key9;Name)
+        key(Key9; Name)
         {
         }
-        key(Key10;City)
+        key(Key10; City)
         {
         }
-        key(Key11;"Post Code")
+        key(Key11; "Post Code")
         {
         }
-        key(Key12;"Phone No.")
+        key(Key12; "Phone No.")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"No.",Name,Type,City,"Post Code","Phone No.")
+        fieldgroup(DropDown; "No.", Name, Type, City, "Post Code", "Phone No.")
         {
         }
     }
@@ -942,7 +962,6 @@ table 67066 Comisionistas
         RecRef: RecordRef;
         xRecRef: RecordRef;
         DuplMgt: Codeunit 5060;
-        NoSeriesMgt: Codeunit 396;
         ChangeLogMgt: Codeunit 423;
         UpdateCustVendBank: Codeunit 5055;
         ContChanged: Boolean;
@@ -958,11 +977,6 @@ table 67066 Comisionistas
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         rRec: RecordRef;
 
-    procedure OnModify(xRec: Record 5050)
-    var
-        OldCont: Record 5050;
-    begin
-    end;
 
     procedure AssistEdit(): Boolean
     begin
@@ -988,8 +1002,9 @@ table 67066 Comisionistas
         MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
-          MapMgt.MakeSelection(DATABASE::Contact,GETPOSITION)
-        ELSE MESSAGE(Text033);
+            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 }
 

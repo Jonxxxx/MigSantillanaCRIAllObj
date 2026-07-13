@@ -126,7 +126,7 @@ table 67036 "Colegio - Nivel"
         field(11; Adoptado; Option)
         {
             OptionCaption = ' ,Yes,No';
-            OptionMembers = " ","S ",No;
+            OptionMembers = " ","Si",No;
 
             trigger OnValidate()
             begin
@@ -290,8 +290,8 @@ table 67036 "Colegio - Nivel"
         PostCode: Record 225;
         DA: Record 67002;
         ColAdopcion: Record 67053;
-        "P-LC"Record 67006;
-        "P-Ruta"Record 67044;
+        "P-LC": Record 67006;
+        "P-Ruta": Record 67044;
         RD: Record 67009;
         Nivel: Record 56005;
         Rutas: Page 67009;

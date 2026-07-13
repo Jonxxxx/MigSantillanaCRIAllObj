@@ -12,7 +12,7 @@ page 67040 "Lista de Docentes"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

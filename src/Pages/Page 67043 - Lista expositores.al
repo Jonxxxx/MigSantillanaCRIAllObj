@@ -11,7 +11,7 @@ page 67043 "Lista expositores"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("No."; "No.")
                 {

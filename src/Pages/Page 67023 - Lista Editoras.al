@@ -10,7 +10,7 @@ page 67023 "Lista Editoras"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 Editable = false;
                 field(Code; Code)

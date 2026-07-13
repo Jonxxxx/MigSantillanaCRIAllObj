@@ -111,7 +111,7 @@ table 67012 Talleres
     var
         APSSetup: Record 67000;
         TipoEvento: Record 67010;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
 
     procedure AssistEdit(OldWS: Record 67012): Boolean
     var

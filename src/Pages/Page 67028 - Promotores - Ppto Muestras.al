@@ -9,7 +9,7 @@ page 67028 "Promotores - Ppto Muestras"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field("Cod. Promotor"; "Cod. Promotor")
                 {

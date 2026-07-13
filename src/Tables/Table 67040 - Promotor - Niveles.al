@@ -7,7 +7,7 @@ table 67040 "Promotor - Niveles"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Nivel"; Code[20])
         {
@@ -17,23 +17,23 @@ table 67040 "Promotor - Niveles"
             begin
                 IF "Cod. Nivel" <> '' THEN BEGIN
                     Nivel.GET("Cod. Nivel");
-                    "Descripcion Nivel" := Nivel.Descripci n;
+                    "Descripcion Nivel" := Nivel.Descripcion;
                 END;
             end;
         }
         field(3; "Nombre Promotor"; Text[100])
         {
-            CalcFormula = Lookup(Salesperson/Purchaser.Name WHERE ("Code"=FIELD("Cod. Promotor")));
+            CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
-        field(4;"Descripcion Nivel";Text[100])
+        field(4; "Descripcion Nivel"; Text[100])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Promotor","Cod. Nivel")
+        key(Key1; "Cod. Promotor", "Cod. Nivel")
         {
         }
     }

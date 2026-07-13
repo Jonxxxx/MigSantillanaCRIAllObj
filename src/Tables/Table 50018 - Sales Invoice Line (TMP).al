@@ -55,12 +55,12 @@ table 50018 "Sales Invoice Line (TMP)"
         field(11; Description; Text[60])
         {
             Caption = 'Description';
-            Description = 'Ampliaci n para la descripci n (Petici n Jos  Rafael). ESL';
+            Description = 'Ampliaci n para la Descripcion (Petici n Jos  Rafael). ESL';
         }
         field(12; "Description 2"; Text[60])
         {
             Caption = 'Description 2';
-            Description = 'Ampliaci n para la descripci n (Petici n Jos  Rafael). ESL';
+            Description = 'Ampliaci n para la Descripcion (Petici n Jos  Rafael). ESL';
         }
         field(13; "Unit of Measure"; Text[10])
         {
@@ -496,7 +496,7 @@ table 50018 "Sales Invoice Line (TMP)"
             Description = 'A adido para la reclasificaci n de productos.';
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edici n"; Code[20])
+        field(50001; "Cod. Edicion"; Code[20])
         {
             Description = 'A adido para la reclasificaci n de productos.';
             //TODO: Ver TableRelation = Table50131;

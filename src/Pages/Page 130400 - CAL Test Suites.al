@@ -9,7 +9,7 @@ page 130400 "CAL Test Suites"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Name; Name)
                 {

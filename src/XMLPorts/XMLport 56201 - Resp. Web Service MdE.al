@@ -116,6 +116,7 @@ xmlport 56201 "Resp. Web Service MdE"
         }
     }
 
+    /* TODO: Ver
     procedure SetInfo(var New_id_mensaje: Text[36]; var New_Tipo: Text[20]; var FechaOrigen: Text[30]; var PaisOrigen: Text[20]): Text
     var
         ConfSant: Record 56001;
@@ -138,5 +139,6 @@ xmlport 56201 "Resp. Web Service MdE"
         id_mensaje := New_id_mensaje;
         ok := '1'
     end;
+    */
 }
 

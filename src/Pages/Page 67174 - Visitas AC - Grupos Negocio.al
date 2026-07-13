@@ -10,7 +10,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
     {
         area(content)
         {
-            repeater()
+            repeater(General)
             {
                 field(Código; Código)
                 {
