@@ -160,7 +160,7 @@ page 75014 "Filtro Valor Campo"
                 BEGIN // Datos auxiliares
                     pwIdfVal := 2;  // Código
                     pwIdfDesc := 3;  // Descripción
-                    lwFieldRf := pwRelRf.FIELD(1);
+                    lwFieldRf := pwRelRf.FIELD("1");
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;
@@ -182,7 +182,7 @@ page 75014 "Filtro Valor Campo"
                 BEGIN  // Datos MdM
                     pwIdfVal := 2;  // Código
                     pwIdfDesc := 3;  // Descripción
-                    lwFieldRf := pwRelRf.FIELD(1);
+                    lwFieldRf := pwRelRf.FIELD("1");
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;

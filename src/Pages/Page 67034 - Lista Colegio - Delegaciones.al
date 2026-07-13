@@ -53,7 +53,7 @@ page 67034 "Lista Colegio - Delegaciones"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67047;
-                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
+                    RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }
             }

@@ -50,6 +50,6 @@ table 34002180 "Shift schedule"
     }
 
     var
-        Turno: Record "34002161";
+        Turno: Record 34002161;
 }
 

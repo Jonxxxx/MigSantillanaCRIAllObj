@@ -13,7 +13,7 @@ table 34002106 "Param. Inic. Conceptos Sal."
 
             trigger OnValidate()
             var
-                ConfNom: Record "34002103";
+                ConfNom: Record 34002103;
             begin
                 ConfNom.GET();
                 rConceptoSalarial.GET(Codigo);
@@ -64,8 +64,8 @@ table 34002106 "Param. Inic. Conceptos Sal."
     }
 
     var
-        rConceptoSalarial: Record "34002111";
-        rLinPerfilSal: Record "34002115";
+        rConceptoSalarial: Record 34002111;
+        rLinPerfilSal: Record 34002115;
         Err001: Label 'This wedge''s concept has formula, amount can''t be cleared';
 }
 

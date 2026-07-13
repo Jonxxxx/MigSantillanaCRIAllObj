@@ -4,7 +4,7 @@ table 34002191 "Planificacion de vacaciones"
 
     fields
     {
-        field(1;"No. empleado";Code[20])
+        field(1; "No. empleado"; Code[20])
         {
             Caption = 'Employee no.';
             DataClassification = ToBeClassified;
@@ -12,36 +12,35 @@ table 34002191 "Planificacion de vacaciones"
 
             trigger OnValidate()
             begin
-                IF "No. empleado" <> '' THEN
-                   BEGIN
+                IF "No. empleado" <> '' THEN BEGIN
                     Empl.GET("No. empleado");
-                     "Fecha inicio planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date",1),DATE2DMY(Empl."Employment Date",2),DATE2DMY(TODAY,3));
-                     Empl.CALCFIELDS("Dias Vacaciones");
-                     "Dias acumulados actual" := Empl."Dias Vacaciones";
-                     Fecha.RESET;
-                     Fecha.SETRANGE("Period Type",Fecha."Period Type"::Month);
-                     Fecha.SETRANGE("Period Start",DMY2DATE(1,DATE2DMY(Empl."Employment Date",2),DATE2DMY(TODAY,3)));
-                     Fecha.FINDFIRST;
+                    "Fecha inicio planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date", 1), DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3));
+                    Empl.CALCFIELDS("Dias Vacaciones");
+                    "Dias acumulados actual" := Empl."Dias Vacaciones";
+                    Fecha.RESET;
+                    Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
+                    Fecha.SETRANGE("Period Start", DMY2DATE(1, DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3)));
+                    Fecha.FINDFIRST;
 
-                     "Dias acumulados estimados" := FuncNom.CalculoDiaVacaciones("No. empleado",DATE2DMY(Empl."Employment Date",2),DATE2DMY(TODAY,3),Monto,Empl."Employment Date",Fecha."Period End");
-                     "Fecha fin planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date",1),DATE2DMY(Empl."Employment Date",2),DATE2DMY(TODAY,3));
-                     "Employment Date" := Empl."Employment Date";
-                   END;
+                    "Dias acumulados estimados" := FuncNom.CalculoDiaVacaciones("No. empleado", DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3), Monto, Empl."Employment Date", Fecha."Period End");
+                    "Fecha fin planificada" := DMY2DATE(DATE2DMY(Empl."Employment Date", 1), DATE2DMY(Empl."Employment Date", 2), DATE2DMY(TODAY, 3));
+                    "Employment Date" := Empl."Employment Date";
+                END;
             end;
         }
-        field(2;"Fecha inicio planificada";Date)
+        field(2; "Fecha inicio planificada"; Date)
         {
             Caption = 'Fecha inicio planificada';
             DataClassification = ToBeClassified;
         }
-        field(3;"Fecha fin planificada";Date)
+        field(3; "Fecha fin planificada"; Date)
         {
             Caption = 'Planned end date';
             DataClassification = ToBeClassified;
         }
-        field(4;"Dias acumulados actual";Decimal)
+        field(4; "Dias acumulados actual"; Decimal)
         {
-            CalcFormula = Sum("Historico Vacaciones".Dias WHERE (No. empleado=FIELD(No. empleado)));
+            CalcFormula = Sum("Historico Vacaciones".Dias WHERE("No. empleado" = FIELD("No. empleado")));
             Caption = 'Current accumulated days';
             FieldClass = FlowField;
 
@@ -50,7 +49,7 @@ table 34002191 "Planificacion de vacaciones"
                 ValidarTiempo
             end;
         }
-        field(5;"Dias acumulados estimados";Decimal)
+        field(5; "Dias acumulados estimados"; Decimal)
         {
             Caption = 'Estimated accumulated days';
             DataClassification = ToBeClassified;
@@ -60,22 +59,22 @@ table 34002191 "Planificacion de vacaciones"
                 ValidarTiempo
             end;
         }
-        field(6;Status;Option)
+        field(6; Status; Option)
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
             OptionCaption = ', Requested, Approved';
             OptionMembers = " ",Solicitada,Aprobada;
         }
-        field(7;"Employment Date";Date)
+        field(7; "Employment Date"; Date)
         {
             Caption = 'Employment Date';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(8;"Full name";Text[60])
+        field(8; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(No. empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("No. empleado")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;
@@ -94,16 +93,16 @@ table 34002191 "Planificacion de vacaciones"
     }
 
     var
-        Empl: Record "5200";
-        Fecha: Record "2000000007";
-        FuncNom: Codeunit "34002104";
+        Empl: Record 5200;
+        Fecha: Record 2000000007;
+        FuncNom: Codeunit 34002104;
         Monto: Decimal;
         Err001: Label '%1 can not be greather than %2';
 
     local procedure ValidarTiempo()
     var
-        DiasFestivos: Record "34002155";
-        Fecha: Record "2000000007";
+        DiasFestivos: Record 34002155;
+        Fecha: Record 2000000007;
     begin
         IF ("Fecha inicio planificada" > "Fecha fin planificada") AND ("Fecha inicio planificada" <> 0D) AND ("Fecha fin planificada" <> 0D) THEN
            ERROR(STRSUBSTNO(Err001,FIELDCAPTION("Fecha fin planificada"),FIELDCAPTION("Fecha fin planificada")))

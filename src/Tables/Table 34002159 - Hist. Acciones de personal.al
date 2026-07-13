@@ -17,7 +17,7 @@ table 34002159 "Hist. Acciones de personal"
         {
             Caption = 'Action code';
             DataClassification = ToBeClassified;
-            TableRelation = "Tipos de acciones personal".Codigo WHERE(Tipo de accion=FIELD(Tipo de accion));
+            TableRelation = "Tipos de acciones personal".Codigo WHERE("Tipo de accion" = FIELD("Tipo de accion"));
         }
         field(3; "No. empleado"; Code[20])
         {
@@ -37,7 +37,7 @@ table 34002159 "Hist. Acciones de personal"
 
             trigger OnValidate()
             var
-                Empresas: Record "2000000006";
+                Empresas: Record 2000000006;
             begin
             end;
         }
@@ -68,208 +68,208 @@ table 34002159 "Hist. Acciones de personal"
             Caption = 'Actual job position';
             DataClassification = ToBeClassified;
             Editable = false;
-            TableRelation = "Puestos laborales".Código WHERE(Cod. departamento=FIELD(Departamento actual));
+            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento actual"));
         }
-        field(11;"Descripcion cargo actual";Text[60])
+        field(11; "Descripcion cargo actual"; Text[60])
         {
             Caption = 'Actual job description';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(12;"Nuevo cargo";Code[20])
+        field(12; "Nuevo cargo"; Code[20])
         {
             Caption = 'New job code';
             DataClassification = ToBeClassified;
-            TableRelation = "Puestos laborales".Código WHERE (Cod. departamento=FIELD(Departamento nuevo));
+            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento nuevo"));
         }
-        field(13;"Descripcion cargo nuevo";Text[60])
+        field(13; "Descripcion cargo nuevo"; Text[60])
         {
             Caption = 'New job description';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(14;"Sueldo actual";Decimal)
+        field(14; "Sueldo actual"; Decimal)
         {
             Caption = 'Actual salary';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(15;"Sueldo Nuevo";Decimal)
+        field(15; "Sueldo Nuevo"; Decimal)
         {
             Caption = 'New salary';
             DataClassification = ToBeClassified;
         }
-        field(16;"Departamento actual";Code[20])
+        field(16; "Departamento actual"; Code[20])
         {
             Caption = 'Actual departament code';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(17;"Nombre  depto. actual";Text[60])
+        field(17; "Nombre  depto. actual"; Text[60])
         {
             Caption = 'Actual department name';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(18;"Departamento nuevo";Code[20])
+        field(18; "Departamento nuevo"; Code[20])
         {
             Caption = 'New department';
             DataClassification = ToBeClassified;
-            TableRelation = Departamentos WHERE (Inhabilitado=CONST(No));
+            TableRelation = Departamentos WHERE(Inhabilitado = CONST(No));
         }
-        field(19;"Nombre depto. nuevo";Text[60])
+        field(19; "Nombre depto. nuevo"; Text[60])
         {
             Caption = 'New department name';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(20;"Ubicacion actual";Code[20])
+        field(20; "Ubicacion actual"; Code[20])
         {
             Caption = 'Actual office';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "Centros de Trabajo"."Centro de trabajo";
         }
-        field(21;"Ubicacion nueva";Code[20])
+        field(21; "Ubicacion nueva"; Code[20])
         {
             Caption = 'New office';
             DataClassification = ToBeClassified;
             TableRelation = "Centros de Trabajo"."Centro de trabajo";
         }
-        field(22;"Empresa nueva";Text[30])
+        field(22; "Empresa nueva"; Text[30])
         {
             Caption = 'New company';
             DataClassification = ToBeClassified;
             TableRelation = Company;
         }
-        field(23;"Numero cuenta actual";Code[15])
+        field(23; "Numero cuenta actual"; Code[15])
         {
             Caption = 'Actual account no.';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(24;"Numero cuenta nueva";Code[15])
+        field(24; "Numero cuenta nueva"; Code[15])
         {
             Caption = 'New account no.';
             DataClassification = ToBeClassified;
         }
-        field(25;"Nivel actual";Code[20])
+        field(25; "Nivel actual"; Code[20])
         {
             Caption = 'Actual level';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(26;"Nivel nuevo";Code[20])
+        field(26; "Nivel nuevo"; Code[20])
         {
             Caption = 'New level';
             DataClassification = ToBeClassified;
             Editable = false;
         }
-        field(27;"Tipo de contrato";Code[20])
+        field(27; "Tipo de contrato"; Code[20])
         {
             Caption = 'Contract type code';
             DataClassification = ToBeClassified;
             TableRelation = "Employment Contract";
         }
-        field(28;"Preparado por";Code[50])
+        field(28; "Preparado por"; Code[50])
         {
             Caption = 'Prepared by';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "User Setup";
         }
-        field(29;"Revisado por";Code[50])
+        field(29; "Revisado por"; Code[50])
         {
             Caption = 'Reviewed by';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "User Setup";
         }
-        field(30;"Autorizado por";Code[50])
+        field(30; "Autorizado por"; Code[50])
         {
             Caption = 'Authorized by';
             DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "User Setup";
         }
-        field(31;"No. serie";Code[20])
+        field(31; "No. serie"; Code[20])
         {
             Caption = 'Serial no.';
             DataClassification = ToBeClassified;
         }
-        field(32;"No.";Code[20])
+        field(32; "No."; Code[20])
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
         }
-        field(33;"Document Type";Option)
+        field(33; "Document Type"; Option)
         {
             Caption = 'Document Type';
             DataClassification = ToBeClassified;
             OptionCaption = 'SS,Passport,Residence ID,Work Permission';
             OptionMembers = "Cédula",Pasaporte,"Tarj.residen.comunitario","Perm.Trabajo",,"N.I.Extranjero","N.I.F.";
         }
-        field(34;Preaviso;Boolean)
+        field(34; Preaviso; Boolean)
         {
             Caption = 'Notice';
             DataClassification = ToBeClassified;
         }
-        field(35;Cesantia;Boolean)
+        field(35; Cesantia; Boolean)
         {
             Caption = 'Unemployment';
             DataClassification = ToBeClassified;
         }
-        field(36;Regalia;Boolean)
+        field(36; Regalia; Boolean)
         {
             Caption = 'Christmas salary';
             DataClassification = ToBeClassified;
         }
-        field(37;"Duracion contrato";DateFormula)
+        field(37; "Duracion contrato"; DateFormula)
         {
             Caption = 'Contract''s duration';
             DataClassification = ToBeClassified;
         }
-        field(38;"First Name";Text[30])
+        field(38; "First Name"; Text[30])
         {
             Caption = 'First Name';
             DataClassification = ToBeClassified;
         }
-        field(39;"Middle Name";Text[30])
+        field(39; "Middle Name"; Text[30])
         {
             Caption = 'Middle Name';
             DataClassification = ToBeClassified;
         }
-        field(40;"Last Name";Text[30])
+        field(40; "Last Name"; Text[30])
         {
             Caption = 'Last Name';
             DataClassification = ToBeClassified;
         }
-        field(41;"Second Last Name";Text[30])
+        field(41; "Second Last Name"; Text[30])
         {
             Caption = 'Second Last Name';
             DataClassification = ToBeClassified;
         }
-        field(42;"Cod. elegible";Code[20])
+        field(42; "Cod. elegible"; Code[20])
         {
             Caption = 'Eligible code';
             DataClassification = ToBeClassified;
         }
-        field(43;Address;Text[60])
+        field(43; Address; Text[60])
         {
             Caption = 'Address';
             DataClassification = ToBeClassified;
         }
-        field(44;"Address 2";Text[60])
+        field(44; "Address 2"; Text[60])
         {
             Caption = 'Address 2';
             DataClassification = ToBeClassified;
         }
-        field(45;City;Text[30])
+        field(45; City; Text[30])
         {
             Caption = 'City';
             DataClassification = ToBeClassified;
         }
-        field(46;"Post Code";Code[20])
+        field(46; "Post Code"; Code[20])
         {
             Caption = 'ZIP Code';
             DataClassification = ToBeClassified;
@@ -278,98 +278,98 @@ table 34002159 "Hist. Acciones de personal"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(47;County;Text[30])
+        field(47; County; Text[30])
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
         }
-        field(48;"Country/Region Code";Code[10])
+        field(48; "Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
             DataClassification = ToBeClassified;
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(49;"URL Linkedin";Text[80])
+        field(49; "URL Linkedin"; Text[80])
         {
             Caption = 'Linkedin URL';
             DataClassification = ToBeClassified;
         }
-        field(50;"URL Facebook";Text[80])
+        field(50; "URL Facebook"; Text[80])
         {
             Caption = 'Facebook URL';
             DataClassification = ToBeClassified;
         }
-        field(51;Gender;Option)
+        field(51; Gender; Option)
         {
             Caption = 'Gender';
             DataClassification = ToBeClassified;
             OptionCaption = ' ,Female,Male';
             OptionMembers = " ",Female,Male;
         }
-        field(52;"Lugar nacimiento";Text[30])
+        field(52; "Lugar nacimiento"; Text[30])
         {
             Caption = 'Birth place';
             DataClassification = ToBeClassified;
         }
-        field(53;"Estado civil";Option)
+        field(53; "Estado civil"; Option)
         {
             Caption = 'Civil status';
             DataClassification = ToBeClassified;
             Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a";
         }
-        field(54;"Comentario 2";Text[250])
+        field(54; "Comentario 2"; Text[250])
         {
             DataClassification = ToBeClassified;
         }
-        field(56;"Cod. Banco";Code[10])
-        {
-            DataClassification = ToBeClassified;
-            TableRelation = "Bancos ACH Nomina";
-        }
-        field(57;"Fecha expiracion";Date)
-        {
-            DataClassification = ToBeClassified;
-        }
-        field(58;"Numero tarjeta";Code[16])
-        {
-            DataClassification = ToBeClassified;
-        }
-        field(59;"Importe tarjeta";Decimal)
-        {
-            DataClassification = ToBeClassified;
-        }
-        field(60;"Banco tarjeta";Code[10])
+        field(56; "Cod. Banco"; Code[10])
         {
             DataClassification = ToBeClassified;
             TableRelation = "Bancos ACH Nomina";
         }
-        field(61;"Cod. Supervisor";Code[20])
+        field(57; "Fecha expiracion"; Date)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(58; "Numero tarjeta"; Code[16])
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(59; "Importe tarjeta"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(60; "Banco tarjeta"; Code[10])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "Bancos ACH Nomina";
+        }
+        field(61; "Cod. Supervisor"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = Employee;
         }
-        field(62;"Nombre Supervisor";Text[60])
+        field(62; "Nombre Supervisor"; Text[60])
         {
             DataClassification = ToBeClassified;
         }
-        field(63;"Fecha de inicio";Date)
+        field(63; "Fecha de inicio"; Date)
         {
             Caption = 'Starting date';
             DataClassification = ToBeClassified;
         }
-        field(64;"Fecha final";Date)
+        field(64; "Fecha final"; Date)
         {
             Caption = 'Ending date';
             DataClassification = ToBeClassified;
         }
-        field(65;"Cause of Inactivity Code";Code[10])
+        field(65; "Cause of Inactivity Code"; Code[10])
         {
             Caption = 'Cause of Inactivity Code';
             DataClassification = ToBeClassified;
             TableRelation = "Cause of Inactivity";
         }
-        field(66;"Tipo de miembro";Option)
+        field(66; "Tipo de miembro"; Option)
         {
             Caption = 'Member type';
             DataClassification = ToBeClassified;
@@ -377,23 +377,23 @@ table 34002159 "Hist. Acciones de personal"
             OptionCaption = 'Member, Partner';
             OptionMembers = Miembro,Socio;
         }
-        field(67;"1ra Quincena";Boolean)
+        field(67; "1ra Quincena"; Boolean)
         {
             DataClassification = ToBeClassified;
             Description = 'Cooperativa';
         }
-        field(68;"2da Quincena";Boolean)
+        field(68; "2da Quincena"; Boolean)
         {
             DataClassification = ToBeClassified;
             Description = 'Cooperativa';
         }
-        field(69;"Fecha inscripcion";Date)
+        field(69; "Fecha inscripcion"; Date)
         {
             Caption = 'Enrollment date';
             DataClassification = ToBeClassified;
             Description = 'Cooperativa';
         }
-        field(70;"Tipo de aporte";Option)
+        field(70; "Tipo de aporte"; Option)
         {
             Caption = 'Contribution type';
             DataClassification = ToBeClassified;
@@ -401,13 +401,13 @@ table 34002159 "Hist. Acciones de personal"
             OptionCaption = 'Fix,Percentage';
             OptionMembers = Fijo,Porcentual;
         }
-        field(71;Importe;Decimal)
+        field(71; Importe; Decimal)
         {
             Caption = 'Amount';
             DataClassification = ToBeClassified;
             Description = 'Cooperativa';
         }
-        field(72;"Proximo no. empleado";Code[20])
+        field(72; "Proximo no. empleado"; Code[20])
         {
             Caption = 'Next Employee no.';
             DataClassification = ToBeClassified;
@@ -416,14 +416,14 @@ table 34002159 "Hist. Acciones de personal"
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Tipo de accion","Cod. accion")
+        fieldgroup(DropDown; "Tipo de accion", "Cod. accion")
         {
         }
     }
@@ -434,22 +434,22 @@ table 34002159 "Hist. Acciones de personal"
     end;
 
     var
-        HumanResSetup: Record "5218";
-        Contrato: Record "34002109";
+        HumanResSetup: Record 5218;
+        Contrato: Record 34002109;
         Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
-        Emp: Record "5200";
-        Cand: Record "34002164";
-        AccP: Record "34002114";
-        Cargos: Record "34002110";
-        NivelesCargos: Record "34002120";
-        NivelCargo: Page "34002166";
-                        Depto: Record "34002135";
-                        Empresas: Record "2000000006";
-                        Autorizacion: Record "34002154";
-                        Err002: Label 'Document can not be deleted';
-        NoSeriesMgt: Codeunit "396";
+        Emp: Record 5200;
+        Cand: Record 34002164;
+        AccP: Record 34002114;
+        Cargos: Record 34002110;
+        NivelesCargos: Record 34002120;
+        NivelCargo: Page 34002166;
+        Depto: Record 34002135;
+        Empresas: Record 2000000006;
+        Autorizacion: Record 34002154;
+        Err002: Label 'Document can not be deleted';
+        NoSeriesMgt: Codeunit 396;
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        FuncNominas: Codeunit "34002104";
+        FuncNominas: Codeunit 34002104;
         Err004: Label '$1 is invalid, please verify';
 }
 

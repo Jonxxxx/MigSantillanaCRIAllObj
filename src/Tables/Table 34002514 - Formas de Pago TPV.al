@@ -93,7 +93,7 @@ table 34002514 "Formas de Pago TPV"
     }
 
     var
-        rFormPago: Record "34002514";
+        rFormPago: Record 34002514;
         error001: Label 'Already exist a Change tender type';
 }
 

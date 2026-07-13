@@ -28,7 +28,7 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                rFormPago: Record "34002513";
+                rFormPago: Record 34002513;
             begin
                 IF NOT "Efectivo Local" THEN
                     EXIT;
@@ -55,8 +55,8 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                rFormPago: Record "34002513";
-                lrConf: Record "34002500";
+                rFormPago: Record 34002513;
+                lrConf: Record 34002500;
             begin
 
                 IF "Cod. divisa" = '' THEN
@@ -94,7 +94,7 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                lrConf: Record "34002500";
+                lrConf: Record 34002500;
             begin
                 IF "Tipo Tarjeta" = '' THEN
                     EXIT;
@@ -119,7 +119,7 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                lrConf: Record "34002500";
+                lrConf: Record 34002500;
             begin
                 TESTFIELD("Tipo Tarjeta", '');
 
@@ -140,7 +140,7 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                lrConf: Record "34002500";
+                lrConf: Record 34002500;
             begin
                 //+#116527
                 IF lrConf.FINDFIRST THEN
@@ -157,7 +157,7 @@ table 34002513 "Formas de Pago"
 
             trigger OnValidate()
             var
-                lrConf: Record "34002500";
+                lrConf: Record 34002500;
             begin
                 //+#116527
                 IF lrConf.FINDFIRST THEN
@@ -201,7 +201,7 @@ table 34002513 "Formas de Pago"
 
     trigger OnDelete()
     var
-        rBotones: Record "34002511";
+        rBotones: Record 34002511;
     begin
 
         rBotones.RESET;

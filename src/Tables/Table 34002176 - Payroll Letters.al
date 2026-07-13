@@ -6,76 +6,75 @@ table 34002176 "Payroll Letters"
 
     fields
     {
-        field(1;"Code";Code[20])
+        field(1; "Code"; Code[20])
         {
             Caption = 'ID';
         }
-        field(2;"Report ID";Integer)
+        field(2; "Report ID"; Integer)
         {
             Caption = 'Report ID';
-            TableRelation = AllObjWithCaption."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObjWithCaption."Object ID" WHERE("Object Type" = CONST(Report));
 
             trigger OnValidate()
             begin
 
-                IF Code <> '' THEN
-                  BEGIN
+                IF Code <> '' THEN BEGIN
                     CRL.RESET;
-                    CRL.SETRANGE(Code,Code);
+                    CRL.SETRANGE(Code, Code);
                     CRL.FINDFIRST;
                     Description := CRL.Description;
                     "Report Name" := CRL."Report Name";
-                  END;
+                END;
             end;
         }
-        field(3;"Report Name";Text[80])
+        field(3; "Report Name"; Text[80])
         {
-            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE (Object Type=CONST(Report),
-                                                                           Object ID=FIELD(Report ID)));
+            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE("Object Type" = CONST(Report),
+                                                                           "Object ID" = FIELD("Report ID")));
             Caption = 'Report Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(4;"Company Name";Text[30])
+        field(4; "Company Name"; Text[30])
         {
             Caption = 'Company Name';
             TableRelation = Company;
         }
-        field(6;Type;Option)
+        field(6; Type; Option)
         {
             Caption = 'Type';
             InitValue = Word;
             OptionCaption = 'RDLC,Word';
             OptionMembers = RDLC,Word;
         }
-        field(7;"Layout";BLOB)
+        field(7; "Layout"; BLOB)
         {
             Caption = 'Layout';
         }
-        field(8;"Last Modified";DateTime)
+        field(8; "Last Modified"; DateTime)
         {
             Caption = 'Last Modified';
             Editable = false;
         }
-        field(9;"Last Modified by User";Code[50])
+        field(9; "Last Modified by User"; Code[50])
         {
             Caption = 'Last Modified by User';
             Editable = false;
         }
-        field(10;"File Extension";Text[30])
+        field(10; "File Extension"; Text[30])
         {
             Caption = 'File Extension';
             Editable = false;
         }
-        field(11;Description;Text[80])
+        field(11; Description; Text[80])
         {
             Caption = 'Description';
         }
-        field(12;"Custom XML Part";BLOB)
+        field(12; "Custom XML Part"; BLOB)
         {
             Caption = 'Custom XML Part';
         }
-        field(13;Publish;Boolean)
+        field(13; Publish; Boolean)
         {
             Caption = 'Publish';
             DataClassification = ToBeClassified;
@@ -84,10 +83,10 @@ table 34002176 "Payroll Letters"
 
     keys
     {
-        key(Key1;"Code")
+        key(Key1; "Code")
         {
         }
-        key(Key2;"Report ID","Company Name",Type)
+        key(Key2; "Report ID", "Company Name", Type)
         {
         }
     }
@@ -111,17 +110,17 @@ table 34002176 "Payroll Letters"
     var
         ImportWordTxt: Label 'Import Word Document';
         ImportRdlcTxt: Label 'Import Report Layout';
-        FileFilterWordTxt: Label 'Word Files (*.docx)|*.docx', Comment='{Split=r''\|''}{Locked=s''1''}';
-        FileFilterRdlcTxt: Label 'SQL Report Builder (*.rdl;*.rdlc)|*.rdl;*.rdlc', Comment='{Split=r''\|''}{Locked=s''1''}';
+        FileFilterWordTxt: Label 'Word Files (*.docx)|*.docx', Comment = '{Split=r''\|''}{Locked=s''1''}';
+        FileFilterRdlcTxt: Label 'SQL Report Builder (*.rdl;*.rdlc)|*.rdl;*.rdlc', Comment = '{Split=r''\|''}{Locked=s''1''}';
         NoRecordsErr: Label 'There is no record in the list.';
         BuiltInTxt: Label 'Built-in layout';
         CopyOfTxt: Label 'Copy of %1';
         NewLayoutTxt: Label 'New layout';
-        ErrorInLayoutErr: Label 'Issue found in layout %1 for report ID  %2:\%3.', Comment='%1=a name, %2=a number, %3=a sentence/error description.';
-        TemplateValidationQst: Label 'The RDLC layout does not comply with the current report design (for example, fields are missing or the report ID is wrong).\The following errors were detected during the layout validation:\%1\Do you want to continue?', Comment='%1 = an error message.';
+        ErrorInLayoutErr: Label 'Issue found in layout %1 for report ID  %2:\%3.', Comment = '%1=a name, %2=a number, %3=a sentence/error description.';
+        TemplateValidationQst: Label 'The RDLC layout does not comply with the current report design (for example, fields are missing or the report ID is wrong).\The following errors were detected during the layout validation:\%1\Do you want to continue?', Comment = '%1 = an error message.';
         TemplateValidationErr: Label 'The RDLC layout does not comply with the current report design (for example, fields are missing or the report ID is wrong).\The following errors were detected during the document validation:\%1\You must update the layout to match the current report design.';
         AbortWithValidationErr: Label 'The RDLC layout action has been canceled because of validation errors.';
-        CRL: Record "9650";
+        CRL: Record 9650;
 
     local procedure SetUpdated()
     begin
@@ -129,10 +128,10 @@ table 34002176 "Payroll Letters"
         "Last Modified by User" := USERID;
     end;
 
-    procedure InitBuiltInLayout(ReportID: Integer;LayoutType: Option)
+    procedure InitBuiltInLayout(ReportID: Integer; LayoutType: Option)
     var
-        CustomReportLayout: Record "9650";
-        DocumentReportMgt: Codeunit "9651";
+        CustomReportLayout: Record 9650;
+        DocumentReportMgt: Codeunit 9651;
         InStr: InStream;
         OutStr: OutStream;
     begin
@@ -171,27 +170,27 @@ table 34002176 "Payroll Letters"
 
     procedure InsertBuiltInLayout()
     var
-        ReportLayoutLookup: Page "9651";
+        ReportLayoutLookup: Page 9651;
         ReportID: Integer;
     begin
         FILTERGROUP(4);
         IF GETFILTER("Report ID") = '' THEN
-          FILTERGROUP(0);
+            FILTERGROUP(0);
         IF GETFILTER("Report ID") <> '' THEN
-          IF EVALUATE(ReportID,GETFILTER("Report ID")) THEN
-            ReportLayoutLookup.SetReportID(ReportID);
+            IF EVALUATE(ReportID, GETFILTER("Report ID")) THEN
+                ReportLayoutLookup.SetReportID(ReportID);
         FILTERGROUP(0);
         IF ReportLayoutLookup.RUNMODAL = ACTION::OK THEN BEGIN
-          IF ReportLayoutLookup.SelectedAddWordLayot THEN
-            InitBuiltInLayout(ReportLayoutLookup.SelectedReportID,Type::Word);
-          IF ReportLayoutLookup.SelectedAddRdlcLayot THEN
-            InitBuiltInLayout(ReportLayoutLookup.SelectedReportID,Type::RDLC);
+            IF ReportLayoutLookup.SelectedAddWordLayot THEN
+                InitBuiltInLayout(ReportLayoutLookup.SelectedReportID, Type::Word);
+            IF ReportLayoutLookup.SelectedAddRdlcLayot THEN
+                InitBuiltInLayout(ReportLayoutLookup.SelectedReportID, Type::RDLC);
         END;
     end;
 
     procedure GetCustomRdlc(ReportID: Integer): Text
     var
-        ReportLayoutSelection: Record "9651";
+        ReportLayoutSelection: Record 9651;
         InStream: InStream;
         RdlcTxt: Text;
         CustomLayoutID: Integer;
@@ -216,59 +215,59 @@ table 34002176 "Payroll Letters"
 
     end;
 
-    local procedure GetWordXML(var TempBlob: Record "99008535")
+    local procedure GetWordXML(var TempBlob: Record 99008535)
     var
         OutStr: OutStream;
     begin
         TESTFIELD("Report ID");
-        TempBlob.Blob.CREATEOUTSTREAM(OutStr,TEXTENCODING::UTF16);
+        TempBlob.Blob.CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
         OutStr.WRITETEXT(REPORT.WORDXMLPART("Report ID"));
     end;
 
-    procedure ExportSchema(DefaultFileName: Text;ShowFileDialog: Boolean): Text
+    procedure ExportSchema(DefaultFileName: Text; ShowFileDialog: Boolean): Text
     var
-        TempBlob: Record "99008535";
-        FileMgt: Codeunit "419";
+        TempBlob: Record 99008535;
+        FileMgt: Codeunit 419;
     begin
-        TESTFIELD(Type,Type::Word);
+        TESTFIELD(Type, Type::Word);
 
         IF DefaultFileName = '' THEN
-          DefaultFileName := '*.xml';
+            DefaultFileName := '*.xml';
 
         GetWordXML(TempBlob);
         IF TempBlob.Blob.HASVALUE THEN
-          EXIT(FileMgt.BLOBExport(TempBlob,DefaultFileName,ShowFileDialog));
+            EXIT(FileMgt.BLOBExport(TempBlob, DefaultFileName, ShowFileDialog));
     end;
 
     procedure EditLayout()
     begin
 
         CASE Type OF
-          Type::Word:
-            CODEUNIT.RUN(CODEUNIT::"Edit MS Word Report Layout",Rec);
+            Type::Word:
+                CODEUNIT.RUN(CODEUNIT::"Edit MS Word Report Layout", Rec);
         END;
     end;
 
     local procedure GetFileExtension(): Text[4]
     begin
         CASE Type OF
-          Type::Word:
-            EXIT('docx');
-          Type::RDLC:
-            EXIT('rdl');
+            Type::Word:
+                EXIT('docx');
+            Type::RDLC:
+                EXIT('rdl');
         END;
     end;
 
-    local procedure InsertCustomXmlPart(var CustomReportLayout: Record "9650")
+    local procedure InsertCustomXmlPart(var CustomReportLayout: Record 9650)
     var
         OutStr: OutStream;
         WordXmlPart: Text;
     begin
         // Store the current design as an extended WordXmlPart. This data is used for later updates / refactorings.
-        CustomReportLayout."Custom XML Part".CREATEOUTSTREAM(OutStr,TEXTENCODING::UTF16);
-        WordXmlPart := REPORT.WORDXMLPART(CustomReportLayout."Report ID",TRUE);
+        CustomReportLayout."Custom XML Part".CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
+        WordXmlPart := REPORT.WORDXMLPART(CustomReportLayout."Report ID", TRUE);
         IF WordXmlPart <> '' THEN
-          OutStr.WRITE(WordXmlPart);
+            OutStr.WRITE(WordXmlPart);
     end;
 
     procedure GetCustomXmlPart() XmlPart: Text
@@ -277,24 +276,24 @@ table 34002176 "Payroll Letters"
     begin
         CALCFIELDS("Custom XML Part");
         IF NOT "Custom XML Part".HASVALUE THEN
-          EXIT;
+            EXIT;
 
-        "Custom XML Part".CREATEINSTREAM(InStr,TEXTENCODING::UTF16);
+        "Custom XML Part".CREATEINSTREAM(InStr, TEXTENCODING::UTF16);
         InStr.READ(XmlPart);
     end;
 
     procedure RunCustomReport(CodEmp: Code[20])
     var
-        ReportLayoutSelection: Record "9651";
-        Emp: Record "5200";
+        ReportLayoutSelection: Record 9651;
+        Emp: Record 5200;
     begin
         IF "Report ID" = 0 THEN
-          EXIT;
+            EXIT;
 
-        Emp.SETRANGE("No.",CodEmp);
+        Emp.SETRANGE("No.", CodEmp);
 
         ReportLayoutSelection.SetTempLayoutSelected(Code);
-        REPORT.RUNMODAL("Report ID",TRUE,FALSE,Emp);
+        REPORT.RUNMODAL("Report ID", TRUE, FALSE, Emp);
         //ReportLayoutSelection.SetTempLayoutSelected('');
     end;
 }

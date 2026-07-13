@@ -15,7 +15,7 @@ table 34002154 "Seguridad Usuarios RH"
 
             trigger OnLookup()
             var
-                UserMgt: Codeunit "418";
+                UserMgt: Codeunit 418;
             begin
                 UserMgt.LookupUserID("User ID");
                 VALIDATE("User ID");
@@ -23,7 +23,7 @@ table 34002154 "Seguridad Usuarios RH"
 
             trigger OnValidate()
             var
-                UserMgt: Codeunit "418";
+                UserMgt: Codeunit 418;
             begin
                 UserMgt.ValidateUserID("User ID");
                 User.RESET;
@@ -79,6 +79,6 @@ table 34002154 "Seguridad Usuarios RH"
     }
 
     var
-        User: Record "2000000120";
+        User: Record 2000000120;
 }
 

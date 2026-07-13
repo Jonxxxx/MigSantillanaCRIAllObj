@@ -40,13 +40,13 @@ page 67008 Rutas
                 {
                     Caption = '&Districts';
                     RunObject = Page 67009;
-                    RunPageLink = Cod. Ruta=FIELD("Codigo");
+                    RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }
                 action("&Salesrep")
                 {
                     Caption = '&Salesrep';
                     RunObject = Page 67048;
-                                    RunPageLink = Cod. Ruta=FIELD("Codigo");
+                    RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }
             }
         }

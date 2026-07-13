@@ -17,7 +17,7 @@ table 34002523 "Transacciones Caja TPV"
         field(20; "Cod. TPV"; Code[20])
         {
             Caption = 'POS Terminal No.';
-            TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD(Cod. tienda));
+            TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(30; Fecha; Date)
         {
@@ -40,7 +40,7 @@ table 34002523 "Transacciones Caja TPV"
         field(70; "Id. cajero"; Code[50])
         {
             Caption = 'Staff ID';
-            TableRelation = Cajeros.ID WHERE(Tienda = FIELD(Cod. tienda));
+            TableRelation = Cajeros.ID WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(80; Hora; Time)
         {
@@ -53,8 +53,8 @@ table 34002523 "Transacciones Caja TPV"
 
             trigger OnValidate()
             var
-                recTienda: Record "34002503";
-                recFormaPago: Record "34002513";
+                recTienda: Record 34002503;
+                recFormaPago: Record 34002513;
             begin
             end;
         }
@@ -65,7 +65,7 @@ table 34002523 "Transacciones Caja TPV"
 
             trigger OnValidate()
             var
-                recCurrExchRate: Record "330";
+                recCurrExchRate: Record 330;
             begin
             end;
         }
@@ -93,30 +93,30 @@ table 34002523 "Transacciones Caja TPV"
         }
         field(160; "Total caja turno (DL)"; Decimal)
         {
-            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE(Cod. tienda=FIELD(Cod. tienda),
-                                                                             Cod. TPV=FIELD(Cod. TPV),
-                                                                             Fecha=FIELD(Fecha),
-                                                                             No. turno=FIELD(No. turno)));
+            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Cod. tienda"),
+                                                                             "Cod. TPV" = FIELD("Cod. TPV"),
+                                                                             Fecha = FIELD("Fecha"),
+                                                                             "No. turno" = FIELD("No. turno")));
             Caption = 'Total caja turno (DL)';
             FieldClass = FlowField;
         }
-        field(161;"Total cajadia (DL)";Decimal)
+        field(161; "Total cajadia (DL)"; Decimal)
         {
-            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE (Cod. tienda=FIELD(Cod. tienda),
-                                                                             Cod. TPV=FIELD(Cod. TPV),
-                                                                             Fecha=FIELD(Fecha)));
+            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Cod. tienda"),
+                                                                             "Cod. TPV" = FIELD("Cod. TPV"),
+                                                                             Fecha = FIELD("Fecha")));
             Caption = 'Total caja dia (DL)';
             FieldClass = FlowField;
         }
-        field(170;Cambio;Boolean)
+        field(170; Cambio; Boolean)
         {
             Caption = 'Cambio';
         }
-        field(34002518;"Id Replicacion";Code[20])
+        field(34002518; "Id Replicacion"; Code[20])
         {
             Description = 'DsPOS Standard';
         }
-        field(34002551;"NCR regis. de compensacion";Code[20])
+        field(34002551; "NCR regis. de compensacion"; Code[20])
         {
             Description = 'DsPos Dominicana - #70132';
             TableRelation = "Sales Cr.Memo Header";
@@ -125,21 +125,21 @@ table 34002523 "Transacciones Caja TPV"
 
     keys
     {
-        key(Key1;"Cod. tienda","Cod. TPV",Fecha,"No. turno","No. transaccion")
+        key(Key1; "Cod. tienda", "Cod. TPV", Fecha, "No. turno", "No. transaccion")
         {
-            SumIndexFields = Importe,"Importe (DL)","Importe venta (DL)";
+            SumIndexFields = Importe, "Importe (DL)", "Importe venta (DL)";
         }
-        key(Key2;"Cod. tienda","Cod. TPV",Fecha,"No. turno","Forma de pago")
+        key(Key2; "Cod. tienda", "Cod. TPV", Fecha, "No. turno", "Forma de pago")
         {
-            SumIndexFields = Importe,"Importe (DL)";
+            SumIndexFields = Importe, "Importe (DL)";
         }
-        key(Key3;"Cod. tienda","Cod. TPV",Fecha,"No. turno","Tipo transaccion")
-        {
-        }
-        key(Key4;"Cod. tienda","Cod. TPV",Fecha,"No. turno","Cod. divisa")
+        key(Key3; "Cod. tienda", "Cod. TPV", Fecha, "No. turno", "Tipo transaccion")
         {
         }
-        key(Key5;"Id Replicacion")
+        key(Key4; "Cod. tienda", "Cod. TPV", Fecha, "No. turno", "Cod. divisa")
+        {
+        }
+        key(Key5; "Id Replicacion")
         {
         }
     }
@@ -154,12 +154,12 @@ table 34002523 "Transacciones Caja TPV"
             AsignarTurno;
 
         "No. transaccion" := TraerUltimaTrans + 1;
-        "Id Replicacion"  := STRSUBSTNO('%1',DATE2DMY(Fecha,1)) + STRSUBSTNO('%1',DATE2DMY(Fecha,2)) + STRSUBSTNO('%1',DATE2DMY(Fecha,3));
+        "Id Replicacion" := STRSUBSTNO('%1', DATE2DMY(Fecha, 1)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 2)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 3));
     end;
 
     procedure TraerUltimaTrans(): Decimal
     var
-        recTrans: Record "34002523";
+        recTrans: Record 34002523;
     begin
         recTrans.RESET;
         recTrans.SETRANGE("Cod. tienda", "Cod. tienda");
@@ -167,14 +167,14 @@ table 34002523 "Transacciones Caja TPV"
         recTrans.SETRANGE(Fecha, Fecha);
         recTrans.SETRANGE("No. turno", "No. turno");
         IF recTrans.FINDLAST THEN
-          EXIT(recTrans."No. transaccion");
+            EXIT(recTrans."No. transaccion");
     end;
 
     procedure AsignarTurno(): Integer
     var
-        cduControl: Codeunit "34002521";
+        cduControl: Codeunit 34002521;
     begin
-        "No. turno" := cduControl.TraerTurnoActual("Cod. tienda","Cod. TPV",Fecha);
+        "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
     end;
 }
 

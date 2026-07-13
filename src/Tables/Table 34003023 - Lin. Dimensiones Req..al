@@ -4,20 +4,20 @@ table 34003023 "Lin. Dimensiones Req."
 
     fields
     {
-        field(1;"No. Tabla";Integer)
+        field(1; "No. Tabla"; Integer)
         {
             Caption = 'Table No.';
         }
-        field(2;Nombre;Text[100])
+        field(2; Nombre; Text[100])
         {
         }
-        field(3;"Cod. Dimension";Code[20])
+        field(3; "Cod. Dimension"; Code[20])
         {
             Caption = 'Dimension Code';
             NotBlank = true;
             TableRelation = Dimension;
         }
-        field(5;"Registro valor";Option)
+        field(5; "Registro valor"; Option)
         {
             Caption = 'Value Posting';
             OptionCaption = ' ,Code Mandatory,Same Code,No Code';
@@ -27,7 +27,7 @@ table 34003023 "Lin. Dimensiones Req."
 
     keys
     {
-        key(Key1;"No. Tabla","Cod. Dimension")
+        key(Key1; "No. Tabla", "Cod. Dimension")
         {
         }
     }
@@ -37,7 +37,7 @@ table 34003023 "Lin. Dimensiones Req."
     }
 
     var
-        "Fields": Record "2000000041";
-        FieldForm: Page "34003022";
+        "Fields": Record 2000000041;
+        FieldForm: Page 34003022;
 }
 

@@ -35,7 +35,7 @@ page 67158 "Pagos a Expositores Ficha"
                 Caption = 'Detalle';
                 Editable = wEdit;
                 Enabled = wEdit;
-                SubPageLink = ID Pago=FIELD("ID Pago");
+                SubPageLink = "ID Pago" = FIELD("ID Pago");
             }
         }
     }

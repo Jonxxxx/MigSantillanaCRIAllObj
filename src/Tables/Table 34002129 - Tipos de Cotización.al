@@ -60,25 +60,25 @@ table 34002129 "Tipos de Cotización"
         }
         field(11; "Control por escalas"; Boolean)
         {
-            CalcFormula = Exist("Distribucion Importes TSS" WHERE(Ano = FIELD(Ano),
-                                                                   Concepto Salarial=FIELD(Código)));
+            CalcFormula = Exist("Distribucion Importes TSS" WHERE(Ano = FIELD("Ano"),
+                                                                   "Concepto Salarial" = FIELD("Código")));
             FieldClass = FlowField;
         }
-        field(12;"Porciento Empresa Pensionados";Decimal)
+        field(12; "Porciento Empresa Pensionados"; Decimal)
         {
             Caption = 'Retired Company %';
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
-        field(13;"Porciento Empleado Pensionados";Decimal)
+        field(13; "Porciento Empleado Pensionados"; Decimal)
         {
             Caption = 'Retired Employee %';
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
     }
 
     keys
     {
-        key(Key1;Ano,"Código")
+        key(Key1; Ano, "Código")
         {
         }
     }
@@ -88,6 +88,6 @@ table 34002129 "Tipos de Cotización"
     }
 
     var
-        ConceptosSal: Record "34002111";
+        ConceptosSal: Record 34002111;
 }
 

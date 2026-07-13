@@ -24,7 +24,7 @@ table 34002110 "Puestos laborales"
 
             trigger OnValidate()
             var
-                Empl: Record "5200";
+                Empl: Record 5200;
             begin
                 IF (xRec."Cod. Supervisor" <> "Cod. Supervisor") AND
                    ("Cod. Supervisor" <> '') THEN BEGIN
@@ -39,7 +39,7 @@ table 34002110 "Puestos laborales"
         }
         field(5; "Nombre Completo"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD(Cod. Supervisor)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cod. Supervisor")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -52,8 +52,8 @@ table 34002110 "Puestos laborales"
         }
         field(8;"Total Empleados";Integer)
         {
-            CalcFormula = Count(Employee WHERE (Departamento=FIELD(Cod. departamento),
-                                                Job Type Code=FIELD(Código),
+            CalcFormula = Count(Employee WHERE (Departamento=FIELD("Cod. departamento"),
+                                                "Type Code"=FIELD("Código"),
                                                 Status=CONST(Active)));
             Caption = 'Total Employee';
             Editable = false;
@@ -79,7 +79,7 @@ table 34002110 "Puestos laborales"
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
             DataClassification = ToBeClassified;
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
 
             trigger OnValidate()
             begin
@@ -91,7 +91,7 @@ table 34002110 "Puestos laborales"
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
             DataClassification = ToBeClassified;
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
 
             trigger OnValidate()
             begin
@@ -158,11 +158,11 @@ table 34002110 "Puestos laborales"
     end;
 
     var
-        Emp: Record "5200";
+        Emp: Record 5200;
         Err001: Label 'You can not delete %1 %2 because there are employees associated to it';
-        PerfSal: Record "34002115";
-        PerfilSalarioxCargo: Record "34002113";
-        DimMgt: Codeunit "408";
+        PerfSal: Record 34002115;
+        PerfilSalarioxCargo: Record 34002113;
+        DimMgt: Codeunit 408;
 
     local procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
     begin

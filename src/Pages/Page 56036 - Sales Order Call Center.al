@@ -139,7 +139,7 @@ page 56036 "Sales Order Call Center"
             }
             part(SalesLines; 46)
             {
-                SubPageLink = Document No.=FIELD("No.");
+                SubPageLink = "Document No." = FIELD("No.");
             }
             group(Invoicing)
             {
@@ -401,7 +401,7 @@ page 56036 "Sales Order Call Center"
             part(;9087)
             {
                 Provider = SalesLines;
-                SubPageLink = Document Type=FIELD("Document Type"),
+                SubPageLink = "Document Type"=FIELD("Document Type"),
                               "Document No."=FIELD("Document No."),
                               "Line No."=FIELD("Line No.");
                 Visible = true;
@@ -414,7 +414,7 @@ page 56036 "Sales Order Call Center"
             }
             part(;9092)
             {
-                SubPageLink = Table ID=CONST(36),
+                SubPageLink = "Table ID"=CONST(36),
                               "Document Type"=FIELD("Document Type"),
                               "Document No."=FIELD("No."),
                               "Status"=CONST(Open);
@@ -499,7 +499,7 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 67;
-                                    RunPageLink = Document Type=FIELD("Document Type"),
+                                    RunPageLink = "Document Type"=FIELD("Document Type"),
                                   "No."=FIELD("No."),
                                   "Document Line No."=CONST(0);
                 }
@@ -507,7 +507,7 @@ page 56036 "Sales Order Call Center"
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 142;
-                                    RunPageLink = Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action(Invoices)
@@ -515,21 +515,21 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Invoices';
                     Image = Invoice;
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action("Prepa&yment Invoices")
                 {
                     Caption = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Prepayment Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action("Prepayment Credi&t Memos")
                 {
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos"
-                                    RunPageLink = Prepayment Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action(Dimensions)
@@ -562,7 +562,7 @@ page 56036 "Sales Order Call Center"
                 {
                     Caption = 'Whse. Shipment Lines';
                     RunObject = Page 7341;
-                                    RunPageLink = Source Type=CONST(37),
+                                    RunPageLink = "Source Type"=CONST(37),
                                   "Source Subtype"=FIELD("Document Type"),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
@@ -571,7 +571,7 @@ page 56036 "Sales Order Call Center"
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
-                                    RunPageLink = Source Document=CONST("Sales Order"),
+                                    RunPageLink = "Source Document"=CONST("Sales Order"),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }

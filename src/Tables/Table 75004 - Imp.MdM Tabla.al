@@ -353,7 +353,7 @@ table 75004 "Imp.MdM Tabla"
 
         IF "Id Tabla" = 75001 THEN BEGIN // Datos MdM
                                          // Filtramos por el tipo de dato
-            lwField2 := lwRecRef.FIELD(1); // Tipo
+            lwField2 := lwRecRef.FIELD("1"); // Tipo
             lwField2.SETRANGE(Tipo);
         END;
 

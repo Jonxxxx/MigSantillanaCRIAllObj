@@ -99,7 +99,7 @@ page 67166 "Ficha de Atenciones"
             part(; 67168)
             {
                 Editable = wMod;
-                SubPageLink = Código Cab. Atención=FIELD("Codigo");
+                SubPageLink = "Cab. Atención" = FIELD("Codigo");
             }
         }
     }
@@ -255,7 +255,7 @@ page 67166 "Ficha de Atenciones"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 67169;
-                RunPageLink = No. Atención=FIELD("Codigo");
+                RunPageLink = "No. Atención" = FIELD("Codigo");
             }
         }
     }
@@ -279,11 +279,11 @@ page 67166 "Ficha de Atenciones"
 
         wMod := TRUE;
         IF Estado = Estado::Realizada THEN
-          wMod := FALSE;
+            wMod := FALSE;
 
         wCambEstado := FALSE;
         IF Estado = Estado::Entregada THEN
-          wCambEstado  := TRUE;
+            wCambEstado := TRUE;
     end;
 
     procedure ValidaDistrCC()
@@ -296,14 +296,14 @@ page 67166 "Ficha de Atenciones"
 
         Distr.SETRANGE(Distr."No. Atención", Codigo);
         IF NOT Distr.FINDSET THEN
-          ERROR(Err001);
+            ERROR(Err001);
 
         REPEAT
-          Porc += Distr.Porcentaje;
-        UNTIL Distr.NEXT=0;
+            Porc += Distr.Porcentaje;
+        UNTIL Distr.NEXT = 0;
 
         IF Porc <> 100 THEN
-          ERROR(Err002);
+            ERROR(Err002);
     end;
 }
 

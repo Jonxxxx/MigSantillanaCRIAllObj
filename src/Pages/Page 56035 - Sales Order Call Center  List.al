@@ -226,15 +226,15 @@ page 56035 "Sales Order Call Center  List"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 67;
-                    RunPageLink = Document Type=FIELD("Document Type"),
-                                  "No."=FIELD("No."),
-                                  "Document Line No."=CONST(0);
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                 }
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 142;
-                                    RunPageLink = Order No.=FIELD("No.");
+                    RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action(Invoices)
@@ -242,21 +242,21 @@ page 56035 "Sales Order Call Center  List"
                     Caption = 'Invoices';
                     Image = Invoice;
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Order No.=FIELD("No.");
+                    RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING(Order No.);
                 }
                 action("Prepa&yment Invoices")
                 {
                     Caption = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
-                                    RunPageLink = Prepayment Order No.=FIELD("No.");
+                    RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action("Prepayment Credi&t Memos")
                 {
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos"
-                                    RunPageLink = Prepayment Order No.=FIELD("No.");
+                                    RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING(Prepayment Order No.);
                 }
                 action(Dimensions)
@@ -278,7 +278,7 @@ page 56035 "Sales Order Call Center  List"
                     var
                         ApprovalEntries: Page 658;
                     begin
-                        ApprovalEntries.Setfilters(DATABASE::"Sales Header","Document Type","No.");
+                        ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
                         ApprovalEntries.RUN;
                     end;
                 }
@@ -289,18 +289,18 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'Whse. Shipment Lines';
                     RunObject = Page 7341;
-                                    RunPageLink = Source Type=CONST(37),
-                                  "Source Subtype"=FIELD("Document Type"),
-                                  "Source No."=FIELD("No.");
-                    RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
+                    RunPageLink = "Source Type" = CONST(37),
+                                  "Source Subtype" = FIELD("Document Type"),
+                                  "Source No." = FIELD("No.");
+                    RunPageView = SORTING(Source Type, Source Subtype, Source No., Source Line No.);
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
-                                    RunPageLink = Source Document=CONST("Sales Order"),
-                                  "Source No."=FIELD("No.");
-                    RunPageView = SORTING(Source Document,Source No.,Location Code);
+                    RunPageLink = "Source Document" = CONST("Sales Order"),
+                                  "Source No." = FIELD("No.");
+                    RunPageView = SORTING(Source Document, Source No., Location Code);
                 }
                 separator()
                 {
@@ -325,9 +325,9 @@ page 56035 "Sales Order Call Center  List"
                     var
                         OrderPromisingLine Record: 99000880" temporary;
                     begin
-                        OrderPromisingLine.SETRANGE("Source Type","Document Type");
-                        OrderPromisingLine.SETRANGE("Source ID","No.");
-                        PAGE.RUNMODAL(PAGE::"Order Promising Lines",OrderPromisingLine);
+                        OrderPromisingLine.SETRANGE("Source Type", "Document Type");
+                        OrderPromisingLine.SETRANGE("Source ID", "No.");
+                        PAGE.RUNMODAL(PAGE::"Order Promising Lines", OrderPromisingLine);
                     end;
                 }
             }
@@ -348,7 +348,7 @@ page 56035 "Sales Order Call Center  List"
                         GetSourceDocOutbound.CreateFromSalesOrder(Rec);
 
                         IF NOT FIND('=><') THEN
-                          INIT;
+                            INIT;
                     end;
                 }
                 action("Create Inventor&y Put-away/Pick")
@@ -361,7 +361,7 @@ page 56035 "Sales Order Call Center  List"
                         CreateInvtPutAwayPick;
 
                         IF NOT FIND('=><') THEN
-                          INIT;
+                            INIT;
                     end;
                 }
                 separator()
@@ -452,15 +452,14 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     begin
                         //001
-                        IF SH.GET("Document Type","No.") THEN
-                          BEGIN
+                        IF SH.GET("Document Type", "No.") THEN BEGIN
                             Cust.RESET;
-                            Cust.SETRANGE(Cust."No.",SH."Bill-to Customer No.");
+                            Cust.SETRANGE(Cust."No.", SH."Bill-to Customer No.");
                             Cust.FINDFIRST;
-                            REPORT.RUNMODAL(10072,TRUE,TRUE,Cust);
-                          END
+                            REPORT.RUNMODAL(10072, TRUE, TRUE, Cust);
+                        END
                         ELSE
-                          REPORT.RUNMODAL(10072,TRUE,TRUE,Cust);
+                            REPORT.RUNMODAL(10072, TRUE, TRUE, Cust);
                         //001
                     end;
                 }
@@ -549,7 +548,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        REPORT.RUNMODAL(REPORT::"Batch Post Sales Orders",TRUE,TRUE,Rec);
+                        REPORT.RUNMODAL(REPORT::"Batch Post Sales Orders", TRUE, TRUE, Rec);
                         CurrPage.UPDATE(FALSE);
                     end;
                 }
@@ -567,7 +566,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        DocPrint.PrintSalesOrder(Rec,Usage::"Order Confirmation");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
                     end;
                 }
                 action("Work Order")
@@ -578,7 +577,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        DocPrint.PrintSalesOrder(Rec,Usage::"Work Order");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
                     end;
                 }
             }

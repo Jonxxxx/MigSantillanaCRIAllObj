@@ -43,7 +43,7 @@ page 67011 "Lista Eventos"
         {
             part(; 67117)
             {
-                SubPageLink = Cod. Evento=FIELD("No.");
+                SubPageLink = "Cod. Evento" = FIELD("No.");
             }
         }
     }

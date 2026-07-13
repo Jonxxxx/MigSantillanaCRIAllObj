@@ -25,7 +25,7 @@ table 34002184 "Cab. Cuestionario Evaluacion"
 
             trigger OnValidate()
             var
-                EmptProfileAnswer: Record "34002192";
+                EmptProfileAnswer: Record 34002192;
             begin
                 EmptProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code");
                 EmptProfileAnswer.SETRANGE("Profile Questionnaire Code", Code);
@@ -54,6 +54,6 @@ table 34002184 "Cab. Cuestionario Evaluacion"
     end;
 
     var
-        ProfileQuestnLine: Record "34002185";
+        ProfileQuestnLine: Record 34002185;
 }
 

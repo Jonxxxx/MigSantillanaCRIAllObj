@@ -40,8 +40,8 @@ page 56020 "Sales Header Movil."
             }
             part(; 56012)
             {
-                SubPageLink = Document Type=FIELD("Document Type"),
-                              "Document No."=FIELD("No.");
+                SubPageLink = "Document Type" = FIELD("Document Type"),
+                              "Document No." = FIELD("No.");
             }
         }
     }

@@ -4,7 +4,7 @@ table 34002192 "Employee Profile Answer"
 
     fields
     {
-        field(1;"Employee No.";Code[20])
+        field(1; "Employee No."; Code[20])
         {
             Caption = 'Employee No.';
             NotBlank = true;
@@ -12,7 +12,7 @@ table 34002192 "Employee Profile Answer"
 
             trigger OnValidate()
             var
-                Cont: Record "5050";
+                Cont: Record 5050;
             begin
                 /*GRN no va
                 IF Cont.GET("Employee No.") THEN
@@ -23,7 +23,7 @@ table 34002192 "Employee Profile Answer"
 
             end;
         }
-        field(3;"Profile Questionnaire Code";Code[20])
+        field(3; "Profile Questionnaire Code"; Code[20])
         {
             Caption = 'Profile Questionnaire Code';
             NotBlank = true;
@@ -31,37 +31,37 @@ table 34002192 "Employee Profile Answer"
 
             trigger OnValidate()
             var
-                ProfileQuestnHeader: Record "34002184";
+                ProfileQuestnHeader: Record 34002184;
             begin
                 ProfileQuestnHeader.GET("Profile Questionnaire Code");
                 "Profile Questionnaire Priority" := ProfileQuestnHeader.Priority;
             end;
         }
-        field(4;"Line No.";Integer)
+        field(4; "Line No."; Integer)
         {
             Caption = 'Line No.';
-            TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE (Profile Questionnaire Code=FIELD(Profile Questionnaire Code),
-                                                                             Type=CONST(Answer));
+            TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
+                                                                             Type = CONST(Answer));
 
             trigger OnValidate()
             var
-                ProfileQuestnLine: Record "34002185";
+                ProfileQuestnLine: Record 34002185;
             begin
-                ProfileQuestnLine.GET("Profile Questionnaire Code","Line No.");
+                ProfileQuestnLine.GET("Profile Questionnaire Code", "Line No.");
                 "Answer Priority" := ProfileQuestnLine.Priority;
             end;
         }
-        field(5;Answer;Text[50])
+        field(5; Answer; Text[50])
         {
-            CalcFormula = Lookup("Profile Questionnaire Line".Description WHERE (Profile Questionnaire Code=FIELD(Profile Questionnaire Code),
-                                                                                 Line No.=FIELD(Line No.)));
+            CalcFormula = Lookup("Profile Questionnaire Line".Description WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
+                                                                                 "Line No." = FIELD("Line No.")));
             Caption = 'Answer';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(7;"Employee Full Name";Text[50])
+        field(7; "Employee Full Name"; Text[50])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Employee No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
             Caption = 'Employee Full Name';
             Editable = false;
             FieldClass = FlowField;
@@ -114,8 +114,8 @@ table 34002192 "Employee Profile Answer"
 
     trigger OnDelete()
     var
-        Employee: Record "5200";
-        ProfileQuestnLine: Record "34002185";
+        Employee: Record 5200;
+        ProfileQuestnLine: Record 34002185;
     begin
         ProfileQuestnLine.GET("Profile Questionnaire Code",QuestionLineNo);
         ProfileQuestnLine.TESTFIELD("Auto Employee Classification",FALSE);
@@ -131,11 +131,11 @@ table 34002192 "Employee Profile Answer"
 
     trigger OnInsert()
     var
-        Employee: Record "5200";
-        EmpProfileAnswer: Record "34002192";
-        ProfileQuestnLine: Record "34002185";
-        ProfileQuestnLine2: Record "34002185";
-        ProfileQuestnLine3: Record "34002185";
+        Employee: Record 5200;
+        EmpProfileAnswer: Record 34002192;
+        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine2: Record 34002185;
+        ProfileQuestnLine3: Record 34002185;
     begin
         ProfileQuestnLine.GET("Profile Questionnaire Code","Line No.");
         ProfileQuestnLine.TESTFIELD(Type,ProfileQuestnLine.Type::Answer);
@@ -171,14 +171,14 @@ table 34002192 "Employee Profile Answer"
 
     trigger OnModify()
     var
-        Contact: Record "5050";
+        Contact: Record 5050;
     begin
         //Esto es para poner la ult. hora de modif. Employee.TouchEmployee("Employee No.");
     end;
 
     trigger OnRename()
     var
-        Contact: Record "5050";
+        Contact: Record 5050;
     begin
         /*
         //Esto es para poner la ult. hora de modif.
@@ -194,50 +194,50 @@ table 34002192 "Employee Profile Answer"
 
     var
         Text000: Label 'This Question does not allow %1.';
-        UpdateEmpClassification: Report "34002170";
+        UpdateEmpClassification: Report 34002170;
 
     [Scope('Personalization')]
     procedure Question(): Text[50]
     var
-        ProfileQuestnLine: Record "34002185";
+        ProfileQuestnLine: Record 34002185;
     begin
-        IF ProfileQuestnLine.GET("Profile Questionnaire Code",QuestionLineNo) THEN
-          EXIT(ProfileQuestnLine.Description)
+        IF ProfileQuestnLine.GET("Profile Questionnaire Code", QuestionLineNo) THEN
+            EXIT(ProfileQuestnLine.Description)
     end;
 
     local procedure QuestionLineNo(): Integer
     var
-        ProfileQuestnLine: Record "34002185";
+        ProfileQuestnLine: Record 34002185;
     begin
         WITH ProfileQuestnLine DO BEGIN
-          RESET;
-          SETRANGE("Profile Questionnaire Code",Rec."Profile Questionnaire Code");
-          SETFILTER("Line No.",'<%1',Rec."Line No.");
-          SETRANGE(Type,Type::Question);
-          IF FINDLAST THEN
-            EXIT("Line No.")
+            RESET;
+            SETRANGE("Profile Questionnaire Code", Rec."Profile Questionnaire Code");
+            SETFILTER("Line No.", '<%1', Rec."Line No.");
+            SETRANGE(Type, Type::Question);
+            IF FINDLAST THEN
+                EXIT("Line No.")
         END;
     end;
 
     local procedure PartOfRating(): Boolean
     var
-        Rating: Record "34002188";
-        ProfileQuestnLine: Record "34002185";
-        ProfileQuestnLine2: Record "34002185";
+        Rating: Record 34002188;
+        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine2: Record 34002185;
     begin
-        Rating.SETCURRENTKEY("Rating Profile Quest. Code","Rating Profile Quest. Line No.");
-        Rating.SETRANGE("Rating Profile Quest. Code","Profile Questionnaire Code");
+        Rating.SETCURRENTKEY("Rating Profile Quest. Code", "Rating Profile Quest. Line No.");
+        Rating.SETRANGE("Rating Profile Quest. Code", "Profile Questionnaire Code");
 
-        ProfileQuestnLine.GET("Profile Questionnaire Code","Line No.");
-        ProfileQuestnLine.GET("Profile Questionnaire Code",ProfileQuestnLine.FindQuestionLine);
+        ProfileQuestnLine.GET("Profile Questionnaire Code", "Line No.");
+        ProfileQuestnLine.GET("Profile Questionnaire Code", ProfileQuestnLine.FindQuestionLine);
 
         ProfileQuestnLine2 := ProfileQuestnLine;
-        ProfileQuestnLine2.SETRANGE(Type,ProfileQuestnLine2.Type::Question);
-        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code",ProfileQuestnLine2."Profile Questionnaire Code");
+        ProfileQuestnLine2.SETRANGE(Type, ProfileQuestnLine2.Type::Question);
+        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code", ProfileQuestnLine2."Profile Questionnaire Code");
         IF ProfileQuestnLine2.NEXT <> 0 THEN
-          Rating.SETRANGE("Rating Profile Quest. Line No.",ProfileQuestnLine."Line No.",ProfileQuestnLine2."Line No.")
+            Rating.SETRANGE("Rating Profile Quest. Line No.", ProfileQuestnLine."Line No.", ProfileQuestnLine2."Line No.")
         ELSE
-          Rating.SETFILTER("Rating Profile Quest. Line No.",'%1..',ProfileQuestnLine."Line No.");
+            Rating.SETFILTER("Rating Profile Quest. Line No.", '%1..', ProfileQuestnLine."Line No.");
 
         EXIT(Rating.FINDFIRST);
     end;

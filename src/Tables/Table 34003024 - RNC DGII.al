@@ -12,9 +12,9 @@ table 34003024 "RNC DGII"
 
             trigger OnValidate()
             var
-                ConsultaRNC: Codeunit "34003003";
+                ConsultaRNC: Codeunit 34003003;
                 Datos: array[6] of Text;
-                VPG: Record "93";
+                VPG: Record 93;
             begin
 
             end;

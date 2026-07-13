@@ -4,17 +4,16 @@ table 34002203 Expositores
 
     fields
     {
-        field(1;"No.";Code[20])
+        field(1; "No."; Code[20])
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
-            TableRelation = IF (Tipo=CONST(Interno)) Employee.No.
-                            ELSE IF (Tipo=CONST(Externo)) Vendor.No.;
+            TableRelation = IF (Tipo = CONST(Interno)) Employee.No.
+                            ELSE IF (Tipo = CONST(Externo)) Vendor.No.;
 
             trigger OnValidate()
             begin
-                IF Tipo = 0 THEN
-                   BEGIN
+                IF Tipo = 0 THEN BEGIN
                     Emp.GET("No.");
                     Name := Emp."Full Name";
                     "Document ID" := Emp."Document ID";
@@ -28,9 +27,8 @@ table 34002203 Expositores
                     "Phone No." := Emp."Phone No.";
                     "E-Mail" := Emp."E-Mail";
                     "E-Mail 2" := Emp."Company E-Mail";
-                   END
-                ELSE
-                   BEGIN
+                END
+                ELSE BEGIN
                     Vend.GET("No.");
                     Name := Vend.Name;
                     "Document ID" := Vend."VAT Registration No.";
@@ -44,86 +42,86 @@ table 34002203 Expositores
                     "Phone No." := Vend."Phone No.";
                     "E-Mail" := Vend."E-Mail";
 
-                   END;
+                END;
             end;
         }
-        field(2;Name;Text[100])
+        field(2; Name; Text[100])
         {
             Caption = 'Name';
             DataClassification = ToBeClassified;
         }
-        field(3;"Search Name";Code[100])
+        field(3; "Search Name"; Code[100])
         {
             Caption = 'Search Name';
             DataClassification = ToBeClassified;
         }
-        field(4;"Name 2";Text[100])
+        field(4; "Name 2"; Text[100])
         {
             Caption = 'Name 2';
             DataClassification = ToBeClassified;
         }
-        field(5;Address;Text[60])
+        field(5; Address; Text[60])
         {
             Caption = 'Address';
             DataClassification = ToBeClassified;
         }
-        field(6;"Address 2";Text[50])
+        field(6; "Address 2"; Text[50])
         {
             Caption = 'Address 2';
             DataClassification = ToBeClassified;
         }
-        field(7;City;Text[30])
+        field(7; City; Text[30])
         {
             Caption = 'City';
             DataClassification = ToBeClassified;
 
             trigger OnValidate()
             begin
-                PostCode.ValidateCity(City,"Post Code",County,"Country/Region Code",(CurrFieldNo <> 0) AND GUIALLOWED);
+                PostCode.ValidateCity(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(8;"Phone No.";Text[50])
+        field(8; "Phone No."; Text[50])
         {
             Caption = 'Phone No.';
             DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
-        field(9;"Mobile Phone No.";Text[30])
+        field(9; "Mobile Phone No."; Text[30])
         {
             Caption = 'Mobile Phone No.';
             DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
-        field(10;"Territory Code";Code[10])
+        field(10; "Territory Code"; Code[10])
         {
             Caption = 'Territory Code';
             DataClassification = ToBeClassified;
             TableRelation = Territory;
         }
-        field(11;"Language Code";Code[10])
+        field(11; "Language Code"; Code[10])
         {
             Caption = 'Language Code';
             DataClassification = ToBeClassified;
             TableRelation = Language;
         }
-        field(12;Tipo;Option)
+        field(12; Tipo; Option)
         {
             Caption = 'Type';
             DataClassification = ToBeClassified;
             OptionCaption = 'Internal,External';
             OptionMembers = Interno,Externo;
         }
-        field(13;"Country/Region Code";Code[10])
+        field(13; "Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
             DataClassification = ToBeClassified;
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(14;Comment;Boolean)
+        field(14; Comment; Boolean)
         {
-            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE (Table Name=CONST(Contact),
-                                                                  No.=FIELD(No.),
-                                                                  Sub No.=CONST(0)));
+            CalcFormula = Exist("Rlshp. Mgt. Comment Line" WHERE("Table Name" = CONST(Contact),
+                                                                  No.=FIELD("No."),
+                                                                  "Sub No."=CONST(0)));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
@@ -146,7 +144,7 @@ table 34002203 Expositores
 
             trigger OnValidate()
             var
-                VATRegNoFormat: Record "381";
+                VATRegNoFormat: Record 381;
             begin
             end;
         }
@@ -238,8 +236,8 @@ table 34002203 Expositores
     }
 
     var
-        Emp: Record "5200";
-        Vend: Record "23";
-        PostCode: Record "225";
+        Emp: Record 5200;
+        Vend: Record 23;
+        PostCode: Record 225;
 }
 

@@ -56,8 +56,8 @@ table 34003003 "Historico Retencion Prov."
         }
         field(14; "Fecha Registro"; Date)
         {
-            CalcFormula = Lookup("Vendor Ledger Entry"."Posting Date" WHERE(Document Type=FIELD(Tipo documento),
-                                                                             Document No.=FIELD(No. documento)));
+            CalcFormula = Lookup("Vendor Ledger Entry"."Posting Date" WHERE("Document Type" = FIELD("Tipo documento"),
+                                                                             "Document No." = FIELD("No. documento")));
             Caption = 'Posting date';
             Editable = false;
             FieldClass = FlowField;
@@ -66,7 +66,7 @@ table 34003003 "Historico Retencion Prov."
 
     keys
     {
-        key(Key1;"Tipo documento","No. documento","Código Retención")
+        key(Key1; "Tipo documento", "No. documento", "Código Retención")
         {
         }
     }

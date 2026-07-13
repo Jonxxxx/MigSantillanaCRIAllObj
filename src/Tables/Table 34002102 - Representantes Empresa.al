@@ -4,24 +4,24 @@ table 34002102 "Representantes Empresa"
 
     fields
     {
-        field(1;"Empresa cotización";Code[10])
+        field(1; "Empresa cotización"; Code[10])
         {
             Caption = 'Company';
         }
-        field(2;"No. Orden";Integer)
+        field(2; "No. Orden"; Integer)
         {
             Caption = 'Line no.';
         }
-        field(3;Nombre;Text[30])
+        field(3; Nombre; Text[30])
         {
             Caption = 'Name';
         }
-        field(4;Address;Text[60])
+        field(4; Address; Text[60])
         {
             Caption = 'Address';
             DataClassification = ToBeClassified;
         }
-        field(5;"C.P.";Text[5])
+        field(5; "C.P."; Text[5])
         {
             Caption = 'Post code';
             TableRelation = "Post Code";
@@ -29,49 +29,48 @@ table 34002102 "Representantes Empresa"
             trigger OnValidate()
             begin
                 IF CodPost.GET("C.P.") THEN BEGIN
-                County := CodPost."Search City";
+                    County := CodPost."Search City";
                 END;
             end;
         }
-        field(6;"Población";Text[30])
+        field(6; "Población"; Text[30])
         {
             Caption = 'Población';
         }
-        field(7;County;Text[30])
+        field(7; County; Text[30])
         {
             Caption = 'State';
             DataClassification = ToBeClassified;
         }
-        field(8;"Teléfono";Text[20])
+        field(8; "Teléfono"; Text[20])
         {
             Caption = 'Phone no.';
         }
-        field(9;"RNC/CED";Text[15])
+        field(9; "RNC/CED"; Text[15])
         {
             Caption = 'RNC/Cédula';
 
             trigger OnValidate()
             begin
                 Emp.RESET;
-                Emp.SETRANGE("Document ID","RNC/CED");
-                IF Emp.FINDFIRST THEN
-                  BEGIN
-                   "Job Title" := Emp."Job Title";
-                   Nombre := Emp."Full Name";
-                   Address := Emp.Address;
-                   "C.P." := Emp."Post Code";
-                   Teléfono := Emp."Phone No.";
-                   Población := Emp."Country/Region Code";
-                   County := Emp.County;
-                  END;
+                Emp.SETRANGE("Document ID", "RNC/CED");
+                IF Emp.FINDFIRST THEN BEGIN
+                    "Job Title" := Emp."Job Title";
+                    Nombre := Emp."Full Name";
+                    Address := Emp.Address;
+                    "C.P." := Emp."Post Code";
+                    Teléfono := Emp."Phone No.";
+                    Población := Emp."Country/Region Code";
+                    County := Emp.County;
+                END;
             end;
         }
-        field(10;"Job Title";Text[60])
+        field(10; "Job Title"; Text[60])
         {
             Caption = 'Job Title';
             DataClassification = ToBeClassified;
         }
-        field(11;Figurar;Option)
+        field(11; Figurar; Option)
         {
             Caption = 'Show';
             Description = 'Todo tipo documento,Contratos laborales,Mercantil,Responsable Informático';
@@ -82,7 +81,7 @@ table 34002102 "Representantes Empresa"
 
     keys
     {
-        key(Key1;"Empresa cotización","No. Orden")
+        key(Key1; "Empresa cotización", "No. Orden")
         {
         }
     }
@@ -92,45 +91,45 @@ table 34002102 "Representantes Empresa"
     }
 
     var
-        Emp: Record "5200";
-        CodPost: Record "225";
+        Emp: Record 5200;
+        CodPost: Record 225;
 
-    procedure "Recoger representantes"(var "Repres.": Record "34002102";"Unidad cotizacion": Code[10];"Centro de trabajo": Code[10];Figurar: Integer)
+    procedure "Recoger representantes"(var "Repres.": Record 34002102; "Unidad cotizacion": Code[10]; "Centro de trabajo": Code[10]; Figurar: Integer)
     begin
         "Repres.".RESET;
-        "Repres.".SETRANGE("Repres."."Empresa cotización","Empresa cotización");
+        "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
         //"Repres.".SETRANGE("Repres."."Centro de trabajo","Centro de trabajo");
-        "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-        "Repres.".SETRANGE("Repres.".Figurar,Figurar);
+        "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+        "Repres.".SETRANGE("Repres.".Figurar, Figurar);
         IF NOT "Repres.".FIND('+') THEN BEGIN
-          "Repres.".RESET;
-          "Repres.".SETRANGE("Repres."."Empresa cotización","Empresa cotización");
-        //  "Repres.".SETRANGE("Repres."."Centro de trabajo","Centro de trabajo");
-          "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-          "Repres.".SETRANGE("Repres.".Figurar,"Repres.".Figurar::"Todo tipo documento");
-          IF NOT "Repres.".FIND('+') THEN BEGIN
             "Repres.".RESET;
-            "Repres.".SETRANGE("Repres."."Empresa cotización","Empresa cotización");
-            "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-            "Repres.".SETRANGE("Repres.".Figurar,Figurar);
+            "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+            //  "Repres.".SETRANGE("Repres."."Centro de trabajo","Centro de trabajo");
+            "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+            "Repres.".SETRANGE("Repres.".Figurar, "Repres.".Figurar::"Todo tipo documento");
             IF NOT "Repres.".FIND('+') THEN BEGIN
-              "Repres.".RESET;
-              "Repres.".SETRANGE("Repres."."Empresa cotización","Empresa cotización");
-              "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-              "Repres.".SETRANGE("Repres.".Figurar,"Repres.".Figurar::"Todo tipo documento");
-              IF NOT "Repres.".FIND('+') THEN BEGIN
                 "Repres.".RESET;
-                "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-                "Repres.".SETRANGE("Repres.".Figurar,Figurar);
+                "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+                "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+                "Repres.".SETRANGE("Repres.".Figurar, Figurar);
                 IF NOT "Repres.".FIND('+') THEN BEGIN
-                  "Repres.".RESET;
-                  "Repres.".SETFILTER(Nombre,'<>%1','');  // 17/12/99
-                  "Repres.".SETRANGE("Repres.".Figurar,"Repres.".Figurar::"Todo tipo documento");
-                  IF NOT "Repres.".FIND('+') THEN "Repres.".INIT
+                    "Repres.".RESET;
+                    "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+                    "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+                    "Repres.".SETRANGE("Repres.".Figurar, "Repres.".Figurar::"Todo tipo documento");
+                    IF NOT "Repres.".FIND('+') THEN BEGIN
+                        "Repres.".RESET;
+                        "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+                        "Repres.".SETRANGE("Repres.".Figurar, Figurar);
+                        IF NOT "Repres.".FIND('+') THEN BEGIN
+                            "Repres.".RESET;
+                            "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
+                            "Repres.".SETRANGE("Repres.".Figurar, "Repres.".Figurar::"Todo tipo documento");
+                            IF NOT "Repres.".FIND('+') THEN "Repres.".INIT
+                        END;
+                    END;
                 END;
-              END;
             END;
-          END;
         END;
     end;
 }

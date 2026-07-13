@@ -7,47 +7,51 @@ table 34002500 "Configuracion General DsPOS"
 
     fields
     {
-        field(34002500;"Clave primaria";Code[10])
+        field(34002500; "Clave primaria"; Code[10])
         {
             Description = 'DsPOS Standard';
         }
-        field(34002503;"Nombre libro diario";Code[20])
+        field(34002503; "Nombre libro diario"; Code[20])
         {
             Caption = 'Journal Template Name';
             Description = 'DsPOS Standard';
             TableRelation = "Gen. Journal Template";
         }
-        field(34002504;"Nombre seccion diario";Code[20])
+        field(34002504; "Nombre seccion diario"; Code[20])
         {
             Caption = 'Journal Batch Name';
             Description = 'DsPOS Standard';
-            TableRelation = "Gen. Journal Batch".Name WHERE (Journal Template Name=FIELD(Nombre libro diario));
+            TableRelation = "Gen. Journal Batch".Name WHERE("Journal Template Name" = FIELD("Nombre libro diario"));
         }
-        field(34002505;Pais;Option)
+        field(34002505; Pais; Option)
         {
             Description = 'DsPOS Standard';
             OptionMembers = ,"Republica Dominicana",Bolivia,Paraguay,Ecuador,Guatemala,Salvador,Honduras,Mexico,"Costa Rica";
 
             trigger OnValidate()
             var
-                cFDominicana: Codeunit "34002504";
-                cFParaguay: Codeunit "34002506";
-                cFBolivia: Codeunit "34002505";
+                cFDominicana: Codeunit 34002504;
+                cFParaguay: Codeunit 34002506;
+                cFBolivia: Codeunit 34002505;
             begin
 
                 IF (Pais <> xRec.Pais) AND (xRec.Pais <> 0) THEN
-                  IF NOT CONFIRM(text001,FALSE,xRec.Pais) THEN
-                    ERROR(Error003);
+                    IF NOT CONFIRM(text001, FALSE, xRec.Pais) THEN
+                        ERROR(Error003);
 
                 CASE xRec.Pais OF
-                  xRec.Pais::"0":EXIT;
-                  xRec.Pais::"Republica Dominicana":cFDominicana.VaciaCampos_Pais;
-                  xRec.Pais::Bolivia:cFBolivia.VaciaCampos_Pais;
-                  xRec.Pais::Paraguay:cFParaguay.VaciaCampos_Pais;
+                    xRec.Pais::"0":
+                        EXIT;
+                    xRec.Pais::"Republica Dominicana":
+                        cFDominicana.VaciaCampos_Pais;
+                    xRec.Pais::Bolivia:
+                        cFBolivia.VaciaCampos_Pais;
+                    xRec.Pais::Paraguay:
+                        cFParaguay.VaciaCampos_Pais;
                 END;
             end;
         }
-        field(34002572;"Nombre Divisa Local";Text[50])
+        field(34002572; "Nombre Divisa Local"; Text[50])
         {
             Description = 'DsPOS Standard';
         }
@@ -55,7 +59,7 @@ table 34002500 "Configuracion General DsPOS"
 
     keys
     {
-        key(Key1;"Clave primaria")
+        key(Key1; "Clave primaria")
         {
         }
     }

@@ -6,12 +6,12 @@ table 34002526 "Arqueo de caja"
 
     fields
     {
-        field(10;"Cod. tienda";Code[20])
+        field(10; "Cod. tienda"; Code[20])
         {
             Caption = 'Store No.';
             TableRelation = Tiendas;
         }
-        field(20;"Cod. TPV";Code[20])
+        field(20; "Cod. TPV"; Code[20])
         {
             Caption = 'POS Terminal No.';
             TableRelation = "Configuracion TPV"."Id TPV";
@@ -19,35 +19,35 @@ table 34002526 "Arqueo de caja"
             //TestTableRelation = false;
             ValidateTableRelation = false;
         }
-        field(25;Fecha;Date)
+        field(25; Fecha; Date)
         {
             Caption = 'Fecha';
         }
-        field(30;"No. turno";Integer)
+        field(30; "No. turno"; Integer)
         {
             Caption = 'Receipt No.';
         }
-        field(40;"Forma de pago";Code[10])
+        field(40; "Forma de pago"; Code[10])
         {
             Caption = 'Tender Type';
             TableRelation = "Formas de Pago"."ID Pago";
             ValidateTableRelation = true;
         }
-        field(50;"Cod. divisa";Code[10])
+        field(50; "Cod. divisa"; Code[10])
         {
             Caption = 'Currency Code';
         }
-        field(60;Tipo;Option)
+        field(60; Tipo; Option)
         {
             Caption = 'Type';
             OptionCaption = 'Coin,Note,Roll';
             OptionMembers = Moneda,Billete;
         }
-        field(70;Importe;Decimal)
+        field(70; Importe; Decimal)
         {
             Caption = 'Amount';
         }
-        field(90;Cantidad;Integer)
+        field(90; Cantidad; Integer)
         {
             Caption = 'Qty.';
 
@@ -56,11 +56,11 @@ table 34002526 "Arqueo de caja"
                 Total := Cantidad * Importe;
             end;
         }
-        field(100;Total;Decimal)
+        field(100; Total; Decimal)
         {
             Caption = 'Total';
         }
-        field(34002518;"Id Replicacion";Code[20])
+        field(34002518; "Id Replicacion"; Code[20])
         {
             Description = 'DsPOS Standard';
         }
@@ -68,10 +68,10 @@ table 34002526 "Arqueo de caja"
 
     keys
     {
-        key(Key1;"Cod. tienda","Cod. TPV",Fecha,"No. turno","Forma de pago","Cod. divisa",Tipo,Importe)
+        key(Key1; "Cod. tienda", "Cod. TPV", Fecha, "No. turno", "Forma de pago", "Cod. divisa", Tipo, Importe)
         {
         }
-        key(Key2;"Id Replicacion")
+        key(Key2; "Id Replicacion")
         {
         }
     }
@@ -83,26 +83,26 @@ table 34002526 "Arqueo de caja"
     trigger OnInsert()
     begin
 
-        "Id Replicacion" := STRSUBSTNO('%1',DATE2DMY(Fecha,1)) + STRSUBSTNO('%1',DATE2DMY(Fecha,2)) + STRSUBSTNO('%1',DATE2DMY(Fecha,3));
+        "Id Replicacion" := STRSUBSTNO('%1', DATE2DMY(Fecha, 1)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 2)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 3));
     end;
 
     procedure TraerDescripcion(): Text[30]
     var
-        recCfgConta: Record "98";
-        recDivisa: Record "4";
+        recCfgConta: Record 98;
+        recDivisa: Record 4;
     begin
         IF "Cod. divisa" = '' THEN BEGIN
-          recCfgConta.GET;
-          IF recCfgConta."LCY Code" <> '' THEN BEGIN
-            IF recDivisa.GET(recCfgConta."LCY Code") THEN
-              EXIT(recDivisa.Description)
-            ELSE
-              EXIT(recCfgConta."LCY Code")
-          END;
+            recCfgConta.GET;
+            IF recCfgConta."LCY Code" <> '' THEN BEGIN
+                IF recDivisa.GET(recCfgConta."LCY Code") THEN
+                    EXIT(recDivisa.Description)
+                ELSE
+                    EXIT(recCfgConta."LCY Code")
+            END;
         END
         ELSE
-          IF recDivisa.GET("Cod. divisa") THEN
-            EXIT(recDivisa.Description)
+            IF recDivisa.GET("Cod. divisa") THEN
+                EXIT(recDivisa.Description)
     end;
 }
 

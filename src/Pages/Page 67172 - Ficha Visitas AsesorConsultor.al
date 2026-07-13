@@ -157,7 +157,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67173;
-                    RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor");
+                    RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor");
                 }
                 action("&Assistance")
                 {
@@ -170,17 +170,17 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     trigger OnAction()
                     var
                         pAsistentes: Page 67177;
-                                         rProg: Record 67103;
-                                         Err001: Label 'Antes de inscribir docentes, tiene que registrar las fechas y horario de la visita.';
+                        rProg: Record 67103;
+                        Err001: Label 'Antes de inscribir docentes, tiene que registrar las fechas y horario de la visita.';
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
                         TESTFIELD("Cod. Colegio");
 
                         rProg.RESET;
-                        rProg.SETRANGE(rProg."No. Visita","No. Visita Asesor/Consultor");
+                        rProg.SETRANGE(rProg."No. Visita", "No. Visita Asesor/Consultor");
                         IF NOT rProg.FINDFIRST THEN
-                          ERROR(Err001);
-                        pAsistentes.RecibeParametros("No. Visita Asesor/Consultor","Cod. Colegio",'');
+                            ERROR(Err001);
+                        pAsistentes.RecibeParametros("No. Visita Asesor/Consultor", "Cod. Colegio", '');
                         pAsistentes.RUN;
                         CLEAR(pAsistentes);
                     end;
@@ -199,7 +199,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
                         TESTFIELD("Cod. Colegio");
-                        GpoNegDistrib.RecibeParametros("No. Visita Asesor/Consultor",Estado = Estado::Programada);
+                        GpoNegDistrib.RecibeParametros("No. Visita Asesor/Consultor", Estado = Estado::Programada);
                         GpoNegDistrib.RUNMODAL;
                     end;
                 }
@@ -209,8 +209,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
-                                    RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  "Tipo"=CONST(Nivel);
+                    RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
+                                  "Tipo" = CONST(Nivel);
                 }
                 action("Grado Asistente")
                 {
@@ -218,8 +218,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
-                                    RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  "Tipo"=CONST(Grado);
+                    RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
+                                  "Tipo" = CONST(Grado);
                 }
                 action("Especialidad Asistente")
                 {
@@ -227,8 +227,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
-                                    RunPageLink = No. Visita=FIELD("No. Visita Asesor/Consultor"),
-                                  "Tipo"=CONST(Especialidad);
+                    RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
+                                  "Tipo" = CONST(Especialidad);
                 }
                 action(Ranking)
                 {
@@ -297,11 +297,11 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
         wMod := TRUE;
         IF Estado = Estado::Ejecutada THEN
-          wMod := FALSE;
+            wMod := FALSE;
 
         wCambEstado := FALSE;
         IF Estado = Estado::Programada THEN
-          wCambEstado  := TRUE;
+            wCambEstado := TRUE;
 
         ControlesCDS;
 
@@ -318,14 +318,14 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
         Distr.SETRANGE(Distr."No. Visita Consultor/Asesor", "No. Visita Asesor/Consultor");
         IF NOT Distr.FINDSET THEN
-          ERROR(Err001);
+            ERROR(Err001);
 
         REPEAT
-          Porc += Distr.Porcentaje;
-        UNTIL Distr.NEXT=0;
+            Porc += Distr.Porcentaje;
+        UNTIL Distr.NEXT = 0;
 
         IF Porc <> 100 THEN
-          ERROR(Err002);
+            ERROR(Err002);
     end;
 
     procedure ValidaFechaHorarios()
@@ -339,22 +339,22 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
         rProg.SETRANGE(rProg."No. Visita", "No. Visita Asesor/Consultor");
         IF NOT rProg.FINDSET THEN
-          ERROR(Err001);
+            ERROR(Err001);
         REPEAT
 
-          IF (rProg."Fecha Programada" = 0D) OR (rProg."Hora Inicio Programada" = 0T) OR (rProg."Hora Fin Programada" = 0T) THEN
-            ERROR(Err003);
+            IF (rProg."Fecha Programada" = 0D) OR (rProg."Hora Inicio Programada" = 0T) OR (rProg."Hora Fin Programada" = 0T) THEN
+                ERROR(Err003);
 
-          rProg2.RESET;
-          rProg2.SETRANGE("No. Visita", rProg."No. Visita");
-          rProg2.SETFILTER("No. Linea",'<>%1', rProg."No. Linea");
-          rProg2.SETRANGE("Fecha Programada", rProg."Fecha Programada");
-          rProg2.SETFILTER("Hora Inicio Programada",'<%1',rProg."Hora Fin Programada");
-          rProg2.SETFILTER("Hora Fin Programada",'>%1',rProg."Hora Inicio Programada");
-          IF rProg2.FINDSET THEN
-            ERROR(Err002);
+            rProg2.RESET;
+            rProg2.SETRANGE("No. Visita", rProg."No. Visita");
+            rProg2.SETFILTER("No. Linea", '<>%1', rProg."No. Linea");
+            rProg2.SETRANGE("Fecha Programada", rProg."Fecha Programada");
+            rProg2.SETFILTER("Hora Inicio Programada", '<%1', rProg."Hora Fin Programada");
+            rProg2.SETFILTER("Hora Fin Programada", '>%1', rProg."Hora Inicio Programada");
+            IF rProg2.FINDSET THEN
+                ERROR(Err002);
 
-        UNTIL rProg.NEXT=0;
+        UNTIL rProg.NEXT = 0;
     end;
 
     procedure ControlesCDS()
@@ -362,7 +362,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
         wCDS := FALSE;
         IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
-          wCDS := TRUE;
+            wCDS := TRUE;
     end;
 
     procedure ControlesTipoVisita()
@@ -370,7 +370,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
         wEditSolicitud := FALSE;
         IF "Tipo Visita" = "Tipo Visita"::Solicitada THEN
-          wEditSolicitud := TRUE;
+            wEditSolicitud := TRUE;
     end;
 
     procedure Act_AsistentesReales()

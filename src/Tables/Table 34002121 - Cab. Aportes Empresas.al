@@ -3,30 +3,30 @@ table 34002121 "Cab. Aportes Empresas"
 
     fields
     {
-        field(1;"No. Documento";Code[20])
+        field(1; "No. Documento"; Code[20])
         {
         }
-        field(2;"Unidad cotización";Code[20])
+        field(2; "Unidad cotización"; Code[20])
         {
         }
-        field(3;"Período";Date)
+        field(3; "Período"; Date)
         {
         }
-        field(4;"No. Contabilización";Code[20])
+        field(4; "No. Contabilización"; Code[20])
         {
         }
-        field(5;"Tipo Nomina";Option)
+        field(5; "Tipo Nomina"; Option)
         {
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
             OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
         }
-        field(6;"Tipo de nomina";Code[20])
+        field(6; "Tipo de nomina"; Code[20])
         {
             Caption = 'Payroll type';
             DataClassification = ToBeClassified;
             TableRelation = "Tipos de nominas";
         }
-        field(7;"Job No.";Code[20])
+        field(7; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             DataClassification = ToBeClassified;
@@ -34,25 +34,25 @@ table 34002121 "Cab. Aportes Empresas"
 
             trigger OnValidate()
             var
-                Job: Record "167";
-                Cust: Record "18";
+                Job: Record 167;
+                Cust: Record 18;
             begin
             end;
         }
-        field(480;"Dimension Set ID";Integer)
+        field(480; "Dimension Set ID"; Integer)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Período","Tipo de nomina")
+        key(Key1; "Período", "Tipo de nomina")
         {
         }
-        key(Key2;"No. Documento")
+        key(Key2; "No. Documento")
         {
         }
-        key(Key3;"Unidad cotización","Período")
+        key(Key3; "Unidad cotización", "Período")
         {
         }
     }
@@ -71,20 +71,20 @@ table 34002121 "Cab. Aportes Empresas"
 
     procedure Anular()
     var
-        Cabnomina: Record "34002117";
-        LinCP: Record "34002122";
+        Cabnomina: Record 34002117;
+        LinCP: Record 34002122;
         inicper: Date;
         finper: Date;
     begin
         LinCP.RESET;
-        LinCP.SETRANGE(Período,Período);
-        LinCP.SETRANGE("Tipo de nomina","Tipo de nomina");
-        LinCP.SETRANGE("Job No.","Job No.");
-        IF LinCP.FINDSET(TRUE,FALSE) THEN
-        //MESSAGE('%1 %2 %3 %4',getfilters);
-        REPEAT
-         LinCP.DELETE;
-        UNTIL LinCP.NEXT = 0;
+        LinCP.SETRANGE(Período, Período);
+        LinCP.SETRANGE("Tipo de nomina", "Tipo de nomina");
+        LinCP.SETRANGE("Job No.", "Job No.");
+        IF LinCP.FINDSET(TRUE, FALSE) THEN
+            //MESSAGE('%1 %2 %3 %4',getfilters);
+            REPEAT
+            LinCP.DELETE;
+            UNTIL LinCP.NEXT = 0;
         DELETE;
     end;
 }

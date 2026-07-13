@@ -27,7 +27,7 @@ table 34002504 "Bancos tienda"
 
             trigger OnValidate()
             var
-                rBanco: Record "270";
+                rBanco: Record 270;
             begin
 
                 IF "Cod. Banco" <> '' THEN BEGIN
@@ -38,7 +38,7 @@ table 34002504 "Bancos tienda"
         }
         field(40; "Nombre Banco"; Text[100])
         {
-            CalcFormula = Lookup("Bank Account".Name WHERE(No.=FIELD(Cod. Banco)));
+            CalcFormula = Lookup("Bank Account".Name WHERE(No.=FIELD("Cod. Banco")));
             Caption = 'Bank Name';
             Description = 'DsPOS Standar';
             Editable = false;
@@ -62,7 +62,7 @@ table 34002504 "Bancos tienda"
 
     trigger OnDelete()
     var
-        rConfTPV: Record "34002501";
+        rConfTPV: Record 34002501;
     begin
     end;
 

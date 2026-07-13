@@ -70,7 +70,7 @@ page 67140 "Asistencia Docentes x Colegio"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67101;
-                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
+                    RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }
             }
@@ -79,10 +79,9 @@ page 67140 "Asistencia Docentes x Colegio"
 
     trigger OnOpenPage()
     begin
-        IF CodPromotor <> '' THEN
-           BEGIN
-            SETRANGE("Cod. promotor",CodPromotor);
-           END;
+        IF CodPromotor <> '' THEN BEGIN
+            SETRANGE("Cod. promotor", CodPromotor);
+        END;
     end;
 
     var

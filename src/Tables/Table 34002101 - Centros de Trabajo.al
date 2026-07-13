@@ -75,7 +75,7 @@ table 34002101 "Centros de Trabajo"
     }
 
     var
-        EmpCotizacion: Record "34002100";
-        cpostal: Record "225";
+        EmpCotizacion: Record 34002100;
+        cpostal: Record 225;
 }
 

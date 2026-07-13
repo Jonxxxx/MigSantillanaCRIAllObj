@@ -3,40 +3,40 @@ table 34002122 "Lin. Aportes Empresas"
 
     fields
     {
-        field(1;"No. Documento";Code[20])
+        field(1; "No. Documento"; Code[20])
         {
         }
-        field(2;"Empresa cotización";Code[20])
+        field(2; "Empresa cotización"; Code[20])
         {
         }
-        field(3;"Período";Date)
+        field(3; "Período"; Date)
         {
         }
-        field(4;"No. Empleado";Code[20])
+        field(4; "No. Empleado"; Code[20])
         {
         }
-        field(5;"Concepto Salarial";Code[20])
+        field(5; "Concepto Salarial"; Code[20])
         {
             TableRelation = "Conceptos salariales".Código;
         }
-        field(6;"No. orden";Integer)
+        field(6; "No. orden"; Integer)
         {
         }
-        field(7;Descripcion;Text[50])
+        field(7; Descripcion; Text[50])
         {
         }
-        field(8;"% Cotizable";Decimal)
+        field(8; "% Cotizable"; Decimal)
         {
         }
-        field(9;"Base Imponible";Decimal)
+        field(9; "Base Imponible"; Decimal)
         {
         }
-        field(10;Importe;Decimal)
+        field(10; Importe; Decimal)
         {
         }
-        field(11;"Apellidos y Nombre";Text[100])
+        field(11; "Apellidos y Nombre"; Text[100])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(No. Empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("No. Empleado")));
             FieldClass = FlowField;
         }
         field(12;"Tipo Nomina";Option)
@@ -53,8 +53,8 @@ table 34002122 "Lin. Aportes Empresas"
 
             trigger OnValidate()
             var
-                Job: Record "167";
-                Cust: Record "18";
+                Job: Record 167;
+                Cust: Record 18;
             begin
             end;
         }
@@ -91,7 +91,7 @@ table 34002122 "Lin. Aportes Empresas"
     }
 
     var
-        DimMgt: Codeunit "408";
+        DimMgt: Codeunit 408;
 
     procedure ShowDimensions()
     begin

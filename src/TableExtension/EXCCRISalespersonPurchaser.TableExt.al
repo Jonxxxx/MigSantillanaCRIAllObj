@@ -38,13 +38,13 @@ tableextension 50004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
         field(62005; Tipo; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = Vendedor, Cobrador, Supervisor;
+            OptionMembers = Vendedor,Cobrador,Supervisor;
             OptionCaption = 'Sales Person,Collector,Supervisor';
         }
         field(62006; Ruta; Code[20])
         {
             FieldClass = FlowField;
-            CalcFormula = lookup("Promotor - Rutas"."Cod. Ruta" where("Cod. Promotor" = field(Code)));
+            CalcFormula = lookup("Promotor - Rutas"."Cod. Ruta" where("Cod. Promotor" = FIELD("Code")));
         }
         field(67000; "Location code"; Code[20])
         {
@@ -55,7 +55,7 @@ tableextension 50004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
         field(67001; Status; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = " ", Inactivo;
+            OptionMembers = " ",Inactivo;
             OptionCaption = ' ,Inactive';
 
             trigger OnValidate()

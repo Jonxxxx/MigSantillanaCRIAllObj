@@ -54,8 +54,8 @@ page 56009 "Cab. Hoja de Ruta"
             }
             part(; 56010)
             {
-                SubPageLink = No. Hoja Ruta=FIELD("No. Hoja Ruta");
-                    SubPageView = SORTING(No. Hoja Ruta,No. Linea)
+                SubPageLink = "Hoja Ruta" = FIELD("No. Hoja Ruta");
+                SubPageView = SORTING(No. Hoja Ruta, No. Linea)
                               ORDER(Ascending);
             }
         }

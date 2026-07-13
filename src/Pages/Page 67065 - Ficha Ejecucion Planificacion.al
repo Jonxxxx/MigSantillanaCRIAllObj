@@ -254,9 +254,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     RunObject = Page 67136;
-                    RunPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
-                                  "Cod. Colegio"=FIELD("Cod. Colegio"),
-                                  "Area"=CONST(true);
+                    RunPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
+                                  "Cod. Colegio" = FIELD("Cod. Colegio"),
+                                  "Area" = CONST(true);
                 }
                 action(Steps)
                 {
@@ -266,9 +266,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     RunObject = Page 67137;
-                                    RunPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
-                                  "Cod. Colegio"=FIELD("Cod. Colegio"),
-                                  "Paso"=CONST(true);
+                    RunPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
+                                  "Cod. Colegio" = FIELD("Cod. Colegio"),
+                                  "Paso" = CONST(true);
                 }
             }
         }
@@ -289,9 +289,9 @@ page 67065 "Ficha Ejecucion Planificacion"
     var
         Text001: Label 'The planning has been posted';
         Muestras: Page 67038;
-    [InDataSet]
+        [InDataSet]
 
-    TipoCDS: Boolean;
+        TipoCDS: Boolean;
         [InDataSet]
         TipoCDS_2: Boolean;
         [InDataSet]
@@ -308,22 +308,22 @@ page 67065 "Ficha Ejecucion Planificacion"
     begin
 
         recWFprog.RESET;
-        recWFprog.SETRANGE("Cod. Promotor","Cod. Promotor");
+        recWFprog.SETRANGE("Cod. Promotor", "Cod. Promotor");
         recWFprog.SETRANGE("Cod. Colegio", "Cod. Colegio");
         recWFprog.SETRANGE(Programado, TRUE);
         IF recWFprog.FINDFIRST THEN BEGIN
-          recWFobj.RESET;
-          recWFobj.SETRANGE("Cod. Promotor","Cod. Promotor");
-          recWFobj.SETRANGE("Cod. Colegio", "Cod. Colegio");
-          recWFobj.SETRANGE(Area, TRUE);
-          recWFobj.SETRANGE(Mantenimiento,TRUE);
-          IF NOT recWFobj.FINDFIRST THEN BEGIN
-            recWFobj.SETRANGE(Mantenimiento);
-            recWFobj.SETRANGE(Conquista,TRUE);
-            IF NOT recWFobj.FINDFIRST THEN
-              IF NOT CONFIRM(STRSUBSTNO(Texto001,pAccion)) THEN
-                ERROR(Error001);
-          END;
+            recWFobj.RESET;
+            recWFobj.SETRANGE("Cod. Promotor", "Cod. Promotor");
+            recWFobj.SETRANGE("Cod. Colegio", "Cod. Colegio");
+            recWFobj.SETRANGE(Area, TRUE);
+            recWFobj.SETRANGE(Mantenimiento, TRUE);
+            IF NOT recWFobj.FINDFIRST THEN BEGIN
+                recWFobj.SETRANGE(Mantenimiento);
+                recWFobj.SETRANGE(Conquista, TRUE);
+                IF NOT recWFobj.FINDFIRST THEN
+                    IF NOT CONFIRM(STRSUBSTNO(Texto001, pAccion)) THEN
+                        ERROR(Error001);
+            END;
         END;
     end;
 
@@ -337,27 +337,27 @@ page 67065 "Ficha Ejecucion Planificacion"
     begin
 
         recWFobj.RESET;
-        recWFobj.SETRANGE("Cod. Promotor","Cod. Promotor");
+        recWFobj.SETRANGE("Cod. Promotor", "Cod. Promotor");
         recWFobj.SETRANGE("Cod. Colegio", "Cod. Colegio");
         recWFobj.SETRANGE(Area, TRUE);
-        recWFobj.SETRANGE(Mantenimiento,TRUE);
+        recWFobj.SETRANGE(Mantenimiento, TRUE);
         IF NOT recWFobj.FINDFIRST THEN BEGIN
-          recWFobj.SETRANGE(Mantenimiento);
-          recWFobj.SETRANGE(Conquista,TRUE);
+            recWFobj.SETRANGE(Mantenimiento);
+            recWFobj.SETRANGE(Conquista, TRUE);
         END;
         IF recWFobj.FINDFIRST THEN BEGIN
-          recWFpasos.RESET;
-          recWFpasos.SETRANGE("Cod. Promotor","Cod. Promotor");
-          recWFpasos.SETRANGE("Cod. Colegio", "Cod. Colegio");
-          recWFpasos.SETRANGE(Paso, TRUE);
-          recWFpasos.SETRANGE(Resultado,TRUE);
-          IF NOT recWFpasos.FINDFIRST THEN
-            IF NOT CONFIRM(STRSUBSTNO(Texto001,pAccion)) THEN
-              ERROR(Error001);
-          recWFpasos.SETRANGE(Resultado,FALSE);
-          IF recWFpasos.FINDFIRST THEN
-            IF NOT CONFIRM(STRSUBSTNO(Texto002,pAccion)) THEN
-              ERROR(Error001);
+            recWFpasos.RESET;
+            recWFpasos.SETRANGE("Cod. Promotor", "Cod. Promotor");
+            recWFpasos.SETRANGE("Cod. Colegio", "Cod. Colegio");
+            recWFpasos.SETRANGE(Paso, TRUE);
+            recWFpasos.SETRANGE(Resultado, TRUE);
+            IF NOT recWFpasos.FINDFIRST THEN
+                IF NOT CONFIRM(STRSUBSTNO(Texto001, pAccion)) THEN
+                    ERROR(Error001);
+            recWFpasos.SETRANGE(Resultado, FALSE);
+            IF recWFpasos.FINDFIRST THEN
+                IF NOT CONFIRM(STRSUBSTNO(Texto002, pAccion)) THEN
+                    ERROR(Error001);
 
         END;
     end;

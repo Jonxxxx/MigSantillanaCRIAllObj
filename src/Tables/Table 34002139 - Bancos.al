@@ -43,6 +43,6 @@ table 34002139 Bancos
     }
 
     var
-        Bco: Record "270";
+        Bco: Record 270;
 }
 

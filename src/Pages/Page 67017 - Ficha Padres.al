@@ -144,7 +144,7 @@ page 67017 "Ficha Padres"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67019;
-                                    RunPageLink = DNI Padre=FIELD("DNI");
+                                    RunPageLink = "DNI Padre"=FIELD("DNI");
                 }
                 action("&Children")
                 {
@@ -153,7 +153,7 @@ page 67017 "Ficha Padres"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67020;
-                                    RunPageLink = DNI Padre=FIELD("DNI");
+                                    RunPageLink = "DNI Padre"=FIELD("DNI");
                 }
                 separator()
                 {

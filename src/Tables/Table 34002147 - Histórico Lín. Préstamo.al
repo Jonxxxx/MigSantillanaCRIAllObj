@@ -76,6 +76,6 @@ table 34002147 "Histórico Lín. Préstamo"
     }
 
     var
-        HistLinPre: Record "34002147";
+        HistLinPre: Record 34002147;
 }
 

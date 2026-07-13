@@ -31,7 +31,7 @@ table 34002515 "Tipos de Tarjeta"
 
     trigger OnDelete()
     var
-        rFPago: Record "34002513";
+        rFPago: Record 34002513;
     begin
 
         rFPago.RESET;

@@ -1,18 +1,18 @@
 table 34002183 "Cab. Eval. desempeno"
 {
     Caption = 'Performance eval. header';
-    DataCaptionFields = "Code",Description;
+    DataCaptionFields = "Code", Description;
     DrillDownPageID = 5111;
     LookupPageID = 5109;
 
     fields
     {
-        field(1;"Code";Code[20])
+        field(1; "Code"; Code[20])
         {
             Caption = 'Code';
             NotBlank = true;
         }
-        field(2;Description;Text[50])
+        field(2; Description; Text[50])
         {
             Caption = 'Description';
         }
@@ -20,7 +20,7 @@ table 34002183 "Cab. Eval. desempeno"
 
     keys
     {
-        key(Key1;"Code")
+        key(Key1; "Code")
         {
         }
     }
@@ -32,11 +32,11 @@ table 34002183 "Cab. Eval. desempeno"
     trigger OnDelete()
     begin
         LinEvaldesempeno.RESET;
-        LinEvaldesempeno.SETRANGE(Code,Code);
+        LinEvaldesempeno.SETRANGE(Code, Code);
         LinEvaldesempeno.DELETEALL(TRUE);
     end;
 
     var
-        LinEvaldesempeno: Record "34002184";
+        LinEvaldesempeno: Record 34002184;
 }
 

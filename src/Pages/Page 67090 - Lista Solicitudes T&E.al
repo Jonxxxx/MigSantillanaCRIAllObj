@@ -125,7 +125,7 @@ page 67090 "Lista Solicitudes T&E"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67064;
-                    RunPageLink = No. Solicitud=FIELD("No. Solicitud");
+                    RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }
             }
@@ -134,20 +134,19 @@ page 67090 "Lista Solicitudes T&E"
 
     trigger OnAfterGetRecord()
     begin
-        wFechaProp         :=  GetFechaPropuesta();
-        wFechaProg         :=  GetFechaProgramada();
+        wFechaProp := GetFechaPropuesta();
+        wFechaProg := GetFechaProgramada();
     end;
 
     trigger OnOpenPage()
     begin
-        IF CodPromotor <> '' THEN
-           BEGIN
-            SETRANGE("Cod. promotor",CodPromotor);
-           END;
+        IF CodPromotor <> '' THEN BEGIN
+            SETRANGE("Cod. promotor", CodPromotor);
+        END;
 
         IF (CodPromotor = '') AND (recUsuario.GET(USERID)) THEN
-          IF recUsuario."Salespers./Purch. Code" <> '' THEN
-            SETRANGE("Cod. promotor",recUsuario."Salespers./Purch. Code");
+            IF recUsuario."Salespers./Purch. Code" <> '' THEN
+                SETRANGE("Cod. promotor", recUsuario."Salespers./Purch. Code");
     end;
 
     var

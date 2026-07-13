@@ -16,7 +16,7 @@ table 56002 "Config. Max. Lineas Reportes"
         field(3; "Sales Report Name"; Text[80])
         {
             //CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE("Object Type"=CONST(Report),
-            //                                                            Object ID=FIELD("Sales Report ID")));
+            //                                                            "Object ID"=FIELD("Sales Report ID")));
             Caption = 'Check Report Name';
             Editable = false;
             FieldClass = FlowField;

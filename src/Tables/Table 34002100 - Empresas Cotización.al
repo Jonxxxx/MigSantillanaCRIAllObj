@@ -62,46 +62,46 @@ table 34002100 "Empresas Cotización"
         field(11; "Cód. país"; Code[10])
         {
             Description = 'Código de país para personas físicas extranjeras';
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(12;"Tipo de documento";Option)
+        field(12; "Tipo de documento"; Option)
         {
             Description = 'RNC,Cédula,Pasaporte,Otro';
             OptionMembers = "Cédula",Pasaporte;
         }
-        field(13;"RNC/CED";Text[15])
+        field(13; "RNC/CED"; Text[15])
         {
         }
-        field(14;"Grupo contable";Code[10])
+        field(14; "Grupo contable"; Code[10])
         {
             TableRelation = "Distribucion Importes TSS";
         }
-        field(15;"Esquema percepción";Code[10])
+        field(15; "Esquema percepción"; Code[10])
         {
             TableRelation = "Tipos de acciones personal";
         }
-        field(16;Banco;Code[20])
+        field(16; Banco; Code[20])
         {
             TableRelation = Bancos;
         }
-        field(17;Cuenta;Text[20])
+        field(17; Cuenta; Text[20])
         {
             CharAllowed = '09';
         }
-        field(18;"Forma de Pago";Option)
+        field(18; "Forma de Pago"; Option)
         {
             Description = '  ,Efectivo,Cheque,Transferencia Banco';
             OptionMembers = "  ",Efectivo,Cheque,"Transferencia Banc.";
         }
-        field(19;"ID  Volante Pago";Integer)
+        field(19; "ID  Volante Pago"; Integer)
         {
             Description = 'Oficial,Oficial abrev.,Factura,Matriz';
-            TableRelation = Object.ID WHERE (Type=CONST(Report));
+            TableRelation = Object.ID WHERE(Type = CONST(Report));
         }
-        field(20;Comentario;Boolean)
+        field(20; Comentario; Boolean)
         {
-            CalcFormula = Exist("Comentarios nómina" WHERE (Tipo=CONST(Empresa cotización),
-                                                            Código=FIELD(Empresa cotización)));
+            CalcFormula = Exist("Comentarios nómina" WHERE(Tipo = CONST(Empresa cotización),
+                                                            Código=FIELD("Empresa cotización")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -109,7 +109,7 @@ table 34002100 "Empresas Cotización"
         {
             CaptionClass = '1,1,1';
             Caption = 'Global Dimension 1 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
 
             trigger OnValidate()
             begin
@@ -120,7 +120,7 @@ table 34002100 "Empresas Cotización"
         {
             CaptionClass = '1,1,2';
             Caption = 'Global Dimension 2 Code';
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
 
             trigger OnValidate()
             begin
@@ -220,13 +220,13 @@ table 34002100 "Empresas Cotización"
 
     var
         ok: Boolean;
-        Cpostal: Record "225";
+        Cpostal: Record 225;
         numafiliac: Code[10];
         dcafiliac: Code[2];
         numero: Decimal;
         result: Decimal;
-        CentroTrab: Record "34002101";
-        DimMgt: Codeunit "408";
+        CentroTrab: Record 34002101;
+        DimMgt: Codeunit 408;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer;var ShortcutDimCode: Code[20])
     begin

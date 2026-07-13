@@ -40,10 +40,10 @@ page 67072 "Cab. Planificacion Reg."
             part(sfVisitas; 67038)
             {
                 Editable = false;
-                SubPageLink = Cod. Promotor=FIELD("Cod. Promotor"),
-                              "Semana"=FIELD("Semana"),
-                              "Estado"=FILTER(>' ');
-                SubPageView = SORTING(Cod. Promotor,Cod. Colegio,Semana);
+                SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
+                              "Semana" = FIELD("Semana"),
+                              "Estado" = FILTER(> ' ');
+                SubPageView = SORTING(Cod. Promotor, Cod. Colegio, Semana);
             }
         }
     }
@@ -67,18 +67,18 @@ page 67072 "Cab. Planificacion Reg."
                     trigger OnAction()
                     begin
                         Planif.RESET;
-                        Planif.SETRANGE("Cod. Promotor","Cod. Promotor");
-                        Planif.SETRANGE(Semana,Semana);
-                        IF Planif.FINDSET(FALSE,FALSE) THEN
-                           REPEAT
-                             Planif.TESTFIELD(Estado,2);
-                             Planif2.GET("Cod. Promotor",Planif."Cod. Colegio",Semana,Planif."Fecha Visita");
-                             Planif2.Estado := 2;
-                             Planif2.Semana := Semana;
-                             Planif2.MODIFY;
-                           UNTIL Planif.NEXT = 0;
+                        Planif.SETRANGE("Cod. Promotor", "Cod. Promotor");
+                        Planif.SETRANGE(Semana, Semana);
+                        IF Planif.FINDSET(FALSE, FALSE) THEN
+                            REPEAT
+                                Planif.TESTFIELD(Estado, 2);
+                                Planif2.GET("Cod. Promotor", Planif."Cod. Colegio", Semana, Planif."Fecha Visita");
+                                Planif2.Estado := 2;
+                                Planif2.Semana := Semana;
+                                Planif2.MODIFY;
+                            UNTIL Planif.NEXT = 0;
 
-                        CabPlanifReg.GET("Cod. Promotor",Semana);
+                        CabPlanifReg.GET("Cod. Promotor", Semana);
                         CabPlanifReg.Estado := 2;
                         CabPlanifReg.MODIFY;
 

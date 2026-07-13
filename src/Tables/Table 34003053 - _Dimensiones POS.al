@@ -6,21 +6,21 @@ table 34003053 "_Dimensiones POS"
 
     fields
     {
-        field(10;Dimension;Code[20])
+        field(10; Dimension; Code[20])
         {
             NotBlank = true;
             TableRelation = Dimension;
         }
-        field(20;"Valor dimension";Code[10])
+        field(20; "Valor dimension"; Code[10])
         {
             NotBlank = true;
-            TableRelation = "Dimension Value".Code WHERE (Dimension Code=FIELD(Dimension));
+            TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Dimension"));
         }
     }
 
     keys
     {
-        key(Key1;Dimension)
+        key(Key1; Dimension)
         {
         }
     }

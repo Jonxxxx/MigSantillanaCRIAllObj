@@ -3,7 +3,7 @@ table 34002171 "Relacion Empleados - Proyectos"
 
     fields
     {
-        field(1;"Employee No.";Code[20])
+        field(1; "Employee No."; Code[20])
         {
             Caption = 'Employee No.';
             NotBlank = true;
@@ -12,46 +12,46 @@ table 34002171 "Relacion Empleados - Proyectos"
             trigger OnValidate()
             begin
                 IF Employee.GET("Employee No.") THEN
-                   "Full name" := Employee."Full Name";
+                    "Full name" := Employee."Full Name";
             end;
         }
-        field(2;"Job No.";Code[20])
+        field(2; "Job No."; Code[20])
         {
             Caption = 'Job No.';
             TableRelation = Job;
 
             trigger OnValidate()
             var
-                Job: Record "167";
+                Job: Record 167;
             begin
             end;
         }
-        field(3;"Job Task No.";Code[20])
+        field(3; "Job Task No."; Code[20])
         {
             Caption = 'Job Task No.';
-            TableRelation = "Job Task"."Job Task No." WHERE (Job No.=FIELD(Job No.));
+            TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
         }
-        field(4;"Job Line Type";Option)
+        field(4; "Job Line Type"; Option)
         {
             Caption = 'Job Line Type';
             OptionCaption = ' ,Schedule,Contract,Both Schedule and Contract';
             OptionMembers = " ",Schedule,Contract,"Both Schedule and Contract";
         }
-        field(5;"Job Unit Price";Decimal)
+        field(5; "Job Unit Price"; Decimal)
         {
             BlankZero = true;
             Caption = 'Job Unit Price';
         }
-        field(6;"Job Description";Text[60])
+        field(6; "Job Description"; Text[60])
         {
-            CalcFormula = Lookup(Job.Description WHERE (No.=FIELD(Job No.)));
+            CalcFormula = Lookup(Job.Description WHERE(No.=FIELD("Job No.")));
             Caption = 'Job Description';
             FieldClass = FlowField;
         }
         field(7;"Job Task Name";Text[60])
         {
-            CalcFormula = Lookup("Job Task".Description WHERE (Job No.=FIELD(Job No.),
-                                                               Job Task No.=FIELD(Job Task No.)));
+            CalcFormula = Lookup("Job Task".Description WHERE ("Job No."=FIELD("Job No."),
+                                                               "Task No."=FIELD("Job Task No.")));
             Caption = 'Job Task No.';
             FieldClass = FlowField;
         }
@@ -61,7 +61,7 @@ table 34002171 "Relacion Empleados - Proyectos"
 
             trigger OnValidate()
             var
-                RelEmp_Job: Record "34002171";
+                RelEmp_Job: Record 34002171;
                 TotDistrib: Decimal;
             begin
                 TotDistrib := 0;
@@ -97,7 +97,7 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(11;"Full name";Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Employee No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD("Employee No.")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;
@@ -130,9 +130,9 @@ table 34002171 "Relacion Empleados - Proyectos"
     end;
 
     var
-        PerfilSalario: Record "34002115";
+        PerfilSalario: Record 34002115;
         Err001: Label 'The top value allowed must be 100 for the %1';
-        Employee: Record "5200";
-        ConcepSalar: Record "34002111";
+        Employee: Record 5200;
+        ConcepSalar: Record 34002111;
 }
 

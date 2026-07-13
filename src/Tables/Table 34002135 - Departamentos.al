@@ -14,7 +14,7 @@ table 34002135 Departamentos
         }
         field(3; "Total Empleados"; Integer)
         {
-            CalcFormula = Count(Employee WHERE(Departamento = FIELD(Codigo)));
+            CalcFormula = Count(Employee WHERE(Departamento = FIELD("Codigo")));
             Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;
@@ -64,8 +64,8 @@ table 34002135 Departamentos
     end;
 
     var
-        SubDepto: Record "34002136";
-        Emp: Record "5200";
+        SubDepto: Record 34002136;
+        Emp: Record 5200;
         Err001: Label 'You can not delete %1 %2 because there are employees associated to it';
         Err002: Label 'You can not block %1 %2 because there are employees associated to it';
 }

@@ -133,7 +133,7 @@ table 34002109 Contratos
 
             trigger OnValidate()
             var
-                MotivoBaja: Record "5217";
+                MotivoBaja: Record 5217;
             begin
                 IF "Motivo baja" <> '' THEN BEGIN
                     MotivoBaja.GET("Motivo baja");
@@ -288,7 +288,7 @@ table 34002109 Contratos
 
     trigger OnDelete()
     var
-        Contratos: Record "34002109";
+        Contratos: Record 34002109;
     begin
 
         //+MdE
@@ -398,14 +398,14 @@ table 34002109 Contratos
     end;
 
     var
-        Empresa: Record "34002100";
-        Trabajad: Record "5200";
-        TipoContrato: Record "5211";
-        "Cab.nómina": Record "34002117";
-        Cont: Record "34002109";
+        Empresa: Record 34002100;
+        Trabajad: Record 5200;
+        TipoContrato: Record 5211;
+        "Cab.nómina": Record 34002117;
+        Cont: Record 34002109;
         TiempoDurac: Text[30];
-        rCfgNom: Record "34002103";
-        rEmp: Record "5200";
+        rCfgNom: Record 34002103;
+        rEmp: Record 5200;
         Err001: Label 'Can''t change starting date if there are posted payrolls';
         Err002: Label 'You must indicate starting date...';
         Err003: Label 'Length can''t be less than minimun time';
@@ -413,16 +413,16 @@ table 34002109 Contratos
         Err005: Label 'You can''t delete a contract with posted payrolls';
         Err006: Label 'There can only be one active contract per employee';
         FromMdE: Boolean;
-        MdEMngt: Codeunit "56202";
+        MdEMngt: Codeunit 56202;
 
     procedure SetFromMde(New_FromMdE: Boolean)
     begin
         FromMdE := New_FromMdE;
     end;
 
-    local procedure ActualizarEmpleado(Contratos: Record "34002109")
+    local procedure ActualizarEmpleado(Contratos: Record 34002109)
     var
-        Empleado: Record "5200";
+        Empleado: Record 5200;
     begin
 
         //+#001
@@ -457,7 +457,7 @@ table 34002109 Contratos
 
     local procedure ActualizarContrato()
     var
-        Empleado: Record "5200";
+        Empleado: Record 5200;
     begin
 
         //+#001
@@ -481,7 +481,7 @@ table 34002109 Contratos
 
     local procedure EsUltimoContrato(): Boolean
     var
-        Contratos: Record "34002109";
+        Contratos: Record 34002109;
     begin
 
         //+#001

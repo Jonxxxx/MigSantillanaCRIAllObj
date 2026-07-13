@@ -29,7 +29,7 @@ page 67142 "Grupo de Colegios"
                 Promoted = true;
                 PromotedIsBig = true;
                 RunObject = Page 67143;
-                RunPageLink = Cod. grupo=FIELD("Cod. Grupo");
+                RunPageLink = "Cod. grupo" = FIELD("Cod. Grupo");
             }
         }
     }

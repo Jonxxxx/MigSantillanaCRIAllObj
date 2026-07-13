@@ -48,7 +48,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         field(5; "Tipo prestamo"; Code[20])
         {
             Caption = 'Loan type';
-            TableRelation = "Datos adicionales RRHH".Code WHERE(Tipo registro=CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Tipo de préstamo));
         }
         field(6; Importe; Decimal)
         {
@@ -82,7 +82,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD(Employee No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }
@@ -117,10 +117,10 @@ table 34002197 "Cab. Prestamos cooperativa"
     end;
 
     var
-        ConfNominas: Record "34002103";
-        Miembroscooperativa: Record "34002195";
-        Employee: Record "5200";
-        NoSeriesMgt: Codeunit "396";
+        ConfNominas: Record 34002103;
+        Miembroscooperativa: Record 34002195;
+        Employee: Record 5200;
+        NoSeriesMgt: Codeunit 396;
 
     [Scope('Personalization')]
     procedure AssistEdit(): Boolean

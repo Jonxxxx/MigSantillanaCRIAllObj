@@ -42,9 +42,9 @@ page 56005 "Lin. Packing Registrada"
             {
                 Caption = '&Box Content';
                 RunObject = Page 56006;
-                RunPageLink = No. Packing=FIELD("No."),
-                              "No. Caja"=FIELD("No. Caja");
-                RunPageView = SORTING(No. Packing,No. Caja,No. Picking,No. Producto,No. Linea)
+                RunPageLink = "No. Packing" = FIELD("No."),
+                              "No. Caja" = FIELD("No. Caja");
+                RunPageView = SORTING(No. Packing, No. Caja, No. Picking, No. Producto, No. Linea)
                               ORDER(Ascending);
             }
             action("Imprimir Etiqueta")
@@ -75,10 +75,10 @@ page 56005 "Lin. Packing Registrada"
         //CurrPage.SETSELECTIONFILTER(LinPackReg);
 
         LinPackReg.RESET;
-        LinPackReg.SETRANGE("No.","No.");
-        LinPackReg.SETRANGE("No. Caja","No. Caja");
+        LinPackReg.SETRANGE("No.", "No.");
+        LinPackReg.SETRANGE("No. Caja", "No. Caja");
         IF LinPackReg.FINDFIRST THEN
-          REPORT.RUNMODAL(ConfSant."ID Reporte Etiqueta de Caja",FALSE,FALSE,LinPackReg);
+            REPORT.RUNMODAL(ConfSant."ID Reporte Etiqueta de Caja", FALSE, FALSE, LinPackReg);
     end;
 }
 

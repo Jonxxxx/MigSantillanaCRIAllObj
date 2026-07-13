@@ -164,39 +164,39 @@ page 67074 "Cab. Muestras"
             }
             part(TransferLines; 67076)
             {
-                SubPageLink = Document No.=FIELD("No."),
-                              "Derived From Line No."=CONST(0);
+                SubPageLink = "Document No." = FIELD("No."),
+                              "Derived From Line No." = CONST(0);
             }
             group("Transfer-from")
             {
                 Caption = 'Transfer-from';
                 Editable = false;
-                field("Transfer-from Name";"Transfer-from Name")
+                field("Transfer-from Name"; "Transfer-from Name")
                 {
                 }
-                field("Transfer-from Name 2;"Transfer-from Name 2")
+                field("Transfer-from Name 2;"Transfer - from Name 2")
                 {
                 }
-                field("Transfer-from Address";"Transfer-from Address")
+                field("Transfer-from Address"; "Transfer-from Address")
                 {
                 }
-                field("Transfer-from Address 2;"Transfer-from Address 2")
+                field("Transfer-from Address 2;"Transfer - from Address 2")
                 {
                 }
-                field("Transfer-from City";"Transfer-from City")
+                field("Transfer-from City"; "Transfer-from City")
                 {
                 }
-                field("Transfer-from County";"Transfer-from County")
+                field("Transfer-from County"; "Transfer-from County")
                 {
                     Caption = 'Transfer-from State / ZIP Code';
                 }
-                field("Transfer-from Post Code";"Transfer-from Post Code")
+                field("Transfer-from Post Code"; "Transfer-from Post Code")
                 {
                 }
-                field("Transfer-from Contact";"Transfer-from Contact")
+                field("Transfer-from Contact"; "Transfer-from Contact")
                 {
                 }
-                field("Shipment Date";"Shipment Date")
+                field("Shipment Date"; "Shipment Date")
                 {
 
                     trigger OnValidate()
@@ -204,7 +204,7 @@ page 67074 "Cab. Muestras"
                         ShipmentDateOnAfterValidate;
                     end;
                 }
-                field("Outbound Whse. Handling Time";"Outbound Whse. Handling Time")
+                field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
                 {
 
                     trigger OnValidate()
@@ -212,10 +212,10 @@ page 67074 "Cab. Muestras"
                         OutboundWhseHandlingTimeOnAfte;
                     end;
                 }
-                field("Shipment Method Code";"Shipment Method Code")
+                field("Shipment Method Code"; "Shipment Method Code")
                 {
                 }
-                field("Shipping Agent Code";"Shipping Agent Code")
+                field("Shipping Agent Code"; "Shipping Agent Code")
                 {
 
                     trigger OnValidate()
@@ -223,7 +223,7 @@ page 67074 "Cab. Muestras"
                         ShippingAgentCodeOnAfterValida;
                     end;
                 }
-                field("Shipping Agent Service Code";"Shipping Agent Service Code")
+                field("Shipping Agent Service Code"; "Shipping Agent Service Code")
                 {
 
                     trigger OnValidate()
@@ -231,7 +231,7 @@ page 67074 "Cab. Muestras"
                         ShippingAgentServiceCodeOnAfte;
                     end;
                 }
-                field("Shipping Time";"Shipping Time")
+                field("Shipping Time"; "Shipping Time")
                 {
 
                     trigger OnValidate()
@@ -239,7 +239,7 @@ page 67074 "Cab. Muestras"
                         ShippingTimeOnAfterValidate;
                     end;
                 }
-                field("Shipping Advice";"Shipping Advice")
+                field("Shipping Advice"; "Shipping Advice")
                 {
                 }
             }
@@ -247,32 +247,32 @@ page 67074 "Cab. Muestras"
             {
                 Caption = 'Transfer-to';
                 Editable = false;
-                field("Transfer-to Name";"Transfer-to Name")
+                field("Transfer-to Name"; "Transfer-to Name")
                 {
                 }
-                field("Transfer-to Name 2;"Transfer-to Name 2")
+                field("Transfer-to Name 2;"Transfer -to Name 2")
                 {
                 }
-                field("Transfer-to Address";"Transfer-to Address")
+                field("Transfer-to Address"; "Transfer-to Address")
                 {
                 }
-                field("Transfer-to Address 2;"Transfer-to Address 2")
+                field("Transfer-to Address 2;"Transfer -to Address 2")
                 {
                 }
-                field("Transfer-to City";"Transfer-to City")
+                field("Transfer-to City"; "Transfer-to City")
                 {
                 }
-                field("Transfer-to County";"Transfer-to County")
+                field("Transfer-to County"; "Transfer-to County")
                 {
                     Caption = 'Transfer-to State / ZIP Code';
                 }
-                field("Transfer-to Post Code";"Transfer-to Post Code")
+                field("Transfer-to Post Code"; "Transfer-to Post Code")
                 {
                 }
-                field("Transfer-to Contact";"Transfer-to Contact")
+                field("Transfer-to Contact"; "Transfer-to Contact")
                 {
                 }
-                field("Receipt Date";"Receipt Date")
+                field("Receipt Date"; "Receipt Date")
                 {
 
                     trigger OnValidate()
@@ -280,7 +280,7 @@ page 67074 "Cab. Muestras"
                         ReceiptDateOnAfterValidate;
                     end;
                 }
-                field("Inbound Whse. Handling Time";"Inbound Whse. Handling Time")
+                field("Inbound Whse. Handling Time"; "Inbound Whse. Handling Time")
                 {
 
                     trigger OnValidate()
@@ -293,18 +293,18 @@ page 67074 "Cab. Muestras"
             {
                 Caption = 'Foreign Trade';
                 Editable = false;
-                field("Transaction Type";"Transaction Type")
+                field("Transaction Type"; "Transaction Type")
                 {
                 }
-                field("Transaction Specification";"Transaction Specification")
+                field("Transaction Specification"; "Transaction Specification")
                 {
                 }
-                field("Transport Method";"Transport Method")
+                field("Transport Method"; "Transport Method")
                 {
                 }
                 field(Area;Area)
-                {
-                }
+        {
+        }
                 field("Entry/Exit Point";"Entry/Exit Point")
                 {
                 }
@@ -334,21 +334,21 @@ page 67074 "Cab. Muestras"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5750;
-                                    RunPageLink = Document Type=CONST("Transfer Order"),
+                                    RunPageLink = "Document Type"=CONST("Transfer Order"),
                                   "No."=FIELD("No.");
                 }
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 5752;
-                                    RunPageLink = Transfer Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                 }
                 action("Re&ceipts")
                 {
                     Caption = 'Re&ceipts';
                     Image = PostedReceipts;
                     RunObject = Page 5753;
-                                    RunPageLink = Transfer Order No.=FIELD("No.");
+                                    RunPageLink = "Order No."=FIELD("No.");
                 }
                 action(Dimensions)
                 {
@@ -366,7 +366,7 @@ page 67074 "Cab. Muestras"
                 {
                     Caption = 'Whse. Shi&pments';
                     RunObject = Page 7341;
-                                    RunPageLink = Source Type=CONST(5741),
+                                    RunPageLink = "Source Type"=CONST(5741),
                                   "Source Subtype"=CONST(0),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
@@ -375,7 +375,7 @@ page 67074 "Cab. Muestras"
                 {
                     Caption = '&Whse. Receipts';
                     RunObject = Page 7342;
-                                    RunPageLink = Source Type=CONST(5741),
+                                    RunPageLink = "Source Type"=CONST(5741),
                                   "Source Subtype"=CONST(1),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
@@ -384,7 +384,7 @@ page 67074 "Cab. Muestras"
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
-                                    RunPageLink = Source Document=FILTER(Inbound Transfer|Outbound Transfer),
+                                    RunPageLink = "Source Document"=FILTER(Inbound Transfer|Outbound Transfer),
                                   "Source No."=FIELD("No.");
                     RunPageView = SORTING(Source Document,Source No.,Location Code);
                 }

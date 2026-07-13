@@ -137,12 +137,12 @@ table 34002164 Elegibles
         field(23; "Country/Region Code"; Code[10])
         {
             Caption = 'Country/Region Code';
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(24;Comment;Boolean)
+        field(24; Comment; Boolean)
         {
-            CalcFormula = Exist("Human Resource Comment Line" WHERE (Table Name=CONST(Employee),
-                                                                     No.=FIELD(No.)));
+            CalcFormula = Exist("Human Resource Comment Line" WHERE("Table Name" = CONST(Employee),
+                                                                     No.=FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
@@ -157,14 +157,14 @@ table 34002164 Elegibles
             CaptionClass = '1,3,1';
             Caption = 'Global Dimension 1 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(1));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(1));
         }
         field(28;"Global Dimension 2 Filter";Code[20])
         {
             CaptionClass = '1,3,2';
             Caption = 'Global Dimension 2 Filter';
             FieldClass = FlowFilter;
-            TableRelation = "Dimension Value".Code WHERE (Global Dimension No.=CONST(2));
+            TableRelation = "Dimension Value".Code WHERE ("Global Dimension No."=CONST(2));
         }
         field(29;Extension;Text[30])
         {
@@ -235,7 +235,7 @@ table 34002164 Elegibles
         }
         field(40;Nacionalidad;Code[10])
         {
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
         field(41;"Lugar nacimiento";Text[30])
         {
@@ -271,7 +271,7 @@ table 34002164 Elegibles
 
             trigger OnValidate()
             var
-                Contract: Record "34002109";
+                Contract: Record 34002109;
             begin
 
                 Cargo.RESET;
@@ -304,9 +304,9 @@ table 34002164 Elegibles
 
     trigger OnDelete()
     var
-        Contrato: Record "34002109";
-        PerfilSal: Record "34002115";
-        HistNom: Record "34002117";
+        Contrato: Record 34002109;
+        PerfilSal: Record 34002115;
+        HistNom: Record 34002117;
     begin
         AlternativeAddr.SETRANGE("Employee No.","No.");
         AlternativeAddr.DELETEALL;
@@ -364,30 +364,30 @@ table 34002164 Elegibles
     end;
 
     var
-        HumanResSetup: Record "5218";
-        Candidato: Record "34002164";
-        Cargo: Record "34002110";
-        Res: Record "156";
-        PostCode: Record "225";
-        AlternativeAddr: Record "5201";
-        EmployeeQualification: Record "5203";
-        Relative: Record "5205";
-        MiscArticleInformation: Record "5214";
-        ConfidentialInformation: Record "5216";
-        HumanResComment: Record "5208";
-        SalespersonPurchaser: Record "13";
-        ConfNominas: Record "34002103";
-        Numeradorescomunes: Record "34002182";
-        NoSeriesMgt: Codeunit "396";
-        DimMgt: Codeunit "408";
+        HumanResSetup: Record 5218;
+        Candidato: Record 34002164;
+        Cargo: Record 34002110;
+        Res: Record 156;
+        PostCode: Record 225;
+        AlternativeAddr: Record 5201;
+        EmployeeQualification: Record 5203;
+        Relative: Record 5205;
+        MiscArticleInformation: Record 5214;
+        ConfidentialInformation: Record 5216;
+        HumanResComment: Record 5208;
+        SalespersonPurchaser: Record 13;
+        ConfNominas: Record 34002103;
+        Numeradorescomunes: Record 34002182;
+        NoSeriesMgt: Codeunit 396;
+        DimMgt: Codeunit 408;
         Text000: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         Err001: Label 'This Account No. already exist for candidate %1';
         Err002: Label 'This employee has posted payroll, you can not delete it';
-        FuncNominas: Codeunit "34002104";
+        FuncNominas: Codeunit 34002104;
         Err003: Label 'This %1 already exist for the candidate %2 %3';
         Err004: Label '$1 is invalid, please verify';
 
-    procedure AssistEdit(OldEmployee: Record "34002164"): Boolean
+    procedure AssistEdit(OldEmployee: Record 34002164): Boolean
     begin
         /*
         WITH Employee DO BEGIN
@@ -436,8 +436,8 @@ table 34002164 Elegibles
 
     procedure DisplayMap()
     var
-        MapPoint: Record "800";
-        MapMgt: Codeunit "802";
+        MapPoint: Record 800;
+        MapMgt: Codeunit 802;
     begin
         IF MapPoint.FIND('-') THEN
           MapMgt.SetupDefault

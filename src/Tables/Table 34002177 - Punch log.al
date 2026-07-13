@@ -3,34 +3,34 @@ table 34002177 "Punch log"
 
     fields
     {
-        field(1;"Cod. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
             TableRelation = Employee;
         }
-        field(2;"Fecha registro";Date)
+        field(2; "Fecha registro"; Date)
         {
         }
-        field(3;"Hora registro";Time)
+        field(3; "Hora registro"; Time)
         {
         }
-        field(4;"No. tarjeta";Code[10])
+        field(4; "No. tarjeta"; Code[10])
         {
         }
-        field(5;"ID Equipo";Code[10])
+        field(5; "ID Equipo"; Code[10])
         {
         }
-        field(6;Procesado;Boolean)
+        field(6; Procesado; Boolean)
         {
         }
-        field(7;"Full name";Text[60])
+        field(7; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             FieldClass = FlowField;
         }
         field(8;"Job Title";Text[60])
         {
-            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD("Cod. Empleado")));
             Caption = 'Job Title';
             FieldClass = FlowField;
         }
@@ -55,11 +55,11 @@ table 34002177 "Punch log"
         field(10;"Job Task No.";Code[20])
         {
             Caption = 'Job Task No.';
-            TableRelation = "Job Task"."Job Task No." WHERE (Job No.=FIELD(Job No.));
+            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
 
             trigger OnValidate()
             var
-                JobTask: Record "1001";
+                JobTask: Record 1001;
             begin
                 TESTFIELD("Job No.");
                 IF "Job Task No." <> '' THEN
@@ -83,7 +83,7 @@ table 34002177 "Punch log"
     }
 
     var
-        Job: Record "167";
-        Cust: Record "18";
+        Job: Record 167;
+        Cust: Record 18;
 }
 

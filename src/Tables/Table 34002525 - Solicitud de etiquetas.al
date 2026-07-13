@@ -44,8 +44,8 @@ table 34002525 "Solicitud de etiquetas"
 
             trigger OnValidate()
             var
-                rItemCrossRef: Record "5717";
-                rItem: Record "27";
+                rItemCrossRef: Record 5717;
+                rItem: Record 27;
             begin
                 rItemCrossRef.RESET;
                 rItemCrossRef.SETCURRENTKEY(rItemCrossRef."Cross-Reference No.");
@@ -65,7 +65,7 @@ table 34002525 "Solicitud de etiquetas"
 
             trigger OnValidate()
             var
-                rItem: Record "27";
+                rItem: Record 27;
             begin
                 IF rItem.GET("No. producto") THEN
                     "Descripcion producto" := rItem.Description;

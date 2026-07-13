@@ -4,13 +4,13 @@ table 34002160 "Control de asistencia"
 
     fields
     {
-        field(1;"Cod. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
             Caption = 'Employee no.';
             NotBlank = true;
-            TableRelation = Employee WHERE (Status=CONST(Active));
+            TableRelation = Employee WHERE(Status = CONST(Active));
         }
-        field(2;"Fecha registro";Date)
+        field(2; "Fecha registro"; Date)
         {
             Caption = 'Posting date';
             NotBlank = true;
@@ -18,38 +18,38 @@ table 34002160 "Control de asistencia"
             trigger OnValidate()
             begin
                 Fecha.RESET;
-                Fecha.SETRANGE("Period Type",Fecha."Period Type"::Date);
-                Fecha.SETRANGE(Fecha."Period Start","Fecha registro");
+                Fecha.SETRANGE("Period Type", Fecha."Period Type"::Date);
+                Fecha.SETRANGE(Fecha."Period Start", "Fecha registro");
                 Fecha.FINDFIRST;
                 "Nombre dia" := Fecha."Period Name";
             end;
         }
-        field(3;"Hora registro";Time)
+        field(3; "Hora registro"; Time)
         {
             Caption = 'Posting time';
             NotBlank = true;
         }
-        field(4;"No. tarjeta";Code[10])
+        field(4; "No. tarjeta"; Code[10])
         {
             Caption = 'Card ID';
         }
-        field(5;"ID Equipo";Code[10])
+        field(5; "ID Equipo"; Code[10])
         {
             Caption = 'TA system ID';
         }
-        field(6;Procesado;Boolean)
+        field(6; Procesado; Boolean)
         {
             Caption = 'Processced';
         }
-        field(7;"Full name";Text[60])
+        field(7; "Full name"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             FieldClass = FlowField;
         }
         field(8;"Job Title";Text[60])
         {
-            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD("Cod. Empleado")));
             Caption = 'Job Title';
             FieldClass = FlowField;
         }
@@ -140,8 +140,8 @@ table 34002160 "Control de asistencia"
         }
         field(24;"Total Horas imputadas";Duration)
         {
-            CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE (Cod. Empleado=FIELD(Cod. Empleado),
-                                                                              Fecha registro=FIELD(Fecha registro)));
+            CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE ("Cod. Empleado"=FIELD("Cod. Empleado"),
+                                                                              "Fecha registro"=FIELD("Fecha registro")));
             Caption = 'Total Input hours';
             Editable = false;
             FieldClass = FlowField;
@@ -185,15 +185,15 @@ table 34002160 "Control de asistencia"
     end;
 
     var
-        ConfNominas: Record "34002103";
-        Emp: Record "5200";
-        CA: Record "34002160";
-        DCA: Record "34002163";
-        Calendario: Record "34002155";
-        CalTurno: Record "34002180";
-        Fecha: Record "2000000007";
-        Cargo: Record "34002110";
-        FuncionesNom: Codeunit "34002104";
+        ConfNominas: Record 34002103;
+        Emp: Record 5200;
+        CA: Record 34002160;
+        DCA: Record 34002163;
+        Calendario: Record 34002155;
+        CalTurno: Record 34002180;
+        Fecha: Record 2000000007;
+        Cargo: Record 34002110;
+        FuncionesNom: Codeunit 34002104;
         Horatexto: Text[60];
         Err003: Label 'The amount of %1 exceeds the daily limit of the working day';
         Err004: Label 'You can not have %1 if %2 does not have full day';
@@ -208,7 +208,7 @@ table 34002160 "Control de asistencia"
 
     local procedure CalculaHoras()
     var
-        Fecha: Record "2000000007";
+        Fecha: Record 2000000007;
         Duracion: Duration;
         dHoras: Decimal;
         tHoras: Decimal;

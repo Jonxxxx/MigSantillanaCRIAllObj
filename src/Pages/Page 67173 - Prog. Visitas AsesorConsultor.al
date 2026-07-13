@@ -40,8 +40,8 @@ page 67173 "Prog. Visitas Asesor/Consultor"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67176;
-                    RunPageLink = No. Visita=FIELD("No. Visita"),
-                                  "No. Linea Progr."=FIELD("No. Linea");
+                    RunPageLink = "No. Visita" = FIELD("No. Visita"),
+                                  "No. Linea Progr." = FIELD("No. Linea");
                 }
             }
         }
@@ -50,15 +50,15 @@ page 67173 "Prog. Visitas Asesor/Consultor"
     trigger OnOpenPage()
     begin
 
-        wVisita :=  GETFILTER("No. Visita");
+        wVisita := GETFILTER("No. Visita");
 
         IF wVisita = '' THEN
-          ERROR(Err001);
+            ERROR(Err001);
 
         CurrPage.EDITABLE := FALSE;
         IF rVisita.GET(wVisita) THEN
-          IF rVisita.Estado = rVisita.Estado::Programada THEN
-            CurrPage.EDITABLE := TRUE;
+            IF rVisita.Estado = rVisita.Estado::Programada THEN
+                CurrPage.EDITABLE := TRUE;
     end;
 
     var

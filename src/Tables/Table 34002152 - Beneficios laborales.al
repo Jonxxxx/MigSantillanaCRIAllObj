@@ -15,8 +15,8 @@ table 34002152 "Beneficios laborales"
         field(3; Codigo; Code[20])
         {
             Caption = 'Code';
-            TableRelation = IF (Tipo Beneficio=CONST(Ingresos)) "Conceptos salariales".Código WHERE (Tipo concepto=CONST(Ingresos))
-                            ELSE IF (Tipo Beneficio=CONST(Otro)) "Datos adicionales RRHH".Code WHERE (Tipo registro=CONST(Beneficio));
+            TableRelation = IF ("Tipo Beneficio" = CONST(Ingresos)) "Conceptos salariales".Código WHERE("Tipo concepto" = CONST(Ingresos))
+            ELSE IF ("Tipo Beneficio" = CONST(Otro)) "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Beneficio));
 
             trigger OnValidate()
             begin
@@ -56,7 +56,7 @@ table 34002152 "Beneficios laborales"
     }
 
     var
-        Conceptossalariales: Record "34002111";
-        DatosadicionalesRRHH: Record "34002151";
+        Conceptossalariales: Record 34002111;
+        DatosadicionalesRRHH: Record 34002151;
 }
 

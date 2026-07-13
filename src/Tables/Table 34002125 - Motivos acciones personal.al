@@ -5,27 +5,27 @@ table 34002125 "Motivos acciones personal"
 
     fields
     {
-        field(1;"Tipo de accion";Option)
+        field(1; "Tipo de accion"; Option)
         {
             Caption = 'Action type';
             DataClassification = ToBeClassified;
             OptionCaption = ' ,Hiring,Change,Quit';
             OptionMembers = " ",Ingreso,Cambio,Salida;
         }
-        field(2;Codigo;Code[20])
+        field(2; Codigo; Code[20])
         {
             DataClassification = ToBeClassified;
         }
-        field(3;Descripcion;Text[30])
+        field(3; Descripcion; Text[30])
         {
             DataClassification = ToBeClassified;
         }
-        field(4;"Emitir documento";Boolean)
+        field(4; "Emitir documento"; Boolean)
         {
             Caption = 'Print document';
             DataClassification = ToBeClassified;
         }
-        field(5;"ID Documento";Integer)
+        field(5; "ID Documento"; Integer)
         {
             Caption = 'Document ID';
             DataClassification = ToBeClassified;
@@ -34,7 +34,7 @@ table 34002125 "Motivos acciones personal"
 
     keys
     {
-        key(Key1;"Tipo de accion",Codigo)
+        key(Key1; "Tipo de accion", Codigo)
         {
         }
     }
@@ -44,6 +44,6 @@ table 34002125 "Motivos acciones personal"
     }
 
     var
-        Incentivo: Record "34002126";
+        Incentivo: Record 34002126;
 }
 

@@ -78,7 +78,7 @@ page 67024 "Ficha Editoras"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67025;
-                                    RunPageLink = Cod. Editorial=FIELD("Code");
+                                    RunPageLink = "Cod. Editorial"=FIELD("Code");
                 }
             }
         }

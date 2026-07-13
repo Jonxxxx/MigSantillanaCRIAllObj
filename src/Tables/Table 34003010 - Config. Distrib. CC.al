@@ -3,13 +3,13 @@ table 34003010 "Config. Distrib. CC"
 
     fields
     {
-        field(1;"Cta. Contable";Code[20])
+        field(1; "Cta. Contable"; Code[20])
         {
             TableRelation = "G/L Account";
         }
-        field(2;"Descripcion Cta. Contable";Text[150])
+        field(2; "Descripcion Cta. Contable"; Text[150])
         {
-            CalcFormula = Lookup("G/L Account".Name WHERE (No.=FIELD(Cta. Contable)));
+            CalcFormula = Lookup("G/L Account".Name WHERE(No.=FIELD("Cta. Contable")));
             FieldClass = FlowField;
         }
         field(3;"Dimension Code";Code[20])
@@ -20,7 +20,7 @@ table 34003010 "Config. Distrib. CC"
         }
         field(4;Codigo;Code[20])
         {
-            TableRelation = "Dimension Value".Code WHERE (Dimension Code=FIELD(Dimension Code));
+            TableRelation = "Dimension Value".Code WHERE ("Dimension Code"=FIELD("Dimension Code"));
         }
         field(5;Descripcion;Text[50])
         {
@@ -30,7 +30,7 @@ table 34003010 "Config. Distrib. CC"
 
             trigger OnValidate()
             var
-                ConfCC: Record "34003010";
+                ConfCC: Record 34003010;
                 "%Total": Decimal;
             begin
                 "%Total" := "% a distribuir";

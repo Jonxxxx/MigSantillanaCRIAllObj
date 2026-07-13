@@ -36,29 +36,29 @@ table 34002174 "Payroll - Job Journal Template"
         }
         field(13; "Test Report Caption"; Text[250])
         {
-            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE(Object Type=CONST(Report),
-                                                                           Object ID=FIELD(Test Report ID)));
+            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE("Object Type" = CONST(Report),
+                                                                           "Object ID" = FIELD("Test Report ID")));
             Caption = 'Test Report Caption';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(14;"Page Caption";Text[250])
+        field(14; "Page Caption"; Text[250])
         {
-            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE (Object Type=CONST(Page),
-                                                                           Object ID=FIELD(Page ID)));
+            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE("Object Type" = CONST(Page),
+                                                                           "Object ID" = FIELD("Page ID")));
             Caption = 'Page Caption';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(15;"Posting Report Caption";Text[250])
+        field(15; "Posting Report Caption"; Text[250])
         {
-            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE (Object Type=CONST(Report),
-                                                                           Object ID=FIELD(Posting Report ID)));
+            CalcFormula = Lookup(AllObjWithCaption."Object Caption" WHERE("Object Type" = CONST(Report),
+                                                                           "Object ID" = FIELD("Posting Report ID")));
             Caption = 'Posting Report Caption';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(16;"No. Series";Code[10])
+        field(16; "No. Series"; Code[10])
         {
             Caption = 'No. Series';
             TableRelation = "No. Series";
@@ -79,7 +79,7 @@ table 34002174 "Payroll - Job Journal Template"
 
             end;
         }
-        field(17;"Posting No. Series";Code[10])
+        field(17; "Posting No. Series"; Code[10])
         {
             Caption = 'Posting No. Series';
             TableRelation = "No. Series";
@@ -97,7 +97,7 @@ table 34002174 "Payroll - Job Journal Template"
 
     keys
     {
-        key(Key1;Name)
+        key(Key1; Name)
         {
         }
     }
@@ -107,8 +107,8 @@ table 34002174 "Payroll - Job Journal Template"
     }
 
     var
-        JobJnlBatch: Record "34002173";
-        JobJnlLine: Record "34002172";
-        SourceCodeSetup: Record "242";
+        JobJnlBatch: Record 34002173;
+        JobJnlLine: Record 34002172;
+        SourceCodeSetup: Record 242;
 }
 

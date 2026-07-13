@@ -17,7 +17,7 @@ table 34002111 "Conceptos salariales"
 
             trigger OnLookup()
             var
-                PageDefDim: Page "560";
+                PageDefDim: Page 560;
             begin
                 ConfNominas.GET();
                 ConfNominas.TESTFIELD("Dimension Conceptos Salariales");
@@ -105,8 +105,8 @@ table 34002111 "Conceptos salariales"
         }
         field(12; "No. Cuenta Cuota Obrera"; Text[20])
         {
-            TableRelation = IF (Tipo Cuenta Cuota Obrera=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Cuota Obrera=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Obrera" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Cuota Obrera" = CONST(Proveedor)) Vendor.No.;
 
             trigger OnValidate()
             begin
@@ -191,8 +191,8 @@ table 34002111 "Conceptos salariales"
         }
         field(23; "No. Cuenta Cuota Patronal"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Cuota Patronal=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Cuota Patronal=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Patronal" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Cuota Patronal" = CONST(Proveedor)) Vendor.No.;
         }
         field(24; "Tipo Cuenta Contrapartida CO"; Option)
         {
@@ -201,8 +201,8 @@ table 34002111 "Conceptos salariales"
         }
         field(25; "No. Cuenta Contrapartida CO"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Contrapartida CO=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Contrapartida CO=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CO" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Contrapartida CO" = CONST(Proveedor)) Vendor.No.;
 
             trigger OnValidate()
             begin
@@ -219,8 +219,8 @@ table 34002111 "Conceptos salariales"
         }
         field(27; "No. Cuenta Contrapartida CP"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Contrapartida CP=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Contrapartida CP=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CP" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Contrapartida CP" = CONST(Proveedor)) Vendor.No.;
 
             trigger OnValidate()
             begin
@@ -321,7 +321,7 @@ table 34002111 "Conceptos salariales"
 
     trigger OnDelete()
     var
-        EquivNavMde: Record "56201";
+        EquivNavMde: Record 56201;
     begin
         Utilizado := FALSE;
 
@@ -359,18 +359,18 @@ table 34002111 "Conceptos salariales"
     end;
 
     var
-        ConfNominas: Record "34002103";
-        DimValue: Record "349";
-        ConceptosSal: Record "34002111";
+        ConfNominas: Record 34002103;
+        DimValue: Record 349;
+        ConceptosSal: Record 34002111;
         Err001: Label 'This value it''s only allowed once';
         Err002: Label 'This account is selected direct from the employee''s card for %1 %2';
         Err003: Label 'Thsi Wedge has been use in payrolls, it can not be deleted';
         Text000: Label 'There are Posted Payroll with this Wedge, do you want to update the parameters?';
         Text001: Label 'Do you want to update the parameter for the Wedges schemas?';
         Text002: Label 'Updating  #1########## @2@@@@@@@@@@@@@';
-        DistCtaGpoCont: Record "34002105";
-        PS: Record "34002115";
-        HLN: Record "34002118";
+        DistCtaGpoCont: Record 34002105;
+        PS: Record 34002115;
+        HLN: Record 34002118;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -390,7 +390,7 @@ table 34002111 "Conceptos salariales"
 
     procedure ValidaHistorico(Procedencia: Integer)
     var
-        HLN: Record "34002118";
+        HLN: Record 34002118;
     begin
         HLN.RESET;
         HLN.SETRANGE("Concepto salarial", Código);
@@ -436,8 +436,8 @@ table 34002111 "Conceptos salariales"
 
     procedure ValidaPerfiles(Procedencia: Integer)
     var
-        PSxC: Record "34002113";
-        LPS: Record "34002115";
+        PSxC: Record 34002113;
+        LPS: Record 34002115;
     begin
         /*
         PSxC.RESET;

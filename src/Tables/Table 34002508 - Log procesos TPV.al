@@ -7,74 +7,74 @@ table 34002508 "Log procesos TPV"
 
     fields
     {
-        field(1;"No. Log";Integer)
+        field(1; "No. Log"; Integer)
         {
         }
-        field(2;"ID Proceso";Option)
+        field(2; "ID Proceso"; Option)
         {
             OptionMembers = Registrar,"Nueva Venta","Anular Factura","Eliminar Linea",Duplicacion,Serie,"Cambio Almacen",Cupon;
         }
-        field(3;"Punto de proceso";Integer)
+        field(3; "Punto de proceso"; Integer)
         {
             Description = 'Este valor, identifica el último punto de proceso realizado. Su valor se refleja en el código.';
         }
-        field(10;"Tipo Documento";Option)
+        field(10; "Tipo Documento"; Option)
         {
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";
         }
-        field(11;"ID. Cab Venta";Code[20])
+        field(11; "ID. Cab Venta"; Code[20])
         {
         }
-        field(12;"ID. Historico";Code[20])
+        field(12; "ID. Historico"; Code[20])
         {
         }
-        field(14;"No. Fiscal TPV";Code[50])
-        {
-            TableRelation = Tiendas;
-        }
-        field(15;"No. comprobante fiscal";Code[50])
-        {
-            TableRelation = "Configuracion TPV"."Id TPV";
-        }
-        field(19;"Texto Error";Text[150])
-        {
-        }
-        field(20;Tienda;Code[20])
+        field(14; "No. Fiscal TPV"; Code[50])
         {
             TableRelation = Tiendas;
         }
-        field(21;TPV;Code[20])
+        field(15; "No. comprobante fiscal"; Code[50])
         {
             TableRelation = "Configuracion TPV"."Id TPV";
         }
-        field(25;Cupon;Code[20])
+        field(19; "Texto Error"; Text[150])
+        {
+        }
+        field(20; Tienda; Code[20])
+        {
+            TableRelation = Tiendas;
+        }
+        field(21; TPV; Code[20])
+        {
+            TableRelation = "Configuracion TPV"."Id TPV";
+        }
+        field(25; Cupon; Code[20])
         {
             Description = '#328529 - El Salvador';
         }
-        field(30;"Fecha creacion";Date)
+        field(30; "Fecha creacion"; Date)
         {
         }
-        field(31;"Hora creacion";Time)
+        field(31; "Hora creacion"; Time)
         {
         }
-        field(32;Usuario;Text[50])
+        field(32; Usuario; Text[50])
         {
         }
-        field(33;"Fecha modificacion";Date)
+        field(33; "Fecha modificacion"; Date)
         {
         }
-        field(34;"Hora modificacion";Time)
+        field(34; "Hora modificacion"; Time)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Log")
+        key(Key1; "No. Log")
         {
         }
-        key(Key2;Tienda,TPV,Cupon)
+        key(Key2; Tienda, TPV, Cupon)
         {
         }
     }
@@ -85,24 +85,24 @@ table 34002508 "Log procesos TPV"
 
     trigger OnInsert()
     var
-        rLog: Record "34002508";
+        rLog: Record 34002508;
     begin
         rLog.RESET;
         rLog.SETCURRENTKEY("No. Log");
         IF rLog.FINDLAST THEN
-          "No. Log" := rLog."No. Log" + 1
+            "No. Log" := rLog."No. Log" + 1
         ELSE
-          "No. Log" := 1;
+            "No. Log" := 1;
 
         "Fecha creacion" := TODAY;
-        "Hora creacion"  := TIME;
-        Usuario          := COPYSTR(USERID,1,MAXSTRLEN(Usuario));
+        "Hora creacion" := TIME;
+        Usuario := COPYSTR(USERID, 1, MAXSTRLEN(Usuario));
     end;
 
     trigger OnModify()
     begin
         "Fecha modificacion" := TODAY;
-        "Hora modificacion"  := TIME;
+        "Hora modificacion" := TIME;
     end;
 }
 

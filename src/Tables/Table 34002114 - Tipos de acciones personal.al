@@ -75,6 +75,6 @@ table 34002114 "Tipos de acciones personal"
     }
 
     var
-        LinEsquema: Record "34002115";
+        LinEsquema: Record 34002115;
 }
 

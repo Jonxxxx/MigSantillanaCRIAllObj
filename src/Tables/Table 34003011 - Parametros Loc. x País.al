@@ -4,49 +4,49 @@ table 34003011 "Parametros Loc. x País"
 
     fields
     {
-        field(1;"País";Code[20])
+        field(1; "País"; Code[20])
         {
             Caption = 'Country';
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(2;"NCF Activado";Boolean)
+        field(2; "NCF Activado"; Boolean)
         {
             Caption = 'NCF Activated';
         }
-        field(3;"Control Lin. por Factura";Boolean)
+        field(3; "Control Lin. por Factura"; Boolean)
         {
             Caption = 'Control Lines per Invoice';
         }
-        field(4;"Cantidad Lin. por factura";Integer)
+        field(4; "Cantidad Lin. por factura"; Integer)
         {
             Caption = 'Line Qty. per Invoice';
         }
-        field(5;"Re facturacion";Boolean)
+        field(5; "Re facturacion"; Boolean)
         {
             Caption = 'Re Invoicing';
         }
-        field(6;"Caption Depto";Text[30])
+        field(6; "Caption Depto"; Text[30])
         {
         }
-        field(7;"Caption Sub Depto";Text[30])
+        field(7; "Caption Sub Depto"; Text[30])
         {
         }
-        field(8;"Caption ISR";Text[30])
+        field(8; "Caption ISR"; Text[30])
         {
         }
-        field(9;"Caption INFOTEP";Text[30])
+        field(9; "Caption INFOTEP"; Text[30])
         {
         }
-        field(10;"Caption AFP";Text[30])
+        field(10; "Caption AFP"; Text[30])
         {
         }
-        field(11;"Caption SFS";Text[30])
+        field(11; "Caption SFS"; Text[30])
         {
         }
-        field(12;"Caption SRL";Text[30])
+        field(12; "Caption SRL"; Text[30])
         {
         }
-        field(13;"Formato Doc. Vtas. por cliente";Boolean)
+        field(13; "Formato Doc. Vtas. por cliente"; Boolean)
         {
             Caption = 'Sales documents format by customer';
         }
@@ -54,14 +54,14 @@ table 34003011 "Parametros Loc. x País"
 
     keys
     {
-        key(Key1;"País")
+        key(Key1; "País")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"País")
+        fieldgroup(DropDown; "País")
         {
         }
     }

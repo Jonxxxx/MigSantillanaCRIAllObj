@@ -4,21 +4,21 @@ table 34003022 "Cab. Dimensiones Requeridas"
 
     fields
     {
-        field(1;"No. Tabla";Integer)
+        field(1; "No. Tabla"; Integer)
         {
             Caption = 'Table No.';
             NotBlank = true;
-            TableRelation = Object.ID WHERE (Type=FILTER(Table));
+            TableRelation = Object.ID WHERE(Type = FILTER(Table));
         }
-        field(2;Nombre;Text[100])
+        field(2; Nombre; Text[100])
         {
-            CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE (Object Type=CONST(Table),
-                                                                        Object ID=FIELD(No. Tabla)));
+            CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE("Object Type" = CONST(Table),
+                                                                        "Object ID" = FIELD("No. Tabla")));
             Caption = 'Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(3;Activo;Boolean)
+        field(3; Activo; Boolean)
         {
             Caption = 'Active';
         }
@@ -26,7 +26,7 @@ table 34003022 "Cab. Dimensiones Requeridas"
 
     keys
     {
-        key(Key1;"No. Tabla")
+        key(Key1; "No. Tabla")
         {
         }
     }
@@ -38,11 +38,11 @@ table 34003022 "Cab. Dimensiones Requeridas"
     trigger OnDelete()
     begin
         LinCampReq.RESET;
-        LinCampReq.SETRANGE("No. Tabla","No. Tabla");
+        LinCampReq.SETRANGE("No. Tabla", "No. Tabla");
         LinCampReq.DELETEALL;
     end;
 
     var
-        LinCampReq: Record "34003021";
+        LinCampReq: Record 34003021;
 }
 

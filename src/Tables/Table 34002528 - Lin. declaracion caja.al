@@ -6,33 +6,33 @@ table 34002528 "Lin. declaracion caja"
 
     fields
     {
-        field(10;"No. tienda";Code[20])
+        field(10; "No. tienda"; Code[20])
         {
             Caption = 'Store No.';
             TableRelation = Tiendas;
         }
-        field(20;"No. TPV";Code[20])
+        field(20; "No. TPV"; Code[20])
         {
             Caption = 'POS Terminal No.';
-            TableRelation = "Configuracion TPV"."Id TPV" WHERE (Tienda=FIELD(No. tienda));
+            TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("No. tienda"));
         }
-        field(25;Fecha;Date)
+        field(25; Fecha; Date)
         {
             Caption = 'Fecha';
         }
-        field(30;"No. turno";Integer)
+        field(30; "No. turno"; Integer)
         {
             Caption = 'Receipt No.';
         }
-        field(40;"Forma de pago";Code[10])
+        field(40; "Forma de pago"; Code[10])
         {
             Caption = 'Tender Type';
             TableRelation = "Formas de Pago";
 
             trigger OnValidate()
             var
-                recTienda: Record "34002503";
-                recFormaPago: Record "34002513";
+                recTienda: Record 34002503;
+                recFormaPago: Record 34002513;
             begin
                 //Si se requiere arqueo se marca el campo "arqueo requerido" para copiar la configuración de arqueo.
 
@@ -41,62 +41,62 @@ table 34002528 "Lin. declaracion caja"
                 recFormaPago.GET("Forma de pago");
                 VALIDATE("Cod. divisa", recFormaPago."Cod. divisa");
                 IF recTienda."Arqueo de caja obligatorio" THEN
-                  "Requiere recueto" := recFormaPago."Realizar recuento";
+                    "Requiere recueto" := recFormaPago."Realizar recuento";
             end;
         }
-        field(50;Descripcion;Text[250])
+        field(50; Descripcion; Text[250])
         {
             Caption = 'Description';
-            TableRelation = "Formas de Pago".Descripcion WHERE (ID Pago=FIELD(Forma de pago));
+            TableRelation = "Formas de Pago".Descripcion WHERE("ID Pago" = FIELD("Forma de pago"));
         }
-        field(60;"Cod. divisa";Code[10])
+        field(60; "Cod. divisa"; Code[10])
         {
             Caption = 'Currency Code';
 
             trigger OnValidate()
             var
-                recDivisa: Record "4";
-                recCurrExchRate: Record "330";
+                recDivisa: Record 4;
+                recCurrExchRate: Record 330;
             begin
                 IF "Cod. divisa" <> '' THEN BEGIN
-                  recDivisa.GET("Cod. divisa");
-                  "Factor divisa" := recCurrExchRate.ExchangeRate(Fecha,"Cod. divisa");
+                    recDivisa.GET("Cod. divisa");
+                    "Factor divisa" := recCurrExchRate.ExchangeRate(Fecha, "Cod. divisa");
                 END;
             end;
         }
-        field(70;"Factor divisa";Decimal)
+        field(70; "Factor divisa"; Decimal)
         {
             Caption = 'Real Exchange Rate';
-            DecimalPlaces = 0:5;
+            DecimalPlaces = 0 : 5;
         }
-        field(80;"Importe calculado";Decimal)
+        field(80; "Importe calculado"; Decimal)
         {
-            CalcFormula = Sum("Transacciones Caja TPV".Importe WHERE (Cod. tienda=FIELD(No. tienda),
-                                                                      Cod. TPV=FIELD(No. TPV),
-                                                                      Fecha=FIELD(Fecha),
-                                                                      No. turno=FIELD(No. turno),
-                                                                      Forma de pago=FIELD(Forma de pago)));
+            CalcFormula = Sum("Transacciones Caja TPV".Importe WHERE("Cod. tienda" = FIELD("No. tienda"),
+                                                                      "Cod. TPV" = FIELD("No. TPV"),
+                                                                      Fecha = FIELD("Fecha"),
+                                                                      "No. turno" = FIELD("No. turno"),
+                                                                      "de pago" = FIELD("Forma de pago")));
             Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
-        field(90;"Importe calculado (DL)";Decimal)
+        field(90; "Importe calculado (DL)"; Decimal)
         {
-            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE (Cod. tienda=FIELD(No. tienda),
-                                                                             Cod. TPV=FIELD(No. TPV),
-                                                                             Fecha=FIELD(Fecha),
-                                                                             No. turno=FIELD(No. turno),
-                                                                             Forma de pago=FIELD(Forma de pago)));
+            CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("No. tienda"),
+                                                                             "Cod. TPV" = FIELD("No. TPV"),
+                                                                             Fecha = FIELD("Fecha"),
+                                                                             "No. turno" = FIELD("No. turno"),
+                                                                             "de pago" = FIELD("Forma de pago")));
             Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
-        field(100;"Importe contado";Decimal)
+        field(100; "Importe contado"; Decimal)
         {
             Caption = 'Amount';
             MinValue = 0;
 
             trigger OnLookup()
             var
-                recCurrExchRate: Record "330";
+                recCurrExchRate: Record 330;
             begin
                 LookupArqueo;
             end;
@@ -104,28 +104,28 @@ table 34002528 "Lin. declaracion caja"
             trigger OnValidate()
             var
                 Error001: Label 'Se debe realizar el recuento para la forma de pago %1.';
-                recCurrExchRate: Record "330";
+                recCurrExchRate: Record 330;
             begin
                 IF "Requiere recueto" THEN
-                  ERROR(Error001,"Forma de pago");
+                    ERROR(Error001, "Forma de pago");
 
                 IF "Cod. divisa" = '' THEN
-                  "Importe contado (DL)" := "Importe contado"
+                    "Importe contado (DL)" := "Importe contado"
                 ELSE
-                  "Importe contado (DL)" := ROUND(recCurrExchRate.ExchangeAmtFCYToLCY(Fecha,"Cod. divisa","Importe contado","Factor divisa"));
+                    "Importe contado (DL)" := ROUND(recCurrExchRate.ExchangeAmtFCYToLCY(Fecha, "Cod. divisa", "Importe contado", "Factor divisa"));
             end;
         }
-        field(110;"Importe contado (DL)";Decimal)
+        field(110; "Importe contado (DL)"; Decimal)
         {
             Caption = 'Amount in LCY';
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
             Editable = false;
         }
-        field(140;"Requiere recueto";Boolean)
+        field(140; "Requiere recueto"; Boolean)
         {
             Caption = 'Requiere recuento';
         }
-        field(34002518;"Id Replicacion";Code[20])
+        field(34002518; "Id Replicacion"; Code[20])
         {
             Description = 'DsPOS Standard';
         }
@@ -133,10 +133,10 @@ table 34002528 "Lin. declaracion caja"
 
     keys
     {
-        key(Key1;"No. tienda","No. TPV",Fecha,"No. turno","Forma de pago")
+        key(Key1; "No. tienda", "No. TPV", Fecha, "No. turno", "Forma de pago")
         {
         }
-        key(Key2;"Id Replicacion")
+        key(Key2; "Id Replicacion")
         {
         }
     }
@@ -147,16 +147,16 @@ table 34002528 "Lin. declaracion caja"
 
     trigger OnDelete()
     var
-        recArqueo: Record "34002526";
+        recArqueo: Record 34002526;
     begin
     end;
 
     trigger OnInsert()
     begin
         IF "Requiere recueto" THEN
-          InsertarCfgArqueo;
+            InsertarCfgArqueo;
 
-        "Id Replicacion" := STRSUBSTNO('%1',DATE2DMY(Fecha,1)) + STRSUBSTNO('%1',DATE2DMY(Fecha,2)) + STRSUBSTNO('%1',DATE2DMY(Fecha,3));
+        "Id Replicacion" := STRSUBSTNO('%1', DATE2DMY(Fecha, 1)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 2)) + STRSUBSTNO('%1', DATE2DMY(Fecha, 3));
     end;
 
     trigger OnModify()
@@ -166,49 +166,49 @@ table 34002528 "Lin. declaracion caja"
 
     procedure ControlArqueoRequerido()
     var
-        recTienda: Record "34002503";
+        recTienda: Record 34002503;
         Error001: Label 'Se debe realizar el arqueo de caja para la forma de pago %1.';
     begin
         recTienda.GET("No. tienda");
         IF recTienda."Arqueo de caja obligatorio" THEN
-          ERROR(Error001, "Forma de pago");
+            ERROR(Error001, "Forma de pago");
     end;
 
     procedure InsertarCfgArqueo()
     var
-        recCfgArqueo: Record "34002527";
-        recArqueo: Record "34002526";
+        recCfgArqueo: Record 34002527;
+        recArqueo: Record 34002526;
         Error001: Label 'Debe configurar el arqueo de caja para divisa %1';
     begin
         recCfgArqueo.RESET;
         recCfgArqueo.SETRANGE("Cod. divisa", "Cod. divisa");
         IF recCfgArqueo.FINDSET THEN BEGIN
-          REPEAT
-            recArqueo.INIT;
-            recArqueo."Cod. tienda" := "No. tienda";
-            recArqueo."Cod. TPV" := "No. TPV";
-            recArqueo.Fecha := Fecha;
-            recArqueo."No. turno" := "No. turno";
-            recArqueo."Forma de pago" := "Forma de pago";
-            recArqueo."Cod. divisa" := recCfgArqueo."Cod. divisa";
-            recArqueo.Tipo := recCfgArqueo.Tipo;
-            recArqueo.Importe := recCfgArqueo.Importe;
-            recArqueo.INSERT(TRUE);
-          UNTIL recCfgArqueo.NEXT = 0;
+            REPEAT
+                recArqueo.INIT;
+                recArqueo."Cod. tienda" := "No. tienda";
+                recArqueo."Cod. TPV" := "No. TPV";
+                recArqueo.Fecha := Fecha;
+                recArqueo."No. turno" := "No. turno";
+                recArqueo."Forma de pago" := "Forma de pago";
+                recArqueo."Cod. divisa" := recCfgArqueo."Cod. divisa";
+                recArqueo.Tipo := recCfgArqueo.Tipo;
+                recArqueo.Importe := recCfgArqueo.Importe;
+                recArqueo.INSERT(TRUE);
+            UNTIL recCfgArqueo.NEXT = 0;
         END
         ELSE
-          ERROR(Error001,"Cod. divisa");
+            ERROR(Error001, "Cod. divisa");
     end;
 
     procedure LookupArqueo()
     var
-        recCurrExchRate: Record "330";
-        recArqueo: Record "34002526";
-        frmArqueo: Page "34002538";
+        recCurrExchRate: Record 330;
+        recArqueo: Record 34002526;
+        frmArqueo: Page 34002538;
         Error001: Label 'La forma de pago %1 no requiere recuento.';
     begin
         IF NOT "Requiere recueto" THEN
-          ERROR(Error001,"Forma de pago");
+            ERROR(Error001, "Forma de pago");
 
         recArqueo.RESET;
         recArqueo.SETRANGE("Cod. tienda", "No. tienda");
@@ -220,19 +220,19 @@ table 34002528 "Lin. declaracion caja"
         frmArqueo.LOOKUPMODE := TRUE;
         frmArqueo.SETTABLEVIEW(recArqueo);
         IF frmArqueo.RUNMODAL = ACTION::LookupOK THEN BEGIN
-          "Importe contado" := frmArqueo.TraerTotalContado;
-          IF "Cod. divisa" = '' THEN
-            "Importe contado (DL)" := "Importe contado"
-          ELSE
-            "Importe contado (DL)" := ROUND(recCurrExchRate.ExchangeAmtFCYToLCY(Fecha,"Cod. divisa","Importe contado","Factor divisa"));
-          MODIFY;
+            "Importe contado" := frmArqueo.TraerTotalContado;
+            IF "Cod. divisa" = '' THEN
+                "Importe contado (DL)" := "Importe contado"
+            ELSE
+                "Importe contado (DL)" := ROUND(recCurrExchRate.ExchangeAmtFCYToLCY(Fecha, "Cod. divisa", "Importe contado", "Factor divisa"));
+            MODIFY;
         END;
     end;
 
     procedure TraerDiferencia(): Decimal
     begin
         IF NOT "Requiere recueto" THEN
-          EXIT(0);
+            EXIT(0);
 
         CALCFIELDS("Importe calculado");
         EXIT("Importe contado" - "Importe calculado");
@@ -241,7 +241,7 @@ table 34002528 "Lin. declaracion caja"
     procedure TraerDiferenciaDL(): Decimal
     begin
         IF NOT "Requiere recueto" THEN
-          EXIT(0);
+            EXIT(0);
 
         CALCFIELDS("Importe calculado (DL)");
         EXIT("Importe contado (DL)" - "Importe calculado (DL)");
@@ -249,12 +249,12 @@ table 34002528 "Lin. declaracion caja"
 
     procedure ControlEstadoTPV()
     var
-        recControlTurno: Record "34002529";
+        recControlTurno: Record 34002529;
         Error001: Label 'El turno está cerrado.';
     begin
-        recControlTurno.GET("No. tienda","No. TPV",Fecha,"No. turno");
+        recControlTurno.GET("No. tienda", "No. TPV", Fecha, "No. turno");
         IF recControlTurno.Estado = recControlTurno.Estado::Cerrado THEN
-          ERROR(Error001);
+            ERROR(Error001);
     end;
 }
 

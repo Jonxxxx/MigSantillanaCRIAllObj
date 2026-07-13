@@ -42,8 +42,8 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
         }
         field(6; "No. Cuenta Cuota Obrera"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Cuota Obrera=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Cuota Obrera=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Obrera" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Cuota Obrera" = CONST(Proveedor)) Vendor.No.;
         }
         field(7; "Tipo Cuenta Cuota Patronal"; Option)
         {
@@ -52,8 +52,8 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
         }
         field(8; "No. Cuenta Cuota Patronal"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Cuota Patronal=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Cuota Patronal=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Cuota Patronal" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Cuota Patronal" = CONST(Proveedor)) Vendor.No.;
         }
         field(9; "Tipo Cuenta Contrapartida CO"; Option)
         {
@@ -62,8 +62,8 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
         }
         field(10; "No. Cuenta Contrapartida CO"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Contrapartida CO=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Contrapartida CO=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CO" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Contrapartida CO" = CONST(Proveedor)) Vendor.No.;
         }
         field(11; "Tipo Cuenta Contrapartida CP"; Option)
         {
@@ -72,8 +72,8 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
         }
         field(12; "No. Cuenta Contrapartida CP"; Code[20])
         {
-            TableRelation = IF (Tipo Cuenta Contrapartida CP=CONST(Cuenta)) "G/L Account".No.
-                            ELSE IF (Tipo Cuenta Contrapartida CP=CONST(Proveedor)) Vendor.No.;
+            TableRelation = IF ("Tipo Cuenta Contrapartida CP" = CONST(Cuenta)) "G/L Account".No.
+                            ELSE IF ("Tipo Cuenta Contrapartida CP" = CONST(Proveedor)) Vendor.No.;
         }
         field(13; "% a Distribuir"; Decimal)
         {
@@ -101,7 +101,7 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
     }
 
     var
-        ConfNom: Record "34002103";
-        ConceptosSal: Record "34002111";
+        ConfNom: Record 34002103;
+        ConceptosSal: Record 34002111;
 }
 

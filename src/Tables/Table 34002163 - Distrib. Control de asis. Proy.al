@@ -6,23 +6,23 @@ table 34002163 "Distrib. Control de asis. Proy"
 
     fields
     {
-        field(1;"Cod. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
-            TableRelation = Employee WHERE (Status=CONST(Active));
+            TableRelation = Employee WHERE(Status = CONST(Active));
         }
-        field(2;"Fecha registro";Date)
-        {
-        }
-        field(3;"Hora registro";Time)
+        field(2; "Fecha registro"; Date)
         {
         }
-        field(4;"No. Linea";Integer)
+        field(3; "Hora registro"; Time)
+        {
+        }
+        field(4; "No. Linea"; Integer)
         {
             Caption = 'Line no.';
         }
-        field(5;"Job Title";Text[60])
+        field(5; "Job Title"; Text[60])
         {
-            CalcFormula = Lookup(Employee."Job Title" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Job Title" WHERE(No.=FIELD("Cod. Empleado")));
             Caption = 'Job Title';
             FieldClass = FlowField;
         }
@@ -33,8 +33,8 @@ table 34002163 "Distrib. Control de asis. Proy"
 
             trigger OnValidate()
             var
-                Job: Record "167";
-                Cust: Record "18";
+                Job: Record 167;
+                Cust: Record 18;
             begin
                 IF "Job No." = '' THEN BEGIN
                   VALIDATE("Job Task No.",'');
@@ -50,11 +50,11 @@ table 34002163 "Distrib. Control de asis. Proy"
         field(7;"Job Task No.";Code[20])
         {
             Caption = 'Job Task No.';
-            TableRelation = "Job Task"."Job Task No." WHERE (Job No.=FIELD(Job No.));
+            TableRelation = "Job Task"."Job Task No." WHERE ("Job No."=FIELD("Job No."));
 
             trigger OnValidate()
             var
-                JobTask: Record "1001";
+                JobTask: Record 1001;
             begin
                 TESTFIELD("Job No.");
                 IF "Job Task No." <> '' THEN
@@ -120,14 +120,14 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(14;"Nombre completo";Text[60])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Cod. Empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD("Cod. Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(15;"Total Horas imputadas";Duration)
         {
-            CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE (Cod. Empleado=FIELD(Cod. Empleado),
-                                                                              Fecha registro=FIELD(Fecha registro)));
+            CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE ("Cod. Empleado"=FIELD("Cod. Empleado"),
+                                                                              "Fecha registro"=FIELD("Fecha registro")));
             Caption = 'Total Input hours';
             Editable = false;
             FieldClass = FlowField;
@@ -161,7 +161,7 @@ table 34002163 "Distrib. Control de asis. Proy"
 
     var
         Err001: Label '%1 can not be greather than the total of hours for the %2 %3 and %4 %5';
-        DCA: Record "34002163";
+        DCA: Record 34002163;
         Err002: Label 'There is already a record for %1 %2 %3 %4 %5 %6';
         Err003: Label 'The amount of %1 exceeds the daily limit of the working day';
         Err004: Label 'You can not have %1 if %2 does not have full day';
@@ -169,9 +169,9 @@ table 34002163 "Distrib. Control de asis. Proy"
 
     local procedure CalcularHorasLab()
     var
-        CA: Record "34002160";
-        DCP: Record "34002163";
-        Fecha: Record "2000000007";
+        CA: Record 34002160;
+        DCP: Record 34002163;
+        Fecha: Record 2000000007;
         TotHoras: Decimal;
         DurHoras: Duration;
     begin

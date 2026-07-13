@@ -4,21 +4,21 @@ table 34002156 "Seleccion beneficios"
 
     fields
     {
-        field(1;"No. documento";Code[20])
+        field(1; "No. documento"; Code[20])
         {
             DataClassification = ToBeClassified;
         }
-        field(2;"Cod. Empleado";Code[20])
+        field(2; "Cod. Empleado"; Code[20])
         {
             DataClassification = ToBeClassified;
         }
-        field(3;"Tipo Beneficio";Option)
+        field(3; "Tipo Beneficio"; Option)
         {
             DataClassification = ToBeClassified;
             OptionCaption = 'Income,Others';
             OptionMembers = Ingresos,Otro;
         }
-        field(4;Codigo;Code[16])
+        field(4; Codigo; Code[16])
         {
             Caption = 'Code';
             DataClassification = ToBeClassified;
@@ -27,22 +27,22 @@ table 34002156 "Seleccion beneficios"
             trigger OnValidate()
             begin
                 BeneficiosLab.RESET;
-                BeneficiosLab.SETRANGE(Codigo,Codigo);
+                BeneficiosLab.SETRANGE(Codigo, Codigo);
                 BeneficiosLab.FINDFIRST;
                 Descripcion := BeneficiosLab.Descripcion;
                 "Tipo Beneficio" := BeneficiosLab."Tipo Beneficio";
             end;
         }
-        field(5;Descripcion;Text[60])
+        field(5; Descripcion; Text[60])
         {
             Caption = 'Description';
             DataClassification = ToBeClassified;
         }
-        field(6;Importe;Decimal)
+        field(6; Importe; Decimal)
         {
             DataClassification = ToBeClassified;
         }
-        field(7;Seleccionar;Boolean)
+        field(7; Seleccionar; Boolean)
         {
             DataClassification = ToBeClassified;
         }
@@ -50,7 +50,7 @@ table 34002156 "Seleccion beneficios"
 
     keys
     {
-        key(Key1;"No. documento","Tipo Beneficio",Codigo)
+        key(Key1; "No. documento", "Tipo Beneficio", Codigo)
         {
         }
     }
@@ -60,6 +60,6 @@ table 34002156 "Seleccion beneficios"
     }
 
     var
-        BeneficiosLab: Record "34002152";
+        BeneficiosLab: Record 34002152;
 }
 

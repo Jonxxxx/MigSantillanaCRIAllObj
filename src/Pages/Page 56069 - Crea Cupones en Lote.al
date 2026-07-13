@@ -99,7 +99,7 @@ page 56069 "Crea Cupones en Lote"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 51011;
-                RunPageLink = No. Lote cupon=FIELD("Lote");
+                RunPageLink = "Lote cupon" = FIELD("Lote");
                 RunPageView = SORTING(No. Lote cupon)
                               ORDER(Ascending);
             }
@@ -116,8 +116,8 @@ page 56069 "Crea Cupones en Lote"
 
 
                     ComprobarLote(Lote);
-                    cuFunSantillana.cuCreaCupones("Cod. Colegio","Cod. Vendedor",NombreVendedor("Cod. Vendedor"),"Valido Desde","Valido Hasta","Grado Alumno","Dto Colegio",
-                                                  "Dto Padre","Año Escolar",NombreColegio("Cod. Colegio"),Descripcion,"Cantidad Cupones",Lote,"Cantidad Limite","Importe Dto. Limite","Cod. Cliente","Nombre Cliente");
+                    cuFunSantillana.cuCreaCupones("Cod. Colegio", "Cod. Vendedor", NombreVendedor("Cod. Vendedor"), "Valido Desde", "Valido Hasta", "Grado Alumno", "Dto Colegio",
+                                                  "Dto Padre", "Año Escolar", NombreColegio("Cod. Colegio"), Descripcion, "Cantidad Cupones", Lote, "Cantidad Limite", "Importe Dto. Limite", "Cod. Cliente", "Nombre Cliente");
                 end;
             }
         }
@@ -128,14 +128,14 @@ page 56069 "Crea Cupones en Lote"
         //+#140677
         //DELETEALL(TRUE);
         //... Sólo borramos los del usuario.
-        SETRANGE(Usuario,USERID);
+        SETRANGE(Usuario, USERID);
         DELETEALL(TRUE);
         SETRANGE(Usuario);
         //-#140677
 
         INSERT(TRUE);
         FILTERGROUP(2);
-        SETFILTER(Lote,'%1',Lote);
+        SETFILTER(Lote, '%1', Lote);
         FILTERGROUP(0);
     end;
 
@@ -148,10 +148,10 @@ page 56069 "Crea Cupones en Lote"
     begin
 
         IF pColegio = '' THEN
-          EXIT
+            EXIT
         ELSE
-          IF rContact.GET(pColegio) THEN
-            EXIT(rContact.Name);
+            IF rContact.GET(pColegio) THEN
+                EXIT(rContact.Name);
     end;
 
     procedure NombreVendedor(pVendedor: Code[10]): Text
@@ -160,10 +160,10 @@ page 56069 "Crea Cupones en Lote"
     begin
 
         IF pVendedor = '' THEN
-          EXIT
+            EXIT
         ELSE
-          IF rSalesPerson.GET(pVendedor) THEN
-            EXIT(rSalesPerson.Name);
+            IF rSalesPerson.GET(pVendedor) THEN
+                EXIT(rSalesPerson.Name);
     end;
 }
 

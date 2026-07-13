@@ -61,36 +61,36 @@ table 34002195 "Miembros cooperativa"
         }
         field(27; "Ahorro acumulado"; Decimal)
         {
-            CalcFormula = Sum("Mov. cooperativa".Importe WHERE(Employee No.=FIELD(Employee No.),
-                                                                Tipo transaccion=CONST(Aporte)));
+            CalcFormula = Sum("Mov. cooperativa".Importe WHERE("Employee No." = FIELD("Employee No."),
+                                                                "Tipo transaccion" = CONST(Aporte)));
             Caption = 'Accumulated savings';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(28;"Prestamos pendientes";Integer)
+        field(28; "Prestamos pendientes"; Integer)
         {
-            CalcFormula = Count("Mov. cooperativa" WHERE (Employee No.=FIELD(Employee No.),
-                                                          Tipo transaccion=CONST(Préstamo)));
+            CalcFormula = Count("Mov. cooperativa" WHERE("Employee No." = FIELD("Employee No."),
+                                                          "Tipo transaccion" = CONST(Préstamo)));
             Caption = 'Outstanding loans';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(29;"Importe pendiente";Decimal)
+        field(29; "Importe pendiente"; Decimal)
         {
-            CalcFormula = Sum("Mov. cooperativa".Importe WHERE (Employee No.=FIELD(Employee No.),
-                                                                Tipo transaccion=CONST(Préstamo)));
+            CalcFormula = Sum("Mov. cooperativa".Importe WHERE("Employee No." = FIELD("Employee No."),
+                                                                "Tipo transaccion" = CONST(Préstamo)));
             Caption = 'Amount pending';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(30;Status;Option)
+        field(30; Status; Option)
         {
             Caption = 'Status';
             DataClassification = ToBeClassified;
             OptionCaption = ' ,Active,Inactive,Retired,Reinstated';
             OptionMembers = " ",Activo,Inactivo,Retirado;
         }
-        field(31;"Fecha reingreso";Date)
+        field(31; "Fecha reingreso"; Date)
         {
             Caption = 'Re-entry date';
             DataClassification = ToBeClassified;
@@ -99,25 +99,25 @@ table 34002195 "Miembros cooperativa"
 
     keys
     {
-        key(Key1;"Employee No.")
+        key(Key1; "Employee No.")
         {
         }
-        key(Key2;"Full name")
+        key(Key2; "Full name")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Employee No.","Full name","Tipo de miembro")
+        fieldgroup(DropDown; "Employee No.", "Full name", "Tipo de miembro")
         {
         }
-        fieldgroup(Brick;"Employee No.","Full name","Tipo de miembro")
+        fieldgroup(Brick; "Employee No.", "Full name", "Tipo de miembro")
         {
         }
     }
 
     var
-        Emp: Record "5200";
+        Emp: Record 5200;
 }
 

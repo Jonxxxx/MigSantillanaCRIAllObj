@@ -34,74 +34,74 @@ table 34002146 "Histórico Cab. Préstamo"
         }
         field(5; "Importe Original"; Decimal)
         {
-            CalcFormula = Sum("Histórico Lín. Préstamo".Débito WHERE(No. Préstamo=FIELD(No. Préstamo)));
+            CalcFormula = Sum("Histórico Lín. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
             Caption = 'Original Amount';
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
-        field(6;Cuotas;Integer)
+        field(6; Cuotas; Integer)
         {
         }
-        field(7;"No. Documento";Code[20])
+        field(7; "No. Documento"; Code[20])
         {
         }
-        field(8;Pendiente;Boolean)
+        field(8; Pendiente; Boolean)
         {
             Editable = true;
         }
-        field(9;"Tipo Contrapartida";Option)
+        field(9; "Tipo Contrapartida"; Option)
         {
             Description = 'Cuenta,Cliente,Proveedor,Banco';
             OptionMembers = Cuenta,Cliente,Proveedor,Banco;
         }
-        field(10;"Cta. Contrapartida";Code[20])
+        field(10; "Cta. Contrapartida"; Code[20])
         {
         }
-        field(11;"Fecha Inicio Deducción";Date)
+        field(11; "Fecha Inicio Deducción"; Date)
         {
         }
-        field(12;"Nro. Solicitud CK";Code[20])
+        field(12; "Nro. Solicitud CK"; Code[20])
         {
         }
-        field(13;"Importe Pendiente Cte.";Decimal)
+        field(13; "Importe Pendiente Cte."; Decimal)
         {
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
-        field(14;"% Cuota";Decimal)
-        {
-        }
-        field(15;"No. Mov. Cliente";Integer)
+        field(14; "% Cuota"; Decimal)
         {
         }
-        field(16;"Importe Pendiente";Decimal)
+        field(15; "No. Mov. Cliente"; Integer)
         {
-            CalcFormula = Sum("Histórico Lín. Préstamo".Importe WHERE (No. Préstamo=FIELD(No. Préstamo)));
-            DecimalPlaces = 2:2;
+        }
+        field(16; "Importe Pendiente"; Decimal)
+        {
+            CalcFormula = Sum("Histórico Lín. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
-        field(17;"1ra Quincena";Boolean)
+        field(17; "1ra Quincena"; Boolean)
         {
         }
-        field(18;"2da Quincena";Boolean)
+        field(18; "2da Quincena"; Boolean)
         {
         }
-        field(19;"Importe Cuota";Decimal)
+        field(19; "Importe Cuota"; Decimal)
         {
         }
-        field(20;"Concepto Salarial";Code[20])
+        field(20; "Concepto Salarial"; Code[20])
         {
             TableRelation = "Conceptos salariales".Código;
         }
-        field(21;"Motivo Prestamos";Text[60])
+        field(21; "Motivo Prestamos"; Text[60])
         {
         }
-        field(22;Correccion;Boolean)
+        field(22; Correccion; Boolean)
         {
             Caption = 'Correction';
         }
-        field(23;"Full name";Text[150])
+        field(23; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Employee No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
             FieldClass = FlowField;
         }
         field(24;"Motivo de cierre";Text[250])
@@ -128,7 +128,7 @@ table 34002146 "Histórico Cab. Préstamo"
     }
 
     var
-        ConfNominas: Record "34002103";
-        GestNoSerie: Codeunit "396";
+        ConfNominas: Record 34002103;
+        GestNoSerie: Codeunit 396;
 }
 

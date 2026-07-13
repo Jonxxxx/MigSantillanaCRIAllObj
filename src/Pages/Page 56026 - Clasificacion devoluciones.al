@@ -91,7 +91,7 @@ page 56026 "Clasificacion devoluciones"
             }
             part(Detalle; 56027)
             {
-                SubPageLink = No. Documento=FIELD("No.");
+                SubPageLink = "No. Documento" = FIELD("No.");
             }
         }
     }

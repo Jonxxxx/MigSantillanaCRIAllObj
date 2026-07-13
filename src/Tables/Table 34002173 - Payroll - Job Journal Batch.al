@@ -34,7 +34,7 @@ table 34002173 "Payroll - Job Journal Batch"
     }
 
     var
-        JobJnlTemplate: Record "34002174";
+        JobJnlTemplate: Record 34002174;
 
     procedure SetupNewBatch()
     begin

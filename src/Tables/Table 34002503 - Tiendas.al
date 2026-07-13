@@ -45,7 +45,7 @@ table 34002503 Tiendas
 
             trigger OnValidate()
             var
-                Location: Record "14";
+                Location: Record 14;
             begin
 
                 IF Location.GET("Cod. Almacen") THEN BEGIN
@@ -115,127 +115,127 @@ table 34002503 Tiendas
         {
             Caption = 'Country Code';
             Description = 'DsPOS Standard';
-            TableRelation = Country/Region;
+            TableRelation = "Country/Region";
         }
-        field(34002513;Ciudad;Code[20])
+        field(34002513; Ciudad; Code[20])
         {
             Caption = 'City';
             Description = 'DsPOS Standard';
         }
-        field(34002515;"Descripcion recibo TPV";Text[250])
+        field(34002515; "Descripcion recibo TPV"; Text[250])
         {
             Caption = 'POS Receipt text';
             Description = 'DsPOS Standard';
         }
-        field(34002516;"Descripcion recibo TPV 2";Text[250])
+        field(34002516; "Descripcion recibo TPV 2"; Text[250])
         {
             Caption = 'POS Receipt text';
             Description = 'DsPOS Standard';
         }
-        field(34002517;"Descripcion recibo TPV 3";Text[250])
+        field(34002517; "Descripcion recibo TPV 3"; Text[250])
         {
             Caption = 'POS Receipt text';
             Description = 'DsPOS Standard';
         }
-        field(34002518;"Descripcion recibo TPV 4";Text[250])
+        field(34002518; "Descripcion recibo TPV 4"; Text[250])
         {
             Caption = 'POS Receipt text';
             Description = 'DsPOS Standard';
         }
-        field(34002519;"Nombre Pais";Text[50])
+        field(34002519; "Nombre Pais"; Text[50])
         {
             Caption = 'Nombre País';
             Description = 'DsPOS Standard';
 
             trigger OnValidate()
             var
-                rPais: Record "9";
+                rPais: Record 9;
             begin
 
                 IF rPais.GET("Cod. Pais") THEN
-                  "Nombre Pais" := rPais.Name
+                    "Nombre Pais" := rPais.Name
                 ELSE
-                  "Nombre Pais" := '';
+                    "Nombre Pais" := '';
             end;
         }
-        field(34002520;"Control de caja";Boolean)
+        field(34002520; "Control de caja"; Boolean)
         {
             Caption = 'Control de caja';
             Description = 'DsPOS Standard';
         }
-        field(34002521;"Descuadre maximo en caja";Decimal)
+        field(34002521; "Descuadre maximo en caja"; Decimal)
         {
             Caption = 'Descuadre máximo en caja';
             Description = 'DsPOS Standard';
             MinValue = 0;
         }
-        field(34002522;"Arqueo de caja obligatorio";Boolean)
+        field(34002522; "Arqueo de caja obligatorio"; Boolean)
         {
             Caption = 'Arqueo de caja obligatorio';
             Description = 'DsPOS Standard';
         }
-        field(34002530;"ID Reporte contado";Integer)
+        field(34002530; "ID Reporte contado"; Integer)
         {
             Caption = 'Cash Receipt ID';
             Description = 'DsPOS Standard';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002531;"ID Reporte contado FE";Integer)
+        field(34002531; "ID Reporte contado FE"; Integer)
         {
             Caption = 'Cash Receipt ID FE ';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002535;"ID Reporte nota credito";Integer)
+        field(34002535; "ID Reporte nota credito"; Integer)
         {
             Caption = 'ID Reporte nota credito';
             Description = 'DsPOS Standard';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002536;"ID Reporte nota credito FE";Integer)
+        field(34002536; "ID Reporte nota credito FE"; Integer)
         {
             Caption = 'ID Reporte nota credito FE';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002540;"ID Reporte venta a credito";Integer)
+        field(34002540; "ID Reporte venta a credito"; Integer)
         {
             Caption = 'Credit sales report ID';
             Description = 'DsPOS Standard';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002550;"ID Reporte cuadre";Integer)
+        field(34002550; "ID Reporte cuadre"; Integer)
         {
             Caption = 'Balancing report ID';
             Description = 'DsPOS Standard';
-            TableRelation = AllObj."Object ID" WHERE (Object Type=CONST(Report));
+            TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002560;"Cantidad de Copias Contado";Integer)
+        field(34002560; "Cantidad de Copias Contado"; Integer)
         {
             Caption = 'Cantidad de Copias venta contado';
             Description = 'DsPOS Standard';
         }
-        field(34002570;"Cantidad de Copias Credito";Integer)
+        field(34002570; "Cantidad de Copias Credito"; Integer)
         {
             Caption = 'Cantidad de Copias venta a credito';
             Description = 'DsPOS Standard';
         }
-        field(34002571;"Registro En Linea";Boolean)
+        field(34002571; "Registro En Linea"; Boolean)
         {
             Caption = 'Registro En Linea';
             Description = 'DsPOS Standard';
         }
-        field(34002573;"Agrupar Lineas";Boolean)
+        field(34002573; "Agrupar Lineas"; Boolean)
         {
             Caption = 'Agrupar Lineas';
             Description = 'DsPOS Standard';
         }
-        field(34002574;"Cantidad copias nota credito";Integer)
+        field(34002574; "Cantidad copias nota credito"; Integer)
         {
             Caption = 'Cantidad de Copias Nota Credito';
             Description = 'DsPOS Standard';
         }
-        field(34002575;"Permite Anulaciones en POS";Boolean)
+        field(34002575; "Permite Anulaciones en POS"; Boolean)
         {
             Description = 'DsPOS Standard';
 
@@ -243,19 +243,19 @@ table 34002503 Tiendas
             begin
 
                 IF NOT "Permite Anulaciones en POS" THEN
-                  cFunciones.DeconfiguraAnulaciones(Rec);
+                    cFunciones.DeconfiguraAnulaciones(Rec);
             end;
         }
-        field(34002576;"Instancia Completa SQL";Text[250])
+        field(34002576; "Instancia Completa SQL"; Text[250])
         {
             Description = 'DsPOS Standard';
         }
-        field(34002577;"Imp. Minimo Sol. Datos Cliente";Decimal)
+        field(34002577; "Imp. Minimo Sol. Datos Cliente"; Decimal)
         {
             Caption = 'Importe mínimo para solicitar datos del cliente';
             Description = 'DsPOS Standard';
         }
-        field(34002578;"No. Maximo de Lineas";Integer)
+        field(34002578; "No. Maximo de Lineas"; Integer)
         {
             Description = 'DsPOS Standard';
             InitValue = 20;
@@ -263,82 +263,82 @@ table 34002503 Tiendas
             MinValue = 1;
             NotBlank = true;
         }
-        field(34002579;"No. Reaperturas Permitidas";Integer)
+        field(34002579; "No. Reaperturas Permitidas"; Integer)
         {
             Description = 'DsPOS Standard';
         }
-        field(34002580;"Cuenta Excencion IVA";Code[20])
+        field(34002580; "Cuenta Excencion IVA"; Code[20])
         {
             Caption = 'Cuenta Excención IVA';
             Description = 'DsPOS Standard';
-            TableRelation = "G/L Account".No. WHERE (Account Type=CONST(Posting));
+            TableRelation = "G/L Account".No. WHERE("Account Type" = CONST(Posting));
 
             trigger OnValidate()
             var
-                rCue: Record "15";
+                rCue: Record 15;
             begin
 
                 IF "Cuenta Excencion IVA" <> '' THEN BEGIN
-                  rCue.GET("Cuenta Excencion IVA");
-                  rCue.TESTFIELD("Account Type",rCue."Account Type"::Posting);
+                    rCue.GET("Cuenta Excencion IVA");
+                    rCue.TESTFIELD("Account Type", rCue."Account Type"::Posting);
                 END;
             end;
         }
-        field(34002585;"ID Sesion";Integer)
+        field(34002585; "ID Sesion"; Integer)
         {
             Description = '#90735';
         }
-        field(34002586;"e-mail";Text[80])
+        field(34002586; "e-mail"; Text[80])
         {
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
-        field(34002587;"Informacion zona";Text[30])
+        field(34002587; "Informacion zona"; Text[30])
         {
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
-        field(34002590;"Permite NC en otro TPV";Boolean)
+        field(34002590; "Permite NC en otro TPV"; Boolean)
         {
             Description = 'DsPOS Standard';
             InitValue = true;
         }
-        field(34002591;"Permite NC en otro Turno";Boolean)
+        field(34002591; "Permite NC en otro Turno"; Boolean)
         {
             Description = 'DsPOS Standard';
             InitValue = true;
         }
-        field(34002592;"Codigo Postal";Code[10])
+        field(34002592; "Codigo Postal"; Code[10])
         {
         }
-        field(34002593;"Nombre Empresa 1";Text[50])
+        field(34002593; "Nombre Empresa 1"; Text[50])
         {
         }
     }
 
     keys
     {
-        key(Key1;"Cod. Tienda")
+        key(Key1; "Cod. Tienda")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Tienda",Descripcion)
+        fieldgroup(DropDown; "Cod. Tienda", Descripcion)
         {
         }
     }
 
     trigger OnDelete()
     var
-        rConfTPV: Record "34002501";
+        rConfTPV: Record 34002501;
     begin
 
         rConfTPV.RESET;
-        rConfTPV.SETRANGE(Tienda,"Cod. Tienda");
+        rConfTPV.SETRANGE(Tienda, "Cod. Tienda");
         IF rConfTPV.FINDSET THEN BEGIN
-          IF NOT CONFIRM(STRSUBSTNO(text001,"Cod. Tienda"),FALSE) THEN
-            ERROR(Error001);
-          rConfTPV.DELETEALL(FALSE);
+            IF NOT CONFIRM(STRSUBSTNO(text001, "Cod. Tienda"), FALSE) THEN
+                ERROR(Error001);
+            rConfTPV.DELETEALL(FALSE);
         END;
     end;
 
@@ -348,10 +348,10 @@ table 34002503 Tiendas
     end;
 
     var
-        rBanco: Record "270";
+        rBanco: Record 270;
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a petición del usuario';
         Error002: ;
-        cFunciones: Codeunit "34002503";
+        cFunciones: Codeunit 34002503;
 }
 

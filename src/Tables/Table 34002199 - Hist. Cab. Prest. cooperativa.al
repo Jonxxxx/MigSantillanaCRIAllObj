@@ -42,7 +42,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         {
             Caption = 'Loan type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH" WHERE(Tipo registro=CONST(Tipo de préstamo));
+            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST(Tipo de préstamo));
         }
         field(6; Importe; Decimal)
         {
@@ -75,7 +75,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD(Employee No.)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }
@@ -87,8 +87,8 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(15;"Importe Pendiente";Decimal)
         {
-            CalcFormula = Sum("Mov. cooperativa".Importe WHERE (No. documento=FIELD(No. Prestamo),
-                                                                Tipo transaccion=FILTER(>Aporte)));
+            CalcFormula = Sum("Mov. cooperativa".Importe WHERE ("No. documento"=FIELD("No. Prestamo"),
+                                                                "Tipo transaccion"=FILTER(>Aporte)));
             Caption = 'Remaining amount';
             DecimalPlaces = 2:2;
             FieldClass = FlowField;
@@ -139,7 +139,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
     }
 
     var
-        ConfNominas: Record "34002103";
-        GestNoSerie: Codeunit "396";
+        ConfNominas: Record 34002103;
+        GestNoSerie: Codeunit 396;
 }
 

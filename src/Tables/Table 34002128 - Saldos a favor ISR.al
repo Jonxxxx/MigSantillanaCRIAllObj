@@ -3,28 +3,28 @@ table 34002128 "Saldos a favor ISR"
 
     fields
     {
-        field(1;"Cód. Empleado";Code[15])
+        field(1; "Cód. Empleado"; Code[15])
         {
             TableRelation = Employee;
         }
-        field(2;Ano;Integer)
+        field(2; Ano; Integer)
         {
         }
-        field(3;"Saldo a favor";Decimal)
+        field(3; "Saldo a favor"; Decimal)
         {
 
             trigger OnValidate()
             begin
                 IF "Importe Pendiente" = 0 THEN
-                   "Importe Pendiente" := "Saldo a favor";
+                    "Importe Pendiente" := "Saldo a favor";
             end;
         }
-        field(4;"Importe Pendiente";Decimal)
+        field(4; "Importe Pendiente"; Decimal)
         {
         }
-        field(5;"Full Name";Text[50])
+        field(5; "Full Name"; Text[50])
         {
-            CalcFormula = Lookup(Employee."Full Name" WHERE (No.=FIELD(Cód. Empleado)));
+            CalcFormula = Lookup(Employee."Full Name" WHERE(No.=FIELD("Cód. Empleado")));
             Caption = 'Full Name';
             Editable = false;
             FieldClass = FlowField;
@@ -50,6 +50,6 @@ table 34002128 "Saldos a favor ISR"
     end;
 
     var
-        BKISR: Record "34002130";
+        BKISR: Record 34002130;
 }
 

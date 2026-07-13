@@ -3,21 +3,21 @@ table 34002126 "Incentivos/Propinas"
 
     fields
     {
-        field(1;"Concepto Salarial";Code[10])
+        field(1; "Concepto Salarial"; Code[10])
         {
             TableRelation = "Conceptos salariales".Código;
         }
-        field(2;"Fecha de Corte";Date)
+        field(2; "Fecha de Corte"; Date)
         {
         }
-        field(3;"Monto a Distribuir";Decimal)
+        field(3; "Monto a Distribuir"; Decimal)
         {
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
-        field(4;"Fecha Ult. Corte";Date)
+        field(4; "Fecha Ult. Corte"; Date)
         {
         }
-        field(5;Delegacion;Code[20])
+        field(5; Delegacion; Code[20])
         {
             TableRelation = "Centros de Trabajo";
         }
@@ -25,7 +25,7 @@ table 34002126 "Incentivos/Propinas"
 
     keys
     {
-        key(Key1;"Concepto Salarial","Fecha de Corte")
+        key(Key1; "Concepto Salarial", "Fecha de Corte")
         {
         }
     }
@@ -36,12 +36,12 @@ table 34002126 "Incentivos/Propinas"
 
     trigger OnInsert()
     begin
-        Incentivo.SETRANGE("Concepto Salarial","Concepto Salarial");
+        Incentivo.SETRANGE("Concepto Salarial", "Concepto Salarial");
         IF Incentivo.FINDLAST THEN
-             "Fecha Ult. Corte" := xRec."Fecha de Corte";
+            "Fecha Ult. Corte" := xRec."Fecha de Corte";
     end;
 
     var
-        Incentivo: Record "34002126";
+        Incentivo: Record 34002126;
 }
 

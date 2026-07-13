@@ -4,58 +4,58 @@ table 34002511 Botones
 
     fields
     {
-        field(34002500;"ID Menu";Code[10])
+        field(34002500; "ID Menu"; Code[10])
         {
             Caption = 'Menu ID';
             Description = 'DsPOS Standar';
             Editable = false;
         }
-        field(34002501;"ID boton";Integer)
+        field(34002501; "ID boton"; Integer)
         {
             Caption = 'Boton ID';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
-        field(34002502;Descripcion;Text[250])
+        field(34002502; Descripcion; Text[250])
         {
             Caption = 'Description';
             Description = 'DsPOS Standar';
         }
-        field(34002503;Accion;Code[20])
+        field(34002503; Accion; Code[20])
         {
             Caption = 'Action';
             Description = 'DsPOS Standar';
-            TableRelation = Acciones."ID Accion" WHERE (Tipo Accion=FILTER(<>Obligatoria));
+            TableRelation = Acciones."ID Accion" WHERE("Tipo Accion" = FILTER(<> Obligatoria));
 
             trigger OnValidate()
             var
-                rMenu: Record "34002509";
-                rBotones: Record "34002511";
-                rAccion: Record "34002512";
+                rMenu: Record 34002509;
+                rBotones: Record 34002511;
+                rAccion: Record 34002512;
             begin
 
-                IF (Accion = '') AND NOT(Activo)THEN BEGIN
-                  "Tipo Accion" := 0;
-                  EXIT;
+                IF (Accion = '') AND NOT (Activo) THEN BEGIN
+                    "Tipo Accion" := 0;
+                    EXIT;
                 END;
 
                 rMenu.GET("ID Menu");
-                rMenu.TESTFIELD("Tipo Menu" , rMenu."Tipo Menu"::Acciones);
+                rMenu.TESTFIELD("Tipo Menu", rMenu."Tipo Menu"::Acciones);
 
-                rBotones.SETRANGE("ID Menu"   , "ID Menu");
-                rBotones.SETFILTER("ID boton" , '<>%1' ,"ID boton");
-                rBotones.SETFILTER(Accion     , '%1'   ,Accion);
+                rBotones.SETRANGE("ID Menu", "ID Menu");
+                rBotones.SETFILTER("ID boton", '<>%1', "ID boton");
+                rBotones.SETFILTER(Accion, '%1', Accion);
                 IF rBotones.FINDFIRST THEN
-                  IF (STRPOS(Accion,'DTO') = 0) THEN
-                    ERROR(Error003,Accion);
+                    IF (STRPOS(Accion, 'DTO') = 0) THEN
+                        ERROR(Error003, Accion);
 
                 rAccion.GET(Accion);
-                Descripcion          := rAccion.Descripcion;
-                "Tipo Accion"        := rAccion."Tipo Accion" + 1;
-                Etiqueta             := UPPERCASE(Descripcion);
+                Descripcion := rAccion.Descripcion;
+                "Tipo Accion" := rAccion."Tipo Accion" + 1;
+                Etiqueta := UPPERCASE(Descripcion);
             end;
         }
-        field(34002504;Etiqueta;Text[30])
+        field(34002504; Etiqueta; Text[30])
         {
             Caption = 'Caption';
             Description = 'DsPOS Standar';
@@ -65,26 +65,28 @@ table 34002511 Botones
                 Etiqueta := UPPERCASE(Etiqueta);
             end;
         }
-        field(34002505;Color;Integer)
+        field(34002505; Color; Integer)
         {
             Description = 'DsPOS Standar';
         }
-        field(34002506;Activo;Boolean)
+        field(34002506; Activo; Boolean)
         {
             Caption = 'Active';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
             var
-                rMenu: Record "34002509";
+                rMenu: Record 34002509;
             begin
                 IF NOT Activo THEN
-                  EXIT;
+                    EXIT;
 
                 rMenu.GET("ID Menu");
                 CASE TRUE OF
-                  rMenu."Tipo Menu"=rMenu."Tipo Menu"::Acciones:TESTFIELD(Accion);
-                  rMenu."Tipo Menu"=rMenu."Tipo Menu"::Pagos:TESTFIELD(Pago);
+                    rMenu."Tipo Menu" = rMenu."Tipo Menu"::Acciones:
+                        TESTFIELD(Accion);
+                    rMenu."Tipo Menu" = rMenu."Tipo Menu"::Pagos:
+                        TESTFIELD(Pago);
                 END;
 
                 ComprobarOrden;
@@ -92,30 +94,30 @@ table 34002511 Botones
                 rMenu.RESET;
                 rMenu.GET("ID Menu");
                 CASE rMenu."Tipo Menu" OF
-                  rMenu."Tipo Menu"::Acciones:
-                    BEGIN
-                      TESTFIELD(Pago,'');
-                      TESTFIELD(Etiqueta);
-                      TESTFIELD(Descripcion);
-                      TESTFIELD(Accion);
-                      IF (STRPOS(Accion,'DTO') <> 0) AND ("Descuento %" = 0) THEN
-                        IF NOT CONFIRM(Text001,FALSE) THEN
-                          ERROR(Error013);
-                    END;
-                  rMenu."Tipo Menu"::Pagos:
-                    BEGIN
-                      TESTFIELD(Pago);
-                      TESTFIELD(Descripcion);
-                      TESTFIELD(Etiqueta);
-                      TESTFIELD(Tipo,0);
-                      TESTFIELD("No.",'');
-                      TESTFIELD("Descuento %",0);
-                      TESTFIELD(Accion,'');
-                    END;
+                    rMenu."Tipo Menu"::Acciones:
+                        BEGIN
+                            TESTFIELD(Pago, '');
+                            TESTFIELD(Etiqueta);
+                            TESTFIELD(Descripcion);
+                            TESTFIELD(Accion);
+                            IF (STRPOS(Accion, 'DTO') <> 0) AND ("Descuento %" = 0) THEN
+                                IF NOT CONFIRM(Text001, FALSE) THEN
+                                    ERROR(Error013);
+                        END;
+                    rMenu."Tipo Menu"::Pagos:
+                        BEGIN
+                            TESTFIELD(Pago);
+                            TESTFIELD(Descripcion);
+                            TESTFIELD(Etiqueta);
+                            TESTFIELD(Tipo, 0);
+                            TESTFIELD("No.", '');
+                            TESTFIELD("Descuento %", 0);
+                            TESTFIELD(Accion, '');
+                        END;
                 END;
             end;
         }
-        field(34002507;"Descuento %";Decimal)
+        field(34002507; "Descuento %"; Decimal)
         {
             Caption = 'Discount %';
             Description = 'DsPOS Standar';
@@ -125,10 +127,10 @@ table 34002511 Botones
             trigger OnValidate()
             begin
                 IF "Descuento %" = 0 THEN
-                  EXIT;
+                    EXIT;
             end;
         }
-        field(34002508;Seguridad;Option)
+        field(34002508; Seguridad; Option)
         {
             Caption = 'Password';
             Description = 'DsPOS Standar';
@@ -141,41 +143,41 @@ table 34002511 Botones
                 TESTFIELD("Tipo Accion");
             end;
         }
-        field(34002509;Pago;Code[20])
+        field(34002509; Pago; Code[20])
         {
             Caption = 'Tender';
             Description = 'DsPOS Standar';
-            TableRelation = "Formas de Pago" WHERE (Tipo Tarjeta=FILTER(''),
-                                                    Efectivo Local=CONST(No));
+            TableRelation = "Formas de Pago" WHERE("Tipo Tarjeta" = FILTER(''),
+                                                    "Efectivo Local" = CONST(No));
 
             trigger OnValidate()
             var
-                rMenu: Record "34002509";
-                rFormPago: Record "34002513";
-                rBotones: Record "34002511";
+                rMenu: Record 34002509;
+                rFormPago: Record 34002513;
+                rBotones: Record 34002511;
             begin
                 IF Pago = '' THEN
-                  EXIT;
+                    EXIT;
 
                 rMenu.RESET;
                 rMenu.GET("ID Menu");
-                rMenu.TESTFIELD("Tipo Menu",rMenu."Tipo Menu"::Pagos);
+                rMenu.TESTFIELD("Tipo Menu", rMenu."Tipo Menu"::Pagos);
 
                 rFormPago.RESET;
                 rFormPago.GET(Pago);
                 IF (rFormPago."Efectivo Local") OR (rFormPago."Tipo Tarjeta" <> '') THEN
-                  ERROR(Error001);
+                    ERROR(Error001);
 
-                rBotones.SETRANGE("ID Menu"   , "ID Menu");
-                rBotones.SETFILTER("ID boton" , '<>%1', "ID boton");
-                rBotones.SETFILTER(Pago       , '%1'  , Pago);
+                rBotones.SETRANGE("ID Menu", "ID Menu");
+                rBotones.SETFILTER("ID boton", '<>%1', "ID boton");
+                rBotones.SETFILTER(Pago, '%1', Pago);
                 IF rBotones.FINDFIRST THEN
-                  ERROR(Error002,Pago);
+                    ERROR(Error002, Pago);
 
                 Descripcion := rFormPago.Descripcion;
             end;
         }
-        field(34002510;Tipo;Option)
+        field(34002510; Tipo; Option)
         {
             Description = 'DsPOS Standar';
             OptionCaption = ' ,G/L Account,Item,Resource,Fixed Asset';
@@ -189,10 +191,10 @@ table 34002511 Botones
                     "No." := '';
             end;
         }
-        field(34002511;"No.";Code[20])
+        field(34002511; "No."; Code[20])
         {
             Description = 'DsPOS Standar';
-            TableRelation = IF (Tipo=CONST(G/L Account)) "G/L Account"
+            TableRelation = IF (Tipo = CONST(G/L Account)) "G/L Account"
                             ELSE IF (Tipo=CONST(Item)) Item
                             ELSE IF (Tipo=CONST(Resource)) Resource
                             ELSE IF (Tipo=CONST(Fixed Asset)) "Fixed Asset";
@@ -250,7 +252,7 @@ table 34002511 Botones
 
     trigger OnInsert()
     var
-        rBotones: Record "34002511";
+        rBotones: Record 34002511;
     begin
 
         rBotones.RESET;
@@ -300,7 +302,7 @@ table 34002511 Botones
 
     procedure ComprobarOrden()
     var
-        rBotones: Record "34002511";
+        rBotones: Record 34002511;
     begin
 
         CASE TRUE OF

@@ -95,7 +95,7 @@ page 67036 "Colegio - Nivel"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67037;
-                    RunPageLink = Cod. Colegio=FIELD("Cod. Colegio");
+                    RunPageLink = "Cod. Colegio" = FIELD("Cod. Colegio");
                 }
             }
         }
@@ -104,54 +104,50 @@ page 67036 "Colegio - Nivel"
     trigger OnInit()
     begin
         "Cod. Colegio" := gColegio;
-        City           := gCity;
-        County         := gCounty;
-        "Post Code"    := gPostCode;
+        City := gCity;
+        County := gCounty;
+        "Post Code" := gPostCode;
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
-        IF "Cod. Colegio" = '' THEN
-           BEGIN
+        IF "Cod. Colegio" = '' THEN BEGIN
             IF gColegio = '' THEN
-               ERROR(Err001,FIELDCAPTION("Cod. Colegio"));
+                ERROR(Err001, FIELDCAPTION("Cod. Colegio"));
             "Cod. Colegio" := gColegio;
-           END;
+        END;
 
-        IF City = '' THEN
-           BEGIN
+        IF City = '' THEN BEGIN
             IF gCity = '' THEN
-               ERROR(Err001,FIELDCAPTION(City));
+                ERROR(Err001, FIELDCAPTION(City));
             City := gCity;
-           END;
+        END;
 
-        IF County = '' THEN
-           BEGIN
+        IF County = '' THEN BEGIN
             IF gCounty = '' THEN
-               ERROR(Err001,FIELDCAPTION(County));
+                ERROR(Err001, FIELDCAPTION(County));
             County := gCounty;
-           END;
-        IF "Post Code" = '' THEN
-           BEGIN
+        END;
+        IF "Post Code" = '' THEN BEGIN
             IF gPostCode = '' THEN
-               ERROR(Err001,FIELDCAPTION("Post Code"));
+                ERROR(Err001, FIELDCAPTION("Post Code"));
             "Post Code" := gPostCode;
-           END;
+        END;
     end;
 
     trigger OnOpenPage()
     begin
         IF gColegio <> '' THEN
-           SETRANGE("Cod. Colegio",gColegio);
+            SETRANGE("Cod. Colegio", gColegio);
 
         IF gCity <> '' THEN
-           SETRANGE(City,gCity);
+            SETRANGE(City, gCity);
 
         IF gCounty <> '' THEN
-           SETRANGE(County,gCounty);
+            SETRANGE(County, gCounty);
 
         IF gPostCode <> '' THEN
-           SETRANGE("Post Code",gPostCode);
+            SETRANGE("Post Code", gPostCode);
     end;
 
     var
@@ -162,11 +158,11 @@ page 67036 "Colegio - Nivel"
         gPostCode: Code[30];
         Err001: Label 'You must specify a %1l to continue';
 
-    procedure RecibeParametros(lColegio: Code[30];lCity: Code[30];lCounty: Code[30];lPostCode: Code[30])
+    procedure RecibeParametros(lColegio: Code[30]; lCity: Code[30]; lCounty: Code[30]; lPostCode: Code[30])
     begin
-        gColegio  := lColegio;
-        gCity     := lCity;
-        gCounty   := lCounty;
+        gColegio := lColegio;
+        gCity := lCity;
+        gCounty := lCounty;
         gPostCode := lPostCode;
     end;
 }

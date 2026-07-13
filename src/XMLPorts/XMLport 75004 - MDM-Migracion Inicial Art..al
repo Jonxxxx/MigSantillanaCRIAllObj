@@ -1078,7 +1078,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                 XmlName = 'Packs';
                                 tableelement(bomline; Table90)
                                 {
-                                    LinkFields = Field1 = FIELD(Field1);
+                                    LinkFields = Field1 = FIELD("Field1");
                                     LinkTable = Item;
                                     MaxOccurs = Unbounded;
                                     MinOccurs = Zero;

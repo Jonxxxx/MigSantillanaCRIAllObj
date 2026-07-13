@@ -4,7 +4,7 @@ table 34002134 Calendario
 
     fields
     {
-        field(1;Fecha;Date)
+        field(1; Fecha; Date)
         {
             Caption = 'Date';
             NotBlank = true;
@@ -12,29 +12,29 @@ table 34002134 Calendario
             trigger OnValidate()
             begin
                 Calend.RESET;
-                Calend.SETRANGE("Period Type",0); //Date
-                Calend.SETRANGE("Period Start",Fecha);
+                Calend.SETRANGE("Period Type", 0); //Date
+                Calend.SETRANGE("Period Start", Fecha);
                 Calend.FINDFIRST;
                 "Día de la semana" := Calend."Period No.";
-                Ano := DATE2DMY(Fecha,3);
+                Ano := DATE2DMY(Fecha, 3);
 
                 Calend.RESET;
-                Calend.SETRANGE("Period Type",2); //Month
-                Calend.SETRANGE("Period Start",DMY2DATE(1,DATE2DMY(Fecha,2),DATE2DMY(Fecha,3)));
+                Calend.SETRANGE("Period Type", 2); //Month
+                Calend.SETRANGE("Period Start", DMY2DATE(1, DATE2DMY(Fecha, 2), DATE2DMY(Fecha, 3)));
                 Calend.FINDFIRST;
 
                 Período := Calend."Period No.";
             end;
         }
-        field(2;Texto;Text[30])
+        field(2; Texto; Text[30])
         {
             Caption = 'Description';
         }
-        field(3;"No laborable";Boolean)
+        field(3; "No laborable"; Boolean)
         {
             Caption = 'No working day';
         }
-        field(4;"Día de la semana";Option)
+        field(4; "Día de la semana"; Option)
         {
             Caption = 'Week day';
             Description = '    ,Lunes,Martes,Miércoles,Jueves,Viernes,Sabado,Domingo';
@@ -42,17 +42,17 @@ table 34002134 Calendario
             OptionCaption = '    ,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday';
             OptionMembers = "    ",Lunes,Martes,"Miércoles",Jueves,Viernes,Sabado,Domingo;
         }
-        field(5;Semana;Integer)
+        field(5; Semana; Integer)
         {
             Caption = 'Week';
             Editable = false;
         }
-        field(6;Generado;Boolean)
+        field(6; Generado; Boolean)
         {
             Caption = 'Generated';
             Editable = false;
         }
-        field(7;"Período";Option)
+        field(7; "Período"; Option)
         {
             Caption = 'Period';
             Description = '    ,Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre';
@@ -60,12 +60,12 @@ table 34002134 Calendario
             OptionCaption = '    ,January,February,March,April,May,Jun,July,August,September,October,November,December';
             OptionMembers = "    ",Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         }
-        field(8;Ano;Integer)
+        field(8; Ano; Integer)
         {
             Caption = 'Year';
             Editable = false;
         }
-        field(9;Mes;Integer)
+        field(9; Mes; Integer)
         {
             Caption = 'Month';
         }
@@ -73,10 +73,10 @@ table 34002134 Calendario
 
     keys
     {
-        key(Key1;Fecha)
+        key(Key1; Fecha)
         {
         }
-        key(Key2;Ano,Mes)
+        key(Key2; Ano, Mes)
         {
         }
     }
@@ -91,6 +91,6 @@ table 34002134 Calendario
     end;
 
     var
-        Calend: Record "2000000007";
+        Calend: Record 2000000007;
 }
 

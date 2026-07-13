@@ -16,7 +16,7 @@ table 34002530 "Transacciones TPV"
         field(20; "Cod. TPV"; Code[20])
         {
             Caption = 'POS Terminal No.';
-            TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD(Cod. tienda));
+            TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(30; Fecha; Date)
         {
@@ -39,7 +39,7 @@ table 34002530 "Transacciones TPV"
         field(70; "Id. cajero"; Code[50])
         {
             Caption = 'Staff ID';
-            TableRelation = Cajeros.ID WHERE(Tienda = FIELD(Cod. tienda));
+            TableRelation = Cajeros.ID WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(80; Hora; Time)
         {
@@ -52,7 +52,7 @@ table 34002530 "Transacciones TPV"
 
             trigger OnValidate()
             var
-                recCurrExchRate: Record "330";
+                recCurrExchRate: Record 330;
             begin
             end;
         }
@@ -63,7 +63,7 @@ table 34002530 "Transacciones TPV"
 
             trigger OnValidate()
             var
-                recCurrExchRate: Record "330";
+                recCurrExchRate: Record 330;
             begin
             end;
         }
@@ -74,8 +74,8 @@ table 34002530 "Transacciones TPV"
         field(110; "No. Registrado"; Code[20])
         {
             Caption = 'No. Registrado';
-            TableRelation = IF (Tipo Transaccion=CONST(Venta)) "Sales Invoice Header"
-                            ELSE IF (Tipo Transaccion=CONST(Anulacion)) "Sales Cr.Memo Header";
+            TableRelation = IF ("Tipo Transaccion" = CONST(Venta)) "Sales Invoice Header"
+            ELSE IF ("Tipo Transaccion" = CONST(Anulacion)) "Sales Cr.Memo Header";
         }
         field(120; "Cod. cliente"; Code[20])
         {
@@ -119,7 +119,7 @@ table 34002530 "Transacciones TPV"
 
     procedure TraerUltimaVenta(): Integer
     var
-        recVentaTPV: Record "34002530";
+        recVentaTPV: Record 34002530;
     begin
         recVentaTPV.RESET;
         recVentaTPV.SETRANGE("Cod. tienda", "Cod. tienda");
@@ -132,7 +132,7 @@ table 34002530 "Transacciones TPV"
 
     procedure AsignarTurno(): Integer
     var
-        cduControl: Codeunit "34002521";
+        cduControl: Codeunit 34002521;
     begin
         "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
     end;

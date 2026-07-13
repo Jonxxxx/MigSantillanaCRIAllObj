@@ -49,7 +49,7 @@ page 75004 "Imp.MdM Tabla"
             part(Campos; 75005)
             {
                 Caption = 'Campos';
-                SubPageLink = Id Rel=FIELD("Id");
+                SubPageLink = "Id Rel" = FIELD("Id");
             }
         }
     }
