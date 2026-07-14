@@ -24,7 +24,7 @@ tableextension 50104 EXCCRISalesPrice extends "Sales Price"
         }
         field(50001; "Item description"; Text[100])
         {
-            Caption = 'Item description', Comment = 'ESP=Descripción producto';
+            Caption = 'Item description', Comment = 'ESP=Descripcion producto';
             FieldClass = FlowField;
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
             Editable = false;

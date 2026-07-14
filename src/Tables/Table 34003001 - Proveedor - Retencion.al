@@ -10,7 +10,7 @@ table 34003001 "Proveedor - Retencion"
         {
             TableRelation = Vendor;
         }
-        field(2; "Código Retención"; Code[20])
+        field(2; "Codigo Retención"; Code[20])
         {
             NotBlank = true;
             TableRelation = "Config. Retencion Proveedores";
@@ -55,7 +55,7 @@ table 34003001 "Proveedor - Retencion"
 
     keys
     {
-        key(Key1; "Cód. Proveedor", "Código Retención")
+        key(Key1; "Cód. Proveedor", "Codigo Retención")
         {
         }
     }

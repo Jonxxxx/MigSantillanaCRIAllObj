@@ -5,7 +5,7 @@ table 34002126 "Incentivos/Propinas"
     {
         field(1; "Concepto Salarial"; Code[10])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(2; "Fecha de Corte"; Date)
         {

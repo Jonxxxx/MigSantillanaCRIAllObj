@@ -8,7 +8,7 @@ page 56062 "Seguimiento Pedidos de Venta"
     Editable = false;
     PageType = List;
     SourceTable = 36;
-    SourceTableView = SORTING("Document Type", No.)
+    SourceTableView = SORTING("Document Type", "No.")
                       ORDER(Ascending)
                       WHERE("Document Type" = FILTER(Order));
 
@@ -76,8 +76,7 @@ page 56062 "Seguimiento Pedidos de Venta"
                 {
                     Editable = false;
                 }
-                field(Contac.Name;
-                    Contac.Name)
+                field(ContacName; Contac.Name)
                 {
                     Caption = 'School Name';
                     Editable = false;

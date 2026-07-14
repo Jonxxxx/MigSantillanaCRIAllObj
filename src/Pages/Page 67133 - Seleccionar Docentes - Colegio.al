@@ -8,7 +8,7 @@ page 67133 "Seleccionar Docentes - Colegio"
     {
         area(content)
         {
-            repeater(General)
+            repeater(GeneralA)
             {
                 field(Seleccionar; Seleccionar)
                 {
@@ -68,41 +68,7 @@ page 67133 "Seleccionar Docentes - Colegio"
 
     actions
     {
-        group()
-        {
-            action()
-            {
 
-                trigger OnAction()
-                begin
-                    /*
-                    TH.GET(NoDocumento);
-                    SETRANGE("Location Code",TH."Transfer-from Code");
-                    SETRANGE("Bin Code",TH."Cod. Ubicacion Alm. Origen");
-                    
-                    MARKEDONLY(TRUE);
-                    IF FINDSET THEN
-                        REPEAT
-                         NoLin += 1000;
-                         TL.INIT;
-                         TL."Document No." := TH."No.";
-                         TL."Line No."     := NoLin;
-                         TL.VALIDATE("Transfer-from Code",TH."Transfer-from Code");
-                         TL.VALIDATE("Transfer-to Code",TH."Transfer-to Code");
-                         TL.VALIDATE("Item No.","Item No.");
-                    //     TL.VALIDATE(Quantity,1);
-                         IF TH."Cod. Ubicacion Alm. Origen" <> '' THEN
-                            TL.VALIDATE("Transfer-from Bin Code",TH."Cod. Ubicacion Alm. Origen");
-                         IF TH."Cod. Ubicacion Alm. Destino" <> '' THEN
-                            TL.VALIDATE("Transfer-To Bin Code",TH."Cod. Ubicacion Alm. Destino");
-                         IF NOT TL.INSERT(TRUE) THEN
-                            TL.MODIFY(TRUE);
-                        UNTIL NEXT = 0;
-                    */
-
-                end;
-            }
-        }
     }
 
     trigger OnAfterGetRecord()

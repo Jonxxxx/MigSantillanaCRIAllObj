@@ -28,7 +28,7 @@ page 67161 "Sel. Eventos Planif. - Expo"
                 {
                     Editable = false;
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
                 {
                     Editable = false;
                 }
@@ -53,11 +53,11 @@ page 67161 "Sel. Eventos Planif. - Expo"
             {
                 Caption = 'Programación';
                 Editable = false;
-                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                              "Tipo Evento"=FIELD("Tipo Evento"),
-                              "Tipo de Expositor"=FIELD("Tipo de Expositor"),
-                              "Expositor"=FIELD("Expositor"),
-                              "Secuencia"=FIELD("Secuencia");
+                SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                              "Tipo Evento" = FIELD("Tipo Evento"),
+                              "Tipo de Expositor" = FIELD("Tipo de Expositor"),
+                              "Expositor" = FIELD("Expositor"),
+                              "Secuencia" = FIELD("Secuencia");
             }
         }
     }
@@ -72,25 +72,25 @@ page 67161 "Sel. Eventos Planif. - Expo"
     begin
         wTextCostos := '';
         IF "No. Solicitud" <> '' THEN BEGIN
-          recCostos.SETRANGE("No. Solicitud","No. Solicitud");
+            recCostos.SETRANGE("No. Solicitud", "No. Solicitud");
         END
         ELSE BEGIN
-          recCostos.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-          recCostos.SETRANGE("Tipo Evento","Tipo Evento");
-          recCostos.SETRANGE(Expositor,Expositor);
-          recCostos.SETRANGE(Secuencia,Secuencia);
+            recCostos.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+            recCostos.SETRANGE("Tipo Evento", "Tipo Evento");
+            recCostos.SETRANGE(Expositor, Expositor);
+            recCostos.SETRANGE(Secuencia, Secuencia);
         END;
         IF recCostos.FINDSET THEN
-          REPEAT
-            IF recCostos.Porcentaje <> 0 THEN
-              wTextCostos := wTextCostos + recCostos.Código + ' (' + FORMAT(recCostos.Porcentaje) + '%) ';
-          UNTIL recCostos.NEXT=0;
+            REPEAT
+                IF recCostos.Porcentaje <> 0 THEN
+                    wTextCostos := wTextCostos + recCostos.Codigo + ' (' + FORMAT(recCostos.Porcentaje) + '%) ';
+            UNTIL recCostos.NEXT = 0;
     end;
 
     trigger OnOpenPage()
     begin
-        SETFILTER(Estado,'<>%1', Estado::Anulado);
-        SETRANGE(Pagado,FALSE);
+        SETFILTER(Estado, '<>%1', Estado::Anulado);
+        SETRANGE(Pagado, FALSE);
     end;
 
     var

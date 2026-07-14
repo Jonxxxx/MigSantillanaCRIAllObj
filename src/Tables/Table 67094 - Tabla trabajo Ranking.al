@@ -99,7 +99,7 @@ table 67094 "Tabla trabajo Ranking"
         field(32; "MONTO BRUTO_BIBL"; Decimal)
         {
         }
-        field(33; "MONTO TOTAL_ESPA OL"; Decimal)
+        field(33; "MONTO TOTAL_ESPANOL"; Decimal)
         {
         }
         field(34; "MONTO TOTAL_INGLES"; Decimal)
@@ -111,7 +111,7 @@ table 67094 "Tabla trabajo Ranking"
         field(36; "MONTO TOTAL_GENERAL"; Decimal)
         {
         }
-        field(37; "PORC MONTO BRUTO_ESPA OL"; Integer)
+        field(37; "PORC MONTO BRUTO_ESPANOL"; Integer)
         {
         }
         field(38; "PORC MONTO BRUTO_INGLES"; Integer)

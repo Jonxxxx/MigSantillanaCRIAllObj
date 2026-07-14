@@ -99,7 +99,7 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(50007; "Descripción Producto Ref."; Text[60])
+        field(50007; "Descripcion Producto Ref."; Text[60])
         {
             CalcFormula = lookup(Item.Description where("No." = field(Producto)));
             Editable = false;

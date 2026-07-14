@@ -36,55 +36,55 @@ page 67049 "Lista Padres"
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Home Phone No.";"Home Phone No.")
+                field("Home Phone No."; "Home Phone No.")
                 {
                 }
-                field("Tipo documento";"Tipo documento")
+                field("Tipo documento"; "Tipo documento")
                 {
                 }
-                field("Dia Nacimiento";"Dia Nacimiento")
+                field("Dia Nacimiento"; "Dia Nacimiento")
                 {
                 }
-                field("Mes Nacimiento";"Mes Nacimiento")
+                field("Mes Nacimiento"; "Mes Nacimiento")
                 {
                 }
-                field("Ano Nacimiento";"Ano Nacimiento")
+                field("Ano Nacimiento"; "Ano Nacimiento")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field(Twitter;Twitter)
+                field(Twitter; Twitter)
                 {
                 }
-                field(Facebook;Facebook)
+                field(Facebook; Facebook)
                 {
                 }
-                field("BB Pin";"BB Pin")
+                field("BB Pin"; "BB Pin")
                 {
                 }
-                field("Cantidad Hijos INI";"Cantidad Hijos INI")
+                field("Cantidad Hijos INI"; "Cantidad Hijos INI")
                 {
                 }
-                field("Cantidad Hijos PRI";"Cantidad Hijos PRI")
+                field("Cantidad Hijos PRI"; "Cantidad Hijos PRI")
                 {
                 }
             }
@@ -102,13 +102,13 @@ page 67049 "Lista Padres"
                 {
                     Caption = '&Interest area';
                     RunObject = Page 67019;
-                                    RunPageLink = "DNI Padre"=FIELD("DNI");
+                    RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
                 action("&Children")
                 {
                     Caption = '&Children';
                     RunObject = Page 67020;
-                                    RunPageLink = "DNI Padre"=FIELD("DNI");
+                    RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
             }
         }

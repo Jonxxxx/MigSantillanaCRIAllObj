@@ -14,7 +14,7 @@ page 56060 "Grupos de almacenes"
                 field(Grupo; Grupo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

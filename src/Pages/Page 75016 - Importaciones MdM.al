@@ -49,7 +49,7 @@ page 75016 "Importaciones MdM"
                 field(tipo; tipo)
                 {
                 }
-                field(Entrada; Entrada)
+                field(Entrada1; Entrada)
                 {
                 }
                 field(Traspasado; Traspasado)
@@ -71,7 +71,7 @@ page 75016 "Importaciones MdM"
     {
         area(processing)
         {
-            group()
+            group(General)
             {
                 group("Imp. Excel")
                 {
@@ -82,7 +82,7 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            cImpExcel.ImportaFile(FALSE, 0);
+                            //TODO: Ver cImpExcel.ImportaFile(FALSE, 0);
                         end;
                     }
                     action("Todas las Hojas")
@@ -91,7 +91,7 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            cImpExcel.ImportaFile(TRUE, 0);
+                            //TODO: Ver cImpExcel.ImportaFile(TRUE, 0);
                         end;
                     }
                 }
@@ -116,6 +116,8 @@ page 75016 "Importaciones MdM"
                         Enabled = wBlobEnabled1;
                         Image = Save;
 
+                        //TODO: Ver 
+                        /*
                         trigger OnAction()
                         var
                             TempBlob: Record 99008535;
@@ -125,14 +127,15 @@ page 75016 "Importaciones MdM"
                                 EXIT;
                             TempBlob.Blob := DOC;
                             cFileMng.BLOBExport(TempBlob, 'DOC.xml', TRUE);
-                        end;
+                        end;*/
                     }
                     action(Salida)
                     {
                         Caption = 'Salida';
                         Enabled = wBlobEnabled2;
                         Image = Save;
-
+                        //TODO: Ver 
+                        /*
                         trigger OnAction()
                         var
                             TempBlob: Record 99008535;
@@ -142,14 +145,15 @@ page 75016 "Importaciones MdM"
                                 EXIT;
                             TempBlob.Blob := "Send XML";
                             cFileMng.BLOBExport(TempBlob, 'SendDOC.xml', TRUE);
-                        end;
+                        end;*/
                     }
                     action("Resp. Salida")
                     {
                         Caption = 'Resp. Salida';
                         Enabled = wBlobEnabled3;
                         Image = Save;
-
+                        //TODO: Ver 
+                        /*
                         trigger OnAction()
                         var
                             TempBlob: Record 99008535;
@@ -159,7 +163,7 @@ page 75016 "Importaciones MdM"
                                 EXIT;
                             TempBlob.Blob := "Send XML Reply";
                             cFileMng.BLOBExport(TempBlob, 'SendResp.xml', TRUE);
-                        end;
+                        end;*/
                     }
                 }
                 action(Traspasar)
@@ -169,7 +173,7 @@ page 75016 "Importaciones MdM"
 
                     trigger OnAction()
                     begin
-                        cMaestrosMdm.TrasPasaCab(Rec);
+                        //TODO: Ver cMaestrosMdm.TrasPasaCab(Rec);
                     end;
                 }
             }
@@ -185,8 +189,8 @@ page 75016 "Importaciones MdM"
     end;
 
     var
-        cImpExcel: Codeunit 75002;
-        cMaestrosMdm: Codeunit 75001;
+        //TODO: Ver cImpExcel: Codeunit 75002;
+        //TODO: Ver cMaestrosMdm: Codeunit 75001;
         cFileMng: Codeunit 419;
         wBlobEnabled1: Boolean;
         wBlobEnabled2: Boolean;

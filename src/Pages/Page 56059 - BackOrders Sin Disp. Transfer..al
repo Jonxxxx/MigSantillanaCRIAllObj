@@ -73,6 +73,8 @@ page 56059 "BackOrders Sin Disp. Transfer."
                 {
                     Editable = false;
                 }
+                //TODO: Ver 
+                /*
                 field(SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec);
                     SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
@@ -80,7 +82,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }
+                }*/
                 field("Cantidad a Anular"; "Cantidad a Anular")
                 {
                 }
@@ -225,23 +227,25 @@ page 56059 "BackOrders Sin Disp. Transfer."
                     PrevTime := TIME;
                     Window.UPDATE(1, ROUND((Counter / CounterTotal) * 10000, 1));
                 END;
-                //-$002
-                //IF (SalesInfoPaneMgt.CalcAvailabilityTransLine(TL) = 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //-#56090
-                IF (SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL) <= 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //+#56090
-                    BEGIN
-                    WHSL.RESET;
-                    WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
-                    WHSL.SETRANGE("Source Type", 5741);
-                    WHSL.SETRANGE("Source Subtype", 0);
-                    WHSL.SETRANGE("Source No.", TL."Document No.");
-                    WHSL.SETRANGE(WHSL."Item No.", TL."Item No.");
-                    IF NOT WHSL.FINDFIRST THEN BEGIN
-                        TRANSFERFIELDS(TL);
-                        "Cantidad a Anular" := 0; //+$001
-                        "Cantidad a Ajustar" := 0; //+$002
-                        INSERT;
-                    END;
+            //-$002
+            //IF (SalesInfoPaneMgt.CalcAvailabilityTransLine(TL) = 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //-#56090
+            //TODO: Ver 
+            /*
+            IF (SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL) <= 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //+#56090
+                BEGIN
+                WHSL.RESET;
+                WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
+                WHSL.SETRANGE("Source Type", 5741);
+                WHSL.SETRANGE("Source Subtype", 0);
+                WHSL.SETRANGE("Source No.", TL."Document No.");
+                WHSL.SETRANGE(WHSL."Item No.", TL."Item No.");
+                IF NOT WHSL.FINDFIRST THEN BEGIN
+                    TRANSFERFIELDS(TL);
+                    "Cantidad a Anular" := 0; //+$001
+                    "Cantidad a Ajustar" := 0; //+$002
+                    INSERT;
                 END;
+            END;*/
             UNTIL TL.NEXT = 0;
         Window.CLOSE;
     end;
@@ -261,7 +265,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
         TL: Record 5741;
         TH: Record 5740;
         estatusTrans: Option Abierto,Lanzado;
-        ReleaseTransfDoc: Codeunit 5708;
+        ReleaseTransfDoc: Codeunit "Release Transfer Document";
         TL1Record: Record 5741;
         WHSL: Record 7321;
         PedTrans: Page 5740;

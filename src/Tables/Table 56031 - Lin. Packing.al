@@ -90,7 +90,7 @@ table 56031 "Lin. Packing"
 
     var
         CP: Record 56032;
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         ContCaja: Page 56041;
 
     procedure ContenidoCaja()

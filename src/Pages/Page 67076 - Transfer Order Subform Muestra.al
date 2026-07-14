@@ -133,6 +133,8 @@ page 67076 "Transfer Order Subform Muestra"
                 {
                     Visible = false;
                 }
+                //TODO: Ver
+                /*
                 field(ShortcutDimCode[3];ShortcutDimCode[3])
                 {
                     CaptionClass = '1,2,3';
@@ -223,6 +225,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(8,ShortcutDimCode[8]);
                     end;
                 }
+                */
             }
         }
     }
@@ -242,7 +245,7 @@ page 67076 "Transfer Order Subform Muestra"
     begin
         COMMIT;
         IF NOT ReserveTransferLine.DeleteLineConfirm(Rec) THEN
-          EXIT(FALSE);
+            EXIT(FALSE);
         ReserveTransferLine.DeleteLine(Rec);
     end;
 
@@ -252,7 +255,7 @@ page 67076 "Transfer Order Subform Muestra"
     end;
 
     var
-        ShortcutDimCode: array [8] of Code[20];
+        ShortcutDimCode: array[8] of Code[20];
 
     procedure ShowDimensions()
     begin

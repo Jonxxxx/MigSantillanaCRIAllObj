@@ -39,19 +39,17 @@ page 67005 "Productos equivalentes"
                 action("&Item card")
                 {
                     Caption = '&Item card';
-                    RunObject = Page "Item Card";
-                    RunPageLink = No.=FIELD("Cod. Producto");
+                    RunObject = Page 30;
+                    RunPageLink = "No." = FIELD("Cod. Producto");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("&Equivalent Item card")
                 {
                     Caption = '&Equivalent Item card';
-                    RunObject = Page "Item Card";
-                                    RunPageLink = No.=FIELD("Cod. Producto Anterior");
+                    RunObject = Page 30;
+                    RunPageLink = "No." = FIELD("Cod. Producto Anterior");
                 }
-                separator()
-                {
-                }
+
                 action("&Import Items")
                 {
                     Caption = '&Import Items';
@@ -62,9 +60,9 @@ page 67005 "Productos equivalentes"
 
                     trigger OnAction()
                     var
-                        ImportaProdEquiv: Report "67001;
+                    //TODO: Ver ImportaProdEquiv: Report 67001;
                     begin
-                        ImportaProdEquiv.RUNMODAL;
+                        //TODO: Ver ImportaProdEquiv.RUNMODAL;
                         CurrPage.UPDATE;
                     end;
                 }

@@ -79,8 +79,8 @@ page 67116 "Hist Colegio - Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 5050;
-                    RunPageLink = No.=FIELD("Cod. Colegio");
+                    RunObject = Page "Contact Card";
+                    RunPageLink = "No." = FIELD("Cod. Colegio");
                     ShortCutKey = 'Shift+F5';
                 }
             }
@@ -94,7 +94,7 @@ page 67116 "Hist Colegio - Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67001;
-                                    RunPageLink = No.=FIELD("Cod. Docente");
+                    RunPageLink = "No." = FIELD("Cod. Docente");
                 }
                 action(Adoption)
                 {
@@ -109,14 +109,12 @@ page 67116 "Hist Colegio - Docentes"
                     var
                         Estad: Page 67119;
                     begin
-                        Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
+                        //TODO: Ver Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
                         Estad.RUN;
                         CLEAR(Estad);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Ranking por CVM")
                 {
                     Caption = 'Ranking por CVM';
@@ -131,7 +129,7 @@ page 67116 "Hist Colegio - Docentes"
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");
-                        
+
                         /*
                         RankingDocente.RecibeParametros("Cod. Docente","Cod. Colegio");
                         RankingDocente.RUN;

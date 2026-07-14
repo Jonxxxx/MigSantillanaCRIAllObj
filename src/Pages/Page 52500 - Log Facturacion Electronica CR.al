@@ -74,11 +74,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc SF  XML");
                     IF "Doc SF  XML".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc SF  XML";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, 'Documento Sin Firma.xml', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver 
+                        /*
+                            TempBlob.INIT;
+                            TempBlob.Blob := "Doc SF  XML";
+                            TempBlob.INSERT;
+                            FileManagment.BLOBExport(TempBlob, 'Documento Sin Firma.xml', TRUE);
+                            TempBlob.DELETEALL;*/
                     END;
                 end;
             }
@@ -96,11 +98,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Firmado  XML");
                     IF "Doc Firmado  XML".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc Firmado  XML";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, 'Documento Firmado.xml', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver 
+                        /*
+                            TempBlob.INIT;
+                            TempBlob.Blob := "Doc Firmado  XML";
+                            TempBlob.INSERT;
+                            FileManagment.BLOBExport(TempBlob, 'Documento Firmado.xml', TRUE);
+                            TempBlob.DELETEALL;*/
                     END;
                 end;
             }
@@ -118,11 +122,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Json envio  XML");
                     IF "Doc Json envio  XML".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc Json envio  XML";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, 'Documento Json Enviado.txt', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver 
+                        /*
+                            TempBlob.INIT;
+                            TempBlob.Blob := "Doc Json envio  XML";
+                            TempBlob.INSERT;
+                            FileManagment.BLOBExport(TempBlob, 'Documento Json Enviado.txt', TRUE);
+                            TempBlob.DELETEALL;*/
                     END;
                 end;
             }
@@ -140,11 +146,11 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Json Respuesta  XML");
                     IF "Doc Json Respuesta  XML".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc Json Respuesta  XML";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, 'Documento Json Recibido.txt', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver TempBlob.INIT;
+                        //TODO: Ver TempBlob.Blob := "Doc Json Respuesta  XML";
+                        //TODO: Ver TempBlob.INSERT;
+                        //ODO: Ver FileManagment.BLOBExport(TempBlob, 'Documento Json Recibido.txt', TRUE);
+                        //TODO: Ver TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -162,11 +168,11 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Respuesta  XML");
                     IF "Doc Respuesta  XML".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc Respuesta  XML";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, 'Documento Xml Respuesta.xml', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver TempBlob.INIT;
+                        //TODO: Ver TempBlob.Blob := "Doc Respuesta  XML";
+                        //TODO: Ver TempBlob.INSERT;
+                        //TODO: Ver FileManagment.BLOBExport(TempBlob, 'Documento Xml Respuesta.xml', TRUE);
+                        //TODO: Ver TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -184,11 +190,11 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Pdf Generado");
                     IF "Doc Pdf Generado".HASVALUE THEN BEGIN
-                        TempBlob.INIT;
-                        TempBlob.Blob := "Doc Pdf Generado";
-                        TempBlob.INSERT;
-                        FileManagment.BLOBExport(TempBlob, FORMAT("Tipo Documento") + '-' + "Clave Doc" + '.pdf', TRUE);
-                        TempBlob.DELETEALL;
+                        //TODO: Ver TempBlob.INIT;
+                        //TODO: Ver TempBlob.Blob := "Doc Pdf Generado";
+                        //TODO: Ver TempBlob.INSERT;
+                        //TODO: Ver FileManagment.BLOBExport(TempBlob, FORMAT("Tipo Documento") + '-' + "Clave Doc" + '.pdf', TRUE);
+                        //TODO: Ver TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -203,12 +209,14 @@ page 52500 "Log Facturacion Electronica CR"
 
                 trigger OnAction()
                 var
-                    FE: Codeunit 52504;
+                    //TODO: Ver FE: Codeunit 52504;
                     lrSCMH: Record 114;
                     lrSH: Record 36;
                 begin
                     //+#217374
                     //... Si el documento viene de POS, no debe enviarse por e-mail.
+                    //TODO: Ver 
+                    /*
                     IF "Tipo Documento" = "Tipo Documento"::TE THEN
                         FE.Parametros(TRUE, '')
                     ELSE BEGIN
@@ -224,7 +232,7 @@ page 52500 "Log Facturacion Electronica CR"
                     END;
                     //-#217374
 
-                    FE.ComprobarDocumentoElectronicoLOG(Rec);
+                    FE.ComprobarDocumentoElectronicoLOG(Rec);*/
                 end;
             }
             action("Enviar Documentos Elect. lotes")
@@ -236,7 +244,7 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
 
                     // ++ 001-YFC
-                    FacturacionElectronicaNAV.ComprobarDocumentosElectronicoLOG;
+                    //TODO: Ver FacturacionElectronicaNAV.ComprobarDocumentosElectronicoLOG;
                     MESSAGE(Text001);
                     // -- 001-YFC
                 end;
@@ -246,8 +254,8 @@ page 52500 "Log Facturacion Electronica CR"
 
     var
         FileManagment: Codeunit 419;
-        TempBlob Record: 99008535" temporary;
-        FacturacionElectronicaNAV: Codeunit 52504;
+        //TODO: Ver TempBlob: Record 99008535 temporary;
+        //TODO: Ver FacturacionElectronicaNAV: Codeunit 52504;
         Text001: Label 'Ended process';
 }
 

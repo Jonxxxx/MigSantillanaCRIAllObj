@@ -10,7 +10,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
     // ------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------
-    // No.      Fecha            Firma         Descripción
+    // No.      Fecha            Firma         Descripcion
     // ------------------------------------------------------------------------
     // 005      13-Enero-2022    FES           SANTINAV-2916. Permitir seleccionar rango en filtro producto.
     // 006      13-Enero-2022    FES           Ajustes a Business Central
@@ -137,7 +137,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnAction()
                 var
-                    lReporteVentas: Report "56138;
+                    //TODO: Ver lReporteVentas: Report 56138;
                     TextL001: Label 'Se generó el archivo de texto en la carpeta indicada %1, con el nombre %2';
                     TextL002: Label 'Fatla indicar la carpeta o bien el nombre del archivo a generar.';
                     TextL003: Label 'Falta indicar el ámbito de fechas.';
@@ -179,10 +179,10 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
                     //005+
                     IF (wProducto2 <> '') THEN
                         //IF wProducto = '' THEN
-                        //ERROR('Debe indicar el código del producto desde')
+                        //ERROR('Debe indicar el Codigo del producto desde')
                         //ELSE
                         IF wProducto2 < wProducto THEN
-                            ERROR('El código producto hasta no puede ser menor al producto desde');
+                            ERROR('El Codigo producto hasta no puede ser menor al producto desde');
                     //005-
 
 
@@ -191,25 +191,25 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
                     //lReporteVentas.Parametros(TRUE,wDetallado,wFechaIni,wFechaFin,wCodNumDev,wTipoCliente,wCliente,wProducto,wTipoDocumento,wGCN,wLineaNegocio);  //005+-
                     //lReporteVentas.Parametros(TRUE,wDetallado,wFechaIni,wFechaFin,wCodNumDev,wTipoCliente,wCliente,wProducto,wProducto2,wTipoDocumento,wGCN,wLineaNegocio); //005+-
                     //lReporteVentas.Parametros(TRUE,wDetallado,wFechaIni,wFechaFin,wCodNumDev,wTipoCliente,wCliente,wProducto,wProducto2,wTipoDocumento,wGCN,wLineaNegocio,wCategoriaPedido); //007+-
-                    lReporteVentas.Parametros(TRUE, wDetallado, wFechaIni, wFechaFin, wCodNumDev, wTipoCliente, wCliente, wProducto, wProducto2, wTipoDocumento, wGCN, wLineaNegocio, wCategoriaPedido, wCanalVenta); //008+-
-                                                                                                                                                                                                                      //-003
+                    //TODO: Ver lReporteVentas.Parametros(TRUE, wDetallado, wFechaIni, wFechaFin, wCodNumDev, wTipoCliente, wCliente, wProducto, wProducto2, wTipoDocumento, wGCN, wLineaNegocio, wCategoriaPedido, wCanalVenta); //008+-
+                    //-003
 
                     lWindow.OPEN(TextL004);
                     //lReporteVentas.GetFileName(lFile0,lRuta+'\');
-                    lReporteVentas.SAVEASEXCEL(lRuta + '\' + lFile0);  //+002
+                    //TODO: Ver lReporteVentas.SAVEASEXCEL(lRuta + '\' + lFile0);  //+002
                     lWindow.CLOSE;
 
                     //DOWNLOAD(FromFile, DialogTitle, ToFolder, ToFilter, ToFile)
                     //DOWNLOAD('FromFile.txt','Download file','C:\','Text file(*.txt)|*.txt',ToFile);
-                    IF NOT DOWNLOAD(lRuta + '\' + lFile0, 'Descargar archivo', 'C:\', 'Excel File|*.xlsx', lFile) THEN
-                        MESSAGE(TextL005);
+                    //TODO: Ver IF NOT DOWNLOAD(lRuta + '\' + lFile0, 'Descargar archivo', 'C:\', 'Excel File|*.xlsx', lFile) THEN
+                    //TODO: Ver    MESSAGE(TextL005);
 
                     //+002
                     //... Una vez descargado el archivo, este será eliminado para que no se acumulen.
 
                     //006+
-                    IF FILE.EXISTS(lRuta + '\' + lFile0) THEN
-                        ERASE(lRuta + '\' + lFile0);
+                    //TODO: Ver IF FILE.EXISTS(lRuta + '\' + lFile0) THEN
+                    //TODO: Ver     ERASE(lRuta + '\' + lFile0);
                     //006-
 
                     /*//fes mig (codigo obsoleto para BC)
@@ -245,7 +245,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
         wProducto: Code[20];
         wTipoCliente: Code[20];
         wCodNumDev: Code[20];
-        Folder: Automation;
+        //TODO: Ver Folder: Automation;
         wLineaNegocio: Code[20];
         wGCN: Code[20];
         TestFile: File;

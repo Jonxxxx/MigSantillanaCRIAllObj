@@ -8,7 +8,7 @@ table 51015 "Cab. Cupon Lote"
         field(1; Lote; Integer)
         {
         }
-        field(2; "A o Escolar"; Code[20])
+        field(2; "Ano Escolar"; Code[20])
         {
             TableRelation = "Ano Escolar";
 
@@ -17,7 +17,7 @@ table 51015 "Cab. Cupon Lote"
                 rAo: Record 51013;
             begin
 
-                IF rAo.GET("A o Escolar") THEN BEGIN
+                IF rAo.GET("Ano Escolar") THEN BEGIN
                     "Valido Desde" := rAo."Fecha Desde";
                     "Valido Hasta" := rAo."Fecha Hasta";
                 END;

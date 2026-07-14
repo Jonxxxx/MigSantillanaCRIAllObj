@@ -121,7 +121,7 @@ page 56002 "Configuracion Santillana"
                 field("No. serie Cupon"; "No. serie Cupon")
                 {
                 }
-                field("Cantidad Lineas en Cupón"; "Cantidad Lineas en Cupón")
+                field("Cantidad Lineas en Cupón"; "Cantidad Lineas en Cupon")
                 {
                 }
                 field("Funcionalidad Imp. Fiscal Act."; "Funcionalidad Imp. Fiscal Act.")
@@ -136,10 +136,10 @@ page 56002 "Configuracion Santillana"
                 field("Impresion Muestras"; "Impresion Muestras")
                 {
                 }
-                field("Cód Cliente Call Center"; "Cód Cliente Call Center")
+                field("Cód Cliente Call Center"; "Cod Cliente Call Center")
                 {
                 }
-                field("Días Borrado Rvas. Call Center"; "Días Borrado Rvas. Call Center")
+                field("Días Borrado Rvas. Call Center"; "Dias Borrado Rvas. Call Center")
                 {
                 }
                 field("Dim Est Vent Excel"; "Dim Est Vent Excel")

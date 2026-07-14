@@ -487,7 +487,7 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
         EXCCRIItem: Record Item;
         EXCCRITransferHeader: Record "Transfer Header";
         EXCCRIVATPostingSetup: Record "VAT Posting Setup";
-        EXCCRISantillanaFunctions: Codeunit 56000;
+        //TODO: Ver EXCCRISantillanaFunctions: Codeunit 56000;
         EXCCRICustomerNo: Code[20];
     begin
         if not EXCCRITransferHeader.Get("Document No.") then

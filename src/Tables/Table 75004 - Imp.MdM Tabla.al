@@ -78,7 +78,7 @@ table 75004 "Imp.MdM Tabla"
     end;
 
     var
-        cFuncMdM: Codeunit 75000;
+        //TODO: Ver cFuncMdM: Codeunit 75000;
         //TODO: Ver cGenProd: Codeunit 75007;
         ConfMdM: Record 75000;
         Text0001: Label 'Dim. ';

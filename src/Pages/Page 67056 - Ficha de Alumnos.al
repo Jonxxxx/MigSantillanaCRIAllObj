@@ -28,45 +28,45 @@ page 67056 "Ficha de Alumnos"
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                     Caption = 'State / ZIP Code';
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
             }
             group(Communication)
             {
                 Caption = 'Communication';
-                field("Home Phone No.";"Home Phone No.")
+                field("Home Phone No."; "Home Phone No.")
                 {
                 }
-                field("Cell Phone No.";"Cell Phone No.")
+                field("Cell Phone No."; "Cell Phone No.")
                 {
                 }
-                field("E-Mail";"E-Mail")
+                field("E-Mail"; "E-Mail")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field(Facebook;Facebook)
+                field(Facebook; Facebook)
                 {
                 }
-                field(Twitter;Twitter)
+                field(Twitter; Twitter)
                 {
                 }
-                field("BB Pin";"BB Pin")
+                field("BB Pin"; "BB Pin")
                 {
                 }
             }
@@ -84,13 +84,13 @@ page 67056 "Ficha de Alumnos"
                 {
                     Caption = '&Fathers';
                     RunObject = Page 67049;
-                                    RunPageLink = DNI=FIELD("DNI Padre");
+                    RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")
                 {
                     Caption = '&School';
                     RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD("Cod. Colegio");
+                    RunPageLink = "No." = FIELD("Cod. Colegio");
                 }
             }
         }

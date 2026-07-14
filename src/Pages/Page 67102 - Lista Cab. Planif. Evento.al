@@ -118,9 +118,7 @@ page 67102 "Lista Cab. Planif. Evento"
                         CLEAR(fCabPlanEvent);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action(Edit)
                 {
                     Caption = 'Edit';
@@ -128,10 +126,10 @@ page 67102 "Lista Cab. Planif. Evento"
                     Promoted = true;
                     PromotedIsBig = true;
                     RunObject = Page 67101;
-                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  "Tipo Evento"=FIELD("Tipo Evento"),
-                                  "Expositor"=FIELD("Expositor"),
-                                  "Secuencia"=FIELD("Secuencia");
+                    RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                  "Tipo Evento" = FIELD("Tipo Evento"),
+                                  "Expositor" = FIELD("Expositor"),
+                                  "Secuencia" = FIELD("Secuencia");
                 }
             }
         }
@@ -143,10 +141,10 @@ page 67102 "Lista Cab. Planif. Evento"
         SETRANGE("No. Solicitud", '');
 
         IF gCodExpositor <> '' THEN
-           SETRANGE(Expositor,gCodExpositor);
+            SETRANGE(Expositor, gCodExpositor);
 
-        IF gCodEvento  <> '' THEN
-          SETRANGE("Cod. Taller - Evento",gCodEvento);
+        IF gCodEvento <> '' THEN
+            SETRANGE("Cod. Taller - Evento", gCodEvento);
     end;
 
     var
@@ -157,7 +155,7 @@ page 67102 "Lista Cab. Planif. Evento"
         gCodEvento: Code[20];
         gTipoEvento: Code[20];
 
-    procedure RecibeParametros(CodExpositor: Code[20];TipoExpositor: Integer;CodEvento: Code[20];TipoEvento: Code[20])
+    procedure RecibeParametros(CodExpositor: Code[20]; TipoExpositor: Integer; CodEvento: Code[20]; TipoEvento: Code[20])
     begin
         gCodExpositor := CodExpositor;
         gTipoExpositor := TipoExpositor;

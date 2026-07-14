@@ -17,7 +17,7 @@ table 34002122 "Lin. Aportes Empresas"
         }
         field(5; "Concepto Salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(6; "No. orden"; Integer)
         {

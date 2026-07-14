@@ -46,27 +46,25 @@ page 67028 "Promotores - Ppto Muestras"
                 action("&Item card")
                 {
                     Caption = '&Item card';
-                    RunObject = Page "Item Card";
-                    RunPageLink = No.=FIELD("Cod. Producto");
+                    RunObject = Page 30;
+                    RunPageLink = "No." = FIELD("Cod. Producto");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("&Equivalent Item card")
                 {
                     Caption = '&Equivalent Item card';
-                    RunObject = Page "Item Card";
-                                    RunPageLink = No.=FIELD("Cod. producto equivalente");
+                    RunObject = Page 30;
+                    RunPageLink = "No." = FIELD("Cod. producto equivalente");
                 }
-                separator()
-                {
-                }
+
                 action("&Insert Items")
                 {
                     Caption = '&Insert Items';
 
                     trigger OnAction()
                     begin
-                        CopiaProducto.RecibeDatos("Cod. Promotor",1);
-                        CopiaProducto.RUNMODAL();
+                        //TODO: Ver CopiaProducto.RecibeDatos("Cod. Promotor",1);
+                        //TODO: Ver CopiaProducto.RUNMODAL();
                     end;
                 }
                 action("I&mport Budget")
@@ -79,10 +77,10 @@ page 67028 "Promotores - Ppto Muestras"
 
                     trigger OnAction()
                     var
-                        ProcImportaPpto: Report "67002;
+                    //TODO: Ver ProcImportaPpto: Report 67002;
                     begin
-                        ProcImportaPpto.RecibeParametros(1);
-                        ProcImportaPpto.RUNMODAL;
+                        //TODO: Ver ProcImportaPpto.RecibeParametros(1);
+                        //TODO: Ver ProcImportaPpto.RUNMODAL;
                     end;
                 }
             }
@@ -90,6 +88,6 @@ page 67028 "Promotores - Ppto Muestras"
     }
 
     var
-        CopiaProducto: Report "67000;
+    //TODO: Ver CopiaProducto: Report 67000;
 }
 

@@ -22,7 +22,7 @@ page 53001 "InicializaTablas Movs."
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Report 53007;
+                //TODO: Ver RunObject = Report 53007;
             }
         }
     }

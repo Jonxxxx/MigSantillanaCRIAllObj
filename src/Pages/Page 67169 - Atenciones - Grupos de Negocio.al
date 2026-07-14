@@ -12,10 +12,10 @@ page 67169 "Atenciones - Grupos de Negocio"
         {
             repeater(General)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field(Porcentaje; Porcentaje)
@@ -101,9 +101,9 @@ page 67169 "Atenciones - Grupos de Negocio"
                 Porciento := 0;
 
                 DistrCentros.INIT;
-                DistrCentros."No. Atención" := "No. Atención";
-                DistrCentros.Código := da.Codigo;
-                DistrCentros.Descripción := da.Descripcion;
+                DistrCentros."No. Atencion" := "No. Atencion";
+                DistrCentros.Codigo := da.Codigo;
+                DistrCentros.Descripcion := da.Descripcion;
                 DistrCentros.Porcentaje := Porciento;
                 DistrCentros.INSERT;
             UNTIL da.NEXT = 0;

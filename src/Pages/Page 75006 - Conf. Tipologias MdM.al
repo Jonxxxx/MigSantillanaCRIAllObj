@@ -34,49 +34,49 @@ page 75006 "Conf. Tipologias MdM"
                         END;
                     end;
                 }
-                field("Referencia 1; "Referencia 1")
+                field("Referencia 1"; "Referencia 1")
                 {
                     Editable = wRefEnbl1;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl1;
                 }
-                field("Referencia 2; "Referencia 2")
+                field("Referencia 2"; "Referencia 2")
                 {
                     Editable = wRefEnbl2;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl2;
                 }
-                field("Referencia 3; "Referencia 3")
+                field("Referencia 3"; "Referencia 3")
                 {
                     Editable = wRefEnbl3;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl3;
                 }
-                field("Referencia 4; "Referencia 4")
+                field("Referencia 4"; "Referencia 4")
                 {
                     Editable = wRefEnbl4;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl4;
                 }
-                field("Referencia 5; "Referencia 5")
+                field("Referencia 5"; "Referencia 5")
                 {
                     Editable = wRefEnbl5;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl5;
                 }
-                field("Referencia 6; "Referencia 6")
+                field("Referencia 6"; "Referencia 6")
                 {
                     Editable = wRefEnbl6;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl6;
                 }
-                field("Referencia 7; "Referencia 7")
+                field("Referencia 7"; "Referencia 7")
                 {
                     Editable = wRefEnbl7;
                     Style = StandardAccent;
@@ -122,7 +122,7 @@ page 75006 "Conf. Tipologias MdM"
         lrConfF: Record 75008;
         lwNo: Integer;
     begin
-        wEditable := cFunMdm.GetEditable;
+        //TODO: Ver wEditable := cFunMdm.GetEditable;
         CurrPage.EDITABLE := wEditable;
 
         // Hacemos visibles solo las columnas configuradas
@@ -137,7 +137,7 @@ page 75006 "Conf. Tipologias MdM"
 
     var
         wEditable: Boolean;
-        cFunMdm: Codeunit 75000;
+        //TODO: Ver cFunMdm: Codeunit 75000;
         wRefEnbl1: Boolean;
         wRefEnbl2: Boolean;
         wRefEnbl3: Boolean;

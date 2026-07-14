@@ -10,7 +10,7 @@ page 75001 "Datos MDM"
     {
         area(content)
         {
-            group(Tipo)
+            group(TipoA)
             {
                 Caption = 'Tipo';
                 field(pTtipo; wTipo)
@@ -57,17 +57,17 @@ page 75001 "Datos MDM"
 
     trigger OnDeleteRecord(): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
     end;
 
     trigger OnModifyRecord(): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(FORMAT(wTipo));
     end;
 
     trigger OnOpenPage()
@@ -76,13 +76,13 @@ page 75001 "Datos MDM"
         IF GETFILTER(Tipo) <> '' THEN
             wTipo := GETRANGEMIN(Tipo);
         ActualizaTipo;
-        wEditable := cFunMdm.GetEditable;
+        //TODO: Ver wEditable := cFunMdm.GetEditable;
         CurrPage.EDITABLE := wEditable;
     end;
 
     var
         wTipo: Option "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,"Edición",Estado,"Campaña";
-        cFunMdm: Codeunit 75000;
+        //TODO: Ver cFunMdm: Codeunit 75000;
         wEditable: Boolean;
 
     procedure ActualizaTipo()

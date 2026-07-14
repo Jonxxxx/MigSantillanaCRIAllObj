@@ -12,7 +12,7 @@ page 67124 "Solicitud - Especialidad"
                 field("Cod. Especialidad"; "Cod. Especialidad")
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

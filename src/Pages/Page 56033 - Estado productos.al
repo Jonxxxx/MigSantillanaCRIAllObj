@@ -11,10 +11,10 @@ page 56033 "Estado productos"
         {
             repeater(Group)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

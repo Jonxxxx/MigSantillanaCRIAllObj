@@ -12,7 +12,7 @@ page 67159 "Pagos a Expositores Subform"
                 field("Cod. Evento"; "Cod. Evento")
                 {
                 }
-                field("Descripción Evento"; "Descripción Evento")
+                field("Descripcion Evento"; "Descripcion Evento")
                 {
                 }
                 field(Secuencia; Secuencia)

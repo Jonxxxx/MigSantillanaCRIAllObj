@@ -25,37 +25,37 @@ page 67023 "Lista Editoras"
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Phone No.";"Phone No.")
+                field("Phone No."; "Phone No.")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field(Twitter;Twitter)
+                field(Twitter; Twitter)
                 {
                 }
-                field(Facebook;Facebook)
+                field(Facebook; Facebook)
                 {
                 }
-                field(Santillana;Santillana)
+                field(Santillana; Santillana)
                 {
                 }
             }
@@ -74,13 +74,11 @@ page 67023 "Lista Editoras"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67024;
-                                    RunPageLink = Code = FIELD("Code");
-                                    ShortCutKey = 'Shift+F7';
-                                    Visible = false;
+                    RunPageLink = Code = FIELD("Code");
+                    ShortCutKey = 'Shift+F7';
+                    Visible = false;
                 }
-                separator()
-                {
-                }
+
             }
         }
     }

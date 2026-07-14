@@ -20,7 +20,7 @@ page 67075 "Seleccionar Productos Muestras"
     {
         area(content)
         {
-            repeater(General)
+            repeater(GeneralG)
             {
                 field(Seleccionar; Seleccionar)
                 {
@@ -46,41 +46,7 @@ page 67075 "Seleccionar Productos Muestras"
 
     actions
     {
-        group()
-        {
-            action()
-            {
 
-                trigger OnAction()
-                begin
-                    /*
-                    TH.GET(NoDocumento);
-                    SETRANGE("Location Code",TH."Transfer-from Code");
-                    SETRANGE("Bin Code",TH."Cod. Ubicacion Alm. Origen");
-                    
-                    MARKEDONLY(TRUE);
-                    IF FINDSET THEN
-                        REPEAT
-                         NoLin += 1000;
-                         TL.INIT;
-                         TL."Document No." := TH."No.";
-                         TL."Line No."     := NoLin;
-                         TL.VALIDATE("Transfer-from Code",TH."Transfer-from Code");
-                         TL.VALIDATE("Transfer-to Code",TH."Transfer-to Code");
-                         TL.VALIDATE("Item No.","Item No.");
-                    //     TL.VALIDATE(Quantity,1);
-                         IF TH."Cod. Ubicacion Alm. Origen" <> '' THEN
-                            TL.VALIDATE("Transfer-from Bin Code",TH."Cod. Ubicacion Alm. Origen");
-                         IF TH."Cod. Ubicacion Alm. Destino" <> '' THEN
-                            TL.VALIDATE("Transfer-To Bin Code",TH."Cod. Ubicacion Alm. Destino");
-                         IF NOT TL.INSERT(TRUE) THEN
-                            TL.MODIFY(TRUE);
-                        UNTIL NEXT = 0;
-                    */
-
-                end;
-            }
-        }
     }
 
     trigger OnAfterGetRecord()
@@ -113,7 +79,7 @@ page 67075 "Seleccionar Productos Muestras"
         BC: Record 7302;
         TH: Record 5740;
         TL: Record 5741;
-        TransLine2Record: Record 5741;
+        TransLine2: Record 5741;
         PPM: Record 67028;
         Seleccionar: Boolean;
         NoDocumento: Code[20];

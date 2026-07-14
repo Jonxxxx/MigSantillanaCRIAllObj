@@ -42,12 +42,12 @@ page 75008 "Conf.Filtros Tipologias MdM"
 
     trigger OnOpenPage()
     begin
-        wEditable := cFunMdm.GetEditable;
+        //TODO: Ver wEditable := cFunMdm.GetEditable;
         CurrPage.EDITABLE := wEditable;
     end;
 
     var
-        cFunMdm: Codeunit 75000;
+        //TODO: Ver cFunMdm: Codeunit 75000;
         rCampos: Record 75008;
         wEditable: Boolean;
 }

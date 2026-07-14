@@ -15,8 +15,10 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     {
         area(content)
         {
-            group()
+            group(GeneralG)
             {
+                //TODO: Ver 
+                /*
                 field("Grupo Almacen"; wGrupoAlmacen)
                 {
                     Caption = 'Grupo Almacén';
@@ -32,7 +34,11 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                         CambiarGrupo;
                     end;
                 }
+                */
             }
+
+            //TODO: Ver
+            /*
             repeater(General)
             {
                 IndentationColumn = 1;
@@ -461,10 +467,12 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                         MatrixOnDrillDown(32);
                     end;
                 }
-            }
+            }*/
         }
     }
 
+    //TODO: Ver
+    /*
     actions
     {
         area(processing)
@@ -490,34 +498,34 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                     {
                         Caption = 'Period';
                         RunObject = Page 157;
-                        RunPageLink = No.=FIELD("No."),
-                                      "Global Dimension 1 Filter"=FIELD("Global Dimension 1 Filter"),
-                                      "Global Dimension 2 Filter"=FIELD("Global Dimension 2 Filter"),
-                                      "Location Filter"=FIELD("Location Filter"),
-                                      "Drop Shipment Filter"=FIELD("Drop Shipment Filter"),
-                                      "Variant Filter"=FIELD("Variant Filter");
+                        RunPageLink = "No." = FIELD("No."),
+                                      "Global Dimension 1 Filter" = FIELD("Global Dimension 1 Filter"),
+                                      "Global Dimension 2 Filter" = FIELD("Global Dimension 2 Filter"),
+                                      "Location Filter" = FIELD("Location Filter"),
+                                      "Drop Shipment Filter" = FIELD("Drop Shipment Filter"),
+                                      "Variant Filter" = FIELD("Variant Filter");
                     }
                     action(Variant)
                     {
                         Caption = 'Variant';
                         RunObject = Page 5414;
-                                        RunPageLink = No.=FIELD("No."),
-                                      "Global Dimension 1 Filter"=FIELD("Global Dimension 1 Filter"),
-                                      "Global Dimension 2 Filter"=FIELD("Global Dimension 2 Filter"),
-                                      "Location Filter"=FIELD("Location Filter"),
-                                      "Drop Shipment Filter"=FIELD("Drop Shipment Filter"),
-                                      "Variant Filter"=FIELD("Variant Filter");
+                        RunPageLink = "No." = FIELD("No."),
+                                      "Global Dimension 1 Filter" = FIELD("Global Dimension 1 Filter"),
+                                      "Global Dimension 2 Filter" = FIELD("Global Dimension 2 Filter"),
+                                      "Location Filter" = FIELD("Location Filter"),
+                                      "Drop Shipment Filter" = FIELD("Drop Shipment Filter"),
+                                      "Variant Filter" = FIELD("Variant Filter");
                     }
                     action(Location)
                     {
                         Caption = 'Location';
                         RunObject = Page 492;
-                                        RunPageLink = No.=FIELD("No."),
-                                      "Global Dimension 1 Filter"=FIELD("Global Dimension 1 Filter"),
-                                      "Global Dimension 2 Filter"=FIELD("Global Dimension 2 Filter"),
-                                      "Location Filter"=FIELD("Location Filter"),
-                                      "Drop Shipment Filter"=FIELD("Drop Shipment Filter"),
-                                      "Variant Filter"=FIELD("Variant Filter");
+                        RunPageLink = "No." = FIELD("No."),
+                                      "Global Dimension 1 Filter" = FIELD("Global Dimension 1 Filter"),
+                                      "Global Dimension 2 Filter" = FIELD("Global Dimension 2 Filter"),
+                                      "Location Filter" = FIELD("Location Filter"),
+                                      "Drop Shipment Filter" = FIELD("Drop Shipment Filter"),
+                                      "Variant Filter" = FIELD("Variant Filter");
                     }
                 }
             }
@@ -531,10 +539,10 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         MATRIX_CurrentColumnOrdinal := 0;
 
         IF MatrixRecord.FIND('-') THEN
-          REPEAT
-            MATRIX_CurrentColumnOrdinal := MATRIX_CurrentColumnOrdinal + 1;
-            MATRIX_OnAfterGetRecord(MATRIX_CurrentColumnOrdinal);
-          UNTIL (MatrixRecord.NEXT(1) = 0) OR (MATRIX_CurrentColumnOrdinal = MATRIX_NoOfMatrixColumns);
+            REPEAT
+                MATRIX_CurrentColumnOrdinal := MATRIX_CurrentColumnOrdinal + 1;
+                MATRIX_OnAfterGetRecord(MATRIX_CurrentColumnOrdinal);
+            UNTIL (MatrixRecord.NEXT(1) = 0) OR (MATRIX_CurrentColumnOrdinal = MATRIX_NoOfMatrixColumns);
     end;
 
     trigger OnInit()
@@ -581,18 +589,18 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     begin
         MATRIX_NoOfMatrixColumns := ARRAYLEN(MATRIX_CellData);
     end;
-
+    
     var
         ItemLedgerEntry: Record 32;
-        MatrixRecords: array [32] of 4456059;
+        MatrixRecords: array[32] of 4456059;
         MatrixHeader: Text[250];
         ShowColumnName: Boolean;
         ShowInTransit: Boolean;
-        Matrix Record: Record: 56059;
+        Matrix: Record 56059;
         MATRIX_NoOfMatrixColumns: Integer;
         MATRIX_ColumnOrdinal: Integer;
-        MATRIX_CellData: array [32] of Decimal;
-        MATRIX_ColumnCaption: array [32] of Text[1024];
+        MATRIX_CellData: array[32] of Decimal;
+        MATRIX_ColumnCaption: array[32] of Text[1024];
         [InDataSet]
         Field1Visible: Boolean;
         [InDataSet]
@@ -670,26 +678,26 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         Item: Record 27;
     begin
         Item.COPY(Rec);
-        Item.SETRANGE("Location Filter",MatrixRecords[ColumnID].Almacen);
+        Item.SETRANGE("Location Filter", MatrixRecords[ColumnID].Almacen);
         Item.CALCFIELDS(Inventory);
         MATRIX_CellData[ColumnID] := Item.Inventory;
         SetVisible;
     end;
 
-    procedure Load(MatrixColumns1: array [32] of Text[1024];var MatrixRecords1: array [32] of 4456059;var MatrixRecord1Record 56059")
+    procedure Load(MatrixColumns1: array[32] of Text[1024]; var MatrixRecords1: array[32] of 56059; var MatrixRecord1Record: record 56059)
     begin
-        COPYARRAY(MATRIX_ColumnCaption,MatrixColumns1,1);
-        COPYARRAY(MatrixRecords,MatrixRecords1,1);
+        COPYARRAY(MATRIX_ColumnCaption, MatrixColumns1, 1);
+        COPYARRAY(MatrixRecords, MatrixRecords1, 1);
         MatrixRecord.COPY(MatrixRecord1);
     end;
 
     procedure MatrixOnDrillDown(ColumnID: Integer)
     begin
         ItemLedgerEntry.SETCURRENTKEY(
-          "Item No.","Entry Type","Variant Code","Drop Shipment","Location Code","Posting Date");
-        ItemLedgerEntry.SETRANGE("Item No.","No.");
-        ItemLedgerEntry.SETRANGE("Location Code",MatrixRecords[ColumnID].Almacen);
-        PAGE.RUN(0,ItemLedgerEntry);
+          "Item No.", "Entry Type", "Variant Code", "Drop Shipment", "Location Code", "Posting Date");
+        ItemLedgerEntry.SETRANGE("Item No.", "No.");
+        ItemLedgerEntry.SETRANGE("Location Code", MatrixRecords[ColumnID].Almacen);
+        PAGE.RUN(0, ItemLedgerEntry);
     end;
 
     procedure SetVisible()
@@ -732,9 +740,9 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     var
         lrAlmacenesPorGrupo: Record 56059;
         lContador: Integer;
-        MatrixColumns1: array [32] of Text[1024];
-        MatrixRecords1: array [32] of 4456059;
-        MatrixRecord1Record: Record 56059;
+        MatrixColumns1: array[32] of Text[1024];
+        MatrixRecords1: array[32] of Text[4456059];
+        MatrixRecord1: Record 56059;
         lCuantos: Integer;
         TextL001: Label 'El grupo %1 contiene %2 almacenes. Sólo se mostrarán %3';
     begin
@@ -751,30 +759,30 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         lContador := 0;
 
         lrAlmacenesPorGrupo.RESET;
-        lrAlmacenesPorGrupo.SETRANGE(Grupo,wGrupoAlmacen);
+        lrAlmacenesPorGrupo.SETRANGE(Grupo, wGrupoAlmacen);
 
         lCuantos := lrAlmacenesPorGrupo.COUNT;
         IF lCuantos > wNumeroColumnas THEN
-          MESSAGE(TextL001,wGrupoAlmacen,lCuantos,wNumeroColumnas);
+            MESSAGE(TextL001, wGrupoAlmacen, lCuantos, wNumeroColumnas);
 
         IF lrAlmacenesPorGrupo.FIND('-') THEN
-          REPEAT
-            lContador := lContador + 1;
-            IF wMostrar = wMostrar::Codigo THEN
-              MatrixColumns1[lContador] := lrAlmacenesPorGrupo.Almacen
-            ELSE BEGIN
-              lrAlmacenesPorGrupo.CALCFIELDS("Nombre Almacen");
-              MatrixColumns1[lContador] := lrAlmacenesPorGrupo."Nombre Almacen";
-            END;
+            REPEAT
+                lContador := lContador + 1;
+                IF wMostrar = wMostrar::Codigo THEN
+                    MatrixColumns1[lContador] := lrAlmacenesPorGrupo.Almacen
+                ELSE BEGIN
+                    lrAlmacenesPorGrupo.CALCFIELDS("Nombre Almacen");
+                    MatrixColumns1[lContador] := lrAlmacenesPorGrupo."Nombre Almacen";
+                END;
 
-            MatrixRecords1[lContador] := lrAlmacenesPorGrupo;
-            MatrixRecord1 := lrAlmacenesPorGrupo;
-          UNTIL (lrAlmacenesPorGrupo.NEXT=0) OR (lContador > wNumeroColumnas) ;
+                MatrixRecords1[lContador] := lrAlmacenesPorGrupo;
+                MatrixRecord1 := lrAlmacenesPorGrupo;
+            UNTIL (lrAlmacenesPorGrupo.NEXT = 0) OR (lContador > wNumeroColumnas);
 
-        Load(MatrixColumns1,MatrixRecords1,MatrixRecord1);
+        Load(MatrixColumns1, MatrixRecords1, MatrixRecord1);
 
         FOR lContador := lContador + 1 TO wNumeroColumnas DO
-          MATRIX_ColumnCaption[lContador] := ' ';
+            MATRIX_ColumnCaption[lContador] := ' ';
 
         CurrPage.UPDATE;
     end;
@@ -784,5 +792,6 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         //+001
         wMostrar := pMostrar;
     end;
+    */
 }
 

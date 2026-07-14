@@ -15,7 +15,7 @@ page 67154 "Historico Plan Lector Ficha"
         {
             group(General)
             {
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")
@@ -43,7 +43,7 @@ page 67154 "Historico Plan Lector Ficha"
                 {
                     Editable = false;
                 }
-                field("Descripción Delegacion"; "Descripción Delegacion")
+                field("Descripcion Delegacion"; "Descripcion Delegacion")
                 {
                     Editable = false;
                 }
@@ -51,7 +51,7 @@ page 67154 "Historico Plan Lector Ficha"
             part(Detalle; 67155)
             {
                 Caption = 'Detalle';
-                SubPageLink = Campaña = FIELD("Campaña"),
+                SubPageLink = Campana = FIELD("Campana"),
                               "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Local" = FIELD("Cod. Local"),
                               "Cod. Turno" = FIELD("Cod. Turno");
@@ -110,7 +110,7 @@ page 67154 "Historico Plan Lector Ficha"
                     recPL."Edit. 1" := 'S';
                     REPEAT
                         recPL."Cant. x Alum 1" += recAdop."Adopcion Real";
-                        recPL."Adopción real" += recAdop."Adopcion Real";
+                        recPL."Adopcion real" += recAdop."Adopcion Real";
                     UNTIL recAdop.NEXT = 0;
                     IF recPL."Cantidad Alumnos" <> 0 THEN
                         recPL.VALIDATE("Cant. x Alum 1", ROUND(recPL."Cant. x Alum 1" / recPL."Cantidad Alumnos", 1));

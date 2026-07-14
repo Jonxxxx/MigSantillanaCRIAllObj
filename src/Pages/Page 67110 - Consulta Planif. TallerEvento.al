@@ -46,8 +46,8 @@ page 67110 "Consulta Planif. Taller/Evento"
                 {
                     Visible = false;
                 }
-                field(CabPlanEvento."Total registrados";
-                    CabPlanEvento."Total registrados")
+                field("CabPlanEventoTotal registrados";
+                CabPlanEvento."Total registrados")
                 {
                     Caption = 'Total registered';
                 }
@@ -80,7 +80,7 @@ page 67110 "Consulta Planif. Taller/Evento"
     procedure AbrirPagAsistentes()
     var
         ATE: Record 67016;
-        ATE2Record: Record 67016;
+        ATE2: Record 67016;
         PagATE: Page 67016;
     begin
         //MESSAGE('%1',Rec);

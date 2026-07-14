@@ -4,7 +4,7 @@ page 75010 "Conf. Campos Relacionados"
     Caption = 'Configuración Campos Relacionados';
     PageType = List;
     SourceTable = 75010;
-    SourceTableView = SORTING("Id Fld Origen", Valor Origen);
+    SourceTableView = SORTING("Id Fld Origen", "Valor Origen");
     UsageCategory = Administration;
 
     layout
@@ -20,7 +20,7 @@ page 75010 "Conf. Campos Relacionados"
                 field("Id Fld Origen"; "Id Fld Origen")
                 {
                 }
-                field(GetNomCampo(0); GetNomCampo(0))
+                field(GetNomCampoN; GetNomCampo(0))
                 {
                     Caption = 'Nombre Campo Origen';
                 }
@@ -30,7 +30,7 @@ page 75010 "Conf. Campos Relacionados"
                 field("Id Fld Destino"; "Id Fld Destino")
                 {
                 }
-                field(GetNomCampo(1); GetNomCampo(1))
+                field(GetNomCampoN1; GetNomCampo(1))
                 {
                     Caption = 'Nombre Campo Destino';
                 }

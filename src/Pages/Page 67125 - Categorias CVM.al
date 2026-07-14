@@ -12,7 +12,7 @@ page 67125 "Categorias CVM"
         {
             repeater(Group)
             {
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")

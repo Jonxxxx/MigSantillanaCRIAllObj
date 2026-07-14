@@ -12,7 +12,7 @@ page 67142 "Grupo de Colegios"
                 field("Cod. Grupo"; "Cod. Grupo")
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

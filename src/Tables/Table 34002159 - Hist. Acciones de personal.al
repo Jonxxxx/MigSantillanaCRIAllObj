@@ -68,7 +68,7 @@ table 34002159 "Hist. Acciones de personal"
             Caption = 'Actual job position';
             DataClassification = ToBeClassified;
             Editable = false;
-            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento actual"));
+            TableRelation = "Puestos laborales".Codigo WHERE("Cod. departamento" = FIELD("Departamento actual"));
         }
         field(11; "Descripcion cargo actual"; Text[60])
         {
@@ -80,7 +80,7 @@ table 34002159 "Hist. Acciones de personal"
         {
             Caption = 'New job code';
             DataClassification = ToBeClassified;
-            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento nuevo"));
+            TableRelation = "Puestos laborales".Codigo WHERE("Cod. departamento" = FIELD("Departamento nuevo"));
         }
         field(13; "Descripcion cargo nuevo"; Text[60])
         {

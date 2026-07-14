@@ -263,7 +263,7 @@ xmlport 58006 "Importa Empleados"
                 IF NOT Empl.GET(CodEmpl) THEN
                     EXIT;
 
-                //Empl."Código Cliente" := Codcte;
+                //Empl."Codigo Cliente" := Codcte;
 
                 IF COPYSTR(estc, 1, 4) = 'Casa' THEN
                     Empl."Estado civil" := 1
@@ -296,7 +296,7 @@ xmlport 58006 "Importa Empleados"
 
             
                 IF cargo <> '' THEN BEGIN
-                    //    CARGOS.SETRANGE(Descripción,UPPERCASE(cargo));
+                    //    CARGOS.SETRANGE(Descripcion,UPPERCASE(cargo));
                     //    CARGOS.FINDFIRST;
                     Empl.VALIDATE("Job Type Code", cargo);
                 END;

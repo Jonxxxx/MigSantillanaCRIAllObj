@@ -4,8 +4,8 @@ page 67057 "Niveles de desicion"
     Caption = 'Decision level';
     PageType = List;
     SourceTable = 67002;
-    SourceTableView = SORTING("Tipo registro", Codigo)
-                      WHERE("Tipo registro" = CONST("Nivel de decisión"));
+    //TODO: Ver SourceTableView = SORTING("Tipo registro", Codigo)
+    //TODO: Ver                   WHERE("Tipo registro" = CONST("Nivel de decision"));
     UsageCategory = Administration;
 
     layout

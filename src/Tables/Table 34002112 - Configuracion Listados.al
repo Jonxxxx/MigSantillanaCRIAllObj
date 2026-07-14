@@ -15,7 +15,7 @@ table 34002112 "Configuracion Listados"
         }
         field(4; "Concepto Salarial"; Code[250])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
             ValidateTableRelation = false;
         }
         field(5; "Total Ingresos"; Boolean)

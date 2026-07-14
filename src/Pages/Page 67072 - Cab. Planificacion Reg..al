@@ -43,7 +43,7 @@ page 67072 "Cab. Planificacion Reg."
                 SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
                               "Semana" = FIELD("Semana"),
                               "Estado" = FILTER(> ' ');
-                SubPageView = SORTING(Cod. Promotor, Cod. Colegio, Semana);
+                SubPageView = SORTING("Cod. Promotor", "Cod. Colegio", Semana);
             }
         }
     }
@@ -95,7 +95,7 @@ page 67072 "Cab. Planificacion Reg."
         CabPlanifReg: Record 67023;
         User: Record 91;
         Planif: Record 67038;
-        Planif2Record: Record 67038;
+        Planif2: Record 67038;
         Text001: Label 'The planning has been posted';
         Promotor: Code[20];
 

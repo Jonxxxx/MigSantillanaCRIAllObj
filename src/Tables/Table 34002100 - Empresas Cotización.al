@@ -30,13 +30,13 @@ table 34002100 "Empresas Cotización"
         {
             Caption = 'Number';
         }
-        field(5; "Código Postal"; Code[20])
+        field(5; "Codigo Postal"; Code[20])
         {
             TableRelation = "Post Code";
 
             trigger OnValidate()
             begin
-                IF Cpostal.GET("Código Postal") THEN BEGIN
+                IF Cpostal.GET("Codigo Postal") THEN BEGIN
                     //GRN  Municipio := Cpostal."County Code";
                     Provincia := Cpostal."Search City";
                 END;
@@ -61,7 +61,7 @@ table 34002100 "Empresas Cotización"
         }
         field(11; "Cód. país"; Code[10])
         {
-            Description = 'Código de país para personas físicas extranjeras';
+            Description = 'Codigo de país para personas físicas extranjeras';
             TableRelation = "Country/Region";
         }
         field(12; "Tipo de documento"; Option)
@@ -101,7 +101,7 @@ table 34002100 "Empresas Cotización"
         field(20; Comentario; Boolean)
         {
             CalcFormula = Exist("Comentarios nómina" WHERE(Tipo = CONST("Empresa cotización"),
-                                                            Código = FIELD("Empresa cotización")));
+                                                            Codigo = FIELD("Empresa cotización")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -196,11 +196,11 @@ table 34002100 "Empresas Cotización"
     trigger OnInsert()
     begin
         /*
-        ConfigEmpresa.SETRANGE(Descripción,COMPANYNAME);
+        ConfigEmpresa.SETRANGE(Descripcion,COMPANYNAME);
         IF ConfigEmpresa.FIND('-') THEN
            BEGIN
             "ID TSS" := ConfigEmpresa."RNC/CED";
-            "Nombre Empresa cotización" := ConfigEmpresa.Descripción;
+            "Nombre Empresa cotización" := ConfigEmpresa.Descripcion;
            END
         ELSE
           ERROR('Antes debe haber configurado la empresa');
@@ -249,8 +249,8 @@ table 34002100 "Empresas Cotización"
     begin
         IF Dirección <> '' THEN
             DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Dirección) + Número, 1, 50);
-        IF "Código Postal" <> '' THEN
-            DomicilioUdad := COPYSTR(DomicilioUdad + ', ' + "Código Postal", 1, 50);
+        IF "Codigo Postal" <> '' THEN
+            DomicilioUdad := COPYSTR(DomicilioUdad + ', ' + "Codigo Postal", 1, 50);
         IF Municipio <> '' THEN
             DomicilioUdad := COPYSTR(DomicilioUdad + ' Esc. ' + Municipio, 1, 50);
         IF Provincia <> '' THEN

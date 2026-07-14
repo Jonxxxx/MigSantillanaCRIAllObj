@@ -27,7 +27,7 @@ table 34002115 "Perfil Salarial"
         {
             Caption = 'Wage Code';
             NotBlank = true;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
@@ -35,7 +35,7 @@ table 34002115 "Perfil Salarial"
 
                 //Empleado.GET("No. empleado");
                 //"Empresa cotización"  := Empleado.Company;
-                Descripción := ConcepSalar.Descripción;
+                Descripcion := ConcepSalar.Descripcion;
                 "Tipo concepto" := ConcepSalar."Tipo concepto";
                 "Cotiza ISR" := ConcepSalar."Cotiza ISR";
                 Prorratear := ConcepSalar.Provisionar;
@@ -50,7 +50,7 @@ table 34002115 "Perfil Salarial"
                 "Tipo de nomina" := ConcepSalar."Tipo de nomina";
             end;
         }
-        field(7; "Descripción"; Text[50])
+        field(7; "Descripcion"; Text[50])
         {
         }
         field(8; Cantidad; Decimal)
@@ -65,7 +65,7 @@ table 34002115 "Perfil Salarial"
 
                 IF Cantidad <> 0 THEN BEGIN
                     TiposCot.SETRANGE(Ano, DATE2DMY(WORKDATE, 3));
-                    TiposCot.SETRANGE(Código, "Concepto salarial");
+                    TiposCot.SETRANGE(Codigo, "Concepto salarial");
                     IF TiposCot.FINDFIRST THEN
                         ERROR(Err002, FIELDCAPTION(Cantidad));
                 END;
@@ -91,7 +91,7 @@ table 34002115 "Perfil Salarial"
                 END;
 
                 TiposCot.SETRANGE(Ano, DATE2DMY(WORKDATE, 3));
-                TiposCot.SETRANGE(Código, "Concepto salarial");
+                TiposCot.SETRANGE(Codigo, "Concepto salarial");
                 IF TiposCot.FINDFIRST THEN
                     ERROR(Err002, FIELDCAPTION(Importe));
 
@@ -186,7 +186,7 @@ table 34002115 "Perfil Salarial"
                 FormConcSalariales.LOOKUPMODE(TRUE);
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     FormConcSalariales.GETRECORD(ConcepSalar);
-                    "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Código;
+                    "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Codigo;
                     CLEAR(FormConcSalariales);
                 END;
                 */

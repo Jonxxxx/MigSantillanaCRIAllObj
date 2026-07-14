@@ -13,7 +13,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
         {
             group(General)
             {
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
                 {
                     Editable = false;
                 }
@@ -52,12 +52,12 @@ page 67139 "Solicitud -Cab. Planif. Evento"
             }
             part(SubFormPTyE; 67015)
             {
-                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                              "Tipo Evento"=FIELD("Tipo Evento"),
-                              "Tipo de Expositor"=FIELD("Tipo de Expositor"),
-                              "Expositor"=FIELD("Expositor"),
-                              "Secuencia"=FIELD("Secuencia");
-                SubPageView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor);
+                SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                              "Tipo Evento" = FIELD("Tipo Evento"),
+                              "Tipo de Expositor" = FIELD("Tipo de Expositor"),
+                              "Expositor" = FIELD("Expositor"),
+                              "Secuencia" = FIELD("Secuencia");
+                SubPageView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor);
             }
         }
     }
@@ -80,37 +80,36 @@ page 67139 "Solicitud -Cab. Planif. Evento"
                     trigger OnAction()
                     var
                         MatTyE: Record 67014;
-                        MatTyE2Record: Record 67014;
+                        MatTyE2: Record 67014;
                         PgMatTyE: Page 67014;
                     begin
                         MatTyE.RESET;
-                        MatTyE.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                        MatTyE.SETRANGE("Tipo Evento","Tipo Evento");
-                        MatTyE.SETRANGE(Expositor,Expositor);
-                        MatTyE.SETRANGE(Secuencia,Secuencia);
-                        IF NOT MatTyE.FINDFIRST THEN
-                           BEGIN
+                        MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                        MatTyE.SETRANGE("Tipo Evento", "Tipo Evento");
+                        MatTyE.SETRANGE(Expositor, Expositor);
+                        MatTyE.SETRANGE(Secuencia, Secuencia);
+                        IF NOT MatTyE.FINDFIRST THEN BEGIN
                             MatTyE2.RESET;
-                            MatTyE2.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                            MatTyE2.SETRANGE("Tipo Evento","Tipo Evento");
-                            MatTyE2.SETRANGE(Secuencia,0);
+                            MatTyE2.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                            MatTyE2.SETRANGE("Tipo Evento", "Tipo Evento");
+                            MatTyE2.SETRANGE(Secuencia, 0);
                             IF MatTyE2.FINDSET THEN
-                               REPEAT
-                                CLEAR(MatTyE);
-                                MatTyE.TRANSFERFIELDS(MatTyE2);
-                                MatTyE.Expositor  := Expositor;
-                                MatTyE."Tipo de Expositor"  :=  "Tipo de Expositor";
-                                MatTyE.Secuencia := Secuencia;
-                                MatTyE.INSERT(TRUE);
-                               UNTIL MatTyE2.NEXT = 0;
+                                REPEAT
+                                    CLEAR(MatTyE);
+                                    MatTyE.TRANSFERFIELDS(MatTyE2);
+                                    MatTyE.Expositor := Expositor;
+                                    MatTyE."Tipo de Expositor" := "Tipo de Expositor";
+                                    MatTyE.Secuencia := Secuencia;
+                                    MatTyE.INSERT(TRUE);
+                                UNTIL MatTyE2.NEXT = 0;
                             COMMIT;
-                           END;
+                        END;
 
                         CLEAR(MatTyE);
-                        MatTyE.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                        MatTyE.SETRANGE("Tipo Evento","Tipo Evento");
-                        MatTyE.SETRANGE(Secuencia,Secuencia);
-                        MatTyE.SETRANGE(Expositor,Expositor);
+                        MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                        MatTyE.SETRANGE("Tipo Evento", "Tipo Evento");
+                        MatTyE.SETRANGE(Secuencia, Secuencia);
+                        MatTyE.SETRANGE(Expositor, Expositor);
                         MatTyE.SETRANGE("Tipo de Expositor", "Tipo de Expositor");
 
                         PgMatTyE.SETTABLEVIEW(MatTyE);

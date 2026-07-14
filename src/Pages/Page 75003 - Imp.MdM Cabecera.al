@@ -66,7 +66,7 @@ page 75003 "Imp.MdM Cabecera"
                 {
                 }
             }
-            part(; 75017)
+            part(PagePart; 75017)
             {
                 SubPageLink = "Id Cab." = FIELD("Id");
             }

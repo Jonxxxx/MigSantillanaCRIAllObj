@@ -29,7 +29,7 @@ page 56035 "Sales Order Call Center  List"
                 field("No. Comprobante Fiscal"; "No. Comprobante Fiscal")
                 {
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("EXCCRI Sell-to Customer No."; "Sell-to Customer No.")
                 {
                 }
                 field("Sell-to Customer Name"; "Sell-to Customer Name")
@@ -53,7 +53,7 @@ page 56035 "Sales Order Call Center  List"
                 field("VAT Registration No."; "VAT Registration No.")
                 {
                 }
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("EXC CRI Bill-to Customer No."; "Bill-to Customer No.")
                 {
                     Visible = false;
                 }
@@ -178,21 +178,21 @@ page 56035 "Sales Order Call Center  List"
         }
         area(factboxes)
         {
-            part(; 9082)
+            part(PageStats; 9082)
             {
-                SubPageLink = No.=FIELD("Bill-to Customer No.");
-                    Visible = true;
+                SubPageLink = "No." = FIELD("Bill-to Customer No.");
+                Visible = true;
             }
-            part(; 9084)
+            part(PageDetails; 9084)
             {
-                SubPageLink = No.=FIELD("Sell-to Customer No.");
-                    Visible = true;
+                SubPageLink = "No." = FIELD("Sell-to Customer No.");
+                Visible = true;
             }
-            systempart(; Links)
+            systempart(Links; Links)
             {
                 Visible = false;
             }
-            systempart(; Notes)
+            systempart(Notes; Notes)
             {
                 Visible = true;
             }
@@ -225,7 +225,7 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'Co&mments';
                     Image = ViewComments;
-                    RunObject = Page 67;
+                    RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"),
                                   "No." = FIELD("No."),
                                   "Document Line No." = CONST(0);
@@ -233,31 +233,37 @@ page 56035 "Sales Order Call Center  List"
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
-                    RunObject = Page 142;
+                    RunObject = Page "Posted Sales Shipments";
                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING(Order No.);
+                    RunPageView = SORTING("Order No.");
                 }
                 action(Invoices)
                 {
                     Caption = 'Invoices';
                     Image = Invoice;
+                    //TODO: Ver
+                    /*
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING(Order No.);
+                    RunPageView = SORTING("Order No.");*/
                 }
                 action("Prepa&yment Invoices")
                 {
+                    //TODO: Ver
+                    /*
                     Caption = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING(Prepayment Order No.);
+                    RunPageView = SORTING("Prepayment Order No.");*/
                 }
                 action("Prepayment Credi&t Memos")
                 {
+                    //TODO: Ver
+                    /*
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos"
                                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING(Prepayment Order No.);
+                    RunPageView = SORTING("Prepayment Order No.");*/
                 }
                 action(Dimensions)
                 {
@@ -276,42 +282,38 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ApprovalEntries: Page 658;
+                        ApprovalEntries: Page "Approval Entries";
                     begin
-                        ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
                         ApprovalEntries.RUN;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Whse. Shipment Lines")
                 {
                     Caption = 'Whse. Shipment Lines';
-                    RunObject = Page 7341;
+                    RunObject = Page "Whse. Shipment Lines";
                     RunPageLink = "Source Type" = CONST(37),
                                   "Source Subtype" = FIELD("Document Type"),
                                   "Source No." = FIELD("No.");
-                    RunPageView = SORTING(Source Type, Source Subtype, Source No., Source Line No.);
+                    RunPageView = SORTING("Source Type", "Source Subtype", "Source No.", "Source Line No.");
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
-                    RunObject = Page 5774;
+                    RunObject = Page "Warehouse Activity List";
                     RunPageLink = "Source Document" = CONST("Sales Order"),
                                   "Source No." = FIELD("No.");
-                    RunPageView = SORTING(Source Document, Source No., Location Code);
+                    RunPageView = SORTING("Source Document", "Source No.", "Location Code");
                 }
-                separator()
-                {
-                }
+
                 action("Pla&nning")
                 {
                     Caption = 'Pla&nning';
 
                     trigger OnAction()
                     var
-                        SalesPlanPage: Page 99000883;
+                        SalesPlanPage: Page "Sales Order Planning";
                     begin
                         SalesPlanPage.SetSalesOrder("No.");
                         SalesPlanPage.RUNMODAL;
@@ -323,7 +325,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        OrderPromisingLine Record: 99000880" temporary;
+                        OrderPromisingLine: Record 99000880 temporary;
                     begin
                         OrderPromisingLine.SETRANGE("Source Type", "Document Type");
                         OrderPromisingLine.SETRANGE("Source ID", "No.");
@@ -341,6 +343,8 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'Create &Whse. Shipment';
 
+                    //TODO: Ver
+                    /*
                     trigger OnAction()
                     var
                         GetSourceDocOutbound: Codeunit 5752;
@@ -349,7 +353,7 @@ page 56035 "Sales Order Call Center  List"
 
                         IF NOT FIND('=><') THEN
                             INIT;
-                    end;
+                    end;*/
                 }
                 action("Create Inventor&y Put-away/Pick")
                 {
@@ -364,9 +368,7 @@ page 56035 "Sales Order Call Center  List"
                             INIT;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Send A&pproval Request")
                 {
                     Caption = 'Send A&pproval Request';
@@ -374,8 +376,8 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ApprovalMgt: Codeunit 1535;
-                        "Release Sales Document": Codeunit 414;
+                    //ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    //"Release Sales Document": Codeunit: "Release Sales Document";
                     begin
                         //fes mig revisar IF ApprovalMgt.SendSalesApprovalRequest(Rec) THEN;
                     end;
@@ -386,15 +388,13 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ApprovalMgt: Codeunit 1535;
-                        "Release Sales Document": Codeunit 414;
+                    //ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    //"Release Sales Document": Codeunit: "Release Sales Document"
                     begin
                         //fes mig revisar IF ApprovalMgt.CancelSalesApprovalRequest(Rec,TRUE,TRUE) THEN;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Re&lease")
                 {
                     Caption = 'Re&lease';
@@ -403,7 +403,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit "Release Sales Document";
                     begin
                         ReleaseSalesDoc.PerformManualRelease(Rec);
                     end;
@@ -415,26 +415,21 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                        ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit "Release Sales Document";
                     begin
                         ReleaseSalesDoc.PerformManualReopen(Rec);
                     end;
                 }
-                separator()
-                {
-                }
-                separator()
-                {
-                }
+
                 action("Send IC Sales Order Cnfmn.")
                 {
                     Caption = 'Send IC Sales Order Cnfmn.';
 
                     trigger OnAction()
                     var
-                        ICInOutboxMgt: Codeunit 427;
-                        ApprovalMgt: Codeunit 1535;
-                        PurchaseHeader: Record 38;
+                    //TODO: Ver ICInOutboxMgt: Codeunit 427;
+                    //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    //TODO: Ver PurchaseHeader: Record 38;
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN
@@ -491,7 +486,7 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                        ApprovalMgt: Codeunit 1535;
+                    //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN
@@ -521,7 +516,7 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                        ApprovalMgt: Codeunit 1535;
+                    //TODO: Ver  ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN
@@ -566,7 +561,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
+                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
                     end;
                 }
                 action("Work Order")
@@ -577,7 +572,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
+                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
                     end;
                 }
             }
@@ -595,9 +590,9 @@ page 56035 "Sales Order Call Center  List"
     }
 
     var
-        DocPrint: Codeunit 229;
+        //TODO: Ver DocPrint: Codeunit 229;
         ReportPrint: Codeunit 228;
-        ApprovalMgt: Codeunit 1535;
+        //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
         Usage: Option "Order Confirmation","Work Order";
         Text001: Label 'There are non posted Prepayment Amounts on %1 %2.';
         Text002: Label 'There are unpaid Prepayment Invoices related to %1 %2.';

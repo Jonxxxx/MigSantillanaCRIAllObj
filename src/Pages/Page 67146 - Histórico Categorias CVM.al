@@ -14,7 +14,7 @@ page 67146 "Histórico Categorias CVM"
         {
             repeater(Group)
             {
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")

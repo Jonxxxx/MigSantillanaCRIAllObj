@@ -30,10 +30,10 @@ page 56090 "Lista Pedidos Ecommerce"
                 field("Metodo de Envio Ecommerce"; "Metodo de Envio Ecommerce")
                 {
                 }
-                field("Direccion 1; "Direccion 1")
+                field("Direccion 1"; "Direccion 1")
                 {
                 }
-                field("Direccion 2; "Direccion 2")
+                field("Direccion 2"; "Direccion 2")
                 {
                 }
                 field(Procesado; Procesado)
@@ -51,7 +51,7 @@ page 56090 "Lista Pedidos Ecommerce"
                 field("Tipo Documento"; "Tipo Documento")
                 {
                 }
-                field("Cód. Dirección de envío"; "Cód. Dirección de envío")
+                field("Cód. Dirección de envío"; "Cod. Direccion de envio")
                 {
                 }
                 field("Tipo Comprobante"; "Tipo Comprobante")
@@ -79,7 +79,7 @@ page 56090 "Lista Pedidos Ecommerce"
                 field("No. documento NAV"; "No. documento NAV")
                 {
                 }
-                field("Pedido vía telefónica"; "Pedido vía telefónica")
+                field("Pedido vía telefónica"; "Pedido via telefonica")
                 {
                 }
                 field("Cod. Cupon"; "Cod. Cupon")
@@ -99,7 +99,7 @@ page 56090 "Lista Pedidos Ecommerce"
 
                 trigger OnAction()
                 var
-                    ModificarPedidosEcommerce: Report "50000;
+                    //TODO: Ver ModificarPedidosEcommerce: Report 50000;
                     CabVentaNopCommerce: Record 50100;
                 begin
                     CabVentaNopCommerce := Rec;

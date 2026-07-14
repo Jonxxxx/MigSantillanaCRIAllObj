@@ -14,7 +14,7 @@ page 56069 "Crea Cupones en Lote"
         {
             group(General)
             {
-                field("Año Escolar"; "Año Escolar")
+                field("Año Escolar"; "Ano Escolar")
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")
@@ -45,7 +45,7 @@ page 56069 "Crea Cupones en Lote"
                 field("Dto. Maestro"; "Dto. Maestro")
                 {
                 }
-                field("Descripción"; Descripcion)
+                field("Descripcion"; Descripcion)
                 {
                     Caption = 'Description';
                 }
@@ -99,9 +99,9 @@ page 56069 "Crea Cupones en Lote"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 51011;
-                RunPageLink = "Lote cupon" = FIELD("Lote");
-                RunPageView = SORTING(No. Lote cupon)
-                              ORDER(Ascending);
+                //TODO: Ver RunPageLink = "Lote cupon" = FIELD("Lote");
+                //TODO: Ver RunPageView = SORTING("No." "Lote cupon")
+                //TODO: Ver               ORDER(Ascending);
             }
             action("&Generar")
             {
@@ -116,8 +116,8 @@ page 56069 "Crea Cupones en Lote"
 
 
                     ComprobarLote(Lote);
-                    cuFunSantillana.cuCreaCupones("Cod. Colegio", "Cod. Vendedor", NombreVendedor("Cod. Vendedor"), "Valido Desde", "Valido Hasta", "Grado Alumno", "Dto Colegio",
-                                                  "Dto Padre", "Año Escolar", NombreColegio("Cod. Colegio"), Descripcion, "Cantidad Cupones", Lote, "Cantidad Limite", "Importe Dto. Limite", "Cod. Cliente", "Nombre Cliente");
+                    //TODO: Ver cuFunSantillana.cuCreaCupones("Cod. Colegio", "Cod. Vendedor", NombreVendedor("Cod. Vendedor"), "Valido Desde", "Valido Hasta", "Grado Alumno", "Dto Colegio",
+                    //TODO: Ver                               "Dto Padre", "Año Escolar", NombreColegio("Cod. Colegio"), Descripcion, "Cantidad Cupones", Lote, "Cantidad Limite", "Importe Dto. Limite", "Cod. Cliente", "Nombre Cliente");
                 end;
             }
         }
@@ -140,7 +140,7 @@ page 56069 "Crea Cupones en Lote"
     end;
 
     var
-        cuFunSantillana: Codeunit 56000;
+    //TODO: Ver cuFunSantillana: Codeunit 56000;
 
     procedure NombreColegio(pColegio: Code[20]): Text
     var

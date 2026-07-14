@@ -40,18 +40,18 @@ table 34002118 "Historico Lin. nomina"
         }
         field(9; "Concepto salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             var
                 ConceptosSal: Record 34002111;
             begin
-                ConceptosSal.SETRANGE(Código, "Concepto salarial");
+                ConceptosSal.SETRANGE(Codigo, "Concepto salarial");
                 IF ConceptosSal.FINDFIRST THEN
-                    Descripción := ConceptosSal.Descripción;
+                    Descripcion := ConceptosSal.Descripcion;
             end;
         }
-        field(10; "Descripción"; Text[50])
+        field(10; "Descripcion"; Text[50])
         {
         }
         field(11; Cantidad; Decimal)

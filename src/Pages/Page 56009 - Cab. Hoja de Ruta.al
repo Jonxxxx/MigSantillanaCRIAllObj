@@ -52,10 +52,10 @@ page 56009 "Cab. Hoja de Ruta"
                     Editable = false;
                 }
             }
-            part(; 56010)
+            part(Pagelin; 56010)
             {
-                SubPageLink = "Hoja Ruta" = FIELD("No. Hoja Ruta");
-                SubPageView = SORTING(No. Hoja Ruta, No. Linea)
+                SubPageLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
+                SubPageView = SORTING("No. Hoja Ruta", "No. Linea")
                               ORDER(Ascending);
             }
         }
@@ -84,8 +84,8 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     begin
-                        IF CONFIRM(txt001) THEN
-                            FunSant.RegHojaEnv(Rec, FALSE);
+                        //TODO: Ver IF CONFIRM(txt001) THEN
+                        //TODO: Ver     FunSant.RegHojaEnv(Rec, FALSE);
                     end;
                 }
                 action("&Post And Print")
@@ -99,8 +99,8 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     begin
-                        IF CONFIRM(txt002) THEN
-                            FunSant.RegHojaEnv(Rec, TRUE);
+                        //TODO: Ver IF CONFIRM(txt002) THEN
+                        //TODO: Ver     FunSant.RegHojaEnv(Rec, TRUE);
                     end;
                 }
                 action("Actualizar Lineas")
@@ -129,7 +129,7 @@ page 56009 "Cab. Hoja de Ruta"
         txt001: Label 'Confirm that you want to post the Route Sheet';
         txt002: Label 'Confirm that you want to Post and Print the Route Sheet';
         LHRR1Record: Record 56023;
-        FunSant: Codeunit 56000;
+        //TODO: Ver FunSant: Codeunit 56000;
         rCHRL: Record 56020;
 }
 

@@ -15,7 +15,7 @@ table 34002152 "Beneficios laborales"
         field(3; Codigo; Code[20])
         {
             Caption = 'Code';
-            TableRelation = IF ("Tipo Beneficio" = CONST(Ingresos)) "Conceptos salariales".Código WHERE("Tipo concepto" = CONST(Ingresos))
+            TableRelation = IF ("Tipo Beneficio" = CONST(Ingresos)) "Conceptos salariales".Codigo WHERE("Tipo concepto" = CONST(Ingresos))
             ELSE IF ("Tipo Beneficio" = CONST(Otro)) "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Beneficio));
 
             trigger OnValidate()
@@ -23,7 +23,7 @@ table 34002152 "Beneficios laborales"
                 IF "Tipo Beneficio" = 0 THEN //Ingresos
                     BEGIN
                     IF Conceptossalariales.GET(Codigo) THEN
-                        Descripcion := Conceptossalariales.Descripción
+                        Descripcion := Conceptossalariales.Descripcion
                     ELSE
                         Descripcion := '';
                 END

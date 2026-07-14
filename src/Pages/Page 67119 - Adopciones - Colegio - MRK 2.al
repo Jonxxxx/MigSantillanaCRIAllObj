@@ -6,7 +6,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     PageType = Card;
     SourceTable = 67078;
-    SourceTableView = SORTING("Cod. Docente", Cod. Colegio, Cod. Local, Cod. Producto);
+    SourceTableView = SORTING("Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto");
 
     layout
     {
@@ -18,7 +18,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
                 {
                     Editable = false;
                 }
-                field("Descripción producto"; "Descripción producto")
+                field("Descripcion producto"; "Descripcion producto")
                 {
                     Editable = false;
                 }
@@ -124,7 +124,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
             IF DefDim.FINDFIRST THEN
                 "Edicion Coleccion" := DefDim."Dimension Value Code";
 
-            "Descripción producto" := Item.Description;
+            "Descripcion producto" := Item.Description;
 
             IF NOT INSERT THEN
                 MODIFY;

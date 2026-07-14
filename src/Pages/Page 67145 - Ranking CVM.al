@@ -67,10 +67,10 @@ page 67145 "Ranking CVM"
         Total := 0;
 
         Config.GET;
-        CurrPage.CAPTION(STRSUBSTNO(Text001, FORMAT(Config."Campaña Ranking Solicitud")));
+        CurrPage.CAPTION(STRSUBSTNO(Text001, FORMAT(Config."Campana Ranking Solicitud")));
 
-        CASE Config."Campaña Ranking Solicitud" OF
-            Config."Campaña Ranking Solicitud"::"­ltima Cerrada":
+        CASE Config."Campana Ranking Solicitud" OF
+            Config."Campana Ranking Solicitud"::"ultima Cerrada":
                 BEGIN
                     HistColAdopciones.RESET;
                     HistColAdopciones.SETCURRENTKEY(Campana, "Cod. Colegio", "Linea de negocio");
@@ -147,7 +147,7 @@ page 67145 "Ranking CVM"
                     END;
                 END;//FIN ULTIMA
 
-            Config."Campaña Ranking Solicitud"::Vigente:
+            Config."Campana Ranking Solicitud"::Vigente:
                 BEGIN
                     ColAdopciones.RESET;
                     ColAdopciones.SETCURRENTKEY("Cod. Colegio", Adopcion, "Cod. Editorial", "Grupo de Negocio", "Linea de negocio");

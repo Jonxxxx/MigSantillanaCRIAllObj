@@ -27,7 +27,7 @@ table 34002109 Contratos
             begin
                 TipoContrato.GET("Cód. contrato");
                 //TODO: Ver Indefinido := TipoContrato.Undefined;
-                Descripción := TipoContrato.Description;
+                Descripcion := TipoContrato.Description;
                 Activo := TRUE;
 
                 Trabajad.GET("No. empleado");
@@ -42,7 +42,7 @@ table 34002109 Contratos
         {
             Enabled = false;
         }
-        field(6; "Descripción"; Text[50])
+        field(6; "Descripcion"; Text[50])
         {
         }
         field(7; "Fecha inicio"; Date)
@@ -334,7 +334,7 @@ table 34002109 Contratos
             "Empresa cotización" := Trabajad.Company;
             Cargo                := Trabajad."Job Type Code";
             "Centro trabajo"     := Trabajad."Working Center";
-            Descripción          := TipoContrato.Description;
+            Descripcion          := TipoContrato.Description;
             "Fecha inicio"       := Trabajad."Employment Date";
             Trabajad."Termination Date"  := "Fecha finalización";
             Trabajad."Fin contrato"      := "Fecha finalización";
@@ -469,9 +469,9 @@ table 34002109 Contratos
         //TODO: Ver Cargo := Empleado."Job Type Code";
         //TODO: Ver IF "Centro trabajo" = '' THEN
         //TODO: Ver "Centro trabajo" := Empleado."Working Center";
-        IF Descripción = '' THEN BEGIN
+        IF Descripcion = '' THEN BEGIN
             IF TipoContrato.GET("Cód. contrato") THEN
-                Descripción := TipoContrato.Description;
+                Descripcion := TipoContrato.Description;
         END;
         IF "Fecha inicio" = 0D THEN
             "Fecha inicio" := Empleado."Employment Date";

@@ -17,15 +17,15 @@ table 34002145 "CxC Empleados"
                 END;
             end;
         }
-        field(2; "Código Empleado"; Code[20])
+        field(2; "Codigo Empleado"; Code[20])
         {
             //TODO: Ver TableRelation = Employee WHERE("Calcular Nomina" = CONST(True));
 
             trigger OnValidate()
             begin
-                Empl.GET("Código Empleado");
+                Empl.GET("Codigo Empleado");
                 IF Empl."Termination Date" <> 0D THEN
-                    ERROR(Err002, "Código Empleado");
+                    ERROR(Err002, "Codigo Empleado");
             end;
         }
         field(3; "Fecha Registro CxC"; Date)
@@ -57,12 +57,12 @@ table 34002145 "CxC Empleados"
             trigger OnLookup()
             begin
 
-                Empl.GET("Código Empleado");
+                Empl.GET("Codigo Empleado");
                 //IF "Tipo CxC" = "Tipo CxC"::Factura THEN
                 //   BEGIN
-                //TODO: Ver Empl.TESTFIELD("Código Cliente");
+                //TODO: Ver Empl.TESTFIELD("Codigo Cliente");
                 CLE.SETCURRENTKEY("Customer No.", Open, Positive, "Due Date", "Currency Code");
-                //TODO: Ver CLE.SETRANGE("Customer No.", Empl."Código Cliente");
+                //TODO: Ver CLE.SETRANGE("Customer No.", Empl."Codigo Cliente");
                 CLE.SETRANGE(Open, TRUE);
                 IF CLE.FINDFIRST THEN BEGIN
                     LiqMovsClientes.LOOKUPMODE(TRUE);
@@ -94,8 +94,8 @@ table 34002145 "CxC Empleados"
                 CASE "Tipo Contrapartida" OF
                     "Tipo Contrapartida"::Cliente:
                         BEGIN
-                            Empl.GET("Código Empleado");
-                            //TODO: Ver "Cta. Contrapartida" := Empl."Código Cliente";
+                            Empl.GET("Codigo Empleado");
+                            //TODO: Ver "Cta. Contrapartida" := Empl."Codigo Cliente";
                         END;
                 END;
             end;
@@ -152,7 +152,7 @@ table 34002145 "CxC Empleados"
         }
         field(16; "Concepto Salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(17; "1ra Quincena"; Boolean)
         {
@@ -168,7 +168,7 @@ table 34002145 "CxC Empleados"
         }
         field(21; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Código Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Codigo Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }

@@ -36,7 +36,7 @@ table 50100 "Cab. Venta NopCommerce"
         field(8; "Tipo Documento"; Integer)
         {
         }
-        field(9; "C d. Direcci n de env o"; Code[20])
+        field(9; "Cod. Direccion de envio"; Code[20])
         {
         }
         field(10; "No. Factura NCr"; Code[20])
@@ -60,7 +60,7 @@ table 50100 "Cab. Venta NopCommerce"
         field(16; "No. documento NAV"; Code[20])
         {
         }
-        field(17; "Pedido v a telef nica"; Boolean)
+        field(17; "Pedido via telefonica"; Boolean)
         {
             DataClassification = ToBeClassified;
         }

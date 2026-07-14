@@ -36,7 +36,7 @@ table 34003051 "Autorizaciones Manuales TPV"
         {
             Description = 'DsPOS Bolivia';
         }
-        field(70; "Descripción"; Text[50])
+        field(70; "Descripcion"; Text[50])
         {
             Description = 'DsPOS Bolivia';
         }

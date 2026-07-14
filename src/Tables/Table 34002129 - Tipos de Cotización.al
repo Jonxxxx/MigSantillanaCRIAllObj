@@ -10,18 +10,18 @@ table 34002129 "Tipos de Cotización"
             Caption = 'Year';
             NotBlank = true;
         }
-        field(2; "Código"; Code[20])
+        field(2; "Codigo"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
-                ConceptosSal.SETRANGE(Código, Código);
+                ConceptosSal.SETRANGE(Codigo, Codigo);
                 ConceptosSal.FINDFIRST;
-                Descripción := ConceptosSal.Descripción;
+                Descripcion := ConceptosSal.Descripcion;
             end;
         }
-        field(3; "Descripción"; Text[60])
+        field(3; "Descripcion"; Text[60])
         {
         }
         field(4; "Porciento Empresa"; Decimal)
@@ -61,7 +61,7 @@ table 34002129 "Tipos de Cotización"
         field(11; "Control por escalas"; Boolean)
         {
             CalcFormula = Exist("Distribucion Importes TSS" WHERE(Ano = FIELD("Ano"),
-                                                                   "Concepto Salarial" = FIELD("Código")));
+                                                                   "Concepto Salarial" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
         field(12; "Porciento Empresa Pensionados"; Decimal)
@@ -78,7 +78,7 @@ table 34002129 "Tipos de Cotización"
 
     keys
     {
-        key(Key1; Ano, "Código")
+        key(Key1; Ano, "Codigo")
         {
         }
     }

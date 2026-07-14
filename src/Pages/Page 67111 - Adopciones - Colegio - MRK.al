@@ -4,7 +4,7 @@ page 67111 "Adopciones - Colegio - MRK"
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     PageType = Card;
     SourceTable = 67058;
-    SourceTableView = SORTING("Cod. Docente", Cod. Colegio, Cod. Local, Cod. Producto);
+    SourceTableView = SORTING("Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto");
 
     layout
     {
@@ -16,7 +16,7 @@ page 67111 "Adopciones - Colegio - MRK"
                 {
                     Editable = false;
                 }
-                field("Descripción producto"; "Descripción producto")
+                field("Descripcion producto"; "Descripcion producto")
                 {
                     Editable = false;
                 }
@@ -62,7 +62,7 @@ page 67111 "Adopciones - Colegio - MRK"
                 {
                     Caption = '4INI';
                     Editable = false;
-                    OptionCaption = ' ,Conquest,Keep,Lost,Retired';
+                    //TODO: Ver OptionCaption = ' ,Conquest,Keep,Lost,Retired';
 
                     trigger OnAssistEdit()
                     begin
@@ -609,7 +609,7 @@ page 67111 "Adopciones - Colegio - MRK"
             IF DefDim.FINDFIRST THEN
                 "Edicion Coleccion" := DefDim."Dimension Value Code";
 
-            "Descripción producto" := Item.Description;
+            "Descripcion producto" := Item.Description;
             IF FIELDCAPTION("2INI") = ColAdopDetalle."Cod. Grado" THEN BEGIN
                 "Adopcion - 2INI" := ColAdopDetalle.Adopcion;
             END

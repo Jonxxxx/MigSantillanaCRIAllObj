@@ -32,69 +32,68 @@ page 67017 "Ficha Padres"
                 field(Sex; Sex)
                 {
                     Caption = 'Sex';
-                    ValuesAllowed = Femenino;
-                    Masculino;
+                    ValuesAllowed = Femenino, Masculino;
                 }
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                     Caption = 'State / ZIP Code';
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Salutation Code";"Salutation Code")
+                field("Salutation Code"; "Salutation Code")
                 {
                 }
-                field("Dia Nacimiento";"Dia Nacimiento")
+                field("Dia Nacimiento"; "Dia Nacimiento")
                 {
                 }
-                field("Mes Nacimiento";"Mes Nacimiento")
+                field("Mes Nacimiento"; "Mes Nacimiento")
                 {
                 }
-                field("Ano Nacimiento";"Ano Nacimiento")
+                field("Ano Nacimiento"; "Ano Nacimiento")
                 {
                 }
-                field("Fecha Nacimiento";"Fecha Nacimiento")
+                field("Fecha Nacimiento"; "Fecha Nacimiento")
                 {
                 }
-                field("Cantidad Hijos INI";"Cantidad Hijos INI")
+                field("Cantidad Hijos INI"; "Cantidad Hijos INI")
                 {
                 }
-                field("Grado INI";"Grado INI")
+                field("Grado INI"; "Grado INI")
                 {
                 }
-                field("Cantidad Hijos PRI";"Cantidad Hijos PRI")
+                field("Cantidad Hijos PRI"; "Cantidad Hijos PRI")
                 {
                 }
-                field("Grado PRI";"Grado PRI")
+                field("Grado PRI"; "Grado PRI")
                 {
                 }
-                field("Cantidad Hijos SEC";"Cantidad Hijos SEC")
+                field("Cantidad Hijos SEC"; "Cantidad Hijos SEC")
                 {
                 }
-                field("Grado SEC";"Grado SEC")
+                field("Grado SEC"; "Grado SEC")
                 {
                 }
-                field("Fecha creacion";"Fecha creacion")
+                field("Fecha creacion"; "Fecha creacion")
                 {
                     Editable = false;
                 }
-                field("Ult. Fecha Actualizacion";"Ult. Fecha Actualizacion")
+                field("Ult. Fecha Actualizacion"; "Ult. Fecha Actualizacion")
                 {
                     Editable = false;
                 }
@@ -102,28 +101,28 @@ page 67017 "Ficha Padres"
             group(Communication)
             {
                 Caption = 'Communication';
-                field("Home Phone No.";"Home Phone No.")
+                field("Home Phone No."; "Home Phone No.")
                 {
                 }
-                field("Cell Phone No.";"Cell Phone No.")
+                field("Cell Phone No."; "Cell Phone No.")
                 {
                 }
-                field("E-Mail";"E-Mail")
+                field("E-Mail"; "E-Mail")
                 {
                 }
-                field("E-Mail 2;"E-Mail 2")
+                field("E-Mail 2"; "E-Mail 2")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field(Facebook;Facebook)
+                field(Facebook; Facebook)
                 {
                 }
-                field(Twitter;Twitter)
+                field(Twitter; Twitter)
                 {
                 }
-                field("BB Pin";"BB Pin")
+                field("BB Pin"; "BB Pin")
                 {
                 }
             }
@@ -144,7 +143,7 @@ page 67017 "Ficha Padres"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67019;
-                                    RunPageLink = "DNI Padre"=FIELD("DNI");
+                    RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
                 action("&Children")
                 {
@@ -153,11 +152,9 @@ page 67017 "Ficha Padres"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67020;
-                                    RunPageLink = "DNI Padre"=FIELD("DNI");
+                    RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
-                separator()
-                {
-                }
+
             }
         }
     }

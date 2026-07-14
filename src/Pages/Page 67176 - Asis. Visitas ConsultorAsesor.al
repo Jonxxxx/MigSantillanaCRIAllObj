@@ -11,7 +11,7 @@ page 67176 "Asis. Visitas Consultor/Asesor"
         {
             repeater(Group)
             {
-                field("Fecha programación"; "Fecha programación")
+                field("Fecha programacion"; "Fecha programacion")
                 {
                 }
                 field("Cod. Docente"; "Cod. Docente")

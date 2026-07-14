@@ -62,14 +62,12 @@ page 56052 "Lin. Consignacion a Facturar"
 
                 trigger OnAction()
                 begin
-                    FuncSant.RecibeNoDoc(NoPedido);
+                    //TODO: Ver FuncSant.RecibeNoDoc(NoPedido);
                     REPORT.RUNMODAL(56027);
                     CurrPage.UPDATE;
                 end;
             }
-            separator()
-            {
-            }
+
             action("Update Discounts")
             {
                 Caption = 'Update Discounts';
@@ -150,15 +148,15 @@ page 56052 "Lin. Consignacion a Facturar"
 
     var
         NoPedido: Code[20];
-        SalesLine1Record: Record 37;
+        SalesLine1: Record 37;
         SalesLine: Record 37;
-        rConsAFact Record: 56011" temporary;
+        rConsAFact: Record 56011 temporary;
         NoLinea: Integer;
         SH: Record 36;
-        rLinCons Record: 56011" temporary;
+        rLinCons: Record 56011 temporary;
         rItem: Record 27;
         rLCF: Record 56011;
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         PageActDesc: Page 56053;
         Window: Dialog;
         CounterTotal: Integer;

@@ -57,7 +57,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     var
         ErrorRango: Label 'El rango permitido est  entre 1 y %1';
-        cFunMdM: Codeunit 75000;
+        //TODO: Ver cFunMdM: Codeunit 75000;
         ErrorDupl: Label 'Ya existe el registro';
         Text001: Label 'Filtro %1';
 

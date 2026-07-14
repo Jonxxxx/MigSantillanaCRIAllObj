@@ -16,7 +16,7 @@ page 67001 Docentes
                 {
                     Editable = false;
                 }
-                field("No. 2; "No. 2")
+                field("No. 2"; "No. 2")
                 {
                 }
                 field("Salutation Code"; "Salutation Code")
@@ -40,7 +40,7 @@ page 67001 Docentes
                 field(Address; Address)
                 {
                 }
-                field("Address 2; "Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
                 field("Referencia Direccion"; "Referencia Direccion")
@@ -140,9 +140,9 @@ page 67001 Docentes
                 field(Expositor; Expositor)
                 {
                 }
-                field("Usuario creación"; "Usuario creación")
-                {
-                }
+                //TODO: Ver field("Usuario creación"; "Usuario creación")
+                //TODO: Ver {
+                //TODO: Ver }
             }
             group(Communication)
             {
@@ -179,9 +179,9 @@ page 67001 Docentes
                 {
                     Importance = Promoted;
                 }
-                field("E-Mail 2; "E-Mail 2")
-                {
-                }
+                //TODO: Ver field("E-Mail 2"; "E - Mail 2")
+                //TODO: Ver {
+                //TODO: Ver }
                 field("Home Page"; "Home Page")
                 {
                 }
@@ -213,7 +213,7 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 21;
-                                    RunPageLink = No.=FIELD("No.");
+                    RunPageLink = "No." = FIELD("No.");
                 }
                 action("&Vendor Card")
                 {
@@ -223,11 +223,9 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 26;
-                                    RunPageLink = No.=FIELD("Cod. Proveedor");
+                    RunPageLink = "No." = FIELD("Cod. Proveedor");
                 }
-                separator()
-                {
-                }
+
                 action("Co&mments")
                 {
                     Caption = 'Co&mments';
@@ -236,12 +234,10 @@ page 67001 Docentes
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 124;
-                                    RunPageLink = "Table Name"=CONST(15),
-                                  "No."=FIELD("No.");
+                    RunPageLink = "Table Name" = CONST(15),
+                                  "No." = FIELD("No.");
                 }
-                separator()
-                {
-                }
+
                 action("&Schools")
                 {
                     Caption = '&Schools';
@@ -249,8 +245,8 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67045;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67045;
+                    //TODO: Ver                 RunPageLink = "Cod. Docente"=FIELD("No.");
                 }
                 action(Hobbies)
                 {
@@ -259,12 +255,10 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67058;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67058;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
-                separator()
-                {
-                }
+
                 action("&Specialities")
                 {
                     Caption = '&Specialities';
@@ -272,8 +266,8 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67063;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67063;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Workshop - Event")
                 {
@@ -282,16 +276,16 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67108;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67108;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
             }
             action("&Exponent")
             {
                 Caption = '&Exponent';
                 Image = ContactReference;
-                RunObject = Page 67100;
-                                RunPageLink = "Cod. Expositor"=FIELD("Cod. Proveedor");
+                //TODO: Ver RunObject = Page 67100;
+                //TODO: Ver RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
             }
             group("&Historics")
             {
@@ -302,8 +296,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67113;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67113;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Hobbies History")
                 {
@@ -311,8 +305,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67114;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67114;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Specialties History")
                 {
@@ -320,8 +314,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67115;
-                                    RunPageLink = "Cod. Docente"=FIELD("No.");
+                    //TODO: Ver RunObject = Page 67115;
+                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("School - Teacher History")
                 {
@@ -349,30 +343,30 @@ page 67001 Docentes
                     trigger OnAction()
                     begin
                         IF Cust.GET("Customer no.") THEN
-                           ERROR(Err001);
-                        
+                            ERROR(Err001);
+
                         CLEAR(Cust);
                         Cust.INSERT(TRUE);
                         "Customer no." := Cust."No.";
-                        Cust.VALIDATE(Name,"Full Name");
+                        Cust.VALIDATE(Name, "Full Name");
                         /*Peru
                         Cust.VALIDATE(Nombres,"First Name" + ' ' + "Name 2");
                         Cust.VALIDATE("Apellido Paterno","Last Name");
                         Cust.VALIDATE("Apellido Materno","Second Last Name");
                         */
                         Cust.Address := Address;
-                        Cust."Address 2" := "Address 2;
+                        Cust."Address 2" := "Address 2";
                         Cust.City := City;
                         Cust."Territory Code" := "Territory Code";
                         Cust.Blocked := Cust.Blocked::All;
                         Cust."Phone No." := "Phone No.";
                         //Peru Cust.VALIDATE(DNI,"Document ID");
-                        Cust.VALIDATE("Post Code","Post Code");
+                        Cust.VALIDATE("Post Code", "Post Code");
                         Cust.County := County;
                         Cust."E-Mail" := "E-Mail";
                         Cust."Home Page" := "Home Page";
                         Cust.INSERT;
-                        
+
                         MESSAGE(Msg001);
 
                     end;

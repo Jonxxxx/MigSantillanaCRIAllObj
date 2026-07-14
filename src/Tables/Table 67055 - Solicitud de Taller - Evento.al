@@ -593,7 +593,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(67007; "Asistencia promotor"; Boolean)
         {
         }
-        field(67008; "Material para revisi n"; Boolean)
+        field(67008; "Material para revision"; Boolean)
         {
         }
         field(67009; "Editorial Competencia"; Code[20])
@@ -613,7 +613,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(67010; "Nombre Editorial Competencia"; Text[80])
         {
         }
-        field(67011; "Art culo Competencia"; Code[10])
+        field(67011; "Articulo Competencia"; Code[10])
         {
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Editorial Competencia"));
 
@@ -623,7 +623,7 @@ table 67055 "Solicitud de Taller - Evento"
             begin
                 "Desc.  Competencia" := '';
                 Lib.SETRANGE(Lib."Cod. Editorial", "Editorial Competencia");
-                Lib.SETRANGE(Lib."Cod. Libro", "Art culo Competencia");
+                Lib.SETRANGE(Lib."Cod. Libro", "Articulo Competencia");
                 IF Lib.FINDSET THEN
                     "Desc.  Competencia" := Lib.Description;
             end;
@@ -664,12 +664,12 @@ table 67055 "Solicitud de Taller - Evento"
             CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67022; "Selecci n Editorial"; Option)
+        field(67022; "Seleccion Editorial"; Option)
         {
             OptionCaption = 'Santillana,Competencia';
             OptionMembers = Santillana,Competencia;
         }
-        field(67023; "Art culo Grupo Santillana"; Code[20])
+        field(67023; "Articulo Grupo Santillana"; Code[20])
         {
             TableRelation = "Historico Adopciones"."Cod. producto" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
@@ -686,18 +686,18 @@ table 67055 "Solicitud de Taller - Evento"
                 fAdop.LOOKUPMODE(TRUE);
                 IF fAdop.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     fAdop.GETRECORD(Adop);
-                    "Desc. Art culo Grupo Santillan" := Adop."Nombre Libro";
-                    "A o Adopci n" := Adop.Campana;
+                    "Desc. Articulo Grupo Santillan" := Adop."Nombre Libro";
+                    "Ano Adopcion" := Adop.Campana;
                 END;
             end;
         }
-        field(67024; "Desc. Art culo Grupo Santillan"; Text[80])
+        field(67024; "Desc. Articulo Grupo Santillan"; Text[80])
         {
         }
         field(67025; "Horas por semana"; Decimal)
         {
         }
-        field(67026; "A o Adopci n"; Code[4])
+        field(67026; "Ano Adopcion"; Code[4])
         {
         }
         field(67027; ESI; Integer)
@@ -908,7 +908,7 @@ table 67055 "Solicitud de Taller - Evento"
                 END;
             end;
         }
-        field(67045; "Usuario creaci n"; Code[50])
+        field(67045; "Usuario creacion"; Code[50])
         {
             Editable = false;
         }
@@ -972,7 +972,7 @@ table 67055 "Solicitud de Taller - Evento"
         END;
 
         "Fecha Solicitud" := TODAY;
-        "Usuario creaci n" := USERID;
+        "Usuario creacion" := USERID;
 
         IF User.GET(USERID) THEN
             IF User."Salespers./Purch. Code" <> '' THEN
@@ -1130,8 +1130,8 @@ table 67055 "Solicitud de Taller - Evento"
         Err002: Label 'El evento programado no existe.';
         Ev: Record 67051;
         rProgramac: Record 67015;
-        Error004: Label 'No ha realizado la programaci n de fechas.';
-        Error005: Label 'En la programaci n de fechas es obligatorio indicar los siguientes campos: Fecha programaci n, Hora de Inicio y Hora Final.';
+        Error004: Label 'No ha realizado la programacion de fechas.';
+        Error005: Label 'En la programacion de fechas es obligatorio indicar los siguientes campos: Fecha programacion, Hora de Inicio y Hora Final.';
         rCab: Record 67051;
         rGrupo: Record 67089;
         Err003: Label 'No existe el grupo de colegio %1';
@@ -1279,9 +1279,9 @@ table 67055 "Solicitud de Taller - Evento"
         UNTIL rFechasProp.NEXT = 0;
 
         IF ("Tipo de Evento" <> '') AND (rTipoEve.GET("Tipo de Evento")) THEN
-            IF (rTipoEve."Ingresar libros a presentar") AND ("Material para revisi n") THEN BEGIN
+            IF (rTipoEve."Ingresar libros a presentar") AND ("Material para revision") THEN BEGIN
                 rLibrosPres.RESET;
-                rLibrosPres.SETRANGE("N m. Solicitud", "No. Solicitud");
+                rLibrosPres.SETRANGE("No. Solicitud", "No. Solicitud");
                 IF NOT rLibrosPres.FINDSET THEN
                     ERROR(Error006);
             END;
@@ -1349,8 +1349,8 @@ table 67055 "Solicitud de Taller - Evento"
     var
         rProgramac: Record 67015;
         rCab: Record 67051;
-        Error004: Label 'No ha realizado la programaci n de fechas.';
-        Error005: Label 'En la programaci n, no se ha indicado las horas dictadas ';
+        Error004: Label 'No ha realizado la programacion de fechas.';
+        Error005: Label 'En la programacion, no se ha indicado las horas dictadas ';
     begin
 
         TESTFIELD("Asistentes Reales");
@@ -1505,7 +1505,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Eliminar_Planificacion()
     var
-        Text001: Label 'Esta acci n provocar  la eliminaci n de la programaci n del evento y de sus asistentes. \ Desea continuar?';
+        Text001: Label 'Esta acci n provocar  la eliminaci n de la programacion del evento y de sus asistentes. \ Desea continuar?';
     begin
     end;
 

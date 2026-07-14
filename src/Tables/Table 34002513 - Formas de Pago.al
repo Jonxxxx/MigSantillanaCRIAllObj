@@ -216,7 +216,7 @@ table 34002513 "Formas de Pago"
         error001: Label 'Already exist a Change tender type';
         error002: Label 'Ya existe una forma de pago para divisa %1';
         error003: Label 'IMPOSIBLE BORRAR La forma de pago esta asginada al Menu Pagos %1';
-        Error004: Label 'No puede especificar Código Divisa para Exención de IVA';
+        Error004: Label 'No puede especificar Codigo Divisa para Exención de IVA';
         Error005: Label 'Exención de IVA no es configurable';
 }
 

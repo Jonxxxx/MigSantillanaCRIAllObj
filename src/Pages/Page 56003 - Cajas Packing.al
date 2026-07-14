@@ -91,7 +91,7 @@ page 56003 "Cajas Packing"
 
     trigger OnInit()
     begin
-        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
@@ -99,7 +99,7 @@ page 56003 "Cajas Packing"
         LinPack: Record 56031;
         txt002: Label 'Confirm that you want to close the box';
         CCP: Record 56032;
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 }

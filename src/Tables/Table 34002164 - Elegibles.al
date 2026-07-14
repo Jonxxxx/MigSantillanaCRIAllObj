@@ -267,7 +267,7 @@ table 34002164 Elegibles
         {
             Caption = 'Job type code';
             DataClassification = ToBeClassified;
-            TableRelation = "Puestos laborales".Código;
+            TableRelation = "Puestos laborales".Codigo;
 
             trigger OnValidate()
             var
@@ -275,9 +275,9 @@ table 34002164 Elegibles
             begin
 
                 Cargo.RESET;
-                Cargo.SETRANGE(Código, "Job Type Code");
+                Cargo.SETRANGE(Codigo, "Job Type Code");
                 IF Cargo.FINDFIRST THEN BEGIN
-                    "Job Title" := Cargo.Descripción;
+                    "Job Title" := Cargo.Descripcion;
                     //     "Cod. Supervisor" := Cargo."Cod. Supervisor";
                 END;
             end;

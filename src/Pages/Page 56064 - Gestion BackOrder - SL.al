@@ -17,13 +17,13 @@ page 56064 "Gestion BackOrder - SL"
     InsertAllowed = false;
     PageType = List;
     SourceTable = 37;
-    SourceTableView = SORTING(Type, No., Variant Code, Drop Shipment, Location Code, Document Type, Shipment Date)
+    SourceTableView = SORTING(Type, "No.", "Variant Code", "Drop Shipment", "Location Code", "Document Type", "Shipment Date")
                       ORDER(Ascending)
                       WHERE("Document Type" = FILTER(Order),
                             "Type" = FILTER(Item),
                             "No." = FILTER(<> ''),
                             "Cantidad pendiente BO" = FILTER(<> 0),
-                            "Disponible BackOrder" = FILTER(Yes));
+                            "Disponible BackOrder" = FILTER(True));
     UsageCategory = Lists;
 
     layout
@@ -88,6 +88,8 @@ page 56064 "Gestion BackOrder - SL"
                 {
                     Editable = false;
                 }
+                //TODO: Ver
+                /*
                 field(SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
                     SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
@@ -95,7 +97,7 @@ page 56064 "Gestion BackOrder - SL"
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }
+                }*/
                 field("Cantidad Solicitada"; "Cantidad Solicitada")
                 {
                     Editable = false;
@@ -130,7 +132,7 @@ page 56064 "Gestion BackOrder - SL"
                     CLEAR(PedVta);
                     SH.GET("Document Type", "Document No.");
                     PedVta.SETRECORD(SH);
-                    PedVta.GestBackOrd(TRUE);
+                    //TODO: Ver PedVta.GestBackOrd(TRUE);
                     PedVta.RUNMODAL;
                     CLEAR(PedVta);
                 end;
@@ -148,7 +150,7 @@ page 56064 "Gestion BackOrder - SL"
 
                     trigger OnAction()
                     var
-                        ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit "Release Sales Document";
                     begin
                         //$001
                         SL.COPY(Rec);
@@ -202,9 +204,7 @@ page 56064 "Gestion BackOrder - SL"
                         END;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("<Action1000000025>")
                 {
                     Caption = '&Sugerir Cantidades';
@@ -228,11 +228,11 @@ page 56064 "Gestion BackOrder - SL"
                                 Window.UPDATE(1, SL."No.");
                                 Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
 
-                                CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
+                                //TODO: Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
                                 IF CantDisp > SL."Cantidad pendiente BO" THEN
-                                    SL."Cantidad a Anular" := 0
-                                ELSE
-                                    SL."Cantidad a Anular" := SL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
+                                    SL."Cantidad a Anular" := 0;
+                                //TODO: Ver ELSE
+                                //TODO: Ver SL."Cantidad a Anular" := SL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
                                 SL."Cantidad a Ajustar" := SL."Cantidad pendiente BO" - SL."Cantidad a Anular";
                                 SL.MODIFY;
                             UNTIL SL.NEXT = 0;
@@ -320,30 +320,31 @@ page 56064 "Gestion BackOrder - SL"
                 END;
                 //-$002
 
-                IF (SalesLine."Cantidad pendiente BO" > 0) THEN // +$003
-                    IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SalesLine) > 0) AND
-                        (SH.GET(SalesLine."Document Type", SalesLine."Document No.")) THEN
-                        //+$002
-                        // El ELSE no tenía ningún sentido, los registros ya están marcados como FALSE
-                        /*********************************************************
-                          SalesLine."Disponible BackOrder" := TRUE
-                      ELSE
-                        BEGIN
-                          //Se verifica que la linea no esté en Envios de Almacen
-                          WHSL.RESET;
-                            whsl.setcurrentkey("Source Document","Source No."); //+$002
-                          WHSL.SETRANGE("Source No.",SalesLine."Document No.");
-                          WHSL.SETRANGE("Item No.",SalesLine."No.");
-                          IF NOT WHSL.FINDFIRST THEN
-                              SalesLine."Disponible BackOrder" := FALSE;
-                        END;
-                      SalesLine.MODIFY;
-                        *********************************************************/
-                        BEGIN
-                        SalesLine."Disponible BackOrder" := TRUE;
-                        SalesLine."Cantidad a Anular" := 0;
-                        SalesLine.MODIFY;
-                    END;
+                //TODO: Ver 
+                //TODO: Ver IF (SalesLine."Cantidad pendiente BO" > 0) THEN // +$003
+                //TODO: Ver IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SalesLine) > 0) AND
+                //TODO: Ver (SH.GET(SalesLine."Document Type", SalesLine."Document No.")) THEN
+                //+$002
+                // El ELSE no tenía ningún sentido, los registros ya están marcados como FALSE
+                /*********************************************************
+                  SalesLine."Disponible BackOrder" := TRUE
+              ELSE
+                BEGIN
+                  //Se verifica que la linea no esté en Envios de Almacen
+                  WHSL.RESET;
+                    whsl.setcurrentkey("Source Document","Source No."); //+$002
+                  WHSL.SETRANGE("Source No.",SalesLine."Document No.");
+                  WHSL.SETRANGE("Item No.",SalesLine."No.");
+                  IF NOT WHSL.FINDFIRST THEN
+                      SalesLine."Disponible BackOrder" := FALSE;
+                END;
+              SalesLine.MODIFY;
+                *********************************************************/
+                BEGIN
+                    SalesLine."Disponible BackOrder" := TRUE;
+                    SalesLine."Cantidad a Anular" := 0;
+                    SalesLine.MODIFY;
+                END;
             //-$002
             UNTIL SalesLine.NEXT = 0;
         END;
@@ -355,10 +356,10 @@ page 56064 "Gestion BackOrder - SL"
     var
         SalesInfoPaneMgt: Codeunit 7171;
         SalesLine: Record 37;
-        ReleaseSalesDoc: Codeunit 414;
+        ReleaseSalesDoc: Codeunit "Release Sales Document";
         salesheader: Record 36;
-        AppTemp: Record 464;
-        ApprovalMgt: Codeunit 1535;
+        //TODO: Ver AppTemp: Record 464;
+        ApprovalMgt: Codeunit "Approvals Mgmt.";
         EstatusPed: Option Abierto,Lanzado,"Aprobación pendiente","Anticipo pendiente";
         UserSetup: Record 91;
         Window: Dialog;

@@ -23,7 +23,7 @@ table 34002200 "Hist. Lin. Prest. cooperativa"
         {
             Caption = 'Transaction date';
         }
-        field(6; "Código Empleado"; Code[20])
+        field(6; "Codigo Empleado"; Code[20])
         {
             TableRelation = Employee;
         }

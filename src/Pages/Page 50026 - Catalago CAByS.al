@@ -15,7 +15,7 @@ page 50026 "Catalago CAByS"
                 field("Codigo CABYS"; "Codigo CABYS")
                 {
                 }
-                field(Descripción; Descripcion)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field("Tipo CABYS"; "Tipo CABYS")

@@ -11,10 +11,10 @@ page 67099 "Nivel Educativo APS"
         {
             repeater(Group)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field("Grupo de Negocio"; "Grupo de Negocio")

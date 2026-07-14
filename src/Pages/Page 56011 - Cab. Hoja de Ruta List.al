@@ -38,10 +38,10 @@ page 56011 "Cab. Hoja de Ruta List"
         }
         area(factboxes)
         {
-            systempart(; Notes)
+            systempart(Notes; Notes)
             {
             }
-            systempart(; Links)
+            systempart(Links; Links)
             {
             }
         }

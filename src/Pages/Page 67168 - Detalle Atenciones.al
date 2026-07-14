@@ -15,7 +15,7 @@ page 67168 "Detalle Atenciones"
                 field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field(Cantidad; Cantidad)

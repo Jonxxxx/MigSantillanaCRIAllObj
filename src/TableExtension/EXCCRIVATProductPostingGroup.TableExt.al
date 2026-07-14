@@ -4,7 +4,7 @@ tableextension 50052 EXCCRIVATProductPostingGroup extends "VAT Product Posting G
     {
         field(50000; "Codigo Tarifa FE"; Code[2])
         {
-            Caption = 'FE Rate Code', Comment = 'ESP=Código Tarifa FE';
+            Caption = 'FE Rate Code', Comment = 'ESP=Codigo Tarifa FE';
             DataClassification = ToBeClassified;
         }
         field(50001; "Tipo de Peso"; Option)

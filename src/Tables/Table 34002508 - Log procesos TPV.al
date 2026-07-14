@@ -16,7 +16,7 @@ table 34002508 "Log procesos TPV"
         }
         field(3; "Punto de proceso"; Integer)
         {
-            Description = 'Este valor, identifica el último punto de proceso realizado. Su valor se refleja en el código.';
+            Description = 'Este valor, identifica el último punto de proceso realizado. Su valor se refleja en el Codigo.';
         }
         field(10; "Tipo Documento"; Option)
         {

@@ -446,7 +446,7 @@ table 56032 "Contenido Cajas Packing"
         CCP: Record 56032;
         CantPendEmp: Decimal;
         CantFaltante: Decimal;
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         Error002: Label 'Este producto ya existe en la linea %1 de este Packing';
         Error003: Label 'El producto %1 no existe en el Picking %2';
         Error004: Label 'Qty. can not exceed the Picking Quantity';

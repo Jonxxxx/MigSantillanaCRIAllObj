@@ -424,7 +424,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         WMSManagement: Codeunit 7302;
         TrackingBlocked: Boolean;
         "*** Santillana ***": Integer;
-        cFuncionesSantillana: Codeunit 56000;
+        //TODO: Ver cFuncionesSantillana: Codeunit 56000;
         wImporteDescuento: Decimal;
         NoLinea: Integer;
         rItem: Record 27;

@@ -44,6 +44,8 @@ page 52505 "Msj  Facturacion Electronica"
         }
     }
 
+    //TODO: Ver FE
+    /*
     actions
     {
         area(navigation)
@@ -186,9 +188,9 @@ page 52505 "Msj  Facturacion Electronica"
             }
         }
     }
-
+    */
     var
         FileManagment: Codeunit 419;
-        TempBlob Record: 99008535" temporary;
+        TempBlob: Codeunit "Temp Blob";
 }
 

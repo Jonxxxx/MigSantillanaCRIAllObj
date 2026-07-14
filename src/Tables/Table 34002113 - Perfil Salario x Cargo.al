@@ -5,7 +5,7 @@ table 34002113 "Perfil Salario x Cargo"
     {
         field(1; "Puesto de Trabajo"; Code[15])
         {
-            TableRelation = "Puestos laborales".Código;
+            TableRelation = "Puestos laborales".Codigo;
 
             trigger OnValidate()
             begin
@@ -16,13 +16,13 @@ table 34002113 "Perfil Salario x Cargo"
         }
         field(2; "Concepto salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
                 ConfNominas.GET();
                 Conceptos.GET("Concepto salarial");
-                Descripción := Conceptos.Descripción;
+                Descripcion := Conceptos.Descripcion;
                 "Tipo concepto" := Conceptos."Tipo concepto";
             end;
         }
@@ -31,7 +31,7 @@ table 34002113 "Perfil Salario x Cargo"
             Editable = false;
             Enabled = false;
         }
-        field(4; "Descripción"; Text[50])
+        field(4; "Descripcion"; Text[50])
         {
         }
         field(7; "Tipo concepto"; Option)

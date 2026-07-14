@@ -10,7 +10,7 @@ page 67101 "Cab. Planif. Evento"
         {
             group(General)
             {
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
                 {
                     Editable = false;
                 }
@@ -78,12 +78,12 @@ page 67101 "Cab. Planif. Evento"
             }
             part(SubFormPTyE; 67015)
             {
-                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                              "Tipo Evento"=FIELD("Tipo Evento"),
-                              "Tipo de Expositor"=FIELD("Tipo de Expositor"),
-                              "Expositor"=FIELD("Expositor"),
-                              "Secuencia"=FIELD("Secuencia");
-                SubPageView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor);
+                SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                              "Tipo Evento" = FIELD("Tipo Evento"),
+                              "Tipo de Expositor" = FIELD("Tipo de Expositor"),
+                              "Expositor" = FIELD("Expositor"),
+                              "Secuencia" = FIELD("Secuencia");
+                SubPageView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor);
             }
         }
     }
@@ -109,55 +109,54 @@ page 67101 "Cab. Planif. Evento"
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin
-                        Evento.GET("Tipo Evento","Cod. Taller - Evento");
+                        Evento.GET("Tipo Evento", "Cod. Taller - Evento");
                         Evento.TESTFIELD("Horas programadas");
 
                         TESTFIELD("Numero de sesiones");
 
                         Fecha.RESET;
-                        Fecha.SETRANGE("Period Type",Fecha."Period Type"::Date);
-                        Fecha.SETRANGE("Period Start","Fecha Inicio",CALCDATE('+50D',"Fecha Inicio"));
+                        Fecha.SETRANGE("Period Type", Fecha."Period Type"::Date);
+                        Fecha.SETRANGE("Period Start", "Fecha Inicio", CALCDATE('+50D', "Fecha Inicio"));
                         //Fecha.SETRANGE("Period end",calcdate('+50D',"Fecha Inicio"));
                         Fecha.FINDSET;
                         REPEAT
-                         IndSkip := FALSE;
-                         CLEAR(ProgTyE);
-                         ProgTyE.VALIDATE("Cod. Taller - Evento","Cod. Taller - Evento");
-                         ProgTyE.VALIDATE("Tipo Evento","Tipo Evento");
-                         ProgTyE.VALIDATE("Tipo de Expositor","Tipo de Expositor");
-                         ProgTyE.VALIDATE(Expositor,Expositor);
-                         ProgTyE."Asistentes esperados" := "Asistentes esperados";
-                         ProgTyE.Secuencia := Secuencia;
-                         IF (Fecha."Period No." = 7) AND (Domingos) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 6) AND (Sabados) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 5) AND (Viernes) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 4) AND (Jueves) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 3) AND (Miercoles) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 2) AND (Martes) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                         IF (Fecha."Period No." = 1) AND (Lunes) THEN
-                            ProgTyE.VALIDATE("Fecha programacion",Fecha."Period Start")
-                         ELSE
-                           IndSkip := TRUE;
+                            IndSkip := FALSE;
+                            CLEAR(ProgTyE);
+                            ProgTyE.VALIDATE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                            ProgTyE.VALIDATE("Tipo Evento", "Tipo Evento");
+                            ProgTyE.VALIDATE("Tipo de Expositor", "Tipo de Expositor");
+                            ProgTyE.VALIDATE(Expositor, Expositor);
+                            ProgTyE."Asistentes esperados" := "Asistentes esperados";
+                            ProgTyE.Secuencia := Secuencia;
+                            IF (Fecha."Period No." = 7) AND (Domingos) THEN
+                                ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                            ELSE
+                                IF (Fecha."Period No." = 6) AND (Sabados) THEN
+                                    ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                ELSE
+                                    IF (Fecha."Period No." = 5) AND (Viernes) THEN
+                                        ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                    ELSE
+                                        IF (Fecha."Period No." = 4) AND (Jueves) THEN
+                                            ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                        ELSE
+                                            IF (Fecha."Period No." = 3) AND (Miercoles) THEN
+                                                ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                            ELSE
+                                                IF (Fecha."Period No." = 2) AND (Martes) THEN
+                                                    ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                                ELSE
+                                                    IF (Fecha."Period No." = 1) AND (Lunes) THEN
+                                                        ProgTyE.VALIDATE("Fecha programacion", Fecha."Period Start")
+                                                    ELSE
+                                                        IndSkip := TRUE;
 
-                         ProgTyE.VALIDATE("Fecha de realizacion",ProgTyE."Fecha programacion");
-                         ProgTyE."Horas dictadas" := Evento."Horas programadas";
+                            ProgTyE.VALIDATE("Fecha de realizacion", ProgTyE."Fecha programacion");
+                            ProgTyE."Horas dictadas" := Evento."Horas programadas";
 
-                         IF NOT IndSkip THEN
-                            BEGIN
-                             ProgTyE.INSERT(TRUE);
-                             Seq += 1;
+                            IF NOT IndSkip THEN BEGIN
+                                ProgTyE.INSERT(TRUE);
+                                Seq += 1;
                             END;
                         UNTIL (Fecha.NEXT = 0) OR (Seq >= "Numero de sesiones");
                     end;
@@ -173,38 +172,37 @@ page 67101 "Cab. Planif. Evento"
                     trigger OnAction()
                     var
                         MatTyE: Record 67014;
-                        MatTyE2Record: Record 67014;
+                        MatTyE2: Record 67014;
                         PgMatTyE: Page 67014;
                     begin
                         MatTyE.RESET;
-                        MatTyE.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                        MatTyE.SETRANGE("Tipo Evento","Tipo Evento");
-                        MatTyE.SETRANGE(Expositor,Expositor);
-                        MatTyE.SETRANGE(Secuencia,Secuencia);
-                        IF NOT MatTyE.FINDFIRST THEN
-                           BEGIN
+                        MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                        MatTyE.SETRANGE("Tipo Evento", "Tipo Evento");
+                        MatTyE.SETRANGE(Expositor, Expositor);
+                        MatTyE.SETRANGE(Secuencia, Secuencia);
+                        IF NOT MatTyE.FINDFIRST THEN BEGIN
                             MatTyE2.RESET;
-                            MatTyE2.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                            MatTyE2.SETRANGE("Tipo Evento","Tipo Evento");
-                            MatTyE2.SETRANGE(Secuencia,0);
+                            MatTyE2.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                            MatTyE2.SETRANGE("Tipo Evento", "Tipo Evento");
+                            MatTyE2.SETRANGE(Secuencia, 0);
                             IF MatTyE2.FINDSET THEN
-                               REPEAT
-                                CLEAR(MatTyE);
-                                MatTyE.TRANSFERFIELDS(MatTyE2);
-                                MatTyE.Expositor :=  Expositor;
-                                MatTyE."Tipo de Expositor" :=  "Tipo de Expositor";
-                                MatTyE.Secuencia := Secuencia;
-                                MatTyE.INSERT(TRUE);
-                               UNTIL MatTyE2.NEXT = 0;
+                                REPEAT
+                                    CLEAR(MatTyE);
+                                    MatTyE.TRANSFERFIELDS(MatTyE2);
+                                    MatTyE.Expositor := Expositor;
+                                    MatTyE."Tipo de Expositor" := "Tipo de Expositor";
+                                    MatTyE.Secuencia := Secuencia;
+                                    MatTyE.INSERT(TRUE);
+                                UNTIL MatTyE2.NEXT = 0;
                             COMMIT;
-                           END;
+                        END;
 
                         CLEAR(MatTyE);
-                        MatTyE.SETRANGE("Cod. Taller - Evento","Cod. Taller - Evento");
-                        MatTyE.SETRANGE("Tipo Evento","Tipo Evento");
-                        MatTyE.SETRANGE(Expositor,Expositor);
+                        MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
+                        MatTyE.SETRANGE("Tipo Evento", "Tipo Evento");
+                        MatTyE.SETRANGE(Expositor, Expositor);
                         MatTyE.SETRANGE("Tipo de Expositor", "Tipo de Expositor");
-                        MatTyE.SETRANGE(Secuencia,Secuencia);
+                        MatTyE.SETRANGE(Secuencia, Secuencia);
 
                         PgMatTyE.SETTABLEVIEW(MatTyE);
                         PgMatTyE.RUNMODAL;
@@ -219,10 +217,10 @@ page 67101 "Cab. Planif. Evento"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67016;
-                                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  "Tipo Evento"=FIELD("Tipo Evento"),
-                                  "Secuencia"=FIELD("Secuencia"),
-                                  "Cod. Expositor"=FIELD("Expositor");
+                    RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                  "Tipo Evento" = FIELD("Tipo Evento"),
+                                  "Secuencia" = FIELD("Secuencia"),
+                                  "Cod. Expositor" = FIELD("Expositor");
                     Visible = false;
                 }
                 action("Distribution per Cost Centre")
@@ -243,7 +241,7 @@ page 67101 "Cab. Planif. Evento"
                         TESTFIELD(Expositor);
                         TESTFIELD(Secuencia);
 
-                        GpoNegDistrib.RecibeParametros('','',"Cod. Taller - Evento","Tipo Evento",Expositor,Secuencia,FALSE,TRUE,'');
+                        GpoNegDistrib.RecibeParametros('', '', "Cod. Taller - Evento", "Tipo Evento", Expositor, Secuencia, FALSE, TRUE, '');
                         GpoNegDistrib.RUNMODAL;
                     end;
                 }

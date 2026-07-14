@@ -12,10 +12,10 @@ page 67094 "Grupos de Negocio - Distrib."
         {
             repeater(General)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field(Porcentaje; Porcentaje)
@@ -162,8 +162,8 @@ page 67094 "Grupos de Negocio - Distrib."
                 DistrCentros."Tipo Evento" := gTipoEvento;
                 DistrCentros.Expositor := gExpositor;
                 DistrCentros.Secuencia := gSecuencia;
-                DistrCentros.Código := da.Codigo;
-                DistrCentros.Descripción := da.Descripcion;
+                DistrCentros.Codigo := da.Codigo;
+                DistrCentros.Descripcion := da.Descripcion;
 
 
                 ColAdopciones.RESET;
@@ -174,7 +174,7 @@ page 67094 "Grupos de Negocio - Distrib."
                         ColAdopciones.SETRANGE("Cod. Colegio", gCodColegio);
                 END;
                 ColAdopciones.SETRANGE("Cod. Editorial", Editoras.Code);
-                ColAdopciones.SETRANGE("Grupo de Negocio", Código);
+                ColAdopciones.SETRANGE("Grupo de Negocio", Codigo);
                 IF ColAdopciones.FINDSET THEN
                     Total := ColAdopciones.COUNT;
 

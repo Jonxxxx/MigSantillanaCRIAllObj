@@ -17,7 +17,7 @@ page 56001 "Lin. Packing"
     ModifyAllowed = false;
     PageType = ListPart;
     SourceTable = 56031;
-    SourceTableView = SORTING(No.)
+    SourceTableView = SORTING("No.")
                       ORDER(Ascending);
 
     layout
@@ -60,9 +60,7 @@ page 56001 "Lin. Packing"
                     END;
                 end;
             }
-            separator()
-            {
-            }
+
             action("<Action1000000011>")
             {
                 Caption = '&Box Content';
@@ -76,7 +74,7 @@ page 56001 "Lin. Packing"
                               "No. Picking" = FIELD("No. Picking"),
                               "Tipo pedido" = FIELD("Tipo pedido"),
                               "No. Pedido" = FIELD("No. Pedido");
-                RunPageView = SORTING(No. Packing, No. Caja, No. Picking, No. Producto, No. Linea)
+                RunPageView = SORTING("No. Packing", "No. Caja", "No. Picking", "No. Producto", "No. Linea")
                               ORDER(Ascending);
                 ShortCutKey = 'Shift+Ctrl+D';
             }
@@ -120,9 +118,9 @@ page 56001 "Lin. Packing"
 
     procedure ReabrirCaja()
     var
-        FuncSant: Codeunit 56000;
+    //TODO: Ver FuncSant: Codeunit 56000;
     begin
-        FuncSant.ReabrirCajaPacking(Rec);
+        //TODO: Ver FuncSant.ReabrirCajaPacking(Rec);
     end;
 }
 

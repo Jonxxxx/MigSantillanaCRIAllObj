@@ -22,7 +22,7 @@ page 56020 "Sales Header Movil."
                 field("Bill-to Address"; "Bill-to Address")
                 {
                 }
-                field("Bill-to Address 2;"Bill -to Address 2")
+                field("Bill-to Address 2"; "Bill-to Address 2")
                 {
                 }
                 field("Bill-to City"; "Bill-to City")
@@ -38,7 +38,7 @@ page 56020 "Sales Header Movil."
                 {
                 }
             }
-            part(; 56012)
+            part(PageLin; 56012)
             {
                 SubPageLink = "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");

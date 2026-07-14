@@ -23,7 +23,7 @@ table 34002198 "Lin. Prestamos cooperativa"
         {
             Caption = 'Transaction date';
         }
-        field(6; "Código Empleado"; Code[20])
+        field(6; "Codigo Empleado"; Code[20])
         {
             TableRelation = Employee;
         }
@@ -99,7 +99,7 @@ table 34002198 "Lin. Prestamos cooperativa"
         CabPrestamo.GET("No. Prestamo");
 
         "Tipo prestamo" := CabPrestamo."Tipo prestamo";
-        //TODO: Ver "Código Empleado" := CabPrestamo."Employee No.";
+        //TODO: Ver "Codigo Empleado" := CabPrestamo."Employee No.";
     end;
 
     var

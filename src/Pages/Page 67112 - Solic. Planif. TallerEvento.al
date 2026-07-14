@@ -61,10 +61,10 @@ page 67112 "Solic. Planif. Taller/Evento"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67016;
-                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  "Tipo Evento"=FIELD("Tipo Evento"),
-                                  "Secuencia"=FIELD("Secuencia"),
-                                  "Cod. Expositor"=FIELD("Expositor");
+                    RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                  "Tipo Evento" = FIELD("Tipo Evento"),
+                                  "Secuencia" = FIELD("Secuencia"),
+                                  "Cod. Expositor" = FIELD("Expositor");
 
                     trigger OnAction()
                     var
@@ -106,12 +106,12 @@ page 67112 "Solic. Planif. Taller/Evento"
 
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
-        VALIDATE("Cod. Taller - Evento",gCodTaller);
-        VALIDATE("Tipo Evento",gTipoEvento);
-        VALIDATE("Cod. Promotor",gCodPromotor);
-        VALIDATE("Cod. Colegio",gCodColegio);
-        VALIDATE(Expositor,gCodExpositor);
-        VALIDATE("Tipo de Expositor",gTipoExpositor);
+        VALIDATE("Cod. Taller - Evento", gCodTaller);
+        VALIDATE("Tipo Evento", gTipoEvento);
+        VALIDATE("Cod. Promotor", gCodPromotor);
+        VALIDATE("Cod. Colegio", gCodColegio);
+        VALIDATE(Expositor, gCodExpositor);
+        VALIDATE("Tipo de Expositor", gTipoExpositor);
 
         TESTFIELD("Cod. Colegio");
         TESTFIELD("Cod. Promotor");
@@ -121,26 +121,26 @@ page 67112 "Solic. Planif. Taller/Evento"
 
     trigger OnOpenPage()
     begin
-        SETRANGE("Cod. Taller - Evento",gCodTaller);
-        SETRANGE("Tipo Evento",gTipoEvento);
-        SETRANGE("Cod. Promotor",gCodPromotor);
-        SETRANGE("Cod. Colegio",gCodColegio);
-        SETRANGE(Expositor,gCodExpositor);
-        SETRANGE("Tipo de Expositor",gTipoExpositor);
+        SETRANGE("Cod. Taller - Evento", gCodTaller);
+        SETRANGE("Tipo Evento", gTipoEvento);
+        SETRANGE("Cod. Promotor", gCodPromotor);
+        SETRANGE("Cod. Colegio", gCodColegio);
+        SETRANGE(Expositor, gCodExpositor);
+        SETRANGE("Tipo de Expositor", gTipoExpositor);
     end;
 
     var
         CabPlanEvento: Record 67051;
         SelDoc: Page 67103;
-                    TotDocentes: Integer;
-                    TotSeleccionados: Integer;
-                    TotReg: Integer;
-                    gCodTaller: Code[20];
-                    gTipoEvento: Code[20];
-                    gCodPromotor: Code[20];
-                    gCodColegio: Code[20];
-                    gCodExpositor: Code[20];
-                    gTipoExpositor: Integer;
+        TotDocentes: Integer;
+        TotSeleccionados: Integer;
+        TotReg: Integer;
+        gCodTaller: Code[20];
+        gTipoEvento: Code[20];
+        gCodPromotor: Code[20];
+        gCodColegio: Code[20];
+        gCodExpositor: Code[20];
+        gTipoExpositor: Integer;
 
     procedure RecibeParametros(CodTaller: Code[20]; TipoEvento: Code[20]; CodPromotor: Code[20]; CodColegio: Code[20]; CodExpositor: Code[20]; TipoExpositor: Integer)
     begin
@@ -155,7 +155,7 @@ page 67112 "Solic. Planif. Taller/Evento"
     procedure AbrirPagAsistentes()
     var
         ATE: Record 67016;
-        ATE2Record: Record 67016;
+        ATE2: Record 67016;
         PagATE: Page 67016;
     begin
         //MESSAGE('%1',Rec);

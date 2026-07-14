@@ -42,7 +42,7 @@ page 67128 "Historico Promotor - Ppto Vtas"
                 field("Adopcion anterior"; "Adopcion anterior")
                 {
                 }
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
             }

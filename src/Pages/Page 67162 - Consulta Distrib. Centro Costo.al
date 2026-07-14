@@ -13,10 +13,10 @@ page 67162 "Consulta Distrib. Centro Costo"
         {
             repeater(Group)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field(Porcentaje; Porcentaje)

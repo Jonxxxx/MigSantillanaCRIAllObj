@@ -12,7 +12,7 @@ page 67122 "Solicitud -  Nivel Asistentes"
                 field("Cod. Nivel"; "Cod. Nivel")
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field("No. Asistentes"; "No. Asistentes")

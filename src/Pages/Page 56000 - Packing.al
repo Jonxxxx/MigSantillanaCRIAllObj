@@ -134,7 +134,7 @@ page 56000 Packing
                         CheckPalet;//+#842
 
                         IF CONFIRM(txt002, FALSE) THEN BEGIN
-                            FuncSant.RegistraPacking(Rec);
+                            //TODO: Ver FuncSant.RegistraPacking(Rec);
                             MESSAGE(txt003);
                         END;
                     end;
@@ -168,7 +168,7 @@ page 56000 Packing
 
     trigger OnInit()
     begin
-        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
@@ -177,7 +177,7 @@ page 56000 Packing
         txt001: Label 'Confirm that you want to create a new box';
         ConfSant: Record 56001;
         NoSerMang: Codeunit "No. Series";
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         txt002: Label 'Confirm that you want to post';
         txt003: Label 'The packing was successfully posted';
         CabPack: Record 56030;
@@ -195,8 +195,8 @@ page 56000 Packing
         IF "No. Palet Abierto" = '' THEN BEGIN
             ConfSant.GET;
             ConfSant.TESTFIELD("No. serie Palet");
-            NoSeriesMgt.InitSeries(ConfSant."No. serie Palet", "No. Palet Abierto", "Fecha Apertura", "No. Palet Abierto",
-                                    ConfSant."No. serie Palet");
+            //TODO: Ver NoSeriesMgt.InitSeries(ConfSant."No. serie Palet", "No. Palet Abierto", "Fecha Apertura", "No. Palet Abierto",
+            //TODO: Ver                         ConfSant."No. serie Palet");
         END;
     end;
 

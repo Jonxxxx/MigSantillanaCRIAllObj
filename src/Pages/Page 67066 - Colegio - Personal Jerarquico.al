@@ -26,7 +26,7 @@ page 67066 "Colegio - Personal Jerarquico"
                 {
                 }
             }
-            part(; 67067)
+            part(PagePart; 67067)
             {
                 SubPageLink = "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Docente" = FIELD("Cod. Local"),

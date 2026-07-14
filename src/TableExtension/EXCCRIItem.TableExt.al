@@ -598,7 +598,7 @@ tableextension 50012 EXCCRIItem extends Item
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        //TODO: Ver EXCCRIMdMFunctions: Codeunit 75000;
         //TODO: Ver EXCCRIMdMManagement: Codeunit 75001;
         EXCCRIModifiedByMdM: Boolean;
         EXCCRIItemUnlockPermissionErr: Label 'The user does not have permission to unblock items.';

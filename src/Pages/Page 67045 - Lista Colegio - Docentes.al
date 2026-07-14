@@ -72,20 +72,20 @@ page 67045 "Lista Colegio - Docentes"
                 field("Docente - Mobile Phone No."; "Docente - Mobile Phone No.")
                 {
                 }
-                field("Docente - E-Mail 2;"Docente - E - Mail 2")
+                //TODO: Ver field("Docente - E-Mail 2"; "Docente-E-Mail 2")
+                //TODO: Ver {
+                //TODO: Ver }
+                field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }
-                field("Cod. Promotor";"Cod. Promotor")
-                {
-                }
-                field("Nombre Promotor";"Nombre Promotor")
+                field("Nombre Promotor"; "Nombre Promotor")
                 {
                     Editable = false;
                 }
-                field("Nivel decision";"Nivel decision")
+                field("Nivel decision"; "Nivel decision")
                 {
                 }
-                field(Principal;Principal)
+                field(Principal; Principal)
                 {
                 }
             }
@@ -107,7 +107,7 @@ page 67045 "Lista Colegio - Docentes"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD("Cod. Colegio");
+                    RunPageLink = "No." = FIELD("Cod. Colegio");
                     ShortCutKey = 'Shift+F5';
                 }
             }
@@ -121,7 +121,7 @@ page 67045 "Lista Colegio - Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67001;
-                                    RunPageLink = No.=FIELD("Cod. Docente");
+                    RunPageLink = "No." = FIELD("Cod. Docente");
                 }
                 action(Adoption)
                 {
@@ -135,14 +135,12 @@ page 67045 "Lista Colegio - Docentes"
                     var
                         Estad: Page 67119;
                     begin
-                        Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
+                        Estad.RecibeParametros("Cod. Docente", "Cod. Colegio");
                         Estad.RUN;
                         CLEAR(Estad);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("<Action1000000010>")
                 {
                     Caption = 'Ranking por CVM';
@@ -157,7 +155,7 @@ page 67045 "Lista Colegio - Docentes"
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");
-                        RankingDocente.RecibeParametros("Cod. Docente","Cod. Colegio");
+                        RankingDocente.RecibeParametros("Cod. Docente", "Cod. Colegio");
                         RankingDocente.RUN;
                         CLEAR(RankingDocente);
                     end;

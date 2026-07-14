@@ -8,8 +8,9 @@ page 67118 "Inventarios Colegios ListPart"
     {
         area(content)
         {
-            field(FuncAPS.ColCalcInvMuestras("No.");
-                FuncAPS.ColCalcInvMuestras("No."))
+            //TODO: Ver  
+            /*
+            field(FuncAPSColCalcInvMuestrasNo; FuncAPS.ColCalcInvMuestras(Rec."No."))
             {
                 Caption = 'Sample Inventory';
 
@@ -28,6 +29,7 @@ page 67118 "Inventarios Colegios ListPart"
                     END;
                 end;
             }
+            */
         }
     }
 
@@ -36,6 +38,6 @@ page 67118 "Inventarios Colegios ListPart"
     }
 
     var
-        FuncAPS: Codeunit 67000;
+    //TODO: Ver FuncAPS: Codeunit 67000;
 }
 

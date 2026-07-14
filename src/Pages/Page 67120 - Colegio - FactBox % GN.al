@@ -16,7 +16,7 @@ page 67120 "Colegio - FactBox % GN"
                 {
                     Caption = 'Grupo de negocio';
                 }
-                field(TraerPorcentaje; TraerPorcentaje)
+                field(TEXCCRIraerPorcentaje; TraerPorcentaje)
                 {
                     Caption = '%';
                 }

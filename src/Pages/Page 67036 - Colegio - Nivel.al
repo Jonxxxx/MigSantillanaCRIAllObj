@@ -85,9 +85,7 @@ page 67036 "Colegio - Nivel"
                         CLEAR(fAdopciones);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("<Action1000000000>")
                 {
                     Caption = '&Grades';

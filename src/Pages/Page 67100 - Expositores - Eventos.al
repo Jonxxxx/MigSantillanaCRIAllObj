@@ -56,7 +56,7 @@ page 67100 "Expositores - Eventos"
                         CabPlanEvent2Record: Record 67051;
                         PlanEvent: Page 67102;
                     begin
-                        PlanEvent.RecibeParametros("Cod. Expositor", "Tipo de Expositor", "Cod. Evento", CabPlanEvent."Tipo Evento");
+                        //TODO: Ver PlanEvent.RecibeParametros("Cod. Expositor", "Tipo de Expositor", "Cod. Evento", CabPlanEvent."Tipo Evento");
                         CabPlanEvent.RESET;
                         CabPlanEvent.SETRANGE("Cod. Taller - Evento", "Cod. Evento");
                         IF CabPlanEvent.FINDFIRST THEN

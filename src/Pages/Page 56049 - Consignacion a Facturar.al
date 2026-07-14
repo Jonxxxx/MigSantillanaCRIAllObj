@@ -78,7 +78,7 @@ page 56049 "Consignacion a Facturar"
         SalesLine: Record 37;
         rConsAFact: Record 56012;
         NoLinea: Integer;
-        TransferLine1Record: Record 5741;
+        TransferLine1: Record 5741;
         TransferLines: Record 5741;
         DescrProd: Text[200];
         rItem: Record 27;

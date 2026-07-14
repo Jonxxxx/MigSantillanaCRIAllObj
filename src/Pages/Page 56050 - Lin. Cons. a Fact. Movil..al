@@ -19,7 +19,7 @@ page 56050 "Lin. Cons. a Fact. Movil."
                 field("Cod. Cliente"; "Cod. Cliente")
                 {
                 }
-                field("Description 2; "Description 2")
+                field("Description 2"; "Description 2")
                 {
                     Editable = false;
                 }
@@ -132,10 +132,10 @@ page 56050 "Lin. Cons. a Fact. Movil."
     end;
 
     var
-        rConsAFact Record: 56017" temporary;
+        rConsAFact: Record 56017 temporary;
         NoLinea: Integer;
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        rLinCons Record: 56017" temporary;
+        rLinCons: Record 56017 temporary;
         rItem: Record 27;
         rLCF: Record 56017;
         NoCliente: Code[20];
@@ -150,7 +150,7 @@ page 56050 "Lin. Cons. a Fact. Movil."
     var
         NoPedidoActual: Code[20];
         SalesHeader: Record 36;
-        SalesLine Record: 37" temporary;
+        SalesLine: Record 37 temporary;
         TransHeader1Record: Record 5740;
         SalesLine1Record: Record 37;
         TransRecHeader: Record 5746;

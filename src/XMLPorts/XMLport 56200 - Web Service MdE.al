@@ -1509,7 +1509,7 @@ xmlport 56200 "Web Service MdE"
                 END;
             DATABASE::"Puestos laborales":
                 BEGIN
-                    rPuesto.SETRANGE(Código, NewValue);
+                    rPuesto.SETRANGE(Codigo, NewValue);
                     IF NOT rPuesto.FINDFIRST THEN
                         AddError(STRSUBSTNO(ErrorTablaRel, NodeName, NewValue, rPuesto.TABLECAPTION), ErrorTipoDatos);
                 END;

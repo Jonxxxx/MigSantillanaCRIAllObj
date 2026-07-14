@@ -22,7 +22,7 @@ page 67109 "Registrar Asistencias"
                 {
                     Editable = false;
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
                 {
                     Editable = false;
                 }
@@ -89,10 +89,10 @@ page 67109 "Registrar Asistencias"
             {
                 Editable = false;
                 ShowFilter = false;
-                SubPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                              "Tipo Evento"=FIELD("Tipo Evento"),
-                              "Expositor"=FIELD("Expositor"),
-                              "Secuencia"=FIELD("Secuencia");
+                SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                              "Tipo Evento" = FIELD("Tipo Evento"),
+                              "Expositor" = FIELD("Expositor"),
+                              "Secuencia" = FIELD("Secuencia");
             }
         }
     }
@@ -111,10 +111,10 @@ page 67109 "Registrar Asistencias"
                     Promoted = true;
                     PromotedIsBig = true;
                     RunObject = Page 67101;
-                                    RunPageLink = Cod. Taller - Evento=FIELD("Cod. Taller - Evento"),
-                                  "Tipo Evento"=FIELD("Tipo Evento"),
-                                  "Expositor"=FIELD("Expositor"),
-                                  "Secuencia"=FIELD("Secuencia");
+                    RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
+                                  "Tipo Evento" = FIELD("Tipo Evento"),
+                                  "Expositor" = FIELD("Expositor"),
+                                  "Secuencia" = FIELD("Secuencia");
                 }
                 action("Register Assistants")
                 {
@@ -125,7 +125,7 @@ page 67109 "Registrar Asistencias"
 
                     trigger OnAction()
                     var
-                        "ProgT&E"Record 67015;
+                        "ProgT&E": Record 67015;
                     begin
                         CurrPage.ConsultaPLanTyE.PAGE.AbrirPagAsistentes;
 
@@ -142,17 +142,17 @@ page 67109 "Registrar Asistencias"
         SETRANGE("No. Solicitud", '');
 
         IF gCodExpositor <> '' THEN
-           SETRANGE(Expositor,gCodExpositor);
+            SETRANGE(Expositor, gCodExpositor);
     end;
 
     var
         PagAsistentes: Page 67110;
-                           Fecha: Record 2000000007;
-                           CabPlanEvent: Record 67051;
-                           gCodExpositor: Code[20];
-                           gTipoExpositor: Integer;
-                           gCodEvento: Code[20];
-                           gTipoEvento: Code[20];
+        Fecha: Record 2000000007;
+        CabPlanEvent: Record 67051;
+        gCodExpositor: Code[20];
+        gTipoExpositor: Integer;
+        gCodEvento: Code[20];
+        gTipoEvento: Code[20];
 
     procedure RecibeParametros(CodExpositor: Code[20]; TipoExpositor: Integer; CodEvento: Code[20]; TipoEvento: Code[20])
     begin

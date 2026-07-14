@@ -83,12 +83,12 @@ table 34002171 "Relacion Empleados - Proyectos"
         field(9; "Concepto salarial"; Code[20])
         {
             Caption = 'Wage Code';
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
                 IF ConcepSalar.GET("Concepto salarial") THEN
-                    "Descripción concepto" := ConcepSalar.Descripción;
+                    "Descripcion concepto" := ConcepSalar.Descripcion;
             end;
         }
         field(10; Precio; Decimal)
@@ -102,7 +102,7 @@ table 34002171 "Relacion Empleados - Proyectos"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(12; "Descripción concepto"; Text[60])
+        field(12; "Descripcion concepto"; Text[60])
         {
             Caption = 'Wage description';
             Editable = false;

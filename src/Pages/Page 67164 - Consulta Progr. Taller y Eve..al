@@ -16,7 +16,7 @@ page 67164 "Consulta Progr. Taller y Eve."
                 field("Fecha programacion"; "Fecha programacion")
                 {
                 }
-                field(FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"); FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"))
+                field(FechaInicioFinal; FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"))
                 {
                     Caption = 'Horario';
                 }

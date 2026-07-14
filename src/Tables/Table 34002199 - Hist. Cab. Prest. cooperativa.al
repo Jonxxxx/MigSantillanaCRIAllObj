@@ -83,7 +83,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         {
             Caption = 'Wage Code';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(15; "Importe Pendiente"; Decimal)
         {

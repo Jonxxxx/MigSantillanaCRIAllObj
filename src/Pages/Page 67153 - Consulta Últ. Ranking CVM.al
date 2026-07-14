@@ -7,7 +7,7 @@ page 67153 "Consulta Últ. Ranking CVM"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 67094;
-    SourceTableView = SORTING(Reporte, Campaña, Delegación, No. Orden)
+    SourceTableView = SORTING(Reporte, Campana, Delegacion, "No. Orden")
                       WHERE("Reporte" = CONST(CVM));
 
     layout
@@ -20,10 +20,10 @@ page 67153 "Consulta Últ. Ranking CVM"
                 {
                     Caption = 'Fecha Gen.';
                 }
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
-                field(Delegación; Delegación)
+                field(Delegación; Delegacion)
                 {
                 }
                 field("No. Orden"; "No. Orden")
@@ -154,7 +154,7 @@ page 67153 "Consulta Últ. Ranking CVM"
                 {
                     Caption = 'MONTO BRUTO GENERAL';
                 }
-                field("PORC MONTO BRUTO_ESPAÑOL"; "PORC MONTO BRUTO_ESPAÑOL")
+                field("PORC MONTO BRUTO_ESPAÑOL"; "PORC MONTO BRUTO_ESPANOL")
                 {
                     Caption = 'PORC. MONTO BRUTO ESPAÑOL';
                 }
@@ -171,7 +171,7 @@ page 67153 "Consulta Últ. Ranking CVM"
                     Caption = 'PORC. MONTO BRUTO GENERAL';
                 }
             }
-            group()
+            group(General)
             {
                 field(TextFecha; TextFecha)
                 {

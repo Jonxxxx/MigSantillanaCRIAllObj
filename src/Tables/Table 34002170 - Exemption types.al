@@ -16,7 +16,7 @@ table 34002170 "Exemption types"
         }
         field(3; "Wedge Code"; Code[10])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(4; Status; Option)
         {

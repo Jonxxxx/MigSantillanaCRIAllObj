@@ -121,6 +121,8 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                 {
                     Editable = false;
                 }
+                //TODO: Ver
+                /*
                 field(SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
                     SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
@@ -129,6 +131,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
+                */
                 field("Cantidad a Anular"; "Cantidad a Anular")
                 {
                 }
@@ -298,22 +301,25 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                     PrevTime := TIME;
                     Window.UPDATE(1, ROUND((Counter / CounterTotal) * 10000, 1));
                 END;
-                //-$002
-                //IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) = 0) AND (SL."Cantidad pendiente BO" <> 0) THEN//MOI - 23/02/2015
-                IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0) AND (SL."Cantidad pendiente BO" <> 0) THEN BEGIN
-                    WHSL.RESET;
-                    WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
-                    WHSL.SETRANGE("Source Type", 37);
-                    WHSL.SETRANGE("Source Subtype", 1);
-                    WHSL.SETRANGE("Source No.", SL."Document No.");
-                    WHSL.SETRANGE("Item No.", SL."No.");
-                    IF NOT WHSL.FINDFIRST THEN BEGIN
-                        TRANSFERFIELDS(SL);
-                        "Cantidad a Anular" := 0; //+$001
-                        "Cantidad a Ajustar" := 0; //+$002
-                        INSERT;
-                    END;
+            //-$002
+            //IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) = 0) AND (SL."Cantidad pendiente BO" <> 0) THEN//MOI - 23/02/2015
+            //TODO: Ver
+            /*
+            IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0) AND (SL."Cantidad pendiente BO" <> 0) THEN BEGIN
+                WHSL.RESET;
+                WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
+                WHSL.SETRANGE("Source Type", 37);
+                WHSL.SETRANGE("Source Subtype", 1);
+                WHSL.SETRANGE("Source No.", SL."Document No.");
+                WHSL.SETRANGE("Item No.", SL."No.");
+                IF NOT WHSL.FINDFIRST THEN BEGIN
+                    TRANSFERFIELDS(SL);
+                    "Cantidad a Anular" := 0; //+$001
+                    "Cantidad a Ajustar" := 0; //+$002
+                    INSERT;
                 END;
+            END;
+            */
             UNTIL SL.NEXT = 0;
         Window.CLOSE;
     end;
@@ -321,10 +327,10 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
     var
         SalesInfoPaneMgt: Codeunit 7171;
         SalesLine: Record 37;
-        ReleaseSalesDoc: Codeunit 414;
+        ReleaseSalesDoc: Codeunit "Release Sales Document";
         salesheader: Record 36;
-        AppTemp: Record 464;
-        ApprovalMgt: Codeunit 1535;
+        //TODO: Ver AppTemp: Record 464;
+        //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
         EstatusPed: Option Abierto,Lanzado,"Aprobación pendiente","Anticipo pendiente";
         UserSetup: Record 91;
         Window: Dialog;

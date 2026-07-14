@@ -10,9 +10,9 @@ page 75000 "Configuracion MDM"
     {
         area(content)
         {
-            group(General)
+            group(GeneralA)
             {
-                group(General)
+                group(GeneralB)
                 {
                     Caption = 'General';
                     field("Bloquea Datos MDM"; "Bloquea Datos MDM")
@@ -44,7 +44,7 @@ page 75000 "Configuracion MDM"
                     }
                     field("Estado Inactivo"; "Estado Inactivo")
                     {
-                        ToolTip = 'Código Estado que provocará que el producto se marque como "Inactivo"';
+                        ToolTip = 'Codigo Estado que provocará que el producto se marque como "Inactivo"';
                     }
                 }
                 group("Precios Venta")

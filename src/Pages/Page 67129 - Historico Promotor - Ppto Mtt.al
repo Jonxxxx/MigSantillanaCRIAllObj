@@ -48,7 +48,7 @@ page 67129 "Historico Promotor - Ppto Mtt"
                 field("No. documento"; "No. documento")
                 {
                 }
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
             }

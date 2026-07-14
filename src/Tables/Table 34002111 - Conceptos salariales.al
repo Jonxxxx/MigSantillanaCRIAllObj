@@ -12,7 +12,7 @@ table 34002111 "Conceptos salariales"
             Caption = 'Shortcut Dimension 1 Code';
             TableRelation = Dimension.Code;
         }
-        field(2; "Código"; Code[20])
+        field(2; "Codigo"; Code[20])
         {
 
             trigger OnLookup()
@@ -28,7 +28,7 @@ table 34002111 "Conceptos salariales"
                 PageDefDim.LOOKUPMODE(TRUE);
                 PageDefDim.RUNMODAL;
                 PageDefDim.GETRECORD(DimValue);
-                VALIDATE(Código, DimValue.Code);
+                VALIDATE(Codigo, DimValue.Code);
                 CLEAR(PageDefDim);
             end;
 
@@ -38,11 +38,11 @@ table 34002111 "Conceptos salariales"
                 ConfNominas.TESTFIELD("Dimension Conceptos Salariales");
                 "Shortcut Dimension" := ConfNominas."Dimension Conceptos Salariales";
 
-                DimValue.GET("Shortcut Dimension", Código);
-                Descripción := DimValue.Name;
+                DimValue.GET("Shortcut Dimension", Codigo);
+                Descripcion := DimValue.Name;
             end;
         }
-        field(3; "Descripción"; Text[50])
+        field(3; "Descripcion"; Text[50])
         {
         }
         field(4; "Tipo concepto"; Option)
@@ -84,7 +84,7 @@ table 34002111 "Conceptos salariales"
         field(9; "Col. Impresión Nómina"; Integer)
         {
         }
-        field(10; "Imprimir descripción"; Boolean)
+        field(10; "Imprimir Descripcion"; Boolean)
         {
         }
         field(11; Provisionar; Boolean)
@@ -95,7 +95,7 @@ table 34002111 "Conceptos salariales"
             begin
                 ValidaPerfiles(6);
 
-                DistCtaGpoCont.SETRANGE("Código Concepto Salarial", Código);
+                DistCtaGpoCont.SETRANGE("Codigo Concepto Salarial", Codigo);
                 IF DistCtaGpoCont.FIND('-') THEN
                     REPEAT
                         DistCtaGpoCont.Provisionar := Provisionar;
@@ -291,7 +291,7 @@ table 34002111 "Conceptos salariales"
             begin
                 IF "Tipo de nomina" <> '' THEN BEGIN
                     PS.RESET;
-                    PS.SETRANGE("Concepto salarial", Código);
+                    PS.SETRANGE("Concepto salarial", Codigo);
                     IF PS.FINDSET(TRUE, FALSE) THEN
                         REPEAT
                             PS."Tipo de nomina" := "Tipo de nomina";
@@ -304,17 +304,17 @@ table 34002111 "Conceptos salariales"
 
     keys
     {
-        key(Key1; "Código")
+        key(Key1; "Codigo")
         {
         }
-        key(Key2; "Descripción")
+        key(Key2; "Descripcion")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Código", "Descripción")
+        fieldgroup(DropDown; "Codigo", "Descripcion")
         {
         }
     }
@@ -326,19 +326,19 @@ table 34002111 "Conceptos salariales"
         Utilizado := FALSE;
 
         HLN.RESET;
-        HLN.SETRANGE("Concepto salarial", Código);
+        HLN.SETRANGE("Concepto salarial", Codigo);
         IF HLN.FINDFIRST THEN
             ERROR(Err003);
 
         PS.RESET;
-        PS.SETRANGE("Concepto salarial", Código);
+        PS.SETRANGE("Concepto salarial", Codigo);
         IF PS.FINDFIRST THEN
             Utilizado := TRUE;
 
         IF Utilizado THEN BEGIN
             IF CONFIRM(Text003, FALSE) THEN BEGIN
                 PS.RESET;
-                PS.SETRANGE("Concepto salarial", Código);
+                PS.SETRANGE("Concepto salarial", Codigo);
                 PS.FINDSET(TRUE, FALSE);
                 PS.DELETEALL;
             END
@@ -346,7 +346,7 @@ table 34002111 "Conceptos salariales"
                 ERROR(Text004);
         END;
         //+MdE
-        EquivNavMde.SETRANGE("Concepto NAV", Código);
+        EquivNavMde.SETRANGE("Concepto NAV", Codigo);
         EquivNavMde.DELETEALL;
         //-MdE
     end;
@@ -382,7 +382,7 @@ table 34002111 "Conceptos salariales"
     begin
         /*IF FIELDNO("Cotiz.adicional") = 4 THEN BEGIN
           FORM.RUNMODAL(34002157"Tipos Cotizacion");
-          "Cotiz.adicional":="Tipos Cotizacion".Código;
+          "Cotiz.adicional":="Tipos Cotizacion".Codigo;
         END;
         */
 
@@ -393,17 +393,17 @@ table 34002111 "Conceptos salariales"
         HLN: Record 34002118;
     begin
         HLN.RESET;
-        HLN.SETRANGE("Concepto salarial", Código);
+        HLN.SETRANGE("Concepto salarial", Codigo);
         IF HLN.FINDFIRST THEN BEGIN
             IF CONFIRM(Text000, TRUE) THEN BEGIN
                 HLN.RESET;
-                HLN.SETRANGE("Concepto salarial", Código);
+                HLN.SETRANGE("Concepto salarial", Codigo);
                 CounterTotal := HLN.COUNT;
                 Window.OPEN(Text002);
                 HLN.FINDSET(TRUE, FALSE);
                 REPEAT
                     Counter += 1;
-                    Window.UPDATE(1, Código);
+                    Window.UPDATE(1, Codigo);
                     Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
                     CASE Procedencia OF
                         1:
@@ -441,19 +441,19 @@ table 34002111 "Conceptos salariales"
     begin
         /*
         PSxC.RESET;
-        PSxC.SETRANGE("Concepto salarial",Código);
+        PSxC.SETRANGE("Concepto salarial",Codigo);
         IF PSxC.FINDFIRST THEN
            BEGIN
         //    if CONFIRM(Text000,true) then
         //       begin
                 PSxC.RESET;
-                PSxC.SETRANGE("Concepto salarial",Código);
+                PSxC.SETRANGE("Concepto salarial",Codigo);
                 CounterTotal := PSxC.COUNT;
                 Window.OPEN(Text002);
                 PSxC.FINDSET(TRUE,FALSE);
                 REPEAT
                  Counter += 1;
-                 Window.UPDATE(1,Código);
+                 Window.UPDATE(1,Codigo);
                  Window.UPDATE(2,ROUND(Counter / CounterTotal * 10000,1));
                  CASE Procedencia OF
                   1:
@@ -480,18 +480,18 @@ table 34002111 "Conceptos salariales"
            END;
         */
         LPS.RESET;
-        LPS.SETRANGE("Concepto salarial", Código);
+        LPS.SETRANGE("Concepto salarial", Codigo);
         IF LPS.FINDFIRST THEN BEGIN
             //    if CONFIRM(Text000,true) then
             //       begin
             LPS.RESET;
-            LPS.SETRANGE("Concepto salarial", Código);
+            LPS.SETRANGE("Concepto salarial", Codigo);
             CounterTotal := LPS.COUNT;
             Window.OPEN(Text002);
             LPS.FINDSET(TRUE, FALSE);
             REPEAT
                 Counter += 1;
-                Window.UPDATE(1, Código);
+                Window.UPDATE(1, Codigo);
                 Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
                 CASE Procedencia OF
                     1:

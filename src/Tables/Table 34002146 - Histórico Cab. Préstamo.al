@@ -90,7 +90,7 @@ table 34002146 "Histórico Cab. Préstamo"
         }
         field(20; "Concepto Salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(21; "Motivo Prestamos"; Text[60])
         {

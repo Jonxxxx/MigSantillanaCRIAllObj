@@ -44,19 +44,19 @@ page 56015 "Cab. Hoja de Ruta Reg."
                 {
                 }
             }
-            part(; 56016)
+            part(PageLin; 56016)
             {
-                SubPageLink = "Hoja Ruta" = FIELD("No. Hoja Ruta");
-                SubPageView = SORTING(No. Hoja Ruta, No. Linea)
+                SubPageLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
+                SubPageView = SORTING("No. Hoja Ruta", "No. Linea")
                               ORDER(Ascending);
             }
         }
         area(factboxes)
         {
-            systempart(; MyNotes)
+            systempart(Notes; MyNotes)
             {
             }
-            systempart(; Links)
+            systempart(Links; Links)
             {
             }
         }

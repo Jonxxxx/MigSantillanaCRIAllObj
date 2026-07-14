@@ -10,7 +10,7 @@ tableextension 50106 EXCCRIBinContent extends "Bin Content"
         }
         field(52501; "Descripcion Producto"; Text[100])
         {
-            Caption = 'Item Description', Comment = 'ESP=Descripción Producto';
+            Caption = 'Item Description', Comment = 'ESP=Descripcion Producto';
             FieldClass = FlowField;
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
         }

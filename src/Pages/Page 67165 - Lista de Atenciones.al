@@ -58,31 +58,31 @@ page 67165 "Lista de Atenciones"
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field(Delegacion;Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
-                field(Distritos;Distritos)
+                field(Distritos; Distritos)
                 {
                 }
-                field(Objetivo;Objetivo)
+                field(Objetivo; Objetivo)
                 {
                 }
-                field("Area Responsable";"Area Responsable")
+                field("Area Responsable"; "Area Responsable")
                 {
                 }
-                field("Cod. Responsable";"Cod. Responsable")
+                field("Cod. Responsable"; "Cod. Responsable")
                 {
                 }
-                field("Nombre responsable";"Nombre responsable")
+                field("Nombre responsable"; "Nombre responsable")
                 {
                 }
-                field("Fecha Recepción Documento";"Fecha Recepción Documento")
+                field("Fecha Recepción Documento"; "Fecha Recepcion Documento")
                 {
                 }
             }

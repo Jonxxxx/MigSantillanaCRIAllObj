@@ -42,8 +42,7 @@ page 56063 "Seguimiento Ped. Transferencia"
                 field("No. Packing"; "No. Packing")
                 {
                 }
-                field(TSH."No.";
-                    TSH."No.")
+                field("TSHNo."; TSH."No.")
                 {
                 }
                 field("No. Envio"; "No. Envio")

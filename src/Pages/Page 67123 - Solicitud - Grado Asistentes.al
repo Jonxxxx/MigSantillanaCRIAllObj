@@ -12,7 +12,7 @@ page 67123 "Solicitud - Grado Asistentes"
                 field("Cod. Grado"; "Cod. Grado")
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field("No. Asistentes"; "No. Asistentes")

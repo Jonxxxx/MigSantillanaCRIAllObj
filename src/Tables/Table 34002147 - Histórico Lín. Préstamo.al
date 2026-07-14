@@ -22,7 +22,7 @@ table 34002147 "Histórico Lín. Préstamo"
         field(5; "Fecha Transacción"; Date)
         {
         }
-        field(6; "Código Empleado"; Code[20])
+        field(6; "Codigo Empleado"; Code[20])
         {
             TableRelation = Employee;
         }

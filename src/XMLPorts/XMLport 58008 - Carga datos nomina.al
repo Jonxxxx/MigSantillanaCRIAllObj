@@ -281,7 +281,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(E_AcumuladoSalario; Employee."Acumulado Salario")
                 {
                 }
-                fieldelement(E_CodigoCliente; Employee."Código Cliente")
+                fieldelement(E_CodigoCliente; Employee."Codigo Cliente")
                 {
                 }
                 fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluído Cotización TSS")
@@ -345,7 +345,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(EC_Numero; "Empresas Cotización"."Número")
                 {
                 }
-                fieldelement(EC_CodigoPostal; "Empresas Cotización"."Código Postal")
+                fieldelement(EC_CodigoPostal; "Empresas Cotización"."Codigo Postal")
                 {
                 }
                 fieldelement(EC_Municipio; "Empresas Cotización".Municipio)
@@ -660,7 +660,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(C_Disponible; Contratos.Disponible)
                 {
                 }
-                fieldelement(C_Descripcion; Contratos."Descripción")
+                fieldelement(C_Descripcion; Contratos."Descripcion")
                 {
                 }
                 fieldelement(C_FechaInicio; Contratos."Fecha inicio")
@@ -718,10 +718,10 @@ xmlport 58008 "Carga datos nomina"
             tableelement(Table34002110; Table34002110)
             {
                 XmlName = 'PuestosLaborales';
-                fieldelement(PL_Codigo; "Puestos laborales"."Código")
+                fieldelement(PL_Codigo; "Puestos laborales"."Codigo")
                 {
                 }
-                fieldelement(PL_Descripcion; "Puestos laborales"."Descripción")
+                fieldelement(PL_Descripcion; "Puestos laborales"."Descripcion")
                 {
                 }
                 fieldelement(PL_NivelSalarialMinimo; "Puestos laborales"."Cod. nivel")
@@ -749,10 +749,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")
                 {
                 }
-                fieldelement(CS_Codigo; "Conceptos salariales"."Código")
+                fieldelement(CS_Codigo; "Conceptos salariales"."Codigo")
                 {
                 }
-                fieldelement(CS_Descripcion; "Conceptos salariales"."Descripción")
+                fieldelement(CS_Descripcion; "Conceptos salariales"."Descripcion")
                 {
                 }
                 fieldelement(CS_TipoConcepto; "Conceptos salariales"."Tipo concepto")
@@ -773,7 +773,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement("CS_ColImpresiónNómina"; "Conceptos salariales"."Col. Impresión Nómina")
                 {
                 }
-                fieldelement("CS_ImprimirDescripción"; "Conceptos salariales"."Imprimir descripción")
+                fieldelement("CS_ImprimirDescripcion"; "Conceptos salariales"."Imprimir Descripcion")
                 {
                 }
                 fieldelement(CS_Provisionar; "Conceptos salariales".Provisionar)
@@ -913,7 +913,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_ConceptoSalarial; "Perfil Salarial"."Concepto salarial")
                 {
                 }
-                fieldelement("PS_Descripción"; "Perfil Salarial"."Descripción")
+                fieldelement("PS_Descripcion"; "Perfil Salarial"."Descripcion")
                 {
                 }
                 fieldelement(PS_Cantidad; "Perfil Salarial".Cantidad)
@@ -1059,10 +1059,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(TC_Ano; "Tipos de Cotización".Ano)
                 {
                 }
-                fieldelement("TC_Código"; "Tipos de Cotización"."Código")
+                fieldelement("TC_Codigo"; "Tipos de Cotización"."Codigo")
                 {
                 }
-                fieldelement("TC_Descripción"; "Tipos de Cotización"."Descripción")
+                fieldelement("TC_Descripcion"; "Tipos de Cotización"."Descripcion")
                 {
                 }
                 fieldelement(TC_PorcientoEmpresa; "Tipos de Cotización"."Porciento Empresa")
@@ -1232,26 +1232,26 @@ xmlport 58008 "Carga datos nomina"
             tableelement(Table34002104; Table34002104)
             {
                 XmlName = 'GruposContablesEmpleados';
-                fieldelement("GCE_Código"; "Grupos Contables Empleados"."Código")
+                fieldelement("GCE_Codigo"; "Grupos Contables Empleados"."Codigo")
                 {
                 }
-                fieldelement("GCE_Descripción"; "Grupos Contables Empleados"."Descripción")
+                fieldelement("GCE_Descripcion"; "Grupos Contables Empleados"."Descripcion")
                 {
                 }
             }
             tableelement(Table34002105; Table34002105)
             {
                 XmlName = 'DistCtasGpoContEmpl';
-                fieldelement("DCGCE_Código"; "Dist. Ctas. Gpo. Cont. Empl."."Código")
+                fieldelement("DCGCE_Codigo"; "Dist. Ctas. Gpo. Cont. Empl."."Codigo")
                 {
                 }
-                fieldelement("DCGCE_Descripción"; "Dist. Ctas. Gpo. Cont. Empl."."Descripción")
+                fieldelement("DCGCE_Descripcion"; "Dist. Ctas. Gpo. Cont. Empl."."Descripcion")
                 {
                 }
                 fieldelement(DCGCE_ShortcutDimension; "Dist. Ctas. Gpo. Cont. Empl."."Shortcut Dimension")
                 {
                 }
-                fieldelement("DCGCE_CódigoConceptoSalarial"; "Dist. Ctas. Gpo. Cont. Empl."."Código Concepto Salarial")
+                fieldelement("DCGCE_CodigoConceptoSalarial"; "Dist. Ctas. Gpo. Cont. Empl."."Codigo Concepto Salarial")
                 {
                 }
                 fieldelement(DCGCE_TipoCuentaCuotaObrera; "Dist. Ctas. Gpo. Cont. Empl."."Tipo Cuenta Cuota Obrera")

@@ -17,25 +17,29 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 Caption = 'Tipo dato MdE';
                 //The GridLayout property is only supported on controls of type Grid
                 //GridLayout = Rows;
+                //TODO: Ver 
+                /*
                 field(GetMdEEquiv; GetMdEEquiv)
                 {
                     Editable = false;
                     Enabled = false;
                     Importance = Promoted;
-                }
+                }*/
             }
             repeater(Group)
             {
-                FreezeColumn = "Descripción";
-                field(Código; Código)
+                FreezeColumn = "Descripcion";
+                field(Codigo; Codigo)
                 {
                     Editable = false;
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; "Descripcion")
                 {
                     Editable = false;
                 }
-                field(BooleanArray[1];BooleanArray[1])
+                //TODO: Ver 
+                /*
+                field(BooleanArray[1]; BooleanArray[1])
                 {
                     CaptionClass = ColumnNameArray[1];
                     Visible = NoColumns > 0;
@@ -234,7 +238,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                     begin
                         ValidateColumn(20);
                     end;
-                }
+                }*/
             }
         }
     }
@@ -279,10 +283,10 @@ page 56200 "Equiv. conceptos NAV-MdE"
         i: Integer;
     begin
         FOR i := 1 TO NoColumns DO BEGIN
-          IF MdEDataType = MdEDataType::IRM THEN
-            BooleanArray[i] := EquivNavMdE.GET(Código, i, 0) AND (EquivNavMdE.Porcentaje > 0)
-          ELSE
-            BooleanArray[i] := EquivNavMdE.GET(Código, 0, i) AND (EquivNavMdE.Porcentaje > 0)
+            IF MdEDataType = MdEDataType::IRM THEN
+                BooleanArray[i] := EquivNavMdE.GET(Codigo, i, 0) AND (EquivNavMdE.Porcentaje > 0)
+            ELSE
+                BooleanArray[i] := EquivNavMdE.GET(Codigo, 0, i) AND (EquivNavMdE.Porcentaje > 0)
         END;
     end;
 
@@ -293,8 +297,8 @@ page 56200 "Equiv. conceptos NAV-MdE"
 
     var
         EquivNavMdE: Record 56201;
-        BooleanArray: array [20] of Boolean;
-        ColumnNameArray: array [20] of Text[20];
+        BooleanArray: array[20] of Boolean;
+        ColumnNameArray: array[20] of Text[20];
         NoColumns: Integer;
         MdEDataType: Option IRM,CT;
         Text000: Label 'Información Real Mensual';
@@ -307,14 +311,14 @@ page 56200 "Equiv. conceptos NAV-MdE"
         CLEAR(ColumnNameArray);
         NoColumns := EquivNavMdE.GetNoConcepts(MdEDataType);
         FOR i := 1 TO NoColumns DO BEGIN
-          IF MdEDataType = MdEDataType::IRM THEN BEGIN
-            EquivNavMdE."Concepto IRM" := i;
-            ColumnNameArray[i] := STRSUBSTNO('%1', EquivNavMdE."Concepto IRM");
-          END
-          ELSE BEGIN
-            EquivNavMdE."Concepto CT" := i;
-            ColumnNameArray[i] := STRSUBSTNO('%1', EquivNavMdE."Concepto CT");
-          END;
+            IF MdEDataType = MdEDataType::IRM THEN BEGIN
+                EquivNavMdE."Concepto IRM" := i;
+                ColumnNameArray[i] := STRSUBSTNO('%1', EquivNavMdE."Concepto IRM");
+            END
+            ELSE BEGIN
+                EquivNavMdE."Concepto CT" := i;
+                ColumnNameArray[i] := STRSUBSTNO('%1', EquivNavMdE."Concepto CT");
+            END;
         END;
         CurrPage.UPDATE(FALSE);
     end;
@@ -325,35 +329,35 @@ page 56200 "Equiv. conceptos NAV-MdE"
         CtVal: Integer;
     begin
         IF MdEDataType = MdEDataType::IRM THEN
-          IrmVal := Column
+            IrmVal := Column
         ELSE
-          CtVal := Column;
+            CtVal := Column;
 
         IF BooleanArray[Column] THEN BEGIN
-          IF EquivNavMdE.GET(Código, IrmVal, CtVal) THEN BEGIN
-            EquivNavMdE.Porcentaje := 1;
-            EquivNavMdE.MODIFY;
-          END
-          ELSE BEGIN
-            EquivNavMdE."Concepto NAV" := Código;
-            EquivNavMdE."Concepto IRM" := IrmVal;
-            EquivNavMdE."Concepto CT" := CtVal;
-            EquivNavMdE.Porcentaje := 1;
-            EquivNavMdE.INSERT;
-          END
+            IF EquivNavMdE.GET(Codigo, IrmVal, CtVal) THEN BEGIN
+                EquivNavMdE.Porcentaje := 1;
+                EquivNavMdE.MODIFY;
+            END
+            ELSE BEGIN
+                EquivNavMdE."Concepto NAV" := Codigo;
+                EquivNavMdE."Concepto IRM" := IrmVal;
+                EquivNavMdE."Concepto CT" := CtVal;
+                EquivNavMdE.Porcentaje := 1;
+                EquivNavMdE.INSERT;
+            END
         END
         ELSE BEGIN
-          IF EquivNavMdE.GET(Código, IrmVal, CtVal) THEN
-            EquivNavMdE.DELETE;
+            IF EquivNavMdE.GET(Codigo, IrmVal, CtVal) THEN
+                EquivNavMdE.DELETE;
         END;
     end;
 
     procedure GetMdEEquiv(): Text[50]
     begin
         IF MdEDataType = MdEDataType::IRM THEN
-          EXIT(Text000)
+            EXIT(Text000)
         ELSE
-          EXIT(Text001);
+            EXIT(Text001);
     end;
 }
 

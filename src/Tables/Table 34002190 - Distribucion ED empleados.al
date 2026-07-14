@@ -15,7 +15,7 @@ table 34002190 "Distribucion ED empleados"
             Caption = 'Wage Code';
             DataClassification = ToBeClassified;
             NotBlank = true;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(3; "Dimension Code"; Code[20])
         {

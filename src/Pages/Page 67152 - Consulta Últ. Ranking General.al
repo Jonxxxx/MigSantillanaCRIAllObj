@@ -7,7 +7,7 @@ page 67152 "Consulta Últ. Ranking General"
     ModifyAllowed = false;
     PageType = List;
     SourceTable = 67094;
-    SourceTableView = SORTING(Reporte, Campaña, Delegación, No. Orden)
+    SourceTableView = SORTING(Reporte, Campana, Delegacion, "No. Orden")
                       WHERE("Reporte" = CONST(General));
 
     layout
@@ -20,10 +20,10 @@ page 67152 "Consulta Últ. Ranking General"
                 {
                     Caption = 'Fecha Gen.';
                 }
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
-                field(Delegación; Delegación)
+                field(Delegación; Delegacion)
                 {
                 }
                 field("No. Orden"; "No. Orden")
@@ -148,7 +148,7 @@ page 67152 "Consulta Últ. Ranking General"
                 {
                     Caption = 'MONTO BRUTO GENERAL';
                 }
-                field("MONTO TOTAL_ESPAÑOL"; "MONTO TOTAL_ESPAÑOL")
+                field("MONTO TOTAL_ESPAÑOL"; "MONTO TOTAL_ESPANOL")
                 {
                     Caption = 'MONTO TOTAL ESPAÑOL';
                 }
@@ -164,7 +164,7 @@ page 67152 "Consulta Últ. Ranking General"
                 {
                     Caption = 'MONTO TOTAL GENERAL';
                 }
-                field("PORC MONTO BRUTO_ESPAÑOL"; "PORC MONTO BRUTO_ESPAÑOL")
+                field("PORC MONTO BRUTO_ESPAÑOL"; "PORC MONTO BRUTO_ESPANOL")
                 {
                     Caption = 'PORC. MONTO BRUTO ESPAÑOL';
                 }
@@ -181,7 +181,7 @@ page 67152 "Consulta Últ. Ranking General"
                     Caption = 'PORC. MONTO BRUTO GENERAL';
                 }
             }
-            group()
+            group(General)
             {
                 Visible = false;
                 field(TextFecha; TextFecha)

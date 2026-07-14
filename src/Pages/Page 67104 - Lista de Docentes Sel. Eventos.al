@@ -52,7 +52,7 @@ page 67104 "Lista de Docentes Sel. Eventos"
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }
-            part(; 67107)
+            part(PagePar; 67107)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }

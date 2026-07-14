@@ -571,7 +571,7 @@ table 67001 Docentes
         field(94; Expositor; Boolean)
         {
         }
-        field(95; "Usuario creaci n"; Code[50])
+        field(95; "Usuario creacion"; Code[50])
         {
         }
     }
@@ -630,7 +630,7 @@ table 67001 Docentes
         END;
         "Ano inscripcion CDS" := FORMAT(APSSetup.Campana);
 
-        "Usuario creaci n" := USERID;
+        "Usuario creacion" := USERID;
     end;
 
     trigger OnModify()

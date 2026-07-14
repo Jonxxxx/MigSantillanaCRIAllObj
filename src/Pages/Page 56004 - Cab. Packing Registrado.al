@@ -59,10 +59,10 @@ page 56004 "Cab. Packing Registrado"
                 {
                 }
             }
-            part(; 56005)
+            part(PageLin; 56005)
             {
-                SubPageLink = No.=FIELD("No.");
-                    SubPageView = SORTING(No.,No. Caja)
+                SubPageLink = "No." = FIELD("No.");
+                SubPageView = SORTING("No.", "No. Caja")
                               ORDER(Ascending);
             }
         }
@@ -94,6 +94,9 @@ page 56004 "Cab. Packing Registrado"
                     //REPORT.RUNMODAL(ConfSant."ID Reporte Etiqueta de Caja", TRUE, FALSE, CabPackReg);
                 end;
             }
+
+            //TODO: Ver 
+            /*
             action(ejecuta)
             {
                 Promoted = true;
@@ -112,26 +115,7 @@ page 56004 "Cab. Packing Registrado"
                     UsrSetUp: Record 91;
                     [RunOnClient]
                     Persona: DotNet Person;
-                begin
-                    /*
-                    Persona := Persona.Person;
-                    Persona.FirstName := 'Agustin';
-                    Persona.LasName := 'Mendez';
-                    MESSAGE(Persona.FirstName + ' '+Persona.LasName);
-                    */
-                    /*
-                    UsrSetUp.GET(USERID);
-                    texComando := 'Copy C:\Users\kgutierrez\Downloads\'+FORMAT(FormatUser(USERID))+'.txt'+' '+ UsrSetUp."Puerto Impresora Etiquetas";
-                    //texComando := 'C:\Users\kgutierrez\Downloads\'+FORMAT(FormatUser(USERID))+'.txt';
-                    ExecuteBat := ExecuteBat.ProcessStartInfo('"cmd.exe", "/c "' + texComando + '"');
-                    ExecuteBat.RedirectStandardError := TRUE;
-                    ExecuteBat.RedirectStandardOutput := TRUE;
-                    ExecuteBat.UseShellExecute := FALSE;
-                    ExecuteBat.CreateNoWindow := TRUE;
-                    Process := Process.Process;
-                    Process.StartInfo(ExecuteBat);
-                    Process.Start;
-                    */
+                begin                    
 
                     UsrSetUp.GET(USERID);
                     texComando := '"C:\Etiqueta\BTC1.bat"';
@@ -161,16 +145,17 @@ page 56004 "Cab. Packing Registrado"
 
                 end;
             }
+            */
         }
     }
 
     trigger OnInit()
     begin
-        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 

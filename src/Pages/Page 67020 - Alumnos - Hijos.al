@@ -37,43 +37,43 @@ page 67020 "Alumnos - Hijos"
                 field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Home Phone No.";"Home Phone No.")
+                field("Home Phone No."; "Home Phone No.")
                 {
                 }
-                field("Born Date";"Born Date")
+                field("Born Date"; "Born Date")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field(Twitter;Twitter)
+                field(Twitter; Twitter)
                 {
                 }
-                field(Facebook;Facebook)
+                field(Facebook; Facebook)
                 {
                 }
-                field("BB Pin";"BB Pin")
+                field("BB Pin"; "BB Pin")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
             }
@@ -92,20 +92,20 @@ page 67020 "Alumnos - Hijos"
                     Caption = '&Card';
                     Image = EditLines;
                     RunObject = Page 67056;
-                                    RunPageLink = Code = FIELD("Code");
-                                    ShortCutKey = 'Shift+F7';
+                    RunPageLink = Code = FIELD("Code");
+                    ShortCutKey = 'Shift+F7';
                 }
                 action("&Fathers")
                 {
                     Caption = '&Fathers';
                     RunObject = Page 67049;
-                                    RunPageLink = DNI=FIELD("DNI Padre");
+                    RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")
                 {
                     Caption = '&School';
-                    RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD("Cod. Colegio");
+                    RunObject = Page "Contact Card";
+                    RunPageLink = "No." = FIELD("Cod. Colegio");
                 }
             }
         }

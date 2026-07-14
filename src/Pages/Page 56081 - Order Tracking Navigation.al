@@ -17,7 +17,7 @@ page 56081 "Order Tracking Navigation"
     {
         area(content)
         {
-            group(General)
+            group(GeneralG)
             {
                 Caption = 'General';
                 field(DocType; DocType)
@@ -283,13 +283,13 @@ page 56081 "Order Tracking Navigation"
 
     procedure FindRecords()
     var
-        WhseShptHeaderTMP Record: 7320" temporary;
-        PostedWhseShptHeaderTMP Record: 7322" temporary;
-        WhseActivityHeaderTMP Record: 5766" temporary;
-        RegWhseActivityHeaderTMP Record: 5772" temporary;
-        CabHojaRutaRegTMP Record: 56022" temporary;
+        WhseShptHeaderTMP: Record 7320 temporary;
+        PostedWhseShptHeaderTMP: Record 7322 temporary;
+        WhseActivityHeaderTMP: Record 5766 temporary;
+        RegWhseActivityHeaderTMP: Record 5772 temporary;
+        CabHojaRutaRegTMP: Record 56022 temporary;
         CabHojaRutaReg: Record 56022;
-        CabHojaRutaTMP Record: 56020" temporary;
+        CabHojaRutaTMP: Record 56020 temporary;
         Window: Dialog;
         BackOrderQty: Decimal;
         UpdateNewIdent: Boolean;

@@ -6,10 +6,10 @@ table 34002110 "Puestos laborales"
 
     fields
     {
-        field(1; "Código"; Code[15])
+        field(1; "Codigo"; Code[15])
         {
         }
-        field(2; "Descripción"; Text[50])
+        field(2; "Descripcion"; Text[50])
         {
         }
         field(3; "Cod. nivel"; Code[20])
@@ -31,7 +31,7 @@ table 34002110 "Puestos laborales"
                     //TODO: Ver 
                     /*
                     Empl.SETCURRENTKEY("Job Type Code");
-                    Empl.SETRANGE("Job Type Code", Código);
+                    Empl.SETRANGE("Job Type Code", Codigo);
                     IF Empl.FINDSET(TRUE, FALSE) THEN BEGIN
                         Empl."Cod. Supervisor" := "Cod. Supervisor";
                         Empl.MODIFY;
@@ -56,7 +56,7 @@ table 34002110 "Puestos laborales"
         field(8; "Total Empleados"; Integer)
         {
             //TODO: Ver CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. departamento"),
-            //TODO: Ver                                     "Type Code" = FIELD("Código"),
+            //TODO: Ver                                     "Type Code" = FIELD("Codigo"),
             //TODO: Ver                                    Status = CONST(Active)));
             Caption = 'Total Employee';
             Editable = false;
@@ -110,17 +110,17 @@ table 34002110 "Puestos laborales"
 
     keys
     {
-        key(Key1; "Cod. departamento", "Código")
+        key(Key1; "Cod. departamento", "Codigo")
         {
         }
-        key(Key2; "Descripción", "Código")
+        key(Key2; "Descripcion", "Codigo")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Código", "Descripción")
+        fieldgroup(DropDown; "Codigo", "Descripcion")
         {
         }
     }
@@ -130,9 +130,9 @@ table 34002110 "Puestos laborales"
         /*
         Emp.RESET;
         Emp.SETRANGE(Departamento,"Cod. departamento");
-        Emp.SETRANGE("Job Type Code",Código);
+        Emp.SETRANGE("Job Type Code",Codigo);
         IF Emp.FINDFIRST THEN
-           ERROR(STRSUBSTNO(Err001,TABLECAPTION,Código));
+           ERROR(STRSUBSTNO(Err001,TABLECAPTION,Codigo));
         */
 
     end;
@@ -148,9 +148,9 @@ table 34002110 "Puestos laborales"
             PerfSal.FINDSET;
             REPEAT
                 PerfilSalarioxCargo.INIT;
-                PerfilSalarioxCargo."Puesto de Trabajo" := Código;
+                PerfilSalarioxCargo."Puesto de Trabajo" := Codigo;
                 PerfilSalarioxCargo."Concepto salarial" := PerfSal."Concepto salarial";
-                PerfilSalarioxCargo.Descripción := PerfSal.Descripción;
+                PerfilSalarioxCargo.Descripcion := PerfSal.Descripcion;
                 PerfilSalarioxCargo."Tipo concepto" := PerfSal."Tipo concepto";
                 PerfilSalarioxCargo."1ra Quincena" := PerfSal."1ra Quincena";
                 PerfilSalarioxCargo."2da Quincena" := PerfSal."2da Quincena";
@@ -169,7 +169,7 @@ table 34002110 "Puestos laborales"
     local procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
         DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::"Puestos laborales", Código, FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::"Puestos laborales", Codigo, FieldNumber, ShortcutDimCode);
         MODIFY;
     end;
 }

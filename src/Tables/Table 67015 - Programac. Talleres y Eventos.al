@@ -88,7 +88,7 @@ table 67015 "Programac. Talleres y Eventos"
 
             trigger OnValidate()
             var
-                Err001: Label 'La fecha de realizaci n no puede ser menor que la fecha de programaci n.';
+                Err001: Label 'La fecha de realizaci n no puede ser menor que la fecha de programacion.';
             begin
                 IF "Fecha programacion" <> 0D THEN
                     IF "Fecha de realizacion" < "Fecha programacion" THEN
@@ -239,7 +239,7 @@ table 67015 "Programac. Talleres y Eventos"
 
         IF "No. Linea" > 1 THEN BEGIN
             //Si la anterior programacion ya tiene asistentes inscritos, los incluimos en la programacion actual
-            //Solo ocurrir  cuando se a ade una programaci n y ya se inscribieron a los asistentes.
+            //Solo ocurrir  cuando se a ade una programacion y ya se inscribieron a los asistentes.
             rAsist.SETRANGE(rAsist."Cod. Taller - Evento", rRec."Cod. Taller - Evento");
             rAsist.SETRANGE(rAsist."Cod. Expositor", rRec.Expositor);
             rAsist.SETRANGE(rAsist.Secuencia, rRec.Secuencia);

@@ -59,7 +59,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Incentive concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(12; "Impuestos manuales"; Boolean)
         {
@@ -70,113 +70,113 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Employee AR concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(14; "Concepto ISR Cobrado en exceso"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(15; "Concepto Sal. Base"; Code[20])
         {
             Caption = 'Concepto Sal. fijo';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(16; "Concepto ISR"; Code[20])
         {
             CaptionClass = '4,3,1';
             Caption = 'Incometax concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(17; "Concepto Retroactivo"; Code[20])
         {
             Caption = 'Concepto Retroactivo';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(18; "Concepto Inasistencia"; Code[20])
         {
             Caption = 'Abscense concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(19; "Concepto AFP"; Code[20])
         {
             CaptionClass = '4,4,1';
             Caption = 'Pension fund concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(20; "Concepto SFS"; Code[20])
         {
             CaptionClass = '4,5,1';
             Caption = 'Family health insurance concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(21; "Concepto Regalia"; Code[20])
         {
             Caption = 'Christmas salary';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(22; "Concepto Bonificacion"; Code[20])
         {
             Caption = 'Bonus concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(23; "Concepto Vacaciones"; Code[20])
         {
             Caption = 'Vacation concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(24; "Concepto Horas Ext. 100%"; Code[20])
         {
             Caption = '100% overtime concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(25; "Concepto Horas Ext. 35%"; Code[20])
         {
             Caption = '35% overtime concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(26; "Concepto Sal. hora"; Code[20])
         {
             Caption = 'Concepto Sal. por hora';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(27; "Concepto SRL"; Code[20])
         {
             CaptionClass = '4,7,1';
             Caption = 'Occupational risk insurance concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(28; "Concepto INFOTEP"; Code[20])
         {
             CaptionClass = '4,6,1';
             Caption = ' INFOTEP concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(29; "Concepto Dias feriados"; Code[20])
         {
             Caption = 'Holiday concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(30; "Concepto Horas nocturnas"; Code[20])
         {
             Caption = 'Night hours concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(31; "Job Journal Template Name"; Code[10])
         {
@@ -196,13 +196,13 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Diet income';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(34; "Concepto Transporte"; Code[20])
         {
             Caption = 'Transportation code';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(35; "Salario Minimo"; Decimal)
         {
@@ -225,13 +225,13 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Notice concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(39; "Concepto Cesantia"; Code[20])
         {
             Caption = 'Unemployment concept';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(40; "Fecha secuencia"; Date)
         {
@@ -260,7 +260,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Concepto devolución ISR';
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(44; "Tasa Cambio Calculo Divisa"; Decimal)
         {
@@ -391,7 +391,7 @@ table 34002103 "Configuracion nominas"
         field(65; "Concepto Cuota cooperativa"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(66; "Mod. cooperativa activo"; Boolean)
         {
@@ -459,7 +459,7 @@ table 34002103 "Configuracion nominas"
             Caption = 'Antiquity labor';
             DataClassification = ToBeClassified;
             Description = 'Honduras';
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(80; "Importe gastos medicos"; Decimal)
         {
@@ -517,7 +517,7 @@ table 34002103 "Configuracion nominas"
         field(90; "Concepto Dependiente Adicional"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(91; "Caption Depto"; Text[30])
         {
@@ -597,7 +597,7 @@ table 34002103 "Configuracion nominas"
             Caption = 'Concepto Reembolso gtos.';
             DataClassification = ToBeClassified;
             Description = 'NOVAL';
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
     }
 

@@ -33,17 +33,19 @@ page 75011 "Tipo Filtros Tipologia MdM"
     end;
 
     var
-        cFunMdM: Codeunit 75000;
+    //TODO: Ver cFunMdM: Codeunit 75000;
 
     procedure RellenaTabla(pwTipo: Option Dimension,"Dato MdM",Otros)
     var
         lwN: Integer;
-        lrTmpDts Record: 75001" temporary;
+        lrTmpDts: Record 75001 temporary;
     begin
         // RellenaTabla
 
         DELETEALL;
 
+        //TODO: Ver 
+        /*
         CASE pwTipo OF
             pwTipo::Dimension:
                 BEGIN
@@ -64,7 +66,7 @@ page 75011 "Tipo Filtros Tipologia MdM"
                         AddReg(pwTipo, lwN, cFunMdM.GetOtrosName(lwN));
                     END;
                 END;
-        END;
+        END;*/
     end;
 
     procedure AddReg(pwTipo: Integer; pwId: Integer; pwCode: Text)

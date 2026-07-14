@@ -1404,19 +1404,19 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                     Caption = 'Soporte Papel';
                     TableRelation = "Datos MDM".Codigo WHERE(Tipo = CONST(Soporte),
                                                               Bloqueado = CONST(false));
-                    ToolTip = 'Código Soporte que corresponde a "Papel" para discriminar la información de ciertos campos';
+                    ToolTip = 'Codigo Soporte que corresponde a "Papel" para discriminar la información de ciertos campos';
                 }
                 field(wTipSLIC; wTipSLIC)
                 {
                     Caption = 'Tipología SLIC';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
-                    ToolTip = 'Código de Tipologia que corresponde a SLIC para discriminar la información de determinados campos';
+                    ToolTip = 'Codigo de Tipologia que corresponde a SLIC para discriminar la información de determinados campos';
                 }
                 field(wTipSDIG; wTipSDIG)
                 {
                     Caption = 'Tipología SDIG';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
-                    ToolTip = 'Código de Tipologia que corresponde a SDIG para discriminar la información de determinados campos';
+                    ToolTip = 'Codigo de Tipologia que corresponde a SDIG para discriminar la información de determinados campos';
                 }
             }
         }

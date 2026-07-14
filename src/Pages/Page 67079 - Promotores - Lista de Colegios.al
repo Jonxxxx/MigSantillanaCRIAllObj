@@ -61,12 +61,12 @@ page 67079 "Promotores - Lista de Colegios"
 
                     trigger OnAction()
                     var
-                        FuncAPS: Codeunit 67000;
+                    //TODO: Ver FuncAPS: Codeunit 67000;
                     begin
-                        IF Promotor <> '' THEN
-                            FuncAPS.LlenaPromotorColegios(Promotor)
-                        ELSE
-                            FuncAPS.LlenaPromotorColegios(GETRANGEMIN("Cod. Promotor"))
+                        //TODO: Ver IF Promotor <> '' THEN
+                        //TODO: Ver     FuncAPS.LlenaPromotorColegios(Promotor)
+                        //TODO: Ver ELSE
+                        //TODO: Ver     FuncAPS.LlenaPromotorColegios(GETRANGEMIN("Cod. Promotor"))
                     end;
                 }
             }

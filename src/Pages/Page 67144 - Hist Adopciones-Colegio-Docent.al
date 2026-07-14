@@ -6,7 +6,7 @@ page 67144 "Hist Adopciones-Colegio-Docent"
     Editable = false;
     PageType = List;
     SourceTable = 67097;
-    SourceTableView = SORTING(Campaña, Cod. Docente, Cod. Colegio, Cod. Local, Cod. Producto, Cod. Grado);
+    SourceTableView = SORTING(Campana, "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado");
     UsageCategory = History;
 
     layout
@@ -15,14 +15,14 @@ page 67144 "Hist Adopciones-Colegio-Docent"
         {
             repeater(General)
             {
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
                 field("Cod. Producto"; "Cod. Producto")
                 {
                     Editable = false;
                 }
-                field("Descripción producto"; "Descripción producto")
+                field("Descripcion Producto"; "Descripcion Producto")
                 {
                     Editable = false;
                 }

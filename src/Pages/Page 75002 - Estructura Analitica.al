@@ -35,27 +35,27 @@ page 75002 "Estructura Analitica"
 
     trigger OnDeleteRecord(): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
     end;
 
     trigger OnModifyRecord(): Boolean
     begin
-        wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
+        //TODO: Ver wEditable := cFunMdm.GetEditableErr(TABLECAPTION);
     end;
 
     trigger OnOpenPage()
     begin
-        wEditable := cFunMdm.GetEditable;
+        //TODO: Ver wEditable := cFunMdm.GetEditable;
         CurrPage.EDITABLE := wEditable;
     end;
 
     var
-        cFunMdm: Codeunit 75000;
+        //TODO: Ver cFunMdm: Codeunit 75000;
         wEditable: Boolean;
 }
 

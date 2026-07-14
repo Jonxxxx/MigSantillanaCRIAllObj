@@ -12,7 +12,7 @@ page 67151 "Plan Lector Lista"
         {
             repeater(Group)
             {
-                field(Campaña; Campaña)
+                field(Campaña; Campana)
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")
@@ -39,7 +39,7 @@ page 67151 "Plan Lector Lista"
                 field("Cod. Delegacion"; "Cod. Delegacion")
                 {
                 }
-                field("Descripción Delegacion"; "Descripción Delegacion")
+                field("Descripcion Delegacion"; "Descripcion Delegacion")
                 {
                 }
             }

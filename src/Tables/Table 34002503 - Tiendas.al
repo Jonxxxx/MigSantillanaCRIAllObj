@@ -14,7 +14,7 @@ table 34002503 Tiendas
     // ------------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------------
-    // No.                 Firma         Fecha           Descripción
+    // No.                 Firma         Fecha           Descripcion
     // ------------------------------------------------------------------------------
     // SANTINAV-1561       FES           05-08-2020      Funcionalidad Cupones Electronicos.
     //                                                   Colocar "Lista Tienda" en propiedad LookupPageID

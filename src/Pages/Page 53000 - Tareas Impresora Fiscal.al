@@ -36,9 +36,9 @@ page 53000 "Tareas Impresora Fiscal"
 
                 trigger OnAction()
                 begin
-                    cuImpFisc.AbrePuerto;
-                    cuImpFisc.CierreZ('P');
-                    cuImpFisc.CerrarPrinter;
+                    //TODO: Ver cuImpFisc.AbrePuerto;
+                    //TODO: Ver cuImpFisc.CierreZ('P');
+                    //TODO: Ver cuImpFisc.CerrarPrinter;
                 end;
             }
             action("&Cierre X")
@@ -49,14 +49,12 @@ page 53000 "Tareas Impresora Fiscal"
 
                 trigger OnAction()
                 begin
-                    cuImpFisc.AbrePuerto;
-                    cuImpFisc.CierreX('P');
-                    cuImpFisc.CerrarPrinter;
+                    //TODO: Ver cuImpFisc.AbrePuerto;
+                    //TODO: Ver cuImpFisc.CierreX('P');
+                    //TODO: Ver cuImpFisc.CerrarPrinter;
                 end;
             }
-            separator()
-            {
-            }
+
             action("<Action1000000005>")
             {
                 Caption = '&Daily Close by date';
@@ -66,12 +64,14 @@ page 53000 "Tareas Impresora Fiscal"
 
                 trigger OnAction()
                 begin
+                    //TODO: Ver 
+                    /*
                     cuImpFisc.AbrePuerto;
                     IF Detallado THEN
                         cuImpFisc.RepAuditPorFecha(FechaDesde, FechaHasta, 'O')
                     ELSE
                         cuImpFisc.RepAuditPorFecha(FechaDesde, FechaHasta, 'G');
-                    cuImpFisc.CerrarPrinter;
+                    cuImpFisc.CerrarPrinter;*/
                 end;
             }
         }
@@ -86,7 +86,7 @@ page 53000 "Tareas Impresora Fiscal"
     var
         UserSetUp: Record 91;
         ConfSant: Record 56001;
-        cuImpFisc: Codeunit 53000;
+        //TODO: Ver cuImpFisc: Codeunit 53000;
         FechaDesde: Date;
         FechaHasta: Date;
         Detallado: Boolean;

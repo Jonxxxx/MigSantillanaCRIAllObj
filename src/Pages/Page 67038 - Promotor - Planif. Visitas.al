@@ -41,11 +41,14 @@ page 67038 "Promotor - Planif. Visitas"
                 field("Fecha Proxima Visita"; "Fecha Proxima Visita")
                 {
                 }
+                //TODO: Ver 
+                /*
                 field(FuncAPS.ColCalcInvMuestras("Cod. Colegio");
                     FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
                 {
                     Caption = 'Sample Inventory';
                 }
+                */
                 field(Comentario; Comentario)
                 {
                 }
@@ -84,17 +87,17 @@ page 67038 "Promotor - Planif. Visitas"
     }
 
     var
-        FuncAPS: Codeunit 67000;
+    //TODO: Ver FuncAPS: Codeunit 67000;
 
     procedure CargaEntregaMuestras()
     var
         Promotor: Record 13;
         Alm: Record 14;
         PromEM: Record 5740;
-        PromEM2Record: Record 5740;
+        PromEM2: Record 5740;
         fPromEM: Page 67074;
         Bins: Record 7354;
-        Bins2Record: Record 7354;
+        Bins2: Record 7354;
         Colegio: Record 5050;
     begin
 
@@ -152,7 +155,7 @@ page 67038 "Promotor - Planif. Visitas"
             //    Colegio.GET("Cod. Colegio");
             PromEM."Transfer-to Name" := Colegio.Name;
             PromEM."Transfer-to Address" := Colegio.Address;
-            PromEM2."Transfer-to Address 2" := Colegio."Address 2;
+            PromEM2."Transfer-to Address 2" := Colegio."Address 2";
             PromEM2."Transfer-to Post Code" := Colegio."Post Code";
             PromEM2."Transfer-to City" := Colegio.City;
             PromEM."Transfer-to County" := Colegio.County;
@@ -181,10 +184,10 @@ page 67038 "Promotor - Planif. Visitas"
         Promotor: Record 13;
         Alm: Record 14;
         PromEM: Record 5740;
-        PromEM2Record: Record 5740;
+        PromEM2: Record 5740;
         fPromEM: Page 67074;
         Bins: Record 7354;
-        Bins2Record: Record 7354;
+        Bins2: Record 7354;
         Colegio: Record 5050;
     begin
 
@@ -225,7 +228,7 @@ page 67038 "Promotor - Planif. Visitas"
             Colegio.GET("Cod. Colegio");
             PromEM."Transfer-to Name" := Colegio.Name;
             PromEM."Transfer-to Address" := Colegio.Address;
-            PromEM2."Transfer-to Address 2" := Colegio."Address 2;
+            PromEM2."Transfer-to Address 2" := Colegio."Address 2";
             PromEM2."Transfer-to Post Code" := Colegio."Post Code";
             PromEM2."Transfer-to City" := Colegio.City;
             PromEM."Transfer-to County" := Colegio.County;

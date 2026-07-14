@@ -28,7 +28,7 @@ page 67000 "Commercial Setup"
                 field("Cod. Alm. Muestras"; "Cod. Alm. Muestras")
                 {
                 }
-                field("Campaña Ranking Solicitud"; "Campaña Ranking Solicitud")
+                field("Campana Ranking Solicitud"; "Campana Ranking Solicitud")
                 {
                 }
                 field("Activar control de C.P."; "Activar control de C.P.")

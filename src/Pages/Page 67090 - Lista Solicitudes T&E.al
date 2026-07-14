@@ -97,7 +97,7 @@ page 67090 "Lista Solicitudes T&E"
                 field("Cod. evento programado"; "Cod. evento programado")
                 {
                 }
-                field("Descripción evento programado"; "Descripción evento programado")
+                field("Descripcion evento programado"; "Descripcion evento programado")
                 {
                 }
                 field("Tipo de Expositor"; "Tipo de Expositor")

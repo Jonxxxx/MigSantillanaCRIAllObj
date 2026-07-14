@@ -44,7 +44,7 @@ page 56005 "Lin. Packing Registrada"
                 RunObject = Page 56006;
                 RunPageLink = "No. Packing" = FIELD("No."),
                               "No. Caja" = FIELD("No. Caja");
-                RunPageView = SORTING(No. Packing, No. Caja, No. Picking, No. Producto, No. Linea)
+                RunPageView = SORTING("No. Packing", "No. Caja", "No. Picking", "No. Producto", "No. Linea")
                               ORDER(Ascending);
             }
             action("Imprimir Etiqueta")

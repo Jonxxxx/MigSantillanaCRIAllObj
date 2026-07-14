@@ -12,10 +12,10 @@ page 67174 "Visitas A/C - Grupos Negocio"
         {
             repeater(General)
             {
-                field(Código; Código)
+                field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
                 field(Porcentaje; Porcentaje)
@@ -98,8 +98,8 @@ page 67174 "Visitas A/C - Grupos Negocio"
 
                 DistrCentros.INIT;
                 DistrCentros."No. Visita Consultor/Asesor" := wVisita;
-                DistrCentros.Código := da.Codigo;
-                DistrCentros.Descripción := da.Descripcion;
+                DistrCentros.Codigo := da.Codigo;
+                DistrCentros.Descripcion := da.Descripcion;
                 DistrCentros.Porcentaje := Porciento;
                 DistrCentros.INSERT;
             UNTIL da.NEXT = 0;

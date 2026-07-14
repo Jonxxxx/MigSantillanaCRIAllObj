@@ -235,6 +235,6 @@ table 75000 "Configuracion MDM"
     end;
 
     var
-        cFuncMdM: Codeunit 75000;
+    //TODO: Ver cFuncMdM: Codeunit 75000;
 }
 

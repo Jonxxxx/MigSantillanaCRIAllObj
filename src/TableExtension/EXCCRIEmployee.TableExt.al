@@ -180,7 +180,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002108; "Job Type Code"; Code[15])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Puestos laborales".Código where("Cod. departamento" = field(Departamento));
+            TableRelation = "Puestos laborales".Codigo where("Cod. departamento" = field(Departamento));
 
             trigger OnValidate()
             begin
@@ -324,7 +324,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
             CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Período = field("Date Filter"), "Salario Base" = const(true)));
         }
 
-        field(34002131; "Código Cliente"; Code[20])
+        field(34002131; "Codigo Cliente"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = Customer."No.";
@@ -728,7 +728,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         TestField(Departamento);
 
         if EXCCRIJobPosition.Get(Departamento, "Job Type Code") then begin
-            "Job Title" := EXCCRIJobPosition.Descripción;
+            "Job Title" := EXCCRIJobPosition.Descripcion;
             "Employee Level" := EXCCRIJobPosition."Cod. nivel";
         end;
 

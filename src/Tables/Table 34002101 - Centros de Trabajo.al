@@ -14,7 +14,7 @@ table 34002101 "Centros de Trabajo"
                     IF Dirección = '' THEN
                         Dirección := EmpCotizacion.Dirección;
                     Población := EmpCotizacion.Provincia;
-                    VALIDATE("C.P.", EmpCotizacion."Código Postal");
+                    VALIDATE("C.P.", EmpCotizacion."Codigo Postal");
                 END;
             end;
         }

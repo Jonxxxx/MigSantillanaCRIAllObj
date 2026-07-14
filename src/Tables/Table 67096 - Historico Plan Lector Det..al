@@ -61,7 +61,7 @@ table 67096 "Historico Plan Lector Det."
         {
             Editable = false;
         }
-        field(20; "Adopci n real"; Integer)
+        field(20; "Adopcion real"; Integer)
         {
             Editable = false;
         }

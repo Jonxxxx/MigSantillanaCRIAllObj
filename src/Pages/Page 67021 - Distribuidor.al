@@ -16,59 +16,59 @@ page 67021 Distribuidor
                 field(Name; Name)
                 {
                 }
-                field("Name 2;"Name 2")
+                field("Name 2"; "Name 2")
                 {
                 }
-                field(Address;Address)
+                field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field("Territory Code";"Territory Code")
+                field("Territory Code"; "Territory Code")
                 {
                 }
-                field("Language Code";"Language Code")
+                field("Language Code"; "Language Code")
                 {
                 }
-                field("Salesperson Code";"Salesperson Code")
+                field("Salesperson Code"; "Salesperson Code")
                 {
                 }
-                field("Country/Region Code";"Country/Region Code")
+                field("Country/Region Code"; "Country/Region Code")
                 {
                 }
-                field("Search Name";"Search Name")
+                field("Search Name"; "Search Name")
                 {
                 }
-                field("Last Date Modified";"Last Date Modified")
+                field("Last Date Modified"; "Last Date Modified")
                 {
                 }
             }
             group(Santillana)
             {
                 Caption = 'Santillana';
-                field("Fax No.";"Fax No.")
+                field("Fax No."; "Fax No.")
                 {
                 }
-                field("E-Mail";"E-Mail")
+                field("E-Mail"; "E-Mail")
                 {
                 }
-                field("E-Mail 2;"E-Mail 2")
+                field("E-Mail 2"; "E-Mail 2")
                 {
                 }
-                field("Home Page";"Home Page")
+                field("Home Page"; "Home Page")
                 {
                 }
-                field("Mobile Phone No.";"Mobile Phone No.")
+                field("Mobile Phone No."; "Mobile Phone No.")
                 {
                 }
             }
@@ -82,9 +82,7 @@ page 67021 Distribuidor
             group("&Exhibitor")
             {
                 Caption = '&Exhibitor';
-                separator()
-                {
-                }
+
                 action("E&vents")
                 {
                     Caption = 'E&vents';
@@ -92,7 +90,7 @@ page 67021 Distribuidor
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67100;
-                                    RunPageLink = "Cod. Expositor"=FIELD("No.");
+                    //TODO: Ver RunPageLink = "Cod. Expositor" = FIELD("No.");
                 }
             }
         }

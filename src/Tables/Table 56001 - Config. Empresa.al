@@ -133,7 +133,7 @@ table 56001 "Config. Empresa"
         {
             Caption = 'Store 6 Coupon Address';
         }
-        field(29; "Cantidad Lineas en Cup n"; Integer)
+        field(29; "Cantidad Lineas en Cupon"; Integer)
         {
             Caption = 'Copuon Lines Qty.';
         }
@@ -562,11 +562,11 @@ table 56001 "Config. Empresa"
             Description = '#144';
             TableRelation = "G/L Account";
         }
-        field(150; "C d Cliente Call Center"; Code[20])
+        field(150; "Cod Cliente Call Center"; Code[20])
         {
             TableRelation = Customer."No.";
         }
-        field(151; "D as Borrado Rvas. Call Center"; Integer)
+        field(151; "Dias Borrado Rvas. Call Center"; Integer)
         {
         }
         field(50010; "Cliente Contado E-Commerce"; Code[20])

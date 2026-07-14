@@ -22,9 +22,9 @@ page 67074 "Cab. Muestras"
     PageType = Card;
     RefreshOnActivate = true;
     SourceTable = 5740;
-    SourceTableView = SORTING(No.)
+    SourceTableView = SORTING("No.")
                       ORDER(Ascending)
-                      WHERE("Devolucion Consignacion" = FILTER(No),
+                      WHERE("Devolucion Consignacion" = FILTER(false),
                             "Pedido Consignacion" = CONST(true));
 
     layout
@@ -77,20 +77,19 @@ page 67074 "Cab. Muestras"
                 {
                     Editable = false;
                 }
-                field(Cliente.Name;
-                    Cliente.Name)
+                field(ClienteName; Cliente.Name)
                 {
                     Caption = 'Nombre';
                     Editable = false;
                 }
-                field(Cliente.Address;
-                    Cliente.Address)
+                field(ClienteAddress;
+                Cliente.Address)
                 {
                     Caption = 'Direccion';
                     Editable = false;
                 }
-                field(Cliente.City;
-                    Cliente.City)
+                field(ClienteCity;
+                Cliente.City)
                 {
                     Caption = 'Ciudad';
                     Editable = false;
@@ -147,7 +146,7 @@ page 67074 "Cab. Muestras"
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Saldo Cliente" +"Importe Consignacion Orginal"; "Saldo Cliente" +"Importe Consignacion Orginal")
+                field("Saldo Cliente 2"; "Importe Consignacion Orginal" + "Saldo Cliente" + "Importe Consignacion Orginal")
                 {
                     Caption = 'Saldo estimado';
                     Editable = false;
@@ -174,13 +173,13 @@ page 67074 "Cab. Muestras"
                 field("Transfer-from Name"; "Transfer-from Name")
                 {
                 }
-                field("Transfer-from Name 2;"Transfer - from Name 2")
+                field("Transfer-from Name 2"; "Transfer-from Name 2")
                 {
                 }
                 field("Transfer-from Address"; "Transfer-from Address")
                 {
                 }
-                field("Transfer-from Address 2;"Transfer - from Address 2")
+                field("Transfer-from Address 2"; "Transfer-from Address 2")
                 {
                 }
                 field("Transfer-from City"; "Transfer-from City")
@@ -250,13 +249,13 @@ page 67074 "Cab. Muestras"
                 field("Transfer-to Name"; "Transfer-to Name")
                 {
                 }
-                field("Transfer-to Name 2;"Transfer -to Name 2")
+                field("Transfer-to Name 2"; "Transfer-to Name 2")
                 {
                 }
                 field("Transfer-to Address"; "Transfer-to Address")
                 {
                 }
-                field("Transfer-to Address 2;"Transfer -to Address 2")
+                field("Transfer-to Address 2"; "Transfer-to Address 2")
                 {
                 }
                 field("Transfer-to City"; "Transfer-to City")
@@ -302,10 +301,10 @@ page 67074 "Cab. Muestras"
                 field("Transport Method"; "Transport Method")
                 {
                 }
-                field(Area;Area)
-        {
-        }
-                field("Entry/Exit Point";"Entry/Exit Point")
+                field("Area"; "Area")
+                {
+                }
+                field("Entry/Exit Point"; "Entry/Exit Point")
                 {
                 }
             }
@@ -326,7 +325,7 @@ page 67074 "Cab. Muestras"
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 5755;
-                                    RunPageLink = No.=FIELD("No.");
+                    RunPageLink = "No." = FIELD("No.");
                     ShortCutKey = 'F7';
                 }
                 action("Co&mments")
@@ -334,21 +333,21 @@ page 67074 "Cab. Muestras"
                     Caption = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5750;
-                                    RunPageLink = "Document Type"=CONST("Transfer Order"),
-                                  "No."=FIELD("No.");
+                    RunPageLink = "Document Type" = CONST("Transfer Order"),
+                                  "No." = FIELD("No.");
                 }
                 action("S&hipments")
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 5752;
-                                    RunPageLink = "Order No."=FIELD("No.");
+                    //TODO: Ver RunPageLink = "Order No." = FIELD("No.");
                 }
                 action("Re&ceipts")
                 {
                     Caption = 'Re&ceipts';
                     Image = PostedReceipts;
                     RunObject = Page 5753;
-                                    RunPageLink = "Order No."=FIELD("No.");
+                    //TODO: Ver RunPageLink = "Order No." = FIELD("No.");
                 }
                 action(Dimensions)
                 {
@@ -366,27 +365,27 @@ page 67074 "Cab. Muestras"
                 {
                     Caption = 'Whse. Shi&pments';
                     RunObject = Page 7341;
-                                    RunPageLink = "Source Type"=CONST(5741),
-                                  "Source Subtype"=CONST(0),
-                                  "Source No."=FIELD("No.");
-                    RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
+                    RunPageLink = "Source Type" = CONST(5741),
+                                  "Source Subtype" = CONST(0),
+                                  "Source No." = FIELD("No.");
+                    RunPageView = SORTING("Source Type", "Source Subtype", "Source No.", "Source Line No.");
                 }
                 action("&Whse. Receipts")
                 {
                     Caption = '&Whse. Receipts';
                     RunObject = Page 7342;
-                                    RunPageLink = "Source Type"=CONST(5741),
-                                  "Source Subtype"=CONST(1),
-                                  "Source No."=FIELD("No.");
-                    RunPageView = SORTING(Source Type,Source Subtype,Source No.,Source Line No.);
+                    RunPageLink = "Source Type" = CONST(5741),
+                                  "Source Subtype" = CONST(1),
+                                  "Source No." = FIELD("No.");
+                    RunPageView = SORTING("Source Type", "Source Subtype", "Source No.", "Source Line No.");
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
                     Caption = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
-                                    RunPageLink = "Source Document"=FILTER(Inbound Transfer|Outbound Transfer),
-                                  "Source No."=FIELD("No.");
-                    RunPageView = SORTING(Source Document,Source No.,Location Code);
+                    RunPageLink = "Source Document" = FILTER('Inbound Transfer' | 'Outbound Transfer'),
+                                  "Source No." = FIELD("No.");
+                    RunPageView = SORTING("Source Document", "Source No.", "Location Code");
                 }
             }
             group("&Line")
@@ -401,7 +400,7 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            CurrPage.TransferLines.PAGE.ItemAvailability(0);
+                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(0);
                         end;
                     }
                     action(Variant)
@@ -410,7 +409,7 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            CurrPage.TransferLines.PAGE.ItemAvailability(1);
+                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(1);
                         end;
                     }
                     action(Location)
@@ -419,11 +418,11 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            CurrPage.TransferLines.PAGE.ItemAvailability(2);
+                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(2);
                         end;
                     }
                 }
-                action(Dimensions)
+                action(EXCCRIDimensions)
                 {
                     Caption = 'Dimensions';
                     Image = Dimensions;
@@ -431,7 +430,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     begin
-                        CurrPage.TransferLines.PAGE.ShowDimensions;
+                        //TODO: Ver CurrPage.TransferLines.PAGE.ShowDimensions;
                     end;
                 }
                 group("Item &Tracking Lines")
@@ -443,7 +442,7 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            CurrPage.TransferLines.PAGE.OpenItemTrackingLines(0);
+                            //TODO: Ver CurrPage.TransferLines.PAGE.OpenItemTrackingLines(0);
                         end;
                     }
                     action(Receipt)
@@ -452,12 +451,12 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            CurrPage.TransferLines.PAGE.OpenItemTrackingLines(1);
+                            //TODO: Ver CurrPage.TransferLines.PAGE.OpenItemTrackingLines(1);
                         end;
                     }
                 }
             }
-            group(Imprimir)
+            group(EXCCRIImprimir)
             {
                 Caption = 'Imprimir';
                 action(Imprimir)
@@ -484,7 +483,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     begin
-                        CurrPage.TransferLines.PAGE.ShowReservation;
+                        //TODO: Ver CurrPage.TransferLines.PAGE.ShowReservation;
                     end;
                 }
                 action("Create &Whse. Receipt")
@@ -529,9 +528,9 @@ page 67074 "Cab. Muestras"
                     trigger OnAction()
                     var
                         BinContent: Record 7302;
-                        GetBinContent: Report "7391;
+                        GetBinContent: Report 7391;
                     begin
-                        BinContent.SETRANGE("Location Code","Transfer-from Code");
+                        BinContent.SETRANGE("Location Code", "Transfer-from Code");
                         GetBinContent.SETTABLEVIEW(BinContent);
                         GetBinContent.InitializeTransferHeader(Rec);
                         GetBinContent.RUNMODAL;
@@ -556,9 +555,7 @@ page 67074 "Cab. Muestras"
                         ReleaseTransferDoc.Reopen(Rec);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Select &Samples")
                 {
                     Caption = 'Select &Samples';
@@ -570,21 +567,19 @@ page 67074 "Cab. Muestras"
                     trigger OnAction()
                     var
                         SelProdMuestras: Page 67075;
-                                             Promotor: Record 13;
+                        Promotor: Record 13;
                     begin
                         /*Promotor.RESET;
                         Promotor.SETRANGE("Location code","Transfer-from Code");
                         Promotor.FINDFIRST;
                         */
-                        SelProdMuestras.RecibeParametros("No.",Promotor.Code);
+                        SelProdMuestras.RecibeParametros("No.", Promotor.Code);
                         SelProdMuestras.RUNMODAL;
                         CLEAR(SelProdMuestras);
 
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("Enviar Pedido por E-mail")
                 {
                     Caption = 'Enviar Pedido por E-mail';
@@ -593,14 +588,12 @@ page 67074 "Cab. Muestras"
                     begin
                         //002
 
-                        CFuncSantillana.CreaEmailPedidoConsg(Rec);
+                        //TODO: Ver CFuncSantillana.CreaEmailPedidoConsg(Rec);
                         CurrPage.UPDATE;
                         //002
                     end;
                 }
-                separator()
-                {
-                }
+
             }
             group("P&osting")
             {
@@ -622,21 +615,18 @@ page 67074 "Cab. Muestras"
                     begin
                         ConfAPS.GET();
 
-                        IF ConfAPS."Movilidad Activada" THEN
-                           BEGIN
-                            IF NOT Blocked THEN
-                               BEGIN
+                        IF ConfAPS."Movilidad Activada" THEN BEGIN
+                            IF NOT Blocked THEN BEGIN
                                 Blocked := TRUE;
                                 MODIFY;
                                 MESSAGE(Msg001);
-                               END;
-                               CurrPage.CLOSE;
-                           END
-                        ELSE
-                           BEGIN
+                            END;
+                            CurrPage.CLOSE;
+                        END
+                        ELSE BEGIN
                             TransferPostShipment.RUN(Rec);
                             TransferPostReceipt.RUN(Rec);
-                           END;
+                        END;
                     end;
                 }
             }
@@ -677,13 +667,13 @@ page 67074 "Cab. Muestras"
     begin
         //003
         IF NOT Cliente.GET("Transfer-to Code") THEN
-           CLEAR(Cliente);
+            CLEAR(Cliente);
         LimitedecreditoclienteSaldoCli;
     end;
 
     trigger OnDeleteRecord(): Boolean
     begin
-        TESTFIELD(Status,Status::Open);
+        TESTFIELD(Status, Status::Open);
     end;
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
@@ -694,13 +684,13 @@ page 67074 "Cab. Muestras"
 
     var
         ConfAPS: Record 67000;
-        CFuncSantillana: Codeunit 56000;
+        //TODO: Ver CFuncSantillana: Codeunit 56000;
         rTransHeader: Record 5740;
         NombreCliente: Text[200];
         DireccionCliente: Text[200];
         "**003**": Integer;
         Cliente: Record 18;
-        cuManejaParametros: Codeunit 34002500;
+        //TODO: Ver cuManejaParametros: Codeunit 34002500;
         I: Integer;
         TransferHeader: Record 5740;
         TransferLine: Record 5741;
@@ -718,57 +708,57 @@ page 67074 "Cab. Muestras"
         Bins: Record 7354;
         Msg001: Label 'Samples had been posted successfully';
 
-    procedure RecibeParametros(AlmOrigen: Code[20];AlmDestino: Code[20];Comercial: Code[20];Colegio: Code[20])
+    procedure RecibeParametros(AlmOrigen: Code[20]; AlmDestino: Code[20]; Comercial: Code[20]; Colegio: Code[20])
     begin
         CodComercial := Comercial;
-        CodColegio   := Colegio;
-        CodAlmFrom   := AlmOrigen;
-        CodAlmTo     := AlmDestino;
+        CodColegio := Colegio;
+        CodAlmFrom := AlmOrigen;
+        CodAlmTo := AlmDestino;
     end;
 
     local procedure PostingDateOnAfterValidate()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShipmentDateOnAfterValidate()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingAgentServiceCodeOnAfte()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingAgentCodeOnAfterValida()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingTimeOnAfterValidate()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver  CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure OutboundWhseHandlingTimeOnAfte()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ReceiptDateOnAfterValidate()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure InboundWhseHandlingTimeOnAfter()
     begin
-        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure LimitedecreditoclienteSaldoCli()
     begin
-        IF ("Limite de credito cliente" - ("Saldo Cliente" +"Importe Consignacion Orginal")) < 0 THEN;
+        IF ("Limite de credito cliente" - ("Saldo Cliente" + "Importe Consignacion Orginal")) < 0 THEN;
     end;
 }
 

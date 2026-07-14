@@ -26,13 +26,13 @@ page 56021 "Sales Header Movil. List"
                 field("Bill-to Name"; "Bill-to Name")
                 {
                 }
-                field("Bill-to Name 2;"Bill -to Name 2")
+                field("Bill-to Name 2"; "Bill-to Name 2")
                 {
                 }
                 field("Bill-to Address"; "Bill-to Address")
                 {
                 }
-                field("Bill-to Address 2;"Bill -to Address 2")
+                field("Bill-to Address 2"; "Bill-to Address 2")
                 {
                 }
                 field("Bill-to City"; "Bill-to City")
@@ -50,13 +50,13 @@ page 56021 "Sales Header Movil. List"
                 field("Ship-to Name"; "Ship-to Name")
                 {
                 }
-                field("Ship-to Name 2;"Ship -to Name 2")
+                field("Ship-to Name 2"; "Ship-to Name 2")
                 {
                 }
                 field("Ship-to Address"; "Ship-to Address")
                 {
                 }
-                field("Ship-to Address 2;"Ship -to Address 2")
+                field("Ship-to Address 2"; "Ship-to Address 2")
                 {
                 }
                 field("Ship-to City"; "Ship-to City")
@@ -212,13 +212,13 @@ page 56021 "Sales Header Movil. List"
                 field("Sell-to Customer Name"; "Sell-to Customer Name")
                 {
                 }
-                field("Sell-to Customer Name 2;"Sell -to Customer Name 2")
+                field("Sell-to Customer Name 2"; "Sell-to Customer Name 2")
                 {
                 }
                 field("Sell-to Address"; "Sell-to Address")
                 {
                 }
-                field("Sell-to Address 2;"Sell -to Address 2")
+                field("Sell-to Address 2"; "Sell-to Address 2")
                 {
                 }
                 field("Sell-to City"; "Sell-to City")
@@ -269,370 +269,370 @@ page 56021 "Sales Header Movil. List"
                 field("External Document No."; "External Document No.")
                 {
                 }
-                field(Area;Area)
-        {
-        }
-                field("Transaction Specification";"Transaction Specification")
+                field("Area"; "Area")
                 {
                 }
-                field("Payment Method Code";"Payment Method Code")
+                field("Transaction Specification"; "Transaction Specification")
                 {
                 }
-                field("Shipping Agent Code";"Shipping Agent Code")
+                field("Payment Method Code"; "Payment Method Code")
                 {
                 }
-                field("Package Tracking No.";"Package Tracking No.")
+                field("Shipping Agent Code"; "Shipping Agent Code")
                 {
                 }
-                field("No. Series";"No. Series")
+                field("Package Tracking No."; "Package Tracking No.")
                 {
                 }
-                field("Posting No. Series";"Posting No. Series")
+                field("No. Series"; "No. Series")
                 {
                 }
-                field("Shipping No. Series";"Shipping No. Series")
+                field("Posting No. Series"; "Posting No. Series")
                 {
                 }
-                field("Tax Area Code";"Tax Area Code")
+                field("Shipping No. Series"; "Shipping No. Series")
                 {
                 }
-                field("Tax Liable";"Tax Liable")
+                field("Tax Area Code"; "Tax Area Code")
                 {
                 }
-                field("VAT Bus. Posting Group";"VAT Bus. Posting Group")
+                field("Tax Liable"; "Tax Liable")
                 {
                 }
-                field(Reserve;Reserve)
+                field("VAT Bus. Posting Group"; "VAT Bus. Posting Group")
                 {
                 }
-                field("Applies-to ID";"Applies-to ID")
+                field(Reserve; Reserve)
                 {
                 }
-                field("VAT Base Discount %";"VAT Base Discount %")
+                field("Applies-to ID"; "Applies-to ID")
                 {
                 }
-                field(Status;Status)
+                field("VAT Base Discount %"; "VAT Base Discount %")
                 {
                 }
-                field("Invoice Discount Calculation";"Invoice Discount Calculation")
+                field(Status; Status)
                 {
                 }
-                field("Invoice Discount Value";"Invoice Discount Value")
+                field("Invoice Discount Calculation"; "Invoice Discount Calculation")
                 {
                 }
-                field("Send IC Document";"Send IC Document")
+                field("Invoice Discount Value"; "Invoice Discount Value")
                 {
                 }
-                field("IC Status";"IC Status")
+                field("Send IC Document"; "Send IC Document")
                 {
                 }
-                field("Sell-to IC Partner Code";"Sell-to IC Partner Code")
+                field("IC Status"; "IC Status")
                 {
                 }
-                field("Bill-to IC Partner Code";"Bill-to IC Partner Code")
+                field("Sell-to IC Partner Code"; "Sell-to IC Partner Code")
                 {
                 }
-                field("IC Direction";"IC Direction")
+                field("Bill-to IC Partner Code"; "Bill-to IC Partner Code")
                 {
                 }
-                field("Prepayment %";"Prepayment %")
+                field("IC Direction"; "IC Direction")
                 {
                 }
-                field("Prepayment No. Series";"Prepayment No. Series")
+                field("Prepayment %"; "Prepayment %")
                 {
                 }
-                field("Compress Prepayment";"Compress Prepayment")
+                field("Prepayment No. Series"; "Prepayment No. Series")
                 {
                 }
-                field("Prepayment Due Date";"Prepayment Due Date")
+                field("Compress Prepayment"; "Compress Prepayment")
                 {
                 }
-                field("Prepmt. Cr. Memo No. Series";"Prepmt. Cr. Memo No. Series")
+                field("Prepayment Due Date"; "Prepayment Due Date")
                 {
                 }
-                field("Prepmt. Posting Description";"Prepmt. Posting Description")
+                field("Prepmt. Cr. Memo No. Series"; "Prepmt. Cr. Memo No. Series")
                 {
                 }
-                field("Prepmt. Pmt. Discount Date";"Prepmt. Pmt. Discount Date")
+                field("Prepmt. Posting Description"; "Prepmt. Posting Description")
                 {
                 }
-                field("Prepmt. Payment Terms Code";"Prepmt. Payment Terms Code")
+                field("Prepmt. Pmt. Discount Date"; "Prepmt. Pmt. Discount Date")
                 {
                 }
-                field("Prepmt. Payment Discount %";"Prepmt. Payment Discount %")
+                field("Prepmt. Payment Terms Code"; "Prepmt. Payment Terms Code")
                 {
                 }
-                field("Quote No.";"Quote No.")
+                field("Prepmt. Payment Discount %"; "Prepmt. Payment Discount %")
                 {
                 }
-                field("Authorization Required";"Authorization Required")
+                field("Quote No."; "Quote No.")
                 {
                 }
-                field("Credit Card No.";"Credit Card No.")
+                field("Authorization Required"; "Authorization Required")
                 {
                 }
-                field("No. of Archived Versions";"No. of Archived Versions")
+                field("Credit Card No."; "Credit Card No.")
                 {
                 }
-                field("Doc. No. Occurrence";"Doc. No. Occurrence")
+                field("No. of Archived Versions"; "No. of Archived Versions")
                 {
                 }
-                field("Campaign No.";"Campaign No.")
+                field("Doc. No. Occurrence"; "Doc. No. Occurrence")
                 {
                 }
-                field("Sell-to Customer Template Code";"Sell-to Customer Template Code")
+                field("Campaign No."; "Campaign No.")
                 {
                 }
-                field("Sell-to Contact No.";"Sell-to Contact No.")
+                field("Sell-to Customer Template Code"; "Sell-to Customer Template Code")
                 {
                 }
-                field("Bill-to Contact No.";"Bill-to Contact No.")
+                field("Sell-to Contact No."; "Sell-to Contact No.")
                 {
                 }
-                field("Bill-to Customer Template Code";"Bill-to Customer Template Code")
+                field("Bill-to Contact No."; "Bill-to Contact No.")
                 {
                 }
-                field("Opportunity No.";"Opportunity No.")
+                field("Bill-to Customer Template Code"; "Bill-to Customer Template Code")
                 {
                 }
-                field("Responsibility Center";"Responsibility Center")
+                field("Opportunity No."; "Opportunity No.")
                 {
                 }
-                field("Shipping Advice";"Shipping Advice")
+                field("Responsibility Center"; "Responsibility Center")
                 {
                 }
-                field("Completely Shipped";"Completely Shipped")
+                field("Shipping Advice"; "Shipping Advice")
                 {
                 }
-                field("Posting from Whse. Ref.";"Posting from Whse. Ref.")
+                field("Completely Shipped"; "Completely Shipped")
                 {
                 }
-                field("Location Filter";"Location Filter")
+                field("Posting from Whse. Ref."; "Posting from Whse. Ref.")
                 {
                 }
-                field("Requested Delivery Date";"Requested Delivery Date")
+                field("Location Filter"; "Location Filter")
                 {
                 }
-                field("Promised Delivery Date";"Promised Delivery Date")
+                field("Requested Delivery Date"; "Requested Delivery Date")
                 {
                 }
-                field("Shipping Time";"Shipping Time")
+                field("Promised Delivery Date"; "Promised Delivery Date")
                 {
                 }
-                field("Outbound Whse. Handling Time";"Outbound Whse. Handling Time")
+                field("Shipping Time"; "Shipping Time")
                 {
                 }
-                field("Shipping Agent Service Code";"Shipping Agent Service Code")
+                field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
                 {
                 }
-                field("Late Order Shipping";"Late Order Shipping")
+                field("Shipping Agent Service Code"; "Shipping Agent Service Code")
                 {
                 }
-                field("Date Filter";"Date Filter")
+                field("Late Order Shipping"; "Late Order Shipping")
                 {
                 }
-                field(Receive;Receive)
+                field("Date Filter"; "Date Filter")
                 {
                 }
-                field("Return Receipt No.";"Return Receipt No.")
+                field(Receive; Receive)
                 {
                 }
-                field("Return Receipt No. Series";"Return Receipt No. Series")
+                field("Return Receipt No."; "Return Receipt No.")
                 {
                 }
-                field("Last Return Receipt No.";"Last Return Receipt No.")
+                field("Return Receipt No. Series"; "Return Receipt No. Series")
                 {
                 }
-                field("Allow Line Disc.";"Allow Line Disc.")
+                field("Last Return Receipt No."; "Last Return Receipt No.")
                 {
                 }
-                field("Get Shipment Used";"Get Shipment Used")
+                field("Allow Line Disc."; "Allow Line Disc.")
                 {
                 }
-                field(Signature;Signature)
+                field("Get Shipment Used"; "Get Shipment Used")
                 {
                 }
-                field("Assigned User ID";"Assigned User ID")
+                field(Signature; Signature)
                 {
                 }
-                field("Ship-to UPS Zone";"Ship-to UPS Zone")
+                field("Assigned User ID"; "Assigned User ID")
                 {
                 }
-                field("Outstanding Amount ($)";"Outstanding Amount ($)")
+                field("Ship-to UPS Zone"; "Ship-to UPS Zone")
                 {
                 }
-                field("Tax Exemption No.";"Tax Exemption No.")
+                field("Outstanding Amount ($)"; "Outstanding Amount ($)")
                 {
                 }
-                field("STE Transaction ID";"STE Transaction ID")
+                field("Tax Exemption No."; "Tax Exemption No.")
                 {
                 }
-                field("Prepmt. Include Tax";"Prepmt. Include Tax")
+                field("STE Transaction ID"; "STE Transaction ID")
                 {
                 }
-                field("Estado distribucion";"Estado distribucion")
+                field("Prepmt. Include Tax"; "Prepmt. Include Tax")
                 {
                 }
-                field("No. copias Picking";"No. copias Picking")
+                field("Estado distribucion"; "Estado distribucion")
                 {
                 }
-                field("Nota de Credito";"Nota de Credito")
+                field("No. copias Picking"; "No. copias Picking")
                 {
                 }
-                field("Tipo de Venta";"Tipo de Venta")
+                field("Nota de Credito"; "Nota de Credito")
                 {
                 }
-                field("No. Bultos";"No. Bultos")
+                field("Tipo de Venta"; "Tipo de Venta")
                 {
                 }
-                field("Cantidad para devolucion";"Cantidad para devolucion")
+                field("No. Bultos"; "No. Bultos")
                 {
                 }
-                field("Cantidad en lineas";"Cantidad en lineas")
+                field("Cantidad para devolucion"; "Cantidad para devolucion")
                 {
                 }
-                field("PO Box address";"PO Box address")
+                field("Cantidad en lineas"; "Cantidad en lineas")
                 {
                 }
-                field("ID Cajero";"ID Cajero")
+                field("PO Box address"; "PO Box address")
                 {
                 }
-                field("Hora creacion";"Hora creacion")
+                field("ID Cajero"; "ID Cajero")
                 {
                 }
-                field("Tipo pedido";"Tipo pedido")
+                field("Hora creacion"; "Hora creacion")
                 {
                 }
-                field(TPV;TPV)
+                field("Tipo pedido"; "Tipo pedido")
                 {
                 }
-                field("Factura comprimida";"Factura comprimida")
+                field(TPV; TPV)
                 {
                 }
-                field("Importe ITBIS Incl.";"Importe ITBIS Incl.")
+                field("Factura comprimida"; "Factura comprimida")
                 {
                 }
-                field("Venta a credito";"Venta a credito")
+                field("Importe ITBIS Incl."; "Importe ITBIS Incl.")
                 {
                 }
-                field("Importe a liquidar";"Importe a liquidar")
+                field("Venta a credito"; "Venta a credito")
                 {
                 }
-                field(Tienda;Tienda)
+                field("Importe a liquidar"; "Importe a liquidar")
                 {
                 }
-                field("Factura en Historico";"Factura en Historico")
+                field(Tienda; Tienda)
                 {
                 }
-                field("Pedido Consignacion";"Pedido Consignacion")
+                field("Factura en Historico"; "Factura en Historico")
                 {
                 }
-                field("Collector Code";"Collector Code")
+                field("Pedido Consignacion"; "Pedido Consignacion")
                 {
                 }
-                field("Pre pedido";"Pre pedido")
+                field("Collector Code"; "Collector Code")
                 {
                 }
-                field("Devolucion Consignacion";"Devolucion Consignacion")
+                field("Pre pedido"; "Pre pedido")
                 {
                 }
-                field("Cod. Cupon";"Cod. Cupon")
+                field("Devolucion Consignacion"; "Devolucion Consignacion")
                 {
                 }
-                field("Siguiente No.";"Siguiente No.")
+                field("Cod. Cupon"; "Cod. Cupon")
                 {
                 }
-                field("Cod. Colegio";"Cod. Colegio")
+                field("Siguiente No."; "Siguiente No.")
                 {
                 }
-                field("Nombre Colegio";"Nombre Colegio")
+                field("Cod. Colegio"; "Cod. Colegio")
                 {
                 }
-                field("Re facturacion";"Re facturacion")
+                field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field(CAE;CAE)
+                field("Re facturacion"; "Re facturacion")
                 {
                 }
-                field("Respuesta CAE";"Respuesta CAE")
+                field(CAE; CAE)
                 {
                 }
-                field(pIdSat;pIdSat)
+                field("Respuesta CAE"; "Respuesta CAE")
                 {
                 }
-                field("No. Resolucion";"No. Resolucion")
+                field(pIdSat; pIdSat)
                 {
                 }
-                field("Fecha Resolucion";"Fecha Resolucion")
+                field("No. Resolucion"; "No. Resolucion")
                 {
                 }
-                field("Serie Desde";"Serie Desde")
+                field("Fecha Resolucion"; "Fecha Resolucion")
                 {
                 }
-                field("Serie hasta";"Serie hasta")
+                field("Serie Desde"; "Serie Desde")
                 {
                 }
-                field("Serie Resolucion";"Serie Resolucion")
+                field("Serie hasta"; "Serie hasta")
                 {
                 }
-                field(CAEC;CAEC)
+                field("Serie Resolucion"; "Serie Resolucion")
                 {
                 }
-                field("No aplica Derechos de Autor";"No aplica Derechos de Autor")
+                field(CAEC; CAEC)
                 {
                 }
-                field(Promocion;Promocion)
+                field("No aplica Derechos de Autor"; "No aplica Derechos de Autor")
                 {
                 }
-                field("No. Serie NCF Facturas";"No. Serie NCF Facturas")
+                field(Promocion; Promocion)
                 {
                 }
-                field("No. Comprobante Fiscal";"No. Comprobante Fiscal")
+                field("No. Serie NCF Facturas"; "No. Serie NCF Facturas")
                 {
                 }
-                field("No. Comprobante Fiscal Rel.";"No. Comprobante Fiscal Rel.")
+                field("No. Comprobante Fiscal"; "No. Comprobante Fiscal")
                 {
                 }
-                field("Razon anulacion NCF";"Razon anulacion NCF")
+                field("No. Comprobante Fiscal Rel."; "No. Comprobante Fiscal Rel.")
                 {
                 }
-                field("No. Serie NCF Abonos";"No. Serie NCF Abonos")
+                field("Razon anulacion NCF"; "Razon anulacion NCF")
                 {
                 }
-                field("Cod. Clasificacion Gastos";"Cod. Clasificacion Gastos")
+                field("No. Serie NCF Abonos"; "No. Serie NCF Abonos")
                 {
                 }
-                field("Date Received";"Date Received")
+                field("Cod. Clasificacion Gastos"; "Cod. Clasificacion Gastos")
                 {
                 }
-                field("Time Received";"Time Received")
+                field("Date Received"; "Date Received")
                 {
                 }
-                field("BizTalk Request for Sales Qte.";"BizTalk Request for Sales Qte.")
+                field("Time Received"; "Time Received")
                 {
                 }
-                field("BizTalk Sales Order";"BizTalk Sales Order")
+                field("BizTalk Request for Sales Qte."; "BizTalk Request for Sales Qte.")
                 {
                 }
-                field("Date Sent";"Date Sent")
+                field("BizTalk Sales Order"; "BizTalk Sales Order")
                 {
                 }
-                field("Time Sent";"Time Sent")
+                field("Date Sent"; "Date Sent")
                 {
                 }
-                field("BizTalk Sales Quote";"BizTalk Sales Quote")
+                field("Time Sent"; "Time Sent")
                 {
                 }
-                field("BizTalk Sales Order Cnfmn.";"BizTalk Sales Order Cnfmn.")
+                field("BizTalk Sales Quote"; "BizTalk Sales Quote")
                 {
                 }
-                field("Customer Quote No.";"Customer Quote No.")
+                field("BizTalk Sales Order Cnfmn."; "BizTalk Sales Order Cnfmn.")
                 {
                 }
-                field("Customer Order No.";"Customer Order No.")
+                field("Customer Quote No."; "Customer Quote No.")
                 {
                 }
-                field("BizTalk Document Sent";"BizTalk Document Sent")
+                field("Customer Order No."; "Customer Order No.")
+                {
+                }
+                field("BizTalk Document Sent"; "BizTalk Document Sent")
                 {
                 }
             }

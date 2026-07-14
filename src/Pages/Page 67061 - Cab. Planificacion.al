@@ -39,7 +39,7 @@ page 67061 "Cab. Planificacion"
                     Editable = false;
                 }
             }
-            part(; 67038)
+            part(PagePromotor; 67038)
             {
                 SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
                               "Semana" = FIELD("Semana"),
@@ -149,7 +149,7 @@ page 67061 "Cab. Planificacion"
         User: Record 91;
         Promotor: Record 13;
         Planif: Record 67038;
-        Planif2Record: Record 67038;
+        Planif2: Record 67038;
         Text001: Label 'The planning has been posted';
         [InDataSet]
         PromEditable: Boolean;

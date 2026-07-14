@@ -12,7 +12,7 @@ page 67175 "Visita A/C - Descr. Asistentes"
                 field(Codigo; Codigo)
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
             }

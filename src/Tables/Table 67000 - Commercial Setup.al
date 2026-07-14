@@ -127,7 +127,7 @@ table 67000 "Commercial Setup"
         field(43; "Campana Ranking Solicitud"; Option)
         {
             OptionCaption = 'Vigente, ltima Cerrada';
-            OptionMembers = Vigente," ltima Cerrada";
+            OptionMembers = Vigente,"ultima Cerrada";
         }
         field(44; "No. Serie Atenciones"; Code[20])
         {

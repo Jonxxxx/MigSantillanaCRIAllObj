@@ -6,12 +6,12 @@ table 34003000 "Config. Retencion Proveedores"
 
     fields
     {
-        field(1; "Código Retención"; Code[20])
+        field(1; "Codigo Retención"; Code[20])
         {
             Caption = 'Retention Code';
             NotBlank = true;
         }
-        field(2; "Descripción"; Text[30])
+        field(2; "Descripcion"; Text[30])
         {
             Caption = 'Description';
         }
@@ -64,14 +64,14 @@ table 34003000 "Config. Retencion Proveedores"
 
     keys
     {
-        key(Key1; "Código Retención")
+        key(Key1; "Codigo Retención")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Código Retención", "Descripción", "Base Cálculo", "Importe Retención", "Tipo Retención")
+        fieldgroup(DropDown; "Codigo Retención", "Descripcion", "Base Cálculo", "Importe Retención", "Tipo Retención")
         {
         }
     }

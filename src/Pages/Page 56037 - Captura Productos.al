@@ -13,7 +13,7 @@ page 56037 "Captura Productos"
         {
             repeater(Group)
             {
-                field(Mark; MARK)
+                field(EXCCRIMark; MARK)
                 {
                     Caption = 'Marked';
                 }
@@ -23,13 +23,15 @@ page 56037 "Captura Productos"
                 field(Description; Description)
                 {
                 }
+                //TODO: Ver
+                /*
                 field(SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location);
                     SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location))
                 {
                     Caption = 'Disponibilidad';
                     Style = Strong;
                     StyleExpr = TRUE;
-                }
+                }*/
                 field("Macado Manualmente"; Marcado)
                 {
 
@@ -286,7 +288,7 @@ page 56037 "Captura Productos"
 
     procedure InsertaProducto()
     var
-        rSalesLine2Record: Record 37;
+        rSalesLine2: Record 37;
         rSalesLine: Record 37;
         NoLinea: Integer;
         lText001: Label 'ERROR: La cantidad introducida (%1) supera la disponibilidad (%2)';

@@ -89,7 +89,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         field(14; "Concepto Salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
     }
 

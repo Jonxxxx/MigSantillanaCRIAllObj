@@ -6,7 +6,9 @@ page 50000 "Pantalla Scanner manual"
     {
         area(content)
         {
-            group()
+            //TODO: Ver 
+            /*
+            group(General)
             {
                 field(; '')
                 {
@@ -43,8 +45,9 @@ page 50000 "Pantalla Scanner manual"
                 field(Cant; wCantidad)
                 {
                 }
-            }
+            }*/
         }
+
     }
 
     actions
@@ -59,7 +62,7 @@ page 50000 "Pantalla Scanner manual"
 
                 trigger OnAction()
                 begin
-                    BuscarEnPedido;
+                    //TODO: Ver BuscarEnPedido;
                 end;
             }
         }
@@ -84,6 +87,8 @@ page 50000 "Pantalla Scanner manual"
         NoDocumento := NoPedido;
     end;
 
+    //TODO: Ver 
+    /*
     procedure BuscarEnPedido()
     var
         rItemCrossRe: Record 5717;
@@ -132,5 +137,6 @@ page 50000 "Pantalla Scanner manual"
                 END;
         END;
     end;
+    */
 }
 

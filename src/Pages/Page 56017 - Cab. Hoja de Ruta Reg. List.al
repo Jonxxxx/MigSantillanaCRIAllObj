@@ -36,10 +36,10 @@ page 56017 "Cab. Hoja de Ruta Reg. List"
         }
         area(factboxes)
         {
-            systempart(; Notes)
+            systempart(Notes; Notes)
             {
             }
-            systempart(; Links)
+            systempart(Links; Links)
             {
             }
         }

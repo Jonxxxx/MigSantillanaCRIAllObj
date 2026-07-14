@@ -40,11 +40,11 @@ page 67147 "Log Coleg. - Work Flow visitas"
                 field(Conquista; Conquista)
                 {
                 }
-                field(Area;Area)
-        {
+                field("Area"; "Area")
+                {
+                }
+            }
         }
-    }
-}
     }
 
     actions

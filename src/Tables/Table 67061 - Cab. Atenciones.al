@@ -404,7 +404,7 @@ table 67061 "Cab. Atenciones"
         field(37; "Comentarios Entrega"; Text[250])
         {
         }
-        field(38; "Comentarios Cancelaci n"; Text[250])
+        field(38; "Comentarios Cancelacion"; Text[250])
         {
         }
         field(39; Monto; Decimal)
@@ -417,7 +417,7 @@ table 67061 "Cab. Atenciones"
             CalcFormula = Count("Detalle Atenciones" WHERE("Codigo Cab. Atencion" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
-        field(41; "Fecha Recepci n Documento"; Date)
+        field(41; "Fecha Recepcion Documento"; Date)
         {
         }
         field(42; Documento; Code[20])

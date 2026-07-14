@@ -10,7 +10,7 @@ tableextension 50076 EXCCRICauseOfAbsence extends "Cause of Absence"
         field(34002103; "Cod. concepto salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
 
         field(34002104; "Tipo de novedad TSS"; Option)

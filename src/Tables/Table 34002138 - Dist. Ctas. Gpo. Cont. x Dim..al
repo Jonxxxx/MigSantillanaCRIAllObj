@@ -3,10 +3,10 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
 
     fields
     {
-        field(1; "Código"; Code[10])
+        field(1; "Codigo"; Code[10])
         {
         }
-        field(2; "Descripción"; Text[50])
+        field(2; "Descripcion"; Text[50])
         {
         }
         field(3; "Shortcut Dimension"; Code[20])
@@ -14,18 +14,18 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
             Caption = 'Shortcut Dimension 1 Code';
             TableRelation = Dimension.Code;
         }
-        field(4; "Código Concepto Salarial"; Code[20])
+        field(4; "Codigo Concepto Salarial"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
                 /*ConfNom.GET();
                 ConceptosSal.SETRANGE("Shortcut Dimension",ConfNom."Dimension Conceptos Salariales");
-                ConceptosSal.SETRANGE(Código,"Código Concepto Salarial");
+                ConceptosSal.SETRANGE(Codigo,"Codigo Concepto Salarial");
                 ConceptosSal.FINDFIRST;
                 "Shortcut Dimension"         := ConceptosSal."Shortcut Dimension";
-                Descripción                  := ConceptosSal.Descripción;
+                Descripcion                  := ConceptosSal.Descripcion;
                 "Tipo Cuenta Cuota Obrera"   := ConceptosSal."Tipo Cuenta Cuota Obrera";
                 "Tipo Cuenta Cuota Patronal" := ConceptosSal."Tipo Cuenta Cuota Patronal";
                 "No. Cuenta Cuota Patronal"  := ConceptosSal."No. Cuenta Cuota Patronal";
@@ -51,7 +51,7 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
 
     keys
     {
-        key(Key1; "Código")
+        key(Key1; "Codigo")
         {
         }
     }

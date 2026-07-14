@@ -8,7 +8,7 @@ table 34002140 "Comentarios nómina"
         {
             OptionMembers = "Empresa cotización",Empleado,Convenios;
         }
-        field(2; "Código"; Code[15])
+        field(2; "Codigo"; Code[15])
         {
         }
         field(3; "No. Orden"; Integer)
@@ -27,7 +27,7 @@ table 34002140 "Comentarios nómina"
 
     keys
     {
-        key(Key1; Tipo, "Código", "No. Orden")
+        key(Key1; Tipo, "Codigo", "No. Orden")
         {
         }
     }

@@ -75,7 +75,7 @@ table 67064 "Plan Lector Det."
         {
             Editable = false;
         }
-        field(20; "Adopci n real"; Integer)
+        field(20; "Adopcion real"; Integer)
         {
             Editable = false;
         }
@@ -142,7 +142,7 @@ table 67064 "Plan Lector Det."
         "Total Obras Compradas x Alumno" := "Cant. x Alum 1" + "Cant. x Alum 2" + "Cant. x Alum 3" + "Cant. x Alum 4";
         "Universo de Titulos u Obras" := "Total Obras Compradas x Alumno" * "Cantidad Alumnos";
         IF "Universo de Titulos u Obras" <> 0 THEN
-            "Porc. Afinidad" := ROUND(("Adopci n real" / "Universo de Titulos u Obras" * 100), 1)
+            "Porc. Afinidad" := ROUND(("Adopcion real" / "Universo de Titulos u Obras" * 100), 1)
         ELSE
             "Porc. Afinidad" := 0;
     end;

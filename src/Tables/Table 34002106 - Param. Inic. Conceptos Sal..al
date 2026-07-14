@@ -9,7 +9,7 @@ table 34002106 "Param. Inic. Conceptos Sal."
         field(1; Codigo; Code[20])
         {
             Caption = 'Code';
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             var
@@ -17,7 +17,7 @@ table 34002106 "Param. Inic. Conceptos Sal."
             begin
                 ConfNom.GET();
                 rConceptoSalarial.GET(Codigo);
-                Descripcion := rConceptoSalarial.Descripción;
+                Descripcion := rConceptoSalarial.Descripcion;
                 "Tipo concepto" := rConceptoSalarial."Tipo concepto";
             end;
         }

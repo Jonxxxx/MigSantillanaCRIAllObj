@@ -62,7 +62,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
         {
             Editable = false;
         }
-        field(10; "Fecha programaci n"; Date)
+        field(10; "Fecha programacion"; Date)
         {
             CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE("No. Visita" = FIELD("No. Visita")));
             Editable = false;

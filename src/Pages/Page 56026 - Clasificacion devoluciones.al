@@ -39,12 +39,14 @@ page 56026 "Clasificacion devoluciones"
                 field(barcode; Barcode)
                 {
                     Caption = 'EAN';
-                    TableRelation = "Item Cross Reference"."Cross-Reference No.";
+                    //TODO: Ver TableRelation = "Item Cross Reference"."Cross-Reference No.";
 
                     trigger OnValidate()
                     begin
-                        ICR.SETCURRENTKEY("Cross-Reference No.");
-                        ICR.SETRANGE("Cross-Reference No.", Barcode);
+                        //TODO: Ver ICR.SETCURRENTKEY("Cross-Reference No.");
+                        //TODO: Ver ICR.SETRANGE("Cross-Reference No.", Barcode);
+                        //TODO: Ver 
+                        /*
                         IF ICR.FINDFIRST THEN
                             Item.GET(ICR."Item No.")
                         ELSE BEGIN
@@ -52,7 +54,7 @@ page 56026 "Clasificacion devoluciones"
                             ICR."Item No." := Barcode;
                         END;
 
-                        ItemNo := ICR."Item No.";
+                        ItemNo := ICR."Item No.";*/
                         Desc := Item.Description;
                         Iuom := Item."Base Unit of Measure";
                     end;
@@ -114,16 +116,16 @@ page 56026 "Clasificacion devoluciones"
                     IF Cant <= 0 THEN
                         ERROR(Err001);
 
-                    CD2.RESET;
-                    CD2.SETRANGE("No. Documento", "No.");
-                    IF CD2.FINDLAST THEN;
+                    //TODO: Ver CD2.RESET;
+                    //TODO: Ver CD2.SETRANGE("No. Documento", "No.");
+                    //TODO: Ver IF CD2.FINDLAST THEN;
 
                     CD.INIT;
                     CD."No. Documento" := "No.";
                     CD.VALIDATE("Customer No.", "Customer no.");
                     CD.VALIDATE("Item No.", ItemNo);
                     CD.VALIDATE(Quantity, Cant);
-                    CD."Line No." := CD2."Line No." + 1;
+                    //TODO: Ver CD."Line No." := CD2."Line No." + 1;
                     //CD."External Doc. Number" := EDoc;
                     CD."External Doc. Number" := "External document no.";
                     CD."Cross-Reference No." := Barcode;
@@ -175,7 +177,7 @@ page 56026 "Clasificacion devoluciones"
     var
         CD: Record 56026;
         CD2Record: Record 56026;
-        ICR: Record 5717;
+        //TODO: Ver ICR: Record 5717;
         Item: Record 27;
         CDR: Record 56025;
         Cant: Integer;

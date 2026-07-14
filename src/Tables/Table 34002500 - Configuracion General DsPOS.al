@@ -72,7 +72,7 @@ table 34002500 "Configuracion General DsPOS"
     }
 
     var
-        Error001: Label 'Primero debe Seleccionar un Código de Tienda';
+        Error001: Label 'Primero debe Seleccionar un Codigo de Tienda';
         Error002: Label 'La tienda Seleccionada %1 tiene configuración BBDD Central.No debe especificar un TPV en Configuración';
         Error003: Label 'Proceso Cancelado a petición del usuario';
         text001: Label 'Se Vaciaran todos los campos personalizados para el Pais %1.\¿ Desea Cotinuar?';

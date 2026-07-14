@@ -3,17 +3,17 @@ table 34002119 "Conceptos Salariales Provision"
 
     fields
     {
-        field(1; "Código"; Code[20])
+        field(1; "Codigo"; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
         }
         field(2; Disponible; Code[20])
         {
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             begin
-                //IF Código = Disponible THEN
+                //IF Codigo = Disponible THEN
                 //   ERROR(Err001);
             end;
         }
@@ -53,7 +53,7 @@ table 34002119 "Conceptos Salariales Provision"
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     CLEAR(ConcepSalar);
                     FormConcSalariales.GETRECORD(ConcepSalar);
-                    "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Código;
+                    "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Codigo;
                     CLEAR(FormConcSalariales);
                 END;
                 */
@@ -99,7 +99,7 @@ table 34002119 "Conceptos Salariales Provision"
 
     keys
     {
-        key(Key1; "Código", "Gpo. Contable Empleado")
+        key(Key1; "Codigo", "Gpo. Contable Empleado")
         {
         }
     }

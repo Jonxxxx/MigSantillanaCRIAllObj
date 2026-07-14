@@ -119,7 +119,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Enabled = (NOT userPromotor) AND wEvProg;
                 }
-                field("Descripción evento programado"; "Descripción evento programado")
+                field("Descripcion evento programado"; "Descripcion evento programado")
                 {
                     Enabled = NOT userPromotor;
                 }
@@ -144,7 +144,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Editable = false;
                     Enabled = NOT userPromotor;
                 }
-                field("Selección Editorial"; "Selección Editorial")
+                field("Selección Editorial"; "Seleccion Editorial")
                 {
 
                     trigger OnValidate()
@@ -229,7 +229,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Editable = false;
                 }
-                field("Usuario creación"; "Usuario creación")
+                field("Usuario creación"; "Usuario creacion")
                 {
                 }
             }
@@ -265,7 +265,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Editable = NoPertenecealCDS;
                 }
-                field("Descripción Cargo Responsable"; "Descripción Cargo Responsable")
+                field("Descripcion Cargo Responsable"; "Descripcion Cargo Responsable")
                 {
                     Editable = NoPertenecealCDS;
                 }
@@ -315,7 +315,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 field("Asistencia promotor"; "Asistencia promotor")
                 {
                 }
-                field("Material para revisión"; "Material para revisión")
+                field("Material para revisión"; "Material para revision")
                 {
                 }
                 field("Asistentes Esperados"; "Asistentes Esperados")
@@ -397,12 +397,12 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Caption = 'Grupo Santillana';
                     Visible = false;
-                    field("Artículo Grupo Santillana"; "Artículo Grupo Santillana")
+                    field("Artículo Grupo Santillana"; "Articulo Grupo Santillana")
                     {
                         Editable = wGS;
                         Visible = false;
                     }
-                    field("Desc. Artículo Grupo Santillan"; "Desc. Artículo Grupo Santillan")
+                    field("Desc. Artículo Grupo Santillan"; "Desc. Articulo Grupo Santillan")
                     {
                         Editable = false;
                         Visible = false;
@@ -411,7 +411,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     {
                         Editable = wGS;
                     }
-                    field("Año Adopción"; "Año Adopción")
+                    field("Año Adopción"; "Ano Adopcion")
                     {
                         Editable = false;
                         Visible = false;
@@ -432,7 +432,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Editable = false;
                     Visible = false;
                 }
-                field("Artículo Competencia"; "Artículo Competencia")
+                field("Artículo Competencia"; "Articulo Competencia")
                 {
                     Editable = wCompetencia;
                     Visible = false;
@@ -453,9 +453,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
             group("&Event")
             {
                 Caption = '&Event';
-                separator()
-                {
-                }
+
                 action("<Action1000000104>")
                 {
                     Caption = '&Proponer fechas';
@@ -571,8 +569,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Caption = '&Libros a Presentar';
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67130;
-                    RunPageLink = "Núm. Solicitud" = FIELD("No. Solicitud");
+                    //TODO: Ver RunObject = Page 67130;
+                    //TODO: Ver RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                 }
                 action("&Competencia")
                 {
@@ -582,9 +580,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     RunObject = Page 67131;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                 }
-                separator()
-                {
-                }
+
                 action("Distribution per Cost Centre")
                 {
                     Caption = 'Distribution per Cost Centre';
@@ -627,14 +623,12 @@ page 67064 "Solicitud asistencia Tec - Ped"
                         pgRanking: Page 67145;
                     begin
                         TESTFIELD("Cod. Colegio");
-                        pgRanking.CalcularRanking("Cod. Colegio");
+                        //TODO: Ver pgRanking.CalcularRanking("Cod. Colegio");
                         pgRanking.RUN;
                         CLEAR(pgRanking);
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("<Action1000000035>")
                 {
                     Caption = 'Nivel Asistente';
@@ -687,7 +681,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     end;
                 }
             }
-            group("&Post")
+            group("EXCCRIPost")
             {
                 Caption = '&Post';
                 action("&Post")
@@ -777,9 +771,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 trigger OnAction()
                 var
-                    cduWord: Codeunit 67001;
+                //TODO: Ver cduWord: Codeunit 67001;
                 begin
-                    cduWord.GeneraWordSolicitudAsistencia("No. Solicitud");
+                    //TODO: Ver cduWord.GeneraWordSolicitudAsistencia("No. Solicitud");
                 end;
             }
             action("<Action1000000045>")
@@ -788,9 +782,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 trigger OnAction()
                 var
-                    cduWord: Codeunit 67001;
+                //TODO: Ver cduWord: Codeunit 67001;
                 begin
-                    cduWord.GeneraWordPPFF("No. Solicitud");
+                    //TODO: Ver cduWord.GeneraWordPPFF("No. Solicitud");
                 end;
             }
         }
@@ -972,9 +966,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     wSeReq := TRUE;
                 END;
 
-            Status::Cancelada, Status::Cancelada:
-                BEGIN
-                END;
+        //TODO: Ver Status::Cancelada, Status::Cancelada:
+        //TODO: Ver    BEGIN
+        //TODO: Ver    END;
 
         END;
     end;
@@ -985,10 +979,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
         CLEAR(wGS);
         CLEAR(wCompetencia);
 
-        CASE "Selección Editorial" OF
-            "Selección Editorial"::Santillana:
+        CASE "Seleccion Editorial" OF
+            "Seleccion Editorial"::Santillana:
                 wGS := TRUE;
-            "Selección Editorial"::Competencia:
+            "Seleccion Editorial"::Competencia:
                 wCompetencia := TRUE;
         END;
     end;

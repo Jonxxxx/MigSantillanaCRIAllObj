@@ -32,7 +32,7 @@ page 75012 "Valores Filtros Tipologia MdM"
 
     var
         wId: Integer;
-        cFunMdM: Codeunit 75000;
+    //TODO: Ver cFunMdM: Codeunit 75000;
 
     procedure RellenaTabla(pwIdFiltro: Integer)
     var
@@ -40,7 +40,7 @@ page 75012 "Valores Filtros Tipologia MdM"
         lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
         lrValDim: Record 349;
-        lrCodGrProd: Record 5723;
+    //TODO: Ver lrCodGrProd: Record 5723;
     begin
         // RellenaTabla
 
@@ -51,7 +51,7 @@ page 75012 "Valores Filtros Tipologia MdM"
             CASE lrFiltroTipo.Tipo OF
                 lrFiltroTipo.Tipo::Dimension:
                     BEGIN
-                        lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
+                        //TODO: Ver lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
                         CLEAR(lrValDim);
                         lrValDim.SETRANGE("Dimension Code", lwCodDim);
                         IF lrValDim.FINDSET THEN BEGIN
@@ -70,21 +70,23 @@ page 75012 "Valores Filtros Tipologia MdM"
                             UNTIL lrDatosMdM.NEXT = 0;
                         END;
                     END;
-                lrFiltroTipo.Tipo::Otros:
-                    BEGIN
-                        CASE lrFiltroTipo."Valor Id" OF
-                            1:
-                                BEGIN // Cód. Grupo Producto
-                                    CLEAR(lrCodGrProd);
-                                    COPYFILTER("Filtro Tipologia", lrCodGrProd."Item Category Code");
-                                    IF lrCodGrProd.FINDSET THEN BEGIN
-                                        REPEAT
-                                            AddReg(pwIdFiltro, lrCodGrProd.Code, lrCodGrProd.Description);
-                                        UNTIL lrCodGrProd.NEXT = 0;
-                                    END;
-                                END;
+            //TODO: Ver 
+            /*
+        lrFiltroTipo.Tipo::Otros:
+            BEGIN
+                CASE lrFiltroTipo."Valor Id" OF
+                    1:
+                        BEGIN // Cód. Grupo Producto
+                            CLEAR(lrCodGrProd);
+                            COPYFILTER("Filtro Tipologia", lrCodGrProd."Item Category Code");
+                            IF lrCodGrProd.FINDSET THEN BEGIN
+                                REPEAT
+                                    AddReg(pwIdFiltro, lrCodGrProd.Code, lrCodGrProd.Description);
+                                UNTIL lrCodGrProd.NEXT = 0;
+                            END;
                         END;
-                    END;
+                END;
+            END;*/
             END;
         END;
     end;

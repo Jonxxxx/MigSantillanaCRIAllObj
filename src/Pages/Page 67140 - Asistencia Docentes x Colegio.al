@@ -48,7 +48,7 @@ page 67140 "Asistencia Docentes x Colegio"
                 field("Cod. evento programado"; "Cod. evento programado")
                 {
                 }
-                field("Descripción evento programado"; "Descripción evento programado")
+                field("Descripcion evento programado"; "Descripcion evento programado")
                 {
                 }
             }

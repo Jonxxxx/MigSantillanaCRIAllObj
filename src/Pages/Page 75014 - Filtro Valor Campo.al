@@ -2,7 +2,7 @@ page 75014 "Filtro Valor Campo"
 {
     // YA SE que codigo en la page no es lo suyo
     // El problema es que NO puede estar en la tabla ya que se trata como una tabla "Temporal" todo el tiempo y no cosume licencia
-    // Si introducimos código dentro de la tabla, El sistema Si solicitará licencia para este objeto.
+    // Si introducimos Codigo dentro de la tabla, El sistema Si solicitará licencia para este objeto.
 
     Editable = false;
     PageType = List;
@@ -37,7 +37,7 @@ page 75014 "Filtro Valor Campo"
     var
         Text001: Label 'El tipo de dato %1 no está permitido. Campo %2';
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
-        cFunMdM: Codeunit 75000;
+    //TODO: Ver cFunMdM: Codeunit 75000;
 
     procedure RellenaTemp()
     var
@@ -80,7 +80,7 @@ page 75014 "Filtro Valor Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(lwFieldNo + 200);
-                        lwCodDim := cFunMdM.GetDimCode(lwIdDim, TRUE);
+                        //TODO: Ver lwCodDim := cFunMdM.GetDimCode(lwIdDim, TRUE);
                         CLEAR(lrValDim);
                         lrValDim.SETRANGE("Dimension Code", lwCodDim);
                         lrValDim.SETRANGE(Blocked, FALSE);
@@ -116,7 +116,7 @@ page 75014 "Filtro Valor Campo"
                         lwRecRf2.OPEN(lwIdRel);
                         CurrPage.CAPTION := lwRecRf2.CAPTION;
                         lwIdfVal := 0; // Id del campo Valor
-                        lwIdfDesc := 0; // Id del campo Descripción, por defecto en blanco
+                        lwIdfDesc := 0; // Id del campo Descripcion, por defecto en blanco
                         RelFilter(lwTableId, lwFieldNo, lwRecRf2, lwIdfVal, lwIdfDesc); // Añade filtros adicionales
                         IF lwIdfVal = 0 THEN BEGIN
                             // Buscamos el primer campo de la clave primaria
@@ -152,15 +152,15 @@ page 75014 "Filtro Valor Campo"
     begin
         // RelFilter
         // Añade filtros adicionales que no he sabido manejar de otro modo
-        // pwIdfVal, pwIdfDesc Devuelve el numero de código y descripción para cada caso
+        // pwIdfVal, pwIdfDesc Devuelve el numero de Codigo y Descripcion para cada caso
 
 
         CASE pwRelRf.NUMBER OF // Tabla relacionada
             67002:
                 BEGIN // Datos auxiliares
-                    pwIdfVal := 2;  // Código
-                    pwIdfDesc := 3;  // Descripción
-                    lwFieldRf := pwRelRf.FIELD("1");
+                    pwIdfVal := 2;  // Codigo
+                    pwIdfDesc := 3;  // Descripcion
+                    //TODO: Ver lwFieldRf := pwRelRf.FIELD("1");
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;
@@ -180,9 +180,9 @@ page 75014 "Filtro Valor Campo"
                 END;
             75001:
                 BEGIN  // Datos MdM
-                    pwIdfVal := 2;  // Código
-                    pwIdfDesc := 3;  // Descripción
-                    lwFieldRf := pwRelRf.FIELD("1");
+                    pwIdfVal := 2;  // Codigo
+                    pwIdfDesc := 3;  // Descripcion
+                    //TODO: Ver lwFieldRf := pwRelRf.FIELD("1");
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;
@@ -241,7 +241,7 @@ page 75014 "Filtro Valor Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(pwIdField + 200);
-                        cFunMdM.GetDimCode(lwIdDim, TRUE);
+                        //TODO: Ver cFunMdM.GetDimCode(lwIdDim, TRUE);
                     END;
             END;
         END

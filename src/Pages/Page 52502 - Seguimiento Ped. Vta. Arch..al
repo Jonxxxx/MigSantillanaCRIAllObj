@@ -8,7 +8,7 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     SourceTable = 5107;
     SourceTableView = SORTING("Ultima Version")
                       ORDER(Ascending)
-                      WHERE("Ultima Version" = FILTER(Yes));
+                      WHERE("Ultima Version" = FILTER(true));
 
     layout
     {
@@ -130,6 +130,8 @@ page 52502 "Seguimiento Ped. Vta. Arch."
     end;
 
     procedure BuscarDocs()
+    var
+        SH1: Record 5107;
     begin
 
         CLEAR(SH1);

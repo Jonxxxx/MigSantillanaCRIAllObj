@@ -1323,7 +1323,7 @@ table 56038 "Sales Line Movil."
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        cManejaParametros: Codeunit 34002500;
+        //TODO: Ver cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';

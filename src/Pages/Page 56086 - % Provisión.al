@@ -13,13 +13,13 @@ page 56086 "% Provisión"
         {
             repeater(Group)
             {
-                field("Desde día"; "Desde día")
+                field("Desde día"; "Desde dia")
                 {
                 }
-                field(Descripción; Descripción)
+                field(Descripcion; Descripcion)
                 {
                 }
-                field("% Provisión"; "% Provisión")
+                field("% Provisión"; "% Provision")
                 {
                 }
             }

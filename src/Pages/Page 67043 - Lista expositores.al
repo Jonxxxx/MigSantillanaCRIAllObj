@@ -22,28 +22,28 @@ page 67043 "Lista expositores"
                 field(Name; Name)
                 {
                 }
-                field("Name 2;"Name 2")
+                field("Name 2"; "Name 2")
                 {
                 }
-                field(Address;Address)
+                field(Address; Address)
                 {
                 }
-                field("Address 2;"Address 2")
+                field("Address 2"; "Address 2")
                 {
                 }
-                field(City;City)
+                field(City; City)
                 {
                 }
-                field("Post Code";"Post Code")
+                field("Post Code"; "Post Code")
                 {
                 }
-                field(County;County)
+                field(County; County)
                 {
                 }
-                field("Phone No.";"Phone No.")
+                field("Phone No."; "Phone No.")
                 {
                 }
-                field("Salesperson Code";"Salesperson Code")
+                field("Salesperson Code"; "Salesperson Code")
                 {
                 }
             }

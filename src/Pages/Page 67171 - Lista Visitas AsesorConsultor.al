@@ -30,7 +30,7 @@ page 67171 "Lista Visitas Asesor/Consultor"
                 field("Nombre Asesor/Consultor"; "Nombre Asesor/Consultor")
                 {
                 }
-                field(Delegación; Delegación)
+                field(Delegacion; Delegacion)
                 {
                 }
                 field("Grupo Negocio"; "Grupo Negocio")
@@ -48,16 +48,16 @@ page 67171 "Lista Visitas Asesor/Consultor"
                 field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field("Dirección Colegio"; "Dirección Colegio")
+                field("Direccion Colegio"; "Direccion Colegio")
                 {
                 }
                 field("Distrito Colegio"; "Distrito Colegio")
                 {
                 }
-                field("Teléfono 1 Colegio"; "Teléfono 1 Colegio")
+                field("Telefono 1 Colegio"; "Telefono 1 Colegio")
                 {
                 }
-                field("Teléfono 2 Colegio"; "Teléfono 2 Colegio")
+                field("Telefono 2 Colegio"; "Telefono 2 Colegio")
                 {
                 }
                 field("Cod. promotor"; "Cod. promotor")

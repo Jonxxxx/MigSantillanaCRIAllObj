@@ -61,7 +61,7 @@ page 52501 "Recepcion Documento Elect"
     trigger OnInit()
     begin
         BEGIN
-            FE.UploadDocumentoElectronico(Valores);
+            //TODO: Ver FE.UploadDocumentoElectronico(Valores);
         END;
         TraerDatos(Valores);
     end;
@@ -75,7 +75,8 @@ page 52501 "Recepcion Documento Elect"
     begin
         IF CloseAction = ACTION::OK THEN BEGIN
             IF CONFIRM(STRSUBSTNO(txt001, FORMAT(Mensaje))) THEN BEGIN
-
+                //TODO: Ver 
+                /*
                 FE.CreaXmlMensaje(Clave, NumeroCedulaEmisor, FechaEmisionDoc, Mensaje, DetalleMensaje, MontoTotalImpuesto, CodigoActividad, TotalFactura, NumeroCedulaReceptor, NumConsecutivoReceptor, Directorio); // YFC --- #FE-CR1.02
                 IF Mensaje = 0 THEN
                     FE.MensajeElectronico(4, NumConsecutivoReceptor, Directorio);
@@ -83,7 +84,7 @@ page 52501 "Recepcion Documento Elect"
                     FE.MensajeElectronico(5, NumConsecutivoReceptor, Directorio);
                 IF Mensaje = 2 THEN
                     FE.MensajeElectronico(6, NumConsecutivoReceptor, Directorio);
-
+                */
                 Modificado := TRUE;
             END;
         END
@@ -92,7 +93,7 @@ page 52501 "Recepcion Documento Elect"
     end;
 
     var
-        FE: Codeunit 52504;
+        //TODO: Ver FE: Codeunit 52504;
         Valores: array[10] of Text;
         Modificado: Boolean;
         Clave: Code[80];

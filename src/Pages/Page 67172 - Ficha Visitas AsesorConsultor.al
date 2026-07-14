@@ -50,19 +50,19 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 field("Nombre Colegio"; "Nombre Colegio")
                 {
                 }
-                field("Dirección Colegio"; "Dirección Colegio")
+                field("Direccion Colegio"; "Direccion Colegio")
                 {
                 }
                 field("Distrito Colegio"; "Distrito Colegio")
                 {
                 }
-                field("Teléfono 1 Colegio"; "Teléfono 1 Colegio")
+                field("Telefono 1 Colegio"; "Telefono 1 Colegio")
                 {
                 }
-                field("Teléfono 2 Colegio"; "Teléfono 2 Colegio")
+                field("Telefono 2 Colegio"; "Telefono 2 Colegio")
                 {
                 }
-                field(Delegación; Delegación)
+                field(Delegacion; Delegacion)
                 {
                 }
                 field("Cod. promotor"; "Cod. promotor")
@@ -86,10 +86,10 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 field(Estado; Estado)
                 {
                 }
-                field("Fecha Próxima Visita"; "Fecha Próxima Visita")
+                field("Fecha Proxima Visita"; "Fecha Proxima Visita")
                 {
                 }
-                field("Cód. Objetivo Visita"; "Cód. Objetivo Visita")
+                field("Cod. Objetivo Visita"; "Cod. Objetivo Visita")
                 {
                 }
                 field("Desc. Objetivo Visita"; "Desc. Objetivo Visita")
@@ -126,11 +126,11 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 field("Desc. Cargo Persona Contacto"; "Desc. Cargo Persona Contacto")
                 {
                 }
-                field("Teléfono 1 Persona Contacto"; "Teléfono 1 Persona Contacto")
+                field("Telefono 1 Persona Contacto"; "Telefono 1 Persona Contacto")
                 {
                     Editable = NOT wCDS;
                 }
-                field("Teléfono 2 Persona Contacto"; "Teléfono 2 Persona Contacto")
+                field("Telefono 2 Persona Contacto"; "Telefono 2 Persona Contacto")
                 {
                     Editable = NOT wCDS;
                 }
@@ -311,8 +311,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
     procedure ValidaDistrCC()
     var
         Distr: Record 67104;
-        Err001: Label 'Debe realizar la distribución de los centros de costo';
-        Err002: Label 'No se ha realizado la distribución de los centros de costo correctamente';
+        Err001: Label 'Debe realizar la distribucion de los centros de costo';
+        Err002: Label 'No se ha realizado la distribucion de los centros de costo correctamente';
         Porc: Decimal;
     begin
 
@@ -331,7 +331,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
     procedure ValidaFechaHorarios()
     var
         rProg: Record 67103;
-        rProg2Record: Record 67103;
+        rProg2: Record 67103;
         Err001: Label 'No se ha realizado el registro de fechas y horario de visitas.';
         Err002: Label 'Revise el registro de fechas y horario de visitas. No se permite solapamientos.';
         Err003: Label 'Revise el registro de fechas y horario de visitas. Es obligatorio ingresar la fecha, hora de inicio y hora fin.';

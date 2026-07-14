@@ -37,7 +37,7 @@ page 67166 "Ficha de Atenciones"
                 field(Documento; Documento)
                 {
                 }
-                field("Fecha Recepción Documento"; "Fecha Recepción Documento")
+                field("Fecha Recepción Documento"; "Fecha Recepcion Documento")
                 {
                 }
                 field(Delegacion; Delegacion)
@@ -92,14 +92,14 @@ page 67166 "Ficha de Atenciones"
                 field("Comentarios Entrega"; "Comentarios Entrega")
                 {
                 }
-                field("Comentarios Cancelación"; "Comentarios Cancelación")
+                field("Comentarios Cancelacion"; "Comentarios Cancelacion")
                 {
                 }
             }
-            part(; 67168)
+            part(PagePart; 67168)
             {
                 Editable = wMod;
-                SubPageLink = "Cab. Atención" = FIELD("Codigo");
+                //TODO: Ver SubPageLink = "Cab. Atencion" = FIELD("Codigo");
             }
         }
     }
@@ -120,7 +120,7 @@ page 67166 "Ficha de Atenciones"
                 trigger OnAction()
                 begin
                     TESTFIELD("Fecha de entrega");
-                    TESTFIELD("Comentarios Cancelación");
+                    TESTFIELD("Comentarios Cancelacion");
                     Estado := Estado::Cancelada;
 
                     ActControles;
@@ -176,9 +176,9 @@ page 67166 "Ficha de Atenciones"
                         IF rLin.FINDSET THEN BEGIN
                             REPEAT
                                 rDetAt.Tipo := rDetAt.Tipo::Pedido;
-                                rDetAt."Código Cab. Atención" := Codigo;
+                                rDetAt."Codigo Cab. Atencion" := Codigo;
                                 rDetAt.Codigo := rLin."No.";
-                                rDetAt.Descripción := rLin.Description;
+                                rDetAt.Descripcion := rLin.Description;
                                 rDetAt.Cantidad := rLin.Quantity;
                                 rDetAt."Precio Unitario" := rLin."Unit Price";
                                 rDetAt."Monto total" := rLin.Quantity * rLin."Unit Price";
@@ -215,9 +215,9 @@ page 67166 "Ficha de Atenciones"
                         IF rLin.FINDSET THEN BEGIN
                             REPEAT
                                 rDetAt.Tipo := rDetAt.Tipo::Pedido;
-                                rDetAt."Código Cab. Atención" := Codigo;
+                                rDetAt."Codigo Cab. Atencion" := Codigo;
                                 rDetAt.Codigo := rLin."Item No.";
-                                rDetAt.Descripción := rLin.Description;
+                                rDetAt.Descripcion := rLin.Description;
                                 rDetAt.Cantidad := rLin.Quantity;
                                 rSalesPrice.RESET;
                                 rSalesPrice.SETRANGE(rSalesPrice."Item No.", rLin."Item No.");
@@ -255,7 +255,7 @@ page 67166 "Ficha de Atenciones"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 67169;
-                RunPageLink = "No. Atención" = FIELD("Codigo");
+                RunPageLink = "No. Atencion" = FIELD("Codigo");
             }
         }
     }
@@ -294,7 +294,7 @@ page 67166 "Ficha de Atenciones"
         Porc: Decimal;
     begin
 
-        Distr.SETRANGE(Distr."No. Atención", Codigo);
+        Distr.SETRANGE(Distr."No. Atencion", Codigo);
         IF NOT Distr.FINDSET THEN
             ERROR(Err001);
 

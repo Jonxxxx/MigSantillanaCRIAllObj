@@ -167,7 +167,7 @@ table 34002133 "Acciones de personal"
         field(10; "Cargo actual"; Code[20])
         {
             Caption = 'Actual job position';
-            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento actual"));
+            TableRelation = "Puestos laborales".Codigo WHERE("Cod. departamento" = FIELD("Departamento actual"));
         }
         field(11; "Descripcion cargo actual"; Text[60])
         {
@@ -178,13 +178,13 @@ table 34002133 "Acciones de personal"
         {
             Caption = 'New job code';
             DataClassification = ToBeClassified;
-            TableRelation = "Puestos laborales".Código WHERE("Cod. departamento" = FIELD("Departamento nuevo"));
+            TableRelation = "Puestos laborales".Codigo WHERE("Cod. departamento" = FIELD("Departamento nuevo"));
 
             trigger OnValidate()
             begin
                 IF "Nuevo cargo" <> '' THEN BEGIN
                     Cargos.GET("Departamento nuevo", "Nuevo cargo");
-                    "Descripcion cargo nuevo" := Cargos.Descripción;
+                    "Descripcion cargo nuevo" := Cargos.Descripcion;
                     NivelesCargos.RESET;
                     NivelesCargos.SETRANGE("Cod. Nivel", Cargos."Cod. nivel");
                     NivelesCargos.FINDSET;

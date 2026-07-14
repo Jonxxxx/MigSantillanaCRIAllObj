@@ -12,13 +12,13 @@ page 67130 "Solicitud - Libros a Presentar"
                 field("Cod. Producto"; "Cod. Producto")
                 {
                 }
-                field("Descripción Producto"; "Descripción Producto")
+                field("Descripcion Producto"; "Descripcion Producto")
                 {
                 }
                 field("Horas por semana"; "Horas por semana")
                 {
                 }
-                field("Año adopción"; "Año adopción")
+                field("Año adopción"; "Ano adopcion")
                 {
                 }
             }

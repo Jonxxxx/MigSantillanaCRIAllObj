@@ -7,7 +7,7 @@ page 56202 "Lista Historial MdE"
     Editable = false;
     PageType = List;
     SourceTable = 56202;
-    SourceTableView = SORTING(No., No. Mov.)
+    SourceTableView = SORTING("No.", "No. Mov.")
                       ORDER(Descending);
     UsageCategory = Lists;
 

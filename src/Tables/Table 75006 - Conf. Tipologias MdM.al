@@ -178,7 +178,7 @@ table 75006 "Conf. Tipologias MdM"
 
     var
         Text0001: Label 'Ya existe una configuraci n %1';
-        cFunMdm: Codeunit 75000;
+        //TODO: Ver cFunMdm: Codeunit 75000;
         Text0002: Label 'El Valor %1 No puede permanecer vacio';
 
     procedure TestDupl()

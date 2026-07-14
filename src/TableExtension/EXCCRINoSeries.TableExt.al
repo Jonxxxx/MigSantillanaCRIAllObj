@@ -11,7 +11,7 @@ tableextension 50047 EXCCRINoSeries extends "No. Series"
         }
         field(34003001; "Descripcion NCF"; Text[60])
         {
-            Caption = 'NCF Description', Comment = 'ESP=Descripción NCF';
+            Caption = 'NCF Description', Comment = 'ESP=Descripcion NCF';
             DataClassification = ToBeClassified;
         }
         field(34003002; "Invoice Copies"; Integer)

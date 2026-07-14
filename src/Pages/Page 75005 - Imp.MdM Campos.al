@@ -32,11 +32,13 @@ page 75005 "Imp.MdM Campos"
                 field("Id Field"; "Id Field")
                 {
                 }
+                //TODO: Ver 
+                /*
                 field(cFumImp.GetFieldCaption("Table Id","Id Field");
                     cFumImp.GetFieldCaption("Table Id","Id Field"))
                 {
                     Caption = 'Nombre Campo';
-                }
+                }*/
                 field(Value; Value)
                 {
                 }
@@ -58,6 +60,6 @@ page 75005 "Imp.MdM Campos"
     }
 
     var
-        cFumImp: Codeunit 75001;
+    //TODO: Ver cFumImp: Codeunit 75001;
 }
 

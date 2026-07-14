@@ -160,9 +160,7 @@ page 67052 "Colegio - Adopciones Detalles"
                         FichaProducto;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action(AdopComp)
                 {
                     Caption = 'Competency Items';
@@ -233,7 +231,7 @@ page 67052 "Colegio - Adopciones Detalles"
         HAdopciones: Record 67035;
         Item: Record 27;
         PptoPromotor: Record 67027;
-        TempAdopciones Record: 67026" temporary;
+        TempAdopciones: Record 67026 temporary;
         GradosCol: Record 67037;
         Editoriales: Record 67024;
         SP: Record 7002;

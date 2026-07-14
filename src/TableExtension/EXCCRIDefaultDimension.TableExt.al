@@ -2,8 +2,8 @@ tableextension 50056 EXCCRIDefaultDimension extends "Default Dimension"
 {
     trigger OnAfterInsert()
     var
-        //TODO: Ver EXCCRICompanyInformationMdE: Codeunit 56201;
-        EXCCRIMdMFunctions: Codeunit 75000;
+    //TODO: Ver EXCCRICompanyInformationMdE: Codeunit 56201;
+    //TODO: Ver EXCCRIMdMFunctions: Codeunit 75000;
     begin
         //TODO: Ver if not EXCCRIFromMdE then
         //TODO: Ver EXCCRICompanyInformationMdE.HorariosCeco(Rec);
@@ -13,8 +13,8 @@ tableextension 50056 EXCCRIDefaultDimension extends "Default Dimension"
 
     trigger OnAfterModify()
     var
-        //TODO: Ver EXCCRICompanyInformationMdE: Codeunit 56201;
-        EXCCRIMdMFunctions: Codeunit 75000;
+    //TODO: Ver EXCCRICompanyInformationMdE: Codeunit 56201;
+    //TODO: Ver EXCCRIMdMFunctions: Codeunit 75000;
     begin
         //TODO: Ver if not EXCCRIFromMdE then
         //TODO: Ver     if "Dimension Value Code" <> xRec."Dimension Value Code" then

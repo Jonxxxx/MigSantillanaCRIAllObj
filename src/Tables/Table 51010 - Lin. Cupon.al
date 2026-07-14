@@ -78,7 +78,7 @@ table 51010 "Lin. Cupon"
         rConfSantillana.GET;
         rLinCupon.RESET;
         rLinCupon.SETRANGE("No. Cupon", "No. Cupon");
-        IF (rLinCupon.COUNT + 1) > rConfSantillana."Cantidad Lineas en Cup n" THEN
+        IF (rLinCupon.COUNT + 1) > rConfSantillana."Cantidad Lineas en Cupon" THEN
             ERROR(Error002);
 
 

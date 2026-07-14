@@ -32,6 +32,8 @@ page 67051 "Colegio - Adopciones Cab"
                     Editable = false;
                     Importance = Promoted;
                 }
+                //TODO: Ver 
+                /*
                 field(FuncAPS.ColCalcInvMuestras("Cod. Colegio");
                     FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
                 {
@@ -54,7 +56,7 @@ page 67051 "Colegio - Adopciones Cab"
                             CLEAR(BCPage);
                         END;
                     end;
-                }
+                }*/
                 field("Cod. Promotor"; "Cod. Promotor")
                 {
                     Editable = false;
@@ -78,6 +80,8 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
+                        //TODO: Ver 
+                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Lin. Negocio");
 
@@ -94,7 +98,7 @@ page 67051 "Colegio - Adopciones Cab"
                             //    CurrPage.TmpAdopciones.FORM.RecibeFiltro("Filtro fecha","Filtro Linea de negocio","Filtro Grupo de Negocio","Filtro Nivel");
                         END;
 
-                        CLEAR(DimForm);
+                        CLEAR(DimForm);*/
                     end;
 
                     trigger OnValidate()
@@ -104,6 +108,8 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
+                //TODO: Ver 
+                /*
                 field("Filtro Nivel"; Filtro)
                 {
                     Caption = 'Level Filter';
@@ -115,12 +121,14 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.RecibeFiltro("Filtro fecha", "Filtro Linea de negocio", "Filtro Grupo de Negocio", "Filtro Nivel",
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
-                }
+                }*/
                 field("Filtro Sub Familia"; "Filtro Sub Familia")
                 {
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
+                        //TODO: Ver 
+                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Sub Familia");
                         DimVal.RESET;
@@ -136,7 +144,7 @@ page 67051 "Colegio - Adopciones Cab"
                                                                      "Filtro Serie", "Filtro Sub Familia");
                         END;
 
-                        CLEAR(DimForm);
+                        CLEAR(DimForm);*/
                     end;
 
                     trigger OnValidate()
@@ -150,6 +158,8 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
+                        //TODO: Ver 
+                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Serie");
                         DimVal.RESET;
@@ -165,7 +175,7 @@ page 67051 "Colegio - Adopciones Cab"
                                                                      "Filtro Serie", "Filtro Sub Familia");
                         END;
 
-                        CLEAR(DimForm);
+                        CLEAR(DimForm);*/
                     end;
 
                     trigger OnValidate()
@@ -226,12 +236,12 @@ page 67051 "Colegio - Adopciones Cab"
             part(TmpAdopciones; 67052)
             {
                 SubPageLink = "Cod. Colegio" = FIELD("Cod. Colegio"),
-                              "Cod. Nivel" = FIELD(FILTER(Filtro Nivel)),
-                              "Cod. Turno"=FIELD("Turno"),
-                              "Cod. Promotor"=FIELD("Cod. Promotor"),
-                              "Linea de negocio"=FIELD(FILTER(Filtro Linea de negocio)),
-                              "Serie"=FIELD(FILTER(Filtro Serie)),
-                              "Sub Familia"=FIELD(FILTER(Filtro Sub Familia));
+                              "Cod. Nivel" = FIELD(FILTER("Filtro Nivel")),
+                              "Cod. Turno" = FIELD("Turno"),
+                              "Cod. Promotor" = FIELD("Cod. Promotor"),
+                              "Linea de negocio" = FIELD(FILTER("Filtro Linea de negocio")),
+                              "Serie" = FIELD(FILTER("Filtro Serie")),
+                              "Sub Familia" = FIELD(FILTER("Filtro Sub Familia"));
             }
         }
     }
@@ -251,7 +261,7 @@ page 67051 "Colegio - Adopciones Cab"
                     PromotedCategory = Category4;
                     PromotedIsBig = true;
                     RunObject = Page 5116;
-                                    RunPageLink = Code=FIELD("Cod. Promotor");
+                    RunPageLink = Code = FIELD("Cod. Promotor");
                     ShortCutKey = 'Shift+F5';
                 }
                 action(FCol)
@@ -261,12 +271,10 @@ page 67051 "Colegio - Adopciones Cab"
                     Promoted = true;
                     PromotedCategory = Category4;
                     PromotedIsBig = true;
-                    RunObject = Page 5050;
-                                    RunPageLink = No.=FIELD("Cod. Colegio");
+                    RunObject = Page "Contact Card";
+                    RunPageLink = "No." = FIELD("Cod. Colegio");
                 }
-                separator()
-                {
-                }
+
                 action(Estad)
                 {
                     Caption = '&Statistic';
@@ -297,7 +305,7 @@ page 67051 "Colegio - Adopciones Cab"
                     var
                         FiltroNivel: Text[100];
                     begin
-                        FuncAPS.InsertaAdopciones("Cod. Colegio",Filtro,"Cod. Promotor",Turno);
+                        //TODO: Ver FuncAPS.InsertaAdopciones("Cod. Colegio",Filtro,"Cod. Promotor",Turno);
                     end;
                 }
             }
@@ -319,12 +327,12 @@ page 67051 "Colegio - Adopciones Cab"
 
     trigger OnOpenPage()
     begin
-        VALIDATE("Cod. Promotor",gCodPromotor);
-        VALIDATE("Cod. Colegio",gCodCol);
+        VALIDATE("Cod. Promotor", gCodPromotor);
+        VALIDATE("Cod. Colegio", gCodCol);
         //VALIDATE("Cod. Local",gCodLocal);
-        VALIDATE("Cod. Nivel",gCodNivel);
-        VALIDATE(Turno,gCodTurno);
-        VALIDATE("Cod. Promotor",gCodPromotor);
+        VALIDATE("Cod. Nivel", gCodNivel);
+        VALIDATE(Turno, gCodTurno);
+        VALIDATE("Cod. Promotor", gCodPromotor);
         IF INSERT(TRUE) THEN;
     end;
 
@@ -335,19 +343,19 @@ page 67051 "Colegio - Adopciones Cab"
         HAdopciones: Record 67035;
         Item: Record 27;
         PptoPromotor: Record 67027;
-        TempAdopciones Record: 67026" temporary;
+        TempAdopciones: Record 67026 temporary;
         GradosCol: Record 67037;
         Editoriales: Record 67024;
         ConfAPS: Record 67000;
         Nivel: Record 67022;
         DefDim: Record 352;
         DimVal: Record 349;
-        FuncAPS: Codeunit 67000;
+        //TODO: Ver FuncAPS: Codeunit 67000;
         Table_ID: Integer;
         MigratedTables: Integer;
         TotalNoOfTables: Integer;
         Window: Dialog;
-        MatrixColumnCaptions: array [100] of Text[100];
+        MatrixColumnCaptions: array[100] of Text[100];
         NoMov: Integer;
         gCodCol: Code[20];
         gCodNivel: Code[20];
@@ -360,8 +368,8 @@ page 67051 "Colegio - Adopciones Cab"
         Counter: Integer;
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';
         Turnos: Page 67003;
-                    DimForm: Page 560;
-                    Filtro: Text[100];
+        DimForm: Page 560;
+        Filtro: Text[100];
 
     procedure RecibeParametros(CodCol: Code[20]; CodNivel: Code[20]; CodPromotor: Code[20]; CodRuta: Code[20]; CodTurno: Code[20])
     begin

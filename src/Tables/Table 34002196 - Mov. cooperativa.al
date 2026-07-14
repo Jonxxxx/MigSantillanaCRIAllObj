@@ -56,7 +56,7 @@ table 34002196 "Mov. cooperativa"
         field(9; "Concepto salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Conceptos salariales".Código;
+            TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
             var

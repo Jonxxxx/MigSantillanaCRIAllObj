@@ -91,7 +91,7 @@ table 67087 "Solicitud - Competencia"
         field(14; "Horas a la semana"; Decimal)
         {
         }
-        field(15; "A o Adopci n"; Code[20])
+        field(15; "Ano adopcion"; Code[20])
         {
         }
     }

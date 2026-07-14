@@ -7,7 +7,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
     // 
     // // Los datos que No trapasan a navision tienen como id Tabla -1
     // // Nos interesa insertar solo los campos de los valores informados. Que pueden venir en blanco. Para ello utilizamos la matriz wInstFld
-    // // wUltCodProd indica el último código de producto utilizado
+    // // wUltCodProd indica el último Codigo de producto utilizado
 
     UseDefaultNamespace = true;
 

@@ -22,7 +22,7 @@ page 56065 "Gestion BackOrder - TL"
                       ORDER(Ascending)
                       WHERE("Item No." = FILTER(<> ''),
                             "Cantidad pendiente BO" = FILTER(<> 0),
-                            "Disponible BackOrder" = FILTER(Yes));
+                            "Disponible BackOrder" = FILTER(True));
     UsageCategory = Lists;
 
     layout
@@ -70,6 +70,8 @@ page 56065 "Gestion BackOrder - TL"
                 {
                     Editable = false;
                 }
+                //TODO: Ver 
+                /*
                 field(SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec);
                     SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
@@ -77,7 +79,7 @@ page 56065 "Gestion BackOrder - TL"
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }
+                }*/
                 field("Cantidad a Ajustar"; "Cantidad a Ajustar")
                 {
                 }
@@ -125,7 +127,7 @@ page 56065 "Gestion BackOrder - TL"
 
                     trigger OnAction()
                     var
-                        ReleaseTransfDoc: Codeunit 5708;
+                        ReleaseTransfDoc: Codeunit "Release Transfer Document";
                     begin
                         //$001
                         TL.COPY(Rec);
@@ -180,9 +182,7 @@ page 56065 "Gestion BackOrder - TL"
                         END;
                     end;
                 }
-                separator()
-                {
-                }
+
                 action("<Action1000000025>")
                 {
                     Caption = '&Sugerir Cantidades';
@@ -207,11 +207,11 @@ page 56065 "Gestion BackOrder - TL"
                                 Window.UPDATE(1, TL."Item No.");
                                 Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
 
-                                cantdisp := SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
+                                //TODO: Ver cantdisp := SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
                                 IF cantdisp > TL."Cantidad pendiente BO" THEN
-                                    TL."Cantidad a Anular" := 0
-                                ELSE
-                                    TL."Cantidad a Anular" := TL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
+                                    TL."Cantidad a Anular" := 0;
+                                //TODO: Ver ELSE
+                                //TODO: Ver     TL."Cantidad a Anular" := TL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
                                 TL."Cantidad a Ajustar" := TL."Cantidad pendiente BO" - TL."Cantidad a Anular";
                                 TL.MODIFY;
                             UNTIL TL.NEXT = 0;
@@ -276,6 +276,8 @@ page 56065 "Gestion BackOrder - TL"
                 IF TL."Cantidad pendiente BO" > 0 THEN BEGIN //+$003
 
                     //Se verifica que la linea no esté en Envios de Almacen
+                    //TODO: Ver 
+                    /*
                     WHSL.RESET;
                     WHSL.SETCURRENTKEY("Source Document", "Source No.");
                     WHSL.SETRANGE("Source No.", TL."Document No.");
@@ -287,7 +289,7 @@ page 56065 "Gestion BackOrder - TL"
                             //+$002
                             TL."Cantidad a Anular" := 0;
                             TL.MODIFY;
-                        END;
+                        END;*/
                     //-$002
 
                     //Se verifica que la linea no esté en Envios de Almacen

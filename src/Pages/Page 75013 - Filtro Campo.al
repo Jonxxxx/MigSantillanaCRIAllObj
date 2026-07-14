@@ -2,7 +2,7 @@ page 75013 "Filtro Campo"
 {
     // YA SE que codigo en la page no es lo suyo
     // El problema es que NO puede estar en la tabla ya que se trata como una tabla "Temporal" todo el tiempo y no cosume licencia
-    // Si introducimos código dentro de la tabla, El sistema Si solicitará licencia para este objeto.
+    // Si introducimos Codigo dentro de la tabla, El sistema Si solicitará licencia para este objeto.
 
     Editable = false;
     PageType = ConfirmationDialog;
@@ -41,7 +41,7 @@ page 75013 "Filtro Campo"
     end;
 
     var
-        cFunMdm: Codeunit 75000;
+    //TODO: Ver cFunMdm: Codeunit 75000;
 
     procedure RellenaTemp(pwTableId: Integer)
     var
@@ -66,7 +66,8 @@ page 75013 "Filtro Campo"
                 InsertaReg(lrFields.TableNo, lrFields."No.", lrFields.FieldName, lrFields."Field Caption");
             UNTIL lrFields.NEXT = 0;
         END;
-
+        //TODO: Ver 
+        /*
         CASE pwTableId OF
             27:
                 BEGIN // Producto
@@ -77,7 +78,7 @@ page 75013 "Filtro Campo"
                         InsertaReg(27, lwIDFld, lwName, lwName);
                     END;
                 END;
-        END;
+        END;*/
     end;
 
     procedure TestCampo(pwIdTable: Integer; pwIdField: Integer)
@@ -96,7 +97,7 @@ page 75013 "Filtro Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(pwIdField + 200);
-                        cFunMdm.GetDimCode(lwIdDim, TRUE);
+                        //TODO: Ver cFunMdm.GetDimCode(lwIdDim, TRUE);
                     END;
             END;
         END

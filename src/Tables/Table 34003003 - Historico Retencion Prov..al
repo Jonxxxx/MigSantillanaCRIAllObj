@@ -10,7 +10,7 @@ table 34003003 "Historico Retencion Prov."
         {
             TableRelation = Vendor;
         }
-        field(2; "Código Retención"; Code[20])
+        field(2; "Codigo Retención"; Code[20])
         {
             TableRelation = "Config. Retencion Proveedores";
         }
@@ -66,7 +66,7 @@ table 34003003 "Historico Retencion Prov."
 
     keys
     {
-        key(Key1; "Tipo documento", "No. documento", "Código Retención")
+        key(Key1; "Tipo documento", "No. documento", "Codigo Retención")
         {
         }
     }

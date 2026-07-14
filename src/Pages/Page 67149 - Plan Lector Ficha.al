@@ -9,7 +9,7 @@ page 67149 "Plan Lector Ficha"
         {
             group(General)
             {
-                field(Campaña; Campaña)
+                field(Campana; Campana)
                 {
                 }
                 field("Cod. Colegio"; "Cod. Colegio")
@@ -37,7 +37,7 @@ page 67149 "Plan Lector Ficha"
                 {
                     Editable = false;
                 }
-                field("Descripción Delegacion"; "Descripción Delegacion")
+                field("Descripcion Delegacion"; "Descripcion Delegacion")
                 {
                     Editable = false;
                 }
@@ -45,7 +45,7 @@ page 67149 "Plan Lector Ficha"
             part(Detalle; 67150)
             {
                 Caption = 'Detalle';
-                SubPageLink = Campaña = FIELD("Campaña"),
+                SubPageLink = Campana = FIELD("Campana"),
                               "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Local" = FIELD("Cod. Local"),
                               "Cod. Turno" = FIELD("Cod. Turno");
@@ -69,7 +69,7 @@ page 67149 "Plan Lector Ficha"
                 begin
                     TESTFIELD("Cod. Colegio");
                     TESTFIELD("Cod. Turno");
-                    Cargar("Cod. Colegio", "Cod. Local", "Cod. Turno", FORMAT(Campaña))
+                    Cargar("Cod. Colegio", "Cod. Local", "Cod. Turno", FORMAT(Campana))
                 end;
             }
         }
@@ -78,7 +78,7 @@ page 67149 "Plan Lector Ficha"
     trigger OnNewRecord(BelowxRec: Boolean)
     begin
 
-        Campaña := FORMAT(recConf.Campana);
+        Campana := FORMAT(recConf.Campana);
     end;
 
     trigger OnOpenPage()
@@ -114,7 +114,7 @@ page 67149 "Plan Lector Ficha"
         IF recGrados.FINDSET THEN
             REPEAT
                 recPL.INIT;
-                recPL.Campaña := Campaña;
+                recPL.Campana := Campana;
                 recPL."Cod. Colegio" := recGrados."Cod. Colegio";
                 recPL."Cod. Local" := recGrados."Cod. Local";
                 recPL."Cod. Turno" := recGrados."Cod. Turno";
@@ -136,7 +136,7 @@ page 67149 "Plan Lector Ficha"
                     recPL."Edit. 1" := 'S';
                     REPEAT
                         recPL."Cant. x Alum 1" += recAdop."Adopcion Real";
-                        recPL."Adopción real" += recAdop."Adopcion Real";
+                        recPL."Adopcion real" += recAdop."Adopcion Real";
                     UNTIL recAdop.NEXT = 0;
                     IF recPL."Cantidad Alumnos" <> 0 THEN
                         recPL.VALIDATE("Cant. x Alum 1", ROUND(recPL."Cant. x Alum 1" / recPL."Cantidad Alumnos", 1));

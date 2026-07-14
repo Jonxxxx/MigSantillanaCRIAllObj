@@ -27,7 +27,7 @@ table 34002501 "Configuracion TPV"
         }
         field(34002502; Descripcion; Text[200])
         {
-            Caption = 'Descripción';
+            Caption = 'Descripcion';
             Description = 'DsPOS Standard';
         }
         field(34002503; "No. serie Facturas"; Code[20])
@@ -97,7 +97,7 @@ table 34002501 "Configuracion TPV"
         field(34002530; "Descripcion tienda"; Text[200])
         {
             CalcFormula = Lookup(Tiendas.Descripcion WHERE("Cod. Tienda" = FIELD("Tienda")));
-            Caption = 'Descripción tienda';
+            Caption = 'Descripcion tienda';
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }

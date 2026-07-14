@@ -136,8 +136,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
                     "Cod. Persona Contacto" := rSol."Cod. Docente responsable";
                     "Nombre Persona Contacto" := rSol."Nombre responsable";
-                    "Tel fono 1 Persona Contacto" := rSol."Telefono Responsable";
-                    "Tel fono 2 Persona Contacto" := rSol."No. celular responsable";
+                    "Telefono 1 Persona Contacto" := rSol."Telefono Responsable";
+                    "Telefono 2 Persona Contacto" := rSol."No. celular responsable";
                     "Cod. Cargo Persona Contacto" := rSol."Cod. Cargo Responsable";
                     "Desc. Cargo Persona Contacto" := rSol."Descripcion Cargo Responsable";
                     "E-mail Persona Contacto" := rSol."E-Mail Docente Responsable";
@@ -162,9 +162,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
                     //TODO: Ver Delegacion := Colegio.Delegacion;
                     "Nombre Colegio" := Colegio.Name;
                     //TODO: Ver "Distrito Colegio" := Colegio.Distritos;
-                    "Direcci n Colegio" := Colegio.Address;
-                    "Tel fono 1 Colegio" := Colegio."Phone No.";
-                    "Tel fono 2 Colegio" := Colegio."Mobile Phone No.";
+                    "Direccion Colegio" := Colegio.Address;
+                    "Telefono 1 Colegio" := Colegio."Phone No.";
+                    "Telefono 2 Colegio" := Colegio."Mobile Phone No.";
                 END;
             end;
         }
@@ -172,7 +172,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
         {
             Editable = false;
         }
-        field(13; "Direcci n Colegio"; Text[100])
+        field(13; "Direccion Colegio"; Text[100])
         {
             Editable = false;
         }
@@ -180,11 +180,11 @@ table 67102 "Cab. Visita Asesor/Consultor"
         {
             Editable = false;
         }
-        field(15; "Tel fono 1 Colegio"; Code[15])
+        field(15; "Telefono 1 Colegio"; Code[15])
         {
             Editable = false;
         }
-        field(16; "Tel fono 2 Colegio"; Code[15])
+        field(16; "Telefono 2 Colegio"; Code[15])
         {
             Editable = false;
         }
@@ -257,8 +257,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
             begin
                 "Cod. Persona Contacto" := '';
                 "Nombre Persona Contacto" := '';
-                "Tel fono 1 Persona Contacto" := '';
-                "Tel fono 2 Persona Contacto" := '';
+                "Telefono 1 Persona Contacto" := '';
+                "Telefono 2 Persona Contacto" := '';
                 "E-mail Persona Contacto" := '';
                 "Cod. Cargo Persona Contacto" := '';
                 "Desc. Cargo Persona Contacto" := '';
@@ -296,8 +296,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
                     IF Doc.GET("Cod. Persona Contacto") THEN BEGIN
                         "Nombre Persona Contacto" := Doc."Full Name";
-                        "Tel fono 1 Persona Contacto" := Doc."Phone No.";
-                        "Tel fono 2 Persona Contacto" := Doc."Mobile Phone No.";
+                        "Telefono 1 Persona Contacto" := Doc."Phone No.";
+                        "Telefono 2 Persona Contacto" := Doc."Mobile Phone No.";
                         "E-mail Persona Contacto" := Doc."E-Mail";
                         ColDoc.SETRANGE("Cod. Colegio", "Cod. Colegio");
                         ColDoc.SETRANGE("Cod. Docente", "Cod. Persona Contacto");
@@ -334,10 +334,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
         {
             Editable = false;
         }
-        field(26; "Tel fono 1 Persona Contacto"; Code[15])
+        field(26; "Telefono 1 Persona Contacto"; Code[15])
         {
         }
-        field(27; "Tel fono 2 Persona Contacto"; Code[15])
+        field(27; "Telefono 2 Persona Contacto"; Code[15])
         {
         }
         field(28; "E-mail Persona Contacto"; Text[30])
@@ -356,10 +356,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
         {
             OptionMembers = Programada,Ejecutada;
         }
-        field(32; "Fecha Pr xima Visita"; Date)
+        field(32; "Fecha Proxima Visita"; Date)
         {
         }
-        field(33; "C d. Objetivo Visita"; Code[20])
+        field(33; "Cod. Objetivo Visita"; Code[20])
         {
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
@@ -367,10 +367,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
             var
                 DA: Record 67002;
             begin
-                IF "C d. Objetivo Visita" <> '' THEN BEGIN
+                IF "Cod. Objetivo Visita" <> '' THEN BEGIN
                     DA.RESET;
                     DA.SETRANGE("Tipo registro", DA."Tipo registro"::Objetivos);
-                    DA.SETRANGE(Codigo, "C d. Objetivo Visita");
+                    DA.SETRANGE(Codigo, "Cod. Objetivo Visita");
                     DA.FINDFIRST;
                     "Desc. Objetivo Visita" := DA.Descripcion;
                 END
@@ -538,11 +538,11 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
         IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
             IF rDoc.GET("Cod. Persona Contacto") THEN
-                IF ("Tel fono 1 Persona Contacto" <> rDoc."Phone No.") OR
-                   ("Tel fono 2 Persona Contacto" <> rDoc."Mobile Phone No.") OR
+                IF ("Telefono 1 Persona Contacto" <> rDoc."Phone No.") OR
+                   ("Telefono 2 Persona Contacto" <> rDoc."Mobile Phone No.") OR
                    ("E-mail Persona Contacto" <> rDoc."E-Mail") THEN BEGIN
-                    rDoc."Phone No." := "Tel fono 1 Persona Contacto";
-                    rDoc."Mobile Phone No." := "Tel fono 2 Persona Contacto";
+                    rDoc."Phone No." := "Telefono 1 Persona Contacto";
+                    rDoc."Mobile Phone No." := "Telefono 2 Persona Contacto";
                     rDoc."E-Mail" := "E-mail Persona Contacto";
                     rDoc.MODIFY;
                 END;

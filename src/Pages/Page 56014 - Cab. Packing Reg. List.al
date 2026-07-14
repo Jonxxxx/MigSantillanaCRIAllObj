@@ -58,7 +58,7 @@ page 56014 "Cab. Packing Reg. List"
         }
         area(factboxes)
         {
-            systempart(; Notes)
+            systempart(Notes; Notes)
             {
             }
         }
@@ -70,11 +70,11 @@ page 56014 "Cab. Packing Reg. List"
 
     trigger OnInit()
     begin
-        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
-        FuncSant: Codeunit 56000;
+        //TODO: Ver FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 }
