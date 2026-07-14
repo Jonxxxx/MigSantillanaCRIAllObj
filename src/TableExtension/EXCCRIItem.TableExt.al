@@ -40,6 +40,8 @@ tableextension 50012 EXCCRIItem extends Item
                 if not EXCCRIItemCategory.Get("Item Category Code") then
                     exit;
 
+                //TODO: Ver
+                /*
                 if "Gen. Prod. Posting Group" = '' then
                     Validate("Gen. Prod. Posting Group", EXCCRIItemCategory."Def. Gen. Prod. Posting Group");
 
@@ -56,7 +58,7 @@ tableextension 50012 EXCCRIItem extends Item
                 if "Tax Group Code" = '' then
                     Validate("Tax Group Code", EXCCRIItemCategory."Def. Tax Group Code");
 
-                Validate("Costing Method", EXCCRIItemCategory."Def. Costing Method");
+                Validate("Costing Method", EXCCRIItemCategory."Def. Costing Method");*/
                 "Gestionado MdM" := EXCCRIItemCategory.MdM;
             end;
         }
