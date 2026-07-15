@@ -1,7 +1,7 @@
 table 34002508 "Log procesos TPV"
 {
     // #121213, RRT, 12.03.2018: Se añade el valor "Eliminar linea" el campo "ID Proceso". De esta forma podrá quedar auditado quien y cuando elimina una línea de factura.
-    // #328529, RRT, 05.08.2020: Se auditará la aplicación de cupones con el fin de prevenir problemas de concurrencia en el mismo cupón.
+    // #328529, RRT, 05.08.2020: Se auditará la aplicacion de cupones con el fin de prevenir problemas de concurrencia en el mismo cupon.
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
 

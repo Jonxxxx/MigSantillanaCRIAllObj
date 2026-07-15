@@ -1,7 +1,7 @@
 page 75010 "Conf. Campos Relacionados"
 {
     ApplicationArea = Basic, Suite, Service;
-    Caption = 'Configuración Campos Relacionados';
+    Caption = 'Configuracion Campos Relacionados';
     PageType = List;
     SourceTable = 75010;
     SourceTableView = SORTING("Id Fld Origen", "Valor Origen");

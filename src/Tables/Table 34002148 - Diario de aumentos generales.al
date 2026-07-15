@@ -6,7 +6,7 @@ table 34002148 "Diario de aumentos generales"
         field(1; "Empresa Cotizacion"; Code[20])
         {
             Caption = 'Business Name';
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
         }
         field(2; "No. empleado"; Code[20])
         {

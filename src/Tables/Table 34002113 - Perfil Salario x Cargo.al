@@ -45,7 +45,7 @@ table 34002113 "Perfil Salario x Cargo"
         field(13; "2da Quincena"; Boolean)
         {
         }
-        field(15; "Fórmula cálculo"; Text[80])
+        field(15; "Formula cálculo"; Text[80])
         {
             DataClassification = ToBeClassified;
         }

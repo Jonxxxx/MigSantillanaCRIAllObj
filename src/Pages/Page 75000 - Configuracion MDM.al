@@ -1,7 +1,7 @@
 page 75000 "Configuracion MDM"
 {
     ApplicationArea = Basic, Suite, Service;
-    Caption = 'Configuración MDM';
+    Caption = 'Configuracion MDM';
     PageType = Card;
     SourceTable = 75000;
     UsageCategory = Administration;
@@ -37,7 +37,7 @@ page 75000 "Configuracion MDM"
                     }
                     field("Dias Borrado Historico"; "Dias Borrado Historico")
                     {
-                        ToolTip = 'Indica con cuantos días tiene que borrarse el histórico.0 No se borra nunca';
+                        ToolTip = 'Indica con cuantos días tiene que borrarse el historico.0 No se borra nunca';
                     }
                     field("Sistema Origen"; "Sistema Origen")
                     {

@@ -29,12 +29,12 @@ tableextension 50069 EXCCRIPostedAssemblyHeader extends "Posted Assembly Header"
         }
         field(56005; "Ultima Fecha Reversion"; Date)
         {
-            Caption = 'Last Reversal Date', Comment = 'ESP=Última Fecha Reversión';
+            Caption = 'Last Reversal Date', Comment = 'ESP=Última Fecha Reversion';
             DataClassification = ToBeClassified;
         }
         field(56006; "Ultimo Almacen Reversion"; Code[20])
         {
-            Caption = 'Last Reversal Location', Comment = 'ESP=Último Almacén Reversión';
+            Caption = 'Last Reversal Location', Comment = 'ESP=Último Almacén Reversion';
             DataClassification = ToBeClassified;
         }
     }

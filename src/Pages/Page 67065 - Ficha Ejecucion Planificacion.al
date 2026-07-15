@@ -215,8 +215,8 @@ page 67065 "Ficha Ejecucion Planificacion"
                         WF: Record 67062;
                         Texto001: Label 'Ya está marcado como programado. ¿Desea quitar la marca?';
                         Texto002: Label '¿Desea marcar como programado?';
-                        Error001: Label 'No se permite realizar esta acción. La visita está registrada.';
-                        Texto003: Label 'La acción se ha realizado con éxito.';
+                        Error001: Label 'No se permite realizar esta accion. La visita está registrada.';
+                        Texto003: Label 'La accion se ha realizado con éxito.';
                         Texto004: Label 'Ya está marcado como programado.';
                     begin
                         IF Estado = Estado::Completado THEN
@@ -303,7 +303,7 @@ page 67065 "Ficha Ejecucion Planificacion"
     var
         recWFobj: Record 67062;
         Texto001: Label '¿Desea %1 sin marcar objetivos?';
-        Error001: Label 'Acción cancelada por el usuario.';
+        Error001: Label 'Accion cancelada por el usuario.';
         recWFprog: Record 67062;
     begin
 
@@ -330,7 +330,7 @@ page 67065 "Ficha Ejecucion Planificacion"
     procedure ValidaPasos(pAccion: Option Registrar,Salir)
     var
         Texto001: Label '¿Desea %1 sin marcar pasos?';
-        Error001: Label 'Acción cancelada por el usuario.';
+        Error001: Label 'Accion cancelada por el usuario.';
         recWFobj: Record 67062;
         recWFpasos: Record 67062;
         Texto002: Label '¿Desea %1 sin marcar algún paso más?';

@@ -8,7 +8,7 @@ page 56002 "Configuracion Santillana"
     // ------------------------------------------------------------------
     // No.       Fecha         Firma         Desscripcion
     // ------------------------------------------------------------------
-    // 001       07-03-2022    FES           SANTINAV-4392: Configuración de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
+    // 001       07-03-2022    FES           SANTINAV-4392: Configuracion de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
     //                                       Adicionar campos "Email Envia Errores Colas" y "Password Email Errores Cola"
     // 
     // #72814 RRT, 30.11.2017: Modificaciones Mde
@@ -121,7 +121,7 @@ page 56002 "Configuracion Santillana"
                 field("No. serie Cupon"; "No. serie Cupon")
                 {
                 }
-                field("Cantidad Lineas en Cupón"; "Cantidad Lineas en Cupon")
+                field("Cantidad Lineas en Cupon"; "Cantidad Lineas en Cupon")
                 {
                 }
                 field("Funcionalidad Imp. Fiscal Act."; "Funcionalidad Imp. Fiscal Act.")
@@ -136,7 +136,7 @@ page 56002 "Configuracion Santillana"
                 field("Impresion Muestras"; "Impresion Muestras")
                 {
                 }
-                field("Cód Cliente Call Center"; "Cod Cliente Call Center")
+                field("Cod Cliente Call Center"; "Cod Cliente Call Center")
                 {
                 }
                 field("Días Borrado Rvas. Call Center"; "Dias Borrado Rvas. Call Center")
@@ -182,7 +182,7 @@ page 56002 "Configuracion Santillana"
                 {
                 }
             }
-            group("Refacturación")
+            group("Refacturacion")
             {
                 field("Almacen refacturacion"; "Almacen refacturacion")
                 {
@@ -197,7 +197,7 @@ page 56002 "Configuracion Santillana"
                 {
                 }
             }
-            group("Factura Electrónica")
+            group("Factura Electronica")
             {
                 field("Funcionalidad FE Activa"; "Funcionalidad FE Activa")
                 {
@@ -219,9 +219,9 @@ page 56002 "Configuracion Santillana"
                 {
                 }
             }
-            group("Gestión Financiera")
+            group("Gestion Financiera")
             {
-                Caption = 'Gestión Financiera';
+                Caption = 'Gestion Financiera';
                 field("Cta. Ingresos Prov. Insolv."; "Cta. Ingresos Prov. Insolv.")
                 {
                     Caption = 'Cta. Ingresos Prov. Insolvencias';

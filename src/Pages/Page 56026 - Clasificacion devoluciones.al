@@ -150,7 +150,7 @@ page 56026 "Clasificacion devoluciones"
             }
             action("<Action1000000021>")
             {
-                Caption = 'Cerrar recepción';
+                Caption = 'Cerrar recepcion';
                 Image = Approve;
                 Promoted = true;
                 PromotedCategory = Process;

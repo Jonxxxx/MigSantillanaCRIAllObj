@@ -284,10 +284,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(E_CodigoCliente; Employee."Codigo Cliente")
                 {
                 }
-                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluído Cotización TSS")
+                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluído Cotizacion TSS")
                 {
                 }
-                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluído Cotización ISR")
+                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluído Cotizacion ISR")
                 {
                 }
                 fieldelement(E_NoSeguridadSocial; Employee."Dia nacimiento")
@@ -330,322 +330,322 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002100; Table34002100)
+            tableelement(Table34002100; 34002100)
             {
                 XmlName = 'EmpresasCotizacion';
-                fieldelement(EC_EmpresaCotizacion; "Empresas Cotización"."Empresa cotización")
+                fieldelement(EC_EmpresaCotizacion; "Empresas Cotizacion"."Empresa cotizacion")
                 {
                 }
-                fieldelement(EC_NombreEmpresaCotizacion; "Empresas Cotización"."Nombre Empresa cotización")
+                fieldelement(EC_NombreEmpresaCotizacion; "Empresas Cotizacion"."Nombre Empresa cotizacion")
                 {
                 }
-                fieldelement(EC_Direccion; "Empresas Cotización"."Dirección")
+                fieldelement(EC_Direccion; "Empresas Cotizacion"."Direccion")
                 {
                 }
-                fieldelement(EC_Numero; "Empresas Cotización"."Número")
+                fieldelement(EC_Numero; "Empresas Cotizacion"."Número")
                 {
                 }
-                fieldelement(EC_CodigoPostal; "Empresas Cotización"."Codigo Postal")
+                fieldelement(EC_CodigoPostal; "Empresas Cotizacion"."Codigo Postal")
                 {
                 }
-                fieldelement(EC_Municipio; "Empresas Cotización".Municipio)
+                fieldelement(EC_Municipio; "Empresas Cotizacion".Municipio)
                 {
                 }
-                fieldelement(EC_Provincia; "Empresas Cotización".Provincia)
+                fieldelement(EC_Provincia; "Empresas Cotizacion".Provincia)
                 {
                 }
-                fieldelement(EC_Telefono; "Empresas Cotización"."Teléfono")
+                fieldelement(EC_Telefono; "Empresas Cotizacion"."Teléfono")
                 {
                 }
-                fieldelement(EC_DomicilioFiscal; "Empresas Cotización"."Domicilio fiscal")
+                fieldelement(EC_DomicilioFiscal; "Empresas Cotizacion"."Domicilio fiscal")
                 {
                 }
-                fieldelement(EC_CodPais; "Empresas Cotización"."Cód. país")
+                fieldelement(EC_CodPais; "Empresas Cotizacion"."Cod. país")
                 {
                 }
-                fieldelement(EC_TipoDocumento; "Empresas Cotización"."Tipo de documento")
+                fieldelement(EC_TipoDocumento; "Empresas Cotizacion"."Tipo de documento")
                 {
                 }
-                fieldelement(EC_RNCCED; "Empresas Cotización"."RNC/CED")
+                fieldelement(EC_RNCCED; "Empresas Cotizacion"."RNC/CED")
                 {
                 }
-                fieldelement(EC_GrupoContable; "Empresas Cotización"."Grupo contable")
+                fieldelement(EC_GrupoContable; "Empresas Cotizacion"."Grupo contable")
                 {
                 }
-                fieldelement(EC_EsquemaPercepcion; "Empresas Cotización"."Esquema percepción")
+                fieldelement(EC_EsquemaPercepcion; "Empresas Cotizacion"."Esquema percepcion")
                 {
                 }
-                fieldelement(EC_Banco; "Empresas Cotización".Banco)
+                fieldelement(EC_Banco; "Empresas Cotizacion".Banco)
                 {
                 }
-                fieldelement(EC_Cuenta; "Empresas Cotización".Cuenta)
+                fieldelement(EC_Cuenta; "Empresas Cotizacion".Cuenta)
                 {
                 }
-                fieldelement(EC_FormaPago; "Empresas Cotización"."Forma de Pago")
+                fieldelement(EC_FormaPago; "Empresas Cotizacion"."Forma de Pago")
                 {
                 }
-                fieldelement(EC_IDVolantePago; "Empresas Cotización"."ID  Volante Pago")
+                fieldelement(EC_IDVolantePago; "Empresas Cotizacion"."ID  Volante Pago")
                 {
                 }
-                fieldelement(EC_Comentario; "Empresas Cotización".Comentario)
+                fieldelement(EC_Comentario; "Empresas Cotizacion".Comentario)
                 {
                 }
-                fieldelement(EC_GlobalDimension1Code; "Empresas Cotización"."Global Dimension 1 Code")
+                fieldelement(EC_GlobalDimension1Code; "Empresas Cotizacion"."Global Dimension 1 Code")
                 {
                 }
-                fieldelement(EC_GlobalDimension2Code; "Empresas Cotización"."Global Dimension 2 Code")
+                fieldelement(EC_GlobalDimension2Code; "Empresas Cotizacion"."Global Dimension 2 Code")
                 {
                 }
-                fieldelement(EC_UltNoContabilizacion; "Empresas Cotización"."Ult. No. Contabilización")
+                fieldelement(EC_UltNoContabilizacion; "Empresas Cotizacion"."Ult. No. Contabilizacion")
                 {
                 }
-                fieldelement(EC_Fax; "Empresas Cotización".Fax)
+                fieldelement(EC_Fax; "Empresas Cotizacion".Fax)
                 {
                 }
-                fieldelement(EC_EMail; "Empresas Cotización"."E-Mail")
+                fieldelement(EC_EMail; "Empresas Cotizacion"."E-Mail")
                 {
                 }
-                fieldelement(EC_IDRNL; "Empresas Cotización"."ID RNL")
+                fieldelement(EC_IDRNL; "Empresas Cotizacion"."ID RNL")
                 {
                 }
-                fieldelement(EC_IDTSS; "Empresas Cotización"."ID TSS")
+                fieldelement(EC_IDTSS; "Empresas Cotizacion"."ID TSS")
                 {
                 }
-                fieldelement(EC_TipoEmpresaTrabajo; "Empresas Cotización"."Tipo Empresa de Trabajo")
+                fieldelement(EC_TipoEmpresaTrabajo; "Empresas Cotizacion"."Tipo Empresa de Trabajo")
                 {
                 }
-                fieldelement(EC_TipoPagoNomina; "Empresas Cotización"."Tipo Pago Nomina")
+                fieldelement(EC_TipoPagoNomina; "Empresas Cotizacion"."Tipo Pago Nomina")
                 {
                 }
-                fieldelement(EC_TasaRiesgo; "Empresas Cotización"."Tasa de Riesgo (%)")
+                fieldelement(EC_TasaRiesgo; "Empresas Cotizacion"."Tasa de Riesgo (%)")
                 {
                 }
-                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotización"."Salario Mínimo TSS")
+                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotizacion"."Salario Mínimo TSS")
                 {
                 }
-                fieldelement(EC_EmployerIdentificationNumber; "Empresas Cotización"."Employer Identification Number")
+                fieldelement(EC_EmployerIdentificationNumber; "Empresas Cotizacion"."Employer Identification Number")
                 {
                 }
-                fieldelement(EC_IdentificadorEmpresa; "Empresas Cotización"."Identificador Empresa")
+                fieldelement(EC_IdentificadorEmpresa; "Empresas Cotizacion"."Identificador Empresa")
                 {
                 }
-                fieldelement(EC_PathArchivoNomina; "Empresas Cotización"."Path archivo Nomina")
+                fieldelement(EC_PathArchivoNomina; "Empresas Cotizacion"."Path archivo Nomina")
                 {
                 }
             }
-            tableelement(Table34002101; Table34002101)
+            tableelement(Table34002101; 34002101)
             {
                 XmlName = 'CentrosTabajo';
-                fieldelement(CT_EmpresaCotizacion; "Centros de Trabajo"."Empresa cotización")
+                fieldelement(CT_EmpresaCotizacion; "Centros de Trabajo"."Empresa cotizacion")
                 {
                 }
                 fieldelement(CT_CentroTrabajo; "Centros de Trabajo"."Centro de trabajo")
                 {
                 }
-                fieldelement(CT_Direccion; "Centros de Trabajo"."Dirección")
+                fieldelement(CT_Direccion; "Centros de Trabajo"."Direccion")
                 {
                 }
                 fieldelement(CT_CP; "Centros de Trabajo"."C.P.")
                 {
                 }
-                fieldelement(CT_Poblacion; "Centros de Trabajo"."Población")
+                fieldelement(CT_Poblacion; "Centros de Trabajo"."Poblacion")
                 {
                 }
                 fieldelement(CT_Provincia; "Centros de Trabajo".Provincia)
                 {
                 }
             }
-            tableelement(Table34002103; Table34002103)
+            tableelement(Table34002103; 34002103)
             {
                 XmlName = 'ConfiguracionNominas';
-                fieldelement(CN_Codigo; "Configuración nominas".Codigo)
+                fieldelement(CN_Codigo; "Configuracion nominas".Codigo)
                 {
                 }
-                fieldelement(CN_NoSerieNominas; "Configuración nominas"."No. serie nominas")
+                fieldelement(CN_NoSerieNominas; "Configuracion nominas"."No. serie nominas")
                 {
                 }
-                fieldelement(CN_NoSserieCxC; "Configuración nominas"."No. serie CxC")
+                fieldelement(CN_NoSserieCxC; "Configuracion nominas"."No. serie CxC")
                 {
                 }
-                fieldelement(CN_NoSerieRegCxC; "Configuración nominas"."No. serie reg. CxC")
+                fieldelement(CN_NoSerieRegCxC; "Configuracion nominas"."No. serie reg. CxC")
                 {
                 }
-                fieldelement(CN_JournalTemplateName; "Configuración nominas"."Journal Template Name")
+                fieldelement(CN_JournalTemplateName; "Configuracion nominas"."Journal Template Name")
                 {
                 }
-                fieldelement(CN_JournalBatchName; "Configuración nominas"."Journal Batch Name")
+                fieldelement(CN_JournalBatchName; "Configuracion nominas"."Journal Batch Name")
                 {
                 }
-                fieldelement(CN_DimensionConceptosSalariales; "Configuración nominas"."Dimension Conceptos Salariales")
+                fieldelement(CN_DimensionConceptosSalariales; "Configuracion nominas"."Dimension Conceptos Salariales")
                 {
                 }
-                fieldelement(CN_IncidenciasAusenciaPropinas; "Configuración nominas"."Incidencias Ausencia Propinas")
+                fieldelement(CN_IncidenciasAusenciaPropinas; "Configuracion nominas"."Incidencias Ausencia Propinas")
                 {
                 }
-                fieldelement(CN_IncidenciasDtoNomina; "Configuración nominas"."Incidencias Dto. Nomina")
+                fieldelement(CN_IncidenciasDtoNomina; "Configuracion nominas"."Incidencias Dto. Nomina")
                 {
                 }
-                fieldelement(CN_ConceptoSalarialIncentivos; "Configuración nominas"."Concepto Incentivos")
+                fieldelement(CN_ConceptoSalarialIncentivos; "Configuracion nominas"."Concepto Incentivos")
                 {
                 }
-                fieldelement(CN_ImpuestosManuales; "Configuración nominas"."Impuestos manuales")
+                fieldelement(CN_ImpuestosManuales; "Configuracion nominas"."Impuestos manuales")
                 {
                 }
-                fieldelement(CN_ConceptoSalarialCxCEmpl; "Configuración nominas"."Concepto CxC Empl.")
+                fieldelement(CN_ConceptoSalarialCxCEmpl; "Configuracion nominas"."Concepto CxC Empl.")
                 {
                 }
-                fieldelement(CN_Incidencia; "Configuración nominas"."Concepto ISR Cobrado en exceso")
+                fieldelement(CN_Incidencia; "Configuracion nominas"."Concepto ISR Cobrado en exceso")
                 {
                 }
-                fieldelement(CN_ConceptoSalBase; "Configuración nominas"."Concepto Sal. Base")
+                fieldelement(CN_ConceptoSalBase; "Configuracion nominas"."Concepto Sal. Base")
                 {
                 }
-                fieldelement(CN_ConceptoISR; "Configuración nominas"."Concepto ISR")
+                fieldelement(CN_ConceptoISR; "Configuracion nominas"."Concepto ISR")
                 {
                 }
-                fieldelement(CN_ConceptoARS; "Configuración nominas"."Concepto Retroactivo")
+                fieldelement(CN_ConceptoARS; "Configuracion nominas"."Concepto Retroactivo")
                 {
                 }
-                fieldelement(CN_ConceptoInasistencia; "Configuración nominas"."Concepto Inasistencia")
+                fieldelement(CN_ConceptoInasistencia; "Configuracion nominas"."Concepto Inasistencia")
                 {
                 }
-                fieldelement(CN_ConceptoAFP; "Configuración nominas"."Concepto AFP")
+                fieldelement(CN_ConceptoAFP; "Configuracion nominas"."Concepto AFP")
                 {
                 }
-                fieldelement(CN_ConceptoSFS; "Configuración nominas"."Concepto SFS")
+                fieldelement(CN_ConceptoSFS; "Configuracion nominas"."Concepto SFS")
                 {
                 }
-                fieldelement(CN_ConceptoRegalia; "Configuración nominas"."Concepto Regalia")
+                fieldelement(CN_ConceptoRegalia; "Configuracion nominas"."Concepto Regalia")
                 {
                 }
-                fieldelement(CN_ConceptoBonificacion; "Configuración nominas"."Concepto Bonificacion")
+                fieldelement(CN_ConceptoBonificacion; "Configuracion nominas"."Concepto Bonificacion")
                 {
                 }
-                fieldelement(CN_ConceptoVacaciones; "Configuración nominas"."Concepto Vacaciones")
+                fieldelement(CN_ConceptoVacaciones; "Configuracion nominas"."Concepto Vacaciones")
                 {
                 }
-                fieldelement(CN_ConceptoHorasExt100; "Configuración nominas"."Concepto Horas Ext. 100%")
+                fieldelement(CN_ConceptoHorasExt100; "Configuracion nominas"."Concepto Horas Ext. 100%")
                 {
                 }
-                fieldelement(CN_ConceptoHorasExt35; "Configuración nominas"."Concepto Horas Ext. 35%")
+                fieldelement(CN_ConceptoHorasExt35; "Configuracion nominas"."Concepto Horas Ext. 35%")
                 {
                 }
-                fieldelement(CN_ConceptoHorasExt15; "Configuración nominas"."Concepto Sal. hora")
+                fieldelement(CN_ConceptoHorasExt15; "Configuracion nominas"."Concepto Sal. hora")
                 {
                 }
-                fieldelement(CN_ConceptoSRL; "Configuración nominas"."Concepto SRL")
+                fieldelement(CN_ConceptoSRL; "Configuracion nominas"."Concepto SRL")
                 {
                 }
-                fieldelement(CN_ConceptoINFOTEP; "Configuración nominas"."Concepto INFOTEP")
+                fieldelement(CN_ConceptoINFOTEP; "Configuracion nominas"."Concepto INFOTEP")
                 {
                 }
-                fieldelement(CN_ConceptoOtrosIngresos3; "Configuración nominas"."Concepto Dias feriados")
+                fieldelement(CN_ConceptoOtrosIngresos3; "Configuracion nominas"."Concepto Dias feriados")
                 {
                 }
-                fieldelement(CN_ConceptoOtrosIngresos4; "Configuración nominas"."Concepto Horas nocturnas")
+                fieldelement(CN_ConceptoOtrosIngresos4; "Configuracion nominas"."Concepto Horas nocturnas")
                 {
                 }
-                fieldelement(CN_ConceptoOtrosIngresos5; "Configuración nominas"."Job Journal Template Name")
+                fieldelement(CN_ConceptoOtrosIngresos5; "Configuracion nominas"."Job Journal Template Name")
                 {
                 }
-                fieldelement(CN_ConceptoOtrasDeducciones1; "Configuración nominas"."Job Journal Batch Name")
+                fieldelement(CN_ConceptoOtrasDeducciones1; "Configuracion nominas"."Job Journal Batch Name")
                 {
                 }
-                fieldelement(CN_ConceptoOtrasDeducciones2; "Configuración nominas"."Concepto Dieta")
+                fieldelement(CN_ConceptoOtrasDeducciones2; "Configuracion nominas"."Concepto Dieta")
                 {
                 }
-                fieldelement(CN_ConceptoOtrasDeducciones3; "Configuración nominas"."Concepto Transporte")
+                fieldelement(CN_ConceptoOtrasDeducciones3; "Configuracion nominas"."Concepto Transporte")
                 {
                 }
-                fieldelement(CN_SalarioMinimo; "Configuración nominas"."Salario Minimo")
+                fieldelement(CN_SalarioMinimo; "Configuracion nominas"."Salario Minimo")
                 {
                 }
-                fieldelement(CN_SecuenciaArchivoBatch; "Configuración nominas"."Secuencia de archivo Batch")
+                fieldelement(CN_SecuenciaArchivoBatch; "Configuracion nominas"."Secuencia de archivo Batch")
                 {
                 }
-                fieldelement(CN_FechaSecuencia; "Configuración nominas"."Fecha secuencia")
+                fieldelement(CN_FechaSecuencia; "Configuracion nominas"."Fecha secuencia")
                 {
                 }
-                fieldelement(CN_MetodoCalculoAusencias; "Configuración nominas"."Método cálculo ausencias")
+                fieldelement(CN_MetodoCalculoAusencias; "Configuracion nominas"."Método cálculo ausencias")
                 {
                 }
-                fieldelement(CN_NoSerieEmpleados; "Configuración nominas"."Concepto devolucion ISR")
+                fieldelement(CN_NoSerieEmpleados; "Configuracion nominas"."Concepto devolucion ISR")
                 {
                 }
-                fieldelement(CN_TasaCambioCalculoDivisa; "Configuración nominas"."Tasa Cambio Calculo Divisa")
+                fieldelement(CN_TasaCambioCalculoDivisa; "Configuracion nominas"."Tasa Cambio Calculo Divisa")
                 {
                 }
-                fieldelement(CN_MetodoCalculoIngresos; "Configuración nominas"."Metodo calculo Ingresos")
+                fieldelement(CN_MetodoCalculoIngresos; "Configuracion nominas"."Metodo calculo Ingresos")
                 {
                 }
-                fieldelement("CN_MetodoCáaculoBajas"; "Configuración nominas"."Metodo calculo Salidas")
+                fieldelement("CN_MetodoCáaculoBajas"; "Configuracion nominas"."Metodo calculo Salidas")
                 {
                 }
-                fieldelement(CN_CodBcoNominasPagoTransf; "Configuración nominas"."Cód. Cta. Nominas Pago Transf.")
+                fieldelement(CN_CodBcoNominasPagoTransf; "Configuracion nominas"."Cod. Cta. Nominas Pago Transf.")
                 {
                 }
-                fieldelement(CN_CodCtaNominasOtrosPagos; "Configuración nominas"."Cta. Nominas Otros Pagos")
+                fieldelement(CN_CodCtaNominasOtrosPagos; "Configuracion nominas"."Cta. Nominas Otros Pagos")
                 {
                 }
-                fieldelement(CN_WebPageTSS; "Configuración nominas"."Web Page TSS")
+                fieldelement(CN_WebPageTSS; "Configuracion nominas"."Web Page TSS")
                 {
                 }
-                fieldelement(CN_WebPageDGII; "Configuración nominas"."Web Page DGII")
+                fieldelement(CN_WebPageDGII; "Configuracion nominas"."Web Page DGII")
                 {
                 }
-                fieldelement(CN_PathArchivosElectronicos; "Configuración nominas"."Path Archivos Electronicos")
+                fieldelement(CN_PathArchivosElectronicos; "Configuracion nominas"."Path Archivos Electronicos")
                 {
                 }
-                fieldelement(CN_ImporteAnualIHSSBaseISR; "Configuración nominas"."Importe Anual IHSS Base ISR")
+                fieldelement(CN_ImporteAnualIHSSBaseISR; "Configuracion nominas"."Importe Anual IHSS Base ISR")
                 {
                 }
-                fieldelement(CN_Disponible; "Configuración nominas"."% dif. Ingresos y descuentos")
+                fieldelement(CN_Disponible; "Configuracion nominas"."% dif. Ingresos y descuentos")
                 {
                 }
-                fieldelement(CN_Disponible2; "Configuración nominas"."Tipo cuenta")
+                fieldelement(CN_Disponible2; "Configuracion nominas"."Tipo cuenta")
                 {
                 }
-                fieldelement(CN_Disponible3; "Configuración nominas"."Vacaciones colectivas")
+                fieldelement(CN_Disponible3; "Configuracion nominas"."Vacaciones colectivas")
                 {
                 }
-                fieldelement(CN_TextoEemailRecibos; "Configuración nominas"."Texto email recibos")
+                fieldelement(CN_TextoEemailRecibos; "Configuracion nominas"."Texto email recibos")
                 {
                 }
-                fieldelement(CN_TiempoEsperaEnvioEemail; "Configuración nominas"."Tiempo espera Envio email")
+                fieldelement(CN_TiempoEsperaEnvioEemail; "Configuracion nominas"."Tiempo espera Envio email")
                 {
                 }
-                fieldelement(CN_JournalTemplateNameCK; "Configuración nominas"."Journal Template Name CK")
+                fieldelement(CN_JournalTemplateNameCK; "Configuracion nominas"."Journal Template Name CK")
                 {
                 }
-                fieldelement(CN_JournalBatchNameCK; "Configuración nominas"."Journal Batch Name CK")
+                fieldelement(CN_JournalBatchNameCK; "Configuracion nominas"."Journal Batch Name CK")
                 {
                 }
-                fieldelement(CN_TipoCtaOtrosPagos; "Configuración nominas"."Tipo Cta. Otros Pagos")
+                fieldelement(CN_TipoCtaOtrosPagos; "Configuracion nominas"."Tipo Cta. Otros Pagos")
                 {
                 }
-                fieldelement(CN_CodeunitCalculoNomina; "Configuración nominas"."Codeunit calculo nomina")
+                fieldelement(CN_CodeunitCalculoNomina; "Configuracion nominas"."Codeunit calculo nomina")
                 {
                 }
-                fieldelement(CN_NominaPais; "Configuración nominas"."Nomina de Pais")
+                fieldelement(CN_NominaPais; "Configuracion nominas"."Nomina de Pais")
                 {
                 }
-                fieldelement(CN_DimensionArea; "Configuración nominas"."No. serie Sol. Prest. Coop.")
+                fieldelement(CN_DimensionArea; "Configuracion nominas"."No. serie Sol. Prest. Coop.")
                 {
                 }
-                fieldelement(CN_DimensionActividad; "Configuración nominas"."No. serie Hist. Prest. Coop.")
+                fieldelement(CN_DimensionActividad; "Configuracion nominas"."No. serie Hist. Prest. Coop.")
                 {
                 }
-                fieldelement(CN_DimensionSubActividad; "Configuración nominas"."Concepto Cuota cooperativa")
+                fieldelement(CN_DimensionSubActividad; "Configuracion nominas"."Concepto Cuota cooperativa")
                 {
                 }
-                fieldelement(CN_DimensionOperacion; "Configuración nominas"."Mod. cooperativa activo")
+                fieldelement(CN_DimensionOperacion; "Configuracion nominas"."Mod. cooperativa activo")
                 {
                 }
             }
-            tableelement(Table34002109; Table34002109)
+            tableelement(Table34002109; 34002109)
             {
                 XmlName = 'Contratos';
-                fieldelement(C_EmpresaCotizacion; Contratos."Empresa cotización")
+                fieldelement(C_EmpresaCotizacion; Contratos."Empresa cotizacion")
                 {
                 }
                 fieldelement(C_NoEempleado; Contratos."No. empleado")
@@ -654,7 +654,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(C_NoOOrden; Contratos."No. Orden")
                 {
                 }
-                fieldelement(C_CodContrato; Contratos."Cód. contrato")
+                fieldelement(C_CodContrato; Contratos."Cod. contrato")
                 {
                 }
                 fieldelement(C_Disponible; Contratos.Disponible)
@@ -669,7 +669,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(C_Duracion; Contratos.Duracion)
                 {
                 }
-                fieldelement(C_FechaFinalizacion; Contratos."Fecha finalización")
+                fieldelement(C_FechaFinalizacion; Contratos."Fecha finalizacion")
                 {
                 }
                 fieldelement(C_Cargo; Contratos.Cargo)
@@ -715,7 +715,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002110; Table34002110)
+            tableelement(Table34002110; 34002110)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(PL_Codigo; "Puestos laborales"."Codigo")
@@ -743,7 +743,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002111; Table34002111)
+            tableelement(Table34002111; 34002111)
             {
                 XmlName = 'ConceptosSalariales';
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")
@@ -761,16 +761,16 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(CS_SalarioBase; "Conceptos salariales"."Salario Base")
                 {
                 }
-                fieldelement("CS_SujetoCotización"; "Conceptos salariales"."Sujeto Cotización")
+                fieldelement("CS_SujetoCotizacion"; "Conceptos salariales"."Sujeto Cotizacion")
                 {
                 }
                 fieldelement(CS_TextoInformativo; "Conceptos salariales"."Texto Informativo")
                 {
                 }
-                fieldelement("CS_FilaImpresiónNómina"; "Conceptos salariales"."Fila Impresión Nómina")
+                fieldelement("CS_FilaImpresionNomina"; "Conceptos salariales"."Fila Impresion Nomina")
                 {
                 }
-                fieldelement("CS_ColImpresiónNómina"; "Conceptos salariales"."Col. Impresión Nómina")
+                fieldelement("CS_ColImpresionNomina"; "Conceptos salariales"."Col. Impresion Nomina")
                 {
                 }
                 fieldelement("CS_ImprimirDescripcion"; "Conceptos salariales"."Imprimir Descripcion")
@@ -782,10 +782,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(CS_NoCuentaCuotaObrera; "Conceptos salariales"."No. Cuenta Cuota Obrera")
                 {
                 }
-                fieldelement("CS_ContabilizaciónResumida"; "Conceptos salariales"."Contabilización Resumida")
+                fieldelement("CS_ContabilizacionResumida"; "Conceptos salariales"."Contabilizacion Resumida")
                 {
                 }
-                fieldelement("CS_ContabilizaciónDimensión"; "Conceptos salariales"."Contabilización x Dimensión")
+                fieldelement("CS_ContabilizacionDimension"; "Conceptos salariales"."Contabilizacion x Dimension")
                 {
                 }
                 fieldelement(CS_SumarRestarCuentaSalarios; "Conceptos salariales"."Sumar/Restar a cuenta salarios")
@@ -861,7 +861,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002112; Table34002112)
+            tableelement(Table34002112; 34002112)
             {
                 XmlName = 'ConfiguracionListados';
                 fieldelement(CL_IDReporte; "Configuracion Listados"."ID Reporte")
@@ -892,10 +892,10 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002115; Table34002115)
+            tableelement(Table34002115; 34002115)
             {
                 XmlName = 'PerfilSalarial';
-                fieldelement("PS_EmpresaCotización"; "Perfil Salarial"."Empresa cotización")
+                fieldelement("PS_EmpresaCotizacion"; "Perfil Salarial"."Empresa cotizacion")
                 {
                 }
                 fieldelement(PS_NoEempleado; "Perfil Salarial"."No. empleado")
@@ -925,7 +925,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_TipoConcepto; "Perfil Salarial"."Tipo concepto")
                 {
                 }
-                fieldelement("PS_SujetoCotización"; "Perfil Salarial"."Sujeto Cotización")
+                fieldelement("PS_SujetoCotizacion"; "Perfil Salarial"."Sujeto Cotizacion")
                 {
                 }
                 fieldelement(PS_CotizaISR; "Perfil Salarial"."Cotiza ISR")
@@ -937,7 +937,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_Prorratear; "Perfil Salarial".Prorratear)
                 {
                 }
-                fieldelement("PS_FormulaCálculo"; "Perfil Salarial"."Fórmula cálculo")
+                fieldelement("PS_FormulaCálculo"; "Perfil Salarial"."Formula cálculo")
                 {
                 }
                 fieldelement("PS_PeríodoGenerac."; "Perfil Salarial"."Período generac.")
@@ -973,7 +973,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_Status; "Perfil Salarial".Status)
                 {
                 }
-                fieldelement("PS_TipoNómina"; "Perfil Salarial"."Tipo Nómina")
+                fieldelement("PS_TipoNomina"; "Perfil Salarial"."Tipo Nomina")
                 {
                 }
                 fieldelement(PS_CotizaAFP; "Perfil Salarial"."Cotiza AFP")
@@ -1034,7 +1034,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002131; Table34002131)
+            tableelement(Table34002131; 34002131)
             {
                 XmlName = 'TablaRetencionISR';
                 fieldelement(TISR_Ano; "Tabla retencion ISR".Ano)
@@ -1046,53 +1046,53 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement("TISR_ImporteMáximo"; "Tabla retencion ISR"."Importe Máximo")
                 {
                 }
-                fieldelement("TISR_ImporteRetención"; "Tabla retencion ISR"."Importe retención")
+                fieldelement("TISR_ImporteRetencion"; "Tabla retencion ISR"."Importe retencion")
                 {
                 }
-                fieldelement("TISR_Retención"; "Tabla retencion ISR"."% Retención")
+                fieldelement("TISR_Retencion"; "Tabla retencion ISR"."% Retencion")
                 {
                 }
             }
-            tableelement(Table34002129; Table34002129)
+            tableelement(Table34002129; 34002129)
             {
-                XmlName = 'TiposCotización';
-                fieldelement(TC_Ano; "Tipos de Cotización".Ano)
+                XmlName = 'TiposCotizacion';
+                fieldelement(TC_Ano; "Tipos de Cotizacion".Ano)
                 {
                 }
-                fieldelement("TC_Codigo"; "Tipos de Cotización"."Codigo")
+                fieldelement("TC_Codigo"; "Tipos de Cotizacion"."Codigo")
                 {
                 }
-                fieldelement("TC_Descripcion"; "Tipos de Cotización"."Descripcion")
+                fieldelement("TC_Descripcion"; "Tipos de Cotizacion"."Descripcion")
                 {
                 }
-                fieldelement(TC_PorcientoEmpresa; "Tipos de Cotización"."Porciento Empresa")
+                fieldelement(TC_PorcientoEmpresa; "Tipos de Cotizacion"."Porciento Empresa")
                 {
                 }
-                fieldelement(TC_PorcientoEmpleado; "Tipos de Cotización"."Porciento Empleado")
+                fieldelement(TC_PorcientoEmpleado; "Tipos de Cotizacion"."Porciento Empleado")
                 {
                 }
-                fieldelement(TC_CuotaEmpresa; "Tipos de Cotización"."Cuota Empresa")
+                fieldelement(TC_CuotaEmpresa; "Tipos de Cotizacion"."Cuota Empresa")
                 {
                 }
-                fieldelement(TC_CuotaEmpleado; "Tipos de Cotización"."Cuota Empleado")
+                fieldelement(TC_CuotaEmpleado; "Tipos de Cotizacion"."Cuota Empleado")
                 {
                 }
-                fieldelement(TC_BaseAplicar; "Tipos de Cotización"."Base aplicar")
+                fieldelement(TC_BaseAplicar; "Tipos de Cotizacion"."Base aplicar")
                 {
                 }
-                fieldelement(TC_TopeSalarialAcumuladoAnual; "Tipos de Cotización"."Tope Salarial/Acumulado Anual")
+                fieldelement(TC_TopeSalarialAcumuladoAnual; "Tipos de Cotizacion"."Tope Salarial/Acumulado Anual")
                 {
                 }
-                fieldelement(TC_AcumulaPor; "Tipos de Cotización"."Acumula por")
+                fieldelement(TC_AcumulaPor; "Tipos de Cotizacion"."Acumula por")
                 {
                 }
-                fieldelement(TC_ControlEscalas; "Tipos de Cotización"."Control por escalas")
+                fieldelement(TC_ControlEscalas; "Tipos de Cotizacion"."Control por escalas")
                 {
                 }
-                fieldelement(TC_PorcientoEmpresaPensionados; "Tipos de Cotización"."Porciento Empresa Pensionados")
+                fieldelement(TC_PorcientoEmpresaPensionados; "Tipos de Cotizacion"."Porciento Empresa Pensionados")
                 {
                 }
-                fieldelement(TC_PorcientoEmpleadoPensionados; "Tipos de Cotización"."Porciento Empleado Pensionados")
+                fieldelement(TC_PorcientoEmpleadoPensionados; "Tipos de Cotizacion"."Porciento Empleado Pensionados")
                 {
                 }
             }
@@ -1153,7 +1153,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table349; Table349)
+            tableelement(Table349; 349)
             {
                 XmlName = 'DimensionValue';
                 fieldelement(DV_DimensionCode; "Dimension Value"."Dimension Code")
@@ -1193,7 +1193,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002107; Table34002107)
+            tableelement(Table34002107; 34002107)
             {
                 XmlName = 'ParametrosCalculoDias';
                 fieldelement(PCD_Codigo; "Parametros Calculo Dias".Codigo)
@@ -1206,7 +1206,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002135; Table34002135)
+            tableelement(Table34002135; 34002135)
             {
                 XmlName = 'Departamentos';
                 fieldelement(D_Codigo; Departamentos.Codigo)
@@ -1216,7 +1216,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002136; Table34002136)
+            tableelement(Table34002136; 34002136)
             {
                 XmlName = 'Sub-Departamentos';
                 fieldelement(SD_CodDepartamento; "Sub-Departamentos"."Cod. Departamento")
@@ -1229,7 +1229,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002104; Table34002104)
+            tableelement(Table34002104; 34002104)
             {
                 XmlName = 'GruposContablesEmpleados';
                 fieldelement("GCE_Codigo"; "Grupos Contables Empleados"."Codigo")
@@ -1239,7 +1239,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002105; Table34002105)
+            tableelement(Table34002105; 34002105)
             {
                 XmlName = 'DistCtasGpoContEmpl';
                 fieldelement("DCGCE_Codigo"; "Dist. Ctas. Gpo. Cont. Empl."."Codigo")
@@ -1288,7 +1288,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002108; Table34002108)
+            tableelement(Table34002108; 34002108)
             {
                 XmlName = 'DistribIngresoPagosElect';
                 fieldelement(DIPE_NoEempleado; "Distrib. Ingreso Pagos Elect."."No. empleado")

@@ -4,16 +4,16 @@ table 34002101 "Centros de Trabajo"
 
     fields
     {
-        field(1; "Empresa cotización"; Code[20])
+        field(1; "Empresa cotizacion"; Code[20])
         {
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
 
             trigger OnValidate()
             begin
-                IF EmpCotizacion.GET("Empresa cotización") THEN BEGIN
-                    IF Dirección = '' THEN
-                        Dirección := EmpCotizacion.Dirección;
-                    Población := EmpCotizacion.Provincia;
+                IF EmpCotizacion.GET("Empresa cotizacion") THEN BEGIN
+                    IF Direccion = '' THEN
+                        Direccion := EmpCotizacion.Direccion;
+                    Poblacion := EmpCotizacion.Provincia;
                     VALIDATE("C.P.", EmpCotizacion."Codigo Postal");
                 END;
             end;
@@ -28,7 +28,7 @@ table 34002101 "Centros de Trabajo"
                 IF STRLEN("Centro de trabajo") < 3 THEN ERROR('Valor comprendido entre 001 y 999');
             end;
         }
-        field(3; "Dirección"; Text[40])
+        field(3; "Direccion"; Text[40])
         {
         }
         field(4; "C.P."; Text[20])
@@ -38,14 +38,14 @@ table 34002101 "Centros de Trabajo"
             trigger OnValidate()
             begin
                 cpostal.SETRANGE(Code, "C.P.");
-                IF Población <> '' THEN
-                    cpostal.SETRANGE(City, Población);
+                IF Poblacion <> '' THEN
+                    cpostal.SETRANGE(City, Poblacion);
                 IF cpostal.FINDFIRST THEN BEGIN
-                    Población := cpostal.City;
+                    Poblacion := cpostal.City;
                 END;
             end;
         }
-        field(5; "Población"; Text[30])
+        field(5; "Poblacion"; Text[30])
         {
         }
         field(6; Provincia; Text[30])
@@ -62,14 +62,14 @@ table 34002101 "Centros de Trabajo"
 
     keys
     {
-        key(Key1; "Empresa cotización", "Centro de trabajo")
+        key(Key1; "Empresa cotizacion", "Centro de trabajo")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Centro de trabajo", Nombre, "Dirección", Provincia)
+        fieldgroup(DropDown; "Centro de trabajo", Nombre, "Direccion", Provincia)
         {
         }
     }

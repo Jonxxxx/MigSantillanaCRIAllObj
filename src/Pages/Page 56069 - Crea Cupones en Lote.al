@@ -57,7 +57,7 @@ page 56069 "Crea Cupones en Lote"
                 {
                     Caption = 'Valid To:';
                 }
-                field("Cód. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; "Cod. Vendedor")
                 {
                     Caption = 'Salesperson Code';
                     TableRelation = "Salesperson/Purchaser";
@@ -127,7 +127,7 @@ page 56069 "Crea Cupones en Lote"
     begin
         //+#140677
         //DELETEALL(TRUE);
-        //... Sólo borramos los del usuario.
+        //... Solo borramos los del usuario.
         SETRANGE(Usuario, USERID);
         DELETEALL(TRUE);
         SETRANGE(Usuario);

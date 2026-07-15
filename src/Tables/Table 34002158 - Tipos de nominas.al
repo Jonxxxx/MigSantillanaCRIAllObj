@@ -67,7 +67,7 @@ table 34002158 "Tipos de nominas"
         }
         field(12; "Tipo de nomina"; Option)
         {
-            Caption = 'Tipo de nómina';
+            Caption = 'Tipo de nomina';
             DataClassification = ToBeClassified;
             OptionCaption = 'Regular,Christmas bonus,Bonus,Extra,Prestaciones,Commission';
             OptionMembers = Regular,Regalia,Bonificacion,Extra,Prestaciones,Comisiones;

@@ -23,7 +23,7 @@ page 67153 "Consulta Últ. Ranking CVM"
                 field(Campaña; Campana)
                 {
                 }
-                field(Delegación; Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
                 field("No. Orden"; "No. Orden")

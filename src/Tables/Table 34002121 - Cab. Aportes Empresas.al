@@ -6,19 +6,19 @@ table 34002121 "Cab. Aportes Empresas"
         field(1; "No. Documento"; Code[20])
         {
         }
-        field(2; "Unidad cotización"; Code[20])
+        field(2; "Unidad cotizacion"; Code[20])
         {
         }
         field(3; "Período"; Date)
         {
         }
-        field(4; "No. Contabilización"; Code[20])
+        field(4; "No. Contabilizacion"; Code[20])
         {
         }
         field(5; "Tipo Nomina"; Option)
         {
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
+            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
         }
         field(6; "Tipo de nomina"; Code[20])
         {
@@ -52,7 +52,7 @@ table 34002121 "Cab. Aportes Empresas"
         key(Key2; "No. Documento")
         {
         }
-        key(Key3; "Unidad cotización", "Período")
+        key(Key3; "Unidad cotizacion", "Período")
         {
         }
     }
@@ -83,7 +83,7 @@ table 34002121 "Cab. Aportes Empresas"
         IF LinCP.FINDSET(TRUE, FALSE) THEN
             //MESSAGE('%1 %2 %3 %4',getfilters);
             REPEAT
-            LinCP.DELETE;
+                LinCP.DELETE;
             UNTIL LinCP.NEXT = 0;
         DELETE;
     end;

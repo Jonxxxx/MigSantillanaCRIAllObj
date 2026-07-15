@@ -1,4 +1,4 @@
-table 34002100 "Empresas Cotización"
+table 34002100 "Empresas Cotizacion"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -8,21 +8,21 @@ table 34002100 "Empresas Cotización"
     // ------------------------------------------------------------------
     // No.       Fecha         Firma         Desscripcion
     // ------------------------------------------------------------------
-    // 001       07-03-2022    FES           SANTINAV-4392: Configuración de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
+    // 001       07-03-2022    FES           SANTINAV-4392: Configuracion de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
 
     //TODO: Ver DrillDownPageID = 34002117;
     //TODO: Ver LookupPageID = 34002117;
 
     fields
     {
-        field(1; "Empresa cotización"; Code[10])
+        field(1; "Empresa cotizacion"; Code[10])
         {
             NotBlank = true;
         }
-        field(2; "Nombre Empresa cotización"; Text[50])
+        field(2; "Nombre Empresa cotizacion"; Text[50])
         {
         }
-        field(3; "Dirección"; Text[100])
+        field(3; "Direccion"; Text[100])
         {
             InitValue = 'CL';
         }
@@ -53,13 +53,13 @@ table 34002100 "Empresas Cotización"
         }
         field(9; "Domicilio fiscal"; Boolean)
         {
-            Description = 'Indica si el domicilio de la unidad de cotización es, a su vez, el domicilio a efectos de presentación de documentos fiscales';
+            Description = 'Indica si el domicilio de la unidad de cotizacion es, a su vez, el domicilio a efectos de presentacion de documentos fiscales';
         }
         field(10; Imagen; BLOB)
         {
             SubType = Bitmap;
         }
-        field(11; "Cód. país"; Code[10])
+        field(11; "Cod. país"; Code[10])
         {
             Description = 'Codigo de país para personas físicas extranjeras';
             TableRelation = "Country/Region";
@@ -76,7 +76,7 @@ table 34002100 "Empresas Cotización"
         {
             TableRelation = "Distribucion Importes TSS";
         }
-        field(15; "Esquema percepción"; Code[10])
+        field(15; "Esquema percepcion"; Code[10])
         {
             TableRelation = "Tipos de acciones personal";
         }
@@ -100,8 +100,8 @@ table 34002100 "Empresas Cotización"
         }
         field(20; Comentario; Boolean)
         {
-            CalcFormula = Exist("Comentarios nómina" WHERE(Tipo = CONST("Empresa cotización"),
-                                                            Codigo = FIELD("Empresa cotización")));
+            CalcFormula = Exist("Comentarios nomina" WHERE(Tipo = CONST("Empresa cotizacion"),
+                                                            Codigo = FIELD("Empresa cotizacion")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -127,7 +127,7 @@ table 34002100 "Empresas Cotización"
                 ValidateShortcutDimCode(2, "Global Dimension 2 Code");
             end;
         }
-        field(23; "Ult. No. Contabilización"; Code[10])
+        field(23; "Ult. No. Contabilizacion"; Code[10])
         {
         }
         field(24; Fax; Text[30])
@@ -184,7 +184,7 @@ table 34002100 "Empresas Cotización"
 
     keys
     {
-        key(Key1; "Empresa cotización")
+        key(Key1; "Empresa cotizacion")
         {
         }
     }
@@ -200,13 +200,13 @@ table 34002100 "Empresas Cotización"
         IF ConfigEmpresa.FIND('-') THEN
            BEGIN
             "ID TSS" := ConfigEmpresa."RNC/CED";
-            "Nombre Empresa cotización" := ConfigEmpresa.Descripcion;
+            "Nombre Empresa cotizacion" := ConfigEmpresa.Descripcion;
            END
         ELSE
           ERROR('Antes debe haber configurado la empresa');
         */
         CentroTrab.INIT;
-        CentroTrab."Empresa cotización" := "Empresa cotización";
+        CentroTrab."Empresa cotizacion" := "Empresa cotizacion";
         CentroTrab."Centro de trabajo" := '001';
         ok := CentroTrab.INSERT;
 
@@ -231,14 +231,14 @@ table 34002100 "Empresas Cotización"
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
         DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización", "Empresa cotización", FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotizacion", "Empresa cotizacion", FieldNumber, ShortcutDimCode);
         MODIFY;
     end;
 
     procedure LookupShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
         DimMgt.LookupDimValueCode(FieldNumber, ShortcutDimCode);
-        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotización", "Empresa cotización", FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::"Empresas Cotizacion", "Empresa cotizacion", FieldNumber, ShortcutDimCode);
     end;
 
     procedure SpecialRelation("Nº de campo": Integer)
@@ -247,8 +247,8 @@ table 34002100 "Empresas Cotización"
 
     procedure Domicilio() DomicilioUdad: Text[50]
     begin
-        IF Dirección <> '' THEN
-            DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Dirección) + Número, 1, 50);
+        IF Direccion <> '' THEN
+            DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Direccion) + Número, 1, 50);
         IF "Codigo Postal" <> '' THEN
             DomicilioUdad := COPYSTR(DomicilioUdad + ', ' + "Codigo Postal", 1, 50);
         IF Municipio <> '' THEN

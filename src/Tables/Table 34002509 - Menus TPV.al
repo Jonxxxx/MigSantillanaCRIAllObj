@@ -128,9 +128,9 @@ table 34002509 "Menus TPV"
     end;
 
     var
-        Error001: Label 'Error de Configuración. El Menú esta configurado como acciones para Tienda %1 TPV %2';
-        Error002: Label 'Error de Configuración. El Menú esta configurado como Menu de Pagos para Tienda %1 TPV %2';
-        Error003: Label 'Proceso Cancelado a Petición del Usuario';
+        Error001: Label 'Error de Configuracion. El Menú esta configurado como acciones para Tienda %1 TPV %2';
+        Error002: Label 'Error de Configuracion. El Menú esta configurado como Menu de Pagos para Tienda %1 TPV %2';
+        Error003: Label 'Proceso Cancelado a Peticion del Usuario';
         Error004: Label 'Imposible Cambiar el Tipo de Menú por tener ya registros configurados, primero debe borrarlos';
         Text001: Label 'El Menu que intenta BORRAR esta asignado a uno o mas TPV''s , ¿Desasignar automáticamente?';
 }

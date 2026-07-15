@@ -124,7 +124,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         }
         field(32; "Forma de pago DGII"; Option)
         {
-            OptionCaption = ' ,1 - Efectivo,2 - Cheques/Transferencias/Depósitos,3 - Tarjeta Crédito/Debito,4 - Compra a crédito, 5 - Permuta,6 - Nota de crédito,7 - Mixto';
+            OptionCaption = ' ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Crédito/Debito,4 - Compra a crédito, 5 - Permuta,6 - Nota de crédito,7 - Mixto';
             OptionMembers = " ","1 - Efectivo","2 - Cheques/Transferencias/Depositos","3 - Tarjeta Credito/Debito","4 - Compra a credito"," 5 - Permuta","6 - Nota de credito","7 - Mixto";
         }
         field(33; "Tipo retencion ISR"; Option)

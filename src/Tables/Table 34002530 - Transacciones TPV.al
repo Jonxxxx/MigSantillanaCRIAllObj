@@ -33,7 +33,7 @@ table 34002530 "Transacciones TPV"
         field(60; "Tipo Transaccion"; Option)
         {
             Caption = 'Transaction Type';
-            OptionCaption = 'Venta,Anulación,Nota de crédito';
+            OptionCaption = 'Venta,Anulacion,Nota de crédito';
             OptionMembers = Venta,Anulacion,Abono;
         }
         field(70; "Id. cajero"; Code[50])
@@ -79,7 +79,7 @@ table 34002530 "Transacciones TPV"
         }
         field(120; "Cod. cliente"; Code[20])
         {
-            Caption = 'Cód. cliente';
+            Caption = 'Cod. cliente';
         }
         field(130; "Nombre cliente"; Text[50])
         {

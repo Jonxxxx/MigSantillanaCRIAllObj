@@ -5,13 +5,13 @@ page 56059 "BackOrders Sin Disp. Transfer."
     //                            Nuevos puntos de menú:
     //                              - Sugerir Cantidad a Anular
     //                              - Actualizar Cantidad Pendiente
-    // $002   14/10/2014    PLB   Utilizar función ActLinBO para actualizar la cantidad anulada
+    // $002   14/10/2014    PLB   Utilizar funcion ActLinBO para actualizar la cantidad anulada
     //                            Campo "Cantidad Anulada"
     //                            Abrir y lanzar la transferencia
     //                            Mejorado rendimiento al abrir formulario
     // 
     // #56090 26/09/2016    PLB   Utilzar la funcion de disponibilidad personalizada para BackOrders
-    //                            Ajustes en la visualización disponibilidad backorders
+    //                            Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Transfer BackOrder Management';

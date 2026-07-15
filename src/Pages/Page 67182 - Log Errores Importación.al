@@ -1,4 +1,4 @@
-page 67182 "Log Errores Importación"
+page 67182 "Log Errores Importacion"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

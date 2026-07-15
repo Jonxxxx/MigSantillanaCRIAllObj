@@ -76,7 +76,7 @@ page 75012 "Valores Filtros Tipologia MdM"
             BEGIN
                 CASE lrFiltroTipo."Valor Id" OF
                     1:
-                        BEGIN // Cód. Grupo Producto
+                        BEGIN // Cod. Grupo Producto
                             CLEAR(lrCodGrProd);
                             COPYFILTER("Filtro Tipologia", lrCodGrProd."Item Category Code");
                             IF lrCodGrProd.FINDSET THEN BEGIN

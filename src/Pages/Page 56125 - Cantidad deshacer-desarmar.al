@@ -15,17 +15,17 @@ page 56125 "Cantidad deshacer-desarmar"
     {
         area(content)
         {
-            field(Cantidad;Cantidad)
+            field(Cantidad; Cantidad)
             {
                 Caption = 'Cantidad a deshacer-desarmar';
             }
-            field(Fecha;Fecha)
+            field(Fecha; Fecha)
             {
                 Caption = 'Fecha';
             }
-            field(CodAlmacen;CodAlm)
+            field(CodAlmacen; CodAlm)
             {
-                Caption = 'Cód. Almacén';
+                Caption = 'Cod. Almacén';
                 TableRelation = Location;
             }
         }

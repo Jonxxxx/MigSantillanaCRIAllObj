@@ -65,7 +65,7 @@ page 67040 "Lista de Docentes"
                 field("Document ID"; "Document ID")
                 {
                 }
-                field("Usuario creación"; "Usuario creacion")
+                field("Usuario creacion"; "Usuario creacion")
                 {
                 }
             }

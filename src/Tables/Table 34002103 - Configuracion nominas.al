@@ -258,7 +258,7 @@ table 34002103 "Configuracion nominas"
         }
         field(43; "Concepto devolucion ISR"; Code[20])
         {
-            Caption = 'Concepto devolución ISR';
+            Caption = 'Concepto devolucion ISR';
             DataClassification = ToBeClassified;
             TableRelation = "Conceptos salariales".Codigo;
         }
@@ -279,7 +279,7 @@ table 34002103 "Configuracion nominas"
             DataClassification = ToBeClassified;
             TableRelation = "Parametros Calculo Dias";
         }
-        field(47; "Cód. Cta. Nominas Pago Transf."; Code[20])
+        field(47; "Cod. Cta. Nominas Pago Transf."; Code[20])
         {
             Caption = 'Account for transfer payments';
             DataClassification = ToBeClassified;

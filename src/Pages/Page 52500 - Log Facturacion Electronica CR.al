@@ -7,7 +7,7 @@ page 52500 "Log Facturacion Electronica CR"
     // --------------------------------------
     // No.  Firma  Fecha        Descripcion
     // --------------------------------------
-    // 001   YFC  14/03/2023    SANTINAV-3030: Error cola facturación electronica
+    // 001   YFC  14/03/2023    SANTINAV-3030: Error cola facturacion electronica
 
     ApplicationArea = Basic, Suite;
     DeleteAllowed = true;

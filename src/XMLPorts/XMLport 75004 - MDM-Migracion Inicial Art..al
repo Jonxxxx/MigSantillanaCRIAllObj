@@ -555,7 +555,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                             FormatoDigital := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Formato Digital", '', wObligaCampos);
                                             PesoDigitalUnidad := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Peso Digital Unidad", '', wObligaCampos);
                                             PesoDigitalValor := '0';
-                                            TipoProteccion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Tipo Protección", '', wObligaCampos);
+                                            TipoProteccion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Tipo Proteccion", '', wObligaCampos);
                                         END
                                         ELSE BEGIN
                                             FormatoDigital := '';
@@ -1222,7 +1222,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                 Derechos_de_Autor := FORMAT(Item."Derecho de autor", 0, 9);
                                 Pais := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::País, Item."Country/Region of Origin Code", FALSE);
 
-                                Edicion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Edición, Item.Edicion, FALSE);
+                                Edicion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Edicion, Item.Edicion, FALSE);
                                 Edicion := GetTexMaxErr(Edicion, 10, Item.FIELDCAPTION(Edicion));
 
                                 Estado := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Estado, Item.Estado, FALSE);
@@ -1404,19 +1404,19 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                     Caption = 'Soporte Papel';
                     TableRelation = "Datos MDM".Codigo WHERE(Tipo = CONST(Soporte),
                                                               Bloqueado = CONST(false));
-                    ToolTip = 'Codigo Soporte que corresponde a "Papel" para discriminar la información de ciertos campos';
+                    ToolTip = 'Codigo Soporte que corresponde a "Papel" para discriminar la informacion de ciertos campos';
                 }
                 field(wTipSLIC; wTipSLIC)
                 {
                     Caption = 'Tipología SLIC';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
-                    ToolTip = 'Codigo de Tipologia que corresponde a SLIC para discriminar la información de determinados campos';
+                    ToolTip = 'Codigo de Tipologia que corresponde a SLIC para discriminar la informacion de determinados campos';
                 }
                 field(wTipSDIG; wTipSDIG)
                 {
                     Caption = 'Tipología SDIG';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
-                    ToolTip = 'Codigo de Tipologia que corresponde a SDIG para discriminar la información de determinados campos';
+                    ToolTip = 'Codigo de Tipologia que corresponde a SDIG para discriminar la informacion de determinados campos';
                 }
             }
         }
@@ -1428,7 +1428,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
     trigger OnInitXmlPort()
     begin
-        wObligaCampos := FALSE; // Refiere a si obliga o no a que campos no requeridos estén debidamente configurados en la tabla de conversión
+        wObligaCampos := FALSE; // Refiere a si obliga o no a que campos no requeridos estén debidamente configurados en la tabla de conversion
     end;
 
     trigger OnPreXmlPort()
@@ -1439,9 +1439,9 @@ xmlport 75004 "MDM-Migracion Inicial Art."
         rConfMdM.TESTFIELD("Divisa Local MdM");
 
         // Valores no incluidos en Navision que han de estar configurados por defecto
-        Encuadernacion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Encuadernación, '', wObligaCampos);
+        Encuadernacion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Encuadernacion, '', wObligaCampos);
         Con_Solapas := BolFormatXML(FALSE); //Booleano sin marcar
-                                            // La fecha de alta con el que se van a cargar en el MdM los productos que se migren de NAV, será a uno del mes en el que se lance el proceso de migración
+                                            // La fecha de alta con el que se van a cargar en el MdM los productos que se migren de NAV, será a uno del mes en el que se lance el proceso de migracion
                                             // Fecha_Alta        := FORMAT(CALCDATE('<CM>', TODAY));
 
         
@@ -1551,7 +1551,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
         END;
 
         wValue := cFunMdM.GetDimValueT(Item."No.", pwId); // Devuelve el valor de la dimension
-        wValue := rConvNavMdM.GetNav2MdM(lwId2, wValue, FALSE); // Mira si hay alguna conversión a MdM
+        wValue := rConvNavMdM.GetNav2MdM(lwId2, wValue, FALSE); // Mira si hay alguna conversion a MdM
         wValue := GetTexMaxErr(wValue, 10, cFunMdM.GetDimNameField(pwId)); // Limita la longitud máxima
     end;
 

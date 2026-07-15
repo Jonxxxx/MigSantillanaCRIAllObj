@@ -33,7 +33,7 @@ page 67131 "Solicitud - Competencia"
                 field("Horas a la semana"; "Horas a la semana")
                 {
                 }
-                field("Año adopción"; "Ano adopcion")
+                field("Año adopcion"; "Ano adopcion")
                 {
                 }
             }

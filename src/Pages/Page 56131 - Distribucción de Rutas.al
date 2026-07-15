@@ -1,4 +1,4 @@
-page 56131 "Distribucción de Rutas"
+page 56131 "Distribuccion de Rutas"
 {
     // #29481  03/09/2015  FAA   Creada para este desarrollo.
 

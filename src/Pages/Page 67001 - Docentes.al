@@ -46,19 +46,19 @@ page 67001 Docentes
                 field("Referencia Direccion"; "Referencia Direccion")
                 {
                 }
-                field("<Cód. país/región>"; "Country/Region Code")
+                field("<Cod. país/region>"; "Country/Region Code")
                 {
                 }
-                field("Cód. Departamento"; County)
+                field("Cod. Departamento"; County)
                 {
                     Caption = 'State';
                     Editable = true;
                 }
-                field("Cód Provincia"; "Post Code")
+                field("Cod Provincia"; "Post Code")
                 {
-                    Caption = 'Cód Provincia';
+                    Caption = 'Cod Provincia';
                 }
-                field("Cód Distrito"; City)
+                field("Cod Distrito"; City)
                 {
                     Caption = 'City';
                 }
@@ -140,7 +140,7 @@ page 67001 Docentes
                 field(Expositor; Expositor)
                 {
                 }
-                //TODO: Ver field("Usuario creación"; "Usuario creación")
+                //TODO: Ver field("Usuario creacion"; "Usuario creacion")
                 //TODO: Ver {
                 //TODO: Ver }
             }

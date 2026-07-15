@@ -2,7 +2,7 @@ table 34002528 "Lin. declaracion caja"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
-    Caption = 'Lín. declaración de caja TPV';
+    Caption = 'Lín. declaracion de caja TPV';
 
     fields
     {
@@ -34,7 +34,7 @@ table 34002528 "Lin. declaracion caja"
                 recTienda: Record 34002503;
                 recFormaPago: Record 34002513;
             begin
-                //Si se requiere arqueo se marca el campo "arqueo requerido" para copiar la configuración de arqueo.
+                //Si se requiere arqueo se marca el campo "arqueo requerido" para copiar la configuracion de arqueo.
 
                 "Requiere recueto" := FALSE;
                 recTienda.GET("No. tienda");

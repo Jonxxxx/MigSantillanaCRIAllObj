@@ -204,7 +204,7 @@ table 34002511 Botones
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = ',Action,Mandatory,Line Action';
-            OptionMembers = ,"Acción",Obligatoria,"Acción Línea";
+            OptionMembers = ,"Accion",Obligatoria,"Accion Línea";
         }
         field(34002515; Orden; Integer)
         {
@@ -293,18 +293,18 @@ table 34002511 Botones
 
     var
         Error001: Label 'Las Formas de Pago Efectivo Local y Tarjetas se añaden automáticamente';
-        Error002: Label 'El pago %1 ya existe en otro botón del menú';
-        Error003: Label 'La Accion %1 ya existe en otro botón del menú';
-        Error004: Label 'El Orden %1 ya existe en otro botón activo del menú';
-        Error005: Label 'No puede Asignar orden 0 a un botón Activo';
+        Error002: Label 'El pago %1 ya existe en otro boton del menú';
+        Error003: Label 'La Accion %1 ya existe en otro boton del menú';
+        Error004: Label 'El Orden %1 ya existe en otro boton activo del menú';
+        Error005: Label 'No puede Asignar orden 0 a un boton Activo';
         Error007: Label 'Orden Debe ser Positivo';
         Error008: Label 'NO se debe configurar orden cuanto Tipo Accion es Obligatoria';
         Error009: Label 'Imposible Modificar un registro Activo';
-        Error010: Label 'Imposible Borrar un Botón Activo';
-        Error011: Label 'Imposible Borrar una acción Obligatoria';
-        Error012: Label 'Cuando Tipo Acción es obligatoria sólo se permite cambiar Etiqueta y Seguridad';
-        Error013: Label 'Proceso Cancelado a Petición del usuario';
-        Text001: Label 'No ha especifacado un % de descuento, el usuario tendrá libertad de especificar el mismo\¿Aún desea activar el botón?';
+        Error010: Label 'Imposible Borrar un Boton Activo';
+        Error011: Label 'Imposible Borrar una accion Obligatoria';
+        Error012: Label 'Cuando Tipo Accion es obligatoria solo se permite cambiar Etiqueta y Seguridad';
+        Error013: Label 'Proceso Cancelado a Peticion del usuario';
+        Text001: Label 'No ha especifacado un % de descuento, el usuario tendrá libertad de especificar el mismo\¿Aún desea activar el boton?';
 
     procedure ComprobarOrden()
     var

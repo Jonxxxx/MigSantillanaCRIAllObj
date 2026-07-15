@@ -22,7 +22,7 @@ tableextension 50019 EXCCRIItemJournalLine extends "Item Journal Line"
         {
             TableRelation =
                 if ("Source Type" = const(Customer)) Customer where(Inactivo = const(false))
-                else if ("Source Type" = const(Vendor)) Vendor where(Inactivo = const(false));
+            else if ("Source Type" = const(Vendor)) Vendor where(Inactivo = const(false));
         }
         modify("Gen. Bus. Posting Group")
         {
@@ -53,7 +53,7 @@ tableextension 50019 EXCCRIItemJournalLine extends "Item Journal Line"
             DataClassification = ToBeClassified;
             TableRelation = Procedencia;
         }
-        field(50004; "Cod. Edición"; Code[20])
+        field(50004; "Cod. Edicion"; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = Edicion;

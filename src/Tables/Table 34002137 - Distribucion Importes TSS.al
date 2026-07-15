@@ -3,29 +3,29 @@ table 34002137 "Distribucion Importes TSS"
 
     fields
     {
-        field(1;Ano;Integer)
+        field(1; Ano; Integer)
         {
         }
-        field(2;"Concepto Salarial";Code[20])
+        field(2; "Concepto Salarial"; Code[20])
         {
             TableRelation = "Conceptos salariales";
         }
-        field(3;"No. orden";Integer)
+        field(3; "No. orden"; Integer)
         {
             AutoIncrement = true;
             Editable = false;
         }
-        field(4;"Importe Máximo";Decimal)
+        field(4; "Importe Máximo"; Decimal)
         {
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
-        field(5;"Importe retención";Decimal)
+        field(5; "Importe retencion"; Decimal)
         {
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
         }
-        field(6;"% Retención";Decimal)
+        field(6; "% Retencion"; Decimal)
         {
-            DecimalPlaces = 2:2;
+            DecimalPlaces = 2 : 2;
             MaxValue = 100;
             MinValue = 0;
         }
@@ -33,7 +33,7 @@ table 34002137 "Distribucion Importes TSS"
 
     keys
     {
-        key(Key1;Ano,"Concepto Salarial","No. orden")
+        key(Key1; Ano, "Concepto Salarial", "No. orden")
         {
         }
     }

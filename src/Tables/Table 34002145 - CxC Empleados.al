@@ -128,7 +128,7 @@ table 34002145 "CxC Empleados"
                 END;
             end;
         }
-        field(11; "Fecha Inicio Deducción"; Date)
+        field(11; "Fecha Inicio Deduccion"; Date)
         {
         }
         field(12; "Nro. Solicitud CK"; Code[20])

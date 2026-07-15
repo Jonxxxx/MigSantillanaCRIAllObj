@@ -11,7 +11,7 @@ table 34002169 "DSPayroll Cue"
         }
         field(2; Loans; Integer)
         {
-            CalcFormula = Count("Histórico Cab. Préstamo" WHERE(Pendiente = CONST(True)));
+            CalcFormula = Count("Historico Cab. Préstamo" WHERE(Pendiente = CONST(True)));
             Caption = 'Pending Loans';
             Editable = false;
             FieldClass = FlowField;
@@ -115,7 +115,7 @@ table 34002169 "DSPayroll Cue"
         }
         field(16; "Contract to expire"; Integer)
         {
-            CalcFormula = Count(Contratos WHERE("Fecha finalización" = FIELD(FILTER("Date Filter")),
+            CalcFormula = Count(Contratos WHERE("Fecha finalizacion" = FIELD(FILTER("Date Filter")),
                                                  Activo = CONST(True)));
             Caption = 'Contract to expire';
             FieldClass = FlowField;

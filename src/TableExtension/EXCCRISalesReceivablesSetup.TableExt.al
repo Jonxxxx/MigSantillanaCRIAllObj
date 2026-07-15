@@ -10,13 +10,13 @@ tableextension 50050 EXCCRISalesReceivablesSetup extends "Sales & Receivables Se
         }
         field(50002; "No. Serie Pedidos Consignacion"; Code[20])
         {
-            Caption = 'Consignment Series No.', Comment = 'ESP=No. Serie Pedidos Consignación';
+            Caption = 'Consignment Series No.', Comment = 'ESP=No. Serie Pedidos Consignacion';
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }
         field(50003; "No. Serie Ident. Devolucion"; Code[20])
         {
-            Caption = 'Return Identifier Series Nos.', Comment = 'ESP=No. Serie Ident. Devolución';
+            Caption = 'Return Identifier Series Nos.', Comment = 'ESP=No. Serie Ident. Devolucion';
             DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }

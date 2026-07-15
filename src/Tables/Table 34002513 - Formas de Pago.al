@@ -1,8 +1,8 @@
 table 34002513 "Formas de Pago"
 {
     // #78451  12/07/2017  PLB: Añadido campo "Forma pago" para seleccionar la forma de pago de Dynamics NAV a cada forma de pago del POS
-    // #116527 07/11/2018  RRT: Adaptaciones para unificación de los objetos en todos los paises
-    // #70132  03.07.2018  RRT: Creación del campo "Tipo compensación NC" para determinar si es una forma de pago que relaciona una NC como medio de pago.
+    // #116527 07/11/2018  RRT: Adaptaciones para unificacion de los objetos en todos los paises
+    // #70132  03.07.2018  RRT: Creacion del campo "Tipo compensacion NC" para determinar si es una forma de pago que relaciona una NC como medio de pago.
 
     Caption = 'Tender Types POS';
     //TODO: Ver DrillDownPageID = 34002514;
@@ -216,7 +216,7 @@ table 34002513 "Formas de Pago"
         error001: Label 'Already exist a Change tender type';
         error002: Label 'Ya existe una forma de pago para divisa %1';
         error003: Label 'IMPOSIBLE BORRAR La forma de pago esta asginada al Menu Pagos %1';
-        Error004: Label 'No puede especificar Codigo Divisa para Exención de IVA';
-        Error005: Label 'Exención de IVA no es configurable';
+        Error004: Label 'No puede especificar Codigo Divisa para Exencion de IVA';
+        Error005: Label 'Exencion de IVA no es configurable';
 }
 

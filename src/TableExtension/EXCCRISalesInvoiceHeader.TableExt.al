@@ -281,7 +281,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
 
         field(56303; "Ruta de Distribucion"; Code[10])
         {
-            Caption = 'Ruta de Distribución';
+            Caption = 'Ruta de Distribucion';
             DataClassification = ToBeClassified;
         }
 

@@ -1,22 +1,22 @@
-table 34002127 "Histórico Puntos Propina"
+table 34002127 "Historico Puntos Propina"
 {
 
     fields
     {
-        field(1;"No. Empleado";Code[20])
+        field(1; "No. Empleado"; Code[20])
         {
         }
-        field(2;"Fecha Aplicacion";Date)
+        field(2; "Fecha Aplicacion"; Date)
         {
         }
-        field(3;Punto;Decimal)
+        field(3; Punto; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"No. Empleado")
+        key(Key1; "No. Empleado")
         {
         }
     }

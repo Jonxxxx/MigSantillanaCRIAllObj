@@ -5048,7 +5048,7 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
                         trigger OnAfterAssignVariable()
                         begin
 
-                            // Es en realidad una modificación sobre producto
+                            // Es en realidad una modificacion sobre producto
                             // cGestM.AddMstReg2(1, 27, 3, Asig_item_pk_Clave, '', 'Asignacion_Autores', '', FALSE);
                             AddMstReg2(27, 3, Asig_item_pk_Clave, '', '', 'Asignacion_Autores', '', FALSE);
                             AddMstRegField(-600, Autor_Catalogo, 'Autor_Catalogo', 1);

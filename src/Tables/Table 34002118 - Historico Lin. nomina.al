@@ -12,11 +12,11 @@ table 34002118 "Historico Lin. nomina"
         {
             TableRelation = Employee;
         }
-        field(3; "Tipo Nómina"; Option)
+        field(3; "Tipo Nomina"; Option)
         {
-            Description = 'Normal,Regalía,Bonificación';
+            Description = 'Normal,Regalía,Bonificacion';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
+            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
         }
         field(4; "Período"; Date)
         {
@@ -34,9 +34,9 @@ table 34002118 "Historico Lin. nomina"
                                                                        "No. empleado" = FIELD("No. empleado")));
             FieldClass = FlowField;
         }
-        field(8; "Empresa cotización"; Code[10])
+        field(8; "Empresa cotizacion"; Code[10])
         {
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
         }
         field(9; "Concepto salarial"; Code[20])
         {
@@ -81,7 +81,7 @@ table 34002118 "Historico Lin. nomina"
         {
             DecimalPlaces = 2 : 2;
         }
-        field(18; "Sujeto Cotización"; Boolean)
+        field(18; "Sujeto Cotizacion"; Boolean)
         {
             InitValue = true;
         }
@@ -99,20 +99,20 @@ table 34002118 "Historico Lin. nomina"
         {
             CaptionClass = '4,4,1';
         }
-        field(22; "Fórmula"; Text[80])
+        field(22; "Formula"; Text[80])
         {
 
             trigger OnValidate()
             begin
-                Fórmula := UPPERCASE(Fórmula);
+                Formula := UPPERCASE(Formula);
 
                 //TODO: Ver 
                 /*
-                IF Fórmula <> '' THEN BEGIN
-                    Regconceptos.Formula := DELCHR(Rec.Fórmula, '=', ' ');
+                IF Formula <> '' THEN BEGIN
+                    Regconceptos.Formula := DELCHR(Rec.Formula, '=', ' ');
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
-                        Regconceptos.Formula := Rec.Fórmula;
+                        Regconceptos.Formula := Rec.Formula;
                         Scanner.RUN(Regconceptos);
                         Parser.RUN(Regconceptos);
                     END;
@@ -271,7 +271,7 @@ table 34002118 "Historico Lin. nomina"
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key2; "No. empleado", "Período", "Tipo Nómina", "Cotiza ISR", "Texto Informativo")
+        key(Key2; "No. empleado", "Período", "Tipo Nomina", "Cotiza ISR", "Texto Informativo")
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
@@ -297,7 +297,7 @@ table 34002118 "Historico Lin. nomina"
         key(Key8; Departamento, "Sub-Departamento", "No. empleado", "Período")
         {
         }
-        key(Key9; "No. empleado", "Tipo Nómina", "Período", "Tipo concepto", "Concepto salarial")
+        key(Key9; "No. empleado", "Tipo Nomina", "Período", "Tipo concepto", "Concepto salarial")
         {
         }
         key(Key10; "Período", Departamento, "Sub-Departamento", "Concepto salarial")

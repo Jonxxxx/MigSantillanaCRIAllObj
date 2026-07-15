@@ -6,11 +6,11 @@ table 34003003 "Historico Retencion Prov."
 
     fields
     {
-        field(1; "Cód. Proveedor"; Code[20])
+        field(1; "Cod. Proveedor"; Code[20])
         {
             TableRelation = Vendor;
         }
-        field(2; "Codigo Retención"; Code[20])
+        field(2; "Codigo Retencion"; Code[20])
         {
             TableRelation = "Config. Retencion Proveedores";
         }
@@ -24,12 +24,12 @@ table 34003003 "Historico Retencion Prov."
         }
         field(5; Devengo; Option)
         {
-            OptionMembers = "Facturación",Pago;
+            OptionMembers = "Facturacion",Pago;
         }
-        field(6; "Importe Retención"; Decimal)
+        field(6; "Importe Retencion"; Decimal)
         {
         }
-        field(7; "Tipo Retención"; Option)
+        field(7; "Tipo Retencion"; Option)
         {
             OptionMembers = Porcentaje,Importe;
         }
@@ -66,7 +66,7 @@ table 34003003 "Historico Retencion Prov."
 
     keys
     {
-        key(Key1; "Tipo documento", "No. documento", "Codigo Retención")
+        key(Key1; "Tipo documento", "No. documento", "Codigo Retencion")
         {
         }
     }

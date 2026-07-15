@@ -6,7 +6,7 @@ page 56010 "Lin. Hoja de Ruta"
     // MOI - 12/12/2014 (#4700): 1 Se añade el control para hacer editable un campo u otro según el valor de Entregado.
     //                           2 En el inicio se muestra
     // 
-    // #29576  08/09/2015  FAA   Se crea nuevo Campo "Ruta de Distribución" y otras modificaciones.
+    // #29576  08/09/2015  FAA   Se crea nuevo Campo "Ruta de Distribucion" y otras modificaciones.
 
     AutoSplitKey = true;
     PageType = ListPart;

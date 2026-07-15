@@ -676,7 +676,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(56303; "Ruta de Distribucion"; Code[10])
         {
             DataClassification = ToBeClassified;
-            Caption = 'Ruta de Distribución';
+            Caption = 'Ruta de Distribucion';
         }
         field(56310; Origen; Option)
         {

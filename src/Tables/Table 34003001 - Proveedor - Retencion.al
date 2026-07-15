@@ -6,11 +6,11 @@ table 34003001 "Proveedor - Retencion"
 
     fields
     {
-        field(1; "Cód. Proveedor"; Code[20])
+        field(1; "Cod. Proveedor"; Code[20])
         {
             TableRelation = Vendor;
         }
-        field(2; "Codigo Retención"; Code[20])
+        field(2; "Codigo Retencion"; Code[20])
         {
             NotBlank = true;
             TableRelation = "Config. Retencion Proveedores";
@@ -28,13 +28,13 @@ table 34003001 "Proveedor - Retencion"
         field(5; Devengo; Option)
         {
             Editable = false;
-            OptionMembers = "Facturación",Pago;
+            OptionMembers = "Facturacion",Pago;
         }
-        field(6; "Importe Retención"; Decimal)
+        field(6; "Importe Retencion"; Decimal)
         {
             Editable = false;
         }
-        field(7; "Tipo Retención"; Option)
+        field(7; "Tipo Retencion"; Option)
         {
             Editable = false;
             OptionMembers = Porcentaje,Importe;
@@ -55,7 +55,7 @@ table 34003001 "Proveedor - Retencion"
 
     keys
     {
-        key(Key1; "Cód. Proveedor", "Codigo Retención")
+        key(Key1; "Cod. Proveedor", "Codigo Retencion")
         {
         }
     }

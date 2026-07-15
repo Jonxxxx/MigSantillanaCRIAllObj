@@ -109,7 +109,7 @@ page 75006 "Conf. Tipologias MdM"
     {
         area(navigation)
         {
-            action("Configuración Campos")
+            action("Configuracion Campos")
             {
                 Image = SetupList;
                 RunObject = Page 75008;

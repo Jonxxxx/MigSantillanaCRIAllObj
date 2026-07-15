@@ -46,7 +46,7 @@ page 67015 "Programac. Talleres y Eventos"
                 {
                     Editable = false;
                 }
-                //TODO: Ver field("Horas Pedagógicas"; "Horas Pedagógicas")
+                //TODO: Ver field("Horas Pedagogicas"; "Horas Pedagogicas")
                 //TODO: Ver {
                 //TODO: Ver }
                 field(Expositor; Expositor)

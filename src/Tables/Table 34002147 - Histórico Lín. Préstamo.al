@@ -1,4 +1,4 @@
-table 34002147 "Histórico Lín. Préstamo"
+table 34002147 "Historico Lín. Préstamo"
 {
     //TODO: Ver DrillDownPageID = 34002135;
     //TODO: Ver LookupPageID = 34002135;
@@ -19,7 +19,7 @@ table 34002147 "Histórico Lín. Préstamo"
         field(4; "No. Cuota"; Integer)
         {
         }
-        field(5; "Fecha Transacción"; Date)
+        field(5; "Fecha Transaccion"; Date)
         {
         }
         field(6; "Codigo Empleado"; Code[20])

@@ -8,7 +8,7 @@ table 34002109 Contratos
 
     fields
     {
-        field(1; "Empresa cotización"; Code[10])
+        field(1; "Empresa cotizacion"; Code[10])
         {
         }
         field(2; "No. empleado"; Code[15])
@@ -18,14 +18,14 @@ table 34002109 Contratos
         field(3; "No. Orden"; Integer)
         {
         }
-        field(4; "Cód. contrato"; Code[5])
+        field(4; "Cod. contrato"; Code[5])
         {
             NotBlank = true;
             TableRelation = "Employment Contract";
 
             trigger OnValidate()
             begin
-                TipoContrato.GET("Cód. contrato");
+                TipoContrato.GET("Cod. contrato");
                 //TODO: Ver Indefinido := TipoContrato.Undefined;
                 Descripcion := TipoContrato.Description;
                 Activo := TRUE;
@@ -57,10 +57,10 @@ table 34002109 Contratos
                 //TODO: Ver END;
 
                 IF Rec."Fecha inicio" <> xRec."Fecha inicio" THEN BEGIN
-                    /*     "Cab.nómina".RESET;
-                         "Cab.nómina".SETRANGE("No. empleado","No. empleado");
-                         "Cab.nómina".SETRANGE(Período,"Fecha inicio","Fecha finalización");
-                         IF "Cab.nómina".FINDFIRST THEN
+                    /*     "Cab.nomina".RESET;
+                         "Cab.nomina".SETRANGE("No. empleado","No. empleado");
+                         "Cab.nomina".SETRANGE(Período,"Fecha inicio","Fecha finalizacion");
+                         IF "Cab.nomina".FINDFIRST THEN
                            ERROR (Err001);
                            */
                     Trabajad."Employment Date" := "Fecha inicio";
@@ -82,19 +82,19 @@ table 34002109 Contratos
 
                 IF Duracion <> '' THEN BEGIN
                     TiempoDurac := COPYSTR(Duracion + '-1D', 1, 30);
-                    "Fecha finalización" := CALCDATE(TiempoDurac, "Fecha inicio");
+                    "Fecha finalizacion" := CALCDATE(TiempoDurac, "Fecha inicio");
                 END;
 
                 Trabajad.GET("No. empleado");
-                //TODO: Ver Trabajad."Fin contrato" := "Fecha finalización";
+                //TODO: Ver Trabajad."Fin contrato" := "Fecha finalizacion";
                 Trabajad.MODIFY;
 
-                TipoContrato.GET("Cód. contrato");
-                //GRN 31/03/2011 IF CALCDATE(Duración,TODAY) < CALCDATE(TipoContrato.Period,TODAY)  THEN
+                TipoContrato.GET("Cod. contrato");
+                //GRN 31/03/2011 IF CALCDATE(Duracion,TODAY) < CALCDATE(TipoContrato.Period,TODAY)  THEN
                 //  ERROR(Err003);
             end;
         }
-        field(9; "Fecha finalización"; Date)
+        field(9; "Fecha finalizacion"; Date)
         {
 
             trigger OnValidate()
@@ -102,8 +102,8 @@ table 34002109 Contratos
                 Trabajad.GET("No. empleado");
                 //IF Trabajad."Fin contrato" = 0D THEN
                 BEGIN
-                    //TODO: Ver Trabajad."Fin contrato" := "Fecha finalización";
-                    Trabajad."Termination Date" := "Fecha finalización";
+                    //TODO: Ver Trabajad."Fin contrato" := "Fecha finalizacion";
+                    Trabajad."Termination Date" := "Fecha finalizacion";
                     //TODO: Ver IF Trabajad."Fin contrato" = 0D THEN
                     //TODO: Ver     Trabajad.Status := Trabajad.Status::Active;
                     Trabajad.MODIFY;
@@ -114,7 +114,7 @@ table 34002109 Contratos
                 ELSE
                    Trabajad."Motivo baja" := "Motivo baja";
                 
-                IF (xRec."Motivo baja" = "Motivo baja") OR (xRec."Fecha finalización" = "Fecha finalización") THEN
+                IF (xRec."Motivo baja" = "Motivo baja") OR (xRec."Fecha finalizacion" = "Fecha finalizacion") THEN
                    Trabajad.MODIFY(TRUE);
                 */
 
@@ -151,7 +151,7 @@ table 34002109 Contratos
                     //TODO: Ver Trabajad."Estado Contrato" := 2;
                     Trabajad.Status := Trabajad.Status::Terminated;
                     //TODO: Ver Trabajad."Calcular Nomina" := FALSE;
-                    //TODO: Ver Trabajad."Fecha salida empresa" := "Fecha finalización";
+                    //TODO: Ver Trabajad."Fecha salida empresa" := "Fecha finalizacion";
                     Trabajad.MODIFY;
                 END;
 
@@ -267,7 +267,7 @@ table 34002109 Contratos
         }
         field(56000; "Grado ocupacion"; Decimal)
         {
-            Caption = 'Grado ocupación';
+            Caption = 'Grado ocupacion';
             DataClassification = ToBeClassified;
             Description = 'MdE';
             MaxValue = 100;
@@ -296,9 +296,9 @@ table 34002109 Contratos
         //TODO: Ver    MdEMngt.Contrato_Delete(Rec);
         //-MdE
 
-        "Cab.nómina".SETRANGE("No. empleado", "No. empleado");
-        "Cab.nómina".SETRANGE(Período, "Fecha inicio", "Fecha finalización");
-        IF "Cab.nómina".FINDFIRST THEN
+        "Cab.nomina".SETRANGE("No. empleado", "No. empleado");
+        "Cab.nomina".SETRANGE(Período, "Fecha inicio", "Fecha finalizacion");
+        IF "Cab.nomina".FINDFIRST THEN
             MESSAGE(Err005);
 
         //+#001
@@ -329,16 +329,16 @@ table 34002109 Contratos
         
         IF Trabajad.GET("No. empleado") THEN
           BEGIN
-            TipoContrato.GET("Cód. contrato");
+            TipoContrato.GET("Cod. contrato");
         //GRN   Trabajad.TESTFIELD(Company);
-            "Empresa cotización" := Trabajad.Company;
+            "Empresa cotizacion" := Trabajad.Company;
             Cargo                := Trabajad."Job Type Code";
             "Centro trabajo"     := Trabajad."Working Center";
             Descripcion          := TipoContrato.Description;
             "Fecha inicio"       := Trabajad."Employment Date";
-            Trabajad."Termination Date"  := "Fecha finalización";
-            Trabajad."Fin contrato"      := "Fecha finalización";
-            Trabajad."Fecha salida empresa" := "Fecha finalización";
+            Trabajad."Termination Date"  := "Fecha finalizacion";
+            Trabajad."Fin contrato"      := "Fecha finalizacion";
+            Trabajad."Fecha salida empresa" := "Fecha finalizacion";
             Trabajad."Alta contrato" := "Fecha inicio";
             Trabajad."Calcular Nomina" := TRUE;
             Trabajad.Status := Trabajad.Status::Active;
@@ -361,17 +361,17 @@ table 34002109 Contratos
         //TODO: Ver     MdEMngt.Contrato_Modify(Rec, xRec);
         //-MdE
 
-        TipoContrato.GET("Cód. contrato");
+        TipoContrato.GET("Cod. contrato");
         //TODO: Ver IF (TipoContrato.Undefined = FALSE) AND ("Fecha inicio" = 0D) THEN
         //TODO: Ver     ERROR(Err004);
 
         //+#001
         /*
         Trabajad.GET("No. empleado");
-        IF "Fecha finalización" <> Trabajad."Termination Date" THEN
+        IF "Fecha finalizacion" <> Trabajad."Termination Date" THEN
            BEGIN
-            Trabajad."Termination Date"  := "Fecha finalización";
-            Trabajad."Fin contrato"      := "Fecha finalización";
+            Trabajad."Termination Date"  := "Fecha finalizacion";
+            Trabajad."Fin contrato"      := "Fecha finalizacion";
            END;
         
         IF NOT TipoContrato.Undefined THEN
@@ -401,7 +401,7 @@ table 34002109 Contratos
         Empresa: Record 34002100;
         Trabajad: Record 5200;
         TipoContrato: Record 5211;
-        "Cab.nómina": Record 34002117;
+        "Cab.nomina": Record 34002117;
         Cont: Record 34002109;
         TiempoDurac: Text[30];
         rCfgNom: Record 34002103;
@@ -430,19 +430,19 @@ table 34002109 Contratos
             Empleado.GET("No. empleado");
             Empleado."Employment Date" := "Fecha inicio";
             //TODO: Ver Empleado."Alta contrato" := "Fecha inicio";
-            Empleado."Termination Date" := "Fecha finalización";
-            //TODO: Ver Empleado."Fin contrato" := "Fecha finalización";
-            //TODO: Ver Empleado."Fecha salida empresa" := "Fecha finalización";
-            //TODO: Ver Empleado.Company := "Empresa cotización";
+            Empleado."Termination Date" := "Fecha finalizacion";
+            //TODO: Ver Empleado."Fin contrato" := "Fecha finalizacion";
+            //TODO: Ver Empleado."Fecha salida empresa" := "Fecha finalizacion";
+            //TODO: Ver Empleado.Company := "Empresa cotizacion";
             //TODO: Ver Empleado."Job Type Code" := Cargo;
             //TODO: Ver Empleado."Working Center" := "Centro trabajo";
-            Empleado."Emplymt. Contract Code" := "Cód. contrato";
+            Empleado."Emplymt. Contract Code" := "Cod. contrato";
 
-            TipoContrato.GET("Cód. contrato");
+            TipoContrato.GET("Cod. contrato");
             //TODO: Ver IF NOT TipoContrato.Undefined THEN
             //TODO: Ver     Empleado."Tipo Empleado" := Empleado."Tipo Empleado"::Temporal;
 
-            IF "Fecha finalización" <> 0D THEN BEGIN
+            IF "Fecha finalizacion" <> 0D THEN BEGIN
                 Empleado.Status := Empleado.Status::Terminated;
                 //TODO: Ver Empleado."Estado Contrato" := Empleado."Estado Contrato"::Finalizado;
             END
@@ -463,20 +463,20 @@ table 34002109 Contratos
         //+#001
         Empleado.GET("No. empleado");
 
-        //TODO: Ver IF "Empresa cotización" = '' THEN
-        //TODO: Ver "Empresa cotización" := Empleado.Company;
+        //TODO: Ver IF "Empresa cotizacion" = '' THEN
+        //TODO: Ver "Empresa cotizacion" := Empleado.Company;
         //TODO: Ver IF Cargo = '' THEN
         //TODO: Ver Cargo := Empleado."Job Type Code";
         //TODO: Ver IF "Centro trabajo" = '' THEN
         //TODO: Ver "Centro trabajo" := Empleado."Working Center";
         IF Descripcion = '' THEN BEGIN
-            IF TipoContrato.GET("Cód. contrato") THEN
+            IF TipoContrato.GET("Cod. contrato") THEN
                 Descripcion := TipoContrato.Description;
         END;
         IF "Fecha inicio" = 0D THEN
             "Fecha inicio" := Empleado."Employment Date";
-        IF "Cód. contrato" = '' THEN
-            "Cód. contrato" := Empleado."Emplymt. Contract Code";
+        IF "Cod. contrato" = '' THEN
+            "Cod. contrato" := Empleado."Emplymt. Contract Code";
     end;
 
     local procedure EsUltimoContrato(): Boolean

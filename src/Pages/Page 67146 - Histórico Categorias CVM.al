@@ -1,4 +1,4 @@
-page 67146 "Histórico Categorias CVM"
+page 67146 "Historico Categorias CVM"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;

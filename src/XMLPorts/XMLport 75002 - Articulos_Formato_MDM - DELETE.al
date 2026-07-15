@@ -1741,7 +1741,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                         trigger OnAfterAssignVariable()
                         begin
-                            // En realidad NO podemos borrar el producto, por lo que lo que hacemos es una modificación de autor
+                            // En realidad NO podemos borrar el producto, por lo que lo que hacemos es una modificacion de autor
                             //AddMstReg2(27, 3, Asig_item_Clave, 'Asignacion_Autores', TRUE);
 
                             AddMstReg(27, 3, Asig_item_Clave, 'Asignacion_Autores');  // Update

@@ -1,6 +1,6 @@
 table 34002111 "Conceptos salariales"
 {
-    // MdE 02/07/2016 PLB: Borramos la relación entre los conceptos NAV y MdE al borrar un concepto NAV
+    // MdE 02/07/2016 PLB: Borramos la relacion entre los conceptos NAV y MdE al borrar un concepto NAV
 
     //TODO: Ver DrillDownPageID = 34002110;
     //TODO: Ver LookupPageID = 34002110;
@@ -60,7 +60,7 @@ table 34002111 "Conceptos salariales"
                 ValidaHistorico(11);
             end;
         }
-        field(6; "Sujeto Cotización"; Boolean)
+        field(6; "Sujeto Cotizacion"; Boolean)
         {
 
             trigger OnValidate()
@@ -78,10 +78,10 @@ table 34002111 "Conceptos salariales"
                 ValidaPerfiles(8);
             end;
         }
-        field(8; "Fila Impresión Nómina"; Integer)
+        field(8; "Fila Impresion Nomina"; Integer)
         {
         }
-        field(9; "Col. Impresión Nómina"; Integer)
+        field(9; "Col. Impresion Nomina"; Integer)
         {
         }
         field(10; "Imprimir Descripcion"; Boolean)
@@ -114,10 +114,10 @@ table 34002111 "Conceptos salariales"
                     ERROR(Err002, FIELDCAPTION("Tipo Cuenta Cuota Obrera"), "Tipo Cuenta Cuota Obrera");
             end;
         }
-        field(13; "Contabilización Resumida"; Boolean)
+        field(13; "Contabilizacion Resumida"; Boolean)
         {
         }
-        field(14; "Contabilización x Dimensión"; Boolean)
+        field(14; "Contabilizacion x Dimension"; Boolean)
         {
         }
         field(15; "Sumar/Restar a cuenta salarios"; Boolean)
@@ -417,7 +417,7 @@ table 34002111 "Conceptos salariales"
                         5:
                             HLN."Cotiza SFS" := "Cotiza SFS";
                         7:
-                            HLN."Sujeto Cotización" := "Sujeto Cotización";
+                            HLN."Sujeto Cotizacion" := "Sujeto Cotizacion";
                         8:
                             HLN."Texto Informativo" := "Texto Informativo";
                         9:
@@ -507,7 +507,7 @@ table 34002111 "Conceptos salariales"
                     6:
                         LPS.Prorratear := Provisionar;
                     7:
-                        LPS."Sujeto Cotización" := "Sujeto Cotización";
+                        LPS."Sujeto Cotizacion" := "Sujeto Cotizacion";
                     8:
                         LPS."Texto Informativo" := "Texto Informativo";
                     9:

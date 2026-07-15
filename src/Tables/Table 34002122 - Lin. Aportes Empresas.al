@@ -6,7 +6,7 @@ table 34002122 "Lin. Aportes Empresas"
         field(1; "No. Documento"; Code[20])
         {
         }
-        field(2; "Empresa cotización"; Code[20])
+        field(2; "Empresa cotizacion"; Code[20])
         {
         }
         field(3; "Período"; Date)
@@ -41,9 +41,9 @@ table 34002122 "Lin. Aportes Empresas"
         }
         field(12; "Tipo Nomina"; Option)
         {
-            Description = 'Normal,Regalía,Bonificación';
+            Description = 'Normal,Regalía,Bonificacion';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
+            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
         }
         field(13; "Job No."; Code[20])
         {
@@ -77,7 +77,7 @@ table 34002122 "Lin. Aportes Empresas"
         key(Key1; "Período", "Tipo de nomina", "No. Empleado", "Job No.", "No. orden")
         {
         }
-        key(Key2; "No. Documento", "Empresa cotización", "Período", "No. Empleado", "Concepto Salarial", "No. orden")
+        key(Key2; "No. Documento", "Empresa cotizacion", "Período", "No. Empleado", "Concepto Salarial", "No. orden")
         {
         }
         key(Key3; "No. Empleado", "Período", "Concepto Salarial")

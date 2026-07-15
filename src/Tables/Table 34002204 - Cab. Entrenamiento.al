@@ -186,7 +186,7 @@ table 34002204 "Cab. Entrenamiento"
         {
             Caption = 'Classroom';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Salón));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Salon));
         }
         field(27; Tipo; Option)
         {

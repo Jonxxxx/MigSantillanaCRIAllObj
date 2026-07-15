@@ -1,19 +1,19 @@
 page 56024 "BackOrders Sin Disp. Ped. Vta"
 {
-    // $001   25/06/2014    PLB   Nueva función BorrarPedidosNoPdtes()
+    // $001   25/06/2014    PLB   Nueva funcion BorrarPedidosNoPdtes()
     //                            Campo "Cantidad a ajustar" editable
     //                            Permitir modificar registro
     //                            Nuevos puntos de menú:
     //                            - Sugerir Cantidad a Anular
     //                            - Actualizar Cantidad Pendiente
     //                            - Borrar Pedidos enviados
-    // $002   13/10/2014    PLB   Utilizar función ActLinBO para actualizar la cantidad anulada
+    // $002   13/10/2014    PLB   Utilizar funcion ActLinBO para actualizar la cantidad anulada
     //                            Campo "Cantidad Anulada"
     //                            Abrir y lanzar los pedidos
     //                            Mejorar rendimiento al abrir página
     // MOI - 23/02/2015(#9653): Se muestran las lineas de venta que tienen disponibilidad negativa.
     // 
-    // #56090 27/09/2016    PLB   Ajustes en la visualización disponibilidad backorders
+    // #56090 27/09/2016    PLB   Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -331,7 +331,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
         salesheader: Record 36;
         //TODO: Ver AppTemp: Record 464;
         //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
-        EstatusPed: Option Abierto,Lanzado,"Aprobación pendiente","Anticipo pendiente";
+        EstatusPed: Option Abierto,Lanzado,"Aprobacion pendiente","Anticipo pendiente";
         UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;

@@ -1,9 +1,9 @@
 page 56043 "Estadisticas de Vtas. (EXCEL)"
 {
-    // 001 #56799 21.09.2016, RRT: Creación del objeto.
-    // 002 #56799 30.09.2016, RRT: Corrección para permitir la simultaneidad de ejecuciones.
+    // 001 #56799 21.09.2016, RRT: Creacion del objeto.
+    // 002 #56799 30.09.2016, RRT: Correccion para permitir la simultaneidad de ejecuciones.
     // 003 #57840 RRT 13.10.2016: Mostrar el "grupo contable negocio" y la linea de negocio en el formato EXCEL. Poder filtrar por estos campos.
-    // 004 #57840 RRT 18.10.2016: El usuario dice que con Excel 2016 tarda mucho y que antes no pasaba. Hago un pequeño cambio para no determinar la extensión.
+    // 004 #57840 RRT 18.10.2016: El usuario dice que con Excel 2016 tarda mucho y que antes no pasaba. Hago un pequeño cambio para no determinar la extension.
     // 
     // 
     // Proyecto: Microsoft Dynamics Business Central
@@ -138,7 +138,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
                 trigger OnAction()
                 var
                     //TODO: Ver lReporteVentas: Report 56138;
-                    TextL001: Label 'Se generó el archivo de texto en la carpeta indicada %1, con el nombre %2';
+                    TextL001: Label 'Se genero el archivo de texto en la carpeta indicada %1, con el nombre %2';
                     TextL002: Label 'Fatla indicar la carpeta o bien el nombre del archivo a generar.';
                     TextL003: Label 'Falta indicar el ámbito de fechas.';
                     TextL004: Label 'Creando archivo Excel';

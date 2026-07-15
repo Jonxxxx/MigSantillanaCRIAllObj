@@ -1,6 +1,6 @@
 table 34002521 "Pagos TPV"
 {
-    // #70132  19.06.2018 RRT  Creación de los campos "NCR regis. de compensación"
+    // #70132  19.06.2018 RRT  Creacion de los campos "NCR regis. de compensacion"
     // #184407 10.04.2018, RRT: Al igual que en Bolivia, se crea el campo "Registrado TPV".
     // 
     // RRT, 05.07.17: Por indicacion de PLB, no se debe testear el num de factura introducido. Esto ya se realizaba en las notad de credito.
@@ -161,7 +161,7 @@ table 34002521 "Pagos TPV"
         }
         field(34002541; "No. Documento Exencion"; Text[50])
         {
-            Caption = 'No. Documento Exención';
+            Caption = 'No. Documento Exencion';
             Description = 'DsPOS Standar';
         }
         field(34002545; "Registrado TPV"; Boolean)
@@ -221,7 +221,7 @@ table 34002521 "Pagos TPV"
     end;
 
     var
-        Error001: Label 'Imposible Borrar, renombrar ó modificar';
+        Error001: Label 'Imposible Borrar, renombrar o modificar';
         recCurrExchRate: Record 330;
 }
 

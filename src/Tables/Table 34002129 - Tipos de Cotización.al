@@ -1,4 +1,4 @@
-table 34002129 "Tipos de Cotización"
+table 34002129 "Tipos de Cotizacion"
 {
     //TODO: Ver DrillDownPageID = 34002146;
     //TODO: Ver LookupPageID = 34002146;

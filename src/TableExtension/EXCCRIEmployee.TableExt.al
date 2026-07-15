@@ -55,8 +55,8 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
                 EXCCRIContract.Validate("No. empleado", "No.");
                 EXCCRIContract."No. Orden" := 100;
-                EXCCRIContract.Validate("Empresa cotización", Company);
-                EXCCRIContract.Validate("Cód. contrato", "Emplymt. Contract Code");
+                EXCCRIContract.Validate("Empresa cotizacion", Company);
+                EXCCRIContract.Validate("Cod. contrato", "Emplymt. Contract Code");
                 EXCCRIContract."Frecuencia de pago" := EXCCRICompany."Tipo Pago Nomina";
 
                 if not EXCCRIContract.Insert() then
@@ -106,7 +106,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002100; "Company"; Code[10])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
         }
 
         field(34002101; "Second Last Name"; Text[30])
@@ -122,7 +122,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002102; "Working Center"; Code[10])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Centros de Trabajo"."Centro de trabajo" where("Empresa cotización" = field(Company));
+            TableRelation = "Centros de Trabajo"."Centro de trabajo" where("Empresa cotizacion" = field(Company));
         }
 
         field(34002103; "Full Name"; Text[50])
@@ -149,7 +149,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
             trigger OnValidate()
             begin
-                "Excluído Cotización TSS" :=
+                "Excluído Cotizacion TSS" :=
                     "Document Type" <> "Document Type"::Cédula;
             end;
         }
@@ -252,7 +252,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002119; "Estado civil"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Unión libre";
+            OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
 
         field(34002120; "Disponible 1"; Code[20])
@@ -330,13 +330,13 @@ tableextension 50074 EXCCRIEmployee extends Employee
             TableRelation = Customer."No.";
         }
 
-        field(34002132; "Excluído Cotización TSS"; Boolean)
+        field(34002132; "Excluído Cotizacion TSS"; Boolean)
         {
             DataClassification = ToBeClassified;
             InitValue = false;
         }
 
-        field(34002133; "Excluído Cotización ISR"; Boolean)
+        field(34002133; "Excluído Cotizacion ISR"; Boolean)
         {
             DataClassification = ToBeClassified;
         }
@@ -758,7 +758,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
                         EXCCRIPositionProfile."Concepto salarial");
 
                     EXCCRISalaryProfileLine.Validate(
-                        "Empresa cotización",
+                        "Empresa cotizacion",
                         Company);
                     EXCCRISalaryProfileLine.Validate(
                         "No. empleado",
@@ -778,7 +778,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         EXCCRIContract.SetRange("No. empleado", "No.");
         EXCCRIContract.SetRange(Activo, true);
         if EXCCRIContract.FindFirst() then begin
-            EXCCRIContract."Empresa cotización" := Company;
+            EXCCRIContract."Empresa cotizacion" := Company;
             EXCCRIContract.Cargo := "Job Type Code";
             EXCCRIContract."Centro trabajo" := "Working Center";
             EXCCRIContract.Modify();

@@ -4,7 +4,7 @@ table 34002102 "Representantes Empresa"
 
     fields
     {
-        field(1; "Empresa cotización"; Code[10])
+        field(1; "Empresa cotizacion"; Code[10])
         {
             Caption = 'Company';
         }
@@ -33,9 +33,9 @@ table 34002102 "Representantes Empresa"
                 END;
             end;
         }
-        field(6; "Población"; Text[30])
+        field(6; "Poblacion"; Text[30])
         {
-            Caption = 'Población';
+            Caption = 'Poblacion';
         }
         field(7; County; Text[30])
         {
@@ -60,7 +60,7 @@ table 34002102 "Representantes Empresa"
                     Address := Emp.Address;
                     "C.P." := Emp."Post Code";
                     Teléfono := Emp."Phone No.";
-                    Población := Emp."Country/Region Code";
+                    Poblacion := Emp."Country/Region Code";
                     County := Emp.County;
                 END;
             end;
@@ -81,7 +81,7 @@ table 34002102 "Representantes Empresa"
 
     keys
     {
-        key(Key1; "Empresa cotización", "No. Orden")
+        key(Key1; "Empresa cotizacion", "No. Orden")
         {
         }
     }
@@ -97,24 +97,24 @@ table 34002102 "Representantes Empresa"
     procedure "Recoger representantes"(var "Repres.": Record 34002102; "Unidad cotizacion": Code[10]; "Centro de trabajo": Code[10]; Figurar: Integer)
     begin
         "Repres.".RESET;
-        "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+        "Repres.".SETRANGE("Repres."."Empresa cotizacion", "Empresa cotizacion");
         //"Repres.".SETRANGE("Repres."."Centro de trabajo","Centro de trabajo");
         "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
         "Repres.".SETRANGE("Repres.".Figurar, Figurar);
         IF NOT "Repres.".FIND('+') THEN BEGIN
             "Repres.".RESET;
-            "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+            "Repres.".SETRANGE("Repres."."Empresa cotizacion", "Empresa cotizacion");
             //  "Repres.".SETRANGE("Repres."."Centro de trabajo","Centro de trabajo");
             "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
             "Repres.".SETRANGE("Repres.".Figurar, "Repres.".Figurar::"Todo tipo documento");
             IF NOT "Repres.".FIND('+') THEN BEGIN
                 "Repres.".RESET;
-                "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+                "Repres.".SETRANGE("Repres."."Empresa cotizacion", "Empresa cotizacion");
                 "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
                 "Repres.".SETRANGE("Repres.".Figurar, Figurar);
                 IF NOT "Repres.".FIND('+') THEN BEGIN
                     "Repres.".RESET;
-                    "Repres.".SETRANGE("Repres."."Empresa cotización", "Empresa cotización");
+                    "Repres.".SETRANGE("Repres."."Empresa cotizacion", "Empresa cotizacion");
                     "Repres.".SETFILTER(Nombre, '<>%1', '');  // 17/12/99
                     "Repres.".SETRANGE("Repres.".Figurar, "Repres.".Figurar::"Todo tipo documento");
                     IF NOT "Repres.".FIND('+') THEN BEGIN

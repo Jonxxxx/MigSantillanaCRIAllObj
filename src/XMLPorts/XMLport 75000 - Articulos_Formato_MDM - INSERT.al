@@ -3655,7 +3655,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             AddMstReg2(27, 1, Clave, Titulo_Catalogo, 'Articulos_GENERAL', '', TRUE);
 
-                            // En la insercción tenemos la clave Mdm
+                            // En la inserccion tenemos la clave Mdm
                             //AddMstRegField2(1, Clave,  'Clave', TRUE,1); // Clave MdM
                             AddMstRegField2(2, Clave, 'Clave MdM', FALSE, 1); // Clave MdM
                             AddMstRegField(5702, Tipologia, 'Tipologia', 2);

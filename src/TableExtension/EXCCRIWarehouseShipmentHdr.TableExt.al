@@ -14,7 +14,7 @@ tableextension 50109 EXCCRIWarehouseShipmentHdr extends "Warehouse Shipment Head
         }
         field(51002; "Driver Code"; Code[10])
         {
-            Caption = 'Driver Code', Comment = 'ESP=Cód. chofer';
+            Caption = 'Driver Code', Comment = 'ESP=Cod. chofer';
             DataClassification = ToBeClassified;
             TableRelation = "Lista de Choferes";
 

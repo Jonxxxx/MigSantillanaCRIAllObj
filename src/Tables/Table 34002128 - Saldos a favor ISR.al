@@ -3,7 +3,7 @@ table 34002128 "Saldos a favor ISR"
 
     fields
     {
-        field(1; "Cód. Empleado"; Code[15])
+        field(1; "Cod. Empleado"; Code[15])
         {
             TableRelation = Employee;
         }
@@ -24,7 +24,7 @@ table 34002128 "Saldos a favor ISR"
         }
         field(5; "Full Name"; Text[50])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cód. Empleado")));
+            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             Editable = false;
             FieldClass = FlowField;
@@ -33,7 +33,7 @@ table 34002128 "Saldos a favor ISR"
 
     keys
     {
-        key(Key1; "Cód. Empleado", Ano)
+        key(Key1; "Cod. Empleado", Ano)
         {
         }
     }

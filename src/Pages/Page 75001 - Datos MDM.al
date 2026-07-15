@@ -18,7 +18,7 @@ page 75001 "Datos MDM"
                     Caption = 'Tipo';
                     Editable = wEditable;
                     Importance = Promoted;
-                    OptionCaption = 'Tipo Producto,Soporte,Editora,Nivel,Plan Editorial,Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edición,Estado,Campaña';
+                    OptionCaption = 'Tipo Producto,Soporte,Editora,Nivel,Plan Editorial,Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,Campaña';
 
                     trigger OnValidate()
                     begin
@@ -81,7 +81,7 @@ page 75001 "Datos MDM"
     end;
 
     var
-        wTipo: Option "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,"Edición",Estado,"Campaña";
+        wTipo: Option "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,"Edicion",Estado,"Campaña";
         //TODO: Ver cFunMdm: Codeunit 75000;
         wEditable: Boolean;
 

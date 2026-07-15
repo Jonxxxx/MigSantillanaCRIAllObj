@@ -26,18 +26,18 @@ table 34002117 "Historico Cab. nomina"
         }
         field(6; "Centro trabajo"; Code[10])
         {
-            TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotización" = FIELD("Empresa cotización"));
+            TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotizacion" = FIELD("Empresa cotizacion"));
         }
-        field(7; "No. afiliación"; Code[12])
+        field(7; "No. afiliacion"; Code[12])
         {
         }
-        field(8; "Empresa cotización"; Code[20])
+        field(8; "Empresa cotizacion"; Code[20])
         {
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
         }
         field(9; "Grupo cotizac"; Code[2])
         {
-            TableRelation = "Histórico Puntos Propina";
+            TableRelation = "Historico Puntos Propina";
         }
         field(10; "Días cotizados"; Integer)
         {
@@ -75,7 +75,7 @@ table 34002117 "Historico Cab. nomina"
         {
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
-                                                                   "Tipo Nómina" = FIELD("Tipo Nomina"),
+                                                                   "Tipo Nomina" = FIELD("Tipo Nomina"),
                                                                    "Cotiza ISR" = CONST(true),
                                                                    "Texto Informativo" = CONST(false)));
             DecimalPlaces = 2 : 2;
@@ -108,7 +108,7 @@ table 34002117 "Historico Cab. nomina"
         field(31; "Fecha Salida"; Date)
         {
         }
-        field(34; "Bonificación"; Decimal)
+        field(34; "Bonificacion"; Decimal)
         {
             DecimalPlaces = 2 : 2;
         }
@@ -180,12 +180,12 @@ table 34002117 "Historico Cab. nomina"
             DecimalPlaces = 2 : 2;
             Enabled = false;
         }
-        field(150; "No. Contabilización"; Code[20])
+        field(150; "No. Contabilizacion"; Code[20])
         {
         }
         field(151; "Total Ingreso Salario"; Decimal)
         {
-            CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. Documento" = FIELD("Empresa cotización"),
+            CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. Documento" = FIELD("Empresa cotizacion"),
                                                                    "No. empleado" = FIELD("No. empleado"),
                                                                    Período = FIELD("Período"),
                                                                    "Salario Base" = CONST(True)));
@@ -223,9 +223,9 @@ table 34002117 "Historico Cab. nomina"
         }
         field(159; "Tipo Nomina"; Option)
         {
-            Description = 'Normal,Regalía,Bonificación';
+            Description = 'Normal,Regalía,Bonificacion';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
+            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
         }
         field(160; Departamento; Code[20])
         {
@@ -279,17 +279,17 @@ table 34002117 "Historico Cab. nomina"
 
     trigger OnDelete()
     begin
-        //ERROR('Utilice función de borrado de nóminas..........');
+        //ERROR('Utilice funcion de borrado de nominas..........');
     end;
 
     trigger OnInsert()
     begin
-        //ERROR('No puede grabar nóminas manualmente..........');
+        //ERROR('No puede grabar nominas manualmente..........');
     end;
 
     var
         LinTabla: Decimal;
-        "Cód. divisa": Code[10];
+        "Cod. divisa": Code[10];
         CalculoInvertido: Boolean;
         DimMgt: Codeunit 408;
 
@@ -319,14 +319,14 @@ table 34002117 "Historico Cab. nomina"
         //TraeDivisa
         ConfNominas.GET('');
         IF ConfNominas."Concepto Incentivos" <> '' THEN BEGIN
-            "Cód. divisa" := ConfNominas."Concepto Incentivos";
+            "Cod. divisa" := ConfNominas."Concepto Incentivos";
             CalculoInvertido := FALSE;
         END ELSE BEGIN
-            "Cód. divisa" := ConfNominas."Incidencias Dto. Nomina";
+            "Cod. divisa" := ConfNominas."Incidencias Dto. Nomina";
             CalculoInvertido := TRUE;
         END;
-        IF "Cód. divisa" <> '' THEN BEGIN
-            Divisa.GET("Cód. divisa");
+        IF "Cod. divisa" <> '' THEN BEGIN
+            Divisa.GET("Cod. divisa");
             Divisa.TESTFIELD("Amount Rounding Precision");
         END;
 

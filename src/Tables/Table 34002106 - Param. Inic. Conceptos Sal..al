@@ -44,7 +44,7 @@ table 34002106 "Param. Inic. Conceptos Sal."
             begin
                 rLinPerfilSal.RESET;
                 rLinPerfilSal.SETRANGE("Concepto salarial", Codigo);
-                rLinPerfilSal.SETFILTER("Fórmula cálculo", '<>%1', ' ');
+                rLinPerfilSal.SETFILTER("Formula cálculo", '<>%1', ' ');
                 IF rLinPerfilSal.FINDFIRST THEN
                     IF "Inicializa Importe" THEN
                         ERROR(Err001);

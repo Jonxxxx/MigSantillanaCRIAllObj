@@ -7,7 +7,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
     // ,Rechazada
     // ,Realizada.
 
-    Caption = 'Solicitud de Asistencia Técnico - Pedagógica';
+    Caption = 'Solicitud de Asistencia Técnico - Pedagogica';
     PageType = Card;
     PromotedActionCategories = 'Nuevo,Proceso,Reporte,Asistentes';
     SourceTable = 67055;
@@ -144,7 +144,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Editable = false;
                     Enabled = NOT userPromotor;
                 }
-                field("Selección Editorial"; "Seleccion Editorial")
+                field("Seleccion Editorial"; "Seleccion Editorial")
                 {
 
                     trigger OnValidate()
@@ -229,7 +229,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Editable = false;
                 }
-                field("Usuario creación"; "Usuario creacion")
+                field("Usuario creacion"; "Usuario creacion")
                 {
                 }
             }
@@ -315,7 +315,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 field("Asistencia promotor"; "Asistencia promotor")
                 {
                 }
-                field("Material para revisión"; "Material para revision")
+                field("Material para revision"; "Material para revision")
                 {
                 }
                 field("Asistentes Esperados"; "Asistentes Esperados")
@@ -411,7 +411,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     {
                         Editable = wGS;
                     }
-                    field("Año Adopción"; "Ano Adopcion")
+                    field("Año Adopcion"; "Ano Adopcion")
                     {
                         Editable = false;
                         Visible = false;
@@ -767,7 +767,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
         {
             action("<Action1000000024>")
             {
-                Caption = 'Generar Solicitud de Asistencia Técnica Pedagógica (Word)';
+                Caption = 'Generar Solicitud de Asistencia Técnica Pedagogica (Word)';
 
                 trigger OnAction()
                 var

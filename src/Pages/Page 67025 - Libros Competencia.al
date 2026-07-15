@@ -42,7 +42,7 @@ page 67025 "Libros Competencia"
                 field(Precio; Precio)
                 {
                 }
-                field("Año Edición"; "Ano Edicion")
+                field("Año Edicion"; "Ano Edicion")
                 {
                 }
                 field("Año Uso"; "Ano Uso")

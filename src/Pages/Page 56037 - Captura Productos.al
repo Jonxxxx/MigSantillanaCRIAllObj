@@ -90,7 +90,7 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000009>")
                 {
-                    Caption = 'Formación';
+                    Caption = 'Formacion';
                     Promoted = true;
                     PromotedCategory = Category4;
 

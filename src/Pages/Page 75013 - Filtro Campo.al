@@ -52,7 +52,7 @@ page 75013 "Filtro Campo"
     begin
         // RellenaTemp
 
-        // Recuerde que la tabla en cuestión debe de ser temporal
+        // Recuerde que la tabla en cuestion debe de ser temporal
         CLEAR(Rec);
         DELETEALL;
 

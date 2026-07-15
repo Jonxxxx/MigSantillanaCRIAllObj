@@ -273,7 +273,7 @@ tableextension 50016 EXCCRIPurchaseHeader extends "Purchase Header"
         }
         field(34003013; "Total Retencion"; Decimal)
         {
-            CalcFormula = sum("Retencion Doc. Proveedores"."Importe Retención" where("Tipo documento" = field("Document Type"), "No. documento" = field("No.")));
+            CalcFormula = sum("Retencion Doc. Proveedores"."Importe Retencion" where("Tipo documento" = field("Document Type"), "No. documento" = field("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -311,7 +311,7 @@ tableextension 50016 EXCCRIPurchaseHeader extends "Purchase Header"
             until EXCCRIVendorWithholdingDocument.Next() = 0;
 
         EXCCRIVendorWithholding.Reset();
-        EXCCRIVendorWithholding.SetRange("Cód. Proveedor", "Buy-from Vendor No.");
+        EXCCRIVendorWithholding.SetRange("Cod. Proveedor", "Buy-from Vendor No.");
         case "Tipo Retencion" of
             "Tipo Retencion"::Productos:
                 EXCCRIVendorWithholding.SetRange("Aplica Productos", true);

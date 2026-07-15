@@ -83,7 +83,7 @@ tableextension 50018 EXCCRIGenJournalLine extends "Gen. Journal Line"
             DataClassification = ToBeClassified;
             TableRelation = Procedencia;
         }
-        field(50004; "Cod. Edición"; Code[20])
+        field(50004; "Cod. Edicion"; Code[20])
         {
             DataClassification = ToBeClassified;
             //TODO: Ver TableRelation = 50131;

@@ -30,9 +30,9 @@ page 67173 "Prog. Visitas Asesor/Consultor"
     {
         area(creation)
         {
-            group("Programación")
+            group("Programacion")
             {
-                Caption = 'Programación';
+                Caption = 'Programacion';
                 action(Asistencia)
                 {
                     Caption = 'Asistencia';

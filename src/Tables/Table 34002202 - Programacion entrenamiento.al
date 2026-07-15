@@ -83,7 +83,7 @@ table 34002202 "Programacion entrenamiento"
 
             trigger OnValidate()
             var
-                Err001: Label 'La fecha de realización no puede ser menor que la fecha de programación.';
+                Err001: Label 'La fecha de realizacion no puede ser menor que la fecha de programacion.';
             begin
                 IF "Fecha programacion" <> 0D THEN
                     IF "Fecha de realizacion" < "Fecha programacion" THEN
@@ -224,7 +224,7 @@ table 34002202 "Programacion entrenamiento"
         {
             Caption = 'Classroom';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Salón));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Salon));
         }
         field(32; Tipo; Option)
         {

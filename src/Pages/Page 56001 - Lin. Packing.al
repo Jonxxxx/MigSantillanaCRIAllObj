@@ -6,9 +6,9 @@ page 56001 "Lin. Packing"
     // ------------------------------------------------------------------------
     // No.         Firma   Fecha         Descripcion
     // ------------------------------------------------------------------------
-    // #854        PLB     05/12/2013    Añadida opción para reabrir caja.
+    // #854        PLB     05/12/2013    Añadida opcion para reabrir caja.
     //                                   Cambios para funcionar correctamente en
-    //                                   BBDD sin gestión almacén.
+    //                                   BBDD sin gestion almacén.
     // #4191  PLB  30/09/2014  Añadido atajo de teclado a "Contenido caja" -> Mayús+Ctrl+D
 
     Caption = 'Packing Lines';

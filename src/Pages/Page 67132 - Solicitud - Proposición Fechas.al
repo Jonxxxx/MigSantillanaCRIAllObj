@@ -1,4 +1,4 @@
-page 67132 "Solicitud - Proposición Fechas"
+page 67132 "Solicitud - Proposicion Fechas"
 {
     DelayedInsert = true;
     PageType = List;

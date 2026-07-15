@@ -1,4 +1,4 @@
-table 34002146 "Histórico Cab. Préstamo"
+table 34002146 "Historico Cab. Préstamo"
 {
     //TODO: Ver DrillDownPageID = 34002138;
     //TODO: Ver LookupPageID = 34002138;
@@ -34,7 +34,7 @@ table 34002146 "Histórico Cab. Préstamo"
         }
         field(5; "Importe Original"; Decimal)
         {
-            CalcFormula = Sum("Histórico Lín. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lín. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
             Caption = 'Original Amount';
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
@@ -57,7 +57,7 @@ table 34002146 "Histórico Cab. Préstamo"
         field(10; "Cta. Contrapartida"; Code[20])
         {
         }
-        field(11; "Fecha Inicio Deducción"; Date)
+        field(11; "Fecha Inicio Deduccion"; Date)
         {
         }
         field(12; "Nro. Solicitud CK"; Code[20])
@@ -75,7 +75,7 @@ table 34002146 "Histórico Cab. Préstamo"
         }
         field(16; "Importe Pendiente"; Decimal)
         {
-            CalcFormula = Sum("Histórico Lín. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lín. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }

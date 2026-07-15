@@ -62,7 +62,7 @@ page 75014 "Filtro Valor Campo"
     begin
         // RellenaTemp
 
-        // Recuerde que la tabla en cuestión debe de ser temporal
+        // Recuerde que la tabla en cuestion debe de ser temporal
 
         lwTableId := GETRANGEMIN("Table Id");
         lwFieldNo := GETRANGEMIN("Field No");

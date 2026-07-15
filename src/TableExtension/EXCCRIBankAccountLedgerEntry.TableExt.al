@@ -9,7 +9,7 @@ tableextension 50042 EXCCRIBankAccountLedgerEntry extends "Bank Account Ledger E
         }
         field(56000; "Collector Code"; Code[10])
         {
-            Caption = 'Collector code', Comment = 'ESP=Cód. cobrador';
+            Caption = 'Collector code', Comment = 'ESP=Cod. cobrador';
             DataClassification = ToBeClassified;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }

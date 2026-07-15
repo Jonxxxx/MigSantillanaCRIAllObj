@@ -8,9 +8,9 @@ page 56065 "Gestion BackOrder - TL"
     //                           Mejorado el rendimiento al abrir la page
     //                           Campo "Cantidad Anulada"
     // 
-    // $003   10/11/2014   PLB   Sólo revisar las líneas que tienen "Cantidad pendiente BO"
+    // $003   10/11/2014   PLB   Solo revisar las líneas que tienen "Cantidad pendiente BO"
     // 
-    // #56090 27/09/2016   PLB   Ajustes en la visualización disponibilidad backorders
+    // #56090 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Transfer Lines BackOrder Mgt. ';

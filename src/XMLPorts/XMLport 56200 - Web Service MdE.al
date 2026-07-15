@@ -1006,7 +1006,7 @@ xmlport 56200 "Web Service MdE"
 
     trigger OnPreXmlPort()
     begin
-        // la empresa tiene que tener el cód. sociedad de maestros Santillana definido
+        // la empresa tiene que tener el cod. sociedad de maestros Santillana definido
         IF NOT Exporting THEN BEGIN //+#101415
             ConfSant.GET;
             IsOk := TRUE;
@@ -1032,7 +1032,7 @@ xmlport 56200 "Web Service MdE"
 
             //+#81969
             IF NOT EmpCotiz.FINDFIRST THEN
-                AddError(STRSUBSTNO(ErrorCompanyConfig, EmpCotiz.FIELDCAPTION("Empresa cotización"), EmpCotiz.TABLECAPTION), ErrorTipoConf);
+                AddError(STRSUBSTNO(ErrorCompanyConfig, EmpCotiz.FIELDCAPTION("Empresa cotizacion"), EmpCotiz.TABLECAPTION), ErrorTipoConf);
             //-#81969
         END; //+#101415
     end;
@@ -1049,30 +1049,30 @@ xmlport 56200 "Web Service MdE"
         ErrorEmployeeDoNotExist: Label 'El empleado %1 %2 no existe.';
         ErrorContractDoNotExist: Label 'El contrato para el empleado %1 %2 no existe.';
         ErrorCompanyConfig: Label 'Es necesario definir %1 en %2.';
-        ErrorCompanyDoNotMatch: Label 'La información de companyia del XML (%1) no coincide con la de la base de datos (%2).';
-        ErrorTipoConf: Label 'Error de configuración';
+        ErrorCompanyDoNotMatch: Label 'La informacion de companyia del XML (%1) no coincide con la de la base de datos (%2).';
+        ErrorTipoConf: Label 'Error de configuracion';
         ErrorTipoDatos: Label 'Error de datos';
         IsOk: Boolean;
-        ErrorOperation: Label 'No se ha recibido un tipo de operación esperada ("INSERT", "CHANGE" o "DELETE").';
+        ErrorOperation: Label 'No se ha recibido un tipo de operacion esperada ("INSERT", "CHANGE" o "DELETE").';
         ErrorTamanoCampo: Label 'El tamaño del valor del nodo %1 (%2) es mayor que el aceptado por el campo "%3" (%4).';
         ErrorTipoVar: Label 'El tipo de dato del nodo %1 (%2) no se ajusta al que necesita el campo "%3".';
         ErrorTipoDatoNoVal: Label 'El campo "%1" no es de un tipo de dato válido.';
         ErrorTablaRel: Label 'El valor del nodo %1 (%2) no existe en la tabla "%3".';
         ErrorEmployeeExist: Label 'Ya existe un empleado (Nº "%1") con Tipo documento "%2" y Nº documento "%3". No se puede crear el empleado "%4".';
-        ErrorDimension: Label 'La dimensión "%2" se ha configurado para validar el nodo "%1" pero no existe en NAV.';
-        ErrorValorDimension: Label 'El valor del nodo %1 (%2) no existe en la tabla en la dimensión %3.';
-        ErrorFechas: Label 'La fecha inicio (%1) del contrato no puede ser superior a la fecha finalización (%2).';
-        ErrorRecontratacion: Label 'El empleado "%1" está de baja, parece que está llegando una recontratación (fecha inicio contrato modificada), pero el "%2" no es de recontratación ("%3").';
-        ErrorContratacion: Label 'Está dando una alta, pero el "%1" no es de nueva contratación ni recontratación ("%2").';
+        ErrorDimension: Label 'La dimension "%2" se ha configurado para validar el nodo "%1" pero no existe en NAV.';
+        ErrorValorDimension: Label 'El valor del nodo %1 (%2) no existe en la tabla en la dimension %3.';
+        ErrorFechas: Label 'La fecha inicio (%1) del contrato no puede ser superior a la fecha finalizacion (%2).';
+        ErrorRecontratacion: Label 'El empleado "%1" está de baja, parece que está llegando una recontratacion (fecha inicio contrato modificada), pero el "%2" no es de recontratacion ("%3").';
+        ErrorContratacion: Label 'Está dando una alta, pero el "%1" no es de nueva contratacion ni recontratacion ("%2").';
         NS: ;
         CodeValue: Code[20];
-        DimensionTxt: Label 'Dimensión %1';
+        DimensionTxt: Label 'Dimension %1';
         ErrorInsert: Label 'No se puede crear el %1 para el empleado %2.';
         ErrorInsertEmployee: Label ' Revise que, si está enviando un alta nueva, el número de serie asignado a recursos humanos en Dynamics NAV esté correctamente configurado.';
         ErrorModify: Label 'No se puede modificar el %1 para el empleado %2.';
         Exporting: Boolean;
         CreateDefaultDim: Boolean;
-        ErrorDatoObligatorio: Label 'En la operación de tipo %1 el valor del nodo %2 es obligatorio y ha llegado en blanco.';
+        ErrorDatoObligatorio: Label 'En la operacion de tipo %1 el valor del nodo %2 es obligatorio y ha llegado en blanco.';
 
     local procedure CreateEmployee(FromModifyEmployee: Boolean)
     var
@@ -1133,11 +1133,11 @@ xmlport 56200 "Web Service MdE"
         Employee.RESET;
 
         // Cuando recibimos un UPDATE y el empleado está de baja (o no hay línea de contrato) se entiende que es
-        // una recontratación, si el motivo es una alta nueva, daremos el correspondiente error
+        // una recontratacion, si el motivo es una alta nueva, daremos el correspondiente error
         
         Contrato.SETRANGE("No. empleado", EmployeeNo);
         Recontratacion := NOT Contrato.FIND('+');
-        IF NOT Recontratacion AND (Contrato."Fecha finalización" <> 0D) THEN
+        IF NOT Recontratacion AND (Contrato."Fecha finalizacion" <> 0D) THEN
             Recontratacion := TRUE;
         IF Recontratacion THEN BEGIN
             IF IsNewContract() OR NOT IsRecontratacion() THEN
@@ -1497,9 +1497,9 @@ xmlport 56200 "Web Service MdE"
             DATABASE::"Centros de Trabajo":
                 BEGIN
                     rCentro.SETRANGE("Centro de trabajo", NewValue);
-                    rCentro.SETRANGE("Empresa cotización", EmpCotiz."Empresa cotización");
+                    rCentro.SETRANGE("Empresa cotizacion", EmpCotiz."Empresa cotizacion");
                     IF NOT rCentro.FINDFIRST THEN
-                        AddError(STRSUBSTNO(ErrorTablaRel, NodeName, EmpCotiz."Empresa cotización" + '-' + NewValue, rCentro.TABLECAPTION), ErrorTipoDatos);
+                        AddError(STRSUBSTNO(ErrorTablaRel, NodeName, EmpCotiz."Empresa cotizacion" + '-' + NewValue, rCentro.TABLECAPTION), ErrorTipoDatos);
                 END;
             DATABASE::"Employment Contract":
                 BEGIN
@@ -1724,7 +1724,7 @@ xmlport 56200 "Web Service MdE"
 
             IF "Numero de persona" <> Numero_persona THEN
                 UpdateTextField("Numero de persona", Numero_persona, 0, 'Numero_persona', FIELDCAPTION("Numero de persona"), MAXSTRLEN("Numero de persona"));
-            Company := EmpCotiz."Empresa cotización";
+            Company := EmpCotiz."Empresa cotizacion";
             IF "M nombre" THEN
                 "First Name" := COPYSTR(Nombre, 1, MAXSTRLEN("First Name"));
             IF "M primer apellido" THEN

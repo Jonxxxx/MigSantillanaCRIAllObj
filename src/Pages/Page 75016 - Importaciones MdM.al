@@ -95,9 +95,9 @@ page 75016 "Importaciones MdM"
                         end;
                     }
                 }
-                group("Exportación XML")
+                group("Exportacion XML")
                 {
-                    Caption = 'Exportación XML';
+                    Caption = 'Exportacion XML';
                     Image = XMLFile;
                     action(Exportar)
                     {

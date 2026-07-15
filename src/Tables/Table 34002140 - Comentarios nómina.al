@@ -1,4 +1,4 @@
-table 34002140 "Comentarios nómina"
+table 34002140 "Comentarios nomina"
 {
     //TODO: Ver LookupPageID = 34002172;
 
@@ -6,7 +6,7 @@ table 34002140 "Comentarios nómina"
     {
         field(1; Tipo; Option)
         {
-            OptionMembers = "Empresa cotización",Empleado,Convenios;
+            OptionMembers = "Empresa cotizacion",Empleado,Convenios;
         }
         field(2; "Codigo"; Code[15])
         {

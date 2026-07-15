@@ -18,7 +18,7 @@ page 67130 "Solicitud - Libros a Presentar"
                 field("Horas por semana"; "Horas por semana")
                 {
                 }
-                field("Año adopción"; "Ano adopcion")
+                field("Año adopcion"; "Ano adopcion")
                 {
                 }
             }

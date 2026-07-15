@@ -1,13 +1,13 @@
 table 34002501 "Configuracion TPV"
 {
     // 001  04/04/2017  PLB: Eliminada la propiedad "Table Relation" del campo "Id TPV"
-    // #76946  07.12.2017   RRT: Creación del campo "Texto Aviso FE" (GT)
+    // #76946  07.12.2017   RRT: Creacion del campo "Texto Aviso FE" (GT)
     // #116527 22.01.2018   RRT: Creacion de los campos "NCF credito fiscal resguardo" y "NCF credito fiscal NCR resg." (GT)
     //         11.02.2018   RRT: Creacion de los campos "NCF credito fiscal habitual" y "NCF credito fiscal NCR habit." (GT)
     // 
-    // #175576 13.11.2018   RRT: Introducción del campo de tipo Option "Precios por contrato".
+    // #175576 13.11.2018   RRT: Introduccion del campo de tipo Option "Precios por contrato".
     // #232158 20.06.2019   RRT: Las series NCF dejan de usarse.
-    // #328529 05.08.2020   RRT: Actualización DS-POS por desarrollo #325138 de El Salvador.
+    // #328529 05.08.2020   RRT: Actualizacion DS-POS por desarrollo #325138 de El Salvador.
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'TPV Configuration';
@@ -181,7 +181,7 @@ table 34002501 "Configuracion TPV"
                 //...
                 /*
                 //+116527
-                //... De momento se restringe sólo al caso de Guatemala
+                //... De momento se restringe solo al caso de Guatemala
                 IF lrConf.FINDFIRST THEN
                   IF lrConf.Pais = lrConf.Pais::Guatemala THEN
                     IF NOT lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
@@ -206,7 +206,7 @@ table 34002501 "Configuracion TPV"
                 /*
                 
                 //+116527
-                //... De momento se restringe sólo al caso de Guatemala
+                //... De momento se restringe solo al caso de Guatemala
                 IF lrConf.FINDFIRST THEN
                   IF lrConf.Pais = lrConf.Pais::Guatemala THEN
                     IF lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
@@ -233,13 +233,13 @@ table 34002501 "Configuracion TPV"
         }
         field(34002563; "Venta Movil"; Boolean)
         {
-            Caption = 'Venta Móvil.';
+            Caption = 'Venta Movil.';
             Description = 'DsPOS Standard';
         }
         field(34002564; "Precio por contacto"; Option)
         {
             Description = 'DsPOS Standard,#175576';
-            OptionMembers = "Sólo si hay venta móvil","En todos los casos","En ningún caso";
+            OptionMembers = "Solo si hay venta movil","En todos los casos","En ningún caso";
         }
         field(34002568; "NCF Credito fiscal NCR habit."; Code[20])
         {
@@ -256,7 +256,7 @@ table 34002501 "Configuracion TPV"
                 /*
                 
                 //+116527
-                //... De momento se restringe sólo al caso de Guatemala
+                //... De momento se restringe solo al caso de Guatemala
                 IF lrConf.FINDFIRST THEN
                   IF lrConf.Pais = lrConf.Pais::Guatemala THEN
                     IF NOT lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
@@ -281,7 +281,7 @@ table 34002501 "Configuracion TPV"
                 /*
                 
                 //+116527
-                //... De momento se restringe sólo al caso de Guatemala
+                //... De momento se restringe solo al caso de Guatemala
                 IF lrConf.FINDFIRST THEN
                   IF lrConf.Pais = lrConf.Pais::Guatemala THEN
                     IF lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
@@ -294,7 +294,7 @@ table 34002501 "Configuracion TPV"
         }
         field(34002570; "Leyenda Dosificacion"; Text[150])
         {
-            Caption = 'Leyenda Dosificación';
+            Caption = 'Leyenda Dosificacion';
             Description = 'DsPOS Bolivia';
         }
         field(34002571; "NCF Credito fiscal 2"; Code[20])

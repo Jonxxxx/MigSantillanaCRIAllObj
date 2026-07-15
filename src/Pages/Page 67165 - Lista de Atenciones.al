@@ -82,7 +82,7 @@ page 67165 "Lista de Atenciones"
                 field("Nombre responsable"; "Nombre responsable")
                 {
                 }
-                field("Fecha Recepción Documento"; "Fecha Recepcion Documento")
+                field("Fecha Recepcion Documento"; "Fecha Recepcion Documento")
                 {
                 }
             }

@@ -91,19 +91,19 @@ xmlport 58011 "Importa Empleados 2"
                 Nomb := CONVERTSTR(Nomb, 'Ý', 'í');
                 Nomb := CONVERTSTR(Nomb, '±', 'ñ');
                 Nomb := CONVERTSTR(Nomb, 'Ð', 'ñ');
-                Nomb := CONVERTSTR(Nomb, '¾', 'ó');
+                Nomb := CONVERTSTR(Nomb, '¾', 'o');
                 Nomb2 := CONVERTSTR(Nomb2, 'Ý', 'í');
                 Nomb2 := CONVERTSTR(Nomb2, '±', 'ñ');
                 Nomb2 := CONVERTSTR(Nomb2, 'Ð', 'ñ');
-                Nomb2 := CONVERTSTR(Nomb2, '¾', 'ó');
+                Nomb2 := CONVERTSTR(Nomb2, '¾', 'o');
                 Ape1 := CONVERTSTR(Ape1, 'Ý', 'í');
                 Ape1 := CONVERTSTR(Ape1, '±', 'ñ');
                 Ape1 := CONVERTSTR(Ape1, 'Ð', 'ñ');
-                Ape1 := CONVERTSTR(Ape1, '¾', 'ó');
+                Ape1 := CONVERTSTR(Ape1, '¾', 'o');
                 Ape2 := CONVERTSTR(Ape2, 'Ý', 'í');
                 Ape2 := CONVERTSTR(Ape2, '±', 'ñ');
                 Ape2 := CONVERTSTR(Ape2, 'Ð', 'ñ');
-                Ape2 := CONVERTSTR(Ape2, '¾', 'ó');
+                Ape2 := CONVERTSTR(Ape2, '¾', 'o');
 
                 CLEAR(Empl);
                 Empl."No." := CodEmpl;

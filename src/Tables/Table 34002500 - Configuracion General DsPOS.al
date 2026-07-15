@@ -1,6 +1,6 @@
 table 34002500 "Configuracion General DsPOS"
 {
-    // #116527, RRT, 07.11.2018: Actualización DS-POS. Se amplia el OptionString del campo Pais para Honduras.
+    // #116527, RRT, 07.11.2018: Actualizacion DS-POS. Se amplia el OptionString del campo Pais para Honduras.
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'POS General Setup';
@@ -73,8 +73,8 @@ table 34002500 "Configuracion General DsPOS"
 
     var
         Error001: Label 'Primero debe Seleccionar un Codigo de Tienda';
-        Error002: Label 'La tienda Seleccionada %1 tiene configuración BBDD Central.No debe especificar un TPV en Configuración';
-        Error003: Label 'Proceso Cancelado a petición del usuario';
+        Error002: Label 'La tienda Seleccionada %1 tiene configuracion BBDD Central.No debe especificar un TPV en Configuracion';
+        Error003: Label 'Proceso Cancelado a peticion del usuario';
         text001: Label 'Se Vaciaran todos los campos personalizados para el Pais %1.\¿ Desea Cotinuar?';
 }
 

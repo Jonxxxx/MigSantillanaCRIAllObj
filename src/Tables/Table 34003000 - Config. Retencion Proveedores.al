@@ -6,7 +6,7 @@ table 34003000 "Config. Retencion Proveedores"
 
     fields
     {
-        field(1; "Codigo Retención"; Code[20])
+        field(1; "Codigo Retencion"; Code[20])
         {
             Caption = 'Retention Code';
             NotBlank = true;
@@ -28,13 +28,13 @@ table 34003000 "Config. Retencion Proveedores"
         field(5; Devengo; Option)
         {
             Caption = 'Accrual';
-            OptionMembers = "Facturación",Pago;
+            OptionMembers = "Facturacion",Pago;
         }
-        field(6; "Importe Retención"; Decimal)
+        field(6; "Importe Retencion"; Decimal)
         {
             Caption = 'Retention Amount';
         }
-        field(7; "Tipo Retención"; Option)
+        field(7; "Tipo Retencion"; Option)
         {
             Caption = 'Retention Type';
             OptionMembers = Porcentaje,Importe;
@@ -64,14 +64,14 @@ table 34003000 "Config. Retencion Proveedores"
 
     keys
     {
-        key(Key1; "Codigo Retención")
+        key(Key1; "Codigo Retencion")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Codigo Retención", "Descripcion", "Base Cálculo", "Importe Retención", "Tipo Retención")
+        fieldgroup(DropDown; "Codigo Retencion", "Descripcion", "Base Cálculo", "Importe Retencion", "Tipo Retencion")
         {
         }
     }

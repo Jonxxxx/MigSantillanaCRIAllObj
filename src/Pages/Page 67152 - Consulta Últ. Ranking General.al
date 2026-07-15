@@ -23,7 +23,7 @@ page 67152 "Consulta Últ. Ranking General"
                 field(Campaña; Campana)
                 {
                 }
-                field(Delegación; Delegacion)
+                field(Delegacion; Delegacion)
                 {
                 }
                 field("No. Orden"; "No. Orden")

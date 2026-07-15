@@ -7,7 +7,7 @@ tableextension 50013 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
             DataClassification = ToBeClassified;
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edición"; Code[20])
+        field(50001; "Cod. Edicion"; Code[20])
         {
             DataClassification = ToBeClassified;
             //TODO: Ver TableRelation = 50131;

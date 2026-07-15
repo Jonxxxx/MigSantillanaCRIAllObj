@@ -68,7 +68,7 @@ table 34002504 "Bancos tienda"
 
     var
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
-        Error001: Label 'Proceso Cancelado a petición del usuario';
+        Error001: Label 'Proceso Cancelado a peticion del usuario';
     //TODO: Ver Error002: ;
 }
 

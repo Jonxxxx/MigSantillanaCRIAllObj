@@ -3,23 +3,23 @@ table 34002130 "BK Saldos a favor ISR"
 
     fields
     {
-        field(1;"Cód. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
             TableRelation = Employee;
         }
-        field(2;"Ano.";Integer)
+        field(2; "Ano."; Integer)
         {
         }
-        field(3;"Saldo a favor";Decimal)
+        field(3; "Saldo a favor"; Decimal)
         {
 
             trigger OnValidate()
             begin
                 IF "Importe Pendiente" = 0 THEN
-                   "Importe Pendiente" := "Saldo a favor";
+                    "Importe Pendiente" := "Saldo a favor";
             end;
         }
-        field(4;"Importe Pendiente";Decimal)
+        field(4; "Importe Pendiente"; Decimal)
         {
             Editable = false;
         }
@@ -27,7 +27,7 @@ table 34002130 "BK Saldos a favor ISR"
 
     keys
     {
-        key(Key1;"Cód. Empleado","Ano.")
+        key(Key1; "Cod. Empleado", "Ano.")
         {
         }
     }

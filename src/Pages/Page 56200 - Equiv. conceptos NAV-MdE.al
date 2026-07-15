@@ -247,7 +247,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
     {
         area(navigation)
         {
-            action("Información Real Mensual")
+            action("Informacion Real Mensual")
             {
                 Enabled = MdEDataType = 1;
                 Image = CompleteLine;
@@ -261,7 +261,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                     SetNoColumns;
                 end;
             }
-            action("Compensación Teórica")
+            action("Compensacion Teorica")
             {
                 Enabled = MdEDataType = 0;
                 Image = CompleteLine;
@@ -301,8 +301,8 @@ page 56200 "Equiv. conceptos NAV-MdE"
         ColumnNameArray: array[20] of Text[20];
         NoColumns: Integer;
         MdEDataType: Option IRM,CT;
-        Text000: Label 'Información Real Mensual';
-        Text001: Label 'Compensación Teórica';
+        Text000: Label 'Informacion Real Mensual';
+        Text001: Label 'Compensacion Teorica';
 
     procedure SetNoColumns()
     var

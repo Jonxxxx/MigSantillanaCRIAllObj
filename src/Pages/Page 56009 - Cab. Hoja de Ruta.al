@@ -1,7 +1,7 @@
 page 56009 "Cab. Hoja de Ruta"
 {
     // #2655 PLB 08/04/2014: Añadido campo "Placa"
-    // #29576  08/09/2015   FAA    Se agrega campo "Ruta de Distribución" y otras modificaciones.
+    // #29576  08/09/2015   FAA    Se agrega campo "Ruta de Distribucion" y otras modificaciones.
 
     PageType = Document;
     SourceTable = 56020;
@@ -40,7 +40,7 @@ page 56009 "Cab. Hoja de Ruta"
                 }
                 field("No. Ruta Distribucion"; "No. Ruta Distribucion")
                 {
-                    Caption = 'No. Ruta Distribución';
+                    Caption = 'No. Ruta Distribucion';
 
                     trigger OnValidate()
                     begin

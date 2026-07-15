@@ -49,9 +49,9 @@ page 67161 "Sel. Eventos Planif. - Expo"
         }
         area(factboxes)
         {
-            part("Programación"; 67164)
+            part("Programacion"; 67164)
             {
-                Caption = 'Programación';
+                Caption = 'Programacion';
                 Editable = false;
                 SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                               "Tipo Evento" = FIELD("Tipo Evento"),

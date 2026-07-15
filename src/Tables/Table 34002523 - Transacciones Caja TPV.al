@@ -1,9 +1,9 @@
 table 34002523 "Transacciones Caja TPV"
 {
-    // #70132 RRT, 09.07.2018: Añadir el campo  "NCR regis. de compensación"
+    // #70132 RRT, 09.07.2018: Añadir el campo  "NCR regis. de compensacion"
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
-    Caption = 'Transacción caja TPV';
+    Caption = 'Transaccion caja TPV';
     //TODO: Ver DrillDownPageID = 34002535;
     //TODO: Ver LookupPageID = 34002535;
 
@@ -34,7 +34,7 @@ table 34002523 "Transacciones Caja TPV"
         field(60; "Tipo transaccion"; Option)
         {
             Caption = 'Transaction Type';
-            OptionCaption = 'Cobro TPV,Anulación,Entrada de caja,Salida de caja,Fondo de caja';
+            OptionCaption = 'Cobro TPV,Anulacion,Entrada de caja,Salida de caja,Fondo de caja';
             OptionMembers = "Cobro TPV",Anulacion,Entrada,Salida,Fondo;
         }
         field(70; "Id. cajero"; Code[50])
@@ -76,7 +76,7 @@ table 34002523 "Transacciones Caja TPV"
         }
         field(130; "Cod. divisa"; Code[10])
         {
-            Caption = 'Cód. divisa';
+            Caption = 'Cod. divisa';
         }
         field(140; "Factor divisa"; Decimal)
         {

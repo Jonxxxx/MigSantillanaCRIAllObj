@@ -4,7 +4,7 @@ table 34002115 "Perfil Salarial"
 
     fields
     {
-        field(1; "Empresa cotización"; Code[10])
+        field(1; "Empresa cotizacion"; Code[10])
         {
         }
         field(2; "No. empleado"; Code[15])
@@ -34,7 +34,7 @@ table 34002115 "Perfil Salarial"
                 ConcepSalar.GET("Concepto salarial");
 
                 //Empleado.GET("No. empleado");
-                //"Empresa cotización"  := Empleado.Company;
+                //"Empresa cotizacion"  := Empleado.Company;
                 Descripcion := ConcepSalar.Descripcion;
                 "Tipo concepto" := ConcepSalar."Tipo concepto";
                 "Cotiza ISR" := ConcepSalar."Cotiza ISR";
@@ -45,7 +45,7 @@ table 34002115 "Perfil Salarial"
                 "Cotiza INFOTEP" := ConcepSalar."Cotiza INFOTEP";
                 "Cotiza SRL" := ConcepSalar."Cotiza SRL";
                 "Excluir de listados" := ConcepSalar."Excluir de listados";
-                "Sujeto Cotización" := ConcepSalar."Sujeto Cotización";
+                "Sujeto Cotizacion" := ConcepSalar."Sujeto Cotizacion";
                 "Aplica para Regalia" := ConcepSalar."Aplica para Regalia";
                 "Tipo de nomina" := ConcepSalar."Tipo de nomina";
             end;
@@ -110,7 +110,7 @@ table 34002115 "Perfil Salarial"
                 
                     NovAuto.INIT;
                     NovAuto."Cod. Empleado"      := "No. empleado";
-                    NovAuto."Empresa cotización" := "Empresa cotización";
+                    NovAuto."Empresa cotizacion" := "Empresa cotizacion";
                     NovAuto.Periodo              := FORMAT(TODAY,0,'<Month,2>') + FORMAT(TODAY,0,'<Year4>');
                     NovAuto."Tipo Novedad"       := 6; //Cambio de datos
                     NovAuto."Fecha Inicio"       := TODAY;
@@ -150,12 +150,12 @@ table 34002115 "Perfil Salarial"
             Description = 'Ingresos,Deducciones';
             OptionMembers = Ingresos,Deducciones;
         }
-        field(11; "Sujeto Cotización"; Boolean)
+        field(11; "Sujeto Cotizacion"; Boolean)
         {
 
             trigger OnValidate()
             begin
-                IF ("Tipo concepto" = 1) AND ("Sujeto Cotización") THEN
+                IF ("Tipo concepto" = 1) AND ("Sujeto Cotizacion") THEN
                     ERROR(Err001);
             end;
         }
@@ -176,7 +176,7 @@ table 34002115 "Perfil Salarial"
         field(14; Prorratear; Boolean)
         {
         }
-        field(15; "Fórmula cálculo"; Text[80])
+        field(15; "Formula cálculo"; Text[80])
         {
 
             trigger OnLookup()
@@ -186,7 +186,7 @@ table 34002115 "Perfil Salarial"
                 FormConcSalariales.LOOKUPMODE(TRUE);
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     FormConcSalariales.GETRECORD(ConcepSalar);
-                    "Fórmula cálculo" := "Fórmula cálculo" + ConcepSalar.Codigo;
+                    "Formula cálculo" := "Formula cálculo" + ConcepSalar.Codigo;
                     CLEAR(FormConcSalariales);
                 END;
                 */
@@ -194,13 +194,13 @@ table 34002115 "Perfil Salarial"
 
             trigger OnValidate()
             begin
-                "Fórmula cálculo" := UPPERCASE("Fórmula cálculo");
+                "Formula cálculo" := UPPERCASE("Formula cálculo");
 
-                IF "Fórmula cálculo" <> '' THEN BEGIN
-                    Regconceptos.Formula := DELCHR(Rec."Fórmula cálculo", '=', ' ');
+                IF "Formula cálculo" <> '' THEN BEGIN
+                    Regconceptos.Formula := DELCHR(Rec."Formula cálculo", '=', ' ');
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
-                        Regconceptos.Formula := Rec."Fórmula cálculo";
+                        Regconceptos.Formula := Rec."Formula cálculo";
                         //TODO: Ver Scanner.RUN(Regconceptos);
                         //TODO: Ver Parser.RUN(Regconceptos);
                     END;
@@ -288,10 +288,10 @@ table 34002115 "Perfil Salarial"
         {
             OptionMembers = Activo,Baja;
         }
-        field(27; "Tipo Nómina"; Option)
+        field(27; "Tipo Nomina"; Option)
         {
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificación",Propina,Renta;
+            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
         }
         field(28; "Cotiza AFP"; Boolean)
         {
@@ -380,13 +380,13 @@ table 34002115 "Perfil Salarial"
         key(Key2; "Perfil salarial", "No. empleado")
         {
         }
-        key(Key3; "Perfil salarial", "Sujeto Cotización", "No. empleado")
+        key(Key3; "Perfil salarial", "Sujeto Cotizacion", "No. empleado")
         {
         }
-        key(Key4; "No. empleado", "Sujeto Cotización")
+        key(Key4; "No. empleado", "Sujeto Cotizacion")
         {
         }
-        key(Key5; "Sujeto Cotización", "Salario Base")
+        key(Key5; "Sujeto Cotizacion", "Salario Base")
         {
         }
         key(Key6; "Perfil salarial", "Concepto salarial", "No. empleado")
@@ -417,7 +417,7 @@ table 34002115 "Perfil Salarial"
     begin
         Empleado.GET("No. empleado");
         //TODO: Ver Cargo := Empleado."Job Type Code";
-        //TODO: Ver "Empresa cotización" := Empleado.Company;
+        //TODO: Ver "Empresa cotizacion" := Empleado.Company;
 
         RegLinPerSal.RESET;
         RegLinPerSal.SETRANGE("No. empleado", "No. empleado");
@@ -435,7 +435,7 @@ table 34002115 "Perfil Salarial"
         RegFormula: Record 34002143;
         Regconceptos: Record 34002144;
         Regpolaca: Record 34002143;
-        "Indemnización": Record 5200;
+        "Indemnizacion": Record 5200;
         HistLinNom: Record 34002118;
         RegLinPerSal: Record 34002115;
         ConcepSalar: Record 34002111;
@@ -480,11 +480,11 @@ table 34002115 "Perfil Salarial"
     begin
         LinEsqPerFormula.SETRANGE("No. empleado", "No. empleado");
         LinEsqPerFormula.SETRANGE("Perfil salarial", "Perfil salarial");
-        LinEsqPerFormula.SETFILTER("Fórmula cálculo", '<>%1', '');
+        LinEsqPerFormula.SETFILTER("Formula cálculo", '<>%1', '');
         LinEsqPerFormula.SETFILTER("Concepto salarial", '<>%1', "Concepto salarial");
         IF LinEsqPerFormula.FIND('-') THEN
             REPEAT
-                LinEsqPerFormula.VALIDATE("Fórmula cálculo");
+                LinEsqPerFormula.VALIDATE("Formula cálculo");
                 LinEsqPerFormula.Importe := ROUND(LinEsqPerFormula.Importe, 0.01);
                 LinEsqPerFormula.MODIFY;
             UNTIL LinEsqPerFormula.NEXT = 0;

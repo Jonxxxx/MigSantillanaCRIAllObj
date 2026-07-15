@@ -1,6 +1,6 @@
-page 56086 "% Provisión"
+page 56086 "% Provision"
 {
-    // 001 CAT 20/02/14  #144 Configuración de los porcentajes de insolvencias
+    // 001 CAT 20/02/14  #144 Configuracion de los porcentajes de insolvencias
 
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
@@ -19,7 +19,7 @@ page 56086 "% Provisión"
                 field(Descripcion; Descripcion)
                 {
                 }
-                field("% Provisión"; "% Provision")
+                field("% Provision"; "% Provision")
                 {
                 }
             }

@@ -37,7 +37,7 @@ page 67166 "Ficha de Atenciones"
                 field(Documento; Documento)
                 {
                 }
-                field("Fecha Recepción Documento"; "Fecha Recepcion Documento")
+                field("Fecha Recepcion Documento"; "Fecha Recepcion Documento")
                 {
                 }
                 field(Delegacion; Delegacion)
@@ -289,8 +289,8 @@ page 67166 "Ficha de Atenciones"
     procedure ValidaDistrCC()
     var
         Distr: Record 67101;
-        Err001: Label 'Debe realizar la distribución de los centros de costo';
-        Err002: Label 'No se han realizado la distribución de los centros de costo correctamente';
+        Err001: Label 'Debe realizar la distribucion de los centros de costo';
+        Err002: Label 'No se han realizado la distribucion de los centros de costo correctamente';
         Porc: Decimal;
     begin
 

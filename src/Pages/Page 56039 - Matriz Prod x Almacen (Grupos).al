@@ -29,7 +29,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
 
                     trigger OnValidate()
                     var
-                        TextL001: Label 'El grupo %1 contiene %2 almacenes. Sólo se mostrarán %3';
+                        TextL001: Label 'El grupo %1 contiene %2 almacenes. Solo se mostrarán %3';
                     begin
                         CambiarGrupo;
                     end;
@@ -477,7 +477,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
     {
         area(processing)
         {
-            action("Gestión Grupos")
+            action("Gestion Grupos")
             {
                 Image = Setup;
                 Promoted = true;
@@ -744,7 +744,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         MatrixRecords1: array[32] of Text[4456059];
         MatrixRecord1: Record 56059;
         lCuantos: Integer;
-        TextL001: Label 'El grupo %1 contiene %2 almacenes. Sólo se mostrarán %3';
+        TextL001: Label 'El grupo %1 contiene %2 almacenes. Solo se mostrarán %3';
     begin
         //+001
 

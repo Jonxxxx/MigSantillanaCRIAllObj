@@ -3,28 +3,28 @@ table 34002149 "Acumulado Salarios"
 
     fields
     {
-        field(1;"Empresa cotización";Code[10])
+        field(1; "Empresa cotizacion"; Code[10])
         {
-            TableRelation = "Empresas Cotización";
+            TableRelation = "Empresas Cotizacion";
         }
-        field(2;"No. empleado";Code[20])
+        field(2; "No. empleado"; Code[20])
         {
             TableRelation = Employee;
         }
-        field(4;"Fecha Desde";Date)
+        field(4; "Fecha Desde"; Date)
         {
         }
-        field(5;"Fecha Hasta";Date)
+        field(5; "Fecha Hasta"; Date)
         {
         }
-        field(6;Importe;Decimal)
+        field(6; Importe; Decimal)
         {
         }
     }
 
     keys
     {
-        key(Key1;"Empresa cotización","No. empleado","Fecha Desde")
+        key(Key1; "Empresa cotizacion", "No. empleado", "Fecha Desde")
         {
         }
     }

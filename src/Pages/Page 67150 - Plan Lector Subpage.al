@@ -60,7 +60,7 @@ page 67150 "Plan Lector Subpage"
                 field("Universo de Títulos u Obras"; "Universo de Titulos u Obras")
                 {
                 }
-                field("Adopción real"; "Adopcion real")
+                field("Adopcion real"; "Adopcion real")
                 {
                 }
                 field("Porc. Afinidad"; "Porc. Afinidad")

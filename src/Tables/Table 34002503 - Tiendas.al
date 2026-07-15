@@ -1,9 +1,9 @@
 table 34002503 Tiendas
 {
-    // #90735 RRT,  15.09.2017: Añadir campo "ID Sesion" para controlar si alguién esa ejecutando una función crítica (Registrar, Nueva_Venta,..)
+    // #90735 RRT,  15.09.2017: Añadir campo "ID Sesion" para controlar si alguién esa ejecutando una funcion crítica (Registrar, Nueva_Venta,..)
     // #88460 RRT,  01.02.2018: Añadir un nuevo campo para permitir grabar un LOG.
-    // #76946 RRT,  13.12.2017: Añadir 2 campos para la impresión de facturas electrónicas
-    //              26.12.2017: Añadir campos de e-mail e "Información zona" para la impresión de facturas electrónicas.
+    // #76946 RRT,  13.12.2017: Añadir 2 campos para la impresion de facturas electronicas
+    //              26.12.2017: Añadir campos de e-mail e "Informacion zona" para la impresion de facturas electronicas.
     // 
     // #121213 RRT, 13.03.2018: Cambiar ID del campo "Registrar log del proceso" a 34002588. Su valor chocaba con uno de los campos nuevos de Guatemala.
     //         De todas formas este campo, tiene el valor inicial y que yo sepa siempre se permite el registrar el LOG. Ni siquiera sale en la ficha.
@@ -269,7 +269,7 @@ table 34002503 Tiendas
         }
         field(34002580; "Cuenta Excencion IVA"; Code[20])
         {
-            Caption = 'Cuenta Excención IVA';
+            Caption = 'Cuenta Excencion IVA';
             Description = 'DsPOS Standard';
             TableRelation = "G/L Account"."No." WHERE("Account Type" = CONST(Posting));
 
@@ -350,7 +350,7 @@ table 34002503 Tiendas
     var
         rBanco: Record 270;
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
-        Error001: Label 'Proceso Cancelado a petición del usuario';
+        Error001: Label 'Proceso Cancelado a peticion del usuario';
     //TODO: Ver Error002: '';
     //TODO: Ver cFunciones: Codeunit 34002503;
 }

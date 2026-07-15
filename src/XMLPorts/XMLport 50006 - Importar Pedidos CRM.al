@@ -235,7 +235,7 @@ xmlport 50006 "Importar Pedidos CRM"
                             SH.INIT;
                             SH.VALIDATE("Document Type", SH."Document Type"::Order);
 
-                            // Encuentra la posición del primer guion ("-")+
+                            // Encuentra la posicion del primer guion ("-")+
                             CLEAR(Serie);
                             CLEAR(Prefijo);
                             NoSeriesLine.RESET;
@@ -247,7 +247,7 @@ xmlport 50006 "Importar Pedidos CRM"
                                     Prefijo := COPYSTR(NoSeriesLine."Starting No.", 1, STRPOS(NoSeriesLine."Starting No.", '-'));
                                 END;
                             END;
-                            // Encuentra la posición del primer guion ("-")-
+                            // Encuentra la posicion del primer guion ("-")-
 
                             //Obtengo el cliente+
                             IF Customer.GET(ConfigEmpresa."Cliente CRM") THEN;
@@ -310,7 +310,7 @@ xmlport 50006 "Importar Pedidos CRM"
                             SH.VALIDATE("Ship-to Post Code", envio_cp);
                             //Envío-
 
-                            //Facturación+
+                            //Facturacion+
                             IF nombre_fact <> '' THEN BEGIN
                                 SH.VALIDATE("Bill-to Name", nombre_fact);
                             END ELSE
@@ -384,7 +384,7 @@ xmlport 50006 "Importar Pedidos CRM"
                             SH.VALIDATE("Sell-to Phone No.",telefono_celular_fact);
                             SH.VALIDATE("Payment Method Code",forma_pago);
                             */
-                            //Facturación-
+                            //Facturacion-
 
                             /*
                             IF envio_nombre = '' THEN

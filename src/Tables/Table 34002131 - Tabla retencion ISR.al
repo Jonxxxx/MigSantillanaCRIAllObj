@@ -17,11 +17,11 @@ table 34002131 "Tabla retencion ISR"
         {
             DecimalPlaces = 2 : 2;
         }
-        field(4; "Importe retención"; Decimal)
+        field(4; "Importe retencion"; Decimal)
         {
             DecimalPlaces = 2 : 2;
         }
-        field(5; "% Retención"; Decimal)
+        field(5; "% Retencion"; Decimal)
         {
             DecimalPlaces = 2 : 2;
         }

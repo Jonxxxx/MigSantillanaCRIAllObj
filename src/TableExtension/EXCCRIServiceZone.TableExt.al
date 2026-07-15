@@ -4,7 +4,7 @@ tableextension 50100 EXCCRIServiceZone extends "Service Zone"
     {
         field(50000; "Cod. Cobrador"; Code[20])
         {
-            Caption = 'Collector Code', Comment = 'ESP=Cód. Cobrador';
+            Caption = 'Collector Code', Comment = 'ESP=Cod. Cobrador';
             DataClassification = ToBeClassified;
             TableRelation = "Salesperson/Purchaser".Code where(Collector = const(true));
 
