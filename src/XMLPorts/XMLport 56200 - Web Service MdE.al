@@ -5,7 +5,7 @@ xmlport 56200 "Web Service MdE"
     // -- Copyright ® 2007-2012 Carsten Scholling
     // --------------------------------------------------------------------------------
     // 
-    // #81969 27/01/2018 PLB: Se genera un historial MdE, si la fecha efectiva es hoy, se pasan los datos al empleado, si no se espera a que llegue el día (se procesa por una tarea programada)
+    // #81969 27/01/2018 PLB: Se genera un historial MdE, si la fecha efectiva es hoy, se pasan los datos al empleado, si no se espera a que llegue el dia (se procesa por una tarea programada)
 
     DefaultNamespace = 'http://prisa.com';
     Direction = Both;
@@ -1132,7 +1132,7 @@ xmlport 56200 "Web Service MdE"
 
         Employee.RESET;
 
-        // Cuando recibimos un UPDATE y el empleado está de baja (o no hay línea de contrato) se entiende que es
+        // Cuando recibimos un UPDATE y el empleado está de baja (o no hay linea de contrato) se entiende que es
         // una recontratacion, si el motivo es una alta nueva, daremos el correspondiente error
         
         Contrato.SETRANGE("No. empleado", EmployeeNo);
@@ -1373,7 +1373,7 @@ xmlport 56200 "Web Service MdE"
         END;
 
         //+#101415
-        //IF USERID <> 'DYNASOFT\PJLLANERAS' THEN // pruebas internas, no enviar al WS la respuesta asíncrona
+        //IF USERID <> 'DYNASOFT\PJLLANERAS' THEN // pruebas internas, no enviar al WS la respuesta asincrona
         //MdEMgnt.SendAsyncPostRequest('WS_RESPUESTA_MDE',ConfSant."WS Respuesta MdE", '', XmlDoc.OuterXml);
         MdEMgnt.CreateAsyncPostRequest('WS_RESPUESTA_MDE', ConfSant."WS Respuesta MdE", '', XmlDoc.OuterXml);
         //-#101415

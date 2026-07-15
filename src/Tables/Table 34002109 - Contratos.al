@@ -59,7 +59,7 @@ table 34002109 Contratos
                 IF Rec."Fecha inicio" <> xRec."Fecha inicio" THEN BEGIN
                     /*     "Cab.nomina".RESET;
                          "Cab.nomina".SETRANGE("No. empleado","No. empleado");
-                         "Cab.nomina".SETRANGE(Período,"Fecha inicio","Fecha finalizacion");
+                         "Cab.nomina".SETRANGE(Periodo,"Fecha inicio","Fecha finalizacion");
                          IF "Cab.nomina".FINDFIRST THEN
                            ERROR (Err001);
                            */
@@ -159,12 +159,12 @@ table 34002109 Contratos
                     Activo := FALSE;
             end;
         }
-        field(22; "Días preaviso"; Text[30])
+        field(22; "Dias preaviso"; Text[30])
         {
             DateFormula = true;
             InitValue = '15D';
         }
-        field(23; "Período prueba"; Text[30])
+        field(23; "Periodo prueba"; Text[30])
         {
             DateFormula = true;
         }
@@ -177,16 +177,16 @@ table 34002109 Contratos
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
-        field(39; "Días semana"; Decimal)
+        field(39; "Dias semana"; Decimal)
         {
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
             begin
-                IF "Días semana" <> 0 THEN
-                    "Horas semana" := "Horas dia" * "Días semana"
+                IF "Dias semana" <> 0 THEN
+                    "Horas semana" := "Horas dia" * "Dias semana"
                 ELSE
-                    "Días semana" := "Horas semana" / "Horas dia";
+                    "Dias semana" := "Horas semana" / "Horas dia";
             end;
         }
         field(40; "Horas dia"; Decimal)
@@ -196,9 +196,9 @@ table 34002109 Contratos
             trigger OnValidate()
             begin
                 IF "Horas dia" <> 0 THEN
-                    "Horas semana" := "Horas dia" * "Días semana"
+                    "Horas semana" := "Horas dia" * "Dias semana"
                 ELSE
-                    "Horas dia" := "Horas semana" / "Días semana";
+                    "Horas dia" := "Horas semana" / "Dias semana";
             end;
         }
         field(41; "Horas semana"; Decimal)
@@ -208,12 +208,12 @@ table 34002109 Contratos
             trigger OnValidate()
             begin
                 IF "Horas semana" = 0 THEN
-                    "Horas semana" := "Horas dia" * "Días semana"
+                    "Horas semana" := "Horas dia" * "Dias semana"
                 ELSE
-                    IF "Días semana" = 0 THEN
-                        "Días semana" := "Horas semana" / "Horas dia"
+                    IF "Dias semana" = 0 THEN
+                        "Dias semana" := "Horas semana" / "Horas dia"
                     ELSE
-                        "Horas dia" := "Horas semana" / "Días semana";
+                        "Horas dia" := "Horas semana" / "Dias semana";
             end;
         }
         field(50; "Causa de la Baja"; Text[30])
@@ -297,7 +297,7 @@ table 34002109 Contratos
         //-MdE
 
         "Cab.nomina".SETRANGE("No. empleado", "No. empleado");
-        "Cab.nomina".SETRANGE(Período, "Fecha inicio", "Fecha finalizacion");
+        "Cab.nomina".SETRANGE(Periodo, "Fecha inicio", "Fecha finalizacion");
         IF "Cab.nomina".FINDFIRST THEN
             MESSAGE(Err005);
 

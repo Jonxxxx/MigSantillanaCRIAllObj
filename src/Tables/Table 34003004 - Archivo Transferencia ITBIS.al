@@ -373,7 +373,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B14*|E44*'),
                                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobante de Regímenes Especiales (14 y 44) Monto';
+            Caption = 'Comprobante de Regimenes Especiales (14 y 44) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -381,7 +381,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B14*|E44*'),
                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobante de Regímenes Especiales (14 y 44) Cantidad';
+            Caption = 'Comprobante de Regimenes Especiales (14 y 44) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -525,7 +525,7 @@ table 34003004 "Archivo Transferencia ITBIS"
             /*
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B14*|E44*'),
                                                                                      "Codigo reporte" = CONST(606)));*/
-            Caption = 'Total Facturas en Comprobantes Fiscales para Regímenes Especiales';
+            Caption = 'Total Facturas en Comprobantes Fiscales para Regimenes Especiales';
             FieldClass = FlowField;
         }
     }

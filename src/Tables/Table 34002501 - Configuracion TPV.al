@@ -151,7 +151,7 @@ table 34002501 "Configuracion TPV"
         }
         field(34002552; "NCF Regimenes especiales"; Code[20])
         {
-            Caption = 'NCF Regímenes especiales';
+            Caption = 'NCF Regimenes especiales';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }

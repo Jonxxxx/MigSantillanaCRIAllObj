@@ -1,6 +1,6 @@
 table 34002503 Tiendas
 {
-    // #90735 RRT,  15.09.2017: Añadir campo "ID Sesion" para controlar si alguién esa ejecutando una funcion crítica (Registrar, Nueva_Venta,..)
+    // #90735 RRT,  15.09.2017: Añadir campo "ID Sesion" para controlar si alguién esa ejecutando una funcion critica (Registrar, Nueva_Venta,..)
     // #88460 RRT,  01.02.2018: Añadir un nuevo campo para permitir grabar un LOG.
     // #76946 RRT,  13.12.2017: Añadir 2 campos para la impresion de facturas electronicas
     //              26.12.2017: Añadir campos de e-mail e "Informacion zona" para la impresion de facturas electronicas.
@@ -144,7 +144,7 @@ table 34002503 Tiendas
         }
         field(34002519; "Nombre Pais"; Text[50])
         {
-            Caption = 'Nombre País';
+            Caption = 'Nombre Pais';
             Description = 'DsPOS Standard';
 
             trigger OnValidate()
@@ -252,7 +252,7 @@ table 34002503 Tiendas
         }
         field(34002577; "Imp. Minimo Sol. Datos Cliente"; Decimal)
         {
-            Caption = 'Importe mínimo para solicitar datos del cliente';
+            Caption = 'Importe minimo para solicitar datos del cliente';
             Description = 'DsPOS Standard';
         }
         field(34002578; "No. Maximo de Lineas"; Integer)

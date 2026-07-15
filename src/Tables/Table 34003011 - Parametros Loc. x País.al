@@ -1,10 +1,10 @@
-table 34003011 "Parametros Loc. x País"
+table 34003011 "Parametros Loc. x Pais"
 {
     Caption = 'Localization by Country setup';
 
     fields
     {
-        field(1; "País"; Code[20])
+        field(1; "Pais"; Code[20])
         {
             Caption = 'Country';
             TableRelation = "Country/Region";
@@ -54,14 +54,14 @@ table 34003011 "Parametros Loc. x País"
 
     keys
     {
-        key(Key1; "País")
+        key(Key1; "Pais")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown; "País")
+        fieldgroup(DropDown; "Pais")
         {
         }
     }

@@ -139,7 +139,7 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000013>")
                 {
-                    Caption = 'Guía';
+                    Caption = 'Guia';
                     Promoted = true;
                     PromotedCategory = Category5;
 

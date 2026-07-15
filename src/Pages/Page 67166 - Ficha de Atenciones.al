@@ -233,9 +233,9 @@ page 67166 "Ficha de Atenciones"
                         ERROR(Text002);
                 end;
             }
-            action("&Estadística")
+            action("&Estadistica")
             {
-                Caption = '&Estadística';
+                Caption = '&Estadistica';
                 Image = Statistics;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -13,7 +13,7 @@ tableextension 50096 EXCCRIRegisteredWhseActLine extends "Registered Whse. Activ
         }
         field(50002; "No. Linea Packing"; Integer)
         {
-            Caption = 'Packing Line No.', Comment = 'ESP=No. Línea Packing';
+            Caption = 'Packing Line No.', Comment = 'ESP=No. Linea Packing';
             DataClassification = ToBeClassified;
         }
         field(50003; "No. Packing Registrado"; Code[20])

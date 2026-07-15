@@ -184,16 +184,16 @@ xmlport 60001 "_Importa Empleados"
                 //IF Nomb2 = 'Rolando' THEN
                 //   MESSAGE('aa%1 bb%2',Ape1,Ape2);
 
-                Nomb := CONVERTSTR(Nomb, 'Ý', 'í');
+                Nomb := CONVERTSTR(Nomb, 'Ý', 'i');
                 Nomb := CONVERTSTR(Nomb, '±', 'ñ');
                 Nomb := CONVERTSTR(Nomb, 'Ð', 'ñ');
-                Nomb2 := CONVERTSTR(Nomb2, 'Ý', 'í');
+                Nomb2 := CONVERTSTR(Nomb2, 'Ý', 'i');
                 Nomb2 := CONVERTSTR(Nomb2, '±', 'ñ');
                 Nomb2 := CONVERTSTR(Nomb2, 'Ð', 'ñ');
-                Ape1 := CONVERTSTR(Ape1, 'Ý', 'í');
+                Ape1 := CONVERTSTR(Ape1, 'Ý', 'i');
                 Ape1 := CONVERTSTR(Ape1, '±', 'ñ');
                 Ape1 := CONVERTSTR(Ape1, 'Ð', 'ñ');
-                Ape2 := CONVERTSTR(Ape2, 'Ý', 'í');
+                Ape2 := CONVERTSTR(Ape2, 'Ý', 'i');
                 Ape2 := CONVERTSTR(Ape2, '±', 'ñ');
                 Ape2 := CONVERTSTR(Ape2, 'Ð', 'ñ');
 

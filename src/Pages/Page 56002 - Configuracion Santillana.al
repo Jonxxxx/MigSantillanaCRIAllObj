@@ -139,7 +139,7 @@ page 56002 "Configuracion Santillana"
                 field("Cod Cliente Call Center"; "Cod Cliente Call Center")
                 {
                 }
-                field("Días Borrado Rvas. Call Center"; "Dias Borrado Rvas. Call Center")
+                field("Dias Borrado Rvas. Call Center"; "Dias Borrado Rvas. Call Center")
                 {
                 }
                 field("Dim Est Vent Excel"; "Dim Est Vent Excel")

@@ -69,7 +69,7 @@ table 34002110 "Puestos laborales"
         field(10; "Método cálculo Paga Salario"; Option)
         {
             OptionCaption = 'Distributed,By period';
-            OptionMembers = Distribuido,"Por período";
+            OptionMembers = Distribuido,"Por periodo";
         }
         field(11; "Cod. departamento"; Code[20])
         {

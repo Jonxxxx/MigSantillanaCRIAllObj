@@ -149,7 +149,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
             trigger OnValidate()
             begin
-                "Excluído Cotizacion TSS" :=
+                "Excluido Cotizacion TSS" :=
                     "Document Type" <> "Document Type"::Cédula;
             end;
         }
@@ -283,14 +283,14 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002124; "Total ingresos"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Período = field("Date Filter"), "Tipo concepto" = const(Ingresos)));
+            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Tipo concepto" = const(Ingresos)));
             Editable = false;
         }
 
         field(34002125; "Total deducciones"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Período = field("Date Filter"), "Tipo concepto" = const(Deducciones)));
+            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Tipo concepto" = const(Deducciones)));
             Editable = false;
         }
 
@@ -303,7 +303,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002127; "Total ISR"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Período = field("Date Filter"), "Concepto salarial" = const('ISR')));
+            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Concepto salarial" = const('ISR')));
         }
 
         field(34002128; "Tipo Empleado"; Option)
@@ -321,7 +321,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002130; "Acumulado Salario"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Período = field("Date Filter"), "Salario Base" = const(true)));
+            CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Salario Base" = const(true)));
         }
 
         field(34002131; "Codigo Cliente"; Code[20])
@@ -330,13 +330,13 @@ tableextension 50074 EXCCRIEmployee extends Employee
             TableRelation = Customer."No.";
         }
 
-        field(34002132; "Excluído Cotizacion TSS"; Boolean)
+        field(34002132; "Excluido Cotizacion TSS"; Boolean)
         {
             DataClassification = ToBeClassified;
             InitValue = false;
         }
 
-        field(34002133; "Excluído Cotizacion ISR"; Boolean)
+        field(34002133; "Excluido Cotizacion ISR"; Boolean)
         {
             DataClassification = ToBeClassified;
         }
@@ -464,7 +464,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002154; "Nivel de riesgo"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionMembers = " ","Crítico","No crítico";
+            OptionMembers = " ","Critico","No critico";
         }
 
         field(34002155; "ID Control de asistencia"; Code[6])
@@ -517,7 +517,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
         field(34002164; "Categoria"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoría"));
+            TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria"));
         }
 
         field(34002165; "Nivel Academico MT"; Code[5])
@@ -632,10 +632,10 @@ tableextension 50074 EXCCRIEmployee extends Employee
             DataClassification = ToBeClassified;
         }
 
-        field(34002185; "Categoría de licencia"; Code[20])
+        field(34002185; "Categoria de licencia"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoría de Licencia"));
+            TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria de Licencia"));
         }
     }
 

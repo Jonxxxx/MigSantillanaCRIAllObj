@@ -551,7 +551,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                        ApprovalEntries: Page 658;
+                        ApprovalEntries: Page "Approval Entries";
                     begin
                         //TODO Ver: ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
                         ApprovalEntries.RUN;
@@ -1019,14 +1019,14 @@ page 56036 "Sales Order Call Center"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 10051;
+                //TODO: Ver //TODO: Ver RunObject = Report 10051;
             }
             action("Picking List by Order")
             {
                 Caption = 'Picking List by Order';
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 10153;
+                //TODO: Ver //TODO: Ver RunObject = Report 10153;
             }
         }
     }

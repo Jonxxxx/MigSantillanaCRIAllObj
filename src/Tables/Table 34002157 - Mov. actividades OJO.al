@@ -111,10 +111,10 @@ table 34002157 "Mov. actividades OJO"
         field(19; "Precio Tarifa"; Decimal)
         {
         }
-        field(20; "Inicio Período"; Date)
+        field(20; "Inicio Periodo"; Date)
         {
         }
-        field(21; "Fin Período"; Date)
+        field(21; "Fin Periodo"; Date)
         {
         }
         field(22; "Work Type Code"; Code[20])

@@ -85,8 +85,8 @@ xmlport 34003025 "RNC DGII Import"
                     "RNC DGII"."VAT Registration No." := RNC;
 
                     IF Name <> '' THEN BEGIN
-                        // Name := DELCHR(Name,'=',DELCHR(Name,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéíoúñÑ›ÉõÛ­ü '));
-                        Name := CONVERTSTR(Name, 'áéíoúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
+                        // Name := DELCHR(Name,'=',DELCHR(Name,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéioúñÑ›ÉõÛ­ü '));
+                        Name := CONVERTSTR(Name, 'áéioúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
                         //n := 165;
                         //NM := 164;
                         //Name := CONVERTSTR(Name,FORMAT(NM),'N');
@@ -94,14 +94,14 @@ xmlport 34003025 "RNC DGII Import"
                     END;
 
                     IF SearchName <> '' THEN BEGIN
-                        //SearchName := DELCHR(SearchName,'=',DELCHR(SearchName,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéíoúñÑ›ÉõÛ­ü '));
-                        SearchName := CONVERTSTR(SearchName, 'áéíoúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
+                        //SearchName := DELCHR(SearchName,'=',DELCHR(SearchName,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéioúñÑ›ÉõÛ­ü '));
+                        SearchName := CONVERTSTR(SearchName, 'áéioúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
                         "RNC DGII"."Search Name" := COPYSTR(SearchName, 1, MAXSTRLEN("RNC DGII"."Search Name"));
                     END;
 
                     IF Campo4 <> '' THEN BEGIN
-                        //Campo4 := DELCHR(Campo4,'=',DELCHR(Campo4,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéíoúñÑ›ÉõÛ­ü '));
-                        Campo4 := CONVERTSTR(Campo4, 'áéíoúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
+                        //Campo4 := DELCHR(Campo4,'=',DELCHR(Campo4,'=','ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&áéioúñÑ›ÉõÛ­ü '));
+                        Campo4 := CONVERTSTR(Campo4, 'áéioúñÑ›ÉõÛ­ü', 'aeiounNAEIOUu');
                         "RNC DGII"."Campo 4" := COPYSTR(Campo4, 1, MAXSTRLEN("RNC DGII"."Campo 4"));
                     END;
 

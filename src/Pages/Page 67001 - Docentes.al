@@ -46,7 +46,7 @@ page 67001 Docentes
                 field("Referencia Direccion"; "Referencia Direccion")
                 {
                 }
-                field("<Cod. país/region>"; "Country/Region Code")
+                field("<Cod. pais/region>"; "Country/Region Code")
                 {
                 }
                 field("Cod. Departamento"; County)

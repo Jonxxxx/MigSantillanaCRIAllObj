@@ -9,7 +9,7 @@ table 34002122 "Lin. Aportes Empresas"
         field(2; "Empresa cotizacion"; Code[20])
         {
         }
-        field(3; "Período"; Date)
+        field(3; "Periodo"; Date)
         {
         }
         field(4; "No. Empleado"; Code[20])
@@ -41,9 +41,9 @@ table 34002122 "Lin. Aportes Empresas"
         }
         field(12; "Tipo Nomina"; Option)
         {
-            Description = 'Normal,Regalía,Bonificacion';
+            Description = 'Normal,Regalia,Bonificacion';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
+            OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
         field(13; "Job No."; Code[20])
         {
@@ -74,13 +74,13 @@ table 34002122 "Lin. Aportes Empresas"
 
     keys
     {
-        key(Key1; "Período", "Tipo de nomina", "No. Empleado", "Job No.", "No. orden")
+        key(Key1; "Periodo", "Tipo de nomina", "No. Empleado", "Job No.", "No. orden")
         {
         }
-        key(Key2; "No. Documento", "Empresa cotizacion", "Período", "No. Empleado", "Concepto Salarial", "No. orden")
+        key(Key2; "No. Documento", "Empresa cotizacion", "Periodo", "No. Empleado", "Concepto Salarial", "No. orden")
         {
         }
-        key(Key3; "No. Empleado", "Período", "Concepto Salarial")
+        key(Key3; "No. Empleado", "Periodo", "Concepto Salarial")
         {
             SumIndexFields = Importe;
         }

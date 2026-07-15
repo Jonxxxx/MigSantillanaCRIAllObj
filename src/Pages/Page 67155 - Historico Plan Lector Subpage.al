@@ -63,7 +63,7 @@ page 67155 "Historico Plan Lector Subpage"
                 field("Total Obras Compradas x Alumno"; "Total Obras Compradas x Alumno")
                 {
                 }
-                field("Universo de Títulos u Obras"; "Universo de Titulos u Obras")
+                field("Universo de Titulos u Obras"; "Universo de Titulos u Obras")
                 {
                 }
                 field("Adopcion real"; "Adopcion real")

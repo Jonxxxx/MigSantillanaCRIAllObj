@@ -14,7 +14,7 @@ table 34002120 "Nivel Cargo"
         field(3; Descripcion; Text[30])
         {
         }
-        field(4; "Importe mínimo"; Decimal)
+        field(4; "Importe minimo"; Decimal)
         {
             Caption = 'Minimum amount';
         }
@@ -37,7 +37,7 @@ table 34002120 "Nivel Cargo"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Cod. Nivel", Descripcion, "Importe mínimo", "Importe Medio", "Importe máximo")
+        fieldgroup(DropDown; "Cod. Nivel", Descripcion, "Importe minimo", "Importe Medio", "Importe máximo")
         {
         }
     }

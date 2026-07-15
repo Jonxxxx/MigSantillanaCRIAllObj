@@ -1106,7 +1106,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                         IF BOMLine.COUNT = 0 THEN
                                             currXMLport.SKIP;
 
-                                        Articulo_Pack := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Artículo Pack", BOMLine."No.", FALSE);
+                                        Articulo_Pack := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Articulo Pack", BOMLine."No.", FALSE);
                                         //Articulo_Pack  := GetTexMaxErr(Articulo_Pack,10, Text003);
                                     end;
                                 }
@@ -1220,7 +1220,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
 
 
                                 Derechos_de_Autor := FORMAT(Item."Derecho de autor", 0, 9);
-                                Pais := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::País, Item."Country/Region of Origin Code", FALSE);
+                                Pais := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Pais, Item."Country/Region of Origin Code", FALSE);
 
                                 Edicion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::Edicion, Item.Edicion, FALSE);
                                 Edicion := GetTexMaxErr(Edicion, 10, Item.FIELDCAPTION(Edicion));
@@ -1408,13 +1408,13 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                 }
                 field(wTipSLIC; wTipSLIC)
                 {
-                    Caption = 'Tipología SLIC';
+                    Caption = 'Tipologia SLIC';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
                     ToolTip = 'Codigo de Tipologia que corresponde a SLIC para discriminar la informacion de determinados campos';
                 }
                 field(wTipSDIG; wTipSDIG)
                 {
-                    Caption = 'Tipología SDIG';
+                    Caption = 'Tipologia SDIG';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
                     ToolTip = 'Codigo de Tipologia que corresponde a SDIG para discriminar la informacion de determinados campos';
                 }

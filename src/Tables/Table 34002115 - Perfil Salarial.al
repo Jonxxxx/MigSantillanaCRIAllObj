@@ -248,22 +248,22 @@ table 34002115 "Perfil Salarial"
                 END;
             end;
         }
-        field(16; "Período generac."; Code[8])
+        field(16; "Periodo generac."; Code[8])
         {
         }
         field(17; Imprimir; Boolean)
         {
         }
-        field(18; "Inicio Período"; Date)
+        field(18; "Inicio Periodo"; Date)
         {
 
             trigger OnValidate()
             begin
-                IF "Inicio Período" <> 0D THEN
-                    "Fin Período" := CALCDATE(Text001, "Inicio Período");
+                IF "Inicio Periodo" <> 0D THEN
+                    "Fin Periodo" := CALCDATE(Text001, "Inicio Periodo");
             end;
         }
-        field(19; "Fin Período"; Date)
+        field(19; "Fin Periodo"; Date)
         {
         }
         field(20; Mes; Integer)
@@ -291,7 +291,7 @@ table 34002115 "Perfil Salarial"
         field(27; "Tipo Nomina"; Option)
         {
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
+            OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
         field(28; "Cotiza AFP"; Boolean)
         {
@@ -323,7 +323,7 @@ table 34002115 "Perfil Salarial"
         field(35; "Importe Acumulado"; Decimal)
         {
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
-                                                                   Período = FIELD("Filtro Fecha"),
+                                                                   Periodo = FIELD("Filtro Fecha"),
                                                                    "Concepto salarial" = FIELD("Concepto salarial")));
             FieldClass = FlowField;
         }

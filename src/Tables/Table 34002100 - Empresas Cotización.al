@@ -59,9 +59,9 @@ table 34002100 "Empresas Cotizacion"
         {
             SubType = Bitmap;
         }
-        field(11; "Cod. país"; Code[10])
+        field(11; "Cod. pais"; Code[10])
         {
-            Description = 'Codigo de país para personas físicas extranjeras';
+            Description = 'Codigo de pais para personas fisicas extranjeras';
             TableRelation = "Country/Region";
         }
         field(12; "Tipo de documento"; Option)
@@ -144,7 +144,7 @@ table 34002100 "Empresas Cotizacion"
         }
         field(28; "Tipo Empresa de Trabajo"; Option)
         {
-            Description = 'General,Hotel,Zona Franca,Agrícola';
+            Description = 'General,Hotel,Zona Franca,Agricola';
             OptionMembers = General,Hotel,"Zona Franca";
         }
         field(29; "Tipo Pago Nomina"; Option)
@@ -156,7 +156,7 @@ table 34002100 "Empresas Cotizacion"
         field(30; "Tasa de Riesgo (%)"; Decimal)
         {
         }
-        field(31; "Salario Mínimo TSS"; Decimal)
+        field(31; "Salario Minimo TSS"; Decimal)
         {
             Caption = 'Minimun Salary TSS';
         }

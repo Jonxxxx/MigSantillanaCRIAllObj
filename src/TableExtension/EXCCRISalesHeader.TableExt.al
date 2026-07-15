@@ -196,7 +196,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         {
             DataClassification = ToBeClassified;
             OptionCaption = 'Invoice,Consignation,Sample,Donations,Channel 3,Exports,Scholarships,Royalties';
-            OptionMembers = Factura,Consignacion,Muestras,Donaciones,"Canal 3",Exportacion,Becas,"Regalías";
+            OptionMembers = Factura,Consignacion,Muestras,Donaciones,"Canal 3",Exportacion,Becas,"Regalias";
 
             trigger OnValidate()
             begin
@@ -696,8 +696,8 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
             FieldClass = FlowField;
             //TODO: Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
             Caption = 'Tax Identification Type';
-            OptionCaption = 'Persona jurídica,Persona física,DIMEX,NITE';
-            OptionMembers = "Persona jurídica","Persona física",DIMEX,NITE;
+            OptionCaption = 'Persona juridica,Persona fisica,DIMEX,NITE';
+            OptionMembers = "Persona juridica","Persona fisica",DIMEX,NITE;
         }
         field(56313; "Metodo de Envio E-Commerce"; Option)
         {

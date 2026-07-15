@@ -524,7 +524,7 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                RunObject = Report 5051;
+                //TODO: Ver RunObject = Report 5051;
             }
             action("Contact Labels")
             {
@@ -533,7 +533,7 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                RunObject = Report 5056;
+                //TODO: Ver RunObject = Report 5056;
             }
             action("Questionnaire Handout")
             {
@@ -542,7 +542,7 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                RunObject = Report 5066;
+                //TODO: Ver RunObject = Report 5066;
             }
             action("Sales Cycle Analysis")
             {
@@ -550,7 +550,7 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                RunObject = Report 5062;
+                //TODO: Ver RunObject = Report 5062;
             }
         }
     }

@@ -8,7 +8,7 @@ page 56064 "Gestion BackOrder - SL"
     //                           Mejorado el rendimiento al abrir la page
     //                           Campo "Cantidad Anulada"
     // 
-    // $003   10/11/2014   PLB   Solo revisar las líneas que tienen "Cantidad pendiente BO"
+    // $003   10/11/2014   PLB   Solo revisar las lineas que tienen "Cantidad pendiente BO"
     // 
     // #56090 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
 
@@ -325,7 +325,7 @@ page 56064 "Gestion BackOrder - SL"
                 //TODO: Ver IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SalesLine) > 0) AND
                 //TODO: Ver (SH.GET(SalesLine."Document Type", SalesLine."Document No.")) THEN
                 //+$002
-                // El ELSE no tenía ningún sentido, los registros ya están marcados como FALSE
+                // El ELSE no tenia ningún sentido, los registros ya están marcados como FALSE
                 /*********************************************************
                   SalesLine."Disponible BackOrder" := TRUE
               ELSE

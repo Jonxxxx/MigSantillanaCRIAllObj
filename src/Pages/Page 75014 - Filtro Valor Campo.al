@@ -97,7 +97,7 @@ page 75014 "Filtro Valor Campo"
             lwRecRf.OPEN(lwTableId);
             lwFieldRf := lwRecRf.FIELD("lwFieldNo");
             IF UPPERCASE(FORMAT(lwFieldRf.TYPE)) = 'BOOLEAN' THEN BEGIN
-                InsertReg(1, lwTableId, lwFieldNo, 'Sí', '');
+                InsertReg(1, lwTableId, lwFieldNo, 'Si', '');
                 InsertReg(2, lwTableId, lwFieldNo, 'No', '');
             END ELSE
                 IF UPPERCASE(FORMAT(lwFieldRf.TYPE)) = 'OPTION' THEN BEGIN

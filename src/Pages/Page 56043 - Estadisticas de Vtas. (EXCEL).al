@@ -15,7 +15,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
     // 005      13-Enero-2022    FES           SANTINAV-2916. Permitir seleccionar rango en filtro producto.
     // 006      13-Enero-2022    FES           Ajustes a Business Central
     // 007      17-Julio-2023    LDP           SANTINAV-4746:crear filtro en Estadisticas de Vtas. (EXCEL)
-    // 008      18-09-2025       LDP           SANTINAV-8394: Crear campo ŽCanal de Venta en cabecera de pedidos y agregarlo al reporte de estadísticas
+    // 008      18-09-2025       LDP           SANTINAV-8394: Crear campo ŽCanal de Venta en cabecera de pedidos y agregarlo al reporte de estadisticas
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

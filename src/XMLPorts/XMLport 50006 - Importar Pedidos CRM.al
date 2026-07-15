@@ -298,7 +298,7 @@ xmlport 50006 "Importar Pedidos CRM"
 
                             SH.VALIDATE("Location Code", ConfigEmpresa."Almacen CRM");
 
-                            //Envío+
+                            //Envio+
                             IF cod_direccion_envio <> '' THEN BEGIN
                                 SH.VALIDATE("Ship-to Code", cod_direccion_envio);
                             END ELSE
@@ -308,7 +308,7 @@ xmlport 50006 "Importar Pedidos CRM"
                             SH.VALIDATE("Ship-to Address", envio_direccion);
                             SH.VALIDATE("Ship-to City", envio_colonia2);
                             SH.VALIDATE("Ship-to Post Code", envio_cp);
-                            //Envío-
+                            //Envio-
 
                             //Facturacion+
                             IF nombre_fact <> '' THEN BEGIN

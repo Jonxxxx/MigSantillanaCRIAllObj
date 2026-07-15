@@ -2,7 +2,7 @@ table 34003013 "Tipos de ingresos"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ---------------------------------
-    // AMS     : Agustín Méndez
+    // AMS     : Agustin Méndez
     // GRN     : Guillermo Román
     // ------------------------------------------------------------------------
     // No.         Firma       Fecha            Descripcion

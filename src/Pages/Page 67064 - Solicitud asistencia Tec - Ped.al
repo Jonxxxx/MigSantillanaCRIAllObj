@@ -397,12 +397,12 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Caption = 'Grupo Santillana';
                     Visible = false;
-                    field("Artículo Grupo Santillana"; "Articulo Grupo Santillana")
+                    field("Articulo Grupo Santillana"; "Articulo Grupo Santillana")
                     {
                         Editable = wGS;
                         Visible = false;
                     }
-                    field("Desc. Artículo Grupo Santillan"; "Desc. Articulo Grupo Santillan")
+                    field("Desc. Articulo Grupo Santillan"; "Desc. Articulo Grupo Santillan")
                     {
                         Editable = false;
                         Visible = false;
@@ -432,7 +432,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Editable = false;
                     Visible = false;
                 }
-                field("Artículo Competencia"; "Articulo Competencia")
+                field("Articulo Competencia"; "Articulo Competencia")
                 {
                     Editable = wCompetencia;
                     Visible = false;

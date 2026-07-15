@@ -184,15 +184,15 @@ table 34002172 "Payroll - Job Journal Line"
                 VALIDATE(Quantity);
             end;
         }
-        field(20; "Inicio Período"; Date)
+        field(20; "Inicio Periodo"; Date)
         {
 
             trigger OnValidate()
             begin
-                "Fin Período" := CALCDATE('PM', "Fin Período");
+                "Fin Periodo" := CALCDATE('PM', "Fin Periodo");
             end;
         }
-        field(21; "Fin Período"; Date)
+        field(21; "Fin Periodo"; Date)
         {
         }
         field(22; "Work Type Code"; Code[20])

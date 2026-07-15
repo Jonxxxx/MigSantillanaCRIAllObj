@@ -15,7 +15,7 @@ table 34002134 Calendario
                 Calend.SETRANGE("Period Type", 0); //Date
                 Calend.SETRANGE("Period Start", Fecha);
                 Calend.FINDFIRST;
-                "Día de la semana" := Calend."Period No.";
+                "Dia de la semana" := Calend."Period No.";
                 Ano := DATE2DMY(Fecha, 3);
 
                 Calend.RESET;
@@ -23,7 +23,7 @@ table 34002134 Calendario
                 Calend.SETRANGE("Period Start", DMY2DATE(1, DATE2DMY(Fecha, 2), DATE2DMY(Fecha, 3)));
                 Calend.FINDFIRST;
 
-                Período := Calend."Period No.";
+                Periodo := Calend."Period No.";
             end;
         }
         field(2; Texto; Text[30])
@@ -34,7 +34,7 @@ table 34002134 Calendario
         {
             Caption = 'No working day';
         }
-        field(4; "Día de la semana"; Option)
+        field(4; "Dia de la semana"; Option)
         {
             Caption = 'Week day';
             Description = '    ,Lunes,Martes,Miércoles,Jueves,Viernes,Sabado,Domingo';
@@ -52,7 +52,7 @@ table 34002134 Calendario
             Caption = 'Generated';
             Editable = false;
         }
-        field(7; "Período"; Option)
+        field(7; "Periodo"; Option)
         {
             Caption = 'Period';
             Description = '    ,Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre';
@@ -87,7 +87,7 @@ table 34002134 Calendario
 
     trigger OnDelete()
     begin
-        //ERROR ('No puede borrar días del calendario');
+        //ERROR ('No puede borrar dias del calendario');
     end;
 
     var

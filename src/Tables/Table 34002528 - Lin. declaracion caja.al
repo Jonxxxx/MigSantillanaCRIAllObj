@@ -2,7 +2,7 @@ table 34002528 "Lin. declaracion caja"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
-    Caption = 'Lín. declaracion de caja TPV';
+    Caption = 'Lin. declaracion de caja TPV';
 
     fields
     {

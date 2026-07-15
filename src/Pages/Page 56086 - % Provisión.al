@@ -13,7 +13,7 @@ page 56086 "% Provision"
         {
             repeater(Group)
             {
-                field("Desde día"; "Desde dia")
+                field("Desde dia"; "Desde dia")
                 {
                 }
                 field(Descripcion; Descripcion)

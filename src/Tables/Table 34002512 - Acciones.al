@@ -22,7 +22,7 @@ table 34002512 Acciones
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = 'Action,Mandatory,Line Action';
-            OptionMembers = "Accion",Obligatoria,"Accion Línea";
+            OptionMembers = "Accion",Obligatoria,"Accion Linea";
         }
         field(34002503; "Necesita Datos"; Boolean)
         {

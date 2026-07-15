@@ -51,7 +51,7 @@ page 56090 "Lista Pedidos Ecommerce"
                 field("Tipo Documento"; "Tipo Documento")
                 {
                 }
-                field("Cod. Direccion de envío"; "Cod. Direccion de envio")
+                field("Cod. Direccion de envio"; "Cod. Direccion de envio")
                 {
                 }
                 field("Tipo Comprobante"; "Tipo Comprobante")
@@ -79,7 +79,7 @@ page 56090 "Lista Pedidos Ecommerce"
                 field("No. documento NAV"; "No. documento NAV")
                 {
                 }
-                field("Pedido vía telefonica"; "Pedido via telefonica")
+                field("Pedido via telefonica"; "Pedido via telefonica")
                 {
                 }
                 field("Cod. Cupon"; "Cod. Cupon")

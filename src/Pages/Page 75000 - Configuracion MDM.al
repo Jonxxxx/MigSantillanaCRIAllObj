@@ -37,7 +37,7 @@ page 75000 "Configuracion MDM"
                     }
                     field("Dias Borrado Historico"; "Dias Borrado Historico")
                     {
-                        ToolTip = 'Indica con cuantos días tiene que borrarse el historico.0 No se borra nunca';
+                        ToolTip = 'Indica con cuantos dias tiene que borrarse el historico.0 No se borra nunca';
                     }
                     field("Sistema Origen"; "Sistema Origen")
                     {

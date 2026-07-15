@@ -1,4 +1,4 @@
-table 34002147 "Historico Lín. Préstamo"
+table 34002147 "Historico Lin. Préstamo"
 {
     //TODO: Ver DrillDownPageID = 34002135;
     //TODO: Ver LookupPageID = 34002135;
@@ -8,7 +8,7 @@ table 34002147 "Historico Lín. Préstamo"
         field(1; "No. Préstamo"; Code[20])
         {
         }
-        field(2; "No. Línea"; Integer)
+        field(2; "No. Linea"; Integer)
         {
         }
         field(3; "Tipo CxC"; Option)
@@ -65,7 +65,7 @@ table 34002147 "Historico Lín. Préstamo"
 
     keys
     {
-        key(Key1; "No. Préstamo", "No. Línea")
+        key(Key1; "No. Préstamo", "No. Linea")
         {
             SumIndexFields = Importe, "Débito", "Crédito";
         }

@@ -34,7 +34,7 @@ table 34002146 "Historico Cab. Préstamo"
         }
         field(5; "Importe Original"; Decimal)
         {
-            CalcFormula = Sum("Historico Lín. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lin. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
             Caption = 'Original Amount';
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
@@ -75,7 +75,7 @@ table 34002146 "Historico Cab. Préstamo"
         }
         field(16; "Importe Pendiente"; Decimal)
         {
-            CalcFormula = Sum("Historico Lín. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lin. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }

@@ -46,11 +46,11 @@ table 34002114 "Tipos de acciones personal"
         }
         field(10; "Pagar cesantia"; Boolean)
         {
-            Caption = 'Pagar cesantía';
+            Caption = 'Pagar cesantia';
         }
         field(11; "Pagar regalia"; Decimal)
         {
-            Caption = 'Pagar regalía';
+            Caption = 'Pagar regalia';
             Enabled = false;
         }
         field(12; Suspension; Boolean)

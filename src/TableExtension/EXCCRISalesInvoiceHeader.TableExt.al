@@ -6,7 +6,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
         {
             DataClassification = ToBeClassified;
             OptionCaption = 'Invoice,Consignation,Sample,Donations,Canal 3,Exports,Scholarships,Royalties';
-            OptionMembers = "Factura","Consignacion","Muestras","Donaciones","Canal 3","Exportacion","Becas","Regalías";
+            OptionMembers = "Factura","Consignacion","Muestras","Donaciones","Canal 3","Exportacion","Becas","Regalias";
         }
 
         field(50110; "No. Documento SIC"; Code[20])
@@ -304,8 +304,8 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             Caption = 'Tax Identification Type';
             FieldClass = FlowField;
             //TODO: Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
-            OptionCaption = 'Persona jurídica,Persona física,DIMEX,NITE';
-            OptionMembers = "Persona jurídica","Persona física","DIMEX","NITE";
+            OptionCaption = 'Persona juridica,Persona fisica,DIMEX,NITE';
+            OptionMembers = "Persona juridica","Persona fisica","DIMEX","NITE";
         }
 
         field(56313; "Metodo de Envio E-Commerce"; Option)

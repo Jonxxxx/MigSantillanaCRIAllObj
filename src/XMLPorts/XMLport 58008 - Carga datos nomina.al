@@ -284,10 +284,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(E_CodigoCliente; Employee."Codigo Cliente")
                 {
                 }
-                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluído Cotizacion TSS")
+                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluido Cotizacion TSS")
                 {
                 }
-                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluído Cotizacion ISR")
+                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluido Cotizacion ISR")
                 {
                 }
                 fieldelement(E_NoSeguridadSocial; Employee."Dia nacimiento")
@@ -360,7 +360,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(EC_DomicilioFiscal; "Empresas Cotizacion"."Domicilio fiscal")
                 {
                 }
-                fieldelement(EC_CodPais; "Empresas Cotizacion"."Cod. país")
+                fieldelement(EC_CodPais; "Empresas Cotizacion"."Cod. pais")
                 {
                 }
                 fieldelement(EC_TipoDocumento; "Empresas Cotizacion"."Tipo de documento")
@@ -420,7 +420,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(EC_TasaRiesgo; "Empresas Cotizacion"."Tasa de Riesgo (%)")
                 {
                 }
-                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotizacion"."Salario Mínimo TSS")
+                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotizacion"."Salario Minimo TSS")
                 {
                 }
                 fieldelement(EC_EmployerIdentificationNumber; "Empresas Cotizacion"."Employer Identification Number")
@@ -684,10 +684,10 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(C_Finalizado; Contratos.Finalizado)
                 {
                 }
-                fieldelement(C_DiasPreaviso; Contratos."Días preaviso")
+                fieldelement(C_DiasPreaviso; Contratos."Dias preaviso")
                 {
                 }
-                fieldelement(C_PeriodoPrueba; Contratos."Período prueba")
+                fieldelement(C_PeriodoPrueba; Contratos."Periodo prueba")
                 {
                 }
                 fieldelement(C_Jornada; Contratos.Jornada)
@@ -696,7 +696,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(C_TipoPagoNomina; Contratos."Frecuencia de pago")
                 {
                 }
-                fieldelement(C_DiasSemana; Contratos."Días semana")
+                fieldelement(C_DiasSemana; Contratos."Dias semana")
                 {
                 }
                 fieldelement(C_HorasDia; Contratos."Horas dia")
@@ -940,16 +940,16 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement("PS_FormulaCálculo"; "Perfil Salarial"."Formula cálculo")
                 {
                 }
-                fieldelement("PS_PeríodoGenerac."; "Perfil Salarial"."Período generac.")
+                fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Periodo generac.")
                 {
                 }
                 fieldelement(PS_Imprimir; "Perfil Salarial".Imprimir)
                 {
                 }
-                fieldelement("PS_InicioPeríodo"; "Perfil Salarial"."Inicio Período")
+                fieldelement("PS_InicioPeriodo"; "Perfil Salarial"."Inicio Periodo")
                 {
                 }
-                fieldelement("PS_FinPeríodo"; "Perfil Salarial"."Fin Período")
+                fieldelement("PS_FinPeriodo"; "Perfil Salarial"."Fin Periodo")
                 {
                 }
                 fieldelement(PS_Mes; "Perfil Salarial".Mes)

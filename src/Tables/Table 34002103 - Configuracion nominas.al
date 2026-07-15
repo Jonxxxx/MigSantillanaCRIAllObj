@@ -240,7 +240,7 @@ table 34002103 "Configuracion nominas"
             trigger OnValidate()
             begin
                 //IF ("Fecha secuencia" > 31) OR ("Fecha secuencia" < 27) THEN
-                //   ERROR('Día inválido, favor verificar');
+                //   ERROR('Dia inválido, favor verificar');
             end;
         }
         field(41; "Método cálculo ausencias"; Code[10])
@@ -416,7 +416,7 @@ table 34002103 "Configuracion nominas"
             Caption = 'Social Security Calc Method';
             DataClassification = ToBeClassified;
             OptionCaption = 'Period Income,Balanced';
-            OptionMembers = "Ingresos del Período",Balanceado;
+            OptionMembers = "Ingresos del Periodo",Balanceado;
         }
         field(70; "Cta. Lin. Planif. Proyectos"; Code[20])
         {
@@ -493,7 +493,7 @@ table 34002103 "Configuracion nominas"
             Caption = 'Activate global numbering';
             DataClassification = ToBeClassified;
         }
-        field(86; "Días vacaciones adicionales"; Integer)
+        field(86; "Dias vacaciones adicionales"; Integer)
         {
             Caption = 'Additional vacation days';
             DataClassification = ToBeClassified;

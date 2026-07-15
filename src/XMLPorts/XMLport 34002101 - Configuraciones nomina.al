@@ -533,10 +533,10 @@ xmlport 34002101 "Configuraciones nomina"
                 }
                 //TODO: Ver
                 /*
-                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluído Cotizacion TSS")
+                fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluido Cotizacion TSS")
                 {
                 }
-                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluído Cotizacion ISR")
+                fieldelement(E_ExcluidoCotizacionISR; Employee."Excluido Cotizacion ISR")
                 {
                 }*/
                 fieldelement(E_NoSeguridadSocial; Employee."Dia nacimiento")
@@ -690,7 +690,7 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(C_Festivo; Calendario."No laborable")
                 {
                 }
-                fieldelement(C_DiaDeLaSemana; Calendario."Día de la semana")
+                fieldelement(C_DiaDeLaSemana; Calendario."Dia de la semana")
                 {
                 }
                 fieldelement(C_Semana; Calendario.Semana)
@@ -699,7 +699,7 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(C_Generado; Calendario.Generado)
                 {
                 }
-                fieldelement("C_Período"; Calendario."Período")
+                fieldelement("C_Periodo"; Calendario."Periodo")
                 {
                 }
                 fieldelement(C_Ano; Calendario.Ano)
@@ -763,16 +763,16 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(PS_FormulaCalculo; "Perfil Salarial"."Formula cálculo")
                 {
                 }*/
-                fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Período generac.")
+                fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Periodo generac.")
                 {
                 }
                 fieldelement(PS_Imprimir; "Perfil Salarial".Imprimir)
                 {
                 }
-                fieldelement("PS_InicioPeríodo"; "Perfil Salarial"."Inicio Período")
+                fieldelement("PS_InicioPeriodo"; "Perfil Salarial"."Inicio Periodo")
                 {
                 }
-                fieldelement("PS_FinPeríodo"; "Perfil Salarial"."Fin Período")
+                fieldelement("PS_FinPeriodo"; "Perfil Salarial"."Fin Periodo")
                 {
                 }
                 fieldelement(PS_Mes; "Perfil Salarial".Mes)
@@ -996,7 +996,7 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(EC_TasaRiesgo; "Empresas Cotizacion"."Tasa de Riesgo (%)")
                 {
                 }
-                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotizacion"."Salario Mínimo TSS")
+                fieldelement(EC_SalarioMinimoTSS; "Empresas Cotizacion"."Salario Minimo TSS")
                 {
                 }
                 fieldelement(EC_EmployerIdentificationNumber; "Empresas Cotizacion"."Employer Identification Number")

@@ -14,11 +14,11 @@ table 34002118 "Historico Lin. nomina"
         }
         field(3; "Tipo Nomina"; Option)
         {
-            Description = 'Normal,Regalía,Bonificacion';
+            Description = 'Normal,Regalia,Bonificacion';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
+            OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
-        field(4; "Período"; Date)
+        field(4; "Periodo"; Date)
         {
         }
         field(5; "No. Orden"; Integer)
@@ -140,7 +140,7 @@ table 34002118 "Historico Lin. nomina"
                                 RegLinPerSal.RESET;
                                 RegLinPerSal.SETRANGE("Concepto salarial", Regpolaca.Token);
                                 RegLinPerSal.SETRANGE("No. empleado", "No. empleado");
-                                RegLinPerSal.SETRANGE(Período, Período);
+                                RegLinPerSal.SETRANGE(Periodo, Periodo);
                                 IF RegLinPerSal.FINDFIRST THEN BEGIN
                                     Regconceptos.Concepto := Regpolaca.Token;
                                     Regconceptos.Valor := RegLinPerSal.Total;
@@ -160,10 +160,10 @@ table 34002118 "Historico Lin. nomina"
         field(23; Imprimir; Boolean)
         {
         }
-        field(24; "Inicio período"; Date)
+        field(24; "Inicio periodo"; Date)
         {
         }
-        field(25; "Fin período"; Date)
+        field(25; "Fin periodo"; Date)
         {
         }
         field(26; "Texto Informativo"; Boolean)
@@ -267,40 +267,40 @@ table 34002118 "Historico Lin. nomina"
 
     keys
     {
-        key(Key1; "No. empleado", "Tipo de nomina", "Período", "No. Orden")
+        key(Key1; "No. empleado", "Tipo de nomina", "Periodo", "No. Orden")
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key2; "No. empleado", "Período", "Tipo Nomina", "Cotiza ISR", "Texto Informativo")
+        key(Key2; "No. empleado", "Periodo", "Tipo Nomina", "Cotiza ISR", "Texto Informativo")
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key3; "No. empleado", "Tipo concepto", "Período", "Concepto salarial")
+        key(Key3; "No. empleado", "Tipo concepto", "Periodo", "Concepto salarial")
         {
             SumIndexFields = Total, "Parcial divisa-adicional";
         }
-        key(Key4; "No. empleado", "Período", "Salario Base", "No. Documento")
+        key(Key4; "No. empleado", "Periodo", "Salario Base", "No. Documento")
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key5; "No. Documento", "No. empleado", "Período", Cantidad)
+        key(Key5; "No. Documento", "No. empleado", "Periodo", Cantidad)
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key6; "No. empleado", "Tipo concepto", "Período", "Texto Informativo", Total)
+        key(Key6; "No. empleado", "Tipo concepto", "Periodo", "Texto Informativo", Total)
         {
             SumIndexFields = "Importe Base", Total, "Parcial divisa-adicional";
         }
-        key(Key7; "Concepto salarial", "Período")
+        key(Key7; "Concepto salarial", "Periodo")
         {
         }
-        key(Key8; Departamento, "Sub-Departamento", "No. empleado", "Período")
+        key(Key8; Departamento, "Sub-Departamento", "No. empleado", "Periodo")
         {
         }
-        key(Key9; "No. empleado", "Tipo Nomina", "Período", "Tipo concepto", "Concepto salarial")
+        key(Key9; "No. empleado", "Tipo Nomina", "Periodo", "Tipo concepto", "Concepto salarial")
         {
         }
-        key(Key10; "Período", Departamento, "Sub-Departamento", "Concepto salarial")
+        key(Key10; "Periodo", Departamento, "Sub-Departamento", "Concepto salarial")
         {
         }
     }

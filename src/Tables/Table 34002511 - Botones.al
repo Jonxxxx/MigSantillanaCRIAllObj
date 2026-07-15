@@ -204,7 +204,7 @@ table 34002511 Botones
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = ',Action,Mandatory,Line Action';
-            OptionMembers = ,"Accion",Obligatoria,"Accion Línea";
+            OptionMembers = ,"Accion",Obligatoria,"Accion Linea";
         }
         field(34002515; Orden; Integer)
         {

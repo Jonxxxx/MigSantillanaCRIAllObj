@@ -12,7 +12,7 @@ query 34002105 "NOMDS Query Cab. Nominas"
             column(Nombre; Nombre)
             {
             }
-            column("Período"; "Período")
+            column("Periodo"; "Periodo")
             {
             }
             column(Tipo_de_nomina; "Tipo de nomina")

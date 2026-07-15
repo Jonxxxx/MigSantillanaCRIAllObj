@@ -9,7 +9,7 @@ table 34002121 "Cab. Aportes Empresas"
         field(2; "Unidad cotizacion"; Code[20])
         {
         }
-        field(3; "Período"; Date)
+        field(3; "Periodo"; Date)
         {
         }
         field(4; "No. Contabilizacion"; Code[20])
@@ -18,7 +18,7 @@ table 34002121 "Cab. Aportes Empresas"
         field(5; "Tipo Nomina"; Option)
         {
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
-            OptionMembers = Normal,"Regalía","Bonificacion",Propina,Renta;
+            OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
         field(6; "Tipo de nomina"; Code[20])
         {
@@ -46,13 +46,13 @@ table 34002121 "Cab. Aportes Empresas"
 
     keys
     {
-        key(Key1; "Período", "Tipo de nomina")
+        key(Key1; "Periodo", "Tipo de nomina")
         {
         }
         key(Key2; "No. Documento")
         {
         }
-        key(Key3; "Unidad cotizacion", "Período")
+        key(Key3; "Unidad cotizacion", "Periodo")
         {
         }
     }
@@ -77,7 +77,7 @@ table 34002121 "Cab. Aportes Empresas"
         finper: Date;
     begin
         LinCP.RESET;
-        LinCP.SETRANGE(Período, Período);
+        LinCP.SETRANGE(Periodo, Periodo);
         LinCP.SETRANGE("Tipo de nomina", "Tipo de nomina");
         LinCP.SETRANGE("Job No.", "Job No.");
         IF LinCP.FINDSET(TRUE, FALSE) THEN

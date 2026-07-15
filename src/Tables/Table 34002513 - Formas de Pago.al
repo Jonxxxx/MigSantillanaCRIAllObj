@@ -175,7 +175,7 @@ table 34002513 "Formas de Pago"
         field(34002515; "Tipo Compensacion NC"; Option)
         {
             Description = '#70132';
-            OptionMembers = No,"Sí";
+            OptionMembers = No,"Si";
         }
     }
 
