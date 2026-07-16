@@ -60,7 +60,7 @@ codeunit 56000 "Funciones Santillana"
         rItem: Record 27;
         //TODO: Ver rICR: Record 5717;
         wDesc: Decimal;
-        //TODO: Ver NoSerMang: Codeunit 396;
+        //TODO: Ver NoSerMang: Codeunit "No. Series";
         Error002: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
         Error003: Label 'Existe, al menos, una linea con "%1" = %2 sin "%3" ("%4" = %5). Antes de registrar tiene que asociar la factura a esa linea.';
         TransHeader: Record 5740;
@@ -692,7 +692,7 @@ codeunit 56000 "Funciones Santillana"
         Counter: Integer;
         CounterOK: Integer;
         rConfEmpresa: Record 56001;
-        //TODO: Ver cuNoSerMangm: Codeunit 396;
+        //TODO: Ver cuNoSerMangm: Codeunit "No. Series";
         rCreaCupLot: Record 51011;
         rCabCupon1: Record 51009;
         rAnoEscolar: Record 51013;
