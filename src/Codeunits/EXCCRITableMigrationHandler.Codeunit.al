@@ -1,4 +1,4 @@
-codeunit 50026 EXCCRIEventSubscriber
+codeunit 61000 EXCCRIEventSubscriber
 {
     [EventSubscriber(ObjectType::Table, Database::"Item Journal Line", 'OnAfterCopyItemJnlLineFromSalesLine', '', false, false)]
     local procedure OnAfterCopyItemJnlLineFromSalesLine(var ItemJnlLine: Record "Item Journal Line"; SalesLine: Record "Sales Line")
