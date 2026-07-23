@@ -126,8 +126,6 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the Birth Date value for the employee.';
             }
-            //TODO: Ver 
-            /*
             field(EXCCRIEdad; EXCCRIAge)
             {
                 ApplicationArea = All;
@@ -137,7 +135,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
                 StyleExpr = true;
                 ToolTip = 'Specifies the Edad value for the employee.';
             }
-            */
+
             field(EXCCRISocialSecurityNo; Rec."Social Security No.")
             {
                 ApplicationArea = All;
@@ -172,7 +170,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the Employment Date value for the employee.';
             }
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIAntiguedadTxt; EXCCRISeniorityText)
             {
@@ -566,7 +564,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
         }
         addlast(FactBoxes)
         {
-            //TODO: Ver 
+            // 
             /*
             part(EXCCRIEmployeeFactBox; Page 34002175)
             {
@@ -596,7 +594,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
                 Promoted = true;
                 PromotedCategory = Process;
                 ToolTip = 'Opens the employee letters in read-only lookup mode.';
-                //TODO: Ver 
+                // 
                 /*
                 trigger OnAction()
                 var
@@ -649,7 +647,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
             exit;
 
         EXCCRIUseDate := Today();
-        //TODO: Ver 
+        // 
         /*
         EXCCRIPayrollFunctions.CalculoEntreFechas(
             Rec."Employment Date",
@@ -665,7 +663,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
 
         if Rec."Birth Date" = 0D then
             exit;
-        //TODO: Ver 
+        // 
         /*
         EXCCRIPayrollFunctions.CalculoEntreFechas(
             Rec."Birth Date",
@@ -685,7 +683,7 @@ pageextension 50100 EXCCRIEmployeeList extends "Employee List"
 
     var
         EXCCRIHRUserSecurity: Record 34002154;
-        //TODO: Ver EXCCRIPayrollFunctions: Codeunit 34002104;
+        // EXCCRIPayrollFunctions: Codeunit 34002104;
         EXCCRIYears: Integer;
         EXCCRIMonths: Integer;
         EXCCRIDays: Integer;

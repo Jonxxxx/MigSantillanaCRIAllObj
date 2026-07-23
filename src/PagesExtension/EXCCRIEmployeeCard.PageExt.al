@@ -67,18 +67,16 @@ pageextension 50099 EXCCRIEmployeeCard extends "Employee Card"
         }
         addlast(FactBoxes)
         {
-            //TODO: Ver 
-            /*
-            part(EXCCRIEmployeeInformation; Page 34002182)
+            part(EXCCRIEmployeeInformation; 34002182)
             {
                 ApplicationArea = All;
                 Caption = 'Employee Information';
             }
-            part(EXCCRIPayrollInformation; Page 34002183)
+            part(EXCCRIPayrollInformation; 34002183)
             {
                 ApplicationArea = All;
                 Caption = 'Payroll Information';
-            }*/
+            }
         }
     }
 }

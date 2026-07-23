@@ -86,7 +86,7 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
                     begin
                         EXCCRIVendor.Get(Rec."Buy-from Vendor No.");
 
-                        //TODO: Ver
+                        //
                         /*
                         if EXCCRIVendor."Tax Identification Type" =
                            EXCCRIVendor."Tax Identification Type"::"Extranjero No Domiciliado"
@@ -115,7 +115,7 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
                         if not EXCCRIElectronicLog.Get(7, Rec."No.") then
                             Error(EXCCRIElectronicLogMissingErr, Rec."No.");
 
-                        //TODO: Ver EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
+                        // EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
                     end;
                 }
                 action(EXCCRICorrectDocumentText)

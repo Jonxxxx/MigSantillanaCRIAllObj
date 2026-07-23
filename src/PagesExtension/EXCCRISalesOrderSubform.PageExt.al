@@ -166,11 +166,11 @@ pageextension 50024 EXCCRISalesOrderSubform extends "Sales Order Subform"
         EXCCRISalesLine: Record "Sales Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRISalesLine);
-        //TODO: Ver Report.Run(
-        //TODO: Ver     Report::"Split Sales Item Charge",
-        //TODO: Ver     false,
-        //TODO: Ver     false,
-        //TODO: Ver    EXCCRISalesLine);
+        // Report.Run(
+        //     Report::"Split Sales Item Charge",
+        //     false,
+        //     false,
+        //    EXCCRISalesLine);
     end;
 
     local procedure EXCCRILoadUserSetup()
@@ -192,8 +192,8 @@ pageextension 50024 EXCCRISalesOrderSubform extends "Sales Order Subform"
 
     local procedure EXCCRIUpdateAvailability()
     begin
-        //TODO: Ver EXCCRIAvailabilityValue :=
-        //TODO: Ver     EXCCRISalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
+        // EXCCRIAvailabilityValue :=
+        //     EXCCRISalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
         EXCCRIAvailabilityTextValue :=
             StrSubstNo('(%1)', EXCCRIAvailabilityValue);
     end;

@@ -68,7 +68,7 @@ pageextension 50023 EXCCRISalesList extends "Sales List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies whether the sales document is included in a route sheet.';
             }
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIOutstandingAmountUSD; Rec."Outstanding Amount ($)")
             {

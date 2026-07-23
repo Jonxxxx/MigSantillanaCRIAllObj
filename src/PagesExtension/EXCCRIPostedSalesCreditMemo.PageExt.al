@@ -296,8 +296,8 @@ pageextension 50042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                             Error(EXCCRIInvalidDigitalSealErr);
 
                         Rec.TestField("Folio Anulado en Ifacere", false);
-                        //TODO: Ver if Confirm(EXCCRIVoidFolioQst, false) then
-                        //TODO: Ver     EXCCRIElectronicInvoicing.AnulaNotaCR(Rec);
+                        // if Confirm(EXCCRIVoidFolioQst, false) then
+                        //     EXCCRIElectronicInvoicing.AnulaNotaCR(Rec);
                     end;
                 }
             }

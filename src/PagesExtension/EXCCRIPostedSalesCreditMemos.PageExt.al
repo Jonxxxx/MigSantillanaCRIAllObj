@@ -120,10 +120,10 @@ pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Me
                     var
                         EXCCRIElectronicInvoicing: Codeunit 52504;
                     begin
-                        //TODO: Verif Rec."Venta TPV" then
-                        //TODO: Ver    EXCCRIElectronicInvoicing.TiqueteElectronicoNCR_vCentral(Rec."No.")
-                        //TODO: Verelse
-                        //TODO: Ver    EXCCRIElectronicInvoicing.NotaCreditoElectronica(Rec."No.");
+                        //if Rec."Venta TPV" then
+                        //    EXCCRIElectronicInvoicing.TiqueteElectronicoNCR_vCentral(Rec."No.")
+                        //else
+                        //    EXCCRIElectronicInvoicing.NotaCreditoElectronica(Rec."No.");
                     end;
                 }
                 action(EXCCRICheckElectronicCrMemo)
@@ -141,10 +141,10 @@ pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Me
                         if not EXCCRIElectronicLog.Get(1, Rec."No.") then
                             Error(EXCCRIElectronicLogMissingErr, Rec."No.");
 
-                        //TODO: Verif Rec."Venta TPV" then
-                        //TODO: Ver    EXCCRIElectronicInvoicing.Parametros(true, Rec.Tienda);
+                        //if Rec."Venta TPV" then
+                        //    EXCCRIElectronicInvoicing.Parametros(true, Rec.Tienda);
 
-                        //TODO: VerEXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
+                        //EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
                     end;
                 }
                 action(EXCCRIElectronicDocumentLog)

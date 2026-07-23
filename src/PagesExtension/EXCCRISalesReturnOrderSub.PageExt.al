@@ -26,7 +26,7 @@ pageextension 50133 EXCCRISalesReturnOrderSub extends "Sales Return Order Subfor
         EXCCRISalesLine: Record "Sales Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRISalesLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split Sales Item Charge",

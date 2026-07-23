@@ -36,7 +36,7 @@ pageextension 50135 EXCCRIPurchReturnOrderSub extends "Purchase Return Order Sub
         EXCCRIPurchaseLine: Record "Purchase Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRIPurchaseLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split Item Charge",
@@ -50,7 +50,7 @@ pageextension 50135 EXCCRIPurchReturnOrderSub extends "Purchase Return Order Sub
         EXCCRIPurchaseLine: Record "Purchase Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRIPurchaseLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split CC Distribution",

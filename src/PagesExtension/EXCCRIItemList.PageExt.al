@@ -23,7 +23,7 @@ pageextension 50014 EXCCRIItemList extends "Item List"
                 Visible = false;
                 ToolTip = 'Specifies the item category assigned to the item.';
             }
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIProductGroup; Rec."Product Group Code")
             {

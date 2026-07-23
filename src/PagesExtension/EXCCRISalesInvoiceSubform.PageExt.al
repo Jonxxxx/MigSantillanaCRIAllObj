@@ -23,7 +23,7 @@ pageextension 50025 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
         EXCCRISalesLine: Record "Sales Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRISalesLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split Sales Item Charge.",

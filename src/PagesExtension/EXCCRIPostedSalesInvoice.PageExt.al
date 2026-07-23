@@ -356,8 +356,8 @@ pageextension 50040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
                             exit;
                         end;
 
-                        //TODO: Ver if Confirm(EXCCRIVoidFolioQst, false) then
-                        //TODO: Ver EXCCRIElectronicInvoicing.AnulaFactura(Rec);
+                        // if Confirm(EXCCRIVoidFolioQst, false) then
+                        // EXCCRIElectronicInvoicing.AnulaFactura(Rec);
                     end;
                 }
             }

@@ -83,7 +83,7 @@ pageextension 50011 EXCCRIVendorList extends "Vendor List"
                 Caption = 'Inactive';
                 ToolTip = 'Specifies whether the vendor is inactive.';
             }
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRITaxIdType; Rec."Tax Identification Type")
             {

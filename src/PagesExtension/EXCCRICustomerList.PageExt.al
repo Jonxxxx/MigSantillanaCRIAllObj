@@ -104,7 +104,7 @@ pageextension 50008 EXCCRICustomerList extends "Customer List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the customer email address.';
             }
-            //TODO: Ver 
+            //TODO: Campo no existe
             /*
             field(EXCCRIEmail2; Rec."E-Mail 2")
             {
@@ -142,7 +142,7 @@ pageextension 50008 EXCCRICustomerList extends "Customer List"
                 Visible = false;
                 ToolTip = 'Specifies whether multiple shipments are combined into one invoice.';
             }
-            //TODO: Ver 
+            //TODO: Campo no existe
             /*
             field(EXCCRITaxIdentificationType; Rec."Tax Identification Type")
             {

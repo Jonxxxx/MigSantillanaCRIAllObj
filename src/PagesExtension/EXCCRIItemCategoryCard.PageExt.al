@@ -4,7 +4,7 @@ pageextension 50113 EXCCRIItemCategoryCard extends "Item Category Card"
     {
         addafter("Parent Category")
         {
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIDefGenProdPostingGroup; Rec."Def. Gen. Prod. Posting Group")
             {

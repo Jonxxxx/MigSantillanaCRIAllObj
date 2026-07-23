@@ -60,7 +60,7 @@ pageextension 50115 EXCCRITransferOrderSubform extends "Transfer Order Subform"
                 Editable = false;
                 ToolTip = 'Specifies the pending backorder quantity to cancel.';
             }
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIAvailability; EXCCRIAvailabilityManagement.CalcAvailabilityTL_BackOrder(Rec))
             {
@@ -147,7 +147,7 @@ pageextension 50115 EXCCRITransferOrderSubform extends "Transfer Order Subform"
 
     procedure DeshacerEnvio()
     begin
-        //TODO: Ver  Rec.DeshacerEnvio();
+        //  Rec.DeshacerEnvio();
     end;
 
     var

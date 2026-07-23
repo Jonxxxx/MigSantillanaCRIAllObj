@@ -22,7 +22,7 @@ pageextension 50033 EXCCRISalesCrMemoSubform extends "Sales Cr. Memo Subform"
         EXCCRISalesLine: Record "Sales Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRISalesLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split Sales Item Charge.",

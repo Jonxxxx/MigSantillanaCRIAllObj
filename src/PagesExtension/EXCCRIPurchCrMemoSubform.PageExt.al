@@ -35,7 +35,7 @@ pageextension 50034 EXCCRIPurchCrMemoSubform extends "Purch. Cr. Memo Subform"
         EXCCRIPurchaseLine: Record "Purchase Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRIPurchaseLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split Item Charge",
@@ -49,7 +49,7 @@ pageextension 50034 EXCCRIPurchCrMemoSubform extends "Purch. Cr. Memo Subform"
         EXCCRIPurchaseLine: Record "Purchase Line";
     begin
         CurrPage.SetSelectionFilter(EXCCRIPurchaseLine);
-        //TODO: Ver 
+        // 
         /*
         Report.Run(
             Report::"Split CC Distribution",

@@ -149,7 +149,7 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
                         EXCCRIElectronicInvoicing: Codeunit 52504;
                         EXCCRILocalizationCR: Codeunit 34002511;
                     begin
-                        //TODO: Ver
+                        //
                         /*
                         if Rec."Tipo de Venta" = Rec."Tipo de Venta"::Exportacion then
                             EXCCRIElectronicInvoicing.FacturaElectronicaExportacion(Rec."No.")
@@ -180,13 +180,13 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
                             if not EXCCRIElectronicLog.Get(3, Rec."No.") then
                                 Error(EXCCRIElectronicLogMissingErr, Rec."No.");
 
-                            //TODO: VerEXCCRIElectronicInvoicing.Parametros(true, Rec.Tienda);
-                            //TODO: VerEXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
+                            //EXCCRIElectronicInvoicing.Parametros(true, Rec.Tienda);
+                            //EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
                             exit;
                         end;
 
-                        //TODO: Verif EXCCRIElectronicLog.Get(0, Rec."No.") then
-                        //TODO: Ver    EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
+                        //if EXCCRIElectronicLog.Get(0, Rec."No.") then
+                        //    EXCCRIElectronicInvoicing.ComprobarDocumentoElectronicoLOG(EXCCRIElectronicLog);
                     end;
                 }
                 action(EXCCRICorrectDocumentText)
@@ -231,7 +231,7 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
                 var
                     EXCCRISalesPost: Codeunit 80;
                 begin
-                    //TODO: VerEXCCRISalesPost.RegistrarCobrosSCR2(Rec."No.");
+                    //EXCCRISalesPost.RegistrarCobrosSCR2(Rec."No.");
                 end;
             }
         }

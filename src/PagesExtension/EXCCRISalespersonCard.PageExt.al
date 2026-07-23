@@ -289,9 +289,9 @@ pageextension 50095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
                     Image = CalculateInvoiceDiscount;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Page 55501;
-                    //TODO: Ver RunPageLink = Field1 = field(Code);
-                    //TODO: Ver RunPageView = sorting(Field1, Field10);
+                    // RunObject = Page 55501;
+                    // RunPageLink = Field1 = field(Code);
+                    // RunPageView = sorting(Field1, Field10);
                     ToolTip = 'Opens the commission setup for the salesperson.';
                     Visible = false;
                 }

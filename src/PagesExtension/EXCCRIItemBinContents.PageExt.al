@@ -1,4 +1,4 @@
-//TODO: Ver 
+// 
 /*
 pageextension 50149 EXCCRIItemBinContents extends "Item Bin Contents"
 {

@@ -221,12 +221,12 @@ pageextension 50020 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver EXCCRIInvoiceSamplesReport: Report 67008;
+                    // EXCCRIInvoiceSamplesReport: Report 67008;
                     begin
-                        //TODO: Ver EXCCRIInvoiceSamplesReport.RecibeParametros(
-                        //TODO: Ver     Rec."Document Type",
-                        //TODO: Ver     Rec."No.");
-                        //TODO: Ver EXCCRIInvoiceSamplesReport.RunModal();
+                        // EXCCRIInvoiceSamplesReport.RecibeParametros(
+                        //     Rec."Document Type",
+                        //     Rec."No.");
+                        // EXCCRIInvoiceSamplesReport.RunModal();
                     end;
                 }
                 action(EXCCRIInvoiceAdoptions)
@@ -238,12 +238,12 @@ pageextension 50020 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver EXCCRIInvoiceAdoptionsReport: Report 67044;
+                    // EXCCRIInvoiceAdoptionsReport: Report 67044;
                     begin
-                        //TODO: Ver EXCCRIInvoiceAdoptionsReport.RecibeParametros(
-                        //TODO: Ver     Rec."Document Type",
-                        //TODO: Ver     Rec."No.");
-                        //TODO: Ver EXCCRIInvoiceAdoptionsReport.RunModal();
+                        // EXCCRIInvoiceAdoptionsReport.RecibeParametros(
+                        //     Rec."Document Type",
+                        //     Rec."No.");
+                        // EXCCRIInvoiceAdoptionsReport.RunModal();
                     end;
                 }
                 action(EXCCRIDistributeItemCharge)

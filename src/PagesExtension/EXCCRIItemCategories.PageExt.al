@@ -12,7 +12,7 @@ pageextension 50112 EXCCRIItemCategories extends "Item Categories"
         }
         addafter(Description)
         {
-            //TODO: Ver 
+            // 
             /*
             field(EXCCRIDefGenProdPostingGroup; Rec."Def. Gen. Prod. Posting Group")
             {

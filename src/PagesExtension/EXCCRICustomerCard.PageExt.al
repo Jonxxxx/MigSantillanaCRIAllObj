@@ -333,7 +333,7 @@ pageextension 50007 EXCCRICustomerCard extends "Customer Card"
                     EXCCRILocation.Validate(Address, Rec.Address);
                     EXCCRILocation.Validate(City, Rec.City);
                     EXCCRILocation.Validate("Phone No.", Rec."Phone No.");
-                    //TODO: Ver EXCCRILocation.Validate("Fax No.", Rec."E-Mail 2");
+                    //TODO: Campo no existe sEXCCRILocation.Validate("Fax No.", Rec."E-Mail 2");
                     EXCCRILocation.Validate("Cod. Cliente", Rec."No.");
                     EXCCRILocation.Insert();
 

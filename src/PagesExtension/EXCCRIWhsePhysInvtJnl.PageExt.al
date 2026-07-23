@@ -13,9 +13,9 @@ pageextension 50142 EXCCRIWhsePhysInvtJnl extends "Whse. Phys. Invt. Journal"
 
                 trigger OnAction()
                 var
-                //TODO: Ver EXCCRIPhysicalInvtReport: Report 56032;
+                // EXCCRIPhysicalInvtReport: Report 56032;
                 begin
-                    //TODO: Ver 
+                    // 
                     /*
                     EXCCRIPhysicalInvtReport.RecibeParametros(
                         Rec."Journal Template Name",
