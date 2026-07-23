@@ -1,7 +1,7 @@
 table 34002145 "CxC Empleados"
 {
-    DrillDownPageID = 58102;
-    //TODO: Ver LookupPageID = 58102;
+    //TODO: Page no existe DrillDownPageID = 58102;
+    //TODO: Page no existe LookupPageID = 58102;
 
     fields
     {
