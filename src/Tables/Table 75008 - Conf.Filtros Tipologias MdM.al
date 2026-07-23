@@ -57,7 +57,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     var
         ErrorRango: Label 'El rango permitido est  entre 1 y %1';
-        //TODO: Ver cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 75000;
         ErrorDupl: Label 'Ya existe el registro';
         Text001: Label 'Filtro %1';
 
@@ -73,7 +73,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
         CASE Tipo OF
             Tipo::Dimension:
                 BEGIN
-                    //TODO: Ver Result := cFunMdM.GetDimNameField("Valor Id");
+                    Result := cFunMdM.GetDimNameField("Valor Id");
                 END;
             Tipo::"Dato MdM":
                 BEGIN
@@ -84,7 +84,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
                 END;
             Tipo::Otros:
                 BEGIN
-                    //TODO: Ver Result := cFunMdM.GetOtrosName("Valor Id");
+                    Result := cFunMdM.GetOtrosName("Valor Id");
                 END;
         END;
     end;

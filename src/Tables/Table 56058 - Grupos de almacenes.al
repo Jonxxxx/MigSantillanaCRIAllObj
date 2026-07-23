@@ -32,7 +32,7 @@ table 56058 "Grupos de almacenes"
         lrAxG: Record 56059;
     begin
         lrAxG.RESET;
-        //TODO: Ver lrAxG.SETRANGE(Grupo, Grupo);
+        lrAxG.SETRANGE(Grupo, Grupo);
         IF lrAxG.COUNT > 0 THEN
             ERROR(TextL001);
     end;

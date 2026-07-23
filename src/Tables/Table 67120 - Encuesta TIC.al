@@ -90,9 +90,9 @@ table 67120 "Encuesta TIC"
                 Distrito := '';
                 IF "Cod. Colegio" <> '' THEN BEGIN
                     Col.GET("Cod. Colegio");
-                    //TODO: Ver VALIDATE("Cod. Delegacion", Col.Delegacion);
+                    VALIDATE("Cod. Delegacion", Col.Delegacion);
                     Colegio := Col.Name;
-                    //TODO: Ver Distrito := Col.Distritos;
+                    Distrito := Col.Distritos;
                 END
             end;
         }

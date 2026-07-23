@@ -35,18 +35,18 @@ table 67023 "Cab. Planificacion"
             trigger OnLookup()
             begin
 
-                //TODO: Ver date1.RESET;
-                //TODO: Ver date1.SETRANGE("Period Type", 1); //Semana
-                //TODO: Ver date1.SETRANGE("Period Start", TODAY, CALCDATE('+2' + Sem, TODAY));
+                date1.RESET;
+                date1.SETRANGE("Period Type", 1); //Semana
+                date1.SETRANGE("Period Start", TODAY, CALCDATE('+2' + Sem, TODAY));
                 //date1.SETRANGE("Period Start",CALCDATE('+1' + Sem,TODAY),CALCDATE('+2' + Sem,TODAY));
-                //TODO: Ver date1.FINDSET;
+                date1.FINDSET;
 
-                //TODO: Ver fFechas.SETTABLEVIEW(date1);
+                fFechas.SETTABLEVIEW(date1);
                 //fFechas.SETRECORD(date1);
                 fFechas.LOOKUPMODE(TRUE);
                 IF fFechas.RUNMODAL = ACTION::LookupOK THEN BEGIN
-                    //TODO: Ver fFechas.GETRECORD(date1);
-                    //TODO: Ver VALIDATE(Semana, date1."Period No.");
+                    fFechas.GETRECORD(date1);
+                    VALIDATE(Semana, date1."Period No.");
                 END;
 
                 CLEAR(fFechas);
@@ -55,14 +55,14 @@ table 67023 "Cab. Planificacion"
             trigger OnValidate()
             begin
 
-                //TODO: Ver date1.RESET;
-                //TODO: Ver date1.SETRANGE("Period Type", date1."Period Type"::Week);
-                //TODO: Ver date1.SETRANGE("Period Start", CALCDATE('-2' + Sem, WORKDATE), CALCDATE('+52' + Sem, WORKDATE));
-                //TODO: Ver date1.SETRANGE("Period No.", Semana);
-                //TODO: Ver date1.FINDFIRST;
+                date1.RESET;
+                date1.SETRANGE("Period Type", date1."Period Type"::Week);
+                date1.SETRANGE("Period Start", CALCDATE('-2' + Sem, WORKDATE), CALCDATE('+52' + Sem, WORKDATE));
+                date1.SETRANGE("Period No.", Semana);
+                date1.FINDFIRST;
 
-                //TODO: Ver "Fecha Inicial" := date1."Period Start";
-                //TODO: Ver "Fecha Final" := NORMALDATE(date1."Period End");
+                "Fecha Inicial" := date1."Period Start";
+                "Fecha Final" := NORMALDATE(date1."Period End");
 
                 IF INSERT(TRUE) THEN;
                 /*
@@ -127,7 +127,7 @@ table 67023 "Cab. Planificacion"
         IF Estado > 1 THEN
             ERROR(STRSUBSTNO(Err001, FIELDNAME(Estado), Estado));
 
-        //TODO: Ver 
+
         /*
         PPV2.RESET;
         PPV2.SETRANGE("Cod. Promotor", "Cod. Promotor");
@@ -149,8 +149,8 @@ table 67023 "Cab. Planificacion"
 
     var
         Promotor: Record 13;
-        date1Record: Record 2000000007;
-        Date2Record: Record 2000000007;
+        date1: Record 2000000007;
+        Date2: Record 2000000007;
         PPV: Record 67038;
         PPV2Record: Record 67038;
         fFechas: Page 67062;

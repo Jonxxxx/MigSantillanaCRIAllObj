@@ -21,8 +21,8 @@ table 34002195 "Miembros cooperativa"
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF Emp.GET("Employee No.") THEN
-                //TODO: Ver     "Full name" := Emp."Full Name";
+                IF Emp.GET("Employee No.") THEN
+                    "Full name" := Emp."Full Name";
             end;
         }
         field(10; "1ra Quincena"; Boolean)

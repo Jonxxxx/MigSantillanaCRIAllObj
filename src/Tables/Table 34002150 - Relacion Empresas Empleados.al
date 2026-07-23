@@ -25,7 +25,7 @@ table 34002150 "Relacion Empresas Empleados"
             trigger OnLookup()
             var
                 Empl: Record 5200;
-            //TODO: Ver frmListaEmpl: Page 34002202;
+                frmListaEmpl: Page 34002202;
             begin
                 //TODO: Ver
                 /*

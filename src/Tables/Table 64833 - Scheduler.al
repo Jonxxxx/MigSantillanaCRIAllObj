@@ -163,7 +163,7 @@ table 64833 Scheduler
         tags: Record 64834;
         ReplicatorSetup: Record 64835;
         Sched: Record 64833;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
 
     procedure AssistEdit(OldSched: Record 64833): Boolean
     begin

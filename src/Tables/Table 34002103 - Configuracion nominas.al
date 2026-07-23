@@ -290,7 +290,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'G/L account for other payments';
             DataClassification = ToBeClassified;
-            //TODO: Ver 
+
             /*
             TableRelation = IF ("Tipo Cta.Otros Pagos" = CONST(Cuenta)) "G/L Account"."No."
             ELSE IF ("Tipo Cta. Otros Pagos" = CONST(Banco)) "Bank Account"."No."

@@ -60,15 +60,6 @@ table 80014 "Tmp Sales Line"
             ELSE IF (Type = CONST(Resource)) Resource
             ELSE IF (Type = CONST("Fixed Asset")) "Fixed Asset"
             ELSE IF (Type = CONST("Charge (Item)")) "Item Charge";
-
-            trigger OnValidate()
-            var
-                ICPartner: Record 413;
-                //TODO: Ver ItemCrossReference: Record 5717;
-                PrepaymentMgt: Codeunit 441;
-                KitUnitPrice: Decimal;
-            begin
-            end;
         }
         field(7; "Location Code"; Code[10])
         {
@@ -522,13 +513,6 @@ table 80014 "Tmp Sales Line"
         field(108; "IC Partner Reference"; Code[20])
         {
             Caption = 'IC Partner Reference';
-
-            trigger OnLookup()
-            var
-                ICGLAccount: Record 410;
-            //TODO: Ver ItemCrossReference: Record 5717;
-            begin
-            end;
         }
         field(109; "Prepayment %"; Decimal)
         {
@@ -880,7 +864,7 @@ table 80014 "Tmp Sales Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(5713; "Special Order"; Boolean)
         {
@@ -1098,11 +1082,11 @@ table 80014 "Tmp Sales Line"
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Ver TableRelation = 50131;
+            //TODO: Tabla no existe TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Ver TableRelation = 50132;
+            //TODO: Tabla no existe TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1116,7 +1100,7 @@ table 80014 "Tmp Sales Line"
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            //TODO: Ver TableRelation = 50133;
+            //TODO: Tabla no existe TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
@@ -1284,7 +1268,6 @@ table 80014 "Tmp Sales Line"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Ver SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -1295,7 +1278,7 @@ table 80014 "Tmp Sales Line"
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
+        DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -1346,7 +1329,7 @@ table 80014 "Tmp Sales Line"
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        //TODO: Ver cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';

@@ -11,13 +11,15 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
             Caption = 'Loan no.';
 
             trigger OnValidate()
+            var
+                NoSeries: Codeunit "No. Series";
             begin
-                ConfNominas.GET;
-                IF "No. Prestamo" = '' THEN BEGIN
-                    ConfNominas.TESTFIELD("No. serie CxC");
-                    //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
-                    //TODO: Ver                       "No. Prestamo", ConfNominas."No. serie reg. CxC");
-                END;
+                ConfNominas.Get();
+
+                if "No. Prestamo" = '' then begin
+                    ConfNominas.TestField("No. serie reg. CxC");
+                    "No. Prestamo" := NoSeries.GetNextNo(ConfNominas."No. serie reg. CxC");
+                end;
             end;
         }
         field(2; "Employee No."; Code[20])
@@ -75,7 +77,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No."=FIELD("Employee No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }

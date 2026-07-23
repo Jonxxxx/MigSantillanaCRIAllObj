@@ -139,7 +139,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Serie/Metodo", 0);
+                cFuncMdM.SetTipoDim("Dim Serie/Metodo", 0);
             end;
         }
         field(1002; "Dim Destino"; Code[20])
@@ -150,7 +150,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Destino", 1);
+                cFuncMdM.SetTipoDim("Dim Destino", 1);
             end;
         }
         field(1003; "Dim Cuenta"; Code[20])
@@ -161,7 +161,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Cuenta", 2);
+                cFuncMdM.SetTipoDim("Dim Cuenta", 2);
             end;
         }
         field(1004; "Dim Tipo Texto"; Code[20])
@@ -172,7 +172,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Tipo Texto", 3);
+                cFuncMdM.SetTipoDim("Dim Tipo Texto", 3);
             end;
         }
         field(1005; "Dim Materia"; Code[20])
@@ -183,7 +183,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Materia", 4);
+                cFuncMdM.SetTipoDim("Dim Materia", 4);
             end;
         }
         field(1006; "Dim Carga Horaria"; Code[20])
@@ -194,7 +194,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Carga Horaria", 5);
+                cFuncMdM.SetTipoDim("Dim Carga Horaria", 5);
             end;
         }
         field(1007; "Dim Origen"; Code[20])
@@ -205,7 +205,7 @@ table 75000 "Configuracion MDM"
 
             trigger OnValidate()
             begin
-                //TODO: Ver cFuncMdM.SetTipoDim("Dim Origen", 6);
+                cFuncMdM.SetTipoDim("Dim Origen", 6);
             end;
         }
         field(50000; Pruebas; Boolean)
@@ -235,6 +235,6 @@ table 75000 "Configuracion MDM"
     end;
 
     var
-    //TODO: Ver cFuncMdM: Codeunit 75000;
+        cFuncMdM: Codeunit 75000;
 }
 

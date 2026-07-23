@@ -219,8 +219,8 @@ table 80000 "Tmp Sales Invoice Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Ver TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            //TODO: Ver ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            //TODO: BAL Account Type no existe TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            //ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(60; Amount; Decimal)
         {
@@ -418,7 +418,7 @@ table 80000 "Tmp Sales Invoice Header"
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            //TODO: Ver TableRelation = 2000000002;
+            //TODO: Tabla no existe TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
 
@@ -475,7 +475,7 @@ table 80000 "Tmp Sales Invoice Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Ver TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5050; "Campaign No."; Code[20])
         {
@@ -524,7 +524,7 @@ table 80000 "Tmp Sales Invoice Header"
         }
         field(53008; Tienda; Code[20])
         {
-            //TODO: Ver TableRelation = "Bancos tienda";
+            TableRelation = "Bancos tienda";
         }
         field(56000; "Pedido Consignacion"; Boolean)
         {
@@ -671,11 +671,9 @@ table 80000 "Tmp Sales Invoice Header"
         SalesCommentLine: Record 44;
         CustLedgEntry: Record 21;
         PostCode: Record 225;
-        PostSalesLinesDelete: Codeunit 363;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         "*** DSLoc ***": Integer;
         ConfSantillana: Record 56001;
-        //TODO: Ver Localizacion: Record 34003011;
+        Localizacion: Record 34003011;
         GpoContableCte: Record 92;
 
     procedure PrintRecords(ShowRequestForm: Boolean)
@@ -686,7 +684,7 @@ table 80000 "Tmp Sales Invoice Header"
 
     procedure Navigate()
     var
-        NavigateForm: Page 344;
+        NavigateForm: Page Navigate;
     begin
     end;
 

@@ -65,7 +65,7 @@ table 67061 "Cab. Atenciones"
         }
         field(8; "Tipo documento"; Code[20])
         {
-            //TODO: Ver TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
+            //TODO: Ver valor option TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
         }
         field(9; "Document ID"; Text[20])
         {
@@ -455,7 +455,7 @@ table 67061 "Cab. Atenciones"
     trigger OnInsert()
     var
         APSSetup: Record 67000;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
     begin
         IF Codigo = '' THEN BEGIN
             APSSetup.GET;
@@ -480,12 +480,12 @@ table 67061 "Cab. Atenciones"
         DA: Record 67002;
         PostCodeForm: Page 367;
         formTerritory: Page 429;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
+        DimMgt: Codeunit 408;
         DimForm: Page 560;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        //TODO: Ver DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
         //DimMgt.SaveDefaultDim(DATABASE::Customer,"No.",FieldNumber,ShortcutDimCode);
         MODIFY;
     end;

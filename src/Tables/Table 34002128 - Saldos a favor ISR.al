@@ -24,7 +24,7 @@ table 34002128 "Saldos a favor ISR"
         }
         field(5; "Full Name"; Text[50])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             Editable = false;
             FieldClass = FlowField;

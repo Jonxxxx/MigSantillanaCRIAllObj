@@ -43,7 +43,7 @@ table 34002160 "Control de asistencia"
         }
         field(7; "Full name"; Text[60])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             FieldClass = FlowField;
         }
@@ -193,7 +193,7 @@ table 34002160 "Control de asistencia"
         CalTurno: Record 34002180;
         Fecha: Record 2000000007;
         Cargo: Record 34002110;
-        //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         Horatexto: Text[60];
         Err003: Label 'The amount of %1 exceeds the daily limit of the working day';
         Err004: Label 'You can not have %1 if %2 does not have full day';
@@ -261,11 +261,11 @@ table 34002160 "Control de asistencia"
             EXIT;
 
         Emp.GET("Cod. Empleado");
-        //TODO: Ver Cargo.GET(Emp.Departamento, Emp."Job Type Code");
-        //TODO: Ver IF NOT Cargo."Control de asistencia" THEN
-        //TODO: Ver     EXIT;
+        Cargo.GET(Emp.Departamento, Emp."Job Type Code");
+        //TODO: No existe campo IF NOT Cargo."Control de asistencia" THEN
+        EXIT;
 
-        //TODO: Ver 
+
         /*
         IF Emp.Shift <> '' THEN BEGIN
             CalTurno.RESET;

@@ -175,7 +175,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-            //TODO: Ver lcGuatemala: Codeunit 34002508;
+                lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -199,7 +199,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-            //TODO: Ver //TODO: Ver lcGuatemala: Codeunit 34002508;
+                lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -249,7 +249,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-            //TODO: Ver lcGuatemala: Codeunit 34002508;
+                lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...
@@ -274,7 +274,7 @@ table 34002501 "Configuracion TPV"
             trigger OnValidate()
             var
                 lrConf: Record 34002500;
-            //TODO: Ver lcGuatemala: Codeunit 34002508;
+                lcGuatemala: Codeunit 34002508;
             begin
                 //+#232158
                 //...

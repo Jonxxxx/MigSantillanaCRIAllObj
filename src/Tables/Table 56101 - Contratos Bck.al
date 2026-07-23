@@ -48,7 +48,7 @@ table 56101 "Contratos Bck"
         field(10; Cargo; Code[15])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = "Puestos laborales";
+            TableRelation = "Puestos laborales";
         }
         field(11; "Centro trabajo"; Code[10])
         {

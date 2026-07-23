@@ -106,7 +106,7 @@ table 34002118 "Historico Lin. nomina"
             begin
                 Formula := UPPERCASE(Formula);
 
-                //TODO: Ver 
+
                 /*
                 IF Formula <> '' THEN BEGIN
                     Regconceptos.Formula := DELCHR(Rec.Formula, '=', ' ');
@@ -320,15 +320,15 @@ table 34002118 "Historico Lin. nomina"
         Regconceptos: Record 34002144;
         Regpolaca: Record 34002143;
         RegLinPerSal: Record 34002118;
-    //TODO: Ver DimMgt: Codeunit 408;
-    //TODO: Ver Scanner: Codeunit 34002106;
-    //TODO: Ver Parser: Codeunit 34002105;
-    //TODO: Ver Calculadora: Codeunit 34002107;
+        DimMgt: Codeunit 408;
+        Scanner: Codeunit 34002106;
+        Parser: Codeunit 34002105;
+        Calculadora: Codeunit 34002107;
 
     procedure ShowDimensions()
     begin
         TESTFIELD("No. Orden");
-        //TODO: Ver  DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Orden"));
+        DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Orden"));
     end;
 
     local procedure RecalculaAportePatronal()

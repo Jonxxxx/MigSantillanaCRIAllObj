@@ -52,14 +52,6 @@ table 34002504 "Bancos tienda"
         {
         }
     }
-
-    fieldgroups
-    {
-        //TODO: Ver fieldgroup(DropDown; Field34002500, Field34002501)
-        //TODO: Ver {
-        //TODO: Ver }
-    }
-
     trigger OnDelete()
     var
         rConfTPV: Record 34002501;
@@ -69,6 +61,5 @@ table 34002504 "Bancos tienda"
     var
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a peticion del usuario';
-    //TODO: Ver Error002: ;
 }
 

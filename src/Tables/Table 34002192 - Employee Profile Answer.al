@@ -61,7 +61,7 @@ table 34002192 "Employee Profile Answer"
         }
         field(7; "Employee Full Name"; Text[50])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Employee Full Name';
             Editable = false;
             FieldClass = FlowField;
@@ -122,7 +122,7 @@ table 34002192 "Employee Profile Answer"
 
         IF PartOfRating THEN BEGIN
             DELETE;
-            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
+            //TODO: No existe tabla UpdateEmpClassification.UpdateRating("Employee No.");
             INSERT;
         END;
 
@@ -162,7 +162,7 @@ table 34002192 "Employee Profile Answer"
 
         IF PartOfRating THEN BEGIN
             INSERT;
-            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
+            //TODO: No existe tabla UpdateEmpClassification.UpdateRating("Employee No.");
             DELETE;
         END;
 
@@ -194,7 +194,7 @@ table 34002192 "Employee Profile Answer"
 
     var
         Text000: Label 'This Question does not allow %1.';
-    //TODO: Ver UpdateEmpClassification: Report 34002170;
+    //TODO: No existe tabla UpdateEmpClassification: Report 34002170;
 
     [Scope('Personalization')]
     procedure Question(): Text[50]

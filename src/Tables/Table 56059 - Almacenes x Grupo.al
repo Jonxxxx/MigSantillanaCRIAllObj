@@ -17,7 +17,7 @@ table 56059 "Almacenes x Grupo"
         }
         field(10; "Nombre Grupo"; Text[50])
         {
-            //TODO: Ver CalcFormula = Lookup("Grupos de almacenes".Descripcion WHERE ("Grupo"=FIELD("Grupo")));
+            CalcFormula = Lookup("Grupos de almacenes".Descripcion WHERE("Grupo" = FIELD("Grupo")));
             Editable = false;
             FieldClass = FlowField;
         }

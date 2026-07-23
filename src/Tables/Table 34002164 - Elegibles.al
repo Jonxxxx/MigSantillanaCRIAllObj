@@ -228,9 +228,9 @@ table 34002164 Elegibles
                 IF Candidato.FINDFIRST THEN
                     ERROR(STRSUBSTNO(Err003, FIELDCAPTION("Document Type"), Candidato."No.", Candidato."Full Name"));
 
-                //TODO: Ver IF "Document Type" = "Document Type"::Cédula THEN
-                //TODO: Ver IF NOT FuncNominas.ValidarCedula(DELCHR("Document ID", '=', '-')) THEN
-                //TODO: Ver ERROR(STRSUBSTNO(Err004, "Document Type"));
+                IF "Document Type" = "Document Type"::Cédula THEN
+                    IF NOT FuncNominas.ValidarCedula(DELCHR("Document ID", '=', '-')) THEN
+                        ERROR(STRSUBSTNO(Err004, "Document Type"));
             end;
         }
         field(40; Nacionalidad; Code[10])
@@ -325,7 +325,7 @@ table 34002164 Elegibles
         HumanResComment.SETRANGE("No.", "No.");
         HumanResComment.DELETEALL;
 
-        //TODO: Ver DimMgt.DeleteDefaultDim(DATABASE::Employee, "No.");
+        DimMgt.DeleteDefaultDim(DATABASE::Employee, "No.");
     end;
 
     trigger OnInsert()
@@ -348,9 +348,9 @@ table 34002164 Elegibles
                 "No." := NoSeriesMgt.GetNextNo("No. Series");
             END;
 
-        //TODO: Ver DimMgt.UpdateDefaultDim(
-        //TODO: Ver   DATABASE::Employee, "No.",
-        //TODO: Ver   "Global Dimension 1 Filter", "Global Dimension 2 Filter");
+        DimMgt.UpdateDefaultDim(
+          DATABASE::Employee, "No.",
+          "Global Dimension 1 Filter", "Global Dimension 2 Filter");
     end;
 
     trigger OnModify()
@@ -379,11 +379,11 @@ table 34002164 Elegibles
         ConfNominas: Record 34002103;
         Numeradorescomunes: Record 34002182;
         NoSeriesMgt: Codeunit "No. Series";
-        //TODO: Ver DimMgt: Codeunit 408;
+        DimMgt: Codeunit 408;
         Text000: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         Err001: Label 'This Account No. already exist for candidate %1';
         Err002: Label 'This employee has posted payroll, you can not delete it';
-        //TODO: Ver FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 34002104;
         Err003: Label 'This %1 already exist for the candidate %2 %3';
         Err004: Label '$1 is invalid, please verify';
 
@@ -407,8 +407,8 @@ table 34002164 Elegibles
         WITH Candidato DO BEGIN
             Candidato := Rec;
             HumanResSetup.GET;
-            //TODO: Ver HumanResSetup.TESTFIELD("Candidate Nos.");
-            //TODO: Ver 
+            HumanResSetup.TESTFIELD("Candidate Nos.");
+
             /*
             IF NoSeriesMgt.SelectSeries(HumanResSetup."Candidate Nos.", OldEmployee."No. Series", "No. Series") THEN BEGIN
                 HumanResSetup.GET;
@@ -432,8 +432,8 @@ table 34002164 Elegibles
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     begin
-        //TODO: Ver DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
-        //TODO: Ver DimMgt.SaveDefaultDim(DATABASE::Employee, "No.", FieldNumber, ShortcutDimCode);
+        DimMgt.ValidateDimValueCode(FieldNumber, ShortcutDimCode);
+        DimMgt.SaveDefaultDim(DATABASE::Employee, "No.", FieldNumber, ShortcutDimCode);
         MODIFY;
     end;
 

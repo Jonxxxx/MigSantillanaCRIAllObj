@@ -36,7 +36,7 @@ table 34002122 "Lin. Aportes Empresas"
         }
         field(11; "Apellidos y Nombre"; Text[100])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. Empleado")));
             FieldClass = FlowField;
         }
         field(12; "Tipo Nomina"; Option)
@@ -91,12 +91,12 @@ table 34002122 "Lin. Aportes Empresas"
     }
 
     var
-    //TODO: Ver DimMgt: Codeunit 408;
+        DimMgt: Codeunit 408;
 
     procedure ShowDimensions()
     begin
         TESTFIELD("No. orden");
-        //TODO: Ver DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Empleado"));
+        DimMgt.ShowDimensionSet("Dimension Set ID", STRSUBSTNO('%1 %2 %3', TABLECAPTION, "No. Documento", "No. Empleado"));
     end;
 }
 

@@ -99,7 +99,7 @@ table 34002198 "Lin. Prestamos cooperativa"
         CabPrestamo.GET("No. Prestamo");
 
         "Tipo prestamo" := CabPrestamo."Tipo prestamo";
-        //TODO: Ver "Codigo Empleado" := CabPrestamo."Employee No.";
+        "Codigo Empleado" := CabPrestamo."Employee No.";
     end;
 
     var

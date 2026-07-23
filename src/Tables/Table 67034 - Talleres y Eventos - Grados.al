@@ -96,18 +96,16 @@ table 67034 "Talleres y Eventos - Grados"
         Docente: Record 67001;
         ColDocentes: Record 67043;
         ATE: Record 67016;
-        NoSeriesMgt: Codeunit "No. Series";
-    //TOOD: Ver DimMgt: Codeunit DimensionManagement;
 
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-    //TOOD: Ver MapMgt: Codeunit 802;
+        MapMgt: Codeunit 802;
     begin
-        //TOOD: Ver IF MapPoint.FIND('-') THEN
-        //TOOD: Ver     MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
-        //TOOD: Ver ELSE
-        //TOOD: Ver     MESSAGE(Text033);
+        IF MapPoint.FIND('-') THEN
+            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 }
 

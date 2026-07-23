@@ -28,7 +28,7 @@ table 34002500 "Configuracion General DsPOS"
             Description = 'DsPOS Standard';
             OptionMembers = ,"Republica Dominicana",Bolivia,Paraguay,Ecuador,Guatemala,Salvador,Honduras,Mexico,"Costa Rica";
 
-            //TODO: Ver 
+
             /*
             trigger OnValidate()
             var

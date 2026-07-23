@@ -1214,18 +1214,6 @@ table 56037 "Sales Header Movil."
         WhseRequest: Record 5765;
         ShippingAgentService: Record 5790;
         TempReqLine: Record 246 temporary;
-        //TODO: Ver SalesTaxDifference: Record 10012;
-        UserMgt: Codeunit 5700;
-        //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
-        CustCheckCreditLimit: Codeunit 312;
-        TransferExtendedText: Codeunit 378;
-        GenJnlApply: Codeunit 225;
-        SalesPost: Codeunit 80;
-        CustEntrySetApplID: Codeunit 101;
-        //TODO Ver: DimMgt: Codeunit DimensionManagement;
-        WhseSourceHeader: Codeunit 5781;
-        ArchiveManagement: Codeunit 5063;
-        SalesLineReserve: Codeunit 99000832;
         CurrencyDate: Date;
         HideValidationDialog: Boolean;
         Confirmed: Boolean;

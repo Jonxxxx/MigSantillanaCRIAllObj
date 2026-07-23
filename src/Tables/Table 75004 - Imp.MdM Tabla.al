@@ -78,8 +78,8 @@ table 75004 "Imp.MdM Tabla"
     end;
 
     var
-        //TODO: Ver cFuncMdM: Codeunit 75000;
-        //TODO: Ver cGenProd: Codeunit 75007;
+        cFuncMdM: Codeunit 75000;
+        cGenProd: Codeunit 75007;
         ConfMdM: Record 75000;
         Text0001: Label 'Dim. ';
         Text0002: Label 'Alto';
@@ -88,21 +88,6 @@ table 75004 "Imp.MdM Tabla"
         wRecRef: RecordRef;
         ft: Integer;
 
-
-    procedure GetTableName() TableName: Text[50]
-    var
-    //TODO: Ver lrTables: Record 2000000001;
-    begin
-        // GetTableName
-        //TODO: Ver 
-        /*
-        CLEAR(lrTables);
-        lrTables.SETRANGE(Type, lrTables.Type::Table);
-        lrTables.SETRANGE(ID, "Id Tabla");
-        IF lrTables.FIND('-') THEN
-            TableName := lrTables.Name;
-            */
-    end;
 
     procedure GetFieldName(pwFieldNo: Integer) FieldName: Text[50]
     var
@@ -130,8 +115,8 @@ table 75004 "Imp.MdM Tabla"
                             -103:
                                 FieldName := Text0004;  // Peso
                                                         // Dimensiones
-                                                        //TODO: Ver -299 .. -200:
-                                                        //TODO: Ver    FieldName := Text0001 + cFuncMdM.GetDimCode(ABS("Id Tabla" + 200), FALSE);
+                            -299 .. -200:
+                                FieldName := Text0001 + cFuncMdM.GetDimCode(ABS("Id Tabla" + 200), FALSE);
                         END;
                     END;
             END;
@@ -160,7 +145,7 @@ table 75004 "Imp.MdM Tabla"
                         //lrField2.Type := lrRF.TYPE;
 
                         lrRF := wRecRef.FIELD(lrField."Id Field");
-                        //TODO: Ver 
+
                         /*
                         CASE lrField2.Type OF
                             lrField2.Type::Integer:
@@ -238,7 +223,7 @@ table 75004 "Imp.MdM Tabla"
             349:
                 BEGIN
                     lwId := ABS(Tipo + 200);
-                    //TODO: Ver wText := cFuncMdM.GetDimCode(lwId, FALSE); // Dimensiones MdM
+                    wText := cFuncMdM.GetDimCode(lwId, FALSE); // Dimensiones MdM
                 END;
             ELSE
                 wText := FORMAT(Tipo);

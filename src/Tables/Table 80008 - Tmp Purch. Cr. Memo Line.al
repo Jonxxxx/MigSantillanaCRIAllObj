@@ -535,7 +535,7 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(6608; "Return Reason Code"; Code[10])
         {
@@ -577,9 +577,6 @@ table 80008 "Tmp Purch. Cr. Memo Line"
         PurchDocLineComments: Record 43;
     begin
     end;
-
-    var
-    //TODO: Ver DimMgt: Codeunit DimensionManagement;
 
     procedure GetCurrencyCode(): Code[10]
     var

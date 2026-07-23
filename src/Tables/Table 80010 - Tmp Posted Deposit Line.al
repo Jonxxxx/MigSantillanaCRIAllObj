@@ -8,7 +8,7 @@ table 80010 "Tmp Posted Deposit Line"
         field(1; "Deposit No."; Code[20])
         {
             Caption = 'Deposit No.';
-            //TODO: Ver TableRelation = "Posted Deposit Header";
+            //TODO: Tabla no existe TableRelation = "Posted Deposit Header";
         }
         field(2; "Line No."; Integer)
         {

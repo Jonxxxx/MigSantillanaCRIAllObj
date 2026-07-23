@@ -19,7 +19,7 @@ table 34002145 "CxC Empleados"
         }
         field(2; "Codigo Empleado"; Code[20])
         {
-            //TODO: Ver TableRelation = Employee WHERE("Calcular Nomina" = CONST(True));
+            TableRelation = Employee WHERE("Calcular Nomina" = CONST(True));
 
             trigger OnValidate()
             begin
@@ -60,9 +60,9 @@ table 34002145 "CxC Empleados"
                 Empl.GET("Codigo Empleado");
                 //IF "Tipo CxC" = "Tipo CxC"::Factura THEN
                 //   BEGIN
-                //TODO: Ver Empl.TESTFIELD("Codigo Cliente");
+                Empl.TESTFIELD("Codigo Cliente");
                 CLE.SETCURRENTKEY("Customer No.", Open, Positive, "Due Date", "Currency Code");
-                //TODO: Ver CLE.SETRANGE("Customer No.", Empl."Codigo Cliente");
+                CLE.SETRANGE("Customer No.", Empl."Codigo Cliente");
                 CLE.SETRANGE(Open, TRUE);
                 IF CLE.FINDFIRST THEN BEGIN
                     LiqMovsClientes.LOOKUPMODE(TRUE);
@@ -95,7 +95,7 @@ table 34002145 "CxC Empleados"
                     "Tipo Contrapartida"::Cliente:
                         BEGIN
                             Empl.GET("Codigo Empleado");
-                            //TODO: Ver "Cta. Contrapartida" := Empl."Codigo Cliente";
+                            "Cta. Contrapartida" := Empl."Codigo Cliente";
                         END;
                 END;
             end;
@@ -168,7 +168,7 @@ table 34002145 "CxC Empleados"
         }
         field(21; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Codigo Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Codigo Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -186,15 +186,17 @@ table 34002145 "CxC Empleados"
     }
 
     trigger OnInsert()
+    var
+        NoSeries: Codeunit "No. Series";
     begin
-        ConfNominas.GET;
-        IF "No. Préstamo" = '' THEN BEGIN
-            ConfNominas.GET;
-            ConfNominas.TESTFIELD("No. serie CxC");
-            //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie CxC", ConfNominas."No. serie CxC", 0D, "No. Préstamo", ConfNominas."No. serie CxC");
+        ConfNominas.Get();
 
-        END;
-        Pendiente := TRUE;
+        if "No. Préstamo" = '' then begin
+            ConfNominas.TestField("No. serie CxC");
+            "No. Préstamo" := NoSeries.GetNextNo(ConfNominas."No. serie CxC");
+        end;
+
+        Pendiente := true;
     end;
 
     var
@@ -216,7 +218,7 @@ table 34002145 "CxC Empleados"
     begin
         ConfNominas.GET;
         TestNoSerie;
-        //TODO: Ver 
+
         /*
         IF GestNoSerie.SelectSeries(TraeCodNoSerie, CxCEmpleadosAnt."No. Préstamo", "No. Préstamo") THEN BEGIN
             ConfNominas.GET;

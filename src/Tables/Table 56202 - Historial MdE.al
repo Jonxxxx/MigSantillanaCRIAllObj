@@ -1,7 +1,7 @@
 table 56202 "Historial MdE"
 {
     // #81969 27/01/2018 PLB: Nueva tabla para el MdE
-    // #269159 14.10.2019, RRT: Control de registros pendientes de aplicaci n.
+    // #269159 14.10.2019, RRT: Control de registros pendientes de aplicacion.
     // 
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -146,10 +146,10 @@ table 56202 "Historial MdE"
 
             trigger OnValidate()
             var
-            //TODO: Ver Contratos: Record 34002109;
+                Contratos: Record 34002109;
             begin
                 TESTFIELD(Company);
-                //TODO: Ver Empresa.GET(Company);
+                Empresa.GET(Company);
                 TipoContrato.GET("Emplymt. Contract Code");
             end;
         }
@@ -340,7 +340,7 @@ table 56202 "Historial MdE"
         }
         field(56238; "Nombre completo"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No.")));
             FieldClass = FlowField;
         }
         field(56260; "Error proceso"; Boolean)
@@ -357,7 +357,7 @@ table 56202 "Historial MdE"
         field(34002100; Company; Code[10])
         {
             Caption = 'Company';
-            //TODO: Ver TableRelation = "Empresas Cotizaci n";
+            TableRelation = "Empresas Cotizacion";
         }
         field(34002101; "Second Last Name"; Text[30])
         {
@@ -371,7 +371,7 @@ table 56202 "Historial MdE"
         field(34002102; "Working Center"; Code[10])
         {
             Caption = 'Working Center';
-            //TODO: Ver TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotizaci n" = FIELD("Company"));
+            TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotizacion" = FIELD("Company"));
         }
         field(34002103; "Full Name"; Text[150])
         {
@@ -395,11 +395,11 @@ table 56202 "Historial MdE"
         field(34002108; "Job Type Code"; Code[15])
         {
             Caption = 'Cod. Cargo';
-            //TODO: Ver TableRelation = "Puestos laborales";
+            TableRelation = "Puestos laborales";
 
             trigger OnValidate()
             begin
-                //TODO: Ver Cargo.GET("Job Type Code");
+                Cargo.GET("Job Type Code");
             end;
         }
         field(34002109; "Alta contrato"; Date)
@@ -422,7 +422,7 @@ table 56202 "Historial MdE"
         {
             Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
             OptionCaption = 'Single, Married, Widowed, Separated, Divorced, Free Union';
-            OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Uni n libre";
+            OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
         field(34002126; "Mes Nacimiento"; Integer)
         {
@@ -432,7 +432,7 @@ table 56202 "Historial MdE"
         {
             CaptionClass = '4,1,1';
             Caption = 'Department';
-            //TODO: Ver TableRelation = Departamentos;
+            TableRelation = Departamentos;
         }
     }
 
@@ -448,9 +448,9 @@ table 56202 "Historial MdE"
 
     fieldgroups
     {
-        //TODO: Ver fieldgroup(DropDown; "No.", "First Name", Field3, "Last Name", "Second Last Name", _Departamento)
-        //TODO: Ver {
-        //TODO: Ver }
+        fieldgroup(DropDown; "No.", "First Name", "Last Name", "Second Last Name", _Departamento)
+        {
+        }
     }
 
 
@@ -480,10 +480,10 @@ table 56202 "Historial MdE"
 
     var
         PostCode: Record 225;
-        //TODO: Ver Empresa: Record 34002100;
-        //TODO: Ver Cargo: Record 34002110;
+        Empresa: Record 34002100;
+        Cargo: Record 34002110;
         TipoContrato: Record 5211;
-        //TODO: Ver Contrato: Record 34002109;
+        Contrato: Record 34002109;
         ErrorTipoDatos: Label 'Error de datos';
         ErrorInsert: Label 'No se puede crear el %1 para el empleado %2.';
         ErrorInsertEmployee: Label ' Revise que, si est  enviando un alta nueva, el n mero de serie asignado a recursos humanos en Dynamics NAV est  correctamente configurado.';
@@ -517,7 +517,7 @@ table 56202 "Historial MdE"
 
         // Campos tabla 5200 "Employee"
         //Employee.TRANSFERFIELDS(Rec);
-        //TODO: Ver 
+
         /*
         Employee."Numero de persona" := "Numero de persona";
         Employee."First Name" := "First Name";
@@ -572,7 +572,7 @@ table 56202 "Historial MdE"
         // Campos configurables (dimension)
         IF "Valor Dimension" <> '' THEN BEGIN
             UpdateDimension(Employee."No.", "Cod. Dimension", "Valor Dimension");
-            Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimensi n global
+            Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimension global
         END;
 
         // Campos tabla 34002109 "Contratos"
@@ -596,7 +596,7 @@ table 56202 "Historial MdE"
         END;
 
         Contrato.VALIDATE("Fecha inicio", "Alta contrato");
-        Contrato.VALIDATE("Fecha finalizaci n", "Fin contrato");
+        Contrato.VALIDATE("Fecha finalizacion", "Fin contrato");
         Contrato.SetFromMde(TRUE);
         IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
             AddError(STRSUBSTNO(ErrorModify, Contrato.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
@@ -606,7 +606,7 @@ table 56202 "Historial MdE"
         UpdateApplied(Employee."No.");
 
         //+#269159
-        //... Ante la duda, s lo realizamos control de contratos si no se ha detectado ning n error.
+        //... Ante la duda, s lo realizamos control de contratos siono se ha detectado ning n error.
         IF IsOk THEN
             ControlContratos(Contrato);
         //-#269159
@@ -618,35 +618,35 @@ table 56202 "Historial MdE"
         IsOk := TRUE;
 
         // Campos tabla 5200 "Employee"
-        //TODO: Ver IF Employee."Numero de persona" <> "Numero de persona" THEN
-        //TODO: Ver    Employee."Numero de persona" := "Numero de persona";
+        IF Employee."Numero de persona" <> "Numero de persona" THEN
+            Employee."Numero de persona" := "Numero de persona";
         IF "M nombre" THEN
             Employee."First Name" := "First Name";
         IF "M primer apellido" THEN
             Employee."Last Name" := "Last Name";
-        //TODO: Ver IF "M segundo apellido" THEN
-        //TODO: Ver     Employee."Second Last Name" := "Second Last Name";
-        //TODO: Ver Employee.VALIDATE("Full Name");
+        IF "M segundo apellido" THEN
+            Employee."Second Last Name" := "Second Last Name";
+        Employee.VALIDATE("Full Name");
 
         IF "M fecha antiguedad reconoci" THEN
             Employee."Employment Date" := "Employment Date";
 
-        //TODO: Ver IF "M tipo documento" THEN
-        //TODO: Ver     Employee."Document Type" := "Document Type";
-        //TODO: Ver IF "M numero documento" THEN
-        //TODO: Ver     Employee."Document ID" := "Document ID";
+        IF "M tipo documento" THEN
+            Employee."Document Type" := "Document Type";
+        IF "M numero documento" THEN
+            Employee."Document ID" := "Document ID";
 
         IF "M genero" THEN
             Employee.Gender := Gender;
-        //TODO: Ver IF "M estado civil" THEN
-        //TODO: Ver     Employee."Estado civil" := "Estado civil";
+        IF "M estado civil" THEN
+            Employee."Estado civil" := "Estado civil";
         IF "M fecha nacimiento" THEN
             Employee."Birth Date" := "Birth Date";
-        //TODO: Ver IF "M provincia nacimiento" OR "M pais nacimiento" THEN
-        //TODO: Ver     Employee."Lugar nacimiento" := "Lugar nacimiento";
+        IF "M provincia nacimiento" OR "M pais nacimiento" THEN
+            Employee."Lugar nacimiento" := "Lugar nacimiento";
 
-        //TODO: Ver IF "M nacionalidad" THEN
-        //TODO: Ver     Employee.Nacionalidad := _Nacionalidad;
+        IF "M nacionalidad" THEN
+            Employee.Nacionalidad := _Nacionalidad;
         IF "M pais" THEN
             Employee."Country/Region Code" := "Country/Region Code";
         IF "M nombre calle" THEN
@@ -663,22 +663,22 @@ table 56202 "Historial MdE"
         IF "M numero telefono" THEN
             Employee."Phone No." := "Phone No.";
 
-        //TODO: Ver IF "M posicion" AND ("Job Type Code" <> '') THEN
-        //TODO: Ver     Employee.VALIDATE("Job Type Code", "Job Type Code");
+        IF "M posicion" AND ("Job Type Code" <> '') THEN
+            Employee.VALIDATE("Job Type Code", "Job Type Code");
 
-        //TODO: Ver IF "M centro trabajo" THEN
-        //TODO: Ver     Employee."Working Center" := "Working Center";
+        IF "M centro trabajo" THEN
+            Employee."Working Center" := "Working Center";
 
-        //TODO: Ver IF "M Categoria grupo" THEN
-        //TODO: Ver    Employee."Categoria old" := _Categoria;
+        IF "M Categoria grupo" THEN
+            Employee."Categoria old" := _Categoria;
 
         IF "M tipo contrato grupo" THEN
             Employee."Emplymt. Contract Code" := "Emplymt. Contract Code";
 
-        //TODO: Ver  IF "M departamento" THEN //001+-
-        //TODO: Ver     Employee.Departamento := _Departamento;
+        IF "M departamento" THEN //001+-
+            Employee.Departamento := _Departamento;
 
-        //TODO: Ver Employee.SetFromMde(TRUE);
+        Employee.SetFromMde(TRUE);
         IF NOT Employee.MODIFY(TRUE) THEN BEGIN
             AddError(STRSUBSTNO(ErrorModify, Employee.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
             EXIT;
@@ -687,35 +687,35 @@ table 56202 "Historial MdE"
         // Campos configurables (dimension)
         IF "Valor Dimension" <> '' THEN BEGIN
             UpdateDimension(Employee."No.", "Cod. Dimension", "Valor Dimension");
-            Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimensi n global
+            Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimension global
         END;
 
         // Campos tabla 34002109 "Contratos"
-        //TODO: Ver Contrato.SETRANGE("No. empleado", Employee."No.");
-        //TODO: Ver IF NOT Contrato.FIND('+') THEN BEGIN
-        //TODO: Ver AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', "Numero de persona"), ErrorTipoDatos);
-        //TODO: Ver EXIT;
-        //TODO: Ver END;
+        Contrato.SETRANGE("No. empleado", Employee."No.");
+        IF NOT Contrato.FIND('+') THEN BEGIN
+            AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', "Numero de persona"), ErrorTipoDatos);
+            EXIT;
+        END;
 
-        //TODO: Ver IF "M fecha inicio contrato" THEN
-        //TODO: Ver     Contrato."Fecha inicio" := "Alta contrato";
-        //TODO: Ver IF "M fecha fin contrato" THEN
-        //TODO: Ver     Contrato."Fecha finalizaci n" := "Fin contrato";
-        //TODO: Ver IF "M tipo baja" THEN
-        //TODO: Ver     Contrato."Motivo baja" := "Grounds for Term. Code";
+        IF "M fecha inicio contrato" THEN
+            Contrato."Fecha inicio" := "Alta contrato";
+        IF "M fecha fin contrato" THEN
+            Contrato."Fecha finalizacion" := "Fin contrato";
+        IF "M tipo baja" THEN
+            Contrato."Motivo baja" := "Grounds for Term. Code";
 
-        //TODO: Ver IF "M tipo contrato grupo" THEN
-        //TODO: Ver    Contrato.VALIDATE("C d. contrato", Employee."Emplymt. Contract Code");
+        IF "M tipo contrato grupo" THEN
+            Contrato.VALIDATE("Cod. contrato", Employee."Emplymt. Contract Code");
 
-        //TODO: Ver IF "M fecha inicio contrato" THEN
-        //TODO: Ver     Contrato.VALIDATE("Fecha inicio");
-        //TODO: Ver IF "M fecha fin contrato" THEN
-        //TODO: Ver     Contrato.VALIDATE("Fecha finalizaci n");
-        //TODO: Ver Contrato.SetFromMde(TRUE);
-        //TODO: Ver IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
-        //TODO: Ver     AddError(STRSUBSTNO(ErrorModify, Contrato.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
-        //TODO: Ver     EXIT;
-        //TODO: Ver END;
+        IF "M fecha inicio contrato" THEN
+            Contrato.VALIDATE("Fecha inicio");
+        IF "M fecha fin contrato" THEN
+            Contrato.VALIDATE("Fecha finalizacion");
+        Contrato.SetFromMde(TRUE);
+        IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
+            AddError(STRSUBSTNO(ErrorModify, Contrato.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
+            EXIT;
+        END;
 
         UpdateApplied(Employee."No.");
     end;
@@ -726,26 +726,26 @@ table 56202 "Historial MdE"
     begin
         IsOk := TRUE;
 
-        //TODO: Ver Contrato.SETRANGE("No. empleado", Employee."No.");
-        //TODO: Ver IF NOT Contrato.FIND('+') THEN BEGIN
-        //TODO: Ver     AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', "Numero de persona"), ErrorTipoDatos);
-        //TODO: Ver    EXIT;
-        //TODO: Ver END;
+        Contrato.SETRANGE("No. empleado", Employee."No.");
+        IF NOT Contrato.FIND('+') THEN BEGIN
+            AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', "Numero de persona"), ErrorTipoDatos);
+            EXIT;
+        END;
 
         IF "M fecha fin contrato" THEN BEGIN
-            //TODO: Ver    Contrato."Fecha finalizaci n" := "Fin contrato";
-            //TODO: Ver    Contrato.VALIDATE("Fecha finalizaci n");
+            Contrato."Fecha finalizacion" := "Fin contrato";
+            Contrato.VALIDATE("Fecha finalizacion");
         END;
-        //TODO: Ver IF "M tipo baja" THEN
-        //TODO: Ver    Contrato."Motivo baja" := "Grounds for Term. Code";
+        IF "M tipo baja" THEN
+            Contrato."Motivo baja" := "Grounds for Term. Code";
 
         //Contrato.Activo := FALSE; // el usuario lo manipular  manualmente
-        //TODO: Ver Contrato.VALIDATE(Finalizado, TRUE);
-        //TODO: Ver Contrato.SetFromMde(TRUE);
-        //TODO: Ver IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
-        //TODO: Ver     AddError(STRSUBSTNO(ErrorModify, Contrato.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
-        //TODO: Ver     EXIT;
-        //TODO: Ver END;
+        Contrato.VALIDATE(Finalizado, TRUE);
+        Contrato.SetFromMde(TRUE);
+        IF NOT Contrato.MODIFY(TRUE) THEN BEGIN
+            AddError(STRSUBSTNO(ErrorModify, Contrato.TABLECAPTION, "Numero de persona"), ErrorTipoDatos);
+            EXIT;
+        END;
 
         UpdateApplied(Employee."No.");
     end;
@@ -833,10 +833,10 @@ table 56202 "Historial MdE"
         lrHistorialAux: Record 56202;
     begin
         //+#269159
-        //... Si para el nuevo contrato no est  definida la fecha de finalizaci n, investigaremos si hay alguna duplicidad:
-        //...    No puede haber 2 contratos simult neos vigentes sin fecha de finalizaci n.
+        //... Si para el nuevo contrato no est  definida la fecha de finalizacion, investigaremos si hay alguna duplicidad:
+        //...    No puede haber 2 contratos simult neos vigentes sin fecha de finalizacion.
         //...
-        //... Esta funci n ir  modific ndose en funci n de las anomal as detectadas.
+        //... Esta funcion ir  modific ndose en funcion de las anomal as detectadas.
 
         //... Si el tipo de envio no es INSERT, asumimos que no supone un problema.
         IF "Tipo envio" <> "Tipo envio"::INSERT THEN
@@ -846,7 +846,7 @@ table 56202 "Historial MdE"
         IF "Fin contrato" <> 0D THEN
             EXIT;
 
-        //... Debe haber una fecha de inicio. No se sabe como interpretarlo. Salimos tambi n de la funci nl.
+        //... Debe haber una fecha de inicio. No se sabe como interpretarlo. Salimos tambion de la funcionl.
         IF "Alta contrato" = 0D THEN
             EXIT;
 
@@ -873,35 +873,35 @@ table 56202 "Historial MdE"
             UNTIL lrHistorial.NEXT = 0;
     end;
 
-    procedure ControlContratos(/*//TODO: Ver lrContratoRef: Record 34002109*/)
+    procedure ControlContratos(lrContratoRef: Record 34002109)
     var
-        //TODO: Ver lrContratos: Record 34002109;
-        //TODO: Ver lrContratosAux: Record 34002109;
+        lrContratos: Record 34002109;
+        lrContratosAux: Record 34002109;
         lrContratosBck: Record 56101;
     begin
         //+#269159
-        //... Si para el nuevo contrato no est  definida la fecha de finalizaci n, investigaremos si hay alguna duplicidad:
-        //...    No puede haber 2 contratos simult neos vigentes sin fecha de finalizaci n.
+        //... Si para el nuevo contrato no est  definida la fecha de finalizacion, investigaremos si hay alguna duplicidad:
+        //...    No puede haber 2 contratos simult neos vigentes sin fecha de finalizacion.
         //...
-        //... Esta funci n ir  modific ndose en funci n de las anomal as detectadas.
+        //... Esta funcion ir  modific ndose en funcion de las anomal as detectadas.
 
         //... Si est  asignado el fin de contrato, asumimos (al menos de momento) que el contrato est  bien delimitado
-        //TODO: Ver IF lrContratoRef."Fecha finalizaci n" <> 0D THEN
-        EXIT;
+        IF lrContratoRef."Fecha finalizacion" <> 0D THEN
+            EXIT;
 
-        //... Debe haber una fecha de inicio. No se sabe como interpretarlo. Salimos tambi n de la funci nl.
-        //TODO: Ver IF lrContratoRef."Fecha inicio" = 0D THEN
-        EXIT;
+        //... Debe haber una fecha de inicio. No se sabe como interpretarlo. Salimos tambion de la funcionl.
+        IF lrContratoRef."Fecha inicio" = 0D THEN
+            EXIT;
 
-        //... Quiero destacar  que si el contrato que se ha creado tiene un error detectado (variable IsOk), no se llegar  a entrar en esta funci n.
+        //... Quiero destacar  que si el contrato que se ha creado tiene un error detectado (variable IsOk), no se llegar  a entrar en esta funcion.
 
-        //TODO: Ver 
+
         /*
         lrContratos.RESET;
         lrContratos.SETCURRENTKEY("No. empleado");
         lrContratos.SETRANGE("No. empleado", lrContratoRef."No. empleado");
         lrContratos.SETFILTER("No. Orden", '<%1', lrContratoRef."No. Orden");
-        lrContratos.SETRANGE("Fecha finalizaci n", 0D);
+        lrContratos.SETRANGE("Fecha finalizacion", 0D);
         IF lrContratos.FINDFIRST THEN
             REPEAT
                 //... Si la fecha de inicio es cercana (en 5 d as maximo) al contrato que estamos insertando, asumiremos que se trata de una duplicidad
@@ -909,8 +909,8 @@ table 56202 "Historial MdE"
                     IF ABS(lrContratoRef."Fecha inicio" - lrContratos."Fecha inicio") < 5 THEN BEGIN
                         lrContratosBck.INIT;
                         lrContratosBck.TRANSFERFIELDS(lrContratos);
-                        lrContratosBck."Fecha eliminaci n" := TODAY;
-                        lrContratosBck."Usuario eliminaci n" := COPYSTR(USERID, 1, MAXSTRLEN(lrContratosBck."Usuario eliminaci n"));
+                        lrContratosBck."Fecha eliminacion" := TODAY;
+                        lrContratosBck."Usuario eliminacion" := COPYSTR(USERID, 1, MAXSTRLEN(lrContratosBck."Usuario eliminacion"));
                         IF lrContratosBck.INSERT THEN BEGIN
                             lrContratosAux := lrContratos;
                             lrContratosAux.DELETE;

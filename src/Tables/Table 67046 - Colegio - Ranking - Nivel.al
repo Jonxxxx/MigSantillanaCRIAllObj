@@ -42,8 +42,8 @@ table 67046 "Colegio - Ranking - Nivel"
         Col: Record 5050;
         PostCode: Record 225;
         DA: Record 67002;
-        //TODO: Ver "P-LC"Record 67006;
-        //TODO: Ver "P-Ruta"Record 67044;
+        "P-LC": Record 67006;
+        "P-Ruta": Record 67044;
         RD: Record 67009;
         Nivel: Record 56005;
         Turnos: Page 67003;

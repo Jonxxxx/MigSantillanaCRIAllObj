@@ -9,7 +9,7 @@ table 70000 "Plantilla Queen Mat. Comerc."
         }
         field(2; "TIPO MATERIAL"; Code[1])
         {
-            //TODO: Ver 
+
             /*
             Description = 'M:Manuscrito (no aplica)\'
                           'ico\'

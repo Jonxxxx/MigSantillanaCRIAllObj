@@ -107,12 +107,19 @@ table 34002201 "ent - aaa - Disponible"
     [Scope('Personalization')]
     procedure AssistEdit(): Boolean
     begin
-        HumanResSetup.GET;
-        //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
-        //TODO: Ver IF NoSeriesMgt.SelectSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", "No. Series") THEN BEGIN
-        //TODO: Ver     NoSeriesMgt.SetSeries(Codigo);
-        //TODO: Ver     EXIT(TRUE);
-        //TODO: Ver END;
+        HumanResSetup.Get();
+        HumanResSetup.TestField("No. serie entrenamientos");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             HumanResSetup."No. serie entrenamientos",
+             xRec."No. Series",
+             "No. Series")
+        then begin
+            Codigo := NoSeriesMgt.GetNextNo("No. Series");
+            exit(true);
+        end;
+
+        exit(false);
     end;
 }
 

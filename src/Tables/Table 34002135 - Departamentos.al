@@ -14,7 +14,7 @@ table 34002135 Departamentos
         }
         field(3; "Total Empleados"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE(Departamento = FIELD("Codigo")));
+            CalcFormula = Count(Employee WHERE(Departamento = FIELD("Codigo")));
             Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;
@@ -27,7 +27,7 @@ table 34002135 Departamentos
             trigger OnValidate()
             begin
 
-                //TODO: Ver Emp.SETRANGE(Departamento, Codigo);
+                Emp.SETRANGE(Departamento, Codigo);
                 IF Emp.FINDFIRST THEN
                     ERROR(STRSUBSTNO(Err002, TABLECAPTION, Codigo));
             end;

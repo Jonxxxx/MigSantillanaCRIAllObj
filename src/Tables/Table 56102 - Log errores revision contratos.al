@@ -34,9 +34,9 @@ table 56102 "Log errores revision contratos"
         }
         field(30; Contratos; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Contratos WHERE("No. empleado" = FIELD("No. empleado")));
+            CalcFormula = Count(Contratos WHERE("No. empleado" = FIELD("No. empleado")));
             FieldClass = FlowField;
-            //TODO: Ver TableRelation = Contratos;
+            TableRelation = Contratos;
         }
         field(100; Observaciones; Text[100])
         {

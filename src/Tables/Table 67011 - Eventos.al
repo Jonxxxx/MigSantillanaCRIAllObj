@@ -160,28 +160,29 @@ table 67011 Eventos
     var
         Evento: Record 67011;
         TipoEvento: Record 67010;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
         DA: Record 67002;
         ConfAPS: Record 67000;
         DimVal: Record 349;
         DimForm: Page "Dimension Value List";
 
     procedure AssistEdit(OldEvent: Record 67011): Boolean
-    var
-        WorkShop: Record 67012;
     begin
-        WITH Evento DO BEGIN
-            Evento := Rec;
-            ConfAPS.GET;
-            ConfAPS.TESTFIELD("No. Serie Profesores");
-            //TODO: Ver IF NoSeriesMgt.SelectSeries(ConfAPS."No. Serie Eventos", OldEvent."No. Series", "No. Series") THEN BEGIN
-            ConfAPS.GET;
-            ConfAPS.TESTFIELD("No. Serie Eventos");
-            //TODO: Ver     NoSeriesMgt.SetSeries("No.");
+        Evento := Rec;
+        ConfAPS.Get();
+        ConfAPS.TestField("No. Serie Eventos");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             ConfAPS."No. Serie Eventos",
+             OldEvent."No. Series",
+             Evento."No. Series")
+        then begin
+            Evento."No." := NoSeriesMgt.GetNextNo(Evento."No. Series");
             Rec := Evento;
-            EXIT(TRUE);
-            //TODO: Ver END;
-        END;
+            exit(true);
+        end;
+
+        exit(false);
     end;
 }
 

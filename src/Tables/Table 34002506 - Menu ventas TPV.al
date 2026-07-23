@@ -24,7 +24,7 @@ table 34002506 "Menu ventas TPV"
         }
         field(5; "Cantidad de botones"; Integer)
         {
-            //TODO: Ver CalcFormula = Count("Grupos Cajeros" WHERE(Field3 = FIELD("Menu ID")));
+            //TODO: No existe campo CalcFormula = Count("Grupos Cajeros" WHERE(Field3 = FIELD("Menu ID")));
             Caption = 'Quantity of buttons';
             FieldClass = FlowField;
         }

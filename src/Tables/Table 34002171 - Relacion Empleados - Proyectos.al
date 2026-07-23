@@ -11,8 +11,8 @@ table 34002171 "Relacion Empleados - Proyectos"
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF Employee.GET("Employee No.") THEN
-                //TODO: Ver     "Full name" := Employee."Full Name";
+                IF Employee.GET("Employee No.") THEN
+                    "Full name" := Employee."Full Name";
             end;
         }
         field(2; "Job No."; Code[20])
@@ -50,8 +50,8 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(7; "Job Task Name"; Text[60])
         {
-            //TODO: Ver CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
-            //TODO: Ver                                                   "Task No." = FIELD("Job Task No.")));
+            //TODO: No existe CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
+            //TODO: No existe campo                                                  "Task No." = FIELD("Job Task No.")));
             Caption = 'Job Task No.';
             FieldClass = FlowField;
         }
@@ -97,7 +97,7 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(11; "Full name"; Text[60])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;

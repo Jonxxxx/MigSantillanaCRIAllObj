@@ -256,8 +256,8 @@ table 80013 "Tmp Sales Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Ver TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            //TODO: Ver ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            //TODO: Tabla no existe TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            //TODO: Tabla no existe ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(57; Ship; Boolean)
         {
@@ -538,13 +538,6 @@ table 80013 "Tmp Sales Header"
             MaxValue = 100;
             MinValue = 0;
 
-            trigger OnValidate()
-            var
-                ChangeLogMgt: Codeunit 423;
-                RecRef: RecordRef;
-                xRecRef: RecordRef;
-            begin
-            end;
         }
         field(120; Status; Option)
         {
@@ -656,7 +649,7 @@ table 80013 "Tmp Sales Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Ver TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5043; "No. of Archived Versions"; Integer)
         {
@@ -687,13 +680,8 @@ table 80013 "Tmp Sales Header"
         field(5051; "Sell-to Customer Template Code"; Code[10])
         {
             Caption = 'Sell-to Customer Template Code';
-            //TODO: Ver TableRelation = "Customer Template";
+            //TODO: Tabla no existe  TableRelation = "Customer Template";
 
-            trigger OnValidate()
-            var
-            //TODO: Ver SellToCustTemplate: Record 5105;
-            begin
-            end;
         }
         field(5052; "Sell-to Contact No."; Code[20])
         {
@@ -740,13 +728,8 @@ table 80013 "Tmp Sales Header"
         field(5054; "Bill-to Customer Template Code"; Code[10])
         {
             Caption = 'Bill-to Customer Template Code';
-            //TODO: Ver TableRelation = "Customer Template";
+            //TODO: Tabla no existe TableRelation = "Customer Template";
 
-            trigger OnValidate()
-            var
-            //TODO: Ver BillToCustTemplate: Record 5105;
-            begin
-            end;
         }
         field(5055; "Opportunity No."; Code[20])
         {
@@ -952,8 +935,8 @@ table 80013 "Tmp Sales Header"
         }
         field(53005; "Importe ITBIS Incl."; Decimal)
         {
-            //TODO: Ver CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
-            //TODO: Ver                                                   "Field3" = FIELD("No.")));
+            //TODO: Tabla no existe CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
+            //TODO: Tabla no existe                                                   "Field3" = FIELD("No.")));
             FieldClass = FlowField;
         }
         field(53006; "Venta a credito"; Boolean)
@@ -964,7 +947,7 @@ table 80013 "Tmp Sales Header"
         }
         field(53008; Tienda; Code[20])
         {
-            //TODO: Ver TableRelation = "Bancos tienda";
+            TableRelation = "Bancos tienda";
         }
         field(53009; "Factura en Historico"; Boolean)
         {
@@ -1024,7 +1007,7 @@ table 80013 "Tmp Sales Header"
         field(34003004; "Razon anulacion NCF"; Code[20])
         {
             Caption = 'Reason to void FDN';
-            //TODO: Ver TableRelation = "Razones Anulacion NCF";
+            TableRelation = "Razones Anulacion NCF";
         }
         field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
@@ -1199,7 +1182,6 @@ table 80013 "Tmp Sales Header"
         WhseRequest: Record 5765;
         ShippingAgentService: Record 5790;
         TempReqLine: Record 246 temporary;
-        //TODO: Ver SalesTaxDifference: Record 10012;
         UserMgt: Codeunit 5700;
         NoSeriesMgt: Codeunit "No. Series";
         CustCheckCreditLimit: Codeunit 312;
@@ -1207,7 +1189,7 @@ table 80013 "Tmp Sales Header"
         GenJnlApply: Codeunit 225;
         SalesPost: Codeunit 80;
         CustEntrySetApplID: Codeunit 101;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
+        DimMgt: Codeunit DimensionManagement;
         WhseSourceHeader: Codeunit 5781;
         ArchiveManagement: Codeunit 5063;
         SalesLineReserve: Codeunit 99000832;
@@ -1257,8 +1239,8 @@ table 80013 "Tmp Sales Header"
         txt001: Label 'Se eliminaran las l neas de ventas del pedido, confirma que desea continuar';
         Error002: Label 'Existe otro pedido tipo Consignacion para este cliente - No. Pedido %1';
         Error003: Label 'Existe un pedido de Devolucion de consignacion en borrador para este cliente - No. Pedido %1';
-        //TODO: Ver Tienda: Record 34002504;
-        //TODO: Ver TPV: Record 34002503;
+        Tienda: Record 34002504;
+        TPV: Record 34002503;
         TransferHeader: Record 5740;
         "**002**": Integer;
         rDefDim: Record 352;
@@ -1266,6 +1248,6 @@ table 80013 "Tmp Sales Header"
         "**005**": Integer;
         rNoSeries: Record 308;
         "**006**": Integer;
-    //TODO: Ver rPagosTPV: Record 34002515;
+        rPagosTPV: Record 34002515;
 }
 

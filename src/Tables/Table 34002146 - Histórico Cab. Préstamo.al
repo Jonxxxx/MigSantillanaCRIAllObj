@@ -9,13 +9,15 @@ table 34002146 "Historico Cab. Préstamo"
         {
 
             trigger OnValidate()
+            var
+                NoSeries: Codeunit "No. Series";
             begin
-                ConfNominas.GET;
-                IF "No. Préstamo" = '' THEN BEGIN
-                    ConfNominas.TESTFIELD("No. serie CxC");
-                    //TODO: Ver GestNoSerie.InitSeries(ConfNominas."No. serie reg. CxC", ConfNominas."No. serie reg. CxC", 0D,
-                    //TODO: Ver                      "No. Préstamo", ConfNominas."No. serie reg. CxC");
-                END;
+                ConfNominas.Get();
+
+                if "No. Préstamo" = '' then begin
+                    ConfNominas.TestField("No. serie reg. CxC");
+                    "No. Préstamo" := NoSeries.GetNextNo(ConfNominas."No. serie reg. CxC");
+                end;
             end;
         }
         field(2; "Employee No."; Code[20])
@@ -101,7 +103,7 @@ table 34002146 "Historico Cab. Préstamo"
         }
         field(23; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             FieldClass = FlowField;
         }
         field(24; "Motivo de cierre"; Text[250])

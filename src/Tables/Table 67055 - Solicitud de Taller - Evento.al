@@ -1022,8 +1022,8 @@ table 67055 "Solicitud de Taller - Evento"
         DefDim: Record 352;
         DimVal: Record 349;
         PostCode: Record 225;
-        NoSeriesMgt: Codeunit "No. Series";
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
+        NoSeriesMgt: Codeunit 310;
+        DimMgt: Codeunit 408;
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
         DimForm: Page 560;
 
@@ -1035,7 +1035,7 @@ table 67055 "Solicitud de Taller - Evento"
             SolEvento := Rec;
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Solic. T-E");
-            //TODO: Ver 
+
             /*
             IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Solic. T-E", OldEvent."No. Series", "No. Series") THEN BEGIN
                 APSSetup.GET;
@@ -1047,42 +1047,8 @@ table 67055 "Solicitud de Taller - Evento"
         END;
     end;
 
-    procedure CreateDim(Type1: Integer; No1: Code[20]; Type2: Integer; No2: Code[20]; Type3: Integer; No3: Code[20]; Type4: Integer; No4: Code[20]; Type5: Integer; No5: Code[20])
-    var
-        SourceCodeSetup: Record 242;
-        TableID: array[10] of Integer;
-        No: array[10] of Code[20];
-        OldDimSetID: Integer;
-    begin
-        SourceCodeSetup.GET;
-        TableID[1] := Type1;
-        No[1] := No1;
-        TableID[2] := Type2;
-        No[2] := No2;
-        TableID[3] := Type3;
-        No[3] := No3;
-        TableID[4] := Type4;
-        No[4] := No4;
-        TableID[5] := Type5;
-        No[5] := No5;
-        "Shortcut Dimension 1 Code" := '';
-        "Shortcut Dimension 2 Code" := '';
-        //DimMgt.GetDefaultDim(
-        //  TableID,No,SourceCodeSetup.Sales,
-        //  "Shortcut Dimension 1 Code","Shortcut Dimension 2 Code");
-        //IF "No. Solicitud" <> '' THEN
-        //  DimMgt.UpdateDocDefaultDim(
-        //    DATABASE::"Solicitud de Taller - Evento",0,"No. Solicitud",0,
-        //    "Shortcut Dimension 1 Code","Shortcut Dimension 2 Code");
-
-        OldDimSetID := "Dimension Set ID";
-        //TODO: Ver "Dimension Set ID" :=
-        //TODO: Ver   DimMgt.GetDefaultDimID(TableID, No, SourceCodeSetup.Sales, "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code", 0, 0);
-    end;
-
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])
     var
-        //TODO: Ver ChangeLogMgt: Codeunit 423;
         RecRef: RecordRef;
         xRecRef: RecordRef;
         OldDimSetID: Integer;
@@ -1099,7 +1065,7 @@ table 67055 "Solicitud de Taller - Evento"
         //  DimMgt.SaveTempDim(FieldNumber,ShortcutDimCode);
 
         OldDimSetID := "Dimension Set ID";
-        //TODO: Ver DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Set ID");
+        DimMgt.ValidateShortcutDimValues(FieldNumber, ShortcutDimCode, "Dimension Set ID");
         IF "No. Solicitud" <> '' THEN
             MODIFY;
     end;
@@ -1108,22 +1074,17 @@ table 67055 "Solicitud de Taller - Evento"
     var
         OldDimSetID: Integer;
     begin
-        //DocDim.SETRANGE("Table ID",DATABASE::"Solicitud de Taller - Evento");
-        //DocDim.SETRANGE("Document Type",0);
-        //DocDim.SETRANGE("Document No.","No. Solicitud");
-        //DocDim.SETRANGE("Line No.",0);
-        //DocDims.SETTABLEVIEW(DocDim);
-        //DocDims.RUNMODAL;
-        //GET("No. Solicitud");
-
-
         OldDimSetID := "Dimension Set ID";
-        //TODO: Ver "Dimension Set ID" :=
-        //TODO: Ver   DimMgt.EditDimensionSet2(
-        //TODO: Ver     "Dimension Set ID", STRSUBSTNO('%1 %2', 0, "No. Solicitud"),
-        //TODO: Ver     "Shortcut Dimension 1 Code", "Shortcut Dimension 2 Code");
-        IF OldDimSetID <> "Dimension Set ID" THEN
-            MODIFY;
+
+        "Dimension Set ID" :=
+            DimMgt.EditDimensionSet(
+                "Dimension Set ID",
+                StrSubstNo('%1 %2', 0, "No. Solicitud"),
+                "Shortcut Dimension 1 Code",
+                "Shortcut Dimension 2 Code");
+
+        if OldDimSetID <> "Dimension Set ID" then
+            Modify();
     end;
 
     procedure Valida_Programado()

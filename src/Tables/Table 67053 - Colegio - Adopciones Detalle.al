@@ -102,9 +102,9 @@ table 67053 "Colegio - Adopciones Detalle"
                     ConfAPS.GET();
                     Item.GET("Cod. Producto");
                     "Descripcion producto" := Item.Description;
-                    //TODO: Ver VALIDATE("Cod. Grado", Item."Nivel Escolar (Grado)");
-                    //TODO: Ver VALIDATE("Cod. Nivel", Item."Nivel Educativo APS");
-                    //TODO: Ver VALIDATE("Grupo de Negocio", Item."Grupo de Negocio");
+                    VALIDATE("Cod. Grado", Item."Nivel Escolar (Grado)");
+                    VALIDATE("Cod. Nivel", Item."Nivel Educativo APS");
+                    VALIDATE("Grupo de Negocio", Item."Grupo de Negocio");
                     IF ProdEq.GET("Cod. Producto") THEN BEGIN
                         "Cod. Equiv. Santillana" := ProdEq."Cod. Producto Anterior";
                         "Descripcion Equiv. Santillana" := ProdEq."Nombre Producto Anterior";
@@ -395,7 +395,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(44; "Carga horaria"; Code[20])
         {
-            //TODO: Ver TableRelation = 62031;
+            //TODO: Tabla no existe TableRelation = 62031;
         }
         field(45; "Tipo Ingles"; Option)
         {
@@ -452,12 +452,12 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(102; "Item - Product Group Code"; Code[20])
         {
-            //TODO: Ver CalcFormula = Lookup(Item."Product Group Code" WHERE("No." = FIELD("Cod. Producto")));
+            //TODO: Itme Product Code no existeCalcFormula = Lookup(Item."Product Group Code" WHERE("No." = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103; "Item - Grado"; Code[20])
         {
-            //TODO: Ver CalcFormula = Lookup(Item."Nivel Escolar (Grado)" WHERE("No." = FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Nivel Escolar (Grado)" WHERE("No." = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(104; "Fecha de entrega acordada"; Date)
@@ -551,7 +551,7 @@ table 67053 "Colegio - Adopciones Detalle"
         CabAdopciones: Record 67052;
         DA: Record 67002;
         ColegioAdopciones: Record 67026;
-        ColegioAdopciones2Record: Record 67026;
+        ColegioAdopciones2: Record 67026;
         DimVal: Record 349;
         DimForm: Page 560;
         LibroComp: Page 67025;
@@ -683,7 +683,7 @@ table 67053 "Colegio - Adopciones Detalle"
             1, 2: //Conquista, Mantener
                 BEGIN
                     "Cod. Editorial" := Editora.Code;
-                    //TODO: Ver "Adopcion Real" := ROUND("Cantidad Alumnos" - ("Cantidad Alumnos" * lItem."% Castigo Conquista" / 100), 1);
+                    "Adopcion Real" := ROUND("Cantidad Alumnos" - ("Cantidad Alumnos" * lItem."% Castigo Conquista" / 100), 1);
                     "Cod. Editorial" := Editora.Code;
 
                     ColNiv.RESET;
@@ -696,7 +696,7 @@ table 67053 "Colegio - Adopciones Detalle"
                 END;
             3, 4, 5: //Perdida, No utiliza, Competencia
                 BEGIN
-                    //TODO: Ver "Adopcion Real" := ROUND("Cantidad Alumnos" - ("Cantidad Alumnos" * lItem."% Castigo Perdida" / 100), 1);
+                    "Adopcion Real" := ROUND("Cantidad Alumnos" - ("Cantidad Alumnos" * lItem."% Castigo Perdida" / 100), 1);
                     "Cod. Editorial" := '';
                 END;
             0: //Blanco
@@ -817,15 +817,15 @@ table 67053 "Colegio - Adopciones Detalle"
 
         IF ColAdopcion.GET("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto") THEN BEGIN
             IF xRec.Adopcion <> Rec.Adopcion THEN BEGIN
-                //TODO: Ver IF NOT ColegioAdopciones2.FINDLAST THEN
-                //TODO: Ver     ColegioAdopciones2.Secuencia := 0;
+                IF NOT ColegioAdopciones2.FINDLAST THEN
+                    ColegioAdopciones2.Secuencia := 0;
 
                 "Fecha Ult. Modificacion" := TODAY;
                 //    message('paso %1',today);
                 //"Fecha Adopcion" := TODAY;
                 ColegioAdopciones.INIT;
                 ColegioAdopciones.TRANSFERFIELDS(Rec);
-                //TODO: Ver ColegioAdopciones.Secuencia := ColegioAdopciones2.Secuencia + 1;
+                ColegioAdopciones.Secuencia := ColegioAdopciones2.Secuencia + 1;
                 ColegioAdopciones.INSERT;
 
                 MODIFY;

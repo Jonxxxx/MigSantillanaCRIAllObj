@@ -56,7 +56,7 @@ table 34002202 "Programacion entrenamiento"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
+                            "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");

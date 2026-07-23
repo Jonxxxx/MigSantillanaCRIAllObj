@@ -59,7 +59,7 @@ table 34002153 "Beneficios empleados"
     }
 
     var
-        //TODO: Ver Datosadicionales: Page 34002146;
+        Datosadicionales: Page 34002146;
         Datosadic: Record 34002151;
 }
 

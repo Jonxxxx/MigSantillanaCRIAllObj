@@ -17,7 +17,7 @@ table 56100 "Provisiones nominas"
         field(3; "Concepto Salarial"; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = "Conceptos salariales";
+            TableRelation = "Conceptos salariales";
         }
         field(4; "Importe provisionado"; Decimal)
         {

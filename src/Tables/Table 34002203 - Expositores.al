@@ -8,7 +8,7 @@ table 34002203 Expositores
         {
             Caption = 'No.';
             DataClassification = ToBeClassified;
-            //TODO: Ver 
+
             /*TableRelation = IF (Tipo = CONST(Interno)) Employee.No.
                             ELSE IF (Tipo = CONST(Externo)) Vendor.No.;*/
 
@@ -16,8 +16,8 @@ table 34002203 Expositores
             begin
                 IF Tipo = 0 THEN BEGIN
                     Emp.GET("No.");
-                    //TODO: Ver Name := Emp."Full Name";
-                    //TODO: Ver "Document ID" := Emp."Document ID";
+                    Name := Emp."Full Name";
+                    "Document ID" := Emp."Document ID";
                     Address := Emp.Address;
                     "Address 2" := Emp."Address 2";
                     City := Emp.City;

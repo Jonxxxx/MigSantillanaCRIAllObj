@@ -19,8 +19,8 @@ table 34002136 "Sub-Departamentos"
         }
         field(4; "Total Empleados"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. Departamento"),
-            //TODO: Ver                                     "Sub-Departamento" = FIELD("Codigo")));
+            CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. Departamento"),
+                                                "Sub-Departamento" = FIELD("Codigo")));
             Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;

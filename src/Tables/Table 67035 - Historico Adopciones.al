@@ -253,7 +253,7 @@ table 67035 "Historico Adopciones"
         }
         field(102; "Item - Product Group Code"; Code[20])
         {
-            //TODO: Ver CalcFormula = Lookup(Item."Product Group Code" WHERE("No." = FIELD("Cod. Producto")));
+            //TODO: No existe item producto code CalcFormula = Lookup(Item."Product Group Code" WHERE("No." = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103; "Item - Grado"; Code[20])

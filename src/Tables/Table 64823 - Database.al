@@ -43,7 +43,7 @@ table 64823 EXCCRIDatabase
         }
         field(19; "Assume Design"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(20; "Read Design"; Boolean)
         {

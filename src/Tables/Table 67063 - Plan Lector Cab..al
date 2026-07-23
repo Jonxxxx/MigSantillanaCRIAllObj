@@ -5,8 +5,8 @@ table 67063 "Plan Lector Cab."
     {
         field(1; "Cod. Colegio"; Code[10])
         {
-            //TODO: Ver TableRelation = Contact WHERE("Type" = CONST(Company),
-            //TODO: Ver                               "Tipo educacion" = CONST(true));
+            //TODO: Ver campo tipo educacion TableRelation = Contact WHERE("Type" = CONST(Company),
+            //                              "Tipo educacion" = CONST(true));
 
             trigger OnValidate()
             var
@@ -17,14 +17,14 @@ table 67063 "Plan Lector Cab."
                 Colegio.SETRANGE(Colegio."No.", "Cod. Colegio");
                 IF Colegio.FINDFIRST THEN BEGIN
                     "Nombre Colegio" := Colegio.Name;
-                    //TODO: Ver Distrito := Colegio.Distritos;
-                    //TODO: Ver "Cod. Delegacion" := Colegio.Delegacion;
+                    Distrito := Colegio.Distritos;
+                    "Cod. Delegacion" := Colegio.Delegacion;
                     ConfAPS.GET;
                     ConfAPS.TESTFIELD("Cod. Dimension Delegacion");
                     DimVal.RESET;
                     DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Delegacion");
                     DimVal.SETRANGE("Dimension Value Type", DimVal."Dimension Value Type"::Standard);
-                    //TODO: Ver DimVal.SETRANGE(Code, Colegio.Delegacion);
+                    DimVal.SETRANGE(Code, Colegio.Delegacion);
                     IF DimVal.FINDFIRST THEN
                         "Descripcion Delegacion" := DimVal.Name;
 

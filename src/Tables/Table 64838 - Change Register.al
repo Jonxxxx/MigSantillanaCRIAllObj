@@ -12,11 +12,11 @@ table 64838 "Change Register"
         }
         field(3; "Source Database"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(4; "Dest. Database"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(5; "Changes Made"; Option)
         {

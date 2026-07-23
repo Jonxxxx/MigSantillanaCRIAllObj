@@ -44,9 +44,9 @@ table 34002180 "Shift schedule"
 
     fieldgroups
     {
-        //TODO: Ver ieldgroup(DropDown; "Codigo turno", Field2)
-        //TODO: Ver {
-        //TODO: Ver }
+        fieldgroup(DropDown; "Codigo turno")
+        {
+        }
     }
 
     var

@@ -210,8 +210,8 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Ver TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            //TODO: Ver ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            //TODO Campo no existe TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
+            //TODO Campo no existe ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(60; Amount; Decimal)
         {
@@ -395,7 +395,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            //TODO: Ver TableRelation = 2000000002;
+            //TODO Tabla no existe TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
 
@@ -403,7 +403,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
             var
                 LoginMgt: Codeunit 418;
             begin
-                //TODO: Ver LoginMgt.LookupUserID("User ID");
+                //TODO metodo no existe LoginMgt.LookupUserID("User ID");
             end;
         }
         field(113; "Source Code"; Code[10])
@@ -448,7 +448,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Ver TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5050; "Campaign No."; Code[20])
         {
@@ -543,7 +543,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         }
         field(34003004; "Razon anulacion NCF"; Code[20])
         {
-            //TODO: Ver TableRelation = "Razones Anulacion NCF";
+            TableRelation = "Razones Anulacion NCF";
         }
         field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
@@ -599,12 +599,6 @@ table 80003 "Tmp Sales Cr.Memo Header"
         }
     }
 
-    trigger OnDelete()
-    var
-    //TODO: Ver DimMgt: Codeunit DimensionManagement;
-    begin
-    end;
-
     var
         SalesCrMemoHeader: Record 114;
         SalesCommentLine: Record 44;
@@ -613,7 +607,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         PostSalesLinesDelete: Codeunit 363;
         "*** DSLoc ***": Integer;
         ConfSantillana: Record 56001;
-        //TODO: Ver Localizacion: Record 34003011;
+        Localizacion: Record 34003011;
         GpoContableCte: Record 92;
 }
 

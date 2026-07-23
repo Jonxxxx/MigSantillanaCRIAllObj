@@ -120,7 +120,7 @@ table 34002529 "Turnos TPV"
     procedure ActualizarFondoCaja(codPrmUsuario: Code[20]; decPrmFondo: Decimal)
     var
         recTrans: Record 34002523;
-    //TODO: Ver cduComun: Codeunit 34002503;
+        cduComun: Codeunit 34002503;
     begin
         recTrans.RESET;
         recTrans.SETRANGE("Cod. tienda", "No. tienda");
@@ -146,7 +146,7 @@ table 34002529 "Turnos TPV"
             recTrans."Id. cajero" := codPrmUsuario;
             recTrans.Fecha := WORKDATE;
             recTrans.Hora := FormatTime(TIME);
-            //TODO: Ver recTrans."Forma de pago" := cduComun.Efectivo_Local;
+            //TODO: No existe campo recTrans."Forma de pago" := cduComun.Efectivo_Local;
             recTrans.Importe := decPrmFondo;
             recTrans."Importe (DL)" := decPrmFondo;
             recTrans.INSERT(TRUE);

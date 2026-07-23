@@ -160,7 +160,7 @@ table 67066 Comisionistas
                 InteractLogEntry: Record 5065;
                 SegLine: Record 5077;
                 SalesHeader: Record 36;
-                ChangeLogMgt: Codeunit 423;
+                ChangeLogMgt: Codeunit "Change Log Management";
                 RecRef: RecordRef;
                 xRecRef: RecordRef;
             begin
@@ -335,7 +335,7 @@ table 67066 Comisionistas
         }
         field(5066; "Next To-do Date"; Date)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Min("To-do.Date" WHERE ("Contact Company No."=FIELD("Company No."),
                                                 "Contact No."=FIELD(FILTER(Lookup Contact No.)),
@@ -399,7 +399,7 @@ table 67066 Comisionistas
         }
         field(5074; "No. of Interactions"; Integer)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Count("Interaction Log Entry" WHERE("Contact Company No." = FIELD("Company No."),
                                                                "Canceled" = CONST(false),
@@ -413,7 +413,7 @@ table 67066 Comisionistas
         field(5076; "Cost (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("Interaction Log Entry"."Cost (LCY)" WHERE("Contact Company No." = FIELD("Company No."),
                                                                           "Canceled" = CONST(false),
@@ -427,7 +427,7 @@ table 67066 Comisionistas
         }
         field(5077; "Duration (Min.)"; Decimal)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("Interaction Log Entry"."Duration (Min.)" WHERE("Contact Company No." = FIELD("Company No."),
                                                                                "Canceled" = CONST(false),
@@ -441,7 +441,7 @@ table 67066 Comisionistas
         }
         field(5078; "No. of Opportunities"; Integer)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Count("Opportunity Entry" WHERE("Active" = CONST(true),
                                                            "Contact Company No." = FIELD("Company No."),
@@ -455,7 +455,7 @@ table 67066 Comisionistas
         field(5079; "Estimated Value (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("Opportunity Entry"."Estimated Value (LCY)" WHERE("Active" = CONST(true),
                                                                                  "Contact Company No." = FIELD("Company No."),
@@ -469,7 +469,7 @@ table 67066 Comisionistas
         field(5080; "Calcd. Current Value (LCY)"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("Opportunity Entry"."Calcd. Current Value (LCY)" WHERE("Active" = CONST(true),
                                                                                       "Contact Company No." = FIELD("Company No."),
@@ -483,7 +483,7 @@ table 67066 Comisionistas
         }
         field(5082; "Opportunity Entry Exists"; Boolean)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Exist("Opportunity Entry" WHERE("Active" = CONST(true),
                                                            "Contact Company No." = FIELD("Company No."),
@@ -506,7 +506,7 @@ table 67066 Comisionistas
         }
         field(5083; "To-do Entry Exists"; Boolean)
         {
-            //TODO: Ver 
+
             /*
             CalcFormula = Exist(To-do WHERE ("Contact Company No."=FIELD("Company No."),
                                              "Contact No."=FIELD(FILTER(Lookup Contact No.)),
@@ -962,9 +962,8 @@ table 67066 Comisionistas
         RecRef: RecordRef;
         xRecRef: RecordRef;
         DuplMgt: Codeunit 5060;
-        ChangeLogMgt: Codeunit 423;
         UpdateCustVendBank: Codeunit 5055;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
         ContChanged: Boolean;
         SkipDefaults: Boolean;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';

@@ -45,12 +45,12 @@ table 64822 Specification
         }
         field(19; "Source Design"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(20; "Source Database"; Code[20])
         {
             NotBlank = true;
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             //ValidateTableRelation = false;
@@ -98,11 +98,11 @@ table 64822 Specification
         }
         field(39; "Dest. Design"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(40; "Dest. Database"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
             //This property is currently not supported
             //TestTableRelation = false;
             //ValidateTableRelation = false;
@@ -221,7 +221,7 @@ table 64822 Specification
         field(85; Time; Time)
         {
         }
-        //TODO: Ver 
+
         /*
         field(86;Option;Option)
         {
@@ -255,6 +255,5 @@ table 64822 Specification
         ReplicatorSetup: Record 64835;
         DatabaseTables: Record 64828;
         AllObj: Record 2000000038;
-        NoSeriesMgt: Codeunit "No. Series";
 }
 

@@ -24,7 +24,7 @@ table 34002177 "Punch log"
         }
         field(7; "Full name"; Text[60])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Caption = 'Full Name';
             FieldClass = FlowField;
         }

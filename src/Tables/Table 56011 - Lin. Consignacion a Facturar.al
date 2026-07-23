@@ -222,19 +222,19 @@ table 56011 "Lin. Consignacion a Facturar"
 
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
-        CustCheckCreditLimit: Codeunit 312;
+        CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
         ItemCheckAvail: Codeunit 311;
         SalesTaxCalculate: Codeunit 398;
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
-        ReserveSalesLine: Codeunit 99000832;
+        ReserveSalesLine: Codeunit "Sales Line-Reserve";
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
         WhseValidateSourceLine: Codeunit 5777;
-        TransferExtendedText: Codeunit 378;
+        TransferExtendedText: Codeunit "Transfer Extended Text";
         JobPostLine: Codeunit 1001;
         FullAutoReservation: Boolean;
         StatusCheckSuspended: Boolean;

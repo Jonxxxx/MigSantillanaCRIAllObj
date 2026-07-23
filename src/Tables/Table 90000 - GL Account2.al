@@ -139,7 +139,7 @@ table 90000 "G/L Account2"
         field(32; "Net Change"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("G/L Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                         "G/L Account No." = FIELD(FILTER(Totaling)),
@@ -154,7 +154,7 @@ table 90000 "G/L Account2"
         field(33; "Budgeted Amount"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("G/L Budget Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                                "G/L Account No." = FIELD(FILTER(Totaling)),
@@ -183,7 +183,7 @@ table 90000 "G/L Account2"
         field(36; Balance; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("G/L Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                         "G/L Account No." = FIELD(FILTER(Totaling)),
@@ -197,7 +197,7 @@ table 90000 "G/L Account2"
         field(37; "Budget at Date"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver 
+
             /*
             CalcFormula = Sum("G/L Budget Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                                "G/L Account No." = FIELD(FILTER(Totaling)),
@@ -448,7 +448,7 @@ table 90000 "G/L Account2"
         field(10001; "GIFI Code"; Code[10])
         {
             Caption = 'GIFI Code';
-            //TODO: Ver TableRelation = "GIFI Code";
+            //TODO: Tabla no existe TableRelation = "GIFI Code";
         }
         field(34003001; "NCF Obligatorio"; Boolean)
         {
@@ -457,7 +457,7 @@ table 90000 "G/L Account2"
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Clasification Code';
-            //TODO: Ver TableRelation = "Clasificacion Gastos";
+            TableRelation = "Clasificacion Gastos";
         }
     }
 

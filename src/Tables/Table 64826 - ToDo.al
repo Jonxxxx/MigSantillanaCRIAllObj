@@ -6,7 +6,7 @@ table 64826 ToDo
         field(1; "Sender Database"; Code[20])
         {
             NotBlank = true;
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(2; "Entry No."; BigInteger)
         {
@@ -14,7 +14,7 @@ table 64826 ToDo
         field(5; "Receiver Database"; Code[20])
         {
             NotBlank = true;
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
         }
         field(6; Processed; Boolean)
         {

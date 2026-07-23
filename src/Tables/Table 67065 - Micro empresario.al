@@ -169,7 +169,7 @@ table 67065 "Micro empresario"
                 InteractLogEntry: Record 5065;
                 SegLine: Record 5077;
                 SalesHeader: Record 36;
-                //TODO: Ver ChangeLogMgt: Codeunit 423;
+                ChangeLogMgt: Codeunit "Change Log Management";
                 RecRef: RecordRef;
                 xRecRef: RecordRef;
             begin
@@ -394,7 +394,7 @@ table 67065 "Micro empresario"
         ContAltAddrDateRange: Record 5052;
         InteractLogEntry: Record 5065;
         Opp: Record 5092;
-    //TODO: Ver CampaignTargetGrMgt: Codeunit 7030;
+        CampaignTargetGrMgt: Codeunit 7030;
     begin
     end;
 
@@ -419,11 +419,9 @@ table 67065 "Micro empresario"
         PostCode: Record 225;
         RecRef: RecordRef;
         xRecRef: RecordRef;
-        //TODO: Ver DuplMgt: Codeunit 5060;
-        NoSeriesMgt: Codeunit "No. Series";
-        //TODO: Ver ChangeLogMgt: Codeunit 423;
-        //TODO: Ver UpdateCustVendBank: Codeunit 5055;
-        //TODO: Ver CampaignMgt: Codeunit 7030;
+        DuplMgt: Codeunit 5060;
+        UpdateCustVendBank: Codeunit 5055;
+        CampaignMgt: Codeunit 7030;
         ContChanged: Boolean;
         SkipDefaults: Boolean;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';
@@ -458,12 +456,12 @@ table 67065 "Micro empresario"
     procedure DisplayMap()
     var
         MapPoint: Record 800;
-    //TODO: Ver MapMgt: Codeunit 802;
+        MapMgt: Codeunit 802;
     begin
-        //TODO: Ver IF MapPoint.FIND('-') THEN
-        //TODO: Ver     MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
-        //TODO: Ver ELSE
-        //TODO: Ver    MESSAGE(Text033);
+        IF MapPoint.FIND('-') THEN
+            MapMgt.MakeSelection(DATABASE::Contact, GETPOSITION)
+        ELSE
+            MESSAGE(Text033);
     end;
 }
 

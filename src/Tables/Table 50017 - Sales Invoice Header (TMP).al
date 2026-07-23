@@ -581,11 +581,5 @@ table 50017 "Sales Invoice Header (TMP)"
         ReportSelection: Record 77;
     begin
     end;
-
-    procedure Navigate()
-    var
-        NavigateForm: Page 344;
-    begin
-    end;
 }
 

@@ -432,7 +432,7 @@ table 80004 "Tmp Sales Cr.Memo Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(5811; "Appl.-from Item Entry"; Integer)
         {
@@ -518,9 +518,6 @@ table 80004 "Tmp Sales Cr.Memo Line"
         SalesDocLineComments: Record 44;
     begin
     end;
-
-    var
-    //TODO: Ver DimMgt: Codeunit DimensionManagement;
 
     procedure GetCurrencyCode(): Code[10]
     var

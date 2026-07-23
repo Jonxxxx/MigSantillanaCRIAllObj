@@ -22,7 +22,7 @@ table 67038 "Promotor - Planif. Visita"
                 IF "Cod. Colegio" <> '' THEN BEGIN
                     Col.GET("Cod. Colegio");
                     "Nombre Colegio" := Col.Name;
-                    //TODO: Ver Delegacion := Col.Delegacion;   //$001
+                    Delegacion := Col.Delegacion;   //$001
                 END;
             end;
         }
@@ -46,7 +46,7 @@ table 67038 "Promotor - Planif. Visita"
                     TESTFIELD("Estado Colegio");
                 END;
 
-                //TODO: Ver 
+
                 /*
                 Fecha1.RESET;
                 Fecha1.SETRANGE("Period Type", 0);
@@ -61,9 +61,9 @@ table 67038 "Promotor - Planif. Visita"
 
                 CLEAR(CabPlanif);
                 CabPlanif.VALIDATE("Cod. Promotor", "Cod. Promotor");
-                //TODO: Ver CabPlanif.VALIDATE(Fecha, Fecha2."Period Start");
+                CabPlanif.VALIDATE(Fecha, Fecha2."Period Start");
                 CabPlanif.VALIDATE(Ano, DATE2DMY("Fecha Proxima Visita", 3));
-                //TODO: Ver CabPlanif.VALIDATE(Semana, Fecha2."Period No.");
+                CabPlanif.VALIDATE(Semana, Fecha2."Period No.");
                 IF CabPlanif.INSERT(TRUE) THEN;
 
                 CLEAR(PromPlanVisit);
@@ -274,8 +274,8 @@ table 67038 "Promotor - Planif. Visita"
         DA: Record 67002;
         Docente: Record 67001;
         Err002: Label 'You can''t delete lines with School with completed dates';
-        Fecha1Record: Record 2000000007;
-        Fecha2Record: Record 2000000007;
+        Fecha1: Record 2000000007;
+        Fecha2: Record 2000000007;
         PromPlanVisit: Record 67038;
 
     procedure BuscaCabecera()

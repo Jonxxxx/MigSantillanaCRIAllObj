@@ -1066,11 +1066,11 @@ table 56038 "Sales Line Movil."
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Ver TableRelation = 50131;
+            //TODO: Error tabla TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Ver TableRelation = 50132;
+            //TODO: Error tabla TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1084,7 +1084,7 @@ table 56038 "Sales Line Movil."
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            //TODO: Ver TableRelation = 50133;
+            //TODO: Error tabla TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
@@ -1259,23 +1259,18 @@ table 56038 "Sales Line Movil."
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Ver SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
-        CustCheckCreditLimit: Codeunit 312;
         ItemCheckAvail: Codeunit 311;
         SalesTaxCalculate: Codeunit 398;
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
-        ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
         WhseValidateSourceLine: Codeunit 5777;
-        TransferExtendedText: Codeunit 378;
         JobPostLine: Codeunit 1001;
         FullAutoReservation: Boolean;
         StatusCheckSuspended: Boolean;
@@ -1321,7 +1316,7 @@ table 56038 "Sales Line Movil."
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        //TODO: Ver cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';

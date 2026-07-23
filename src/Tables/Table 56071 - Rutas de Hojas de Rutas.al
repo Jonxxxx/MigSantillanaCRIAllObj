@@ -40,7 +40,7 @@ table 56071 "Rutas de Hojas de Rutas"
                     City := recCodigoPostal.City;
                     "Region Code" := recCodigoPostal."Country/Region Code";
                     Country := recCodigoPostal.County;
-                    //TODO: Ver Colonia := recCodigoPostal.Colonia;
+                    Colonia := recCodigoPostal.Colonia;
                     IF recCodigoPostal."Country/Region Code" = '' THEN
                         "Region Code" := 'CR';
                 END;

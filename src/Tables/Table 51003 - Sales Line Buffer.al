@@ -1057,11 +1057,11 @@ table 51003 "Sales Line Buffer"
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Ver TableRelation = 50131;
+            //TODO: Tabla Error TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Ver TableRelation = 50132;
+            //TODO: Tabla Error TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1075,7 +1075,7 @@ table 51003 "Sales Line Buffer"
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            //TODO: Ver TableRelation = 50133;
+            //TODO: Tabla Error TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
@@ -1228,27 +1228,6 @@ table 51003 "Sales Line Buffer"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Ver //TODO: Ver SalesTaxDifference: Record 10012;
-        //TODO Ver 0 referencias
-        /*
-        PriceCalcMgt: Codeunit 7000;
-        ResFindUnitCost: Codeunit 220;
-        CustCheckCreditLimit: Codeunit 312;
-        ItemCheckAvail: Codeunit 311;
-        SalesTaxCalculate: Codeunit 398;
-        ReservMgt: Codeunit 99000845;
-        ReservEngineMgt: Codeunit 99000831;
-        ReserveSalesLine: Codeunit 99000832;
-        UOMMgt: Codeunit 5402;
-        AddOnIntegrMgt: Codeunit 5403;
-        DimMgt: Codeunit DimensionManagement;
-        ItemSubstitutionMgt: Codeunit 5701;
-        DistIntegration: Codeunit 5702;
-        NonstockItemMgt: Codeunit 5703;
-        WhseValidateSourceLine: Codeunit 5777;
-        TransferExtendedText: Codeunit 378;
-        JobPostLine: Codeunit 1001;
-        */
         FullAutoReservation: Boolean;
         StatusCheckSuspended: Boolean;
         HasBeenShown: Boolean;
@@ -1292,7 +1271,7 @@ table 51003 "Sales Line Buffer"
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        //TODO: Ver cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]

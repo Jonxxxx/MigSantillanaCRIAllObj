@@ -159,9 +159,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
                 IF "Cod. Colegio" <> '' THEN BEGIN
                     Colegio.GET("Cod. Colegio");
-                    //TODO: Ver Delegacion := Colegio.Delegacion;
+                    Delegacion := Colegio.Delegacion;
                     "Nombre Colegio" := Colegio.Name;
-                    //TODO: Ver "Distrito Colegio" := Colegio.Distritos;
+                    "Distrito Colegio" := Colegio.Distritos;
                     "Direccion Colegio" := Colegio.Address;
                     "Telefono 1 Colegio" := Colegio."Phone No.";
                     "Telefono 2 Colegio" := Colegio."Mobile Phone No.";
@@ -496,7 +496,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
     trigger OnInsert()
     var
         APSSetup: Record 67000;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
         Seg: Record 67107;
     begin
 

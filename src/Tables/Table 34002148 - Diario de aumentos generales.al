@@ -46,7 +46,7 @@ table 34002148 "Diario de aumentos generales"
         }
         field(14; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No. empleado")));
             Caption = 'Full name';
             Editable = false;
             FieldClass = FlowField;

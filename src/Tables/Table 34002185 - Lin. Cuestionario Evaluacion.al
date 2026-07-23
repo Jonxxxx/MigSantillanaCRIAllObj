@@ -559,7 +559,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     procedure FinishWizard()
     var
         ProfileQuestionnaireLine: Record 34002185;
-        //TODO: Ver ProfileMgt: Codeunit 34002122;
+        ProfileMgt: Codeunit 34002122;
         NextLineNo: Integer;
         QuestionLineNo: Integer;
     begin
@@ -587,7 +587,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         COMMIT;
 
         ProfileQuestionnaireLine.GET("Profile Questionnaire Code", QuestionLineNo);
-        //TODO: Ver  ProfileMgt.ShowAnswerPoints(ProfileQuestionnaireLine);
+        ProfileMgt.ShowAnswerPoints(ProfileQuestionnaireLine);
     end;
 
     [Scope('Personalization')]

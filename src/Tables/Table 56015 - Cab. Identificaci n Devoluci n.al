@@ -118,7 +118,7 @@ table 56015 "Cab. Identificaci n Devoluci n"
     end;
 
     var
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
         SalesSetup: Record 311;
         Cust: Record 18;
         LID: Record 56016;

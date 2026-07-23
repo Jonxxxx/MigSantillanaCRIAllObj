@@ -45,7 +45,7 @@ table 34002206 "Asistentes entrenamientos"
                     0: // Empleado
                         BEGIN
                             Emp.GET("Cod. Instructor");
-                            //TODO: Ver "Nombre Instructor" := Emp."Full Name";
+                            "Nombre Instructor" := Emp."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");
@@ -70,8 +70,8 @@ table 34002206 "Asistentes entrenamientos"
             begin
                 IF "No. empleado" <> '' THEN BEGIN
                     Emp.GET("No. empleado");
-                    //TODO: Ver "Nombre completo" := Emp."Full Name";
-                    //TODO: Ver "Document ID" := Emp."Document ID";
+                    "Nombre completo" := Emp."Full Name";
+                    "Document ID" := Emp."Document ID";
                 END;
             end;
         }

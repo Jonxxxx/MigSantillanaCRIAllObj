@@ -423,7 +423,7 @@ table 50018 "Sales Invoice Line (TMP)"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(5811; "Appl.-from Item Entry"; Integer)
         {
@@ -611,10 +611,10 @@ table 50018 "Sales Invoice Line (TMP)"
 
     procedure RowID1(): Text[250]
     var
-    //TODO: Ver ItemTrackingMgt: Codeunit 6500;
+        ItemTrackingMgt: Codeunit 6500;
     begin
-        //TODO: VerEXIT(ItemTrackingMgt.ComposeRowID(DATABASE::"Sales Invoice Line",
-        //TODO: Ver  0, "Document No.", '', 0, "Line No."));
+        EXIT(ItemTrackingMgt.ComposeRowID(DATABASE::"Sales Invoice Line",
+         0, "Document No.", '', 0, "Line No."));
         Exit('');
     end;
 }

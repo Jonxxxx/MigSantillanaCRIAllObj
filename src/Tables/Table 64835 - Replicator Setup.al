@@ -52,30 +52,30 @@ table 64835 "Replicator Setup"
         }
         field(30; "Local Database Code"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
             //This property is currently not supported
             //TestTableRelation = false;
-            //TODO: Ver ValidateTableRelation = false;
+            ValidateTableRelation = false;
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF "Local Database Code" <> '' THEN
-                //TODO: Ver     IF Database2.COUNT() > 0 THEN
-                //TODO: Ver        Database2.GET("Local Database Code");
+                IF "Local Database Code" <> '' THEN
+                    IF Database2.COUNT() > 0 THEN
+                        Database2.GET("Local Database Code");
             end;
         }
         field(31; "Central Database Code"; Code[20])
         {
-            //TODO: Ver TableRelation = Database.Code;
+            TableRelation = EXCCRIDatabase.Code;
             //This property is currently not supported
             //TestTableRelation = false;
-            //TODO: Ver ValidateTableRelation = false;
+            ValidateTableRelation = false;
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF "Central Database Code" <> '' THEN
-                //TODO: Ver IF Database2.COUNT() > 0 THEN
-                //TODO: Ver   Database2.GET("Central Database Code");
+                IF "Central Database Code" <> '' THEN
+                    IF Database2.COUNT() > 0 THEN
+                        Database2.GET("Central Database Code");
             end;
         }
         field(40; "Shut Down Date (Sched)"; Date)
@@ -98,6 +98,6 @@ table 64835 "Replicator Setup"
     }
 
     var
-        Database2Record: Record 64823;
+        Database2: Record 64823;
 }
 

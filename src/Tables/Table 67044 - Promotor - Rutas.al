@@ -16,11 +16,11 @@ table 67044 "Promotor - Rutas"
             trigger OnValidate()
             begin
                 IF "Cod. Ruta" <> '' THEN BEGIN
-                    //TODO: Ver DA.RESET;
-                    //TODO: Ver DA.SETRANGE("Tipo registro", DA."Tipo registro"::Rutas);
-                    //TODO: Ver DA.SETRANGE(Codigo, "Cod. Ruta");
-                    //TODO: Ver DA.FINDFIRST;
-                    //TODO: Ver "Descripcion Ruta" := DA.Descripcion;
+                    DA.RESET;
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Rutas);
+                    DA.SETRANGE(Codigo, "Cod. Ruta");
+                    DA.FINDFIRST;
+                    "Descripcion Ruta" := DA.Descripcion;
                 END;
             end;
         }
@@ -31,11 +31,11 @@ table 67044 "Promotor - Rutas"
             trigger OnValidate()
             begin
                 IF "Cod. Zona" <> '' THEN BEGIN
-                    //TODO: Ver DA.RESET;
-                    //TODO: Ver DA.SETRANGE("Tipo registro", DA."Tipo registro"::Zonas);
-                    //TODO: Ver DA.SETRANGE(Codigo, "Cod. Zona");
-                    //TODO: Ver DA.FINDFIRST;
-                    //TODO: Ver "Descripcion zona" := DA.Descripcion;
+                    DA.RESET;
+                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::Zonas);
+                    DA.SETRANGE(Codigo, "Cod. Zona");
+                    DA.FINDFIRST;
+                    "Descripcion zona" := DA.Descripcion;
                 END;
             end;
         }
@@ -50,7 +50,7 @@ table 67044 "Promotor - Rutas"
         field(6; "Cod. Supervisor"; Code[20])
         {
             Caption = 'Superviser code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser".Code WHERE ("Tipo"=CONST(Supervisor));
+            TableRelation = "Salesperson/Purchaser".Code WHERE("Tipo" = CONST(Supervisor));
         }
         field(7; "Nombre Supervisor"; Text[100])
         {

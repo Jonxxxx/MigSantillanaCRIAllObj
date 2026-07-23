@@ -39,15 +39,15 @@ table 34002169 "DSPayroll Cue"
         }
         field(6; "Employees with wire transfer"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST("Transferencia Banc."),
-            //TODO: Ver                                     "Calcular Nomina" = CONST(True)));
+            CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST("Transferencia Banc."),
+                                                "Calcular Nomina" = CONST(True)));
             Caption = 'Employees with wire transfer';
             Editable = false;
             FieldClass = FlowField;
         }
         field(7; "Employees with check"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST(Cheque)));
+            CalcFormula = Count(Employee WHERE("Forma de Cobro" = CONST(Cheque)));
             Caption = 'Employees with check';
             Editable = false;
             FieldClass = FlowField;
@@ -92,8 +92,8 @@ table 34002169 "DSPayroll Cue"
         }
         field(13; "Birthday of the month"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE("Mes Nacimiento" = FIELD("Birth Month filter"),
-            //TODO: Ver                                    Status = CONST(Active)));
+            CalcFormula = Count(Employee WHERE("Mes Nacimiento" = FIELD("Birth Month filter"),
+                                               Status = CONST(Active)));
             Caption = 'Birthday of the month';
             FieldClass = FlowField;
 

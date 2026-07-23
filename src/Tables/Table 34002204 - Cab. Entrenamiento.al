@@ -59,7 +59,7 @@ table 34002204 "Cab. Entrenamiento"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
+                            "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");

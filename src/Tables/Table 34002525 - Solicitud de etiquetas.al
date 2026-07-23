@@ -41,24 +41,6 @@ table 34002525 "Solicitud de etiquetas"
         {
             Caption = 'Barcode';
             Description = 'DsPOS Standar';
-
-            trigger OnValidate()
-            var
-                //TODO: Ver rItemCrossRef: Record 5717;
-                rItem: Record 27;
-            begin
-                //TODO: Ver 
-                /*
-                rItemCrossRef.RESET;
-                rItemCrossRef.SETCURRENTKEY(rItemCrossRef."Cross-Reference No.");
-                //TODO: Ver rItemCrossRef.SETRANGE("Cross-Reference No.", "Cod. barra");
-                IF rItemCrossRef.FIND('-') THEN BEGIN
-                    rItem.GET(rItemCrossRef."Item No.");
-                    "No. producto" := rItemCrossRef."Item No.";
-                    "Descripcion producto" := rItem.Description
-                END;
-                */
-            end;
         }
         field(34002507; "No. producto"; Code[20])
         {

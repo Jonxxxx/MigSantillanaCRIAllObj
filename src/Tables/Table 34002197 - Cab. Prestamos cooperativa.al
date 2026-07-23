@@ -82,7 +82,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(13; "Full name"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No."=FIELD("Employee No.")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Employee No.")));
             Caption = 'Full name';
             FieldClass = FlowField;
         }

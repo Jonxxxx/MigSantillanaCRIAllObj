@@ -447,10 +447,10 @@ table 34002178 "Arch. Acciones de personal"
         Numeradorescomunes: Record 34002182;
         Beneficiospuestoslaborales: Record 34002152;
         Seleccionbeneficios: Record 34002156;
-        //TODO: Ver NivelCargo: Page 34002166;
+        NivelCargo: Page 34002166;
         NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        //TODO: Ver FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 34002104;
         Err004: Label '$1 is invalid, please verify';
         Err005: Label 'The %1 is out of the limits for this level. %2 %3, %4 %5, do you want to continue?';
         Err006: Label 'The maximum number of vacancies for this position has already been reached. No more people can be assigned to this position.';

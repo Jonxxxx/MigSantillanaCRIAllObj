@@ -40,7 +40,7 @@ table 80011 "Tmp Check Ledger Entry"
         }
         field(8; Amount; Decimal)
         {
-            //TODO: Ver AutoFormatExpression = GetCurrencyCodeFromBank;
+            AutoFormatExpression = GetCurrencyCodeFromBank;
             AutoFormatType = 1;
             Caption = 'Amount';
         }
@@ -85,7 +85,7 @@ table 80011 "Tmp Check Ledger Entry"
         field(16; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Ver 
+
             /*
             TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
             ELSE IF ("Bal. Account Type" = CONST(Customer)) Customer
@@ -107,7 +107,7 @@ table 80011 "Tmp Check Ledger Entry"
         field(19; "Statement No."; Code[20])
         {
             Caption = 'Statement No.';
-            //TODO: Ver 
+
             /*
             TableRelation = IF ("Statement Status" = FILTER("Bank Acc.Entry Applied"|"Check Entry Applied")) "Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."))
                             ELSE IF ("Statement Status"=CONST(Closed)) "Posted Bank Rec. Header"."Statement No." WHERE ("Bank Account No."=FIELD("Bank Account No."));*/
@@ -117,7 +117,7 @@ table 80011 "Tmp Check Ledger Entry"
         field(20; "Statement Line No."; Integer)
         {
             Caption = 'Statement Line No.';
-            //TODO: Ver 
+
             /*
             TableRelation = IF ("Statement Status"=FILTER("Bank Acc. Entry Applied"|"Check Entry Applied")) "Bank Rec. Line"."Line No." WHERE ("Bank Account No."=FIELD("Bank Account No."),
                                                                                         "Statement No."=FIELD("Statement No."))
@@ -129,7 +129,7 @@ table 80011 "Tmp Check Ledger Entry"
         field(21; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            //TODO: Ver TableRelation = 2000000002;
+            //TODO: Tabla no existe TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;           
         }

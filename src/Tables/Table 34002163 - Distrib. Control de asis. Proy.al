@@ -119,7 +119,7 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(14; "Nombre completo"; Text[60])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }

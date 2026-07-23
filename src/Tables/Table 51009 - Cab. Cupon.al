@@ -218,7 +218,7 @@ table 51009 "Cab. Cupon"
 
     var
         rConfEmpresa: Record 56001;
-        NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit 310;
         rCliente: Record 18;
         rContacto: Record 5050;
         rAnoEscolar: Record 51013;

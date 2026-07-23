@@ -220,7 +220,7 @@ table 34002176 "Payroll Letters"
         OutStr: OutStream;
     begin
         TESTFIELD("Report ID");
-        //TODO: Ver TempBlob.Blob.CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
+        TempBlob.CREATEOUTSTREAM(OutStr, TEXTENCODING::UTF16);
         OutStr.WRITETEXT(REPORT.WORDXMLPART("Report ID"));
     end;
 
@@ -234,15 +234,15 @@ table 34002176 "Payroll Letters"
         IF DefaultFileName = '' THEN
             DefaultFileName := '*.xml';
 
-        //TODO: Ver GetWordXML(TempBlob);
-        //TODO: Ver IF TempBlob.Blob.HASVALUE THEN
-        EXIT(FileMgt.BLOBExport(TempBlob, DefaultFileName, ShowFileDialog));
+        GetWordXML(TempBlob);
+        IF TempBlob.HASVALUE THEN
+            EXIT(FileMgt.BLOBExport(TempBlob, DefaultFileName, ShowFileDialog));
     end;
 
     procedure EditLayout()
     begin
 
-        //TODO: Ver 
+
         /*
         CASE Type OF
             Type::Word:
