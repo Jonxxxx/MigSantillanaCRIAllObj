@@ -35,7 +35,7 @@ page 34002502 "Lista TPVs"
 
     trigger OnInit()
     var
-        //TODO: Ver //TODO: Ver cfComunes: Codeunit 34002503;
+        //TODO: Ver cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

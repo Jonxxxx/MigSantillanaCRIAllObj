@@ -36,20 +36,12 @@ page 34002509 "Lista Menus TPV"
 
     trigger OnInit()
     var
-        //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 
         //TODO: VerIF NOT (cfComunes.EsCentral) THEN
         ERROR(Error001);
     end;
-
-    trigger OnOpenPage()
-    begin
-        //TODO: Ver cfAddin.CrearAcciones;
-    end;
-
-    var
-    //TODO: Ver cfAddin: Codeunit 34002502;
 }
 

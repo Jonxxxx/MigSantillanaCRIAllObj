@@ -28,7 +28,7 @@ page 34002517 "Ficha Vendedor"
 
     trigger OnInit()
     var
-        //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo disponible en Servidor Central';
     begin
 

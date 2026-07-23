@@ -8,12 +8,9 @@ query 50000 View_SalesInvoiceLine
             column(Document_No; "Document No.")
             {
             }
-            //TOOD: Ver 
-            /*
             column(Compartir; Compartir)
             {
             }
-            */
             column(Sum_Quantity; Quantity)
             {
                 Method = Sum;

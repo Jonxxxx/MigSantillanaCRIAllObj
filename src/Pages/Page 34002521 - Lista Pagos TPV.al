@@ -56,7 +56,7 @@ page 34002521 "Lista Pagos TPV"
     trigger OnInit()
     var
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
-    //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
     begin
 
         //TODO: VerIF NOT (cfComunes.EsCentral) THEN

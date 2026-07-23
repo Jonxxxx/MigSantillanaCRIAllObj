@@ -274,7 +274,7 @@ page 34002501 "Ficha TPV"
         wParaguay: Boolean;
         wAnulaciones: Boolean;
         wEcuador: Boolean;
-        //TODO: Ver //TODO: Ver cfComunes: Codeunit 34002503;
+        //TODO: Ver cfComunes: Codeunit 34002503;
         //TODO: Ver cfAdd: Codeunit 34002502;
         wGuatemala: Boolean;
         wSalvador: Boolean;

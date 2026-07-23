@@ -175,7 +175,7 @@ page 34002503 "Ficha Tienda"
 
     trigger OnInit()
     var
-    //TODO: Ver //TODO: Ver cfComunes: Codeunit 34002503;
+    //TODO: Ver cfComunes: Codeunit 34002503;
     begin
 
         //TODO: Ver //TODO: VerIF NOT (cfComunes.EsCentral) THEN

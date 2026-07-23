@@ -32,7 +32,7 @@ page 34002504 "Lista Tiendas"
 
     trigger OnInit()
     var
-        //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

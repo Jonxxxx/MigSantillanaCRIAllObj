@@ -41,6 +41,6 @@ page 34002507 "Ficha Grupo Cajeros"
     end;
 
     var
-    //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
 }
 

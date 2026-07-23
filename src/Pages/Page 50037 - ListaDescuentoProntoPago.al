@@ -68,11 +68,11 @@ page 50037 ListaDescuentoProntoPago
                 trigger OnAction()
                 begin
                     CLEAR(CustLedgEntry);
-                    //TODO: Ver CLEAR(ReporteDPPv2);
+                    CLEAR(ReporteDPPv2);
 
                     CurrPage.SETSELECTIONFILTER(CustLedgEntry);
-                    //TODO: Ver ReporteDPPv2.SETTABLEVIEW(CustLedgEntry);
-                    //TODO: Ver ReporteDPPv2.RUNMODAL;
+                    ReporteDPPv2.SETTABLEVIEW(CustLedgEntry);
+                    ReporteDPPv2.RUNMODAL;
                 end;
             }
             action("Discount Soon Payment by customer v2")
@@ -86,9 +86,9 @@ page 50037 ListaDescuentoProntoPago
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CLEAR(ReporteDPPXclientev2);
+                    CLEAR(ReporteDPPXclientev2);
 
-                    //TODO: Ver ReporteDPPXclientev2.RUNMODAL;
+                    ReporteDPPXclientev2.RUNMODAL;
                 end;
             }
         }
@@ -104,8 +104,8 @@ page 50037 ListaDescuentoProntoPago
 
     var
         DetailedCustLedgEntry: Record 379;
-        //TODO: Ver ReporteDPPv2: Report 50047;
-        //TODO: Ver ReporteDPPXclientev2: Report 50048;
+        ReporteDPPv2: Report 50047;
+        ReporteDPPXclientev2: Report 50048;
         CustLedgEntry: Record 21;
 }
 

@@ -30,7 +30,7 @@ page 34002514 "Lista Formas de Pago"
 
     trigger OnInit()
     var
-        //TODO: Ver cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

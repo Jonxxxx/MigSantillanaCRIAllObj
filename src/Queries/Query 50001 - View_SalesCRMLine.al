@@ -8,12 +8,10 @@ query 50001 View_SalesCRMLine
             column(Document_No; "Document No.")
             {
             }
-            //TOOD: Ver 
-            /*
             column(Compartir; Compartir)
             {
             }
-            */
+
             column(Sum_Quantity; Quantity)
             {
                 Method = Sum;
