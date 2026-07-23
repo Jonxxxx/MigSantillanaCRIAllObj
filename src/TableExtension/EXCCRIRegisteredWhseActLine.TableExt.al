@@ -38,8 +38,8 @@ tableextension 50096 EXCCRIRegisteredWhseActLine extends "Registered Whse. Activ
         key(EXCCRIPackingNo; "No. Packing")
         {
         }
-        //TODO: Ver key(EXCCRIRegisteredPackingNo; "No.", "No. Packing Registrado")
-        //TODO: Ver {
-        //TODO: Ver }
+        // Ver key(EXCCRIRegisteredPackingNo; "No.", "No. Packing Registrado")
+        // Ver {
+        // Ver }
     }
 }

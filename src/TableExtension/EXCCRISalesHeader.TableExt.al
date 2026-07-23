@@ -420,7 +420,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(53005; "Importe ITBIS Incl."; Decimal)
         {
             FieldClass = FlowField;
-            //TODO: Ver CalcFormula = sum("Formas de Pago".Field30 where(Field1 = field("Document Type"), Field3 = field("No.")));
+            // Ver CalcFormula = sum("Formas de Pago".Field30 where(Field1 = field("Document Type"), Field3 = field("No.")));
         }
         field(53006; "Venta a credito (Obsoleto)"; Boolean)
         {
@@ -694,7 +694,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(56312; "Tax Identification Type"; Option)
         {
             FieldClass = FlowField;
-            //TODO: Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
+            // Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
             Caption = 'Tax Identification Type';
             OptionCaption = 'Persona juridica,Persona fisica,DIMEX,NITE';
             OptionMembers = "Persona juridica","Persona fisica",DIMEX,NITE;
@@ -815,9 +815,9 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
 
             trigger OnValidate()
             var
-            //TODO: Ver cuLocalizacion: Codeunit 34003002;
+            // Ver cuLocalizacion: Codeunit 34003002;
             begin
-                //TODO: Ver cuLocalizacion.ValidaNCFRelacionadoVentas(Rec);
+                // Ver cuLocalizacion.ValidaNCFRelacionadoVentas(Rec);
             end;
         }
         field(34003004; "Razon anulacion NCF"; Code[20])

@@ -10,12 +10,12 @@ tableextension 50013 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
         field(50001; "Cod. Edicion"; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = 50131;
+            // Ver TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = 50132;
+            // Ver TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -33,7 +33,7 @@ tableextension 50013 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
         field(50006; "Nivel Educativo"; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = 50133;
+            // Ver TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
@@ -126,14 +126,14 @@ tableextension 50013 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
     {
         key(EXCCRIConsignmentAmounts; "Location Code", Open)
         {
-            //TODO: Ver SumIndexFields = "Importe Cons. Neto Inicial", "Importe Cons. Neto Act.";
+            // Ver SumIndexFields = "Importe Cons. Neto Inicial", "Importe Cons. Neto Act.";
         }
         key(EXCCRIConsignmentOrder; "Pedido Consignacion")
         {
         }
         key(EXCCRIConsignmentPosting; "Posting Date", "Location Code")
         {
-            //TODO: Ver SumIndexFields = "Importe Cons. bruto Inicial", "Importe Cons. Neto Inicial";
+            // Ver SumIndexFields = "Importe Cons. bruto Inicial", "Importe Cons. Neto Inicial";
         }
     }
 }

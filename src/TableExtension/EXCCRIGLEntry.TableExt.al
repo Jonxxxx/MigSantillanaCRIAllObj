@@ -38,7 +38,7 @@ tableextension 50007 EXCCRIGLEntry extends "G/L Entry"
 
     keys
     {
-        //TODO: Ver 
+        // Ver 
         /*
         key(EXCCRIProvisionedCustomer; "No. Mov. cliente provisionado", "Document Date")
         {

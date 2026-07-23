@@ -1,6 +1,6 @@
 tableextension 50080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
 {
-    //TODO: Ver
+    // Ver
     /*
     trigger OnAfterInsert()
     var

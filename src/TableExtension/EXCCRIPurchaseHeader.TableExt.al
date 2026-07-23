@@ -192,8 +192,8 @@ tableextension 50016 EXCCRIPurchaseHeader extends "Purchase Header"
 
             trigger OnValidate()
             var
-                //TODO: Ver EXCCRIConsultaNCF: Codeunit 34003003;
-                //TODO: Ver EXCCRILocalization: Codeunit 34003002;
+                // Ver EXCCRIConsultaNCF: Codeunit 34003003;
+                // Ver EXCCRILocalization: Codeunit 34003002;
                 EXCCRIMessage: array[6] of Text[1000];
                 EXCCRIVendor: Record Vendor;
                 EXCCRIVendorPostingGroup: Record "Vendor Posting Group";
@@ -210,7 +210,7 @@ tableextension 50016 EXCCRIPurchaseHeader extends "Purchase Header"
                 if "No. Comprobante Fiscal" = '' then
                     exit;
 
-                //TODO: Ver 
+                // Ver 
                 /*
                 EXCCRILocalization.ValidaNCFCompras(Rec);
                 if not Correction then
@@ -227,9 +227,9 @@ tableextension 50016 EXCCRIPurchaseHeader extends "Purchase Header"
 
             trigger OnValidate()
             var
-            //TODO: Ver EXCCRILocalization: Codeunit 34003002;
+            // Ver EXCCRILocalization: Codeunit 34003002;
             begin
-                //TODO: Ver EXCCRILocalization.ValidaNCFRelacionadoCompras(Rec);
+                // Ver EXCCRILocalization.ValidaNCFRelacionadoCompras(Rec);
             end;
         }
         field(34003004; "Correccion Doc. NCF"; Boolean)

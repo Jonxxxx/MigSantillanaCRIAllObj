@@ -19,7 +19,7 @@ tableextension 50055 EXCCRIDimensionValue extends "Dimension Value"
         }
     }
 
-    //TODO: Ver 
+    // Ver 
     /*
     trigger OnAfterInsert()
     var

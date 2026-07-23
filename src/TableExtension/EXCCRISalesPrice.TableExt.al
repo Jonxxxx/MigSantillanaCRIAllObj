@@ -53,7 +53,7 @@ tableextension 50104 EXCCRISalesPrice extends "Sales Price"
         }
     }
 
-    //TODO: Ver 
+    // Ver 
     /*
     trigger OnAfterInsert()
     var

@@ -22,15 +22,15 @@ tableextension 50008 EXCCRICustomer extends Customer
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            //TODO: Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+                EXCCRIValidateCampaignRequirements: Codeunit 34003006;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if Blocked <> Blocked::All then
                         if not EXCCRIUserSetup."Desbloquea Clientes" then
                             Error(EXCCRICustomerUnlockPermissionErr)
                         else begin
-                            //TODO: Ver EXCCRIValidateCampaignRequirements.Maestros(Database::Customer, "No.");
-                            //TODO: Ver EXCCRIValidateCampaignRequirements.Dimensiones(Database::Customer, "No.", 0, 0);
+                            EXCCRIValidateCampaignRequirements.Maestros(Database::Customer, "No.");
+                            EXCCRIValidateCampaignRequirements.Dimensiones(Database::Customer, "No.", 0, 0);
                         end;
                 end else
                     Error(EXCCRICustomerUnlockPermissionErr);
@@ -43,8 +43,8 @@ tableextension 50008 EXCCRICustomer extends Customer
                 EXCCRIPostCode: Record "Post Code";
                 EXCCRIDistributionRoute: Record 56071;
             begin
-                //TODO: Ver if EXCCRIPostCode.Get("Post Code", City) then
-                //TODO: Ver     "Address 2" := EXCCRIPostCode.Colonia;
+                // Ver if EXCCRIPostCode.Get("Post Code", City) then
+                // Ver     "Address 2" := EXCCRIPostCode.Colonia;
 
                 EXCCRIDistributionRoute.SetFilter(CP, "Post Code");
                 if EXCCRIDistributionRoute.FindFirst() then

@@ -141,12 +141,12 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Ver TableRelation = 50131;
+            // Ver TableRelation = 50131;
             DataClassification = ToBeClassified;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Ver TableRelation = 50132;
+            // Ver TableRelation = 50132;
             DataClassification = ToBeClassified;
         }
         field(50003; "No. Paginas"; Decimal)
@@ -239,7 +239,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
 
                     "Cantidad pendiente BO" := 0;
                     "Cantidad a Anular" := 0;
-                    //TODO: Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
+                    // Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
                     IF CantDisp >= "Cantidad Aprobada" THEN BEGIN
                         Validate(Quantity, "Cantidad Aprobada");
                         UpdateUnitPrice(FieldNo("Cantidad Aprobada"));
@@ -356,7 +356,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
                             Error(Error001);
 
                         Cantidad := (("Cantidad Solicitada" * "Porcentaje Cant. Aprobada") DIV 100);
-                        //TODO: Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
+                        // Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
                         BEGIN
                             Validate("Cantidad Aprobada", Cantidad);
                             UpdateUnitPrice(FieldNo("Porcentaje Cant. Aprobada"));
@@ -535,7 +535,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
     trigger OnBeforeDelete()
     var
         EXCCRILogEntryNo: Integer;
-        //TODO: Ver EXCCRIPOSManagement: Codeunit 34002503;
+        // Ver EXCCRIPOSManagement: Codeunit 34002503;
         EXCCRISalesHeader: Record "Sales Header";
     begin
         if not EXCCRISalesHeader.Get("Document Type", "Document No.") then
@@ -543,7 +543,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         if not EXCCRISalesHeader."Venta TPV" then
             exit;
 
-        //TODO: Ver 
+        // Ver 
         /*
         EXCCRILogEntryNo := EXCCRIPOSManagement.IniciarLog(3, EXCCRISalesHeader.Tienda, EXCCRISalesHeader.TPV);
         EXCCRIPOSManagement.ModificarDatosLog(
@@ -683,7 +683,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
             Error(Error002, FieldCaption("Cantidad a Ajustar"));
 
         IF "Cantidad a Ajustar" > 0 THEN BEGIN
-            //TODO: Ver 
+            // Ver 
             /*
             IF SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec) >= "Cantidad a Ajustar" THEN BEGIN
                 Quantity += "Cantidad a Ajustar";

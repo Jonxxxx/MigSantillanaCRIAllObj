@@ -397,9 +397,9 @@ tableextension 50031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
         key(EXCCRIRelatedNCFNo; "No. Comprobante Fiscal Rel.")
         {
         }
-        //TODO: Ver key(EXCCRIPOSTransaction; "Venta TPV", "Posting Date", Estado)
-        //TODO: Ver {
-        //TODO: Ver }
+        // Ver key(EXCCRIPOSTransaction; "Venta TPV", "Posting Date", Estado)
+        // Ver {
+        // Ver }
         key(EXCCRISICDocumentNo; "No. Documento SIC")
         {
         }
@@ -410,7 +410,7 @@ tableextension 50031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
         EXCCRIConfSantillana: Record 56001;
         EXCCRILocalizationSetup: Record 34003011;
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
-    //TODO: Ver EXCCRIEInvoiceManagement: Codeunit 10145;
+    // Ver EXCCRIEInvoiceManagement: Codeunit 10145;
     begin
         EXCCRIConfSantillana.Get();
         EXCCRILocalizationSetup.Get(EXCCRIConfSantillana.Country);
@@ -426,7 +426,7 @@ tableextension 50031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             exit;
         end;
 
-        //TODO: Ver EXCCRIEInvoiceManagement.EDocPrintValidation(0, "No.");
+        // Ver EXCCRIEInvoiceManagement.EDocPrintValidation(0, "No.");
         PrintRecords(ShowRequestPage);
     end;
 }

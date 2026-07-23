@@ -18,15 +18,15 @@ tableextension 50010 EXCCRIVendor extends Vendor
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            //TODO: Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+            // Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if Blocked <> Blocked::All then
                         if not EXCCRIUserSetup."Desbloquea Proveedores" then
                             Error(EXCCRIVendorUnlockPermissionErr)
                         else begin
-                            //TODO: Ver EXCCRIValidateCampaignRequirements.Maestros(Database::Vendor, "No.");
-                            //TODO: Ver EXCCRIValidateCampaignRequirements.Dimensiones(Database::Vendor, "No.", 0, 0);
+                            // Ver EXCCRIValidateCampaignRequirements.Maestros(Database::Vendor, "No.");
+                            // Ver EXCCRIValidateCampaignRequirements.Dimensiones(Database::Vendor, "No.", 0, 0);
                         end;
                 end else
                     Error(EXCCRIVendorUnlockPermissionErr);
@@ -35,11 +35,11 @@ tableextension 50010 EXCCRIVendor extends Vendor
         modify("VAT Registration No.")
         {
             TableRelation = "RNC DGII";
-            //TODO: Ver ValidateTableRelation = false;
+            // Ver ValidateTableRelation = false;
 
             trigger OnAfterValidate()
             var
-                //TODO: Ver EXCCRIConsultaRNC: Codeunit 34003003;
+                // Ver EXCCRIConsultaRNC: Codeunit 34003003;
                 EXCCRIData: array[6] of Text;
                 EXCCRIVendorPostingGroup: Record "Vendor Posting Group";
                 EXCCRIRNCDGII: Record 34003024;
@@ -54,7 +54,7 @@ tableextension 50010 EXCCRIVendor extends Vendor
                         if EXCCRIRNCDGII."Search Name" <> '' then
                             "Search Name" := EXCCRIRNCDGII."Search Name";
                     end else begin
-                        //TODO: Ver EXCCRIConsultaRNC.BuscarRNC("VAT Registration No.", EXCCRIData);
+                        // Ver EXCCRIConsultaRNC.BuscarRNC("VAT Registration No.", EXCCRIData);
                         if EXCCRIData[2] <> '' then
                             Name := CopyStr(EXCCRIData[2], 1, MaxStrLen(Name));
                         if EXCCRIData[3] <> '' then

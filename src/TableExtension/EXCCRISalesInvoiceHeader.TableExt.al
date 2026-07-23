@@ -303,7 +303,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
         {
             Caption = 'Tax Identification Type';
             FieldClass = FlowField;
-            //TODO: Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
+            // Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
             OptionCaption = 'Persona juridica,Persona fisica,DIMEX,NITE';
             OptionMembers = "Persona juridica","Persona fisica","DIMEX","NITE";
         }
@@ -439,7 +439,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
         key(EXCCRINCFNo; "No. Comprobante Fiscal")
         {
         }
-        //TODO: Ver 
+        // Ver 
         /*
         key(EXCCRICouponSchoolPostingDate; "Cod. Cupon", "Cod. Colegio", "Posting Date")
         {
@@ -460,8 +460,8 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
     var
         EXCCRICustomer: Record Customer;
     begin
-        //TODO: Ver if EXCCRICustomer.Get("Sell-to Customer No.") then
-        //TODO: Ver     exit(EXCCRICustomer."E-Mail 2");
+        // Ver if EXCCRICustomer.Get("Sell-to Customer No.") then
+        // Ver     exit(EXCCRICustomer."E-Mail 2");
     end;
 
     procedure EXCCRIPrintRecords(ShowRequestPage: Boolean)
@@ -469,7 +469,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
         EXCCRIConfSantillana: Record 56001;
         EXCCRILocalizationSetup: Record 34003011;
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
-    //TODO: Ver EXCCRIEInvoiceManagement: Codeunit 10145;
+    // Ver EXCCRIEInvoiceManagement: Codeunit 10145;
     begin
         EXCCRIConfSantillana.Get();
         EXCCRILocalizationSetup.Get(EXCCRIConfSantillana.Country);
@@ -485,7 +485,7 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             exit;
         end;
 
-        //TODO: Ver EXCCRIEInvoiceManagement.EDocPrintValidation(0, "No.");
+        // Ver EXCCRIEInvoiceManagement.EDocPrintValidation(0, "No.");
         PrintRecords(ShowRequestPage);
     end;
 

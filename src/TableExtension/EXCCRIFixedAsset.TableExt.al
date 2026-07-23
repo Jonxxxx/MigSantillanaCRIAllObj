@@ -20,7 +20,7 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            //TODO: Ver EXCCRIValidateFields: Codeunit 34003006;
+            // Ver EXCCRIValidateFields: Codeunit 34003006;
             begin
                 if not EXCCRIUserSetup.Get(UserId()) then
                     Error(EXCCRICannotUnlockFixedAssetErr);
@@ -28,7 +28,7 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
                 if not EXCCRIUserSetup."Desbloquea Activos Fijos" then
                     Error(EXCCRICannotUnlockFixedAssetErr);
 
-                //TODO: Ver 
+                // Ver 
                 /*
                 if not Blocked then begin
                     EXCCRIValidateFields.Maestros(Database::"Fixed Asset", "No.");

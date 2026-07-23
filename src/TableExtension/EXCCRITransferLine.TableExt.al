@@ -152,8 +152,8 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
                 "Cantidad pendiente BO" := 0;
                 "Cantidad a Anular" := 0;
 
-                //TODO: Ver EXCCRIAvailableQuantity :=
-                //TODO: Ver EXCCRIAvailabilityManagement.CalcAvailabilityTL_BackOrder(Rec);
+                // Ver EXCCRIAvailableQuantity :=
+                // Ver EXCCRIAvailabilityManagement.CalcAvailabilityTL_BackOrder(Rec);
 
                 if EXCCRIAvailableQuantity >= "Cantidad Aprobada" then begin
                     Validate(Quantity, "Cantidad Aprobada");
@@ -263,8 +263,8 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
                         1,
                         '<');
 
-                //TODO: Ver EXCCRIAvailableQuantity :=
-                //TODO: Ver EXCCRIAvailabilityManagement.CalcAvailabilityTransLine(Rec);
+                // Ver EXCCRIAvailableQuantity :=
+                // Ver EXCCRIAvailabilityManagement.CalcAvailabilityTransLine(Rec);
 
                 if EXCCRIAvailableQuantity >= 0 then
                     Validate("Cantidad Aprobada", EXCCRIApprovedQuantity);
@@ -324,9 +324,9 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
     {
         key(EXCCRIConsignmentByDocument; "Document No.", "Derived From Line No.")
         {
-            //TODO: Ver SumIndexFields =
-            //TODO: Ver "Importe Consignacion",
-            //TODO: Ver "Importe Consignacion Original";
+            // Ver SumIndexFields =
+            // Ver "Importe Consignacion",
+            // Ver "Importe Consignacion Original";
         }
         key(EXCCRIAvailableBackOrder; "Disponible BackOrder")
         {
@@ -358,7 +358,7 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
                     EXCCRIQuantityExceedsPendingErr,
                     FieldCaption("Cantidad a Ajustar"));
 
-            //TODO: Ver 
+            // Ver 
             /*
             if EXCCRIAvailabilityManagement.CalcAvailabilityTL_BackOrder(Rec) >= "Cantidad a Ajustar" then begin
                 Quantity += "Cantidad a Ajustar";
@@ -487,7 +487,7 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
         EXCCRIItem: Record Item;
         EXCCRITransferHeader: Record "Transfer Header";
         EXCCRIVATPostingSetup: Record "VAT Posting Setup";
-        //TODO: Ver EXCCRISantillanaFunctions: Codeunit 56000;
+        // Ver EXCCRISantillanaFunctions: Codeunit 56000;
         EXCCRICustomerNo: Code[20];
     begin
         if not EXCCRITransferHeader.Get("Document No.") then
@@ -504,7 +504,7 @@ tableextension 50087 EXCCRITransferLine extends "Transfer Line"
         else
             EXCCRICustomerNo := EXCCRITransferHeader."Transfer-to Code";
 
-        //TODO: Ver
+        // Ver
         /*
         if EXCCRIItem."Unit Price" = 0 then begin
             if
