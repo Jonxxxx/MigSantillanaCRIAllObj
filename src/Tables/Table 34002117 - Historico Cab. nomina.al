@@ -133,27 +133,25 @@ table 34002117 "Historico Cab. nomina"
         }
         field(100; "Total deducciones"; Decimal)
         {
-            //TODO: Ver 
-            /*
+
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Periodo = FIELD("Periodo"),
-                                                                   "de nomina" = FIELD("Tipo de nomina"),
+                                                                   "Tipo de nomina" = FIELD("Tipo de nomina"),
                                                                    "Tipo concepto" = CONST(Deducciones),
                                                                    Total = FILTER(<> 0),
-                                                                   "Texto Informativo" = CONST(No)));*/
+                                                                   "Texto Informativo" = CONST(False)));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
         field(101; "Total Ingresos"; Decimal)
         {
-            //TODO: Ver 
-            /*
+
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Periodo = FIELD("Periodo"),
-                                                                   "de nomina" = FIELD("Tipo de nomina"),
+                                                                   "Tipo de nomina" = FIELD("Tipo de nomina"),
                                                                    "Tipo concepto" = CONST(Ingresos),
                                                                    Total = FILTER(<> 0),
-                                                                   "Texto Informativo" = CONST(No)));*/
+                                                                   "Texto Informativo" = CONST(False)));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }

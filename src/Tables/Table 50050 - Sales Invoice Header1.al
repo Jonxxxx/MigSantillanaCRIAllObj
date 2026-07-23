@@ -433,7 +433,7 @@ table 50050 "Sales Invoice Header1"
         field(112; "User ID"; Code[20])
         {
             Caption = 'User ID';
-            //TODO: Ver TableRelation = Table2000000002;
+            //TODO: Tabla no existe TableRelation = 2000000002;
             //This property is currently not supported
             //TestTableRelation = false;
         }
@@ -484,7 +484,7 @@ table 50050 "Sales Invoice Header1"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Ver TableRelation = Table827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5050; "Campaign No."; Code[20])
         {
@@ -533,7 +533,7 @@ table 50050 "Sales Invoice Header1"
         }
         field(53008; Tienda; Code[20])
         {
-            //TODO: Ver TableRelation = "Bancos tienda";
+            TableRelation = "Bancos tienda";
         }
         field(56000; "Pedido Consignacion"; Boolean)
         {
@@ -541,7 +541,7 @@ table 50050 "Sales Invoice Header1"
         field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
         field(56002; "Pre pedido"; Boolean)
         {
@@ -674,15 +674,14 @@ table 50050 "Sales Invoice Header1"
         PostCode: Record 225;
         "*** DSLoc ***": Integer;
         ConfSantillana: Record 56001;
-        //TODO: Ver Localizacion: Record 34003011;
+        Localizacion: Record 34003011;
         GpoContableCte: Record 92;
 
     procedure PrintRecords(ShowRequestForm: Boolean)
     var
         ReportSelection: Record 77;
     begin
-        //TODO: Ver 
-        /*
+
         WITH SalesInvHeader DO BEGIN
             COPY(Rec);
             FIND('-');
@@ -704,7 +703,7 @@ table 50050 "Sales Invoice Header1"
                 UNTIL ReportSelection.NEXT = 0;
             END;
         END;
-        */
+
     end;
 
     procedure Navigate()

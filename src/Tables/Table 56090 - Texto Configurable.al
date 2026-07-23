@@ -7,7 +7,7 @@ table 56090 "Texto Configurable"
     {
         field(1; "Id. Tabla"; Integer)
         {
-            //TODO: Ver TableRelation = Object.ID WHERE("Type" = CONST(TableData));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(TableData));
         }
         field(2; "Seccion"; Option)
         {

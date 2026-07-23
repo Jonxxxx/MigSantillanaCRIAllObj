@@ -44,7 +44,6 @@ table 56038 "Sales Line Movil."
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                //TODO: Ver ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -502,7 +501,6 @@ table 56038 "Sales Line Movil."
             trigger OnLookup()
             var
                 ICGLAccount: Record 410;
-            //TODO: Ver ItemCrossReference: Record 5717;
             begin
             end;
         }

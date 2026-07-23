@@ -25,7 +25,7 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(5; Turno; Code[20])
         {

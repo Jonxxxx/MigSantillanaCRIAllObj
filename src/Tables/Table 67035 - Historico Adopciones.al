@@ -42,7 +42,7 @@ table 67035 "Historico Adopciones"
         field(8; "Cod. Promotor"; Code[20])
         {
             Caption = 'C d. Promotor';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(9; "Cod. producto"; Code[20])
         {

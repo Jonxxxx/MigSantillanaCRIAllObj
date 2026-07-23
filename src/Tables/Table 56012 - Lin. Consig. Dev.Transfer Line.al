@@ -312,7 +312,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(5707; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Ver TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
         }
         field(5752; "Completely Shipped"; Boolean)
         {
@@ -417,14 +417,13 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         TransHeader: Record 5740;
         Location: Record 14;
         Bin: Record 7354;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         WhseValidateSourceLine: Codeunit 5777;
         ReserveTransferLine: Codeunit 99000836;
         CheckDateConflict: Codeunit 99000815;
         WMSManagement: Codeunit 7302;
         TrackingBlocked: Boolean;
         "*** Santillana ***": Integer;
-        //TODO: Ver cFuncionesSantillana: Codeunit 56000;
+        cFuncionesSantillana: Codeunit 56000;
         wImporteDescuento: Decimal;
         NoLinea: Integer;
         rItem: Record 27;

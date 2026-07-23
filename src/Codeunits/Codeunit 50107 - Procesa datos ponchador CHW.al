@@ -23,8 +23,8 @@ codeunit 50107 "Procesa datos ponchador CHW"
             END;
         UNTIL DatosPonchador.NEXT = 0;
 
-        //TODO: Ver IF Haydatos THEN
-        //TODO: Ver     FuncionesNom.ProcesaDatosPonchador;
+        IF Haydatos THEN
+            FuncionesNom.ProcesaDatosPonchador;
         ;
     end;
 
@@ -35,7 +35,7 @@ codeunit 50107 "Procesa datos ponchador CHW"
         Text000: Label 'End of processing';
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         DatosPonchador: Record 50109;
-        //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         wFecha: Date;
         wHora: Time;
         Haydatos: Boolean;

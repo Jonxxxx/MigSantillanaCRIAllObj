@@ -38,8 +38,6 @@ table 34002133 "Acciones de personal"
                     VALIDATE("Middle Name", Emp."Middle Name");
                     VALIDATE("Last Name", Emp."Last Name");
 
-                    //TODO: Ver 
-                    /*
                     VALIDATE("Second Last Name", Emp."Second Last Name");
 
                     "ID Documento" := Emp."Document ID";
@@ -68,7 +66,7 @@ table 34002133 "Acciones de personal"
                     Gender := Emp.Gender;
                     "Lugar nacimiento" := Emp."Lugar nacimiento";
                     "Estado civil" := Emp."Estado civil";
-                    */
+
                 END
                 ELSE BEGIN
                     Cand.GET("No. empleado");
@@ -127,22 +125,22 @@ table 34002133 "Acciones de personal"
                 Empresas: Record 2000000006;
             begin
                 IF "Document Type" = "Document Type"::Cédula THEN
-                    //TODO: Ver IF NOT FuncNominas.ValidarCedula(DELCHR("ID Documento", '=', '-')) THEN
-                    //TODO: Ver     ERROR(STRSUBSTNO(Err004, "Document Type"));
+                    IF NOT FuncNominas.ValidarCedula(DELCHR("ID Documento", '=', '-')) THEN
+                        ERROR(STRSUBSTNO(Err004, "Document Type"));
 
                 IF "Tipo de accion" = "Tipo de accion"::Ingreso THEN BEGIN
+                    IF ConfNominas."Multiempresa activo" THEN
+                        Empresas.SETRANGE(Name, COMPANYNAME);
+                    Empresas.FIND('-');
+                    REPEAT
+                        CLEAR(Emp);
                         IF ConfNominas."Multiempresa activo" THEN
-                            Empresas.SETRANGE(Name, COMPANYNAME);
-                        Empresas.FIND('-');
-                        REPEAT
-                            CLEAR(Emp);
-                            IF ConfNominas."Multiempresa activo" THEN
-                                Emp.CHANGECOMPANY(Empresas.Name);
-                            //TODO: Ver Emp.SETRANGE("Document ID", "ID Documento");
-                            IF Emp.FINDFIRST THEN
-                                ERROR(STRSUBSTNO(Err003, FIELDCAPTION("ID Documento"), Emp.TABLECAPTION, Emp."No.", Empresas.TABLECAPTION, Empresas.Name));
-                        UNTIL Empresas.NEXT = 0;
-                    END;
+                            Emp.CHANGECOMPANY(Empresas.Name);
+                        Emp.SETRANGE("Document ID", "ID Documento");
+                        IF Emp.FINDFIRST THEN
+                            ERROR(STRSUBSTNO(Err003, FIELDCAPTION("ID Documento"), Emp.TABLECAPTION, Emp."No.", Empresas.TABLECAPTION, Empresas.Name));
+                    UNTIL Empresas.NEXT = 0;
+                END;
             end;
         }
         field(6; "Descripcion accion"; Text[60])
@@ -189,8 +187,8 @@ table 34002133 "Acciones de personal"
                     NivelesCargos.SETRANGE("Cod. Nivel", Cargos."Cod. nivel");
                     NivelesCargos.FINDSET;
                     IF NivelesCargos.COUNT > 1 THEN BEGIN
-                        //TODO: Ver NivelCargo.SETTABLEVIEW(NivelesCargos);
-                        //TODO: Ver NivelCargo.LOOKUPMODE(TRUE);
+                        NivelCargo.SETTABLEVIEW(NivelesCargos);
+                        NivelCargo.LOOKUPMODE(TRUE);
                         IF PAGE.RUNMODAL(0, NivelesCargos) = ACTION::LookupOK THEN
                             "Nivel nuevo" := NivelesCargos."Cod. Nivel";
                     END
@@ -341,8 +339,8 @@ table 34002133 "Acciones de personal"
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF EmpContract.GET("Tipo de contrato") THEN
-                //TODO: Ver    "Duracion contrato" := EmpContract.Duracion;
+                IF EmpContract.GET("Tipo de contrato") THEN
+                    "Duracion contrato" := EmpContract.Duracion;
             end;
         }
         field(28; "Preparado por"; Code[50])
@@ -557,8 +555,8 @@ table 34002133 "Acciones de personal"
 
             trigger OnValidate()
             begin
-                //TODO: Ver IF Emp.GET("Cod. Supervisor") THEN
-                //TODO: Ver     "Nombre Supervisor" := Emp."Full Name";
+                IF Emp.GET("Cod. Supervisor") THEN
+                    "Nombre Supervisor" := Emp."Full Name";
             end;
         }
         field(62; "Nombre Supervisor"; Text[60])
@@ -703,10 +701,10 @@ table 34002133 "Acciones de personal"
         Numeradorescomunes: Record 34002182;
         Beneficiospuestoslaborales: Record 34002152;
         Seleccionbeneficios: Record 34002156;
-        //TODO: Ver NivelCargo: Page 34002166;
+        NivelCargo: Page 34002166;
         NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        //TODO: Ver FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 34002104;
         Err004: Label '$1 is invalid, please verify';
         Err005: Label 'The %1 is out of the limits for this level. %2 %3, %4 %5, do you want to continue?';
         Err006: Label 'The maximum number of vacancies for this position has already been reached. No more people can be assigned to this position.';

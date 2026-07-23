@@ -8,7 +8,7 @@ table 67038 "Promotor - Planif. Visita"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Colegio"; Code[20])
         {

@@ -648,7 +648,7 @@ table 56037 "Sales Header Movil."
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO Ver: TableRelation = Table827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO Ver: TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5043; "No. of Archived Versions"; Integer)
         {

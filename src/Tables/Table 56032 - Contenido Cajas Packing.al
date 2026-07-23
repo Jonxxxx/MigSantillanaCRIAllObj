@@ -49,78 +49,77 @@ table 56032 "Contenido Cajas Packing"
             begin
                 //Codigo de barras
                 IF (STRLEN(FORMAT("Cod. Barras"))) > 5 THEN BEGIN
-                    //TODO Ver: 
-                    /*
-                ICR.RESET;
-                //TODO Ver: ICR.SETRANGE("Cross-Reference Type", ICR."Cross-Reference Type"::"Bar Code");
-                ICR.SETRANGE(ICR."Cross-Reference No.", "Cod. Barras");
-                IF ICR.FINDFIRST THEN
-                  //se localiza el producto en a linea de picking registrado
-                  BEGIN
-                    //+#854
+                    /* TODO No existe ICR
+                    ICR.RESET;
+                    //TODO Ver: ICR.SETRANGE("Cross-Reference Type", ICR."Cross-Reference Type"::"Bar Code");
+                    ICR.SETRANGE(ICR."Cross-Reference No.", "Cod. Barras");
+                    IF ICR.FINDFIRST THEN
+                      //se localiza el producto en a linea de picking registrado
+                      BEGIN
+                        //+#854
 
-                    IF NOT FuncSant.TieneGestionAlmacen THEN BEGIN
+                        IF NOT FuncSant.TieneGestionAlmacen THEN BEGIN
 
-                        CASE "Tipo pedido" OF
-                            "Tipo pedido"::Venta:
-                                BEGIN
+                            CASE "Tipo pedido" OF
+                                "Tipo pedido"::Venta:
+                                    BEGIN
 
-                                    recLinVta.RESET;
-                                    IF "No. Linea Pedido" <> 0 THEN
-                                        recLinVta.SETRANGE("Line No.", "No. Linea Pedido");
-                                    recLinVta.SETRANGE("Document Type", recLinVta."Document Type"::Order);
-                                    recLinVta.SETRANGE("Document No.", "No. Pedido");
-                                    recLinVta.SETRANGE(Type, recLinVta.Type::Item);
-                                    recLinVta.SETRANGE("No.", ICR."Item No.");
-                                    IF recLinVta.FINDFIRST THEN BEGIN
-                                        "No. Producto" := recLinVta."No.";
-                                        "Cod. Unidad de Medida" := recLinVta."Unit of Measure Code";
-                                        Descripcion := recLinVta.Description;
-                                        "No. Linea Pedido" := recLinVta."Line No.";
+                                        recLinVta.RESET;
+                                        IF "No. Linea Pedido" <> 0 THEN
+                                            recLinVta.SETRANGE("Line No.", "No. Linea Pedido");
+                                        recLinVta.SETRANGE("Document Type", recLinVta."Document Type"::Order);
+                                        recLinVta.SETRANGE("Document No.", "No. Pedido");
+                                        recLinVta.SETRANGE(Type, recLinVta.Type::Item);
+                                        recLinVta.SETRANGE("No.", ICR."Item No.");
+                                        IF recLinVta.FINDFIRST THEN BEGIN
+                                            "No. Producto" := recLinVta."No.";
+                                            "Cod. Unidad de Medida" := recLinVta."Unit of Measure Code";
+                                            Descripcion := recLinVta.Description;
+                                            "No. Linea Pedido" := recLinVta."Line No.";
+                                        END;
                                     END;
-                                END;
-                            "Tipo pedido"::Consignacion, "Tipo pedido"::Transferencia:
-                                BEGIN
-                                    recLinTransfer.RESET;
-                                    recLinTransfer.SETRANGE("Document No.", "No. Pedido");
-                                    recLinTransfer.SETRANGE("Item No.", ICR."Item No.");
-                                    IF recLinTransfer.FINDFIRST THEN BEGIN
-                                        "No. Producto" := recLinTransfer."Item No.";
-                                        "Cod. Unidad de Medida" := recLinTransfer."Unit of Measure Code";
-                                        Descripcion := recLinTransfer.Description;
-                                        "No. Linea Picking" := recLinTransfer."Line No.";
+                                "Tipo pedido"::Consignacion, "Tipo pedido"::Transferencia:
+                                    BEGIN
+                                        recLinTransfer.RESET;
+                                        recLinTransfer.SETRANGE("Document No.", "No. Pedido");
+                                        recLinTransfer.SETRANGE("Item No.", ICR."Item No.");
+                                        IF recLinTransfer.FINDFIRST THEN BEGIN
+                                            "No. Producto" := recLinTransfer."Item No.";
+                                            "Cod. Unidad de Medida" := recLinTransfer."Unit of Measure Code";
+                                            Descripcion := recLinTransfer.Description;
+                                            "No. Linea Picking" := recLinTransfer."Line No.";
+                                        END;
                                     END;
-                                END;
-                        END;
+                            END;
 
-                    END
-                    ELSE BEGIN
-                        //-#854
-
-                        RWAL.RESET;
-                        RWAL.SETRANGE(RWAL."Activity Type", RWAL."Activity Type"::Pick);
-                        RWAL.SETRANGE(RWAL."No.", "No. Picking");
-                        RWAL.SETRANGE(RWAL."Item No.", ICR."Item No.");
-                        RWAL.SETRANGE(RWAL."Action Type", RWAL."Action Type"::Take);
-                        IF RWAL.FINDFIRST THEN BEGIN
-                            "No. Producto" := RWAL."Item No.";
-                            //Cantidad := RWAL.Quantity;
-                            "Cod. Unidad de Medida" := RWAL."Unit of Measure Code";
-                            Descripcion := RWAL.Description;
-                            "No. Linea Picking" := RWAL."Line No.";
-                            RWAL1.GET(RWAL."Activity Type", RWAL."No.", RWAL."Line No.");
-                            RWAL1.VALIDATE("No. Packing", "No. Packing");
-                            RWAL1.VALIDATE("No. Caja", "No. Caja");
-                            //RWAL1.VALIDATE("No. Linea Packing","No. Linea");
-                            RWAL1.MODIFY(TRUE);
                         END
-                        ELSE
-                            ERROR(Error003, ICR."Item No.", "No. Picking");
-                    END; //+#854
-                END
-                ELSE
-                    MESSAGE(txt001);
-                    */
+                        ELSE BEGIN
+                            //-#854
+
+                            RWAL.RESET;
+                            RWAL.SETRANGE(RWAL."Activity Type", RWAL."Activity Type"::Pick);
+                            RWAL.SETRANGE(RWAL."No.", "No. Picking");
+                            RWAL.SETRANGE(RWAL."Item No.", ICR."Item No.");
+                            RWAL.SETRANGE(RWAL."Action Type", RWAL."Action Type"::Take);
+                            IF RWAL.FINDFIRST THEN BEGIN
+                                "No. Producto" := RWAL."Item No.";
+                                //Cantidad := RWAL.Quantity;
+                                "Cod. Unidad de Medida" := RWAL."Unit of Measure Code";
+                                Descripcion := RWAL.Description;
+                                "No. Linea Picking" := RWAL."Line No.";
+                                RWAL1.GET(RWAL."Activity Type", RWAL."No.", RWAL."Line No.");
+                                RWAL1.VALIDATE("No. Packing", "No. Packing");
+                                RWAL1.VALIDATE("No. Caja", "No. Caja");
+                                //RWAL1.VALIDATE("No. Linea Packing","No. Linea");
+                                RWAL1.MODIFY(TRUE);
+                            END
+                            ELSE
+                                ERROR(Error003, ICR."Item No.", "No. Picking");
+                        END; //+#854
+                    END
+                    ELSE
+                        MESSAGE(txt001);
+*/
                 END
                 ELSE BEGIN
                     //+#854
@@ -436,8 +435,8 @@ table 56032 "Contenido Cajas Packing"
         Prod: Record 27;
         LinPack: Record 56031;
         RWAL: Record 5773;
-        //TODO Ver: ICR: Record 5717;
-        RWAL1Record: Record 5773;
+        //TODO Tabla no existe: ICR: Record 5717;
+        RWAL1: Record 5773;
         wCant: Decimal;
         txt001: Label 'Barcode Not Found';
         txt002: Label 'Quantity %1 is greater than the remaining tiems to pack in the Posted Picking %2';
@@ -446,7 +445,7 @@ table 56032 "Contenido Cajas Packing"
         CCP: Record 56032;
         CantPendEmp: Decimal;
         CantFaltante: Decimal;
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         Error002: Label 'Este producto ya existe en la linea %1 de este Packing';
         Error003: Label 'El producto %1 no existe en el Picking %2';
         Error004: Label 'Qty. can not exceed the Picking Quantity';

@@ -242,8 +242,8 @@ table 34002503 Tiendas
             trigger OnValidate()
             begin
 
-                //TODO: Ver IF NOT "Permite Anulaciones en POS" THEN
-                //TODO: Ver    cFunciones.DeconfiguraAnulaciones(Rec);
+                //TODO: Revisar IF NOT "Permite Anulaciones en POS" THEN
+                //TODO: Revisar cFunciones.DeconfiguraAnulaciones(Rec);
             end;
         }
         field(34002576; "Instancia Completa SQL"; Text[250])
@@ -351,7 +351,7 @@ table 34002503 Tiendas
         rBanco: Record 270;
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a peticion del usuario';
-    //TODO: Ver Error002: '';
-    //TODO: Ver cFunciones: Codeunit 34002503;
+        Error002: Label '';
+        cFunciones: Codeunit 34002503;
 }
 

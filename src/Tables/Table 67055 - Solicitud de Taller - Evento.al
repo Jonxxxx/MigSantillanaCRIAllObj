@@ -425,7 +425,7 @@ table 67055 "Solicitud de Taller - Evento"
         field(40; "Filtro Promotor"; Code[20])
         {
             FieldClass = FlowFilter;
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
         }
         field(41; "Filtro Colegio"; Code[20])
         {

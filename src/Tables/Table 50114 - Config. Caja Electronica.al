@@ -79,12 +79,12 @@ table 50114 "Config. Caja Electronica"
         field(19; "Tienda ID"; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Tiendas."Cod. Tienda";
+            TableRelation = Tiendas."Cod. Tienda";
         }
         field(20; TPV; Code[20])
         {
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = "Configuracion TPV"."Id TPV";
+            TableRelation = "Configuracion TPV"."Id TPV";
         }
         field(21; "Secuencia electronica"; Code[10])
         {
@@ -102,7 +102,7 @@ table 50114 "Config. Caja Electronica"
         {
             DataClassification = ToBeClassified;
             Description = 'LDP:SIC-JERM';
-            //TODO: Ver TableRelation = Customer."No_ Cliente SIC";
+            TableRelation = Customer."No_ Cliente SIC";
         }
         field(25; "No. Serie Pedido"; Code[20])
         {

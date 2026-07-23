@@ -54,7 +54,7 @@ table 34002205 "Lin. entrenamientos"
                     0: // Empleado
                         BEGIN
                             Employee.GET("Cod. Instructor");
-                            //TODO: Ver "Nombre Instructor" := Employee."Full Name";
+                            "Nombre Instructor" := Employee."Full Name";
                         END;
                     ELSE BEGIN
                         Vendor.GET("Cod. Instructor");

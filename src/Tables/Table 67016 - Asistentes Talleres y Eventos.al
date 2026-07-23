@@ -33,7 +33,7 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(5; "Cod. Promotor"; Code[20])
         {
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
             begin

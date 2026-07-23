@@ -201,7 +201,7 @@ table 56026 "Lin. clas. devoluciones"
 
     procedure CrossReferenceNoLookUp()
     var
-        //TODO: Ver ItemCrossReference: Record 5717;
+        //TODO: Tabla no existe ItemCrossReference: Record 5717;
         ICGLAcc: Record 410;
     begin
         //TODO Ver: ItemCrossReference.RESET;

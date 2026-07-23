@@ -11,7 +11,8 @@ table 56002 "Config. Max. Lineas Reportes"
         field(2; "Sales Report ID"; Integer)
         {
             Caption = 'Sales Report ID';
-            //TODO: Ver TableRelation = Object.ID WHERE ("Type"=CONST(Report));
+            TableRelation = AllObjWithCaption."Object ID"
+    where("Object Type" = const(Report));
         }
         field(3; "Sales Report Name"; Text[80])
         {

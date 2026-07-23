@@ -213,7 +213,7 @@ table 80013 "Tmp Sales Header"
         field(43; "Salesperson Code"; Code[10])
         {
             Caption = 'Salesperson Code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(false));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(false));
 
             trigger OnValidate()
             var
@@ -978,7 +978,7 @@ table 80013 "Tmp Sales Header"
         field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
         field(56002; "Pre pedido"; Boolean)
         {

@@ -18,8 +18,7 @@ table 34003021 "Lin. Campos Req. Maestros"
 
             trigger OnLookup()
             begin
-                //TODO: Ver 
-                /*
+
                 CLEAR(FieldForm);
                 Fields.SETRANGE(TableNo, "No. Tabla");
                 FieldForm.SETRECORD(Fields);
@@ -30,7 +29,7 @@ table 34003021 "Lin. Campos Req. Maestros"
                     "No. Campo" := Fields."No.";
                     "Nombre Campo" := Fields."Field Caption";
                 END;
-                */
+
             end;
 
             trigger OnValidate()
@@ -61,6 +60,6 @@ table 34003021 "Lin. Campos Req. Maestros"
 
     var
         "Fields": Record 2000000041;
-    //TODO: Ver FieldForm: Page 34003022;
+        FieldForm: Page 34003022;
 }
 

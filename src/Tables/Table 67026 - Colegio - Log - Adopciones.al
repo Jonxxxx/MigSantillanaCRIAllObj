@@ -36,7 +36,7 @@ table 67026 "Colegio - Log - Adopciones"
         }
         field(7; "Cod. Promotor"; Code[20])
         {
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {

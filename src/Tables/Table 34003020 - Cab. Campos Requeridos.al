@@ -8,7 +8,7 @@ table 34003020 "Cab. Campos Requeridos"
         {
             Caption = 'Table No.';
             NotBlank = true;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = FILTER(Table));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Table));
         }
         field(2; Nombre; Text[100])
         {

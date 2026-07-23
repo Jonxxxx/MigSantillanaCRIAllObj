@@ -532,7 +532,7 @@ table 80000 "Tmp Sales Invoice Header"
         field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
         field(56002; "Pre pedido"; Boolean)
         {

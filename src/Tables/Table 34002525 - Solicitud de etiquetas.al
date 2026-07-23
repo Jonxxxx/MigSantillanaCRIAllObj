@@ -10,7 +10,7 @@ table 34002525 "Solicitud de etiquetas"
         {
             Caption = 'Report ID';
             Description = 'DsPOS Standar';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(34002501; Usuario; Code[20])
         {

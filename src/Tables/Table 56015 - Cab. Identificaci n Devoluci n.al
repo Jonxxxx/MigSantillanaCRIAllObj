@@ -127,13 +127,13 @@ table 56015 "Cab. Identificaci n Devoluci n"
 
     procedure TestNoSeries()
     begin
-        //TODO: Ver SalesSetup.TESTFIELD("No. Serie Ident. Devolucion");
-        //TODO: Ver SalesSetup.TESTFIELD(SalesSetup."No. Serie Ident. Dev. Reg.");
+        SalesSetup.TESTFIELD("No. Serie Ident. Devolucion");
+        SalesSetup.TESTFIELD(SalesSetup."No. Serie Ident. Dev. Reg.");
     end;
 
     local procedure GetNoSeriesCode(): Code[10]
     begin
-        //TODO: Ver  EXIT(SalesSetup."No. Serie Ident. Devolucion");
+        EXIT(SalesSetup."No. Serie Ident. Devolucion");
     end;
 }
 

@@ -448,7 +448,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Ver TableRelation = Table827 WHERE("Field6" = FIELD("Bill-to Customer No."));
+            //TODO: Ver TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5050; "Campaign No."; Code[20])
         {
@@ -510,7 +510,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         field(56001; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
+            TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
         field(56002; "Pre pedido"; Boolean)
         {

@@ -26,7 +26,7 @@ table 34002109 Contratos
             trigger OnValidate()
             begin
                 TipoContrato.GET("Cod. contrato");
-                //TODO: Ver Indefinido := TipoContrato.Undefined;
+                Indefinido := TipoContrato.Undefined;
                 Descripcion := TipoContrato.Description;
                 Activo := TRUE;
 
@@ -34,8 +34,8 @@ table 34002109 Contratos
                 IF Trabajad."Employment Date" <> 0D THEN
                     "Fecha inicio" := Trabajad."Employment Date";
 
-                //TODO: Ver Cargo := Trabajad."Job Type Code";
-                //TODO: Ver "Centro trabajo" := Trabajad."Working Center";
+                Cargo := Trabajad."Job Type Code";
+                "Centro trabajo" := Trabajad."Working Center";
             end;
         }
         field(5; Disponible; Code[12])
@@ -51,10 +51,10 @@ table 34002109 Contratos
             trigger OnValidate()
             begin
                 Trabajad.GET("No. empleado");
-                //TODO: Ver IF Trabajad."Alta contrato" = 0D THEN BEGIN
-                //TODO: Ver     Trabajad."Alta contrato" := "Fecha inicio";
-                //TODO: Ver     Trabajad.MODIFY(TRUE);
-                //TODO: Ver END;
+                IF Trabajad."Alta contrato" = 0D THEN BEGIN
+                    Trabajad."Alta contrato" := "Fecha inicio";
+                    Trabajad.MODIFY(TRUE);
+                END;
 
                 IF Rec."Fecha inicio" <> xRec."Fecha inicio" THEN BEGIN
                     /*     "Cab.nomina".RESET;
@@ -64,7 +64,7 @@ table 34002109 Contratos
                            ERROR (Err001);
                            */
                     Trabajad."Employment Date" := "Fecha inicio";
-                    //TODO: Ver Trabajad."Alta contrato" := "Fecha inicio";
+                    Trabajad."Alta contrato" := "Fecha inicio";
                     Trabajad.MODIFY;
                 END;
 
@@ -86,7 +86,7 @@ table 34002109 Contratos
                 END;
 
                 Trabajad.GET("No. empleado");
-                //TODO: Ver Trabajad."Fin contrato" := "Fecha finalizacion";
+                Trabajad."Fin contrato" := "Fecha finalizacion";
                 Trabajad.MODIFY;
 
                 TipoContrato.GET("Cod. contrato");
@@ -102,10 +102,10 @@ table 34002109 Contratos
                 Trabajad.GET("No. empleado");
                 //IF Trabajad."Fin contrato" = 0D THEN
                 BEGIN
-                    //TODO: Ver Trabajad."Fin contrato" := "Fecha finalizacion";
+                    Trabajad."Fin contrato" := "Fecha finalizacion";
                     Trabajad."Termination Date" := "Fecha finalizacion";
-                    //TODO: Ver IF Trabajad."Fin contrato" = 0D THEN
-                    //TODO: Ver     Trabajad.Status := Trabajad.Status::Active;
+                    IF Trabajad."Fin contrato" = 0D THEN
+                        Trabajad.Status := Trabajad.Status::Active;
                     Trabajad.MODIFY;
                 END;
                 /*
@@ -148,10 +148,10 @@ table 34002109 Contratos
             begin
                 IF Finalizado THEN BEGIN
                     Trabajad.GET("No. empleado");
-                    //TODO: Ver Trabajad."Estado Contrato" := 2;
+                    Trabajad."Estado Contrato" := 2;
                     Trabajad.Status := Trabajad.Status::Terminated;
-                    //TODO: Ver Trabajad."Calcular Nomina" := FALSE;
-                    //TODO: Ver Trabajad."Fecha salida empresa" := "Fecha finalizacion";
+                    Trabajad."Calcular Nomina" := FALSE;
+                    Trabajad."Fecha salida empresa" := "Fecha finalizacion";
                     Trabajad.MODIFY;
                 END;
 
@@ -226,10 +226,10 @@ table 34002109 Contratos
             begin
                 Trabajad.GET("No. empleado");
 
-                //TODO: Ver  IF Indefinido THEN
-                //TODO: Ver     Trabajad."Estado Contrato" := 1  /*estado indefinido   */
-                //TODO: Ver ELSE
-                //TODO: Ver    Trabajad."Estado Contrato" := 3; /*estado no finalizado */
+                IF Indefinido THEN
+                    Trabajad."Estado Contrato" := 1  /*estado indefinido   */
+                ELSE
+                    Trabajad."Estado Contrato" := 3; /*estado no finalizado */
 
                 Trabajad.MODIFY;
 
@@ -243,13 +243,13 @@ table 34002109 Contratos
                 IF NOT Activo THEN BEGIN
                     Trabajad.GET("No. empleado");
                     Trabajad.Status := Trabajad.Status::Terminated;
-                    //TODO: Ver Trabajad."Estado Contrato" := Trabajad."Estado Contrato"::Finalizado;
+                    Trabajad."Estado Contrato" := Trabajad."Estado Contrato"::Finalizado;
                     Trabajad.MODIFY;
                 END
                 ELSE BEGIN
                     Trabajad.GET("No. empleado");
                     Trabajad.Status := Trabajad.Status::Active;
-                    //TODO: Ver Trabajad."Estado Contrato" := Trabajad."Estado Contrato"::Indefinido;
+                    Trabajad."Estado Contrato" := Trabajad."Estado Contrato"::Indefinido;
                     Trabajad.MODIFY;
                 END;
 
@@ -292,8 +292,8 @@ table 34002109 Contratos
     begin
 
         //+MdE
-        //TODO: Ver IF NOT FromMdE THEN
-        //TODO: Ver    MdEMngt.Contrato_Delete(Rec);
+        IF NOT FromMdE THEN
+            MdEMngt.Contrato_Delete(Rec);
         //-MdE
 
         "Cab.nomina".SETRANGE("No. empleado", "No. empleado");
@@ -315,8 +315,8 @@ table 34002109 Contratos
     begin
 
         //+MdE
-        //TODO: Ver IF NOT FromMdE THEN
-        //TODO: Ver     MdEMngt.Contrato_Insert(Rec);
+        IF NOT FromMdE THEN
+            MdEMngt.Contrato_Insert(Rec);
         //-MdE
 
         //+#001
@@ -357,13 +357,13 @@ table 34002109 Contratos
     begin
 
         //+MdE
-        //TODO: Ver IF NOT FromMdE THEN
-        //TODO: Ver     MdEMngt.Contrato_Modify(Rec, xRec);
+        IF NOT FromMdE THEN
+            MdEMngt.Contrato_Modify(Rec, xRec);
         //-MdE
 
         TipoContrato.GET("Cod. contrato");
-        //TODO: Ver IF (TipoContrato.Undefined = FALSE) AND ("Fecha inicio" = 0D) THEN
-        //TODO: Ver     ERROR(Err004);
+        IF (TipoContrato.Undefined = FALSE) AND ("Fecha inicio" = 0D) THEN
+            ERROR(Err004);
 
         //+#001
         /*
@@ -413,7 +413,7 @@ table 34002109 Contratos
         Err005: Label 'You can''t delete a contract with posted payrolls';
         Err006: Label 'There can only be one active contract per employee';
         FromMdE: Boolean;
-    //TODO: Ver MdEMngt: Codeunit 56202;
+        MdEMngt: Codeunit 56202;
 
     procedure SetFromMde(New_FromMdE: Boolean)
     begin
@@ -429,26 +429,26 @@ table 34002109 Contratos
         WITH Contratos DO BEGIN
             Empleado.GET("No. empleado");
             Empleado."Employment Date" := "Fecha inicio";
-            //TODO: Ver Empleado."Alta contrato" := "Fecha inicio";
+            Empleado."Alta contrato" := "Fecha inicio";
             Empleado."Termination Date" := "Fecha finalizacion";
-            //TODO: Ver Empleado."Fin contrato" := "Fecha finalizacion";
-            //TODO: Ver Empleado."Fecha salida empresa" := "Fecha finalizacion";
-            //TODO: Ver Empleado.Company := "Empresa cotizacion";
-            //TODO: Ver Empleado."Job Type Code" := Cargo;
-            //TODO: Ver Empleado."Working Center" := "Centro trabajo";
+            Empleado."Fin contrato" := "Fecha finalizacion";
+            Empleado."Fecha salida empresa" := "Fecha finalizacion";
+            Empleado.Company := "Empresa cotizacion";
+            Empleado."Job Type Code" := Cargo;
+            Empleado."Working Center" := "Centro trabajo";
             Empleado."Emplymt. Contract Code" := "Cod. contrato";
 
             TipoContrato.GET("Cod. contrato");
-            //TODO: Ver IF NOT TipoContrato.Undefined THEN
-            //TODO: Ver     Empleado."Tipo Empleado" := Empleado."Tipo Empleado"::Temporal;
+            IF NOT TipoContrato.Undefined THEN
+                Empleado."Tipo Empleado" := Empleado."Tipo Empleado"::Temporal;
 
             IF "Fecha finalizacion" <> 0D THEN BEGIN
                 Empleado.Status := Empleado.Status::Terminated;
-                //TODO: Ver Empleado."Estado Contrato" := Empleado."Estado Contrato"::Finalizado;
+                Empleado."Estado Contrato" := Empleado."Estado Contrato"::Finalizado;
             END
             ELSE BEGIN
                 Empleado.Status := Empleado.Status::Active;
-                //TODO: Ver Empleado."Estado Contrato" := Empleado."Estado Contrato"::Indefinido;
+                Empleado."Estado Contrato" := Empleado."Estado Contrato"::Indefinido;
             END;
 
             Empleado.MODIFY;
@@ -463,12 +463,12 @@ table 34002109 Contratos
         //+#001
         Empleado.GET("No. empleado");
 
-        //TODO: Ver IF "Empresa cotizacion" = '' THEN
-        //TODO: Ver "Empresa cotizacion" := Empleado.Company;
-        //TODO: Ver IF Cargo = '' THEN
-        //TODO: Ver Cargo := Empleado."Job Type Code";
-        //TODO: Ver IF "Centro trabajo" = '' THEN
-        //TODO: Ver "Centro trabajo" := Empleado."Working Center";
+        IF "Empresa cotizacion" = '' THEN
+            "Empresa cotizacion" := Empleado.Company;
+        IF Cargo = '' THEN
+            Cargo := Empleado."Job Type Code";
+        IF "Centro trabajo" = '' THEN
+            "Centro trabajo" := Empleado."Working Center";
         IF Descripcion = '' THEN BEGIN
             IF TipoContrato.GET("Cod. contrato") THEN
                 Descripcion := TipoContrato.Description;

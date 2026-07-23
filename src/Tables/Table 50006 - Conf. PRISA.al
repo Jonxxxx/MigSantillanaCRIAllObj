@@ -8,28 +8,28 @@ table 50006 "Conf. PRISA"
         }
         field(2; "Filtro Sueldos y Salarios"; Text[250])
         {
-            //TODO: Ver TableRelation = "Conceptos salariales"."Codigo";
-            //TODO: Ver ValidateTableRelation = false;
+            TableRelation = "Conceptos salariales"."Codigo";
+            ValidateTableRelation = false;
         }
         field(3; "Filtro Cargas Sociales"; Text[250])
         {
-            //TODO: Ver TableRelation = "Conceptos salariales"."Codigo";
-            //TODO: Ver ValidateTableRelation = false;
+            TableRelation = "Conceptos salariales"."Codigo";
+            ValidateTableRelation = false;
         }
         field(4; "Filtro Gastos Sociales"; Text[250])
         {
-            //TODO: Ver TableRelation = "Conceptos salariales"."Codigo";
-            //TODO: Ver ValidateTableRelation = false;
+            TableRelation = "Conceptos salariales"."Codigo";
+            ValidateTableRelation = false;
         }
         field(5; "Filtro Indemnizaciones"; Text[250])
         {
-            //TODO: Ver TableRelation = "Conceptos salariales"."Codigo";
-            //TODO: Ver ValidateTableRelation = false;
+            TableRelation = "Conceptos salariales"."Codigo";
+            ValidateTableRelation = false;
         }
         field(6; "Filtro Bonos y Gratificaciones"; Text[250])
         {
-            //TODO: Ver TableRelation = "Conceptos salariales"."Codigo";
-            //TODO: Ver ValidateTableRelation = false;
+            TableRelation = "Conceptos salariales"."Codigo";
+            ValidateTableRelation = false;
         }
     }
 

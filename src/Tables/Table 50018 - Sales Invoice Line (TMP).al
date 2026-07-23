@@ -172,17 +172,17 @@ table 50018 "Sales Invoice Line (TMP)"
         field(47; "Phase Code"; Code[10])
         {
             Caption = 'Phase Code';
-            //TODO: Ver TableRelation = Table161;
+            //TODO: Tabla no existe TableRelation = 161;
         }
         field(48; "Task Code"; Code[10])
         {
             Caption = 'Task Code';
-            //TODO: Ver TableRelation = Table162;
+            //TODO: Tabla no existe TableRelation = 162;
         }
         field(49; "Step Code"; Code[10])
         {
             Caption = 'Step Code';
-            //TODO: Ver TableRelation = Table163;
+            //TODO: Tabla no existe TableRelation = 163;
         }
         field(50; "Job Applies-to ID"; Code[20])
         {
@@ -438,7 +438,7 @@ table 50018 "Sales Invoice Line (TMP)"
         field(5901; "Service Order No."; Code[20])
         {
             Caption = 'Service Order No.';
-            //TODO: Ver TableRelation = Table5930;
+            //TODO: Tabla no existe TableRelation = 5930;
         }
         field(5902; "Service Item No."; Code[20])
         {
@@ -499,12 +499,12 @@ table 50018 "Sales Invoice Line (TMP)"
         field(50001; "Cod. Edicion"; Code[20])
         {
             Description = 'A adido para la reclasificaci n de productos.';
-            //TODO: Ver TableRelation = Table50131;
+            //TODO: Tabla no existe TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
             Description = 'A adido para la reclasificaci n de productos.';
-            //TODO: Ver TableRelation = Table50132;
+            //TODO: Tabla no existe TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -522,7 +522,7 @@ table 50018 "Sales Invoice Line (TMP)"
         field(50006; "Nivel Educativo"; Code[20])
         {
             Description = 'A adido para la reclasificaci n de productos.';
-            //TODO: Ver TableRelation = Table50133;
+            //TODO: Tabla no existe TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {

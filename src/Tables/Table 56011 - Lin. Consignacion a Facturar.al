@@ -47,7 +47,7 @@ table 56011 "Lin. Consignacion a Facturar"
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                //TODO: Ver ItemCrossReference: Record 5717;
+                //TODO: Tabla no existe ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -219,7 +219,7 @@ table 56011 "Lin. Consignacion a Facturar"
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Ver SalesTaxDifference: Record 10012;
+
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
@@ -230,7 +230,6 @@ table 56011 "Lin. Consignacion a Facturar"
         ReserveSalesLine: Codeunit 99000832;
         UOMMgt: Codeunit 5402;
         AddOnIntegrMgt: Codeunit 5403;
-        //TODO: Ver DimMgt: Codeunit DimensionManagement;
         ItemSubstitutionMgt: Codeunit 5701;
         DistIntegration: Codeunit 5702;
         NonstockItemMgt: Codeunit 5703;
@@ -281,7 +280,7 @@ table 56011 "Lin. Consignacion a Facturar"
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        //TODO: Ver cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 34002500;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';
@@ -567,7 +566,6 @@ table 56011 "Lin. Consignacion a Facturar"
 
     procedure CrossReferenceNoLookUp()
     var
-        //TODO: Ver ItemCrossReference: Record 5717;
         ICGLAcc: Record 410;
     begin
     end;

@@ -1057,11 +1057,11 @@ table 51003 "Sales Line Buffer"
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Ver TableRelation = Table50131;
+            //TODO: Ver TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Ver TableRelation = Table50132;
+            //TODO: Ver TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1075,7 +1075,7 @@ table 51003 "Sales Line Buffer"
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            //TODO: Ver TableRelation = Table50133;
+            //TODO: Ver TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {

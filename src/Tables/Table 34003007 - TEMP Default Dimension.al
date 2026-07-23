@@ -9,17 +9,7 @@ table 34003007 "TEMP Default Dimension"
             Caption = 'Table ID';
             NotBlank = true;
 
-            trigger OnLookup()
-            var
-            //TODO: Ver TempObject: Record 2000000001 temporary;
-            begin
-            end;
 
-            trigger OnValidate()
-            var
-            //TODO: Ver TempObject: Record 2000000001 temporary;
-            begin
-            end;
         }
         field(2; "No."; Code[20])
         {

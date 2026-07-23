@@ -461,70 +461,63 @@ table 34003004 "Archivo Transferencia ITBIS"
         }
         field(95; "Monto Operacional IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(01 | 1)));*/
+                                                                                     "Tipo de ingreso" = FILTER(01 | 1)));
             Caption = 'Ingresos por Operaciones(No Financieros)';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(96; "Monto Financiero IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(02 | 2)));*/
+                                                                                     "Tipo de ingreso" = FILTER(02 | 2)));
             Caption = 'Ingresos Financieros';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(97; "Monto Extraordinarios IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(03 | 3)));*/
+                                                                                     "Tipo de ingreso" = FILTER(03 | 3)));
             Caption = 'Ingresos Extraordinarios';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(98; "Monto Arrendamiento IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(04 | 4)));*/
+                                                                                     "Tipo de ingreso" = FILTER(04 | 4)));
             Caption = 'Ingreso por Arrendamiento';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(99; "Monto VentaActivo IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(05 | 5)));*/
+                                                                                     "Tipo de ingreso" = FILTER(05 | 5)));
             Caption = 'Ingreso por Venta de Activos Depreciables';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(100; "Monto IngresoOtros IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE("Codigo reporte" = CONST('607'),
-                                                                                     "de ingreso" = FILTER(06 | 6)));*/
+                                                                                     "Tipo de ingreso" = FILTER(06 | 6)));
             Caption = 'Otros Ingresos';
             Description = 'IT1';
             FieldClass = FlowField;
         }
         field(101; "MontoEspecial IT-1"; Decimal)
         {
-            //TODO: Ver
-            /*
+
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B14*|E44*'),
-                                                                                     "Codigo reporte" = CONST(606)));*/
+                                                                                     "Codigo reporte" = CONST('606')));
             Caption = 'Total Facturas en Comprobantes Fiscales para Regimenes Especiales';
             FieldClass = FlowField;
         }

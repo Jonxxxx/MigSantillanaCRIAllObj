@@ -5,7 +5,7 @@ table 67023 "Cab. Planificacion"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
-            //TODO: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor | Supervisor));
+            TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor | Supervisor));
 
             trigger OnValidate()
             begin

@@ -90,7 +90,7 @@ table 56031 "Lin. Packing"
 
     var
         CP: Record 56032;
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         ContCaja: Page 56041;
 
     procedure ContenidoCaja()
@@ -106,13 +106,12 @@ table 56031 "Lin. Packing"
 
     procedure AbrirCaja()
     begin
-        //TODO Ver: FuncSant.ReabrirCajaPacking(Rec);
-        /*
-        CP.SETRANGE("No. Packing","No.");
-        CP.SETRANGE("No. Caja","No. Caja");
-        CP.SETRANGE("No. Picking","No. Picking");
+        FuncSant.ReabrirCajaPacking(Rec);
+
+        CP.SETRANGE("No. Packing", "No.");
+        CP.SETRANGE("No. Caja", "No. Caja");
+        CP.SETRANGE("No. Picking", "No. Picking");
         CP.DELETEALL(TRUE);
-         */
 
     end;
 }

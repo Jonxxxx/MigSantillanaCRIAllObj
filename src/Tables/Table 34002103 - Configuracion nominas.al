@@ -368,7 +368,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Payroll calculation codeunit';
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
         field(62; "Nomina de Pais"; Code[10])
         {
@@ -402,7 +402,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Codeunit Electronic files';
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
         field(68; "Dimension Empleado"; Code[20])
         {
@@ -447,7 +447,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Payroll report ID';
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(72; "Proceso recalculo ISR automat."; Boolean)
         {
@@ -507,7 +507,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'ID Xmlport to import time attendance';
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(XMLport));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(XmlPort));
         }
         field(89; "Tiempo minimo prest. coop."; DateFormula)
         {
@@ -558,7 +558,7 @@ table 34002103 "Configuracion nominas"
         {
             Caption = 'Time attendance Process CU';
             DataClassification = ToBeClassified;
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Codeunit));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
         field(99; "Completar horas ponchador"; Boolean)
         {

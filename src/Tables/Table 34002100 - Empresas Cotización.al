@@ -96,7 +96,7 @@ table 34002100 "Empresas Cotizacion"
         field(19; "ID  Volante Pago"; Integer)
         {
             Description = 'Oficial,Oficial abrev.,Factura,Matriz';
-            //TODO: Ver TableRelation = Object.ID WHERE(Type = CONST(Report));
+            TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(20; Comentario; Boolean)
         {

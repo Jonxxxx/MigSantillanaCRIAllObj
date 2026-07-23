@@ -38,6 +38,6 @@ table 34003023 "Lin. Dimensiones Req."
 
     var
         "Fields": Record 2000000041;
-    //TODO: Ver FieldForm: Page 34003022;
+        FieldForm: Page 34003022;
 }
 

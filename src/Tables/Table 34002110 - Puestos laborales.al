@@ -28,21 +28,20 @@ table 34002110 "Puestos laborales"
             begin
                 IF (xRec."Cod. Supervisor" <> "Cod. Supervisor") AND
                    ("Cod. Supervisor" <> '') THEN BEGIN
-                    //TODO: Ver 
-                    /*
+
                     Empl.SETCURRENTKEY("Job Type Code");
                     Empl.SETRANGE("Job Type Code", Codigo);
                     IF Empl.FINDSET(TRUE, FALSE) THEN BEGIN
                         Empl."Cod. Supervisor" := "Cod. Supervisor";
                         Empl.MODIFY;
                     END;
-                    */
+
                 END;
             end;
         }
         field(5; "Nombre Completo"; Text[150])
         {
-            //TODO: Ver CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Supervisor")));
+            CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Supervisor")));
             Editable = false;
             FieldClass = FlowField;
         }
@@ -55,9 +54,9 @@ table 34002110 "Puestos laborales"
         }
         field(8; "Total Empleados"; Integer)
         {
-            //TODO: Ver CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. departamento"),
-            //TODO: Ver                                     "Type Code" = FIELD("Codigo"),
-            //TODO: Ver                                    Status = CONST(Active)));
+            CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. departamento"),
+                                               //TODO Ver "Type Code" = FIELD("Codigo"),
+                                               Status = CONST(Active)));
             Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;
@@ -140,7 +139,7 @@ table 34002110 "Puestos laborales"
     trigger OnInsert()
     begin
         Emp.RESET;
-        //TODO: Ver Emp.SETRANGE("Calcular Nomina", TRUE);
+        Emp.SETRANGE("Calcular Nomina", TRUE);
         Emp.SETRANGE(Status, Emp.Status::Active);
         IF Emp.FINDFIRST THEN BEGIN
             PerfSal.RESET;

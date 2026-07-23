@@ -5,7 +5,7 @@ table 50137 "TMP: Ventas Liquidas"
     {
         field(1; "Nivel Educativo"; Code[20])
         {
-            //TODO: Ver TableRelation = Table50133;
+            //TODO: Tabla no existe TableRelation = 50133;
         }
         field(2; "Grupo Contable Producto"; Code[10])
         {

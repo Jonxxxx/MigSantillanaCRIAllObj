@@ -59,7 +59,7 @@ table 51009 "Cab. Cupon"
                 IF rContacto.GET("Cod. Colegio") THEN BEGIN
                     "Nombre Colegio" := rContacto.Name;
                     VALIDATE("Cod. Vendedor", rContacto."Salesperson Code");
-                    //TODO: Ver VALIDATE("Descuento a Colegio",rContacto."% Descuento Cupon");
+                    VALIDATE("Descuento a Colegio", rContacto."% Descuento Cupon");
                 END;
             end;
         }
