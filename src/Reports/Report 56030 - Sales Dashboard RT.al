@@ -12,7 +12,7 @@ report 56030 "Sales Dashboard RT"
     {
         dataitem(Opportunity; 5092)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }
@@ -140,7 +140,7 @@ report 56030 "Sales Dashboard RT"
         }
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             column(Customer__No__; "No.")
             {
             }
@@ -196,7 +196,7 @@ report 56030 "Sales Dashboard RT"
         }
         dataitem(Item; 27)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             column(Item__No__; "No.")
             {
             }

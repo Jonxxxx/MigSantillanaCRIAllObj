@@ -7,7 +7,7 @@ report 56097 "Rel. conduce en firme"
     {
         dataitem("Sales Shipment Header"; 110)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Bill-to Customer No.", "Posting Date", "Shipping Agent Service Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

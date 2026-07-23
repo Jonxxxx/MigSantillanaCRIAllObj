@@ -9,15 +9,15 @@ report 56186 "Provisión de insolvencias"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.)
-                                WHERE("Exento Provision" = CONST(No),
+            DataItemTableView = SORTING("No.")
+                                WHERE("Exento Provision" = CONST(False),
                                       Blocked = CONST(" "));
             dataitem("Integer"; 2000000026)
             {
                 DataItemTableView = SORTING(Number);
                 dataitem("Cust. Ledger Entry"; 21)
                 {
-                    DataItemTableView = SORTING(Customer No., Posting Date, Open, Provisionado por insolvencia);
+                    DataItemTableView = SORTING("Customer No.", "Posting Date", Open, Provisionado por insolvencia);
 
                     trigger OnAfterGetRecord()
                     begin

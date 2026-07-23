@@ -13,7 +13,7 @@ report 56144 "Antiguedad Consignacion"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Global Dimension 1 Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -113,7 +113,7 @@ report 56144 "Antiguedad Consignacion"
             }
             dataitem(t0a30; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
+                DataItemLink = "Location Code" = FIELD("No.");
                 DataItemTableView = SORTING("Location Code", Open)
                                     WHERE(Open = FILTER(Yes));
                 column(t0a30__Remaining_Quantity_; "Remaining Quantity")
@@ -149,8 +149,8 @@ report 56144 "Antiguedad Consignacion"
             }
             dataitem(t31a60; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING("Location Code", "Item Category Code", Posting Date, Item No.);
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Location Code", "Item Category Code", "Posting Date", "Item No.");
                 column(t31a60_Quantity; Quantity)
                 {
                 }
@@ -181,8 +181,8 @@ report 56144 "Antiguedad Consignacion"
             }
             dataitem(t61a90; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING("Location Code", "Item Category Code", Posting Date, Item No.);
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Location Code", "Item Category Code", "Posting Date", "Item No.");
                 column(t61a90_Quantity; Quantity)
                 {
                 }
@@ -213,8 +213,8 @@ report 56144 "Antiguedad Consignacion"
             }
             dataitem(t91Adelante; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING("Location Code", "Item Category Code", Posting Date, Item No.);
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Location Code", "Item Category Code", "Posting Date", "Item No.");
                 column(t91Adelante_Quantity; Quantity)
                 {
                 }

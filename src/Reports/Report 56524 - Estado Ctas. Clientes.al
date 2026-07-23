@@ -127,13 +127,13 @@ report 56524 "Estado Ctas. Clientes"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Customer No.=FIELD(No.),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter),
-                               Currency Code=FIELD(Currency Filter),
-                               Posting Date=FIELD(Date Filter);
-                DataItemTableView = SORTING(Customer No.,Open,Positive,Due Date)
-                                    WHERE(Open=CONST(Yes));
+                DataItemLink = "Customer No." = FIELD("No."),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
+                               Currency Code=FIELD("Currency Filter"),
+                               Posting Date=FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.",Open,Positive,"Due Date")
+                                    WHERE(Open=CONST(True));
                 column(Cust__Ledger_Entry__Posting_Date_;"Posting Date")
                 {
                 }

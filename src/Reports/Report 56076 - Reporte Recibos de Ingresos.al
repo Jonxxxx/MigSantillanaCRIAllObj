@@ -9,7 +9,7 @@ report 56076 "Reporte Recibos de Ingresos"
     {
         dataitem("Cust. Ledger Entry"; 21)
         {
-            DataItemTableView = SORTING(Document No., Document Type, Customer No.);
+            DataItemTableView = SORTING("Document No.", "Document Type", Customer No.);
             RequestFilterFields = "Document No.", "Posting Date", "Document Type";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

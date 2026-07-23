@@ -13,7 +13,7 @@ report 52542 "Factura Santillana CR"
     {
         dataitem("Sales Invoice Header"; 112)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.", "Sell-to Customer No.";
             column(Salesperson_Code________VendorName; "Salesperson Code" + ' ' + VendorName)
@@ -102,8 +102,8 @@ report 52542 "Factura Santillana CR"
             }
             dataitem("Sales Invoice Line"; 113)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.);
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
                 column(CrossReferenceNo_SalesInvoiceLine; "Sales Invoice Line"."Cross-Reference No.")
                 {
                 }

@@ -8,7 +8,7 @@ report 67017 "Alcance presupuesto detallado"
         dataitem(Presupuesto; 67060)
         {
             CalcFields = Descripcion nivel, Descripcion producto;
-            DataItemTableView = SORTING(Usuario, "Fecha hora", "Cod. Nivel", Linea de negocio, Familia, Sub Familia);
+            DataItemTableView = SORTING(Usuario, "Fecha hora", "Cod. Nivel", "Linea de negocio", Familia, "Sub Familia");
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }

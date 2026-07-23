@@ -79,47 +79,47 @@ report 67018 "Pedidos por cliente"
             }
             dataitem("Sales Line"; 37)
             {
-                DataItemLink = Document Type=FIELD(Document Type),
-                               Document No.=FIELD(No.);
-                DataItemTableView = SORTING("Document Type",Document No.,Line No.);
-                column(Sales_Line__No__;"No.")
+                DataItemLink = "Document Type" = FIELD("Document Type"),
+                               Document No.=FIELD("No.");
+                DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
+                column(Sales_Line__No__; "No.")
                 {
                 }
-                column(Sales_Line_Description;Description)
+                column(Sales_Line_Description; Description)
                 {
                 }
-                column(Sales_Line_Quantity;Quantity)
+                column(Sales_Line_Quantity; Quantity)
                 {
                 }
-                column(Sales_Line__Quantity_Shipped_;"Quantity Shipped")
+                column(Sales_Line__Quantity_Shipped_; "Quantity Shipped")
                 {
                 }
-                column(Sales_Line__Cantidad_Aprobada_;"Cantidad Aprobada")
+                column(Sales_Line__Cantidad_Aprobada_; "Cantidad Aprobada")
                 {
-                    DecimalPlaces = 0:2;
+                    DecimalPlaces = 0 : 2;
                 }
-                column(Sales_Line__No__Caption;Sales_Line__No__CaptionLbl)
-                {
-                }
-                column(Sales_Line_DescriptionCaption;FIELDCAPTION(Description))
+                column(Sales_Line__No__Caption; Sales_Line__No__CaptionLbl)
                 {
                 }
-                column(Sales_Line_QuantityCaption;FIELDCAPTION(Quantity))
+                column(Sales_Line_DescriptionCaption; FIELDCAPTION(Description))
                 {
                 }
-                column(Sales_Line__Cantidad_Aprobada_Caption;FIELDCAPTION("Cantidad Aprobada"))
+                column(Sales_Line_QuantityCaption; FIELDCAPTION(Quantity))
                 {
                 }
-                column(Sales_Line__Quantity_Shipped_Caption;FIELDCAPTION("Quantity Shipped"))
+                column(Sales_Line__Cantidad_Aprobada_Caption; FIELDCAPTION("Cantidad Aprobada"))
                 {
                 }
-                column(Sales_Line_Document_Type;"Document Type")
+                column(Sales_Line__Quantity_Shipped_Caption; FIELDCAPTION("Quantity Shipped"))
                 {
                 }
-                column(Sales_Line_Document_No_;"Document No.")
+                column(Sales_Line_Document_Type; "Document Type")
                 {
                 }
-                column(Sales_Line_Line_No_;"Line No.")
+                column(Sales_Line_Document_No_; "Document No.")
+                {
+                }
+                column(Sales_Line_Line_No_; "Line No.")
                 {
                 }
             }
@@ -157,7 +157,7 @@ report 67018 "Pedidos por cliente"
         recVendedor: Record 13;
     begin
         IF recVendedor.GET("Sales Header"."Salesperson Code") THEN
-          EXIT(recVendedor.Name);
+            EXIT(recVendedor.Name);
     end;
 }
 

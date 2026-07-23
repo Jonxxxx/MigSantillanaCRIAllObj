@@ -10,7 +10,7 @@ report 56128 "Antiguedad Saldo Proveedor"
     {
         dataitem(Vendor; 23)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
             column(FiltroProv; FiltroProv)
@@ -181,8 +181,8 @@ report 56128 "Antiguedad Saldo Proveedor"
             }
             dataitem(MovProvNoVencido; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.);
-                DataItemTableView = SORTING(Vendor No., Posting Date, Entry Type, Currency Code);
+                DataItemLink = "Vendor No." = FIELD("No.");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date", Entry Type, Currency Code);
                 column(wImporteNoVencido; wImporteNoVencido)
                 {
                 }
@@ -232,8 +232,8 @@ report 56128 "Antiguedad Saldo Proveedor"
             }
             dataitem(MovProv30; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.);
-                DataItemTableView = SORTING(Vendor No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Vendor No." = FIELD("No.");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date", Entry Type, Currency Code)
                                     WHERE("Document Type" = FILTER(Invoice));
                 column(wImporte30; wImporte30)
                 {
@@ -287,8 +287,8 @@ report 56128 "Antiguedad Saldo Proveedor"
             }
             dataitem(MovProv60; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.);
-                DataItemTableView = SORTING(Vendor No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Vendor No." = FIELD("No.");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date", Entry Type, Currency Code)
                                     WHERE("Document Type" = FILTER(Invoice));
                 column(wImporte60; wImporte60)
                 {
@@ -341,8 +341,8 @@ report 56128 "Antiguedad Saldo Proveedor"
             }
             dataitem(MovProv90; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.);
-                DataItemTableView = SORTING(Vendor No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Vendor No." = FIELD("No.");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date", Entry Type, Currency Code)
                                     WHERE("Document Type" = FILTER(Invoice));
                 column(wImporte90; wImporte90)
                 {
@@ -397,8 +397,8 @@ report 56128 "Antiguedad Saldo Proveedor"
             }
             dataitem(MovProvMasDe90; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.);
-                DataItemTableView = SORTING(Vendor No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Vendor No." = FIELD("No.");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date", Entry Type, Currency Code)
                                     WHERE("Document Type" = FILTER(Invoice));
                 column(MovProvMasDe90__Document_No__; "Document No.")
                 {

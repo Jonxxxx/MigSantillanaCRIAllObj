@@ -9,7 +9,7 @@ report 56095 "Enviado NO Consignado"
     {
         dataitem("Transfer Line"; 5741)
         {
-            DataItemTableView = SORTING(Document No., Line No.);
+            DataItemTableView = SORTING("Document No.", "Line No.");
             RequestFilterFields = "Document No.", "Transfer-to Code", "Qty. in Transit", "Shipment Date";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

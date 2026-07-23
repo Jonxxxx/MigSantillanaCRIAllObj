@@ -6,7 +6,7 @@ report 70500 "Clientes RH"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
 
             trigger OnAfterGetRecord()
@@ -216,7 +216,7 @@ report 70500 "Clientes RH"
         }
         dataitem("Sales Line Discount"; 7004)
         {
-            DataItemTableView = SORTING(Type, Code, "Sales Type", "Sales Code", Starting Date, Currency Code, Variant Code, Unit of Measure Code, Minimum Quantity)
+            DataItemTableView = SORTING(Type, Code, "Sales Type", "Sales Code", "Starting Date", "Currency Code", Variant Code, Unit of Measure Code, Minimum Quantity)
                                 ORDER(Ascending)
                                 WHERE("Sales Type" = FILTER(Customer));
 

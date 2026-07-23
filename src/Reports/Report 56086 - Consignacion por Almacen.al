@@ -9,7 +9,7 @@ report 56086 "Consignacion por Almacen"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING("Location Code", "Item Category Code", Posting Date, Item No.)
+            DataItemTableView = SORTING("Location Code", "Item Category Code", "Posting Date", "Item No.")
                                 ORDER(Ascending);
             RequestFilterFields = "Item Category Code", "Posting Date", "Item No.", "Location Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

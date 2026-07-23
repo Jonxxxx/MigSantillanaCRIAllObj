@@ -7,7 +7,7 @@ report 56027 "Split Item Charge"
     {
         dataitem("Purchase Line"; 39)
         {
-            DataItemTableView = SORTING("Document Type", Document No., Line No.);
+            DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
 
             trigger OnPostDataItem()
             begin

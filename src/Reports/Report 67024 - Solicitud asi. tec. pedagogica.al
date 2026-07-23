@@ -201,128 +201,128 @@ report 67024 "Solicitud asi. tec. pedagogica"
             }
             dataitem(Programacion; 67015)
             {
-                DataItemLink = Tipo Evento=FIELD(Tipo de Evento),
-                               Cod. Taller - Evento=FIELD(Cod. evento);
-                DataItemTableView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor,Fecha programacion,Secuencia);
-                column(Programacion__Fecha_programacion_;"Fecha programacion")
+                DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
+                               Cod. Taller - Evento=FIELD("Cod. evento");
+                DataItemTableView = SORTING(Cod. Taller - Evento, Tipo Evento, Tipo de Expositor, Expositor, Fecha programacion, Secuencia);
+                column(Programacion__Fecha_programacion_; "Fecha programacion")
                 {
                 }
-                column(Programacion__Hora_de_Inicio_;"Hora de Inicio")
+                column(Programacion__Hora_de_Inicio_; "Hora de Inicio")
                 {
                 }
-                column(Programacion__Hora_Final_;"Hora Final")
+                column(Programacion__Hora_Final_; "Hora Final")
                 {
                 }
-                column(Programacion__Hora_Final_Caption;FIELDCAPTION("Hora Final"))
+                column(Programacion__Hora_Final_Caption; FIELDCAPTION("Hora Final"))
                 {
                 }
-                column(Programacion__Hora_de_Inicio_Caption;FIELDCAPTION("Hora de Inicio"))
+                column(Programacion__Hora_de_Inicio_Caption; FIELDCAPTION("Hora de Inicio"))
                 {
                 }
-                column(Programacion__Fecha_programacion_Caption;Programacion__Fecha_programacion_CaptionLbl)
+                column(Programacion__Fecha_programacion_Caption; Programacion__Fecha_programacion_CaptionLbl)
                 {
                 }
-                column(HorarioCaption;HorarioCaptionLbl)
+                column(HorarioCaption; HorarioCaptionLbl)
                 {
                 }
-                column(Programacion_Cod__Taller___Evento;"Cod. Taller - Evento")
+                column(Programacion_Cod__Taller___Evento; "Cod. Taller - Evento")
                 {
                 }
-                column(Programacion_Tipo_Evento;"Tipo Evento")
+                column(Programacion_Tipo_Evento; "Tipo Evento")
                 {
                 }
-                column(Programacion_Tipo_de_Expositor;"Tipo de Expositor")
+                column(Programacion_Tipo_de_Expositor; "Tipo de Expositor")
                 {
                 }
-                column(Programacion_Expositor;Expositor)
+                column(Programacion_Expositor; Expositor)
                 {
                 }
-                column(Programacion_Secuencia;Secuencia)
-                {
-                }
-            }
-            dataitem(Asistentes;67016)
-            {
-                DataItemLink = Tipo Evento=FIELD(Tipo de Evento),
-                               Cod. Taller - Evento=FIELD(Cod. evento);
-                DataItemTableView = SORTING("No. Solicitud",Cod. Taller - Evento,Cod. Expositor,Secuencia,Cod. Docente,Fecha programacion);
-                column(Asistentes__Cod__Docente_;"Cod. Docente")
-                {
-                }
-                column(Asistentes__Nombre_Docente_;"Nombre Docente")
-                {
-                }
-                column(TraerNivelDocente;TraerNivelDocente)
-                {
-                }
-                column(AsistentesCaption;AsistentesCaptionLbl)
-                {
-                }
-                column(Asistentes__Cod__Docente_Caption;Asistentes__Cod__Docente_CaptionLbl)
-                {
-                }
-                column(Asistentes__Nombre_Docente_Caption;Asistentes__Nombre_Docente_CaptionLbl)
-                {
-                }
-                column(TraerNivelDocenteCaption;TraerNivelDocenteCaptionLbl)
-                {
-                }
-                column(Asistentes_No__Solicitud;"No. Solicitud")
-                {
-                }
-                column(Asistentes_Cod__Taller___Evento;"Cod. Taller - Evento")
-                {
-                }
-                column(Asistentes_Cod__Expositor;"Cod. Expositor")
-                {
-                }
-                column(Asistentes_Secuencia;Secuencia)
-                {
-                }
-                column(Asistentes_Fecha_programacion;"Fecha programacion")
-                {
-                }
-                column(Asistentes_Tipo_Evento;"Tipo Evento")
+                column(Programacion_Secuencia; Secuencia)
                 {
                 }
             }
-            dataitem(Material;67014)
+            dataitem(Asistentes; 67016)
             {
-                DataItemLink = Tipo Evento=FIELD(Tipo de Evento),
-                               Cod. Taller - Evento=FIELD(Cod. evento);
-                DataItemTableView = SORTING(Cod. Taller - Evento,Tipo Evento,Secuencia,Line no.)
-                                    WHERE("Tipo de Material"=CONST(Producto));
-                column(Material__Codigo_Material_;"Codigo Material")
+                DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
+                               Cod. Taller - Evento=FIELD("Cod. evento");
+                DataItemTableView = SORTING("No. Solicitud", Cod. Taller - Evento, Cod. Expositor, Secuencia, Cod. Docente, Fecha programacion);
+                column(Asistentes__Cod__Docente_; "Cod. Docente")
                 {
                 }
-                column(Material__Description_Material_;"Description Material")
+                column(Asistentes__Nombre_Docente_; "Nombre Docente")
                 {
                 }
-                column(TraerGradoMaterial;TraerGradoMaterial)
+                column(TraerNivelDocente; TraerNivelDocente)
                 {
                 }
-                column(Material__Description_Material_Caption;Material__Description_Material_CaptionLbl)
+                column(AsistentesCaption; AsistentesCaptionLbl)
                 {
                 }
-                column(Material__Codigo_Material_Caption;Material__Codigo_Material_CaptionLbl)
+                column(Asistentes__Cod__Docente_Caption; Asistentes__Cod__Docente_CaptionLbl)
                 {
                 }
-                column(GradoCaption;GradoCaptionLbl)
+                column(Asistentes__Nombre_Docente_Caption; Asistentes__Nombre_Docente_CaptionLbl)
                 {
                 }
-                column(MaterialCaption;MaterialCaptionLbl)
+                column(TraerNivelDocenteCaption; TraerNivelDocenteCaptionLbl)
                 {
                 }
-                column(Material_Cod__Taller___Evento;"Cod. Taller - Evento")
+                column(Asistentes_No__Solicitud; "No. Solicitud")
                 {
                 }
-                column(Material_Tipo_Evento;"Tipo Evento")
+                column(Asistentes_Cod__Taller___Evento; "Cod. Taller - Evento")
                 {
                 }
-                column(Material_Secuencia;Secuencia)
+                column(Asistentes_Cod__Expositor; "Cod. Expositor")
                 {
                 }
-                column(Material_Line_no_;"Line no.")
+                column(Asistentes_Secuencia; Secuencia)
+                {
+                }
+                column(Asistentes_Fecha_programacion; "Fecha programacion")
+                {
+                }
+                column(Asistentes_Tipo_Evento; "Tipo Evento")
+                {
+                }
+            }
+            dataitem(Material; 67014)
+            {
+                DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
+                               Cod. Taller - Evento=FIELD("Cod. evento");
+                DataItemTableView = SORTING(Cod. Taller - Evento, Tipo Evento, Secuencia, Line no.)
+                                    WHERE("Tipo de Material" = CONST(Producto));
+                column(Material__Codigo_Material_; "Codigo Material")
+                {
+                }
+                column(Material__Description_Material_; "Description Material")
+                {
+                }
+                column(TraerGradoMaterial; TraerGradoMaterial)
+                {
+                }
+                column(Material__Description_Material_Caption; Material__Description_Material_CaptionLbl)
+                {
+                }
+                column(Material__Codigo_Material_Caption; Material__Codigo_Material_CaptionLbl)
+                {
+                }
+                column(GradoCaption; GradoCaptionLbl)
+                {
+                }
+                column(MaterialCaption; MaterialCaptionLbl)
+                {
+                }
+                column(Material_Cod__Taller___Evento; "Cod. Taller - Evento")
+                {
+                }
+                column(Material_Tipo_Evento; "Tipo Evento")
+                {
+                }
+                column(Material_Secuencia; Secuencia)
+                {
+                }
+                column(Material_Line_no_; "Line no.")
                 {
                 }
             }
@@ -333,8 +333,8 @@ report 67024 "Solicitud asi. tec. pedagogica"
                 CLEAR(texDireccion);
 
                 IF recColegio.GET("Cod. Colegio") THEN BEGIN
-                  texDistrito := recColegio.Distritos;
-                  texDireccion := recColegio.Address +' '+ recColegio."Address 2";
+                    texDistrito := recColegio.Distritos;
+                    texDireccion := recColegio.Address + ' ' + recColegio."Address 2";
                 END;
             end;
         }
@@ -409,24 +409,24 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recProducto: Record 27;
     begin
         IF Material."Tipo de Material" = Material."Tipo de Material"::Producto THEN
-          IF recProducto.GET(Material."Codigo Material") THEN
-            EXIT(recProducto."Nivel Escolar (Grado)");
+            IF recProducto.GET(Material."Codigo Material") THEN
+                EXIT(recProducto."Nivel Escolar (Grado)");
     end;
 
     procedure TraerDescripcionTurno(): Text[100]
     var
         recTurno: Record 67002;
     begin
-        IF recTurno.GET(recTurno."Tipo registro"::Turnos,Solicitud."Cod. Turno") THEN
-          EXIT(recTurno.Descripcion);
+        IF recTurno.GET(recTurno."Tipo registro"::Turnos, Solicitud."Cod. Turno") THEN
+            EXIT(recTurno.Descripcion);
     end;
 
     procedure TraerDescripcionLocal(): Text[250]
     var
         recLocal: Record 5051;
     begin
-        IF recLocal.GET(Solicitud."Cod. Colegio",Solicitud."Cod. Local") THEN
-          EXIT(recLocal.Code+' - '+recLocal."Company Name"+' - '+recLocal.Address+' - '+recLocal.City);
+        IF recLocal.GET(Solicitud."Cod. Colegio", Solicitud."Cod. Local") THEN
+            EXIT(recLocal.Code + ' - ' + recLocal."Company Name" + ' - ' + recLocal.Address + ' - ' + recLocal.City);
     end;
 
     procedure TraerDescripcionNivel(): Text[100]
@@ -434,7 +434,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recNivel: Record 67022;
     begin
         IF recNivel.GET(Solicitud."Cod. Nivel") THEN
-          EXIT(recNivel.Descripción);
+            EXIT(recNivel.Descripción);
     end;
 
     procedure TraerDescripcionTipoEvento(): Text[100]
@@ -442,7 +442,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recTipoEvento: Record 67010;
     begin
         IF recTipoEvento.GET(Solicitud."Tipo de Evento") THEN
-          EXIT(recTipoEvento.Descripcion);
+            EXIT(recTipoEvento.Descripcion);
     end;
 
     procedure TraerNivelDocente(): Text[100]
@@ -451,8 +451,8 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recNivel: Record 67022;
     begin
         IF recDocente.GET(Asistentes."Cod. Docente") THEN
-          IF recNivel.GET(recDocente."Nivel Docente") THEN
-            EXIT(recNivel.Descripción);
+            IF recNivel.GET(recDocente."Nivel Docente") THEN
+                EXIT(recNivel.Descripción);
     end;
 }
 

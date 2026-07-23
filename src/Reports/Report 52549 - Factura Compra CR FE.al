@@ -8,7 +8,7 @@ report 52549 "Factura Compra CR FE"
     {
         dataitem("Purch. Inv. Header"; 122)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Buy-from Vendor No.", "Pay-to Vendor No.", "No. Printed";
             column(No_PurchInvHeader; "No.")
@@ -224,9 +224,9 @@ report 52549 "Factura Compra CR FE"
                     }
                     dataitem("Purch. Inv. Line"; 123)
                     {
-                        DataItemLink = Document No.=FIELD(No.);
+                        DataItemLink = "Document No." = FIELD("No.");
                         DataItemLinkReference = "Purch. Inv. Header";
-                        DataItemTableView = SORTING(Document No., Line No.);
+                        DataItemTableView = SORTING("Document No.", "Line No.");
                         column(AmountExclInvDisc; AmountExclInvDisc)
                         {
                         }

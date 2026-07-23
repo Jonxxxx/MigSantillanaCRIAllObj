@@ -7,7 +7,7 @@ report 56034 "Elimina Transferencias"
     {
         dataitem("Transfer Header"; 5740)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
 
             trigger OnAfterGetRecord()

@@ -17,7 +17,7 @@ report 52543 "Factura Santillana CR FE"
     {
         dataitem("Sales Invoice Header"; 112)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
             column(Salesperson_Code________VendorName; "Salesperson Code" + ' ' + VendorName)
@@ -187,8 +187,8 @@ report 52543 "Factura Santillana CR FE"
             }
             dataitem("Sales Invoice Line"; 113)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.);
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
                 UseTemporary = false;
                 column(Sales_Invoice_Line__No__; "No.")
                 {

@@ -7,7 +7,7 @@ report 56026 "Split Sales Item Charge"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING("Document Type", Document No., Line No.);
+            DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
 
             trigger OnPostDataItem()
             begin

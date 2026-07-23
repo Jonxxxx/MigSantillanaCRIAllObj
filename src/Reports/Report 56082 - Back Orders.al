@@ -11,7 +11,7 @@ report 56082 "Back Orders"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING("Document Type", Type, No., Variant Code, Drop Shipment, Location Code, Shipment Date)
+            DataItemTableView = SORTING("Document Type", Type, "No.", "Variant Code", Drop Shipment, Location Code, Shipment Date)
                                 ORDER(Ascending)
                                 WHERE("Document Type" = FILTER(Order),
                                       Type = FILTER(Item));
@@ -131,7 +131,7 @@ report 56082 "Back Orders"
         }
         dataitem("Transfer Line"; 5741)
         {
-            DataItemTableView = SORTING(Item No.)
+            DataItemTableView = SORTING("Item No.")
                                 ORDER(Ascending);
             RequestFilterFields = "Document No.", "Item No.";
             column(Transfer_Line__Document_No__; "Document No.")

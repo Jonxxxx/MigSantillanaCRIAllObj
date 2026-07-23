@@ -10,7 +10,7 @@ report 51007 "Transfer Receipt (Consig)"
     {
         dataitem("Transfer Receipt Header"; 5746)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Transfer-from Code";
             RequestFilterHeading = 'Posted Transfer Receipt';
             column(Transfer_Receipt_Header_No_; "No.")
@@ -188,9 +188,9 @@ report 51007 "Transfer Receipt (Consig)"
                     }
                     dataitem("Transfer Receipt Line"; 5747)
                     {
-                        DataItemLink = Document No.=FIELD(No.);
+                        DataItemLink = "Document No." = FIELD("No.");
                         DataItemLinkReference = "Transfer Receipt Header";
-                        DataItemTableView = SORTING(Document No., Line No.);
+                        DataItemTableView = SORTING("Document No.", "Line No.");
                         column(Transfer_Receipt_Line__Item_No__; "Item No.")
                         {
                         }

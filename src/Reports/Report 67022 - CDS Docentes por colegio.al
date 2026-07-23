@@ -10,8 +10,8 @@ report 67022 "CDS Docentes por colegio"
         dataitem("Colegio - Docentes"; 67043)
         {
             CalcFields = Nombre colegio;
-            DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", Apellido paterno)
-                                WHERE("Pertenece al CDS" = CONST(Yes));
+            DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", "Apellido paterno")
+                                WHERE("Pertenece al CDS" = CONST(True));
             RequestFilterFields = "Cod. Colegio";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

@@ -6,7 +6,7 @@ report 67000 "Copia productos"
     {
         dataitem(Item; 27)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Global Dimension 1 Code", Edicion, "Sub Familia";
 
             trigger OnAfterGetRecord()

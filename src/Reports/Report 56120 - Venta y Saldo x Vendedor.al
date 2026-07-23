@@ -13,7 +13,7 @@ report 56120 "Venta y Saldo x Vendedor"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 CalcFields = Original Amt. (LCY),Remaining Amt. (LCY);
-                DataItemLink = Salesperson Code=FIELD(Code);
+                DataItemLink = "Salesperson Code" = FIELD(Code);
                 DataItemTableView = SORTING("Salesperson Code", "Posting Date")
                                     WHERE("Document Type" = FILTER(Invoice | Credit Memo));
 
@@ -58,7 +58,7 @@ report 56120 "Venta y Saldo x Vendedor"
         }
         dataitem("TMP: Ventas x Vend. - Zona"; 50005)
         {
-            DataItemTableView = SORTING("Cod. Vendedor", "Cod. Zona", Entry No.);
+            DataItemTableView = SORTING("Cod. Vendedor", "Cod. Zona", "Entry No.");
 
             trigger OnPostDataItem()
             begin

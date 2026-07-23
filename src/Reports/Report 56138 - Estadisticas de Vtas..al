@@ -335,7 +335,7 @@ report 56138 "Estadisticas de Vtas."
             }
             dataitem("Sales Invoice Header";112)
             {
-                DataItemLink = No.=FIELD(Document No.);
+                DataItemLink = "No."=FIELD("Document No.");
                 RequestFilterFields = "Categoria Pedido Venta";
             }
 

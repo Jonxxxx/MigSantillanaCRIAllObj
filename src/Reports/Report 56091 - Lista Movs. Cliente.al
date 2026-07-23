@@ -9,7 +9,7 @@ report 56091 "Lista Movs. Cliente"
     {
         dataitem("Cust. Ledger Entry"; 21)
         {
-            DataItemTableView = SORTING(Customer No., Posting Date, Currency Code)
+            DataItemTableView = SORTING("Customer No.", "Posting Date", Currency Code)
                                 ORDER(Ascending)
                                 WHERE("Document Type" = FILTER(Invoice | Credit Memo|' '));
             RequestFilterFields = "Customer No.", "Posting Date", "Document Type";

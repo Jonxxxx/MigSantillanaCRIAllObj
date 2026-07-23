@@ -14,7 +14,7 @@ report 52505 "Customer - Detail Trial Bal CR"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Name", "Customer Posting Group", "Date Filter";
             column(TodayFormatted; FORMAT(TODAY))
@@ -138,12 +138,12 @@ report 52505 "Customer - Detail Trial Bal CR"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Customer No.=FIELD(No.),
-                               Posting Date=FIELD(Date Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Date Filter=FIELD(Date Filter);
-                DataItemTableView = SORTING(Customer No.,Posting Date);
+                DataItemLink = "Customer No." = FIELD("No."),
+                               Posting Date=FIELD("Date Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Date Filter=FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.","Posting Date");
                 column(PostDate_CustLedgEntry;FORMAT("Posting Date"))
                 {
                 }
@@ -185,8 +185,8 @@ report 52505 "Customer - Detail Trial Bal CR"
                 }
                 dataitem("Detailed Cust. Ledg. Entry";379)
                 {
-                    DataItemLink = Cust. Ledger Entry No.=FIELD(Entry No.);
-                    DataItemTableView = SORTING(Cust. Ledger Entry No.,Entry Type,Posting Date)
+                    DataItemLink = "Cust. Ledger Entry No."=FIELD("Entry No.");
+                    DataItemTableView = SORTING("Cust. Ledger Entry No.",Entry Type,Posting Date)
                                         WHERE("Entry Type"=FILTER(Appln. Rounding|Correction of Remaining Amount));
                     column(EntryType_DtldCustLedgEntry;FORMAT("Entry Type"))
                     {

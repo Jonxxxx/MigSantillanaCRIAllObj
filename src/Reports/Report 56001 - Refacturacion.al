@@ -7,13 +7,13 @@ report 56001 Refacturacion
     {
         dataitem("Sales Invoice Header"; 112)
         {
-            DataItemTableView = SORTING(No.)
-                                WHERE(Refacturar = CONST(Yes));
+            DataItemTableView = SORTING("No.")
+                                WHERE(Refacturar = CONST(True));
             RequestFilterFields = "No.", "Posting Date";
             dataitem("Sales Invoice Line"; 113)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.)
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Type = CONST(Item),
                                           No.=FILTER(<>''));
 

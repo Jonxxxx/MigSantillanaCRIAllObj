@@ -8,7 +8,7 @@ report 56092 "Antiguedad Saldo Cliente"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -213,8 +213,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCustNoVencido; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporteNoVencido; wImporteNoVencido)
                 {
@@ -269,8 +269,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCust30; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporte30; wImporte30)
@@ -330,8 +330,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCust60; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias60; wDias60)
@@ -391,8 +391,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCust90; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias90; wDias90)
@@ -452,8 +452,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCust120; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias120; wDias120)
@@ -513,8 +513,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCust150; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias150; wDias150)
@@ -574,8 +574,8 @@ report 56092 "Antiguedad Saldo Cliente"
             }
             dataitem(MovCustMasDe180; 379)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Entry Type, Currency Code)
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporte180; wImporte180)

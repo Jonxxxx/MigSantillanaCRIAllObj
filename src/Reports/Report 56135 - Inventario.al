@@ -10,7 +10,7 @@ report 56135 Inventario
         dataitem(Item; 27)
         {
             CalcFields = Qty. on Purch. Order, Qty. on Sales Order;
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.", "Date Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

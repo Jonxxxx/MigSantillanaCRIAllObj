@@ -9,7 +9,7 @@ report 56073 "Consignacion por categoria"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING("Item Category Code", "Posting Date", Item No., Location Code)
+            DataItemTableView = SORTING("Item Category Code", "Posting Date", "Item No.", "Location Code")
                                 ORDER(Ascending);
             RequestFilterFields = "Item Category Code", "Posting Date", "Item No.", "Location Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

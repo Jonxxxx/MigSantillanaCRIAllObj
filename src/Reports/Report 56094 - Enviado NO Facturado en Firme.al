@@ -9,7 +9,7 @@ report 56094 "Enviado NO Facturado en Firme"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING(Document No.)
+            DataItemTableView = SORTING("Document No.")
                                 ORDER(Ascending);
             RequestFilterFields = "Sell-to Customer No.", "Document No.", "Qty. Shipped Not Invoiced", "Shipment Date";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

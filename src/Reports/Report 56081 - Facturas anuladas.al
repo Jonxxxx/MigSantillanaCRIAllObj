@@ -15,7 +15,7 @@ report 56081 "Facturas anuladas"
         dataitem("Cust. Ledger Entry"; 21)
         {
             CalcFields = Amount;
-            DataItemTableView = SORTING(Document No., Document Type, Customer No.)
+            DataItemTableView = SORTING("Document No.", "Document Type", Customer No.)
                                 WHERE(Open = FILTER(No));
             RequestFilterFields = "Document No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

@@ -129,7 +129,7 @@ report 56024 "Guia de Transporte Resumida"
             }
             dataitem("Lin. Hoja de Ruta Reg."; 56023)
             {
-                DataItemLink = No. Hoja Ruta=FIELD(No. Hoja Ruta);
+                DataItemLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 DataItemTableView = SORTING("No. Hoja Ruta", "No. Linea")
                                     ORDER(Ascending);
                 column(Lin__Hoja_de_Ruta_Reg___Cod__Cliente_; "Cod. Cliente")

@@ -9,7 +9,7 @@ report 56093 "Venta a Consignacion por item"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING(Item No., Posting Date);
+            DataItemTableView = SORTING("Item No.", "Posting Date");
             RequestFilterFields = "Item No.", "Posting Date", "Location Code", "Pedido Consignacion";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

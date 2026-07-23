@@ -12,7 +12,7 @@ report 52504 "Purchase Order CR"
     {
         dataitem("Purchase Header"; 38)
         {
-            DataItemTableView = SORTING("Document Type", No.)
+            DataItemTableView = SORTING("Document Type", "No.")
                                 WHERE("Document Type" = CONST(Order));
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Buy-from Vendor No.", "Pay-to Vendor No.", "No. Printed";
@@ -193,9 +193,9 @@ report 52504 "Purchase Order CR"
                     }
                     dataitem("Purchase Line"; 39)
                     {
-                        DataItemLink = Document No.=FIELD(No.);
+                        DataItemLink = "Document No." = FIELD("No.");
                         DataItemLinkReference = "Purchase Header";
-                        DataItemTableView = SORTING("Document Type", Document No., Line No.)
+                        DataItemTableView = SORTING("Document Type", "Document No.", "Line No.")
                                             WHERE("Document Type" = CONST(Order));
                         column(AmountExclInvDisc; AmountExclInvDisc)
                         {

@@ -8,7 +8,7 @@ report 56200 "Enviar IRM"
     {
         dataitem(Employee; 5200)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
 
             trigger OnAfterGetRecord()

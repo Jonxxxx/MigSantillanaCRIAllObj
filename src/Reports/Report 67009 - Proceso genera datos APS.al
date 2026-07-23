@@ -6,11 +6,11 @@ report 67009 "Proceso genera datos APS"
     {
         dataitem(Contact; 5050)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             dataitem("Colegio - Adopciones Detalle"; 67053)
             {
-                DataItemLink = Cod. Colegio=FIELD(No.);
-                DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", Cod. Grado, Cod. Turno, Cod. Promotor, Cod. Producto);
+                DataItemLink = "Cod. Colegio" = FIELD("No.");
+                DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto);
 
                 trigger OnAfterGetRecord()
                 begin

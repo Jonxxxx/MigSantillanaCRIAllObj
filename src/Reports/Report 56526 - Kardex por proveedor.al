@@ -10,7 +10,7 @@ report 56526 "Kardex por proveedor"
     {
         dataitem(Vendor; 23)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Name", "Vendor Posting Group", "Date Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -120,12 +120,12 @@ report 56526 "Kardex por proveedor"
             }
             dataitem("Vendor Ledger Entry"; 25)
             {
-                DataItemLink = Vendor No.=FIELD(No.),
-                               Posting Date=FIELD(Date Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Date Filter=FIELD(Date Filter);
-                DataItemTableView = SORTING(Vendor No.,Posting Date);
+                DataItemLink = "Vendor No." = FIELD("No."),
+                               Posting Date=FIELD("Date Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Date Filter=FIELD("Date Filter");
+                DataItemTableView = SORTING("Vendor No.","Posting Date");
                 column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY__;StartBalanceLCY + "Amount (LCY)")
                 {
                     AutoFormatType = 1;

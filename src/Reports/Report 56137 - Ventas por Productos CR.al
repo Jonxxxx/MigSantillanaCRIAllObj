@@ -60,8 +60,8 @@ report 56137 "Ventas por Productos CR"
             }
             dataitem("Value Entry"; 5802)
             {
-                DataItemLink = Item No.=FIELD(No.);
-                DataItemTableView = SORTING(Item No., Posting Date, Item Ledger Entry Type, Entry Type, Variance Type, Item Charge No., Location Code, Variant Code)
+                DataItemLink = "Item No." = FIELD("No.");
+                DataItemTableView = SORTING("Item No.", "Posting Date", Item Ledger Entry Type, Entry Type, Variance Type, Item Charge No., Location Code, Variant Code)
                                     WHERE("Item Ledger Entry Type" = FILTER(Sale));
                 RequestFilterFields = "Item No.", "Posting Date", "Source No.", "Document No.", "Gen. Bus. Posting Group", "Gen. Prod. Posting Group";
                 column(Cost_Amount__Actual____1; "Cost Amount (Actual)" * -1)

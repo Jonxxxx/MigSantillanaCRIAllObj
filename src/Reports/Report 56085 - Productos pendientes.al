@@ -9,7 +9,7 @@ report 56085 "Productos pendientes"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING("Document Type", Document No., Line No.);
+            DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }

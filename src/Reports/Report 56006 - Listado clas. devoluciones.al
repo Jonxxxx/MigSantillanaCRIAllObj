@@ -8,7 +8,7 @@ report 56006 "Listado clas. devoluciones"
     {
         dataitem("Cab. clas. devolucion"; 56025)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -81,8 +81,8 @@ report 56006 "Listado clas. devoluciones"
             }
             dataitem("Lin. clas. devoluciones"; 56026)
             {
-                DataItemLink = No. Documento=FIELD(No.);
-                DataItemTableView = SORTING("No. Documento", Line No.);
+                DataItemLink = "No. Documento" = FIELD("No.");
+                DataItemTableView = SORTING("No. Documento", "Line No.");
                 column(Lin__pre_Devoluciones__Receiving_date_; "Receiving date")
                 {
                 }

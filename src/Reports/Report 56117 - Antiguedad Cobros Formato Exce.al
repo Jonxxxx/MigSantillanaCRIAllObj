@@ -153,8 +153,8 @@ report 56117 "Antiguedad Cobros Formato Exce"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Posting Date, Currency Code);
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Currency Code);
 
                 trigger OnAfterGetRecord()
                 var
@@ -184,9 +184,9 @@ report 56117 "Antiguedad Cobros Formato Exce"
             }
             dataitem(OpenCustLedgEntry; 21)
             {
-                DataItemLink = Customer No.=FIELD(No.);
-                DataItemTableView = SORTING(Customer No., Open, Positive, Due Date, Currency Code)
-                                    WHERE(Open = CONST(Yes));
+                DataItemLink = "Customer No." = FIELD("No.");
+                DataItemTableView = SORTING("Customer No.", Open, Positive, "Due Date", Currency Code)
+                                    WHERE(Open = CONST(True));
 
                 trigger OnAfterGetRecord()
                 begin

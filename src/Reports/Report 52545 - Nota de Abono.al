@@ -7,7 +7,7 @@ report 52545 "Nota de Abono"
     {
         dataitem("Sales Cr.Memo Header"; 114)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.", "Sell-to Customer No.";
             column(Sales_Cr_Memo_Header__Bill_to_Name_; "Bill-to Name")
@@ -39,8 +39,8 @@ report 52545 "Nota de Abono"
             }
             dataitem("Sales Cr.Memo Line"; 115)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.);
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
                 column(Sales_Cr_Memo_Line__No__; "No.")
                 {
                 }

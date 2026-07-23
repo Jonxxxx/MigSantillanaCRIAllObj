@@ -9,7 +9,7 @@ report 56103 "Consignacion Producto/Cliente"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING(Item No., Positive, Location Code, Variant Code);
+            DataItemTableView = SORTING("Item No.", Positive, "Location Code", Variant Code);
             RequestFilterFields = "Item No.", Positive, "Location Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

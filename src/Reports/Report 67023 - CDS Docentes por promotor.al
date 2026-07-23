@@ -10,8 +10,8 @@ report 67023 "CDS Docentes por promotor"
         dataitem("Colegio - Docentes"; 67043)
         {
             CalcFields = Nombre Promotor;
-            DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", Apellido paterno)
-                                WHERE("Pertenece al CDS" = CONST(Yes));
+            DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", "Apellido paterno")
+                                WHERE("Pertenece al CDS" = CONST(True));
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }

@@ -15,7 +15,7 @@ report 52544 "Nota de Credito CR Electronica"
     {
         dataitem("Sales Cr.Memo Header"; 114)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
             column(Salesperson_Code________VendorName; "Salesperson Code" + ' ' + VendorName)
@@ -101,8 +101,8 @@ report 52544 "Nota de Credito CR Electronica"
             }
             dataitem("Sales Cr.Memo Line"; 115)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.);
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
                 column(Sales_Invoice_Line__No__; "No.")
                 {
                 }

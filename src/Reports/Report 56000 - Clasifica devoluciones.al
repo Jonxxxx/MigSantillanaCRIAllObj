@@ -9,8 +9,8 @@ report 56000 "Clasifica devoluciones"
     {
         dataitem(PreDev; 56025)
         {
-            DataItemTableView = SORTING(No.)
-                                WHERE(Closed = CONST(Yes));
+            DataItemTableView = SORTING("No.")
+                                WHERE(Closed = CONST(True));
             RequestFilterFields = "No.", "Customer no.", "Receipt date";
 
             trigger OnAfterGetRecord()

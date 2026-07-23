@@ -6,12 +6,12 @@ report 67008 "Proceso Facturacion Muestras"
     {
         dataitem("Transfer Receipt Header"; 5746)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Transfer-from Code", "Transfer-to Code", "Cod. Ubicacion Alm. Origen", "Desc. Ubic. Alm. Destino", "External Document No.", "Posting Date";
             dataitem("Transfer Receipt Line"; 5747)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Document No., Line No.);
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING("Document No.", "Line No.");
 
                 trigger OnAfterGetRecord()
                 begin

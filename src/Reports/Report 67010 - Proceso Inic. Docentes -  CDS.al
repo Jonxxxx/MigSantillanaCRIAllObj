@@ -6,7 +6,7 @@ report 67010 "Proceso Inic. Docentes -  CDS"
     {
         dataitem(Docentes; 67001)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
 
             trigger OnAfterGetRecord()

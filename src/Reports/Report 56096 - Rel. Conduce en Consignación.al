@@ -9,7 +9,7 @@ report 56096 "Rel. Conduce en Consignación"
     {
         dataitem("Transfer Shipment Header"; 5744)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Transfer-to Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

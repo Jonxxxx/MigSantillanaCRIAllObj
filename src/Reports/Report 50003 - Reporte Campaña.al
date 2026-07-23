@@ -28,50 +28,50 @@ report 50003 "Reporte Campaña"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Document No.=FIELD(No.),
-                               Posting Date=FIELD(Posting Date);
+                DataItemLink = "Document No." = FIELD("No."),
+                               Posting Date=FIELD("Posting Date");
                 DataItemTableView = ORDER(Ascending)
-                                    WHERE("Document Type"=CONST(Invoice));
+                                    WHERE("Document Type" = CONST(Invoice));
                 RequestFilterFields = "Posting Date";
-                column(CustomerNo_CustLedgerEntry;"Cust. Ledger Entry"."Customer No.")
+                column(CustomerNo_CustLedgerEntry; "Cust. Ledger Entry"."Customer No.")
                 {
                 }
-                column(PostingDate_CustLedgerEntry;"Cust. Ledger Entry"."Posting Date")
+                column(PostingDate_CustLedgerEntry; "Cust. Ledger Entry"."Posting Date")
                 {
                 }
-                column(DocumentType_CustLedgerEntry;"Cust. Ledger Entry"."Document Type")
+                column(DocumentType_CustLedgerEntry; "Cust. Ledger Entry"."Document Type")
                 {
                 }
-                column(DocumentNo_CustLedgerEntry;"Cust. Ledger Entry"."Document No.")
+                column(DocumentNo_CustLedgerEntry; "Cust. Ledger Entry"."Document No.")
                 {
                 }
-                column(Amount_CustLedgerEntry;"Cust. Ledger Entry".Amount)
+                column(Amount_CustLedgerEntry; "Cust. Ledger Entry".Amount)
                 {
                 }
-                column(CustomerPostingGroup_CustLedgerEntry;"Cust. Ledger Entry"."Customer Posting Group")
+                column(CustomerPostingGroup_CustLedgerEntry; "Cust. Ledger Entry"."Customer Posting Group")
                 {
                 }
-                dataitem("Detailed Cust. Ledg. Entry";379)
+                dataitem("Detailed Cust. Ledg. Entry"; 379)
                 {
-                    DataItemLink = Cust. Ledger Entry No.=FIELD(Entry No.);
+                    DataItemLink = "Cust. Ledger Entry No." = FIELD("Entry No.");
                     DataItemTableView = ORDER(Ascending);
                     RequestFilterFields = "Posting Date";
-                    column(PostingDate_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry"."Posting Date")
+                    column(PostingDate_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry"."Posting Date")
                     {
                     }
-                    column(DocumentType_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry"."Document Type")
+                    column(DocumentType_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry"."Document Type")
                     {
                     }
-                    column(DocumentNo_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry"."Document No.")
+                    column(DocumentNo_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry"."Document No.")
                     {
                     }
-                    column(Amount_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry".Amount)
+                    column(Amount_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry".Amount)
                     {
                     }
-                    column(CustomerNo_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry"."Customer No.")
+                    column(CustomerNo_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry"."Customer No.")
                     {
                     }
-                    column(GrupoContable_DetailedCustLedgEntry;"Detailed Cust. Ledg. Entry"."Grupo Contable")
+                    column(GrupoContable_DetailedCustLedgEntry; "Detailed Cust. Ledg. Entry"."Grupo Contable")
                     {
                     }
                 }

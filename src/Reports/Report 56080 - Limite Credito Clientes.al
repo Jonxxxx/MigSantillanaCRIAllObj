@@ -10,7 +10,7 @@ report 56080 "Limite Credito Clientes"
         dataitem(Customer; 18)
         {
             CalcFields = Balance (LCY);
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

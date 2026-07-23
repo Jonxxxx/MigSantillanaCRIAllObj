@@ -19,7 +19,7 @@ report 50045 "Cheque Santillana BPD"
     {
         dataitem(VoidGenJnlLine; 81)
         {
-            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", Posting Date, Document No.);
+            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
             RequestFilterFields = "Journal Template Name", "Journal Batch Name", "Posting Date";
 
             trigger OnAfterGetRecord()
@@ -53,7 +53,7 @@ report 50045 "Cheque Santillana BPD"
         }
         dataitem(TestGenJnlLine; 81)
         {
-            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", Line No.);
+            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", "Line No.");
 
             trigger OnAfterGetRecord()
             begin
@@ -147,7 +147,7 @@ report 50045 "Cheque Santillana BPD"
         }
         dataitem(GenJnlLine; 81)
         {
-            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", Posting Date, Document No.);
+            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", "Posting Date", "Document No.");
             column(GenJnlLine_Journal_Template_Name; "Journal Template Name")
             {
             }

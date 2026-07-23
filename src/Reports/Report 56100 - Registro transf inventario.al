@@ -10,7 +10,7 @@ report 56100 "Registro transf inventario"
     {
         dataitem("Item Register"; 46)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Source Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -72,7 +72,7 @@ report 56100 "Registro transf inventario"
             }
             dataitem("Item Ledger Entry"; 32)
             {
-                DataItemTableView = SORTING(Entry No.);
+                DataItemTableView = SORTING("Entry No.");
                 RequestFilterFields = "Item No.", "Entry Type", "Location Code", "Posting Date";
                 column(Item_Ledger_Entry__Posting_Date_; "Posting Date")
                 {

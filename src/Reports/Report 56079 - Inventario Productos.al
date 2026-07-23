@@ -10,7 +10,7 @@ report 56079 "Inventario Productos"
         dataitem(Item; 27)
         {
             CalcFields = Inventory;
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 WHERE(Blocked = FILTER(No));
             RequestFilterFields = Inventory, "Location Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

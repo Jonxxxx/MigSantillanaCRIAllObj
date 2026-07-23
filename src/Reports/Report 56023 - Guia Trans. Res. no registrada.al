@@ -60,7 +60,7 @@ report 56023 "Guia Trans. Res. no registrada"
             }
             dataitem("Lin. Hoja de Ruta"; 56021)
             {
-                DataItemLink = No. Hoja Ruta=FIELD(No. Hoja Ruta);
+                DataItemLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 column(Codigo_Cliente_Caption; "Lin. Hoja de Ruta"."Cod. Cliente")
                 {
                 }

@@ -11,9 +11,9 @@ report 50048 "Formato DPP x Clientes v2"
     {
         dataitem("Cust. Ledger Entry"; 21)
         {
-            DataItemTableView = SORTING(Closed by Entry No.)
+            DataItemTableView = SORTING("Closed by Entry No.")
                                 ORDER(Descending)
-                                WHERE(Open = CONST(No),
+                                WHERE(Open = CONST(False),
                                       Pmt. Disc. Given (LCY)=FILTER(>0),
                                       No. Comprobante Fiscal DPP=FILTER(<>''));
             RequestFilterFields = "Customer No.";

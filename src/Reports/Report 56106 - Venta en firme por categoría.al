@@ -9,7 +9,7 @@ report 56106 "Venta en firme por categoría"
     {
         dataitem("Value Entry"; 5802)
         {
-            DataItemTableView = SORTING("Cod. Oferta", "Posting Date", Item Ledger Entry Type)
+            DataItemTableView = SORTING("Cod. Oferta", "Posting Date", "Item Ledger Entry Type")
                                 ORDER(Ascending);
             RequestFilterFields = "Cod. Oferta", "Posting Date", "Source No.", "Item Ledger Entry Type", "Global Dimension 1 Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))

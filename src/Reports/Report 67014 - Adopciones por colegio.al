@@ -9,7 +9,7 @@ report 67014 "Adopciones por colegio"
     {
         dataitem(Adopciones; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Promotor", Cod. Producto);
+            DataItemTableView = SORTING("Cod. Colegio", "Cod. Promotor", "Cod. Producto");
             RequestFilterFields = "Cod. Colegio", "Cod. Promotor";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

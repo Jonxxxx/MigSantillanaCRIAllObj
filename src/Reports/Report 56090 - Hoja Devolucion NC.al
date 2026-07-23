@@ -14,7 +14,7 @@ report 56090 "Hoja Devolucion NC"
     {
         dataitem("Sales Header"; 36)
         {
-            DataItemTableView = SORTING("Document Type", No.)
+            DataItemTableView = SORTING("Document Type", "No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
             column(Sales_Header__Sell_to_Customer_Name_; "Sell-to Customer Name")
@@ -82,57 +82,57 @@ report 56090 "Hoja Devolucion NC"
             }
             dataitem("Sales Line"; 37)
             {
-                DataItemLink = Document Type=FIELD(Document Type),
-                               Document No.=FIELD(No.);
-                DataItemTableView = SORTING(No.,Type)
+                DataItemLink = "Document Type" = FIELD("Document Type"),
+                               Document No.=FIELD("No.");
+                DataItemTableView = SORTING("No.", Type)
                                     ORDER(Ascending)
-                                    WHERE(Type=FILTER(Item));
-                column(Sales_Line__No__;"No.")
+                                    WHERE(Type = FILTER(Item));
+                column(Sales_Line__No__; "No.")
                 {
                 }
-                column(Sales_Line_Description;Description)
+                column(Sales_Line_Description; Description)
                 {
                 }
-                column(Sales_Line__Sales_Line__Quantity;"Sales Line".Quantity)
+                column(Sales_Line__Sales_Line__Quantity; "Sales Line".Quantity)
                 {
                 }
-                column(txtComentario_1_;txtComentario[1])
+                column(txtComentario_1_; txtComentario[1])
                 {
                 }
-                column(txtComentario_2_;txtComentario[2])
+                column(txtComentario_2_; txtComentario[2])
                 {
                 }
-                column(txtComentario_3_;txtComentario[3])
+                column(txtComentario_3_; txtComentario[3])
                 {
                 }
-                column(txtComentario_4_;txtComentario[4])
+                column(txtComentario_4_; txtComentario[4])
                 {
                 }
-                column(TOTAL_BULTOSCaption;TOTAL_BULTOSCaptionLbl)
+                column(TOTAL_BULTOSCaption; TOTAL_BULTOSCaptionLbl)
                 {
                 }
-                column(TOTAL_EJEMPLARES_DEVUELTOSCaption;TOTAL_EJEMPLARES_DEVUELTOSCaptionLbl)
+                column(TOTAL_EJEMPLARES_DEVUELTOSCaption; TOTAL_EJEMPLARES_DEVUELTOSCaptionLbl)
                 {
                 }
-                column(Comentario_Caption;Comentario_CaptionLbl)
+                column(Comentario_Caption; Comentario_CaptionLbl)
                 {
                 }
-                column(SELLO_Y_NOMBRE_DEL_CLIENTECaption;SELLO_Y_NOMBRE_DEL_CLIENTECaptionLbl)
+                column(SELLO_Y_NOMBRE_DEL_CLIENTECaption; SELLO_Y_NOMBRE_DEL_CLIENTECaptionLbl)
                 {
                 }
-                column(NOMBRE_DE_QUIEN_RECOGECaption;NOMBRE_DE_QUIEN_RECOGECaptionLbl)
+                column(NOMBRE_DE_QUIEN_RECOGECaption; NOMBRE_DE_QUIEN_RECOGECaptionLbl)
                 {
                 }
-                column(FECHACaption;FECHACaptionLbl)
+                column(FECHACaption; FECHACaptionLbl)
                 {
                 }
-                column(Sales_Line_Document_Type;"Document Type")
+                column(Sales_Line_Document_Type; "Document Type")
                 {
                 }
-                column(Sales_Line_Document_No_;"Document No.")
+                column(Sales_Line_Document_No_; "Document No.")
                 {
                 }
-                column(Sales_Line_Line_No_;"Line No.")
+                column(Sales_Line_Line_No_; "Line No.")
                 {
                 }
             }
@@ -144,10 +144,10 @@ report 56090 "Hoja Devolucion NC"
                 //+139
                 //... Si sólo tuviera cabecera, lo saltamos.
                 lrSalesLine.RESET;
-                lrSalesLine.SETRANGE("Document Type","Document Type");
-                lrSalesLine.SETRANGE("Document No.","No.");
+                lrSalesLine.SETRANGE("Document Type", "Document Type");
+                lrSalesLine.SETRANGE("Document No.", "No.");
                 IF NOT lrSalesLine.FIND('-') THEN
-                  CurrReport.SKIP;
+                    CurrReport.SKIP;
                 //-139
 
                 //+139
@@ -155,15 +155,15 @@ report 56090 "Hoja Devolucion NC"
                 //-139
 
                 rComentario.RESET;
-                rComentario.SETRANGE("Document Type",rComentario."Document Type"::"Credit Memo");
-                rComentario.SETRANGE("Document Type","Document Type");
-                rComentario.SETRANGE(rComentario."No.","No.");
+                rComentario.SETRANGE("Document Type", rComentario."Document Type"::"Credit Memo");
+                rComentario.SETRANGE("Document Type", "Document Type");
+                rComentario.SETRANGE(rComentario."No.", "No.");
                 IF rComentario.FINDSET THEN
-                  REPEAT
-                    I += 1;
-                    txtComentario[I] := rComentario.Comment;
-                    rComentario.NEXT(1);
-                  UNTIL I = rComentario.COUNT;
+                    REPEAT
+                        I += 1;
+                        txtComentario[I] := rComentario.Comment;
+                        rComentario.NEXT(1);
+                    UNTIL I = rComentario.COUNT;
 
                 rCliente.GET("Sell-to Customer No.");
             end;
@@ -194,7 +194,7 @@ report 56090 "Hoja Devolucion NC"
     var
         rCliente: Record 18;
         rComentario: Record 44;
-        txtComentario: array [15] of Text[200];
+        txtComentario: array[15] of Text[200];
         I: Integer;
         rEmpresa: Record 79;
         CLIENTE_CaptionLbl: Label 'CLIENTE:';

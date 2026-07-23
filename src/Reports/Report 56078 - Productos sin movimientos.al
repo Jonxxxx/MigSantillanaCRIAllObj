@@ -9,7 +9,7 @@ report 56078 "Productos sin movimientos"
     {
         dataitem(Item; 27)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "Date Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

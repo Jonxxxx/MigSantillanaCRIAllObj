@@ -9,7 +9,7 @@ report 56130 "Seguimiento pedido Consignacio"
     {
         dataitem("Transfer Header"; 5740)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.", "Shipment Date", "Posting Date", "Transfer-to Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

@@ -8,8 +8,8 @@ report 56037 "Documentos generados clas. dev"
     {
         dataitem(PreDev; 56025)
         {
-            DataItemTableView = SORTING(No.)
-                                WHERE(Closed = CONST(Yes));
+            DataItemTableView = SORTING("No.")
+                                WHERE(Closed = CONST(True));
             column(COMPANYNAME; COMPANYNAME)
             {
             }
@@ -52,7 +52,7 @@ report 56037 "Documentos generados clas. dev"
         }
         dataitem(VentasClas; 56013)
         {
-            DataItemTableView = SORTING("No. clas. devoluciones", "Tipo documento", No. documento)
+            DataItemTableView = SORTING("No. clas. devoluciones", "Tipo documento", "No. documento")
                                 WHERE("Tipo documento" = CONST(Venta));
             column(COMPANYNAME_Control1000000002; COMPANYNAME)
             {
@@ -105,8 +105,8 @@ report 56037 "Documentos generados clas. dev"
             dataitem("Sales Header"; 36)
             {
                 CalcFields = Amount, Amount Including VAT;
-                DataItemLink = No.=FIELD(No. documento);
-                DataItemTableView = SORTING("Document Type", No.)
+                DataItemLink = "No." = FIELD("No. documento");
+                DataItemTableView = SORTING("Document Type", "No.")
                                     WHERE("Document Type" = CONST(Return Order));
                 column(Sales_Header__No__; "No.")
                 {
@@ -134,40 +134,40 @@ report 56037 "Documentos generados clas. dev"
                 }
                 dataitem("Sales Line"; 37)
                 {
-                    DataItemLink = Document Type=FIELD(Document Type),
-                                   Document No.=FIELD(No.);
-                    DataItemTableView = SORTING("Document Type",Document No.,Line No.);
-                    column(Sales_Line__No__;"No.")
+                    DataItemLink = "Document Type" = FIELD("Document Type"),
+                                   Document No.=FIELD("No.");
+                    DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
+                    column(Sales_Line__No__; "No.")
                     {
                     }
-                    column(Sales_Line_Description;Description)
+                    column(Sales_Line_Description; Description)
                     {
                     }
-                    column(Sales_Line__Unit_of_Measure_;"Unit of Measure")
+                    column(Sales_Line__Unit_of_Measure_; "Unit of Measure")
                     {
                     }
-                    column(Sales_Line_Quantity;Quantity)
+                    column(Sales_Line_Quantity; Quantity)
                     {
                     }
-                    column(Sales_Line__No__Caption;FIELDCAPTION("No."))
+                    column(Sales_Line__No__Caption; FIELDCAPTION("No."))
                     {
                     }
-                    column(Sales_Line_DescriptionCaption;FIELDCAPTION(Description))
+                    column(Sales_Line_DescriptionCaption; FIELDCAPTION(Description))
                     {
                     }
-                    column(Sales_Line__Unit_of_Measure_Caption;Sales_Line__Unit_of_Measure_CaptionLbl)
+                    column(Sales_Line__Unit_of_Measure_Caption; Sales_Line__Unit_of_Measure_CaptionLbl)
                     {
                     }
-                    column(Sales_Line_QuantityCaption;FIELDCAPTION(Quantity))
+                    column(Sales_Line_QuantityCaption; FIELDCAPTION(Quantity))
                     {
                     }
-                    column(Sales_Line_Document_Type;"Document Type")
+                    column(Sales_Line_Document_Type; "Document Type")
                     {
                     }
-                    column(Sales_Line_Document_No_;"Document No.")
+                    column(Sales_Line_Document_No_; "Document No.")
                     {
                     }
-                    column(Sales_Line_Line_No_;"Line No.")
+                    column(Sales_Line_Line_No_; "Line No.")
                     {
                     }
                 }
@@ -179,109 +179,109 @@ report 56037 "Documentos generados clas. dev"
                 SETRANGE("Fecha hora imp.", dtImpresion);
             end;
         }
-        dataitem(TransferClas;56013)
+        dataitem(TransferClas; 56013)
         {
-            DataItemTableView = SORTING("No. clas. devoluciones","Tipo documento",No. documento)
-                                WHERE("Tipo documento"=CONST(Transferencia));
-            column(COMPANYNAME_Control1000000005;COMPANYNAME)
+            DataItemTableView = SORTING("No. clas. devoluciones", "Tipo documento", "No. documento")
+                                WHERE("Tipo documento" = CONST(Transferencia));
+            column(COMPANYNAME_Control1000000005; COMPANYNAME)
             {
             }
-            column(TranferClas__No__pre_devolucion_;"No. clas. devoluciones")
+            column(TranferClas__No__pre_devolucion_; "No. clas. devoluciones")
             {
             }
-            column(Transfer_Header__No__Caption;Transfer_Header__No__CaptionLbl)
+            column(Transfer_Header__No__Caption; Transfer_Header__No__CaptionLbl)
             {
             }
-            column(Transfer_ReturnsCaption;Transfer_ReturnsCaptionLbl)
+            column(Transfer_ReturnsCaption; Transfer_ReturnsCaptionLbl)
             {
             }
-            column(Transfer_Header__Posting_Date_Caption;Transfer_Header__Posting_Date_CaptionLbl)
+            column(Transfer_Header__Posting_Date_Caption; Transfer_Header__Posting_Date_CaptionLbl)
             {
             }
-            column(Transfer_Header__Transfer_from_Code_Caption;Transfer_Header__Transfer_from_Code_CaptionLbl)
+            column(Transfer_Header__Transfer_from_Code_Caption; Transfer_Header__Transfer_from_Code_CaptionLbl)
             {
             }
-            column(Transfer_Header__Transfer_from_Name_Caption;Transfer_Header__Transfer_from_Name_CaptionLbl)
+            column(Transfer_Header__Transfer_from_Name_Caption; Transfer_Header__Transfer_from_Name_CaptionLbl)
             {
             }
-            column(Transfer_Header__Transfer_from_Address_Caption;Transfer_Header__Transfer_from_Address_CaptionLbl)
+            column(Transfer_Header__Transfer_from_Address_Caption; Transfer_Header__Transfer_from_Address_CaptionLbl)
             {
             }
-            column(TransferenciasCaption;TransferenciasCaptionLbl)
+            column(TransferenciasCaption; TransferenciasCaptionLbl)
             {
             }
-            column(Transfer_Header__Transfer_to_Code_Caption;Transfer_Header__Transfer_to_Code_CaptionLbl)
+            column(Transfer_Header__Transfer_to_Code_Caption; Transfer_Header__Transfer_to_Code_CaptionLbl)
             {
             }
-            column(Control1000000004Caption;Control1000000004CaptionLbl)
+            column(Control1000000004Caption; Control1000000004CaptionLbl)
             {
             }
-            column("Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033";Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033Lbl)
+            column("Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033"; Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033Lbl)
             {
             }
-            column("Pre_devolución_Caption_Control1000000025";Pre_devolución_Caption_Control1000000025Lbl)
+            column("Pre_devolución_Caption_Control1000000025"; Pre_devolución_Caption_Control1000000025Lbl)
             {
             }
-            column(TransferClas_Tipo_documento;"Tipo documento")
+            column(TransferClas_Tipo_documento; "Tipo documento")
             {
             }
-            column(TransferClas_No__documento;"No. documento")
+            column(TransferClas_No__documento; "No. documento")
             {
             }
-            dataitem("Transfer Header";5740)
+            dataitem("Transfer Header"; 5740)
             {
-                DataItemLink = No.=FIELD(No. documento);
-                DataItemTableView = SORTING(No.);
-                column(Transfer_Header__No__;"No.")
+                DataItemLink = "No." = FIELD("No. documento");
+                DataItemTableView = SORTING("No.");
+                column(Transfer_Header__No__; "No.")
                 {
                 }
-                column(Transfer_Header__Transfer_from_Code_;"Transfer-from Code")
+                column(Transfer_Header__Transfer_from_Code_; "Transfer-from Code")
                 {
                 }
-                column(Transfer_Header__Transfer_from_Name_;"Transfer-from Name")
+                column(Transfer_Header__Transfer_from_Name_; "Transfer-from Name")
                 {
                 }
-                column(Transfer_Header__Transfer_from_Address_;"Transfer-from Address")
+                column(Transfer_Header__Transfer_from_Address_; "Transfer-from Address")
                 {
                 }
-                column(Transfer_Header__Transfer_to_Code_;"Transfer-to Code")
+                column(Transfer_Header__Transfer_to_Code_; "Transfer-to Code")
                 {
                 }
-                column(Transfer_Header__Posting_Date_;"Posting Date")
+                column(Transfer_Header__Posting_Date_; "Posting Date")
                 {
                 }
-                dataitem("Transfer Line";5741)
+                dataitem("Transfer Line"; 5741)
                 {
-                    DataItemLink = Document No.=FIELD(No.);
-                    DataItemTableView = SORTING(Document No.,Line No.);
-                    column(Transfer_Line__Item_No__;"Item No.")
+                    DataItemLink = "Document No." = FIELD("No.");
+                    DataItemTableView = SORTING("Document No.", "Line No.");
+                    column(Transfer_Line__Item_No__; "Item No.")
                     {
                     }
-                    column(Transfer_Line_Description;Description)
+                    column(Transfer_Line_Description; Description)
                     {
                     }
-                    column(Transfer_Line__Unit_of_Measure_;"Unit of Measure")
+                    column(Transfer_Line__Unit_of_Measure_; "Unit of Measure")
                     {
                     }
-                    column(Transfer_Line_Quantity;Quantity)
+                    column(Transfer_Line_Quantity; Quantity)
                     {
                     }
-                    column(Transfer_Line__Item_No__Caption;FIELDCAPTION("Item No."))
+                    column(Transfer_Line__Item_No__Caption; FIELDCAPTION("Item No."))
                     {
                     }
-                    column(Transfer_Line_DescriptionCaption;FIELDCAPTION(Description))
+                    column(Transfer_Line_DescriptionCaption; FIELDCAPTION(Description))
                     {
                     }
-                    column(Transfer_Line__Unit_of_Measure_Caption;Transfer_Line__Unit_of_Measure_CaptionLbl)
+                    column(Transfer_Line__Unit_of_Measure_Caption; Transfer_Line__Unit_of_Measure_CaptionLbl)
                     {
                     }
-                    column(Transfer_Line_QuantityCaption;FIELDCAPTION(Quantity))
+                    column(Transfer_Line_QuantityCaption; FIELDCAPTION(Quantity))
                     {
                     }
-                    column(Transfer_Line_Document_No_;"Document No.")
+                    column(Transfer_Line_Document_No_; "Document No.")
                     {
                     }
-                    column(Transfer_Line_Line_No_;"Line No.")
+                    column(Transfer_Line_Line_No_; "Line No.")
                     {
                     }
                 }
@@ -357,11 +357,11 @@ report 56037 "Documentos generados clas. dev"
         recDocClas.RESET;
         recDocClas.SETRANGE("No. clas. devoluciones", PreDev."No.");
         IF recDocClas.FINDSET THEN
-          REPEAT
-            recDocClas."Usuario imp." := USERID;
-            recDocClas."Fecha hora imp." := dtImpresion;
-            recDocClas.MODIFY;
-          UNTIL recDocClas.NEXT = 0;
+            REPEAT
+                recDocClas."Usuario imp." := USERID;
+                recDocClas."Fecha hora imp." := dtImpresion;
+                recDocClas.MODIFY;
+            UNTIL recDocClas.NEXT = 0;
     end;
 
     procedure PasarPreDev(var recPrmPreDev: Record 56025 temporary)
@@ -371,10 +371,10 @@ report 56037 "Documentos generados clas. dev"
 
         recPrmPreDev.RESET;
         IF recPrmPreDev.FINDSET THEN
-          REPEAT
-            recTmpPreDev := recPrmPreDev;
-            recTmpPreDev.INSERT;
-          UNTIL recPrmPreDev.NEXT = 0;
+            REPEAT
+                recTmpPreDev := recPrmPreDev;
+                recTmpPreDev.INSERT;
+            UNTIL recPrmPreDev.NEXT = 0;
     end;
 }
 

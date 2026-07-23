@@ -100,7 +100,7 @@ report 67027 "Control Asistencia"
                     DataItemLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
                                    Cod. Expositor=FIELD(Expositor),
                                    Secuencia=FIELD(Secuencia),
-                                   Fecha programacion=FIELD(Fecha programacion);
+                                   Fecha programacion=FIELD("Fecha programacion");
                     DataItemTableView = SORTING("No. Solicitud",Cod. Taller - Evento,Cod. Expositor,Secuencia,Cod. Docente,Fecha programacion);
                     column(Asistentes_Talleres_y_Eventos_Confirmado;Confirmado)
                     {

@@ -10,7 +10,7 @@ report 56533 "Obligaciones pendientes"
     {
         dataitem(Vendor; 23)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Name", "Vendor Posting Group";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -93,12 +93,12 @@ report 56533 "Obligaciones pendientes"
             }
             dataitem("Vendor Ledger Entry"; 25)
             {
-                DataItemLink = Vendor No.=FIELD(No.),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter),
-                               Currency Code=FIELD(Currency Filter);
-                DataItemTableView = SORTING(Vendor No.,Open,Positive,Due Date,Currency Code)
-                                    WHERE(Open=CONST(Yes));
+                DataItemLink = "Vendor No." = FIELD("No."),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
+                               Currency Code=FIELD("Currency Filter");
+                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date",Currency Code)
+                                    WHERE(Open=CONST(True));
                 column(Vendor_Ledger_Entry__Document_Type_;"Document Type")
                 {
                 }

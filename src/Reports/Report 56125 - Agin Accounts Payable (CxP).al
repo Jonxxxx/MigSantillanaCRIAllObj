@@ -227,10 +227,10 @@ report 56125 "Agin Accounts Payable (CxP)"
             }
             dataitem("Vendor Ledger Entry"; 25)
             {
-                DataItemLink = Vendor No.=FIELD(No.),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter);
-                DataItemTableView = SORTING(Vendor No.,Open,Positive,Due Date);
+                DataItemLink = "Vendor No." = FIELD("No."),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter");
+                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date");
 
                 trigger OnAfterGetRecord()
                 begin
@@ -406,7 +406,7 @@ report 56125 "Agin Accounts Payable (CxP)"
                 }
                 dataitem("Purch. Inv. Line";123)
                 {
-                    DataItemTableView = SORTING(Document No.,Line No.)
+                    DataItemTableView = SORTING("Document No.","Line No.")
                                         ORDER(Ascending);
                     column(Posted_Document_Dimension__Dimension_Value_Code_;DimSetEntry."Dimension Value Code")
                     {

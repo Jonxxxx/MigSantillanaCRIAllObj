@@ -12,7 +12,7 @@ report 67003 "Genera archivo adopciones"
     {
         dataitem("Colegio - Adopciones Detalle"; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", Cod. Grado, Cod. Turno, Cod. Promotor, Cod. Producto)
+            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto)
                                 WHERE("Cantidad Alumnos" = FILTER(<> 0));
 
             trigger OnAfterGetRecord()

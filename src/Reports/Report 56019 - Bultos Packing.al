@@ -7,7 +7,7 @@ report 56019 "Bultos Packing"
     {
         dataitem("Lin. Packing"; 56031)
         {
-            DataItemTableView = SORTING(No., No. Caja);
+            DataItemTableView = SORTING("No.", "No. Caja");
             RequestFilterFields = "No.", "No. Caja";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

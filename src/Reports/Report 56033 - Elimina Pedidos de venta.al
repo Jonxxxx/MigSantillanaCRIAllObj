@@ -7,9 +7,9 @@ report 56033 "Elimina Pedidos de venta"
     {
         dataitem("Sales Header"; 36)
         {
-            DataItemTableView = SORTING("Document Type", No.)
+            DataItemTableView = SORTING("Document Type", "No.")
                                 WHERE("Document Type" = CONST(Order),
-                                      Pre pedido=CONST(No));
+                                      Pre pedido=CONST(False));
             RequestFilterFields = "No.", "Posting Date";
 
             trigger OnAfterGetRecord()

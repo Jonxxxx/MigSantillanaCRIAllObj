@@ -9,7 +9,7 @@ report 56133 "Informe Detalle Consignación"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING(Item No., Open, Variant Code, Positive, Location Code, Posting Date, Expiration Date, Lot No., Serial No.);
+            DataItemTableView = SORTING("Item No.", Open, "Variant Code", Positive, Location Code, Posting Date, Expiration Date, Lot No., Serial No.);
             RequestFilterFields = "Item No.", "Location Code", "Posting Date", "Document No.", "Entry Type";
             column(PageConst_________FORMAT_CurrReport_PAGENO_; PageConst + ' ' + FORMAT(CurrReport.PAGENO))
             {

@@ -7,9 +7,9 @@ report 56038 "Borrar devolu. procesadas"
     {
         dataitem(PreDev; 56025)
         {
-            DataItemTableView = SORTING(No.)
-                                WHERE(Closed = CONST(Yes),
-                                      Procesada = CONST(Yes));
+            DataItemTableView = SORTING("No.")
+                                WHERE(Closed = CONST(True),
+                                      Procesada = CONST(True));
             RequestFilterFields = "No.", "Customer no.", "Receipt date";
 
             trigger OnAfterGetRecord()

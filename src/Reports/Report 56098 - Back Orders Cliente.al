@@ -137,7 +137,7 @@ report 56098 "Back Orders Cliente"
         }
         dataitem("Transfer Line"; 5741)
         {
-            DataItemTableView = SORTING(Item No.)
+            DataItemTableView = SORTING("Item No.")
                                 ORDER(Ascending);
             RequestFilterFields = "Document No.", "Item No.", "Transfer-to Code", "Shipment Date", "Transfer-from Code", "Shortcut Dimension 1 Code", "Outstanding Quantity";
             column(Transfer_Line__Document_No__; "Document No.")

@@ -21,7 +21,7 @@ report 56029 "Etiqueta Cajas"
         {
             dataitem("Lin. Packing Registrada"; 56034)
             {
-                DataItemLink = No.=FIELD(No.);
+                DataItemLink = "No." = FIELD("No.");
 
                 trigger OnAfterGetRecord()
                 begin

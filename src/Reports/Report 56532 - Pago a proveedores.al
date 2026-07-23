@@ -10,7 +10,7 @@ report 56532 "Pago a proveedores"
     {
         dataitem(Vendor; 23)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Name", "Vendor Posting Group", "Date Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -109,12 +109,12 @@ report 56532 "Pago a proveedores"
             }
             dataitem("Detailed Vendor Ledg. Entry"; 380)
             {
-                DataItemLink = Vendor No.=FIELD(No.),
-                               Posting Date=FIELD(Date Filter),
-                               Initial Entry Global Dim. 1=FIELD(Global Dimension 1 Filter),
-                               Initial Entry Global Dim. 2=FIELD(Global Dimension 2 Filter),
-                               Currency Code=FIELD(Currency Filter);
-                DataItemTableView = SORTING(Vendor No.,Posting Date,Entry Type,Currency Code)
+                DataItemLink = "Vendor No." = FIELD("No."),
+                               Posting Date=FIELD("Date Filter"),
+                               Initial Entry Global Dim. 1=FIELD("Global Dimension 1 Filter"),
+                               Initial Entry Global Dim. 2=FIELD("Global Dimension 2 Filter"),
+                               Currency Code=FIELD("Currency Filter");
+                DataItemTableView = SORTING("Vendor No.","Posting Date",Entry Type,Currency Code)
                                     WHERE("Entry Type"=CONST(Application),
                                           Initial Document Type=FILTER(Invoice|Credit Memo));
                 column(FORMAT__Posting_Date___Control35;FORMAT("Posting Date"))

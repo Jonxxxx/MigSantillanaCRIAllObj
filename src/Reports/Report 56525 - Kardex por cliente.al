@@ -10,7 +10,7 @@ report 56525 "Kardex por cliente"
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             PrintOnlyIfDetail = true;
             RequestFilterFields = "No.", "Search Name", "Customer Posting Group", "Date Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -120,12 +120,12 @@ report 56525 "Kardex por cliente"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Sell-to Customer No.=FIELD(No.),
-                               Posting Date=FIELD(Date Filter),
-                               Global Dimension 2 Code=FIELD(Global Dimension 2 Filter),
-                               Global Dimension 1 Code=FIELD(Global Dimension 1 Filter),
-                               Date Filter=FIELD(Date Filter);
-                DataItemTableView = SORTING(Customer No.,Posting Date);
+                DataItemLink = Sell-to Customer No.=FIELD("No."),
+                               Posting Date=FIELD("Date Filter"),
+                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
+                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
+                               Date Filter=FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.","Posting Date");
                 column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY__;StartBalanceLCY + "Amount (LCY)")
                 {
                     AutoFormatType = 1;

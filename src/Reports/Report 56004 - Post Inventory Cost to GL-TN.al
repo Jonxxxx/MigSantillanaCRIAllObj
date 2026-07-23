@@ -146,7 +146,7 @@ report 56004 "Post Inventory Cost to G/L-TN"
                 }
                 dataitem(PostValueEntryToGL; 5811)
                 {
-                    DataItemTableView = SORTING(Item No., Posting Date);
+                    DataItemTableView = SORTING("Item No.", "Posting Date");
                     RequestFilterFields = "Item No.", "Posting Date";
                     column(ItemDescription; Item.Description)
                     {
@@ -458,7 +458,7 @@ report 56004 "Post Inventory Cost to G/L-TN"
             }
             dataitem(SkippedValueEntry; 5802)
             {
-                DataItemTableView = SORTING(Item No.);
+                DataItemTableView = SORTING("Item No.");
                 column(ItemNo_SkippedValueEntry; "Item No.")
                 {
                 }

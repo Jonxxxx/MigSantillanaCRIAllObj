@@ -7,7 +7,7 @@ report 56014 "Exporta Proveedores"
     {
         dataitem(Vendor; 23)
         {
-            DataItemTableView = SORTING(No.)
+            DataItemTableView = SORTING("No.")
                                 ORDER(Ascending);
             RequestFilterFields = "No.";
 

@@ -9,7 +9,7 @@ report 56110 "Saldo x Antig. Vendedor Det."
     {
         dataitem("Cust. Ledger Entry"; 21)
         {
-            DataItemTableView = SORTING(Customer No., Posting Date, Currency Code);
+            DataItemTableView = SORTING("Customer No.", "Posting Date", "Currency Code");
             RequestFilterFields = "Customer No.", "Document No.", "Salesperson Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

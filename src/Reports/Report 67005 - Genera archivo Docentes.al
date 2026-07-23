@@ -10,7 +10,7 @@ report 67005 "Genera archivo Docentes"
     {
         dataitem(Docentes; 67001)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
 
             trigger OnAfterGetRecord()
             begin

@@ -107,90 +107,90 @@ report 56531 "Ctas. por cobrar por promotor"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Salesperson Code=FIELD(Code),
-                               Posting Date=FIELD(Date Filter);
-                DataItemTableView = SORTING(Customer No.,Posting Date,Open,Provisionado por insolvencia)
-                                    WHERE(Open=CONST(Yes));
-                column(Cust__Ledger_Entry__Posting_Date_;"Posting Date")
+                DataItemLink = "Salesperson Code" = FIELD(Code),
+                               Posting Date=FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Open, Provisionado por insolvencia)
+                                    WHERE(Open = CONST(True));
+                column(Cust__Ledger_Entry__Posting_Date_; "Posting Date")
                 {
                 }
-                column(Cust__Ledger_Entry__Document_Type_;"Document Type")
+                column(Cust__Ledger_Entry__Document_Type_; "Document Type")
                 {
                 }
-                column(Cust__Ledger_Entry__Document_No__;"Document No.")
+                column(Cust__Ledger_Entry__Document_No__; "Document No.")
                 {
                 }
-                column(Cust__Ledger_Entry__Due_Date_;"Due Date")
+                column(Cust__Ledger_Entry__Due_Date_; "Due Date")
                 {
                 }
-                column(Cust__Ledger_Entry__Remaining_Amt___LCY__;"Remaining Amt. (LCY)")
+                column(Cust__Ledger_Entry__Remaining_Amt___LCY__; "Remaining Amt. (LCY)")
                 {
                 }
-                column(Cust__Ledger_Entry__Amount__LCY__;"Amount (LCY)")
+                column(Cust__Ledger_Entry__Amount__LCY__; "Amount (LCY)")
                 {
                 }
-                column(Cust__Ledger_Entry__Customer_No__;"Customer No.")
+                column(Cust__Ledger_Entry__Customer_No__; "Customer No.")
                 {
                 }
-                column(Customer_Name;Customer.Name)
+                column(Customer_Name; Customer.Name)
                 {
                 }
-                column(Amount__LCY____Remaining_Amt___LCY__;"Amount (LCY)"-"Remaining Amt. (LCY)")
+                column(Amount__LCY____Remaining_Amt___LCY__; "Amount (LCY)" - "Remaining Amt. (LCY)")
                 {
                 }
-                column(Cust__Ledger_Entry__Remaining_Amt___LCY___Control1000000001;"Remaining Amt. (LCY)")
+                column(Cust__Ledger_Entry__Remaining_Amt___LCY___Control1000000001; "Remaining Amt. (LCY)")
                 {
                 }
-                column(Cust__Ledger_Entry__Amount__LCY___Control1000000002;"Amount (LCY)")
+                column(Cust__Ledger_Entry__Amount__LCY___Control1000000002; "Amount (LCY)")
                 {
                 }
-                column(Salesperson_Purchaser__Code;"Salesperson/Purchaser".Code)
+                column(Salesperson_Purchaser__Code; "Salesperson/Purchaser".Code)
                 {
                 }
-                column(Amount__LCY____Remaining_Amt___LCY___Control1000000015;"Amount (LCY)"-"Remaining Amt. (LCY)")
+                column(Amount__LCY____Remaining_Amt___LCY___Control1000000015; "Amount (LCY)" - "Remaining Amt. (LCY)")
                 {
                 }
-                column(TotalCaption_Control1000000003;TotalCaption_Control1000000003Lbl)
+                column(TotalCaption_Control1000000003; TotalCaption_Control1000000003Lbl)
                 {
                 }
-                column(Cust__Ledger_Entry_Entry_No_;"Entry No.")
+                column(Cust__Ledger_Entry_Entry_No_; "Entry No.")
                 {
                 }
-                column(Cust__Ledger_Entry_Salesperson_Code;"Salesperson Code")
+                column(Cust__Ledger_Entry_Salesperson_Code; "Salesperson Code")
                 {
                 }
 
                 trigger OnAfterGetRecord()
                 begin
                     //IF "Customer No." <> Customer."No." THEN
-                      IF NOT Customer.GET("Customer No.") THEN
+                    IF NOT Customer.GET("Customer No.") THEN
                         CLEAR(Customer);
                 end;
 
                 trigger OnPreDataItem()
                 begin
-                    CurrReport.CREATETOTALS("Cust. Ledger Entry"."Remaining Amt. (LCY)","Cust. Ledger Entry"."Amount (LCY)");
+                    CurrReport.CREATETOTALS("Cust. Ledger Entry"."Remaining Amt. (LCY)", "Cust. Ledger Entry"."Amount (LCY)");
 
                     IF ToDate = 0D THEN
-                      DateToConvertCurrency := WORKDATE
+                        DateToConvertCurrency := WORKDATE
                     ELSE BEGIN
-                      SETRANGE("Due Date",0D,ToDate);
-                      DateToConvertCurrency := ToDate;
+                        SETRANGE("Due Date", 0D, ToDate);
+                        DateToConvertCurrency := ToDate;
                     END;
 
                     IF GETFILTER("Posting Date") <> '' THEN
-                      COPYFILTER("Posting Date","Date Filter");
+                        COPYFILTER("Posting Date", "Date Filter");
                 end;
             }
 
             trigger OnAfterGetRecord()
             begin
-                sumUSD:=0;
+                sumUSD := 0;
             end;
 
             trigger OnPreDataItem()
             begin
-                CurrReport.CREATETOTALS("Cust. Ledger Entry"."Remaining Amt. (LCY)","Cust. Ledger Entry"."Amount (LCY)");
+                CurrReport.CREATETOTALS("Cust. Ledger Entry"."Remaining Amt. (LCY)", "Cust. Ledger Entry"."Amount (LCY)");
             end;
         }
     }
@@ -202,7 +202,7 @@ report 56531 "Ctas. por cobrar por promotor"
         {
             area(content)
             {
-                field("<Control1000000001>";ToDate)
+                field("<Control1000000001>"; ToDate)
                 {
                     Caption = 'Fecha final';
                 }
@@ -216,7 +216,7 @@ report 56531 "Ctas. por cobrar por promotor"
         trigger OnInit()
         begin
             IF ToDate = 0D THEN
-              ToDate := WORKDATE;
+                ToDate := WORKDATE;
         end;
     }
 
@@ -231,7 +231,7 @@ report 56531 "Ctas. por cobrar por promotor"
         FilterString := "Salesperson/Purchaser".GETFILTERS;
 
         IF ToDate <> 0D THEN
-          Subtitle := Text000 + ' ' + FORMAT(ToDate,0,4) + ')';
+            Subtitle := Text000 + ' ' + FORMAT(ToDate, 0, 4) + ')';
     end;
 
     var
@@ -268,9 +268,9 @@ report 56531 "Ctas. por cobrar por promotor"
         Currency: Record 4;
     begin
         IF CurrencyCode = '' THEN
-          EXIT(GLSetup."LCY Code")
+            EXIT(GLSetup."LCY Code")
         ELSE
-          EXIT(CurrencyCode);
+            EXIT(CurrencyCode);
     end;
 }
 

@@ -11,7 +11,7 @@ report 56099 "Existencia por Almacenes"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING(Item No., Location Code);
+            DataItemTableView = SORTING("Item No.", "Location Code");
             RequestFilterFields = "Item No.", "Location Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

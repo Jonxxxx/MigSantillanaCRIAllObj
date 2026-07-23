@@ -13,7 +13,7 @@ report 56074 "Antiguedad Importe Consig."
     {
         dataitem(Customer; 18)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -89,8 +89,8 @@ report 56074 "Antiguedad Importe Consig."
             }
             dataitem(t0a30; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING(Item No., Variant Code, Open, Positive, Location Code, Posting Date)
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
                                     ORDER(Ascending);
                 column(t0a30__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -118,8 +118,8 @@ report 56074 "Antiguedad Importe Consig."
             }
             dataitem(t31a60; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING(Item No., Variant Code, Open, Positive, Location Code, Posting Date)
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
                                     ORDER(Ascending);
                 column(t31a60__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -147,8 +147,8 @@ report 56074 "Antiguedad Importe Consig."
             }
             dataitem(t61a97; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING(Item No., Variant Code, Open, Positive, Location Code, Posting Date)
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
                                     ORDER(Ascending);
                 column(t61a97__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -176,8 +176,8 @@ report 56074 "Antiguedad Importe Consig."
             }
             dataitem(t98Adelante; 32)
             {
-                DataItemLink = Location Code=FIELD(No.);
-                DataItemTableView = SORTING(Item No., Variant Code, Open, Positive, Location Code, Posting Date)
+                DataItemLink = "Location Code" = FIELD("No.");
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
                                     ORDER(Ascending);
                 column(t98Adelante__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {

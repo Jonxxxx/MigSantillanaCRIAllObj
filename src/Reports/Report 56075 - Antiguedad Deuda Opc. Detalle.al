@@ -191,7 +191,7 @@ report 56075 "Antiguedad Deuda Opc. Detalle"
             }
             dataitem("Cust. Ledger Entry"; 21)
             {
-                DataItemLink = Customer No.=FIELD(No.);
+                DataItemLink = "Customer No." = FIELD("No.");
                 RequestFilterFields = "Posting Date", "Document Type", "Salesperson Code";
                 column(Cust__Ledger_Entry__Posting_Date_; "Posting Date")
                 {

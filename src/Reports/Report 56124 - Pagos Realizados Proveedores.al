@@ -9,7 +9,7 @@ report 56124 "Pagos Realizados Proveedores"
     {
         dataitem(Facturas; 25)
         {
-            DataItemTableView = SORTING(Entry No.)
+            DataItemTableView = SORTING("Entry No.")
                                 ORDER(Ascending)
                                 WHERE("Document Type" = FILTER(Invoice),
                                       Open = FILTER(No));

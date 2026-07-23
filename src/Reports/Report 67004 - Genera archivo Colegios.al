@@ -12,10 +12,10 @@ report 67004 "Genera archivo Colegios"
     {
         dataitem(Contact; 5050)
         {
-            DataItemTableView = SORTING(No.);
+            DataItemTableView = SORTING("No.");
             dataitem("Colegio - Nivel"; 67036)
             {
-                DataItemLink = Cod. Colegio=FIELD(No.);
+                DataItemLink = "Cod. Colegio" = FIELD("No.");
                 DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", Turno);
 
                 trigger OnAfterGetRecord()

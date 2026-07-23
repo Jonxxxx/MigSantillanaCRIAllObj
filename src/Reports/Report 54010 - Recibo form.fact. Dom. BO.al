@@ -25,11 +25,11 @@ report 54010 "Recibo form.fact. Dom. BO"
             }
             dataitem("Historico Lin. nomina"; 34002118)
             {
-                DataItemLink = No. empleado=FIELD(No. empleado),
-                               Tipo Nómina=FIELD(Tipo Nomina),
+                DataItemLink = "No. empleado" = FIELD("No. empleado"),
+                               Tipo Nómina=FIELD("Tipo Nomina"),
                                Período=FIELD(Período);
-                DataItemTableView = SORTING("No. empleado","Tipo Nómina",Período,No. Orden)
-                                    WHERE("Excluir de listados"=CONST(No));
+                DataItemTableView = SORTING("No. empleado","Tipo Nómina",Período,"No. Orden")
+                                    WHERE("Excluir de listados"=CONST(False));
                 column("Histórico_Lín__nómina__No__empleado_";'Empleado: ' + "Historico Cab. nomina".Nombre)
                 {
                 }
@@ -363,11 +363,11 @@ report 54010 "Recibo form.fact. Dom. BO"
             }
             dataitem(HLN;34002118)
             {
-                DataItemLink = No. empleado=FIELD(No. empleado),
-                               Tipo Nómina=FIELD(Tipo Nomina),
+                DataItemLink = "No. empleado"=FIELD("No. empleado"),
+                               Tipo Nómina=FIELD("Tipo Nomina"),
                                Período=FIELD(Período);
-                DataItemTableView = SORTING("No. empleado","Tipo Nómina",Período,No. Orden)
-                                    WHERE("Excluir de listados"=CONST(No));
+                DataItemTableView = SORTING("No. empleado","Tipo Nómina",Período,"No. Orden")
+                                    WHERE("Excluir de listados"=CONST(False));
                 column("Histórico_Lín__nómina__No__empleado2_";'Empleado: ' + "Historico Cab. nomina".Nombre)
                 {
                 }

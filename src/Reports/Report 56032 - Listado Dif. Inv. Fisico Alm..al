@@ -7,7 +7,7 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
     {
         dataitem("Warehouse Journal Line"; 7311)
         {
-            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", Location Code, Line No.);
+            DataItemTableView = SORTING("Journal Template Name", "Journal Batch Name", "Location Code", "Line No.");
             column(COMPANYNAME; COMPANYNAME)
             {
             }

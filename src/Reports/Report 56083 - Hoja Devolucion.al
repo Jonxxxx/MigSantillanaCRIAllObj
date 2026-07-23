@@ -80,8 +80,8 @@ report 56083 "Hoja Devolucion"
             }
             dataitem("Transfer Line"; 5741)
             {
-                DataItemLink = Document No.=FIELD(No.);
-                DataItemTableView = SORTING(Description, Item No.)
+                DataItemLink = "Document No." = FIELD("No.");
+                DataItemTableView = SORTING(Description, "Item No.")
                                     ORDER(Ascending);
                 column(Transfer_Line__Item_No__; "Item No.")
                 {

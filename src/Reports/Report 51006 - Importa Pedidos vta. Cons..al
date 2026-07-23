@@ -9,7 +9,7 @@ report 51006 "Importa Pedidos vta. Cons."
     {
         dataitem("Excel Buffer"; 370)
         {
-            DataItemTableView = SORTING(Row No., Column No.)
+            DataItemTableView = SORTING("Row No.", "Column No.")
                                 ORDER(Ascending);
 
             trigger OnAfterGetRecord()

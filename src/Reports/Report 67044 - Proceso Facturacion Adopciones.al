@@ -6,7 +6,7 @@ report 67044 "Proceso Facturacion Adopciones"
     {
         dataitem("Colegio - Adopciones Detalle"; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", Cod. Grado, Cod. Turno, Cod. Promotor, Cod. Producto)
+            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto)
                                 WHERE(Adopcion = FILTER(Conquista | Mantener));
             RequestFilterFields = "Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto";
 

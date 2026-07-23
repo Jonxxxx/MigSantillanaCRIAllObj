@@ -22,7 +22,7 @@ report 67006 "Cerrar campaña"
     {
         dataitem(ColGrados; 67037)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", Cod. Turno, Cod. Grado, Seccion);
+            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", Cod. Grado, Seccion);
 
             trigger OnAfterGetRecord()
             var
@@ -44,7 +44,7 @@ report 67006 "Cerrar campaña"
         }
         dataitem(ColDetAdopciones; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", Cod. Grado, Cod. Turno, Cod. Promotor, Cod. Producto);
+            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto);
 
             trigger OnAfterGetRecord()
             var
