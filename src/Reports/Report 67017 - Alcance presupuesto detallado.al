@@ -1,7 +1,7 @@
 report 67017 "Alcance presupuesto detallado"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Alcance presupuesto detallado.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Alcance presupuesto detallado.rdlc';
 
     dataset
     {

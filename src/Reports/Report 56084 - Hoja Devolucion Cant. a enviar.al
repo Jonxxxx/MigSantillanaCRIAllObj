@@ -5,7 +5,7 @@ report 56084 "Hoja Devolucion Cant. a enviar"
     // ------------------------------------------------------------------------
     // 139         03/12/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
-    RDLCLayout = './Hoja Devolucion Cant. a enviar.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Hoja Devolucion Cant. a enviar.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

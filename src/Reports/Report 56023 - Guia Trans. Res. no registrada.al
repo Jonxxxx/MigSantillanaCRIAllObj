@@ -9,7 +9,7 @@ report 56023 "Guia Trans. Res. no registrada"
     // SANTINAV-301        FES           27-08-2019      Adicionar Campo Comentario" de la Tabla "Cab. Hoja de Ruta"
     // 001                 YFC           17/02/2021       SANTINAV-2130 mejoras en desarrollo para E-Commerce
     DefaultLayout = RDLC;
-    RDLCLayout = './Guia Trans. Res. no registrada.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Guia Trans. Res. no registrada.rdlc';
 
 
     dataset

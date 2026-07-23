@@ -1,7 +1,7 @@
 report 50003 "Reporte Campaña"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte Campaña.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte Campaña.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Reporte Campaña';
     UsageCategory = ReportsAndAnalysis;

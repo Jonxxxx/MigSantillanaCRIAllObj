@@ -2,7 +2,7 @@ report 67013 "Resumen colegios adoptados"
 {
     // Falta calcujlo de colegios adoptados , no adoptados e indecisos. Ademas del nº de ejemplares.
     DefaultLayout = RDLC;
-    RDLCLayout = './Resumen colegios adoptados.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Resumen colegios adoptados.rdlc';
 
 
     dataset

@@ -1,7 +1,7 @@
 report 56076 "Reporte Recibos de Ingresos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte Recibos de Ingresos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte Recibos de Ingresos.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

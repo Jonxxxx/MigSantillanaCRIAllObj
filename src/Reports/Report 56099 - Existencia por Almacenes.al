@@ -2,7 +2,7 @@ report 56099 "Existencia por Almacenes"
 {
     // Si da error de clave, activar el grupo de claves "ConvLoc"
     DefaultLayout = RDLC;
-    RDLCLayout = './Existencia por Almacenes.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Existencia por Almacenes.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

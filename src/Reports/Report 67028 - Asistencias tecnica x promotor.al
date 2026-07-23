@@ -1,7 +1,7 @@
 report 67028 "Asistencias tecnica x promotor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Asistencias tecnica x promotor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Asistencias tecnica x promotor.rdlc';
     Caption = 'Asistencias Técnica Pedagogica por Promotor';
 
     dataset

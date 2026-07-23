@@ -1,7 +1,7 @@
 report 56123 "Seguimiento Ordenes de Compra"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Seguimiento Ordenes de Compra.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Seguimiento Ordenes de Compra.rdlc';
     Caption = 'Seguimiento Ord. Compra';
 
     dataset

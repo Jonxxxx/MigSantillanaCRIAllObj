@@ -1,7 +1,7 @@
 report 56073 "Consignacion por categoria"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Consignacion por categoria.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Consignacion por categoria.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

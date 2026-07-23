@@ -1,7 +1,7 @@
 report 56017 "Etiqueta Ident. Devolucion"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Etiqueta Ident. Devolucion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Etiqueta Ident. Devolucion.rdlc';
 
     dataset
     {

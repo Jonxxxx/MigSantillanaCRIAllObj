@@ -1,7 +1,7 @@
 report 56105 "Movimiento Valor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Movimiento Valor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Movimiento Valor.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

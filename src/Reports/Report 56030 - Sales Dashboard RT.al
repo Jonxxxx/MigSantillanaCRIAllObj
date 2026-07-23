@@ -4,7 +4,7 @@ report 56030 "Sales Dashboard RT"
     // Rene Gayer - www.dynamicsblog.at
     // Sales Dashboard Demo
     DefaultLayout = RDLC;
-    RDLCLayout = './Sales Dashboard RT.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Sales Dashboard RT.rdlc';
 
     EnableHyperlinks = true;
 

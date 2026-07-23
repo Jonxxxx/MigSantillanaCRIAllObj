@@ -1,7 +1,7 @@
 report 67012 "Colegios por promotor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Colegios por promotor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Colegios por promotor.rdlc';
 
     dataset
     {

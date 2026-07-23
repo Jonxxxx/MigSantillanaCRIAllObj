@@ -2,7 +2,7 @@ report 56137 "Ventas por Productos CR"
 {
     // 001 RRT #4219 - 01.12.2014: Añadir la columna "Importe Descuento". En lugar de la categoria se mostrará el grupo contable negocio
     DefaultLayout = RDLC;
-    RDLCLayout = './Ventas por Productos CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Ventas por Productos CR.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

@@ -1,7 +1,7 @@
 report 56115 "Analisis de Cobro por cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Analisis de Cobro por cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Analisis de Cobro por cliente.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Customer Billing Analysis';
     UsageCategory = ReportsAndAnalysis;

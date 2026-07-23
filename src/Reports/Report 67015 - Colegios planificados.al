@@ -1,7 +1,7 @@
 report 67015 "Colegios planificados"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Colegios planificados.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Colegios planificados.rdlc';
 
     dataset
     {

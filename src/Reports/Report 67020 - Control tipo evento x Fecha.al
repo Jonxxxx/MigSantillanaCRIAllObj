@@ -1,7 +1,7 @@
 report 67020 "Control tipo evento x Fecha"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Control tipo evento x Fecha.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Control tipo evento x Fecha.rdlc';
 
     dataset
     {

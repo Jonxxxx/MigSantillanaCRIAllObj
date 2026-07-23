@@ -1,7 +1,7 @@
 report 67018 "Pedidos por cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Pedidos por cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Pedidos por cliente.rdlc';
 
     dataset
     {

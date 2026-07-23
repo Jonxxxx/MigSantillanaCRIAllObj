@@ -10,7 +10,7 @@ report 52543 "Factura Santillana CR FE"
     // 003   LDP   19/10/2025    SANTINAV-8697: Problema con codigo QR en facturas electronicas ã Costa Rica
     // 004   LDP   24/11/2025    SANTINAV-8776: Error descripcion Facturacion Electronica
     DefaultLayout = RDLC;
-    RDLCLayout = './Factura Santillana CR FE.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Factura Santillana CR FE.rdlc';
 
 
     dataset

@@ -1,7 +1,7 @@
 report 56079 "Inventario Productos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Inventario Productos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Inventario Productos.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

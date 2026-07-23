@@ -14,7 +14,7 @@ report 50002 "Customer - Detail Trial"
     //  001           13/03/2023      LDP      SANTINAV-4805: Ajuste reporte Cliente - Movimiento
     //  002           10/04/2025      LDP      SANTINAV-7904: Error en estados de cuenta ã Informacion incompleta y saldo incorrecto, no visible para busquedas.
     DefaultLayout = RDLC;
-    RDLCLayout = './Customer - Detail Trial.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Customer - Detail Trial.rdlc';
 
     Caption = 'Customer - Detail Trial Bal.';
 

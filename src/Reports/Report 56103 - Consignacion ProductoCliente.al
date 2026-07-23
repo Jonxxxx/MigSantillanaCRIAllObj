@@ -1,7 +1,7 @@
 report 56103 "Consignacion Producto/Cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Consignacion ProductoCliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Consignacion ProductoCliente.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

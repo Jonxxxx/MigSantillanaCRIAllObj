@@ -1,7 +1,7 @@
 report 56535 "Lista Global Picking"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista Global Picking.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista Global Picking.rdlc';
     Caption = 'Picking List';
 
     dataset

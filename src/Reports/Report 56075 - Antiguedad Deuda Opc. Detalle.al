@@ -2,7 +2,7 @@ report 56075 "Antiguedad Deuda Opc. Detalle"
 {
     //               .-
     DefaultLayout = RDLC;
-    RDLCLayout = './Antiguedad Deuda Opc. Detalle.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Antiguedad Deuda Opc. Detalle.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Customer - Sum/Detail Aging Simp.';

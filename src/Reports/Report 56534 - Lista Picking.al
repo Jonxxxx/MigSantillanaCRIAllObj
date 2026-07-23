@@ -1,7 +1,7 @@
 report 56534 "Lista Picking"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista Picking.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista Picking.rdlc';
     Caption = 'Picking List';
 
     dataset

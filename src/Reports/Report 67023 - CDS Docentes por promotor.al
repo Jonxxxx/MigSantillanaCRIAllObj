@@ -2,7 +2,7 @@ report 67023 "CDS Docentes por promotor"
 {
     // 0009 CAT Modifiaciones en el formato del informe
     DefaultLayout = RDLC;
-    RDLCLayout = './CDS Docentes por promotor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/CDS Docentes por promotor.rdlc';
 
 
     dataset

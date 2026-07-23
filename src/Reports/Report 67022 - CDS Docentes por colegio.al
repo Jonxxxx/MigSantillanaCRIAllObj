@@ -2,7 +2,7 @@ report 67022 "CDS Docentes por colegio"
 {
     // 0009 CAT Eliminacion de los ceros de la derecha del codigo CDS
     DefaultLayout = RDLC;
-    RDLCLayout = './CDS Docentes por colegio.rdlc';
+    RDLCLayout = 'src/ReportsLayout/CDS Docentes por colegio.rdlc';
 
 
     dataset

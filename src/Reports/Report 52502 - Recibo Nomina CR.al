@@ -1,7 +1,7 @@
 report 52502 "Recibo Nomina CR"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Recibo Nomina CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Recibo Nomina CR.rdlc';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

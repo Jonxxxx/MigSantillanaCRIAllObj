@@ -1,7 +1,7 @@
 report 56106 "Venta en firme por categoria"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Venta en firme por categoria.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Venta en firme por categoria.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

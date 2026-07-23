@@ -1,7 +1,7 @@
 report 56096 "Rel. Conduce en Consignacion"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Rel. Conduce en Consignacion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Rel. Conduce en Consignacion.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

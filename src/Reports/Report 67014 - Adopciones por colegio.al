@@ -2,7 +2,7 @@ report 67014 "Adopciones por colegio"
 {
     // Falta como obtener precio.
     DefaultLayout = RDLC;
-    RDLCLayout = './Adopciones por colegio.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Adopciones por colegio.rdlc';
 
 
     dataset

@@ -1,7 +1,7 @@
 report 56093 "Venta a Consignacion por item"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Venta a Consignacion por item.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Venta a Consignacion por item.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

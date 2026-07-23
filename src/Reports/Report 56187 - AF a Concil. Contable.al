@@ -2,7 +2,7 @@ report 56187 "AF a Concil. Contable"
 {
     // MOI - 26/02/2015(#11502): Se crea el report.
     DefaultLayout = RDLC;
-    RDLCLayout = './AF a Concil. Contable.rdlc';
+    RDLCLayout = 'src/ReportsLayout/AF a Concil. Contable.rdlc';
 
 
     dataset

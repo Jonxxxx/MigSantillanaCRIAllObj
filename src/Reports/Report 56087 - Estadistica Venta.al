@@ -1,7 +1,7 @@
 report 56087 "Estadistica Venta"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Estadistica Venta.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Estadistica Venta.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Sales Statistics';
     UsageCategory = ReportsAndAnalysis;

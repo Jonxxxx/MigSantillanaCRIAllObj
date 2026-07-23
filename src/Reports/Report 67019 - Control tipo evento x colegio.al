@@ -1,7 +1,7 @@
 report 67019 "Control tipo evento x colegio"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Control tipo evento x colegio.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Control tipo evento x colegio.rdlc';
 
     dataset
     {

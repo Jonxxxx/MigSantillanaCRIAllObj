@@ -1,7 +1,7 @@
 report 56524 "Estado Ctas. Clientes"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Estado Ctas. Clientes.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Estado Ctas. Clientes.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Análisis Cta Clientes';
     UsageCategory = ReportsAndAnalysis;

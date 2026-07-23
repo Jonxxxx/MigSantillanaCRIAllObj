@@ -1,7 +1,7 @@
 report 56112 "Customer-Summary (Santillana)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Customer-Summary (Santillana).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Customer-Summary (Santillana).rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Customer - Summary Aging Simp.';
     UsageCategory = ReportsAndAnalysis;

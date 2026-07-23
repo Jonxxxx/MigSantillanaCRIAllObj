@@ -1,7 +1,7 @@
 report 56109 "Saldo x Antigüedad Vendedor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Saldo x Antigüedad Vendedor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Saldo x Antigüedad Vendedor.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 56526 "Kardex por proveedor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Kardex por proveedor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Kardex por proveedor.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Vendor - Detail Trial Bal.';
     UsageCategory = ReportsAndAnalysis;

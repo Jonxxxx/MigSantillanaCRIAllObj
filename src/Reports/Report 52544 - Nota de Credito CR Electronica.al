@@ -8,7 +8,7 @@ report 52544 "Nota de Credito CR Electronica"
     // 
     // 001   YFC  17/08/2022    SANTINAV-2745: Ajustes
     DefaultLayout = RDLC;
-    RDLCLayout = './Nota de Credito CR Electronica.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nota de Credito CR Electronica.rdlc';
 
 
     dataset

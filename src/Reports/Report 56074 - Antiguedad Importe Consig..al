@@ -4,7 +4,7 @@ report 56074 "Antiguedad Importe Consig."
     // ------------------------------------------------------------------------
     // 139         12/12/2013      RRT           Adaptacion informes a RTC. Correccion de errores detectados.
     DefaultLayout = RDLC;
-    RDLCLayout = './Antiguedad Importe Consig..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Antiguedad Importe Consig..rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

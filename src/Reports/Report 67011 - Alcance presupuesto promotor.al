@@ -1,7 +1,7 @@
 report 67011 "Alcance presupuesto promotor"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Alcance presupuesto promotor.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Alcance presupuesto promotor.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

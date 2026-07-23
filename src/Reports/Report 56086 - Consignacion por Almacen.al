@@ -1,7 +1,7 @@
 report 56086 "Consignacion por Almacen"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Consignacion por Almacen.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Consignacion por Almacen.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

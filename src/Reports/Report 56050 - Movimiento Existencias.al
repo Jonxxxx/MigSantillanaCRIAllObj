@@ -1,7 +1,7 @@
 report 56050 "Movimiento Existencias"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Movimiento Existencias.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Movimiento Existencias.rdlc';
 
     dataset
     {

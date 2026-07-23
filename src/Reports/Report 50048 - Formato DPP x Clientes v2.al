@@ -1,7 +1,7 @@
 report 50048 "Formato DPP x Clientes v2"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Formato DPP x Clientes v2.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Formato DPP x Clientes v2.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Report Credit Memo (Discount Soon Payment by Customer)';
     Permissions = TableData 379 = r;

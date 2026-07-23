@@ -2,7 +2,7 @@ report 56082 "Back Orders"
 {
     // #56090  27/09/2016  PLB: Utilizar funcion disponibilidad backorder en lugar de la estándar
     DefaultLayout = RDLC;
-    RDLCLayout = './Back Orders.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Back Orders.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

@@ -1,7 +1,7 @@
 report 56056 "Reporte de posicion bancos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte de posicion bancos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte de posicion bancos.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

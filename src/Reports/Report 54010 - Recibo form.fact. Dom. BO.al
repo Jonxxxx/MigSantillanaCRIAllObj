@@ -1,7 +1,7 @@
 report 54010 "Recibo form.fact. Dom. BO"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Recibo form.fact. Dom. BO.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Recibo form.fact. Dom. BO.rdlc';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

@@ -1,7 +1,7 @@
 report 56107 "Venta consignacion x Cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Venta consignacion x Cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Venta consignacion x Cliente.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

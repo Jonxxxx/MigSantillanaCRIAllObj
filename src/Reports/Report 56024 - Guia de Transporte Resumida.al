@@ -19,7 +19,7 @@ report 56024 "Guia de Transporte Resumida"
     // ------------------------------------------------------------------------
     // 001         YFC      17/02/2021       SANTINAV-2130 mejoras en desarrollo para E-Commerce
     DefaultLayout = RDLC;
-    RDLCLayout = './Guia de Transporte Resumida.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Guia de Transporte Resumida.rdlc';
 
     Caption = 'Shipping Guide';
 

@@ -2,7 +2,7 @@ report 56117 "Antiguedad Cobros Formato Exce"
 {
     // #3143 Se define un valor por defecto para la longitud del periodo. Se valida que tenga contenido.
     DefaultLayout = RDLC;
-    RDLCLayout = './Antiguedad Cobros Formato Exce.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Antiguedad Cobros Formato Exce.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Aged Accounts Receivable (EXCEL)';

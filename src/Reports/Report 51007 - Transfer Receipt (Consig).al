@@ -1,7 +1,7 @@
 report 51007 "Transfer Receipt (Consig)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Transfer Receipt (Consig).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Transfer Receipt (Consig).rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Transfer Receipt';
     UsageCategory = ReportsAndAnalysis;

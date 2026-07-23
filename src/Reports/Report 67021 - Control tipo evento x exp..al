@@ -1,7 +1,7 @@
 report 67021 "Control tipo evento x exp."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Control tipo evento x exp..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Control tipo evento x exp..rdlc';
 
     dataset
     {

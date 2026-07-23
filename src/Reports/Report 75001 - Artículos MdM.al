@@ -1,7 +1,7 @@
 report 75001 "Articulos MdM"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Articulos MdM.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Articulos MdM.rdlc';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Articulos MdM';
     UsageCategory = ReportsAndAnalysis;

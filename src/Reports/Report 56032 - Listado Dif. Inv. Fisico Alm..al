@@ -1,7 +1,7 @@
 report 56032 "Listado Dif. Inv. Fisico Alm."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado Dif. Inv. Fisico Alm..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado Dif. Inv. Fisico Alm..rdlc';
 
     dataset
     {

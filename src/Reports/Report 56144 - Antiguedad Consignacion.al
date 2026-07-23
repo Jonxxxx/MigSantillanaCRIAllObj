@@ -4,7 +4,7 @@ report 56144 "Antiguedad Consignacion"
     //                         Por tanto, la adaptacion que realizaré será minima. En caso de en un futuro tener que adaptar el
     //                         informe, podemos basarnos en el report 56074.
     DefaultLayout = RDLC;
-    RDLCLayout = './Antiguedad Consignacion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Antiguedad Consignacion.rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

@@ -8,7 +8,7 @@ report 52546 "Sales Quote Report"
     //  ------------------------------------------------------------------------
     //  001  07-Diciembre-2022     LDP      SANTINAV-3495: Santillana Costa Rica - Ajustes en cotizaciones de ventas BC
     DefaultLayout = RDLC;
-    RDLCLayout = './Sales Quote Report.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Sales Quote Report.rdlc';
 
     Caption = 'Sales - Quote';
 

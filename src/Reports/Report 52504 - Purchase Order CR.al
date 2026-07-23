@@ -4,7 +4,7 @@ report 52504 "Purchase Order CR"
     // 
     // 001     FES     13-12-2021  Adicionar Total Impuestos
     DefaultLayout = RDLC;
-    RDLCLayout = './Purchase Order CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Purchase Order CR.rdlc';
 
     Caption = 'Purchase Order';
 

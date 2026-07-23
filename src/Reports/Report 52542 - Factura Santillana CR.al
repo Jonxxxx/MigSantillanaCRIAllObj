@@ -6,7 +6,7 @@ report 52542 "Factura Santillana CR"
     //                   Se añaden los TextConstants para direccion y comentarios en el footer.
     // MOI - 12/02/2015: Se buscan todos los comentarios y se concatenan para mostrarlos.
     DefaultLayout = RDLC;
-    RDLCLayout = './Factura Santillana CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Factura Santillana CR.rdlc';
 
 
     dataset

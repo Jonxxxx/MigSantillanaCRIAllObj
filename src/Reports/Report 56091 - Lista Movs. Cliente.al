@@ -1,7 +1,7 @@
 report 56091 "Lista Movs. Cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista Movs. Cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista Movs. Cliente.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 50016 "Recibo Nomina Aero/Helidosa"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Recibo Nomina AeroHelidosa.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Recibo Nomina AeroHelidosa.rdlc';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

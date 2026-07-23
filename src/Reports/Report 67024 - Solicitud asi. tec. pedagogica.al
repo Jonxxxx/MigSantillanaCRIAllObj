@@ -1,7 +1,7 @@
 report 67024 "Solicitud asi. tec. pedagogica"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Solicitud asi. tec. pedagogica.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Solicitud asi. tec. pedagogica.rdlc';
     Caption = 'Solicitud de asistencia técnica pedagogica';
 
     dataset

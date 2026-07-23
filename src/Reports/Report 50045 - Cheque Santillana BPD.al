@@ -8,7 +8,7 @@ report 50045 "Cheque Santillana BPD"
     // ------------------------------------------------------------------------
     // MIGDO    06-enero-2022   FES           Comentado por error compilacion. Migracion Santillana Dominicana
     DefaultLayout = RDLC;
-    RDLCLayout = './Cheque Santillana BPD.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Cheque Santillana BPD.rdlc';
 
     Caption = 'Check';
     //TODO: revisar propiedad PDFFontEmbedding = true;

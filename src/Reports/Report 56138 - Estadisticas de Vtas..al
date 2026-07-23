@@ -40,7 +40,7 @@ report 56138 "Estadisticas de Vtas."
     // 020     12-07-2023      LDP             SANTINAV-4746: crear filtro en Estadisticas de Vtas. (EXCEL)
     // 021     18-09-2025      LDP             SANTINAV-8394: Crear campo ŽCanal de Venta en cabecera de pedidos y agregarlo al reporte de estadisticas
     DefaultLayout = RDLC;
-    RDLCLayout = './Estadisticas de Vtas..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Estadisticas de Vtas..rdlc';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
