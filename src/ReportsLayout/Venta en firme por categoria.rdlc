@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,90 +11,6 @@
       <rd:DataSourceID>dba2eae9-c1a0-41b1-87a4-1d0644737740</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="Cost_Posted_to_G_L___1">
-          <DataField>Cost_Posted_to_G_L___1</DataField>
-        </Field>
-        <Field Name="Cost_Posted_to_G_L___1Format">
-          <DataField>Cost_Posted_to_G_L___1Format</DataField>
-        </Field>
-        <Field Name="Value_Entry__Discount_Amount_">
-          <DataField>Value_Entry__Discount_Amount_</DataField>
-        </Field>
-        <Field Name="Value_Entry__Discount_Amount_Format">
-          <DataField>Value_Entry__Discount_Amount_Format</DataField>
-        </Field>
-        <Field Name="Value_Entry__Sales_Amount__Actual__">
-          <DataField>Value_Entry__Sales_Amount__Actual__</DataField>
-        </Field>
-        <Field Name="Value_Entry__Sales_Amount__Actual__Format">
-          <DataField>Value_Entry__Sales_Amount__Actual__Format</DataField>
-        </Field>
-        <Field Name="Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_">
-          <DataField>Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_</DataField>
-        </Field>
-        <Field Name="Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_Format">
-          <DataField>Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_Format</DataField>
-        </Field>
-        <Field Name="Invoiced_Quantity___1">
-          <DataField>Invoiced_Quantity___1</DataField>
-        </Field>
-        <Field Name="Invoiced_Quantity___1Format">
-          <DataField>Invoiced_Quantity___1Format</DataField>
-        </Field>
-        <Field Name="Value_Entry__Value_Entry___Item_Category_Code_">
-          <DataField>Value_Entry__Value_Entry___Item_Category_Code_</DataField>
-        </Field>
-        <Field Name="Value_EntryCaption">
-          <DataField>Value_EntryCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Cod__CategoríaCaption">
-          <DataField>Cod__CategoríaCaption</DataField>
-        </Field>
-        <Field Name="CantidadCaption">
-          <DataField>CantidadCaption</DataField>
-        </Field>
-        <Field Name="Vta__LíquidaCaption">
-          <DataField>Vta__LíquidaCaption</DataField>
-        </Field>
-        <Field Name="DescuentoCaption">
-          <DataField>DescuentoCaption</DataField>
-        </Field>
-        <Field Name="CostoCaption">
-          <DataField>CostoCaption</DataField>
-        </Field>
-        <Field Name="Vta__NetaCaption">
-          <DataField>Vta__NetaCaption</DataField>
-        </Field>
-        <Field Name="Value_Entry_Entry_No_">
-          <DataField>Value_Entry_Entry_No_</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -745,4 +661,83 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>da1716ca-b154-4330-88d3-5518521b3926</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Cost_Posted_to_G_L___1">
+          <DataField>Cost_Posted_to_G_L___1</DataField>
+        </Field>
+        <Field Name="Cost_Posted_to_G_L___1Format">
+          <DataField>Cost_Posted_to_G_L___1Format</DataField>
+        </Field>
+        <Field Name="Value_Entry__Discount_Amount_">
+          <DataField>Value_Entry__Discount_Amount_</DataField>
+        </Field>
+        <Field Name="Value_Entry__Discount_Amount_Format">
+          <DataField>Value_Entry__Discount_Amount_Format</DataField>
+        </Field>
+        <Field Name="Value_Entry__Sales_Amount__Actual__">
+          <DataField>Value_Entry__Sales_Amount__Actual__</DataField>
+        </Field>
+        <Field Name="Value_Entry__Sales_Amount__Actual__Format">
+          <DataField>Value_Entry__Sales_Amount__Actual__Format</DataField>
+        </Field>
+        <Field Name="Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_">
+          <DataField>Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_</DataField>
+        </Field>
+        <Field Name="Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_Format">
+          <DataField>Value_Entry___Sales_Amount__Actual____Value_Entry___Discount_Amount_Format</DataField>
+        </Field>
+        <Field Name="Invoiced_Quantity___1">
+          <DataField>Invoiced_Quantity___1</DataField>
+        </Field>
+        <Field Name="Invoiced_Quantity___1Format">
+          <DataField>Invoiced_Quantity___1Format</DataField>
+        </Field>
+        <Field Name="Value_Entry__Value_Entry___Item_Category_Code_">
+          <DataField>Value_Entry__Value_Entry___Item_Category_Code_</DataField>
+        </Field>
+        <Field Name="Value_EntryCaption">
+          <DataField>Value_EntryCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Cod__CategoriaCaption">
+          <DataField>Cod__CategoriaCaption</DataField>
+        </Field>
+        <Field Name="CantidadCaption">
+          <DataField>CantidadCaption</DataField>
+        </Field>
+        <Field Name="Vta__LiquidaCaption">
+          <DataField>Vta__LiquidaCaption</DataField>
+        </Field>
+        <Field Name="DescuentoCaption">
+          <DataField>DescuentoCaption</DataField>
+        </Field>
+        <Field Name="CostoCaption">
+          <DataField>CostoCaption</DataField>
+        </Field>
+        <Field Name="Vta__NetaCaption">
+          <DataField>Vta__NetaCaption</DataField>
+        </Field>
+        <Field Name="Value_Entry_Entry_No_">
+          <DataField>Value_Entry_Entry_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

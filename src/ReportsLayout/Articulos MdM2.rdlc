@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,36 +11,6 @@
       <rd:DataSourceID>cabaf552-ba45-4c50-9d2f-c9dba8e7cf4b</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="fItemNo">
-          <DataField>fItemNo</DataField>
-        </Field>
-        <Field Name="fItemDescription">
-          <DataField>fItemDescription</DataField>
-        </Field>
-        <Field Name="fItemEstado">
-          <DataField>fItemEstado</DataField>
-        </Field>
-        <Field Name="fItemFechaAlmacen">
-          <DataField>fItemFechaAlmacen</DataField>
-        </Field>
-        <Field Name="fItemFechaComerc">
-          <DataField>fItemFechaComerc</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -706,4 +676,29 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="fItemNo">
+          <DataField>fItemNo</DataField>
+        </Field>
+        <Field Name="fItemDescription">
+          <DataField>fItemDescription</DataField>
+        </Field>
+        <Field Name="fItemEstado">
+          <DataField>fItemEstado</DataField>
+        </Field>
+        <Field Name="fItemFechaAlmacen">
+          <DataField>fItemFechaAlmacen</DataField>
+        </Field>
+        <Field Name="fItemFechaComerc">
+          <DataField>fItemFechaComerc</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
