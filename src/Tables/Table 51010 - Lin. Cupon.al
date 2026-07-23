@@ -42,8 +42,7 @@ table 51010 "Lin. Cupon"
 
             trigger OnValidate()
             begin
-                //TODO: Ver
-                /*
+
                 IF rCabCupon.GET("No. Cupon") THEN BEGIN
                     IF rUserSetup.GET(USERID) THEN BEGIN
                         IF NOT rUserSetup."Permite modificar Cupon" THEN
@@ -53,7 +52,7 @@ table 51010 "Lin. Cupon"
                         rCabCupon.TESTFIELD(rCabCupon.Impreso, FALSE);
                     "Cantidad Pendiente" := Cantidad;
                 END;
-                */
+
             end;
         }
         field(7; "Cantidad Pendiente"; Integer)

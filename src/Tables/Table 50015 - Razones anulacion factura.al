@@ -1,7 +1,7 @@
 table 50015 "Razones anulacion factura"
 {
-    //TODO: VerDrillDownPageID = 50015;
-    //TODO: VerLookupPageID = 50015;
+    //TODO: Page no existe DrillDownPageID = 50015;
+    //TODO: Page no existe LookupPageID = 50015;
 
     fields
     {

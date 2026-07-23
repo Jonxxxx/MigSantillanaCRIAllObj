@@ -124,7 +124,7 @@ table 90000 "G/L Account2"
         field(31; "Balance at Date"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Ver
+            //TODO: Revisar
             /*
             CalcFormula = Sum("G/L Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                         "G/L Account No." = FIELD(FILTER(Totaling)),

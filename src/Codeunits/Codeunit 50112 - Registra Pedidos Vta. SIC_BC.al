@@ -58,7 +58,6 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         CustomerNo: Code[20];
         SalesLine2: Record 37;
         Item: Record 27;
-        //TODO: Ver RegistrarVentasenLoteDsPOS: Codeunit 34002522;
         Text002: Label 'Registrada Correctamente';
         Numlogs: Integer;
         rCabLog: Record 34002533;

@@ -72,7 +72,7 @@ codeunit 50001 "Funciones varias"
             REPEAT
                 IF ItemCategory.GET(Utility.Code) THEN BEGIN
                     ItemCategory.SETCURRENTKEY(Code);
-                    //TODO: Ver 
+                    //TODO: Campos no existen 
                     /*
                     ItemCategory."Def. Costing Method" := Utility."Def. Costing Method"::Average;
                     ItemCategory."Def. Gen. Prod. Posting Group" := Utility."Def. Gen. Prod. Posting Group";

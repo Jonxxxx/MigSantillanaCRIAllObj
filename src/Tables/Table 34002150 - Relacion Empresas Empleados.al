@@ -27,7 +27,7 @@ table 34002150 "Relacion Empresas Empleados"
                 Empl: Record 5200;
                 frmListaEmpl: Page 34002202;
             begin
-                //TODO: Ver
+                //TODO: Revisar
                 /*
                 frmListaEmpl.ParamCompany(Empresa);
                 frmListaEmpl.LOOKUPMODE(TRUE);

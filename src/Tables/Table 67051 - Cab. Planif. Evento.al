@@ -219,7 +219,7 @@ table 67051 "Cab. Planif. Evento"
         }
         field(33; "Tipo Documento Pago"; Code[20])
         {
-            //TODO: Ver option correcto TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("28"));
+            //TODO: Revisar option correcto TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("28"));
         }
         field(34; "Fecha Pago"; Date)
         {

@@ -1,7 +1,7 @@
 table 50130 Procedencia
 {
-    //TODO: VerDrillDownPageID = 50031;
-    //TODO: VerLookupPageID = 50031;
+    //TODO: Page no existe DrillDownPageID = 50031;
+    //TODO: Page no existe LookupPageID = 50031;
 
     fields
     {

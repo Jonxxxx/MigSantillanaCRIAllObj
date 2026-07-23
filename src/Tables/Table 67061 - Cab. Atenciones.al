@@ -65,7 +65,7 @@ table 67061 "Cab. Atenciones"
         }
         field(8; "Tipo documento"; Code[20])
         {
-            //TODO: Ver valor option TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
+            //TODO: Revisar valor option TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
         }
         field(9; "Document ID"; Text[20])
         {
