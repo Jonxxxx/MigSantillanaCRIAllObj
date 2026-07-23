@@ -1,6 +1,6 @@
 table 34002101 "Centros de Trabajo"
 {
-    //TODO: Ver LookupPageID = 34002101;
+    LookupPageID = 34002101;
 
     fields
     {

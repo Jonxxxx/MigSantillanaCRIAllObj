@@ -305,7 +305,8 @@ page 34002115 "Ficha Acciones de personal"
                                 "Cod. elegible" := "No. empleado";
                                 HumanResSetup.GET;
                                 HumanResSetup.TESTFIELD("Employee Nos.");
-                                //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."Employee Nos.", xRec."No. serie", 0D, "No. empleado", "No. serie");
+                                "No. serie" := HumanResSetup."Employee Nos.";
+                                "No. empleado" := NoSeriesMgt.GetNextNo(HumanResSetup."Employee Nos.");
                             END;
                         END;
 

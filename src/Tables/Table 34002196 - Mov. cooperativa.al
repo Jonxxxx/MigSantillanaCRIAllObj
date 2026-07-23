@@ -2,7 +2,7 @@ table 34002196 "Mov. cooperativa"
 {
     Caption = 'Cooperative entries';
     DrillDownPageID = 34002218;
-    //TODO: Ver LookupPageID = 34002218;
+    LookupPageID = 34002218;
 
     fields
     {

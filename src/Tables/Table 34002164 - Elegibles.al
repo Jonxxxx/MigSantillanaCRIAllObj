@@ -6,7 +6,7 @@ table 34002164 Elegibles
     Caption = 'Eligibles';
     DataCaptionFields = "No.", "First Name", "Last Name";
     DrillDownPageID = 34002191;
-    //TODO: Ver LookupPageID = 34002191;
+    LookupPageID = 34002191;
 
     fields
     {
@@ -342,8 +342,10 @@ table 34002164 Elegibles
         ELSE
             IF "No." = '' THEN BEGIN
                 HumanResSetup.GET;
-                //TODO: Ver HumanResSetup.TESTFIELD("Candidate Nos.");
-                //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."Candidate Nos.",xRec."No. Series",0D,"No.","No. Series");
+                HumanResSetup.TESTFIELD("Candidate Nos.");
+                "No. Series" := HumanResSetup."Candidate Nos.";
+                if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+                "No." := NoSeriesMgt.GetNextNo("No. Series");
             END;
 
         //TODO: Ver DimMgt.UpdateDefaultDim(

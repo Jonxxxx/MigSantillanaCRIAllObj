@@ -6,7 +6,7 @@ table 34002513 "Formas de Pago"
 
     Caption = 'Tender Types POS';
     DrillDownPageID = 34002514;
-    //TODO: Ver LookupPageID = 34002514;
+    LookupPageID = 34002514;
 
     fields
     {

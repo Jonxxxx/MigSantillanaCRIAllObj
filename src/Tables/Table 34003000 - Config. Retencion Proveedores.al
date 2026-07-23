@@ -2,7 +2,7 @@ table 34003000 "Config. Retencion Proveedores"
 {
     Caption = 'Setup Vendor Retention';
     DrillDownPageID = 34003000;
-    //TODO: Ver LookupPageID = 34003000;
+    LookupPageID = 34003000;
 
     fields
     {

@@ -460,7 +460,9 @@ table 67061 "Cab. Atenciones"
         IF Codigo = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD(APSSetup."No. Serie Atenciones");
-            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Atenciones", xRec."No. Series", 0D, Codigo, "No. Series");
+            "No. Series" := APSSetup."No. Serie Atenciones";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            Codigo := NoSeriesMgt.GetNextNo("No. Series");
         END;
 
 

@@ -1,7 +1,7 @@
 table 34002514 "Formas de Pago TPV"
 {
     Caption = 'Tender Types POS';
-    //TODO: Ver LookupPageID = 34002519;
+    LookupPageID = 34002519;
 
     fields
     {

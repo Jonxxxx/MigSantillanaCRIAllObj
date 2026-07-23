@@ -1,6 +1,6 @@
 table 34002139 Bancos
 {
-    //TODO: Ver LookupPageID = 34002152;
+    LookupPageID = 34002152;
 
     fields
     {

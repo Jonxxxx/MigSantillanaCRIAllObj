@@ -1,7 +1,7 @@
 table 34002129 "Tipos de Cotizacion"
 {
     DrillDownPageID = 34002146;
-    //TODO: Ver LookupPageID = 34002146;
+    LookupPageID = 34002146;
 
     fields
     {

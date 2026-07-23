@@ -1,7 +1,7 @@
 table 34002504 "Bancos tienda"
 {
     Caption = 'Stores';
-    //TODO: Ver LookupPageID = 34002503;
+    LookupPageID = 34002503;
 
     fields
     {

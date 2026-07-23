@@ -2,7 +2,7 @@ table 34002525 "Solicitud de etiquetas"
 {
     Caption = 'Labels request';
     DrillDownPageID = 34002532;
-    //TODO: Ver LookupPageID = 34002532;
+    LookupPageID = 34002532;
 
     fields
     {

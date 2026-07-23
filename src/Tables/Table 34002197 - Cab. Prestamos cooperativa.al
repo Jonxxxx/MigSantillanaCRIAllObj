@@ -2,7 +2,7 @@ table 34002197 "Cab. Prestamos cooperativa"
 {
     Caption = 'Cooperative loan header';
     DrillDownPageID = 34002138;
-    //TODO: Ver LookupPageID = 34002138;
+    LookupPageID = 34002138;
 
     fields
     {
@@ -16,7 +16,7 @@ table 34002197 "Cab. Prestamos cooperativa"
                 IF "No. Prestamo" <> xRec."No. Prestamo" THEN BEGIN
                     ConfNominas.GET;
                     ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-                    //TODO: Ver NoSeriesMgt.TestManual(ConfNominas."No. serie Sol. Prest. Coop.");
+                    NoSeriesMgt.TestManual(ConfNominas."No. serie Sol. Prest. Coop.");
                 END;
             end;
         }
@@ -112,7 +112,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         IF "No. Prestamo" = '' THEN BEGIN
             ConfNominas.GET;
             ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-            //TODO: Ver NoSeriesMgt.InitSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",0D,"No. Prestamo",ConfNominas."No. serie Sol. Prest. Coop.");
+            "No. Prestamo" := NoSeriesMgt.GetNextNo(ConfNominas."No. serie Sol. Prest. Coop.");
         END;
     end;
 
@@ -124,13 +124,22 @@ table 34002197 "Cab. Prestamos cooperativa"
 
     [Scope('Personalization')]
     procedure AssistEdit(): Boolean
+    var
+        NoSeriesCode: Code[20];
     begin
-        ConfNominas.GET;
-        ConfNominas.TESTFIELD("No. serie Sol. Prest. Coop.");
-        //TODO: Ver IF NoSeriesMgt.SelectSeries(ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.",ConfNominas."No. serie Sol. Prest. Coop.") THEN BEGIN
-        //TODO: Ver   NoSeriesMgt.SetSeries("No. Prestamo");
-        //TODO: Ver   EXIT(TRUE);
-        //TODO: Ver END;
+        ConfNominas.Get();
+        ConfNominas.TestField("No. serie Sol. Prest. Coop.");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             ConfNominas."No. serie Sol. Prest. Coop.",
+             ConfNominas."No. serie Sol. Prest. Coop.",
+             NoSeriesCode)
+        then begin
+            "No. Prestamo" := NoSeriesMgt.GetNextNo(NoSeriesCode);
+            exit(true);
+        end;
+
+        exit(false);
     end;
 }
 

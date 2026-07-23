@@ -1,7 +1,7 @@
 table 34002515 "Tipos de Tarjeta"
 {
     DrillDownPageID = 34002516;
-    //TODO: Ver LookupPageID = 34002515;
+    LookupPageID = 34002515;
 
     fields
     {

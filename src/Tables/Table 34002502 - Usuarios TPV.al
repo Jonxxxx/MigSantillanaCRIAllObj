@@ -1,7 +1,7 @@
 table 34002502 "Usuarios TPV"
 {
     Caption = 'POS Users';
-    //TODO: Ver LookupPageID = 34002507;
+    LookupPageID = 34002507;
 
     fields
     {

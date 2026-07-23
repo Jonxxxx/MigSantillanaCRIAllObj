@@ -2,7 +2,7 @@ table 34002170 "Exemption types"
 {
     DataPerCompany = false;
     DrillDownPageID = 34002185;
-    //TODO: Ver LookupPageID = 34002185;
+    LookupPageID = 34002185;
 
     fields
     {

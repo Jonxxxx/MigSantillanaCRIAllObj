@@ -195,8 +195,7 @@ page 56000 Packing
         IF "No. Palet Abierto" = '' THEN BEGIN
             ConfSant.GET;
             ConfSant.TESTFIELD("No. serie Palet");
-            //TODO: Ver NoSeriesMgt.InitSeries(ConfSant."No. serie Palet", "No. Palet Abierto", "Fecha Apertura", "No. Palet Abierto",
-            //TODO: Ver                         ConfSant."No. serie Palet");
+            "No. Palet Abierto" := NoSeriesMgt.GetNextNo(ConfSant."No. serie Palet", "Fecha Apertura");
         END;
     end;
 

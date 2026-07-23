@@ -149,7 +149,9 @@ table 67011 Eventos
         IF "No." = '' THEN BEGIN
             ConfAPS.GET;
             ConfAPS.TESTFIELD("No. Serie Eventos");
-            //TODO: Ver NoSeriesMgt.InitSeries(ConfAPS."No. Serie Eventos", xRec."No. Series", 0D, "No.", "No. Series");
+            "No. Series" := ConfAPS."No. Serie Eventos";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            "No." := NoSeriesMgt.GetNextNo("No. Series");
         END;
 
         "Fecha creacion" := TODAY;

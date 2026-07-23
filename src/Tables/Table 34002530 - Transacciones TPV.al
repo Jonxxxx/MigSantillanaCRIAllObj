@@ -4,7 +4,7 @@ table 34002530 "Transacciones TPV"
 
     Caption = 'Pos Transactions';
     DrillDownPageID = 34002544;
-    //TODO: Ver LookupPageID = 34002544;
+    LookupPageID = 34002544;
 
     fields
     {

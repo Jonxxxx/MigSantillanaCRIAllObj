@@ -4,7 +4,7 @@ table 34002158 "Tipos de nominas"
     DataCaptionFields = Descripcion;
     DataPerCompany = false;
     DrillDownPageID = 34002158;
-    //TODO: Ver LookupPageID = 34002158;
+    LookupPageID = 34002158;
 
     fields
     {

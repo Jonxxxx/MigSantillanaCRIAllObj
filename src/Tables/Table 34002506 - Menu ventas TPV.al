@@ -1,7 +1,7 @@
 table 34002506 "Menu ventas TPV"
 {
     Caption = 'Sales POS menu';
-    //TODO: Ver LookupPageID = 34002511;
+    LookupPageID = 34002511;
 
     fields
     {

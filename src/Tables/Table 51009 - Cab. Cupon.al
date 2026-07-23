@@ -187,25 +187,28 @@ table 51009 "Cab. Cupon"
 
     trigger OnInsert()
     begin
-        IF "No. Cupon" = '' THEN BEGIN
-            rConfEmpresa.GET;
-            rConfEmpresa.TESTFIELD("No. serie Cupon");
-            //TODO: Ver NoSeriesMgt.InitSeries(rConfEmpresa."No. serie Cupon", xRec."No. Series", 0D, "No. Cupon", "No. Series");
-        END;
+        if "No. Cupon" = '' then begin
+            rConfEmpresa.Get();
+            rConfEmpresa.TestField("No. serie Cupon");
+
+            "No. Series" := rConfEmpresa."No. serie Cupon";
+
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then
+                "No. Series" := xRec."No. Series";
+
+            "No. Cupon" := NoSeriesMgt.GetNextNo("No. Series");
+        end;
     end;
 
     trigger OnModify()
     begin
-        /*
-        IF rUserSetup.GET(USERID) THEN
-          BEGIN
-            IF NOT rUserSetup."Permite modificar Cupon" THEN
-              TESTFIELD(Impreso,FALSE);
-          END
-        ELSE
-          TESTFIELD(Impreso,FALSE);
-        */
 
+        IF rUserSetup.GET(USERID) THEN BEGIN
+            IF NOT rUserSetup."Permite modificar Cupon" THEN
+                TESTFIELD(Impreso, FALSE);
+        END
+        ELSE
+            TESTFIELD(Impreso, FALSE);
     end;
 
     trigger OnRename()
@@ -215,7 +218,7 @@ table 51009 "Cab. Cupon"
 
     var
         rConfEmpresa: Record 56001;
-        //TODO: Ver NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit "No. Series";
         rCliente: Record 18;
         rContacto: Record 5050;
         rAnoEscolar: Record 51013;
@@ -223,22 +226,29 @@ table 51009 "Cab. Cupon"
         rUserSetup: Record 91;
 
 
-    /*TODO: Ver
+
     procedure AssistEdit(OldCabCupon: Record 51009): Boolean
     var
         rCabCupon: Record 51009;
     begin
-        WITH rCabCupon DO BEGIN
-            rCabCupon := Rec;
-            rConfEmpresa.GET;
-            rConfEmpresa.TESTFIELD("No. serie Cupon");
-            IF NoSeriesMgt.SelectSeries(rConfEmpresa."No. serie Cupon", OldCabCupon."No. Series", "No. Series") THEN BEGIN
-                NoSeriesMgt.SetSeries("No. Cupon");
-                Rec := rCabCupon;
-                EXIT(TRUE);
-            END;
-        END;
+        rCabCupon := Rec;
+
+        rConfEmpresa.Get();
+        rConfEmpresa.TestField("No. serie Cupon");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             rConfEmpresa."No. serie Cupon",
+             OldCabCupon."No. Series",
+             rCabCupon."No. Series")
+        then begin
+            rCabCupon."No. Cupon" :=
+                NoSeriesMgt.GetNextNo(rCabCupon."No. Series");
+
+            Rec := rCabCupon;
+            exit(true);
+        end;
+
+        exit(false);
     end;
-    */
 }
 

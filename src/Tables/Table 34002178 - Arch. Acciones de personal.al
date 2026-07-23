@@ -2,7 +2,7 @@ table 34002178 "Arch. Acciones de personal"
 {
     Caption = 'Personnel activities';
     DrillDownPageID = 34002170;
-    //TODO: Ver LookupPageID = 34002170;
+    LookupPageID = 34002170;
 
     fields
     {

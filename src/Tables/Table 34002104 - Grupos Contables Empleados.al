@@ -2,7 +2,7 @@ table 34002104 "Grupos Contables Empleados"
 {
     DataCaptionFields = "Codigo";
     DrillDownPageID = 34002140;
-    //TODO: Ver LookupPageID = 34002140;
+    LookupPageID = 34002140;
 
     fields
     {

@@ -2,7 +2,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
 {
     Caption = 'Profile Questionnaire Line';
     DataCaptionFields = "Profile Questionnaire Code", Description;
-    //TODO: Ver LookupPageID = 34002210;
+    LookupPageID = 34002210;
 
     fields
     {

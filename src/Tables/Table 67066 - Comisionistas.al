@@ -2,7 +2,7 @@ table 67066 Comisionistas
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;
-    //TODO: Ver LookupPageID = 5052;
+    LookupPageID = 5052;
 
     fields
     {
@@ -13,8 +13,8 @@ table 67066 Comisionistas
             trigger OnValidate()
             begin
                 IF "No." <> xRec."No." THEN BEGIN
-                    //TODO: Ver RMSetup.GET;
-                    //TODO: Ver NoSeriesMgt.TestManual(RMSetup."Contact Nos.");
+                    RMSetup.GET;
+                    NoSeriesMgt.TestManual(RMSetup."Contact Nos.");
                     "No. Series" := '';
                 END;
             end;
@@ -956,7 +956,7 @@ table 67066 Comisionistas
         Text009: Label 'The %2 record of the %1 has been created.';
         Text010: Label 'The %2 record of the %1 is not linked with any other table.';
         RMSetup: Record 5079;
-        Cont: Record 5050;
+        Cont: Record Comisionistas;
         ContBusRel: Record 5054;
         PostCode: Record 225;
         RecRef: RecordRef;
@@ -964,6 +964,7 @@ table 67066 Comisionistas
         DuplMgt: Codeunit 5060;
         ChangeLogMgt: Codeunit 423;
         UpdateCustVendBank: Codeunit 5055;
+        NoSeriesMgt: Codeunit "No. Series";
         ContChanged: Boolean;
         SkipDefaults: Boolean;
         Text012: Label 'You cannot change %1 because one or more unlogged segments are assigned to the contact.';
@@ -980,20 +981,21 @@ table 67066 Comisionistas
 
     procedure AssistEdit(): Boolean
     begin
-        /*WITH Cont DO BEGIN
-          Cont := Rec;
-          RMSetup.GET;
-          RMSetup.TESTFIELD("Contact Nos.");
-          IF NoSeriesMgt.SelectSeries(RMSetup."Contact Nos.",OldCont."No. Series","No. Series") THEN BEGIN
-            RMSetup.GET;
-            RMSetup.TESTFIELD("Contact Nos.");
-            NoSeriesMgt.SetSeries("No.");
-            Rec := Cont;
-            EXIT(TRUE);
-          END;
-        END;
-         */
+        Cont := Rec;
+        RMSetup.Get();
+        RMSetup.TestField("Contact Nos.");
 
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             RMSetup."Contact Nos.",
+             Cont."No. Series",
+             Cont."No. Series")
+        then begin
+            Cont."No." := NoSeriesMgt.GetNextNo(Cont."No. Series");
+            Rec := Cont;
+            exit(true);
+        end;
+
+        exit(false);
     end;
 
     procedure DisplayMap()

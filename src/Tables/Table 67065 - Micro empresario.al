@@ -420,7 +420,7 @@ table 67065 "Micro empresario"
         RecRef: RecordRef;
         xRecRef: RecordRef;
         //TODO: Ver DuplMgt: Codeunit 5060;
-        //TODO: Ver NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit "No. Series";
         //TODO: Ver ChangeLogMgt: Codeunit 423;
         //TODO: Ver UpdateCustVendBank: Codeunit 5055;
         //TODO: Ver CampaignMgt: Codeunit 7030;

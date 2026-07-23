@@ -2,7 +2,7 @@ table 34002152 "Beneficios laborales"
 {
     Caption = 'Beneficios cargos';
     DrillDownPageID = 34002159;
-    //TODO: Ver LookupPageID = 34002159;
+    LookupPageID = 34002159;
 
     fields
     {

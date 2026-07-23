@@ -2,7 +2,7 @@ table 34002529 "Turnos TPV"
 {
     Caption = 'Control de TPV';
     DrillDownPageID = 34002536;
-    //TODO: Ver LookupPageID = 34002536;
+    LookupPageID = 34002536;
 
     fields
     {

@@ -770,7 +770,7 @@ codeunit 75007 "MdM Gen. Prod."
 
                     IF lwSerie <> '' THEN BEGIN
                         lwNo := '';
-                        //TODO: Ver NoSeriesMgt.InitSeries(lwSerie, lwSerie, 0D, lwNo, lwSerie);
+                        lwNo := NoSeriesMgt.GetNextNo(lwSerie);
                         lwFieRef.VALUE := lwNo;
                         // le ponemos la serie
                         lwFieRef := pwRecRef.FIELD(97); // Serie

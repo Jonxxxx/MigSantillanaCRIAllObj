@@ -3,7 +3,7 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
     Caption = 'Distribucion Ctas. Gpo. Contable Empleados';
     DataCaptionFields = "Codigo";
     DrillDownPageID = 34002140;
-    //TODO: Ver LookupPageID = 34002140;
+    LookupPageID = 34002140;
 
     fields
     {

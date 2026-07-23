@@ -2,7 +2,7 @@ table 34002117 "Historico Cab. nomina"
 {
     DataCaptionFields = "No. empleado", Nombre, "Tipo de nomina", "Periodo";
     DrillDownPageID = 34002123;
-    //TODO: Ver LookupPageID = 34002123;
+    LookupPageID = 34002123;
 
     fields
     {

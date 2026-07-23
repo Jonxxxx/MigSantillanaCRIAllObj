@@ -626,7 +626,9 @@ table 67001 Docentes
         APSSetup.GET;
         IF "No." = '' THEN BEGIN
             APSSetup.TESTFIELD("No. Serie Profesores");
-            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Profesores", xRec."No. Series", 0D, "No.", "No. Series");
+            "No. Series" := APSSetup."No. Serie Profesores";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            "No." := NoSeriesMgt.GetNextNo("No. Series");
         END;
         "Ano inscripcion CDS" := FORMAT(APSSetup.Campana);
 
@@ -698,18 +700,21 @@ table 67001 Docentes
 
     procedure AssistEdit(OldCont: Record 67001): Boolean
     begin
-        WITH Docente DO BEGIN
-            Docente := Rec;
-            APSSetup.GET;
-            APSSetup.TESTFIELD("No. Serie Profesores");
-            //TODO: Ver IF NoSeriesMgt.SelectSeries(APSSetup."No. Serie Profesores", OldCont."No. Series", "No. Series") THEN BEGIN
-            APSSetup.GET;
-            APSSetup.TESTFIELD("No. Serie Profesores");
-            //TODO: Ver NoSeriesMgt.SetSeries("No.");
+        Docente := Rec;
+        APSSetup.Get();
+        APSSetup.TestField("No. Serie Profesores");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             APSSetup."No. Serie Profesores",
+             OldCont."No. Series",
+             Docente."No. Series")
+        then begin
+            Docente."No." := NoSeriesMgt.GetNextNo(Docente."No. Series");
             Rec := Docente;
-            EXIT(TRUE);
-            //TODO: Ver END;
-        END;
+            exit(true);
+        end;
+
+        exit(false);
     end;
 
     procedure GetApellidosNombre(): Text[250]

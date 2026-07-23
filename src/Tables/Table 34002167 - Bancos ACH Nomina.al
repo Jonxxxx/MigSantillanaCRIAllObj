@@ -2,7 +2,7 @@ table 34002167 "Bancos ACH Nomina"
 {
     DataPerCompany = false;
     DrillDownPageID = 34002172;
-    //TODO: Ver LookupPageID = 34002172;
+    LookupPageID = 34002172;
 
     fields
     {

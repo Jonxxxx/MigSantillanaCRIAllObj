@@ -92,8 +92,10 @@ table 34002201 "ent - aaa - Disponible"
     begin
         IF Codigo = '' THEN BEGIN
             HumanResSetup.GET;
-            //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
-            //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. Series", 0D, Codigo, "No. Series");
+            HumanResSetup.TESTFIELD("No. serie entrenamientos");
+            "No. Series" := HumanResSetup."No. serie entrenamientos";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            Codigo := NoSeriesMgt.GetNextNo("No. Series");
         END;
     end;
 

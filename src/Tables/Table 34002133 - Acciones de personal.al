@@ -2,7 +2,7 @@ table 34002133 "Acciones de personal"
 {
     Caption = 'Personnel activities';
     DrillDownPageID = 34002170;
-    //TODO: Ver LookupPageID = 34002170;
+    LookupPageID = 34002170;
 
     fields
     {
@@ -663,8 +663,10 @@ table 34002133 "Acciones de personal"
         ELSE
             IF "No." = '' THEN BEGIN
                 HumanResSetup.GET;
-                //TODO: Ver HumanResSetup.TESTFIELD("No. serie acciones personal");
-                //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."No. serie acciones personal", xRec."No. serie", 0D, "No.", "No. serie");
+                HumanResSetup.TESTFIELD("No. serie acciones personal");
+                "No. serie" := HumanResSetup."No. serie acciones personal";
+                if NoSeriesMgt.AreRelated("No. serie", xRec."No. serie") then "No. serie" := xRec."No. serie";
+                "No." := NoSeriesMgt.GetNextNo("No. serie");
             END;
 
 

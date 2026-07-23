@@ -2,7 +2,7 @@ table 34002180 "Shift schedule"
 {
     Caption = 'Shift schedule';
     DrillDownPageID = 34002177;
-    //TODO: Ver LookupPageID = 34002177;
+    LookupPageID = 34002177;
 
     fields
     {

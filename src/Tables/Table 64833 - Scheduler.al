@@ -154,7 +154,9 @@ table 64833 Scheduler
         ReplicatorSetup.GET;
         IF "No." = '' THEN
             ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-        //TODO: Ver NoSeriesMgt.InitSeries(ReplicatorSetup."Scheduler Nos.", xRec."No. Series", 0D, "No.", "No. Series");
+        "No. Series" := ReplicatorSetup."Scheduler Nos.";
+        if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+        "No." := NoSeriesMgt.GetNextNo("No. Series");
     end;
 
     var
@@ -165,18 +167,21 @@ table 64833 Scheduler
 
     procedure AssistEdit(OldSched: Record 64833): Boolean
     begin
-        WITH Sched DO BEGIN
-            Sched := Rec;
-            ReplicatorSetup.GET;
-            ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-            //TODO: Ver IF NoSeriesMgt.SelectSeries(ReplicatorSetup."Scheduler Nos.", OldSched."No. Series", "No. Series") THEN BEGIN
-            ReplicatorSetup.GET;
-            ReplicatorSetup.TESTFIELD("Scheduler Nos.");
-            //TODO: Ver NoSeriesMgt.SetSeries("No.");
+        Sched := Rec;
+        ReplicatorSetup.Get();
+        ReplicatorSetup.TestField("Scheduler Nos.");
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             ReplicatorSetup."Scheduler Nos.",
+             OldSched."No. Series",
+             Sched."No. Series")
+        then begin
+            Sched."No." := NoSeriesMgt.GetNextNo(Sched."No. Series");
             Rec := Sched;
-            EXIT(TRUE);
-            //TODO: Ver END;
-        END;
+            exit(true);
+        end;
+
+        exit(false);
     end;
 }
 

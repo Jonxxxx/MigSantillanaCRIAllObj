@@ -3,7 +3,7 @@ table 34002184 "Cab. Cuestionario Evaluacion"
     Caption = 'Profile Questionnaire Header';
     DataCaptionFields = "Code", Description;
     DrillDownPageID = 34002209;
-    //TODO: Ver LookupPageID = 34002208;
+    LookupPageID = 34002208;
 
     fields
     {

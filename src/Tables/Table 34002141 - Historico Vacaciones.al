@@ -2,7 +2,7 @@ table 34002141 "Historico Vacaciones"
 {
     Caption = 'Vacation''s History';
     DrillDownPageID = 34002178;
-    //TODO: Ver LookupPageID = 34002178;
+    LookupPageID = 34002178;
 
     fields
     {

@@ -5,7 +5,7 @@ table 34002523 "Transacciones Caja TPV"
 
     Caption = 'Transaccion caja TPV';
     DrillDownPageID = 34002535;
-    //TODO: Ver LookupPageID = 34002535;
+    LookupPageID = 34002535;
 
     fields
     {

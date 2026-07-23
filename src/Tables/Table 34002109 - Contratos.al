@@ -4,7 +4,7 @@ table 34002109 Contratos
 
     DataCaptionFields = "No. empleado";
     DrillDownPageID = 34002106;
-    //TODO: Ver LookupPageID = 34002106;
+    LookupPageID = 34002106;
 
     fields
     {

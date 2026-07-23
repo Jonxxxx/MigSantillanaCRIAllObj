@@ -968,7 +968,9 @@ table 67055 "Solicitud de Taller - Evento"
         IF "No. Solicitud" = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Solic. T-E");
-            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Solic. T-E", xRec."No. Series", 0D, "No. Solicitud", "No. Series");
+            "No. Series" := APSSetup."No. Serie Solic. T-E";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            "No. Solicitud" := NoSeriesMgt.GetNextNo("No. Series");
         END;
 
         "Fecha Solicitud" := TODAY;

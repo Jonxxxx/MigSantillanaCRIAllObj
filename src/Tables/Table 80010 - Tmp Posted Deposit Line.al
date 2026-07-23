@@ -1,7 +1,7 @@
 table 80010 "Tmp Posted Deposit Line"
 {
     Caption = 'Posted Deposit Line';
-    //TODO: Ver LookupPageID = 10148;
+    //TODO: Page no existe LookupPageID = 10148;
 
     fields
     {

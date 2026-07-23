@@ -22,7 +22,7 @@ table 34002503 Tiendas
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'Stores';
-    //TODO: Ver LookupPageID = 34002504;
+    LookupPageID = 34002504;
 
     fields
     {

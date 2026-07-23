@@ -278,8 +278,10 @@ table 34002204 "Cab. Entrenamiento"
     begin
         IF "No. entrenamiento" = '' THEN BEGIN
             HumanResSetup.GET;
-            //TODO: Ver HumanResSetup.TESTFIELD("No. serie acciones personal");
-            //TODO: Ver NoSeriesMgt.InitSeries(HumanResSetup."No. serie entrenamientos", xRec."No. serie", 0D, "No. entrenamiento", "No. serie");
+            HumanResSetup.TESTFIELD("No. serie acciones personal");
+            "No. serie" := HumanResSetup."No. serie entrenamientos";
+            if NoSeriesMgt.AreRelated("No. serie", xRec."No. serie") then "No. serie" := xRec."No. serie";
+            "No. entrenamiento" := NoSeriesMgt.GetNextNo("No. serie");
         END;
     end;
 
@@ -321,23 +323,30 @@ table 34002204 "Cab. Entrenamiento"
 
     procedure AssistEdit(): Boolean
     begin
-        HumanResSetup.GET;
-        TestNoSerie;
-        //TODO: Ver IF NoSeriesMgt.SelectSeries(TraeCodNoSerie, "No. entrenamiento", "No. entrenamiento") THEN BEGIN
-        //TODO: Ver TestNoSerie;
-        //TODO: Ver NoSeriesMgt.SetSeries("No. entrenamiento");
-        //TODO: Ver EXIT(TRUE);
-        //TODO: Ver END;
+        HumanResSetup.Get();
+        TestNoSerie();
+
+        if NoSeriesMgt.LookupRelatedNoSeries(
+             TraeCodNoSerie(),
+             "No. serie",
+             "No. serie")
+        then begin
+            TestNoSerie();
+            "No. entrenamiento" := NoSeriesMgt.GetNextNo("No. serie");
+            exit(true);
+        end;
+
+        exit(false);
     end;
 
     local procedure TestNoSerie(): Boolean
     begin
-        //TODO: Ver HumanResSetup.TESTFIELD("No. serie entrenamientos");
+        HumanResSetup.TESTFIELD("No. serie entrenamientos");
     end;
 
     local procedure TraeCodNoSerie(): Code[20]
     begin
-        //TODO: Ver EXIT(HumanResSetup."No. serie entrenamientos");
+        exit(HumanResSetup."No. serie entrenamientos");
     end;
 }
 

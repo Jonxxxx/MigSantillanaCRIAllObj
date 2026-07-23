@@ -1,7 +1,7 @@
 table 34002195 "Miembros cooperativa"
 {
     DrillDownPageID = 34002216;
-    //TODO: Ver LookupPageID = 34002216;
+    LookupPageID = 34002216;
 
     fields
     {

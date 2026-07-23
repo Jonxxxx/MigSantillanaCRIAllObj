@@ -503,7 +503,9 @@ table 67102 "Cab. Visita Asesor/Consultor"
         IF "No. Visita Asesor/Consultor" = '' THEN BEGIN
             APSSetup.GET;
             APSSetup.TESTFIELD("No. Serie Visita Asesor/Consu.");
-            //TODO: Ver NoSeriesMgt.InitSeries(APSSetup."No. Serie Visita Asesor/Consu.", xRec."No. Series", 0D, "No. Visita Asesor/Consultor", "No. Series");
+            "No. Series" := APSSetup."No. Serie Visita Asesor/Consu.";
+            if NoSeriesMgt.AreRelated("No. Series", xRec."No. Series") then "No. Series" := xRec."No. Series";
+            "No. Visita Asesor/Consultor" := NoSeriesMgt.GetNextNo("No. Series");
         END;
 
         Seg.InsertarSeguimiento(Rec);

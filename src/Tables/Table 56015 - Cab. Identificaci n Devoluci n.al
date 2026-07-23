@@ -12,7 +12,7 @@ table 56015 "Cab. Identificaci n Devoluci n"
             trigger OnValidate()
             begin
                 SalesSetup.GET;
-                //TODO: Ver NoSeriesMgt.TestManual(SalesSetup."No. Serie Ident. Devolucion");
+                NoSeriesMgt.TestManual(SalesSetup."No. Serie Ident. Devolucion");
             end;
         }
         field(2; "Id. Usuario"; Code[20])
@@ -113,13 +113,12 @@ table 56015 "Cab. Identificaci n Devoluci n"
         IF "No. Ident. Devolucion" = '' THEN BEGIN
             SalesSetup.GET;
             TestNoSeries;
-            //TODO: Ver NoSeriesMgt.InitSeries(GetNoSeriesCode, "No. Ident. Devolucion", "Fecha Registro", "No. Ident. Devolucion",
-            //TODO: Ver                        SalesSetup."No. Serie Ident. Devolucion");
+            "No. Ident. Devolucion" := NoSeriesMgt.GetNextNo(GetNoSeriesCode(), "Fecha Registro");
         END;
     end;
 
     var
-        //TODO: Ver NoSeriesMgt: Codeunit "No. Series";
+        NoSeriesMgt: Codeunit "No. Series";
         SalesSetup: Record 311;
         Cust: Record 18;
         LID: Record 56016;

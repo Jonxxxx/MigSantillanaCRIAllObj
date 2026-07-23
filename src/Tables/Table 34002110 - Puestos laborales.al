@@ -2,7 +2,7 @@ table 34002110 "Puestos laborales"
 {
     Caption = 'Job type';
     DrillDownPageID = 34002109;
-    //TODO: Ver LookupPageID = 34002109;
+    LookupPageID = 34002109;
 
     fields
     {

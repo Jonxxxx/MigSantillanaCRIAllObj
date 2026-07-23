@@ -1,7 +1,7 @@
 table 34002510 "Clinetes TPV"
 {
     Caption = 'Customers POS';
-    //TODO: Ver LookupPageID = 34002515;
+    LookupPageID = 34002515;
 
     fields
     {

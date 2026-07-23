@@ -2,7 +2,7 @@ table 80009 "Tmp Posted Deposit Header"
 {
     Caption = 'Posted Deposit Header';
     DataCaptionFields = "No.";
-    //TODO: Ver LookupPageID = 10147;
+    //TODO: Page no existe LookupPageID = 10147;
 
     fields
     {
