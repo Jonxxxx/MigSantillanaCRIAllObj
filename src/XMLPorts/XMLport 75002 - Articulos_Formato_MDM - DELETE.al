@@ -98,7 +98,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
                 begin
                     lwOK := EVALUATE(TmpCab."Fecha Creacion", fecha_origen);
                     lwOK := EVALUATE(TmpCab.fecha, fecha);
-                    //TODO: Ver cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
+                    cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
                 end;
             }
             textelement(body)
@@ -2175,11 +2175,11 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
     trigger OnPreXmlPort()
     begin
-        //TODO: Ver cGestM.AddMstRegHeader(2, 0);
+        cGestM.AddMstRegHeader(2, 0);
     end;
 
     var
-        //TODO: Ver cGestM: Codeunit 75001;
+        cGestM: Codeunit 75001;
         wTblInsertd: Boolean;
 
     procedure AddMstReg(pwIdTabla: Integer; pwTipo: Integer; pwCode: Code[30]; pwNombreElemento: Text)
@@ -2210,7 +2210,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
             lwOper := 1; // Update
 
         //cGestM.AddMstReg2(lwOper, pwIdTabla ,pwTipo ,pwCode, '', pwNombreElemento, '', pwValMdM);
-        //TODO: Ver cGestM.AddMstReg2(lwOper, pwIdTabla, pwTipo, pwCode, '', pwNombreElemento, '', FALSE);
+        cGestM.AddMstReg2(lwOper, pwIdTabla, pwTipo, pwCode, '', pwNombreElemento, '', FALSE);
     end;
 
     procedure AddMstRegField(pwIdField: Integer; pwValue: Text; pwNombreElemento: Text)
@@ -2224,22 +2224,22 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
     begin
         // AddMstRegField2
 
-        //TODO: Ver IF wTblInsertd THEN
-        //TODO: Ver cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
+        IF wTblInsertd THEN
+            cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
     end;
 
     procedure GetOutStrm(var wOutStrm: OutStream)
     begin
         // GetOutStrm
 
-        //TODO: Ver cGestM.GetOutStrm(wOutStrm)
+        cGestM.GetOutStrm(wOutStrm)
     end;
 
     procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 
-        //TODO: Ver cGestM.GestMessageXML(pxResp);
+        cGestM.GestMessageXML(pxResp);
     end;
 
     procedure AsegDato(pwDato: Text)

@@ -12,7 +12,7 @@ xmlport 34003002 "Comprobantes Anulados 608"
             tableelement(Table2000000026; 2000000026)
             {
                 XmlName = 'Cabecera';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field1)
                                   WHERE(Field1=CONST(1));*/
@@ -62,7 +62,7 @@ xmlport 34003002 "Comprobantes Anulados 608"
             tableelement("Archivo Transferencia ITBIS"; 34003004)
             {
                 XmlName = 'ITBIS';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field11, Field18)
                                   WHERE(Field18 = CONST(608));*/

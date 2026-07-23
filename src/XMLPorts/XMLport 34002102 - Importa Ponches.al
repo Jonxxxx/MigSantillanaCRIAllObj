@@ -13,7 +13,7 @@ xmlport 34002102 "Importa Ponches"
                 AutoSave = false;
                 AutoUpdate = false;
                 XmlName = 'integer';
-                //TODO: Ver
+                //TODO: Campo no existe 
                 /*SourceTableView = SORTING(Field1)
                                   WHERE(Field1=CONST(1));*/
                 textelement(texto)

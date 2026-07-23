@@ -21,14 +21,13 @@ xmlport 58013 "cta Empleados"
 
                 trigger OnBeforeInsertRecord()
                 begin
-                    /*
-                    //TODO: Ver 
+
                     DistCta."Cod. Banco" := '017';
                     DistCta."No. empleado" := CodEmpl;
                     DistCta."Tipo Cuenta" := 1;
                     DistCta."Numero Cuenta" := ctaban;
                     IF DistCta.INSERT THEN;
-                    */
+
                 end;
             }
         }
@@ -47,6 +46,6 @@ xmlport 58013 "cta Empleados"
     }
 
     var
-    //TODO: Ver DistCta: Record 34002108;
+        DistCta: Record 34002108;
 }
 

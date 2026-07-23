@@ -116,17 +116,10 @@ xmlport 56201 "Resp. Web Service MdE"
         }
     }
 
-    /* TODO: Ver
     procedure SetInfo(var New_id_mensaje: Text[36]; var New_Tipo: Text[20]; var FechaOrigen: Text[30]; var PaisOrigen: Text[20]): Text
     var
         ConfSant: Record 56001;
         XmlDomMngt: Codeunit 6224;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNodeList: DotNet XmlNodeList;
         i: Integer;
     begin
         ConfSant.GET;
@@ -139,6 +132,5 @@ xmlport 56201 "Resp. Web Service MdE"
         id_mensaje := New_id_mensaje;
         ok := '1'
     end;
-    */
 }
 

@@ -111,7 +111,7 @@ xmlport 58011 "Importa Empleados 2"
                 Empl."Middle Name" := Nomb2;
                 Empl."Last Name" := Ape1;
 
-                /* TODO: Ver
+
                 Empl."Second Last Name" := Ape2;
 
                 Empl.VALIDATE("First Name");
@@ -176,7 +176,7 @@ xmlport 58011 "Importa Empleados 2"
                 DistCta."No. empleado" := Empl."No.";
                 IF DistCta.INSERT THEN;
 
-                Empl."Dia nacimiento" := NSS;
+                //TODO: Campo no existe Empl."Dia nacimiento" := NSS;
 
 
                 Departamento.FINDFIRST;
@@ -198,7 +198,7 @@ xmlport 58011 "Importa Empleados 2"
                     Empl.MODIFY;
 
                 Empl.VALIDATE("Emplymt. Contract Code", '100');
-                */
+
 
 
                 Empl.MODIFY;
@@ -224,8 +224,7 @@ xmlport 58011 "Importa Empleados 2"
 
     var
         Empl: Record 5200;
-        /*
-        //TODO: Ver 
+
         esqsal: Record 34002115;
         contra: Record 34002109;
         CARGOS: Record 34002110;
@@ -233,7 +232,7 @@ xmlport 58011 "Importa Empleados 2"
         DefDim: Record 352;
         DimVal: Record 349;
         Departamento: Record 34002135;
-        SubDepartamento: Record 34002136;*/
+        SubDepartamento: Record 34002136;
         Sucursal: Code[10];
         found: Integer;
 }

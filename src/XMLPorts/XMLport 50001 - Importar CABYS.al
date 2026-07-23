@@ -36,7 +36,7 @@ xmlport 50001 "Importar CABYS"
                         // ++ 001
                         CLEAR(Item);
                         Item.GET(numeroProducto);
-                        //TODO: Ver Item.VALIDATE(CABYS, CABYS);
+                        Item.VALIDATE(CABYS, CABYS);
                         Item.MODIFY;
 
                         // -- 001

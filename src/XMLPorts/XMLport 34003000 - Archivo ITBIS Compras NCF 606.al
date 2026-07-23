@@ -13,7 +13,7 @@ xmlport 34003000 "Archivo ITBIS Compras NCF 606"
             {
                 MaxOccurs = Once;
                 XmlName = 'ATI';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field7, Field8, Field5, Field6, Field18)
                                   ORDER(Ascending)
@@ -90,7 +90,7 @@ xmlport 34003000 "Archivo ITBIS Compras NCF 606"
             tableelement(ati_2; 34003004)
             {
                 XmlName = 'ATI_2';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field7, Field8, Field5, Field6, Field18)
                                   ORDER(Ascending)

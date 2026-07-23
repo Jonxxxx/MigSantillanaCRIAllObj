@@ -5012,7 +5012,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                 lwOK := EVALUATE(TmpCab."Fecha Creacion", fecha_origen);
                 lwOK := EVALUATE(TmpCab.fecha, fecha);
 
-                //TODO: Ver cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
+                cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
             end;
         }
     }
@@ -5038,12 +5038,12 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
     begin
         CLEAR(wInstFld);
         CLEAR(wUltCodProd);
-        //TODO: Ver cGestM.SetAlowEmptyValues(TRUE);
-        //TODO: Ver cGestM.AddMstRegHeader(0, 0);
+        cGestM.SetAlowEmptyValues(TRUE);
+        cGestM.AddMstRegHeader(0, 0);
     end;
 
     var
-        //TODO: Ver cGestM: Codeunit 75001;
+        cGestM: Codeunit 75001;
         wOutStrm: OutStream;
         wTblInsertd: Boolean;
         wInstFld: array[30] of Boolean;
@@ -5082,7 +5082,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
         ELSE
             lwOp := 0; // Inserta;
 
-        //TODO: Ver cGestM.AddMstReg2(lwOp, pwIdTabla, pwTipo, pwCode, pwDescripcion, pwNombreElemento, pwVisible, pwValMdM);
+        cGestM.AddMstReg2(lwOp, pwIdTabla, pwTipo, pwCode, pwDescripcion, pwNombreElemento, pwVisible, pwValMdM);
     end;
 
     procedure AddMstRegField(pwIdField: Integer; pwValue: Text; pwNombreElemento: Text; pwNo: Integer)
@@ -5100,22 +5100,22 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
         // wInstFld[pwNo] indica si el valor ha sido informado en el XML
 
         wInstFld[pwNo] := wInstFld[pwNo] OR (pwValue <> '');
-        //TODO: Ver IF wTblInsertd AND wInstFld[pwNo] THEN
-        //TODO: Ver cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
+        IF wTblInsertd AND wInstFld[pwNo] THEN
+            cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
     end;
 
     procedure GetOutStrm(var wOutStrm: OutStream)
     begin
         // GetOutStrm
 
-        //TODO: Ver cGestM.GetOutStrm(wOutStrm)
+        cGestM.GetOutStrm(wOutStrm)
     end;
 
     procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 
-        //TODO: Ver cGestM.GestMessageXML(pxResp);
+        cGestM.GestMessageXML(pxResp);
     end;
 
     procedure SetInsField(wNo: Integer)

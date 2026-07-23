@@ -12,7 +12,7 @@ xmlport 34003004 "Pagos Exterior Formato 609"
             tableelement(Table2000000026; 2000000026)
             {
                 XmlName = 'Cabecera';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field1)
                                   WHERE(Field1 = CONST(1));*/
@@ -69,7 +69,7 @@ xmlport 34003004 "Pagos Exterior Formato 609"
             tableelement("Archivo Transferencia ITBIS"; 34003004)
             {
                 XmlName = 'ITBIS';
-                //TODO: Ver 
+                //TODO: Campo no existe 
                 /*
                 SourceTableView = SORTING(Field7, Field8, Field5, Field6, Field18)
                                   WHERE(Field18 = CONST(606));*/

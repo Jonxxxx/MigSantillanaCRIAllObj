@@ -12,8 +12,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
     Encoding = UTF16;
     Format = Xml;
     FormatEvaluate = Xml;
-    /*
-    TODO: Ver
+
     schema
     {
         textelement(mensaje)
@@ -35,9 +34,9 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                     {
                         MaxOccurs = Unbounded;
                         MinOccurs = Once;
-                        RequestFilterFields = Field1;
+                        //TODO: Campo no existe RequestFilterFields = Field1;
                         XmlName = 'Articulo';
-                        SourceTableView = SORTING(Field1);
+                        //TODO: Campo no existe SourceTableView = SORTING(Field1);
                         textelement(articulo_general)
                         {
                             MaxOccurs = Once;
@@ -555,7 +554,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                             FormatoDigital := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Formato Digital", '', wObligaCampos);
                                             PesoDigitalUnidad := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Peso Digital Unidad", '', wObligaCampos);
                                             PesoDigitalValor := '0';
-                                            TipoProteccion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Tipo Proteccion", '', wObligaCampos);
+                                            //TODO: Campo no existe TipoProteccion := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Tipo Proteccion", '', wObligaCampos);
                                         END
                                         ELSE BEGIN
                                             FormatoDigital := '';
@@ -1076,14 +1075,14 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                 MaxOccurs = Once;
                                 MinOccurs = Zero;
                                 XmlName = 'Packs';
-                                tableelement(bomline; Table90)
+                                tableelement(bomline; 90)
                                 {
-                                    LinkFields = Field1 = FIELD("Field1");
+                                    //TODO: Campo no existe LinkFields = Field1 = FIELD("Field1");
                                     LinkTable = Item;
                                     MaxOccurs = Unbounded;
                                     MinOccurs = Zero;
                                     XmlName = 'Pack';
-                                    SourceTableView = WHERE(Field3 = CONST(1));
+                                    //TODO: Campo no existe SourceTableView = WHERE(Field3 = CONST(1));
                                     textelement(articulo_pack)
                                     {
                                         MaxOccurs = Once;
@@ -1106,7 +1105,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                         IF BOMLine.COUNT = 0 THEN
                                             currXMLport.SKIP;
 
-                                        Articulo_Pack := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Articulo Pack", BOMLine."No.", FALSE);
+                                        //TODO: Campo no existe Articulo_Pack := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Articulo Pack", BOMLine."No.", FALSE);
                                         //Articulo_Pack  := GetTexMaxErr(Articulo_Pack,10, Text003);
                                     end;
                                 }
@@ -1388,7 +1387,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                 }
             }
         }
-        
+
     }
 
     requestpage
@@ -1444,14 +1443,14 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                                             // La fecha de alta con el que se van a cargar en el MdM los productos que se migren de NAV, será a uno del mes en el que se lance el proceso de migracion
                                             // Fecha_Alta        := FORMAT(CALCDATE('<CM>', TODAY));
 
-        
+
         Vendible := BolFormatXML(TRUE); // Este valor siempre será True.
 
         // Se reporta 01/01/2016 a piñon
         // Fecha_Estado      := FORMAT(010116D);
         // Se reporta 1/12/2017 a piñon
-        Fecha_Estado := DateFormatXML(120117D);
-        Fecha_Alta := DateFormatXML(120117D);
+        Fecha_Estado := DateFormatXML(20171201D);
+        Fecha_Alta := DateFormatXML(20171201D);
 
         // Moneda
         Vida_Util := rConvNavMdM.GetNav2MdM(rConvNavMdM."Tipo Registro"::"Vida util", '', wObligaCampos);
@@ -1597,7 +1596,7 @@ xmlport 75004 "MDM-Migracion Inicial Art."
         CLEAR(lwPrecioConImp);
         CLEAR(lwPrecioSinImp);
 
-        
+
 
         wEnc := cGestMdm.GetPrecioVta(Item, pwFecha, lwPrecioConImp, lwPrecioSinImp, lwDivisa);
 
@@ -1671,6 +1670,6 @@ xmlport 75004 "MDM-Migracion Inicial Art."
                 Result := TRUE;
         END;
     end;
-    */
+
 }
 

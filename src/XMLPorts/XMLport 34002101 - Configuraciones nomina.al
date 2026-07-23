@@ -129,11 +129,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(CN_MetodoCalculoBajas; "Configuracion nominas"."Metodo calculo Salidas")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(CN_CodBcoNominasPagoTransf; "Configuracion nominas"."Cod. Cta. Nominas Pago Transf.")
                 {
-                }*/
+                }
                 fieldelement(CN_CodCtaNominasOtrosPagos; "Configuracion nominas"."Cta. Nominas Otros Pagos")
                 {
                 }
@@ -244,14 +243,13 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(TISR_ImporteMaximo; "Tabla retencion ISR"."Importe Máximo")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(TISR_ImporteRetencion; "Tabla retencion ISR"."Importe retencion")
                 {
                 }
                 fieldelement(TISR_Retencion; "Tabla retencion ISR"."% Retencion")
                 {
-                }*/
+                }
             }
             tableelement(Employee; 5200)
             {
@@ -412,7 +410,7 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(E_Tiempo; Employee."Tiempo old")
                 {
                 }
-                //TODO: Ver
+                //TODO: Campo no existe 
                 /*
                 fieldelement(E_PermisoTrabajoMT; Employee.Field51000)
                 {
@@ -531,14 +529,13 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(E_CodigoCliente; Employee."Codigo Cliente")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(E_ExcluidoCotizacionTSS; Employee."Excluido Cotizacion TSS")
                 {
                 }
                 fieldelement(E_ExcluidoCotizacionISR; Employee."Excluido Cotizacion ISR")
                 {
-                }*/
+                }
                 fieldelement(E_NoSeguridadSocial; Employee."Dia nacimiento")
                 {
                 }
@@ -712,11 +709,10 @@ xmlport 34002101 "Configuraciones nomina"
             tableelement("Perfil Salarial"; 34002115)
             {
                 XmlName = 'PerfilSalarial';
-                //TODO: Ver
-                /*
+
                 fieldelement(PS_EmpresaCotizacion; "Perfil Salarial"."Empresa cotizacion")
                 {
-                }*/
+                }
                 fieldelement(PS_NoEmpleado; "Perfil Salarial"."No. empleado")
                 {
                 }
@@ -744,11 +740,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(PS_TipoConcepto; "Perfil Salarial"."Tipo concepto")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(PS_SujetoCotizacion; "Perfil Salarial"."Sujeto Cotizacion")
                 {
-                }*/
+                }
                 fieldelement(PS_CotizaISR; "Perfil Salarial"."Cotiza ISR")
                 {
                 }
@@ -758,11 +753,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(PS_Prorratear; "Perfil Salarial".Prorratear)
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(PS_FormulaCalculo; "Perfil Salarial"."Formula cálculo")
                 {
-                }*/
+                }
                 fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Periodo generac.")
                 {
                 }
@@ -796,11 +790,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(PS_Status; "Perfil Salarial".Status)
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement("PS_TipoNomina"; "Perfil Salarial"."Tipo Nomina")
                 {
-                }*/
+                }
                 fieldelement(PS_CotizaAFP; "Perfil Salarial"."Cotiza AFP")
                 {
                 }
@@ -901,8 +894,7 @@ xmlport 34002101 "Configuraciones nomina"
             tableelement("Empresas Cotizacion"; 34002100)
             {
                 XmlName = 'EmpresasCotizacion';
-                //TODO: Ver
-                /*
+
                 fieldelement("EC_EmpresaCotizacion"; "Empresas Cotizacion"."Empresa cotizacion")
                 {
                 }
@@ -911,7 +903,7 @@ xmlport 34002101 "Configuraciones nomina"
                 }
                 fieldelement(EC_Direccion; "Empresas Cotizacion"."Direccion")
                 {
-                }*/
+                }
                 fieldelement(EC_Numero; "Empresas Cotizacion"."Número")
                 {
                 }
@@ -930,11 +922,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(EC_DomicilioFiscal; "Empresas Cotizacion"."Domicilio fiscal")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(EC_CodPais; "Empresas Cotizacion"."Cod. pais")
                 {
-                }*/
+                }
                 fieldelement(EC_TipoDocumento; "Empresas Cotizacion"."Tipo de documento")
                 {
                 }
@@ -944,11 +935,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(EC_GrupoContable; "Empresas Cotizacion"."Grupo contable")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(EC_EsquemaPercepcion; "Empresas Cotizacion"."Esquema percepcion")
                 {
-                }*/
+                }
                 fieldelement(EC_Banco; "Empresas Cotizacion".Banco)
                 {
                 }
@@ -970,11 +960,10 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(EC_GlobalDimension2Code; "Empresas Cotizacion"."Global Dimension 2 Code")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(EC_UltNoContabilizacion; "Empresas Cotizacion"."Ult. No. Contabilizacion")
                 {
-                }*/
+                }
                 fieldelement(EC_Fax; "Empresas Cotizacion".Fax)
                 {
                 }
@@ -1021,22 +1010,20 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(CS_SalarioBase; "Conceptos salariales"."Salario Base")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(CS_SujetoCotizacion; "Conceptos salariales"."Sujeto Cotizacion")
                 {
-                }*/
+                }
                 fieldelement(CS_TextoInformativo; "Conceptos salariales"."Texto Informativo")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(CS_FilaImpresionNomina; "Conceptos salariales"."Fila Impresion Nomina")
                 {
                 }
                 fieldelement(CS_ColImpresionNomina; "Conceptos salariales"."Col. Impresion Nomina")
                 {
-                }*/
+                }
                 fieldelement(CS_ImprimirDescripcion; "Conceptos salariales"."Imprimir descripcion")
                 {
                 }
@@ -1046,15 +1033,14 @@ xmlport 34002101 "Configuraciones nomina"
                 fieldelement(CS_NoCuentaCuotaObrera; "Conceptos salariales"."No. Cuenta Cuota Obrera")
                 {
                 }
-                //TODO: Ver
-                /*
+
                 fieldelement(CS_ContabilizacionResumida; "Conceptos salariales"."Contabilizacion Resumida")
                 {
                 }
                 fieldelement(CS_ContabilizacionDimension; "Conceptos salariales"."Contabilizacion x Dimension")
                 {
                 }
-                */
+
                 fieldelement(CS_SumarRestarCuentaSalarios; "Conceptos salariales"."Sumar/Restar a cuenta salarios")
                 {
                 }

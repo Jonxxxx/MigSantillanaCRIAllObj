@@ -163,13 +163,15 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(E_NoSeries; Employee."No. Series")
                 {
                 }
-                /* TODO: Ver
+
                 fieldelement(E_Categoria; Employee."Categoria old")
                 {
                 }
                 fieldelement(E_Tiempo; Employee."Tiempo old")
                 {
                 }
+                //TODO: Campo no existe 
+                /*
                 fieldelement(E_PermisoTrabajoMT; Employee.Field51000)
                 {
                 }
@@ -190,7 +192,7 @@ xmlport 58008 "Carga datos nomina"
                 }
                 fieldelement(E_PuestoSegunMT; Employee.Field51007)
                 {
-                }
+                }*/
                 fieldelement(E_Company; Employee.Company)
                 {
                 }
@@ -330,7 +332,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002100; 34002100)
+            tableelement("Empresas Cotizacion"; 34002100)
             {
                 XmlName = 'EmpresasCotizacion';
                 fieldelement(EC_EmpresaCotizacion; "Empresas Cotizacion"."Empresa cotizacion")
@@ -433,7 +435,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002101; 34002101)
+            tableelement("Centros de Trabajo"; 34002101)
             {
                 XmlName = 'CentrosTabajo';
                 fieldelement(CT_EmpresaCotizacion; "Centros de Trabajo"."Empresa cotizacion")
@@ -455,7 +457,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002103; 34002103)
+            tableelement("Configuracion nominas"; 34002103)
             {
                 XmlName = 'ConfiguracionNominas';
                 fieldelement(CN_Codigo; "Configuracion nominas".Codigo)
@@ -642,7 +644,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002109; 34002109)
+            tableelement(Contratos; 34002109)
             {
                 XmlName = 'Contratos';
                 fieldelement(C_EmpresaCotizacion; Contratos."Empresa cotizacion")
@@ -715,7 +717,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002110; 34002110)
+            tableelement("Puestos laborales"; 34002110)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(PL_Codigo; "Puestos laborales"."Codigo")
@@ -743,7 +745,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002111; 34002111)
+            tableelement("Conceptos salariales"; 34002111)
             {
                 XmlName = 'ConceptosSalariales';
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")
@@ -861,7 +863,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002112; 34002112)
+            tableelement("Configuracion Listados"; 34002112)
             {
                 XmlName = 'ConfiguracionListados';
                 fieldelement(CL_IDReporte; "Configuracion Listados"."ID Reporte")
@@ -892,7 +894,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002115; 34002115)
+            tableelement("Perfil Salarial"; 34002115)
             {
                 XmlName = 'PerfilSalarial';
                 fieldelement("PS_EmpresaCotizacion"; "Perfil Salarial"."Empresa cotizacion")
@@ -1009,18 +1011,20 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_AplicaParaRegalia; "Perfil Salarial"."Aplica para Regalia")
                 {
                 }
-                fieldelement(PS_CotizaSUTA; "Perfil Salarial".Field39)
-                {
-                }
+                //TODO: Campo no existe fieldelement(PS_CotizaSUTA; "Perfil Salarial".Field39)
+                //TODO: Campo no existe {
+                //TODO: Campo no existe }
                 fieldelement(PS_CotizaFUTA; "Perfil Salarial"."Job No.")
                 {
                 }
-                fieldelement(PS_CotizaMEDICARE; "Perfil Salarial".Field41)
-                {
-                }
+                //TODO: Campo no existe fieldelement(PS_CotizaMEDICARE; "Perfil Salarial".Field41)
+                //TODO: Campo no existe {
+                //TODO: Campo no existe }
                 fieldelement(PS_CotizaFICA; "Perfil Salarial"."Cotiza FICA")
                 {
                 }
+                //TODO: Campo no existe 
+                /*
                 fieldelement(PS_CotizaSINOT; "Perfil Salarial".Field43)
                 {
                 }
@@ -1029,12 +1033,12 @@ xmlport 58008 "Carga datos nomina"
                 }
                 fieldelement(PS_CotizaINCOMETAX; "Perfil Salarial".Field45)
                 {
-                }
+                }*/
                 fieldelement(PS_ExcluirListados; "Perfil Salarial"."Excluir de listados")
                 {
                 }
             }
-            tableelement(Table34002131; 34002131)
+            tableelement("Tabla retencion ISR"; 34002131)
             {
                 XmlName = 'TablaRetencionISR';
                 fieldelement(TISR_Ano; "Tabla retencion ISR".Ano)
@@ -1053,7 +1057,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002129; 34002129)
+            tableelement("Tipos de Cotizacion"; 34002129)
             {
                 XmlName = 'TiposCotizacion';
                 fieldelement(TC_Ano; "Tipos de Cotizacion".Ano)
@@ -1096,7 +1100,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table5218; Table5218)
+            tableelement("Human Resources Setup"; 5218)
             {
                 XmlName = 'HumanResourcesSetup';
                 fieldelement(HRS_PrimaryKey; "Human Resources Setup"."Primary Key")
@@ -1112,7 +1116,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table352; Table352)
+            tableelement("Default Dimension"; 352)
             {
                 XmlName = 'DefaultDimension';
                 fieldelement(DD_TableID; "Default Dimension"."Table ID")
@@ -1137,7 +1141,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table5211; Table5211)
+            tableelement("Employment Contract"; 5211)
             {
                 XmlName = 'EmploymentContract';
                 fieldelement(EC_Code; "Employment Contract".Code)
@@ -1153,7 +1157,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table349; 349)
+            tableelement("Dimension Value"; 349)
             {
                 XmlName = 'DimensionValue';
                 fieldelement(DV_DimensionCode; "Dimension Value"."Dimension Code")
@@ -1193,7 +1197,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002107; 34002107)
+            tableelement("Parametros Calculo Dias"; 34002107)
             {
                 XmlName = 'ParametrosCalculoDias';
                 fieldelement(PCD_Codigo; "Parametros Calculo Dias".Codigo)
@@ -1206,7 +1210,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002135; 34002135)
+            tableelement(Departamentos; 34002135)
             {
                 XmlName = 'Departamentos';
                 fieldelement(D_Codigo; Departamentos.Codigo)
@@ -1216,7 +1220,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002136; 34002136)
+            tableelement("Sub-Departamentos"; 34002136)
             {
                 XmlName = 'Sub-Departamentos';
                 fieldelement(SD_CodDepartamento; "Sub-Departamentos"."Cod. Departamento")
@@ -1229,7 +1233,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002104; 34002104)
+            tableelement("Grupos Contables Empleados"; 34002104)
             {
                 XmlName = 'GruposContablesEmpleados';
                 fieldelement("GCE_Codigo"; "Grupos Contables Empleados"."Codigo")
@@ -1239,7 +1243,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002105; 34002105)
+            tableelement("Dist. Ctas. Gpo. Cont. Empl."; 34002105)
             {
                 XmlName = 'DistCtasGpoContEmpl';
                 fieldelement("DCGCE_Codigo"; "Dist. Ctas. Gpo. Cont. Empl."."Codigo")
@@ -1288,7 +1292,7 @@ xmlport 58008 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Table34002108; 34002108)
+            tableelement("Distrib. Ingreso Pagos Elect."; 34002108)
             {
                 XmlName = 'DistribIngresoPagosElect';
                 fieldelement(DIPE_NoEempleado; "Distrib. Ingreso Pagos Elect."."No. empleado")
@@ -1309,7 +1313,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(DIPE_Importe; "Distrib. Ingreso Pagos Elect.".Importe)
                 {
                 }
-                */
+
             }
 
             trigger OnAfterAssignVariable()
@@ -1360,11 +1364,11 @@ xmlport 58008 "Carga datos nomina"
 
     var
         Empl: Record 5200;
-    /*TODO: Ver
-    esqsal: Record 34002115;
-    contra: Record 34002109;
-    CARGOS: Record 34002110;
-    Depart: Record 34002135;
-    SubDe: Record 34002136;*/
+
+        esqsal: Record 34002115;
+        contra: Record 34002109;
+        CARGOS: Record 34002110;
+        Depart: Record 34002135;
+        SubDe: Record 34002136;
 }
 

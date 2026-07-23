@@ -101,7 +101,7 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
 
                     lwOK := EVALUATE(TmpCab."Fecha Creacion", fecha_origen);
                     lwOK := EVALUATE(TmpCab.fecha, fecha);
-                    //TODO: Ver cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
+                    cGestM.SetDatosCab(id_mensaje, sistema_origen, pais_origen, TmpCab."Fecha Creacion", TmpCab.fecha, tipo);
                 end;
             }
             textelement(body)
@@ -5466,11 +5466,11 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
                                   item_Articulo_Pack := Articulo_Pack;
                                 */
 
-                                //TODO: Ver cGestM.AddMstReg2(1, 90, 0, Packs_pk_Clave, '', 'Articulo_Pack', '', FALSE); // Update
+                                cGestM.AddMstReg2(1, 90, 0, Packs_pk_Clave, '', 'Articulo_Pack', '', FALSE); // Update
 
                                 IF Packs_pk_Clave <> lwPack THEN BEGIN // Rename
                                     AddMstRegField(1, Packs_pk_Clave, 'Clave', 1);
-                                    //TODO: Ver cGestM.AddRenameField(lwPack);
+                                    cGestM.AddRenameField(lwPack);
                                 END;
 
                                 IF lwArtPack <> Articulo_Pack THEN BEGIN
@@ -5933,12 +5933,12 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
     trigger OnPreXmlPort()
     begin
         CLEAR(wInstFld);
-        //TODO: Ver cGestM.SetAlowEmptyValues(TRUE);
-        //TODO: Ver cGestM.AddMstRegHeader(1, 0);
+        cGestM.SetAlowEmptyValues(TRUE);
+        cGestM.AddMstRegHeader(1, 0);
     end;
 
     var
-        //TODO: Ver cGestM: Codeunit 75001;
+        cGestM: Codeunit 75001;
         wTblInsertd: Boolean;
         wInstFld: array[30] of Boolean;
 
@@ -5971,7 +5971,7 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
 
         // No renombramos los maestros. En su lugar anulamos el codigo antiguo y creamos uno nuevo
         /*
-        //TODO: Ver 
+        
         IF (pwCode <> pwCodePk) AND (pwCode <> '') THEN BEGIN
             cGestM.AddMstReg2(2, pwIdTabla, pwTipo, pwCodePk, pwDescripcion, pwNombreElemento, pwVisible, pwValMdM); // Delete
             cGestM.AddMstReg2(0, pwIdTabla, pwTipo, pwCode, pwDescripcion, pwNombreElemento, pwVisible, pwValMdM); // insert
@@ -5999,22 +5999,22 @@ xmlport 75001 "Articulos_Formato_MDM - UPDATE"
         ELSE
             lwOK := TRUE;
 
-        //TODO: Ver IF wTblInsertd AND lwOK THEN
-        //TODO: Ver cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
+        IF wTblInsertd AND lwOK THEN
+            cGestM.AddMstRegField2(pwIdField, pwValue, pwNombreElemento, pwValMdM);
     end;
 
     procedure GetOutStrm(var wOutStrm: OutStream)
     begin
         // GetOutStrm
 
-        //TODO: Ver cGestM.GetOutStrm(wOutStrm)
+        cGestM.GetOutStrm(wOutStrm)
     end;
 
     procedure GestMessageXML(var pxResp: XMLport 75003)
     begin
         // GestMessageXML
 
-        //TODO: Ver cGestM.GestMessageXML(pxResp);
+        cGestM.GestMessageXML(pxResp);
     end;
 
     procedure SetInsField(wNo: Integer)

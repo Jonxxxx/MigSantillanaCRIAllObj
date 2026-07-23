@@ -123,8 +123,6 @@ xmlport 58007 "Asigna depto y Secc"
 
                 END;
 
-                /*
-                //TODO: Ver
                 IF STRPOS(Depto, '-') <> 0 THEN
                     Depart.SETFILTER(Descripcion, COPYSTR(Depto, STRPOS(Depto, '-') + 1, 3) + '*');
                 Depart.FINDFIRST;
@@ -139,7 +137,7 @@ xmlport 58007 "Asigna depto y Secc"
                 END;
                 Empl."Sub-Departamento" := SubDe.Codigo;
                 Empl.MODIFY;
-                */
+
             end;
         }
     }
@@ -158,11 +156,11 @@ xmlport 58007 "Asigna depto y Secc"
 
     var
         Empl: Record 5200;
-    /* TODO: Ver
-    esqsal: Record 34002115;
-    contra: Record 34002109;
-    CARGOS: Record 34002110;
-    Depart: Record 34002135;
-    SubDe: Record 34002136;*/
+
+        esqsal: Record 34002115;
+        contra: Record 34002109;
+        CARGOS: Record 34002110;
+        Depart: Record 34002135;
+        SubDe: Record 34002136;
 }
 
