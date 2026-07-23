@@ -1,6 +1,6 @@
 table 34002161 Shift
 {
-    //TODO: Ver DrillDownPageID = 34002177;
+    DrillDownPageID = 34002177;
     //TODO: Ver LookupPageID = 34002177;
 
     fields

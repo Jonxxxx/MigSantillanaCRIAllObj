@@ -1,6 +1,6 @@
 table 34003024 "RNC DGII"
 {
-    //TODO: Ver DrillDownPageID = 34003028;
+    DrillDownPageID = 34003028;
     //TODO: Ver LookupPageID = 34003028;
 
     fields

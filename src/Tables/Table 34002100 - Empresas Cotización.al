@@ -10,7 +10,7 @@ table 34002100 "Empresas Cotizacion"
     // ------------------------------------------------------------------
     // 001       07-03-2022    FES           SANTINAV-4392: Configuracion de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
 
-    //TODO: Ver DrillDownPageID = 34002117;
+    DrillDownPageID = 34002117;
     //TODO: Ver LookupPageID = 34002117;
 
     fields

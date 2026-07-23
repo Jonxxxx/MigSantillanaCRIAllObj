@@ -1,7 +1,7 @@
 table 34002174 "Payroll - Job Journal Template"
 {
     Caption = 'Payroll Journal Template';
-    //TODO: Ver DrillDownPageID = 34002194;
+    DrillDownPageID = 34002194;
     //TODO: Ver LookupPageID = 34002194;
 
     fields

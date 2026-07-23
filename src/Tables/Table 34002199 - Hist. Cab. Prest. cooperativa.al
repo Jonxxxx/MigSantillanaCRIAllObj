@@ -1,7 +1,7 @@
 table 34002199 "Hist. Cab. Prest. cooperativa"
 {
     Caption = 'Cooperative loan header';
-    //TODO: Ver DrillDownPageID = 34002222;
+    DrillDownPageID = 34002222;
     //TODO: Ver LookupPageID = 34002222;
 
     fields

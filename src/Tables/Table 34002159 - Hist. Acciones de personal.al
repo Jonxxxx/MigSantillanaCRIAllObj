@@ -1,7 +1,7 @@
 table 34002159 "Hist. Acciones de personal"
 {
     Caption = 'Posted Personnel activities';
-    //TODO: Ver DrillDownPageID = 34002170;
+    DrillDownPageID = 34002170;
     //TODO: Ver LookupPageID = 34002170;
 
     fields

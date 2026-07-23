@@ -1,7 +1,7 @@
 table 34002196 "Mov. cooperativa"
 {
     Caption = 'Cooperative entries';
-    //TODO: Ver DrillDownPageID = 34002218;
+    DrillDownPageID = 34002218;
     //TODO: Ver LookupPageID = 34002218;
 
     fields

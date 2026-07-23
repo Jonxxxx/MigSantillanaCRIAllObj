@@ -5,7 +5,7 @@ table 34002513 "Formas de Pago"
     // #70132  03.07.2018  RRT: Creacion del campo "Tipo compensacion NC" para determinar si es una forma de pago que relaciona una NC como medio de pago.
 
     Caption = 'Tender Types POS';
-    //TODO: Ver DrillDownPageID = 34002514;
+    DrillDownPageID = 34002514;
     //TODO: Ver LookupPageID = 34002514;
 
     fields

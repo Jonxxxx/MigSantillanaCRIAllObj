@@ -2,7 +2,7 @@ table 34003009 "Clasificacion Gastos"
 {
     Caption = 'Expenses Clasification';
     DataPerCompany = false;
-    //TODO: Ver DrillDownPageID = 34003009;
+    DrillDownPageID = 34003009;
     //TODO: Ver LookupPageID = 34003009;
 
     fields

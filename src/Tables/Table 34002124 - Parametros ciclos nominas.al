@@ -1,8 +1,8 @@
 table 34002124 "Parametros ciclos nominas"
 {
     Caption = 'Payroll cicle parameters';
-    //TODO: Ver DrillDownPageID = 34002150;
-    //TODO: Ver LookupPageID = 34002150;
+    //TODO: Page no existe DrillDownPageID = 34002150;
+    //TODO: Page no existe LookupPageID = 34002150;
 
     fields
     {

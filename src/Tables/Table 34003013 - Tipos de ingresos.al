@@ -11,7 +11,7 @@ table 34003013 "Tipos de ingresos"
 
     Caption = 'Income Type';
     DataPerCompany = false;
-    //TODO: Ver DrillDownPageID = 34003010;
+    DrillDownPageID = 34003010;
     //TODO: Ver LookupPageID = 34003010;
 
     fields

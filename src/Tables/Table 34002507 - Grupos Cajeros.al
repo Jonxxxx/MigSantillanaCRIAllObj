@@ -1,7 +1,7 @@
 table 34002507 "Grupos Cajeros"
 {
     Caption = 'Cashier Group';
-    //TODO: Ver DrillDownPageID = 34002508;
+    DrillDownPageID = 34002508;
     //TODO: Ver LookupPageID = 34002507;
 
     fields

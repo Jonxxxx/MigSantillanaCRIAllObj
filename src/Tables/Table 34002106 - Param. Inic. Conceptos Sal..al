@@ -1,8 +1,8 @@
 table 34002106 "Param. Inic. Conceptos Sal."
 {
     Caption = 'Clear Wedges';
-    //TODO: Ver DrillDownPageID = 34002150;
-    //TODO: Ver LookupPageID = 34002150;
+    //TODO: Page no existe DrillDownPageID = 34002150;
+    //TODO: Page no existe LookupPageID = 34002150;
 
     fields
     {

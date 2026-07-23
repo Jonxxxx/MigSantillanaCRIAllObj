@@ -1,6 +1,6 @@
 table 34002146 "Historico Cab. Préstamo"
 {
-    //TODO: Ver DrillDownPageID = 34002138;
+    DrillDownPageID = 34002138;
     //TODO: Ver LookupPageID = 34002138;
 
     fields

@@ -1,7 +1,7 @@
 table 34002181 "Employee Shift schedule"
 {
     Caption = 'Shift schedule';
-    //TODO: Ver DrillDownPageID = 34002177;
+    DrillDownPageID = 34002177;
     //TODO: Ver LookupPageID = 34002177;
 
     fields

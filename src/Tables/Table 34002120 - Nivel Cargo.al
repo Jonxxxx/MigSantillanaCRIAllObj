@@ -2,7 +2,7 @@ table 34002120 "Nivel Cargo"
 {
     Caption = 'Job type levels';
     DataPerCompany = false;
-    //TODO: Ver DrillDownPageID = 34002166;
+    DrillDownPageID = 34002166;
     //TODO: Ver LookupPageID = 34002166;
 
     fields

@@ -1,8 +1,8 @@
 table 64833 Scheduler
 {
     DataCaptionFields = "No.", Description;
-    //TODO: Ver DrillDownPageID = 64847;
-    //TODO: Ver LookupPageID = 64847;
+    //TODO: Page no existe DrillDownPageID = 64847;
+    //TODO: Page no existe LookupPageID = 64847;
 
     fields
     {

@@ -2,7 +2,7 @@ table 34002111 "Conceptos salariales"
 {
     // MdE 02/07/2016 PLB: Borramos la relacion entre los conceptos NAV y MdE al borrar un concepto NAV
 
-    //TODO: Ver DrillDownPageID = 34002110;
+    DrillDownPageID = 34002110;
     //TODO: Ver LookupPageID = 34002110;
 
     fields

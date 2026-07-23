@@ -1,6 +1,6 @@
 table 34002147 "Historico Lin. Préstamo"
 {
-    //TODO: Ver DrillDownPageID = 34002135;
+    DrillDownPageID = 34002135;
     //TODO: Ver LookupPageID = 34002135;
 
     fields

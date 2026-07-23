@@ -1,6 +1,6 @@
 table 64829 "Database Field"
 {
-    //TODO: Ver DrillDownPageID = 64829;
+    DrillDownPageID = 64829;
     //TODO: Ver LookupPageID = 64829;
 
     fields

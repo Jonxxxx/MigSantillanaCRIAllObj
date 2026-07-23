@@ -1,7 +1,7 @@
 table 34002197 "Cab. Prestamos cooperativa"
 {
     Caption = 'Cooperative loan header';
-    //TODO: Ver DrillDownPageID = 34002138;
+    DrillDownPageID = 34002138;
     //TODO: Ver LookupPageID = 34002138;
 
     fields

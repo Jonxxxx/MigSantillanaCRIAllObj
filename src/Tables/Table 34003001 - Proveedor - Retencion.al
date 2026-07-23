@@ -1,7 +1,7 @@
 table 34003001 "Proveedor - Retencion"
 {
     Caption = 'Vendor - Retention';
-    //TODO: Ver DrillDownPageID = 34003001;
+    DrillDownPageID = 34003001;
     //TODO: Ver LookupPageID = 34003001;
 
     fields

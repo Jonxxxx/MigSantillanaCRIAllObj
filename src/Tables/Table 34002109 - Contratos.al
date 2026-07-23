@@ -3,7 +3,7 @@ table 34002109 Contratos
     // #001  PLB  21/12/2016  Actualizar datos empleado
 
     DataCaptionFields = "No. empleado";
-    //TODO: Ver DrillDownPageID = 34002106;
+    DrillDownPageID = 34002106;
     //TODO: Ver LookupPageID = 34002106;
 
     fields

@@ -1,6 +1,6 @@
 table 34002145 "CxC Empleados"
 {
-    //TODO: Ver DrillDownPageID = 58102;
+    DrillDownPageID = 58102;
     //TODO: Ver LookupPageID = 58102;
 
     fields

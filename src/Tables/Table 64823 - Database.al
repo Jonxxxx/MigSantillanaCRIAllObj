@@ -1,8 +1,8 @@
 table 64823 EXCCRIDatabase
 {
     DataCaptionFields = "Code", Description;
-    //TODO: Ver DrillDownPageID = 64833;
-    //TODO: Ver LookupPageID = 64833;
+    //TODO: Page no existe DrillDownPageID = 64833;
+    //TODO: Page no existe LookupPageID = 64833;
 
     fields
     {

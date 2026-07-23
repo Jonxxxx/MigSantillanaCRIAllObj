@@ -1,7 +1,7 @@
 table 34003003 "Historico Retencion Prov."
 {
     Caption = 'Posted Vendor Rentention';
-    //TODO: Ver DrillDownPageID = 34003003;
+    DrillDownPageID = 34003003;
     //TODO: Ver LookupPageID = 34003003;
 
     fields

@@ -1,7 +1,7 @@
 table 64828 "Database Table"
 {
-    //TODO: Ver DrillDownPageID = 64828;
-    //TODO: Ver LookupPageID = 64828;
+    //TODO: Page no existe DrillDownPageID = 64828;
+    //TODO: Page no existe LookupPageID = 64828;
 
     fields
     {

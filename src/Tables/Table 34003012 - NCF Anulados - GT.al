@@ -1,8 +1,8 @@
 table 34003012 "NCF Anulados - GT"
 {
     Caption = 'VOID NCF';
-    //TODO: Ver DrillDownPageID = 34003014;
-    //TODO: Ver LookupPageID = 34003014;
+    //TODO: Page no existe DrillDownPageID = 34003014;
+    //TODO: Page no existe LookupPageID = 34003014;
 
     fields
     {

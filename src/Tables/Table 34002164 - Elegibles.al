@@ -5,7 +5,7 @@ table 34002164 Elegibles
 
     Caption = 'Eligibles';
     DataCaptionFields = "No.", "First Name", "Last Name";
-    //TODO: Ver DrillDownPageID = 34002191;
+    DrillDownPageID = 34002191;
     //TODO: Ver LookupPageID = 34002191;
 
     fields

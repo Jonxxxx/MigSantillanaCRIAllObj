@@ -1,6 +1,6 @@
 table 34002173 "Payroll - Job Journal Batch"
 {
-    //TODO: Ver DrillDownPageID = 34002195;
+    DrillDownPageID = 34002195;
     //TODO: Ver LookupPageID = 34002195;
 
     fields

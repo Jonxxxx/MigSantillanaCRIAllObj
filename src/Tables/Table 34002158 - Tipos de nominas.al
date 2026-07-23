@@ -3,7 +3,7 @@ table 34002158 "Tipos de nominas"
     Caption = 'Payroll type';
     DataCaptionFields = Descripcion;
     DataPerCompany = false;
-    //TODO: Ver DrillDownPageID = 34002158;
+    DrillDownPageID = 34002158;
     //TODO: Ver LookupPageID = 34002158;
 
     fields

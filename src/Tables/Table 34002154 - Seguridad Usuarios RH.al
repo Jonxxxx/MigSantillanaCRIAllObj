@@ -1,7 +1,7 @@
 table 34002154 "Seguridad Usuarios RH"
 {
     Caption = 'HR User permission';
-    //TODO: Ver DrillDownPageID = 34002161;
+    DrillDownPageID = 34002161;
     //TODO: Ver LookupPageID = 34002161;
 
     fields

@@ -3,7 +3,7 @@ table 34002530 "Transacciones TPV"
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'Pos Transactions';
-    //TODO: Ver DrillDownPageID = 34002544;
+    DrillDownPageID = 34002544;
     //TODO: Ver LookupPageID = 34002544;
 
     fields

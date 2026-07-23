@@ -1,7 +1,7 @@
 table 34002135 Departamentos
 {
     Caption = 'Department';
-    //TODO: Ver DrillDownPageID = 34002168;
+    DrillDownPageID = 34002168;
     //TODO: Ver LookupPageID = 34002168;
 
     fields

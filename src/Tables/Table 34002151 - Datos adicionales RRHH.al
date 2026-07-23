@@ -3,7 +3,7 @@ table 34002151 "Datos adicionales RRHH"
     Caption = 'Datos adicionales';
     DataCaptionFields = "Tipo registro";
     DataPerCompany = false;
-    //TODO: Ver DrillDownPageID = 34002146;
+    DrillDownPageID = 34002146;
     //TODO: Ver LookupPageID = 34002146;
 
     fields
