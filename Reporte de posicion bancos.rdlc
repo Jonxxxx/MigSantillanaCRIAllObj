@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="wTxtMoneda">
+          <DataField>wTxtMoneda</DataField>
+        </Field>
+        <Field Name="wFechaBalance">
+          <DataField>wFechaBalance</DataField>
+        </Field>
+        <Field Name="wTipoCambioDR">
+          <DataField>wTipoCambioDR</DataField>
+        </Field>
+        <Field Name="wTipoCambioDRFormat">
+          <DataField>wTipoCambioDRFormat</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="REPORTE_POSICION_EN_BANCOSCaption">
+          <DataField>REPORTE_POSICION_EN_BANCOSCaption</DataField>
+        </Field>
+        <Field Name="Cuenta_bancariaCaption">
+          <DataField>Cuenta_bancariaCaption</DataField>
+        </Field>
+        <Field Name="Saldo_inicial_del_diaCaption">
+          <DataField>Saldo_inicial_del_diaCaption</DataField>
+        </Field>
+        <Field Name="IngresosCaption">
+          <DataField>IngresosCaption</DataField>
+        </Field>
+        <Field Name="EgresosCaption">
+          <DataField>EgresosCaption</DataField>
+        </Field>
+        <Field Name="Saldo_en_librosCaption">
+          <DataField>Saldo_en_librosCaption</DataField>
+        </Field>
+        <Field Name="MonedaCaption">
+          <DataField>MonedaCaption</DataField>
+        </Field>
+        <Field Name="Al_DiaCaption">
+          <DataField>Al_DiaCaption</DataField>
+        </Field>
+        <Field Name="Tipo_de_CambioCaption">
+          <DataField>Tipo_de_CambioCaption</DataField>
+        </Field>
+        <Field Name="PageCaption">
+          <DataField>PageCaption</DataField>
+        </Field>
+        <Field Name="Cabecera_Number">
+          <DataField>Cabecera_Number</DataField>
+        </Field>
+        <Field Name="Bank_Account__Currency_Code_">
+          <DataField>Bank_Account__Currency_Code_</DataField>
+        </Field>
+        <Field Name="No________Name">
+          <DataField>No________Name</DataField>
+        </Field>
+        <Field Name="wSaldoInicial">
+          <DataField>wSaldoInicial</DataField>
+        </Field>
+        <Field Name="wSaldoInicialFormat">
+          <DataField>wSaldoInicialFormat</DataField>
+        </Field>
+        <Field Name="wIngresos">
+          <DataField>wIngresos</DataField>
+        </Field>
+        <Field Name="wIngresosFormat">
+          <DataField>wIngresosFormat</DataField>
+        </Field>
+        <Field Name="wEgresos">
+          <DataField>wEgresos</DataField>
+        </Field>
+        <Field Name="wEgresosFormat">
+          <DataField>wEgresosFormat</DataField>
+        </Field>
+        <Field Name="Bank_Account__Net_Change_">
+          <DataField>Bank_Account__Net_Change_</DataField>
+        </Field>
+        <Field Name="Bank_Account__Net_Change_Format">
+          <DataField>Bank_Account__Net_Change_Format</DataField>
+        </Field>
+        <Field Name="wNombre2">
+          <DataField>wNombre2</DataField>
+        </Field>
+        <Field Name="Bank_Account__Net_Change__Control1000000012">
+          <DataField>Bank_Account__Net_Change__Control1000000012</DataField>
+        </Field>
+        <Field Name="Bank_Account__Net_Change__Control1000000012Format">
+          <DataField>Bank_Account__Net_Change__Control1000000012Format</DataField>
+        </Field>
+        <Field Name="MONEDACaption_Control1000000007">
+          <DataField>MONEDACaption_Control1000000007</DataField>
+        </Field>
+        <Field Name="TotalesCaption">
+          <DataField>TotalesCaption</DataField>
+        </Field>
+        <Field Name="Bank_Account_No_">
+          <DataField>Bank_Account_No_</DataField>
+        </Field>
+        <Field Name="wTotalDR">
+          <DataField>wTotalDR</DataField>
+        </Field>
+        <Field Name="wTotalDRFormat">
+          <DataField>wTotalDRFormat</DataField>
+        </Field>
+        <Field Name="TOTAL_GENERAL_DOLARESCaption">
+          <DataField>TOTAL_GENERAL_DOLARESCaption</DataField>
+        </Field>
+        <Field Name="Total_Number">
+          <DataField>Total_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

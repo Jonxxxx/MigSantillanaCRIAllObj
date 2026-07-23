@@ -139,60 +139,60 @@ report 50007 "Cust. - Detail Trial Bal. CR"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 DataItemLink = "Customer No." = FIELD("No."),
-                               Posting Date=FIELD("Date Filter"),
-                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
-                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
-                               Date Filter=FIELD("Date Filter");
-                DataItemTableView = SORTING("Customer No.","Posting Date");
-                column(PostDate_CustLedgEntry;FORMAT("Posting Date"))
+                               "Posting Date" = FIELD("Date Filter"),
+                               "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
+                               "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
+                               "Date Filter" = FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.", "Posting Date");
+                column(PostDate_CustLedgEntry; FORMAT("Posting Date"))
                 {
                 }
-                column(DocType_CustLedgEntry;"Document Type")
-                {
-                    IncludeCaption = true;
-                }
-                column(DocNo_CustLedgEntry;"Document No.")
+                column(DocType_CustLedgEntry; "Document Type")
                 {
                     IncludeCaption = true;
                 }
-                column(ExtDocNo_CustLedgEntry;"External Document No.")
-                {
-                }
-                column(Desc_CustLedgEntry;Description)
+                column(DocNo_CustLedgEntry; "Document No.")
                 {
                     IncludeCaption = true;
                 }
-                column(CustAmount;CustAmount)
+                column(ExtDocNo_CustLedgEntry; "External Document No.")
+                {
+                }
+                column(Desc_CustLedgEntry; Description)
+                {
+                    IncludeCaption = true;
+                }
+                column(CustAmount; CustAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustDebitAmount;CustDebitAmount)
+                column(CustDebitAmount; CustDebitAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustCreditAmount;CustCreditAmount)
+                column(CustCreditAmount; CustCreditAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustRemainAmount;CustRemainAmount)
+                column(CustRemainAmount; CustRemainAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustEntryDueDate;FORMAT(CustEntryDueDate))
+                column(CustEntryDueDate; FORMAT(CustEntryDueDate))
                 {
                 }
-                column(EntryNo_CustLedgEntry;"Entry No.")
+                column(EntryNo_CustLedgEntry; "Entry No.")
                 {
                     IncludeCaption = true;
                 }
-                column(CustCurrencyCode;CustCurrencyCode)
+                column(CustCurrencyCode; CustCurrencyCode)
                 {
                 }
-                column(CustBalanceLCY1;CustBalanceLCY)
+                column(CustBalanceLCY1; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
@@ -201,28 +201,28 @@ report 50007 "Cust. - Detail Trial Bal. CR"
                 begin
                     CustLedgEntryExists := TRUE;
                     IF PrintAmountsInLCY THEN BEGIN
-                      CustAmount := "Amount (LCY)";
-                      CustRemainAmount := "Remaining Amt. (LCY)";
-                      CustCurrencyCode := '';
+                        CustAmount := "Amount (LCY)";
+                        CustRemainAmount := "Remaining Amt. (LCY)";
+                        CustCurrencyCode := '';
                     END ELSE BEGIN
-                      CustAmount := Amount;
-                      CustRemainAmount := "Remaining Amount";
-                      CustCurrencyCode := "Currency Code";
+                        CustAmount := Amount;
+                        CustRemainAmount := "Remaining Amount";
+                        CustCurrencyCode := "Currency Code";
                     END;
                     CustDebitAmount := 0;
                     CustCreditAmount := 0;
                     IF CustAmount > 0 THEN
-                      CustDebitAmount := CustAmount
+                        CustDebitAmount := CustAmount
                     ELSE
-                      CustCreditAmount := -CustAmount;
+                        CustCreditAmount := -CustAmount;
                     CustTotalDebitAmount += CustDebitAmount;
                     CustTotalCreditAmount += CustCreditAmount;
 
                     CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";
                     IF ("Document Type" = "Document Type"::Payment) OR ("Document Type" = "Document Type"::Refund) THEN
-                      CustEntryDueDate := 0D
+                        CustEntryDueDate := 0D
                     ELSE
-                      CustEntryDueDate := "Due Date";
+                        CustEntryDueDate := "Due Date";
                 end;
 
                 trigger OnPreDataItem()
@@ -234,35 +234,35 @@ report 50007 "Cust. - Detail Trial Bal. CR"
                     CustDebitAmount := 0;
                     CustCreditAmount := 0;
 
-                    SETAUTOCALCFIELDS(Amount,"Remaining Amount","Amount (LCY)","Remaining Amt. (LCY)");
+                    SETAUTOCALCFIELDS(Amount, "Remaining Amount", "Amount (LCY)", "Remaining Amt. (LCY)");
                 end;
             }
-            dataitem("Integer";2000000026)
+            dataitem("Integer"; 2000000026)
             {
                 DataItemTableView = SORTING(Number)
-                                    WHERE(Number=CONST(1));
-                column(Name1_Cust;Customer.Name)
+                                    WHERE(Number = CONST(1));
+                column(Name1_Cust; Customer.Name)
                 {
                 }
-                column(CustBalanceLCY4;CustBalanceLCY)
+                column(CustBalanceLCY4; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
-                column(StartBalanceLCY2;StartBalanceLCY)
+                column(StartBalanceLCY2; StartBalanceLCY)
                 {
                 }
-                column(CustTotalDebitAmount;CustTotalDebitAmount)
+                column(CustTotalDebitAmount; CustTotalDebitAmount)
                 {
                 }
-                column(CustTotalCreditAmount;CustTotalCreditAmount)
+                column(CustTotalCreditAmount; CustTotalCreditAmount)
                 {
                 }
 
                 trigger OnAfterGetRecord()
                 begin
                     IF NOT CustLedgEntryExists AND ((StartBalanceLCY = 0) OR ExcludeBalanceOnly) THEN BEGIN
-                      StartBalanceLCY := 0;
-                      CurrReport.SKIP;
+                        StartBalanceLCY := 0;
+                        CurrReport.SKIP;
                     END;
                 end;
             }
@@ -270,16 +270,16 @@ report 50007 "Cust. - Detail Trial Bal. CR"
             trigger OnAfterGetRecord()
             begin
                 IF PrintOnlyOnePerPage THEN
-                  PageGroupNo := PageGroupNo + 1;
+                    PageGroupNo := PageGroupNo + 1;
 
                 StartBalanceLCY := 0;
                 IF CustDateFilter <> '' THEN BEGIN
-                  IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
-                    SETRANGE("Date Filter",0D,GETRANGEMIN("Date Filter") - 1);
-                    CALCFIELDS("Net Change (LCY)");
-                    StartBalanceLCY := "Net Change (LCY)";
-                  END;
-                  SETFILTER("Date Filter",CustDateFilter);
+                    IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
+                        SETRANGE("Date Filter", 0D, GETRANGEMIN("Date Filter") - 1);
+                        CALCFIELDS("Net Change (LCY)");
+                        StartBalanceLCY := "Net Change (LCY)";
+                    END;
+                    SETFILTER("Date Filter", CustDateFilter);
                 END;
                 CurrReport.PRINTONLYIFDETAIL := ExcludeBalanceOnly OR (StartBalanceLCY = 0);
                 CustBalanceLCY := StartBalanceLCY;
@@ -305,21 +305,21 @@ report 50007 "Cust. - Detail Trial Bal. CR"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(ShowAmountsInLCY;PrintAmountsInLCY)
+                    field(ShowAmountsInLCY; PrintAmountsInLCY)
                     {
-                        ApplicationArea = Basic,Suite;
+                        ApplicationArea = Basic, Suite;
                         Caption = 'Show Amounts in $';
                         ToolTip = 'Specifies if the reported amounts are shown in the local currency.';
                     }
-                    field(NewPageperCustomer;PrintOnlyOnePerPage)
+                    field(NewPageperCustomer; PrintOnlyOnePerPage)
                     {
-                        ApplicationArea = Basic,Suite;
+                        ApplicationArea = Basic, Suite;
                         Caption = 'New Page per Customer';
                         ToolTip = 'Specifies if each customer''s information is printed on a new page if you have chosen two or more customers to be included in the report.';
                     }
-                    field(ExcludeCustHaveaBalanceOnly;ExcludeBalanceOnly)
+                    field(ExcludeCustHaveaBalanceOnly; ExcludeBalanceOnly)
                     {
-                        ApplicationArea = Basic,Suite;
+                        ApplicationArea = Basic, Suite;
                         Caption = 'Exclude Customers That Have a Balance Only';
                         MultiLine = true;
                         ToolTip = 'Specifies if you do not want the report to include entries for customers that have a balance but do not have a net change during the selected time period.';
@@ -346,13 +346,13 @@ report 50007 "Cust. - Detail Trial Bal. CR"
         CustFilter := FormatDocument.GetRecordFiltersWithCaptions(Customer);
         CustDateFilter := Customer.GETFILTER("Date Filter");
         WITH "Cust. Ledger Entry" DO
-          IF PrintAmountsInLCY THEN BEGIN
-            AmountCaption := FIELDCAPTION("Amount (LCY)");
-            RemainingAmtCaption := FIELDCAPTION("Remaining Amt. (LCY)");
-          END ELSE BEGIN
-            AmountCaption := FIELDCAPTION(Amount);
-            RemainingAmtCaption := FIELDCAPTION("Remaining Amount");
-          END;
+            IF PrintAmountsInLCY THEN BEGIN
+                AmountCaption := FIELDCAPTION("Amount (LCY)");
+                RemainingAmtCaption := FIELDCAPTION("Remaining Amt. (LCY)");
+            END ELSE BEGIN
+                AmountCaption := FIELDCAPTION(Amount);
+                RemainingAmtCaption := FIELDCAPTION("Remaining Amount");
+            END;
     end;
 
     var
@@ -400,7 +400,7 @@ report 50007 "Cust. - Detail Trial Bal. CR"
         EmailLbl: Label 'Email';
 
     [Scope('Personalization')]
-    procedure InitializeRequest(ShowAmountInLCY: Boolean;SetPrintOnlyOnePerPage: Boolean;SetExcludeBalanceOnly: Boolean)
+    procedure InitializeRequest(ShowAmountInLCY: Boolean; SetPrintOnlyOnePerPage: Boolean; SetExcludeBalanceOnly: Boolean)
     begin
         PrintOnlyOnePerPage := SetPrintOnlyOnePerPage;
         PrintAmountsInLCY := ShowAmountInLCY;
@@ -410,7 +410,7 @@ report 50007 "Cust. - Detail Trial Bal. CR"
     procedure GetSalesPersonName(): Text[100]
     begin
         IF SalesPerson.GET(Customer."Salesperson Code") THEN
-          EXIT('(' + SalesPerson.Code + ') ' + SalesPerson.Name);
+            EXIT('(' + SalesPerson.Code + ') ' + SalesPerson.Name);
         EXIT('');
     end;
 }

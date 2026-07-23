@@ -44,9 +44,11 @@ report 70500 "Clientes RH"
                 MCliente01.Poblacion := "Address 2";
                 MCliente01."Codigo postal/Pobl" := "Post Code";
                 MCliente01.Pais := "Country/Region Code";
+                //TODO: Ver
+                /*                
                 MCliente01."Nº ident.fis.1" := "VAT Registration No.";
                 IF "Tax Identification Type" = 1 THEN
-                    MCliente01."Persona fisica" := 'X';
+                    MCliente01."Persona fisica" := 'X';*/
 
                 MCliente01."Vias de pago" := "Payment Method Code";
                 IF "Payment Method Code" <> '' THEN BEGIN
@@ -119,7 +121,7 @@ report 70500 "Clientes RH"
                 TL009.Descripcion := "Payment Terms Code";
                 IF TL009.INSERT THEN;
 
-                MCliente01.Organizacion := "VAT Bus. Posting Group";
+                //TODO: Ver campo MCliente01.Organizacion := "VAT Bus. Posting Group";
                 IF "VAT Bus. Posting Group" <> '' THEN BEGIN
                     VatBussPostGrp.GET("VAT Bus. Posting Group");
                     GL014.INIT;
@@ -185,10 +187,10 @@ report 70500 "Clientes RH"
                             MCliente01."Codigo Cliente Santillana" := ClientesOfisys."Cod. Cliente";
                             IF ClientesOfisys."Tipo Persona" = 'N' THEN
                                 MCliente01."Persona fisica" := 'X';
-                            IF ClientesOfisys."Tipo Persona" = 'N' THEN
-                                MCliente01."Nº ident.fis.1" := ClientesOfisys."Numero Documento Identidad"
-                            ELSE
-                                MCliente01."Nº ident.fis.1" := ClientesOfisys."Numero RUC";
+                            //TODO: Ver campo IF ClientesOfisys."Tipo Persona" = 'N' THEN
+                            //TODO: Ver campo MCliente01."Nº ident.fis.1" := ClientesOfisys."Numero Documento Identidad"
+                            //TODO: Ver campo ELSE
+                            //TODO: Ver campo MCliente01."Nº ident.fis.1" := ClientesOfisys."Numero RUC";
                             IF NOT MCliente01.INSERT THEN;
                         END;
 

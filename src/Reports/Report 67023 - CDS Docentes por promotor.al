@@ -184,7 +184,7 @@ report 67023 "CDS Docentes por promotor"
                 }
                 field(Promotor; codPromotor)
                 {
-                    TableRelation = Salesperson/Purchaser;
+                    TableRelation = "Salesperson/Purchaser";
                 }
             }
         }
@@ -234,7 +234,7 @@ report 67023 "CDS Docentes por promotor"
         recDatAux.SETRANGE("Tipo registro", recDatAux."Tipo registro"::"Puestos de trabajo");
         recDatAux.SETRANGE(Codigo, "Colegio - Docentes"."Cod. Cargo");
         IF recDatAux.FINDFIRST THEN
-          EXIT(recDatAux.Descripcion);
+            EXIT(recDatAux.Descripcion);
     end;
 
     procedure traerDistrito(): Text[30]
@@ -242,7 +242,7 @@ report 67023 "CDS Docentes por promotor"
         recColegio: Record 5050;
     begin
         IF recColegio.GET("Colegio - Docentes"."Cod. Colegio") THEN
-          EXIT(recColegio.Distritos);
+            EXIT(recColegio.Distritos);
     end;
 
     procedure FormatFechaNac()

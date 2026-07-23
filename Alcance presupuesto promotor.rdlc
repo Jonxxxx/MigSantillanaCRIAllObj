@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Presupuesto__Cod__Promotor_">
+          <DataField>Presupuesto__Cod__Promotor_</DataField>
+        </Field>
+        <Field Name="Presupuesto__Nombre_Promotor_">
+          <DataField>Presupuesto__Nombre_Promotor_</DataField>
+        </Field>
+        <Field Name="codNivel">
+          <DataField>codNivel</DataField>
+        </Field>
+        <Field Name="texDescLinNeg">
+          <DataField>texDescLinNeg</DataField>
+        </Field>
+        <Field Name="decMontoPres">
+          <DataField>decMontoPres</DataField>
+        </Field>
+        <Field Name="decMontoPresFormat">
+          <DataField>decMontoPresFormat</DataField>
+        </Field>
+        <Field Name="decMontoAlcance">
+          <DataField>decMontoAlcance</DataField>
+        </Field>
+        <Field Name="decMontoAlcanceFormat">
+          <DataField>decMontoAlcanceFormat</DataField>
+        </Field>
+        <Field Name="decCdadMant">
+          <DataField>decCdadMant</DataField>
+        </Field>
+        <Field Name="decCdadMantFormat">
+          <DataField>decCdadMantFormat</DataField>
+        </Field>
+        <Field Name="decCdadConquista">
+          <DataField>decCdadConquista</DataField>
+        </Field>
+        <Field Name="decCdadConquistaFormat">
+          <DataField>decCdadConquistaFormat</DataField>
+        </Field>
+        <Field Name="decCdadPres">
+          <DataField>decCdadPres</DataField>
+        </Field>
+        <Field Name="decCdadPresFormat">
+          <DataField>decCdadPresFormat</DataField>
+        </Field>
+        <Field Name="texDescFamilia">
+          <DataField>texDescFamilia</DataField>
+        </Field>
+        <Field Name="texDescSubFamilia">
+          <DataField>texDescSubFamilia</DataField>
+        </Field>
+        <Field Name="texDescEdicionCol">
+          <DataField>texDescEdicionCol</DataField>
+        </Field>
+        <Field Name="decCdadPerdidas">
+          <DataField>decCdadPerdidas</DataField>
+        </Field>
+        <Field Name="decCdadPerdidasFormat">
+          <DataField>decCdadPerdidasFormat</DataField>
+        </Field>
+        <Field Name="Presupuesto__Item_Description_">
+          <DataField>Presupuesto__Item_Description_</DataField>
+        </Field>
+        <Field Name="Presupuesto__Cod__Producto_">
+          <DataField>Presupuesto__Cod__Producto_</DataField>
+        </Field>
+        <Field Name="Adoption_StatisticCaption">
+          <DataField>Adoption_StatisticCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="codNivelCaption">
+          <DataField>codNivelCaption</DataField>
+        </Field>
+        <Field Name="codFamiliaCaption">
+          <DataField>codFamiliaCaption</DataField>
+        </Field>
+        <Field Name="codSubFamiliaCaption">
+          <DataField>codSubFamiliaCaption</DataField>
+        </Field>
+        <Field Name="codEdicionColCaption">
+          <DataField>codEdicionColCaption</DataField>
+        </Field>
+        <Field Name="codLinNegCaption">
+          <DataField>codLinNegCaption</DataField>
+        </Field>
+        <Field Name="decCdadPresCaption">
+          <DataField>decCdadPresCaption</DataField>
+        </Field>
+        <Field Name="decMontoPresCaption">
+          <DataField>decMontoPresCaption</DataField>
+        </Field>
+        <Field Name="decMontoAlcanceCaption">
+          <DataField>decMontoAlcanceCaption</DataField>
+        </Field>
+        <Field Name="decCdadMantCaption">
+          <DataField>decCdadMantCaption</DataField>
+        </Field>
+        <Field Name="decCdadConquistaCaption">
+          <DataField>decCdadConquistaCaption</DataField>
+        </Field>
+        <Field Name="decCdadPerdidasCaption">
+          <DataField>decCdadPerdidasCaption</DataField>
+        </Field>
+        <Field Name="DescripcionCaption">
+          <DataField>DescripcionCaption</DataField>
+        </Field>
+        <Field Name="Presupuesto__Cod__Producto_Caption">
+          <DataField>Presupuesto__Cod__Producto_Caption</DataField>
+        </Field>
+        <Field Name="PromotorCaption">
+          <DataField>PromotorCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

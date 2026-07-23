@@ -159,7 +159,7 @@ report 56534 "Lista Picking"
                 dataitem("Warehouse Activity Line"; 5767)
                 {
                     DataItemLink = "Activity Type" = FIELD(Type),
-                                   No.=FIELD("No.");
+                                   "No." = FIELD("No.");
                     DataItemLinkReference = "Warehouse Activity Header";
                     DataItemTableView = SORTING("Activity Type", "No.", "Sorting Sequence No.")
                                         WHERE("Action Type" = FILTER(<> Place));
@@ -251,7 +251,7 @@ report 56534 "Lista Picking"
                 dataitem(WhseActLine; 5767)
                 {
                     DataItemLink = "Activity Type" = FIELD(Type),
-                                   No.=FIELD("No.");
+                                   "No." = FIELD("No.");
                     DataItemLinkReference = "Warehouse Activity Header";
                     DataItemTableView = SORTING("Activity Type", "No.", "Sorting Sequence No.");
                     column(ISBN; ISBN)
@@ -323,28 +323,28 @@ report 56534 "Lista Picking"
                     dataitem(WhseActLine2; 5767)
                     {
                         DataItemLink = "Activity Type" = FIELD("Activity Type"),
-                                       No.=FIELD("No."),
-                                       Bin Code=FIELD("Bin Code"),
-                                       Item No.=FIELD("Item No."),
-                                       Action Type=FIELD("Action Type"),
-                                       Variant Code=FIELD("Variant Code"),
-                                       Unit of Measure Code=FIELD("Unit of Measure Code"),
-                                       Due Date=FIELD("Due Date");
+                                       "No." = FIELD("No."),
+                                       "Bin Code" = FIELD("Bin Code"),
+                                       "Item No." = FIELD("Item No."),
+                                       "Action Type" = FIELD("Action Type"),
+                                       "Variant Code" = FIELD("Variant Code"),
+                                       "Unit of Measure Code" = FIELD("Unit of Measure Code"),
+                                       "Due Date" = FIELD("Due Date");
                         DataItemLinkReference = "Warehouse Activity Line";
-                        DataItemTableView = SORTING("Activity Type","No.","Bin Code","Breakbulk No.","Action Type");
-                        column(LotNo_WhseActLine2;"Lot No.")
+                        DataItemTableView = SORTING("Activity Type", "No.", "Bin Code", "Breakbulk No.", "Action Type");
+                        column(LotNo_WhseActLine2; "Lot No.")
                         {
                         }
-                        column(SerialNo_WhseActLine2;"Serial No.")
+                        column(SerialNo_WhseActLine2; "Serial No.")
                         {
                         }
-                        column(QtyBase_WhseActLine2;"Qty. (Base)")
+                        column(QtyBase_WhseActLine2; "Qty. (Base)")
                         {
                         }
-                        column(QtytoHandle_WhseActLine2;"Qty. to Handle")
+                        column(QtytoHandle_WhseActLine2; "Qty. to Handle")
                         {
                         }
-                        column(LineNo_WhseActLine2;"Line No.")
+                        column(LineNo_WhseActLine2; "Line No.")
                         {
                         }
                     }
@@ -352,13 +352,13 @@ report 56534 "Lista Picking"
                     trigger OnAfterGetRecord()
                     begin
                         IF SumUpLines THEN BEGIN
-                          TmpWhseActLine.GET("Activity Type","No.","Line No.");
-                          "Qty. (Base)" := TmpWhseActLine."Qty. (Base)";
-                          "Qty. to Handle" := TmpWhseActLine."Qty. to Handle";
+                            TmpWhseActLine.GET("Activity Type", "No.", "Line No.");
+                            "Qty. (Base)" := TmpWhseActLine."Qty. (Base)";
+                            "Qty. to Handle" := TmpWhseActLine."Qty. to Handle";
                         END;
 
-                         //item.reset;
-                         WhseActLine.CALCFIELDS(ISBN);
+                        //item.reset;
+                        WhseActLine.CALCFIELDS(ISBN);
                         //IF Item.GET(WhseActLine."Item No.") THEN;
                         //ISBN2 := item.isbn;
                         //message(ISBN);
@@ -369,64 +369,64 @@ report 56534 "Lista Picking"
                         COPY("Warehouse Activity Line");
                         Counter := COUNT;
                         IF Counter = 0 THEN
-                          CurrReport.BREAK;
+                            CurrReport.BREAK;
 
                         IF BreakbulkFilter THEN
-                          SETRANGE("Original Breakbulk",FALSE);
+                            SETRANGE("Original Breakbulk", FALSE);
                     end;
                 }
             }
-            dataitem("Sales Comment Line";44)
+            dataitem("Sales Comment Line"; 44)
             {
-                DataItemTableView = SORTING("Document Type","No.","Document Line No.","Line No.")
-                                    ORDER(Ascending)
-                                    WHERE("Print On Pick Ticket"=FILTER(Yes));
-                column(ComentarioVta;'VTA')
+                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
+                                    ORDER(Ascending);
+                //TODO: Ver WHERE("Print On Pick Ticket" = FILTER(Yes));
+                column(ComentarioVta; 'VTA')
                 {
                 }
-                column(Comment_SalesCommentLine;"Sales Comment Line".Comment)
+                column(Comment_SalesCommentLine; "Sales Comment Line".Comment)
                 {
                 }
-                column(DocumentType_SalesCommentLine;"Sales Comment Line"."Document Type")
+                column(DocumentType_SalesCommentLine; "Sales Comment Line"."Document Type")
                 {
                 }
-                column(No_SalesCommentLine;"Sales Comment Line"."No.")
+                column(No_SalesCommentLine; "Sales Comment Line"."No.")
                 {
                 }
-                column(LineNo_SalesCommentLine;"Sales Comment Line"."Line No.")
+                column(LineNo_SalesCommentLine; "Sales Comment Line"."Line No.")
                 {
                 }
 
                 trigger OnPreDataItem()
                 begin
 
-                    SETRANGE("Document Type","Sales Comment Line"."Document Type"::Order);
-                    SETRANGE("No.",NoPedido);
+                    SETRANGE("Document Type", "Sales Comment Line"."Document Type"::Order);
+                    SETRANGE("No.", NoPedido);
                 end;
             }
-            dataitem("Inventory Comment Line";5748)
+            dataitem("Inventory Comment Line"; 5748)
             {
-                column(ComentarioInv;'INV')
+                column(ComentarioInv; 'INV')
                 {
                 }
-                column(Comment_InventoryCommentLine;"Inventory Comment Line".Comment)
+                column(Comment_InventoryCommentLine; "Inventory Comment Line".Comment)
                 {
                 }
-                column(LineNo_InventoryCommentLine;"Inventory Comment Line"."Line No.")
+                column(LineNo_InventoryCommentLine; "Inventory Comment Line"."Line No.")
                 {
                 }
-                column(DocumentType_InventoryCommentLine;"Inventory Comment Line"."Document Type")
+                column(DocumentType_InventoryCommentLine; "Inventory Comment Line"."Document Type")
                 {
                 }
-                column(No_InventoryCommentLine;"Inventory Comment Line"."No.")
+                column(No_InventoryCommentLine; "Inventory Comment Line"."No.")
                 {
                 }
 
                 trigger OnPreDataItem()
                 begin
 
-                    SETRANGE("Document Type","Document Type"::"Transfer Order");
-                    SETRANGE("No.",NoPedido);
+                    SETRANGE("Document Type", "Document Type"::"Transfer Order");
+                    SETRANGE("No.", NoPedido);
                 end;
             }
 
@@ -436,57 +436,55 @@ report 56534 "Lista Picking"
                 InvtPick := Type = Type::"Invt. Pick";
 
                 IF NOT CurrReport.PREVIEW THEN
-                  WhseCountPrinted.RUN("Warehouse Activity Header");
+                    WhseCountPrinted.RUN("Warehouse Activity Header");
 
                 "Warehouse Activity Line".RESET;
-                "Warehouse Activity Line".SETRANGE("Activity Type",Type);
-                "Warehouse Activity Line".SETRANGE("No.","No.");
-                "Warehouse Activity Line".SETRANGE("Source Type",37);
-                "Warehouse Activity Line".SETRANGE("Source Subtype",1);
-                IF "Warehouse Activity Line".FINDFIRST THEN
-                  BEGIN
-                  // ++ YFC     comentarios pedidos
-                    SH.GET(SH."Document Type"::Order,"Warehouse Activity Line"."Source No.");
+                "Warehouse Activity Line".SETRANGE("Activity Type", Type);
+                "Warehouse Activity Line".SETRANGE("No.", "No.");
+                "Warehouse Activity Line".SETRANGE("Source Type", 37);
+                "Warehouse Activity Line".SETRANGE("Source Subtype", 1);
+                IF "Warehouse Activity Line".FINDFIRST THEN BEGIN
+                    // ++ YFC     comentarios pedidos
+                    SH.GET(SH."Document Type"::Order, "Warehouse Activity Line"."Source No.");
                     rSalesCommentLine2.RESET;
-                   // rSalesCommentLine2.SETRANGE("No.",rLineasPicking."Source No.");
-                    rSalesCommentLine2.SETRANGE("No.",SH."No.");
-                     rSalesCommentLine2.SETRANGE("Document Type",rSalesCommentLine2."Document Type"::Order);
-                     IF rSalesCommentLine2.FINDSET THEN
-                      REPEAT
-                        Comentario2 += rSalesCommentLine2.Comment + ' ';
-                      UNTIL (rSalesCommentLine2.NEXT=0) OR (STRLEN(Comentario2) >=250);
+                    // rSalesCommentLine2.SETRANGE("No.",rLineasPicking."Source No.");
+                    rSalesCommentLine2.SETRANGE("No.", SH."No.");
+                    rSalesCommentLine2.SETRANGE("Document Type", rSalesCommentLine2."Document Type"::Order);
+                    IF rSalesCommentLine2.FINDSET THEN
+                        REPEAT
+                            Comentario2 += rSalesCommentLine2.Comment + ' ';
+                        UNTIL (rSalesCommentLine2.NEXT = 0) OR (STRLEN(Comentario2) >= 250);
 
-                  END;
+                END;
 
 
                 "Warehouse Activity Line".RESET;
-                "Warehouse Activity Line".SETRANGE("Activity Type","Warehouse Activity Line"."Activity Type"::Pick);
-                "Warehouse Activity Line".SETRANGE("No.","No.");
-                "Warehouse Activity Line".SETRANGE("Source Type",5741);
+                "Warehouse Activity Line".SETRANGE("Activity Type", "Warehouse Activity Line"."Activity Type"::Pick);
+                "Warehouse Activity Line".SETRANGE("No.", "No.");
+                "Warehouse Activity Line".SETRANGE("Source Type", 5741);
                 //"Warehouse Activity Line".SETRANGE("Source Subtype",1);
-                IF "Warehouse Activity Line".FINDFIRST THEN
-                  BEGIN
-                   InventoryCommentLine.RESET;
-                   InventoryCommentLine.SETRANGE("Document Type", InventoryCommentLine."Document Type"::"Transfer Order");
-                   InventoryCommentLine.SETRANGE("No.","Warehouse Activity Line"."Source No.");
-                   IF InventoryCommentLine.FINDSET THEN
-                    REPEAT
-                      Comentario2 += InventoryCommentLine.Comment + ' ';
-                    UNTIL (InventoryCommentLine.NEXT=0) OR (STRLEN(Comentario2) >=250);
-                  END;
-                  // -- YFC
+                IF "Warehouse Activity Line".FINDFIRST THEN BEGIN
+                    InventoryCommentLine.RESET;
+                    InventoryCommentLine.SETRANGE("Document Type", InventoryCommentLine."Document Type"::"Transfer Order");
+                    InventoryCommentLine.SETRANGE("No.", "Warehouse Activity Line"."Source No.");
+                    IF InventoryCommentLine.FINDSET THEN
+                        REPEAT
+                            Comentario2 += InventoryCommentLine.Comment + ' ';
+                        UNTIL (InventoryCommentLine.NEXT = 0) OR (STRLEN(Comentario2) >= 250);
+                END;
+                // -- YFC
 
                 // ++ YFC buscar comentario
 
 
 
                 WarehouseCommentLine.RESET;
-                WarehouseCommentLine.SETRANGE("No.","Warehouse Activity Header"."No.");
+                WarehouseCommentLine.SETRANGE("No.", "Warehouse Activity Header"."No.");
 
-                 IF WarehouseCommentLine.FINDSET THEN
-                  REPEAT
-                    Comentario += WarehouseCommentLine.Comment + ' ';
-                  UNTIL (WarehouseCommentLine.NEXT=0) OR (STRLEN(Comentario) >=250);
+                IF WarehouseCommentLine.FINDSET THEN
+                    REPEAT
+                        Comentario += WarehouseCommentLine.Comment + ' ';
+                    UNTIL (WarehouseCommentLine.NEXT = 0) OR (STRLEN(Comentario) >= 250);
 
                 // --
 
@@ -521,17 +519,17 @@ report 56534 "Lista Picking"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(Breakbulk;BreakbulkFilter)
+                    field(Breakbulk; BreakbulkFilter)
                     {
                         Caption = 'Set Breakbulk Filter';
                         Editable = BreakbulkEditable;
                     }
-                    field(SumUpLines;SumUpLines)
+                    field(SumUpLines; SumUpLines)
                     {
                         Caption = 'Sum up Lines';
                         Editable = SumUpLinesEditable;
                     }
-                    field(LotSerialNo;ShowLotSN)
+                    field(LotSerialNo; ShowLotSN)
                     {
                         Caption = 'Show Serial/Lot Number';
                     }
@@ -552,8 +550,8 @@ report 56534 "Lista Picking"
         trigger OnOpenPage()
         begin
             IF HideOptions THEN BEGIN
-              BreakbulkEditable := FALSE;
-              SumUpLinesEditable := FALSE;
+                BreakbulkEditable := FALSE;
+                SumUpLinesEditable := FALSE;
             END;
         end;
     }
@@ -608,10 +606,10 @@ report 56534 "Lista Picking"
     local procedure GetLocation(LocationCode: Code[10])
     begin
         IF LocationCode = '' THEN
-          Location.INIT
+            Location.INIT
         ELSE
-          IF Location.Code <> LocationCode THEN
-            Location.GET(LocationCode);
+            IF Location.Code <> LocationCode THEN
+                Location.GET(LocationCode);
     end;
 
     procedure SetBreakbulkFilter(BreakbulkFilter2: Boolean)

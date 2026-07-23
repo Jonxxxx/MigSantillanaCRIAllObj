@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_Item">
+          <DataField>No_Item</DataField>
+        </Field>
+        <Field Name="Description_Item">
+          <DataField>Description_Item</DataField>
+        </Field>
+        <Field Name="valor36">
+          <DataField>valor36</DataField>
+        </Field>
+        <Field Name="valor36Format">
+          <DataField>valor36Format</DataField>
+        </Field>
+        <Field Name="valor0">
+          <DataField>valor0</DataField>
+        </Field>
+        <Field Name="valor0Format">
+          <DataField>valor0Format</DataField>
+        </Field>
+        <Field Name="valor1">
+          <DataField>valor1</DataField>
+        </Field>
+        <Field Name="valor1Format">
+          <DataField>valor1Format</DataField>
+        </Field>
+        <Field Name="valor2">
+          <DataField>valor2</DataField>
+        </Field>
+        <Field Name="valor2Format">
+          <DataField>valor2Format</DataField>
+        </Field>
+        <Field Name="valor3">
+          <DataField>valor3</DataField>
+        </Field>
+        <Field Name="valor3Format">
+          <DataField>valor3Format</DataField>
+        </Field>
+        <Field Name="valor4">
+          <DataField>valor4</DataField>
+        </Field>
+        <Field Name="valor4Format">
+          <DataField>valor4Format</DataField>
+        </Field>
+        <Field Name="valor5">
+          <DataField>valor5</DataField>
+        </Field>
+        <Field Name="valor5Format">
+          <DataField>valor5Format</DataField>
+        </Field>
+        <Field Name="valor6">
+          <DataField>valor6</DataField>
+        </Field>
+        <Field Name="valor6Format">
+          <DataField>valor6Format</DataField>
+        </Field>
+        <Field Name="valor7">
+          <DataField>valor7</DataField>
+        </Field>
+        <Field Name="valor7Format">
+          <DataField>valor7Format</DataField>
+        </Field>
+        <Field Name="valor8">
+          <DataField>valor8</DataField>
+        </Field>
+        <Field Name="valor8Format">
+          <DataField>valor8Format</DataField>
+        </Field>
+        <Field Name="valor9">
+          <DataField>valor9</DataField>
+        </Field>
+        <Field Name="valor9Format">
+          <DataField>valor9Format</DataField>
+        </Field>
+        <Field Name="valor10">
+          <DataField>valor10</DataField>
+        </Field>
+        <Field Name="valor10Format">
+          <DataField>valor10Format</DataField>
+        </Field>
+        <Field Name="valor11">
+          <DataField>valor11</DataField>
+        </Field>
+        <Field Name="valor11Format">
+          <DataField>valor11Format</DataField>
+        </Field>
+        <Field Name="valor12">
+          <DataField>valor12</DataField>
+        </Field>
+        <Field Name="valor12Format">
+          <DataField>valor12Format</DataField>
+        </Field>
+        <Field Name="valor13">
+          <DataField>valor13</DataField>
+        </Field>
+        <Field Name="valor13Format">
+          <DataField>valor13Format</DataField>
+        </Field>
+        <Field Name="valor14">
+          <DataField>valor14</DataField>
+        </Field>
+        <Field Name="valor14Format">
+          <DataField>valor14Format</DataField>
+        </Field>
+        <Field Name="valor15">
+          <DataField>valor15</DataField>
+        </Field>
+        <Field Name="valor15Format">
+          <DataField>valor15Format</DataField>
+        </Field>
+        <Field Name="valor16">
+          <DataField>valor16</DataField>
+        </Field>
+        <Field Name="valor16Format">
+          <DataField>valor16Format</DataField>
+        </Field>
+        <Field Name="valor17">
+          <DataField>valor17</DataField>
+        </Field>
+        <Field Name="valor17Format">
+          <DataField>valor17Format</DataField>
+        </Field>
+        <Field Name="valor18">
+          <DataField>valor18</DataField>
+        </Field>
+        <Field Name="valor18Format">
+          <DataField>valor18Format</DataField>
+        </Field>
+        <Field Name="valor19">
+          <DataField>valor19</DataField>
+        </Field>
+        <Field Name="valor19Format">
+          <DataField>valor19Format</DataField>
+        </Field>
+        <Field Name="valor20">
+          <DataField>valor20</DataField>
+        </Field>
+        <Field Name="valor20Format">
+          <DataField>valor20Format</DataField>
+        </Field>
+        <Field Name="valor21">
+          <DataField>valor21</DataField>
+        </Field>
+        <Field Name="valor21Format">
+          <DataField>valor21Format</DataField>
+        </Field>
+        <Field Name="valor22">
+          <DataField>valor22</DataField>
+        </Field>
+        <Field Name="valor22Format">
+          <DataField>valor22Format</DataField>
+        </Field>
+        <Field Name="valor23">
+          <DataField>valor23</DataField>
+        </Field>
+        <Field Name="valor23Format">
+          <DataField>valor23Format</DataField>
+        </Field>
+        <Field Name="valor24">
+          <DataField>valor24</DataField>
+        </Field>
+        <Field Name="valor24Format">
+          <DataField>valor24Format</DataField>
+        </Field>
+        <Field Name="valor25">
+          <DataField>valor25</DataField>
+        </Field>
+        <Field Name="valor25Format">
+          <DataField>valor25Format</DataField>
+        </Field>
+        <Field Name="valor26">
+          <DataField>valor26</DataField>
+        </Field>
+        <Field Name="valor26Format">
+          <DataField>valor26Format</DataField>
+        </Field>
+        <Field Name="valor27">
+          <DataField>valor27</DataField>
+        </Field>
+        <Field Name="valor27Format">
+          <DataField>valor27Format</DataField>
+        </Field>
+        <Field Name="valor28">
+          <DataField>valor28</DataField>
+        </Field>
+        <Field Name="valor28Format">
+          <DataField>valor28Format</DataField>
+        </Field>
+        <Field Name="valor29">
+          <DataField>valor29</DataField>
+        </Field>
+        <Field Name="valor29Format">
+          <DataField>valor29Format</DataField>
+        </Field>
+        <Field Name="valor30">
+          <DataField>valor30</DataField>
+        </Field>
+        <Field Name="valor30Format">
+          <DataField>valor30Format</DataField>
+        </Field>
+        <Field Name="valor31">
+          <DataField>valor31</DataField>
+        </Field>
+        <Field Name="valor31Format">
+          <DataField>valor31Format</DataField>
+        </Field>
+        <Field Name="valor32">
+          <DataField>valor32</DataField>
+        </Field>
+        <Field Name="valor32Format">
+          <DataField>valor32Format</DataField>
+        </Field>
+        <Field Name="valor33">
+          <DataField>valor33</DataField>
+        </Field>
+        <Field Name="valor33Format">
+          <DataField>valor33Format</DataField>
+        </Field>
+        <Field Name="valor34">
+          <DataField>valor34</DataField>
+        </Field>
+        <Field Name="valor34Format">
+          <DataField>valor34Format</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="Opportunity__Salesperson_Code_">
+          <DataField>Opportunity__Salesperson_Code_</DataField>
+        </Field>
+        <Field Name="Opportunity__Campaign_No__">
+          <DataField>Opportunity__Campaign_No__</DataField>
+        </Field>
+        <Field Name="Opportunity__Contact_No__">
+          <DataField>Opportunity__Contact_No__</DataField>
+        </Field>
+        <Field Name="Opportunity__Sales_Cycle_Code_">
+          <DataField>Opportunity__Sales_Cycle_Code_</DataField>
+        </Field>
+        <Field Name="Opportunity__Creation_Date_">
+          <DataField>Opportunity__Creation_Date_</DataField>
+        </Field>
+        <Field Name="Opportunity_Status">
+          <DataField>Opportunity_Status</DataField>
+        </Field>
+        <Field Name="Opportunity__Current_Sales_Cycle_Stage_">
+          <DataField>Opportunity__Current_Sales_Cycle_Stage_</DataField>
+        </Field>
+        <Field Name="Opportunity__Estimated_Value__LCY__">
+          <DataField>Opportunity__Estimated_Value__LCY__</DataField>
+        </Field>
+        <Field Name="Opportunity__Estimated_Value__LCY__Format">
+          <DataField>Opportunity__Estimated_Value__LCY__Format</DataField>
+        </Field>
+        <Field Name="Opportunity__Probability___">
+          <DataField>Opportunity__Probability___</DataField>
+        </Field>
+        <Field Name="Opportunity__Probability___Format">
+          <DataField>Opportunity__Probability___Format</DataField>
+        </Field>
+        <Field Name="Opportunity__Calcd__Current_Value__LCY__">
+          <DataField>Opportunity__Calcd__Current_Value__LCY__</DataField>
+        </Field>
+        <Field Name="Opportunity__Calcd__Current_Value__LCY__Format">
+          <DataField>Opportunity__Calcd__Current_Value__LCY__Format</DataField>
+        </Field>
+        <Field Name="Opportunity__Chances_of_Success___">
+          <DataField>Opportunity__Chances_of_Success___</DataField>
+        </Field>
+        <Field Name="Opportunity__Chances_of_Success___Format">
+          <DataField>Opportunity__Chances_of_Success___Format</DataField>
+        </Field>
+        <Field Name="Opportunity__Completed___">
+          <DataField>Opportunity__Completed___</DataField>
+        </Field>
+        <Field Name="Opportunity__Completed___Format">
+          <DataField>Opportunity__Completed___Format</DataField>
+        </Field>
+        <Field Name="TotalToDoOpp">
+          <DataField>TotalToDoOpp</DataField>
+        </Field>
+        <Field Name="FORMAT_RecRef_RECORDID_0_10__Control1000000082">
+          <DataField>FORMAT_RecRef_RECORDID_0_10__Control1000000082</DataField>
+        </Field>
+        <Field Name="SalesPerson_Name">
+          <DataField>SalesPerson_Name</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="CustomerCaption">
+          <DataField>CustomerCaption</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption">
+          <DataField>RT_Client_ONLYCaption</DataField>
+        </Field>
+        <Field Name="Opportunity__Salesperson_Code_Caption">
+          <DataField>Opportunity__Salesperson_Code_Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Campaign_No__Caption">
+          <DataField>Opportunity__Campaign_No__Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Contact_No__Caption">
+          <DataField>Opportunity__Contact_No__Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Sales_Cycle_Code_Caption">
+          <DataField>Opportunity__Sales_Cycle_Code_Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Creation_Date_Caption">
+          <DataField>Opportunity__Creation_Date_Caption</DataField>
+        </Field>
+        <Field Name="Opportunity_StatusCaption">
+          <DataField>Opportunity_StatusCaption</DataField>
+        </Field>
+        <Field Name="Opportunity__Current_Sales_Cycle_Stage_Caption">
+          <DataField>Opportunity__Current_Sales_Cycle_Stage_Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Estimated_Value__LCY__Caption">
+          <DataField>Opportunity__Estimated_Value__LCY__Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Probability___Caption">
+          <DataField>Opportunity__Probability___Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Calcd__Current_Value__LCY__Caption">
+          <DataField>Opportunity__Calcd__Current_Value__LCY__Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Chances_of_Success___Caption">
+          <DataField>Opportunity__Chances_of_Success___Caption</DataField>
+        </Field>
+        <Field Name="Opportunity__Completed___Caption">
+          <DataField>Opportunity__Completed___Caption</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption_Control1000000013">
+          <DataField>RT_Client_ONLYCaption_Control1000000013</DataField>
+        </Field>
+        <Field Name="Opportunity_No_">
+          <DataField>Opportunity_No_</DataField>
+        </Field>
+        <Field Name="Customer__No__">
+          <DataField>Customer__No__</DataField>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>Customer_Name</DataField>
+        </Field>
+        <Field Name="Customer_Balance">
+          <DataField>Customer_Balance</DataField>
+        </Field>
+        <Field Name="Customer_BalanceFormat">
+          <DataField>Customer_BalanceFormat</DataField>
+        </Field>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TotalFormat">
+          <DataField>TotalFormat</DataField>
+        </Field>
+        <Field Name="Customer__Country_Region_Code_">
+          <DataField>Customer__Country_Region_Code_</DataField>
+        </Field>
+        <Field Name="Customer_Balance2">
+          <DataField>Customer_Balance2</DataField>
+        </Field>
+        <Field Name="Customer_Balance2Format">
+          <DataField>Customer_Balance2Format</DataField>
+        </Field>
+        <Field Name="Customer__No__Caption">
+          <DataField>Customer__No__Caption</DataField>
+        </Field>
+        <Field Name="Customer_NameCaption">
+          <DataField>Customer_NameCaption</DataField>
+        </Field>
+        <Field Name="Customer_BalanceCaption">
+          <DataField>Customer_BalanceCaption</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption_Control1000000016">
+          <DataField>RT_Client_ONLYCaption_Control1000000016</DataField>
+        </Field>
+        <Field Name="Customer__Country_Region_Code_Caption">
+          <DataField>Customer__Country_Region_Code_Caption</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption_Control1000000017">
+          <DataField>RT_Client_ONLYCaption_Control1000000017</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption_Control1000000018">
+          <DataField>RT_Client_ONLYCaption_Control1000000018</DataField>
+        </Field>
+        <Field Name="Item__No__">
+          <DataField>Item__No__</DataField>
+        </Field>
+        <Field Name="Item_Description">
+          <DataField>Item_Description</DataField>
+        </Field>
+        <Field Name="Item__Country_Region_Purchased_Code_">
+          <DataField>Item__Country_Region_Purchased_Code_</DataField>
+        </Field>
+        <Field Name="Item__Budget_Quantity_">
+          <DataField>Item__Budget_Quantity_</DataField>
+        </Field>
+        <Field Name="Item__Budget_Quantity_Format">
+          <DataField>Item__Budget_Quantity_Format</DataField>
+        </Field>
+        <Field Name="Item__Net_Change_">
+          <DataField>Item__Net_Change_</DataField>
+        </Field>
+        <Field Name="Item__Net_Change_Format">
+          <DataField>Item__Net_Change_Format</DataField>
+        </Field>
+        <Field Name="Item__Purchases__Qty___">
+          <DataField>Item__Purchases__Qty___</DataField>
+        </Field>
+        <Field Name="Item__Purchases__Qty___Format">
+          <DataField>Item__Purchases__Qty___Format</DataField>
+        </Field>
+        <Field Name="Item__Sales__Qty___">
+          <DataField>Item__Sales__Qty___</DataField>
+        </Field>
+        <Field Name="Item__Sales__Qty___Format">
+          <DataField>Item__Sales__Qty___Format</DataField>
+        </Field>
+        <Field Name="Item__Purchases__LCY__">
+          <DataField>Item__Purchases__LCY__</DataField>
+        </Field>
+        <Field Name="Item__Purchases__LCY__Format">
+          <DataField>Item__Purchases__LCY__Format</DataField>
+        </Field>
+        <Field Name="Item__Sales__LCY__">
+          <DataField>Item__Sales__LCY__</DataField>
+        </Field>
+        <Field Name="Item__Sales__LCY__Format">
+          <DataField>Item__Sales__LCY__Format</DataField>
+        </Field>
+        <Field Name="Item__No__Caption">
+          <DataField>Item__No__Caption</DataField>
+        </Field>
+        <Field Name="Item_DescriptionCaption">
+          <DataField>Item_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Item__Country_Region_Purchased_Code_Caption">
+          <DataField>Item__Country_Region_Purchased_Code_Caption</DataField>
+        </Field>
+        <Field Name="Item__Budget_Quantity_Caption">
+          <DataField>Item__Budget_Quantity_Caption</DataField>
+        </Field>
+        <Field Name="Item__Net_Change_Caption">
+          <DataField>Item__Net_Change_Caption</DataField>
+        </Field>
+        <Field Name="Item__Purchases__Qty___Caption">
+          <DataField>Item__Purchases__Qty___Caption</DataField>
+        </Field>
+        <Field Name="Item__Sales__Qty___Caption">
+          <DataField>Item__Sales__Qty___Caption</DataField>
+        </Field>
+        <Field Name="Item__Purchases__LCY__Caption">
+          <DataField>Item__Purchases__LCY__Caption</DataField>
+        </Field>
+        <Field Name="Item__Sales__LCY__Caption">
+          <DataField>Item__Sales__LCY__Caption</DataField>
+        </Field>
+        <Field Name="RT_Client_ONLYCaption_Control1000000019">
+          <DataField>RT_Client_ONLYCaption_Control1000000019</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

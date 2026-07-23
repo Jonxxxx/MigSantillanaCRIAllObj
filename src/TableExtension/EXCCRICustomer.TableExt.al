@@ -212,6 +212,11 @@ tableextension 50008 EXCCRICustomer extends Customer
             DataClassification = ToBeClassified;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Tipos de colegios"));
         }
+        field(56030; "E-Mail 2"; Text[100])
+        {
+            DataClassification = CustomerContent;
+            Caption = 'Email 2';
+        }
         field(34002500; "Permite venta a credito"; Boolean)
         {
             Caption = 'Credit Sales Allowed';

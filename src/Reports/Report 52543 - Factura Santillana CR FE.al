@@ -278,11 +278,11 @@ report 52543 "Factura Santillana CR FE"
 
                     //Codigo de barra
                     IF Type = Type::Item THEN BEGIN
-                        Referencia.RESET;
-                        Referencia.SETRANGE("Item No.", "No.");
-                        Referencia.SETRANGE("Cross-Reference Type", 3);
-                        IF Referencia.FINDFIRST THEN
-                            "No." := Referencia."Cross-Reference No.";
+                        //TODO: no existe Referencia.RESET;
+                        //TODO: no existe Referencia.SETRANGE("Item No.", "No.");
+                        //TODO: no existe Referencia.SETRANGE("Cross-Reference Type", 3);
+                        //TODO: no existe IF Referencia.FINDFIRST THEN
+                        //TODO: no existe "No." := Referencia."Cross-Reference No.";
                     END;
                     //Codigo de barra
 
@@ -343,7 +343,7 @@ report 52543 "Factura Santillana CR FE"
             var
                 QRCodeInput: Code[20];
                 FE: Codeunit 52504;
-                TempBlob: Record 99008535;
+                TempBlob: Codeunit "Temp Blob";
             begin
                 IF NOT "QR Code FE".HASVALUE THEN
                     FunSan.CreaQRFE("No.");//003+-
@@ -374,7 +374,7 @@ report 52543 "Factura Santillana CR FE"
                 ELSE
                     txtIva := '';
 
-                ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
+                //TODO: no existe ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
 
                 //MOI - 12/02/2015:Inicio
                 CLEAR(Comentario);
@@ -521,7 +521,7 @@ report 52543 "Factura Santillana CR FE"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        ChkTransMgt: Report 10400;
+        //TODO: no existe ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';
@@ -539,7 +539,7 @@ report 52543 "Factura Santillana CR FE"
         "Order": Option Normal,Ranking;
         DireccionCaptionLbl: Label 'Direccion: ';
         ComentarioCaptionLbl: Label 'Comentarios: ';
-        Referencia: Record 5717;
+        //TODO: no existe Referencia: Record 5717;
         TotalMuestra: Decimal;
         View_SalesInvoiceLine: Query 50000;
         Number: Integer;

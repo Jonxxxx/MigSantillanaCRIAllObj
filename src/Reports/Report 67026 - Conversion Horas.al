@@ -10,7 +10,7 @@ report 67026 "Conversion Horas"
 
             trigger OnAfterGetRecord()
             begin
-                "Horas Pedagogicas" := ROUND("Horas dictadas" * 60 / 40, 1);
+                //TODO: Ver campo"Horas Pedagogicas" := ROUND("Horas dictadas" * 60 / 40, 1);
                 MODIFY;
             end;
 

@@ -424,8 +424,7 @@ report 56087 "Estadistica Venta"
 
             trigger OnPreDataItem()
             begin
-                CurrReport.CREATETOTALS(CustSalesLCY, CustProfitLCY, CustInvDiscAmountLCY, CustPaymentDiscLCY, CustPaymentDiscTolLCY, CustPaymentTolLCY
-                );
+                //TODO: Revisar si es necesario CurrReport.CREATETOTALS(CustSalesLCY, CustProfitLCY, CustInvDiscAmountLCY, CustPaymentDiscLCY, CustPaymentDiscTolLCY, CustPaymentTolLCY);
             end;
         }
     }

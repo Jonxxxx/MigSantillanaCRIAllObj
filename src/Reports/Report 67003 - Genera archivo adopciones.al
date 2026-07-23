@@ -1,8 +1,7 @@
 report 67003 "Genera archivo adopciones"
 {
-    // CODIGO_COLEGIO COD_ARTICULO ARTICULO RUBRO FAMILIA SUBFAMILIA SERIE GRADO
-
     ApplicationArea = Basic, Suite, Service;
+    Caption = 'Generate Adoptions File';
     ProcessingOnly = true;
     ShowPrintStatus = false;
     UsageCategory = ReportsAndAnalysis;
@@ -12,76 +11,98 @@ report 67003 "Genera archivo adopciones"
     {
         dataitem("Colegio - Adopciones Detalle"; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto")
-                                WHERE("Cantidad Alumnos" = FILTER(<> 0));
+            DataItemTableView = sorting(
+                                    "Cod. Colegio",
+                                    "Cod. Nivel",
+                                    "Cod. Grado",
+                                    "Cod. Turno",
+                                    "Cod. Promotor",
+                                    "Cod. Producto")
+                                where("Cantidad Alumnos" = filter(<> 0));
+
+            trigger OnPreDataItem()
+            begin
+                Counter := 0;
+                CounterTotal := Count();
+
+                TempBlob.CreateOutStream(
+                    FileOutStream,
+                    TextEncoding::Windows);
+
+                if GuiAllowed() then
+                    Window.Open(ProcessingLbl);
+            end;
 
             trigger OnAfterGetRecord()
             begin
-                CLEAR(Lin_Body);
+                Counter += 1;
 
-                Counter := Counter + 1;
-                Window.UPDATE(1, "Cod. Colegio");
-                Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
+                if GuiAllowed() then begin
+                    Window.Update(1, "Cod. Colegio");
 
-                Item.GET("Cod. Producto");
-                Lin_Body := "Cod. Colegio" + ';' + "Cod. Producto" + ';' + "Descripcion producto" + ';' + "Linea de negocio" + ';' +
-                            Familia + ';' + "Sub Familia" + ';' + Serie + ';' + "Cod. Grado" + ';' + "Sub Familia" + ' ' + Serie +
-                            ' ' + Item.Tipos;
+                    if CounterTotal <> 0 then
+                        Window.Update(
+                            2,
+                            Round(Counter / CounterTotal * 10000, 1));
+                end;
 
-                Fichero.WRITE(Lin_Body);
+                Item.Get("Cod. Producto");
+
+                LineBody :=
+                    "Cod. Colegio" + ';' +
+                    "Cod. Producto" + ';' +
+                    "Descripcion producto" + ';' +
+                    "Linea de negocio" + ';' +
+                    Familia + ';' +
+                    "Sub Familia" + ';' +
+                    Serie + ';' +
+                    "Cod. Grado" + ';' +
+                    "Sub Familia" + ' ' +
+                    Serie + ' ' +
+                    Item.Tipos;
+
+                FileOutStream.WriteText(LineBody);
+                FileOutStream.WriteText();
             end;
 
             trigger OnPostDataItem()
             begin
-                Fichero.CLOSE;
-                Window.CLOSE;
-            end;
+                if GuiAllowed() then
+                    Window.Close();
 
-            trigger OnPreDataItem()
-            begin
-                ConfAPS.GET();
-                ConfAPS.TESTFIELD("Ruta archivos electronicos");
-                CounterTotal := COUNT;
-                Window.OPEN(Text001);
-
-                IF COPYSTR(ConfAPS."Ruta archivos electronicos", STRLEN(ConfAPS."Ruta archivos electronicos"), 1) = '\' THEN
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + 'ADOPCIONES.CSV'
-                ELSE
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + '\ADOPCIONES.CSV';
-
-                Fichero.TEXTMODE(TRUE);
-                Fichero.CREATE(NombreArchivo);
-                Fichero.TRUNC;
+                DownloadAdoptionsFile();
             end;
         }
-    }
-
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     var
-        ConfAPS: Record 67000;
-        Item: Record 27;
-        Lin_Body: Text[500];
-        Fichero: File;
-        Text002: Label 'Text documents (*.txt) |*.txt|Word Documents (*.doc*)|*.doc*|All files (*.*)|*.*';
-        NombreArchivo: Text[30];
-        Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
+        Item: Record Item;
+        TempBlob: Codeunit "Temp Blob";
+        FileOutStream: OutStream;
+        LineBody: Text[500];
         CounterTotal: Integer;
         Counter: Integer;
         Window: Dialog;
-}
+        ProcessingLbl: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
+        FileNameLbl: Label 'ADOPCIONES.csv', Locked = true;
+        CSVFileFilterLbl: Label 'CSV files (*.csv)|*.csv';
 
+    local procedure DownloadAdoptionsFile()
+    var
+        FileInStream: InStream;
+        FileName: Text;
+    begin
+        TempBlob.CreateInStream(
+            FileInStream,
+            TextEncoding::Windows);
+
+        FileName := FileNameLbl;
+
+        DownloadFromStream(
+            FileInStream,
+            '',
+            '',
+            CSVFileFilterLbl,
+            FileName);
+    end;
+}

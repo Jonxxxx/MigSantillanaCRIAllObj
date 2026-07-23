@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="STRSUBSTNO_Text001_FORMAT_StartDate__">
+          <DataField>STRSUBSTNO_Text001_FORMAT_StartDate__</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Customer_TABLECAPTION__________CustFilter">
+          <DataField>Customer_TABLECAPTION__________CustFilter</DataField>
+        </Field>
+        <Field Name="CustFilter">
+          <DataField>CustFilter</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5_">
+          <DataField>CustBalanceDueLCY_5_</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5_Format">
+          <DataField>CustBalanceDueLCY_5_Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4_">
+          <DataField>CustBalanceDueLCY_4_</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4_Format">
+          <DataField>CustBalanceDueLCY_4_Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3_">
+          <DataField>CustBalanceDueLCY_3_</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3_Format">
+          <DataField>CustBalanceDueLCY_3_Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2_">
+          <DataField>CustBalanceDueLCY_2_</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2_Format">
+          <DataField>CustBalanceDueLCY_2_Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120">
+          <DataField>CustBalanceDueLCY120</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120Format">
+          <DataField>CustBalanceDueLCY120Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180">
+          <DataField>CustBalanceDueLCY180</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180Format">
+          <DataField>CustBalanceDueLCY180Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270">
+          <DataField>CustBalanceDueLCY270</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270Format">
+          <DataField>CustBalanceDueLCY270Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270">
+          <DataField>CustBalanceDueLCYMas270</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270Format">
+          <DataField>CustBalanceDueLCYMas270Format</DataField>
+        </Field>
+        <Field Name="Customer__No__">
+          <DataField>Customer__No__</DataField>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>Customer_Name</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control25">
+          <DataField>CustBalanceDueLCY_5__Control25</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control25Format">
+          <DataField>CustBalanceDueLCY_5__Control25Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control26">
+          <DataField>CustBalanceDueLCY_4__Control26</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control26Format">
+          <DataField>CustBalanceDueLCY_4__Control26Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control27">
+          <DataField>CustBalanceDueLCY_3__Control27</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control27Format">
+          <DataField>CustBalanceDueLCY_3__Control27Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control28">
+          <DataField>CustBalanceDueLCY_2__Control28</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control28Format">
+          <DataField>CustBalanceDueLCY_2__Control28Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000005">
+          <DataField>CustBalanceDueLCY120_Control1000000005</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000005Format">
+          <DataField>CustBalanceDueLCY120_Control1000000005Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000009">
+          <DataField>CustBalanceDueLCY180_Control1000000009</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000009Format">
+          <DataField>CustBalanceDueLCY180_Control1000000009Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000013">
+          <DataField>CustBalanceDueLCY270_Control1000000013</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000013Format">
+          <DataField>CustBalanceDueLCY270_Control1000000013Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000017">
+          <DataField>CustBalanceDueLCYMas270_Control1000000017</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000017Format">
+          <DataField>CustBalanceDueLCYMas270_Control1000000017Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control31">
+          <DataField>CustBalanceDueLCY_5__Control31</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control31Format">
+          <DataField>CustBalanceDueLCY_5__Control31Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control32">
+          <DataField>CustBalanceDueLCY_4__Control32</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control32Format">
+          <DataField>CustBalanceDueLCY_4__Control32Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control33">
+          <DataField>CustBalanceDueLCY_3__Control33</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control33Format">
+          <DataField>CustBalanceDueLCY_3__Control33Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control34">
+          <DataField>CustBalanceDueLCY_2__Control34</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control34Format">
+          <DataField>CustBalanceDueLCY_2__Control34Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000006">
+          <DataField>CustBalanceDueLCY120_Control1000000006</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000006Format">
+          <DataField>CustBalanceDueLCY120_Control1000000006Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000010">
+          <DataField>CustBalanceDueLCY180_Control1000000010</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000010Format">
+          <DataField>CustBalanceDueLCY180_Control1000000010Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000014">
+          <DataField>CustBalanceDueLCY270_Control1000000014</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000014Format">
+          <DataField>CustBalanceDueLCY270_Control1000000014Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000018">
+          <DataField>CustBalanceDueLCYMas270_Control1000000018</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000018Format">
+          <DataField>CustBalanceDueLCYMas270_Control1000000018Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control37">
+          <DataField>CustBalanceDueLCY_5__Control37</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control37Format">
+          <DataField>CustBalanceDueLCY_5__Control37Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control38">
+          <DataField>CustBalanceDueLCY_4__Control38</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control38Format">
+          <DataField>CustBalanceDueLCY_4__Control38Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control39">
+          <DataField>CustBalanceDueLCY_3__Control39</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control39Format">
+          <DataField>CustBalanceDueLCY_3__Control39Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control40">
+          <DataField>CustBalanceDueLCY_2__Control40</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control40Format">
+          <DataField>CustBalanceDueLCY_2__Control40Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000007">
+          <DataField>CustBalanceDueLCY120_Control1000000007</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY120_Control1000000007Format">
+          <DataField>CustBalanceDueLCY120_Control1000000007Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000011">
+          <DataField>CustBalanceDueLCY180_Control1000000011</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY180_Control1000000011Format">
+          <DataField>CustBalanceDueLCY180_Control1000000011Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000015">
+          <DataField>CustBalanceDueLCY270_Control1000000015</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY270_Control1000000015Format">
+          <DataField>CustBalanceDueLCY270_Control1000000015Format</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000019">
+          <DataField>CustBalanceDueLCYMas270_Control1000000019</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCYMas270_Control1000000019Format">
+          <DataField>CustBalanceDueLCYMas270_Control1000000019Format</DataField>
+        </Field>
+        <Field Name="Customer___Summary_Aging_Simp_Caption">
+          <DataField>Customer___Summary_Aging_Simp_Caption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="All_amounts_are_in_LCYCaption">
+          <DataField>All_amounts_are_in_LCYCaption</DataField>
+        </Field>
+        <Field Name="Customer__No__Caption">
+          <DataField>Customer__No__Caption</DataField>
+        </Field>
+        <Field Name="Customer_NameCaption">
+          <DataField>Customer_NameCaption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control25Caption">
+          <DataField>CustBalanceDueLCY_5__Control25Caption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_4__Control26Caption">
+          <DataField>CustBalanceDueLCY_4__Control26Caption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_3__Control27Caption">
+          <DataField>CustBalanceDueLCY_3__Control27Caption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_2__Control28Caption">
+          <DataField>CustBalanceDueLCY_2__Control28Caption</DataField>
+        </Field>
+        <Field Name="V91_120Caption">
+          <DataField>V91_120Caption</DataField>
+        </Field>
+        <Field Name="V121_180Caption">
+          <DataField>V121_180Caption</DataField>
+        </Field>
+        <Field Name="V181_270Caption">
+          <DataField>V181_270Caption</DataField>
+        </Field>
+        <Field Name="Mas_270Caption">
+          <DataField>Mas_270Caption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5_Caption">
+          <DataField>CustBalanceDueLCY_5_Caption</DataField>
+        </Field>
+        <Field Name="CustBalanceDueLCY_5__Control31Caption">
+          <DataField>CustBalanceDueLCY_5__Control31Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

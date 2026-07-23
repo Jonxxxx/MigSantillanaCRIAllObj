@@ -131,9 +131,9 @@ report 52504 "Purchase Order CR"
                     column(CopyNo; CopyNo)
                     {
                     }
-                    column(VendTaxIdentificationType; FORMAT(Vend."Tax Identification Type"))
-                    {
-                    }
+                    //TODO: no existe column(VendTaxIdentificationType; FORMAT(Vend."Tax Identification Type"))
+                    //{
+                    //}
                     column(ToCaption; ToCaptionLbl)
                     {
                     }
@@ -293,8 +293,8 @@ report 52504 "Purchase Order CR"
                         begin
                             OnLineNumber := OnLineNumber + 1;
 
-                            IF ("Purchase Header"."Tax Area Code" <> '') AND NOT UseExternalTaxEngine THEN
-                                SalesTaxCalc.AddPurchLine("Purchase Line");
+                            //TODO: no existe IF ("Purchase Header"."Tax Area Code" <> '') AND NOT UseExternalTaxEngine THEN
+                            //TODO: no existe SalesTaxCalc.AddPurchLine("Purchase Line");
 
                             IF "Vendor Item No." <> '' THEN
                                 ItemNumberToPrint := "Vendor Item No."
@@ -327,6 +327,8 @@ report 52504 "Purchase Order CR"
                                 PrintFooter := TRUE;
 
                                 IF "Purchase Header"."Tax Area Code" <> '' THEN BEGIN
+                                    //TODO: Ver
+                                    /*
                                     IF UseExternalTaxEngine THEN
                                         SalesTaxCalc.CallExternalTaxEngineForPurch("Purchase Header", TRUE)
                                     ELSE
@@ -362,6 +364,7 @@ report 52504 "Purchase Order CR"
                                                 TaxAmount := TaxAmount + "Tax Amount";
                                             UNTIL NEXT = 0;
                                     END;
+                                    */
                                     IF BrkIdx = 1 THEN BEGIN
                                         CLEAR(BreakdownLabel);
                                         CLEAR(BreakdownAmt);
@@ -401,6 +404,8 @@ report 52504 "Purchase Order CR"
                     TotalTaxLabel := Text008;
                     IF "Purchase Header"."Tax Area Code" <> '' THEN BEGIN
                         TaxArea.GET("Purchase Header"."Tax Area Code");
+                        //TODO: no existe 
+                        /*
                         CASE TaxArea."Country/Region" OF
                             TaxArea."Country/Region"::US:
                                 TotalTaxLabel := Text005;
@@ -408,7 +413,7 @@ report 52504 "Purchase Order CR"
                                 TotalTaxLabel := Text007;
                         END;
                         UseExternalTaxEngine := TaxArea."Use External Tax Engine";
-                        SalesTaxCalc.StartSalesTaxCalculation;
+                        SalesTaxCalc.StartSalesTaxCalculation;*/
                     END;
                 end;
 
@@ -429,7 +434,7 @@ report 52504 "Purchase Order CR"
                         CompanyInformation."Phone No." := RespCenter."Phone No.";
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     END;
-                CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
+                //TODO: no existe CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
 
                 IF "Purchaser Code" = '' THEN
                     CLEAR(SalesPurchPerson)
@@ -543,7 +548,7 @@ report 52504 "Purchase Order CR"
         trigger OnOpenPage()
         begin
             ArchiveDocument := ArchiveManagement.PurchaseDocArchiveGranule;
-            LogInteraction := SegManagement.FindInteractTmplCode(13) <> '';
+            //TODO: no existe LogInteraction := SegManagement.FindInteractTmplCode(13) <> '';
 
             ArchiveDocumentEnable := ArchiveDocument;
             LogInteractionEnable := LogInteraction;
@@ -567,8 +572,8 @@ report 52504 "Purchase Order CR"
         SalesPurchPerson: Record 13;
         CompanyInformation: Record 79;
         RespCenter: Record 5714;
-        Language: Record 8;
-        TempSalesTaxAmtLine: Record 10011 temporary;
+        //TODO: no existe Language: Record 8;
+        //TODO: no existe TempSalesTaxAmtLine: Record 10011 temporary;
         TaxArea: Record 318;
         Vend: Record 23;
         CompanyAddress: array[8] of Text[100];

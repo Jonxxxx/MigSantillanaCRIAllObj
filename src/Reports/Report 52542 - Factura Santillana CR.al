@@ -104,9 +104,9 @@ report 52542 "Factura Santillana CR"
             {
                 DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", "Line No.");
-                column(CrossReferenceNo_SalesInvoiceLine; "Sales Invoice Line"."Cross-Reference No.")
-                {
-                }
+                //TODO: no existe column(CrossReferenceNo_SalesInvoiceLine; "Sales Invoice Line"."Cross-Reference No.")
+                //{
+                //}
                 column(Sales_Invoice_Line__No__; "No.")
                 {
                 }
@@ -191,11 +191,11 @@ report 52542 "Factura Santillana CR"
 
                     //Codigo de barra
                     IF Type = Type::Item THEN BEGIN
-                        Referencia.RESET;
-                        Referencia.SETRANGE("Item No.", "No.");
-                        Referencia.SETRANGE("Cross-Reference Type", 3);
-                        IF Referencia.FINDFIRST THEN
-                            "No." := Referencia."Cross-Reference No.";
+                        //TODO: no existe Referencia.RESET;
+                        //TODO: no existe Referencia.SETRANGE("Item No.", "No.");
+                        //TODO: no existe Referencia.SETRANGE("Cross-Reference Type", 3);
+                        //TODO: no existe IF Referencia.FINDFIRST THEN
+                        //TODO: no existe "No." := Referencia."Cross-Reference No.";
                     END;
                     //Codigo de barra
                 end;
@@ -246,7 +246,7 @@ report 52542 "Factura Santillana CR"
                 ELSE
                     txtIva := '';
 
-                ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
+                //TODO: no existe ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
 
                 //MOI - 12/02/2015:Inicio
                 CLEAR(Comentario);
@@ -317,7 +317,7 @@ report 52542 "Factura Santillana CR"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        ChkTransMgt: Report 10400;
+        //TODO: no existe ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';
@@ -336,6 +336,6 @@ report 52542 "Factura Santillana CR"
         DireccionCaptionLbl: Label 'Direccion: ';
         ComentarioCaptionLbl: Label 'Comentarios: ';
         TotalMuestra: Decimal;
-        Referencia: Record 5717;
+    //TODO: no existe Referencia: Record 5717;
 }
 

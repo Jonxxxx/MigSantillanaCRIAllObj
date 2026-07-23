@@ -268,7 +268,7 @@ report 56112 "Customer-Summary (Santillana)"
 
             trigger OnPreDataItem()
             begin
-                CurrReport.CREATETOTALS(CustBalanceDueLCY, CustBalanceDueLCY120, CustBalanceDueLCY180, CustBalanceDueLCY270, CustBalanceDueLCYMas270);
+                //TODO: Revisar metodo CurrReport.CREATETOTALS(CustBalanceDueLCY, CustBalanceDueLCY120, CustBalanceDueLCY180, CustBalanceDueLCY270, CustBalanceDueLCYMas270);
             end;
         }
     }

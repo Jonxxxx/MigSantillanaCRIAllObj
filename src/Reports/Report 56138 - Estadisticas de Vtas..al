@@ -587,13 +587,13 @@ report 56138 "Estadisticas de Vtas."
                     IF wCategoriaPedido = '' THEN//020+
                                                  //018+
                         CASE "Document Type" OF
-                      "Document Type"::"Sales Invoice":
-                          IF lrSIH.GET("Document No.") THEN
-                              CategoriaPedido := lrSIH."Categoria Pedido Venta";
+                            "Document Type"::"Sales Invoice":
+                                IF lrSIH.GET("Document No.") THEN
+                                    CategoriaPedido := lrSIH."Categoria Pedido Venta";
 
-                      "Document Type"::"Sales Credit Memo":
-                          IF lrSCMH.GET("Document No.") THEN
-                              CategoriaPedido := lrSCMH."Categoria Pedido Venta";
+                            "Document Type"::"Sales Credit Memo":
+                                IF lrSCMH.GET("Document No.") THEN
+                                    CategoriaPedido := lrSCMH."Categoria Pedido Venta";
                         END;
                     //018-
 
@@ -631,13 +631,13 @@ report 56138 "Estadisticas de Vtas."
                     IF wCanalVenta = '' THEN
                         //018+
                         CASE "Document Type" OF
-                      "Document Type"::"Sales Invoice":
-                          IF lrSIH.GET("Document No.") THEN
-                              Canalventa := Funcionesvarias.BuscaDimension(lrSIH."No.");
+                            "Document Type"::"Sales Invoice":
+                                IF lrSIH.GET("Document No.") THEN
+                                    Canalventa := Funcionesvarias.BuscaDimension(lrSIH."No.");
 
-                      "Document Type"::"Sales Credit Memo":
-                          IF lrSCMH.GET("Document No.") THEN
-                              Canalventa := Funcionesvarias.BuscaDimension(lrSCMH."No.");
+                            "Document Type"::"Sales Credit Memo":
+                                IF lrSCMH.GET("Document No.") THEN
+                                    Canalventa := Funcionesvarias.BuscaDimension(lrSCMH."No.");
                         END;
 
                     CLEAR(Canalventa);
@@ -951,26 +951,13 @@ report 56138 "Estadisticas de Vtas."
         Canalventa_Lbl: Label 'Canal de Venta';
         wCanalVenta: Code[20];
 
-    local procedure CreateExcelbook()
-    var
-        TextL006: Label 'EstadisticasVentas';
-        lRuta: Text[1024];
-        lFile: Text[100];
-        lFile0: Text[100];
-        lrMySession: Record 2000000110;
+    procedure CreateExcelBook()
     begin
-        /*
-        lRuta := 'C:\Libros Excel\';
-        
-        lFile:='';
-        IF lrMySession.FINDFIRST THEN
-          lFile := FORMAT(lrMySession."Session ID");
-        lFile := lFile + TextL006;
-        */
-        //ExcelBuf.CreateBookAndOpenExcel(lRuta+lFile+'.xlsx',Text001,Text000,COMPANYNAME,USERID);
-        ExcelBuf.CreateBookAndOpenExcel('', Text001, Text000, COMPANYNAME, USERID);
-        ERROR('');
-
+        ExcelBuf.CreateNewBook(Text001);
+        ExcelBuf.WriteSheet(Text001, CompanyName, UserId);
+        ExcelBuf.CloseBook();
+        ExcelBuf.SetFriendlyFilename(Text001);
+        ExcelBuf.OpenExcel();
     end;
 
     local procedure MakeExcelDataHeader()

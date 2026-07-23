@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="GetShorDimCodeCaption2">
+          <DataField>GetShorDimCodeCaption2</DataField>
+        </Field>
+        <Field Name="GetShorDimCodeCaption1">
+          <DataField>GetShorDimCodeCaption1</DataField>
+        </Field>
+        <Field Name="ShowLotSN">
+          <DataField>ShowLotSN</DataField>
+        </Field>
+        <Field Name="Filtros">
+          <DataField>Filtros</DataField>
+        </Field>
+        <Field Name="CodSeccion1">
+          <DataField>CodSeccion1</DataField>
+        </Field>
+        <Field Name="CodSeccion2">
+          <DataField>CodSeccion2</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line__Posting_Date_">
+          <DataField>Warehouse_Journal_Line__Posting_Date_</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line__Item_No__">
+          <DataField>Warehouse_Journal_Line__Item_No__</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line_Description">
+          <DataField>Warehouse_Journal_Line_Description</DataField>
+        </Field>
+        <Field Name="Warehouse_Journall_Line__Location_Code_">
+          <DataField>Warehouse_Journall_Line__Location_Code_</DataField>
+        </Field>
+        <Field Name="CalcQty1">
+          <DataField>CalcQty1</DataField>
+        </Field>
+        <Field Name="CalcQty1Format">
+          <DataField>CalcQty1Format</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line__Bin_Code_">
+          <DataField>Warehouse_Journal_Line__Bin_Code_</DataField>
+        </Field>
+        <Field Name="CalcQty2">
+          <DataField>CalcQty2</DataField>
+        </Field>
+        <Field Name="CalcQty2Format">
+          <DataField>CalcQty2Format</DataField>
+        </Field>
+        <Field Name="DifQty">
+          <DataField>DifQty</DataField>
+        </Field>
+        <Field Name="DifQtyFormat">
+          <DataField>DifQtyFormat</DataField>
+        </Field>
+        <Field Name="Phys__Inventory_ListCaption">
+          <DataField>Phys__Inventory_ListCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Item_Journal_Line__Posting_Date_Caption">
+          <DataField>Item_Journal_Line__Posting_Date_Caption</DataField>
+        </Field>
+        <Field Name="Item_Journal_Line__Item_No__Caption">
+          <DataField>Item_Journal_Line__Item_No__Caption</DataField>
+        </Field>
+        <Field Name="Item_Journal_Line_DescriptionCaption">
+          <DataField>Item_Journal_Line_DescriptionCaption</DataField>
+        </Field>
+        <Field Name="Item_Journal_Line__Location_Code_Caption">
+          <DataField>Item_Journal_Line__Location_Code_Caption</DataField>
+        </Field>
+        <Field Name="Item_Journal_Line__Bin_Code_Caption">
+          <DataField>Item_Journal_Line__Bin_Code_Caption</DataField>
+        </Field>
+        <Field Name="Diff_Caption">
+          <DataField>Diff_Caption</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line_Journal_Template_Name">
+          <DataField>Warehouse_Journal_Line_Journal_Template_Name</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line_Journal_Batch_Name">
+          <DataField>Warehouse_Journal_Line_Journal_Batch_Name</DataField>
+        </Field>
+        <Field Name="Warehouse_Journal_Line_Line_No_">
+          <DataField>Warehouse_Journal_Line_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

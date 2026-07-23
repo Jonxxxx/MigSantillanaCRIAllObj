@@ -183,7 +183,7 @@ report 56030 "Sales Dashboard RT"
 
             trigger OnAfterGetRecord()
             begin
-                CALCFIELDS(Picture);
+                CALCFIELDS(Image);
                 //Total := Total + "Balance (LCY)";
             end;
 
@@ -267,24 +267,24 @@ report 56030 "Sales Dashboard RT"
                 group("Microsoft Dynamics NAV 2009 Sales Dashboard")
                 {
                     Caption = 'Microsoft Dynamics NAV 2009 Sales Dashboard';
-                    field('included';'included')
+                    field(included; 'included')
                     {
                         Caption = 'TOP 8 Customers';
                         Editable = false;
                     }
-                    field('included';'included')
+                    field(included2; 'included')
                     {
                         Caption = 'TOP 8 Items';
                     }
-                    field('included';'included')
+                    field(included3; 'included')
                     {
                         Caption = 'Balance vs Country/Region';
                     }
-                    field('included';'included')
+                    field(included4; 'included')
                     {
                         Caption = 'Item Purchase/Sales';
                     }
-                    field('included';'included')
+                    field(included5; 'included')
                     {
                         Caption = 'Opportunities';
                     }
@@ -304,7 +304,7 @@ report 56030 "Sales Dashboard RT"
     trigger OnPreReport()
     begin
         IF NOT ISSERVICETIER THEN
-          ERROR('Report is only designed for using in Role Tailored Client');
+            ERROR('Report is only designed for using in Role Tailored Client');
     end;
 
     var

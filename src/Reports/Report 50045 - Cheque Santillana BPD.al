@@ -80,6 +80,8 @@ report 50045 "Cheque Santillana BPD"
                 TESTFIELD("Bal. Account Type", "Bal. Account Type"::"Bank Account");
                 IF "Bal. Account No." <> BankAcc2."No." THEN
                     CurrReport.SKIP;
+                //TODO: Ver
+                /*
                 CASE "Account Type" OF
                     "Account Type"::"G/L Account":
                         BEGIN
@@ -98,13 +100,12 @@ report 50045 "Cheque Santillana BPD"
                         END;
                     "Account Type"::Vendor:
                         BEGIN
-                            /*    AMS
-                              Vend.GET("Account No.");
-                              IF Vend."Check Date Format" = Vend."Check Date Format"::" " THEN
-                                ERROR(USText006,Vend.FIELDCAPTION("Check Date Format"),Vend.TABLECAPTION,"Account No.");
-                              IF Vend."Bank Communication" = Vend."Bank Communication"::"S Spanish" THEN
-                                ERROR(USText007,Vend.FIELDCAPTION("Bank Communication"),Vend.TABLECAPTION,"Account No.");
-                                */
+                            //AMS
+                            //Vend.GET("Account No.");
+                            //IF Vend."Check Date Format" = Vend."Check Date Format"::" " THEN
+                            //  ERROR(USText006,Vend.FIELDCAPTION("Check Date Format"),Vend.TABLECAPTION,"Account No.");
+                            //IF Vend."Bank Communication" = Vend."Bank Communication"::"S Spanish" THEN
+                            //  ERROR(USText007,Vend.FIELDCAPTION("Bank Communication"),Vend.TABLECAPTION,"Account No.");                                
                         END;
                     "Account Type"::"Bank Account":
                         BEGIN
@@ -115,7 +116,7 @@ report 50045 "Cheque Santillana BPD"
                                 ERROR(USText007, BankAcc.FIELDCAPTION("Bank Communication"), BankAcc.TABLECAPTION, "Account No.");
                         END;
                 END;
-
+                */
             end;
 
             trigger OnPreDataItem()
@@ -633,8 +634,8 @@ report 50045 "Cheque Santillana BPD"
                                         DollarSignBefore := Currency.Symbol;
                                         DollarSignAfter := ' ';
                                     END;
-                                    IF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
-                                        ERROR(DescriptionLine[1]);
+                                    //TODO: Ver IF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
+                                    ERROR(DescriptionLine[1]);
                                     VoidText := '';
                                 END ELSE BEGIN
                                     CLEAR(CheckAmountText);
@@ -748,9 +749,7 @@ report 50045 "Cheque Santillana BPD"
                             ControlLen := 27
                         ELSE
                             ControlLen := 29;
-                        CheckAmountText :=
-                          ParagraphHandling.PadStrProportional(
-                            CheckAmountText + DollarSignBefore + DollarSignAfter, ControlLen, 10, '*');
+                        //TODO: Ver CheckAmountText := ParagraphHandling.PadStrProportional(CheckAmountText + DollarSignBefore + DollarSignAfter, ControlLen, 10, '*');
                         CheckAmountText :=
                           DELSTR(CheckAmountText, StartingLen + 1, STRLEN(DollarSignBefore + DollarSignAfter));
                         NewLen := STRLEN(CheckAmountText);
@@ -908,7 +907,7 @@ report 50045 "Cheque Santillana BPD"
                 IF rCuentaBanco.GET(GenJnlLine."Bal. Account No.") THEN BEGIN
                     CtaBanco := '';
                     GrupoContBanco.GET(rCuentaBanco."Bank Acc. Posting Group");
-                    CtaBanco := GrupoContBanco."G/L Bank Account No.";
+                    //TODO: Ver CtaBanco := GrupoContBanco."G/L Bank Account No.";
                 END;
 
                 TextDiaCheque := FORMAT("Posting Date", 0, ('<day,2>'));
@@ -923,7 +922,7 @@ report 50045 "Cheque Santillana BPD"
 
                 IF NOT GrupoContBanco.GET(rBanco."Bank Acc. Posting Group") THEN
                     ERROR(Error002 + rBanco.FIELDCAPTION(rBanco."Bank Acc. Posting Group"));
-                CtaCredito := GrupoContBanco."G/L Bank Account No.";
+                //TODO: Ver CtaCredito := GrupoContBanco."G/L Bank Account No.";
                 Monto := Amount;
 
                 CreditAmount := GenJnlLine."Credit Amount";
@@ -958,7 +957,7 @@ report 50045 "Cheque Santillana BPD"
                         BEGIN
                             IF BankAcc.GET("Account No.") THEN
                                 GrupoContBanco.GET(BankAcc."Bank Acc. Posting Group");
-                            Cuenta := GrupoContBanco."G/L Bank Account No.";
+                            //TODO: Ver Cuenta := GrupoContBanco."G/L Bank Account No.";
                             CheckToAddr[1] := GenJnlLine.Beneficiario;
                         END;
 
@@ -1029,11 +1028,13 @@ report 50045 "Cheque Santillana BPD"
                             BEGIN
                                 //AMS CheckToAddr[1] := GenJnlLine.Description;
                                 CheckToAddr[1] := GenJnlLine.Beneficiario;
+                                //TODO: Ver 
+                                /*
                                 SetCheckPrintParams(
                                   BankAcc2."Check Date Format",
                                   BankAcc2."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc2."Bank Communication");
+                                  BankAcc2."Bank Communication");*/
                             END;
                         BalancingType::Customer:
                             BEGIN
@@ -1048,11 +1049,13 @@ report 50045 "Cheque Santillana BPD"
                                     ContactText := Text006;
                                     SalesPurchPerson.GET(Cust."Salesperson Code");
                                 END;
+                                //TODO: Ver 
+                                /*
                                 SetCheckPrintParams(
                                   Cust."Check Date Format",
                                   Cust."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Cust."Bank Communication");
+                                  Cust."Bank Communication");*/
                             END;
                         BalancingType::Vendor:
                             BEGIN
@@ -1068,11 +1071,13 @@ report 50045 "Cheque Santillana BPD"
                                     ContactText := Text007;
                                     SalesPurchPerson.GET(Vend."Purchaser Code");
                                 END;
+                                //TODO: Ver 
+                                /*
                                 SetCheckPrintParams(
                                   Vend."Check Date Format",
                                   Vend."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Vend."Bank Communication");
+                                  Vend."Bank Communication");*/
                             END;
                         BalancingType::"Bank Account":
                             BEGIN
@@ -1090,24 +1095,27 @@ report 50045 "Cheque Santillana BPD"
                                     ContactText := Text009;
                                     SalesPurchPerson.GET(BankAcc."Our Contact Code");
                                 END;
+                                //TODO: Ver 
+                                /*
                                 SetCheckPrintParams(
                                   BankAcc."Check Date Format",
                                   BankAcc."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc."Bank Communication");
+                                  BankAcc."Bank Communication");*/
                             END;
                     END;
 
-                    CheckDateText :=
-                      ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
+                    //TODO: Ver CheckDateText := ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
                 END ELSE BEGIN
                     IF ChecksPrinted > 0 THEN
                         CurrReport.BREAK;
-                    SetCheckPrintParams(
-                      BankAcc2."Check Date Format",
-                      BankAcc2."Check Date Separator",
-                      BankAcc2."Country/Region Code",
-                      BankAcc2."Bank Communication");
+                    //TODO: Ver 
+                    /*
+                        SetCheckPrintParams(
+                        BankAcc2."Check Date Format",
+                        BankAcc2."Check Date Separator",
+                        BankAcc2."Country/Region Code",
+                        BankAcc2."Bank Communication");*/
                     BalancingType := BalancingType::Vendor;
                     BalancingNo := Text010;
                     CLEAR(CheckToAddr);
@@ -1163,8 +1171,7 @@ report 50045 "Cheque Santillana BPD"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(BankAcc2."No.";
-                        BankAcc2."No.")
+                    field("No."; BankAcc2."No.")
                     {
                         Caption = 'Bank Account';
                         TableRelation = "Bank Account";
@@ -1285,8 +1292,8 @@ report 50045 "Cheque Santillana BPD"
         WindowsLang: Record 2000000045;
         FormatAddr: Codeunit 365;
         CheckManagement: Codeunit 367;
-        ParagraphHandling: Codeunit 10025;
-        ChkTransMgt: Report 10400;
+        //TODO: Ver ParagraphHandling: Codeunit 10025;
+        //TODO: Ver ChkTransMgt: Report 10400;
         CompanyAddr: array[8] of Text[100];
         CheckToAddr: array[8] of Text[220];
         BalancingType: Option "G/L Account",Customer,Vendor,"Bank Account";

@@ -30,7 +30,7 @@ report 56008 "Genera Certificado Digital"
                 */
                 //CPMCR-CEC-
 
-                cuFE.Factura("Sales Invoice Header");
+                //TODO: Ver cuFE.Factura("Sales Invoice Header");
 
             end;
         }

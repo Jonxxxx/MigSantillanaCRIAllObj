@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="FiltroCust">
+          <DataField>FiltroCust</DataField>
+        </Field>
+        <Field Name="EmptyString">
+          <DataField>EmptyString</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_4_">
+          <DataField>FechaInicPeriodo_4_</DataField>
+        </Field>
+        <Field Name="wLabelRango_4_">
+          <DataField>wLabelRango_4_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_4_">
+          <DataField>FechaFinPeriodo_4_</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_3_">
+          <DataField>FechaInicPeriodo_3_</DataField>
+        </Field>
+        <Field Name="wLabelRango_3_">
+          <DataField>wLabelRango_3_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_3_">
+          <DataField>FechaFinPeriodo_3_</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_2_">
+          <DataField>FechaInicPeriodo_2_</DataField>
+        </Field>
+        <Field Name="wLabelRango_2_">
+          <DataField>wLabelRango_2_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_2_">
+          <DataField>FechaFinPeriodo_2_</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_1_">
+          <DataField>FechaInicPeriodo_1_</DataField>
+        </Field>
+        <Field Name="wLabelRango_1_">
+          <DataField>wLabelRango_1_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_1_">
+          <DataField>FechaFinPeriodo_1_</DataField>
+        </Field>
+        <Field Name="FORMAT_wFechaInicio_0_4_">
+          <DataField>FORMAT_wFechaInicio_0_4_</DataField>
+        </Field>
+        <Field Name="wLabelRango_5_">
+          <DataField>wLabelRango_5_</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_5_">
+          <DataField>FechaInicPeriodo_5_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_5_">
+          <DataField>FechaFinPeriodo_5_</DataField>
+        </Field>
+        <Field Name="wLabelRango_6_">
+          <DataField>wLabelRango_6_</DataField>
+        </Field>
+        <Field Name="FechaInicPeriodo_6_">
+          <DataField>FechaInicPeriodo_6_</DataField>
+        </Field>
+        <Field Name="FechaFinPeriodo_6_">
+          <DataField>FechaFinPeriodo_6_</DataField>
+        </Field>
+        <Field Name="wDetallado">
+          <DataField>wDetallado</DataField>
+        </Field>
+        <Field Name="Customer__No__">
+          <DataField>Customer__No__</DataField>
+        </Field>
+        <Field Name="Customer_Name">
+          <DataField>Customer_Name</DataField>
+        </Field>
+        <Field Name="wTotalSaldo">
+          <DataField>wTotalSaldo</DataField>
+        </Field>
+        <Field Name="wTotalSaldoFormat">
+          <DataField>wTotalSaldoFormat</DataField>
+        </Field>
+        <Field Name="wTotalVencido">
+          <DataField>wTotalVencido</DataField>
+        </Field>
+        <Field Name="wTotalVencidoFormat">
+          <DataField>wTotalVencidoFormat</DataField>
+        </Field>
+        <Field Name="wTotalImporte120">
+          <DataField>wTotalImporte120</DataField>
+        </Field>
+        <Field Name="wTotalImporte120Format">
+          <DataField>wTotalImporte120Format</DataField>
+        </Field>
+        <Field Name="wTotalImporte90">
+          <DataField>wTotalImporte90</DataField>
+        </Field>
+        <Field Name="wTotalImporte90Format">
+          <DataField>wTotalImporte90Format</DataField>
+        </Field>
+        <Field Name="wTotalImporte60">
+          <DataField>wTotalImporte60</DataField>
+        </Field>
+        <Field Name="wTotalImporte60Format">
+          <DataField>wTotalImporte60Format</DataField>
+        </Field>
+        <Field Name="wTotalImporte30">
+          <DataField>wTotalImporte30</DataField>
+        </Field>
+        <Field Name="wTotalImporte30Format">
+          <DataField>wTotalImporte30Format</DataField>
+        </Field>
+        <Field Name="wTotalImporteNoVencido">
+          <DataField>wTotalImporteNoVencido</DataField>
+        </Field>
+        <Field Name="wTotalImporteNoVencidoFormat">
+          <DataField>wTotalImporteNoVencidoFormat</DataField>
+        </Field>
+        <Field Name="wTotalImporte150">
+          <DataField>wTotalImporte150</DataField>
+        </Field>
+        <Field Name="wTotalImporte150Format">
+          <DataField>wTotalImporte150Format</DataField>
+        </Field>
+        <Field Name="wTotalImporte180">
+          <DataField>wTotalImporte180</DataField>
+        </Field>
+        <Field Name="wTotalImporte180Format">
+          <DataField>wTotalImporte180Format</DataField>
+        </Field>
+        <Field Name="wGranTotalSaldo">
+          <DataField>wGranTotalSaldo</DataField>
+        </Field>
+        <Field Name="wGranTotalSaldoFormat">
+          <DataField>wGranTotalSaldoFormat</DataField>
+        </Field>
+        <Field Name="wGranTotalVencido">
+          <DataField>wGranTotalVencido</DataField>
+        </Field>
+        <Field Name="wGranTotalVencidoFormat">
+          <DataField>wGranTotalVencidoFormat</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte120">
+          <DataField>wGranTotalImporte120</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte120Format">
+          <DataField>wGranTotalImporte120Format</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte90">
+          <DataField>wGranTotalImporte90</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte90Format">
+          <DataField>wGranTotalImporte90Format</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte60">
+          <DataField>wGranTotalImporte60</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte60Format">
+          <DataField>wGranTotalImporte60Format</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte30">
+          <DataField>wGranTotalImporte30</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte30Format">
+          <DataField>wGranTotalImporte30Format</DataField>
+        </Field>
+        <Field Name="wGranTotalImporteNoVencido">
+          <DataField>wGranTotalImporteNoVencido</DataField>
+        </Field>
+        <Field Name="wGranTotalImporteNoVencidoFormat">
+          <DataField>wGranTotalImporteNoVencidoFormat</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte180">
+          <DataField>wGranTotalImporte180</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte180Format">
+          <DataField>wGranTotalImporte180Format</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte150">
+          <DataField>wGranTotalImporte150</DataField>
+        </Field>
+        <Field Name="wGranTotalImporte150Format">
+          <DataField>wGranTotalImporte150Format</DataField>
+        </Field>
+        <Field Name="Customer___Summary_Aging_Simp_Caption">
+          <DataField>Customer___Summary_Aging_Simp_Caption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="DiasCaption">
+          <DataField>DiasCaption</DataField>
+        </Field>
+        <Field Name="SaldoCaption">
+          <DataField>SaldoCaption</DataField>
+        </Field>
+        <Field Name="VencidosCaption">
+          <DataField>VencidosCaption</DataField>
+        </Field>
+        <Field Name="Saldo_vencidoCaption">
+          <DataField>Saldo_vencidoCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="VencidoCaption">
+          <DataField>VencidoCaption</DataField>
+        </Field>
+        <Field Name="No_VencidasCaption">
+          <DataField>No_VencidasCaption</DataField>
+        </Field>
+        <Field Name="FacturasCaption">
+          <DataField>FacturasCaption</DataField>
+        </Field>
+        <Field Name="DescripcionCaption">
+          <DataField>DescripcionCaption</DataField>
+        </Field>
+        <Field Name="Saldos_al__Caption">
+          <DataField>Saldos_al__Caption</DataField>
+        </Field>
+        <Field Name="No_Caption">
+          <DataField>No_Caption</DataField>
+        </Field>
+        <Field Name="SubtotalCaption">
+          <DataField>SubtotalCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption_Control1100244075">
+          <DataField>TotalCaption_Control1100244075</DataField>
+        </Field>
+        <Field Name="wImporteNoVencido">
+          <DataField>wImporteNoVencido</DataField>
+        </Field>
+        <Field Name="wImporteNoVencidoFormat">
+          <DataField>wImporteNoVencidoFormat</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido__Document_No__">
+          <DataField>MovCustNoVencido__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido__Posting_Date_">
+          <DataField>MovCustNoVencido__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido_Amount">
+          <DataField>MovCustNoVencido_Amount</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido_AmountFormat">
+          <DataField>MovCustNoVencido_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido_Entry_No_">
+          <DataField>MovCustNoVencido_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCustNoVencido_Customer_No_">
+          <DataField>MovCustNoVencido_Customer_No_</DataField>
+        </Field>
+        <Field Name="wImporte30">
+          <DataField>wImporte30</DataField>
+        </Field>
+        <Field Name="wImporte30Format">
+          <DataField>wImporte30Format</DataField>
+        </Field>
+        <Field Name="MovCust30__Document_No__">
+          <DataField>MovCust30__Document_No__</DataField>
+        </Field>
+        <Field Name="wDias30">
+          <DataField>wDias30</DataField>
+        </Field>
+        <Field Name="MovCust30__Posting_Date_">
+          <DataField>MovCust30__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCust30_Amount">
+          <DataField>MovCust30_Amount</DataField>
+        </Field>
+        <Field Name="MovCust30_AmountFormat">
+          <DataField>MovCust30_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCust30_Entry_No_">
+          <DataField>MovCust30_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCust30_Customer_No_">
+          <DataField>MovCust30_Customer_No_</DataField>
+        </Field>
+        <Field Name="wDias60">
+          <DataField>wDias60</DataField>
+        </Field>
+        <Field Name="wImporte60">
+          <DataField>wImporte60</DataField>
+        </Field>
+        <Field Name="wImporte60Format">
+          <DataField>wImporte60Format</DataField>
+        </Field>
+        <Field Name="MovCust60__Document_No__">
+          <DataField>MovCust60__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCust60__Posting_Date_">
+          <DataField>MovCust60__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCust60_Amount">
+          <DataField>MovCust60_Amount</DataField>
+        </Field>
+        <Field Name="MovCust60_AmountFormat">
+          <DataField>MovCust60_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCust60_Entry_No_">
+          <DataField>MovCust60_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCust60_Customer_No_">
+          <DataField>MovCust60_Customer_No_</DataField>
+        </Field>
+        <Field Name="wDias90">
+          <DataField>wDias90</DataField>
+        </Field>
+        <Field Name="wImporte90">
+          <DataField>wImporte90</DataField>
+        </Field>
+        <Field Name="wImporte90Format">
+          <DataField>wImporte90Format</DataField>
+        </Field>
+        <Field Name="MovCust90__Document_No__">
+          <DataField>MovCust90__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCust90__Posting_Date_">
+          <DataField>MovCust90__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCust90_Amount">
+          <DataField>MovCust90_Amount</DataField>
+        </Field>
+        <Field Name="MovCust90_AmountFormat">
+          <DataField>MovCust90_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCust90_Entry_No_">
+          <DataField>MovCust90_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCust90_Customer_No_">
+          <DataField>MovCust90_Customer_No_</DataField>
+        </Field>
+        <Field Name="wDias120">
+          <DataField>wDias120</DataField>
+        </Field>
+        <Field Name="wImporte120">
+          <DataField>wImporte120</DataField>
+        </Field>
+        <Field Name="wImporte120Format">
+          <DataField>wImporte120Format</DataField>
+        </Field>
+        <Field Name="MovCust120__Document_No__">
+          <DataField>MovCust120__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCust120__Posting_Date_">
+          <DataField>MovCust120__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCust120_Amount">
+          <DataField>MovCust120_Amount</DataField>
+        </Field>
+        <Field Name="MovCust120_AmountFormat">
+          <DataField>MovCust120_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCust120_Entry_No_">
+          <DataField>MovCust120_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCust120_Customer_No_">
+          <DataField>MovCust120_Customer_No_</DataField>
+        </Field>
+        <Field Name="wDias150">
+          <DataField>wDias150</DataField>
+        </Field>
+        <Field Name="wImporte150">
+          <DataField>wImporte150</DataField>
+        </Field>
+        <Field Name="wImporte150Format">
+          <DataField>wImporte150Format</DataField>
+        </Field>
+        <Field Name="MovCust150__Document_No__">
+          <DataField>MovCust150__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCust150__Posting_Date_">
+          <DataField>MovCust150__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCust150_Amount">
+          <DataField>MovCust150_Amount</DataField>
+        </Field>
+        <Field Name="MovCust150_AmountFormat">
+          <DataField>MovCust150_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCust150_Entry_No_">
+          <DataField>MovCust150_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCust150_Customer_No_">
+          <DataField>MovCust150_Customer_No_</DataField>
+        </Field>
+        <Field Name="wImporte180">
+          <DataField>wImporte180</DataField>
+        </Field>
+        <Field Name="wImporte180Format">
+          <DataField>wImporte180Format</DataField>
+        </Field>
+        <Field Name="wDias180">
+          <DataField>wDias180</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180__Document_No__">
+          <DataField>MovCustMasDe180__Document_No__</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180__Posting_Date_">
+          <DataField>MovCustMasDe180__Posting_Date_</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180_Amount">
+          <DataField>MovCustMasDe180_Amount</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180_AmountFormat">
+          <DataField>MovCustMasDe180_AmountFormat</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180_Entry_No_">
+          <DataField>MovCustMasDe180_Entry_No_</DataField>
+        </Field>
+        <Field Name="MovCustMasDe180_Customer_No_">
+          <DataField>MovCustMasDe180_Customer_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

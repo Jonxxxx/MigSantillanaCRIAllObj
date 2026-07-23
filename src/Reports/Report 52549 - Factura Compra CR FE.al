@@ -168,9 +168,9 @@ report 52549 "Factura Compra CR FE"
                     column(Picture_CompanyInfo; CompanyInformation.Picture)
                     {
                     }
-                    column(VendTaxIdentificationType; FORMAT(Vend."Tax Identification Type"))
-                    {
-                    }
+                    //TODO: no existe column(VendTaxIdentificationType; FORMAT(Vend."Tax Identification Type"))
+                    //{
+                    //}
                     column(ToCaption; ToCaptionLbl)
                     {
                     }
@@ -401,7 +401,7 @@ report 52549 "Factura Compra CR FE"
                         CompanyInformation."Phone No." := RespCenter."Phone No.";
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     END;
-                CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
+                //TODO: no existe CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
 
                 IF "Purchaser Code" = '' THEN
                     CLEAR(SalesPurchPerson)
@@ -443,6 +443,8 @@ report 52549 "Factura Compra CR FE"
                 TotalTaxLabel := Text008;
                 IF "Tax Area Code" <> '' THEN BEGIN
                     TaxArea.GET("Tax Area Code");
+                    //TODO: Ver
+                    /*
                     CASE TaxArea."Country/Region" OF
                         TaxArea."Country/Region"::US:
                             TotalTaxLabel := Text005;
@@ -485,6 +487,7 @@ report 52549 "Factura Compra CR FE"
                                 BreakdownAmt[BrkIdx] := BreakdownAmt[BrkIdx] + "Tax Amount";
                             UNTIL NEXT = 0;
                     END;
+                    */
                     IF BrkIdx = 1 THEN BEGIN
                         CLEAR(BreakdownLabel);
                         CLEAR(BreakdownAmt);
@@ -494,7 +497,7 @@ report 52549 "Factura Compra CR FE"
                 Vend.GET("Purch. Inv. Header"."Buy-from Vendor No.");
 
                 "Purch. Inv. Header".CALCFIELDS("Amount Including VAT");
-                ChkTransMgt.FormatNoText(DescriptionLine, "Purch. Inv. Header"."Amount Including VAT", 2058, "Currency Code");
+                //TODO: no existe ChkTransMgt.FormatNoText(DescriptionLine, "Purch. Inv. Header"."Amount Including VAT", 2058, "Currency Code");
             end;
 
             trigger OnPreDataItem()
@@ -552,7 +555,7 @@ report 52549 "Factura Compra CR FE"
 
         trigger OnOpenPage()
         begin
-            LogInteraction := SegManagement.FindInteractTmplCode(14) <> '';
+            //TODO: no existe LogInteraction := SegManagement.FindInteractTmplCode(14) <> '';
             LogInteractionEnable := LogInteraction;
         end;
     }
@@ -580,8 +583,8 @@ report 52549 "Factura Compra CR FE"
         SalesPurchPerson: Record 13;
         CompanyInformation: Record 79;
         RespCenter: Record 5714;
-        Language: Record 8;
-        TempSalesTaxAmtLine: Record 10011 temporary;
+        rLanguage: Record Language;
+        //TODO: no existe TempSalesTaxAmtLine: Record 10011 temporary;
         TaxArea: Record 318;
         Vend: Record 23;
         GLSetup: Record 98;
@@ -650,7 +653,7 @@ report 52549 "Factura Compra CR FE"
         DireccionCaptionLbl: Label 'Direccion: ';
         ComentarioCaptionLbl: Label 'Comentarios: ';
         DescriptionLine: array[2] of Text[200];
-        ChkTransMgt: Report 10400;
+        //TODO: no existe ChkTransMgt: Report 10400;
         CurrName: Text[30];
         Comentario: Text[1024];
 }

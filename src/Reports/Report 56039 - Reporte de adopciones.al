@@ -268,8 +268,11 @@ report 56039 "Reporte de adopciones"
 
     procedure CreateExcelBook()
     begin
-        ExcelBuffer.CreateBookAndOpenExcel('', Text007, Text007, COMPANYNAME, USERID);
-        ERROR('');
+        ExcelBuffer.CreateNewBook(Text007);
+        ExcelBuffer.WriteSheet(Text007, CompanyName, UserId);
+        ExcelBuffer.CloseBook();
+        ExcelBuffer.SetFriendlyFilename(Text007);
+        ExcelBuffer.OpenExcel();
     end;
 }
 

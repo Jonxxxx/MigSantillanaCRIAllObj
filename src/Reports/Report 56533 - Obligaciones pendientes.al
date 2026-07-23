@@ -94,93 +94,93 @@ report 56533 "Obligaciones pendientes"
             dataitem("Vendor Ledger Entry"; 25)
             {
                 DataItemLink = "Vendor No." = FIELD("No."),
-                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
-                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
-                               Currency Code=FIELD("Currency Filter");
-                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date","Currency Code")
-                                    WHERE(Open=CONST(True));
-                column(Vendor_Ledger_Entry__Document_Type_;"Document Type")
+                               "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
+                               "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
+                               "Currency Code" = FIELD("Currency Filter");
+                DataItemTableView = SORTING("Vendor No.", Open, Positive, "Due Date", "Currency Code")
+                                    WHERE(Open = CONST(True));
+                column(Vendor_Ledger_Entry__Document_Type_; "Document Type")
                 {
                 }
-                column(Vendor_Ledger_Entry__Document_No__;"Document No.")
+                column(Vendor_Ledger_Entry__Document_No__; "Document No.")
                 {
                 }
-                column(GetCurrency__Currency_Code__;GetCurrency("Currency Code"))
+                column(GetCurrency__Currency_Code__; GetCurrency("Currency Code"))
                 {
                 }
-                column(PageGroupNo_Control1000000015;"Amount (LCY)")
+                column(PageGroupNo_Control1000000015; "Amount (LCY)")
                 {
                 }
-                column(Vendor_Ledger_Entry__Posting_Date_;"Posting Date")
+                column(Vendor_Ledger_Entry__Posting_Date_; "Posting Date")
                 {
                 }
-                column(Vendor_Ledger_Entry__Due_Date_;"Due Date")
+                column(Vendor_Ledger_Entry__Due_Date_; "Due Date")
                 {
                 }
-                column(Vendor_Ledger_Entry_Description;Description)
+                column(Vendor_Ledger_Entry_Description; Description)
                 {
                 }
-                column(Vendor_Ledger_Entry__Remaining_Amount_;"Remaining Amount")
+                column(Vendor_Ledger_Entry__Remaining_Amount_; "Remaining Amount")
                 {
                 }
-                column(Vendor_Ledger_Entry__Remaining_Amt___LCY__;"Remaining Amt. (LCY)")
+                column(Vendor_Ledger_Entry__Remaining_Amt___LCY__; "Remaining Amt. (LCY)")
                 {
                 }
-                column(OverDueDays;OverDueDays)
+                column(OverDueDays; OverDueDays)
                 {
                 }
-                column(Vendor_Ledger_Entry_Entry_No_;"Entry No.")
+                column(Vendor_Ledger_Entry_Entry_No_; "Entry No.")
                 {
                 }
-                column(Vendor_Ledger_Entry_Vendor_No_;"Vendor No.")
+                column(Vendor_Ledger_Entry_Vendor_No_; "Vendor No.")
                 {
                 }
-                column(Vendor_Ledger_Entry_Global_Dimension_1_Code;"Global Dimension 1 Code")
+                column(Vendor_Ledger_Entry_Global_Dimension_1_Code; "Global Dimension 1 Code")
                 {
                 }
-                column(Vendor_Ledger_Entry_Global_Dimension_2_Code;"Global Dimension 2 Code")
+                column(Vendor_Ledger_Entry_Global_Dimension_2_Code; "Global Dimension 2 Code")
                 {
                 }
-                column(Vendor_Ledger_Entry_Currency_Code;"Currency Code")
+                column(Vendor_Ledger_Entry_Currency_Code; "Currency Code")
                 {
                 }
 
                 trigger OnAfterGetRecord()
                 begin
-                    CALCFIELDS("Remaining Amount","Remaining Amt. (LCY)");
+                    CALCFIELDS("Remaining Amount", "Remaining Amt. (LCY)");
                     IF ("Due Date" <> 0D) AND (ToDate > "Due Date") AND ("Remaining Amount" > 0) THEN
-                      OverDueDays := ToDate - "Due Date"
+                        OverDueDays := ToDate - "Due Date"
                     ELSE
-                      OverDueDays := 0;
+                        OverDueDays := 0;
 
                     IF NOT VendBuff.GET("Currency Code") THEN BEGIN
-                      VendBuff."Currency Code" := "Currency Code";
-                      VendBuff."Total Amount" := "Remaining Amount";
-                      VendBuff."Total Amount (LCY)" := "Remaining Amt. (LCY)";
-                      VendBuff.INSERT;
+                        VendBuff."Currency Code" := "Currency Code";
+                        VendBuff."Total Amount" := "Remaining Amount";
+                        VendBuff."Total Amount (LCY)" := "Remaining Amt. (LCY)";
+                        VendBuff.INSERT;
                     END
                     ELSE BEGIN
-                      VendBuff."Total Amount" += "Remaining Amount";
-                      VendBuff."Total Amount (LCY)" += "Remaining Amt. (LCY)";
-                      VendBuff.MODIFY;
+                        VendBuff."Total Amount" += "Remaining Amount";
+                        VendBuff."Total Amount (LCY)" += "Remaining Amt. (LCY)";
+                        VendBuff.MODIFY;
                     END;
 
                     IF NOT TotalBuff.GET("Currency Code") THEN BEGIN
-                      TotalBuff."Currency Code" := "Currency Code";
-                      TotalBuff."Total Amount" := "Remaining Amount";
-                      TotalBuff."Total Amount (LCY)" := "Remaining Amt. (LCY)";
-                      TotalBuff.INSERT;
+                        TotalBuff."Currency Code" := "Currency Code";
+                        TotalBuff."Total Amount" := "Remaining Amount";
+                        TotalBuff."Total Amount (LCY)" := "Remaining Amt. (LCY)";
+                        TotalBuff.INSERT;
                     END
                     ELSE BEGIN
-                      TotalBuff."Total Amount" += "Remaining Amount";
-                      TotalBuff."Total Amount (LCY)" += "Remaining Amt. (LCY)";
-                      TotalBuff.MODIFY;
+                        TotalBuff."Total Amount" += "Remaining Amount";
+                        TotalBuff."Total Amount (LCY)" += "Remaining Amt. (LCY)";
+                        TotalBuff.MODIFY;
                     END;
                 end;
 
                 trigger OnPreDataItem()
                 begin
-                    CurrReport.CREATETOTALS("Remaining Amount","Remaining Amt. (LCY)");
+                    CurrReport.CREATETOTALS("Remaining Amount", "Remaining Amt. (LCY)");
 
                     VendBuff.RESET;
                     VendBuff.DELETEALL;
@@ -188,47 +188,47 @@ report 56533 "Obligaciones pendientes"
                     SETRANGE("Posting Date", 0D, ToDate);
                 end;
             }
-            dataitem("Integer";2000000026)
+            dataitem("Integer"; 2000000026)
             {
                 DataItemTableView = SORTING(Number)
-                                    WHERE(Number=FILTER(1..));
-                column(VendBuff__Total_Amount__LCY__;VendBuff."Total Amount (LCY)")
+                                    WHERE(Number = FILTER(1 ..));
+                column(VendBuff__Total_Amount__LCY__; VendBuff."Total Amount (LCY)")
                 {
                 }
-                column(VendBuff__Total_Amount_;VendBuff."Total Amount")
+                column(VendBuff__Total_Amount_; VendBuff."Total Amount")
                 {
                 }
-                column(GetCurrency_VendBuff__Currency_Code__;GetCurrency(VendBuff."Currency Code"))
+                column(GetCurrency_VendBuff__Currency_Code__; GetCurrency(VendBuff."Currency Code"))
                 {
                 }
-                column(Vendor__No___Control1000000022;Vendor."No.")
+                column(Vendor__No___Control1000000022; Vendor."No.")
                 {
                 }
-                column(Integer_Number;Number)
+                column(Integer_Number; Number)
                 {
                 }
-                column(VendBuff__Total_Amount__LCY___Control1000000023;VendBuff."Total Amount (LCY)")
+                column(VendBuff__Total_Amount__LCY___Control1000000023; VendBuff."Total Amount (LCY)")
                 {
                 }
-                column(VendBuff__Total_Amount__Control1000000024;VendBuff."Total Amount")
+                column(VendBuff__Total_Amount__Control1000000024; VendBuff."Total Amount")
                 {
                 }
-                column(GetCurrency_VendBuff__Currency_Code___Control1000000025;GetCurrency(VendBuff."Currency Code"))
+                column(GetCurrency_VendBuff__Currency_Code___Control1000000025; GetCurrency(VendBuff."Currency Code"))
                 {
                 }
-                column(VendBuff__Total_Amount__LCY___Control1000000027;VendBuff."Total Amount (LCY)")
+                column(VendBuff__Total_Amount__LCY___Control1000000027; VendBuff."Total Amount (LCY)")
                 {
                 }
-                column(TotalCaption;TotalCaptionLbl)
+                column(TotalCaption; TotalCaptionLbl)
                 {
                 }
 
                 trigger OnAfterGetRecord()
                 begin
                     IF Number = 1 THEN BEGIN
-                      VendBuff.RESET;
-                      IF NOT VendBuff.FINDSET THEN
-                        CurrReport.BREAK;
+                        VendBuff.RESET;
+                        IF NOT VendBuff.FINDSET THEN
+                            CurrReport.BREAK;
                     END
                     ELSE IF VendBuff.NEXT = 0 THEN
                         CurrReport.BREAK;
@@ -243,8 +243,8 @@ report 56533 "Obligaciones pendientes"
             trigger OnAfterGetRecord()
             begin
                 IF ISSERVICETIER THEN BEGIN
-                  IF PrintOnlyOnePerPage THEN
-                    PageGroupNo := PageGroupNo + 1;
+                    IF PrintOnlyOnePerPage THEN
+                        PageGroupNo := PageGroupNo + 1;
                 END;
             end;
 
@@ -252,50 +252,50 @@ report 56533 "Obligaciones pendientes"
             begin
                 PageGroupNo := 1;
                 CurrReport.NEWPAGEPERRECORD := PrintOnlyOnePerPage;
-                CurrReport.CREATETOTALS("Vendor Ledger Entry"."Remaining Amount","Vendor Ledger Entry"."Remaining Amt. (LCY)");
+                CurrReport.CREATETOTALS("Vendor Ledger Entry"."Remaining Amount", "Vendor Ledger Entry"."Remaining Amt. (LCY)");
             end;
         }
-        dataitem(Total;2000000026)
+        dataitem(Total; 2000000026)
         {
             DataItemTableView = SORTING(Number)
-                                WHERE(Number=FILTER(1..));
-            column(TotalBuff__Total_Amount__LCY__;TotalBuff."Total Amount (LCY)")
+                                WHERE(Number = FILTER(1 ..));
+            column(TotalBuff__Total_Amount__LCY__; TotalBuff."Total Amount (LCY)")
             {
             }
-            column(TotalBuff__Total_Amount_;TotalBuff."Total Amount")
+            column(TotalBuff__Total_Amount_; TotalBuff."Total Amount")
             {
             }
-            column(GetCurrency_TotalBuff__Currency_Code__;GetCurrency(TotalBuff."Currency Code"))
+            column(GetCurrency_TotalBuff__Currency_Code__; GetCurrency(TotalBuff."Currency Code"))
             {
             }
-            column(Total_Number;Number)
+            column(Total_Number; Number)
             {
             }
-            column(TotalBuff__Total_Amount__LCY___Control1000000014;TotalBuff."Total Amount (LCY)")
+            column(TotalBuff__Total_Amount__LCY___Control1000000014; TotalBuff."Total Amount (LCY)")
             {
             }
-            column(TotalBuff__Total_Amount__Control1000000016;TotalBuff."Total Amount")
+            column(TotalBuff__Total_Amount__Control1000000016; TotalBuff."Total Amount")
             {
             }
-            column(GetCurrency_TotalBuff__Currency_Code___Control1000000017;GetCurrency(TotalBuff."Currency Code"))
+            column(GetCurrency_TotalBuff__Currency_Code___Control1000000017; GetCurrency(TotalBuff."Currency Code"))
             {
             }
-            column(TotalBuff__Total_Amount__LCY___Control1000000018;TotalBuff."Total Amount (LCY)")
+            column(TotalBuff__Total_Amount__LCY___Control1000000018; TotalBuff."Total Amount (LCY)")
             {
             }
-            column(TotalCaption_Control1000000019;TotalCaption_Control1000000019Lbl)
+            column(TotalCaption_Control1000000019; TotalCaption_Control1000000019Lbl)
             {
             }
 
             trigger OnAfterGetRecord()
             begin
                 IF Number = 1 THEN BEGIN
-                  TotalBuff.RESET;
-                  IF NOT TotalBuff.FINDSET THEN
-                    CurrReport.BREAK;
+                    TotalBuff.RESET;
+                    IF NOT TotalBuff.FINDSET THEN
+                        CurrReport.BREAK;
                 END
                 ELSE IF TotalBuff.NEXT = 0 THEN
-                  CurrReport.BREAK;
+                    CurrReport.BREAK;
             end;
 
             trigger OnPreDataItem()
@@ -316,11 +316,11 @@ report 56533 "Obligaciones pendientes"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(ToDate;ToDate)
+                    field(ToDate; ToDate)
                     {
                         Caption = 'Ending Date';
                     }
-                    field(PrintOnlyOnePerPage;PrintOnlyOnePerPage)
+                    field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
                         Caption = 'New Page per Vendor';
                     }
@@ -335,7 +335,7 @@ report 56533 "Obligaciones pendientes"
         trigger OnOpenPage()
         begin
             IF ToDate = 0D THEN
-              ToDate := WORKDATE;
+                ToDate := WORKDATE;
         end;
     }
 
@@ -374,9 +374,9 @@ report 56533 "Obligaciones pendientes"
         Currency: Record 4;
     begin
         IF CurrencyCode = '' THEN
-          EXIT(GLSetup."LCY Code")
+            EXIT(GLSetup."LCY Code")
         ELSE
-          EXIT(CurrencyCode);
+            EXIT(CurrencyCode);
     end;
 }
 

@@ -29,12 +29,14 @@ report 56186 "Provision de insolvencias"
                         GenJnlLine."Journal Batch Name" := BatchName;
                         GenJnlLine."Line No." := wLine;
                         GenJnlLine.VALIDATE("Posting Date", PostingDate);
-                        IF Reversion THEN BEGIN
+
+                        //TODO ver
+                        /*IF Reversion THEN BEGIN
                             GenJnlLine."Account Type" := GenJnlLine."Account Type"::"Cancelar Prov. Insol.";
                         END
                         ELSE BEGIN
                             GenJnlLine."Account Type" := GenJnlLine."Account Type"::"Provision Insolvencias";
-                        END;
+                        END;*/
                         GenJnlLine."Document No." := 'INSOLV' + FORMAT(PostingDate);
                         GenJnlLine.VALIDATE("Account No.", "Cust. Ledger Entry"."Customer No.");
                         GenJnlLine."Applies-to Doc. Type" := GenJnlLine."Applies-to Doc. Type"::Invoice;

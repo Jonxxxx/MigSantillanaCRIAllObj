@@ -45,7 +45,7 @@ report 67014 "Adopciones por colegio"
             }
             column(codMarca; Adopcion)
             {
-                DecimalPlaces = 0 : 2;
+
             }
             column(intCdadAlumnos; "Cantidad Alumnos")
             {
@@ -72,7 +72,7 @@ report 67014 "Adopciones por colegio"
             }
             column(decCdadPres; "Cod. Grado")
             {
-                DecimalPlaces = 0 : 2;
+
             }
             column(codCategoria; codCategoria)
             {

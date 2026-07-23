@@ -147,67 +147,67 @@ report 50002 "Customer - Detail Trial"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 DataItemLink = "Customer No." = FIELD("No."),
-                               Posting Date=FIELD("Date Filter"),
-                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
-                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
-                               Date Filter=FIELD("Date Filter");
-                DataItemTableView = SORTING("Customer No.","Posting Date");
-                column(PostDate_CustLedgEntry;FORMAT("Posting Date"))
+                               "Posting Date" = FIELD("Date Filter"),
+                               "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
+                               "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
+                               "Date Filter" = FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.", "Posting Date");
+                column(PostDate_CustLedgEntry; FORMAT("Posting Date"))
                 {
                 }
-                column(DocType_CustLedgEntry;"Document Type")
-                {
-                    IncludeCaption = true;
-                }
-                column(DocNo_CustLedgEntry;"Document No.")
+                column(DocType_CustLedgEntry; "Document Type")
                 {
                     IncludeCaption = true;
                 }
-                column(Desc_CustLedgEntry;Description)
+                column(DocNo_CustLedgEntry; "Document No.")
                 {
                     IncludeCaption = true;
                 }
-                column(CustAmount;CustAmount)
+                column(Desc_CustLedgEntry; Description)
+                {
+                    IncludeCaption = true;
+                }
+                column(CustAmount; CustAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustRemainAmount;CustRemainAmount)
+                column(CustRemainAmount; CustRemainAmount)
                 {
                     AutoFormatExpression = CustCurrencyCode;
                     AutoFormatType = 1;
                 }
-                column(CustEntryDueDate;FORMAT(CustEntryDueDate))
+                column(CustEntryDueDate; FORMAT(CustEntryDueDate))
                 {
                 }
-                column(EntryNo_CustLedgEntry;"Entry No.")
+                column(EntryNo_CustLedgEntry; "Entry No.")
                 {
                     IncludeCaption = true;
                 }
-                column(CustCurrencyCode;CustCurrencyCode)
+                column(CustCurrencyCode; CustCurrencyCode)
                 {
                 }
-                column(CustBalanceLCY1;CustBalanceLCY)
+                column(CustBalanceLCY1; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
-                dataitem("Detailed Cust. Ledg. Entry";379)
+                dataitem("Detailed Cust. Ledg. Entry"; 379)
                 {
-                    DataItemLink = "Cust. Ledger Entry No."=FIELD("Entry No.");
-                    DataItemTableView = SORTING("Cust. Ledger Entry No.","Entry Type","Posting Date")
-                                        WHERE("Entry Type"=FILTER(Appln. Rounding|Correction of Remaining Amount));
-                    column(EntryType_DtldCustLedgEntry;FORMAT("Entry Type"))
+                    DataItemLink = "Cust. Ledger Entry No." = FIELD("Entry No.");
+                    DataItemTableView = SORTING("Cust. Ledger Entry No.", "Entry Type", "Posting Date")
+                                        WHERE("Entry Type" = FILTER('Appln. Rounding' | 'Correction of Remaining Amount'));
+                    column(EntryType_DtldCustLedgEntry; FORMAT("Entry Type"))
                     {
                     }
-                    column(Correction;Correction)
-                    {
-                        AutoFormatType = 1;
-                    }
-                    column(CustBalanceLCY2;CustBalanceLCY)
+                    column(Correction; Correction)
                     {
                         AutoFormatType = 1;
                     }
-                    column(ApplicationRounding;ApplicationRounding)
+                    column(CustBalanceLCY2; CustBalanceLCY)
+                    {
+                        AutoFormatType = 1;
+                    }
+                    column(ApplicationRounding; ApplicationRounding)
                     {
                         AutoFormatType = 1;
                     }
@@ -215,17 +215,17 @@ report 50002 "Customer - Detail Trial"
                     trigger OnAfterGetRecord()
                     begin
                         CASE "Entry Type" OF
-                          "Entry Type"::"Appln. Rounding":
-                            ApplicationRounding := ApplicationRounding + "Amount (LCY)";
-                          "Entry Type"::"Correction of Remaining Amount":
-                            Correction := Correction + "Amount (LCY)";
+                            "Entry Type"::"Appln. Rounding":
+                                ApplicationRounding := ApplicationRounding + "Amount (LCY)";
+                            "Entry Type"::"Correction of Remaining Amount":
+                                Correction := Correction + "Amount (LCY)";
                         END;
                         CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";
                     end;
 
                     trigger OnPreDataItem()
                     begin
-                        SETFILTER("Posting Date",CustDateFilter);
+                        SETFILTER("Posting Date", CustDateFilter);
                         Correction := 0;
                         ApplicationRounding := 0;
                     end;
@@ -235,7 +235,7 @@ report 50002 "Customer - Detail Trial"
                 begin
                     //if "Document Type" > 0 then
                     //error('%1',"Document Type");
-                    
+
                     //001+
                     /*
                     IF "Currency Code" <> '' THEN
@@ -244,32 +244,32 @@ report 50002 "Customer - Detail Trial"
                       CALCFIELDS(Amount,"Remaining Amount","Amount (LCY)","Remaining Amt ");
                     */
                     //001-
-                    CALCFIELDS(Amount,"Remaining Amount","Amount (LCY)","Remaining Amt. (LCY)");
-                    
+                    CALCFIELDS(Amount, "Remaining Amount", "Amount (LCY)", "Remaining Amt. (LCY)");
+
                     CustLedgEntryExists := TRUE;
                     IF PrintAmountsInLCY THEN BEGIN
-                      CustAmount := "Amount (LCY)";
-                      CustRemainAmount := "Remaining Amt. (LCY)";
-                      CustCurrencyCode := '';
-                      CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";//001+- Si es filtro moneda local.
+                        CustAmount := "Amount (LCY)";
+                        CustRemainAmount := "Remaining Amt. (LCY)";
+                        CustCurrencyCode := '';
+                        CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";//001+- Si es filtro moneda local.
                     END ELSE BEGIN
-                      //001+
-                      IF ("Currency Code") <> '' THEN BEGIN
-                       CustAmount := Amount;
-                       CustRemainAmount := "Remaining Amount";
-                       CustBalanceLCY := CustBalanceLCY + Amount
-                       END ELSE BEGIN
-                         CustAmount := "Amount (LCY)";
-                         CustRemainAmount := "Remaining Amt. (LCY)";
-                         CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";
-                         END;
-                      //001-
-                    
-                      //CustAmount := Amount;//001+-Original
-                      //CustRemainAmount := "Remaining Amount";//001+-Original
-                      CustCurrencyCode := "Currency Code";
+                        //001+
+                        IF ("Currency Code") <> '' THEN BEGIN
+                            CustAmount := Amount;
+                            CustRemainAmount := "Remaining Amount";
+                            CustBalanceLCY := CustBalanceLCY + Amount
+                        END ELSE BEGIN
+                            CustAmount := "Amount (LCY)";
+                            CustRemainAmount := "Remaining Amt. (LCY)";
+                            CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";
+                        END;
+                        //001-
+
+                        //CustAmount := Amount;//001+-Original
+                        //CustRemainAmount := "Remaining Amount";//001+-Original
+                        CustCurrencyCode := "Currency Code";
                     END;
-                    
+
                     //001+
                     /*
                     IF ("Currency Code") <> '' THEN
@@ -280,9 +280,9 @@ report 50002 "Customer - Detail Trial"
                     //001-
                     //CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";//001+- Original
                     IF ("Document Type" = "Document Type"::Payment) OR ("Document Type" = "Document Type"::Refund) THEN
-                      CustEntryDueDate := 0D
+                        CustEntryDueDate := 0D
                     ELSE
-                      CustEntryDueDate := "Due Date";
+                        CustEntryDueDate := "Due Date";
 
                 end;
 
@@ -290,31 +290,31 @@ report 50002 "Customer - Detail Trial"
                 begin
                     CustLedgEntryExists := FALSE;
                     IF "Currency Code" <> '' THEN
-                     CurrReport.CREATETOTALS(CustAmount,Amount)//001+
-                     ELSE
-                      CurrReport.CREATETOTALS(CustAmount,"Amount (LCY)");//001+
+                        CurrReport.CREATETOTALS(CustAmount, Amount)//001+
+                    ELSE
+                        CurrReport.CREATETOTALS(CustAmount, "Amount (LCY)");//001+
 
                     //CurrReport.CREATETOTALS(CustAmount,"Amount (LCY)");//001+
                 end;
             }
-            dataitem("Integer";2000000026)
+            dataitem("Integer"; 2000000026)
             {
                 DataItemTableView = SORTING(Number)
-                                    WHERE(Number=CONST(1));
-                column(Name1_Cust;Customer.Name)
+                                    WHERE(Number = CONST(1));
+                column(Name1_Cust; Customer.Name)
                 {
                 }
-                column(CustBalanceLCY4;CustBalanceLCY)
+                column(CustBalanceLCY4; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
-                column(StartBalanceLCY2;StartBalanceLCY)
+                column(StartBalanceLCY2; StartBalanceLCY)
                 {
                 }
-                column(StartBalAdjLCY2;StartBalAdjLCY)
+                column(StartBalAdjLCY2; StartBalAdjLCY)
                 {
                 }
-                column(CustBalStBalStBalAdjLCY;CustBalanceLCY - StartBalanceLCY - StartBalAdjLCY)
+                column(CustBalStBalStBalAdjLCY; CustBalanceLCY - StartBalanceLCY - StartBalAdjLCY)
                 {
                     AutoFormatType = 1;
                 }
@@ -322,8 +322,8 @@ report 50002 "Customer - Detail Trial"
                 trigger OnAfterGetRecord()
                 begin
                     IF NOT CustLedgEntryExists AND ((StartBalanceLCY = 0) OR ExcludeBalanceOnly) THEN BEGIN
-                      StartBalanceLCY := 0;
-                      CurrReport.SKIP;
+                        StartBalanceLCY := 0;
+                        CurrReport.SKIP;
                     END;
                 end;
             }
@@ -332,60 +332,60 @@ report 50002 "Customer - Detail Trial"
             begin
 
                 IF PrintOnlyOnePerPage THEN
-                  PageGroupNo := PageGroupNo + 1;
+                    PageGroupNo := PageGroupNo + 1;
 
                 StartBalanceLCY := 0;
                 StartBalAdjLCY := 0;
                 IF CustDateFilter <> '' THEN BEGIN
-                  IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
-                    SETRANGE("Date Filter",0D,GETRANGEMIN("Date Filter") - 1);
+                    IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
+                        SETRANGE("Date Filter", 0D, GETRANGEMIN("Date Filter") - 1);
+                        CALCFIELDS("Net Change (LCY)");
+                        StartBalanceLCY := "Net Change (LCY)";
+                    END;
+                    SETFILTER("Date Filter", CustDateFilter);
                     CALCFIELDS("Net Change (LCY)");
-                    StartBalanceLCY := "Net Change (LCY)";
-                  END;
-                  SETFILTER("Date Filter",CustDateFilter);
-                  CALCFIELDS("Net Change (LCY)");
-                  //001+
-                  IF ("Currency Code") <> '' THEN
-                   StartBalAdjLCY := "Net Change (LCY)"
-                  ELSE
-                   StartBalAdjLCY := "Net Change";
-                  //001-
-                  //StartBalAdjLCY := "Net Change (LCY)";//001-
-                  CustLedgEntry.SETCURRENTKEY("Customer No.","Posting Date");
-                  CustLedgEntry.SETRANGE("Customer No.","No.");
-                  CustLedgEntry.SETFILTER("Posting Date",CustDateFilter);
-                  IF CustLedgEntry.FIND('-') THEN
-                    REPEAT
-                      CustLedgEntry.SETFILTER("Date Filter",CustDateFilter);
-                      //001+
-                      IF ("Currency Code") <> '' THEN BEGIN
-                      CustLedgEntry.CALCFIELDS(Amount);//001+-
-                      StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry.Amount;
-                       END ELSE BEGIN
-                         CustLedgEntry.CALCFIELDS("Amount (LCY)");//001+-
-                         StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry."Amount (LCY)";
-                        END;
-                      //001-
-                      //CustLedgEntry.CALCFIELDS("Amount (LCY)");//001+-
-                      //StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry."Amount (LCY)";//
-                      "Detailed Cust. Ledg. Entry".SETCURRENTKEY("Cust. Ledger Entry No.","Entry Type","Posting Date");
-                      "Detailed Cust. Ledg. Entry".SETRANGE("Cust. Ledger Entry No.",CustLedgEntry."Entry No.");
-                      "Detailed Cust. Ledg. Entry".SETFILTER("Entry Type",'%1|%2',
-                        "Detailed Cust. Ledg. Entry"."Entry Type"::"Correction of Remaining Amount",
-                        "Detailed Cust. Ledg. Entry"."Entry Type"::"Appln. Rounding");
-                      "Detailed Cust. Ledg. Entry".SETFILTER("Posting Date",CustDateFilter);
-                      IF "Detailed Cust. Ledg. Entry".FIND('-') THEN
+                    //001+
+                    IF ("Currency Code") <> '' THEN
+                        StartBalAdjLCY := "Net Change (LCY)"
+                    ELSE
+                        StartBalAdjLCY := "Net Change";
+                    //001-
+                    //StartBalAdjLCY := "Net Change (LCY)";//001-
+                    CustLedgEntry.SETCURRENTKEY("Customer No.", "Posting Date");
+                    CustLedgEntry.SETRANGE("Customer No.", "No.");
+                    CustLedgEntry.SETFILTER("Posting Date", CustDateFilter);
+                    IF CustLedgEntry.FIND('-') THEN
                         REPEAT
-                          //001+
-                          IF ("Currency Code") <> '' THEN
-                            StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry".Amount
-                           ELSE
-                            StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry"."Amount (LCY)"
-                          //001-
-                          //StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry"."Amount (LCY)";//001+-
-                        UNTIL "Detailed Cust. Ledg. Entry".NEXT = 0;
-                      "Detailed Cust. Ledg. Entry".RESET;
-                    UNTIL CustLedgEntry.NEXT = 0;
+                            CustLedgEntry.SETFILTER("Date Filter", CustDateFilter);
+                            //001+
+                            IF ("Currency Code") <> '' THEN BEGIN
+                                CustLedgEntry.CALCFIELDS(Amount);//001+-
+                                StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry.Amount;
+                            END ELSE BEGIN
+                                CustLedgEntry.CALCFIELDS("Amount (LCY)");//001+-
+                                StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry."Amount (LCY)";
+                            END;
+                            //001-
+                            //CustLedgEntry.CALCFIELDS("Amount (LCY)");//001+-
+                            //StartBalAdjLCY := StartBalAdjLCY - CustLedgEntry."Amount (LCY)";//
+                            "Detailed Cust. Ledg. Entry".SETCURRENTKEY("Cust. Ledger Entry No.", "Entry Type", "Posting Date");
+                            "Detailed Cust. Ledg. Entry".SETRANGE("Cust. Ledger Entry No.", CustLedgEntry."Entry No.");
+                            "Detailed Cust. Ledg. Entry".SETFILTER("Entry Type", '%1|%2',
+                              "Detailed Cust. Ledg. Entry"."Entry Type"::"Correction of Remaining Amount",
+                              "Detailed Cust. Ledg. Entry"."Entry Type"::"Appln. Rounding");
+                            "Detailed Cust. Ledg. Entry".SETFILTER("Posting Date", CustDateFilter);
+                            IF "Detailed Cust. Ledg. Entry".FIND('-') THEN
+                                REPEAT
+                                    //001+
+                                    IF ("Currency Code") <> '' THEN
+                                        StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry".Amount
+                                    ELSE
+                                        StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry"."Amount (LCY)"
+                                //001-
+                                //StartBalAdjLCY := StartBalAdjLCY - "Detailed Cust. Ledg. Entry"."Amount (LCY)";//001+-
+                                UNTIL "Detailed Cust. Ledg. Entry".NEXT = 0;
+                            "Detailed Cust. Ledg. Entry".RESET;
+                        UNTIL CustLedgEntry.NEXT = 0;
                 END;
                 CurrReport.PRINTONLYIFDETAIL := ExcludeBalanceOnly OR (StartBalanceLCY = 0);
                 CustBalanceLCY := StartBalanceLCY + StartBalAdjLCY
@@ -395,7 +395,7 @@ report 50002 "Customer - Detail Trial"
             begin
                 PageGroupNo := 1;
                 CurrReport.NEWPAGEPERRECORD := PrintOnlyOnePerPage;
-                CurrReport.CREATETOTALS("Cust. Ledger Entry"."Amount (LCY)",StartBalanceLCY,StartBalAdjLCY,Correction,ApplicationRounding);
+                CurrReport.CREATETOTALS("Cust. Ledger Entry"."Amount (LCY)", StartBalanceLCY, StartBalAdjLCY, Correction, ApplicationRounding);
             end;
         }
     }
@@ -411,15 +411,15 @@ report 50002 "Customer - Detail Trial"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(ShowAmountsInLCY;PrintAmountsInLCY)
+                    field(ShowAmountsInLCY; PrintAmountsInLCY)
                     {
                         Caption = 'Show Amounts in $';
                     }
-                    field(NewPageperCustomer;PrintOnlyOnePerPage)
+                    field(NewPageperCustomer; PrintOnlyOnePerPage)
                     {
                         Caption = 'New Page per Customer';
                     }
-                    field(ExcludeCustHaveaBalanceOnly;ExcludeBalanceOnly)
+                    field(ExcludeCustHaveaBalanceOnly; ExcludeBalanceOnly)
                     {
                         Caption = 'Exclude Customers That Have a Balance Only';
                         MultiLine = true;
@@ -442,13 +442,13 @@ report 50002 "Customer - Detail Trial"
         CustFilter := Customer.GETFILTERS;
         CustDateFilter := Customer.GETFILTER("Date Filter");
         WITH "Cust. Ledger Entry" DO
-          IF PrintAmountsInLCY THEN BEGIN
-            AmountCaption := FIELDCAPTION("Amount (LCY)");
-            RemainingAmtCaption := FIELDCAPTION("Remaining Amt. (LCY)");
-          END ELSE BEGIN
-            AmountCaption := FIELDCAPTION(Amount);
-            RemainingAmtCaption := FIELDCAPTION("Remaining Amount");
-          END;
+            IF PrintAmountsInLCY THEN BEGIN
+                AmountCaption := FIELDCAPTION("Amount (LCY)");
+                RemainingAmtCaption := FIELDCAPTION("Remaining Amt. (LCY)");
+            END ELSE BEGIN
+                AmountCaption := FIELDCAPTION(Amount);
+                RemainingAmtCaption := FIELDCAPTION("Remaining Amount");
+            END;
     end;
 
     var
@@ -488,7 +488,7 @@ report 50002 "Customer - Detail Trial"
         VendedorLbl: Label 'Sales person';
         Lang: Record 8;
 
-    procedure InitializeRequest(ShowAmountInLCY: Boolean;SetPrintOnlyOnePerPage: Boolean;SetExcludeBalanceOnly: Boolean)
+    procedure InitializeRequest(ShowAmountInLCY: Boolean; SetPrintOnlyOnePerPage: Boolean; SetExcludeBalanceOnly: Boolean)
     begin
         PrintOnlyOnePerPage := SetPrintOnlyOnePerPage;
         PrintAmountsInLCY := ShowAmountInLCY;
@@ -498,7 +498,7 @@ report 50002 "Customer - Detail Trial"
     procedure GetSalesPersonName(): Text[100]
     begin
         IF SalesPerson.GET(Customer."Salesperson Code") THEN
-          EXIT('(' + SalesPerson.Code + ') ' + SalesPerson.Name);
+            EXIT('(' + SalesPerson.Code + ') ' + SalesPerson.Name);
         EXIT('');
     end;
 }

@@ -228,202 +228,203 @@ report 56125 "Agin Accounts Payable (CxP)"
             dataitem("Vendor Ledger Entry"; 25)
             {
                 DataItemLink = "Vendor No." = FIELD("No."),
-                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
-                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter");
-                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date");
+                               "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
+                               "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter");
+
+                DataItemTableView = SORTING("Vendor No.", Open, Positive, "Due Date");
 
                 trigger OnAfterGetRecord()
                 begin
-                    SETRANGE("Date Filter",0D,PeriodEndingDate[1]);
+                    SETRANGE("Date Filter", 0D, PeriodEndingDate[1]);
                     CALCFIELDS("Remaining Amount");
 
                     CLEAR(RazonGasto);
                     PIL.RESET;
-                    PIL.SETRANGE("Document No.","Document No.");
-                    PIL.SETRANGE(Type,PIL.Type::"G/L Account");
+                    PIL.SETRANGE("Document No.", "Document No.");
+                    PIL.SETRANGE(Type, PIL.Type::"G/L Account");
                     IF PIL.FINDSET THEN
-                      REPEAT
-                        IF (STRLEN(RazonGasto) + STRLEN(PIL.Description)) < 1024 THEN
-                          RazonGasto += PIL.Description + ', ';
-                       // IF PDD.GET(123,PIL."Document No.",PIL."Line No.",DimDepto) THEN
-                       //   DimDeptoPRT := PDD."Dimension Value Code";
-                      UNTIL PIL.NEXT = 0;
+                        REPEAT
+                            IF (STRLEN(RazonGasto) + STRLEN(PIL.Description)) < 1024 THEN
+                                RazonGasto += PIL.Description + ', ';
+                        // IF PDD.GET(123,PIL."Document No.",PIL."Line No.",DimDepto) THEN
+                        //   DimDeptoPRT := PDD."Dimension Value Code";
+                        UNTIL PIL.NEXT = 0;
 
                     IF "Remaining Amount" <> 0 THEN
-                      InsertTemp("Vendor Ledger Entry");
+                        InsertTemp("Vendor Ledger Entry");
                     CurrReport.SKIP;    //  this fools the system into thinking that no details "printed"...yet
                 end;
 
                 trigger OnPreDataItem()
                 begin
                     // Find ledger entries which are posted before the date of the aging.
-                    SETRANGE("Posting Date",0D,PeriodEndingDate[1]);
+                    SETRANGE("Posting Date", 0D, PeriodEndingDate[1]);
 
-                    IF (ShowOnlyOverDueBy <> '') AND NOT(ShowAllForOverdue) THEN
-                      SETRANGE("Due Date",0D,CalculatedDate);
+                    IF (ShowOnlyOverDueBy <> '') AND NOT (ShowAllForOverdue) THEN
+                        SETRANGE("Due Date", 0D, CalculatedDate);
                 end;
             }
-            dataitem(Totals;2000000026)
+            dataitem(Totals; 2000000026)
             {
                 DataItemTableView = SORTING(Number);
-                column(AmountDueToPrint;-AmountDueToPrint)
+                column(AmountDueToPrint; -AmountDueToPrint)
                 {
                 }
-                column(AmountDue_1_;-AmountDue[1])
+                column(AmountDue_1_; -AmountDue[1])
                 {
                 }
-                column(AmountDue_2_;-AmountDue[2])
+                column(AmountDue_2_; -AmountDue[2])
                 {
                 }
-                column(AmountDue_3_;-AmountDue[3])
+                column(AmountDue_3_; -AmountDue[3])
                 {
                 }
-                column(AmountDue_4_;-AmountDue[4])
+                column(AmountDue_4_; -AmountDue[4])
                 {
                 }
-                column(AgingDate;AgingDate)
+                column(AgingDate; AgingDate)
                 {
                 }
-                column(Vendor_Ledger_Entry__Description;"Vendor Ledger Entry".Description)
+                column(Vendor_Ledger_Entry__Description; "Vendor Ledger Entry".Description)
                 {
                 }
-                column(Vendor_Ledger_Entry___Document_Type_;"Vendor Ledger Entry"."Document Type")
+                column(Vendor_Ledger_Entry___Document_Type_; "Vendor Ledger Entry"."Document Type")
                 {
                 }
-                column(DocNo;DocNo)
+                column(DocNo; DocNo)
                 {
                 }
-                column(AmountDueToPrint_Control63;-AmountDueToPrint)
+                column(AmountDueToPrint_Control63; -AmountDueToPrint)
                 {
                 }
-                column(AmountDue_1__Control64;-AmountDue[1])
+                column(AmountDue_1__Control64; -AmountDue[1])
                 {
                 }
-                column(AmountDue_2__Control65;-AmountDue[2])
+                column(AmountDue_2__Control65; -AmountDue[2])
                 {
                 }
-                column(AmountDue_3__Control66;-AmountDue[3])
+                column(AmountDue_3__Control66; -AmountDue[3])
                 {
                 }
-                column(AmountDue_4__Control67;-AmountDue[4])
+                column(AmountDue_4__Control67; -AmountDue[4])
                 {
                 }
-                column(Vendor_Ledger_Entry___Currency_Code_;"Vendor Ledger Entry"."Currency Code")
+                column(Vendor_Ledger_Entry___Currency_Code_; "Vendor Ledger Entry"."Currency Code")
                 {
                 }
-                column(RazonGasto;RazonGasto)
+                column(RazonGasto; RazonGasto)
                 {
                 }
-                column(AmountDueToPrint_Control68;-AmountDueToPrint)
+                column(AmountDueToPrint_Control68; -AmountDueToPrint)
                 {
                 }
-                column(AmountDue_1__Control69;-AmountDue[1])
+                column(AmountDue_1__Control69; -AmountDue[1])
                 {
                 }
-                column(AmountDue_2__Control70;-AmountDue[2])
+                column(AmountDue_2__Control70; -AmountDue[2])
                 {
                 }
-                column(AmountDue_3__Control71;-AmountDue[3])
+                column(AmountDue_3__Control71; -AmountDue[3])
                 {
                 }
-                column(AmountDue_4__Control72;-AmountDue[4])
+                column(AmountDue_4__Control72; -AmountDue[4])
                 {
                 }
-                column(AmountDueToPrint_Control74;-AmountDueToPrint)
+                column(AmountDueToPrint_Control74; -AmountDueToPrint)
                 {
                 }
-                column(AmountDue_1__Control75;-AmountDue[1])
+                column(AmountDue_1__Control75; -AmountDue[1])
                 {
                 }
-                column(AmountDue_2__Control76;-AmountDue[2])
+                column(AmountDue_2__Control76; -AmountDue[2])
                 {
                 }
-                column(AmountDue_3__Control77;-AmountDue[3])
+                column(AmountDue_3__Control77; -AmountDue[3])
                 {
                 }
-                column(AmountDue_4__Control78;-AmountDue[4])
+                column(AmountDue_4__Control78; -AmountDue[4])
                 {
                 }
-                column(PercentString_1__Control5;PercentString[1])
+                column(PercentString_1__Control5; PercentString[1])
                 {
                 }
-                column(PercentString_2__Control6;PercentString[2])
+                column(PercentString_2__Control6; PercentString[2])
                 {
                 }
-                column(PercentString_3__Control7;PercentString[3])
+                column(PercentString_3__Control7; PercentString[3])
                 {
                 }
-                column(PercentString_4__Control8;PercentString[4])
+                column(PercentString_4__Control8; PercentString[4])
                 {
                 }
-                column(Vendor__No___Control80;Vendor."No.")
+                column(Vendor__No___Control80; Vendor."No.")
                 {
                 }
-                column(AmountDueToPrint_Control81;-AmountDueToPrint)
+                column(AmountDueToPrint_Control81; -AmountDueToPrint)
                 {
                 }
-                column(AmountDue_1__Control82;-AmountDue[1])
+                column(AmountDue_1__Control82; -AmountDue[1])
                 {
                 }
-                column(AmountDue_2__Control83;-AmountDue[2])
+                column(AmountDue_2__Control83; -AmountDue[2])
                 {
                 }
-                column(AmountDue_3__Control84;-AmountDue[3])
+                column(AmountDue_3__Control84; -AmountDue[3])
                 {
                 }
-                column(AmountDue_4__Control85;-AmountDue[4])
+                column(AmountDue_4__Control85; -AmountDue[4])
                 {
                 }
-                column(PercentString_1__Control87;PercentString[1])
+                column(PercentString_1__Control87; PercentString[1])
                 {
                 }
-                column(PercentString_2__Control88;PercentString[2])
+                column(PercentString_2__Control88; PercentString[2])
                 {
                 }
-                column(PercentString_3__Control89;PercentString[3])
+                column(PercentString_3__Control89; PercentString[3])
                 {
                 }
-                column(PercentString_4__Control90;PercentString[4])
+                column(PercentString_4__Control90; PercentString[4])
                 {
                 }
-                column(Balance_ForwardCaption;Balance_ForwardCaptionLbl)
+                column(Balance_ForwardCaption; Balance_ForwardCaptionLbl)
                 {
                 }
-                column(Balance_to_Carry_ForwardCaption;Balance_to_Carry_ForwardCaptionLbl)
+                column(Balance_to_Carry_ForwardCaption; Balance_to_Carry_ForwardCaptionLbl)
                 {
                 }
-                column(Total_Amount_DueCaption;Total_Amount_DueCaptionLbl)
+                column(Total_Amount_DueCaption; Total_Amount_DueCaptionLbl)
                 {
                 }
-                column(Total_Amount_DueCaption_Control86;Total_Amount_DueCaption_Control86Lbl)
+                column(Total_Amount_DueCaption_Control86; Total_Amount_DueCaption_Control86Lbl)
                 {
                 }
-                column(Control1020001Caption;CAPTIONCLASSTRANSLATE(GetCurrencyCaptionCode(Vendor."Currency Code")))
+                column(Control1020001Caption; CAPTIONCLASSTRANSLATE(GetCurrencyCaptionCode(Vendor."Currency Code")))
                 {
                 }
-                column(Totals_Number;Number)
+                column(Totals_Number; Number)
                 {
                 }
-                dataitem("Purch. Inv. Line";123)
+                dataitem("Purch. Inv. Line"; 123)
                 {
-                    DataItemTableView = SORTING("Document No.","Line No.")
+                    DataItemTableView = SORTING("Document No.", "Line No.")
                                         ORDER(Ascending);
-                    column(Posted_Document_Dimension__Dimension_Value_Code_;DimSetEntry."Dimension Value Code")
+                    column(Posted_Document_Dimension__Dimension_Value_Code_; DimSetEntry."Dimension Value Code")
                     {
                     }
-                    column(Importe;Importe)
+                    column(Importe; Importe)
                     {
                     }
-                    column(Posted_Document_Dimension_Table_ID;123)
+                    column(Posted_Document_Dimension_Table_ID; 123)
                     {
                     }
-                    column(Posted_Document_Dimension_Document_No_;"Document No.")
+                    column(Posted_Document_Dimension_Document_No_; "Document No.")
                     {
                     }
-                    column(Posted_Document_Dimension_Line_No_;"Line No.")
+                    column(Posted_Document_Dimension_Line_No_; "Line No.")
                     {
                     }
-                    column(Posted_Document_Dimension_Dimension_Code;DimDepto)
+                    column(Posted_Document_Dimension_Dimension_Code; DimDepto)
                     {
                     }
 
@@ -438,8 +439,8 @@ report 56125 "Agin Accounts Payable (CxP)"
                         DimSetEntry.SETRANGE("Dimension Set ID", "Purch. Inv. Line"."Dimension Set ID");
                         DimSetEntry.SETRANGE("Dimension Code", DimDepto);
                         IF NOT DimSetEntry.FINDFIRST THEN
-                          CurrReport.SKIP;
-                          Importe := "Amount Including VAT";
+                            CurrReport.SKIP;
+                        Importe := "Amount Including VAT";
                         //-MIGRACION 2013
                     end;
 
@@ -451,7 +452,7 @@ report 56125 "Agin Accounts Payable (CxP)"
                         //SETRANGE("Document No.","Vendor Ledger Entry"."Document No.");
                         //SETFILTER("Line No.",'<>%1',0);
                         //SETRANGE("Dimension Code",DimDepto);
-                        "Purch. Inv. Line".SETRANGE("Document No.","Vendor Ledger Entry"."Document No.");
+                        "Purch. Inv. Line".SETRANGE("Document No.", "Vendor Ledger Entry"."Document No.");
                         //-MIGRACION 2013
                         Importe := 0; //+#139
                     end;
@@ -460,106 +461,106 @@ report 56125 "Agin Accounts Payable (CxP)"
                 trigger OnAfterGetRecord()
                 begin
                     IF ISSERVICETIER THEN
-                      CalcPercents(AmountDueToPrint,AmountDue);
+                        CalcPercents(AmountDueToPrint, AmountDue);
 
                     IF Number = 1 THEN
-                      TempVendLedgEntry.FIND('-')
+                        TempVendLedgEntry.FIND('-')
                     ELSE
-                      TempVendLedgEntry.NEXT;
-                    TempVendLedgEntry.SETRANGE("Date Filter",0D,PeriodEndingDate[1]);
-                    TempVendLedgEntry.CALCFIELDS("Remaining Amount","Remaining Amt. (LCY)");
+                        TempVendLedgEntry.NEXT;
+                    TempVendLedgEntry.SETRANGE("Date Filter", 0D, PeriodEndingDate[1]);
+                    TempVendLedgEntry.CALCFIELDS("Remaining Amount", "Remaining Amt. (LCY)");
                     IF TempVendLedgEntry."Remaining Amount" = 0 THEN
-                      CurrReport.SKIP;
+                        CurrReport.SKIP;
                     IF TempVendLedgEntry."Currency Code" <> '' THEN
-                      TempVendLedgEntry."Remaining Amt. (LCY)" :=
-                        ROUND(
-                          CurrExchRate.ExchangeAmtFCYToFCY(
-                            PeriodEndingDate[1],
-                            TempVendLedgEntry."Currency Code",
-                            '',
-                            TempVendLedgEntry."Remaining Amount"));
+                        TempVendLedgEntry."Remaining Amt. (LCY)" :=
+                          ROUND(
+                            CurrExchRate.ExchangeAmtFCYToFCY(
+                              PeriodEndingDate[1],
+                              TempVendLedgEntry."Currency Code",
+                              '',
+                              TempVendLedgEntry."Remaining Amount"));
                     IF PrintAmountsInLocal THEN BEGIN
-                      TempVendLedgEntry."Remaining Amount" :=
-                        ROUND(
-                          CurrExchRate.ExchangeAmtFCYToFCY(
-                            PeriodEndingDate[1],
-                            TempVendLedgEntry."Currency Code",
-                            Vendor."Currency Code",
-                            TempVendLedgEntry."Remaining Amount"),
-                          Currency."Amount Rounding Precision");
-                      AmountDueToPrint := TempVendLedgEntry."Remaining Amount";
+                        TempVendLedgEntry."Remaining Amount" :=
+                          ROUND(
+                            CurrExchRate.ExchangeAmtFCYToFCY(
+                              PeriodEndingDate[1],
+                              TempVendLedgEntry."Currency Code",
+                              Vendor."Currency Code",
+                              TempVendLedgEntry."Remaining Amount"),
+                            Currency."Amount Rounding Precision");
+                        AmountDueToPrint := TempVendLedgEntry."Remaining Amount";
                     END ELSE
-                      AmountDueToPrint := TempVendLedgEntry."Remaining Amt. (LCY)";
+                        AmountDueToPrint := TempVendLedgEntry."Remaining Amt. (LCY)";
 
                     CASE AgingMethod OF
-                      AgingMethod::"Due Date" :
-                         AgingDate := TempVendLedgEntry."Due Date";
-                      AgingMethod::"Trans Date" :
-                         AgingDate := TempVendLedgEntry."Posting Date";
-                      AgingMethod::"Document Date" :
-                         AgingDate := TempVendLedgEntry."Document Date";
+                        AgingMethod::"Due Date":
+                            AgingDate := TempVendLedgEntry."Due Date";
+                        AgingMethod::"Trans Date":
+                            AgingDate := TempVendLedgEntry."Posting Date";
+                        AgingMethod::"Document Date":
+                            AgingDate := TempVendLedgEntry."Document Date";
                     END;
                     j := 0;
-                    WHILE AgingDate < PeriodEndingDate[j+1] DO
-                      j := j + 1;
+                    WHILE AgingDate < PeriodEndingDate[j + 1] DO
+                        j := j + 1;
                     IF j = 0 THEN
-                      j := 1;
+                        j := 1;
 
                     AmountDue[j] := AmountDueToPrint;
                     "BalanceDue$"[j] := "BalanceDue$"[j] + TempVendLedgEntry."Remaining Amt. (LCY)";
 
                     IF ISSERVICETIER THEN BEGIN
-                      "TotalBalanceDue$" := 0;
-                      VendTotAmountDue[j] := VendTotAmountDue[j] + AmountDueToPrint;
-                      VendTotAmountDueToPrint := VendTotAmountDueToPrint + AmountDueToPrint;
+                        "TotalBalanceDue$" := 0;
+                        VendTotAmountDue[j] := VendTotAmountDue[j] + AmountDueToPrint;
+                        VendTotAmountDueToPrint := VendTotAmountDueToPrint + AmountDueToPrint;
 
-                      FOR j := 1 TO 4 DO
-                        "TotalBalanceDue$" := "TotalBalanceDue$" + "BalanceDue$"[j];
-                      CalcPercents("TotalBalanceDue$","BalanceDue$");
+                        FOR j := 1 TO 4 DO
+                            "TotalBalanceDue$" := "TotalBalanceDue$" + "BalanceDue$"[j];
+                        CalcPercents("TotalBalanceDue$", "BalanceDue$");
                     END;
 
 
                     "Vendor Ledger Entry" := TempVendLedgEntry;
                     IF UseExternalDocNo THEN
-                      DocNo := "Vendor Ledger Entry"."External Document No."
+                        DocNo := "Vendor Ledger Entry"."External Document No."
                     ELSE
-                      DocNo := "Vendor Ledger Entry"."Document No.";
+                        DocNo := "Vendor Ledger Entry"."Document No.";
 
-                       // Do NOT use the following fields in the sections:
-                       //   "Applied-To Doc. Type"
-                       //   "Applied-To Doc. No."
-                       //   Open
-                       //   "Paym. Disc. Taken"
-                       //   "Closed by Entry No."
-                       //   "Closed at Date"
-                       //   "Closed by Amount"
+                    // Do NOT use the following fields in the sections:
+                    //   "Applied-To Doc. Type"
+                    //   "Applied-To Doc. No."
+                    //   Open
+                    //   "Paym. Disc. Taken"
+                    //   "Closed by Entry No."
+                    //   "Closed at Date"
+                    //   "Closed by Amount"
 
                     IF PrintDetail AND PrintToExcel THEN
-                      MakeExcelDataBody;
+                        MakeExcelDataBody;
                 end;
 
                 trigger OnPostDataItem()
                 begin
                     IF TempVendLedgEntry.COUNT > 0 THEN BEGIN
-                      IF ISSERVICETIER THEN BEGIN
-                        FOR j := 1 TO 4 DO
-                          AmountDue[j] := VendTotAmountDue[j];
-                        AmountDueToPrint := VendTotAmountDueToPrint;
-                      END;
-                      IF NOT PrintDetail AND PrintToExcel THEN
-                        MakeExcelDataBody;
+                        IF ISSERVICETIER THEN BEGIN
+                            FOR j := 1 TO 4 DO
+                                AmountDue[j] := VendTotAmountDue[j];
+                            AmountDueToPrint := VendTotAmountDueToPrint;
+                        END;
+                        IF NOT PrintDetail AND PrintToExcel THEN
+                            MakeExcelDataBody;
                     END;
                 end;
 
                 trigger OnPreDataItem()
                 begin
-                    CurrReport.CREATETOTALS(AmountDueToPrint,AmountDue);
-                    SETRANGE(Number,1,TempVendLedgEntry.COUNT);
-                    TempVendLedgEntry.SETCURRENTKEY("Vendor No.","Posting Date");
+                    //TODO: Revisar metodo CurrReport.CREATETOTALS(AmountDueToPrint, AmountDue);
+                    SETRANGE(Number, 1, TempVendLedgEntry.COUNT);
+                    TempVendLedgEntry.SETCURRENTKEY("Vendor No.", "Posting Date");
                     IF ISSERVICETIER THEN BEGIN
-                      CLEAR("BalanceDue$");
-                      CLEAR(VendTotAmountDue);
-                      VendTotAmountDueToPrint := 0;
+                        CLEAR("BalanceDue$");
+                        CLEAR(VendTotAmountDue);
+                        VendTotAmountDueToPrint := 0;
                     END;
                 end;
             }
@@ -569,25 +570,25 @@ report 56125 "Agin Accounts Payable (CxP)"
                 VendLedgEntry: Record 25;
             begin
                 IF PrintAmountsInLocal THEN BEGIN
-                  GetCurrencyRecord(Currency,"Currency Code");
-                  CurrencyFactor := CurrExchRate.ExchangeRate(PeriodEndingDate[1],"Currency Code");
+                    GetCurrencyRecord(Currency, "Currency Code");
+                    CurrencyFactor := CurrExchRate.ExchangeRate(PeriodEndingDate[1], "Currency Code");
                 END;
 
                 IF Blocked <> Blocked::" " THEN
-                  BlockedDescription := STRSUBSTNO(Text003, Blocked)
+                    BlockedDescription := STRSUBSTNO(Text003, Blocked)
                 ELSE
-                  BlockedDescription := '';
+                    BlockedDescription := '';
 
                 TempVendLedgEntry.DELETEALL;
 
                 IF ShowOnlyOverDueBy <> '' THEN
-                  CalculatedDate := CALCDATE('-'+ ShowOnlyOverDueBy,PeriodEndingDate[1]);
+                    CalculatedDate := CALCDATE('-' + ShowOnlyOverDueBy, PeriodEndingDate[1]);
 
                 IF ShowAllForOverdue AND (ShowOnlyOverDueBy <> '') THEN BEGIN
-                  VendLedgEntry.SETRANGE("Vendor No.","No.");
-                  VendLedgEntry.SETRANGE(Open,TRUE);
-                  VendLedgEntry.SETRANGE("Due Date",0D,CalculatedDate);
-                  IF NOT(VendLedgEntry.FINDSET) THEN CurrReport.SKIP;
+                    VendLedgEntry.SETRANGE("Vendor No.", "No.");
+                    VendLedgEntry.SETRANGE(Open, TRUE);
+                    VendLedgEntry.SETRANGE("Due Date", 0D, CalculatedDate);
+                    IF NOT (VendLedgEntry.FINDSET) THEN CurrReport.SKIP;
                 END;
             end;
 
@@ -595,51 +596,51 @@ report 56125 "Agin Accounts Payable (CxP)"
             begin
                 CLEAR("BalanceDue$");
                 IF PeriodEndingDate[1] = 0D THEN
-                  PeriodEndingDate[1] := WORKDATE;
+                    PeriodEndingDate[1] := WORKDATE;
 
                 IF PrintDetail THEN BEGIN
-                  SubTitle := Text004;
+                    SubTitle := Text004;
                 END ELSE BEGIN
-                  SubTitle := Text005;
+                    SubTitle := Text005;
                 END;
-                SubTitle := SubTitle + Text006 + ' ' + FORMAT(PeriodEndingDate[1],0,4) + ')';
+                SubTitle := SubTitle + Text006 + ' ' + FORMAT(PeriodEndingDate[1], 0, 4) + ')';
 
-                IF AgingMethod = AgingMethod ::"Due Date" THEN BEGIN
-                  DateTitle := Text007;
-                  ShortDateTitle := Text008;
-                  ColumnHead[2] :=   Text009 + ' '
-                                   + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
-                                   + ' ' + Text010;
-                  ColumnHeadHead := ' ' + Text011 + ' ';
-                END ELSE IF AgingMethod = AgingMethod ::"Trans Date" THEN BEGIN
-                  DateTitle := Text012;
-                  ShortDateTitle := Text013;
-                  ColumnHead[2] :=   FORMAT(PeriodEndingDate[1] - PeriodEndingDate[2] + 1)
-                                   + ' - '
-                                   + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
-                                   + ' ' + Text010;
-                  ColumnHeadHead := ' ' + Text014 + ' ';
+                IF AgingMethod = AgingMethod::"Due Date" THEN BEGIN
+                    DateTitle := Text007;
+                    ShortDateTitle := Text008;
+                    ColumnHead[2] := Text009 + ' '
+                                     + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
+                                     + ' ' + Text010;
+                    ColumnHeadHead := ' ' + Text011 + ' ';
+                END ELSE IF AgingMethod = AgingMethod::"Trans Date" THEN BEGIN
+                    DateTitle := Text012;
+                    ShortDateTitle := Text013;
+                    ColumnHead[2] := FORMAT(PeriodEndingDate[1] - PeriodEndingDate[2] + 1)
+                                     + ' - '
+                                     + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
+                                     + ' ' + Text010;
+                    ColumnHeadHead := ' ' + Text014 + ' ';
                 END ELSE BEGIN
-                  DateTitle := Text015;
-                  ShortDateTitle := Text016;
-                  ColumnHead[2] :=   FORMAT(PeriodEndingDate[1] - PeriodEndingDate[2] + 1)
-                                   + ' - '
-                                   + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
-                                   + ' ' + Text010;
-                  ColumnHeadHead := ' ' + Text017 + ' ';
+                    DateTitle := Text015;
+                    ShortDateTitle := Text016;
+                    ColumnHead[2] := FORMAT(PeriodEndingDate[1] - PeriodEndingDate[2] + 1)
+                                     + ' - '
+                                     + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3])
+                                     + ' ' + Text010;
+                    ColumnHeadHead := ' ' + Text017 + ' ';
                 END;
 
                 ColumnHead[1] := Text018;
-                ColumnHead[3] :=   FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3] + 1)
+                ColumnHead[3] := FORMAT(PeriodEndingDate[1] - PeriodEndingDate[3] + 1)
                                  + ' - '
                                  + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[4])
                                  + ' ' + Text010;
-                ColumnHead[4] :=   'Over '
+                ColumnHead[4] := 'Over '
                                  + FORMAT(PeriodEndingDate[1] - PeriodEndingDate[4])
                                  + ' ' + Text010;
 
                 IF PrintToExcel THEN
-                  MakeExcelInfo;
+                    MakeExcelInfo;
             end;
         }
     }
@@ -655,7 +656,7 @@ report 56125 "Agin Accounts Payable (CxP)"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(PeriodEndingDate[1];PeriodEndingDate[1])
+                    field(PeriodEndingDate1; PeriodEndingDate[1])
                     {
                         Caption = 'Aged as of';
 
@@ -664,23 +665,23 @@ report 56125 "Agin Accounts Payable (CxP)"
                             PeriodEndingDate1OnAfterValida;
                         end;
                     }
-                    field(AgingMethod;AgingMethod)
+                    field(AgingMethod; AgingMethod)
                     {
                         Caption = 'Aging Method';
                         OptionCaption = 'Due Date,Trans Date,Document Date';
                     }
-                    field(PeriodCalculation;PeriodCalculation)
+                    field(PeriodCalculation; PeriodCalculation)
                     {
                         Caption = 'Length of Aging Periods';
 
                         trigger OnValidate()
                         begin
                             IF PeriodCalculation = '' THEN
-                              ERROR( 'You must enter a period calculation in the '
-                                    +'Length of Aging Periods field');
+                                ERROR('You must enter a period calculation in the '
+                                      + 'Length of Aging Periods field');
                         end;
                     }
-                    field(ShowOnlyOverDueBy;ShowOnlyOverDueBy)
+                    field(ShowOnlyOverDueBy; ShowOnlyOverDueBy)
                     {
                         Caption = 'Show If Overdue By';
                         DateFormula = true;
@@ -688,28 +689,28 @@ report 56125 "Agin Accounts Payable (CxP)"
                         trigger OnValidate()
                         begin
                             IF AgingMethod <> AgingMethod::"Due Date" THEN
-                              ERROR(Text120);
+                                ERROR(Text120);
                             IF ShowOnlyOverDueBy = '' THEN ShowAllForOverdue := FALSE;
                         end;
                     }
-                    field(DimDepto;DimDepto)
+                    field(DimDepto; DimDepto)
                     {
                         Caption = 'Dimension';
                         TableRelation = Dimension;
                     }
-                    field(ShowAllForOverdue;ShowAllForOverdue)
+                    field(ShowAllForOverdue; ShowAllForOverdue)
                     {
                         Caption = 'Show All for Overdue By Vendor';
 
                         trigger OnValidate()
                         begin
                             IF AgingMethod <> AgingMethod::"Due Date" THEN
-                              ERROR(Text120);
+                                ERROR(Text120);
                             IF ShowAllForOverdue AND (ShowOnlyOverDueBy = '') THEN
-                              ERROR(Text119);
+                                ERROR(Text119);
                         end;
                     }
-                    field(PrintAmountsInLocal;PrintAmountsInLocal)
+                    field(PrintAmountsInLocal; PrintAmountsInLocal)
                     {
                         Caption = 'Print Amounts in Vendor''s Currency';
                         MultiLine = true;
@@ -717,18 +718,18 @@ report 56125 "Agin Accounts Payable (CxP)"
                         trigger OnValidate()
                         begin
                             IF ShowAllForOverdue AND (ShowOnlyOverDueBy = '') THEN
-                              ERROR(Text119);
+                                ERROR(Text119);
                         end;
                     }
-                    field(PrintDetail;PrintDetail)
+                    field(PrintDetail; PrintDetail)
                     {
                         Caption = 'Print Detail';
                     }
-                    field(UseExternalDocNo;UseExternalDocNo)
+                    field(UseExternalDocNo; UseExternalDocNo)
                     {
                         Caption = 'Use External Doc. No.';
                     }
-                    field(PrintToExcel;PrintToExcel)
+                    field(PrintToExcel; PrintToExcel)
                     {
                         Caption = 'Print to Excel';
                     }
@@ -743,8 +744,8 @@ report 56125 "Agin Accounts Payable (CxP)"
         trigger OnOpenPage()
         begin
             IF PeriodEndingDate[1] = 0D THEN BEGIN
-              PeriodEndingDate[1] := WORKDATE;
-              PeriodCalculation := Text023;
+                PeriodEndingDate[1] := WORKDATE;
+                PeriodCalculation := Text023;
             END;
         end;
     }
@@ -756,18 +757,18 @@ report 56125 "Agin Accounts Payable (CxP)"
     trigger OnPostReport()
     begin
         IF PrintToExcel THEN
-          CreateExcelbook;
+            CreateExcelbook;
     end;
 
     trigger OnPreReport()
     begin
         IF AgingMethod = AgingMethod::"Due Date" THEN BEGIN
-          PeriodEndingDate[2] := PeriodEndingDate[1];
-          FOR j := 3 TO 4 DO
-            PeriodEndingDate[j] := CALCDATE('-('+PeriodCalculation+')',PeriodEndingDate[j-1]);
+            PeriodEndingDate[2] := PeriodEndingDate[1];
+            FOR j := 3 TO 4 DO
+                PeriodEndingDate[j] := CALCDATE('-(' + PeriodCalculation + ')', PeriodEndingDate[j - 1]);
         END ELSE BEGIN
-          FOR j := 2 TO 4 DO
-            PeriodEndingDate[j] := CALCDATE('-('+PeriodCalculation+')',PeriodEndingDate[j-1]);
+            FOR j := 2 TO 4 DO
+                PeriodEndingDate[j] := CALCDATE('-(' + PeriodCalculation + ')', PeriodEndingDate[j - 1]);
         END;
         PeriodEndingDate[5] := 0D;
         CompanyInformation.GET;
@@ -775,7 +776,7 @@ report 56125 "Agin Accounts Payable (CxP)"
         FilterString := Vendor.GETFILTERS;
 
         IF DimDepto = '' THEN
-          ERROR(Error001);
+            ERROR(Error001);
     end;
 
     var
@@ -793,12 +794,12 @@ report 56125 "Agin Accounts Payable (CxP)"
         PrintAmountsInLocal: Boolean;
         PrintDetail: Boolean;
         PrintToExcel: Boolean;
-        AmountDue: array [4] of Decimal;
-        "BalanceDue$": array [4] of Decimal;
+        AmountDue: array[4] of Decimal;
+        "BalanceDue$": array[4] of Decimal;
         ClosingAmount: Decimal;
-        ColumnHead: array [4] of Text[20];
+        ColumnHead: array[4] of Text[20];
         ColumnHeadHead: Text[59];
-        PercentString: array [4] of Text[10];
+        PercentString: array[4] of Text[10];
         Percent: Decimal;
         "TotalBalanceDue$": Decimal;
         AmountDueToPrint: Decimal;
@@ -809,7 +810,7 @@ report 56125 "Agin Accounts Payable (CxP)"
         SubTitle: Text[88];
         DateTitle: Text[20];
         ShortDateTitle: Text[20];
-        PeriodEndingDate: array [5] of Date;
+        PeriodEndingDate: array[5] of Date;
         AgingDate: Date;
         UseExternalDocNo: Boolean;
         DocNo: Code[20];
@@ -856,7 +857,7 @@ report 56125 "Agin Accounts Payable (CxP)"
         Text119: Label 'Show Only Overdue By Needs a Valid Date Formula';
         CalculatedDate: Date;
         Text120: Label 'This option is only allowed for method Due Date';
-        VendTotAmountDue: array [4] of Decimal;
+        VendTotAmountDue: array[4] of Decimal;
         VendTotAmountDueToPrint: Decimal;
         RazonGasto: Text[1024];
         DimDepto: Code[20];
@@ -885,64 +886,64 @@ report 56125 "Agin Accounts Payable (CxP)"
     local procedure InsertTemp(var VendLedgEntry: Record 25)
     begin
         WITH TempVendLedgEntry DO BEGIN
-          IF GET(VendLedgEntry."Entry No.") THEN
-            EXIT;
-          TempVendLedgEntry := VendLedgEntry;
-          CASE AgingMethod OF
-            AgingMethod::"Due Date" :
-              "Posting Date" := "Due Date";
-            AgingMethod::"Document Date" :
-              "Posting Date" := "Document Date";
-          END;
-          INSERT;
+            IF GET(VendLedgEntry."Entry No.") THEN
+                EXIT;
+            TempVendLedgEntry := VendLedgEntry;
+            CASE AgingMethod OF
+                AgingMethod::"Due Date":
+                    "Posting Date" := "Due Date";
+                AgingMethod::"Document Date":
+                    "Posting Date" := "Document Date";
+            END;
+            INSERT;
         END;
     end;
 
-    procedure CalcPercents(Total: Decimal;Amounts: array [4] of Decimal)
+    procedure CalcPercents(Total: Decimal; Amounts: array[4] of Decimal)
     var
         i: Integer;
         j: Integer;
     begin
         CLEAR(PercentString);
         IF Total <> 0 THEN
-          FOR i := 1 TO 4 DO BEGIN
-            Percent := Amounts[i] / Total * 100.0;
-            IF STRLEN(FORMAT(ROUND(Percent))) + 4 > MAXSTRLEN(PercentString[1]) THEN
-              PercentString[i] := PADSTR(PercentString[i],MAXSTRLEN(PercentString[i]),'*')
-            ELSE BEGIN
-              PercentString[i] := FORMAT(ROUND(Percent));
-              j := STRPOS(PercentString[i],'.');
-              IF j = 0 THEN
-                PercentString[i] := PercentString[i] + '.00'
-              ELSE IF j = STRLEN(PercentString[i]) - 1 THEN
-                PercentString[i] := PercentString[i] + '0';
-              PercentString[i] := PercentString[i] + '%';
+            FOR i := 1 TO 4 DO BEGIN
+                Percent := Amounts[i] / Total * 100.0;
+                IF STRLEN(FORMAT(ROUND(Percent))) + 4 > MAXSTRLEN(PercentString[1]) THEN
+                    PercentString[i] := PADSTR(PercentString[i], MAXSTRLEN(PercentString[i]), '*')
+                ELSE BEGIN
+                    PercentString[i] := FORMAT(ROUND(Percent));
+                    j := STRPOS(PercentString[i], '.');
+                    IF j = 0 THEN
+                        PercentString[i] := PercentString[i] + '.00'
+                    ELSE IF j = STRLEN(PercentString[i]) - 1 THEN
+                        PercentString[i] := PercentString[i] + '0';
+                    PercentString[i] := PercentString[i] + '%';
+                END;
             END;
-          END;
     end;
 
-    local procedure GetCurrencyRecord(var Currency: Record 4;CurrencyCode: Code[10])
+    local procedure GetCurrencyRecord(var Currency: Record 4; CurrencyCode: Code[10])
     begin
         IF CurrencyCode = '' THEN BEGIN
-          CLEAR(Currency);
-          Currency.Description := GLSetup."LCY Code";
-          Currency."Amount Rounding Precision" := GLSetup."Amount Rounding Precision";
+            CLEAR(Currency);
+            Currency.Description := GLSetup."LCY Code";
+            Currency."Amount Rounding Precision" := GLSetup."Amount Rounding Precision";
         END ELSE
-          IF Currency.Code <> CurrencyCode THEN
-            Currency.GET(CurrencyCode);
+            IF Currency.Code <> CurrencyCode THEN
+                Currency.GET(CurrencyCode);
     end;
 
     local procedure GetCurrencyCaptionCode(CurrencyCode: Code[10]): Text[80]
     begin
         IF PrintAmountsInLocal THEN BEGIN
-          IF CurrencyCode = '' THEN
-            EXIT('101,1,' + Text001)
-          ELSE BEGIN
-            GetCurrencyRecord(Currency,CurrencyCode);
-            EXIT('101,4,' + STRSUBSTNO(Text001,Currency.Description));
-          END;
+            IF CurrencyCode = '' THEN
+                EXIT('101,1,' + Text001)
+            ELSE BEGIN
+                GetCurrencyRecord(Currency, CurrencyCode);
+                EXIT('101,4,' + STRSUBSTNO(Text001, Currency.Description));
+            END;
         END ELSE
-          EXIT('');
+            EXIT('');
     end;
 
     local procedure MakeExcelInfo()
@@ -988,24 +989,24 @@ report 56125 "Agin Accounts Payable (CxP)"
     local procedure MakeExcelDataHeader()
     begin
         ExcelBuf.NewRow;
-        ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Vendor No."),FALSE,'',TRUE,FALSE,TRUE,'@',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(Vendor.FIELDCAPTION(Name),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Vendor No."), FALSE, '', TRUE, FALSE, TRUE, '@', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(Vendor.FIELDCAPTION(Name), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
         IF PrintDetail THEN BEGIN
-          ExcelBuf.AddColumn(STRSUBSTNO(Text114,ShortDateTitle),FALSE,'',TRUE,FALSE,TRUE,'@',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION(Description),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Document Type"),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Document No."),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn(STRSUBSTNO(Text114, ShortDateTitle), FALSE, '', TRUE, FALSE, TRUE, '@', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION(Description), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Document Type"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn("Vendor Ledger Entry".FIELDCAPTION("Document No."), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
         END;
-        ExcelBuf.AddColumn(FORMAT(Text115),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(ColumnHead[1],FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(ColumnHead[2],FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(ColumnHead[3],FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(ColumnHead[4],FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(FORMAT(Text115), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(ColumnHead[1], FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(ColumnHead[2], FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(ColumnHead[3], FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(ColumnHead[4], FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
         IF PrintAmountsInLocal THEN BEGIN
-          IF PrintDetail THEN
-            ExcelBuf.AddColumn(FORMAT(Text116),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text)
-          ELSE
-            ExcelBuf.AddColumn(FORMAT(Text117),FALSE,'',TRUE,FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
+            IF PrintDetail THEN
+                ExcelBuf.AddColumn(FORMAT(Text116), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text)
+            ELSE
+                ExcelBuf.AddColumn(FORMAT(Text117), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuf."Cell Type"::Text);
         END;
     end;
 
@@ -1014,27 +1015,27 @@ report 56125 "Agin Accounts Payable (CxP)"
         CurrencyCodeToPrint: Code[20];
     begin
         ExcelBuf.NewRow;
-        ExcelBuf.AddColumn(Vendor."No.",FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(Vendor.Name,FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(Vendor."No.", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(Vendor.Name, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
         IF PrintDetail THEN BEGIN
-          ExcelBuf.AddColumn(AgingDate,FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn("Vendor Ledger Entry".Description,FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn(FORMAT("Vendor Ledger Entry"."Document Type"),FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
-          ExcelBuf.AddColumn(DocNo,FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn(AgingDate, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn("Vendor Ledger Entry".Description, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn(FORMAT("Vendor Ledger Entry"."Document Type"), FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+            ExcelBuf.AddColumn(DocNo, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
         END;
-        ExcelBuf.AddColumn(-AmountDueToPrint,FALSE,'',FALSE,FALSE,FALSE,'#,##0.00',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(-AmountDue[1],FALSE,'',FALSE,FALSE,FALSE,'#,##0.00',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(-AmountDue[2],FALSE,'',FALSE,FALSE,FALSE,'#,##0.00',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(-AmountDue[3],FALSE,'',FALSE,FALSE,FALSE,'#,##0.00',ExcelBuf."Cell Type"::Text);
-        ExcelBuf.AddColumn(-AmountDue[4],FALSE,'',FALSE,FALSE,FALSE,'#,##0.00',ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(-AmountDueToPrint, FALSE, '', FALSE, FALSE, FALSE, '#,##0.00', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(-AmountDue[1], FALSE, '', FALSE, FALSE, FALSE, '#,##0.00', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(-AmountDue[2], FALSE, '', FALSE, FALSE, FALSE, '#,##0.00', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(-AmountDue[3], FALSE, '', FALSE, FALSE, FALSE, '#,##0.00', ExcelBuf."Cell Type"::Text);
+        ExcelBuf.AddColumn(-AmountDue[4], FALSE, '', FALSE, FALSE, FALSE, '#,##0.00', ExcelBuf."Cell Type"::Text);
         IF PrintAmountsInLocal THEN BEGIN
-          IF PrintDetail THEN
-            CurrencyCodeToPrint := "Vendor Ledger Entry"."Currency Code"
-          ELSE
-            CurrencyCodeToPrint := Vendor."Currency Code";
-          IF CurrencyCodeToPrint = '' THEN
-            CurrencyCodeToPrint := GLSetup."LCY Code";
-          ExcelBuf.AddColumn(CurrencyCodeToPrint,FALSE,'',FALSE,FALSE,FALSE,'',ExcelBuf."Cell Type"::Text)
+            IF PrintDetail THEN
+                CurrencyCodeToPrint := "Vendor Ledger Entry"."Currency Code"
+            ELSE
+                CurrencyCodeToPrint := Vendor."Currency Code";
+            IF CurrencyCodeToPrint = '' THEN
+                CurrencyCodeToPrint := GLSetup."LCY Code";
+            ExcelBuf.AddColumn(CurrencyCodeToPrint, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text)
         END;
     end;
 
@@ -1047,7 +1048,6 @@ report 56125 "Agin Accounts Payable (CxP)"
     local procedure PeriodEndingDate1OnAfterValida()
     begin
         IF PeriodEndingDate[1] = 0D THEN
-          PeriodEndingDate[1] := WORKDATE;
+            PeriodEndingDate[1] := WORKDATE;
     end;
 }
-

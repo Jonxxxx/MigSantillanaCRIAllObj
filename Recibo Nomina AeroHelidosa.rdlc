@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Historico_Cab__nomina_No__empleado">
+          <DataField>Historico_Cab__nomina_No__empleado</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Per_odo">
+          <DataField>Historico_Cab__nomina_Per_odo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina__No__empleado_">
+          <DataField>Historico_Lin__nomina__No__empleado_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Nombre">
+          <DataField>Historico_Cab__nomina__Nombre</DataField>
+        </Field>
+        <Field Name="txtDesc">
+          <DataField>txtDesc</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Inicio">
+          <DataField>Historico_Cab__nomina__Inicio</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Fin">
+          <DataField>Historico_Cab__nomina__Fin</DataField>
+        </Field>
+        <Field Name="TotIng___TotDed">
+          <DataField>TotIng___TotDed</DataField>
+        </Field>
+        <Field Name="TotIng___TotDedFormat">
+          <DataField>TotIng___TotDedFormat</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Cuenta">
+          <DataField>Historico_Cab__nomina__Cuenta</DataField>
+        </Field>
+        <Field Name="rEmpresa_Picture">
+          <DataField>rEmpresa_Picture</DataField>
+        </Field>
+        <Field Name="txttextoInf">
+          <DataField>txttextoInf</DataField>
+        </Field>
+        <Field Name="DescDeducc_1_">
+          <DataField>DescDeducc_1_</DataField>
+        </Field>
+        <Field Name="DescDeducc_2_">
+          <DataField>DescDeducc_2_</DataField>
+        </Field>
+        <Field Name="DescDeducc_3_">
+          <DataField>DescDeducc_3_</DataField>
+        </Field>
+        <Field Name="DescDeducc_4_">
+          <DataField>DescDeducc_4_</DataField>
+        </Field>
+        <Field Name="DescDeducc_5_">
+          <DataField>DescDeducc_5_</DataField>
+        </Field>
+        <Field Name="DescDeducc_6_">
+          <DataField>DescDeducc_6_</DataField>
+        </Field>
+        <Field Name="DescDeducc_7_">
+          <DataField>DescDeducc_7_</DataField>
+        </Field>
+        <Field Name="DescDeducc_8_">
+          <DataField>DescDeducc_8_</DataField>
+        </Field>
+        <Field Name="DescDeducc_9_">
+          <DataField>DescDeducc_9_</DataField>
+        </Field>
+        <Field Name="DescIngreso_1_">
+          <DataField>DescIngreso_1_</DataField>
+        </Field>
+        <Field Name="DescIngreso_2_">
+          <DataField>DescIngreso_2_</DataField>
+        </Field>
+        <Field Name="DescIngreso_3_">
+          <DataField>DescIngreso_3_</DataField>
+        </Field>
+        <Field Name="DescIngreso_4_">
+          <DataField>DescIngreso_4_</DataField>
+        </Field>
+        <Field Name="DescIngreso_5_">
+          <DataField>DescIngreso_5_</DataField>
+        </Field>
+        <Field Name="DescIngreso_6_">
+          <DataField>DescIngreso_6_</DataField>
+        </Field>
+        <Field Name="DescIngreso_7_">
+          <DataField>DescIngreso_7_</DataField>
+        </Field>
+        <Field Name="DescIngreso_8_">
+          <DataField>DescIngreso_8_</DataField>
+        </Field>
+        <Field Name="DescIngreso_9_">
+          <DataField>DescIngreso_9_</DataField>
+        </Field>
+        <Field Name="DescIngreso_10_">
+          <DataField>DescIngreso_10_</DataField>
+        </Field>
+        <Field Name="DescDeducc_10_">
+          <DataField>DescDeducc_10_</DataField>
+        </Field>
+        <Field Name="Horas_1_">
+          <DataField>Horas_1_</DataField>
+        </Field>
+        <Field Name="Horas_1_Format">
+          <DataField>Horas_1_Format</DataField>
+        </Field>
+        <Field Name="Horas_2_">
+          <DataField>Horas_2_</DataField>
+        </Field>
+        <Field Name="Horas_2_Format">
+          <DataField>Horas_2_Format</DataField>
+        </Field>
+        <Field Name="Horas_3_">
+          <DataField>Horas_3_</DataField>
+        </Field>
+        <Field Name="Horas_3_Format">
+          <DataField>Horas_3_Format</DataField>
+        </Field>
+        <Field Name="Horas_4_">
+          <DataField>Horas_4_</DataField>
+        </Field>
+        <Field Name="Horas_4_Format">
+          <DataField>Horas_4_Format</DataField>
+        </Field>
+        <Field Name="Horas_5_">
+          <DataField>Horas_5_</DataField>
+        </Field>
+        <Field Name="Horas_5_Format">
+          <DataField>Horas_5_Format</DataField>
+        </Field>
+        <Field Name="Horas_6_">
+          <DataField>Horas_6_</DataField>
+        </Field>
+        <Field Name="Horas_6_Format">
+          <DataField>Horas_6_Format</DataField>
+        </Field>
+        <Field Name="Horas_7_">
+          <DataField>Horas_7_</DataField>
+        </Field>
+        <Field Name="Horas_7_Format">
+          <DataField>Horas_7_Format</DataField>
+        </Field>
+        <Field Name="Horas_8_">
+          <DataField>Horas_8_</DataField>
+        </Field>
+        <Field Name="Horas_8_Format">
+          <DataField>Horas_8_Format</DataField>
+        </Field>
+        <Field Name="Horas_9_">
+          <DataField>Horas_9_</DataField>
+        </Field>
+        <Field Name="Horas_9_Format">
+          <DataField>Horas_9_Format</DataField>
+        </Field>
+        <Field Name="Horas_10_">
+          <DataField>Horas_10_</DataField>
+        </Field>
+        <Field Name="Horas_10_Format">
+          <DataField>Horas_10_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1_">
+          <DataField>ImportIngreso_1_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1_Format">
+          <DataField>ImportIngreso_1_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2_">
+          <DataField>ImportIngreso_2_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2_Format">
+          <DataField>ImportIngreso_2_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3_">
+          <DataField>ImportIngreso_3_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3_Format">
+          <DataField>ImportIngreso_3_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4_">
+          <DataField>ImportIngreso_4_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4_Format">
+          <DataField>ImportIngreso_4_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_5_">
+          <DataField>ImportIngreso_5_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_5_Format">
+          <DataField>ImportIngreso_5_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6_">
+          <DataField>ImportIngreso_6_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6_Format">
+          <DataField>ImportIngreso_6_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7_">
+          <DataField>ImportIngreso_7_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7_Format">
+          <DataField>ImportIngreso_7_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8_">
+          <DataField>ImportIngreso_8_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8_Format">
+          <DataField>ImportIngreso_8_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9_">
+          <DataField>ImportIngreso_9_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9_Format">
+          <DataField>ImportIngreso_9_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10_">
+          <DataField>ImportIngreso_10_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10_Format">
+          <DataField>ImportIngreso_10_Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1__">
+          <DataField>ABS_ImportEgreso_1__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1__Format">
+          <DataField>ABS_ImportEgreso_1__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2__">
+          <DataField>ABS_ImportEgreso_2__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2__Format">
+          <DataField>ABS_ImportEgreso_2__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3__">
+          <DataField>ABS_ImportEgreso_3__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3__Format">
+          <DataField>ABS_ImportEgreso_3__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4__">
+          <DataField>ABS_ImportEgreso_4__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4__Format">
+          <DataField>ABS_ImportEgreso_4__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5__">
+          <DataField>ABS_ImportEgreso_5__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5__Format">
+          <DataField>ABS_ImportEgreso_5__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6__">
+          <DataField>ABS_ImportEgreso_6__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6__Format">
+          <DataField>ABS_ImportEgreso_6__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7__">
+          <DataField>ABS_ImportEgreso_7__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7__Format">
+          <DataField>ABS_ImportEgreso_7__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8__">
+          <DataField>ABS_ImportEgreso_8__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8__Format">
+          <DataField>ABS_ImportEgreso_8__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9__">
+          <DataField>ABS_ImportEgreso_9__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9__Format">
+          <DataField>ABS_ImportEgreso_9__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10__">
+          <DataField>ABS_ImportEgreso_10__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10__Format">
+          <DataField>ABS_ImportEgreso_10__Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal">
+          <DataField>ImporteIngresoTotal</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotalFormat">
+          <DataField>ImporteIngresoTotalFormat</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_">
+          <DataField>ABS_ImportEgresoTotal_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_Format">
+          <DataField>ABS_ImportEgresoTotal_Format</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina__No__empleado_Caption">
+          <DataField>Historico_Lin__nomina__No__empleado_Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__NombreCaption">
+          <DataField>Historico_Cab__nomina__NombreCaption</DataField>
+        </Field>
+        <Field Name="txtDescCaption">
+          <DataField>txtDescCaption</DataField>
+        </Field>
+        <Field Name="TODAYCaption">
+          <DataField>TODAYCaption</DataField>
+        </Field>
+        <Field Name="TIMECaption">
+          <DataField>TIMECaption</DataField>
+        </Field>
+        <Field Name="Recibo_de_nomina_periodoCaption">
+          <DataField>Recibo_de_nomina_periodoCaption</DataField>
+        </Field>
+        <Field Name="alCaption">
+          <DataField>alCaption</DataField>
+        </Field>
+        <Field Name="TotIng___TotDedCaption">
+          <DataField>TotIng___TotDedCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__CuentaCaption">
+          <DataField>Historico_Cab__nomina__CuentaCaption</DataField>
+        </Field>
+        <Field Name="V1Caption">
+          <DataField>V1Caption</DataField>
+        </Field>
+        <Field Name="DescuentosCaption">
+          <DataField>DescuentosCaption</DataField>
+        </Field>
+        <Field Name="IngresosCaption">
+          <DataField>IngresosCaption</DataField>
+        </Field>
+        <Field Name="DescripcionCaption">
+          <DataField>DescripcionCaption</DataField>
+        </Field>
+        <Field Name="HorasCaption">
+          <DataField>HorasCaption</DataField>
+        </Field>
+        <Field Name="ValorCaption">
+          <DataField>ValorCaption</DataField>
+        </Field>
+        <Field Name="ValorCaption_Control41">
+          <DataField>ValorCaption_Control41</DataField>
+        </Field>
+        <Field Name="DescripcionCaption_Control43">
+          <DataField>DescripcionCaption_Control43</DataField>
+        </Field>
+        <Field Name="Total_ingresosCaption">
+          <DataField>Total_ingresosCaption</DataField>
+        </Field>
+        <Field Name="Total_deduccionesCaption">
+          <DataField>Total_deduccionesCaption</DataField>
+        </Field>
+        <Field Name="Agree_with_ReceiveCaption">
+          <DataField>Agree_with_ReceiveCaption</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Tipo_Nomina">
+          <DataField>Historico_Lin__nomina_Tipo_Nomina</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Periodo">
+          <DataField>Historico_Lin__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_No__Orden">
+          <DataField>Historico_Lin__nomina_No__Orden</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="Cod__Colegio___________Nombre_colegio__________traerDistrito">
+          <DataField>Cod__Colegio___________Nombre_colegio__________traerDistrito</DataField>
+        </Field>
+        <Field Name="texNombre">
+          <DataField>texNombre</DataField>
+        </Field>
+        <Field Name="TraerDescripcionCargo">
+          <DataField>TraerDescripcionCargo</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes__Cod__Nivel_">
+          <DataField>Colegio___Docentes__Cod__Nivel_</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes__Nombre_Promotor_">
+          <DataField>Colegio___Docentes__Nombre_Promotor_</DataField>
+        </Field>
+        <Field Name="texSaludo">
+          <DataField>texSaludo</DataField>
+        </Field>
+        <Field Name="codCDS">
+          <DataField>codCDS</DataField>
+        </Field>
+        <Field Name="texDocumento">
+          <DataField>texDocumento</DataField>
+        </Field>
+        <Field Name="texTelefono1">
+          <DataField>texTelefono1</DataField>
+        </Field>
+        <Field Name="texTelefono2">
+          <DataField>texTelefono2</DataField>
+        </Field>
+        <Field Name="texEmail">
+          <DataField>texEmail</DataField>
+        </Field>
+        <Field Name="datFechaNac">
+          <DataField>datFechaNac</DataField>
+        </Field>
+        <Field Name="codAño">
+          <DataField>codAño</DataField>
+        </Field>
+        <Field Name="COUNT">
+          <DataField>COUNT</DataField>
+        </Field>
+        <Field Name="Colegio___DocentesCaption">
+          <DataField>Colegio___DocentesCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="texNombreCaption">
+          <DataField>texNombreCaption</DataField>
+        </Field>
+        <Field Name="TraerDescripcionCargoCaption">
+          <DataField>TraerDescripcionCargoCaption</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes__Cod__Nivel_Caption">
+          <DataField>Colegio___Docentes__Cod__Nivel_Caption</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes__Nombre_Promotor_Caption">
+          <DataField>Colegio___Docentes__Nombre_Promotor_Caption</DataField>
+        </Field>
+        <Field Name="texSaludoCaption">
+          <DataField>texSaludoCaption</DataField>
+        </Field>
+        <Field Name="codCDSCaption">
+          <DataField>codCDSCaption</DataField>
+        </Field>
+        <Field Name="texDocumentoCaption">
+          <DataField>texDocumentoCaption</DataField>
+        </Field>
+        <Field Name="texTelefono1Caption">
+          <DataField>texTelefono1Caption</DataField>
+        </Field>
+        <Field Name="texTelefono2Caption">
+          <DataField>texTelefono2Caption</DataField>
+        </Field>
+        <Field Name="texEmailCaption">
+          <DataField>texEmailCaption</DataField>
+        </Field>
+        <Field Name="datFechaNacCaption">
+          <DataField>datFechaNacCaption</DataField>
+        </Field>
+        <Field Name="codAñoCaption">
+          <DataField>codAñoCaption</DataField>
+        </Field>
+        <Field Name="Cod__Colegio___________Nombre_colegio__________traerDistritoCaption">
+          <DataField>Cod__Colegio___________Nombre_colegio__________traerDistritoCaption</DataField>
+        </Field>
+        <Field Name="COUNTCaption">
+          <DataField>COUNTCaption</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes_Cod__Colegio">
+          <DataField>Colegio___Docentes_Cod__Colegio</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes_Cod__Local">
+          <DataField>Colegio___Docentes_Cod__Local</DataField>
+        </Field>
+        <Field Name="Colegio___Docentes_Cod__Docente">
+          <DataField>Colegio___Docentes_Cod__Docente</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

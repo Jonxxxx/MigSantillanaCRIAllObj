@@ -43,9 +43,9 @@ report 56082 "Back Orders"
             column(Sales_Line__Quantity_Shipped_; "Quantity Shipped")
             {
             }
-            column(SalesInfoPaneMgt_CalcAvailability__Sales_Line__; SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line"))
-            {
-            }
+            //TODO: Revisar metodo column(SalesInfoPaneMgt_CalcAvailability__Sales_Line__; SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line"))
+            //{
+            //}
             column(Sales_Line__Outstanding_Quantity_; "Outstanding Quantity")
             {
             }
@@ -117,8 +117,8 @@ report 56082 "Back Orders"
                 //  CurrReport.SKIP;
 
                 //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#56090
-                IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
-                    CurrReport.SKIP;
+                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
+                CurrReport.SKIP;
 
                 // Traspasado de la seccion body
                 rCliente.GET("Sell-to Customer No."); //+#139

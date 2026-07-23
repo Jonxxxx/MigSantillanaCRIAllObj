@@ -148,7 +148,7 @@ report 67006 "Cerrar campaña"
 
                 HistPromPptoVta.INIT;
                 HistPromPptoVta.TRANSFERFIELDS(PromPptoVtas);
-                HistPromPptoVta.Campaña := codCampaña;
+                HistPromPptoVta.Campana := codCampaña;
                 HistPromPptoVta.INSERT;
             end;
 

@@ -1,7 +1,9 @@
 report 56035 "Importa Lin. Compras"
 {
+    ApplicationArea = All;
     Caption = 'Import Purch. Lines';
     ProcessingOnly = true;
+    UsageCategory = Tasks;
 
     dataset
     {
@@ -12,9 +14,9 @@ report 56035 "Importa Lin. Compras"
 
             trigger OnAfterGetRecord()
             begin
-                ReadExcelSheet;
-                COMMIT;
-                AnalyzeData;
+                ReadExcelSheet();
+                Commit();
+                AnalyzeData();
             end;
         }
     }
@@ -35,34 +37,41 @@ report 56035 "Importa Lin. Compras"
                         Caption = 'Import from';
                         field(File_Name; FileName)
                         {
+                            ApplicationArea = All;
                             Caption = 'Workbook File Name';
+                            ToolTip = 'Specifies the Excel workbook to import.';
 
                             trigger OnAssistEdit()
                             begin
-                                UploadFile;
+                                UploadFile();
                             end;
 
                             trigger OnValidate()
                             begin
-                                FileNameOnAfterValidate;
+                                FileNameOnAfterValidate();
                             end;
                         }
                         field(Sheet_Name; SheetName)
                         {
+                            ApplicationArea = All;
                             Caption = 'Worksheet Name';
+                            ToolTip = 'Specifies the worksheet to import.';
 
                             trigger OnAssistEdit()
                             begin
-                                IF ISSERVICETIER THEN
-                                    SheetName := ExcelBuf.SelectSheetsName(UploadedFileName)
-                                ELSE
-                                    SheetName := ExcelBuf.SelectSheetsName(FileName);
+                                if not HasUploadedFile then
+                                    UploadFile();
+
+                                if HasUploadedFile then
+                                    SheetName := SelectWorksheet();
                             end;
                         }
                         field(DimensionProveedor; DimProv)
                         {
+                            ApplicationArea = All;
                             Caption = 'Vendor Dim. Code';
                             TableRelation = Dimension;
+                            ToolTip = 'Specifies the dimension code used for the vendor value imported from Excel.';
                         }
                     }
                     group("Data Columns")
@@ -70,23 +79,33 @@ report 56035 "Importa Lin. Compras"
                         Caption = 'Data Columns';
                         field(Cell_1; Cell1)
                         {
+                            ApplicationArea = All;
                             Caption = 'Item/G/L Account Code Cell';
+                            ToolTip = 'Specifies the first cell containing the item or G/L account code.';
                         }
                         field(Cell_2; Cell2)
                         {
+                            ApplicationArea = All;
                             Caption = 'Quantity Cell';
+                            ToolTip = 'Specifies the first cell containing the quantity.';
                         }
                         field(Cell_3; Cell3)
                         {
+                            ApplicationArea = All;
                             Caption = 'Direct Unit cost Cell';
+                            ToolTip = 'Specifies the first cell containing the direct unit cost.';
                         }
                         field(Cell_4; Cell4)
                         {
+                            ApplicationArea = All;
                             Caption = 'Employee Cell';
+                            ToolTip = 'Specifies the first cell containing the employee code.';
                         }
                         field(Cell_5; Cell5)
                         {
+                            ApplicationArea = All;
                             Caption = 'Vendor Cell';
+                            ToolTip = 'Specifies the first cell containing the vendor dimension value.';
                         }
                     }
                 }
@@ -107,17 +126,32 @@ report 56035 "Importa Lin. Compras"
         NoLin := 1000;
     end;
 
+    trigger OnPreReport()
+    begin
+        if not HasUploadedFile then
+            UploadFile();
+
+        if not HasUploadedFile then
+            Error(FileNotSelectedErr);
+
+        if SheetName = '' then
+            SheetName := SelectWorksheet();
+
+        if SheetName = '' then
+            Error(SheetNotSelectedErr);
+    end;
+
     var
-        ExcelBuf: Record 370 temporary;
-        PL: Record 39;
-        PL2: Record 39;
-        Item: Record 27;
-        GLAcc: Record 15;
-        Empl: Record 5200;
-        DefDim: Record 352;
+        ExcelBuf: Record "Excel Buffer" temporary;
+        TempBlob: Codeunit "Temp Blob";
+        PL: Record "Purchase Line";
+        PL2: Record "Purchase Line";
+        Item: Record Item;
+        GLAcc: Record "G/L Account";
+        Empl: Record Employee;
+        DefDim: Record "Default Dimension";
         Celda: Code[5];
         FileName: Text[250];
-        UploadedFileName: Text[1024];
         SheetName: Text[250];
         Window: Dialog;
         Description: Text[50];
@@ -149,7 +183,12 @@ report 56035 "Importa Lin. Compras"
         Err002: Label 'Cost can''t be zero, check line %1';
         Err003: Label 'Quantity can''t be zero, check line %1';
         Err004: Label 'G/L Account or Item code can''t be blank, check line %1';
-        ExcelFileExtensionTok: Label '.xlsx', Locked = true;
+        HasUploadedFile: Boolean;
+        ExcelFileFilterLbl: Label 'Excel files (*.xlsx)|*.xlsx';
+        UploadedWorkbookLbl: Label 'Uploaded workbook';
+        FileNotSelectedErr: Label 'You must select an Excel file.';
+        SheetNotSelectedErr: Label 'You must select an Excel worksheet.';
+        OpenBookErr: Label 'The Excel workbook could not be opened. %1';
 
     procedure RecibeParametros(TipoDoc: Integer; NoDoc: Code[20])
     begin
@@ -158,38 +197,37 @@ report 56035 "Importa Lin. Compras"
     end;
 
     local procedure ReadExcelSheet()
+    var
+        ExcelInStream: InStream;
+        OpenBookError: Text;
     begin
-        IF ISSERVICETIER THEN
-            IF UploadedFileName = '' THEN
-                UploadFile
-            ELSE
-                FileName := UploadedFileName;
+        FirstTime := true;
 
-        FirstTime := TRUE;
+        ExcelBuf.Reset();
+        ExcelBuf.DeleteAll();
 
-        ExcelBuf.OpenBook(FileName, SheetName);
-        ExcelBuf.ReadSheet;
+        TempBlob.CreateInStream(ExcelInStream);
+
+        OpenBookError := ExcelBuf.OpenBookStream(ExcelInStream, SheetName);
+        if OpenBookError <> '' then
+            Error(OpenBookErr, OpenBookError);
+
+        ExcelBuf.ReadSheet();
+        ExcelBuf.CloseBook();
     end;
 
     local procedure AnalyzeData()
     var
-        TempExcelBuf: Record 370 temporary;
-        BudgetBuf: Record 371;
-        TempBudgetBuf: Record 371 temporary;
-        HeaderRowNo: Integer;
-        CountDim: Integer;
-        TestDate: Date;
-        OldRowNo: Integer;
-        DimRowNo: Integer;
-        DimCode3: Code[20];
-        DimVal: Record 349;
-        TempDimSetEntry: Record 480 temporary;
-        DimMgt: Codeunit 408;
+        DimVal: Record "Dimension Value";
+        TempDimSetEntry: Record "Dimension Set Entry" temporary;
+        DimMgt: Codeunit DimensionManagement;
     begin
-        Window.OPEN(
-          Text007 +
-          '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
-        Window.UPDATE(1, 0);
+        if GuiAllowed() then begin
+            Window.Open(
+                Text007 +
+                '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
+            Window.Update(1, 0);
+        end;
         TotalRecNo := ExcelBuf.COUNT;
         RecNo := 0;
         FilaAnt := 0;
@@ -204,7 +242,8 @@ report 56035 "Importa Lin. Compras"
                 END;
 
                 RecNo := RecNo + 1;
-                Window.UPDATE(1, ROUND(RecNo / TotalRecNo * 10000, 1));
+                if GuiAllowed() and (TotalRecNo <> 0) then
+                    Window.Update(1, Round(RecNo / TotalRecNo * 10000, 1));
                 Celda := ExcelBuf.xlColID + ExcelBuf.xlRowID;
                 IF Celda = Cell1 THEN BEGIN
                     EVALUATE(CodProducto, ExcelBuf."Cell Value as Text");
@@ -267,9 +306,11 @@ report 56035 "Importa Lin. Compras"
                             PL.MODIFY;
 
                             DefDim.RESET;
-                            DefDim.SETRANGE("Table ID", 5200);
+                            DefDim.SETRANGE("Table ID", Database::Employee);
                             DefDim.SETRANGE("No.", Empleado);
-                            DefDim.SETRANGE("Value Posting", 2); //Igual a codigo
+                            DefDim.SETRANGE(
+                                "Value Posting",
+                                DefDim."Value Posting"::"Same Code");
                             IF DefDim.FINDSET THEN
                                 REPEAT
                                     DimVal.GET(DefDim."Dimension Code", DefDim."Dimension Value Code");
@@ -317,7 +358,8 @@ report 56035 "Importa Lin. Compras"
         IF ExcelBuf.FIND('-') THEN
             REPEAT
                 RecNo := RecNo + 1;
-                Window.UPDATE(1, ROUND(RecNo / TotalRecNo * 10000, 1));
+                if GuiAllowed() and (TotalRecNo <> 0) then
+                    Window.Update(1, Round(RecNo / TotalRecNo * 10000, 1));
                 Celda := ExcelBuf.xlColID + ExcelBuf.xlRowID;
                 IF Celda = Cell1 THEN BEGIN
                     EVALUATE(CodProducto, ExcelBuf."Cell Value as Text");
@@ -380,9 +422,11 @@ report 56035 "Importa Lin. Compras"
                             PL.MODIFY;
 
                             DefDim.RESET;
-                            DefDim.SETRANGE("Table ID", 5200);
+                            DefDim.SETRANGE("Table ID", Database::Employee);
                             DefDim.SETRANGE("No.", Empleado);
-                            DefDim.SETRANGE("Value Posting", 2); //Igual a codigo
+                            DefDim.SETRANGE(
+                                "Value Posting",
+                                DefDim."Value Posting"::"Same Code");
                             IF DefDim.FINDSET THEN
                                 REPEAT
                                     DimVal.GET(DefDim."Dimension Code", DefDim."Dimension Value Code");
@@ -410,22 +454,42 @@ report 56035 "Importa Lin. Compras"
                 END;
             UNTIL ExcelBuf.NEXT = 0;
 
-        Window.CLOSE;
+        if GuiAllowed() then
+            Window.Close();
     end;
 
     procedure UploadFile()
     var
-        FileMgt: Codeunit 419;
-        ClientFileName: Text[1024];
+        UploadInStream: InStream;
+        BlobOutStream: OutStream;
     begin
-        UploadedFileName := FileMgt.UploadFile(Text006, ExcelFileExtensionTok);
+        if not UploadIntoStream(ExcelFileFilterLbl, UploadInStream) then
+            exit;
 
-        FileName := UploadedFileName;
+        Clear(TempBlob);
+        TempBlob.CreateOutStream(BlobOutStream);
+        CopyStream(BlobOutStream, UploadInStream);
+        Clear(BlobOutStream);
+
+        HasUploadedFile := true;
+        FileName := UploadedWorkbookLbl;
+        SheetName := SelectWorksheet();
+    end;
+
+    local procedure SelectWorksheet(): Text[250]
+    var
+        ExcelInStream: InStream;
+    begin
+        if not HasUploadedFile then
+            Error(FileNotSelectedErr);
+
+        TempBlob.CreateInStream(ExcelInStream);
+        exit(ExcelBuf.SelectSheetsNameStream(ExcelInStream));
     end;
 
     local procedure FileNameOnAfterValidate()
     begin
-        UploadFile;
+        UploadFile();
     end;
 }
 

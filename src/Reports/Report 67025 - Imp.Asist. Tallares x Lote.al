@@ -1,25 +1,29 @@
 report 67025 "Imp.Asist. Tallares x Lote"
 {
+    ApplicationArea = All;
     Caption = 'Import Assistance workshops by Lot';
     ProcessingOnly = true;
+    UsageCategory = Tasks;
 
     dataset
     {
-        dataitem("Integer"; 2000000026)
+        dataitem(Integer; Integer)
         {
-            DataItemTableView = SORTING(Number)
-                                WHERE(Number = CONST(1));
+            DataItemTableView = sorting(Number)
+                                where(Number = const(1));
 
             trigger OnAfterGetRecord()
             begin
-                ReadExcelSheet;
-                AnalyzeData;
+                ReadExcelSheet();
+                AnalyzeData();
             end;
 
             trigger OnPostDataItem()
             begin
-                Window.CLOSE;
-                MESSAGE(Text001);
+                if GuiAllowed() then begin
+                    Window.Close();
+                    Message(ImportCompletedLbl);
+                end;
             end;
         }
     }
@@ -32,138 +36,213 @@ report 67025 "Imp.Asist. Tallares x Lote"
         {
             area(content)
             {
-                field("Nombre Fichero"; FileName)
+                field(FileNameField; FileName)
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Fichero';
+                    ToolTip = 'Specifies the Excel workbook to import.';
 
                     trigger OnAssistEdit()
                     begin
-                        UploadFile;
+                        UploadFile();
+                    end;
+
+                    trigger OnValidate()
+                    begin
+                        FileNameOnAfterValidate();
                     end;
                 }
-                field("Nombre Hoja"; SheetName)
+
+                field(SheetNameField; SheetName)
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Hoja';
+                    ToolTip = 'Specifies the worksheet to import.';
 
                     trigger OnAssistEdit()
                     begin
-                        IF ISSERVICETIER THEN
-                            SheetName := ExcelBuf.SelectSheetsName(UploadedFileName)
-                        ELSE
-                            SheetName := ExcelBuf.SelectSheetsName(FileName);
+                        if not HasUploadedFile then
+                            UploadFile();
+
+                        if HasUploadedFile then
+                            SheetName := SelectWorksheet();
                     end;
                 }
             }
         }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     trigger OnPreReport()
-    var
-        BusUnit: Record 220;
     begin
+        if not HasUploadedFile then
+            UploadFile();
+
+        if not HasUploadedFile then
+            Error(FileNotSelectedErr);
+
+        if SheetName = '' then
+            SheetName := SelectWorksheet();
+
+        if SheetName = '' then
+            Error(SheetNotSelectedErr);
     end;
 
     var
-        ExcelBuf: Record 370 temporary;
+        ExcelBuf: Record "Excel Buffer" temporary;
         PlanifEvento: Record 67051;
         "Asist_T&E": Record 67016;
         Docente: Record 67001;
+        TempBlob: Codeunit "Temp Blob";
         FileName: Text[250];
-        UploadedFileName: Text[1024];
         SheetName: Text[250];
         RecNo: Integer;
         CodTaller: Code[20];
         CodDocente: Code[20];
         Window: Dialog;
         TotalRecNo: Integer;
-        wNreg: Integer;
-        UltFila: Integer;
-        Text007: Label 'Analyzing Data...\\';
-        Text006: Label 'Import Excel File';
-        Text001: Label 'Import completed, please review';
+        HasUploadedFile: Boolean;
+        AnalyzingDataLbl: Label 'Analyzing Data...\\';
+        ExcelFileFilterLbl: Label 'Excel files (*.xlsx)|*.xlsx';
+        UploadedWorkbookLbl: Label 'Uploaded workbook';
+        ImportCompletedLbl: Label 'Import completed, please review';
+        FileNotSelectedErr: Label 'You must select an Excel file.';
+        SheetNotSelectedErr: Label 'You must select an Excel worksheet.';
+        OpenBookErr: Label 'The Excel workbook could not be opened. %1';
 
     local procedure ReadExcelSheet()
+    var
+        ExcelInStream: InStream;
+        OpenBookError: Text;
     begin
-        IF ISSERVICETIER THEN
-            IF UploadedFileName = '' THEN
-                UploadFile
-            ELSE
-                FileName := UploadedFileName;
+        ExcelBuf.Reset();
+        ExcelBuf.DeleteAll();
 
-        ExcelBuf.OpenBook(FileName, SheetName);
-        ExcelBuf.ReadSheet;
+        TempBlob.CreateInStream(ExcelInStream);
+
+        OpenBookError :=
+            ExcelBuf.OpenBookStream(
+                ExcelInStream,
+                SheetName);
+
+        if OpenBookError <> '' then
+            Error(OpenBookErr, OpenBookError);
+
+        ExcelBuf.ReadSheet();
+        ExcelBuf.CloseBook();
     end;
 
     local procedure AnalyzeData()
-    var
-        TempExcelBuf: Record 370 temporary;
-        BudgetBuf: Record 371;
-        TempBudgetBuf: Record 371 temporary;
-        HeaderRowNo: Integer;
-        CountDim: Integer;
-        TestDate: Date;
-        OldRowNo: Integer;
-        DimRowNo: Integer;
-        DimCode3: Code[20];
     begin
-        Window.OPEN(
-          Text007 +
-          '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
-        Window.UPDATE(1, 0);
-        TotalRecNo := ExcelBuf.COUNT;
+        if GuiAllowed() then begin
+            Window.Open(
+                AnalyzingDataLbl +
+                '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
+            Window.Update(1, 0);
+        end;
+
+        TotalRecNo := ExcelBuf.Count();
         RecNo := 0;
 
-        IF ExcelBuf.FIND('-') THEN
-            REPEAT
-                RecNo := RecNo + 1;
-                Window.UPDATE(1, ROUND(RecNo / TotalRecNo * 10000, 1));
+        if ExcelBuf.Find('-') then
+            repeat
+                RecNo += 1;
 
-                CLEAR("Asist_T&E");
-                CodTaller := ExcelBuf."Cell Value as Text";
+                if GuiAllowed() and (TotalRecNo <> 0) then
+                    Window.Update(
+                        1,
+                        Round(
+                            RecNo / TotalRecNo * 10000,
+                            1));
 
-                PlanifEvento.RESET;
-                PlanifEvento.SETRANGE("Cod. Taller - Evento", CodTaller);
-                PlanifEvento.FINDFIRST;
+                Clear("Asist_T&E");
 
-                ExcelBuf.NEXT(1);
-                CodDocente := ExcelBuf."Cell Value as Text";
-                Docente.RESET;
-                Docente.SETRANGE("Document ID", CodDocente);
-                Docente.FINDFIRST;
+                CodTaller :=
+                    ExcelBuf."Cell Value as Text";
 
-                CLEAR("Asist_T&E");
-                "Asist_T&E".VALIDATE("Tipo Evento", PlanifEvento."Tipo Evento");
-                "Asist_T&E".VALIDATE("Cod. Taller - Evento", CodTaller);
-                "Asist_T&E".VALIDATE("Cod. Expositor", PlanifEvento.Expositor);
-                "Asist_T&E".Secuencia := PlanifEvento.Secuencia;
-                "Asist_T&E".VALIDATE("Cod. Docente", Docente."No.");
-                IF "Asist_T&E".INSERT(TRUE) THEN;
+                PlanifEvento.Reset();
+                PlanifEvento.SetRange(
+                    "Cod. Taller - Evento",
+                    CodTaller);
+                PlanifEvento.FindFirst();
 
-                RecNo := RecNo + 1;
-            UNTIL ExcelBuf.NEXT = 0;
+                ExcelBuf.Next(1);
+
+                CodDocente :=
+                    ExcelBuf."Cell Value as Text";
+
+                Docente.Reset();
+                Docente.SetRange(
+                    "Document ID",
+                    CodDocente);
+                Docente.FindFirst();
+
+                Clear("Asist_T&E");
+
+                "Asist_T&E".Validate(
+                    "Tipo Evento",
+                    PlanifEvento."Tipo Evento");
+
+                "Asist_T&E".Validate(
+                    "Cod. Taller - Evento",
+                    CodTaller);
+
+                "Asist_T&E".Validate(
+                    "Cod. Expositor",
+                    PlanifEvento.Expositor);
+
+                "Asist_T&E".Secuencia :=
+                    PlanifEvento.Secuencia;
+
+                "Asist_T&E".Validate(
+                    "Cod. Docente",
+                    Docente."No.");
+
+                if not "Asist_T&E".Insert(true) then
+                    Clear("Asist_T&E");
+
+                RecNo += 1;
+            until ExcelBuf.Next() = 0;
     end;
 
     procedure UploadFile()
     var
-        CommonDialogMgt: Codeunit 419;
-        ClientFileName: Text[1024];
+        UploadInStream: InStream;
+        BlobOutStream: OutStream;
     begin
-        //UploadedFileName := CommonDialogMgt.OpenFile(Text006,ClientFileName,2,'',0);
-        UploadedFileName := CommonDialogMgt.UploadFile(Text006, ClientFileName);
-        FileName := UploadedFileName;
+        if not UploadIntoStream(
+             ExcelFileFilterLbl,
+             UploadInStream)
+        then
+            exit;
+
+        Clear(TempBlob);
+        TempBlob.CreateOutStream(BlobOutStream);
+
+        CopyStream(
+            BlobOutStream,
+            UploadInStream);
+
+        HasUploadedFile := true;
+        FileName := UploadedWorkbookLbl;
+        SheetName := SelectWorksheet();
+    end;
+
+    local procedure SelectWorksheet(): Text[250]
+    var
+        ExcelInStream: InStream;
+    begin
+        if not HasUploadedFile then
+            Error(FileNotSelectedErr);
+
+        TempBlob.CreateInStream(ExcelInStream);
+
+        exit(
+            ExcelBuf.SelectSheetsNameStream(
+                ExcelInStream));
     end;
 
     local procedure FileNameOnAfterValidate()
     begin
-        UploadFile;
+        UploadFile();
     end;
 }
-

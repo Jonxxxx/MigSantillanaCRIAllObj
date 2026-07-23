@@ -159,7 +159,7 @@ report 56535 "Lista Global Picking"
                 dataitem(WhseActLine; 5767)
                 {
                     DataItemLink = "Activity Type" = FIELD(Type),
-                                   No.=FIELD("No.");
+                                   "No." = FIELD("No.");
                     DataItemLinkReference = "Warehouse Activity Header";
                     DataItemTableView = SORTING("Activity Type", "No.", "Sorting Sequence No.")
                                         WHERE("Action Type" = FILTER(= Take));
@@ -329,8 +329,8 @@ report 56535 "Lista Global Picking"
             dataitem("Sales Comment Line"; 44)
             {
                 DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
-                                    ORDER(Ascending)
-                                    WHERE("Print On Pick Ticket" = FILTER(Yes));
+                                    ORDER(Ascending);
+                //TODO: Ver WHERE("Print On Pick Ticket" = FILTER(Yes));
                 column(ComentarioVta; 'VTA')
                 {
                 }

@@ -14,21 +14,21 @@ report 56036 "Ajusta Backorder"
                 SL.SETRANGE("Document No.", "No.");
                 IF SL.FINDSET THEN
                     REPEAT
-                        IF SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0 THEN BEGIN
-                            WHSL.RESET;
-                            WHSL.SETRANGE("Source No.", SL."Document No.");
-                            WHSL.SETRANGE("Item No.", SL."No.");
-                            IF NOT WHSL.FINDFIRST THEN BEGIN
-                                Ajuste := 0;
-                                Ajuste := SL.Quantity - SL."Quantity Shipped";
-                                SL.Quantity := SL."Quantity Shipped";
-                                SL.VALIDATE(Quantity);
-                                Cust.GET("Sales Header"."Sell-to Customer No.");
-                                IF Cust."Admite Pendientes en Pedidos" THEN
-                                    SL."Cantidad pendiente BO" := Ajuste;
-                                SL.MODIFY;
-                            END;
-                        END
+                        //TODO: Ver metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0 THEN BEGIN
+                        WHSL.RESET;
+                        WHSL.SETRANGE("Source No.", SL."Document No.");
+                        WHSL.SETRANGE("Item No.", SL."No.");
+                        IF NOT WHSL.FINDFIRST THEN BEGIN
+                            Ajuste := 0;
+                            Ajuste := SL.Quantity - SL."Quantity Shipped";
+                            SL.Quantity := SL."Quantity Shipped";
+                            SL.VALIDATE(Quantity);
+                            Cust.GET("Sales Header"."Sell-to Customer No.");
+                            IF Cust."Admite Pendientes en Pedidos" THEN
+                                SL."Cantidad pendiente BO" := Ajuste;
+                            SL.MODIFY;
+                        END;
+                    //TODO: Ver metodo END
 
                     UNTIL SL.NEXT = 0;
             end;

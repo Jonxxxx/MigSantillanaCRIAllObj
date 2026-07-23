@@ -492,8 +492,8 @@ report 52500 "Cheque Generico Costa Rica"
                                       CurrName := Txt003;
                                     */
 
-                                    IF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
-                                        ERROR(DescriptionLine[1]);
+                                    //TODO: VerIF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
+                                    ERROR(DescriptionLine[1]);
                                     VoidText := '';
 
                                     //AMS para cheques con monto en texto muy largos
@@ -768,11 +768,13 @@ report 52500 "Cheque Generico Costa Rica"
                                 NoCta := GenJnlLine."Account No.";
                                 NombCta := GLAcc.Name;
                                 CheckToAddr[1] := GenJnlLine.Description;
+                                //TODO: Ver
+                                /*
                                 SetCheckPrintParams(
                                   BankAcc2."Check Date Format",
                                   BankAcc2."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc2."Bank Communication");
+                                  BankAcc2."Bank Communication");*/
                             END;
                         BalancingType::Customer:
                             BEGIN
@@ -794,11 +796,13 @@ report 52500 "Cheque Generico Costa Rica"
                                     ContactText := Text006;
                                     SalesPurchPerson.GET(Cust."Salesperson Code");
                                 END;
+                                //TODO: Ver
+                                /*
                                 SetCheckPrintParams(
                                   Cust."Check Date Format",
                                   Cust."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Cust."Bank Communication");
+                                  Cust."Bank Communication");*/
                             END;
                         BalancingType::Vendor:
                             BEGIN
@@ -820,11 +824,13 @@ report 52500 "Cheque Generico Costa Rica"
                                     ContactText := Text007;
                                     SalesPurchPerson.GET(Vend."Purchaser Code");
                                 END;
+                                //TODO: Ver
+                                /*
                                 SetCheckPrintParams(
                                   Vend."Check Date Format",
                                   Vend."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Vend."Bank Communication");
+                                  Vend."Bank Communication");*/
                             END;
                         BalancingType::"Bank Account":
                             BEGIN
@@ -832,9 +838,11 @@ report 52500 "Cheque Generico Costa Rica"
                                 BankAcc.TESTFIELD(Blocked, FALSE);
                                 BankAcc.Contact := '';
                                 BankPostingGr.GET(BankAcc."Bank Acc. Posting Group");
+                                //TODO: Ver
+                                /*
                                 BankPostingGr.TESTFIELD("G/L Bank Account No.");
                                 GLAcc.GET(BankPostingGr."G/L Bank Account No.");
-                                NoCta := BankPostingGr."G/L Bank Account No.";
+                                NoCta := BankPostingGr."G/L Bank Account No.";*/
                                 NombCta := GLAcc.Name;
 
                                 FormatAddr.BankAcc(CheckToAddr, BankAcc);
@@ -844,11 +852,13 @@ report 52500 "Cheque Generico Costa Rica"
                                     ContactText := Text009;
                                     SalesPurchPerson.GET(BankAcc."Our Contact Code");
                                 END;
+                                //TODO: Ver
+                                /*
                                 SetCheckPrintParams(
                                   BankAcc."Check Date Format",
                                   BankAcc."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc."Bank Communication");
+                                  BankAcc."Bank Communication");*/
                             END;
                     END;
 
@@ -883,22 +893,26 @@ report 52500 "Cheque Generico Costa Rica"
                                 BankAcc.GET(BalancingNo2);
                                 BankAcc.TESTFIELD(Blocked, FALSE);
                                 BankPostingGr.GET(BankAcc."Bank Acc. Posting Group");
+                                //TODO: Ver
+                                /*
                                 BankPostingGr.TESTFIELD("G/L Bank Account No.");
                                 GLAcc.GET(BankPostingGr."G/L Bank Account No.");
-                                NoCta2 := BankPostingGr."G/L Bank Account No.";
+                                NoCta2 := BankPostingGr."G/L Bank Account No.";*/
                                 NombCta2 := GLAcc.Name;
                             END;
                     END;
-                    CheckDateText :=
-                      ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
+                    //TODO: VerCheckDateText :=
+                    //TODO: VerChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
                 END ELSE BEGIN
                     IF ChecksPrinted > 0 THEN
                         CurrReport.BREAK;
-                    SetCheckPrintParams(
-                      BankAcc2."Check Date Format",
-                      BankAcc2."Check Date Separator",
-                      BankAcc2."Country/Region Code",
-                      BankAcc2."Bank Communication");
+                    //TODO: Ver
+                    /*
+                        SetCheckPrintParams(
+                        BankAcc2."Check Date Format",
+                        BankAcc2."Check Date Separator",
+                        BankAcc2."Country/Region Code",
+                        BankAcc2."Bank Communication");*/
                     BalancingType := BalancingType::Vendor;
                     BalancingNo := Text010;
                     CLEAR(CheckToAddr);
@@ -958,8 +972,7 @@ report 52500 "Cheque Generico Costa Rica"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(BankAcc2."No.";
-                        BankAcc2."No.")
+                    field("No."; BankAcc2."No.")
                     {
                         Caption = 'Bank Account';
                         TableRelation = "Bank Account";
@@ -1081,8 +1094,8 @@ report 52500 "Cheque Generico Costa Rica"
         WindowsLang: Record 2000000045;
         FormatAddr: Codeunit 365;
         CheckManagement: Codeunit 367;
-        ParagraphHandling: Codeunit 10025;
-        ChkTransMgt: Report 10400;
+        //TODO: VerParagraphHandling: Codeunit 10025;
+        //TODO: VerChkTransMgt: Report 10400;
         CompanyAddr: array[8] of Text[50];
         CheckToAddr: array[8] of Text[50];
         BalancingType: Option "G/L Account",Customer,Vendor,"Bank Account";
@@ -1391,6 +1404,8 @@ report 52500 "Cheque Generico Costa Rica"
             ELSE
                 CheckLanguage := 1033;
         END;
+        //TODO: Ver
+        /*
         CASE NewCountryCode OF
             CompanyInfo."Country/Region Code":
                 BEGIN
@@ -1409,6 +1424,7 @@ report 52500 "Cheque Generico Costa Rica"
             ELSE
                 CheckStyle := CheckStyle::US;
         END;
+        */
         IF CheckLanguage <> WindowsLang."Language ID" THEN
             WindowsLang.GET(CheckLanguage);
         IF NOT WindowsLang."Globally Enabled" THEN BEGIN

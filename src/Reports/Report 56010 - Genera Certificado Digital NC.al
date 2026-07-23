@@ -17,7 +17,7 @@ report 56010 "Genera Certificado Digital NC"
                     CurrReport.SKIP;
 
 
-                cuFE.NotaCR("Sales Cr.Memo Header");
+                //TODO: Ver cuFE.NotaCR("Sales Cr.Memo Header");
             end;
         }
     }

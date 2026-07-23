@@ -121,69 +121,69 @@ report 56526 "Kardex por proveedor"
             dataitem("Vendor Ledger Entry"; 25)
             {
                 DataItemLink = "Vendor No." = FIELD("No."),
-                               Posting Date=FIELD("Date Filter"),
-                               Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
-                               Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
-                               Date Filter=FIELD("Date Filter");
-                DataItemTableView = SORTING("Vendor No.","Posting Date");
-                column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY__;StartBalanceLCY + "Amount (LCY)")
+                               "Posting Date" = FIELD("Date Filter"),
+                               "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
+                               "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
+                               "Date Filter" = FIELD("Date Filter");
+                DataItemTableView = SORTING("Vendor No.", "Posting Date");
+                column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY__; StartBalanceLCY + "Amount (LCY)")
                 {
                     AutoFormatType = 1;
                 }
-                column(Cust__Ledger_Entry__Posting_Date_;FORMAT("Posting Date"))
+                column(Cust__Ledger_Entry__Posting_Date_; FORMAT("Posting Date"))
                 {
                 }
-                column(Cust__Ledger_Entry__Document_Type_;"Document Type")
+                column(Cust__Ledger_Entry__Document_Type_; "Document Type")
                 {
                 }
-                column(Cust__Ledger_Entry__Document_No__;"Document No.")
+                column(Cust__Ledger_Entry__Document_No__; "Document No.")
                 {
                 }
-                column(Cust__Ledger_Entry_Description;Description)
+                column(Cust__Ledger_Entry_Description; Description)
                 {
                 }
-                column(CustEntryDueDate;FORMAT(CustEntryDueDate))
+                column(CustEntryDueDate; FORMAT(CustEntryDueDate))
                 {
                 }
-                column(Cust__Ledger_Entry__Entry_No__;"Entry No.")
+                column(Cust__Ledger_Entry__Entry_No__; "Entry No.")
                 {
                 }
-                column(CustBalanceLCY;CustBalanceLCY)
-                {
-                    AutoFormatType = 1;
-                }
-                column(Cust__Ledger_Entry__Currency_Code_;"Currency Code")
-                {
-                }
-                column(Cust__Ledger_Entry_Amount;Amount)
-                {
-                }
-                column(Cust__Ledger_Entry__Amount__LCY__;"Amount (LCY)")
-                {
-                }
-                column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY___Control59;StartBalanceLCY + "Amount (LCY)")
+                column(CustBalanceLCY; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
-                column(ContinuedCaption;ContinuedCaptionLbl)
+                column(Cust__Ledger_Entry__Currency_Code_; "Currency Code")
                 {
                 }
-                column(ContinuedCaption_Control46;ContinuedCaption_Control46Lbl)
+                column(Cust__Ledger_Entry_Amount; Amount)
                 {
                 }
-                column(Vendor_Ledger_Entry_Vendor_No_;"Vendor No.")
+                column(Cust__Ledger_Entry__Amount__LCY__; "Amount (LCY)")
                 {
                 }
-                column(Vendor_Ledger_Entry_Posting_Date;"Posting Date")
+                column(StartBalanceLCY___StartBalAdjLCY____Amount__LCY___Control59; StartBalanceLCY + "Amount (LCY)")
+                {
+                    AutoFormatType = 1;
+                }
+                column(ContinuedCaption; ContinuedCaptionLbl)
                 {
                 }
-                column(Vendor_Ledger_Entry_Global_Dimension_2_Code;"Global Dimension 2 Code")
+                column(ContinuedCaption_Control46; ContinuedCaption_Control46Lbl)
                 {
                 }
-                column(Vendor_Ledger_Entry_Global_Dimension_1_Code;"Global Dimension 1 Code")
+                column(Vendor_Ledger_Entry_Vendor_No_; "Vendor No.")
                 {
                 }
-                column(Vendor_Ledger_Entry_Date_Filter;"Date Filter")
+                column(Vendor_Ledger_Entry_Posting_Date; "Posting Date")
+                {
+                }
+                column(Vendor_Ledger_Entry_Global_Dimension_2_Code; "Global Dimension 2 Code")
+                {
+                }
+                column(Vendor_Ledger_Entry_Global_Dimension_1_Code; "Global Dimension 1 Code")
+                {
+                }
+                column(Vendor_Ledger_Entry_Date_Filter; "Date Filter")
                 {
                 }
 
@@ -194,9 +194,9 @@ report 56526 "Kardex por proveedor"
                     CustLedgEntryExists := TRUE;
                     CustBalanceLCY := CustBalanceLCY + "Amount (LCY)";
                     IF ("Document Type" = "Document Type"::Payment) OR ("Document Type" = "Document Type"::Refund) THEN
-                      CustEntryDueDate := 0D
+                        CustEntryDueDate := 0D
                     ELSE
-                      CustEntryDueDate := "Due Date";
+                        CustEntryDueDate := "Due Date";
                 end;
 
                 trigger OnPreDataItem()
@@ -205,29 +205,29 @@ report 56526 "Kardex por proveedor"
                     CurrReport.CREATETOTALS("Amount (LCY)");
                 end;
             }
-            dataitem("Integer";2000000026)
+            dataitem("Integer"; 2000000026)
             {
                 DataItemTableView = SORTING(Number)
-                                    WHERE(Number=CONST(1));
-                column(CustBalanceLCY_Control62;CustBalanceLCY)
+                                    WHERE(Number = CONST(1));
+                column(CustBalanceLCY_Control62; CustBalanceLCY)
                 {
                     AutoFormatType = 1;
                 }
-                column(StartBalanceLCY_footer;StartBalanceLCY)
+                column(StartBalanceLCY_footer; StartBalanceLCY)
                 {
                 }
-                column(Vendor_Name_Control48;Vendor.Name)
+                column(Vendor_Name_Control48; Vendor.Name)
                 {
                 }
-                column(Integer_Number;Number)
+                column(Integer_Number; Number)
                 {
                 }
 
                 trigger OnAfterGetRecord()
                 begin
                     IF NOT CustLedgEntryExists AND ((StartBalanceLCY = 0) OR ExcludeBalanceOnly) THEN BEGIN
-                      StartBalanceLCY := 0;
-                      CurrReport.SKIP;
+                        StartBalanceLCY := 0;
+                        CurrReport.SKIP;
                     END;
                 end;
             }
@@ -235,18 +235,18 @@ report 56526 "Kardex por proveedor"
             trigger OnAfterGetRecord()
             begin
                 IF ISSERVICETIER THEN BEGIN
-                  IF PrintOnlyOnePerPage THEN
-                    PageGroupNo := PageGroupNo + 1;
+                    IF PrintOnlyOnePerPage THEN
+                        PageGroupNo := PageGroupNo + 1;
                 END;
 
                 StartBalanceLCY := 0;
                 IF CustDateFilter <> '' THEN BEGIN
-                  IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
-                    SETRANGE("Date Filter",0D,GETRANGEMIN("Date Filter") - 1);
-                    CALCFIELDS("Net Change (LCY)");
-                    StartBalanceLCY := "Net Change (LCY)";
-                    SETFILTER("Date Filter", CustDateFilter);
-                  END;
+                    IF GETRANGEMIN("Date Filter") <> 0D THEN BEGIN
+                        SETRANGE("Date Filter", 0D, GETRANGEMIN("Date Filter") - 1);
+                        CALCFIELDS("Net Change (LCY)");
+                        StartBalanceLCY := "Net Change (LCY)";
+                        SETFILTER("Date Filter", CustDateFilter);
+                    END;
                 END;
                 CurrReport.PRINTONLYIFDETAIL := ExcludeBalanceOnly OR (StartBalanceLCY = 0);
                 CustBalanceLCY := StartBalanceLCY;
@@ -256,7 +256,7 @@ report 56526 "Kardex por proveedor"
             begin
                 PageGroupNo := 1;
                 CurrReport.NEWPAGEPERRECORD := PrintOnlyOnePerPage;
-                CurrReport.CREATETOTALS("Vendor Ledger Entry"."Amount (LCY)",StartBalanceLCY);
+                CurrReport.CREATETOTALS("Vendor Ledger Entry"."Amount (LCY)", StartBalanceLCY);
             end;
         }
     }
@@ -272,11 +272,11 @@ report 56526 "Kardex por proveedor"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(PrintOnlyOnePerPage;PrintOnlyOnePerPage)
+                    field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
                         Caption = 'New Page per Vendor';
                     }
-                    field(ExcludeBalanceOnly;ExcludeBalanceOnly)
+                    field(ExcludeBalanceOnly; ExcludeBalanceOnly)
                     {
                         Caption = 'Exclude Vendors That Have a Balance Only';
                         MultiLine = true;

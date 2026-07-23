@@ -19,10 +19,10 @@ report 56200 "Enviar IRM"
 
                     //+#72814
                     //  InfComp.IRM(FechaIni, FechaFin, Employee."No.");
-                    InfComp.IRM(FechaIni, FechaFin, Employee."No.", FALSE);
+                    //TODO: Ver InfComp.IRM(FechaIni, FechaFin, Employee."No.", FALSE);
                 END
                 ELSE BEGIN
-                    InfComp.IRM(FechaIni, FechaFin, Employee.GETFILTER("No."), TRUE);
+                    //TODO: Ver InfComp.IRM(FechaIni, FechaFin, Employee.GETFILTER("No."), TRUE);
                     CurrReport.BREAK;
                 END;
                 //-#72814
@@ -53,7 +53,7 @@ report 56200 "Enviar IRM"
         {
             area(content)
             {
-                group("Envio")
+                group("EnvioG")
                 {
                     Caption = 'Envio';
                     field(Envio; Envio)

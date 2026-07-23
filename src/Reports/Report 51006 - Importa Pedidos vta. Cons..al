@@ -7,115 +7,118 @@ report 51006 "Importa Pedidos vta. Cons."
 
     dataset
     {
-        dataitem("Excel Buffer"; 370)
+        dataitem("Excel Buffer"; "Excel Buffer")
         {
-            DataItemTableView = SORTING("Row No.", "Column No.")
-                                ORDER(Ascending);
+            DataItemTableView = sorting("Row No.", "Column No.")
+                                order(Ascending);
+            UseTemporary = true;
 
             trigger OnAfterGetRecord()
             begin
-                /*
-                rSalesLine.RESET;
-                rSalesLine.SETRANGE("Document No.",NoPedido);
-                IF rSalesLine.FINDLAST THEN
-                  NoLinea := rSalesLine."Line No."
-                ELSE
-                */
                 NoLinea += 10000;
 
-                //Creamos la linea temporal
-                rSalesLineTMP.INIT;
-                rSalesLineTMP."Document Type" := 1;
+                // Create the temporary sales line.
+                rSalesLineTMP.Init();
+                rSalesLineTMP."Document Type" :=
+                    rSalesLineTMP."Document Type"::Order;
                 rSalesLineTMP."Document No." := NoPedido;
                 rSalesLineTMP."Line No." := NoLinea;
-                rSalesLineTMP.Type := 2;
+                rSalesLineTMP.Type := rSalesLineTMP.Type::Item;
                 rSalesLineTMP."No." := "Cell Value as Text";
-                rSalesLineTMP.INSERT;
-                NEXT(3);
+                rSalesLineTMP.Insert();
 
+                Next(3);
             end;
 
             trigger OnPreDataItem()
+            var
+                ExcelInStream: InStream;
+                OpenBookError: Text;
             begin
-                DELETEALL;
-                OpenBook(FileName, Sheetname);
+                DeleteAll();
+
+                TempBlob.CreateInStream(ExcelInStream);
+
+                OpenBookError :=
+                    OpenBookStream(ExcelInStream, SheetName);
+
+                if OpenBookError <> '' then
+                    Error(ExcelImportErr, OpenBookError);
+
                 ReadSheet();
-                SETRANGE(xlColID, 'A', 'F');
+
+                SetRange(xlColID, 'A', 'F');
             end;
         }
-    }
-
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     trigger OnPostReport()
     begin
-        //Eliminamos las lineas de productos que no esten en el documento excel
-        rSalesLine.RESET;
-        rSalesLine.SETRANGE("Document Type", 1);
-        rSalesLine.SETRANGE("Document No.", NoPedido);
-        IF rSalesLine.FINDSET THEN
-            REPEAT
-                rSalesLineTMP.RESET;
-                rSalesLineTMP.SETRANGE(rSalesLineTMP."No.", rSalesLine."No.");
-                IF NOT rSalesLineTMP.FINDFIRST THEN BEGIN
-                    rSalesLine1.GET(rSalesLine."Document Type", rSalesLine."Document No.", rSalesLine."Line No.");
-                    rSalesLine1.DELETE;
-                END;
-            UNTIL rSalesLine.NEXT = 0;
+        // Delete product lines that are not present in the Excel document.
+        rSalesLine.Reset();
+        rSalesLine.SetRange(
+            "Document Type",
+            rSalesLine."Document Type"::Order);
+        rSalesLine.SetRange("Document No.", NoPedido);
+
+        if rSalesLine.FindSet() then
+            repeat
+                rSalesLineTMP.Reset();
+                rSalesLineTMP.SetRange("No.", rSalesLine."No.");
+
+                if not rSalesLineTMP.FindFirst() then begin
+                    rSalesLine1.Get(
+                        rSalesLine."Document Type",
+                        rSalesLine."Document No.",
+                        rSalesLine."Line No.");
+                    rSalesLine1.Delete();
+                end;
+            until rSalesLine.Next() = 0;
     end;
 
     trigger OnPreReport()
     begin
-        NoPedido := CFuncSantillana.EnviaNoTransferencia;
+        NoPedido := CFuncSantillana.EnviaNoTransferencia();
+        UploadExcelFile();
     end;
 
     var
-        rExcelBuffer: Record 370;
-        FileName: Text[1024];
-        Sheetname: Text[1024];
-        NoProd: Code[20];
-        wCantidad: Text[30];
+        rExcelBuffer: Record "Excel Buffer" temporary;
+        rSalesLine: Record "Sales Line";
+        rSalesLine1: Record "Sales Line";
+        rSalesLineTMP: Record 51003 temporary;
+        TempBlob: Codeunit "Temp Blob";
+        CFuncSantillana: Codeunit 56000;
+        SheetName: Text[250];
         NoLinea: Integer;
         NoPedido: Code[20];
-        CodAlmacenCliente: Code[20];
-        CodAlmacenOrigen: Code[20];
-        I: Integer;
-        Text000: Label 'Analyzing Data...\\';
-        Text001: Label 'Filters';
-        Text002: Label 'Update Workbook';
-        CodAlmacenTransito: Code[20];
-        CFuncSantillana: Codeunit 56000;
-        rSalesHeader: Record 36;
-        rSalesLine: Record 37;
-        rSalesLineTMP: Record 51003 temporary;
-        txtPrecio: Text[30];
-        txtDescuento: Text[30];
-        wPrecio: Decimal;
-        wDescuento: Decimal;
-        rSalesHeader1: Record 36;
-        Pedido: Boolean;
-        Factura: Boolean;
-        rSalesInvHeader: Record 112;
-        txt003: Label 'At least one Order/Invoice have this External document No. %1 Confirm that you want to import the order';
-        rSalesLine1: Record 37;
+        ExcelFileFilterLbl: Label 'Excel files (*.xlsx)|*.xlsx';
+        FileNotSelectedErr: Label 'You must select an Excel file.';
+        SheetNotSelectedErr: Label 'You must select an Excel worksheet.';
+        ExcelImportErr: Label 'The Excel file could not be opened. %1';
+
+    local procedure UploadExcelFile()
+    var
+        UploadInStream: InStream;
+        SheetInStream: InStream;
+        ExcelOutStream: OutStream;
+    begin
+        if not UploadIntoStream(ExcelFileFilterLbl, UploadInStream) then
+            Error(FileNotSelectedErr);
+
+        TempBlob.CreateOutStream(ExcelOutStream);
+        CopyStream(ExcelOutStream, UploadInStream);
+
+        TempBlob.CreateInStream(SheetInStream);
+        SheetName :=
+            rExcelBuffer.SelectSheetsNameStream(SheetInStream);
+
+        if SheetName = '' then
+            Error(SheetNotSelectedErr);
+    end;
 
     procedure RecibeNoPedido(NoDocumento: Code[20])
     begin
         NoPedido := NoDocumento;
     end;
 }
-

@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="intColegios">
+          <DataField>intColegios</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor__Categoria_colegio_">
+          <DataField>CategoriasPromotor__Categoria_colegio_</DataField>
+        </Field>
+        <Field Name="TraerNombrePromotor">
+          <DataField>TraerNombrePromotor</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor__Cod__Promotor_">
+          <DataField>CategoriasPromotor__Cod__Promotor_</DataField>
+        </Field>
+        <Field Name="intNoAdoptados">
+          <DataField>intNoAdoptados</DataField>
+        </Field>
+        <Field Name="intAdoptados">
+          <DataField>intAdoptados</DataField>
+        </Field>
+        <Field Name="intFaltanDecidir">
+          <DataField>intFaltanDecidir</DataField>
+        </Field>
+        <Field Name="intEjemplares">
+          <DataField>intEjemplares</DataField>
+        </Field>
+        <Field Name="intEjemplaresFormat">
+          <DataField>intEjemplaresFormat</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Resumen_de_colegios_adoptados_por_categoriaCaption">
+          <DataField>Resumen_de_colegios_adoptados_por_categoriaCaption</DataField>
+        </Field>
+        <Field Name="intColegiosCaption">
+          <DataField>intColegiosCaption</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor__Categoria_colegio_Caption">
+          <DataField>CategoriasPromotor__Categoria_colegio_Caption</DataField>
+        </Field>
+        <Field Name="TraerNombrePromotorCaption">
+          <DataField>TraerNombrePromotorCaption</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor__Cod__Promotor_Caption">
+          <DataField>CategoriasPromotor__Cod__Promotor_Caption</DataField>
+        </Field>
+        <Field Name="No_adoptadosCaption">
+          <DataField>No_adoptadosCaption</DataField>
+        </Field>
+        <Field Name="AdoptadosCaption">
+          <DataField>AdoptadosCaption</DataField>
+        </Field>
+        <Field Name="Faltan_decidirCaption">
+          <DataField>Faltan_decidirCaption</DataField>
+        </Field>
+        <Field Name="EjemplaresCaption">
+          <DataField>EjemplaresCaption</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor_Cod__Colegio">
+          <DataField>CategoriasPromotor_Cod__Colegio</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor_Cod__Nivel">
+          <DataField>CategoriasPromotor_Cod__Nivel</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor_Turno">
+          <DataField>CategoriasPromotor_Turno</DataField>
+        </Field>
+        <Field Name="CategoriasPromotor_Ruta">
+          <DataField>CategoriasPromotor_Ruta</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

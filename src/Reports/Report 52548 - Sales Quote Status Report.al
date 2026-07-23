@@ -67,10 +67,10 @@ report 52548 "Sales Quote Status Report"
                 dataitem(SalesLineComments; 44)
                 {
                     DataItemLink = "No." = FIELD("Document No."),
-                                   Document Line No.=FIELD("Line No.");
+                                   "Document Line No." = FIELD("Line No.");
                     DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
-                                        WHERE("Document Type" = CONST(Quote),
-                                              Print On Quote=CONST(True));
+                                        WHERE("Document Type" = CONST(Quote));
+                    //TODO: no existe "Print On Quote"=CONST(True));
 
                     trigger OnAfterGetRecord()
                     begin
@@ -103,8 +103,8 @@ report 52548 "Sales Quote Status Report"
                     TempSalesLine.INSERT;
                     HighestLineNo := "Line No.";
 
-                    IF ("Sales Header"."Tax Area Code" <> '') AND NOT UseExternalTaxEngine THEN
-                        SalesTaxCalc.AddSalesLine(TempSalesLine);
+                    //TODO: no existe IF ("Sales Header"."Tax Area Code" <> '') AND NOT UseExternalTaxEngine THEN
+                    //TODO: no existe SalesTaxCalc.AddSalesLine(TempSalesLine);
 
                     // ++ 001-LDP
                     CategoriaPedidoVenta.GET("Sales Header"."Categoria Pedido Venta");
@@ -146,6 +146,8 @@ report 52548 "Sales Quote Status Report"
                 trigger OnPostDataItem()
                 begin
                     IF "Sales Header"."Tax Area Code" <> '' THEN BEGIN
+                        //TODO: Ver
+                        /*
                         IF UseExternalTaxEngine THEN
                             SalesTaxCalc.CallExternalTaxEngineForSales("Sales Header", TRUE)
                         ELSE
@@ -180,6 +182,7 @@ report 52548 "Sales Quote Status Report"
                                     BreakdownAmt[BrkIdx] := BreakdownAmt[BrkIdx] + "Tax Amount";
                                 UNTIL NEXT = 0;
                         END;
+                        */
                         IF BrkIdx = 1 THEN BEGIN
                             CLEAR(BreakdownLabel);
                             CLEAR(BreakdownAmt);
@@ -198,8 +201,8 @@ report 52548 "Sales Quote Status Report"
                 DataItemLink = "No." = FIELD("No.");
                 DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                     WHERE("Document Type" = CONST(Quote),
-                                          Print On Quote=CONST(True),
-                                          Document Line No.=CONST(0));
+                                          //TODO: no existe "Print On Quote"=CONST(True),
+                                          "Document Line No." = CONST(0));
 
                 trigger OnAfterGetRecord()
                 begin
@@ -361,9 +364,9 @@ report 52548 "Sales Quote Status Report"
                     column(CopyNo; CopyNo)
                     {
                     }
-                    column(CustTaxIdentificationType; FORMAT(Cust."Tax Identification Type"))
-                    {
-                    }
+                    //TODO: no existe column(CustTaxIdentificationType; FORMAT(Cust."Tax Identification Type"))
+                    //{
+                    //}
                     column(SellCaption; SellCaptionLbl)
                     {
                     }
@@ -670,7 +673,7 @@ report 52548 "Sales Quote Status Report"
                         CompanyInformation."Fax No." := RespCenter."Fax No.";
                     END;
 
-                CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
+                //TODO: no existe CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
 
                 FormatDocumentFields("Sales Header");
 
@@ -708,6 +711,8 @@ report 52548 "Sales Quote Status Report"
                 TaxRegLabel := '';
                 IF "Tax Area Code" <> '' THEN BEGIN
                     TaxArea.GET("Tax Area Code");
+                    //TODO: Ver
+                    /*
                     CASE TaxArea."Country/Region" OF
                         TaxArea."Country/Region"::US:
                             TotalTaxLabel := Text005;
@@ -719,7 +724,7 @@ report 52548 "Sales Quote Status Report"
                             END;
                     END;
                     UseExternalTaxEngine := TaxArea."Use External Tax Engine";
-                    SalesTaxCalc.StartSalesTaxCalculation;
+                    SalesTaxCalc.StartSalesTaxCalculation;*/
                 END;
 
                 UseDate := WORKDATE;
@@ -796,7 +801,7 @@ report 52548 "Sales Quote Status Report"
             ArchiveDocument :=
               (SalesSetup."Archive Quotes" = SalesSetup."Archive Quotes"::Question) OR
               (SalesSetup."Archive Quotes" = SalesSetup."Archive Quotes"::Always);
-            LogInteraction := SegManagement.FindInteractTmplCode(1) <> '';
+            //TODO: no existe LogInteraction := SegManagement.FindInteractTmplCode(1) <> '';
 
             ArchiveDocumentEnable := ArchiveDocument;
             LogInteractionEnable := LogInteraction;
@@ -839,8 +844,8 @@ report 52548 "Sales Quote Status Report"
         SalesSetup: Record 311;
         TempSalesLine: Record 37 temporary;
         RespCenter: Record 5714;
-        Language: Record 8;
-        TempSalesTaxAmtLine: Record 10011 temporary;
+        rLanguage: Record 8;
+        //TODO: no existe TempSalesTaxAmtLine: Record 10011 temporary;
         TaxArea: Record 318;
         Cust: Record 18;
         SalesPrinted: Codeunit 313;

@@ -13,12 +13,10 @@ report 75000 "Actualiza Dimensiones Docs"
 
             trigger OnAfterGetRecord()
             begin
-
-
-                CreateDim(
-                  DimMgt.TypeToTableID3(Type), "No.",
-                  DATABASE::Job, "Job No.",
-                  DATABASE::"Responsibility Center", "Responsibility Center");
+                //TODO: Ver CreateDim(
+                //TODO: Ver DimMgt.TypeToTableID3(Type), "No.",
+                //TODO: Ver DATABASE::Job, "Job No.",
+                //TODO: Ver DATABASE::"Responsibility Center", "Responsibility Center");
                 MODIFY;
                 UpdateDia;
             end;
@@ -39,11 +37,11 @@ report 75000 "Actualiza Dimensiones Docs"
 
             trigger OnAfterGetRecord()
             begin
-                CreateDim(
-                  DimMgt.TypeToTableID3(Type), "No.",
-                  DATABASE::Job, "Job No.",
-                  DATABASE::"Responsibility Center", "Responsibility Center",
-                  DATABASE::"Work Center", "Work Center No.");
+                //TODO: Ver CreateDim(
+                //TODO: Ver DimMgt.TypeToTableID3(Type), "No.",
+                //TODO: Ver DATABASE::Job, "Job No.",
+                //TODO: Ver DATABASE::"Responsibility Center", "Responsibility Center",
+                //TODO: Ver DATABASE::"Work Center", "Work Center No.");
                 MODIFY;
                 UpdateDia;
             end;

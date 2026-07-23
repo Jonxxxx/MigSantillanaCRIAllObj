@@ -38,22 +38,6 @@ report 56040 "Efectivo aplicado"
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     trigger OnInitReport()
     begin
         PrintToExcel := TRUE;
@@ -115,8 +99,11 @@ report 56040 "Efectivo aplicado"
 
     procedure CreateExcelBook()
     begin
-        ExcelBuffer.CreateBookAndOpenExcel('', Text007, Text007, COMPANYNAME, USERID);
-        ERROR('');
+        ExcelBuffer.CreateNewBook(Text007);
+        ExcelBuffer.WriteSheet(Text007, CompanyName, UserId);
+        ExcelBuffer.CloseBook();
+        ExcelBuffer.SetFriendlyFilename(Text007);
+        ExcelBuffer.OpenExcel();
     end;
 }
 

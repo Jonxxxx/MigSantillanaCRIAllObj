@@ -1,8 +1,7 @@
 report 67004 "Genera archivo Colegios"
 {
-    // CODIGO_COLEGIO NOMBRE NIVEL COLEGIO_UBIVEO DISTRITO DIRECCION CODIGO_PROMOTOR NOMBRE_PROMOTOR COD_DELE DESCRIPCION_DELE
-
     ApplicationArea = Basic, Suite, Service;
+    Caption = 'Generate Schools File';
     ProcessingOnly = true;
     ShowPrintStatus = false;
     UsageCategory = ReportsAndAnalysis;
@@ -10,99 +9,128 @@ report 67004 "Genera archivo Colegios"
 
     dataset
     {
-        dataitem(Contact; 5050)
+        dataitem(Contact; Contact)
         {
-            DataItemTableView = SORTING("No.");
+            DataItemTableView = sorting("No.");
+
             dataitem("Colegio - Nivel"; 67036)
             {
-                DataItemLink = "Cod. Colegio" = FIELD("No.");
-                DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", Turno);
+                DataItemLink = "Cod. Colegio" = field("No.");
+                DataItemTableView = sorting(
+                    "Cod. Colegio",
+                    "Cod. Nivel",
+                    Turno);
 
                 trigger OnAfterGetRecord()
                 begin
-                    CLEAR(Lin_Body);
+                    Clear(LineBody);
 
-                    PR.RESET;
-                    PR.SETRANGE("Cod. Ruta", Ruta);
-                    IF PR.FINDFIRST THEN BEGIN
-                        DimVal.RESET;
-                        DimVal.SETRANGE("Dimension Code", ConfAPS."Cod. Dimension Delegacion");
-                        DimVal.SETRANGE(Code, Contact.Delegacion);
-                        DimVal.FINDFIRST;
+                    SchoolRoute.Reset();
+                    SchoolRoute.SetRange("Cod. Ruta", Ruta);
 
-                        Promotor.GET(PR."Cod. Promotor");
-                        Lin_Body := "Cod. Colegio" + ';' + Contact.Name + ';' + "Cod. Nivel" + ';' + Contact."Post Code" + ';' +
-                                    Contact.City + ';' + Contact.Address + ';' + PR."Cod. Promotor" + ';' + Promotor.Name + ';' +
-                                    Contact.Delegacion + ';' + DimVal.Name;
+                    if SchoolRoute.FindFirst() then begin
+                        DimensionValue.Reset();
+                        DimensionValue.SetRange(
+                            "Dimension Code",
+                            APSSetup."Cod. Dimension Delegacion");
+                        DimensionValue.SetRange(
+                            Code,
+                            Contact.Delegacion);
+                        DimensionValue.FindFirst();
 
-                        Fichero.WRITE(Lin_Body);
-                    END;
+                        SalespersonPurchaser.Get(
+                            SchoolRoute."Cod. Promotor");
+
+                        LineBody :=
+                            "Cod. Colegio" + ';' +
+                            Contact.Name + ';' +
+                            "Cod. Nivel" + ';' +
+                            Contact."Post Code" + ';' +
+                            Contact.City + ';' +
+                            Contact.Address + ';' +
+                            SchoolRoute."Cod. Promotor" + ';' +
+                            SalespersonPurchaser.Name + ';' +
+                            Contact.Delegacion + ';' +
+                            DimensionValue.Name;
+
+                        FileOutStream.WriteText(LineBody);
+                        FileOutStream.WriteText();
+                    end;
                 end;
             }
 
             trigger OnAfterGetRecord()
             begin
-                Counter := Counter + 1;
-                Window.UPDATE(1, "No.");
-                Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
+                Counter += 1;
+
+                if GuiAllowed() then begin
+                    Window.Update(1, "No.");
+
+                    if CounterTotal <> 0 then
+                        Window.Update(
+                            2,
+                            Round(
+                                Counter / CounterTotal * 10000,
+                                1));
+                end;
             end;
 
             trigger OnPostDataItem()
             begin
-                Fichero.CLOSE;
-                Window.CLOSE;
+                if GuiAllowed() then
+                    Window.Close();
+
+                DownloadSchoolsFile();
             end;
 
             trigger OnPreDataItem()
             begin
-                ConfAPS.GET();
-                ConfAPS.TESTFIELD("Ruta archivos electronicos");
+                APSSetup.Get();
 
-                CounterTotal := COUNT;
-                Window.OPEN(Text001);
+                Counter := 0;
+                CounterTotal := Count();
 
-                Blanco := '  ';
-                IF COPYSTR(ConfAPS."Ruta archivos electronicos", STRLEN(ConfAPS."Ruta archivos electronicos"), 1) = '\' THEN
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + 'COLEGIOS.CSV'
-                ELSE
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + '\COLEGIOS.CSV';
+                TempBlob.CreateOutStream(
+                    FileOutStream,
+                    TextEncoding::Windows);
 
-                Fichero.TEXTMODE(TRUE);
-                Fichero.CREATE(NombreArchivo);
-                Fichero.TRUNC;
+                if GuiAllowed() then
+                    Window.Open(ProcessingLbl);
             end;
         }
     }
 
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
-    }
-
     var
-        ConfAPS: Record 67000;
-        PR: Record 67044;
-        Promotor: Record 13;
-        DimVal: Record 349;
-        Lin_Body: Text[500];
-        Fichero: File;
-        Text002: Label 'Text documents (*.txt) |*.txt|Word Documents (*.doc*)|*.doc*|All files (*.*)|*.*';
-        NombreArchivo: Text[30];
-        Blanco: Text[30];
+        APSSetup: Record 67000;
+        SchoolRoute: Record 67044;
+        SalespersonPurchaser: Record "Salesperson/Purchaser";
+        DimensionValue: Record "Dimension Value";
+        TempBlob: Codeunit "Temp Blob";
+        FileOutStream: OutStream;
+        LineBody: Text[500];
         CounterTotal: Integer;
         Counter: Integer;
         Window: Dialog;
-        Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
-}
+        ProcessingLbl: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
+        FileNameLbl: Label 'COLEGIOS.csv', Locked = true;
+        CSVFileFilterLbl: Label 'CSV files (*.csv)|*.csv';
 
+    local procedure DownloadSchoolsFile()
+    var
+        FileInStream: InStream;
+        FileName: Text;
+    begin
+        TempBlob.CreateInStream(
+            FileInStream,
+            TextEncoding::Windows);
+
+        FileName := FileNameLbl;
+
+        DownloadFromStream(
+            FileInStream,
+            '',
+            '',
+            CSVFileFilterLbl,
+            FileName);
+    end;
+}

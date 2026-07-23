@@ -121,8 +121,8 @@ report 56098 "Back Orders Cliente"
                 //  CurrReport.SKIP;
 
                 //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#56090
-                IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
-                    CurrReport.SKIP;
+                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
+                CurrReport.SKIP;
 
                 //+139
                 IF NOT rCliente.GET("Sell-to Customer No.") THEN

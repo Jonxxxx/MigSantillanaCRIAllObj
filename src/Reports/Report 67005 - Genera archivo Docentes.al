@@ -1,6 +1,7 @@
 report 67005 "Genera archivo Docentes"
 {
     ApplicationArea = Basic, Suite, Service;
+    Caption = 'Generate Teachers File';
     ProcessingOnly = true;
     ShowPrintStatus = false;
     UsageCategory = ReportsAndAnalysis;
@@ -10,87 +11,126 @@ report 67005 "Genera archivo Docentes"
     {
         dataitem(Docentes; 67001)
         {
-            DataItemTableView = SORTING("No.");
+            DataItemTableView = sorting("No.");
+
+            trigger OnPreDataItem()
+            begin
+                Counter := 0;
+                CounterTotal := Count();
+
+                TempBlob.CreateOutStream(
+                    FileOutStream,
+                    TextEncoding::Windows);
+
+                if GuiAllowed() then
+                    Window.Open(ProcessingLbl);
+            end;
 
             trigger OnAfterGetRecord()
             begin
-                CLEAR(Lin_Body);
+                Clear(LineBody);
+                Clear(AdditionalData);
 
-                Counter := Counter + 1;
-                Window.UPDATE(1, "No.");
-                Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
+                Counter += 1;
 
-                IF "Job Type Code" <> '' THEN BEGIN
-                    DA.RESET;
-                    DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Puestos de trabajo");
-                    DA.SETRANGE(Codigo, "Job Type Code");
-                    DA.FINDFIRST;
-                END;
-                Lin_Body := "Document ID" + ';' + "Salutation Code" + ';' + FORMAT(Sexo) + ';' + FORMAT(Hijos) + ';' + "Last Name" + ';' +
-                            "Second Last Name" + ';' + "First Name" + ';' + "Tipo documento" + ';' + "Document ID" + ';' +
-                            "Phone No." + ';' + "Mobile Phone No." + ';' + Address + ';' + "Address 2" + ';' + City + ';' +
-                            "E-Mail" + ';' + FORMAT("Dia Nacimiento", 0, '<Integer,2><Filler Character,0>') + '/' +
-                            FORMAT("Mes Nacimiento", 0, '<Integer,2><Filler Character,0>') + '/' +
-                            FORMAT("Ano Nacimiento", 0, '<Integer,4><Filler Character,0>') + ';' + "Nivel Docente" + ';' +
-                            "Job Type Code" + ';' + DA.Descripcion;
-                Fichero.WRITE(Lin_Body);
+                if GuiAllowed() then begin
+                    Window.Update(1, "No.");
+
+                    if CounterTotal <> 0 then
+                        Window.Update(
+                            2,
+                            Round(
+                                Counter / CounterTotal * 10000,
+                                1));
+                end;
+
+                if "Job Type Code" <> '' then begin
+                    AdditionalData.Reset();
+                    AdditionalData.SetRange(
+                        "Tipo registro",
+                        AdditionalData."Tipo registro"::"Puestos de trabajo");
+                    AdditionalData.SetRange(
+                        Codigo,
+                        "Job Type Code");
+
+                    if not AdditionalData.FindFirst() then
+                        Clear(AdditionalData);
+                end;
+
+                LineBody :=
+                    "Document ID" + ';' +
+                    "Salutation Code" + ';' +
+                    Format(Sexo) + ';' +
+                    Format(Hijos) + ';' +
+                    "Last Name" + ';' +
+                    "Second Last Name" + ';' +
+                    "First Name" + ';' +
+                    "Tipo documento" + ';' +
+                    "Document ID" + ';' +
+                    "Phone No." + ';' +
+                    "Mobile Phone No." + ';' +
+                    Address + ';' +
+                    "Address 2" + ';' +
+                    City + ';' +
+                    "E-Mail" + ';' +
+                    Format(
+                        "Dia Nacimiento",
+                        0,
+                        '<Integer,2><Filler Character,0>') + '/' +
+                    Format(
+                        "Mes Nacimiento",
+                        0,
+                        '<Integer,2><Filler Character,0>') + '/' +
+                    Format(
+                        "Ano Nacimiento",
+                        0,
+                        '<Integer,4><Filler Character,0>') + ';' +
+                    "Nivel Docente" + ';' +
+                    "Job Type Code" + ';' +
+                    AdditionalData.Descripcion;
+
+                FileOutStream.WriteText(LineBody);
+                FileOutStream.WriteText();
             end;
 
             trigger OnPostDataItem()
             begin
-                Fichero.CLOSE;
-                Window.CLOSE;
-            end;
+                if GuiAllowed() then
+                    Window.Close();
 
-            trigger OnPreDataItem()
-            begin
-                ConfAPS.GET();
-                ConfAPS.TESTFIELD("Ruta archivos electronicos");
-
-                CounterTotal := COUNT;
-                Window.OPEN(Text001);
-
-                Blanco := '  ';
-                IF COPYSTR(ConfAPS."Ruta archivos electronicos", STRLEN(ConfAPS."Ruta archivos electronicos"), 1) = '\' THEN
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + 'DOCENTES.CSV'
-                ELSE
-                    NombreArchivo := ConfAPS."Ruta archivos electronicos" + '\DOCENTES.CSV';
-
-                Fichero.TEXTMODE(TRUE);
-                Fichero.CREATE(NombreArchivo);
-                Fichero.TRUNC;
+                DownloadTeachersFile();
             end;
         }
-    }
-
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     var
-        ConfAPS: Record 67000;
-        DimVal: Record 349;
-        DA: Record 67002;
-        Lin_Body: Text[500];
-        Fichero: File;
-        Text002: Label 'Text documents (*.txt) |*.txt|Word Documents (*.doc*)|*.doc*|All files (*.*)|*.*';
-        NombreArchivo: Text[30];
-        Blanco: Text[30];
+        AdditionalData: Record 67002;
+        TempBlob: Codeunit "Temp Blob";
+        FileOutStream: OutStream;
+        LineBody: Text[500];
         CounterTotal: Integer;
         Counter: Integer;
         Window: Dialog;
-        Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
-}
+        ProcessingLbl: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
+        FileNameLbl: Label 'DOCENTES.csv', Locked = true;
+        CSVFileFilterLbl: Label 'CSV files (*.csv)|*.csv';
 
+    local procedure DownloadTeachersFile()
+    var
+        FileInStream: InStream;
+        FileName: Text;
+    begin
+        TempBlob.CreateInStream(
+            FileInStream,
+            TextEncoding::Windows);
+
+        FileName := FileNameLbl;
+
+        DownloadFromStream(
+            FileInStream,
+            '',
+            '',
+            CSVFileFilterLbl,
+            FileName);
+    end;
+}

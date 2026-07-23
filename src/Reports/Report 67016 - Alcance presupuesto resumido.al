@@ -149,7 +149,7 @@ report 67016 "Alcance presupuesto resumido"
             {
                 field(Promotor; codPromotor)
                 {
-                    TableRelation = Salesperson/Purchaser;
+                    TableRelation = "Salesperson/Purchaser";
                 }
             }
         }
@@ -212,27 +212,27 @@ report 67016 "Alcance presupuesto resumido"
     begin
 
         IF recProducto.GET(codPrmProd) THEN BEGIN
-          recTarifas.RESET;
-          recTarifas.SETRANGE("Item No.", codPrmProd);
-          recTarifas.SETFILTER("Variant Code",'%1','');
-          recTarifas.SETFILTER("Ending Date",'%1|>=%2',0D,WORKDATE);
-          recTarifas.SETFILTER("Currency Code",'%1','');
-          recTarifas.SETFILTER("Unit of Measure Code",'%1|%2',recProducto."Sales Unit of Measure",'');
-          recTarifas.SETRANGE("Starting Date",0D,WORKDATE);
-          recTarifas.SETRANGE("Sales Type",recTarifas."Sales Type"::"All Customers");
-          IF recTarifas.FINDFIRST THEN
-            EXIT(recTarifas."Unit Price")
-          ELSE
-            EXIT(recProducto."Unit Price");
+            recTarifas.RESET;
+            recTarifas.SETRANGE("Item No.", codPrmProd);
+            recTarifas.SETFILTER("Variant Code", '%1', '');
+            recTarifas.SETFILTER("Ending Date", '%1|>=%2', 0D, WORKDATE);
+            recTarifas.SETFILTER("Currency Code", '%1', '');
+            recTarifas.SETFILTER("Unit of Measure Code", '%1|%2', recProducto."Sales Unit of Measure", '');
+            recTarifas.SETRANGE("Starting Date", 0D, WORKDATE);
+            recTarifas.SETRANGE("Sales Type", recTarifas."Sales Type"::"All Customers");
+            IF recTarifas.FINDFIRST THEN
+                EXIT(recTarifas."Unit Price")
+            ELSE
+                EXIT(recProducto."Unit Price");
         END;
     end;
 
-    procedure TraerDescripcionDimension(codPrmDim: Code[20];codPrmValor: Code[20]): Text[100]
+    procedure TraerDescripcionDimension(codPrmDim: Code[20]; codPrmValor: Code[20]): Text[100]
     var
         recDimVal: Record 349;
     begin
-        IF recDimVal.GET(codPrmDim,codPrmValor) THEN
-          EXIT(recDimVal.Name);
+        IF recDimVal.GET(codPrmDim, codPrmValor) THEN
+            EXIT(recDimVal.Name);
     end;
 
     procedure CargarDatosTemp()
@@ -251,133 +251,139 @@ report 67016 "Alcance presupuesto resumido"
         intMov: Integer;
     begin
 
-        dlgProgreso.OPEN(Text002+Text003);
+        dlgProgreso.OPEN(Text002 + Text003);
 
         recPpto.RESET;
         IF codPromotor <> '' THEN
-          recPpto.SETRANGE("Cod. Promotor", codPromotor);
+            recPpto.SETRANGE("Cod. Promotor", codPromotor);
         IF recPpto.FINDSET THEN BEGIN
-          dlgProgreso.UPDATE(1, Text001);
-          intTotal := recPpto.COUNT;
-          REPEAT
-            IF recProducto.GET(recPpto."Cod. Producto") THEN BEGIN
-              codNivel := recProducto."Nivel Educativo APS";
-              codLinNeg := recProducto.GetLineaNegocio;
-              codFamilia := recProducto.GetFamilia;
-              codSubFamilia := recProducto.GetSubfamilia;
-              decPrecio := CalcularPrecio(recProducto."No.");
+            dlgProgreso.UPDATE(1, Text001);
+            intTotal := recPpto.COUNT;
+            REPEAT
+                IF recProducto.GET(recPpto."Cod. Producto") THEN BEGIN
+                    codNivel := recProducto."Nivel Educativo APS";
+                    codLinNeg := recProducto.GetLineaNegocio;
+                    codFamilia := recProducto.GetFamilia;
+                    codSubFamilia := recProducto.GetSubfamilia;
+                    decPrecio := CalcularPrecio(recProducto."No.");
 
-              recTmpRep.RESET;
-              recTmpRep.SETCURRENTKEY(Usuario,"Fecha hora","Cod. Nivel","Linea de negocio",Familia,"Sub Familia");
-              recTmpRep.SETRANGE(Usuario, USERID);
-              recTmpRep.SETRANGE("Fecha hora", dtImpresion);
-              recTmpRep.SETRANGE("Cod. Nivel", codNivel);
-              recTmpRep.SETRANGE("Linea de negocio", codLinNeg);
-              recTmpRep.SETRANGE(Familia, codFamilia);
-              recTmpRep.SETRANGE("Sub Familia", codSubFamilia);
-              IF recTmpRep.FINDFIRST THEN BEGIN
-                recTmpRep."Cdad. presupuestada" += recPpto.Quantity;
-                recTmpRep."Monto. presupuestado" += (decPrecio * recPpto.Quantity);
-                recTmpRep.MODIFY;
-              END
-              ELSE BEGIN
-                intMov += 1;
-                recTmpRep.INIT;
-                recTmpRep."No. mov" := intMov;
-                recTmpRep."Cod. Nivel" := codNivel;
-                recTmpRep."Linea de negocio" := codLinNeg;
-                recTmpRep.Familia := codFamilia;
-                recTmpRep."Sub Familia" := codSubFamilia;
-                recTmpRep."Cdad. presupuestada" := recPpto.Quantity;
-                recTmpRep."Monto. presupuestado" := (decPrecio * recPpto.Quantity);
-                recTmpRep.Usuario := USERID;
-                recTmpRep."Fecha hora" := dtImpresion;
-                recTmpRep.INSERT;
-              END;
-            END;
+                    recTmpRep.RESET;
+                    recTmpRep.SETCURRENTKEY(Usuario, "Fecha hora", "Cod. Nivel", "Linea de negocio", Familia, "Sub Familia");
+                    recTmpRep.SETRANGE(Usuario, USERID);
+                    recTmpRep.SETRANGE("Fecha hora", dtImpresion);
+                    recTmpRep.SETRANGE("Cod. Nivel", codNivel);
+                    recTmpRep.SETRANGE("Linea de negocio", codLinNeg);
+                    recTmpRep.SETRANGE(Familia, codFamilia);
+                    recTmpRep.SETRANGE("Sub Familia", codSubFamilia);
+                    IF recTmpRep.FINDFIRST THEN BEGIN
+                        recTmpRep."Cdad. presupuestada" += recPpto.Quantity;
+                        recTmpRep."Monto. presupuestado" += (decPrecio * recPpto.Quantity);
+                        recTmpRep.MODIFY;
+                    END
+                    ELSE BEGIN
+                        intMov += 1;
+                        recTmpRep.INIT;
+                        recTmpRep."No. mov" := intMov;
+                        recTmpRep."Cod. Nivel" := codNivel;
+                        recTmpRep."Linea de negocio" := codLinNeg;
+                        recTmpRep.Familia := codFamilia;
+                        recTmpRep."Sub Familia" := codSubFamilia;
+                        recTmpRep."Cdad. presupuestada" := recPpto.Quantity;
+                        recTmpRep."Monto. presupuestado" := (decPrecio * recPpto.Quantity);
+                        recTmpRep.Usuario := USERID;
+                        recTmpRep."Fecha hora" := dtImpresion;
+                        recTmpRep.INSERT;
+                    END;
+                END;
 
-            intProcesados += 1;
-            IF intProcesados MOD 100 = 0 THEN
-              dlgProgreso.UPDATE(2, ROUND(intProcesados/intTotal*10000,1));
-          UNTIL recPpto.NEXT = 0;
+                intProcesados += 1;
+                IF intProcesados MOD 100 = 0 THEN
+                    dlgProgreso.UPDATE(2, ROUND(intProcesados / intTotal * 10000, 1));
+            UNTIL recPpto.NEXT = 0;
         END;
 
         recAdopciones.RESET;
         IF codPromotor <> '' THEN
-          recAdopciones.SETRANGE("Cod. Promotor", codPromotor);
-          IF recAdopciones.FINDSET THEN BEGIN
+            recAdopciones.SETRANGE("Cod. Promotor", codPromotor);
+        IF recAdopciones.FINDSET THEN BEGIN
             dlgProgreso.UPDATE(1, Text004);
             intTotal := recAdopciones.COUNT;
             intProcesados := 0;
             REPEAT
 
-              IF recProducto.GET(recAdopciones."Cod. Producto") THEN BEGIN
-                codNivel := recProducto."Nivel Educativo APS";
-                codLinNeg := recProducto.GetLineaNegocio;
-                codFamilia := recProducto.GetFamilia;
-                codSubFamilia := recProducto.GetSubfamilia;
-                decPrecio := CalcularPrecio(recProducto."No.");
+                IF recProducto.GET(recAdopciones."Cod. Producto") THEN BEGIN
+                    codNivel := recProducto."Nivel Educativo APS";
+                    codLinNeg := recProducto.GetLineaNegocio;
+                    codFamilia := recProducto.GetFamilia;
+                    codSubFamilia := recProducto.GetSubfamilia;
+                    decPrecio := CalcularPrecio(recProducto."No.");
 
-                recTmpRep.RESET;
-                recTmpRep.SETCURRENTKEY(Usuario,"Fecha hora","Cod. Nivel","Linea de negocio",Familia,"Sub Familia");
-                recTmpRep.SETRANGE(Usuario, USERID);
-                recTmpRep.SETRANGE("Fecha hora", dtImpresion);
-                recTmpRep.SETRANGE("Cod. Nivel", codNivel);
-                recTmpRep.SETRANGE("Linea de negocio", codLinNeg);
-                recTmpRep.SETRANGE(Familia, codFamilia);
-                recTmpRep.SETRANGE("Sub Familia", codSubFamilia);
-                IF recTmpRep.FINDFIRST THEN BEGIN
-                  CASE recAdopciones.Adopcion OF
-                    recAdopciones.Adopcion::Conquista : BEGIN
-                      recTmpRep."Cdad. conquista" += recAdopciones."Adopcion Real";
-                      recTmpRep."Cdad. alcance" += recAdopciones."Adopcion Real";
-                      recTmpRep."Monto alcance" += (recAdopciones."Adopcion Real" * decPrecio);
+                    recTmpRep.RESET;
+                    recTmpRep.SETCURRENTKEY(Usuario, "Fecha hora", "Cod. Nivel", "Linea de negocio", Familia, "Sub Familia");
+                    recTmpRep.SETRANGE(Usuario, USERID);
+                    recTmpRep.SETRANGE("Fecha hora", dtImpresion);
+                    recTmpRep.SETRANGE("Cod. Nivel", codNivel);
+                    recTmpRep.SETRANGE("Linea de negocio", codLinNeg);
+                    recTmpRep.SETRANGE(Familia, codFamilia);
+                    recTmpRep.SETRANGE("Sub Familia", codSubFamilia);
+                    IF recTmpRep.FINDFIRST THEN BEGIN
+                        CASE recAdopciones.Adopcion OF
+                            recAdopciones.Adopcion::Conquista:
+                                BEGIN
+                                    recTmpRep."Cdad. conquista" += recAdopciones."Adopcion Real";
+                                    recTmpRep."Cdad. alcance" += recAdopciones."Adopcion Real";
+                                    recTmpRep."Monto alcance" += (recAdopciones."Adopcion Real" * decPrecio);
+                                END;
+                            recAdopciones.Adopcion::Mantener:
+                                BEGIN
+                                    recTmpRep."Cdad. mnto." += recAdopciones."Adopcion Real";
+                                    recTmpRep."Cdad. alcance" += recAdopciones."Adopcion Real";
+                                    recTmpRep."Monto alcance" += (recAdopciones."Adopcion Real" * decPrecio);
+                                END;
+                            recAdopciones.Adopcion::Perdida:
+                                recTmpRep."Cdad. perdida" += recAdopciones."Adopcion Real";
+                        END;
+                        recTmpRep.MODIFY;
+                    END
+                    ELSE BEGIN
+                        recTmpRep.INIT;
+                        intMov += 1;
+                        recTmpRep."No. mov" := intMov;
+                        recTmpRep."Cod. Nivel" := codNivel;
+                        recTmpRep."Linea de negocio" := codLinNeg;
+                        recTmpRep.Familia := codFamilia;
+                        recTmpRep."Sub Familia" := codSubFamilia;
+                        CASE recAdopciones.Adopcion OF
+                            recAdopciones.Adopcion::Conquista:
+                                recTmpRep."Cdad. conquista" := recAdopciones."Adopcion Real";
+                            recAdopciones.Adopcion::Mantener:
+                                recTmpRep."Cdad. mnto." := recAdopciones."Adopcion Real";
+                            recAdopciones.Adopcion::Perdida:
+                                recTmpRep."Cdad. perdida" := recAdopciones."Adopcion Real";
+                        END;
+                        recTmpRep."Cdad. alcance" := recTmpRep."Cdad. conquista" + recTmpRep."Cdad. mnto.";
+                        recTmpRep."Monto alcance" := recTmpRep."Cdad. alcance" * decPrecio;
+                        recTmpRep.Usuario := USERID;
+                        recTmpRep."Fecha hora" := dtImpresion;
+                        recTmpRep.INSERT;
                     END;
-                    recAdopciones.Adopcion::Mantener : BEGIN
-                      recTmpRep."Cdad. mnto." += recAdopciones."Adopcion Real";
-                      recTmpRep."Cdad. alcance" += recAdopciones."Adopcion Real";
-                      recTmpRep."Monto alcance" += (recAdopciones."Adopcion Real" * decPrecio);
-                    END;
-                    recAdopciones.Adopcion::Perdida : recTmpRep."Cdad. perdida" += recAdopciones."Adopcion Real";
-                  END;
-                  recTmpRep.MODIFY;
-                END
-                ELSE BEGIN
-                  recTmpRep.INIT;
-                  intMov += 1;
-                  recTmpRep."No. mov" := intMov;
-                  recTmpRep."Cod. Nivel" := codNivel;
-                  recTmpRep."Linea de negocio" := codLinNeg;
-                  recTmpRep.Familia := codFamilia;
-                  recTmpRep."Sub Familia" := codSubFamilia;
-                  CASE recAdopciones.Adopcion OF
-                    recAdopciones.Adopcion::Conquista : recTmpRep."Cdad. conquista" := recAdopciones."Adopcion Real";
-                    recAdopciones.Adopcion::Mantener  : recTmpRep."Cdad. mnto." := recAdopciones."Adopcion Real";
-                    recAdopciones.Adopcion::Perdida   : recTmpRep."Cdad. perdida" := recAdopciones."Adopcion Real";
-                  END;
-                  recTmpRep."Cdad. alcance" := recTmpRep."Cdad. conquista" + recTmpRep."Cdad. mnto.";
-                  recTmpRep."Monto alcance" := recTmpRep."Cdad. alcance" * decPrecio;
-                  recTmpRep.Usuario := USERID;
-                  recTmpRep."Fecha hora" := dtImpresion;
-                  recTmpRep.INSERT;
                 END;
-              END;
 
-              intProcesados += 1;
-              IF intProcesados MOD 100 = 0 THEN
-                dlgProgreso.UPDATE(2, ROUND(intProcesados/intTotal*10000,1));
+                intProcesados += 1;
+                IF intProcesados MOD 100 = 0 THEN
+                    dlgProgreso.UPDATE(2, ROUND(intProcesados / intTotal * 10000, 1));
             UNTIL recAdopciones.NEXT = 0;
-          END;
+        END;
         dlgProgreso.CLOSE;
 
 
         //Cargo los datos primero en un record temporary = Yes por una cuestion de rendiemiento.
         recTmpRep.RESET;
         IF recTmpRep.FINDSET THEN
-          REPEAT
-            recTemp := recTmpRep;
-            recTemp.INSERT;
-          UNTIL recTmpRep.NEXT = 0;
+            REPEAT
+                recTemp := recTmpRep;
+                recTemp.INSERT;
+            UNTIL recTmpRep.NEXT = 0;
     end;
 }
 
