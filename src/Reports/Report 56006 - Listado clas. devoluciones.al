@@ -202,10 +202,10 @@ report 56006 "Listado clas. devoluciones"
         LastFieldNo: Integer;
         FooterPrinted: Boolean;
         Totalfor: Label 'Total for document %1:';
-        Cab__recepcionCaptionLbl: Label 'Clasificación devolución cerrada';
+        Cab__recepcionCaptionLbl: Label 'Clasificacion devolucion cerrada';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Cab__pre_devolucion_ClosedCaptionLbl: Label 'Closed';
-        Lin__pre_Devoluciones__Cod__Almacen_Consignacion_CaptionLbl: Label 'Cód. Almacén Consigna.';
+        Lin__pre_Devoluciones__Cod__Almacen_Consignacion_CaptionLbl: Label 'Cod. Almacén Consigna.';
         Lin__pre_Devoluciones__Inventario_en_Consignacion_CaptionLbl: Label 'Invent. en Consigna.';
         Lin__pre_Devoluciones_QuantityCaptionLbl: Label 'Quantity';
         Lin__pre_Devoluciones__Con_defecto_CaptionLbl: Label 'Con defecto';

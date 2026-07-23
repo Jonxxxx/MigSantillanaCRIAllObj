@@ -1,6 +1,6 @@
 report 67022 "CDS Docentes por colegio"
 {
-    // 0009 CAT Eliminación de los ceros de la derecha del codigo CDS
+    // 0009 CAT Eliminacion de los ceros de la derecha del codigo CDS
     DefaultLayout = RDLC;
     RDLCLayout = './CDS Docentes por colegio.rdlc';
 
@@ -9,7 +9,7 @@ report 67022 "CDS Docentes por colegio"
     {
         dataitem("Colegio - Docentes"; 67043)
         {
-            CalcFields = Nombre colegio;
+            CalcFields = "Nombre colegio";
             DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", "Apellido paterno")
                                 WHERE("Pertenece al CDS" = CONST(True));
             RequestFilterFields = "Cod. Colegio";
@@ -194,9 +194,9 @@ report 67022 "CDS Docentes por colegio"
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         texNombreCaptionLbl: Label 'Nombre docente';
         TraerDescripcionCargoCaptionLbl: Label 'Cargo';
-        Colegio___Docentes__Cod__Nivel_CaptionLbl: Label 'Cód. Nivel';
+        Colegio___Docentes__Cod__Nivel_CaptionLbl: Label 'Cod. Nivel';
         texSaludoCaptionLbl: Label 'Saludo';
-        codCDSCaptionLbl: Label 'Código CDS';
+        codCDSCaptionLbl: Label 'Codigo CDS';
         texDocumentoCaptionLbl: Label 'Documento';
         texTelefono1CaptionLbl: Label 'Teléfono';
         texTelefono2CaptionLbl: Label 'Teléfono 2';

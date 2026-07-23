@@ -1,7 +1,7 @@
-report 56106 "Venta en firme por categoría"
+report 56106 "Venta en firme por categoria"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Venta en firme por categoría.rdlc';
+    RDLCLayout = './Venta en firme por categoria.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
@@ -45,13 +45,13 @@ report 56106 "Venta en firme por categoría"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("Cod__CategoríaCaption"; Cod__CategoríaCaptionLbl)
+            column("Cod__CategoriaCaption"; Cod__CategoriaCaptionLbl)
             {
             }
             column(CantidadCaption; CantidadCaptionLbl)
             {
             }
-            column("Vta__LíquidaCaption"; Vta__LíquidaCaptionLbl)
+            column("Vta__LiquidaCaption"; Vta__LiquidaCaptionLbl)
             {
             }
             column(DescuentoCaption; DescuentoCaptionLbl)
@@ -99,9 +99,9 @@ report 56106 "Venta en firme por categoría"
         DescCat: Text[100];
         Value_EntryCaptionLbl: Label 'Value Entry';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Cod__CategoríaCaptionLbl": Label 'Cod. Categoría';
+        "Cod__CategoriaCaptionLbl": Label 'Cod. Categoria';
         CantidadCaptionLbl: Label 'Cantidad';
-        "Vta__LíquidaCaptionLbl": Label 'Vta. Líquida';
+        "Vta__LiquidaCaptionLbl": Label 'Vta. Liquida';
         DescuentoCaptionLbl: Label 'Descuento';
         CostoCaptionLbl: Label 'Costo';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';

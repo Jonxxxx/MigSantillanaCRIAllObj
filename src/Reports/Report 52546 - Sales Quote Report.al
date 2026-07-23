@@ -51,7 +51,7 @@ report 52546 "Sales Quote Report"
                 {
                     DataItemLink = "No." = FIELD("Document No."),
                                    Document Line No.=FIELD("Line No.");
-                    DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", Line No.)
+                    DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                         WHERE("Document Type" = CONST(Quote),
                                               Print On Quote=CONST(True));
 
@@ -88,7 +88,7 @@ report 52546 "Sales Quote Report"
 
                     IF ("Sales Header"."Tax Area Code" <> '') AND NOT UseExternalTaxEngine THEN
                         SalesTaxCalc.AddSalesLine(TempSalesLine);
-                    // 001-- Permite agrupar las lineas por tipo categoría pedido venta.
+                    // 001-- Permite agrupar las lineas por tipo categoria pedido venta.
                     CategoriaPedidoVenta.GET("Sales Header"."Categoria Pedido Venta");
                     IF CategoriaPedidoVenta."Filtrar Cod. Compartir" THEN BEGIN
                         //*****************************************
@@ -112,7 +112,7 @@ report 52546 "Sales Quote Report"
                         END;
                         //*****************************************
                     END;//001++
-                    //001  Permite agrupar las lineas por tipo categoría pedido venta.
+                    //001  Permite agrupar las lineas por tipo categoria pedido venta.
                 end;
 
                 trigger OnPostDataItem()
@@ -168,7 +168,7 @@ report 52546 "Sales Quote Report"
             dataitem("<Sales Comment Line>"; 44)
             {
                 DataItemLink = "No." = FIELD("No.");
-                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", Line No.)
+                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                     WHERE("Document Type" = CONST(Quote),
                                           Print On Quote=CONST(True),
                                           Document Line No.=CONST(0));
@@ -560,7 +560,7 @@ report 52546 "Sales Quote Report"
                                 ELSE
                                     UnitPriceToPrint := ROUND(AmountExclInvDisc / Quantity, 0.00001);
 
-                                //001-- Permite agrupar las lineas por tipo categoría pedido venta.
+                                //001-- Permite agrupar las lineas por tipo categoria pedido venta.
                                 CategoriaPedidoVenta.GET("Sales Header"."Categoria Pedido Venta");
                                 IF CategoriaPedidoVenta."Filtrar Cod. Compartir" THEN BEGIN
                                     //*****************************************

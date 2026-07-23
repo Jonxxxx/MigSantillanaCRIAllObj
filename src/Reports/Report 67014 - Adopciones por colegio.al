@@ -104,7 +104,7 @@ report 67014 "Adopciones por colegio"
             column(decCdadMantCaption; decCdadMantCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(Presupuesto__Cod__Producto_Caption; FIELDCAPTION("Cod. Producto"))
@@ -206,12 +206,12 @@ report 67014 "Adopciones por colegio"
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         codFamiliaCaptionLbl: Label 'Familia';
         codSubFamiliaCaptionLbl: Label 'Subfamilia';
-        codEdicionColCaptionLbl: Label 'Edición colección';
-        codLinNegCaptionLbl: Label 'Línea de negocio';
+        codEdicionColCaptionLbl: Label 'Edicion coleccion';
+        codLinNegCaptionLbl: Label 'Linea de negocio';
         decMontoPresCaptionLbl: Label 'Precio';
         decMontoAlcanceCaptionLbl: Label 'Marca';
         decCdadMantCaptionLbl: Label 'Cantidad alumnos';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         codNivelCaptionLbl: Label 'Nivel';
         Categ_CaptionLbl: Label 'Categ.';
         Colegio_CaptionLbl: Label 'Colegio:';

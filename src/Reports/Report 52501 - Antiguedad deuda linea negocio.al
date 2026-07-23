@@ -213,7 +213,7 @@ report 52501 "Antiguedad deuda linea negocio"
     begin
         CustFilter := Customer.GETFILTERS;
         PeriodStartDate[5] := StartDate;
-        PeriodStartDate[6] := 12319999D;
+        PeriodStartDate[6] := 20991231D;
         FOR i := 4 DOWNTO 2 DO
             PeriodStartDate[i] := CALCDATE('<-90D>', PeriodStartDate[i + 1]);
     end;
@@ -238,7 +238,7 @@ report 52501 "Antiguedad deuda linea negocio"
         CustBalanceDueLCY_1__Control29CaptionLbl: Label 'Over 90 days';
         TotalCaptionLbl: Label 'Total';
         decSaldoTotal: Decimal;
-        ProvisionLbl: Label 'Provisión';
+        ProvisionLbl: Label 'Provision';
 
     procedure InitializeRequest(StartingDate: Date)
     begin

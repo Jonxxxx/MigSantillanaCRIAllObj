@@ -1,8 +1,8 @@
 report 56136 "Control Ventas"
 {
     // 001 #139 RRT 27.12.2013 -> Para no crear una nueva clave sustituyo el orden original de la tabla "Value entry"
-    //              SORTING("Item Category Code","Item No.","Valuation Date",Location Code,Variant Code,Drop Shipment) por
-    //              SORTING("Item No.","Valuation Date",Location Code,Variant Code,Drop Shipment)
+    //              SORTING("Item Category Code","Item No.","Valuation Date","Location Code","Variant Code","Drop Shipment") por
+    //              SORTING("Item No.","Valuation Date","Location Code","Variant Code","Drop Shipment")
 
     ApplicationArea = Basic, Suite, Service;
     ProcessingOnly = true;
@@ -17,7 +17,7 @@ report 56136 "Control Ventas"
             dataitem("Value Entry"; 5802)
             {
                 DataItemLink = "Item No." = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Valuation Date", Location Code, Variant Code, Drop Shipment)
+                DataItemTableView = SORTING("Item No.", "Valuation Date", "Location Code", "Variant Code", "Drop Shipment")
                                     ORDER(Ascending);
                 RequestFilterFields = "Cod. Oferta", "Item No.", "Location Code", "Document No.", "Posting Date", "Salespers./Purch. Code";
 

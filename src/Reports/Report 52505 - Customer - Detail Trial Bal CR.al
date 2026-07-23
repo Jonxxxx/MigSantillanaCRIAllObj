@@ -1,8 +1,8 @@
 report 52505 "Customer - Detail Trial Bal CR"
 {
     // #4148  PLB  25/09/2014  Se han añadido varios datos al cliente:
-    //                         - Nombre institución (Name 2)
-    //                         - Dirección
+    //                         - Nombre institucion (Name 2)
+    //                         - Direccion
     //                         - Vendedor
     //                         - Contacto
     DefaultLayout = RDLC;
@@ -186,7 +186,7 @@ report 52505 "Customer - Detail Trial Bal CR"
                 dataitem("Detailed Cust. Ledg. Entry";379)
                 {
                     DataItemLink = "Cust. Ledger Entry No."=FIELD("Entry No.");
-                    DataItemTableView = SORTING("Cust. Ledger Entry No.",Entry Type,Posting Date)
+                    DataItemTableView = SORTING("Cust. Ledger Entry No.","Entry Type","Posting Date")
                                         WHERE("Entry Type"=FILTER(Appln. Rounding|Correction of Remaining Amount));
                     column(EntryType_DtldCustLedgEntry;FORMAT("Entry Type"))
                     {

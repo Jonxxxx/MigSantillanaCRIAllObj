@@ -9,7 +9,7 @@ report 56121 "Listado de Ventas Ped."
     {
         dataitem("Sales Invoice Header"; 112)
         {
-            DataItemTableView = SORTING(Sell-to Customer No., Order Date);
+            DataItemTableView = SORTING("Sell-to Customer No.", "Order Date");
             RequestFilterFields = "No.", "Order Date", "Order No.", "Sell-to Customer No.", "Salesperson Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

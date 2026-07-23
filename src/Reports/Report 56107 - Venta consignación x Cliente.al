@@ -1,7 +1,7 @@
-report 56107 "Venta consignación x Cliente"
+report 56107 "Venta consignacion x Cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Venta consignación x Cliente.rdlc';
+    RDLCLayout = './Venta consignacion x Cliente.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
@@ -50,7 +50,7 @@ report 56107 "Venta consignación x Cliente"
             column(Vta__NetaCaption; Vta__NetaCaptionLbl)
             {
             }
-            column("Vta__LíquidaCaption"; Vta__LíquidaCaptionLbl)
+            column("Vta__LiquidaCaption"; Vta__LiquidaCaptionLbl)
             {
             }
             column(Item_Ledger_Entry_Entry_No_; "Entry No.")
@@ -88,6 +88,6 @@ report 56107 "Venta consignación x Cliente"
         CurrReport_PAGENOCaptionLbl: Label 'Página';
         CantidadCaptionLbl: Label 'Cantidad';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';
-        "Vta__LíquidaCaptionLbl": Label 'Vta. Líquida';
+        "Vta__LiquidaCaptionLbl": Label 'Vta. Liquida';
 }
 

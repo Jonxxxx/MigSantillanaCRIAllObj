@@ -132,7 +132,7 @@ report 51009 Cupon
             column(TitulosCaption; TitulosCaptionLbl)
             {
             }
-            column("Calz__Concepción_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172Caption"; Calz__Concepción_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172CaptionLbl)
+            column("Calz__Concepcion_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172Caption"; Calz__Concepcion_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172CaptionLbl)
             {
             }
             column(Grado_Caption_Control1000000018; Grado_Caption_Control1000000018Lbl)
@@ -226,7 +226,7 @@ report 51009 Cupon
         Centro_Comercial_MontserratCaptionLbl: Label 'Centro Comercial Montserrat';
         CC_Plaza_Villa_NuevaCaptionLbl: Label 'CC Plaza Villa Nueva';
         TitulosCaptionLbl: Label 'Titulos';
-        "Calz__Concepción_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172CaptionLbl": Label 'Calz. Concepción 5-26 Zona 6, Plaza Villa Nueva L 13, Tel: 6636-4172';
+        "Calz__Concepcion_5_26_Zona_6__Plaza_Villa_Nueva_L_13__Tel__6636_4172CaptionLbl": Label 'Calz. Concepcion 5-26 Zona 6, Plaza Villa Nueva L 13, Tel: 6636-4172';
         Grado_Caption_Control1000000018Lbl: Label 'Grado:';
 }
 

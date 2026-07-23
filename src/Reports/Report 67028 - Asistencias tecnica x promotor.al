@@ -2,7 +2,7 @@ report 67028 "Asistencias tecnica x promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Asistencias tecnica x promotor.rdlc';
-    Caption = 'Asistencias Técnica Pedagógica por Promotor';
+    Caption = 'Asistencias Técnica Pedagogica por Promotor';
 
     dataset
     {
@@ -103,7 +103,7 @@ report 67028 "Asistencias tecnica x promotor"
             column(Solicitud_Delegacion; Delegacion)
             {
             }
-            column("Solicitud_de_aistencia_técnica_pedagógicaCaption"; Solicitud_de_aistencia_técnica_pedagógicaCaptionLbl)
+            column("Solicitud_de_aistencia_técnica_pedagogicaCaption"; Solicitud_de_aistencia_técnica_pedagogicaCaptionLbl)
             {
             }
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
@@ -178,7 +178,7 @@ report 67028 "Asistencias tecnica x promotor"
             column(Solicitud__Objetivo_promotor_Caption; Solicitud__Objetivo_promotor_CaptionLbl)
             {
             }
-            column("Descripción_Caption"; Descripción_CaptionLbl)
+            column("Descripcion_Caption"; Descripcion_CaptionLbl)
             {
             }
             column(texDistritoCaption; texDistritoCaptionLbl)
@@ -231,37 +231,37 @@ report 67028 "Asistencias tecnica x promotor"
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
-        "Solicitud_de_aistencia_técnica_pedagógicaCaptionLbl": Label 'Asistencias Técnica Pedagógica por Promotor';
+        "Solicitud_de_aistencia_técnica_pedagogicaCaptionLbl": Label 'Asistencias Técnica Pedagogica por Promotor';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Solicitud__Tipo_de_Evento_CaptionLbl: Label 'Tipo Evento:';
         ObservacionesCaptionLbl: Label 'Observaciones';
         Datos_del_responsableCaptionLbl: Label 'Datos del responsable';
         Datos_del_colegioCaptionLbl: Label 'Datos del colegio';
-        Solicitud__Cod__evento_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__evento_CaptionLbl: Label 'Codigo:';
         Solicitud__Cod__Expositor_CaptionLbl: Label 'Expositor:';
         Datos_del_eventoCaptionLbl: Label 'Datos del evento';
         Datos_de_solicitudCaptionLbl: Label 'Datos de solicitud';
         Solicitud__No__Solicitud_CaptionLbl: Label 'Nº Solicitud:';
         Solicitud__Fecha_Solicitud_CaptionLbl: Label 'Fecha:';
         Solicitud__No__asistentes_CaptionLbl: Label 'Asistentes esperados:';
-        Solicitud__Cod__promotor_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__promotor_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_promotor_CaptionLbl: Label 'Nombre:';
         Solicitud_StatusCaptionLbl: Label 'Estado:';
-        Solicitud__Cod__Colegio_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__Colegio_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_Colegio_CaptionLbl: Label 'Nombre:';
         TraerDescripcionLocalCaptionLbl: Label 'Local:';
         TraerDescripcionTurnoCaptionLbl: Label 'Turno:';
         Solicitud_ReferenciaCaptionLbl: Label 'Referencia:';
-        Solicitud__Cod__Docente_responsable_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__Docente_responsable_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_responsable_CaptionLbl: Label 'Nombre:';
         Phone_Docente_________Cell_Docente_CaptionLbl: Label 'Teléfono:';
         Solicitud__Objetivo_promotor_CaptionLbl: Label 'Objetivo:';
-        "Descripción_CaptionLbl": Label 'Descripción:';
+        "Descripcion_CaptionLbl": Label 'Descripcion:';
         texDistritoCaptionLbl: Label 'Distrito:';
         Solicitud__Cod__Nivel_CaptionLbl: Label 'Nivel:';
-        texDireccionCaptionLbl: Label 'Dirección:';
+        texDireccionCaptionLbl: Label 'Direccion:';
         Telefono_________No__celular_CaptionLbl: Label 'Teléfono:';
-        Solicitud_DelegacionCaptionLbl: Label 'Delegación:';
+        Solicitud_DelegacionCaptionLbl: Label 'Delegacion:';
 
     procedure TraerDescripcionTurno(): Text[100]
     var
@@ -284,7 +284,7 @@ report 67028 "Asistencias tecnica x promotor"
         recNivel: Record 67022;
     begin
         IF recNivel.GET(Solicitud."Cod. Nivel") THEN
-            EXIT(recNivel.Descripción);
+            EXIT(recNivel.Descripcion);
     end;
 
     procedure TraerDescripcionTipoEvento(): Text[100]

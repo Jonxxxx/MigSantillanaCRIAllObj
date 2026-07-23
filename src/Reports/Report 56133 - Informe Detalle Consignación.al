@@ -1,7 +1,7 @@
-report 56133 "Informe Detalle Consignación"
+report 56133 "Informe Detalle Consignacion"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Informe Detalle Consignación.rdlc';
+    RDLCLayout = './Informe Detalle Consignacion.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
@@ -9,7 +9,7 @@ report 56133 "Informe Detalle Consignación"
     {
         dataitem("Item Ledger Entry"; 32)
         {
-            DataItemTableView = SORTING("Item No.", Open, "Variant Code", Positive, Location Code, Posting Date, Expiration Date, Lot No., Serial No.);
+            DataItemTableView = SORTING("Item No.", Open, "Variant Code", Positive, "Location Code", "Posting Date", "Expiration Date", "Lot No.", "Serial No.");
             RequestFilterFields = "Item No.", "Location Code", "Posting Date", "Document No.", "Entry Type";
             column(PageConst_________FORMAT_CurrReport_PAGENO_; PageConst + ' ' + FORMAT(CurrReport.PAGENO))
             {
@@ -83,7 +83,7 @@ report 56133 "Informe Detalle Consignación"
             column(Vta__NetaCaption; Vta__NetaCaptionLbl)
             {
             }
-            column("Vta__LíquidaCaption"; Vta__LíquidaCaptionLbl)
+            column("Vta__LiquidaCaption"; Vta__LiquidaCaptionLbl)
             {
             }
             column(Item_Ledger_Entry__Item_No__Caption; FIELDCAPTION("Item No."))
@@ -124,6 +124,6 @@ report 56133 "Informe Detalle Consignación"
         Item_Ledger_EntryCaptionLbl: Label 'Item Ledger Entry';
         Invoiced_Quantity___1CaptionLbl: Label 'Label1000000025';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';
-        "Vta__LíquidaCaptionLbl": Label 'Vta. Líquida';
+        "Vta__LiquidaCaptionLbl": Label 'Vta. Liquida';
 }
 

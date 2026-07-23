@@ -121,7 +121,7 @@ report 67008 "Proceso Facturacion Muestras"
         TipoAdopcion: Option "Con Adopcion","Sin Adopcion";
         NoDocumento: Code[20];
         LineNo: Integer;
-        TipoFacturacion: Option "Factura a título gratuito","Factura Comercial";
+        TipoFacturacion: Option "Factura a titulo gratuito","Factura Comercial";
 
     procedure RecibeParametros(TipoDoc: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order"; NoDoc: Code[20])
     begin

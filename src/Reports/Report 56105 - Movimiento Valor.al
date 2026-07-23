@@ -9,7 +9,7 @@ report 56105 "Movimiento Valor"
     {
         dataitem("Value Entry"; 5802)
         {
-            DataItemTableView = SORTING("Item No.", "Posting Date", Item Ledger Entry Type, Entry Type, Variance Type, Item Charge No., Location Code, Variant Code);
+            DataItemTableView = SORTING("Item No.", "Posting Date", "Item Ledger Entry Type", "Entry Type", "Variance Type", "Item Charge No.", "Location Code", "Variant Code");
             RequestFilterFields = "Item No.", "Document No.", "Posting Date", "Source No.", "Item Ledger Entry Type", "Document Type";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

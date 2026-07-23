@@ -57,7 +57,7 @@ report 56073 "Consignacion por categoria"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("Categoría_ProductoCaption"; Categoría_ProductoCaptionLbl)
+            column("Categoria_ProductoCaption"; Categoria_ProductoCaptionLbl)
             {
             }
             column(CantidadCaption; CantidadCaptionLbl)
@@ -69,7 +69,7 @@ report 56073 "Consignacion por categoria"
             column(Vta__LiquidaCaption; Vta__LiquidaCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(TotalCaption; TotalCaptionLbl)
@@ -124,11 +124,11 @@ report 56073 "Consignacion por categoria"
         DescCat: Text[100];
         Item_Ledger_EntryCaptionLbl: Label 'Item Ledger Entry';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Categoría_ProductoCaptionLbl": Label 'Categoría Producto';
+        "Categoria_ProductoCaptionLbl": Label 'Categoria Producto';
         CantidadCaptionLbl: Label 'Cantidad';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';
         Vta__LiquidaCaptionLbl: Label 'Vta. Liquida';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         TotalCaptionLbl: Label 'Total';
 }
 

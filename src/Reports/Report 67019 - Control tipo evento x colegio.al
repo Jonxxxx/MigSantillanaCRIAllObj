@@ -166,7 +166,7 @@ report 67019 "Control tipo evento x colegio"
         Programac__Talleres_y_EventosCaptionLbl: Label 'Control tipo evento';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Eventos__Fecha_programacion_CaptionLbl: Label 'Fecha';
-        Eventos__Description_Taller_CaptionLbl: Label 'Descripción evento';
+        Eventos__Description_Taller_CaptionLbl: Label 'Descripcion evento';
         TraerNombreExpositorCaptionLbl: Label 'Nombre Expositor';
         TraerHorasCaptionLbl: Label 'Starting date';
         Avis_CaptionLbl: Label 'Avis.';

@@ -86,7 +86,7 @@ report 56524 "Estado Ctas. Clientes"
             column("NúmeroCaption"; NúmeroCaptionLbl)
             {
             }
-            column("Días_Venci_Caption"; Días_Venci_CaptionLbl)
+            column("Dias_Venci_Caption"; Dias_Venci_CaptionLbl)
             {
             }
             column(Cust__Ledger_Entry__Currency_Code_Caption; Cust__Ledger_Entry__Currency_Code_CaptionLbl)
@@ -424,7 +424,7 @@ report 56524 "Estado Ctas. Clientes"
         DocumentCaptionLbl: Label 'Document';
         TipoCaptionLbl: Label 'Tipo';
         "NúmeroCaptionLbl": Label 'Número';
-        "Días_Venci_CaptionLbl": Label 'Días Venci.';
+        "Dias_Venci_CaptionLbl": Label 'Dias Venci.';
         Cust__Ledger_Entry__Currency_Code_CaptionLbl: Label 'Currency Code';
         Phone_CaptionLbl: Label 'Phone:';
         Contact_CaptionLbl: Label 'Contact:';

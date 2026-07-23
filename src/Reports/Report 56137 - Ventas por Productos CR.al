@@ -31,7 +31,7 @@ report 56137 "Ventas por Productos CR"
             column(Value_EntryCaption; Value_EntryCaptionLbl)
             {
             }
-            column("Venta_LíquidaCaption"; Venta_LíquidaCaptionLbl)
+            column("Venta_LiquidaCaption"; Venta_LiquidaCaptionLbl)
             {
             }
             column(Importe_CosteCaption; Importe_CosteCaptionLbl)
@@ -40,7 +40,7 @@ report 56137 "Ventas por Productos CR"
             column(CantidadCaption; CantidadCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(No__ProductoCaption; No__ProductoCaptionLbl)
@@ -61,7 +61,7 @@ report 56137 "Ventas por Productos CR"
             dataitem("Value Entry"; 5802)
             {
                 DataItemLink = "Item No." = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Posting Date", Item Ledger Entry Type, Entry Type, Variance Type, Item Charge No., Location Code, Variant Code)
+                DataItemTableView = SORTING("Item No.", "Posting Date", "Item Ledger Entry Type", "Entry Type", "Variance Type", "Item Charge No.", "Location Code", "Variant Code")
                                     WHERE("Item Ledger Entry Type" = FILTER(Sale));
                 RequestFilterFields = "Item No.", "Posting Date", "Source No.", "Document No.", "Gen. Bus. Posting Group", "Gen. Prod. Posting Group";
                 column(Cost_Amount__Actual____1; "Cost Amount (Actual)" * -1)
@@ -138,10 +138,10 @@ report 56137 "Ventas por Productos CR"
         vtaliquida: Decimal;
         CurrReport_PAGENOCaptionLbl: Label 'Página';
         Value_EntryCaptionLbl: Label 'Value Entry';
-        "Venta_LíquidaCaptionLbl": Label 'Venta Líquida';
+        "Venta_LiquidaCaptionLbl": Label 'Venta Liquida';
         Importe_CosteCaptionLbl: Label 'Importe Coste';
         CantidadCaptionLbl: Label 'Cantidad';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         No__ProductoCaptionLbl: Label 'No. Producto';
         Venta_NetaCaptionLbl: Label 'Venta Neta';
         Importe_CosteCaption_Control1000000015Lbl: Label 'Importe Coste';

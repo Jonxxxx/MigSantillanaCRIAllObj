@@ -9,7 +9,7 @@ report 56077 "Saldo Clientes x Fecha"
     {
         dataitem("Detailed Cust. Ledg. Entry"; 379)
         {
-            DataItemTableView = SORTING("Customer No.", "Initial Entry Due Date", Posting Date, Currency Code);
+            DataItemTableView = SORTING("Customer No.", "Initial Entry Due Date", "Posting Date", "Currency Code");
             RequestFilterFields = "Customer No.", "Posting Date";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

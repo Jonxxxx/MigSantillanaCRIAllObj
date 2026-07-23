@@ -61,7 +61,7 @@ report 56100 "Registro transf inventario"
             column(Item_Ledger_Entry__Document_No__Caption; "Item Ledger Entry".FIELDCAPTION("Document No."))
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(Item_Ledger_Entry__External_Document_No__Caption; "Item Ledger Entry".FIELDCAPTION("External Document No."))
@@ -85,7 +85,7 @@ report 56100 "Registro transf inventario"
                 }
                 column(Item_Ledger_Entry__Location_Code_; "Location Code")
                 {
-                    DecimalPlaces = 0 : 5;
+                    //DecimalPlaces = 0 : 5;
                 }
                 column(Item_Ledger_Entry_Quantity; Quantity)
                 {
@@ -194,7 +194,7 @@ report 56100 "Registro transf inventario"
         Registrado_por_CaptionLbl: Label 'Registrado por:';
         Item_Ledger_Entry__Entry_Type_CaptionLbl: Label 'Entry Type';
         Item_Ledger_Entry_QuantityCaptionLbl: Label 'Cost Amount (Actual)';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         Entregado_Por_______________________________CaptionLbl: Label 'Entregado Por: _____________________________';
         Recibido_Por_______________________________CaptionLbl: Label 'Recibido Por: _____________________________';
 }

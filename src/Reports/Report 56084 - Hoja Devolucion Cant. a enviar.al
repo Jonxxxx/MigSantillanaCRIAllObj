@@ -3,7 +3,7 @@ report 56084 "Hoja Devolucion Cant. a enviar"
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         03/12/2013      RRT           Adaptación informes a RTC.
+    // 139         03/12/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
     RDLCLayout = './Hoja Devolucion Cant. a enviar.rdlc';
 
@@ -151,7 +151,7 @@ report 56084 "Hoja Devolucion Cant. a enviar"
                 //-139
 
                 //+139
-                //... Si sólo tuviera cabecera, lo saltamos.
+                //... Si solo tuviera cabecera, lo saltamos.
                 lrTransferLine.RESET;
                 lrTransferLine.SETRANGE("Document No.", "No.");
                 IF NOT lrTransferLine.FIND('-') THEN

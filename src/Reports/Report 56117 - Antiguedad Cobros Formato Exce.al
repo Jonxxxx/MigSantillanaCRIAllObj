@@ -154,7 +154,7 @@ report 56117 "Antiguedad Cobros Formato Exce"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Currency Code);
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Currency Code");
 
                 trigger OnAfterGetRecord()
                 var
@@ -179,13 +179,13 @@ report 56117 "Antiguedad Cobros Formato Exce"
 
                 trigger OnPreDataItem()
                 begin
-                    SETRANGE("Posting Date", EndingDate + 1, 12319999D);
+                    SETRANGE("Posting Date", EndingDate + 1, 20991231D);
                 end;
             }
             dataitem(OpenCustLedgEntry; 21)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", Open, Positive, "Due Date", Currency Code)
+                DataItemTableView = SORTING("Customer No.", Open, Positive, "Due Date", "Currency Code")
                                     WHERE(Open = CONST(True));
 
                 trigger OnAfterGetRecord()
@@ -661,7 +661,7 @@ report 56117 "Antiguedad Cobros Formato Exce"
                 TempCurrencyAmount.SETRANGE("Currency Code", TempCurrency2.Code);
                 IF TempCurrencyAmount.FIND('-') THEN
                     REPEAT
-                        IF TempCurrencyAmount.Date <> 12319999D THEN
+                        IF TempCurrencyAmount.Date <> 20991231D THEN
                             AgedCustLedgEntry[GetPeriodIndex(TempCurrencyAmount.Date)]."Remaining Amount" :=
                               TempCurrencyAmount.Amount
                         ELSE
@@ -689,11 +689,11 @@ report 56117 "Antiguedad Cobros Formato Exce"
                     field(AgingBy; AgingBy)
                     {
                         Caption = 'Vencido por';
-                        OptionCaption = 'Fecha vencimiento,Fecha registro,Fecha emisión documento';
+                        OptionCaption = 'Fecha vencimiento,Fecha registro,Fecha emision documento';
                     }
                     field(PeriodLength; PeriodLength)
                     {
-                        Caption = 'Long. períodos antigüedad';
+                        Caption = 'Long. periodos antigüedad';
                     }
                     field(PrintAmountInLCY; PrintAmountInLCY)
                     {
@@ -810,7 +810,7 @@ report 56117 "Antiguedad Cobros Formato Exce"
 
         EVALUATE(PeriodLength2, '-' + FORMAT(PeriodLength));
         IF AgingBy = AgingBy::"Due Date" THEN BEGIN
-            PeriodEndDate[1] := 12319999D;
+            PeriodEndDate[1] := 20991231D;
             PeriodStartDate[1] := EndingDate + 1;
         END ELSE BEGIN
             PeriodEndDate[1] := EndingDate;
@@ -914,13 +914,13 @@ report 56117 "Antiguedad Cobros Formato Exce"
                 END;
             END;
             "Currency Code" := CurrencyCode;
-            Date := 12319999D;
+            Date := 20991231D;
             IF FIND THEN BEGIN
                 Amount := Amount + TotalCustLedgEntry[1].Amount;
                 MODIFY;
             END ELSE BEGIN
                 "Currency Code" := CurrencyCode;
-                Date := 12319999D;
+                Date := 20991231D;
                 Amount := TotalCustLedgEntry[1].Amount;
                 INSERT;
             END;

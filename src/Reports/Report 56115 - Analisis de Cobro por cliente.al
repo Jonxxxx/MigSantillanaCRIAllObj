@@ -65,7 +65,7 @@ report 56115 "Analisis de Cobro por cliente"
                 PromDiasD := 0;
                 I := 0;
 
-                //Como debió pagar
+                //Como debio pagar
                 SIH.RESET;
                 COPYFILTER("Date Filter", SIH."Posting Date");
                 SIH.SETRANGE("Sell-to Customer No.", "No.");

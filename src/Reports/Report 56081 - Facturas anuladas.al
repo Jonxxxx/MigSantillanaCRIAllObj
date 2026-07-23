@@ -3,7 +3,7 @@ report 56081 "Facturas anuladas"
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         20/11/2013      RRT           Adaptación informes a RTC.
+    // 139         20/11/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
     RDLCLayout = './Facturas anuladas.rdlc';
 
@@ -15,8 +15,8 @@ report 56081 "Facturas anuladas"
         dataitem("Cust. Ledger Entry"; 21)
         {
             CalcFields = Amount;
-            DataItemTableView = SORTING("Document No.", "Document Type", Customer No.)
-                                WHERE(Open = FILTER(No));
+            DataItemTableView = SORTING("Document No.", "Document Type", "Customer No.")
+                                WHERE(Open = FILTER(False));
             RequestFilterFields = "Document No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -89,7 +89,7 @@ report 56081 "Facturas anuladas"
                 rCliente.GET("Customer No.");
 
                 //+139.
-                //... Adaptación del código existente en el trigger Body del mismo DataItem en el apartado Section.
+                //... Adaptacion del codigo existente en el trigger Body del mismo DataItem en el apartado Section.
                 lMostrar := FALSE;
                 FechaAnulacion := 0D;
 

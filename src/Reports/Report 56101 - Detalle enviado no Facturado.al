@@ -9,7 +9,7 @@ report 56101 "Detalle enviado no Facturado"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING("Document Type", Bill-to Customer No., Currency Code);
+            DataItemTableView = SORTING("Document Type", "Bill-to Customer No.", "Currency Code");
             RequestFilterFields = "Document Type", "Bill-to Customer No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

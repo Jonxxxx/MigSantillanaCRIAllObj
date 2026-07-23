@@ -1,7 +1,7 @@
 report 56024 "Guia de Transporte Resumida"
 {
-    // #4161     PLB  26/09/2014  Se pide que muestre el nº de factura que corresponde a la guía, pero esto no es posible
-    //                            tal como trabajan. Si se factura desde el pedido, la factura y la guía no quedan
+    // #4161     PLB  26/09/2014  Se pide que muestre el nº de factura que corresponde a la guia, pero esto no es posible
+    //                            tal como trabajan. Si se factura desde el pedido, la factura y la guia no quedan
     //                            relacionados.
     // 
     // MOI - 12/12/2014: Se modifica el report para que aparezcan nuevos campos y desaparezcan antiguos.
@@ -67,13 +67,13 @@ report 56024 "Guia de Transporte Resumida"
             column(Ruta_Embarque_Caption; Ruta_Embarque_CaptionLbl)
             {
             }
-            column(Relacion__EmbarqueCaption; Relación__EmbarqueCaptionLbl)
+            column(Relacion__EmbarqueCaption; Relacion__EmbarqueCaptionLbl)
             {
             }
-            column(No__LineaCaption; No__LíneaCaptionLbl)
+            column(No__LineaCaption; No__LineaCaptionLbl)
             {
             }
-            column(Cod__ClienteCaption; Cód__ClienteCaptionLbl)
+            column(Cod__ClienteCaption; Cod__ClienteCaptionLbl)
             {
             }
             column(NombreClienteCaption; NombreClienteCaptionLbl)
@@ -103,7 +103,7 @@ report 56024 "Guia de Transporte Resumida"
             column(Fecha_Entrega_RequeridaCaption; Fecha_Entrega_RequeridaCaptionLbl)
             {
             }
-            column(Condiciones_de_envioCaption; Condiciones_de_envíoCaptionLbl)
+            column(Condiciones_de_envioCaption; Condiciones_de_envioCaptionLbl)
             {
             }
             column(Observaciones_Caption; Observaciones_CaptionLbl)
@@ -266,9 +266,9 @@ report 56024 "Guia de Transporte Resumida"
         "Página_CaptionLbl": Label 'Página:';
         Hora_CaptionLbl: Label 'Hora:';
         Ruta_Embarque_CaptionLbl: Label 'Ruta Embarque:';
-        "Relación__EmbarqueCaptionLbl": Label 'Relación  Embarque';
-        "No__LíneaCaptionLbl": Label 'No. Línea';
-        "Cód__ClienteCaptionLbl": Label 'Cód. Cliente';
+        "Relacion__EmbarqueCaptionLbl": Label 'Relacion  Embarque';
+        "No__LineaCaptionLbl": Label 'No. Linea';
+        "Cod__ClienteCaptionLbl": Label 'Cod. Cliente';
         NombreClienteCaptionLbl: Label 'Nombre Cliente';
         EstadoCaptionLbl: Label 'Estado';
         CiudadCaptionLbl: Label 'Ciudad';
@@ -278,7 +278,7 @@ report 56024 "Guia de Transporte Resumida"
         BultosCaptionLbl: Label 'Bultos';
         PesoCaptionLbl: Label 'Peso';
         Fecha_Entrega_RequeridaCaptionLbl: Label 'Fecha Entrega Requerida';
-        "Condiciones_de_envíoCaptionLbl": Label 'Condiciones de envío';
+        "Condiciones_de_envioCaptionLbl": Label 'Condiciones de envio';
         Observaciones_CaptionLbl: Label 'Observaciones ';
         Ciudad: Text[40];
         EntregadoLbl: Label 'Entregado';

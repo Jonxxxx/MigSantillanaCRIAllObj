@@ -3,7 +3,7 @@ report 56007 "Lista Inventario Consignacion"
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         28/11/2013      RRT           Adaptación informes a RTC. Pasar código de OnPreSection() a  OnAfterGetRecord()
+    // 139         28/11/2013      RRT           Adaptacion informes a RTC. Pasar codigo de OnPreSection() a  OnAfterGetRecord()
     DefaultLayout = RDLC;
     RDLCLayout = './Lista Inventario Consignacion.rdlc';
 
@@ -91,7 +91,7 @@ report 56007 "Lista Inventario Consignacion"
         {
             area(content)
             {
-                field("Mostrar sólo almacén con balance"; SoloBalance)
+                field("Mostrar solo almacén con balance"; SoloBalance)
                 {
                 }
             }

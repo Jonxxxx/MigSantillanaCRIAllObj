@@ -309,7 +309,7 @@ report 56029 "Etiqueta Cajas"
                             IF SSI2.FINDFIRST THEN BEGIN
                                 IF CabNop.GET(SSH."External Document No.", SSH."Sell-to Customer No.") THEN;
                                 IF (CabNop."Metodo de Envio Ecommerce" <> '') AND (CabNop."Metodo de Envio Ecommerce" <> 'TERRESTRE') THEN BEGIN
-                                    //Ciudad := SSH."Ship-to City" +' - '+Provincia +' - '+Departamento+' - '+Pais.Name + ' - E-Commerce: ' + SH."External Document No."+' - Método de envío: ' + CabNop."Metodo de Envio Ecommerce";   // 003-YFC
+                                    //Ciudad := SSH."Ship-to City" +' - '+Provincia +' - '+Departamento+' - '+Pais.Name + ' - E-Commerce: ' + SH."External Document No."+' - Método de envio: ' + CabNop."Metodo de Envio Ecommerce";   // 003-YFC
                                     Ciudad := SSH."Ship-to City" + ' - ' + Provincia + ' - ' + Departamento + ' - ' + Pais.Name + ' - Tel: ' + SSI2."No. Telefono" + ' - ' + SSI2."External Document No.";   // 003-YFC
                                 END
                                 ELSE
@@ -340,7 +340,7 @@ report 56029 "Etiqueta Cajas"
                                 IF CabNop.GET(SH."External Document No.", SH."Sell-to Customer No.") THEN;
                                 IF (SH."Metodo de Envio E-Commerce" = SH."Metodo de Envio E-Commerce"::Recogida) AND (CabNop."Metodo de Envio Ecommerce" <> '') THEN BEGIN
 
-                                    //Ciudad := SH."Ship-to City" +' - '+Provincia +' - '+Departamento+' - '+Pais.Name  +' - Telefono: '+ SH."No. Telefono" +' - E-Commerce: ' + SH."External Document No."+' - Método de envío: ' + CabNop."Metodo de Envio Ecommerce"  // 002-YFC
+                                    //Ciudad := SH."Ship-to City" +' - '+Provincia +' - '+Departamento+' - '+Pais.Name  +' - Telefono: '+ SH."No. Telefono" +' - E-Commerce: ' + SH."External Document No."+' - Método de envio: ' + CabNop."Metodo de Envio Ecommerce"  // 002-YFC
                                     Ciudad := SH."Ship-to City" + ' - ' + Provincia + ' - ' + Departamento + ' - ' + Pais.Name + ' - Tel: ' + SH."No. Telefono" + ' - ' + SH."External Document No." // 002-YFC
                                 END
                                 ELSE

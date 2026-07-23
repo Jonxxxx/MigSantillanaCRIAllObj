@@ -3,7 +3,7 @@ report 56090 "Hoja Devolucion NC"
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         02/12/2013      RRT           Adaptación informes a RTC.
+    // 139         02/12/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
     RDLCLayout = './Hoja Devolucion NC.rdlc';
 
@@ -83,7 +83,7 @@ report 56090 "Hoja Devolucion NC"
             dataitem("Sales Line"; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("No.", Type)
                                     ORDER(Ascending)
                                     WHERE(Type = FILTER(Item));
@@ -142,7 +142,7 @@ report 56090 "Hoja Devolucion NC"
                 lrSalesLine: Record 37;
             begin
                 //+139
-                //... Si sólo tuviera cabecera, lo saltamos.
+                //... Si solo tuviera cabecera, lo saltamos.
                 lrSalesLine.RESET;
                 lrSalesLine.SETRANGE("Document Type", "Document Type");
                 lrSalesLine.SETRANGE("Document No.", "No.");

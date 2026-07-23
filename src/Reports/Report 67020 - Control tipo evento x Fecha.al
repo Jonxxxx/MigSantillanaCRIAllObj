@@ -166,7 +166,7 @@ report 67020 "Control tipo evento x Fecha"
         Programac__Talleres_y_EventosCaptionLbl: Label 'Control tipo evento';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Eventos__Tipo_Evento_CaptionLbl: Label 'Tipo Ev.';
-        Eventos__Description_Taller_CaptionLbl: Label 'Descripción';
+        Eventos__Description_Taller_CaptionLbl: Label 'Descripcion';
         TraerNombreExpositorCaptionLbl: Label 'Nombre Expositor';
         TraerHorasCaptionLbl: Label 'Starting date';
         Avis_CaptionLbl: Label 'Avis.';
@@ -175,7 +175,7 @@ report 67020 "Control tipo evento x Fecha"
         AsistentesCaptionLbl: Label 'Asistentes';
         DistritoCaptionLbl: Label 'Distrito';
         Equi_CaptionLbl: Label 'Equi.';
-        Eventos__Cod__Colegio_CaptionLbl: Label 'Fecha programación:';
+        Eventos__Cod__Colegio_CaptionLbl: Label 'Fecha programacion:';
         TOTAL_CaptionLbl: Label 'TOTAL:';
 
     procedure TraerNombreExpositor(): Text[100]

@@ -13,7 +13,7 @@ report 56119 "Control Ventas 2"
             dataitem("Value Entry"; 5802)
             {
                 DataItemLink = "Source No." = FIELD("No.");
-                DataItemTableView = SORTING("Source Type", "Source No.", "Cod. Oferta", Posting Date)
+                DataItemTableView = SORTING("Source Type", "Source No.", "Cod. Oferta", "Posting Date")
                                     WHERE("Source Type" = FILTER(Customer));
                 RequestFilterFields = "Source No.", "Cod. Oferta", "Item No.", "Location Code", "Document No.", "Posting Date", "Salespers./Purch. Code";
 

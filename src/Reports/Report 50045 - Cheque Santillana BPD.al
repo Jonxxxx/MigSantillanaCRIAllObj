@@ -4,14 +4,14 @@ report 50045 "Cheque Santillana BPD"
     // ------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------
-    // No.      Fecha           Firma         Descripción
+    // No.      Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // MIGDO    06-enero-2022   FES           Comentado por error compilación. Migración Santillana Dominicana
+    // MIGDO    06-enero-2022   FES           Comentado por error compilacion. Migracion Santillana Dominicana
     DefaultLayout = RDLC;
     RDLCLayout = './Cheque Santillana BPD.rdlc';
 
     Caption = 'Check';
-    PDFFontEmbedding = true;
+    //TODO: revisar propiedad PDFFontEmbedding = true;
     Permissions = TableData 270 = m;
     PreviewMode = PrintLayout;
 

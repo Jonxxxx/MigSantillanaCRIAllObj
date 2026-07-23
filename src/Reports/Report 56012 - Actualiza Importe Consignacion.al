@@ -14,9 +14,9 @@ report 56012 "Actualiza Importe Consignacion"
             dataitem("Item Ledger Entry"; 32)
             {
                 DataItemLink = "Location Code" = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", Open, "Variant Code", Positive, Location Code, Posting Date)
+                DataItemTableView = SORTING("Item No.", Open, "Variant Code", Positive, "Location Code", "Posting Date")
                                     ORDER(Ascending)
-                                    WHERE(Open = FILTER(Yes));
+                                    WHERE(Open = FILTER(True));
 
                 trigger OnAfterGetRecord()
                 begin

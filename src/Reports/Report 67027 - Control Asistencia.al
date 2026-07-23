@@ -55,7 +55,7 @@ report 67027 "Control Asistencia"
                 DataItemLink = Cod. Taller - Evento=FIELD(Cod. Taller - Evento),
                                Expositor=FIELD(Expositor),
                                Secuencia=FIELD(Secuencia);
-                DataItemTableView = SORTING(Cod. Taller - Evento,Tipo Evento,Tipo de Expositor,Expositor,Fecha programacion,Secuencia);
+                DataItemTableView = SORTING("Cod. Taller - Evento","Tipo Evento","Tipo de Expositor",Expositor,"Fecha programacion",Secuencia);
                 column(Programac__Talleres_y_Eventos__Fecha_programacion_;"Fecha programacion")
                 {
                 }
@@ -101,7 +101,7 @@ report 67027 "Control Asistencia"
                                    Cod. Expositor=FIELD(Expositor),
                                    Secuencia=FIELD(Secuencia),
                                    Fecha programacion=FIELD("Fecha programacion");
-                    DataItemTableView = SORTING("No. Solicitud",Cod. Taller - Evento,Cod. Expositor,Secuencia,Cod. Docente,Fecha programacion);
+                    DataItemTableView = SORTING("No. Solicitud","Cod. Taller - Evento","Cod. Expositor",Secuencia,"Cod. Docente","Fecha programacion");
                     column(Asistentes_Talleres_y_Eventos_Confirmado;Confirmado)
                     {
                     }

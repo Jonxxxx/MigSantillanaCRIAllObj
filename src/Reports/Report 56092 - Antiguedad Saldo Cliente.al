@@ -172,7 +172,7 @@ report 56092 "Antiguedad Saldo Cliente"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("DíasCaption"; DíasCaptionLbl)
+            column("DiasCaption"; DiasCaptionLbl)
             {
             }
             column(SaldoCaption; SaldoCaptionLbl)
@@ -214,7 +214,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCustNoVencido; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporteNoVencido; wImporteNoVencido)
                 {
@@ -270,7 +270,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCust30; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporte30; wImporte30)
@@ -331,7 +331,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCust60; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias60; wDias60)
@@ -392,7 +392,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCust90; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias90; wDias90)
@@ -453,7 +453,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCust120; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias120; wDias120)
@@ -514,7 +514,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCust150; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wDias150; wDias150)
@@ -575,7 +575,7 @@ report 56092 "Antiguedad Saldo Cliente"
             dataitem(MovCustMasDe180; 379)
             {
                 DataItemLink = "Customer No." = FIELD("No.");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Entry Type, Currency Code)
+                DataItemTableView = SORTING("Customer No.", "Posting Date", "Entry Type", "Currency Code")
                                     ORDER(Ascending)
                                     WHERE(Amount = FILTER(> 0));
                 column(wImporte180; wImporte180)
@@ -770,7 +770,7 @@ report 56092 "Antiguedad Saldo Cliente"
         rMovClie: Record 21;
         Customer___Summary_Aging_Simp_CaptionLbl: Label 'Customer - Summary Aging Simp.';
         CurrReport_PAGENOCaptionLbl: Label 'Page';
-        "DíasCaptionLbl": Label 'Días';
+        "DiasCaptionLbl": Label 'Dias';
         SaldoCaptionLbl: Label 'Saldo';
         VencidosCaptionLbl: Label 'Vencidos';
         Saldo_vencidoCaptionLbl: Label 'Saldo vencido';

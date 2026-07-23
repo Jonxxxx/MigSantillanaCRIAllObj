@@ -1,8 +1,8 @@
 report 52500 "Cheque Generico Costa Rica"
 {
     // 001  PLB  18/09/2014  - Algunos ajustes para cuadrar el cheque
-    //                       - Sólo aparecía el último cheque
-    //                       - Error en la impresión de fecha
+    //                       - Solo aparecia el último cheque
+    //                       - Error en la impresion de fecha
     //                       - Escribir "setiembre" en lugar de "septiembre"
     DefaultLayout = RDLC;
     RDLCLayout = './Cheque Generico Costa Rica.rdlc';

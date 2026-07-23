@@ -292,7 +292,7 @@ report 56527 "Ctas. por cobrar x dias vdos."
         i: Integer;
     begin
         CustFilter := Customer.GETFILTERS;
-        PeriodStartDate[6] := 12319999D;
+        PeriodStartDate[6] := 20991231D;
         PeriodStartDate[5] := StartDate;
         PeriodStartDate[4] := CALCDATE('<-60D>', StartDate);
         FOR i := 3 DOWNTO 2 DO

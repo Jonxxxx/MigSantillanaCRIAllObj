@@ -694,7 +694,7 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(DimDepto;DimDepto)
                     {
-                        Caption = 'Dimensión';
+                        Caption = 'Dimension';
                         TableRelation = Dimension;
                     }
                     field(ShowAllForOverdue;ShowAllForOverdue)

@@ -103,7 +103,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
             column(Solicitud_Delegacion; Delegacion)
             {
             }
-            column("Solicitud_de_aistencia_técnica_pedagógicaCaption"; Solicitud_de_aistencia_técnica_pedagógicaCaptionLbl)
+            column("Solicitud_de_aistencia_técnica_pedagogicaCaption"; Solicitud_de_aistencia_técnica_pedagogicaCaptionLbl)
             {
             }
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
@@ -181,7 +181,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
             column(Solicitud__Objetivo_promotor_Caption; Solicitud__Objetivo_promotor_CaptionLbl)
             {
             }
-            column("Descripción_Caption"; Descripción_CaptionLbl)
+            column("Descripcion_Caption"; Descripcion_CaptionLbl)
             {
             }
             column(texDistritoCaption; texDistritoCaptionLbl)
@@ -202,8 +202,8 @@ report 67024 "Solicitud asi. tec. pedagogica"
             dataitem(Programacion; 67015)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
-                               Cod. Taller - Evento=FIELD("Cod. evento");
-                DataItemTableView = SORTING(Cod. Taller - Evento, Tipo Evento, Tipo de Expositor, Expositor, Fecha programacion, Secuencia);
+                               "Cod. Taller - Evento" = FIELD("Cod. evento");
+                DataItemTableView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor, "Fecha programacion", Secuencia);
                 column(Programacion__Fecha_programacion_; "Fecha programacion")
                 {
                 }
@@ -244,8 +244,8 @@ report 67024 "Solicitud asi. tec. pedagogica"
             dataitem(Asistentes; 67016)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
-                               Cod. Taller - Evento=FIELD("Cod. evento");
-                DataItemTableView = SORTING("No. Solicitud", Cod. Taller - Evento, Cod. Expositor, Secuencia, Cod. Docente, Fecha programacion);
+                               "Cod. Taller - Evento" = FIELD("Cod. evento");
+                DataItemTableView = SORTING("No. Solicitud", "Cod. Taller - Evento", "Cod. Expositor", Secuencia, "Cod. Docente", "Fecha programacion");
                 column(Asistentes__Cod__Docente_; "Cod. Docente")
                 {
                 }
@@ -289,8 +289,8 @@ report 67024 "Solicitud asi. tec. pedagogica"
             dataitem(Material; 67014)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
-                               Cod. Taller - Evento=FIELD("Cod. evento");
-                DataItemTableView = SORTING(Cod. Taller - Evento, Tipo Evento, Secuencia, Line no.)
+                               "Cod. Taller - Evento" = FIELD("Cod. evento");
+                DataItemTableView = SORTING("Cod. Taller - Evento", "Tipo Evento", Secuencia, "Line no.")
                                     WHERE("Tipo de Material" = CONST(Producto));
                 column(Material__Codigo_Material_; "Codigo Material")
                 {
@@ -361,46 +361,46 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
-        "Solicitud_de_aistencia_técnica_pedagógicaCaptionLbl": Label 'Solicitud de Asistencia Técnica Pedagógica';
+        "Solicitud_de_aistencia_técnica_pedagogicaCaptionLbl": Label 'Solicitud de Asistencia Técnica Pedagogica';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Solicitud__Tipo_de_Evento_CaptionLbl: Label 'Tipo Evento:';
         ObservacionesCaptionLbl: Label 'Observaciones';
         Datos_del_responsableCaptionLbl: Label 'Datos del responsable';
         Datos_del_colegioCaptionLbl: Label 'Datos del colegio';
         Datos_del_promotorCaptionLbl: Label 'Datos del promotor';
-        Solicitud__Cod__evento_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__evento_CaptionLbl: Label 'Codigo:';
         Solicitud__Cod__Expositor_CaptionLbl: Label 'Expositor:';
         Datos_del_eventoCaptionLbl: Label 'Datos del evento';
         Datos_de_solicitudCaptionLbl: Label 'Datos de solicitud';
         Solicitud__No__Solicitud_CaptionLbl: Label 'Nº Solicitud:';
         Solicitud__Fecha_Solicitud_CaptionLbl: Label 'Fecha:';
         Solicitud__No__asistentes_CaptionLbl: Label 'Asistentes esperados:';
-        Solicitud__Cod__promotor_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__promotor_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_promotor_CaptionLbl: Label 'Nombre:';
         Solicitud_StatusCaptionLbl: Label 'Estado:';
-        Solicitud__Cod__Colegio_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__Colegio_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_Colegio_CaptionLbl: Label 'Nombre:';
         TraerDescripcionLocalCaptionLbl: Label 'Local:';
         TraerDescripcionTurnoCaptionLbl: Label 'Turno:';
         Solicitud_ReferenciaCaptionLbl: Label 'Referencia:';
-        Solicitud__Cod__Docente_responsable_CaptionLbl: Label 'Código:';
+        Solicitud__Cod__Docente_responsable_CaptionLbl: Label 'Codigo:';
         Solicitud__Nombre_responsable_CaptionLbl: Label 'Nombre:';
         Phone_Docente_________Cell_Docente_CaptionLbl: Label 'Teléfono:';
         Solicitud__Objetivo_promotor_CaptionLbl: Label 'Objetivo:';
-        "Descripción_CaptionLbl": Label 'Descripción:';
+        "Descripcion_CaptionLbl": Label 'Descripcion:';
         texDistritoCaptionLbl: Label 'Distrito:';
         Solicitud__Cod__Nivel_CaptionLbl: Label 'Nivel:';
-        texDireccionCaptionLbl: Label 'Dirección:';
+        texDireccionCaptionLbl: Label 'Direccion:';
         Telefono_________No__celular_CaptionLbl: Label 'Teléfono:';
-        Solicitud_DelegacionCaptionLbl: Label 'Delegación:';
+        Solicitud_DelegacionCaptionLbl: Label 'Delegacion:';
         Programacion__Fecha_programacion_CaptionLbl: Label 'Fecha prog.';
         HorarioCaptionLbl: Label 'Horario';
         AsistentesCaptionLbl: Label 'Asistentes';
-        Asistentes__Cod__Docente_CaptionLbl: Label 'Cód. Docente';
+        Asistentes__Cod__Docente_CaptionLbl: Label 'Cod. Docente';
         Asistentes__Nombre_Docente_CaptionLbl: Label 'Nombre';
         TraerNivelDocenteCaptionLbl: Label 'Nivel';
-        Material__Description_Material_CaptionLbl: Label 'Descriptión';
-        Material__Codigo_Material_CaptionLbl: Label 'Código';
+        Material__Description_Material_CaptionLbl: Label 'Description';
+        Material__Codigo_Material_CaptionLbl: Label 'Codigo';
         GradoCaptionLbl: Label 'Grado';
         MaterialCaptionLbl: Label 'Material';
 
@@ -434,7 +434,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
         recNivel: Record 67022;
     begin
         IF recNivel.GET(Solicitud."Cod. Nivel") THEN
-            EXIT(recNivel.Descripción);
+            EXIT(recNivel.Descripcion);
     end;
 
     procedure TraerDescripcionTipoEvento(): Text[100]
@@ -452,7 +452,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
     begin
         IF recDocente.GET(Asistentes."Cod. Docente") THEN
             IF recNivel.GET(recDocente."Nivel Docente") THEN
-                EXIT(recNivel.Descripción);
+                EXIT(recNivel.Descripcion);
     end;
 }
 

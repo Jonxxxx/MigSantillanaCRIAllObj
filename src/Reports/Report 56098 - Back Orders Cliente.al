@@ -3,9 +3,9 @@ report 56098 "Back Orders Cliente"
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         11/12/2013      RRT           Adaptación informes a RTC.
+    // 139         11/12/2013      RRT           Adaptacion informes a RTC.
     // 
-    // #56090      27/09/2016      PLB           Utilizar función disponibilidad backorder en lugar de la estándar
+    // #56090      27/09/2016      PLB           Utilizar funcion disponibilidad backorder en lugar de la estándar
     DefaultLayout = RDLC;
     RDLCLayout = './Back Orders Cliente.rdlc';
 
@@ -182,7 +182,7 @@ report 56098 "Back Orders Cliente"
             column(N_Caption; N_CaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(AlmacenCaption_Control1000000032; AlmacenCaption_Control1000000032Lbl)
@@ -267,7 +267,7 @@ report 56098 "Back Orders Cliente"
         Pedidos_en_ConsignacionCaptionLbl: Label 'Pedidos en Consignacion';
         No__DocumentoCaptionLbl: Label 'No. Documento';
         N_CaptionLbl: Label 'Nº';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         AlmacenCaption_Control1000000032Lbl: Label 'Almacen';
         CantidadCaptionLbl: Label 'Cantidad';
         Cantidad_enviadaCaptionLbl: Label 'Cantidad enviada';

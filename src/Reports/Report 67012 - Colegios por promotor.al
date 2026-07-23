@@ -242,7 +242,7 @@ report 67012 "Colegios por promotor"
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         codCategoriaCaptionLbl: Label 'Cat.';
         texDistritoCaptionLbl: Label 'Distrito';
-        Adopciones__Cod__Colegio_CaptionLbl: Label 'Cód. Colegio';
+        Adopciones__Cod__Colegio_CaptionLbl: Label 'Cod. Colegio';
         Adopciones__Cod__Promotor_CaptionLbl: Label 'Promotor:';
 
     procedure TraerCategoria(codPrmColegio: Code[20]; codPrmNivel: Code[20]): Code[10]

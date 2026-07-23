@@ -42,14 +42,14 @@ report 56014 "Exporta Proveedores"
 
                 IF I = 1 THEN BEGIN
                     ExcelBuf.NewRow;
-                    ExcelBuf.AddColumn('Cód. Autor', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+                    ExcelBuf.AddColumn('Cod. Autor', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Estado', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Nombre', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Direccion', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
-                    ExcelBuf.AddColumn('Cód. Postal', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+                    ExcelBuf.AddColumn('Cod. Postal', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Ciudad', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Provincia', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
-                    ExcelBuf.AddColumn('País', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
+                    ExcelBuf.AddColumn('Pais', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('RFC', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Teléfono', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);
                     ExcelBuf.AddColumn('Fax', FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuf."Cell Type"::Text);

@@ -1,6 +1,6 @@
 report 52542 "Factura Santillana CR"
 {
-    // #4186   30/09/2014      PLB           Se ha creado la opción de poder imprimir las líneas por el ranking de ubicación
+    // #4186   30/09/2014      PLB           Se ha creado la opcion de poder imprimir las lineas por el ranking de ubicacion
     // 
     // MOI - 12/12/2014: Se añade la direccion y los comentarios en el footer del layout.
     //                   Se añaden los TextConstants para direccion y comentarios en el footer.

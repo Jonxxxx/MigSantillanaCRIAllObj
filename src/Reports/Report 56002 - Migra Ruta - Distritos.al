@@ -4,9 +4,9 @@ report 56002 "Migra Ruta - Distritos"
     // ------------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------------
-    // No.             Firma         Fecha           Descripción
+    // No.             Firma         Fecha           Descripcion
     // ------------------------------------------------------------------------------
-    // CPMCR-CEC       FES           08-06-2021      Comentario por migración Costa Rica. Corregir error compilación.
+    // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
 
     ProcessingOnly = true;
 

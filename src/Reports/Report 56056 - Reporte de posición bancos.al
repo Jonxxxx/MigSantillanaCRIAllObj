@@ -1,7 +1,7 @@
-report 56056 "Reporte de posición bancos"
+report 56056 "Reporte de posicion bancos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte de posición bancos.rdlc';
+    RDLCLayout = './Reporte de posicion bancos.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
@@ -41,7 +41,7 @@ report 56056 "Reporte de posición bancos"
             column(Cuenta_bancariaCaption; Cuenta_bancariaCaptionLbl)
             {
             }
-            column("Saldo_inicial_del_díaCaption"; Saldo_inicial_del_díaCaptionLbl)
+            column("Saldo_inicial_del_diaCaption"; Saldo_inicial_del_diaCaptionLbl)
             {
             }
             column(IngresosCaption; IngresosCaptionLbl)
@@ -56,7 +56,7 @@ report 56056 "Reporte de posición bancos"
             column(MonedaCaption; MonedaCaptionLbl)
             {
             }
-            column("Al_DíaCaption"; Al_DíaCaptionLbl)
+            column("Al_DiaCaption"; Al_DiaCaptionLbl)
             {
             }
             column(Tipo_de_CambioCaption; Tipo_de_CambioCaptionLbl)
@@ -207,7 +207,7 @@ report 56056 "Reporte de posición bancos"
                 lrConfig.GET;
                 wDivisaLocal := lrConfig."LCY Code";
 
-                //... De momento, a piñón fijo.
+                //... De momento, a piñon fijo.
                 wDivisaRef := 'USD';
 
                 wTipoCambioDR := 1 / lrExchangeRate.ExchangeRate(wFechaBalance, wDivisaRef);
@@ -280,12 +280,12 @@ report 56056 "Reporte de posición bancos"
         wNombre2: Text[50];
         REPORTE_POSICION_EN_BANCOSCaptionLbl: Label 'REPORTE POSICION EN BANCOS';
         Cuenta_bancariaCaptionLbl: Label 'Cuenta bancaria';
-        "Saldo_inicial_del_díaCaptionLbl": Label 'Saldo inicial del día';
+        "Saldo_inicial_del_diaCaptionLbl": Label 'Saldo inicial del dia';
         IngresosCaptionLbl: Label 'Ingresos';
         EgresosCaptionLbl: Label 'Egresos';
         Saldo_en_librosCaptionLbl: Label 'Saldo en libros';
         MonedaCaptionLbl: Label 'Moneda';
-        "Al_DíaCaptionLbl": Label 'Al Día';
+        "Al_DiaCaptionLbl": Label 'Al Dia';
         Tipo_de_CambioCaptionLbl: Label 'Tipo de Cambio';
         PageCaptionLbl: Label 'Page';
         MONEDACaption_Control1000000007Lbl: Label 'MONEDA';

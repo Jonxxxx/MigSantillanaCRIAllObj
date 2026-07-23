@@ -53,10 +53,10 @@ report 56093 "Venta a Consignacion por item"
             column(Vta__NetaCaption; Vta__NetaCaptionLbl)
             {
             }
-            column("Vta__LíquidaCaption"; Vta__LíquidaCaptionLbl)
+            column("Vta__LiquidaCaption"; Vta__LiquidaCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(Item_Ledger_Entry_Entry_No_; "Entry No.")
@@ -95,7 +95,7 @@ report 56093 "Venta a Consignacion por item"
         No_CaptionLbl: Label 'No.';
         CantidadCaptionLbl: Label 'Cantidad';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';
-        "Vta__LíquidaCaptionLbl": Label 'Vta. Líquida';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "Vta__LiquidaCaptionLbl": Label 'Vta. Liquida';
+        "DescripcionCaptionLbl": Label 'Descripcion';
 }
 

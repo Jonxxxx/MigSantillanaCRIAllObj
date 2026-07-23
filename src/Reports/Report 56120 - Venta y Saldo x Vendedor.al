@@ -12,10 +12,10 @@ report 56120 "Venta y Saldo x Vendedor"
             RequestFilterFields = "Code";
             dataitem("Cust. Ledger Entry"; 21)
             {
-                CalcFields = Original Amt. (LCY),Remaining Amt. (LCY);
+                CalcFields = "Original Amt. (LCY)", "Remaining Amt. (LCY)";
                 DataItemLink = "Salesperson Code" = FIELD(Code);
                 DataItemTableView = SORTING("Salesperson Code", "Posting Date")
-                                    WHERE("Document Type" = FILTER(Invoice | Credit Memo));
+                                    WHERE("Document Type" = FILTER(Invoice | 'Credit Memo'));
 
                 trigger OnAfterGetRecord()
                 begin

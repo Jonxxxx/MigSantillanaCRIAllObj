@@ -9,7 +9,7 @@ report 56535 "Lista Global Picking"
         dataitem("Warehouse Activity Header"; 5766)
         {
             DataItemTableView = SORTING(Type, "No.")
-                                WHERE(Type = FILTER(Pick | Invt. Pick));
+                                WHERE(Type = FILTER(Pick | 'Invt. Pick'));
             RequestFilterFields = "No.", "No. Printed";
             column(Comentario; Comentario)
             {
@@ -328,7 +328,7 @@ report 56535 "Lista Global Picking"
             }
             dataitem("Sales Comment Line"; 44)
             {
-                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", Line No.)
+                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                     ORDER(Ascending)
                                     WHERE("Print On Pick Ticket" = FILTER(Yes));
                 column(ComentarioVta; 'VTA')

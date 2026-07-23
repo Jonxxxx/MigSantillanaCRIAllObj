@@ -6,7 +6,7 @@ report 67044 "Proceso Facturacion Adopciones"
     {
         dataitem("Colegio - Adopciones Detalle"; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto)
+            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto")
                                 WHERE(Adopcion = FILTER(Conquista | Mantener));
             RequestFilterFields = "Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto";
 
@@ -73,7 +73,7 @@ report 67044 "Proceso Facturacion Adopciones"
         TipoAdopcion: Option "Con Adopcion","Sin Adopcion";
         NoDocumento: Code[20];
         LineNo: Integer;
-        TipoFacturacion: Option "Factura a título gratuito","Factura Comercial";
+        TipoFacturacion: Option "Factura a titulo gratuito","Factura Comercial";
         Err001: Label 'Specify %1 in %2 to continue';
         Err002: Label 'Specify %1 filter to continue';
 

@@ -59,7 +59,7 @@ report 67015 "Colegios planificados"
             column(Planificacion__Cod__Colegio_; "Cod. Colegio")
             {
             }
-            column("Planificación_de_visitasCaption"; Planificación_de_visitasCaptionLbl)
+            column("Planificacion_de_visitasCaption"; Planificacion_de_visitasCaptionLbl)
             {
             }
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
@@ -80,7 +80,7 @@ report 67015 "Colegios planificados"
             column(Planificacion__Descripcion_Objetivo_Caption; Planificacion__Descripcion_Objetivo_CaptionLbl)
             {
             }
-            column("Delegación_Caption"; Delegación_CaptionLbl)
+            column("Delegacion_Caption"; Delegacion_CaptionLbl)
             {
             }
             column(Nivel_Caption; Nivel_CaptionLbl)
@@ -114,7 +114,7 @@ report 67015 "Colegios planificados"
                     texDistrito := recColegio.Distritos;
 
                 IF recNivel.GET(Nivel) THEN
-                    texDescNivel := recNivel.Descripción;
+                    texDescNivel := recNivel.Descripcion;
 
                 codCategoria := TraerCategoria("Cod. Colegio", Nivel);
             end;
@@ -144,12 +144,12 @@ report 67015 "Colegios planificados"
         codCategoria: Code[20];
         Text001: Label 'Del %1 al %2';
         texDescNivel: Text[100];
-        "Planificación_de_visitasCaptionLbl": Label 'Planificación de visitas';
+        "Planificacion_de_visitasCaptionLbl": Label 'Planificacion de visitas';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         texDistritoCaptionLbl: Label 'Distrito';
         codCategoriaCaptionLbl: Label 'Categoria';
         Planificacion__Descripcion_Objetivo_CaptionLbl: Label 'Objetivo';
-        "Delegación_CaptionLbl": Label 'Delegación:';
+        "Delegacion_CaptionLbl": Label 'Delegacion:';
         Nivel_CaptionLbl: Label 'Nivel:';
         Promotor_CaptionLbl: Label 'Promotor:';
         Semana_CaptionLbl: Label 'Semana:';

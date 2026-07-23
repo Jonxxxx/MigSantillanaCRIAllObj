@@ -6,11 +6,11 @@ report 67026 "Conversion Horas"
     {
         dataitem("Programac. Talleres y Eventos"; 67015)
         {
-            DataItemTableView = SORTING(Cod. Taller - Evento, Tipo Evento, Tipo de Expositor, Expositor, Fecha programacion, Secuencia);
+            DataItemTableView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor, "Fecha programacion", Secuencia);
 
             trigger OnAfterGetRecord()
             begin
-                "Horas Pedagógicas" := ROUND("Horas dictadas" * 60 / 40, 1);
+                "Horas Pedagogicas" := ROUND("Horas dictadas" * 60 / 40, 1);
                 MODIFY;
             end;
 
@@ -39,7 +39,7 @@ report 67026 "Conversion Horas"
 
     trigger OnPreReport()
     var
-        Text001: Label 'Se realizará una conversión de horas programadas a horas pedagógicas. ¿Desea continuar?';
+        Text001: Label 'Se realizará una conversion de horas programadas a horas pedagogicas. ¿Desea continuar?';
     begin
         IF NOT CONFIRM(Text001) THEN
             CurrReport.QUIT;

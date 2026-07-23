@@ -70,7 +70,7 @@ report 56038 "Borrar devolu. procesadas"
         Text001: Label 'Automatic return from customer %1';
         Text002: Label 'Clasificando devoluciones';
         Text003: Label '#############################1\\';
-        Text004: Label 'Devolución    ###############2\\';
+        Text004: Label 'Devolucion    ###############2\\';
         Text005: Label '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@3';
         Text006: Label '¿Esta seguro de que des eliminar las devoluciones procesadas?';
 

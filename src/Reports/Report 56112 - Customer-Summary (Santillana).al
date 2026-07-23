@@ -310,7 +310,7 @@ report 56112 "Customer-Summary (Santillana)"
     begin
         CustFilter := Customer.GETFILTERS;
         PeriodStartDate[5] := StartDate;
-        PeriodStartDate[6] := 12319999D;
+        PeriodStartDate[6] := 20991231D;
         FOR i := 4 DOWNTO 2 DO
             PeriodStartDate[i] := CALCDATE('<-30D>', PeriodStartDate[i + 1]);
 

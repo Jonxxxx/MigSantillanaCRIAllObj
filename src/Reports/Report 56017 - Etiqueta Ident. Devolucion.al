@@ -5,7 +5,7 @@ report 56017 "Etiqueta Ident. Devolucion"
 
     dataset
     {
-        dataitem("Lin. Ident. Devolución Reg."; 56019)
+        dataitem("Lin. Ident. Devolucion Reg."; 56019)
         {
             column(CI_Name; CI.Name)
             {
@@ -55,7 +55,7 @@ report 56017 "Etiqueta Ident. Devolucion"
             column(Orden_de_Recogida__Caption; Orden_de_Recogida__CaptionLbl)
             {
             }
-            column(Fecha_de_Recepcion__Caption; Fecha_de_Recepción__CaptionLbl)
+            column(Fecha_de_Recepcion__Caption; Fecha_de_Recepcion__CaptionLbl)
             {
             }
             column(No__Cliente__Caption; No__Cliente__CaptionLbl)
@@ -64,7 +64,7 @@ report 56017 "Etiqueta Ident. Devolucion"
             column(BultoCaption; BultoCaptionLbl)
             {
             }
-            column(UbicacionCaption; UbicaciónCaptionLbl)
+            column(UbicacionCaption; UbicacionCaptionLbl)
             {
             }
             column(Lin__Ident__Devolucion_Reg__No__Bulto; "No. Bulto")
@@ -106,9 +106,9 @@ report 56017 "Etiqueta Ident. Devolucion"
         CID: Record 56018;
         Destinatario_CaptionLbl: Label 'Destinatario:';
         Orden_de_Recogida__CaptionLbl: Label 'Orden de Recogida :';
-        "Fecha_de_Recepción__CaptionLbl": Label 'Fecha de Recepción :';
+        "Fecha_de_Recepcion__CaptionLbl": Label 'Fecha de Recepcion :';
         No__Cliente__CaptionLbl: Label 'No. Cliente :';
         BultoCaptionLbl: Label 'Bulto';
-        "UbicaciónCaptionLbl": Label 'Ubicación';
+        "UbicacionCaptionLbl": Label 'Ubicacion';
 }
 

@@ -114,7 +114,7 @@ report 67011 "Alcance presupuesto promotor"
             column(decCdadPerdidasCaption; decCdadPerdidasCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(Presupuesto__Cod__Producto_Caption; FIELDCAPTION("Cod. Producto"))
@@ -163,7 +163,7 @@ report 67011 "Alcance presupuesto promotor"
 
                     codNivel := recAdopciones."Cod. Nivel";
                     IF recNivel.GET(codNivel) THEN
-                        texDescNivel := recNivel.Descripción;
+                        texDescNivel := recNivel.Descripcion;
 
                     REPEAT
                         CASE recAdopciones.Adopcion OF
@@ -235,15 +235,15 @@ report 67011 "Alcance presupuesto promotor"
         codNivelCaptionLbl: Label 'Nivel';
         codFamiliaCaptionLbl: Label 'Familia';
         codSubFamiliaCaptionLbl: Label 'Subfamilia';
-        codEdicionColCaptionLbl: Label 'Edición colección';
-        codLinNegCaptionLbl: Label 'Línea de negocio';
+        codEdicionColCaptionLbl: Label 'Edicion coleccion';
+        codLinNegCaptionLbl: Label 'Linea de negocio';
         decCdadPresCaptionLbl: Label 'Cdad. presup.';
         decMontoPresCaptionLbl: Label 'Monto presup.';
         decMontoAlcanceCaptionLbl: Label 'Monto alcance';
         decCdadMantCaptionLbl: Label 'Cdad. mante.';
         decCdadConquistaCaptionLbl: Label 'Cdad. Conquis.';
         decCdadPerdidasCaptionLbl: Label 'Cdad perdidas';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         PromotorCaptionLbl: Label 'Promotor:';
 
     procedure CalcularPrecio(codPrmProd: Code[20]): Decimal

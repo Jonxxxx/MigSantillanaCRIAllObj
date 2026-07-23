@@ -2,7 +2,7 @@ report 56037 "Documentos generados clas. dev"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './Documentos generados clas. dev.rdlc';
-    Caption = 'Documentos generados clasificación devoluciones';
+    Caption = 'Documentos generados clasificacion devoluciones';
 
     dataset
     {
@@ -22,7 +22,7 @@ report 56037 "Documentos generados clas. dev"
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }
-            column("Documentos_generados_por_clasificación_de_devolucionesCaption"; Documentos_generados_por_clasificación_de_devolucionesCaptionLbl)
+            column("Documentos_generados_por_clasificacion_de_devolucionesCaption"; Documentos_generados_por_clasificacion_de_devolucionesCaptionLbl)
             {
             }
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
@@ -87,13 +87,13 @@ report 56037 "Documentos generados clas. dev"
             column(Sales_ReturnsCaption; Sales_ReturnsCaptionLbl)
             {
             }
-            column("Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000000"; Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000000Lbl)
+            column("Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000000"; Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000000Lbl)
             {
             }
             column(Control1000000003Caption; Control1000000003CaptionLbl)
             {
             }
-            column("Pre_devolución_Caption"; Pre_devolución_CaptionLbl)
+            column("Pre_devolucion_Caption"; Pre_devolucion_CaptionLbl)
             {
             }
             column(VentasClas_Tipo_documento; "Tipo documento")
@@ -104,10 +104,10 @@ report 56037 "Documentos generados clas. dev"
             }
             dataitem("Sales Header"; 36)
             {
-                CalcFields = Amount, Amount Including VAT;
+                CalcFields = Amount, "Amount Including VAT";
                 DataItemLink = "No." = FIELD("No. documento");
                 DataItemTableView = SORTING("Document Type", "No.")
-                                    WHERE("Document Type" = CONST(Return Order));
+                                    WHERE("Document Type" = CONST("Return Order"));
                 column(Sales_Header__No__; "No.")
                 {
                 }
@@ -135,7 +135,7 @@ report 56037 "Documentos generados clas. dev"
                 dataitem("Sales Line"; 37)
                 {
                     DataItemLink = "Document Type" = FIELD("Document Type"),
-                                   Document No.=FIELD("No.");
+                                   "Document No." = FIELD("No.");
                     DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
                     column(Sales_Line__No__; "No.")
                     {
@@ -216,10 +216,10 @@ report 56037 "Documentos generados clas. dev"
             column(Control1000000004Caption; Control1000000004CaptionLbl)
             {
             }
-            column("Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033"; Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033Lbl)
+            column("Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000033"; Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000033Lbl)
             {
             }
-            column("Pre_devolución_Caption_Control1000000025"; Pre_devolución_Caption_Control1000000025Lbl)
+            column("Pre_devolucion_Caption_Control1000000025"; Pre_devolucion_Caption_Control1000000025Lbl)
             {
             }
             column(TransferClas_Tipo_documento; "Tipo documento")
@@ -324,7 +324,7 @@ report 56037 "Documentos generados clas. dev"
         dlgProgreso: Dialog;
         dtImpresion: DateTime;
         blnEjecutadoAuto: Boolean;
-        "Documentos_generados_por_clasificación_de_devolucionesCaptionLbl": Label 'Documentos generados por clasificación de devoluciones';
+        "Documentos_generados_por_clasificacion_de_devolucionesCaptionLbl": Label 'Documentos generados por clasificacion de devoluciones';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Sales_Header__Amount_Including_VAT_CaptionLbl: Label 'Amount Including Tax';
         Sales_Header_AmountCaptionLbl: Label 'Amount';
@@ -335,9 +335,9 @@ report 56037 "Documentos generados clas. dev"
         Sales_Header__No__CaptionLbl: Label 'No.';
         VentasCaptionLbl: Label 'Ventas';
         Sales_ReturnsCaptionLbl: Label 'Sales Returns';
-        "Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000000Lbl": Label 'Documentos generados por clasificación de devoluciones';
+        "Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000000Lbl": Label 'Documentos generados por clasificacion de devoluciones';
         Control1000000003CaptionLbl: Label 'Pág.';
-        "Pre_devolución_CaptionLbl": Label 'Clas. devolución:';
+        "Pre_devolucion_CaptionLbl": Label 'Clas. devolucion:';
         Sales_Line__Unit_of_Measure_CaptionLbl: Label 'Unit of Measure';
         Transfer_Header__No__CaptionLbl: Label 'No.';
         Transfer_ReturnsCaptionLbl: Label 'Transfer Returns';
@@ -348,8 +348,8 @@ report 56037 "Documentos generados clas. dev"
         TransferenciasCaptionLbl: Label 'Transferencias';
         Transfer_Header__Transfer_to_Code_CaptionLbl: Label 'Transfer-to Code';
         Control1000000004CaptionLbl: Label 'Pág.';
-        "Documentos_generados_por_clasificación_de_devolucionesCaption_Control1000000033Lbl": Label 'Documentos generados por clasificación de devoluciones';
-        "Pre_devolución_Caption_Control1000000025Lbl": Label 'Clas. devolución:';
+        "Documentos_generados_por_clasificacion_de_devolucionesCaption_Control1000000033Lbl": Label 'Documentos generados por clasificacion de devoluciones';
+        "Pre_devolucion_Caption_Control1000000025Lbl": Label 'Clas. devolucion:';
         Transfer_Line__Unit_of_Measure_CaptionLbl: Label 'Unit of Measure';
 
     procedure MarcarDocsClas()

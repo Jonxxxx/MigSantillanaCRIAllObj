@@ -1,6 +1,6 @@
 report 56082 "Back Orders"
 {
-    // #56090  27/09/2016  PLB: Utilizar función disponibilidad backorder en lugar de la estándar
+    // #56090  27/09/2016  PLB: Utilizar funcion disponibilidad backorder en lugar de la estándar
     DefaultLayout = RDLC;
     RDLCLayout = './Back Orders.rdlc';
 
@@ -11,7 +11,7 @@ report 56082 "Back Orders"
     {
         dataitem("Sales Line"; 37)
         {
-            DataItemTableView = SORTING("Document Type", Type, "No.", "Variant Code", Drop Shipment, Location Code, Shipment Date)
+            DataItemTableView = SORTING("Document Type", Type, "No.", "Variant Code", "Drop Shipment", "Location Code", "Shipment Date")
                                 ORDER(Ascending)
                                 WHERE("Document Type" = FILTER(Order),
                                       Type = FILTER(Item));
@@ -120,7 +120,7 @@ report 56082 "Back Orders"
                 IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
                     CurrReport.SKIP;
 
-                // Traspasado de la sección body
+                // Traspasado de la seccion body
                 rCliente.GET("Sell-to Customer No."); //+#139
             end;
 
@@ -185,7 +185,7 @@ report 56082 "Back Orders"
             column(N_Caption; N_CaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(AlmacenCaption_Control1000000032; AlmacenCaption_Control1000000032Lbl)
@@ -217,7 +217,7 @@ report 56082 "Back Orders"
                     CurrReport.SKIP;
 
                 //+#139
-                // Traspasado de la sección body
+                // Traspasado de la seccion body
                 IF NOT rCliente.GET("Transfer-to Code") THEN BEGIN
                     rCliente."No." := '';
                     rCliente.Name := '';
@@ -283,7 +283,7 @@ report 56082 "Back Orders"
         Pedidos_en_ConsignacionCaptionLbl: Label 'Pedidos en Consignacion';
         No__DocumentoCaptionLbl: Label 'No. Documento';
         N_CaptionLbl: Label 'Nº';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         AlmacenCaption_Control1000000032Lbl: Label 'Almacen';
         CantidadCaptionLbl: Label 'Cantidad';
         Cantidad_enviadaCaptionLbl: Label 'Cantidad enviada';

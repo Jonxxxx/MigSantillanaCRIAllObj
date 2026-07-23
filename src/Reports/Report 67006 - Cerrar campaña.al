@@ -3,15 +3,15 @@ report 67006 "Cerrar campaña"
     // ------------------------------------------------------------------------
     // No.     Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 001     17-Julio-14     AMS           Este proceso guarda en el histórico los datos de la campaña actual.
+    // 001     17-Julio-14     AMS           Este proceso guarda en el historico los datos de la campaña actual.
     //                                       El proceso hace lo siguiente:
     // 
-    //                                         Copia los datos de Grados al histórico y deja como está la tabla actual.
-    //                                         Copia los datos de Adopciones por colegio al histórico y vacía la actual.
-    //                                         Copia los datos de Colegios Niveles al histórico y vacía la actual.
-    //                                         Vacía la tabla de Promotor-Ruta.
-    //                                         Vacía la tabla Ppto de ventas.
-    //                                         Vacía la tabla Promotores Lista de Colegios.
+    //                                         Copia los datos de Grados al historico y deja como está la tabla actual.
+    //                                         Copia los datos de Adopciones por colegio al historico y vacia la actual.
+    //                                         Copia los datos de Colegios Niveles al historico y vacia la actual.
+    //                                         Vacia la tabla de Promotor-Ruta.
+    //                                         Vacia la tabla Ppto de ventas.
+    //                                         Vacia la tabla Promotores Lista de Colegios.
 
     ApplicationArea = Basic, Suite;
     Caption = 'Close Campaign';
@@ -22,7 +22,7 @@ report 67006 "Cerrar campaña"
     {
         dataitem(ColGrados; 67037)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", Cod. Grado, Seccion);
+            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", "Cod. Grado", Seccion);
 
             trigger OnAfterGetRecord()
             var
@@ -44,7 +44,7 @@ report 67006 "Cerrar campaña"
         }
         dataitem(ColDetAdopciones; 67053)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto);
+            DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto");
 
             trigger OnAfterGetRecord()
             var

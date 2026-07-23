@@ -7,7 +7,7 @@ report 67017 "Alcance presupuesto detallado"
     {
         dataitem(Presupuesto; 67060)
         {
-            CalcFields = Descripcion nivel, Descripcion producto;
+            CalcFields = "Descripcion nivel", "Descripcion producto";
             DataItemTableView = SORTING(Usuario, "Fecha hora", "Cod. Nivel", "Linea de negocio", Familia, "Sub Familia");
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -82,7 +82,7 @@ report 67017 "Alcance presupuesto detallado"
             column(FamiliaCaption; FamiliaCaptionLbl)
             {
             }
-            column("Línea_de_negocioCaption"; Línea_de_negocioCaptionLbl)
+            column("Linea_de_negocioCaption"; Linea_de_negocioCaptionLbl)
             {
             }
             column(decCdadPresCaption; decCdadPresCaptionLbl)
@@ -187,7 +187,7 @@ report 67017 "Alcance presupuesto detallado"
         Cdad__alcanceCaptionLbl: Label 'Cdad. alcance';
         SubfamiliaCaptionLbl: Label 'Subfamilia';
         FamiliaCaptionLbl: Label 'Familia';
-        "Línea_de_negocioCaptionLbl": Label 'Línea de negocio';
+        "Linea_de_negocioCaptionLbl": Label 'Linea de negocio';
         decCdadPresCaptionLbl: Label 'Cdad. presup.';
         decMontoPresCaptionLbl: Label 'Monto presup.';
         decMontoAlcanceCaptionLbl: Label 'Monto alcance';

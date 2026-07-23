@@ -14,107 +14,107 @@ report 50048 "Formato DPP x Clientes v2"
             DataItemTableView = SORTING("Closed by Entry No.")
                                 ORDER(Descending)
                                 WHERE(Open = CONST(False),
-                                      Pmt. Disc. Given (LCY)=FILTER(>0),
-                                      No. Comprobante Fiscal DPP=FILTER(<>''));
+                                      "Pmt. Disc. Given (LCY)" = FILTER(> 0),
+                                      "No. Comprobante Fiscal DPP" = FILTER(<> ''));
             RequestFilterFields = "Customer No.";
-            dataitem(CopyLoop;2000000026)
+            dataitem(CopyLoop; 2000000026)
             {
                 DataItemTableView = SORTING(Number);
-                dataitem(PageLoop;2000000026)
+                dataitem(PageLoop; 2000000026)
                 {
                     DataItemTableView = SORTING(Number)
-                                        WHERE(Number=CONST(1));
-                    column(Picture;CompanyInfo.Picture)
+                                        WHERE(Number = CONST(1));
+                    column(Picture; CompanyInfo.Picture)
                     {
                     }
-                    column(Company;CompanyInfo.Name)
+                    column(Company; CompanyInfo.Name)
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Country_Region_Code_;rCliente."Country/Region Code")
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Country_Region_Code_; rCliente."Country/Region Code")
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_County_;rCliente.County)
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_County_; rCliente.County)
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_City_;rCliente.City)
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_City_; rCliente.City)
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Address_;rCliente.Address)
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Address_; rCliente.Address)
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Customer_Name_;rCliente.Name)
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Customer_Name_; rCliente.Name)
                     {
                     }
-                    column(Web;CompanyInfo."Home Page")
+                    column(Web; CompanyInfo."Home Page")
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Customer_No__;"Cust. Ledger Entry"."Customer No.")
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___Sell_to_Customer_No__; "Cust. Ledger Entry"."Customer No.")
                     {
                     }
-                    column(CompanyInfo__VAT_Registration_No__;'RNC: '+CompanyInfo."VAT Registration No.")
+                    column(CompanyInfo__VAT_Registration_No__; 'RNC: ' + CompanyInfo."VAT Registration No.")
                     {
                     }
-                    column(CompanyInfo__E_Mail_;CompanyInfo."E-Mail")
+                    column(CompanyInfo__E_Mail_; CompanyInfo."E-Mail")
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___NCF_Afectado_;NCFAFECTA)
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago___NCF_Afectado_; NCFAFECTA)
                     {
                     }
-                    column(CompanyInfo__Phone_No__2_;CompanyInfo."Phone No. 2")
+                    column(CompanyInfo__Phone_No__2_; CompanyInfo."Phone No. 2")
                     {
                     }
-                    column(Desc_Pronto_Pago__Desc_Pronto_Pago__NCF;"Cust. Ledger Entry"."No. Comprobante Fiscal DPP")
+                    column(Desc_Pronto_Pago__Desc_Pronto_Pago__NCF; "Cust. Ledger Entry"."No. Comprobante Fiscal DPP")
                     {
                     }
-                    column(CompanyInfo__Fax_No__;'Fax: '+ CompanyInfo."Fax No.")
+                    column(CompanyInfo__Fax_No__; 'Fax: ' + CompanyInfo."Fax No.")
                     {
                     }
-                    column(CompanyInfo__Phone_No__;'Tel: '+CompanyInfo."Phone No.")
+                    column(CompanyInfo__Phone_No__; 'Tel: ' + CompanyInfo."Phone No.")
                     {
                     }
-                    column(Desc_Pronto_Pago__Posting_Date_;rDetailedMovCliente."Posting Date")
+                    column(Desc_Pronto_Pago__Posting_Date_; rDetailedMovCliente."Posting Date")
                     {
                     }
-                    column(Desc_Pronto_Pago__Document_No__;rDetailedMovCliente."Document No.")
+                    column(Desc_Pronto_Pago__Document_No__; rDetailedMovCliente."Document No.")
                     {
                     }
-                    column(CompanyAddr_3_;CompanyAddr[3])
+                    column(CompanyAddr_3_; CompanyAddr[3])
                     {
                     }
-                    column(CompanyAddr_2_;CompanyAddr[2])
+                    column(CompanyAddr_2_; CompanyAddr[2])
                     {
                     }
-                    column(Desc_Pronto_Pago__Salesperson_Code_;rCliente."Salesperson Code")
+                    column(Desc_Pronto_Pago__Salesperson_Code_; rCliente."Salesperson Code")
                     {
                     }
-                    column(Desc_Pronto_Pago_Description;DescripcionDPP)
+                    column(Desc_Pronto_Pago_Description; DescripcionDPP)
                     {
                     }
-                    column(Desc_Pronto_Pago_Amount;"Cust. Ledger Entry"."Pmt. Disc. Given (LCY)")
+                    column(Desc_Pronto_Pago_Amount; "Cust. Ledger Entry"."Pmt. Disc. Given (LCY)")
                     {
                     }
-                    column(rCliente__VAT_Registration_No__;rCliente."VAT Registration No.")
+                    column(rCliente__VAT_Registration_No__; rCliente."VAT Registration No.")
                     {
                     }
-                    column(Totalexc;Totalexc)
+                    column(Totalexc; Totalexc)
                     {
                     }
-                    column(USERID;USERID)
+                    column(USERID; USERID)
                     {
                     }
-                    column(Desc_Pronto_Pago_Line_No_;10000)
+                    column(Desc_Pronto_Pago_Line_No_; 10000)
                     {
                     }
-                    column(FDocumentNo;"Cust. Ledger Entry"."Document No.")
+                    column(FDocumentNo; "Cust. Ledger Entry"."Document No.")
                     {
                     }
-                    column(FPostingDate;"Cust. Ledger Entry"."Posting Date")
+                    column(FPostingDate; "Cust. Ledger Entry"."Posting Date")
                     {
                     }
-                    column(CopyNo;CopyNo)
+                    column(CopyNo; CopyNo)
                     {
                     }
-                    column("filter";"Cust. Ledger Entry".GETFILTERS)
+                    column("filter"; "Cust. Ledger Entry".GETFILTERS)
                     {
                     }
                 }
@@ -127,16 +127,16 @@ report 50048 "Formato DPP x Clientes v2"
                     END;
                     CopyNo := CopyNo + 1;
                     IF CopyNo = 1 THEN // Original
-                      CLEAR(CopyTxt)
+                        CLEAR(CopyTxt)
                     ELSE
-                      CopyTxt := Text000;
+                        CopyTxt := Text000;
                 end;
 
                 trigger OnPreDataItem()
                 begin
                     NoLoops := 1 + ABS(NoCopies);
                     IF NoLoops <= 0 THEN
-                      NoLoops := 1;
+                        NoLoops := 1;
                     CopyNo := 0;
                 end;
             }
@@ -144,30 +144,29 @@ report 50048 "Formato DPP x Clientes v2"
             trigger OnAfterGetRecord()
             begin
                 IF rCliente.GET("Customer No.") THEN
-
-                rDetailedMovCliente.RESET;
-                rDetailedMovCliente.SETRANGE("Cust. Ledger Entry No.","Cust. Ledger Entry"."Closed by Entry No.");
-                rDetailedMovCliente.SETRANGE("Entry Type",rDetailedMovCliente."Entry Type"::"Payment Discount");
-                rDetailedMovCliente.SETFILTER("Posting Date",'%1..%2',FechaDesde,FechaHasta);
+                    rDetailedMovCliente.RESET;
+                rDetailedMovCliente.SETRANGE("Cust. Ledger Entry No.", "Cust. Ledger Entry"."Closed by Entry No.");
+                rDetailedMovCliente.SETRANGE("Entry Type", rDetailedMovCliente."Entry Type"::"Payment Discount");
+                rDetailedMovCliente.SETFILTER("Posting Date", '%1..%2', FechaDesde, FechaHasta);
                 IF NOT rDetailedMovCliente.FINDFIRST THEN
-                  CurrReport.SKIP;
+                    CurrReport.SKIP;
 
-                DescripcionDPP := 'Descuento Pronto Pago Factura ' + ' '+"Cust. Ledger Entry"."Document No.";
-                NCFAFECTA:= "Cust. Ledger Entry"."No. Comprobante Fiscal";
+                DescripcionDPP := 'Descuento Pronto Pago Factura ' + ' ' + "Cust. Ledger Entry"."Document No.";
+                NCFAFECTA := "Cust. Ledger Entry"."No. Comprobante Fiscal";
 
-                IF (NCFAFECTA = '') OR  (VendedorCode <> '' )THEN BEGIN
-                  rSalesInvHeader.RESET;
-                  rSalesInvHeader.SETRANGE("No.", "Cust. Ledger Entry"."Document No.");
-                  IF VendedorCode <> '' THEN
-                    rSalesInvHeader.SETFILTER("Salesperson Code",'=%1',VendedorCode);
+                IF (NCFAFECTA = '') OR (VendedorCode <> '') THEN BEGIN
+                    rSalesInvHeader.RESET;
+                    rSalesInvHeader.SETRANGE("No.", "Cust. Ledger Entry"."Document No.");
+                    IF VendedorCode <> '' THEN
+                        rSalesInvHeader.SETFILTER("Salesperson Code", '=%1', VendedorCode);
 
-                  IF rSalesInvHeader.FIND('-') THEN BEGIN
-                    IF NCFAFECTA = '' THEN BEGIN
-                    NCFAFECTA:= rSalesInvHeader."No. Comprobante Fiscal";
-                    END;
-                  END ELSE
-                  IF VendedorCode <> '' THEN
-                      CurrReport.SKIP;
+                    IF rSalesInvHeader.FIND('-') THEN BEGIN
+                        IF NCFAFECTA = '' THEN BEGIN
+                            NCFAFECTA := rSalesInvHeader."No. Comprobante Fiscal";
+                        END;
+                    END ELSE
+                        IF VendedorCode <> '' THEN
+                            CurrReport.SKIP;
 
                 END;
 
@@ -181,7 +180,7 @@ report 50048 "Formato DPP x Clientes v2"
 
                 CompanyInfo.GET;
                 CompanyInfo.CALCFIELDS(Picture);
-                FormatAddr.Company(CompanyAddr,CompanyInfo);
+                FormatAddr.Company(CompanyAddr, CompanyInfo);
                 CLEAR(Totalexc);
                 CLEAR(Totalinc);
             end;
@@ -195,22 +194,22 @@ report 50048 "Formato DPP x Clientes v2"
         {
             area(content)
             {
-                field(NumberOfCopies;NoCopies)
+                field(NumberOfCopies; NoCopies)
                 {
                     Caption = 'Number of Copies';
                 }
-                field(FechaDesde;FechaDesde)
+                field(FechaDesde; FechaDesde)
                 {
                     Caption = 'Fecha Desde';
                 }
-                field(FechaHasta;FechaHasta)
+                field(FechaHasta; FechaHasta)
                 {
                     Caption = 'Fecha Hasta';
                 }
-                field(VendedorCode;VendedorCode)
+                field(VendedorCode; VendedorCode)
                 {
                     Caption = 'Vendedor';
-                    TableRelation = Salesperson/Purchaser.Code;
+                    TableRelation = "Salesperson/Purchaser".Code;
                 }
             }
         }
@@ -229,8 +228,8 @@ report 50048 "Formato DPP x Clientes v2"
         FooterPrinted: Boolean;
         rCliente: Record 18;
         CompanyInfo: Record 79;
-        CompanyAddr: array [8] of Text[50];
-        CustAddr: array [8] of Text[50];
+        CompanyAddr: array[8] of Text[50];
+        CustAddr: array[8] of Text[50];
         FormatAddr: Codeunit 365;
         Totalexc: Decimal;
         Totalinc: Decimal;

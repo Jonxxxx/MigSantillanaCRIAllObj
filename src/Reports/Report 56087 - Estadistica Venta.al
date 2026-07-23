@@ -468,7 +468,7 @@ report 56087 "Estadistica Venta"
         CustFilter := Customer.GETFILTERS;
         FOR i := 2 TO 4 DO
             PeriodStartDate[i + 1] := CALCDATE(PeriodLength, PeriodStartDate[i]);
-        PeriodStartDate[6] := 12319999D;
+        PeriodStartDate[6] := 20991231D;
     end;
 
     var

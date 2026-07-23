@@ -62,7 +62,7 @@ report 56110 "Saldo x Antig. Vendedor Det."
             column(Cust__Ledger_Entry__Document_No__Caption; FIELDCAPTION("Document No."))
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(Cust__Ledger_Entry__Currency_Code_Caption; FIELDCAPTION("Currency Code"))
@@ -107,6 +107,6 @@ report 56110 "Saldo x Antig. Vendedor Det."
         TotalFor: Label 'Total para ';
         Cust__Ledger_EntryCaptionLbl: Label 'Cust. Ledger Entry';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
 }
 

@@ -1,7 +1,7 @@
-report 56186 "Provisión de insolvencias"
+report 56186 "Provision de insolvencias"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Provisión de insolvencias.rdlc';
+    RDLCLayout = './Provision de insolvencias.rdlc';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
@@ -17,7 +17,7 @@ report 56186 "Provisión de insolvencias"
                 DataItemTableView = SORTING(Number);
                 dataitem("Cust. Ledger Entry"; 21)
                 {
-                    DataItemTableView = SORTING("Customer No.", "Posting Date", Open, Provisionado por insolvencia);
+                    DataItemTableView = SORTING("Customer No.", "Posting Date", Open, "Provisionado por insolvencia");
 
                     trigger OnAfterGetRecord()
                     begin
@@ -33,7 +33,7 @@ report 56186 "Provisión de insolvencias"
                             GenJnlLine."Account Type" := GenJnlLine."Account Type"::"Cancelar Prov. Insol.";
                         END
                         ELSE BEGIN
-                            GenJnlLine."Account Type" := GenJnlLine."Account Type"::"Provisión Insolvencias";
+                            GenJnlLine."Account Type" := GenJnlLine."Account Type"::"Provision Insolvencias";
                         END;
                         GenJnlLine."Document No." := 'INSOLV' + FORMAT(PostingDate);
                         GenJnlLine.VALIDATE("Account No.", "Cust. Ledger Entry"."Customer No.");
@@ -261,7 +261,7 @@ report 56186 "Provisión de insolvencias"
         Text004: Label 'Se requiere introducir %1.';
         Text005: Label 'la fecha de registro';
         Text006: Label 'el libro dario';
-        Text007: Label 'el nombre de la sección';
+        Text007: Label 'el nombre de la seccion';
         Text008: Label 'la cuenta de gastos';
         Text009: Label 'la cuenta de ingresos';
 

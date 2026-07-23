@@ -66,7 +66,7 @@ report 56097 "Rel. conduce en firme"
             column(Sales_Shipment_Header__Salesperson_Code_Caption; FIELDCAPTION("Salesperson Code"))
             {
             }
-            column("Estatus_EnvíoCaption"; Estatus_EnvíoCaptionLbl)
+            column("Estatus_EnvioCaption"; Estatus_EnvioCaptionLbl)
             {
             }
         }
@@ -91,6 +91,6 @@ report 56097 "Rel. conduce en firme"
     var
         Sales_Shipment_HeaderCaptionLbl: Label 'Sales Shipment Header';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Estatus_EnvíoCaptionLbl": Label 'Estatus Envío';
+        "Estatus_EnvioCaptionLbl": Label 'Estatus Envio';
 }
 

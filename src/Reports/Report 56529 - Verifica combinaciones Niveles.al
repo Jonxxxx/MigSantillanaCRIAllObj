@@ -6,8 +6,8 @@ report 56529 "Verifica combinaciones Niveles"
     {
         dataitem("Colegio - Grados"; 67037)
         {
-            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", Cod. Grado, Seccion)
-                                WHERE("Cod. Nivel" = FILTER(INI | PRI | SEC));
+            DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", "Cod. Grado", Seccion)
+                                WHERE("Cod. Nivel" = FILTER('INI' | 'PRI' | 'SEC'));
 
             trigger OnAfterGetRecord()
             begin

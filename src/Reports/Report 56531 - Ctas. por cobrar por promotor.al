@@ -108,8 +108,8 @@ report 56531 "Ctas. por cobrar por promotor"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 DataItemLink = "Salesperson Code" = FIELD(Code),
-                               Posting Date=FIELD("Date Filter");
-                DataItemTableView = SORTING("Customer No.", "Posting Date", Open, Provisionado por insolvencia)
+                               "Posting Date" = FIELD("Date Filter");
+                DataItemTableView = SORTING("Customer No.", "Posting Date", Open, "Provisionado por insolvencia")
                                     WHERE(Open = CONST(True));
                 column(Cust__Ledger_Entry__Posting_Date_; "Posting Date")
                 {

@@ -110,7 +110,7 @@ report 56094 "Enviado NO Facturado en Firme"
         Sales_LineCaptionLbl: Label 'Sales Line';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
         Sales_Line__Document_No__CaptionLbl: Label 'No Documento';
-        Sales_Line__Shipment_Date_CaptionLbl: Label 'Fecha Envío';
+        Sales_Line__Shipment_Date_CaptionLbl: Label 'Fecha Envio';
         No_CaptionLbl: Label 'No.';
         Sales_Line__Qty__Shipped_Not_Invoiced_CaptionLbl: Label 'Cantidad';
         Sales_Line__Shipped_Not_Invoiced_CaptionLbl: Label 'Importe';

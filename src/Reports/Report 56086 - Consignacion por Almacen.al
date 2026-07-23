@@ -62,7 +62,7 @@ report 56086 "Consignacion por Almacen"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("Cód__Cliente__Almacén_Caption"; Cód__Cliente__Almacén_CaptionLbl)
+            column("Cod__Cliente__Almacén_Caption"; Cod__Cliente__Almacén_CaptionLbl)
             {
             }
             column(CantidadCaption; CantidadCaptionLbl)
@@ -74,7 +74,7 @@ report 56086 "Consignacion por Almacen"
             column(Vta__LiquidaCaption; Vta__LiquidaCaptionLbl)
             {
             }
-            column("Cód__Zona_Serv_Caption"; Cód__Zona_Serv_CaptionLbl)
+            column("Cod__Zona_Serv_Caption"; Cod__Zona_Serv_CaptionLbl)
             {
             }
             column(Nombre_ClienteCaption; Nombre_ClienteCaptionLbl)
@@ -125,11 +125,11 @@ report 56086 "Consignacion por Almacen"
         CodZonaServ: Text[30];
         Item_Ledger_EntryCaptionLbl: Label 'Item Ledger Entry';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Cód__Cliente__Almacén_CaptionLbl": Label 'Cód. Cliente (Almacén)';
+        "Cod__Cliente__Almacén_CaptionLbl": Label 'Cod. Cliente (Almacén)';
         CantidadCaptionLbl: Label 'Cantidad';
         Vta__NetaCaptionLbl: Label 'Vta. Neta';
         Vta__LiquidaCaptionLbl: Label 'Vta. Liquida';
-        "Cód__Zona_Serv_CaptionLbl": Label 'Cód. Zona Serv.';
+        "Cod__Zona_Serv_CaptionLbl": Label 'Cod. Zona Serv.';
         Nombre_ClienteCaptionLbl: Label 'Nombre Cliente';
         TotalCaptionLbl: Label 'Total';
 }

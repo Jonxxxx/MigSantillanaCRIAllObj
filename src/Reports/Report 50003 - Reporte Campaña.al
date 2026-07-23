@@ -29,7 +29,7 @@ report 50003 "Reporte Campaña"
             dataitem("Cust. Ledger Entry"; 21)
             {
                 DataItemLink = "Document No." = FIELD("No."),
-                               Posting Date=FIELD("Posting Date");
+                               "Posting Date" = FIELD("Posting Date");
                 DataItemTableView = ORDER(Ascending)
                                     WHERE("Document Type" = CONST(Invoice));
                 RequestFilterFields = "Posting Date";

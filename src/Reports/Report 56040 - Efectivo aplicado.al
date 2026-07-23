@@ -11,7 +11,7 @@ report 56040 "Efectivo aplicado"
         dataitem("G/L Entry"; 17)
         {
             DataItemTableView = WHERE("Document Type" = CONST(Payment),
-                                      Bal. Account Type=CONST(Customer));
+                                      "Bal. Account Type" = CONST(Customer));
             RequestFilterFields = "Posting Date";
 
             trigger OnAfterGetRecord()

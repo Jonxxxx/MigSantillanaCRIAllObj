@@ -7,7 +7,7 @@ report 67018 "Pedidos por cliente"
     {
         dataitem("Sales Header"; 36)
         {
-            DataItemTableView = SORTING("Document Type", Sell-to Customer No., No.)
+            DataItemTableView = SORTING("Document Type", "Sell-to Customer No.", "No.")
                                 WHERE("Document Type" = CONST(Order));
             PrintOnlyIfDetail = true;
             RequestFilterFields = "Sell-to Customer No.", "Salesperson Code", "Order Date";
@@ -80,7 +80,7 @@ report 67018 "Pedidos por cliente"
             dataitem("Sales Line"; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document Type", "Document No.", "Line No.");
                 column(Sales_Line__No__; "No.")
                 {

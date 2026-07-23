@@ -166,7 +166,7 @@ report 67021 "Control tipo evento x exp."
         Programac__Talleres_y_EventosCaptionLbl: Label 'Control tipo evento';
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         Eventos__Tipo_Evento_CaptionLbl: Label 'Tipo Ev.';
-        Eventos__Description_Taller_CaptionLbl: Label 'Descripción';
+        Eventos__Description_Taller_CaptionLbl: Label 'Descripcion';
         TraerHorasCaptionLbl: Label 'Starting date';
         Avis_CaptionLbl: Label 'Avis.';
         Espe_CaptionLbl: Label 'Espe.';

@@ -9,7 +9,7 @@ report 56129 "Seguimiento pedido en firme"
     {
         dataitem("Sales Header"; 36)
         {
-            DataItemTableView = SORTING("Document Type", Sell-to Customer No., No.);
+            DataItemTableView = SORTING("Document Type", "Sell-to Customer No.", "No.");
             RequestFilterFields = "Document Type", "Sell-to Customer No.", "No.", "Order Date", "Shipment Date", Status, "Estado distribucion", "Completely Shipped";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

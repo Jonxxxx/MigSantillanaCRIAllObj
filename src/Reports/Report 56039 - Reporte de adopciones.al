@@ -138,7 +138,7 @@ report 56039 "Reporte de adopciones"
                     SalesPrice.init;
                 */
                 NivelEducativoAPS.RESET;
-                NivelEducativoAPS.SETRANGE(Código, "Cod. Nivel");
+                NivelEducativoAPS.SETRANGE(Codigo, "Cod. Nivel");
                 IF NivelEducativoAPS.FINDFIRST THEN;
 
                 Editoras.RESET;
@@ -218,7 +218,7 @@ report 56039 "Reporte de adopciones"
         ExcelBuffer.AddColumn(SalesPrice.FIELDCAPTION("Unit Price"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".FIELDCAPTION("Cantidad Alumnos"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".FIELDCAPTION("Cod. Nivel"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
-        ExcelBuffer.AddColumn(NivelEducativoAPS.FIELDCAPTION(Descripción), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
+        ExcelBuffer.AddColumn(NivelEducativoAPS.FIELDCAPTION(Descripcion), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".FIELDCAPTION("Cod. Grado"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".FIELDCAPTION(Adopcion), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".FIELDCAPTION("Adopcion Real"), FALSE, '', TRUE, FALSE, TRUE, '', ExcelBuffer."Cell Type"::Text);
@@ -246,7 +246,7 @@ report 56039 "Reporte de adopciones"
         ExcelBuffer.AddColumn(SalesPrice."Unit Price", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Number);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle"."Cantidad Alumnos", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle"."Cod. Nivel", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
-        ExcelBuffer.AddColumn(NivelEducativoAPS.Descripción, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
+        ExcelBuffer.AddColumn(NivelEducativoAPS.Descripcion, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle"."Cod. Grado", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle".Adopcion, FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);
         ExcelBuffer.AddColumn("Colegio - Adopciones Detalle"."Adopcion Real", FALSE, '', FALSE, FALSE, FALSE, '', ExcelBuffer."Cell Type"::Text);

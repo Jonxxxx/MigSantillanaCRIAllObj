@@ -53,10 +53,10 @@ report 56089 "Cdad Enviada No Fact. Cosng."
             column(CantidadCaption; CantidadCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
-            column("Cód__Categoría_ProductoCaption"; Cód__Categoría_ProductoCaptionLbl)
+            column("Cod__Categoria_ProductoCaption"; Cod__Categoria_ProductoCaptionLbl)
             {
             }
             column(TotalCaption; TotalCaptionLbl)
@@ -111,8 +111,8 @@ report 56089 "Cdad Enviada No Fact. Cosng."
         CurrReport_PAGENOCaptionLbl: Label 'Página';
         Vta__BrutaCaptionLbl: Label 'Vta. Bruta';
         CantidadCaptionLbl: Label 'Cantidad';
-        "DescripciónCaptionLbl": Label 'Descripción';
-        "Cód__Categoría_ProductoCaptionLbl": Label 'Cód. Categoría Producto';
+        "DescripcionCaptionLbl": Label 'Descripcion';
+        "Cod__Categoria_ProductoCaptionLbl": Label 'Cod. Categoria Producto';
         TotalCaptionLbl: Label 'Total';
 }
 

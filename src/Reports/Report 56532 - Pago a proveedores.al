@@ -114,7 +114,7 @@ report 56532 "Pago a proveedores"
                                Initial Entry Global Dim. 1=FIELD("Global Dimension 1 Filter"),
                                Initial Entry Global Dim. 2=FIELD("Global Dimension 2 Filter"),
                                Currency Code=FIELD("Currency Filter");
-                DataItemTableView = SORTING("Vendor No.","Posting Date",Entry Type,Currency Code)
+                DataItemTableView = SORTING("Vendor No.","Posting Date","Entry Type","Currency Code")
                                     WHERE("Entry Type"=CONST(Application),
                                           Initial Document Type=FILTER(Invoice|Credit Memo));
                 column(FORMAT__Posting_Date___Control35;FORMAT("Posting Date"))

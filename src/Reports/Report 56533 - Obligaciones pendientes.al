@@ -97,7 +97,7 @@ report 56533 "Obligaciones pendientes"
                                Global Dimension 1 Code=FIELD("Global Dimension 1 Filter"),
                                Global Dimension 2 Code=FIELD("Global Dimension 2 Filter"),
                                Currency Code=FIELD("Currency Filter");
-                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date",Currency Code)
+                DataItemTableView = SORTING("Vendor No.",Open,Positive,"Due Date","Currency Code")
                                     WHERE(Open=CONST(True));
                 column(Vendor_Ledger_Entry__Document_Type_;"Document Type")
                 {

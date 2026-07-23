@@ -11,7 +11,7 @@ report 56079 "Inventario Productos"
         {
             CalcFields = Inventory;
             DataItemTableView = SORTING("No.")
-                                WHERE(Blocked = FILTER(No));
+                                WHERE(Blocked = FILTER(False));
             RequestFilterFields = Inventory, "Location Filter";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
@@ -58,7 +58,7 @@ report 56079 "Inventario Productos"
             column(Item_InventoryCaption; FIELDCAPTION(Inventory))
             {
             }
-            column("Lín__NegocioCaption"; Lín__NegocioCaptionLbl)
+            column("Lin__NegocioCaption"; Lin__NegocioCaptionLbl)
             {
             }
         }
@@ -83,6 +83,6 @@ report 56079 "Inventario Productos"
     var
         ItemCaptionLbl: Label 'Item';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Lín__NegocioCaptionLbl": Label 'Lín. Negocio';
+        "Lin__NegocioCaptionLbl": Label 'Lin. Negocio';
 }
 

@@ -1,8 +1,8 @@
 report 50002 "Customer - Detail Trial"
 {
     // #4148  PLB  25/09/2014  Se han añadido varios datos al cliente:
-    //                         - Nombre institución (Name 2)
-    //                         - Dirección
+    //                         - Nombre institucion (Name 2)
+    //                         - Direccion
     //                         - Vendedor
     //                         - Contacto
     //  Proyecto: Implementacion Microsoft Dynamic
@@ -12,7 +12,7 @@ report 50002 "Customer - Detail Trial"
     //  No.           Fecha           Firma    Descripcion
     //  ------------------------------------------------------------------------
     //  001           13/03/2023      LDP      SANTINAV-4805: Ajuste reporte Cliente - Movimiento
-    //  002           10/04/2025      LDP      SANTINAV-7904: Error en estados de cuenta ã Información incompleta y saldo incorrecto, no visible para busquedas.
+    //  002           10/04/2025      LDP      SANTINAV-7904: Error en estados de cuenta ã Informacion incompleta y saldo incorrecto, no visible para busquedas.
     DefaultLayout = RDLC;
     RDLCLayout = './Customer - Detail Trial.rdlc';
 
@@ -194,7 +194,7 @@ report 50002 "Customer - Detail Trial"
                 dataitem("Detailed Cust. Ledg. Entry";379)
                 {
                     DataItemLink = "Cust. Ledger Entry No."=FIELD("Entry No.");
-                    DataItemTableView = SORTING("Cust. Ledger Entry No.",Entry Type,Posting Date)
+                    DataItemTableView = SORTING("Cust. Ledger Entry No.","Entry Type","Posting Date")
                                         WHERE("Entry Type"=FILTER(Appln. Rounding|Correction of Remaining Amount));
                     column(EntryType_DtldCustLedgEntry;FORMAT("Entry Type"))
                     {

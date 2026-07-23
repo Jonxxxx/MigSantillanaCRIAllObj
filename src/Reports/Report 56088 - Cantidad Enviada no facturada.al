@@ -50,7 +50,7 @@ report 56088 "Cantidad Enviada no facturada"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("Cód__Categoría_ProductoCaption"; Cód__Categoría_ProductoCaptionLbl)
+            column("Cod__Categoria_ProductoCaption"; Cod__Categoria_ProductoCaptionLbl)
             {
             }
             column(Vta__BrutaCaption; Vta__BrutaCaptionLbl)
@@ -59,7 +59,7 @@ report 56088 "Cantidad Enviada no facturada"
             column(CantidadCaption; CantidadCaptionLbl)
             {
             }
-            column("DescripciónCaption"; DescripciónCaptionLbl)
+            column("DescripcionCaption"; DescripcionCaptionLbl)
             {
             }
             column(TotalCaption; TotalCaptionLbl)
@@ -126,10 +126,10 @@ report 56088 "Cantidad Enviada no facturada"
         DescCategoria: Text[290];
         Sales_LineCaptionLbl: Label 'Sales Line';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
-        "Cód__Categoría_ProductoCaptionLbl": Label 'Cód. Categoría Producto';
+        "Cod__Categoria_ProductoCaptionLbl": Label 'Cod. Categoria Producto';
         Vta__BrutaCaptionLbl: Label 'Vta. Bruta';
         CantidadCaptionLbl: Label 'Cantidad';
-        "DescripciónCaptionLbl": Label 'Descripción';
+        "DescripcionCaptionLbl": Label 'Descripcion';
         TotalCaptionLbl: Label 'Total';
 }
 

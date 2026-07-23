@@ -53,9 +53,9 @@ report 56200 "Enviar IRM"
         {
             area(content)
             {
-                group("Envío")
+                group("Envio")
                 {
-                    Caption = 'Envío';
+                    Caption = 'Envio';
                     field(Envio; Envio)
                     {
                         Caption = 'Tipo';

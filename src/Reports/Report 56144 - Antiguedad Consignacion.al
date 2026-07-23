@@ -1,7 +1,7 @@
 report 56144 "Antiguedad Consignacion"
 {
-    // 001 #139 RRT 27.12.13 - Adaptación en RTC. La información sólo se está volcando en EXCEL.
-    //                         Por tanto, la adaptación que realizaré será mínima. En caso de en un futuro tener que adaptar el
+    // 001 #139 RRT 27.12.13 - Adaptacion en RTC. La informacion solo se está volcando en EXCEL.
+    //                         Por tanto, la adaptacion que realizaré será minima. En caso de en un futuro tener que adaptar el
     //                         informe, podemos basarnos en el report 56074.
     DefaultLayout = RDLC;
     RDLCLayout = './Antiguedad Consignacion.rdlc';
@@ -99,7 +99,7 @@ report 56144 "Antiguedad Consignacion"
             column(V91_a_120Caption; V91_a_120CaptionLbl)
             {
             }
-            column("V0_a_90_díasCaption"; V0_a_90_díasCaptionLbl)
+            column("V0_a_90_diasCaption"; V0_a_90_diasCaptionLbl)
             {
             }
             column(V121_a_150Caption; V121_a_150CaptionLbl)
@@ -115,7 +115,7 @@ report 56144 "Antiguedad Consignacion"
             {
                 DataItemLink = "Location Code" = FIELD("No.");
                 DataItemTableView = SORTING("Location Code", Open)
-                                    WHERE(Open = FILTER(Yes));
+                                    WHERE(Open = FILTER(True));
                 column(t0a30__Remaining_Quantity_; "Remaining Quantity")
                 {
                 }
@@ -391,17 +391,17 @@ report 56144 "Antiguedad Consignacion"
         wImp_91aAde: Decimal;
         ExcelBuf: Record 370 temporary;
         PrintToExcel: Boolean;
-        Text000: Label 'Antiguedad Consignación';
-        txt001: Label 'Balance en Consignación';
-        txt002: Label 'Inventario en Consignación';
-        txt003: Label '0 a 90 días';
-        txt004: Label '91 a 120 días';
-        txt005: Label '121 a 150 días';
+        Text000: Label 'Antiguedad Consignacion';
+        txt001: Label 'Balance en Consignacion';
+        txt002: Label 'Inventario en Consignacion';
+        txt003: Label '0 a 90 dias';
+        txt004: Label '91 a 120 dias';
+        txt005: Label '121 a 150 dias';
         txt006: Label '151 en adelante';
         txt007: Label 'Total';
-        txt008: Label 'Imp. 0 a 90 días';
-        txt009: Label 'Imp. 91 a 120 días';
-        txt010: Label 'Imp. 121 a 150 días';
+        txt008: Label 'Imp. 0 a 90 dias';
+        txt009: Label 'Imp. 91 a 120 dias';
+        txt010: Label 'Imp. 121 a 150 dias';
         txt011: Label 'Imp. 151 en adelante';
         wImporteDescuento: Decimal;
         Importe30: Decimal;
@@ -426,14 +426,14 @@ report 56144 "Antiguedad Consignacion"
         txt025: Label 'Descuento % Consignacion';
         txt026: Label 'Vta Neta';
         txt027: Label 'Vta Liquida';
-        txt028: Label 'Dim Línea Negocio';
+        txt028: Label 'Dim Linea Negocio';
         txt029: Label 'Detalle';
         FiltroLinNeg: Text[200];
         Item: Record 27;
         txt030: Label 'Antigüedad';
-        txt031: Label 'Cód. Zona de Servicio';
-        txt032: Label 'Cód. Vendedor';
-        txt033: Label 'Cód. Cliente';
+        txt031: Label 'Cod. Zona de Servicio';
+        txt032: Label 'Cod. Vendedor';
+        txt033: Label 'Cod. Cliente';
         txt034: Label 'Nombre Cliente';
         Cust: Record 18;
         CantDias: Integer;
@@ -443,11 +443,11 @@ report 56144 "Antiguedad Consignacion"
         VentaNeta: Decimal;
         VentaLiquida: Decimal;
         ImporteDesc: Decimal;
-        txt100: Label 'La información se ha volcado en documento EXCEL';
+        txt100: Label 'La informacion se ha volcado en documento EXCEL';
         CustomerCaptionLbl: Label 'Customer';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
         V91_a_120CaptionLbl: Label '91 a 120';
-        "V0_a_90_díasCaptionLbl": Label '0 a 90 días';
+        "V0_a_90_diasCaptionLbl": Label '0 a 90 dias';
         V121_a_150CaptionLbl: Label '121 a 150';
         V151_en_adelanteCaptionLbl: Label '151 en adelante';
         TotalCaptionLbl: Label 'Total';

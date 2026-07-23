@@ -2,7 +2,7 @@ report 56074 "Antiguedad Importe Consig."
 {
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
-    // 139         12/12/2013      RRT           Adaptación informes a RTC. Corrección de errores detectados.
+    // 139         12/12/2013      RRT           Adaptacion informes a RTC. Correccion de errores detectados.
     DefaultLayout = RDLC;
     RDLCLayout = './Antiguedad Importe Consig..rdlc';
 
@@ -90,7 +90,7 @@ report 56074 "Antiguedad Importe Consig."
             dataitem(t0a30; 32)
             {
                 DataItemLink = "Location Code" = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, "Location Code", "Posting Date")
                                     ORDER(Ascending);
                 column(t0a30__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -119,7 +119,7 @@ report 56074 "Antiguedad Importe Consig."
             dataitem(t31a60; 32)
             {
                 DataItemLink = "Location Code" = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, "Location Code", "Posting Date")
                                     ORDER(Ascending);
                 column(t31a60__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -137,7 +137,7 @@ report 56074 "Antiguedad Importe Consig."
                 trigger OnPreDataItem()
                 begin
                     //+139
-                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecución del DataItem.
+                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecucion del DataItem.
                     IF NOT Detallado THEN
                         CurrReport.BREAK;
                     //-139
@@ -148,7 +148,7 @@ report 56074 "Antiguedad Importe Consig."
             dataitem(t61a97; 32)
             {
                 DataItemLink = "Location Code" = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, "Location Code", "Posting Date")
                                     ORDER(Ascending);
                 column(t61a97__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -166,7 +166,7 @@ report 56074 "Antiguedad Importe Consig."
                 trigger OnPreDataItem()
                 begin
                     //+139
-                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecución del DataItem.
+                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecucion del DataItem.
                     IF NOT Detallado THEN
                         CurrReport.BREAK;
                     //-139
@@ -177,7 +177,7 @@ report 56074 "Antiguedad Importe Consig."
             dataitem(t98Adelante; 32)
             {
                 DataItemLink = "Location Code" = FIELD("No.");
-                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, Location Code, Posting Date)
+                DataItemTableView = SORTING("Item No.", "Variant Code", Open, Positive, "Location Code", "Posting Date")
                                     ORDER(Ascending);
                 column(t98Adelante__Importe_Cons__Neto_Inicial_; "Importe Cons. Neto Inicial")
                 {
@@ -203,13 +203,13 @@ report 56074 "Antiguedad Importe Consig."
                 trigger OnPreDataItem()
                 begin
                     //+139
-                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecución del DataItem.
+                    //... Si no se ha indicado mostrar el detalle, se abortará la ejecucion del DataItem.
                     IF NOT Detallado THEN
                         CurrReport.BREAK;
                     //-139
 
                     //+139
-                    //... Por error, esta acción estaba en el trigger OnAfterGetRecord()
+                    //... Por error, esta accion estaba en el trigger OnAfterGetRecord()
                     SETRANGE("Posting Date", 0D, CALCDATE('-98D', FechaDesde));
                     //-139
                 end;

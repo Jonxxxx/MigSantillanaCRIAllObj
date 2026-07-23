@@ -101,7 +101,7 @@ report 56050 "Movimiento Existencias"
             column(Item__No__Caption; FIELDCAPTION("No."))
             {
             }
-            column("TítuloCaption"; TítuloCaptionLbl)
+            column("TituloCaption"; TituloCaptionLbl)
             {
             }
             column(Fecha_ultima_compraCaption; Fecha_ultima_compraCaptionLbl)
@@ -110,10 +110,10 @@ report 56050 "Movimiento Existencias"
             column(Exit__InicialesCaption; Exit__InicialesCaptionLbl)
             {
             }
-            column("Salidas_por_promociónCaption"; Salidas_por_promociónCaptionLbl)
+            column("Salidas_por_promocionCaption"; Salidas_por_promocionCaptionLbl)
             {
             }
-            column("Entradas__producción_o_comprasCaption"; Entradas__producción_o_comprasCaptionLbl)
+            column("Entradas__produccion_o_comprasCaption"; Entradas__produccion_o_comprasCaptionLbl)
             {
             }
             column(Ajustes_positivos_y_negativosCaption; Ajustes_positivos_y_negativosCaptionLbl)
@@ -131,10 +131,10 @@ report 56050 "Movimiento Existencias"
             column(Salidas_por_ventas_RegularCaption_Control1000000040; Salidas_por_ventas_RegularCaption_Control1000000040Lbl)
             {
             }
-            column("Salidas_por_promociónCaption_Control1000000041"; Salidas_por_promociónCaption_Control1000000041Lbl)
+            column("Salidas_por_promocionCaption_Control1000000041"; Salidas_por_promocionCaption_Control1000000041Lbl)
             {
             }
-            column("Entradas__producción_o_comprasCaption_Control1000000042"; Entradas__producción_o_comprasCaption_Control1000000042Lbl)
+            column("Entradas__produccion_o_comprasCaption_Control1000000042"; Entradas__produccion_o_comprasCaption_Control1000000042Lbl)
             {
             }
             column(Exit__InicialesCaption_Control1000000043; Exit__InicialesCaption_Control1000000043Lbl)
@@ -319,11 +319,11 @@ report 56050 "Movimiento Existencias"
                 RowNo := 1;
                 EnterCell(RowNo, 1, 'ISBN', TRUE, TRUE, '');
                 EnterCell(RowNo, 2, '', TRUE, TRUE, '');
-                EnterCell(RowNo, 3, 'Título', TRUE, TRUE, '');
+                EnterCell(RowNo, 3, 'Titulo', TRUE, TRUE, '');
                 EnterCell(RowNo, 4, 'Fecha ultima compra', TRUE, TRUE, '');
                 EnterCell(RowNo, 5, 'Exit. Iniciales', TRUE, TRUE, '');
-                EnterCell(RowNo, 6, 'Entradas: producción o compras', TRUE, TRUE, '');
-                EnterCell(RowNo, 7, 'Salidas por promoción', TRUE, TRUE, '');
+                EnterCell(RowNo, 6, 'Entradas: produccion o compras', TRUE, TRUE, '');
+                EnterCell(RowNo, 7, 'Salidas por promocion', TRUE, TRUE, '');
                 EnterCell(RowNo, 8, 'Salidas por ventas Regular', TRUE, TRUE, '');
                 EnterCell(RowNo, 9, 'Salidas por ventas Institucional', TRUE, TRUE, '');
                 EnterCell(RowNo, 10, 'Salidas por ventas Grupo', TRUE, TRUE, '');
@@ -332,8 +332,8 @@ report 56050 "Movimiento Existencias"
                 EnterCell(RowNo, 13, 'Existencias finales', TRUE, TRUE, '');
                 EnterCell(RowNo, 14, 'Coste Unitario ML', TRUE, TRUE, '');
                 EnterCell(RowNo, 15, 'Exit. Iniciales', TRUE, TRUE, '');
-                EnterCell(RowNo, 16, 'Entradas: producción o compras', TRUE, TRUE, '');
-                EnterCell(RowNo, 17, 'Salidas por promoción', TRUE, TRUE, '');
+                EnterCell(RowNo, 16, 'Entradas: produccion o compras', TRUE, TRUE, '');
+                EnterCell(RowNo, 17, 'Salidas por promocion', TRUE, TRUE, '');
                 EnterCell(RowNo, 18, 'Salidas por ventas Regular', TRUE, TRUE, '');
                 EnterCell(RowNo, 19, 'Salidas por ventas Institucional', TRUE, TRUE, '');
                 EnterCell(RowNo, 20, 'Salidas por ventas Grupo', TRUE, TRUE, '');
@@ -387,18 +387,18 @@ report 56050 "Movimiento Existencias"
         CurrReport_PAGENOCaptionLbl: Label 'Page';
         TitleCaptionLbl: Label 'Movimiento Existencias';
         ISBNCaptionLbl: Label 'ISBN';
-        "TítuloCaptionLbl": Label 'Título';
+        "TituloCaptionLbl": Label 'Titulo';
         Fecha_ultima_compraCaptionLbl: Label 'Fecha ultima compra';
         Exit__InicialesCaptionLbl: Label 'Exit. Iniciales';
-        "Salidas_por_promociónCaptionLbl": Label 'Salidas por promoción';
-        "Entradas__producción_o_comprasCaptionLbl": Label 'Entradas: producción o compras';
+        "Salidas_por_promocionCaptionLbl": Label 'Salidas por promocion';
+        "Entradas__produccion_o_comprasCaptionLbl": Label 'Entradas: produccion o compras';
         Ajustes_positivos_y_negativosCaptionLbl: Label 'Ajustes positivos y negativos';
         Consumo__salida__esto_es_el_traslado_a_PackCaptionLbl: Label 'Consumo /salida (esto es el traslado a Pack';
         Salidas_por_ventas_InstitucionalCaptionLbl: Label 'Salidas por ventas Institucional';
         Salidas_por_ventas_RegularCaptionLbl: Label 'Salidas por ventas Regular';
         Salidas_por_ventas_RegularCaption_Control1000000040Lbl: Label 'Salidas por ventas Regular';
-        "Salidas_por_promociónCaption_Control1000000041Lbl": Label 'Salidas por promoción';
-        "Entradas__producción_o_comprasCaption_Control1000000042Lbl": Label 'Entradas: producción o compras';
+        "Salidas_por_promocionCaption_Control1000000041Lbl": Label 'Salidas por promocion';
+        "Entradas__produccion_o_comprasCaption_Control1000000042Lbl": Label 'Entradas: produccion o compras';
         Exit__InicialesCaption_Control1000000043Lbl: Label 'Exit. Iniciales';
         Coste_Unitario_MLCaptionLbl: Label 'Coste Unitario ML';
         Existencias_finalesCaptionLbl: Label 'Existencias finales';

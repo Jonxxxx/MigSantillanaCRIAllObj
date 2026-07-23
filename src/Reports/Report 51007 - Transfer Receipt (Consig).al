@@ -134,7 +134,7 @@ report 51007 "Transfer Receipt (Consig)"
                     column(Orden_de_Compra_Caption; Orden_de_Compra_CaptionLbl)
                     {
                     }
-                    column(Pedido_ConsignacionCaption; Pedido_ConsignaciónCaptionLbl)
+                    column(Pedido_ConsignacionCaption; Pedido_ConsignacionCaptionLbl)
                     {
                     }
                     column(Orden_de_Compra_Caption_Control1000000057; Orden_de_Compra_Caption_Control1000000057Lbl)
@@ -236,10 +236,10 @@ report 51007 "Transfer Receipt (Consig)"
                         column(Importe_Consignacion___Importe_IVA_; "Importe Consignacion" + "Importe IVA")
                         {
                         }
-                        column(CodigoCaption; CódigoCaptionLbl)
+                        column(CodigoCaption; CodigoCaptionLbl)
                         {
                         }
-                        column(TituloCaption; TítuloCaptionLbl)
+                        column(TituloCaption; TituloCaptionLbl)
                         {
                         }
                         column(CantidadCaption; CantidadCaptionLbl)
@@ -447,7 +447,7 @@ report 51007 "Transfer Receipt (Consig)"
         Domicilio_CaptionLbl: Label 'Domicilio:';
         Entregar_en_CaptionLbl: Label 'Entregar en:';
         Ruta_de_Embarque_CaptionLbl: Label 'Ruta de Embarque:';
-        "NOTA_DE_REMISIÛNCaptionLbl": Label 'NOTA DE REMISION (Recepción)';
+        "NOTA_DE_REMISIÛNCaptionLbl": Label 'NOTA DE REMISION (Recepcion)';
         Pedido_CaptionLbl: Label 'Pedido:';
         Fecha_Pedido_CaptionLbl: Label 'Fecha Pedido:';
         Fecha_Requerida_CaptionLbl: Label 'Fecha Requerida:';
@@ -457,11 +457,11 @@ report 51007 "Transfer Receipt (Consig)"
         Vendedor_CaptionLbl: Label 'Vendedor:';
         "Almacén_CaptionLbl": Label 'Almacén:';
         Orden_de_Compra_CaptionLbl: Label 'Orden de Compra:';
-        "Pedido_ConsignaciónCaptionLbl": Label 'Pedido Consignación';
+        "Pedido_ConsignacionCaptionLbl": Label 'Pedido Consignacion';
         Orden_de_Compra_Caption_Control1000000057Lbl: Label 'Orden de Compra:';
         ESTOS_PRECIOS_NO_INCLUYEN_IVA_CaptionLbl: Label '*ESTOS PRECIOS NO INCLUYEN IVA*';
-        "CódigoCaptionLbl": Label 'Código';
-        "TítuloCaptionLbl": Label 'Título';
+        "CodigoCaptionLbl": Label 'Codigo';
+        "TituloCaptionLbl": Label 'Titulo';
         CantidadCaptionLbl: Label 'Cantidad';
         P_V_P_CaptionLbl: Label 'P.V.P.';
         DescuentoCaptionLbl: Label '% Descuento';

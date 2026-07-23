@@ -224,7 +224,7 @@ report 56075 "Antiguedad Deuda Opc. Detalle"
                 trigger OnAfterGetRecord()
                 begin
                     rVendedor.RESET;
-                    //Evaluar que no me aparezca un codigo vacío
+                    //Evaluar que no me aparezca un codigo vacio
                     IF "Cust. Ledger Entry"."Salesperson Code" <> '' THEN BEGIN
                         rVendedor.GET("Cust. Ledger Entry"."Salesperson Code");
                         Vendedor := "Cust. Ledger Entry"."Salesperson Code" + '-' +
@@ -297,7 +297,7 @@ report 56075 "Antiguedad Deuda Opc. Detalle"
     begin
         CustFilter := Customer.GETFILTERS;
         PeriodStartDate[5] := StartDate;
-        PeriodStartDate[6] := 12319999D;
+        PeriodStartDate[6] := 20991231D;
         FOR i := 4 DOWNTO 2 DO
             PeriodStartDate[i] := CALCDATE('<-30D>', PeriodStartDate[i + 1]);
     end;

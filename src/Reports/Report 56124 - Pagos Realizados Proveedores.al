@@ -12,7 +12,7 @@ report 56124 "Pagos Realizados Proveedores"
             DataItemTableView = SORTING("Entry No.")
                                 ORDER(Ascending)
                                 WHERE("Document Type" = FILTER(Invoice),
-                                      Open = FILTER(No));
+                                      Open = FILTER(False));
             RequestFilterFields = "Posting Date", "Document No.";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

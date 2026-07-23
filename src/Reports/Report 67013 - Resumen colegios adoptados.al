@@ -12,7 +12,7 @@ report 67013 "Resumen colegios adoptados"
             DataItemTableView = SORTING("Cod. Promotor", "Categoria colegio")
                                 WHERE("Cod. Promotor" = FILTER(<> ''));
             RequestFilterFields = "Cod. Promotor", "Categoria colegio";
-            RequestFilterHeading = 'Resumen de colegios adoptados por categoría';
+            RequestFilterHeading = 'Resumen de colegios adoptados por categoria';
             column(USERID; USERID)
             {
             }
@@ -52,7 +52,7 @@ report 67013 "Resumen colegios adoptados"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column("Resumen_de_colegios_adoptados_por_categoríaCaption"; Resumen_de_colegios_adoptados_por_categoríaCaptionLbl)
+            column("Resumen_de_colegios_adoptados_por_categoriaCaption"; Resumen_de_colegios_adoptados_por_categoriaCaptionLbl)
             {
             }
             column(intColegiosCaption; intColegiosCaptionLbl)
@@ -189,9 +189,9 @@ report 67013 "Resumen colegios adoptados"
         intFaltanDecidir: Integer;
         intEjemplares: Decimal;
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
-        "Resumen_de_colegios_adoptados_por_categoríaCaptionLbl": Label 'Resumen de colegios adoptados por categoría';
+        "Resumen_de_colegios_adoptados_por_categoriaCaptionLbl": Label 'Resumen de colegios adoptados por categoria';
         intColegiosCaptionLbl: Label 'Total colegios';
-        CategoriasPromotor__Categoria_colegio_CaptionLbl: Label 'Categoría';
+        CategoriasPromotor__Categoria_colegio_CaptionLbl: Label 'Categoria';
         TraerNombrePromotorCaptionLbl: Label 'Nombre promotor';
         No_adoptadosCaptionLbl: Label 'No adoptados';
         AdoptadosCaptionLbl: Label 'Adoptados';

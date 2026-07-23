@@ -68,7 +68,7 @@ report 52548 "Sales Quote Status Report"
                 {
                     DataItemLink = "No." = FIELD("Document No."),
                                    Document Line No.=FIELD("Line No.");
-                    DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", Line No.)
+                    DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                         WHERE("Document Type" = CONST(Quote),
                                               Print On Quote=CONST(True));
 
@@ -196,7 +196,7 @@ report 52548 "Sales Quote Status Report"
             dataitem("<Sales Comment Line>"; 44)
             {
                 DataItemLink = "No." = FIELD("No.");
-                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", Line No.)
+                DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
                                     WHERE("Document Type" = CONST(Quote),
                                           Print On Quote=CONST(True),
                                           Document Line No.=CONST(0));

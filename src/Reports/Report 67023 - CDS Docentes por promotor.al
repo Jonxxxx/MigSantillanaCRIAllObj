@@ -9,7 +9,7 @@ report 67023 "CDS Docentes por promotor"
     {
         dataitem("Colegio - Docentes"; 67043)
         {
-            CalcFields = Nombre Promotor;
+            CalcFields = "Nombre Promotor";
             DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", "Apellido paterno")
                                 WHERE("Pertenece al CDS" = CONST(True));
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
@@ -180,7 +180,7 @@ report 67023 "CDS Docentes por promotor"
             {
                 field(Orden; optOrden)
                 {
-                    OptionCaption = 'Por nombre docente,Por código colegio,Por distrito';
+                    OptionCaption = 'Por nombre docente,Por codigo colegio,Por distrito';
                 }
                 field(Promotor; codPromotor)
                 {
@@ -217,8 +217,8 @@ report 67023 "CDS Docentes por promotor"
         CurrReport_PAGENOCaptionLbl: Label 'Pág.';
         texNombreCaptionLbl: Label 'Nombre docente';
         TraerDescripcionCargoCaptionLbl: Label 'Cargo';
-        Colegio___Docentes__Cod__Nivel_CaptionLbl: Label 'Cód. Nivel';
-        codCDSCaptionLbl: Label 'Código CDS';
+        Colegio___Docentes__Cod__Nivel_CaptionLbl: Label 'Cod. Nivel';
+        codCDSCaptionLbl: Label 'Codigo CDS';
         texDocumentoCaptionLbl: Label 'Documento';
         texTelefono1CaptionLbl: Label 'Teléfono';
         texTelefono2CaptionLbl: Label 'Teléfono 2';

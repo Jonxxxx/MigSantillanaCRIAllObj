@@ -131,7 +131,7 @@ report 51020 "Transfer Shipment (Consig)"
                     column(Orden_de_Compra_Caption; Orden_de_Compra_CaptionLbl)
                     {
                     }
-                    column(Pedido_ConsignacionCaption; Pedido_ConsignaciónCaptionLbl)
+                    column(Pedido_ConsignacionCaption; Pedido_ConsignacionCaptionLbl)
                     {
                     }
                     column(Peso_Caption; Peso_CaptionLbl)
@@ -224,10 +224,10 @@ report 51020 "Transfer Shipment (Consig)"
                         column(Comentario_5_; Comentario[5])
                         {
                         }
-                        column(CodigoCaption; CódigoCaptionLbl)
+                        column(CodigoCaption; CodigoCaptionLbl)
                         {
                         }
-                        column(TituloCaption; TítuloCaptionLbl)
+                        column(TituloCaption; TituloCaptionLbl)
                         {
                         }
                         column(CantidadCaption; CantidadCaptionLbl)
@@ -440,10 +440,10 @@ report 51020 "Transfer Shipment (Consig)"
         Vendedor_CaptionLbl: Label 'Vendedor:';
         "Almacén_CaptionLbl": Label 'Almacén:';
         Orden_de_Compra_CaptionLbl: Label 'Orden de Compra:';
-        "Pedido_ConsignaciónCaptionLbl": Label 'Pedido Consignación';
+        "Pedido_ConsignacionCaptionLbl": Label 'Pedido Consignacion';
         Peso_CaptionLbl: Label 'Peso:';
-        "CódigoCaptionLbl": Label 'Código';
-        "TítuloCaptionLbl": Label 'Título';
+        "CodigoCaptionLbl": Label 'Codigo';
+        "TituloCaptionLbl": Label 'Titulo';
         CantidadCaptionLbl: Label 'Cantidad';
         P_V_P_CaptionLbl: Label 'P.V.P.';
         DescuentoCaptionLbl: Label '% Descuento';

@@ -1,14 +1,14 @@
 report 52543 "Factura Santillana CR FE"
 {
-    // #4186   30/09/2014      PLB           Se ha creado la opción de poder imprimir las líneas por el ranking de ubicación
+    // #4186   30/09/2014      PLB           Se ha creado la opcion de poder imprimir las lineas por el ranking de ubicacion
     // 
     // MOI - 12/12/2014: Se añade la direccion y los comentarios en el footer del layout.
     //                   Se añaden los TextConstants para direccion y comentarios en el footer.
     // MOI - 12/02/2015: Se buscan todos los comentarios y se concatenan para mostrarlos.
     // 001   YFC   17/08/2022    SANTINAV-2745: Ajustes
     // 002   SSM   04/09/2025    SANTINAV-8512: Ajustes
-    // 003   LDP   19/10/2025    SANTINAV-8697: Problema con código QR en facturas electrónicas ã Costa Rica
-    // 004   LDP   24/11/2025    SANTINAV-8776: Error descripción Facturación Electronica
+    // 003   LDP   19/10/2025    SANTINAV-8697: Problema con codigo QR en facturas electronicas ã Costa Rica
+    // 004   LDP   24/11/2025    SANTINAV-8776: Error descripcion Facturacion Electronica
     DefaultLayout = RDLC;
     RDLCLayout = './Factura Santillana CR FE.rdlc';
 

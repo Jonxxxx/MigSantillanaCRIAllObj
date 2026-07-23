@@ -6,7 +6,7 @@ report 56031 "Desglose Ajuste Divisa"
     {
         dataitem("Detailed Cust. Ledg. Entry"; 379)
         {
-            DataItemTableView = SORTING("Document No.", "Document Type", Posting Date)
+            DataItemTableView = SORTING("Document No.", "Document Type", "Posting Date")
                                 ORDER(Ascending);
             RequestFilterFields = "Document No.", "Currency Code", "Posting Date", "Transaction No.";
 
@@ -90,7 +90,7 @@ report 56031 "Desglose Ajuste Divisa"
         }
         dataitem("Detailed Vendor Ledg. Entry"; 380)
         {
-            DataItemTableView = SORTING("Document No.", "Document Type", Posting Date)
+            DataItemTableView = SORTING("Document No.", "Document Type", "Posting Date")
                                 ORDER(Ascending);
             RequestFilterFields = "Document No.", "Currency Code", "Posting Date", "Transaction No.";
 

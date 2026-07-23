@@ -200,20 +200,20 @@ report 56018 "Guia de Transporte"
         Pagina_CaptionLbl: Label 'Página:';
         Hora_CaptionLbl: Label 'Hora:';
         Ruta_Embarque_CaptionLbl: Label 'Ruta Embarque:';
-        Relacion__EmbarqueCaptionLbl: Label 'Relación  Embarque';
-        Cod__Cliente_CaptionLbl: Label 'Cód. Cliente:';
+        Relacion__EmbarqueCaptionLbl: Label 'Relacion  Embarque';
+        Cod__Cliente_CaptionLbl: Label 'Cod. Cliente:';
         Estado_CaptionLbl: Label 'Estado:';
-        Direccion_1_CaptionLbl: Label 'Dirección 1:';
-        Direccion_2_CaptionLbl: Label 'Dirección 2:';
+        Direccion_1_CaptionLbl: Label 'Direccion 1:';
+        Direccion_2_CaptionLbl: Label 'Direccion 2:';
         Ciudad_CaptionLbl: Label 'Ciudad:';
         Municipio_CaptionLbl: Label 'Municipio:';
         Observaciones__CaptionLbl: Label 'Observaciones :';
-        No__LineaCaptionLbl: Label 'No. Línea';
+        No__LineaCaptionLbl: Label 'No. Linea';
         BultosCaptionLbl: Label 'Bultos';
         PesoCaptionLbl: Label 'Peso';
         No__FacturaCaptionLbl: Label 'No. Factura';
         No__PedidoCaptionLbl: Label 'No. Pedido';
         Fecha_Entrega_RequeridaCaptionLbl: Label 'Fecha Entrega Requerida';
-        Condiciones_de_envioCaptionLbl: Label 'Condiciones de envío';
+        Condiciones_de_envioCaptionLbl: Label 'Condiciones de envio';
 }
 

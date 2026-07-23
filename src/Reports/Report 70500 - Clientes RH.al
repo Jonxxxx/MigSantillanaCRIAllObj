@@ -119,7 +119,7 @@ report 70500 "Clientes RH"
                 TL009.Descripcion := "Payment Terms Code";
                 IF TL009.INSERT THEN;
 
-                MCliente01.Organización := "VAT Bus. Posting Group";
+                MCliente01.Organizacion := "VAT Bus. Posting Group";
                 IF "VAT Bus. Posting Group" <> '' THEN BEGIN
                     VatBussPostGrp.GET("VAT Bus. Posting Group");
                     GL014.INIT;
@@ -159,7 +159,7 @@ report 70500 "Clientes RH"
                 //MCliente01."Zona de ventas" := "Salesperson Code";
                 MCliente01."Grupo de precios" := "Customer Price Group";
                 MCliente01."Lista de precios" := "Customer Price Group";
-                MCliente01."Código Cliente Santillana" := codCliente;
+                MCliente01."Codigo Cliente Santillana" := codCliente;
                 IF NOT MCliente01.INSERT THEN
                     MCliente01.MODIFY;
             end;
@@ -182,7 +182,7 @@ report 70500 "Clientes RH"
                         IF ClientesOfisys."Tipo Cliente" <> 'COL' THEN BEGIN
                             MCliente01.INIT;
                             MCliente01."Nombre 1" := ClientesOfisys."Nombre Cliente";
-                            MCliente01."Código Cliente Santillana" := ClientesOfisys."Cod. Cliente";
+                            MCliente01."Codigo Cliente Santillana" := ClientesOfisys."Cod. Cliente";
                             IF ClientesOfisys."Tipo Persona" = 'N' THEN
                                 MCliente01."Persona fisica" := 'X';
                             IF ClientesOfisys."Tipo Persona" = 'N' THEN
@@ -216,7 +216,7 @@ report 70500 "Clientes RH"
         }
         dataitem("Sales Line Discount"; 7004)
         {
-            DataItemTableView = SORTING(Type, Code, "Sales Type", "Sales Code", "Starting Date", "Currency Code", Variant Code, Unit of Measure Code, Minimum Quantity)
+            DataItemTableView = SORTING(Type, Code, "Sales Type", "Sales Code", "Starting Date", "Currency Code", "Variant Code", "Unit of Measure Code", "Minimum Quantity")
                                 ORDER(Ascending)
                                 WHERE("Sales Type" = FILTER(Customer));
 

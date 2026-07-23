@@ -10,7 +10,7 @@ report 67009 "Proceso genera datos APS"
             dataitem("Colegio - Adopciones Detalle"; 67053)
             {
                 DataItemLink = "Cod. Colegio" = FIELD("No.");
-                DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", Cod. Turno, Cod. Promotor, Cod. Producto);
+                DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto");
 
                 trigger OnAfterGetRecord()
                 begin
@@ -66,7 +66,7 @@ report 67009 "Proceso genera datos APS"
                     //TmpReport."Carga horaria"           := Item."Carga horaria";
                     //TmpReport."Tipo Ingles"             := Item."Tipo Ingles";
                     //TmpReport."Nivel Educativo"         := Item."Nivel Educativo";
-                    //TmpReport."Cod. Edición"            := Item."Cod. Edición";
+                    //TmpReport."Cod. Edicion"            := Item."Cod. Edicion";
                     //TmpReport."% Castigo Mantenimiento" := Item."% Castigo Mantenimiento";
                     //TmpReport."% Castigo Conquista"     := Item."% Castigo Conquista";
                     //TmpReport."% Castigo Perdida"       := Item."% Castigo Perdida";

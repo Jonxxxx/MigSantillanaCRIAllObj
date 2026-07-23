@@ -9,7 +9,7 @@ report 56534 "Lista Picking"
         dataitem("Warehouse Activity Header"; 5766)
         {
             DataItemTableView = SORTING(Type, "No.")
-                                WHERE(Type = FILTER(Pick | Invt. Pick));
+                                WHERE(Type = FILTER(Pick | 'Invt. Pick'));
             RequestFilterFields = "No.", "No. Printed";
             column(Comentario; Comentario)
             {
@@ -331,7 +331,7 @@ report 56534 "Lista Picking"
                                        Unit of Measure Code=FIELD("Unit of Measure Code"),
                                        Due Date=FIELD("Due Date");
                         DataItemLinkReference = "Warehouse Activity Line";
-                        DataItemTableView = SORTING("Activity Type","No.","Bin Code",Breakbulk No.,Action Type);
+                        DataItemTableView = SORTING("Activity Type","No.","Bin Code","Breakbulk No.","Action Type");
                         column(LotNo_WhseActLine2;"Lot No.")
                         {
                         }
@@ -378,7 +378,7 @@ report 56534 "Lista Picking"
             }
             dataitem("Sales Comment Line";44)
             {
-                DataItemTableView = SORTING("Document Type","No.","Document Line No.",Line No.)
+                DataItemTableView = SORTING("Document Type","No.","Document Line No.","Line No.")
                                     ORDER(Ascending)
                                     WHERE("Print On Pick Ticket"=FILTER(Yes));
                 column(ComentarioVta;'VTA')

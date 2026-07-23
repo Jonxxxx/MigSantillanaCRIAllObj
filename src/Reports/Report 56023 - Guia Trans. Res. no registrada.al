@@ -4,7 +4,7 @@ report 56023 "Guia Trans. Res. no registrada"
     // ------------------------------------------------------------------------------
     // FES   : Fausto Serrata
     // ------------------------------------------------------------------------------
-    // No.                 Firma         Fecha           Descripción
+    // No.                 Firma         Fecha           Descripcion
     // ------------------------------------------------------------------------------
     // SANTINAV-301        FES           27-08-2019      Adicionar Campo Comentario" de la Tabla "Cab. Hoja de Ruta"
     // 001                 YFC           17/02/2021       SANTINAV-2130 mejoras en desarrollo para E-Commerce
@@ -185,7 +185,7 @@ report 56023 "Guia Trans. Res. no registrada"
     var
         Nhojaderuta: Label 'No.:';
         vHora: Label 'Hora:';
-        CodTransportista: Label 'Cód. Transportista:';
+        CodTransportista: Label 'Cod. Transportista:';
         NomTransportista: Label 'Nombre Transportista:';
         CompanyN: Label 'Santillana Costa Rica';
         Cust: Record 18;
@@ -194,7 +194,7 @@ report 56023 "Guia Trans. Res. no registrada"
         vEstado: Text[30];
         vCiudad: Text[30];
         VMunicipio: Text[30];
-        vCodigoCliente: Label 'Cód. Cliente';
+        vCodigoCliente: Label 'Cod. Cliente';
         vNombreCliente: Label 'Nombre Cliente';
         vEstadoL: Label 'Estado';
         vCiudadL: Label 'Ciudad';
