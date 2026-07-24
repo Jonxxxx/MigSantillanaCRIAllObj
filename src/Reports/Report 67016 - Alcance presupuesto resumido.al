@@ -1,7 +1,7 @@
 report 67016 "Alcance presupuesto resumido"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Alcance presupuesto resumido.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Alcance presupuesto resumido.rdl';
 
     dataset
     {

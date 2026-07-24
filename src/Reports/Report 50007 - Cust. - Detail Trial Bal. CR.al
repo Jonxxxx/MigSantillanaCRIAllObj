@@ -1,7 +1,7 @@
 report 50007 "Cust. - Detail Trial Bal. CR"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Cust. - Detail Trial Bal. CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Cust. - Detail Trial Bal. CR.rdl';
     ApplicationArea = Basic, Suite;
     Caption = 'Customer - Detail Trial Bal. CR';
     UsageCategory = ReportsAndAnalysis;

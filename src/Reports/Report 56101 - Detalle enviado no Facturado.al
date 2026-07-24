@@ -1,7 +1,7 @@
 report 56101 "Detalle enviado no Facturado"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Detalle enviado no Facturado.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Detalle enviado no Facturado.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 56018 "Guia de Transporte"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Guia de Transporte.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Guia de Transporte.rdl';
     Caption = 'Shipping Guide';
 
     dataset

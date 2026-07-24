@@ -1,37 +1,5 @@
 codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 {
-    // $001 24/07/15 JML : Añado dimensiones por defecto POS
-    // #44884  26/02/2016  MOI   En el proceso nocturno, si la factura o las lineas tiene un cupon este se tiene que marcar como pendiente FALSE.
-    //                           En el proceso nocturno, si las lineas de la nota de credito tiene un cupon este se tiene que marcar como pendiente TRUE.
-    // 
-    // #65232  PLB 10/05/2017: Temas Varios DSPOS - Mejoras
-    //            03/07/2017: Si no tiene pagos y el cliente permite venta a crédito, no guardar el error en la tabla
-    // 
-    // #76946  RRT 20.01.2018: Creacion de la funcion localizada FinalProcesoRegistro()
-    // #75918  RRT 15.03.2018: Testear exclusividad "Nº fiscal TPV" en Bolivia. Para que sea generico se establece una funcion en la CU del pais para
-    //            comprobar inconvenientes antes de registrar.
-    // 
-    // #116510 RRT 07.11.2018: Actualizacion de DS-POS en Honduras.
-    //         #57166  28/09/16    JMB   :   Se actualiza los nº de serie al registrar el documento
-    // 
-    // #126073 RRT 22.04.2018: Seguimiento y registro del error que pudiera ocurrir al ejecutar FE() en Guatemala.
-    // #201856 RRT 25.02.2018: Replantear el control cuando no han llegado los pagos.
-    // #232158 RRT 27.06.2019: Adaptacion a FE 2.0
-    // #232158 RRT 18.11.2019: En la empresa <ACTIVA EDUCA> de Guatemala la facturacion electronica debe ser con
-    //             el metodo anterior. Se ha modificado la funcion Registro_Localizado()
-    // 
-    // #246745 RRT 29.07.2019: Que en la funcion TestIntegridad() se devuelva FALSE, si faltan datos de pagos o no se ha completado la transaccion.
-    // #257334 RRT 28.08.2019: Para prevenir errores en la liquidacion de un documento, se comprueba que todos los registros en <Transacciones TPV Caja> correspondan a la misma transaccion.
-    // #273889 RRT 15.10.2019: Se quita el control sobre "Pagos TPV" temporalmente.
-    // #348662 RRT 26.11.2020: Unificacion de DS-POS.
-    // #305288 RRT 10.03.2020: Revisar el test de integridad para Honduras.
-    // #350950 RRT 23.12.2020: Se ha visto que no se estaba especificando el num. documento en el log de derrores.
-    // 
-    // 
-    // DE MOMENTO SOLO SE REGISTRA.
-    // . no hay autoliquidacion. es decir la funcion liquidarpendientes() esta desactivado.
-    // . solo se testean las lineas.   ni pagos ni nada maas. desasteriscar.
-    // . LA FUNCION TIENEPAGO DEVUELVE SIEMPRE TRUE.  BUSCAR RRT Y ELIMINAR LINEAS
 
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,

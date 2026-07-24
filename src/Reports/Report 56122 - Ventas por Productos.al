@@ -1,7 +1,7 @@
 report 56122 "Ventas por Productos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Ventas por Productos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Ventas por Productos.rdl';
 
     dataset
     {

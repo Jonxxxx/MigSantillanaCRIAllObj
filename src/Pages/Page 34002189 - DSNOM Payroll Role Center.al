@@ -43,9 +43,9 @@ page 34002189 "DSNOM Payroll Role Center"
             }
             group(GeneralGroupE)
             {
-                chartpart("DSNOM-1001"; "DSNOM-1001")
-                {
-                }
+                //chartpart("DSNOM1001"; "DSNOM-1001")
+                //{
+                //}
                 systempart(Notes; MyNotes)
                 {
                 }

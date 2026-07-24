@@ -1,7 +1,7 @@
 report 52545 "Nota de Abono"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Nota de Abono.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nota de Abono.rdl';
 
     dataset
     {

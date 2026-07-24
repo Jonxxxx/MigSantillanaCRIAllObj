@@ -1,7 +1,7 @@
 report 56186 "Provision de insolvencias"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Provision de insolvencias.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Provision de insolvencias.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

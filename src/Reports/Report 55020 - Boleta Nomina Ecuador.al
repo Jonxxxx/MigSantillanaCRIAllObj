@@ -1,7 +1,7 @@
 report 55020 "Boleta Nomina Ecuador"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Boleta Nomina Ecuador.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Boleta Nomina Ecuador.rdl';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

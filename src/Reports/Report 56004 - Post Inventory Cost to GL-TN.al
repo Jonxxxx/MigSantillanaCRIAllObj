@@ -1,7 +1,7 @@
 report 56004 "Post Inventory Cost to G/L-TN"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Post Inventory Cost to GL-TN.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Post Inventory Cost to GL-TN.rdl';
     AdditionalSearchTerms = 'reconcile inventory';
     ApplicationArea = Basic, Suite;
     Caption = 'Post Inventory Cost to G/L';

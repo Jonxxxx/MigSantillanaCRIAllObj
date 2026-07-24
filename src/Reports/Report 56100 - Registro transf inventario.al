@@ -1,7 +1,7 @@
 report 56100 "Registro transf inventario"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Registro transf inventario.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Registro transf inventario.rdl';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Item Register';
     UsageCategory = ReportsAndAnalysis;

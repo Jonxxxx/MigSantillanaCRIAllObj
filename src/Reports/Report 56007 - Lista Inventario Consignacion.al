@@ -5,7 +5,7 @@ report 56007 "Lista Inventario Consignacion"
     // ------------------------------------------------------------------------
     // 139         28/11/2013      RRT           Adaptacion informes a RTC. Pasar codigo de OnPreSection() a  OnAfterGetRecord()
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Lista Inventario Consignacion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista Inventario Consignacion.rdl';
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Consignment inventory list';

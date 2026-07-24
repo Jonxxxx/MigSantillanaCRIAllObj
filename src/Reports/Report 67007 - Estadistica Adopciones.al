@@ -1,7 +1,7 @@
 report 67007 "Estadistica Adopciones"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Estadistica Adopciones.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Estadistica Adopciones.rdl';
 
     dataset
     {

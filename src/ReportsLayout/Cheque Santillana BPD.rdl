@@ -1,0 +1,1720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>eb1cd90c-6da4-4a92-ae8e-a44ed1da8b4b</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Textbox Name="EmptyStringCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Cheque_No_Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.08585cm</Top>
+            <Left>14.53356cm</Left>
+            <Height>0.59233cm</Height>
+            <Width>2.89762cm</Width>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="UseCheckNo">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!UseCheckNo.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.08585cm</Top>
+            <Left>17.60756cm</Left>
+            <Height>0.59233cm</Height>
+            <Width>3.63cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ReferenciaCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!ReferenciaCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.85885cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>2.85714cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="FechaCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!FechaCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.85885cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>2.3cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtReferencia_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtReferencia_1_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.68585cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>5.065cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtReferencia_2_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtReferencia_2_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.08585cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>5.065cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtReferencia_3_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtReferencia_3_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.58585cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>5.065cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtReferencia_4_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtReferencia_4_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.08585cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>5.065cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtReferencia_5_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtReferencia_5_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.58585cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>5.065cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Fecha1">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Fecha1.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.58585cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.4cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtFecha_2_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtFecha_2_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.08585cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.4cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtFecha_3_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtFecha_3_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.58585cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.4cm</Width>
+            <ZIndex>11</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtFecha_4_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtFecha_4_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.08585cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.4cm</Width>
+            <ZIndex>12</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtFecha_5_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!txtFecha_5_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>d</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.58585cm</Top>
+            <Left>6.53356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.4cm</Width>
+            <ZIndex>13</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CodCuentaFactura_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CodCuentaFactura_1_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.64299cm</Top>
+            <Left>9.23356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>14</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CodCuentaFactura_2_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CodCuentaFactura_2_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.08585cm</Top>
+            <Left>9.23356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CodCuentaFactura_3_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CodCuentaFactura_3_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.58585cm</Top>
+            <Left>9.23356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CodCuentaFactura_4_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CodCuentaFactura_4_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.08585cm</Top>
+            <Left>9.23356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CodCuentaFactura_5_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CodCuentaFactura_5_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.58585cm</Top>
+            <Left>9.23356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_1__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_1__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_1__Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.64299cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.766cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_2__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_2__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_2__Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.08585cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.766cm</Width>
+            <ZIndex>20</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_3__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_3__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_3__Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.58585cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.766cm</Width>
+            <ZIndex>21</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_4__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_4__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_4__Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.08585cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.766cm</Width>
+            <ZIndex>22</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_5__">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_5__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_5__Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.58585cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.766cm</Width>
+            <ZIndex>23</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_1___Control1000000060">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_1__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_1___Control1000000060Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>2.66945cm</Top>
+            <Left>16.66912cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.69014cm</Width>
+            <ZIndex>24</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_2___Control1000000059">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_2__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_2___Control1000000059Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.11231cm</Top>
+            <Left>16.66912cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.69014cm</Width>
+            <ZIndex>25</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_3___Control1000000058">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_3__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_3___Control1000000058Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>3.61231cm</Top>
+            <Left>16.66912cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.69014cm</Width>
+            <ZIndex>26</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_4___Control1000000057">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_4__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_4___Control1000000057Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.11231cm</Top>
+            <Left>16.66912cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.69014cm</Width>
+            <ZIndex>27</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="ABS_wMonto_5___Control1000000056">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Code.BlankZero(Sum(Fields!ABS_wMonto_5__.Value))</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <Format>=First(Fields!ABS_wMonto_5___Control1000000056Format.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>4.61231cm</Top>
+            <Left>16.66912cm</Left>
+            <Height>0.423cm</Height>
+            <Width>2.69014cm</Width>
+            <ZIndex>28</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="MontoCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!MontoCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.85885cm</Top>
+            <Left>12.33355cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>29</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox103">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CuentaCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.85885cm</Top>
+            <Left>9.13356cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>2.7cm</Width>
+            <ZIndex>30</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Desc_AdjCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Desc_AdjCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.88531cm</Top>
+            <Left>15.21606cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>1.43542cm</Width>
+            <ZIndex>31</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Monto_NetoCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Monto_NetoCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.88531cm</Top>
+            <Left>17.13356cm</Left>
+            <Height>0.59348cm</Height>
+            <Width>2.2257cm</Width>
+            <ZIndex>32</ZIndex>
+            <Style>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextDiaCheque">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Fields!TextDiaCheque.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.22235cm</Top>
+            <Left>1.33355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>0.6cm</Width>
+            <ZIndex>33</ZIndex>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextMesCheque">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Fields!TextMesCheque.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.22235cm</Top>
+            <Left>2.03355cm</Left>
+            <Height>0.423cm</Height>
+            <Width>1.731cm</Width>
+            <ZIndex>34</ZIndex>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="TextAnoCheque">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Fields!TextAnoCheque.Value</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>1.22235cm</Top>
+            <Left>3.83356cm</Left>
+            <Height>0.423cm</Height>
+            <Width>1.605cm</Width>
+            <ZIndex>35</ZIndex>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="Cta__Caption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Cta__Caption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.32235cm</Top>
+            <Left>0.53355cm</Left>
+            <Height>0.70692cm</Height>
+            <Width>0.9cm</Width>
+            <ZIndex>36</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="CtaBanco">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CtaBanco.Value)</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.32235cm</Top>
+            <Left>1.63356cm</Left>
+            <Height>0.65583cm</Height>
+            <Width>3.9cm</Width>
+            <ZIndex>37</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!TotalCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.42235cm</Top>
+            <Left>14.99748cm</Left>
+            <Height>0.677cm</Height>
+            <Width>1.4cm</Width>
+            <ZIndex>38</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="textbox1">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Monto.Value)</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <Format>=First(Fields!MontoFormat.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>5.42235cm</Top>
+            <Left>16.51656cm</Left>
+            <Height>0.677cm</Height>
+            <Width>3.1805cm</Width>
+            <ZIndex>39</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____day_2_____2_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____day_2_____2_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>16.29834cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>40</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____MONTH_2_____2_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____MONTH_2_____2_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>17.16659cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>41</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____1_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____yEAR4_____1_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>17.59834cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>42</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____2_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____yEAR4_____2_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>18.03009cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>43</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____3_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____yEAR4_____3_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>18.43009cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>44</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____day_2_____1_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____day_2_____1_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>15.86897cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>45</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____MONTH_2_____1_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____MONTH_2_____1_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>16.76659cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>46</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="TotalCaption">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!EmptyStringCaption.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>8.58953cm</Top>
+            <Left>16.7288cm</Left>
+            <Height>0.59892cm</Height>
+            <Width>0.70238cm</Width>
+            <ZIndex>47</ZIndex>
+            <Visibility>
+              <Hidden>true</Hidden>
+            </Visibility>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.105cm</PaddingLeft>
+              <PaddingRight>0.105cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Monto">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=Sum(Fields!Monto.Value)</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>11pt</FontSize>
+                      <Format>=First(Fields!MontoFormat.Value)</Format>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>12.7519cm</Top>
+            <Left>15.27134cm</Left>
+            <Height>0.76825cm</Height>
+            <Width>4.15983cm</Width>
+            <ZIndex>48</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>0.105cm</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="CheckToAddr_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!CheckToAddr_1_.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>12.74282cm</Top>
+            <Left>4.22795cm</Left>
+            <Height>0.77733cm</Height>
+            <Width>10.93757cm</Width>
+            <ZIndex>49</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>0.84cm</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="COPYSTR_DescriptionLine_1__5_STRLEN_DescriptionLine_1___">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_DescriptionLine_1__5_STRLEN_DescriptionLine_1___.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>13.34282cm</Top>
+            <Left>2.40256cm</Left>
+            <Height>1.085cm</Height>
+            <Width>16.5cm</Width>
+            <ZIndex>50</ZIndex>
+            <Style>
+              <VerticalAlign>Middle</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____4_1_">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!COPYSTR_FORMAT_Fecha_0____yEAR4_____4_1_.Value)</Value>
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <Top>11.52187cm</Top>
+            <Left>18.83009cm</Left>
+            <Height>0.71933cm</Height>
+            <Width>0.4cm</Width>
+            <ZIndex>51</ZIndex>
+            <Style />
+          </Textbox>
+          <Textbox Name="txtDescripcion">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">=First(Fields!Descripcion.Value)</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.0716cm</Top>
+            <Left>2.66107cm</Left>
+            <Height>1.29612cm</Height>
+            <Width>16.60294cm</Width>
+            <ZIndex>52</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Textbox Name="txtDescripcion2">
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value EvaluationMode="Auto">Descripción:</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <Top>6.0716cm</Top>
+            <Left>0.57333cm</Left>
+            <Height>0.7405cm</Height>
+            <Width>2.05247cm</Width>
+            <ZIndex>53</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <VerticalAlign>Top</VerticalAlign>
+            </Style>
+          </Textbox>
+          <Line Name="line1">
+            <Top>2.5176cm</Top>
+            <Left>0.43356cm</Left>
+            <Height>0cm</Height>
+            <Width>18.946cm</Width>
+            <ZIndex>54</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <Height>5.88024in</Height>
+        <Style />
+      </Body>
+      <Width>8.36125in</Width>
+      <Page>
+        <LeftMargin>0.03937in</LeftMargin>
+        <RightMargin>0.03937in</RightMargin>
+        <TopMargin>0.03937in</TopMargin>
+        <BottomMargin>0.03937in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>5e6f45bf-45e7-450e-aa64-a9eeaddf3021</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="GenJnlLine_Journal_Template_Name">
+          <DataField>GenJnlLine_Journal_Template_Name</DataField>
+        </Field>
+        <Field Name="GenJnlLine_Journal_Batch_Name">
+          <DataField>GenJnlLine_Journal_Batch_Name</DataField>
+        </Field>
+        <Field Name="GenJnlLine_Line_No_">
+          <DataField>GenJnlLine_Line_No_</DataField>
+        </Field>
+        <Field Name="UseCheckNo">
+          <DataField>UseCheckNo</DataField>
+        </Field>
+        <Field Name="CheckToAddr_1_">
+          <DataField>CheckToAddr_1_</DataField>
+        </Field>
+        <Field Name="Monto">
+          <DataField>Monto</DataField>
+        </Field>
+        <Field Name="MontoFormat">
+          <DataField>MontoFormat</DataField>
+        </Field>
+        <Field Name="COPYSTR_DescriptionLine_1__5_STRLEN_DescriptionLine_1___">
+          <DataField>COPYSTR_DescriptionLine_1__5_STRLEN_DescriptionLine_1___</DataField>
+        </Field>
+        <Field Name="Monto_Control1000000033">
+          <DataField>Monto_Control1000000033</DataField>
+        </Field>
+        <Field Name="Monto_Control1000000033Format">
+          <DataField>Monto_Control1000000033Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_1__">
+          <DataField>ABS_wMonto_1__</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_1__Format">
+          <DataField>ABS_wMonto_1__Format</DataField>
+        </Field>
+        <Field Name="txtReferencia_1_">
+          <DataField>txtReferencia_1_</DataField>
+        </Field>
+        <Field Name="txtReferencia_2_">
+          <DataField>txtReferencia_2_</DataField>
+        </Field>
+        <Field Name="txtReferencia_3_">
+          <DataField>txtReferencia_3_</DataField>
+        </Field>
+        <Field Name="txtReferencia_4_">
+          <DataField>txtReferencia_4_</DataField>
+        </Field>
+        <Field Name="txtReferencia_5_">
+          <DataField>txtReferencia_5_</DataField>
+        </Field>
+        <Field Name="Fecha1">
+          <DataField>Fecha1</DataField>
+        </Field>
+        <Field Name="txtFecha_2_">
+          <DataField>txtFecha_2_</DataField>
+        </Field>
+        <Field Name="txtFecha_3_">
+          <DataField>txtFecha_3_</DataField>
+        </Field>
+        <Field Name="txtFecha_4_">
+          <DataField>txtFecha_4_</DataField>
+        </Field>
+        <Field Name="txtFecha_5_">
+          <DataField>txtFecha_5_</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_2__">
+          <DataField>ABS_wMonto_2__</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_2__Format">
+          <DataField>ABS_wMonto_2__Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_3__">
+          <DataField>ABS_wMonto_3__</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_3__Format">
+          <DataField>ABS_wMonto_3__Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_4__">
+          <DataField>ABS_wMonto_4__</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_4__Format">
+          <DataField>ABS_wMonto_4__Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_5__">
+          <DataField>ABS_wMonto_5__</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_5__Format">
+          <DataField>ABS_wMonto_5__Format</DataField>
+        </Field>
+        <Field Name="CtaBanco">
+          <DataField>CtaBanco</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_5___Control1000000056">
+          <DataField>ABS_wMonto_5___Control1000000056</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_5___Control1000000056Format">
+          <DataField>ABS_wMonto_5___Control1000000056Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_4___Control1000000057">
+          <DataField>ABS_wMonto_4___Control1000000057</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_4___Control1000000057Format">
+          <DataField>ABS_wMonto_4___Control1000000057Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_3___Control1000000058">
+          <DataField>ABS_wMonto_3___Control1000000058</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_3___Control1000000058Format">
+          <DataField>ABS_wMonto_3___Control1000000058Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_2___Control1000000059">
+          <DataField>ABS_wMonto_2___Control1000000059</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_2___Control1000000059Format">
+          <DataField>ABS_wMonto_2___Control1000000059Format</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_1___Control1000000060">
+          <DataField>ABS_wMonto_1___Control1000000060</DataField>
+        </Field>
+        <Field Name="ABS_wMonto_1___Control1000000060Format">
+          <DataField>ABS_wMonto_1___Control1000000060Format</DataField>
+        </Field>
+        <Field Name="CodCuentaFactura_1_">
+          <DataField>CodCuentaFactura_1_</DataField>
+        </Field>
+        <Field Name="CodCuentaFactura_2_">
+          <DataField>CodCuentaFactura_2_</DataField>
+        </Field>
+        <Field Name="CodCuentaFactura_3_">
+          <DataField>CodCuentaFactura_3_</DataField>
+        </Field>
+        <Field Name="CodCuentaFactura_4_">
+          <DataField>CodCuentaFactura_4_</DataField>
+        </Field>
+        <Field Name="CodCuentaFactura_5_">
+          <DataField>CodCuentaFactura_5_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____day_2_____1_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____day_2_____1_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____day_2_____2_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____day_2_____2_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____MONTH_2_____1_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____MONTH_2_____1_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____MONTH_2_____2_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____MONTH_2_____2_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____1_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____yEAR4_____1_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____2_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____yEAR4_____2_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____3_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____yEAR4_____3_1_</DataField>
+        </Field>
+        <Field Name="COPYSTR_FORMAT_Fecha_0____yEAR4_____4_1_">
+          <DataField>COPYSTR_FORMAT_Fecha_0____yEAR4_____4_1_</DataField>
+        </Field>
+        <Field Name="TextAnoCheque">
+          <DataField>TextAnoCheque</DataField>
+        </Field>
+        <Field Name="TextMesCheque">
+          <DataField>TextMesCheque</DataField>
+        </Field>
+        <Field Name="TextDiaCheque">
+          <DataField>TextDiaCheque</DataField>
+        </Field>
+        <Field Name="Cheque_No_Caption">
+          <DataField>Cheque_No_Caption</DataField>
+        </Field>
+        <Field Name="ReferenciaCaption">
+          <DataField>ReferenciaCaption</DataField>
+        </Field>
+        <Field Name="FechaCaption">
+          <DataField>FechaCaption</DataField>
+        </Field>
+        <Field Name="CuentaCaption">
+          <DataField>CuentaCaption</DataField>
+        </Field>
+        <Field Name="MontoCaption">
+          <DataField>MontoCaption</DataField>
+        </Field>
+        <Field Name="Desc_AdjCaption">
+          <DataField>Desc_AdjCaption</DataField>
+        </Field>
+        <Field Name="Monto_NetoCaption">
+          <DataField>Monto_NetoCaption</DataField>
+        </Field>
+        <Field Name="Cta__Caption">
+          <DataField>Cta__Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="EmptyStringCaption">
+          <DataField>EmptyStringCaption</DataField>
+        </Field>
+        <Field Name="PrintCheck_Number">
+          <DataField>PrintCheck_Number</DataField>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

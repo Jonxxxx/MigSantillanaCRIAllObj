@@ -6,7 +6,7 @@ report 52505 "Customer - Detail Trial Bal CR"
     //                         - Vendedor
     //                         - Contacto
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Customer - Detail Trial Bal CR.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Customer - Detail Trial Bal CR.rdl';
 
     Caption = 'Customer - Detail Trial Bal.';
 

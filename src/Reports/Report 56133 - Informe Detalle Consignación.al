@@ -1,7 +1,7 @@
 report 56133 "Informe Detalle Consignacion"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Informe Detalle Consignacion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Informe Detalle Consignacion.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

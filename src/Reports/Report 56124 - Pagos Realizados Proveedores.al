@@ -1,7 +1,7 @@
 report 56124 "Pagos Realizados Proveedores"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Pagos Realizados Proveedores.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Pagos Realizados Proveedores.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

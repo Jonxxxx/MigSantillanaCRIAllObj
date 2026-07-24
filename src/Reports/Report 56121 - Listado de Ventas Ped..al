@@ -1,7 +1,7 @@
 report 56121 "Listado de Ventas Ped."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Listado de Ventas Ped..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de Ventas Ped..rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

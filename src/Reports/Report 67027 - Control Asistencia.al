@@ -1,7 +1,7 @@
 report 67027 "Control Asistencia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Control Asistencia.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Control Asistencia.rdl';
 
     dataset
     {

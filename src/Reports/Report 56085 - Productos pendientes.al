@@ -1,7 +1,7 @@
 report 56085 "Productos pendientes"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Productos pendientes.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Productos pendientes.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

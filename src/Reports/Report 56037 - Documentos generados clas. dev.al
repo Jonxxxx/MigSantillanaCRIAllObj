@@ -1,7 +1,7 @@
 report 56037 "Documentos generados clas. dev"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Documentos generados clas. dev.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Documentos generados clas. dev.rdl';
     Caption = 'Documentos generados clasificacion devoluciones';
 
     dataset

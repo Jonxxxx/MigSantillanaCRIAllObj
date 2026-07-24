@@ -5,7 +5,7 @@ report 52500 "Cheque Generico Costa Rica"
     //                       - Error en la impresion de fecha
     //                       - Escribir "setiembre" en lugar de "septiembre"
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Cheque Generico Costa Rica.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Cheque Generico Costa Rica.rdl';
 
     Caption = 'Check';
     Permissions = TableData 270 = m;

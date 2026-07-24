@@ -1,7 +1,7 @@
 report 56019 "Bultos Packing"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Bultos Packing.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Bultos Packing.rdl';
 
     dataset
     {

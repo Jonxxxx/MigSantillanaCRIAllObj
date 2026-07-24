@@ -1,7 +1,7 @@
 report 56527 "Ctas. por cobrar x dias vdos."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Ctas. por cobrar x dias vdos..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Ctas. por cobrar x dias vdos..rdl';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Ctas. por cobrar x dias vdos.';
     UsageCategory = ReportsAndAnalysis;

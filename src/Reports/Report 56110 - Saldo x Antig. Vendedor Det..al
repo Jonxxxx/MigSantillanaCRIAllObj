@@ -1,7 +1,7 @@
 report 56110 "Saldo x Antig. Vendedor Det."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Saldo x Antig. Vendedor Det..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Saldo x Antig. Vendedor Det..rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

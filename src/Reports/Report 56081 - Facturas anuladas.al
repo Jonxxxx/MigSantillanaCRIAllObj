@@ -5,7 +5,7 @@ report 56081 "Facturas anuladas"
     // ------------------------------------------------------------------------
     // 139         20/11/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Facturas anuladas.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Facturas anuladas.rdl';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

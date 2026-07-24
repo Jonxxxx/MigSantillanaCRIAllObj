@@ -5,7 +5,7 @@ report 56083 "Hoja Devolucion"
     // ------------------------------------------------------------------------
     // 139         03/12/2013      RRT           Adaptacion informes a RTC.
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Hoja Devolucion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Hoja Devolucion.rdl';
 
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;

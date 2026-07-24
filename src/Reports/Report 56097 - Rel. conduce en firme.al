@@ -1,7 +1,7 @@
 report 56097 "Rel. conduce en firme"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Rel. conduce en firme.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Rel. conduce en firme.rdl';
 
     dataset
     {

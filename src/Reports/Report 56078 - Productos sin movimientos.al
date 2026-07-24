@@ -1,7 +1,7 @@
 report 56078 "Productos sin movimientos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Productos sin movimientos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Productos sin movimientos.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 56134 "Reporte Consignacion x cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Reporte Consignacion x cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte Consignacion x cliente.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 56092 "Antiguedad Saldo Cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Antiguedad Saldo Cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Antiguedad Saldo Cliente.rdl';
     Caption = 'Customer - Summary Aging Simp.';
 
     dataset

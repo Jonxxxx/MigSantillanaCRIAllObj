@@ -1,7 +1,7 @@
 report 56525 "Kardex por cliente"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Kardex por cliente.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Kardex por cliente.rdl';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Customer - Detail Trial Bal.';
     UsageCategory = ReportsAndAnalysis;

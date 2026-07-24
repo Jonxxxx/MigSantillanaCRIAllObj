@@ -1,7 +1,7 @@
 report 56528 "Pendiente cobro x campaña"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Pendiente cobro x campaña.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Pendiente cobro x campaña.rdl';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Pendiente cobro x campaña';
     UsageCategory = ReportsAndAnalysis;

@@ -1,7 +1,7 @@
 report 56129 "Seguimiento pedido en firme"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Seguimiento pedido en firme.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Seguimiento pedido en firme.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

@@ -1,7 +1,7 @@
 report 50004 "Productos por almacen"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Productos por almacen.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Productos por almacen.rdl';
     Caption = 'Item for location';
 
     dataset

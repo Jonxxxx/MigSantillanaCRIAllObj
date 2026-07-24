@@ -1,7 +1,7 @@
 report 51009 Cupon
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Cupon.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Cupon.rdl';
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Cupon';
     UsageCategory = ReportsAndAnalysis;

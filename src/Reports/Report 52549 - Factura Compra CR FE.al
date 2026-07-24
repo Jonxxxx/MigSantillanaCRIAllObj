@@ -1,7 +1,7 @@
 report 52549 "Factura Compra CR FE"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Factura Compra CR FE.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Factura Compra CR FE.rdl';
     Caption = 'Purchase Invoice';
 
     dataset

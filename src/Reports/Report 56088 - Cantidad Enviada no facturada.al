@@ -1,7 +1,7 @@
 report 56088 "Cantidad Enviada no facturada"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Cantidad Enviada no facturada.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Cantidad Enviada no facturada.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 

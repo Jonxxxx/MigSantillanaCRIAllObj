@@ -5,8 +5,7 @@ using System.Reflection;
 codeunit 61013 EXCCRIDimensionMgtSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::DimensionManagement, 'OnAfterSetupObjectNoList', '', false, false)]
-    local procedure OnAfterSetupObjectNoList(
-        var TempAllObjWithCaption: Record AllObjWithCaption temporary)
+    local procedure OnAfterSetupObjectNoList(var TempAllObjWithCaption: Record AllObjWithCaption temporary)
     begin
         EXCCRIInsertTable(
             TempAllObjWithCaption,

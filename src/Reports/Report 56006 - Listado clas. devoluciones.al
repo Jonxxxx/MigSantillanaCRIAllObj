@@ -1,7 +1,7 @@
 report 56006 "Listado clas. devoluciones"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Listado clas. devoluciones.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado clas. devoluciones.rdl';
     Caption = 'Returns classification report';
 
     dataset

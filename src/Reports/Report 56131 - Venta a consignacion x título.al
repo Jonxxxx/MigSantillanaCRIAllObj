@@ -1,7 +1,7 @@
 report 56131 "Venta a consignacion x titulo"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Venta a consignacion x titulo.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Venta a consignacion x titulo.rdl';
     ApplicationArea = Basic, Suite, Service;
     UsageCategory = ReportsAndAnalysis;
 
