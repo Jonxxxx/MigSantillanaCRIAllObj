@@ -44,12 +44,7 @@ page 34002216 "Lista Miembros Cooperativa"
                 }
             }
         }
-        area(factboxes)
-        {
-            chartpart("Q9150-01"; "Q9150-01")
-            {
-            }
-        }
+
     }
 
     actions

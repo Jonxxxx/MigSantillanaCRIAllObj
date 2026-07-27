@@ -52753,6 +52753,46 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Clasificacion devoluciones - NamedType Text011</note>
         </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 1383680323" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Downloading and extracting the DGII RNC file. @1@@@@@@@@@@</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType DownloadingRncLbl</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se debe especificar un número de NCF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType Err001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 481797073" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fiscal Document No. invalid or not authorized for this vendor</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType Err002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 2308197844" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The DGII form could not be initialized because the required security tokens were not found.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType FormTokenErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 1695660489" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The request to DGII could not be completed.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType HttpRequestFailedErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 2197075555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DGII returned HTTP status %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType HttpStatusErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 2720335481" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The DGII ZIP file does not contain DGII_RNC.TXT.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType RncFileNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 4053812239 - NamedType 3757533207" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha encontrado el RNC %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType RncNotFoundMsg</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3014133471 - Method 646520962 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
           <source>El dia ya está abierto.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -52937,6 +52977,201 @@
           <source>y</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Email packing - Method generaBody - NamedType conj</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - NamedType 2446012031" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The email could not be sent. Verify the email account configuration in Business Central.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - NamedType EmailSendErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - NamedType 924275788" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se han enviado los correos de forma satisfactoria</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - NamedType Msg001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 - Statement of Balance Balance with %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mr.: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attached the Aging Balance status with %1, with the following summary:</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please proceed with the payment of to due balance update your account.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 3921243024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Last payment date: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 3609384839 - NamedType 1664139952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sending  @1@@@@@@@@@@@@@ \Customer  #2##############################</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailEstCta - NamedType Text010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mr.: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Attached is our Invoice No. %1, dated %2, NCF %3, corresponding to your Purchase Order %4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 2008153173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payment terms %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 2645849790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Due date: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If you have any questions or disagreements regarding our bill, we request that you immediately respond to this email with your concern.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 3921243024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please confirm receipt of this email.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 1664139952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sending E-mail\Customer  #2##############################</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 430164265 - NamedType 1026443335" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The client %1 does not have email configured in the field %2, if you want to send the electronic documents, you must add an e-mail in the field</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailFactura - NamedType Text011</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 | Payment notification from %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Mr.: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cortésmente les informamos que emitiremos próximamente a su favor un(a) %1, por la suma de %2 %3 correspondiente al pago de la(s) siguiente(s) factura(s) y/o documento(s):</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3957205749" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cortésmente les informamos que emitiremos próximamente a su favor un(a) %1, por la suma de %2 %3 correspondiente a pago adelantado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text003_b</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Issue date</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No. NCF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 2008153173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 2645849790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount of retention</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Net amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3921243024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If you have any observations, please reply to this email,</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 1664139952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sending  @1@@@@@@@@@@@@@ \Customer  #2##############################</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 1026443335" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Invoice No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text011</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 2939533186" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Grand total</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text012</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 2301836569" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Kind regards,</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text013</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 4214926420" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dear Sir/Madam, we kindly inform you that we will issue a %1 in your favor in the amount of %2 %3 corresponding to the payment of the following invoice (s) and / or document (s):</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text014</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3319584055" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dear Sir/Madam, we kindly inform you that we will issue a %1 in your favor in the amount of %2 %3 corresponding to the payment in advance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text014_b</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 3577229803" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Notification sent</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text015</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 1195352358" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount applied</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text016</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 557655741" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Remaining amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Text017</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There's not %1 as beneficiary in the %2 %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Err001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2261789647 - Method 850180504 - NamedType 481797073" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sólo se pueden notificar %1 pago</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Envios de notificaciones - Method EnviaEmailPagosMovProv - NamedType Err002</note>
         </trans-unit>
         <trans-unit id="Codeunit 4201708004 - NamedType 1120035877" size-unit="char" translate="yes" xml:space="preserve">
           <source>The amount of line %1 in sales document %2 cannot be zero.</source>
@@ -55507,6 +55742,286 @@
           <source>Credit Memo</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Validaciones Localizacion - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>There is nothing to post.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting lines              #2######\</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting sales and tax      #3######\</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting to customers       #4######\</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting to bal. account    #5######</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2008153173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting lines              #2######</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2645849790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 -&gt; Invoice %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 -&gt; Credit Memo %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3921243024" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot ship sales order line %1. </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1664139952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The line is marked as a drop shipment and is not yet associated with a purchase order.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1026443335" size-unit="char" translate="yes" xml:space="preserve">
+          <source>must have the same sign as the shipment</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text011</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2301836569" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The shipment lines have been deleted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text013</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 4214926420" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot invoice more than you have shipped for order %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text014</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1195352358" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax Amount</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text016</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 557655741" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1% Tax</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text017</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 857534312" size-unit="char" translate="yes" xml:space="preserve">
+          <source>in the associated blanket order must not be greater than %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text018</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 219837695" size-unit="char" translate="yes" xml:space="preserve">
+          <source>in the associated blanket order must not be reduced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text019</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1940672225" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Please enter "Yes" in %1 and/or %2 and/or %3.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text020</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2578368842" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Warehouse handling is required for %1 = %2, %3 = %4, %5 = %6.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text021</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1302975608" size-unit="char" translate="yes" xml:space="preserve">
+          <source>This order must be a complete Shipment.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text023</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 196491397" size-unit="char" translate="yes" xml:space="preserve">
+          <source>must have the same sign as the return receipt</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text024</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 834188014" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line %1 of the return receipt %2, which you are attempting to invoice, has already been invoiced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text025</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3216065459" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line %1 of the shipment %2, which you are attempting to invoice, has already been invoiced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text026</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3853762076" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The quantity you are attempting to invoice is greater than the quantity in shipment %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text027</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2747277865" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The combination of dimensions used in %1 %2 is blocked. %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text028</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3384974482" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The combination of dimensions used in %1 %2, line no. %3 is blocked. %4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text029</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1148659762" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The dimensions used in %1 %2 are invalid. %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text030</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 510963145" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The dimensions used in %1 %2, line no. %3 are invalid. %4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text031</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 4168233824" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot assign more than %1 units in %2 = %3, %4 = %5,%6 = %7.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text032</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3530537207" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must assign all item charges, if you invoice everything.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text033</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3699446230" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot assign item charges to the %1 %2 = %3,%4 = %5, %6 = %7, because it has been invoiced.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text034</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2424052996" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You cannot invoice more than you have received for return order %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text036</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1786356379" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The return receipt lines have been deleted.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text037</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 342054122" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The quantity you are attempting to invoice is greater than the quantity in return receipt %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text038</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1404403683" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Related item ledger entries cannot be found.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text040</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3317493534" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Tracking is signed wrongly.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text043</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3148584511" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Item Tracking does not match.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text044</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3786281128" size-unit="char" translate="yes" xml:space="preserve">
+          <source>is not within your range of allowed posting dates.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text045</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 129010449" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The %1 does not match the quantity defined in item tracking.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text046</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 766707066" size-unit="char" translate="yes" xml:space="preserve">
+          <source>cannot be more than %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text047</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2211009323" size-unit="char" translate="yes" xml:space="preserve">
+          <source>must be at least %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text048</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 612391220" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The total %1 cannot be more than %2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text050</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 4269661899" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The total %1 must be at least %2.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text051</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1887784454" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You must assign item charge %1 if you want to invoice it.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text052</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1250087837" size-unit="char" translate="yes" xml:space="preserve">
+          <source>You can not invoice item charge %1 because there is no item ledger entry to assign it to.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text053</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1718875431" size-unit="char" translate="yes" xml:space="preserve">
+          <source>#1#################################\\Checking Assembly #2###########</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text055</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3631965282" size-unit="char" translate="yes" xml:space="preserve">
+          <source>#1#################################\\Posting Assembly #2###########</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text056</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2994268665" size-unit="char" translate="yes" xml:space="preserve">
+          <source>#1#################################\\Finalizing Assembly #2###########</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text057</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3463056259" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2 %3 %4</source>
+          <note from="Developer" annotates="general" priority="2">%1 = SalesLine."Document Type". %2 = SalesLine."Document No.". %3 = SalesLine.FIELDCAPTION("Line No."). %4 = SalesLine."Line No.". This is used in a progress window.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text059</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 888923493" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 %2</source>
+          <note from="Developer" annotates="general" priority="2">%1 = "Document Type". %2 = AsmHeader."No.". Used in a progress window.</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text060</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 1516385001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The order line that the item charge was originally assigned to has been fully posted. You must reassign the item charge to the posted receipt or shipment.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text061Err</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2357159465" size-unit="char" translate="yes" xml:space="preserve">
+          <source>One or more reservation entries exist for the item with %1 = %2, %3 = %4, %5 = %6 which may be disrupted if you post this negative adjustment. Do you want to continue?</source>
+          <note from="Developer" annotates="general" priority="2">One or more reservation entries exist for the item with No. = 1000, Location Code = SILVER, Variant Code = NEW which may be disrupted if you post this negative adjustment. Do you want to continue?</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text062Qst</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2756358356" size-unit="char" translate="yes" xml:space="preserve">
+          <source>must be more completely preinvoiced before you can invoice</source>
+          <note from="Developer" annotates="general" priority="2">starts with "Prepmt. Line Amount"; ends with "Sales Line"</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text27000</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 2118661739" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Every %1 must have %2 = %3 if any %1 has %2 = %3.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text27001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 4031751590" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If the %1 has a blank %2, then every %3 must also have blank %4.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text27002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1454074558 - NamedType 3394054973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>If the %1 has a %2 whose %3 is %4, then any %5 with a %6 must have one whose %3 is %4. </source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Ventas-Registrar DsPOS - NamedType Text27003</note>
         </trans-unit>
         <trans-unit id="Page 432368060 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
           <source>Reading  #1########## @2@@@@@@@@@@@@@</source>
