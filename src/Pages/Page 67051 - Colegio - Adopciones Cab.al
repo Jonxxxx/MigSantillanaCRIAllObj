@@ -305,7 +305,7 @@ page 67051 "Colegio - Adopciones Cab"
                     var
                         FiltroNivel: Text[100];
                     begin
-                        //TODO: Ver FuncAPS.InsertaAdopciones("Cod. Colegio",Filtro,"Cod. Promotor",Turno);
+                        FuncAPS.InsertaAdopciones(Rec."Cod. Colegio", Filtro, Rec."Cod. Promotor", Rec.Turno);
                     end;
                 }
             }
@@ -350,7 +350,7 @@ page 67051 "Colegio - Adopciones Cab"
         Nivel: Record 67022;
         DefDim: Record 352;
         DimVal: Record 349;
-        //TODO: Ver FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 67000;
         Table_ID: Integer;
         MigratedTables: Integer;
         TotalNoOfTables: Integer;

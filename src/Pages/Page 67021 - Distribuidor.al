@@ -90,7 +90,7 @@ page 67021 Distribuidor
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67100;
-                    //TODO: Ver RunPageLink = "Cod. Expositor" = FIELD("No.");
+                    RunPageLink = "Cod. Expositor" = FIELD("No.");
                 }
             }
         }

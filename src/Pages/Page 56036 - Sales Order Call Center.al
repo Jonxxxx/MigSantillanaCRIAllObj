@@ -29,7 +29,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver SelltoCustomerNoOnAfterValidat;
+                        SelltoCustomerNoOnAfterValidat;
                     end;
                 }
                 field("Sell-to Contact No."; "Sell-to Contact No.")
@@ -99,7 +99,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver SalespersonCodeOnAfterValidate;
+                        SalespersonCodeOnAfterValidate;
                     end;
                 }
                 field("Campaign No."; "Campaign No.")
@@ -150,7 +150,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver BilltoCustomerNoOnAfterValidat;
+                        BilltoCustomerNoOnAfterValidat;
                     end;
                 }
                 field("Location Code"; "Location Code")
@@ -191,7 +191,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver ShortcutDimension1CodeOnAfterV;
+                        ShortcutDimension1CodeOnAfterV;
                     end;
                 }
                 field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
@@ -199,7 +199,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver ShortcutDimension2CodeOnAfterV;
+                        ShortcutDimension2CodeOnAfterV;
                     end;
                 }
                 field("Payment Terms Code"; "Payment Terms Code")
@@ -270,9 +270,9 @@ page 56036 "Sales Order Call Center"
                 {
                     Importance = Additional;
                 }
-                //TODO: Ver field("Ship-to UPS Zone"; "Ship-to UPS Zone")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Ship-to UPS Zone"; Rec."Ship-to UPS Zone")
+                {
+                }
                 field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
                 {
                     Importance = Additional;
@@ -359,7 +359,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver Prepayment37OnAfterValidate;
+                        Prepayment37OnAfterValidate;
                     end;
                 }
                 field("Compress Prepayment"; "Compress Prepayment")
@@ -378,9 +378,9 @@ page 56036 "Sales Order Call Center"
                 field("Prepmt. Pmt. Discount Date"; "Prepmt. Pmt. Discount Date")
                 {
                 }
-                //TODO: Ver field("Prepmt. Include Tax"; "Prepmt. Include Tax")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Prepmt. Include Tax"; Rec."Prepmt. Include Tax")
+                {
+                }
             }
         }
         area(factboxes)
@@ -467,7 +467,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CapturarProductos;
+                        CapturarProductos;
                     end;
                 }
                 action(Statistics)
@@ -531,7 +531,7 @@ page 56036 "Sales Order Call Center"
                 {
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos";
-                    //TODO: Ver RunPageLink = "Order No."=FIELD("No.");
+                    RunPageLink = "Prepayment Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action(Dimensions)
@@ -683,9 +683,9 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver GetSourceDocOutbound: Codeunit 5752;
+                        GetSourceDocOutbound: Codeunit 5752;
                     begin
-                        //TODO: Ver GetSourceDocOutbound.CreateFromSalesOrder(Rec);
+                        GetSourceDocOutbound.CreateFromSalesOrder(Rec);
 
                         IF NOT FIND('=><') THEN
                             INIT;
@@ -986,7 +986,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
                     end;
                 }
                 action("Work Order")
@@ -997,7 +997,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
                     end;
                 }
                 action("Pick Ticket")
@@ -1006,7 +1006,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver  DocPrint.PrintSalesOrder(Rec, Usage::"Pick Ticket");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Pick Ticket");
                     end;
                 }
             }
@@ -1094,7 +1094,7 @@ page 56036 "Sales Order Call Center"
         MoveNegSalesLines: Report 6699;
         ApprovalMgt: Codeunit "Approvals Mgmt.";
         ReportPrint: Codeunit 228;
-        //TODO: Ver DocPrint: Codeunit 229;
+        DocPrint: Codeunit 229;
         ArchiveManagement: Codeunit 5063;
         SalesInfoPaneMgt: Codeunit 7171;
         SalesSetup: Record 311;

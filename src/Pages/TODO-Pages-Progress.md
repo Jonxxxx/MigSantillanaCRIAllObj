@@ -3,20 +3,20 @@
 ## Current status
 
 - Date: 2026-07-27
-- Stop condition: Compilation is blocked by concurrent out-of-scope changes in
-  `src/Codeunits/Codeunit 56000 - Funciones Santillana.al`.
-- Current `//TODO: Ver` occurrences in AL files: 537
-- AL objects modified in the current task: 37
-- TODO markers inspected in the current task: 491
-- TODOs resolved in the current task: 236
-- TODOs skipped after inspection: 255
+- Stop condition: No verifiable High-confidence candidate remains after the
+  sequential file-ordered re-evaluation.
+- Current `//TODO: Ver` occurrences in AL files: 344
+- AL objects modified in the current continuation task: 42
+- TODO markers inspected in the current continuation task: 280
+- TODOs resolved in the current continuation task: 183
+- TODOs skipped after inspection in the current continuation task: 97
 - New compilation errors introduced: 0
-- Warnings introduced by the current changes: 22
-- Warnings removed by the current changes: 2
-- Net warning delta at the last successful compilation: +20
-- Current compilation errors: 10
+- Warnings introduced by the current continuation changes: 1
+- Warnings removed by the current continuation changes: 0
+- Net warning delta at the last successful compilation: +1
+- Current compilation errors: 0
 - Last successfully processed file:
-  `src/Pages/Page 34003028 - Listado RNC DGII.al`
+  `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
 
 ## Initial audit note
 
@@ -29,7 +29,7 @@ in this task.
 
 ## TODOs pending manual review
 
-Total current occurrences pending re-evaluation or manual review: **537**
+Total current occurrences pending re-evaluation or manual review: **344**
 
 ## Files modified
 
@@ -804,3 +804,533 @@ authorized `src/Pages` scope. The current errors are:
   `Config. Usuarios Empresa`.
 - AL0118 at lines 588, 592, and 814: identifiers are missing.
 - AL0296 at line 1406: `BLOBImportFromServerFile` is OnPrem-only.
+
+## Batch 13
+
+### Files inspected
+
+- `src/Pages/Page 56001 - Lin. Packing.al`
+- `src/Pages/Page 56003 - Cajas Packing.al`
+- `src/Pages/Page 56004 - Cab. Packing Registrado.al`
+- `src/Pages/Page 56009 - Cab. Hoja de Ruta.al`
+- `src/Pages/Page 56013 - Cab. Packing List.al`
+- `src/Pages/Page 56014 - Cab. Packing Reg. List.al`
+- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+
+### Files modified
+
+- `src/Pages/Page 56001 - Lin. Packing.al`
+- `src/Pages/Page 56003 - Cajas Packing.al`
+- `src/Pages/Page 56004 - Cab. Packing Registrado.al`
+- `src/Pages/Page 56009 - Cab. Hoja de Ruta.al`
+- `src/Pages/Page 56013 - Cab. Packing List.al`
+- `src/Pages/Page 56014 - Cab. Packing Reg. List.al`
+- `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+
+### TODOs resolved
+
+- Pages 56001, 56003, 56004, 56009, 56013, and 56014: restored the
+  original calls and declarations for custom codeunit 56000. Repository
+  verification confirmed public procedures `ReabrirCajaPacking`,
+  `RegHojaEnv`, and `TieneGestionAlmacen` with compatible parameter and return
+  types.
+- Page 56026: migrated the obsolete table 5717 / `Item Cross Reference`
+  references to the dependency table `Item Reference` and its verified
+  `Reference No.` and `Item No.` fields. `al_symbolsearch` also confirmed a
+  key beginning with `Reference No.`.
+- Page 56026: restored the existing custom return-line numbering block using
+  the already-declared `CD2Record`; table 56026 and its composite key
+  `"No. Documento", "Line No."` were verified in the repository.
+
+Original classifications: Custom dependency, Functional ambiguity, Missing
+page property, and Renamed standard object/field.
+
+Final classifications: Verified custom dependency, Renamed standard table and
+fields, and Deterministic custom line-number logic.
+
+Resolved TODO markers: **24**
+
+### TODOs skipped
+
+- Page 56004: the disabled action invokes DotNet processes, a Windows batch
+  file, and a server file path; it is not SaaS-compatible.
+- Page 56024: the disabled availability field and population block depend on
+  an obsolete custom availability method and require functional redesign.
+- Page 56024: the commented `Approval Entry` and `Approvals Mgmt.` variables
+  are unused while the associated logic is absent, so restoring declarations
+  alone would not resolve a functional issue.
+
+Skipped TODO markers: **5**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,045
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+
+## Batch 14
+
+### Files inspected
+
+- `src/Pages/Page 56028 - Lista clas. devoluciones cer..al`
+- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+- `src/Pages/Page 56036 - Sales Order Call Center.al`
+- `src/Pages/Page 56037 - Captura Productos.al`
+- `src/Pages/Page 56039 - Matriz Prod x Almacen (Grupos).al`
+- `src/Pages/Page 56043 - Estadisticas de Vtas. (EXCEL).al`
+- `src/Pages/Page 56052 - Lin. Consignacion a Facturar.al`
+- `src/Pages/Page 56059 - BackOrders Sin Disp. Transfer..al`
+
+### Files modified
+
+- `src/Pages/Page 56028 - Lista clas. devoluciones cer..al`
+- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+- `src/Pages/Page 56036 - Sales Order Call Center.al`
+- `src/Pages/Page 56052 - Lin. Consignacion a Facturar.al`
+
+### TODOs resolved
+
+- Page 56028: restored three report calls after confirming custom reports
+  `Clasifica devoluciones`, `Listado clas. devoluciones`, and
+  `Documentos generados clas. dev` in the repository.
+- Page 56035: restored verified posted-invoice and prepayment navigation,
+  warehouse-shipment creation through codeunit 5752, `Document-Print`
+  calls, and report `Sales Reservation Avail.`.
+- Page 56036: restored existing local page procedure calls, the verified
+  `Ship-to UPS Zone` and `Prepmt. Include Tax` fields, the prepayment credit
+  memo link, warehouse-shipment creation, and `Document-Print` calls.
+- Page 56052: restored custom codeunit 56000 and public procedure
+  `RecibeNoDoc(Code[20])`.
+
+Original classifications: Functional ambiguity, Missing page property,
+Renamed standard object/field/method, and Custom dependency.
+
+Final classifications: Verified custom report/procedure, Verified current
+standard symbol, and Deterministic local procedure call.
+
+Verification performed: repository object/procedure searches plus
+`al_symbolsearch` for posted sales pages, destination fields, report
+`Sales Reservation Avail.`, `Document-Print.PrintSalesOrder`,
+`Get Source Doc. Outbound.CreateFromSalesOrder`, `Ship-to UPS Zone`, and
+`Prepmt. Include Tax`.
+
+Resolved TODO markers: **33**
+
+### TODOs skipped
+
+- Page 56028: the unused report variable alone has no functional effect.
+- Pages 56035 and 56036: obsolete approval calls, absent page/report IDs,
+  disabled posting redesign, and the incomplete `AppTemp` close-page branch
+  remain unsuitable for isolated restoration.
+- Pages 56037 and 56059: the custom availability methods are unavailable in
+  the current codeunit 7171 dependency.
+- Page 56039: the whole matrix layout/action/trigger implementation is
+  structurally commented and includes incompatible array record types.
+- Page 56043: the workflow depends on Automation, server paths, direct file
+  access, and server-side download/erase behavior and is not SaaS-compatible.
+
+Skipped TODO markers: **36**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 1
+- Introduced warning: AL0432 on report `Sales Reservation Avail.`, which is
+  valid in the current v27 dependency but marked for removal in v28.
+- Last successfully processed file:
+  `src/Pages/Page 56059 - BackOrders Sin Disp. Transfer..al`
+
+## Batch 15
+
+### Files inspected
+
+- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 56065 - Gestion BackOrder - TL.al`
+- `src/Pages/Page 56069 - Crea Cupones en Lote.al`
+- `src/Pages/Page 56090 - Lista Pedidos Ecommerce.al`
+- `src/Pages/Page 56200 - Equiv. conceptos NAV-MdE.al`
+- `src/Pages/Page 67001 - Docentes.al`
+- `src/Pages/Page 67005 - Productos equivalentes.al`
+- `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+
+### Files modified
+
+- `src/Pages/Page 56069 - Crea Cupones en Lote.al`
+- `src/Pages/Page 67001 - Docentes.al`
+- `src/Pages/Page 67005 - Productos equivalentes.al`
+- `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+
+### TODOs resolved
+
+- Page 56069: restored the custom coupon generator after verifying public
+  procedure `cuCreaCupones` and its full signature in codeunit 56000. The
+  business-group navigation was corrected to verified custom fields
+  `No. Lote cupon` and `Grupo Negocio`.
+- Page 67001: restored custom fields `Usuario creacion` and `E-Mail 2`, plus
+  eight verified custom page links for teacher schools, hobbies,
+  specialties, events, exponent records, and history.
+- Page 67005: restored report 67001 and its modal invocation.
+- Page 67012: restored the verified `Cod. Evento` link to page 67100.
+
+Original classifications: Custom dependency, Missing page property,
+Renamed custom field, and Functional ambiguity.
+
+Final classifications: Verified custom dependency, Verified custom page link,
+and Deterministic custom field-name correction.
+
+Verification performed: repository searches of custom codeunit procedures,
+report/page objects, source tables, destination tables, fields, and keys.
+
+Resolved TODO markers: **31**
+
+### TODOs skipped
+
+- Pages 56064 and 56065: custom backorder availability methods are absent
+  from current codeunit 7171. Page 56064 also declares standard page 42 while
+  the flagged `GestBackOrd` method exists only on custom page 56036; changing
+  the page type would be a functional decision.
+- Page 56090: the commented report variable is unused because the action
+  already invokes report 50000 directly.
+- Page 56200: the two markers guard a large, structurally disabled matrix
+  control set and cannot be restored as isolated lines.
+
+Skipped TODO markers: **18**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+
+## Batch 16
+
+### Files inspected and modified
+
+- `src/Pages/Page 67015 - Programac. Talleres y Eventos.al`
+- `src/Pages/Page 67018 - Areas de interes.al`
+- `src/Pages/Page 67021 - Distribuidor.al`
+- `src/Pages/Page 67027 - Promotores - Ppto Vtas.al`
+- `src/Pages/Page 67028 - Promotores - Ppto Muestras.al`
+- `src/Pages/Page 67038 - Promotor - Planif. Visitas.al`
+- `src/Pages/Page 67045 - Lista Colegio - Docentes.al`
+- `src/Pages/Page 67051 - Colegio - Adopciones Cab.al`
+
+### TODOs resolved
+
+- Page 67015: restored the pedagogical-hours field using the exact repository
+  field name.
+- Page 67018: restored the source-table view and insert-time record type using
+  the verified custom option member and key.
+- Page 67021: restored the distributor-to-event page link.
+- Pages 67027 and 67028: restored reports 67000 and 67002 and their verified
+  public parameter procedures for sales and sample budgets.
+- Page 67038: restored the verified custom sample-inventory calculation.
+- Page 67045: restored the current `Docente - E-Mail 2` field.
+- Page 67051: restored codeunit 67000 and public procedure
+  `InsertaAdopciones`.
+
+Original classifications: Renamed custom field/option, Missing page property,
+Custom dependency, and Functional ambiguity.
+
+Final classifications: Deterministic custom field/option correction, Verified
+custom page link, and Verified custom report/codeunit procedure.
+
+Verification performed: complete-object inspection and repository searches of
+custom tables, fields, keys, option members, reports, codeunits, and public
+procedure signatures.
+
+Resolved TODO markers: **26**
+
+### TODOs skipped
+
+- Page 67051: five large inventory and dimension-filter lookup blocks remain
+  disabled. Each requires restoring coordinated UI behavior and configuration
+  semantics, so none is safe as an isolated correction.
+
+Skipped TODO markers: **5**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 67051 - Colegio - Adopciones Cab.al`
+
+## Batch 17
+
+### Files inspected
+
+- `src/Pages/Page 67057 - Niveles de desicion.al`
+- `src/Pages/Page 67062 - Fechas.al`
+- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 67074 - Cab. Muestras.al`
+- `src/Pages/Page 67076 - Transfer Order Subform Muestra.al`
+- `src/Pages/Page 67077 - Contact List APS.al`
+- `src/Pages/Page 67079 - Promotores - Lista de Colegios.al`
+- `src/Pages/Page 67100 - Expositores - Eventos.al`
+
+### Files modified
+
+- `src/Pages/Page 67057 - Niveles de desicion.al`
+- `src/Pages/Page 67062 - Fechas.al`
+- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 67074 - Cab. Muestras.al`
+- `src/Pages/Page 67077 - Contact List APS.al`
+- `src/Pages/Page 67079 - Promotores - Lista de Colegios.al`
+
+### TODOs resolved
+
+- Page 67057: restored the source-table view with the exact current custom
+  option member and existing table key.
+- Page 67062: restored the deterministic normalized period-end field.
+- Page 67064: restored page 67130 with its verified `No. Solicitud` link and
+  the verified public ranking-page procedure.
+- Page 67074: restored posted transfer shipment/receipt links with the current
+  standard `Transfer Order No.` field, plus verified subpage dimension,
+  reservation, and update methods.
+- Page 67077: restored indentation, five Contact-related page links using the
+  current `Contact Company No.` destination field, and the verified custom
+  school-level page procedure.
+- Page 67079: restored the verified custom codeunit 67000 procedure call for
+  both the explicit promoter and page-filter branches.
+
+Original classifications: Renamed standard/custom symbol, Missing page
+property, Custom dependency, Functional ambiguity, and Deterministic syntax.
+
+Final classifications: Verified current standard field, Verified custom
+field/option/page/procedure, and Deterministic page syntax.
+
+Verification performed: complete-object inspection; repository searches of
+custom tables, keys, option members, page source tables, and public procedure
+signatures; and `al_symbolsearch` for `Transfer Order No.` and the
+`Contact Company No.` fields of Interaction Log Entry, To-do, Opportunity,
+and Segment Line.
+
+Resolved TODO markers: **32**
+
+### TODOs skipped
+
+- Page 67064: Word generation remains based on a no-op codeunit whose
+  implementation is commented Automation/server-file behavior; the duplicate
+  `Status::Cancelada` branch is structurally ambiguous.
+- Page 67074: item-availability is a no-op, item-tracking is recursively
+  implemented in the subpage, and the e-mail codeunit is commented
+  server-file/SMTP behavior. The unused parameter codeunit declaration has no
+  verified functional call.
+- Page 67076: the single marker guards a large structurally disabled shortcut
+  dimension block and is not safe to restore in isolation.
+- Page 67077: `ShowCustVendBank` is no longer a callable Contact method;
+  the template-selection expression is unavailable; and the four legacy
+  report names/IDs could not be verified in current dependencies.
+- Page 67100: the commented procedure call would pass an uninitialized event
+  type before the subsequent lookup, so restoring it unchanged is unsafe.
+
+Skipped TODO markers: **23**
+
+### Compilation result
+
+- Tools: `al_compile`, `al_getdiagnostics`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Seven temporary AL0604 warnings from restored implicit record references
+  were removed by qualifying only those new references with `Rec.`.
+- Last successfully processed file:
+  `src/Pages/Page 67100 - Expositores - Eventos.al`
+
+## Batch 18
+
+### Files inspected
+
+- `src/Pages/Page 67111 - Adopciones - Colegio - MRK.al`
+- `src/Pages/Page 67116 - Hist Colegio - Docentes.al`
+- `src/Pages/Page 67118 - Inventarios Colegios ListPart.al`
+- `src/Pages/Page 67166 - Ficha de Atenciones.al`
+- `src/Pages/Page 67170 - Documentos operac. comerciales.al`
+- `src/Pages/Page 67183 - Area Curricular - APS.al`
+- `src/Pages/Page 75001 - Datos MDM.al`
+- `src/Pages/Page 75002 - Estructura Analitica.al`
+
+### Files modified
+
+- `src/Pages/Page 67116 - Hist Colegio - Docentes.al`
+- `src/Pages/Page 67118 - Inventarios Colegios ListPart.al`
+- `src/Pages/Page 67166 - Ficha de Atenciones.al`
+- `src/Pages/Page 75001 - Datos MDM.al`
+- `src/Pages/Page 75002 - Estructura Analitica.al`
+
+### TODOs resolved
+
+- Page 67116: restored the verified public `RecibeParametros` call on custom
+  page 67119 with compatible source fields.
+- Page 67118: restored the complete sample-inventory field, verified custom
+  codeunit procedure, and Bin Content lookup.
+- Page 67166: corrected and restored the subpage link to the current custom
+  destination field `Codigo Cab. Atencion`.
+- Pages 75001 and 75002: restored custom codeunit 75000 plus the verified
+  public MDM editability checks in all affected page triggers.
+
+Original classifications: Functional ambiguity, Custom dependency, Missing
+page property, and Deterministic syntax.
+
+Final classifications: Verified custom page/codeunit procedure, Verified
+custom field link, and Verified standard Bin Content lookup.
+
+Verification performed: complete-object inspection; repository searches of
+custom page and codeunit procedures, source/destination tables and fields;
+and `al_symbolsearch` for standard `Bin Content`, `Location Code`,
+`Bin Code`, and the `Bin Contents` page.
+
+Resolved TODO markers: **14**
+
+### TODOs skipped
+
+- Page 67111: `OptionCaption` cannot be restored on the current Text-backed
+  page field.
+- Pages 67170 and 67183: numeric option values 28 and 29 do not exist in the
+  current custom table 67002 option definition, and no semantic replacement
+  is verifiable.
+
+Skipped TODO markers: **3**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 75002 - Estructura Analitica.al`
+
+## Batch 19
+
+### Files inspected
+
+- `src/Pages/Page 75005 - Imp.MdM Campos.al`
+- `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
+- `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
+- `src/Pages/Page 75011 - Tipo Filtros Tipologia MdM.al`
+- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 75013 - Filtro Campo.al`
+- `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- `src/Pages/Page 75016 - Importaciones MdM.al`
+
+### Files modified
+
+- `src/Pages/Page 75005 - Imp.MdM Campos.al`
+- `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
+- `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
+- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 75013 - Filtro Campo.al`
+- `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- `src/Pages/Page 75016 - Importaciones MdM.al`
+
+### TODOs resolved
+
+- Page 75005: restored the computed field caption using the verified custom
+  codeunit 75001 procedure and valid AL control syntax.
+- Pages 75006 and 75008: restored verified MDM editability checks.
+- Pages 75012, 75013, and 75014: restored verified custom dimension
+  discovery/validation calls, virtual dimension fields, and deterministic
+  `RecordRef.FIELD(1)` syntax.
+- Page 75016: restored the custom master-transfer call and replaced three
+  legacy BLOB export blocks with the verified SaaS-compatible
+  `Temp Blob.FromRecord` and `File Management.BLOBExport` APIs.
+
+Original classifications: Deterministic syntax, Custom dependency, Obsolete
+Business Central API, SaaS incompatibility, and Functional ambiguity.
+
+Final classifications: Verified custom procedure, Deterministic AL syntax,
+and Verified minimal SaaS-compatible BLOB export.
+
+Verification performed: complete-object inspection; repository searches of
+custom codeunits 75000, 75001, and 75002 and their public procedures; and
+`al_symbolsearch` for Product Group, Temp Blob, `FromRecord`, File Management,
+and `BLOBExport`.
+
+Resolved TODO markers: **21**
+
+### TODOs skipped
+
+- Page 75011: the coordinated block includes an `Otros` branch that resolves
+  to removed standard Product Group table 5723.
+- Page 75012: the Product Group declaration and `Otros` branch are unavailable
+  in current dependencies.
+- Page 75016: the Excel import calls remain unusable because the current
+  codeunit's file picker and main import body are disabled; restoring the
+  declaration/calls would not resolve the feature.
+
+Skipped TODO markers: **7**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 75016 - Importaciones MdM.al`
+
+## Batch 20
+
+### Files inspected and modified
+
+- `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+
+### TODOs resolved
+
+- Page 75017: restored the table-caption field with valid AL control syntax
+  and the verified public `GetTableCaption(Integer)` procedure on custom
+  codeunit 75001.
+
+Original classification: Deterministic syntax and Custom dependency.
+
+Final classification: Verified custom procedure with deterministic AL control
+syntax.
+
+Verification performed: complete-object inspection and repository verification
+of codeunit 75001 and its public procedure signature.
+
+Resolved TODO markers: **2**
+
+### TODOs skipped
+
+- None in this object.
+
+Skipped TODO markers: **0**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+
+## Final continuation stop
+
+The sequential file-ordered pass reached the final AL page containing
+`//TODO: Ver`. Remaining markers are the entries already recorded as requiring
+manual review because they are unavailable in current dependencies,
+structurally incomplete, functionally ambiguous, no-op implementations, or
+SaaS-incompatible. No further verified High-confidence candidate remains.

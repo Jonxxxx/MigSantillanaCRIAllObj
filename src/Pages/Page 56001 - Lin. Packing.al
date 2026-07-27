@@ -118,9 +118,9 @@ page 56001 "Lin. Packing"
 
     procedure ReabrirCaja()
     var
-    //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
     begin
-        //TODO: Ver FuncSant.ReabrirCajaPacking(Rec);
+        FuncSant.ReabrirCajaPacking(Rec);
     end;
 }
 

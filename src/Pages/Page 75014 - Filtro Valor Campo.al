@@ -37,7 +37,7 @@ page 75014 "Filtro Valor Campo"
     var
         Text001: Label 'El tipo de dato %1 no está permitido. Campo %2';
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
-    //TODO: Ver cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 75000;
 
     procedure RellenaTemp()
     var
@@ -80,7 +80,7 @@ page 75014 "Filtro Valor Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(lwFieldNo + 200);
-                        //TODO: Ver lwCodDim := cFunMdM.GetDimCode(lwIdDim, TRUE);
+                        lwCodDim := cFunMdM.GetDimCode(lwIdDim, TRUE);
                         CLEAR(lrValDim);
                         lrValDim.SETRANGE("Dimension Code", lwCodDim);
                         lrValDim.SETRANGE(Blocked, FALSE);
@@ -160,7 +160,7 @@ page 75014 "Filtro Valor Campo"
                 BEGIN // Datos auxiliares
                     pwIdfVal := 2;  // Codigo
                     pwIdfDesc := 3;  // Descripcion
-                    //TODO: Ver lwFieldRf := pwRelRf.FIELD("1");
+                    lwFieldRf := pwRelRf.FIELD(1);
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;
@@ -182,7 +182,7 @@ page 75014 "Filtro Valor Campo"
                 BEGIN  // Datos MdM
                     pwIdfVal := 2;  // Codigo
                     pwIdfDesc := 3;  // Descripcion
-                    //TODO: Ver lwFieldRf := pwRelRf.FIELD("1");
+                    lwFieldRf := pwRelRf.FIELD(1);
                     //lwOptionValue := lwFieldRf.OPTIONCAPTION;
                     lwOptionValue := lwFieldRf.OPTIONSTRING;
                     lwId := 0;
@@ -241,7 +241,7 @@ page 75014 "Filtro Valor Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(pwIdField + 200);
-                        //TODO: Ver cFunMdM.GetDimCode(lwIdDim, TRUE);
+                        cFunMdM.GetDimCode(lwIdDim, TRUE);
                     END;
             END;
         END

@@ -72,9 +72,9 @@ page 67045 "Lista Colegio - Docentes"
                 field("Docente - Mobile Phone No."; "Docente - Mobile Phone No.")
                 {
                 }
-                //TODO: Ver field("Docente - E-Mail 2"; "Docente-E-Mail 2")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Docente - E-Mail 2"; Rec."Docente - E-Mail 2")
+                {
+                }
                 field("Cod. Promotor"; "Cod. Promotor")
                 {
                 }

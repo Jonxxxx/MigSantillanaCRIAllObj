@@ -62,7 +62,7 @@ page 56052 "Lin. Consignacion a Facturar"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver FuncSant.RecibeNoDoc(NoPedido);
+                    FuncSant.RecibeNoDoc(NoPedido);
                     REPORT.RUNMODAL(56027);
                     CurrPage.UPDATE;
                 end;
@@ -156,7 +156,7 @@ page 56052 "Lin. Consignacion a Facturar"
         rLinCons: Record 56011 temporary;
         rItem: Record 27;
         rLCF: Record 56011;
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         PageActDesc: Page 56053;
         Window: Dialog;
         CounterTotal: Integer;

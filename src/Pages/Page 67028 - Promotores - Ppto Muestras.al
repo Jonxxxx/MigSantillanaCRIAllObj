@@ -63,8 +63,8 @@ page 67028 "Promotores - Ppto Muestras"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CopiaProducto.RecibeDatos("Cod. Promotor",1);
-                        //TODO: Ver CopiaProducto.RUNMODAL();
+                        CopiaProducto.RecibeDatos(Rec."Cod. Promotor", 1);
+                        CopiaProducto.RUNMODAL();
                     end;
                 }
                 action("I&mport Budget")
@@ -77,10 +77,10 @@ page 67028 "Promotores - Ppto Muestras"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ProcImportaPpto: Report 67002;
+                        ProcImportaPpto: Report 67002;
                     begin
-                        //TODO: Ver ProcImportaPpto.RecibeParametros(1);
-                        //TODO: Ver ProcImportaPpto.RUNMODAL;
+                        ProcImportaPpto.RecibeParametros(1);
+                        ProcImportaPpto.RUNMODAL;
                     end;
                 }
             }
@@ -88,6 +88,6 @@ page 67028 "Promotores - Ppto Muestras"
     }
 
     var
-    //TODO: Ver CopiaProducto: Report 67000;
+        CopiaProducto: Report 67000;
 }
 

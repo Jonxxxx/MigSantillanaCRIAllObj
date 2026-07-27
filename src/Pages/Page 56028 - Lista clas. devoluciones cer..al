@@ -69,7 +69,7 @@ page 56028 "Lista clas. devoluciones cer."
                     CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
-                    //TODO: Ver REPORT.RUNMODAL(REPORT::"Clasifica devoluciones", TRUE, FALSE, CR);
+                    REPORT.RUNMODAL(REPORT::"Clasifica devoluciones", TRUE, FALSE, CR);
                 end;
             }
             action("<Action1000000010>")
@@ -85,7 +85,7 @@ page 56028 "Lista clas. devoluciones cer."
                     CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
-                    //TODO: Ver REPORT.RUNMODAL(REPORT::"Listado clas. devoluciones", TRUE, FALSE, CR);
+                    REPORT.RUNMODAL(REPORT::"Listado clas. devoluciones", TRUE, FALSE, CR);
                 end;
             }
             action("Imprimir documentos generados")
@@ -101,7 +101,7 @@ page 56028 "Lista clas. devoluciones cer."
                     CR: Record 56025;
                 begin
                     CR.SETRANGE("No.", "No.");
-                    //TODO: Ver REPORT.RUNMODAL(REPORT::"Documentos generados clas. dev", TRUE, FALSE, CR);
+                    REPORT.RUNMODAL(REPORT::"Documentos generados clas. dev", TRUE, FALSE, CR);
                 end;
             }
         }

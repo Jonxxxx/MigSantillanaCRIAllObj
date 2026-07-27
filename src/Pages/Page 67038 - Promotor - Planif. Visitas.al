@@ -41,14 +41,10 @@ page 67038 "Promotor - Planif. Visitas"
                 field("Fecha Proxima Visita"; "Fecha Proxima Visita")
                 {
                 }
-                //TODO: Ver 
-                /*
-                field(FuncAPS.ColCalcInvMuestras("Cod. Colegio");
-                    FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
+                field(SampleInventory; FuncAPS.ColCalcInvMuestras(Rec."Cod. Colegio"))
                 {
                     Caption = 'Sample Inventory';
                 }
-                */
                 field(Comentario; Comentario)
                 {
                 }
@@ -87,7 +83,7 @@ page 67038 "Promotor - Planif. Visitas"
     }
 
     var
-    //TODO: Ver FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 67000;
 
     procedure CargaEntregaMuestras()
     var

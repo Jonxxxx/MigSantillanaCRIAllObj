@@ -140,9 +140,9 @@ page 67001 Docentes
                 field(Expositor; Expositor)
                 {
                 }
-                //TODO: Ver field("Usuario creacion"; "Usuario creacion")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Usuario creacion"; Rec."Usuario creacion")
+                {
+                }
             }
             group(Communication)
             {
@@ -179,9 +179,9 @@ page 67001 Docentes
                 {
                     Importance = Promoted;
                 }
-                //TODO: Ver field("E-Mail 2"; "E - Mail 2")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("E-Mail 2"; Rec."E-Mail 2")
+                {
+                }
                 field("Home Page"; "Home Page")
                 {
                 }
@@ -245,8 +245,8 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Page 67045;
-                    //TODO: Ver                 RunPageLink = "Cod. Docente"=FIELD("No.");
+                    RunObject = Page 67045;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action(Hobbies)
                 {
@@ -255,8 +255,8 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Page 67058;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67058;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
 
                 action("&Specialities")
@@ -266,8 +266,8 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Page 67063;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67063;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Workshop - Event")
                 {
@@ -276,16 +276,16 @@ page 67001 Docentes
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Page 67108;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67108;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
             }
             action("&Exponent")
             {
                 Caption = '&Exponent';
                 Image = ContactReference;
-                //TODO: Ver RunObject = Page 67100;
-                //TODO: Ver RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
+                RunObject = Page 67100;
+                RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
             }
             group("&Historics")
             {
@@ -296,8 +296,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Page 67113;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67113;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Hobbies History")
                 {
@@ -305,8 +305,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Page 67114;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67114;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Specialties History")
                 {
@@ -314,8 +314,8 @@ page 67001 Docentes
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Page 67115;
-                    //TODO: Ver RunPageLink = "Cod. Docente" = FIELD("No.");
+                    RunObject = Page 67115;
+                    RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("School - Teacher History")
                 {

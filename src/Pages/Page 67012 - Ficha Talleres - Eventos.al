@@ -68,7 +68,7 @@ page 67012 "Ficha Talleres - Eventos"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page 67100;
-                    //TODO: Ver RunPageLink = "Cod. Evento" = FIELD("No.");
+                    RunPageLink = "Cod. Evento" = FIELD("No.");
                 }
                 action("<Action1000000039>")
                 {

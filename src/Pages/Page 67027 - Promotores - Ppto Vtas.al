@@ -66,8 +66,8 @@ page 67027 "Promotores - Ppto Vtas"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CopiaProducto.RecibeDatos("Cod. Promotor",0);
-                        //TODO: Ver CopiaProducto.RUNMODAL();
+                        CopiaProducto.RecibeDatos(Rec."Cod. Promotor", 0);
+                        CopiaProducto.RUNMODAL();
                     end;
                 }
                 action("I&mport Budget")
@@ -80,10 +80,10 @@ page 67027 "Promotores - Ppto Vtas"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ProcImportaPpto: Report 67002;
+                        ProcImportaPpto: Report 67002;
                     begin
-                        //TODO: Ver ProcImportaPpto.RecibeParametros(0);
-                        //TODO: Ver ProcImportaPpto.RUNMODAL;
+                        ProcImportaPpto.RecibeParametros(0);
+                        ProcImportaPpto.RUNMODAL;
                     end;
                 }
             }
@@ -91,6 +91,6 @@ page 67027 "Promotores - Ppto Vtas"
     }
 
     var
-    //TODO: Ver CopiaProducto: Report 67000;
+        CopiaProducto: Report 67000;
 }
 

@@ -241,29 +241,23 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'Invoices';
                     Image = Invoice;
-                    //TODO: Ver
-                    /*
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING("Order No.");*/
+                    RunPageView = SORTING("Order No.");
                 }
                 action("Prepa&yment Invoices")
                 {
-                    //TODO: Ver
-                    /*
                     Caption = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING("Prepayment Order No.");*/
+                    RunPageView = SORTING("Prepayment Order No.");
                 }
                 action("Prepayment Credi&t Memos")
                 {
-                    //TODO: Ver
-                    /*
                     Caption = 'Prepayment Credi&t Memos';
-                    RunObject = Page "Posted Sales Credit Memos"
-                                    RunPageLink = "Order No." = FIELD("No.");
-                    RunPageView = SORTING("Prepayment Order No.");*/
+                    RunObject = Page "Posted Sales Credit Memos";
+                    RunPageLink = "Prepayment Order No." = FIELD("No.");
+                    RunPageView = SORTING("Prepayment Order No.");
                 }
                 action(Dimensions)
                 {
@@ -343,17 +337,15 @@ page 56035 "Sales Order Call Center  List"
                 {
                     Caption = 'Create &Whse. Shipment';
 
-                    //TODO: Ver
-                    /*
                     trigger OnAction()
                     var
                         GetSourceDocOutbound: Codeunit 5752;
                     begin
                         GetSourceDocOutbound.CreateFromSalesOrder(Rec);
 
-                        IF NOT FIND('=><') THEN
-                            INIT;
-                    end;*/
+                        IF NOT Rec.FIND('=><') THEN
+                            Rec.INIT;
+                    end;
                 }
                 action("Create Inventor&y Put-away/Pick")
                 {
@@ -561,7 +553,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
                     end;
                 }
                 action("Work Order")
@@ -572,7 +564,7 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
                     end;
                 }
             }
@@ -584,13 +576,13 @@ page 56035 "Sales Order Call Center  List"
                 Caption = 'Sales Reservation Avail.';
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 209;
+                RunObject = Report "Sales Reservation Avail.";
             }
         }
     }
 
     var
-        //TODO: Ver DocPrint: Codeunit 229;
+        DocPrint: Codeunit 229;
         ReportPrint: Codeunit 228;
         //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
         Usage: Option "Order Confirmation","Work Order";

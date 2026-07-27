@@ -4,8 +4,8 @@ page 67018 "Areas de interes"
     Caption = 'Areas of interest';
     PageType = List;
     SourceTable = 67002;
-    //TODO: Ver SourceTableView = SORTING("Tipo registro", Codigo)
-    //TODO: Ver WHERE("Tipo registro" = CONST("Areas de interes"));
+    SourceTableView = SORTING("Tipo registro", Codigo)
+                      WHERE("Tipo registro" = CONST("Areas de inter s"));
     UsageCategory = Administration;
 
     layout
@@ -30,7 +30,7 @@ page 67018 "Areas de interes"
 
     trigger OnInsertRecord(BelowxRec: Boolean): Boolean
     begin
-        //TODO: Ver "Tipo registro" := "Tipo registro"::"Areas de interés";
+        Rec."Tipo registro" := Rec."Tipo registro"::"Areas de inter s";
     end;
 }
 

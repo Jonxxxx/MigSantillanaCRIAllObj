@@ -32,7 +32,7 @@ page 75012 "Valores Filtros Tipologia MdM"
 
     var
         wId: Integer;
-    //TODO: Ver cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 75000;
 
     procedure RellenaTabla(pwIdFiltro: Integer)
     var
@@ -51,7 +51,7 @@ page 75012 "Valores Filtros Tipologia MdM"
             CASE lrFiltroTipo.Tipo OF
                 lrFiltroTipo.Tipo::Dimension:
                     BEGIN
-                        //TODO: Ver lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
+                        lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
                         CLEAR(lrValDim);
                         lrValDim.SETRANGE("Dimension Code", lwCodDim);
                         IF lrValDim.FINDSET THEN BEGIN

@@ -340,14 +340,14 @@ page 67074 "Cab. Muestras"
                 {
                     Caption = 'S&hipments';
                     RunObject = Page 5752;
-                    //TODO: Ver RunPageLink = "Order No." = FIELD("No.");
+                    RunPageLink = "Transfer Order No." = FIELD("No.");
                 }
                 action("Re&ceipts")
                 {
                     Caption = 'Re&ceipts';
                     Image = PostedReceipts;
                     RunObject = Page 5753;
-                    //TODO: Ver RunPageLink = "Order No." = FIELD("No.");
+                    RunPageLink = "Transfer Order No." = FIELD("No.");
                 }
                 action(Dimensions)
                 {
@@ -430,7 +430,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CurrPage.TransferLines.PAGE.ShowDimensions;
+                        CurrPage.TransferLines.PAGE.ShowDimensions;
                     end;
                 }
                 group("Item &Tracking Lines")
@@ -483,7 +483,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CurrPage.TransferLines.PAGE.ShowReservation;
+                        CurrPage.TransferLines.PAGE.ShowReservation;
                     end;
                 }
                 action("Create &Whse. Receipt")
@@ -718,42 +718,42 @@ page 67074 "Cab. Muestras"
 
     local procedure PostingDateOnAfterValidate()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShipmentDateOnAfterValidate()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingAgentServiceCodeOnAfte()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingAgentCodeOnAfterValida()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ShippingTimeOnAfterValidate()
     begin
-        //TODO: Ver  CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure OutboundWhseHandlingTimeOnAfte()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure ReceiptDateOnAfterValidate()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure InboundWhseHandlingTimeOnAfter()
     begin
-        //TODO: Ver CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
+        CurrPage.TransferLines.PAGE.UpdateForm(TRUE);
     end;
 
     local procedure LimitedecreditoclienteSaldoCli()

@@ -60,9 +60,9 @@ page 67005 "Productos equivalentes"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ImportaProdEquiv: Report 67001;
+                        ImportaProdEquiv: Report 67001;
                     begin
-                        //TODO: Ver ImportaProdEquiv.RUNMODAL;
+                        ImportaProdEquiv.RUNMODAL;
                         CurrPage.UPDATE;
                     end;
                 }

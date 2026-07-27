@@ -569,8 +569,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Caption = '&Libros a Presentar';
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Page 67130;
-                    //TODO: Ver RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
+                    RunObject = Page 67130;
+                    RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                 }
                 action("&Competencia")
                 {
@@ -623,7 +623,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
                         pgRanking: Page 67145;
                     begin
                         TESTFIELD("Cod. Colegio");
-                        //TODO: Ver pgRanking.CalcularRanking("Cod. Colegio");
+                        pgRanking.CalcularRanking(Rec."Cod. Colegio");
                         pgRanking.RUN;
                         CLEAR(pgRanking);
                     end;

@@ -15,7 +15,7 @@ page 67077 "Contact List APS"
         {
             repeater(General)
             {
-                //TODO: Ver IndentationColumn = NameIndent;
+                IndentationColumn = NameIndent;
                 IndentationControls = Name;
                 field("No."; "No.")
                 {
@@ -191,7 +191,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Interaction Log E&ntries';
                     RunObject = Page 5076;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -201,7 +201,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Postponed &Interactions';
                     RunObject = Page 5082;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -210,7 +210,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'T&o-dos';
                     RunObject = Page 5096;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No.")),
                                   "System To-do Type" = FILTER("Contact Attendee");
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -222,7 +222,7 @@ page 67077 "Contact List APS"
                     {
                         Caption = 'List';
                         RunObject = Page 5123;
-                        RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                        RunPageLink = "Contact Company No." = FIELD("Company No."),
                                       "Contact No." = FILTER(<> ''),
                                       "Contact No." = FIELD(FILTER("Lookup Contact No."));
                         RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -233,7 +233,7 @@ page 67077 "Contact List APS"
                     Caption = 'Segmen&ts';
                     Image = Segment;
                     RunObject = Page 5150;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact No.", "Segment No.");
@@ -294,9 +294,9 @@ page 67077 "Contact List APS"
                         TESTFIELD(City);
                         TESTFIELD(County);
                         TESTFIELD("Post Code");
-                        //TODO: Ver PageColNivel.RecibeParametros("No.", City, County, "Post Code");
-                        //TODO: Ver PageColNivel.RUNMODAL;
-                        //TODO: Ver CLEAR(PageColNivel);
+                        PageColNivel.RecibeParametros(Rec."No.", Rec.City, Rec.County, Rec."Post Code");
+                        PageColNivel.RUNMODAL;
+                        CLEAR(PageColNivel);
                     end;
                 }
                 action("<Action1000000040>")
