@@ -132,7 +132,7 @@ page 56064 "Gestion BackOrder - SL"
                     CLEAR(PedVta);
                     SH.GET("Document Type", "Document No.");
                     PedVta.SETRECORD(SH);
-                    //TODO: Ver PedVta.GestBackOrd(TRUE);
+                    PedVta.GestBackOrd(TRUE);
                     PedVta.RUNMODAL;
                     CLEAR(PedVta);
                 end;

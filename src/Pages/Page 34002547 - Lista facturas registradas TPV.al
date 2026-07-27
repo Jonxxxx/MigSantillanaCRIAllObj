@@ -332,7 +332,7 @@ page 34002547 "Lista facturas registradas TPV"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 10055;
+                RunObject = Report "Outstanding Sales Order Aging";
             }
             action("Outstanding Sales Order Status")
             {
@@ -340,7 +340,7 @@ page 34002547 "Lista facturas registradas TPV"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 10056;
+                RunObject = Report "Outstanding Sales Order Status";
             }
             action("Daily Invoicing Report")
             {
@@ -349,7 +349,7 @@ page 34002547 "Lista facturas registradas TPV"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 10050;
+                RunObject = Report "Daily Invoicing Report";
             }
         }
     }

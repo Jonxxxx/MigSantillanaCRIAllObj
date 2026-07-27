@@ -427,10 +427,10 @@ page 34002180 "Datos empleados moviles OJO"
 
     trigger OnOpenPage()
     var
-    //TODO: Ver MapMgt: Codeunit 802;
+        MapMgt: Codeunit "Online Map Management";
     begin
-        //TODO: Ver IF NOT MapMgt.TestSetup THEN
-        //TODO: Ver     MapPointVisible := FALSE;
+        IF NOT MapMgt.TestSetup THEN
+            MapPointVisible := FALSE;
     end;
 
     var

@@ -239,8 +239,9 @@ page 34002546 "Lista de facturas TPV"
                     trigger OnAction()
                     var
                         ApprovalEntries: Page 658;
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::Invoice, Rec."No.");
                         ApprovalEntries.RUN;
                     end;
                 }

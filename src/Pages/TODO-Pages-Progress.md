@@ -1334,3 +1334,356 @@ The sequential file-ordered pass reached the final AL page containing
 manual review because they are unavailable in current dependencies,
 structurally incomplete, functionally ambiguous, no-op implementations, or
 SaaS-incompatible. No further verified High-confidence candidate remains.
+
+# Medium-confidence pass
+
+## Current Medium-confidence status
+
+- Date: 2026-07-27
+- Current `//TODO: Ver` occurrences in AL files: 335
+- Medium-confidence TODO markers inspected in this task: 85
+- TODO markers resolved in this task: 19
+- TODO markers skipped in this task: 66
+- AL objects modified in this task: 8
+- Compilation errors: 0
+- Warnings introduced by this task: 0
+- Last successfully processed file:
+  `src/Pages/Page 67077 - Contact List APS.al`
+
+## Medium Batch 1
+
+### Files inspected
+
+- `src/Pages/Page 34002111 - Lista Acciones de personal.al`
+- `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
+- `src/Pages/Page 34002122 - Control de asistencia.al`
+- `src/Pages/Page 34002133 - CxC Empleados.al`
+- `src/Pages/Page 34002144 - Diario Nominas.al`
+
+### Files modified
+
+- None.
+
+### TODOs inspected and skipped
+
+- Page 34002111: page 34002156 is absent from the current repository and
+  dependencies.
+- Page 34002113: report 34002102 is absent.
+- Page 34002122: report 34002146 is absent.
+- Page 34002133: page 58100 and its destination `Field1` cannot be verified.
+- Page 34002144: reports 34002182, 34002139, 34002124, 34002130, 50211,
+  34002168, 34002120, and 34002125 are absent. The standard Employee Absences
+  page and `Employee No.` field exist, but the adjacent `Closed` filter field
+  does not; the complete logical link therefore cannot be restored without
+  changing behavior.
+
+Original classifications and confidence: Custom dependency, Missing page
+property, and Renamed standard symbol; all Medium confidence with Low or
+Medium compile and functional risk.
+
+Verification performed: complete-object inspection; repository searches for
+all custom page/report IDs; and `al_symbolsearch` for Employee Absences,
+Employee Absence fields `Employee No.` and `Closed`, and source Employee field
+`No.`.
+
+Assumptions made: none.
+
+Inspected TODO markers: **16**
+
+Resolved TODO markers: **0**
+
+Skipped TODO markers: **16**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002144 - Diario Nominas.al`
+
+## Medium Batch 2
+
+### Files inspected
+
+- `src/Pages/Page 34002162 - Calendario Anual.al`
+- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 34002249 - Payroll Charts.al`
+
+### Files modified
+
+- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
+
+### TODOs resolved
+
+- Page 34002180: replaced legacy codeunit 802 with the verified standard
+  `Online Map Management` codeunit and restored the equivalent public
+  `TestSetup(): Boolean` check.
+
+Original classification and confidence: Renamed standard object/method,
+Medium confidence, Medium compile risk, and Medium functional risk.
+
+Verification performed: `al_symbolsearch` confirmed the current codeunit name
+and exact `TestSetup()` signature.
+
+Resolved TODO markers: **3**
+
+### TODOs inspected and skipped
+
+- Page 34002162: report 34002147 is absent.
+- Pages 34002180 and 34002181: custom page 34002157 is absent, so the
+  adjacent RunObject/RunPageLink blocks cannot be restored.
+- Page 34002189: all 18 remaining custom report/page targets are absent as
+  objects of the requested type. Several IDs now identify pages or codeunits,
+  which are not valid substitutes for the missing reports.
+- Page 34002249: `Analysis Report Chart Mgt.SelectChart` has the expected
+  signature, but the adjacent legacy `UpdateChart(Period::" ")` call binds to
+  the current Business Chart control API and causes AL0133. The complete
+  logical correction was reverted; resolving it would require renaming and
+  coordinating the legacy local procedure and other callers.
+
+Original classifications and confidence: Custom dependency, Missing page
+property, and Renamed standard symbol; Medium confidence with Medium compile
+and functional risk.
+
+Assumptions made: none.
+
+Inspected TODO markers: **28**
+
+Skipped TODO markers: **25**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result after reverting the chart correction: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002249 - Payroll Charts.al`
+
+## Medium Batch 3
+
+### Files inspected
+
+- `src/Pages/Page 34002260 - Headline RC Payroll.al`
+- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
+- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+
+### Files modified
+
+- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
+- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+
+### TODOs resolved
+
+- Pages 34002526, 34002546, and 34002557: restored the Approval Entries
+  page declaration, call, and run statements as applicable. The legacy
+  `Setfilters` call was replaced by the verified current
+  `SetRecordFilters(Integer, Enum "Approval Document Type", Code[20])`
+  signature, using the page's fixed Invoice or Credit Memo source type.
+- Page 34002547: restored RunObject properties for the verified current
+  reports `Outstanding Sales Order Aging`, `Outstanding Sales Order Status`,
+  and `Daily Invoicing Report`.
+
+Original classifications and confidence: Renamed standard symbols and Missing
+page properties; Medium confidence with Low or Medium compile and functional
+risk.
+
+Verification performed: complete-object and surrounding-action inspection;
+`al_symbolsearch` verification of the Approval Entries page, the exact
+`SetRecordFilters` signature, the Approval Document Type enum, and all three
+current report names. Compilation verified the selected enum members and
+property syntax.
+
+Assumptions made: none. The fixed source table views supplied the exact
+approval document types.
+
+Resolved TODO markers: **10**
+
+### TODOs inspected and skipped
+
+- Page 34002260: the legacy `ScheduleTask` and `GetUserGreetingText` methods
+  are not available in the current standard dependencies, and no equivalent
+  verified signature was found.
+- Page 34002526: legacy page 829 cannot be verified in the current standard
+  dependencies.
+- Page 34002547: legacy report 10074 has no exact current symbol. The available
+  Standard Sales Invoice report was not treated as semantically equivalent
+  without further functional verification.
+
+Skipped TODO markers: **4**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+
+## Medium Batch 4
+
+### Files inspected
+
+- `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
+- `src/Pages/Page 34003015 - Pre Sales List.al`
+- `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+
+### Files modified
+
+- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+
+### TODOs resolved
+
+- Page 56035: replaced the legacy Approval Entries `Setfilters` call with
+  the verified current `SetRecordFilters` signature. An explicit mapping
+  between every Sales Document Type and Approval Document Type preserves the
+  original record-specific behavior without an implicit enum conversion.
+
+Original classification and confidence: Renamed standard object, field,
+method, enum, or property; Medium confidence with Medium compile and
+functional risk.
+
+Verification performed: complete-object inspection and `al_symbolsearch`
+verification of both enum objects, the Approval Entries page, and the exact
+`SetRecordFilters(Integer, Enum "Approval Document Type", Code[20])`
+signature. Compilation verified every mapped enum member.
+
+Resolved TODO markers: **1**
+
+### TODOs inspected and skipped
+
+- Page 34003004: custom report 34003006 is absent from the repository.
+- Page 34003015: the legacy Mini Pages Mapping table is absent from current
+  dependencies; its only use is also inside a disabled block classified as
+  functional ambiguity.
+- Page 53001: custom report 53007 is absent. The duplicated marker on the same
+  RunObject line was treated as one logical correction and both physical
+  occurrences were inspected.
+- Page 56024: the Application Temp and Approvals Mgmt. declarations have no
+  active callers; their related availability/approval logic is disabled and
+  excluded from this task.
+- Page 56035: the six remaining declarations belong to disabled IC and
+  posting blocks or are unused because those blocks remain disabled. Restoring
+  declarations alone would not restore behavior.
+
+Original classifications and confidence: Custom dependency and Renamed
+standard symbols; Medium confidence with Low or Medium compile and functional
+risk.
+
+Verification performed: complete-object inspection; repository searches for
+reports 34003006 and 53007; `al_symbolsearch` for Mini Pages Mapping, current
+approval symbols, and the current IC Outbox codeunit.
+
+Assumptions made: none.
+
+Inspected TODO markers: **13**
+
+Skipped TODO markers: **12**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+
+## Medium Batch 5
+
+### Files inspected
+
+- `src/Pages/Page 56036 - Sales Order Call Center.al`
+- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 67074 - Cab. Muestras.al`
+- `src/Pages/Page 67077 - Contact List APS.al`
+
+### Files modified
+
+- `src/Pages/Page 56036 - Sales Order Call Center.al`
+- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+
+### TODOs resolved
+
+- Page 56036: restored the exact current `Drop Shipment Status` and `Picking
+  List by Order` report RunObjects. Each source line contained two physical
+  `//TODO: Ver` markers.
+- Page 56064: restored the unchanged `PedVta.GestBackOrd(TRUE)` call after
+  verifying that custom page 56036 exposes the public
+  `GestBackOrd(Boolean)` procedure.
+
+Original classifications and confidence: the report entries were Renamed
+standard symbols with Medium confidence. The custom method call was initially
+Functional ambiguity with Low confidence.
+
+Final classification after verification: the report entries remain verified
+Renamed standard symbols at Medium confidence. The custom call is a verified
+Custom dependency at Medium confidence with Low compile risk and Medium
+functional risk because the target page, public procedure, Boolean parameter,
+and surrounding SetRecord/RunModal sequence all match.
+
+Verification performed: complete-object inspection; `al_symbolsearch`
+verification of both exact standard report symbols; repository verification
+of page 56036 and its public `GestBackOrd(Boolean)` procedure; and compilation.
+
+Resolved TODO markers: **5**
+
+### TODOs inspected and skipped
+
+- Page 56036: the Sales Order Stats branch was skipped because it selects
+  behavior from `Tax Area Code`, and tax changes are excluded. Page 829 and
+  the Application Temp table are unavailable. The remaining active close-page
+  block depends on unavailable approval state and would change approval/release
+  behavior.
+- Page 56064: Application Temp is unavailable; the remaining availability
+  calculations and disabled blocks are not Medium-confidence candidates.
+- Page 67064: the audit's Medium RunObject/RunPageLink pair was already
+  resolved in the current source. Remaining Word-generation and status entries
+  are excluded integration or functional-ambiguity cases.
+- Page 67074: the audit's Medium shipment/receipt links were already resolved
+  in the current source. Remaining subpage calls and email dependencies are
+  not current Medium-confidence candidates.
+- Page 67077: the legacy reports for Contact Company Summary, Contact Labels,
+  Questionnaire Handout, and Sales Cycle Analysis have no exact current
+  dependency symbols. No substitute was invented.
+
+Original classifications and confidence: Renamed standard symbols and Missing
+page properties; Medium confidence with Medium compile and functional risk.
+
+Assumptions made: none.
+
+Inspected TODO markers: **14**
+
+Skipped TODO markers: **9**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 67077 - Contact List APS.al`
+
+## Medium-confidence pass stop
+
+The pass stopped after modifying eight AL objects, which is the task-level
+maximum imposed by the effective project `AGENTS.md` instructions. Remaining
+current Medium-confidence candidates were not processed in this task.

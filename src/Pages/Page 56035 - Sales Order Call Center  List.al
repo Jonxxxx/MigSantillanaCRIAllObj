@@ -277,8 +277,23 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        case Rec."Document Type" of
+                            Rec."Document Type"::Quote:
+                                ApprovalDocumentType := ApprovalDocumentType::Quote;
+                            Rec."Document Type"::Order:
+                                ApprovalDocumentType := ApprovalDocumentType::Order;
+                            Rec."Document Type"::Invoice:
+                                ApprovalDocumentType := ApprovalDocumentType::Invoice;
+                            Rec."Document Type"::"Credit Memo":
+                                ApprovalDocumentType := ApprovalDocumentType::"Credit Memo";
+                            Rec."Document Type"::"Blanket Order":
+                                ApprovalDocumentType := ApprovalDocumentType::"Blanket Order";
+                            Rec."Document Type"::"Return Order":
+                                ApprovalDocumentType := ApprovalDocumentType::"Return Order";
+                        end;
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType, Rec."No.");
                         ApprovalEntries.RUN;
                     end;
                 }

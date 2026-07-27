@@ -604,10 +604,11 @@ page 34002526 "Facturas comprimidas"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ApprovalEntries: Page "Approval Entries";
+                        ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
-                        //TODO: Ver ApprovalEntries.RUN;
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::Invoice, Rec."No.");
+                        ApprovalEntries.RUN;
                     end;
                 }
                 action("Co&mments")

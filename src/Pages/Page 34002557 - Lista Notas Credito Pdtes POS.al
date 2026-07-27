@@ -275,10 +275,11 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ApprovalEntries: Page "Approval Entries";
+                        ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver  ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
-                        //TODO: Ver ApprovalEntries.RUN;
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::"Credit Memo", Rec."No.");
+                        ApprovalEntries.RUN;
                     end;
                 }
                 action("Log de Documentos Electronicos")
