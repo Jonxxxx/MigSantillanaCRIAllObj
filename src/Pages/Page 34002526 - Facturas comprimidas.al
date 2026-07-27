@@ -382,14 +382,12 @@ page 34002526 "Facturas comprimidas"
                     Importance = Additional;
                     Visible = ESACC_F18_Visible;
                 }
-                //TODO: Ver 
-                /*
                 field("Ship-to UPS Zone"; "Ship-to UPS Zone")
                 {
                     Editable = ESACC_F10005_Editable;
                     HideValue = ESACC_F10005_HideValue;
                     Visible = ESACC_F10005_Visible;
-                }*/
+                }
                 field("Location Code"; "Location Code")
                 {
                     Editable = ESACC_F28_Editable;
@@ -567,12 +565,10 @@ page 34002526 "Facturas comprimidas"
                     begin
                         CalcInvDiscForHeader;
                         COMMIT;
-                        //TODO: Ver 
-                        /*
                         IF "Tax Area Code" = '' THEN
                           PAGE.RUNMODAL(PAGE::"Sales Statistics",Rec)
                         ELSE
-                          PAGE.RUNMODAL(PAGE::"Sales Order Stats.",Rec)*/
+                          PAGE.RUNMODAL(PAGE::"Sales Order Stats.",Rec)
                     end;
                 }
                 action(Dimensions)
@@ -594,10 +590,8 @@ page 34002526 "Facturas comprimidas"
                     Caption = 'Customer';
                     Enabled = ESACC_C60_Enabled;
                     Image = Customer;
-                    //TODO: Ver 
-                    /*
                     RunObject = Page 21;
-                    RunPageLink = "No." = FIELD("Sell-to Customer No.");*/
+                    RunPageLink = "No." = FIELD("Sell-to Customer No.");
                     ShortCutKey = 'Shift+F7';
                     Visible = ESACC_C60_Visible;
                 }
@@ -621,10 +615,10 @@ page 34002526 "Facturas comprimidas"
                     Caption = 'Co&mments';
                     Enabled = ESACC_C61_Enabled;
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = FIELD("Document Type"),
-                    //TODO: Ver               "No." = FIELD("No."),
-                    //TODO: Ver               "Document Line No." = CONST(0);
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                     Visible = ESACC_C61_Visible;
                 }
 

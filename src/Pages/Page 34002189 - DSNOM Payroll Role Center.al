@@ -204,7 +204,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     action("Envio IRM")
                     {
                         Image = "Report";
-                        //TODO: Ver RunObject = Report 56200;
+                        RunObject = Report 56200;
                     }
                 }
             }
@@ -280,85 +280,85 @@ page 34002189 "DSNOM Payroll Role Center"
                     action("Employee - Labels")
                     {
                         Caption = 'Employee - Labels';
-                        //TODO: Ver RunObject = Report 5200;
+                        RunObject = Report 5200;
                         ToolTip = 'View a list of employees'' mailing labels.';
                     }
                     action("Employee - List")
                     {
                         Caption = 'Employee - List';
-                        //TODO: Ver RunObject = Report 5201;
+                        RunObject = Report 5201;
                         ToolTip = 'View a list of all employees.';
                     }
                     action("Employee - Misc. Article Info.")
                     {
                         Caption = 'Employee - Misc. Article Info.';
-                        //TODO: Ver RunObject = Report 5202;
+                        RunObject = Report 5202;
                         ToolTip = 'View a list of employees'' miscellaneous articles.';
                     }
                     action("Employee - Confidential Info.")
                     {
                         Caption = 'Employee - Confidential Info.';
-                        //TODO: Ver RunObject = Report 5203;
+                        RunObject = Report 5203;
                         ToolTip = 'View a list of employees'' confidential information.';
                     }
                     action("Employee - Staff Absences")
                     {
                         Caption = 'Employee - Staff Absences';
-                        //TODO: Ver RunObject = Report 5204;
+                        RunObject = Report 5204;
                         ToolTip = 'View a list of employee absences by date. The list includes the cause of each employee absence.';
                     }
                     action("Employee - Absences by Causes")
                     {
                         Caption = 'Employee - Absences by Causes';
-                        //TODO: Ver RunObject = Report 5205;
+                        RunObject = Report 5205;
                         ToolTip = 'View a list of all employees'' absences categorized by absence code.';
                     }
                     action("Employee - Qualifications")
                     {
                         Caption = 'Employee - Qualifications';
-                        //TODO: Ver RunObject = Report 5206;
+                        RunObject = Report 5206;
                         ToolTip = 'View a list of employees'' qualifications.';
                     }
                     action("Employee - Addresses")
                     {
                         Caption = 'Employee - Addresses';
-                        //TODO: Ver RunObject = Report 5207;
+                        RunObject = Report 5207;
                         ToolTip = 'View a list of employees'' addresses.';
                     }
                     action("Employee - Relatives")
                     {
                         Caption = 'Employee - Relatives';
-                        //TODO: Ver RunObject = Report 5208;
+                        RunObject = Report 5208;
                         ToolTip = 'View a list of employees'' relatives.';
                     }
                     action("Employee - Birthdays")
                     {
                         Caption = 'Employee - Birthdays';
-                        //TODO: Ver RunObject = Report 5209;
+                        RunObject = Report 5209;
                         ToolTip = 'View a list of employees'' birthdays.';
                     }
                     action("Employee - Phone Nos.")
                     {
                         Caption = 'Employee - Phone Nos.';
-                        //TODO: Ver RunObject = Report 5210;
+                        RunObject = Report 5210;
                         ToolTip = 'View a list of employees'' phone numbers.';
                     }
                     action("Employee - Unions")
                     {
                         Caption = 'Employee - Unions';
-                        //TODO: Ver RunObject = Report 5211;
+                        RunObject = Report 5211;
                         ToolTip = 'View a list of employees'' union memberships.';
                     }
                     action("Employee - Contracts")
                     {
                         Caption = 'Employee - Contracts';
-                        //TODO: Ver RunObject = Report 5212;
+                        RunObject = Report 5212;
                         ToolTip = 'View all employee contracts.';
                     }
                     action("Employee - Alt. Addresses")
                     {
                         Caption = 'Employee - Alt. Addresses';
-                        //TODO: Ver RunObject = Report 5213;
+                        RunObject = Report 5213;
                         ToolTip = 'View a list of employees'' alternate addresses.';
                     }
                 }

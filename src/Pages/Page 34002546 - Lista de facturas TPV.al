@@ -201,8 +201,8 @@ page 34002546 "Lista de facturas TPV"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action("Co&mments")
@@ -262,9 +262,9 @@ page 34002546 "Lista de facturas TPV"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver ReleaseSalesDoc.PerformManualRelease(Rec);
+                        ReleaseSalesDoc.PerformManualRelease(Rec);
                     end;
                 }
                 action("Re&open")
@@ -276,9 +276,9 @@ page 34002546 "Lista de facturas TPV"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver ReleaseSalesDoc.PerformManualReopen(Rec);
+                        ReleaseSalesDoc.PerformManualReopen(Rec);
                     end;
                 }
             }

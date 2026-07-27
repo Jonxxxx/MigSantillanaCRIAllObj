@@ -20,7 +20,7 @@ page 34002193 "Payroll - Job Journal"
                 trigger OnLookup(var Text: Text): Boolean
                 begin
                     CurrPage.SAVERECORD;
-                    //TODO: Ver JobJnlManagement.LookupName(CurrentJnlBatchName, Rec);
+                    JobJnlManagement.LookupName(CurrentJnlBatchName, Rec);
                     CurrPage.UPDATE(FALSE);
                 end;
             }
@@ -54,7 +54,7 @@ page 34002193 "Payroll - Job Journal"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver JobJnlManagement.GetNames(Rec, JobDescription, AccName);
+                        JobJnlManagement.GetNames(Rec, JobDescription, AccName);
                         //ShowShortcutDimCode(ShortcutDimCode);
                     end;
                 }
@@ -258,7 +258,7 @@ page 34002193 "Payroll - Job Journal"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CODEUNIT.RUN(CODEUNIT::"Post Payroll - Job Journal", Rec);
+                        CODEUNIT.RUN(CODEUNIT::"Post Payroll - Job Journal", Rec);
                         CurrPage.UPDATE(FALSE);
                     end;
                 }
@@ -297,17 +297,17 @@ page 34002193 "Payroll - Job Journal"
         OpenedFromBatch := ("Journal Batch Name" <> '') AND ("Journal Template Name" = '');
         IF OpenedFromBatch THEN BEGIN
             CurrentJnlBatchName := "Journal Batch Name";
-            //TODO: Ver JobJnlManagement.OpenJnl(CurrentJnlBatchName, Rec);
+            JobJnlManagement.OpenJnl(CurrentJnlBatchName, Rec);
             EXIT;
         END;
-        //TODO: Ver JobJnlManagement.TemplateSelection(PAGE::"Payroll - Job Journal Batches", FALSE, Rec, JnlSelected);
+        JobJnlManagement.TemplateSelection(PAGE::"Payroll - Job Journal Batches", FALSE, Rec, JnlSelected);
         IF NOT JnlSelected THEN
             ERROR('');
-        //TODO: Ver JobJnlManagement.OpenJnl(CurrentJnlBatchName, Rec);
+        JobJnlManagement.OpenJnl(CurrentJnlBatchName, Rec);
     end;
 
     var
-        //TODO: Ver JobJnlManagement: Codeunit 34002120;
+        JobJnlManagement: Codeunit 34002120;
         JobDescription: Text[50];
         AccName: Text[50];
         CurrentJnlBatchName: Code[10];

@@ -374,7 +374,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNominas(Rec);
+                    CUNomina.MuestraNominas(Rec);
                 end;
             }
             action(Dimensions)
@@ -386,7 +386,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraDimensiones("No.");
+                    CUNomina.MuestraDimensiones("No.");
                 end;
             }
             action(Qualifications)
@@ -397,7 +397,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraCualificaciones("No.");
+                    CUNomina.MuestraCualificaciones("No.");
                 end;
             }
             action(Absenses)
@@ -408,7 +408,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNovedades(Rec);
+                    CUNomina.MuestraNovedades(Rec);
                 end;
             }
         }
@@ -438,7 +438,7 @@ page 34002181 "Temporary Employee Card OJO"
 
     var
         Mail: Codeunit 397;
-        //TODO: Ver CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 34002104;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

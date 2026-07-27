@@ -34,7 +34,6 @@ page 34002512 "Lista Acciones"
                 }
                 field("Literal Pedir Datos"; "Literal Pedir Datos")
                 {
-                    //TODO: Ver BlankZero = true;
                 }
             }
         }

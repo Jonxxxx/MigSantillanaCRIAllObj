@@ -194,7 +194,7 @@ page 34003015 "Pre Sales List"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 209;
+                RunObject = Report 209;
             }
         }
     }

@@ -151,17 +151,17 @@ page 34002553 "Facturas Venta Regis POS"
                     begin
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Invoice Statistics", Rec, "No.")
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Invoice Stats.", Rec, "No.");
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Invoice Stats.", Rec, "No.");
                     end;
                 }
                 action("Co&mments")
                 {
                     Caption = 'Co&mments';
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = CONST("Posted Invoice"),
-                    //TODO: Ver               "No." = FIELD("No.");
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = CONST("Posted Invoice"),
+                                  "No." = FIELD("No.");
                 }
                 action(Dimensions)
                 {
@@ -190,7 +190,7 @@ page 34002553 "Facturas Venta Regis POS"
                     SalesPost: Codeunit 80;
                 begin
                     //SalesPost.RegistrarCobrosTPVManual(Rec."No."); //001+ Version dspos-sic
-                    //TODO: Ver RegistrarCobrosDsPos.RegistrarCobrosFacturaTPVManual(Rec); //002+-
+                    RegistrarCobrosDsPos.RegistrarCobrosFacturaTPVManual(Rec); //002+-
 
                     //001+ Comentada version dspos anterior
                     /*
@@ -218,6 +218,6 @@ page 34002553 "Facturas Venta Regis POS"
         gtCAE: Text[160];
         gtCAEC: Text[160];
         gtRespuesta: Text[100];
-    //TODO: Ver RegistrarCobrosDsPos: Codeunit 50116;
+        RegistrarCobrosDsPos: Codeunit 50116;
 }
 

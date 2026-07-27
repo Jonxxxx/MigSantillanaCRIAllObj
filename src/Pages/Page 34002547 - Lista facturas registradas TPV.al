@@ -223,17 +223,17 @@ page 34002547 "Lista facturas registradas TPV"
                     begin
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Invoice Statistics", Rec, "No.")
-                        //TODO: Ver ELSE
-                        //TODO: Ver    PAGE.RUNMODAL(PAGE::"Sales Invoice Stats.", Rec, "No.");
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Invoice Stats.", Rec, "No.");
                     end;
                 }
                 action("Co&mments")
                 {
                     Caption = 'Co&mments';
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = CONST("Posted Invoice"),
-                    //TODO: Ver               "No." = FIELD("No.");
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = CONST("Posted Invoice"),
+                                  "No." = FIELD("No.");
                 }
                 action(Dimensions)
                 {

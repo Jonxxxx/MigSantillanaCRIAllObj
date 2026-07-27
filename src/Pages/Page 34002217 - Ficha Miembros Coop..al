@@ -111,7 +111,7 @@ page 34002217 "Ficha Miembros Coop."
                         MESSAGE(Msg001);
                         */
 
-                        //TODO: Ver Funcionescooperativa.ActivarMiembro(Rec);
+                        Funcionescooperativa.ActivarMiembro(Rec);
 
                     end;
                 }
@@ -144,7 +144,7 @@ page 34002217 "Ficha Miembros Coop."
                         
                         MESSAGE(Msg002);
                         */
-                        //TODO: Ver Funcionescooperativa.InActivarMiembro(Rec);
+                        Funcionescooperativa.InActivarMiembro(Rec);
 
                     end;
                 }
@@ -162,7 +162,7 @@ page 34002217 "Ficha Miembros Coop."
                         ConceptosSalariales: Record 34002111;
                         PerfilSal: Record 34002115;
                     begin
-                        //TODO: Ver Funcionescooperativa.RetirarMiembro(Rec);
+                        Funcionescooperativa.RetirarMiembro(Rec);
                     end;
                 }
             }
@@ -179,7 +179,7 @@ page 34002217 "Ficha Miembros Coop."
         ConfNomina: Record 34002103;
         Msg001: Label 'Successful employee activation';
         Msg002: Label 'Successful employee inactivation';
-        //TODO: Ver Funcionescooperativa: Codeunit 34002110;
+        Funcionescooperativa: Codeunit 34002110;
         [InDataSet]
         Editar: Boolean;
         [InDataSet]

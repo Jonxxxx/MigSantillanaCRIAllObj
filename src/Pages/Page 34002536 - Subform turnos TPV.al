@@ -88,9 +88,9 @@ page 34002536 "Subform turnos TPV"
 
                 trigger OnAction()
                 var
-                //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                 begin
-                    //TODO: Ver  cduControl.AbrirTurno("No. tienda", "No. TPV", Fecha, codUsuario);
+                    cduControl.AbrirTurno("No. tienda", "No. TPV", Fecha, codUsuario);
                 end;
             }
             action("Cerrar Turno")
@@ -101,12 +101,12 @@ page 34002536 "Subform turnos TPV"
                 trigger OnAction()
                 var
                     Text001: Label '¿Desea cerrar el turno %1?';
-                //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                 begin
                     IF NOT ISEMPTY THEN
                         IF CONFIRM(Text001, FALSE, "No. turno") THEN BEGIN
-                            //TODO: Ver IF cduControl.CerrarTurno(Rec, codUsuario) THEN
-                            CurrPage.CLOSE;
+                            IF cduControl.CerrarTurno(Rec, codUsuario) THEN
+                                CurrPage.CLOSE;
                         END;
                 end;
             }

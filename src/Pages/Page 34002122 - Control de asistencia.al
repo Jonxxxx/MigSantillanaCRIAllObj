@@ -229,7 +229,7 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchadorManual;
+                        FuncNominas.ProcesaDatosPonchadorManual;
                     end;
                 }
                 action(ImportAuto)
@@ -245,7 +245,7 @@ page 34002122 "Control de asistencia"
                     //TODO: Ver AdoConn: Codeunit 34002124;
                     begin
                         //AdoConn.ReadEmp;
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchador;
+                        FuncNominas.ProcesaDatosPonchador;
                     end;
                 }
                 action("Page Distrib. Control de asis. ")
@@ -309,7 +309,7 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchador;
+                        FuncNominas.ProcesaDatosPonchador;
                     end;
                 }
             }
@@ -343,7 +343,7 @@ page 34002122 "Control de asistencia"
     var
         ConfNom: Record 34002103;
         //TODO: Ver DistribAsistencia: Page 34002107;
-        //TODO: Ver FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 34002104;
         [InDataSet]
 
         HorasVisibles: Boolean;

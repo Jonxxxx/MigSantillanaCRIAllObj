@@ -597,7 +597,6 @@ page 34002251 "Employee Capacity Matrix"
 
     end;
 
-    [Scope('Internal')]
     procedure Load(QtyType1: Option "Net Change","Balance at Date"; MatrixColumns1: array[32] of Text[1024]; var MatrixRecords1: array[32] of Record 2000000007; NoOfMatrixColumns1: Integer)
     var
         i: Integer;

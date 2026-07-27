@@ -49,9 +49,9 @@ page 34003028 "Listado RNC DGII"
 
                 trigger OnAction()
                 var
-                //TODO: Ver ConsultasDGII: Codeunit 34003003;
+                    ConsultasDGII: Codeunit 34003003;
                 begin
-                    //TODO: Ver ConsultasDGII.DescargarListadoRNC;
+                    ConsultasDGII.DescargarListadoRNC;
                     CurrPage.UPDATE;
                 end;
             }

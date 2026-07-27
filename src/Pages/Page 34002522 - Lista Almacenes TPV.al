@@ -74,7 +74,7 @@ page 34002522 "Lista Almacenes TPV"
                 Image = NewWarehouse;
                 Promoted = true;
                 PromotedCategory = Process;
-                //TODO: Ver RunObject = Report 5756;
+                RunObject = Report 5756;
             }
         }
     }

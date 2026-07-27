@@ -94,7 +94,7 @@ page 34002260 "Headline RC Payroll"
         //TODO: Ver HeadlineManagement.GetUserGreetingText(GreetingText);
         DocumentationText := STRSUBSTNO(DocumentationTxt, PRODUCTNAME.SHORT);
 
-        //TODO: Ver FuncionesNom.GetBirthdays(ListaCumpleanos);
+        FuncionesNom.GetBirthdays(ListaCumpleanos);
         NewsText := COPYSTR(STRSUBSTNO(NewsTxt, ListaCumpleanos), 1, MAXSTRLEN(NewsText));
 
         IF Uninitialized THEN
@@ -108,14 +108,14 @@ page 34002260 "Headline RC Payroll"
         Empl: Record 5200;
         EmplList: Page 5201;
         HeadlineManagement: Codeunit 1439;
-        //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         DefaultFieldsVisible: Boolean;
         DocumentationTxt: Label 'Want to learn more about %1?', Comment = '%1 is the NAV short product name.';
         DocumentationUrlTxt: Label 'https://go.microsoft.com/fwlink/?linkid=867580', Locked = true;
         GreetingText: Text[250];
         DocumentationText: Text[250];
         NewsText: Text;
-        ListaCumpleanos: Text;
+        ListaCumpleanos: Text[250];
         UserGreetingVisible: Boolean;
         NewsTxt: Label 'Today''s birthdays %1';
 

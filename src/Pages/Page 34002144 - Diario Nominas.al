@@ -95,7 +95,7 @@ page 34002144 "Diario Nominas"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncionesNomina.InicializaConceptosSalariales;
+                        FuncionesNomina.InicializaConceptosSalariales;
                     end;
                 }
 
@@ -254,7 +254,7 @@ page 34002144 "Diario Nominas"
         Empl: Record 5200;
         CabHistorico: Record 34002117;
         ConfNominas: Record 34002103;
-        //TODO: Ver FuncionesNomina: Codeunit 34002104;
+        FuncionesNomina: Codeunit 34002104;
         StatusEmpl: Boolean;
         TipoConcepto: Option Ingresos,Deducciones,Ambos;
         TipoColumna: Option Cantidad,Importe,Ambos;

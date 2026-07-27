@@ -238,8 +238,8 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action("Co&mments")
@@ -247,10 +247,10 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                     Caption = 'Co&mments';
                     Enabled = ESACC_C1102601023_Enabled;
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = FIELD("Document Type"),
-                    //TODO: Ver               "No." = FIELD("No."),
-                    //TODO: Ver               "Document Line No." = CONST(0);
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                     Visible = ESACC_C1102601023_Visible;
                 }
                 action(Dimensions)
@@ -452,7 +452,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Registrar.RegistraFacturaManual();
+                        Registrar.RegistraFacturaManual();
                     end;
                 }
                 action("Convertir Pedidos DSPOS")
@@ -462,7 +462,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Transfer_SIC.RUN();//001+-
+                        Transfer_SIC.RUN();//001+-
                     end;
                 }
             }
@@ -700,7 +700,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
         [InDataSet]
         JobQueueActive: Boolean;
         wCostaRica: Boolean;
-    //TODO: Ver Registrar: Codeunit 50112;
-    //TODO: Ver Transfer_SIC: Codeunit 50110;
+        Registrar: Codeunit 50112;
+        Transfer_SIC: Codeunit 50110;
 }
 

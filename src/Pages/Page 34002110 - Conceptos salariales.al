@@ -212,11 +212,9 @@ page 34002110 "Conceptos salariales"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver 
-                    /*
                     RunObject = Page "Default Dimensions";
                     RunPageLink = "Table ID" = CONST(34002111),
-                                  "No." = FIELD(Codigo);*/
+                                  "No." = FIELD(Codigo);
                 }
             }
         }

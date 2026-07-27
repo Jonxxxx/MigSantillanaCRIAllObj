@@ -44,8 +44,8 @@ codeunit 56000 "Funciones Santillana"
         TransferReceiptHeader: Record 5746;
         TransferReceiptLine: Record 5747;
         ItemLedgerEntryCons: Record 32;
-        //TODO: Ver MailSetup: Record 409;
-        //TODO: Ver SMTP: Codeunit 400;
+        //MailSetup: Record 409;
+        SMTP: Codeunit 400;
         UserSetup: Record 56000;
         UserSetUp1: Record 56000;
         Window: Dialog;
@@ -58,9 +58,9 @@ codeunit 56000 "Funciones Santillana"
         rGenJournalLine: Record 81;
         rCustLedgerEntry: Record 21;
         rItem: Record 27;
-        //TODO: Ver rICR: Record 5717;
+        rICR: Record "Item Reference";
         wDesc: Decimal;
-        //TODO: Ver NoSerMang: Codeunit "No. Series";
+        NoSerMang: Codeunit "No. Series";
         Error002: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
         Error003: Label 'Existe, al menos, una linea con "%1" = %2 sin "%3" ("%4" = %5). Antes de registrar tiene que asociar la factura a esa linea.';
         TransHeader: Record 5740;
@@ -565,50 +565,45 @@ codeunit 56000 "Funciones Santillana"
 
     end;
 
-    procedure EnviaAConfirmarPedidoVenta(SalesHeader: Record 36)
+    procedure EnviaAConfirmarPedidoVenta(SalesHeader: Record "Sales Header")
     var
-        SenderName: Text[100];
-        SenderAddress: Text[100];
-        Recipient: Text[1024];
-        Subject: Text[100];
-        Body: Text[1024];
-        SalesHeader1: Record 36;
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        Recipients: List of [Text];
+        Subject: Text;
+        Body: Text;
+        NoRecipientsErr: Label 'No existen usuarios configurados para recibir correos de confirmación de pedidos.';
+        EmailNotSentErr: Label 'No fue posible enviar el correo de confirmación del pedido %1.';
     begin
-
-        ConfSantillana.GET;
-        //TODO: Ver MailSetup.GET;
-        Recipient := '';
-
-        UserSetup.GET(USERID);
+        ConfSantillana.Get();
+        UserSetup.Get(UserId());
+        //TODO: Ver
         /*
-        IF UserSetup."Envia E-mail Confirmacion Ped." THEN
-          BEGIN
-            Subject       := ConfSantillana."Titulo E-mail Confirm. Pedido" + ' ' +SalesHeader."No." + ' '+txt001 +
-                             SalesHeader."Sell-to Customer No." + '-'+SalesHeader."Bill-to Name";
-            SenderName    := COMPANYNAME;
-            SenderAddress := MailSetup."User ID";
-            //Correos de usuario(s) destino
-            UserSetUp1.RESET;
-            UserSetUp1.SETRANGE("Recibe E-mail Confirmacion Ped",TRUE);
-            IF UserSetUp1.FINDSET(FALSE,FALSE) THEN
-              REPEAT
-                UserSetUp1.TESTFIELD("E-Mail");
-                Recipient += UserSetUp1."E-Mail"+';';
-              UNTIL UserSetUp1.NEXT = 0;
-        
-            //Se quita el signo ultimo ;
-            Recipient := COPYSTR(Recipient,1,(STRLEN(Recipient)-1));
-        
-            SMTP.CreateMessage(SenderName,SenderAddress,Recipient,Subject,Body,TRUE);
-            Body := '';
-        
-            SMTP.AppendBody(Body);
-            SMTP.Send;
-            SalesHeader."Estado distribucion" := SalesHeader."Estado distribucion"::"Para Confirmar";
-            SalesHeader.MODIFY;
-          END;
-         */
+        if not UserSetup."Envia E-mail Confirmacion Ped." then
+            exit;
 
+        Subject := ConfSantillana."Titulo E-mail Confirm. Pedido" + ' ' + SalesHeader."No." + ' ' + Txt001 + SalesHeader."Sell-to Customer No." + '-' + SalesHeader."Bill-to Name";
+        Body := '';
+
+        UserSetup1.Reset();
+        UserSetup1.SetRange("Recibe E-mail Confirmacion Ped", true);
+
+        if UserSetup1.FindSet() then
+            repeat
+                UserSetup1.TestField("E-Mail");
+                Recipients.Add(UserSetup1."E-Mail");
+            until UserSetup1.Next() = 0;
+        */
+        if Recipients.Count() = 0 then
+            Error(NoRecipientsErr);
+
+        EmailMessage.Create(Recipients, Subject, Body, true);
+
+        if not Email.Send(EmailMessage, Enum::"Email Scenario"::Default) then
+            Error(EmailNotSentErr, SalesHeader."No.");
+
+        SalesHeader."Estado distribucion" := SalesHeader."Estado distribucion"::"Para Confirmar";
+        SalesHeader.Modify();
     end;
 
     procedure CalcAvailableCredit(CustNo: Code[20]; SalesHeaderActual: Record 36): Decimal
@@ -692,7 +687,7 @@ codeunit 56000 "Funciones Santillana"
         Counter: Integer;
         CounterOK: Integer;
         rConfEmpresa: Record 56001;
-        //TODO: Ver cuNoSerMangm: Codeunit "No. Series";
+        cuNoSerMangm: Codeunit "No. Series";
         rCreaCupLot: Record 51011;
         rCabCupon1: Record 51009;
         rAnoEscolar: Record 51013;
@@ -740,7 +735,7 @@ codeunit 56000 "Funciones Santillana"
 
         REPEAT
 
-            //TODO: Ver rCabCupon."No. Cupon" := cuNoSerMangm.GetNextNo(rConfEmpresa."No. serie Cupon", WORKDATE, TRUE);
+            rCabCupon."No. Cupon" := cuNoSerMangm.GetNextNo(rConfEmpresa."No. serie Cupon", WORKDATE, TRUE);
             Counter := Counter + 1;
             Window.UPDATE(1, rCabCupon."No. Cupon");
             Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
@@ -912,36 +907,33 @@ codeunit 56000 "Funciones Santillana"
 
         END
         ELSE BEGIN
-            //TODO: Ver 
-            /*
-                rICR.RESET;
-                rICR.SETRANGE("Cross-Reference Type", rICR."Cross-Reference Type"::"Bar Code");
-                rICR.SETRANGE("Cross-Reference No.", CodProducto);
-                IF rICR.FINDFIRST THEN BEGIN
-                    rSalesHeader_Loc.RESET;
-                    rSalesHeader_Loc.INIT;
-                    rSalesHeader_Loc.VALIDATE("Document Type", 1);
-                    rSalesHeader_Loc."No." := txt001;
-                    rSalesHeader_Loc.VALIDATE("Posting Date", WORKDATE);
-                    rSalesHeader_Loc.VALIDATE("Sell-to Customer No.", CodCliente);
-                    rSalesHeader_Loc.INSERT(TRUE);
+            rICR.RESET;
+            rICR.SETRANGE("Reference Type", rICR."Reference Type"::"Bar Code");
+            rICR.SETRANGE(rICR."Item No.", CodProducto);
+            IF rICR.FINDFIRST THEN BEGIN
+                rSalesHeader_Loc.RESET;
+                rSalesHeader_Loc.INIT;
+                rSalesHeader_Loc.VALIDATE("Document Type", 1);
+                rSalesHeader_Loc."No." := txt001;
+                rSalesHeader_Loc.VALIDATE("Posting Date", WORKDATE);
+                rSalesHeader_Loc.VALIDATE("Sell-to Customer No.", CodCliente);
+                rSalesHeader_Loc.INSERT(TRUE);
 
-                    rSalesLines_Loc.INIT;
-                    rSalesLines_Loc.VALIDATE("Document Type", 1);
-                    rSalesLines_Loc.Temporal := TRUE;
-                    rSalesLines_Loc."Document No." := txt001;
-                    rSalesLines_Loc."Line No." := 1000;
-                    rSalesLines_Loc.VALIDATE(Type, rSalesLines_Loc.Type::Item);
-                    rSalesLines_Loc.VALIDATE("No.", rICR."Item No.");
-                    rSalesLines_Loc.VALIDATE(Quantity, 1);
-                    rSalesLines_Loc.INSERT(TRUE);
-                    wPrecio_Loc := rSalesLines_Loc."Unit Price";
-                    wDesc_Loc := rSalesLines_Loc."Line Discount %";
+                rSalesLines_Loc.INIT;
+                rSalesLines_Loc.VALIDATE("Document Type", 1);
+                rSalesLines_Loc.Temporal := TRUE;
+                rSalesLines_Loc."Document No." := txt001;
+                rSalesLines_Loc."Line No." := 1000;
+                rSalesLines_Loc.VALIDATE(Type, rSalesLines_Loc.Type::Item);
+                rSalesLines_Loc.VALIDATE("No.", rICR."Item No.");
+                rSalesLines_Loc.VALIDATE(Quantity, 1);
+                rSalesLines_Loc.INSERT(TRUE);
+                wPrecio_Loc := rSalesLines_Loc."Unit Price";
+                wDesc_Loc := rSalesLines_Loc."Line Discount %";
 
-                    IF rSalesHeader_Loc.DELETE(TRUE) THEN;
+                IF rSalesHeader_Loc.DELETE(TRUE) THEN;
 
-                END;
-                */
+            END;
         END;
     end;
 
@@ -1079,7 +1071,7 @@ codeunit 56000 "Funciones Santillana"
         //Cabecera de Packing
         CabPackReg.INIT;
         CabPackReg.TRANSFERFIELDS(CabPack);
-        //TODO: Ver CabPackReg."No." := NoSerMang.GetNextNo(ConfSantillana."No. Serie Packing Reg.", WORKDATE, TRUE);
+        CabPackReg."No." := NoSerMang.GetNextNo(ConfSantillana."No. Serie Packing Reg.", WORKDATE, TRUE);
         CabPackReg."No. Packing Origen" := CabPack."No.";
         CabPackReg."Fecha Registro" := WORKDATE;
         CabPackReg.INSERT;
@@ -1357,84 +1349,54 @@ codeunit 56000 "Funciones Santillana"
         MESSAGE('finalizado');
     end;
 
-    procedure CreaQRFE(No: Code[20])
+    procedure CreaQRFE(DocumentNo: Code[20])
     var
-        CompanyInformation: Record 79;
-        //TODO: Ver TempBlob: Record 99008535;
-        QRCodeInput: Text[1024];
-        QRCodeFileName: Text[1024];
-        SIH: Record 112;
-        SCrMH: Record 114;
+        SalesInvoiceHeader: Record "Sales Invoice Header";
+        SalesCrMemoHeader: Record "Sales Cr.Memo Header";
+        TempBlob: Codeunit "Temp Blob";
+        BarcodeImageProvider2D: Interface "Barcode Image Provider 2D";
+        QRCodeInStream: InStream;
+        QRCodeOutStream: OutStream;
     begin
-        //TODO: Ver 
-        /*
-        //003+
-        CompanyInformation.GET;
+        BarcodeImageProvider2D := Enum::"Barcode Image Provider 2D"::Dynamics2D;
 
-        IF SIH.GET(No) THEN BEGIN
-            QRCodeInput := SIH."No.";
-            CLEAR(TempBlob);
-            CLEAR(QRCodeFileName);
-            QRCodeFileName := GetQRCodeV2(QRCodeInput);
-            UplFileBLOBImpndDelServerFileV2(TempBlob, QRCodeFileName);
-            SIH."QR Code FE" := TempBlob.Blob;
-            SIH.MODIFY;
-            IF NOT ISSERVICETIER THEN
-                IF EXISTS(QRCodeFileName) THEN
-                    ERASE(QRCodeFileName);
-        END ELSE
-            IF SCrMH.GET(No) THEN BEGIN
-                QRCodeInput := SCrMH."No.";
-                CLEAR(TempBlob);
-                CLEAR(QRCodeFileName);
-                QRCodeFileName := GetQRCodeV2(QRCodeInput);
-                UplFileBLOBImpndDelServerFileV2(TempBlob, QRCodeFileName);
-                SCrMH."QR Code FE" := TempBlob.Blob;
-                SCrMH.MODIFY;
-                IF NOT ISSERVICETIER THEN
-                    IF EXISTS(QRCodeFileName) THEN
-                        ERASE(QRCodeFileName);
-            END;
-        */
+        if SalesInvoiceHeader.Get(DocumentNo) then begin
+            TempBlob := BarcodeImageProvider2D.EncodeImage(SalesInvoiceHeader."No.", Enum::"Barcode Symbology 2D"::"QR-Code");
+            TempBlob.CreateInStream(QRCodeInStream);
+
+            Clear(SalesInvoiceHeader."QR Code FE");
+            SalesInvoiceHeader."QR Code FE".CreateOutStream(QRCodeOutStream);
+            CopyStream(QRCodeOutStream, QRCodeInStream);
+
+            SalesInvoiceHeader.Modify();
+            exit;
+        end;
+
+        if SalesCrMemoHeader.Get(DocumentNo) then begin
+            TempBlob := BarcodeImageProvider2D.EncodeImage(SalesCrMemoHeader."No.", Enum::"Barcode Symbology 2D"::"QR-Code");
+            TempBlob.CreateInStream(QRCodeInStream);
+
+            Clear(SalesCrMemoHeader."QR Code FE");
+            SalesCrMemoHeader."QR Code FE".CreateOutStream(QRCodeOutStream);
+            CopyStream(QRCodeOutStream, QRCodeInStream);
+
+            SalesCrMemoHeader.Modify();
+        end;
     end;
 
-    //TODO: Ver 
-    /*
-    [Scope('Personalization')]
-    procedure CreateQRCodeV2(QRCodeInput: Text; var TempBLOB: Record 99008535)
+    procedure CreateQRCodeV2(QRCodeInput: Text; var TempBlob: Codeunit "Temp Blob")
+    begin
+        Clear(TempBlob);
+        TempBlob := GetQRCodeV2(QRCodeInput);
+    end;
+
+    procedure GetQRCodeV2(QRCodeInput: Text) TempBlob: Codeunit "Temp Blob"
     var
-        QRCodeFileName: Text[1024];
+        BarcodeImageProvider2D: Interface "Barcode Image Provider 2D";
     begin
-
-        CLEAR(TempBLOB);
-        QRCodeFileName := GetQRCodeV2(QRCodeInput);
-        UplFileBLOBImpndDelServerFileV2(TempBLOB, QRCodeFileName);
+        BarcodeImageProvider2D := Enum::"Barcode Image Provider 2D"::Dynamics2D;
+        TempBlob := BarcodeImageProvider2D.EncodeImage(QRCodeInput, Enum::"Barcode Symbology 2D"::"QR-Code");
     end;
 
-    procedure UplFileBLOBImpndDelServerFileV2(var TempBlob: Record 99008535; FileName: Text[1024])
-    var
-        FileManagement: Codeunit 419;
-    begin
-
-        FileManagement.BLOBImportFromServerFile(TempBlob, FileName);
-        DeleteServerFile(FileName);
-    end;
-
-    [Scope('Personalization')]
-    procedure GetQRCodeV2(QRCodeInput: Text) QRCodeFileName: Text[1024]
-    var
-        EInvoiceObjectFactory: Codeunit 10147;
-        IBarCodeProvider: DotNet IBarcodeProvider;
-    begin
-        EInvoiceObjectFactory.GetBarCodeProvider(IBarCodeProvider);
-        QRCodeFileName := IBarCodeProvider.GetBarcode(QRCodeInput);
-    end;
-
-    local procedure DeleteServerFile(ServerFileName: Text)
-    begin
-        //IF ERASE(ServerFileName) THEN;
-        //003-
-    end;
-    */
 }
 
