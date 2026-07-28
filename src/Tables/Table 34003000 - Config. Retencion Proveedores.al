@@ -20,7 +20,7 @@ table 34003000 "Config. Retencion Proveedores"
             Caption = 'G/L Account';
             TableRelation = "G/L Account";
         }
-        field(4; "Base Cálculo"; Option)
+        field(4; "Base Calculo"; Option)
         {
             Caption = 'Base';
             OptionMembers = ITBIS,"B. Imponible","Total Fra.",Ninguno;
@@ -71,7 +71,7 @@ table 34003000 "Config. Retencion Proveedores"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Codigo Retencion", "Descripcion", "Base Cálculo", "Importe Retencion", "Tipo Retencion")
+        fieldgroup(DropDown; "Codigo Retencion", "Descripcion", "Base Calculo", "Importe Retencion", "Tipo Retencion")
         {
         }
     }

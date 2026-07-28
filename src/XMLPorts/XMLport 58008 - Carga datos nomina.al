@@ -344,7 +344,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(EC_Direccion; "Empresas Cotizacion"."Direccion")
                 {
                 }
-                fieldelement(EC_Numero; "Empresas Cotizacion"."Número")
+                fieldelement(EC_Numero; "Empresas Cotizacion"."Numero")
                 {
                 }
                 fieldelement(EC_CodigoPostal; "Empresas Cotizacion"."Codigo Postal")
@@ -568,7 +568,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(CN_FechaSecuencia; "Configuracion nominas"."Fecha secuencia")
                 {
                 }
-                fieldelement(CN_MetodoCalculoAusencias; "Configuracion nominas"."Método cálculo ausencias")
+                fieldelement(CN_MetodoCalculoAusencias; "Configuracion nominas"."Metodo Calculo ausencias")
                 {
                 }
                 fieldelement(CN_NoSerieEmpleados; "Configuracion nominas"."Concepto devolucion ISR")
@@ -939,7 +939,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(PS_Prorratear; "Perfil Salarial".Prorratear)
                 {
                 }
-                fieldelement("PS_FormulaCálculo"; "Perfil Salarial"."Formula cálculo")
+                fieldelement("PS_FormulaCalculo"; "Perfil Salarial"."Formula Calculo")
                 {
                 }
                 fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Periodo generac.")
@@ -1047,7 +1047,7 @@ xmlport 58008 "Carga datos nomina"
                 fieldelement(TISR_NoOrden; "Tabla retencion ISR"."No. orden")
                 {
                 }
-                fieldelement("TISR_ImporteMáximo"; "Tabla retencion ISR"."Importe Máximo")
+                fieldelement("TISR_ImporteMaximo"; "Tabla retencion ISR"."Importe Maximo")
                 {
                 }
                 fieldelement("TISR_ImporteRetencion"; "Tabla retencion ISR"."Importe retencion")

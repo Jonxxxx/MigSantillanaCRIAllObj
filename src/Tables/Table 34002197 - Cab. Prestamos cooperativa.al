@@ -48,7 +48,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         field(5; "Tipo prestamo"; Code[20])
         {
             Caption = 'Loan type';
-            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de préstamo"));
+            TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de Prestamo"));
         }
         field(6; Importe; Decimal)
         {

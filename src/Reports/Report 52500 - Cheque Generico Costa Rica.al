@@ -492,8 +492,8 @@ report 52500 "Cheque Generico Costa Rica"
                                       CurrName := Txt003;
                                     */
 
-                                    //TODO: VerIF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
-                                    ERROR(DescriptionLine[1]);
+                                    IF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
+                                        ERROR(DescriptionLine[1]);
                                     VoidText := '';
 
                                     //AMS para cheques con monto en texto muy largos
@@ -901,8 +901,7 @@ report 52500 "Cheque Generico Costa Rica"
                                 NombCta2 := GLAcc.Name;
                             END;
                     END;
-                    //TODO: VerCheckDateText :=
-                    //TODO: VerChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
+                    CheckDateText := ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
                 END ELSE BEGIN
                     IF ChecksPrinted > 0 THEN
                         CurrReport.BREAK;
@@ -1092,10 +1091,10 @@ report 52500 "Cheque Generico Costa Rica"
         Currency: Record 4;
         GenJnlTemplate: Record 80;
         WindowsLang: Record 2000000045;
-        FormatAddr: Codeunit 365;
+        FormatAddr: Codeunit "Format Address";
         CheckManagement: Codeunit 367;
         //TODO: VerParagraphHandling: Codeunit 10025;
-        //TODO: VerChkTransMgt: Report 10400;
+        ChkTransMgt: Report 10400;
         CompanyAddr: array[8] of Text[50];
         CheckToAddr: array[8] of Text[50];
         BalancingType: Option "G/L Account",Customer,Vendor,"Bank Account";

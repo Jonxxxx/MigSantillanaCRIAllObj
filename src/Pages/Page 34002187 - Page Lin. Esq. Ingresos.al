@@ -59,7 +59,7 @@ page 34002187 "Page Lin. Esq. Ingresos"
     trigger OnAfterGetRecord()
     begin
         ImporteEditable := TRUE;
-        IF "Formula cálculo" <> '' THEN
+        IF "Formula Calculo" <> '' THEN
             ImporteEditable := FALSE
         ELSE
             IF "Concepto salarial" = ConfNom."Concepto Sal. Base" THEN

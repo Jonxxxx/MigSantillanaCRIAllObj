@@ -88,7 +88,6 @@ report 34002137 "Genera Diario Proyectos"
                 }
                 column(Concepto_salarial; "Concepto salarial")
                 {
-                    DecimalPlaces = 0 : 0;
                 }
                 column(Concepto_Sal_Desc; ConceptoSalDesc)
                 {

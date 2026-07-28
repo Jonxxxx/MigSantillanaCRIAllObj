@@ -563,7 +563,7 @@ report 34002528 "DsPOS - Credit Memo SV OFF"
         ConfigLinRep: Record 56002;
         SIH: Record 112;
         VatBussPG: Record 323;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
                          Cust: Record 18;
                          DescriptionLine: array [2] of Text[250];
                          NoSeriesMgt: Codeunit 396;

@@ -374,7 +374,7 @@ report 52543 "Factura Santillana CR FE"
                 ELSE
                     txtIva := '';
 
-                //TODO: no existe ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
+                ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
 
                 //MOI - 12/02/2015:Inicio
                 CLEAR(Comentario);
@@ -521,7 +521,7 @@ report 52543 "Factura Santillana CR FE"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        //TODO: no existe ChkTransMgt: Report 10400;
+        ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';

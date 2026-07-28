@@ -21,17 +21,14 @@ report 34002503 "DsPOS - Cuadre de caja"
             column(NombreTienda; "Nombre tienda")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Tienda';
             }
             column(NombreTPV; "Nombre TPV")
             {
                 IncludeCaption = true;
-                OptionCaption = 'TPV';
             }
             column(Fecha; Fecha)
             {
                 IncludeCaption = true;
-                OptionCaption = 'Fecha';
             }
             column(TurnoCaption; lblTurno)
             {
@@ -52,12 +49,12 @@ report 34002503 "DsPOS - Cuadre de caja"
             column(HoraApertura; "Hora apertura")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Apertura:';
+
             }
             column(HoraCierre; "Hora cierre")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Cierre:';
+
             }
             column(UsuarioApertura; "Usuario apertura")
             {
@@ -98,7 +95,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                                Fecha = FIELD(Fecha),
                                "No. turno" = FIELD("No. turno");
                 DataItemTableView = SORTING("Cod. tienda", "Cod. TPV", Fecha, "No. turno", "Forma de pago")
-                                    WHERE("Tipo transaccion" = FILTER(Cobro TPV|Anulacion));
+                                    WHERE("Tipo transaccion" = FILTER('Cobro TPV' | Anulacion));
                 column(Pagos_TipoMov; TipoMov)
                 {
                 }
@@ -108,7 +105,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                 column(Pagos_FormaDePago; "Forma de pago")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Forma de pago';
+
                 }
                 column(Pagos_Importe; Importe)
                 {
@@ -166,7 +163,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                 column(FC_Importe; "Importe (DL)")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Fondo de caja:';
+
                 }
 
                 trigger OnPreDataItem()
@@ -191,7 +188,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                 column(OC_Importe; "Importe (DL)")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Fondo de caja:';
+
                 }
 
                 trigger OnAfterGetRecord()
@@ -266,7 +263,7 @@ report 34002503 "DsPOS - Cuadre de caja"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     field(blnDetallado; blnDetallado)
                     {

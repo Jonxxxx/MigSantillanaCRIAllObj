@@ -5,15 +5,15 @@ table 34002145 "CxC Empleados"
 
     fields
     {
-        field(1; "No. Préstamo"; Code[20])
+        field(1; "No. Prestamo"; Code[20])
         {
 
             trigger OnValidate()
             begin
-                IF "No. Préstamo" <> xRec."No. Préstamo" THEN BEGIN
+                IF "No. Prestamo" <> xRec."No. Prestamo" THEN BEGIN
                     ConfNominas.GET;
                     GestNoSerie.TestManual(TraeCodNoSerie);
-                    "No. Préstamo" := '';
+                    "No. Prestamo" := '';
                 END;
             end;
         }
@@ -33,8 +33,8 @@ table 34002145 "CxC Empleados"
         }
         field(4; "Tipo CxC"; Option)
         {
-            Description = ' ,Préstamo,Factura';
-            OptionMembers = " ","Préstamo",Factura;
+            Description = ' ,Prestamo,Factura';
+            OptionMembers = " ","Prestamo",Factura;
         }
         field(5; Importe; Decimal)
         {
@@ -176,7 +176,7 @@ table 34002145 "CxC Empleados"
 
     keys
     {
-        key(Key1; "No. Préstamo")
+        key(Key1; "No. Prestamo")
         {
         }
     }
@@ -191,9 +191,9 @@ table 34002145 "CxC Empleados"
     begin
         ConfNominas.Get();
 
-        if "No. Préstamo" = '' then begin
+        if "No. Prestamo" = '' then begin
             ConfNominas.TestField("No. serie CxC");
-            "No. Préstamo" := NoSeries.GetNextNo(ConfNominas."No. serie CxC");
+            "No. Prestamo" := NoSeries.GetNextNo(ConfNominas."No. serie CxC");
         end;
 
         Pendiente := true;
@@ -220,10 +220,10 @@ table 34002145 "CxC Empleados"
         TestNoSerie;
 
         /*
-        IF GestNoSerie.SelectSeries(TraeCodNoSerie, CxCEmpleadosAnt."No. Préstamo", "No. Préstamo") THEN BEGIN
+        IF GestNoSerie.SelectSeries(TraeCodNoSerie, CxCEmpleadosAnt."No. Prestamo", "No. Prestamo") THEN BEGIN
             ConfNominas.GET;
             TestNoSerie;
-            GestNoSerie.SetSeries("No. Préstamo");
+            GestNoSerie.SetSeries("No. Prestamo");
             EXIT(TRUE);
         END;
         */
@@ -232,7 +232,7 @@ table 34002145 "CxC Empleados"
     local procedure TestNoSerie(): Boolean
     begin
         CASE "Tipo CxC" OF
-            "Tipo CxC"::Préstamo:
+            "Tipo CxC"::Prestamo:
                 ConfNominas.TESTFIELD("No. serie CxC");
         END;
     end;
@@ -240,7 +240,7 @@ table 34002145 "CxC Empleados"
     local procedure TraeCodNoSerie(): Code[10]
     begin
         CASE "Tipo CxC" OF
-            "Tipo CxC"::Préstamo:
+            "Tipo CxC"::Prestamo:
                 EXIT(ConfNominas."No. serie CxC");
         END;
     end;

@@ -11,7 +11,7 @@ table 34002169 "DSPayroll Cue"
         }
         field(2; Loans; Integer)
         {
-            CalcFormula = Count("Historico Cab. Préstamo" WHERE(Pendiente = CONST(True)));
+            CalcFormula = Count("Historico Cab. Prestamo" WHERE(Pendiente = CONST(True)));
             Caption = 'Pending Loans';
             Editable = false;
             FieldClass = FlowField;

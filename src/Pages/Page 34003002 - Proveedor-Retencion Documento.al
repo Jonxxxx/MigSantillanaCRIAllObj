@@ -16,7 +16,7 @@ page 34003002 "Proveedor-Retencion Documento"
                 field("Cta. Contable"; "Cta. Contable")
                 {
                 }
-                field("Base Cálculo"; "Base Cálculo")
+                field("Base Calculo"; "Base Calculo")
                 {
                 }
                 field(Devengo; Devengo)

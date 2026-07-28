@@ -23,7 +23,7 @@ page 34002166 "Niveles puestos laborales"
                 field("Importe Medio"; "Importe Medio")
                 {
                 }
-                field("Importe máximo"; "Importe máximo")
+                field("Importe Maximo"; "Importe Maximo")
                 {
                 }
             }

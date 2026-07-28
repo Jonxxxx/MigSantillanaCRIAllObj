@@ -1147,7 +1147,7 @@
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value EvaluationMode="Auto">Descuento por Pronto pago en Recibo Nota crédito descuento</Value>
+                                      <Value EvaluationMode="Auto">Descuento por Pronto pago en Recibo Nota Credito descuento</Value>
                                       <Style>
                                         <FontSize>9pt</FontSize>
                                       </Style>

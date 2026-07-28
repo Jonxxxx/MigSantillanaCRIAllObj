@@ -40,7 +40,7 @@ table 34002196 "Mov. cooperativa"
             Caption = 'Transaction type';
             DataClassification = ToBeClassified;
             OptionCaption = ' ,Deposit,Loan,Fee,Late fee';
-            OptionMembers = " ",Aporte,"Préstamo",Cuota,Mora;
+            OptionMembers = " ",Aporte,"Prestamo",Cuota,Mora;
         }
         field(7; Importe; Decimal)
         {

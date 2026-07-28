@@ -118,8 +118,8 @@ pageextension 50056 EXCCRIPurchaseStatistics extends "Purchase Statistics"
             EXCCRIRetentionCode[EXCCRICounter] :=
                 EXCCRIRetentionDocument."Codigo Retencion";
 
-            if EXCCRIRetentionDocument."Base Cálculo" <>
-               EXCCRIRetentionDocument."Base Cálculo"::Ninguno
+            if EXCCRIRetentionDocument."Base Calculo" <>
+               EXCCRIRetentionDocument."Base Calculo"::Ninguno
             then
                 if Rec."Prices Including VAT" then
                     EXCCRIRetentionAmount[EXCCRICounter] :=

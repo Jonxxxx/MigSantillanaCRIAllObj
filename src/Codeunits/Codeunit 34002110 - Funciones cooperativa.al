@@ -204,7 +204,7 @@ codeunit 34002110 "Funciones cooperativa"
         Movcooperativa."Employee No." := HistCabPrestcooperativa."Employee No.";
         Movcooperativa."Fecha registro" := CabPrestamoscoop."Fecha Inicio Deduccion";
         Movcooperativa."No. documento" := HistCabPrestcooperativa."No. Prestamo";
-        Movcooperativa."Tipo transaccion" := Movcooperativa."Tipo transaccion"::Préstamo;
+        Movcooperativa."Tipo transaccion" := Movcooperativa."Tipo transaccion"::Prestamo;
         Movcooperativa.Importe := HistCabPrestcooperativa.Importe;
         Movcooperativa."Concepto salarial" := HistCabPrestcooperativa."Concepto Salarial";
         Movcooperativa.INSERT(TRUE);
@@ -251,8 +251,8 @@ codeunit 34002110 "Funciones cooperativa"
             ELSE BEGIN
                 Miembroscooperativa.TESTFIELD(Importe);
                 PerfilSal.Cantidad := 1;
-                PerfilSal."Formula cálculo" := ConfNominas."Concepto Sal. Base" + '*' + FORMAT(Miembroscooperativa.Importe / 100);
-                PerfilSal.VALIDATE("Formula cálculo");
+                PerfilSal."Formula Calculo" := ConfNominas."Concepto Sal. Base" + '*' + FORMAT(Miembroscooperativa.Importe / 100);
+                PerfilSal.VALIDATE("Formula Calculo");
             END;
         END;
         PerfilSal."1ra Quincena" := Miembroscooperativa."1ra Quincena";

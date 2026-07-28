@@ -88,7 +88,6 @@ report 34002129 "Listado Nomina Proyectos"
                 }
                 column(Concepto_salarial; "Concepto salarial")
                 {
-                    DecimalPlaces = 0 : 0;
                 }
                 column(Precio_TarifaCaption; FIELDCAPTION("Precio Tarifa"))
                 {

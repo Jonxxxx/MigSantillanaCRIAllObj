@@ -10,7 +10,7 @@ page 34002151 "Configuracion nominas"
             group(General)
             {
                 Caption = 'General';
-                field("Método cálculo ausencias"; "Método cálculo ausencias")
+                field("Metodo Calculo ausencias"; "Metodo Calculo ausencias")
                 {
                     Importance = Additional;
                 }

@@ -714,7 +714,7 @@ report 56138 "Estadisticas de Vtas."
             trigger OnPreDataItem()
             var
                 rSCMH: Record 114;
-                lText001: Label 'El Nº Devolucion introducido no pertenece a ninguna Nota de crédito registrada';
+                lText001: Label 'El Nº Devolucion introducido no pertenece a ninguna Nota de Credito registrada';
                 lrSIH: Record 112;
                 lrSCMH: Record 114;
             begin
@@ -938,7 +938,7 @@ report 56138 "Estadisticas de Vtas."
         ImpVatIncCR: Decimal;
         ImporteVatIncGenTotCR: Decimal;
         ImporteVatIncGranTotCR: Decimal;
-        ImporteImpIncCR_Lbl: Label 'Importe Imp. Inc. Nota Crédito';
+        ImporteImpIncCR_Lbl: Label 'Importe Imp. Inc. Nota Credito';
         CodColegio: Code[20];
         CodColegio_Caption: Label 'School Code';
         NombreArchivo: Text;

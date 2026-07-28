@@ -638,7 +638,7 @@ codeunit 34002104 "Funciones Nomina"
                                 END;
                             END;
 
-                            IF ("Inicializa Importe") AND (LinEsqPercepcion."Formula cálculo" = '') THEN BEGIN
+                            IF ("Inicializa Importe") AND (LinEsqPercepcion."Formula Calculo" = '') THEN BEGIN
                                 IF "Inicializa Cantidad" THEN BEGIN
                                     //                    IF (LinEsqPercepcion."Concepto salarial" <> ConfNomina."Concepto Sal. Base") AND
                                     //                       (LinEsqPercepcion."Concepto salarial" <> ConfNomina."Concepto Dieta") THEN
@@ -658,7 +658,7 @@ codeunit 34002104 "Funciones Nomina"
                                 END;
                             END;
 
-                            IF ("Inicializa Importe") AND (LinEsqPercepcion."Formula cálculo" = '') THEN BEGIN
+                            IF ("Inicializa Importe") AND (LinEsqPercepcion."Formula Calculo" = '') THEN BEGIN
                                 IF "Inicializa Cantidad" THEN BEGIN
                                     IF (LinEsqPercepcion."Concepto salarial" <> ConfNomina."Concepto Sal. Base") AND
                                        (LinEsqPercepcion."Concepto salarial" <> ConfNomina."Concepto Dieta") THEN BEGIN

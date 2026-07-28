@@ -1,4 +1,4 @@
-codeunit 34002525 "Notas Crédito Pdtes POS"
+codeunit 34002525 "Notas Credito Pdtes POS"
 {
 
     trigger OnRun()

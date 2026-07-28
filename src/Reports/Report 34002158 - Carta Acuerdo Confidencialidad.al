@@ -64,7 +64,7 @@ report 34002158 "Carta Acuerdo Confidencialidad"
             column(Dir_Empresa; EmpresaCot.Direccion)
             {
             }
-            column(No_Empresa; EmpresaCot.nomero)
+            column(No_Empresa; EmpresaCot.Numero)
             {
             }
             column(Provincia_Empresa; EmpresaCot.Provincia)

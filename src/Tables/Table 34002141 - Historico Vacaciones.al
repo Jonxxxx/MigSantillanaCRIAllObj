@@ -24,7 +24,7 @@ table 34002141 "Historico Vacaciones"
                 DiaCalculado: Integer;
             begin
                 /*
-                FuncNomina.CálculoEntreFechas("Fecha Inicio","Fecha Fin",AnoCalculado,MesCalculado,DiaCalculado);
+                FuncNomina.CalculoEntreFechas("Fecha Inicio","Fecha Fin",AnoCalculado,MesCalculado,DiaCalculado);
                 
                 Dias := DiaCalculado * Tipo;
                 */

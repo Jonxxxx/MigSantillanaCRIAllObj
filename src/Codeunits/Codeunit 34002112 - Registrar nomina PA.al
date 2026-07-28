@@ -410,7 +410,7 @@ codeunit 34002112 "Registrar nomina PA"
 
                     IF DiasIncid <= 0 THEN
                         DiasIncid := 1;
-                    CalcDias.GET(ConfNominas."Método cálculo ausencias");
+                    CalcDias.GET(ConfNominas."Metodo Calculo ausencias");
                     ImporteIncid := IngresoSalario / CalcDias.Valor * DiasIncid;
                     ImporteTotal := ImporteTotal - ImporteIncid;
                 END;
@@ -1017,12 +1017,12 @@ codeunit 34002112 "Registrar nomina PA"
         Base := TotalISR[1] [1];
         //message('%1',base);
 
-        // Cálculo del ISR. Busqueda de Rangos ISR
+        // Calculo del ISR. Busqueda de Rangos ISR
         Indice := 1;
         RetencionISR.SETRANGE(Ano, FORMAT(Ano, 4, '<Standard Format,0>'));
         RetencionISR.FINDSET(FALSE, FALSE);
         REPEAT
-            RangoISR[Indice] := RetencionISR."Importe Máximo";
+            RangoISR[Indice] := RetencionISR."Importe Maximo";
             ImporteRetencion[Indice] := RetencionISR."Importe retencion";
             "%Calcular"[Indice] := RetencionISR."% Retencion";
             Indice += 1;
@@ -1195,7 +1195,7 @@ codeunit 34002112 "Registrar nomina PA"
                 LinPerfilSal.FINDFIRST;
 
                 rHistLinPrestamo.SETRANGE("Codigo Empleado", rHistCabPrestamo."Employee No.");
-                rHistLinPrestamo.SETRANGE("No. Préstamo", rHistCabPrestamo."No. Préstamo");
+                rHistLinPrestamo.SETRANGE("No. Prestamo", rHistCabPrestamo."No. Prestamo");
                 IF (rHistLinPrestamo.FINDLAST) AND (LinPerfilSal."Tipo concepto" <> 0) THEN BEGIN
                     rHistLinPrestamo."No. Linea" += 100;
                     rHistLinPrestamo."Tipo CxC" := rHistCabPrestamo."Tipo CxC";
@@ -1281,7 +1281,7 @@ codeunit 34002112 "Registrar nomina PA"
         LinNomina."Cotiza Infotep" := perfSalario."Cotiza INFOTEP";
         LinNomina."Sujeto Cotizacion" := perfSalario."Sujeto Cotizacion";
         LinNomina."Aplica para Regalia" := perfSalario."Aplica para Regalia";
-        LinNomina.Formula := perfSalario."Formula cálculo";
+        LinNomina.Formula := perfSalario."Formula Calculo";
         LinNomina.Imprimir := perfSalario.Imprimir;
         LinNomina."Inicio periodo" := PerInici;
         LinNomina."Fin periodo" := PerFinal;

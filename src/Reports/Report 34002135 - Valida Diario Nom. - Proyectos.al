@@ -88,7 +88,6 @@ report 34002135 "Valida Diario Nom. - Proyectos"
                 }
                 column(Concepto_salarial; "Concepto salarial")
                 {
-                    DecimalPlaces = 0 : 0;
                 }
                 column(Concepto_Sal_Desc; ConceptoSalDesc)
                 {
@@ -312,7 +311,7 @@ report 34002135 "Valida Diario Nom. - Proyectos"
         Date: Record 2000000007;
         Date2: Record 2000000007;
         ResourcesSetup: Record 314;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         ConceptoSalDesc: Text[1024];
         ApplytoJobJnl: Boolean;
         ApplyPayroll: Boolean;

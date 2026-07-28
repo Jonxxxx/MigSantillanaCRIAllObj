@@ -230,7 +230,7 @@ report 50048 "Formato DPP x Clientes v2"
         CompanyInfo: Record 79;
         CompanyAddr: array[8] of Text[50];
         CustAddr: array[8] of Text[50];
-        FormatAddr: Codeunit 365;
+        FormatAddr: Codeunit "Format Address";
         Totalexc: Decimal;
         Totalinc: Decimal;
         Informacion_ClienteCaptionLbl: Label 'Informacion Cliente';

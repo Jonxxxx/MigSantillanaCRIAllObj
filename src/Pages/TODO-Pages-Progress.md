@@ -67,7 +67,7 @@ Total current occurrences pending re-evaluation or manual review: **344**
 - `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
 - `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
 - `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
 - `src/Pages/Page 34003028 - Listado RNC DGII.al`
 - `src/Pages/TODO-Pages-Progress.md`
@@ -162,7 +162,7 @@ Skipped TODO markers: **19**
 - `src/Pages/Page 34002126 - Visualizar nómina histórico.al`
 - `src/Pages/Page 34002131 - Líneas cobros empleado.al`
 - `src/Pages/Page 34002133 - CxC Empleados.al`
-- `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`
 - `src/Pages/Page 34002144 - Diario Nominas.al`
 - `src/Pages/Page 34002162 - Calendario Anual.al`
@@ -697,7 +697,7 @@ Skipped TODO markers: **20**
 - `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
 - `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
 - `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
 - `src/Pages/Page 34003028 - Listado RNC DGII.al`
@@ -707,7 +707,7 @@ Skipped TODO markers: **20**
 - `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
 - `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
 - `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
 - `src/Pages/Page 34003028 - Listado RNC DGII.al`
 

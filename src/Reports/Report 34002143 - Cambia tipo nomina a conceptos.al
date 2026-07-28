@@ -18,7 +18,7 @@ report 34002143 "Cambia tipo nomina a conceptos"
                 PerfilSal.SETRANGE("Concepto salarial", Concepto);
                 PerfilSal.FINDSET(TRUE, FALSE);
                 REPEAT
-                    PerfilSal."Tipo de nomina" := TipoNom;
+                    PerfilSal."Tipo de nomina" := Format(TipoNom);
                     PerfilSal.MODIFY;
                 UNTIL PerfilSal.NEXT = 0;
             end;
@@ -46,7 +46,6 @@ report 34002143 "Cambia tipo nomina a conceptos"
                 field(Nvotiponom; TipoNom)
                 {
                     Caption = 'New payroll type';
-                    OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
                     TableRelation = "Tipos de nominas";
                 }
             }
@@ -64,7 +63,7 @@ report 34002143 "Cambia tipo nomina a conceptos"
     var
         PerfilSal: Record 34002115;
         Text001: Label 'Update already done, please check the changes';
-        TipoNom: Code[20];
+        TipoNom: Option Regular,Christmas,Bonus,Tip,Rent;
         Concepto: Code[20];
         Err001: Label 'Select a wage concept';
 }

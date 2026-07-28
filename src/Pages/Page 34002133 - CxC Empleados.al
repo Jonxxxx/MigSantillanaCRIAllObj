@@ -10,7 +10,7 @@ page 34002133 "CxC Empleados"
             group(General)
             {
                 Caption = 'General';
-                field("No. Préstamo"; "No. Préstamo")
+                field("No. Prestamo"; "No. Prestamo")
                 {
 
                     trigger OnAssistEdit()
@@ -78,7 +78,7 @@ page 34002133 "CxC Empleados"
                     // TODO: Manual review - Page 58100 and its destination field Field1 cannot be verified.
                     // Original code preserved below.
                     // RunObject = Page 58100;
-                    // RunPageLink = Field1 = FIELD("No. Préstamo");
+                    // RunPageLink = Field1 = FIELD("No. Prestamo");
                     Visible = false;
                 }
             }
@@ -99,14 +99,14 @@ page 34002133 "CxC Empleados"
                     begin
                         Answer := CONFIRM(Text001, FALSE);
                         IF Answer = TRUE THEN
-                            IF "No. Préstamo" = '' THEN
-                                ERROR(STRSUBSTNO(Err001, "No. Préstamo"))
+                            IF "No. Prestamo" = '' THEN
+                                ERROR(STRSUBSTNO(Err001, "No. Prestamo"))
                             ELSE BEGIN
                                 TESTFIELD("Fecha Registro CxC");
                                 TESTFIELD("Fecha Inicio Deduccion");
                                 TESTFIELD("Concepto Salarial");
                                 HistCabPrestamo.RESET;
-                                HistCabPrestamo.VALIDATE("No. Préstamo");
+                                HistCabPrestamo.VALIDATE("No. Prestamo");
                                 HistCabPrestamo."Employee No." := "Codigo Empleado";
                                 HistCabPrestamo."Fecha Registro CxC" := "Fecha Registro CxC";
                                 HistCabPrestamo."Fecha Inicio Deduccion" := "Fecha Inicio Deduccion";
@@ -126,14 +126,14 @@ page 34002133 "CxC Empleados"
                                 HistCabPrestamo.INSERT;
 
                                 HistLinPrestamo.RESET;
-                                HistLinPrestamo."No. Préstamo" := HistCabPrestamo."No. Préstamo";
+                                HistLinPrestamo."No. Prestamo" := HistCabPrestamo."No. Prestamo";
                                 HistLinPrestamo."No. Linea" += 100;
                                 HistLinPrestamo."Tipo CxC" := "Tipo CxC";
                                 HistLinPrestamo."No. Cuota" := 0;
                                 HistLinPrestamo."Fecha Transaccion" := "Fecha Registro CxC";
                                 HistLinPrestamo."Codigo Empleado" := "Codigo Empleado";
-                                HistLinPrestamo.Débito := Importe;
-                                HistLinPrestamo.VALIDATE(Débito);
+                                HistLinPrestamo.Debito := Importe;
+                                HistLinPrestamo.VALIDATE(Debito);
                                 HistLinPrestamo.INSERT;
                                 CLEAR(HistCabPrestamo);
                                 CLEAR(HistLinPrestamo);

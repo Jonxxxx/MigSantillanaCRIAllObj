@@ -243,7 +243,7 @@ table 34002103 "Configuracion nominas"
                 //   ERROR('Dia inválido, favor verificar');
             end;
         }
-        field(41; "Método cálculo ausencias"; Code[10])
+        field(41; "Metodo Calculo ausencias"; Code[10])
         {
             Caption = 'Absences calculation method';
             DataClassification = ToBeClassified;

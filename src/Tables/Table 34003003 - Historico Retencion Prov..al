@@ -18,7 +18,7 @@ table 34003003 "Historico Retencion Prov."
         {
             TableRelation = "G/L Account";
         }
-        field(4; "Base Cálculo"; Option)
+        field(4; "Base Calculo"; Option)
         {
             OptionMembers = ITBIS,"B. Imponible","Total Fra.",Ninguno;
         }

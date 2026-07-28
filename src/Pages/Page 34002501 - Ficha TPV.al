@@ -115,7 +115,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("NCF Credito fiscal NCR"; "NCF Credito fiscal NCR")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
             }
@@ -128,7 +128,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("<NCF.. Credito fiscal NCR>"; "NCF Credito fiscal NCR")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
             }
@@ -141,7 +141,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("<NCF... Credito fiscal NCR>"; "NCF Credito fiscal NCR habit.")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
                 field("NCF Credito fiscal resguardo"; "NCF Credito fiscal resguardo")
@@ -150,7 +150,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("NCF Credito fiscal NCR resg."; "NCF Credito fiscal NCR resg.")
                 {
-                    Caption = 'Serie NCF Notas Crédito resguardo';
+                    Caption = 'Serie NCF Notas Credito resguardo';
                 }
             }
             group("El Salvador")
@@ -162,7 +162,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("<NCF.... Credito fiscal NCR>"; "NCF Credito fiscal NCR")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
             }
@@ -175,7 +175,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("<NCF..... Credito fiscal NCR>"; "NCF Credito fiscal NCR")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
             }
@@ -188,7 +188,7 @@ page 34002501 "Ficha TPV"
                 }
                 field("<NCF...... Credito fiscal NCR>"; "NCF Credito fiscal NCR")
                 {
-                    Caption = 'Serie NCF Notas Crédito';
+                    Caption = 'Serie NCF Notas Credito';
                     Enabled = wAnulaciones;
                 }
             }

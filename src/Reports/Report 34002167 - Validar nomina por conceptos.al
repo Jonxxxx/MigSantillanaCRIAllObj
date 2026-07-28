@@ -114,22 +114,22 @@ report 34002167 "Validar nomina por conceptos"
                      rAusencia.SETRANGE("no. empleado", "no. empleado");
                      rAusencia.SETRANGE("Acredita carencia", TRUE);
                      //GRN rAusencia.SETFILTER("Fecha finalizacion", '>=%1',InicPer);
-                     rAusencia.SETFILTER("Fecha inicio", '>%1',DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",
+                     rAusencia.SETFILTER("Fecha inicio", '>%1',DMY2DATE(ConfNominas."Dia Corte Incidencias",
                                      DATE2DMY(CALCDATE('-1M',InicPer),2),DATE2DMY(CALCDATE('-1M',InicPer),3)));
                 
                      IF rAusencia.FIND('-') THEN
                         BEGIN
-                          IF (rAusencia."Fecha finalizacion" <= DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",DATE2DMY(FinPer,2),
+                          IF (rAusencia."Fecha finalizacion" <= DMY2DATE(ConfNominas."Dia Corte Incidencias",DATE2DMY(FinPer,2),
                                                                 DATE2DMY(FinPer,3))) AND
-                             (rAusencia."Fecha inicio"      >= DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",
+                             (rAusencia."Fecha inicio"      >= DMY2DATE(ConfNominas."Dia Corte Incidencias",
                               DATE2DMY(CALCDATE('-1M',InicPer),2),DATE2DMY(CALCDATE('-1M',InicPer),3))) THEN
                               DiasAusencia := (rAusencia."Fecha finalizacion" - rAusencia."Fecha inicio" + 1) * (rAusencia."% Jornada"/100)
                           ELSE
-                          IF (rAusencia."Fecha finalizacion" > DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",DATE2DMY(FinPer,2),
+                          IF (rAusencia."Fecha finalizacion" > DMY2DATE(ConfNominas."Dia Corte Incidencias",DATE2DMY(FinPer,2),
                                                                         DATE2DMY(FinPer,3))) AND
-                             (rAusencia."Fecha inicio"       >= DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",
+                             (rAusencia."Fecha inicio"       >= DMY2DATE(ConfNominas."Dia Corte Incidencias",
                               DATE2DMY(CALCDATE('-1M',InicPer),2),DATE2DMY(CALCDATE('-1M',InicPer),3))) THEN
-                              DiasAusencia := (DMY2DATE(ConfNominas."D´Š¢a Corte Incidencias",DATE2DMY(FinPer,2),DATE2DMY(FinPer,3))
+                              DiasAusencia := (DMY2DATE(ConfNominas."Dia Corte Incidencias",DATE2DMY(FinPer,2),DATE2DMY(FinPer,3))
                                               - rAusencia."Fecha inicio" + 1) * (rAusencia."% Jornada"/100);
                         END;
                 

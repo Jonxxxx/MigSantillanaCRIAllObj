@@ -1,7 +1,7 @@
-report 34002119 "Lista acumulado Regal´Š¢a"
+report 34002119 "Lista acumulado Regalia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista acumulado Regal´Š¢a.rdlc';
+    RDLCLayout = './Lista acumulado Regalia.rdlc';
 
     dataset
     {
@@ -266,7 +266,7 @@ report 34002119 "Lista acumulado Regal´Š¢a"
                     LinEsqSalarial.FINDFIRST;
                     LinEsqSalarial.Cantidad := 1;
                     LinEsqSalarial.Importe := TotImporte;
-                    LinEsqSalarial."Tipo nomina" := LinEsqSalarial."Tipo nomina"::Regal´Š¢a;
+                    LinEsqSalarial."Tipo nomina" := LinEsqSalarial."Tipo nomina"::Regalia;
                     LinEsqSalarial.MODIFY;
                 END;
             end;
@@ -372,8 +372,8 @@ report 34002119 "Lista acumulado Regal´Š¢a"
         TotNominas: Integer;
         Acumulado_de_regalia_por_empleadoCaptionLbl: Label 'Acumulado de regalia por empleado';
         CurrReport_PAGENOCaptionLbl: Label 'Pagina';
-        TotImporteCaptionLbl: Label 'Regal´Š¢a a pagar';
-        AcumuladoSalarioCaptionLbl: Label 'Acumulado Regal´Š¢a';
+        TotImporteCaptionLbl: Label 'Regalia a pagar';
+        AcumuladoSalarioCaptionLbl: Label 'Acumulado Regalia';
         Total_Gral_CaptionLbl: Label 'Total Gral.';
         UltIngresosxQuincena: Decimal;
         UltIngresosOtros: Decimal;

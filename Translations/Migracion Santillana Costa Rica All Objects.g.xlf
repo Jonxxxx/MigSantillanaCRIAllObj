@@ -1494,7 +1494,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Apellidos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 1590515264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes válido para Crédito Fiscal (01 y 31) Cantidad</source>
+          <source>Comprobantes válido para Credito Fiscal (01 y 31) Cantidad</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Cant B01 y E31 IT-1 - Property Caption</note>
         </trans-unit>
@@ -1504,12 +1504,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Cant B02 y E32 IT-1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 3241511264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes Nota de Débito (03 y 33) Cantidad</source>
+          <source>Comprobantes Nota de Debito (03 y 33) Cantidad</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Cant B03 y E33 IT-1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 496845024 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes Nota de Crédito (04 y 34) Cantidad</source>
+          <source>Comprobantes Nota de Credito (04 y 34) Cantidad</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Cant B04 y E34 IT-1 - Property Caption</note>
         </trans-unit>
@@ -1604,7 +1604,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Forma de pago DGII - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 1248598520 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source> ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Crédito/Debito,4 - Compra a crédito, 5 - Permuta,6 - Nota de crédito,7 - Mixto</source>
+          <source> ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Credito/Debito,4 - Compra a Credito, 5 - Permuta,6 - Nota de Credito,7 - Mixto</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Forma de pago DGII - Property OptionCaption</note>
         </trans-unit>
@@ -1659,7 +1659,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Monto Arrendamiento IT-1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 2585658501 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes válido para Crédito Fiscal (01 y 31) Monto</source>
+          <source>Comprobantes válido para Credito Fiscal (01 y 31) Monto</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Monto B01 y E31 IT-1 - Property Caption</note>
         </trans-unit>
@@ -1669,12 +1669,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Monto B02 y E32 IT-1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 3879130469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes Nota de Débito (03 y 33) Monto</source>
+          <source>Comprobantes Nota de Debito (03 y 33) Monto</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Monto B03 y E33 IT-1 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 2570475365 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Comprobantes Nota de Crédito (04 y 34) Monto</source>
+          <source>Comprobantes Nota de Credito (04 y 34) Monto</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field Monto B04 y E34 IT-1 - Property Caption</note>
         </trans-unit>
@@ -1829,7 +1829,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field MontoTarjeta - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1589289642 - Field 3050439221 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Tarjeta débito / crédito </source>
+          <source>Tarjeta Debito / Credito </source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Archivo Transferencia ITBIS - Field MontoTarjeta IT-1 - Property Caption</note>
         </trans-unit>
@@ -5854,7 +5854,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Clientes  TPV - Field Tipo Comprobante - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3870624679 - Field 883792878 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source> ,Consumidor Final,Crédito Fiscal,Régimen Especial ,Gubernamental</source>
+          <source> ,Consumidor Final,Credito Fiscal,Régimen Especial ,Gubernamental</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Clientes  TPV - Field Tipo Comprobante - Property OptionCaption</note>
         </trans-unit>
@@ -8914,9 +8914,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Conceptos Salariales Provision - Field Disponible - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1973801102 - Field 1721052175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Formula cálculo</source>
+          <source>Formula Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Conceptos Salariales Provision - Field Formula cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Conceptos Salariales Provision - Field Formula Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1973801102 - Field 3644434987 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Gpo. Contable Empleado</source>
@@ -10561,7 +10561,7 @@
         <trans-unit id="Table 87003629 - Field 2893331426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Base</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Config. Retencion Proveedores - Field Base Cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Config. Retencion Proveedores - Field Base Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 87003629 - Field 3650170606 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Retention Code</source>
@@ -11281,7 +11281,7 @@
         <trans-unit id="Table 1281654234 - Field 308511773 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Absences calculation method</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion nominas - Field Método cálculo ausencias - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion nominas - Field Metodo Calculo ausencias - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1281654234 - Field 601860404 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Generic Job code</source>
@@ -11504,7 +11504,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion TPV - Field NCF Consumidor final NCR - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1652321359 - Field 884753829 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>NCF Crédito fiscal</source>
+          <source>NCF Credito fiscal</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion TPV - Field NCF Credito fiscal - Property Caption</note>
         </trans-unit>
@@ -11564,12 +11564,12 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion TPV - Field No. serie facturas Reg. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1652321359 - Field 2817969334 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Nº serie notas crédito</source>
+          <source>Nº serie notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion TPV - Field No. serie notas credito - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1652321359 - Field 3503071736 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Nº serie notas crédito registradas</source>
+          <source>Nº serie notas Credito registradas</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Configuracion TPV - Field No. serie notas credito reg. - Property Caption</note>
         </trans-unit>
@@ -12609,9 +12609,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table CxC Empleados - Field No. Mov. Cliente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4045560628 - Field 765742516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No. Préstamo</source>
+          <source>No. Prestamo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table CxC Empleados - Field No. Préstamo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table CxC Empleados - Field No. Prestamo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4045560628 - Field 1654975069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nro. Solicitud CK</source>
@@ -13939,9 +13939,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Distribucion Importes TSS - Field Concepto Salarial - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1534268294 - Field 338009177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Importe Máximo</source>
+          <source>Importe Maximo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Distribucion Importes TSS - Field Importe Máximo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Distribucion Importes TSS - Field Importe Maximo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1534268294 - Field 1938113485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe retencion</source>
@@ -21151,122 +21151,122 @@
         <trans-unit id="Table 305057393 - Field 3290453459 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>% Cuota</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field % Cuota - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field % Cuota - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3411994612 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>1ra Quincena</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field 1ra Quincena - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field 1ra Quincena - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 536968239 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>2da Quincena</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field 2da Quincena - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field 2da Quincena - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3379915778 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Concepto Salarial</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Concepto Salarial - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Concepto Salarial - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 355612683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Correction</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Correccion - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Correccion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3056297546 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cta. Contrapartida</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Cta. Contrapartida - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Cta. Contrapartida - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 2078201289 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cuotas</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Cuotas - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Cuotas - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1964419135 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee No.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Employee No. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Employee No. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1009462294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Inicio Deduccion</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Fecha Inicio Deduccion - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Fecha Inicio Deduccion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3875044198 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Registro CxC</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Fecha Registro CxC - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Fecha Registro CxC - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3537548264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Full name</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Full name - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Full name - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 976626240 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe Cuota</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Importe Cuota - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Importe Cuota - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3773219003 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Original Amount</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Importe Original - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Importe Original - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3276012120 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe Pendiente</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Importe Pendiente - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Importe Pendiente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 4274647852 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe Pendiente Cte.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Importe Pendiente Cte. - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Importe Pendiente Cte. - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1517889247 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cause of close</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Motivo de cierre - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Motivo de cierre - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 3817638722 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Motivo Prestamos</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Motivo Prestamos - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Motivo Prestamos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 423150633 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Documento</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field No. Documento - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field No. Documento - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 2759463875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Mov. Cliente</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field No. Mov. Cliente - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field No. Mov. Cliente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 765742516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No. Préstamo</source>
+          <source>No. Prestamo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field No. Préstamo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field No. Prestamo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1654975069 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nro. Solicitud CK</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Nro. Solicitud CK - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Nro. Solicitud CK - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1654878624 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Pendiente</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Pendiente - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Pendiente - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 2860948464 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo Contrapartida</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Tipo Contrapartida - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Tipo Contrapartida - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 305057393 - Field 1068335294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo CxC</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Préstamo - Field Tipo CxC - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Cab. Prestamo - Field Tipo CxC - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3561780189 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
           <source>This School = Grade already has Adopctions registered. You can't delete it</source>
@@ -21746,52 +21746,52 @@
         <trans-unit id="Table 4011699744 - Field 430424374 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Codigo Empleado</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Codigo Empleado - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Codigo Empleado - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 355612683 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Correction</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Correccion - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Correccion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 3753459842 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Crédito</source>
+          <source>Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Crédito - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Credito - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 2210357775 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Débito</source>
+          <source>Debito</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Débito - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Debito - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 386383670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Fecha Transaccion</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Fecha Transaccion - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Fecha Transaccion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 2272012708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Importe - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Importe - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 3103300933 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Cuota</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field No. Cuota - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field No. Cuota - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 3445315636 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. Linea</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field No. Linea - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field No. Linea - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 765742516 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>No. Préstamo</source>
+          <source>No. Prestamo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field No. Préstamo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field No. Prestamo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 4011699744 - Field 1068335294 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tipo CxC</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Préstamo - Field Tipo CxC - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Lin. Prestamo - Field Tipo CxC - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2469733164 - Method 804474859 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
           <source>You cannot rename a %1.</source>
@@ -22229,9 +22229,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Historico Retencion Prov. - Field Aplica Servicios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2959857364 - Field 2893331426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Base Cálculo</source>
+          <source>Base Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Retencion Prov. - Field Base Cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Historico Retencion Prov. - Field Base Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2959857364 - Field 1270990264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Proveedor</source>
@@ -27394,9 +27394,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Nivel Cargo - Field Importe minimo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3950880476 - Field 3484406585 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Importe máximo</source>
+          <source>Importe Maximo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Nivel Cargo - Field Importe máximo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Nivel Cargo - Field Importe Maximo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3659806254 - Field 4092165491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Codigo</source>
@@ -28729,9 +28729,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salarial - Field Fin Periodo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1056493919 - Field 1721052175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Formula cálculo</source>
+          <source>Formula Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salarial - Field Formula cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salarial - Field Formula Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1056493919 - Field 2272012708 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe</source>
@@ -28869,9 +28869,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salario x Cargo - Field Descripcion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2529629169 - Field 1721052175 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Formula cálculo</source>
+          <source>Formula Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salario x Cargo - Field Formula cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Perfil Salario x Cargo - Field Formula Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2529629169 - Field 15250528 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>No. de Orden</source>
@@ -31379,9 +31379,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Proveedor - Retencion - Field Aplica Servicios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2609554688 - Field 2893331426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Base Cálculo</source>
+          <source>Base Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Proveedor - Retencion - Field Base Cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Proveedor - Retencion - Field Base Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2609554688 - Field 1270990264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Proveedor</source>
@@ -31539,19 +31539,19 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Maximo de posiciones - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1020873558 - Field 2739526529 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Método cálculo Ingresos</source>
+          <source>Metodo Calculo Ingresos</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Método cálculo Ingresos - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Metodo Calculo Ingresos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1020873558 - Field 12829429 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Método cálculo Paga Salario</source>
+          <source>Metodo Calculo Paga Salario</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Método cálculo Paga Salario - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Metodo Calculo Paga Salario - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1020873558 - Field 12829429 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
           <source>Distributed,By period</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Método cálculo Paga Salario - Property OptionCaption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Puestos laborales - Field Metodo Calculo Paga Salario - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="Table 1020873558 - Field 3754703990 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nombre Completo</source>
@@ -32964,9 +32964,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Retencion Doc. Proveedores - Field Aplica Servicios - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2262183219 - Field 2893331426 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Base Cálculo</source>
+          <source>Base Calculo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Retencion Doc. Proveedores - Field Base Cálculo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Retencion Doc. Proveedores - Field Base Calculo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2262183219 - Field 1270990264 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Cod. Proveedor</source>
@@ -40419,9 +40419,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Tabla retencion ISR - Field Ano - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 911281203 - Field 338009177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Importe Máximo</source>
+          <source>Importe Maximo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Tabla retencion ISR - Field Importe Máximo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Tabla retencion ISR - Field Importe Maximo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 911281203 - Field 1938113485 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Importe retencion</source>
@@ -42614,7 +42614,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Tiendas - Field Descripcion recibo TPV 4 - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 135588716 - Field 3182100517 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Descuadre máximo en caja</source>
+          <source>Descuadre Maximo en caja</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Tiendas - Field Descuadre maximo en caja - Property Caption</note>
         </trans-unit>
@@ -51619,7 +51619,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table Transacciones TPV - Field Tipo Transaccion - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 2199344305 - Field 2190246931 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Venta,Anulacion,Nota de crédito</source>
+          <source>Venta,Anulacion,Nota de Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Transacciones TPV - Field Tipo Transaccion - Property OptionCaption</note>
         </trans-unit>
@@ -52604,7 +52604,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Table _Clientes TPV - Field Tipo Comprobante - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 3587335686 - Field 883792878 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
-          <source> ,Consumidor Final,Crédito Fiscal,Régimen Especial ,Gubernamental</source>
+          <source> ,Consumidor Final,Credito Fiscal,Régimen Especial ,Gubernamental</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table _Clientes TPV - Field Tipo Comprobante - Property OptionCaption</note>
         </trans-unit>
@@ -53536,12 +53536,12 @@
         <trans-unit id="Codeunit 963378983 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculando Ranking General ... \ Colegio #1###################</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones cálculo Ranking - NamedType Text001</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Calculo Ranking - NamedType Text001</note>
         </trans-unit>
         <trans-unit id="Codeunit 963378983 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
           <source>Calculando Ranking CVM ... \ Colegio #1###################</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones cálculo Ranking - NamedType Text002</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Calculo Ranking - NamedType Text002</note>
         </trans-unit>
         <trans-unit id="Codeunit 2526806412 - NamedType 1902164874" size-unit="char" translate="yes" xml:space="preserve">
           <source>The net amount of your payment has already been transferred to your bank account.If you have any questions about your payment, please contact the person in charge of payroll.</source>
@@ -54791,32 +54791,32 @@
         <trans-unit id="Codeunit 796240981 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
           <source>Funcion Solo disponible en Servidor Central</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Pdtes POS - NamedType Error001</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Pdtes POS - NamedType Error001</note>
         </trans-unit>
         <trans-unit id="Codeunit 796240981 - NamedType 3951219478" size-unit="char" translate="yes" xml:space="preserve">
           <source>MOSTRAR TODAS LAS TIENDAS</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Pdtes POS - NamedType TxtDescri</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Pdtes POS - NamedType TxtDescri</note>
         </trans-unit>
         <trans-unit id="Codeunit 796240981 - NamedType 2512591863" size-unit="char" translate="yes" xml:space="preserve">
           <source>TODAS</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Pdtes POS - NamedType txtTodas</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Pdtes POS - NamedType txtTodas</note>
         </trans-unit>
         <trans-unit id="Codeunit 2575233521 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
           <source>Funcion Solo disponible en Servidor Central</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Regis POS - NamedType Error001</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Regis POS - NamedType Error001</note>
         </trans-unit>
         <trans-unit id="Codeunit 2575233521 - Method 1665861916 - NamedType 2512591863" size-unit="char" translate="yes" xml:space="preserve">
           <source>TODAS</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Regis POS - Method OnRun - NamedType txtTodas</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Regis POS - Method OnRun - NamedType txtTodas</note>
         </trans-unit>
         <trans-unit id="Codeunit 2575233521 - Method 1665861916 - NamedType 3258730870" size-unit="char" translate="yes" xml:space="preserve">
           <source>MOSTRAR TODAS LAS TIENDAS</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Crédito Regis POS - Method OnRun - NamedType txtDescri</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notas Credito Regis POS - Method OnRun - NamedType txtDescri</note>
         </trans-unit>
         <trans-unit id="Codeunit 3669098649 - NamedType 578242643" size-unit="char" translate="yes" xml:space="preserve">
           <source>Error Cola Proyecto -</source>
@@ -55454,7 +55454,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Registrar nomina RD -2 - Method CalcularISR - NamedType Err002</note>
         </trans-unit>
         <trans-unit id="Codeunit 3582801770 - Method 523063398 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Liquidando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de crédito  @@@@@@@@@@@@@@@@@@@@2</source>
+          <source>Liquidando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Registrar Ventas en Lote DsPOS - Method LiquidarRegistrados - NamedType Text001</note>
         </trans-unit>
@@ -55509,7 +55509,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Registrar Ventas en Lote DsPOS - Method OnRun - NamedType Error003</note>
         </trans-unit>
         <trans-unit id="Codeunit 3582801770 - Method 4225823389 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Registrando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de crédito  @@@@@@@@@@@@@@@@@@@@2</source>
+          <source>Registrando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Registrar Ventas en Lote DsPOS - Method RegistroNocturno - NamedType Text001</note>
         </trans-unit>
@@ -62516,77 +62516,77 @@
         <trans-unit id="Page 2721485266 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sales Credit Memo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 3318495821 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>DsPOS</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control DsPOS - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control DsPOS - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 3624777196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Foreign Trade</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Foreign Trade - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Foreign Trade - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control General - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 2131962646 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Sell-to State / ZIP Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Sell-to County - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Sell-to County - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 1450094168 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Invoicing</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Invoicing - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Invoicing - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 3882955433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>State / ZIP Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Bill-to County - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Bill-to County - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 3097346278 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Shipping</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Shipping - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Shipping - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Control 187607738 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Ship-to State / ZIP Code</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Control Ship-to County - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Control Ship-to County - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 4133730939 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Credit Memo</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action &amp;Credit Memo - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action &amp;Credit Memo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 3860314472 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Approvals</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action Approvals - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action Approvals - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 3000180178 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Co&amp;mments</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action Co&amp;mments - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action Co&amp;mments - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 1994964448 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Customer</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action Customer - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action Customer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 2173385693 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Dimensions</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action Dimensions - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action Dimensions - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2721485266 - Action 84074407 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Statistics</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Crédito Pdtes POS - Action Statistics - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Ficha Notas Credito Pdtes POS - Action Statistics - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 409149560 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Father Card</source>
@@ -62684,7 +62684,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Method OnInit - NamedType Error001</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 2321747130 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF...... Credito fiscal NCR&gt; - Property Caption</note>
         </trans-unit>
@@ -62699,7 +62699,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF Anulaciones&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 2441757018 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF.. Credito fiscal NCR&gt; - Property Caption</note>
         </trans-unit>
@@ -62709,7 +62709,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF.. Credito fiscal&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 3445058602 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF.... Credito fiscal NCR&gt; - Property Caption</note>
         </trans-unit>
@@ -62719,7 +62719,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF.... Credito fiscal&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 1776542180 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF... Credito fiscal NCR&gt; - Property Caption</note>
         </trans-unit>
@@ -62729,7 +62729,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF... Credito fiscal&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 2422339611 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito resguardo</source>
+          <source>Serie NCF Notas Credito resguardo</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control NCF Credito fiscal NCR resg. - Property Caption</note>
         </trans-unit>
@@ -62739,7 +62739,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control NCF Credito fiscal resguardo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 1179772916 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF..... Credito fiscal NCR&gt; - Property Caption</note>
         </trans-unit>
@@ -62764,7 +62764,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control &lt;NCF. Credito fiscal&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2629517833 - Control 1290574280 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Serie NCF Notas Crédito</source>
+          <source>Serie NCF Notas Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Ficha TPV - Control NCF Credito fiscal NCR - Property Caption</note>
         </trans-unit>
@@ -63266,12 +63266,12 @@
         <trans-unit id="Page 3071612710 - Control 2445482498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>General</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Historico Préstamos - Control General - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Historico Prestamos - Control General - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3071612710 - Action 910297409 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Imprimir</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Historico Préstamos - Action &amp;Imprimir - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Historico Prestamos - Action &amp;Imprimir - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2588748975 - Control 2780874720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Nombre Campo</source>
@@ -63359,7 +63359,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page IT-1 Anexo A - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1078435631 - Control 2101075105 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Total Notas de Crédito Emitidas con mas de Trenta(30) Dias desde la Facturacion</source>
+          <source>Total Notas de Credito Emitidas con mas de Trenta(30) Dias desde la Facturacion</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page IT-1 Anexo A - Control MontoNC30Factura - Property Caption</note>
         </trans-unit>
@@ -71999,7 +71999,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Estadisticas de Vtas. - NamedType Dim1CaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 4169633794 - NamedType 2894222944" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Importe Imp. Inc. Nota Crédito</source>
+          <source>Importe Imp. Inc. Nota Credito</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Estadisticas de Vtas. - NamedType ImporteImpIncCR_Lbl</note>
         </trans-unit>
@@ -72069,7 +72069,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Estadisticas de Vtas. - NamedType Vta__LiquidaCaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 4169633794 - ReportDataItem 467645625 - Method 72583909 - NamedType 2179470716" size-unit="char" translate="yes" xml:space="preserve">
-          <source>El Nº Devolucion introducido no pertenece a ninguna Nota de crédito registrada</source>
+          <source>El Nº Devolucion introducido no pertenece a ninguna Nota de Credito registrada</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Report Estadisticas de Vtas. - ReportDataItem Value Entry - Method OnPreDataItem - NamedType lText001</note>
         </trans-unit>
@@ -86864,7 +86864,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EXCCRIBankAccount - Field Tipo Cuenta - Property Caption</note>
         </trans-unit>
         <trans-unit id="TableExtension 3733970435 - Field 580147974 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1682139193">
-          <source>CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Préstamo</source>
+          <source>CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Prestamo</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EXCCRIBankAccount - Field Tipo Cuenta - Property OptionCaption</note>
         </trans-unit>
@@ -89035,7 +89035,7 @@
         </trans-unit>
         <trans-unit id="TableExtension 3322255096 - Field 2832857678 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 1351594800">
           <source> ,Invoice,Credit Memo</source>
-          <note from="Developer" annotates="general" priority="2">ESP= ,Factura,Nota de Crédito</note>
+          <note from="Developer" annotates="general" priority="2">ESP= ,Factura,Nota de Credito</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EXCCRINoSeries - Field Tipo Documento - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 1874945254 - Field 2135398657 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 913177062">
@@ -89075,7 +89075,7 @@
         </trans-unit>
         <trans-unit id="TableExtension 1064835781 - Field 1248598520 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3566004263">
           <source> ,1 - Cash,2 - Checks/Transfers/Deposits,3 - Credit/Debit Card,4 - Credit Purchase, 5 - Exchange,6 - Credit Memo,7 - Mixed</source>
-          <note from="Developer" annotates="general" priority="2">ESP= ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Crédito/Débito,4 - Compra a crédito, 5 - Permuta,6 - Nota de crédito,7 - Mixto</note>
+          <note from="Developer" annotates="general" priority="2">ESP= ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Credito/Debito,4 - Compra a Credito, 5 - Permuta,6 - Nota de Credito,7 - Mixto</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EXCCRIPaymentMethod - Field Forma de pago DGII - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 322228859 - Field 2039017749 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 3197070065">
@@ -93365,7 +93365,7 @@
         </trans-unit>
         <trans-unit id="TableExtension 1092947495 - Field 580147974 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 4231435149">
           <source>CC= Current Account,CA=Savings Account,TJ= Card,PR= Loan</source>
-          <note from="Developer" annotates="general" priority="2">ESP=CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Préstamo</note>
+          <note from="Developer" annotates="general" priority="2">ESP=CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Prestamo</note>
           <note from="Xliff Generator" annotates="general" priority="3">TableExtension EXCCRIVendorBankAccount - Field Tipo Cuenta - Property OptionCaption</note>
         </trans-unit>
         <trans-unit id="TableExtension 2987189253 - Field 928243943 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Table 406314583">

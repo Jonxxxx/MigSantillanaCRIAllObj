@@ -118,7 +118,7 @@ xmlport 52000 "Config. nomina can"
                 fieldelement(CN_FechaSecuencia; "Configuracion nominas"."Fecha secuencia")
                 {
                 }
-                fieldelement(CN_MetodoCalculoAusencias; "Configuracion nominas"."Método cálculo ausencias")
+                fieldelement(CN_MetodoCalculoAusencias; "Configuracion nominas"."Metodo Calculo ausencias")
                 {
                 }
                 fieldelement(CN_NoSerieEmpleados; "Configuracion nominas"."Concepto devolucion ISR")
@@ -243,7 +243,7 @@ xmlport 52000 "Config. nomina can"
                 fieldelement(TISR_NoOrden; "Tabla retencion ISR"."No. orden")
                 {
                 }
-                fieldelement(TISR_ImporteMaximo; "Tabla retencion ISR"."Importe Máximo")
+                fieldelement(TISR_ImporteMaximo; "Tabla retencion ISR"."Importe Maximo")
                 {
                 }
                 fieldelement(TISR_ImporteRetencion; "Tabla retencion ISR"."Importe retencion")
@@ -432,7 +432,7 @@ xmlport 52000 "Config. nomina can"
                 //TODO: Campo no existe fieldelement(PSC_CotizaAFP; "Perfil Salario x Cargo".Field14)
                 //TODO: Campo no existe {
                 //TODO: Campo no existe }
-                fieldelement(PSC_AplicaSRL; "Perfil Salario x Cargo"."Formula cálculo")
+                fieldelement(PSC_AplicaSRL; "Perfil Salario x Cargo"."Formula Calculo")
                 {
                 }
                 //TODO: Campo no existe
@@ -494,7 +494,7 @@ xmlport 52000 "Config. nomina can"
                 fieldelement(EC_Direccion; "Empresas Cotizacion"."Direccion")
                 {
                 }
-                fieldelement(EC_Numero; "Empresas Cotizacion"."Número")
+                fieldelement(EC_Numero; "Empresas Cotizacion"."Numero")
                 {
                 }
                 fieldelement(EC_CodigoPostal; "Empresas Cotizacion"."Codigo Postal")
@@ -1190,7 +1190,7 @@ xmlport 52000 "Config. nomina can"
                 fieldelement(PS_Prorratear; "Perfil Salarial".Prorratear)
                 {
                 }
-                fieldelement(PS_FormulaCalculo; "Perfil Salarial"."Formula cálculo")
+                fieldelement(PS_FormulaCalculo; "Perfil Salarial"."Formula Calculo")
                 {
                 }
                 fieldelement("PS_PeriodoGenerac."; "Perfil Salarial"."Periodo generac.")

@@ -818,11 +818,11 @@ report 52546 "Sales Quote Report"
         TaxArea: Record 318;
         Cust: Record 18;
         SalesPrinted: Codeunit 313;
-        FormatAddress: Codeunit 365;
-        FormatDocument: Codeunit 368;
-        SalesTaxCalc: Codeunit 398;
-        ArchiveManagement: Codeunit 5063;
-        SegManagement: Codeunit 5051;
+        FormatAddress: Codeunit "Format Address";
+        FormatDocument: Codeunit "Format Document";
+        SalesTaxCalc: Codeunit "Sales Tax Calculate";
+        ArchiveManagement: Codeunit ArchiveManagement;
+        SegManagement: Codeunit SegManagement;
         CompanyAddress: array[8] of Text[100];
         BillToAddress: array[8] of Text[100];
         ShipToAddress: array[8] of Text[100];

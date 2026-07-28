@@ -1,4 +1,4 @@
-page 34002558 "Ficha Notas Crédito Pdtes POS"
+page 34002558 "Ficha Notas Credito Pdtes POS"
 {
     // #815  19/12/2013  PLB   Se muestra el campo "Texto de registro"
 

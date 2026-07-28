@@ -180,7 +180,7 @@ report 34002103 "Nominas por departamentos"
             column("Historico_Lin__nomina__No__empleado_Caption"; FIELDCAPTION("No. empleado"))
             {
             }
-            column(Historico_Cab__nomina__NombreCaption; Histirico_Cab__nomina__NombreCaptionLbl)
+            column(Historico_Cab__nomina__NombreCaption; Histrico_Cab__nomina__NombreCaptionLbl)
             {
             }
             column(TotalIngresos___TotalDeducciones_Control1100040Caption; TotalIngresos___TotalDeducciones_Control1100040CaptionLbl)
@@ -360,7 +360,7 @@ report 34002103 "Nominas por departamentos"
         Text005: Label 'Total';
         Payroll_s_ReportCaptionLbl: Label 'Department Payroll''s Report ';
         CurrReport_PAGENOCaptionLbl: Label 'Pagina';
-        Histirico_Cab__nomina__NombreCaptionLbl: Label 'Name';
+        Histrico_Cab__nomina__NombreCaptionLbl: Label 'Name';
         TotalIngresos___TotalDeducciones_Control1100040CaptionLbl: Label 'Net Income';
         Grand_TotalCaptionLbl: Label 'Grand Total';
         Prepared_by__CaptionLbl: Label 'Prepared by :';

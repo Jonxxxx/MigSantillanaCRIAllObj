@@ -9,7 +9,7 @@ report 34003003 "NCF Anulados (608)"
         {
             DataItemTableView = SORTING(Correction)
                                 ORDER(Ascending)
-                                WHERE(Correction = FILTER(Yes));
+                                WHERE(Correction = FILTER(true));
             RequestFilterFields = "Posting Date";
             column(NCFRelacionado; ArchITBIS."NCF Relacionado")
             {

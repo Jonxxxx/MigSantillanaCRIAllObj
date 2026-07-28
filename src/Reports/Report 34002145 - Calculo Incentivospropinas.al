@@ -10,190 +10,186 @@ report 34002145 "Calculo Incentivos/propinas"
         dataitem(Employee; 5200)
         {
             DataItemTableView = SORTING("No.")
-                                WHERE(Incentivos/Puntos=FILTER(<>0),
-                                      Calcular Nomina=CONST(true));
+                                WHERE("Incentivos/Puntos" = FILTER(<> 0),
+                                      "Calcular Nomina" = CONST(true));
             RequestFilterFields = "No.";
-            column(USERID;USERID)
+            column(USERID; USERID)
             {
             }
-            column(COMPANYNAME;COMPANYNAME)
+            column(COMPANYNAME; COMPANYNAME)
             {
             }
-            column(CurrReport_PAGENO;CurrReport.PAGENO)
+            column(CurrReport_PAGENO; CurrReport.PAGENO)
             {
             }
-            column(FORMAT_TODAY_0_4_;FORMAT(TODAY,0,4))
+            column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {
             }
-            column(PrecioPto__Monto_a_Distribuir_;PrecioPto."Monto a Distribuir")
+            column(PrecioPto__Monto_a_Distribuir_; PrecioPto."Monto a Distribuir")
             {
             }
-            column(PrecioPto__Fecha_Ult__Corte_;PrecioPto."Fecha Ult. Corte")
+            column(PrecioPto__Fecha_Ult__Corte_; PrecioPto."Fecha Ult. Corte")
             {
             }
-            column(Employee__No__;"No.")
+            column(Employee__No__; "No.")
             {
             }
-            column(Employee__Full_Name_;"Full Name")
+            column(Employee__Full_Name_; "Full Name")
             {
             }
-            column(Employee__Incentivos_Puntos_;"Incentivos/Puntos")
+            column(Employee__Incentivos_Puntos_; "Incentivos/Puntos")
             {
             }
-            column(LinPerfSal_Importe;LinPerfSal.Importe)
+            column(LinPerfSal_Importe; LinPerfSal.Importe)
             {
-                DecimalPlaces = 2:2;
+                DecimalPlaces = 2 : 2;
             }
-            column(DiasTrabajados;DiasTrabajados)
-            {
-            }
-            column(Employee__Fecha_salida_empresa_;"Fecha salida empresa")
+            column(DiasTrabajados; DiasTrabajados)
             {
             }
-            column(FechaIniAusencia;FechaIniAusencia)
+            column(Employee__Fecha_salida_empresa_; "Fecha salida empresa")
             {
             }
-            column(FechaFinAusencia;FechaFinAusencia)
+            column(FechaIniAusencia; FechaIniAusencia)
             {
             }
-            column(blnMostrar;blnMostrar)
+            column(FechaFinAusencia; FechaFinAusencia)
             {
             }
-            column(Employee__Incentivos_Puntos__Control7;"Incentivos/Puntos")
+            column(blnMostrar; blnMostrar)
             {
             }
-            column(LinPerfSal_Importe_Control15;LinPerfSal.Importe)
+            column(Employee__Incentivos_Puntos__Control7; "Incentivos/Puntos")
             {
             }
-            column(Diferencia;Diferencia)
+            column(LinPerfSal_Importe_Control15; LinPerfSal.Importe)
             {
             }
-            column(Employee__No__Caption;FIELDCAPTION("No."))
+            column(Diferencia; Diferencia)
             {
             }
-            column(Employee__Full_Name_Caption;Employee__Full_Name_CaptionLbl)
+            column(Employee__No__Caption; FIELDCAPTION("No."))
             {
             }
-            column(Employee__Incentivos_Puntos_Caption;Employee__Incentivos_Puntos_CaptionLbl)
+            column(Employee__Full_Name_Caption; Employee__Full_Name_CaptionLbl)
             {
             }
-            column(CurrReport_PAGENOCaption;CurrReport_PAGENOCaptionLbl)
+            column(Employee__Incentivos_Puntos_Caption; Employee__Incentivos_Puntos_CaptionLbl)
             {
             }
-            column(Incentive_Tips_DistributionCaption;Incentive_Tips_DistributionCaptionLbl)
+            column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column(Importe_a_Distribuir_Caption;Importe_a_Distribuir_CaptionLbl)
+            column(Incentive_Tips_DistributionCaption; Incentive_Tips_DistributionCaptionLbl)
             {
             }
-            column(ImporteCaption;ImporteCaptionLbl)
+            column(Importe_a_Distribuir_Caption; Importe_a_Distribuir_CaptionLbl)
             {
             }
-            column(DiasTrabajadosCaption;DiasTrabajadosCaptionLbl)
+            column(ImporteCaption; ImporteCaptionLbl)
             {
             }
-            column(Fecha_de_Cancelaci_nCaption;Fecha_de_Cancelaci_nCaptionLbl)
+            column(DiasTrabajadosCaption; DiasTrabajadosCaptionLbl)
             {
             }
-            column(Fecha_Ult__CorteCaption;Fecha_Ult__CorteCaptionLbl)
+            column(Fecha_de_Cancelaci_nCaption; Fecha_de_Cancelaci_nCaptionLbl)
             {
             }
-            column(FechaIniAusenciaCaption;FechaIniAusenciaCaptionLbl)
+            column(Fecha_Ult__CorteCaption; Fecha_Ult__CorteCaptionLbl)
             {
             }
-            column(FechaFinAusenciaCaption;FechaFinAusenciaCaptionLbl)
+            column(FechaIniAusenciaCaption; FechaIniAusenciaCaptionLbl)
             {
             }
-            column(TotalCaption;TotalCaptionLbl)
+            column(FechaFinAusenciaCaption; FechaFinAusenciaCaptionLbl)
             {
             }
-            column(Diferencia_Caption;Diferencia_CaptionLbl)
+            column(TotalCaption; TotalCaptionLbl)
+            {
+            }
+            column(Diferencia_Caption; Diferencia_CaptionLbl)
             {
             }
 
             trigger OnAfterGetRecord()
             begin
-                Contador := Contador +1;
-                Ventana.UPDATE(1,ROUND(Contador/AModificar,1));
-                
+                Contador := Contador + 1;
+                Ventana.UPDATE(1, ROUND(Contador / AModificar, 1));
+
                 blnMostrar := TRUE;
-                
-                DiasTrabajados   := 15;
-                DiasAusencia     := 0;
+
+                DiasTrabajados := 15;
+                DiasAusencia := 0;
                 FechaIniAusencia := 0D;
                 FechaFinAusencia := 0D;
-                
-                
+
+
                 Ausencia.RESET;
                 Ausencia.SETRANGE("Employee No.", "No.");
                 //GRN rAusencia.SETRANGE("Cod. causa ausencia", ConfNomina."Incidencias Ausencia Propinas");
                 Ausencia.SETRANGE("From Date", PrecioPto."Fecha Ult. Corte", PrecioPto."Fecha de Corte");
-                Ausencia.SETFILTER(Quantity,'<>%1',0);
+                Ausencia.SETFILTER(Quantity, '<>%1', 0);
                 IF Ausencia.FIND('-') THEN
-                   REPEAT
-                    IF "Fecha salida empresa" >= Ausencia."To Date" THEN
-                       BEGIN
-                        FechaIniAusencia := Ausencia."From Date";
-                        FechaFinAusencia := Ausencia."To Date";
-                        DiasAusencia := FechaFinAusencia - FechaIniAusencia +1;
-                       END
-                    ELSE
-                    IF "Fecha salida empresa" =0D THEN
-                       BEGIN
-                        FechaIniAusencia := Ausencia."From Date";
-                        FechaFinAusencia := Ausencia."To Date";
-                        DiasAusencia := FechaFinAusencia - FechaIniAusencia +1 ;
-                       END;
-                   UNTIL Ausencia.NEXT = 0;
-                
-                IF "Employment Date" > PrecioPto."Fecha de Corte" THEN
-                   IF "Employment Date" <= PrecioPto."Fecha de Corte" THEN
-                      DiasTrabajados := PrecioPto."Fecha de Corte" - "Employment Date"+1;
-                
-                IF "Fecha salida empresa" <>0D THEN
-                   IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
-                      BEGIN
-                        DiasTrabajados := "Fecha salida empresa" - PrecioPto."Fecha Ult. Corte" +1;
-                
-                        IF DiasTrabajados < 0 THEN
-                           DiasTrabajados := 1
+                    REPEAT
+                        IF "Fecha salida empresa" >= Ausencia."To Date" THEN BEGIN
+                            FechaIniAusencia := Ausencia."From Date";
+                            FechaFinAusencia := Ausencia."To Date";
+                            DiasAusencia := FechaFinAusencia - FechaIniAusencia + 1;
+                        END
                         ELSE
-                        IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
-                           DiasTrabajados := DiasTrabajados - 1;
-                      END;
-                
+                            IF "Fecha salida empresa" = 0D THEN BEGIN
+                                FechaIniAusencia := Ausencia."From Date";
+                                FechaFinAusencia := Ausencia."To Date";
+                                DiasAusencia := FechaFinAusencia - FechaIniAusencia + 1;
+                            END;
+                    UNTIL Ausencia.NEXT = 0;
+
+                IF "Employment Date" > PrecioPto."Fecha de Corte" THEN
+                    IF "Employment Date" <= PrecioPto."Fecha de Corte" THEN
+                        DiasTrabajados := PrecioPto."Fecha de Corte" - "Employment Date" + 1;
+
+                IF "Fecha salida empresa" <> 0D THEN
+                    IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN BEGIN
+                        DiasTrabajados := "Fecha salida empresa" - PrecioPto."Fecha Ult. Corte" + 1;
+
+                        IF DiasTrabajados < 0 THEN
+                            DiasTrabajados := 1
+                        ELSE
+                            IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
+                                DiasTrabajados := DiasTrabajados - 1;
+                    END;
+
                 DiasTrabajados := DiasTrabajados - DiasAusencia;
                 IF DiasTrabajados < 0 THEN
-                   DiasTrabajados := 1;
-                
+                    DiasTrabajados := 1;
+
                 //PtosEmpleados   := "Incentivos/Puntos" * DiasTrabajados;
-                PtosEmpleados   := "Incentivos/Puntos";
-                MontoPropina    := 0;
-                
+                PtosEmpleados := "Incentivos/Puntos";
+                MontoPropina := 0;
+
                 IF DiasTrabajados > 0 THEN
-                //GRN   MontoPropina    := "TotalPropDistrib." / 15 * PtosEmpleados;
-                
-                   MontoPropina    := "TotalPropDistrib." * PtosEmpleados;
-                
+                    //GRN   MontoPropina    := "TotalPropDistrib." / 15 * PtosEmpleados;
+
+                    MontoPropina := "TotalPropDistrib." * PtosEmpleados;
+
                 LinPerfSal.RESET;
-                LinPerfSal.SETCURRENTKEY("No. empleado","Concepto salarial");
-                LinPerfSal.SETRANGE("No. empleado","No.");
-                LinPerfSal.SETRANGE("Concepto salarial",ConceptoSalarial);
-                IF LinPerfSal.FIND('-') THEN
-                   BEGIN
-                     LinPerfSal.Importe:= MontoPropina;
-                     LinPerfSal.Cantidad := 1;
-                     LinPerfSal.MODIFY;
-                   END
+                LinPerfSal.SETCURRENTKEY("No. empleado", "Concepto salarial");
+                LinPerfSal.SETRANGE("No. empleado", "No.");
+                LinPerfSal.SETRANGE("Concepto salarial", ConceptoSalarial);
+                IF LinPerfSal.FIND('-') THEN BEGIN
+                    LinPerfSal.Importe := MontoPropina;
+                    LinPerfSal.Cantidad := 1;
+                    LinPerfSal.MODIFY;
+                END
                 ELSE
-                //   CurrReport.SKIP;
-                   blnMostrar := FALSE;
-                
-                
+                    //   CurrReport.SKIP;
+                    blnMostrar := FALSE;
+
+
                 /*   ERROR(Err003,"No. empleado",LinPerfSal.FIELDCAPTION("Concepto salarial"),conceptosalarial,
                          LinPerfSal.TABLECAPTION);
                 */
-                
+
                 Diferencia := PrecioPto."Monto a Distribuir" - LinPerfSal.Importe;
 
             end;
@@ -206,95 +202,92 @@ report 34002145 "Calculo Incentivos/propinas"
             trigger OnPreDataItem()
             begin
                 IF ConceptoSalarial = '' THEN
-                   ERROR(Err002);
+                    ERROR(Err002);
                 IF (FechaIni = 0D) OR (FechaFin = 0D) THEN
                     ERROR(Err001);
-                
+
                 ConfNomina.FINDFIRST;
-                
+
                 // Busca el record correspondiente al periodo de nomina que se va a generar
                 PrecioPto.RESET;
-                PrecioPto.SETRANGE("Concepto Salarial",ConceptoSalarial);
-                PrecioPto.SETRANGE("Fecha de Corte",FechaIni,FechaFin);
+                PrecioPto.SETRANGE("Concepto Salarial", ConceptoSalarial);
+                PrecioPto.SETRANGE("Fecha de Corte", FechaIni, FechaFin);
                 PrecioPto.FINDFIRST;
-                
-                TotalPtos    := 0;
-                TotalDias    := 0;
+
+                TotalPtos := 0;
+                TotalDias := 0;
                 PromedioPtos := 0;
-                
+
                 // Filtra a los empleados que les toca propina aunque no est´Š¢n dentro del periodo
                 // normal de la nomina. Si est´Š¢ despu´Š¢s de la fecha de corte de la propina se
                 // incluye dentro del presente pago de nominas.
                 Empleado.RESET;
-                Empleado.SETFILTER("Fecha salida empresa",'> %1 & <= %2 | > %3 | = %4',
-                                   PrecioPto."Fecha Ult. Corte",PrecioPto."Fecha de Corte",
-                                   PrecioPto."Fecha de Corte",0D);
-                Empleado.SETFILTER("Employment Date",'<= %1',PrecioPto."Fecha de Corte");
-                Empleado.SETFILTER("Calcular Nomina", '=%1',TRUE);
+                Empleado.SETFILTER("Fecha salida empresa", '> %1 & <= %2 | > %3 | = %4',
+                                   PrecioPto."Fecha Ult. Corte", PrecioPto."Fecha de Corte",
+                                   PrecioPto."Fecha de Corte", 0D);
+                Empleado.SETFILTER("Employment Date", '<= %1', PrecioPto."Fecha de Corte");
+                Empleado.SETFILTER("Calcular Nomina", '=%1', TRUE);
                 Empleado.FIND('-');
                 AModificar := COUNT;
-                
-                Ventana.OPEN (Msg001);
-                
+
+                Ventana.OPEN(Msg001);
+
                 AModificar := AModificar / 10000;
                 Contador := 0;
-                
+
                 WITH Empleado DO
-                 REPEAT
-                  DiasTrabajados   := 15;
-                  DiasAusencia     := 0;
-                  FechaIniAusencia := 0D;
-                  FechaFinAusencia := 0D;
-                
-                  Ausencia.RESET;
-                  Ausencia.SETRANGE("Employee No.", "No.");
-                  Ausencia.SETRANGE(Ausencia."From Date", PrecioPto."Fecha Ult. Corte", PrecioPto."Fecha de Corte");
-                  Ausencia.SETFILTER(Ausencia.Quantity,'<>%1',0);
-                  IF Ausencia.FIND('-') THEN
-                     REPEAT
-                      IF "Fecha salida empresa" >= Ausencia."To Date" THEN
-                         BEGIN
-                          FechaIniAusencia := Ausencia."From Date";
-                          FechaFinAusencia := Ausencia."To Date";
-                          DiasAusencia     := FechaFinAusencia - FechaIniAusencia +1 ;
-                         END
-                      ELSE
-                      IF "Fecha salida empresa" =0D THEN
-                         BEGIN
-                          FechaIniAusencia := Ausencia."From Date";
-                          FechaFinAusencia := Ausencia."To Date";
-                          DiasAusencia     := FechaFinAusencia - FechaIniAusencia +1 ;
-                         END;
-                     UNTIL Ausencia.NEXT = 0;
-                
-                     IF "Employment Date" > PrecioPto."Fecha Ult. Corte" THEN
-                        IF "Employment Date" <= PrecioPto."Fecha de Corte" THEN
-                           DiasTrabajados := PrecioPto."Fecha de Corte" - "Employment Date"+1;
-                
-                     IF "Fecha salida empresa" <> 0D THEN
-                        IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
-                           BEGIN
-                            DiasTrabajados := "Fecha salida empresa" - PrecioPto."Fecha Ult. Corte" +1;
-                            IF DiasTrabajados < 0 THEN
-                               DiasTrabajados := 1
-                            ELSE
-                            IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
-                               DiasTrabajados := DiasTrabajados - 1;
-                           END;
-                
-                     DiasTrabajados := DiasTrabajados - DiasAusencia;
-                     IF DiasTrabajados < 0 THEN
-                        DiasTrabajados := 1;
-                
-                //     TotalPtos := TotalPtos + ("Incentivos/Puntos" * DiasTrabajados);
-                     TotalPtos := TotalPtos + ("Incentivos/Puntos");
-                 UNTIL Empleado.NEXT =0;
-                
-                 PromedioPtos := TotalPtos / 15;
+                    REPEAT
+                        DiasTrabajados := 15;
+                        DiasAusencia := 0;
+                        FechaIniAusencia := 0D;
+                        FechaFinAusencia := 0D;
+
+                        Ausencia.RESET;
+                        Ausencia.SETRANGE("Employee No.", "No.");
+                        Ausencia.SETRANGE(Ausencia."From Date", PrecioPto."Fecha Ult. Corte", PrecioPto."Fecha de Corte");
+                        Ausencia.SETFILTER(Ausencia.Quantity, '<>%1', 0);
+                        IF Ausencia.FIND('-') THEN
+                            REPEAT
+                                IF "Fecha salida empresa" >= Ausencia."To Date" THEN BEGIN
+                                    FechaIniAusencia := Ausencia."From Date";
+                                    FechaFinAusencia := Ausencia."To Date";
+                                    DiasAusencia := FechaFinAusencia - FechaIniAusencia + 1;
+                                END
+                                ELSE
+                                    IF "Fecha salida empresa" = 0D THEN BEGIN
+                                        FechaIniAusencia := Ausencia."From Date";
+                                        FechaFinAusencia := Ausencia."To Date";
+                                        DiasAusencia := FechaFinAusencia - FechaIniAusencia + 1;
+                                    END;
+                            UNTIL Ausencia.NEXT = 0;
+
+                        IF "Employment Date" > PrecioPto."Fecha Ult. Corte" THEN
+                            IF "Employment Date" <= PrecioPto."Fecha de Corte" THEN
+                                DiasTrabajados := PrecioPto."Fecha de Corte" - "Employment Date" + 1;
+
+                        IF "Fecha salida empresa" <> 0D THEN
+                            IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN BEGIN
+                                DiasTrabajados := "Fecha salida empresa" - PrecioPto."Fecha Ult. Corte" + 1;
+                                IF DiasTrabajados < 0 THEN
+                                    DiasTrabajados := 1
+                                ELSE
+                                    IF "Fecha salida empresa" <= PrecioPto."Fecha de Corte" THEN
+                                        DiasTrabajados := DiasTrabajados - 1;
+                            END;
+
+                        DiasTrabajados := DiasTrabajados - DiasAusencia;
+                        IF DiasTrabajados < 0 THEN
+                            DiasTrabajados := 1;
+
+                        //     TotalPtos := TotalPtos + ("Incentivos/Puntos" * DiasTrabajados);
+                        TotalPtos := TotalPtos + ("Incentivos/Puntos");
+                    UNTIL Empleado.NEXT = 0;
+
+                PromedioPtos := TotalPtos / 15;
                 //GRN "TotalPropDistrib." := PrecioPto."Monto a Distribuir"/PromedioPtos;
                 "TotalPropDistrib." := PrecioPto."Monto a Distribuir";
-                
-                
+
+
                 /*GRN
                 MESSAGE('Promedio ptos %1',PromedioPtos);
                 MESSAGE('Total puntos %1',TotalPtos);
@@ -312,7 +305,7 @@ report 34002145 "Calculo Incentivos/propinas"
                 ConfNomina.GET();
                 //ConfNomina.TESTFIELD("Incidencias Ausencia Propinas");
                 //ConfNomina.TESTFIELD("Concepto Salarial Incentivos");
-                CurrReport.CREATETOTALS(LinPerfSal.Importe,"Incentivos/Puntos",PromedioPtos);
+                CurrReport.CREATETOTALS(LinPerfSal.Importe, "Incentivos/Puntos", PromedioPtos);
 
             end;
         }
@@ -325,33 +318,33 @@ report 34002145 "Calculo Incentivos/propinas"
         {
             area(content)
             {
-                field("Concepto salarial";ConceptoSalarial)
+                field("Concepto salarial"; ConceptoSalarial)
                 {
                     TableRelation = "Conceptos salariales".Codigo;
                 }
-                field("Fecha inicio";FechaIni)
+                field("Fecha inicio"; FechaIni)
                 {
 
                     trigger OnValidate()
                     begin
-                          Dia:= DATE2DMY(FechaIni,1);
-                          IF (Dia <> 1) AND (Dia <> 16) THEN
-                             ERROR('La fecha Inicial debe ser d´Š¢a 1 o d´Š¢a 16');
-                          Mes:= DATE2DMY(FechaIni,2);
-                          Ano:= DATE2DMY(FechaIni,3);
-                          IF Dia = 1 THEN
-                              FechaFin:= DMY2DATE(15,Mes,Ano)
-                           ELSE BEGIN
-                                 Inicio:= DMY2DATE(1,Mes,Ano);
-                                 Fecha.RESET;
-                                 Fecha.SETRANGE("Period Type",Fecha."Period Type"::Month);
-                                 Fecha.SETRANGE("Period Start",Inicio);
-                                 IF Fecha.FIND('-') THEN
-                                    FechaFin:= NORMALDATE(Fecha."Period End");
-                             END;
+                        Dia := DATE2DMY(FechaIni, 1);
+                        IF (Dia <> 1) AND (Dia <> 16) THEN
+                            ERROR('La fecha Inicial debe ser Dia 1 o Dia 16');
+                        Mes := DATE2DMY(FechaIni, 2);
+                        Ano := DATE2DMY(FechaIni, 3);
+                        IF Dia = 1 THEN
+                            FechaFin := DMY2DATE(15, Mes, Ano)
+                        ELSE BEGIN
+                            Inicio := DMY2DATE(1, Mes, Ano);
+                            Fecha.RESET;
+                            Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
+                            Fecha.SETRANGE("Period Start", Inicio);
+                            IF Fecha.FIND('-') THEN
+                                FechaFin := NORMALDATE(Fecha."Period End");
+                        END;
                     end;
                 }
-                field("Fecha final";FechaFin)
+                field("Fecha final"; FechaFin)
                 {
                     Editable = false;
                 }
@@ -407,7 +400,7 @@ report 34002145 "Calculo Incentivos/propinas"
         Incentive_Tips_DistributionCaptionLbl: Label 'Incentive/Tips Distribution';
         Importe_a_Distribuir_CaptionLbl: Label 'Importe a Distribuir:';
         ImporteCaptionLbl: Label 'Importe';
-        DiasTrabajadosCaptionLbl: Label 'D´Š¢as Cotizados';
+        DiasTrabajadosCaptionLbl: Label 'Dias Cotizados';
         Fecha_de_Cancelaci_nCaptionLbl: Label 'Fecha de Cancelacion';
         Fecha_Ult__CorteCaptionLbl: Label 'Fecha Ult. Corte';
         FechaIniAusenciaCaptionLbl: Label 'Fecha Inicio Ausencia';

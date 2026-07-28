@@ -17,7 +17,7 @@ table 34003002 "Retencion Doc. Proveedores"
         {
             TableRelation = "G/L Account";
         }
-        field(4; "Base Cálculo"; Option)
+        field(4; "Base Calculo"; Option)
         {
             OptionMembers = ITBIS,"B. Imponible","Total Fra.",Ninguno;
         }

@@ -54,7 +54,7 @@ report 34002130 "Inic. Concepto Salarial"
 
                         rLinEsqPercepcion.SETRANGE("Concepto salarial", Concepto);
                         IF rLinEsqPercepcion.FINDFIRST THEN
-                            IF (rLinEsqPercepcion."F´Š¢rmula Calculo" <> '') AND (InicImporte) THEN
+                            IF (rLinEsqPercepcion."Formula Calculo" <> '') AND (InicImporte) THEN
                                 ERROR(Err001);
                     end;
                 }

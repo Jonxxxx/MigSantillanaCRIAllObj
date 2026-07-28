@@ -14,44 +14,44 @@ report 34002170 "Update Employee Classification"
                 DataItemLink = "Profile Questionnaire Code" = FIELD(Code);
                 DataItemTableView = SORTING("Profile Questionnaire Code", "Line No.")
                                     WHERE(Type = CONST(Question),
-                                          Auto Employee Classification=CONST(true),
-                                          Employee Class. Field=FILTER(<>Rating));
+                                          "Auto Employee Classification" = CONST(true),
+                                          "Employee Class. Field" = FILTER(<> Rating));
 
                 trigger OnAfterGetRecord()
                 begin
-                    Window.UPDATE(3,"Line No.");
+                    Window.UPDATE(3, "Line No.");
                     IF NoOfQuestions = 0 THEN
-                      NoOfQuestions := COUNT;
+                        NoOfQuestions := COUNT;
                     QuestionCount := QuestionCount + 1;
-                    Window.UPDATE(4,ROUND(10000 * QuestionCount / NoOfQuestions,1));
+                    Window.UPDATE(4, ROUND(10000 * QuestionCount / NoOfQuestions, 1));
                     RecCount := 0;
 
                     EmployeeValue.DELETEALL;
 
                     IF (FORMAT("Starting Date Formula") = '') OR (FORMAT("Ending Date Formula") = '') THEN
-                      ERROR(
-                        Text005,
-                        FIELDCAPTION("Starting Date Formula"),
-                        FIELDCAPTION("Ending Date Formula"),
-                        "Cab. Cuestionario Evaluacion".Code,
-                        Description);
+                        ERROR(
+                          Text005,
+                          FIELDCAPTION("Starting Date Formula"),
+                          FIELDCAPTION("Ending Date Formula"),
+                          "Cab. Cuestionario Evaluacion".Code,
+                          Description);
 
                     IF "Classification Method" = "Classification Method"::" " THEN
-                      ERROR(
-                        Text008,
-                        FIELDCAPTION("Classification Method"),
-                        "Cab. Cuestionario Evaluacion".Code,
-                        Description);
+                        ERROR(
+                          Text008,
+                          FIELDCAPTION("Classification Method"),
+                          "Cab. Cuestionario Evaluacion".Code,
+                          Description);
 
-                    AnswersExists("Lin. Cuestionario Evaluacion",'',TRUE);
+                    AnswersExists("Lin. Cuestionario Evaluacion", '', TRUE);
                     TotalValue := 0;
 
                     //CASE TRUE OF
                     //  "Employee Class. Field" <> "Employee Class. Field"::" ":
-                        FindEmployeeValues("Lin. Cuestionario Evaluacion");
+                    FindEmployeeValues("Lin. Cuestionario Evaluacion");
                     //END;
 
-                    MarkEmployeeByMethod("Lin. Cuestionario Evaluacion",'');
+                    MarkEmployeeByMethod("Lin. Cuestionario Evaluacion", '');
                 end;
 
                 trigger OnPreDataItem()
@@ -63,18 +63,18 @@ report 34002170 "Update Employee Classification"
 
             trigger OnAfterGetRecord()
             begin
-                Window.UPDATE(1,Code);
+                Window.UPDATE(1, Code);
                 IF NoOfProfiles = 0 THEN
-                  NoOfProfiles := COUNT;
+                    NoOfProfiles := COUNT;
                 ProfileCount := ProfileCount + 1;
-                Window.UPDATE(2,ROUND(10000 * ProfileCount / NoOfProfiles,1));
+                Window.UPDATE(2, ROUND(10000 * ProfileCount / NoOfProfiles, 1));
                 NoOfQuestions := 0;
             end;
         }
         dataitem("Integer"; 2000000026)
         {
             DataItemTableView = SORTING(Number)
-                                WHERE(Number=CONST(1));
+                                WHERE(Number = CONST(1));
 
             trigger OnAfterGetRecord()
             begin
@@ -93,7 +93,7 @@ report 34002170 "Update Employee Classification"
                 group(Options)
                 {
                     Caption = 'Options';
-                    field(Date;Date)
+                    field(Date; Date)
                     {
                         ApplicationArea = RelationshipMgmt;
                         Caption = 'Date';
@@ -141,34 +141,34 @@ report 34002170 "Update Employee Classification"
         RecCount: Integer;
         TotalValue: Decimal;
         Text004: Label 'Two or more questions are causing the rating calculation to loop.';
-        Text005: Label 'You must specify %1 and %2 in Profile Questionnaire %3, question %4. To find additional errors, run the Test report.', Comment='%1 = Starting Date Formula;%2 = Ending Date Formula;%3 = Profile Questionaire Code;%4 = Question Description';
-        Text008: Label 'You must specify %1 in Profile Questionnaire %2, question %3. To find additional errors, run the Test report.', Comment='%1 = Sorting Method;%2 = Profile Questionaire Code;%3 = Question Description';
+        Text005: Label 'You must specify %1 and %2 in Profile Questionnaire %3, question %4. To find additional errors, run the Test report.', Comment = '%1 = Starting Date Formula;%2 = Ending Date Formula;%3 = Profile Questionaire Code;%4 = Question Description';
+        Text008: Label 'You must specify %1 in Profile Questionnaire %2, question %3. To find additional errors, run the Test report.', Comment = '%1 = Sorting Method;%2 = Profile Questionaire Code;%3 = Question Description';
 
-    local procedure AnswersExists(var ProfileQuestionnaireLine: Record 34002185;UpdateEmpNo: Code[20];Delete: Boolean): Boolean
+    local procedure AnswersExists(var ProfileQuestionnaireLine: Record 34002185; UpdateEmpNo: Code[20]; Delete: Boolean): Boolean
     var
         ContProfileAnswer: Record 34002192;
         ProfileQuestnLine2: Record 34002185;
     begin
-        ContProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code","Line No.");
-        ContProfileAnswer.SETRANGE("Profile Questionnaire Code",ProfileQuestionnaireLine."Profile Questionnaire Code");
+        ContProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code", "Line No.");
+        ContProfileAnswer.SETRANGE("Profile Questionnaire Code", ProfileQuestionnaireLine."Profile Questionnaire Code");
 
         ProfileQuestnLine2.RESET;
         ProfileQuestnLine2 := ProfileQuestionnaireLine;
-        ProfileQuestnLine2.SETRANGE(Type,ProfileQuestnLine2.Type::Question);
-        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code",ProfileQuestionnaireLine."Profile Questionnaire Code");
+        ProfileQuestnLine2.SETRANGE(Type, ProfileQuestnLine2.Type::Question);
+        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code", ProfileQuestionnaireLine."Profile Questionnaire Code");
         IF ProfileQuestnLine2.NEXT <> 0 THEN
-          ContProfileAnswer.SETRANGE("Line No.",ProfileQuestionnaireLine."Line No.",ProfileQuestnLine2."Line No.")
+            ContProfileAnswer.SETRANGE("Line No.", ProfileQuestionnaireLine."Line No.", ProfileQuestnLine2."Line No.")
         ELSE
-          ContProfileAnswer.SETFILTER("Line No.",'%1..',ProfileQuestionnaireLine."Line No.");
+            ContProfileAnswer.SETFILTER("Line No.", '%1..', ProfileQuestionnaireLine."Line No.");
         IF UpdateEmpNo <> '' THEN BEGIN
-          ContProfileAnswer.SETRANGE("Employee No.",UpdateEmpNo);
-          ContProfileAnswer.SETCURRENTKEY("Employee No.","Profile Questionnaire Code","Line No.");
+            ContProfileAnswer.SETRANGE("Employee No.", UpdateEmpNo);
+            ContProfileAnswer.SETCURRENTKEY("Employee No.", "Profile Questionnaire Code", "Line No.");
         END;
 
         IF Delete THEN
-          ContProfileAnswer.DELETEALL
+            ContProfileAnswer.DELETEALL
         ELSE
-          EXIT(NOT ContProfileAnswer.ISEMPTY);
+            EXIT(NOT ContProfileAnswer.ISEMPTY);
     end;
 
     local procedure FindEmployeeValues(ProfileQuestionnaireLine: Record 34002185)
@@ -247,14 +247,14 @@ report 34002170 "Update Employee Classification"
 
     end;
 
-    local procedure EmployeeNo(ProfileQuestionnaireLine: Record 34002185;TableID: Integer;No: Code[20]) EmployeeNo: Code[20]
+    local procedure EmployeeNo(ProfileQuestionnaireLine: Record 34002185; TableID: Integer; No: Code[20]) EmployeeNo: Code[20]
     var
         Emp: Record 5200;
         ProfileQuestnHeader: Record 34002184;
     begin
         ProfileQuestnHeader.GET(ProfileQuestionnaireLine."Profile Questionnaire Code");
         IF TableID = DATABASE::Employee THEN
-          EmployeeNo := No;
+            EmployeeNo := No;
         /*
         ELSE
           WITH ContBusRel DO BEGIN
@@ -275,7 +275,7 @@ report 34002170 "Update Employee Classification"
               EXIT('');
           END;
         */
-        
+
         Emp.GET(EmployeeNo);
         /*
         IF (ProfileQuestnHeader."Employee Type" = ProfileQuestnHeader."Employee Type"::Companies) AND
@@ -285,7 +285,7 @@ report 34002170 "Update Employee Classification"
         
         IF ProfileQuestnHeader."Business Relation Code" = '' THEN
         */
-          EXIT(EmployeeNo);
+        EXIT(EmployeeNo);
         /*
         ContBusRel.RESET;
         IF TableID = DATABASE::Employee THEN
@@ -300,19 +300,19 @@ report 34002170 "Update Employee Classification"
 
     end;
 
-    local procedure MarkByDefinedValue(ProfileQuestnLineQuestion: Record 34002185;ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByDefinedValue(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
     begin
         EmployeeValue.RESET;
         IF EmployeeValue.FIND('-') THEN
-          REPEAT
-            IF InRange(EmployeeValue.Value,ProfileQuestnLineAnswer."From Value",ProfileQuestnLineAnswer."To Value") THEN
-              MarkEmployee(
-                ProfileQuestnLineQuestion,ProfileQuestnLineAnswer,EmployeeValue."Employee No.",
-                EmployeeValue."Last Date Updated",EmployeeValue."Questions Answered (%)")
-          UNTIL EmployeeValue.NEXT = 0;
+            REPEAT
+                IF InRange(EmployeeValue.Value, ProfileQuestnLineAnswer."From Value", ProfileQuestnLineAnswer."To Value") THEN
+                    MarkEmployee(
+                      ProfileQuestnLineQuestion, ProfileQuestnLineAnswer, EmployeeValue."Employee No.",
+                      EmployeeValue."Last Date Updated", EmployeeValue."Questions Answered (%)")
+            UNTIL EmployeeValue.NEXT = 0;
     end;
 
-    local procedure MarkByPercentageOfValue(ProfileQuestnLineQuestion: Record 34002185;ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByPercentageOfValue(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
     var
         Prc: Decimal;
     begin
@@ -320,33 +320,33 @@ report 34002170 "Update Employee Classification"
         EmployeeValue.SETCURRENTKEY(Value);
 
         IF ProfileQuestnLineQuestion."Sorting Method" = ProfileQuestnLineQuestion."Sorting Method"::" " THEN
-          ERROR(
-            Text008,
-            ProfileQuestnLineQuestion.FIELDCAPTION("Sorting Method"),
-            ProfileQuestnLineQuestion."Profile Questionnaire Code",
-            ProfileQuestnLineQuestion.Description);
+            ERROR(
+              Text008,
+              ProfileQuestnLineQuestion.FIELDCAPTION("Sorting Method"),
+              ProfileQuestnLineQuestion."Profile Questionnaire Code",
+              ProfileQuestnLineQuestion.Description);
 
         CASE ProfileQuestnLineQuestion."Sorting Method" OF
-          ProfileQuestnLineQuestion."Sorting Method"::Descending:
-            EmployeeValue.ASCENDING(FALSE);
-          ProfileQuestnLineQuestion."Sorting Method"::Ascending:
-            EmployeeValue.ASCENDING(TRUE);
+            ProfileQuestnLineQuestion."Sorting Method"::Descending:
+                EmployeeValue.ASCENDING(FALSE);
+            ProfileQuestnLineQuestion."Sorting Method"::Ascending:
+                EmployeeValue.ASCENDING(TRUE);
         END;
 
         IF EmployeeValue.FINDSET THEN
-          REPEAT
-            IF TotalValue <> 0 THEN
-              Prc := ROUND(100 * EmployeeValue.Value / TotalValue,1 / POWER(10,ProfileQuestnLineQuestion."No. of Decimals"))
-            ELSE
-              Prc := 0;
-            IF InRange(Prc,ProfileQuestnLineAnswer."From Value",ProfileQuestnLineAnswer."To Value") THEN
-              MarkEmployee(
-                ProfileQuestnLineQuestion,ProfileQuestnLineAnswer,EmployeeValue."Employee No.",
-                EmployeeValue."Last Date Updated",EmployeeValue."Questions Answered (%)");
-          UNTIL EmployeeValue.NEXT = 0
+            REPEAT
+                IF TotalValue <> 0 THEN
+                    Prc := ROUND(100 * EmployeeValue.Value / TotalValue, 1 / POWER(10, ProfileQuestnLineQuestion."No. of Decimals"))
+                ELSE
+                    Prc := 0;
+                IF InRange(Prc, ProfileQuestnLineAnswer."From Value", ProfileQuestnLineAnswer."To Value") THEN
+                    MarkEmployee(
+                      ProfileQuestnLineQuestion, ProfileQuestnLineAnswer, EmployeeValue."Employee No.",
+                      EmployeeValue."Last Date Updated", EmployeeValue."Questions Answered (%)");
+            UNTIL EmployeeValue.NEXT = 0
     end;
 
-    local procedure MarkByPercentageOfEmployee(ProfileQuestnLineQuestion: Record 34002185;ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByPercentageOfEmployee(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
     var
         EmployeeValueCount: Integer;
         RecNo: Integer;
@@ -356,44 +356,44 @@ report 34002170 "Update Employee Classification"
         EmployeeValue.SETCURRENTKEY(Value);
 
         IF ProfileQuestnLineQuestion."Sorting Method" = ProfileQuestnLineQuestion."Sorting Method"::" " THEN
-          ERROR(
-            Text008,
-            ProfileQuestnLineQuestion.FIELDCAPTION("Sorting Method"),
-            ProfileQuestnLineQuestion."Profile Questionnaire Code",
-            ProfileQuestnLineQuestion.Description);
+            ERROR(
+              Text008,
+              ProfileQuestnLineQuestion.FIELDCAPTION("Sorting Method"),
+              ProfileQuestnLineQuestion."Profile Questionnaire Code",
+              ProfileQuestnLineQuestion.Description);
 
         CASE ProfileQuestnLineQuestion."Sorting Method" OF
-          ProfileQuestnLineQuestion."Sorting Method"::Descending:
-            EmployeeValue.ASCENDING(FALSE);
-          ProfileQuestnLineQuestion."Sorting Method"::Ascending:
-            EmployeeValue.ASCENDING(TRUE);
+            ProfileQuestnLineQuestion."Sorting Method"::Descending:
+                EmployeeValue.ASCENDING(FALSE);
+            ProfileQuestnLineQuestion."Sorting Method"::Ascending:
+                EmployeeValue.ASCENDING(TRUE);
         END;
 
         IF EmployeeValue.FIND('-') THEN BEGIN
-          EmployeeValueCount := EmployeeValue.COUNT;
-          RecNo := 0;
-          REPEAT
-            RecNo := RecNo + 1;
-            Prc := ROUND(100 * RecNo / EmployeeValueCount,1 / POWER(10,ProfileQuestnLineQuestion."No. of Decimals"));
-            IF InRange(Prc,ProfileQuestnLineAnswer."From Value",ProfileQuestnLineAnswer."To Value") THEN
-              MarkEmployee(
-                ProfileQuestnLineQuestion,ProfileQuestnLineAnswer,EmployeeValue."Employee No.",
-                EmployeeValue."Last Date Updated",EmployeeValue."Questions Answered (%)")
-          UNTIL EmployeeValue.NEXT = 0
+            EmployeeValueCount := EmployeeValue.COUNT;
+            RecNo := 0;
+            REPEAT
+                RecNo := RecNo + 1;
+                Prc := ROUND(100 * RecNo / EmployeeValueCount, 1 / POWER(10, ProfileQuestnLineQuestion."No. of Decimals"));
+                IF InRange(Prc, ProfileQuestnLineAnswer."From Value", ProfileQuestnLineAnswer."To Value") THEN
+                    MarkEmployee(
+                      ProfileQuestnLineQuestion, ProfileQuestnLineAnswer, EmployeeValue."Employee No.",
+                      EmployeeValue."Last Date Updated", EmployeeValue."Questions Answered (%)")
+            UNTIL EmployeeValue.NEXT = 0
         END;
     end;
 
-    local procedure InRange(Value: Decimal;FromValue: Decimal;ToValue: Decimal): Boolean
+    local procedure InRange(Value: Decimal; FromValue: Decimal; ToValue: Decimal): Boolean
     begin
         IF (FromValue <> 0) AND (ToValue <> 0) AND (Value >= FromValue) AND (Value <= ToValue) THEN
-          EXIT(TRUE);
+            EXIT(TRUE);
         IF (FromValue <> 0) AND (ToValue = 0) AND (Value >= FromValue) THEN
-          EXIT(TRUE);
+            EXIT(TRUE);
         IF (FromValue = 0) AND (ToValue <> 0) AND (Value <= ToValue) THEN
-          EXIT(TRUE);
+            EXIT(TRUE);
     end;
 
-    local procedure MarkEmployee(ProfileQuestnLineQuestion: Record 34002185;ProfileQuestnLineAnswer: Record 34002185;EmpNo: Code[20];UpdateDate: Date;QuestionsAnsweredPrc: Decimal)
+    local procedure MarkEmployee(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185; EmpNo: Code[20]; UpdateDate: Date; QuestionsAnsweredPrc: Decimal)
     var
         Emp: Record 5200;
         EmpPers: Record 5200;
@@ -401,7 +401,7 @@ report 34002170 "Update Employee Classification"
         ProfileQuestnHeader2: Record 34002184;
     begin
         ProfileQuestnHeader2.GET(ProfileQuestnLineQuestion."Profile Questionnaire Code");
-        
+
         Emp.GET(EmpNo);
         /*
         IF (Emp.Type = Emp.Type::Company) AND
@@ -436,9 +436,9 @@ report 34002170 "Update Employee Classification"
         EmpProfileAnswer."Answer Priority" := ProfileQuestnLineAnswer.Priority;
         EmpProfileAnswer."Questions Answered (%)" := QuestionsAnsweredPrc;
         IF UpdateDate = 0D THEN
-          EmpProfileAnswer."Last Date Updated" := TODAY
+            EmpProfileAnswer."Last Date Updated" := TODAY
         ELSE
-          EmpProfileAnswer."Last Date Updated" := UpdateDate;
+            EmpProfileAnswer."Last Date Updated" := UpdateDate;
         EmpProfileAnswer.INSERT;
 
     end;
@@ -461,81 +461,81 @@ report 34002170 "Update Employee Classification"
     begin
         // Mark all non-calculated rating questions
         ProfileQuestnLine.RESET;
-        ProfileQuestnLine.SETRANGE("Employee Class. Field",ProfileQuestnLine."Employee Class. Field"::Rating);
+        ProfileQuestnLine.SETRANGE("Employee Class. Field", ProfileQuestnLine."Employee Class. Field"::Rating);
         IF "Cab. Cuestionario Evaluacion".Code <> '' THEN
-          ProfileQuestnLine.SETRANGE("Profile Questionnaire Code","Cab. Cuestionario Evaluacion".Code);
+            ProfileQuestnLine.SETRANGE("Profile Questionnaire Code", "Cab. Cuestionario Evaluacion".Code);
         IF NOT ProfileQuestnLine.FIND('-') THEN
-          EXIT;
+            EXIT;
         REPEAT
-          ProfileQuestnLine.MARK(TRUE);
-          NoOfRatingLines := NoOfRatingLines + 1;
+            ProfileQuestnLine.MARK(TRUE);
+            NoOfRatingLines := NoOfRatingLines + 1;
         UNTIL ProfileQuestnLine.NEXT = 0;
         ProfileQuestnLine.MARKEDONLY(TRUE);
 
         // Calculate Ratings
         REPEAT
-          Changed := FALSE;
-          IF ProfileQuestnLine.FIND('-') THEN
-            REPEAT
-              Leaf := TRUE;
-              Rating.SETRANGE("Profile Questionnaire Code",ProfileQuestnLine."Profile Questionnaire Code");
-              Rating.SETRANGE("Profile Questionnaire Line No.",ProfileQuestnLine."Line No.");
-              IF Rating.FIND('-') THEN
+            Changed := FALSE;
+            IF ProfileQuestnLine.FIND('-') THEN
                 REPEAT
-                  ProfileQuestnLine2.GET(Rating."Rating Profile Quest. Code",Rating."Rating Profile Quest. Line No.");
-                  RatingQuestion.SETRANGE("Profile Questionnaire Code",Rating."Rating Profile Quest. Code");
-                  RatingQuestion.SETRANGE("Profile Questionnaire Line No.",ProfileQuestnLine2.FindQuestionLine);
-                  IF RatingQuestion.FINDFIRST THEN BEGIN
-                    ProfileQuestnLine2 := ProfileQuestnLine;
-                    ProfileQuestnLine.GET(
-                      RatingQuestion."Profile Questionnaire Code",RatingQuestion."Profile Questionnaire Line No.");
-                    IF ProfileQuestnLine.MARK THEN
-                      Leaf := FALSE;
-                    ProfileQuestnLine := ProfileQuestnLine2;
-                  END;
-                UNTIL (Rating.NEXT = 0) OR (NOT Leaf);
+                    Leaf := TRUE;
+                    Rating.SETRANGE("Profile Questionnaire Code", ProfileQuestnLine."Profile Questionnaire Code");
+                    Rating.SETRANGE("Profile Questionnaire Line No.", ProfileQuestnLine."Line No.");
+                    IF Rating.FIND('-') THEN
+                        REPEAT
+                            ProfileQuestnLine2.GET(Rating."Rating Profile Quest. Code", Rating."Rating Profile Quest. Line No.");
+                            RatingQuestion.SETRANGE("Profile Questionnaire Code", Rating."Rating Profile Quest. Code");
+                            RatingQuestion.SETRANGE("Profile Questionnaire Line No.", ProfileQuestnLine2.FindQuestionLine);
+                            IF RatingQuestion.FINDFIRST THEN BEGIN
+                                ProfileQuestnLine2 := ProfileQuestnLine;
+                                ProfileQuestnLine.GET(
+                                  RatingQuestion."Profile Questionnaire Code", RatingQuestion."Profile Questionnaire Line No.");
+                                IF ProfileQuestnLine.MARK THEN
+                                    Leaf := FALSE;
+                                ProfileQuestnLine := ProfileQuestnLine2;
+                            END;
+                        UNTIL (Rating.NEXT = 0) OR (NOT Leaf);
 
-              // Calculate Rating
-              IF Leaf THEN BEGIN
-                IF UpdateEmpNo = '' THEN BEGIN
-                  RatingLineNo := RatingLineNo + 1;
-                  Window.UPDATE(1,ProfileQuestnLine."Profile Questionnaire Code");
-                  Window.UPDATE(3,ProfileQuestnLine."Line No.");
-                  Window.UPDATE(4,ROUND(10000 * RatingLineNo / NoOfRatingLines,1));
-                  NoOfRecs := Emp.COUNT;
-                  RecCount := 0;
-                  TotalValue := 0;
-                END;
-                EmployeeValue.DELETEALL;
-                AnswersExists(ProfileQuestnLine,UpdateEmpNo,TRUE);
-                IF UpdateEmpNo <> '' THEN
-                  Emp.SETRANGE("No.",UpdateEmpNo);
-                IF Emp.FIND('-') THEN
-                  REPEAT
-                    IF UpdateEmpNo = '' THEN BEGIN
-                      RecCount := RecCount + 1;
-                      Window.UPDATE(5,Emp."No.");
-                      Window.UPDATE(6,ROUND(10000 * RecCount / NoOfRecs,1));
+                    // Calculate Rating
+                    IF Leaf THEN BEGIN
+                        IF UpdateEmpNo = '' THEN BEGIN
+                            RatingLineNo := RatingLineNo + 1;
+                            Window.UPDATE(1, ProfileQuestnLine."Profile Questionnaire Code");
+                            Window.UPDATE(3, ProfileQuestnLine."Line No.");
+                            Window.UPDATE(4, ROUND(10000 * RatingLineNo / NoOfRatingLines, 1));
+                            NoOfRecs := Emp.COUNT;
+                            RecCount := 0;
+                            TotalValue := 0;
+                        END;
+                        EmployeeValue.DELETEALL;
+                        AnswersExists(ProfileQuestnLine, UpdateEmpNo, TRUE);
+                        IF UpdateEmpNo <> '' THEN
+                            Emp.SETRANGE("No.", UpdateEmpNo);
+                        IF Emp.FIND('-') THEN
+                            REPEAT
+                                IF UpdateEmpNo = '' THEN BEGIN
+                                    RecCount := RecCount + 1;
+                                    Window.UPDATE(5, Emp."No.");
+                                    Window.UPDATE(6, ROUND(10000 * RecCount / NoOfRecs, 1));
+                                END;
+                                EmpNo := EmployeeNo(ProfileQuestnLine, DATABASE::Employee, Emp."No.");
+                                IF EmpNo <> '' THEN BEGIN
+                                    Points := FindEmployeeRatingValue(ProfileQuestnLine, Emp, UpdateDate, QuestionsAnsweredPrc);
+                                    //GRN  IF QuestionsAnsweredPrc >= ProfileQuestnLine."Min. % Questions Answered" THEN
+                                    //GRN    InsertEmployeeValue(ProfileQuestnLine,Emp."No.",Points,UpdateDate,QuestionsAnsweredPrc);
+                                END;
+                            UNTIL Emp.NEXT = 0;
+                        MarkEmployeeByMethod(ProfileQuestnLine, UpdateEmpNo);
+                        ProfileQuestnLine.MARK(FALSE);
+                        Changed := TRUE;
                     END;
-                    EmpNo := EmployeeNo(ProfileQuestnLine,DATABASE::Employee,Emp."No.");
-                    IF EmpNo <> '' THEN BEGIN
-                      Points := FindEmployeeRatingValue(ProfileQuestnLine,Emp,UpdateDate,QuestionsAnsweredPrc);
-                    //GRN  IF QuestionsAnsweredPrc >= ProfileQuestnLine."Min. % Questions Answered" THEN
-                    //GRN    InsertEmployeeValue(ProfileQuestnLine,Emp."No.",Points,UpdateDate,QuestionsAnsweredPrc);
-                    END;
-                  UNTIL Emp.NEXT = 0;
-                MarkEmployeeByMethod(ProfileQuestnLine,UpdateEmpNo);
-                ProfileQuestnLine.MARK(FALSE);
-                Changed := TRUE;
-              END;
-            UNTIL ProfileQuestnLine.NEXT = 0;
+                UNTIL ProfileQuestnLine.NEXT = 0;
         UNTIL Changed = FALSE;
 
         IF ProfileQuestnLine.FIND('-') THEN
-          ERROR(Text004);
+            ERROR(Text004);
     end;
 
-    local procedure FindEmployeeRatingValue(ProfileQuestnLine: Record 34002185;Emp: Record 5200;var UpdateDate: Date;var QuestionsAnsweredPrc: Decimal) Value: Decimal
+    local procedure FindEmployeeRatingValue(ProfileQuestnLine: Record 34002185; Emp: Record 5200; var UpdateDate: Date; var QuestionsAnsweredPrc: Decimal) Value: Decimal
     var
         Rating: Record 34002188;
         ContProfileAnswer: Record 5089;
@@ -544,62 +544,62 @@ report 34002170 "Update Employee Classification"
         NoOfAnsweredQuestions: Integer;
     begin
         UpdateDate := TODAY;
-        Rating.SETRANGE("Profile Questionnaire Code",ProfileQuestnLine."Profile Questionnaire Code");
-        Rating.SETRANGE("Profile Questionnaire Line No.",ProfileQuestnLine."Line No.");
+        Rating.SETRANGE("Profile Questionnaire Code", ProfileQuestnLine."Profile Questionnaire Code");
+        Rating.SETRANGE("Profile Questionnaire Line No.", ProfileQuestnLine."Line No.");
         IF Rating.FIND('-') THEN
-          REPEAT
-            ProfileQuestionnaireLine.GET(Rating."Rating Profile Quest. Code",Rating."Rating Profile Quest. Line No.");
-            ProfileQuestionnaireLine.GET(
-              ProfileQuestionnaireLine."Profile Questionnaire Code",ProfileQuestionnaireLine.FindQuestionLine);
-            IF NOT TempProfileQuestnLine.GET(
-                 ProfileQuestionnaireLine."Profile Questionnaire Code",ProfileQuestionnaireLine."Line No.")
-            THEN BEGIN
-              TempProfileQuestnLine.INIT;
-              TempProfileQuestnLine."Profile Questionnaire Code" := ProfileQuestionnaireLine."Profile Questionnaire Code";
-              TempProfileQuestnLine."Line No." := ProfileQuestionnaireLine."Line No.";
-              TempProfileQuestnLine.INSERT;
-              IF AnswersExists(ProfileQuestionnaireLine,Emp."No.",FALSE) THEN
-                NoOfAnsweredQuestions := NoOfAnsweredQuestions + 1;
-            END;
+            REPEAT
+                ProfileQuestionnaireLine.GET(Rating."Rating Profile Quest. Code", Rating."Rating Profile Quest. Line No.");
+                ProfileQuestionnaireLine.GET(
+                  ProfileQuestionnaireLine."Profile Questionnaire Code", ProfileQuestionnaireLine.FindQuestionLine);
+                IF NOT TempProfileQuestnLine.GET(
+                     ProfileQuestionnaireLine."Profile Questionnaire Code", ProfileQuestionnaireLine."Line No.")
+                THEN BEGIN
+                    TempProfileQuestnLine.INIT;
+                    TempProfileQuestnLine."Profile Questionnaire Code" := ProfileQuestionnaireLine."Profile Questionnaire Code";
+                    TempProfileQuestnLine."Line No." := ProfileQuestionnaireLine."Line No.";
+                    TempProfileQuestnLine.INSERT;
+                    IF AnswersExists(ProfileQuestionnaireLine, Emp."No.", FALSE) THEN
+                        NoOfAnsweredQuestions := NoOfAnsweredQuestions + 1;
+                END;
 
-            IF ContProfileAnswer.GET(
-                 Emp."No.",Rating."Rating Profile Quest. Code",Rating."Rating Profile Quest. Line No.")
-            THEN BEGIN
-              Value := Value + Rating.Points;
-              IF ContProfileAnswer."Last Date Updated" < UpdateDate THEN
-                UpdateDate := ContProfileAnswer."Last Date Updated";
-            END;
-          UNTIL Rating.NEXT = 0;
+                IF ContProfileAnswer.GET(
+                     Emp."No.", Rating."Rating Profile Quest. Code", Rating."Rating Profile Quest. Line No.")
+                THEN BEGIN
+                    Value := Value + Rating.Points;
+                    IF ContProfileAnswer."Last Date Updated" < UpdateDate THEN
+                        UpdateDate := ContProfileAnswer."Last Date Updated";
+                END;
+            UNTIL Rating.NEXT = 0;
 
         IF TempProfileQuestnLine.COUNT <> 0 THEN
-          QuestionsAnsweredPrc := NoOfAnsweredQuestions / TempProfileQuestnLine.COUNT * 100
+            QuestionsAnsweredPrc := NoOfAnsweredQuestions / TempProfileQuestnLine.COUNT * 100
         ELSE
-          QuestionsAnsweredPrc := 0;
+            QuestionsAnsweredPrc := 0;
     end;
 
-    local procedure MarkEmployeeByMethod(ProfileQuestnLine: Record 34002185;UpdateEmpNo: Code[20])
+    local procedure MarkEmployeeByMethod(ProfileQuestnLine: Record 34002185; UpdateEmpNo: Code[20])
     var
         ProfileQuestnLine2: Record 34002185;
     begin
         ProfileQuestnLine2.RESET;
         ProfileQuestnLine2 := ProfileQuestnLine;
-        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code",ProfileQuestnLine."Profile Questionnaire Code");
+        ProfileQuestnLine2.SETRANGE("Profile Questionnaire Code", ProfileQuestnLine."Profile Questionnaire Code");
         IF ProfileQuestnLine2.FIND('>') AND
            (ProfileQuestnLine2.Type = ProfileQuestnLine2.Type::Answer)
         THEN
-          REPEAT
-            IF UpdateEmpNo = '' THEN
-              Window.UPDATE(3,ProfileQuestnLine2."Line No.");
-            CASE ProfileQuestnLine."Classification Method" OF
-              ProfileQuestnLine."Classification Method"::"Defined Value":
-                MarkByDefinedValue(ProfileQuestnLine,ProfileQuestnLine2);
-              ProfileQuestnLine."Classification Method"::"Percentage of Value":
-                MarkByPercentageOfValue(ProfileQuestnLine,ProfileQuestnLine2);
-              ProfileQuestnLine."Classification Method"::"Percentage of employees":
-                MarkByPercentageOfEmployee(ProfileQuestnLine,ProfileQuestnLine2);
-            END;
-          UNTIL (ProfileQuestnLine2.NEXT = 0) OR
-                (ProfileQuestnLine2.Type = ProfileQuestnLine2.Type::Question);
+            REPEAT
+                IF UpdateEmpNo = '' THEN
+                    Window.UPDATE(3, ProfileQuestnLine2."Line No.");
+                CASE ProfileQuestnLine."Classification Method" OF
+                    ProfileQuestnLine."Classification Method"::"Defined Value":
+                        MarkByDefinedValue(ProfileQuestnLine, ProfileQuestnLine2);
+                    ProfileQuestnLine."Classification Method"::"Percentage of Value":
+                        MarkByPercentageOfValue(ProfileQuestnLine, ProfileQuestnLine2);
+                    ProfileQuestnLine."Classification Method"::"Percentage of employees":
+                        MarkByPercentageOfEmployee(ProfileQuestnLine, ProfileQuestnLine2);
+                END;
+            UNTIL (ProfileQuestnLine2.NEXT = 0) OR
+                  (ProfileQuestnLine2.Type = ProfileQuestnLine2.Type::Question);
     end;
 }
 

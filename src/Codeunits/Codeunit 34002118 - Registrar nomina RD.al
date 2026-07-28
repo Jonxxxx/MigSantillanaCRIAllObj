@@ -774,10 +774,10 @@ codeunit 34002118 "Registrar nomina RD"
                             IF CantidadDiasEnt <= 0 THEN
                                 ERROR(Err001, CantidadDiasEnt, Empleado."No.");
 
-                            IF Puestos."Método cálculo Ingresos" = '' THEN
+                            IF Puestos."Metodo Calculo Ingresos" = '' THEN
                                 CalcDias.GET(ConfNominas."Metodo calculo Ingresos")
                             ELSE
-                                CalcDias.GET(Puestos."Método cálculo Ingresos");
+                                CalcDias.GET(Puestos."Metodo Calculo Ingresos");
 
                             //IF CalcDias.Valor <> 30 THEN
                             BEGIN
@@ -824,7 +824,7 @@ codeunit 34002118 "Registrar nomina RD"
 
                     IF DiasIncid <= 0 THEN
                         DiasIncid := 1;
-                    CalcDias.GET(ConfNominas."Método cálculo ausencias");
+                    CalcDias.GET(ConfNominas."Metodo Calculo ausencias");
                     ImporteIncid := IngresoSalario / CalcDias.Valor * DiasIncid;
                     ImporteTotal := ImporteTotal - ImporteIncid;
                 END;
@@ -908,10 +908,10 @@ codeunit 34002118 "Registrar nomina RD"
 
                 IF DiasPago <> 0 THEN BEGIN
                     IF Empleado."Employment Date" >= PerInici THEN BEGIN
-                        IF Puestos."Método cálculo Ingresos" = '' THEN
+                        IF Puestos."Metodo Calculo Ingresos" = '' THEN
                             CalcDias.GET(ConfNominas."Metodo calculo Ingresos")
                         ELSE
-                            CalcDias.GET(Puestos."Método cálculo Ingresos");
+                            CalcDias.GET(Puestos."Metodo Calculo Ingresos");
                         //                message('%1 %2 %3 %4',ingresosalario, calcdias.valor, diaspago);
                         ImporteTotal := IngresoSalario / CalcDias.Valor * DiasPago;
                         ImporteBaseImp := ImporteTotal;
@@ -1267,7 +1267,7 @@ codeunit 34002118 "Registrar nomina RD"
                                         REPEAT
                                         BEGIN
                                             IF (NOT Empleado."Excluido Cotizacion TSS") AND ((LinNominasES."Cotiza SFS" OR LinNominasES."Cotiza AFP")) THEN BEGIN
-                                                IF (Puestos."Método cálculo Paga Salario" = Puestos."Método cálculo Paga Salario"::Distribuido) AND
+                                                IF (Puestos."Metodo Calculo Paga Salario" = Puestos."Metodo Calculo Paga Salario"::Distribuido) AND
                                                    (ConfNominas."Concepto Sal. Base" = PerfilSal."Concepto salarial") THEN BEGIN
                                                     IF (LinNominasES."Importe Base" > DeduccGob."Tope Salarial/Acumulado Anual") AND
                                                        (DeduccGob."Tope Salarial/Acumulado Anual" <> 0) THEN BEGIN
@@ -1356,7 +1356,7 @@ codeunit 34002118 "Registrar nomina RD"
                                             REPEAT
                                                 IF SegundaQ THEN BEGIN
                                                     IF (NOT Empleado."Excluido Cotizacion TSS") AND ((LinNominasES."Cotiza SFS" OR LinNominasES."Cotiza AFP")) THEN BEGIN
-                                                        IF (Puestos."Método cálculo Paga Salario" = Puestos."Método cálculo Paga Salario"::Distribuido) AND
+                                                        IF (Puestos."Metodo Calculo Paga Salario" = Puestos."Metodo Calculo Paga Salario"::Distribuido) AND
                                                            (ConfNominas."Concepto Sal. Base" = LinNominasES."Concepto salarial") AND (PrimeraQ) THEN BEGIN
                                                             IF (LinNominasES."Importe Base" > DeduccGob."Tope Salarial/Acumulado Anual") AND
                                                                (DeduccGob."Tope Salarial/Acumulado Anual" <> 0) THEN BEGIN
@@ -1421,7 +1421,7 @@ codeunit 34002118 "Registrar nomina RD"
                                                     END
                                                     ELSE
                                                         IF (LinNominasES."Cotiza SRL" OR (LinNominasES."Cotiza Infotep")) THEN BEGIN
-                                                            IF (Puestos."Método cálculo Paga Salario" = Puestos."Método cálculo Paga Salario"::Distribuido) AND
+                                                            IF (Puestos."Metodo Calculo Paga Salario" = Puestos."Metodo Calculo Paga Salario"::Distribuido) AND
                                                                (ConfNominas."Concepto Sal. Base" = LinNominasES."Concepto salarial") THEN BEGIN
                                                                 IF (LinNominasES."Importe Base" > DeduccGob."Tope Salarial/Acumulado Anual") AND
                                                                    (DeduccGob."Tope Salarial/Acumulado Anual" <> 0) THEN
@@ -1848,7 +1848,7 @@ codeunit 34002118 "Registrar nomina RD"
             IF (NOT LinEsqPercepISR2."1ra Quincena") AND (PrimeraQ) THEN
                 EXIT;
 
-            IF Puestos."Método cálculo Paga Salario" = 0 THEN //Para Normal, se divide el salario
+            IF Puestos."Metodo Calculo Paga Salario" = 0 THEN //Para Normal, se divide el salario
                 IngresoSalario := IngresoSalario / 2;
         END;
 
@@ -1931,7 +1931,7 @@ codeunit 34002118 "Registrar nomina RD"
                 LinEsqPercepISR.SETRANGE("Concepto salarial", HistLinNom."Concepto salarial");
                 LinEsqPercepISR.FINDFIRST;
                 IF LinEsqPercepISR."1ra Quincena" AND LinEsqPercepISR."2da Quincena" THEN BEGIN
-                    IF ((Puestos."Método cálculo Paga Salario" = 0) AND (HistLinNom."Salario Base" AND PrimeraQ) AND (PrimeraVez) AND
+                    IF ((Puestos."Metodo Calculo Paga Salario" = 0) AND (HistLinNom."Salario Base" AND PrimeraQ) AND (PrimeraVez) AND
                        (gTiposNom."Frecuencia de pago" = gTiposNom."Frecuencia de pago"::Quincenal)) OR (gTiposNom."Calcular ISR Mes en Bonific") THEN BEGIN
                         HistLinNom.Total += IngresoSalario;
                         PrimeraVez := FALSE;
@@ -2086,12 +2086,12 @@ codeunit 34002118 "Registrar nomina RD"
         Base := TotalISR[1] [1];
 
         //ERROR('%1 %2 %3 %4',BASE,TOTALISR[1][1],TOTALCOMPANY);
-        // Cálculo del ISR. Busqueda de Rangos ISR
+        // Calculo del ISR. Busqueda de Rangos ISR
         Indice := 1;
         RetencionISR.SETRANGE(Ano, FORMAT(iAno, 4, '<Standard Format,0>'));
         RetencionISR.FINDSET(FALSE, FALSE);
         REPEAT
-            RangoISR[Indice] := RetencionISR."Importe Máximo";
+            RangoISR[Indice] := RetencionISR."Importe Maximo";
             ImporteRetencion[Indice] := RetencionISR."Importe retencion";
             "%Calcular"[Indice] := RetencionISR."% Retencion";
             Indice += 1;
@@ -2188,7 +2188,7 @@ codeunit 34002118 "Registrar nomina RD"
 
         IF ((Contrato."Frecuencia de pago" = Contrato."Frecuencia de pago"::Quincenal) AND
            (PerfilSalImp."1ra Quincena") AND (PerfilSalImp."2da Quincena") AND (PrimeraQ) AND
-           (Puestos."Método cálculo Paga Salario" = 0)) AND (gTiposNom."Frecuencia de pago" <> gTiposNom."Frecuencia de pago"::Mensual) THEN
+           (Puestos."Metodo Calculo Paga Salario" = 0)) AND (gTiposNom."Frecuencia de pago" <> gTiposNom."Frecuencia de pago"::Mensual) THEN
             TotalISR[1] [1] := ROUND(TotalISR[1] [1] / 2, 0.01)
         ELSE
             IF (gTiposNom."Tipo de nomina" = gTiposNom."Tipo de nomina"::Prestaciones) THEN BEGIN
@@ -2406,11 +2406,11 @@ codeunit 34002118 "Registrar nomina RD"
 
                 CheckHistLinPrestamo.RESET;
                 CheckHistLinPrestamo.SETRANGE("Codigo Empleado", HistCabPrestamo."Employee No.");
-                CheckHistLinPrestamo.SETRANGE("No. Préstamo", HistCabPrestamo."No. Préstamo");
+                CheckHistLinPrestamo.SETRANGE("No. Prestamo", HistCabPrestamo."No. Prestamo");
                 CheckHistLinPrestamo.SETRANGE("Fecha Transaccion", PerInici);
                 IF NOT CheckHistLinPrestamo.FINDFIRST THEN BEGIN
                     HistLinPrestamo.SETRANGE("Codigo Empleado", HistCabPrestamo."Employee No.");
-                    HistLinPrestamo.SETRANGE("No. Préstamo", HistCabPrestamo."No. Préstamo");
+                    HistLinPrestamo.SETRANGE("No. Prestamo", HistCabPrestamo."No. Prestamo");
                     IF (HistLinPrestamo.FINDLAST) AND (LinPerfilSal."Tipo concepto" <> 0) THEN BEGIN
                         HistLinPrestamo."No. Linea" += 100;
                         HistLinPrestamo."Tipo CxC" := HistCabPrestamo."Tipo CxC";
@@ -2534,7 +2534,7 @@ codeunit 34002118 "Registrar nomina RD"
         END;
         LinNomina."Sujeto Cotizacion" := ConceptosSal."Sujeto Cotizacion";
         LinNomina."Aplica para Regalia" := ConceptosSal."Aplica para Regalia";
-        LinNomina.Formula := perfSalario."Formula cálculo";
+        LinNomina.Formula := perfSalario."Formula Calculo";
         LinNomina.Imprimir := perfSalario.Imprimir;
         LinNomina."Inicio periodo" := PerInici;
         LinNomina."Fin periodo" := PerFinal;
@@ -3471,7 +3471,7 @@ codeunit 34002118 "Registrar nomina RD"
         /*
         DiasVacaciones := 0;
         
-        funcionesnom.CálculoEntreFechas(empleado."Employment Date", empleado."Termination Date",Anos, Meses, Dias);
+        funcionesnom.CalculoEntreFechas(empleado."Employment Date", empleado."Termination Date",Anos, Meses, Dias);
         DiasVacaciones := funcionesnom.CalculoDiaVacaciones(empleado."No.",MesTrabajo,AnoTrabajo,MontoVacaciones,empleado."Employment Date",PerFinal);
         
         PromedioSalarioDiarioVac := "Perfil Salarial".Importe / 23.83;

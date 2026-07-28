@@ -22,7 +22,7 @@ page 34002143 "Conceptos Salariales Prorrateo"
                 {
                     Visible = false;
                 }
-                field("Formula cálculo"; "Formula cálculo")
+                field("Formula Calculo"; "Formula Calculo")
                 {
                 }
                 field("No. Cuenta"; "No. Cuenta")

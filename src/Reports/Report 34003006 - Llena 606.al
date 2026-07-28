@@ -158,7 +158,7 @@ report 34003006 "Llena 606"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     group("Import from")
                     {

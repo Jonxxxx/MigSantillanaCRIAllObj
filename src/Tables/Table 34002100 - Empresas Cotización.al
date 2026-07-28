@@ -26,7 +26,7 @@ table 34002100 "Empresas Cotizacion"
         {
             InitValue = 'CL';
         }
-        field(4; "Número"; Text[4])
+        field(4; "Numero"; Text[4])
         {
             Caption = 'Number';
         }

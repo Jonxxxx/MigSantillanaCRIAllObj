@@ -95,7 +95,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         intProcesados: Integer;
         intTotal: Integer;
         cduPOS: Codeunit 34002503;
-        Text001: Label 'Registrando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de crédito  @@@@@@@@@@@@@@@@@@@@2';
+        Text001: Label 'Registrando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2';
         Text002: Label 'Registrada Correctamente';
         Text003: Label ' Error Registro: %1';
         rParametros: Record 34002522;
@@ -597,7 +597,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         intProcesados: Integer;
         intTotal: Integer;
         cduPOS: Codeunit 34002503;
-        Text001: Label 'Liquidando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de crédito  @@@@@@@@@@@@@@@@@@@@2';
+        Text001: Label 'Liquidando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2';
         rParametros: Record 34002522;
         Text004: Label 'Liquidada Correctamente.';
         Text005: Label 'Error Liquidar Fac: %1';

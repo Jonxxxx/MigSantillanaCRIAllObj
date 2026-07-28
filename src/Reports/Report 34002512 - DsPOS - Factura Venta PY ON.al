@@ -960,7 +960,7 @@ report 34002512 "DsPOS - Factura Venta PY ON"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';

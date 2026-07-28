@@ -83,7 +83,7 @@ report 34002140 "Proceso Gtos. Nomina"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     field(Dimension; CodDimension)
                     {
@@ -120,7 +120,6 @@ report 34002140 "Proceso Gtos. Nomina"
                     field(Banco; CodigoBanco)
                     {
                         Caption = 'Bank Account';
-                        OptionCaption = 'Bank Account';
                         TableRelation = "Bank Account";
                     }
                 }

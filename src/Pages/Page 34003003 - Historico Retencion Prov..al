@@ -19,7 +19,7 @@ page 34003003 "Historico Retencion Prov."
                 field("Cta. Contable"; "Cta. Contable")
                 {
                 }
-                field("Base Cálculo"; "Base Cálculo")
+                field("Base Calculo"; "Base Calculo")
                 {
                 }
                 field(Devengo; Devengo)

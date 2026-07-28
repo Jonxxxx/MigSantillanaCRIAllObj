@@ -21,7 +21,7 @@ report 34002106 "Contabilizar Nominas - new"
                 DataItemTableView = SORTING("No. empleado", "Tipo nomina", Periodo, "No. Orden")
                                     WHERE("Concepto salarial" = FILTER(<> ''),
                                           Cantidad = FILTER(<> 0),
-                                          Excluir de listados=CONST(false));
+                                          "Excluir de listados" = CONST(false));
 
                 trigger OnAfterGetRecord()
                 var
@@ -475,7 +475,7 @@ report 34002106 "Contabilizar Nominas - new"
                                                PS.SETRANGE("No. empleado",Empleado."No.");
                                                PS.SETRANGE("Concepto salarial",Codigo);
                                                PS.FINDFIRST;
-                                               PS.VALIDATE("F´Š¢rmula Calculo","F´Š¢rmula Calculo");
+                                               PS.VALIDATE("Formula Calculo","Formula Calculo");
                                                Acumulado         := PS.Importe;
                                                */
                                                 ConceptosFormula.FIND('-');
@@ -484,7 +484,7 @@ report 34002106 "Contabilizar Nominas - new"
                                                 TempHistLinNom.VALIDATE("No. empleado", Empleado."No.");
                                                 TempHistLinNom.VALIDATE("Concepto salarial", Codigo);
                                                 TempHistLinNom.VALIDATE(Periodo, inicial);
-                                                TempHistLinNom.VALIDATE(F´Š¢rmula, "F´Š¢rmula Calculo");
+                                                TempHistLinNom.VALIDATE(Formula, "Formula Calculo");
 
                                                 Acumulado := TempHistLinNom.Total;
                                                 /*
@@ -505,13 +505,13 @@ report 34002106 "Contabilizar Nominas - new"
                                             ; //Variable
                                         1:
                                             ; //Fijo
-                                        2: //F´Š¢rmula
+                                        2: //Formula
                                             BEGIN
                                                 PS.RESET;
                                                 PS.SETRANGE("No. empleado", Empleado."No.");
                                                 PS.SETRANGE("Concepto salarial", Codigo);
                                                 PS.FINDFIRST;
-                                                PS.VALIDATE("F´Š¢rmula Calculo", "F´Š¢rmula Calculo");
+                                                PS.VALIDATE("Formula Calculo", "Formula Calculo");
                                                 Acumulado := PS.Importe;
                                             END;
                                     END;
@@ -574,7 +574,7 @@ report 34002106 "Contabilizar Nominas - new"
                                                        (((DATE2DMY(Empleado."Fin contrato", 2) = DATE2DMY(FechaRegistro, 2)) AND
                                                          (DATE2DMY(Empleado."Fin contrato", 3) = DATE2DMY(FechaRegistro, 3)))) THEN BEGIN
                                                         CalculoFechas.CalculoEntreFechas(Empleado."Employment Date", Empleado."Fin contrato", Anos, Meses, Dias);
-                                                        EVALUATE(PS.Importe, "F´Š¢rmula Calculo");
+                                                        EVALUATE(PS.Importe, "Formula Calculo");
                                                         Acumulado := ROUND((PS.Importe / 30) * Dias, ConfContabilidad."Amount Rounding Precision");
                                                     END
                                                     ELSE
@@ -585,7 +585,7 @@ report 34002106 "Contabilizar Nominas - new"
                                                             IF DATE2DMY(FechaRegistro, 2) = 2 THEN
                                                                 Dias := 30 - Dias + 1;
 
-                                                            EVALUATE(PS.Importe, "F´Š¢rmula Calculo");
+                                                            EVALUATE(PS.Importe, "Formula Calculo");
                                                             Acumulado := ROUND((PS.Importe / 30) * Dias, ConfContabilidad."Amount Rounding Precision");
                                                         END;
                                                 END
@@ -597,21 +597,21 @@ report 34002106 "Contabilizar Nominas - new"
                                                         //             IF DATE2DMY(FechaRegistro,2) = 2 THEN
                                                         Dias := 30 - Dias + 1;
 
-                                                        EVALUATE(PS.Importe, "F´Š¢rmula Calculo");
+                                                        EVALUATE(PS.Importe, "Formula Calculo");
                                                         Acumulado := ROUND((PS.Importe / 30) * Dias, ConfContabilidad."Amount Rounding Precision");
                                                     END
                                                     ELSE BEGIN
-                                                        EVALUATE(Acumulado, "F´Š¢rmula Calculo");
+                                                        EVALUATE(Acumulado, "Formula Calculo");
                                                     END;
                                                 //            message('%1 %2 %3 %4 %5',dias,Empleado."Employment Date",fecharegistro);
                                             END;
-                                        2: //F´Š¢rmula
+                                        2: //Formula
                                             BEGIN
                                                 PS.RESET;
                                                 PS.SETRANGE("No. empleado", Empleado."No.");
                                                 PS.SETRANGE("Concepto salarial", Codigo);
                                                 PS.FINDFIRST;
-                                                PS.VALIDATE("F´Š¢rmula Calculo", "F´Š¢rmula Calculo");
+                                                PS.VALIDATE("Formula Calculo", "Formula Calculo");
                                                 Acumulado := PS.Importe;
                                             END;
                                     END;
@@ -623,13 +623,13 @@ report 34002106 "Contabilizar Nominas - new"
                                             ; //Variable
                                         1:
                                             ; //Fijo
-                                        2: //F´Š¢rmula
+                                        2: //Formula
                                             BEGIN
                                                 PS.RESET;
                                                 PS.SETRANGE("No. empleado", Empleado."No.");
                                                 PS.SETRANGE("Concepto salarial", Codigo);
                                                 PS.FINDFIRST;
-                                                PS.VALIDATE("F´Š¢rmula Calculo", "F´Š¢rmula Calculo");
+                                                PS.VALIDATE("Formula Calculo", "Formula Calculo");
                                                 Acumulado := PS.Importe;
                                             END;
                                     END;
@@ -641,13 +641,13 @@ report 34002106 "Contabilizar Nominas - new"
                                             ; //Variable
                                         1:
                                             ; //Fijo
-                                        2: //F´Š¢rmula
+                                        2: //Formula
                                             BEGIN
                                                 PS.RESET;
                                                 PS.SETRANGE("No. empleado", Empleado."No.");
                                                 PS.SETRANGE("Concepto salarial", Codigo);
                                                 PS.FINDFIRST;
-                                                PS.VALIDATE("F´Š¢rmula Calculo", "F´Š¢rmula Calculo");
+                                                PS.VALIDATE("Formula Calculo", "Formula Calculo");
                                                 Acumulado := PS.Importe;
                                             END;
                                     END;
@@ -669,13 +669,13 @@ report 34002106 "Contabilizar Nominas - new"
                                             END;
                                         1:
                                             ; //Fijo
-                                        2: //F´Š¢rmula
+                                        2: //Formula
                                             BEGIN
                                                 PS.RESET;
                                                 PS.SETRANGE("No. empleado", Empleado."No.");
                                                 PS.SETRANGE("Concepto salarial", Codigo);
                                                 PS.FINDFIRST;
-                                                PS.VALIDATE("F´Š¢rmula Calculo", "F´Š¢rmula Calculo");
+                                                PS.VALIDATE("Formula Calculo", "Formula Calculo");
                                                 Acumulado := PS.Importe;
                                             END;
                                     END;
@@ -1216,7 +1216,7 @@ report 34002106 "Contabilizar Nominas - new"
         Tiposdenominas: Record 34002158;
         DistribEDEmp: Record 34002190;
         cduDim: Codeunit 408;
-        GestNumSerie: Codeunit 396;
+        GestNumSerie: Codeunit "No. Series";
         CalculoFechas: Codeunit 34002104;
         CodOrigen: Code[20];
         inicial: Date;

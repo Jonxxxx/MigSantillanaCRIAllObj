@@ -16,7 +16,7 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         {
             DataItemTableView = SORTING("Document Type", "No.")
                                 ORDER(Ascending)
-                                WHERE("Document Type" = CONST(Credit Memo));
+                                WHERE("Document Type" = CONST('Credit Memo'));
             RequestFilterFields = "No.", "Sell-to Customer No.";
             column(Sales_Invoice_Header__Bill_to_Address_; Loc.Address + ' ' + Loc."Address 2" + ' ' + Loc.City + ' ' + Loc.County)
             {
@@ -365,7 +365,7 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         SSH: Record 110;
         SCML: Record 37;
         Loc: Record 14;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
                          wDiv: Code[10];
                          _VendorName: Text[50];
                          Comentario: Text[1024];

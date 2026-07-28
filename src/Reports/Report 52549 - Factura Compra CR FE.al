@@ -497,7 +497,7 @@ report 52549 "Factura Compra CR FE"
                 Vend.GET("Purch. Inv. Header"."Buy-from Vendor No.");
 
                 "Purch. Inv. Header".CALCFIELDS("Amount Including VAT");
-                //TODO: no existe ChkTransMgt.FormatNoText(DescriptionLine, "Purch. Inv. Header"."Amount Including VAT", 2058, "Currency Code");
+                ChkTransMgt.FormatNoText(DescriptionLine, "Purch. Inv. Header"."Amount Including VAT", 2058, "Currency Code");
             end;
 
             trigger OnPreDataItem()
@@ -601,9 +601,9 @@ report 52549 "Factura Compra CR FE"
         NumberOfLines: Integer;
         OnLineNumber: Integer;
         PurchaseInvPrinted: Codeunit 319;
-        FormatAddress: Codeunit 365;
-        SalesTaxCalc: Codeunit 398;
-        SegManagement: Codeunit 5051;
+        FormatAddress: Codeunit "Format Address";
+        SalesTaxCalc: Codeunit "Sales Tax Calculate";
+        SegManagement: Codeunit SegManagement;
         LogInteraction: Boolean;
         TotalTaxLabel: Text[30];
         BreakdownTitle: Text[30];
@@ -653,7 +653,7 @@ report 52549 "Factura Compra CR FE"
         DireccionCaptionLbl: Label 'Direccion: ';
         ComentarioCaptionLbl: Label 'Comentarios: ';
         DescriptionLine: array[2] of Text[200];
-        //TODO: no existe ChkTransMgt: Report 10400;
+        ChkTransMgt: Report 10400;
         CurrName: Text[30];
         Comentario: Text[1024];
 }

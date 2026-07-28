@@ -20,7 +20,7 @@ page 34002155 "Tabla retenc. ISR"
                 field("No. orden"; "No. orden")
                 {
                 }
-                field("Importe Máximo"; "Importe Máximo")
+                field("Importe Maximo"; "Importe Maximo")
                 {
                 }
                 field("Importe retencion"; "Importe retencion")

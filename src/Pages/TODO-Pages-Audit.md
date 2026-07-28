@@ -792,7 +792,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
     76:                 {
     77:                     Caption = '&Movimientos CxC Empleados';
     78:                     //TODO: Ver RunObject = Page 58100;
-    79:                     //TODO: Ver RunPageLink = Field1 = FIELD("No. Préstamo");
+    79:                     //TODO: Ver RunPageLink = Field1 = FIELD("No. Prestamo");
     80:                     Visible = false;
 ~~~
 
@@ -813,17 +813,17 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     77:                     Caption = '&Movimientos CxC Empleados';
     78:                     //TODO: Ver RunObject = Page 58100;
-    79:                     //TODO: Ver RunPageLink = Field1 = FIELD("No. Préstamo");
+    79:                     //TODO: Ver RunPageLink = Field1 = FIELD("No. Prestamo");
     80:                     Visible = false;
     81:                 }
 ~~~
 
 ## TODO 0037
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 83
 - Classification: Custom dependency
 - Proposed correction: Verify the referenced part page and its source-table relationship, then restore the part declaration together with its complete SubPageLink block.
@@ -837,15 +837,15 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
     82:             }
     83:             //TODO: Ver part(PartPage; 34002135)
     84:             //TODO: Ver {
-    85:             //TODO: Ver     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+    85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
 ~~~
 
 ## TODO 0038
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 84
 - Classification: Functional ambiguity
 - Proposed correction: Review the entire surrounding disabled block and its matching control-flow boundaries before deciding whether any line should be restored; this marker is not independently actionable.
@@ -858,16 +858,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
     82:             }
     83:             //TODO: Ver part(PartPage; 34002135)
     84:             //TODO: Ver {
-    85:             //TODO: Ver     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+    85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
     86:             //TODO: Ver }
 ~~~
 
 ## TODO 0039
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 85
 - Classification: Missing page property
 - Proposed correction: Restore this property only as part of its complete property block after verifying the referenced source and destination fields and preserving the original filter or display semantics.
@@ -879,17 +879,17 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     83:             //TODO: Ver part(PartPage; 34002135)
     84:             //TODO: Ver {
-    85:             //TODO: Ver     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+    85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
     86:             //TODO: Ver }
     87:         }
 ~~~
 
 ## TODO 0040
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 86
 - Classification: Functional ambiguity
 - Proposed correction: Review the entire surrounding disabled block and its matching control-flow boundaries before deciding whether any line should be restored; this marker is not independently actionable.
@@ -900,7 +900,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
     84:             //TODO: Ver {
-    85:             //TODO: Ver     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+    85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
     86:             //TODO: Ver }
     87:         }
     88:     }
@@ -908,10 +908,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0041
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 104
 - Classification: Functional ambiguity
 - Proposed correction: Inspect the complete disabled or flagged logic and confirm the intended page behavior before restoring or changing it; leave the TODO in place until that review is complete.
@@ -930,10 +930,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0042
 
-- File path: `src/Pages/Page 34002134 - Histórico Préstamos.al`
+- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
 - Object type: Page
 - Object ID: 34002134
-- Object name: `Historico Préstamos`
+- Object name: `Historico Prestamos`
 - Line number: 112
 - Classification: Renamed standard object, field, method, enum, or property
 - Proposed correction: Use AL symbol search to confirm the current standard object and member signature, then update only the flagged reference while preserving its original call or page behavior.
@@ -9691,10 +9691,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0439
 
-- File path: `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- File path: `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - Object type: Page
 - Object ID: 34002558
-- Object name: `Ficha Notas Crédito Pdtes POS`
+- Object name: `Ficha Notas Credito Pdtes POS`
 - Line number: 393
 - Classification: Functional ambiguity
 - Proposed correction: Review the entire surrounding disabled block and its matching control-flow boundaries before deciding whether any line should be restored; this marker is not independently actionable.
@@ -9713,10 +9713,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0440
 
-- File path: `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- File path: `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - Object type: Page
 - Object ID: 34002558
-- Object name: `Ficha Notas Crédito Pdtes POS`
+- Object name: `Ficha Notas Credito Pdtes POS`
 - Line number: 555
 - Classification: Functional ambiguity
 - Proposed correction: Review the entire surrounding disabled block and its matching control-flow boundaries before deciding whether any line should be restored; this marker is not independently actionable.
@@ -9735,10 +9735,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0441
 
-- File path: `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- File path: `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - Object type: Page
 - Object ID: 34002558
-- Object name: `Ficha Notas Crédito Pdtes POS`
+- Object name: `Ficha Notas Credito Pdtes POS`
 - Line number: 556
 - Classification: Renamed standard object, field, method, enum, or property
 - Proposed correction: Use AL symbol search to confirm the current standard object and member signature, then update only the flagged reference while preserving its original call or page behavior.
@@ -9757,10 +9757,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0442
 
-- File path: `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- File path: `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - Object type: Page
 - Object ID: 34002558
-- Object name: `Ficha Notas Crédito Pdtes POS`
+- Object name: `Ficha Notas Credito Pdtes POS`
 - Line number: 605
 - Classification: Renamed standard object, field, method, enum, or property
 - Proposed correction: Use AL symbol search to confirm the current standard object and member signature, then update only the flagged reference while preserving its original call or page behavior.
@@ -9779,10 +9779,10 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0443
 
-- File path: `src/Pages/Page 34002558 - Ficha Notas Crédito Pdtes POS.al`
+- File path: `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
 - Object type: Page
 - Object ID: 34002558
-- Object name: `Ficha Notas Crédito Pdtes POS`
+- Object name: `Ficha Notas Credito Pdtes POS`
 - Line number: 639
 - Classification: Custom dependency
 - Proposed correction: Verify the referenced custom object or public method in this extension and confirm its SaaS compatibility before restoring the declaration, call, action, or link unchanged.

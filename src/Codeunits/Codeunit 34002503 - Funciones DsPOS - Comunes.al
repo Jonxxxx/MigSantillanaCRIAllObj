@@ -281,7 +281,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Error003: Label 'Imposible Insertar Línea de Pedido';
         Error004: Label 'El Producto %1 no existe';
         rTienda: Record 34002503;
-        Error005: Label 'El n·mero máximo de líneas (%1) para este pedido se ha superado';
+        Error005: Label 'El n·mero Maximo de líneas (%1) para este pedido se ha superado';
         Error006: Label 'Se ha producido un error inesperado. Se está intentando modificar una factura ya emitida por el TPV (%1). Por favor, pulse el botón de "Nueva venta".';
         Text001: Label 'Añadido/s %1 unidad/es del producto %2';
         dto: Decimal;
@@ -1881,7 +1881,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recTPV: Record 34002501;
         Evento: DotNet ;
         Error001: Label 'La factura %1 ya está anulada.';
-        Error002: Label 'No se ha podido insertar la nota de crédito.';
+        Error002: Label 'No se ha podido insertar la nota de Credito.';
         Text002: Label 'Factura anulada correctamente.';
         recCabNC: Record 114;
         rPagos: Record 34002521;
@@ -2381,7 +2381,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         //+#65232
         // Sustituye a las funciones LiquidaFacturaTPV y LiquidaNotaCreditoTPV
 
-        //Esta función genera los pagos según divisa y liquida la factura o nota de crédito TPV
+        //Esta función genera los pagos según divisa y liquida la factura o nota de Credito TPV
 
         IF optTipoDoc = optTipoDoc::Invoice THEN BEGIN
             recCabFac.GET(codPrmDoc);
@@ -2755,7 +2755,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recBancosTienda: Record 34002504;
         recLinDiaGen: Record 81;
         cduRegDia: Codeunit 12;
-        Text001: Label 'Liq. Nota Crédito TPV Doc. %1';
+        Text001: Label 'Liq. Nota Credito TPV Doc. %1';
     begin
         //Esta funció busca los pagos introducidos en la factura y liquida la nota de credito contra las mismas cuenta de banco.
 
@@ -3406,7 +3406,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure DeconfiguraAnulaciones(var rec: Record 34002503)
     var
         rTPV: Record 34002501;
-        Text001: Label 'Se va a proceder a desconfigurar de la tienda y todas sus POS asignadas la configuración de notas de crédito.\ Continuar?';
+        Text001: Label 'Se va a proceder a desconfigurar de la tienda y todas sus POS asignadas la configuración de notas de Credito.\ Continuar?';
         rTienda: Record 34002503;
     begin
 
@@ -4303,7 +4303,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lrNCR: Record 114;
         lResult: Boolean;
         TextL001: Label 'En el NCR %1M Se ha indicado el  cliente %2 para liquidar la venta con cliente %3';
-        TextL002: Label 'Se ha indicado el NCR %1 para liquidar la venta. Sin embargo dicho NCR ha excedido ya su crédito.';
+        TextL002: Label 'Se ha indicado el NCR %1 para liquidar la venta. Sin embargo dicho NCR ha excedido ya su Credito.';
         TextL003: Label 'No se ha encontrado el NCR %1';
         lrTMP_NCR: Record 114 temporary;
         TextL004: Label 'El NCR %1 se ha registrado con divisa %2. Faltaría adaptar los cobros en divisa para la compensación con NCR.';

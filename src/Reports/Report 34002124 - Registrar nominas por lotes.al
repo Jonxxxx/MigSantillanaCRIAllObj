@@ -360,7 +360,7 @@ report 34002124 "Registrar nominas por lotes"
         mes: Integer;
         Ano: Integer;
         Inicio: Date;
-        "Tipo Nomina": Option Normal,"Regal´Š¢a",Bonificacion,Propina,Renta;
+        "Tipo Nomina": Option Normal,"Regalia",Bonificacion,Propina,Renta;
         Text001: Label 'Processing payroll ... \\';
         Text002: Label 'Do you confirm you want to post the payroll?';
         Text003: Label 'You must select %1 for employee %2';

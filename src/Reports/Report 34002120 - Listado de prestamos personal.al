@@ -32,7 +32,7 @@ report 34002120 "Listado de prestamos personal"
             }
             column(intAntesNomina; intAntesNomina)
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(CantEmpl; CantEmpl)
             {
@@ -84,7 +84,7 @@ report 34002120 "Listado de prestamos personal"
             column(Control12Caption; Control12CaptionLbl)
             {
             }
-            column(Hist_rico_Cab__Pr_stamo__Importe_Original_Caption; "Historico Cab. Pr´Š¢stamo".FIELDCAPTION("Importe Original"))
+            column(Hist_rico_Cab__Pr_stamo__Importe_Original_Caption; "Historico Cab. Prestamo".FIELDCAPTION("Importe Original"))
             {
             }
             column(Importe_Pendiente____LinPerSal_Importe_Caption; Importe_Pendiente____LinPerSal_Importe_CaptionLbl)
@@ -99,10 +99,10 @@ report 34002120 "Listado de prestamos personal"
             column(Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption; Hist_rico_Cab__Pr_stamo__Importe_Cuota_CaptionLbl)
             {
             }
-            column(Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption; "Historico Cab. Pr´Š¢stamo".FIELDCAPTION("No. Pr´Š¢stamo"))
+            column(Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption; "Historico Cab. Prestamo".FIELDCAPTION("No. Prestamo"))
             {
             }
-            column(Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption; "Historico Cab. Pr´Š¢stamo".FIELDCAPTION("Fecha Inicio Deduccion"))
+            column(Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption; "Historico Cab. Prestamo".FIELDCAPTION("Fecha Inicio Deduccion"))
             {
             }
             column(Total_de_empleadosCaption; Total_de_empleadosCaptionLbl)
@@ -111,9 +111,9 @@ report 34002120 "Listado de prestamos personal"
             column(Total_de_empleadosCaption_Control40; Total_de_empleadosCaption_Control40Lbl)
             {
             }
-            dataitem("Historico Cab. Pr´Š¢stamo"; 34002146)
+            dataitem("Historico Cab. Prestamo"; 34002146)
             {
-                DataItemLink = Employee No.=FIELD("No.");
+                DataItemLink = "Employee No." = FIELD("No.");
                 DataItemTableView = SORTING("Employee No.", Pendiente)
                                     WHERE(Pendiente = CONST(true));
                 column(Hist_rico_Cab__Pr_stamo__Importe_Original_; "Importe Original")
@@ -136,13 +136,13 @@ report 34002120 "Listado de prestamos personal"
                 {
                     DecimalPlaces = 2 : 2;
                 }
-                column(Hist_rico_Cab__Pr_stamo__No__Pr_stamo_; "No. Pr´Š¢stamo")
+                column(Hist_rico_Cab__Pr_stamo__No__Pr_stamo_; "No. Prestamo")
                 {
-                    DecimalPlaces = 2 : 2;
+
                 }
                 column(Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_; "Fecha Inicio Deduccion")
                 {
-                    DecimalPlaces = 2 : 2;
+
                 }
                 column(Hist_rico_Cab__Pr_stamo__Importe_Original__Control33; "Importe Original")
                 {
@@ -164,7 +164,7 @@ report 34002120 "Listado de prestamos personal"
                 {
                     DecimalPlaces = 2 : 2;
                 }
-                column("Historico_Cab__Pr´Š¢stamo_Codigo_Empleado"; "Employee No.")
+                column("Historico_Cab__Prestamo_Codigo_Empleado"; "Employee No.")
                 {
                 }
 
@@ -318,7 +318,7 @@ report 34002120 "Listado de prestamos personal"
         Text001: Label 'Starting date must be 1st day';
         Text002: Label 'Starting date mus be 1st or 16th day';
         intAntesNomina: Integer;
-        Listado_pr_stamos_personalCaptionLbl: Label 'Listado pr´Š¢stamos personal';
+        Listado_pr_stamos_personalCaptionLbl: Label 'Listado Prestamos personal';
         CurrReport_PAGENOCaptionLbl: Label 'Pagina';
         Control9CaptionLbl: Label 'N´Š¢';
         Control12CaptionLbl: Label 'Nombre completo';

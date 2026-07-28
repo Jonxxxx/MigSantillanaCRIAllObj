@@ -124,7 +124,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         }
         field(32; "Forma de pago DGII"; Option)
         {
-            OptionCaption = ' ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Crédito/Debito,4 - Compra a crédito, 5 - Permuta,6 - Nota de crédito,7 - Mixto';
+            OptionCaption = ' ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Credito/Debito,4 - Compra a Credito, 5 - Permuta,6 - Nota de Credito,7 - Mixto';
             OptionMembers = " ","1 - Efectivo","2 - Cheques/Transferencias/Depositos","3 - Tarjeta Credito/Debito","4 - Compra a credito"," 5 - Permuta","6 - Nota de credito","7 - Mixto";
         }
         field(33; "Tipo retencion ISR"; Option)
@@ -293,7 +293,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B01*|E31*'),
                                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes válido para Crédito Fiscal (01 y 31) Monto';
+            Caption = 'Comprobantes válido para Credito Fiscal (01 y 31) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -301,7 +301,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B01*|E31*'),
                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes válido para Crédito Fiscal (01 y 31) Cantidad';
+            Caption = 'Comprobantes válido para Credito Fiscal (01 y 31) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -325,7 +325,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B03*|E33*'),
                                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes Nota de Débito (03 y 33) Monto';
+            Caption = 'Comprobantes Nota de Debito (03 y 33) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -333,7 +333,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B03*|E33*'),
                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes Nota de Débito (03 y 33) Cantidad';
+            Caption = 'Comprobantes Nota de Debito (03 y 33) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -341,7 +341,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Total Documento" WHERE(NCF = FILTER('B04*|E34*'),
                                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes Nota de Crédito (04 y 34) Monto';
+            Caption = 'Comprobantes Nota de Credito (04 y 34) Monto';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -349,7 +349,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         {
             CalcFormula = Count("Archivo Transferencia ITBIS" WHERE(NCF = FILTER('B04*|E34*'),
                                                                      "Codigo reporte" = CONST('607')));
-            Caption = 'Comprobantes Nota de Crédito (04 y 34) Cantidad';
+            Caption = 'Comprobantes Nota de Credito (04 y 34) Cantidad';
             Description = 'IT1';
             FieldClass = FlowField;
         }
@@ -434,7 +434,7 @@ table 34003004 "Archivo Transferencia ITBIS"
         field(91; "MontoTarjeta IT-1"; Decimal)
         {
             CalcFormula = Sum("Archivo Transferencia ITBIS"."Monto tarjetas" WHERE("Codigo reporte" = CONST('607')));
-            Caption = 'Tarjeta débito / crédito ';
+            Caption = 'Tarjeta Debito / Credito ';
             Description = 'IT1';
             FieldClass = FlowField;
         }

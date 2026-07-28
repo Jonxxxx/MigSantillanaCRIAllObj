@@ -96,7 +96,7 @@ report 34002159 "Nominas Totales X Departamento"
         Text005: Label 'Total';
         Payroll_s_ReportCaptionLbl: Label 'Total Department Payroll''s Report ';
         CurrReport_PAGENOCaptionLbl: Label 'Pagina';
-        Histirico_Cab__nomina__NombreCaptionLbl: Label 'Name';
+        Histrico_Cab__nomina__NombreCaptionLbl: Label 'Name';
         TotalIngresos___TotalDeducciones_Control1100040CaptionLbl: Label 'Net Income';
         Grand_TotalCaptionLbl: Label 'Grand Total';
         Prepared_by__CaptionLbl: Label 'Prepared by :';

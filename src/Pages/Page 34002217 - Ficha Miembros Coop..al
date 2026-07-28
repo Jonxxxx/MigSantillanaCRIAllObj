@@ -99,8 +99,8 @@ page 34002217 "Ficha Miembros Coop."
                             BEGIN
                               TESTFIELD(Importe);
                               PerfilSal.Cantidad := 1;
-                              PerfilSal."Formula cálculo" := ConfNomina."Concepto Sal. Base" + '*' +  FORMAT(Importe / 100);
-                              PerfilSal.VALIDATE("Formula cálculo");
+                              PerfilSal."Formula Calculo" := ConfNomina."Concepto Sal. Base" + '*' +  FORMAT(Importe / 100);
+                              PerfilSal.VALIDATE("Formula Calculo");
                             END;
                         END;
                         PerfilSal."1ra Quincena" := TRUE;

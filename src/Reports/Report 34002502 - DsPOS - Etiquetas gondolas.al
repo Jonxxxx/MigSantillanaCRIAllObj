@@ -54,7 +54,7 @@ report 34002502 "DsPOS - Etiquetas gondolas"
                 rItemCrossref.SETRANGE(rItemCrossref."Item No.", "No.");
                 rItemCrossref.SETRANGE(rItemCrossref."Unit of Measure", "Sales Unit of Measure");
                 IF rItemCrossref.FIND('-') THEN
-                    Addr[ColumnNo] [3] := FORMAT(rItemCrossref."Cross-Reference No.")
+                    Addr[ColumnNo] [3] := FORMAT(rItemCrossref."Reference No.")
                 ELSE
                     Addr[ColumnNo] [3] := FORMAT('');
 
@@ -107,6 +107,6 @@ report 34002502 "DsPOS - Etiquetas gondolas"
         NoOfColumns: Integer;
         ColumnNo: Integer;
         i: Integer;
-        rItemCrossref: Record 5717;
+        rItemCrossref: Record "Item Reference";
 }
 

@@ -31,7 +31,7 @@ report 34002164 "Recibo Nomina sin copia - coop"
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo de nomina" = FIELD("Tipo de nomina"),
                                Periodo = FIELD(Periodo),
-                               Job No.=FIELD("Job No.");
+                               "Job No." = FIELD("Job No.");
                 DataItemTableView = SORTING("No. empleado", "Tipo de nomina", Periodo, "No. Orden")
                                     WHERE("Texto Informativo" = CONST(false));
                 column("Historico_Lin__nomina__No__empleado_"; "No. empleado")
@@ -262,7 +262,7 @@ report 34002164 "Recibo Nomina sin copia - coop"
                 column("Historico_Lin__nomina__No__empleado_Caption"; FIELDCAPTION("No. empleado"))
                 {
                 }
-                column(Historico_Cab__nomina__NombreCaption; Histirico_Cab__nomina__NombreCaptionLbl)
+                column(Historico_Cab__nomina__NombreCaption; Histrico_Cab__nomina__NombreCaptionLbl)
                 {
                 }
                 column(txtDescCaption; txtDescCaptionLbl)

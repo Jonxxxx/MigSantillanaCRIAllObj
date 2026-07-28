@@ -88,7 +88,6 @@ report 34002136 "Genera Diario de  proyectos"
                 }
                 column(Concepto_salarial; "Concepto salarial")
                 {
-                    DecimalPlaces = 0 : 0;
                 }
                 column(Precio_TarifaCaption; FIELDCAPTION("Precio Tarifa"))
                 {
@@ -240,7 +239,7 @@ report 34002136 "Genera Diario de  proyectos"
         JobJNL: Record 210;
         Date: Record 2000000007;
         Date2: Record 2000000007;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         NoLin: Integer;
     begin
         Res.GET("Mov. actividades OJO"."No. empleado");

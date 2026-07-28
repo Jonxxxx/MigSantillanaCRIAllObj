@@ -634,8 +634,8 @@ report 50045 "Cheque Santillana BPD"
                                         DollarSignBefore := Currency.Symbol;
                                         DollarSignAfter := ' ';
                                     END;
-                                    //TODO: Ver IF NOT ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
-                                    ERROR(DescriptionLine[1]);
+                                    IF ChkTransMgt.FormatNoText(DescriptionLine, CheckLedgEntry.Amount, CheckLanguage, BankAcc2."Currency Code") THEN
+                                        ERROR(DescriptionLine[1]);
                                     VoidText := '';
                                 END ELSE BEGIN
                                     CLEAR(CheckAmountText);
@@ -1105,7 +1105,7 @@ report 50045 "Cheque Santillana BPD"
                             END;
                     END;
 
-                    //TODO: Ver CheckDateText := ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
+                    CheckDateText := ChkTransMgt.FormatDate("Posting Date", CheckDateFormat, DateSeparator, CheckLanguage, DateIndicator);
                 END ELSE BEGIN
                     IF ChecksPrinted > 0 THEN
                         CurrReport.BREAK;
@@ -1290,10 +1290,10 @@ report 50045 "Cheque Santillana BPD"
         Currency: Record 4;
         GenJnlTemplate: Record 80;
         WindowsLang: Record 2000000045;
-        FormatAddr: Codeunit 365;
+        FormatAddr: Codeunit "Format Address";
         CheckManagement: Codeunit 367;
         //TODO: Ver ParagraphHandling: Codeunit 10025;
-        //TODO: Ver ChkTransMgt: Report 10400;
+        ChkTransMgt: Report 10400;
         CompanyAddr: array[8] of Text[100];
         CheckToAddr: array[8] of Text[220];
         BalancingType: Option "G/L Account",Customer,Vendor,"Bank Account";

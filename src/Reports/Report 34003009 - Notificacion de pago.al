@@ -171,7 +171,7 @@ report 34003009 "Notificacion de pago"
         Vendor: Record 23;
         VLE: Record 25;
         DVLE: Record 380;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         Company: Record 79;
         NombreDia: Text[60];
         NombreMes: Text[60];

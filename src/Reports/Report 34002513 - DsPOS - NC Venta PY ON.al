@@ -870,7 +870,7 @@ report 34002513 "DsPOS - NC Venta PY ON"
         Vendedor_Comprador: Record 13;
         PT: Record 3;
         SCL: Record 44;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
                          SIL: Record 115;
                          PostedDocDim: Integer;
                          DimVal: Record 349;

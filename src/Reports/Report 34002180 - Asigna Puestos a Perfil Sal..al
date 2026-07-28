@@ -7,7 +7,7 @@ report 34002180 "Asigna Puestos a Perfil Sal."
         dataitem("Perfil Salario x Cargo"; 34002113)
         {
             DataItemTableView = SORTING("Puesto de Trabajo", "Concepto salarial", "No. de Orden")
-                                WHERE("Puesto de Trabajo" = CONST(ASIST ADM));
+                                WHERE("Puesto de Trabajo" = CONST('ASIST ADM'));
 
             trigger OnAfterGetRecord()
             begin

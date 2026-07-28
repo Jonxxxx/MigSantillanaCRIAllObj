@@ -33,7 +33,7 @@ report 34002141 "Crea ED Empleados"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     group("Import from")
                     {
@@ -56,7 +56,7 @@ report 34002141 "Crea ED Empleados"
                                 SheetName := ExcelBuf.SelectSheetsName(UploadedFileName)
                             end;
                         }
-                        group()
+                        group(General)
                         {
                             field(Cell1; Cell1)
                             {

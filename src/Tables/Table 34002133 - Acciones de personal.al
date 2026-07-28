@@ -244,8 +244,8 @@ table 34002133 "Acciones de personal"
                 NivelesCargos.SETRANGE("Cod. Nivel", Cargos."Cod. nivel");
                 NivelesCargos.FINDFIRST;
                 IF ("Sueldo Nuevo" < NivelesCargos."Importe minimo") OR
-                   ("Sueldo Nuevo" > NivelesCargos."Importe máximo") THEN
-                    IF NOT CONFIRM(STRSUBSTNO(Err005, FIELDCAPTION("Sueldo Nuevo"), NivelesCargos.FIELDCAPTION("Importe minimo"), NivelesCargos."Importe minimo", NivelesCargos.FIELDCAPTION("Importe máximo"), NivelesCargos."Importe máximo")) THEN
+                   ("Sueldo Nuevo" > NivelesCargos."Importe Maximo") THEN
+                    IF NOT CONFIRM(STRSUBSTNO(Err005, FIELDCAPTION("Sueldo Nuevo"), NivelesCargos.FIELDCAPTION("Importe minimo"), NivelesCargos."Importe minimo", NivelesCargos.FIELDCAPTION("Importe Maximo"), NivelesCargos."Importe Maximo")) THEN
                         ERROR('');
             end;
         }

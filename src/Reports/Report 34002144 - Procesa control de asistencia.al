@@ -272,7 +272,7 @@ report 34002144 "Procesa control de asistencia"
         JobJNL: Record 210;
         Date: Record 2000000007;
         Date2: Record 2000000007;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         NoLin: Integer;
     begin
         /*Res.GET("Mov. actividades"."No. empleado");

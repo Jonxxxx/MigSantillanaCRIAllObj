@@ -392,10 +392,10 @@ codeunit 34002111 "Registrar nomina CR"
                                 ERROR(Err001, CantidadDiasEnt, Empleado."No.");
 
                             //message('%1 %2 %3 %4',cantidaddiasent);
-                            IF Puestos."Método cálculo Ingresos" = '' THEN
+                            IF Puestos."Metodo Calculo Ingresos" = '' THEN
                                 CalcDias.GET(ConfNominas."Metodo calculo Ingresos")
                             ELSE
-                                CalcDias.GET(Puestos."Método cálculo Ingresos");
+                                CalcDias.GET(Puestos."Metodo Calculo Ingresos");
 
                             IF CalcDias.Valor <> 30 THEN BEGIN
                                 Fecha.RESET;
@@ -439,7 +439,7 @@ codeunit 34002111 "Registrar nomina CR"
 
                     IF DiasIncid <= 0 THEN
                         DiasIncid := 1;
-                    CalcDias.GET(ConfNominas."Método cálculo ausencias");
+                    CalcDias.GET(ConfNominas."Metodo Calculo ausencias");
                     ImporteIncid := IngresoSalario / CalcDias.Valor * DiasIncid;
                     ImporteTotal := ImporteTotal - ImporteIncid;
                 END;
@@ -547,10 +547,10 @@ codeunit 34002111 "Registrar nomina CR"
 
                 IF DiasPago <> 0 THEN BEGIN
                     IF Empleado."Employment Date" >= PerInici THEN BEGIN
-                        IF Puestos."Método cálculo Ingresos" = '' THEN
+                        IF Puestos."Metodo Calculo Ingresos" = '' THEN
                             CalcDias.GET(ConfNominas."Metodo calculo Ingresos")
                         ELSE
-                            CalcDias.GET(Puestos."Método cálculo Ingresos");
+                            CalcDias.GET(Puestos."Metodo Calculo Ingresos");
 
                         ImporteTotal := IngresoSalario / CalcDias.Valor * (DiasPago - DiasIncid);
                         ImporteBaseImp := ImporteTotal;
@@ -1100,12 +1100,12 @@ codeunit 34002111 "Registrar nomina CR"
         TotalISR[1] [1] += TotalCompany;
         Base := TotalISR[1] [1];
         //ERROR('%1 %2 %3 %4',BASE,TOTALISR[1][1],TOTALCOMPANY);
-        // Cálculo del ISR. Busqueda de Rangos ISR
+        // Calculo del ISR. Busqueda de Rangos ISR
         Indice := 1;
         RetencionISR.SETRANGE(Ano, FORMAT(Ano, 4, '<Standard Format,0>'));
         RetencionISR.FINDSET(FALSE, FALSE);
         REPEAT
-            RangoISR[Indice] := RetencionISR."Importe Máximo";
+            RangoISR[Indice] := RetencionISR."Importe Maximo";
             ImporteRetencion[Indice] := RetencionISR."Importe retencion";
             "%Calcular"[Indice] := RetencionISR."% Retencion";
             ImporteFijo[Indice] := RetencionISR."Importe retencion";
@@ -1270,7 +1270,7 @@ codeunit 34002111 "Registrar nomina CR"
                 LinPerfilSal.FINDFIRST;
 
                 rHistLinPrestamo.SETRANGE("Codigo Empleado", rHistCabPrestamo."Employee No.");
-                rHistLinPrestamo.SETRANGE("No. Préstamo", rHistCabPrestamo."No. Préstamo");
+                rHistLinPrestamo.SETRANGE("No. Prestamo", rHistCabPrestamo."No. Prestamo");
                 IF (rHistLinPrestamo.FINDLAST) AND (LinPerfilSal."Tipo concepto" <> 0) THEN BEGIN
                     rHistLinPrestamo."No. Linea" += 100;
                     rHistLinPrestamo."Tipo CxC" := rHistCabPrestamo."Tipo CxC";
@@ -1354,7 +1354,7 @@ codeunit 34002111 "Registrar nomina CR"
         LinNomina."Cotiza SRL" := perfSalario."Cotiza SRL";
         LinNomina."Cotiza Infotep" := perfSalario."Cotiza INFOTEP";
         LinNomina."Sujeto Cotizacion" := perfSalario."Sujeto Cotizacion";
-        LinNomina.Formula := perfSalario."Formula cálculo";
+        LinNomina.Formula := perfSalario."Formula Calculo";
         LinNomina.Imprimir := perfSalario.Imprimir;
         LinNomina."Inicio periodo" := PerInici;
         LinNomina."Fin periodo" := PerFinal;

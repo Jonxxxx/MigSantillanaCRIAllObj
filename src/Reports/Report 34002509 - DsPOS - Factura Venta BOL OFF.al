@@ -586,7 +586,7 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
         Text001: Label 'Page %1';
         Vendedor_Comprador: Record 13;
         rPais: Record 9;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;

@@ -1988,7 +1988,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Nota Crédito No.</Value>
+                      <Value EvaluationMode="Auto">Nota Credito No.</Value>
                       <Style>
                         <FontWeight>Bold</FontWeight>
                       </Style>

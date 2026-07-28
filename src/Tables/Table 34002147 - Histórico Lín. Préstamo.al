@@ -1,11 +1,11 @@
-table 34002147 "Historico Lin. Préstamo"
+table 34002147 "Historico Lin. Prestamo"
 {
     //IGNORAR: Page no existe DrillDownPageID = 34002135;
     //IGNORAR: Page no existe LookupPageID = 34002135;
 
     fields
     {
-        field(1; "No. Préstamo"; Code[20])
+        field(1; "No. Prestamo"; Code[20])
         {
         }
         field(2; "No. Linea"; Integer)
@@ -13,8 +13,8 @@ table 34002147 "Historico Lin. Préstamo"
         }
         field(3; "Tipo CxC"; Option)
         {
-            Description = ',Préstamo,Factura';
-            OptionMembers = " ","Préstamo",Factura;
+            Description = ',Prestamo,Factura';
+            OptionMembers = " ","Prestamo",Factura;
         }
         field(4; "No. Cuota"; Integer)
         {
@@ -32,29 +32,29 @@ table 34002147 "Historico Lin. Préstamo"
             trigger OnValidate()
             begin
                 IF Importe > 0 THEN BEGIN
-                    Débito := Importe;
-                    CLEAR(Crédito);
+                    Debito := Importe;
+                    CLEAR(Credito);
                 END
                 ELSE BEGIN
-                    Crédito := Importe * -1;
-                    CLEAR(Débito);
+                    Credito := Importe * -1;
+                    CLEAR(Debito);
                 END;
             end;
         }
-        field(8; "Débito"; Decimal)
+        field(8; "Debito"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                Importe := Débito;
+                Importe := Debito;
             end;
         }
-        field(9; "Crédito"; Decimal)
+        field(9; "Credito"; Decimal)
         {
 
             trigger OnValidate()
             begin
-                Importe := -Crédito;
+                Importe := -Credito;
             end;
         }
         field(10; Correccion; Boolean)
@@ -65,9 +65,9 @@ table 34002147 "Historico Lin. Préstamo"
 
     keys
     {
-        key(Key1; "No. Préstamo", "No. Linea")
+        key(Key1; "No. Prestamo", "No. Linea")
         {
-            SumIndexFields = Importe, "Débito", "Crédito";
+            SumIndexFields = Importe, "Debito", "Credito";
         }
     }
 

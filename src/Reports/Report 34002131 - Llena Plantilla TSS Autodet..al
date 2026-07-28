@@ -40,7 +40,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                     LinNomina.SETRANGE("Tipo concepto", LinNomina."Tipo concepto"::Ingresos);
                     IF LinNomina.FINDSET(FALSE, FALSE) THEN
                         REPEAT
-                            IF NOT Employee."Exclu´Š¢do Cotizacion TSS" THEN
+                            IF NOT Employee."Excluido Cotizacion TSS" THEN
                                 SalarioCotizable += LinNomina.Total;
                         UNTIL LinNomina.NEXT = 0;
 
@@ -58,7 +58,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                     LinNomina.SETRANGE("Tipo concepto", LinNomina."Tipo concepto"::Ingresos);
                     IF LinNomina.FINDSET(FALSE, FALSE) THEN
                         REPEAT
-                            IF ((NOT Empl."Exclu´Š¢do Cotizacion ISR") AND (LinNomina."Cotiza ISR") AND (LinNomina."Salario Base")) THEN
+                            IF ((NOT Empl."Excluido Cotizacion ISR") AND (LinNomina."Cotiza ISR") AND (LinNomina."Salario Base")) THEN
                                 SalarioISR += ROUND(LinNomina.Total, 0.01)
                             ELSE
                                 IF (ConfNominas."Concepto Vacaciones" = LinNomina."Concepto salarial") AND

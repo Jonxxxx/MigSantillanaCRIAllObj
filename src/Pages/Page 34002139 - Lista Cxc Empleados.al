@@ -11,7 +11,7 @@ page 34002139 "Lista Cxc Empleados"
         {
             repeater(Group)
             {
-                field("No. Préstamo"; "No. Préstamo")
+                field("No. Prestamo"; "No. Prestamo")
                 {
                 }
                 field("Codigo Empleado"; "Codigo Empleado")

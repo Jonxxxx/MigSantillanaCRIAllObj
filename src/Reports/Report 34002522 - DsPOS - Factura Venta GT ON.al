@@ -236,7 +236,7 @@ report 34002522 "DsPOS - Factura Venta GT ON"
                     }
                     dataitem("Sales Line"; 113)
                     {
-                        DataItemLink = Document No.=FIELD("No.");
+                        DataItemLink = "Document No." = FIELD("No.");
                         DataItemLinkReference = "Sales Header";
                         DataItemTableView = SORTING("Document No.", "Line No.");
                         column(Sales_Invoice_Line_Description2_Control65; Description)
@@ -644,7 +644,7 @@ report 34002522 "DsPOS - Factura Venta GT ON"
         VatBussPG: Record 323;
         Cobrador: Text[30];
         CobradorText: Text[30];
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         DescriptionLine: array[2] of Text[250];
         Text012: Label 'Total books %1';
         NoSeriesMgt: Codeunit 396;

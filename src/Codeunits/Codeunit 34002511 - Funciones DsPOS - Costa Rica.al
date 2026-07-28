@@ -657,7 +657,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         lProcesados: Integer;
         lTotal: Integer;
         cduPOS: Codeunit 34002503;
-        TextL001: Label '<Firmando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de crédito  @@@@@@@@@@@@@@@@@@@@2>';
+        TextL001: Label '<Firmando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2>';
         rParametros: Record 34002522;
         lrSalesH: Record 36;
         lwProgreso: Dialog;

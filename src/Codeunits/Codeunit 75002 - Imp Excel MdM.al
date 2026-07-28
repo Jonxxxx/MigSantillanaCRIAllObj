@@ -221,7 +221,7 @@ codeunit 75002 "Imp Excel MdM"
                 wId := 75001;  // Datos MDM;
             'IDIOMA':
                 wId := 8;      // Language
-            'SERIE MÉTODO':
+            'SERIE Metodo':
                 wId := 349;    // Dimension Value
             'AUTOR':
                 wId := 75001;  // Datos MDM;
@@ -274,7 +274,7 @@ codeunit 75002 "Imp Excel MdM"
         wTipo := -1; // Si no encuntra nada, delvuelve -1
 
         CASE pwCode OF
-            'SERIE MÉTODO':
+            'SERIE Metodo':
                 wTipo := 0;    // Dimension Value
             'DESTINO':
                 wTipo := 1;    // Dimension Value

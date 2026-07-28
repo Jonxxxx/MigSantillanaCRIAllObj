@@ -13,7 +13,7 @@ table 34002131 "Tabla retencion ISR"
             AutoIncrement = true;
             Editable = false;
         }
-        field(3; "Importe Máximo"; Decimal)
+        field(3; "Importe Maximo"; Decimal)
         {
             DecimalPlaces = 2 : 2;
         }
@@ -32,7 +32,7 @@ table 34002131 "Tabla retencion ISR"
         key(Key1; Ano, "No. orden")
         {
         }
-        key(Key2; Ano, "Importe Máximo")
+        key(Key2; Ano, "Importe Maximo")
         {
         }
     }

@@ -47,7 +47,7 @@ report 34002123 "Anular nominas por lotes"
                 HistLinPrestamos.SETFILTER("No. Cuota", '>0');
                 IF HistLinPrestamos.FINDSET(TRUE, FALSE) THEN
                     REPEAT
-                        HistCabPrestamos.GET(HistLinPrestamos."No. Pr´Š¢stamo");
+                        HistCabPrestamos.GET(HistLinPrestamos."No. Prestamo");
 
                         HistoricoLinnomina.RESET;
                         HistoricoLinnomina.SETRANGE("No. empleado", "No. empleado");

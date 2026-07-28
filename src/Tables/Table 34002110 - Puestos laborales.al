@@ -61,11 +61,11 @@ table 34002110 "Puestos laborales"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(9; "Método cálculo Ingresos"; Code[10])
+        field(9; "Metodo Calculo Ingresos"; Code[10])
         {
             TableRelation = "Parametros Calculo Dias";
         }
-        field(10; "Método cálculo Paga Salario"; Option)
+        field(10; "Metodo Calculo Paga Salario"; Option)
         {
             OptionCaption = 'Distributed,By period';
             OptionMembers = Distribuido,"Por periodo";

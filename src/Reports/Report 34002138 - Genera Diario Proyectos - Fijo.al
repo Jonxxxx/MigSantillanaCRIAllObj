@@ -47,7 +47,7 @@ report 34002138 "Genera Diario Proyectos - Fijo"
             }
             dataitem("Relacion Empleados - Proyectos"; 34002171)
             {
-                DataItemLink = Employee No.=FIELD("No.");
+                DataItemLink = "Employee No." = FIELD("No.");
                 DataItemTableView = SORTING("Employee No.", "Job No.", "Job Task No.");
                 RequestFilterFields = "Job No.";
                 column(Job_No_Caption; FIELDCAPTION("Job No."))

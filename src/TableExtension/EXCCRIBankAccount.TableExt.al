@@ -19,8 +19,8 @@ tableextension 50041 EXCCRIBankAccount extends "Bank Account"
         field(34003003; "Tipo Cuenta"; Option)
         {
             DataClassification = ToBeClassified;
-            OptionCaption = 'CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Préstamo';
-            OptionMembers = "CC= Cuenta Corriente","CA=Cuenta de Ahorro","TJ= Tarjeta","PR= Préstamo";
+            OptionCaption = 'CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Prestamo';
+            OptionMembers = "CC= Cuenta Corriente","CA=Cuenta de Ahorro","TJ= Tarjeta","PR= Prestamo";
         }
     }
 }

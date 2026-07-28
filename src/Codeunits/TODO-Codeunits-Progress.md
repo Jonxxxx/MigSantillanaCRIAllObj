@@ -462,7 +462,7 @@
   errors.
 - Remaining manual-review comments: 70.
 - Last processed file:
-  `src/Codeunits/Codeunit 34002525 - Notas Crédito Pdtes POS.al`.
+  `src/Codeunits/Codeunit 34002525 - Notas Credito Pdtes POS.al`.
 
 ## Manual-review batch 6
 

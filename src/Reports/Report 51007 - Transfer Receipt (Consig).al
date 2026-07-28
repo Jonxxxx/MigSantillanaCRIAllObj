@@ -424,7 +424,7 @@ report 51007 "Transfer Receipt (Consig)"
         Text002: Label 'Page %1';
         DimSetEntry1: Record 480;
         DimSetEntry2: Record 480;
-        FormatAddr: Codeunit 365;
+        FormatAddr: Codeunit "Format Address";
         TransferFromAddr: array[8] of Text[50];
         TransferToAddr: array[8] of Text[50];
         MoreLines: Boolean;

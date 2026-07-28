@@ -18,7 +18,7 @@ page 34003001 "Proveedor-Retencion"
                         rMaestroRet.SETRANGE("Codigo Retencion", "Codigo Retencion");
                         IF rMaestroRet.FIND('-') THEN BEGIN
                             "Cta. Contable" := rMaestroRet."Cta. Contable";
-                            "Base Cálculo" := rMaestroRet."Base Cálculo";
+                            "Base Calculo" := rMaestroRet."Base Calculo";
                             Devengo := rMaestroRet.Devengo;
                             "Importe Retencion" := rMaestroRet."Importe Retencion";
                             "Tipo Retencion" := rMaestroRet."Tipo Retencion";
@@ -30,7 +30,7 @@ page 34003001 "Proveedor-Retencion"
                 field("Cta. Contable"; "Cta. Contable")
                 {
                 }
-                field("Base Cálculo"; "Base Cálculo")
+                field("Base Calculo"; "Base Calculo")
                 {
                 }
                 field(Devengo; Devengo)

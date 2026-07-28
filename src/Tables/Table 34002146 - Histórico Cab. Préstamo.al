@@ -1,11 +1,11 @@
-table 34002146 "Historico Cab. Préstamo"
+table 34002146 "Historico Cab. Prestamo"
 {
     DrillDownPageID = 34002138;
     LookupPageID = 34002138;
 
     fields
     {
-        field(1; "No. Préstamo"; Code[20])
+        field(1; "No. Prestamo"; Code[20])
         {
 
             trigger OnValidate()
@@ -14,9 +14,9 @@ table 34002146 "Historico Cab. Préstamo"
             begin
                 ConfNominas.Get();
 
-                if "No. Préstamo" = '' then begin
+                if "No. Prestamo" = '' then begin
                     ConfNominas.TestField("No. serie reg. CxC");
-                    "No. Préstamo" := NoSeries.GetNextNo(ConfNominas."No. serie reg. CxC");
+                    "No. Prestamo" := NoSeries.GetNextNo(ConfNominas."No. serie reg. CxC");
                 end;
             end;
         }
@@ -31,12 +31,12 @@ table 34002146 "Historico Cab. Préstamo"
         }
         field(4; "Tipo CxC"; Option)
         {
-            Description = ' ,Préstamo,Factura';
-            OptionMembers = " ","Préstamo",Factura;
+            Description = ' ,Prestamo,Factura';
+            OptionMembers = " ","Prestamo",Factura;
         }
         field(5; "Importe Original"; Decimal)
         {
-            CalcFormula = Sum("Historico Lin. Préstamo".Débito WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lin. Prestamo".Debito WHERE("No. Prestamo" = FIELD("No. Prestamo")));
             Caption = 'Original Amount';
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
@@ -77,7 +77,7 @@ table 34002146 "Historico Cab. Préstamo"
         }
         field(16; "Importe Pendiente"; Decimal)
         {
-            CalcFormula = Sum("Historico Lin. Préstamo".Importe WHERE("No. Préstamo" = FIELD("No. Préstamo")));
+            CalcFormula = Sum("Historico Lin. Prestamo".Importe WHERE("No. Prestamo" = FIELD("No. Prestamo")));
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
@@ -114,13 +114,13 @@ table 34002146 "Historico Cab. Préstamo"
 
     keys
     {
-        key(Key1; "No. Préstamo")
+        key(Key1; "No. Prestamo")
         {
         }
         key(Key2; "Employee No.", Pendiente)
         {
         }
-        key(Key3; "Employee No.", "No. Préstamo")
+        key(Key3; "Employee No.", "No. Prestamo")
         {
         }
     }

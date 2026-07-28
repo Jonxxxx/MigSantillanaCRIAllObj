@@ -15,7 +15,7 @@ table 34002137 "Distribucion Importes TSS"
             AutoIncrement = true;
             Editable = false;
         }
-        field(4; "Importe Máximo"; Decimal)
+        field(4; "Importe Maximo"; Decimal)
         {
             DecimalPlaces = 2 : 2;
         }

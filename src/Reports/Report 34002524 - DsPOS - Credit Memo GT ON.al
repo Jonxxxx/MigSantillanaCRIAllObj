@@ -746,7 +746,7 @@ report 34002524 "DsPOS - Credit Memo GT ON"
         NoSerie: Record 308;
         "*** Santillana ***": Integer;
         VatBussPG: Record 323;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
                          DescriptionLine: array [2] of Text[250];
                          NoSeriesMgt: Codeunit 396;
                          NCFAnulados: Record 34003012;

@@ -20,7 +20,7 @@ report 34002181 "Asigna Formula a Conceptos Sal"
                 REPEAT
                     Emp.GET(PerfSal."No. empleado");
                     IF Emp."Tipo pago" = "Tipo sueldo" THEN BEGIN
-                        PerfSal.VALIDATE("F´Š¢rmula Calculo", Formula);
+                        PerfSal.VALIDATE("Formula Calculo", Formula);
                         PerfSal.MODIFY;
                     END;
                 UNTIL PerfSal.NEXT = 0;
@@ -48,7 +48,7 @@ report 34002181 "Asigna Formula a Conceptos Sal"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     field(ConceptoSal; ConceptoSal)
                     {

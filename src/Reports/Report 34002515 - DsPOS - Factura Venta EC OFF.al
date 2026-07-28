@@ -388,7 +388,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
         rEmpresa: Record 79;
         rCliente: Record 18;
         rPais: Record 9;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         GLSetUp: Record 98;
         Cust: Record 18;
         Customer: Record 18;

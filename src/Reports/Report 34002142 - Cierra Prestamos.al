@@ -5,12 +5,12 @@ report 34002142 "Cierra Prestamos"
 
     dataset
     {
-        dataitem("Historico Cab. Pr´Š¢stamo"; 34002146)
+        dataitem("Historico Cab. Prestamo"; 34002146)
         {
             CalcFields = "Importe Pendiente";
-            DataItemTableView = SORTING("Employee No.", "No. Pr´Š¢stamo")
+            DataItemTableView = SORTING("Employee No.", "No. Prestamo")
                                 WHERE(Pendiente = CONST(true));
-            RequestFilterFields = "No. Pr´Š¢stamo", "Employee No.";
+            RequestFilterFields = "No. Prestamo", "Employee No.";
 
             trigger OnAfterGetRecord()
             begin
@@ -18,12 +18,12 @@ report 34002142 "Cierra Prestamos"
                     CurrReport.SKIP;
 
                 HLP.RESET;
-                HLP.SETRANGE("No. Pr´Š¢stamo", "No. Pr´Š¢stamo");
+                HLP.SETRANGE("No. Prestamo", "No. Prestamo");
                 IF NOT HLP.FINDLAST THEN
                     HLP."No. Linea" := 0;
 
                 HLP2.INIT;
-                HLP2."No. Pr´Š¢stamo" := "No. Pr´Š¢stamo";
+                HLP2."No. Prestamo" := "No. Prestamo";
                 HLP2."No. Linea" := HLP."No. Linea" + 1000;
                 HLP2."Tipo CxC" := "Tipo CxC";
                 HLP2."No. Cuota" := HLP."No. Cuota" + 1;

@@ -26,7 +26,7 @@ report 34002182 "Importa datos empleados"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     group("Import from")
                     {
@@ -36,7 +36,7 @@ report 34002182 "Importa datos empleados"
                             Caption = 'Wedge''s Concept';
                             TableRelation = "Conceptos salariales";
                         }
-                        group()
+                        group(General2)
                         {
                             field(Cell3; Cell3)
                             {
@@ -179,13 +179,13 @@ report 34002182 "Importa datos empleados"
 
                         IF (Cell2 <> '') AND (Cell1 = '') THEN BEGIN
                             PerfilSal.VALIDATE(Cantidad, 1);
-                            IF PerfilSal."F´Š¢rmula Calculo" = '' THEN
+                            IF PerfilSal."Formula Calculo" = '' THEN
                                 PerfilSal.VALIDATE(Importe, Amt);
                         END
                         ELSE
                             IF Cell2 <> '' THEN BEGIN
                                 PerfilSal.VALIDATE(Cantidad, Qty);
-                                IF PerfilSal."F´Š¢rmula Calculo" = '' THEN
+                                IF PerfilSal."Formula Calculo" = '' THEN
                                     PerfilSal.VALIDATE(Importe, Amt);
                             END;
 

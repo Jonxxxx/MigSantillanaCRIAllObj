@@ -663,7 +663,7 @@ report 34002526 "DsPOS - Factura Venta SV ON"
         VatBussPG: Record 323;
         Cobrador: Text[30];
         CobradorText: Text[30];
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         DescriptionLine: array[2] of Text[250];
         Text012: Label 'Total books %1';
         NoSeriesMgt: Codeunit 396;

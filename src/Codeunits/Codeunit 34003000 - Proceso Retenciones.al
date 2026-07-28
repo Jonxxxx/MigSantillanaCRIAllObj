@@ -104,7 +104,7 @@ codeunit 34003000 "Proceso Retenciones"
 
             GenJnlLine."Retencion ITBIS" := RetDocProv_."Retencion ITBIS";
 
-            CASE RetDocProv_."Base Cálculo" OF
+            CASE RetDocProv_."Base Calculo" OF
                 0:
                     IF RetDocProv_."Tipo Retencion" = RetDocProv_."Tipo Retencion"::Porcentaje THEN BEGIN
                         rPurchLine.RESET;
@@ -251,7 +251,7 @@ codeunit 34003000 "Proceso Retenciones"
               PurchSetup.TESTFIELD("Nombre libro diario Retencion");
               PurchSetup.TESTFIELD("Nombre Secc. diario Retencion");
         
-              CASE ProvRetencion."Base Cálculo" OF
+              CASE ProvRetencion."Base Calculo" OF
                 0:
                   BEGIN
                     IF ProvRetencion."Tipo Retencion" = ProvRetencion."Tipo Retencion"::Porcentaje THEN
@@ -367,7 +367,7 @@ codeunit 34003000 "Proceso Retenciones"
         GenJnlLine.VALIDATE("Currency Code", PurchHeader."Currency Code");
         GenJnlLine."Currency Factor" := PurchHeader."Currency Factor";
 
-        CASE RetDocProv_."Base Cálculo" OF
+        CASE RetDocProv_."Base Calculo" OF
             0:
                 BEGIN
                     IF RetDocProv_."Tipo Retencion" = RetDocProv_."Tipo Retencion"::Porcentaje THEN BEGIN
@@ -439,7 +439,7 @@ codeunit 34003000 "Proceso Retenciones"
     var
         wMonto: Decimal;
     begin
-        CASE rProveedorRetencionDoc."Base Cálculo" OF
+        CASE rProveedorRetencionDoc."Base Calculo" OF
             0:
                 IF rProveedorRetencionDoc."Tipo Retencion" = rProveedorRetencionDoc."Tipo Retencion"::Porcentaje THEN
                     wMonto := Itbis * rProveedorRetencionDoc."Importe Retencion" / 100;
@@ -466,7 +466,7 @@ codeunit 34003000 "Proceso Retenciones"
         TotalFra: Decimal;
         Importe: Decimal;
     begin
-        CASE rProveedorRetencionDocReg."Base Cálculo" OF
+        CASE rProveedorRetencionDocReg."Base Calculo" OF
             0:
                 BEGIN
                     IF rProveedorRetencionDocReg."Tipo Retencion" = rProveedorRetencionDocReg."Tipo Retencion"::Porcentaje THEN BEGIN

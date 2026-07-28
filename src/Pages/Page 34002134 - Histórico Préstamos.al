@@ -1,4 +1,4 @@
-page 34002134 "Historico Préstamos"
+page 34002134 "Historico Prestamos"
 {
     DeleteAllowed = false;
     Editable = false;
@@ -13,7 +13,7 @@ page 34002134 "Historico Préstamos"
             {
                 Caption = 'General';
                 Editable = false;
-                field("No. Préstamo"; "No. Préstamo")
+                field("No. Prestamo"; "No. Prestamo")
                 {
                 }
                 field("Employee No."; "Employee No.")
@@ -84,7 +84,7 @@ page 34002134 "Historico Préstamos"
             // Original code preserved below.
             // part(PartPage; 34002135)
             // {
-            //     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+            //     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
             // }
         }
     }
@@ -112,7 +112,7 @@ page 34002134 "Historico Préstamos"
 
     var
         rPrestamo: Record 34002146;
-        // TODO: Manual review - The Document-Print declaration has no active caller in this page and does not restore the missing custom report.
-        // Original code: ImprInfor: Codeunit 228;
+    // TODO: Manual review - The Document-Print declaration has no active caller in this page and does not restore the missing custom report.
+    // Original code: ImprInfor: Codeunit 228;
 }
 

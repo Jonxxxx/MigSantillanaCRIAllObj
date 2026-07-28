@@ -20,7 +20,7 @@ table 34003001 "Proveedor - Retencion"
             Editable = false;
             TableRelation = "G/L Account";
         }
-        field(4; "Base Cálculo"; Option)
+        field(4; "Base Calculo"; Option)
         {
             Editable = false;
             OptionMembers = ITBIS,"B. Imponible","Total Fra.",Ninguno;

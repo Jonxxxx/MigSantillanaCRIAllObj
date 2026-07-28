@@ -26,7 +26,7 @@ report 34002148 "Genera Calendario"
                         IF (Date."Period No." = 6) AND (SabadosNoLaborables) THEN
                             Calend."No laborable" := TRUE;
 
-                    Calend."D´Š¢a de la semana" := Date."Period No.";
+                    Calend."Dia de la semana" := Date."Period No.";
                     Calend.Semana := DATE2DWY(Date."Period Start", 2);
                     Calend.Periodo := DATE2DMY(Date."Period Start", 2);
                     Calend.Ano := Ano;

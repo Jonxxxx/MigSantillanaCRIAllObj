@@ -6,8 +6,8 @@ tableextension 50047 EXCCRINoSeries extends "No. Series"
         {
             Caption = 'Document Type', Comment = 'ESP=Tipo Documento';
             DataClassification = ToBeClassified;
-            OptionCaption = ' ,Invoice,Credit Memo', Comment = 'ESP= ,Factura,Nota de Crédito';
-            OptionMembers = " ",Factura,"Nota de Crédito";
+            OptionCaption = ' ,Invoice,Credit Memo', Comment = 'ESP= ,Factura,Nota de Credito';
+            OptionMembers = " ",Factura,"Nota de Credito";
         }
         field(34003001; "Descripcion NCF"; Text[60])
         {

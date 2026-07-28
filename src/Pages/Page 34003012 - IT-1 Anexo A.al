@@ -128,7 +128,7 @@ page 34003012 "IT-1 Anexo A"
             {
                 field(MontoNC30Factura; MontoNC30Factura)
                 {
-                    Caption = 'Total Notas de Crédito Emitidas con mas de Trenta(30) Dias desde la Facturacion';
+                    Caption = 'Total Notas de Credito Emitidas con mas de Trenta(30) Dias desde la Facturacion';
 
                     trigger OnDrillDown()
                     begin

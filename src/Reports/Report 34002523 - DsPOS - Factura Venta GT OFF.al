@@ -638,7 +638,7 @@ report 34002523 "DsPOS - Factura Venta GT OFF"
         VatBussPG: Record 323;
         Cobrador: Text[30];
         CobradorText: Text[30];
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         DescriptionLine: array[2] of Text[250];
         Text012: Label 'Total books %1';
         NoSeriesMgt: Codeunit 396;

@@ -574,7 +574,7 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         o Mes actual (2 digitos formato MM)
         o Tipo de movimiento (prefijado como INS)
         o Cédula (Actualizada) de identidad del afiliado afectado (10 digitos)
-        o Valores Extras (máximo 14 digitos)
+        o Valores Extras (Maximo 14 digitos)
         o Causa. (1 digito (codificacion ver Anexo) )
         */
         /*GRN

@@ -65,12 +65,12 @@ report 34002139 "Proceso Carga Gtos. a Nomina"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     field(Dimension; CodDimension)
                     {
                         Caption = 'Dimension Code';
-                        OptionCaption = 'Bank Account';
+
                         TableRelation = Dimension;
                     }
                     field("Valor Dimension"; CodValorDim)

@@ -176,7 +176,7 @@ table 34002115 "Perfil Salarial"
         field(14; Prorratear; Boolean)
         {
         }
-        field(15; "Formula cálculo"; Text[80])
+        field(15; "Formula Calculo"; Text[80])
         {
 
             trigger OnLookup()
@@ -186,7 +186,7 @@ table 34002115 "Perfil Salarial"
                 FormConcSalariales.LOOKUPMODE(TRUE);
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     FormConcSalariales.GETRECORD(ConcepSalar);
-                    "Formula cálculo" := "Formula cálculo" + ConcepSalar.Codigo;
+                    "Formula Calculo" := "Formula Calculo" + ConcepSalar.Codigo;
                     CLEAR(FormConcSalariales);
                 END;
                 */
@@ -194,13 +194,13 @@ table 34002115 "Perfil Salarial"
 
             trigger OnValidate()
             begin
-                "Formula cálculo" := UPPERCASE("Formula cálculo");
+                "Formula Calculo" := UPPERCASE("Formula Calculo");
 
-                IF "Formula cálculo" <> '' THEN BEGIN
-                    Regconceptos.Formula := DELCHR(Rec."Formula cálculo", '=', ' ');
+                IF "Formula Calculo" <> '' THEN BEGIN
+                    Regconceptos.Formula := DELCHR(Rec."Formula Calculo", '=', ' ');
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
-                        Regconceptos.Formula := Rec."Formula cálculo";
+                        Regconceptos.Formula := Rec."Formula Calculo";
                         Scanner.RUN(Regconceptos);
                         Parser.RUN(Regconceptos);
                     END;
@@ -455,7 +455,7 @@ table 34002115 "Perfil Salarial"
         Err003: Label '%1 is already assigned to this employee';
         Err004: Label '%1 can not be deleted because is in use';
 
-    procedure "CálculoCantidad"(LinEsq: Record 34002115) "Factor cantidad": Decimal
+    procedure "CalculoCantidad"(LinEsq: Record 34002115) "Factor cantidad": Decimal
     var
         "Horas semanales": Decimal;
         RegUdadCotiz: Record 34002100;
@@ -480,11 +480,11 @@ table 34002115 "Perfil Salarial"
     begin
         LinEsqPerFormula.SETRANGE("No. empleado", "No. empleado");
         LinEsqPerFormula.SETRANGE("Perfil salarial", "Perfil salarial");
-        LinEsqPerFormula.SETFILTER("Formula cálculo", '<>%1', '');
+        LinEsqPerFormula.SETFILTER("Formula Calculo", '<>%1', '');
         LinEsqPerFormula.SETFILTER("Concepto salarial", '<>%1', "Concepto salarial");
         IF LinEsqPerFormula.FIND('-') THEN
             REPEAT
-                LinEsqPerFormula.VALIDATE("Formula cálculo");
+                LinEsqPerFormula.VALIDATE("Formula Calculo");
                 LinEsqPerFormula.Importe := ROUND(LinEsqPerFormula.Importe, 0.01);
                 LinEsqPerFormula.MODIFY;
             UNTIL LinEsqPerFormula.NEXT = 0;

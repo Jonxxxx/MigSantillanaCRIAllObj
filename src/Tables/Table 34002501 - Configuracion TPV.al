@@ -84,13 +84,13 @@ table 34002501 "Configuracion TPV"
         }
         field(34002521; "No. serie notas credito"; Code[20])
         {
-            Caption = 'Nº serie notas crédito';
+            Caption = 'Nº serie notas Credito';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
         field(34002522; "No. serie notas credito reg."; Code[20])
         {
-            Caption = 'Nº serie notas crédito registradas';
+            Caption = 'Nº serie notas Credito registradas';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
@@ -145,7 +145,7 @@ table 34002501 "Configuracion TPV"
         }
         field(34002551; "NCF Credito fiscal"; Code[20])
         {
-            Caption = 'NCF Crédito fiscal';
+            Caption = 'NCF Credito fiscal';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }

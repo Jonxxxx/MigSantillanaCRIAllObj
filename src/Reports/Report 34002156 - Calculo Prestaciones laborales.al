@@ -17,7 +17,6 @@ report 34002156 "Calculo Prestaciones laborales"
             }
             column(DiasCesantia; DiasCesantia)
             {
-                DecimalPlaces = 2 : 2;
             }
             column(MontoPreaviso; MontoPreaviso)
             {
@@ -26,7 +25,6 @@ report 34002156 "Calculo Prestaciones laborales"
             }
             column(DiasPreaviso; DiasPreaviso)
             {
-                DecimalPlaces = 2 : 2;
             }
             column(Importe_SFS; ImporteSFS)
             {
@@ -58,7 +56,7 @@ report 34002156 "Calculo Prestaciones laborales"
             }
             column(DiasVacaciones; DiasVacaciones)
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante; (MontoCesantia + MontoPreaviso) + MontoRegalia + MontoVacaciones + MontoRestante)
             {
@@ -83,7 +81,7 @@ report 34002156 "Calculo Prestaciones laborales"
             column(Causa_Salida; Contrato."Causa de la Baja")
             {
             }
-            column(FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_; FORMAT(GAno) + ' Anos, ' + FORMAT(GMes) + ' Meses, ' + FORMAT(GDia) + ' D´Š¢as')
+            column(FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_; FORMAT(GAno) + ' Anos, ' + FORMAT(GMes) + ' Meses, ' + FORMAT(GDia) + ' Dias')
             {
             }
             column(PromedioSalarioAnual; PromedioSalarioAnual)
@@ -116,11 +114,11 @@ report 34002156 "Calculo Prestaciones laborales"
             }
             column(DMY2DATE_1_DATE2DMY__Termination_Date__2__DATE2DMY__Termination_Date__3__; DMY2DATE(1, DATE2DMY("Termination Date", 2), DATE2DMY("Termination Date", 3)))
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(Employee__Termination_Date__Control104; "Fin contrato")
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(Monto_Restante; MontoRestante)
             {
@@ -301,7 +299,7 @@ report 34002156 "Calculo Prestaciones laborales"
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado", "Perfil salarial", "Concepto salarial", Cargo)
                                     ORDER(Ascending)
-                                    WHERE("Salario Base" = FILTER(Yes));
+                                    WHERE("Salario Base" = FILTER(true));
 
                 trigger OnAfterGetRecord()
                 begin
@@ -382,7 +380,7 @@ report 34002156 "Calculo Prestaciones laborales"
                     IF (NOT VacacionesPagadas) OR (CalcularDesdeHistorico) THEN
                         CalculoVacaciones(MontoVacaciones);
 
-                    //GRN IF "Pagar Regal´Š¢a" THEN
+                    //GRN IF "Pagar Regalia" THEN
                     IF NOT Calculoenbaseultimosalario THEN
                         CalculoRegalia(MontoRegalia);
 
@@ -480,7 +478,7 @@ report 34002156 "Calculo Prestaciones laborales"
                 {
                     Caption = 'Calculate Censantea';
                 }
-                field("Pagar regal´Š¢a"; "Pagar Regal´Š¢a")
+                field("Pagar Regalia"; "Pagar Regalia")
                 {
                 }
                 field(Calculoenbaseultimosalario; Calculoenbaseultimosalario)
@@ -491,7 +489,7 @@ report 34002156 "Calculo Prestaciones laborales"
                 {
                     Caption = 'Include end date in calculation';
                 }
-                field("D´Š¢as diferencia salario"; DiasSalario)
+                field("Dias diferencia salario"; DiasSalario)
                 {
                 }
             }
@@ -541,7 +539,7 @@ report 34002156 "Calculo Prestaciones laborales"
         AcumuladoRegalia: Decimal;
         MontoVacaciones: Decimal;
         VacacionesPagadas: Boolean;
-        "Pagar Regal´Š¢a": Boolean;
+        "Pagar Regalia": Boolean;
         CalcularPreaviso: Boolean;
         CalcularCesantia: Boolean;
         FechaProceso: Date;
@@ -570,7 +568,7 @@ report 34002156 "Calculo Prestaciones laborales"
         CDateSymbol: Label 'Y';
         II__CESANTIACaptionLbl: Label 'II. CESANTIA';
         RD_CaptionLbl: Label 'RD$';
-        D_asCaptionLbl: Label 'D´Š¢as';
+        D_asCaptionLbl: Label 'Dias';
         I__PREAVISOCaptionLbl: Label 'I. PREAVISO';
         Nombres_y_ApellidosCaptionLbl: Label 'Full name';
         V__REGALIACaptionLbl: Label 'IV. REGALIA';
@@ -587,9 +585,9 @@ report 34002156 "Calculo Prestaciones laborales"
         Promedio_DiarioCaptionLbl: Label 'Daily average';
         Ultimo_Sueldo_Mensual_RD_CaptionLbl: Label 'Last monthly salary RD$';
         DETALLES_DE_LIQUIDACION_DE_PRESTACIONES_LABORALESCaptionLbl: Label 'DETALLES DE LIQUIDACION DE PRESTACIONES LABORALES';
-        D_asCaption_Control86Lbl: Label 'D´Š¢as';
+        D_asCaption_Control86Lbl: Label 'Dias';
         RD_Caption_Control89Lbl: Label 'RD$';
-        D_asCaption_Control90Lbl: Label 'D´Š¢as';
+        D_asCaption_Control90Lbl: Label 'Dias';
         RD_Caption_Control95Lbl: Label 'RD$';
         TOTAL_LIQUIDACION_PRESTACIONES_LABORALESCaptionLbl: Label 'TOTAL LIQUIDACION PRESTACIONES LABORALES';
         IV__Salario_devengado_del_CaptionLbl: Label 'IV. Salario devengado del ';
@@ -937,7 +935,7 @@ report 34002156 "Calculo Prestaciones laborales"
     procedure InicioReporte(StatusVacacionesParam: Boolean; PagarRegaliaParam: Boolean; DiasSalarioNomParam: Integer; ImporteAcumuladoParam: Decimal; MesesAcumuladoParam: Decimal; MontoDeduccionesParam: Decimal; PorcCesantia: Decimal; PorcPreaviso: Decimal; ProcMontoGral: Decimal)
     begin
         VacacionesPagadas := StatusVacacionesParam;
-        "Pagar Regal´Š¢a" := PagarRegaliaParam;
+        "Pagar Regalia" := PagarRegaliaParam;
         DiasSalario := DiasSalarioNomParam;
         ImporteSueldoAcumulado := ImporteAcumuladoParam;
         MesesAcumulado := MesesAcumuladoParam;
@@ -966,7 +964,7 @@ report 34002156 "Calculo Prestaciones laborales"
         DeduccGob: Record 34002129;
     begin
         /*
-        IF Employee."Exclu´Š¢do Cotizacion TSS" THEN
+        IF Employee."Excluido Cotizacion TSS" THEN
            EXIT;
         
         ConfNominas.GET();

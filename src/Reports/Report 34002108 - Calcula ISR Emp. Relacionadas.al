@@ -64,7 +64,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
         {
             area(content)
             {
-                group()
+                group(General)
                 {
                     field(PerNomina; PerNomina)
                     {
@@ -198,7 +198,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
         RetencionISR.SETRANGE(Ano, FORMAT(iAno, 4, '<Standard Format,0>'));
         RetencionISR.FIND('-');
         REPEAT
-            RangoISR[Indice] := RetencionISR."Importe M´Š¢ximo";
+            RangoISR[Indice] := RetencionISR."Importe Maximo";
             ImporteRetencion[Indice] := RetencionISR."Importe retencion";
             "%Calcular"[Indice] := RetencionISR."% Retencion";
             Indice += 1;
@@ -258,7 +258,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
 
         IF (Contrato."Frecuencia de pago" = Contrato."Frecuencia de pago"::Quincenal) AND
            (PerfilSalImp."1ra Quincena") AND (PerfilSalImp."2da Quincena") AND (PrimeraQ) AND
-           (Puestos."M´Š¢todo Calculo Paga Salario" = 0) THEN
+           (Puestos."Metodo Calculo Paga Salario" = 0) THEN
             TotalISR[1] [1] := ROUND(TotalISR[1] [1] / 2, 0.01)
         ELSE BEGIN
             HistLinNomISR.RESET;
@@ -373,7 +373,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
         LinNomina."Cotiza SRL" := perfSalario."Cotiza SRL";
         LinNomina."Cotiza Infotep" := perfSalario."Cotiza INFOTEP";
         LinNomina."Sujeto Cotizacion" := perfSalario."Sujeto Cotizacion";
-        LinNomina.F´Š¢rmula := perfSalario."F´Š¢rmula Calculo";
+        LinNomina.Formula := perfSalario."Formula Calculo";
         LinNomina.Imprimir := perfSalario.Imprimir;
         LinNomina."Inicio periodo" := PerInici;
         LinNomina."Fin periodo" := PerFinal;
@@ -490,7 +490,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
                         IF ConfNominas."Concepto SFS" = DeduccGob.Codigo THEN
                             LinNominasES.SETRANGE("Cotiza SFS", TRUE);
 
-                    IF Empleado."Exclu´Š¢do Cotizacion TSS" THEN
+                    IF Empleado."Excluido Cotizacion TSS" THEN
                         IndSkip := TRUE;
 
                     IF LinNominasES.FINDSET(FALSE, FALSE) THEN

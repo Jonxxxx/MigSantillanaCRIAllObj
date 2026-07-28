@@ -18,7 +18,7 @@ table 34002120 "Nivel Cargo"
         {
             Caption = 'Minimum amount';
         }
-        field(5; "Importe máximo"; Decimal)
+        field(5; "Importe Maximo"; Decimal)
         {
             DataClassification = ToBeClassified;
         }
@@ -37,7 +37,7 @@ table 34002120 "Nivel Cargo"
 
     fieldgroups
     {
-        fieldgroup(DropDown; "Cod. Nivel", Descripcion, "Importe minimo", "Importe Medio", "Importe máximo")
+        fieldgroup(DropDown; "Cod. Nivel", Descripcion, "Importe minimo", "Importe Medio", "Importe Maximo")
         {
         }
     }

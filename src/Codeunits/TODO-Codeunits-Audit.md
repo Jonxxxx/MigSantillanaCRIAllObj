@@ -63,9 +63,9 @@ block during processing.
 | Codeunit 34002520 - Facturas Registradas POS.al | 1 |
 | Codeunit 34002521 - Control TPV.al | 1 |
 | Codeunit 34002522 - Registrar Ventas en Lote DsPOS.al | 12 |
-| Codeunit 34002523 - Notas Crédito Regis POS.al | 1 |
+| Codeunit 34002523 - Notas Credito Regis POS.al | 1 |
 | Codeunit 34002524 - Facturas Pendientes POS.al | 1 |
-| Codeunit 34002525 - Notas Crédito Pdtes POS.al | 1 |
+| Codeunit 34002525 - Notas Credito Pdtes POS.al | 1 |
 | Codeunit 50010 - CI_AnularFacturas.al | 2 |
 | Codeunit 50112 - Registra Pedidos Vta. SIC_BC.al | 1 |
 | Codeunit 50113 - Sales-Post + Print SIC_BC.al | 4 |
@@ -85,7 +85,7 @@ block during processing.
 | Codeunit 56206 - Aplicar cambios MdE via Job Q.al | 8 |
 | Codeunit 56300 - Email packing.al | 4 |
 | Codeunit 67001 - Generacion Words APS.al | 1 |
-| Codeunit 67002 - Funciones cálculo Ranking.al | 2 |
+| Codeunit 67002 - Funciones Calculo Ranking.al | 2 |
 | Codeunit 75000 - Funciones MdM.al | 15 |
 | Codeunit 75001 - Gest. Maestros MdM.al | 2 |
 | Codeunit 75002 - Imp Excel MdM.al | 4 |

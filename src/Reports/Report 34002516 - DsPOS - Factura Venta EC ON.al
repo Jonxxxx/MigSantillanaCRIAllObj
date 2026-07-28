@@ -576,7 +576,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         FPTPV: Record 34002513;
         Vendedor_Comprador: Record 13;
         rPais: Record 9;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;

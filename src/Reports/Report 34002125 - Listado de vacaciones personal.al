@@ -9,7 +9,7 @@ report 34002125 "Listado de vacaciones personal"
         {
             CalcFields = Salario;
             DataItemTableView = WHERE("Fecha salida empresa" = FILTER(''),
-                                      Calcular Nomina=CONST(true));
+                                      "Calcular Nomina" = CONST(true));
             RequestFilterFields = "No.", "Calcular Nomina", "Global Dimension 1 Code";
             column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
             {

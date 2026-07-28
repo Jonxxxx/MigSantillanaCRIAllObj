@@ -44,7 +44,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         {
             Caption = 'Loan type';
             DataClassification = ToBeClassified;
-            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST("Tipo de préstamo"));
+            TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST("Tipo de Prestamo"));
         }
         field(6; Importe; Decimal)
         {

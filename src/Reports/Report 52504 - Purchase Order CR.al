@@ -589,10 +589,10 @@ report 52504 "Purchase Order CR"
         NumberOfLines: Integer;
         OnLineNumber: Integer;
         PurchasePrinted: Codeunit 317;
-        FormatAddress: Codeunit 365;
-        SalesTaxCalc: Codeunit 398;
+        FormatAddress: Codeunit "Format Address";
+        SalesTaxCalc: Codeunit "Sales Tax Calculate";
         ArchiveManagement: Codeunit 5063;
-        SegManagement: Codeunit 5051;
+        SegManagement: Codeunit SegManagement;
         ArchiveDocument: Boolean;
         LogInteraction: Boolean;
         TaxAmount: Decimal;

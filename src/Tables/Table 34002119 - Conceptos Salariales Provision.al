@@ -38,7 +38,7 @@ table 34002119 "Conceptos Salariales Provision"
         field(8; "Validar Contrapartida"; Boolean)
         {
         }
-        field(11; "Formula cálculo"; Text[150])
+        field(11; "Formula Calculo"; Text[150])
         {
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
@@ -53,7 +53,7 @@ table 34002119 "Conceptos Salariales Provision"
                 IF FormConcSalariales.RUNMODAL = ACTION::LookupOK THEN BEGIN
                     CLEAR(ConcepSalar);
                     FormConcSalariales.GETRECORD(ConcepSalar);
-                    "Formula cálculo" := "Formula cálculo" + ConcepSalar.Codigo;
+                    "Formula Calculo" := "Formula Calculo" + ConcepSalar.Codigo;
                     CLEAR(FormConcSalariales);
                 END;
                 */
@@ -61,16 +61,16 @@ table 34002119 "Conceptos Salariales Provision"
 
             trigger OnValidate()
             begin
-                "Formula cálculo" := UPPERCASE("Formula cálculo");
-                IF "Formula cálculo" <> '' THEN BEGIN
+                "Formula Calculo" := UPPERCASE("Formula Calculo");
+                IF "Formula Calculo" <> '' THEN BEGIN
                     Regpolaca.DELETEALL;
                     RegFormula.DELETEALL;
                     Regconceptos.DELETEALL;
 
-                    Regconceptos.Formula := DELCHR("Formula cálculo", '=', ' ');
+                    Regconceptos.Formula := DELCHR("Formula Calculo", '=', ' ');
                     RegFormula.SETRANGE(Formula, Regconceptos.Formula);
                     IF RegFormula.COUNT = 0 THEN BEGIN
-                        Regconceptos.Formula := "Formula cálculo";
+                        Regconceptos.Formula := "Formula Calculo";
                         Scanner.RUN(Regconceptos);
                         Parser.RUN(Regconceptos);
                     END;

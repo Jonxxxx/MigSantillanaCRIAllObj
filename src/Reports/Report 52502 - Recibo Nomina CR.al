@@ -255,7 +255,7 @@ report 52502 "Recibo Nomina CR"
                 column("Historico_Lin__nomina__No__empleado_Caption"; FIELDCAPTION("No. empleado"))
                 {
                 }
-                column("Historico_Cab__nomina__NombreCaption"; Histirico_Cab__nomina__NombreCaptionLbl)
+                column("Historico_Cab__nomina__NombreCaption"; Histrico_Cab__nomina__NombreCaptionLbl)
                 {
                 }
                 column(txtDescCaption; txtDescCaptionLbl)
@@ -448,7 +448,7 @@ report 52502 "Recibo Nomina CR"
         TotDed: Decimal;
         txtDesc: Text[250];
         TextoInformativo: Text[250];
-        "Historico_Cab__nomina__NombreCaptionLbl": Label 'Full Name';
+        Histrico_Cab__nomina__NombreCaptionLbl: Label 'Full Name';
         txtDescCaptionLbl: Label 'Cargo';
         TODAYCaptionLbl: Label 'Date:';
         TIMECaptionLbl: Label 'Time:';

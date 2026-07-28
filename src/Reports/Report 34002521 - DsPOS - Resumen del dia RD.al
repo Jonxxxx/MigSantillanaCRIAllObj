@@ -248,7 +248,7 @@ report 34002521 "DsPOS - Resumen del dia RD"
         codFiltro: Text;
         lblApertura: Label 'Apertura:';
         lblCierre: Label 'Cierre:';
-        TexNombreInforme: Label 'RESUMEN DE VENTAS DEL D´Š¢A';
+        TexNombreInforme: Label 'RESUMEN DE VENTAS DEL Dia';
         lblCliente: Label 'Cliente';
         lblNombreCliente: Label 'Nombre cliente';
         TexPagina: Label 'N´Š¢ Pag.:';

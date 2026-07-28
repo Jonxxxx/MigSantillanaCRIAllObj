@@ -275,7 +275,7 @@ report 34003008 "Notificacion retencion"
         PurchInvHdr: Record 122;
         HistRet: Record 34003003;
         TempHistRet: Record 34003003 temporary;
-        ChkTransMgt: Report 10400;
+        ChkTransMgt: Report "Check Translation Management";
         CRP: Record 34003000;
         Company: Record 79;
         ProvRet: Record 34003001;

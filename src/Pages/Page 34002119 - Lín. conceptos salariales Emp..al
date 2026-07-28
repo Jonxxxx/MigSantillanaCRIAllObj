@@ -88,7 +88,7 @@ page 34002119 "Lin. conceptos salariales Emp."
                 {
                     Visible = false;
                 }
-                field("Formula cálculo"; "Formula cálculo")
+                field("Formula Calculo"; "Formula Calculo")
                 {
                     Editable = true;
                 }
@@ -148,7 +148,7 @@ page 34002119 "Lin. conceptos salariales Emp."
     trigger OnAfterGetRecord()
     begin
         ImporteEditable := TRUE;
-        IF "Formula cálculo" <> '' THEN
+        IF "Formula Calculo" <> '' THEN
             ImporteEditable := FALSE
         ELSE
             IF "Concepto salarial" = ConfNom."Concepto Sal. Base" THEN

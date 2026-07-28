@@ -70,7 +70,7 @@ table 34002195 "Miembros cooperativa"
         field(28; "Prestamos pendientes"; Integer)
         {
             CalcFormula = Count("Mov. cooperativa" WHERE("Employee No." = FIELD("Employee No."),
-                                                          "Tipo transaccion" = CONST(Préstamo)));
+                                                          "Tipo transaccion" = CONST(Prestamo)));
             Caption = 'Outstanding loans';
             Editable = false;
             FieldClass = FlowField;
@@ -78,7 +78,7 @@ table 34002195 "Miembros cooperativa"
         field(29; "Importe pendiente"; Decimal)
         {
             CalcFormula = Sum("Mov. cooperativa".Importe WHERE("Employee No." = FIELD("Employee No."),
-                                                                "Tipo transaccion" = CONST(Préstamo)));
+                                                                "Tipo transaccion" = CONST(Prestamo)));
             Caption = 'Amount pending';
             Editable = false;
             FieldClass = FlowField;

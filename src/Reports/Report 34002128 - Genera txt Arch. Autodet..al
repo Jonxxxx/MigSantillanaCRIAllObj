@@ -38,12 +38,10 @@ report 34002128 "Genera txt Arch. Autodet."
                 field(Ano; Ano)
                 {
                     Caption = 'Year';
-                    Numeric = true;
                 }
                 field(Mes; Mes)
                 {
                     Caption = 'Month';
-                    Numeric = true;
                 }
                 field(ClaveNom; ClaveNom)
                 {

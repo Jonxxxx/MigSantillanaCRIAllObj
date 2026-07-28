@@ -19,7 +19,7 @@ page 34003005 "Retencion Doc. Prov. Reg."
                 field("Cta. Contable"; "Cta. Contable")
                 {
                 }
-                field("Base Cálculo"; "Base Cálculo")
+                field("Base Calculo"; "Base Calculo")
                 {
                 }
                 field(Devengo; Devengo)

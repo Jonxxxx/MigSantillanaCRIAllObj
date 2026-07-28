@@ -1,6 +1,6 @@
 page 34002138 "Lista Mov. CxC Empleados"
 {
-    CardPageID = "Historico Préstamos";
+    CardPageID = "Historico Prestamos";
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
@@ -14,7 +14,7 @@ page 34002138 "Lista Mov. CxC Empleados"
         {
             repeater(GeneralRep)
             {
-                field("No. Préstamo"; "No. Préstamo")
+                field("No. Prestamo"; "No. Prestamo")
                 {
                 }
                 field("Employee No."; "Employee No.")

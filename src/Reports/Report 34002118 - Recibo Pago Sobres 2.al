@@ -695,7 +695,7 @@ report 34002118 "Recibo Pago Sobres 2"
 
             trigger OnAfterGetRecord()
             begin
-                Periodo := Text0001 + FORMAT("Historico Cab. nomina".Inicio) + Text0002 + FORMAT("Historico Cab. nomina".Fin);
+                PeriodoText := Text0001 + FORMAT("Historico Cab. nomina".Inicio) + Text0002 + FORMAT("Historico Cab. nomina".Fin);
                 rEmpleado.GET("No. empleado");
                 CLEAR(TotIng);
                 CLEAR(TotDed);
@@ -867,7 +867,7 @@ report 34002118 "Recibo Pago Sobres 2"
         NoSobre: Integer;
         Text0001: Label 'Periodo ';
         Text0002: Label ' to ';
-        Periodo: Text[150];
+        PeriodoText: Text[150];
         NumSobre: array[3] of Text[30];
         Tot: Integer;
         Seq: Integer;

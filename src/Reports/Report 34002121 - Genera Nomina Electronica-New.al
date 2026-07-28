@@ -9,14 +9,14 @@ report 34002121 "Genera Nomina Electronica-New"
         dataitem(Employee; 5200)
         {
             DataItemTableView = SORTING("No.")
-                                WHERE("Forma de Cobro" = FILTER(Cheque | Transferencia Banc.));
+                                WHERE("Forma de Cobro" = FILTER(Cheque | 'Transferencia Banc.'));
             column(Total; Total)
             {
                 DecimalPlaces = 2 : 2;
             }
             column(Contador; Contador)
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(Total_EmpleadosCaption; Total_EmpleadosCaptionLbl)
             {
@@ -56,7 +56,7 @@ report 34002121 "Genera Nomina Electronica-New"
                 column(Empresa__ID__Volante_Pago_; Empresa."ID  Volante Pago")
                 {
                 }
-                column(Empresa_Direccion_________Empresa_nomero; Empresa.Direccion + ', ' + Empresa.nomero)
+                column(Empresa_Direccion_________Empresa_nomero; Empresa.Direccion + ', ' + Empresa."Numero")
                 {
                 }
                 column(Historico_Cab__nomina_Fin; Fin)

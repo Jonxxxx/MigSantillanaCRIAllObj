@@ -165,7 +165,7 @@ table 34002503 Tiendas
         }
         field(34002521; "Descuadre maximo en caja"; Decimal)
         {
-            Caption = 'Descuadre máximo en caja';
+            Caption = 'Descuadre Maximo en caja';
             Description = 'DsPOS Standard';
             MinValue = 0;
         }

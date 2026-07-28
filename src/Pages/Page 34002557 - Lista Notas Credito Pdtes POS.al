@@ -4,7 +4,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
     ApplicationArea = Basic, Suite;
     Caption = 'Sales Credit Memos';
-    CardPageID = "Ficha Notas Crédito Pdtes POS";
+    CardPageID = "Ficha Notas Credito Pdtes POS";
     Editable = false;
     PageType = List;
     SourceTable = 36;
@@ -473,8 +473,8 @@ page 34002557 "Lista Notas Credito Pdtes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-        // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
-        // Original code: lcfComunes: Codeunit 34002503;
+    // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+    // Original code: lcfComunes: Codeunit 34002503;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;

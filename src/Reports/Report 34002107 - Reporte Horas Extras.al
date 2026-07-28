@@ -74,7 +74,7 @@ report 34002107 "Reporte Horas Extras"
                 dataitem(Employee; 5200)
                 {
                     DataItemLink = Departamento = FIELD("Cod. Departamento"),
-                                   Sub-Departamento=FIELD(Codigo);
+                                   "Sub-Departamento" = FIELD(Codigo);
                     DataItemTableView = SORTING("No.");
                     RequestFilterFields = "No.";
                     column(Employee_No_; "No.")
@@ -90,88 +90,88 @@ report 34002107 "Reporte Horas Extras"
                     {
                         DataItemLink = "No. empleado" = FIELD("No."),
                                        Departamento = FIELD(Departamento),
-                                       Sub-Departamento=FIELD(Sub-Departamento);
-                        DataItemTableView = SORTING(Departamento, Sub-Departamento, "No. empleado", Periodo)
-                                            WHERE(F´Š¢rmula=FILTER(<>''));
+                                       "Sub-Departamento" = FIELD("Sub-Departamento");
+                        DataItemTableView = SORTING(Departamento, "Sub-Departamento", "No. empleado", Periodo)
+                                            WHERE(Formula = FILTER(<> ''));
                         RequestFilterFields = Periodo;
-                        column(FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion;FIELDCAPTION(Departamento)  + ': ' + Departamento+ ', ' + Departamentos.Descripcion)
+                        column(FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion; FIELDCAPTION(Departamento) + ': ' + Departamento + ', ' + Departamentos.Descripcion)
                         {
                         }
-                        column(FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion;FIELDCAPTION("Sub-Departamento") + ': ' + "Sub-Departamento"  + ', ' + "Sub-Departamentos".Descripcion)
+                        column(FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion; FIELDCAPTION("Sub-Departamento") + ': ' + "Sub-Departamento" + ', ' + "Sub-Departamentos".Descripcion)
                         {
                         }
-                        column(Hist_rico_L_n__n_mina__Importe_Base_;"Importe Base")
+                        column(Hist_rico_L_n__n_mina__Importe_Base_; "Importe Base")
                         {
                         }
-                        column(Employee__Full_Name_;Employee."Full Name")
+                        column(Employee__Full_Name_; Employee."Full Name")
                         {
                         }
-                        column(Hist_rico_L_n__n_mina__No__empleado_;"No. empleado")
+                        column(Hist_rico_L_n__n_mina__No__empleado_; "No. empleado")
                         {
                         }
-                        column(Hist_rico_L_n__n_mina_Cantidad;Cantidad)
+                        column(Hist_rico_L_n__n_mina_Cantidad; Cantidad)
                         {
                         }
-                        column(Hist_rico_L_n__n_mina_Total;Total)
+                        column(Hist_rico_L_n__n_mina_Total; Total)
                         {
                         }
-                        column(Hist_rico_L_n__n_mina_Total_Control1000000016;Total)
+                        column(Hist_rico_L_n__n_mina_Total_Control1000000016; Total)
                         {
                         }
-                        column(Hist_rico_L_n__n_mina_Cantidad_Control1000000017;Cantidad)
+                        column(Hist_rico_L_n__n_mina_Cantidad_Control1000000017; Cantidad)
                         {
                         }
-                        column(Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion;Text002 + FIELDCAPTION("Sub-Departamento")  + ', ' + "Sub-Departamentos".Descripcion)
+                        column(Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion; Text002 + FIELDCAPTION("Sub-Departamento") + ', ' + "Sub-Departamentos".Descripcion)
                         {
                         }
-                        column(CantEmpl;CantEmpl)
+                        column(CantEmpl; CantEmpl)
                         {
-                            DecimalPlaces = 0:0;
+                            DecimalPlaces = 0 : 0;
                         }
-                        column(Hist_rico_L_n__n_mina_Total_Control1000000008;Total)
-                        {
-                        }
-                        column(Hist_rico_L_n__n_mina_Cantidad_Control1000000009;Cantidad)
+                        column(Hist_rico_L_n__n_mina_Total_Control1000000008; Total)
                         {
                         }
-                        column(Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion;Text002 + FIELDCAPTION(Departamento)  + ', ' + Departamentos.Descripcion)
+                        column(Hist_rico_L_n__n_mina_Cantidad_Control1000000009; Cantidad)
                         {
                         }
-                        column(CantEmpl_Control1000000020;CantEmpl)
-                        {
-                            DecimalPlaces = 0:0;
-                        }
-                        column(V1Caption;V1CaptionLbl)
+                        column(Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion; Text002 + FIELDCAPTION(Departamento) + ', ' + Departamentos.Descripcion)
                         {
                         }
-                        column(Historico_Lin__nomina_Tipo_nomina;"Tipo nomina")
+                        column(CantEmpl_Control1000000020; CantEmpl)
+                        {
+                            DecimalPlaces = 0 : 0;
+                        }
+                        column(V1Caption; V1CaptionLbl)
                         {
                         }
-                        column(Historico_Lin__nomina_Periodo;Periodo)
+                        column(Historico_Lin__nomina_Tipo_nomina; "Tipo nomina")
                         {
                         }
-                        column(Historico_Lin__nomina_No__Orden;"No. Orden")
+                        column(Historico_Lin__nomina_Periodo; Periodo)
                         {
                         }
-                        column(Historico_Lin__nomina_Departamento;Departamento)
+                        column(Historico_Lin__nomina_No__Orden; "No. Orden")
                         {
                         }
-                        column(Historico_Lin__nomina_Sub_Departamento;"Sub-Departamento")
+                        column(Historico_Lin__nomina_Departamento; Departamento)
+                        {
+                        }
+                        column(Historico_Lin__nomina_Sub_Departamento; "Sub-Departamento")
                         {
                         }
 
                         trigger OnAfterGetRecord()
                         begin
-                            CantEmpl     += 1;
+                            CantEmpl += 1;
                             CantEmplGral += 1;
 
-                            CantGral     += Cantidad;
+                            CantGral += Cantidad;
                             ImporteTotal += Total;
                         end;
 
                         trigger OnPreDataItem()
                         begin
-                            SETRANGE("Concepto salarial",Concepto);
+                            SETRANGE("Concepto salarial", Concepto);
                             CurrReport.CREATETOTALS(CantEmpl);
                         end;
                     }
@@ -193,7 +193,7 @@ report 34002107 "Reporte Horas Extras"
         {
             area(content)
             {
-                field("Concepto salarial";Concepto)
+                field("Concepto salarial"; Concepto)
                 {
                     TableRelation = "Conceptos salariales".Codigo;
                 }
