@@ -172,49 +172,11 @@ table 34002501 "Configuracion TPV"
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
 
-            trigger OnValidate()
-            var
-                lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
-            begin
-                //+#232158
-                //...
-                /*
-                //+116527
-                //... De momento se restringe solo al caso de Guatemala
-                IF lrConf.FINDFIRST THEN
-                  IF lrConf.Pais = lrConf.Pais::Guatemala THEN
-                    IF NOT lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
-                      VALIDATE("NCF Credito fiscal","NCF Credito fiscal habitual");
-                */
-                //-#232158
-
-            end;
         }
         field(34002559; "NCF Credito fiscal resguardo"; Code[20])
         {
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
-
-            trigger OnValidate()
-            var
-                lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
-            begin
-                //+#232158
-                //...
-                /*
-                
-                //+116527
-                //... De momento se restringe solo al caso de Guatemala
-                IF lrConf.FINDFIRST THEN
-                  IF lrConf.Pais = lrConf.Pais::Guatemala THEN
-                    IF lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
-                      VALIDATE("NCF Credito fiscal","NCF Credito fiscal resguardo");
-                */
-                //-#232158
-
-            end;
         }
         field(34002560; "Serie Ventas Computerizadas"; Code[20])
         {
@@ -245,52 +207,11 @@ table 34002501 "Configuracion TPV"
         {
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
-
-            trigger OnValidate()
-            var
-                lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
-            begin
-                //+#232158
-                //...
-                /*
-                
-                //+116527
-                //... De momento se restringe solo al caso de Guatemala
-                IF lrConf.FINDFIRST THEN
-                  IF lrConf.Pais = lrConf.Pais::Guatemala THEN
-                    IF NOT lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
-                      VALIDATE("NCF Credito fiscal NCR","NCF Credito fiscal NCR habit.");
-                */
-                //-#232158
-
-            end;
         }
         field(34002569; "NCF Credito fiscal NCR resg."; Code[20])
         {
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
-
-            trigger OnValidate()
-            var
-                lrConf: Record 34002500;
-                lcGuatemala: Codeunit 34002508;
-            begin
-                //+#232158
-                //...
-                /*
-                
-                //+116527
-                //... De momento se restringe solo al caso de Guatemala
-                IF lrConf.FINDFIRST THEN
-                  IF lrConf.Pais = lrConf.Pais::Guatemala THEN
-                    IF lcGuatemala.TestSeriesResguardo(Tienda,"Id TPV") THEN
-                      VALIDATE("NCF Credito fiscal NCR","NCF Credito fiscal NCR resg.");
-                
-                */
-                //-#232158
-
-            end;
         }
         field(34002570; "Leyenda Dosificacion"; Text[150])
         {

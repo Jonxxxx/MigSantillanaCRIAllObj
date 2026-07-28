@@ -1,6 +1,6 @@
 codeunit 34002503 "Funciones DsPOS - Comunes"
 {
-    //Ver codigo completo
+    //TODO: Revisar codigo completo
     /*
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,

@@ -89,7 +89,6 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         wNumLog: Integer;
         wFechaProceso: Date;
         cfComunes: Codeunit 34002503;
-        cGuatemala: Codeunit 34002508;
 
     procedure RegistroNocturno()
     var
@@ -783,33 +782,11 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         lcGuatEduca: Codeunit 34002512;
         lcCostaRica: Codeunit 34002511;
     begin
-        //TODO: Ver 
+        //TODO: Revisar 
         /*
         CASE cfComunes.Pais() OF
             //+#126073
-            //... Se realiza un tratamiento de gestion de los posibles errores en el proceso de firma.
-            //5:cGuatemala.FE(pSalesH);
-            5:
-                BEGIN
-                    //+#232158
-                    //... FE 2.0
-                    IF NOT cGuatemala.TestFE20 THEN BEGIN
-                        COMMIT;
-                        CLEARLASTERROR;
-                        lcGuatEduca.Parametros_2(pSalesH, wNumLog, FALSE);
-                        IF lcGuatEduca.RUN THEN
-                            lcGuatEduca.LogFirmaEnCentral(pSalesH, '')
-                        ELSE
-                            lcGuatEduca.LogFirmaEnCentral(pSalesH, COPYSTR(GETLASTERRORTEXT, 1, 1024));
-                    END
-                    ELSE BEGIN
-                        cGuatemala.Parametros_2(pSalesH, wNumLog, FALSE);
-                        cGuatemala.LogFirmaEnCentral(pSalesH, '')
-                    END;
-                    //-#232158
-                END;
-
-            //+#217374
+            //... Se realiza un tratamiento de gestion de los posibles errores en el proceso de firma.            
             9:
                 BEGIN
                     COMMIT;
@@ -1015,17 +992,12 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure Final_Localizado()
     var
-        lcGuatemala: Codeunit 34002508;
         lcCostaRica: Codeunit 34002511;
     begin
         //+76946
-        //TODO: Ver 
+        //TODO: Revisar 
         /*
-        CASE cfComunes.Pais() OF
-            5:
-                lcGuatemala.FinalProcesoRegistro(wNumLog);
-
-            //+#217374
+        CASE cfComunes.Pais() OF            
             9:
                 lcCostaRica.FinalProcesoRegistro(wNumLog);
         //-#217374
@@ -1036,11 +1008,10 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     procedure TestRegistroViable(lrCV: Record 36): Boolean
     var
         lResult: Boolean;
-        lcBolivia: Codeunit 34002505;
     begin
         //+#75918
         lResult := TRUE;
-        //TODO: Ver 
+        //TODO: Revisar 
         /*
         CASE cfComunes.Pais() OF
             2:
