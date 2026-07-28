@@ -12,7 +12,6 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         Text001: Label 'Se procederá a Registrar y Liquidar todas las ventas de Tienda\¿Desea Continuar?';
         Text002: Label 'Proceso Terminado';
         Error001: Label 'Cancelado a Peticion del Usuario';
-        CduPOS: Codeunit 34002502;
         Error002: Label 'Proceso Solo Disponible en Servidor Central';
         recTPV: Record 34002501;
         Seleccion: Integer;
@@ -27,7 +26,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
         IF GUIALLOWED THEN BEGIN
 
-            //TODO: Ver recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+            recTPV.SETRANGE("Usuario windows", USERID);
             IF recTPV.FINDFIRST THEN
                 ERROR(Error002);
 
@@ -373,26 +372,25 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         DimMgt: Codeunit 408;
         recTmpDimEntry: Record 480 temporary;
         recDimVal: Record 349;
+        DefaultDimSource: List of [Dictionary of [Integer, Code[20]]];
     begin
         WITH recPrmCabVta DO BEGIN
 
             SetHideValidationDialog(TRUE);
-            //TODO: Ver CreateDim(
-            //TODO: Ver DATABASE::Customer, "Bill-to Customer No.",
-            //TODO: Ver DATABASE::"Salesperson/Purchaser", "Salesperson Code",
-            //TODO: Ver DATABASE::Campaign, "Campaign No.",
-            //TODO: Ver DATABASE::"Responsibility Center", "Responsibility Center",
-            //TODO: Ver DATABASE::"Customer Template", "Bill-to Customer Template Code");
+            DimMgt.AddDimSource(DefaultDimSource, DATABASE::Customer, "Bill-to Customer No.");
+            DimMgt.AddDimSource(DefaultDimSource, DATABASE::"Salesperson/Purchaser", "Salesperson Code");
+            DimMgt.AddDimSource(DefaultDimSource, DATABASE::Campaign, "Campaign No.");
+            DimMgt.AddDimSource(DefaultDimSource, DATABASE::"Responsibility Center", "Responsibility Center");
+            CreateDim(DefaultDimSource);
 
             recLinVta.RESET;
             recLinVta.SETRANGE("Document Type", "Document Type");
             recLinVta.SETRANGE("Document No.", "No.");
             IF recLinVta.FINDSET THEN
                 REPEAT
-                    //TODO: Ver  recLinVta.CreateDim(
-                    //TODO: Ver   DimMgt.TypeToTableID3(recLinVta.Type), recLinVta."No.",
-                    //TODO: Ver   DATABASE::Job, recLinVta."Job No.",
-                    //TODO: Ver   DATABASE::"Responsibility Center", recLinVta."Responsibility Center");
+                    Clear(DefaultDimSource);
+                    recLinVta.InitDefaultDimensionSources(DefaultDimSource, 0);
+                    recLinVta.CreateDim(DefaultDimSource);
                     recLinVta.MODIFY;
                 UNTIL recLinVta.NEXT = 0;
 
@@ -1072,7 +1070,8 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     begin
         //+#201856
 
-        //TODO: Ver lPais := cfComunes.Pais;
+        // TODO: Manual review - Codeunit 34002503 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected.
+        // Original code: lPais := cfComunes.Pais();
 
         lrSL.RESET;
         lrSL.SETRANGE("Document Type", lrSH."Document Type");

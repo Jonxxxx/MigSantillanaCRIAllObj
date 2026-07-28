@@ -541,7 +541,7 @@ table 80006 "Tmp Purch. Inv. Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(6608; "Return Reason Code"; Code[10])
         {

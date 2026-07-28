@@ -31,18 +31,18 @@ codeunit 50300 "Notificar Errores Colas"
     end;
 
     var
-        Doc: InStream;
         ConfEmpresa: Record 56001;
         Error01: Label 'Error Cola Proyecto -';
         Error02: Label 'Error: ';
 
     procedure SendEmail(SendToAddress: Text[1024]; Subject: Text[200]; MessageBody: Text[1024])
     var
-        //TODO: Ver SMTPMail: Codeunit 400;
-        SendOK: Boolean;
-        GLSetup: Record 98;
         CompanyInfo: Record 79;
-        SMTP_ERROR: Label 'Error : %1';
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        SendOK: Boolean;
+        EmailNotSentErr: Label 'The email could not be sent to %1.';
+        EmailSentMsg: Label 'Correo enviado';
     begin
         CompanyInfo.GET;
         ConfEmpresa.GET;
@@ -50,18 +50,13 @@ codeunit 50300 "Notificar Errores Colas"
         ConfEmpresa.TESTFIELD("Email Soporte Funcional");
         ConfEmpresa.TESTFIELD("Email Encargado Proyecto");
 
-        //002+
-        //SMTPMail.CreateMessage(CompanyInfo.Name,CompanyInfo."E-Mail",SendToAddress,Subject,MessageBody,FALSE);
-        //TODO: Ver SMTPMail.CreateMessage(CompanyInfo.Name, ConfEmpresa."Email Envia Errores Colas", SendToAddress, Subject, MessageBody, FALSE);
-        //002-
-
-        //TODO: Ver SendOK := SMTPMail.TrySendCR(ConfEmpresa."Email Envia Errores Colas", ConfEmpresa."Password Email Errores Colas");
-
-        //TODO: Ver IF NOT SendOK THEN
-        //TODO: Ver     ERROR(STRSUBSTNO(SMTP_ERROR, SMTPMail.GetLastSendMailErrorText));
+        EmailMessage.Create(SendToAddress, Subject, MessageBody, false);
+        SendOK := Email.Send(EmailMessage);
+        if not SendOK then
+            Error(EmailNotSentErr, SendToAddress);
 
         IF SendOK AND GUIALLOWED THEN
-            MESSAGE('Correo enviado');
+            MESSAGE(EmailSentMsg);
     end;
 }
 

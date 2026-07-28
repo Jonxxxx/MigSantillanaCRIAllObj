@@ -2,7 +2,7 @@ table 80009 "Tmp Posted Deposit Header"
 {
     Caption = 'Posted Deposit Header';
     DataCaptionFields = "No.";
-    //TODO: Page no existe LookupPageID = 10147;
+    //IGNORAR: Page no existe LookupPageID = 10147;
 
     fields
     {
@@ -90,9 +90,9 @@ table 80009 "Tmp Posted Deposit Header"
         }
         field(21; Comment; Boolean)
         {
-            //TODO: Tabla no existe CalcFormula = Exist("Bank Comment Line" WHERE("Table Name" = CONST("Posted Deposit"),
-            //TODO: Tabla no existe "Bank Account No." = FIELD("Bank Account No."),
-            //TODO: Tabla no existe "No." = FIELD("No.")));
+            CalcFormula = Exist("Bank Comment Line" WHERE("Table Name" = CONST("Posted Deposit"),
+            "Bank Account No." = FIELD("Bank Account No."),
+            "No." = FIELD("No.")));
             Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
@@ -101,7 +101,7 @@ table 80009 "Tmp Posted Deposit Header"
         {
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            //TODO: Tabla no existe CalcFormula = Sum("Posted Deposit Line".Amount WHERE("Deposit No." = FIELD("No.")));
+            CalcFormula = Sum("Posted Deposit Line".Amount WHERE("Deposit No." = FIELD("No.")));
             Caption = 'Total Deposit Lines';
             Editable = false;
             FieldClass = FlowField;

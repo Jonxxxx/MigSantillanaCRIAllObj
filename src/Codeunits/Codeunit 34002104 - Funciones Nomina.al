@@ -2219,15 +2219,18 @@ codeunit 34002104 "Funciones Nomina"
     end;
 
     procedure CalculoEntreFechaDotNet(TipoFecha: Code[6]; FechaIni: DateTime; FechaFin: DateTime): Integer
-    var
-    //TODO: Ver DateandTime: DotNet DateAndTime;
-    //TODO: Ver DayOfWeekInput: DotNet FirstDayOfWeek;
-    //TODO: Ver WeekOfYearInput: DotNet FirstWeekOfYear;
     begin
         IF TipoFecha = '' THEN
             TipoFecha := 'YYYY';
 
-        //TODO: Ver EXIT(DateandTime.DateDiff(TipoFecha, FechaIni, FechaFin, DayOfWeekInput, WeekOfYearInput));
+        CASE UPPERCASE(TipoFecha) OF
+            'YYYY':
+                EXIT(DATE2DMY(DT2DATE(FechaFin), 3) - DATE2DMY(DT2DATE(FechaIni), 3));
+            'D':
+                EXIT(DT2DATE(FechaFin) - DT2DATE(FechaIni));
+            ELSE
+                ERROR('Unsupported date interval %1.', TipoFecha);
+        END;
     end;
 
     procedure VacacionesporVencer() Vacaciones: Decimal

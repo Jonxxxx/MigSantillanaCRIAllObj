@@ -6,7 +6,8 @@ codeunit 52502 "Utilitario para corregir cosas"
                   TableData 271 = rimd,
                   TableData 379 = rimd,
                   TableData 454 = rimd;
-    //TODO: Ver TableData 10144 = rimd;
+    // TODO: Manual review - Table 10144 is unavailable, so its historical-deposit data permission cannot be restored.
+    // Original code: TableData 10144 = rimd;
 
     trigger OnRun()
     begin
@@ -28,7 +29,8 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     var
         SL: Record 37;
-        //TODO: Ver HistDeposits: Record 10144;
+        // TODO: Manual review - Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored.
+        // Original code: HistDeposits: Record 10144;
         HistMovimientos: Record 17;
         Fecha: Date;
         CorrectPostedSalesInvoice: Codeunit 1303;
@@ -43,12 +45,15 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure EliminaMetaData()
     var
-    //TODO: Ver ObjMeta: Record 2000000071;
+    // TODO: Manual review - Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online.
+    // Original code: ObjMeta: Record 2000000071;
     begin
-        //TODO: Ver ObjMeta.RESET;
-        //TODO: Ver ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
-        //TODO: Ver IF ObjMeta.FINDSET(TRUE, FALSE) THEN
-        //TODO: Ver     ObjMeta.DELETEALL;
+        // Original unsupported object-metadata deletion preserved below.
+        // Original code preserved below.
+        // ObjMeta.RESET;
+        // ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
+        // IF ObjMeta.FINDSET(TRUE, FALSE) THEN
+        // ObjMeta.DELETEALL;
     end;
 
     procedure CorregirDatosEmpleado()
@@ -69,7 +74,7 @@ codeunit 52502 "Utilitario para corregir cosas"
     var
         NoMov: Integer;
     begin
-        //TODO: Ver 
+        // TODO: Manual review - Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored.
         /*
         HistDeposits.FINDFIRST;
         REPEAT //recorro el historico de depositos registrados
@@ -986,7 +991,7 @@ codeunit 52502 "Utilitario para corregir cosas"
                 IF SalesInvoiceHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument2(SalesInvoiceHeader, SalesHeader);
+                    CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader);
                     // PAGE.RUN(PAGE::"Sales Credit Memo",SalesHeader);
                     //CurrPage.CLOSE;
 
@@ -1017,6 +1022,8 @@ codeunit 52502 "Utilitario para corregir cosas"
     end;
 
     local procedure CrearFacturaCorreccion(DocNo_: Code[20])
+    var
+        CopyDocumentMgt: Codeunit "Copy Document Mgt.";
     begin
         SCMH.RESET;
         SCMH.SETRANGE("No.", DocNo_);
@@ -1031,7 +1038,7 @@ codeunit 52502 "Utilitario para corregir cosas"
                 IF SalesCrMemoHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
+                    CopyDocumentMgt.CopySalesDocForCrMemoCancelling(SalesCrMemoHeader."No.", SalesHeader);
 
                     //                NotasCRaCorregirTEMPORAL2.RESET;
                     //                NotasCRaCorregirTEMPORAL2.GET(NotasCRaCorregirTEMPORAL."No. Documento");

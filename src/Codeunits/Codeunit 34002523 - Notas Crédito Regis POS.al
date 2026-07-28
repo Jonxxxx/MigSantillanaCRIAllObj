@@ -6,7 +6,6 @@ codeunit 34002523 "Notas Crédito Regis POS"
         recTPV: Record 34002501;
         recTienda: Record 34002503;
         pagTiendas: Page 34002552;
-        CduPOS: Codeunit 34002502;
         pagHistNC: Page 34002554;
         recHistNC: Record 114;
         recTiendaTMP: Record 34002503 temporary;
@@ -16,7 +15,7 @@ codeunit 34002523 "Notas Crédito Regis POS"
 
         recTPV.RESET;
         recTPV.SETCURRENTKEY("Usuario windows");
-        //TODO: Ver recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+        recTPV.SETRANGE("Usuario windows", USERID);
         IF NOT recTPV.FINDFIRST THEN BEGIN
 
             IF recTienda.FINDSET THEN BEGIN

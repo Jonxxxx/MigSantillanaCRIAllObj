@@ -47,7 +47,6 @@ table 56011 "Lin. Consignacion a Facturar"
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                //TODO: Tabla no existe ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin

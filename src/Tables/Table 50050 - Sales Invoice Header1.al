@@ -430,12 +430,10 @@ table 50050 "Sales Invoice Header1"
         {
             Caption = 'Pre-Assigned No.';
         }
-        field(112; "User ID"; Code[20])
+        field(112; "User ID"; Code[50])
         {
             Caption = 'User ID';
-            //TODO: Tabla no existe TableRelation = 2000000002;
-            //This property is currently not supported
-            //TestTableRelation = false;
+            TableRelation = User."User Name";
         }
         field(113; "Source Code"; Code[10])
         {
@@ -484,7 +482,6 @@ table 50050 "Sales Invoice Header1"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5050; "Campaign No."; Code[20])
         {

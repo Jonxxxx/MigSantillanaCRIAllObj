@@ -9,8 +9,10 @@ codeunit 34002500 "Lanzador DsPOS"
 
 
         CLEAR(cfAddin);
-        //TODO: Ver cfAddin.RegistrarAddin();
-        //TODO: Ver cfAddin.CrearAcciones();
+        // TODO: Manual review - The DsPOS control-add-in initialization methods are disabled in the referenced codeunit and the legacy client add-in is not SaaS-compatible.
+        // Original code preserved below.
+        // cfAddin.RegistrarAddin();
+        // cfAddin.CrearAcciones();
 
         CLEAR(pPOS);
         COMMIT;

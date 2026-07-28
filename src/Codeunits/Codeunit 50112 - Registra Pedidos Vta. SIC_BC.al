@@ -389,7 +389,6 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         propina: Decimal;
         Text002_: Label 'Error en los medios de pagos  | %1  | %2  | %3';
         rCabLog: Record 34002533;
-        //TODO: Ver CduPOS: Codeunit 34002502;
         recTPV: Record 34002501;
         Seleccion: Integer;
         PagFecha: Page 34002559;

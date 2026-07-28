@@ -6,7 +6,6 @@ codeunit 34002524 "Facturas Pendientes POS"
         recTPV: Record 34002501;
         recTienda: Record 34002503;
         pagTiendas: Page 34002552;
-        CduPOS: Codeunit 34002502;
         pagFact: Page 34002555;
         recFact: Record 36;
         recTiendaTMP: Record 34002503 temporary;
@@ -14,7 +13,7 @@ codeunit 34002524 "Facturas Pendientes POS"
 
         recTPV.RESET;
         recTPV.SETCURRENTKEY("Usuario windows");
-        //TODO: Ver recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+        recTPV.SETRANGE("Usuario windows", USERID);
         IF NOT recTPV.FINDFIRST THEN BEGIN
 
             IF recTienda.FINDSET THEN BEGIN

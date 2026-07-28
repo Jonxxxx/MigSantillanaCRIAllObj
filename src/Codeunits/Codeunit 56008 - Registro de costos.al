@@ -57,7 +57,8 @@ codeunit 56008 "Registro de costos"
                     IF PostValueEntrytoGL.FINDFIRST THEN BEGIN
                         PostInventoryCosttoGL.InitializeRequest(0, 'COSTOS-' + FORMAT(NORMALDATE(Date."Period End")), TRUE);
                         PostInventoryCosttoGL.SETTABLEVIEW(PostValueEntrytoGL);
-                        //TODO: Ver PostInventoryCosttoGL.SAVEASPDF('\\SAZPBIBCP1\Reporte de Costos\costos-' + FORMAT(Date."Period End", 0, '<Day,2><Month,2><Year4>') + '.pdf');
+                        // TODO: Manual review - This timed background process has no SaaS-compatible storage or delivery destination for the generated cost-report PDF.
+                        // Original code: PostInventoryCosttoGL.SAVEASPDF('\\SAZPBIBCP1\Reporte de Costos\costos-' + FORMAT(Date."Period End", 0, '<Day,2><Month,2><Year4>') + '.pdf');
                         CLEAR(PostInventoryCosttoGL);
                         //PostInventoryCosttoGL.RUN;
                         COMMIT;

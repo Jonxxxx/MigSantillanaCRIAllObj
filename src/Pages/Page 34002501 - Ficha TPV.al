@@ -253,22 +253,9 @@ page 34002501 "Ficha TPV"
     trigger OnOpenPage()
     var
         rConf: Record 34002500;
-        lcGuatemala: Codeunit 34002508;
     begin
         ActivarPais;
         ActivarRestricciones;
-
-        //+#232158
-        //... Las series NCF dejan de usarse.
-        /*
-        //+#116527
-        //... Gestion de las series NCFs.
-        IF wGuatemala THEN
-          lcGuatemala.GestionSeriesNCF;
-        //-#116527
-        */
-        //-#232158
-
     end;
 
     var

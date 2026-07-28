@@ -78,7 +78,8 @@ table 52502 "Log Facturacion Electronica CR"
             ProcessData += ReadPart;
     end;
 
-    /*TODO: Ver
+    //TODO: Ver
+    /*
     procedure SetDocSF(ArchivoDir: Text)
     var
         OutStr: OutStream;
@@ -89,9 +90,6 @@ table 52502 "Log Facturacion Electronica CR"
         xmlDomDoc.Load(ArchivoDir);
         "Doc SF  XML".CREATEOUTSTREAM(OutStr);
         xmlDomDoc.Save(OutStr);
-
-        //MODIFY;
-        //OutStr.WRITETEXT(ProcessData);
     end;*/
 
     procedure GetDocFirmado() ProcessData: Text

@@ -55,10 +55,10 @@ codeunit 34002102 "Anular nomina"
 
             Window.UPDATE(1, Periodo);
             Window.UPDATE(2, "Tipo de nomina");
+            copiar := CONFIRM('¿Desea copiar la nómina al esquema de simulación?', FALSE);
             Window.UPDATE(3, copiar);
-            //TODO: Ver Window.INPUT(3, copiar);
+            SiNo := CONFIRM('¿Desea anular la nómina?', FALSE);
             Window.UPDATE(4, SiNo);
-            //TODO: Ver Window.INPUT(4, SiNo);
 
             IF SiNo = FALSE THEN
                 EXIT;

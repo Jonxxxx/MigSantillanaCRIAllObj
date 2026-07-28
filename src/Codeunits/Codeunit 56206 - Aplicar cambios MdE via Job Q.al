@@ -98,58 +98,25 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
                 HtmlEncode(TABLENAME), HtmlEncode(FIELDNAME("Error proceso")), HtmlEncode(FIELDNAME(Aplicado)));
 
             RecordLink.URL1 := COPYSTR(Link, 1, MAXSTRLEN(RecordLink.URL1));
-            //TODO: Ver IF STRLEN(Link) > MAXSTRLEN(RecordLink.URL1) THEN
-            //TODO: Ver    RecordLink.URL2 := COPYSTR(Link, MAXSTRLEN(RecordLink.URL1) + 1, MAXSTRLEN(RecordLink.URL2));
         END;
     end;
 
     local procedure SetText(var MdEHistory: Record 56202; var RecordLink: Record 2000000068)
     var
-        //TODO: Ver SystemUTF8Encoder: DotNet UTF8Encoding;
-        //TODO: Ver SystemByteArray: DotNet Array;
-        OStr: OutStream;
-        s: Text;
-        lf: Text;
-        c1: Char;
-        c2: Char;
-        x: Integer;
-        y: Integer;
-        i: Integer;
+        RecordLinkManagement: Codeunit "Record Link Management";
+        NoteText: Text;
     begin
-        c1 := 13;
-        lf[1] := c1;
-
-        s := STRSUBSTNO(ErrorText, MdEHistory."Descripcion error");
-
-        //TODO: Ver 
-        /*
-        SystemUTF8Encoder := SystemUTF8Encoder.UTF8Encoding;
-        SystemByteArray := SystemUTF8Encoder.GetBytes(s);
-
-        RecordLink.Note.CREATEOUTSTREAM(OStr);
-        x := SystemByteArray.Length DIV 128;
-        IF x > 1 THEN
-            y := SystemByteArray.Length - 128 * (x - 1)
-        ELSE
-            y := SystemByteArray.Length;
-        c1 := y;
-        OStr.WRITE(c1);
-        IF x > 0 THEN BEGIN
-            c2 := x;
-            OStr.WRITE(c2);
-        END;
-        FOR i := 0 TO SystemByteArray.Length - 1 DO BEGIN
-            c1 := SystemByteArray.GetValue(i);
-            OStr.WRITE(c1);
-        END;*/
+        NoteText := STRSUBSTNO(ErrorText, MdEHistory."Descripcion error");
+        RecordLinkManagement.WriteNote(RecordLink, NoteText);
     end;
 
     local procedure HtmlEncode(InText: Text[1024]): Text[1024]
     var
-    //TODO: Ver SystemWebHttpUtility: DotNet HttpUtility;
+        TypeHelper: Codeunit "Type Helper";
+        Value: Text;
     begin
-        //TODO: Ver SystemWebHttpUtility := SystemWebHttpUtility.HttpUtility;
-        //TODO: Ver EXIT(SystemWebHttpUtility.HtmlEncode(InText));
+        Value := InText;
+        exit(CopyStr(TypeHelper.HtmlEncode(Value), 1, MaxStrLen(InText)));
     end;
 }
 

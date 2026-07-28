@@ -12,7 +12,6 @@ codeunit 56300 "Email packing"
 
     var
         Body: BigText;
-    //TODO: Ver SMTPmail: Codeunit 400;
 
     procedure generaBody(parSalesHeader: Record 36)
     var
@@ -89,21 +88,23 @@ codeunit 56300 "Email packing"
     var
         rCust: Record 18;
         Subject: Label 'Santillana-Prueba de envio';
-        rConf: Record 56001;
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        BodyText: Text;
+        EmailNotSentErr: Label 'The packing email could not be sent to %1.';
     begin
 
 
         rCust.GET(parSalesHeader."Sell-to Customer No.");
         IF rCust."E-Mail" = '' THEN EXIT;
 
+        Clear(Body);
         generaBody(parSalesHeader);
+        Body.GetSubText(BodyText, 1);
 
-        rConf.GET();
-        //TODO: Ver rConf.TESTFIELD("E-mail notificacion envio ped.");
-
-        //TODO: Ver SMTPmail.CreateMessageBigBody('Santillana', rConf."E-mail notificacion envio ped.", rCust."E-Mail", Subject, Body, TRUE);
-
-        //TODO: Ver SMTPmail.Send();
+        EmailMessage.Create(rCust."E-Mail", Subject, BodyText, true);
+        if not Email.Send(EmailMessage) then
+            Error(EmailNotSentErr, rCust."E-Mail");
     end;
 }
 

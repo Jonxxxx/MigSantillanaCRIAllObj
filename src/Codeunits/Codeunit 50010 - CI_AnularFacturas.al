@@ -34,7 +34,7 @@ codeunit 50010 CI_AnularFacturas
                 IF SalesInvoiceHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument2(SalesInvoiceHeader, SalesHeader);
+                    CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader);
                     // PAGE.RUN(PAGE::"Sales Credit Memo",SalesHeader);
                     //CurrPage.CLOSE;
 
@@ -61,6 +61,8 @@ codeunit 50010 CI_AnularFacturas
     end;
 
     local procedure CrearFacturaCorreccion(DocNo_: Code[20])
+    var
+        CopyDocumentMgt: Codeunit "Copy Document Mgt.";
     begin
         SCMH.RESET;
         SCMH.SETRANGE("No.", DocNo_);
@@ -75,7 +77,7 @@ codeunit 50010 CI_AnularFacturas
                 IF SalesCrMemoHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
+                    CopyDocumentMgt.CopySalesDocForCrMemoCancelling(SalesCrMemoHeader."No.", SalesHeader);
 
                     //                NotasCRaCorregirTEMPORAL2.RESET;
                     //                NotasCRaCorregirTEMPORAL2.GET(NotasCRaCorregirTEMPORAL."No. Documento");

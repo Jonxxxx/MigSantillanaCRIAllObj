@@ -444,7 +444,7 @@ table 80001 "Tmp Sales Invoice Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(5811; "Appl.-from Item Entry"; Integer)
         {

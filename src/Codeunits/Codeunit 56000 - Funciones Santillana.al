@@ -577,7 +577,8 @@ codeunit 56000 "Funciones Santillana"
     begin
         ConfSantillana.Get();
         UserSetup.Get(UserId());
-        //TODO: Ver
+        // TODO: Manual review - The current Config. Usuarios Empresa table does not contain the email opt-in, recipient, or address fields required by this confirmation workflow.
+        // Original code preserved below.
         /*
         if not UserSetup."Envia E-mail Confirmacion Ped." then
             exit;
@@ -812,7 +813,8 @@ codeunit 56000 "Funciones Santillana"
     procedure RegVtasTPVNas()
     begin
         SELECTLATESTVERSION;
-        //TODO: Ver REPORT.RUN(REPORT::Report51003, FALSE, FALSE);
+        // TODO: Manual review - Report 51003 is not present in the current repository, so the original POS sales registration cannot be restored.
+        // Original code: REPORT.RUN(REPORT::Report51003, FALSE, FALSE);
     end;
 
     procedure RegPagosTPVNas()

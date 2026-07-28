@@ -600,10 +600,11 @@ codeunit 56050 "Clasificacion devoluciones"
     var
         recCabVta: Record 36;
         cduLanzar: Codeunit 414;
+        ReleaseSalesDocSub: Codeunit EXCCRIReleaseSalesDocSub;
     begin
         IF codPrmDoc <> '' THEN BEGIN
             recCabVta.GET(recCabVta."Document Type"::"Return Order", codPrmDoc);
-            //TODO: Ver cduLanzar.SetIgnorarControles(TRUE);
+            ReleaseSalesDocSub.SetIgnorarControles(TRUE);
             cduLanzar.RUN(recCabVta);
         END;
     end;

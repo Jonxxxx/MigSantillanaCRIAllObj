@@ -504,14 +504,11 @@ codeunit 67002 "Funciones cálculo Ranking"
     begin
 
         WITH tTrabajo DO BEGIN
-            //TODO: Ver 
-            /*
-            "MONTO TOTAL_ESPAÑOL" := "MONTO BRUTO_INI" + "MONTO BRUTO_PRI" + "MONTO BRUTO_SEC" +
+            "MONTO TOTAL_ESPANOL" := "MONTO BRUTO_INI" + "MONTO BRUTO_PRI" + "MONTO BRUTO_SEC" +
                                           "MONTO BRUTO_DICC" + "MONTO BRUTO_BIBL";
             "MONTO TOTAL_INGLES" := "MONTO BRUTO_ING" + "MONTO BRUTO_READ";
             "MONTO TOTAL_PLAN LECTOR" := "MONTO BRUTO_PLA" + "MONTO BRUTO_LETI";
-            "MONTO TOTAL_GENERAL" := "MONTO TOTAL_ESPAÑOL" + "MONTO TOTAL_INGLES" + "MONTO TOTAL_PLAN LECTOR";
-            */
+            "MONTO TOTAL_GENERAL" := "MONTO TOTAL_ESPANOL" + "MONTO TOTAL_INGLES" + "MONTO TOTAL_PLAN LECTOR";
         END;
     end;
 
@@ -520,11 +517,9 @@ codeunit 67002 "Funciones cálculo Ranking"
 
         WITH tTrabajo DO BEGIN
             IF "MONTO TOTAL_GENERAL" <> 0 THEN BEGIN
-                //TODO: Ver 
-                /*
-                    "PORC MONTO BRUTO_ESPAÑOL" := ROUND("MONTO TOTAL_ESPAÑOL" / "MONTO TOTAL_GENERAL" * 100, 1);
-                    "PORC MONTO BRUTO_INGLES" := ROUND("MONTO TOTAL_INGLES" / "MONTO TOTAL_GENERAL" * 100, 1);
-                    "PORC MONTO BRUTO_PLAN LECTOR" := ROUND("MONTO TOTAL_PLAN LECTOR" / "MONTO TOTAL_GENERAL" * 100, 1);*/
+                "PORC MONTO BRUTO_ESPANOL" := ROUND("MONTO TOTAL_ESPANOL" / "MONTO TOTAL_GENERAL" * 100, 1);
+                "PORC MONTO BRUTO_INGLES" := ROUND("MONTO TOTAL_INGLES" / "MONTO TOTAL_GENERAL" * 100, 1);
+                "PORC MONTO BRUTO_PLAN LECTOR" := ROUND("MONTO TOTAL_PLAN LECTOR" / "MONTO TOTAL_GENERAL" * 100, 1);
                 "PORC MONTO BRUTO_GENERAL" := 100;
             END;
         END;

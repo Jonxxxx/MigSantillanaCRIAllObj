@@ -395,7 +395,6 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(44; "Carga horaria"; Code[20])
         {
-            //TODO: Tabla no existe TableRelation = 62031;
         }
         field(45; "Tipo Ingles"; Option)
         {
@@ -452,7 +451,7 @@ table 67053 "Colegio - Adopciones Detalle"
         }
         field(102; "Item - Product Group Code"; Code[20])
         {
-            //TODO: Itme Product Code no existeCalcFormula = Lookup(Item."Product Group Code" WHERE("No." = FIELD("Cod. Producto")));
+            CalcFormula = Lookup(Item."Item Category Code" WHERE("No." = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103; "Item - Grado"; Code[20])

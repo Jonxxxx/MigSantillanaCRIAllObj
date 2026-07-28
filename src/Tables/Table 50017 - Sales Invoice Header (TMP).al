@@ -417,12 +417,10 @@ table 50017 "Sales Invoice Header (TMP)"
         {
             Caption = 'Pre-Assigned No.';
         }
-        field(112; "User ID"; Code[20])
+        field(112; "User ID"; Code[50])
         {
             Caption = 'User ID';
-            TableRelation = User;
-            //This property is currently not supported
-            //TestTableRelation = false;            
+            TableRelation = User."User Name";
         }
         field(113; "Source Code"; Code[10])
         {

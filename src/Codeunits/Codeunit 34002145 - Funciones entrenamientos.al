@@ -7,7 +7,6 @@ codeunit 34002145 "Funciones entrenamientos"
     end;
 
     var
-        //TODO: Ver SMTP: Codeunit 400;
         GlobalRec: Record 34002117;
         Historico: Record 34002117;
         Emp: Record 5200;
@@ -55,8 +54,11 @@ codeunit 34002145 "Funciones entrenamientos"
     var
         CabEnt: Record 34002204;
         Asistentesentrenamientos: Record 34002206;
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        Recipient: Text;
+        EmailNotSentErr: Label 'The training notification could not be sent to %1.';
     begin
-        UserSetup.GET(USERID);
         ConfNominas.GET();
         CarriageReturn := 13;
         RepresentantesEmpresa.FINDFIRST;
@@ -84,12 +86,17 @@ codeunit 34002145 "Funciones entrenamientos"
             TextoBody += STRSUBSTNO(Info, RepresentantesEmpresa.Nombre, RepresentantesEmpresa."Job Title");
 
             SLEEP(ConfNominas."Tiempo espera Envio email");
-            //TODO: Ver IF Emp."Company E-Mail" <> '' THEN
-            //TODO: Ver     SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."Company E-Mail", Asunto, TextoBody, FALSE)
-            //TODO: Ver ELSE
-            //TODO: Ver IF Emp."E-Mail" <> '' THEN
-            //TODO: Ver SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."E-Mail", Asunto, TextoBody, FALSE);
-            //TODO: Ver SMTP.Send;
+            Recipient := Emp."Company E-Mail";
+            if Recipient = '' then
+                Recipient := Emp."E-Mail";
+            if Recipient = '' then
+                Error(EmailNotSentErr, Emp."No.");
+
+            Clear(EmailMessage);
+            EmailMessage.Create(Recipient, Asunto, TextoBody, false);
+            if not Email.Send(EmailMessage) then
+                Error(EmailNotSentErr, Recipient);
+
             Asistentesentrenamientos.Notificado := TRUE;
             Asistentesentrenamientos.MODIFY;
         UNTIL Asistentesentrenamientos.NEXT = 0;

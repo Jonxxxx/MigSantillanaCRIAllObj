@@ -22,6 +22,7 @@ codeunit 75002 "Imp Excel MdM"
         cFubMdM: Codeunit 75000;
         cTrasp: Codeunit 75007;
 
+    // TODO: Manual review - Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs.
     procedure ImportaFile(pwTodas: Boolean; pwOperacion: Option Insert,Update,Delete)
     var
         lwFileName: Text;
@@ -65,11 +66,12 @@ codeunit 75002 "Imp Excel MdM"
         IF pwFileName = '' THEN
             EXIT;
 
-        //TODO: Ver IF NOT cFileMng.ClientFileExists(pwFileName) THEN
-        //TODO: Ver     ERROR(Text0003, pwFileName);
+        // Original code preserved below.
+        // IF NOT cFileMng.ClientFileExists(pwFileName) THEN
+        //     ERROR(Text0003, pwFileName);
 
 
-        //TODO: Ver lwFilename2 := cFileMng.UploadFileSilent(pwFileName);
+        // Original code: lwFilename2 := cFileMng.UploadFileSilent(pwFileName);
         /*//fes mig
         CLEAR(lwSheetNames);
         lwPTotal :=0;
@@ -396,7 +398,7 @@ codeunit 75002 "Imp Excel MdM"
     begin
         // GetFilenameDialog
 
-        //TODO: Ver wFilename := cFileMng.OpenFileDialog(Text0002, '', '(Excel|*.xlsx|All Files (*.*)|*.*,');
+        // Original code: wFilename := cFileMng.OpenFileDialog(Text0002, '', '(Excel|*.xlsx|All Files (*.*)|*.*,');
     end;
 
     procedure ExtractTableId(pwCode: Code[30]) wId: Integer

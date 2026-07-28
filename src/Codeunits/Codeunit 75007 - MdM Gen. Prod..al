@@ -489,38 +489,36 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure SetRefCruz(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwEan: Code[20]; pwDescrip: Text)
     var
-    //TODO: Ver lrRef: Record 5717;
+        lrRef: Record "Item Reference";
     begin
         // SetRefCruz
         // Crea y actualiza una referencia cruzada si no existe
         // Para codigos de barra
-        //TODO: Ver 
-        /*
         CLEAR(lrRef);
         lrRef.SETRANGE("Item No.", pwItemNo);
-        lrRef.SETRANGE("Cross-Reference Type", lrRef."Cross-Reference Type"::"Bar Code");
+        lrRef.SETRANGE("Reference Type", lrRef."Reference Type"::"Bar Code");
         // lrRef.SETRANGE("Unit of Measure", pwCodUnidadBase);
         lrRef.SETFILTER("Unit of Measure", '%1|%2', pwCodUnidadBase, '');
-        lrRef.SETRANGE("Cross-Reference No.", pwEan);
+        lrRef.SETRANGE("Reference No.", pwEan);
         IF lrRef.FINDFIRST THEN
             EXIT;
 
-        lrRef.SETRANGE("Cross-Reference No.");
+        lrRef.SETRANGE("Reference No.");
         lrRef.DELETEALL;
 
         IF pwEan <> '' THEN BEGIN
-            lrRef.SETRANGE("Cross-Reference Type");
-            lrRef.SETRANGE("Cross-Reference No.", pwEan);
+            lrRef.SETRANGE("Reference Type");
+            lrRef.SETRANGE("Reference No.", pwEan);
             lrRef.DELETEALL;
 
             CLEAR(lrRef);
             lrRef."Item No." := pwItemNo;
             lrRef."Unit of Measure" := pwCodUnidadBase;
-            lrRef."Cross-Reference Type" := lrRef."Cross-Reference Type"::"Bar Code";
-            lrRef."Cross-Reference No." := pwEan;
+            lrRef."Reference Type" := lrRef."Reference Type"::"Bar Code";
+            lrRef."Reference No." := pwEan;
             lrRef.Description := COPYSTR(pwDescrip, 1, MAXSTRLEN(lrRef.Description));
             lrRef.INSERT(TRUE);
-        END;*/
+        END;
     end;
 
     local procedure SetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwTipo: Option Ancho,Alto,Peso; pwValor: Decimal)
@@ -1280,8 +1278,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        //TODO: Ver lrObjects: Record 2000000001;
-        lrObjects2: Record 2000000058;
+        lrObjects2: Record AllObjWithCaption;
     begin
         // GetTableCaption
         // Devuelve el caption de la tabla
@@ -1387,27 +1384,18 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure ExpMigracion(prProd: Record 27)
     var
-        lwFileName: Text;
-        lwFileName2: Text;
-        lwFile: File;
+        TempBlob: Codeunit "Temp Blob";
         lwOutStr: OutStream;
+        lwInStr: InStream;
+        lwFileName: Text;
         lText001: Label 'Guardar Archivo';
-        lwXML: XMLport 75004;
     begin
         // ExpMigracion2
-
-        //TODO: Ver 
-        /*
-        lwFileName := cFileMng.ServerTempFileName('xml');
-
-        lwFile.CREATE(lwFileName);
-        lwFile.CREATEOUTSTREAM(lwOutStr);
+        lwFileName := 'MDM-Migracion Inicial Art.xml';
+        TempBlob.CreateOutStream(lwOutStr, TextEncoding::UTF8);
         XMLPORT.EXPORT(XMLPORT::"MDM-Migracion Inicial Art.", lwOutStr, prProd);
-        lwFile.CLOSE;
-
-
-        //lwFileName2 := cFileMng.SaveFileDialog(lText001,'','XML|*.XML');
-        cFileMng.DownloadHandler(lwFileName, lText001, '', 'XML|*.XML', lwFileName2);*/
+        TempBlob.CreateInStream(lwInStr, TextEncoding::UTF8);
+        DownloadFromStream(lwInStr, lText001, '', 'XML|*.xml', lwFileName);
     end;
 
     procedure GetProdNav(pwCodMdm: Code[20]; pwError: Boolean) wCodNav: Code[20]

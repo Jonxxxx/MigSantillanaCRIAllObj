@@ -61,12 +61,12 @@ codeunit 61000 EXCCRIEventSubscriber
     [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]
     local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry")
     var
-    //TODO: Ver EXCCRINotifyError: Codeunit 50300;
+        EXCCRINotifyError: Codeunit 50300;
     begin
         if JobQueueEntry.Status <> JobQueueEntry.Status::Error then
             exit;
 
-        //TODO: Ver EXCCRINotifyError.Run(JobQueueEntry);
+        EXCCRINotifyError.Run(JobQueueEntry);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Transfer Shipment Header", 'OnAfterCopyFromTransferHeader', '', false, false)]

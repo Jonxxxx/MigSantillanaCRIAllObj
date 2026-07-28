@@ -135,14 +135,16 @@ codeunit 75005 "MdM Async Manager"
 
             IF prCab.Estado = prCab.Estado::Error THEN BEGIN
                 lwErrCode := '100';
-                //TODO: Ver rAsSender.BuildXMLError(prCab, lwErrCode, lwErrDescription);
+                // TODO: Manual review - Codeunit 75006 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable.
+                // Original calls preserved below.
+                // rAsSender.BuildXMLError(prCab, lwErrCode, lwErrDescription);
             END
             ELSE BEGIN
-                //TODO: Ver rAsSender.BuildXMLRequest(prCab);
+                // rAsSender.BuildXMLRequest(prCab);
             END;
         END;
 
-        //TODO: Ver rAsSender.Send(prCab); // Enviamos la respuesta asincrona
+        // rAsSender.Send(prCab); // Enviamos la respuesta asincrona
 
         cGest.GestColaProy(0); // Nos aseguramos que la cola de proyecto está activada
         prCab.MODIFY;

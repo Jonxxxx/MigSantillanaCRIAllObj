@@ -1,8 +1,8 @@
 table 64822 Specification
 {
     DataCaptionFields = "No.", Description;
-    //TODO: Page no existe DrillDownPageID = 64832;
-    //TODO: Page no existe LookupPageID = 64832;
+    //IGNORAR: Page no existe DrillDownPageID = 64832;
+    //IGNORAR: Page no existe LookupPageID = 64832;
 
     fields
     {

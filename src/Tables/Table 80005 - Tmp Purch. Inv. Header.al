@@ -206,8 +206,8 @@ table 80005 "Tmp Purch. Inv. Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Tabla no existe TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            //TODO: Tabla no existe ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            TableRelation = IF ("Bal. Account Type" = CONST("G/L Account")) "G/L Account"
+            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(60; Amount; Decimal)
         {
@@ -403,19 +403,11 @@ table 80005 "Tmp Purch. Inv. Header"
         {
             Caption = 'Pre-Assigned No.';
         }
-        field(112; "User ID"; Code[20])
+        field(112; "User ID"; Code[50])
         {
             Caption = 'User ID';
-            //TODO: Tabla no existeTableRelation = 2000000002;
-            //This property is currently not supported
-            //TestTableRelation = false;
+            TableRelation = User."User Name";
 
-            trigger OnLookup()
-            var
-                LoginMgt: Codeunit 418;
-            begin
-                //TODO: Metodo no existe LoginMgt.LookupUserID("User ID");
-            end;
         }
         field(113; "Source Code"; Code[10])
         {
@@ -502,7 +494,6 @@ table 80005 "Tmp Purch. Inv. Header"
         field(10020; "1099 Code"; Code[10])
         {
             Caption = '1099 Code';
-            //TODO: Tabla no existe TableRelation = "IRS 1099 Form-Box";
         }
         field(34003001; "Tipo Retencion"; Option)
         {

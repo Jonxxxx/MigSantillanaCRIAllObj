@@ -84,7 +84,7 @@ codeunit 61001 EXCCRIGenJnlPostLineSub
         ContextKey := EXCCRIGetContextKey(GenJournalLine, Balancing);
         CustomerNo := GenJournalLine."Account No.";
 
-        //TODO: Ver
+        // TODO: Manual review - The insolvency posting context cannot be activated safely while the journal-producing report remains disabled outside src/Codeunits and the end-to-end posting transaction has not been validated.
         /*
         if GenJournalLine."Account Type" = GenJournalLine."Account Type"::"Provision Insolvencias" then begin
             EXCCRIProvisionContext.Remove(ContextKey);
@@ -136,16 +136,18 @@ codeunit 61001 EXCCRIGenJnlPostLineSub
         ContextKey := EXCCRIGetContextKey(GenJournalLine, Balancing);
 
         if EXCCRIProvisionContext.Get(ContextKey, CustomerNo) then begin
-            //TODO: Ver GenJournalLine."Account Type" :=
-            //TODO: Ver    GenJournalLine."Account Type"::"Provision Insolvencias";
+            // TODO: Manual review - Restoring the custom insolvency account types after posting requires end-to-end validation with the disabled journal-producing report and its transaction semantics.
+            // Original code preserved below.
+            // GenJournalLine."Account Type" :=
+            //     GenJournalLine."Account Type"::"Provision Insolvencias";
             GenJournalLine."Account No." := CustomerNo;
             EXCCRIProvisionContext.Remove(ContextKey);
             exit;
         end;
 
         if EXCCRICancelProvisionContext.Get(ContextKey, CustomerNo) then begin
-            //TODO: Ver GenJournalLine."Account Type" :=
-            //TODO: Ver     GenJournalLine."Account Type"::"Cancelar Prov. Insol.";
+            // GenJournalLine."Account Type" :=
+            //     GenJournalLine."Account Type"::"Cancelar Prov. Insol.";
             GenJournalLine."Account No." := CustomerNo;
             EXCCRICancelProvisionContext.Remove(ContextKey);
         end;
@@ -154,7 +156,7 @@ codeunit 61001 EXCCRIGenJnlPostLineSub
     local procedure EXCCRIIsInsolvencyAccountType(
         AccountType: Enum "Gen. Journal Account Type"): Boolean
     begin
-        //TODO: Ver 
+        // TODO: Manual review - Enabling recognition of the custom insolvency account types would activate high-risk financial posting while its journal source remains disabled and unvalidated.
         /*
         exit(
             AccountType in

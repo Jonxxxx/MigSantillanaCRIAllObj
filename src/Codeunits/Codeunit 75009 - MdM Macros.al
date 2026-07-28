@@ -125,7 +125,7 @@ codeunit 75009 "MdM Macros"
 
     procedure BorraDescrpEAN()
     var
-    //TODO: Ver lrRefC: Record 5717;
+        lrRefC: Record "Item Reference";
     begin
         // BorraDescrpEAN
         // Borra la descripcion de todas las referencias cruzadas
@@ -133,9 +133,9 @@ codeunit 75009 "MdM Macros"
         IF NOT CONFIRM('¿Desea borrar la descripcion de todos los codigos de barra?') THEN
             EXIT;
 
-        //TODO: Ver CLEAR(lrRefC);
-        //TODO: Ver lrRefC.SETRANGE("Cross-Reference Type", lrRefC."Cross-Reference Type"::"Bar Code");
-        //TODO: Ver lrRefC.MODIFYALL(Description, '');
+        CLEAR(lrRefC);
+        lrRefC.SETRANGE("Reference Type", lrRefC."Reference Type"::"Bar Code");
+        lrRefC.MODIFYALL(Description, '');
     end;
 
     procedure RellenaUnidadEnPrecios()
@@ -226,18 +226,17 @@ codeunit 75009 "MdM Macros"
     procedure ImportarProductos()
     var
         excelBuff: Record 370 temporary;
-        fileMgt: Codeunit 419;
-        ruta: Text;
-        totalRows: Integer;
-        rutaServidor: Text;
+        ExcelInStream: InStream;
+        ClientFileName: Text;
+        OpenBookError: Text;
     begin
         //+#278368
-        //TODO: Ver ruta := fileMgt.OpenFileDialog('Archivo a importar', '', fileMgt.GetToFilterText('', '*.xlsx'));
-        IF ruta = '' THEN
+        if not UploadIntoStream('Archivo a importar', '', 'Excel files (*.xlsx)|*.xlsx', ClientFileName, ExcelInStream) then
             EXIT;
-        //TODO: Ver rutaServidor := fileMgt.UploadFileSilent(ruta);
 
-        //TODO: Ver excelBuff.OpenBook(rutaServidor, 'PRECIOS');
+        OpenBookError := excelBuff.OpenBookStream(ExcelInStream, 'PRECIOS');
+        if OpenBookError <> '' then
+            Error(OpenBookError);
         excelBuff.ReadSheet();
 
         //excelbuff2.COPY(excelBuff,TRUE);

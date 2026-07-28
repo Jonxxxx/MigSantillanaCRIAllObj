@@ -36,8 +36,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         VendorBank: Record 288;
         Vendor: Record 23;
         FuncNom: Codeunit 34002104;
-        Archivo: File;
-        FileVar: File;
+        TempBlob: Codeunit "Temp Blob";
         IStream: InStream;
         StreamOut: OutStream;
         Lin_Body: Text[320];
@@ -104,13 +103,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         EC.GET(GHCN."Empresa cotizacion");
         EC.TESTFIELD("Identificador Empresa");
 
-        ConfNomina.TESTFIELD("Path Archivos Electronicos");
-
-        IF COPYSTR(ConfNomina."Path Archivos Electronicos", STRLEN(ConfNomina."Path Archivos Electronicos"), 1) <> '\' THEN
-            ConfNomina."Path Archivos Electronicos" += '\';
-
         FechaTrans := GHCN."Fecha Pago";
-        //TODO: Ver PathENV := TEMPORARYPATH;
 
         NombreArchivo := 'PE' + Empresa."Identificador Empresa" + '01' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Day,2>') + DELCHR(FORMAT(TIME), '=', ' ampmAMPM:.');
 
@@ -153,9 +146,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 SecuenciaTrans := '0000000';
             END;
 
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+        StartTextExport();
 
 
         HCN.RESET;
@@ -224,7 +215,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                     Lin_Body += FORMAT(TIME, 4, '<hours24,2><Minutes,2>');
                     Lin_Body += FORMAT(Empresa."E-Mail", 40);
                     Lin_Body += FORMAT(Blanco, 136);
-                    //TODO: Ver //TODO: Ver Archivo.WRITE(Lin_Body);
+                    WriteExportLine(Lin_Body);
                 END;
                 //Creo el detalle
                 SecuenciaTrans := INCSTR(SecuenciaTrans);
@@ -309,7 +300,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body += FORMAT(Blanco, 12);
                 Lin_Body += '00';
                 Lin_Body += FORMAT(Blanco, 78);
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+                WriteExportLine(Lin_Body);
 
                 Contador := Contador + 1;
             END
@@ -327,7 +318,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
 
                     Lin_Body += ';' + FORMAT(Total, 0, '<Integer><Decimals,3>');
                     Lin_Body += ';' + STRSUBSTNO(Text002, GHCN.Inicio, GHCN.Fin);
-                    //TODO: Ver Archivo.WRITE(Lin_Body);
+                    WriteExportLine(Lin_Body);
                     Contador := Contador + 1;
                 END
                 ELSE
@@ -361,7 +352,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                         Concepto := STRSUBSTNO(Text002, GHCN.Inicio, GHCN.Fin);
                         Lin_Body += FORMAT(COPYSTR(Concepto, 1, 55), 55);
 
-                        //TODO: Ver Archivo.WRITE(Lin_Body);
+                        WriteExportLine(Lin_Body);
                         Contador := Contador + 1;
                     END
                     ELSE
@@ -398,7 +389,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                                 Lin_Body += FORMAT(FechaTrans, 0, '<Month,2><Day,2><Year4>'); //Fecha efectividad MMDDYYYY
                                 Lin_Body += FORMAT(CounterTotal, 6, '<Integer,6><Filler Character,0>');
                                 Lin_Body += FORMAT(COPYSTR(Empresa."Nombre Empresa cotizacion", 1, 30), 30, '<Filler Character, >');
-                                //TODO: Ver Archivo.WRITE(Lin_Body);
+                                WriteExportLine(Lin_Body);
                             END;
 
                             //Creo el detalle
@@ -416,7 +407,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                             Empl."Full Name" := FuncNom.Ascii2Ansi(Empl."Full Name");
                             Lin_Body += FORMAT(COPYSTR(Empl."Full Name", 1, 30), 30);
                             Contador := Contador + 1;
-                            //TODO: Ver Archivo.WRITE(Lin_Body);
+                            WriteExportLine(Lin_Body);
                         END
                         ELSE
                             IF (UPPERCASE(BcoNom.Formato) = 'BLH') OR (UPPERCASE(BcoNom.Formato) = 'LOPEZDEHARO') THEN BEGIN
@@ -445,7 +436,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                                     Lin_Body2 += '000000000000000'; //Para tarjetas de credito, No de comercio (Merchand ID)
                                     Lin_Body2 += '1000'; //Version del archivo
                                     Lin_Body2 += FORMAT(Blanco, 238); //Espacios en blanco para llegar a 400
-                                    //TODO: Ver Archivo.WRITE(Lin_Body2);
+                                    WriteExportLine(Lin_Body2);
                                 END;
 
                                 //Creo el detalle
@@ -504,7 +495,7 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                                 Lin_Body2 += 'N';
                                 Lin_Body2 += FORMAT(Blanco, 58, '<Filler Character, >');
 
-                                //TODO: Ver Archivo.WRITE(Lin_Body2);
+                                WriteExportLine(Lin_Body2);
                             END;
         UNTIL HCN.NEXT = 0;
 
@@ -528,14 +519,9 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             Lin_Body2 += FORMAT(Contador, 6, '<Integer,6><Filler Character,0>');
             Lin_Body2 += PADSTR(CERO, 15 - STRLEN(FORMAT(TotalGeneral * 100, 0, '<Integer>')), '0') + FORMAT(TotalGeneral * 100, 0, '<Integer>');
             Lin_Body2 += FORMAT(Blanco, 378, '<Filler character, >');
-            //TODO: Ver Archivo.WRITE(Lin_Body2);
+            WriteExportLine(Lin_Body2);
         END;
-        //TODO: Ver Archivo.CLOSE;
-
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
-        NombreArchivo2 := ConfNomina."Path Archivos Electronicos" + BcoNom.Formato + '\' + NombreArchivo2;
-        //MESSAGE('%1\ %2',NOMBREARCHIVO,NOMBREARCHIVO2);
-        RenameFile;
+        DownloadTextExport(NombreArchivo2);
 
     end;
 
@@ -605,7 +591,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
               Lin_Body := EC."RNC/CED" + Blanco + Empl."Working Center" + Blanco + FORMAT(WORKDATE,0,'<Year4>') + Blanco +
                           FORMAT(WORKDATE,0,'<Month,2>') + Blanco + 'MSU' + Blanco + Lin_Body + FORMAT(Empl."Document ID",10) +
                           Blanco + FORMAT(Empl.Salario,14,'<Integer><Decimals,3>') + Blanco + 'O';
-              //TODO: Ver Archivo.WRITE(Lin_Body);
+              // TODO: Manual review - This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions.
+              // Original code: Archivo.WRITE(Lin_Body);
            UNTIL HSalario.NEXT = 0;
         
         Archivo.CLOSE;
@@ -698,7 +685,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body := EC."RNC/CED" + Blanco + Empl."Working Center" + Blanco + FORMAT(WORKDATE,0,'<Year4>') + Blanco +
                             FORMAT(WORKDATE,0,'<Month,2>') + Blanco + 'INS' + Blanco + Lin_Body + FORMAT(Empl."Document ID",10) +
                             Blanco + FORMAT(Acumulado,14,'<Integer><Decimals,3>') + Blanco + 'O';
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+                // TODO: Manual review - This entire variable-salary export remains disabled and its source-field and activation requirements are not defined.
+                // Original code: Archivo.WRITE(Lin_Body);
              END;
         UNTIL HCabNomina.NEXT =0;
         Window.CLOSE;
@@ -874,7 +862,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
              Lin_Body += FORMAT(Empl."Document ID",13);
             END;
           END;
-          //TODO: Ver Archivo.WRITE(Lin_Body);
+          // TODO: Manual review - This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated.
+          // Original code: Archivo.WRITE(Lin_Body);
         UNTIL GenJnlLine.NEXT = 0;
         Window.CLOSE;
         Archivo.CLOSE;
@@ -891,8 +880,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         VendorBank: Record 288;
         BcoACH: Record 34002167;
         Vendor: Record 23;
-        //TODO: Ver ExportPaymentsACH: Codeunit 10090;
-        //TODO: Ver ExportPaymentsRB: Codeunit 10091;
+        // TODO: Manual review - Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27.
+        // Original code preserved below.
+        // ExportPaymentsACH: Codeunit 10090;
+        // ExportPaymentsRB: Codeunit 10091;
         FirstTime: Boolean;
         FirstTime2: Boolean;
         BancoAnt: Code[20];
@@ -925,7 +916,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         UNTIL GenJnlLine.NEXT = 0;
 
         BankAccount.TESTFIELD(Formato);
-        //TODO: Ver BankAccount.TESTFIELD("E-Pay Export File Path");
+        // TODO: Manual review - Bank Account field "E-Pay Export File Path" is unavailable; the provider-export procedures also require missing payment metadata fields.
+        // Original code: BankAccount.TESTFIELD("E-Pay Export File Path");
         //MESSAGE('%1',BankAccount.Formato);
 
         BankAccount.Formato := UPPERCASE(BankAccount.Formato);
@@ -968,8 +960,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 "Bal. Account Type" := GenJnlLine."Account Type";
                 "Bal. Account No." := GenJnlLine."Account No.";
             END;
-            //TODO: Ver "Trace No." := Trace;
-            //TODO: Ver "Transmission File Name" := GenJnlLine."Export File Name";
+            // TODO: Manual review - Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable.
+            // Original code preserved below.
+            // "Trace No." := Trace;
+            // "Transmission File Name" := GenJnlLine."Export File Name";
             Amount := Amt;
             CheckManagement.InsertCheck(CheckLedgerEntry, RECORDID);
         END;
@@ -978,7 +972,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
 
     procedure EnviaMailPagos(CodDiario: Code[20]; SeccDiario: Code[20])
     var
-        //TODO: Ver Mail: Codeunit 400;
+        // TODO: Manual review - This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision.
+        // Original code: Mail: Codeunit 400;
         GenJnlLine: Record 81;
         VendorBank: Record 288;
         Vendor: Record 23;
@@ -1169,7 +1164,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
     var
         FileManagement: Codeunit 419;
     begin
-        //TODO: Ver FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
+        // TODO: Manual review - RenameFile has no remaining active caller that is free of missing payment-export dependencies.
+        // Original code: FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
     end;
 
     local procedure FormatoBPD(CodDiario: Code[20]; SeccDiario: Code[20])
@@ -1196,8 +1192,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         TotalGeneral := 0;
         BankAccount.TESTFIELD("Identificador Empresa");
 
-        //TODO: Ver IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
-        //TODO: Ver     BankAccount."E-Pay Export File Path" += '\';
+        // TODO: Manual review - Banco Popular export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name".
+        // Original code preserved below.
+        // IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
+        // BankAccount."E-Pay Export File Path" += '\';
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1213,7 +1211,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         IF GenJnlLine."Posting Date" < TODAY THEN
             ERROR(Err003);
         FechaTrans := GenJnlLine."Posting Date";
-        //TODO: Ver PathENV := TEMPORARYPATH;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: PathENV := TEMPORARYPATH;
 
         NombreArchivo := 'PE' + BankAccount."Identificador Empresa" + '01' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Day,2>');
 
@@ -1238,9 +1237,11 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         NombreArchivo2 := NombreArchivo;
         SecuenciaTrans := '0000000';
 
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1284,7 +1285,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body += FORMAT(TIME, 4, '<hours24,2><Minutes,2>');
                 Lin_Body += FORMAT(CompanyInfo."E-Mail", 40);
                 Lin_Body += FORMAT(Blanco, 136);
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+                // Original code: Archivo.WRITE(Lin_Body);
             END;
 
             //Creo el detalle
@@ -1306,8 +1308,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 CodBco := GenJnlLine."Bal. Account No.";
                 VendorBank.FINDFIRST;
                 VendorBank.TESTFIELD("Bank Account No.");
-                //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                // Original code preserved below.
+                // VendorBank.TESTFIELD("Banco RED ACH");
+                // BcoACH.GET(VendorBank."Banco RED ACH");
                 //BcoACH.TESTFIELD("Ruta y Transito");
             END
             ELSE
@@ -1320,8 +1324,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                     CodBco := GenJnlLine."Account No.";
                     VendorBank.FINDFIRST;
                     VendorBank.TESTFIELD("Bank Account No.");
-                    //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                    //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                    // Original code preserved below.
+                    // VendorBank.TESTFIELD("Banco RED ACH");
+                    // BcoACH.GET(VendorBank."Banco RED ACH");
                     //BcoACH.TESTFIELD("Ruta y Transito");
                 END;
 
@@ -1395,7 +1401,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                         ELSE
                             Lin_Body += '840'; //Moneda 214=RD$, 840=USD, 978=Euro
 
-                    //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                    // Original code: BcoACH.GET(VendorBank."Banco RED ACH");
                     IF (STRPOS(GenJnlLine."Currency Code", 'DO') = 0) AND (BcoACH."Cod. Institucion Financiera" <> 'BPD') THEN BEGIN
                         Lin_Body += '8' + COPYSTR(BcoACH."ACH Reservas", 2, 10);
                         Lin_Body += 'L';
@@ -1415,7 +1422,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                             ELSE
                                 Lin_Body += '214'; //Moneda 214=RD$, 840=USD, 978=Euro
 
-                        //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                        // Original code: BcoACH.GET(VendorBank."Banco RED ACH");
                         IF (GenJnlLine."Currency Code" = '') OR (BcoACH."Cod. Institucion Financiera" = 'BPD') THEN BEGIN
                             Lin_Body += BcoACH."ACH Reservas";
                             Lin_Body += FORMAT(BcoACH."Digito Chequeo");
@@ -1464,7 +1472,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             Lin_Body += '00';
 
             Lin_Body += FORMAT(Blanco, 78);
-            //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+            // Original code: Archivo.WRITE(Lin_Body);
 
             Contador := Contador + 1;
             /*GRN
@@ -1485,12 +1494,16 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             GenJnlLine."Check Exported" := TRUE;
             GenJnlLine."Check Transmitted" := TRUE;
 
-            //TODO: Ver GenJnlLine."Export File Name" := NombreArchivo2;
-            //TODO: Ver BankAccount.TESTFIELD("Last Remittance Advice No.");
-            //TODO: Ver GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // GenJnlLine."Export File Name" := NombreArchivo2;
+            // BankAccount.TESTFIELD("Last Remittance Advice No.");
+            // GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
 
-            //TODO: Ver BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
-            //TODO: Ver BankAccount."Last E-Pay Export File Name" := NombreArchivo;
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
+            // BankAccount."Last E-Pay Export File Name" := NombreArchivo;
             BankAccount.MODIFY;
 
 
@@ -1500,10 +1513,13 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
 
         UNTIL GenJnlLine.NEXT = 0;
         Window.CLOSE;
-        //TODO: Ver Archivo.CLOSE;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
-        //TODO: Ver NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
         //MESSAGE('%1\ %2',NOMBREARCHIVO,NOMBREARCHIVO2);
         RenameFile;
 
@@ -1528,8 +1544,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         PrimeraVez := TRUE;
         BankAccount.TESTFIELD("Identificador Empresa");
 
-        //TODO: Ver IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
-        //TODO: Ver     BankAccount."E-Pay Export File Path" += '\';
+        // TODO: Manual review - Banco BHD export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name".
+        // Original code preserved below.
+        // IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
+        // BankAccount."E-Pay Export File Path" += '\';
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1542,7 +1560,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         GenJnlLine.SETFILTER(Amount, '<>%1', 0);
         GenJnlLine.FINDFIRST;
 
-        //TODO: Ver PathENV := TEMPORARYPATH;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: PathENV := TEMPORARYPATH;
 
         NombreArchivo := 'PE-BHD-' + BankAccount."Identificador Empresa" + '-' + FORMAT(WORKDATE, 0, '<Month,2>') + FORMAT(WORKDATE, 0, '<Day,2>');
 
@@ -1557,9 +1576,11 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         NombreArchivo += Secuencia + '.txt';
         NombreArchivo2 := NombreArchivo;
 
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1608,7 +1629,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body += FORMAT(TotalGeneral, 0, '<Integer><Decimals,3>') + ';';
                 Lin_Body += SecuenciaTrans + ';';
                 Lin_Body += 'TRANSFERENCIA ELECTRONICA;';
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+                // Original code: Archivo.WRITE(Lin_Body);
             END;
 
             IF GenJnlLine."Account Type" = GenJnlLine."Account Type"::Vendor THEN BEGIN
@@ -1620,8 +1642,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 CodBco := GenJnlLine."Bal. Account No.";
                 VendorBank.FINDFIRST;
                 VendorBank.TESTFIELD("Bank Account No.");
-                //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                // Original code preserved below.
+                // VendorBank.TESTFIELD("Banco RED ACH");
+                // BcoACH.GET(VendorBank."Banco RED ACH");
                 //      BcoACH.TESTFIELD("Ruta y Transito");
             END
             ELSE
@@ -1634,11 +1658,14 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                     CodBco := GenJnlLine."Account No.";
                     VendorBank.FINDFIRST;
                     VendorBank.TESTFIELD("Bank Account No.");
-                    //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                    //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                    // Original code preserved below.
+                    // VendorBank.TESTFIELD("Banco RED ACH");
+                    // BcoACH.GET(VendorBank."Banco RED ACH");
                     //BcoACH.TESTFIELD("Ruta y Transito");
                 END;
-            //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+            // Original code: BcoACH.GET(VendorBank."Banco RED ACH");
 
             CLEAR(Lin_Body);
             VendorBank."Bank Account No." := DELCHR(VendorBank."Bank Account No.", '=', '-/., ');
@@ -1664,7 +1691,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             Lin_Body += Vendor."E-Mail";
 
 
-            //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+            // Original code: Archivo.WRITE(Lin_Body);
 
             Tracenumber := FORMAT(CURRENTDATETIME);
             Tracenumber := DELCHR(Tracenumber, '=', '._-:');
@@ -1674,12 +1702,16 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             GenJnlLine."Check Transmitted" := TRUE;
             //jpg eliminar hhh a la secuencia para campo "EP Bulk No. Line"
 
-            //TODO: Ver GenJnlLine."Export File Name" := NombreArchivo2;
-            //TODO: Ver BankAccount.TESTFIELD("Last Remittance Advice No.");
-            //TODO: Ver GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // GenJnlLine."Export File Name" := NombreArchivo2;
+            // BankAccount.TESTFIELD("Last Remittance Advice No.");
+            // GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
 
-            //TODO: Ver BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
-            //TODO: Ver BankAccount."Last E-Pay Export File Name" := NombreArchivo;
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
+            // BankAccount."Last E-Pay Export File Name" := NombreArchivo;
             BankAccount.MODIFY;
 
 
@@ -1692,10 +1724,13 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         BankAccount.MODIFY;
 
         Window.CLOSE;
-        //TODO: Ver Archivo.CLOSE;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
-        //TODO: Ver NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
         RenameFile;
         MESSAGE(MSG001);
     end;
@@ -1718,8 +1753,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         TotalGeneral := 0;
         BankAccount.TESTFIELD("Identificador Empresa");
 
-        //TODO: Ver IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
-        //TODO: Ver     BankAccount."E-Pay Export File Path" += '\';
+        // TODO: Manual review - Banco Reservas export requires missing Bank Account field "E-Pay Export File Path" and Vendor Bank Account field "Banco RED ACH"; the destination routing cannot be produced without them.
+        // Original code preserved below.
+        // IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
+        // BankAccount."E-Pay Export File Path" += '\';
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1732,7 +1769,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         GenJnlLine.SETFILTER(Amount, '<>%1', 0);
         GenJnlLine.FINDFIRST;
 
-        //TODO: Ver PathENV := TEMPORARYPATH;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: PathENV := TEMPORARYPATH;
 
         NombreArchivo := 'PE-BR-' + BankAccount."Identificador Empresa" + '-' + FORMAT(WORKDATE, 0, '<Month,2>') + FORMAT(WORKDATE, 0, '<Day,2>');
 
@@ -1750,9 +1788,11 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         NombreArchivo += Secuencia + '.txt';
         NombreArchivo2 := NombreArchivo;
 
-        //TODO: Ver  Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1798,8 +1838,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 CodBco := GenJnlLine."Bal. Account No.";
                 VendorBank.FINDFIRST;
                 VendorBank.TESTFIELD("Bank Account No.");
-                //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                // Original code preserved below.
+                // VendorBank.TESTFIELD("Banco RED ACH");
+                // BcoACH.GET(VendorBank."Banco RED ACH");
                 //BcoACH.TESTFIELD("Ruta y Transito");
             END
             ELSE
@@ -1812,11 +1854,14 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                     CodBco := GenJnlLine."Account No.";
                     VendorBank.FINDFIRST;
                     VendorBank.TESTFIELD("Bank Account No.");
-                    //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                    //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                    // Original code preserved below.
+                    // VendorBank.TESTFIELD("Banco RED ACH");
+                    // BcoACH.GET(VendorBank."Banco RED ACH");
                     //BcoACH.TESTFIELD("Ruta y Transito");
                 END;
-            //TODO: Ver  BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+            // Original code: BcoACH.GET(VendorBank."Banco RED ACH");
 
 
             Lin_Body += BcoACH."ACH Reservas" + ','; //Banco y ruta destino
@@ -1853,14 +1898,18 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             Lin_Body += RNC + ',';
             GenJnlLine.Description := DELCHR(GenJnlLine.Description, '=', ',');
             Lin_Body += FORMAT(COPYSTR(GenJnlLine.Description, 1, 55), 55);
-        //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+        // Original code: Archivo.WRITE(Lin_Body);
         UNTIL GenJnlLine.NEXT = 0;
 
         Window.CLOSE;
-        //TODO: Ver Archivo.CLOSE;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
-        //TODO: Ver NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
         //MESSAGE('%1\ %2',NOMBREARCHIVO,NOMBREARCHIVO2);
         RenameFile;
         MESSAGE(MSG001);
@@ -1889,23 +1938,31 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
         GenJnlLine.SETFILTER(Amount, '<>%1', 0);
         GenJnlLine.FINDFIRST;
 
-        //TODO: Ver IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
-        //TODO: Ver     BankAccount."E-Pay Export File Path" += '\';
+        // TODO: Manual review - Scotiabank export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name".
+        // Original code preserved below.
+        // IF COPYSTR(BankAccount."E-Pay Export File Path", STRLEN(BankAccount."E-Pay Export File Path"), 1) <> '\' THEN
+        // BankAccount."E-Pay Export File Path" += '\';
 
-        //TODO: Ver PathENV := TEMPORARYPATH;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: PathENV := TEMPORARYPATH;
 
-        //TODO: Ver BankAccount."Last E-Pay Export File Name" := INCSTR(BankAccount."Last E-Pay Export File Name");
+// Original unavailable payment-export dependency preserved below.
+        // Original code: BankAccount."Last E-Pay Export File Name" := INCSTR(BankAccount."Last E-Pay Export File Name");
         BankAccount.MODIFY;
 
-        //TODO: Ver NombreArchivo := BankAccount."Last E-Pay Export File Name";
+// Original unavailable payment-export dependency preserved below.
+        // Original code: NombreArchivo := BankAccount."Last E-Pay Export File Name";
 
         NombreArchivo2 := NombreArchivo;
 
-        //TODO: Ver PathENV := TEMPORARYPATH;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: PathENV := TEMPORARYPATH;
 
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Leemos el Diario
         GenJnlLine.RESET;
@@ -1942,8 +1999,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 CodBco := GenJnlLine."Bal. Account No.";
                 VendorBank.FINDFIRST;
                 VendorBank.TESTFIELD("Bank Account No.");
-                //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                // Original code preserved below.
+                // VendorBank.TESTFIELD("Banco RED ACH");
+                // BcoACH.GET(VendorBank."Banco RED ACH");
                 //      BcoACH.TESTFIELD("Ruta y Transito");
             END
             ELSE
@@ -1956,8 +2015,10 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                     CodBco := GenJnlLine."Account No.";
                     VendorBank.FINDFIRST;
                     VendorBank.TESTFIELD("Bank Account No.");
-                    //TODO: Ver VendorBank.TESTFIELD("Banco RED ACH");
-                    //TODO: Ver BcoACH.GET(VendorBank."Banco RED ACH");
+// Original unavailable payment-export dependency preserved below.
+                    // Original code preserved below.
+                    // VendorBank.TESTFIELD("Banco RED ACH");
+                    // BcoACH.GET(VendorBank."Banco RED ACH");
                     //      BcoACH.TESTFIELD("Ruta y Transito");
                 END;
 
@@ -2001,7 +2062,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body += FORMAT(GenJnlLine.Amount * 100, 10, '<Integer,10><Filler Character,0>');
                 Lin_Body += ',';
                 Lin_Body += COPYSTR(GenJnlLine.Description, 1, 80);
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+                // Original code: Archivo.WRITE(Lin_Body);
             END
             ELSE BEGIN
                 CLEAR(Lin_Body);
@@ -2028,7 +2090,8 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
                 Lin_Body += FORMAT(GenJnlLine.Amount * 100, 10, '<Integer,10><Filler Character,0>');
                 Lin_Body += ',';
                 Lin_Body += COPYSTR(GenJnlLine.Description, 1, 80);
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+// Original unavailable payment-export dependency preserved below.
+                // Original code: Archivo.WRITE(Lin_Body);
             END;
 
             ExportAmount := GenJnlLine.Amount;
@@ -2038,12 +2101,16 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
             GenJnlLine."Check Transmitted" := TRUE;
             GenJnlLine."Exported to Payment File" := TRUE;
 
-            //TODO: Ver GenJnlLine."Export File Name" := NombreArchivo2;
-            //TODO: Ver BankAccount.TESTFIELD("Last Remittance Advice No.");
-            //TODO: Ver GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // GenJnlLine."Export File Name" := NombreArchivo2;
+            // BankAccount.TESTFIELD("Last Remittance Advice No.");
+            // GenJnlLine."Document No." := INCSTR(BankAccount."Last Remittance Advice No.");
 
-            //TODO: Ver BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
-            //TODO: Ver BankAccount."Last E-Pay Export File Name" := NombreArchivo;
+// Original unavailable payment-export dependency preserved below.
+            // Original code preserved below.
+            // BankAccount."Last Remittance Advice No." := INCSTR(BankAccount."Last Remittance Advice No.");
+            // BankAccount."Last E-Pay Export File Name" := NombreArchivo;
             BankAccount.MODIFY;
 
             InsertIntoCheckLedger(Tracenumber, -ExportAmount, GenJnlLine);
@@ -2051,13 +2118,34 @@ codeunit 34002125 "Genera Formatos  E. Nomina RD"
 
         UNTIL GenJnlLine.NEXT = 0;
         Window.CLOSE;
-        //TODO: Ver Archivo.CLOSE;
+// Original unavailable payment-export dependency preserved below.
+        // Original code: Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
-        //TODO: Ver NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
+// Original unavailable payment-export dependency preserved below.
+        // Original code preserved below.
+        // NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // NombreArchivo2 := BankAccount."E-Pay Export File Path" + NombreArchivo2;
         //MESSAGE('%1\ %2',NOMBREARCHIVO,NOMBREARCHIVO2);
         RenameFile;
         MESSAGE(MSG001);
+    end;
+
+    local procedure StartTextExport()
+    begin
+        Clear(TempBlob);
+        TempBlob.CreateOutStream(StreamOut, TextEncoding::Windows);
+    end;
+
+    local procedure WriteExportLine(LineText: Text)
+    begin
+        StreamOut.WriteText(LineText);
+        StreamOut.WriteText();
+    end;
+
+    local procedure DownloadTextExport(DownloadFileName: Text)
+    begin
+        TempBlob.CreateInStream(IStream, TextEncoding::Windows);
+        DownloadFromStream(IStream, '', '', '', DownloadFileName);
     end;
 }
 

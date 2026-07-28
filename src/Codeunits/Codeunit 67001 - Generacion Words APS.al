@@ -478,7 +478,7 @@ codeunit 67001 "Generacion Words APS"
         ToFile: Text[1024];
         RBMgt: Codeunit 419;
     begin
-        //TODO: Ver 
+        // TODO: Manual review - The complete Word-generation block depends on temporary server files, legacy Word Automation, and client file transfer; it requires a SaaS document-generation redesign.
         /*
           filFile.CREATETEMPFILE;
           texFileName := filFile.NAME;

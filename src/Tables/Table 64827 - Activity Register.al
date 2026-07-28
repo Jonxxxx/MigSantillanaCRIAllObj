@@ -1,7 +1,7 @@
 table 64827 "Activity Register"
 {
-    //TODO: Page no existe DrillDownPageID = 64827;
-    //TODO: Page no existe LookupPageID = 64827;
+    //IGNORAR: Page no existe DrillDownPageID = 64827;
+    //IGNORAR: Page no existe LookupPageID = 64827;
 
     fields
     {
