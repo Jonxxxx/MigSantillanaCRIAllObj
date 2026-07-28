@@ -736,16 +736,6 @@ table 56001 "Config. Empresa"
         {
             Description = 'MdE,#81969';
             TableRelation = User."User Name";
-            /*TODO: Ver
-            trigger OnLookup()
-            begin
-                UserMgt.LookupUserID("Usuario notificaciones MdE");
-            end;
-
-            trigger OnValidate()
-            begin
-                UserMgt.ValidateUserID("Usuario notificaciones MdE");
-            end;*/
         }
         field(52500; "Config Factura Electronica CR"; Boolean)
         {

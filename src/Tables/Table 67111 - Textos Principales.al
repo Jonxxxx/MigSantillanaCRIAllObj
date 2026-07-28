@@ -43,7 +43,7 @@ table 67111 "Textos Principales"
             Caption = 'Product Group Code';
             Editable = false;
             Enabled = false;
-            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(8; "Dim Subfamilia"; Code[20])
         {

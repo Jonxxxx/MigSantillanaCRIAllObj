@@ -9,7 +9,7 @@ table 50001 "Presupuesto (Flash de ventas)"
         }
         field(2; "Cod. linea de negocio"; Code[20])
         {
-            //TODO: revisar relacion TableRelation = "Dimension Value".Code WHERE("Dimension Code" = CONST(LINEA_NEGOCIO));
+            TableRelation = "Dimension Value".Code WHERE("Dimension Code" = CONST('LINEA_NEGOCIO'));
         }
         field(3; "Presupuesto Importe Neto"; Decimal)
         {

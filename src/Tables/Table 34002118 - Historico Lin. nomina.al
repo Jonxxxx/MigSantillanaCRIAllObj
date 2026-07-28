@@ -1,7 +1,7 @@
 table 34002118 "Historico Lin. nomina"
 {
-    //TODO: Page no existe DrillDownPageID = 34002145;
-    //TODO: Page no existe LookupPageID = 34002145;
+    //IGNORAR: Page no existe DrillDownPageID = 34002145;
+    //IGNORAR: Page no existe LookupPageID = 34002145;
 
     fields
     {

@@ -84,7 +84,7 @@ table 51009 "Cab. Cupon"
 
             trigger OnValidate()
             begin
-                /*TODO: Ver
+
                 IF rUserSetup.GET(USERID) THEN BEGIN
                     IF NOT rUserSetup."Permite modificar Cupon" THEN
                         TESTFIELD(Impreso, FALSE)
@@ -99,7 +99,7 @@ table 51009 "Cab. Cupon"
                     END;
                 END
                 ELSE
-                    TESTFIELD(Impreso, FALSE);*/
+                    TESTFIELD(Impreso, FALSE);
             end;
         }
         field(14; "Ano Escolar"; Code[20])

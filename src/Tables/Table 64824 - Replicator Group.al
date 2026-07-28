@@ -1,7 +1,7 @@
 table 64824 "Replicator Group"
 {
-    //TODO: Page no existe DrillDownPageID = 64824;
-    //TODO: Page no existe LookupPageID = 64824;
+    //IGNORAR: Page no existe DrillDownPageID = 64824;
+    //IGNORAR: Page no existe LookupPageID = 64824;
 
     fields
     {

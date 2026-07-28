@@ -122,7 +122,7 @@ table 34002192 "Employee Profile Answer"
 
         IF PartOfRating THEN BEGIN
             DELETE;
-            //TODO: No existe tabla UpdateEmpClassification.UpdateRating("Employee No.");
+            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
             INSERT;
         END;
 

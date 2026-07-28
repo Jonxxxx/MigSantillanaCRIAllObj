@@ -256,8 +256,8 @@ table 80013 "Tmp Sales Header"
         field(55; "Bal. Account No."; Code[20])
         {
             Caption = 'Bal. Account No.';
-            //TODO: Tabla no existe TableRelation = IF ("Bal.Account Type" = CONST("G/L Account")) "G/L Account"
-            //TODO: Tabla no existe ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
+            TableRelation = IF ("Bal. Account Type" = CONST("G/L Account")) "G/L Account"
+            ELSE IF ("Bal. Account Type" = CONST("Bank Account")) "Bank Account";
         }
         field(57; Ship; Boolean)
         {
@@ -649,7 +649,6 @@ table 80013 "Tmp Sales Header"
         field(827; "Credit Card No."; Code[20])
         {
             Caption = 'Credit Card No.';
-            //TODO: Tabla no existe TableRelation = 827 WHERE("Field6" = FIELD("Bill-to Customer No."));
         }
         field(5043; "No. of Archived Versions"; Integer)
         {
@@ -680,7 +679,6 @@ table 80013 "Tmp Sales Header"
         field(5051; "Sell-to Customer Template Code"; Code[10])
         {
             Caption = 'Sell-to Customer Template Code';
-            //TODO: Tabla no existe  TableRelation = "Customer Template";
 
         }
         field(5052; "Sell-to Contact No."; Code[20])
@@ -728,7 +726,6 @@ table 80013 "Tmp Sales Header"
         field(5054; "Bill-to Customer Template Code"; Code[10])
         {
             Caption = 'Bill-to Customer Template Code';
-            //TODO: Tabla no existe TableRelation = "Customer Template";
 
         }
         field(5055; "Opportunity No."; Code[20])
@@ -935,9 +932,6 @@ table 80013 "Tmp Sales Header"
         }
         field(53005; "Importe ITBIS Incl."; Decimal)
         {
-            //TODO: Tabla no existe CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
-            //TODO: Tabla no existe                                                   "Field3" = FIELD("No.")));
-            FieldClass = FlowField;
         }
         field(53006; "Venta a credito"; Boolean)
         {

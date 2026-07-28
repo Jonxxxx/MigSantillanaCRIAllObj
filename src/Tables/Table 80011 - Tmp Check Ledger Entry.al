@@ -126,12 +126,10 @@ table 80011 "Tmp Check Ledger Entry"
             //This property is currently not supported
             //TestTableRelation = false;
         }
-        field(21; "User ID"; Code[20])
+        field(21; "User ID"; Code[50])
         {
             Caption = 'User ID';
-            //TODO: Tabla no existe TableRelation = 2000000002;
-            //This property is currently not supported
-            //TestTableRelation = false;           
+            TableRelation = User."User Name";
         }
         field(22; "External Document No."; Code[20])
         {

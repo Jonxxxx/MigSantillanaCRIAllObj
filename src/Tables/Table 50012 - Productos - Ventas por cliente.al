@@ -1,7 +1,7 @@
 table 50012 "Productos - Ventas por cliente"
 {
-    //TODO: Page no existe DrillDownPageID = 50012;
-    //TODO: Page no existe LookupPageID = 50012;
+    //IGNORAR: Page no existe DrillDownPageID = 50012;
+    //IGNORAR: Page no existe LookupPageID = 50012;
 
     fields
     {

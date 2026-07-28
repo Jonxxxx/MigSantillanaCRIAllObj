@@ -1,7 +1,7 @@
 table 50110 "Conf. Medios de pagos"
 {
-    //TODO: Page no existeDrillDownPageID = 50106;
-    //TODO: Page no existe LookupPageID = 50106;
+    //IGNORAR: Page no existeDrillDownPageID = 50106;
+    //IGNORAR: Page no existe LookupPageID = 50106;
 
     fields
     {

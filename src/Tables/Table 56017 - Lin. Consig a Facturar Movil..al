@@ -28,7 +28,6 @@ table 56017 "Lin. Consig a Facturar Movil."
             trigger OnValidate()
             var
                 ICPartner: Record 413;
-                //TODO: Tabla no existe ItemCrossReference: Record 5717;
                 PrepaymentMgt: Codeunit 441;
                 KitUnitPrice: Decimal;
             begin
@@ -214,7 +213,6 @@ table 56017 "Lin. Consig a Facturar Movil."
         InvtSetup: Record 313;
         Location: Record 14;
         ReturnReason: Record 6635;
-        //TODO: Tabla no existe SalesTaxDifference: Record 10012;
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";

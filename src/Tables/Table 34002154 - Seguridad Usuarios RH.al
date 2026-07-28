@@ -13,19 +13,10 @@ table 34002154 "Seguridad Usuarios RH"
             NotBlank = true;
             TableRelation = User."User Name";
 
-            trigger OnLookup()
-            var
-                UserMgt: Codeunit 418;
-            begin
-                //TODO: No existe metodo UserMgt.LookupUserID("User ID");
-                VALIDATE("User ID");
-            end;
-
             trigger OnValidate()
             var
                 UserMgt: Codeunit 418;
             begin
-                //TODO: No existe metodo UserMgt.ValidateUserID("User ID");
                 User.RESET;
                 User.SETRANGE("User Name", "User ID");
                 IF User.FINDFIRST THEN

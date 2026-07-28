@@ -261,9 +261,9 @@ table 34002160 "Control de asistencia"
             EXIT;
 
         Emp.GET("Cod. Empleado");
-        Cargo.GET(Emp.Departamento, Emp."Job Type Code");
-        //TODO: No existe campo IF NOT Cargo."Control de asistencia" THEN
-        EXIT;
+        //Cargo.GET(Emp.Departamento, Emp."Job Type Code");
+        //IF NOT Cargo."Control de asistencia" THEN
+        //    EXIT;
 
 
         /*

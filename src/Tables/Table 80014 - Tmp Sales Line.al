@@ -864,7 +864,7 @@ table 80014 "Tmp Sales Line"
         field(5712; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(5713; "Special Order"; Boolean)
         {
@@ -1082,11 +1082,9 @@ table 80014 "Tmp Sales Line"
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
-            //TODO: Tabla no existe TableRelation = 50131;
         }
         field(50002; Areas; Code[20])
         {
-            //TODO: Tabla no existe TableRelation = 50132;
         }
         field(50003; "No. Paginas"; Decimal)
         {
@@ -1100,7 +1098,6 @@ table 80014 "Tmp Sales Line"
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            //TODO: Tabla no existe TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {

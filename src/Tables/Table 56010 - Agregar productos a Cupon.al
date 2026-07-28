@@ -19,8 +19,9 @@ table 56010 "Agregar productos a Cupon"
         {
             Caption = 'Description';
         }
-        field(3; "User ID"; Code[20])
+        field(3; "User ID"; Code[50])
         {
+            TableRelation = User."User Name";
         }
     }
 

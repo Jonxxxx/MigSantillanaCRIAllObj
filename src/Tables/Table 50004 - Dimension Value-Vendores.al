@@ -1,8 +1,8 @@
 table 50004 "Dimension Value-Vendores"
 {
     Caption = 'Dimension Value';
-    //TODO: Page no existe DrillDownPageID = 50009;
-    //TODO: Page no existe LookupPageID = 50009;
+    //IGNORAR: Page no existe DrillDownPageID = 50009;
+    //IGNORAR: Page no existe LookupPageID = 50009;
 
     fields
     {

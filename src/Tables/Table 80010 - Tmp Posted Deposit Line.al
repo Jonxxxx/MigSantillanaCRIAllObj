@@ -1,14 +1,14 @@
 table 80010 "Tmp Posted Deposit Line"
 {
     Caption = 'Posted Deposit Line';
-    //TODO: Page no existe LookupPageID = 10148;
+    //IGNORAR: Page no existe LookupPageID = 10148;
 
     fields
     {
         field(1; "Deposit No."; Code[20])
         {
             Caption = 'Deposit No.';
-            //TODO: Tabla no existe TableRelation = "Posted Deposit Header";
+            TableRelation = "Posted Deposit Header";
         }
         field(2; "Line No."; Integer)
         {

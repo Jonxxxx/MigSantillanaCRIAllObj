@@ -124,14 +124,13 @@ table 90000 "G/L Account2"
         field(31; "Balance at Date"; Decimal)
         {
             AutoFormatType = 1;
-            //TODO: Revisar
-            /*
+
             CalcFormula = Sum("G/L Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                         "G/L Account No." = FIELD(FILTER(Totaling)),
                                                         "Business Unit Code" = FIELD("Business Unit Filter"),
                                                         "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
                                                         "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
-                                                        "Posting Date" = FIELD(UPPERLIMIT("Date Filter"))));*/
+                                                        "Posting Date" = FIELD(UPPERLIMIT("Date Filter"))));
             Caption = 'Balance at Date';
             Editable = false;
             FieldClass = FlowField;
@@ -140,13 +139,13 @@ table 90000 "G/L Account2"
         {
             AutoFormatType = 1;
 
-            /*
+
             CalcFormula = Sum("G/L Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                         "G/L Account No." = FIELD(FILTER(Totaling)),
                                                         "Business Unit Code" = FIELD("Business Unit Filter"),
                                                         "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
                                                         "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
-                                                        "Posting Date" = FIELD("Date Filter")));*/
+                                                        "Posting Date" = FIELD("Date Filter")));
             Caption = 'Net Change';
             Editable = false;
             FieldClass = FlowField;
@@ -155,14 +154,14 @@ table 90000 "G/L Account2"
         {
             AutoFormatType = 1;
 
-            /*
+
             CalcFormula = Sum("G/L Budget Entry".Amount WHERE("G/L Account No." = FIELD("No."),
                                                                "G/L Account No." = FIELD(FILTER(Totaling)),
                                                                "Business Unit Code" = FIELD("Business Unit Filter"),
                                                                "Global Dimension 1 Code" = FIELD("Global Dimension 1 Filter"),
                                                                "Global Dimension 2 Code" = FIELD("Global Dimension 2 Filter"),
                                                                "Date" = FIELD("Date Filter"),
-                                                               "Budget Name" = FIELD("Budget Filter")));*/
+                                                               "Budget Name" = FIELD("Budget Filter")));
             Caption = 'Budgeted Amount';
             FieldClass = FlowField;
         }
@@ -448,7 +447,7 @@ table 90000 "G/L Account2"
         field(10001; "GIFI Code"; Code[10])
         {
             Caption = 'GIFI Code';
-            //TODO: Tabla no existe TableRelation = "GIFI Code";
+            TableRelation = "GIFI Code";
         }
         field(34003001; "NCF Obligatorio"; Boolean)
         {

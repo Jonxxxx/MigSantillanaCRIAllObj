@@ -201,15 +201,13 @@ table 56026 "Lin. clas. devoluciones"
 
     procedure CrossReferenceNoLookUp()
     var
-        //TODO: Tabla no existe ItemCrossReference: Record 5717;
-        ICGLAcc: Record 410;
+        ItemReference: Record "Item Reference";
     begin
-        //TODO Ver: ItemCrossReference.RESET;
-        //TODO Ver: ItemCrossReference.SETCURRENTKEY("Cross-Reference No.");
-        //TODO Ver: ItemCrossReference.SETRANGE("Cross-Reference No.", "Cross-Reference No.");
+        ItemReference.Reset();
+        ItemReference.SetCurrentKey("Reference No.");
 
-        //TODO Ver: IF PAGE.RUNMODAL(PAGE::"Cross Reference List", ItemCrossReference) = ACTION::LookupOK THEN
-        //TODO Ver:     VALIDATE("Cross-Reference No.", ItemCrossReference."Cross-Reference No.");
+        if Page.RunModal(Page::"Item Reference List", ItemReference) = Action::LookupOK then
+            Validate("Cross-Reference No.", ItemReference."Reference No.");
     end;
 }
 

@@ -43,9 +43,10 @@ table 56025 "Cab. clas. devolucion"
         {
             Caption = 'Closed';
         }
-        field(6; "User id"; Code[20])
+        field(6; "User ID"; Code[50])
         {
             Caption = 'User ID';
+            TableRelation = User."User Name";
         }
         field(7; "Closing Datetime"; DateTime)
         {

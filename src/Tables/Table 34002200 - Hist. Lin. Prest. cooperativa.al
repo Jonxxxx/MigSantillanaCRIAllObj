@@ -1,7 +1,7 @@
 table 34002200 "Hist. Lin. Prest. cooperativa"
 {
-    //TODO: Page no existe DrillDownPageID = 34002135;
-    //TODO: Page no existe LookupPageID = 34002135;
+    //IGNORAR: Page no existe DrillDownPageID = 34002135;
+    //IGNORAR: Page no existe LookupPageID = 34002135;
 
     fields
     {

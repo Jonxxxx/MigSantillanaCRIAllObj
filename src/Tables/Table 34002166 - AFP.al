@@ -1,7 +1,7 @@
 table 34002166 AFP
 {
-    //TODO: Page no existe DrillDownPageID = 34002174;
-    //TODO: Page no existe LookupPageID = 34002174;
+    //IGNORAR: Page no existe DrillDownPageID = 34002174;
+    //IGNORAR: Page no existe LookupPageID = 34002174;
 
     fields
     {

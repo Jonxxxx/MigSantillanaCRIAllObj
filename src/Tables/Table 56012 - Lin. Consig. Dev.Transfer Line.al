@@ -312,7 +312,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         field(5707; "Product Group Code"; Code[10])
         {
             Caption = 'Product Group Code';
-            //TODO: Tabla no existe TableRelation = "Product Group".Code WHERE("Item Category Code" = FIELD("Item Category Code"));
+            TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(5752; "Completely Shipped"; Boolean)
         {
