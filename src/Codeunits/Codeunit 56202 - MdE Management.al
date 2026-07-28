@@ -60,69 +60,35 @@ codeunit 56202 "MdE Management"
 
     local procedure SendPostRequestLocal(Url: Text[150]; SoapAction: Text[250]; Content: Text; ShowError: Boolean; var IsError: Boolean) Response: Text
     var
-    // TODO: Manual review - The legacy synchronous SOAP request uses DotNet HTTP types; the endpoint, headers, timeout, and error contract require a verified AL HttpClient redesign.
-    /*
-    HttpClient: DotNet HttpClient;
-    Uri: DotNet Uri;
-    HttpResponseMessage: DotNet HttpResponseMessage;
-    StringContent: DotNet StringContent;
-    TextEncoding: DotNet Encoding;
-    Status: Integer;*/
+        HttpClient: HttpClient;
+        HttpContent: HttpContent;
+        HttpResponseMessage: HttpResponseMessage;
+        ContentHeaders: HttpHeaders;
+        RequestFailedErr: Label 'The SOAP request to %1 could not be sent.';
     begin
-        /*
-        HttpClient := HttpClient.HttpClient();
-        Uri := Uri.Uri(Url);
-        HttpClient.BaseAddress(Uri);
+        IsError := false;
+        HttpContent.WriteFrom(Content);
+        HttpContent.GetHeaders(ContentHeaders);
+        ContentHeaders.Remove('Content-Type');
+        ContentHeaders.Add('Content-Type', 'application/soap+xml; charset=utf-8');
+        HttpClient.DefaultRequestHeaders().Add('SOAPAction', SoapAction);
 
-        // Header
-        //HttpClient.DefaultRequestHeaders.Add('Content-type', 'application/soap+xml; charset=utf-8'); // esta da error
-        HttpClient.DefaultRequestHeaders.Add('SOAPAction', SoapAction);
-        HttpClient.DefaultRequestHeaders.Add('Host', Uri.Host);
-
-
-        StringContent := StringContent.StringContent(Content, TextEncoding.UTF8, 'application/soap+xml');
-
-        //HttpClient.Timeout
-
-        // Get response
-        HttpResponseMessage := HttpClient.PostAsync(Uri, StringContent).Result;
-
-        // Save data
-        Status := HttpResponseMessage.StatusCode;
-        Response := HttpResponseMessage.Content.ReadAsStringAsync().Result;
-
-        // Check reponse status
-        IF (Status < 200) OR (Status > 299) THEN BEGIN
+        if not HttpClient.Post(Url, HttpContent, HttpResponseMessage) then begin
             IF ShowError THEN
-                ERROR(Response)
+                Error(RequestFailedErr, Url)
             ELSE
                 IsError := TRUE;
-        END;
-        */
+            exit('');
+        end;
+
+        HttpResponseMessage.Content.ReadAs(Response);
+        if not HttpResponseMessage.IsSuccessStatusCode() then begin
+            if ShowError then
+                Error(Response)
+            else
+                IsError := true;
+        end;
     end;
-
-    // TODO: Manual review - The XML helper uses DotNet XmlNode types and requires a verified migration to AL XML DOM types with the same node and error semantics.
-    /*
-    procedure AddElement(var XMLNode: DotNet XmlNode; NodeName: Text[250]; NodeText: Text[250]; Prefix: Text[250]; NSUri: Text[250]; var CreatedXMLNode: DotNet XmlNode) ExitStatus: Integer
-    var
-        NewChildNode: DotNet XmlNode;
-        XmlNodeType: DotNet XmlNodeType;
-    begin
-        NewChildNode := XMLNode.OwnerDocument.CreateNode(XmlNodeType.Element, Prefix, NodeName, NSUri);
-
-        IF ISNULL(NewChildNode) THEN BEGIN
-            ExitStatus := 50;
-            EXIT;
-        END;
-
-        IF NodeText <> '' THEN
-            NewChildNode.InnerText := NodeText;
-
-        XMLNode.AppendChild(NewChildNode);
-        CreatedXMLNode := NewChildNode;
-
-        ExitStatus := 0;
-    end;*/
 
     procedure FormatDateTime(Fecha: Date; Hora: Time) TxtFecha: Text[50]
     var

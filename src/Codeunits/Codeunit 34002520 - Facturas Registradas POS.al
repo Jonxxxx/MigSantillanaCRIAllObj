@@ -7,15 +7,13 @@ codeunit 34002520 "Facturas Registradas POS"
         recTienda: Record 34002503;
         recTiendaTMP: Record 34002503 temporary;
         pagTiendas: Page 34002552;
-        CduPOS: Codeunit 34002502;
         pagHistFact: Page 34002553;
         recHistFact: Record 112;
     begin
 
         recTPV.RESET;
         recTPV.SETCURRENTKEY("Usuario windows");
-        // TODO: Manual review - The Windows-user filter depends on a disabled Windows identity procedure and cannot be restored in Business Central Online.
-        // Original code: recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+        recTPV.SETRANGE("Usuario windows", USERID);
         IF NOT recTPV.FINDFIRST THEN BEGIN
 
             IF recTienda.FINDSET THEN BEGIN

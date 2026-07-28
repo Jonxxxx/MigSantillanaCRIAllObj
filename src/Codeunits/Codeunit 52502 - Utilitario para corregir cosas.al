@@ -6,7 +6,7 @@ codeunit 52502 "Utilitario para corregir cosas"
                   TableData 271 = rimd,
                   TableData 379 = rimd,
                   TableData 454 = rimd;
-    // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+    // TODO: Manual review - Table 10144 is unavailable, so its historical-deposit data permission cannot be restored.
     // Original code: TableData 10144 = rimd;
 
     trigger OnRun()
@@ -29,7 +29,7 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     var
         SL: Record 37;
-        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+        // TODO: Manual review - Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored.
         // Original code: HistDeposits: Record 10144;
         HistMovimientos: Record 17;
         Fecha: Date;
@@ -45,10 +45,10 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure EliminaMetaData()
     var
-    // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+    // TODO: Manual review - Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online.
     // Original code: ObjMeta: Record 2000000071;
     begin
-        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+        // Original unsupported object-metadata deletion preserved below.
         // Original code preserved below.
         // ObjMeta.RESET;
         // ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
@@ -74,7 +74,7 @@ codeunit 52502 "Utilitario para corregir cosas"
     var
         NoMov: Integer;
     begin
-        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+        // TODO: Manual review - Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored.
         /*
         HistDeposits.FINDFIRST;
         REPEAT //recorro el historico de depositos registrados
@@ -1022,6 +1022,8 @@ codeunit 52502 "Utilitario para corregir cosas"
     end;
 
     local procedure CrearFacturaCorreccion(DocNo_: Code[20])
+    var
+        CopyDocumentMgt: Codeunit "Copy Document Mgt.";
     begin
         SCMH.RESET;
         SCMH.SETRANGE("No.", DocNo_);
@@ -1036,8 +1038,7 @@ codeunit 52502 "Utilitario para corregir cosas"
                 IF SalesCrMemoHeader.FINDFIRST THEN BEGIN
 
 
-                    // TODO: Manual review - Business Central v27 has no verified Correct Posted Sales Invoice method that creates an invoice from a posted sales credit memo with this signature.
-                    // Original code: CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
+                    CopyDocumentMgt.CopySalesDocForCrMemoCancelling(SalesCrMemoHeader."No.", SalesHeader);
 
                     //                NotasCRaCorregirTEMPORAL2.RESET;
                     //                NotasCRaCorregirTEMPORAL2.GET(NotasCRaCorregirTEMPORAL."No. Documento");

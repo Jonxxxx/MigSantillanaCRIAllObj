@@ -55,12 +55,10 @@ codeunit 34002102 "Anular nomina"
 
             Window.UPDATE(1, Periodo);
             Window.UPDATE(2, "Tipo de nomina");
+            copiar := CONFIRM('¿Desea copiar la nómina al esquema de simulación?', FALSE);
             Window.UPDATE(3, copiar);
-            // TODO: Manual review - Dialog.INPUT is unavailable in the web client, and replacing this payroll-copy choice requires a verified request-page or confirmation flow.
-            // Original code: Window.INPUT(3, copiar);
+            SiNo := CONFIRM('¿Desea anular la nómina?', FALSE);
             Window.UPDATE(4, SiNo);
-            // TODO: Manual review - Dialog.INPUT is unavailable in the web client, and replacing this payroll-cancellation confirmation would change the interaction and transaction flow.
-            // Original code: Window.INPUT(4, SiNo);
 
             IF SiNo = FALSE THEN
                 EXIT;

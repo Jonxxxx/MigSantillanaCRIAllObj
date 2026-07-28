@@ -61,13 +61,12 @@ codeunit 61000 EXCCRIEventSubscriber
     [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]
     local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry")
     var
-        // TODO: Manual review - Codeunit 50300 exists, but its email send implementation remains disabled, so restoring this subscriber call would not deliver the intended notification.
-        // Original declaration: EXCCRINotifyError: Codeunit 50300;
+        EXCCRINotifyError: Codeunit 50300;
     begin
         if JobQueueEntry.Status <> JobQueueEntry.Status::Error then
             exit;
 
-        // Original code: EXCCRINotifyError.Run(JobQueueEntry);
+        EXCCRINotifyError.Run(JobQueueEntry);
     end;
 
     [EventSubscriber(ObjectType::Table, Database::"Transfer Shipment Header", 'OnAfterCopyFromTransferHeader', '', false, false)]

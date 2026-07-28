@@ -122,6 +122,107 @@ Count the actual current source occurrences, not duplicated audit entries.
 - After every successful batch, continue automatically with the next batch.
 - Stop only when no `//TODO: Ver` remains under `src/Codeunits`; every original marker must have been either safely resolved or explicitly converted to manual review.
 
+## Standard SaaS migration policy
+
+- Standard Business Central SaaS migration patterns are authorized and expected when the original functional purpose is clear.
+- Do not leave a TODO as manual review merely because the implementation must change from an obsolete OnPrem API to a current standard Business Central SaaS API.
+- Compilation alone is not sufficient, but a verified standard SaaS replacement should be implemented when it preserves the original functional outcome.
+- Re-evaluate existing `// TODO: Manual review` comments and implement the migration when the blocked code uses a removed or obsolete standard Business Central API with a supported SaaS equivalent.
+- Treat the complete logical flow as one migration. Update declarations, setup validations, calls, error handling, streams, generated filenames, and obsolete variables together.
+- Remove obsolete setup-field validations only when repository analysis confirms that the fields were used exclusively by the replaced OnPrem implementation.
+- Do not preserve requirements for SMTP passwords, server paths, Windows users, or server file access when those requirements exist only because of the obsolete technical implementation.
+- Preserve recipient addresses, subjects, message bodies, report filters, report request settings, filenames, output formats, and functional error handling.
+
+### Email migration
+
+- Legacy SMTP codeunits and direct SMTP credential flows must be migrated to the standard `"Email Message"` and `"Email"` codeunits when recipients, subject, body, and send behavior are clear.
+- Use `"Email Message".Create(...)` to construct the message.
+- Use `"Email".Send(...)` when the original behavior is synchronous.
+- Use `"Email".Enqueue(...)` only when the original behavior is asynchronous, background-oriented, or explicitly queues the message.
+- When no custom sender-account requirement is present, use the default Business Central email account instead of requiring legacy sender-address and password fields.
+- A missing custom Email Scenario is not by itself a reason for manual review. The standard default email account may be used when this preserves the original behavior.
+- Do not invent a custom Email Scenario.
+- Preserve To, CC, BCC, subject, body, HTML format, attachments, and Boolean send-result behavior.
+- Replace legacy last-error APIs with clear AL error handling based on the Boolean result returned by the standard Email API.
+- Do not leave commented SMTP declarations, password validations, sender-credential calls, or obsolete SMTP error handling after a complete standard Email migration.
+- Search for all usages before removing custom credential-field validations.
+- Never migrate or copy SMTP passwords into AL code.
+
+### Report and file output migration
+
+- Legacy report output to a server or network path must be migrated to streams when the functional purpose is to provide the generated file to the user.
+- Use a `"Temp Blob"` OutStream as the report destination.
+- Use the verified current `Report.SaveAs` API with the required report format.
+- Create an InStream from `"Temp Blob"`.
+- Use `DownloadFromStream` for an interactive browser download.
+- Preserve the original report instance configuration, request-page parameters, filters, `SetTableView`, initialization procedures, filename, extension, and report format.
+- Do not replace a report instance call with a static report call when doing so would lose configured request variables or filters.
+- When the code can run interactively and in the background:
+
+  - Use direct download only when `GuiAllowed` is true.
+  - Do not attempt browser downloads when `GuiAllowed` is false.
+  - Use an existing verified background destination when one is already defined.
+  - Leave manual review only when the required background destination cannot be inferred.
+- When one interactive operation generates multiple files, create one ZIP using the standard `"Data Compression"` codeunit and download the ZIP once.
+- Do not call `DownloadFromStream` repeatedly inside a loop and assume every browser download will be retained.
+- Use `File.ViewFromStream` only when the intended behavior is PDF preview rather than direct download.
+- Do not retain network paths, server paths, `SaveAsPdf` file paths, `File.Download`, or server-side file operations after a complete SaaS stream migration.
+
+### Upload and import migration
+
+- Legacy client or server file imports must be migrated to `UploadIntoStream` when the user is expected to select a file interactively.
+- Preserve file filters, encoding, delimiters, XML or CSV structure, and cancellation behavior.
+- For background imports, use an existing verified Blob, Media, API, or external-storage source.
+- Leave manual review only when no background input source or integration contract exists.
+
+### Standard object and API replacements
+
+- A removed standard object, method, codeunit, or table must be researched using `al_symbolsearch` and current dependency symbols.
+- Implement the current standard replacement when semantic equivalence can be verified from:
+
+  - The current standard API.
+  - Current standard usages.
+  - The complete surrounding custom logic.
+- A changed method signature is not a reason for manual review when all required parameters can be derived safely.
+- A changed standard storage mechanism is not a reason for manual review when the original output or input purpose remains clear.
+- A removed standard API with a documented replacement must be migrated unless doing so changes the functional outcome.
+
+### Manual-review threshold
+
+- Manual review is a last resort, not the default outcome.
+- Leave or create `// TODO: Manual review` only when at least one of the following is true:
+
+  - A referenced custom object does not exist.
+  - A referenced custom field does not exist.
+  - A referenced custom procedure does not exist or its required contract cannot be established.
+  - A required custom enum or option member does not exist.
+  - The original business requirement cannot be inferred from the current repository.
+  - Multiple possible replacements produce materially different business outcomes.
+  - An external API contract, endpoint, authentication flow, or payload is unavailable.
+  - An interactive file operation is executed in the background and no destination is defined.
+  - A standard replacement would require changes outside the permitted scope.
+- Do not leave manual review solely because:
+
+  - The old implementation uses SMTP.
+  - The old implementation writes to a server or network path.
+  - The old implementation uses a legacy Temp Blob pattern.
+  - The old implementation uses an obsolete standard codeunit.
+  - The standard API signature has changed.
+  - Business Central requires configured Email accounts.
+  - A browser download replaces a server-file output.
+- Every retained manual-review comment must state the exact missing custom dependency, functional decision, external contract, or execution-context decision.
+
+### Continuous manual-review processing
+
+- Process no more than 10 codeunit objects per compilation batch.
+- The 10-object limit applies per batch, not to the complete task.
+- After every successful compilation, continue automatically with the next batch.
+- Re-evaluate all existing `// TODO: Manual review` comments under `src/Codeunits`.
+- Stop only when every manual-review comment has either:
+
+  - Been resolved through a verified standard SaaS migration, or
+  - Been confirmed as requiring one of the permitted manual-review reasons above.
+
 ## Validation
 
 After every batch:

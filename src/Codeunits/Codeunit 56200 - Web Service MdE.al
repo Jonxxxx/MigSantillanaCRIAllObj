@@ -5,10 +5,6 @@ codeunit 56200 "Web Service MdE"
     begin
     end;
 
-    var
-    // TODO: Manual review - The original NS variable type is missing, and no usage establishes the required namespace representation.
-    // Original code: NS: ;
-
     [Scope('Personalization')]
     procedure Empleado(mae: XMLport 56200; var result: XMLport 56201)
     var

@@ -80,7 +80,7 @@ codeunit 55002 "Export Payments Formato EC"
             ERROR(Text000, FileName);
 
         CompanyInformation.GET;
-        // TODO: Manual review - This legacy bank export depends on removed country-specific payment fields and server file-system output; no equivalent SaaS export contract was verified.
+        // TODO: Manual review - The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable.
         /*
         CompanyInformation.TESTFIELD("Federal ID No.");
 
@@ -359,7 +359,7 @@ codeunit 55002 "Export Payments Formato EC"
             ERROR(Text015);
 
         FileIsInProcess := FALSE;
-        // TODO: Manual review - Closing, downloading, and erasing the server-side export file requires a verified stream-based SaaS download flow.
+        // Original disabled end-of-export implementation preserved below.
         /*
         ExportFile.CLOSE;
         IF ISSERVICETIER THEN BEGIN
@@ -459,7 +459,7 @@ codeunit 55002 "Export Payments Formato EC"
     local procedure ExportPrnString(var PrnString: Text[422])
     begin
         PrnString := PADSTR(PrnString, RecordLength, ' ');
-        // TODO: Manual review - The legacy File write requires a verified OutStream-based bank export that preserves record encoding and line endings.
+        // Original disabled export write preserved below.
         // Original code: ExportFile.WRITE(PrnString);
         NoOfRec := NoOfRec + 1;
         PrnString := '';
@@ -562,7 +562,7 @@ codeunit 55002 "Export Payments Formato EC"
         TransmitFullPathName: Text[250];
     begin
         BankAccount.GET(BankAccountNo);
-        // TODO: Manual review - The transmit workflow depends on removed E-Pay path fields and server file-system rename and erase operations.
+        // Original disabled transmission implementation preserved below.
         /*
         WITH BankAccount DO BEGIN
             TESTFIELD("E-Pay Export File Path");
@@ -594,7 +594,7 @@ codeunit 55002 "Export Payments Formato EC"
 
     procedure ExportFileName(): Text[250]
     begin
-        // TODO: Manual review - Export-file naming depends on removed E-Pay fields and an unverified bank-specific sequencing contract.
+        // Original disabled bank-specific naming implementation preserved below.
         /*
         IF BankAccount."Last E-Pay Export File Name" = '' THEN BEGIN
             FileName := '';

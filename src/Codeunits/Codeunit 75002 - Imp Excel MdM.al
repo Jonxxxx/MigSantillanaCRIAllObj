@@ -22,6 +22,7 @@ codeunit 75002 "Imp Excel MdM"
         cFubMdM: Codeunit 75000;
         cTrasp: Codeunit 75007;
 
+    // TODO: Manual review - Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs.
     procedure ImportaFile(pwTodas: Boolean; pwOperacion: Option Insert,Update,Delete)
     var
         lwFileName: Text;
@@ -65,13 +66,11 @@ codeunit 75002 "Imp Excel MdM"
         IF pwFileName = '' THEN
             EXIT;
 
-        // TODO: Manual review - ClientFileExists is a legacy Windows-client check and the caller contract does not establish a browser-upload stream.
         // Original code preserved below.
         // IF NOT cFileMng.ClientFileExists(pwFileName) THEN
         //     ERROR(Text0003, pwFileName);
 
 
-        // TODO: Manual review - Silent upload from a client path is unavailable in the web client and requires an explicit UploadIntoStream interaction contract.
         // Original code: lwFilename2 := cFileMng.UploadFileSilent(pwFileName);
         /*//fes mig
         CLEAR(lwSheetNames);
@@ -399,7 +398,6 @@ codeunit 75002 "Imp Excel MdM"
     begin
         // GetFilenameDialog
 
-        // TODO: Manual review - The Windows file dialog is unavailable in Business Central Online and this public return contract does not provide an upload stream.
         // Original code: wFilename := cFileMng.OpenFileDialog(Text0002, '', '(Excel|*.xlsx|All Files (*.*)|*.*,');
     end;
 

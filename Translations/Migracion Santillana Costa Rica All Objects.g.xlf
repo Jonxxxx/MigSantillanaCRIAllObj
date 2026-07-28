@@ -52963,6 +52963,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Email packing - Method EnvioMailPacking - NamedType Subject</note>
         </trans-unit>
+        <trans-unit id="Codeunit 1546959599 - Method 2317532413 - NamedType 1461464388" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The packing email could not be sent to %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Email packing - Method EnvioMailPacking - NamedType EmailNotSentErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 1546959599 - Method 839956566 - NamedType 3097064244" size-unit="char" translate="yes" xml:space="preserve">
           <source>%1 Caja(s) </source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -53592,6 +53597,11 @@
           <source>period %1 to %2.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones entrenamientos - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2526806412 - Method 676684178 - NamedType 1461464388" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The training notification could not be sent to %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones entrenamientos - Method EnRecord - NamedType EmailNotSentErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 2721043379 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
           <source>User %1 is not TPV user</source>
@@ -54648,10 +54658,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Imprime en PDF - NamedType Text001</note>
         </trans-unit>
-        <trans-unit id="Codeunit 688889354 - Method 3004954119 - NamedType 3557359287" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Error : %1</source>
+        <trans-unit id="Codeunit 688889354 - Method 3004954119 - NamedType 1461464388" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payroll receipt email could not be sent to %1.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Imprime en PDF - Method Code - NamedType SMTP_ERROR</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Imprime en PDF - Method Code - NamedType EmailNotSentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 688889354 - Method 3004954119 - NamedType 331680579" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The payroll receipt PDF could not be generated.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Imprime en PDF - Method Code - NamedType ReportNotGeneratedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 3010066547 - Method 1665861916 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
           <source>Este proceso BORRA TODOS LOS DATOS DEL POS\ Solo deberia ejecutarlo Dynasoft Solutions \ ¿Continuar?</source>
@@ -54672,6 +54687,11 @@
           <source>Solo se puede modificar "%1" de la tabla "%2" desde el MdE.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit MdE Management - NamedType ErrorModify</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2116361577 - Method 3118695404 - NamedType 1334027089" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The SOAP request to %1 could not be sent.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit MdE Management - Method SendPostRequestLocal - NamedType RequestFailedErr</note>
         </trans-unit>
         <trans-unit id="Codeunit 1961266851 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
           <source>El tipo de dato %1 no está permitido en la importacion de datos. Campo %2</source>
@@ -54808,10 +54828,15 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notificar Errores Colas - NamedType Error02</note>
         </trans-unit>
-        <trans-unit id="Codeunit 3669098649 - Method 743942932 - NamedType 3557359287" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Error : %1</source>
+        <trans-unit id="Codeunit 3669098649 - Method 743942932 - NamedType 1461464388" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The email could not be sent to %1.</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notificar Errores Colas - Method SendEmail - NamedType SMTP_ERROR</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notificar Errores Colas - Method SendEmail - NamedType EmailNotSentErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3669098649 - Method 743942932 - NamedType 4263671251" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Correo enviado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Notificar Errores Colas - Method SendEmail - NamedType EmailSentMsg</note>
         </trans-unit>
         <trans-unit id="Codeunit 600354434 - NamedType 2476940767" size-unit="char" translate="yes" xml:space="preserve">
           <source>JOB</source>

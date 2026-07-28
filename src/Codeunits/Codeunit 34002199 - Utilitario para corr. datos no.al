@@ -6,7 +6,7 @@ codeunit 34002199 "Utilitario para corr. datos no"
                   TableData 271 = rimd,
                   TableData 379 = rimd,
                   TableData 454 = rimd;
-    // TODO: Manual review - The utility depends on removed virtual metadata/deposit tables and destructive metadata deletion behavior with no verified SaaS equivalent.
+    // TODO: Manual review - Table 10144 is unavailable, so its historical-deposit data permission cannot be restored.
     // Original code: TableData 10144 = rimd;
 
     trigger OnRun()
@@ -28,17 +28,17 @@ codeunit 34002199 "Utilitario para corr. datos no"
 
     var
         SL: Record 37;
-        // TODO: Manual review - The utility depends on removed virtual metadata/deposit tables and destructive metadata deletion behavior with no verified SaaS equivalent.
+        // TODO: Manual review - Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored.
         // Original code: HistDeposits: Record 10144;
         HistMovimientos: Record 17;
         Fecha: Date;
 
     procedure EliminaMetaData()
     var
-    // TODO: Manual review - The utility depends on removed virtual metadata/deposit tables and destructive metadata deletion behavior with no verified SaaS equivalent.
+    // TODO: Manual review - Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online.
     // Original code: ObjMeta: Record 2000000071;
     begin
-        // TODO: Manual review - The utility depends on removed virtual metadata/deposit tables and destructive metadata deletion behavior with no verified SaaS equivalent.
+        // Original unsupported object-metadata deletion preserved below.
         // Original code preserved below.
         // ObjMeta.RESET;
         // ObjMeta.SETRANGE("Object ID", 34002117, 34002118);

@@ -15,7 +15,6 @@ codeunit 56051 "Cancelar reservas Call Center"
         wFecha: Date;
         ReservEngineMgt: Codeunit 99000831;
         ReservEntry: Record 337;
-        ReserveSalesLine: Codeunit 99000832;
         lText002: Label 'Proceso finalizado';
     begin
         //+#830
@@ -38,8 +37,7 @@ codeunit 56051 "Cancelar reservas Call Center"
                         REPEAT
                             IF (rSalesLine.Type = rSalesLine.Type::Item) AND (rSalesLine."No." <> '') THEN BEGIN
                                 ReservEngineMgt.InitFilterAndSortingLookupFor(ReservEntry, TRUE);
-                                // TODO: Manual review - Sales Line-Reserve no longer exposes FilterReservFor, and the current Reservation Management overload requires an unverified transfer direction.
-                                // Original code: ReserveSalesLine.FilterReservFor(ReservEntry, rSalesLine);
+                                rSalesLine.SetReservationFilters(ReservEntry);
                                 IF ReservEntry.FINDFIRST THEN
                                     REPEAT
                                         //ReservEngineMgt.CloseReservEntry2(ReservEntry); //-$001

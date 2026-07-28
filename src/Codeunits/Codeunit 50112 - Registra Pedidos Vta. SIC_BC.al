@@ -389,8 +389,6 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         propina: Decimal;
         Text002_: Label 'Error en los medios de pagos  | %1  | %2  | %3';
         rCabLog: Record 34002533;
-        // TODO: Manual review - Codeunit 34002502 exists, but no active call in this codeunit requires the disabled declaration and restoring it would add no behavior.
-        // Original code: CduPOS: Codeunit 34002502;
         recTPV: Record 34002501;
         Seleccion: Integer;
         PagFecha: Page 34002559;

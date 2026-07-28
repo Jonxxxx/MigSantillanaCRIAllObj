@@ -8,15 +8,12 @@ codeunit 130410 "Sys. Warmup Test Runner"
         CODEUNIT.RUN(CODEUNIT::"Sys. Warmup Scenarios");
     end;
 
-    // TODO: Manual review - Codeunit 40 no longer publishes OnAfterCompanyOpen in Business Central v27, and no event with equivalent company-open timing and idempotency was verified.
-    // Original subscriber preserved below.
-    /*
-    [EventSubscriber(ObjectType::Codeunit, 40, 'OnAfterCompanyOpen', '', true, true)]
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Company Triggers", 'OnCompanyOpenCompleted', '', true, true)]
     local procedure WarmUpOnAfterCompanyOpen()
     var
         O365GettingStarted: Record 1309;
         CompanyInformationMgt: Codeunit 1306;
-        PermissionManager: Codeunit 9002;
+        EnvironmentInformation: Codeunit "Environment Information";
     begin
         IF NOT GUIALLOWED THEN
             EXIT;
@@ -24,7 +21,7 @@ codeunit 130410 "Sys. Warmup Test Runner"
         IF NOT CompanyInformationMgt.IsDemoCompany THEN
             EXIT;
 
-        IF NOT PermissionManager.SoftwareAsAService THEN
+        IF NOT EnvironmentInformation.IsSaaS() THEN
             EXIT;
 
         IF NOT O365GettingStarted.ISEMPTY THEN
@@ -35,6 +32,5 @@ codeunit 130410 "Sys. Warmup Test Runner"
 
         TASKSCHEDULER.CREATETASK(CODEUNIT::"Sys. Warmup Test Runner", 0, TRUE, COMPANYNAME, CURRENTDATETIME + 10000); // Add 10s
     end;
-    */
 }
 

@@ -226,20 +226,17 @@ codeunit 75009 "MdM Macros"
     procedure ImportarProductos()
     var
         excelBuff: Record 370 temporary;
-        fileMgt: Codeunit 419;
-        ruta: Text;
-        totalRows: Integer;
-        rutaServidor: Text;
+        ExcelInStream: InStream;
+        ClientFileName: Text;
+        OpenBookError: Text;
     begin
         //+#278368
-        // TODO: Manual review - This import depends on Windows file selection, silent client upload, and opening Excel from a server path; a stream-based upload contract was not verified.
-        // Original code preserved below.
-        // ruta := fileMgt.OpenFileDialog('Archivo a importar', '', fileMgt.GetToFilterText('', '*.xlsx'));
-        IF ruta = '' THEN
+        if not UploadIntoStream('Archivo a importar', '', 'Excel files (*.xlsx)|*.xlsx', ClientFileName, ExcelInStream) then
             EXIT;
-        // rutaServidor := fileMgt.UploadFileSilent(ruta);
 
-        // excelBuff.OpenBook(rutaServidor, 'PRECIOS');
+        OpenBookError := excelBuff.OpenBookStream(ExcelInStream, 'PRECIOS');
+        if OpenBookError <> '' then
+            Error(OpenBookError);
         excelBuff.ReadSheet();
 
         //excelbuff2.COPY(excelBuff,TRUE);

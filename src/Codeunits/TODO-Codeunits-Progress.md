@@ -262,3 +262,341 @@
   warning counts are both 10,118.
 - Exact stop condition: no `//TODO: Ver` occurrences remain under
   `src/Codeunits`.
+
+# Manual-review re-evaluation
+
+## Re-evaluation baseline
+
+- Date: 2026-07-28.
+- Current `// TODO: Manual review` comments: 206 across 45 codeunits.
+- Candidate source of truth: current AL source and dependency symbols.
+- Initial mutually exclusive heuristic grouping:
+
+| Migration pattern | Comments |
+|---|---:|
+| Email and SMTP | 10 |
+| Report output | 4 |
+| File upload | 4 |
+| File download | 31 |
+| Server and network paths | 97 |
+| Temp Blob | 1 |
+| Compression | 0 |
+| XML and JSON | 4 |
+| DotNet with standard AL replacement | 2 |
+| Automation with standard AL replacement | 1 |
+| Standard obsolete APIs | 16 |
+| Standard changed signatures | 3 |
+| No. Series | 0 |
+| Dimensions | 3 |
+| Event subscribers | 1 |
+| Missing custom objects | 5 |
+| Missing custom fields | 4 |
+| Missing custom procedures | 6 |
+| Missing custom enum or option members | 3 |
+| External integration contracts | 3 |
+| Genuine functional ambiguity | 8 |
+| **Total** | **206** |
+
+- The grouping is prioritization guidance only; every logical block will be
+  reclassified after complete procedure and dependency inspection.
+
+## Manual-review batch 1
+
+- Codeunits inspected and modified: 34002108, 34002145, 50300, 52506,
+  56008, 56202, 56206, 56300, 75002, and 75009.
+- Manual reviews resolved: 19.
+- Email migrations: 4 complete synchronous Email/Email Message flows,
+  including the payroll PDF stream attachment.
+- Report-output migrations: 1 payroll report generated to Temp Blob and
+  attached without server storage.
+- File-upload migrations: 1 Excel upload migrated to UploadIntoStream and
+  Excel Buffer.OpenBookStream.
+- File-download migrations: 0.
+- Temp Blob migrations: 1.
+- Standard API migrations: HttpClient SOAP posting, Record Link
+  Management.WriteNote, Type Helper.HtmlEncode, and current Record Link URL1.
+- Event subscriber migrations: 0.
+- Manual reviews retained for missing custom objects/fields/procedures: 0.
+- Manual reviews retained for external contracts: 0.
+- Manual reviews retained for genuine functional ambiguity: 3. Two timed
+  background cost-report processes have no SaaS delivery/storage destination;
+  the MdM importer requires disabled Page 75016 actions outside this scope and
+  migration of its disabled custom multi-sheet body.
+- Compilation: first `al_compile` found one introduced
+  HttpClient.DefaultRequestHeaders overload error; the verified zero-argument
+  accessor was applied and repeat compilation succeeded with 0 errors.
+- Remaining manual-review comments: 187.
+- Last processed file: `src/Codeunits/Codeunit 75009 - MdM Macros.al`.
+
+## Manual-review batch 2
+
+- Codeunits inspected and modified: 34002125, 34002126, and 34002135.
+- Manual-review comments resolved or deduplicated: 98.
+- Email migrations: 0.
+- Report-output migrations: 0.
+- File-upload migrations: 0.
+- File-download migrations: 5 interactive text-export flows. The active
+  Dominican Republic and Costa Rica payroll-bank exports and the three legal
+  export procedures now write Windows-encoded text to `Temp Blob` streams and
+  download the original logical filename through `DownloadFromStream`.
+- Temp Blob migrations: 3 codeunits.
+- Standard API migrations: server temporary paths, `File.CREATE`,
+  `File.WRITE`, `File.CLOSE`, Automation, Windows-client branching, and
+  `File Management.DownloadToFile` were removed from the active export flows.
+- Event subscriber migrations: 0.
+- Manual reviews retained for missing custom fields: bank-provider procedures
+  require unavailable E-Pay metadata fields, `Vendor Bank Account."Banco RED
+  ACH"`, `Gen. Journal Line."Export File Name"`, and legacy Employee position
+  or nationality fields.
+- Manual reviews retained for missing custom procedures/objects: legacy
+  payment codeunits 10090 and 10091 are unavailable.
+- Manual reviews retained for external contracts: 0.
+- Manual reviews retained for genuine functional ambiguity: disabled
+  salary-change, variable-salary, journal-bank, and vendor-email bodies have
+  no current activation contract; their exact dependency reasons remain in
+  source.
+- Compilation: `al_compile` succeeded with 0 errors on the first batch
+  validation.
+- Remaining manual-review comments: 89.
+- Last processed file:
+  `src/Codeunits/Codeunit 34002135 - Genera formatos elect. legales.al`.
+
+## Manual-review batch 3
+
+- Codeunits inspected: 52502, 55002, 34002199,
+  EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 34002118,
+  56000, 75001, and 56200.
+- Codeunits modified: 52502, 34002522, 75001, and 56200.
+- Manual reviews resolved: 6.
+- Email migrations: 0.
+- Report-output migrations: 0.
+- File-upload migrations: 0.
+- File-download migrations: the MdM initial-product XML export now writes
+  directly to a UTF-8 `Temp Blob` and downloads through
+  `DownloadFromStream`.
+- Temp Blob migrations: 1.
+- Standard API migrations: `AllObjWithCaption` replaces the numeric virtual
+  object reference; `Copy Document Mgt.CopySalesDocForCrMemoCancelling`
+  replaces the removed credit-memo correction copy call; current list-based
+  `CreateDim` APIs and `DimensionManagement.AddDimSource` replace the legacy
+  POS header and line dimension signatures.
+- Event subscriber migrations: 0.
+- Manual reviews retained for missing custom objects/procedures: electronic
+  invoicing codeunits are empty, payment codeunits and report 51003 are
+  absent, MdE XMLport methods are absent, and the compiled POS helper
+  codeunits do not expose `TraerUsuarioWindows` or `Pais`.
+- Manual reviews retained for missing custom fields/options: legacy deposit
+  table 10144, payroll option 6, `Tipo pago OLD`, and country-specific bank
+  metadata remain unavailable.
+- Manual reviews retained for external contracts: the disabled bank
+  transmission contract in codeunit 55002 remains unavailable.
+- Manual reviews retained for genuine functional ambiguity: insolvency
+  posting remains tied to a disabled report outside `src/Codeunits`.
+- Compilation: the first validation found four introduced errors. The two
+  apparently present POS helper procedures were confirmed unavailable in the
+  compiled object and restored as specific reviews; the removed Customer
+  Template dimension source was omitted from the current standard source
+  list. Repeat `al_compile` succeeded with 0 errors.
+- Remaining manual-review comments: 83.
+- Last processed file: `src/Codeunits/Codeunit 56200 - Web Service MdE.al`.
+
+## Manual-review batch 4
+
+- Codeunits inspected: 75007, 50113, 50112,
+  EXCCRITableMigrationHandler, 56051, 75002, 75006, 75005, 56201, and
+  67001.
+- Codeunits modified: 75007, 50112, EXCCRITableMigrationHandler, and 56051.
+- Manual reviews resolved: 5.
+- Email migrations: the Job Queue `OnAfterFinalizeRun` subscriber was restored
+  to run codeunit 50300, whose Email/Email Message implementation was
+  completed in batch 1.
+- Report-output migrations: 0.
+- File-upload migrations: 0.
+- File-download migrations: the duplicate MdM product XML exporter now uses a
+  UTF-8 `Temp Blob` and `DownloadFromStream`.
+- Temp Blob migrations: 1.
+- Standard API migrations: `AllObjWithCaption` replaces the numeric virtual
+  object reference; `Sales Line.SetReservationFilters` replaces the removed
+  `Sales Line-Reserve.FilterReservFor` call.
+- Event subscriber migrations: 1.
+- Manual reviews retained for missing custom objects/procedures: electronic
+  invoicing codeunit 52504, MdM sender codeunit 75006, and complementary MdE
+  codeunit 56201 do not implement the required contracts.
+- Manual reviews retained for missing custom fields: 0.
+- Manual reviews retained for external contracts: the asynchronous MdM
+  endpoint/payload/authentication/retry contract is absent.
+- Manual reviews retained for genuine functional ambiguity: the disabled
+  multi-sheet import requires Page 75016 changes outside this scope; the
+  legacy Word Automation merge has no current document-generation contract.
+- Compilation: `al_compile` succeeded with 0 errors on the first validation.
+- Remaining manual-review comments: 78.
+- Last processed file:
+  `src/Codeunits/Codeunit 67001 - Generacion Words APS.al`.
+
+## Manual-review batch 5
+
+- Codeunits inspected: 130410, 34002102, 34002104, 34002124, 34002500,
+  34002520, 34002521, 34002523, 34002524, and 34002525.
+- Codeunits modified: 130410, 34002102, 34002104, 34002520, 34002523,
+  34002524, and 34002525.
+- Manual reviews resolved: 8.
+- Email migrations: 0.
+- Report/file migrations: 0.
+- Temp Blob migrations: 0.
+- Standard API migrations: the payroll cancellation choices now use
+  browser-compatible `Confirm`; the visible `DateDiff` contracts (`YYYY` and
+  `d`) now use AL date operations; POS user filters now use `UserId`; and the
+  warmup subscriber uses `Company Triggers.OnCompanyOpenCompleted` plus
+  `Environment Information.IsSaaS`.
+- Event subscriber migrations: 1.
+- Manual reviews retained for missing custom procedures: the DsPOS add-in
+  initialization and invoice-cancellation implementations are absent from
+  their compiled codeunits.
+- Manual reviews retained for external contracts: the proprietary POS
+  cancellation transaction contract and direct-SQL/ADO replacement contract
+  are unavailable.
+- Manual reviews retained for genuine functional ambiguity: 0.
+- Compilation: the first validation found the removed
+  `Permission Manager.SoftwareAsAService` method. Symbol search verified
+  `Environment Information.IsSaaS`; repeat `al_compile` succeeded with 0
+  errors.
+- Remaining manual-review comments: 70.
+- Last processed file:
+  `src/Codeunits/Codeunit 34002525 - Notas Crédito Pdtes POS.al`.
+
+## Manual-review batch 6
+
+- Codeunits inspected: 50010, 52504, 56003, plus dependency-reopened or
+  retained-review entries in 34002522, 55002, 34002126, 34002199, and 52502.
+- Codeunits modified: 50010, 34002522, 55002, 34002126, 34002199, and 52502.
+- Manual reviews resolved or deduplicated: 9.
+- Email migrations: 0.
+- Report/file migrations: 0.
+- Temp Blob migrations: 0.
+- Standard API migrations:
+  `Copy Document Mgt.CopySalesDocForCrMemoCancelling` replaces the removed
+  posted-credit-memo correction call; the POS TPV filter now uses `UserId`.
+- Event subscriber migrations: 0.
+- Manual reviews retained for missing custom objects/procedures: codeunits
+  52504 and 56003 are empty and provide no electronic-invoicing procedures;
+  codeunit 34002503 does not expose `Pais`; table 10144 and virtual table
+  2000000071 are unavailable.
+- Manual reviews retained for external contracts: both empty electronic
+  invoicing codeunits require an endpoint, payload, authentication, response,
+  and error contract.
+- Manual reviews retained for genuine functional ambiguity: 0.
+- Compilation: both the batch validation and the retained-review cleanup
+  validation succeeded with 0 errors.
+- Remaining manual-review comments: 61.
+- Last processed file:
+  `src/Codeunits/Codeunit 56003 - Factura Electronica.al`.
+
+# Retained manual-review inventory after re-evaluation
+
+Every remaining source comment was re-evaluated against the current repository, dependency symbols, and compilation result. The exact retained inventory is:
+
+| Permitted exclusion category | Count |
+|---|---:|
+| Missing custom object / field / procedure | 38 |
+| External contract / SaaS redesign | 8 |
+| Undefined background destination | 2 |
+| Functional ambiguity / outside scope | 11 |
+| Genuine functional ambiguity | 2 |
+| **Total** | **61** |
+
+| Source | Category | Exact retained reason |
+|---|---|---|
+| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:250` | Missing custom object / field / procedure | Payroll type option value 6 is not defined in the current source field, so the automatic-vacation branch cannot be restored without selecting or adding a business option. |
+| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:540` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the conditional salary-profile validation cannot be restored without a verified replacement field. |
+| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:3037` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the retroactive-pay divisor rule cannot be restored without a verified replacement field and payroll decision. |
+| `src\Codeunits\Codeunit 34002124 - ADO Connection Mgmt.al:3` | External contract / SaaS redesign | The complete ADO/direct-SQL implementation is unsupported in Business Central Online and no repository API replacement exists. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:594` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:688` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:865` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:883` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:919` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the provider-export procedures also require missing payment metadata fields. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:963` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:975` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1167` | Functional ambiguity / outside scope | RenameFile has no remaining active caller that is free of missing payment-export dependencies. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1195` | Missing custom object / field / procedure | Banco Popular export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1547` | Missing custom object / field / procedure | Banco BHD export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1756` | Missing custom object / field / procedure | Banco Reservas export requires missing Bank Account field "E-Pay Export File Path" and Vendor Bank Account field "Banco RED ACH"; the destination routing cannot be produced without them. |
+| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1941` | Missing custom object / field / procedure | Scotiabank export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:409` | Missing custom object / field / procedure | Employee fields "Puesto Segun MT" and its related legacy position value are not present in the current repository. |
+| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:549` | Missing custom object / field / procedure | Employee field "Puesto Segun MT" is not present in the current repository. |
+| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:559` | Missing custom object / field / procedure | Employee field "Cod. Nacionalidad MT" is not present in the current repository. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:554` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:648` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:825` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:843` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:879` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the disabled provider-export procedures also require missing payment metadata fields. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:919` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:931` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:1235` | Missing custom object / field / procedure | The complete BCR provider-payment implementation is disabled and depends on removed payment metadata fields. |
+| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:1577` | Missing custom object / field / procedure | The complete BHD provider-payment implementation is disabled and depends on removed payment metadata fields. |
+| `src\Codeunits\Codeunit 34002500 - Lanzador DsPOS.al:12` | External contract / SaaS redesign | The DsPOS control-add-in initialization methods are disabled in the referenced codeunit and the legacy client add-in is not SaaS-compatible. |
+| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
+| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:31` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
+| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:38` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
+| `src\Codeunits\Codeunit 34002522 - Registrar Ventas en Lote DsPOS.al:1073` | Missing custom object / field / procedure | Codeunit 34002503 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected. |
+| `src\Codeunits\Codeunit 34002521 - Control TPV.al:19` | External contract / SaaS redesign | The invoice-cancellation call targets disabled legacy POS integration behavior and its external transaction contract is unavailable. |
+| `src\Codeunits\Codeunit 52504 - Facturacion  Electronica NAV.al:3` | External contract / SaaS redesign | The complete electronic-invoicing implementation is absent and requires an external integration contract; no executable replacement exists in the repository. |
+| `src\Codeunits\Codeunit 52506 - Registro de costo.al:46` | Undefined background destination | This codeunit runs as a timed background process, but no SaaS-compatible storage or delivery destination is defined for the generated cost-report PDF or its duplicate-prevention state. |
+| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
+| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:32` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
+| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:48` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
+| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:77` | Missing custom object / field / procedure | Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored. |
+| `src\Codeunits\Codeunit 50113 - Sales-Post + Print SIC_BC.al:271` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored. |
+| `src\Codeunits\Codeunit 50113 - Sales-Post + Print SIC_BC.al:280` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored. |
+| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:580` | Missing custom object / field / procedure | The current Config. Usuarios Empresa table does not contain the email opt-in, recipient, or address fields required by this confirmation workflow. |
+| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:816` | Missing custom object / field / procedure | Report 51003 is not present in the current repository, so the original POS sales registration cannot be restored. |
+| `src\Codeunits\Codeunit 56003 - Factura Electronica.al:3` | External contract / SaaS redesign | The complete legacy electronic-invoicing implementation is absent and cannot be reconstructed from this empty codeunit. |
+| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:83` | Missing custom object / field / procedure | The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable. |
+| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:383` | Missing custom object / field / procedure | Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table. |
+| `src\Codeunits\Codeunit 56008 - Registro de costos.al:60` | Undefined background destination | This timed background process has no SaaS-compatible storage or delivery destination for the generated cost-report PDF. |
+| `src\Codeunits\Codeunit 56200 - Web Service MdE.al:21` | Missing custom object / field / procedure | XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object. |
+| `src\Codeunits\Codeunit 56201 - Informacion Complementaria MDE.al:3` | External contract / SaaS redesign | The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit. |
+| `src\Codeunits\Codeunit 67001 - Generacion Words APS.al:481` | External contract / SaaS redesign | The complete Word-generation block depends on temporary server files, legacy Word Automation, and client file transfer; it requires a SaaS document-generation redesign. |
+| `src\Codeunits\Codeunit 75002 - Imp Excel MdM.al:25` | Functional ambiguity / outside scope | Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs. |
+| `src\Codeunits\Codeunit 75006 - MdM Async Sender.al:4` | External contract / SaaS redesign | The complete asynchronous MdM sender implementation is absent, including its endpoint, payload, authentication, retry, and error contracts. |
+| `src\Codeunits\Codeunit 75005 - MdM Async Manager.al:138` | Missing custom object / field / procedure | Codeunit 75006 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable. |
+| `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:87` | Functional ambiguity / outside scope | The insolvency posting context cannot be activated safely while the journal-producing report remains disabled outside src/Codeunits and the end-to-end posting transaction has not been validated. |
+| `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:139` | Genuine functional ambiguity | Restoring the custom insolvency account types after posting requires end-to-end validation with the disabled journal-producing report and its transaction semantics. |
+| `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:159` | Genuine functional ambiguity | Enabling recognition of the custom insolvency account types would activate high-risk financial posting while its journal source remains disabled and unvalidated. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:95` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose Factura for the posted sales-invoice record. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:104` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose NotaCR for the posted sales-credit-memo record. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:124` | Missing custom object / field / procedure | Codeunit 52504 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:152` | Missing custom object / field / procedure | Codeunit 52504 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number. |
+
+# Manual-review re-evaluation completion
+
+- Batches completed: 6.
+- Codeunits inspected: 45.
+- Unique AL codeunits modified: 31.
+- Manual-review comments resolved or deduplicated: 145.
+- Email migrations completed: 4 synchronous Email/Email Message flows; the
+  Job Queue failure subscriber was also restored to the migrated notification
+  codeunit.
+- Report and file migrations completed: 1 PDF report attachment, 1 Excel
+  upload, and 7 browser-download text/XML export flows.
+- Standard API migrations completed: Temp Blob streams, UploadIntoStream,
+  DownloadFromStream, Email/Email Message, HttpClient, Record Link
+  Management, Type Helper HTML encoding, Copy Document Mgt., list-based
+  dimensions, sales-line reservation filters, AllObjWithCaption, AL date
+  arithmetic, UserId, and Environment Information.
+- Event subscribers migrated: 2.
+- Manual reviews retained: 61.
+- Retained by permitted exclusion:
+  - Missing custom object / field / procedure: 38.
+  - External contract / SaaS redesign: 8.
+  - Functional ambiguity / outside scope: 11.
+  - Undefined background destination: 2.
+  - Genuine functional ambiguity: 2.
+- Final `al_compile`: succeeded with 0 errors and 10,118 warnings.
+- New warnings introduced by this re-evaluation: 0. The final warning count
+  equals the 10,118-warning baseline.
+- Exact stop condition: every current manual-review comment under
+  `src/Codeunits` was re-evaluated; every verified direct standard Business
+  Central v27 SaaS migration was implemented; every one of the 61 retained
+  reviews is listed above under a permitted exclusion; final compilation
+  succeeded.

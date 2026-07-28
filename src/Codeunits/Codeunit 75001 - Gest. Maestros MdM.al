@@ -372,9 +372,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        // TODO: Manual review - Virtual table Object (2000000001) is unavailable, and the adjacent AllObj table is not a verified caption-equivalent replacement.
-        // Original declaration: lrObjects: Record 2000000001;
-        lrObjects2: Record 2000000058;
+        lrObjects2: Record AllObjWithCaption;
     begin
         // GetTableCaption
         // Devuelve el caption de la tabla
@@ -477,26 +475,18 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure ExpMigracion(prProd: Record 27)
     var
-        lwFileName: Text;
-        lwFileName2: Text;
-        lwFile: File;
+        TempBlob: Codeunit "Temp Blob";
         lwOutStr: OutStream;
+        lwInStr: InStream;
+        lwFileName: Text;
         lText001: Label 'Guardar Archivo';
-        lwXML: XMLport 75004;
     begin
         // ExpMigracion2
-        // TODO: Manual review - This XML export depends on a server temporary file and client save dialog; a stream-based browser download contract was not verified.
-        /*
-        lwFileName := cFileMng.ServerTempFileName('xml');
-
-        lwFile.CREATE(lwFileName);
-        lwFile.CREATEOUTSTREAM(lwOutStr);
+        lwFileName := 'MDM-Migracion Inicial Art.xml';
+        TempBlob.CreateOutStream(lwOutStr, TextEncoding::UTF8);
         XMLPORT.EXPORT(XMLPORT::"MDM-Migracion Inicial Art.", lwOutStr, prProd);
-        lwFile.CLOSE;
-
-
-        //lwFileName2 := cFileMng.SaveFileDialog(lText001,'','XML|*.XML');
-        cFileMng.DownloadHandler(lwFileName, lText001, '', 'XML|*.XML', lwFileName2);*/
+        TempBlob.CreateInStream(lwInStr, TextEncoding::UTF8);
+        DownloadFromStream(lwInStr, lText001, '', 'XML|*.xml', lwFileName);
     end;
 
     procedure NotifyProd(prProd: Record 27; pwOperacion: Option Insert,Update,Delete; pwCambs: array[10] of Boolean)

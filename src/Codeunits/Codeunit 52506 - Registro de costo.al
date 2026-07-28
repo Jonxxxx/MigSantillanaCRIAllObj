@@ -43,7 +43,7 @@ codeunit 52506 "Registro de costo"
                 IF (Date."Period Start" = TODAY) AND (PrimeraVez2) THEN
                     PrimeraVez2 := FALSE;
 
-                // TODO: Manual review - This cost-report workflow depends on server file-system existence checks and PDF output paths, which are unsupported in Business Central Online.
+                // TODO: Manual review - This codeunit runs as a timed background process, but no SaaS-compatible storage or delivery destination is defined for the generated cost-report PDF or its duplicate-prevention state.
                 /*
                 IF PrimeraVez2 AND (NOT EXISTS('C:\Reporte de costos\costos-' + FORMAT(Date."Period Start", 0, '<Day,2><Month,2><Year4>') + '.pdf')) THEN BEGIN
                     PostValueEntrytoGL.RESET;

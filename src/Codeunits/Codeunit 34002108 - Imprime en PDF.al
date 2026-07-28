@@ -21,52 +21,37 @@ codeunit 34002108 "Imprime en PDF"
     end;
 
     var
-        // TODO: Manual review - The legacy SMTP setup/codeunit and credential-based sender contract require migration to Email and Email Message with a defined account scenario.
-        // Original declarations preserved below.
-        // SMTPSetup: Record 409;
-        // SMTP: Codeunit 400;
         GlobalRec: Record 34002117;
         Historico: Record 34002117;
         Emp: Record 5200;
         ConfNominas: Record 34002103;
-        cuMail: Codeunit 397;
         Counter: Integer;
-        Path: Text[250];
         UseAttachment: Boolean;
         _ArchivoPDF: Text[150];
-        _Directorio: Text[150];
         IDReporte: Integer;
         DefPrinter: Text[250];
         Asunto: Text[250];
-        AttachmentFile: Text[250];
         MailSent: Boolean;
         Text001: Label 'period %1 to %2.';
         Dia_Pago: Label 'It''s Payday!';
         TextoBody: Text[1024];
         Pagado_Periodo: Label 'Dear contribuort % 1, by means of this email you are notified that you have made the payment of your number corresponding to the period between% 2 and% 3. Attached is the Record 34002100of payment. If you have any questions, please contact the person in charge of the payroll.';
         El_Importe: Label 'The net amount of your payment has already been transferred to your bank account.If you have any questions about your payment, please contact the person in charge of payroll.';
-        EmpresaCot: Record 34002100;
-
-
-
     local procedure Code()
     var
-        UserSetup: Record 91;
         CarriageReturn: Char;
         SendOK: Boolean;
-        SMTP_ERROR: Label 'Error : %1';
+        TempBlob: Codeunit "Temp Blob";
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
+        AttachmentOutStream: OutStream;
+        AttachmentInStream: InStream;
+        HistoricoRecordRef: RecordRef;
+        Recipient: Text;
+        EmailNotSentErr: Label 'The payroll receipt email could not be sent to %1.';
+        ReportNotGeneratedErr: Label 'The payroll receipt PDF could not be generated.';
     begin
-        //UserSetup.GET(USERID);
-        _Directorio := ConfNominas."Path Archivos Electronicos";
         CarriageReturn := 13;
-        // Original code: SMTPSetup.GET();
-
-        //001+
-        //SMTPSetup.TESTFIELD("User ID");
-        EmpresaCot.FINDFIRST;
-        EmpresaCot.TESTFIELD("Email Envia Boleta de Pago");
-        EmpresaCot.TESTFIELD("Password Email Boleta Pago");
-        //001-
 
         Emp.GET(GlobalRec."No. empleado");
         Historico.SETRANGE("No. empleado", GlobalRec."No. empleado");
@@ -77,36 +62,26 @@ codeunit 34002108 "Imprime en PDF"
         TextoBody := /*Dia_Pago +*/ FORMAT(CarriageReturn) + FORMAT(CarriageReturn) + STRSUBSTNO(Pagado_Periodo, Historico.Nombre, Historico.Inicio, Historico.Fin);// +
         //002 DAC Format Email end
         Asunto := ConfNominas."Texto email recibos" + ', ' + Historico.Nombre + ', ' + STRSUBSTNO(Text001, Historico.Inicio, Historico.Fin);
-        // TODO: Manual review - Saving the payroll report PDF to a configured server path is unsupported in SaaS; the attachment must be generated through a verified Temp Blob/OutStream flow.
-        // Original code: REPORT.SAVEASPDF(IDReporte, _Directorio + _ArchivoPDF, Historico);
+        TempBlob.CreateOutStream(AttachmentOutStream);
+        HistoricoRecordRef.GetTable(Historico);
+        if not Report.SaveAs(IDReporte, '', ReportFormat::Pdf, AttachmentOutStream, HistoricoRecordRef) then
+            Error(ReportNotGeneratedErr);
+
         SLEEP(ConfNominas."Tiempo espera Envio email");
-        AttachmentFile := _Directorio + _ArchivoPDF;
-        // TODO: Manual review - The legacy SMTP block depends on a server-file attachment, explicit sender credentials, and custom TrySendCR error handling; no equivalent Email scenario is defined.
-        /*
-        IF Emp."Company E-Mail" <> '' THEN
-            //001+
-            //SMTP.CreateMessage(COMPANYNAME,SMTPSetup."User ID",Emp."Company E-Mail",Asunto,TextoBody,FALSE)
-            SMTP.CreateMessage(COMPANYNAME, EmpresaCot."Email Envia Boleta de Pago", Emp."Company E-Mail", Asunto, TextoBody, FALSE)
-        //001-
-        ELSE
-            IF Emp."E-Mail" <> '' THEN
-                //001+
-                //SMTP.CreateMessage(COMPANYNAME,SMTPSetup."User ID",Emp."E-Mail",Asunto,TextoBody,FALSE);
-                SMTP.CreateMessage(COMPANYNAME, EmpresaCot."Email Envia Boleta de Pago", Emp."E-Mail", Asunto, TextoBody, FALSE);
-        //001-
-        SMTP.AddAttachment(AttachmentFile, _ArchivoPDF);
-        */
-        //001+
-        //SMTP.Send;
-        // Original code: SendOK := SMTP.TrySendCR(EmpresaCot."Email Envia Boleta de Pago", EmpresaCot."Password Email Boleta Pago");
 
-        // Original code preserved below.
-        // IF NOT SendOK THEN
-        //     ERROR(STRSUBSTNO(SMTP_ERROR, SMTP.GetLastSendMailErrorText));
-        //001-
+        Recipient := Emp."Company E-Mail";
+        if Recipient = '' then
+            Recipient := Emp."E-Mail";
+        if Recipient = '' then
+            exit;
 
-        // TODO: Manual review - ERASE targets a server path and must be removed only as part of the same verified stream-based attachment redesign.
-        // Original code: ERASE(_Directorio + _ArchivoPDF);
+        EmailMessage.Create(Recipient, Asunto, TextoBody, false);
+        TempBlob.CreateInStream(AttachmentInStream);
+        EmailMessage.AddAttachment(_ArchivoPDF, 'application/pdf', AttachmentInStream);
+        SendOK := Email.Send(EmailMessage);
+        if not SendOK then
+            Error(EmailNotSentErr, Recipient);
+
         CLEARALL;
 
     end;
