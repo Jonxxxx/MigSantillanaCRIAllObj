@@ -22,7 +22,8 @@ page 53001 "InicializaTablas Movs."
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                //TODO: Ver //TODO: Ver RunObject = Report 53007;
+                // TODO: Manual review - Custom report 53007 is unavailable in the current repository.
+                // Original code: RunObject = Report 53007;
             }
         }
     }

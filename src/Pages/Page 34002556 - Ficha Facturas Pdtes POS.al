@@ -774,7 +774,8 @@ page 34002556 "Ficha Facturas Pdtes POS"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C59_Visible: Boolean;
         [InDataSet]

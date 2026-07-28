@@ -599,8 +599,9 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
                     trigger OnAction()
                     var
                         ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::"Credit Memo", Rec."No.");
                         ApprovalEntries.RUN;
                     end;
                 }
@@ -634,7 +635,8 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C51_Visible: Boolean;
         [InDataSet]

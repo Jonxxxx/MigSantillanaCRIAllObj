@@ -106,7 +106,8 @@ page 34002144 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002182;
+                    // TODO: Manual review - Custom report 34002182 is unavailable.
+                    // Original code: RunObject = Report 34002182;
                 }
                 action("Import Expenses from G/L")
                 {
@@ -115,7 +116,8 @@ page 34002144 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002139;
+                    // TODO: Manual review - Custom report 34002139 is unavailable.
+                    // Original code: RunObject = Report 34002139;
                 }
                 action("Calculate payroll")
                 {
@@ -124,7 +126,8 @@ page 34002144 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002124;
+                    // TODO: Manual review - Custom report 34002124 is unavailable.
+                    // Original code: RunObject = Report 34002124;
                 }
                 action("Init Wedge")
                 {
@@ -132,7 +135,8 @@ page 34002144 "Diario Nominas"
                     Image = ApplyEntries;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Report 34002130;
+                    // TODO: Manual review - Custom report 34002130 is unavailable.
+                    // Original code: RunObject = Report 34002130;
                 }
 
                 action(CalculoIncentivoProy)
@@ -141,7 +145,8 @@ page 34002144 "Diario Nominas"
                     Image = CalculateRemainingUsage;
                     Promoted = true;
                     PromotedCategory = Process;
-                    //TODO: Ver RunObject = Report 50211;
+                    // TODO: Manual review - Custom report 50211 is unavailable.
+                    // Original code: RunObject = Report 50211;
                 }
                 group(Reports)
                 {
@@ -153,7 +158,8 @@ page 34002144 "Diario Nominas"
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = "Report";
-                    //TODO: Ver RunObject = Report 34002168;
+                    // TODO: Manual review - Custom report 34002168 is unavailable.
+                    // Original code: RunObject = Report 34002168;
                 }
                 action(Prestamos)
                 {
@@ -161,7 +167,8 @@ page 34002144 "Diario Nominas"
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
-                    //TODO: Ver RunObject = Report 34002120;
+                    // TODO: Manual review - Custom report 34002120 is unavailable.
+                    // Original code: RunObject = Report 34002120;
                 }
                 action(Vacaciones)
                 {
@@ -169,7 +176,8 @@ page 34002144 "Diario Nominas"
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
-                    //TODO: Ver RunObject = Report 34002125;
+                    // TODO: Manual review - Custom report 34002125 is unavailable.
+                    // Original code: RunObject = Report 34002125;
                 }
                 action("ListNomxDepto8.5")
                 {
@@ -221,9 +229,11 @@ page 34002144 "Diario Nominas"
                 {
                     Caption = 'Absence Registration';
                     Image = Absence;
-                    //TODO: Ver RunObject = Page 5211;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No."),
-                    //TODO: Ver               Closed = CONST(false);
+                    // TODO: Manual review - The current Employee Absence table has no Closed field, so the complete page link cannot be preserved.
+                    // Original code preserved below.
+                    // RunObject = Page 5211;
+                    // RunPageLink = "Employee No." = FIELD("No."),
+                    //               Closed = CONST(false);
                 }
             }
         }

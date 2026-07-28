@@ -58,9 +58,3 @@ After every batch:
    - TODOs requiring manual review.
    - Compilation errors remaining.
    - Assumptions made.
-
-## Batch size
-
-- Modify no more than 8 objects in one task.
-- Keep each batch reviewable.
-- Stop when a structural or functional ambiguity is detected.

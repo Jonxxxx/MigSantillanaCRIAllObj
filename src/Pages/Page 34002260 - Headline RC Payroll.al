@@ -88,10 +88,12 @@ page 34002260 "Headline RC Payroll"
         IF NOT Uninitialized AND WRITEPERMISSION THEN BEGIN
             "Workdate for computations" := WORKDATE;
             MODIFY;
-            //TODO: Ver HeadlineManagement.ScheduleTask(CODEUNIT::"Headline RC Payroll");
+            // TODO: Manual review - Headline Management no longer exposes the legacy ScheduleTask method and no equivalent signature was verified.
+            // Original code: HeadlineManagement.ScheduleTask(CODEUNIT::"Headline RC Payroll");
         END;
 
-        //TODO: Ver HeadlineManagement.GetUserGreetingText(GreetingText);
+        // TODO: Manual review - Headline Management no longer exposes the legacy GetUserGreetingText method and no equivalent signature was verified.
+        // Original code: HeadlineManagement.GetUserGreetingText(GreetingText);
         DocumentationText := STRSUBSTNO(DocumentationTxt, PRODUCTNAME.SHORT);
 
         FuncionesNom.GetBirthdays(ListaCumpleanos);

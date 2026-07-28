@@ -349,7 +349,8 @@ page 34002115 "Ficha Acciones de personal"
                         COMMIT;
                         TESTFIELD("Revisado por");
                         CurrPage.SETSELECTIONFILTER(AP);
-                        //TODO: Ver REPORT.RUN(REPORT::"Acciones de personal", TRUE, TRUE, AP);
+                        // TODO: Manual review - The custom Acciones de personal report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Acciones de personal", TRUE, TRUE, AP);
                     end;
                 }
                 action(archivar)

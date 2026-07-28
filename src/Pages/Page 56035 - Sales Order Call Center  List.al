@@ -434,9 +434,11 @@ page 56035 "Sales Order Call Center  List"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ICInOutboxMgt: Codeunit 427;
-                    //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
-                    //TODO: Ver PurchaseHeader: Record 38;
+                        // TODO: Manual review - These declarations belong exclusively to a disabled intercompany approval block and cannot restore behavior independently.
+                        // Original code preserved below.
+                        // ICInOutboxMgt: Codeunit 427;
+                        // ApprovalMgt: Codeunit "Approvals Mgmt.";
+                        // PurchaseHeader: Record 38;
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN
@@ -493,7 +495,8 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                    //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
+                        // TODO: Manual review - This declaration belongs exclusively to a disabled posting approval block.
+                        // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN
@@ -523,7 +526,8 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                    //TODO: Ver  ApprovalMgt: Codeunit "Approvals Mgmt.";
+                        // TODO: Manual review - This declaration belongs exclusively to a disabled post-and-print approval block.
+                        // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN
@@ -599,7 +603,8 @@ page 56035 "Sales Order Call Center  List"
     var
         DocPrint: Codeunit 229;
         ReportPrint: Codeunit 228;
-        //TODO: Ver ApprovalMgt: Codeunit "Approvals Mgmt.";
+        // TODO: Manual review - This global approval declaration has no active caller because the related approval blocks remain disabled.
+        // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
         Usage: Option "Order Confirmation","Work Order";
         Text001: Label 'There are non posted Prepayment Amounts on %1 %2.';
         Text002: Label 'There are unpaid Prepayment Invoices related to %1 %2.';

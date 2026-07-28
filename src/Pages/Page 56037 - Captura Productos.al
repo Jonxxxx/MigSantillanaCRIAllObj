@@ -23,15 +23,13 @@ page 56037 "Captura Productos"
                 field(Description; Description)
                 {
                 }
-                //TODO: Ver
-                /*
-                field(SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location);
+                field(AvailabilityJX;
                     SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location))
                 {
                     Caption = 'Disponibilidad';
                     Style = Strong;
                     StyleExpr = TRUE;
-                }*/
+                }
                 field("Macado Manualmente"; Marcado)
                 {
 
@@ -279,7 +277,7 @@ page 56037 "Captura Productos"
         pgCantidad: Page 56038;
         _Cantidad: Decimal;
         Text002: Label 'Cancelado por el usuario';
-        SalesInfoPaneMgt: Codeunit 7171;
+        SalesInfoPaneMgt: Codeunit EXCCRISalesInfoPaneMgt;
         _Location: Code[20];
         _Disponibilidad: Decimal;
         Prod: Record 27;

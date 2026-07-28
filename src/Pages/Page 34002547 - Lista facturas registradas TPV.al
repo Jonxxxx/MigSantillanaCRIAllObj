@@ -125,8 +125,6 @@ page 34002547 "Lista facturas registradas TPV"
                 {
                     Visible = true;
                 }
-                //TODO: Ver 
-                /*
                 field("Electronic Document Status"; "Electronic Document Status")
                 {
                 }
@@ -149,7 +147,7 @@ page 34002547 "Lista facturas registradas TPV"
                 field("Error Description"; "Error Description")
                 {
                     Visible = false;
-                }*/
+                }
                 field("No. Printed"; "No. Printed")
                 {
                 }
@@ -261,7 +259,7 @@ page 34002547 "Lista facturas registradas TPV"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver RequestStampEDocument;
+                        RequestStampEDocument;
                     end;
                 }
                 action("Export E-Document as &XML")
@@ -271,7 +269,7 @@ page 34002547 "Lista facturas registradas TPV"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver ExportEDocument;
+                        ExportEDocument;
                     end;
                 }
                 action("&Cancel")
@@ -281,7 +279,7 @@ page 34002547 "Lista facturas registradas TPV"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CancelEDocument;
+                        CancelEDocument;
                     end;
                 }
             }
@@ -320,7 +318,8 @@ page 34002547 "Lista facturas registradas TPV"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = Process;
-                //TODO: Ver RunObject = Report 10074;
+                // TODO: Manual review - Standard report 10074 is unavailable and no semantically equivalent current report was verified.
+                // Original code: RunObject = Report 10074;
             }
         }
         area(reporting)

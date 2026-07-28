@@ -54,12 +54,14 @@ page 34002131 "Lineas cobros empleado"
 
     trigger OnFindRecord(Which: Text): Boolean
     begin
-        //TODO: Ver EXIT(GestionFormPeriodo.FindDate(Which, Rec, LongPeriodoClie));
+        // TODO: Manual review - Period Form Management and its legacy FindDate method are unavailable in current dependencies.
+        // Original code: EXIT(GestionFormPeriodo.FindDate(Which, Rec, LongPeriodoClie));
     end;
 
     trigger OnNextRecord(Steps: Integer): Integer
     begin
-        //TODO: Ver EXIT(GestionFormPeriodo.NextDate(Steps, Rec, LongPeriodoClie));
+        // TODO: Manual review - Period Form Management and its legacy NextDate method are unavailable in current dependencies.
+        // Original code: EXIT(GestionFormPeriodo.NextDate(Steps, Rec, LongPeriodoClie));
     end;
 
     trigger OnOpenPage()
@@ -70,7 +72,8 @@ page 34002131 "Lineas cobros empleado"
     var
         Trab: Record 5200;
         LinsNom: Record 34002118;
-        //TODO: Ver GestionFormPeriodo: Codeunit 359;
+        // TODO: Manual review - Standard codeunit 359 Period Form Management is unavailable and no equivalent navigation API was verified.
+        // Original code: GestionFormPeriodo: Codeunit 359;
         LongPeriodoClie: Option "Dia",Semana,Mes,Trimestre,"Año",Periodo;
         TipImporte: Option "Saldo en el periodo","Saldo acumulado a la fecha";
 

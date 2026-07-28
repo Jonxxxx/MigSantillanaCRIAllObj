@@ -23,13 +23,15 @@ page 34002249 "Payroll Charts"
 
                 trigger AddInReady()
                 begin
-                    //TODO: Ver //TODO: Ver UpdateChart(Period::" ");
+                    // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this trigger and is incompatible with the current chart API.
+                    // Original code: UpdateChart(Period::" ");
                 end;
 
                 trigger Refresh()
                 begin
                     InitializePeriodFilter(0D, 0D);
-                    //TODO: Ver //TODO: Ver UpdateChart(Period::" ");
+                    // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this trigger and is incompatible with the current chart API.
+                    // Original code: UpdateChart(Period::" ");
                 end;
             }
         }
@@ -48,8 +50,10 @@ page 34002249 "Payroll Charts"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver IF AnalysisReportChartMgt.SelectChart(AnalysisReportChartSetup, Rec) THEN
-                    //TODO: Ver UpdateChart(Period::" ");
+                    // TODO: Manual review - The verified SelectChart call cannot be restored with the legacy chart refresh call because the current Business Chart API rejects that refresh argument.
+                    // Original code preserved below.
+                    // IF AnalysisReportChartMgt.SelectChart(AnalysisReportChartSetup, Rec) THEN
+                    //     UpdateChart(Period::" ");
                 end;
             }
 
@@ -66,7 +70,8 @@ page 34002249 "Payroll Charts"
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Day);
-                        //TODO: Ver UpdateChart(Period::" ");
+                        // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this action and is incompatible with the current chart API.
+                        // Original code: UpdateChart(Period::" ");
                     end;
                 }
                 action(Week)
@@ -78,7 +83,8 @@ page 34002249 "Payroll Charts"
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Week);
-                        //TODO: Ver UpdateChart(Period::" ");
+                        // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this action and is incompatible with the current chart API.
+                        // Original code: UpdateChart(Period::" ");
                     end;
                 }
                 action(Month)
@@ -90,7 +96,8 @@ page 34002249 "Payroll Charts"
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Month);
-                        //TODO: Ver UpdateChart(Period::" ");
+                        // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this action and is incompatible with the current chart API.
+                        // Original code: UpdateChart(Period::" ");
                     end;
                 }
                 action(Quarter)
@@ -102,7 +109,8 @@ page 34002249 "Payroll Charts"
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Quarter);
-                        //TODO: Ver UpdateChart(Period::" ");
+                        // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this action and is incompatible with the current chart API.
+                        // Original code: UpdateChart(Period::" ");
                     end;
                 }
                 action(Year)
@@ -114,7 +122,8 @@ page 34002249 "Payroll Charts"
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Year);
-                        //TODO: Ver UpdateChart(Period::" ");
+                        // TODO: Manual review - The legacy option-qualified chart refresh argument is unavailable in this action and is incompatible with the current chart API.
+                        // Original code: UpdateChart(Period::" ");
                     end;
                 }
             }
@@ -127,7 +136,8 @@ page 34002249 "Payroll Charts"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver UpdateChart(Period::Previous);
+                    // TODO: Manual review - The legacy Previous option value cannot be referenced safely from this trigger with the current chart refresh signature.
+                    // Original code: UpdateChart(Period::Previous);
                 end;
             }
             action(NextPeriod)
@@ -139,7 +149,8 @@ page 34002249 "Payroll Charts"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver UpdateChart(Period::Next);
+                    // TODO: Manual review - The legacy Next option value cannot be referenced safely from this trigger with the current chart refresh signature.
+                    // Original code: UpdateChart(Period::Next);
                 end;
             }
         }
@@ -155,7 +166,8 @@ page 34002249 "Payroll Charts"
     begin
         AnalysisReportChartMgt.UpdateChart(
           Period, AnalysisReportChartSetup, AnalysisReportChartSetup."Analysis Area"::Sales, Rec, StatusText);
-        //TODO: Ver Update(CurrPage.BusinessChart);
+        // TODO: Manual review - The legacy Business Chart Update call has no verified current control-add-in signature.
+        // Original code: Update(CurrPage.BusinessChart);
     end;
 }
 

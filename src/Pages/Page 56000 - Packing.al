@@ -134,7 +134,7 @@ page 56000 Packing
                         CheckPalet;//+#842
 
                         IF CONFIRM(txt002, FALSE) THEN BEGIN
-                            //TODO: Ver FuncSant.RegistraPacking(Rec);
+                            FuncSant.RegistraPacking(Rec);
                             MESSAGE(txt003);
                         END;
                     end;
@@ -168,7 +168,7 @@ page 56000 Packing
 
     trigger OnInit()
     begin
-        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
@@ -177,7 +177,7 @@ page 56000 Packing
         txt001: Label 'Confirm that you want to create a new box';
         ConfSant: Record 56001;
         NoSerMang: Codeunit "No. Series";
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         txt002: Label 'Confirm that you want to post';
         txt003: Label 'The packing was successfully posted';
         CabPack: Record 56030;

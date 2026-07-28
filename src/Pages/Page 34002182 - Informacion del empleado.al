@@ -8,7 +8,7 @@ page 34002182 "Informacion del empleado"
     {
         area(content)
         {
-            //TODO: Ver 
+            // TODO: Manual review - The disabled block uses the removed Employee.Picture field and unrelated sales drill-down pages, so its intended FactBox behavior is not verifiable.
             /*
             field(Picture; Picture)
             {
@@ -37,6 +37,7 @@ page 34002182 "Informacion del empleado"
     }
 
     var
-    //TODO: Ver CUNomina: Codeunit 34002104;
+        // TODO: Manual review - The verified payroll codeunit declaration is used only by the unresolved Employee.Picture FactBox block.
+        // Original code: CUNomina: Codeunit 34002104;
 }
 

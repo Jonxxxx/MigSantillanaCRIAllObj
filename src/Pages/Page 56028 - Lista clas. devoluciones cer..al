@@ -108,6 +108,6 @@ page 56028 "Lista clas. devoluciones cer."
     }
 
     var
-    //TODO: Ver CreaDev: Report 56000;
+        CreaDev: Report 56000;
 }
 

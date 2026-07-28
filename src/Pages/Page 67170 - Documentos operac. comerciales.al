@@ -2,7 +2,7 @@ page 67170 "Documentos operac. comerciales"
 {
     PageType = List;
     SourceTable = 67002;
-    //TODO: Ver SourceTableView = WHERE("Tipo registro" = CONST(28));
+    //TODO: Option no existe en BC ver desde NAV SourceTableView = WHERE("Tipo registro" = CONST(28));
 
     layout
     {

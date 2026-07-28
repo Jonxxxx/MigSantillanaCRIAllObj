@@ -400,7 +400,8 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(0);
+                            // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide period availability.
+                            // Original code: CurrPage.TransferLines.PAGE.ItemAvailability(0);
                         end;
                     }
                     action(Variant)
@@ -409,7 +410,8 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(1);
+                            // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide variant availability.
+                            // Original code: CurrPage.TransferLines.PAGE.ItemAvailability(1);
                         end;
                     }
                     action(Location)
@@ -418,7 +420,8 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CurrPage.TransferLines.PAGE.ItemAvailability(2);
+                            // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide location availability.
+                            // Original code: CurrPage.TransferLines.PAGE.ItemAvailability(2);
                         end;
                     }
                 }
@@ -442,7 +445,8 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CurrPage.TransferLines.PAGE.OpenItemTrackingLines(0);
+                            // TODO: Manual review - The custom subpage OpenItemTrackingLines procedure recursively calls itself and must be corrected before this action can be restored.
+                            // Original code: CurrPage.TransferLines.PAGE.OpenItemTrackingLines(0);
                         end;
                     }
                     action(Receipt)
@@ -451,7 +455,8 @@ page 67074 "Cab. Muestras"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CurrPage.TransferLines.PAGE.OpenItemTrackingLines(1);
+                            // TODO: Manual review - The custom subpage OpenItemTrackingLines procedure recursively calls itself and must be corrected before this action can be restored.
+                            // Original code: CurrPage.TransferLines.PAGE.OpenItemTrackingLines(1);
                         end;
                     }
                 }
@@ -588,7 +593,8 @@ page 67074 "Cab. Muestras"
                     begin
                         //002
 
-                        //TODO: Ver CFuncSantillana.CreaEmailPedidoConsg(Rec);
+                        // TODO: Manual review - CreaEmailPedidoConsg exists, but its complete legacy SMTP, HTML file, attachment, and status-update body is disabled.
+                        // Original code: CFuncSantillana.CreaEmailPedidoConsg(Rec);
                         CurrPage.UPDATE;
                         //002
                     end;
@@ -684,13 +690,15 @@ page 67074 "Cab. Muestras"
 
     var
         ConfAPS: Record 67000;
-        //TODO: Ver CFuncSantillana: Codeunit 56000;
+        // Original declaration preserved for the disabled e-mail action above.
+        // CFuncSantillana: Codeunit 56000;
         rTransHeader: Record 5740;
         NombreCliente: Text[200];
         DireccionCliente: Text[200];
         "**003**": Integer;
         Cliente: Record 18;
-        //TODO: Ver cuManejaParametros: Codeunit 34002500;
+        // TODO: Manual review - Codeunit 34002500 exists, but its only related page call is already disabled and no active behavior requires this declaration.
+        // Original code: cuManejaParametros: Codeunit 34002500;
         I: Integer;
         TransferHeader: Record 5740;
         TransferLine: Record 5741;

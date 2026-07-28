@@ -40,7 +40,8 @@ page 75012 "Valores Filtros Tipologia MdM"
         lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
         lrValDim: Record 349;
-    //TODO: Ver lrCodGrProd: Record 5723;
+        // TODO: Manual review - Product Group table 5723 is unavailable and Item Category is not a verified semantic replacement.
+        // Original code: lrCodGrProd: Record 5723;
     begin
         // RellenaTabla
 
@@ -70,7 +71,7 @@ page 75012 "Valores Filtros Tipologia MdM"
                             UNTIL lrDatosMdM.NEXT = 0;
                         END;
                     END;
-            //TODO: Ver 
+            // TODO: Manual review - The Otros branch requires removed Product Group table 5723, and Item Category is not a verified semantic replacement.
             /*
         lrFiltroTipo.Tipo::Otros:
             BEGIN

@@ -35,11 +35,13 @@ page 34002502 "Lista TPVs"
 
     trigger OnInit()
     var
-        //TODO: Ver cfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
+        // Original code: cfComunes: Codeunit 34002503;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 
-        //TODO: Ver //TODO: VerIF NOT (cfComunes.EsCentral) THEN
+        // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code: IF NOT cfComunes.EsCentral() THEN
         ERROR(Error001);
     end;
 }

@@ -56,7 +56,8 @@ page 34002162 "Calendario Anual"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002147;
+                    // TODO: Manual review - Custom report 34002147 is unavailable; the current object with this ID is not a report.
+                    // Original code: RunObject = Report 34002147;
                 }
                 action(Hollydays)
                 {

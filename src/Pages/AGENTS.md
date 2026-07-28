@@ -83,8 +83,16 @@ After every batch:
    - Compilation errors remaining.
    - Assumptions made.
 
-## Batch size
+## Continuous TODO batch processing
 
-- Modify no more than 8 objects in one task.
-- Keep each batch reviewable.
-- Stop when a structural or functional ambiguity is detected.
+For page TODO migration tasks, this section overrides any object-per-task limit
+defined in the repository root `AGENTS.md`.
+
+- Process a maximum of 10 AL objects per compilation batch, with no total object limit for the complete task.
+- After every successful compilation batch, continue automatically with the next batch without waiting for user confirmation.
+- Process all remaining `//TODO: Ver` comments regardless of their original High, Medium, or Low confidence classification.
+- Re-evaluate every TODO against the current repository, dependency symbols, object definitions, procedure signatures, and compiler results.
+- Safely resolvable TODOs must be corrected and removed.
+- TODOs that cannot be resolved without inventing business logic or unsupported semantics must be converted to `// TODO: Manual review - <specific reason>`.
+- One unresolved, ambiguous, missing, obsolete, or SaaS-incompatible candidate must never stop the complete task.
+- Stop only when no `//TODO: Ver` remains under `src/Pages`; every original marker must have been either safely resolved or explicitly converted to manual review.

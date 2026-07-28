@@ -149,7 +149,8 @@ page 34002114 "Historico Cab. Nominas"
                     Image = Cancel;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
-                    //TODO: Ver RunObject = Report 34002123;
+                    // TODO: Manual review - Custom report 34002123 is unavailable as the required object type.
+                    // Original code: RunObject = Report 34002123;
 
                     trigger OnAction()
                     begin
@@ -177,7 +178,8 @@ page 34002114 "Historico Cab. Nominas"
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Codeunit 34002103;
+                // TODO: Manual review - Custom codeunit 34002103 is unavailable as the required object type.
+                // Original code: RunObject = Codeunit 34002103;
             }
         }
     }

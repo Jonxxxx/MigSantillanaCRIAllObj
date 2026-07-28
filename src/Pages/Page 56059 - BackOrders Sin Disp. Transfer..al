@@ -73,16 +73,14 @@ page 56059 "BackOrders Sin Disp. Transfer."
                 {
                     Editable = false;
                 }
-                //TODO: Ver 
-                /*
-                field(SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec);
+                field(AvailableQtyJX;
                     SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
                     Caption = 'Available Qty.';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }*/
+                }
                 field("Cantidad a Anular"; "Cantidad a Anular")
                 {
                 }
@@ -229,8 +227,6 @@ page 56059 "BackOrders Sin Disp. Transfer."
                 END;
             //-$002
             //IF (SalesInfoPaneMgt.CalcAvailabilityTransLine(TL) = 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //-#56090
-            //TODO: Ver 
-            /*
             IF (SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL) <= 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //+#56090
                 BEGIN
                 WHSL.RESET;
@@ -245,13 +241,13 @@ page 56059 "BackOrders Sin Disp. Transfer."
                     "Cantidad a Ajustar" := 0; //+$002
                     INSERT;
                 END;
-            END;*/
+            END;
             UNTIL TL.NEXT = 0;
         Window.CLOSE;
     end;
 
     var
-        SalesInfoPaneMgt: Codeunit 7171;
+        SalesInfoPaneMgt: Codeunit EXCCRISalesInfoPaneMgt;
         UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;

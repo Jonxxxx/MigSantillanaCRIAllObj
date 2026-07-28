@@ -46,6 +46,7 @@ page 34002125 "Estadisticas Empleados"
     }
 
     var
-    //TODO: Ver FuncNom: Codeunit 34002104;
+        // TODO: Manual review - The verified payroll codeunit declaration has no caller in this page, so restoring it would not restore behavior.
+        // Original code: FuncNom: Codeunit 34002104;
 }
 

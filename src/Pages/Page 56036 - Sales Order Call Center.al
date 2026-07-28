@@ -308,8 +308,6 @@ page 56036 "Sales Order Call Center"
             {
                 Caption = 'Foreign Trade';
                 Visible = false;
-                //TODO: Ver 
-                /*
                 field("Currency Code"; "Currency Code")
                 {
                     Importance = Promoted;
@@ -329,7 +327,7 @@ page 56036 "Sales Order Call Center"
                     begin
                         CurrencyCodeOnAfterValidate;
                     end;
-                }*/
+                }
                 field("EU 3-Party Trade"; "EU 3-Party Trade")
                 {
                 }
@@ -484,8 +482,10 @@ page 56036 "Sales Order Call Center"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Order Statistics", Rec);
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        // TODO: Manual review - The standard page exists, but restoring this tax-dependent branch requires functional tax-behavior validation.
+                        // Original code preserved below.
+                        // ELSE
+                        //     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action(Card)
@@ -605,7 +605,8 @@ page 56036 "Sales Order Call Center"
                 action("Credit Cards Transaction Lo&g Entries")
                 {
                     Caption = 'Credit Cards Transaction Lo&g Entries';
-                    //TODO: Ver RunObject = Page 829;
+                    // TODO: Manual review - Standard page 829 is unavailable and no semantically equivalent current page was verified.
+                    // Original code: RunObject = Page 829;
                 }
             }
         }
@@ -1034,18 +1035,20 @@ page 56036 "Sales Order Call Center"
     trigger OnClosePage()
     begin
         //004
-        //TODO: Ver AppTemp.RESET;
-        //TODO: Ver AppTemp.SETRANGE("Table ID", 36);
-        //TODO: Ver AppTemp.SETRANGE(Enabled, TRUE);
-        //TODO: Ver IF NOT AppTemp.FINDFIRST THEN BEGIN
+        // TODO: Manual review - Standard table Application Temp is unavailable, so the legacy close-page approval-state guard cannot be restored.
+        // Original code preserved below.
+        // AppTemp.RESET;
+        // AppTemp.SETRANGE("Table ID", 36);
+        // AppTemp.SETRANGE(Enabled, TRUE);
+        // IF NOT AppTemp.FINDFIRST THEN BEGIN
         SalesLine.SETRANGE("Document Type", "Document Type");
         SalesLine.SETRANGE("Document No.", "No.");
         SalesLine.SETFILTER(Type, '>0');
         SalesLine.SETFILTER(Quantity, '<>0');
         IF SalesLine.FIND('-') THEN
             ReleaseSalesDoc.PerformManualRelease(Rec);
-        //TODO: Ver END
-        //TODO: Ver ELSE
+        // END
+        // ELSE
         //  IF ApprovalMgt.SendSalesApprovalRequest_BO(Rec) THEN; //-$001
         //004
         /*
@@ -1113,8 +1116,10 @@ page 56036 "Sales Order Call Center"
         SalesHistoryStnVisible: Boolean;
         SH: Record 36;
         GestBO: Boolean;
-        //TODO: Ver AjusBO: Report 56036;
-        //TODO: Ver AppTemp: Record 464;
+        // TODO: Manual review - Report 56036 exists, but no active call uses this declaration, so restoring it would add an unused dependency without restoring behavior.
+        // Original code: AjusBO: Report 56036;
+        // TODO: Manual review - Standard table Application Temp is unavailable and the related close-page approval logic is incomplete.
+        // Original code: AppTemp: Record 464;
         SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit "Release Sales Document";
         pgProductos: Page 56037;

@@ -244,7 +244,8 @@ page 34002193 "Payroll - Job Journal"
                         PJL.RESET;
                         PJL.SETRANGE("Journal Template Name", "Journal Template Name");
                         PJL.SETRANGE("Journal Batch Name", "Journal Batch Name");
-                        //TODO: Ver REPORT.RUN(REPORT::"Valida Diario Nom. - Proyectos", TRUE, TRUE, PJL);
+                        // TODO: Manual review - The custom Valida Diario Nom. - Proyectos report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Valida Diario Nom. - Proyectos", TRUE, TRUE, PJL);
                     end;
                 }
                 action("P&ost")

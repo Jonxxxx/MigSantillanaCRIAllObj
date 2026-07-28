@@ -10,13 +10,11 @@ page 50037 ListaDescuentoProntoPago
     PageType = List;
     Permissions = TableData 21 = r;
     SourceTable = 21;
-    //TODO: Ver 
-    /*
     SourceTableView = SORTING("Closed by Entry No.")
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),
                             "Pmt. Disc. Given (LCY)"=FILTER(>0),
-                            "No. Comprobante Fiscal DPP"=FILTER(<>''));*/
+                            "No. Comprobante Fiscal DPP"=FILTER(<>''));
     UsageCategory = Lists;
 
     layout

@@ -75,8 +75,10 @@ page 34002133 "CxC Empleados"
                 action("&Movimientos CxC Empleados")
                 {
                     Caption = '&Movimientos CxC Empleados';
-                    //TODO: Ver RunObject = Page 58100;
-                    //TODO: Ver RunPageLink = Field1 = FIELD("No. Préstamo");
+                    // TODO: Manual review - Page 58100 and its destination field Field1 cannot be verified.
+                    // Original code preserved below.
+                    // RunObject = Page 58100;
+                    // RunPageLink = Field1 = FIELD("No. Préstamo");
                     Visible = false;
                 }
             }

@@ -38,11 +38,14 @@ page 34002500 "Configuracion General DSPoS"
 
     trigger OnInit()
     var
-    //TODO: Ver cfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
+        // Original code: cfComunes: Codeunit 34002503;
     begin
 
-        //TODO: Ver //TODO: VerIF NOT (cfComunes.EsCentral) THEN
-        ERROR(error001);
+        // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code preserved below.
+        // IF NOT cfComunes.EsCentral() THEN
+        //     ERROR(error001);
     end;
 
     trigger OnOpenPage()

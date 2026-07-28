@@ -311,8 +311,10 @@ page 34002180 "Datos empleados moviles OJO"
                 action("&Related Companies")
                 {
                     Caption = '&Related Companies';
-                    //TODO: Ver RunObject = Page 34002157;
-                    //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
+                    // TODO: Manual review - Custom page 34002157 is unavailable; the current object with this ID is a table.
+                    // Original code preserved below.
+                    // RunObject = Page 34002157;
+                    // RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
                 action("Absences b&y Categories")
@@ -434,7 +436,8 @@ page 34002180 "Datos empleados moviles OJO"
     end;
 
     var
-        //TODO: Ver Mail: Codeunit 397;
+        // TODO: Manual review - Legacy Mail codeunit 397 is unavailable, and this declaration has no active caller to migrate to the current Email API.
+        // Original code: Mail: Codeunit 397;
         CUNomina: Codeunit 34002104;
         FechaIni: Date;
         FechaFin: Date;

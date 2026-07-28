@@ -6,7 +6,7 @@ page 50000 "Pantalla Scanner manual"
     {
         area(content)
         {
-            //TODO: Ver 
+            // TODO: Manual review - The disabled scanner layout contains unnamed legacy controls and cannot be restored as valid BC v27 page controls without redesign.
             /*
             group(General)
             {
@@ -62,7 +62,8 @@ page 50000 "Pantalla Scanner manual"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver BuscarEnPedido;
+                    // TODO: Manual review - BuscarEnPedido remains disabled because it depends on the removed Item Cross Reference model and scanner layout.
+                    // Original code: BuscarEnPedido;
                 end;
             }
         }
@@ -87,7 +88,7 @@ page 50000 "Pantalla Scanner manual"
         NoDocumento := NoPedido;
     end;
 
-    //TODO: Ver 
+    // TODO: Manual review - The disabled scanner procedures use removed Item Cross Reference table 5717 and require migration to verified Item Reference semantics.
     /*
     procedure BuscarEnPedido()
     var

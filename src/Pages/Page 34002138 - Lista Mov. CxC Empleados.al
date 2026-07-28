@@ -100,11 +100,13 @@ page 34002138 "Lista Mov. CxC Empleados"
 
                     trigger OnAction()
                     var
-                        //TODO: Ver CierraPrestamo: Report 34002142;
+                        // TODO: Manual review - Custom report 34002142 is unavailable as the required object type.
+                        // Original code: CierraPrestamo: Report 34002142;
                         HCP: Record 34002146;
                     begin
                         CurrPage.SETSELECTIONFILTER(HCP);
-                        //TODO: Ver REPORT.RUN(REPORT::"Cierra Prestamos", TRUE, FALSE, HCP);
+                        // TODO: Manual review - The custom Cierra Prestamos report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Cierra Prestamos", TRUE, FALSE, HCP);
                     end;
                 }
             }

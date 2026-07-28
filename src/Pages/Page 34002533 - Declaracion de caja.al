@@ -147,15 +147,18 @@ page 34002533 "Declaracion de caja"
                 trigger OnAction()
                 var
                     recTurno: Record 34002529;
-                //TODO: Ver repCuadre: Report 34002503;
+                    // TODO: Manual review - Custom report 34002503 is unavailable as the required object type.
+                    // Original code: repCuadre: Report 34002503;
                 begin
                     recTurno.RESET;
                     recTurno.SETRANGE("No. tienda", "No. tienda");
                     recTurno.SETRANGE("No. TPV", "No. TPV");
                     recTurno.SETRANGE(Fecha, Fecha);
                     recTurno.SETRANGE("No. turno", "No. turno");
-                    //TODO: Ver repCuadre.SETTABLEVIEW(recTurno);
-                    //TODO: Ver repCuadre.RUNMODAL;
+                    // TODO: Manual review - Custom report 34002503 is unavailable, so its filtered modal execution cannot be restored.
+                    // Original code preserved below.
+                    // repCuadre.SETTABLEVIEW(recTurno);
+                    // repCuadre.RUNMODAL;
                 end;
             }
         }

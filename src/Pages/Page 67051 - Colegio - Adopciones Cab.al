@@ -32,9 +32,7 @@ page 67051 "Colegio - Adopciones Cab"
                     Editable = false;
                     Importance = Promoted;
                 }
-                //TODO: Ver 
-                /*
-                field(FuncAPS.ColCalcInvMuestras("Cod. Colegio");
+                field(SampleInventoryJX;
                     FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
                 {
                     Caption = 'Sample Inventory';
@@ -42,9 +40,9 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnLookup(var Text: Text): Boolean
                     var
-                        Colegio: Record 5050;
-                        BC: Record 7302;
-                        BCPage: Page 7304;
+                        Colegio: Record Contact;
+                        BC: Record "Bin Content";
+                        BCPage: Page "Bin Contents";
                     begin
                         Colegio.GET("Cod. Colegio");
                         BC.RESET;
@@ -56,7 +54,7 @@ page 67051 "Colegio - Adopciones Cab"
                             CLEAR(BCPage);
                         END;
                     end;
-                }*/
+                }
                 field("Cod. Promotor"; "Cod. Promotor")
                 {
                     Editable = false;
@@ -80,8 +78,6 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        //TODO: Ver 
-                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Lin. Negocio");
 
@@ -98,7 +94,7 @@ page 67051 "Colegio - Adopciones Cab"
                             //    CurrPage.TmpAdopciones.FORM.RecibeFiltro("Filtro fecha","Filtro Linea de negocio","Filtro Grupo de Negocio","Filtro Nivel");
                         END;
 
-                        CLEAR(DimForm);*/
+                        CLEAR(DimForm);
                     end;
 
                     trigger OnValidate()
@@ -108,8 +104,6 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
-                //TODO: Ver 
-                /*
                 field("Filtro Nivel"; Filtro)
                 {
                     Caption = 'Level Filter';
@@ -121,14 +115,12 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.RecibeFiltro("Filtro fecha", "Filtro Linea de negocio", "Filtro Grupo de Negocio", "Filtro Nivel",
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
-                }*/
+                }
                 field("Filtro Sub Familia"; "Filtro Sub Familia")
                 {
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        //TODO: Ver 
-                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Sub Familia");
                         DimVal.RESET;
@@ -144,7 +136,7 @@ page 67051 "Colegio - Adopciones Cab"
                                                                      "Filtro Serie", "Filtro Sub Familia");
                         END;
 
-                        CLEAR(DimForm);*/
+                        CLEAR(DimForm);
                     end;
 
                     trigger OnValidate()
@@ -158,8 +150,6 @@ page 67051 "Colegio - Adopciones Cab"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        //TODO: Ver 
-                        /*
                         ConfAPS.GET();
                         ConfAPS.TESTFIELD("Cod. Dimension Serie");
                         DimVal.RESET;
@@ -175,7 +165,7 @@ page 67051 "Colegio - Adopciones Cab"
                                                                      "Filtro Serie", "Filtro Sub Familia");
                         END;
 
-                        CLEAR(DimForm);*/
+                        CLEAR(DimForm);
                     end;
 
                     trigger OnValidate()

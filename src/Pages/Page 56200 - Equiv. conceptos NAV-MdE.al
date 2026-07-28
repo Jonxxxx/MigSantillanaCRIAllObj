@@ -17,14 +17,12 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 Caption = 'Tipo dato MdE';
                 //The GridLayout property is only supported on controls of type Grid
                 //GridLayout = Rows;
-                //TODO: Ver 
-                /*
-                field(GetMdEEquiv; GetMdEEquiv)
+                field(MdEEquivalenceJX; GetMdEEquiv)
                 {
                     Editable = false;
                     Enabled = false;
                     Importance = Promoted;
-                }*/
+                }
             }
             repeater(Group)
             {
@@ -37,9 +35,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 {
                     Editable = false;
                 }
-                //TODO: Ver 
-                /*
-                field(BooleanArray[1]; BooleanArray[1])
+                field(Concept01JX; BooleanArray[1])
                 {
                     CaptionClass = ColumnNameArray[1];
                     Visible = NoColumns > 0;
@@ -49,7 +45,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(1);
                     end;
                 }
-                field(BooleanArray[2];BooleanArray[2])
+                field(Concept02JX; BooleanArray[2])
                 {
                     CaptionClass = ColumnNameArray[2];
                     Visible = NoColumns > 1;
@@ -59,7 +55,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(2);
                     end;
                 }
-                field(BooleanArray[3];BooleanArray[3])
+                field(Concept03JX; BooleanArray[3])
                 {
                     CaptionClass = ColumnNameArray[3];
                     Visible = NoColumns > 2;
@@ -69,7 +65,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(3);
                     end;
                 }
-                field(BooleanArray[4];BooleanArray[4])
+                field(Concept04JX; BooleanArray[4])
                 {
                     CaptionClass = ColumnNameArray[4];
                     Visible = NoColumns > 3;
@@ -79,7 +75,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(4);
                     end;
                 }
-                field(BooleanArray[5];BooleanArray[5])
+                field(Concept05JX; BooleanArray[5])
                 {
                     CaptionClass = ColumnNameArray[5];
                     Visible = NoColumns > 4;
@@ -89,7 +85,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(5);
                     end;
                 }
-                field(BooleanArray[6];BooleanArray[6])
+                field(Concept06JX; BooleanArray[6])
                 {
                     CaptionClass = ColumnNameArray[6];
                     Visible = NoColumns > 5;
@@ -99,7 +95,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(6);
                     end;
                 }
-                field(BooleanArray[7];BooleanArray[7])
+                field(Concept07JX; BooleanArray[7])
                 {
                     CaptionClass = ColumnNameArray[7];
                     Visible = NoColumns > 6;
@@ -109,7 +105,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(7);
                     end;
                 }
-                field(BooleanArray[8];BooleanArray[8])
+                field(Concept08JX; BooleanArray[8])
                 {
                     CaptionClass = ColumnNameArray[8];
                     Visible = NoColumns > 7;
@@ -119,7 +115,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(8);
                     end;
                 }
-                field(BooleanArray[9];BooleanArray[9])
+                field(Concept09JX; BooleanArray[9])
                 {
                     CaptionClass = ColumnNameArray[9];
                     Visible = NoColumns > 8;
@@ -129,7 +125,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(9);
                     end;
                 }
-                field(BooleanArray[10];BooleanArray[10])
+                field(Concept10JX; BooleanArray[10])
                 {
                     CaptionClass = ColumnNameArray[10];
                     Visible = NoColumns > 9;
@@ -139,7 +135,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(10);
                     end;
                 }
-                field(BooleanArray[11];BooleanArray[11])
+                field(Concept11JX; BooleanArray[11])
                 {
                     CaptionClass = ColumnNameArray[11];
                     Visible = NoColumns > 10;
@@ -149,7 +145,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(11);
                     end;
                 }
-                field(BooleanArray[12];BooleanArray[12])
+                field(Concept12JX; BooleanArray[12])
                 {
                     CaptionClass = ColumnNameArray[12];
                     Visible = NoColumns > 11;
@@ -159,7 +155,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(12);
                     end;
                 }
-                field(BooleanArray[13];BooleanArray[13])
+                field(Concept13JX; BooleanArray[13])
                 {
                     CaptionClass = ColumnNameArray[13];
                     Visible = NoColumns > 12;
@@ -169,7 +165,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(13);
                     end;
                 }
-                field(BooleanArray[14];BooleanArray[14])
+                field(Concept14JX; BooleanArray[14])
                 {
                     CaptionClass = ColumnNameArray[14];
                     Visible = NoColumns > 13;
@@ -179,7 +175,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(14);
                     end;
                 }
-                field(BooleanArray[15];BooleanArray[15])
+                field(Concept15JX; BooleanArray[15])
                 {
                     CaptionClass = ColumnNameArray[15];
                     Visible = NoColumns > 14;
@@ -189,7 +185,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(15);
                     end;
                 }
-                field(BooleanArray[16];BooleanArray[16])
+                field(Concept16JX; BooleanArray[16])
                 {
                     CaptionClass = ColumnNameArray[16];
                     Visible = NoColumns > 15;
@@ -199,7 +195,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(16);
                     end;
                 }
-                field(BooleanArray[17];BooleanArray[17])
+                field(Concept17JX; BooleanArray[17])
                 {
                     CaptionClass = ColumnNameArray[17];
                     Visible = NoColumns > 16;
@@ -209,7 +205,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(17);
                     end;
                 }
-                field(BooleanArray[18];BooleanArray[18])
+                field(Concept18JX; BooleanArray[18])
                 {
                     CaptionClass = ColumnNameArray[18];
                     Visible = NoColumns > 17;
@@ -219,7 +215,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(18);
                     end;
                 }
-                field(BooleanArray[19];BooleanArray[19])
+                field(Concept19JX; BooleanArray[19])
                 {
                     CaptionClass = ColumnNameArray[19];
                     Visible = NoColumns > 18;
@@ -229,7 +225,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                         ValidateColumn(19);
                     end;
                 }
-                field(BooleanArray[20];BooleanArray[20])
+                field(Concept20JX; BooleanArray[20])
                 {
                     CaptionClass = ColumnNameArray[20];
                     Visible = NoColumns > 19;
@@ -238,7 +234,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                     begin
                         ValidateColumn(20);
                     end;
-                }*/
+                }
             }
         }
     }

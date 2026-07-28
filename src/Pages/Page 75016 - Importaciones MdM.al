@@ -82,7 +82,8 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver cImpExcel.ImportaFile(FALSE, 0);
+                            // TODO: Manual review - ImportaFile exists, but its file selection, upload, workbook reading, and import body are disabled legacy client-file code.
+                            // Original code: cImpExcel.ImportaFile(FALSE, 0);
                         end;
                     }
                     action("Todas las Hojas")
@@ -91,7 +92,8 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver cImpExcel.ImportaFile(TRUE, 0);
+                            // TODO: Manual review - ImportaFile exists, but its file selection, upload, workbook reading, and import body are disabled legacy client-file code.
+                            // Original code: cImpExcel.ImportaFile(TRUE, 0);
                         end;
                     }
                 }
@@ -183,7 +185,8 @@ page 75016 "Importaciones MdM"
     end;
 
     var
-        //TODO: Ver cImpExcel: Codeunit 75002;
+        // Original declaration preserved for the disabled Excel import actions above.
+        // cImpExcel: Codeunit 75002;
         cMaestrosMdm: Codeunit 75001;
         cFileMng: Codeunit 419;
         wBlobEnabled1: Boolean;

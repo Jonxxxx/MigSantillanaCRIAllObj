@@ -52,7 +52,9 @@ page 34002525 "Solicitud de etiquetas"
     }
 
     var
-    //TODO: Ver rObject: Record 2000000001;
-    //TODO: Ver cFDsPOS: Codeunit 34002503;
+        // TODO: Manual review - The legacy Object virtual table is unavailable in SaaS, and the DsPOS declaration has no caller in the empty print action.
+        // Original code preserved below.
+        // rObject: Record 2000000001;
+        // cFDsPOS: Codeunit 34002503;
 }
 

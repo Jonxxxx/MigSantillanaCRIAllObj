@@ -254,7 +254,8 @@ page 67077 "Contact List APS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver ShowCustVendBank;
+                        // TODO: Manual review - ShowCustVendBank is no longer a public Contact or Contact List method, and the intended related-record selection UI has no verified replacement.
+                        // Original code: ShowCustVendBank;
                     end;
                 }
 
@@ -421,7 +422,8 @@ page 67077 "Contact List APS"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CreateCustomer(ChooseCustomerTemplate);
+                            // TODO: Manual review - ChooseCustomerTemplate is unavailable; replacing the original template-selection flow with parameterless CreateCustomer is not verified as semantically equivalent.
+                            // Original code: CreateCustomer(ChooseCustomerTemplate);
                         end;
                     }
                     action(EXCCRIVendor)
@@ -524,7 +526,8 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5051;
+                // TODO: Manual review - Legacy Contact Company Summary report 5051 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5051;
             }
             action("Contact Labels")
             {
@@ -533,7 +536,8 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5056;
+                // TODO: Manual review - Legacy Contact Labels report 5056 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5056;
             }
             action("Questionnaire Handout")
             {
@@ -542,7 +546,8 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5066;
+                // TODO: Manual review - Legacy Questionnaire Handout report 5066 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5066;
             }
             action("Sales Cycle Analysis")
             {
@@ -550,7 +555,8 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5062;
+                // TODO: Manual review - Legacy Sales Cycle Analysis report 5062 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5062;
             }
         }
     }

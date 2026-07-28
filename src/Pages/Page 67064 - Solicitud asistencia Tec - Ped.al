@@ -771,9 +771,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 trigger OnAction()
                 var
-                //TODO: Ver cduWord: Codeunit 67001;
+                    // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
+                    // Original code: cduWord: Codeunit 67001;
                 begin
-                    //TODO: Ver cduWord.GeneraWordSolicitudAsistencia("No. Solicitud");
+                    // Original code: cduWord.GeneraWordSolicitudAsistencia("No. Solicitud");
                 end;
             }
             action("<Action1000000045>")
@@ -782,9 +783,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 trigger OnAction()
                 var
-                //TODO: Ver cduWord: Codeunit 67001;
+                    // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
+                    // Original code: cduWord: Codeunit 67001;
                 begin
-                    //TODO: Ver cduWord.GeneraWordPPFF("No. Solicitud");
+                    // Original code: cduWord.GeneraWordPPFF("No. Solicitud");
                 end;
             }
         }
@@ -966,9 +968,11 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     wSeReq := TRUE;
                 END;
 
-        //TODO: Ver Status::Cancelada, Status::Cancelada:
-        //TODO: Ver    BEGIN
-        //TODO: Ver    END;
+        // TODO: Manual review - The legacy CASE branch repeats Status::Cancelada and contains no behavior, so the intended missing status branch cannot be determined.
+        // Original code preserved below.
+        // Status::Cancelada, Status::Cancelada:
+        //     BEGIN
+        //     END;
 
         END;
     end;

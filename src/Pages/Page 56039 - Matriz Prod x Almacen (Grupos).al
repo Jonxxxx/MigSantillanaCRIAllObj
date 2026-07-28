@@ -17,7 +17,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         {
             group(GeneralG)
             {
-                //TODO: Ver 
+                // TODO: Manual review - The disabled warehouse-group field depends on the complete legacy matrix layout, whose record-array types and control structure are not valid in the current source.
                 /*
                 field("Grupo Almacen"; wGrupoAlmacen)
                 {
@@ -37,7 +37,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                 */
             }
 
-            //TODO: Ver
+            // TODO: Manual review - The disabled 32-column matrix layout contains incompatible record-array declarations and cannot be restored independently of a matrix-page redesign.
             /*
             repeater(General)
             {
@@ -471,7 +471,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         }
     }
 
-    //TODO: Ver
+    // TODO: Manual review - The disabled actions and matrix triggers depend on the incompatible legacy matrix block and obsolete numeric availability-page links.
     /*
     actions
     {

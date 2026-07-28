@@ -473,22 +473,26 @@ page 34002557 "Lista Notas Credito Pdtes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-    //TODO: Ver lcfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+        // Original code: lcfComunes: Codeunit 34002503;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;
 
         //+#217374
         wCostaRica := FALSE;
-        //TODO: Ver CASE lcFComunes.Pais OF
-        //TODO: Ver     9:
-        //TODO: Ver        wCostaRica := TRUE;
-        //TODO: Ver END;
+        // TODO: Manual review - Pais is not a compiled procedure, and numeric country value 9 must not be reinterpreted without verified option semantics.
+        // Original code preserved below.
+        // CASE lcFComunes.Pais OF
+        //     9:
+        //         wCostaRica := TRUE;
+        // END;
         //-#217374
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C3_Visible: Boolean;
         [InDataSet]

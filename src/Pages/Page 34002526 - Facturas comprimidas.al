@@ -633,7 +633,8 @@ page 34002526 "Facturas comprimidas"
                     Caption = 'Credit Cards Transaction Lo&g Entries';
                     Enabled = ESACC_C172_Enabled;
                     Image = CreditCardLog;
-                    //TODO: Ver RunObject = Page 829;
+                    // TODO: Manual review - Standard page 829 is unavailable and no semantically equivalent current page was verified.
+                    // Original code: RunObject = Page 829;
                     Visible = ESACC_C172_Visible;
                 }
             }
@@ -910,7 +911,8 @@ page 34002526 "Facturas comprimidas"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C3_Visible: Boolean;
         [InDataSet]
@@ -1374,7 +1376,7 @@ page 34002526 "Facturas comprimidas"
     var
         TempBoolean: Boolean;
     begin
-        //TODO: Ver
+        // TODO: Manual review - The disabled field-level security block depends on missing codeunit 14123801 and cannot be restored.
         /*
         IF OpenObject THEN BEGIN
             //+65232

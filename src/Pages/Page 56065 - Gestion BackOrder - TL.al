@@ -70,16 +70,14 @@ page 56065 "Gestion BackOrder - TL"
                 {
                     Editable = false;
                 }
-                //TODO: Ver 
-                /*
-                field(SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec);
+                field(AvailableQtyJX;
                     SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
                     Caption = 'Available Qty.';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }*/
+                }
                 field("Cantidad a Ajustar"; "Cantidad a Ajustar")
                 {
                 }
@@ -207,11 +205,11 @@ page 56065 "Gestion BackOrder - TL"
                                 Window.UPDATE(1, TL."Item No.");
                                 Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
 
-                                //TODO: Ver cantdisp := SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
+                                cantdisp := SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
                                 IF cantdisp > TL."Cantidad pendiente BO" THEN
-                                    TL."Cantidad a Anular" := 0;
-                                //TODO: Ver ELSE
-                                //TODO: Ver     TL."Cantidad a Anular" := TL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
+                                    TL."Cantidad a Anular" := 0
+                                ELSE
+                                    TL."Cantidad a Anular" := TL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL);
                                 TL."Cantidad a Ajustar" := TL."Cantidad pendiente BO" - TL."Cantidad a Anular";
                                 TL.MODIFY;
                             UNTIL TL.NEXT = 0;
@@ -276,8 +274,6 @@ page 56065 "Gestion BackOrder - TL"
                 IF TL."Cantidad pendiente BO" > 0 THEN BEGIN //+$003
 
                     //Se verifica que la linea no esté en Envios de Almacen
-                    //TODO: Ver 
-                    /*
                     WHSL.RESET;
                     WHSL.SETCURRENTKEY("Source Document", "Source No.");
                     WHSL.SETRANGE("Source No.", TL."Document No.");
@@ -289,7 +285,7 @@ page 56065 "Gestion BackOrder - TL"
                             //+$002
                             TL."Cantidad a Anular" := 0;
                             TL.MODIFY;
-                        END;*/
+                        END;
                     //-$002
 
                     //Se verifica que la linea no esté en Envios de Almacen
@@ -310,7 +306,7 @@ page 56065 "Gestion BackOrder - TL"
     end;
 
     var
-        SalesInfoPaneMgt: Codeunit 7171;
+        SalesInfoPaneMgt: Codeunit EXCCRISalesInfoPaneMgt;
         UserSetup: Record 91;
         Window: Dialog;
         CounterTotal: Integer;

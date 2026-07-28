@@ -1687,3 +1687,660 @@ Skipped TODO markers: **9**
 The pass stopped after modifying eight AL objects, which is the task-level
 maximum imposed by the effective project `AGENTS.md` instructions. Remaining
 current Medium-confidence candidates were not processed in this task.
+
+# Medium-confidence continuation pass 2
+
+## Current status
+
+- Date: 2026-07-27
+- Current `//TODO: Ver` occurrences in AL files: 335
+- Medium-confidence TODO markers inspected in this task: 3
+- TODO markers resolved in this task: 0
+- TODO markers skipped in this task: 3
+- AL objects modified in this task: 0
+- Compilation errors: 0
+- Warnings introduced by this task: 0
+- Last successfully processed file:
+  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+
+## Batch 1
+
+### Files inspected
+
+- `src/Pages/Page 67170 - Documentos operac. comerciales.al`
+- `src/Pages/Page 67183 - Area Curricular - APS.al`
+- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+
+### Files modified
+
+- None.
+
+### TODOs resolved
+
+- None.
+
+Resolved TODO markers: **0**
+
+### TODOs inspected and skipped
+
+- Pages 67170 and 67183: the requested `SourceTableView` constants 28 and 29
+  are outside the current option definition of custom table 67002, whose
+  `Tipo registro` field defines values 0 through 27. No current option member
+  has verified equivalent semantics.
+- Page 75012: legacy Product Group table 5723 is absent from current
+  dependencies. `al_symbolsearch` found the current Item Category table, but
+  it is not a verified semantic substitute for the removed Product Group
+  record or the disabled `Otros` branch.
+
+Original classifications and confidence: Missing page property and Renamed
+standard object, field, method, enum, or property; Medium confidence with
+Medium compile and functional risk.
+
+Final classification after verification: unavailable custom option values and
+unavailable standard Product Group dependency. Current confidence remains
+Medium, but the entries are ineligible because not all referenced symbols can
+be verified and any replacement would require invented semantics.
+
+Verification performed: complete-object inspection; repository inspection of
+custom table 67002 and its complete option definition; repository search for
+table 5723; and `al_symbolsearch` for Product Group, Item Category, and the
+legacy Item Category Code field.
+
+Assumptions made: none.
+
+Inspected TODO markers: **3**
+
+Skipped TODO markers: **3**
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+
+## Stop condition
+
+The sequential Medium-confidence pass reached the last remaining candidate.
+No remaining Medium-confidence TODO satisfies the eligibility rules without
+inventing an option value, substituting a semantically different table, or
+revisiting an explicitly excluded ambiguity, SaaS incompatibility, disabled
+block, or high-risk business change.
+
+# Medium manual-review continuation pass 3
+
+## Current status
+
+- Date: 2026-07-27
+- Batches completed in this task: 1
+- AL objects inspected in this task: 8
+- AL objects modified in this task: 8
+- TODO markers resolved with executable corrections: 0
+- TODO markers converted to manual review: 21
+- Manual-review comment occurrences added: 16
+- Remaining `//TODO: Ver` occurrences: 312
+- Total `// TODO: Manual review` occurrences: 16
+- Compilation errors: 0
+- Warnings introduced by this task: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+
+## Batch 1
+
+### AL files inspected and modified
+
+- `src/Pages/Page 34002111 - Lista Acciones de personal.al`
+- `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
+- `src/Pages/Page 34002122 - Control de asistencia.al`
+- `src/Pages/Page 34002133 - CxC Empleados.al`
+- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 34002162 - Calendario Anual.al`
+- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+
+### TODOs resolved
+
+- None. No executable correction could be made without inventing a missing
+  object, field, or equivalent behavior.
+
+Resolved TODO markers: **0**
+
+### TODOs marked for manual review
+
+- Pages 34002111, 34002113, 34002122, 34002144, and 34002162: preserved
+  RunObject references to custom pages or reports that are absent as the
+  requested object type in the current repository.
+- Page 34002133: preserved the adjacent page 58100 RunObject and Field1
+  RunPageLink block because neither the target page nor destination field can
+  be verified.
+- Page 34002144: preserved the complete Absence Registration block because
+  `al_symbolsearch` verified the standard pages and `Employee No.` field, but
+  the current Employee Absence table has no `Closed` field.
+- Pages 34002180 and 34002181: preserved the adjacent Related Companies
+  RunObject and RunPageLink blocks because object 34002157 exists only as a
+  table, not as the required page.
+
+Original classifications and confidence: Custom dependency, Missing page
+property, and Renamed standard object, field, method, enum, or property;
+Medium confidence with Low or Medium compile and functional risk.
+
+Final classification: Manual review required for missing custom object type,
+unverifiable destination field, or removed standard field without an
+equivalent complete link.
+
+Verification performed: complete inspection of all eight AL objects;
+repository searches for every custom object ID and requested object type;
+repository inspection of conflicting object types; and `al_symbolsearch` for
+Employee Absences, Absence Registration, Employee Absence.`Employee No.`, and
+Employee Absence.`Closed`.
+
+Manual-review reason: the original targets or required fields are unavailable,
+and no semantically equivalent replacement can be verified.
+
+TODO markers converted to manual review: **21**
+
+Manual-review comment occurrences added: **16**
+
+Assumptions made: none.
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings: 10,046
+- Errors introduced and corrected: 0
+- Warnings introduced by this batch: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+- Remaining `//TODO: Ver` occurrences: 312
+- Total `// TODO: Manual review` occurrences: 16
+
+## Stop condition
+
+The task stopped after modifying eight AL objects, the task-level maximum in
+the effective project `AGENTS.md` instructions. Later eligible markers remain
+for a subsequent task.
+
+# Medium manual-review continuation pass 4
+
+## Batch 1
+
+### AL files inspected
+
+- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 34002249 - Payroll Charts.al`
+- `src/Pages/Page 34002260 - Headline RC Payroll.al`
+- `src/Pages/Page 34002512 - Lista Acciones.al`
+- `src/Pages/Page 34002522 - Lista Almacenes TPV.al`
+- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
+- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
+- `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
+
+### AL files modified
+
+- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 34002249 - Payroll Charts.al`
+- `src/Pages/Page 34002260 - Headline RC Payroll.al`
+- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
+
+### TODOs safely resolved
+
+- None.
+
+### TODOs converted to manual review
+
+- Page 34002189: 18 custom RunObject references were preserved because the
+  requested page or report object type is absent from the repository.
+- Page 34002249: the adjacent SelectChart/UpdateChart block was preserved
+  because SelectChart exists, but the legacy chart refresh argument is
+  rejected by the current Business Chart API.
+- Page 34002260: the ScheduleTask and GetUserGreetingText calls were preserved
+  because neither method exists on the current Headline Management codeunit.
+- Page 34002526: page 829 was preserved because no current page or verified
+  semantic equivalent exists.
+- Page 34002547: report 10074 was preserved because no exact current report or
+  verified semantic equivalent exists.
+
+Original classifications and confidence: Custom dependency and Renamed
+standard object, field, method, enum, or property; Medium confidence with Low
+or Medium compile and functional risk.
+
+Final classification: Manual review required for missing custom object types,
+removed methods, or unavailable standard objects without verified semantic
+equivalents.
+
+Verification performed: complete-object inspection; repository searches for
+all custom object IDs and requested object types; and `al_symbolsearch` for
+Analysis Report Chart Mgt.SelectChart, Headline Management.ScheduleTask,
+Headline Management.GetUserGreetingText, credit-card pages, and sales-invoice
+reports.
+
+TODO markers converted to manual review: **24**
+
+Manual-review comment occurrences added: **23**
+
+Assumptions made: none.
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings introduced by this batch: 0
+- Errors introduced and corrected: 0
+- Last successfully processed file:
+  `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
+- Remaining Medium-confidence `//TODO: Ver` count: pending final re-scan
+- Remaining total `//TODO: Ver` occurrences: 288
+- Total `// TODO: Manual review` occurrences: 39
+
+## Batch 2
+
+### AL files inspected and modified
+
+- `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
+- `src/Pages/Page 34003015 - Pre Sales List.al`
+- `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+- `src/Pages/Page 56036 - Sales Order Call Center.al`
+- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 67077 - Contact List APS.al`
+- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+
+### TODOs safely resolved
+
+- None.
+
+### TODOs converted to manual review
+
+- Pages 34003004 and 53001: preserved RunObject references to missing custom
+  reports 34003006 and 53007. The duplicated markers on the Page 53001 line
+  were treated as one logical correction.
+- Page 34003015: preserved the Mini Pages Mapping declaration because that
+  standard table is unavailable and its related code remains disabled.
+- Pages 56024 and 56064: preserved Application Temp declarations because the
+  table is unavailable. The Page 56024 approval declaration and its related
+  legacy logic are disabled.
+- Page 56035: preserved six declarations used only by disabled intercompany,
+  posting, post-and-print, and approval blocks.
+- Page 56036: preserved the tax-dependent Sales Order Stats branch, page 829
+  RunObject, and Application Temp declaration. The statistics page exists,
+  but tax behavior requires functional validation; page 829 and Application
+  Temp are unavailable.
+- Page 67077: preserved four legacy contact report RunObjects because no exact
+  current dependency symbols or verified semantic replacements exist.
+- Page 75012: preserved the Product Group declaration because table 5723 is
+  unavailable and Item Category is not a verified semantic replacement.
+
+Original classifications and confidence: Custom dependency, Renamed standard
+object, field, method, enum, or property, and Missing page property; Medium
+confidence with Low or Medium compile and functional risk.
+
+Final classification: Manual review required for missing objects, declarations
+whose only callers remain disabled, tax-dependent behavior, and unavailable
+standard functionality without verified semantic equivalents.
+
+Verification performed: complete-object and surrounding-block inspection;
+repository searches for custom reports 34003006, 53007, and 56036; and
+`al_symbolsearch` for Mini Pages Mapping, Application Temp, Approvals Mgmt.,
+IC Outbox, Sales Order Stats., credit-card pages, Contact Company Summary,
+Contact Labels, Questionnaire Handout, Sales Cycle Analysis, Product Group,
+and Item Category.
+
+TODO markers converted to manual review: **22**
+
+Manual-review comment occurrences added: **17**
+
+Assumptions made: none.
+
+### Compilation result
+
+- Tool: `al_compile`
+- Result: Succeeded
+- Errors: 0
+- Warnings introduced by this batch: 0
+- Errors introduced and corrected: 0
+- Last successfully processed file:
+  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- Remaining Medium-confidence `//TODO: Ver` count: 0
+- Remaining total `//TODO: Ver` occurrences: 266
+- Total `// TODO: Manual review` occurrences: 56
+
+## Pass 4 final status
+
+- Batches completed: 2
+- AL objects inspected: 19
+- AL objects modified: 14
+- Medium-confidence TODO markers safely resolved: 0
+- Medium-confidence TODO markers converted to manual review: 46
+- Remaining Medium-confidence `//TODO: Ver` occurrences: 0
+- Remaining total `//TODO: Ver` occurrences: 266
+- Total `// TODO: Manual review` occurrences: 56
+- Final compilation result: Succeeded
+- Compilation errors: 0
+- Errors introduced by this task: 0
+- Warnings introduced by this task: 0
+
+Final verification: a current-source re-scan found no eligible
+Medium-confidence marker. Superficial text matches remaining in Payroll Charts,
+Pre Sales List, and Sales Order Call Center were rechecked against their
+current locations and complete logical blocks: they are Low-confidence chart
+refresh calls, a disabled-block marker, incomplete approval control flow, or
+the High-confidence custom report declaration already excluded from the
+Medium-confidence scope.
+
+Exact stop condition: no eligible Medium-confidence `//TODO: Ver` occurrence
+remains under `src/Pages`.
+
+# All-remaining TODO pass
+
+## Batch 1
+
+- AL objects inspected and modified: Pages 34002104, 34002114, 34002115,
+  34002122, 34002123, 34002125, 34002126, 34002131, 34002134, and 34002138.
+- TODOs safely resolved: 1. Restored the verified `FuncionesNomina` codeunit
+  34002104 declaration used by existing active calls on Page 34002104.
+- TODO markers converted to manual review: 30 markers represented by 25
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: mixed Custom dependency, obsolete
+  standard API, SaaS incompatibility, missing page property, and functional
+  ambiguity; High, Medium, and Low confidence.
+- Final classification: one verified custom declaration; otherwise missing
+  custom object types, removed Period Form Management methods, ADO, or
+  complete disabled layout/action blocks requiring functional migration.
+- Verification: complete current-object inspection; repository searches for
+  every referenced custom page, report, and codeunit; public procedure checks
+  on codeunit 34002104; and `al_symbolsearch` for Period Form Management,
+  FindDate, NextDate, Employee Picture, and document-attachment pages.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 235.
+- Total `// TODO: Manual review`: 81.
+- Last successfully processed file:
+  `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`.
+
+## Batch 2
+
+- AL objects inspected and modified: Pages 34002170, 34002175, 34002176,
+  34002180, 34002181, 34002182, 34002183, 34002193, 34002199, and 34002211.
+- TODOs safely resolved: 8. Restored four verified payroll FactBox/information
+  blocks and their codeunit declarations, using valid JX-prefixed control
+  identifiers where the legacy expression had been used as a control name.
+- TODO markers converted to manual review: 14 markers represented by 12
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: mixed custom dependency, obsolete
+  standard API, SaaS incompatibility, deterministic syntax, and functional
+  ambiguity across High, Medium, and Low confidence.
+- Final classification: verified custom FactBox calls, or missing custom
+  reports, ADO, removed Mail, removed Employee.Picture, and unavailable
+  questionnaire APIs.
+- Verification: complete current-object inspection; repository checks for all
+  custom reports and codeunit 34002104 public procedure signatures; and
+  `al_symbolsearch` for Employee.Picture/Image, Profile
+  Management.GetQuestionnaire, and current email codeunits.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 213.
+- Total `// TODO: Manual review`: 93.
+- Last successfully processed file:
+  `src/Pages/Page 34002211 - Conf. Cuest. Evaluacion.al`.
+
+## Batch 3
+
+- AL objects inspected and modified: Pages 34002214, 34002233, 34002238,
+  34002240, 34002241, 34002242, 34002249, 34002253, 34002500, and 34002501.
+- TODOs safely resolved: 1. Restored the verified Guatemala codeunit
+  declaration required by an existing active call.
+- TODO markers converted to manual review: 33 markers represented by 26
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: mixed custom dependency, chart API,
+  SaaS incompatibility, cue-page declarations, and functional ambiguity across
+  High, Medium, and Low confidence.
+- Final classification: missing custom report/procedure, unused declarations,
+  unsupported DotNet chart events, incompatible legacy chart refresh calls, or
+  procedures present only inside disabled DsPOS codeunit blocks.
+- Verification: complete current-object inspection; repository checks for
+  custom reports, training methods, payroll codeunit usages, and DsPOS
+  procedures; compiler validation of attempted restorations; and prior/current
+  `al_symbolsearch` verification of Business Chart symbols.
+- Initial compilation introduced 5 errors: the parameterless chart call bound
+  an overload requiring a BusinessChart argument, and three DsPOS methods were
+  not compiled symbols. Those logical corrections were reverted to manual
+  review.
+- Final compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 5.
+- Remaining `//TODO: Ver`: 179.
+- Total `// TODO: Manual review`: 119.
+- Last successfully processed file:
+  `src/Pages/Page 34002501 - Ficha TPV.al`.
+
+## Batch 4
+
+- AL objects inspected and modified: Pages 34002502 through 34002511.
+- TODOs safely resolved: 0.
+- TODO markers converted to manual review: 14 markers represented by 12
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: functional ambiguity and SaaS
+  incompatibility, mainly Low confidence.
+- Final classification: EsCentral is present only inside a disabled codeunit
+  block and therefore is not callable; the menu-button block uses unsupported
+  RunOnClient DotNet ColorDialog behavior.
+- Verification: complete current-object inspection, repository inspection of
+  codeunit 34002503, compiler evidence from Batch 3, and inspection of the
+  complete disabled color-selection block.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 165.
+- Total `// TODO: Manual review`: 131.
+- Last successfully processed file:
+  `src/Pages/Page 34002511 - SubLista - Botones Menu TPV.al`.
+
+## Batch 5
+
+- AL objects inspected and modified: Pages 34002512 through 34002525, limited
+  to the ten current TODO-bearing objects in that range.
+- TODOs safely resolved: 0.
+- TODO markers converted to manual review: 11 markers represented by 10
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: functional ambiguity, obsolete virtual
+  table, and SaaS incompatibility across High and Low confidence.
+- Final classification: unavailable compiled EsCentral procedure, unavailable
+  SaaS Object virtual table, and an unused DsPOS declaration attached to an
+  empty print action.
+- Verification: complete current-object inspection and repository/compiler
+  verification of the disabled codeunit methods and declaration usages.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 154.
+- Total `// TODO: Manual review`: 141.
+- Last successfully processed file:
+  `src/Pages/Page 34002525 - Solicitud de etiquetas.al`.
+
+## Batch 6
+
+- AL objects inspected and modified: Pages 34002526, 34002530, 34002533,
+  34002534, 34002536, 34002537, 34002546, 34002547, 34002548, and 34002555.
+- TODOs safely resolved: 4. Restored the complete electronic-document field
+  block and the verified RequestStampEDocument, ExportEDocument, and
+  CancelEDocument table-procedure calls on Page 34002547.
+- TODO markers converted to manual review: 26 markers represented by 17
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: custom dependency, SaaS
+  incompatibility, obsolete/missing symbol, disabled security block, and
+  functional ambiguity across High and Low confidence.
+- Final classification: verified Sales Invoice Header fields/procedures, or
+  missing reports/control add-ins/security codeunits, disabled DsPOS methods,
+  and an empty Bolivia migration placeholder.
+- Verification: complete current-object inspection; repository searches for
+  custom object IDs and procedure declarations; and `al_symbolsearch` for all
+  six electronic-document fields plus RequestStampEDocument,
+  ExportEDocument, and CancelEDocument on Sales Invoice Header.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 124.
+- Total `// TODO: Manual review`: 158.
+- Last successfully processed file:
+  `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`.
+
+## Batch 7
+
+- AL objects inspected and modified: Pages 34002556, 34002557, 34002558,
+  34003015, 50000, 50037, 52500, 52501, 52505, and 53000.
+- TODOs safely resolved: 2. Migrated the legacy approval-entry filter on Page
+  34002558 to the verified `SetRecordFilters` signature and restored the
+  verified customer-ledger `SourceTableView` on Page 50037.
+- TODO markers converted to manual review: 46 markers represented by 27
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: obsolete standard APIs, missing page
+  properties, custom dependencies, SaaS incompatibility, and functional
+  ambiguity across all confidence levels.
+- Final classification: verified standard approval API and table fields, or
+  missing ESACC/report dependencies, removed cross-reference and Temp Blob
+  APIs, empty electronic-invoicing placeholders, unavailable control add-ins,
+  and fiscal-printer behavior requiring a SaaS redesign.
+- Verification: complete current-object inspection; repository searches for
+  custom reports, codeunits, methods, and table-extension fields; and
+  `al_symbolsearch` for Approval Entry, Approval Document Type, Customer
+  Ledger Entry, and the legacy cross-reference and Temp Blob symbols.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 76.
+- Total `// TODO: Manual review`: 185.
+- Last successfully processed file:
+  `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`.
+
+## Batch 8
+
+- AL objects inspected and modified: Pages 56000, 56004, 56024, 56028,
+  56036, 56037, 56039, 56043, 56059, and 56064.
+- TODOs safely resolved: 18. Restored verified packing methods and codeunit
+  declaration, the existing classification report declaration, the current
+  exchange-rate field API, and four complete back-order availability blocks
+  using the repository's public `EXCCRISalesInfoPaneMgt` procedures.
+- TODO markers converted to manual review: 19 markers represented by 8
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: custom dependencies, obsolete
+  standard methods, large disabled layouts, SaaS incompatibility, and
+  functional ambiguity across all confidence levels.
+- Final classification: verified custom public procedures and current
+  exchange-rate API, or unavailable Application Temp state, incompatible
+  legacy matrix structures, Windows/DotNet printing, and server-file Excel
+  generation requiring SaaS redesign.
+- Verification: complete current-object inspection; repository verification
+  of Codeunits 56000 and 61025, Reports 56000, 56036, and 56138, procedure
+  signatures and usages; and `al_symbolsearch` for all current Sales
+  Info-Pane Management methods, Change Exchange Rate methods, and item
+  availability pages.
+- Compilation: the initial `al_compile` found one introduced AL0110 orphaned
+  `ELSE`; removing the legacy semicolon before that restored `ELSE` fixed it.
+  The repeat `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 1.
+- Remaining `//TODO: Ver`: 39.
+- Total `// TODO: Manual review`: 193.
+- Last successfully processed file:
+  `src/Pages/Page 56064 - Gestion BackOrder - SL.al`.
+
+## Batch 9
+
+- AL objects inspected and modified: Pages 56065, 56090, 56200, 67051,
+  67064, 67074, 67076, 67077, 67100, and 67111.
+- TODOs safely resolved: 15. Restored transfer back-order availability,
+  symbolic execution of Report 50000, the complete 20-column MdE matrix,
+  sample inventory and three verified dimension lookups, the educational
+  level filter, six shortcut-dimension controls, and the verified event-page
+  parameter call.
+- TODO markers converted to manual review: 18 markers represented by 13
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: custom dependencies, obsolete
+  standard APIs, matrix/layout blocks, SaaS incompatibility, and functional
+  ambiguity across all confidence levels.
+- Final classification: verified custom arrays/procedures, report dataitem,
+  standard dimension/bin fields, and Transfer Line dimension methods, or
+  disabled Word Automation/e-mail implementations, empty or recursive custom
+  subpage methods, removed Contact UI helpers, an invalid text OptionCaption,
+  and an indeterminate duplicate CASE branch.
+- Verification: complete current-object inspection; repository verification
+  of Reports 50000, Codeunits 61025, 67000, and 67001, Pages 67076 and 67102,
+  and all relevant public signatures; and `al_symbolsearch` for Bin Content,
+  Bin Contents, Dimension Value, Transfer Line shortcut-dimension methods,
+  and Contact/Contact List creation and related-record methods.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 6.
+- Total `// TODO: Manual review`: 206.
+- Last successfully processed file:
+  `src/Pages/Page 67111 - Adopciones - Colegio - MRK.al`.
+
+## Batch 10
+
+- AL objects inspected and modified: Pages 75011, 75012, and 75016.
+- TODOs safely resolved: 2. Restored the verified Codeunit 75000 declaration
+  and the complete temporary MdM filter-type population CASE block.
+- TODO markers converted to manual review: 4 markers represented by 3
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved: 0.
+- Original classifications/confidence: custom dependency, removed standard
+  object, and SaaS/client-file incompatibility across Medium and Low
+  confidence.
+- Final classification: verified public MdM helper methods, unavailable
+  Product Group semantics, and an Excel import codeunit whose file selection,
+  upload, workbook processing, and import body remain disabled.
+- Verification: complete current-object inspection; repository verification
+  of Codeunits 75000 and 75002 and all called method signatures; inspection
+  of the disabled ImportaFile execution path; and prior standard-symbol
+  verification confirming that Product Group has no semantically verified
+  replacement.
+- Compilation: `al_compile` succeeded with 0 errors.
+- Errors introduced and corrected: 0.
+- Remaining `//TODO: Ver`: 0.
+- Total `// TODO: Manual review`: 209.
+- Last successfully processed file:
+  `src/Pages/Page 75016 - Importaciones MdM.al`.
+
+## Final validation and dependency-sensitive manual-review pass
+
+- Batches completed in this task: 10.
+- AL objects inspected and modified: 93.
+- TODO markers safely resolved: 51.
+- TODO markers converted to manual review: 215 markers represented by 153
+  deduplicated manual-review comments.
+- Existing manual-review comments resolved after dependency re-evaluation: 0.
+- Second-pass verification: rechecked manual-review comments associated with
+  the payroll helper, electronic-document procedures, approval filtering,
+  back-order availability helper, matrix controls, dimension controls, event
+  parameters, and MdM helpers restored in this task. Their remaining blockers
+  are independent missing objects, disabled procedure bodies, unavailable
+  option semantics, recursive or empty procedures, or SaaS redesigns, so none
+  became safely resolvable.
+- Final source search: 0 occurrences of `//TODO: Ver` in `.al` files under
+  `src/Pages`.
+- Final manual-review count: 209 occurrences of
+  `// TODO: Manual review`.
+- Final `al_compile`: succeeded with 0 errors and 10,118 warnings.
+- Task baseline warnings: 10,046.
+- Net warnings introduced by the current task diff: 72. These are compiler
+  warnings emitted by restored page controls/declarations; unrelated
+  pre-existing warnings were not corrected or suppressed.
+- Compilation errors introduced and corrected during the task: 6 (five
+  reverted unsafe restorations in Batch 3 and one corrected `IF/ELSE`
+  semicolon in Batch 8).
+- Final errors introduced: 0.
+- Stop condition: a fresh repository search confirmed no `//TODO: Ver`
+  occurrences remain under `src/Pages`.

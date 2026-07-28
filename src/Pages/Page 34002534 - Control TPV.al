@@ -190,15 +190,18 @@ page 34002534 "Control TPV"
                 trigger OnAction()
                 var
                     recDia: Record 34002524;
-                //TODO: Ver repResumen: Report 34002505;
+                    // TODO: Manual review - Custom report 34002505 is unavailable as the required object type.
+                    // Original code: repResumen: Report 34002505;
                 begin
 
                     recDia.RESET;
                     recDia.SETRANGE("No. tienda", "No. tienda");
                     recDia.SETRANGE("No. TPV", "No. TPV");
                     recDia.SETRANGE(Fecha, Fecha);
-                    //TODO: Ver repResumen.SETTABLEVIEW(recDia);
-                    //TODO: Ver repResumen.RUNMODAL;
+                    // TODO: Manual review - Custom report 34002505 is unavailable, so its filtered modal execution cannot be restored.
+                    // Original code preserved below.
+                    // repResumen.SETTABLEVIEW(recDia);
+                    // repResumen.RUNMODAL;
                 end;
             }
         }
