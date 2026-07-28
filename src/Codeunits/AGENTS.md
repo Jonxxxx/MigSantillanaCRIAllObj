@@ -59,14 +59,68 @@ When processing comments matching `//TODO: Ver`:
 - Deduplicate audit entries that refer to the same file, line, and TODO marker.
 Count the actual current source occurrences, not duplicated audit entries.
 
-## Pages
+## Codeunits
 
-- Preserve page type, source table, layout structure, actions, visibility, editability, and business logic.
-- Add `ApplicationArea = All;` to fields and actions when missing and appropriate.
-- Add an English `ToolTip` only when its purpose can be inferred safely.
-- Do not invent captions, permissions, RunObject targets, RunPageLink filters, or SubPageLink values.
-- Do not convert a page to a page extension unless explicitly requested.
-- Do not change UsageCategory without reviewing how the page is opened.
+- Preserve the existing functional behavior, procedure flow, validations, filters, calculations, record modifications, and transaction boundaries.
+- Preserve the codeunit ID, name, subtype, `TableNo`, `Permissions`, `SingleInstance`, and event-subscriber structure unless an explicit task requires a change.
+- Do not change public procedure names, parameter order, parameter types, `var` modifiers, return types, or accessibility unless required by a verified Business Central v27 API change.
+- Before modifying a public procedure, search the complete repository for all callers and subscribers.
+- Preserve `OnRun`, `OnCheckPreconditionsPerCompany`, `OnInstallAppPerCompany`, upgrade triggers, and any other special triggers.
+- Preserve existing `COMMIT`, `LOCKTABLE`, `FINDSET`, `MODIFY`, `INSERT`, `DELETE`, `VALIDATE`, `TRANSFERFIELDS`, `CHANGECOMPANY`, and `TryFunction` behavior unless the task explicitly requires a reviewed functional change.
+- Never add, remove, or move a `COMMIT` without documenting the transactional impact.
+- Do not replace `VALIDATE(Field, Value)` with direct assignment unless equivalent behavior is proven.
+- Do not replace `INSERT(TRUE)`, `MODIFY(TRUE)`, `DELETE(TRUE)`, or `RENAME` with alternatives that bypass table triggers.
+- Preserve temporary-record semantics and verify whether multiple temporary record variables require independent buffers.
+- Preserve record filters, keys, sorting, marked records, security filters, and company context.
+- Verify `SetRange`, `SetFilter`, `SetCurrentKey`, `FindFirst`, `FindSet`, `FindLast`, `Next`, `Get`, and `IsEmpty` changes against the surrounding loop and business logic.
+- Preserve posting, document numbering, dimensions, item tracking, reservations, VAT, taxes, withholding, currency, inventory costing, and financial behavior.
+- Treat posting codeunits and subscribers to posting events as high-risk.
+- Do not invent standard events, integration events, business events, object IDs, methods, fields, enums, interfaces, or APIs.
+- Before changing an event subscriber, verify:
+
+  - The publisher object.
+  - The exact event name.
+  - The current parameter list.
+  - `var` parameters.
+  - `SkipOnMissingLicense`.
+  - `SkipOnMissingPermission`.
+  - Whether the event is obsolete or replaced.
+- Preserve subscriber idempotency and ensure that repeated event execution does not duplicate records, dimensions, payments, entries, notifications, or external calls.
+- Do not subscribe to a broader or earlier event merely to make the code compile.
+- Do not remove an event subscriber because its publisher cannot be found without first checking Business Central v27 dependency symbols.
+- Replace obsolete standard APIs only when the current replacement and its behavior are verified through `al_symbolsearch`.
+- Prefer Business Central SaaS-compatible APIs and patterns.
+- Do not restore or introduce:
+
+  - DotNet.
+  - Automation.
+  - ADO.
+  - Direct SQL access.
+  - Windows-client APIs.
+  - `[RunOnClient]`.
+  - Server file-system paths.
+  - Server-side file access.
+  - OnPrem-only APIs.
+- For file handling, verify supported `InStream`, `OutStream`, `Temp Blob`, `UploadIntoStream`, and `DownloadFromStream` patterns.
+- For external integrations, preserve payload structure, authentication requirements, idempotency, timeout handling, error handling, and response processing.
+- Do not introduce secrets, tokens, connection strings, client secrets, certificates, or real customer-sensitive information.
+- Do not change integration endpoints or payload contracts unless explicitly requested.
+- For `HttpClient`, verify that requests are SaaS-compatible and that the extension is expected to have outbound HTTP access enabled.
+- Do not silently replace synchronous integration behavior with asynchronous behavior, or vice versa.
+- For obsolete No. Series functionality, use the current `"No. Series"` APIs only after verifying whether the original code consumes, previews, or tests the next number.
+- Preserve the difference between generating a number and previewing the next number.
+- For dimension API changes, verify the current `Dimension Management` signatures and preserve all original dimension sources.
+- For posting buffer and posting API changes, verify the exact current standard codeunit, temporary table, and procedure signature.
+- For removed standard tables or codeunits, do not select a similarly named replacement without confirming semantic equivalence.
+- Do not suppress compiler errors or warnings by commenting out executable business logic.
+- Do not create empty procedures, placeholder return values, or unconditional success responses merely to make the project compile.
+- When a TODO cannot be resolved safely, preserve the original code and replace the marker with:
+  `// TODO: Manual review - <specific technical or functional reason>`
+- All new comments must be written in English.
+- Process no more than 10 AL codeunit objects per compilation batch.
+- The 10-object limit applies per batch, not to the complete task.
+- After every successful batch, continue automatically with the next batch.
+- Stop only when no `//TODO: Ver` remains under `src/Codeunits`; every original marker must have been either safely resolved or explicitly converted to manual review.
 
 ## Validation
 

@@ -53968,6 +53968,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Santillana - Method cuCreaCupones - NamedType Error009</note>
         </trans-unit>
+        <trans-unit id="Codeunit 3412244321 - Method 1097316946 - NamedType 447844760" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No existen usuarios configurados para recibir correos de confirmación de pedidos.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Santillana - Method EnviaAConfirmarPedidoVenta - NamedType NoRecipientsErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3412244321 - Method 1097316946 - NamedType 1461464388" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No fue posible enviar el correo de confirmación del pedido %1.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Santillana - Method EnviaAConfirmarPedidoVenta - NamedType EmailNotSentErr</note>
+        </trans-unit>
         <trans-unit id="Codeunit 3412244321 - Method 3231408208 - NamedType 3805845379" size-unit="char" translate="yes" xml:space="preserve">
           <source>There is nothing to post</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -56483,6 +56493,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BackOrders Sin Disp. Ped. Vta - Control Nombre Cliente - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 1578809234 - Control 3948916233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Qty. Available</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BackOrders Sin Disp. Ped. Vta - Control QtyAvailableJX - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1578809234 - Action 2727220514 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Abrir Documento</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -56537,6 +56552,11 @@
           <source>Reading  #1########## @2@@@@@@@@@@@@@</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page BackOrders Sin Disp. Transfer. - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Page 2298521881 - Control 180184993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Available Qty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page BackOrders Sin Disp. Transfer. - Control AvailableQtyJX - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2298521881 - Action 110175469 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;Abrir Documento</source>
@@ -57108,6 +57128,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Captura Productos - Method InsertaProducto - NamedType lText001</note>
         </trans-unit>
+        <trans-unit id="Page 3377910009 - Control 1596557021 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Disponibilidad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Captura Productos - Control AvailabilityJX - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3377910009 - Control 44114117 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Marked</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -57342,6 +57367,16 @@
           <source>Editor code, name</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Colegio - Adopciones Cab - Control Cod. Editorial - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2286458250 - Control 2031785062 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Level Filter</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Colegio - Adopciones Cab - Control Filtro Nivel - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2286458250 - Control 1867322906 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Colegio - Adopciones Cab - Control SampleInventoryJX - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2286458250 - Action 1979130670 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>&amp;School</source>
@@ -59578,6 +59613,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - Control Vacation - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2933308700 - Control 3599093828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>vacation to expire</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - Control FuncionesNomVacacionesporVencer - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3952366577 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payroll Activities</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -59603,6 +59643,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - RH - Control Human Resource - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3952366577 - Control 1509952335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Empl. anniversary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - RH - Control FuncionesNomAniversarioEmpleados - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 3952366577 - Control 3324647799 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payroll</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -59612,6 +59657,11 @@
           <source>Vacation</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - RH - Control Vacation - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3952366577 - Control 3599093828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>vacation to expire</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Activities - RH - Control FuncionesNomVacacionesporVencer - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 707466233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee fund's activities</source>
@@ -59792,6 +59842,11 @@
           <source>Human Resource</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM HR Activities - Control Human Resource - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2913176262 - Control 1509952335 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Empl. anniversary</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM HR Activities - Control FuncionesNomAniversarioEmpleados - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 171960279 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Trailing Sales Orders</source>
@@ -60973,6 +61028,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Vacaciones Activities - Control Vacation - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 3851637460 - Control 3599093828 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>vacation to expire</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page DSNOM Vacaciones Activities - Control FuncionesNomVacacionesporVencer - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1815009141 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Edition</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -61192,6 +61252,31 @@
           <source>Employee data</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2000297771 - Control 3186025867 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Personnel actions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Control Busca Nov - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2000297771 - Control 182360014 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dimensions</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Control JXDimensionsCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2000297771 - Control 3909519904 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Job entries</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Control JXJobEntriesCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2000297771 - Control 1000234109 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Qualifications</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Control JXQualificationsCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2000297771 - Control 1269409489 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Salary History</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Employee Info FactBox - Control JXSalaryHistoryCount - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 681014764 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee List</source>
@@ -61797,6 +61882,11 @@
           <source>Statistics</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Facturas Venta Regis POS - Action Statistics - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 1304715374 - Control 459019446 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Period End</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Fechas - Control Period End - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3695256997 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
           <source>Userid %1 does not have the permission to approbe</source>
@@ -62808,6 +62898,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gestion BackOrder - SL - NamedType Text006</note>
         </trans-unit>
+        <trans-unit id="Page 2771935974 - Control 3948916233 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Qty. Available</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gestion BackOrder - SL - Control QtyAvailableJX - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 2771935974 - Action 537837875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>F&amp;unctions</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -62872,6 +62967,11 @@
           <source>Reading  #1########## @2@@@@@@@@@@@@@</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Gestion BackOrder - TL - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Page 1676407711 - Control 180184993 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Available Qty.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Gestion BackOrder - TL - Control AvailableQtyJX - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1676407711 - Action 537837875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>F&amp;unctions</source>
@@ -63148,6 +63248,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Historico Préstamos - Action &amp;Imprimir - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 2588748975 - Control 2780874720 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre Campo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Imp.MdM Campos - Control FieldCaption - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 180580200 - Control 205806341 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Campos</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -63193,6 +63298,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Informacion de nominas - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 733508557 - Control 252495551 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Customer No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Informacion de nominas - Control Novedades - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1320715607 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Informacion del empleado</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -63212,6 +63322,11 @@
           <source>Sample Inventory</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Inventarios Colegios ListPart - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2651550446 - Control 1345988989 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Inventarios Colegios ListPart - Control FuncAPSColCalcInvMuestrasNo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 1078435631 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>IT-1 Anexo A</source>
@@ -63972,6 +64087,11 @@
           <source>Print</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Lista historico nominas - Action Print - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2751469257 - Control 940074596 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre Tabla</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Lista Imp.Mdm Tabla - Control Campo - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2751469257 - Action 4051196238 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Tabla</source>
@@ -65013,6 +65133,16 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Payroll Information FactBox - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Page 457841168 - Control 4018149064 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Payroll Information FactBox - Control JXPayrollCount - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 457841168 - Control 7571195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Tax balance</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Payroll Information FactBox - Control JXTaxBalance - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Page 1519439076 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Letters</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -65182,6 +65312,11 @@
           <source>Asistentes</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Programac. Talleres y Eventos - Action Asistentes - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 3723855742 - Control 2991239368 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Sample Inventory</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Promotor - Planif. Visitas - Control SampleInventory - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 3723855742 - Action 537837875 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>F&amp;unctions</source>
@@ -65777,6 +65912,16 @@
           <source>Pla&amp;nning</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Sales Order Call Center  List - Action Pla&amp;nning - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2781464895 - Action 2995463547 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prepa&amp;yment Invoices</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Order Call Center  List - Action Prepa&amp;yment Invoices - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2781464895 - Action 4201453209 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prepayment Credi&amp;t Memos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Sales Order Call Center  List - Action Prepayment Credi&amp;t Memos - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2781464895 - Action 2787584647 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>S&amp;hipments</source>
@@ -66492,6 +66637,11 @@
           <source>Middle Name/Initials</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Temporary Employee Card OJO - Control Middle Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Page 2359102169 - Control 3136267648 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Payroll Information</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Temporary Employee Card OJO - Control NomInfoPanel - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 2359102169 - Control 2758253868 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Personal</source>
