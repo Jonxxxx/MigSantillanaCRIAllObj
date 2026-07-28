@@ -17,7 +17,8 @@ codeunit 34002135 "Genera formatos elect. legales"
         TipoNom: Record 34002158;
         EmpresaCot: Record 34002100;
         FuncNom: Codeunit 34002104;
-        //TODO: Ver ClientTypeManagement: Codeunit 4;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: ClientTypeManagement: Codeunit 4;
         Archivo: File;
         PathENV: Text;
         FileVar: File;
@@ -32,7 +33,8 @@ codeunit 34002135 "Genera formatos elect. legales"
         Counter: Integer;
         NombreArchivo: Text[1024];
         NombreArchivo2: Text[1024];
-        //TODO: Ver FileSystemObject: Automation;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: FileSystemObject: Automation;
         DestinationFileName: Text[200];
         PrimeraVez: Boolean;
         SecuenciaTrans: Code[10];
@@ -87,7 +89,8 @@ codeunit 34002135 "Genera formatos elect. legales"
         IF COPYSTR(ConfNomina."Path Archivos Electronicos", STRLEN(ConfNomina."Path Archivos Electronicos"), 1) <> '\' THEN
             ConfNomina."Path Archivos Electronicos" += '\';
 
-        //TODO: Ver PathENV := TEMPORARYPATH;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: PathENV := TEMPORARYPATH;
         FechaTrans := HCN.GETRANGEMAX(Periodo);
 
         Fecha.RESET;
@@ -97,16 +100,19 @@ codeunit 34002135 "Genera formatos elect. legales"
 
         NombreArchivo := 'AM_' + RNC + '_' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Year4>') + '.txt';
         NombreArchivo2 := NombreArchivo;
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Creo la cabecera
         Lin_Body := 'E';
         Lin_Body += 'AM';
         Lin_Body += FORMAT(Blanco, 11 - STRLEN(RNC), '<Filler character, >') + RNC;
         Lin_Body += FORMAT(FechaTrans, 0, '<Month,2><Year4>');
-        //TODO: Ver Archivo.WRITE(Lin_Body);
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: Archivo.WRITE(Lin_Body);
 
         FechaTrans := HCN.GETRANGEMIN(Periodo);
 
@@ -326,7 +332,8 @@ codeunit 34002135 "Genera formatos elect. legales"
                 //Lin_Body += PADSTR('',16 - STRLEN(FORMAT(Preaviso_Cesantia,0,'<Integer><Decimals,3>')),CERO) + FORMAT(IngresosExentos,0,'<Integer><Decimals,3>');
                 Lin_Body += '030000000000000.00';
 
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+                // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+                // Original code: Archivo.WRITE(Lin_Body);
 
                 CantLineas += 1;
             END;
@@ -338,10 +345,13 @@ codeunit 34002135 "Genera formatos elect. legales"
         Lin_Body += 'S';
         CantLineas += 1;
         Lin_Body += PADSTR('', 6 - STRLEN(FORMAT(CantLineas, 0, '<Integer>')), CERO) + FORMAT(CantLineas, 0, '<Integer>');
-        //TODO: Ver Archivo.WRITE(Lin_Body);
-        //TODO: Ver Archivo.CLOSE;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.WRITE(Lin_Body);
+        // Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: NombreArchivo := TEMPORARYPATH + NombreArchivo;
         NombreArchivo2 := ConfNomina."Path Archivos Electronicos" + 'TSS\' + NombreArchivo2;
         RenameFile;
 
@@ -370,7 +380,8 @@ codeunit 34002135 "Genera formatos elect. legales"
             ConfNomina."Path Archivos Electronicos" += '\';
 
         FechaTrans := DMY2DATE(1, DGTMes, DGTAno);
-        //TODO: Ver PathENV := TEMPORARYPATH;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: PathENV := TEMPORARYPATH;
 
         Fecha.RESET;
         Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
@@ -379,16 +390,19 @@ codeunit 34002135 "Genera formatos elect. legales"
 
         NombreArchivo := 'DGT3-' + RNC + '-' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Year4>') + '.txt';
         NombreArchivo2 := NombreArchivo;
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Creo la cabecera
         Lin_Body_DGT := 'E';
         Lin_Body_DGT += 'T3';
         Lin_Body_DGT += FORMAT(Blanco, 11 - STRLEN(RNC), '<Filler character, >') + RNC;
         Lin_Body_DGT += FORMAT(FechaTrans, 0, '<Month,2><Year4>');
-        //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: Archivo.WRITE(Lin_Body_DGT);
 
         Empl.RESET;
         Empl.SETRANGE("Employment Date", Fecha."Period Start", Fecha."Period End");
@@ -434,8 +448,10 @@ codeunit 34002135 "Genera formatos elect. legales"
             Lin_Body_DGT += FORMAT(Empl."Birth Date", 0, '<Day,2><Month,2><Year4>');
             Lin_Body_DGT += PADSTR('', 16 - STRLEN(FORMAT(SalarioCotizable, 0, '<Integer><Decimals,3>')), CERO) + FORMAT(SalarioCotizable, 0, '<Integer><Decimals,3>');
             Lin_Body_DGT += FORMAT(Empl."Employment Date", 0, '<Day,2><Month,2><Year4>');
-            //TODO: Ver Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 6 - STRLEN(Empl."Puesto Segun MT")) + Empl."Cod. Puesto MT", 1, 6);
-            //TODO: Ver Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 150 - STRLEN(Empl."Puesto Segun MT")) + Empl."Puesto Segun MT", 1, 150);
+            // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+            // Original code preserved below.
+            // Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 6 - STRLEN(Empl."Puesto Segun MT")) + Empl."Cod. Puesto MT", 1, 6);
+            // Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 150 - STRLEN(Empl."Puesto Segun MT")) + Empl."Puesto Segun MT", 1, 150);
             //Para calcular las vacaciones
             IF DATE2DMY(Empl."Employment Date", 3) = DATE2DMY(TODAY, 3) THEN BEGIN
                 Empl."Employment Date" := CALCDATE(CalcFecha, Empl."Employment Date");
@@ -449,7 +465,8 @@ codeunit 34002135 "Genera formatos elect. legales"
             Lin_Body_DGT += PADSTR(Blanco, 6); //Turno
             Lin_Body_DGT += PADSTR(Blanco, 2) + COPYSTR(EC."ID RNL", MAXSTRLEN(EC."ID RNL") - 4, 5); // RNL
             Lin_Body_DGT += PADSTR(Blanco, 150); //Observacion
-            //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
+            // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+            // Original code: Archivo.WRITE(Lin_Body_DGT);
             CantLineas += 1;
 
         UNTIL Empl.NEXT = 0;
@@ -460,12 +477,16 @@ codeunit 34002135 "Genera formatos elect. legales"
         Lin_Body_DGT += 'S';
 
         Lin_Body_DGT += PADSTR('', 6 - STRLEN(FORMAT(CantLineas, 0, '<Integer>')), CERO) + FORMAT(CantLineas, 0, '<Integer>');
-        //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
-        //TODO: Ver Archivo.CLOSE;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.WRITE(Lin_Body_DGT);
+        // Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: NombreArchivo := TEMPORARYPATH + NombreArchivo;
         NombreArchivo2 := ConfNomina."Path Archivos Electronicos" + 'DGT\' + NombreArchivo2;
-        //TODO: Ver RenameFile;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: RenameFile;
         MESSAGE('%1 %2 %3', Text002, NombreArchivo2, Text003);
     end;
 
@@ -493,7 +514,8 @@ codeunit 34002135 "Genera formatos elect. legales"
             ConfNomina."Path Archivos Electronicos" += '\';
 
         FechaTrans := DMY2DATE(1, DGTMes, DGTAno);
-        //TODO: Ver PathENV := TEMPORARYPATH;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: PathENV := TEMPORARYPATH;
 
         Fecha.RESET;
         Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
@@ -502,16 +524,19 @@ codeunit 34002135 "Genera formatos elect. legales"
 
         NombreArchivo := 'DGT4-' + RNC + '-' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Year4>') + '.txt';
         NombreArchivo2 := NombreArchivo;
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
         //Creo la cabecera
         Lin_Body_DGT := 'E';
         Lin_Body_DGT += 'T4';
         Lin_Body_DGT += FORMAT(Blanco, 11 - STRLEN(RNC), '<Filler character, >') + RNC;
         Lin_Body_DGT += FORMAT(FechaTrans, 0, '<Month,2><Year4>');
-        //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: Archivo.WRITE(Lin_Body_DGT);
 
         Empl.RESET;
         Empl.SETRANGE("Employment Date", Fecha."Period Start", Fecha."Period End");
@@ -585,7 +610,8 @@ codeunit 34002135 "Genera formatos elect. legales"
                 ELSE
                     Lin_Body_DGT += '00000000';
                 Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 6 - STRLEN(Empl."Cod. Puesto MT")) + Empl."Cod. Puesto MT", 1, 6);
-                //TODO: Ver Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 150 - STRLEN(Empl."Puesto Segun MT")) + Empl."Puesto Segun MT", 1, 150);
+                // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+                // Original code: Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 150 - STRLEN(Empl."Puesto Segun MT")) + Empl."Puesto Segun MT", 1, 150);
                 //Para calcular las vacaciones
                 IF DATE2DMY(Empl."Employment Date", 3) = DATE2DMY(TODAY, 3) THEN BEGIN
                     Empl."Employment Date" := CALCDATE(CalcFecha, Empl."Employment Date");
@@ -594,12 +620,14 @@ codeunit 34002135 "Genera formatos elect. legales"
 
                 Lin_Body_DGT += PADSTR(Blanco, 6); //Turno
                 Lin_Body_DGT += PADSTR(Blanco, 2) + COPYSTR(EC."ID RNL", MAXSTRLEN(EC."ID RNL") - 4, 5); // RNL
-                //TODO: Ver Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 3 - STRLEN(Empl."Cod. Nacionalidad MT")) + Empl."Cod. Nacionalidad MT", 1, 3);
+                // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+                // Original code: Lin_Body_DGT += COPYSTR(PADSTR(Blanco, 3 - STRLEN(Empl."Cod. Nacionalidad MT")) + Empl."Cod. Nacionalidad MT", 1, 3);
                 IF HAP."Fecha accion" <> 0D THEN
                     Lin_Body_DGT += FORMAT(HAP."Fecha accion", 0, '<Day,2><Month,2><Year4>')
                 ELSE
                     Lin_Body_DGT += '00000000';
-                //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
+                // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+                // Original code: Archivo.WRITE(Lin_Body_DGT);
                 CantLineas += 1;
             END;
         UNTIL Empl.NEXT = 0;
@@ -610,24 +638,33 @@ codeunit 34002135 "Genera formatos elect. legales"
         Lin_Body_DGT += 'S';
 
         Lin_Body_DGT += PADSTR('', 6 - STRLEN(FORMAT(CantLineas, 0, '<Integer>')), CERO) + FORMAT(CantLineas, 0, '<Integer>');
-        //TODO: Ver Archivo.WRITE(Lin_Body_DGT);
-        //TODO: Ver Archivo.CLOSE;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // Archivo.WRITE(Lin_Body_DGT);
+        // Archivo.CLOSE;
 
-        //TODO: Ver  IF ClientTypeManagement.GetCurrentClientType = CLIENTTYPE::Windows THEN BEGIN
-        //TODO: Ver  NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // IF ClientTypeManagement.GetCurrentClientType = CLIENTTYPE::Windows THEN BEGIN
+        // NombreArchivo := TEMPORARYPATH + NombreArchivo;
         NombreArchivo2 := ConfNomina."Path Archivos Electronicos" + 'DGT\' + NombreArchivo2;
-        //TODO: Ver RenameFile;
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: RenameFile;
         MESSAGE('%1 %2 %3', Text002, NombreArchivo2, Text003);
-        //TODO: Ver END
-        //TODO: Ver    ELSE
-        //TODO: Ver        MESSAGE(Text004);
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code preserved below.
+        // END
+        // ELSE
+        // MESSAGE(Text004);
     end;
 
     procedure RenameFile()
     var
-    //TODO: Ver FileManagement: Codeunit 419;
+    // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+    // Original code: FileManagement: Codeunit 419;
     begin
-        //TODO: Ver FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
+        // TODO: Manual review - The legal-format export uses Automation and server-file creation, writing, renaming, and download behavior that requires a verified SaaS stream redesign.
+        // Original code: FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
     end;
 }
 

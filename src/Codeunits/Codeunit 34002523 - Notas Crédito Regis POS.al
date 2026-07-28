@@ -16,7 +16,8 @@ codeunit 34002523 "Notas Crédito Regis POS"
 
         recTPV.RESET;
         recTPV.SETCURRENTKEY("Usuario windows");
-        //TODO: Ver recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+        // TODO: Manual review - The Windows-user filter depends on a disabled Windows identity procedure and cannot be restored in Business Central Online.
+        // Original code: recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
         IF NOT recTPV.FINDFIRST THEN BEGIN
 
             IF recTienda.FINDSET THEN BEGIN

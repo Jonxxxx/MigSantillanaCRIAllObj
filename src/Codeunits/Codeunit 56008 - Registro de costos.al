@@ -57,7 +57,8 @@ codeunit 56008 "Registro de costos"
                     IF PostValueEntrytoGL.FINDFIRST THEN BEGIN
                         PostInventoryCosttoGL.InitializeRequest(0, 'COSTOS-' + FORMAT(NORMALDATE(Date."Period End")), TRUE);
                         PostInventoryCosttoGL.SETTABLEVIEW(PostValueEntrytoGL);
-                        //TODO: Ver PostInventoryCosttoGL.SAVEASPDF('\\SAZPBIBCP1\Reporte de Costos\costos-' + FORMAT(Date."Period End", 0, '<Day,2><Month,2><Year4>') + '.pdf');
+                        // TODO: Manual review - Report PDF output to a network server path is unsupported in Business Central Online and requires a defined download or storage workflow.
+                        // Original code: PostInventoryCosttoGL.SAVEASPDF('\\SAZPBIBCP1\Reporte de Costos\costos-' + FORMAT(Date."Period End", 0, '<Day,2><Month,2><Year4>') + '.pdf');
                         CLEAR(PostInventoryCosttoGL);
                         //PostInventoryCosttoGL.RUN;
                         COMMIT;

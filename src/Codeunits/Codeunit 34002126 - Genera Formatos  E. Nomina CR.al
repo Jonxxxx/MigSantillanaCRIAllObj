@@ -115,7 +115,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
             ConfNomina."Path Archivos Electronicos" += '\';
 
         FechaTrans := GHCN."Fecha Pago";
-        //TODO: Ver PathENV := TEMPORARYPATH;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: PathENV := TEMPORARYPATH;
 
         NombreArchivo := 'PE' + Empresa."Identificador Empresa" + '01' + FORMAT(FechaTrans, 0, '<Month,2>') + FORMAT(FechaTrans, 0, '<Day,2>') + DELCHR(FORMAT(TIME), '=', ' ampmAMPM:.');
 
@@ -149,9 +150,11 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
             SecuenciaTrans := '0000000';
         END;
 
-        //TODO: Ver Archivo.TEXTMODE(TRUE);
-        //TODO: Ver Archivo.CREATE(PathENV + NombreArchivo);
-        //TODO: Ver Archivo.TRUNC;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code preserved below.
+        // Archivo.TEXTMODE(TRUE);
+        // Archivo.CREATE(PathENV + NombreArchivo);
+        // Archivo.TRUNC;
 
 
         HCN.RESET;
@@ -212,7 +215,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                     Lin_Body += FORMAT(Blanco, 12);
                     Lin_Body += '000000';
                     Lin_Body += FORMAT(Blanco, 158);
-                    //TODO: Ver Archivo.WRITE(Lin_Body);
+                    // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                    // Original code: Archivo.WRITE(Lin_Body);
 
                     //Creo la linea de la cuenta de la empresa
                     CLEAR(Lin_Body);
@@ -233,7 +237,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                     Lin_Body += FORMAT(Blanco, 35); //Filler
                     Lin_Body += FORMAT(Empl."E-Mail", 50);
 
-                    //TODO: Ver Archivo.WRITE(Lin_Body);
+                    // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                    // Original code: Archivo.WRITE(Lin_Body);
                 END;
 
                 //Creo el detalle
@@ -269,7 +274,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                 ELSE
                     Lin_Body += FORMAT(Empl."E-Mail", 50);
 
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+                // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                // Original code: Archivo.WRITE(Lin_Body);
 
                 Contador := Contador + 1;
             END
@@ -287,7 +293,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
 
                     Lin_Body += ';' + FORMAT(Total, 0, '<Integer><Decimals,3>');
                     Lin_Body += ';' + STRSUBSTNO(Text002, GHCN.Inicio, GHCN.Fin);
-                    //TODO: Ver Archivo.WRITE(Lin_Body);
+                    // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                    // Original code: Archivo.WRITE(Lin_Body);
                     Contador := Contador + 1;
                 END
                 ELSE
@@ -321,7 +328,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                         Concepto := STRSUBSTNO(Text002, GHCN.Inicio, GHCN.Fin);
                         Lin_Body += FORMAT(COPYSTR(Concepto, 1, 55), 55);
 
-                        //TODO: Ver Archivo.WRITE(Lin_Body);
+                        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                        // Original code: Archivo.WRITE(Lin_Body);
                         Contador := Contador + 1;
                     END
                     ELSE
@@ -358,7 +366,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                                 Lin_Body += FORMAT(FechaTrans, 0, '<Month,2><Day,2><Year4>'); //Fecha efectividad MMDDYYYY
                                 Lin_Body += FORMAT(CounterTotal, 6, '<Integer,6><Filler Character,0>');
                                 Lin_Body += FORMAT(COPYSTR(Empresa."Nombre Empresa cotizacion", 1, 30), 30, '<Filler Character, >');
-                                //TODO: Ver Archivo.WRITE(Lin_Body);
+                                // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                                // Original code: Archivo.WRITE(Lin_Body);
                             END;
 
                             //Creo el detalle
@@ -376,7 +385,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                             Empl."Full Name" := FuncNom.Ascii2Ansi(Empl."Full Name");
                             Lin_Body += FORMAT(COPYSTR(Empl."Full Name", 1, 30), 30);
                             Contador := Contador + 1;
-                            //TODO: Ver Archivo.WRITE(Lin_Body);
+                            // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                            // Original code: Archivo.WRITE(Lin_Body);
                         END
                         ELSE
                             IF (UPPERCASE(BcoNom.Formato) = 'BLH') OR (UPPERCASE(BcoNom.Formato) = 'LOPEZDEHARO') THEN BEGIN
@@ -405,7 +415,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                                     Lin_Body2 += '000000000000000'; //Para tarjetas de credito, No de comercio (Merchand ID)
                                     Lin_Body2 += '1000'; //Version del archivo
                                     Lin_Body2 += FORMAT(Blanco, 238); //Espacios en blanco para llegar a 400
-                                    //TODO: Ver Archivo.WRITE(Lin_Body2);
+                                    // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                                    // Original code: Archivo.WRITE(Lin_Body2);
                                 END;
 
                                 //Creo el detalle
@@ -464,7 +475,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                                 Lin_Body2 += 'N';
                                 Lin_Body2 += FORMAT(Blanco, 58, '<Filler Character, >');
 
-                                //TODO: Ver Archivo.WRITE(Lin_Body2);
+                                // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                                // Original code: Archivo.WRITE(Lin_Body2);
                             END;
         UNTIL HCN.NEXT = 0;
 
@@ -488,11 +500,14 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
             Lin_Body2 += FORMAT(Contador, 6, '<Integer,6><Filler Character,0>');
             Lin_Body2 += PADSTR(CERO, 15 - STRLEN(FORMAT(TotalGeneral * 100, 0, '<Integer>')), '0') + FORMAT(TotalGeneral * 100, 0, '<Integer>');
             Lin_Body2 += FORMAT(Blanco, 378, '<Filler character, >');
-            //TODO: Ver Archivo.WRITE(Lin_Body2);
+            // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+            // Original code: Archivo.WRITE(Lin_Body2);
         END;
-        //TODO: Ver Archivo.CLOSE;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: Archivo.CLOSE;
 
-        //TODO: Ver NombreArchivo := TEMPORARYPATH + NombreArchivo;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: NombreArchivo := TEMPORARYPATH + NombreArchivo;
         NombreArchivo2 := ConfNomina."Path Archivos Electronicos" + BcoNom.Formato + '\' + NombreArchivo2;
         //MESSAGE('%1\ %2',NOMBREARCHIVO,NOMBREARCHIVO2);
         RenameFile;
@@ -565,7 +580,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
               Lin_Body := EC."RNC/CED" + Blanco + Empl."Working Center" + Blanco + FORMAT(WORKDATE,0,'<Year4>') + Blanco +
                           FORMAT(WORKDATE,0,'<Month,2>') + Blanco + 'MSU' + Blanco + Lin_Body + FORMAT(Empl."Document ID",10) +
                           Blanco + FORMAT(Empl.Salario,14,'<Integer><Decimals,3>') + Blanco + 'O';
-              //TODO: Ver Archivo.WRITE(Lin_Body);
+              // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+              // Original code: Archivo.WRITE(Lin_Body);
            UNTIL HSalario.NEXT = 0;
         
         Archivo.CLOSE;
@@ -658,7 +674,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                 Lin_Body := EC."RNC/CED" + Blanco + Empl."Working Center" + Blanco + FORMAT(WORKDATE,0,'<Year4>') + Blanco +
                             FORMAT(WORKDATE,0,'<Month,2>') + Blanco + 'INS' + Blanco + Lin_Body + FORMAT(Empl."Document ID",10) +
                             Blanco + FORMAT(Acumulado,14,'<Integer><Decimals,3>') + Blanco + 'O';
-                //TODO: Ver Archivo.WRITE(Lin_Body);
+                // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+                // Original code: Archivo.WRITE(Lin_Body);
              END;
         UNTIL HCabNomina.NEXT =0;
         Window.CLOSE;
@@ -834,7 +851,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
              Lin_Body += FORMAT(Empl."Document ID",13);
             END;
           END;
-          //TODO: Ver Archivo.WRITE(Lin_Body);
+          // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+          // Original code: Archivo.WRITE(Lin_Body);
         UNTIL GenJnlLine.NEXT = 0;
         Window.CLOSE;
         Archivo.CLOSE;
@@ -851,8 +869,10 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         VendorBank: Record 288;
         BcoACH: Record 34002167;
         Vendor: Record 23;
-        //TODO: Ver ExportPaymentsACH: Codeunit 10090;
-        //TODO: Ver ExportPaymentsRB: Codeunit 10091;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code preserved below.
+        // ExportPaymentsACH: Codeunit 10090;
+        // ExportPaymentsRB: Codeunit 10091;
         FirstTime: Boolean;
         FirstTime2: Boolean;
         BancoAnt: Code[20];
@@ -885,7 +905,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         UNTIL GenJnlLine.NEXT = 0;
 
         BankAccount.TESTFIELD(Formato);
-        //TODO: Ver BankAccount.TESTFIELD("E-Pay Export File Path");
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: BankAccount.TESTFIELD("E-Pay Export File Path");
         //MESSAGE('%1',BankAccount.Formato);
 
         BankAccount.Formato := UPPERCASE(BankAccount.Formato);
@@ -924,8 +945,10 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
                 "Bal. Account Type" := GenJnlLine."Account Type";
                 "Bal. Account No." := GenJnlLine."Account No.";
             END;
-            //TODO: Ver "Trace No." := Trace;
-            //TODO: Ver "Transmission File Name" := GenJnlLine."Export File Name";
+            // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+            // Original code preserved below.
+            // "Trace No." := Trace;
+            // "Transmission File Name" := GenJnlLine."Export File Name";
             Amount := Amt;
             CheckManagement.InsertCheck(CheckLedgerEntry, RECORDID);
         END;
@@ -934,7 +957,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
 
     procedure EnviaMailPagos(CodDiario: Code[20]; SeccDiario: Code[20])
     var
-        //TODO: Ver  Mail: Codeunit 400;
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: Mail: Codeunit 400;
         GenJnlLine: Record 81;
         VendorBank: Record 288;
         Vendor: Record 23;
@@ -1125,7 +1149,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
     var
         FileManagement: Codeunit 419;
     begin
-        //TODO: Ver FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
+        // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+        // Original code: FileManagement.DownloadToFile(NombreArchivo, NombreArchivo2);
     end;
 
     local procedure FormatoBCR(CodDiario: Code[20]; SeccDiario: Code[20])
@@ -1244,7 +1269,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
               Lin_Body += FORMAT(TIME,4,'<hours24,2><Minutes,2>');
               Lin_Body += FORMAT(CompanyInfo."E-Mail",40);
               Lin_Body += FORMAT(Blanco,136);
-              //TODO: Ver Archivo.WRITE(Lin_Body);
+              // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+              // Original code: Archivo.WRITE(Lin_Body);
             END;
         
           //Creo el detalle
@@ -1436,7 +1462,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
             Lin_Body += '00';
         
             Lin_Body += FORMAT(Blanco,78);
-            //TODO: Ver Archivo.WRITE(Lin_Body);
+            // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+            // Original code: Archivo.WRITE(Lin_Body);
         
             Contador := Contador + 1;
         {GRN
@@ -1584,7 +1611,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
               Lin_Body += FORMAT(TotalGeneral,0,'<Integer><Decimals,3>') + ';';
               Lin_Body += SecuenciaTrans + ';';
               Lin_Body += 'TRANSFERENCIA ELECTRONICA;';
-              //TODO: Ver Archivo.WRITE(Lin_Body);
+              // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+              // Original code: Archivo.WRITE(Lin_Body);
             END;
         
           IF GenJnlLine."Account Type" = GenJnlLine."Account Type"::Vendor THEN
@@ -1642,7 +1670,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
           Lin_Body += Vendor."E-Mail";
         
         
-            //TODO: Ver Archivo.WRITE(Lin_Body);
+            // TODO: Manual review - The legacy payroll payment-export logic depends on server-file APIs and removed payment fields or codeunits; no verified SaaS-equivalent end-to-end export contract exists.
+            // Original code: Archivo.WRITE(Lin_Body);
         
             Tracenumber := FORMAT(CURRENTDATETIME);
             Tracenumber := DELCHR(Tracenumber,'=','._-:');

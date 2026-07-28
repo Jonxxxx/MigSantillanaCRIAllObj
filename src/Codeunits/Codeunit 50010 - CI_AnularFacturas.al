@@ -34,7 +34,7 @@ codeunit 50010 CI_AnularFacturas
                 IF SalesInvoiceHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument2(SalesInvoiceHeader, SalesHeader);
+                    CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader);
                     // PAGE.RUN(PAGE::"Sales Credit Memo",SalesHeader);
                     //CurrPage.CLOSE;
 
@@ -75,7 +75,8 @@ codeunit 50010 CI_AnularFacturas
                 IF SalesCrMemoHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
+                    // TODO: Manual review - Business Central v27 has no verified Correct Posted Sales Invoice method that creates an invoice from a posted sales credit memo with this signature.
+                    // Original code: CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
 
                     //                NotasCRaCorregirTEMPORAL2.RESET;
                     //                NotasCRaCorregirTEMPORAL2.GET(NotasCRaCorregirTEMPORAL."No. Documento");

@@ -21,8 +21,10 @@ codeunit 34002108 "Imprime en PDF"
     end;
 
     var
-        //TODO: Ver SMTPSetup: Record 409;
-        //TODO: Ver SMTP: Codeunit 400;
+        // TODO: Manual review - The legacy SMTP setup/codeunit and credential-based sender contract require migration to Email and Email Message with a defined account scenario.
+        // Original declarations preserved below.
+        // SMTPSetup: Record 409;
+        // SMTP: Codeunit 400;
         GlobalRec: Record 34002117;
         Historico: Record 34002117;
         Emp: Record 5200;
@@ -57,7 +59,7 @@ codeunit 34002108 "Imprime en PDF"
         //UserSetup.GET(USERID);
         _Directorio := ConfNominas."Path Archivos Electronicos";
         CarriageReturn := 13;
-        //TODO: Ver SMTPSetup.GET();
+        // Original code: SMTPSetup.GET();
 
         //001+
         //SMTPSetup.TESTFIELD("User ID");
@@ -75,10 +77,11 @@ codeunit 34002108 "Imprime en PDF"
         TextoBody := /*Dia_Pago +*/ FORMAT(CarriageReturn) + FORMAT(CarriageReturn) + STRSUBSTNO(Pagado_Periodo, Historico.Nombre, Historico.Inicio, Historico.Fin);// +
         //002 DAC Format Email end
         Asunto := ConfNominas."Texto email recibos" + ', ' + Historico.Nombre + ', ' + STRSUBSTNO(Text001, Historico.Inicio, Historico.Fin);
-        //TODO: Ver REPORT.SAVEASPDF(IDReporte, _Directorio + _ArchivoPDF, Historico);
+        // TODO: Manual review - Saving the payroll report PDF to a configured server path is unsupported in SaaS; the attachment must be generated through a verified Temp Blob/OutStream flow.
+        // Original code: REPORT.SAVEASPDF(IDReporte, _Directorio + _ArchivoPDF, Historico);
         SLEEP(ConfNominas."Tiempo espera Envio email");
         AttachmentFile := _Directorio + _ArchivoPDF;
-        //TODO: Ver 
+        // TODO: Manual review - The legacy SMTP block depends on a server-file attachment, explicit sender credentials, and custom TrySendCR error handling; no equivalent Email scenario is defined.
         /*
         IF Emp."Company E-Mail" <> '' THEN
             //001+
@@ -95,13 +98,15 @@ codeunit 34002108 "Imprime en PDF"
         */
         //001+
         //SMTP.Send;
-        //TODO: Ver SendOK := SMTP.TrySendCR(EmpresaCot."Email Envia Boleta de Pago", EmpresaCot."Password Email Boleta Pago");
+        // Original code: SendOK := SMTP.TrySendCR(EmpresaCot."Email Envia Boleta de Pago", EmpresaCot."Password Email Boleta Pago");
 
-        //TODO: Ver IF NOT SendOK THEN
-        //TODO: Ver     ERROR(STRSUBSTNO(SMTP_ERROR, SMTP.GetLastSendMailErrorText));
+        // Original code preserved below.
+        // IF NOT SendOK THEN
+        //     ERROR(STRSUBSTNO(SMTP_ERROR, SMTP.GetLastSendMailErrorText));
         //001-
 
-        //TODO: Ver ERASE(_Directorio + _ArchivoPDF);
+        // TODO: Manual review - ERASE targets a server path and must be removed only as part of the same verified stream-based attachment redesign.
+        // Original code: ERASE(_Directorio + _ArchivoPDF);
         CLEARALL;
 
     end;

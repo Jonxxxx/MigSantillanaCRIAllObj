@@ -7,7 +7,8 @@ codeunit 34002145 "Funciones entrenamientos"
     end;
 
     var
-        //TODO: Ver SMTP: Codeunit 400;
+        // TODO: Manual review - The legacy SMTP codeunit and sender-address behavior require a defined Email account/scenario and verified recipient/error semantics.
+        // Original code: SMTP: Codeunit 400;
         GlobalRec: Record 34002117;
         Historico: Record 34002117;
         Emp: Record 5200;
@@ -84,12 +85,14 @@ codeunit 34002145 "Funciones entrenamientos"
             TextoBody += STRSUBSTNO(Info, RepresentantesEmpresa.Nombre, RepresentantesEmpresa."Job Title");
 
             SLEEP(ConfNominas."Tiempo espera Envio email");
-            //TODO: Ver IF Emp."Company E-Mail" <> '' THEN
-            //TODO: Ver     SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."Company E-Mail", Asunto, TextoBody, FALSE)
-            //TODO: Ver ELSE
-            //TODO: Ver IF Emp."E-Mail" <> '' THEN
-            //TODO: Ver SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."E-Mail", Asunto, TextoBody, FALSE);
-            //TODO: Ver SMTP.Send;
+            // TODO: Manual review - The legacy SMTP codeunit and sender-address behavior require a defined Email account/scenario and verified recipient/error semantics.
+            // Original code preserved below.
+            // IF Emp."Company E-Mail" <> '' THEN
+            // SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."Company E-Mail", Asunto, TextoBody, FALSE)
+            // ELSE
+            // IF Emp."E-Mail" <> '' THEN
+            // SMTP.CreateMessage(COMPANYNAME, UserSetup."E-Mail", Emp."E-Mail", Asunto, TextoBody, FALSE);
+            // SMTP.Send;
             Asistentesentrenamientos.Notificado := TRUE;
             Asistentesentrenamientos.MODIFY;
         UNTIL Asistentesentrenamientos.NEXT = 0;

@@ -27,7 +27,8 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
         IF GUIALLOWED THEN BEGIN
 
-            //TODO: Ver recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
+            // TODO: Manual review - The remaining POS migration block depends on unavailable Windows identity or legacy multi-source dimension APIs whose current transaction and precedence semantics are not verified.
+            // Original code: recTPV.SETRANGE("Usuario windows", CduPOS.TraerUsuarioWindows);
             IF recTPV.FINDFIRST THEN
                 ERROR(Error002);
 
@@ -377,22 +378,26 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         WITH recPrmCabVta DO BEGIN
 
             SetHideValidationDialog(TRUE);
-            //TODO: Ver CreateDim(
-            //TODO: Ver DATABASE::Customer, "Bill-to Customer No.",
-            //TODO: Ver DATABASE::"Salesperson/Purchaser", "Salesperson Code",
-            //TODO: Ver DATABASE::Campaign, "Campaign No.",
-            //TODO: Ver DATABASE::"Responsibility Center", "Responsibility Center",
-            //TODO: Ver DATABASE::"Customer Template", "Bill-to Customer Template Code");
+            // TODO: Manual review - The remaining POS migration block depends on unavailable Windows identity or legacy multi-source dimension APIs whose current transaction and precedence semantics are not verified.
+            // Original code preserved below.
+            // CreateDim(
+            // DATABASE::Customer, "Bill-to Customer No.",
+            // DATABASE::"Salesperson/Purchaser", "Salesperson Code",
+            // DATABASE::Campaign, "Campaign No.",
+            // DATABASE::"Responsibility Center", "Responsibility Center",
+            // DATABASE::"Customer Template", "Bill-to Customer Template Code");
 
             recLinVta.RESET;
             recLinVta.SETRANGE("Document Type", "Document Type");
             recLinVta.SETRANGE("Document No.", "No.");
             IF recLinVta.FINDSET THEN
                 REPEAT
-                    //TODO: Ver  recLinVta.CreateDim(
-                    //TODO: Ver   DimMgt.TypeToTableID3(recLinVta.Type), recLinVta."No.",
-                    //TODO: Ver   DATABASE::Job, recLinVta."Job No.",
-                    //TODO: Ver   DATABASE::"Responsibility Center", recLinVta."Responsibility Center");
+                    // TODO: Manual review - The remaining POS migration block depends on unavailable Windows identity or legacy multi-source dimension APIs whose current transaction and precedence semantics are not verified.
+                    // Original code preserved below.
+                    // recLinVta.CreateDim(
+                    // DimMgt.TypeToTableID3(recLinVta.Type), recLinVta."No.",
+                    // DATABASE::Job, recLinVta."Job No.",
+                    // DATABASE::"Responsibility Center", recLinVta."Responsibility Center");
                     recLinVta.MODIFY;
                 UNTIL recLinVta.NEXT = 0;
 
@@ -1072,7 +1077,8 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     begin
         //+#201856
 
-        //TODO: Ver lPais := cfComunes.Pais;
+        // TODO: Manual review - Procedure Pais appears only inside disabled legacy code in Codeunit 34002503 and is not available to compiled callers.
+        // Original code: lPais := cfComunes.Pais;
 
         lrSL.RESET;
         lrSL.SETRANGE("Document Type", lrSH."Document Type");

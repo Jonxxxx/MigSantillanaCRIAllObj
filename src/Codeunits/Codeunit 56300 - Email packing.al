@@ -12,7 +12,8 @@ codeunit 56300 "Email packing"
 
     var
         Body: BigText;
-    //TODO: Ver SMTPmail: Codeunit 400;
+    // TODO: Manual review - The legacy SMTP codeunit and sender field are unavailable; the required Email account, scenario, BigText body conversion, and sender behavior are not defined.
+    // Original declaration: SMTPmail: Codeunit 400;
 
     procedure generaBody(parSalesHeader: Record 36)
     var
@@ -99,11 +100,12 @@ codeunit 56300 "Email packing"
         generaBody(parSalesHeader);
 
         rConf.GET();
-        //TODO: Ver rConf.TESTFIELD("E-mail notificacion envio ped.");
+        // Original calls preserved below.
+        // rConf.TESTFIELD("E-mail notificacion envio ped.");
 
-        //TODO: Ver SMTPmail.CreateMessageBigBody('Santillana', rConf."E-mail notificacion envio ped.", rCust."E-Mail", Subject, Body, TRUE);
+        // SMTPmail.CreateMessageBigBody('Santillana', rConf."E-mail notificacion envio ped.", rCust."E-Mail", Subject, Body, TRUE);
 
-        //TODO: Ver SMTPmail.Send();
+        // SMTPmail.Send();
     end;
 }
 

@@ -372,7 +372,8 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        //TODO: Ver lrObjects: Record 2000000001;
+        // TODO: Manual review - Virtual table Object (2000000001) is unavailable, and the adjacent AllObj table is not a verified caption-equivalent replacement.
+        // Original declaration: lrObjects: Record 2000000001;
         lrObjects2: Record 2000000058;
     begin
         // GetTableCaption
@@ -484,7 +485,7 @@ codeunit 75001 "Gest. Maestros MdM"
         lwXML: XMLport 75004;
     begin
         // ExpMigracion2
-        //TODO: Ver 
+        // TODO: Manual review - This XML export depends on a server temporary file and client save dialog; a stream-based browser download contract was not verified.
         /*
         lwFileName := cFileMng.ServerTempFileName('xml');
 

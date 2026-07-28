@@ -371,8 +371,7 @@ codeunit 34002160 "Registrar nomina CR New"
 
         IF CabNomina."No. Documento" = '' THEN BEGIN
             ConfNominas.TESTFIELD("No. serie nominas");
-            //TODO: Ver GestNoSer.InitSeries(ConfNominas."No. serie nominas", ConfNominas."No. serie nominas", 0D, CabNomina."No. Documento",
-            //TODO: Ver                      ConfNominas."No. serie nominas");
+            CabNomina."No. Documento" := GestNoSer.GetNextNo(ConfNominas."No. serie nominas", 0D);
         END;
         //Para buscar los datos del banco
         CLEAR(DPE);

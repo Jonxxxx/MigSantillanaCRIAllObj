@@ -80,7 +80,7 @@ codeunit 55002 "Export Payments Formato EC"
             ERROR(Text000, FileName);
 
         CompanyInformation.GET;
-        //TODO: Ver 
+        // TODO: Manual review - This legacy bank export depends on removed country-specific payment fields and server file-system output; no equivalent SaaS export contract was verified.
         /*
         CompanyInformation.TESTFIELD("Federal ID No.");
 
@@ -359,7 +359,7 @@ codeunit 55002 "Export Payments Formato EC"
             ERROR(Text015);
 
         FileIsInProcess := FALSE;
-        //TODO: Ver 
+        // TODO: Manual review - Closing, downloading, and erasing the server-side export file requires a verified stream-based SaaS download flow.
         /*
         ExportFile.CLOSE;
         IF ISSERVICETIER THEN BEGIN
@@ -380,7 +380,8 @@ codeunit 55002 "Export Payments Formato EC"
     begin
         TraceCode := '';
         AddToPrnString(TraceCode, FORMAT(FileDate, 0, '<Year,2><Month,2><Day,2>'), 1, 6, Justification::Left, ' ');
-        //TODO: Ver AddToPrnString(TraceCode, BankAccount."Last ACH File ID Modifier", 7, 1, Justification::Right, '0');
+        // TODO: Manual review - Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table.
+        // Original code: AddToPrnString(TraceCode, BankAccount."Last ACH File ID Modifier", 7, 1, Justification::Right, '0');
         AddNumToPrnString(TraceCode, BatchNo, 8, 7);
         AddToPrnString(TraceCode, GenerateTraceNoCode(TraceNo), 15, 15, Justification::Left, ' ');
         EXIT(TraceCode);
@@ -458,7 +459,8 @@ codeunit 55002 "Export Payments Formato EC"
     local procedure ExportPrnString(var PrnString: Text[422])
     begin
         PrnString := PADSTR(PrnString, RecordLength, ' ');
-        //TODO: Ver ExportFile.WRITE(PrnString);
+        // TODO: Manual review - The legacy File write requires a verified OutStream-based bank export that preserves record encoding and line endings.
+        // Original code: ExportFile.WRITE(PrnString);
         NoOfRec := NoOfRec + 1;
         PrnString := '';
     end;
@@ -560,7 +562,7 @@ codeunit 55002 "Export Payments Formato EC"
         TransmitFullPathName: Text[250];
     begin
         BankAccount.GET(BankAccountNo);
-        //TODO: Ver 
+        // TODO: Manual review - The transmit workflow depends on removed E-Pay path fields and server file-system rename and erase operations.
         /*
         WITH BankAccount DO BEGIN
             TESTFIELD("E-Pay Export File Path");
@@ -592,7 +594,7 @@ codeunit 55002 "Export Payments Formato EC"
 
     procedure ExportFileName(): Text[250]
     begin
-        //TODO: Ver 
+        // TODO: Manual review - Export-file naming depends on removed E-Pay fields and an unverified bank-specific sequencing contract.
         /*
         IF BankAccount."Last E-Pay Export File Name" = '' THEN BEGIN
             FileName := '';

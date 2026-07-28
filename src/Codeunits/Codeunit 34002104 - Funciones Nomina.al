@@ -2220,14 +2220,16 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure CalculoEntreFechaDotNet(TipoFecha: Code[6]; FechaIni: DateTime; FechaFin: DateTime): Integer
     var
-    //TODO: Ver DateandTime: DotNet DateAndTime;
-    //TODO: Ver DayOfWeekInput: DotNet FirstDayOfWeek;
-    //TODO: Ver WeekOfYearInput: DotNet FirstWeekOfYear;
+    // TODO: Manual review - The public procedure exposes the Visual Basic DateDiff interval contract; only YYYY and d callers are visible in this repository, so a complete SaaS replacement cannot be implemented without defining all supported interval and week-boundary semantics.
+    // Original DotNet declarations preserved below.
+    // DateandTime: DotNet DateAndTime;
+    // DayOfWeekInput: DotNet FirstDayOfWeek;
+    // WeekOfYearInput: DotNet FirstWeekOfYear;
     begin
         IF TipoFecha = '' THEN
             TipoFecha := 'YYYY';
 
-        //TODO: Ver EXIT(DateandTime.DateDiff(TipoFecha, FechaIni, FechaFin, DayOfWeekInput, WeekOfYearInput));
+        // Original code: EXIT(DateandTime.DateDiff(TipoFecha, FechaIni, FechaFin, DayOfWeekInput, WeekOfYearInput));
     end;
 
     procedure VacacionesporVencer() Vacaciones: Decimal

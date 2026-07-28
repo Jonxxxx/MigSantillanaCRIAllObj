@@ -215,8 +215,7 @@ codeunit 34002114 "Registrar nomina HN"
 
         IF CabNomina."No. Documento" = '' THEN BEGIN
             ConfNominas.TESTFIELD("No. serie nominas");
-            //TODO: Ver GestNoSer.InitSeries(ConfNominas."No. serie nominas", ConfNominas."No. serie nominas", 0D, CabNomina."No. Documento",
-            //TODO: Ver                      ConfNominas."No. serie nominas");
+            CabNomina."No. Documento" := GestNoSer.GetNextNo(ConfNominas."No. serie nominas", 0D);
         END;
 
         //Create Payroll Header

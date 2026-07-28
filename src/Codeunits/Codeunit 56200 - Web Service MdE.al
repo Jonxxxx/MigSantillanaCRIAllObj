@@ -6,7 +6,8 @@ codeunit 56200 "Web Service MdE"
     end;
 
     var
-    //TODO: Ver NS: ;
+    // TODO: Manual review - The original NS variable type is missing, and no usage establishes the required namespace representation.
+    // Original code: NS: ;
 
     [Scope('Personalization')]
     procedure Empleado(mae: XMLport 56200; var result: XMLport 56201)
@@ -21,16 +22,18 @@ codeunit 56200 "Web Service MdE"
         OutStrm: OutStream;
     begin
         mae.IMPORT;
-        //TODO: Ver mae.GetInfo(IsOk, id_mensaje, Tipo, FechaOrigen, PaisOrigen, DescErrorArray, TipoErrorArray);
+        // TODO: Manual review - XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object.
+        // Original calls preserved below.
+        // mae.GetInfo(IsOk, id_mensaje, Tipo, FechaOrigen, PaisOrigen, DescErrorArray, TipoErrorArray);
 
         //+#101415
-        //TODO: Ver mae.GetOutStrm(OutStrm);
+        // mae.GetOutStrm(OutStrm);
         mae.SETDESTINATION(OutStrm);
         mae.EXPORT;
-        //TODO: Ver mae.SendAsyncResponse();
+        // mae.SendAsyncResponse();
         //-#101415
 
-        //TODO: Ver result.SetInfo(id_mensaje, Tipo, FechaOrigen, PaisOrigen);
+        result.SetInfo(id_mensaje, Tipo, FechaOrigen, PaisOrigen);
     end;
 }
 

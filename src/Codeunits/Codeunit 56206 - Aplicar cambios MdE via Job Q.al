@@ -98,15 +98,19 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
                 HtmlEncode(TABLENAME), HtmlEncode(FIELDNAME("Error proceso")), HtmlEncode(FIELDNAME(Aplicado)));
 
             RecordLink.URL1 := COPYSTR(Link, 1, MAXSTRLEN(RecordLink.URL1));
-            //TODO: Ver IF STRLEN(Link) > MAXSTRLEN(RecordLink.URL1) THEN
-            //TODO: Ver    RecordLink.URL2 := COPYSTR(Link, MAXSTRLEN(RecordLink.URL1) + 1, MAXSTRLEN(RecordLink.URL2));
+            // TODO: Manual review - Record Link no longer provides URL2, and no compatible overflow-storage contract for links exceeding URL1 was verified.
+            // Original code preserved below.
+            // IF STRLEN(Link) > MAXSTRLEN(RecordLink.URL1) THEN
+            //     RecordLink.URL2 := COPYSTR(Link, MAXSTRLEN(RecordLink.URL1) + 1, MAXSTRLEN(RecordLink.URL2));
         END;
     end;
 
     local procedure SetText(var MdEHistory: Record 56202; var RecordLink: Record 2000000068)
     var
-        //TODO: Ver SystemUTF8Encoder: DotNet UTF8Encoding;
-        //TODO: Ver SystemByteArray: DotNet Array;
+        // TODO: Manual review - The legacy Note BLOB uses a custom byte-length prefix and DotNet UTF-8 encoding; a byte-compatible SaaS serialization was not verified.
+        // Original declarations and code preserved below.
+        // SystemUTF8Encoder: DotNet UTF8Encoding;
+        // SystemByteArray: DotNet Array;
         OStr: OutStream;
         s: Text;
         lf: Text;
@@ -121,7 +125,6 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
 
         s := STRSUBSTNO(ErrorText, MdEHistory."Descripcion error");
 
-        //TODO: Ver 
         /*
         SystemUTF8Encoder := SystemUTF8Encoder.UTF8Encoding;
         SystemByteArray := SystemUTF8Encoder.GetBytes(s);
@@ -146,10 +149,12 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
 
     local procedure HtmlEncode(InText: Text[1024]): Text[1024]
     var
-    //TODO: Ver SystemWebHttpUtility: DotNet HttpUtility;
+        // TODO: Manual review - DotNet HttpUtility is unavailable, and no verified AL HTML encoder preserves the generated Record Link filter URL semantics.
+        // Original declaration and calls preserved below.
+        // SystemWebHttpUtility: DotNet HttpUtility;
     begin
-        //TODO: Ver SystemWebHttpUtility := SystemWebHttpUtility.HttpUtility;
-        //TODO: Ver EXIT(SystemWebHttpUtility.HtmlEncode(InText));
+        // SystemWebHttpUtility := SystemWebHttpUtility.HttpUtility;
+        // EXIT(SystemWebHttpUtility.HtmlEncode(InText));
     end;
 }
 

@@ -8,7 +8,8 @@ codeunit 130410 "Sys. Warmup Test Runner"
         CODEUNIT.RUN(CODEUNIT::"Sys. Warmup Scenarios");
     end;
 
-    //TODO: Ver 
+    // TODO: Manual review - Codeunit 40 no longer publishes OnAfterCompanyOpen in Business Central v27, and no event with equivalent company-open timing and idempotency was verified.
+    // Original subscriber preserved below.
     /*
     [EventSubscriber(ObjectType::Codeunit, 40, 'OnAfterCompanyOpen', '', true, true)]
     local procedure WarmUpOnAfterCompanyOpen()

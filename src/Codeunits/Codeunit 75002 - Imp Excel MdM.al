@@ -65,11 +65,14 @@ codeunit 75002 "Imp Excel MdM"
         IF pwFileName = '' THEN
             EXIT;
 
-        //TODO: Ver IF NOT cFileMng.ClientFileExists(pwFileName) THEN
-        //TODO: Ver     ERROR(Text0003, pwFileName);
+        // TODO: Manual review - ClientFileExists is a legacy Windows-client check and the caller contract does not establish a browser-upload stream.
+        // Original code preserved below.
+        // IF NOT cFileMng.ClientFileExists(pwFileName) THEN
+        //     ERROR(Text0003, pwFileName);
 
 
-        //TODO: Ver lwFilename2 := cFileMng.UploadFileSilent(pwFileName);
+        // TODO: Manual review - Silent upload from a client path is unavailable in the web client and requires an explicit UploadIntoStream interaction contract.
+        // Original code: lwFilename2 := cFileMng.UploadFileSilent(pwFileName);
         /*//fes mig
         CLEAR(lwSheetNames);
         lwPTotal :=0;
@@ -396,7 +399,8 @@ codeunit 75002 "Imp Excel MdM"
     begin
         // GetFilenameDialog
 
-        //TODO: Ver wFilename := cFileMng.OpenFileDialog(Text0002, '', '(Excel|*.xlsx|All Files (*.*)|*.*,');
+        // TODO: Manual review - The Windows file dialog is unavailable in Business Central Online and this public return contract does not provide an upload stream.
+        // Original code: wFilename := cFileMng.OpenFileDialog(Text0002, '', '(Excel|*.xlsx|All Files (*.*)|*.*,');
     end;
 
     procedure ExtractTableId(pwCode: Code[30]) wId: Integer

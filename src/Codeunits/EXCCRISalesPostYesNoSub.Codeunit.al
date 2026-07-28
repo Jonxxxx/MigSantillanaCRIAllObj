@@ -92,7 +92,8 @@ codeunit 61005 EXCCRISalesPostYesNoSub
     begin
         if SalesInvHdrNo <> '' then begin
             SalesInvoiceHeader.Get(SalesInvHdrNo);
-            //TODO: Ver EXCCRIElectronicInvoice.Factura(SalesInvoiceHeader);
+            // TODO: Manual review - Codeunit 56003 is empty and does not expose Factura for the posted sales-invoice record.
+            // Original code: EXCCRIElectronicInvoice.Factura(SalesInvoiceHeader);
         end;
 
         if
@@ -100,7 +101,8 @@ codeunit 61005 EXCCRISalesPostYesNoSub
             not SalesHeader.Correction
         then begin
             SalesCrMemoHeader.Get(SalesCrMemoHdrNo);
-            //TODO: Ver EXCCRIElectronicInvoice.NotaCR(SalesCrMemoHeader);
+            // TODO: Manual review - Codeunit 56003 is empty and does not expose NotaCR for the posted sales-credit-memo record.
+            // Original code: EXCCRIElectronicInvoice.NotaCR(SalesCrMemoHeader);
         end;
     end;
 
@@ -119,7 +121,7 @@ codeunit 61005 EXCCRISalesPostYesNoSub
         if SalesInvHdrNo <> '' then begin
             SalesInvoiceHeader.Get(SalesInvHdrNo);
 
-            //TODO: Ver 
+            // TODO: Manual review - Codeunit 52504 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch.
             /*
             if
                 SalesInvoiceHeader."Tipo de Venta" =
@@ -147,9 +149,11 @@ codeunit 61005 EXCCRISalesPostYesNoSub
             not SalesHeader.Correction
         then begin
             SalesCrMemoHeader.Get(SalesCrMemoHdrNo);
-            //TODO: Ver EXCCRICostaRicaElectronicInvoice.
-            //TODO: Ver     NotaCreditoElectronica(
-            //TODO: Ver         SalesCrMemoHeader."No.");
+            // TODO: Manual review - Codeunit 52504 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number.
+            // Original code preserved below.
+            // EXCCRICostaRicaElectronicInvoice.
+            //     NotaCreditoElectronica(
+            //         SalesCrMemoHeader."No.");
         end;
     end;
 

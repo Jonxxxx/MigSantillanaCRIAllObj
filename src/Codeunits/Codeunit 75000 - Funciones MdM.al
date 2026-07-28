@@ -529,18 +529,18 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetBarCode(prProd: Record 27): Code[20]
     var
-    //TODO: Ver lwRecRef: Record 5717;
+        lwRecRef: Record "Item Reference";
     begin
         // GetBarCode
 
-        //TODO: Ver CLEAR(lwRecRef);
-        //TODO: Ver lwRecRef.SETRANGE("Item No.", prProd."No.");
-        //TODO: Ver lwRecRef.SETRANGE("Variant Code", '');
-        //TODO: Ver lwRecRef.SETRANGE("Unit of Measure", prProd."Base Unit of Measure");
-        //TODO: Ver  lwRecRef.SETRANGE("Cross-Reference Type", lwRecRef."Cross-Reference Type"::"Bar Code");
-        //TODO: Ver lwRecRef.SETRANGE("Cross-Reference Type No.", '');
-        //TODO: Ver IF lwRecRef.FINDFIRST THEN
-        //TODO: Ver    EXIT(lwRecRef."Cross-Reference No.");
+        CLEAR(lwRecRef);
+        lwRecRef.SETRANGE("Item No.", prProd."No.");
+        lwRecRef.SETRANGE("Variant Code", '');
+        lwRecRef.SETRANGE("Unit of Measure", prProd."Base Unit of Measure");
+        lwRecRef.SETRANGE("Reference Type", lwRecRef."Reference Type"::"Bar Code");
+        lwRecRef.SETRANGE("Reference Type No.", '');
+        IF lwRecRef.FINDFIRST THEN
+            EXIT(COPYSTR(lwRecRef."Reference No.", 1, 20));
     end;
 
     procedure GetDatDescrp(pwTipo: Integer; pwCode: Code[20]) wDesc: Text[100]
@@ -619,7 +619,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEAN(prProd: Record 27) wEan: Text
     var
-    //TODO: Ver lrCrossRef: Record 5717;
+        lrCrossRef: Record "Item Reference";
     begin
         // GetEAN
 
@@ -627,11 +627,11 @@ codeunit 75000 "Funciones MdM"
         IF prProd."No." = '' THEN
             EXIT;
 
-        //TODO: Ver CLEAR(lrCrossRef);
-        //TODO: Ver lrCrossRef.SETRANGE("Item No.", prProd."No.");
-        //TODO: Ver lrCrossRef.SETRANGE("Cross-Reference Type", lrCrossRef."Cross-Reference Type"::"Bar Code");
-        //TODO: Ver IF lrCrossRef.FINDFIRST THEN
-        //TODO: Ver    wEan := lrCrossRef."Cross-Reference No.";
+        CLEAR(lrCrossRef);
+        lrCrossRef.SETRANGE("Item No.", prProd."No.");
+        lrCrossRef.SETRANGE("Reference Type", lrCrossRef."Reference Type"::"Bar Code");
+        IF lrCrossRef.FINDFIRST THEN
+            wEan := lrCrossRef."Reference No.";
     end;
 
     procedure GetEditable() wEditable: Boolean

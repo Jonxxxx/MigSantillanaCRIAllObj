@@ -489,38 +489,36 @@ codeunit 75007 "MdM Gen. Prod."
 
     local procedure SetRefCruz(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwEan: Code[20]; pwDescrip: Text)
     var
-    //TODO: Ver lrRef: Record 5717;
+        lrRef: Record "Item Reference";
     begin
         // SetRefCruz
         // Crea y actualiza una referencia cruzada si no existe
         // Para codigos de barra
-        //TODO: Ver 
-        /*
         CLEAR(lrRef);
         lrRef.SETRANGE("Item No.", pwItemNo);
-        lrRef.SETRANGE("Cross-Reference Type", lrRef."Cross-Reference Type"::"Bar Code");
+        lrRef.SETRANGE("Reference Type", lrRef."Reference Type"::"Bar Code");
         // lrRef.SETRANGE("Unit of Measure", pwCodUnidadBase);
         lrRef.SETFILTER("Unit of Measure", '%1|%2', pwCodUnidadBase, '');
-        lrRef.SETRANGE("Cross-Reference No.", pwEan);
+        lrRef.SETRANGE("Reference No.", pwEan);
         IF lrRef.FINDFIRST THEN
             EXIT;
 
-        lrRef.SETRANGE("Cross-Reference No.");
+        lrRef.SETRANGE("Reference No.");
         lrRef.DELETEALL;
 
         IF pwEan <> '' THEN BEGIN
-            lrRef.SETRANGE("Cross-Reference Type");
-            lrRef.SETRANGE("Cross-Reference No.", pwEan);
+            lrRef.SETRANGE("Reference Type");
+            lrRef.SETRANGE("Reference No.", pwEan);
             lrRef.DELETEALL;
 
             CLEAR(lrRef);
             lrRef."Item No." := pwItemNo;
             lrRef."Unit of Measure" := pwCodUnidadBase;
-            lrRef."Cross-Reference Type" := lrRef."Cross-Reference Type"::"Bar Code";
-            lrRef."Cross-Reference No." := pwEan;
+            lrRef."Reference Type" := lrRef."Reference Type"::"Bar Code";
+            lrRef."Reference No." := pwEan;
             lrRef.Description := COPYSTR(pwDescrip, 1, MAXSTRLEN(lrRef.Description));
             lrRef.INSERT(TRUE);
-        END;*/
+        END;
     end;
 
     local procedure SetUnid(pwItemNo: Code[20]; pwCodUnidadBase: Code[10]; pwTipo: Option Ancho,Alto,Peso; pwValor: Decimal)
@@ -1280,7 +1278,8 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure GetTableCaption(pwId: Integer) wText: Text
     var
-        //TODO: Ver lrObjects: Record 2000000001;
+        // TODO: Manual review - Virtual table Object (2000000001) is unavailable, and AllObj is not a verified caption-equivalent replacement.
+        // Original declaration: lrObjects: Record 2000000001;
         lrObjects2: Record 2000000058;
     begin
         // GetTableCaption
@@ -1396,7 +1395,7 @@ codeunit 75007 "MdM Gen. Prod."
     begin
         // ExpMigracion2
 
-        //TODO: Ver 
+        // TODO: Manual review - This XML export depends on a server temporary file and client save dialog; a stream-based browser download contract was not verified.
         /*
         lwFileName := cFileMng.ServerTempFileName('xml');
 

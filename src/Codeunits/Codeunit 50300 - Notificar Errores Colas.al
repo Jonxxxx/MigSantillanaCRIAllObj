@@ -38,7 +38,8 @@ codeunit 50300 "Notificar Errores Colas"
 
     procedure SendEmail(SendToAddress: Text[1024]; Subject: Text[200]; MessageBody: Text[1024])
     var
-        //TODO: Ver SMTPMail: Codeunit 400;
+        // TODO: Manual review - The legacy SMTP flow uses explicit sender credentials and custom error APIs; no Business Central Email account/scenario contract is defined.
+        // Original code: SMTPMail: Codeunit 400;
         SendOK: Boolean;
         GLSetup: Record 98;
         CompanyInfo: Record 79;
@@ -52,13 +53,17 @@ codeunit 50300 "Notificar Errores Colas"
 
         //002+
         //SMTPMail.CreateMessage(CompanyInfo.Name,CompanyInfo."E-Mail",SendToAddress,Subject,MessageBody,FALSE);
-        //TODO: Ver SMTPMail.CreateMessage(CompanyInfo.Name, ConfEmpresa."Email Envia Errores Colas", SendToAddress, Subject, MessageBody, FALSE);
+        // TODO: Manual review - The legacy SMTP flow uses explicit sender credentials and custom error APIs; no Business Central Email account/scenario contract is defined.
+        // Original code: SMTPMail.CreateMessage(CompanyInfo.Name, ConfEmpresa."Email Envia Errores Colas", SendToAddress, Subject, MessageBody, FALSE);
         //002-
 
-        //TODO: Ver SendOK := SMTPMail.TrySendCR(ConfEmpresa."Email Envia Errores Colas", ConfEmpresa."Password Email Errores Colas");
+        // TODO: Manual review - The legacy SMTP flow uses explicit sender credentials and custom error APIs; no Business Central Email account/scenario contract is defined.
+        // Original code: SendOK := SMTPMail.TrySendCR(ConfEmpresa."Email Envia Errores Colas", ConfEmpresa."Password Email Errores Colas");
 
-        //TODO: Ver IF NOT SendOK THEN
-        //TODO: Ver     ERROR(STRSUBSTNO(SMTP_ERROR, SMTPMail.GetLastSendMailErrorText));
+        // TODO: Manual review - The legacy SMTP flow uses explicit sender credentials and custom error APIs; no Business Central Email account/scenario contract is defined.
+        // Original code preserved below.
+        // IF NOT SendOK THEN
+        // ERROR(STRSUBSTNO(SMTP_ERROR, SMTPMail.GetLastSendMailErrorText));
 
         IF SendOK AND GUIALLOWED THEN
             MESSAGE('Correo enviado');

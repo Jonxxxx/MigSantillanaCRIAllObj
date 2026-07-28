@@ -247,7 +247,7 @@ codeunit 34002118 "Registrar nomina RD"
                     END;
 
                     //Para las vacaciones automaticas
-                    //TODO: Ver 
+                    // TODO: Manual review - Payroll type option value 6 is not defined in the current source field, so the automatic-vacation branch cannot be restored without selecting or adding a business option.
                     /*
                     IF (gTiposNom."Tipo de nomina" = gTiposNom."Tipo de nomina"::"6") AND (ConfNominas."Adelantar salario vacaciones") THEN BEGIN
                         PagarVacAut;
@@ -400,8 +400,7 @@ codeunit 34002118 "Registrar nomina RD"
 
         IF CabNomina."No. Documento" = '' THEN BEGIN
             ConfNominas.TESTFIELD("No. serie nominas");
-            //TODO: Ver GestNoSer.InitSeries(ConfNominas."No. serie nominas", ConfNominas."No. serie nominas", 0D, CabNomina."No. Documento",
-            //TODO: Ver                      ConfNominas."No. serie nominas");
+            CabNomina."No. Documento" := GestNoSer.GetNextNo(ConfNominas."No. serie nominas", 0D);
         END;
         //Para buscar los datos del banco
         CLEAR(DPE);
@@ -538,7 +537,7 @@ codeunit 34002118 "Registrar nomina RD"
         IF DATE2DMY(PerFinal, 1) = 31 THEN
             PerFinal2 := DMY2DATE(30, DATE2DMY(PerFinal, 2), DATE2DMY(PerFinal, 3));
 
-        //TODO: Ver 
+        // TODO: Manual review - Employee field Tipo pago OLD is unavailable, so the conditional salary-profile validation cannot be restored without a verified replacement field.
         /*
         IF Empleado."Tipo pago OLD" = Empleado."Tipo pago OLD"::"0" THEN BEGIN
             EsqSal.RESET;
@@ -3035,8 +3034,10 @@ codeunit 34002118 "Registrar nomina RD"
             PerfilSalario.SETRANGE("No. empleado", GlobalRec."No. empleado");
             PerfilSalario.SETRANGE("Concepto salarial", ConfNominas."Concepto Retroactivo");
             PerfilSalario.FINDFIRST;
-            //TODO: Ver IF Empleado."Tipo pago OLD" = Empleado."Tipo pago OLD"::"0" THEN
-            //TODO: Ver     PerfilSalario.Importe := Empleado.Salario / 23.83;
+            // TODO: Manual review - Employee field Tipo pago OLD is unavailable, so the retroactive-pay divisor rule cannot be restored without a verified replacement field and payroll decision.
+            // Original code preserved below.
+            // IF Empleado."Tipo pago OLD" = Empleado."Tipo pago OLD"::"0" THEN
+            //     PerfilSalario.Importe := Empleado.Salario / 23.83;
 
             PerfilSalario.VALIDATE(Cantidad, DiasRetroactivo);
             PerfilSalario.Comentario := STRSUBSTNO(Text001, FORMAT(DiasRetroactivo));

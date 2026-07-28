@@ -6,7 +6,8 @@ codeunit 52502 "Utilitario para corregir cosas"
                   TableData 271 = rimd,
                   TableData 379 = rimd,
                   TableData 454 = rimd;
-    //TODO: Ver TableData 10144 = rimd;
+    // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+    // Original code: TableData 10144 = rimd;
 
     trigger OnRun()
     begin
@@ -28,7 +29,8 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     var
         SL: Record 37;
-        //TODO: Ver HistDeposits: Record 10144;
+        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+        // Original code: HistDeposits: Record 10144;
         HistMovimientos: Record 17;
         Fecha: Date;
         CorrectPostedSalesInvoice: Codeunit 1303;
@@ -43,12 +45,15 @@ codeunit 52502 "Utilitario para corregir cosas"
 
     procedure EliminaMetaData()
     var
-    //TODO: Ver ObjMeta: Record 2000000071;
+    // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+    // Original code: ObjMeta: Record 2000000071;
     begin
-        //TODO: Ver ObjMeta.RESET;
-        //TODO: Ver ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
-        //TODO: Ver IF ObjMeta.FINDSET(TRUE, FALSE) THEN
-        //TODO: Ver     ObjMeta.DELETEALL;
+        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
+        // Original code preserved below.
+        // ObjMeta.RESET;
+        // ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
+        // IF ObjMeta.FINDSET(TRUE, FALSE) THEN
+        // ObjMeta.DELETEALL;
     end;
 
     procedure CorregirDatosEmpleado()
@@ -69,7 +74,7 @@ codeunit 52502 "Utilitario para corregir cosas"
     var
         NoMov: Integer;
     begin
-        //TODO: Ver 
+        // TODO: Manual review - The correction utility depends on removed virtual/deposit tables or disabled high-risk data-correction logic with no verified SaaS equivalent.
         /*
         HistDeposits.FINDFIRST;
         REPEAT //recorro el historico de depositos registrados
@@ -986,7 +991,7 @@ codeunit 52502 "Utilitario para corregir cosas"
                 IF SalesInvoiceHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument2(SalesInvoiceHeader, SalesHeader);
+                    CorrectPostedSalesInvoice.CreateCreditMemoCopyDocument(SalesInvoiceHeader, SalesHeader);
                     // PAGE.RUN(PAGE::"Sales Credit Memo",SalesHeader);
                     //CurrPage.CLOSE;
 
@@ -1031,7 +1036,8 @@ codeunit 52502 "Utilitario para corregir cosas"
                 IF SalesCrMemoHeader.FINDFIRST THEN BEGIN
 
 
-                    //TODO: Ver CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
+                    // TODO: Manual review - Business Central v27 has no verified Correct Posted Sales Invoice method that creates an invoice from a posted sales credit memo with this signature.
+                    // Original code: CorrectPostedSalesInvoice.CreateSalesInvoiceCopyDocument(SalesCrMemoHeader, SalesHeader);
 
                     //                NotasCRaCorregirTEMPORAL2.RESET;
                     //                NotasCRaCorregirTEMPORAL2.GET(NotasCRaCorregirTEMPORAL."No. Documento");

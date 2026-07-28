@@ -60,7 +60,7 @@ codeunit 56202 "MdE Management"
 
     local procedure SendPostRequestLocal(Url: Text[150]; SoapAction: Text[250]; Content: Text; ShowError: Boolean; var IsError: Boolean) Response: Text
     var
-    //TODO: Ver 
+    // TODO: Manual review - The legacy synchronous SOAP request uses DotNet HTTP types; the endpoint, headers, timeout, and error contract require a verified AL HttpClient redesign.
     /*
     HttpClient: DotNet HttpClient;
     Uri: DotNet Uri;
@@ -69,7 +69,6 @@ codeunit 56202 "MdE Management"
     TextEncoding: DotNet Encoding;
     Status: Integer;*/
     begin
-        //TODO: Ver 
         /*
         HttpClient := HttpClient.HttpClient();
         Uri := Uri.Uri(Url);
@@ -102,7 +101,7 @@ codeunit 56202 "MdE Management"
         */
     end;
 
-    //TODO: Ver 
+    // TODO: Manual review - The XML helper uses DotNet XmlNode types and requires a verified migration to AL XML DOM types with the same node and error semantics.
     /*
     procedure AddElement(var XMLNode: DotNet XmlNode; NodeName: Text[250]; NodeText: Text[250]; Prefix: Text[250]; NSUri: Text[250]; var CreatedXMLNode: DotNet XmlNode) ExitStatus: Integer
     var

@@ -16,7 +16,8 @@ codeunit 34002521 "Control TPV"
         //+#144756
         //... Obtenemos la respuesta para sincronizar correctamente con DS-POS.
         //lcFComunes.AnularFactura(wcodPrmTienda,wcodPrmTPV,wcodPrmCajero,wcodPrmDoc);
-        //TODO: Ver - Ver codigo completowRespuesta := lcFComunes.AnularFactura(wcodPrmTienda, wcodPrmTPV, wcodPrmCajero, wcodPrmDoc);
+        // TODO: Manual review - The invoice-cancellation call targets disabled legacy POS integration behavior and its external transaction contract is unavailable.
+        // Original code: - Ver codigo completowRespuesta := lcFComunes.AnularFactura(wcodPrmTienda, wcodPrmTPV, wcodPrmCajero, wcodPrmDoc);
         //-#144756
     end;
 
