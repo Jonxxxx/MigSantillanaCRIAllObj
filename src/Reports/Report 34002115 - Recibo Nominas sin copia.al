@@ -1,7 +1,7 @@
-report 55020 "Boleta Nomina Ecuador"
+report 34002115 "Recibo Nominas sin copia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = 'src/ReportsLayout/Boleta Nomina Ecuador.rdl';
+    RDLCLayout = './Recibo Nominas sin copia.rdlc';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 
@@ -9,9 +9,8 @@ report 55020 "Boleta Nomina Ecuador"
     {
         dataitem("Historico Cab. nomina"; 34002117)
         {
-            //The property 'DataItemTableView' shouldn't have an empty value.
-            //DataItemTableView = '';
-            RequestFilterFields = "No. empleado", "Tipo de nomina", "Periodo";
+            DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
+            RequestFilterFields = "No. empleado", "Tipo de nomina", Periodo;
             column(Historico_Cab__nomina_No__empleado; "No. empleado")
             {
             }
@@ -27,14 +26,18 @@ report 55020 "Boleta Nomina Ecuador"
             dataitem("Historico Lin. nomina"; 34002118)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
-                               "Tipo Nomina" = FIELD("Tipo Nomina"),
-                               Periodo = FIELD(Periodo);
-                DataItemTableView = SORTING("No. empleado", "Tipo Nomina", Periodo, "No. Orden")
-                                    WHERE("Texto Informativo" = CONST(False));
+                               "Tipo de nomina" = FIELD("Tipo de nomina"),
+                               Periodo = FIELD(Periodo),
+                               Job No.=FIELD("Job No.");
+                DataItemTableView = SORTING("No. empleado", "Tipo de nomina", Periodo, "No. Orden")
+                                    WHERE("Texto Informativo" = CONST(false));
                 column("Historico_Lin__nomina__No__empleado_"; "No. empleado")
                 {
                 }
-                column("Historico_Cab__nomina__Nombre"; "Historico Cab. nomina".Nombre)
+                column(Historico_Cab__nomina__Nombre; "Historico Cab. nomina".Nombre)
+                {
+                }
+                column(Comentarion_; Comentario)
                 {
                 }
                 column(txtDesc; txtDesc)
@@ -46,16 +49,16 @@ report 55020 "Boleta Nomina Ecuador"
                 column(TIME; TIME)
                 {
                 }
-                column("Historico_Cab__nomina__Inicio"; "Historico Cab. nomina".Inicio)
+                column(Historico_Cab__nomina__Inicio; "Historico Cab. nomina".Inicio)
                 {
                 }
-                column("Historico_Cab__nomina__Fin"; "Historico Cab. nomina".Fin)
+                column(Historico_Cab__nomina__Fin; "Historico Cab. nomina".Fin)
                 {
                 }
                 column(TotIng___TotDed; TotIng + TotDed)
                 {
                 }
-                column("Historico_Cab__nomina__Cuenta"; "Historico Cab. nomina".Cuenta)
+                column(Historico_Cab__nomina__Cuenta; "Historico Cab. nomina".Cuenta)
                 {
                 }
                 column(rEmpresa_Picture; rEmpresa.Picture)
@@ -256,7 +259,7 @@ report 55020 "Boleta Nomina Ecuador"
                 column("Historico_Lin__nomina__No__empleado_Caption"; FIELDCAPTION("No. empleado"))
                 {
                 }
-                column("Historico_Cab__nomina__NombreCaption"; Histirico_Cab__nomina__NombreCaptionLbl)
+                column(Historico_Cab__nomina__NombreCaption; Histirico_Cab__nomina__NombreCaptionLbl)
                 {
                 }
                 column(txtDescCaption; txtDescCaptionLbl)
@@ -268,7 +271,7 @@ report 55020 "Boleta Nomina Ecuador"
                 column(TIMECaption; TIMECaptionLbl)
                 {
                 }
-                column("Recibo_de_nomina_periodoCaption"; Recibo_de_nomina_periodoCaptionLbl)
+                column(Recibo_de_nomina_periodoCaption; TextoTipoNomina)
                 {
                 }
                 column(alCaption; alCaptionLbl)
@@ -277,7 +280,7 @@ report 55020 "Boleta Nomina Ecuador"
                 column(TotIng___TotDedCaption; TotIng___TotDedCaptionLbl)
                 {
                 }
-                column("Historico_Cab__nomina__CuentaCaption"; Historico_Cab__nomina__CuentaCaptionLbl)
+                column(Historico_Cab__nomina__CuentaCaption; Historico_Cab__nomina__CuentaCaptionLbl)
                 {
                 }
                 column(V1Caption; V1CaptionLbl)
@@ -289,7 +292,7 @@ report 55020 "Boleta Nomina Ecuador"
                 column(IngresosCaption; IngresosCaptionLbl)
                 {
                 }
-                column("DescripcionCaption"; DescripcionCaptionLbl)
+                column(DescripcionCaption; DescripcionCaptionLbl)
                 {
                 }
                 column(HorasCaption; HorasCaptionLbl)
@@ -301,7 +304,7 @@ report 55020 "Boleta Nomina Ecuador"
                 column(ValorCaption_Control41; ValorCaption_Control41Lbl)
                 {
                 }
-                column("DescripcionCaption_Control43"; DescripcionCaption_Control43Lbl)
+                column(DescripcionCaption_Control43; DescripcionCaption_Control43Lbl)
                 {
                 }
                 column(Total_ingresosCaption; Total_ingresosCaptionLbl)
@@ -313,10 +316,10 @@ report 55020 "Boleta Nomina Ecuador"
                 column(Agree_with_ReceiveCaption; Agree_with_ReceiveCaptionLbl)
                 {
                 }
-                column("Historico_Lin__nomina_Tipo_Nomina"; "Tipo Nomina")
+                column(Historico_Lin__nomina_Tipo_nomina; "Tipo nomina")
                 {
                 }
-                column("Historico_Lin__nomina_Periodo"; Periodo)
+                column(Historico_Lin__nomina_Periodo; Periodo)
                 {
                 }
                 column(Historico_Lin__nomina_No__Orden; "No. Orden")
@@ -325,12 +328,14 @@ report 55020 "Boleta Nomina Ecuador"
 
                 trigger OnAfterGetRecord()
                 begin
+
                     IF "Tipo concepto" = "Tipo concepto"::Ingresos THEN BEGIN
                         i += 1;
                         DescIngreso[i] := Descripcion;
                         Horas[i] := Cantidad;
                         ImportIngreso[i] := Total;
                         ImporteIngresoTotal += ImportIngreso[i];
+                        TotIng += Total;
                     END
                     ELSE BEGIN
                         id += 1;
@@ -338,6 +343,7 @@ report 55020 "Boleta Nomina Ecuador"
                         Cant[id] := Cantidad;
                         ImportEgreso[id] := Total;
                         ImportEgresoTotal += ImportEgreso[id];
+                        TotDed += Total;
                     END;
                 end;
 
@@ -356,306 +362,10 @@ report 55020 "Boleta Nomina Ecuador"
                     END;
                     i := 0;
                     id := 0;
+
+                    TotIng := 0;
+                    TotDed := 0;
                 end;
-            }
-            dataitem(HLN; 34002118)
-            {
-                DataItemLink = "No. empleado" = FIELD("No. empleado"),
-                               "Tipo Nomina" = FIELD("Tipo Nomina"),
-                               Periodo = FIELD(Periodo);
-                DataItemTableView = SORTING("No. empleado", "Tipo Nomina", Periodo, "No. Orden")
-                                    WHERE("Texto Informativo" = CONST(False));
-                column("Historico_Lin__nomina__No__empleado2_"; "No. empleado")
-                {
-                }
-                column("Historico_Cab__nomina__Nombre2"; "Historico Cab. nomina".Nombre)
-                {
-                }
-                column(txtDesc2; txtDesc)
-                {
-                }
-                column(TODAY_2; TODAY)
-                {
-                }
-                column(TIME_2; TIME)
-                {
-                }
-                column("Historico_Cab__nomina__Inicio2"; "Historico Cab. nomina".Inicio)
-                {
-                }
-                column("Historico_Cab__nomina__Fin2"; "Historico Cab. nomina".Fin)
-                {
-                }
-                column(TotIng2___TotDed; TotIng + TotDed)
-                {
-                    AutoFormatType = 1;
-                }
-                column("Historico_Cab__nomina2__Cuenta"; "Historico Cab. nomina".Cuenta)
-                {
-                }
-                column(rEmpresa2_Picture; rEmpresa.Picture)
-                {
-                }
-                column(txttextoInf2; TextoInformativo)
-                {
-                }
-                column(DescDeducc_1_2; DescDeducc[1])
-                {
-                }
-                column(DescDeducc_2_2; DescDeducc[2])
-                {
-                }
-                column(DescDeducc_3_2; DescDeducc[3])
-                {
-                }
-                column(DescDeducc_4_2; DescDeducc[4])
-                {
-                }
-                column(DescDeducc_5_2; DescDeducc[5])
-                {
-                }
-                column(DescDeducc_6_2; DescDeducc[6])
-                {
-                }
-                column(DescDeducc_7_2; DescDeducc[7])
-                {
-                }
-                column(DescDeducc_8_2; DescDeducc[8])
-                {
-                }
-                column(DescDeducc_9_2; DescDeducc[9])
-                {
-                }
-                column(DescIngreso_1_2; DescIngreso[1])
-                {
-                }
-                column(DescIngreso_2_2; DescIngreso[2])
-                {
-                }
-                column(DescIngreso_3_2; DescIngreso[3])
-                {
-                }
-                column(DescIngreso_4_2; DescIngreso[4])
-                {
-                }
-                column(DescIngreso_5_2; DescIngreso[5])
-                {
-                }
-                column(DescIngreso_6_2; DescIngreso[6])
-                {
-                }
-                column(DescIngreso_7_2; DescIngreso[7])
-                {
-                }
-                column(DescIngreso_8_2; DescIngreso[8])
-                {
-                }
-                column(DescIngreso_9_2; DescIngreso[9])
-                {
-                }
-                column(DescIngreso_10_2; DescIngreso[10])
-                {
-                }
-                column(DescDeducc_10_2; DescDeducc[10])
-                {
-                }
-                column(Horas_1_2; Horas[1])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_2_2; Horas[2])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_3_2; Horas[3])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_4_2; Horas[4])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_5_2; Horas[5])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_6_2; Horas[6])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_7_2; Horas[7])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_8_2; Horas[8])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_9_2; Horas[9])
-                {
-                    AutoFormatType = 1;
-                }
-                column(Horas_10_2; Horas[10])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_1_2; ImportIngreso[1])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_2_2; ImportIngreso[2])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_3_2; ImportIngreso[3])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_4_2; ImportIngreso[4])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_5_2; ImportIngreso[5])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_6_2; ImportIngreso[6])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_7_2; ImportIngreso[7])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_8_2; ImportIngreso[8])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_9_2; ImportIngreso[9])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImportIngreso_10_2; ImportIngreso[10])
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_12__; ABS(ImportEgreso[1]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_22__; ABS(ImportEgreso[2]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_32__; ABS(ImportEgreso[3]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_42__; ABS(ImportEgreso[4]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_52__; ABS(ImportEgreso[5]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_62__; ABS(ImportEgreso[6]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_72__; ABS(ImportEgreso[7]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_82__; ABS(ImportEgreso[8]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_92__; ABS(ImportEgreso[9]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgreso_120__; ABS(ImportEgreso[10]))
-                {
-                    AutoFormatType = 1;
-                }
-                column(ImporteIngresoTotal2; ImporteIngresoTotal)
-                {
-                    AutoFormatType = 1;
-                }
-                column(ABS_ImportEgresoTotal2_; ABS(ImportEgresoTotal))
-                {
-                    AutoFormatType = 1;
-                }
-                column("Historico_Lin__nomina__No__empleado2_Caption"; FIELDCAPTION("No. empleado"))
-                {
-                }
-                column("Historico_Cab__nomina__Nombre2_Caption"; Historico_Cab__nomina__Nombre2_CaptionLbl)
-                {
-                }
-                column(txtDescCaption2; txtDescCaption2Lbl)
-                {
-                }
-                column(TODAY_2_Caption; TODAY_2_CaptionLbl)
-                {
-                }
-                column(TIME_2_Caption; TIME_2_CaptionLbl)
-                {
-                }
-                column("Recibo_de_nomina_periodo2Caption"; Recibo_de_nomina_periodo2CaptionLbl)
-                {
-                }
-                column(al2Caption; al2CaptionLbl)
-                {
-                }
-                column(TotIng2___TotDedCaption; TotIng2___TotDedCaptionLbl)
-                {
-                }
-                column("Historico_Cab__nomina2__CuentaCaption"; Historico_Cab__nomina2__CuentaCaptionLbl)
-                {
-                }
-                column(V2Caption; V2CaptionLbl)
-                {
-                }
-                column(Descuentos2_Caption; Descuentos2_CaptionLbl)
-                {
-                }
-                column(Ingresos2_Caption; Ingresos2_CaptionLbl)
-                {
-                }
-                column("DescripcionC2_aption"; DescripcionC2_aptionLbl)
-                {
-                }
-                column(Horas2_Caption; Horas2_CaptionLbl)
-                {
-                }
-                column(Valor2_Caption; Valor2_CaptionLbl)
-                {
-                }
-                column(ValorCaption2_Control41; ValorCaption2_Control41Lbl)
-                {
-                }
-                column("DescripcionCaption2_Control43"; DescripcionCaption2_Control43Lbl)
-                {
-                }
-                column(Total_ingresos2_Caption; Total_ingresos2_CaptionLbl)
-                {
-                }
-                column(Total_deducciones2_Caption; Total_deducciones2_CaptionLbl)
-                {
-                }
-                column(Agree_with_Receive2Caption; Agree_with_Receive2CaptionLbl)
-                {
-                }
-                column("HLN_Tipo_Nomina"; "Tipo Nomina")
-                {
-                }
-                column("HLN_Periodo"; Periodo)
-                {
-                }
-                column(HLN_No__Orden; "No. Orden")
-                {
-                }
             }
 
             trigger OnAfterGetRecord()
@@ -670,12 +380,15 @@ report 55020 "Boleta Nomina Ecuador"
                 CLEAR(DescIngreso);
                 CLEAR(DescDeducc);
                 CLEAR(Cant);
+                /*
                 CALCFIELDS("Total Ingresos", "Total deducciones");
-                TotIng := "Total Ingresos";
-                TotDed := "Total deducciones";
+                TotIng  := "Total Ingresos";
+                TotDed  := "Total deducciones";
+                */
                 txtDesc := '';
+                TextoTipoNomina := STRSUBSTNO(Recibo_de_nomina_periodoCaptionLbl, "Tipo de nomina");
 
-                IF NOT rCargos.GET(Cargo) THEN
+                IF NOT rCargos.GET(Departamento, Cargo) THEN
                     rCargos.INIT
                 ELSE
                     txtDesc := rCargos.Descripcion;
@@ -696,20 +409,13 @@ report 55020 "Boleta Nomina Ecuador"
                 TextoInformativo := '';
                 "Historico Lin. nomina".RESET;
                 "Historico Lin. nomina".SETRANGE("No. empleado", "No. empleado");
-                "Historico Lin. nomina".SETRANGE("Tipo Nomina", "Tipo Nomina");
+                "Historico Lin. nomina".SETRANGE("Tipo de nomina", "Tipo de nomina");
                 "Historico Lin. nomina".SETRANGE(Periodo, Periodo);
                 "Historico Lin. nomina".SETRANGE("No. Documento", "No. Documento");
                 "Historico Lin. nomina".SETRANGE("Texto Informativo", TRUE);
-                IF "Historico Lin. nomina".FINDSET THEN
-                    REPEAT
-                        IF FirstTime THEN BEGIN
-                            FirstTime := FALSE;
-                            TextoInformativo := "Historico Lin. nomina".Descripcion + ', ' + FORMAT(ROUND("Historico Lin. nomina".Total, 0.01));
-                        END
-                        ELSE
-                            TextoInformativo += '. ' + "Historico Lin. nomina".Descripcion + ', ' + FORMAT(ROUND("Historico Lin. nomina".Total, 0.01));
+                IF "Historico Lin. nomina".FINDFIRST THEN
+                    TextoInformativo := "Historico Lin. nomina".Descripcion + ', ' + FORMAT("Historico Lin. nomina".Total);
 
-                    UNTIL "Historico Lin. nomina".NEXT = 0;
             end;
 
             trigger OnPreDataItem()
@@ -736,11 +442,6 @@ report 55020 "Boleta Nomina Ecuador"
     {
     }
 
-    trigger OnPreReport()
-    begin
-        FirstTime := TRUE;
-    end;
-
     var
         rEmpresa: Record 79;
         rEmp: Record 5200;
@@ -761,44 +462,44 @@ report 55020 "Boleta Nomina Ecuador"
         TotDed: Decimal;
         txtDesc: Text[250];
         TextoInformativo: Text[250];
-        "Historico_Cab__nomina__NombreCaptionLbl": Label 'Full Name';
+        Histrico_Cab__nomina__NombreCaptionLbl: Label 'Full Name';
         txtDescCaptionLbl: Label 'Cargo';
         TODAYCaptionLbl: Label 'Date:';
         TIMECaptionLbl: Label 'Time:';
-        "Recibo_de_nomina_periodoCaptionLbl": Label 'Recibo de nomina periodo';
+        Recibo_de_nomina_periodoCaptionLbl: Label 'Payment slip payroll %1, period';
         alCaptionLbl: Label 'al';
         TotIng___TotDedCaptionLbl: Label 'Net Income';
-        "Historico_Cab__nomina__CuentaCaptionLbl": Label 'Bank Account';
+        Historico_Cab__nomina__CuentaCaptionLbl: Label 'Bank Account';
         V1CaptionLbl: Label '1';
         DescuentosCaptionLbl: Label 'Descuentos';
         IngresosCaptionLbl: Label 'Ingresos';
-        "DescripcionCaptionLbl": Label 'Descripcion';
+        DescripcionCaptionLbl: Label 'Descripcion';
         HorasCaptionLbl: Label 'Horas';
         ValorCaptionLbl: Label 'Valor';
         ValorCaption_Control41Lbl: Label 'Valor';
-        "DescripcionCaption_Control43Lbl": Label 'Descripcion';
+        DescripcionCaption_Control43Lbl: Label 'Descripcion';
         Total_ingresosCaptionLbl: Label 'Total ingresos';
         Total_deduccionesCaptionLbl: Label 'Total deducciones';
         Agree_with_ReceiveCaptionLbl: Label 'Agree with Receive';
-        "Historico_Cab__nomina__Nombre2_CaptionLbl": Label 'Full Name';
+        Historico_Cab__nomina__Nombre2_CaptionLbl: Label 'Full Name';
         txtDescCaption2Lbl: Label 'Cargo';
         TODAY_2_CaptionLbl: Label 'Date:';
         TIME_2_CaptionLbl: Label 'Time:';
-        "Recibo_de_nomina_periodo2CaptionLbl": Label 'Recibo de nomina periodo';
+        Recibo_de_nomina_periodo2CaptionLbl: Label 'Recibo de nomina periodo';
         al2CaptionLbl: Label 'al';
         TotIng2___TotDedCaptionLbl: Label 'Net Income';
-        "Historico_Cab__nomina2__CuentaCaptionLbl": Label 'Bank Account';
+        Historico_Cab__nomina2__CuentaCaptionLbl: Label 'Bank Account';
         V2CaptionLbl: Label '2';
         Descuentos2_CaptionLbl: Label 'Descuentos';
         Ingresos2_CaptionLbl: Label 'Ingresos';
-        "DescripcionC2_aptionLbl": Label 'Descripcion';
+        DescripcionC2_aptionLbl: Label 'Descripcion';
         Horas2_CaptionLbl: Label 'Horas';
         Valor2_CaptionLbl: Label 'Valor';
         ValorCaption2_Control41Lbl: Label 'Valor';
-        "DescripcionCaption2_Control43Lbl": Label 'Descripcion';
+        DescripcionCaption2_Control43Lbl: Label 'Descripcion';
         Total_ingresos2_CaptionLbl: Label 'Total ingresos';
         Total_deducciones2_CaptionLbl: Label 'Total deducciones';
         Agree_with_Receive2CaptionLbl: Label 'Agree with Receive';
-        FirstTime: Boolean;
+        TextoTipoNomina: Text[250];
 }
 

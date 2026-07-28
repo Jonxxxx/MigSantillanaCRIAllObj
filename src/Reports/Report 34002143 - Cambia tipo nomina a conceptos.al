@@ -1,0 +1,71 @@
+report 34002143 "Cambia tipo nomina a conceptos"
+{
+    ProcessingOnly = true;
+
+    dataset
+    {
+        dataitem("Integer"; 2000000026)
+        {
+            DataItemTableView = SORTING(Number)
+                                WHERE(Number = CONST(1));
+
+            trigger OnAfterGetRecord()
+            begin
+                IF Concepto = '' THEN
+                    ERROR(Err001);
+
+                PerfilSal.RESET;
+                PerfilSal.SETRANGE("Concepto salarial", Concepto);
+                PerfilSal.FINDSET(TRUE, FALSE);
+                REPEAT
+                    PerfilSal."Tipo de nomina" := TipoNom;
+                    PerfilSal.MODIFY;
+                UNTIL PerfilSal.NEXT = 0;
+            end;
+
+            trigger OnPostDataItem()
+            begin
+                MESSAGE(Text001);
+            end;
+        }
+    }
+
+    requestpage
+    {
+        SaveValues = true;
+
+        layout
+        {
+            area(content)
+            {
+                field(concep; Concepto)
+                {
+                    Caption = 'Wage';
+                    TableRelation = "Conceptos salariales";
+                }
+                field(Nvotiponom; TipoNom)
+                {
+                    Caption = 'New payroll type';
+                    OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
+                    TableRelation = "Tipos de nominas";
+                }
+            }
+        }
+
+        actions
+        {
+        }
+    }
+
+    labels
+    {
+    }
+
+    var
+        PerfilSal: Record 34002115;
+        Text001: Label 'Update already done, please check the changes';
+        TipoNom: Code[20];
+        Concepto: Code[20];
+        Err001: Label 'Select a wage concept';
+}
+

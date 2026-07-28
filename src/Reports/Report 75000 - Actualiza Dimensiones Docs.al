@@ -87,7 +87,7 @@ report 75000 "Actualiza Dimensiones Docs"
     end;
 
     var
-        DimMgt: Codeunit 408;
+        DimMgt: Codeunit DimensionManagement;
         Text001: Label 'Proceso Terminado';
         wDia: Dialog;
         wTotal: Integer;
