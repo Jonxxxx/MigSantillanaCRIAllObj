@@ -98,13 +98,13 @@ page 34002533 "Declaracion de caja"
                 trigger OnAction()
                 var
                     Text001: Label '¿Desea cerrar el turno?';
-                //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                 begin
-                    //TODO: Ver IF NOT ISEMPTY THEN
-                    //TODO: Ver     IF CONFIRM(Text001, FALSE) THEN BEGIN
-                    //TODO: Ver IF cduControl.CerrarTurno(Rec, codUsuario) THEN
-                    //TODO: Ver             CurrPage.CLOSE;
-                    //TODO: Ver    END;
+                    IF NOT ISEMPTY THEN
+                        IF CONFIRM(Text001, FALSE) THEN BEGIN
+                            IF cduControl.CerrarTurno(Rec, codUsuario) THEN
+                                CurrPage.CLOSE;
+                        END;
                 end;
             }
             action("Introducir fondo de caja")
@@ -117,19 +117,19 @@ page 34002533 "Declaracion de caja"
 
                 trigger OnAction()
                 var
-                    //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                     decFondoCaja: Decimal;
                     Text001: Label 'Esta accion la debe realizar un supervisor.';
                 begin
-                    //TODO: Ver IF cduControl.UsuarioSuper("No. tienda", codUsuario) THEN BEGIN
-                    CALCFIELDS("Fondo de caja");
-                    decFondoCaja := "Fondo de caja";
-                    //TODO: Ver cduControl.PedirFondoDeCaja(decFondoCaja);
-                    ActualizarFondoCaja(codUsuario, decFondoCaja);
-                    CurrPage.UPDATE;
-                    //TODO: Ver END
-                    //TODO: Ver ELSE
-                    ERROR(Text001);
+                    IF cduControl.UsuarioSuper("No. tienda", codUsuario) THEN BEGIN
+                        CALCFIELDS("Fondo de caja");
+                        decFondoCaja := "Fondo de caja";
+                        cduControl.PedirFondoDeCaja(decFondoCaja);
+                        ActualizarFondoCaja(codUsuario, decFondoCaja);
+                        CurrPage.UPDATE;
+                    END
+                    ELSE
+                        ERROR(Text001);
                 end;
             }
         }
@@ -147,15 +147,18 @@ page 34002533 "Declaracion de caja"
                 trigger OnAction()
                 var
                     recTurno: Record 34002529;
-                //TODO: Ver repCuadre: Report 34002503;
+                    // TODO: Manual review - Custom report 34002503 is unavailable as the required object type.
+                    // Original code: repCuadre: Report 34002503;
                 begin
                     recTurno.RESET;
                     recTurno.SETRANGE("No. tienda", "No. tienda");
                     recTurno.SETRANGE("No. TPV", "No. TPV");
                     recTurno.SETRANGE(Fecha, Fecha);
                     recTurno.SETRANGE("No. turno", "No. turno");
-                    //TODO: Ver repCuadre.SETTABLEVIEW(recTurno);
-                    //TODO: Ver repCuadre.RUNMODAL;
+                    // TODO: Manual review - Custom report 34002503 is unavailable, so its filtered modal execution cannot be restored.
+                    // Original code preserved below.
+                    // repCuadre.SETTABLEVIEW(recTurno);
+                    // repCuadre.RUNMODAL;
                 end;
             }
         }

@@ -95,7 +95,7 @@ page 56004 "Cab. Packing Registrado"
                 end;
             }
 
-            //TODO: Ver 
+            // TODO: Manual review - The disabled action uses DotNet process execution, a Windows batch file, a server path, and RunOnClient, which require a SaaS-compatible printing redesign.
             /*
             action(ejecuta)
             {
@@ -151,11 +151,11 @@ page 56004 "Cab. Packing Registrado"
 
     trigger OnInit()
     begin
-        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 

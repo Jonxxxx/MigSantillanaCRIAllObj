@@ -109,7 +109,7 @@ page 67116 "Hist Colegio - Docentes"
                     var
                         Estad: Page 67119;
                     begin
-                        //TODO: Ver Estad.RecibeParametros("Cod. Docente","Cod. Colegio");
+                        Estad.RecibeParametros(Rec."Cod. Docente", Rec."Cod. Colegio");
                         Estad.RUN;
                         CLEAR(Estad);
                     end;

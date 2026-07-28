@@ -145,14 +145,14 @@ page 34002534 "Control TPV"
 
                 trigger OnAction()
                 var
-                    //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                     Error001: Label 'Debe seleccionar tienda y TPV.';
                 begin
 
                     IF (codTienda = '') OR (codTPV = '') THEN
                         ERROR(Error001);
 
-                    //TODO: Ver cduControl.AbrirDia(codTienda, codTPV, WORKDATE, codUsuario);
+                    cduControl.AbrirDia(codTienda, codTPV, WORKDATE, codUsuario);
 
                     IF FINDFIRST THEN;
                 end;
@@ -167,12 +167,12 @@ page 34002534 "Control TPV"
 
                 trigger OnAction()
                 var
-                    //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                     Text001: Label '¿Desea cerrar el dia %1?';
                 begin
-                    //TODO: Ver IF NOT ISEMPTY THEN
-                    //TODO: Ver IF CONFIRM(Text001, FALSE, Fecha) THEN
-                    //TODO: Ver cduControl.CerrarDia(Rec, codUsuario);
+                    IF NOT ISEMPTY THEN
+                        IF CONFIRM(Text001, FALSE, Fecha) THEN
+                            cduControl.CerrarDia(Rec, codUsuario);
                 end;
             }
         }
@@ -190,15 +190,18 @@ page 34002534 "Control TPV"
                 trigger OnAction()
                 var
                     recDia: Record 34002524;
-                //TODO: Ver repResumen: Report 34002505;
+                    // TODO: Manual review - Custom report 34002505 is unavailable as the required object type.
+                    // Original code: repResumen: Report 34002505;
                 begin
 
                     recDia.RESET;
                     recDia.SETRANGE("No. tienda", "No. tienda");
                     recDia.SETRANGE("No. TPV", "No. TPV");
                     recDia.SETRANGE(Fecha, Fecha);
-                    //TODO: Ver repResumen.SETTABLEVIEW(recDia);
-                    //TODO: Ver repResumen.RUNMODAL;
+                    // TODO: Manual review - Custom report 34002505 is unavailable, so its filtered modal execution cannot be restored.
+                    // Original code preserved below.
+                    // repResumen.SETTABLEVIEW(recDia);
+                    // repResumen.RUNMODAL;
                 end;
             }
         }
@@ -219,19 +222,19 @@ page 34002534 "Control TPV"
         blnEditable := TRUE;
         IF FiltrarUsuarioTPV THEN BEGIN
             blnEditable := FALSE;
-            //TODO: Ver IF cduControl.LoginCajero(codTienda, codUsuario) THEN BEGIN
-            CurrPage.Turnos.PAGE.PasarDatos(codTienda, codUsuario);
-            CurrPage.Permisos.PAGE.PasarDatos(codTienda, codUsuario);
-            //TODO: Ver END
-            //TODO: Ver ELSE
-            ERROR('');
+            IF cduControl.LoginCajero(codTienda, codUsuario) THEN BEGIN
+                CurrPage.Turnos.PAGE.PasarDatos(codTienda, codUsuario);
+                CurrPage.Permisos.PAGE.PasarDatos(codTienda, codUsuario);
+            END
+            ELSE
+                ERROR('');
         END;
 
         IF FINDFIRST THEN;
     end;
 
     var
-        //TODO: Ver cduControl: Codeunit 34002521;
+        cduControl: Codeunit 34002521;
         texEstilo: Text;
         codTienda: Code[20];
         codTPV: Code[20];
@@ -254,11 +257,11 @@ page 34002534 "Control TPV"
 
     procedure CerrarTPV()
     var
-        //TODO: Ver cduControl: Codeunit 34002521;
+        cduControl: Codeunit 34002521;
         Text001: Label '¿Desea cerrar el TPV %1 de la tienda %2?';
     begin
-        //TODO: Ver IF CONFIRM(Text001, FALSE, "No. TPV", "No. tienda") THEN
-        //TODO: Ver cduControl.CerrarDia(Rec, codUsuario);
+        IF CONFIRM(Text001, FALSE, "No. TPV", "No. tienda") THEN
+            cduControl.CerrarDia(Rec, codUsuario);
     end;
 
     procedure TraerNombreTienda(): Text

@@ -226,7 +226,8 @@ page 34002501 "Ficha TPV"
                 trigger OnAction()
                 begin
 
-                    //TODO: Ver "Usuario windows" := cfAdd.TraerUsuarioWindows();
+                    // TODO: Manual review - TraerUsuarioWindows is inside a disabled codeunit block and is not a compiled public procedure.
+                    // Original code: "Usuario windows" := cfAdd.TraerUsuarioWindows();
                     MODIFY(FALSE);
                 end;
             }
@@ -243,14 +244,16 @@ page 34002501 "Ficha TPV"
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 
-        //TODO: Ver //TODO: VerIF NOT (cfComunes.EsCentral) THEN
-        ERROR(Error001);
+        // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code preserved below.
+        // IF NOT cfComunes.EsCentral() THEN
+        //     ERROR(Error001);
     end;
 
     trigger OnOpenPage()
     var
         rConf: Record 34002500;
-    //TODO: Ver lcGuatemala: Codeunit 34002508;
+        lcGuatemala: Codeunit 34002508;
     begin
         ActivarPais;
         ActivarRestricciones;
@@ -274,8 +277,10 @@ page 34002501 "Ficha TPV"
         wParaguay: Boolean;
         wAnulaciones: Boolean;
         wEcuador: Boolean;
-        //TODO: Ver cfComunes: Codeunit 34002503;
-        //TODO: Ver cfAdd: Codeunit 34002502;
+        // TODO: Manual review - The required EsCentral, PermiteAnulaciones, and TraerUsuarioWindows procedures are inside disabled codeunit blocks.
+        // Original code preserved below.
+        // cfComunes: Codeunit 34002503;
+        // cfAdd: Codeunit 34002502;
         wGuatemala: Boolean;
         wSalvador: Boolean;
         wHonduras: Boolean;
@@ -312,8 +317,10 @@ page 34002501 "Ficha TPV"
     procedure ActivarRestricciones()
     begin
 
-        //TODO: Ver  IF Tienda <> '' THEN
-        //TODO: Ver     wAnulaciones := cfComunes.PermiteAnulaciones(Tienda);
+        // TODO: Manual review - PermiteAnulaciones is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code preserved below.
+        // IF Tienda <> '' THEN
+        //     wAnulaciones := cfComunes.PermiteAnulaciones(Tienda);
     end;
 }
 

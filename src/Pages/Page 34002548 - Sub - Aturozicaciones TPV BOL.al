@@ -45,15 +45,18 @@ page 34002548 "Sub - Aturozicaciones TPV BOL"
 
     trigger OnOpenPage()
     var
-        //TODO: Ver cfBol: Codeunit 34002505;
+        // TODO: Manual review - Codeunit 34002505 is an empty migration placeholder and has no ActualizaAutorizaciones procedure.
+        // Original code: cfBol: Codeunit 34002505;
         rConf: Record 34002500;
     begin
 
         SETFILTER("Filtro Fecha", '%1..|%2', TODAY, 0D);
 
         rConf.GET();
-        //TODO: Ver IF rConf.Pais = rConf.Pais::Bolivia THEN
-        //TODO: Ver cfBol.ActualizaAutorizaciones(wTienda);
+        // TODO: Manual review - The Bolivia codeunit is an empty placeholder and cannot update authorization data.
+        // Original code preserved below.
+        // IF rConf.Pais = rConf.Pais::Bolivia THEN
+        //     cfBol.ActualizaAutorizaciones(wTienda);
     end;
 
     var

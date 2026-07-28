@@ -59,7 +59,8 @@ page 34002521 "Lista Pagos TPV"
         cfComunes: Codeunit 34002503;
     begin
 
-        //TODO: VerIF NOT (cfComunes.EsCentral) THEN
+        // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code: IF NOT cfComunes.EsCentral() THEN
         ERROR(Error001);
     end;
 }

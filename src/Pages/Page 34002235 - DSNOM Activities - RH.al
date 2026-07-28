@@ -17,13 +17,11 @@ page 34002235 "DSNOM Activities - RH"
                 field("Inactives Employees"; "Inactives Employees")
                 {
                 }
-                //TODO: Ver 
-                /*
                 field(FuncionesNomAniversarioEmpleados;
                 FuncionesNom.AniversarioEmpleados)
                 {
                     Caption = 'Empl. anniversary';
-                    //TODO: Ver DecimalPlaces = 0 : 2;
+                    DecimalPlaces = 0 : 2;
                     Image = Time;
                     Style = Attention;
                     StyleExpr = TRUE;
@@ -32,7 +30,7 @@ page 34002235 "DSNOM Activities - RH"
                     begin
                         FuncionesNom.MuestraAniversarioEmpl;
                     end;
-                }*/
+                }
                 field("New hires"; "New hires")
                 {
                 }
@@ -60,20 +58,18 @@ page 34002235 "DSNOM Activities - RH"
             cuegroup(Vacation)
             {
                 Caption = 'Vacation';
-                //TODO: Ver 
-                /*
                 field(FuncionesNomVacacionesporVencer;
                 FuncionesNom.VacacionesporVencer)
                 {
                     Caption = 'vacation to expire';
-                    //TODO: Ver DecimalPlaces = 0 : 2;
+                    DecimalPlaces = 0 : 2;
                     Image = Calendar;
 
                     trigger OnDrillDown()
                     begin
                         FuncionesNom.MuestraVacporVencer;
                     end;
-                }*/
+                }
                 field("Vacation to start"; "Vacation to start")
                 {
                     Image = Calendar;
@@ -137,7 +133,7 @@ page 34002235 "DSNOM Activities - RH"
     end;
 
     var
-        //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         Fecha: Record 2000000007;
 }
 

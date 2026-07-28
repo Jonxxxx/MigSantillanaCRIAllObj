@@ -390,14 +390,12 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
                     Importance = Additional;
                     Visible = ESACC_F18_Visible;
                 }
-                //TODO: Ver 
-                /*
                 field("Ship-to UPS Zone"; "Ship-to UPS Zone")
                 {
                     Editable = ESACC_F10005_Editable;
                     HideValue = ESACC_F10005_HideValue;
                     Visible = ESACC_F10005_Visible;
-                }*/
+                }
                 field("Location Code"; "Location Code")
                 {
                     Editable = ESACC_F28_Editable;
@@ -552,8 +550,8 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action(Customer)
@@ -601,8 +599,9 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
                     trigger OnAction()
                     var
                         ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::"Credit Memo", Rec."No.");
                         ApprovalEntries.RUN;
                     end;
                 }
@@ -636,7 +635,8 @@ page 34002558 "Ficha Notas Crédito Pdtes POS"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C51_Visible: Boolean;
         [InDataSet]

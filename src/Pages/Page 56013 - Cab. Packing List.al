@@ -63,11 +63,11 @@ page 56013 "Cab. Packing List"
 
     trigger OnInit()
     begin
-        //TODO: Ver TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
+        TieneGestionAlmacen := FuncSant.TieneGestionAlmacen;
     end;
 
     var
-        //TODO: Ver FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 56000;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 }

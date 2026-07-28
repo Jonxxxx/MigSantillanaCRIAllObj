@@ -84,8 +84,8 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver IF CONFIRM(txt001) THEN
-                        //TODO: Ver     FunSant.RegHojaEnv(Rec, FALSE);
+                        IF CONFIRM(txt001) THEN
+                            FunSant.RegHojaEnv(Rec, FALSE);
                     end;
                 }
                 action("&Post And Print")
@@ -99,8 +99,8 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver IF CONFIRM(txt002) THEN
-                        //TODO: Ver     FunSant.RegHojaEnv(Rec, TRUE);
+                        IF CONFIRM(txt002) THEN
+                            FunSant.RegHojaEnv(Rec, TRUE);
                     end;
                 }
                 action("Actualizar Lineas")
@@ -129,7 +129,7 @@ page 56009 "Cab. Hoja de Ruta"
         txt001: Label 'Confirm that you want to post the Route Sheet';
         txt002: Label 'Confirm that you want to Post and Print the Route Sheet';
         LHRR1Record: Record 56023;
-        //TODO: Ver FunSant: Codeunit 56000;
+        FunSant: Codeunit 56000;
         rCHRL: Record 56020;
 }
 

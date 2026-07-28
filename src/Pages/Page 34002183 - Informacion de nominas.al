@@ -8,12 +8,10 @@ page 34002183 "Informacion de nominas"
     {
         area(content)
         {
-            //TODO: Ver 
-            /*
             field(Novedades; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
             {
                 Caption = 'Customer No.';
-            }*/
+            }
         }
     }
 
@@ -22,6 +20,6 @@ page 34002183 "Informacion de nominas"
     }
 
     var
-    //TODO: Ver  CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 34002104;
 }
 

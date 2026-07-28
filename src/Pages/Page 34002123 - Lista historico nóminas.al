@@ -65,7 +65,8 @@ page 34002123 "Lista historico nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002124;
+                    // TODO: Manual review - Custom report 34002124 is unavailable as the required object type.
+                    // Original code: RunObject = Report 34002124;
 
                     trigger OnAction()
                     begin
@@ -80,7 +81,8 @@ page 34002123 "Lista historico nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002106;
+                    // TODO: Manual review - Custom report 34002106 is unavailable as the required object type.
+                    // Original code: RunObject = Report 34002106;
                 }
 
                 action(Statistics)
@@ -112,7 +114,8 @@ page 34002123 "Lista historico nominas"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver Modelorecibsalario.RUN(Rec);
+                    // TODO: Manual review - Custom codeunit 34002103 is unavailable, so the payroll receipt execution cannot be restored.
+                    // Original code: Modelorecibsalario.RUN(Rec);
                 end;
             }
         }
@@ -126,6 +129,7 @@ page 34002123 "Lista historico nominas"
 
     var
         Emp: Record 5200;
-    //TODO: Ver Modelorecibsalario: Codeunit 34002103;
+        // TODO: Manual review - Custom codeunit 34002103 is unavailable as the required object type.
+        // Original code: Modelorecibsalario: Codeunit 34002103;
 }
 

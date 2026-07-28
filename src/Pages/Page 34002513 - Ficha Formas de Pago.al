@@ -54,7 +54,8 @@ page 34002513 "Ficha Formas de Pago"
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 
-        //TODO: VerIF NOT (cfComunes.EsCentral) THEN
+        // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
+        // Original code: IF NOT cfComunes.EsCentral() THEN
         ERROR(Error001);
     end;
 }

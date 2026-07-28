@@ -17,12 +17,10 @@ page 67062 Fechas
                 field("Period Start"; "Period Start")
                 {
                 }
-                //TODO: Ver 
-                /*
-                field(NORMALDATE("Period End"); NORMALDATE("Period End"))
+                field("Period End"; NORMALDATE(Rec."Period End"))
                 {
                     Caption = 'Period End';
-                }*/
+                }
                 field("Period No."; "Period No.")
                 {
                 }

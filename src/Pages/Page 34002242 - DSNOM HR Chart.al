@@ -19,7 +19,7 @@ page 34002242 "DSNOM HR Chart"
             usercontrol(BusinessChart; "Microsoft.Dynamics.Nav.Client.BusinessChart")
             {
                 ApplicationArea = Basic, Suite;
-                //TODO: Ver
+                // TODO: Manual review - The disabled chart event block uses DotNet BusinessChartDataPoint, which is unsupported in Business Central SaaS.
                 /*
 
                 trigger DataPointClicked(point: DotNet BusinessChartDataPoint)
@@ -282,7 +282,8 @@ page 34002242 "DSNOM HR Chart"
 
     trigger OnFindRecord(Which: Text): Boolean
     begin
-        //TODO: Ver UpdateChart;
+        // TODO: Manual review - The legacy parameterless chart refresh binds the current control-add-in overload, which requires a BusinessChart argument.
+        // Original code: UpdateChart;
         IsChartDataReady := TRUE;
 
         IF NOT IsChartAddInReady THEN
@@ -338,7 +339,8 @@ page 34002242 "DSNOM HR Chart"
         IF NOT IsChartAddInReady THEN
             EXIT;
         TrailingSalesOrdersMgt.UpdateData(Rec);
-        //TODO: Ver Update(CurrPage.BusinessChart);
+        // TODO: Manual review - The legacy Business Chart Update call has no verified current control-add-in signature.
+        // Original code: Update(CurrPage.BusinessChart);
         UpdateStatus;
         NeedsUpdate := FALSE;
     end;

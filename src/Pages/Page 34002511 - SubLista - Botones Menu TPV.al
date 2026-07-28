@@ -26,7 +26,7 @@ page 34002511 "SubLista - Botones Menu TPV"
                 {
                     Editable = false;
 
-                    //TODO: Ver 
+                    // TODO: Manual review - The disabled color-selection trigger uses RunOnClient and DotNet ColorDialog, which are unsupported in Business Central SaaS.
                     /*
                     trigger OnAssistEdit()
                     var

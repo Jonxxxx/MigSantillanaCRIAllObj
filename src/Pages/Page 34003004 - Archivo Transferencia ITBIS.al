@@ -325,7 +325,8 @@ page 34003004 "Archivo Transferencia ITBIS"
                     //PromotedCategory = Process;
                     //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34003006;
+                    // TODO: Manual review - Custom report 34003006 is unavailable as the required object type.
+                    // Original code: RunObject = Report 34003006;
                 }
                 action(AbrirDocumento)
                 {

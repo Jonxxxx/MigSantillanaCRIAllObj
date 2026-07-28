@@ -252,85 +252,87 @@ page 34002180 "Datos empleados moviles OJO"
                 {
                     Caption = 'Co&mments';
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page 5222;
-                    //TODO: Ver RunPageLink = "Table Name" = CONST(Employee),
-                    //TODO: Ver              "No." = FIELD("No.");
+                    RunObject = Page 5222;
+                    RunPageLink = "Table Name" = CONST(Employee),
+                                  "No." = FIELD("No.");
                 }
                 action(DimensionsA)
                 {
                     Caption = 'Dimensions';
                     Image = Dimensions;
-                    //TODO: Ver RunObject = Page "Default Dimensions";
-                    //TODO: Ver RunPageLink = "Table ID" = CONST(5200),
-                    //TODO: Ver              "No." = FIELD("No.");
+                    RunObject = Page "Default Dimensions";
+                    RunPageLink = "Table ID" = CONST(5200),
+                                  "No." = FIELD("No.");
                     ShortCutKey = 'Shift+Ctrl+D';
                 }
                 action("&Picture")
                 {
                     Caption = '&Picture';
-                    //TODO: Ver RunObject = Page 5202;
-                    //TODO: Ver RunPageLink = "No." = FIELD("No.");
+                    RunObject = Page 5202;
+                    RunPageLink = "No." = FIELD("No.");
                 }
                 action("&Alternative Addresses")
                 {
                     Caption = '&Alternative Addresses';
-                    //TODO: Ver RunObject = Page 5203;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5203;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Relati&ves")
                 {
                     Caption = 'Relati&ves';
-                    //TODO: Ver RunObject = Page 5209;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5209;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Mi&sc. Article Information")
                 {
                     Caption = 'Mi&sc. Article Information';
-                    //TODO: Ver RunObject = Page 5219;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5219;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Con&fidential Information")
                 {
                     Caption = 'Con&fidential Information';
-                    //TODO: Ver RunObject = Page 5221;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5221;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Q&ualifications")
                 {
                     Caption = 'Q&ualifications';
-                    //TODO: Ver RunObject = Page 5206;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5206;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("A&bsences")
                 {
                     Caption = 'A&bsences';
-                    //TODO: Ver RunObject = Page 5211;
-                    //TODO: Ver RunPageLink = "Employee No." = FIELD("No.");
+                    RunObject = Page 5211;
+                    RunPageLink = "Employee No." = FIELD("No.");
                 }
 
                 action("&Related Companies")
                 {
                     Caption = '&Related Companies';
-                    //TODO: Ver RunObject = Page 34002157;
-                    //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
+                    // TODO: Manual review - Custom page 34002157 is unavailable; the current object with this ID is a table.
+                    // Original code preserved below.
+                    // RunObject = Page 34002157;
+                    // RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
                 action("Absences b&y Categories")
                 {
                     Caption = 'Absences b&y Categories';
-                    //TODO: Ver RunObject = Page 5226;
-                    //TODO: Ver RunPageLink = "No." = FIELD("No."),
-                    //TODO: Ver               "Employee No. Filter" = FIELD("No.");
+                    RunObject = Page 5226;
+                    RunPageLink = "No." = FIELD("No."),
+                                  "Employee No. Filter" = FIELD("No.");
                 }
                 action("Misc. Articles &Overview")
                 {
                     Caption = 'Misc. Articles &Overview';
-                    //TODO: Ver RunObject = Page 5228;
+                    RunObject = Page 5228;
                 }
                 action("Confidential Info. Overvie&w")
                 {
                     Caption = 'Confidential Info. Overvie&w';
-                    //TODO: Ver RunObject = Page 5229;
+                    RunObject = Page 5229;
                 }
 
                 action("Online Map")
@@ -371,7 +373,7 @@ page 34002180 "Datos empleados moviles OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNominas(Rec);
+                    CUNomina.MuestraNominas(Rec);
                 end;
             }
             action(Dimensions)
@@ -383,7 +385,7 @@ page 34002180 "Datos empleados moviles OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraDimensiones("No.");
+                    CUNomina.MuestraDimensiones("No.");
                 end;
             }
             action(Qualifications)
@@ -394,7 +396,7 @@ page 34002180 "Datos empleados moviles OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraCualificaciones("No.");
+                    CUNomina.MuestraCualificaciones("No.");
                 end;
             }
             action(Absenses)
@@ -405,7 +407,7 @@ page 34002180 "Datos empleados moviles OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNovedades(Rec);
+                    CUNomina.MuestraNovedades(Rec);
                 end;
             }
         }
@@ -427,15 +429,16 @@ page 34002180 "Datos empleados moviles OJO"
 
     trigger OnOpenPage()
     var
-    //TODO: Ver MapMgt: Codeunit 802;
+        MapMgt: Codeunit "Online Map Management";
     begin
-        //TODO: Ver IF NOT MapMgt.TestSetup THEN
-        //TODO: Ver     MapPointVisible := FALSE;
+        IF NOT MapMgt.TestSetup THEN
+            MapPointVisible := FALSE;
     end;
 
     var
-        //TODO: Ver Mail: Codeunit 397;
-        //TODO: Ver CUNomina: Codeunit 34002104;
+        // TODO: Manual review - Legacy Mail codeunit 397 is unavailable, and this declaration has no active caller to migrate to the current Email API.
+        // Original code: Mail: Codeunit 397;
+        CUNomina: Codeunit 34002104;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

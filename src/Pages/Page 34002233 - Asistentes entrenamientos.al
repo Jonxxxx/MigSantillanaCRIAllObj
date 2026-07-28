@@ -109,7 +109,8 @@ page 34002233 "Asistentes entrenamientos"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncEnt.EnviarNotificacion(Rec);
+                        // TODO: Manual review - Codeunit 34002145 exists but does not expose the legacy EnviarNotificacion procedure.
+                        // Original code: FuncEnt.EnviarNotificacion(Rec);
                     end;
                 }
 
@@ -155,7 +156,8 @@ page 34002233 "Asistentes entrenamientos"
     var
         CabEntrenamiento: Record 34002204;
         Asistentesentrenamientos: Record 34002206;
-        //TODO: Ver FuncEnt: Codeunit 34002145;
+        // TODO: Manual review - The verified training codeunit lacks the required EnviarNotificacion procedure.
+        // Original code: FuncEnt: Codeunit 34002145;
         TotalInscritos: Integer;
         TotalAsistentes: Integer;
         Capacidad: Integer;

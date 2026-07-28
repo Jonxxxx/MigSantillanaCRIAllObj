@@ -122,7 +122,8 @@ page 34002111 "Lista Acciones de personal"
                 action("C&omentarios")
                 {
                     Caption = 'C&omentarios';
-                    //TODO: Ver RunObject = Page 34002156;
+                    // TODO: Manual review - Custom page 34002156 cannot be verified in the current repository or dependency symbols.
+                    // Original code: RunObject = Page 34002156;
                 }
             }
         }

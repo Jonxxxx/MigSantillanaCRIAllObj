@@ -88,16 +88,14 @@ page 56064 "Gestion BackOrder - SL"
                 {
                     Editable = false;
                 }
-                //TODO: Ver
-                /*
-                field(SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec);
+                field(QtyAvailableJX;
                     SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
                     Caption = 'Qty. Available';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
-                }*/
+                }
                 field("Cantidad Solicitada"; "Cantidad Solicitada")
                 {
                     Editable = false;
@@ -132,7 +130,7 @@ page 56064 "Gestion BackOrder - SL"
                     CLEAR(PedVta);
                     SH.GET("Document Type", "Document No.");
                     PedVta.SETRECORD(SH);
-                    //TODO: Ver PedVta.GestBackOrd(TRUE);
+                    PedVta.GestBackOrd(TRUE);
                     PedVta.RUNMODAL;
                     CLEAR(PedVta);
                 end;
@@ -228,11 +226,11 @@ page 56064 "Gestion BackOrder - SL"
                                 Window.UPDATE(1, SL."No.");
                                 Window.UPDATE(2, ROUND(Counter / CounterTotal * 10000, 1));
 
-                                //TODO: Ver CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
+                                CantDisp := SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
                                 IF CantDisp > SL."Cantidad pendiente BO" THEN
-                                    SL."Cantidad a Anular" := 0;
-                                //TODO: Ver ELSE
-                                //TODO: Ver SL."Cantidad a Anular" := SL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
+                                    SL."Cantidad a Anular" := 0
+                                ELSE
+                                    SL."Cantidad a Anular" := SL."Cantidad pendiente BO" - SalesInfoPaneMgt.CalcAvailability_BackOrder(SL);
                                 SL."Cantidad a Ajustar" := SL."Cantidad pendiente BO" - SL."Cantidad a Anular";
                                 SL.MODIFY;
                             UNTIL SL.NEXT = 0;
@@ -320,10 +318,9 @@ page 56064 "Gestion BackOrder - SL"
                 END;
                 //-$002
 
-                //TODO: Ver 
-                //TODO: Ver IF (SalesLine."Cantidad pendiente BO" > 0) THEN // +$003
-                //TODO: Ver IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SalesLine) > 0) AND
-                //TODO: Ver (SH.GET(SalesLine."Document Type", SalesLine."Document No.")) THEN
+                IF (SalesLine."Cantidad pendiente BO" > 0) THEN // +$003
+                    IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SalesLine) > 0) AND
+                       (SH.GET(SalesLine."Document Type", SalesLine."Document No.")) THEN
                 //+$002
                 // El ELSE no tenia ningún sentido, los registros ya están marcados como FALSE
                 /*********************************************************
@@ -354,11 +351,12 @@ page 56064 "Gestion BackOrder - SL"
     end;
 
     var
-        SalesInfoPaneMgt: Codeunit 7171;
+        SalesInfoPaneMgt: Codeunit EXCCRISalesInfoPaneMgt;
         SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit "Release Sales Document";
         salesheader: Record 36;
-        //TODO: Ver AppTemp: Record 464;
+        // TODO: Manual review - Standard table Application Temp is unavailable and no verified equivalent preserves the legacy approval state.
+        // Original code: AppTemp: Record 464;
         ApprovalMgt: Codeunit "Approvals Mgmt.";
         EstatusPed: Option Abierto,Lanzado,"Aprobacion pendiente","Anticipo pendiente";
         UserSetup: Record 91;

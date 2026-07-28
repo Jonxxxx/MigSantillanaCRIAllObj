@@ -43,20 +43,18 @@ page 34002188 "DSNOM Activities"
             cuegroup(Vacation)
             {
                 Caption = 'Vacation';
-                //TODO: Ver 
-                /*
                 field(FuncionesNomVacacionesporVencer;
                 FuncionesNom.VacacionesporVencer)
                 {
                     Caption = 'vacation to expire';
-                    //TODO: Ver DecimalPlaces = 0 : 2;
+                    DecimalPlaces = 0 : 2;
                     Image = Calendar;
 
                     trigger OnDrillDown()
                     begin
                         FuncionesNom.MuestraVacporVencer;
                     end;
-                }*/
+                }
                 field("Vacation to start"; "Vacation to start")
                 {
                     Image = Calendar;
@@ -120,7 +118,7 @@ page 34002188 "DSNOM Activities"
     end;
 
     var
-        //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         Fecha: Record 2000000007;
 }
 

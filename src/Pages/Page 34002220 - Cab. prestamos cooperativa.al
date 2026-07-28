@@ -87,7 +87,7 @@ page 34002220 "Cab. prestamos cooperativa"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncCoop.CrearCuotasCoop(Rec);
+                        FuncCoop.CrearCuotasCoop(Rec);
                     end;
                 }
 
@@ -102,7 +102,7 @@ page 34002220 "Cab. prestamos cooperativa"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncCoop.RegistrarPrestCoop(Rec);
+                        FuncCoop.RegistrarPrestCoop(Rec);
                     end;
                 }
             }
@@ -110,6 +110,6 @@ page 34002220 "Cab. prestamos cooperativa"
     }
 
     var
-    //TODO: Ver FuncCoop: Codeunit 34002110;
+        FuncCoop: Codeunit 34002110;
 }
 

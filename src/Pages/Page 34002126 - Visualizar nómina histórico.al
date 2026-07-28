@@ -10,7 +10,7 @@ page 34002126 "Visualizar nomina historico"
         {
             group(GeneralGroup)
             {
-                //TODO: Ver 
+                // TODO: Manual review - This disabled payroll summary field must be validated together with the complete legacy layout before activation.
                 /*
                 field(TotDevengTotDeducc; TotDeveng + TotDeducc)
                 {
@@ -27,7 +27,7 @@ page 34002126 "Visualizar nomina historico"
                         Caption = 'General';
                         //The GridLayout property is only supported on controls of type Grid
                         //GridLayout = Columns;
-                        //TODO: Ver 
+                        // TODO: Manual review - This disabled array-based payroll grid uses legacy layout structure that has no verified BC v27 equivalent as a complete block.
                         /*
                         group(GeneralGroup2)
                         {
@@ -126,7 +126,7 @@ page 34002126 "Visualizar nomina historico"
                             }
                         }*/
                     }
-                    //TODO: Ver 
+                    // TODO: Manual review - These disabled payroll total fields depend on the surrounding legacy layout block and cannot be restored independently.
                     /*
                     field(TotDeveng; TotDeveng)
                     {

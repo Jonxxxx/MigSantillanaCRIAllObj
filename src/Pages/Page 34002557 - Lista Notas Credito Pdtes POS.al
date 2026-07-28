@@ -238,8 +238,8 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action("Co&mments")
@@ -247,10 +247,10 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                     Caption = 'Co&mments';
                     Enabled = ESACC_C1102601023_Enabled;
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = FIELD("Document Type"),
-                    //TODO: Ver               "No." = FIELD("No."),
-                    //TODO: Ver               "Document Line No." = CONST(0);
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                     Visible = ESACC_C1102601023_Visible;
                 }
                 action(Dimensions)
@@ -275,10 +275,11 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ApprovalEntries: Page "Approval Entries";
+                        ApprovalEntries: Page "Approval Entries";
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver  ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
-                        //TODO: Ver ApprovalEntries.RUN;
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::"Credit Memo", Rec."No.");
+                        ApprovalEntries.RUN;
                     end;
                 }
                 action("Log de Documentos Electronicos")
@@ -452,7 +453,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Registrar.RegistraFacturaManual();
+                        Registrar.RegistraFacturaManual();
                     end;
                 }
                 action("Convertir Pedidos DSPOS")
@@ -462,7 +463,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Transfer_SIC.RUN();//001+-
+                        Transfer_SIC.RUN();//001+-
                     end;
                 }
             }
@@ -472,22 +473,26 @@ page 34002557 "Lista Notas Credito Pdtes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-    //TODO: Ver lcfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+        // Original code: lcfComunes: Codeunit 34002503;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;
 
         //+#217374
         wCostaRica := FALSE;
-        //TODO: Ver CASE lcFComunes.Pais OF
-        //TODO: Ver     9:
-        //TODO: Ver        wCostaRica := TRUE;
-        //TODO: Ver END;
+        // TODO: Manual review - Pais is not a compiled procedure, and numeric country value 9 must not be reinterpreted without verified option semantics.
+        // Original code preserved below.
+        // CASE lcFComunes.Pais OF
+        //     9:
+        //         wCostaRica := TRUE;
+        // END;
         //-#217374
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C3_Visible: Boolean;
         [InDataSet]
@@ -700,7 +705,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
         [InDataSet]
         JobQueueActive: Boolean;
         wCostaRica: Boolean;
-    //TODO: Ver Registrar: Codeunit 50112;
-    //TODO: Ver Transfer_SIC: Codeunit 50110;
+        Registrar: Codeunit 50112;
+        Transfer_SIC: Codeunit 50110;
 }
 

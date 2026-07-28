@@ -122,7 +122,7 @@ page 75006 "Conf. Tipologias MdM"
         lrConfF: Record 75008;
         lwNo: Integer;
     begin
-        //TODO: Ver wEditable := cFunMdm.GetEditable;
+        wEditable := cFunMdm.GetEditable;
         CurrPage.EDITABLE := wEditable;
 
         // Hacemos visibles solo las columnas configuradas
@@ -137,7 +137,7 @@ page 75006 "Conf. Tipologias MdM"
 
     var
         wEditable: Boolean;
-        //TODO: Ver cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 75000;
         wRefEnbl1: Boolean;
         wRefEnbl2: Boolean;
         wRefEnbl3: Boolean;

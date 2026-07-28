@@ -20,9 +20,11 @@ page 34002530 "Menu Inicial TPV"
     {
         area(content)
         {
-            //TODO: Ver usercontrol(DSPoS; "DSPoS")
-            //TODO: Ver {
-            //TODO: Ver }
+            // TODO: Manual review - The DSPoS client control add-in is unavailable and requires a SaaS-compatible interface redesign.
+            // Original code preserved below.
+            // usercontrol(DSPoS; "DSPoS")
+            // {
+            // }
         }
     }
 
@@ -40,13 +42,15 @@ page 34002530 "Menu Inicial TPV"
     begin
 
         AddInData := text001;
-        //TODO: Ver cFuncDS.Comprobaciones_Iniciales;
+        // TODO: Manual review - Comprobaciones_Iniciales is inside a disabled codeunit block that depends on DotNet and RunOnClient.
+        // Original code: cFuncDS.Comprobaciones_Iniciales;
     end;
 
     var
         AddInData: Text[1024];
         Err001: Label 'No puede cerrar esta página con el DSPoS iniciado';
-        //TODO: Ver cFuncDS: Codeunit 34002502;
+        // TODO: Manual review - Codeunit 34002502 contains the required initialization only inside an unsupported disabled client-add-in block.
+        // Original code: cFuncDS: Codeunit 34002502;
         text001: Label 'Copyright: DynaSoft Spain';
 }
 

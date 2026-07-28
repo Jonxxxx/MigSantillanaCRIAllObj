@@ -32,7 +32,7 @@ page 75012 "Valores Filtros Tipologia MdM"
 
     var
         wId: Integer;
-    //TODO: Ver cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 75000;
 
     procedure RellenaTabla(pwIdFiltro: Integer)
     var
@@ -40,7 +40,8 @@ page 75012 "Valores Filtros Tipologia MdM"
         lrDatosMdM: Record 75001;
         lwCodDim: Code[20];
         lrValDim: Record 349;
-    //TODO: Ver lrCodGrProd: Record 5723;
+        // TODO: Manual review - Product Group table 5723 is unavailable and Item Category is not a verified semantic replacement.
+        // Original code: lrCodGrProd: Record 5723;
     begin
         // RellenaTabla
 
@@ -51,7 +52,7 @@ page 75012 "Valores Filtros Tipologia MdM"
             CASE lrFiltroTipo.Tipo OF
                 lrFiltroTipo.Tipo::Dimension:
                     BEGIN
-                        //TODO: Ver lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
+                        lwCodDim := cFunMdM.GetDimCode(lrFiltroTipo."Valor Id", TRUE);
                         CLEAR(lrValDim);
                         lrValDim.SETRANGE("Dimension Code", lwCodDim);
                         IF lrValDim.FINDSET THEN BEGIN
@@ -70,7 +71,7 @@ page 75012 "Valores Filtros Tipologia MdM"
                             UNTIL lrDatosMdM.NEXT = 0;
                         END;
                     END;
-            //TODO: Ver 
+            // TODO: Manual review - The Otros branch requires removed Product Group table 5723, and Item Category is not a verified semantic replacement.
             /*
         lrFiltroTipo.Tipo::Otros:
             BEGIN

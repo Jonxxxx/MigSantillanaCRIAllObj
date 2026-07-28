@@ -82,7 +82,8 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver cImpExcel.ImportaFile(FALSE, 0);
+                            // TODO: Manual review - ImportaFile exists, but its file selection, upload, workbook reading, and import body are disabled legacy client-file code.
+                            // Original code: cImpExcel.ImportaFile(FALSE, 0);
                         end;
                     }
                     action("Todas las Hojas")
@@ -91,7 +92,8 @@ page 75016 "Importaciones MdM"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver cImpExcel.ImportaFile(TRUE, 0);
+                            // TODO: Manual review - ImportaFile exists, but its file selection, upload, workbook reading, and import body are disabled legacy client-file code.
+                            // Original code: cImpExcel.ImportaFile(TRUE, 0);
                         end;
                     }
                 }
@@ -116,54 +118,48 @@ page 75016 "Importaciones MdM"
                         Enabled = wBlobEnabled1;
                         Image = Save;
 
-                        //TODO: Ver 
-                        /*
                         trigger OnAction()
                         var
-                            TempBlob: Record 99008535;
+                            TempBlob: Codeunit "Temp Blob";
                         begin
-                            CALCFIELDS(DOC);
-                            IF NOT DOC.HASVALUE THEN
+                            Rec.CALCFIELDS(DOC);
+                            IF NOT Rec.DOC.HASVALUE THEN
                                 EXIT;
-                            TempBlob.Blob := DOC;
+                            TempBlob.FromRecord(Rec, Rec.FIELDNO(DOC));
                             cFileMng.BLOBExport(TempBlob, 'DOC.xml', TRUE);
-                        end;*/
+                        end;
                     }
                     action(Salida)
                     {
                         Caption = 'Salida';
                         Enabled = wBlobEnabled2;
                         Image = Save;
-                        //TODO: Ver 
-                        /*
                         trigger OnAction()
                         var
-                            TempBlob: Record 99008535;
+                            TempBlob: Codeunit "Temp Blob";
                         begin
-                            CALCFIELDS("Send XML");
-                            IF NOT "Send XML".HASVALUE THEN
+                            Rec.CALCFIELDS("Send XML");
+                            IF NOT Rec."Send XML".HASVALUE THEN
                                 EXIT;
-                            TempBlob.Blob := "Send XML";
+                            TempBlob.FromRecord(Rec, Rec.FIELDNO("Send XML"));
                             cFileMng.BLOBExport(TempBlob, 'SendDOC.xml', TRUE);
-                        end;*/
+                        end;
                     }
                     action("Resp. Salida")
                     {
                         Caption = 'Resp. Salida';
                         Enabled = wBlobEnabled3;
                         Image = Save;
-                        //TODO: Ver 
-                        /*
                         trigger OnAction()
                         var
-                            TempBlob: Record 99008535;
+                            TempBlob: Codeunit "Temp Blob";
                         begin
-                            CALCFIELDS("Send XML Reply");
-                            IF NOT "Send XML Reply".HASVALUE THEN
+                            Rec.CALCFIELDS("Send XML Reply");
+                            IF NOT Rec."Send XML Reply".HASVALUE THEN
                                 EXIT;
-                            TempBlob.Blob := "Send XML Reply";
+                            TempBlob.FromRecord(Rec, Rec.FIELDNO("Send XML Reply"));
                             cFileMng.BLOBExport(TempBlob, 'SendResp.xml', TRUE);
-                        end;*/
+                        end;
                     }
                 }
                 action(Traspasar)
@@ -173,7 +169,7 @@ page 75016 "Importaciones MdM"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver cMaestrosMdm.TrasPasaCab(Rec);
+                        cMaestrosMdm.TrasPasaCab(Rec);
                     end;
                 }
             }
@@ -189,8 +185,9 @@ page 75016 "Importaciones MdM"
     end;
 
     var
-        //TODO: Ver cImpExcel: Codeunit 75002;
-        //TODO: Ver cMaestrosMdm: Codeunit 75001;
+        // Original declaration preserved for the disabled Excel import actions above.
+        // cImpExcel: Codeunit 75002;
+        cMaestrosMdm: Codeunit 75001;
         cFileMng: Codeunit 419;
         wBlobEnabled1: Boolean;
         wBlobEnabled2: Boolean;

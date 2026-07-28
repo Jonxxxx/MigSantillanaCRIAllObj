@@ -349,7 +349,8 @@ page 34002115 "Ficha Acciones de personal"
                         COMMIT;
                         TESTFIELD("Revisado por");
                         CurrPage.SETSELECTIONFILTER(AP);
-                        //TODO: Ver REPORT.RUN(REPORT::"Acciones de personal", TRUE, TRUE, AP);
+                        // TODO: Manual review - The custom Acciones de personal report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Acciones de personal", TRUE, TRUE, AP);
                     end;
                 }
                 action(archivar)
@@ -421,7 +422,7 @@ page 34002115 "Ficha Acciones de personal"
         Seleccionbeneficios: Record 34002156;
         Beneficiosempleados: Record 34002153;
         Miembroscooperativa: Record 34002195;
-        //TODO: Ver FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 34002104;
         NoSeriesMgt: Codeunit "No. Series";
         [InDataSet]
         EditaSalario: Boolean;
@@ -765,7 +766,7 @@ page 34002115 "Ficha Acciones de personal"
     local procedure Transferencia()
     begin
         TESTFIELD("Empresa nueva");
-        //TODO: Ver FuncionesNom.TraspasaEmpleados("Empresa nueva", Rec);
+        FuncionesNom.TraspasaEmpleados("Empresa nueva", Rec);
         //TraspasaEmpleados("Empresa nueva");
         HistAccionesdepersonal.TRANSFERFIELDS(Rec);
         HistAccionesdepersonal."No. empleado" := Emp."No.";

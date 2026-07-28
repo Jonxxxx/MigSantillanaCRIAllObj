@@ -99,9 +99,9 @@ page 56069 "Crea Cupones en Lote"
                 PromotedCategory = Process;
                 PromotedIsBig = true;
                 RunObject = Page 51011;
-                //TODO: Ver RunPageLink = "Lote cupon" = FIELD("Lote");
-                //TODO: Ver RunPageView = SORTING("No." "Lote cupon")
-                //TODO: Ver               ORDER(Ascending);
+                RunPageLink = "No. Lote cupon" = FIELD(Lote);
+                RunPageView = SORTING("No. Lote cupon", "Grupo Negocio")
+                              ORDER(Ascending);
             }
             action("&Generar")
             {
@@ -116,8 +116,8 @@ page 56069 "Crea Cupones en Lote"
 
 
                     ComprobarLote(Lote);
-                    //TODO: Ver cuFunSantillana.cuCreaCupones("Cod. Colegio", "Cod. Vendedor", NombreVendedor("Cod. Vendedor"), "Valido Desde", "Valido Hasta", "Grado Alumno", "Dto Colegio",
-                    //TODO: Ver                               "Dto Padre", "Año Escolar", NombreColegio("Cod. Colegio"), Descripcion, "Cantidad Cupones", Lote, "Cantidad Limite", "Importe Dto. Limite", "Cod. Cliente", "Nombre Cliente");
+                    cuFunSantillana.cuCreaCupones(Rec."Cod. Colegio", Rec."Cod. Vendedor", NombreVendedor(Rec."Cod. Vendedor"), Rec."Valido Desde", Rec."Valido Hasta", Rec."Grado Alumno", Rec."Dto Colegio",
+                                                 Rec."Dto Padre", Rec."Ano Escolar", NombreColegio(Rec."Cod. Colegio"), Rec.Descripcion, Rec."Cantidad Cupones", Rec.Lote, Rec."Cantidad Limite", Rec."Importe Dto. Limite", Rec."Cod. Cliente", Rec."Nombre Cliente");
                 end;
             }
         }
@@ -140,7 +140,7 @@ page 56069 "Crea Cupones en Lote"
     end;
 
     var
-    //TODO: Ver cuFunSantillana: Codeunit 56000;
+        cuFunSantillana: Codeunit 56000;
 
     procedure NombreColegio(pColegio: Code[20]): Text
     var

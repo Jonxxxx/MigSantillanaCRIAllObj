@@ -389,7 +389,7 @@ page 34002104 "Ficha Empleados"
         }
         area(factboxes)
         {
-            //TODO: Ver
+            // TODO: Manual review - The legacy factbox block uses numeric standard pages and link semantics that are not fully verified for the current Employee page.
             /*
             part(PartPage; 5202)
             {
@@ -425,7 +425,7 @@ page 34002104 "Ficha Empleados"
         }
     }
 
-    //TODO: Ver
+    // TODO: Manual review - The complete legacy actions block contains unavailable reports, pages, and legacy communication behavior that requires a coordinated functional migration.
     /*
     actions
     {
@@ -870,7 +870,7 @@ page 34002104 "Ficha Empleados"
         SeguridadUsrRH: Record 34002154;
         fecha: Date;
         Mail: Codeunit 397;
-        //TODO: Ver FuncionesNomina: Codeunit 34002104;
+        FuncionesNomina: Codeunit 34002104;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

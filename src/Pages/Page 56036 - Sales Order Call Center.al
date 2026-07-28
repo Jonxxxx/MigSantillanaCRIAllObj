@@ -29,7 +29,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver SelltoCustomerNoOnAfterValidat;
+                        SelltoCustomerNoOnAfterValidat;
                     end;
                 }
                 field("Sell-to Contact No."; "Sell-to Contact No.")
@@ -99,7 +99,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver SalespersonCodeOnAfterValidate;
+                        SalespersonCodeOnAfterValidate;
                     end;
                 }
                 field("Campaign No."; "Campaign No.")
@@ -150,7 +150,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver BilltoCustomerNoOnAfterValidat;
+                        BilltoCustomerNoOnAfterValidat;
                     end;
                 }
                 field("Location Code"; "Location Code")
@@ -191,7 +191,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver ShortcutDimension1CodeOnAfterV;
+                        ShortcutDimension1CodeOnAfterV;
                     end;
                 }
                 field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
@@ -199,7 +199,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver ShortcutDimension2CodeOnAfterV;
+                        ShortcutDimension2CodeOnAfterV;
                     end;
                 }
                 field("Payment Terms Code"; "Payment Terms Code")
@@ -270,9 +270,9 @@ page 56036 "Sales Order Call Center"
                 {
                     Importance = Additional;
                 }
-                //TODO: Ver field("Ship-to UPS Zone"; "Ship-to UPS Zone")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Ship-to UPS Zone"; Rec."Ship-to UPS Zone")
+                {
+                }
                 field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
                 {
                     Importance = Additional;
@@ -308,8 +308,6 @@ page 56036 "Sales Order Call Center"
             {
                 Caption = 'Foreign Trade';
                 Visible = false;
-                //TODO: Ver 
-                /*
                 field("Currency Code"; "Currency Code")
                 {
                     Importance = Promoted;
@@ -329,7 +327,7 @@ page 56036 "Sales Order Call Center"
                     begin
                         CurrencyCodeOnAfterValidate;
                     end;
-                }*/
+                }
                 field("EU 3-Party Trade"; "EU 3-Party Trade")
                 {
                 }
@@ -359,7 +357,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver Prepayment37OnAfterValidate;
+                        Prepayment37OnAfterValidate;
                     end;
                 }
                 field("Compress Prepayment"; "Compress Prepayment")
@@ -378,9 +376,9 @@ page 56036 "Sales Order Call Center"
                 field("Prepmt. Pmt. Discount Date"; "Prepmt. Pmt. Discount Date")
                 {
                 }
-                //TODO: Ver field("Prepmt. Include Tax"; "Prepmt. Include Tax")
-                //TODO: Ver {
-                //TODO: Ver }
+                field("Prepmt. Include Tax"; Rec."Prepmt. Include Tax")
+                {
+                }
             }
         }
         area(factboxes)
@@ -467,7 +465,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver CapturarProductos;
+                        CapturarProductos;
                     end;
                 }
                 action(Statistics)
@@ -484,8 +482,10 @@ page 56036 "Sales Order Call Center"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Order Statistics", Rec);
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        // TODO: Manual review - The standard page exists, but restoring this tax-dependent branch requires functional tax-behavior validation.
+                        // Original code preserved below.
+                        // ELSE
+                        //     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action(Card)
@@ -531,7 +531,7 @@ page 56036 "Sales Order Call Center"
                 {
                     Caption = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos";
-                    //TODO: Ver RunPageLink = "Order No."=FIELD("No.");
+                    RunPageLink = "Prepayment Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action(Dimensions)
@@ -605,7 +605,8 @@ page 56036 "Sales Order Call Center"
                 action("Credit Cards Transaction Lo&g Entries")
                 {
                     Caption = 'Credit Cards Transaction Lo&g Entries';
-                    //TODO: Ver RunObject = Page 829;
+                    // TODO: Manual review - Standard page 829 is unavailable and no semantically equivalent current page was verified.
+                    // Original code: RunObject = Page 829;
                 }
             }
         }
@@ -683,9 +684,9 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver GetSourceDocOutbound: Codeunit 5752;
+                        GetSourceDocOutbound: Codeunit 5752;
                     begin
-                        //TODO: Ver GetSourceDocOutbound.CreateFromSalesOrder(Rec);
+                        GetSourceDocOutbound.CreateFromSalesOrder(Rec);
 
                         IF NOT FIND('=><') THEN
                             INIT;
@@ -986,7 +987,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Order Confirmation");
                     end;
                 }
                 action("Work Order")
@@ -997,7 +998,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Work Order");
                     end;
                 }
                 action("Pick Ticket")
@@ -1006,7 +1007,7 @@ page 56036 "Sales Order Call Center"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver  DocPrint.PrintSalesOrder(Rec, Usage::"Pick Ticket");
+                        DocPrint.PrintSalesOrder(Rec, Usage::"Pick Ticket");
                     end;
                 }
             }
@@ -1019,14 +1020,14 @@ page 56036 "Sales Order Call Center"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver //TODO: Ver RunObject = Report 10051;
+                RunObject = Report "Drop Shipment Status";
             }
             action("Picking List by Order")
             {
                 Caption = 'Picking List by Order';
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver //TODO: Ver RunObject = Report 10153;
+                RunObject = Report "Picking List by Order";
             }
         }
     }
@@ -1034,18 +1035,20 @@ page 56036 "Sales Order Call Center"
     trigger OnClosePage()
     begin
         //004
-        //TODO: Ver AppTemp.RESET;
-        //TODO: Ver AppTemp.SETRANGE("Table ID", 36);
-        //TODO: Ver AppTemp.SETRANGE(Enabled, TRUE);
-        //TODO: Ver IF NOT AppTemp.FINDFIRST THEN BEGIN
+        // TODO: Manual review - Standard table Application Temp is unavailable, so the legacy close-page approval-state guard cannot be restored.
+        // Original code preserved below.
+        // AppTemp.RESET;
+        // AppTemp.SETRANGE("Table ID", 36);
+        // AppTemp.SETRANGE(Enabled, TRUE);
+        // IF NOT AppTemp.FINDFIRST THEN BEGIN
         SalesLine.SETRANGE("Document Type", "Document Type");
         SalesLine.SETRANGE("Document No.", "No.");
         SalesLine.SETFILTER(Type, '>0');
         SalesLine.SETFILTER(Quantity, '<>0');
         IF SalesLine.FIND('-') THEN
             ReleaseSalesDoc.PerformManualRelease(Rec);
-        //TODO: Ver END
-        //TODO: Ver ELSE
+        // END
+        // ELSE
         //  IF ApprovalMgt.SendSalesApprovalRequest_BO(Rec) THEN; //-$001
         //004
         /*
@@ -1094,7 +1097,7 @@ page 56036 "Sales Order Call Center"
         MoveNegSalesLines: Report 6699;
         ApprovalMgt: Codeunit "Approvals Mgmt.";
         ReportPrint: Codeunit 228;
-        //TODO: Ver DocPrint: Codeunit 229;
+        DocPrint: Codeunit 229;
         ArchiveManagement: Codeunit 5063;
         SalesInfoPaneMgt: Codeunit 7171;
         SalesSetup: Record 311;
@@ -1113,8 +1116,10 @@ page 56036 "Sales Order Call Center"
         SalesHistoryStnVisible: Boolean;
         SH: Record 36;
         GestBO: Boolean;
-        //TODO: Ver AjusBO: Report 56036;
-        //TODO: Ver AppTemp: Record 464;
+        // TODO: Manual review - Report 56036 exists, but no active call uses this declaration, so restoring it would add an unused dependency without restoring behavior.
+        // Original code: AjusBO: Report 56036;
+        // TODO: Manual review - Standard table Application Temp is unavailable and the related close-page approval logic is incomplete.
+        // Original code: AppTemp: Record 464;
         SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit "Release Sales Document";
         pgProductos: Page 56037;

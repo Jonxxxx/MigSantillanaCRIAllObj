@@ -99,7 +99,7 @@ page 67166 "Ficha de Atenciones"
             part(PagePart; 67168)
             {
                 Editable = wMod;
-                //TODO: Ver SubPageLink = "Cab. Atencion" = FIELD("Codigo");
+                SubPageLink = "Codigo Cab. Atencion" = FIELD(Codigo);
             }
         }
     }

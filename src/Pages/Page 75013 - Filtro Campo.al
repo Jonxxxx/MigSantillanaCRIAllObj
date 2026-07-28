@@ -41,7 +41,7 @@ page 75013 "Filtro Campo"
     end;
 
     var
-    //TODO: Ver cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 75000;
 
     procedure RellenaTemp(pwTableId: Integer)
     var
@@ -66,8 +66,6 @@ page 75013 "Filtro Campo"
                 InsertaReg(lrFields.TableNo, lrFields."No.", lrFields.FieldName, lrFields."Field Caption");
             UNTIL lrFields.NEXT = 0;
         END;
-        //TODO: Ver 
-        /*
         CASE pwTableId OF
             27:
                 BEGIN // Producto
@@ -78,7 +76,7 @@ page 75013 "Filtro Campo"
                         InsertaReg(27, lwIDFld, lwName, lwName);
                     END;
                 END;
-        END;*/
+        END;
     end;
 
     procedure TestCampo(pwIdTable: Integer; pwIdField: Integer)
@@ -97,7 +95,7 @@ page 75013 "Filtro Campo"
                 -299 .. -200:
                     BEGIN // Dimensiones
                         lwIdDim := -(pwIdField + 200);
-                        //TODO: Ver cFunMdm.GetDimCode(lwIdDim, TRUE);
+                        cFunMdm.GetDimCode(lwIdDim, TRUE);
                     END;
             END;
         END

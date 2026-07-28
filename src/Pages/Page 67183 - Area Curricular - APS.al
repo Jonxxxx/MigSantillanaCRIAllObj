@@ -2,7 +2,7 @@ page 67183 "Area Curricular - APS"
 {
     PageType = List;
     SourceTable = 67002;
-    //TODO: Ver SourceTableView = WHERE("Tipo registro" = CONST(29));
+    //TODO: Option no existe en BC ver en NAV SourceTableView = WHERE("Tipo registro" = CONST(29));
 
     layout
     {

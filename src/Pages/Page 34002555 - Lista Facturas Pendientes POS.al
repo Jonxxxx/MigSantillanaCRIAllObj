@@ -193,18 +193,18 @@ page 34002555 "Lista Facturas Pendientes POS"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver     PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action("Co&mments")
                 {
                     Caption = 'Co&mments';
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = FIELD("Document Type"),
-                    //TODO: Ver              "No." = FIELD("No."),
-                    //TODO: Ver              "Document Line No." = CONST(0);
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                 }
                 action(Dimensions)
                 {
@@ -233,9 +233,9 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver Utilitarioparacorregircosas: Codeunit 52502;
+                        Utilitarioparacorregircosas: Codeunit 52502;
                     begin
-                        //TODO: Ver Utilitarioparacorregircosas.TransferLineaActualizada2(Rec."No. Fiscal TPV", Rec."Location Code");
+                        Utilitarioparacorregircosas.TransferLineaActualizada2(Rec."No. Fiscal TPV", Rec."Location Code");
                     end;
                 }
             }
@@ -259,9 +259,9 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver ReleaseSalesDoc.PerformManualRelease(Rec);
+                        ReleaseSalesDoc.PerformManualRelease(Rec);
                     end;
                 }
                 action(Reopen)
@@ -276,9 +276,9 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver  ReleaseSalesDoc.PerformManualReopen(Rec);
+                        ReleaseSalesDoc.PerformManualReopen(Rec);
                     end;
                 }
                 action("Registrar Ventas en Lote DSPOS")
@@ -288,7 +288,7 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Registrar.RegistraFacturaManual();
+                        Registrar.RegistraFacturaManual();
                     end;
                 }
                 action("Convertir Pedidos DSPOS")
@@ -298,7 +298,7 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver Transfer_SIC.RUN();//001+-
+                        Transfer_SIC.RUN();//001+-
                     end;
                 }
             }
@@ -308,17 +308,20 @@ page 34002555 "Lista Facturas Pendientes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-    //TODO: Ver lcfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+        // Original code: lcfComunes: Codeunit 34002503;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;
 
         //+#217374
         wCostaRica := FALSE;
-        //TODO: Ver CASE lcFComunes.Pais OF
-        //TODO: Ver     9:
-        //TODO: Ver         wCostaRica := TRUE;
-        //TODO: Ver END;
+        // TODO: Manual review - Pais is not a compiled procedure, and numeric country value 9 must not be reinterpreted without verified option semantics.
+        // Original code preserved below.
+        // CASE lcFComunes.Pais OF
+        //     9:
+        //         wCostaRica := TRUE;
+        // END;
         //-#217374
     end;
 
@@ -327,7 +330,7 @@ page 34002555 "Lista Facturas Pendientes POS"
         [InDataSet]
         JobQueueActive: Boolean;
         wCostaRica: Boolean;
-    //TODO: Ver Registrar: Codeunit 50112;
-    //TODO: Ver  Transfer_SIC: Codeunit 50110;
+        Registrar: Codeunit 50112;
+        Transfer_SIC: Codeunit 50110;
 }
 

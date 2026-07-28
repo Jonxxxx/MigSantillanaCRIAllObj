@@ -74,7 +74,7 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc SF  XML");
                     IF "Doc SF  XML".HASVALUE THEN BEGIN
-                        //TODO: Ver 
+                        // TODO: Manual review - This export uses the removed TempBlob record pattern and BLOBExport API; a verified stream-based download migration is required.
                         /*
                             TempBlob.INIT;
                             TempBlob.Blob := "Doc SF  XML";
@@ -98,7 +98,7 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Firmado  XML");
                     IF "Doc Firmado  XML".HASVALUE THEN BEGIN
-                        //TODO: Ver 
+                        // TODO: Manual review - This export uses the removed TempBlob record pattern and BLOBExport API; a verified stream-based download migration is required.
                         /*
                             TempBlob.INIT;
                             TempBlob.Blob := "Doc Firmado  XML";
@@ -122,7 +122,7 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Json envio  XML");
                     IF "Doc Json envio  XML".HASVALUE THEN BEGIN
-                        //TODO: Ver 
+                        // TODO: Manual review - This export uses the removed TempBlob record pattern and BLOBExport API; a verified stream-based download migration is required.
                         /*
                             TempBlob.INIT;
                             TempBlob.Blob := "Doc Json envio  XML";
@@ -146,11 +146,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Json Respuesta  XML");
                     IF "Doc Json Respuesta  XML".HASVALUE THEN BEGIN
-                        //TODO: Ver TempBlob.INIT;
-                        //TODO: Ver TempBlob.Blob := "Doc Json Respuesta  XML";
-                        //TODO: Ver TempBlob.INSERT;
-                        //ODO: Ver FileManagment.BLOBExport(TempBlob, 'Documento Json Recibido.txt', TRUE);
-                        //TODO: Ver TempBlob.DELETEALL;
+                        // TODO: Manual review - The JSON response export uses removed TempBlob record and BLOBExport APIs and requires a verified stream-based download migration.
+                        // Original code preserved below.
+                        // TempBlob.INIT;
+                        // TempBlob.Blob := "Doc Json Respuesta  XML";
+                        // TempBlob.INSERT;
+                        // FileManagment.BLOBExport(TempBlob, 'Documento Json Recibido.txt', TRUE);
+                        // TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -168,11 +170,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Respuesta  XML");
                     IF "Doc Respuesta  XML".HASVALUE THEN BEGIN
-                        //TODO: Ver TempBlob.INIT;
-                        //TODO: Ver TempBlob.Blob := "Doc Respuesta  XML";
-                        //TODO: Ver TempBlob.INSERT;
-                        //TODO: Ver FileManagment.BLOBExport(TempBlob, 'Documento Xml Respuesta.xml', TRUE);
-                        //TODO: Ver TempBlob.DELETEALL;
+                        // TODO: Manual review - The XML response export uses removed TempBlob record and BLOBExport APIs and requires a verified stream-based download migration.
+                        // Original code preserved below.
+                        // TempBlob.INIT;
+                        // TempBlob.Blob := "Doc Respuesta  XML";
+                        // TempBlob.INSERT;
+                        // FileManagment.BLOBExport(TempBlob, 'Documento Xml Respuesta.xml', TRUE);
+                        // TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -190,11 +194,13 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
                     CALCFIELDS("Doc Pdf Generado");
                     IF "Doc Pdf Generado".HASVALUE THEN BEGIN
-                        //TODO: Ver TempBlob.INIT;
-                        //TODO: Ver TempBlob.Blob := "Doc Pdf Generado";
-                        //TODO: Ver TempBlob.INSERT;
-                        //TODO: Ver FileManagment.BLOBExport(TempBlob, FORMAT("Tipo Documento") + '-' + "Clave Doc" + '.pdf', TRUE);
-                        //TODO: Ver TempBlob.DELETEALL;
+                        // TODO: Manual review - The PDF export uses removed TempBlob record and BLOBExport APIs and requires a verified stream-based download migration.
+                        // Original code preserved below.
+                        // TempBlob.INIT;
+                        // TempBlob.Blob := "Doc Pdf Generado";
+                        // TempBlob.INSERT;
+                        // FileManagment.BLOBExport(TempBlob, FORMAT("Tipo Documento") + '-' + "Clave Doc" + '.pdf', TRUE);
+                        // TempBlob.DELETEALL;
                     END;
                 end;
             }
@@ -209,13 +215,14 @@ page 52500 "Log Facturacion Electronica CR"
 
                 trigger OnAction()
                 var
-                    //TODO: Ver FE: Codeunit 52504;
+                    // TODO: Manual review - Electronic-invoicing codeunit 52504 is an empty migration placeholder with no callable procedures.
+                    // Original code: FE: Codeunit 52504;
                     lrSCMH: Record 114;
                     lrSH: Record 36;
                 begin
                     //+#217374
                     //... Si el documento viene de POS, no debe enviarse por e-mail.
-                    //TODO: Ver 
+                    // TODO: Manual review - The complete electronic-document verification block depends on empty codeunit 52504 and cannot be restored.
                     /*
                     IF "Tipo Documento" = "Tipo Documento"::TE THEN
                         FE.Parametros(TRUE, '')
@@ -244,7 +251,8 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
 
                     // ++ 001-YFC
-                    //TODO: Ver FacturacionElectronicaNAV.ComprobarDocumentosElectronicoLOG;
+                    // TODO: Manual review - Codeunit 52504 is an empty placeholder and has no ComprobarDocumentosElectronicoLOG procedure.
+                    // Original code: FacturacionElectronicaNAV.ComprobarDocumentosElectronicoLOG;
                     MESSAGE(Text001);
                     // -- 001-YFC
                 end;
@@ -254,8 +262,10 @@ page 52500 "Log Facturacion Electronica CR"
 
     var
         FileManagment: Codeunit 419;
-        //TODO: Ver TempBlob: Record 99008535 temporary;
-        //TODO: Ver FacturacionElectronicaNAV: Codeunit 52504;
+        // TODO: Manual review - Temp Blob record 99008535 is removed, and electronic-invoicing codeunit 52504 is an empty placeholder.
+        // Original code preserved below.
+        // TempBlob: Record 99008535 temporary;
+        // FacturacionElectronicaNAV: Codeunit 52504;
         Text001: Label 'Ended process';
 }
 

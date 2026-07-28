@@ -8,9 +8,7 @@ page 34002176 "Payroll Information FactBox"
     {
         area(content)
         {
-            //TODO: Ver 
-            /*
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaNominas(Rec));STRSUBSTNO('(%1)',CUNomina.BuscaNominas(Rec)))
+            field(JXPayrollCount; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
             {
                 Caption = 'Payroll';
                 Editable = false;
@@ -20,7 +18,7 @@ page 34002176 "Payroll Information FactBox"
                     CUNomina.MuestraNominas(Rec);
                 end;
             }
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaSaldoISRFavor(Rec));STRSUBSTNO('(%1)',CUNomina.BuscaSaldoISRFavor(Rec)))
+            field(JXTaxBalance; STRSUBSTNO('(%1)', CUNomina.BuscaSaldoISRFavor(Rec)))
             {
                 Caption = 'Tax balance';
 
@@ -28,7 +26,7 @@ page 34002176 "Payroll Information FactBox"
                 begin
                     CUNomina.MuestraSaldoISRFavor(Rec);
                 end;
-            }*/
+            }
         }
     }
 
@@ -43,6 +41,6 @@ page 34002176 "Payroll Information FactBox"
     end;
 
     var
-    //TODO: Ver CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 34002104;
 }
 

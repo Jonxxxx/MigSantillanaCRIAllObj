@@ -62,9 +62,11 @@ page 34002199 "Datos Ponchador"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver AdoConn: Codeunit 34002124;
+                        // TODO: Manual review - Codeunit 34002124 and ReadEmp use legacy ADO access that is incompatible with Business Central SaaS.
+                        // Original code preserved below.
+                        // AdoConn: Codeunit 34002124;
                     begin
-                        //TODO: Ver AdoConn.ReadEmp
+                        // AdoConn.ReadEmp
                     end;
                 }
             }

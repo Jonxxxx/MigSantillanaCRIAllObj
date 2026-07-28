@@ -1,6 +1,6 @@
 codeunit 34002511 "Funciones DsPOS - Costa Rica"
 {
-    //TODO: Ver codigo completo
+    //TODO: Revisar codigo completo
     /*
     Permissions = TableData 112 = rm,
                   TableData 114 = rm;

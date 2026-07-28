@@ -25,13 +25,10 @@ page 75017 "Lista Imp.Mdm Tabla"
                 field("Id Tabla"; "Id Tabla")
                 {
                 }
-                //TODO: Ver 
-                /*
-                field(Campo;
-                cFumImp.GetTableCaption("Id Tabla"))
+                field(Campo; cFumImp.GetTableCaption(Rec."Id Tabla"))
                 {
                     Caption = 'Nombre Tabla';
-                }*/
+                }
                 field(Code; Code)
                 {
                 }
@@ -95,6 +92,6 @@ page 75017 "Lista Imp.Mdm Tabla"
     }
 
     var
-    //TODO: Ver cFumImp: Codeunit 75001;
+        cFumImp: Codeunit 75001;
 }
 

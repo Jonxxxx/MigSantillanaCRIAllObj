@@ -62,7 +62,8 @@ page 67111 "Adopciones - Colegio - MRK"
                 {
                     Caption = '4INI';
                     Editable = false;
-                    //TODO: Ver OptionCaption = ' ,Conquest,Keep,Lost,Retired';
+                    // TODO: Manual review - OptionCaption cannot be applied to the Text variable t4INI; the displayed adoption caption must be defined by a verified option-backed source.
+                    // Original code: OptionCaption = ' ,Conquest,Keep,Lost,Retired';
 
                     trigger OnAssistEdit()
                     begin

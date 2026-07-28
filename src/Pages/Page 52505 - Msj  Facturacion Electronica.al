@@ -44,7 +44,7 @@ page 52505 "Msj  Facturacion Electronica"
         }
     }
 
-    //TODO: Ver FE
+    // TODO: Manual review - The complete electronic-invoicing actions block depends on empty codeunit 52504 and requires integration redesign.
     /*
     actions
     {

@@ -80,10 +80,12 @@ page 34002134 "Historico Préstamos"
                 {
                 }
             }
-            //TODO: Ver part(PartPage; 34002135)
-            //TODO: Ver {
-            //TODO: Ver     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
-            //TODO: Ver }
+            // TODO: Manual review - Custom page 34002135 is unavailable, so the loan-history part and SubPageLink cannot be restored.
+            // Original code preserved below.
+            // part(PartPage; 34002135)
+            // {
+            //     SubPageLink = "No. Préstamo" = FIELD("No. Préstamo");
+            // }
         }
     }
 
@@ -101,7 +103,8 @@ page 34002134 "Historico Préstamos"
                 trigger OnAction()
                 begin
                     CurrPage.SETSELECTIONFILTER(rPrestamo);
-                    //TODO: Ver REPORT.RUN(REPORT::"Lista Mov. CxC Empl.", TRUE, TRUE, rPrestamo);
+                    // TODO: Manual review - The custom Lista Mov. CxC Empl. report is unavailable in the current repository.
+                    // Original code: REPORT.RUN(REPORT::"Lista Mov. CxC Empl.", TRUE, TRUE, rPrestamo);
                 end;
             }
         }
@@ -109,6 +112,7 @@ page 34002134 "Historico Préstamos"
 
     var
         rPrestamo: Record 34002146;
-    //TODO: Ver ImprInfor: Codeunit 228;
+        // TODO: Manual review - The Document-Print declaration has no active caller in this page and does not restore the missing custom report.
+        // Original code: ImprInfor: Codeunit 228;
 }
 

@@ -207,10 +207,12 @@ page 34002170 "Hist. acciones de personal"
                     trigger OnAction()
                     var
                         Acciones: Record 34002159;
-                    //TODO: Ver RepAcciones: Report 34002161;
+                        // TODO: Manual review - Custom report 34002161 is unavailable as the required object type.
+                        // Original code: RepAcciones: Report 34002161;
                     begin
                         CurrPage.SETSELECTIONFILTER(Acciones);
-                        //TODO: Ver REPORT.RUN(REPORT::"Hist Acciones de personal", TRUE, TRUE, Acciones);
+                        // TODO: Manual review - The custom Hist Acciones de personal report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Hist Acciones de personal", TRUE, TRUE, Acciones);
                     end;
                 }
 

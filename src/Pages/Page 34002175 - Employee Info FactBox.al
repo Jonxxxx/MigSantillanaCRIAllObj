@@ -8,8 +8,6 @@ page 34002175 "Employee Info FactBox"
     {
         area(content)
         {
-            //TODO: Ver 
-            /*
             field("Busca Nov"; STRSUBSTNO('(%1)', CUNomina.BuscaNovedades(Rec)))
             {
                 Caption = 'Personnel actions';
@@ -20,7 +18,7 @@ page 34002175 "Employee Info FactBox"
                     CUNomina.MuestraNovedades(Rec);
                 end;
             }
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaCualificaciones("No."));STRSUBSTNO('(%1)',CUNomina.BuscaCualificaciones("No.")))
+            field(JXQualificationsCount; STRSUBSTNO('(%1)', CUNomina.BuscaCualificaciones("No.")))
             {
                 Caption = 'Qualifications';
                 Editable = false;
@@ -30,7 +28,7 @@ page 34002175 "Employee Info FactBox"
                     CUNomina.MuestraCualificaciones("No.");
                 end;
             }
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaDimensiones("No."));STRSUBSTNO('(%1)',CUNomina.BuscaDimensiones("No.")))
+            field(JXDimensionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaDimensiones("No.")))
             {
                 Caption = 'Dimensions';
                 Editable = false;
@@ -40,7 +38,7 @@ page 34002175 "Employee Info FactBox"
                     CUNomina.MuestraDimensiones("No.");
                 end;
             }
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaActividades(Rec,GETRANGEMIN("Date Filter"),GETRANGEMAX("Date Filter")));STRSUBSTNO('(%1)',CUNomina.BuscaActividades(Rec,GETRANGEMIN("Date Filter"),GETRANGEMAX("Date Filter"))))
+            field(JXJobEntriesCount; STRSUBSTNO('(%1)', CUNomina.BuscaActividades(Rec, GETRANGEMIN("Date Filter"), GETRANGEMAX("Date Filter"))))
             {
                 Caption = 'Job entries';
                 Editable = false;
@@ -50,7 +48,7 @@ page 34002175 "Employee Info FactBox"
                     CUNomina.MuestraActividades(Rec,GETRANGEMIN("Date Filter"),GETRANGEMAX("Date Filter"));
                 end;
             }
-            field(STRSUBSTNO('(%1)',CUNomina.BuscaHistSalario(Rec));STRSUBSTNO('(%1)',CUNomina.BuscaHistSalario(Rec)))
+            field(JXSalaryHistoryCount; STRSUBSTNO('(%1)', CUNomina.BuscaHistSalario(Rec)))
             {
                 Caption = 'Salary History';
                 Editable = false;
@@ -60,7 +58,6 @@ page 34002175 "Employee Info FactBox"
                     CUNomina.MuestraHistSalario(Rec);
                 end;
             }
-            */
         }
     }
 
@@ -75,6 +72,6 @@ page 34002175 "Employee Info FactBox"
     end;
 
     var
-    //TODO: Ver CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 34002104;
 }
 

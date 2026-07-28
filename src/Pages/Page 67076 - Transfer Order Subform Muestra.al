@@ -133,9 +133,7 @@ page 67076 "Transfer Order Subform Muestra"
                 {
                     Visible = false;
                 }
-                //TODO: Ver
-                /*
-                field(ShortcutDimCode[3];ShortcutDimCode[3])
+                field(ShortcutDimension3JX; ShortcutDimCode[3])
                 {
                     CaptionClass = '1,2,3';
                     Visible = false;
@@ -150,7 +148,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(3,ShortcutDimCode[3]);
                     end;
                 }
-                field(ShortcutDimCode[4];ShortcutDimCode[4])
+                field(ShortcutDimension4JX; ShortcutDimCode[4])
                 {
                     CaptionClass = '1,2,4';
                     Visible = false;
@@ -165,7 +163,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(4,ShortcutDimCode[4]);
                     end;
                 }
-                field(ShortcutDimCode[5];ShortcutDimCode[5])
+                field(ShortcutDimension5JX; ShortcutDimCode[5])
                 {
                     CaptionClass = '1,2,5';
                     Visible = false;
@@ -180,7 +178,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(5,ShortcutDimCode[5]);
                     end;
                 }
-                field(ShortcutDimCode[6];ShortcutDimCode[6])
+                field(ShortcutDimension6JX; ShortcutDimCode[6])
                 {
                     CaptionClass = '1,2,6';
                     Visible = false;
@@ -195,7 +193,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(6,ShortcutDimCode[6]);
                     end;
                 }
-                field(ShortcutDimCode[7];ShortcutDimCode[7])
+                field(ShortcutDimension7JX; ShortcutDimCode[7])
                 {
                     CaptionClass = '1,2,7';
                     Visible = false;
@@ -210,7 +208,7 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(7,ShortcutDimCode[7]);
                     end;
                 }
-                field(ShortcutDimCode[8];ShortcutDimCode[8])
+                field(ShortcutDimension8JX; ShortcutDimCode[8])
                 {
                     CaptionClass = '1,2,8';
                     Visible = false;
@@ -225,7 +223,6 @@ page 67076 "Transfer Order Subform Muestra"
                         ValidateShortcutDimCode(8,ShortcutDimCode[8]);
                     end;
                 }
-                */
             }
         }
     }

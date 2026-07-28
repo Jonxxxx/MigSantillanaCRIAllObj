@@ -478,14 +478,12 @@ page 34002556 "Ficha Facturas Pdtes POS"
                     Importance = Additional;
                     Visible = ESACC_F18_Visible;
                 }
-                //TODO: Ver 
-                /*
                 field("Ship-to UPS Zone"; "Ship-to UPS Zone")
                 {
                     Editable = ESACC_F10005_Editable;
                     HideValue = ESACC_F10005_HideValue;
                     Visible = ESACC_F10005_Visible;
-                }*/
+                }
                 field("Location Code"; "Location Code")
                 {
                     Editable = ESACC_F28_Editable;
@@ -665,8 +663,8 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action(Dimensions)
@@ -688,8 +686,8 @@ page 34002556 "Ficha Facturas Pdtes POS"
                     Caption = 'Customer';
                     Enabled = ESACC_C60_Enabled;
                     Image = Customer;
-                    //TODO: Ver RunObject = Page 21;
-                    //TODO: Ver RunPageLink = "No." = FIELD("Sell-to Customer No.");
+                    RunObject = Page 21;
+                    RunPageLink = "No." = FIELD("Sell-to Customer No.");
                     ShortCutKey = 'Shift+F7';
                     Visible = ESACC_C60_Visible;
                 }
@@ -698,10 +696,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
                     Caption = 'Co&mments';
                     Enabled = ESACC_C61_Enabled;
                     Image = ViewComments;
-                    //TODO: Ver RunObject = Page "Sales Comment Sheet";
-                    //TODO: Ver RunPageLink = "Document Type" = FIELD("Document Type"),
-                    //TODO: Ver               "No." = FIELD("No."),
-                    //TODO: Ver               "Document Line No." = CONST(0);
+                    RunObject = Page "Sales Comment Sheet";
+                    RunPageLink = "Document Type" = FIELD("Document Type"),
+                                  "No." = FIELD("No."),
+                                  "Document Line No." = CONST(0);
                     Visible = ESACC_C61_Visible;
                 }
             }
@@ -776,7 +774,8 @@ page 34002556 "Ficha Facturas Pdtes POS"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C59_Visible: Boolean;
         [InDataSet]

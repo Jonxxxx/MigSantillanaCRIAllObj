@@ -50,7 +50,8 @@ page 34002214 "Planificacion de vacaciones"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver REPORT.RUNMODAL(REPORT::"Proceso proponer vacaciones", TRUE, FALSE);
+                        // TODO: Manual review - The custom Proceso proponer vacaciones report is unavailable in the current repository.
+                        // Original code: REPORT.RUNMODAL(REPORT::"Proceso proponer vacaciones", TRUE, FALSE);
                     end;
                 }
             }

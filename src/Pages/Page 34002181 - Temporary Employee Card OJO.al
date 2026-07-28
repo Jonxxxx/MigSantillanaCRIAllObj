@@ -88,30 +88,26 @@ page 34002181 "Temporary Employee Card OJO"
             group(EmpInfoPanel)
             {
                 Caption = 'Employee Information';
-                //TODO: Ver 
-                /*
-                field(STRSUBSTNO('(%1)',CUNomina.BuscaNovedades(Rec));STRSUBSTNO('(%1)',CUNomina.BuscaNovedades(Rec)))
+                field(JXPersonnelActionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaNovedades(Rec)))
                 {
                     Editable = false;
                 }
-                field(STRSUBSTNO('(%1)',CUNomina.BuscaCualificaciones("No."));STRSUBSTNO('(%1)',CUNomina.BuscaCualificaciones("No.")))
+                field(JXQualificationsCount; STRSUBSTNO('(%1)', CUNomina.BuscaCualificaciones("No.")))
                 {
                     Editable = false;
                 }
-                field(STRSUBSTNO('(%1)',CUNomina.BuscaDimensiones("No."));STRSUBSTNO('(%1)',CUNomina.BuscaDimensiones("No.")))
+                field(JXDimensionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaDimensiones("No.")))
                 {
                     Editable = false;
-                }*/
+                }
             }
             group(NomInfoPanel)
             {
-                //TODO: Ver 
-                /*
                 Caption = 'Payroll Information';
-                field(STRSUBSTNO('(%1)',CUNomina.BuscaNominas(Rec));STRSUBSTNO('(%1)',CUNomina.BuscaNominas(Rec)))
+                field(JXPayrollCount; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
                 {
                     Editable = false;
-                }*/
+                }
             }
             group(Communication)
             {
@@ -307,8 +303,10 @@ page 34002181 "Temporary Employee Card OJO"
                 action("&Related Companies")
                 {
                     Caption = '&Related Companies';
-                    //TODO: Ver RunObject = Page 34002157;
-                    //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
+                    // TODO: Manual review - Custom page 34002157 is unavailable; the current object with this ID is a table.
+                    // Original code preserved below.
+                    // RunObject = Page 34002157;
+                    // RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
                 action("Absences b&y Categories")
@@ -374,7 +372,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNominas(Rec);
+                    CUNomina.MuestraNominas(Rec);
                 end;
             }
             action(Dimensions)
@@ -386,7 +384,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraDimensiones("No.");
+                    CUNomina.MuestraDimensiones("No.");
                 end;
             }
             action(Qualifications)
@@ -397,7 +395,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraCualificaciones("No.");
+                    CUNomina.MuestraCualificaciones("No.");
                 end;
             }
             action(Absenses)
@@ -408,7 +406,7 @@ page 34002181 "Temporary Employee Card OJO"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver CUNomina.MuestraNovedades(Rec);
+                    CUNomina.MuestraNovedades(Rec);
                 end;
             }
         }
@@ -438,7 +436,7 @@ page 34002181 "Temporary Employee Card OJO"
 
     var
         Mail: Codeunit 397;
-        //TODO: Ver CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 34002104;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

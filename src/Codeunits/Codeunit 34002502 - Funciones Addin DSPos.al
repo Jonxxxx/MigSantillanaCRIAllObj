@@ -1,5 +1,5 @@
 codeunit 34002502 "Funciones Addin DSPos"
-{   //Ver codigo completo
+{   //TODO: Revisar codigo completo
     /*    
     trigger OnRun()
     var

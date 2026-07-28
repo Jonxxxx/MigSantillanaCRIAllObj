@@ -88,9 +88,9 @@ page 34002536 "Subform turnos TPV"
 
                 trigger OnAction()
                 var
-                //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                 begin
-                    //TODO: Ver  cduControl.AbrirTurno("No. tienda", "No. TPV", Fecha, codUsuario);
+                    cduControl.AbrirTurno("No. tienda", "No. TPV", Fecha, codUsuario);
                 end;
             }
             action("Cerrar Turno")
@@ -101,12 +101,12 @@ page 34002536 "Subform turnos TPV"
                 trigger OnAction()
                 var
                     Text001: Label '¿Desea cerrar el turno %1?';
-                //TODO: Ver cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 34002521;
                 begin
                     IF NOT ISEMPTY THEN
                         IF CONFIRM(Text001, FALSE, "No. turno") THEN BEGIN
-                            //TODO: Ver IF cduControl.CerrarTurno(Rec, codUsuario) THEN
-                            CurrPage.CLOSE;
+                            IF cduControl.CerrarTurno(Rec, codUsuario) THEN
+                                CurrPage.CLOSE;
                         END;
                 end;
             }
@@ -138,15 +138,18 @@ page 34002536 "Subform turnos TPV"
                 trigger OnAction()
                 var
                     recTurno: Record 34002529;
-                //TODO: Ver repResumen: Report 34002504;
+                    // TODO: Manual review - Custom report 34002504 is unavailable as the required object type.
+                    // Original code: repResumen: Report 34002504;
                 begin
                     recTurno.RESET;
                     recTurno.SETRANGE("No. tienda", "No. tienda");
                     recTurno.SETRANGE("No. TPV", "No. TPV");
                     recTurno.SETRANGE(Fecha, Fecha);
                     recTurno.SETRANGE("No. turno", "No. turno");
-                    //TODO: Ver repResumen.SETTABLEVIEW(recTurno);
-                    //TODO: Ver repResumen.RUNMODAL;
+                    // TODO: Manual review - Custom report 34002504 is unavailable, so its filtered modal execution cannot be restored.
+                    // Original code preserved below.
+                    // repResumen.SETTABLEVIEW(recTurno);
+                    // repResumen.RUNMODAL;
                 end;
             }
         }

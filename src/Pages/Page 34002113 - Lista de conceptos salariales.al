@@ -69,7 +69,8 @@ page 34002113 "Lista de conceptos salariales"
                 Enabled = false;
                 Promoted = true;
                 PromotedCategory = Process;
-                //TODO: Ver RunObject = Report 34002102;
+                // TODO: Manual review - Custom report 34002102 is unavailable; the current object with this ID is not a report.
+                // Original code: RunObject = Report 34002102;
                 Visible = false;
             }
         }

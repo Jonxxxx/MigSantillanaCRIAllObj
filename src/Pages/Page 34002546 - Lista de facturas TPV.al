@@ -201,8 +201,8 @@ page 34002546 "Lista de facturas TPV"
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
                             PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
-                        //TODO: Ver ELSE
-                        //TODO: Ver PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
+                        ELSE
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action("Co&mments")
@@ -239,8 +239,9 @@ page 34002546 "Lista de facturas TPV"
                     trigger OnAction()
                     var
                         ApprovalEntries: Page 658;
+                        ApprovalDocumentType: Enum "Approval Document Type";
                     begin
-                        //TODO: Ver ApprovalEntries.Setfilters(DATABASE::"Sales Header", "Document Type", "No.");
+                        ApprovalEntries.SetRecordFilters(DATABASE::"Sales Header", ApprovalDocumentType::Invoice, Rec."No.");
                         ApprovalEntries.RUN;
                     end;
                 }
@@ -262,9 +263,9 @@ page 34002546 "Lista de facturas TPV"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver ReleaseSalesDoc.PerformManualRelease(Rec);
+                        ReleaseSalesDoc.PerformManualRelease(Rec);
                     end;
                 }
                 action("Re&open")
@@ -276,9 +277,9 @@ page 34002546 "Lista de facturas TPV"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver ReleaseSalesDoc: Codeunit 414;
+                        ReleaseSalesDoc: Codeunit 414;
                     begin
-                        //TODO: Ver ReleaseSalesDoc.PerformManualReopen(Rec);
+                        ReleaseSalesDoc.PerformManualReopen(Rec);
                     end;
                 }
             }
@@ -406,7 +407,8 @@ page 34002546 "Lista de facturas TPV"
     end;
 
     var
-        //TODO: Ver ESACC_ESFLADSMgt: Codeunit 14123801;
+        // TODO: Manual review - Custom security codeunit 14123801 is unavailable in the current repository.
+        // Original code: ESACC_ESFLADSMgt: Codeunit 14123801;
         [InDataSet]
         ESACC_C5_Visible: Boolean;
         [InDataSet]

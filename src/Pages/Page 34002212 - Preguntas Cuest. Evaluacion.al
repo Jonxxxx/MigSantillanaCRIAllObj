@@ -22,13 +22,13 @@ page 34002212 "Preguntas Cuest. Evaluacion"
                 trigger OnLookup(var Text: Text): Boolean
                 begin
                     CurrPage.SAVERECORD;
-                    //TODO: Ver ProfileManagement.LookupName(CurrentQuestionsChecklistCode, Rec, Emp);
+                    ProfileManagement.LookupName(CurrentQuestionsChecklistCode, Rec, Emp);
                     CurrPage.UPDATE(FALSE);
                 end;
 
                 trigger OnValidate()
                 begin
-                    //TODO: Ver ProfileManagement.CheckName(CurrentQuestionsChecklistCode, Emp);
+                    ProfileManagement.CheckName(CurrentQuestionsChecklistCode, Emp);
                     CurrentQuestionsChecklistCodeO;
                 end;
             }
@@ -170,15 +170,13 @@ page 34002212 "Preguntas Cuest. Evaluacion"
 
     trigger OnOpenPage()
     begin
-        //TODO: Ver 
-        /*
         IF EmpProfileAnswerCode = '' THEN
             CurrentQuestionsChecklistCode :=
               ProfileManagement.ProfileQuestionnaireAllowed(Emp, CurrentQuestionsChecklistCode)
         ELSE
             CurrentQuestionsChecklistCode := EmpProfileAnswerCode;
 
-        ProfileManagement.SetName(CurrentQuestionsChecklistCode, Rec, EmpProfileAnswerLine);*/
+        ProfileManagement.SetName(CurrentQuestionsChecklistCode, Rec, EmpProfileAnswerLine);
 
         /*
         IF (Emp."Company No." <> '') AND (Emp."No." <> Emp."Company No.") THEN BEGIN
@@ -195,7 +193,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
         EmpProfileAnswer: Record 34002192;
         ProfileQuestionnaireLine2: Record 34002185;
         ProfileQuestLineQuestion: Record 34002185;
-        //TODO: Ver ProfileManagement: Codeunit 34002122;
+        ProfileManagement: Codeunit 34002122;
         CurrentQuestionsChecklistCode: Code[20];
         EmpProfileAnswerCode: Code[20];
         EmpProfileAnswerLine: Integer;
@@ -250,7 +248,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
     local procedure CurrentQuestionsChecklistCodeO()
     begin
         CurrPage.SAVERECORD;
-        //TODO: Ver ProfileManagement.SetName(CurrentQuestionsChecklistCode, Rec, 0);
+        ProfileManagement.SetName(CurrentQuestionsChecklistCode, Rec, 0);
         CurrPage.UPDATE(FALSE);
     end;
 }

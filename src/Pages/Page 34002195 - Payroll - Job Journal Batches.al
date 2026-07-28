@@ -49,7 +49,7 @@ page 34002195 "Payroll - Job Journal Batches"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver JobJnlMgt.TemplateSelectionFromBatch(Rec);
+                    JobJnlMgt.TemplateSelectionFromBatch(Rec);
                 end;
             }
             group("P&osting")
@@ -102,12 +102,12 @@ page 34002195 "Payroll - Job Journal Batches"
 
     trigger OnOpenPage()
     begin
-        //TODO: Ver JobJnlMgt.OpenJnlBatch(Rec);
+        JobJnlMgt.OpenJnlBatch(Rec);
     end;
 
     var
         ReportPrint: Codeunit 228;
-    //TODO: Ver JobJnlMgt: Codeunit 34002120;
+        JobJnlMgt: Codeunit 34002120;
 
     local procedure DataCaption(): Text[250]
     var

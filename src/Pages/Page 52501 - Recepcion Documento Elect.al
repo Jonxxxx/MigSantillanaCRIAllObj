@@ -61,7 +61,8 @@ page 52501 "Recepcion Documento Elect"
     trigger OnInit()
     begin
         BEGIN
-            //TODO: Ver FE.UploadDocumentoElectronico(Valores);
+            // TODO: Manual review - Codeunit 52504 is an empty placeholder and has no UploadDocumentoElectronico procedure.
+            // Original code: FE.UploadDocumentoElectronico(Valores);
         END;
         TraerDatos(Valores);
     end;
@@ -75,7 +76,7 @@ page 52501 "Recepcion Documento Elect"
     begin
         IF CloseAction = ACTION::OK THEN BEGIN
             IF CONFIRM(STRSUBSTNO(txt001, FORMAT(Mensaje))) THEN BEGIN
-                //TODO: Ver 
+                // TODO: Manual review - The complete electronic-message block depends on procedures absent from empty codeunit 52504.
                 /*
                 FE.CreaXmlMensaje(Clave, NumeroCedulaEmisor, FechaEmisionDoc, Mensaje, DetalleMensaje, MontoTotalImpuesto, CodigoActividad, TotalFactura, NumeroCedulaReceptor, NumConsecutivoReceptor, Directorio); // YFC --- #FE-CR1.02
                 IF Mensaje = 0 THEN
@@ -93,7 +94,8 @@ page 52501 "Recepcion Documento Elect"
     end;
 
     var
-        //TODO: Ver FE: Codeunit 52504;
+        // TODO: Manual review - Electronic-invoicing codeunit 52504 is an empty migration placeholder with no callable procedures.
+        // Original code: FE: Codeunit 52504;
         Valores: array[10] of Text;
         Modificado: Boolean;
         Clave: Code[80];

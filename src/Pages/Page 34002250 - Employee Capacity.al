@@ -27,7 +27,7 @@ page 34002250 "Employee Capacity"
 
                     trigger OnValidate()
                     begin
-                        //TODO: Ver SetColumns(SetWanted::Initial);
+                        SetColumns(SetWanted::Initial);
                         UpdateMatrixSubform;
                     end;
                 }
@@ -67,7 +67,7 @@ page 34002250 "Employee Capacity"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver SetColumns(SetWanted::Previous);
+                    SetColumns(SetWanted::Previous);
                     UpdateMatrixSubform;
                 end;
             }
@@ -83,7 +83,7 @@ page 34002250 "Employee Capacity"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver SetColumns(SetWanted::PreviousColumn);
+                    SetColumns(SetWanted::PreviousColumn);
                     UpdateMatrixSubform;
                 end;
             }
@@ -99,7 +99,7 @@ page 34002250 "Employee Capacity"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver SetColumns(SetWanted::NextColumn);
+                    SetColumns(SetWanted::NextColumn);
                     UpdateMatrixSubform;
                 end;
             }
@@ -115,7 +115,7 @@ page 34002250 "Employee Capacity"
 
                 trigger OnAction()
                 begin
-                    //TODO: Ver SetColumns(SetWanted::Next);
+                    SetColumns(SetWanted::Next);
                     UpdateMatrixSubform;
                 end;
             }
@@ -124,7 +124,7 @@ page 34002250 "Employee Capacity"
 
     trigger OnOpenPage()
     begin
-        //TODO: Ver SetColumns(SetWanted::Initial);
+        SetColumns(SetWanted::Initial);
         UpdateMatrixSubform;
     end;
 
@@ -138,7 +138,6 @@ page 34002250 "Employee Capacity"
         PKFirstRecInCurrSet: Text[100];
         CurrSetLength: Integer;
 
-    [Scope('Internal')]
     procedure SetColumns(SetWanted: Option Initial,Previous,Same,Next,PreviousColumn,NextColumn)
     var
         MatrixMgt: Codeunit 9200;
@@ -149,7 +148,7 @@ page 34002250 "Employee Capacity"
 
     local procedure UpdateMatrixSubform()
     begin
-        //TODO: Ver CurrPage.MatrixForm.PAGE.Load(QtyType, MatrixColumnCaptions, MatrixRecords, CurrSetLength);
+        CurrPage.MatrixForm.PAGE.Load(QtyType, MatrixColumnCaptions, MatrixRecords, CurrSetLength);
         CurrPage.UPDATE(FALSE);
     end;
 }

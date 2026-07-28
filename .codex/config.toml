@@ -1,0 +1,10 @@
+[mcp_servers.al]
+command = "C:\\Users\\JXAdmin\\.dotnet\\tools\\al.exe"
+args = [
+    "launchmcpserver",
+    "C:\\Users\\JXAdmin\\Documents\\AL\\MigSantillanaCRIAllObj",
+    "--transport",
+    "stdio"
+]
+startup_timeout_sec = 30
+tool_timeout_sec = 180

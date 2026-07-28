@@ -1854,13 +1854,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
         Text061Err: Label 'The order line that the item charge was originally assigned to has been fully posted. You must reassign the item charge to the posted receipt or shipment.';
         Text062Qst: Label 'One or more reservation entries exist for the item with %1 = %2, %3 = %4, %5 = %6 which may be disrupted if you post this negative adjustment. Do you want to continue?', Comment = 'One or more reservation entries exist for the item with No. = 1000, Location Code = SILVER, Variant Code = NEW which may be disrupted if you post this negative adjustment. Do you want to continue?';
         cfComunes: Codeunit 34002503;
-        cfDominicana: Codeunit 34002504;
         c80: Codeunit 80;
-        cfBolivia: Codeunit 34002505;
-        cfParaguay: Codeunit 34002506;
-        cfEcuador: Codeunit 34002507;
-        cfGuatemala: Codeunit 34002508;
-        cfSalvador: Codeunit 34002509;
 
     procedure SetPostingDate(NewReplacePostingDate: Boolean; NewReplaceDocumentDate: Boolean; NewPostingDate: Date)
     begin

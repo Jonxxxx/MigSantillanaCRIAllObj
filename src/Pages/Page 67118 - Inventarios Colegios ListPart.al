@@ -8,8 +8,6 @@ page 67118 "Inventarios Colegios ListPart"
     {
         area(content)
         {
-            //TODO: Ver  
-            /*
             field(FuncAPSColCalcInvMuestrasNo; FuncAPS.ColCalcInvMuestras(Rec."No."))
             {
                 Caption = 'Sample Inventory';
@@ -20,8 +18,8 @@ page 67118 "Inventarios Colegios ListPart"
                     BCPage: Page 7304;
                 begin
                     BC.RESET;
-                    BC.SETRANGE("Location Code", "Samples Location Code");
-                    BC.SETRANGE("Bin Code", "No.");
+                    BC.SETRANGE("Location Code", Rec."Samples Location Code");
+                    BC.SETRANGE("Bin Code", Rec."No.");
                     IF BC.FINDSET THEN BEGIN
                         BCPage.SETTABLEVIEW(BC);
                         BCPage.RUNMODAL;
@@ -29,7 +27,6 @@ page 67118 "Inventarios Colegios ListPart"
                     END;
                 end;
             }
-            */
         }
     }
 
@@ -38,6 +35,6 @@ page 67118 "Inventarios Colegios ListPart"
     }
 
     var
-    //TODO: Ver FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 67000;
 }
 

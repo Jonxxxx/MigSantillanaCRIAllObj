@@ -229,7 +229,7 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchadorManual;
+                        FuncNominas.ProcesaDatosPonchadorManual;
                     end;
                 }
                 action(ImportAuto)
@@ -242,10 +242,11 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     var
-                    //TODO: Ver AdoConn: Codeunit 34002124;
+                        // TODO: Manual review - Codeunit 34002124 implements legacy ADO access that is incompatible with Business Central SaaS.
+                        // Original code: AdoConn: Codeunit 34002124;
                     begin
                         //AdoConn.ReadEmp;
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchador;
+                        FuncNominas.ProcesaDatosPonchador;
                     end;
                 }
                 action("Page Distrib. Control de asis. ")
@@ -268,9 +269,11 @@ page 34002122 "Control de asistencia"
                         DCA.SETRANGE("Cod. Empleado", "Cod. Empleado");
                         DCA.SETRANGE("Fecha registro", "Fecha registro");
                         DCA.SETRANGE("Hora registro", "Hora registro");
-                        //TODO: Ver DistribAsistencia.SETTABLEVIEW(DCA);
-                        //TODO: Ver DistribAsistencia.RUNMODAL();
-                        //TODO: Ver CLEAR(DistribAsistencia);
+                        // TODO: Manual review - Custom page 34002107 is unavailable, so its table view and modal execution cannot be restored.
+                        // Original code preserved below.
+                        // DistribAsistencia.SETTABLEVIEW(DCA);
+                        // DistribAsistencia.RUNMODAL();
+                        // CLEAR(DistribAsistencia);
                     end;
                 }
                 action("Page Datos Ponchador")
@@ -291,11 +294,13 @@ page 34002122 "Control de asistencia"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    //TODO: Ver RunObject = Report 34002146;
+                    // TODO: Manual review - Custom report 34002146 is unavailable; the current object with this ID is not a report.
+                    // Original code: RunObject = Report 34002146;
 
                     trigger OnAction()
                     var
-                    //TODO: Ver FuncNom: Codeunit 34002104;
+                        // TODO: Manual review - The verified payroll codeunit declaration has no call in this empty action, so restoring it would not restore any behavior.
+                        // Original code: FuncNom: Codeunit 34002104;
                     begin
                     end;
                 }
@@ -309,7 +314,7 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver FuncNominas.ProcesaDatosPonchador;
+                        FuncNominas.ProcesaDatosPonchador;
                     end;
                 }
             }
@@ -342,8 +347,9 @@ page 34002122 "Control de asistencia"
 
     var
         ConfNom: Record 34002103;
-        //TODO: Ver DistribAsistencia: Page 34002107;
-        //TODO: Ver FuncNominas: Codeunit 34002104;
+        // TODO: Manual review - Custom page 34002107 is unavailable as the required object type.
+        // Original code: DistribAsistencia: Page 34002107;
+        FuncNominas: Codeunit 34002104;
         [InDataSet]
 
         HorasVisibles: Boolean;

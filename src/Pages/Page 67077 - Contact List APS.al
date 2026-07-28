@@ -15,7 +15,7 @@ page 67077 "Contact List APS"
         {
             repeater(General)
             {
-                //TODO: Ver IndentationColumn = NameIndent;
+                IndentationColumn = NameIndent;
                 IndentationControls = Name;
                 field("No."; "No.")
                 {
@@ -191,7 +191,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Interaction Log E&ntries';
                     RunObject = Page 5076;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -201,7 +201,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'Postponed &Interactions';
                     RunObject = Page 5082;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -210,7 +210,7 @@ page 67077 "Contact List APS"
                 {
                     Caption = 'T&o-dos';
                     RunObject = Page 5096;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No.")),
                                   "System To-do Type" = FILTER("Contact Attendee");
                     RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -222,7 +222,7 @@ page 67077 "Contact List APS"
                     {
                         Caption = 'List';
                         RunObject = Page 5123;
-                        RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                        RunPageLink = "Contact Company No." = FIELD("Company No."),
                                       "Contact No." = FILTER(<> ''),
                                       "Contact No." = FIELD(FILTER("Lookup Contact No."));
                         RunPageView = SORTING("Contact Company No.", "Contact No.");
@@ -233,7 +233,7 @@ page 67077 "Contact List APS"
                     Caption = 'Segmen&ts';
                     Image = Segment;
                     RunObject = Page 5150;
-                    RunPageLink = //TODO: Ver "Company No." = FIELD("Company No."),
+                    RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No."));
                     RunPageView = SORTING("Contact No.", "Segment No.");
@@ -254,7 +254,8 @@ page 67077 "Contact List APS"
 
                     trigger OnAction()
                     begin
-                        //TODO: Ver ShowCustVendBank;
+                        // TODO: Manual review - ShowCustVendBank is no longer a public Contact or Contact List method, and the intended related-record selection UI has no verified replacement.
+                        // Original code: ShowCustVendBank;
                     end;
                 }
 
@@ -294,9 +295,9 @@ page 67077 "Contact List APS"
                         TESTFIELD(City);
                         TESTFIELD(County);
                         TESTFIELD("Post Code");
-                        //TODO: Ver PageColNivel.RecibeParametros("No.", City, County, "Post Code");
-                        //TODO: Ver PageColNivel.RUNMODAL;
-                        //TODO: Ver CLEAR(PageColNivel);
+                        PageColNivel.RecibeParametros(Rec."No.", Rec.City, Rec.County, Rec."Post Code");
+                        PageColNivel.RUNMODAL;
+                        CLEAR(PageColNivel);
                     end;
                 }
                 action("<Action1000000040>")
@@ -421,7 +422,8 @@ page 67077 "Contact List APS"
 
                         trigger OnAction()
                         begin
-                            //TODO: Ver CreateCustomer(ChooseCustomerTemplate);
+                            // TODO: Manual review - ChooseCustomerTemplate is unavailable; replacing the original template-selection flow with parameterless CreateCustomer is not verified as semantically equivalent.
+                            // Original code: CreateCustomer(ChooseCustomerTemplate);
                         end;
                     }
                     action(EXCCRIVendor)
@@ -524,7 +526,8 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5051;
+                // TODO: Manual review - Legacy Contact Company Summary report 5051 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5051;
             }
             action("Contact Labels")
             {
@@ -533,7 +536,8 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5056;
+                // TODO: Manual review - Legacy Contact Labels report 5056 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5056;
             }
             action("Questionnaire Handout")
             {
@@ -542,7 +546,8 @@ page 67077 "Contact List APS"
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5066;
+                // TODO: Manual review - Legacy Questionnaire Handout report 5066 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5066;
             }
             action("Sales Cycle Analysis")
             {
@@ -550,7 +555,8 @@ page 67077 "Contact List APS"
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
-                //TODO: Ver RunObject = Report 5062;
+                // TODO: Manual review - Legacy Sales Cycle Analysis report 5062 is unavailable and no equivalent report was verified.
+                // Original code: RunObject = Report 5062;
             }
         }
     }

@@ -174,7 +174,8 @@ page 34002211 "Conf. Cuest. Evaluacion"
                     begin
                         ProfileQuestnHeader.GET(CurrentQuestionsChecklistCode);
                         ProfileQuestnHeader.SETRECFILTER;
-                        //TODO: Ver REPORT.RUN(REPORT::"Update Employee Classification", TRUE, FALSE, ProfileQuestnHeader);
+                        // TODO: Manual review - The custom Update Employee Classification report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Update Employee Classification", TRUE, FALSE, ProfileQuestnHeader);
                     end;
                 }
 
@@ -219,7 +220,8 @@ page 34002211 "Conf. Cuest. Evaluacion"
                         ProfileQuestnHeader: Record 34002184;
                     begin
                         ProfileQuestnHeader.SETRANGE(Code, CurrentQuestionsChecklistCode);
-                        //TODO: Ver REPORT.RUN(REPORT::"Recibo Nomina sin copia - coop", TRUE, FALSE, ProfileQuestnHeader);
+                        // TODO: Manual review - The custom Recibo Nomina sin copia - coop report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Recibo Nomina sin copia - coop", TRUE, FALSE, ProfileQuestnHeader);
                     end;
                 }
                 action("Test Report")
@@ -234,7 +236,8 @@ page 34002211 "Conf. Cuest. Evaluacion"
                         ProfileQuestnHeader: Record 34002184;
                     begin
                         ProfileQuestnHeader.SETRANGE(Code, CurrentQuestionsChecklistCode);
-                        //TODO: Ver REPORT.RUN(REPORT::"Nominas por departamentos A4", TRUE, FALSE, ProfileQuestnHeader);
+                        // TODO: Manual review - The custom Nominas por departamentos A4 report is unavailable in the current repository.
+                        // Original code: REPORT.RUN(REPORT::"Nominas por departamentos A4", TRUE, FALSE, ProfileQuestnHeader);
                     end;
                 }
             }
@@ -277,8 +280,10 @@ page 34002211 "Conf. Cuest. Evaluacion"
             END;
         END;
 
-        //TODO: Ver IF CurrentQuestionsChecklistCode = '' THEN
-        //TODO: Ver     CurrentQuestionsChecklistCode := ProfileManagement.GetQuestionnaire;
+        // TODO: Manual review - Custom codeunit 34002123 is unavailable, and current Profile Management has no verified GetQuestionnaire replacement.
+        // Original code preserved below.
+        // IF CurrentQuestionsChecklistCode = '' THEN
+        //     CurrentQuestionsChecklistCode := ProfileManagement.GetQuestionnaire;
 
         //001 ProfileManagement.SetName(CurrentQuestionsChecklistCode,Rec,0);
 
@@ -289,7 +294,8 @@ page 34002211 "Conf. Cuest. Evaluacion"
     var
         Text000: Label 'Details only available for questions.';
         ProfileQuestnHeader: Record 34002184;
-        //TODO: Ver ProfileManagement: Codeunit 34002123;
+        // TODO: Manual review - Custom codeunit 34002123 is unavailable as the required object type.
+        // Original code: ProfileManagement: Codeunit 34002123;
         CurrentQuestionsChecklistCode: Code[20];
         Text001: Label 'Where-Used only available for answers.';
         CaptionExpr: Text[100];
