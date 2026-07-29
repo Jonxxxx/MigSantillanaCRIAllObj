@@ -6,21 +6,23 @@ table 34003022 "Cab. Dimensiones Requeridas"
     {
         field(1; "No. Tabla"; Integer)
         {
-            Caption = 'Table No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Tabla';
             NotBlank = true;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Table));
         }
         field(2; Nombre; Text[100])
         {
+            Caption = 'Nombre';
             CalcFormula = Lookup(AllObjWithCaption."Object Name" WHERE("Object Type" = CONST(Table),
                                                                         "Object ID" = FIELD("No. Tabla")));
-            Caption = 'Name';
             Editable = false;
             FieldClass = FlowField;
         }
         field(3; Activo; Boolean)
         {
-            Caption = 'Active';
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
         }
     }
 

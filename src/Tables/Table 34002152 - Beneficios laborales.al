@@ -8,13 +8,15 @@ table 34002152 "Beneficios laborales"
     {
         field(2; "Tipo Beneficio"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Beneficio';
             OptionCaption = 'Income,Others';
             OptionMembers = Ingresos,Otro;
         }
         field(3; Codigo; Code[20])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = IF ("Tipo Beneficio" = CONST(Ingresos)) "Conceptos salariales".Codigo WHERE("Tipo concepto" = CONST(Ingresos))
             ELSE IF ("Tipo Beneficio" = CONST(Otro)) "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Beneficio));
 
@@ -37,7 +39,8 @@ table 34002152 "Beneficios laborales"
         }
         field(4; Descripcion; Text[60])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

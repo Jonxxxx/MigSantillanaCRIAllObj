@@ -6,24 +6,28 @@ table 34002102 "Representantes Empresa"
     {
         field(1; "Empresa cotizacion"; Code[10])
         {
-            Caption = 'Company';
+            DataClassification = CustomerContent;
+            Caption = 'Empresa cotizacion';
         }
         field(2; "No. Orden"; Integer)
         {
-            Caption = 'Line no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Orden';
         }
         field(3; Nombre; Text[30])
         {
-            Caption = 'Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(4; Address; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
-            DataClassification = ToBeClassified;
         }
         field(5; "C.P."; Text[5])
         {
-            Caption = 'Post code';
+            DataClassification = CustomerContent;
+            Caption = 'C.P.';
             TableRelation = "Post Code";
 
             trigger OnValidate()
@@ -35,20 +39,23 @@ table 34002102 "Representantes Empresa"
         }
         field(6; "Poblacion"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Poblacion';
         }
         field(7; County; Text[30])
         {
-            Caption = 'State';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(8; "Teléfono"; Text[20])
         {
-            Caption = 'Phone no.';
+            DataClassification = CustomerContent;
+            Caption = 'Teléfono';
         }
         field(9; "RNC/CED"; Text[15])
         {
-            Caption = 'RNC/Cédula';
+            DataClassification = CustomerContent;
+            Caption = 'RNC/CED';
 
             trigger OnValidate()
             begin
@@ -67,12 +74,13 @@ table 34002102 "Representantes Empresa"
         }
         field(10; "Job Title"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Title';
-            DataClassification = ToBeClassified;
         }
         field(11; Figurar; Option)
         {
-            Caption = 'Show';
+            DataClassification = CustomerContent;
+            Caption = 'Figurar';
             Description = 'Todo tipo documento,Contratos laborales,Mercantil,Responsable Informático';
             OptionCaption = 'All types of documents, Labor contracts, Letters, IT Manager';
             OptionMembers = "Todo tipo documento","Contratos laborales",Mercantil,"Responsable Informático";

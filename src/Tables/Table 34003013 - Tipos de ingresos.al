@@ -18,10 +18,14 @@ table 34003013 "Tipos de ingresos"
     {
         field(1; Codigo; Code[2])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             NotBlank = true;
         }
         field(2; Descripcion; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

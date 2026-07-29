@@ -10,16 +10,24 @@ table 34002109 Contratos
     {
         field(1; "Empresa cotizacion"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Empresa cotizacion';
         }
         field(2; "No. empleado"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
         }
         field(3; "No. Orden"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Orden';
         }
         field(4; "Cod. contrato"; Code[5])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. contrato';
             NotBlank = true;
             TableRelation = "Employment Contract";
 
@@ -40,13 +48,19 @@ table 34002109 Contratos
         }
         field(5; Disponible; Code[12])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Disponible';
             Enabled = false;
         }
         field(6; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(7; "Fecha inicio"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inicio';
 
             trigger OnValidate()
             begin
@@ -72,7 +86,8 @@ table 34002109 Contratos
         }
         field(8; Duracion; Text[30])
         {
-            Caption = 'Duration';
+            DataClassification = CustomerContent;
+            Caption = 'Duracion';
             DateFormula = true;
 
             trigger OnValidate()
@@ -96,6 +111,8 @@ table 34002109 Contratos
         }
         field(9; "Fecha finalizacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha finalizacion';
 
             trigger OnValidate()
             begin
@@ -122,13 +139,19 @@ table 34002109 Contratos
         }
         field(10; Cargo; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cargo';
             TableRelation = "Puestos laborales";
         }
         field(11; "Centro trabajo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Centro trabajo';
         }
         field(12; "Motivo baja"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Motivo baja';
             TableRelation = "Grounds for Termination";
 
             trigger OnValidate()
@@ -143,6 +166,8 @@ table 34002109 Contratos
         }
         field(21; Finalizado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Finalizado';
 
             trigger OnValidate()
             begin
@@ -161,24 +186,33 @@ table 34002109 Contratos
         }
         field(22; "Dias preaviso"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dias preaviso';
             DateFormula = true;
             InitValue = '15D';
         }
         field(23; "Periodo prueba"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Periodo prueba';
             DateFormula = true;
         }
         field(33; Jornada; Text[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Jornada';
         }
         field(34; "Frecuencia de pago"; Option)
         {
-            Caption = 'Payment frequency';
+            DataClassification = CustomerContent;
+            Caption = 'Frecuencia de pago';
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
         field(39; "Dias semana"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dias semana';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -191,6 +225,8 @@ table 34002109 Contratos
         }
         field(40; "Horas dia"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas dia';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -203,6 +239,8 @@ table 34002109 Contratos
         }
         field(41; "Horas semana"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas semana';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -218,9 +256,13 @@ table 34002109 Contratos
         }
         field(50; "Causa de la Baja"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Causa de la Baja';
         }
         field(61; Indefinido; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Indefinido';
 
             trigger OnValidate()
             begin
@@ -237,6 +279,8 @@ table 34002109 Contratos
         }
         field(62; Activo; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
 
             trigger OnValidate()
             begin
@@ -259,16 +303,18 @@ table 34002109 Contratos
         }
         field(63; "Pagar preaviso"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Pagar preaviso';
         }
         field(64; "Pagar cesantia"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Pagar cesantia';
         }
         field(56000; "Grado ocupacion"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Grado ocupacion';
-            DataClassification = ToBeClassified;
             Description = 'MdE';
             MaxValue = 100;
             MinValue = 0;

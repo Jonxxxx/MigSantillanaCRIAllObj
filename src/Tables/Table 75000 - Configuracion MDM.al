@@ -8,89 +8,110 @@ table 75000 "Configuracion MDM"
     {
         field(1; "Code"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(2; Activo; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
             Description = 'Sirve para determinar si est  cargado';
             Editable = false;
         }
         field(5; "Bloquea Datos MDM"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Bloquea Datos MDM';
             Description = 'MdM: Bloquea ciertos valor en Producto para que no sean editables';
         }
         field(6; "Grupo Precio PVP"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Grupo Precio PVP';
             Description = 'MdM';
             TableRelation = "Customer Price Group".Code;
         }
         field(7; "Grupo Precio PROM"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Grupo Precio PROM';
             Description = 'MdM';
             TableRelation = "Customer Price Group".Code;
         }
         field(8; "URL Async Reply"; Text[250])
         {
-            Caption = 'MdM URL Async Reply';
+            DataClassification = CustomerContent;
+            Caption = 'URL Async Reply';
             Description = 'MdM';
         }
         field(9; "VAT Bus. Posting Group"; Code[10])
         {
-            Caption = 'Tax Bus. Posting Gr. (Price For Migration)';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Bus. Posting Group';
             Description = 'MdM';
             TableRelation = "VAT Business Posting Group";
         }
         field(15; "URL Notif.MdM"; Text[250])
         {
-            Caption = 'URL Notif. MdM';
+            DataClassification = CustomerContent;
+            Caption = 'URL Notif.MdM';
             Description = 'MdM';
         }
         field(21; "Control ISBN"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Control ISBN';
         }
         field(22; "Dias Borrado Historico"; Integer)
         {
-            Caption = 'Dias Borrado Hist rico';
+            DataClassification = CustomerContent;
+            Caption = 'Dias Borrado Historico';
             Description = 'Indica con cuantos d as tiene que borrarse el hist rico.0 No se borra nunca';
         }
         field(25; "Notifica a MdM"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Notifica a MdM';
             Description = 'Notifica cambios de productos a MdM';
         }
         field(28; "Obliga Campos MdM"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Obliga Campos MdM';
             Description = 'Genera error si no rellenan debidamente todos los campos MdM';
         }
         field(29; "Activar Cola Proy. Auto."; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Activar Cola Proy. Auto.';
             Description = 'Si se activa, la cola de proyecto se activara automaticamente y el mov se activara y desactivara';
         }
         field(30; "Mov. cola proyecto"; Guid)
         {
-            Caption = 'Job Queue Entry';
+            DataClassification = CustomerContent;
+            Caption = 'Mov. cola proyecto';
             TableRelation = "Job Queue Entry".ID;
         }
         field(31; "Cola proyecto"; Code[10])
         {
-            Caption = 'Job Queue';
+            DataClassification = CustomerContent;
+            Caption = 'Cola proyecto';
         }
         field(33; "Base Unit of Measure"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Base Unit of Measure';
             TableRelation = "Unit of Measure";
             ValidateTableRelation = false;
         }
         field(34; "Divisa Local MdM"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Divisa Local MdM';
         }
         field(35; "Job Queue Category"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Queue Category';
             Description = 'Categoria de Cola de proyecto relacioando con MdM';
             TableRelation = "Job Queue Category";
@@ -100,9 +121,12 @@ table 75000 "Configuracion MDM"
         }
         field(37; "Sistema Origen"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sistema Origen';
         }
         field(40; "Tipo Precio Venta"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo Precio Venta';
             OptionMembers = "Todos clientes","Grupo precio cliente","Sin Filtrar";
 
@@ -113,6 +137,7 @@ table 75000 "Configuracion MDM"
         }
         field(41; "Grupo Precio Cliente"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Grupo Precio Cliente';
             TableRelation = "Customer Price Group".Code;
 
@@ -124,15 +149,19 @@ table 75000 "Configuracion MDM"
         }
         field(50; "Estado Inactivo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado Inactivo';
             TableRelation = "Datos MDM".Codigo WHERE("Tipo" = CONST(Estado));
         }
         field(100; "Serie Producto"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Serie Producto';
             TableRelation = "No. Series";
         }
         field(1001; "Dim Serie/Metodo"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Serie/Metodo';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -144,6 +173,7 @@ table 75000 "Configuracion MDM"
         }
         field(1002; "Dim Destino"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Destino';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -155,6 +185,7 @@ table 75000 "Configuracion MDM"
         }
         field(1003; "Dim Cuenta"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Cuenta';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -166,6 +197,7 @@ table 75000 "Configuracion MDM"
         }
         field(1004; "Dim Tipo Texto"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Tipo Texto';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -177,6 +209,7 @@ table 75000 "Configuracion MDM"
         }
         field(1005; "Dim Materia"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Materia';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -188,6 +221,7 @@ table 75000 "Configuracion MDM"
         }
         field(1006; "Dim Carga Horaria"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Carga Horaria';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -199,6 +233,7 @@ table 75000 "Configuracion MDM"
         }
         field(1007; "Dim Origen"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dim Origen';
             Description = 'MDM';
             TableRelation = Dimension.Code;
@@ -210,6 +245,8 @@ table 75000 "Configuracion MDM"
         }
         field(50000; Pruebas; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pruebas';
         }
     }
 

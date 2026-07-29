@@ -8,19 +8,23 @@ table 34002162 "Requisitos del Cargo"
     {
         field(1; "Cod. Cargo"; Code[10])
         {
-            Caption = 'Position Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cargo';
         }
         field(2; "Cod. requisito"; Code[10])
         {
-            Caption = 'Skills code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. requisito';
         }
         field(3; "Cualificacion requerida"; Code[10])
         {
-            Caption = 'Qualification Required';
+            DataClassification = CustomerContent;
+            Caption = 'Cualificacion requerida';
         }
         field(4; Requerido; Boolean)
         {
-            Caption = 'Requested';
+            DataClassification = CustomerContent;
+            Caption = 'Requerido';
         }
     }
 

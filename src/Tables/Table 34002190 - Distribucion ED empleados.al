@@ -6,39 +6,39 @@ table 34002190 "Distribucion ED empleados"
     {
         field(1; "Employee no."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee no.';
-            DataClassification = ToBeClassified;
             TableRelation = Employee;
         }
         field(2; "Concepto salarial"; Code[20])
         {
-            Caption = 'Wage Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Concepto salarial';
             NotBlank = true;
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(3; "Dimension Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Code';
-            DataClassification = ToBeClassified;
             NotBlank = true;
             TableRelation = Dimension;
         }
         field(4; Codigo; Code[20])
         {
-            Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Dimension Code"));
         }
         field(5; Descripcion; Text[50])
         {
-            Caption = 'Description';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(6; "% a distribuir"; Decimal)
         {
-            Caption = '% to distribute';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = '% a distribuir';
 
             trigger OnValidate()
             var

@@ -6,19 +6,23 @@ table 34002512 Acciones
     {
         field(34002500; "ID Accion"; Code[20])
         {
-            Caption = 'Action ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Accion';
             Description = 'DsPOS Standar';
             Editable = false;
             NotBlank = true;
         }
         field(34002501; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
             Editable = false;
         }
         field(34002502; "Tipo Accion"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Accion';
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = 'Action,Mandatory,Line Action';
@@ -26,17 +30,23 @@ table 34002512 Acciones
         }
         field(34002503; "Necesita Datos"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Necesita Datos';
             Description = 'DsPOS Standar';
             Editable = false;
         }
         field(34002504; "Tipo Datos"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Datos';
             Description = 'DsPOS Standar';
             Editable = false;
             OptionMembers = ,Numerico,Texto;
         }
         field(34002505; "Literal Pedir Datos"; Text[75])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Literal Pedir Datos';
             Description = 'DsPOS Standar';
             Editable = true;
 

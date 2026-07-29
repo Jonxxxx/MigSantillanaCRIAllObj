@@ -5,61 +5,73 @@ table 67035 "Historico Adopciones"
     {
         field(1; Campana; Code[4])
         {
+            DataClassification = CustomerContent;
             Caption = 'Campana';
             TableRelation = Campaign;
         }
         field(2; "Cod. Editorial"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cod. Editorial';
             TableRelation = Editoras;
         }
         field(3; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(4; "Cod. Local"; Code[20])
         {
-            Caption = 'C d. Local';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(5; "Cod. Nivel"; Code[20])
         {
-            Caption = 'C d. Nivel';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
         }
         field(6; "Cod. Grado"; Code[20])
         {
-            Caption = 'C d. Grado';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                    "Cod. Nivel" = FIELD("Cod. Nivel"));
         }
         field(7; "Cod. Turno"; Code[20])
         {
-            Caption = 'C d. Turno';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(8; "Cod. Promotor"; Code[20])
         {
-            Caption = 'C d. Promotor';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(9; "Cod. producto"; Code[20])
         {
-            Caption = 'C d. producto';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. producto';
             TableRelation = Item;
         }
         field(10; Seccion; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Seccion';
         }
         field(11; "Cod. Equiv. Santillana"; Code[20])
         {
-            Caption = 'C d. Equiv. Santillana';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Equiv. Santillana';
             TableRelation = "Productos Equivalentes"."Cod. Producto Anterior" WHERE("Cod. Producto" = FIELD("Cod. Producto"));
         }
         field(12; "Descripcion Equiv. Santillana"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion Equiv. Santillana';
             TableRelation = "Country/Region";
         }
@@ -73,6 +85,7 @@ table 67035 "Historico Adopciones"
         }
         field(14; "Nombre Libro"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre Libro';
         }
         field(15; "Nombre Colegio"; Text[100])
@@ -96,43 +109,53 @@ table 67035 "Historico Adopciones"
         }
         field(18; "Fecha Adopcion"; Date)
         {
-            Caption = 'Fecha Adopci n';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Adopcion';
         }
         field(19; "Cantidad Alumnos"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Cantidad Alumnos';
         }
         field(20; "% Dto. Padres de familia"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% Dto. Padres de familia';
         }
         field(21; "% Dto. Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% Dto. Colegio';
         }
         field(22; "% Dto. Docente"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% Dto. Docente';
         }
         field(23; "% Dto. Feria Padres de familia"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% Dto. Feria Padres de familia';
         }
         field(24; "% Dto. Feria Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% Dto. Feria Colegio';
         }
         field(25; "Cod. Motivo perdida adopcion"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cod. Motivo perdida adopcion';
         }
         field(26; "Cod. Libro Equivalente"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cod. Libro Equivalente';
             TableRelation = "Productos Equivalentes" WHERE("Cod. Producto" = FIELD("Cod. Producto"));
         }
         field(27; "Adopciones Camp. Anterior"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Adopciones Camp. Anterior';
         }
         field(28; "Nombre Promotor"; Text[60])
@@ -143,88 +166,107 @@ table 67035 "Historico Adopciones"
         }
         field(29; Adopcion; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Adopcion';
             OptionCaption = ' ,Conquest,Keep,Lost,Not use,Competition';
             OptionMembers = " ",Conquista,Mantener,Perdida,"No utiliza",Competencia;
         }
         field(30; "Adopcion anterior"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Adopcion anterior';
             OptionCaption = ' ,Conquest,Keep,Lost,Not use,Competition';
             OptionMembers = " ",Conquista,Mantener,Perdida,"No utiliza",Competencia;
         }
         field(31; Santillana; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Santillana';
         }
         field(32; "Ano adopcion"; Integer)
         {
-            Caption = 'Year of decition';
+            DataClassification = CustomerContent;
+            Caption = 'Ano adopcion';
         }
         field(40; "Descripcion producto"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion producto';
         }
         field(41; Usuario; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario';
         }
         field(42; "Linea de negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Linea de negocio';
         }
         field(43; Familia; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Familia';
         }
         field(44; "Sub Familia"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Sub Familia';
         }
         field(45; Serie; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Serie';
         }
         field(46; "Fecha Ult. Modificacion"; Date)
         {
-            Caption = 'Fecha Ult. Modificaci n';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Ult. Modificacion';
         }
         field(47; "Adopcion Real"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Adopcion Real';
         }
         field(48; "Motivo perdida adopcion"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Motivo perdida adopcion';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Motivos Perdida"));
         }
         field(49; "Cod. Producto Editora"; Code[20])
         {
-            Caption = 'C d. Producto Editora';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto Editora';
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Cod. Editorial"),
                                                                      "Nivel" = FIELD("Cod. Nivel"));
         }
         field(50; "Nombre Producto Editora"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre Producto Editora';
         }
         field(51; "Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Grupo de Negocio';
         }
         field(52; "Carga horaria"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Carga horaria';
         }
         field(53; "Tipo Ingles"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo Ingles';
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
         field(54; Materia; Code[10])
         {
-            Caption = 'Mater a';
+            DataClassification = CustomerContent;
+            Caption = 'Materia';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Materia));
 
             trigger OnLookup()
@@ -235,29 +277,35 @@ table 67035 "Historico Adopciones"
         }
         field(55; "Mes de Lectura"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Mes de Lectura';
             OptionCaption = ' ,January,February,March,April,May,Jun,July,August,September,October,November,December';
             OptionMembers = " ",Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         }
         field(100; "Item - Item Category Code"; Code[20])
         {
+            Caption = 'Item - Item Category Code';
             CalcFormula = Lookup(Item."Item Category Code" WHERE("No." = FIELD("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(101; "Sales Price - Unit Price"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sales Price - Unit Price';
             AutoFormatType = 2;
-            Caption = 'Unit Price';
             Editable = false;
             MinValue = 0;
         }
         field(102; "Item - Product Group Code"; Code[20])
         {
+            Caption = 'Item - Product Group Code';
             CalcFormula = lookup(Item."Item Category Code" where("No." = field("Cod. Producto")));
             FieldClass = FlowField;
         }
         field(103; "Item - Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Item - Grado';
         }
     }
 

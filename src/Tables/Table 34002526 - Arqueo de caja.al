@@ -8,12 +8,14 @@ table 34002526 "Arqueo de caja"
     {
         field(10; "Cod. tienda"; Code[20])
         {
-            Caption = 'Store No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. tienda';
             TableRelation = Tiendas;
         }
         field(20; "Cod. TPV"; Code[20])
         {
-            Caption = 'POS Terminal No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. TPV';
             TableRelation = "Configuracion TPV"."Id TPV";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -21,35 +23,42 @@ table 34002526 "Arqueo de caja"
         }
         field(25; Fecha; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Fecha';
         }
         field(30; "No. turno"; Integer)
         {
-            Caption = 'Receipt No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. turno';
         }
         field(40; "Forma de pago"; Code[10])
         {
-            Caption = 'Tender Type';
+            DataClassification = CustomerContent;
+            Caption = 'Forma de pago';
             TableRelation = "Formas de Pago"."ID Pago";
             ValidateTableRelation = true;
         }
         field(50; "Cod. divisa"; Code[10])
         {
-            Caption = 'Currency Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
         }
         field(60; Tipo; Option)
         {
-            Caption = 'Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Coin,Note,Roll';
             OptionMembers = Moneda,Billete;
         }
         field(70; Importe; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
         field(90; Cantidad; Integer)
         {
-            Caption = 'Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
 
             trigger OnValidate()
             begin
@@ -58,10 +67,13 @@ table 34002526 "Arqueo de caja"
         }
         field(100; Total; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Total';
         }
         field(34002518; "Id Replicacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
     }

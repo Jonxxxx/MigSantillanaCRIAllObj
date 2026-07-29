@@ -12,6 +12,7 @@ table 34002164 Elegibles
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
 
             trigger OnValidate()
@@ -24,6 +25,7 @@ table 34002164 Elegibles
         }
         field(2; "First Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'First Name';
 
             trigger OnValidate()
@@ -33,6 +35,7 @@ table 34002164 Elegibles
         }
         field(3; "Middle Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Middle Name';
 
             trigger OnValidate()
@@ -42,6 +45,7 @@ table 34002164 Elegibles
         }
         field(4; "Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Name';
 
             trigger OnValidate()
@@ -51,6 +55,7 @@ table 34002164 Elegibles
         }
         field(5; Initials; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Initials';
 
             trigger OnValidate()
@@ -61,22 +66,27 @@ table 34002164 Elegibles
         }
         field(6; "Job Title"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Title';
         }
         field(7; "Search Name"; Code[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(8; Address; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(9; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
         }
         field(10; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
 
             trigger OnValidate()
@@ -87,7 +97,8 @@ table 34002164 Elegibles
         }
         field(11; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -101,41 +112,50 @@ table 34002164 Elegibles
         }
         field(12; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(13; "Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
         }
         field(14; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
         }
         field(15; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
         }
         field(19; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
             SubType = Bitmap;
         }
         field(20; "Birth Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Birth Date';
         }
         field(21; "Social Security No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Social Security No.';
         }
         field(22; Gender; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Gender';
             OptionCaption = ' ,Female,Male';
             OptionMembers = " ",Female,Male;
         }
         field(23; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
@@ -149,6 +169,7 @@ table 34002164 Elegibles
         }
         field(25; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
@@ -168,32 +189,39 @@ table 34002164 Elegibles
         }
         field(29; Extension; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Extension';
         }
         field(30; "URL Linkedin"; Text[80])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'URL Linkedin';
         }
         field(31; "URL Facebook"; Text[80])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'URL Facebook';
         }
         field(32; "Company E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Company E-Mail';
         }
         field(33; Title; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Title';
         }
         field(34; "No. Series"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
         field(35; "Second Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Second Last Name';
 
             trigger OnValidate()
@@ -203,6 +231,7 @@ table 34002164 Elegibles
         }
         field(36; "Full Name"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full Name';
 
             trigger OnValidate()
@@ -212,12 +241,14 @@ table 34002164 Elegibles
         }
         field(37; "Document Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Type';
             OptionCaption = 'SS,Passport,Residence ID,Work Permission';
             OptionMembers = "Cédula",Pasaporte,"Tarj. residencia","Permiso de Trabajo";
         }
         field(38; "Document ID"; Text[15])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
 
             trigger OnValidate()
@@ -235,38 +266,48 @@ table 34002164 Elegibles
         }
         field(40; Nacionalidad; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nacionalidad';
             TableRelation = "Country/Region";
         }
         field(41; "Lugar nacimiento"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Lugar nacimiento';
         }
         field(42; "Estado civil"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado civil';
             Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a";
         }
         field(44; "No. Seguridad Social"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Seguridad Social';
         }
         field(45; "Experiencia 1"; Text[150])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Experiencia 1';
         }
         field(46; "Experiencia 2"; Text[150])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Experiencia 2';
         }
         field(47; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
-            DataClassification = ToBeClassified;
             OptionCaption = 'Elegible,Descartado,Contratado';
             OptionMembers = Elegible,Descartado,Contratado;
         }
         field(34002108; "Job Type Code"; Code[15])
         {
-            Caption = 'Job type code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Job Type Code';
             TableRelation = "Puestos laborales".Codigo;
 
             trigger OnValidate()

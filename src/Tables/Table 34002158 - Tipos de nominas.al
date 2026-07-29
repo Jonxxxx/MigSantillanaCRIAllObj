@@ -10,16 +10,19 @@ table 34002158 "Tipos de nominas"
     {
         field(1; Codigo; Code[20])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; Descripcion; Text[60])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Cotiza ISR"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza ISR';
             CaptionClass = '4,3,1';
-            DataClassification = ToBeClassified;
             InitValue = false;
 
             trigger OnValidate()
@@ -30,64 +33,68 @@ table 34002158 "Tipos de nominas"
         }
         field(4; "Cotiza AFP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza AFP';
             CaptionClass = '4,4,1';
-            DataClassification = ToBeClassified;
         }
         field(5; "Cotiza SFS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SFS';
             CaptionClass = '4,5,1';
-            DataClassification = ToBeClassified;
         }
         field(6; "Cotiza INFOTEP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza INFOTEP';
             CaptionClass = '4,6,1';
-            DataClassification = ToBeClassified;
         }
         field(7; "Cotiza SRL"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SRL';
             CaptionClass = '4,7,1';
-            DataClassification = ToBeClassified;
         }
         field(8; "Calcular ISR Mes en Bonific"; Boolean)
         {
-            Caption = 'Calculate ISR of the month';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Calcular ISR Mes en Bonific';
         }
         field(10; "Frecuencia de pago"; Option)
         {
-            Caption = 'Payment frequency';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Frecuencia de pago';
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
         field(11; "Validar contrato"; Boolean)
         {
-            Caption = 'Request contract';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Validar contrato';
         }
         field(12; "Tipo de nomina"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo de nomina';
-            DataClassification = ToBeClassified;
             OptionCaption = 'Regular,Christmas bonus,Bonus,Extra,Prestaciones,Commission';
             OptionMembers = Regular,Regalia,Bonificacion,Extra,Prestaciones,Comisiones;
         }
         field(13; "Dia inicio 1ra"; Integer)
         {
-            Caption = 'Starting day 1st';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Dia inicio 1ra';
             MaxValue = 31;
         }
         field(14; "Dia inicio 2da"; Integer)
         {
-            Caption = 'Starting day 2nd';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Dia inicio 2da';
             MaxValue = 31;
         }
         field(15; "Incluir salario"; Boolean)
         {
-            Caption = 'Include salary';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Incluir salario';
         }
     }
 

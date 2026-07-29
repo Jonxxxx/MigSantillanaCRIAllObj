@@ -8,14 +8,18 @@ table 56041 Choferes
     {
         field(1;"Cod. Chofer";Code[20])
         {
-            Caption = 'Driver Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Chofer';
         }
         field(2;Nombre;Text[100])
         {
-            Caption = 'Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(3;"No. Licencia";Code[9])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Licencia';
 
             trigger OnValidate()
             begin
@@ -25,9 +29,13 @@ table 56041 Choferes
         }
         field(4;Activo;Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
         }
         field(5;Observaciones;Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Observaciones';
         }
     }
 

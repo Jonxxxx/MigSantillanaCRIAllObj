@@ -6,22 +6,25 @@ table 34002156 "Seleccion beneficios"
     {
         field(1; "No. documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento';
         }
         field(2; "Cod. Empleado"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
         }
         field(3; "Tipo Beneficio"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Beneficio';
             OptionCaption = 'Income,Others';
             OptionMembers = Ingresos,Otro;
         }
         field(4; Codigo; Code[16])
         {
-            Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = "Beneficios laborales".Codigo;
 
             trigger OnValidate()
@@ -35,16 +38,18 @@ table 34002156 "Seleccion beneficios"
         }
         field(5; Descripcion; Text[60])
         {
-            Caption = 'Description';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(6; Importe; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
         field(7; Seleccionar; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Seleccionar';
         }
     }
 

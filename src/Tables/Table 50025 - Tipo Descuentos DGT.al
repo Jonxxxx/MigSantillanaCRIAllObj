@@ -11,15 +11,17 @@ table 50025 "Tipo Descuentos DGT"
         field(1;Codigo;Code[2])
         {
             DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;Descripcion;Text[50])
         {
-            Caption = 'Description';
             DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3;"Descuento Asumido Fabrica";Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descuento Asumido Fabrica';
         }
     }
 

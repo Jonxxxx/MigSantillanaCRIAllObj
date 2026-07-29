@@ -6,8 +6,8 @@ table 34002191 "Planificacion de vacaciones"
     {
         field(1; "No. empleado"; Code[20])
         {
-            Caption = 'Employee no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
 
             trigger OnValidate()
@@ -30,18 +30,18 @@ table 34002191 "Planificacion de vacaciones"
         }
         field(2; "Fecha inicio planificada"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Fecha inicio planificada';
-            DataClassification = ToBeClassified;
         }
         field(3; "Fecha fin planificada"; Date)
         {
-            Caption = 'Planned end date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha fin planificada';
         }
         field(4; "Dias acumulados actual"; Decimal)
         {
+            Caption = 'Dias acumulados actual';
             CalcFormula = Sum("Historico Vacaciones".Dias WHERE("No. empleado" = FIELD("No. empleado")));
-            Caption = 'Current accumulated days';
             FieldClass = FlowField;
 
             trigger OnValidate()
@@ -51,8 +51,8 @@ table 34002191 "Planificacion de vacaciones"
         }
         field(5; "Dias acumulados estimados"; Decimal)
         {
-            Caption = 'Estimated accumulated days';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Dias acumulados estimados';
 
             trigger OnValidate()
             begin
@@ -61,15 +61,15 @@ table 34002191 "Planificacion de vacaciones"
         }
         field(6; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
-            DataClassification = ToBeClassified;
             OptionCaption = ', Requested, Approved';
             OptionMembers = " ",Solicitada,Aprobada;
         }
         field(7; "Employment Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Employment Date';
-            DataClassification = ToBeClassified;
             Editable = false;
         }
         field(8; "Full name"; Text[60])

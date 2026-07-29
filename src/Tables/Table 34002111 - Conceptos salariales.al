@@ -9,11 +9,14 @@ table 34002111 "Conceptos salariales"
     {
         field(1; "Shortcut Dimension"; Code[20])
         {
-            Caption = 'Shortcut Dimension 1 Code';
+            DataClassification = CustomerContent;
+            Caption = 'Shortcut Dimension';
             TableRelation = Dimension.Code;
         }
         field(2; "Codigo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
 
             trigger OnLookup()
             var
@@ -44,15 +47,21 @@ table 34002111 "Conceptos salariales"
         }
         field(3; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Tipo concepto"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo concepto';
             Description = 'Ingresos,Deducciones';
             OptionCaption = 'Incomes,Deductions';
             OptionMembers = Ingresos,Deducciones;
         }
         field(5; "Salario Base"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Salario Base';
 
             trigger OnValidate()
             begin
@@ -62,6 +71,8 @@ table 34002111 "Conceptos salariales"
         }
         field(6; "Sujeto Cotizacion"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sujeto Cotizacion';
 
             trigger OnValidate()
             begin
@@ -71,6 +82,8 @@ table 34002111 "Conceptos salariales"
         }
         field(7; "Texto Informativo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto Informativo';
             InitValue = false;
 
             trigger OnValidate()
@@ -80,15 +93,22 @@ table 34002111 "Conceptos salariales"
         }
         field(8; "Fila Impresion Nomina"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fila Impresion Nomina';
         }
         field(9; "Col. Impresion Nomina"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Col. Impresion Nomina';
         }
         field(10; "Imprimir Descripcion"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Imprimir Descripcion';
         }
         field(11; Provisionar; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Provisionar';
 
             trigger OnValidate()
@@ -105,6 +125,8 @@ table 34002111 "Conceptos salariales"
         }
         field(12; "No. Cuenta Cuota Obrera"; Text[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta Cuota Obrera';
             TableRelation = IF ("Tipo Cuenta Cuota Obrera" = CONST(Cuenta)) "G/L Account"."No."
             ELSE IF ("Tipo Cuenta Cuota Obrera" = CONST(Proveedor)) Vendor."No.";
 
@@ -116,15 +138,23 @@ table 34002111 "Conceptos salariales"
         }
         field(13; "Contabilizacion Resumida"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Contabilizacion Resumida';
         }
         field(14; "Contabilizacion x Dimension"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Contabilizacion x Dimension';
         }
         field(15; "Sumar/Restar a cuenta salarios"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sumar/Restar a cuenta salarios';
         }
         field(16; "Cotiza AFP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza AFP';
             CaptionClass = '4,4,1';
 
             trigger OnValidate()
@@ -135,6 +165,8 @@ table 34002111 "Conceptos salariales"
         }
         field(17; "Cotiza SRL"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SRL';
             CaptionClass = '4,7,1';
 
             trigger OnValidate()
@@ -145,6 +177,8 @@ table 34002111 "Conceptos salariales"
         }
         field(18; "Cotiza INFOTEP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza INFOTEP';
             CaptionClass = '4,6,1';
 
             trigger OnValidate()
@@ -155,6 +189,8 @@ table 34002111 "Conceptos salariales"
         }
         field(19; "Cotiza ISR"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza ISR';
             CaptionClass = '4,3,1';
 
             trigger OnValidate()
@@ -165,6 +201,8 @@ table 34002111 "Conceptos salariales"
         }
         field(20; "Cotiza SFS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SFS';
             CaptionClass = '4,5,1';
 
             trigger OnValidate()
@@ -175,6 +213,8 @@ table 34002111 "Conceptos salariales"
         }
         field(21; "Tipo Cuenta Cuota Obrera"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Cuenta Cuota Obrera';
             OptionCaption = 'G/L Account,Vendor,Customer';
             OptionMembers = Cuenta,Proveedor,Cliente;
 
@@ -186,21 +226,29 @@ table 34002111 "Conceptos salariales"
         }
         field(22; "Tipo Cuenta Cuota Patronal"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Cuenta Cuota Patronal';
             OptionCaption = 'G/L Account,Vendor';
             OptionMembers = Cuenta,Proveedor;
         }
         field(23; "No. Cuenta Cuota Patronal"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta Cuota Patronal';
             TableRelation = IF ("Tipo Cuenta Cuota Patronal" = CONST(Cuenta)) "G/L Account"."No."
             ELSE IF ("Tipo Cuenta Cuota Patronal" = CONST(Proveedor)) Vendor."No.";
         }
         field(24; "Tipo Cuenta Contrapartida CO"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Cuenta Contrapartida CO';
             OptionCaption = 'G/L Account,Vendor';
             OptionMembers = Cuenta,Proveedor;
         }
         field(25; "No. Cuenta Contrapartida CO"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta Contrapartida CO';
             TableRelation = IF ("Tipo Cuenta Contrapartida CO" = CONST(Cuenta)) "G/L Account"."No."
             ELSE IF ("Tipo Cuenta Contrapartida CO" = CONST(Proveedor)) Vendor."No.";
 
@@ -214,11 +262,15 @@ table 34002111 "Conceptos salariales"
         }
         field(26; "Tipo Cuenta Contrapartida CP"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Cuenta Contrapartida CP';
             OptionCaption = 'G/L Account,Vendor';
             OptionMembers = Cuenta,Proveedor;
         }
         field(27; "No. Cuenta Contrapartida CP"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta Contrapartida CP';
             TableRelation = IF ("Tipo Cuenta Contrapartida CP" = CONST(Cuenta)) "G/L Account"."No."
             ELSE IF ("Tipo Cuenta Contrapartida CP" = CONST(Proveedor)) Vendor."No.";
 
@@ -232,12 +284,18 @@ table 34002111 "Conceptos salariales"
         }
         field(28; "Validar Contrapartida CO"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Validar Contrapartida CO';
         }
         field(29; "Validar Contrapartida CP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Validar Contrapartida CP';
         }
         field(30; "Aplica para Regalia"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Aplica para Regalia';
 
             trigger OnValidate()
             begin
@@ -247,27 +305,43 @@ table 34002111 "Conceptos salariales"
         }
         field(31; "Cotiza SUTA"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SUTA';
         }
         field(32; "Cotiza FUTA"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza FUTA';
         }
         field(33; "Cotiza MEDICARE"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza MEDICARE';
         }
         field(34; "Cotiza FICA"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza FICA';
         }
         field(35; "Cotiza SINOT"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SINOT';
         }
         field(36; "Cotiza CHOFERIL"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza CHOFERIL';
         }
         field(37; "Cotiza INCOMETAX"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza INCOMETAX';
         }
         field(38; "Excluir de listados"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Excluir de listados';
             Description = 'Bolivia';
 
             trigger OnValidate()
@@ -278,13 +352,13 @@ table 34002111 "Conceptos salariales"
         }
         field(39; "No distribuir en proyectos"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'No distribuir en proyectos';
-            DataClassification = ToBeClassified;
         }
         field(40; "Tipo de nomina"; Code[20])
         {
-            Caption = 'Payroll type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de nomina';
             TableRelation = "Tipos de nominas";
 
             trigger OnValidate()

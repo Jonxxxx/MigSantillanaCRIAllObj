@@ -8,43 +8,51 @@ table 34002525 "Solicitud de etiquetas"
     {
         field(34002500; "ID Reporte"; Integer)
         {
-            Caption = 'Report ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Reporte';
             Description = 'DsPOS Standar';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(34002501; Usuario; Code[20])
         {
-            Caption = 'User';
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
             Description = 'DsPOS Standar';
         }
         field(34002502; "No. Linea"; Integer)
         {
-            Caption = 'Line no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
             Description = 'DsPOS Standar';
         }
         field(34002503; "Nombre reporte"; Text[200])
         {
-            Caption = 'Report name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre reporte';
             Description = 'DsPOS Standar';
         }
         field(34002504; Cantidad; Integer)
         {
-            Caption = 'Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
             Description = 'DsPOS Standar';
         }
         field(34002505; "Fecha solicitud"; Date)
         {
-            Caption = 'Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha solicitud';
             Description = 'DsPOS Standar';
         }
         field(34002506; "Cod. barra"; Code[30])
         {
-            Caption = 'Barcode';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. barra';
             Description = 'DsPOS Standar';
         }
         field(34002507; "No. producto"; Code[20])
         {
-            Caption = 'Item no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. producto';
             Description = 'DsPOS Standar';
             TableRelation = Item;
 
@@ -58,12 +66,14 @@ table 34002525 "Solicitud de etiquetas"
         }
         field(34002508; "Descripcion producto"; Text[200])
         {
-            Caption = 'Item description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion producto';
             Description = 'DsPOS Standar';
         }
         field(34002509; Confirmada; Boolean)
         {
-            Caption = 'Confirmed';
+            DataClassification = CustomerContent;
+            Caption = 'Confirmada';
             Description = 'DsPOS Standar';
         }
     }

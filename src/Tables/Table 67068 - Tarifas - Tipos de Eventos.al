@@ -5,10 +5,14 @@ table 67068 "Tarifas - Tipos de Eventos"
     {
         field(1; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             TableRelation = "Tipos de Eventos";
         }
         field(2; Distrito; Code[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distrito';
 
             trigger OnLookup()
             var
@@ -35,28 +39,37 @@ table 67068 "Tarifas - Tipos de Eventos"
         }
         field(3; Pago; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pago';
             OptionCaption = ' ,Acci n pedag gica';
             OptionMembers = " ","Acci n pedag gica";
         }
         field(4; "Tipo Pago"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Pago';
             OptionCaption = 'Por Hora,Por Unidad,Por Grupo';
             OptionMembers = "Por Hora","Por Unidad","Por Grupo";
         }
         field(5; Monto; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Monto';
         }
         field(6; "Post Code"; Code[20])
         {
-            Caption = 'Cod. Provincia';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
         }
         field(7; County; Text[30])
         {
-            Caption = 'Cod. Departamento';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(8; City; Text[30])
         {
-            Caption = 'Cod. Distrito';
+            DataClassification = CustomerContent;
+            Caption = 'City';
         }
     }
 

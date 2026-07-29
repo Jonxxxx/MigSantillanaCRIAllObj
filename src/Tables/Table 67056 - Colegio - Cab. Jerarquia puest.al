@@ -5,6 +5,8 @@ table 67056 "Colegio - Cab. Jerarquia puest"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
 
             trigger OnValidate()
@@ -17,15 +19,21 @@ table 67056 "Colegio - Cab. Jerarquia puest"
         }
         field(2; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(3; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   "Cod. Local" = FIELD("Cod. Local"));
         }
         field(4; "Cod. Turno"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
 
             trigger OnLookup()
@@ -45,6 +53,8 @@ table 67056 "Colegio - Cab. Jerarquia puest"
         }
         field(5; "Nombre Colegio"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
     }
 

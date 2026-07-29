@@ -8,27 +8,32 @@ table 50004 "Dimension Value-Vendores"
     {
         field(1; "Dimension Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Code';
             NotBlank = true;
             TableRelation = Dimension;
         }
         field(2; "Code"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code';
             NotBlank = true;
         }
         field(3; Name; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
         }
         field(4; "Dimension Value Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Value Type';
             OptionCaption = 'Standard,Heading,Total,Begin-Total,End-Total';
             OptionMembers = Standard,Heading,Total,"Begin-Total","End-Total";
         }
         field(5; Totaling; Text[250])
         {
+            DataClassification = CustomerContent;
             Caption = 'Totaling';
             TableRelation = IF ("Dimension Value Type" = CONST(Total)) "Dimension Value"."Dimension Code" WHERE("Dimension Code" = FIELD("Dimension Code"));
             //This property is currently not supported
@@ -37,26 +42,32 @@ table 50004 "Dimension Value-Vendores"
         }
         field(6; Blocked; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Blocked';
         }
         field(7; "Consolidation Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Consolidation Code';
         }
         field(8; Indentation; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Indentation';
         }
         field(9; "Global Dimension No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension No.';
         }
         field(10; "Map-to IC Dimension Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Map-to IC Dimension Code';
         }
         field(11; "Map-to IC Dimension Value Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Map-to IC Dimension Value Code';
             TableRelation = "IC Dimension Value".Code WHERE("Dimension Code" = FIELD("Map-to IC Dimension Code"));
         }

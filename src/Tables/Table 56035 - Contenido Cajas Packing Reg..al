@@ -15,44 +15,55 @@ table 56035 "Contenido Cajas Packing Reg."
     {
         field(1; "No. Packing"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Packing';
         }
         field(2; "No. Caja"; Code[20])
         {
-            Caption = 'Box No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Caja';
         }
         field(3; "No. Producto"; Code[20])
         {
-            Caption = 'Item No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Producto';
         }
         field(4; Descripcion; Text[200])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; "No. Linea"; Integer)
         {
-            Caption = 'Line No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(6; "Cod. Barras"; Code[30])
         {
-            Caption = 'Barcode';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Barras';
         }
         field(7; "Cod. Unidad de Medida"; Code[20])
         {
-            Caption = 'Unit Of Measure Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Unidad de Medida';
             Editable = false;
             TableRelation = "Item Unit of Measure".Code WHERE("Item No." = FIELD("No. Producto"));
         }
         field(8; Cantidad; Decimal)
         {
-            Caption = 'Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
         }
         field(9; "No. Picking"; Code[20])
         {
-            Caption = 'Picking No';
+            DataClassification = CustomerContent;
+            Caption = 'No. Picking';
         }
         field(10; "No. Linea Picking"; Integer)
         {
-            Caption = 'Picking Line No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea Picking';
             NotBlank = true;
             //TODO Ver: 
             /*
@@ -78,27 +89,33 @@ table 56035 "Contenido Cajas Packing Reg."
         }
         field(11; "Peso Calculado"; Decimal)
         {
-            Caption = 'Calculated weight';
+            DataClassification = CustomerContent;
+            Caption = 'Peso Calculado';
         }
         field(12; "Peso de la Caja"; Decimal)
         {
-            Caption = 'Calculated weight';
+            DataClassification = CustomerContent;
+            Caption = 'Peso de la Caja';
         }
         field(13; "Peso real"; Decimal)
         {
-            Caption = 'Real weight';
+            DataClassification = CustomerContent;
+            Caption = 'Peso real';
         }
         field(14; Diferencia; Decimal)
         {
-            Caption = 'Diference';
+            DataClassification = CustomerContent;
+            Caption = 'Diferencia';
         }
         field(15; "Serie de etiquetas"; Code[20])
         {
-            Caption = 'Tag Series';
+            DataClassification = CustomerContent;
+            Caption = 'Serie de etiquetas';
         }
         field(16; "No. Pedido"; Code[20])
         {
-            Caption = 'N  Pedido';
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido';
             //TODO Ver: 
             /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
@@ -108,7 +125,8 @@ table 56035 "Contenido Cajas Packing Reg."
         }
         field(17; "No. Linea Pedido"; Integer)
         {
-            Caption = 'Order Line No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea Pedido';
             NotBlank = true;
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Line"."Line No." WHERE("Document Type" = CONST(Order),
                                                                                          "Document No." = FIELD("No. Pedido"),
@@ -145,6 +163,7 @@ table 56035 "Contenido Cajas Packing Reg."
         }
         field(20; "Tipo pedido"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo pedido';
             OptionCaption = 'Venta,Consignaci n,Transferencia';
             OptionMembers = Venta,Consignacion,Transferencia;

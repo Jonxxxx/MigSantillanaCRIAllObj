@@ -5,9 +5,13 @@ table 70515 "Producto-Cod. Descuento"
     {
         field(1;"Cod. Producto";Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
         }
         field(2;"Cod. Descuento";Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Descuento';
         }
     }
 

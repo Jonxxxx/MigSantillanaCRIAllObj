@@ -5,6 +5,8 @@ table 67029 "Hist. Promotor - Ppto Muestras"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             //TOOD: Ver TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
@@ -15,6 +17,8 @@ table 67029 "Hist. Promotor - Ppto Muestras"
         }
         field(2; "Cod. Producto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             TableRelation = Item;
 
             trigger OnValidate()
@@ -30,27 +34,38 @@ table 67029 "Hist. Promotor - Ppto Muestras"
         }
         field(3; "Nombre Promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Promotor';
         }
         field(4; "Item Description"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item Description';
         }
         field(5; Quantity; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity';
         }
         field(6; "Extended Quantity"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Extended Quantity';
         }
         field(7; "Cantidad camp. anterior"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad camp. anterior';
         }
         field(8; "Cod. producto equivalente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. producto equivalente';
         }
         field(9; Ano; Code[4])
         {
-            Caption = 'Year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano';
             Numeric = true;
         }
     }

@@ -8,17 +8,24 @@ table 34002163 "Distrib. Control de asis. Proy"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             TableRelation = Employee WHERE(Status = CONST(Active));
         }
         field(2; "Fecha registro"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
         }
         field(3; "Hora registro"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora registro';
         }
         field(4; "No. Linea"; Integer)
         {
-            Caption = 'Line no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(5; "Job Title"; Text[60])
         {
@@ -28,6 +35,7 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(6; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
 
@@ -49,6 +57,7 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(7; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
 
@@ -75,10 +84,14 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(8; "Horas laboradas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas laboradas';
             Editable = false;
         }
         field(9; "Horas regulares"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas regulares';
 
             trigger OnValidate()
             begin
@@ -87,6 +100,8 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(10; "Horas extras al 35"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas extras al 35';
 
             trigger OnValidate()
             begin
@@ -95,6 +110,8 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(11; "Horas extras al 100"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas extras al 100';
 
             trigger OnValidate()
             begin
@@ -103,6 +120,8 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(12; "Horas nocturnas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas nocturnas';
 
             trigger OnValidate()
             begin
@@ -111,6 +130,8 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(13; "Horas feriadas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas feriadas';
 
             trigger OnValidate()
             begin
@@ -119,20 +140,23 @@ table 34002163 "Distrib. Control de asis. Proy"
         }
         field(14; "Nombre completo"; Text[60])
         {
+            Caption = 'Nombre completo';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(15; "Total Horas imputadas"; Duration)
         {
+            Caption = 'Total Horas imputadas';
             CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE("Cod. Empleado" = FIELD("Cod. Empleado"),
                                                                               "Fecha registro" = FIELD("Fecha registro")));
-            Caption = 'Total Input hours';
             Editable = false;
             FieldClass = FlowField;
         }
         field(16; "Horas Extras Nocturnas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas Extras Nocturnas';
         }
     }
 

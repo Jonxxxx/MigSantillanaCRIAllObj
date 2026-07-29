@@ -6,6 +6,8 @@ table 34002101 "Centros de Trabajo"
     {
         field(1; "Empresa cotizacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Empresa cotizacion';
             TableRelation = "Empresas Cotizacion";
 
             trigger OnValidate()
@@ -20,6 +22,8 @@ table 34002101 "Centros de Trabajo"
         }
         field(2; "Centro de trabajo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Centro de trabajo';
             NotBlank = true;
             Numeric = true;
 
@@ -30,9 +34,13 @@ table 34002101 "Centros de Trabajo"
         }
         field(3; "Direccion"; Text[40])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Direccion';
         }
         field(4; "C.P."; Text[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'C.P.';
             TableRelation = "Post Code";
 
             trigger OnValidate()
@@ -47,16 +55,23 @@ table 34002101 "Centros de Trabajo"
         }
         field(5; "Poblacion"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Poblacion';
         }
         field(6; Provincia; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Provincia';
         }
         field(7; "Fecha de Cierre Nomina"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de Cierre Nomina';
         }
         field(8; Nombre; Text[60])
         {
-            Caption = 'Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
     }
 

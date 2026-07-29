@@ -6,6 +6,8 @@ table 67059 "Equipos Talleres y Eventos"
     {
         field(1; "Cod. Taller - Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Taller - Evento';
             NotBlank = true;
             TableRelation = Eventos."No.";
 
@@ -17,14 +19,20 @@ table 67059 "Equipos Talleres y Eventos"
         }
         field(2; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             Editable = false;
             TableRelation = "Tipos de Eventos";
         }
         field(3; "Line no."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line no.';
         }
         field(5; "Codigo Equipo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Equipo';
             NotBlank = true;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Equipos T&E"));
 
@@ -39,23 +47,35 @@ table 67059 "Equipos Talleres y Eventos"
         }
         field(6; "Description Taller"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description Taller';
             Editable = false;
         }
         field(7; "Descripcion Equipo"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Equipo';
             Editable = false;
         }
         field(8; Cantidad; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
         }
         field(9; "Costo Unitario"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Costo Unitario';
         }
         field(10; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
         }
         field(11; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
     }
 

@@ -9,30 +9,37 @@ table 67021 "Expositores - aps"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
         }
         field(2; Name; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
         }
         field(3; "Search Name"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(4; "Name 2"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name 2';
         }
         field(5; Address; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(6; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
         }
         field(7; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
 
             trigger OnValidate()
@@ -42,30 +49,36 @@ table 67021 "Expositores - aps"
         }
         field(8; "Phone No."; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(9; "Telex No."; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Telex No.';
         }
         field(10; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             TableRelation = Territory;
         }
         field(11; "Language Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Language Code';
             TableRelation = Language;
         }
         field(12; "Salesperson Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Salesperson Code';
             TableRelation = "Salesperson/Purchaser";
         }
         field(13; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
@@ -80,19 +93,23 @@ table 67021 "Expositores - aps"
         }
         field(15; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
         field(16; "Fax No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Fax No.';
         }
         field(17; "Telex Answer Back"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Telex Answer Back';
         }
         field(18; "Document ID"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
 
             trigger OnValidate()
@@ -103,12 +120,14 @@ table 67021 "Expositores - aps"
         }
         field(19; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
             SubType = Bitmap;
         }
         field(20; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -121,34 +140,45 @@ table 67021 "Expositores - aps"
         }
         field(21; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(22; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
         field(23; "Home Page"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
         field(24; Twitter; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Twitter';
         }
         field(25; Facebook; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Facebook';
         }
         field(26; "BB Pin"; Text[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'BB Pin';
         }
         field(27; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
         field(28; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
@@ -159,21 +189,26 @@ table 67021 "Expositores - aps"
         }
         field(30; "Cost (LCY)"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cost (LCY)';
             AutoFormatType = 1;
-            Caption = 'Cost ($)';
             Editable = false;
         }
         field(31; "E-Mail 2"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
         field(32; "Se entrego carne"; Boolean)
         {
-            Caption = 'Carnet delivered';
+            DataClassification = CustomerContent;
+            Caption = 'Se entrego carne';
         }
         field(33; "Pertenece al CDS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pertenece al CDS';
 
             trigger OnValidate()
             begin
@@ -183,14 +218,18 @@ table 67021 "Expositores - aps"
         }
         field(34; "Ano inscripcion CDS"; Code[4])
         {
-            Caption = 'Subscription year CDS';
+            DataClassification = CustomerContent;
+            Caption = 'Ano inscripcion CDS';
             Numeric = true;
         }
         field(35; "Ult. fecha activacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ult. fecha activacion';
         }
         field(36; "Eventos Planif. Pendiente Pago"; Integer)
         {
+            Caption = 'Eventos Planif. Pendiente Pago';
             CalcFormula = Count("Cab. Planif. Evento" WHERE("Pagado" = CONST(false),
                                                              "Expositor" = FIELD("No."),
                                                              "Estado" = FILTER(<> Anulado)));
@@ -212,6 +251,7 @@ table 67021 "Expositores - aps"
         }
         field(37; "Eventos Planif. Pagados"; Integer)
         {
+            Caption = 'Eventos Planif. Pagados';
             CalcFormula = Count("Cab. Planif. Evento" WHERE("Pagado" = CONST(true),
                                                              "Expositor" = FIELD("No."),
                                                              "Estado" = FILTER(<> Anulado)));
@@ -232,6 +272,7 @@ table 67021 "Expositores - aps"
         }
         field(38; "Tiene Eventos Planif"; Boolean)
         {
+            Caption = 'Tiene Eventos Planif';
             CalcFormula = Exist("Cab. Planif. Evento" WHERE("Expositor" = FIELD("No."),
                                                              "Estado" = FILTER(<> Anulado)));
             FieldClass = FlowField;

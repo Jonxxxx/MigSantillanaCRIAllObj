@@ -8,13 +8,19 @@ table 34002141 "Historico Vacaciones"
     {
         field(1; "No. empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
         }
         field(2; "Fecha Inicio"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio';
         }
         field(3; "Fecha Fin"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Fin';
 
             trigger OnValidate()
             var
@@ -33,11 +39,13 @@ table 34002141 "Historico Vacaciones"
         }
         field(4; Dias; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dias';
         }
         field(5; "Tipo calculo"; Option)
         {
-            Caption = 'Calculation type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo calculo';
             Editable = false;
             OptionCaption = 'By law,Additional';
             OptionMembers = "De ley",Adicional;

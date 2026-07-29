@@ -5,20 +5,30 @@ table 34002126 "Incentivos/Propinas"
     {
         field(1; "Concepto Salarial"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(2; "Fecha de Corte"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de Corte';
         }
         field(3; "Monto a Distribuir"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Monto a Distribuir';
             DecimalPlaces = 2 : 2;
         }
         field(4; "Fecha Ult. Corte"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Ult. Corte';
         }
         field(5; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             TableRelation = "Centros de Trabajo";
         }
     }

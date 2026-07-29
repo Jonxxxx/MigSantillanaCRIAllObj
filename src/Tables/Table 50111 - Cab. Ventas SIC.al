@@ -15,157 +15,208 @@ table 50111 "Cab. Ventas SIC"
     {
         field(1; "Tipo documento"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo documento';
         }
         field(2; "No. documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. documento';
         }
         field(3; "Cod. Cliente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
         }
         field(4; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(5; "Cod. Almacen"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Almacen';
         }
         field(6; "Cod. Moneda"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Moneda';
         }
         field(7; RNC; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'RNC';
         }
         field(8; "Nombre Cliente"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cliente';
         }
         field(9; "No. comprobante"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. comprobante';
         }
         field(10; "Fecha Venc. NCF"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Venc. NCF';
         }
         field(11; "NCF Afectado"; Code[19])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Afectado';
         }
         field(12; "Cod. Cajero"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cajero';
         }
         field(13; "Tasa de cambio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tasa de cambio';
         }
         field(14; "Nombre asegurado"; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Nombre asegurado';
         }
         field(15; "No. poliza"; Code[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. poliza';
         }
         field(16; "No. orden"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. orden';
         }
         field(17; Aseguradora; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Aseguradora';
         }
         field(18; "RNC Aseguradora"; Code[15])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'RNC Aseguradora';
         }
         field(19; "Cod. supervisor"; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. supervisor';
         }
         field(20; Turno; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
         }
         field(21; "Source Counter"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Source Counter';
         }
         field(22; Transferido; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Transferido';
         }
         field(23; Errores; Text[250])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Errores';
         }
         field(24; ErroresLineas; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'ErroresLineas';
         }
         field(25; Monto; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Monto';
         }
         field(26; ITBIS; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'ITBIS';
         }
         field(27; SubTotal; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'SubTotal';
         }
         field(28; Descuento; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descuento';
         }
         field(29; Observacion; Text[250])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Observacion';
         }
         field(30; Origen; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Origen';
             OptionCaption = ' ,Punto de Venta,From Hotel';
             OptionMembers = " ","Punto de Venta","From Hotel";
         }
         field(31; Hora; Time)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
         field(32; Clave; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Clave';
         }
         field(33; Consecutivo; Text[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Consecutivo';
         }
         field(34; Colegio; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Colegio';
         }
         field(35; Caja; Code[5])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Caja';
         }
         field(36; Tienda; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tienda';
             Description = '001-LDP:SIC-JERM';
         }
         field(37; "No. documento SIC"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento SIC';
         }
         field(38; Establecimiento; Code[40])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Establecimiento';
             Editable = false;
         }
         field(39; PuntoEmision; Code[40])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'PuntoEmision';
             Editable = false;
         }
         field(40; "Tipo Documento Identidad"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo Documento Identidad';
-            DataClassification = ToBeClassified;
             Description = '001-LDP: SIC-JERM';
             Editable = false;
             OptionCaption = ' ,CI - CEDULA DE IDENTIDAD,CEX - CEDULA DE IDENTIDAD DE EXTRANJERO,PAS - PASAPORTE,OD - OTRO DOCUMENTO DE IDENTIDAD,NIT - NUMERO DE IDENTIFICACION TRIBUTARIA';
@@ -173,24 +224,28 @@ table 50111 "Cab. Ventas SIC"
         }
         field(41; "No. Telefono"; Text[15])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. Telefono';
             Description = '001-LDP: SIC-JERM';
             Editable = false;
         }
         field(42; "Correo Electronico"; Text[40])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Correo Electronico';
             Description = '001-LDP: SIC-JERM';
             Editable = false;
         }
         field(43; "Serie Documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Serie Documento';
             Description = '001-LDP: SIC-JERM';
         }
         field(44; "Cod. Banco"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Banco';
             Description = '001-LDP: SIC-JERM';
         }
     }

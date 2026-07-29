@@ -6,12 +6,14 @@ table 34002188 "Rating Evaluacion"
     {
         field(1; "Profile Questionnaire Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Code';
             NotBlank = true;
             TableRelation = "Cab. Cuestionario Evaluacion";
         }
         field(2; "Profile Questionnaire Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Line No.';
             NotBlank = true;
             TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
@@ -20,12 +22,14 @@ table 34002188 "Rating Evaluacion"
         }
         field(3; "Rating Profile Quest. Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Rating Profile Quest. Code';
             NotBlank = true;
             TableRelation = "Cab. Cuestionario Evaluacion";
         }
         field(4; "Rating Profile Quest. Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Rating Profile Quest. Line No.';
             NotBlank = true;
             TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Rating Profile Quest. Code"),
@@ -33,8 +37,9 @@ table 34002188 "Rating Evaluacion"
         }
         field(5; Points; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Points';
+            BlankZero = true;
             DecimalPlaces = 0 : 0;
         }
         field(6; "Profile Question Description"; Text[50])

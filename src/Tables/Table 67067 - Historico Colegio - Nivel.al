@@ -7,6 +7,8 @@ table 67067 "Historico Colegio - Nivel"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
@@ -19,21 +21,31 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(2; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(3; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Nivel Educativo APS";
         }
         field(4; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(5; "Categoria colegio"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Categoria colegio';
         }
         field(6; Ruta; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ruta';
 
             trigger OnLookup()
             begin
@@ -92,6 +104,7 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(7; "Dto. Ticket Colegio"; Decimal)
         {
+            Caption = 'Dto. Ticket Colegio';
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                     "Cod. Local" = FIELD("Cod. Local"),
                                                                                     "Cod. Nivel" = FIELD("Cod. Nivel")));
@@ -100,6 +113,7 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(8; "Dto. Ticket Padres"; Decimal)
         {
+            Caption = 'Dto. Ticket Padres';
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Padres" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                    "Cod. Local" = FIELD("Cod. Local"),
                                                                                    "Cod. Nivel" = FIELD("Cod. Nivel")));
@@ -108,6 +122,7 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(9; "Dto. Feria Colegio"; Decimal)
         {
+            Caption = 'Dto. Feria Colegio';
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Colegio" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                           "Cod. Local" = FIELD("Cod. Local"),
                                                                                           "Cod. Nivel" = FIELD("Cod. Nivel")));
@@ -116,6 +131,7 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(10; "Dto. Feria Padres"; Decimal)
         {
+            Caption = 'Dto. Feria Padres';
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Feria Padres" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                          "Cod. Local" = FIELD("Cod. Local"),
                                                                                          "Cod. Nivel" = FIELD("Cod. Nivel")));
@@ -124,6 +140,8 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(11; Adoptado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Adoptado';
             OptionCaption = ' ,Yes,No';
             OptionMembers = " ","Si",No;
 
@@ -142,9 +160,12 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(12; "Estatus observado"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estatus observado';
         }
         field(13; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
             TableRelation = Contact.City;
 
@@ -155,7 +176,8 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(14; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = Contact."Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -168,14 +190,18 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(15; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(16; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(17; "Dto. Docente"; Decimal)
         {
+            Caption = 'Dto. Docente';
             CalcFormula = Lookup("Colegio - Adopciones Cab"."% Dto. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                     "Cod. Local" = FIELD("Cod. Local"),
                                                                                     "Cod. Nivel" = FIELD("Cod. Nivel")));
@@ -184,12 +210,14 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(20; Campana; Code[4])
         {
+            DataClassification = CustomerContent;
             Caption = 'Campana';
             TableRelation = Campaign;
         }
         field(53501; "Distrito Code"; Code[10])
         {
-            Caption = 'Cod. Distrito';
+            DataClassification = CustomerContent;
+            Caption = 'Distrito Code';
             Description = '//Peru';
             Enabled = false;
 
@@ -207,22 +235,28 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(53502; Departamento; Text[30])
         {
-            Caption = 'District';
+            DataClassification = CustomerContent;
+            Caption = 'Departamento';
             Description = '//Peru';
             Enabled = false;
         }
         field(53503; Distritos; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distritos';
             Description = '//Peru';
             Enabled = false;
         }
         field(53504; Provincia; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Provincia';
             Description = '//Peru';
             Enabled = false;
         }
         field(53505; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             Description = '//Peru';
             Enabled = false;
@@ -230,12 +264,15 @@ table 67067 "Historico Colegio - Nivel"
         }
         field(53506; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             Description = '//Peru';
             TableRelation = "Country/Region";
         }
         field(67000; "Codigo Postal"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Postal';
             Description = '//Peru';
             Enabled = false;
         }

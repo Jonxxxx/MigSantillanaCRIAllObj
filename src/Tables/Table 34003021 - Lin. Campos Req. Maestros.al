@@ -6,14 +6,18 @@ table 34003021 "Lin. Campos Req. Maestros"
     {
         field(1; "No. Tabla"; Integer)
         {
-            Caption = 'Table No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Tabla';
         }
         field(2; Nombre; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(3; "No. Campo"; Integer)
         {
-            Caption = 'Field No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Campo';
             NotBlank = true;
 
             trigger OnLookup()
@@ -43,7 +47,8 @@ table 34003021 "Lin. Campos Req. Maestros"
         }
         field(4; "Nombre Campo"; Text[80])
         {
-            Caption = 'Field Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Campo';
         }
     }
 

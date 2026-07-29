@@ -7,9 +7,13 @@ table 64824 "Replicator Group"
     {
         field(1; "Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(5; Description; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
     }
 

@@ -6,11 +6,14 @@ table 51011 "Lin Cupon por Lote"
     {
         field(1; Lote; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Lote';
             TableRelation = "Cab. Cupon Lote".Lote;
         }
         field(2; "Cod. Producto"; Code[20])
         {
-            Caption = 'Coupon Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             NotBlank = false;
             TableRelation = Item;
 
@@ -37,20 +40,24 @@ table 51011 "Lin Cupon por Lote"
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Precio Venta"; Decimal)
         {
-            Caption = 'Sales Price';
+            DataClassification = CustomerContent;
+            Caption = 'Precio Venta';
         }
         field(5; "% Descuento"; Decimal)
         {
-            Caption = 'Discount %';
+            DataClassification = CustomerContent;
+            Caption = '% Descuento';
             DecimalPlaces = 4 :;
         }
         field(6; Cantidad; Integer)
         {
-            Caption = 'Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
         }
     }
 

@@ -10,20 +10,28 @@ table 75014 "Filtro Valor Campo Buffer"
     {
         field(1; "Table Id"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Table Id';
         }
         field(2; "Field No"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Field No';
         }
         field(3; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
         }
         field(10; Value; Text[100])
         {
-            Caption = 'Valor';
+            DataClassification = CustomerContent;
+            Caption = 'Value';
         }
         field(11; Description; Text[100])
         {
-            Caption = 'Descripcion';
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
     }
 

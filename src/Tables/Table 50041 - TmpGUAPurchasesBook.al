@@ -9,53 +9,63 @@ table 50041 TmpGUAPurchasesBook
     {
         field(1; Date; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Date';
             Description = 'COL5.0.001';
         }
         field(2; Vendedor; Text[50])
         {
-            Caption = 'Vendor';
+            DataClassification = CustomerContent;
+            Caption = 'Vendedor';
             Description = 'COL5.0.001';
             TableRelation = "Sales Header"."No.";
         }
         field(3; Identification; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Identification';
             Description = 'COL5.0.001';
             TableRelation = "Sales Header"."No.";
         }
         field(4; "Total purchase"; Decimal)
         {
-            Caption = 'Total Purchase';
+            DataClassification = CustomerContent;
+            Caption = 'Total purchase';
             Description = 'COL5.0.001';
         }
         field(6; "Total service"; Decimal)
         {
-            Caption = 'Total Service';
+            DataClassification = CustomerContent;
+            Caption = 'Total service';
             Description = 'COL5.0.001';
         }
         field(8; VAT; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'VAT';
             Description = 'COL5.0.001';
         }
         field(9; "Total invoice"; Decimal)
         {
-            Caption = 'Total Invoice';
+            DataClassification = CustomerContent;
+            Caption = 'Total invoice';
             Description = 'COL5.0.001';
         }
         field(10; Import; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Import';
             Description = 'COL5.0.001';
         }
         field(11; Reference; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Reference';
             Description = 'COL5.0.001';
         }
         field(13; "Document Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Type';
             Description = 'COL5.0.001';
             OptionCaption = ' ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund';
@@ -63,12 +73,14 @@ table 50041 TmpGUAPurchasesBook
         }
         field(14; "VAT Bus. Posting Group"; Code[20])
         {
-            Caption = 'Tax Bus. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Bus. Posting Group';
             Description = 'COL5.0.001';
         }
         field(15; No; Integer)
         {
-            Caption = 'No.';
+            DataClassification = CustomerContent;
+            Caption = 'No';
             Description = 'COL5.0.001';
         }
     }

@@ -7,9 +7,13 @@ table 51015 "Cab. Cupon Lote"
     {
         field(1; Lote; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Lote';
         }
         field(2; "Ano Escolar"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ano Escolar';
             TableRelation = "Ano Escolar";
 
             trigger OnValidate()
@@ -25,6 +29,8 @@ table 51015 "Cab. Cupon Lote"
         }
         field(3; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
 
             trigger OnValidate()
@@ -40,10 +46,14 @@ table 51015 "Cab. Cupon Lote"
         }
         field(4; "Grado Alumno"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grado Alumno';
             TableRelation = Grado;
         }
         field(5; "Dto Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dto Colegio';
             DecimalPlaces = 4 :;
 
             trigger OnValidate()
@@ -53,6 +63,8 @@ table 51015 "Cab. Cupon Lote"
         }
         field(6; "Dto Padre"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dto Padre';
             DecimalPlaces = 4 :;
 
             trigger OnValidate()
@@ -62,23 +74,34 @@ table 51015 "Cab. Cupon Lote"
         }
         field(7; Descripcion; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(8; "Valido Desde"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valido Desde';
         }
         field(9; "Valido Hasta"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valido Hasta';
         }
         field(10; "Cod. Vendedor"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Vendedor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(11; "Cantidad Cupones"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Cupones';
         }
         field(12; "Dto. Aplica a Lineas"; Option)
         {
-            Caption = 'Dto. Aplica en L neas';
+            DataClassification = CustomerContent;
+            Caption = 'Dto. Aplica a Lineas';
             OptionMembers = Ninguno,Padres,Colegio;
 
             trigger OnValidate()
@@ -103,21 +126,26 @@ table 51015 "Cab. Cupon Lote"
         }
         field(20; Usuario; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
             Description = '#140677';
         }
         field(50000; "Cantidad Limite"; Integer)
         {
-            Caption = 'Max. Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
         field(50001; "Importe Dto. Limite"; Decimal)
         {
-            Caption = 'Max. Discount Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe Dto. Limite';
             Description = 'NopCommerce';
         }
         field(50002; "Cod. Cliente"; Code[20])
         {
-            Caption = 'Customer No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
 
             trigger OnValidate()
@@ -128,13 +156,18 @@ table 51015 "Cab. Cupon Lote"
         }
         field(50004; "Nombre Cliente"; Text[100])
         {
-            Caption = 'Customer Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cliente';
         }
         field(50005; "Nombre Maestro"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Maestro';
         }
         field(50006; "Dto. Maestro"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dto. Maestro';
         }
     }
 

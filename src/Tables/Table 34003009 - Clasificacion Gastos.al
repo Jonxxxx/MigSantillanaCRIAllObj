@@ -9,10 +9,14 @@ table 34003009 "Clasificacion Gastos"
     {
         field(1; Codigo; Code[2])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             NotBlank = true;
         }
         field(2; Descripcion; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

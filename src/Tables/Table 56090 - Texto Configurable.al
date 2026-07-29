@@ -7,17 +7,25 @@ table 56090 "Texto Configurable"
     {
         field(1; "Id. Tabla"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id. Tabla';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(TableData));
         }
         field(2; "Seccion"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Seccion';
             OptionMembers = Cabecera,Detalle,Pie;
         }
         field(3; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(4; Texto; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto';
         }
     }
 

@@ -7,11 +7,13 @@ table 51012 Grado
     {
         field(1;"Cod. Grado";Code[20])
         {
-            Caption = 'Grade Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
         }
         field(2;Descripcion;Text[50])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

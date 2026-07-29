@@ -5,6 +5,8 @@ table 67023 "Cab. Planificacion"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor | Supervisor));
 
             trigger OnValidate()
@@ -18,18 +20,28 @@ table 67023 "Cab. Planificacion"
         }
         field(2; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(3; Hora; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
         field(4; "Fecha Inicial"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicial';
         }
         field(5; "Fecha Final"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Final';
         }
         field(6; Semana; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Semana';
             NotBlank = true;
 
             trigger OnLookup()
@@ -90,20 +102,26 @@ table 67023 "Cab. Planificacion"
         }
         field(7; "Nombre promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre promotor';
             Editable = false;
         }
         field(8; Estado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionCaption = ' ,Planned,Executed';
             OptionMembers = " ",Planificado,Ejecutado;
         }
         field(9; "Filtro Fecha"; Date)
         {
+            Caption = 'Filtro Fecha';
             FieldClass = FlowFilter;
         }
         field(10; Ano; Integer)
         {
-            Caption = 'Year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano';
         }
     }
 

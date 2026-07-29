@@ -27,15 +27,18 @@ table 56021 "Lin. Hoja de Ruta"
     {
         field(1; "No. Hoja Ruta"; Code[20])
         {
-            Caption = 'Route Sheet No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Hoja Ruta';
         }
         field(2; "No. Linea"; Integer)
         {
-            Caption = 'Line No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(3; "No. Conduce"; Code[20])
         {
-            Caption = 'Shipment No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Conduce';
             //TODO Ver: 
             /*
             TableRelation = IF ("Tipo Envio" = FILTER("Pedido Venta")) "Sales Shipment Header" WHERE ("En Hoja de Ruta"=FILTER(No),
@@ -110,67 +113,82 @@ table 56021 "Lin. Hoja de Ruta"
         }
         field(4; "Cod. Cliente"; Code[20])
         {
-            Caption = 'Customer Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
         }
         field(5; "Nombre Cliente"; Text[200])
         {
-            Caption = 'Customer Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cliente';
         }
         field(6; "Cantidad de Bultos"; Integer)
         {
-            Caption = 'Packages Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Bultos';
         }
         field(7; Peso; Decimal)
         {
-            Caption = 'Weight';
+            DataClassification = CustomerContent;
+            Caption = 'Peso';
         }
         field(8; "Unidad Medida"; Code[10])
         {
-            Caption = 'Unit of Measure';
+            DataClassification = CustomerContent;
+            Caption = 'Unidad Medida';
             TableRelation = "Unit of Measure";
         }
         field(9; Valor; Decimal)
         {
-            Caption = 'Value';
+            DataClassification = CustomerContent;
+            Caption = 'Valor';
         }
         field(10; "No. Guia"; Code[30])
         {
-            Caption = 'Shipment Guide No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Guia';
         }
         field(11; Comentarios; Text[250])
         {
-            Caption = 'Comments';
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios';
         }
         field(12; "Fecha Entrega Requerida"; Date)
         {
-            Caption = 'Required Delivery Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Entrega Requerida';
         }
         field(13; "Condiciones de Envio"; Text[200])
         {
-            Caption = 'Shipping Conditions';
+            DataClassification = CustomerContent;
+            Caption = 'Condiciones de Envio';
         }
         field(14; "No. Pedido"; Code[20])
         {
-            Caption = 'Order No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido';
         }
         field(15; "Fecha Pedido"; Date)
         {
-            Caption = 'Order Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Pedido';
         }
         field(16; "No Entregado"; Boolean)
         {
-            Caption = 'Voided';
+            DataClassification = CustomerContent;
+            Caption = 'No Entregado';
         }
         field(17; "Tipo Envio"; Option)
         {
-            Caption = 'Shippment Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Envio';
             OptionCaption = ' ,Transfer,Sales Order';
             OptionMembers = " ",Transferencia,"Pedido Venta";
         }
         field(18; "No. Factura"; Code[20])
         {
-            Caption = 'Invoice No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Factura';
             TableRelation = "Sales Invoice Header"."No.";
 
             trigger OnValidate()
@@ -203,21 +221,30 @@ table 56021 "Lin. Hoja de Ruta"
         }
         field(19; Entregado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Entregado';
             Editable = false;
         }
         field(20; "Fecha Entrega"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Entrega';
         }
         field(21; "Causa No Entrega"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Causa No Entrega';
         }
         field(22; "Ruta De Distribucion"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ruta De Distribucion';
             Description = '#29576';
         }
         field(23; "No Orden"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No Orden';
             Description = 'SANTINAV-3077';
         }
     }

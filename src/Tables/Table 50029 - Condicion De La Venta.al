@@ -5,15 +5,18 @@ table 50029 "Condicion De La Venta"
     {
         field(1;Codigo;Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;"Condicion de la Venta";Text[150])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Condicion de la Venta';
         }
         field(3;Inactivo;Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Inactivo';
         }
     }
 

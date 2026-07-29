@@ -6,12 +6,18 @@ table 34002144 "Conceptos formula"
     {
         field(1;Concepto;Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Concepto';
         }
         field(2;Formula;Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Formula';
         }
         field(3;Valor;Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor';
             DecimalPlaces = 2:2;
         }
     }

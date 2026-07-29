@@ -10,11 +10,13 @@ table 34002520 "Dimension Set Entry TPV"
     {
         field(1; "Dimension Set ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Set ID';
             Description = 'DsPOS Standar';
         }
         field(2; "Dimension Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Code';
             Description = 'DsPOS Standar';
             NotBlank = true;
@@ -22,6 +24,7 @@ table 34002520 "Dimension Set Entry TPV"
         }
         field(3; "Dimension Value Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Value Code';
             Description = 'DsPOS Standar';
             NotBlank = true;
@@ -29,6 +32,7 @@ table 34002520 "Dimension Set Entry TPV"
         }
         field(4; "Dimension Value ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Value ID';
             Description = 'DsPOS Standar';
         }

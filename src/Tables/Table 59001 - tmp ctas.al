@@ -5,9 +5,13 @@ table 59001 "tmp ctas"
     {
         field(1;Codigo;Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;Entrada;Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Entrada';
         }
     }
 

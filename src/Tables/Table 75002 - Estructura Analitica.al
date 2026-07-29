@@ -7,6 +7,8 @@ table 75002 "Estructura Analitica"
     {
         field(1; Codigo; Code[21])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
 
             trigger OnValidate()
             begin
@@ -15,12 +17,17 @@ table 75002 "Estructura Analitica"
         }
         field(10; Nivel; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel';
         }
         field(11; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(50; Blocked; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Blocked';
 
             trigger OnValidate()

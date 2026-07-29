@@ -5,9 +5,13 @@ table 104027 "UPG Service Password"
     {
         field(1;"Key";Guid)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Key';
         }
         field(2;Value;Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Value';
         }
     }
 

@@ -5,12 +5,18 @@ table 67100 "Detalle Atenciones"
     {
         field(1; "Codigo Cab. Atencion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Cab. Atencion';
         }
         field(2; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(3; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
 
             trigger OnLookup()
             var
@@ -39,9 +45,13 @@ table 67100 "Detalle Atenciones"
         }
         field(4; "Descripcion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; Cantidad; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
 
             trigger OnValidate()
             begin
@@ -50,6 +60,8 @@ table 67100 "Detalle Atenciones"
         }
         field(6; "Precio Unitario"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Precio Unitario';
 
             trigger OnValidate()
             begin
@@ -58,10 +70,14 @@ table 67100 "Detalle Atenciones"
         }
         field(7; "Monto total"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Monto total';
             Editable = false;
         }
         field(8; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Atencion,Pedido';
             OptionMembers = "Atencion",Pedido;
         }

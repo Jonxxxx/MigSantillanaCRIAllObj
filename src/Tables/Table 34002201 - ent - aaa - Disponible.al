@@ -6,8 +6,8 @@ table 34002201 "ent - aaa - Disponible"
     {
         field(1; "Tipo entrenamiento"; Code[20])
         {
-            Caption = 'Training type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo entrenamiento';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
 
             trigger OnValidate()
@@ -23,46 +23,46 @@ table 34002201 "ent - aaa - Disponible"
         }
         field(2; Codigo; Code[20])
         {
-            Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Area Curricular"; Code[20])
         {
-            Caption = 'Trainer code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Area Curricular';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(6; "Fecha creacion"; Date)
         {
-            Caption = 'Date of creation';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha creacion';
         }
         field(7; "Horas estimadas"; Decimal)
         {
-            Caption = 'Estimated hours';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Horas estimadas';
         }
         field(8; "Capacidad de asistentes"; Integer)
         {
-            Caption = 'Attendee capacity';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Capacidad de asistentes';
         }
         field(14; "No. Series"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
-            DataClassification = ToBeClassified;
             Editable = false;
             TableRelation = "No. Series";
         }
         field(15; Tipo; Option)
         {
-            Caption = 'Type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Internal, External';
             OptionMembers = Interno,Externo;
         }

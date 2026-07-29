@@ -12,18 +12,21 @@ table 34002513 "Formas de Pago"
     {
         field(34002500; "ID Pago"; Code[20])
         {
-            Caption = 'Payment ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Pago';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
         field(34002501; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
         field(34002503; "Efectivo Local"; Boolean)
         {
-            Caption = 'Cash in Local Currency';
+            DataClassification = CustomerContent;
+            Caption = 'Efectivo Local';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
@@ -49,7 +52,8 @@ table 34002513 "Formas de Pago"
         }
         field(34002504; "Cod. divisa"; Code[10])
         {
-            Caption = 'Currency code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
             Description = 'DsPOS Standar';
             TableRelation = Currency;
 
@@ -84,11 +88,14 @@ table 34002513 "Formas de Pago"
         }
         field(34002506; "Abre cajon"; Boolean)
         {
-            Caption = 'Open Drawer';
+            DataClassification = CustomerContent;
+            Caption = 'Abre cajon';
             Description = 'DsPOS Standar';
         }
         field(34002510; "Tipo Tarjeta"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Tarjeta';
             Description = 'DsPOS Standar';
             TableRelation = "Tipos de Tarjeta".Codigo;
 
@@ -114,6 +121,7 @@ table 34002513 "Formas de Pago"
         }
         field(34002511; "Realizar recuento"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Realizar recuento';
             Description = 'DsPOS Standar';
 
@@ -133,7 +141,8 @@ table 34002513 "Formas de Pago"
         }
         field(34002512; Icono; BLOB)
         {
-            Caption = 'Icon';
+            DataClassification = CustomerContent;
+            Caption = 'Icono';
             Compressed = false;
             Description = 'DsPOS Standar';
             SubType = Bitmap;
@@ -152,6 +161,8 @@ table 34002513 "Formas de Pago"
         }
         field(34002513; "Icono Nav"; BLOB)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Icono Nav';
             Description = 'DsPOS Standar';
             SubType = Bitmap;
 
@@ -169,11 +180,15 @@ table 34002513 "Formas de Pago"
         }
         field(34002514; "Forma pago"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Forma pago';
             Description = '#78451';
             TableRelation = "Payment Method";
         }
         field(34002515; "Tipo Compensacion NC"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Compensacion NC';
             Description = '#70132';
             OptionMembers = No,"Si";
         }

@@ -14,42 +14,50 @@ table 34002505 Cajeros
     {
         field(34002500; Tienda; Code[20])
         {
-            Caption = 'Store';
+            DataClassification = CustomerContent;
+            Caption = 'Tienda';
             Description = 'DsPOS Standar';
             TableRelation = Tiendas."Cod. Tienda";
         }
         field(34002501; ID; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'ID';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
         field(34002502; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
         field(34002503; "Grupo Cajero"; Code[20])
         {
-            Caption = 'Cashier Group';
+            DataClassification = CustomerContent;
+            Caption = 'Grupo Cajero';
             Description = 'DsPOS Standar';
             TableRelation = "Grupos Cajeros".Grupo WHERE(Tienda = FIELD("Tienda"));
         }
         field(34002504; Contrasena; Text[30])
         {
-            Caption = 'Password';
+            DataClassification = CustomerContent;
+            Caption = 'Contrasena';
             Description = 'DsPOS Standar';
             ExtendedDatatype = Masked;
         }
         field(34002505; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             Description = 'DsPOS Standar';
             OptionCaption = 'Cashier, Supervisor';
             OptionMembers = Cajero,Supervisor;
         }
         field(34002506; "Cod. Cajero SIC"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cajero SIC';
             Description = 'JERM-SIC';
         }
     }

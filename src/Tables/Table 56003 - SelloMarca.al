@@ -10,11 +10,13 @@ table 56003 "Sello/Marca"
     {
         field(1;"Cod. Sello/Marca";Code[20])
         {
-            Caption = 'Seal/Brand Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Sello/Marca';
         }
         field(2;Descripcion;Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

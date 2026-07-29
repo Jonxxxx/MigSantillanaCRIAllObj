@@ -5,15 +5,21 @@ table 67102 "Cab. Visita Asesor/Consultor"
     {
         field(1; "No. Visita Asesor/Consultor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Visita Asesor/Consultor';
         }
         field(2; "Tipo Asesor/Consultor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Asesor/Consultor';
             Enabled = false;
             OptionCaption = 'Docente,Proveedor';
             OptionMembers = Docente,Proveedor;
         }
         field(3; "Cod. Asesor/Consultor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Asesor/Consultor';
             TableRelation = Vendor."No.";
 
             trigger OnValidate()
@@ -53,32 +59,46 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(4; "Nombre Asesor/Consultor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Asesor/Consultor';
             Editable = false;
         }
         field(5; "Delegacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             Editable = false;
             TableRelation = "Dimension Value".Code;
         }
         field(6; "Grupo Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo Negocio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(7; "Fecha Registro"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
             Editable = false;
         }
         field(8; "Hora Registro"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Registro';
             Editable = false;
         }
         field(9; "Tipo Visita"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Visita';
             OptionCaption = 'Solicitada,No Solicitada';
             OptionMembers = Solicitada,"No Solicitada";
         }
         field(10; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
 
             trigger OnLookup()
             var
@@ -150,6 +170,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(11; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact."No." WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
@@ -170,26 +192,38 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(12; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
             Editable = false;
         }
         field(13; "Direccion Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Direccion Colegio';
             Editable = false;
         }
         field(14; "Distrito Colegio"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distrito Colegio';
             Editable = false;
         }
         field(15; "Telefono 1 Colegio"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 1 Colegio';
             Editable = false;
         }
         field(16; "Telefono 2 Colegio"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 2 Colegio';
             Editable = false;
         }
         field(17; "Cod. promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. promotor';
             TableRelation = "Salesperson/Purchaser";
 
             trigger OnLookup()
@@ -226,10 +260,14 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(18; "Nombre promotor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre promotor';
             Editable = false;
         }
         field(19; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   "Cod. Promotor" = FIELD("Cod. promotor"));
 
@@ -246,10 +284,14 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(20; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             TableRelation = "Tipos de Eventos";
         }
         field(21; "Tipo Persona Contacto"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Persona Contacto';
             OptionCaption = 'CDS,Otro';
             OptionMembers = CDS,Otro;
 
@@ -266,6 +308,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(22; "Cod. Persona Contacto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Persona Contacto';
             TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                        "Pertenece al CDS" = CONST(true));
 
@@ -310,9 +354,13 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(23; "Nombre Persona Contacto"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Persona Contacto';
         }
         field(24; "Cod. Cargo Persona Contacto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cargo Persona Contacto';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
@@ -332,35 +380,52 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(25; "Desc. Cargo Persona Contacto"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desc. Cargo Persona Contacto';
             Editable = false;
         }
         field(26; "Telefono 1 Persona Contacto"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 1 Persona Contacto';
         }
         field(27; "Telefono 2 Persona Contacto"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 2 Persona Contacto';
         }
         field(28; "E-mail Persona Contacto"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'E-mail Persona Contacto';
         }
         field(29; "No. Asistentes Esperados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Asistentes Esperados';
         }
         field(30; "No. Asistentes Reales"; Integer)
         {
+            Caption = 'No. Asistentes Reales';
             CalcFormula = Count("Asis. Visitas Asesor/Consultor" WHERE("No. Visita" = FIELD("No. Visita Asesor/Consultor")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(31; Estado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionMembers = Programada,Ejecutada;
         }
         field(32; "Fecha Proxima Visita"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Proxima Visita';
         }
         field(33; "Cod. Objetivo Visita"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Objetivo Visita';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
             trigger OnValidate()
@@ -380,20 +445,30 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(34; "Comentarios Visita"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios Visita';
         }
         field(35; "Usuario Registro"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario Registro';
             Editable = false;
         }
         field(36; "No. Series"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Series';
         }
         field(37; "Desc. Objetivo Visita"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desc. Objetivo Visita';
             Editable = false;
         }
         field(38; "Cod. evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. evento';
 
             trigger OnLookup()
             var
@@ -436,18 +511,24 @@ table 67102 "Cab. Visita Asesor/Consultor"
         }
         field(39; "Descripcion evento"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion evento';
             Editable = false;
         }
         field(40; "Programa Seguimiento Uno a Uno"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Programa Seguimiento Uno a Uno';
         }
         field(41; "Fecha programada"; Date)
         {
+            Caption = 'Fecha programada';
             CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE("No. Visita" = FIELD("No. Visita Asesor/Consultor")));
             FieldClass = FlowField;
         }
         field(42; "Fecha realizada"; Date)
         {
+            Caption = 'Fecha realizada';
             CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Realizada" WHERE("No. Visita" = FIELD("No. Visita Asesor/Consultor")));
             FieldClass = FlowField;
         }

@@ -6,10 +6,13 @@ table 34002116 "Income tax Employee parameters"
     {
         field(1; "Employee No."; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Employee No.';
             TableRelation = Employee;
         }
         field(2; "Exemption code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Exemption code';
             TableRelation = "Exemption types";
 
@@ -26,15 +29,20 @@ table 34002116 "Income tax Employee parameters"
         }
         field(3; "Wedge Code"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Wedge Code';
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(4; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionCaption = 'Single,Married,Married filling separately';
             OptionMembers = Soltero,Casado,"Casado rinde separado";
         }
         field(5; "Exemption type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Exemption type';
             NotBlank = true;
             OptionCaption = 'None,Half,Complete,Fix';
@@ -48,6 +56,7 @@ table 34002116 "Income tax Employee parameters"
         }
         field(6; "Personal Exemption"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Personal Exemption';
 
             trigger OnValidate()
@@ -59,11 +68,13 @@ table 34002116 "Income tax Employee parameters"
         }
         field(7; "Exeption for Dependents"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Exeption for Dependents';
         }
         field(8; "Importe fijo"; Decimal)
         {
-            Caption = 'Fix amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe fijo';
         }
     }
 

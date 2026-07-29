@@ -5,58 +5,71 @@ table 56018 "Cab. Ident. Devoluci n Reg."
     {
         field(1;"No. Ident. Devolucion";Code[20])
         {
-            Caption = 'Return Identifier No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Ident. Devolucion';
         }
         field(2;"Id. Usuario";Code[20])
         {
-            Caption = 'User ID';
+            DataClassification = CustomerContent;
+            Caption = 'Id. Usuario';
         }
         field(3;"Cod. Cliente";Code[20])
         {
-            Caption = 'Customer Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
         }
         field(4;"Nombre Cliente";Text[100])
         {
-            Caption = 'Customer Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cliente';
         }
         field(5;"Cantidad de Bultos";Integer)
         {
-            Caption = 'Number of Packages';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Bultos';
         }
         field(6;Comentarios;Text[250])
         {
-            Caption = 'Comments';
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios';
         }
         field(7;"Fecha Recepcion";Date)
         {
-            Caption = 'Receipt Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Recepcion';
         }
         field(8;"Fecha Registro";Date)
         {
-            Caption = 'Posting Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
         }
         field(9;"Agencia Transporte";Text[100])
         {
-            Caption = 'Transportation Agency';
+            DataClassification = CustomerContent;
+            Caption = 'Agencia Transporte';
         }
         field(10;"Tipo de Producto";Option)
         {
-            Caption = 'Product Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Producto';
             OptionCaption = ' ,Text,Not Text,Mixed';
             OptionMembers = " ",Texto,"No Texto",Mixta;
         }
         field(11;Ubicacion;Text[250])
         {
-            Caption = 'Place';
+            DataClassification = CustomerContent;
+            Caption = 'Ubicacion';
         }
         field(12;Almacen;Code[20])
         {
-            Caption = 'Location';
+            DataClassification = CustomerContent;
+            Caption = 'Almacen';
         }
         field(13;Procesada;Boolean)
         {
-            Caption = 'Processed';
+            DataClassification = CustomerContent;
+            Caption = 'Procesada';
         }
     }
 

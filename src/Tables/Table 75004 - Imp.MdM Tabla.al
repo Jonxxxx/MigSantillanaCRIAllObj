@@ -5,28 +5,40 @@ table 75004 "Imp.MdM Tabla"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
             AutoIncrement = true;
         }
         field(2; "Id Cab."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Cab.';
             Description = 'Id de la cabecera';
         }
         field(3; Operacion; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Operacion';
             OptionMembers = Insert,Update,Delete;
         }
         field(5; "Id Tabla"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Tabla';
         }
         field(10; "Code"; Code[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(11; "Code MdM"; Code[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code MdM';
         }
         field(12; Rename; Boolean)
         {
+            Caption = 'Rename';
             CalcFormula = Exist("Imp.MdM Campos" WHERE("Id Rel" = FIELD("Id"),
                                                         "Renamed Val" = FILTER(<> '')));
             Description = 'FlowField';
@@ -35,19 +47,29 @@ table 75004 "Imp.MdM Tabla"
         }
         field(20; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(30; Tipo; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
         }
         field(40; Procesado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Procesado';
         }
         field(41; Visible; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Visible';
             OptionMembers = Ind,"Si",No;
         }
         field(50; "Nombre Elemento"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Elemento';
         }
     }
 

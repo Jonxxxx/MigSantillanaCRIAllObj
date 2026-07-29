@@ -6,9 +6,13 @@ table 67061 "Cab. Atenciones"
     {
         field(1; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
             TableRelation = Contact WHERE("Type" = CONST(Company));
 
@@ -36,10 +40,14 @@ table 67061 "Cab. Atenciones"
         }
         field(3; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(4; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             NotBlank = true;
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
@@ -53,22 +61,29 @@ table 67061 "Cab. Atenciones"
         }
         field(5; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(6; "Fecha registro"; Date)
         {
-            Caption = 'Posting date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
         }
         field(7; "Fecha de entrega"; Date)
         {
-            Caption = 'Delivery date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de entrega';
         }
         field(8; "Tipo documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo documento';
             //TODO: Revisar valor option TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
         }
         field(9; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
 
             trigger OnValidate()
@@ -90,21 +105,26 @@ table 67061 "Cab. Atenciones"
         }
         field(10; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
             Editable = false;
             FieldClass = Normal;
         }
         field(11; Address; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
             Editable = false;
         }
         field(12; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
             Editable = false;
         }
         field(13; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
             Editable = false;
 
@@ -115,6 +135,7 @@ table 67061 "Cab. Atenciones"
         }
         field(14; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             Editable = false;
             TableRelation = Territory;
@@ -127,6 +148,7 @@ table 67061 "Cab. Atenciones"
         }
         field(15; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             Editable = false;
             TableRelation = "Country/Region";
@@ -141,7 +163,8 @@ table 67061 "Cab. Atenciones"
         }
         field(16; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             Editable = false;
             TableRelation = "Post Code";
             //This property is currently not supported
@@ -155,7 +178,8 @@ table 67061 "Cab. Atenciones"
         }
         field(17; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
             Editable = false;
 
             trigger OnValidate()
@@ -170,31 +194,40 @@ table 67061 "Cab. Atenciones"
         }
         field(18; Departamento; Text[30])
         {
-            Caption = 'District';
+            DataClassification = CustomerContent;
+            Caption = 'Departamento';
             Description = 'Peru';
             Editable = false;
             Enabled = false;
         }
         field(19; Distritos; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distritos';
             Description = 'Peru';
             Editable = false;
             Enabled = false;
         }
         field(20; Provincia; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Provincia';
             Description = 'Peru';
             Editable = false;
             Enabled = false;
         }
         field(21; Pais; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pais';
             Description = 'Peru';
             Editable = false;
             Enabled = false;
         }
         field(22; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             TableRelation = "Dimension Value".Code;
 
             trigger OnLookup()
@@ -231,6 +264,8 @@ table 67061 "Cab. Atenciones"
         }
         field(23; "Distribucion Geografica"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distribucion Geografica';
             Editable = false;
             TableRelation = "Dimension Value".Code;
 
@@ -254,6 +289,8 @@ table 67061 "Cab. Atenciones"
         }
         field(24; "Codigo Postal"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Postal';
             Description = '//peru';
             Editable = false;
 
@@ -264,6 +301,8 @@ table 67061 "Cab. Atenciones"
         }
         field(25; "Cod. Responsable"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Responsable';
             TableRelation = Vendor;
 
             trigger OnValidate()
@@ -277,14 +316,20 @@ table 67061 "Cab. Atenciones"
         }
         field(26; "Nombre responsable"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre responsable';
         }
         field(27; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             Editable = false;
             TableRelation = "Tipos de Eventos";
         }
         field(28; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
             TableRelation = "Solicitud de Taller - Evento"."No. Solicitud";
 
             trigger OnLookup()
@@ -324,6 +369,8 @@ table 67061 "Cab. Atenciones"
         }
         field(29; Objetivo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Objetivo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
             trigger OnValidate()
@@ -343,11 +390,15 @@ table 67061 "Cab. Atenciones"
         }
         field(30; "Area Responsable"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Area Responsable';
             OptionCaption = 'Marketing,Ventas';
             OptionMembers = Marketing,Ventas;
         }
         field(31; "Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Negocio';
             Editable = false;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
@@ -368,8 +419,9 @@ table 67061 "Cab. Atenciones"
         }
         field(32; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
@@ -379,8 +431,9 @@ table 67061 "Cab. Atenciones"
         }
         field(33; "Global Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,1,2';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 2 Code';
+            CaptionClass = '1,1,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
@@ -390,41 +443,59 @@ table 67061 "Cab. Atenciones"
         }
         field(34; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Series';
         }
         field(35; Estado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             Editable = false;
             OptionCaption = 'Entregada,Realizada,Cancelada';
             OptionMembers = Entregada,Realizada,Cancelada;
         }
         field(36; "Id. Usuario"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id. Usuario';
             Editable = false;
         }
         field(37; "Comentarios Entrega"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios Entrega';
         }
         field(38; "Comentarios Cancelacion"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios Cancelacion';
         }
         field(39; Monto; Decimal)
         {
+            Caption = 'Monto';
             CalcFormula = Sum("Detalle Atenciones"."Monto total" WHERE("Codigo Cab. Atencion" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
         field(40; Atenciones; Integer)
         {
+            Caption = 'Atenciones';
             CalcFormula = Count("Detalle Atenciones" WHERE("Codigo Cab. Atencion" = FIELD("Codigo")));
             FieldClass = FlowField;
         }
         field(41; "Fecha Recepcion Documento"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Recepcion Documento';
         }
         field(42; Documento; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Documento';
         }
         field(43; "Descripcion Objetivo"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Objetivo';
             Editable = false;
         }
     }

@@ -6,19 +6,25 @@ table 34002172 "Payroll - Job Journal Line"
     {
         field(1; "Journal Template Name"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Journal Template Name';
             TableRelation = "Payroll - Job Journal Template";
         }
         field(2; "Journal Batch Name"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Journal Batch Name';
             TableRelation = "Payroll - Job Journal Batch".Name WHERE("Journal Template Name" = FIELD("Journal Template Name"));
         }
         field(3; "Line no."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line no.';
         }
         field(4; "No. empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
 
             trigger OnValidate()
@@ -35,6 +41,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(5; "Posting Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Date';
 
             trigger OnValidate()
@@ -45,14 +52,19 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(6; "Puesto trabajo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Puesto trabajo';
             Editable = false;
         }
         field(7; "Apellidos y Nombre"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Apellidos y Nombre';
             Editable = false;
         }
         field(8; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
 
@@ -71,6 +83,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(9; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
 
@@ -87,6 +100,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(10; "Resource No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Resource No.';
             TableRelation = Resource;
 
@@ -98,6 +112,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(11; "Unit of Measure Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure Code';
             TableRelation = "Unit of Measure";
 
@@ -119,6 +134,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(12; "Qty. per Unit of Measure"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Qty. per Unit of Measure';
             DecimalPlaces = 0 : 5;
             Editable = false;
@@ -126,11 +142,14 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(13; "Job Task Name"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task Name';
             Editable = false;
         }
         field(14; "Concepto salarial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Concepto salarial';
             TableRelation = "Conceptos salariales";
 
             trigger OnValidate()
@@ -143,12 +162,15 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(15; "Tipo concepto"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo concepto';
             Description = 'Ingresos,Deducciones';
             Editable = false;
             OptionMembers = Ingresos,Deducciones;
         }
         field(16; Quantity; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity';
             DecimalPlaces = 2 : 2;
 
@@ -159,6 +181,7 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(17; Amount; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Amount';
             DecimalPlaces = 2 : 2;
             Editable = false;
@@ -170,13 +193,16 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(18; "Tipo Tarifa"; Option)
         {
-            Caption = 'Working type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Tarifa';
             Description = 'Precio fijo,Precio variable';
             Editable = false;
             OptionMembers = "Precio fijo","Precio variable";
         }
         field(19; "Precio Costo"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Precio Costo';
             Editable = false;
 
             trigger OnValidate()
@@ -186,6 +212,8 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(20; "Inicio Periodo"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Inicio Periodo';
 
             trigger OnValidate()
             begin
@@ -194,9 +222,12 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(21; "Fin Periodo"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fin Periodo';
         }
         field(22; "Work Type Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Work Type Code';
             TableRelation = "Resource Cost"."Work Type Code" WHERE(Type = CONST(Resource),
                                                                     Code = FIELD("Resource No."));
@@ -237,14 +268,18 @@ table 34002172 "Payroll - Job Journal Line"
         }
         field(23; "Document No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Document No.';
         }
         field(24; "Gen. Bus. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Bus. Posting Group';
             TableRelation = "Gen. Business Posting Group";
         }
         field(25; "Gen. Prod. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
         }

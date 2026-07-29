@@ -9,22 +9,28 @@ table 34002500 "Configuracion General DsPOS"
     {
         field(34002500; "Clave primaria"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Clave primaria';
             Description = 'DsPOS Standard';
         }
         field(34002503; "Nombre libro diario"; Code[20])
         {
-            Caption = 'Journal Template Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre libro diario';
             Description = 'DsPOS Standard';
             TableRelation = "Gen. Journal Template";
         }
         field(34002504; "Nombre seccion diario"; Code[20])
         {
-            Caption = 'Journal Batch Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre seccion diario';
             Description = 'DsPOS Standard';
             TableRelation = "Gen. Journal Batch".Name WHERE("Journal Template Name" = FIELD("Nombre libro diario"));
         }
         field(34002505; Pais; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pais';
             Description = 'DsPOS Standard';
             OptionMembers = ,"Republica Dominicana",Bolivia,Paraguay,Ecuador,Guatemala,Salvador,Honduras,Mexico,"Costa Rica";
 
@@ -56,6 +62,8 @@ table 34002500 "Configuracion General DsPOS"
         }
         field(34002572; "Nombre Divisa Local"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Divisa Local';
             Description = 'DsPOS Standard';
         }
     }

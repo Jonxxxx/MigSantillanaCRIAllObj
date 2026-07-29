@@ -5,9 +5,13 @@ table 67089 "Grupo de Colegios"
     {
         field(1; "Cod. Grupo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grupo';
         }
         field(2; "Descripcion"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

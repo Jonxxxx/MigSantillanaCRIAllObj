@@ -6,10 +6,14 @@ table 67019 "Areas de interes padres"
     {
         field(1; "DNI Padre"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'DNI Padre';
             TableRelation = Padres;
         }
         field(2; "Cod. Area Interes"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Area Interes';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Areas de inter s"));
 
             trigger OnValidate()
@@ -23,11 +27,14 @@ table 67019 "Areas de interes padres"
         }
         field(3; "Nombre Padre"; Text[60])
         {
+            Caption = 'Nombre Padre';
             CalcFormula = Lookup(Padres."Full name" WHERE("DNI" = FIELD("DNI Padre")));
             FieldClass = FlowField;
         }
         field(4; "Descripcion Area Interes"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Area Interes';
         }
     }
 

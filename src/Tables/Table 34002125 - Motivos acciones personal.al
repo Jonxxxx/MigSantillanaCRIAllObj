@@ -7,28 +7,30 @@ table 34002125 "Motivos acciones personal"
     {
         field(1; "Tipo de accion"; Option)
         {
-            Caption = 'Action type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de accion';
             OptionCaption = ' ,Hiring,Change,Quit';
             OptionMembers = " ",Ingreso,Cambio,Salida;
         }
         field(2; Codigo; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(3; Descripcion; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Emitir documento"; Boolean)
         {
-            Caption = 'Print document';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Emitir documento';
         }
         field(5; "ID Documento"; Integer)
         {
-            Caption = 'Document ID';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'ID Documento';
         }
     }
 

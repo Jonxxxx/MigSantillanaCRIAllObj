@@ -5,7 +5,8 @@ table 56010 "Agregar productos a Cupon"
     {
         field(1; "No. Producto"; Code[20])
         {
-            Caption = 'Item No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Producto';
             NotBlank = true;
             TableRelation = Item;
 
@@ -17,10 +18,13 @@ table 56010 "Agregar productos a Cupon"
         }
         field(2; Descripcion; Text[200])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "User ID"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'User ID';
             TableRelation = User."User Name";
         }
     }

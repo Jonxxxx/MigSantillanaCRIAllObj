@@ -8,8 +8,8 @@ table 34002154 "Seguridad Usuarios RH"
     {
         field(1; "User ID"; Code[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'User ID';
-            DataClassification = ToBeClassified;
             NotBlank = true;
             TableRelation = User."User Name";
 
@@ -25,33 +25,35 @@ table 34002154 "Seguridad Usuarios RH"
         }
         field(2; "Full name"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full name';
-            DataClassification = ToBeClassified;
             Editable = false;
         }
         field(3; "Revisado por"; Boolean)
         {
-            Caption = 'Alloow Reviewed by';
+            DataClassification = CustomerContent;
+            Caption = 'Revisado por';
         }
         field(4; "Autorizado por"; Boolean)
         {
-            Caption = 'Allow Authorized by';
+            DataClassification = CustomerContent;
+            Caption = 'Autorizado por';
         }
         field(7; "E-Mail"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = EMail;
         }
         field(8; "Visualiza salario"; Boolean)
         {
-            Caption = 'Salary visible';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Visualiza salario';
         }
         field(9; "Visualiza Calc. Nomina"; Boolean)
         {
-            Caption = 'Calc payroll visible';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Visualiza Calc. Nomina';
         }
     }
 

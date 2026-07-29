@@ -5,6 +5,8 @@ table 67055 "Solicitud de Taller - Evento"
     {
         field(1; "Tipo de Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Evento';
             TableRelation = "Tipos de Eventos";
 
             trigger OnValidate()
@@ -18,9 +20,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(2; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(3; "Cod. evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. evento';
             TableRelation = Eventos."No." WHERE("Tipo de Evento" = FIELD("Tipo de Evento"));
 
             trigger OnLookup()
@@ -88,9 +94,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(4; Descripcion; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             TableRelation = "Dimension Value".Code;
 
             trigger OnLookup()
@@ -135,11 +145,15 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(7; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   "Cod. Promotor" = FIELD("Cod. promotor"));
         }
         field(8; "Cod. Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Expositor';
 
             trigger OnValidate()
             begin
@@ -158,9 +172,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(9; Sala; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sala';
         }
         field(10; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE("Cod. Promotor" = FIELD("Cod. promotor"));
 
             trigger OnValidate()
@@ -236,21 +254,31 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(11; "Nombre Colegio"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(12; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = IF ("Grupo de Colegios" = CONST(false)) "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(13; "Cod. Turno"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(14; "Fecha Solicitud"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Solicitud';
             Editable = false;
         }
         field(15; "Cod. promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. promotor';
             TableRelation = "Salesperson/Purchaser";
 
             trigger OnValidate()
@@ -285,18 +313,26 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(16; "Nombre promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre promotor';
         }
         field(17; "Telefono 1 Colegio"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 1 Colegio';
             ExtendedDatatype = PhoneNo;
         }
         field(18; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionCaption = ' ,Sent by salesperson,Approved,Programmed,Voided,Rejected,Done';
             OptionMembers = " ","Enviada por promotor",Aprobada,Programada,Cancelada,Rechazada,Realizada;
         }
         field(19; "Asistentes Esperados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes Esperados';
 
             trigger OnValidate()
             begin
@@ -305,9 +341,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(20; Observaciones; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Observaciones';
         }
         field(21; "Cod. Docente responsable"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente responsable';
             TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                        "Pertenece al CDS" = CONST(true));
 
@@ -351,59 +391,91 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(22; "Nombre responsable"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre responsable';
         }
         field(23; "No. celular responsable"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. celular responsable';
         }
         field(24; "Objetivo promotor"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Objetivo promotor';
         }
         field(25; "Descripcion evento"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion evento';
         }
         field(26; "Evento programado"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Evento programado';
         }
         field(27; "Fecha invitacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha invitacion';
         }
         field(28; "Horas programadas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas programadas';
         }
         field(29; "Asistentes Reales"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes Reales';
         }
         field(30; "Eventos programados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Eventos programados';
         }
         field(31; "Importe Gasto Expositor"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto Expositor';
         }
         field(32; "Importe Gasto mensajeria"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto mensajeria';
         }
         field(33; "ImporteGastos Impresion"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ImporteGastos Impresion';
         }
         field(34; "Importe Utiles"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Utiles';
         }
         field(35; "Importe Atenciones"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Atenciones';
         }
         field(36; "Otros Importes"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Otros Importes';
         }
         field(37; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
         field(38; "Shortcut Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,2,1';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 1 Code';
+            CaptionClass = '1,2,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
@@ -413,8 +485,9 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(39; "Shortcut Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,2,2';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 2 Code';
+            CaptionClass = '1,2,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
@@ -424,24 +497,31 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(40; "Filtro Promotor"; Code[20])
         {
+            Caption = 'Filtro Promotor';
             FieldClass = FlowFilter;
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = FILTER(Vendedor));
         }
         field(41; "Filtro Colegio"; Code[20])
         {
+            Caption = 'Filtro Colegio';
             FieldClass = FlowFilter;
             TableRelation = Contact;
         }
         field(42; "Nombre expositor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre expositor';
         }
         field(43; "KPI Status"; BLOB)
         {
-            Caption = 'Status';
+            DataClassification = CustomerContent;
+            Caption = 'KPI Status';
             SubType = Bitmap;
         }
         field(44; "Cod. objetivo promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. objetivo promotor';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
             trigger OnValidate()
@@ -457,53 +537,80 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(45; "Comentario Aprobado"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario Aprobado';
         }
         field(46; "Comentario Programado"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario Programado';
         }
         field(47; "Comentario Rechazado"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario Rechazado';
         }
         field(48; "Comentario Cancelado"; Text[200])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario Cancelado';
         }
         field(49; "Grupo de Negocio"; Code[20])
         {
-            Caption = 'Business Group';
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Negocio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(50; Referencia; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia';
         }
         field(51; "Telefono Responsable"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono Responsable';
         }
         field(52; "Celular Responsable"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Celular Responsable';
         }
         field(53; "Col. tiene equipo MM"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Col. tiene equipo MM';
         }
         field(54; Refrigerio; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Refrigerio';
         }
         field(55; Material; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Material';
         }
         field(56; Merchandising; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Merchandising';
         }
         field(57; "Desc. del Evento no existe"; Text[100])
         {
-            Caption = 'Non exist Event name';
+            DataClassification = CustomerContent;
+            Caption = 'Desc. del Evento no existe';
         }
         field(58; "Tipo de Expositor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Expositor';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(480; "Dimension Set ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Set ID';
             Editable = false;
             TableRelation = "Dimension Set Entry";
@@ -515,28 +622,35 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(53501; "Codigo Distrito Colegio"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Codigo Distrito Colegio';
             Description = 'Peru';
             Enabled = false;
         }
         field(53502; Departamento; Text[30])
         {
-            Caption = 'District';
+            DataClassification = CustomerContent;
+            Caption = 'Departamento';
             Description = 'Peru';
             Enabled = false;
         }
         field(53503; "Nombre Distrito Colegio"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Distrito Colegio';
             Description = 'Peru';
             Enabled = false;
         }
         field(53504; Provincia; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Provincia';
             Description = 'Peru';
             Enabled = false;
         }
         field(53505; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             Description = 'Peru';
             Enabled = false;
@@ -544,6 +658,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(53506; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             Description = 'Peru';
             Enabled = false;
@@ -551,10 +666,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67000; "Codigo Postal"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Postal';
         }
         field(67001; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = Contact."Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -567,6 +685,7 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67002; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
             TableRelation = Contact.City;
 
@@ -577,27 +696,40 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67003; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(67004; "Direccion Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Direccion Colegio';
         }
         field(67005; "Tipo Solicitud"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Solicitud';
             OptionCaption = 'School,Salesperson';
             OptionMembers = Colegio,Promotor;
         }
         field(67006; Ruta; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ruta';
         }
         field(67007; "Asistencia promotor"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asistencia promotor';
         }
         field(67008; "Material para revision"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Material para revision';
         }
         field(67009; "Editorial Competencia"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Editorial Competencia';
             TableRelation = Editoras.Code;
             ValidateTableRelation = false;
 
@@ -612,9 +744,13 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67010; "Nombre Editorial Competencia"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Editorial Competencia';
         }
         field(67011; "Articulo Competencia"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Articulo Competencia';
             TableRelation = "Libros Competencia"."Cod. Libro" WHERE("Cod. Editorial" = FIELD("Editorial Competencia"));
 
             trigger OnValidate()
@@ -630,47 +766,68 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67012; "Desc.  Competencia"; Text[120])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desc.  Competencia';
         }
         field(67013; "E-Mail Docente Responsable"; Text[40])
         {
+            DataClassification = CustomerContent;
+            Caption = 'E-Mail Docente Responsable';
         }
         field(67014; INI; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'INI';
         }
         field(67015; PRI; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'PRI';
         }
         field(67016; SEC; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'SEC';
         }
         field(67017; ING; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ING';
         }
         field(67018; PLA; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'PLA';
         }
         field(67019; "Nivel Asistente"; Integer)
         {
+            Caption = 'Nivel Asistente';
             CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67020; "Grado Asistente"; Integer)
         {
+            Caption = 'Grado Asistente';
             CalcFormula = Count("Solicitud -  Grado Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67021; "Especialidad Asistente"; Integer)
         {
+            Caption = 'Especialidad Asistente';
             CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
         field(67022; "Seleccion Editorial"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Seleccion Editorial';
             OptionCaption = 'Santillana,Competencia';
             OptionMembers = Santillana,Competencia;
         }
         field(67023; "Articulo Grupo Santillana"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Articulo Grupo Santillana';
             TableRelation = "Historico Adopciones"."Cod. producto" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnLookup()
@@ -693,30 +850,48 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67024; "Desc. Articulo Grupo Santillan"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desc. Articulo Grupo Santillan';
         }
         field(67025; "Horas por semana"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas por semana';
         }
         field(67026; "Ano Adopcion"; Code[4])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ano Adopcion';
         }
         field(67027; ESI; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ESI';
         }
         field(67028; GEN; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'GEN';
         }
         field(67029; IPR; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'IPR';
         }
         field(67030; IPS; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'IPS';
         }
         field(67031; PSE; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'PSE';
         }
         field(67032; "Tipo Responsable"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Responsable';
             OptionCaption = 'CDS,Otro';
             OptionMembers = CDS,Otro;
 
@@ -733,12 +908,18 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67033; "Telefono 2 Colegio"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 2 Colegio';
         }
         field(67034; "Avisado al expositor"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Avisado al expositor';
         }
         field(67035; "Cod. Cargo Responsable"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cargo Responsable';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
@@ -754,10 +935,14 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67036; "Descripcion Cargo Responsable"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Cargo Responsable';
             Editable = false;
         }
         field(67037; "Cod. evento programado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. evento programado';
             TableRelation = Eventos."No." WHERE("Tipo de Evento" = FIELD("Tipo de Evento"));
 
             trigger OnLookup()
@@ -846,18 +1031,26 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67038; "Descripcion evento programado"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion evento programado';
             Editable = false;
         }
         field(67039; "Evento dictado por (codigo)"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Evento dictado por (codigo)';
             TableRelation = IF ("Evento dictado por (tipo)" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Evento dictado por (tipo)" = CONST(Proveedor)) Vendor;
         }
         field(67040; "Evento dictado por (nombre)"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Evento dictado por (nombre)';
         }
         field(67041; "Existe evento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Existe evento';
             InitValue = true;
 
             trigger OnValidate()
@@ -871,11 +1064,15 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67042; "Evento dictado por (tipo)"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Evento dictado por (tipo)';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(67043; "Grupo de Colegios"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Colegios';
 
             trigger OnValidate()
             begin
@@ -892,6 +1089,8 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67044; "Asociacion/Grupo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asociacion/Grupo';
             TableRelation = IF ("Cod. Colegio" = FILTER(<> '')) "Grupo - Colegios"."Cod. grupo" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
@@ -910,13 +1109,18 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67045; "Usuario creacion"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario creacion';
             Editable = false;
         }
         field(67046; "Fecha Propuesta"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Propuesta';
         }
         field(67047; "Fecha programada"; Date)
         {
+            Caption = 'Fecha programada';
             CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. evento programado"),
                                                                                              "Tipo de Expositor" = FIELD("Tipo de Expositor"),
                                                                                              "Expositor" = FIELD("Cod. Expositor"),
@@ -925,6 +1129,8 @@ table 67055 "Solicitud de Taller - Evento"
         }
         field(67048; "Secuencia Cod. Evento Progr."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia Cod. Evento Progr.';
         }
     }
 

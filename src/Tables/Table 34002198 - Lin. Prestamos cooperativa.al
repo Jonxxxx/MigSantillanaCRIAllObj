@@ -7,29 +7,35 @@ table 34002198 "Lin. Prestamos cooperativa"
     {
         field(1; "No. Prestamo"; Code[20])
         {
-            Caption = 'Loan no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Prestamo';
         }
         field(2; "No. Cuota"; Integer)
         {
-            Caption = 'Quote no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuota';
         }
         field(3; "Tipo prestamo"; Code[20])
         {
-            Caption = 'Loan type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo prestamo';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de Prestamo"));
         }
         field(5; "Fecha Transaccion"; Date)
         {
-            Caption = 'Transaction date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Transaccion';
         }
         field(6; "Codigo Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Empleado';
             TableRelation = Employee;
         }
         field(7; "Saldo inicial"; Decimal)
         {
-            Caption = 'Initial balance';
+            DataClassification = CustomerContent;
+            Caption = 'Saldo inicial';
 
             trigger OnValidate()
             begin
@@ -45,7 +51,8 @@ table 34002198 "Lin. Prestamos cooperativa"
         }
         field(8; Interes; Decimal)
         {
-            Caption = 'Interest';
+            DataClassification = CustomerContent;
+            Caption = 'Interes';
 
             trigger OnValidate()
             begin
@@ -54,7 +61,8 @@ table 34002198 "Lin. Prestamos cooperativa"
         }
         field(9; "Importe cuota"; Decimal)
         {
-            Caption = 'Fee amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe cuota';
 
             trigger OnValidate()
             begin
@@ -63,22 +71,23 @@ table 34002198 "Lin. Prestamos cooperativa"
         }
         field(10; Capital; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Capital';
         }
         field(11; Saldo; Decimal)
         {
-            Caption = 'Final balance';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Saldo';
         }
         field(12; "Importe mora"; Decimal)
         {
-            Caption = 'Charge amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe mora';
         }
         field(13; "Fecha mora"; Date)
         {
-            Caption = 'Charge date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha mora';
         }
     }
 

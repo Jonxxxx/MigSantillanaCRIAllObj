@@ -5,9 +5,13 @@ table 67113 "Hist.Lineas de Corte"
     {
         field(1; "Campana"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Campana';
         }
         field(2; "Linea Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Linea Negocio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
             trigger OnValidate()
@@ -18,11 +22,15 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(3; Categoria; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Categoria';
             OptionCaption = ' ,Inicial,Nidos,Primaria,Secundaria';
             OptionMembers = " ",Inicial,Nidos,Primaria,Secundaria;
         }
         field(4; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnLookup()
             var
@@ -41,6 +49,8 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(5; "L1 - Ejemplares"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L1 - Ejemplares';
             Editable = false;
 
             trigger OnValidate()
@@ -50,6 +60,8 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(6; "L2 - Ejemplares"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L2 - Ejemplares';
 
             trigger OnValidate()
             begin
@@ -61,6 +73,8 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(7; "L3 - Ejemplares"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L3 - Ejemplares';
             Editable = false;
 
             trigger OnValidate()
@@ -70,6 +84,8 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(8; "L4 - Ejemplares"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L4 - Ejemplares';
 
             trigger OnValidate()
             begin
@@ -80,6 +96,8 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(9; "PVP Unitario"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'PVP Unitario';
 
             trigger OnValidate()
             begin
@@ -91,22 +109,32 @@ table 67113 "Hist.Lineas de Corte"
         }
         field(10; "L1 - Importe"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L1 - Importe';
             Editable = false;
         }
         field(11; "L2 - Importe"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L2 - Importe';
             Editable = false;
         }
         field(12; "L3 - Importe"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L3 - Importe';
             Editable = false;
         }
         field(13; "L4 - Importe"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'L4 - Importe';
             Editable = false;
         }
         field(14; "Nombre Delegacion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Delegacion';
             Editable = false;
         }
     }

@@ -7,24 +7,32 @@ table 67004 "Promotor - Docentes"
     {
         field(1; "Codigo Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Docente';
             TableRelation = Docentes;
         }
         field(2; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(3; "Nombre Docente"; Text[60])
         {
+            Caption = 'Nombre Docente';
             CalcFormula = Lookup(Docentes."Full Name" WHERE("No." = FIELD("Codigo Docente")));
             FieldClass = FlowField;
         }
         field(4; "Nombre Promotor"; Text[60])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5; "Nivel decision"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel decision';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
@@ -39,6 +47,8 @@ table 67004 "Promotor - Docentes"
         }
         field(6; "Cod. Cargo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cargo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
@@ -54,6 +64,8 @@ table 67004 "Promotor - Docentes"
         }
         field(7; "Descripcion Cargo"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Cargo';
         }
     }
 

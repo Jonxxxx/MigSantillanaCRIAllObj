@@ -9,11 +9,13 @@ table 51009 "Cab. Cupon"
     {
         field(1; "No. Cupon"; Code[20])
         {
-            Caption = 'Coupon No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Cupon';
         }
         field(2; "Cod. Cliente"; Code[20])
         {
-            Caption = 'Customer No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
 
             trigger OnValidate()
@@ -24,34 +26,41 @@ table 51009 "Cab. Cupon"
         }
         field(3; "Nombre Cliente"; Text[100])
         {
-            Caption = 'Customer Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cliente';
         }
         field(4; "Cod. Vendedor"; Code[20])
         {
-            Caption = 'Salesperson Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Vendedor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(5; "Valido Desde"; Date)
         {
-            Caption = 'Date From';
+            DataClassification = CustomerContent;
+            Caption = 'Valido Desde';
         }
         field(6; "Valido Hasta"; Date)
         {
-            Caption = 'Valid Until';
+            DataClassification = CustomerContent;
+            Caption = 'Valido Hasta';
         }
         field(7; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
         field(8; Impreso; Boolean)
         {
-            Caption = 'Printed';
+            DataClassification = CustomerContent;
+            Caption = 'Impreso';
         }
         field(9; "Cod. Colegio"; Code[20])
         {
-            Caption = 'School Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
 
             trigger OnValidate()
@@ -65,21 +74,25 @@ table 51009 "Cab. Cupon"
         }
         field(10; "Nombre Colegio"; Text[100])
         {
-            Caption = 'School Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(11; "Grado del Alumno"; Code[20])
         {
-            Caption = 'Student Grade';
+            DataClassification = CustomerContent;
+            Caption = 'Grado del Alumno';
             TableRelation = Grado;
         }
         field(12; "Descuento a Colegio"; Decimal)
         {
-            Caption = 'School Discount';
+            DataClassification = CustomerContent;
+            Caption = 'Descuento a Colegio';
             DecimalPlaces = 4 :;
         }
         field(13; "Descuento a Padres de Familia"; Decimal)
         {
-            Caption = 'Family Discount';
+            DataClassification = CustomerContent;
+            Caption = 'Descuento a Padres de Familia';
             DecimalPlaces = 4 :;
 
             trigger OnValidate()
@@ -104,7 +117,8 @@ table 51009 "Cab. Cupon"
         }
         field(14; "Ano Escolar"; Code[20])
         {
-            Caption = 'School Year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano Escolar';
             TableRelation = "Ano Escolar";
 
             trigger OnValidate()
@@ -118,47 +132,56 @@ table 51009 "Cab. Cupon"
         }
         field(15; Pendiente; Boolean)
         {
+            Caption = 'Pendiente';
             CalcFormula = Exist("Lin. Cupon" WHERE("No. Cupon" = FIELD("No. Cupon"),
                                                     "Cantidad Pendiente" = FILTER(<> 0)));
-            Caption = 'Open';
             FieldClass = FlowField;
         }
         field(16; "No. Lote"; Integer)
         {
-            Caption = 'Lot No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Lote';
         }
         field(17; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(18; "Razon Anulacion"; Text[250])
         {
-            Caption = 'Void Reason';
+            DataClassification = CustomerContent;
+            Caption = 'Razon Anulacion';
         }
         field(19; Anulado; Boolean)
         {
-            Caption = 'Void';
+            DataClassification = CustomerContent;
+            Caption = 'Anulado';
         }
         field(20; "Fecha Creacion"; Date)
         {
-            Caption = 'Creation Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Creacion';
         }
         field(21; "Hora Creacion"; Time)
         {
-            Caption = 'Creation Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora Creacion';
         }
         field(22; "Creado por Usuario"; Code[50])
         {
-            Caption = 'Created By User';
+            DataClassification = CustomerContent;
+            Caption = 'Creado por Usuario';
         }
         field(50000; "Cantidad Limite"; Integer)
         {
-            Caption = 'Max. Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
         field(50001; "Importe Dto. Limite"; Decimal)
         {
-            Caption = 'Max. Discount Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe Dto. Limite';
             Description = 'NopCommerce';
         }
     }

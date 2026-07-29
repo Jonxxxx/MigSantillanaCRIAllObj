@@ -8,10 +8,12 @@ table 34002165 ARS
     {
         field(1; "Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code';
         }
         field(2; Description; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
     }

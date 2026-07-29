@@ -12,19 +12,22 @@ table 34002521 "Pagos TPV"
     {
         field(34002500; Tienda; Code[20])
         {
-            Caption = 'Store';
+            DataClassification = CustomerContent;
+            Caption = 'Tienda';
             Description = 'DsPOS Standar';
             TableRelation = Tiendas."Cod. Tienda";
         }
         field(34002501; TPV; Code[20])
         {
-            Caption = 'POS';
+            DataClassification = CustomerContent;
+            Caption = 'TPV';
             Description = 'DsPOS Standar';
             TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("Tienda"));
         }
         field(34002503; "Forma pago TPV"; Code[20])
         {
-            Caption = 'Tender Type POS';
+            DataClassification = CustomerContent;
+            Caption = 'Forma pago TPV';
             Description = 'DsPOS Standar';
             TableRelation = IF ("Tipo Tarjeta" = CONST()) "Formas de Pago"
             ELSE IF ("Tipo Tarjeta" = FILTER(<> '')) "Tipos de Tarjeta";
@@ -39,12 +42,14 @@ table 34002521 "Pagos TPV"
         }
         field(34002504; "No. Borrador"; Code[20])
         {
-            Caption = 'Sales No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Borrador';
             Description = 'DsPOS Standar';
         }
         field(34002505; "Cod. divisa"; Code[10])
         {
-            Caption = 'Currency code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
@@ -59,7 +64,8 @@ table 34002521 "Pagos TPV"
         }
         field(34002506; "Importe (DL)"; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe (DL)';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
@@ -77,6 +83,7 @@ table 34002521 "Pagos TPV"
         }
         field(34002507; Importe; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Importe';
             Description = 'DsPOS Standar';
 
@@ -90,52 +97,61 @@ table 34002521 "Pagos TPV"
         }
         field(34002508; Cajero; Code[20])
         {
-            Caption = 'Cashier';
+            DataClassification = CustomerContent;
+            Caption = 'Cajero';
             Description = 'DsPOS Standar';
             TableRelation = Cajeros.ID WHERE(Tienda = FIELD("Tienda"));
         }
         field(34002509; Fecha; Date)
         {
-            Caption = 'Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
             Description = 'DsPOS Standar';
         }
         field(34002510; Hora; Time)
         {
-            Caption = 'Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
             Description = 'DsPOS Standar';
         }
         field(34002511; "No. Factura"; Code[20])
         {
-            Caption = 'Nº Factura';
+            DataClassification = CustomerContent;
+            Caption = 'No. Factura';
             Description = 'DsPOS Standar';
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
         }
         field(34002513; "Tipo Tarjeta"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo Tarjeta';
             Description = 'DsPOS Standar';
             TableRelation = "Tipos de Tarjeta".Codigo;
         }
         field(34002514; "No. Tarjeta"; Text[50])
         {
-            Caption = 'Nº Tarjeta';
+            DataClassification = CustomerContent;
+            Caption = 'No. Tarjeta';
             Description = 'DsPOS Standar';
         }
         field(34002515; "No. Cheque"; Text[30])
         {
-            Caption = 'Nº Cheque';
+            DataClassification = CustomerContent;
+            Caption = 'No. Cheque';
             Description = 'DsPOS Standar';
         }
         field(34002516; "Banco Cheque"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Banco Cheque';
             Description = 'DsPOS Standar';
             TableRelation = "Bank Account";
         }
         field(34002517; "No. Nota Credito"; Code[20])
         {
-            Caption = 'Return Invoice No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Nota Credito';
             Description = 'DsPOS Standar';
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
@@ -150,28 +166,35 @@ table 34002521 "Pagos TPV"
         }
         field(34002530; Cambio; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Cambio';
             Description = 'DsPOS Standar';
         }
         field(34002540; "Factor divisa"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Factor divisa';
             DecimalPlaces = 0 : 5;
             Description = 'DsPOS Standar';
         }
         field(34002541; "No. Documento Exencion"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Documento Exencion';
             Description = 'DsPOS Standar';
         }
         field(34002545; "Registrado TPV"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Registrado TPV';
             Description = 'DsPOS Standard - #211509';
             Editable = false;
             FieldClass = Normal;
         }
         field(34002551; "NCR regis. de compensacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCR regis. de compensacion';
             Description = '#70132';
             TableRelation = "Sales Cr.Memo Header";
         }

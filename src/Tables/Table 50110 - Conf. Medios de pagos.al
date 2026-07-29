@@ -7,23 +7,25 @@ table 50110 "Conf. Medios de pagos"
     {
         field(1; "Cod. med. pago"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. med. pago';
         }
         field(2; Credito; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Credito';
         }
         field(3; "Account Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Account Type';
-            DataClassification = ToBeClassified;
             OptionCaption = 'G/L Account,Customer,Vendor,Bank Account,Fixed Asset,IC Partner,Employee';
             OptionMembers = "G/L Account",Customer,Vendor,"Bank Account","Fixed Asset","IC Partner",Employee;
         }
         field(4; "Account No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Account No.';
-            DataClassification = ToBeClassified;
             TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Account" WHERE("Account Type" = CONST(Posting),
                                                                                       "Blocked" = CONST(false))
             ELSE IF ("Account Type" = CONST(Customer)) Customer
@@ -35,16 +37,19 @@ table 50110 "Conf. Medios de pagos"
         }
         field(5; Descripcion; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(6; "Cod. Forma Pago"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Forma Pago';
             TableRelation = "Payment Method";
         }
         field(7; "ID Agrupacion"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'ID Agrupacion';
         }
     }
 

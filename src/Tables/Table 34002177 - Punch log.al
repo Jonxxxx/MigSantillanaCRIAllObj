@@ -5,27 +5,39 @@ table 34002177 "Punch log"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             TableRelation = Employee;
         }
         field(2; "Fecha registro"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
         }
         field(3; "Hora registro"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora registro';
         }
         field(4; "No. tarjeta"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. tarjeta';
         }
         field(5; "ID Equipo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Equipo';
         }
         field(6; Procesado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Procesado';
         }
         field(7; "Full name"; Text[60])
         {
+            Caption = 'Full name';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
-            Caption = 'Full Name';
             FieldClass = FlowField;
         }
         field(8; "Job Title"; Text[60])
@@ -36,6 +48,7 @@ table 34002177 "Punch log"
         }
         field(9; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
 
@@ -54,6 +67,7 @@ table 34002177 "Punch log"
         }
         field(10; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
 

@@ -7,9 +7,13 @@ table 56070 "Maestro de Rutas"
     {
         field(1; Codigo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Nombre de Ruta"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre de Ruta';
         }
     }
 

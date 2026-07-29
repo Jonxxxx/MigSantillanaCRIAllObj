@@ -5,9 +5,13 @@ table 67016 "Asistentes Talleres y Eventos"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Taller - Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Taller - Evento';
             TableRelation = Eventos."No.";
 
             trigger OnValidate()
@@ -20,9 +24,13 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(3; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
         }
         field(4; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
@@ -33,6 +41,8 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(5; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
@@ -45,21 +55,33 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(6; "Description Tipo evento"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description Tipo evento';
         }
         field(7; "Description Taller"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description Taller';
         }
         field(8; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(9; "Nombre Promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Promotor';
         }
         field(10; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
         }
         field(11; "Cod. Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Expositor';
             TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
 
@@ -77,21 +99,33 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(12; "Nombre Expositor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Expositor';
         }
         field(13; Confirmado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Confirmado';
         }
         field(14; "Fecha inscripcion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inscripcion';
         }
         field(15; "Fecha del Evento"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha del Evento';
         }
         field(16; "Fecha de realizacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de realizacion';
         }
         field(17; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             TableRelation = Docentes;
 
             trigger OnValidate()
@@ -106,10 +140,13 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(18; "Nombre Docente"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Docente';
         }
         field(19; Asistio; Boolean)
         {
-            Caption = 'Attended';
+            DataClassification = CustomerContent;
+            Caption = 'Asistio';
 
             trigger OnValidate()
             begin
@@ -124,14 +161,19 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(20; "Tipo de Expositor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Expositor';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(21; Inscrito; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Inscrito';
         }
         field(22; "Fecha programacion"; Date)
         {
+            Caption = 'Fecha programacion';
             CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                                                                              "Tipo Evento" = FIELD("Tipo Evento"),
                                                                                              "Tipo de Expositor" = FIELD("Tipo de Expositor"),
@@ -141,6 +183,7 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(23; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
 
             trigger OnValidate()
@@ -151,6 +194,8 @@ table 67016 "Asistentes Talleres y Eventos"
         }
         field(24; "No Linea Programac."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No Linea Programac.';
         }
     }
 

@@ -8,13 +8,19 @@ table 64833 Scheduler
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
             NotBlank = false;
         }
         field(5; Description; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
         field(6; "Job Type"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Job Type';
             OptionMembers = Replicator,Navision;
 
             trigger OnValidate()
@@ -29,6 +35,8 @@ table 64833 Scheduler
         }
         field(10; "Specfication No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Specfication No.';
             TableRelation = Specification."No.";
 
             trigger OnValidate()
@@ -41,6 +49,8 @@ table 64833 Scheduler
         }
         field(11; "Replicator Group Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Replicator Group Code';
             TableRelation = "Replicator Group".Code;
 
             trigger OnValidate()
@@ -53,69 +63,105 @@ table 64833 Scheduler
         }
         field(15; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionMembers = Ok,Processing,Error,Stopped;
         }
         field(16; "Error Handling"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Error Handling';
             OptionMembers = Skip,Retry,Stop;
         }
         field(17; Interval; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Interval';
             BlankZero = true;
         }
         field(18; Unit; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Unit';
             BlankZero = true;
             OptionMembers = ,"Minute(s)","Hour(s)","Day(s)","Week(s)","Month(s)";
         }
         field(20; Sunday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sunday';
             InitValue = true;
         }
         field(21; Monday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Monday';
             InitValue = true;
         }
         field(22; Tuesday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tuesday';
             InitValue = true;
         }
         field(23; Wednesday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Wednesday';
             InitValue = true;
         }
         field(24; Thursday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Thursday';
             InitValue = true;
         }
         field(25; Friday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Friday';
             InitValue = true;
         }
         field(26; Saturday; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Saturday';
             InitValue = true;
         }
         field(28; "Start Time"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Start Time';
         }
         field(29; "End Time"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'End Time';
         }
         field(30; "Last Date"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Last Date';
         }
         field(31; "Last Time"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Last Time';
         }
         field(32; "Next Date"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Next Date';
         }
         field(33; "Next Time"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Next Time';
         }
         field(40; "Codeunit No."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codeunit No.';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Codeunit));
 
             trigger OnValidate()
@@ -126,6 +172,8 @@ table 64833 Scheduler
         }
         field(50; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Series';
         }
     }
 

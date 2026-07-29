@@ -6,13 +6,16 @@ table 75010 "Conf. Campos Relacionados"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
             AutoIncrement = true;
             Description = 'PK';
             Editable = false;
         }
         field(100; "Id Fld Origen"; Integer)
         {
-            Caption = 'Campo Origen';
+            DataClassification = CustomerContent;
+            Caption = 'Id Fld Origen';
             TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27));
             //This property is currently not supported
             //TestTableRelation = false;
@@ -29,6 +32,8 @@ table 75010 "Conf. Campos Relacionados"
         }
         field(110; "Valor Origen"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor Origen';
             TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
                                                                      "Field No" = FIELD("Id Fld Origen"));
             //This property is currently not supported
@@ -42,7 +47,8 @@ table 75010 "Conf. Campos Relacionados"
         }
         field(200; "Id Fld Destino"; Integer)
         {
-            Caption = 'Campo Destino';
+            DataClassification = CustomerContent;
+            Caption = 'Id Fld Destino';
             TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27));
             //This property is currently not supported
             //TestTableRelation = false;
@@ -59,6 +65,8 @@ table 75010 "Conf. Campos Relacionados"
         }
         field(210; "Valor Destino"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor Destino';
             TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
                                                                      "Field No" = FIELD("Id Fld Destino"));
             //This property is currently not supported

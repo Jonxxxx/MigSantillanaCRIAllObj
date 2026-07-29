@@ -7,6 +7,8 @@ table 67009 "Rutas - CP"
     {
         field(1; "Cod. Ruta"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Ruta';
             NotBlank = true;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Rutas));
 
@@ -22,15 +24,20 @@ table 67009 "Rutas - CP"
         }
         field(3; Description; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
             Editable = false;
             Enabled = false;
         }
         field(4; "Name of route"; Text[100])
         {
-            Caption = 'Name of Route';
+            DataClassification = CustomerContent;
+            Caption = 'Name of route';
         }
         field(5; "Cod. Dim. Delegacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Dim. Delegacion';
             Enabled = false;
 
             trigger OnValidate()
@@ -41,6 +48,7 @@ table 67009 "Rutas - CP"
         }
         field(6; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
 
             trigger OnValidate()
@@ -50,6 +58,7 @@ table 67009 "Rutas - CP"
         }
         field(7; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             Enabled = false;
             TableRelation = Territory;
@@ -62,6 +71,7 @@ table 67009 "Rutas - CP"
         }
         field(8; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
 
@@ -73,7 +83,8 @@ table 67009 "Rutas - CP"
         }
         field(9; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -86,7 +97,8 @@ table 67009 "Rutas - CP"
         }
         field(10; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
     }
 

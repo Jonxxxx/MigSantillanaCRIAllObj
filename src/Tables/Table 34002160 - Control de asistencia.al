@@ -6,13 +6,15 @@ table 34002160 "Control de asistencia"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
-            Caption = 'Employee no.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             NotBlank = true;
             TableRelation = Employee WHERE(Status = CONST(Active));
         }
         field(2; "Fecha registro"; Date)
         {
-            Caption = 'Posting date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
             NotBlank = true;
 
             trigger OnValidate()
@@ -26,25 +28,29 @@ table 34002160 "Control de asistencia"
         }
         field(3; "Hora registro"; Time)
         {
-            Caption = 'Posting time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora registro';
             NotBlank = true;
         }
         field(4; "No. tarjeta"; Code[10])
         {
-            Caption = 'Card ID';
+            DataClassification = CustomerContent;
+            Caption = 'No. tarjeta';
         }
         field(5; "ID Equipo"; Code[10])
         {
-            Caption = 'TA system ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Equipo';
         }
         field(6; Procesado; Boolean)
         {
-            Caption = 'Processced';
+            DataClassification = CustomerContent;
+            Caption = 'Procesado';
         }
         field(7; "Full name"; Text[60])
         {
+            Caption = 'Full name';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Empleado")));
-            Caption = 'Full Name';
             FieldClass = FlowField;
         }
         field(8; "Job Title"; Text[60])
@@ -55,15 +61,18 @@ table 34002160 "Control de asistencia"
         }
         field(9; "Fecha Entrada"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Entrada';
         }
         field(10; "Fecha Salida"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Salida';
         }
         field(11; "1ra entrada"; Time)
         {
-            Caption = 'First entry';
+            DataClassification = CustomerContent;
+            Caption = '1ra entrada';
 
             trigger OnValidate()
             begin
@@ -72,7 +81,8 @@ table 34002160 "Control de asistencia"
         }
         field(12; "1ra salida"; Time)
         {
-            Caption = 'Firs exit';
+            DataClassification = CustomerContent;
+            Caption = '1ra salida';
 
             trigger OnValidate()
             begin
@@ -81,7 +91,8 @@ table 34002160 "Control de asistencia"
         }
         field(13; "2da entrada"; Time)
         {
-            Caption = 'Second entry';
+            DataClassification = CustomerContent;
+            Caption = '2da entrada';
 
             trigger OnValidate()
             begin
@@ -90,7 +101,8 @@ table 34002160 "Control de asistencia"
         }
         field(14; "2da salida"; Time)
         {
-            Caption = 'Second exit';
+            DataClassification = CustomerContent;
+            Caption = '2da salida';
 
             trigger OnValidate()
             begin
@@ -99,12 +111,14 @@ table 34002160 "Control de asistencia"
         }
         field(15; "Total Horas"; Duration)
         {
-            Caption = 'Total hours';
+            DataClassification = CustomerContent;
+            Caption = 'Total Horas';
             Editable = false;
         }
         field(16; "Horas receso"; Duration)
         {
-            Caption = 'Hour recess';
+            DataClassification = CustomerContent;
+            Caption = 'Horas receso';
 
             trigger OnValidate()
             begin
@@ -113,51 +127,59 @@ table 34002160 "Control de asistencia"
         }
         field(17; "Horas laboradas"; Duration)
         {
-            Caption = 'Working hours';
+            DataClassification = CustomerContent;
+            Caption = 'Horas laboradas';
             Editable = false;
         }
         field(18; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
             OptionCaption = 'Open,Closed';
             OptionMembers = Pendiente,Cerrada;
         }
         field(19; "Horas regulares"; Decimal)
         {
-            Caption = 'Regular hours';
+            DataClassification = CustomerContent;
+            Caption = 'Horas regulares';
         }
         field(20; "Horas extras al 35"; Decimal)
         {
-            Caption = 'Overtime at 35';
+            DataClassification = CustomerContent;
+            Caption = 'Horas extras al 35';
         }
         field(22; "Horas extras 100"; Decimal)
         {
-            Caption = '100% overtime';
+            DataClassification = CustomerContent;
+            Caption = 'Horas extras 100';
         }
         field(23; "Dias feriados"; Decimal)
         {
-            Caption = 'Holiday hours';
+            DataClassification = CustomerContent;
+            Caption = 'Dias feriados';
         }
         field(24; "Total Horas imputadas"; Duration)
         {
+            Caption = 'Total Horas imputadas';
             CalcFormula = Lookup("Control de asistencia"."Total Horas" WHERE("Cod. Empleado" = FIELD("Cod. Empleado"),
                                                                               "Fecha registro" = FIELD("Fecha registro")));
-            Caption = 'Total Input hours';
             Editable = false;
             FieldClass = FlowField;
         }
         field(25; "Nombre dia"; Text[30])
         {
-            Caption = 'Day';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre dia';
         }
         field(26; "Horas nocturnas"; Decimal)
         {
-            Caption = 'Night hours';
+            DataClassification = CustomerContent;
+            Caption = 'Horas nocturnas';
         }
         field(27; "Metodo registro"; Option)
         {
-            Caption = 'Registration method';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Metodo registro';
             OptionCaption = 'Clock,Calculated,Completed manually';
             OptionMembers = Reloj,Calculado,"Completado manualmente";
         }

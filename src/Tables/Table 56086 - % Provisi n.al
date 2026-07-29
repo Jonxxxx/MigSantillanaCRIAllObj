@@ -7,15 +7,23 @@ table 56086 "% Provision"
     {
         field(1; "Desde dia"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desde dia';
         }
         field(2; "Descripcion"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "% Provision"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Provision';
         }
         field(4; "Importe Provision"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Provision';
         }
     }
 

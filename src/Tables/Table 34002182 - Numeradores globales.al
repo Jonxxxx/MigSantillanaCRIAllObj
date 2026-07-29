@@ -6,28 +6,34 @@ table 34002182 "Numeradores globales"
     {
         field(1;"Code";Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(2;"No. serie empleados";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. serie empleados';
         }
         field(3;"No. serie candidatos";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. serie candidatos';
         }
         field(4;"No. serie acciones";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. serie acciones';
         }
         field(5;"Campo 1";Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 1';
             TableRelation = "No. Series";
         }
         field(6;"Campo 2";Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 2';
             TableRelation = "No. Series";
         }
     }

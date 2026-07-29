@@ -7,6 +7,8 @@ table 67051 "Cab. Planif. Evento"
     {
         field(1; "Cod. Taller - Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Taller - Evento';
             TableRelation = Eventos."No.";
 
             trigger OnValidate()
@@ -24,6 +26,8 @@ table 67051 "Cab. Planif. Evento"
         }
         field(2; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             TableRelation = "Tipos de Eventos";
 
             trigger OnValidate()
@@ -34,6 +38,8 @@ table 67051 "Cab. Planif. Evento"
         }
         field(3; Expositor; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Expositor';
             TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
 
@@ -53,63 +59,85 @@ table 67051 "Cab. Planif. Evento"
         }
         field(4; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
         }
         field(5; "Description Tipo evento"; Text[100])
         {
+            Caption = 'Description Tipo evento';
             CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE("Codigo" = FIELD("Tipo Evento")));
             FieldClass = FlowField;
         }
         field(6; "Description Taller"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description Taller';
         }
         field(7; "Nombre Expositor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Expositor';
         }
         field(8; "Tipo de Expositor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Expositor';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(9; "Numero de sesiones"; Integer)
         {
-            Caption = 'Sessions number';
+            DataClassification = CustomerContent;
+            Caption = 'Numero de sesiones';
         }
         field(10; "Fecha Inicio"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio';
         }
         field(11; Lunes; Boolean)
         {
-            Caption = 'Monday';
+            DataClassification = CustomerContent;
+            Caption = 'Lunes';
         }
         field(12; Martes; Boolean)
         {
-            Caption = 'Tuesday';
+            DataClassification = CustomerContent;
+            Caption = 'Martes';
         }
         field(13; Miercoles; Boolean)
         {
-            Caption = 'Wednesday';
+            DataClassification = CustomerContent;
+            Caption = 'Miercoles';
         }
         field(14; Jueves; Boolean)
         {
-            Caption = 'Thursday';
+            DataClassification = CustomerContent;
+            Caption = 'Jueves';
         }
         field(15; Viernes; Boolean)
         {
-            Caption = 'Friday';
+            DataClassification = CustomerContent;
+            Caption = 'Viernes';
         }
         field(16; Sabados; Boolean)
         {
-            Caption = 'Saturday';
+            DataClassification = CustomerContent;
+            Caption = 'Sabados';
         }
         field(17; Domingos; Boolean)
         {
-            Caption = 'Sunday';
+            DataClassification = CustomerContent;
+            Caption = 'Domingos';
         }
         field(18; "Asistentes esperados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes esperados';
         }
         field(19; "Total registrados"; Integer)
         {
+            Caption = 'Total registrados';
             CalcFormula = Count("Asistentes Talleres y Eventos" WHERE("Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                                                        "Tipo Evento" = FIELD("Tipo Evento"),
                                                                        "Cod. Expositor" = FIELD("Expositor"),
@@ -118,6 +146,8 @@ table 67051 "Cab. Planif. Evento"
         }
         field(20; Estado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionCaption = ' ,Done,Cancelled';
             OptionMembers = " ",Realizado,Anulado;
 
@@ -146,26 +176,40 @@ table 67051 "Cab. Planif. Evento"
         }
         field(21; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(22; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
         }
         field(23; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(24; "Fecha Programada"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Programada';
         }
         field(25; "Fecha Realizada"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Realizada';
         }
         field(26; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
         }
         field(27; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnLookup()
             begin
@@ -203,39 +247,55 @@ table 67051 "Cab. Planif. Evento"
         }
         field(28; "Descripcion Delegacion"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion Delegacion';
         }
         field(29; "Asistentes reales"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes reales';
         }
         field(30; Pagado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pagado';
         }
         field(31; "Importe pago"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe pago';
         }
         field(32; "No. Documento Pago"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento Pago';
         }
         field(33; "Tipo Documento Pago"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Documento Pago';
             //TODO: Revisar option correcto TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("28"));
         }
         field(34; "Fecha Pago"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Pago';
         }
         field(35; "Nombre Colegio"; Text[90])
         {
+            Caption = 'Nombre Colegio';
             CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(36; "Distrito Colegio"; Text[30])
         {
+            Caption = 'Distrito Colegio';
             CalcFormula = Lookup(Contact.Distritos WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(37; "Estado Solicitud"; Option)
         {
+            Caption = 'Estado Solicitud';
             CalcFormula = Lookup("Solicitud de Taller - Evento".Status WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
             OptionCaption = ' ,Sent by salesperson,Approved,Programmed,Voided,Rejected,Done';
@@ -243,6 +303,8 @@ table 67051 "Cab. Planif. Evento"
         }
         field(38; "Grupo Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo Negocio';
         }
     }
 

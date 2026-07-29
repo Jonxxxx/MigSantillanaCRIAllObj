@@ -7,32 +7,40 @@ table 34003050 "_Clientes TPV"
     {
         field(1; Identificacion; Code[20])
         {
-            Caption = 'Vat Reg. No.';
+            DataClassification = CustomerContent;
+            Caption = 'Identificacion';
         }
         field(2; Nombre; Text[100])
         {
-            Caption = 'Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(3; Direccion; Text[100])
         {
-            Caption = 'Address';
+            DataClassification = CustomerContent;
+            Caption = 'Direccion';
         }
         field(4; Telefono; Code[30])
         {
-            Caption = 'Phone';
+            DataClassification = CustomerContent;
+            Caption = 'Telefono';
         }
         field(5; "Tipo ID"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo ID';
             OptionMembers = ,"R.U.C. JURIDICOS Y EXTRANJEROS SIN CEDULA","R.U.C. PUBLICOS","RUC PERSONA NATURAL",CEDULA;
         }
         field(102; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
         field(103; "Tipo Comprobante"; Option)
         {
-            Caption = 'Fiscal Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Comprobante';
             OptionCaption = ' ,Consumidor Final,Credito Fiscal,Régimen Especial ,Gubernamental';
             OptionMembers = " ","Consumidor Final","Credito Fiscal","Regimen Especial",Gubernamental;
         }

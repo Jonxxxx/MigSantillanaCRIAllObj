@@ -6,24 +6,28 @@ table 34002511 Botones
     {
         field(34002500; "ID Menu"; Code[10])
         {
-            Caption = 'Menu ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Menu';
             Description = 'DsPOS Standar';
             Editable = false;
         }
         field(34002501; "ID boton"; Integer)
         {
-            Caption = 'Boton ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID boton';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
         field(34002502; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
         field(34002503; Accion; Code[20])
         {
-            Caption = 'Action';
+            DataClassification = CustomerContent;
+            Caption = 'Accion';
             Description = 'DsPOS Standar';
             TableRelation = Acciones."ID Accion" WHERE("Tipo Accion" = FILTER(<> Obligatoria));
 
@@ -57,7 +61,8 @@ table 34002511 Botones
         }
         field(34002504; Etiqueta; Text[30])
         {
-            Caption = 'Caption';
+            DataClassification = CustomerContent;
+            Caption = 'Etiqueta';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
@@ -67,11 +72,14 @@ table 34002511 Botones
         }
         field(34002505; Color; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Color';
             Description = 'DsPOS Standar';
         }
         field(34002506; Activo; Boolean)
         {
-            Caption = 'Active';
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()
@@ -119,7 +127,8 @@ table 34002511 Botones
         }
         field(34002507; "Descuento %"; Decimal)
         {
-            Caption = 'Discount %';
+            DataClassification = CustomerContent;
+            Caption = 'Descuento %';
             Description = 'DsPOS Standar';
             MaxValue = 100;
             MinValue = 0;
@@ -132,7 +141,8 @@ table 34002511 Botones
         }
         field(34002508; Seguridad; Option)
         {
-            Caption = 'Password';
+            DataClassification = CustomerContent;
+            Caption = 'Seguridad';
             Description = 'DsPOS Standar';
             OptionCaption = ' ,Password';
             OptionMembers = " ","Contraseña";
@@ -145,7 +155,8 @@ table 34002511 Botones
         }
         field(34002509; Pago; Code[20])
         {
-            Caption = 'Tender';
+            DataClassification = CustomerContent;
+            Caption = 'Pago';
             Description = 'DsPOS Standar';
             TableRelation = "Formas de Pago" WHERE("Tipo Tarjeta" = FILTER(''),
                                                     "Efectivo Local" = CONST(False));
@@ -179,6 +190,8 @@ table 34002511 Botones
         }
         field(34002510; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             Description = 'DsPOS Standar';
             OptionCaption = ' ,G/L Account,Item,Resource,Fixed Asset';
             OptionMembers = " ","G/L Account",Item,Resource,"Fixed Asset";
@@ -193,6 +206,8 @@ table 34002511 Botones
         }
         field(34002511; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
             Description = 'DsPOS Standar';
             TableRelation = IF (Tipo = CONST("G/L Account")) "G/L Account"
             ELSE IF (Tipo = CONST(Item)) Item
@@ -201,6 +216,8 @@ table 34002511 Botones
         }
         field(34002513; "Tipo Accion"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Accion';
             Description = 'DsPOS Standar';
             Editable = false;
             OptionCaption = ',Action,Mandatory,Line Action';
@@ -208,6 +225,8 @@ table 34002511 Botones
         }
         field(34002515; Orden; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Orden';
             Description = 'DsPOS Standar';
 
             trigger OnValidate()

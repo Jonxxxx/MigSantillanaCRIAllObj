@@ -14,32 +14,39 @@ table 50113 "Medios de Pago SIC"
     {
         field(1;"Tipo documento";Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo documento';
         }
         field(2;"No. documento";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento';
         }
         field(3;"No. linea";Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. linea';
         }
         field(4;"Cod. medio de pago";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. medio de pago';
             TableRelation = "Conf. Medios de pagos";
         }
         field(5;"Cod. cliente";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. cliente';
         }
         field(6;"Fecha registro";Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
         }
         field(7;Importe;Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
 
             trigger OnValidate()
             begin
@@ -48,47 +55,57 @@ table 50113 "Medios de Pago SIC"
         }
         field(8;"Cod. divisa";Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
         }
         field(9;"Tasa de cambio";Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tasa de cambio';
         }
         field(10;"Source Counter";Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Source Counter';
         }
         field(11;Transferido;Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Transferido';
         }
         field(12;Origen;Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Origen';
             OptionCaption = ' ,Punto de Venta,From Hotel';
             OptionMembers = " ","Punto de Venta","From Hotel";
         }
         field(13;"No. documento Pos";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento Pos';
         }
         field(14;"No. Serie Pos";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. Serie Pos';
             Description = '001-LDP: SIC-JERM';
         }
         field(15;"Location Code";Code[40])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Location Code';
             Description = '001-LDP: SIC-JERM';
         }
         field(16;"No. documento SIC";Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento SIC';
         }
         field(17;"Refencia Pago";Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Refencia Pago';
             Description = '001-LDP: SIC-JERM';
         }
     }

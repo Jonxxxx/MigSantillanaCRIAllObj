@@ -7,11 +7,13 @@ table 34003006 "Razones Anulacion NCF"
     {
         field(1;Codigo;Code[20])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;Descripcion;Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

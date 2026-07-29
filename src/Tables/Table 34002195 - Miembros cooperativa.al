@@ -7,15 +7,15 @@ table 34002195 "Miembros cooperativa"
     {
         field(1; "Tipo de miembro"; Option)
         {
-            Caption = 'Member type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de miembro';
             OptionCaption = 'Member, Partner';
             OptionMembers = Miembro,Socio;
         }
         field(2; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
-            DataClassification = ToBeClassified;
             NotBlank = true;
             TableRelation = Employee;
 
@@ -27,73 +27,76 @@ table 34002195 "Miembros cooperativa"
         }
         field(10; "1ra Quincena"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = '1ra Quincena';
         }
         field(11; "2da Quincena"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = '2da Quincena';
         }
         field(12; "Fecha inactivacion"; Date)
         {
-            Caption = 'Inactivation date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inactivacion';
         }
         field(23; "Full name"; Text[150])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full name';
         }
         field(24; "Fecha inscripcion"; Date)
         {
-            Caption = 'Enrollment date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inscripcion';
         }
         field(25; "Tipo de aporte"; Option)
         {
-            Caption = 'Contribution type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de aporte';
             OptionCaption = 'Fix,Percentage';
             OptionMembers = Fijo,Porcentual;
         }
         field(26; Importe; Decimal)
         {
-            Caption = 'Amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
         field(27; "Ahorro acumulado"; Decimal)
         {
+            Caption = 'Ahorro acumulado';
             CalcFormula = Sum("Mov. cooperativa".Importe WHERE("Employee No." = FIELD("Employee No."),
                                                                 "Tipo transaccion" = CONST(Aporte)));
-            Caption = 'Accumulated savings';
             Editable = false;
             FieldClass = FlowField;
         }
         field(28; "Prestamos pendientes"; Integer)
         {
+            Caption = 'Prestamos pendientes';
             CalcFormula = Count("Mov. cooperativa" WHERE("Employee No." = FIELD("Employee No."),
                                                           "Tipo transaccion" = CONST(Prestamo)));
-            Caption = 'Outstanding loans';
             Editable = false;
             FieldClass = FlowField;
         }
         field(29; "Importe pendiente"; Decimal)
         {
+            Caption = 'Importe pendiente';
             CalcFormula = Sum("Mov. cooperativa".Importe WHERE("Employee No." = FIELD("Employee No."),
                                                                 "Tipo transaccion" = CONST(Prestamo)));
-            Caption = 'Amount pending';
             Editable = false;
             FieldClass = FlowField;
         }
         field(30; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
-            DataClassification = ToBeClassified;
             OptionCaption = ' ,Active,Inactive,Retired,Reinstated';
             OptionMembers = " ",Activo,Inactivo,Retirado;
         }
         field(31; "Fecha reingreso"; Date)
         {
-            Caption = 'Re-entry date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha reingreso';
         }
     }
 

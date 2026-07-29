@@ -5,19 +5,29 @@ table 67099 "Detalle Pago Expositores"
     {
         field(1; "ID Pago"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Pago';
         }
         field(2; Linea; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Linea';
         }
         field(3; "Cod. Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Expositor';
         }
         field(5; "Num. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Num. Solicitud';
             Editable = false;
         }
         field(6; "Cod. Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Evento';
 
             trigger OnLookup()
             var
@@ -46,17 +56,25 @@ table 67099 "Detalle Pago Expositores"
         }
         field(7; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
             Editable = false;
         }
         field(8; "Monto a Pagar"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Monto a Pagar';
         }
         field(9; "Descripcion Evento"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Evento';
             Editable = false;
         }
         field(10; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             Editable = false;
         }
     }

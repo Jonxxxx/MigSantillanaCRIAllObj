@@ -7,10 +7,14 @@ table 50015 "Razones anulacion factura"
     {
         field(1; Codigo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             NotBlank = true;
         }
         field(2; Descripcion; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

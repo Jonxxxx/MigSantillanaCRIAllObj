@@ -6,49 +6,69 @@ table 34003011 "Parametros Loc. x Pais"
     {
         field(1; "Pais"; Code[20])
         {
-            Caption = 'Country';
+            DataClassification = CustomerContent;
+            Caption = 'Pais';
             TableRelation = "Country/Region";
         }
         field(2; "NCF Activado"; Boolean)
         {
-            Caption = 'NCF Activated';
+            DataClassification = CustomerContent;
+            Caption = 'NCF Activado';
         }
         field(3; "Control Lin. por Factura"; Boolean)
         {
-            Caption = 'Control Lines per Invoice';
+            DataClassification = CustomerContent;
+            Caption = 'Control Lin. por Factura';
         }
         field(4; "Cantidad Lin. por factura"; Integer)
         {
-            Caption = 'Line Qty. per Invoice';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Lin. por factura';
         }
         field(5; "Re facturacion"; Boolean)
         {
-            Caption = 'Re Invoicing';
+            DataClassification = CustomerContent;
+            Caption = 'Re facturacion';
         }
         field(6; "Caption Depto"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption Depto';
         }
         field(7; "Caption Sub Depto"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption Sub Depto';
         }
         field(8; "Caption ISR"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption ISR';
         }
         field(9; "Caption INFOTEP"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption INFOTEP';
         }
         field(10; "Caption AFP"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption AFP';
         }
         field(11; "Caption SFS"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption SFS';
         }
         field(12; "Caption SRL"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Caption SRL';
         }
         field(13; "Formato Doc. Vtas. por cliente"; Boolean)
         {
-            Caption = 'Sales documents format by customer';
+            DataClassification = CustomerContent;
+            Caption = 'Formato Doc. Vtas. por cliente';
         }
     }
 

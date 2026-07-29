@@ -8,7 +8,8 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
     {
         field(1; "No. Prestamo"; Code[20])
         {
-            Caption = 'Loan no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Prestamo';
 
             trigger OnValidate()
             var
@@ -24,56 +25,65 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(2; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
             NotBlank = true;
             TableRelation = Employee;
         }
         field(3; "No. afiliado"; Date)
         {
-            Caption = 'Affiliate code';
+            DataClassification = CustomerContent;
+            Caption = 'No. afiliado';
             Enabled = false;
         }
         field(4; "Tipo de miembro"; Option)
         {
-            Caption = 'Member type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de miembro';
             OptionCaption = 'Member, Partner';
             OptionMembers = Miembro,Socio;
         }
         field(5; "Tipo prestamo"; Code[20])
         {
-            Caption = 'Loan type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo prestamo';
             TableRelation = "Datos adicionales RRHH" WHERE("Tipo registro" = CONST("Tipo de Prestamo"));
         }
         field(6; Importe; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             DecimalPlaces = 2 : 2;
         }
         field(7; "% Interes"; Decimal)
         {
-            Caption = 'Interest rate';
+            DataClassification = CustomerContent;
+            Caption = '% Interes';
         }
         field(8; "Cantidad de Cuotas"; Integer)
         {
-            Caption = 'Fees quantities';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Cuotas';
         }
         field(9; "Fecha Inicio Deduccion"; Date)
         {
-            Caption = 'Deduction Start Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio Deduccion';
         }
         field(10; "1ra Quincena"; Boolean)
         {
-            Caption = '1st half';
+            DataClassification = CustomerContent;
+            Caption = '1ra Quincena';
         }
         field(11; "2da Quincena"; Boolean)
         {
-            Caption = '2nd half';
+            DataClassification = CustomerContent;
+            Caption = '2da Quincena';
         }
         field(12; "Motivo Prestamo"; Text[60])
         {
-            Caption = 'Reason for loan';
+            DataClassification = CustomerContent;
+            Caption = 'Motivo Prestamo';
         }
         field(13; "Full name"; Text[150])
         {
@@ -83,43 +93,45 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
         }
         field(14; "Concepto Salarial"; Code[20])
         {
-            Caption = 'Wage Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(15; "Importe Pendiente"; Decimal)
         {
+            Caption = 'Importe Pendiente';
             CalcFormula = Sum("Mov. cooperativa".Importe WHERE("No. documento" = FIELD("No. Prestamo"),
                                                                 "Tipo transaccion" = FILTER(> Aporte)));
-            Caption = 'Remaining amount';
             DecimalPlaces = 2 : 2;
             FieldClass = FlowField;
         }
         field(16; Pendiente; Boolean)
         {
-            Caption = 'Open';
+            DataClassification = CustomerContent;
+            Caption = 'Pendiente';
             Editable = true;
         }
         field(17; "Motivo de cierre"; Text[250])
         {
-            Caption = 'Reason to close';
+            DataClassification = CustomerContent;
+            Caption = 'Motivo de cierre';
         }
         field(18; "No. Solicitud prestamo"; Code[20])
         {
-            Caption = 'Loan Serial No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud prestamo';
         }
         field(25; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
-            DataClassification = ToBeClassified;
             OptionCaption = 'Active,Paused,Completed';
             OptionMembers = Activo,Pausado,Completado;
         }
         field(26; "Fecha de pausa"; Date)
         {
-            Caption = 'Pause date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de pausa';
         }
     }
 

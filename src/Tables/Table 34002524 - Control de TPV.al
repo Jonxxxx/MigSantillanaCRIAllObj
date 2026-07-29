@@ -8,32 +8,39 @@ table 34002524 "Control de TPV"
     {
         field(10; "No. tienda"; Code[20])
         {
-            Caption = 'Nº tienda';
+            DataClassification = CustomerContent;
+            Caption = 'No. tienda';
             TableRelation = Tiendas;
         }
         field(20; "No. TPV"; Code[20])
         {
-            Caption = 'Nº TPV';
+            DataClassification = CustomerContent;
+            Caption = 'No. TPV';
             TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("No. tienda"));
         }
         field(30; Fecha; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Fecha';
         }
         field(60; "Hora apertura"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Hora apertura';
         }
         field(70; "Usuario apertura"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario apertura';
         }
         field(90; "Hora cierre"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Hora cierre';
         }
         field(100; "Usuario cierre"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario cierre';
         }
         field(110; "Nombre tienda"; Text[200])
@@ -51,32 +58,41 @@ table 34002524 "Control de TPV"
         }
         field(130; Estado; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Estado';
             OptionCaption = 'Cerrado,Abierto';
             OptionMembers = Cerrado,Abierto;
         }
         field(150; "Usuario reapertura"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario reapertura';
         }
         field(160; "Hora reapertura"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Hora reapertura';
         }
         field(170; "Motivo reapertura"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Motivo reapertura';
         }
         field(180; "No. Reaperturas"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Reaperturas';
         }
         field(34002517; "Replicado POS"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Replicado POS';
             Description = 'DsPOS Standard';
         }
         field(34002518; "Id Replicacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
     }

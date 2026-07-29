@@ -5,12 +5,14 @@ table 34002175 "Relacion Puestos - Proyectos"
     {
         field(1; "Job Type Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Type Code';
             NotBlank = true;
             TableRelation = "Puestos laborales";
         }
         field(2; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
 
@@ -22,18 +24,21 @@ table 34002175 "Relacion Puestos - Proyectos"
         }
         field(3; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
         }
         field(4; "Job Line Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Line Type';
             OptionCaption = ' ,Schedule,Contract,Both Schedule and Contract';
             OptionMembers = " ",Schedule,Contract,"Both Schedule and Contract";
         }
         field(5; "Concepto Salarial"; Code[20])
         {
-            Caption = 'Wedge code';
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
         }
         field(6; "Job Description"; Text[60])
         {
@@ -43,9 +48,9 @@ table 34002175 "Relacion Puestos - Proyectos"
         }
         field(7; "Job Task Name"; Text[60])
         {
+            Caption = 'Job Task Name';
             CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
             "Job Task No." = FIELD("Job Task No.")));
-            Caption = 'Job Task No.';
             FieldClass = FlowField;
         }
     }

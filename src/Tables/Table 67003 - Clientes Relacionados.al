@@ -8,7 +8,8 @@ table 67003 "Clientes Relacionados"
     {
         field(1; "Cod. Cliente"; Code[20])
         {
-            Caption = 'Customer code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
 
             trigger OnValidate()
@@ -21,7 +22,8 @@ table 67003 "Clientes Relacionados"
         }
         field(2; "Cod. Cliente Relacionado"; Code[20])
         {
-            Caption = 'Related Customer code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente Relacionado';
             TableRelation = Customer;
 
             trigger OnValidate()
@@ -34,11 +36,13 @@ table 67003 "Clientes Relacionados"
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Descripcion Cte. Relacionado"; Text[100])
         {
-            Caption = 'Related Cust. Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Cte. Relacionado';
         }
         field(5; Balance; Decimal)
         {
@@ -54,26 +58,28 @@ table 67003 "Clientes Relacionados"
         }
         field(6; "Balance (LCY)"; Decimal)
         {
+            Caption = 'Balance (LCY)';
             AutoFormatType = 1;
             CalcFormula = Sum("Detailed Cust. Ledg. Entry"."Amount (LCY)" WHERE("Customer No." = FIELD("Cod. Cliente Relacionado"),
                                                                                  "Initial Entry Global Dim. 1" = FIELD("Global Dimension 1 Filter"),
                                                                                  "Initial Entry Global Dim. 2" = FIELD("Global Dimension 2 Filter"),
                                                                                  "Currency Code" = FIELD("Currency Filter"),
                                                                                  "Posting Date" = FIELD("Date Filter")));
-            Caption = 'Balance ($)';
             Editable = false;
             FieldClass = FlowField;
         }
         field(7; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(8; "Global Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,1,2';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 2 Code';
+            CaptionClass = '1,1,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(9; "Date Filter"; Date)

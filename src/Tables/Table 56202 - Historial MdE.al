@@ -20,10 +20,12 @@ table 56202 "Historial MdE"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
         }
         field(2; "First Name"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'First Name';
 
             trigger OnValidate()
@@ -33,6 +35,7 @@ table 56202 "Historial MdE"
         }
         field(4; "Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Name';
 
             trigger OnValidate()
@@ -42,6 +45,7 @@ table 56202 "Historial MdE"
         }
         field(5; Initials; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Initials';
 
             trigger OnValidate()
@@ -52,18 +56,22 @@ table 56202 "Historial MdE"
         }
         field(6; "Job Title"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Title';
         }
         field(7; "Search Name"; Code[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(8; Address; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(10; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
             TableRelation = IF ("Country/Region Code" = CONST()) "Post Code".City
             ELSE IF ("Country/Region Code" = FILTER(<> '')) "Post Code".City WHERE("Country/Region Code" = FIELD("Country/Region Code"));
@@ -78,7 +86,8 @@ table 56202 "Historial MdE"
         }
         field(11; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = IF ("Country/Region Code" = CONST()) "Post Code"
             ELSE IF ("Country/Region Code" = FILTER(<> '')) "Post Code" WHERE("Country/Region Code" = FIELD("Country/Region Code"));
             //This property is currently not supported
@@ -92,25 +101,30 @@ table 56202 "Historial MdE"
         }
         field(12; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(13; "Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(14; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(15; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
         field(20; "Birth Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Birth Date';
 
             trigger OnValidate()
@@ -121,26 +135,31 @@ table 56202 "Historial MdE"
         }
         field(21; "Social Security No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Social Security No.';
         }
         field(24; Gender; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Gender';
             OptionCaption = ' ,Female,Male';
             OptionMembers = " ",Female,Male;
         }
         field(25; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
         field(26; "Manager No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Manager No.';
             TableRelation = Employee;
         }
         field(27; "Emplymt. Contract Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Emplymt. Contract Code';
             TableRelation = "Employment Contract";
 
@@ -155,212 +174,310 @@ table 56202 "Historial MdE"
         }
         field(28; "Statistics Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Statistics Group Code';
             TableRelation = "Employee Statistics Group";
         }
         field(29; "Employment Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Employment Date';
         }
         field(31; Status; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Status';
             OptionCaption = 'Active,Inactive,Terminated';
             OptionMembers = Active,Inactive,Terminated;
         }
         field(32; "Inactive Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Inactive Date';
         }
         field(33; "Cause of Inactivity Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cause of Inactivity Code';
             TableRelation = "Cause of Inactivity";
         }
         field(34; "Termination Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Termination Date';
         }
         field(35; "Grounds for Term. Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Grounds for Term. Code';
             TableRelation = "Grounds for Termination";
         }
         field(36; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(37; "Global Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,1,2';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 2 Code';
+            CaptionClass = '1,1,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(38; "Resource No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Resource No.';
             TableRelation = Resource WHERE("Type" = CONST(Person));
         }
         field(40; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
         field(50000; _Categoria; Option)
         {
-            Caption = 'Category';
+            DataClassification = CustomerContent;
+            Caption = '_Categoria';
             Description = 'Grupo Santillana';
             OptionCaption = ' ,01-PD,02-MI,03-PTC,04-OP';
             OptionMembers = " ","01-PD","02-MI","03-PTC","04-OP";
         }
         field(50002; "Numero de persona"; Text[32])
         {
-            Caption = 'N mero de persona';
+            DataClassification = CustomerContent;
+            Caption = 'Numero de persona';
             Description = 'Santillana,MDE';
         }
         field(56200; "No. Mov."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Mov.';
         }
         field(56201; "Fecha y hora recepcion"; DateTime)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha y hora recepcion';
         }
         field(56202; "Fecha efectiva"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha efectiva';
         }
         field(56203; Aplicado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Aplicado';
         }
         field(56204; "Tipo envio"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo envio';
             OptionMembers = INSERT,CHANGE,DELETE;
         }
         field(56205; "M nombre"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M nombre';
         }
         field(56206; "M primer apellido"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M primer apellido';
         }
         field(56207; "M segundo apellido"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M segundo apellido';
         }
         field(56208; "M fecha antiguedad reconoci"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M fecha antiguedad reconoci';
         }
         field(56209; "M tipo documento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M tipo documento';
         }
         field(56210; "M numero documento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M numero documento';
         }
         field(56211; "M genero"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M genero';
         }
         field(56212; "M estado civil"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M estado civil';
         }
         field(56213; "M fecha nacimiento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M fecha nacimiento';
         }
         field(56214; "M provincia nacimiento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M provincia nacimiento';
         }
         field(56215; "M pais nacimiento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M pais nacimiento';
         }
         field(56216; "M nacionalidad"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M nacionalidad';
         }
         field(56217; "M pais"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M pais';
         }
         field(56218; "M nombre calle"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M nombre calle';
         }
         field(56219; "M ciudad"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M ciudad';
         }
         field(56220; "M codigo postal"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M codigo postal';
         }
         field(56221; "M provincia"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M provincia';
         }
         field(56222; "M direccion"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M direccion';
         }
         field(56223; "M numero telefono"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M numero telefono';
         }
         field(56224; "M posicion"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M posicion';
         }
         field(56225; "M centro trabajo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M centro trabajo';
         }
         field(56226; "M Categoria grupo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M Categoria grupo';
         }
         field(56227; "M tipo contrato grupo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M tipo contrato grupo';
         }
         field(56228; "M departamento"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M departamento';
         }
         field(56229; "M division"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M division';
         }
         field(56230; "M area funcional grupo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M area funcional grupo';
         }
         field(56231; "M fecha inicio contrato"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M fecha inicio contrato';
         }
         field(56232; "M fecha fin contrato"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M fecha fin contrato';
         }
         field(56233; "M tipo baja"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'M tipo baja';
         }
         field(56234; "Cod. Dimension"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Dimension';
             TableRelation = Dimension;
         }
         field(56235; "Valor Dimension"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor Dimension';
             TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Cod. Dimension"));
         }
         field(56236; "Fecha y hora aplicado"; DateTime)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha y hora aplicado';
         }
         field(56237; "Aplicado por usuario"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Aplicado por usuario';
             TableRelation = User."User Name";
         }
         field(56238; "Nombre completo"; Text[150])
         {
+            Caption = 'Nombre completo';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No.")));
             FieldClass = FlowField;
         }
         field(56260; "Error proceso"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Error proceso';
         }
         field(56261; "Descripcion error"; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion error';
         }
         field(56270; "Desactivacion forzada"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Desactivacion forzada';
             Description = ' #269159';
             OptionMembers = No,Si;
         }
         field(34002100; Company; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Company';
             TableRelation = "Empresas Cotizacion";
         }
         field(34002101; "Second Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Second Last Name';
 
             trigger OnValidate()
@@ -370,11 +487,13 @@ table 56202 "Historial MdE"
         }
         field(34002102; "Working Center"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Working Center';
             TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotizacion" = FIELD("Company"));
         }
         field(34002103; "Full Name"; Text[150])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full Name';
 
             trigger OnValidate()
@@ -384,17 +503,20 @@ table 56202 "Historial MdE"
         }
         field(34002104; "Document Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Type';
             OptionCaption = 'SS,Passport,Residence ID,Work Permission';
             OptionMembers = "C dula",Pasaporte,"Tarj.residen.comunitario","Perm.Trabajo",,"N.I.Extranjero","N.I.F.";
         }
         field(34002105; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
         }
         field(34002108; "Job Type Code"; Code[15])
         {
-            Caption = 'Cod. Cargo';
+            DataClassification = CustomerContent;
+            Caption = 'Job Type Code';
             TableRelation = "Puestos laborales";
 
             trigger OnValidate()
@@ -404,34 +526,44 @@ table 56202 "Historial MdE"
         }
         field(34002109; "Alta contrato"; Date)
         {
-            Caption = 'Enroll date';
+            DataClassification = CustomerContent;
+            Caption = 'Alta contrato';
         }
         field(34002110; "Fin contrato"; Date)
         {
-            Caption = 'Ending date';
+            DataClassification = CustomerContent;
+            Caption = 'Fin contrato';
         }
         field(34002116; _Nacionalidad; Code[10])
         {
-            Caption = 'Nacionality';
+            DataClassification = CustomerContent;
+            Caption = '_Nacionalidad';
             TableRelation = "Country/Region";
         }
         field(34002118; "Lugar nacimiento"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Lugar nacimiento';
         }
         field(34002119; "Estado civil"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado civil';
             Description = 'Soltero/a,Casado/a,Viudo/a,Separado/a,Divorciado/a';
             OptionCaption = 'Single, Married, Widowed, Separated, Divorced, Free Union';
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
         field(34002126; "Mes Nacimiento"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes Nacimiento';
             Editable = false;
         }
         field(34002137; _Departamento; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = '_Departamento';
             CaptionClass = '4,1,1';
-            Caption = 'Department';
             TableRelation = Departamentos;
         }
     }

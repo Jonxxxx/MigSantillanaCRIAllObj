@@ -8,7 +8,8 @@ table 34002197 "Cab. Prestamos cooperativa"
     {
         field(1; "No. Prestamo"; Code[20])
         {
-            Caption = 'Loan no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Prestamo';
 
             trigger OnValidate()
             begin
@@ -22,6 +23,7 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(2; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
             NotBlank = true;
             TableRelation = "Miembros cooperativa";
@@ -35,50 +37,59 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(3; "No. afiliado"; Date)
         {
-            Caption = 'Affiliate code';
+            DataClassification = CustomerContent;
+            Caption = 'No. afiliado';
             Enabled = false;
         }
         field(4; "Tipo de miembro"; Option)
         {
-            Caption = 'Member type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de miembro';
             OptionCaption = 'Member, Partner';
             OptionMembers = Miembro,Socio;
         }
         field(5; "Tipo prestamo"; Code[20])
         {
-            Caption = 'Loan type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo prestamo';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo de Prestamo"));
         }
         field(6; Importe; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             DecimalPlaces = 2 : 2;
         }
         field(7; "% Interes"; Decimal)
         {
-            Caption = 'Interest rate';
+            DataClassification = CustomerContent;
+            Caption = '% Interes';
             MaxValue = 100;
         }
         field(8; "Cantidad de Cuotas"; Integer)
         {
-            Caption = 'Fees quantities';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Cuotas';
         }
         field(9; "Fecha Inicio Deduccion"; Date)
         {
-            Caption = 'Deduction Start Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio Deduccion';
         }
         field(10; "1ra Quincena"; Boolean)
         {
-            Caption = '1st half';
+            DataClassification = CustomerContent;
+            Caption = '1ra Quincena';
         }
         field(11; "2da Quincena"; Boolean)
         {
-            Caption = '2nd half';
+            DataClassification = CustomerContent;
+            Caption = '2da Quincena';
         }
         field(12; "Motivo Prestamo"; Text[60])
         {
-            Caption = 'Reason for loan';
+            DataClassification = CustomerContent;
+            Caption = 'Motivo Prestamo';
         }
         field(13; "Full name"; Text[150])
         {
@@ -88,7 +99,8 @@ table 34002197 "Cab. Prestamos cooperativa"
         }
         field(14; "Concepto Salarial"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
             TableRelation = "Conceptos salariales".Codigo;
         }
     }

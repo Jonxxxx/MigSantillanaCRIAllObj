@@ -8,21 +8,25 @@ table 34002135 Departamentos
     {
         field(1; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; Descripcion; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Total Empleados"; Integer)
         {
+            Caption = 'Total Empleados';
             CalcFormula = Count(Employee WHERE(Departamento = FIELD("Codigo")));
-            Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;
         }
         field(4; Inhabilitado; Boolean)
         {
-            Caption = 'Disables';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Inhabilitado';
 
             trigger OnValidate()
             begin

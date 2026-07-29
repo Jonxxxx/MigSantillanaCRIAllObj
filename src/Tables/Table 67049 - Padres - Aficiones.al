@@ -5,15 +5,20 @@ table 67049 "Padres - Aficiones"
     {
         field(1; "Cod. Padre"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Padre';
             TableRelation = Padres;
         }
         field(2; "Nombre Padre"; Text[100])
         {
+            Caption = 'Nombre Padre';
             CalcFormula = Lookup(Padres."Full name" WHERE("DNI" = FIELD("Cod. Padre")));
             FieldClass = FlowField;
         }
         field(3; "Cod. aficion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. aficion';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Aficiones));
 
             trigger OnValidate()
@@ -29,6 +34,8 @@ table 67049 "Padres - Aficiones"
         }
         field(4; "Descripcion aficion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion aficion';
         }
     }
 

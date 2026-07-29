@@ -9,17 +9,23 @@ table 75013 "Filtro Campo Buffer"
     {
         field(1;"Table Id";Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Table Id';
         }
         field(2;"Field No";Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Field No';
         }
         field(10;Name;Text[30])
         {
-            Caption = 'Nombre';
+            DataClassification = CustomerContent;
+            Caption = 'Name';
         }
         field(11;Caption;Text[100])
         {
-            Caption = 'Campo';
+            DataClassification = CustomerContent;
+            Caption = 'Caption';
         }
     }
 

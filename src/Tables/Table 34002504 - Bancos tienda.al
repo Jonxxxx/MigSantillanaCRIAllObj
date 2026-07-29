@@ -7,20 +7,24 @@ table 34002504 "Bancos tienda"
     {
         field(10; "Cod. Tienda"; Code[20])
         {
-            Caption = 'Store Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Tienda';
             Description = 'DsPOS Standar';
             NotBlank = true;
             TableRelation = Tiendas;
         }
         field(20; "Cod. Divisa"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Divisa';
             Description = 'DsPOS Standar';
             NotBlank = false;
             TableRelation = Currency;
         }
         field(30; "Cod. Banco"; Code[20])
         {
-            Caption = 'Bank Account';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Banco';
             Description = 'DsPOS Standar';
             NotBlank = true;
             TableRelation = "Bank Account";
@@ -38,8 +42,8 @@ table 34002504 "Bancos tienda"
         }
         field(40; "Nombre Banco"; Text[100])
         {
+            Caption = 'Nombre Banco';
             CalcFormula = Lookup("Bank Account".Name WHERE("No." = FIELD("Cod. Banco")));
-            Caption = 'Bank Name';
             Description = 'DsPOS Standar';
             Editable = false;
             FieldClass = FlowField;

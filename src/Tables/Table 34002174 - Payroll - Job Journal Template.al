@@ -8,30 +8,36 @@ table 34002174 "Payroll - Job Journal Template"
     {
         field(1; Name; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
             NotBlank = true;
         }
         field(2; Description; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(5; "Test Report ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Test Report ID';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(6; "Page ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Page ID';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Page));
         }
         field(7; "Posting Report ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Report ID';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(8; "Force Posting Report"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Force Posting Report';
         }
         field(13; "Test Report Caption"; Text[250])
@@ -60,6 +66,7 @@ table 34002174 "Payroll - Job Journal Template"
         }
         field(16; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             TableRelation = "No. Series";
 
@@ -81,6 +88,7 @@ table 34002174 "Payroll - Job Journal Template"
         }
         field(17; "Posting No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting No. Series';
             TableRelation = "No. Series";
 

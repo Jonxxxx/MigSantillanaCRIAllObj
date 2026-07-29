@@ -9,20 +9,24 @@ table 56017 "Lin. Consig a Facturar Movil."
     {
         field(2; "Cod. Cliente"; Code[20])
         {
-            Caption = 'Customer Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             Editable = false;
             TableRelation = Customer;
         }
         field(3; "Document No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document No.';
         }
         field(4; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line No.';
         }
         field(6; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
 
             trigger OnValidate()
@@ -35,23 +39,28 @@ table 56017 "Lin. Consig a Facturar Movil."
         }
         field(7; "Location Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Location Code';
             TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
         field(11; Description; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(12; "Description 2"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description 2';
         }
         field(13; "Unit of Measure"; Text[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure';
         }
         field(15; Quantity; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity';
             DecimalPlaces = 0 : 5;
 
@@ -63,11 +72,13 @@ table 56017 "Lin. Consig a Facturar Movil."
         }
         field(22; "Unit Price"; Decimal)
         {
-            AutoFormatType = 2;
+            DataClassification = CustomerContent;
             Caption = 'Unit Price';
+            AutoFormatType = 2;
         }
         field(27; "Line Discount %"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line Discount %';
             DecimalPlaces = 0 : 5;
             MaxValue = 100;
@@ -75,46 +86,62 @@ table 56017 "Lin. Consig a Facturar Movil."
         }
         field(28; "Line Discount Amount"; Decimal)
         {
-            AutoFormatType = 1;
+            DataClassification = CustomerContent;
             Caption = 'Line Discount Amount';
+            AutoFormatType = 1;
         }
         field(29; Amount; Decimal)
         {
-            AutoFormatType = 1;
+            DataClassification = CustomerContent;
             Caption = 'Amount';
+            AutoFormatType = 1;
             Editable = false;
         }
         field(30; "Amount Including VAT"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Amount Including VAT';
             AutoFormatType = 1;
-            Caption = 'Amount Including Tax';
             Editable = false;
         }
         field(31; "Cantidad Inv. en Consignacion"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Inv. en Consignacion';
         }
         field(32; "Cantidad Consignacion Devuelta"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Consignacion Devuelta';
         }
         field(33; "No. Pedido Consignacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido Consignacion';
         }
         field(34; "No. Linea Pedido Consignacion"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea Pedido Consignacion';
         }
         field(35; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Mov. Prod. Cosg. a Liq.';
         }
         field(36; "ID Usuario"; Code[20])
         {
-            Caption = 'User ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Usuario';
         }
         field(37; Marcada; Boolean)
         {
-            Caption = 'Marked';
+            DataClassification = CustomerContent;
+            Caption = 'Marcada';
         }
         field(5407; "Unit of Measure Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure Code';
 
             trigger OnValidate()
@@ -126,7 +153,8 @@ table 56017 "Lin. Consig a Facturar Movil."
         }
         field(50000; "Cantidad a Facturar"; Integer)
         {
-            Caption = 'Qty. To Invoice';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad a Facturar';
 
             trigger OnValidate()
             begin
@@ -136,7 +164,8 @@ table 56017 "Lin. Consig a Facturar Movil."
         }
         field(50001; "Fecha Inventario"; Date)
         {
-            Caption = 'Inventory Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inventario';
         }
     }
 

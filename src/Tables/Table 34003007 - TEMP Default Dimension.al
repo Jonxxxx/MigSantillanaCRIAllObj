@@ -6,6 +6,7 @@ table 34003007 "TEMP Default Dimension"
     {
         field(1; "Table ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Table ID';
             NotBlank = true;
 
@@ -13,19 +14,23 @@ table 34003007 "TEMP Default Dimension"
         }
         field(2; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
         }
         field(3; "Dimension Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Code';
             NotBlank = true;
         }
         field(4; "Dimension Value Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Dimension Value Code';
         }
         field(5; "Value Posting"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Value Posting';
             OptionCaption = ' ,Code Mandatory,Same Code,No Code';
             OptionMembers = " ","Code Mandatory","Same Code","No Code";
@@ -40,6 +45,7 @@ table 34003007 "TEMP Default Dimension"
         }
         field(7; "Multi Selection Action"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Multi Selection Action';
             OptionCaption = ' ,Change,Delete';
             OptionMembers = " ",Change,Delete;

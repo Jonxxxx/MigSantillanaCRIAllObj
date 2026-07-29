@@ -6,11 +6,13 @@ table 51010 "Lin. Cupon"
     {
         field(1; "No. Cupon"; Code[20])
         {
-            Caption = 'Coupon No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Cupon';
         }
         field(2; "Cod. Producto"; Code[20])
         {
-            Caption = 'Coupon Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             TableRelation = Item;
 
             trigger OnValidate()
@@ -25,20 +27,24 @@ table 51010 "Lin. Cupon"
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Precio Venta"; Decimal)
         {
-            Caption = 'Sales Price';
+            DataClassification = CustomerContent;
+            Caption = 'Precio Venta';
         }
         field(5; "% Descuento"; Decimal)
         {
-            Caption = 'Discount %';
+            DataClassification = CustomerContent;
+            Caption = '% Descuento';
             DecimalPlaces = 4 :;
         }
         field(6; Cantidad; Integer)
         {
-            Caption = 'Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
 
             trigger OnValidate()
             begin
@@ -57,7 +63,8 @@ table 51010 "Lin. Cupon"
         }
         field(7; "Cantidad Pendiente"; Integer)
         {
-            Caption = 'Remaning Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Pendiente';
         }
     }
 

@@ -7,6 +7,8 @@ table 67011 Eventos
     {
         field(1; "Tipo de Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Evento';
             TableRelation = "Tipos de Eventos";
 
             trigger OnValidate()
@@ -17,13 +19,18 @@ table 67011 Eventos
         }
         field(2; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
         }
         field(3; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; Delegacion; Code[20])
         {
-            Caption = 'Responsibility Center';
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnLookup()
             begin
@@ -61,71 +68,101 @@ table 67011 Eventos
         }
         field(5; Categoria; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Categoria';
             Enabled = false;
         }
         field(6; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Nivel Educativo APS";
         }
         field(7; Expositores; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Expositores';
             Enabled = false;
             TableRelation = "Expositores - aps";
         }
         field(8; Sala; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sala';
             Enabled = false;
         }
         field(9; "Fecha creacion"; Date)
         {
-            Caption = 'Creation Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha creacion';
         }
         field(10; "Horas programadas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas programadas';
         }
         field(11; "Capacidad de vacantes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Capacidad de vacantes';
         }
         field(12; "Eventos programados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Eventos programados';
             Enabled = false;
         }
         field(13; "Importe Gasto Expositor"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto Expositor';
             Enabled = false;
         }
         field(14; "Importe Gasto mensajeria"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto mensajeria';
             Enabled = false;
         }
         field(15; "ImporteGastos Impresion"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ImporteGastos Impresion';
             Enabled = false;
         }
         field(16; "Importe Utiles"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Utiles';
             Enabled = false;
         }
         field(17; "Importe Atenciones"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Atenciones';
             Enabled = false;
         }
         field(18; "Otros Importes"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Otros Importes';
             Enabled = false;
         }
         field(19; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";
         }
         field(20; "Descripcion Delegacion"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion Delegacion';
         }
         field(21; "Descripcion Tipo Evento"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion Tipo Evento';
         }
     }

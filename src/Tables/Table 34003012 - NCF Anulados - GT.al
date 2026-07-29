@@ -8,25 +8,30 @@ table 34003012 "NCF Anulados - GT"
     {
         field(1; "No. documento"; Code[20])
         {
-            Caption = 'Document No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. documento';
         }
         field(2; "No. Serie NCF Facturas"; Code[10])
         {
-            Caption = 'Invoice FDN Serial No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Serie NCF Facturas';
             TableRelation = "No. Series";
         }
         field(3; "No. Comprobante Fiscal"; Code[19])
         {
-            Caption = 'Fiscal Document No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Comprobante Fiscal';
         }
         field(6; "No. Serie NCF Abonos"; Code[10])
         {
-            Caption = 'Credit Memo NCF Serial No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Serie NCF Abonos';
             TableRelation = "No. Series";
         }
         field(7; "Fecha anulacion"; Date)
         {
-            Caption = 'Void date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha anulacion';
         }
     }
 

@@ -5,9 +5,13 @@ table 67105 "Visitas A/C - Descr. Asistente"
     {
         field(1; "No. Visita"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Visita';
         }
         field(2; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = IF (Tipo = CONST(Nivel)) "Nivel Educativo APS".Codigo
             ELSE IF (Tipo = CONST(Especialidad)) "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Especialidades))
             ELSE IF (Tipo = CONST(Grado)) "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
@@ -49,12 +53,18 @@ table 67105 "Visitas A/C - Descr. Asistente"
         }
         field(3; "Descripcion"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "No. Asistentes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Asistentes';
         }
         field(5; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Nivel,Grado,Especialidad';
             OptionMembers = Nivel,Grado,Especialidad;
         }

@@ -5,57 +5,70 @@ table 56027 "Doc. pendientes Cliente Movil."
     {
         field(1;"Cod. Cliente";Code[20])
         {
-            Caption = 'Customer Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
         }
         field(2;Nombre;Text[200])
         {
-            Caption = 'Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(3;"Tipo Documento";Option)
         {
-            Caption = 'Document Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Documento';
             OptionCaption = ' ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund';
             OptionMembers = " ",Payment,Invoice,"Credit Memo","Finance Charge Memo",Reminder,Refund;
         }
         field(4;"No. Documento";Code[20])
         {
-            Caption = 'Document No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento';
         }
         field(5;"Fecha Registro";Date)
         {
-            Caption = 'Posting Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
         }
         field(6;"Fecha Vencimiento";Date)
         {
-            Caption = 'Due Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Vencimiento';
         }
         field(7;"Importe inicial";Decimal)
         {
-            Caption = 'Initial Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe inicial';
         }
         field(8;"Importe Pendiente";Decimal)
         {
-            Caption = 'Remaining Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe Pendiente';
         }
         field(9;"Cod. Divisa";Code[20])
         {
-            Caption = 'Currency Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Divisa';
         }
         field(10;"Fecha Ult. Actualizacion";Date)
         {
-            Caption = 'Last Update Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Ult. Actualizacion';
         }
         field(11;"No. Doc. Externo";Code[20])
         {
-            Caption = 'External Document No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Doc. Externo';
         }
         field(12;"Importe inicial ($)";Decimal)
         {
-            Caption = 'Initial Amount ($)';
+            DataClassification = CustomerContent;
+            Caption = 'Importe inicial ($)';
         }
         field(13;"Importe Pendiente ($)";Decimal)
         {
-            Caption = 'Remaining Amount ($)';
+            DataClassification = CustomerContent;
+            Caption = 'Importe Pendiente ($)';
         }
     }
 

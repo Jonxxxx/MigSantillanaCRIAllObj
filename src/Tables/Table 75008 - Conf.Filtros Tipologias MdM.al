@@ -7,11 +7,15 @@ table 75008 "Conf.Filtros Tipologias MdM"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
             MaxValue = 7;
             MinValue = 1;
         }
         field(11; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionMembers = Dimension,"Dato MdM",Otros;
 
             trigger OnValidate()
@@ -21,6 +25,8 @@ table 75008 "Conf.Filtros Tipologias MdM"
         }
         field(12; "Valor Id"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor Id';
             TableRelation = "Tipo Filtros Tipo. MdM Buffer".Id WHERE("Tipo" = FIELD("Tipo"));
             //This property is currently not supported
             //TestTableRelation = false;

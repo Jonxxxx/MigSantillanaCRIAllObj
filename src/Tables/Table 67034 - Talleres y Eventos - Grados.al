@@ -8,9 +8,13 @@ table 67034 "Talleres y Eventos - Grados"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
 
             trigger OnValidate()
@@ -47,27 +51,39 @@ table 67034 "Talleres y Eventos - Grados"
         }
         field(3; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(4; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                   "Cod. Local" = FIELD("Cod. Local"));
         }
         field(5; "Cod. Grado"; Code[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Colegio - Grados"."Cod. Grado" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                    "Cod. Local" = FIELD("Cod. Local"),
                                                                    "Cod. Nivel" = FIELD("Cod. Nivel"));
         }
         field(8; "Nombre Colegio"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(9; "Descripcion Nivel"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Nivel';
         }
         field(10; "Descripcion Grado"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Grado';
         }
     }
 

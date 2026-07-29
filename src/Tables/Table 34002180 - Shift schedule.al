@@ -8,7 +8,8 @@ table 34002180 "Shift schedule"
     {
         field(1; "Codigo turno"; Code[10])
         {
-            Caption = 'Shift Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo turno';
             TableRelation = Shift;
 
             trigger OnValidate()
@@ -19,19 +20,24 @@ table 34002180 "Shift schedule"
         }
         field(4; Descripcion; Text[30])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Editable = false;
         }
         field(5; "Hora Inicio"; Time)
         {
-            Caption = 'Date in';
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicio';
         }
         field(6; "Hora Fin"; Time)
         {
-            Caption = 'Date Out';
+            DataClassification = CustomerContent;
+            Caption = 'Hora Fin';
         }
         field(7; "Hora almuerzo"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora almuerzo';
         }
     }
 

@@ -8,10 +8,14 @@ table 75006 "Conf. Tipologias MdM"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
             AutoIncrement = true;
         }
         field(10; Tipologia; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipologia';
             TableRelation = "Item Category";
 
             trigger OnValidate()
@@ -21,42 +25,51 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(51; "Gen. Prod. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
         }
         field(52; "Inventory Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Inventory Posting Group';
             TableRelation = "Inventory Posting Group";
         }
         field(53; "VAT Prod. Posting Group"; Code[10])
         {
-            Caption = 'Tax Prod. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Prod. Posting Group';
             TableRelation = "VAT Product Posting Group";
         }
         field(54; "Costing Method"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Costing Method';
             OptionCaption = 'FIFO,LIFO,Specific,Average,Standard';
             OptionMembers = FIFO,LIFO,Specific,"Average",Standard;
         }
         field(55; "Item Disc. Group"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item Disc. Group';
             TableRelation = "Item Discount Group";
         }
         field(97; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
         field(98; "Product Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Product Group Code';
             TableRelation = "Item Category".Code WHERE("Parent Category" = FIELD("Tipologia"));
         }
         field(1001; "Referencia 1"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 1';
             CaptionClass = '75000,1';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(1),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -71,6 +84,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1002; "Referencia 2"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 2';
             CaptionClass = '75000,2';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(2),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -85,6 +100,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1003; "Referencia 3"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 3';
             CaptionClass = '75000,3';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(3),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -99,6 +116,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1004; "Referencia 4"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 4';
             CaptionClass = '75000,4';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(4),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -113,6 +132,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1005; "Referencia 5"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 5';
             CaptionClass = '75000,5';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(5),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -127,6 +148,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1006; "Referencia 6"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 6';
             CaptionClass = '75000,6';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(6),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
@@ -141,6 +164,8 @@ table 75006 "Conf. Tipologias MdM"
         }
         field(1007; "Referencia 7"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia 7';
             CaptionClass = '75000,7';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(7),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));

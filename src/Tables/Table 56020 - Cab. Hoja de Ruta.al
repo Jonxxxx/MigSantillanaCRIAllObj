@@ -10,11 +10,13 @@ table 56020 "Cab. Hoja de Ruta"
     {
         field(1; "No. Hoja Ruta"; Code[20])
         {
-            Caption = 'Route Sheet No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Hoja Ruta';
         }
         field(2; "Cod. Transportista"; Code[20])
         {
-            Caption = 'Carrier Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Transportista';
             TableRelation = "Shipping Agent";
 
             trigger OnValidate()
@@ -27,30 +29,38 @@ table 56020 "Cab. Hoja de Ruta"
         }
         field(3; "Fecha Planificacion Transporte"; Date)
         {
-            Caption = 'Transportation Planning Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Planificacion Transporte';
         }
         field(4; Comentario; Text[250])
         {
-            Caption = 'Comment';
+            DataClassification = CustomerContent;
+            Caption = 'Comentario';
         }
         field(5; Hora; Time)
         {
-            Caption = 'Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
         field(6; "Fecha Registro"; Date)
         {
-            Caption = 'Posting date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
         }
         field(8; Anulada; Boolean)
         {
-            Caption = 'Voided';
+            DataClassification = CustomerContent;
+            Caption = 'Anulada';
         }
         field(9; "Nombre Transportista"; Text[100])
         {
-            Caption = 'Transport Agent Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Transportista';
         }
         field(10; Chofer; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Chofer';
             TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE("Cod. Transportista" = FIELD("Cod. Transportista"));
 
             trigger OnValidate()
@@ -63,13 +73,18 @@ table 56020 "Cab. Hoja de Ruta"
         }
         field(11; "Nombre Chofer"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Chofer';
         }
         field(12; Placa; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Placa';
         }
         field(13; "No. Ruta Distribucion"; Code[10])
         {
-            Caption = 'No. Ruta Distribuci n';
+            DataClassification = CustomerContent;
+            Caption = 'No. Ruta Distribucion';
             Editable = true;
             TableRelation = "Maestro de Rutas".Codigo;
 
@@ -91,6 +106,7 @@ table 56020 "Cab. Hoja de Ruta"
         }
         field(14; "Nombre de Ruta"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre de Ruta';
         }
     }

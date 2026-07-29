@@ -5,9 +5,13 @@ table 67098 "Pago a Expositores"
     {
         field(1; "ID Pago"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Pago';
         }
         field(2; "Cod. Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Expositor';
             TableRelation = "Expositores - aps";
 
             trigger OnLookup()
@@ -50,30 +54,42 @@ table 67098 "Pago a Expositores"
         }
         field(3; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(4; "No. Documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento';
         }
         field(5; Importe; Decimal)
         {
+            Caption = 'Importe';
             CalcFormula = Sum("Detalle Pago Expositores"."Monto a Pagar" WHERE("ID Pago" = FIELD("ID Pago")));
             FieldClass = FlowField;
         }
         field(6; "Nombre Expositor"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Expositor';
         }
         field(7; "Estado Pago"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado Pago';
             OptionCaption = 'Pendiente,Pagado';
             OptionMembers = Pendiente,Pagado;
         }
         field(8; "Numero Eventos"; Integer)
         {
+            Caption = 'Numero Eventos';
             CalcFormula = Count("Detalle Pago Expositores" WHERE("ID Pago" = FIELD("ID Pago")));
             FieldClass = FlowField;
         }
         field(9; "Tipo Documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Documento';
             //TODO Ver: TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST('28'));
         }
     }

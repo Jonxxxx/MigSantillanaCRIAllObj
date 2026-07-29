@@ -9,20 +9,24 @@ table 90000 "G/L Account2"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
             NotBlank = true;
             SQLDataType = Variant;
         }
         field(2; Name; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
         }
         field(3; "Search Name"; Code[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(4; "Account Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Account Type';
             OptionCaption = 'Posting,Heading,Total,Begin-Total,End-Total';
             OptionMembers = Posting,Heading,Total,"Begin-Total","End-Total";
@@ -36,30 +40,35 @@ table 90000 "G/L Account2"
         }
         field(6; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(7; "Global Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,1,2';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 2 Code';
+            CaptionClass = '1,1,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(9; "Income/Balance"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Income/Balance';
             OptionCaption = 'Income Statement,Balance Sheet';
             OptionMembers = "Income Statement","Balance Sheet";
         }
         field(10; "Debit/Credit"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Debit/Credit';
             OptionCaption = 'Both,Debit,Credit';
             OptionMembers = Both,Debit,Credit;
         }
         field(11; "No. 2"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. 2';
         }
         field(12; Comment; Boolean)
@@ -72,33 +81,40 @@ table 90000 "G/L Account2"
         }
         field(13; Blocked; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Blocked';
         }
         field(14; "Direct Posting"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Direct Posting';
             InitValue = true;
         }
         field(16; "Reconciliation Account"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Reconciliation Account';
         }
         field(17; "New Page"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'New Page';
         }
         field(18; "No. of Blank Lines"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'No. of Blank Lines';
             MinValue = 0;
         }
         field(19; Indentation; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Indentation';
             MinValue = 0;
         }
         field(26; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
@@ -167,6 +183,7 @@ table 90000 "G/L Account2"
         }
         field(34; Totaling; Text[250])
         {
+            DataClassification = CustomerContent;
             Caption = 'Totaling';
             TableRelation = "G/L Account";
             //This property is currently not supported
@@ -211,6 +228,7 @@ table 90000 "G/L Account2"
         }
         field(39; "Consol. Translation Method"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Consol. Translation Method';
             OptionCaption = 'Average Rate (Manual),Closing Rate,Historical Rate,Composite Rate,Equity Rate';
             OptionMembers = "Average Rate (Manual)","Closing Rate","Historical Rate","Composite Rate","Equity Rate";
@@ -223,6 +241,7 @@ table 90000 "G/L Account2"
         }
         field(40; "Consol. Debit Acc."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Consol. Debit Acc.';
 
             trigger OnValidate()
@@ -233,6 +252,7 @@ table 90000 "G/L Account2"
         }
         field(41; "Consol. Credit Acc."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Consol. Credit Acc.';
 
             trigger OnValidate()
@@ -249,12 +269,14 @@ table 90000 "G/L Account2"
         }
         field(43; "Gen. Posting Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Posting Type';
             OptionCaption = ' ,Purchase,Sale';
             OptionMembers = " ",Purchase,Sale;
         }
         field(44; "Gen. Bus. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Bus. Posting Group';
             TableRelation = "Gen. Business Posting Group";
 
@@ -266,6 +288,7 @@ table 90000 "G/L Account2"
         }
         field(45; "Gen. Prod. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
 
@@ -277,6 +300,7 @@ table 90000 "G/L Account2"
         }
         field(46; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
             SubType = Bitmap;
         }
@@ -310,7 +334,8 @@ table 90000 "G/L Account2"
         }
         field(49; "Automatic Ext. Texts"; Boolean)
         {
-            Caption = 'Automatic Ext. Text';
+            DataClassification = CustomerContent;
+            Caption = 'Automatic Ext. Texts';
         }
         field(52; "Budgeted Debit Amount"; Decimal)
         {
@@ -342,26 +367,31 @@ table 90000 "G/L Account2"
         }
         field(54; "Tax Area Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Area Code';
             TableRelation = "Tax Area";
         }
         field(55; "Tax Liable"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Liable';
         }
         field(56; "Tax Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Group Code';
             TableRelation = "Tax Group";
         }
         field(57; "VAT Bus. Posting Group"; Code[10])
         {
-            Caption = 'Tax Bus. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Bus. Posting Group';
             TableRelation = "VAT Business Posting Group";
         }
         field(58; "VAT Prod. Posting Group"; Code[10])
         {
-            Caption = 'Tax Prod. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Prod. Posting Group';
             TableRelation = "VAT Product Posting Group";
         }
         field(60; "Additional-Currency Net Change"; Decimal)
@@ -407,6 +437,7 @@ table 90000 "G/L Account2"
         }
         field(63; "Exchange Rate Adjustment"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Exchange Rate Adjustment';
             OptionCaption = 'No Adjustment,Adjust Amount,Adjust Additional-Currency Amount';
             OptionMembers = "No Adjustment","Adjust Amount","Adjust Additional-Currency Amount";
@@ -441,21 +472,25 @@ table 90000 "G/L Account2"
         }
         field(66; "Default IC Partner G/L Acc. No"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Default IC Partner G/L Acc. No';
             TableRelation = "IC G/L Account"."No.";
         }
         field(10001; "GIFI Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'GIFI Code';
             TableRelation = "GIFI Code";
         }
         field(34003001; "NCF Obligatorio"; Boolean)
         {
-            Caption = 'NCF Requested';
+            DataClassification = CustomerContent;
+            Caption = 'NCF Obligatorio';
         }
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
-            Caption = 'Expense Clasification Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Clasificacion Gasto';
             TableRelation = "Clasificacion Gastos";
         }
     }

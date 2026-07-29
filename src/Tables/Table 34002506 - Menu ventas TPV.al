@@ -7,33 +7,39 @@ table 34002506 "Menu ventas TPV"
     {
         field(1; "Menu ID"; Code[10])
         {
-            Caption = 'ID Menu';
+            DataClassification = CustomerContent;
+            Caption = 'Menu ID';
             NotBlank = true;
         }
         field(2; Columnas; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Columnas';
         }
         field(3; Filas; Integer)
         {
-            Caption = 'Rows';
+            DataClassification = CustomerContent;
+            Caption = 'Filas';
         }
         field(4; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; "Cantidad de botones"; Integer)
         {
-
-            Caption = 'Quantity of buttons';
-
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de botones';
         }
         field(6; "Menu pagos"; Boolean)
         {
-            Caption = 'Tender Menu';
+            DataClassification = CustomerContent;
+            Caption = 'Menu pagos';
         }
         field(7; "Sub-Menu ID"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sub-Menu ID';
             OptionCaption = ',1,2,3,4';
             OptionMembers = ,"1","2","3","4";
         }

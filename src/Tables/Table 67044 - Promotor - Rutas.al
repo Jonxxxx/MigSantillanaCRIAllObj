@@ -7,10 +7,14 @@ table 67044 "Promotor - Rutas"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Ruta"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Ruta';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Rutas));
 
             trigger OnValidate()
@@ -26,6 +30,8 @@ table 67044 "Promotor - Rutas"
         }
         field(3; "Cod. Zona"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Zona';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Zonas));
 
             trigger OnValidate()
@@ -41,27 +47,36 @@ table 67044 "Promotor - Rutas"
         }
         field(4; "Nombre Promotor"; Text[100])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5; "Descripcion Ruta"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Ruta';
         }
         field(6; "Cod. Supervisor"; Code[20])
         {
-            Caption = 'Superviser code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Supervisor';
             TableRelation = "Salesperson/Purchaser".Code WHERE("Tipo" = CONST(Supervisor));
         }
         field(7; "Nombre Supervisor"; Text[100])
         {
+            Caption = 'Nombre Supervisor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Supervisor")));
             FieldClass = FlowField;
         }
         field(8; "Descripcion zona"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion zona';
         }
         field(9; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnLookup()
             begin
@@ -97,6 +112,8 @@ table 67044 "Promotor - Rutas"
         }
         field(10; "Descripcion Delegacion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Delegacion';
             Editable = false;
         }
     }

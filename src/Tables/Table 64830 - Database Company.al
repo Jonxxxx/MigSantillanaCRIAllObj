@@ -7,9 +7,13 @@ table 64830 "Database Company"
     {
         field(1; "Database Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Database Code';
         }
         field(2; "Company Name"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Company Name';
         }
     }
 

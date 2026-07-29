@@ -6,20 +6,25 @@ table 34003023 "Lin. Dimensiones Req."
     {
         field(1; "No. Tabla"; Integer)
         {
-            Caption = 'Table No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Tabla';
         }
         field(2; Nombre; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre';
         }
         field(3; "Cod. Dimension"; Code[20])
         {
-            Caption = 'Dimension Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Dimension';
             NotBlank = true;
             TableRelation = Dimension;
         }
         field(5; "Registro valor"; Option)
         {
-            Caption = 'Value Posting';
+            DataClassification = CustomerContent;
+            Caption = 'Registro valor';
             OptionCaption = ' ,Code Mandatory,Same Code,No Code';
             OptionMembers = " ","Code Mandatory","Same Code","No Code";
         }

@@ -5,9 +5,13 @@ table 67087 "Solicitud - Competencia"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Editorial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Editorial';
             TableRelation = Editoras;
 
             trigger OnValidate()
@@ -20,6 +24,8 @@ table 67087 "Solicitud - Competencia"
         }
         field(3; "Cod. Libro"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Libro';
 
             trigger OnLookup()
             begin
@@ -42,35 +48,44 @@ table 67087 "Solicitud - Competencia"
         }
         field(4; Description; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
         field(5; Nivel; Code[20])
         {
-            Caption = 'Adresse 2';
+            DataClassification = CustomerContent;
+            Caption = 'Nivel';
             NotBlank = true;
             TableRelation = "Nivel Educativo APS";
         }
         field(6; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(7; "Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Negocio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(8; "Cod. Libro Santillana"; Code[20])
         {
-            Caption = 'Code de territoire';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Libro Santillana';
             TableRelation = Item;
         }
         field(9; "Description Santillana"; Text[100])
         {
+            Caption = 'Description Santillana';
             CalcFormula = Lookup(Item.Description WHERE("No." = FIELD("Cod. Libro Santillana")));
-            Caption = 'Code pays/r gion';
             FieldClass = FlowField;
         }
         field(10; "Nombre Editorial"; Text[60])
         {
-            Caption = 'Code postal';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Editorial';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -78,21 +93,31 @@ table 67087 "Solicitud - Competencia"
         }
         field(11; Precio; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Precio';
         }
         field(12; "Carga horaria"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Carga horaria';
             TableRelation = "Carga Horaria";
         }
         field(13; "Tipo Ingles"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Ingles';
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
         field(14; "Horas a la semana"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas a la semana';
         }
         field(15; "Ano adopcion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ano adopcion';
         }
     }
 

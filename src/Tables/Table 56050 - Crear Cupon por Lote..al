@@ -6,7 +6,8 @@ table 56050 "Crear Cupon por Lote."
     {
         field(2; "Cod. Producto"; Code[20])
         {
-            Caption = 'Coupon Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             NotBlank = false;
             TableRelation = Item;
 
@@ -18,36 +19,45 @@ table 56050 "Crear Cupon por Lote."
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Precio Venta"; Decimal)
         {
-            Caption = 'Sales Price';
+            DataClassification = CustomerContent;
+            Caption = 'Precio Venta';
         }
         field(5; "% Descuento Padre"; Decimal)
         {
-            Caption = 'Discount %';
+            DataClassification = CustomerContent;
+            Caption = '% Descuento Padre';
         }
         field(6; Cantidad; Integer)
         {
-            Caption = 'Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
         }
         field(7; "Cod. Colegio"; Code[20])
         {
-            Caption = 'School code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
         }
         field(8; "Cod. Nivel"; Code[20])
         {
-            Caption = 'Level Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
         }
         field(9; "Cod. Promotor"; Code[20])
         {
-            Caption = 'Salesperson Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(10; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
 
             trigger OnValidate()
             begin
@@ -59,21 +69,29 @@ table 56050 "Crear Cupon por Lote."
         }
         field(11; "Campana"; Code[20])
         {
-            Caption = 'Campaing';
+            DataClassification = CustomerContent;
+            Caption = 'Campana';
             TableRelation = Campaign;
         }
         field(12; "% Descuento Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Descuento Colegio';
         }
         field(13; "Cod. Grado"; Code[20])
         {
-            Caption = 'Grade Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
         }
         field(50005; "Nombre Maestro"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Maestro';
         }
         field(50006; "Dto. Maestro"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dto. Maestro';
         }
     }
 

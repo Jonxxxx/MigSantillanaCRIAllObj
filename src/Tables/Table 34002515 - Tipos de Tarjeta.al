@@ -7,10 +7,14 @@ table 34002515 "Tipos de Tarjeta"
     {
         field(34002500; Codigo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             Description = 'DsPOS Standar';
         }
         field(34002501; Descripcion; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
     }

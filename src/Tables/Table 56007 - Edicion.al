@@ -9,11 +9,13 @@ table 56007 Edicion
     {
         field(1;Codigo;Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
         field(2;Descripcion;Text[30])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

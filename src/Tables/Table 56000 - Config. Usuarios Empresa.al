@@ -5,11 +5,14 @@ table 56000 "Config. Usuarios Empresa"
     {
         field(1; "User ID"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'User ID';
             TableRelation = User."User Name";
         }
         field(2; "Allow to mod. Sales Price Docs"; Boolean)
         {
-            Caption = 'Allow to mod. Sales Price in Documents';
+            DataClassification = CustomerContent;
+            Caption = 'Allow to mod. Sales Price Docs';
         }
     }
 

@@ -6,13 +6,13 @@ table 34002208 "Headline RC Payroll"
     {
         field(1;"Key";Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Key';
-            DataClassification = SystemMetadata;
         }
         field(2;"Workdate for computations";Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Workdate for computations';
-            DataClassification = SystemMetadata;
         }
     }
 

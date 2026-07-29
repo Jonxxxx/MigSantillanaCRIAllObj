@@ -7,10 +7,14 @@ table 67006 "Promotor - Lista de Colegios"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
 
             trigger OnValidate()
@@ -24,6 +28,8 @@ table 67006 "Promotor - Lista de Colegios"
         }
         field(3; "Cod. Ruta"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Ruta';
             TableRelation = "Promotor - Rutas"."Cod. Ruta" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
 
             trigger OnValidate()
@@ -38,17 +44,24 @@ table 67006 "Promotor - Lista de Colegios"
         }
         field(4; "Nombre Promotor"; Text[60])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(6; "Nombre Ruta"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Ruta';
         }
         field(7; Seleccionar; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Seleccionar';
         }
     }
 

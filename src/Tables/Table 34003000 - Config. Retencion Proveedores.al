@@ -8,55 +8,68 @@ table 34003000 "Config. Retencion Proveedores"
     {
         field(1; "Codigo Retencion"; Code[20])
         {
-            Caption = 'Retention Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Retencion';
             NotBlank = true;
         }
         field(2; "Descripcion"; Text[30])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Cta. Contable"; Code[20])
         {
-            Caption = 'G/L Account';
+            DataClassification = CustomerContent;
+            Caption = 'Cta. Contable';
             TableRelation = "G/L Account";
         }
         field(4; "Base Calculo"; Option)
         {
-            Caption = 'Base';
+            DataClassification = CustomerContent;
+            Caption = 'Base Calculo';
             OptionMembers = ITBIS,"B. Imponible","Total Fra.",Ninguno;
         }
         field(5; Devengo; Option)
         {
-            Caption = 'Accrual';
+            DataClassification = CustomerContent;
+            Caption = 'Devengo';
             OptionMembers = "Facturacion",Pago;
         }
         field(6; "Importe Retencion"; Decimal)
         {
-            Caption = 'Retention Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe Retencion';
         }
         field(7; "Tipo Retencion"; Option)
         {
-            Caption = 'Retention Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Retencion';
             OptionMembers = Porcentaje,Importe;
         }
         field(8; "Aplica Productos"; Boolean)
         {
-            Caption = 'Apply Items';
+            DataClassification = CustomerContent;
+            Caption = 'Aplica Productos';
         }
         field(9; "Aplica Servicios"; Boolean)
         {
-            Caption = 'Apply Service';
+            DataClassification = CustomerContent;
+            Caption = 'Aplica Servicios';
         }
         field(10; "Retencion ITBIS"; Boolean)
         {
-            Caption = 'ITBIS Retention';
+            DataClassification = CustomerContent;
+            Caption = 'Retencion ITBIS';
         }
         field(50200; "Retencion Defecto Sub-Cont."; Boolean)
         {
-            Caption = 'Sub-Contract Default Retention';
+            DataClassification = CustomerContent;
+            Caption = 'Retencion Defecto Sub-Cont.';
         }
         field(34003000; "Tipo retencion ISR"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo retencion ISR';
             OptionCaption = ' ,01 - ALQUILERES,02 - HONORARIOS POR SERVICIOS,03 - OTRAS RENTAS,04 - OTRAS RENTAS (Rentas Presuntas),05 - INTERESES PAGADOS A PERSONAS JURIDICAS RESIDENTES,06 - INTERESES PAGADOS A PERSONAS FISICAS RESIDENTES,07 - RETENCION POR PROVEEDORES DEL ESTADO,08 - JUEGOS TELEFONICOS';
             OptionMembers = " ","01 - ALQUILERES","02 - HONORARIOS POR SERVICIOS","03 - OTRAS RENTAS","04 - OTRAS RENTAS (Rentas Presuntas)","05 - INTERESES PAGADOS A PERSONAS JURIDICAS RESIDENTES","06 - INTERESES PAGADOS A PERSONAS FISICAS RESIDENTES","07 - RETENCION POR PROVEEDORES DEL ESTADO","08 - JUEGOS TELEFONICOS";
         }

@@ -8,27 +8,32 @@ table 80001 "Tmp Sales Invoice Line"
     {
         field(2; "Sell-to Customer No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Sell-to Customer No.';
             Editable = false;
             TableRelation = Customer;
         }
         field(3; "Document No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document No.';
             TableRelation = "Sales Invoice Header";
         }
         field(4; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line No.';
         }
         field(5; Type; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Type';
             OptionCaption = ' ,G/L Account,Item,Resource,Fixed Asset,Charge (Item)';
             OptionMembers = " ","G/L Account",Item,Resource,"Fixed Asset","Charge (Item)";
         }
         field(6; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
             TableRelation = IF (Type = CONST("G/L Account")) "G/L Account"
             ELSE IF (Type = CONST(Item)) Item
@@ -38,11 +43,13 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(7; "Location Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Location Code';
             TableRelation = Location WHERE("Use As In-Transit" = CONST(false));
         }
         field(8; "Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Group';
             Editable = false;
             TableRelation = IF (Type = CONST(Item)) "Inventory Posting Group"
@@ -50,45 +57,54 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(10; "Shipment Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Shipment Date';
         }
         field(11; Description; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(12; "Description 2"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description 2';
         }
         field(13; "Unit of Measure"; Text[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure';
         }
         field(15; Quantity; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity';
             DecimalPlaces = 0 : 5;
         }
         field(22; "Unit Price"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Unit Price';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 2;
             CaptionClass = GetCaptionClass(FIELDNO("Unit Price"));
-            Caption = 'Unit Price';
         }
         field(23; "Unit Cost (LCY)"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Unit Cost (LCY)';
             AutoFormatType = 2;
-            Caption = 'Unit Cost ($)';
         }
         field(25; "VAT %"; Decimal)
         {
-            Caption = 'Tax %';
+            DataClassification = CustomerContent;
+            Caption = 'VAT %';
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
         field(27; "Line Discount %"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line Discount %';
             DecimalPlaces = 0 : 5;
             MaxValue = 100;
@@ -96,176 +112,210 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(28; "Line Discount Amount"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line Discount Amount';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Line Discount Amount';
         }
         field(29; Amount; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Amount';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Amount';
         }
         field(30; "Amount Including VAT"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Amount Including VAT';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Amount Including Tax';
         }
         field(32; "Allow Invoice Disc."; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Allow Invoice Disc.';
             InitValue = true;
         }
         field(34; "Gross Weight"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Gross Weight';
             DecimalPlaces = 0 : 5;
         }
         field(35; "Net Weight"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Net Weight';
             DecimalPlaces = 0 : 5;
         }
         field(36; "Units per Parcel"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Units per Parcel';
             DecimalPlaces = 0 : 5;
         }
         field(37; "Unit Volume"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit Volume';
             DecimalPlaces = 0 : 5;
         }
         field(38; "Appl.-to Item Entry"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Appl.-to Item Entry';
         }
         field(40; "Shortcut Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,2,1';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 1 Code';
+            CaptionClass = '1,2,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(41; "Shortcut Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,2,2';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 2 Code';
+            CaptionClass = '1,2,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(42; "Customer Price Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer Price Group';
             TableRelation = "Customer Price Group";
         }
         field(45; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
         }
         field(52; "Work Type Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Work Type Code';
             TableRelation = "Work Type";
         }
         field(63; "Shipment No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Shipment No.';
             Editable = false;
         }
         field(64; "Shipment Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Shipment Line No.';
             Editable = false;
         }
         field(68; "Bill-to Customer No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Bill-to Customer No.';
             Editable = false;
             TableRelation = Customer;
         }
         field(69; "Inv. Discount Amount"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Inv. Discount Amount';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Inv. Discount Amount';
         }
         field(73; "Drop Shipment"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Drop Shipment';
         }
         field(74; "Gen. Bus. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Bus. Posting Group';
             TableRelation = "Gen. Business Posting Group";
         }
         field(75; "Gen. Prod. Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Gen. Prod. Posting Group';
             TableRelation = "Gen. Product Posting Group";
         }
         field(77; "VAT Calculation Type"; Option)
         {
-            Caption = 'Tax Calculation Type';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Calculation Type';
             OptionCaption = 'Normal VAT,Reverse Charge VAT,Full VAT,Sales Tax';
             OptionMembers = "Normal VAT","Reverse Charge VAT","Full VAT","Sales Tax";
         }
         field(78; "Transaction Type"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Transaction Type';
             TableRelation = "Transaction Type";
         }
         field(79; "Transport Method"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Transport Method';
             TableRelation = "Transport Method";
         }
         field(80; "Attached to Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Attached to Line No.';
             TableRelation = "Sales Invoice Line"."Line No." WHERE("Document No." = FIELD("Document No."));
         }
         field(81; "Exit Point"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Exit Point';
             TableRelation = "Entry/Exit Point";
         }
         field(82; "Area"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Area';
             TableRelation = Area;
         }
         field(83; "Transaction Specification"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Transaction Specification';
             TableRelation = "Transaction Specification";
         }
         field(85; "Tax Area Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Area Code';
             TableRelation = "Tax Area";
         }
         field(86; "Tax Liable"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Liable';
         }
         field(87; "Tax Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Tax Group Code';
             TableRelation = "Tax Group";
         }
         field(89; "VAT Bus. Posting Group"; Code[10])
         {
-            Caption = 'Tax Bus. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Bus. Posting Group';
             TableRelation = "VAT Business Posting Group";
         }
         field(90; "VAT Prod. Posting Group"; Code[10])
         {
-            Caption = 'Tax Prod. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Prod. Posting Group';
             TableRelation = "VAT Product Posting Group";
         }
         field(97; "Blanket Order No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Blanket Order No.';
             TableRelation = "Sales Header"."No." WHERE("Document Type" = CONST("Blanket Order"));
             //This property is currently not supported
@@ -273,6 +323,7 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(98; "Blanket Order Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Blanket Order Line No.';
             TableRelation = "Sales Line"."Line No." WHERE("Document Type" = CONST("Blanket Order"),
                                                            "Document No." = FIELD("Blanket Order No."));
@@ -281,83 +332,98 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(99; "VAT Base Amount"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'VAT Base Amount';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Tax Base Amount';
             Editable = false;
         }
         field(100; "Unit Cost"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Unit Cost';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 2;
-            Caption = 'Unit Cost';
             Editable = false;
         }
         field(101; "System-Created Entry"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'System-Created Entry';
             Editable = false;
         }
         field(103; "Line Amount"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line Amount';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
             CaptionClass = GetCaptionClass(FIELDNO("Line Amount"));
-            Caption = 'Line Amount';
         }
         field(104; "VAT Difference"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'VAT Difference';
             AutoFormatExpression = GetCurrencyCode;
             AutoFormatType = 1;
-            Caption = 'Tax Difference';
         }
         field(106; "VAT Identifier"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'VAT Identifier';
             Editable = false;
         }
         field(107; "IC Partner Ref. Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'IC Partner Ref. Type';
             OptionCaption = ' ,G/L Account,Item,,,Charge (Item),Cross reference,Common Item No.';
             OptionMembers = " ","G/L Account",Item,,,"Charge (Item)","Cross reference","Common Item No.";
         }
         field(108; "IC Partner Reference"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'IC Partner Reference';
         }
         field(123; "Prepayment Line"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Prepayment Line';
             Editable = false;
         }
         field(130; "IC Partner Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'IC Partner Code';
             TableRelation = "IC Partner";
         }
         field(131; "Posting Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Date';
         }
         field(1001; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             Editable = false;
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
         }
         field(1002; "Job Contract Entry No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Contract Entry No.';
             Editable = false;
         }
         field(5402; "Variant Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Variant Code';
             TableRelation = IF (Type = CONST(Item)) "Item Variant".Code WHERE("Item No." = FIELD("No."));
         }
         field(5403; "Bin Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Bin Code';
             TableRelation = Bin.Code WHERE("Location Code" = FIELD("Location Code"),
                                             "Item Filter" = FIELD("No."),
@@ -365,12 +431,14 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(5404; "Qty. per Unit of Measure"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Qty. per Unit of Measure';
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
         field(5407; "Unit of Measure Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure Code';
             TableRelation = IF (Type = CONST(Item)) "Item Unit of Measure".Code WHERE("Item No." = FIELD("No."))
             ELSE
@@ -378,158 +446,198 @@ table 80001 "Tmp Sales Invoice Line"
         }
         field(5415; "Quantity (Base)"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity (Base)';
             DecimalPlaces = 0 : 5;
         }
         field(5600; "FA Posting Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'FA Posting Date';
         }
         field(5602; "Depreciation Book Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Depreciation Book Code';
             TableRelation = "Depreciation Book";
         }
         field(5605; "Depr. until FA Posting Date"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Depr. until FA Posting Date';
         }
         field(5612; "Duplicate in Depreciation Book"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Duplicate in Depreciation Book';
             TableRelation = "Depreciation Book";
         }
         field(5613; "Use Duplication List"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Use Duplication List';
         }
         field(5700; "Responsibility Center"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Responsibility Center';
             TableRelation = "Responsibility Center";
         }
         field(5705; "Cross-Reference No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cross-Reference No.';
         }
         field(5706; "Unit of Measure (Cross Ref.)"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure (Cross Ref.)';
             TableRelation = IF (Type = CONST(Item)) "Item Unit of Measure".Code WHERE("Item No." = FIELD("No."));
         }
         field(5707; "Cross-Reference Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Cross-Reference Type';
             OptionCaption = ' ,Customer,Vendor,Bar Code';
             OptionMembers = " ",Customer,Vendor,"Bar Code";
         }
         field(5708; "Cross-Reference Type No."; Code[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cross-Reference Type No.';
         }
         field(5709; "Item Category Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item Category Code';
             TableRelation = IF (Type = CONST(Item)) "Item Category";
         }
         field(5710; Nonstock; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Nonstock';
         }
         field(5711; "Purchasing Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Purchasing Code';
             TableRelation = Purchasing;
         }
         field(5712; "Product Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Product Group Code';
             TableRelation = "Item Category".Code where("Parent Category" = field("Item Category Code"));
         }
         field(5811; "Appl.-from Item Entry"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Appl.-from Item Entry';
             MinValue = 0;
         }
         field(6608; "Return Reason Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Return Reason Code';
             TableRelation = "Return Reason";
         }
         field(7001; "Allow Line Disc."; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Allow Line Disc.';
             InitValue = true;
         }
         field(7002; "Customer Disc. Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer Disc. Group';
             TableRelation = "Customer Discount Group";
         }
         field(10000; "Package Tracking No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Package Tracking No.';
         }
         field(25000; "Kit Item"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Kit Item';
         }
         field(25001; "Build Kit"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Build Kit';
         }
         field(50014; "Cod. Cupon"; Code[20])
         {
-            Caption = 'Coupon Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cupon';
         }
         field(50015; "No. Linea Cupon"; Integer)
         {
-            Caption = 'Coupon Line No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea Cupon';
         }
         field(34002500; "Anulada en TPV"; Boolean)
         {
-            Caption = 'POS Void';
+            DataClassification = CustomerContent;
+            Caption = 'Anulada en TPV';
         }
         field(34002501; "Precio anulacion TPV"; Decimal)
         {
-            Caption = 'Void POS Price';
+            DataClassification = CustomerContent;
+            Caption = 'Precio anulacion TPV';
         }
         field(34002502; "Cantidad anulacion TPV"; Decimal)
         {
-            Caption = 'Void POS Qty.';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad anulacion TPV';
         }
         field(34002503; "Cantidad agregada"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad agregada';
         }
         field(34002504; "Cod. Vendedor"; Code[20])
         {
-            Caption = 'Salesperson Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Vendedor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(34002505; "Tipo Documento Replicador"; Option)
         {
-            Caption = 'Replicator Document Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Documento Replicador';
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order,Pre Order';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order","Pre Order";
         }
         field(34002506; "No. Pedido Replicador"; Code[20])
         {
-            Caption = 'Replicator Order No';
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido Replicador';
         }
         field(34002507; "Cantidad 1 Replicador"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad 1 Replicador';
             Description = 'Para Replicador';
         }
         field(34002508; "Cantidad 2 Replicador"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad 2 Replicador';
             Description = 'Para Replicador';
         }
         field(34002509; "Cantidad 3 Replicador"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad 3 Replicador';
             Description = 'Para Replicador';
         }
         field(34002510; "Cantidad 4 Replicador"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad 4 Replicador';
             Description = 'Para Replicador';
         }
     }

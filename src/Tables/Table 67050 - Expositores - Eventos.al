@@ -6,6 +6,8 @@ table 67050 "Expositores - Eventos"
     {
         field(1; "Cod. Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Expositor';
             TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
 
@@ -30,21 +32,31 @@ table 67050 "Expositores - Eventos"
         }
         field(2; "Cod. Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Evento';
             TableRelation = Eventos."No.";
         }
         field(3; "Nombre Expositor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Expositor';
             Editable = false;
         }
         field(4; "Descripcion Evento"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Evento';
             Editable = false;
         }
         field(5; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
         }
         field(6; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnValidate()
             begin
@@ -62,11 +74,15 @@ table 67050 "Expositores - Eventos"
         }
         field(7; "Tipo de Expositor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Expositor';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(8; "Tipo de Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Evento';
         }
     }
 

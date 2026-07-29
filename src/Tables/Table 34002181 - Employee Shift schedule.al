@@ -8,25 +8,31 @@ table 34002181 "Employee Shift schedule"
     {
         field(1; "Employee code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee code';
             TableRelation = Employee;
         }
         field(2; "Codigo turno"; Code[10])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo turno';
             TableRelation = Shift;
         }
         field(3; "Fecha inicial"; Date)
         {
-            Caption = ' From date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inicial';
         }
         field(5; "Full Name"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full Name';
             Editable = false;
         }
         field(6; "Fecha final"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha final';
         }
     }
 

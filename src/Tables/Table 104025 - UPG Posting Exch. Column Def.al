@@ -6,15 +6,23 @@ table 104025 "UPG Posting Exch. Column Def"
     {
         field(1;"Posting Exch. Def Code";Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Posting Exch. Def Code';
         }
         field(2;"Column No.";Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Column No.';
         }
         field(9;Multiplier;Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Multiplier';
         }
         field(10;"Posting Exch. Line Def Code";Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Posting Exch. Line Def Code';
         }
     }
 

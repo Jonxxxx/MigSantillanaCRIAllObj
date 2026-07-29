@@ -6,26 +6,37 @@ table 34002115 "Perfil Salarial"
     {
         field(1; "Empresa cotizacion"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Empresa cotizacion';
         }
         field(2; "No. empleado"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             Editable = false;
             TableRelation = Employee;
         }
         field(3; "Perfil salarial"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Perfil salarial';
             Editable = false;
         }
         field(4; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(5; Cargo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cargo';
             TableRelation = "Puestos laborales";
         }
         field(6; "Concepto salarial"; Code[20])
         {
-            Caption = 'Wage Code';
+            DataClassification = CustomerContent;
+            Caption = 'Concepto salarial';
             NotBlank = true;
             TableRelation = "Conceptos salariales".Codigo;
 
@@ -52,9 +63,13 @@ table 34002115 "Perfil Salarial"
         }
         field(7; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(8; Cantidad; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -73,6 +88,8 @@ table 34002115 "Perfil Salarial"
         }
         field(9; Importe; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             DecimalPlaces = 2 : 4;
 
             trigger OnValidate()
@@ -147,11 +164,15 @@ table 34002115 "Perfil Salarial"
         }
         field(10; "Tipo concepto"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo concepto';
             Description = 'Ingresos,Deducciones';
             OptionMembers = Ingresos,Deducciones;
         }
         field(11; "Sujeto Cotizacion"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sujeto Cotizacion';
 
             trigger OnValidate()
             begin
@@ -161,6 +182,8 @@ table 34002115 "Perfil Salarial"
         }
         field(12; "Cotiza ISR"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza ISR';
             CaptionClass = '4,3,1';
             InitValue = false;
 
@@ -172,12 +195,18 @@ table 34002115 "Perfil Salarial"
         }
         field(13; "Texto Informativo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto Informativo';
         }
         field(14; Prorratear; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Prorratear';
         }
         field(15; "Formula Calculo"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Formula Calculo';
 
             trigger OnLookup()
             begin
@@ -250,12 +279,18 @@ table 34002115 "Perfil Salarial"
         }
         field(16; "Periodo generac."; Code[8])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Periodo generac.';
         }
         field(17; Imprimir; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Imprimir';
         }
         field(18; "Inicio Periodo"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Inicio Periodo';
 
             trigger OnValidate()
             begin
@@ -265,63 +300,95 @@ table 34002115 "Perfil Salarial"
         }
         field(19; "Fin Periodo"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fin Periodo';
         }
         field(20; Mes; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes';
         }
         field(21; "Mes Inicio"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes Inicio';
         }
         field(22; "Mes Fin"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes Fin';
         }
         field(23; "Deducir dias"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Deducir dias';
         }
         field(24; "1ra Quincena"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = '1ra Quincena';
         }
         field(25; "2da Quincena"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = '2da Quincena';
         }
         field(26; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionMembers = Activo,Baja;
         }
         field(27; "Tipo Nomina"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Nomina';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
             OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
         field(28; "Cotiza AFP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza AFP';
             CaptionClass = '4,4,1';
         }
         field(29; "Cotiza SFS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SFS';
             CaptionClass = '4,5,1';
         }
         field(30; "Salario Base"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Salario Base';
             Editable = false;
         }
         field(31; "Currency Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Currency Code';
             TableRelation = Currency;
         }
         field(32; "% ISR Pago Empleado"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% ISR Pago Empleado';
         }
         field(33; "Cotiza INFOTEP"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza INFOTEP';
             CaptionClass = '4,6,1';
         }
         field(34; "% Retencion Ingreso Salario"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Retencion Ingreso Salario';
         }
         field(35; "Importe Acumulado"; Decimal)
         {
+            Caption = 'Importe Acumulado';
             CalcFormula = Sum("Historico Lin. nomina".Total WHERE("No. empleado" = FIELD("No. empleado"),
                                                                    Periodo = FIELD("Filtro Fecha"),
                                                                    "Concepto salarial" = FIELD("Concepto salarial")));
@@ -329,20 +396,24 @@ table 34002115 "Perfil Salarial"
         }
         field(36; "Filtro Fecha"; Date)
         {
+            Caption = 'Filtro Fecha';
             FieldClass = FlowFilter;
         }
         field(37; "Cotiza SRL"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza SRL';
             CaptionClass = '4,7,1';
         }
         field(38; "Aplica para Regalia"; Boolean)
         {
-            Caption = 'Apply for EOY Salary';
+            DataClassification = CustomerContent;
+            Caption = 'Aplica para Regalia';
         }
         field(40; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
-            DataClassification = ToBeClassified;
             TableRelation = Job;
 
             trigger OnValidate()
@@ -354,21 +425,26 @@ table 34002115 "Perfil Salarial"
         }
         field(42; "Cotiza FICA"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cotiza FICA';
             CaptionClass = '4,8,1';
         }
         field(46; "Excluir de listados"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Excluir de listados';
             Description = 'Bolivia';
         }
         field(47; "Tipo de nomina"; Code[20])
         {
-            Caption = 'Payroll type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de nomina';
             TableRelation = "Tipos de nominas";
         }
         field(48; Comentario; Text[100])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Comentario';
         }
     }
 

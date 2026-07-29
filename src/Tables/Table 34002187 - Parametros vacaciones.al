@@ -7,13 +7,13 @@ table 34002187 "Parametros vacaciones"
     {
         field(1;Desde;Integer)
         {
-            Caption = 'Years from';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Desde';
         }
         field(2;"Cantidad de dias";Integer)
         {
-            Caption = 'Quantity of days';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de dias';
         }
     }
 

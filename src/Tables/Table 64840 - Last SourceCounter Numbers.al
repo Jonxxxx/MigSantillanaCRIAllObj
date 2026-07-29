@@ -5,9 +5,13 @@ table 64840 "Last SourceCounter Numbers"
     {
         field(1;TableNumber;Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'TableNumber';
         }
         field(2;"Last SourceCounter";BigInteger)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Last SourceCounter';
         }
     }
 

@@ -5,6 +5,7 @@ table 34002171 "Relacion Empleados - Proyectos"
     {
         field(1; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
             NotBlank = true;
             TableRelation = Employee;
@@ -17,6 +18,7 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(2; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
             TableRelation = Job;
 
@@ -28,19 +30,22 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(3; "Job Task No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Task No.';
             TableRelation = "Job Task"."Job Task No." WHERE("Job No." = FIELD("Job No."));
         }
         field(4; "Job Line Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Line Type';
             OptionCaption = ' ,Schedule,Contract,Both Schedule and Contract';
             OptionMembers = " ",Schedule,Contract,"Both Schedule and Contract";
         }
         field(5; "Job Unit Price"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Job Unit Price';
+            BlankZero = true;
         }
         field(6; "Job Description"; Text[60])
         {
@@ -50,13 +55,14 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(7; "Job Task Name"; Text[60])
         {
+            Caption = 'Job Task Name';
             CalcFormula = Lookup("Job Task".Description WHERE("Job No." = FIELD("Job No."),
                                                               "Job Task No." = FIELD("Job Task No.")));
-            Caption = 'Job Task No.';
             FieldClass = FlowField;
         }
         field(8; "% to distribute"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = '% to distribute';
 
             trigger OnValidate()
@@ -82,7 +88,8 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(9; "Concepto salarial"; Code[20])
         {
-            Caption = 'Wage Code';
+            DataClassification = CustomerContent;
+            Caption = 'Concepto salarial';
             TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
@@ -93,7 +100,8 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(10; Precio; Decimal)
         {
-            Caption = 'Unit price';
+            DataClassification = CustomerContent;
+            Caption = 'Precio';
         }
         field(11; "Full name"; Text[60])
         {
@@ -104,7 +112,8 @@ table 34002171 "Relacion Empleados - Proyectos"
         }
         field(12; "Descripcion concepto"; Text[60])
         {
-            Caption = 'Wage description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion concepto';
             Editable = false;
         }
     }

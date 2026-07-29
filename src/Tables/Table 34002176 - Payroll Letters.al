@@ -8,10 +8,12 @@ table 34002176 "Payroll Letters"
     {
         field(1; "Code"; Code[20])
         {
-            Caption = 'ID';
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(2; "Report ID"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Report ID';
             TableRelation = AllObjWithCaption."Object ID" WHERE("Object Type" = CONST(Report));
 
@@ -37,11 +39,13 @@ table 34002176 "Payroll Letters"
         }
         field(4; "Company Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Company Name';
             TableRelation = Company;
         }
         field(6; Type; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Type';
             InitValue = Word;
             OptionCaption = 'RDLC,Word';
@@ -49,35 +53,41 @@ table 34002176 "Payroll Letters"
         }
         field(7; "Layout"; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Layout';
         }
         field(8; "Last Modified"; DateTime)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Modified';
             Editable = false;
         }
         field(9; "Last Modified by User"; Code[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Modified by User';
             Editable = false;
         }
         field(10; "File Extension"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'File Extension';
             Editable = false;
         }
         field(11; Description; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(12; "Custom XML Part"; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Custom XML Part';
         }
         field(13; Publish; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Publish';
-            DataClassification = ToBeClassified;
         }
     }
 

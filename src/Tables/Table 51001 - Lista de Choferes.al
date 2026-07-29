@@ -7,18 +7,28 @@ table 51001 "Lista de Choferes"
     {
         field(1; Codigo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Nombre Completo"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Completo';
         }
         field(3; "ID de la Empresa"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID de la Empresa';
         }
         field(4; "ID Documento"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Documento';
         }
         field(5; Telefono; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Telefono';
         }
     }
 

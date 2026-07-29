@@ -7,15 +7,18 @@ table 80010 "Tmp Posted Deposit Line"
     {
         field(1; "Deposit No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Deposit No.';
             TableRelation = "Posted Deposit Header";
         }
         field(2; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line No.';
         }
         field(3; "Account Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Account Type';
             InitValue = Customer;
             OptionCaption = 'G/L Account,Customer,Vendor,Bank Account,,IC Partner';
@@ -23,6 +26,7 @@ table 80010 "Tmp Posted Deposit Line"
         }
         field(4; "Account No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Account No.';
             TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Account"
             ELSE IF ("Account Type" = CONST(Customer)) Customer
@@ -32,37 +36,44 @@ table 80010 "Tmp Posted Deposit Line"
         }
         field(5; "Document Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Date';
         }
         field(6; "Document Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Type';
             OptionCaption = ' ,Payment,,,,,Refund';
             OptionMembers = " ",Payment,,,,,Refund;
         }
         field(7; "Document No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document No.';
         }
         field(8; Description; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(9; "Currency Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Currency Code';
             Editable = false;
             TableRelation = Currency;
         }
         field(10; Amount; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Amount';
             AutoFormatExpression = "Currency Code";
             AutoFormatType = 1;
-            Caption = 'Amount';
             MinValue = 0;
         }
         field(11; "Posting Group"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Group';
             Editable = false;
             TableRelation = IF ("Account Type" = CONST(Customer)) "Customer Posting Group"
@@ -70,27 +81,32 @@ table 80010 "Tmp Posted Deposit Line"
         }
         field(12; "Shortcut Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,2,1';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 1 Code';
+            CaptionClass = '1,2,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
         }
         field(13; "Shortcut Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,2,2';
+            DataClassification = CustomerContent;
             Caption = 'Shortcut Dimension 2 Code';
+            CaptionClass = '1,2,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
         }
         field(14; "Posting Date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Posting Date';
         }
         field(15; "Bank Account Ledger Entry No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Bank Account Ledger Entry No.';
             TableRelation = "Bank Account Ledger Entry";
         }
         field(16; "Entry No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Entry No.';
             TableRelation = IF ("Account Type" = CONST("G/L Account")) "G/L Entry"
             ELSE IF ("Account Type" = CONST(Customer)) "Cust. Ledger Entry"

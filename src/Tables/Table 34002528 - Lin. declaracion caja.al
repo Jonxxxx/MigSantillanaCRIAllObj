@@ -8,25 +8,30 @@ table 34002528 "Lin. declaracion caja"
     {
         field(10; "No. tienda"; Code[20])
         {
-            Caption = 'Store No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. tienda';
             TableRelation = Tiendas;
         }
         field(20; "No. TPV"; Code[20])
         {
-            Caption = 'POS Terminal No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. TPV';
             TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("No. tienda"));
         }
         field(25; Fecha; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Fecha';
         }
         field(30; "No. turno"; Integer)
         {
-            Caption = 'Receipt No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. turno';
         }
         field(40; "Forma de pago"; Code[10])
         {
-            Caption = 'Tender Type';
+            DataClassification = CustomerContent;
+            Caption = 'Forma de pago';
             TableRelation = "Formas de Pago";
 
             trigger OnValidate()
@@ -46,12 +51,14 @@ table 34002528 "Lin. declaracion caja"
         }
         field(50; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             TableRelation = "Formas de Pago".Descripcion WHERE("ID Pago" = FIELD("Forma de pago"));
         }
         field(60; "Cod. divisa"; Code[10])
         {
-            Caption = 'Currency Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
 
             trigger OnValidate()
             var
@@ -66,11 +73,13 @@ table 34002528 "Lin. declaracion caja"
         }
         field(70; "Factor divisa"; Decimal)
         {
-            Caption = 'Real Exchange Rate';
+            DataClassification = CustomerContent;
+            Caption = 'Factor divisa';
             DecimalPlaces = 0 : 5;
         }
         field(80; "Importe calculado"; Decimal)
         {
+            Caption = 'Importe calculado';
 
             /*
             CalcFormula = Sum("Transacciones Caja TPV".Importe WHERE("Cod. tienda" = FIELD("No. tienda"),
@@ -78,11 +87,11 @@ table 34002528 "Lin. declaracion caja"
                                                                       Fecha = FIELD("Fecha"),
                                                                       "No. turno" = FIELD("No. turno"),
                                                                       "de pago" = FIELD("Forma de pago")));*/
-            Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
         field(90; "Importe calculado (DL)"; Decimal)
         {
+            Caption = 'Importe calculado (DL)';
 
             /*
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("No. tienda"),
@@ -90,12 +99,12 @@ table 34002528 "Lin. declaracion caja"
                                                                              Fecha = FIELD("Fecha"),
                                                                              "No. turno" = FIELD("No. turno"),
                                                                              "de pago" = FIELD("Forma de pago")));*/
-            Caption = 'Trans. Amount in LCY';
             FieldClass = FlowField;
         }
         field(100; "Importe contado"; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe contado';
             MinValue = 0;
 
             trigger OnLookup()
@@ -121,16 +130,20 @@ table 34002528 "Lin. declaracion caja"
         }
         field(110; "Importe contado (DL)"; Decimal)
         {
-            Caption = 'Amount in LCY';
+            DataClassification = CustomerContent;
+            Caption = 'Importe contado (DL)';
             DecimalPlaces = 2 : 2;
             Editable = false;
         }
         field(140; "Requiere recueto"; Boolean)
         {
-            Caption = 'Requiere recuento';
+            DataClassification = CustomerContent;
+            Caption = 'Requiere recueto';
         }
         field(34002518; "Id Replicacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
     }

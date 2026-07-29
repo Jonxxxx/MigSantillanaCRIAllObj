@@ -8,11 +8,15 @@ table 34003053 "_Dimensiones POS"
     {
         field(10; Dimension; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dimension';
             NotBlank = true;
             TableRelation = Dimension;
         }
         field(20; "Valor dimension"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor dimension';
             NotBlank = true;
             TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Dimension"));
         }

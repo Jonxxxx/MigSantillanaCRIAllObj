@@ -5,24 +5,35 @@ table 67079 "Seguimiento Solicitud TE"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "No. Cambio"; Integer)
         {
-            Caption = 'No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Cambio';
         }
         field(3; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionCaption = ' ,Enviada por promotor,Aprobada,Programada,Cancelada,Rechazada,Realizada';
             OptionMembers = " ","Enviada por promotor",Aprobada,Programada,Cancelada,Rechazada,Realizada;
         }
         field(4; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(5; Usuario; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
         }
         field(6; Hora; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
     }
 

@@ -6,42 +6,49 @@ table 70512 "Precios por Cliente_Producto"
     {
         field(1; "No. producto"; Code[20])
         {
-            Caption = 'Item No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. producto';
             NotBlank = true;
             TableRelation = Item;
         }
         field(2; "Codigo ventas"; Code[20])
         {
-            Caption = 'Sales Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo ventas';
             TableRelation = IF ("Tipo Venta" = CONST("Customer Price Group")) "Customer Price Group"
             ELSE IF ("Tipo Venta" = CONST(Customer)) Customer
             ELSE IF ("Tipo Venta" = CONST(Campaign)) Campaign;
         }
         field(3; "Cod. Divisa"; Code[10])
         {
-            Caption = 'Currency Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Divisa';
             TableRelation = Currency;
         }
         field(4; "Fecha Inicial"; Date)
         {
-            Caption = 'Starting Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicial';
         }
         field(5; Precio; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Precio';
             AutoFormatExpression = "Cod. Divisa";
             AutoFormatType = 2;
-            Caption = 'Unit Price';
             MinValue = 0;
         }
         field(13; "Tipo Venta"; Option)
         {
-            Caption = 'Sales Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Venta';
             OptionCaption = 'Customer,Customer Price Group,All Customers,Campaign';
             OptionMembers = Customer,"Customer Price Group","All Customers",Campaign;
         }
         field(15; "Fecha Final"; Date)
         {
-            Caption = 'Ending Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Final';
         }
     }
 

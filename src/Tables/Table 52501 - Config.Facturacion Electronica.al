@@ -5,10 +5,14 @@ table 52501 "Config.Facturacion Electronica"
     {
         field(1; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionMembers = Config,Serie,Opcion,Unidad,"Forma Pago","Cond Pago";
         }
         field(2; Relacion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Relacion';
             TableRelation = IF (Tipo = CONST(Serie)) "No. Series".Code
             ELSE IF (Tipo = CONST(Unidad)) "Unit of Measure".Code
             ELSE IF (Tipo = CONST("Forma Pago")) "Payment Method".Code
@@ -16,15 +20,23 @@ table 52501 "Config.Facturacion Electronica"
         }
         field(3; Campo; Code[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Campo';
         }
         field(4; Descripcion; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; Valor; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor';
         }
         field(6; "Tipo de Documento"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Documento';
             OptionMembers = " ",FE,NC,ND,TE,MA,MP,MR,FEC;
         }
     }

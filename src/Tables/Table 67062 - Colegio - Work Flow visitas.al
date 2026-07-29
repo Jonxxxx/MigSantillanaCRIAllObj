@@ -5,13 +5,19 @@ table 67062 "Colegio - Work Flow visitas"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = "Contact Alt. Addr. Date Range";
         }
         field(2; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
         }
         field(3; Resultado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Resultado';
 
             trigger OnValidate()
             var
@@ -24,15 +30,23 @@ table 67062 "Colegio - Work Flow visitas"
         }
         field(4; Programado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Programado';
         }
         field(5; Paso; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Paso';
         }
         field(6; Detalle; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Detalle';
         }
         field(7; Mantenimiento; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mantenimiento';
 
             trigger OnValidate()
             var
@@ -45,6 +59,8 @@ table 67062 "Colegio - Work Flow visitas"
         }
         field(8; Conquista; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Conquista';
 
             trigger OnValidate()
             var
@@ -57,9 +73,13 @@ table 67062 "Colegio - Work Flow visitas"
         }
         field(9; "Area"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Area';
         }
         field(10; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
     }

@@ -7,6 +7,8 @@ table 75007 "Conversion NAV MdM"
     {
         field(1; "Tipo Registro"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Registro';
             OptionMembers = "Codigo Producto",ISBN,"ISBN Tramitado",EAN,"Encuadernacion",Sello,Idioma,"Serie/M todo",Autor,"Formato Digital","Peso Digital Unidad","Tipo Protecci n","Pais","Edicion",Destino,Cuenta,Estado,"Tipo Texto",Materia,"Nivel Escolar","Carga Horaria",Origen,"Art culo Pack","Vida util","Campana";
 
             trigger OnValidate()
@@ -16,6 +18,8 @@ table 75007 "Conversion NAV MdM"
         }
         field(2; "Codigo MdM"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo MdM';
 
             trigger OnValidate()
             var
@@ -44,6 +48,8 @@ table 75007 "Conversion NAV MdM"
         }
         field(3; "Codigo NAV"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo NAV';
             //TODO Ver: 
             /*
             TableRelation = IF ("Tipo registro" = CONST("Codigo Producto")) Item.No.
@@ -82,6 +88,7 @@ table 75007 "Conversion NAV MdM"
         }
         field(100; "Dim Code Filter"; Code[20])
         {
+            Caption = 'Dim Code Filter';
             Description = 'Flowfilter';
             FieldClass = FlowFilter;
         }

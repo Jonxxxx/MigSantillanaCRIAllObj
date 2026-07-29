@@ -6,9 +6,12 @@ table 56025 "Cab. clas. devolucion"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
         }
         field(2; "Customer no."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer no.';
             TableRelation = Customer;
 
@@ -33,49 +36,58 @@ table 56025 "Cab. clas. devolucion"
         }
         field(3; "Customer name"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer name';
         }
         field(4; "Receipt date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Receipt date';
         }
         field(5; Closed; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Closed';
         }
         field(6; "User ID"; Code[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'User ID';
             TableRelation = User."User Name";
         }
         field(7; "Closing Datetime"; DateTime)
         {
+            DataClassification = CustomerContent;
             Caption = 'Closing Datetime';
         }
         field(8; "External document no."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'External document no.';
         }
         field(9; Procesada; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Procesada';
         }
         field(10; Comentario; Boolean)
         {
+            Caption = 'Comentario';
             CalcFormula = Exist("Clas. dev. Comment Line" WHERE("No." = FIELD("No.")));
-            Caption = 'Comment';
             Editable = false;
             FieldClass = FlowField;
         }
         field(11; "Cod. Almacen"; Code[20])
         {
-            Caption = 'Location Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Almacen';
             TableRelation = Location;
         }
         field(12; "Dev. Trans. generadas"; Integer)
         {
+            Caption = 'Dev. Trans. generadas';
             CalcFormula = Count("Docs. clas. devoluciones" WHERE("Tipo documento" = CONST(Transferencia),
                                                                   "No. clas. devoluciones" = FIELD("No.")));
-            Caption = 'Dev. transferencia generadas';
             FieldClass = FlowField;
         }
         field(13; "Dev. ventas generadas"; Integer)
@@ -87,11 +99,13 @@ table 56025 "Cab. clas. devolucion"
         }
         field(14; "Usuario clasificacion"; Code[20])
         {
-            Caption = 'Usuario clasificaci n';
+            DataClassification = CustomerContent;
+            Caption = 'Usuario clasificacion';
         }
         field(15; "Fecha hora clasificacion"; DateTime)
         {
-            Caption = 'Fecha hora clasificaci n';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha hora clasificacion';
         }
     }
 

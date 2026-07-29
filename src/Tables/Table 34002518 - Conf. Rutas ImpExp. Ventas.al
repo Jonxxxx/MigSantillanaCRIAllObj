@@ -6,23 +6,27 @@ table 34002518 "Conf. Rutas Imp/Exp. Ventas"
     {
         field(1;"Cod. Tienda";Code[20])
         {
-            Caption = 'Store Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Tienda';
             NotBlank = true;
             TableRelation = "Bancos tienda";
         }
         field(2;"Ruta Importa Ventas";Text[200])
         {
-            Caption = 'Sales Import Path';
+            DataClassification = CustomerContent;
+            Caption = 'Ruta Importa Ventas';
         }
         field(3;Direccion;Option)
         {
-            Caption = 'Direction';
+            DataClassification = CustomerContent;
+            Caption = 'Direccion';
             OptionCaption = 'Export,Import';
             OptionMembers = Exporta,Importa;
         }
         field(4;"Cod. Tienda Destino";Code[20])
         {
-            Caption = 'Object Store Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Tienda Destino';
             TableRelation = "Bancos tienda";
         }
     }

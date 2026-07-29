@@ -8,7 +8,8 @@ table 34002106 "Param. Inic. Conceptos Sal."
     {
         field(1; Codigo; Code[20])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
@@ -23,22 +24,26 @@ table 34002106 "Param. Inic. Conceptos Sal."
         }
         field(2; Descripcion; Text[60])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Tipo concepto"; Option)
         {
-            Caption = 'Wedge type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo concepto';
             Description = 'Ingresos,Deducciones,Bases';
             OptionCaption = 'Income,Deduction';
             OptionMembers = Ingresos,Deducciones;
         }
         field(4; "Inicializa Cantidad"; Boolean)
         {
-            Caption = 'Clear Quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Inicializa Cantidad';
         }
         field(5; "Inicializa Importe"; Boolean)
         {
-            Caption = 'Clear Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Inicializa Importe';
 
             trigger OnValidate()
             begin

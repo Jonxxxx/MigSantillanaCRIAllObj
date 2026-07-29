@@ -7,11 +7,14 @@ table 75009 "Conf. Estructura Analitica"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
             AutoIncrement = true;
             Editable = false;
         }
         field(10; Codigo; Code[21])
         {
+            DataClassification = CustomerContent;
             Caption = 'Codigo';
             TableRelation = "Estructura Analitica";
         }
@@ -31,8 +34,9 @@ table 75009 "Conf. Estructura Analitica"
         }
         field(100; "Id Field"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Field';
             BlankZero = true;
-            Caption = 'Campo';
             TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27),
                                                                     "Field No" = FILTER(56022));
             //This property is currently not supported
@@ -52,14 +56,16 @@ table 75009 "Conf. Estructura Analitica"
         }
         field(101; FieldName; Text[30])
         {
+            Caption = 'FieldName';
             CalcFormula = Lookup(Field."Field Caption" WHERE("TableNo" = CONST(27),
                                                               "No." = FIELD("Id Field")));
-            Caption = 'Nombre Campo';
             Editable = false;
             FieldClass = FlowField;
         }
         field(110; Valor; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Valor';
             TableRelation = "Filtro Valor Campo Buffer".Value WHERE("Table Id" = CONST(27),
                                                                      "Field No" = FIELD("Id Field"));
             //This property is currently not supported

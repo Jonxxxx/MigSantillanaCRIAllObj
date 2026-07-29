@@ -9,20 +9,27 @@ table 75012 "Valores Filtros Tipologia MdM"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
         }
         field(2; "Id Filtro"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Filtro';
         }
         field(3; "Code"; Code[20])
         {
-            Caption = 'Codigo';
+            DataClassification = CustomerContent;
+            Caption = 'Code';
         }
         field(5; Description; Text[50])
         {
-            Caption = 'Descripcion';
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
         field(10; "Filtro Tipologia"; Code[10])
         {
+            Caption = 'Filtro Tipologia';
             Description = 'FlowFilter';
             FieldClass = FlowFilter;
             TableRelation = "Item Category";

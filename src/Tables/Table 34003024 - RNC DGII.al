@@ -7,8 +7,8 @@ table 34003024 "RNC DGII"
     {
         field(1; "VAT Registration No."; Text[20])
         {
-            Caption = 'Tax Registration No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'VAT Registration No.';
 
             trigger OnValidate()
             var
@@ -20,8 +20,8 @@ table 34003024 "RNC DGII"
         }
         field(2; Name; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             begin
@@ -30,8 +30,8 @@ table 34003024 "RNC DGII"
         }
         field(3; "Search Name"; Code[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             begin
@@ -40,39 +40,48 @@ table 34003024 "RNC DGII"
         }
         field(4; "Campo 4"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 4';
         }
         field(5; "Campo 5"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 5';
         }
         field(6; "Campo 6"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 6';
         }
         field(7; "Campo 7"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 7';
         }
         field(8; "Campo 8"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Campo 8';
         }
         field(9; "Fecha Registro DGII"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro DGII';
         }
         field(10; Estado; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
         }
         field(11; Tipo; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
         }
         field(12; "Fecha Registro Nav"; DateTime)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro Nav';
         }
     }
 

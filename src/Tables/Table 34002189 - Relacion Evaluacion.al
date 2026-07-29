@@ -8,11 +8,13 @@ table 34002189 "Relacion Evaluacion"
     {
         field(1; "Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code';
             NotBlank = true;
         }
         field(2; Description; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
         field(3; "No. of Contacts"; Integer)

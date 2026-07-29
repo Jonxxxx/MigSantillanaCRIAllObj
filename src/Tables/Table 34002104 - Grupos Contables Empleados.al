@@ -8,13 +8,18 @@ table 34002104 "Grupos Contables Empleados"
     {
         field(1; "Codigo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Excluir contabilizacion"; Boolean)
         {
-            Caption = 'Exclude from G/L Post';
+            DataClassification = CustomerContent;
+            Caption = 'Excluir contabilizacion';
         }
     }
 

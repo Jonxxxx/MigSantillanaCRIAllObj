@@ -9,6 +9,7 @@ table 67001 Docentes
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
 
             trigger OnValidate()
@@ -22,9 +23,12 @@ table 67001 Docentes
         }
         field(2; "No. 2"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. 2';
         }
         field(3; "Full Name"; Text[70])
         {
+            DataClassification = CustomerContent;
             Caption = 'Full Name';
 
             trigger OnValidate()
@@ -34,22 +38,27 @@ table 67001 Docentes
         }
         field(4; "Search Name"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(5; "Name 2"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name 2';
         }
         field(6; Address; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(7; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
         }
         field(8; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
 
             trigger OnValidate()
@@ -59,30 +68,36 @@ table 67001 Docentes
         }
         field(9; "Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(10; "Work No."; Text[30])
         {
-            Caption = 'Telex No.';
+            DataClassification = CustomerContent;
+            Caption = 'Work No.';
         }
         field(11; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             TableRelation = Territory;
         }
         field(12; "Language Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Language Code';
             TableRelation = Language;
         }
         field(13; "Salesperson Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Salesperson Code';
             TableRelation = "Salesperson/Purchaser";
         }
         field(14; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
@@ -97,19 +112,23 @@ table 67001 Docentes
         }
         field(16; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
         field(17; "Fax No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Fax No.';
         }
         field(18; "Telex Answer Back"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Telex Answer Back';
         }
         field(19; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
 
             trigger OnValidate()
@@ -128,12 +147,14 @@ table 67001 Docentes
         }
         field(20; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
             SubType = Bitmap;
         }
         field(21; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -146,53 +167,68 @@ table 67001 Docentes
         }
         field(22; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(23; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
         field(24; "Home Page"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
         field(25; Twitter; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Twitter';
             ExtendedDatatype = URL;
         }
         field(26; Facebook; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Facebook';
             ExtendedDatatype = URL;
         }
         field(27; "BB Pin"; Text[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'BB Pin';
         }
         field(28; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
         field(29; "Job Title"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Title';
         }
         field(30; Initials; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Initials';
         }
         field(31; "Extension No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Extension No.';
         }
         field(32; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(33; Pager; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Pager';
         }
         field(34; "Date Filter"; Date)
@@ -202,6 +238,7 @@ table 67001 Docentes
         }
         field(35; "External ID"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'External ID';
         }
         field(36; "Salesperson Filter"; Code[10])
@@ -264,40 +301,48 @@ table 67001 Docentes
         }
         field(44; "Customer no."; Code[20])
         {
-            Caption = 'Customer No.';
+            Caption = 'Customer no.';
             FieldClass = FlowFilter;
             TableRelation = Customer;
         }
         field(45; "Correspondence Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Correspondence Type';
             OptionCaption = ' ,Hard Copy,E-Mail,Fax';
             OptionMembers = " ","Hard Copy","E-Mail",Fax;
         }
         field(46; "Salutation Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
         field(47; "Search E-Mail"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search E-Mail';
         }
         field(48; "Last Time Modified"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Time Modified';
         }
         field(49; "E-Mail 2"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
         field(50; "% Descuento Cupon"; Decimal)
         {
-            Caption = 'Coupon Discount %';
+            DataClassification = CustomerContent;
+            Caption = '% Descuento Cupon';
         }
         field(51; "Tipo de colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de colegio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipos de colegios"));
 
             trigger OnValidate()
@@ -312,9 +357,13 @@ table 67001 Docentes
         }
         field(52; "Nivel Escolar"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel Escolar';
         }
         field(53; "Tipo educacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo educacion';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipo de educacion"));
 
             trigger OnValidate()
@@ -329,6 +378,8 @@ table 67001 Docentes
         }
         field(54; "Orden religiosa"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Orden religiosa';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Orden religiosa"));
 
             trigger OnValidate()
@@ -343,46 +394,67 @@ table 67001 Docentes
         }
         field(55; Bilingue; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Bilingue';
         }
         field(56; "Sistema educativo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sistema educativo';
         }
         field(57; Plan; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Plan';
         }
         field(58; Sexo; Option)
         {
-            Caption = 'Sex';
+            DataClassification = CustomerContent;
+            Caption = 'Sexo';
             OptionCaption = 'Female,Male';
             OptionMembers = Femenino,Masculino;
         }
         field(59; "Nivel Docente"; Code[20])
         {
-            Caption = 'Teacher''s level';
+            DataClassification = CustomerContent;
+            Caption = 'Nivel Docente';
             TableRelation = "Nivel Educativo APS";
         }
         field(60; "Usuario Lectores en red"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario Lectores en red';
         }
         field(61; "Recibe correos"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Recibe correos';
         }
         field(62; "Recibe llamadas"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Recibe llamadas';
         }
         field(63; "Recibe email"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Recibe email';
         }
         field(64; Jubilado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Jubilado';
         }
         field(65; "Dia Nacimiento"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dia Nacimiento';
             MaxValue = 31;
             MinValue = 1;
         }
         field(66; "Job Type Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Type Code';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
@@ -398,6 +470,8 @@ table 67001 Docentes
         }
         field(67; "Pertenece al CDS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pertenece al CDS';
 
             trigger OnValidate()
             begin
@@ -407,32 +481,44 @@ table 67001 Docentes
         }
         field(68; "Mes Nacimiento"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes Nacimiento';
             MaxValue = 12;
             MinValue = 1;
         }
         field(69; "Ano Nacimiento"; Integer)
         {
-            Caption = 'Born year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano Nacimiento';
             MaxValue = 2450;
             MinValue = 1950;
         }
         field(70; "Ano inscripcion CDS"; Code[4])
         {
-            Caption = 'Subscription year CDS';
+            DataClassification = CustomerContent;
+            Caption = 'Ano inscripcion CDS';
             Numeric = true;
         }
         field(71; "Cod. CDS"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. CDS';
         }
         field(76; Hijos; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hijos';
         }
         field(77; "Frecuencia uso email"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Frecuencia uso email';
             OptionMembers = Diario,"Fines de semana","Menos de una vez por semana";
         }
         field(78; "Nivel decision"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel decision';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
@@ -447,20 +533,28 @@ table 67001 Docentes
         }
         field(79; "Envio correspondencia"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Envio correspondencia';
             OptionCaption = 'School,Self';
             OptionMembers = Colegio,Particular;
         }
         field(80; "Situacion general"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Situacion general';
             OptionCaption = 'Active,Inactive';
             OptionMembers = Activo,Inactivo;
         }
         field(81; "Tipo documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo documento';
             TableRelation = "Tipos de documentos personales";
         }
         field(82; "Tipo de contacto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de contacto';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Tipos de contactos"));
 
             trigger OnValidate()
@@ -474,13 +568,17 @@ table 67001 Docentes
         }
         field(83; "Ult. fecha activacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ult. fecha activacion';
         }
         field(84; "Se entrego carne"; Boolean)
         {
-            Caption = 'Carnet delivered';
+            DataClassification = CustomerContent;
+            Caption = 'Se entrego carne';
         }
         field(85; "First Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'First Name';
 
             trigger OnValidate()
@@ -490,6 +588,7 @@ table 67001 Docentes
         }
         field(86; "Middle Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Middle Name';
 
             trigger OnValidate()
@@ -499,6 +598,7 @@ table 67001 Docentes
         }
         field(87; "Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Name';
 
             trigger OnValidate()
@@ -508,6 +608,7 @@ table 67001 Docentes
         }
         field(88; "Second Last Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Second Last Name';
 
             trigger OnValidate()
@@ -517,19 +618,26 @@ table 67001 Docentes
         }
         field(89; Status; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Status';
             OptionCaption = ' ,Inactive';
             OptionMembers = " ",Inactivo;
         }
         field(90; "Desc Tipo de contacto"; Text[60])
         {
-            Caption = 'Type of contact description';
+            DataClassification = CustomerContent;
+            Caption = 'Desc Tipo de contacto';
             Editable = false;
         }
         field(91; "Referencia Direccion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Referencia Direccion';
         }
         field(92; "Cod. Proveedor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Proveedor';
             TableRelation = Vendor;
 
             trigger OnValidate()
@@ -566,13 +674,19 @@ table 67001 Docentes
         }
         field(93; "Cod. Cliente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cliente';
             TableRelation = Customer;
         }
         field(94; Expositor; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Expositor';
         }
         field(95; "Usuario creacion"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario creacion';
         }
     }
 

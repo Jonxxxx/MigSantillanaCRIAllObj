@@ -7,37 +7,53 @@ table 67078 "Ranking CVM vertical"
     {
         field(1; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             NotBlank = true;
             TableRelation = Docentes;
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
             TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(4; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             NotBlank = true;
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
         }
         field(5; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             NotBlank = true;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(6; "Cod. Turno"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Turno';
         }
         field(7; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(8; "Cod. Producto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             NotBlank = true;
             TableRelation = Item;
 
@@ -86,30 +102,44 @@ table 67078 "Ranking CVM vertical"
         }
         field(9; "Linea de negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Linea de negocio';
         }
         field(10; Familia; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Familia';
         }
         field(11; "Sub Familia"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sub Familia';
         }
         field(12; Serie; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Serie';
         }
         field(88; "Descripcion producto"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion producto';
         }
         field(89; "Edicion Coleccion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Edicion Coleccion';
         }
         field(90; Adopcion; Option)
         {
-            Caption = 'Adopci n';
+            DataClassification = CustomerContent;
+            Caption = 'Adopcion';
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
         }
         field(100; CDS; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'CDS';
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;

@@ -5,41 +5,50 @@ table 34002148 "Diario de aumentos generales"
     {
         field(1; "Empresa Cotizacion"; Code[20])
         {
-            Caption = 'Business Name';
+            DataClassification = CustomerContent;
+            Caption = 'Empresa Cotizacion';
             TableRelation = "Empresas Cotizacion";
         }
         field(2; "No. empleado"; Code[20])
         {
-            Caption = 'Employee no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
         }
         field(3; "No. Linea"; Integer)
         {
-            Caption = 'Line no.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(4; "Fecha Efectividad"; Date)
         {
-            Caption = 'Efective date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Efectividad';
         }
         field(5; Importe; Decimal)
         {
-            Caption = 'Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
         field(6; Procesado; Boolean)
         {
-            Caption = 'Processed';
+            DataClassification = CustomerContent;
+            Caption = 'Procesado';
         }
         field(7; "% Aumento"; Decimal)
         {
-            Caption = '% to increase';
+            DataClassification = CustomerContent;
+            Caption = '% Aumento';
         }
         field(8; "Tope Salario"; Decimal)
         {
-            Caption = 'Up to';
+            DataClassification = CustomerContent;
+            Caption = 'Tope Salario';
         }
         field(13; "Tipo Aumento"; Option)
         {
-            Caption = 'Raising Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Aumento';
             Description = ' ,Gral. por Rango de Salarios,Gral. por % de aumento';
             OptionCaption = ' ,General by Salary range,General by rise %';
             OptionMembers = " ","Gral. por Rango de Salarios","Gral. por % de aumento";

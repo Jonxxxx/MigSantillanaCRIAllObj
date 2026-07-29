@@ -6,6 +6,7 @@ table 34002192 "Employee Profile Answer"
     {
         field(1; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
             NotBlank = true;
             TableRelation = Employee;
@@ -25,6 +26,7 @@ table 34002192 "Employee Profile Answer"
         }
         field(3; "Profile Questionnaire Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Code';
             NotBlank = true;
             TableRelation = "Cab. Cuestionario Evaluacion";
@@ -39,6 +41,7 @@ table 34002192 "Employee Profile Answer"
         }
         field(4; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line No.';
             TableRelation = "Lin. Cuestionario Evaluacion"."Line No." WHERE("Profile Questionnaire Code" = FIELD("Profile Questionnaire Code"),
                                                                              Type = CONST(Answer));
@@ -68,6 +71,7 @@ table 34002192 "Employee Profile Answer"
         }
         field(8; "Profile Questionnaire Priority"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Priority';
             Editable = false;
             OptionCaption = 'Very Low,Low,Normal,High,Very High';
@@ -75,22 +79,26 @@ table 34002192 "Employee Profile Answer"
         }
         field(9; "Answer Priority"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Answer Priority';
             OptionCaption = 'Very Low (Hidden),Low,Normal,High,Very High';
             OptionMembers = "Very Low (Hidden)",Low,Normal,High,"Very High";
         }
         field(10; "Last Date Updated"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Updated';
         }
         field(11; "Questions Answered (%)"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Questions Answered (%)';
+            BlankZero = true;
             DecimalPlaces = 0 : 0;
         }
         field(5088; "Profile Questionnaire Value"; Text[250])
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Value';
         }
     }

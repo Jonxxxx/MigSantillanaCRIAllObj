@@ -7,15 +7,20 @@ table 67075 "Hist. Docente - Aficiones"
     {
         field(1; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             TableRelation = Docentes;
         }
         field(2; "Nombre Docente"; Text[60])
         {
+            Caption = 'Nombre Docente';
             CalcFormula = Lookup(Docentes."Full Name" WHERE("No." = FIELD("Cod. Docente")));
             FieldClass = FlowField;
         }
         field(3; "Cod. aficion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. aficion';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Aficiones));
 
             trigger OnValidate()
@@ -29,10 +34,13 @@ table 67075 "Hist. Docente - Aficiones"
         }
         field(4; "Descripcion aficion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion aficion';
         }
         field(5; Campana; Integer)
         {
-            Caption = 'Campaign';
+            DataClassification = CustomerContent;
+            Caption = 'Campana';
         }
     }
 

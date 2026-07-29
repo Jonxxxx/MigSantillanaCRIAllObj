@@ -7,6 +7,8 @@ table 34002145 "CxC Empleados"
     {
         field(1; "No. Prestamo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Prestamo';
 
             trigger OnValidate()
             begin
@@ -19,6 +21,8 @@ table 34002145 "CxC Empleados"
         }
         field(2; "Codigo Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Empleado';
             TableRelation = Employee WHERE("Calcular Nomina" = CONST(True));
 
             trigger OnValidate()
@@ -30,18 +34,26 @@ table 34002145 "CxC Empleados"
         }
         field(3; "Fecha Registro CxC"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro CxC';
         }
         field(4; "Tipo CxC"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo CxC';
             Description = ' ,Prestamo,Factura';
             OptionMembers = " ","Prestamo",Factura;
         }
         field(5; Importe; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             DecimalPlaces = 2 : 2;
         }
         field(6; Cuotas; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cuotas';
 
             trigger OnValidate()
             begin
@@ -53,6 +65,8 @@ table 34002145 "CxC Empleados"
         }
         field(7; "No. Documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento';
 
             trigger OnLookup()
             begin
@@ -82,10 +96,14 @@ table 34002145 "CxC Empleados"
         }
         field(8; Pendiente; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pendiente';
             Editable = true;
         }
         field(9; "Tipo Contrapartida"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Contrapartida';
             Description = 'Cuenta,Cliente,Proveedor,Banco';
             OptionMembers = Cuenta,Cliente,Proveedor,Banco;
 
@@ -102,6 +120,8 @@ table 34002145 "CxC Empleados"
         }
         field(10; "Cta. Contrapartida"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cta. Contrapartida';
             TableRelation = IF ("Tipo Contrapartida" = CONST(Cuenta)) "G/L Account"
             ELSE IF ("Tipo Contrapartida" = CONST(Cliente)) Customer
             ELSE IF ("Tipo Contrapartida" = CONST(Proveedor)) Vendor
@@ -130,16 +150,24 @@ table 34002145 "CxC Empleados"
         }
         field(11; "Fecha Inicio Deduccion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio Deduccion';
         }
         field(12; "Nro. Solicitud CK"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nro. Solicitud CK';
         }
         field(13; "Importe Pendiente Cte."; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Pendiente Cte.';
             FieldClass = Normal;
         }
         field(14; "% a deducir de Ingresos"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% a deducir de Ingresos';
 
             trigger OnValidate()
             begin
@@ -149,25 +177,38 @@ table 34002145 "CxC Empleados"
         }
         field(15; "No. Mov. Cliente"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Mov. Cliente';
         }
         field(16; "Concepto Salarial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(17; "1ra Quincena"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = '1ra Quincena';
         }
         field(18; "2da Quincena"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = '2da Quincena';
         }
         field(19; "Importe Cuota"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Cuota';
         }
         field(20; "Motivo Prestamos"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Motivo Prestamos';
         }
         field(21; "Full name"; Text[150])
         {
+            Caption = 'Full name';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Codigo Empleado")));
             Editable = false;
             FieldClass = FlowField;

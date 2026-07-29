@@ -8,36 +8,44 @@ table 34002529 "Turnos TPV"
     {
         field(10; "No. tienda"; Code[20])
         {
-            Caption = 'Nº tienda';
+            DataClassification = CustomerContent;
+            Caption = 'No. tienda';
             TableRelation = Tiendas;
         }
         field(20; "No. TPV"; Code[20])
         {
-            Caption = 'Nº TPV';
+            DataClassification = CustomerContent;
+            Caption = 'No. TPV';
             TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("No. tienda"));
         }
         field(30; Fecha; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Fecha';
         }
         field(40; "No. turno"; Integer)
         {
-            Caption = 'Nº turno';
+            DataClassification = CustomerContent;
+            Caption = 'No. turno';
         }
         field(60; "Hora apertura"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Hora apertura';
         }
         field(70; "Usuario apertura"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario apertura';
         }
         field(90; "Hora cierre"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Hora cierre';
         }
         field(100; "Usuario cierre"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario cierre';
         }
         field(110; "Nombre tienda"; Text[200])
@@ -55,12 +63,14 @@ table 34002529 "Turnos TPV"
         }
         field(130; Estado; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Estado';
             OptionCaption = 'Cerrado,Abierto';
             OptionMembers = Cerrado,Abierto;
         }
         field(140; "Fondo de caja"; Decimal)
         {
+            Caption = 'Fondo de caja';
             CalcFormula = Lookup("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("No. tienda"),
                                                                                 "Cod. TPV" = FIELD("No. TPV"),
                                                                                 Fecha = FIELD("Fecha"),
@@ -70,6 +80,8 @@ table 34002529 "Turnos TPV"
         }
         field(34002518; "Id Replicacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
     }

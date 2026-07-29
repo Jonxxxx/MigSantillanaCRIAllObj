@@ -16,29 +16,34 @@ table 34002501 "Configuracion TPV"
     {
         field(34002500; Tienda; Code[20])
         {
-            Caption = 'Store';
+            DataClassification = CustomerContent;
+            Caption = 'Tienda';
             Description = 'DsPOS Standard';
             TableRelation = Tiendas."Cod. Tienda";
         }
         field(34002501; "Id TPV"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Id TPV';
             Description = 'DsPOS Standard';
         }
         field(34002502; Descripcion; Text[200])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standard';
         }
         field(34002503; "No. serie Facturas"; Code[20])
         {
-            Caption = 'Nº Serie Facturas';
+            DataClassification = CustomerContent;
+            Caption = 'No. serie Facturas';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
         field(34002504; "Menu de acciones"; Code[20])
         {
-            Caption = 'Menú de acciones';
+            DataClassification = CustomerContent;
+            Caption = 'Menu de acciones';
             Description = 'DsPOS Standard';
             TableRelation = "Menus TPV" WHERE("Tipo Menu" = CONST(Acciones));
 
@@ -50,7 +55,8 @@ table 34002501 "Configuracion TPV"
         }
         field(34002505; "Menu de productos"; Code[20])
         {
-            Caption = 'Menú de productos';
+            DataClassification = CustomerContent;
+            Caption = 'Menu de productos';
             Description = 'DsPOS Standard';
             TableRelation = "Menus TPV" WHERE("Tipo Menu" = CONST(Productos));
 
@@ -61,7 +67,8 @@ table 34002501 "Configuracion TPV"
         }
         field(34002506; "Menu de Formas de Pago"; Code[20])
         {
-            Caption = 'Menú de Formas de Pago';
+            DataClassification = CustomerContent;
+            Caption = 'Menu de Formas de Pago';
             Description = 'DsPOS Standard';
             TableRelation = "Menus TPV" WHERE("Tipo Menu" = CONST(Pagos));
 
@@ -72,25 +79,29 @@ table 34002501 "Configuracion TPV"
         }
         field(34002516; "Usuario windows"; Text[64])
         {
+            DataClassification = CustomerContent;
             Caption = 'Usuario windows';
             Description = 'DsPOS Standard';
             Editable = true;
         }
         field(34002520; "No. serie facturas Reg."; Code[20])
         {
-            Caption = 'Nº serie facturas Registradas';
+            DataClassification = CustomerContent;
+            Caption = 'No. serie facturas Reg.';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
         field(34002521; "No. serie notas credito"; Code[20])
         {
-            Caption = 'Nº serie notas Credito';
+            DataClassification = CustomerContent;
+            Caption = 'No. serie notas credito';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
         field(34002522; "No. serie notas credito reg."; Code[20])
         {
-            Caption = 'Nº serie notas Credito registradas';
+            DataClassification = CustomerContent;
+            Caption = 'No. serie notas credito reg.';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
@@ -139,24 +150,28 @@ table 34002501 "Configuracion TPV"
         }
         field(34002550; "NCF Consumidor final"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'NCF Consumidor final';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }
         field(34002551; "NCF Credito fiscal"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
         field(34002552; "NCF Regimenes especiales"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'NCF Regimenes especiales';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }
         field(34002553; "NCF Gubernamentales"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'NCF Gubernamentales';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
@@ -169,67 +184,91 @@ table 34002501 "Configuracion TPV"
         }
         field(34002558; "NCF Credito fiscal habitual"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal habitual';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
 
         }
         field(34002559; "NCF Credito fiscal resguardo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal resguardo';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
         field(34002560; "Serie Ventas Computerizadas"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Serie Ventas Computerizadas';
             Description = 'DsPOS Bolivia';
             TableRelation = "No. Series".Code;
         }
         field(34002561; "NCF Consumidor final NCR"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Consumidor final NCR';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
         field(34002562; "NCF Credito fiscal NCR"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal NCR';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
         field(34002563; "Venta Movil"; Boolean)
         {
-            Caption = 'Venta Movil.';
+            DataClassification = CustomerContent;
+            Caption = 'Venta Movil';
             Description = 'DsPOS Standard';
         }
         field(34002564; "Precio por contacto"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Precio por contacto';
             Description = 'DsPOS Standard,#175576';
             OptionMembers = "Solo si hay venta movil","En todos los casos","En ningún caso";
         }
         field(34002568; "NCF Credito fiscal NCR habit."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal NCR habit.';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
         field(34002569; "NCF Credito fiscal NCR resg."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal NCR resg.';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
         field(34002570; "Leyenda Dosificacion"; Text[150])
         {
+            DataClassification = CustomerContent;
             Caption = 'Leyenda Dosificacion';
             Description = 'DsPOS Bolivia';
         }
         field(34002571; "NCF Credito fiscal 2"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal 2';
             Description = '#325138,DsPOS El Salvador';
             TableRelation = "No. Series";
         }
         field(34002572; "NCF Credito fiscal NCR 2"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF Credito fiscal NCR 2';
             Description = '#325138,DsPOS El Salvador';
             TableRelation = "No. Series";
         }
         field(34002580; "Texto aviso FE"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto aviso FE';
             Description = 'DsPOS Guatemala';
         }
     }

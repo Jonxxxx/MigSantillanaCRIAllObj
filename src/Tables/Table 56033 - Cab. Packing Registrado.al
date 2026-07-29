@@ -17,10 +17,13 @@ table 56033 "Cab. Packing Registrado"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
         }
         field(2; "Cod. Empleado"; Code[20])
         {
-            Caption = 'Employee Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
 
             trigger OnLookup()
             begin
@@ -34,11 +37,13 @@ table 56033 "Cab. Packing Registrado"
         }
         field(3; "No. Mesa"; Code[20])
         {
-            Caption = 'Table No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Mesa';
         }
         field(4; "Picking No."; Code[20])
         {
-            Caption = 'No. Picking';
+            DataClassification = CustomerContent;
+            Caption = 'Picking No.';
             TableRelation = "Registered Whse. Activity Hdr."."No." WHERE("Type" = FILTER(Pick));
 
             trigger OnValidate()
@@ -59,38 +64,46 @@ table 56033 "Cab. Packing Registrado"
         }
         field(5; "Fecha Apertura"; Date)
         {
-            Caption = 'Opening Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Apertura';
         }
         field(6; "Fecha Registro"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
         }
         field(7; "No. Packing Origen"; Code[20])
         {
-            Caption = 'Packing No. Origin';
+            DataClassification = CustomerContent;
+            Caption = 'No. Packing Origen';
         }
         field(8; "Total de Productos"; Decimal)
         {
+            Caption = 'Total de Productos';
             CalcFormula = Sum("Contenido Cajas Packing Reg.".Cantidad WHERE("No. Packing" = FIELD("No.")));
-            Caption = 'Items Total';
             FieldClass = FlowField;
         }
         field(9; "Hora Finalizacion"; Time)
         {
-            Caption = 'End Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora Finalizacion';
         }
         field(10; "Cantidad de Bultos"; Integer)
         {
+            Caption = 'Cantidad de Bultos';
             CalcFormula = Count("Lin. Packing Registrada" WHERE("No." = FIELD("No."),
                                                                  "No. Picking" = FIELD("Picking No.")));
-            Caption = 'Packages Qty.';
             FieldClass = FlowField;
         }
         field(11; "No. Palet Abierto"; Code[20])
         {
-            Caption = 'Open Palet No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Palet Abierto';
         }
         field(12; "No. Pedido"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido';
             //TODO Ver: 
             /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
@@ -100,6 +113,8 @@ table 56033 "Cab. Packing Registrado"
         }
         field(20; "Tipo pedido"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo pedido';
             OptionCaption = 'Venta,Consignaci n,Transferencia';
             OptionMembers = Venta,Consignacion,Transferencia;
         }

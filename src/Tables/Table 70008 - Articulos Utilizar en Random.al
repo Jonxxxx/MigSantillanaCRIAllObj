@@ -5,9 +5,13 @@ table 70008 "Articulos Utilizar en Random"
     {
         field(1;Codigo;Code[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;ISBN;Code[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ISBN';
         }
     }
 

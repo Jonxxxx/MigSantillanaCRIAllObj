@@ -7,17 +7,24 @@ table 67010 "Tipos de Eventos"
     {
         field(1; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; Cantidad; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad';
         }
         field(4; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
@@ -27,12 +34,18 @@ table 67010 "Tipos de Eventos"
         }
         field(5; "Ingresar grados"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ingresar grados';
         }
         field(6; "Ingresar libros a presentar"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ingresar libros a presentar';
         }
         field(7; Seleccionar; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Seleccionar';
         }
     }
 

@@ -5,41 +5,61 @@ table 75005 "Imp.MdM Campos"
     {
         field(1; Id; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id';
         }
         field(2; "Id Rel"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Rel';
             TableRelation = "Imp.MdM Tabla".Id;
         }
         field(5; "Id Cab."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Cab.';
         }
         field(9; "Table Id"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Table Id';
         }
         field(10; "Id Field"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Field';
         }
         field(20; Value; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Value';
         }
         field(21; PK; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'PK';
             Description = 'Determina si forma parte de la clave primaria';
         }
         field(22; Orden; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Orden';
             InitValue = 100;
         }
         field(23; "Renamed Val"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Renamed Val';
             Description = 'Valor por el que se renombra';
         }
         field(30; "MdM Value"; Text[250])
         {
+            DataClassification = CustomerContent;
             Caption = 'MdM Value';
         }
         field(50; "Nombre Elemento"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre Elemento';
         }
     }

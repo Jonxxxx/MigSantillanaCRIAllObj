@@ -5,30 +5,40 @@ table 67002 "Datos auxiliares"
     {
         field(1; "Tipo registro"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo registro';
             OptionCaption = 'Hobbies,Areas of interest,Attentions,Sales channel,Specialties,Grade,Materials,Decision level,Jobs,Routes,Type of education,Types of Schools,Type of contacts,Shits,Zones,Main Areas,Sub family,Objetives,Tasks,Reason of loose,Religious order,Educative association,Subject,Bus. line group,Equipments,Iniciales Almacen,Step,School status';
             OptionMembers = Aficiones,"Areas de inter s",Atenciones,"Canal de venta",Especialidades,Grados,Materiales,"Nivel de decisi n","Puestos de trabajo",Rutas,"Tipo de educacion","Tipos de colegios","Tipos de contactos",Turnos,Zonas,"Area principal","Sub familia",Objetivos,Tareas,"Motivos Perdida","Orden religiosa","Asociacion educativa",Materia,"Grupo de Negocio","Equipos T&E","Iniciales Almacen",Paso,"Estado Colegio";
         }
         field(2; Codigo; Code[20])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(3; Descripcion; Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Aplica Jerarquia Colegio"; Boolean)
         {
-            Caption = 'Apply to School Hierarchy';
+            DataClassification = CustomerContent;
+            Caption = 'Aplica Jerarquia Colegio';
         }
         field(5; Seleccionar; Boolean)
         {
-            Caption = 'Select';
+            DataClassification = CustomerContent;
+            Caption = 'Seleccionar';
         }
         field(6; Calculo; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Calculo';
         }
         field(7; Delegacion; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
 
             trigger OnLookup()
             begin
@@ -62,15 +72,19 @@ table 67002 "Datos auxiliares"
         }
         field(8; "Descripcion delegacion"; Text[100])
         {
-            Caption = 'Descripcion Delegacion';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion delegacion';
             Editable = false;
         }
         field(9; "Orden en informes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Orden en informes';
         }
         field(10; "Costo Unitario"; Decimal)
         {
-            Caption = 'Unit Cost';
+            DataClassification = CustomerContent;
+            Caption = 'Costo Unitario';
         }
     }
 

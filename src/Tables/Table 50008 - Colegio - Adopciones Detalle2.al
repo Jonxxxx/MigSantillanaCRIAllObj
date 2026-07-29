@@ -7,44 +7,68 @@ table 50008 "Colegio - Adopciones Detalle2"
     {
         field(1; "Cod. Editorial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Editorial';
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
         }
         field(3; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
         }
         field(4; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             NotBlank = true;
         }
         field(5; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             NotBlank = true;
         }
         field(6; "Cod. Turno"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Turno';
         }
         field(7; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
         }
         field(8; "Cod. Producto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             NotBlank = true;
         }
         field(9; Seccion; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Seccion';
             NotBlank = true;
         }
         field(10; "Cod. Equiv. Santillana"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Equiv. Santillana';
         }
         field(11; "Descripcion Equiv. Santillana"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Equiv. Santillana';
         }
         field(12; "Nombre Editorial"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Editorial';
             Editable = false;
             FieldClass = Normal;
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
@@ -52,74 +76,115 @@ table 50008 "Colegio - Adopciones Detalle2"
         }
         field(13; "Descripcion producto"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion producto';
         }
         field(14; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
             FieldClass = Normal;
         }
         field(15; "Descripcion Nivel"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Nivel';
             FieldClass = Normal;
         }
         field(16; "Descripcion Grado"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Grado';
         }
         field(17; "Fecha Adopcion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Adopcion';
         }
         field(18; "Cantidad Alumnos"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad Alumnos';
             DecimalPlaces = 0 : 0;
         }
         field(19; "% Dto. Padres"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Padres';
         }
         field(20; "% Dto. Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Colegio';
         }
         field(21; "% Dto. Docente"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Docente';
         }
         field(22; "% Dto. Feria Padres"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Feria Padres';
         }
         field(23; "% Dto. Feria Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Feria Colegio';
         }
         field(24; "Cod. Motivo perdida adopcion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Motivo perdida adopcion';
         }
         field(27; "Nombre Promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Promotor';
         }
         field(28; Adopcion; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Adopcion';
             OptionCaption = ' ,Conquest,Keep,Lost,Not use,Competition';
             OptionMembers = " ",Conquista,Mantener,Perdida,"No utiliza",Competencia;
         }
         field(29; "Adopcion anterior"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Adopcion anterior';
             OptionCaption = ' ,Conquest,Keep,Lost,Not use,Competition';
             OptionMembers = " ",Conquista,Mantener,Perdida,"No utiliza",Competencia;
         }
         field(30; Santillana; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Santillana';
         }
         field(31; Usuario; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
         }
         field(32; "Ano adopcion"; Integer)
         {
-            Caption = 'Year of decition';
+            DataClassification = CustomerContent;
+            Caption = 'Ano adopcion';
         }
         field(33; "Linea de negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Linea de negocio';
         }
         field(34; Familia; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Familia';
         }
         field(35; "Sub Familia"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sub Familia';
 
             trigger OnLookup()
             begin
@@ -128,35 +193,55 @@ table 50008 "Colegio - Adopciones Detalle2"
         }
         field(36; Serie; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Serie';
         }
         field(37; "Fecha Ult. Modificacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Ult. Modificacion';
         }
         field(38; "Adopcion Real"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Adopcion Real';
         }
         field(39; "Motivo perdida adopcion"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Motivo perdida adopcion';
         }
         field(41; "Cod. Producto Editora"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto Editora';
         }
         field(42; "Nombre Producto Editora"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Producto Editora';
         }
         field(43; "Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Negocio';
         }
         field(44; "Carga horaria"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Carga horaria';
         }
         field(45; "Tipo Ingles"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Ingles';
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
         field(46; Materia; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Materia';
 
             trigger OnLookup()
             var
@@ -166,51 +251,64 @@ table 50008 "Colegio - Adopciones Detalle2"
         }
         field(47; "Mes de Lectura"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Mes de Lectura';
             OptionCaption = ' ,January,February,March,April,May,Jun,July,August,September,October,November,December';
             OptionMembers = " ",Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         }
         field(48; Inventory; Decimal)
         {
-            Caption = 'Quantity on Hand';
+            DataClassification = CustomerContent;
+            Caption = 'Inventory';
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = Normal;
         }
         field(49; "Unit Price"; Decimal)
         {
-            AutoFormatType = 2;
+            DataClassification = CustomerContent;
             Caption = 'Unit Price';
+            AutoFormatType = 2;
             Editable = false;
             FieldClass = Normal;
             MinValue = 0;
         }
         field(100; "Item - Item Category Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Item - Item Category Code';
             FieldClass = Normal;
         }
         field(101; "Sales Price - Unit Price"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sales Price - Unit Price';
             AutoFormatType = 2;
-            Caption = 'Unit Price';
             Editable = false;
             FieldClass = Normal;
             MinValue = 0;
         }
         field(102; "Item - Product Group Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Item - Product Group Code';
             FieldClass = Normal;
         }
         field(103; "Item - Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Item - Grado';
             FieldClass = Normal;
         }
         field(104; "Fecha de entrega acordada"; Date)
         {
-            Caption = 'Delivery date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de entrega acordada';
         }
         field(105; "Cantidad anterior"; Decimal)
         {
-            Caption = 'Previous quantity';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad anterior';
             Editable = false;
         }
     }

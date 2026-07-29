@@ -5,28 +5,44 @@ table 67103 "Prog. Visitas Asesor/Consultor"
     {
         field(1; "No. Visita"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Visita';
         }
         field(2; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(3; "Fecha Programada"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Programada';
         }
         field(4; "Hora Inicio Programada"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicio Programada';
         }
         field(5; "Hora Fin Programada"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Fin Programada';
         }
         field(6; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(8; "No. asistentes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. asistentes';
         }
         field(9; "Tipo Asesor/Consultor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Asesor/Consultor';
             Editable = false;
             Enabled = false;
             OptionCaption = 'Docente,Proveedor';
@@ -34,34 +50,47 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(10; "Cod. Asesor/Consultor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Asesor/Consultor';
             Editable = false;
             TableRelation = Vendor."No.";
         }
         field(11; "Nombre Asesor/Consultor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Asesor/Consultor';
             Editable = false;
         }
         field(12; "Delegacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             Editable = false;
             TableRelation = "Dimension Value".Code;
         }
         field(13; "Grupo Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo Negocio';
             Editable = false;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(14; "Cod. promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. promotor';
             Editable = false;
             TableRelation = "Salesperson/Purchaser";
         }
         field(15; "Nombre promotor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre promotor';
             Editable = false;
         }
         field(16; "Estado Visita"; Option)
         {
+            Caption = 'Estado Visita';
             CalcFormula = Lookup("Cab. Visita Asesor/Consultor".Estado WHERE("No. Visita Asesor/Consultor" = FIELD("No. Visita")));
             Editable = false;
             FieldClass = FlowField;
@@ -70,24 +99,36 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(17; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             Editable = false;
             TableRelation = Contact."No." WHERE("Type" = CONST(Company));
         }
         field(18; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
             Editable = false;
         }
         field(19; "Fecha Realizada"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Realizada';
         }
         field(20; "Hora Inicio Realizada"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicio Realizada';
         }
         field(21; "Hora Fin Realizada"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Fin Realizada';
         }
         field(22; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnLookup()
@@ -132,10 +173,14 @@ table 67103 "Prog. Visitas Asesor/Consultor"
         }
         field(23; "Nombre Docente"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Docente';
             Editable = false;
         }
         field(24; "Cod. Seccion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Seccion';
 
             trigger OnLookup()
             var

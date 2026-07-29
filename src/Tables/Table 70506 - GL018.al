@@ -5,9 +5,13 @@ table 70506 GL018
     {
         field(1;Codigo;Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;Descripcion;Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

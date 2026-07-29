@@ -10,18 +10,20 @@ table 34002151 "Datos adicionales RRHH"
     {
         field(1; "Tipo registro"; Option)
         {
-            Caption = 'Record type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo registro';
             OptionCaption = 'Benefit,ARS,AFP,Blood type,Driver''s licence category,Employee''s category,Hobby,Job profile,Loan type,Training type,Knowledge area,Classroom,Category,Disabilities,Level-Grades,MT positions,Grouping area';
             OptionMembers = Beneficio,ARS,AFP,"Tipo de Sangre","Categoria de Licencia","Categoria de Empleado",Pasatiempo,"Requisitos puestos","Tipo de Prestamo","Tipo Entrenamiento","Area curricular","Salon","Categoria",Discapacidades,"Niveles-Grados","Puestos MT","Area de agrupacion";
         }
         field(2; "Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code';
         }
         field(3; Descripcion; Text[120])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

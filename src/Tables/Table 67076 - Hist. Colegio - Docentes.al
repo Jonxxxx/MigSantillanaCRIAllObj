@@ -5,11 +5,15 @@ table 67076 "Hist. Colegio - Docentes"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
             TableRelation = Contact;
         }
         field(2; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             NotBlank = true;
             TableRelation = Docentes;
 
@@ -26,15 +30,20 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(3; "Nombre colegio"; Text[100])
         {
+            Caption = 'Nombre colegio';
             CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(4; "Nombre docente"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre docente';
         }
         field(5; "Cod. Cargo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Cargo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
@@ -50,10 +59,13 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(6; Principal; Boolean)
         {
-            Caption = 'Default';
+            DataClassification = CustomerContent;
+            Caption = 'Principal';
         }
         field(7; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
@@ -76,10 +88,14 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(8; "Descripcion Nivel"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Nivel';
             Editable = false;
         }
         field(9; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Promotor - Lista de Colegios"."Cod. Promotor" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
@@ -90,25 +106,36 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(10; "Nombre Promotor"; Text[60])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(11; "Aplica Jerarquia Puestos"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Aplica Jerarquia Puestos';
         }
         field(12; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(13; "Pertenece al CDS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Pertenece al CDS';
         }
         field(14; "Nombre Cargo"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Cargo';
         }
         field(15; "Nivel decision"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel decision';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Nivel de decisi n"));
 
             trigger OnValidate()
@@ -123,25 +150,34 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(16; Campana; Code[20])
         {
-            Caption = 'Campaign';
+            DataClassification = CustomerContent;
+            Caption = 'Campana';
         }
         field(17; Distritos; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distritos';
         }
         field(20; "Apellido paterno"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Apellido paterno';
         }
         field(30; "Distrito colegio"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Distrito colegio';
         }
         field(31; "Docente - Phone No."; Text[30])
         {
-            Caption = 'Phone No.';
+            DataClassification = CustomerContent;
+            Caption = 'Docente - Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(32; "Docente - Document ID"; Text[20])
         {
-            Caption = 'Document ID';
+            DataClassification = CustomerContent;
+            Caption = 'Docente - Document ID';
 
             trigger OnValidate()
             var
@@ -151,21 +187,26 @@ table 67076 "Hist. Colegio - Docentes"
         }
         field(33; "Docente - E-Mail"; Text[80])
         {
-            Caption = 'E-Mail';
+            DataClassification = CustomerContent;
+            Caption = 'Docente - E-Mail';
             ExtendedDatatype = EMail;
         }
         field(34; "Docente - Mobile Phone No."; Text[30])
         {
-            Caption = 'Mobile Phone No.';
+            DataClassification = CustomerContent;
+            Caption = 'Docente - Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(35; "Docente - E-Mail 2"; Text[80])
         {
-            Caption = 'E-Mail 2';
+            DataClassification = CustomerContent;
+            Caption = 'Docente - E-Mail 2';
             ExtendedDatatype = EMail;
         }
         field(36; "Docente - Tipo documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Docente - Tipo documento';
             TableRelation = "Tipos de documentos personales";
         }
     }

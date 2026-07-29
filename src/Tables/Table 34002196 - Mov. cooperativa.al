@@ -8,44 +8,44 @@ table 34002196 "Mov. cooperativa"
     {
         field(1; "No. Movimiento"; Integer)
         {
-            Caption = 'Entry no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. Movimiento';
         }
         field(2; "Tipo miembro"; Option)
         {
-            Caption = 'Member type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo miembro';
             OptionCaption = 'Member, Partner';
             OptionMembers = Miembro,Socio;
         }
         field(3; "Employee No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee No.';
-            DataClassification = ToBeClassified;
             NotBlank = true;
             TableRelation = Employee;
         }
         field(4; "Fecha registro"; Date)
         {
-            Caption = 'Posting date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha registro';
         }
         field(5; "No. documento"; Code[20])
         {
-            Caption = 'Document no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. documento';
         }
         field(6; "Tipo transaccion"; Option)
         {
-            Caption = 'Transaction type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo transaccion';
             OptionCaption = ' ,Deposit,Loan,Fee,Late fee';
             OptionMembers = " ",Aporte,"Prestamo",Cuota,Mora;
         }
         field(7; Importe; Decimal)
         {
-            Caption = 'Amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
         field(8; "Full name"; Text[150])
         {
@@ -55,7 +55,8 @@ table 34002196 "Mov. cooperativa"
         }
         field(9; "Concepto salarial"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Concepto salarial';
             TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()

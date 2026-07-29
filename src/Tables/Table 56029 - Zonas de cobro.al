@@ -7,10 +7,12 @@ table 56029 "Zonas de cobro"
     {
         field(10; "Cod. zona"; Code[20])
         {
-            Caption = 'C d. zona';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. zona';
         }
         field(20; Descripcion; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
     }

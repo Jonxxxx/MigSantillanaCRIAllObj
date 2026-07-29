@@ -7,6 +7,8 @@ table 67020 "Alumnos - Hijos"
     {
         field(1; "DNI Padre"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'DNI Padre';
             NotBlank = true;
             TableRelation = Padres;
 
@@ -27,44 +29,57 @@ table 67020 "Alumnos - Hijos"
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
             TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(3; "Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Code';
             NotBlank = true;
         }
         field(4; "First Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'First Name';
         }
         field(5; "Middle Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Middle Name';
         }
         field(6; Surname; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Surname';
         }
         field(7; "Nombre Padre"; Text[60])
         {
-            Caption = 'Father''s name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Padre';
         }
         field(8; Sex; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sex';
             OptionCaption = 'Female,Male';
             OptionMembers = Femenino,Masculino;
         }
         field(9; Address; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(10; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
         }
         field(11; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
 
             trigger OnValidate()
@@ -74,17 +89,20 @@ table 67020 "Alumnos - Hijos"
         }
         field(12; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             TableRelation = Territory;
         }
         field(13; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
         field(14; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -92,38 +110,54 @@ table 67020 "Alumnos - Hijos"
         }
         field(15; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(16; "Home Phone No."; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Home Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(17; "Born Date"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Born Date';
         }
         field(18; "Home Page"; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Home Page';
         }
         field(19; Twitter; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Twitter';
         }
         field(20; Facebook; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Facebook';
         }
         field(21; "BB Pin"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'BB Pin';
         }
         field(22; "Nombre Colegio"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(23; "Cell Phone No."; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cell Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(25; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }

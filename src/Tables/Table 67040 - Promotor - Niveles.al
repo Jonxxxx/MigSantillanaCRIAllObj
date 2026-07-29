@@ -7,10 +7,14 @@ table 67040 "Promotor - Niveles"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Nivel Educativo APS";
 
             trigger OnValidate()
@@ -23,11 +27,14 @@ table 67040 "Promotor - Niveles"
         }
         field(3; "Nombre Promotor"; Text[100])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(4; "Descripcion Nivel"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Nivel';
         }
     }
 

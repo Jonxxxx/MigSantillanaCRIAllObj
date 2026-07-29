@@ -8,11 +8,13 @@ table 51014 "Vendedores por Colegio"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
-            Caption = 'School Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
         }
         field(2; "Cod. Vendedor"; Code[20])
         {
-            Caption = 'Salesperson Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Vendedor';
             TableRelation = "Salesperson/Purchaser";
 
             trigger OnValidate()
@@ -23,6 +25,8 @@ table 51014 "Vendedores por Colegio"
         }
         field(3; "Nombre Vendedor"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Vendedor';
         }
     }
 

@@ -8,18 +8,25 @@ table 34002124 "Parametros ciclos nominas"
     {
         field(1; "Frecuencia de pago"; Option)
         {
-            Caption = 'Payment frequency';
+            DataClassification = CustomerContent;
+            Caption = 'Frecuencia de pago';
             OptionCaption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
             OptionMembers = Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;
         }
         field(2; "No. ciclo"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. ciclo';
         }
         field(3; "Fecha de inicio"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de inicio';
         }
         field(4; "Fecha fin"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha fin';
         }
     }
 

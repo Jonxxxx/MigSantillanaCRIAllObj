@@ -10,57 +10,75 @@ table 56022 "Cab. Hoja de Ruta Reg."
     {
         field(1; "No. Hoja Ruta"; Code[20])
         {
-            Caption = 'Route Sheet No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Hoja Ruta';
         }
         field(2; "Cod. Transportista"; Code[20])
         {
-            Caption = 'Carrier Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Transportista';
             TableRelation = "Shipping Agent";
         }
         field(3; "Fecha Planificacion Transporte"; Date)
         {
-            Caption = 'Transportation Planning Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Planificacion Transporte';
         }
         field(4; Comentario; Text[250])
         {
-            Caption = 'Comment';
+            DataClassification = CustomerContent;
+            Caption = 'Comentario';
         }
         field(5; Hora; Time)
         {
-            Caption = 'Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
         field(6; "Fecha Registro"; Date)
         {
-            Caption = 'Posting date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Registro';
         }
         field(7; "No. Hoja Ruta Origen"; Code[20])
         {
-            Caption = 'Route Sheet No. From';
+            DataClassification = CustomerContent;
+            Caption = 'No. Hoja Ruta Origen';
         }
         field(8; Anulada; Boolean)
         {
-            Caption = 'Voided';
+            DataClassification = CustomerContent;
+            Caption = 'Anulada';
         }
         field(9; "Nombre Transportista"; Text[100])
         {
-            Caption = 'Transport Agent Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Transportista';
         }
         field(10; Chofer; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Chofer';
             TableRelation = "Choferes por Transportista"."Cod. Chofer" WHERE("Cod. Transportista" = FIELD("Cod. Transportista"));
         }
         field(11; "Nombre Chofer"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Chofer';
         }
         field(12; Placa; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Placa';
         }
         field(13; "Ruta de Distribucion"; Code[10])
         {
-            Caption = '<Ruta de Distribuci n>';
+            DataClassification = CustomerContent;
+            Caption = 'Ruta de Distribucion';
         }
         field(14; "Hoja de Ruta Origen"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hoja de Ruta Origen';
             Description = '#37066';
         }
     }

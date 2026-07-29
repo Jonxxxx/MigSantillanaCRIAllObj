@@ -6,16 +6,22 @@ table 56026 "Lin. clas. devoluciones"
     {
         field(1; "No. Documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento';
         }
         field(2; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line No.';
         }
         field(3; "Receiving date"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Receiving date';
         }
         field(4; "Item No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item No.';
             NotBlank = true;
             TableRelation = Item;
@@ -29,11 +35,13 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(5; "Item Description"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item Description';
             Editable = false;
         }
         field(6; Quantity; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Quantity';
             DecimalPlaces = 0 : 5;
             InitValue = 1;
@@ -49,6 +57,7 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(7; "Unit of Measure Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Unit of Measure Code';
 
             trigger OnValidate()
@@ -60,7 +69,8 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(8; "Cross-Reference No."; Code[20])
         {
-            Caption = 'EAN';
+            DataClassification = CustomerContent;
+            Caption = 'Cross-Reference No.';
 
             trigger OnLookup()
             begin
@@ -89,6 +99,7 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(9; "Customer No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer No.';
             NotBlank = true;
             TableRelation = Customer;
@@ -105,26 +116,29 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(10; "Customer name"; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer name';
             Editable = false;
         }
         field(11; "Variant Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Variant Code';
             TableRelation = "Item Variant".Code WHERE("Item No." = FIELD("Item No."));
         }
         field(12; Inventory; Decimal)
         {
+            Caption = 'Inventory';
             CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD("Item No."),
                                                                   "Variant Code" = FIELD("Variant Filter"),
                                                                   "Location Code" = FIELD("Location Filter")));
-            Caption = 'Quantity on Hand';
             DecimalPlaces = 0 : 5;
             Editable = false;
             FieldClass = FlowField;
         }
         field(13; "Inventario en Consignacion"; Decimal)
         {
+            Caption = 'Inventario en Consignacion';
             CalcFormula = Sum("Item Ledger Entry".Quantity WHERE("Item No." = FIELD("Item No."),
                                                                   "Location Code" = FIELD("Cod. Almacen Consignacion"),
                                                                   "Posting Date" = FIELD("Date Filter")));
@@ -133,10 +147,13 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(14; "Cod. Almacen Consignacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Almacen Consignacion';
             TableRelation = Location;
         }
         field(15; "Date Filter"; Date)
         {
+            Caption = 'Date Filter';
             FieldClass = FlowFilter;
         }
         field(16; "Location Filter"; Code[10])
@@ -153,23 +170,33 @@ table 56026 "Lin. clas. devoluciones"
         }
         field(18; "Receiving Time"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Receiving Time';
         }
         field(19; Processed; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Processed';
         }
         field(21; "External Doc. Number"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'External Doc. Number';
         }
         field(22; Comentario; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario';
         }
         field(23; "Con defecto"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Con defecto';
         }
         field(24; Recuperable; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Recuperable';
         }
     }
 

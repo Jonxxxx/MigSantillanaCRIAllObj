@@ -10,44 +10,53 @@ table 34002530 "Transacciones TPV"
     {
         field(10; "Cod. tienda"; Code[20])
         {
-            Caption = 'Store No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. tienda';
             TableRelation = Tiendas;
         }
         field(20; "Cod. TPV"; Code[20])
         {
-            Caption = 'POS Terminal No.';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. TPV';
             TableRelation = "Configuracion TPV"."Id TPV" WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(30; Fecha; Date)
         {
-            Caption = 'Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(40; "No. turno"; Integer)
         {
-            Caption = 'Nº turno';
+            DataClassification = CustomerContent;
+            Caption = 'No. turno';
         }
         field(50; "No. Transaccion"; Integer)
         {
-            Caption = 'Transaction No';
+            DataClassification = CustomerContent;
+            Caption = 'No. Transaccion';
         }
         field(60; "Tipo Transaccion"; Option)
         {
-            Caption = 'Transaction Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Transaccion';
             OptionCaption = 'Venta,Anulacion,Nota de Credito';
             OptionMembers = Venta,Anulacion,Abono;
         }
         field(70; "Id. cajero"; Code[50])
         {
-            Caption = 'Staff ID';
+            DataClassification = CustomerContent;
+            Caption = 'Id. cajero';
             TableRelation = Cajeros.ID WHERE(Tienda = FIELD("Cod. tienda"));
         }
         field(80; Hora; Time)
         {
-            Caption = 'Time';
+            DataClassification = CustomerContent;
+            Caption = 'Hora';
         }
         field(90; Importe; Decimal)
         {
-            Caption = 'Net Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -58,7 +67,8 @@ table 34002530 "Transacciones TPV"
         }
         field(95; "Importe IVA inc."; Decimal)
         {
-            Caption = 'Net Amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe IVA inc.';
             DecimalPlaces = 2 : 2;
 
             trigger OnValidate()
@@ -69,24 +79,30 @@ table 34002530 "Transacciones TPV"
         }
         field(100; "No. Borrador"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Borrador';
         }
         field(110; "No. Registrado"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Registrado';
             TableRelation = IF ("Tipo Transaccion" = CONST(Venta)) "Sales Invoice Header"
             ELSE IF ("Tipo Transaccion" = CONST(Anulacion)) "Sales Cr.Memo Header";
         }
         field(120; "Cod. cliente"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cod. cliente';
         }
         field(130; "Nombre cliente"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre cliente';
         }
         field(34002518; "Id Replicacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
     }

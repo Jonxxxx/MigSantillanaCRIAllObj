@@ -5,9 +5,13 @@ table 50500 "Ubicaciones que no existen"
     {
         field(1;"Cod. Ubicacion";Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Ubicacion';
         }
         field(2;"Cod. Almacen";Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Almacen';
         }
     }
 

@@ -28,18 +28,21 @@ table 34002503 Tiendas
     {
         field(34002500; "Cod. Tienda"; Code[20])
         {
-            Caption = 'Store Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Tienda';
             Description = 'DsPOS Standard';
             NotBlank = true;
         }
         field(34002501; Descripcion; Text[200])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standard';
         }
         field(34002502; "Cod. Almacen"; Code[20])
         {
-            Caption = 'Location code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Almacen';
             Description = 'DsPOS Standard';
             TableRelation = Location.Code;
 
@@ -78,72 +81,86 @@ table 34002503 Tiendas
         }
         field(34002503; Direccion; Text[250])
         {
-            Caption = 'Address';
+            DataClassification = CustomerContent;
+            Caption = 'Direccion';
             Description = 'DsPOS Standard';
         }
         field(34002504; Telefono; Text[250])
         {
-            Caption = 'Phone no.';
+            DataClassification = CustomerContent;
+            Caption = 'Telefono';
             Description = 'DsPOS Standard';
         }
         field(34002505; Fax; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Fax';
             Description = 'DsPOS Standard';
         }
         field(34002506; "Direccion 2"; Text[250])
         {
-            Caption = 'Address 2';
+            DataClassification = CustomerContent;
+            Caption = 'Direccion 2';
             Description = 'DsPOS Standard';
         }
         field(34002507; "Pagina web"; Text[250])
         {
-            Caption = 'Web page';
+            DataClassification = CustomerContent;
+            Caption = 'Pagina web';
             Description = 'DsPOS Standard';
         }
         field(34002508; "Telefono 2"; Text[30])
         {
-            Caption = 'Phono no. 2';
+            DataClassification = CustomerContent;
+            Caption = 'Telefono 2';
             Description = 'DsPOS Standard';
         }
         field(34002509; "No. Identificacion Fiscal"; Text[50])
         {
-            Caption = 'VAT Registration No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Identificacion Fiscal';
             Description = 'DsPOS Standard';
         }
         field(34002512; "Cod. Pais"; Code[20])
         {
-            Caption = 'Country Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Pais';
             Description = 'DsPOS Standard';
             TableRelation = "Country/Region";
         }
         field(34002513; Ciudad; Code[20])
         {
-            Caption = 'City';
+            DataClassification = CustomerContent;
+            Caption = 'Ciudad';
             Description = 'DsPOS Standard';
         }
         field(34002515; "Descripcion recibo TPV"; Text[250])
         {
-            Caption = 'POS Receipt text';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion recibo TPV';
             Description = 'DsPOS Standard';
         }
         field(34002516; "Descripcion recibo TPV 2"; Text[250])
         {
-            Caption = 'POS Receipt text';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion recibo TPV 2';
             Description = 'DsPOS Standard';
         }
         field(34002517; "Descripcion recibo TPV 3"; Text[250])
         {
-            Caption = 'POS Receipt text';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion recibo TPV 3';
             Description = 'DsPOS Standard';
         }
         field(34002518; "Descripcion recibo TPV 4"; Text[250])
         {
-            Caption = 'POS Receipt text';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion recibo TPV 4';
             Description = 'DsPOS Standard';
         }
         field(34002519; "Nombre Pais"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Nombre Pais';
             Description = 'DsPOS Standard';
 
@@ -160,83 +177,99 @@ table 34002503 Tiendas
         }
         field(34002520; "Control de caja"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Control de caja';
             Description = 'DsPOS Standard';
         }
         field(34002521; "Descuadre maximo en caja"; Decimal)
         {
-            Caption = 'Descuadre Maximo en caja';
+            DataClassification = CustomerContent;
+            Caption = 'Descuadre maximo en caja';
             Description = 'DsPOS Standard';
             MinValue = 0;
         }
         field(34002522; "Arqueo de caja obligatorio"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Arqueo de caja obligatorio';
             Description = 'DsPOS Standard';
         }
         field(34002530; "ID Reporte contado"; Integer)
         {
-            Caption = 'Cash Receipt ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Reporte contado';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002531; "ID Reporte contado FE"; Integer)
         {
-            Caption = 'Cash Receipt ID FE ';
+            DataClassification = CustomerContent;
+            Caption = 'ID Reporte contado FE';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002535; "ID Reporte nota credito"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'ID Reporte nota credito';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002536; "ID Reporte nota credito FE"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'ID Reporte nota credito FE';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002540; "ID Reporte venta a credito"; Integer)
         {
-            Caption = 'Credit sales report ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Reporte venta a credito';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002550; "ID Reporte cuadre"; Integer)
         {
-            Caption = 'Balancing report ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Reporte cuadre';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
         field(34002560; "Cantidad de Copias Contado"; Integer)
         {
-            Caption = 'Cantidad de Copias venta contado';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Copias Contado';
             Description = 'DsPOS Standard';
         }
         field(34002570; "Cantidad de Copias Credito"; Integer)
         {
-            Caption = 'Cantidad de Copias venta a credito';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad de Copias Credito';
             Description = 'DsPOS Standard';
         }
         field(34002571; "Registro En Linea"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Registro En Linea';
             Description = 'DsPOS Standard';
         }
         field(34002573; "Agrupar Lineas"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Agrupar Lineas';
             Description = 'DsPOS Standard';
         }
         field(34002574; "Cantidad copias nota credito"; Integer)
         {
-            Caption = 'Cantidad de Copias Nota Credito';
+            DataClassification = CustomerContent;
+            Caption = 'Cantidad copias nota credito';
             Description = 'DsPOS Standard';
         }
         field(34002575; "Permite Anulaciones en POS"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Permite Anulaciones en POS';
             Description = 'DsPOS Standard';
 
             trigger OnValidate()
@@ -248,15 +281,20 @@ table 34002503 Tiendas
         }
         field(34002576; "Instancia Completa SQL"; Text[250])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Instancia Completa SQL';
             Description = 'DsPOS Standard';
         }
         field(34002577; "Imp. Minimo Sol. Datos Cliente"; Decimal)
         {
-            Caption = 'Importe minimo para solicitar datos del cliente';
+            DataClassification = CustomerContent;
+            Caption = 'Imp. Minimo Sol. Datos Cliente';
             Description = 'DsPOS Standard';
         }
         field(34002578; "No. Maximo de Lineas"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Maximo de Lineas';
             Description = 'DsPOS Standard';
             InitValue = 20;
             MaxValue = 999;
@@ -265,10 +303,13 @@ table 34002503 Tiendas
         }
         field(34002579; "No. Reaperturas Permitidas"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Reaperturas Permitidas';
             Description = 'DsPOS Standard';
         }
         field(34002580; "Cuenta Excencion IVA"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Cuenta Excencion IVA';
             Description = 'DsPOS Standard';
             TableRelation = "G/L Account"."No." WHERE("Account Type" = CONST(Posting));
@@ -286,31 +327,45 @@ table 34002503 Tiendas
         }
         field(34002585; "ID Sesion"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Sesion';
             Description = '#90735';
         }
         field(34002586; "e-mail"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'e-mail';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
         field(34002587; "Informacion zona"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Informacion zona';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
         field(34002590; "Permite NC en otro TPV"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Permite NC en otro TPV';
             Description = 'DsPOS Standard';
             InitValue = true;
         }
         field(34002591; "Permite NC en otro Turno"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Permite NC en otro Turno';
             Description = 'DsPOS Standard';
             InitValue = true;
         }
         field(34002592; "Codigo Postal"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Postal';
         }
         field(34002593; "Nombre Empresa 1"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Empresa 1';
         }
     }
 

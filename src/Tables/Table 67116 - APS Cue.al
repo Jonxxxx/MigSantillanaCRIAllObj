@@ -5,44 +5,55 @@ table 67116 "APS Cue"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser";
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact;
         }
         field(3; Presupuesto; Decimal)
         {
+            Caption = 'Presupuesto';
             CalcFormula = Sum("Promotor - Ppto Vtas".Quantity WHERE("Cod. Promotor" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(4; Adoptado; Decimal)
         {
+            Caption = 'Adoptado';
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Promotor" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(5; Docentes; Integer)
         {
+            Caption = 'Docentes';
             CalcFormula = Count("Promotor - Docentes" WHERE("Cod. Promotor" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(6; Colegios; Integer)
         {
+            Caption = 'Colegios';
             CalcFormula = Count("Promotor - Lista de Colegios" WHERE("Cod. Promotor" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(7; "Solicitud Talleres"; Integer)
         {
+            Caption = 'Solicitud Talleres';
             CalcFormula = Count("Solicitud de Taller - Evento" WHERE("Cod. promotor" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(8; "Colegio - Adopciones"; Integer)
         {
+            Caption = 'Colegio - Adopciones';
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(9; "Colegio - Total"; Integer)
         {
+            Caption = 'Colegio - Total';
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE("Cod. Colegio" = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }

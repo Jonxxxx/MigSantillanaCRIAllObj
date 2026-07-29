@@ -6,8 +6,8 @@ table 34002203 Expositores
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
-            DataClassification = ToBeClassified;
 
             /*TableRelation = IF (Tipo = CONST(Interno)) Employee.No.
                             ELSE IF (Tipo = CONST(Externo)) Vendor.No.;*/
@@ -48,33 +48,33 @@ table 34002203 Expositores
         }
         field(2; Name; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
-            DataClassification = ToBeClassified;
         }
         field(3; "Search Name"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
-            DataClassification = ToBeClassified;
         }
         field(4; "Name 2"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name 2';
-            DataClassification = ToBeClassified;
         }
         field(5; Address; Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
-            DataClassification = ToBeClassified;
         }
         field(6; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
-            DataClassification = ToBeClassified;
         }
         field(7; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             begin
@@ -83,39 +83,39 @@ table 34002203 Expositores
         }
         field(8; "Phone No."; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
         field(9; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = PhoneNo;
         }
         field(10; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
-            DataClassification = ToBeClassified;
             TableRelation = Territory;
         }
         field(11; "Language Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Language Code';
-            DataClassification = ToBeClassified;
             TableRelation = Language;
         }
         field(12; Tipo; Option)
         {
-            Caption = 'Type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Internal,External';
             OptionMembers = Interno,Externo;
         }
         field(13; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
-            DataClassification = ToBeClassified;
             TableRelation = "Country/Region";
         }
         field(14; Comment; Boolean)
@@ -129,19 +129,19 @@ table 34002203 Expositores
         }
         field(15; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
-            DataClassification = ToBeClassified;
             Editable = false;
         }
         field(16; "Fax No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Fax No.';
-            DataClassification = ToBeClassified;
         }
         field(18; "Document ID"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             var
@@ -151,14 +151,14 @@ table 34002203 Expositores
         }
         field(19; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
-            DataClassification = ToBeClassified;
             SubType = Bitmap;
         }
         field(20; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -171,41 +171,41 @@ table 34002203 Expositores
         }
         field(21; County; Text[30])
         {
-            Caption = 'State';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(22; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = EMail;
         }
         field(23; "Home Page"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Home Page';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = URL;
         }
         field(24; Twitter; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Twitter';
-            DataClassification = ToBeClassified;
         }
         field(25; Facebook; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Facebook';
-            DataClassification = ToBeClassified;
         }
         field(26; "E-Mail 2"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail 2';
-            DataClassification = ToBeClassified;
             ExtendedDatatype = EMail;
         }
         field(27; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
-            DataClassification = ToBeClassified;
             TableRelation = "No. Series";
         }
         field(29; "Date Filter"; Date)
@@ -215,9 +215,9 @@ table 34002203 Expositores
         }
         field(30; "Cost (LCY)"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cost (LCY)';
             AutoFormatType = 1;
-            Caption = 'Cost ($)';
-            DataClassification = ToBeClassified;
             Editable = false;
         }
     }

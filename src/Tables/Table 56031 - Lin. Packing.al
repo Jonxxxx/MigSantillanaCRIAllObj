@@ -15,40 +15,52 @@ table 56031 "Lin. Packing"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
         }
         field(3; "No. Caja"; Code[20])
         {
-            Caption = 'Box No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Caja';
         }
         field(4; "Fecha Apertura Caja"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Apertura Caja';
         }
         field(5; "Fecha Cierre Caja"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Cierre Caja';
         }
         field(6; "Estado Caja"; Option)
         {
-            Caption = 'Box Status';
+            DataClassification = CustomerContent;
+            Caption = 'Estado Caja';
             OptionCaption = 'Close,Open';
             OptionMembers = Cerrada,Abierta;
         }
         field(7; "No. Picking"; Code[20])
         {
-            Caption = 'Picking No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Picking';
         }
         field(8; "Total de Productos"; Decimal)
         {
+            Caption = 'Total de Productos';
             CalcFormula = Sum("Contenido Cajas Packing".Cantidad WHERE("No. Packing" = FIELD("No."),
                                                                         "No. Caja" = FIELD("No. Caja")));
-            Caption = 'Item total';
             FieldClass = FlowField;
         }
         field(9; "No. Palet"; Code[20])
         {
-            Caption = 'Palet No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Palet';
         }
         field(10; "No. Pedido"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Pedido';
             //TODO Ver: 
             /*
             TableRelation = IF ("Tipo pedido" = CONST(Venta)) "Sales Header"."No." WHERE("Document Type" = CONST(Order),
@@ -60,6 +72,8 @@ table 56031 "Lin. Packing"
         }
         field(20; "Tipo pedido"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo pedido';
             OptionCaption = 'Venta,Consignaci n,Transferencia';
             OptionMembers = Venta,Consignacion,Transferencia;
         }

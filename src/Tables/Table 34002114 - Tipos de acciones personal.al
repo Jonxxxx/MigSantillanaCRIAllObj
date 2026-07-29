@@ -9,54 +9,66 @@ table 34002114 "Tipos de acciones personal"
     {
         field(1; "Tipo de accion"; Option)
         {
-            Caption = 'Action type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de accion';
             OptionCaption = ' ,Hiring,Change,Quit';
             OptionMembers = " ",Ingreso,Cambio,Salida;
         }
         field(2; Codigo; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(3; Descripcion; Text[50])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Emitir documento"; Boolean)
         {
-            Caption = 'Print document';
+            DataClassification = CustomerContent;
+            Caption = 'Emitir documento';
         }
         field(5; "ID Documento"; Integer)
         {
-            Caption = 'Document ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Documento';
         }
         field(6; "Editar salario"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Editar salario';
         }
         field(7; "Editar cargo"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Editar cargo';
         }
         field(8; "Transferir entre empresas"; Boolean)
         {
-            Caption = 'Transfer between companies';
+            DataClassification = CustomerContent;
+            Caption = 'Transferir entre empresas';
         }
         field(9; "Pagar preaviso"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Pagar preaviso';
         }
         field(10; "Pagar cesantia"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Pagar cesantia';
         }
         field(11; "Pagar regalia"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Pagar regalia';
             Enabled = false;
         }
         field(12; Suspension; Boolean)
         {
-            Caption = 'Suspend';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Suspension';
         }
     }
 

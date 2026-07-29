@@ -9,22 +9,28 @@ table 34002120 "Nivel Cargo"
     {
         field(2; "Cod. Nivel"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
         }
         field(3; Descripcion; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "Importe minimo"; Decimal)
         {
-            Caption = 'Minimum amount';
+            DataClassification = CustomerContent;
+            Caption = 'Importe minimo';
         }
         field(5; "Importe Maximo"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe Maximo';
         }
         field(6; "Importe Medio"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe Medio';
         }
     }
 

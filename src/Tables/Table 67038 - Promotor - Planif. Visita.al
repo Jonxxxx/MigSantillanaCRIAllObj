@@ -8,10 +8,14 @@ table 67038 "Promotor - Planif. Visita"
     {
         field(1; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(2; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = "Promotor - Lista de Colegios"."Cod. Colegio" WHERE("Cod. Promotor" = FIELD("Cod. Promotor"));
 
             trigger OnValidate()
@@ -28,12 +32,18 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(3; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
         }
         field(4; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(5; Estado; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionCaption = ' ,Planned,Completed';
             OptionMembers = " ",Planificado,Completado;
 
@@ -78,6 +88,8 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(6; "Fecha Visita"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Visita';
 
             trigger OnValidate()
             var
@@ -103,43 +115,63 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(7; "Hora Inicial Visita"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicial Visita';
         }
         field(8; "Hora Final Visita"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Final Visita';
         }
         field(9; "Fecha Proxima Visita"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Proxima Visita';
         }
         field(10; Comentario; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Comentario';
         }
         field(11; "Nombre Promotor"; Text[60])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(12; Ano; Integer)
         {
-            Caption = 'Year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano';
             Editable = false;
         }
         field(13; Semana; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Semana';
         }
         field(14; "Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(15; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(16; Nivel; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel';
             TableRelation = "Nivel Educativo APS";
         }
         field(17; "Persona atendio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Persona atendio';
             TableRelation = "Colegio - Docentes"."Cod. Docente" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
             trigger OnValidate()
@@ -159,11 +191,15 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(18; Tipo; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = ' ,CDS,Other';
             OptionMembers = " ",CDS,Otro;
         }
         field(19; Cargo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cargo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Puestos de trabajo"));
 
             trigger OnValidate()
@@ -180,12 +216,18 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(20; "Nombre persona atendio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre persona atendio';
         }
         field(21; "Descripcion Cargo"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Cargo';
         }
         field(22; Tarea; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tarea';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Tareas));
 
             trigger OnValidate()
@@ -199,9 +241,13 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(23; "Descripcion Tarea"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Tarea';
         }
         field(24; Objetivo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Objetivo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
 
             trigger OnValidate()
@@ -215,21 +261,25 @@ table 67038 "Promotor - Planif. Visita"
         }
         field(25; "Descripcion Objetivo"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Objetivo';
         }
         field(26; Delegacion; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Delegacion';
         }
         field(27; Calificacion; Option)
         {
-            Caption = 'Qualification';
+            DataClassification = CustomerContent;
+            Caption = 'Calificacion';
             OptionCaption = ' ,Done,Not Done';
             OptionMembers = " ","Se Cumplio","No se Cumplio";
         }
         field(28; "Estado Colegio"; Code[20])
         {
-            Caption = 'School status';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Estado Colegio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Estado Colegio"));
         }
     }

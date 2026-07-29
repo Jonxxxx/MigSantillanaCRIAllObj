@@ -5,19 +5,23 @@ table 56019 "Lin. Ident. Devoluci n Reg."
     {
         field(1;"No. Ident. Devolucion";Code[20])
         {
-            Caption = 'Return Identifier No.';
+            DataClassification = CustomerContent;
+            Caption = 'No. Ident. Devolucion';
         }
         field(2;"No. Bulto";Integer)
         {
-            Caption = 'No. of package';
+            DataClassification = CustomerContent;
+            Caption = 'No. Bulto';
         }
         field(3;Comentarios;Text[250])
         {
-            Caption = 'Comments';
+            DataClassification = CustomerContent;
+            Caption = 'Comentarios';
         }
         field(4;Ubicacion;Text[250])
         {
-            Caption = 'Place';
+            DataClassification = CustomerContent;
+            Caption = 'Ubicacion';
         }
     }
 

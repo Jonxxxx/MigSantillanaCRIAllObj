@@ -7,32 +7,46 @@ table 67007 Asignaturas
     {
         field(1; "Code"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Code';
             NotBlank = true;
         }
         field(2; Description; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description';
         }
         field(3; Nivel; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel';
             NotBlank = true;
             TableRelation = "Nivel Educativo APS";
         }
         field(4; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
             NotBlank = true;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(5; Grado; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grado';
             NotBlank = true;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
         field(6; "Carga horaria"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Carga horaria';
             TableRelation = "Carga Horaria";
         }
         field(7; "Tipo Ingles"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Ingles';
             OptionCaption = 'USA,England';
             OptionMembers = USA,England;
         }

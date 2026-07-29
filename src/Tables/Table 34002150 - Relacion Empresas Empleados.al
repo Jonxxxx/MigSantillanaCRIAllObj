@@ -6,11 +6,14 @@ table 34002150 "Relacion Empresas Empleados"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             TableRelation = Employee;
         }
         field(2; Empresa; Text[30])
         {
-            Caption = 'Company';
+            DataClassification = CustomerContent;
+            Caption = 'Empresa';
             TableRelation = Company;
 
             trigger OnValidate()
@@ -21,6 +24,8 @@ table 34002150 "Relacion Empresas Empleados"
         }
         field(3; "Cod. Empleado en empresa"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado en empresa';
 
             trigger OnLookup()
             var

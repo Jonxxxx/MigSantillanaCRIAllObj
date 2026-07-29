@@ -6,25 +6,29 @@ table 34002509 "Menus TPV"
     {
         field(34002500; "Menu ID"; Code[10])
         {
-            Caption = 'ID Menu';
+            DataClassification = CustomerContent;
+            Caption = 'Menu ID';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
         field(34002501; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
         field(34002502; "Cantidad de botones"; Integer)
         {
+            Caption = 'Cantidad de botones';
             CalcFormula = Count(Botones WHERE("ID Menu" = FIELD("Menu ID"),
                                                Activo = CONST(True)));
-            Caption = 'Quantity of buttons';
             Description = 'DsPOS Standar';
             FieldClass = FlowField;
         }
         field(340025003; "Tipo Menu"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Menu';
             Description = 'DsPOS Standar';
             OptionMembers = ,Acciones,Pagos,Productos;
 

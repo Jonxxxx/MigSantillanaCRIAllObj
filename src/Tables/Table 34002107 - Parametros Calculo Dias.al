@@ -9,15 +9,18 @@ table 34002107 "Parametros Calculo Dias"
     {
         field(1; Codigo; Code[10])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; Descripcion; Text[30])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; Valor; Decimal)
         {
-            Caption = 'Value';
+            DataClassification = CustomerContent;
+            Caption = 'Valor';
         }
     }
 

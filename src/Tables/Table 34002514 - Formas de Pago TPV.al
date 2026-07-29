@@ -7,25 +7,31 @@ table 34002514 "Formas de Pago TPV"
     {
         field(1; "ID Pago"; Code[20])
         {
-            Caption = 'Payment ID';
+            DataClassification = CustomerContent;
+            Caption = 'ID Pago';
             NotBlank = true;
         }
         field(2; Descripcion; Text[250])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; Activo; Boolean)
         {
-            Caption = 'Active';
+            DataClassification = CustomerContent;
+            Caption = 'Activo';
         }
         field(4; Tipo; Option)
         {
-            Caption = 'Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'G/L Account,Customer,Vendor,Bank Account,Fixed Asset,IC Partner';
             OptionMembers = Cuenta,Cliente,Proveedor,Banco;
         }
         field(5; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No.';
             TableRelation = IF (Tipo = CONST(Cuenta)) "G/L Account"
             ELSE IF (Tipo = CONST(Cliente)) Customer
             ELSE IF (Tipo = CONST(Proveedor)) Vendor
@@ -33,12 +39,14 @@ table 34002514 "Formas de Pago TPV"
         }
         field(6; "Cod. divisa"; Code[10])
         {
-            Caption = 'Currency code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
             TableRelation = Currency;
         }
         field(7; Cambio; Boolean)
         {
-            Caption = 'Change';
+            DataClassification = CustomerContent;
+            Caption = 'Cambio';
 
             trigger OnValidate()
             begin
@@ -51,33 +59,43 @@ table 34002514 "Formas de Pago TPV"
         }
         field(8; "Abre cajon"; Boolean)
         {
-            Caption = 'Open Drawer';
+            DataClassification = CustomerContent;
+            Caption = 'Abre cajon';
         }
         field(9; "Filtro Cajero"; Code[20])
         {
-            Caption = 'Cashier Filter';
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Cajero';
         }
         field(10; "Filtro Fecha"; Date)
         {
-            Caption = 'Date Filter';
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Fecha';
         }
         field(11; "Filtro Hora"; Time)
         {
-            Caption = 'Time Filter';
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Hora';
         }
         field(12; "Notas de Credito"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Notas de Credito';
         }
         field(13; "Tarjeta Credito"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tarjeta Credito';
         }
         field(14; Devolucion; Boolean)
         {
-            Caption = 'Return';
+            DataClassification = CustomerContent;
+            Caption = 'Devolucion';
         }
         field(15; "Exencion IVA"; Boolean)
         {
-            Caption = 'VAT exemption';
+            DataClassification = CustomerContent;
+            Caption = 'Exencion IVA';
         }
     }
 

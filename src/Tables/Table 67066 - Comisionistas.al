@@ -8,6 +8,7 @@ table 67066 Comisionistas
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
 
             trigger OnValidate()
@@ -21,59 +22,72 @@ table 67066 Comisionistas
         }
         field(2; Name; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name';
         }
         field(3; "Search Name"; Code[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search Name';
         }
         field(4; "Name 2"; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Name 2';
         }
         field(5; Address; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address';
         }
         field(6; "Address 2"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Address 2';
         }
         field(7; City; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'City';
         }
         field(9; "Phone No."; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(10; "Telex No."; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Telex No.';
         }
         field(15; "Territory Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Territory Code';
             TableRelation = Territory;
         }
         field(22; "Currency Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Currency Code';
             TableRelation = Currency;
         }
         field(24; "Language Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Language Code';
             TableRelation = Language;
         }
         field(29; "Salesperson Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Salesperson Code';
             TableRelation = "Salesperson/Purchaser";
         }
         field(35; "Country/Region Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
@@ -88,19 +102,23 @@ table 67066 Comisionistas
         }
         field(54; "Last Date Modified"; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Date Modified';
             Editable = false;
         }
         field(84; "Fax No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Fax No.';
         }
         field(85; "Telex Answer Back"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Telex Answer Back';
         }
         field(86; "VAT Registration No."; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'VAT Registration No.';
 
             trigger OnValidate()
@@ -111,12 +129,14 @@ table 67066 Comisionistas
         }
         field(89; Picture; BLOB)
         {
+            DataClassification = CustomerContent;
             Caption = 'Picture';
             SubType = Bitmap;
         }
         field(91; "Post Code"; Code[20])
         {
-            Caption = 'ZIP Code';
+            DataClassification = CustomerContent;
+            Caption = 'Post Code';
             TableRelation = "Post Code";
             //This property is currently not supported
             //TestTableRelation = false;
@@ -124,31 +144,37 @@ table 67066 Comisionistas
         }
         field(92; County; Text[30])
         {
-            Caption = 'State';
+            DataClassification = CustomerContent;
+            Caption = 'County';
         }
         field(102; "E-Mail"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail';
             ExtendedDatatype = EMail;
         }
         field(103; "Home Page"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Home Page';
             ExtendedDatatype = URL;
         }
         field(107; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             TableRelation = "No. Series";
         }
         field(5050; Type; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Type';
             OptionCaption = 'Company,Person';
             OptionMembers = Company,Person;
         }
         field(5051; "Company No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Company No.';
             TableRelation = Contact WHERE("Type" = CONST(Company));
 
@@ -251,11 +277,13 @@ table 67066 Comisionistas
         }
         field(5052; "Company Name"; Text[70])
         {
+            DataClassification = CustomerContent;
             Caption = 'Company Name';
             Editable = false;
         }
         field(5053; "Lookup Contact No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Lookup Contact No.';
             Editable = false;
             TableRelation = Contact;
@@ -270,6 +298,7 @@ table 67066 Comisionistas
         }
         field(5054; "First Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'First Name';
 
             trigger OnValidate()
@@ -280,6 +309,7 @@ table 67066 Comisionistas
         }
         field(5055; "Middle Name"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Middle Name';
 
             trigger OnValidate()
@@ -290,6 +320,7 @@ table 67066 Comisionistas
         }
         field(5056; Surname; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Surname';
 
             trigger OnValidate()
@@ -300,32 +331,39 @@ table 67066 Comisionistas
         }
         field(5058; "Job Title"; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job Title';
         }
         field(5059; Initials; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Initials';
         }
         field(5060; "Extension No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Extension No.';
         }
         field(5061; "Mobile Phone No."; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Mobile Phone No.';
             ExtendedDatatype = PhoneNo;
         }
         field(5062; Pager; Text[30])
         {
+            DataClassification = CustomerContent;
             Caption = 'Pager';
         }
         field(5063; "Organizational Level Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Organizational Level Code';
             TableRelation = "Organizational Level";
         }
         field(5064; "Exclude from Segment"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Exclude from Segment';
         }
         field(5065; "Date Filter"; Date)
@@ -395,6 +433,7 @@ table 67066 Comisionistas
         }
         field(5073; "External ID"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'External ID';
         }
         field(5074; "No. of Interactions"; Integer)
@@ -412,6 +451,7 @@ table 67066 Comisionistas
         }
         field(5076; "Cost (LCY)"; Decimal)
         {
+            Caption = 'Cost (LCY)';
             AutoFormatType = 1;
 
             /*
@@ -421,7 +461,6 @@ table 67066 Comisionistas
                                                                           "Date"=FIELD("Date Filter"),
                                                                           "Postponed"=CONST(false)));
                                                                           */
-            Caption = 'Cost ($)';
             Editable = false;
             FieldClass = FlowField;
         }
@@ -454,6 +493,7 @@ table 67066 Comisionistas
         }
         field(5079; "Estimated Value (LCY)"; Decimal)
         {
+            Caption = 'Estimated Value (LCY)';
             AutoFormatType = 1;
 
             /*
@@ -462,12 +502,12 @@ table 67066 Comisionistas
                                                                                  "Estimated Close Date" = FIELD("Date Filter"),
                                                                                  "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                                  "Action Taken"=FIELD("Action Taken Filter")));*/
-            Caption = 'Estimated Value ($)';
             Editable = false;
             FieldClass = FlowField;
         }
         field(5080; "Calcd. Current Value (LCY)"; Decimal)
         {
+            Caption = 'Calcd. Current Value (LCY)';
             AutoFormatType = 1;
 
             /*
@@ -477,7 +517,6 @@ table 67066 Comisionistas
                                                                                       "Contact No." = FIELD(FILTER(Lookup Contact No.)),
                                                                                       "Action Taken"=FIELD("Action Taken Filter")));
                                                                                       */
-            Caption = 'Calcd. Current Value ($)';
             Editable = false;
             FieldClass = FlowField;
         }
@@ -621,92 +660,138 @@ table 67066 Comisionistas
         }
         field(5100; "Correspondence Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Correspondence Type';
             OptionCaption = ' ,Hard Copy,E-Mail,Fax';
             OptionMembers = " ","Hard Copy","E-Mail",Fax;
         }
         field(5101; "Salutation Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Salutation Code';
             TableRelation = Salutation;
         }
         field(5102; "Search E-Mail"; Code[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'Search E-Mail';
         }
         field(5104; "Last Time Modified"; Time)
         {
+            DataClassification = CustomerContent;
             Caption = 'Last Time Modified';
         }
         field(5105; "E-Mail 2"; Text[80])
         {
+            DataClassification = CustomerContent;
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
         field(50000; "% Descuento Cupon"; Decimal)
         {
-            Caption = 'Coupon Discount %';
+            DataClassification = CustomerContent;
+            Caption = '% Descuento Cupon';
         }
         field(56000; "Tipo de colegio"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de colegio';
         }
         field(56001; "Nivel Escolar"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nivel Escolar';
         }
         field(56002; "Tipo educacion"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo educacion';
         }
         field(56003; "Orden religiosa"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Orden religiosa';
         }
         field(56004; Bilingue; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Bilingue';
         }
         field(56005; "Sistema educativo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sistema educativo';
         }
         field(56006; Plan; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Plan';
         }
         field(56007; Turno; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
         }
         field(56008; Gerencia; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Gerencia';
         }
         field(56009; Delegado; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Delegado';
         }
         field(56010; Asesor; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Asesor';
         }
         field(56011; Ruta; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ruta';
         }
         field(56012; "Canal de compra"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Canal de compra';
         }
         field(56013; "Nombre canal"; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre canal';
         }
         field(56014; Microempresario; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Microempresario';
             TableRelation = "Cab. Identificaci n Devoluci n";
         }
         field(56016; "Fecha decision"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha decision';
         }
         field(56017; "Fecha lista"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha lista';
         }
         field(56018; Periodo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Periodo';
         }
         field(56019; Grupo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo';
         }
         field(56020; "Tipo de texto"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de texto';
         }
     }
 

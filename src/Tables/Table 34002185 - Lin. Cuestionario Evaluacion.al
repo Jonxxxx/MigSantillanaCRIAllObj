@@ -8,15 +8,18 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     {
         field(1; "Profile Questionnaire Code"; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Profile Questionnaire Code';
             TableRelation = "Cab. Cuestionario Evaluacion";
         }
         field(2; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'Line No.';
         }
         field(3; Type; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Type';
             OptionCaption = 'Question,Answer';
             OptionMembers = Question,Answer;
@@ -49,11 +52,13 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(4; Description; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
             NotBlank = true;
         }
         field(5; "Multiple Answers"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Multiple Answers';
 
             trigger OnValidate()
@@ -64,6 +69,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(6; "Auto Employee Classification"; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Auto Employee Classification';
 
             trigger OnValidate()
@@ -86,6 +92,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(9; "Employee Class. Field"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Employee Class. Field';
             OptionCaption = ' ,Interaction Quantity,Interaction Frequency (No./Year),Avg. Interaction Cost ($),Avg. Interaction Duration (Min.),Opportunity Won (%),Rating';
             OptionMembers = " ","Interaction Quantity","Interaction Frequency (No./Year)","Avg. Interaction Cost (LCY)","Avg. Interaction Duration (Min.)","Opportunity Won (%)",Rating;
@@ -124,6 +131,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(10; "Starting Date Formula"; DateFormula)
         {
+            DataClassification = CustomerContent;
             Caption = 'Starting Date Formula';
 
             trigger OnValidate()
@@ -134,6 +142,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(11; "Ending Date Formula"; DateFormula)
         {
+            DataClassification = CustomerContent;
             Caption = 'Ending Date Formula';
 
             trigger OnValidate()
@@ -144,6 +153,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(12; "Classification Method"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Classification Method';
             OptionCaption = ' ,Defined Value,Percentage of Value,Percentage of Employees';
             OptionMembers = " ","Defined Value","Percentage of Value","Percentage of employees";
@@ -162,6 +172,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(13; "Sorting Method"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Sorting Method';
             OptionCaption = ' ,Descending,Ascending';
             OptionMembers = " ","Descending","Ascending";
@@ -174,8 +185,9 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(14; "From Value"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'From Value';
+            BlankZero = true;
             DecimalPlaces = 0 : 25;
 
             trigger OnValidate()
@@ -186,8 +198,9 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(15; "To Value"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'To Value';
+            BlankZero = true;
             DecimalPlaces = 0 : 25;
 
             trigger OnValidate()
@@ -207,6 +220,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(17; Priority; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Priority';
             InitValue = Normal;
             OptionCaption = 'Very Low (Hidden),Low,Normal,High,Very High';
@@ -226,6 +240,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(18; "No. of Decimals"; Integer)
         {
+            DataClassification = CustomerContent;
             Caption = 'No. of Decimals';
             MaxValue = 25;
             MinValue = -25;
@@ -238,6 +253,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(19; "Min. % Questions Answered"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Min. % Questions Answered';
             DecimalPlaces = 0 : 0;
             MaxValue = 100;
@@ -253,6 +269,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(9501; "Wizard Step"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Wizard Step';
             Editable = false;
             OptionCaption = ' ,1,2,3,4,5,6';
@@ -260,24 +277,28 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(9502; "Interval Option"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Interval Option';
             OptionCaption = 'Minimum,Maximum,Interval';
             OptionMembers = Minimum,Maximum,Interval;
         }
         field(9503; "Answer Option"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Answer Option';
             OptionCaption = 'HighLow,ABC,Custom';
             OptionMembers = HighLow,ABC,Custom;
         }
         field(9504; "Answer Description"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Answer Description';
         }
         field(9505; "Wizard From Value"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Wizard From Value';
+            BlankZero = true;
             DecimalPlaces = 0 : 25;
 
             trigger OnValidate()
@@ -288,8 +309,9 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(9506; "Wizard To Value"; Decimal)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Wizard To Value';
+            BlankZero = true;
             DecimalPlaces = 0 : 25;
 
             trigger OnValidate()
@@ -300,8 +322,9 @@ table 34002185 "Lin. Cuestionario Evaluacion"
         }
         field(9707; "Wizard From Line No."; Integer)
         {
-            BlankZero = true;
+            DataClassification = CustomerContent;
             Caption = 'Wizard From Line No.';
+            BlankZero = true;
 
             trigger OnValidate()
             begin

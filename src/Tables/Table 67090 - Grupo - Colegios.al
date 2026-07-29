@@ -5,6 +5,8 @@ table 67090 "Grupo - Colegios"
     {
         field(1; "Cod. grupo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. grupo';
             TableRelation = "Grupo de Colegios"."Cod. Grupo";
 
             trigger OnValidate()
@@ -17,9 +19,13 @@ table 67090 "Grupo - Colegios"
         }
         field(3; "Nombre Grupo"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Grupo';
         }
         field(4; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact."No.";
 
             trigger OnValidate()
@@ -32,6 +38,8 @@ table 67090 "Grupo - Colegios"
         }
         field(5; "Nombre Colegio"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
     }
 

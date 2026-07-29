@@ -6,16 +6,24 @@ table 64839 "Replicator Report List"
     {
         field(1; Type; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Type';
             OptionMembers = Replicator;
         }
         field(2; "Line No."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Line No.';
         }
         field(3; Text; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Text';
         }
         field(4; "Report ID"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Report ID';
             TableRelation = AllObjWithCaption."Object ID"
     where("Object Type" = const(Report));
 
@@ -27,6 +35,7 @@ table 64839 "Replicator Report List"
         }
         field(5; "Report Name"; Text[30])
         {
+            Caption = 'Report Name';
             CalcFormula = lookup(AllObjWithCaption."Object Name" where("Object Type" = const(Report), "Object ID" = field("Report ID")));
             Editable = false;
             FieldClass = FlowField;

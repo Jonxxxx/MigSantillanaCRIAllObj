@@ -7,10 +7,14 @@ table 67012 Talleres
     {
         field(1; "Cod. Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Evento';
             TableRelation = Eventos;
         }
         field(2; "Tipo de Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Evento';
             TableRelation = "Tipos de Eventos";
 
             trigger OnValidate()
@@ -21,61 +25,95 @@ table 67012 Talleres
         }
         field(3; Codigo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(4; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; Delegacion; Code[20])
         {
-            Caption = 'Responsibility Center';
+            DataClassification = CustomerContent;
+            Caption = 'Delegacion';
             TableRelation = "Responsibility Center";
         }
         field(6; Categoria; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Categoria';
         }
         field(7; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Nivel Educativo APS";
         }
         field(8; "Codigo Expositor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Expositor';
             TableRelation = "Expositores - aps";
         }
         field(9; Sala; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Sala';
         }
         field(10; "Fecha invitacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha invitacion';
         }
         field(11; "Horas programadas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas programadas';
         }
         field(12; "Capacidad de asistentes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Capacidad de asistentes';
         }
         field(13; "Eventos programados"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Eventos programados';
         }
         field(14; "Importe Gasto Expositor"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto Expositor';
         }
         field(15; "Importe Gasto mensajeria"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gasto mensajeria';
         }
         field(16; "ImporteGastos Impresion"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ImporteGastos Impresion';
         }
         field(17; "Importe Utiles"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Utiles';
         }
         field(18; "Importe Atenciones"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe Atenciones';
         }
         field(19; "Otros Importes"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Otros Importes';
         }
         field(20; "No. Series"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'No. Series';
             Editable = false;
             TableRelation = "No. Series";

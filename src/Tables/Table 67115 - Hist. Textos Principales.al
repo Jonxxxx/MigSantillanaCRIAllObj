@@ -5,16 +5,20 @@ table 67115 "Hist. Textos Principales"
     {
         field(1; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
             Editable = false;
         }
         field(2; Description; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
             Editable = false;
         }
         field(3; "Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo de Negocio';
             Editable = false;
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
 
@@ -26,20 +30,26 @@ table 67115 "Hist. Textos Principales"
         }
         field(4; "Item Category Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Item Category Code';
             Editable = false;
             TableRelation = "Item Category";
         }
         field(5; "Dim Linea_Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dim Linea_Negocio';
             Editable = false;
         }
         field(6; "Dim Ediccion_Coleccion"; Text[70])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dim Ediccion_Coleccion';
             Editable = false;
         }
         field(7; "Product Group Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Product Group Code';
             Editable = false;
             Enabled = false;
@@ -47,11 +57,15 @@ table 67115 "Hist. Textos Principales"
         }
         field(8; "Dim Subfamilia"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dim Subfamilia';
             Editable = false;
             Enabled = false;
         }
         field(9; "Campana"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Campana';
         }
     }
 

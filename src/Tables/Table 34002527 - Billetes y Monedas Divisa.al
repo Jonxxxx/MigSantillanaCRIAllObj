@@ -6,18 +6,21 @@ table 34002527 "Billetes y Monedas Divisa"
     {
         field(10;"Cod. divisa";Code[10])
         {
-            Caption = 'Currency Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. divisa';
             TableRelation = Currency;
         }
         field(20;Tipo;Option)
         {
-            Caption = 'Type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             OptionCaption = 'Coin,Note,Roll';
             OptionMembers = Moneda,Billete;
         }
         field(30;Importe;Decimal)
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
     }
 

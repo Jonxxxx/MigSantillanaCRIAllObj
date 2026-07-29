@@ -6,19 +6,19 @@ table 34002204 "Cab. Entrenamiento"
     {
         field(1; "No. entrenamiento"; Code[20])
         {
-            Caption = 'Training no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. entrenamiento';
         }
         field(2; "Tipo entrenamiento"; Code[20])
         {
-            Caption = 'Training type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo entrenamiento';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(3; Disponible; Code[20])
         {
-            Caption = 'Training code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Disponible';
             Enabled = false;
             TableRelation = "ent - aaa - Disponible";
 
@@ -36,20 +36,20 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(5; "Titulo entrenamiento"; Text[100])
         {
-            Caption = 'Training title';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Titulo entrenamiento';
         }
         field(6; "Tipo de Instructor"; Option)
         {
-            Caption = 'Trainer type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Instructor';
             OptionCaption = 'Employee,Vendor';
             OptionMembers = Empleado,Proveedor;
         }
         field(7; "Cod. Instructor"; Code[20])
         {
-            Caption = 'Trainger code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Instructor';
             TableRelation = IF ("Tipo de Instructor" = CONST(Empleado)) Employee
             ELSE IF ("Tipo de Instructor" = CONST(Proveedor)) Vendor;
 
@@ -70,70 +70,70 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(8; "Nombre Instructor"; Text[60])
         {
-            Caption = 'Trainer name';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Instructor';
             Editable = false;
         }
         field(9; "Numero de sesiones"; Integer)
         {
-            Caption = 'Sessions number';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Numero de sesiones';
         }
         field(10; "Fecha Inicio"; Date)
         {
-            Caption = 'Starting date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Inicio';
         }
         field(11; Lunes; Boolean)
         {
-            Caption = 'Monday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Lunes';
         }
         field(12; Martes; Boolean)
         {
-            Caption = 'Tuesday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Martes';
         }
         field(13; Miercoles; Boolean)
         {
-            Caption = 'Wednesday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Miercoles';
         }
         field(14; Jueves; Boolean)
         {
-            Caption = 'Thursday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Jueves';
         }
         field(15; Viernes; Boolean)
         {
-            Caption = 'Friday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Viernes';
         }
         field(16; Sabados; Boolean)
         {
-            Caption = 'Saturday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Sabados';
         }
         field(17; Domingos; Boolean)
         {
-            Caption = 'Sunday';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Domingos';
         }
         field(18; "Asistentes esperados"; Integer)
         {
-            Caption = 'Expected attendees';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes esperados';
         }
         field(19; "Total registrados"; Integer)
         {
+            Caption = 'Total registrados';
             CalcFormula = Count("Asistentes entrenamientos" WHERE("No. entrenamiento" = FIELD("No. entrenamiento")));
-            Caption = 'Total registered';
             FieldClass = FlowField;
         }
         field(20; Estado; Option)
         {
-            Caption = 'Status';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionCaption = ' ,Requested,Planned,Done,Canceled';
             OptionMembers = " ",Solicitado,Planificado,Realizado,Cancelado;
 
@@ -168,63 +168,63 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(21; "No. serie"; Code[20])
         {
-            Caption = 'Serial no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. serie';
         }
         field(24; "Asistentes reales"; Integer)
         {
-            Caption = 'Real assistants';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes reales';
         }
         field(25; "Area Curricular"; Code[20])
         {
-            Caption = 'Knowledge area code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Area Curricular';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Area curricular"));
         }
         field(26; Sala; Code[20])
         {
-            Caption = 'Classroom';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Sala';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Salon));
         }
         field(27; Tipo; Option)
         {
-            Caption = 'Type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo';
             Editable = false;
             OptionCaption = 'Internal, External';
             OptionMembers = Interno,Externo;
         }
         field(28; "Importe Gastos Entrenador"; Decimal)
         {
-            Caption = 'Trainer Expense Amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gastos Entrenador';
         }
         field(29; "Importe Gastos Impresion"; Decimal)
         {
-            Caption = 'Amount Printing Expenses';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe Gastos Impresion';
         }
         field(30; "Importe Atenciones"; Decimal)
         {
-            Caption = 'Amount Attentions';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe Atenciones';
         }
         field(31; "Otros Importes"; Decimal)
         {
-            Caption = 'Other expenses amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Otros Importes';
         }
         field(32; Avisado; Boolean)
         {
-            Caption = 'Notified';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Avisado';
         }
         field(33; "Hora de Inicio"; Time)
         {
-            Caption = 'Starting date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Hora de Inicio';
 
             trigger OnValidate()
             begin
@@ -233,8 +233,8 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(34; "Hora Final"; Time)
         {
-            Caption = 'End time';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Hora Final';
 
             trigger OnValidate()
             begin
@@ -243,8 +243,8 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(35; "Horas entrenamiento"; Decimal)
         {
-            Caption = 'Training time';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Horas entrenamiento';
 
             trigger OnValidate()
             begin
@@ -253,13 +253,13 @@ table 34002204 "Cab. Entrenamiento"
         }
         field(36; "Examen requerido"; Boolean)
         {
-            Caption = 'Request test';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Examen requerido';
         }
         field(37; "Minimo para aprobar"; Decimal)
         {
-            Caption = 'Minimun to pass';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Minimo para aprobar';
         }
     }
 

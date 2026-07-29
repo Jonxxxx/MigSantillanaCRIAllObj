@@ -6,36 +6,37 @@ table 34002206 "Asistentes entrenamientos"
     {
         field(1; "No. entrenamiento"; Code[20])
         {
-            Caption = 'Training no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. entrenamiento';
         }
         field(2; "Tipo entrenamiento"; Code[20])
         {
-            Caption = 'Training type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo entrenamiento';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
         }
         field(4; "Fecha programacion"; Date)
         {
-            Caption = 'Schedule date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha programacion';
         }
         field(5; "Titulo entrenamiento"; Text[100])
         {
-            Caption = 'Training title';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Titulo entrenamiento';
             Editable = false;
         }
         field(6; "Tipo de Instructor"; Option)
         {
-            Caption = 'Trainer type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Instructor';
             OptionCaption = 'Employee,Vendor';
             OptionMembers = Empleado,Proveedor;
         }
         field(7; "Cod. Instructor"; Code[20])
         {
-            Caption = 'Trainger code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Instructor';
             TableRelation = IF ("Tipo de Instructor" = CONST(Empleado)) Employee
             ELSE IF ("Tipo de Instructor" = CONST(Proveedor)) Vendor;
 
@@ -56,14 +57,14 @@ table 34002206 "Asistentes entrenamientos"
         }
         field(8; "Nombre Instructor"; Text[60])
         {
-            Caption = 'Trainer name';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Instructor';
             Editable = false;
         }
         field(9; "No. empleado"; Code[20])
         {
-            Caption = 'Employee no.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'No. empleado';
             TableRelation = Employee;
 
             trigger OnValidate()
@@ -77,14 +78,14 @@ table 34002206 "Asistentes entrenamientos"
         }
         field(10; "Nombre completo"; Text[60])
         {
-            Caption = 'Name';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Nombre completo';
             Editable = false;
         }
         field(11; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
-            DataClassification = ToBeClassified;
 
             trigger OnValidate()
             var
@@ -94,28 +95,28 @@ table 34002206 "Asistentes entrenamientos"
         }
         field(12; "Fecha inscripcion"; Date)
         {
-            Caption = 'Enrollment date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inscripcion';
         }
         field(13; Inscrito; Boolean)
         {
-            Caption = 'Enrolled';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Inscrito';
         }
         field(14; Notificado; Boolean)
         {
-            Caption = 'Notified';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Notificado';
         }
         field(15; Confirmado; Boolean)
         {
-            Caption = 'Confirmed';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Confirmado';
         }
         field(16; Asistio; Boolean)
         {
-            Caption = 'Attended';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Asistio';
 
             trigger OnValidate()
             begin
@@ -127,13 +128,13 @@ table 34002206 "Asistentes entrenamientos"
         }
         field(17; Calificacion; Decimal)
         {
-            Caption = 'Score';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Calificacion';
         }
         field(18; "Hora de Inicio"; Time)
         {
-            Caption = 'Starting date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Hora de Inicio';
 
             trigger OnValidate()
             begin
@@ -144,7 +145,8 @@ table 34002206 "Asistentes entrenamientos"
         }
         field(19; "Hora Final"; Time)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Hora Final';
 
             trigger OnValidate()
             begin

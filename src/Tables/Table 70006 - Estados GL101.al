@@ -5,9 +5,13 @@ table 70006 "Estados GL101"
     {
         field(1; "Codigo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Descripcion"; Text[40])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

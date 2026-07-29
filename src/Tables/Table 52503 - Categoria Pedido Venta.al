@@ -7,18 +7,18 @@ table 52503 "Categoria Pedido Venta"
     {
         field(1;Codigo;Code[20])
         {
-            Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;Descripcion;Text[30])
         {
-            Caption = 'Description';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3;"Filtrar Cod. Compartir";Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Filtrar Cod. Compartir';
-            DataClassification = ToBeClassified;
             Description = 'SANTINAV-2745';
         }
     }

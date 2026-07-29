@@ -5,18 +5,26 @@ table 67106 "Asis. Visitas Asesor/Consultor"
     {
         field(1; "No. Visita"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Visita';
             Editable = false;
         }
         field(2; "No. Linea Progr."; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea Progr.';
             Editable = false;
         }
         field(3; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
             Editable = false;
         }
         field(4; "Cod. Docente"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Docente';
             TableRelation = Docentes;
 
             trigger OnValidate()
@@ -34,11 +42,14 @@ table 67106 "Asis. Visitas Asesor/Consultor"
         }
         field(5; "Nombre Docente"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Docente';
             Editable = false;
         }
         field(6; Asistio; Boolean)
         {
-            Caption = 'Attended';
+            DataClassification = CustomerContent;
+            Caption = 'Asistio';
 
             trigger OnValidate()
             begin
@@ -54,22 +65,30 @@ table 67106 "Asis. Visitas Asesor/Consultor"
         }
         field(7; Inscrito; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Inscrito';
         }
         field(8; Confirmado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Confirmado';
         }
         field(9; "Fecha inscripcion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inscripcion';
             Editable = false;
         }
         field(10; "Fecha programacion"; Date)
         {
+            Caption = 'Fecha programacion';
             CalcFormula = Lookup("Prog. Visitas Asesor/Consultor"."Fecha Programada" WHERE("No. Visita" = FIELD("No. Visita")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(11; "Document ID"; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Document ID';
             Editable = false;
 

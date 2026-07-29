@@ -5,31 +5,41 @@ table 34002121 "Cab. Aportes Empresas"
     {
         field(1; "No. Documento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Documento';
         }
         field(2; "Unidad cotizacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Unidad cotizacion';
         }
         field(3; "Periodo"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Periodo';
         }
         field(4; "No. Contabilizacion"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Contabilizacion';
         }
         field(5; "Tipo Nomina"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Nomina';
             OptionCaption = 'Regular,Christmas,Bonus,Tip,Rent';
             OptionMembers = Normal,"Regalia","Bonificacion",Propina,Renta;
         }
         field(6; "Tipo de nomina"; Code[20])
         {
-            Caption = 'Payroll type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de nomina';
             TableRelation = "Tipos de nominas";
         }
         field(7; "Job No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Job No.';
-            DataClassification = ToBeClassified;
             TableRelation = Job;
 
             trigger OnValidate()
@@ -41,6 +51,8 @@ table 34002121 "Cab. Aportes Empresas"
         }
         field(480; "Dimension Set ID"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Dimension Set ID';
         }
     }
 

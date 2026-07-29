@@ -5,15 +5,18 @@ table 50027 TempImpuestoFE
     {
         field(1;Codigo;Code[2])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2;TarifaIva;Code[2])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'TarifaIva';
         }
         field(3;MontoTotalImp;Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'MontoTotalImp';
         }
     }
 

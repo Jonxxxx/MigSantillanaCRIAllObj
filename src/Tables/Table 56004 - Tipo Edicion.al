@@ -10,11 +10,13 @@ table 56004 "Tipo Edicion"
     {
         field(1;"Cod. Tipo Edicion";Code[20])
         {
-            Caption = 'Edition Type Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Tipo Edicion';
         }
         field(2;Descripcion;Text[100])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

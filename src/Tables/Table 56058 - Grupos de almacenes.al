@@ -9,9 +9,13 @@ table 56058 "Grupos de almacenes"
     {
         field(1; Grupo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo';
         }
         field(2; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 

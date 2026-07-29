@@ -6,22 +6,25 @@ table 56100 "Provisiones nominas"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
-            Caption = 'Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             TableRelation = Employee;
         }
         field(2; Periodo; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Periodo';
         }
         field(3; "Concepto Salarial"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Concepto Salarial';
             TableRelation = "Conceptos salariales";
         }
         field(4; "Importe provisionado"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe provisionado';
         }
     }
 

@@ -9,6 +9,8 @@ table 67015 "Programac. Talleres y Eventos"
     {
         field(1; "Cod. Taller - Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Taller - Evento';
             TableRelation = Eventos."No.";
 
             trigger OnValidate()
@@ -22,10 +24,14 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(2; "Tipo Evento"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Evento';
             TableRelation = "Tipos de Eventos";
         }
         field(3; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = CONST(Company));
 
             trigger OnValidate()
@@ -36,6 +42,8 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
 
             trigger OnValidate()
@@ -48,43 +56,64 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(5; "Description Tipo evento"; Text[100])
         {
+            Caption = 'Description Tipo evento';
             CalcFormula = Lookup("Tipos de Eventos".Descripcion WHERE("Codigo" = FIELD("Tipo Evento")));
             FieldClass = FlowField;
         }
         field(6; "Description Taller"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Description Taller';
         }
         field(7; "Nombre Colegio"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Colegio';
         }
         field(8; "Nombre Promotor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Promotor';
         }
         field(9; "Tipo de Expositor"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de Expositor';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
         field(10; Expositor; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Expositor';
             TableRelation = IF ("Tipo de Expositor" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Tipo de Expositor" = CONST(Proveedor)) Vendor;
         }
         field(11; "Nombre Expositor"; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Expositor';
         }
         field(12; Avisado; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Avisado';
         }
         field(13; "Fecha inscripcion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha inscripcion';
             Editable = false;
         }
         field(14; "Fecha programacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha programacion';
         }
         field(15; "Fecha de realizacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha de realizacion';
 
             trigger OnValidate()
             var
@@ -97,16 +126,20 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(16; "Asistentes esperados"; Integer)
         {
-            Caption = 'Expected Attendees';
+            DataClassification = CustomerContent;
+            Caption = 'Asistentes esperados';
         }
         field(17; "Nro. De asistentes reales"; Integer)
         {
-            Caption = 'Real Attendees';
+            DataClassification = CustomerContent;
+            Caption = 'Nro. De asistentes reales';
             Editable = true;
             FieldClass = Normal;
         }
         field(18; "Horas dictadas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas dictadas';
 
             trigger OnValidate()
             begin
@@ -117,27 +150,40 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(19; "Horas Pedag gicas"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas Pedag gicas';
             Editable = false;
         }
         field(20; Observacion; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Observacion';
         }
         field(21; "Fecha Solicitud"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Solicitud';
         }
         field(22; Objetivo; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Objetivo';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Objetivos));
         }
         field(23; "Descripcion observacion"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion observacion';
         }
         field(24; Secuencia; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Secuencia';
         }
         field(25; Estado; Option)
         {
-            Caption = 'Status';
+            DataClassification = CustomerContent;
+            Caption = 'Estado';
             OptionCaption = ' ,Done,Cancelled';
             OptionMembers = " ",Realizado,Anulado;
 
@@ -150,7 +196,8 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(26; "Hora de Inicio"; Time)
         {
-            Caption = 'Starting date';
+            DataClassification = CustomerContent;
+            Caption = 'Hora de Inicio';
 
             trigger OnValidate()
             begin
@@ -161,6 +208,8 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(27; "Hora Final"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Final';
 
             trigger OnValidate()
             begin
@@ -169,20 +218,30 @@ table 67015 "Programac. Talleres y Eventos"
         }
         field(28; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(29; "Fecha propuesta"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha propuesta';
         }
         field(30; "Hora Inicio Propuesta"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicio Propuesta';
             Editable = false;
         }
         field(31; "Hora Fin Propuesta"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Fin Propuesta';
             Editable = false;
         }
         field(32; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
         }
     }

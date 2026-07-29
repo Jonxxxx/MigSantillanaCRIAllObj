@@ -7,6 +7,8 @@ table 34002155 "Dias Festivos"
     {
         field(1; Fecha; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
 
             trigger OnValidate()
             begin
@@ -24,7 +26,8 @@ table 34002155 "Dias Festivos"
         }
         field(2; "Dia Semana"; Option)
         {
-            Caption = 'Day of the week';
+            DataClassification = CustomerContent;
+            Caption = 'Dia Semana';
             Description = '    ,Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo';
             Editable = false;
             OptionCaption = ' ,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday';
@@ -32,16 +35,21 @@ table 34002155 "Dias Festivos"
         }
         field(3; Texto; Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto';
         }
         field(4; Mes; Option)
         {
-            Caption = 'Month';
+            DataClassification = CustomerContent;
+            Caption = 'Mes';
             Description = '   ,Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre';
             OptionCaption = '  ,January,February,March,April,May,Jun,July,August,Septiember,Octouber,November,December';
             OptionMembers = " ",Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         }
         field(5; "Fecha original"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha original';
         }
     }
 

@@ -7,27 +7,41 @@ table 34002147 "Historico Lin. Prestamo"
     {
         field(1; "No. Prestamo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Prestamo';
         }
         field(2; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(3; "Tipo CxC"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo CxC';
             Description = ',Prestamo,Factura';
             OptionMembers = " ","Prestamo",Factura;
         }
         field(4; "No. Cuota"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuota';
         }
         field(5; "Fecha Transaccion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Transaccion';
         }
         field(6; "Codigo Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Empleado';
             TableRelation = Employee;
         }
         field(7; Importe; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
 
             trigger OnValidate()
             begin
@@ -43,6 +57,8 @@ table 34002147 "Historico Lin. Prestamo"
         }
         field(8; "Debito"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Debito';
 
             trigger OnValidate()
             begin
@@ -51,6 +67,8 @@ table 34002147 "Historico Lin. Prestamo"
         }
         field(9; "Credito"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Credito';
 
             trigger OnValidate()
             begin
@@ -59,7 +77,8 @@ table 34002147 "Historico Lin. Prestamo"
         }
         field(10; Correccion; Boolean)
         {
-            Caption = 'Correction';
+            DataClassification = CustomerContent;
+            Caption = 'Correccion';
         }
     }
 

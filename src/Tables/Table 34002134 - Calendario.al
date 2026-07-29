@@ -6,7 +6,8 @@ table 34002134 Calendario
     {
         field(1; Fecha; Date)
         {
-            Caption = 'Date';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha';
             NotBlank = true;
 
             trigger OnValidate()
@@ -28,15 +29,18 @@ table 34002134 Calendario
         }
         field(2; Texto; Text[30])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Texto';
         }
         field(3; "No laborable"; Boolean)
         {
-            Caption = 'No working day';
+            DataClassification = CustomerContent;
+            Caption = 'No laborable';
         }
         field(4; "Dia de la semana"; Option)
         {
-            Caption = 'Week day';
+            DataClassification = CustomerContent;
+            Caption = 'Dia de la semana';
             Description = '    ,Lunes,Martes,Miércoles,Jueves,Viernes,Sabado,Domingo';
             Editable = false;
             OptionCaption = '    ,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday';
@@ -44,17 +48,20 @@ table 34002134 Calendario
         }
         field(5; Semana; Integer)
         {
-            Caption = 'Week';
+            DataClassification = CustomerContent;
+            Caption = 'Semana';
             Editable = false;
         }
         field(6; Generado; Boolean)
         {
-            Caption = 'Generated';
+            DataClassification = CustomerContent;
+            Caption = 'Generado';
             Editable = false;
         }
         field(7; "Periodo"; Option)
         {
-            Caption = 'Period';
+            DataClassification = CustomerContent;
+            Caption = 'Periodo';
             Description = '    ,Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre';
             Editable = false;
             OptionCaption = '    ,January,February,March,April,May,Jun,July,August,September,October,November,December';
@@ -62,12 +69,14 @@ table 34002134 Calendario
         }
         field(8; Ano; Integer)
         {
-            Caption = 'Year';
+            DataClassification = CustomerContent;
+            Caption = 'Ano';
             Editable = false;
         }
         field(9; Mes; Integer)
         {
-            Caption = 'Month';
+            DataClassification = CustomerContent;
+            Caption = 'Mes';
         }
     }
 

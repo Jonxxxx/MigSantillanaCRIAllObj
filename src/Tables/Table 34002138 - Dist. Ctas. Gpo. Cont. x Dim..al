@@ -5,17 +5,24 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
     {
         field(1; "Codigo"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Shortcut Dimension"; Code[20])
         {
-            Caption = 'Shortcut Dimension 1 Code';
+            DataClassification = CustomerContent;
+            Caption = 'Shortcut Dimension';
             TableRelation = Dimension.Code;
         }
         field(4; "Codigo Concepto Salarial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo Concepto Salarial';
             TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
@@ -35,16 +42,21 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
         }
         field(5; Importe; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
             InitValue = 100;
             MaxValue = 100;
         }
         field(6; "No. tarjeta"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. tarjeta';
             TableRelation = "G/L Entry";
         }
         field(7; "Tipo de nomina"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo de nomina';
             TableRelation = "Tipos de nominas";
         }
     }

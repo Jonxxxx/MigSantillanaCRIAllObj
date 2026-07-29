@@ -5,15 +5,21 @@ table 67052 "Colegio - Adopciones Cab"
     {
         field(1; "Cod. Colegio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Colegio';
             NotBlank = true;
             TableRelation = Contact WHERE("Type" = CONST(Company));
         }
         field(2; "Cod. Local"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Local';
             TableRelation = "Contact Alt. Address".Code WHERE("Contact No." = FIELD("Cod. Colegio"));
         }
         field(3; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             NotBlank = true;
             TableRelation = "Colegio - Nivel"."Cod. Nivel" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"));
 
@@ -25,29 +31,38 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(4; "Cod. Promotor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Promotor';
             TableRelation = "Salesperson/Purchaser" WHERE("Tipo" = CONST(Vendedor));
         }
         field(5; Turno; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Turno';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Turnos));
         }
         field(6; "Nombre Colegio"; Text[100])
         {
+            Caption = 'Nombre Colegio';
             CalcFormula = Lookup(Contact.Name WHERE("No." = FIELD("Cod. Colegio")));
             FieldClass = FlowField;
         }
         field(7; "Descripcion Nivel"; Text[100])
         {
+            Caption = 'Descripcion Nivel';
             CalcFormula = Lookup("Nivel Educativo APS".Descripcion WHERE("Codigo" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
         field(8; "Nombre Promotor"; Text[60])
         {
+            Caption = 'Nombre Promotor';
             CalcFormula = Lookup("Salesperson/Purchaser".Name WHERE("Code" = FIELD("Cod. Promotor")));
             FieldClass = FlowField;
         }
         field(9; "% Dto. Padres"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Padres';
 
             trigger OnValidate()
             begin
@@ -70,6 +85,8 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(10; "% Dto. Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Colegio';
 
             trigger OnValidate()
             begin
@@ -92,6 +109,8 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(11; "% Dto. Docente"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Docente';
 
             trigger OnValidate()
             begin
@@ -114,6 +133,8 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(12; "% Dto. Feria Padres"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Feria Padres';
 
             trigger OnValidate()
             begin
@@ -136,6 +157,8 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(13; "% Dto. Feria Colegio"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = '% Dto. Feria Colegio';
 
             trigger OnValidate()
             begin
@@ -158,33 +181,47 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(14; Usuario; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
         }
         field(15; Santillana; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Santillana';
         }
         field(16; "Cod. Editorial"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Editorial';
             TableRelation = Editoras;
         }
         field(17; "Nombre editorial"; Text[60])
         {
+            Caption = 'Nombre editorial';
             CalcFormula = Lookup(Editoras.Description WHERE("Code" = FIELD("Cod. Editorial")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(18; "Filtro fecha"; Date)
         {
+            Caption = 'Filtro fecha';
             FieldClass = FlowFilter;
         }
         field(19; "Filtro Linea de negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Linea de negocio';
         }
         field(20; "Filtro Grupo de Negocio"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Grupo de Negocio';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST("Grupo de Negocio"));
         }
         field(21; "Filtro Sub Familia"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Sub Familia';
 
             trigger OnLookup()
             begin
@@ -206,14 +243,20 @@ table 67052 "Colegio - Adopciones Cab"
         }
         field(22; "Filtro Serie"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Serie';
         }
         field(23; Adopcion; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Adopcion';
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquest,Keep,Lost,Retired;
         }
         field(24; "Filtro Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Filtro Nivel';
             TableRelation = "Nivel Educativo APS";
         }
     }

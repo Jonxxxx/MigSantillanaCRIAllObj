@@ -7,7 +7,8 @@ table 34002186 "Rel. Empleados Evaluacion"
     {
         field(1; "Employee No."; Code[20])
         {
-            Caption = 'Contact No.';
+            DataClassification = CustomerContent;
+            Caption = 'Employee No.';
             NotBlank = true;
             TableRelation = Contact WHERE(Type = CONST(Company));
 
@@ -22,6 +23,7 @@ table 34002186 "Rel. Empleados Evaluacion"
         }
         field(2; "Business Relation Code"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Business Relation Code';
             NotBlank = true;
             TableRelation = "Relacion Evaluacion";
@@ -59,12 +61,14 @@ table 34002186 "Rel. Empleados Evaluacion"
         }
         field(3; "Link to Table"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Link to Table';
             OptionCaption = ' ,Customer,Vendor,Bank Account';
             OptionMembers = " ",Customer,Vendor,"Bank Account";
         }
         field(4; "No."; Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'No.';
             TableRelation = IF ("Link to Table" = CONST(Customer)) Customer
             ELSE IF ("Link to Table" = CONST(Vendor)) Vendor
@@ -79,6 +83,7 @@ table 34002186 "Rel. Empleados Evaluacion"
         }
         field(6; "Contact Name"; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Contact Name';
             Editable = false;
             FieldClass = Normal;

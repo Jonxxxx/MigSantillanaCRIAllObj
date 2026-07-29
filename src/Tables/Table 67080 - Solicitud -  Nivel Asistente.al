@@ -5,9 +5,13 @@ table 67080 "Solicitud -  Nivel Asistente"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Nivel"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Nivel';
             TableRelation = "Nivel Educativo APS";
 
             trigger OnValidate()
@@ -22,9 +26,13 @@ table 67080 "Solicitud -  Nivel Asistente"
         }
         field(3; "Descripcion"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(4; "No. Asistentes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Asistentes';
         }
     }
 

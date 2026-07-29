@@ -10,10 +10,12 @@ table 56006 Tipos
     {
         field(1;"Code";Code[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Code';
         }
         field(2;Description;Text[60])
         {
+            DataClassification = CustomerContent;
             Caption = 'Description';
         }
     }

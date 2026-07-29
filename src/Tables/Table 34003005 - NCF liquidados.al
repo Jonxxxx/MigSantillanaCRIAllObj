@@ -5,9 +5,13 @@ table 34003005 "NCF liquidados"
     {
         field(1;NCF;Text[30])
         {
+            DataClassification = CustomerContent;
+            Caption = 'NCF';
         }
         field(2;Importe;Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
     }
 

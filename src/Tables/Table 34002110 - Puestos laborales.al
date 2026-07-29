@@ -8,18 +8,24 @@ table 34002110 "Puestos laborales"
     {
         field(1; "Codigo"; Code[15])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
         }
         field(2; "Descripcion"; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3; "Cod. nivel"; Code[20])
         {
-            Caption = 'Level code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. nivel';
             TableRelation = "Nivel Cargo";
         }
         field(4; "Cod. Supervisor"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Supervisor';
             TableRelation = Employee;
 
             trigger OnValidate()
@@ -41,46 +47,56 @@ table 34002110 "Puestos laborales"
         }
         field(5; "Nombre Completo"; Text[150])
         {
+            Caption = 'Nombre Completo';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("Cod. Supervisor")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(6; "Incluye Dias Feriados"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Incluye Dias Feriados';
         }
         field(7; Exento; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Exento';
             Description = 'Para Nomina PR';
         }
         field(8; "Total Empleados"; Integer)
         {
+            Caption = 'Total Empleados';
             CalcFormula = Count(Employee WHERE(Departamento = FIELD("Cod. departamento"),
                                                //TODO Ver "Type Code" = FIELD("Codigo"),
                                                Status = CONST(Active)));
-            Caption = 'Total Employee';
             Editable = false;
             FieldClass = FlowField;
         }
         field(9; "Metodo Calculo Ingresos"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Metodo Calculo Ingresos';
             TableRelation = "Parametros Calculo Dias";
         }
         field(10; "Metodo Calculo Paga Salario"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Metodo Calculo Paga Salario';
             OptionCaption = 'Distributed,By period';
             OptionMembers = Distribuido,"Por periodo";
         }
         field(11; "Cod. departamento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. departamento';
             NotBlank = true;
             TableRelation = Departamentos;
         }
         field(12; "Global Dimension 1 Code"; Code[20])
         {
-            CaptionClass = '1,1,1';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 1 Code';
-            DataClassification = ToBeClassified;
+            CaptionClass = '1,1,1';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
 
             trigger OnValidate()
@@ -90,9 +106,9 @@ table 34002110 "Puestos laborales"
         }
         field(13; "Global Dimension 2 Code"; Code[20])
         {
-            CaptionClass = '1,1,2';
+            DataClassification = CustomerContent;
             Caption = 'Global Dimension 2 Code';
-            DataClassification = ToBeClassified;
+            CaptionClass = '1,1,2';
             TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
 
             trigger OnValidate()
@@ -102,8 +118,8 @@ table 34002110 "Puestos laborales"
         }
         field(14; "Maximo de posiciones"; Integer)
         {
-            Caption = 'Maximum quantity';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Maximo de posiciones';
         }
     }
 

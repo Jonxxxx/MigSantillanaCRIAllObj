@@ -7,38 +7,60 @@ table 56200 "Async NAV WS Process Queue"
     {
         field(1;"Entry No.";Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Entry No.';
             AutoIncrement = true;
         }
         field(2;"Process Code";Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process Code';
         }
         field(3;"Process Data";BLOB)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process Data';
         }
         field(4;"Process Status";Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process Status';
             OptionMembers = Requested,Pending,Completed,Error;
         }
         field(5;"Process Response";BLOB)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process Response';
         }
         field(6;"Process Start Date & Time";DateTime)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process Start Date & Time';
         }
         field(7;"Process End Date & Time";DateTime)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process End Date & Time';
         }
         field(8;"Process User Id";Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Process User Id';
         }
         field(9;"URL Web Service";Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'URL Web Service';
         }
         field(10;"Soap Action";Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Soap Action';
         }
         field(11;"Received Data";BLOB)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Received Data';
         }
     }
 

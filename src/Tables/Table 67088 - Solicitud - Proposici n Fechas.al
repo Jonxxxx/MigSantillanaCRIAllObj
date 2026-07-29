@@ -5,21 +5,33 @@ table 67088 "Solicitud - Proposici n Fechas"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "No. Linea"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Linea';
         }
         field(3; "Fecha propuesta"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha propuesta';
         }
         field(4; "Hora Inicio"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Inicio';
         }
         field(5; "Hora Fin"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora Fin';
         }
         field(6; "Cod. Grado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Grado';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Grados));
 
             trigger OnValidate()
@@ -44,6 +56,8 @@ table 67088 "Solicitud - Proposici n Fechas"
         }
         field(8; "No. asistentes"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. asistentes';
         }
     }
 

@@ -6,18 +6,21 @@ table 34002153 "Beneficios empleados"
     {
         field(1; "Cod. Empleado"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Empleado';
             TableRelation = Employee;
         }
         field(2; "Tipo Beneficio"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Beneficio';
             OptionCaption = 'Income,Others';
             OptionMembers = Ingresos,Otro;
         }
         field(3; Codigo; Code[16])
         {
-            Caption = 'Code';
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = "Datos adicionales RRHH".Code WHERE("Tipo registro" = CONST(Beneficio));
 
             trigger OnLookup()
@@ -36,11 +39,13 @@ table 34002153 "Beneficios empleados"
         }
         field(4; Descripcion; Text[60])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(5; Importe; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
+            Caption = 'Importe';
         }
     }
 

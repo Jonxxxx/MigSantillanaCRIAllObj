@@ -7,22 +7,28 @@ table 56059 "Almacenes x Grupo"
     {
         field(1; Grupo; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Grupo';
             NotBlank = true;
             TableRelation = "Grupos de almacenes".Grupo;
         }
         field(2; Almacen; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Almacen';
             NotBlank = true;
             TableRelation = Location.Code;
         }
         field(10; "Nombre Grupo"; Text[50])
         {
+            Caption = 'Nombre Grupo';
             CalcFormula = Lookup("Grupos de almacenes".Descripcion WHERE("Grupo" = FIELD("Grupo")));
             Editable = false;
             FieldClass = FlowField;
         }
         field(11; "Nombre Almacen"; Text[100])
         {
+            Caption = 'Nombre Almacen';
             CalcFormula = Lookup(Location.Name WHERE("Code" = FIELD("Almacen")));
             Editable = false;
             FieldClass = FlowField;

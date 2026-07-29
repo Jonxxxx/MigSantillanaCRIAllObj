@@ -7,7 +7,8 @@ table 56071 "Rutas de Hojas de Rutas"
     {
         field(1; "Code"; Code[10])
         {
-            Caption = 'No. de Ruta';
+            DataClassification = CustomerContent;
+            Caption = 'Code';
             TableRelation = "Maestro de Rutas".Codigo;
 
             trigger OnValidate()
@@ -21,11 +22,14 @@ table 56071 "Rutas de Hojas de Rutas"
         }
         field(2; "Nombre de Ruta"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre de Ruta';
             Editable = false;
         }
         field(5; CP; Code[20])
         {
-            Caption = 'Codigo Postal';
+            DataClassification = CustomerContent;
+            Caption = 'CP';
             TableRelation = "Post Code".Code;
             ValidateTableRelation = true;
 
@@ -48,25 +52,32 @@ table 56071 "Rutas de Hojas de Rutas"
         }
         field(6; City; Text[60])
         {
-            Caption = 'Municipio/Ciudad';
+            DataClassification = CustomerContent;
+            Caption = 'City';
             Editable = false;
         }
         field(7; "Region Code"; Code[10])
         {
-            Caption = 'C d. Pais';
+            DataClassification = CustomerContent;
+            Caption = 'Region Code';
             Editable = false;
         }
         field(8; Country; Text[60])
         {
-            Caption = 'Provincia';
+            DataClassification = CustomerContent;
+            Caption = 'Country';
             Editable = false;
         }
         field(9; Colonia; Text[60])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Colonia';
             Editable = false;
         }
         field(15; "Tiempo de Envio"; DateFormula)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tiempo de Envio';
 
             trigger OnValidate()
             var

@@ -8,7 +8,8 @@ table 56042 "Choferes por Transportista"
     {
         field(1; "Cod. Transportista"; Code[20])
         {
-            Caption = 'Shiping Agent';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Transportista';
             TableRelation = "Shipping Agent";
 
             trigger OnValidate()
@@ -21,10 +22,13 @@ table 56042 "Choferes por Transportista"
         }
         field(2; "Nombre Transportista"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Transportista';
         }
         field(3; "Cod. Chofer"; Code[20])
         {
-            Caption = 'Driver Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Chofer';
             TableRelation = Choferes;
 
             trigger OnValidate()
@@ -41,18 +45,23 @@ table 56042 "Choferes por Transportista"
         }
         field(4; "Nombre Chofer"; Text[100])
         {
-            Caption = 'Driver Name';
+            DataClassification = CustomerContent;
+            Caption = 'Nombre Chofer';
         }
         field(5; "No. Licencia"; Code[9])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Licencia';
         }
         field(6; "Chofer activo"; Boolean)
         {
+            Caption = 'Chofer activo';
             CalcFormula = Lookup(Choferes.Activo WHERE("Cod. Chofer" = FIELD("Cod. Chofer")));
             FieldClass = FlowField;
         }
         field(7; "Observaciones chofer"; Text[100])
         {
+            Caption = 'Observaciones chofer';
             CalcFormula = Lookup(Choferes.Observaciones WHERE("Cod. Chofer" = FIELD("Cod. Chofer")));
             FieldClass = FlowField;
         }

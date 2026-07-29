@@ -7,19 +7,23 @@ table 51013 "Ano Escolar"
     {
         field(1;"Cod. Ano";Code[20])
         {
-            Caption = 'Year Code';
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Ano';
         }
         field(2;Descripcion;Text[50])
         {
-            Caption = 'Description';
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
         field(3;"Fecha Desde";Date)
         {
-            Caption = 'Date From';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Desde';
         }
         field(4;"Fecha Hasta";Date)
         {
-            Caption = 'Date To:';
+            DataClassification = CustomerContent;
+            Caption = 'Fecha Hasta';
         }
     }
 

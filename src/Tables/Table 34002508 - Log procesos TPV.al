@@ -9,63 +9,97 @@ table 34002508 "Log procesos TPV"
     {
         field(1; "No. Log"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Log';
         }
         field(2; "ID Proceso"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID Proceso';
             OptionMembers = Registrar,"Nueva Venta","Anular Factura","Eliminar Linea",Duplicacion,Serie,"Cambio Almacen",Cupon;
         }
         field(3; "Punto de proceso"; Integer)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Punto de proceso';
             Description = 'Este valor, identifica el último punto de proceso realizado. Su valor se refleja en el Codigo.';
         }
         field(10; "Tipo Documento"; Option)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tipo Documento';
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";
         }
         field(11; "ID. Cab Venta"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID. Cab Venta';
         }
         field(12; "ID. Historico"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'ID. Historico';
         }
         field(14; "No. Fiscal TPV"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Fiscal TPV';
             TableRelation = Tiendas;
         }
         field(15; "No. comprobante fiscal"; Code[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. comprobante fiscal';
             TableRelation = "Configuracion TPV"."Id TPV";
         }
         field(19; "Texto Error"; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Texto Error';
         }
         field(20; Tienda; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Tienda';
             TableRelation = Tiendas;
         }
         field(21; TPV; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'TPV';
             TableRelation = "Configuracion TPV"."Id TPV";
         }
         field(25; Cupon; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cupon';
             Description = '#328529 - El Salvador';
         }
         field(30; "Fecha creacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha creacion';
         }
         field(31; "Hora creacion"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora creacion';
         }
         field(32; Usuario; Text[50])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Usuario';
         }
         field(33; "Fecha modificacion"; Date)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Fecha modificacion';
         }
         field(34; "Hora modificacion"; Time)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Hora modificacion';
         }
     }
 

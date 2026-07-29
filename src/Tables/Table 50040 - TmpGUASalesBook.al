@@ -9,42 +9,50 @@ table 50040 TmpGUASalesBook
     {
         field(1; Date; Date)
         {
+            DataClassification = CustomerContent;
             Caption = 'Date';
             Description = 'COL5.0.001';
         }
         field(2; FromNo; Code[20])
         {
-            Caption = 'From No.';
+            DataClassification = CustomerContent;
+            Caption = 'FromNo';
             Description = 'COL5.0.001';
             TableRelation = "Sales Header"."No.";
         }
         field(4; "Total Sales"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Total Sales';
             Description = 'COL5.0.001';
         }
         field(6; "Total service"; Decimal)
         {
-            Caption = 'Total Service';
+            DataClassification = CustomerContent;
+            Caption = 'Total service';
             Description = 'COL5.0.001';
         }
         field(8; VAT; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'VAT';
             Description = 'COL5.0.001';
         }
         field(9; "Total invoice"; Decimal)
         {
+            DataClassification = CustomerContent;
             Caption = 'Total invoice';
             Description = 'COL5.0.001';
         }
         field(10; GoodsExent; Decimal)
         {
-            Caption = 'Export';
+            DataClassification = CustomerContent;
+            Caption = 'GoodsExent';
             Description = 'COL5.0.001';
         }
         field(11; "Document Type"; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Document Type';
             Description = 'COL5.0.001';
             OptionCaption = ' ,Payment,Invoice,Credit Memo,Finance Charge Memo,Reminder,Refund';
@@ -52,27 +60,32 @@ table 50040 TmpGUASalesBook
         }
         field(12; Customer; Text[50])
         {
+            DataClassification = CustomerContent;
             Caption = 'Customer';
             Description = 'COL5.0.001';
         }
         field(13; Identification; Text[20])
         {
+            DataClassification = CustomerContent;
             Caption = 'Identification';
             Description = 'COL5.0.001';
         }
         field(14; ServicesExent; Decimal)
         {
-            Caption = 'Exent Services';
+            DataClassification = CustomerContent;
+            Caption = 'ServicesExent';
             Description = 'COL5.0.001';
         }
         field(15; "VAT Bus. Posting Group"; Code[20])
         {
-            Caption = 'Tax Bus. Posting Group';
+            DataClassification = CustomerContent;
+            Caption = 'VAT Bus. Posting Group';
             Description = 'COL5.0.001';
         }
         field(16; No; Integer)
         {
-            Caption = 'No.';
+            DataClassification = CustomerContent;
+            Caption = 'No';
             Description = 'COL5.0.001';
         }
     }

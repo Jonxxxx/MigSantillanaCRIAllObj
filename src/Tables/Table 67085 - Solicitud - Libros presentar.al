@@ -5,9 +5,13 @@ table 67085 "Solicitud - Libros presentar"
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Producto"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Producto';
             TableRelation = Item;
 
             trigger OnValidate()
@@ -20,12 +24,18 @@ table 67085 "Solicitud - Libros presentar"
         }
         field(3; "Descripcion Producto"; Text[100])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion Producto';
         }
         field(4; "Horas por semana"; Decimal)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Horas por semana';
         }
         field(5; "Ano adopcion"; Code[10])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Ano adopcion';
         }
     }
 

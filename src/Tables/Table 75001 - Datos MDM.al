@@ -8,26 +8,31 @@ table 75001 "Datos MDM"
     {
         field(1; Tipo; Option)
         {
+            DataClassification = CustomerContent;
             Caption = 'Tipo';
             OptionCaption = 'Tipo Producto,Soporte,Editora,Nivel,Plan Editorial,Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,Campana';
             OptionMembers = "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,Edicion,Estado,"Campana";
         }
         field(2; Codigo; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
         field(3; Descripcion; Text[100])
         {
+            DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
         field(4; "Codigo Relacionado"; Code[10])
         {
+            DataClassification = CustomerContent;
             Caption = 'Codigo Relacionado';
             TableRelation = IF (Tipo = CONST(Grado)) "Datos MDM".Codigo WHERE("Tipo" = CONST(Ciclo))
             ELSE IF (Tipo = CONST(Ciclo)) "Datos MDM".Codigo WHERE("Tipo" = CONST(Nivel));
         }
         field(5; Bloqueado; Boolean)
         {
+            DataClassification = CustomerContent;
             Caption = 'Bloqueado';
         }
     }

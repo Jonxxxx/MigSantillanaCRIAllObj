@@ -5,10 +5,14 @@ table 34002119 "Conceptos Salariales Provision"
     {
         field(1; "Codigo"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Codigo';
             TableRelation = "Conceptos salariales".Codigo;
         }
         field(2; Disponible; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Disponible';
             TableRelation = "Conceptos salariales".Codigo;
 
             trigger OnValidate()
@@ -19,27 +23,38 @@ table 34002119 "Conceptos Salariales Provision"
         }
         field(3; "Tipo provision"; Option)
         {
-            Caption = 'Provition type';
+            DataClassification = CustomerContent;
+            Caption = 'Tipo provision';
             OptionCaption = 'Variable,Fix,Formula';
             OptionMembers = Variable,Fix,Formula;
         }
         field(4; "Gpo. Contable Empleado"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Gpo. Contable Empleado';
             TableRelation = "Grupos Contables Empleados";
         }
         field(6; "No. Cuenta"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta';
             TableRelation = "G/L Account";
         }
         field(7; "No. Cuenta Contrapartida"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Cuenta Contrapartida';
             TableRelation = "G/L Account";
         }
         field(8; "Validar Contrapartida"; Boolean)
         {
+            DataClassification = CustomerContent;
+            Caption = 'Validar Contrapartida';
         }
         field(11; "Formula Calculo"; Text[150])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Formula Calculo';
             //The property 'ValidateTableRelation' can only be set if the property 'TableRelation' is set
             //ValidateTableRelation = false;
 

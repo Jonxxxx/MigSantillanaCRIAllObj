@@ -5,9 +5,13 @@ table 67082 "Solicitud -  Especialidad Asi."
     {
         field(1; "No. Solicitud"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'No. Solicitud';
         }
         field(2; "Cod. Especialidad"; Code[20])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Cod. Especialidad';
             TableRelation = "Datos auxiliares".Codigo WHERE("Tipo registro" = CONST(Especialidades));
 
             trigger OnValidate()
@@ -25,6 +29,8 @@ table 67082 "Solicitud -  Especialidad Asi."
         }
         field(3; "Descripcion"; Text[80])
         {
+            DataClassification = CustomerContent;
+            Caption = 'Descripcion';
         }
     }
 
