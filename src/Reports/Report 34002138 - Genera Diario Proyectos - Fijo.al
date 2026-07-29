@@ -1,7 +1,7 @@
 report 34002138 "Genera Diario Proyectos - Fijo"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Genera Diario Proyectos - Fijo.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Genera Diario Proyectos - Fijo.rdl';
     Caption = 'Generate Job Journal from employees distribution';
 
     dataset

@@ -5,22 +5,19 @@ report 34002141 "Crea ED Empleados"
 
     dataset
     {
-        dataitem("Integer"; 2000000026)
+        dataitem(Integer; Integer)
         {
-            DataItemTableView = SORTING(Number)
-                                WHERE(Number = CONST(1));
+            DataItemTableView = sorting(Number) where(Number = const(1));
 
             trigger OnAfterGetRecord()
             begin
-                ReadExcelSheet;
+                ReadExcelSheet();
 
-                ExcelBuf.FIND('-');
+                if ExcelBuf.IsEmpty() then
+                    Error(EmptyExcelFileErr);
 
-                EVALUATE(Fila, COPYSTR(Cell1, 2, 5));
-
-                // MESSAGE('%1 %2',Cell1);
-
-                AnalyzeData;
+                Evaluate(Fila, CopyStr(Cell1, 2, 5));
+                AnalyzeData();
             end;
         }
     }
@@ -35,66 +32,88 @@ report 34002141 "Crea ED Empleados"
             {
                 group(General)
                 {
+                    Caption = 'General';
+
                     group("Import from")
                     {
                         Caption = 'Import from';
+
                         field("Nombre fichero"; FileName)
                         {
+                            ApplicationArea = All;
                             Caption = 'Workbook File Name';
+                            Editable = false;
+                            ToolTip = 'Specifies the Excel workbook that contains the employee data to import.';
 
                             trigger OnAssistEdit()
                             begin
-                                UploadFile;
+                                UploadFile();
                             end;
                         }
+
                         field(SheetName; SheetName)
                         {
+                            ApplicationArea = All;
                             Caption = 'Worksheet Name';
+                            Editable = false;
+                            ToolTip = 'Specifies the worksheet that contains the employee data to import.';
 
                             trigger OnAssistEdit()
                             begin
-                                SheetName := ExcelBuf.SelectSheetsName(UploadedFileName)
+                                SelectSheetName();
                             end;
                         }
-                        group(General)
+
+                        group(General2)
                         {
+                            ShowCaption = false;
+
                             field(Cell1; Cell1)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Employee code Cell';
+                                ToolTip = 'Specifies the first cell containing an employee code.';
                             }
+
                             field(Cell2; Cell2)
                             {
+                                ApplicationArea = All;
                                 Caption = 'G/L Account Cell';
+                                ToolTip = 'Specifies the first cell containing a G/L account.';
                             }
+
                             field(Cell3; Cell3)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Amount Cell';
+                                ToolTip = 'Specifies the first cell containing an amount.';
                             }
+
                             field(Cell4; Cell4)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Dimension Code Cell';
+                                ToolTip = 'Specifies the first cell containing a dimension code.';
                             }
+
                             field(Cell5; Cell5)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Dimension Value Cell';
+                                ToolTip = 'Specifies the first cell containing a dimension value code.';
                             }
+
                             field(Cell6; Cell6)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Balance Account';
+                                ToolTip = 'Specifies the first cell containing the balancing account.';
                             }
                         }
                     }
                 }
             }
         }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     trigger OnInitReport()
@@ -103,40 +122,41 @@ report 34002141 "Crea ED Empleados"
     end;
 
     var
-        ExcelBuf: Record 370;
-        GenJnlLine: Record 81;
-        GenJnlLine2: Record 81;
-        Emp: Record 5200;
-        DefDim: Record 352;
+        ExcelBuf: Record "Excel Buffer" temporary;
+        GenJnlLine: Record "Gen. Journal Line";
+        GenJnlLine2: Record "Gen. Journal Line";
+        Emp: Record Employee;
+        ExcelFileTempBlob: Codeunit "Temp Blob";
         CodigoDiario: Code[20];
         CodigoSeccion: Code[20];
-        Celda: Code[5];
-        FileName: Text[250];
-        UploadedFileName: Text[1024];
+        Celda: Code[20];
+        FileName: Text[1024];
         SheetName: Text[250];
         Window: Dialog;
-        Description: Text[50];
-        Qty: Decimal;
         Amt: Decimal;
         CodEmpleado: Code[20];
-        Cell1: Code[5];
-        Cell2: Code[5];
-        Text0001: Label 'aaa';
-        Text003: Label '.xlsx';
-        Cell3: Code[5];
-        Cell4: Code[5];
+        Cell1: Code[10];
+        Cell2: Code[10];
+        Cell3: Code[10];
+        Cell4: Code[10];
         Cell5: Code[10];
         Cell6: Code[10];
         TotalRecNo: Integer;
         RecNo: Integer;
-        Text006: Label 'Import Excel File';
-        Text007: Label 'Analyzing Data...\\';
         NoLin: Integer;
         CodCuenta: Code[20];
         CodDim: Code[20];
         CodValorDim: Code[20];
         Fila: Integer;
         CtaContrapartida: Code[20];
+        ExcelFileFilterLbl: Label 'Excel Workbook (*.xlsx)|*.xlsx';
+        ExcelFileExtensionLbl: Label 'xlsx', Locked = true;
+        ImportExcelFileLbl: Label 'Import Excel File';
+        AnalyzingDataLbl: Label 'Analyzing Data...\@1@@@@@@@@@@@@@@@@@@@@@@@@@';
+        NoExcelFileErr: Label 'You must select an Excel workbook before running the import.';
+        NoWorksheetErr: Label 'You must select a worksheet before running the import.';
+        EmptyExcelFileErr: Label 'The selected worksheet does not contain any data.';
+        ExcelOpenErr: Label 'The Excel workbook could not be opened. %1';
 
     procedure RecibeParametros(CodDiario: Code[20]; CodSeccion: Code[20])
     begin
@@ -144,156 +164,180 @@ report 34002141 "Crea ED Empleados"
         CodigoSeccion := CodSeccion;
     end;
 
-    local procedure ReadExcelSheet()
+    procedure UploadFile()
+    var
+        FileManagement: Codeunit "File Management";
+        UploadedFileName: Text;
     begin
-        IF ISSERVICETIER THEN
-            IF UploadedFileName = '' THEN
-                UploadFile
-            ELSE
-                FileName := UploadedFileName;
+        Clear(ExcelFileTempBlob);
 
-        ExcelBuf.OpenBook(FileName, SheetName);
-        ExcelBuf.ReadSheet;
+        UploadedFileName := FileManagement.BLOBImportWithFilter(
+            ExcelFileTempBlob,
+            ImportExcelFileLbl,
+            '',
+            ExcelFileFilterLbl,
+            ExcelFileExtensionLbl);
+
+        if UploadedFileName = '' then begin
+            Clear(FileName);
+            Clear(SheetName);
+            exit;
+        end;
+
+        FileName := CopyStr(FileManagement.GetFileName(UploadedFileName), 1, MaxStrLen(FileName));
+        Clear(SheetName);
+    end;
+
+    local procedure SelectSheetName()
+    var
+        ExcelInStream: InStream;
+    begin
+        if not ExcelFileTempBlob.HasValue() then
+            UploadFile();
+
+        if not ExcelFileTempBlob.HasValue() then
+            exit;
+
+        ExcelFileTempBlob.CreateInStream(ExcelInStream);
+        SheetName := ExcelBuf.SelectSheetsNameStream(ExcelInStream);
+    end;
+
+    local procedure ReadExcelSheet()
+    var
+        ExcelInStream: InStream;
+        OpenBookError: Text;
+    begin
+        if not ExcelFileTempBlob.HasValue() then
+            UploadFile();
+
+        if not ExcelFileTempBlob.HasValue() then
+            Error(NoExcelFileErr);
+
+        if SheetName = '' then
+            SelectSheetName();
+
+        if SheetName = '' then
+            Error(NoWorksheetErr);
+
+        ExcelBuf.Reset();
+        ExcelBuf.DeleteAll();
+
+        ExcelFileTempBlob.CreateInStream(ExcelInStream);
+
+        OpenBookError := ExcelBuf.OpenBookStream(ExcelInStream, SheetName);
+
+        if OpenBookError <> '' then
+            Error(ExcelOpenErr, OpenBookError);
+
+        ExcelBuf.ReadSheet();
+        ExcelBuf.CloseBook();
     end;
 
     local procedure AnalyzeData()
-    var
-        TempExcelBuf: Record 370 temporary;
-        BudgetBuf: Record 371;
-        TempBudgetBuf: Record 371 temporary;
-        HeaderRowNo: Integer;
-        CountDim: Integer;
-        TestDate: Date;
-        OldRowNo: Integer;
-        DimRowNo: Integer;
-        DimCode3: Code[20];
     begin
-        Window.OPEN(
-          Text007 +
-          '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
-        Window.UPDATE(1, 0);
-        TotalRecNo := ExcelBuf.COUNT;
+        Window.Open(AnalyzingDataLbl);
+        Window.Update(1, 0);
+
+        TotalRecNo := ExcelBuf.Count();
         RecNo := 0;
         Amt := 0;
 
-        ExcelBuf.SETRANGE("Row No.", Fila, 9999999);
+        ExcelBuf.SetRange("Row No.", Fila, 9999999);
 
-        IF ExcelBuf.FIND('-') THEN
-            REPEAT
+        if ExcelBuf.FindSet() then
+            repeat
+                RecNo += 1;
 
-                RecNo := RecNo + 1;
-                Window.UPDATE(1, ROUND(RecNo / TotalRecNo * 10000, 1));
-                Celda := ExcelBuf.xlColID + ExcelBuf.xlRowID;
-                IF Celda = Cell6 THEN BEGIN
-                    EVALUATE(CtaContrapartida, ExcelBuf."Cell Value as Text");
-                    Cell6 := INCSTR(Cell6);
-                END
-                ELSE
-                    IF Celda = Cell5 THEN BEGIN
-                        EVALUATE(CodValorDim, ExcelBuf."Cell Value as Text");
-                        Cell5 := INCSTR(Cell5);
-                    END
-                    ELSE
-                        IF Celda = Cell4 THEN BEGIN
-                            EVALUATE(CodDim, ExcelBuf."Cell Value as Text");
-                            Cell4 := INCSTR(Cell4);
-                        END
-                        ELSE
-                            IF Celda = Cell3 THEN BEGIN
-                                EVALUATE(Amt, ExcelBuf."Cell Value as Text");
-                                Cell3 := INCSTR(Cell3);
-                            END
-                            ELSE
-                                IF Celda = Cell2 THEN BEGIN
-                                    CodCuenta := ExcelBuf."Cell Value as Text";
-                                    Cell2 := INCSTR(Cell2);
-                                END
-                                ELSE
-                                    IF Celda = Cell1 THEN BEGIN
-                                        CodEmpleado := ExcelBuf."Cell Value as Text";
-                                        CodEmpleado := DELCHR(CodEmpleado, '=', ', .');
-                                        Cell1 := INCSTR(Cell1);
-                                    END;
+                if TotalRecNo > 0 then
+                    Window.Update(1, Round(RecNo / TotalRecNo * 10000, 1));
 
-                //    MESSAGE('%1 %2 %3 %4 %5 %6 %7 %8',ExcelBuf.xlRowID,CodEmpleado,Qty,Amt,Celda,Cell1,Cell2,Cell3);
+                Celda := CopyStr(ExcelBuf.xlColID + ExcelBuf.xlRowID, 1, MaxStrLen(Celda));
 
-                IF (CodEmpleado <> '') AND (CodCuenta <> '') AND (Amt <> 0) AND
-                   (CodDim <> '') AND (CodValorDim <> '') AND (CtaContrapartida <> '') THEN BEGIN
-                    Emp.GET(CodEmpleado);
-                    GenJnlLine2.RESET;
-                    GenJnlLine2.SETRANGE("Journal Template Name", CodigoDiario);
-                    GenJnlLine2.SETRANGE("Journal Batch Name", CodigoSeccion);
-                    IF NOT GenJnlLine2.FINDLAST THEN
+                if Celda = Cell6 then begin
+                    Evaluate(CtaContrapartida, ExcelBuf."Cell Value as Text");
+                    Cell6 := IncStr(Cell6);
+                end else
+                    if Celda = Cell5 then begin
+                        Evaluate(CodValorDim, ExcelBuf."Cell Value as Text");
+                        Cell5 := IncStr(Cell5);
+                    end else
+                        if Celda = Cell4 then begin
+                            Evaluate(CodDim, ExcelBuf."Cell Value as Text");
+                            Cell4 := IncStr(Cell4);
+                        end else
+                            if Celda = Cell3 then begin
+                                Evaluate(Amt, ExcelBuf."Cell Value as Text");
+                                Cell3 := IncStr(Cell3);
+                            end else
+                                if Celda = Cell2 then begin
+                                    CodCuenta := CopyStr(
+                                        ExcelBuf."Cell Value as Text",
+                                        1,
+                                        MaxStrLen(CodCuenta));
+
+                                    Cell2 := IncStr(Cell2);
+                                end else
+                                    if Celda = Cell1 then begin
+                                        CodEmpleado := CopyStr(
+                                            ExcelBuf."Cell Value as Text",
+                                            1,
+                                            MaxStrLen(CodEmpleado));
+
+                                        CodEmpleado := DelChr(CodEmpleado, '=', ', .');
+                                        Cell1 := IncStr(Cell1);
+                                    end;
+
+                if (CodEmpleado <> '') and
+                   (CodCuenta <> '') and
+                   (Amt <> 0) and
+                   (CodDim <> '') and
+                   (CodValorDim <> '') and
+                   (CtaContrapartida <> '')
+                then begin
+                    Emp.Get(CodEmpleado);
+
+                    GenJnlLine2.Reset();
+                    GenJnlLine2.SetRange("Journal Template Name", CodigoDiario);
+                    GenJnlLine2.SetRange("Journal Batch Name", CodigoSeccion);
+
+                    if not GenJnlLine2.FindLast() then
                         GenJnlLine2."Line No." := 0;
 
                     NoLin := GenJnlLine2."Line No." + 1000;
 
-                    CLEAR(GenJnlLine);
+                    Clear(GenJnlLine);
+                    GenJnlLine.Init();
                     GenJnlLine."Journal Template Name" := CodigoDiario;
                     GenJnlLine."Journal Batch Name" := CodigoSeccion;
                     GenJnlLine."Line No." := NoLin;
                     GenJnlLine."Account Type" := GenJnlLine."Account Type"::"G/L Account";
-                    GenJnlLine.VALIDATE("Account No.", CodCuenta);
-                    GenJnlLine.VALIDATE("Posting Date", TODAY);
+                    GenJnlLine.Validate("Account No.", CodCuenta);
+                    GenJnlLine.Validate("Posting Date", Today);
                     GenJnlLine."Document Type" := GenJnlLine."Document Type"::Payment;
-                    GenJnlLine."Document No." := 'NOMINA' + FORMAT(DATE2DMY(TODAY, 1)) + FORMAT(DATE2DMY(TODAY, 2)) +
-                                                 FORMAT(DATE2DMY(TODAY, 3));
-                    GenJnlLine.Description := Emp."Full Name";
-                    GenJnlLine.VALIDATE(Amount, Amt);
+                    GenJnlLine."Document No." :=
+                        CopyStr(
+                            'NOMINA' +
+                            Format(Date2DMY(Today, 1)) +
+                            Format(Date2DMY(Today, 2)) +
+                            Format(Date2DMY(Today, 3)),
+                            1,
+                            MaxStrLen(GenJnlLine."Document No."));
+
+                    GenJnlLine.Description := CopyStr(Emp."Full Name", 1, MaxStrLen(GenJnlLine.Description));
+                    GenJnlLine.Validate(Amount, Amt);
                     GenJnlLine."Bal. Account Type" := GenJnlLine."Bal. Account Type"::"G/L Account";
-                    GenJnlLine.VALIDATE("Bal. Account No.", CtaContrapartida);
+                    GenJnlLine.Validate("Bal. Account No.", CtaContrapartida);
+                    GenJnlLine.Insert(true);
 
-                    GenJnlLine.INSERT(TRUE);
-                    /*
-                            DefDim.RESET;
-                            DefDim.SETRANGE("Table ID",5200);
-                            DefDim.SETRANGE("No.",CodEmpleado);
-                            IF DefDim.FINDSET THEN
-                               REPEAT
-                                CLEAR(JLD);
-                                JLD."Table ID"              := 81;
-                                JLD."Journal Template Name" := CodigoDiario;
-                                JLD."Journal Batch Name"    := CodigoSeccion;
-                                JLD."Journal Line No."      := GenJnlLine."Line No.";
-                                JLD.VALIDATE("Dimension Code",DefDim."Dimension Code");
-                                JLD.VALIDATE("Dimension Value Code",DefDim."Dimension Value Code");
-                                JLD.INSERT(TRUE);
-                               UNTIL DefDim.NEXT =0;
+                    Clear(Amt);
+                    Clear(CodEmpleado);
+                    Clear(CodCuenta);
+                    Clear(CodDim);
+                    Clear(CodValorDim);
+                    Clear(CtaContrapartida);
+                end;
+            until ExcelBuf.Next() = 0;
 
-                             CLEAR(JLD);
-                             JLD."Table ID"              := 81;
-                             JLD."Journal Template Name" := CodigoDiario;
-                             JLD."Journal Batch Name"    := CodigoSeccion;
-                             JLD."Journal Line No."      := GenJnlLine."Line No.";
-                             JLD.VALIDATE("Dimension Code",CodDim);
-                             JLD.VALIDATE("Dimension Value Code",CodValorDim);
-                             JLD.INSERT(TRUE);
-                    */
-                    Amt := 0;
-                    CodEmpleado := '';
-                    CodCuenta := '';
-                    CodDim := '';
-                    CodValorDim := '';
-                END;
-
-            UNTIL ExcelBuf.NEXT = 0;
-
-        Window.CLOSE;
-
-    end;
-
-    procedure UploadFile()
-    var
-        FileMgt: Codeunit 419;
-        ClientFileName: Text[1024];
-    begin
-        UploadedFileName := FileMgt.UploadFile(Text006, Text003);
-        FileName := UploadedFileName;
-    end;
-
-    local procedure FileNameOnAfterValidate()
-    begin
-        UploadFile;
+        Window.Close();
     end;
 }
-

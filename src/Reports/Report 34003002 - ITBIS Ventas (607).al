@@ -1,7 +1,7 @@
 report 34003002 "ITBIS Ventas (607)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './ITBIS Ventas (607).rdlc';
+    RDLCLayout = 'src/ReportsLayout/ITBIS Ventas (607).rdl';
 
     dataset
     {

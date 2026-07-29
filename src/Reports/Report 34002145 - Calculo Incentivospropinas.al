@@ -1,7 +1,7 @@
 report 34002145 "Calculo Incentivos/propinas"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Calculo Incentivospropinas.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Calculo Incentivospropinas.rdl';
     Caption = 'Calculate Incentives/tips';
     ProcessingOnly = false;
 

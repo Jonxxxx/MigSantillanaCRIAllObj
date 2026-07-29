@@ -8,7 +8,7 @@ report 34002506 "DsPOS - Factura Venta RD ON"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta RD ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta RD ON.rdl';
 
 
     dataset
@@ -126,7 +126,7 @@ report 34002506 "DsPOS - Factura Venta RD ON"
             }
             dataitem("Sales Invoice Line"; 113)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 column(Sales_Invoice_Line__No__; "No.")
                 {
                 }

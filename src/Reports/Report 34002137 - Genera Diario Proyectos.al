@@ -1,7 +1,7 @@
 report 34002137 "Genera Diario Proyectos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Genera Diario Proyectos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Genera Diario Proyectos.rdl';
     Caption = 'Job payroll';
 
     dataset

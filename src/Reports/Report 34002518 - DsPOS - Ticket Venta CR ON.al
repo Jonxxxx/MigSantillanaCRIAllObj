@@ -2,7 +2,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
 {
     // #52748  22/09/2016  JMB   Creacion de ticket - Modo ONLINE
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Ticket Venta CR ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Ticket Venta CR ON.rdl';
 
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
@@ -117,7 +117,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
             }
             dataitem(Productos; 37)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemLinkReference = "Sales Invoice Header";
                 DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Quantity = FILTER(<> 0),

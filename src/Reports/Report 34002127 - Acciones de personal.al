@@ -1,7 +1,7 @@
 report 34002127 "Acciones de personal"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Acciones de personal.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Acciones de personal.rdl';
 
     dataset
     {

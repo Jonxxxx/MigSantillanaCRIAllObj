@@ -1,7 +1,7 @@
 report 34002126 "Listado de Bonificaciones pers"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado de Bonificaciones pers.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de Bonificaciones pers.rdl';
     Caption = 'Employee Bonification''s Report';
 
     dataset

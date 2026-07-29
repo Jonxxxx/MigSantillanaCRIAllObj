@@ -1,6 +1,6 @@
 report 34002162 "Carta Sol. Tarj. Banco"
 {
-    RDLCLayout = './Carta Sol. Tarj. Banco.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta Sol. Tarj. Banco.rdl';
     WordLayout = './Carta Sol. Tarj. Banco.docx';
     Caption = 'Letter opening Movil card';
     DefaultLayout = Word;

@@ -1,7 +1,7 @@
 report 34002156 "Calculo Prestaciones laborales"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Calculo Prestaciones laborales.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Calculo Prestaciones laborales.rdl';
     Caption = 'Calculation of labor benefits';
 
     dataset

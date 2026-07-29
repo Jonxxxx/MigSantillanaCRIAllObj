@@ -31,7 +31,7 @@ page 34002100 "Empresas de cotizacion"
                 {
                     Caption = 'Direccion';
                 }
-                field(Número; Número)
+                field(Numero; Numero)
                 {
                     Caption = 'Apartamento';
                 }

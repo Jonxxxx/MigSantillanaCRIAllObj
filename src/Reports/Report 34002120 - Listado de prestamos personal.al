@@ -1,7 +1,7 @@
 report 34002120 "Listado de prestamos personal"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado de prestamos personal.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de prestamos personal.rdl';
 
     dataset
     {

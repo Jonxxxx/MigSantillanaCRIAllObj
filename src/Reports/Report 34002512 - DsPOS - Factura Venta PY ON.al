@@ -8,7 +8,7 @@ report 34002512 "DsPOS - Factura Venta PY ON"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta PY ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta PY ON.rdl';
 
     Caption = 'DsPOS - Factura Venta PY ON';
     Permissions = TableData 21 = rm,
@@ -960,7 +960,7 @@ report 34002512 "DsPOS - Factura Venta PY ON"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';
@@ -977,7 +977,7 @@ report 34002512 "DsPOS - Factura Venta PY ON"
         GLSetUp: Record 98;
         CodDiv: Code[20];
         NCFAnulados: Record 34003012;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         CLE: Record 21;
         SSH: Record 110;
         NoGuia: Code[50];
@@ -1011,9 +1011,6 @@ report 34002512 "DsPOS - Factura Venta PY ON"
         CantENviada: Decimal;
         CantSolicitada: Decimal;
         Vendedor: Text[30];
-        ICR: Record 5717;
-        CodBarra: Code[20];
-        SegManagement: Codeunit 5051;
         LogInteraction: Boolean;
         Tel: Code[20];
         SerieCompleta: Code[50];

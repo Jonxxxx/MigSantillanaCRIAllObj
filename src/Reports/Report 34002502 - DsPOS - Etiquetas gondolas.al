@@ -1,7 +1,7 @@
 report 34002502 "DsPOS - Etiquetas gondolas"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Etiquetas gondolas.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Etiquetas gondolas.rdl';
 
     dataset
     {

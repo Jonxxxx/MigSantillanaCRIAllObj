@@ -1,7 +1,7 @@
 report 34002167 "Validar nomina por conceptos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Validar nomina por conceptos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Validar nomina por conceptos.rdl';
     Caption = 'Validate payroll by wage';
 
     dataset

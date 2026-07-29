@@ -3,7 +3,7 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
     // $001 11/08/2014 JML : DSPOS Bolivia 2013R2
     //                       Reporte basado en el de notas de credito registradas 54002
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - NC Venta BOL OFF.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - NC Venta BOL OFF.rdl';
 
     Permissions = TableData 21 = rm,
                   TableData 114 = rm,
@@ -16,7 +16,7 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         {
             DataItemTableView = SORTING("Document Type", "No.")
                                 ORDER(Ascending)
-                                WHERE("Document Type" = CONST('Credit Memo'));
+                                WHERE("Document Type" = CONST("Credit Memo"));
             RequestFilterFields = "No.", "Sell-to Customer No.";
             column(Sales_Invoice_Header__Bill_to_Address_; Loc.Address + ' ' + Loc."Address 2" + ' ' + Loc.City + ' ' + Loc.County)
             {
@@ -154,9 +154,9 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
             }
             dataitem("Sales Line"; 37)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document Type", "Document No.", "Line No.")
-                                    WHERE("Document Type" = CONST(Credit Memo));
+                                    WHERE("Document Type" = CONST("Credit Memo"));
 
                 trigger OnPreDataItem()
                 begin
@@ -165,10 +165,10 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
             }
             dataitem(SCML2; 37)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document Type", "Document No.", "Line No.")
-                                    WHERE("Document Type" = FILTER(Credit Memo),
-                                          Type=FILTER(<>Item));
+                                    WHERE("Document Type" = FILTER("Credit Memo"),
+                                          Type = FILTER(<> Item));
 
                 trigger OnAfterGetRecord()
                 begin
@@ -188,9 +188,9 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
                 begin
                     CurrReport.PAGENO := 1;
                     IF Number > 1 THEN BEGIN
-                      CopyText := Text004;
-                      IF ISSERVICETIER THEN
-                       OutputNo += 1;
+                        CopyText := Text004;
+                        IF ISSERVICETIER THEN
+                            OutputNo += 1;
                     END;
                 end;
 
@@ -198,15 +198,16 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
                 begin
                     NoOfLoops := ABS(NoOfCopies) + 1;
                     CopyText := '';
-                    SETRANGE(Number,1,NoOfLoops);
+                    SETRANGE(Number, 1, NoOfLoops);
                     IF ISSERVICETIER THEN
-                      OutputNo := 1;
+                        OutputNo := 1;
                 end;
             }
 
             trigger OnAfterGetRecord()
             var
                 DimSetEntry: Record 480;
+                ChkTransMgt: Report 10400;
             begin
                 GLSetUp.GET;
 
@@ -217,9 +218,9 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
                 DescuentoCargos := 0;
                 CantUnidades := 0;
                 ImporteTotal := 0;
-                ImporteTotalFact  := 0;
-                ImpDesc  := 0;
-                ImpDescFact  :=0;
+                ImporteTotalFact := 0;
+                ImpDesc := 0;
+                ImpDescFact := 0;
 
 
                 //+001
@@ -238,7 +239,8 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
                 CLEAR(CodUndMed_Fact_Arr);
                 CLEAR(Imp_Fact_Arr);
                 CLEAR(ImpDescFact);
-                CLEAR(ImporteTotalFact);;
+                CLEAR(ImporteTotalFact);
+                ;
 
                 //-001
 
@@ -248,77 +250,76 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
 
                 NoFacFiscal := "No. Fiscal TPV";
 
-                TextDia    := FORMAT("Posting Date",0,('<day,2>'));
-                TextMes    := UPPERCASE(FORMAT("Posting Date",0,('<month Text>')));
-                TextAno    := FORMAT("Posting Date",0,('<year4>'));
+                TextDia := FORMAT("Posting Date", 0, ('<day,2>'));
+                TextMes := UPPERCASE(FORMAT("Posting Date", 0, ('<month Text>')));
+                TextAno := FORMAT("Posting Date", 0, ('<year4>'));
 
                 NombreDiv := GLSetUp."Nombre Divisa Local";
 
                 IF Loc.GET("Location Code") THEN;
 
                 SCL.RESET;
-                SCL.SETRANGE("Document Type",SCL."Document Type"::"Credit Memo");
-                SCL.SETRANGE("No.","No.");
+                SCL.SETRANGE("Document Type", SCL."Document Type"::"Credit Memo");
+                SCL.SETRANGE("No.", "No.");
                 IF SCL.FINDFIRST THEN
-                  Comentario := SCL.Comment;
+                    Comentario := SCL.Comment;
 
-                CALCFIELDS(Amount,"Amount Including VAT");
+                CALCFIELDS(Amount, "Amount Including VAT");
 
                 IF "Amount Including VAT" - Amount <> 0 THEN
-                  txtIva := txt004
+                    txtIva := txt004
                 ELSE
-                  txtIva := '';
+                    txtIva := '';
 
-                ChkTransMgt.FormatNoText(DescriptionLine,"Amount Including VAT",2058,"Currency Code");
+                ChkTransMgt.FormatNoText(DescriptionLine, "Amount Including VAT", 2058, "Currency Code");
 
                 TotFactura := "Amount Including VAT";
 
                 SCML.RESET;
                 SCML.SETRANGE("Document Type", "Document Type"::"Credit Memo");
-                SCML.SETRANGE("Document No.","No.");
-                SCML.SETFILTER(Type,'<>%1',SCML.Type::"Charge (Item)");
+                SCML.SETRANGE("Document No.", "No.");
+                SCML.SETFILTER(Type, '<>%1', SCML.Type::"Charge (Item)");
                 IF SCML.FINDSET THEN
-                  REPEAT
-                    ImporteSinCargos += SCML.Amount + SCML."Line Discount Amount";
-                    Descuento        += SCML."Line Discount Amount";
-                    CantUnidades     += SCML.Quantity;
-                    igv              += SCML."Amount Including VAT" - SCML.Amount;
-                  UNTIL SCML.NEXT = 0;
+                    REPEAT
+                        ImporteSinCargos += SCML.Amount + SCML."Line Discount Amount";
+                        Descuento += SCML."Line Discount Amount";
+                        CantUnidades += SCML.Quantity;
+                        igv += SCML."Amount Including VAT" - SCML.Amount;
+                    UNTIL SCML.NEXT = 0;
 
 
                 I := 0;
                 SCML.RESET;
                 SCML.SETRANGE("Document Type", "Document Type"::"Credit Memo");
-                SCML.SETRANGE("Document No.","No.");
-                SCML.SETRANGE(Type,SCML.Type::Item);
+                SCML.SETRANGE("Document No.", "No.");
+                SCML.SETRANGE(Type, SCML.Type::Item);
                 IF SCML.FINDSET THEN
-                  REPEAT
-                    I += 1;
-                    CodProd_Arr[I]   := SCML."No.";
-                    Cantidad_Arr[I]  := SCML.Quantity;
-                    Desc_Arr[I]      := SCML.Description;
-                    PrecUnit_Arr[I]  := SCML."Unit Price";
-                    CodUndMed_Arr[I] := SCML."Unit of Measure Code";
-                    Imp_Arr[I]       := SCML."Amount Including VAT";
+                    REPEAT
+                        I += 1;
+                        CodProd_Arr[I] := SCML."No.";
+                        Cantidad_Arr[I] := SCML.Quantity;
+                        Desc_Arr[I] := SCML.Description;
+                        PrecUnit_Arr[I] := SCML."Unit Price";
+                        CodUndMed_Arr[I] := SCML."Unit of Measure Code";
+                        Imp_Arr[I] := SCML."Amount Including VAT";
 
-                    SIL.RESET;
-                    SIL.SETRANGE("Document No.",SCML."Devuelve a Documento");
-                    SIL.SETRANGE("Line No.",SCML."Devuelve a Linea Documento");
-                    IF SIL.FINDFIRST THEN
-                      BEGIN
-                        CodProd_Fact_Arr[I]   := SIL."No.";
-                        Cantidad_Fact_Arr[I]  := SIL.Quantity;
-                        Desc_Fact_Arr[I]      := SIL.Description;
-                        PrecUnit_Fact_Arr[I]  := SIL."Unit Price";
-                        CodUndMed_Fact_Arr[I] := SIL."Unit of Measure Code";
-                        Imp_Fact_Arr[I]       := SIL."Amount Including VAT";
-                        ImpDescFact           += SIL."Line Discount Amount";
-                        ImporteTotalFact      += SIL."Amount Including VAT";
+                        SIL.RESET;
+                        SIL.SETRANGE("Document No.", SCML."Devuelve a Documento");
+                        SIL.SETRANGE("Line No.", SCML."Devuelve a Linea Documento");
+                        IF SIL.FINDFIRST THEN BEGIN
+                            CodProd_Fact_Arr[I] := SIL."No.";
+                            Cantidad_Fact_Arr[I] := SIL.Quantity;
+                            Desc_Fact_Arr[I] := SIL.Description;
+                            PrecUnit_Fact_Arr[I] := SIL."Unit Price";
+                            CodUndMed_Fact_Arr[I] := SIL."Unit of Measure Code";
+                            Imp_Fact_Arr[I] := SIL."Amount Including VAT";
+                            ImpDescFact += SIL."Line Discount Amount";
+                            ImporteTotalFact += SIL."Amount Including VAT";
 
-                        ImpDesc               += SIL."Line Discount Amount";
-                        ImporteTotal          += SIL."Amount Including VAT";
-                      END;
-                  UNTIL SCML.NEXT = 0;
+                            ImpDesc += SIL."Line Discount Amount";
+                            ImporteTotal += SIL."Amount Including VAT";
+                        END;
+                    UNTIL SCML.NEXT = 0;
             end;
 
             trigger OnPreDataItem()
@@ -327,7 +328,7 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
             begin
                 lrCredit.COPYFILTERS("Sales Cr.Memo Header");
                 IF lrCredit.COUNT > 1 THEN
-                  ERROR(Text100);
+                    ERROR(Text100);
             end;
         }
     }
@@ -365,12 +366,11 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         SSH: Record 110;
         SCML: Record 37;
         Loc: Record 14;
-        ChkTransMgt: Report "Check Translation Management";
-                         wDiv: Code[10];
-                         _VendorName: Text[50];
-                         Comentario: Text[1024];
-                         DescriptionLine: array [2] of Text[250];
-                         Text002: Label 'Total %1';
+        wDiv: Code[10];
+        _VendorName: Text[50];
+        Comentario: Text[1024];
+        DescriptionLine: array[2] of Text[250];
+        Text002: Label 'Total %1';
         txtIva: Text[30];
         txt004: Label '(*) IVA';
         NoLineas: Integer;
@@ -394,16 +394,16 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         ImporteCargos: Decimal;
         DescuentoCargos: Decimal;
         CantUnidades: Decimal;
-        CodProd_Arr: array [50] of Code[20];
-        Cantidad_Arr: array [50] of Integer;
-        Desc_Arr: array [50] of Text[200];
-        PrecUnit_Arr: array [50] of Decimal;
-        PorcDto_Arr: array [50] of Decimal;
-        ImpDesc_Arr: array [50] of Decimal;
-        BaseExe_Arr: array [50] of Decimal;
-        Iva1_Arr: array [50] of Decimal;
-        Iva2_Arr: array [50] of Decimal;
-        Imp_Arr: array [50] of Decimal;
+        CodProd_Arr: array[50] of Code[20];
+        Cantidad_Arr: array[50] of Integer;
+        Desc_Arr: array[50] of Text[200];
+        PrecUnit_Arr: array[50] of Decimal;
+        PorcDto_Arr: array[50] of Decimal;
+        ImpDesc_Arr: array[50] of Decimal;
+        BaseExe_Arr: array[50] of Decimal;
+        Iva1_Arr: array[50] of Decimal;
+        Iva2_Arr: array[50] of Decimal;
+        Imp_Arr: array[50] of Decimal;
         I: Integer;
         wTotalDescuento: Decimal;
         wtotalEx: Decimal;
@@ -416,18 +416,18 @@ report 34002511 "DsPOS - NC Venta BOL OFF"
         NombreDiv: Text[30];
         Tel: Code[20];
         Fax: Code[20];
-        CodProd_Fact_Arr: array [50] of Code[20];
-        Cantidad_Fact_Arr: array [50] of Integer;
-        Desc_Fact_Arr: array [50] of Text[200];
-        PrecUnit_Fact_Arr: array [50] of Decimal;
-        PorcDto_Fact_Arr: array [50] of Decimal;
-        ImpDesc_Fact_Arr: array [50] of Decimal;
-        BaseExe_Fact_Arr: array [50] of Decimal;
-        Iva1_Fact_Arr: array [50] of Decimal;
-        Iva2_Fact_Arr: array [50] of Decimal;
-        Imp_Fact_Arr: array [50] of Decimal;
-        CodUndMed_Fact_Arr: array [50] of Code[20];
-        CodUndMed_Arr: array [50] of Code[20];
+        CodProd_Fact_Arr: array[50] of Code[20];
+        Cantidad_Fact_Arr: array[50] of Integer;
+        Desc_Fact_Arr: array[50] of Text[200];
+        PrecUnit_Fact_Arr: array[50] of Decimal;
+        PorcDto_Fact_Arr: array[50] of Decimal;
+        ImpDesc_Fact_Arr: array[50] of Decimal;
+        BaseExe_Fact_Arr: array[50] of Decimal;
+        Iva1_Fact_Arr: array[50] of Decimal;
+        Iva2_Fact_Arr: array[50] of Decimal;
+        Imp_Fact_Arr: array[50] of Decimal;
+        CodUndMed_Fact_Arr: array[50] of Code[20];
+        CodUndMed_Arr: array[50] of Code[20];
         NoFacLiq: Code[20];
         ImporteTotal: Decimal;
         ImporteTotalFact: Decimal;

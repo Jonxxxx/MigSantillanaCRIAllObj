@@ -1,6 +1,6 @@
 report 34003009 "Notificacion de pago"
 {
-    RDLCLayout = './Notificacion de pago.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Notificacion de pago.rdl';
     WordLayout = './Notificacion de pago.docx';
     Caption = 'Notification of payment';
     DefaultLayout = Word;
@@ -60,7 +60,7 @@ report 34003009 "Notificacion de pago"
             }
             dataitem("Detailed Vendor Ledg. Entry"; 380)
             {
-                DataItemLink = '';
+                DataItemLink = "Applied Vend. Ledger Entry No." = field("Entry No.");
                 DataItemTableView = SORTING("Vendor Ledger Entry No.", "Posting Date");
                 column(VEDocument_No_; VLE."Document No.")
                 {
@@ -149,22 +149,6 @@ report 34003009 "Notificacion de pago"
                 Company.GET();
             end;
         }
-    }
-
-    requestpage
-    {
-
-        layout
-        {
-        }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     var

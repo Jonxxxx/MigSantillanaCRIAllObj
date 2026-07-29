@@ -1,7 +1,7 @@
 report 34002121 "Genera Nomina Electronica-New"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Genera Nomina Electronica-New.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Genera Nomina Electronica-New.rdl';
     Caption = 'Generate Electronic Payroll';
 
     dataset

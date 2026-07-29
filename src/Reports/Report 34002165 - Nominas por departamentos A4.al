@@ -1,7 +1,7 @@
 report 34002165 "Nominas por departamentos A4"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Nominas por departamentos A4.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nominas por departamentos A4.rdl';
     Caption = 'Payroll by department A4';
 
     dataset

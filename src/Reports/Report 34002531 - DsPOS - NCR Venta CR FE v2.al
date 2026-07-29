@@ -2,7 +2,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
 {
     // #217374 13.09.2019  RRT   Creacion del reporte a partir de 34002530
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - NCR Venta CR FE v2.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - NCR Venta CR FE v2.rdl';
 
     PreviewMode = PrintLayout;
 
@@ -26,7 +26,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
             column(Empresa_Colonia; rEmpresa."Address 2")
             {
             }
-            column(Empresa_Telefono; 'Tel´Š¢fonos: ' + rEmpresa."Phone No." + '/' + rEmpresa."Phone No. 2")
+            column(Empresa_Telefono; 'Telefonos: ' + rEmpresa."Phone No." + '/' + rEmpresa."Phone No. 2")
             {
             }
             column(TPV_Descripcion; rTPV.Descripcion)
@@ -108,7 +108,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
                     IF DivisaDePago = '' THEN
                         DivisaDePago := 'COLONES'
                     ELSE
-                        DivisaDePago := 'D´Š¢LARES';
+                        DivisaDePago := 'DOLARES';
                 end;
             }
             dataitem(Cambio; 34002521)
@@ -131,7 +131,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
             }
             dataitem(Productos; 115)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
                 DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Quantity = FILTER(<> 0),

@@ -1,7 +1,7 @@
 report 34002505 "DsPOS - Resumen del dia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Resumen del dia.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Resumen del dia.rdl';
 
     dataset
     {
@@ -18,17 +18,17 @@ report 34002505 "DsPOS - Resumen del dia"
             column(NombreTienda; "Nombre tienda")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Tienda';
+                Caption = 'Tienda';
             }
             column(NombreTPV; "Nombre TPV")
             {
                 IncludeCaption = true;
-                OptionCaption = 'TPV';
+                Caption = 'TPV';
             }
             column(Fecha; Fecha)
             {
                 IncludeCaption = true;
-                OptionCaption = 'Fecha';
+                Caption = 'Fecha';
             }
             column(AperturaCaption; lblApertura)
             {
@@ -39,12 +39,12 @@ report 34002505 "DsPOS - Resumen del dia"
             column(HoraApertura; "Hora apertura")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Apertura:';
+                Caption = 'Apertura:';
             }
             column(HoraCierre; "Hora cierre")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Cierre:';
+                Caption = 'Cierre:';
             }
             column(UsuarioApertura; "Usuario apertura")
             {
@@ -89,7 +89,7 @@ report 34002505 "DsPOS - Resumen del dia"
                 column(Ped_Fechas; Fecha)
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Fecha';
+                    Caption = 'Fecha';
                 }
                 column(Ped_ClienteCaption; lblCliente)
                 {
@@ -99,28 +99,30 @@ report 34002505 "DsPOS - Resumen del dia"
                 }
                 column(Ped_Cliente; "Cod. cliente")
                 {
-                    OptionCaption = 'Cliente';
+                    Caption = 'Cliente';
                 }
                 column(Ped_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Nombre del cliente';
+                    Caption = 'Nombre del cliente';
                 }
                 column(Ped_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de documento';
+                    Caption = 'N´Š¢ de documento';
                 }
                 column(Ped_ImporteIVAInc; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+                    Caption = 'Importe';
                 }
+                //TODO: Ver
+                /*
                 column(Ped_NCF; cFComunes.Devolver_NCF(DetalleDePedidos))
                 {
                 }
                 column(Ped_AnuladoPor; cFComunes.AnulaA_AnuladoPor(DetalleDePedidos))
                 {
-                }
+                }*/
 
                 trigger OnAfterGetRecord()
                 begin
@@ -147,31 +149,33 @@ report 34002505 "DsPOS - Resumen del dia"
                 column(NC_Fecha; Fecha)
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Fecha';
+                    Caption = 'Fecha';
                 }
                 column(NC_ClienteCaption; lblCliente)
                 {
                 }
                 column(NC_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Cliente';
+                    Caption = 'Cliente';
                 }
                 column(NC_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de nota de credito';
+                    Caption = 'N´Š¢ de nota de credito';
                 }
                 column(NC_Importe; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+                    Caption = 'Importe';
                 }
+                //TODO: Ver
+                /*
                 column(NC_NCF; cFComunes.Devolver_NCF(NotasDeCredito))
                 {
                 }
                 column(NC_AnulaA; cFComunes.AnulaA_AnuladoPor(NotasDeCredito))
                 {
-                }
+                }*/
 
                 trigger OnAfterGetRecord()
                 begin
@@ -198,31 +202,33 @@ report 34002505 "DsPOS - Resumen del dia"
                 column(Anul_Fecha; Fecha)
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Fecha';
+                    Caption = 'Fecha';
                 }
                 column(Anul_ClienteCaption; lblCliente)
                 {
                 }
                 column(Anul_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Cliente';
+                    Caption = 'Cliente';
                 }
                 column(Anul_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de anulacion';
+                    Caption = 'No de anulacion';
                 }
                 column(Anul_Importe; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+                    Caption = 'Importe';
                 }
+                //TODO: Ver
+                /*
                 column(Anul_NCF; cFComunes.Devolver_NCF(Anulaciones))
                 {
                 }
                 column(Anul_AnulaA; cFComunes.AnulaA_AnuladoPor(Anulaciones))
                 {
-                }
+                }*/
 
                 trigger OnAfterGetRecord()
                 begin
@@ -278,7 +284,7 @@ report 34002505 "DsPOS - Resumen del dia"
         TexNombreInforme: Label 'RESUMEN DE VENTAS DEL Dia';
         lblCliente: Label 'Cliente';
         lblNombreCliente: Label 'Nombre cliente';
-        TexPagina: Label 'N´Š¢ Pag.:';
+        TexPagina: Label 'No Pag.:';
         texTipoOperacion: Text;
         Text005: Label 'Notas de credito';
         Text006: Label 'Anulaciones';
@@ -287,7 +293,6 @@ report 34002505 "DsPOS - Resumen del dia"
         decImporteEnCaja: Decimal;
         Text009: Label 'nomero Compr. Fiscal';
         cFComunes: Codeunit 34002503;
-        cFDominicana: Codeunit 34002504;
         wTotalVentas: Decimal;
         wTotalAnul: Decimal;
 }

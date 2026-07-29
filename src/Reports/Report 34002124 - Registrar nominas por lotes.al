@@ -349,7 +349,6 @@ report 34002124 "Registrar nominas por lotes"
         PerfilSalarios: Record 34002115;
         Contrato: Record 34002109;
         TiposNom: Record 34002158;
-        CalculoNomina: Codeunit 34002101;
         Fecha: Record 2000000007;
         Ventana: Dialog;
         ACalcular: Decimal;

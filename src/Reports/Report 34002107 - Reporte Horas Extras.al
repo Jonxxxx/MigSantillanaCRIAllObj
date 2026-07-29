@@ -1,7 +1,7 @@
 report 34002107 "Reporte Horas Extras"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte Horas Extras.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte Horas Extras.rdl';
     Caption = 'Template Over Time';
 
     dataset

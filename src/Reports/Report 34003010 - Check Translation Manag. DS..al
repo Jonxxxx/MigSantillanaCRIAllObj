@@ -1,7 +1,7 @@
 report 34003010 "Check Translation Manag. DS."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Check Translation Manag. DS..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Check Translation Manag. DS..rdl';
     Caption = 'Test Check Translation Management Functions';
 
     dataset

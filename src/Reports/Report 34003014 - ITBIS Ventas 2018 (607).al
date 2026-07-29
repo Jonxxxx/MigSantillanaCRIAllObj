@@ -1,7 +1,7 @@
 report 34003014 "ITBIS Ventas 2018 (607)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './ITBIS Ventas 2018 (607).rdlc';
+    RDLCLayout = 'src/ReportsLayout/ITBIS Ventas 2018 (607).rdl';
 
     dataset
     {
@@ -921,120 +921,118 @@ report 34003014 "ITBIS Ventas 2018 (607)"
             DataItemTableView = SORTING("Closed by Entry No.")
                                 ORDER(Descending)
                                 WHERE(Open = CONST(false),
-                                      Pmt. Disc. Given (LCY)=FILTER(>0),
-                                      No. Comprobante Fiscal DPP=FILTER(<>''));
-            column(PostingDate_DetailedCustLedgEntry;rDetailedMovCliente."Posting Date")
+                                      "Pmt. Disc. Given (LCY)" = FILTER(> 0),
+                                      "No. Comprobante Fiscal DPP" = FILTER(<> ''));
+            column(PostingDate_DetailedCustLedgEntry; rDetailedMovCliente."Posting Date")
             {
             }
-            column(DocumentNo_DetailedCustLedgEntry;rDetailedMovCliente."Document No.")
+            column(DocumentNo_DetailedCustLedgEntry; rDetailedMovCliente."Document No.")
             {
             }
-            column(AmountLCY_DetailedCustLedgEntry;"Cust. Ledger Entry"."Pmt. Disc. Given (LCY)")
+            column(AmountLCY_DetailedCustLedgEntry; "Cust. Ledger Entry"."Pmt. Disc. Given (LCY)")
             {
             }
-            column(NoComprobanteFiscal_DetailedCustLedgEntry;"Cust. Ledger Entry"."No. Comprobante Fiscal DPP")
+            column(NoComprobanteFiscal_DetailedCustLedgEntry; "Cust. Ledger Entry"."No. Comprobante Fiscal DPP")
             {
             }
-            column(RNCClientedt;Cust."VAT Registration No.")
+            column(RNCClientedt; Cust."VAT Registration No.")
             {
             }
-            column(NoComprobanteFiscalRel_DetailedCustLedgEntry;"Cust. Ledger Entry"."No. Comprobante Fiscal")
+            column(NoComprobanteFiscalRel_DetailedCustLedgEntry; "Cust. Ledger Entry"."No. Comprobante Fiscal")
             {
             }
-            column(ImporteBaseNCrDetailedCustLedgEntry;ImporteBaseNCr)
+            column(ImporteBaseNCrDetailedCustLedgEntry; ImporteBaseNCr)
             {
             }
-            column(ImporteITBISNCrDetailedCustLedgEntry;ImporteITBISNCr)
+            column(ImporteITBISNCrDetailedCustLedgEntry; ImporteITBISNCr)
             {
             }
-            column(ImporteGravadoNCrDetailedCustLedgEntry;ImporteGravadoNCr)
+            column(ImporteGravadoNCrDetailedCustLedgEntry; ImporteGravadoNCr)
             {
             }
-            column(ImporteExentoNCrDetailedCustLedgEntry;ImporteExentoNCr)
+            column(ImporteExentoNCrDetailedCustLedgEntry; ImporteExentoNCr)
             {
             }
-            column(ImporteTotalNCrDetailedCustLedgEntry;ImporteTotalNCr)
+            column(ImporteTotalNCrDetailedCustLedgEntry; ImporteTotalNCr)
             {
             }
-            column(BilltoNameDetailedCustLedgEntry;Cust.Name)
+            column(BilltoNameDetailedCustLedgEntry; Cust.Name)
             {
             }
-            column(NoDetailedCustLedgEntry;Cust."No.")
+            column(NoDetailedCustLedgEntry; Cust."No.")
             {
             }
 
             trigger OnAfterGetRecord()
             begin
-                ImporteBaseNCr    := 0;
-                ImporteTotalNCr   := 0;
-                ImporteITBISNCr   := 0;
-                "%ITBISNCr"       := 0;
+                ImporteBaseNCr := 0;
+                ImporteTotalNCr := 0;
+                ImporteITBISNCr := 0;
+                "%ITBISNCr" := 0;
                 ImporteGravadoNCr := 0;
-                ImporteExentoNCr  := 0;
+                ImporteExentoNCr := 0;
                 //para excluir las que tiene corregida.
                 SIH.RESET;
-                SIH.SETRANGE("No. Comprobante Fiscal Rel.","No. Comprobante Fiscal");
-                SIH.SETRANGE(Correction,TRUE);
-                SIH.SETRANGE("Sell-to Customer No.","Customer No.");
+                SIH.SETRANGE("No. Comprobante Fiscal Rel.", "No. Comprobante Fiscal");
+                SIH.SETRANGE(Correction, TRUE);
+                SIH.SETRANGE("Sell-to Customer No.", "Customer No.");
                 IF SIH.FINDFIRST THEN
-                  CurrReport.SKIP;
+                    CurrReport.SKIP;
 
-                ImporteTotalNCr   :=  ABS("Pmt. Disc. Given (LCY)");
-                ImporteBaseNCr    := ImporteTotalNCr;
-                ImporteExentoNCr  := ImporteTotalNCr;
+                ImporteTotalNCr := ABS("Pmt. Disc. Given (LCY)");
+                ImporteBaseNCr := ImporteTotalNCr;
+                ImporteExentoNCr := ImporteTotalNCr;
 
-                tImporteBase    += ABS(ImporteBaseNCr);
-                tImporteTotal   += ABS(ImporteTotalNCr);
-                tImporteITBIS   += ABS(ImporteITBISNCr);
+                tImporteBase += ABS(ImporteBaseNCr);
+                tImporteTotal += ABS(ImporteTotalNCr);
+                tImporteITBIS += ABS(ImporteITBISNCr);
                 tImporteGravado += ABS(ImporteGravadoNCr);
-                tImporteExento  += ABS(ImporteTotalNCr);
+                tImporteExento += ABS(ImporteTotalNCr);
 
                 IF NOT Cust.GET("Customer No.") THEN
-                  Cust.INIT;
+                    Cust.INIT;
 
                 rDetailedMovCliente.RESET;
-                rDetailedMovCliente.SETRANGE("Cust. Ledger Entry No.","Cust. Ledger Entry"."Closed by Entry No.");
-                rDetailedMovCliente.SETRANGE("Entry Type",rDetailedMovCliente."Entry Type"::"Payment Discount");
+                rDetailedMovCliente.SETRANGE("Cust. Ledger Entry No.", "Cust. Ledger Entry"."Closed by Entry No.");
+                rDetailedMovCliente.SETRANGE("Entry Type", rDetailedMovCliente."Entry Type"::"Payment Discount");
                 //rDetailedMovCliente.SETFILTER("Posting Date","Sales Cr.Memo Header".GETFILTER("Posting Date"));
                 IF NOT rDetailedMovCliente.FINDFIRST THEN
-                  CurrReport.SKIP;
+                    CurrReport.SKIP;
 
                 //Se llena la tabla de ITIBS
                 CLEAR(ArchITBIS);
-                ArchITBIS."Numero Documento"        := rDetailedMovCliente."Document No.";
-                ArchITBIS."No. Mov."                := "Entry No.";
-                ArchITBIS."Fecha Documento"         := FORMAT(rDetailedMovCliente."Posting Date",0,'<year4>') + FORMAT(rDetailedMovCliente."Posting Date",0,'<Month,2>') +
-                                                       FORMAT(rDetailedMovCliente."Posting Date",0,'<day,2>');
-                ArchITBIS.Apellidos                 := '';
-                ArchITBIS.Nombres                   := '';
-                ArchITBIS."Razon Social"            := DELCHR(COPYSTR(Cust.Name,1,60),'=',',');
-                ArchITBIS."Nombre Comercial"        := ArchITBIS."Razon Social";
-                RNCTxt                              := DELCHR(Cust."VAT Registration No.",'=','- ');
+                ArchITBIS."Numero Documento" := rDetailedMovCliente."Document No.";
+                ArchITBIS."No. Mov." := "Entry No.";
+                ArchITBIS."Fecha Documento" := FORMAT(rDetailedMovCliente."Posting Date", 0, '<year4>') + FORMAT(rDetailedMovCliente."Posting Date", 0, '<Month,2>') +
+                                                       FORMAT(rDetailedMovCliente."Posting Date", 0, '<day,2>');
+                ArchITBIS.Apellidos := '';
+                ArchITBIS.Nombres := '';
+                ArchITBIS."Razon Social" := DELCHR(COPYSTR(Cust.Name, 1, 60), '=', ',');
+                ArchITBIS."Nombre Comercial" := ArchITBIS."Razon Social";
+                RNCTxt := DELCHR(Cust."VAT Registration No.", '=', '- ');
                 IF STRLEN(RNCTxt) < 10 THEN
-                  ArchITBIS.RNC                     := RNCTxt
+                    ArchITBIS.RNC := RNCTxt
                 ELSE
-                  ArchITBIS.Cedula                  := COPYSTR(RNCTxt,1,11);
-                ArchITBIS."Total Documento"         := ImporteBaseNCr;
-                ArchITBIS."ITBIS Pagado"            := ABS(ImporteITBISNCr);
-                ArchITBIS.NCF                       := "No. Comprobante Fiscal DPP";
-                ArchITBIS."NCF Relacionado"         := "No. Comprobante Fiscal";
-                ArchITBIS."Tipo documento"          := 2; //Nota de credito
-                ArchITBIS."Codigo reporte"          := '607';
+                    ArchITBIS.Cedula := COPYSTR(RNCTxt, 1, 11);
+                ArchITBIS."Total Documento" := ImporteBaseNCr;
+                ArchITBIS."ITBIS Pagado" := ABS(ImporteITBISNCr);
+                ArchITBIS.NCF := "No. Comprobante Fiscal DPP";
+                ArchITBIS."NCF Relacionado" := "No. Comprobante Fiscal";
+                ArchITBIS."Tipo documento" := 2; //Nota de credito
+                ArchITBIS."Codigo reporte" := '607';
 
-                IF ArchITBIS.RNC <> '' THEN
-                  BEGIN
+                IF ArchITBIS.RNC <> '' THEN BEGIN
                     ArchITBIS."RNC/Cedula" := ArchITBIS.RNC;
                     ArchITBIS."Tipo Identificacion" := 1;
-                  END
-                ELSE
-                  BEGIN
+                END
+                ELSE BEGIN
                     ArchITBIS."RNC/Cedula" := ArchITBIS.Cedula;
-                   ArchITBIS."Tipo Identificacion" := 2;
-                  END;
+                    ArchITBIS."Tipo Identificacion" := 2;
+                END;
 
 
                 IF NOT ArchITBIS.INSERT THEN
-                  ERROR(Error001);
+                    ERROR(Error001);
             end;
 
             trigger OnPreDataItem()
@@ -1046,8 +1044,8 @@ report 34003014 "ITBIS Ventas 2018 (607)"
                 
                 FiltroFecha := "Cust. Ledger Entry".GETFILTER("Posting Date");
                 SETFILTER("Posting Date",'');*/
-                SETFILTER("Cust. Ledger Entry"."Pmt. Discount Date","Sales Cr.Memo Header".GETFILTER("Posting Date"));
-                SETFILTER("Cust. Ledger Entry"."Customer Posting Group","Sales Cr.Memo Header".GETFILTER("Customer Posting Group"));
+                SETFILTER("Cust. Ledger Entry"."Pmt. Discount Date", "Sales Cr.Memo Header".GETFILTER("Posting Date"));
+                SETFILTER("Cust. Ledger Entry"."Customer Posting Group", "Sales Cr.Memo Header".GETFILTER("Customer Posting Group"));
 
             end;
         }
@@ -1073,7 +1071,7 @@ report 34003014 "ITBIS Ventas 2018 (607)"
     trigger OnPreReport()
     begin
         ArchITBIS.RESET;
-        ArchITBIS.SETRANGE("Codigo reporte",'607');
+        ArchITBIS.SETRANGE("Codigo reporte", '607');
         ArchITBIS.DELETEALL;
 
         InfoEmpresa.GET;
@@ -1086,11 +1084,11 @@ report 34003014 "ITBIS Ventas 2018 (607)"
         DirEmpresa[7] := txt001 + InfoEmpresa."VAT Registration No.";
         COMPRESSARRAY(DirEmpresa);
 
-        FiltrosSIH  := "Sales Invoice Header".GETFILTERS;
+        FiltrosSIH := "Sales Invoice Header".GETFILTERS;
         FiltrosSCMH := "Sales Cr.Memo Header".GETFILTERS;
 
         IF "Sales Invoice Header".GETFILTER("Posting Date") = '' THEN
-          ERROR(Error002,"Sales Invoice Header".FIELDCAPTION("Posting Date"));
+            ERROR(Error002, "Sales Invoice Header".FIELDCAPTION("Posting Date"));
 
         //IF "Sales Cr.Memo Header".GETFILTER("Posting Date") = '' THEN
         //  ERROR(Error002,"Sales Cr.Memo Header".FIELDCAPTION("Posting Date"));
@@ -1109,7 +1107,7 @@ report 34003014 "ITBIS Ventas 2018 (607)"
         SIL: Record 113;
         FormaPago: Record 289;
         VPPG: Record 324;
-        DirEmpresa: array [7] of Text[50];
+        DirEmpresa: array[7] of Text[50];
         ImporteBase: Decimal;
         "%ITBIS": Decimal;
         ImporteITBIS: Decimal;

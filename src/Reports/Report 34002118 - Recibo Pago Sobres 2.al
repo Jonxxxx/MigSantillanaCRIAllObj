@@ -1,7 +1,7 @@
 report 34002118 "Recibo Pago Sobres 2"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Recibo Pago Sobres 2.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Recibo Pago Sobres 2.rdl';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

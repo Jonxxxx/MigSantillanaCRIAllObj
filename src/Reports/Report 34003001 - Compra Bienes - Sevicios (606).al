@@ -1,7 +1,7 @@
 report 34003001 "Compra Bienes - Sevicios (606)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Compra Bienes - Sevicios (606).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Compra Bienes - Sevicios (606).rdl';
 
     dataset
     {

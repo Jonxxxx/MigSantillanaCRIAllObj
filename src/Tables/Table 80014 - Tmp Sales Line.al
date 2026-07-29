@@ -1269,7 +1269,7 @@ table 80014 "Tmp Sales Line"
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit 312;
         ItemCheckAvail: Codeunit 311;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
         ReserveSalesLine: Codeunit 99000832;

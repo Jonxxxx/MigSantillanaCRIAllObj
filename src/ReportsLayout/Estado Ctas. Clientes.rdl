@@ -432,14 +432,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="NúmeroCaption">
+                        <Textbox Name="NumeroCaption">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=First(Fields!NúmeroCaption.Value)</Value>
+                                  <Value>=First(Fields!NumeroCaption.Value)</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -5186,8 +5186,8 @@ End Function
         <Field Name="Importe_Pendiente__DL_Caption">
           <DataField>Importe_Pendiente__DL_Caption</DataField>
         </Field>
-        <Field Name="NúmeroCaption">
-          <DataField>NúmeroCaption</DataField>
+        <Field Name="NumeroCaption">
+          <DataField>NumeroCaption</DataField>
         </Field>
         <Field Name="Dias_Venci_Caption">
           <DataField>Dias_Venci_Caption</DataField>

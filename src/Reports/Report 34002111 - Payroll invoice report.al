@@ -1,7 +1,7 @@
 report 34002111 "Payroll invoice report"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Payroll invoice report.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Payroll invoice report.rdl';
     Caption = 'Payroll invoice report';
 
     dataset

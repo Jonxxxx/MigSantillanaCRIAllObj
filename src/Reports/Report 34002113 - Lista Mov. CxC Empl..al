@@ -1,7 +1,7 @@
 report 34002113 "Lista Mov. CxC Empl."
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista Mov. CxC Empl..rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista Mov. CxC Empl..rdl';
 
     dataset
     {

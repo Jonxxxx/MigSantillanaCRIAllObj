@@ -226,7 +226,7 @@ codeunit 34002513 "Funciones DsPOS - ComuneZ"
         Error003: Label 'Imposible Insertar Línea de Pedido';
         Error004: Label 'El Producto %1 no existe';
         rTienda: Record 34002503;
-        Error005: Label 'El número Maximo de líneas (%1) para este pedido se ha superado';
+        Error005: Label 'El Numero Maximo de líneas (%1) para este pedido se ha superado';
         Text001: Label 'Añadido/s %1 unidad/es del producto %2';
         dto: Decimal;
     begin

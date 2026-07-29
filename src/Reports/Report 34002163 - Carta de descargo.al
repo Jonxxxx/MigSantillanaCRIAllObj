@@ -1,6 +1,6 @@
 report 34002163 "Carta de descargo"
 {
-    RDLCLayout = './Carta de descargo.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta de descargo.rdl';
     WordLayout = './Carta de descargo.docx';
     Caption = 'Discharge letter';
     DefaultLayout = Word;

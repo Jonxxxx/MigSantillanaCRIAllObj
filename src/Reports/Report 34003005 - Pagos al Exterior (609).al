@@ -1,7 +1,7 @@
 report 34003005 "Pagos al Exterior (609)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Pagos al Exterior (609).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Pagos al Exterior (609).rdl';
 
     dataset
     {

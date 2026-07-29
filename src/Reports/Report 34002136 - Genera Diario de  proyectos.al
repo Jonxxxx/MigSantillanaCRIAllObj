@@ -1,7 +1,7 @@
 report 34002136 "Genera Diario de  proyectos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Genera Diario de  proyectos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Genera Diario de  proyectos.rdl';
     Caption = 'Generate Job Journal';
 
     dataset

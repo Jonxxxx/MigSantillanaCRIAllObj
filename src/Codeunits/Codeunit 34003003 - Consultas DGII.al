@@ -6,7 +6,7 @@ codeunit 34003003 "Consultas DGII"
     end;
 
     var
-        Err001: Label 'Se debe especificar un número de NCF';
+        Err001: Label 'Se debe especificar un Numero de NCF';
         Err002: Label 'Fiscal Document No. invalid or not authorized for this vendor';
         RncNotFoundMsg: Label 'No se ha encontrado el RNC %1';
         HttpRequestFailedErr: Label 'The request to DGII could not be completed.';
@@ -257,7 +257,7 @@ codeunit 34003003 "Consultas DGII"
             1,
             250);
         Datos[4] := CopyStr(
-            GetValueByLabels(ResponseHtml, 'Número de Comprobante Fiscal', 'NCF', 'Número Comprobante Fiscal'),
+            GetValueByLabels(ResponseHtml, 'Numero de Comprobante Fiscal', 'NCF', 'Numero Comprobante Fiscal'),
             1,
             250);
         Datos[5] := CopyStr(

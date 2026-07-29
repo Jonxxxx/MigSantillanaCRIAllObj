@@ -217,7 +217,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
         ItemCheckAvail: Codeunit 311;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
         ReserveSalesLine: Codeunit "Sales Line-Reserve";
@@ -527,7 +527,7 @@ table 56017 "Lin. Consig a Facturar Movil."
         Currency: Record 4;
         Cust: Record 18;
         CustPostingGroup: Record 92;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         QtyToHandle: Decimal;
         SalesSetup: Record 311;
         RoundingLineInserted: Boolean;

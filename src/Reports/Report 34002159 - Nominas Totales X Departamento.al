@@ -1,7 +1,7 @@
 report 34002159 "Nominas Totales X Departamento"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Nominas Totales X Departamento.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nominas Totales X Departamento.rdl';
     Caption = '<Nominas por Totales por Departamento>';
 
     dataset

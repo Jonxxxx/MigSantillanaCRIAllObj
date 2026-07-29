@@ -1,26 +1,27 @@
 report 34002112 "Listado Novedades TSS"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado Novedades TSS.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado Novedades TSS.rdl';
 
     dataset
     {
         dataitem(Employee; 5200)
         {
             RequestFilterFields = "No.";
-            column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
+
+            column(FORMAT_TODAY_0_4_; Format(Today, 0, 4))
             {
             }
-            column(COMPANYNAME; COMPANYNAME)
+            column(COMPANYNAME; CompanyName)
             {
             }
-            column(CurrReport_PAGENO; CurrReport.PAGENO)
+            column(CurrReport_PAGENO; CurrReport.PageNo)
             {
             }
-            column(USERID; USERID)
+            column(USERID; UserId)
             {
             }
-            column(GETFILTERS; GETFILTERS)
+            column(GETFILTERS; GetFilters)
             {
             }
             column(Employee__No__; "No.")
@@ -50,13 +51,13 @@ report 34002112 "Listado Novedades TSS"
             column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
             {
             }
-            column(Employee__No__Caption; FIELDCAPTION("No."))
+            column(Employee__No__Caption; FieldCaption("No."))
             {
             }
-            column(Employee__Full_Name_Caption; FIELDCAPTION("Full Name"))
+            column(Employee__Full_Name_Caption; FieldCaption("Full Name"))
             {
             }
-            column(Employee__Document_ID_Caption; FIELDCAPTION("Document ID"))
+            column(Employee__Document_ID_Caption; FieldCaption("Document ID"))
             {
             }
             column(TipoDocCaption; TipoDocCaptionLbl)
@@ -65,38 +66,100 @@ report 34002112 "Listado Novedades TSS"
             column(Employee_GenderCaption; Employee_GenderCaptionLbl)
             {
             }
-            column(Employee__Birth_Date_Caption; FIELDCAPTION("Birth Date"))
+            column(Employee__Birth_Date_Caption; FieldCaption("Birth Date"))
             {
             }
             column(SalCotCaption; SalCotCaptionLbl)
             {
             }
 
+            trigger OnPreDataItem()
+            begin
+                rCompany.Get();
+
+                if GenerarArchivo then begin
+                    Clear(TempBlob);
+                    TempBlob.CreateOutStream(FileOutStream, TextEncoding::Windows);
+                end;
+
+                rCompany."VAT Registration No." := DelChr(rCompany."VAT Registration No.", '=', '-');
+
+                Texto := 'E';
+                Texto += 'NV';
+                Texto += Format(
+                    rCompany."VAT Registration No.",
+                    11 - StrLen(rCompany."VAT Registration No."),
+                    '<Filler Character, >') +
+                    rCompany."VAT Registration No.";
+
+                case Mes of
+                    Mes::Enero:
+                        Mestxt := '01';
+                    Mes::Febrero:
+                        Mestxt := '02';
+                    Mes::Marzo:
+                        Mestxt := '03';
+                    Mes::Abril:
+                        Mestxt := '04';
+                    Mes::Mayo:
+                        Mestxt := '05';
+                    Mes::Junio:
+                        Mestxt := '06';
+                    Mes::Julio:
+                        Mestxt := '07';
+                    Mes::Agosto:
+                        Mestxt := '08';
+                    Mes::Septiembre:
+                        Mestxt := '09';
+                    Mes::Octubre:
+                        Mestxt := '10';
+                    Mes::Noviembre:
+                        Mestxt := '11';
+                    Mes::Diciembre:
+                        Mestxt := '12';
+                end;
+
+                Texto += Format(Mestxt + Ano);
+
+                if GenerarArchivo then begin
+                    SetDefaultFileName();
+                    WriteFileLine(Texto);
+                end;
+
+                Clear(Texto);
+            end;
+
             trigger OnAfterGetRecord()
             begin
                 Texto := 'D';
                 Texto += '001';
-                EVALUATE(iMes, Mestxt);
-                EVALUATE(iAno, Ano);
-                wDate := WORKDATE;
-                TESTFIELD("Employment Date");
-                IF (DATE2DMY("Employment Date", 2) = iMes) AND
-                   (DATE2DMY("Employment Date", 3) = iAno) THEN
+
+                Evaluate(iMes, Mestxt);
+                Evaluate(iAno, Ano);
+
+                wDate := WorkDate;
+
+                TestField("Employment Date");
+
+                if (Date2DMY("Employment Date", 2) = iMes) and
+                   (Date2DMY("Employment Date", 3) = iAno)
+                then
                     Texto += 'IN'
-                ELSE
-                    IF (DATE2DMY("Employment Date", 2) >= iMes) AND
-                       (DATE2DMY("Employment Date", 3) <= iAno) THEN BEGIN
+                else
+                    if (Date2DMY("Employment Date", 2) >= iMes) and
+                       (Date2DMY("Employment Date", 3) <= iAno)
+                    then begin
                         CalFecha.CalculoEntreFechas("Employment Date", wDate, iAno, iMes, iDia);
-                        IF iAno > 0 THEN BEGIN
-                            IF (iAno >= 1) AND (iAno < 5) THEN
+
+                        if iAno > 0 then begin
+                            if (iAno >= 1) and (iAno < 5) then
                                 DiasVacaciones := 14
-                            ELSE
-                                IF iAno >= 5 THEN
+                            else
+                                if iAno >= 5 then
                                     DiasVacaciones := 18;
-                        END
-                        ELSE
-                            IF Meses > 4 THEN
-                                CASE Meses OF
+                        end else
+                            if Meses > 4 then
+                                case Meses of
                                     5:
                                         DiasVacaciones := 6;
                                     6:
@@ -109,145 +172,126 @@ report 34002112 "Listado Novedades TSS"
                                         DiasVacaciones := 10;
                                     10:
                                         DiasVacaciones := 11;
-                                    ELSE
+                                    else
                                         DiasVacaciones := 12;
-                                END;
+                                end;
 
-                        IF iAno <> 0 THEN
-                            Texto += 'VC'
-                    END;
+                        if iAno <> 0 then
+                            Texto += 'VC';
+                    end;
 
-                IF "Fecha salida empresa" <> 0D THEN
-                    IF (DATE2DMY("Fecha salida empresa", 2) >= iMes) AND
-                       (DATE2DMY("Fecha salida empresa", 3) >= iAno) THEN
+                if "Fecha salida empresa" <> 0D then
+                    if (Date2DMY("Fecha salida empresa", 2) >= iMes) and
+                       (Date2DMY("Fecha salida empresa", 3) >= iAno)
+                    then
                         Texto += 'SA';
 
-                Texto += FORMAT(FORMAT(iDia) + Mestxt + Ano);
-                IF GenerarArchivo THEN
-                    Archivo.WRITE(Texto);
-                CLEAR(Texto);
-            end;
+                Texto += Format(Format(iDia) + Mestxt + Ano);
 
-            trigger OnPostDataItem()
-            begin
-                IF GenerarArchivo THEN
-                    Archivo.CLOSE;
-            end;
+                if GenerarArchivo then
+                    WriteFileLine(Texto);
 
-            trigger OnPreDataItem()
-            begin
-                rCompany.GET();
-                IF GenerarArchivo THEN BEGIN
-                    Archivo.WRITEMODE := TRUE;
-                    Archivo.TEXTMODE := TRUE;
-                    Archivo.CREATE(Path);
-                END;
-                rCompany."VAT Registration No." := DELCHR(rCompany."VAT Registration No.", '=', '-');
-                Texto := 'E';
-                Texto += 'NV';
-                Texto += FORMAT(rCompany."VAT Registration No.", 11 - STRLEN(rCompany."VAT Registration No."), '<Filler Character, >') +
-                         rCompany."VAT Registration No.";
-                CASE Mes OF
-                    0:
-                        Mestxt := '01';
-                    1:
-                        Mestxt := '02';
-                    2:
-                        Mestxt := '03';
-                    3:
-                        Mestxt := '04';
-                    4:
-                        Mestxt := '05';
-                    5:
-                        Mestxt := '06';
-                    6:
-                        Mestxt := '07';
-                    7:
-                        Mestxt := '08';
-                    8:
-                        Mestxt := '09';
-                    9:
-                        Mestxt := '10';
-                    10:
-                        Mestxt := '11';
-                    11:
-                        Mestxt := '12';
-                END;
-                Texto += FORMAT(Mestxt + Ano);
-                IF GenerarArchivo THEN
-                    Archivo.WRITE(Texto);
-                CLEAR(Texto);
+                Clear(Texto);
             end;
         }
     }
 
     requestpage
     {
-
         layout
         {
             area(content)
             {
                 field(Mes; Mes)
                 {
+                    ApplicationArea = All;
+                    Caption = 'Mes';
+                    ToolTip = 'Especifica el mes que se utilizará para generar el listado de novedades TSS.';
                 }
                 field(Ano; Ano)
                 {
+                    ApplicationArea = All;
+                    Caption = 'Año';
+                    ToolTip = 'Especifica el año que se utilizará para generar el listado de novedades TSS.';
                 }
-                field("Ruta archivo"; Path)
+                field("Nombre archivo"; FileName)
                 {
-
-                    trigger OnAssistEdit()
-                    begin
-                        //Path := CommonDialogMgt.OpenFile(Text002,Path,2,'',0);
-                    end;
+                    ApplicationArea = All;
+                    Caption = 'Nombre archivo';
+                    ToolTip = 'Especifica el nombre del archivo TXT que se descargará. La carpeta de descarga es administrada por el navegador.';
                 }
                 field("Genera archivo"; GenerarArchivo)
                 {
+                    ApplicationArea = All;
+                    Caption = 'Generar archivo';
+                    ToolTip = 'Especifica si se debe generar y descargar el archivo TXT de novedades TSS.';
                 }
             }
         }
-
-        actions
-        {
-        }
-    }
-
-    labels
-    {
     }
 
     trigger OnInitReport()
     begin
-        IF Ano = '' THEN
-            Ano := FORMAT(WORKDATE, 0, '<Year4>');
+        if Ano = '' then
+            Ano := Format(WorkDate, 0, '<Year4>');
+    end;
+
+    trigger OnPostReport()
+    begin
+        if not GenerarArchivo then
+            exit;
+
+        DownloadGeneratedFile();
     end;
 
     var
         rCompany: Record 79;
         CalFecha: Codeunit 34002104;
+        TempBlob: Codeunit "Temp Blob";
+        FileOutStream: OutStream;
         TipoDoc: Code[2];
         SalCot: Decimal;
-        Archivo: File;
-        Path: Text[250];
-        Text001: Label 'Text (*.txt)|*.txt|CSV(Comma delimited) *.csv';
+        FileName: Text[250];
         GenerarArchivo: Boolean;
         Texto: Text[500];
         Mes: Option Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre;
         Ano: Code[4];
         Mestxt: Code[2];
-        Num: Integer;
         iAno: Integer;
         iMes: Integer;
         iDia: Integer;
         wDate: Date;
         DiasVacaciones: Integer;
         Meses: Integer;
-        Text002: Label 'Update Workbook';
+        Text001: Label 'Text (*.txt)|*.txt|CSV (Comma delimited) (*.csv)|*.csv';
         TSS_Update_s_ReportCaptionLbl: Label 'TSS Update''s Report';
         CurrReport_PAGENOCaptionLbl: Label 'Page';
         TipoDocCaptionLbl: Label 'Document Type';
         Employee_GenderCaptionLbl: Label 'Document Type';
         SalCotCaptionLbl: Label 'Taxable Salary';
-}
 
+    local procedure WriteFileLine(LineText: Text)
+    begin
+        FileOutStream.WriteText(LineText);
+        FileOutStream.WriteText();
+    end;
+
+    local procedure SetDefaultFileName()
+    begin
+        if FileName <> '' then
+            exit;
+
+        FileName := StrSubstNo('Novedades_TSS_%1_%2.txt', Ano, Mestxt);
+    end;
+
+    local procedure DownloadGeneratedFile()
+    var
+        FileInStream: InStream;
+    begin
+        SetDefaultFileName();
+        Clear(FileOutStream);
+
+        TempBlob.CreateInStream(FileInStream);
+        DownloadFromStream(FileInStream, '', '', Text001, FileName);
+    end;
+}

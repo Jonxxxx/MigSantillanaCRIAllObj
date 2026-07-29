@@ -14,7 +14,7 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta BOL OFF.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta BOL OFF.rdl';
 
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
@@ -286,7 +286,7 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
             dataitem("Sales Invoice Line"; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Quantity = FILTER(<> 0),
                                           Type = FILTER(<> 'Charge (Item)'));
@@ -586,7 +586,7 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
         Text001: Label 'Page %1';
         Vendedor_Comprador: Record 13;
         rPais: Record 9;
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;
@@ -600,12 +600,11 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
         Customer: Record 18;
         CLE: Record 21;
         SSH: Record 110;
-        ICR: Record 5717;
+
         VatPostSet: Record 325;
         VatProdPostGrp: Record 324;
         SalesInvHeader: Record 112;
-        NoSeriesMgt: Codeunit 396;
-        SegManagement: Codeunit 5051;
+
         SalesInvPrinted: Codeunit 315;
         wDiv: Code[10];
         VendorName: Text[50];

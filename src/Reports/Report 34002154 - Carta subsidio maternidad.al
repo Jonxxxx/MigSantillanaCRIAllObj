@@ -1,6 +1,6 @@
 report 34002154 "Carta subsidio maternidad"
 {
-    RDLCLayout = './Carta subsidio maternidad.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta subsidio maternidad.rdl';
     WordLayout = './Carta subsidio maternidad.docx';
     Caption = 'Charter maternity allowance';
     DefaultLayout = Word;

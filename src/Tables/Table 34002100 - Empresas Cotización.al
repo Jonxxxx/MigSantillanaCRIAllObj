@@ -223,7 +223,6 @@ table 34002100 "Empresas Cotizacion"
         Cpostal: Record 225;
         numafiliac: Code[10];
         dcafiliac: Code[2];
-        numero: Decimal;
         result: Decimal;
         CentroTrab: Record 34002101;
         DimMgt: Codeunit 408;
@@ -248,7 +247,7 @@ table 34002100 "Empresas Cotizacion"
     procedure Domicilio() DomicilioUdad: Text[50]
     begin
         IF Direccion <> '' THEN
-            DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Direccion) + Número, 1, 50);
+            DomicilioUdad := COPYSTR(STRSUBSTNO('%1 ', Direccion) + Numero, 1, 50);
         IF "Codigo Postal" <> '' THEN
             DomicilioUdad := COPYSTR(DomicilioUdad + ', ' + "Codigo Postal", 1, 50);
         IF Municipio <> '' THEN

@@ -3,7 +3,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
     // #52748  22/09/2016  JMB   Creacion de ticket - Modo OFFLINE
     // #217374 13.09.2019  RRT   Correcciones por actualizacion de campos. A´Š¢adir la posibilidad de imprimir notas de credito. Mostrar la parte impositiva.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Ticket Venta CR OFF.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Ticket Venta CR OFF.rdl';
 
     PreviewMode = PrintLayout;
 
@@ -14,7 +14,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
             CalcFields = "Amount Including VAT";
             DataItemTableView = SORTING("Document Type", "No.")
                                 ORDER(Ascending)
-                                WHERE("Document Type" = FILTER(Invoice | Credit Memo));
+                                WHERE("Document Type" = FILTER(Invoice | "Credit Memo"));
             RequestFilterFields = "No.", "Sell-to Customer No.";
             column(Empresa_Nombre; rEmpresa.Name)
             {
@@ -134,7 +134,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
             dataitem(Productos; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
                 DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Quantity = FILTER(<> 0),

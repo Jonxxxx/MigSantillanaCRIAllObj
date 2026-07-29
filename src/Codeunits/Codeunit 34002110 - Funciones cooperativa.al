@@ -1,7 +1,7 @@
 codeunit 34002110 "Funciones cooperativa"
 {
     // Si en A1 pones Tasa (tipo de interes del periodo)
-    // en B1 el nPer (número de Periodos)
+    // en B1 el nPer (Numero de Periodos)
     // en C1 el Va (Capital inicial)
     // Esta formula:
     // 

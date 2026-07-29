@@ -1016,7 +1016,7 @@ codeunit 75007 "MdM Gen. Prod."
     begin
         // FindPrimKey
         // Devuelve la clave primaria del registro en un array(10) pwPKVal Por Dios que deberia de bastar.
-        // Devuelve el número de campos encontrados
+        // Devuelve el Numero de campos encontrados
 
         wNoFlds := 0;
         CLEAR(pwPKVal);
@@ -1041,7 +1041,7 @@ codeunit 75007 "MdM Gen. Prod."
     begin
         // FindPrimKeyIdField
         // Devuelve la clave primaria del registro en un array(10) pwPKIdFields (Por Dios que deberia de bastar). El array es de integer, id de campos
-        // Devuelve el número de campos encontrados
+        // Devuelve el Numero de campos encontrados
 
 
         CLEAR(pwPKIdFields);
@@ -1061,7 +1061,7 @@ codeunit 75007 "MdM Gen. Prod."
     begin
         // IsFieldPrimKey
         // Devuelve True si el campo indicado está en la clave primaria
-        // Devuelve el número de campos encontrados
+        // Devuelve el Numero de campos encontrados
 
 
         wIsPK := FALSE;

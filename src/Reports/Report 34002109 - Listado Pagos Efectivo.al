@@ -1,7 +1,7 @@
 report 34002109 "Listado Pagos Efectivo"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado Pagos Efectivo.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado Pagos Efectivo.rdl';
 
     dataset
     {

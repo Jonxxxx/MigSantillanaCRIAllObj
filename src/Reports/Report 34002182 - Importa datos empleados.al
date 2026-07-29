@@ -5,15 +5,14 @@ report 34002182 "Importa datos empleados"
 
     dataset
     {
-        dataitem("Integer"; 2000000026)
+        dataitem(Integer; Integer)
         {
-            DataItemTableView = SORTING(Number)
-                                WHERE(Number = CONST(1));
+            DataItemTableView = sorting(Number) where(Number = const(1));
 
             trigger OnAfterGetRecord()
             begin
-                ReadExcelSheet;
-                AnalyzeData;
+                ReadExcelSheet();
+                AnalyzeData();
             end;
         }
     }
@@ -28,27 +27,73 @@ report 34002182 "Importa datos empleados"
             {
                 group(General)
                 {
+                    Caption = 'General';
+
                     group("Import from")
                     {
                         Caption = 'Import from';
+
                         field(ConceptoSal; ConceptoSal)
                         {
+                            ApplicationArea = All;
                             Caption = 'Wedge''s Concept';
                             TableRelation = "Conceptos salariales";
+                            ToolTip = 'Specifies the salary concept whose employee values will be updated.';
                         }
+
+                        field(FileName; FileName)
+                        {
+                            ApplicationArea = All;
+                            Caption = 'Workbook File Name';
+                            Editable = false;
+                            ToolTip = 'Specifies the Excel workbook containing the employee data.';
+
+                            trigger OnAssistEdit()
+                            begin
+                                UploadFile();
+                            end;
+                        }
+
+                        field(SheetName; SheetName)
+                        {
+                            ApplicationArea = All;
+                            Caption = 'Worksheet Name';
+                            Editable = false;
+                            ToolTip = 'Specifies the worksheet containing the employee data.';
+
+                            trigger OnAssistEdit()
+                            begin
+                                if not ExcelFileTempBlob.HasValue() then
+                                    if not UploadFile() then
+                                        exit;
+
+                                SelectSheetName();
+                            end;
+                        }
+
                         group(General2)
                         {
+                            ShowCaption = false;
+
                             field(Cell3; Cell3)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Employee code cell';
+                                ToolTip = 'Specifies the first cell containing the employee code.';
                             }
+
                             field(Cell1; Cell1)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Quantity Cell';
+                                ToolTip = 'Specifies the first cell containing the quantity.';
                             }
+
                             field(Cell2; Cell2)
                             {
+                                ApplicationArea = All;
                                 Caption = 'Amount Cell';
+                                ToolTip = 'Specifies the first cell containing the amount.';
                             }
                         }
                     }
@@ -56,151 +101,202 @@ report 34002182 "Importa datos empleados"
             }
         }
 
-        actions
-        {
-        }
-
         trigger OnQueryClosePage(CloseAction: Action): Boolean
-        var
-            FileMgt: Codeunit 419;
         begin
-            IF CloseAction = ACTION::OK THEN BEGIN
-                IF ServerFileName = '' THEN
-                    ServerFileName := FileMgt.UploadFile(Text006, ExcelFileExtensionTok);
-                IF ServerFileName = '' THEN
-                    EXIT(FALSE);
-            END;
+            if CloseAction <> Action::OK then
+                exit(true);
+
+            if not ExcelFileTempBlob.HasValue() then
+                if not UploadFile() then
+                    exit(false);
+
+            if SheetName = '' then
+                if not SelectSheetName() then
+                    exit(false);
+
+            exit(true);
         end;
     }
 
-    labels
-    {
-    }
-
-    trigger OnInitReport()
-    begin
-        NoLin := 1000;
-    end;
-
     trigger OnPreReport()
     begin
-        IF SheetName = '' THEN
-            SheetName := ExcelBuf.SelectSheetsName(ServerFileName);
+        if not ExcelFileTempBlob.HasValue() then
+            Error(NoExcelFileErr);
+
+        if SheetName = '' then
+            if not SelectSheetName() then
+                Error(NoWorksheetErr);
     end;
 
     var
-        ExcelBuf: Record 370;
+        ExcelBuf: Record "Excel Buffer" temporary;
         PerfilSal: Record 34002115;
-        Celda: Code[5];
-        ServerFileName: Text[250];
-        UploadedFileName: Text[1024];
+        ExcelFileTempBlob: Codeunit "Temp Blob";
+        Celda: Code[20];
+        FileName: Text[250];
         SheetName: Text[250];
         Window: Dialog;
-        Description: Text[50];
         Qty: Decimal;
         Amt: Decimal;
         CodEmpleado: Code[20];
-        Cell1: Code[5];
-        Cell2: Code[5];
-        Text0001: Label 'aaa';
-        Text007: Label 'Analyzing Data...\\';
-        Cell3: Code[5];
+        Cell1: Code[10];
+        Cell2: Code[10];
+        Cell3: Code[10];
         TotalRecNo: Integer;
         RecNo: Integer;
-        Text006: Label 'Import Excel File';
-        NoLin: Integer;
-        CodProd: Code[20];
         ConceptoSal: Code[20];
-        ExcelFileExtensionTok: Label '.xlsx', Locked = true;
+        ImportExcelFileLbl: Label 'Import Excel File';
+        ExcelFileFilterLbl: Label 'Excel Workbook (*.xlsx)|*.xlsx';
+        ExcelFileExtensionTok: Label 'xlsx', Locked = true;
+        AnalyzingDataLbl: Label 'Analyzing Data...\@1@@@@@@@@@@@@@@@@@@@@@@@@@';
+        NoExcelFileErr: Label 'You must select an Excel workbook before running the import.';
+        NoWorksheetErr: Label 'You must select a worksheet before running the import.';
+        ExcelOpenErr: Label 'The Excel workbook could not be opened. %1';
+
+    local procedure UploadFile(): Boolean
+    var
+        FileManagement: Codeunit "File Management";
+        UploadedFileName: Text;
+    begin
+        Clear(ExcelFileTempBlob);
+
+        UploadedFileName := FileManagement.BLOBImportWithFilter(
+            ExcelFileTempBlob,
+            ImportExcelFileLbl,
+            '',
+            ExcelFileFilterLbl,
+            ExcelFileExtensionTok);
+
+        if UploadedFileName = '' then begin
+            Clear(FileName);
+            Clear(SheetName);
+            exit(false);
+        end;
+
+        FileName := CopyStr(
+            FileManagement.GetFileName(UploadedFileName),
+            1,
+            MaxStrLen(FileName));
+
+        Clear(SheetName);
+        exit(true);
+    end;
+
+    local procedure SelectSheetName(): Boolean
+    var
+        ExcelInStream: InStream;
+    begin
+        if not ExcelFileTempBlob.HasValue() then
+            exit(false);
+
+        ExcelFileTempBlob.CreateInStream(ExcelInStream);
+        SheetName := ExcelBuf.SelectSheetsNameStream(ExcelInStream);
+
+        exit(SheetName <> '');
+    end;
 
     local procedure ReadExcelSheet()
+    var
+        ExcelInStream: InStream;
+        OpenBookError: Text;
     begin
-        /*
-        IF ISSERVICETIER THEN
-          IF UploadedFileName = '' THEN
-            UploadFile
-          ELSE
-            FileName := UploadedFileName;
-        */
-        ExcelBuf.OpenBook(ServerFileName, SheetName);
-        ExcelBuf.ReadSheet;
+        if not ExcelFileTempBlob.HasValue() then
+            Error(NoExcelFileErr);
 
+        if SheetName = '' then
+            Error(NoWorksheetErr);
+
+        ExcelBuf.Reset();
+        ExcelBuf.DeleteAll();
+
+        ExcelFileTempBlob.CreateInStream(ExcelInStream);
+
+        OpenBookError := ExcelBuf.OpenBookStream(ExcelInStream, SheetName);
+
+        if OpenBookError <> '' then
+            Error(ExcelOpenErr, OpenBookError);
+
+        ExcelBuf.ReadSheet();
+        ExcelBuf.CloseBook();
     end;
 
     local procedure AnalyzeData()
-    var
-        TempExcelBuf: Record 370 temporary;
-        BudgetBuf: Record 371;
-        TempBudgetBuf: Record 371 temporary;
-        HeaderRowNo: Integer;
-        CountDim: Integer;
-        TestDate: Date;
-        OldRowNo: Integer;
-        DimRowNo: Integer;
-        DimCode3: Code[20];
     begin
-        Window.OPEN(
-          Text007 +
-          '@1@@@@@@@@@@@@@@@@@@@@@@@@@\');
-        Window.UPDATE(1, 0);
-        TotalRecNo := ExcelBuf.COUNT;
+        Window.Open(AnalyzingDataLbl);
+        Window.Update(1, 0);
+
+        TotalRecNo := ExcelBuf.Count();
         RecNo := 0;
 
-        IF ExcelBuf.FIND('-') THEN
-            REPEAT
-                RecNo := RecNo + 1;
-                Window.UPDATE(1, ROUND(RecNo / TotalRecNo * 10000, 1));
-                Celda := ExcelBuf.xlColID + ExcelBuf.xlRowID;
-                IF Celda = Cell1 THEN BEGIN
-                    EVALUATE(Qty, ExcelBuf."Cell Value as Text");
-                    Cell1 := INCSTR(Cell1);
-                END
-                ELSE
-                    IF Celda = Cell2 THEN BEGIN
-                        EVALUATE(Amt, ExcelBuf."Cell Value as Text");
-                        Cell2 := INCSTR(Cell2);
-                    END
-                    ELSE
-                        IF Celda = Cell3 THEN BEGIN
-                            CodEmpleado := ExcelBuf."Cell Value as Text";
-                            CodEmpleado := DELCHR(CodEmpleado, '=', ', .');
-                            Cell3 := INCSTR(Cell3);
-                        END;
+        if ExcelBuf.FindSet() then
+            repeat
+                RecNo += 1;
 
-                //    MESSAGE('%1 %2 %3 %4 %5 %6 %7 %8',CodEmpleado,Qty,Amt,Celda,Cell1,Cell2,Cell3);
+                if TotalRecNo > 0 then
+                    Window.Update(1, Round(RecNo / TotalRecNo * 10000, 1));
 
-                IF CodEmpleado <> '' THEN BEGIN
-                    PerfilSal.RESET;
-                    PerfilSal.SETRANGE("No. empleado", CodEmpleado);
-                    PerfilSal.SETRANGE("Concepto salarial", ConceptoSal);
-                    IF PerfilSal.FINDFIRST THEN BEGIN
-                        IF Cell1 <> '' THEN
-                            PerfilSal.VALIDATE(Cantidad, Qty);
+                Celda := CopyStr(
+                    ExcelBuf.xlColID + ExcelBuf.xlRowID,
+                    1,
+                    MaxStrLen(Celda));
 
-                        IF (Cell2 <> '') AND (Cell1 = '') THEN BEGIN
-                            PerfilSal.VALIDATE(Cantidad, 1);
-                            IF PerfilSal."Formula Calculo" = '' THEN
-                                PerfilSal.VALIDATE(Importe, Amt);
-                        END
-                        ELSE
-                            IF Cell2 <> '' THEN BEGIN
-                                PerfilSal.VALIDATE(Cantidad, Qty);
-                                IF PerfilSal."Formula Calculo" = '' THEN
-                                    PerfilSal.VALIDATE(Importe, Amt);
-                            END;
+                if Celda = Cell1 then begin
+                    Evaluate(Qty, ExcelBuf."Cell Value as Text");
+                    Cell1 := IncStr(Cell1);
+                end else
+                    if Celda = Cell2 then begin
+                        Evaluate(Amt, ExcelBuf."Cell Value as Text");
+                        Cell2 := IncStr(Cell2);
+                    end else
+                        if Celda = Cell3 then begin
+                            CodEmpleado := CopyStr(
+                                ExcelBuf."Cell Value as Text",
+                                1,
+                                MaxStrLen(CodEmpleado));
 
-                        PerfilSal.MODIFY;
-                    END;
-                END;
-            UNTIL ExcelBuf.NEXT = 0;
+                            CodEmpleado := DelChr(CodEmpleado, '=', ', .');
+                            Cell3 := IncStr(Cell3);
+                        end;
 
-        Window.CLOSE;
+                if CodEmpleado <> '' then begin
+                    PerfilSal.Reset();
+                    PerfilSal.SetRange("No. empleado", CodEmpleado);
+                    PerfilSal.SetRange("Concepto salarial", ConceptoSal);
+
+                    if PerfilSal.FindFirst() then begin
+                        if Cell1 <> '' then
+                            PerfilSal.Validate(Cantidad, Qty);
+
+                        if (Cell2 <> '') and (Cell1 = '') then begin
+                            PerfilSal.Validate(Cantidad, 1);
+
+                            if PerfilSal."Formula Calculo" = '' then
+                                PerfilSal.Validate(Importe, Amt);
+                        end else
+                            if Cell2 <> '' then begin
+                                PerfilSal.Validate(Cantidad, Qty);
+
+                                if PerfilSal."Formula Calculo" = '' then
+                                    PerfilSal.Validate(Importe, Amt);
+                            end;
+
+                        PerfilSal.Modify();
+                    end;
+                end;
+            until ExcelBuf.Next() = 0;
+
+        Window.Close();
     end;
 
-    [Scope('Personalization')]
-    procedure SetFileName(NewFileName: Text)
+    procedure SetExcelFile(NewFileName: Text; ExcelInStream: InStream)
+    var
+        ExcelOutStream: OutStream;
     begin
-        ServerFileName := NewFileName;
+        Clear(ExcelFileTempBlob);
+        ExcelFileTempBlob.CreateOutStream(ExcelOutStream);
+        CopyStream(ExcelOutStream, ExcelInStream);
+
+        FileName := CopyStr(NewFileName, 1, MaxStrLen(FileName));
+        Clear(SheetName);
     end;
 }
-

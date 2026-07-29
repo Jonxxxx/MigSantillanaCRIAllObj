@@ -1,7 +1,7 @@
 report 34002103 "Nominas por departamentos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Nominas por departamentos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nominas por departamentos.rdl';
     AdditionalSearchTerms = 'Payroll by department';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Payroll by department';

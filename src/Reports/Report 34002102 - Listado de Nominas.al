@@ -1,7 +1,7 @@
 report 34002102 "Listado de Nominas"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado de Nominas.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de Nominas.rdl';
 
     dataset
     {

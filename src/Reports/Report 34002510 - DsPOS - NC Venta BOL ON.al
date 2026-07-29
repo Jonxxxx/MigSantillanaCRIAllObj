@@ -12,7 +12,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - NC Venta BOL ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - NC Venta BOL ON.rdl';
 
     Permissions = TableData 21 = rm,
                   TableData 114 = rm,
@@ -170,7 +170,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
             }
             dataitem("Sales Cr.Memo Line"; 115)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", "Line No.");
 
                 trigger OnPreDataItem()
@@ -180,7 +180,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
             }
             dataitem(SCML2; 115)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", "Line No.")
                                     WHERE(Type = FILTER(<> Item));
 
@@ -514,7 +514,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
         vPais: Text[50];
         rPais: Record 9;
         Comentario: Text[1024];
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         CurrName: Text[30];
         Text002: Label 'Total %1';
@@ -531,7 +531,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
         GLSetUp: Record 98;
         CodDivLocal: Code[20];
         NCFAnulados: Record 34003012;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         CLE: Record 21;
         SSH: Record 110;
         NoGuia: Code[50];
@@ -555,7 +555,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
         CopyText: Text[30];
         Text004: Label 'COPY';
         OutputNo: Integer;
-        SalesCrMemoCountPrinted: Codeunit 316;
+        SalesCrMemoCountPrinted: Codeunit "Sales Cr. Memo-Printed";
         ConfSant: Record 56001;
         ImporteSinCargos: Decimal;
         ImporteCargos: Decimal;

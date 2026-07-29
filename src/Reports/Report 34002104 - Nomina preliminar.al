@@ -1,7 +1,7 @@
 report 34002104 "Nomina preliminar"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Nomina preliminar.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Nomina preliminar.rdl';
 
     dataset
     {

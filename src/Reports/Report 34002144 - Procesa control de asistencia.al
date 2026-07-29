@@ -1,7 +1,7 @@
 report 34002144 "Procesa control de asistencia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Procesa control de asistencia.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Procesa control de asistencia.rdl';
     Caption = 'Generate Job Journal';
 
     dataset

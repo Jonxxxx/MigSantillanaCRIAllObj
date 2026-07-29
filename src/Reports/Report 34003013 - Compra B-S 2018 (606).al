@@ -8,7 +8,7 @@ report 34003013 "Compra B-S 2018 (606)"
     // ------------------------------------------------------------------------
     // DSLoc1.04   11-jun-2019  JPG       Texto CORREC Incluido y tipo identificacion
     DefaultLayout = RDLC;
-    RDLCLayout = './Compra B-S 2018 (606).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Compra B-S 2018 (606).rdl';
 
 
     dataset

@@ -83,7 +83,7 @@ report 56524 "Estado Ctas. Clientes"
             column(Importe_Pendiente__DL_Caption; "Cust. Ledger Entry".FIELDCAPTION("Remaining Amt. (LCY)"))
             {
             }
-            column("NúmeroCaption"; NúmeroCaptionLbl)
+            column("NumeroCaption"; NumeroCaptionLbl)
             {
             }
             column("Dias_Venci_Caption"; Dias_Venci_CaptionLbl)
@@ -423,7 +423,7 @@ report 56524 "Estado Ctas. Clientes"
         "Análisis_Cta_ClientesCaptionLbl": Label 'ACCOUNT STATUS BY CUSTOMER (Detailed)';
         DocumentCaptionLbl: Label 'Document';
         TipoCaptionLbl: Label 'Tipo';
-        "NúmeroCaptionLbl": Label 'Número';
+        "NumeroCaptionLbl": Label 'Numero';
         "Dias_Venci_CaptionLbl": Label 'Dias Venci.';
         Cust__Ledger_Entry__Currency_Code_CaptionLbl: Label 'Currency Code';
         Phone_CaptionLbl: Label 'Phone:';

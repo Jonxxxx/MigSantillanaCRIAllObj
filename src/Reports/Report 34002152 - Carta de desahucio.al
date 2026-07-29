@@ -1,6 +1,6 @@
 report 34002152 "Carta de desahucio"
 {
-    RDLCLayout = './Carta de desahucio.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta de desahucio.rdl';
     WordLayout = './Carta de desahucio.docx';
     Caption = 'Eviction letter';
     DefaultLayout = Word;

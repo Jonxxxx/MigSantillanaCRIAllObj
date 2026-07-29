@@ -1,7 +1,7 @@
 report 34002135 "Valida Diario Nom. - Proyectos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Valida Diario Nom. - Proyectos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Valida Diario Nom. - Proyectos.rdl';
     Caption = 'Test Job payroll journal';
 
     dataset

@@ -1,7 +1,7 @@
 report 34002164 "Recibo Nomina sin copia - coop"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Recibo Nomina sin copia - coop.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Recibo Nomina sin copia - coop.rdl';
     Permissions = TableData 34002117 = rimd,
                   TableData 34002118 = rimd;
 

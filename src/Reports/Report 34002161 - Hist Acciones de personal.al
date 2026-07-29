@@ -1,7 +1,7 @@
 report 34002161 "Hist Acciones de personal"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Hist Acciones de personal.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Hist Acciones de personal.rdl';
 
     dataset
     {

@@ -467,14 +467,14 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="NúmeroCaption">
+                        <Textbox Name="NumeroCaption">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=First(Fields!NúmeroCaption.Value)</Value>
+                                  <Value>=First(Fields!NumeroCaption.Value)</Value>
                                   <Style>
                                     <FontSize>7pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -4162,8 +4162,8 @@ End Function
         <Field Name="Cust__Ledger_Entry__Due_Date_Caption">
           <DataField>Cust__Ledger_Entry__Due_Date_Caption</DataField>
         </Field>
-        <Field Name="NúmeroCaption">
-          <DataField>NúmeroCaption</DataField>
+        <Field Name="NumeroCaption">
+          <DataField>NumeroCaption</DataField>
         </Field>
         <Field Name="Cust__Ledger_Entry__Amount__LCY__Caption">
           <DataField>Cust__Ledger_Entry__Amount__LCY__Caption</DataField>

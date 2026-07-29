@@ -15621,7 +15621,7 @@
         <trans-unit id="Table 1569003529 - Field 254737395 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Number</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Table Empresas Cotizacion - Field Número - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Empresas Cotizacion - Field Numero - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1569003529 - Field 1744440805 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Password Email Boleta Pago</source>
@@ -52759,7 +52759,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType DownloadingRncLbl</note>
         </trans-unit>
         <trans-unit id="Codeunit 4053812239 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Se debe especificar un número de NCF</source>
+          <source>Se debe especificar un Numero de NCF</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Consultas DGII - NamedType Err001</note>
         </trans-unit>
@@ -61411,7 +61411,7 @@
         <trans-unit id="Page 4047650802 - Control 254737395 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Apartamento</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Page Empresas de cotizacion - Control Número - Property Caption</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Page Empresas de cotizacion - Control Numero - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 4047650802 - Control 1004196339 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Payments</source>
@@ -66194,7 +66194,7 @@
           <note from="Xliff Generator" annotates="general" priority="3">Page Solic. Planif. Taller/Evento - Action &lt;Action1000000047&gt; - Property Caption</note>
         </trans-unit>
         <trans-unit id="Page 290080734 - Method 4177352842 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
-          <source>El número de asistentes definidos supera al número de asistentes esperados de la solicitud</source>
+          <source>El Numero de asistentes definidos supera al Numero de asistentes esperados de la solicitud</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Page Solicitud - Proposicion Fechas - Method OnQueryClosePage - NamedType Err001</note>
         </trans-unit>
@@ -70844,9 +70844,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Ctas. por cobrar por promotor - NamedType DocumentCaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 2772361454 - NamedType 2841882887" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Número</source>
+          <source>Numero</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report Ctas. por cobrar por promotor - NamedType NúmeroCaptionLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Ctas. por cobrar por promotor - NamedType NumeroCaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 2772361454 - NamedType 2604161633" size-unit="char" translate="yes" xml:space="preserve">
           <source>Phone:</source>
@@ -72149,9 +72149,9 @@
           <note from="Xliff Generator" annotates="general" priority="3">Report Estado Ctas. Clientes - NamedType DocumentCaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 972768224 - NamedType 2841882887" size-unit="char" translate="yes" xml:space="preserve">
-          <source>Número</source>
+          <source>Numero</source>
           <note from="Developer" annotates="general" priority="2"></note>
-          <note from="Xliff Generator" annotates="general" priority="3">Report Estado Ctas. Clientes - NamedType NúmeroCaptionLbl</note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Estado Ctas. Clientes - NamedType NumeroCaptionLbl</note>
         </trans-unit>
         <trans-unit id="Report 972768224 - NamedType 2604161633" size-unit="char" translate="yes" xml:space="preserve">
           <source>Phone:</source>

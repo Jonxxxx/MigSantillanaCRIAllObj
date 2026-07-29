@@ -1,7 +1,7 @@
 report 34002101 "Plantilla Horas Extras"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Plantilla Horas Extras.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Plantilla Horas Extras.rdl';
     Caption = 'Template Over Time';
 
     dataset

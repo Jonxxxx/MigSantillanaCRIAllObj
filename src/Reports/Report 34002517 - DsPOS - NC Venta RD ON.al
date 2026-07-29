@@ -1,7 +1,7 @@
 report 34002517 "DsPOS - NC Venta RD ON"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - NC Venta RD ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - NC Venta RD ON.rdl';
 
     dataset
     {
@@ -112,7 +112,7 @@ report 34002517 "DsPOS - NC Venta RD ON"
             }
             dataitem("Sales Cr.Memo Line"; 115)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 column(Sales_Invoice_Line__No__; "No.")
                 {
                 }

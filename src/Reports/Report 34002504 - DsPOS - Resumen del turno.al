@@ -1,7 +1,7 @@
 report 34002504 "DsPOS - Resumen del turno"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Resumen del turno.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Resumen del turno.rdl';
 
     dataset
     {
@@ -18,17 +18,17 @@ report 34002504 "DsPOS - Resumen del turno"
             column(NombreTienda; "Nombre tienda")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Tienda';
+                Caption = 'Tienda';
             }
             column(NombreTPV; "Nombre TPV")
             {
                 IncludeCaption = true;
-                OptionCaption = 'TPV';
+                Caption = 'TPV';
             }
             column(Fecha; Fecha)
             {
                 IncludeCaption = true;
-                OptionCaption = 'Fecha';
+
             }
             column(NoTurno; "No. turno")
             {
@@ -43,12 +43,12 @@ report 34002504 "DsPOS - Resumen del turno"
             column(HoraApertura; "Hora apertura")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Apertura:';
+                Caption = 'Apertura:';
             }
             column(HoraCierre; "Hora cierre")
             {
                 IncludeCaption = true;
-                OptionCaption = 'Cierre:';
+                Caption = 'Cierre:';
             }
             column(UsuarioApertura; "Usuario apertura")
             {
@@ -89,30 +89,31 @@ report 34002504 "DsPOS - Resumen del turno"
                 }
                 column(Ped_Cliente; "Cod. cliente")
                 {
-                    OptionCaption = 'Cliente';
+
                 }
                 column(Ped_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Nombre del cliente';
+
                 }
                 column(Ped_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de documento';
+
                 }
                 column(Ped_ImporteIVAInc; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+
                 }
                 column(Ped_Hora; Hora)
                 {
-                    OptionCaption = 'Time';
+
                 }
-                column(Ped_NCF; cFComunes.Devolver_NCF(DetalleDePedidos))
+                //TODO: Ver 
+                /*column(Ped_NCF; cFComunes.Devolver_NCF(DetalleDePedidos))
                 {
-                    OptionCaption = 'N´Š¢ Compr. Fiscal';
-                }
+                    
+                }*/
 
                 trigger OnPreDataItem()
                 begin
@@ -138,30 +139,32 @@ report 34002504 "DsPOS - Resumen del turno"
                 }
                 column(NC_Cliente; "Cod. cliente")
                 {
-                    OptionCaption = 'Cliente';
+
                 }
                 column(NC_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Cliente';
+
                 }
                 column(NC_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de nota de credito';
+                    Caption = 'Nota de nota de credito';
                 }
                 column(NC_Importe; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+
                 }
                 column(NC_Hora; Hora)
                 {
-                    OptionCaption = 'Time';
+
                 }
+                //TODO: Ver 
+                /*
                 column(NC_NCF; cFComunes.Devolver_NCF(NotasDeCredito))
                 {
-                    OptionCaption = 'N´Š¢ Compr. Fiscal';
-                }
+
+                }*/
 
                 trigger OnAfterGetRecord()
                 var
@@ -190,29 +193,31 @@ report 34002504 "DsPOS - Resumen del turno"
                 }
                 column(Anul_NombreCliente; "Nombre cliente")
                 {
-                    OptionCaption = 'Cliente';
+
                 }
                 column(Anul_NoDocumento; "No. Registrado")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'N´Š¢ de anulacion';
+
                 }
                 column(Anul_Importe; "Importe IVA inc.")
                 {
                     IncludeCaption = true;
-                    OptionCaption = 'Importe';
+
                 }
                 column(Anul_Hora; Hora)
                 {
-                    OptionCaption = 'Time';
+
                 }
+                //TODO: Ver 
+                /*
                 column(Anul_NCF; cFComunes.Devolver_NCF(Anulaciones))
                 {
-                    OptionCaption = 'N´Š¢ Compr. Fiscal';
-                }
+
+                }*/
                 column(Anul_Cliente; "Cod. cliente")
                 {
-                    OptionCaption = 'Cliente';
+
                 }
                 column(Anul_NombreClienteCaption; lblNombreCliente)
                 {

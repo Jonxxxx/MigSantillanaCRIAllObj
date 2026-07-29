@@ -1,7 +1,7 @@
 report 34002515 "DsPOS - Factura Venta EC OFF"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta EC OFF.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta EC OFF.rdl';
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
                   TableData 7190 = rm,
@@ -63,7 +63,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
             }
             column(CodDivLocalFormateada; CodDiv + ' ' + FORMAT(TotFactura, 0, '<Precision,2:2><Standard format,0>'))
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(igv; igv)
             {
@@ -138,7 +138,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
             dataitem("Sales Line"; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document Type", "Document No.", "Line No.")
                                     WHERE(Quantity = FILTER(<> 0),
                                           Type = FILTER(<> 'Charge (Item)'));
@@ -191,6 +191,8 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
 
                 trigger OnAfterGetRecord()
                 begin
+                    //TODO: Ver Tabla ICR no existe
+                    /*
                     ICR.SETRANGE(ICR."Item No.", "No.");
                     ICR.SETRANGE(ICR."Unit of Measure", "Unit of Measure");
                     IF NOT ICR.FINDFIRST THEN BEGIN
@@ -201,6 +203,9 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
                         ELSE
                             CodBarra := ''
                     END;
+                    */
+                    //TODO: Temp
+                    CodBarra := '';
                 end;
 
                 trigger OnPostDataItem()
@@ -388,16 +393,13 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
         rEmpresa: Record 79;
         rCliente: Record 18;
         rPais: Record 9;
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         GLSetUp: Record 98;
         Cust: Record 18;
         Customer: Record 18;
-        ICR: Record 5717;
+        //TODO: Ver Tabla no existe ICR: Record 5717;
         ConfSant: Record 56001;
         recDimEntry: Record 480;
-        NoSeriesMgt: Codeunit 396;
-        SalesInvPrinted: Codeunit 315;
-        SegManagement: Codeunit 5051;
         wDiv: Code[10];
         VendorName: Text[50];
         vPais: Text[50];

@@ -7,9 +7,9 @@ report 56138 "Estadisticas de Vtas."
     //                        Nota migracion: no existe el campo "Cod. categoria producto"
     // 
     // #6280  PLB 19/11/2014  Guardaba todos los datos como texto en el Excel... ahora guardará la fecha como fecha y las cantidades
-    //                        e importes como números.
+    //                        e importes como Numeros.
     //                        Algunos ajustes en el codigo
-    //        PLB 06/07/2016  Faltaba el MakeExcelDataBody3 para guardar como números en el Excel.
+    //        PLB 06/07/2016  Faltaba el MakeExcelDataBody3 para guardar como Numeros en el Excel.
     // 
     // #34579 FAA 28/10/2015  Se crea funcion ya que el reporte muestra datos erroneos.
     //        PLB 05/07/2015  Si se genera excel, no generar dataset para imprimir, y asi poder sacar un año entero

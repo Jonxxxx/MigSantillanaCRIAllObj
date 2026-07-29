@@ -1,7 +1,7 @@
 report 34003012 "Anexo IT-1"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Anexo IT-1.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Anexo IT-1.rdl';
     Caption = 'Anexo IT-1';
     EnableHyperlinks = true;
 

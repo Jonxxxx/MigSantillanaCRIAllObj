@@ -223,7 +223,7 @@ table 56011 "Lin. Consignacion a Facturar"
         ResFindUnitCost: Codeunit 220;
         CustCheckCreditLimit: Codeunit "Cust-Check Cr. Limit";
         ItemCheckAvail: Codeunit 311;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
         ReserveSalesLine: Codeunit "Sales Line-Reserve";

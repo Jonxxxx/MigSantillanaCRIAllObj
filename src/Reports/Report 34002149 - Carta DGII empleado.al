@@ -1,6 +1,6 @@
 report 34002149 "Carta DGII empleado"
 {
-    RDLCLayout = './Carta DGII empleado.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta DGII empleado.rdl';
     WordLayout = './Carta DGII empleado.docx';
     Caption = 'Carta declaracion DGII';
     DefaultLayout = Word;

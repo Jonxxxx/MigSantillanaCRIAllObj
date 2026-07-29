@@ -3,7 +3,7 @@ report 34002522 "DsPOS - Factura Venta GT ON"
     // #22712  10/06/2015  MOI   Cuando se reimprima una factura no se tiene que actualizar el NCF.
     //                           Eliminacion de codigo muerto
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta GT ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta GT ON.rdl';
 
     Caption = 'Sales - Invoice';
     Permissions = TableData 112 = rm,
@@ -438,7 +438,7 @@ report 34002522 "DsPOS - Factura Venta GT ON"
                 //AMS - Cod. Cup´Š¢n
 
 
-                CurrReport.LANGUAGE := Language.GetLanguageID("Language Code");
+                CurrReport.LANGUAGE := LanguageCU.GetLanguageID("Language Code");
 
                 NoSerie.GET("No. Serie NCF Facturas");
                 NoSerie.TESTFIELD("Invoice Copies");
@@ -588,11 +588,11 @@ report 34002522 "DsPOS - Factura Venta GT ON"
         Cust: Record 18;
         VATAmountLine: Record 290 temporary;
         RespCenter: Record 5714;
-        Language: Record 8;
+        LanguageCU: Codeunit Language;
         CurrExchRate: Record 330;
         SalesInvCountPrinted: Codeunit 315;
-        FormatAddr: Codeunit 365;
-        SegManagement: Codeunit 5051;
+        FormatAddr: Codeunit "Format Address";
+        SegManagement: Codeunit SegManagement;
         SalesShipmentBuffer: Record 7190 temporary;
         PostedShipmentDate: Date;
         CustAddr: array[8] of Text[50];
@@ -644,10 +644,9 @@ report 34002522 "DsPOS - Factura Venta GT ON"
         VatBussPG: Record 323;
         Cobrador: Text[30];
         CobradorText: Text[30];
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         DescriptionLine: array[2] of Text[250];
         Text012: Label 'Total books %1';
-        NoSeriesMgt: Codeunit 396;
         Text013: Label 'QUETZALES';
         CurrName: Text[30];
         Currency: Record 4;
@@ -670,7 +669,7 @@ report 34002522 "DsPOS - Factura Venta GT ON"
 
     procedure InitLogInteraction()
     begin
-        LogInteraction := SegManagement.FindInteractTmplCode(4) <> '';
+        LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Sales Inv.") <> '';
     end;
 
     procedure FindPostedShipmentDate(): Date

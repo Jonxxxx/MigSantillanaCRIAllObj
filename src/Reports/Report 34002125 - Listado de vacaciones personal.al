@@ -1,7 +1,7 @@
 report 34002125 "Listado de vacaciones personal"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado de vacaciones personal.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de vacaciones personal.rdl';
 
     dataset
     {

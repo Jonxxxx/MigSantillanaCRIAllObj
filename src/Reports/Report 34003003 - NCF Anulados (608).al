@@ -1,7 +1,7 @@
 report 34003003 "NCF Anulados (608)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './NCF Anulados (608).rdlc';
+    RDLCLayout = 'src/ReportsLayout/NCF Anulados (608).rdl';
 
     dataset
     {

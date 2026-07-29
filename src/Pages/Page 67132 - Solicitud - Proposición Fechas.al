@@ -39,7 +39,7 @@ page 67132 "Solicitud - Proposicion Fechas"
         rSol: Record 67055;
         TieneGrado: Boolean;
         wAsis: Integer;
-        Err001: Label 'El número de asistentes definidos supera al número de asistentes esperados de la solicitud';
+        Err001: Label 'El Numero de asistentes definidos supera al Numero de asistentes esperados de la solicitud';
     begin
         rProp.COPY(Rec);
         rProp.SETRANGE(rProp."No. Solicitud", "No. Solicitud");

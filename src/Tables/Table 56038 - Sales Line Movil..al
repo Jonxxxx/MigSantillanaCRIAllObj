@@ -1259,7 +1259,7 @@ table 56038 "Sales Line Movil."
         PriceCalcMgt: Codeunit 7000;
         ResFindUnitCost: Codeunit 220;
         ItemCheckAvail: Codeunit 311;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         ReservMgt: Codeunit 99000845;
         ReservEngineMgt: Codeunit 99000831;
         UOMMgt: Codeunit 5402;

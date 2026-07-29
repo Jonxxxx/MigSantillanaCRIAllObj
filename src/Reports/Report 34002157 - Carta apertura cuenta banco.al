@@ -1,6 +1,6 @@
 report 34002157 "Carta apertura cuenta banco"
 {
-    RDLCLayout = './Carta apertura cuenta banco.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta apertura cuenta banco.rdl';
     WordLayout = './Carta apertura cuenta banco.docx';
     Caption = 'Letter opening Bank account';
     DefaultLayout = Word;

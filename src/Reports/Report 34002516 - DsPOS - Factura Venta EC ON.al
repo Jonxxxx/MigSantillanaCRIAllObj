@@ -10,7 +10,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta EC ON.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta EC ON.rdl';
 
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
@@ -57,7 +57,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
             }
             column(CodDivLocalFormateada; CodDiv + ' ' + FORMAT(TotFactura, 0, '<Precision,2:2><Standard format,0>'))
             {
-                DecimalPlaces = 2 : 2;
+
             }
             column(Sales_Invoice_Header__User_ID_; "User ID")
             {
@@ -159,7 +159,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
             }
             dataitem("Sales Invoice Line"; 113)
             {
-                DataItemLink = Document No.=FIELD("No.");
+                DataItemLink = "Document No." = FIELD("No.");
                 DataItemTableView = SORTING("Document No.", Type, "No.")
                                     WHERE(Quantity = FILTER(<> 0),
                                           Type = FILTER(<> 'Charge (Item)'));
@@ -212,6 +212,8 @@ report 34002516 "DsPOS - Factura Venta EC ON"
 
                 trigger OnAfterGetRecord()
                 begin
+                    //TODO Ver
+                    /*
                     ICR.SETRANGE(ICR."Item No.", "No.");
                     ICR.SETRANGE(ICR."Unit of Measure", "Unit of Measure");
                     IF NOT ICR.FINDFIRST THEN BEGIN
@@ -221,7 +223,9 @@ report 34002516 "DsPOS - Factura Venta EC ON"
                             CodBarra := ICR."Cross-Reference No."
                         ELSE
                             CodBarra := ''
-                    END;
+                    END;*/
+                    //TODO: Temp
+                    CodBarra := '';
 
 
                     /*
@@ -576,7 +580,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         FPTPV: Record 34002513;
         Vendedor_Comprador: Record 13;
         rPais: Record 9;
-        ChkTransMgt: Report "Check Translation Management";
+        ChkTransMgt: Report 10400;
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;
@@ -588,12 +592,12 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         Cust: Record 18;
         PostCodes: Record 225;
         Customer: Record 18;
-        ICR: Record 5717;
+        //TODO: Tabla no existe ICR: Record 5717;
         ConfSant: Record 56001;
         recDimEntry: Record 480;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         SalesInvPrinted: Codeunit 315;
-        SegManagement: Codeunit 5051;
+
         wDiv: Code[10];
         VendorName: Text[50];
         vPais: Text[50];

@@ -1,6 +1,6 @@
 report 34002150 "Carta de contrato de trabajo"
 {
-    RDLCLayout = './Carta de contrato de trabajo.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Carta de contrato de trabajo.rdl';
     WordLayout = './Carta de contrato de trabajo.docx';
     Caption = 'Work contract lletter';
     DefaultLayout = Word;

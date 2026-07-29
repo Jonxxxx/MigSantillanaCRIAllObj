@@ -1,7 +1,7 @@
 report 34002119 "Lista acumulado Regalia"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Lista acumulado Regalia.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Lista acumulado Regalia.rdl';
 
     dataset
     {

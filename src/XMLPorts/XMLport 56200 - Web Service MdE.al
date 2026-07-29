@@ -1068,7 +1068,7 @@ xmlport 56200 "Web Service MdE"
         CodeValue: Code[20];
         DimensionTxt: Label 'Dimension %1';
         ErrorInsert: Label 'No se puede crear el %1 para el empleado %2.';
-        ErrorInsertEmployee: Label ' Revise que, si está enviando un alta nueva, el número de serie asignado a recursos humanos en Dynamics NAV esté correctamente configurado.';
+        ErrorInsertEmployee: Label ' Revise que, si está enviando un alta nueva, el Numero de serie asignado a recursos humanos en Dynamics NAV esté correctamente configurado.';
         ErrorModify: Label 'No se puede modificar el %1 para el empleado %2.';
         Exporting: Boolean;
         CreateDefaultDim: Boolean;

@@ -1,7 +1,7 @@
 report 34002503 "DsPOS - Cuadre de caja"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Cuadre de caja.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Cuadre de caja.rdl';
 
     dataset
     {
@@ -119,9 +119,9 @@ report 34002503 "DsPOS - Cuadre de caja"
                 {
                     IncludeCaption = true;
                 }
-                column(Pagos_NCF; cfComunes.Devolver_NCF_TransCaja(Pagos))
-                {
-                }
+                //TODO: Ver column(Pagos_NCF; cfComunes.Devolver_NCF_TransCaja(Pagos))
+                //{
+                //}
                 column(Pagos_Hora; Hora)
                 {
                     IncludeCaption = true;

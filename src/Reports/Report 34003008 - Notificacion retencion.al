@@ -1,6 +1,6 @@
 report 34003008 "Notificacion retencion"
 {
-    RDLCLayout = './Notificacion retencion.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Notificacion retencion.rdl';
     WordLayout = './Notificacion retencion.docx';
     Caption = 'Notification of Withholdings';
     DefaultLayout = Word;

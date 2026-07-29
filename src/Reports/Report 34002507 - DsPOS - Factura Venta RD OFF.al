@@ -10,7 +10,7 @@ report 34002507 "DsPOS - Factura Venta RD OFF"
     //                                               Eliminar linea: Column / "TPV (Obsoleto)" / Terminal.
     //                                               Eliminar en el layout la expresion del campo UseridTextBox2 (=First(Fields!Terminal.Value, "DataSet_Result"))
     DefaultLayout = RDLC;
-    RDLCLayout = './DsPOS - Factura Venta RD OFF.rdlc';
+    RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta RD OFF.rdl';
 
 
     dataset
@@ -122,7 +122,7 @@ report 34002507 "DsPOS - Factura Venta RD OFF"
             dataitem("Sales Line"; 37)
             {
                 DataItemLink = "Document Type" = FIELD("Document Type"),
-                               Document No.=FIELD("No.");
+                               "Document No." = FIELD("No.");
                 column(Sales_Invoice_Line__No__; "No.")
                 {
                 }

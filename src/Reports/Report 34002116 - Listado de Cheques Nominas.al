@@ -1,7 +1,7 @@
 report 34002116 "Listado de Cheques Nominas"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado de Cheques Nominas.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado de Cheques Nominas.rdl';
     Caption = 'Listado de Cheques Nominas';
 
     dataset

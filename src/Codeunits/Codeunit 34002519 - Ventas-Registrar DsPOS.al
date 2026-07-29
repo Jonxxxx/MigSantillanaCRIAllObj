@@ -1,4 +1,5 @@
 using Microsoft.Foundation.AuditCodes;
+using Microsoft.Finance.SalesTax;
 using Microsoft.Foundation.NoSeries;
 using Microsoft.Finance.ReceivablesPayables;
 codeunit 34002519 "Ventas-Registrar DsPOS"
@@ -1776,7 +1777,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
         JobPostLine: Codeunit 1001;
         ServItemMgt: Codeunit 5920;
         AsmPost: Codeunit 900;
-        SalesTaxCalculate: Codeunit 398;
+        SalesTaxCalculate: Codeunit "Sales Tax Calculate";
         Window: Dialog;
         PostingDate: Date;
         UseDate: Date;

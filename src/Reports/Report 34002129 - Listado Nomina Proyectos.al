@@ -1,7 +1,7 @@
 report 34002129 "Listado Nomina Proyectos"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado Nomina Proyectos.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado Nomina Proyectos.rdl';
     Caption = 'Job Payroll Report';
 
     dataset

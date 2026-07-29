@@ -78,12 +78,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                         REPEAT
                             IF (LinNomina."Cotiza ISR" AND (NOT LinNomina."Salario Base") AND (ConfNominas."Concepto Vacaciones" <> LinNomina."Concepto salarial")) THEN
                                 OtrasRemuneraciones += ROUND(LinNomina.Total, 0.01)
-                        /*
-                        ELSE
-                        IF (ConfNominas."Concepto Vacaciones" = LinNomina."Concepto salarial") and
-                           (Tiposdenominas.Codigo = LinNomina."Tipo de nomina") THEN
-                           OtrasRemuneraciones += LinNomina.Total;
-                           */
+
                         UNTIL LinNomina.NEXT = 0;
 
                     EmpRel.SETRANGE("Cod. Empleado", "No. empleado");
@@ -164,15 +159,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                     IF TipoSalida = 1 THEN BEGIN
                         IF HayNomina THEN BEGIN
                             //GRN Busco el saldo a favor
-                            /*
-                            LinNomina.RESET;
-                            LinNomina.SETRANGE(Periodo,Periodo);
-                            LinNomina.SETRANGE("Tipo de nomina","Tipo de nomina");
-                            LinNomina.SETRANGE("No. empleado","No. empleado");
-                            LinNomina.SETRANGE("Concepto salarial",ConfNominas."Concepto ISR");
-                            IF LinNomina.FINDFIRST THEN
-                               SaldoFavorISR := ABS(LinNomina.Total);
-                            */
+
                             BKSaldosFavor.RESET;
                             BKSaldosFavor.SETRANGE("Ano.", "Historico Cab. nomina".Ano);
                             BKSaldosFavor.SETRANGE("Cod. Empleado", "Historico Cab. nomina"."No. empleado");
@@ -270,74 +257,14 @@ report 34002131 "Llena Plantilla TSS Autodet."
 
             trigger OnPostDataItem()
             begin
-                IF TipoSalida = 1 THEN BEGIN
-                    ExcelBuf.CloseBook;
-                    /*
-                    ExcelBuf.UpdateBook(ServerFileName,SheetName);
-                    ExcelBuf.WriteSheet('',COMPANYNAME,USERID);
-                    ExcelBuf.CloseBook;
-                    ExcelBuf.DownloadAndOpenExcel;
-                    ExcelBuf.UpdateBookStream(ExcelBuf,SheetName,true);
-                    */
-                    ExcelBuf.UpdateBook(ServerFileName, SheetName);
-                    ExcelBuf.WriteSheet('', COMPANYNAME, USERID);
-                    ExcelBuf.CloseBook;
-                    IF FileMgt.IsWindowsClient THEN
-                        FileMgt.DownloadToFile(ServerFileName, FileName)
-                    ELSE
-                        ExcelBuf.DownloadAndOpenExcel;
-                END;
+                if TipoSalida = TipoSalida::Excel then begin
+                    ExcelWorkbookBuf.WriteAllToCurrentSheet(ExcelBuf);
+                    ExcelWorkbookBuf.CloseBook();
+                    DownloadExcelFile();
+                end;
 
-
-                /*
-                Window.CLOSE;
-                Counter := 0;
-                IF HayNomina THEN
-                   BEGIN
-                     CounterTotal := ExcelBuf.COUNT;
-                     Window.OPEN(Text003);
-                     ExcelBuf.FIND('-');
-                     REPEAT
-                      Counter += 1;
-                      Window.UPDATE(1,ROUND(Counter / CounterTotal * 10000,1));
-                
-                       EnterCell(RowNo,2,'100',FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                
-                      CASE Employee."Document Type" OF
-                        0:
-                         EnterCell(RowNo,3,'C',FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                        ELSE
-                         EnterCell(RowNo,3,'P',FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      END;
-                
-                      EnterCell(RowNo,4,DELCHR(Employee."Document ID",'=','-'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      EnterCell(RowNo,5,Employee."First Name",FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      EnterCell(RowNo,6,Employee."Last Name",FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      EnterCell(RowNo,7,Employee."Second Last Name",FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                
-                      CASE Employee.Gender OF
-                       1:
-                         EnterCell(RowNo,8,'F',FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                       ELSE
-                        EnterCell(RowNo,8,'M',FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      END;
-                      EnterCell(RowNo,9,FORMAT(Employee."Birth Date",2,'<DAY,2>')+FORMAT(Employee."Birth Date",2,'<MONTH,2>') + FORMAT(Employee."Birth Date",4,'<YEAR4>'),
-                                FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      EnterCell(RowNo,10,FORMAT(ROUND(SalarioCotizable,0.01),15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,11,FORMAT(0),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,12,FORMAT(ROUND(SalarioISR,0.01),15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,13,FORMAT(ROUND(OtrasRemuneraciones,0.01),15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,14,Employee."RNC Agente de Retencion ISR",FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                      EnterCell(RowNo,15,FORMAT(RemOtrosAgentes,15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,16,FORMAT(ROU0ND(IngresosExentos,0.01),15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,17,FORMAT(ROUND(SalarioInfotep,0.01),15,'<Integer><Decimals,3>'),FALSE,TRUE,'',ExcelBuf."Cell Type"::Number);
-                      EnterCell(RowNo,18,'Normal',FALSE,TRUE,'',ExcelBuf."Cell Type"::Text);
-                
-                      RowNo += 1;
-                      UNTIL ExcelBuf.NEXT = 0;
-                   END;
-                   */
-
+                if GuiAllowed then
+                    Window.Close();
             end;
 
             trigger OnPreDataItem()
@@ -355,28 +282,16 @@ report 34002131 "Llena Plantilla TSS Autodet."
                 //Empresa.GET("Empresa cotizacion");
                 Empresa.FINDFIRST;
 
-                IF TipoSalida = 1 THEN BEGIN
-                    IF ISSERVICETIER THEN
-                        IF UploadedFileName = '' THEN
-                            UploadFile
-                        ELSE
-                            FileName := UploadedFileName;
-                    /*
-                      IF ServerFileName = '' THEN
-                        ServerFileName := FileMgt.UploadFile(Text002,ExcelFileExtensionTok);
-                      IF ServerFileName = '' THEN
-                        EXIT;
-                    */
+                if TipoSalida = TipoSalida::Excel then begin
+                    if not ExcelTemplateTempBlob.HasValue() then
+                        if not UploadFile() then
+                            Error(NoExcelFileErr);
 
+                    if SheetName = '' then
+                        if not SelectSheetName() then
+                            Error(NoWorksheetErr);
 
-                    IF SheetName = '' THEN
-                        SheetName := ExcelBuf.SelectSheetsName(ServerFileName);
-
-                    IF SheetName = '' THEN
-                        EXIT;
-
-                    ExcelBuf.OpenBook(FileName, SheetName);
-                    //ExcelBuf.SelectSheetsName(SheetName);
+                    InitializeExcelWorkbook();
 
                     //Busco el numero de empleados que van a ser procesados
                     PrimeraVez := TRUE;
@@ -453,23 +368,32 @@ report 34002131 "Llena Plantilla TSS Autodet."
                 }
                 field("Nombre fichero libro"; FileName)
                 {
-                    Editable = EditaDatos;
+                    ApplicationArea = All;
+                    Caption = 'Workbook File Name';
+                    Editable = false;
+                    Enabled = EditaDatos;
+                    ToolTip = 'Specifies the Excel template workbook that will be completed and downloaded.';
 
                     trigger OnAssistEdit()
                     begin
-                        UploadFile;
+                        UploadFile();
                     end;
                 }
                 field("Nombre Hoja"; SheetName)
                 {
-                    Editable = EditaDatos;
+                    ApplicationArea = All;
+                    Caption = 'Worksheet Name';
+                    Editable = false;
+                    Enabled = EditaDatos;
+                    ToolTip = 'Specifies the worksheet in the uploaded Excel template.';
 
                     trigger OnAssistEdit()
                     begin
-                        IF ISSERVICETIER THEN
-                            SheetName := ExcelBuf.SelectSheetsName(UploadedFileName)
-                        ELSE
-                            SheetName := ExcelBuf.SelectSheetsName(FileName);
+                        if not ExcelTemplateTempBlob.HasValue() then
+                            if not UploadFile() then
+                                exit;
+
+                        SelectSheetName();
                     end;
                 }
             }
@@ -512,7 +436,8 @@ report 34002131 "Llena Plantilla TSS Autodet."
         FechaIni := "Historico Cab. nomina".GETRANGEMIN(Periodo);
         FechaFin := "Historico Cab. nomina".GETRANGEMAX(Periodo);
 
-        ExcelBuf.DELETEALL;
+        ExcelBuf.DeleteAll();
+        Clear(ExcelWorkbookBuf);
     end;
 
     var
@@ -523,16 +448,17 @@ report 34002131 "Llena Plantilla TSS Autodet."
         LinNomina: Record 34002118;
         EmpRel: Record 34002150;
         Fecha: Record 2000000007;
-        ExcelBuf: Record 370 temporary;
+        ExcelBuf: Record "Excel Buffer" temporary;
+        ExcelWorkbookBuf: Record "Excel Buffer" temporary;
         BKSaldosFavor: Record 34002130;
         SaldosFavor: Record 34002128;
         CauseofAbsence: Record 5206;
         Conceptossalariales: Record 34002111;
         Tiposdenominas: Record 34002158;
-        FileMgt: Codeunit 419;
         FormatosLegales: Codeunit 34002135;
+        ExcelTemplateTempBlob: Codeunit "Temp Blob";
+        ExcelResultTempBlob: Codeunit "Temp Blob";
         FileName: Text[250];
-        UploadedFileName: Text[1024];
         SheetName: Text[250];
         CounterTotal: Integer;
         Window: Dialog;
@@ -554,7 +480,6 @@ report 34002131 "Llena Plantilla TSS Autodet."
         [InDataSet]
         SheetNameEnable: Boolean;
         PathArchivo: Text[150];
-        Fichero: File;
         "Product Cell": Text[30];
         Text001: Label 'Exporting @1@@@@@@@@@@@@@';
         Text002: Label 'Update Workbook';
@@ -567,8 +492,10 @@ report 34002131 "Llena Plantilla TSS Autodet."
         Text006: Label 'Import Excel File';
         HayNomina: Boolean;
         Err001: Label 'Please select a payroll period';
-        ServerFileName: Text;
-        ExcelFileExtensionTok: Label '.xlsx', Locked = true;
+        ExcelFileFilterLbl: Label 'Excel Workbook (*.xlsx)|*.xlsx';
+        ExcelFileExtensionTok: Label 'xlsx', Locked = true;
+        NoExcelFileErr: Label 'You must select an Excel workbook before generating the Excel output.';
+        NoWorksheetErr: Label 'You must select a worksheet before generating the Excel output.';
         TipoSalida: Option Txt,Excel;
         [InDataSet]
         EditaDatos: Boolean;
@@ -579,32 +506,90 @@ report 34002131 "Llena Plantilla TSS Autodet."
         Preaviso_Cesantia: Decimal;
         Regalia: Decimal;
 
-    procedure UploadFile()
+    procedure UploadFile(): Boolean
     var
-        ClientFileName: Text[1024];
+        UploadedExcelInStream: InStream;
+        ExcelOutStream: OutStream;
+        UploadedFileName: Text;
     begin
-        UploadedFileName := FileMgt.UploadFile(Text006, ExcelFileExtensionTok);
-        FileName := UploadedFileName;
-        ServerFileName := FileName;
+        if not UploadIntoStream(Text006, '', ExcelFileFilterLbl, UploadedFileName, UploadedExcelInStream) then
+            exit(false);
+
+        Clear(ExcelTemplateTempBlob);
+        ExcelTemplateTempBlob.CreateOutStream(ExcelOutStream);
+        CopyStream(ExcelOutStream, UploadedExcelInStream);
+
+        FileName := CopyStr(UploadedFileName, 1, MaxStrLen(FileName));
+        Clear(SheetName);
+        exit(true);
+    end;
+
+    local procedure SelectSheetName(): Boolean
+    var
+        ExcelInStream: InStream;
+    begin
+        if not ExcelTemplateTempBlob.HasValue() then
+            exit(false);
+
+        ExcelTemplateTempBlob.CreateInStream(ExcelInStream);
+        SheetName := ExcelWorkbookBuf.SelectSheetsNameStream(ExcelInStream);
+        exit(SheetName <> '');
+    end;
+
+    local procedure InitializeExcelWorkbook()
+    var
+        ExcelInStream: InStream;
+    begin
+        Clear(ExcelWorkbookBuf);
+        ExcelTemplateTempBlob.CreateInStream(ExcelInStream);
+        ExcelWorkbookBuf.UpdateBookStream(ExcelInStream, SheetName, true);
+    end;
+
+    local procedure DownloadExcelFile()
+    var
+        ExcelInStream: InStream;
+        ExcelOutStream: OutStream;
+        DownloadFileName: Text;
+    begin
+        Clear(ExcelResultTempBlob);
+        ExcelResultTempBlob.CreateOutStream(ExcelOutStream);
+        ExcelWorkbookBuf.SaveToStream(ExcelOutStream, true);
+        Clear(ExcelOutStream);
+
+        ExcelResultTempBlob.CreateInStream(ExcelInStream);
+        DownloadFileName := FileName;
+
+        if DownloadFileName = '' then
+            DownloadFileName := StrSubstNo('Plantilla_TSS_%1_%2.xlsx', Ano, Format(Mes + 1));
+
+        DownloadFromStream(ExcelInStream, '', '', ExcelFileFilterLbl, DownloadFileName);
     end;
 
     local procedure EnterCell(RowNo: Integer; ColumnNo: Integer; CellValue: Text[250]; Bold: Boolean; UnderLine: Boolean; NumberFormat: Text[30]; CellType: Option)
     begin
-        ExcelBuf.INIT;
-        ExcelBuf.VALIDATE("Row No.", RowNo);
-        ExcelBuf.VALIDATE("Column No.", ColumnNo);
+        ExcelBuf.Init();
+        ExcelBuf.Validate("Row No.", RowNo);
+        ExcelBuf.Validate("Column No.", ColumnNo);
         ExcelBuf."Cell Value as Text" := CellValue;
         ExcelBuf.Formula := '';
         ExcelBuf.Bold := Bold;
         ExcelBuf.Underline := UnderLine;
         ExcelBuf.NumberFormat := NumberFormat;
         ExcelBuf."Cell Type" := CellType;
-        ExcelBuf.INSERT;
+        ExcelBuf.Insert();
     end;
 
-    procedure SetFileNameSilent(NewFileName: Text)
+    procedure SetFileNameSilent(NewFileName: Text; ExcelInStream: InStream)
+    var
+        ExcelOutStream: OutStream;
     begin
-        ServerFileName := NewFileName;
+        Clear(ExcelTemplateTempBlob);
+        ExcelTemplateTempBlob.CreateOutStream(ExcelOutStream);
+        CopyStream(ExcelOutStream, ExcelInStream);
+
+        FileName := CopyStr(NewFileName, 1, MaxStrLen(FileName));
+        Clear(SheetName);
     end;
+
 }
 

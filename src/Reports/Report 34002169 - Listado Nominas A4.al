@@ -1,7 +1,7 @@
 report 34002169 "Listado Nominas A4"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Listado Nominas A4.rdlc';
+    RDLCLayout = 'src/ReportsLayout/Listado Nominas A4.rdl';
     Caption = 'Payroll by department A4';
 
     dataset

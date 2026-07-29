@@ -1,7 +1,7 @@
 report 34003004 "Reporte Compra Divisas (612)"
 {
     DefaultLayout = RDLC;
-    RDLCLayout = './Reporte Compra Divisas (612).rdlc';
+    RDLCLayout = 'src/ReportsLayout/Reporte Compra Divisas (612).rdl';
 
     dataset
     {

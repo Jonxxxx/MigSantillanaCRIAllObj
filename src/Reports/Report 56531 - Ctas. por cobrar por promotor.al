@@ -72,7 +72,7 @@ report 56531 "Ctas. por cobrar por promotor"
             column(Cust__Ledger_Entry__Due_Date_Caption; "Cust. Ledger Entry".FIELDCAPTION("Due Date"))
             {
             }
-            column("NúmeroCaption"; NúmeroCaptionLbl)
+            column("NumeroCaption"; NumeroCaptionLbl)
             {
             }
             column(Cust__Ledger_Entry__Amount__LCY__Caption; "Cust. Ledger Entry".FIELDCAPTION("Amount (LCY)"))
@@ -254,7 +254,7 @@ report 56531 "Ctas. por cobrar por promotor"
         "Análisis_Cta_ClientesCaptionLbl": Label 'ACCOUNT STATUS BY CUSTOMER (Detailed)';
         DocumentCaptionLbl: Label 'Document';
         TipoCaptionLbl: Label 'Tipo';
-        "NúmeroCaptionLbl": Label 'Número';
+        "NumeroCaptionLbl": Label 'Numero';
         Amount__LCY____Remaining_Amt___LCY__CaptionLbl: Label 'Advance ($)';
         Customer_Name_Control1000000012CaptionLbl: Label 'Name';
         Phone_CaptionLbl: Label 'Phone:';
