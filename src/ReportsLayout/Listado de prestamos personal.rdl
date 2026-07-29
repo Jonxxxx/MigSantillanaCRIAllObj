@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,207 +11,6 @@
       <rd:DataSourceID>06a5c4bb-dbe3-4861-af02-f7858cff9da8</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="TIME">
-          <DataField>TIME</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="intAntesNomina">
-          <DataField>intAntesNomina</DataField>
-        </Field>
-        <Field Name="CantEmpl">
-          <DataField>CantEmpl</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe">
-          <DataField>LinPerSal_Importe</DataField>
-        </Field>
-        <Field Name="LinPerSal_ImporteFormat">
-          <DataField>LinPerSal_ImporteFormat</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_">
-          <DataField>HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_Format">
-          <DataField>HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_Format</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente_">
-          <DataField>HistCabPrestamo__Importe_Pendiente_</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente_Format">
-          <DataField>HistCabPrestamo__Importe_Pendiente_Format</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Original_">
-          <DataField>HistCabPrestamo__Importe_Original_</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Original_Format">
-          <DataField>HistCabPrestamo__Importe_Original_Format</DataField>
-        </Field>
-        <Field Name="CantEmpl_Control39">
-          <DataField>CantEmpl_Control39</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control41">
-          <DataField>LinPerSal_Importe_Control41</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control41Format">
-          <DataField>LinPerSal_Importe_Control41Format</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente__Control42">
-          <DataField>HistCabPrestamo__Importe_Pendiente__Control42</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Pendiente__Control42Format">
-          <DataField>HistCabPrestamo__Importe_Pendiente__Control42Format</DataField>
-        </Field>
-        <Field Name="ImportePte">
-          <DataField>ImportePte</DataField>
-        </Field>
-        <Field Name="ImportePteFormat">
-          <DataField>ImportePteFormat</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Original__Control44">
-          <DataField>HistCabPrestamo__Importe_Original__Control44</DataField>
-        </Field>
-        <Field Name="HistCabPrestamo__Importe_Original__Control44Format">
-          <DataField>HistCabPrestamo__Importe_Original__Control44Format</DataField>
-        </Field>
-        <Field Name="Listado_pr_stamos_personalCaption">
-          <DataField>Listado_pr_stamos_personalCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Control9Caption">
-          <DataField>Control9Caption</DataField>
-        </Field>
-        <Field Name="Control12Caption">
-          <DataField>Control12Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Caption</DataField>
-        </Field>
-        <Field Name="Importe_Pendiente____LinPerSal_Importe_Caption">
-          <DataField>Importe_Pendiente____LinPerSal_Importe_Caption</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control19Caption">
-          <DataField>LinPerSal_Importe_Control19Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption</DataField>
-        </Field>
-        <Field Name="Total_de_empleadosCaption">
-          <DataField>Total_de_empleadosCaption</DataField>
-        </Field>
-        <Field Name="Total_de_empleadosCaption_Control40">
-          <DataField>Total_de_empleadosCaption_Control40</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control19">
-          <DataField>LinPerSal_Importe_Control19</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control19Format">
-          <DataField>LinPerSal_Importe_Control19Format</DataField>
-        </Field>
-        <Field Name="Importe_Pendiente____LinPerSal_Importe_">
-          <DataField>Importe_Pendiente____LinPerSal_Importe_</DataField>
-        </Field>
-        <Field Name="Importe_Pendiente____LinPerSal_Importe_Format">
-          <DataField>Importe_Pendiente____LinPerSal_Importe_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original__Control33">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original__Control33</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original__Control33Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original__Control33Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38Format</DataField>
-        </Field>
-        <Field Name="Importe_Pendiente_____Importe_Cuota_">
-          <DataField>Importe_Pendiente_____Importe_Cuota_</DataField>
-        </Field>
-        <Field Name="Importe_Pendiente_____Importe_Cuota_Format">
-          <DataField>Importe_Pendiente_____Importe_Cuota_Format</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control36">
-          <DataField>LinPerSal_Importe_Control36</DataField>
-        </Field>
-        <Field Name="LinPerSal_Importe_Control36Format">
-          <DataField>LinPerSal_Importe_Control36Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35Format</DataField>
-        </Field>
-        <Field Name="Historico_Cab__Pr´Š¢stamo_Codigo_Empleado">
-          <DataField>Historico_Cab__Pr´Š¢stamo_Codigo_Empleado</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3210,4 +3009,200 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>da6323d2-95e6-4272-a747-75ff428d857e</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="intAntesNomina">
+          <DataField>intAntesNomina</DataField>
+        </Field>
+        <Field Name="CantEmpl">
+          <DataField>CantEmpl</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe">
+          <DataField>LinPerSal_Importe</DataField>
+        </Field>
+        <Field Name="LinPerSal_ImporteFormat">
+          <DataField>LinPerSal_ImporteFormat</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_">
+          <DataField>HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_Format">
+          <DataField>HistCabPrestamo__Importe_Pendiente____LinPerSal_Importe_Format</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente_">
+          <DataField>HistCabPrestamo__Importe_Pendiente_</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente_Format">
+          <DataField>HistCabPrestamo__Importe_Pendiente_Format</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Original_">
+          <DataField>HistCabPrestamo__Importe_Original_</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Original_Format">
+          <DataField>HistCabPrestamo__Importe_Original_Format</DataField>
+        </Field>
+        <Field Name="CantEmpl_Control39">
+          <DataField>CantEmpl_Control39</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control41">
+          <DataField>LinPerSal_Importe_Control41</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control41Format">
+          <DataField>LinPerSal_Importe_Control41Format</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente__Control42">
+          <DataField>HistCabPrestamo__Importe_Pendiente__Control42</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Pendiente__Control42Format">
+          <DataField>HistCabPrestamo__Importe_Pendiente__Control42Format</DataField>
+        </Field>
+        <Field Name="ImportePte">
+          <DataField>ImportePte</DataField>
+        </Field>
+        <Field Name="ImportePteFormat">
+          <DataField>ImportePteFormat</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Original__Control44">
+          <DataField>HistCabPrestamo__Importe_Original__Control44</DataField>
+        </Field>
+        <Field Name="HistCabPrestamo__Importe_Original__Control44Format">
+          <DataField>HistCabPrestamo__Importe_Original__Control44Format</DataField>
+        </Field>
+        <Field Name="Listado_pr_stamos_personalCaption">
+          <DataField>Listado_pr_stamos_personalCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Control9Caption">
+          <DataField>Control9Caption</DataField>
+        </Field>
+        <Field Name="Control12Caption">
+          <DataField>Control12Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Caption</DataField>
+        </Field>
+        <Field Name="Importe_Pendiente____LinPerSal_Importe_Caption">
+          <DataField>Importe_Pendiente____LinPerSal_Importe_Caption</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control19Caption">
+          <DataField>LinPerSal_Importe_Control19Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_Caption</DataField>
+        </Field>
+        <Field Name="Total_de_empleadosCaption">
+          <DataField>Total_de_empleadosCaption</DataField>
+        </Field>
+        <Field Name="Total_de_empleadosCaption_Control40">
+          <DataField>Total_de_empleadosCaption_Control40</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control19">
+          <DataField>LinPerSal_Importe_Control19</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control19Format">
+          <DataField>LinPerSal_Importe_Control19Format</DataField>
+        </Field>
+        <Field Name="Importe_Pendiente____LinPerSal_Importe_">
+          <DataField>Importe_Pendiente____LinPerSal_Importe_</DataField>
+        </Field>
+        <Field Name="Importe_Pendiente____LinPerSal_Importe_Format">
+          <DataField>Importe_Pendiente____LinPerSal_Importe_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Inicio_Deducci_n_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original__Control33">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original__Control33</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original__Control33Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original__Control33Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota__Control38Format</DataField>
+        </Field>
+        <Field Name="Importe_Pendiente_____Importe_Cuota_">
+          <DataField>Importe_Pendiente_____Importe_Cuota_</DataField>
+        </Field>
+        <Field Name="Importe_Pendiente_____Importe_Cuota_Format">
+          <DataField>Importe_Pendiente_____Importe_Cuota_Format</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control36">
+          <DataField>LinPerSal_Importe_Control36</DataField>
+        </Field>
+        <Field Name="LinPerSal_Importe_Control36Format">
+          <DataField>LinPerSal_Importe_Control36Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente__Control35Format</DataField>
+        </Field>
+        <Field Name="Historico_Cab__Prestamo_Codigo_Empleado">
+          <DataField>Historico_Cab__Prestamo_Codigo_Empleado</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

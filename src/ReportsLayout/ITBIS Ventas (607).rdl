@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,250 +10,6 @@
       <rd:SecurityType>None</rd:SecurityType>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="No_SalesInvoiceHeader">
-          <DataField>No_SalesInvoiceHeader</DataField>
-        </Field>
-        <Field Name="BilltoCustomerNo_SalesInvoiceHeader">
-          <DataField>BilltoCustomerNo_SalesInvoiceHeader</DataField>
-        </Field>
-        <Field Name="BilltoName_SalesInvoiceHeader">
-          <DataField>BilltoName_SalesInvoiceHeader</DataField>
-        </Field>
-        <Field Name="PostingDate_SalesInvoiceHeader">
-          <DataField>PostingDate_SalesInvoiceHeader</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscal_SalesInvoiceHeader">
-          <DataField>NoComprobanteFiscal_SalesInvoiceHeader</DataField>
-        </Field>
-        <Field Name="RNCCliente">
-          <DataField>RNCCliente</DataField>
-        </Field>
-        <Field Name="ImporteBase">
-          <DataField>ImporteBase</DataField>
-        </Field>
-        <Field Name="ImporteBaseFormat">
-          <DataField>ImporteBaseFormat</DataField>
-        </Field>
-        <Field Name="ImporteExento">
-          <DataField>ImporteExento</DataField>
-        </Field>
-        <Field Name="ImporteExentoFormat">
-          <DataField>ImporteExentoFormat</DataField>
-        </Field>
-        <Field Name="ImporteGravado">
-          <DataField>ImporteGravado</DataField>
-        </Field>
-        <Field Name="ImporteGravadoFormat">
-          <DataField>ImporteGravadoFormat</DataField>
-        </Field>
-        <Field Name="ImporteITBIS">
-          <DataField>ImporteITBIS</DataField>
-        </Field>
-        <Field Name="ImporteITBISFormat">
-          <DataField>ImporteITBISFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotal">
-          <DataField>ImporteTotal</DataField>
-        </Field>
-        <Field Name="ImporteTotalFormat">
-          <DataField>ImporteTotalFormat</DataField>
-        </Field>
-        <Field Name="DirEmpresa1">
-          <DataField>DirEmpresa1</DataField>
-        </Field>
-        <Field Name="DirEmpresa2">
-          <DataField>DirEmpresa2</DataField>
-        </Field>
-        <Field Name="DirEmpresa3">
-          <DataField>DirEmpresa3</DataField>
-        </Field>
-        <Field Name="DirEmpresa4">
-          <DataField>DirEmpresa4</DataField>
-        </Field>
-        <Field Name="FiltrosSIH">
-          <DataField>FiltrosSIH</DataField>
-        </Field>
-        <Field Name="FiltrosSCMH">
-          <DataField>FiltrosSCMH</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscal_SalesCrMemoHeader">
-          <DataField>NoComprobanteFiscal_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscalRel_SalesCrMemoHeader">
-          <DataField>NoComprobanteFiscalRel_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="No_SalesCrMemoHeader">
-          <DataField>No_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="BilltoCustomerNo_SalesCrMemoHeader">
-          <DataField>BilltoCustomerNo_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="BilltoName_SalesCrMemoHeader">
-          <DataField>BilltoName_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="PostingDate_SalesCrMemoHeader">
-          <DataField>PostingDate_SalesCrMemoHeader</DataField>
-        </Field>
-        <Field Name="RNCCliente_NCR">
-          <DataField>RNCCliente_NCR</DataField>
-        </Field>
-        <Field Name="ImporteBaseNCr">
-          <DataField>ImporteBaseNCr</DataField>
-        </Field>
-        <Field Name="ImporteBaseNCrFormat">
-          <DataField>ImporteBaseNCrFormat</DataField>
-        </Field>
-        <Field Name="ImporteITBISNCr">
-          <DataField>ImporteITBISNCr</DataField>
-        </Field>
-        <Field Name="ImporteITBISNCrFormat">
-          <DataField>ImporteITBISNCrFormat</DataField>
-        </Field>
-        <Field Name="ImporteGravadoNCr">
-          <DataField>ImporteGravadoNCr</DataField>
-        </Field>
-        <Field Name="ImporteGravadoNCrFormat">
-          <DataField>ImporteGravadoNCrFormat</DataField>
-        </Field>
-        <Field Name="ImporteExentoNCr">
-          <DataField>ImporteExentoNCr</DataField>
-        </Field>
-        <Field Name="ImporteExentoNCrFormat">
-          <DataField>ImporteExentoNCrFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotalNCr">
-          <DataField>ImporteTotalNCr</DataField>
-        </Field>
-        <Field Name="ImporteTotalNCrFormat">
-          <DataField>ImporteTotalNCrFormat</DataField>
-        </Field>
-        <Field Name="No_SalesInvoiceHeader_S">
-          <DataField>No_SalesInvoiceHeader_S</DataField>
-        </Field>
-        <Field Name="BilltoCustomerNo_SalesInvoiceHeader_S">
-          <DataField>BilltoCustomerNo_SalesInvoiceHeader_S</DataField>
-        </Field>
-        <Field Name="BilltoName_SalesInvoiceHeader_S">
-          <DataField>BilltoName_SalesInvoiceHeader_S</DataField>
-        </Field>
-        <Field Name="PostingDate_SalesInvoiceHeader_S">
-          <DataField>PostingDate_SalesInvoiceHeader_S</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscal_SalesInvoiceHeader_S">
-          <DataField>NoComprobanteFiscal_SalesInvoiceHeader_S</DataField>
-        </Field>
-        <Field Name="RNCCliente_S">
-          <DataField>RNCCliente_S</DataField>
-        </Field>
-        <Field Name="ImporteBase_S">
-          <DataField>ImporteBase_S</DataField>
-        </Field>
-        <Field Name="ImporteBase_SFormat">
-          <DataField>ImporteBase_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteExento_S">
-          <DataField>ImporteExento_S</DataField>
-        </Field>
-        <Field Name="ImporteExento_SFormat">
-          <DataField>ImporteExento_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteGravado_S">
-          <DataField>ImporteGravado_S</DataField>
-        </Field>
-        <Field Name="ImporteGravado_SFormat">
-          <DataField>ImporteGravado_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteITBIS_S">
-          <DataField>ImporteITBIS_S</DataField>
-        </Field>
-        <Field Name="ImporteITBIS_SFormat">
-          <DataField>ImporteITBIS_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotal_S">
-          <DataField>ImporteTotal_S</DataField>
-        </Field>
-        <Field Name="ImporteTotal_SFormat">
-          <DataField>ImporteTotal_SFormat</DataField>
-        </Field>
-        <Field Name="DirEmpresa1_S">
-          <DataField>DirEmpresa1_S</DataField>
-        </Field>
-        <Field Name="DirEmpresa2_S">
-          <DataField>DirEmpresa2_S</DataField>
-        </Field>
-        <Field Name="DirEmpresa3_S">
-          <DataField>DirEmpresa3_S</DataField>
-        </Field>
-        <Field Name="DirEmpresa4_S">
-          <DataField>DirEmpresa4_S</DataField>
-        </Field>
-        <Field Name="FiltrosSIH_S">
-          <DataField>FiltrosSIH_S</DataField>
-        </Field>
-        <Field Name="FiltrosSCMH_S">
-          <DataField>FiltrosSCMH_S</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscal_SalesCrMemoHeader_S">
-          <DataField>NoComprobanteFiscal_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="NoComprobanteFiscalRel_SalesCrMemoHeader_S">
-          <DataField>NoComprobanteFiscalRel_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="No_SalesCrMemoHeader_S">
-          <DataField>No_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="BilltoCustomerNo_SalesCrMemoHeader_S">
-          <DataField>BilltoCustomerNo_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="BilltoName_SalesCrMemoHeader_S">
-          <DataField>BilltoName_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="PostingDate_SalesCrMemoHeader_S">
-          <DataField>PostingDate_SalesCrMemoHeader_S</DataField>
-        </Field>
-        <Field Name="RNCCliente_NCR_S">
-          <DataField>RNCCliente_NCR_S</DataField>
-        </Field>
-        <Field Name="ImporteBaseNCr_S">
-          <DataField>ImporteBaseNCr_S</DataField>
-        </Field>
-        <Field Name="ImporteBaseNCr_SFormat">
-          <DataField>ImporteBaseNCr_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteITBISNCr_S">
-          <DataField>ImporteITBISNCr_S</DataField>
-        </Field>
-        <Field Name="ImporteITBISNCr_SFormat">
-          <DataField>ImporteITBISNCr_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteGravadoNCr_S">
-          <DataField>ImporteGravadoNCr_S</DataField>
-        </Field>
-        <Field Name="ImporteGravadoNCr_SFormat">
-          <DataField>ImporteGravadoNCr_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteExentoNCr_S">
-          <DataField>ImporteExentoNCr_S</DataField>
-        </Field>
-        <Field Name="ImporteExentoNCr_SFormat">
-          <DataField>ImporteExentoNCr_SFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotalNCr_S">
-          <DataField>ImporteTotalNCr_S</DataField>
-        </Field>
-        <Field Name="ImporteTotalNCr_SFormat">
-          <DataField>ImporteTotalNCr_SFormat</DataField>
-        </Field>
-      </Fields>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -6178,4 +5934,299 @@ End Function
   <Language>=User!Language</Language>
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_SalesInvoiceHeader">
+          <DataField>No_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesInvoiceHeader">
+          <DataField>BilltoCustomerNo_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesInvoiceHeader">
+          <DataField>BilltoName_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesInvoiceHeader">
+          <DataField>PostingDate_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscal_SalesInvoiceHeader">
+          <DataField>NoComprobanteFiscal_SalesInvoiceHeader</DataField>
+        </Field>
+        <Field Name="RNCCliente">
+          <DataField>RNCCliente</DataField>
+        </Field>
+        <Field Name="ImporteBase">
+          <DataField>ImporteBase</DataField>
+        </Field>
+        <Field Name="ImporteBaseFormat">
+          <DataField>ImporteBaseFormat</DataField>
+        </Field>
+        <Field Name="ImporteExento">
+          <DataField>ImporteExento</DataField>
+        </Field>
+        <Field Name="ImporteExentoFormat">
+          <DataField>ImporteExentoFormat</DataField>
+        </Field>
+        <Field Name="ImporteGravado">
+          <DataField>ImporteGravado</DataField>
+        </Field>
+        <Field Name="ImporteGravadoFormat">
+          <DataField>ImporteGravadoFormat</DataField>
+        </Field>
+        <Field Name="ImporteITBIS">
+          <DataField>ImporteITBIS</DataField>
+        </Field>
+        <Field Name="ImporteITBISFormat">
+          <DataField>ImporteITBISFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+        </Field>
+        <Field Name="ImporteTotalFormat">
+          <DataField>ImporteTotalFormat</DataField>
+        </Field>
+        <Field Name="DirEmpresa1">
+          <DataField>DirEmpresa1</DataField>
+        </Field>
+        <Field Name="DirEmpresa2">
+          <DataField>DirEmpresa2</DataField>
+        </Field>
+        <Field Name="DirEmpresa3">
+          <DataField>DirEmpresa3</DataField>
+        </Field>
+        <Field Name="DirEmpresa4">
+          <DataField>DirEmpresa4</DataField>
+        </Field>
+        <Field Name="FiltrosSIH">
+          <DataField>FiltrosSIH</DataField>
+        </Field>
+        <Field Name="FiltrosSCMH">
+          <DataField>FiltrosSCMH</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscal_SalesCrMemoHeader">
+          <DataField>NoComprobanteFiscal_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscalRel_SalesCrMemoHeader">
+          <DataField>NoComprobanteFiscalRel_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="No_SalesCrMemoHeader">
+          <DataField>No_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesCrMemoHeader">
+          <DataField>BilltoCustomerNo_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesCrMemoHeader">
+          <DataField>BilltoName_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCrMemoHeader">
+          <DataField>PostingDate_SalesCrMemoHeader</DataField>
+        </Field>
+        <Field Name="RNCCliente_NCR">
+          <DataField>RNCCliente_NCR</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCr">
+          <DataField>ImporteBaseNCr</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCrFormat">
+          <DataField>ImporteBaseNCrFormat</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCr">
+          <DataField>ImporteITBISNCr</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCrFormat">
+          <DataField>ImporteITBISNCrFormat</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCr">
+          <DataField>ImporteGravadoNCr</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCrFormat">
+          <DataField>ImporteGravadoNCrFormat</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCr">
+          <DataField>ImporteExentoNCr</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCrFormat">
+          <DataField>ImporteExentoNCrFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCr">
+          <DataField>ImporteTotalNCr</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCrFormat">
+          <DataField>ImporteTotalNCrFormat</DataField>
+        </Field>
+        <Field Name="No_SalesInvoiceHeader_S">
+          <DataField>No_SalesInvoiceHeader_S</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesInvoiceHeader_S">
+          <DataField>BilltoCustomerNo_SalesInvoiceHeader_S</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesInvoiceHeader_S">
+          <DataField>BilltoName_SalesInvoiceHeader_S</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesInvoiceHeader_S">
+          <DataField>PostingDate_SalesInvoiceHeader_S</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscal_SalesInvoiceHeader_S">
+          <DataField>NoComprobanteFiscal_SalesInvoiceHeader_S</DataField>
+        </Field>
+        <Field Name="RNCCliente_S">
+          <DataField>RNCCliente_S</DataField>
+        </Field>
+        <Field Name="ImporteBase_S">
+          <DataField>ImporteBase_S</DataField>
+        </Field>
+        <Field Name="ImporteBase_SFormat">
+          <DataField>ImporteBase_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteExento_S">
+          <DataField>ImporteExento_S</DataField>
+        </Field>
+        <Field Name="ImporteExento_SFormat">
+          <DataField>ImporteExento_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteGravado_S">
+          <DataField>ImporteGravado_S</DataField>
+        </Field>
+        <Field Name="ImporteGravado_SFormat">
+          <DataField>ImporteGravado_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteITBIS_S">
+          <DataField>ImporteITBIS_S</DataField>
+        </Field>
+        <Field Name="ImporteITBIS_SFormat">
+          <DataField>ImporteITBIS_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotal_S">
+          <DataField>ImporteTotal_S</DataField>
+        </Field>
+        <Field Name="ImporteTotal_SFormat">
+          <DataField>ImporteTotal_SFormat</DataField>
+        </Field>
+        <Field Name="DirEmpresa1_S">
+          <DataField>DirEmpresa1_S</DataField>
+        </Field>
+        <Field Name="DirEmpresa2_S">
+          <DataField>DirEmpresa2_S</DataField>
+        </Field>
+        <Field Name="DirEmpresa3_S">
+          <DataField>DirEmpresa3_S</DataField>
+        </Field>
+        <Field Name="DirEmpresa4_S">
+          <DataField>DirEmpresa4_S</DataField>
+        </Field>
+        <Field Name="FiltrosSIH_S">
+          <DataField>FiltrosSIH_S</DataField>
+        </Field>
+        <Field Name="FiltrosSCMH_S">
+          <DataField>FiltrosSCMH_S</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscal_SalesCrMemoHeader_S">
+          <DataField>NoComprobanteFiscal_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscalRel_SalesCrMemoHeader_S">
+          <DataField>NoComprobanteFiscalRel_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="No_SalesCrMemoHeader_S">
+          <DataField>No_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNo_SalesCrMemoHeader_S">
+          <DataField>BilltoCustomerNo_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesCrMemoHeader_S">
+          <DataField>BilltoName_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="PostingDate_SalesCrMemoHeader_S">
+          <DataField>PostingDate_SalesCrMemoHeader_S</DataField>
+        </Field>
+        <Field Name="RNCCliente_NCR_S">
+          <DataField>RNCCliente_NCR_S</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCr_S">
+          <DataField>ImporteBaseNCr_S</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCr_SFormat">
+          <DataField>ImporteBaseNCr_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCr_S">
+          <DataField>ImporteITBISNCr_S</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCr_SFormat">
+          <DataField>ImporteITBISNCr_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCr_S">
+          <DataField>ImporteGravadoNCr_S</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCr_SFormat">
+          <DataField>ImporteGravadoNCr_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCr_S">
+          <DataField>ImporteExentoNCr_S</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCr_SFormat">
+          <DataField>ImporteExentoNCr_SFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCr_S">
+          <DataField>ImporteTotalNCr_S</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCr_SFormat">
+          <DataField>ImporteTotalNCr_SFormat</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscalDtldCustEntry">
+          <DataField>NoComprobanteFiscalDtldCustEntry</DataField>
+        </Field>
+        <Field Name="NoComprobanteFiscalRelDtldCustEntry">
+          <DataField>NoComprobanteFiscalRelDtldCustEntry</DataField>
+        </Field>
+        <Field Name="No_DtldCustEntry">
+          <DataField>No_DtldCustEntry</DataField>
+        </Field>
+        <Field Name="BilltoCustomerNoDtldCustEntry">
+          <DataField>BilltoCustomerNoDtldCustEntry</DataField>
+        </Field>
+        <Field Name="BilltoNameDtldCustEntry">
+          <DataField>BilltoNameDtldCustEntry</DataField>
+        </Field>
+        <Field Name="PostingDatDtldCustEntry">
+          <DataField>PostingDatDtldCustEntry</DataField>
+        </Field>
+        <Field Name="RNCCliente_NCRDtldCustEntry">
+          <DataField>RNCCliente_NCRDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCrDtldCustEntry">
+          <DataField>ImporteBaseNCrDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteBaseNCrDtldCustEntryFormat">
+          <DataField>ImporteBaseNCrDtldCustEntryFormat</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCrDtldCustEntry">
+          <DataField>ImporteITBISNCrDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteITBISNCrDtldCustEntryFormat">
+          <DataField>ImporteITBISNCrDtldCustEntryFormat</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCrDtldCustEntry">
+          <DataField>ImporteGravadoNCrDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteGravadoNCrDtldCustEntryFormat">
+          <DataField>ImporteGravadoNCrDtldCustEntryFormat</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCrDtldCustEntry">
+          <DataField>ImporteExentoNCrDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteExentoNCrDtldCustEntryFormat">
+          <DataField>ImporteExentoNCrDtldCustEntryFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCrDtldCustEntry">
+          <DataField>ImporteTotalNCrDtldCustEntry</DataField>
+        </Field>
+        <Field Name="ImporteTotalNCrDtldCustEntryFormat">
+          <DataField>ImporteTotalNCrDtldCustEntryFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

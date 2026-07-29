@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,894 +11,6 @@
       <rd:DataSourceID>964dda0e-2009-49f8-8a40-c79e366b8be7</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="ImportIngreso_5_">
-          <DataField>ImportIngreso_5_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_5_Format">
-          <DataField>ImportIngreso_5_Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_4_">
-          <DataField>ImportIngreso_4_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_4_Format">
-          <DataField>ImportIngreso_4_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_4_">
-          <DataField>DescIngreso_4_</DataField>
-        </Field>
-        <Field Name="DescIngreso_5_">
-          <DataField>DescIngreso_5_</DataField>
-        </Field>
-        <Field Name="DescIngreso_3_">
-          <DataField>DescIngreso_3_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_3_">
-          <DataField>ImportIngreso_3_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_3_Format">
-          <DataField>ImportIngreso_3_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_2_">
-          <DataField>DescIngreso_2_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_2_">
-          <DataField>ImportIngreso_2_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_2_Format">
-          <DataField>ImportIngreso_2_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_1_">
-          <DataField>DescIngreso_1_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_1_">
-          <DataField>ImportIngreso_1_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_1_Format">
-          <DataField>ImportIngreso_1_Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1_">
-          <DataField>ImporteIngresoTotal_1_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1_Format">
-          <DataField>ImporteIngresoTotal_1_Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_4_">
-          <DataField>DescDeducc_4_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_4__">
-          <DataField>ABS_ImportEgreso_4__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_4__Format">
-          <DataField>ABS_ImportEgreso_4__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_3_">
-          <DataField>DescDeducc_3_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_3__">
-          <DataField>ABS_ImportEgreso_3__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_3__Format">
-          <DataField>ABS_ImportEgreso_3__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_2_">
-          <DataField>DescDeducc_2_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_2__">
-          <DataField>ABS_ImportEgreso_2__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_2__Format">
-          <DataField>ABS_ImportEgreso_2__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_1_">
-          <DataField>DescDeducc_1_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_1__">
-          <DataField>ABS_ImportEgreso_1__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_1__Format">
-          <DataField>ABS_ImportEgreso_1__Format</DataField>
-        </Field>
-        <Field Name="TextNombre_1_">
-          <DataField>TextNombre_1_</DataField>
-        </Field>
-        <Field Name="TextCed_1_">
-          <DataField>TextCed_1_</DataField>
-        </Field>
-        <Field Name="TODAY">
-          <DataField>TODAY</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control1000000033">
-          <DataField>COMPANYNAME_Control1000000033</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000034">
-          <DataField>TODAY_Control1000000034</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_1__">
-          <DataField>ABS_ImportEgresoTotal_1__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_1__Format">
-          <DataField>ABS_ImportEgresoTotal_1__Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_10_">
-          <DataField>ImportIngreso_10_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_10_Format">
-          <DataField>ImportIngreso_10_Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_9_">
-          <DataField>ImportIngreso_9_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_9_Format">
-          <DataField>ImportIngreso_9_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_9_">
-          <DataField>DescIngreso_9_</DataField>
-        </Field>
-        <Field Name="DescIngreso_10_">
-          <DataField>DescIngreso_10_</DataField>
-        </Field>
-        <Field Name="DescIngreso_8_">
-          <DataField>DescIngreso_8_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_8_">
-          <DataField>ImportIngreso_8_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_8_Format">
-          <DataField>ImportIngreso_8_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_7_">
-          <DataField>DescIngreso_7_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_7_">
-          <DataField>ImportIngreso_7_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_7_Format">
-          <DataField>ImportIngreso_7_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_6_">
-          <DataField>DescIngreso_6_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_6_">
-          <DataField>ImportIngreso_6_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_6_Format">
-          <DataField>ImportIngreso_6_Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2_">
-          <DataField>ImporteIngresoTotal_2_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2_Format">
-          <DataField>ImporteIngresoTotal_2_Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_6_">
-          <DataField>DescDeducc_6_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_6__">
-          <DataField>ABS_ImportEgreso_6__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_6__Format">
-          <DataField>ABS_ImportEgreso_6__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_8_">
-          <DataField>DescDeducc_8_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_8__">
-          <DataField>ABS_ImportEgreso_8__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_8__Format">
-          <DataField>ABS_ImportEgreso_8__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_7_">
-          <DataField>DescDeducc_7_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_7__">
-          <DataField>ABS_ImportEgreso_7__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_7__Format">
-          <DataField>ABS_ImportEgreso_7__Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_5_">
-          <DataField>DescDeducc_5_</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_5__">
-          <DataField>ABS_ImportEgreso_5__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_5__Format">
-          <DataField>ABS_ImportEgreso_5__Format</DataField>
-        </Field>
-        <Field Name="TextNombre_2_">
-          <DataField>TextNombre_2_</DataField>
-        </Field>
-        <Field Name="TextCed_2_">
-          <DataField>TextCed_2_</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000063">
-          <DataField>TODAY_Control1000000063</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control1000000065">
-          <DataField>COMPANYNAME_Control1000000065</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control1000000067">
-          <DataField>COMPANYNAME_Control1000000067</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000068">
-          <DataField>TODAY_Control1000000068</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_2__">
-          <DataField>ABS_ImportEgresoTotal_2__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_2__Format">
-          <DataField>ABS_ImportEgresoTotal_2__Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_12__">
-          <DataField>ABS_ImportEgreso_12__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_12__Format">
-          <DataField>ABS_ImportEgreso_12__Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_11__">
-          <DataField>ABS_ImportEgreso_11__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_11__Format">
-          <DataField>ABS_ImportEgreso_11__Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_10__">
-          <DataField>ABS_ImportEgreso_10__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_10__Format">
-          <DataField>ABS_ImportEgreso_10__Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_9__">
-          <DataField>ABS_ImportEgreso_9__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_9__Format">
-          <DataField>ABS_ImportEgreso_9__Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_3__">
-          <DataField>ABS_ImportEgresoTotal_3__</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_3__Format">
-          <DataField>ABS_ImportEgresoTotal_3__Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3_">
-          <DataField>ImporteIngresoTotal_3_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3_Format">
-          <DataField>ImporteIngresoTotal_3_Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_12_">
-          <DataField>DescDeducc_12_</DataField>
-        </Field>
-        <Field Name="DescDeducc_11_">
-          <DataField>DescDeducc_11_</DataField>
-        </Field>
-        <Field Name="DescDeducc_10_">
-          <DataField>DescDeducc_10_</DataField>
-        </Field>
-        <Field Name="DescDeducc_9_">
-          <DataField>DescDeducc_9_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_15_">
-          <DataField>ImportIngreso_15_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_15_Format">
-          <DataField>ImportIngreso_15_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_15_">
-          <DataField>DescIngreso_15_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_14_">
-          <DataField>ImportIngreso_14_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_14_Format">
-          <DataField>ImportIngreso_14_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_14_">
-          <DataField>DescIngreso_14_</DataField>
-        </Field>
-        <Field Name="DescIngreso_13_">
-          <DataField>DescIngreso_13_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_13_">
-          <DataField>ImportIngreso_13_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_13_Format">
-          <DataField>ImportIngreso_13_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_12_">
-          <DataField>DescIngreso_12_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_12_">
-          <DataField>ImportIngreso_12_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_12_Format">
-          <DataField>ImportIngreso_12_Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_11_">
-          <DataField>DescIngreso_11_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_11_">
-          <DataField>ImportIngreso_11_</DataField>
-        </Field>
-        <Field Name="ImportIngreso_11_Format">
-          <DataField>ImportIngreso_11_Format</DataField>
-        </Field>
-        <Field Name="TextNombre_3_">
-          <DataField>TextNombre_3_</DataField>
-        </Field>
-        <Field Name="TextCed_3_">
-          <DataField>TextCed_3_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control1000000100">
-          <DataField>COMPANYNAME_Control1000000100</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000101">
-          <DataField>TODAY_Control1000000101</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control1000000103">
-          <DataField>COMPANYNAME_Control1000000103</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000104">
-          <DataField>TODAY_Control1000000104</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_Format">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_Format">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_Format">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Format">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_1___Control1000000119">
-          <DataField>ABS_ImportEgresoTotal_1___Control1000000119</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_1___Control1000000119Format">
-          <DataField>ABS_ImportEgresoTotal_1___Control1000000119Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_4___Control1000000120">
-          <DataField>ABS_ImportEgreso_4___Control1000000120</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_4___Control1000000120Format">
-          <DataField>ABS_ImportEgreso_4___Control1000000120Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_3___Control1000000121">
-          <DataField>ABS_ImportEgreso_3___Control1000000121</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_3___Control1000000121Format">
-          <DataField>ABS_ImportEgreso_3___Control1000000121Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_2___Control1000000122">
-          <DataField>ABS_ImportEgreso_2___Control1000000122</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_2___Control1000000122Format">
-          <DataField>ABS_ImportEgreso_2___Control1000000122Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_4__Control1000000123">
-          <DataField>DescDeducc_4__Control1000000123</DataField>
-        </Field>
-        <Field Name="DescDeducc_3__Control1000000124">
-          <DataField>DescDeducc_3__Control1000000124</DataField>
-        </Field>
-        <Field Name="DescDeducc_2__Control1000000125">
-          <DataField>DescDeducc_2__Control1000000125</DataField>
-        </Field>
-        <Field Name="DescDeducc_1__Control1000000127">
-          <DataField>DescDeducc_1__Control1000000127</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_1___Control1000000128">
-          <DataField>ABS_ImportEgreso_1___Control1000000128</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_1___Control1000000128Format">
-          <DataField>ABS_ImportEgreso_1___Control1000000128Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1__Control1000000132">
-          <DataField>ImporteIngresoTotal_1__Control1000000132</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1__Control1000000132Format">
-          <DataField>ImporteIngresoTotal_1__Control1000000132Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_5__Control1000000134">
-          <DataField>ImportIngreso_5__Control1000000134</DataField>
-        </Field>
-        <Field Name="ImportIngreso_5__Control1000000134Format">
-          <DataField>ImportIngreso_5__Control1000000134Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_5__Control1000000135">
-          <DataField>DescIngreso_5__Control1000000135</DataField>
-        </Field>
-        <Field Name="ImportIngreso_4__Control1000000136">
-          <DataField>ImportIngreso_4__Control1000000136</DataField>
-        </Field>
-        <Field Name="ImportIngreso_4__Control1000000136Format">
-          <DataField>ImportIngreso_4__Control1000000136Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_4__Control1000000137">
-          <DataField>DescIngreso_4__Control1000000137</DataField>
-        </Field>
-        <Field Name="DescIngreso_3__Control1000000138">
-          <DataField>DescIngreso_3__Control1000000138</DataField>
-        </Field>
-        <Field Name="ImportIngreso_3__Control1000000139">
-          <DataField>ImportIngreso_3__Control1000000139</DataField>
-        </Field>
-        <Field Name="ImportIngreso_3__Control1000000139Format">
-          <DataField>ImportIngreso_3__Control1000000139Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_2__Control1000000140">
-          <DataField>DescIngreso_2__Control1000000140</DataField>
-        </Field>
-        <Field Name="ImportIngreso_2__Control1000000141">
-          <DataField>ImportIngreso_2__Control1000000141</DataField>
-        </Field>
-        <Field Name="ImportIngreso_2__Control1000000141Format">
-          <DataField>ImportIngreso_2__Control1000000141Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_1__Control1000000142">
-          <DataField>DescIngreso_1__Control1000000142</DataField>
-        </Field>
-        <Field Name="ImportIngreso_1__Control1000000143">
-          <DataField>ImportIngreso_1__Control1000000143</DataField>
-        </Field>
-        <Field Name="ImportIngreso_1__Control1000000143Format">
-          <DataField>ImportIngreso_1__Control1000000143Format</DataField>
-        </Field>
-        <Field Name="TextNombre_1__Control1000000146">
-          <DataField>TextNombre_1__Control1000000146</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Format">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Format</DataField>
-        </Field>
-        <Field Name="TextNombre_2__Control1000000152">
-          <DataField>TextNombre_2__Control1000000152</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Format">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Format</DataField>
-        </Field>
-        <Field Name="TextNombre_3__Control1000000162">
-          <DataField>TextNombre_3__Control1000000162</DataField>
-        </Field>
-        <Field Name="Periodo">
-          <DataField>Periodo</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_1_">
-          <DataField>No_____NumSobre_1_</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_1__Control1000000166">
-          <DataField>No_____NumSobre_1__Control1000000166</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_2_">
-          <DataField>No_____NumSobre_2_</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_2__Control1000000172">
-          <DataField>No_____NumSobre_2__Control1000000172</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_3_">
-          <DataField>No_____NumSobre_3_</DataField>
-        </Field>
-        <Field Name="Periodo_Control1000000176">
-          <DataField>Periodo_Control1000000176</DataField>
-        </Field>
-        <Field Name="No_____NumSobre_3__Control1000000178">
-          <DataField>No_____NumSobre_3__Control1000000178</DataField>
-        </Field>
-        <Field Name="Periodo_Control1000000179">
-          <DataField>Periodo_Control1000000179</DataField>
-        </Field>
-        <Field Name="Periodo_Control1000000180">
-          <DataField>Periodo_Control1000000180</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_6___Control1000000193">
-          <DataField>ABS_ImportEgreso_6___Control1000000193</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_6___Control1000000193Format">
-          <DataField>ABS_ImportEgreso_6___Control1000000193Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_6__Control1000000194">
-          <DataField>DescDeducc_6__Control1000000194</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_2___Control1000000195">
-          <DataField>ABS_ImportEgresoTotal_2___Control1000000195</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_2___Control1000000195Format">
-          <DataField>ABS_ImportEgresoTotal_2___Control1000000195Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_8___Control1000000196">
-          <DataField>ABS_ImportEgreso_8___Control1000000196</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_8___Control1000000196Format">
-          <DataField>ABS_ImportEgreso_8___Control1000000196Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_7___Control1000000197">
-          <DataField>ABS_ImportEgreso_7___Control1000000197</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_7___Control1000000197Format">
-          <DataField>ABS_ImportEgreso_7___Control1000000197Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_8__Control1000000198">
-          <DataField>DescDeducc_8__Control1000000198</DataField>
-        </Field>
-        <Field Name="DescDeducc_7__Control1000000199">
-          <DataField>DescDeducc_7__Control1000000199</DataField>
-        </Field>
-        <Field Name="DescDeducc_5__Control1000000201">
-          <DataField>DescDeducc_5__Control1000000201</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_5___Control1000000202">
-          <DataField>ABS_ImportEgreso_5___Control1000000202</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_5___Control1000000202Format">
-          <DataField>ABS_ImportEgreso_5___Control1000000202Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_3___Control1000000215">
-          <DataField>ABS_ImportEgresoTotal_3___Control1000000215</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgresoTotal_3___Control1000000215Format">
-          <DataField>ABS_ImportEgresoTotal_3___Control1000000215Format</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_12___Control1000000216">
-          <DataField>ABS_ImportEgreso_12___Control1000000216</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_12___Control1000000216Format">
-          <DataField>ABS_ImportEgreso_12___Control1000000216Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_12__Control1000000217">
-          <DataField>DescDeducc_12__Control1000000217</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_11___Control1000000219">
-          <DataField>ABS_ImportEgreso_11___Control1000000219</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_11___Control1000000219Format">
-          <DataField>ABS_ImportEgreso_11___Control1000000219Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_11__Control1000000220">
-          <DataField>DescDeducc_11__Control1000000220</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_10___Control1000000221">
-          <DataField>ABS_ImportEgreso_10___Control1000000221</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_10___Control1000000221Format">
-          <DataField>ABS_ImportEgreso_10___Control1000000221Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_10__Control1000000222">
-          <DataField>DescDeducc_10__Control1000000222</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_9___Control1000000223">
-          <DataField>ABS_ImportEgreso_9___Control1000000223</DataField>
-        </Field>
-        <Field Name="ABS_ImportEgreso_9___Control1000000223Format">
-          <DataField>ABS_ImportEgreso_9___Control1000000223Format</DataField>
-        </Field>
-        <Field Name="DescDeducc_9__Control1000000224">
-          <DataField>DescDeducc_9__Control1000000224</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3__Control1000000203">
-          <DataField>ImporteIngresoTotal_3__Control1000000203</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3__Control1000000203Format">
-          <DataField>ImporteIngresoTotal_3__Control1000000203Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_15__Control1000000204">
-          <DataField>ImportIngreso_15__Control1000000204</DataField>
-        </Field>
-        <Field Name="ImportIngreso_15__Control1000000204Format">
-          <DataField>ImportIngreso_15__Control1000000204Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_15__Control1000000206">
-          <DataField>DescIngreso_15__Control1000000206</DataField>
-        </Field>
-        <Field Name="ImportIngreso_14__Control1000000207">
-          <DataField>ImportIngreso_14__Control1000000207</DataField>
-        </Field>
-        <Field Name="ImportIngreso_14__Control1000000207Format">
-          <DataField>ImportIngreso_14__Control1000000207Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_14__Control1000000208">
-          <DataField>DescIngreso_14__Control1000000208</DataField>
-        </Field>
-        <Field Name="DescIngreso_13__Control1000000209">
-          <DataField>DescIngreso_13__Control1000000209</DataField>
-        </Field>
-        <Field Name="ImportIngreso_13__Control1000000210">
-          <DataField>ImportIngreso_13__Control1000000210</DataField>
-        </Field>
-        <Field Name="ImportIngreso_13__Control1000000210Format">
-          <DataField>ImportIngreso_13__Control1000000210Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_12__Control1000000211">
-          <DataField>DescIngreso_12__Control1000000211</DataField>
-        </Field>
-        <Field Name="ImportIngreso_12__Control1000000212">
-          <DataField>ImportIngreso_12__Control1000000212</DataField>
-        </Field>
-        <Field Name="ImportIngreso_12__Control1000000212Format">
-          <DataField>ImportIngreso_12__Control1000000212Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_11__Control1000000213">
-          <DataField>DescIngreso_11__Control1000000213</DataField>
-        </Field>
-        <Field Name="ImportIngreso_11__Control1000000214">
-          <DataField>ImportIngreso_11__Control1000000214</DataField>
-        </Field>
-        <Field Name="ImportIngreso_11__Control1000000214Format">
-          <DataField>ImportIngreso_11__Control1000000214Format</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2__Control1000000225">
-          <DataField>ImporteIngresoTotal_2__Control1000000225</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2__Control1000000225Format">
-          <DataField>ImporteIngresoTotal_2__Control1000000225Format</DataField>
-        </Field>
-        <Field Name="ImportIngreso_10__Control1000000226">
-          <DataField>ImportIngreso_10__Control1000000226</DataField>
-        </Field>
-        <Field Name="ImportIngreso_10__Control1000000226Format">
-          <DataField>ImportIngreso_10__Control1000000226Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_10__Control1000000227">
-          <DataField>DescIngreso_10__Control1000000227</DataField>
-        </Field>
-        <Field Name="ImportIngreso_9__Control1000000229">
-          <DataField>ImportIngreso_9__Control1000000229</DataField>
-        </Field>
-        <Field Name="ImportIngreso_9__Control1000000229Format">
-          <DataField>ImportIngreso_9__Control1000000229Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_9__Control1000000230">
-          <DataField>DescIngreso_9__Control1000000230</DataField>
-        </Field>
-        <Field Name="DescIngreso_8__Control1000000231">
-          <DataField>DescIngreso_8__Control1000000231</DataField>
-        </Field>
-        <Field Name="ImportIngreso_8__Control1000000232">
-          <DataField>ImportIngreso_8__Control1000000232</DataField>
-        </Field>
-        <Field Name="ImportIngreso_8__Control1000000232Format">
-          <DataField>ImportIngreso_8__Control1000000232Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_7__Control1000000233">
-          <DataField>DescIngreso_7__Control1000000233</DataField>
-        </Field>
-        <Field Name="ImportIngreso_7__Control1000000234">
-          <DataField>ImportIngreso_7__Control1000000234</DataField>
-        </Field>
-        <Field Name="ImportIngreso_7__Control1000000234Format">
-          <DataField>ImportIngreso_7__Control1000000234Format</DataField>
-        </Field>
-        <Field Name="DescIngreso_6__Control1000000235">
-          <DataField>DescIngreso_6__Control1000000235</DataField>
-        </Field>
-        <Field Name="ImportIngreso_6__Control1000000236">
-          <DataField>ImportIngreso_6__Control1000000236</DataField>
-        </Field>
-        <Field Name="ImportIngreso_6__Control1000000236Format">
-          <DataField>ImportIngreso_6__Control1000000236Format</DataField>
-        </Field>
-        <Field Name="Periodo_Control1000000168">
-          <DataField>Periodo_Control1000000168</DataField>
-        </Field>
-        <Field Name="Periodo_Control1000000169">
-          <DataField>Periodo_Control1000000169</DataField>
-        </Field>
-        <Field Name="TextCed_3__Control1000000028">
-          <DataField>TextCed_3__Control1000000028</DataField>
-        </Field>
-        <Field Name="txtDesc_3_">
-          <DataField>txtDesc_3_</DataField>
-        </Field>
-        <Field Name="txtDesc_2_">
-          <DataField>txtDesc_2_</DataField>
-        </Field>
-        <Field Name="txtDesc_1_">
-          <DataField>txtDesc_1_</DataField>
-        </Field>
-        <Field Name="Imprimir">
-          <DataField>Imprimir</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption">
-          <DataField>DEDUCTIONSCaption</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption">
-          <DataField>Total_IncomesCaption</DataField>
-        </Field>
-        <Field Name="TextNombre_1_Caption">
-          <DataField>TextNombre_1_Caption</DataField>
-        </Field>
-        <Field Name="TextCed_1_Caption">
-          <DataField>TextCed_1_Caption</DataField>
-        </Field>
-        <Field Name="TODAYCaption">
-          <DataField>TODAYCaption</DataField>
-        </Field>
-        <Field Name="INCOMECaption">
-          <DataField>INCOMECaption</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000034Caption">
-          <DataField>TODAY_Control1000000034Caption</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption">
-          <DataField>Total_DeductionsCaption</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption_Control1000000048">
-          <DataField>DEDUCTIONSCaption_Control1000000048</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption_Control1000000050">
-          <DataField>Total_IncomesCaption_Control1000000050</DataField>
-        </Field>
-        <Field Name="TextNombre_2_Caption">
-          <DataField>TextNombre_2_Caption</DataField>
-        </Field>
-        <Field Name="TextCed_2_Caption">
-          <DataField>TextCed_2_Caption</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000063Caption">
-          <DataField>TODAY_Control1000000063Caption</DataField>
-        </Field>
-        <Field Name="INCOMECaption_Control1000000066">
-          <DataField>INCOMECaption_Control1000000066</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000068Caption">
-          <DataField>TODAY_Control1000000068Caption</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption_Control1000000071">
-          <DataField>Total_DeductionsCaption_Control1000000071</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption_Control1000000077">
-          <DataField>DEDUCTIONSCaption_Control1000000077</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption_Control1000000079">
-          <DataField>Total_IncomesCaption_Control1000000079</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption_Control1000000084">
-          <DataField>Total_DeductionsCaption_Control1000000084</DataField>
-        </Field>
-        <Field Name="INCOMECaption_Control1000000095">
-          <DataField>INCOMECaption_Control1000000095</DataField>
-        </Field>
-        <Field Name="TextNombre_3_Caption">
-          <DataField>TextNombre_3_Caption</DataField>
-        </Field>
-        <Field Name="TextCed_3_Caption">
-          <DataField>TextCed_3_Caption</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000101Caption">
-          <DataField>TODAY_Control1000000101Caption</DataField>
-        </Field>
-        <Field Name="TODAY_Control1000000104Caption">
-          <DataField>TODAY_Control1000000104Caption</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_Caption">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_Caption</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption">
-          <DataField>Recibido_ConformeCaption</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_Caption">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_Caption</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption_Control1000000112">
-          <DataField>Recibido_ConformeCaption_Control1000000112</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption_Control1000000115">
-          <DataField>Recibido_ConformeCaption_Control1000000115</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_Caption">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_Caption</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Caption">
-          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Caption</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption_Control1000000126">
-          <DataField>Total_DeductionsCaption_Control1000000126</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption_Control1000000129">
-          <DataField>DEDUCTIONSCaption_Control1000000129</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption_Control1000000131">
-          <DataField>Recibido_ConformeCaption_Control1000000131</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption_Control1000000133">
-          <DataField>Total_IncomesCaption_Control1000000133</DataField>
-        </Field>
-        <Field Name="INCOMECaption_Control1000000145">
-          <DataField>INCOMECaption_Control1000000145</DataField>
-        </Field>
-        <Field Name="TextNombre_1__Control1000000146Caption">
-          <DataField>TextNombre_1__Control1000000146Caption</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Caption">
-          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Caption</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption_Control1000000149">
-          <DataField>DEDUCTIONSCaption_Control1000000149</DataField>
-        </Field>
-        <Field Name="INCOMECaption_Control1000000151">
-          <DataField>INCOMECaption_Control1000000151</DataField>
-        </Field>
-        <Field Name="TextNombre_2__Control1000000152Caption">
-          <DataField>TextNombre_2__Control1000000152Caption</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption_Control1000000155">
-          <DataField>Recibido_ConformeCaption_Control1000000155</DataField>
-        </Field>
-        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Caption">
-          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Caption</DataField>
-        </Field>
-        <Field Name="DEDUCTIONSCaption_Control1000000157">
-          <DataField>DEDUCTIONSCaption_Control1000000157</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption_Control1000000159">
-          <DataField>Recibido_ConformeCaption_Control1000000159</DataField>
-        </Field>
-        <Field Name="INCOMECaption_Control1000000161">
-          <DataField>INCOMECaption_Control1000000161</DataField>
-        </Field>
-        <Field Name="TextNombre_3__Control1000000162Caption">
-          <DataField>TextNombre_3__Control1000000162Caption</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption_Control1000000200">
-          <DataField>Total_DeductionsCaption_Control1000000200</DataField>
-        </Field>
-        <Field Name="Total_DeductionsCaption_Control1000000218">
-          <DataField>Total_DeductionsCaption_Control1000000218</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption_Control1000000205">
-          <DataField>Total_IncomesCaption_Control1000000205</DataField>
-        </Field>
-        <Field Name="Total_IncomesCaption_Control1000000228">
-          <DataField>Total_IncomesCaption_Control1000000228</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_No__empleado">
-          <DataField>Historico_Cab__nomina_No__empleado</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Ano">
-          <DataField>Historico_Cab__nomina_Ano</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Periodo">
-          <DataField>Historico_Cab__nomina_Periodo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
-          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -16809,4 +15921,887 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>22ca6f3b-1824-44c2-8fdc-ca8417843ad2</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ImportIngreso_5_">
+          <DataField>ImportIngreso_5_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_5_Format">
+          <DataField>ImportIngreso_5_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4_">
+          <DataField>ImportIngreso_4_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4_Format">
+          <DataField>ImportIngreso_4_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_4_">
+          <DataField>DescIngreso_4_</DataField>
+        </Field>
+        <Field Name="DescIngreso_5_">
+          <DataField>DescIngreso_5_</DataField>
+        </Field>
+        <Field Name="DescIngreso_3_">
+          <DataField>DescIngreso_3_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3_">
+          <DataField>ImportIngreso_3_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3_Format">
+          <DataField>ImportIngreso_3_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_2_">
+          <DataField>DescIngreso_2_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2_">
+          <DataField>ImportIngreso_2_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2_Format">
+          <DataField>ImportIngreso_2_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_1_">
+          <DataField>DescIngreso_1_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1_">
+          <DataField>ImportIngreso_1_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1_Format">
+          <DataField>ImportIngreso_1_Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1_">
+          <DataField>ImporteIngresoTotal_1_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1_Format">
+          <DataField>ImporteIngresoTotal_1_Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_4_">
+          <DataField>DescDeducc_4_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4__">
+          <DataField>ABS_ImportEgreso_4__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4__Format">
+          <DataField>ABS_ImportEgreso_4__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_3_">
+          <DataField>DescDeducc_3_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3__">
+          <DataField>ABS_ImportEgreso_3__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3__Format">
+          <DataField>ABS_ImportEgreso_3__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_2_">
+          <DataField>DescDeducc_2_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2__">
+          <DataField>ABS_ImportEgreso_2__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2__Format">
+          <DataField>ABS_ImportEgreso_2__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_1_">
+          <DataField>DescDeducc_1_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1__">
+          <DataField>ABS_ImportEgreso_1__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1__Format">
+          <DataField>ABS_ImportEgreso_1__Format</DataField>
+        </Field>
+        <Field Name="TextNombre_1_">
+          <DataField>TextNombre_1_</DataField>
+        </Field>
+        <Field Name="TextCed_1_">
+          <DataField>TextCed_1_</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1000000033">
+          <DataField>COMPANYNAME_Control1000000033</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000034">
+          <DataField>TODAY_Control1000000034</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_1__">
+          <DataField>ABS_ImportEgresoTotal_1__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_1__Format">
+          <DataField>ABS_ImportEgresoTotal_1__Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10_">
+          <DataField>ImportIngreso_10_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10_Format">
+          <DataField>ImportIngreso_10_Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9_">
+          <DataField>ImportIngreso_9_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9_Format">
+          <DataField>ImportIngreso_9_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_9_">
+          <DataField>DescIngreso_9_</DataField>
+        </Field>
+        <Field Name="DescIngreso_10_">
+          <DataField>DescIngreso_10_</DataField>
+        </Field>
+        <Field Name="DescIngreso_8_">
+          <DataField>DescIngreso_8_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8_">
+          <DataField>ImportIngreso_8_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8_Format">
+          <DataField>ImportIngreso_8_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_7_">
+          <DataField>DescIngreso_7_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7_">
+          <DataField>ImportIngreso_7_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7_Format">
+          <DataField>ImportIngreso_7_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_6_">
+          <DataField>DescIngreso_6_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6_">
+          <DataField>ImportIngreso_6_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6_Format">
+          <DataField>ImportIngreso_6_Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2_">
+          <DataField>ImporteIngresoTotal_2_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2_Format">
+          <DataField>ImporteIngresoTotal_2_Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_6_">
+          <DataField>DescDeducc_6_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6__">
+          <DataField>ABS_ImportEgreso_6__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6__Format">
+          <DataField>ABS_ImportEgreso_6__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_8_">
+          <DataField>DescDeducc_8_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8__">
+          <DataField>ABS_ImportEgreso_8__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8__Format">
+          <DataField>ABS_ImportEgreso_8__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_7_">
+          <DataField>DescDeducc_7_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7__">
+          <DataField>ABS_ImportEgreso_7__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7__Format">
+          <DataField>ABS_ImportEgreso_7__Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_5_">
+          <DataField>DescDeducc_5_</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5__">
+          <DataField>ABS_ImportEgreso_5__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5__Format">
+          <DataField>ABS_ImportEgreso_5__Format</DataField>
+        </Field>
+        <Field Name="TextNombre_2_">
+          <DataField>TextNombre_2_</DataField>
+        </Field>
+        <Field Name="TextCed_2_">
+          <DataField>TextCed_2_</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000063">
+          <DataField>TODAY_Control1000000063</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1000000065">
+          <DataField>COMPANYNAME_Control1000000065</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1000000067">
+          <DataField>COMPANYNAME_Control1000000067</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000068">
+          <DataField>TODAY_Control1000000068</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_2__">
+          <DataField>ABS_ImportEgresoTotal_2__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_2__Format">
+          <DataField>ABS_ImportEgresoTotal_2__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_12__">
+          <DataField>ABS_ImportEgreso_12__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_12__Format">
+          <DataField>ABS_ImportEgreso_12__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_11__">
+          <DataField>ABS_ImportEgreso_11__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_11__Format">
+          <DataField>ABS_ImportEgreso_11__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10__">
+          <DataField>ABS_ImportEgreso_10__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10__Format">
+          <DataField>ABS_ImportEgreso_10__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9__">
+          <DataField>ABS_ImportEgreso_9__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9__Format">
+          <DataField>ABS_ImportEgreso_9__Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_3__">
+          <DataField>ABS_ImportEgresoTotal_3__</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_3__Format">
+          <DataField>ABS_ImportEgresoTotal_3__Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3_">
+          <DataField>ImporteIngresoTotal_3_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3_Format">
+          <DataField>ImporteIngresoTotal_3_Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_12_">
+          <DataField>DescDeducc_12_</DataField>
+        </Field>
+        <Field Name="DescDeducc_11_">
+          <DataField>DescDeducc_11_</DataField>
+        </Field>
+        <Field Name="DescDeducc_10_">
+          <DataField>DescDeducc_10_</DataField>
+        </Field>
+        <Field Name="DescDeducc_9_">
+          <DataField>DescDeducc_9_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_15_">
+          <DataField>ImportIngreso_15_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_15_Format">
+          <DataField>ImportIngreso_15_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_15_">
+          <DataField>DescIngreso_15_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_14_">
+          <DataField>ImportIngreso_14_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_14_Format">
+          <DataField>ImportIngreso_14_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_14_">
+          <DataField>DescIngreso_14_</DataField>
+        </Field>
+        <Field Name="DescIngreso_13_">
+          <DataField>DescIngreso_13_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_13_">
+          <DataField>ImportIngreso_13_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_13_Format">
+          <DataField>ImportIngreso_13_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_12_">
+          <DataField>DescIngreso_12_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_12_">
+          <DataField>ImportIngreso_12_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_12_Format">
+          <DataField>ImportIngreso_12_Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_11_">
+          <DataField>DescIngreso_11_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_11_">
+          <DataField>ImportIngreso_11_</DataField>
+        </Field>
+        <Field Name="ImportIngreso_11_Format">
+          <DataField>ImportIngreso_11_Format</DataField>
+        </Field>
+        <Field Name="TextNombre_3_">
+          <DataField>TextNombre_3_</DataField>
+        </Field>
+        <Field Name="TextCed_3_">
+          <DataField>TextCed_3_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1000000100">
+          <DataField>COMPANYNAME_Control1000000100</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000101">
+          <DataField>TODAY_Control1000000101</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control1000000103">
+          <DataField>COMPANYNAME_Control1000000103</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000104">
+          <DataField>TODAY_Control1000000104</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_Format">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_Format">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_Format">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Format">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_1___Control1000000119">
+          <DataField>ABS_ImportEgresoTotal_1___Control1000000119</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_1___Control1000000119Format">
+          <DataField>ABS_ImportEgresoTotal_1___Control1000000119Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4___Control1000000120">
+          <DataField>ABS_ImportEgreso_4___Control1000000120</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_4___Control1000000120Format">
+          <DataField>ABS_ImportEgreso_4___Control1000000120Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3___Control1000000121">
+          <DataField>ABS_ImportEgreso_3___Control1000000121</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_3___Control1000000121Format">
+          <DataField>ABS_ImportEgreso_3___Control1000000121Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2___Control1000000122">
+          <DataField>ABS_ImportEgreso_2___Control1000000122</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_2___Control1000000122Format">
+          <DataField>ABS_ImportEgreso_2___Control1000000122Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_4__Control1000000123">
+          <DataField>DescDeducc_4__Control1000000123</DataField>
+        </Field>
+        <Field Name="DescDeducc_3__Control1000000124">
+          <DataField>DescDeducc_3__Control1000000124</DataField>
+        </Field>
+        <Field Name="DescDeducc_2__Control1000000125">
+          <DataField>DescDeducc_2__Control1000000125</DataField>
+        </Field>
+        <Field Name="DescDeducc_1__Control1000000127">
+          <DataField>DescDeducc_1__Control1000000127</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1___Control1000000128">
+          <DataField>ABS_ImportEgreso_1___Control1000000128</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_1___Control1000000128Format">
+          <DataField>ABS_ImportEgreso_1___Control1000000128Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1__Control1000000132">
+          <DataField>ImporteIngresoTotal_1__Control1000000132</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1__Control1000000132Format">
+          <DataField>ImporteIngresoTotal_1__Control1000000132Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_5__Control1000000134">
+          <DataField>ImportIngreso_5__Control1000000134</DataField>
+        </Field>
+        <Field Name="ImportIngreso_5__Control1000000134Format">
+          <DataField>ImportIngreso_5__Control1000000134Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_5__Control1000000135">
+          <DataField>DescIngreso_5__Control1000000135</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4__Control1000000136">
+          <DataField>ImportIngreso_4__Control1000000136</DataField>
+        </Field>
+        <Field Name="ImportIngreso_4__Control1000000136Format">
+          <DataField>ImportIngreso_4__Control1000000136Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_4__Control1000000137">
+          <DataField>DescIngreso_4__Control1000000137</DataField>
+        </Field>
+        <Field Name="DescIngreso_3__Control1000000138">
+          <DataField>DescIngreso_3__Control1000000138</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3__Control1000000139">
+          <DataField>ImportIngreso_3__Control1000000139</DataField>
+        </Field>
+        <Field Name="ImportIngreso_3__Control1000000139Format">
+          <DataField>ImportIngreso_3__Control1000000139Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_2__Control1000000140">
+          <DataField>DescIngreso_2__Control1000000140</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2__Control1000000141">
+          <DataField>ImportIngreso_2__Control1000000141</DataField>
+        </Field>
+        <Field Name="ImportIngreso_2__Control1000000141Format">
+          <DataField>ImportIngreso_2__Control1000000141Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_1__Control1000000142">
+          <DataField>DescIngreso_1__Control1000000142</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1__Control1000000143">
+          <DataField>ImportIngreso_1__Control1000000143</DataField>
+        </Field>
+        <Field Name="ImportIngreso_1__Control1000000143Format">
+          <DataField>ImportIngreso_1__Control1000000143Format</DataField>
+        </Field>
+        <Field Name="TextNombre_1__Control1000000146">
+          <DataField>TextNombre_1__Control1000000146</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Format">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Format</DataField>
+        </Field>
+        <Field Name="TextNombre_2__Control1000000152">
+          <DataField>TextNombre_2__Control1000000152</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Format">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Format</DataField>
+        </Field>
+        <Field Name="TextNombre_3__Control1000000162">
+          <DataField>TextNombre_3__Control1000000162</DataField>
+        </Field>
+        <Field Name="Periodo">
+          <DataField>Periodo</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_1_">
+          <DataField>No_____NumSobre_1_</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_1__Control1000000166">
+          <DataField>No_____NumSobre_1__Control1000000166</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_2_">
+          <DataField>No_____NumSobre_2_</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_2__Control1000000172">
+          <DataField>No_____NumSobre_2__Control1000000172</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_3_">
+          <DataField>No_____NumSobre_3_</DataField>
+        </Field>
+        <Field Name="Periodo_Control1000000176">
+          <DataField>Periodo_Control1000000176</DataField>
+        </Field>
+        <Field Name="No_____NumSobre_3__Control1000000178">
+          <DataField>No_____NumSobre_3__Control1000000178</DataField>
+        </Field>
+        <Field Name="Periodo_Control1000000179">
+          <DataField>Periodo_Control1000000179</DataField>
+        </Field>
+        <Field Name="Periodo_Control1000000180">
+          <DataField>Periodo_Control1000000180</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6___Control1000000193">
+          <DataField>ABS_ImportEgreso_6___Control1000000193</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_6___Control1000000193Format">
+          <DataField>ABS_ImportEgreso_6___Control1000000193Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_6__Control1000000194">
+          <DataField>DescDeducc_6__Control1000000194</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_2___Control1000000195">
+          <DataField>ABS_ImportEgresoTotal_2___Control1000000195</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_2___Control1000000195Format">
+          <DataField>ABS_ImportEgresoTotal_2___Control1000000195Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8___Control1000000196">
+          <DataField>ABS_ImportEgreso_8___Control1000000196</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_8___Control1000000196Format">
+          <DataField>ABS_ImportEgreso_8___Control1000000196Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7___Control1000000197">
+          <DataField>ABS_ImportEgreso_7___Control1000000197</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_7___Control1000000197Format">
+          <DataField>ABS_ImportEgreso_7___Control1000000197Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_8__Control1000000198">
+          <DataField>DescDeducc_8__Control1000000198</DataField>
+        </Field>
+        <Field Name="DescDeducc_7__Control1000000199">
+          <DataField>DescDeducc_7__Control1000000199</DataField>
+        </Field>
+        <Field Name="DescDeducc_5__Control1000000201">
+          <DataField>DescDeducc_5__Control1000000201</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5___Control1000000202">
+          <DataField>ABS_ImportEgreso_5___Control1000000202</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_5___Control1000000202Format">
+          <DataField>ABS_ImportEgreso_5___Control1000000202Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_3___Control1000000215">
+          <DataField>ABS_ImportEgresoTotal_3___Control1000000215</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgresoTotal_3___Control1000000215Format">
+          <DataField>ABS_ImportEgresoTotal_3___Control1000000215Format</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_12___Control1000000216">
+          <DataField>ABS_ImportEgreso_12___Control1000000216</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_12___Control1000000216Format">
+          <DataField>ABS_ImportEgreso_12___Control1000000216Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_12__Control1000000217">
+          <DataField>DescDeducc_12__Control1000000217</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_11___Control1000000219">
+          <DataField>ABS_ImportEgreso_11___Control1000000219</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_11___Control1000000219Format">
+          <DataField>ABS_ImportEgreso_11___Control1000000219Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_11__Control1000000220">
+          <DataField>DescDeducc_11__Control1000000220</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10___Control1000000221">
+          <DataField>ABS_ImportEgreso_10___Control1000000221</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_10___Control1000000221Format">
+          <DataField>ABS_ImportEgreso_10___Control1000000221Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_10__Control1000000222">
+          <DataField>DescDeducc_10__Control1000000222</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9___Control1000000223">
+          <DataField>ABS_ImportEgreso_9___Control1000000223</DataField>
+        </Field>
+        <Field Name="ABS_ImportEgreso_9___Control1000000223Format">
+          <DataField>ABS_ImportEgreso_9___Control1000000223Format</DataField>
+        </Field>
+        <Field Name="DescDeducc_9__Control1000000224">
+          <DataField>DescDeducc_9__Control1000000224</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3__Control1000000203">
+          <DataField>ImporteIngresoTotal_3__Control1000000203</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3__Control1000000203Format">
+          <DataField>ImporteIngresoTotal_3__Control1000000203Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_15__Control1000000204">
+          <DataField>ImportIngreso_15__Control1000000204</DataField>
+        </Field>
+        <Field Name="ImportIngreso_15__Control1000000204Format">
+          <DataField>ImportIngreso_15__Control1000000204Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_15__Control1000000206">
+          <DataField>DescIngreso_15__Control1000000206</DataField>
+        </Field>
+        <Field Name="ImportIngreso_14__Control1000000207">
+          <DataField>ImportIngreso_14__Control1000000207</DataField>
+        </Field>
+        <Field Name="ImportIngreso_14__Control1000000207Format">
+          <DataField>ImportIngreso_14__Control1000000207Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_14__Control1000000208">
+          <DataField>DescIngreso_14__Control1000000208</DataField>
+        </Field>
+        <Field Name="DescIngreso_13__Control1000000209">
+          <DataField>DescIngreso_13__Control1000000209</DataField>
+        </Field>
+        <Field Name="ImportIngreso_13__Control1000000210">
+          <DataField>ImportIngreso_13__Control1000000210</DataField>
+        </Field>
+        <Field Name="ImportIngreso_13__Control1000000210Format">
+          <DataField>ImportIngreso_13__Control1000000210Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_12__Control1000000211">
+          <DataField>DescIngreso_12__Control1000000211</DataField>
+        </Field>
+        <Field Name="ImportIngreso_12__Control1000000212">
+          <DataField>ImportIngreso_12__Control1000000212</DataField>
+        </Field>
+        <Field Name="ImportIngreso_12__Control1000000212Format">
+          <DataField>ImportIngreso_12__Control1000000212Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_11__Control1000000213">
+          <DataField>DescIngreso_11__Control1000000213</DataField>
+        </Field>
+        <Field Name="ImportIngreso_11__Control1000000214">
+          <DataField>ImportIngreso_11__Control1000000214</DataField>
+        </Field>
+        <Field Name="ImportIngreso_11__Control1000000214Format">
+          <DataField>ImportIngreso_11__Control1000000214Format</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2__Control1000000225">
+          <DataField>ImporteIngresoTotal_2__Control1000000225</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2__Control1000000225Format">
+          <DataField>ImporteIngresoTotal_2__Control1000000225Format</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10__Control1000000226">
+          <DataField>ImportIngreso_10__Control1000000226</DataField>
+        </Field>
+        <Field Name="ImportIngreso_10__Control1000000226Format">
+          <DataField>ImportIngreso_10__Control1000000226Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_10__Control1000000227">
+          <DataField>DescIngreso_10__Control1000000227</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9__Control1000000229">
+          <DataField>ImportIngreso_9__Control1000000229</DataField>
+        </Field>
+        <Field Name="ImportIngreso_9__Control1000000229Format">
+          <DataField>ImportIngreso_9__Control1000000229Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_9__Control1000000230">
+          <DataField>DescIngreso_9__Control1000000230</DataField>
+        </Field>
+        <Field Name="DescIngreso_8__Control1000000231">
+          <DataField>DescIngreso_8__Control1000000231</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8__Control1000000232">
+          <DataField>ImportIngreso_8__Control1000000232</DataField>
+        </Field>
+        <Field Name="ImportIngreso_8__Control1000000232Format">
+          <DataField>ImportIngreso_8__Control1000000232Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_7__Control1000000233">
+          <DataField>DescIngreso_7__Control1000000233</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7__Control1000000234">
+          <DataField>ImportIngreso_7__Control1000000234</DataField>
+        </Field>
+        <Field Name="ImportIngreso_7__Control1000000234Format">
+          <DataField>ImportIngreso_7__Control1000000234Format</DataField>
+        </Field>
+        <Field Name="DescIngreso_6__Control1000000235">
+          <DataField>DescIngreso_6__Control1000000235</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6__Control1000000236">
+          <DataField>ImportIngreso_6__Control1000000236</DataField>
+        </Field>
+        <Field Name="ImportIngreso_6__Control1000000236Format">
+          <DataField>ImportIngreso_6__Control1000000236Format</DataField>
+        </Field>
+        <Field Name="Periodo_Control1000000168">
+          <DataField>Periodo_Control1000000168</DataField>
+        </Field>
+        <Field Name="Periodo_Control1000000169">
+          <DataField>Periodo_Control1000000169</DataField>
+        </Field>
+        <Field Name="TextCed_3__Control1000000028">
+          <DataField>TextCed_3__Control1000000028</DataField>
+        </Field>
+        <Field Name="txtDesc_3_">
+          <DataField>txtDesc_3_</DataField>
+        </Field>
+        <Field Name="txtDesc_2_">
+          <DataField>txtDesc_2_</DataField>
+        </Field>
+        <Field Name="txtDesc_1_">
+          <DataField>txtDesc_1_</DataField>
+        </Field>
+        <Field Name="Imprimir">
+          <DataField>Imprimir</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption">
+          <DataField>DEDUCTIONSCaption</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption">
+          <DataField>Total_IncomesCaption</DataField>
+        </Field>
+        <Field Name="TextNombre_1_Caption">
+          <DataField>TextNombre_1_Caption</DataField>
+        </Field>
+        <Field Name="TextCed_1_Caption">
+          <DataField>TextCed_1_Caption</DataField>
+        </Field>
+        <Field Name="TODAYCaption">
+          <DataField>TODAYCaption</DataField>
+        </Field>
+        <Field Name="INCOMECaption">
+          <DataField>INCOMECaption</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000034Caption">
+          <DataField>TODAY_Control1000000034Caption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption">
+          <DataField>Total_DeductionsCaption</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption_Control1000000048">
+          <DataField>DEDUCTIONSCaption_Control1000000048</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption_Control1000000050">
+          <DataField>Total_IncomesCaption_Control1000000050</DataField>
+        </Field>
+        <Field Name="TextNombre_2_Caption">
+          <DataField>TextNombre_2_Caption</DataField>
+        </Field>
+        <Field Name="TextCed_2_Caption">
+          <DataField>TextCed_2_Caption</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000063Caption">
+          <DataField>TODAY_Control1000000063Caption</DataField>
+        </Field>
+        <Field Name="INCOMECaption_Control1000000066">
+          <DataField>INCOMECaption_Control1000000066</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000068Caption">
+          <DataField>TODAY_Control1000000068Caption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption_Control1000000071">
+          <DataField>Total_DeductionsCaption_Control1000000071</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption_Control1000000077">
+          <DataField>DEDUCTIONSCaption_Control1000000077</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption_Control1000000079">
+          <DataField>Total_IncomesCaption_Control1000000079</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption_Control1000000084">
+          <DataField>Total_DeductionsCaption_Control1000000084</DataField>
+        </Field>
+        <Field Name="INCOMECaption_Control1000000095">
+          <DataField>INCOMECaption_Control1000000095</DataField>
+        </Field>
+        <Field Name="TextNombre_3_Caption">
+          <DataField>TextNombre_3_Caption</DataField>
+        </Field>
+        <Field Name="TextCed_3_Caption">
+          <DataField>TextCed_3_Caption</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000101Caption">
+          <DataField>TODAY_Control1000000101Caption</DataField>
+        </Field>
+        <Field Name="TODAY_Control1000000104Caption">
+          <DataField>TODAY_Control1000000104Caption</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1_Caption">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1_Caption</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption">
+          <DataField>Recibido_ConformeCaption</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2_Caption">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2_Caption</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption_Control1000000112">
+          <DataField>Recibido_ConformeCaption_Control1000000112</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption_Control1000000115">
+          <DataField>Recibido_ConformeCaption_Control1000000115</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3_Caption">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3_Caption</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Caption">
+          <DataField>ImporteIngresoTotal_1____ImportEgresoTotal_1__Control1000000118Caption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption_Control1000000126">
+          <DataField>Total_DeductionsCaption_Control1000000126</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption_Control1000000129">
+          <DataField>DEDUCTIONSCaption_Control1000000129</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption_Control1000000131">
+          <DataField>Recibido_ConformeCaption_Control1000000131</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption_Control1000000133">
+          <DataField>Total_IncomesCaption_Control1000000133</DataField>
+        </Field>
+        <Field Name="INCOMECaption_Control1000000145">
+          <DataField>INCOMECaption_Control1000000145</DataField>
+        </Field>
+        <Field Name="TextNombre_1__Control1000000146Caption">
+          <DataField>TextNombre_1__Control1000000146Caption</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Caption">
+          <DataField>ImporteIngresoTotal_2____ImportEgresoTotal_2__Control1000000148Caption</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption_Control1000000149">
+          <DataField>DEDUCTIONSCaption_Control1000000149</DataField>
+        </Field>
+        <Field Name="INCOMECaption_Control1000000151">
+          <DataField>INCOMECaption_Control1000000151</DataField>
+        </Field>
+        <Field Name="TextNombre_2__Control1000000152Caption">
+          <DataField>TextNombre_2__Control1000000152Caption</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption_Control1000000155">
+          <DataField>Recibido_ConformeCaption_Control1000000155</DataField>
+        </Field>
+        <Field Name="ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Caption">
+          <DataField>ImporteIngresoTotal_3____ImportEgresoTotal_3__Control1000000156Caption</DataField>
+        </Field>
+        <Field Name="DEDUCTIONSCaption_Control1000000157">
+          <DataField>DEDUCTIONSCaption_Control1000000157</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption_Control1000000159">
+          <DataField>Recibido_ConformeCaption_Control1000000159</DataField>
+        </Field>
+        <Field Name="INCOMECaption_Control1000000161">
+          <DataField>INCOMECaption_Control1000000161</DataField>
+        </Field>
+        <Field Name="TextNombre_3__Control1000000162Caption">
+          <DataField>TextNombre_3__Control1000000162Caption</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption_Control1000000200">
+          <DataField>Total_DeductionsCaption_Control1000000200</DataField>
+        </Field>
+        <Field Name="Total_DeductionsCaption_Control1000000218">
+          <DataField>Total_DeductionsCaption_Control1000000218</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption_Control1000000205">
+          <DataField>Total_IncomesCaption_Control1000000205</DataField>
+        </Field>
+        <Field Name="Total_IncomesCaption_Control1000000228">
+          <DataField>Total_IncomesCaption_Control1000000228</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_No__empleado">
+          <DataField>Historico_Cab__nomina_No__empleado</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Periodo">
+          <DataField>Historico_Cab__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

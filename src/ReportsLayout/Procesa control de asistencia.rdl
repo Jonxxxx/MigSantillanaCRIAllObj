@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,150 +11,6 @@
       <rd:DataSourceID>c9df4c70-fb54-4ce6-842c-0677cf2fd937</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="TrabajosEmplporproyectosCaptionLbl">
-          <DataField>TrabajosEmplporproyectosCaptionLbl</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Cod__Empleado">
-          <DataField>Cod__Empleado</DataField>
-        </Field>
-        <Field Name="Full_Name_">
-          <DataField>Full_Name_</DataField>
-        </Field>
-        <Field Name="Job_Title">
-          <DataField>Job_Title</DataField>
-        </Field>
-        <Field Name="Primera_Entrada">
-          <DataField>Primera_Entrada</DataField>
-        </Field>
-        <Field Name="Primera_Salida">
-          <DataField>Primera_Salida</DataField>
-        </Field>
-        <Field Name="Segunda_Entrada">
-          <DataField>Segunda_Entrada</DataField>
-        </Field>
-        <Field Name="Segunda_Salida">
-          <DataField>Segunda_Salida</DataField>
-        </Field>
-        <Field Name="Total_Horas">
-          <DataField>Total_Horas</DataField>
-        </Field>
-        <Field Name="Horas_receso">
-          <DataField>Horas_receso</DataField>
-        </Field>
-        <Field Name="Horas_laboradas2">
-          <DataField>Horas_laboradas2</DataField>
-        </Field>
-        <Field Name="TotalGralCaptionLbl">
-          <DataField>TotalGralCaptionLbl</DataField>
-        </Field>
-        <Field Name="Total_Qty">
-          <DataField>Total_Qty</DataField>
-        </Field>
-        <Field Name="Total_QtyFormat">
-          <DataField>Total_QtyFormat</DataField>
-        </Field>
-        <Field Name="Total_Amt">
-          <DataField>Total_Amt</DataField>
-        </Field>
-        <Field Name="Total_AmtFormat">
-          <DataField>Total_AmtFormat</DataField>
-        </Field>
-        <Field Name="Job_No_Caption">
-          <DataField>Job_No_Caption</DataField>
-        </Field>
-        <Field Name="Job_No_">
-          <DataField>Job_No_</DataField>
-        </Field>
-        <Field Name="Job_Task_No_Caption">
-          <DataField>Job_Task_No_Caption</DataField>
-        </Field>
-        <Field Name="Job_Task_No_">
-          <DataField>Job_Task_No_</DataField>
-        </Field>
-        <Field Name="Horas_laboradasCaption">
-          <DataField>Horas_laboradasCaption</DataField>
-        </Field>
-        <Field Name="Horas_laboradas">
-          <DataField>Horas_laboradas</DataField>
-        </Field>
-        <Field Name="Horas_laboradasFormat">
-          <DataField>Horas_laboradasFormat</DataField>
-        </Field>
-        <Field Name="Horas_regularesCaption">
-          <DataField>Horas_regularesCaption</DataField>
-        </Field>
-        <Field Name="Horas_regulares">
-          <DataField>Horas_regulares</DataField>
-        </Field>
-        <Field Name="Horas_regularesFormat">
-          <DataField>Horas_regularesFormat</DataField>
-        </Field>
-        <Field Name="Horas_extras35Caption">
-          <DataField>Horas_extras35Caption</DataField>
-        </Field>
-        <Field Name="Horas_extras35">
-          <DataField>Horas_extras35</DataField>
-        </Field>
-        <Field Name="Horas_extras35Format">
-          <DataField>Horas_extras35Format</DataField>
-        </Field>
-        <Field Name="Horas_extras100Caption">
-          <DataField>Horas_extras100Caption</DataField>
-        </Field>
-        <Field Name="Horas_extras100">
-          <DataField>Horas_extras100</DataField>
-        </Field>
-        <Field Name="Horas_extras100Format">
-          <DataField>Horas_extras100Format</DataField>
-        </Field>
-        <Field Name="Horas_nocturnasCaption">
-          <DataField>Horas_nocturnasCaption</DataField>
-        </Field>
-        <Field Name="Horas_nocturnas">
-          <DataField>Horas_nocturnas</DataField>
-        </Field>
-        <Field Name="Horas_nocturnasFormat">
-          <DataField>Horas_nocturnasFormat</DataField>
-        </Field>
-        <Field Name="Horas_feriadasCaption">
-          <DataField>Horas_feriadasCaption</DataField>
-        </Field>
-        <Field Name="Horas_feriadas">
-          <DataField>Horas_feriadas</DataField>
-        </Field>
-        <Field Name="Horas_feriadasFormat">
-          <DataField>Horas_feriadasFormat</DataField>
-        </Field>
-        <Field Name="TotalimputadasCaption">
-          <DataField>TotalimputadasCaption</DataField>
-        </Field>
-        <Field Name="Totalimputadas">
-          <DataField>Totalimputadas</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1293,4 +1149,143 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>625375a0-ecc6-4682-ace6-927523801b6a</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="TrabajosEmplporproyectosCaptionLbl">
+          <DataField>TrabajosEmplporproyectosCaptionLbl</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Cod__Empleado">
+          <DataField>Cod__Empleado</DataField>
+        </Field>
+        <Field Name="Full_Name_">
+          <DataField>Full_Name_</DataField>
+        </Field>
+        <Field Name="Job_Title">
+          <DataField>Job_Title</DataField>
+        </Field>
+        <Field Name="Primera_Entrada">
+          <DataField>Primera_Entrada</DataField>
+        </Field>
+        <Field Name="Primera_Salida">
+          <DataField>Primera_Salida</DataField>
+        </Field>
+        <Field Name="Segunda_Entrada">
+          <DataField>Segunda_Entrada</DataField>
+        </Field>
+        <Field Name="Segunda_Salida">
+          <DataField>Segunda_Salida</DataField>
+        </Field>
+        <Field Name="Total_Horas">
+          <DataField>Total_Horas</DataField>
+        </Field>
+        <Field Name="Horas_receso">
+          <DataField>Horas_receso</DataField>
+        </Field>
+        <Field Name="Horas_laboradas2">
+          <DataField>Horas_laboradas2</DataField>
+        </Field>
+        <Field Name="TotalGralCaptionLbl">
+          <DataField>TotalGralCaptionLbl</DataField>
+        </Field>
+        <Field Name="Total_Qty">
+          <DataField>Total_Qty</DataField>
+        </Field>
+        <Field Name="Total_QtyFormat">
+          <DataField>Total_QtyFormat</DataField>
+        </Field>
+        <Field Name="Total_Amt">
+          <DataField>Total_Amt</DataField>
+        </Field>
+        <Field Name="Total_AmtFormat">
+          <DataField>Total_AmtFormat</DataField>
+        </Field>
+        <Field Name="Job_No_Caption">
+          <DataField>Job_No_Caption</DataField>
+        </Field>
+        <Field Name="Job_No_">
+          <DataField>Job_No_</DataField>
+        </Field>
+        <Field Name="Job_Task_No_Caption">
+          <DataField>Job_Task_No_Caption</DataField>
+        </Field>
+        <Field Name="Job_Task_No_">
+          <DataField>Job_Task_No_</DataField>
+        </Field>
+        <Field Name="Horas_laboradasCaption">
+          <DataField>Horas_laboradasCaption</DataField>
+        </Field>
+        <Field Name="Horas_laboradas">
+          <DataField>Horas_laboradas</DataField>
+        </Field>
+        <Field Name="Horas_laboradasFormat">
+          <DataField>Horas_laboradasFormat</DataField>
+        </Field>
+        <Field Name="Horas_regularesCaption">
+          <DataField>Horas_regularesCaption</DataField>
+        </Field>
+        <Field Name="Horas_regulares">
+          <DataField>Horas_regulares</DataField>
+        </Field>
+        <Field Name="Horas_regularesFormat">
+          <DataField>Horas_regularesFormat</DataField>
+        </Field>
+        <Field Name="Horas_extras35Caption">
+          <DataField>Horas_extras35Caption</DataField>
+        </Field>
+        <Field Name="Horas_extras35">
+          <DataField>Horas_extras35</DataField>
+        </Field>
+        <Field Name="Horas_extras35Format">
+          <DataField>Horas_extras35Format</DataField>
+        </Field>
+        <Field Name="Horas_extras100Caption">
+          <DataField>Horas_extras100Caption</DataField>
+        </Field>
+        <Field Name="Horas_extras100">
+          <DataField>Horas_extras100</DataField>
+        </Field>
+        <Field Name="Horas_extras100Format">
+          <DataField>Horas_extras100Format</DataField>
+        </Field>
+        <Field Name="Horas_nocturnasCaption">
+          <DataField>Horas_nocturnasCaption</DataField>
+        </Field>
+        <Field Name="Horas_nocturnas">
+          <DataField>Horas_nocturnas</DataField>
+        </Field>
+        <Field Name="Horas_nocturnasFormat">
+          <DataField>Horas_nocturnasFormat</DataField>
+        </Field>
+        <Field Name="Horas_feriadasCaption">
+          <DataField>Horas_feriadasCaption</DataField>
+        </Field>
+        <Field Name="Horas_feriadas">
+          <DataField>Horas_feriadas</DataField>
+        </Field>
+        <Field Name="Horas_feriadasFormat">
+          <DataField>Horas_feriadasFormat</DataField>
+        </Field>
+        <Field Name="TotalimputadasCaption">
+          <DataField>TotalimputadasCaption</DataField>
+        </Field>
+        <Field Name="Totalimputadas">
+          <DataField>Totalimputadas</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

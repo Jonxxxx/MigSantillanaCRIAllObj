@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,135 +10,6 @@
       <rd:DataSourceID>0669b2b3-264e-464c-895f-eef9b7b01ba6</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Empresa_Nombre">
-          <DataField>Empresa_Nombre</DataField>
-        </Field>
-        <Field Name="Empresa_Ruc">
-          <DataField>Empresa_Ruc</DataField>
-        </Field>
-        <Field Name="Empresa_Direccion">
-          <DataField>Empresa_Direccion</DataField>
-        </Field>
-        <Field Name="Empresa_Colonia">
-          <DataField>Empresa_Colonia</DataField>
-        </Field>
-        <Field Name="Empresa_Telefono">
-          <DataField>Empresa_Telefono</DataField>
-        </Field>
-        <Field Name="TPV_Descripcion">
-          <DataField>TPV_Descripcion</DataField>
-        </Field>
-        <Field Name="TPV_Direccion">
-          <DataField>TPV_Direccion</DataField>
-        </Field>
-        <Field Name="TPV_Numero_Autorizacion">
-          <DataField>TPV_Numero_Autorizacion</DataField>
-        </Field>
-        <Field Name="Venta_Factura">
-          <DataField>Venta_Factura</DataField>
-        </Field>
-        <Field Name="Venta_Fecha">
-          <DataField>Venta_Fecha</DataField>
-        </Field>
-        <Field Name="Venta_Hora">
-          <DataField>Venta_Hora</DataField>
-        </Field>
-        <Field Name="Venta_Total">
-          <DataField>Venta_Total</DataField>
-        </Field>
-        <Field Name="Venta_TotalFormat">
-          <DataField>Venta_TotalFormat</DataField>
-        </Field>
-        <Field Name="Cliente_Nombre">
-          <DataField>Cliente_Nombre</DataField>
-        </Field>
-        <Field Name="Cliente_Ruc">
-          <DataField>Cliente_Ruc</DataField>
-        </Field>
-        <Field Name="Cajero_Nombre">
-          <DataField>Cajero_Nombre</DataField>
-        </Field>
-        <Field Name="Pago_Forma">
-          <DataField>Pago_Forma</DataField>
-        </Field>
-        <Field Name="Pago_Divisa">
-          <DataField>Pago_Divisa</DataField>
-        </Field>
-        <Field Name="Pago_Importe">
-          <DataField>Pago_Importe</DataField>
-        </Field>
-        <Field Name="Pago_ImporteFormat">
-          <DataField>Pago_ImporteFormat</DataField>
-        </Field>
-        <Field Name="Pago_Filtro">
-          <DataField>Pago_Filtro</DataField>
-        </Field>
-        <Field Name="Cambio_Forma">
-          <DataField>Cambio_Forma</DataField>
-        </Field>
-        <Field Name="Cambio_Divisa">
-          <DataField>Cambio_Divisa</DataField>
-        </Field>
-        <Field Name="Cambio_Importe">
-          <DataField>Cambio_Importe</DataField>
-        </Field>
-        <Field Name="Cambio_ImporteFormat">
-          <DataField>Cambio_ImporteFormat</DataField>
-        </Field>
-        <Field Name="Cambio_Filtro">
-          <DataField>Cambio_Filtro</DataField>
-        </Field>
-        <Field Name="Producto_Numero">
-          <DataField>Producto_Numero</DataField>
-        </Field>
-        <Field Name="Producto_Descripcion">
-          <DataField>Producto_Descripcion</DataField>
-        </Field>
-        <Field Name="Producto_Importe_Total">
-          <DataField>Producto_Importe_Total</DataField>
-        </Field>
-        <Field Name="Producto_Importe_TotalFormat">
-          <DataField>Producto_Importe_TotalFormat</DataField>
-        </Field>
-        <Field Name="Producto_Importe_Unitario">
-          <DataField>Producto_Importe_Unitario</DataField>
-        </Field>
-        <Field Name="Producto_Importe_UnitarioFormat">
-          <DataField>Producto_Importe_UnitarioFormat</DataField>
-        </Field>
-        <Field Name="Producto_Cantidad">
-          <DataField>Producto_Cantidad</DataField>
-        </Field>
-        <Field Name="Producto_CantidadFormat">
-          <DataField>Producto_CantidadFormat</DataField>
-        </Field>
-        <Field Name="Producto_Numero_Documento">
-          <DataField>Producto_Numero_Documento</DataField>
-        </Field>
-        <Field Name="Producto_Numero_Linea">
-          <DataField>Producto_Numero_Linea</DataField>
-        </Field>
-        <Field Name="Producto_Descuento">
-          <DataField>Producto_Descuento</DataField>
-        </Field>
-        <Field Name="Producto_Filtro">
-          <DataField>Producto_Filtro</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1666,4 +1537,128 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>4be231af-6188-4150-a559-2f349cac6df1</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Empresa_Nombre">
+          <DataField>Empresa_Nombre</DataField>
+        </Field>
+        <Field Name="Empresa_Ruc">
+          <DataField>Empresa_Ruc</DataField>
+        </Field>
+        <Field Name="Empresa_Direccion">
+          <DataField>Empresa_Direccion</DataField>
+        </Field>
+        <Field Name="Empresa_Colonia">
+          <DataField>Empresa_Colonia</DataField>
+        </Field>
+        <Field Name="Empresa_Telefono">
+          <DataField>Empresa_Telefono</DataField>
+        </Field>
+        <Field Name="TPV_Descripcion">
+          <DataField>TPV_Descripcion</DataField>
+        </Field>
+        <Field Name="TPV_Direccion">
+          <DataField>TPV_Direccion</DataField>
+        </Field>
+        <Field Name="TPV_Numero_Autorizacion">
+          <DataField>TPV_Numero_Autorizacion</DataField>
+        </Field>
+        <Field Name="Venta_Factura">
+          <DataField>Venta_Factura</DataField>
+        </Field>
+        <Field Name="Venta_Fecha">
+          <DataField>Venta_Fecha</DataField>
+        </Field>
+        <Field Name="Venta_Hora">
+          <DataField>Venta_Hora</DataField>
+        </Field>
+        <Field Name="Venta_Total">
+          <DataField>Venta_Total</DataField>
+        </Field>
+        <Field Name="Venta_TotalFormat">
+          <DataField>Venta_TotalFormat</DataField>
+        </Field>
+        <Field Name="Cliente_Nombre">
+          <DataField>Cliente_Nombre</DataField>
+        </Field>
+        <Field Name="Cliente_Ruc">
+          <DataField>Cliente_Ruc</DataField>
+        </Field>
+        <Field Name="Cajero_Nombre">
+          <DataField>Cajero_Nombre</DataField>
+        </Field>
+        <Field Name="Pago_Forma">
+          <DataField>Pago_Forma</DataField>
+        </Field>
+        <Field Name="Pago_Divisa">
+          <DataField>Pago_Divisa</DataField>
+        </Field>
+        <Field Name="Pago_Importe">
+          <DataField>Pago_Importe</DataField>
+        </Field>
+        <Field Name="Pago_ImporteFormat">
+          <DataField>Pago_ImporteFormat</DataField>
+        </Field>
+        <Field Name="Pago_Filtro">
+          <DataField>Pago_Filtro</DataField>
+        </Field>
+        <Field Name="Cambio_Forma">
+          <DataField>Cambio_Forma</DataField>
+        </Field>
+        <Field Name="Cambio_Divisa">
+          <DataField>Cambio_Divisa</DataField>
+        </Field>
+        <Field Name="Cambio_Importe">
+          <DataField>Cambio_Importe</DataField>
+        </Field>
+        <Field Name="Cambio_ImporteFormat">
+          <DataField>Cambio_ImporteFormat</DataField>
+        </Field>
+        <Field Name="Cambio_Filtro">
+          <DataField>Cambio_Filtro</DataField>
+        </Field>
+        <Field Name="Producto_Numero">
+          <DataField>Producto_Numero</DataField>
+        </Field>
+        <Field Name="Producto_Descripcion">
+          <DataField>Producto_Descripcion</DataField>
+        </Field>
+        <Field Name="Producto_Importe_Total">
+          <DataField>Producto_Importe_Total</DataField>
+        </Field>
+        <Field Name="Producto_Importe_TotalFormat">
+          <DataField>Producto_Importe_TotalFormat</DataField>
+        </Field>
+        <Field Name="Producto_Importe_Unitario">
+          <DataField>Producto_Importe_Unitario</DataField>
+        </Field>
+        <Field Name="Producto_Importe_UnitarioFormat">
+          <DataField>Producto_Importe_UnitarioFormat</DataField>
+        </Field>
+        <Field Name="Producto_Cantidad">
+          <DataField>Producto_Cantidad</DataField>
+        </Field>
+        <Field Name="Producto_CantidadFormat">
+          <DataField>Producto_CantidadFormat</DataField>
+        </Field>
+        <Field Name="Producto_Numero_Documento">
+          <DataField>Producto_Numero_Documento</DataField>
+        </Field>
+        <Field Name="Producto_Numero_Linea">
+          <DataField>Producto_Numero_Linea</DataField>
+        </Field>
+        <Field Name="Producto_Descuento">
+          <DataField>Producto_Descuento</DataField>
+        </Field>
+        <Field Name="Producto_Filtro">
+          <DataField>Producto_Filtro</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,51 +11,6 @@
       <rd:DataSourceID>6f5f1b98-a174-4c74-9aee-5a9690656f53</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Payroll_s_ReportCaption">
-          <DataField>Payroll_s_ReportCaption</DataField>
-        </Field>
-        <Field Name="TextoEncabezadoTotales">
-          <DataField>TextoEncabezadoTotales</DataField>
-        </Field>
-        <Field Name="ValorTotales">
-          <DataField>ValorTotales</DataField>
-        </Field>
-        <Field Name="ValorTotalesFormat">
-          <DataField>ValorTotalesFormat</DataField>
-        </Field>
-        <Field Name="Departamento">
-          <DataField>Departamento</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -644,12 +599,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -689,4 +638,44 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>50f36244-3c95-4445-892c-fc3fc71afb54</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Payroll_s_ReportCaption">
+          <DataField>Payroll_s_ReportCaption</DataField>
+        </Field>
+        <Field Name="TextoEncabezadoTotales">
+          <DataField>TextoEncabezadoTotales</DataField>
+        </Field>
+        <Field Name="ValorTotales">
+          <DataField>ValorTotales</DataField>
+        </Field>
+        <Field Name="ValorTotalesFormat">
+          <DataField>ValorTotalesFormat</DataField>
+        </Field>
+        <Field Name="Departamento">
+          <DataField>Departamento</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

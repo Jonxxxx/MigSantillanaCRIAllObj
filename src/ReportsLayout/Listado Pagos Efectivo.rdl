@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,366 +10,6 @@
       <rd:DataSourceID>2f5d4b73-fe53-4ee3-a2c2-6ddfff60f8e2</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Empresas_Cotizacion_Empresa_cotizacion">
-          <DataField>Empresas_Cotizacion_Empresa_cotizacion</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo_Empresa_cotizacion">
-          <DataField>Centros_de_Trabajo_Empresa_cotizacion</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo_Centro_de_trabajo">
-          <DataField>Centros_de_Trabajo_Centro_de_trabajo</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo___C_P__">
-          <DataField>Centros_de_Trabajo___C_P__</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo___Poblaci_n_">
-          <DataField>Centros_de_Trabajo___Poblaci_n_</DataField>
-        </Field>
-        <Field Name="Empresas_Cotizaci_n__Provincia">
-          <DataField>Empresas_Cotizaci_n__Provincia</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="Employee__Working_Center_">
-          <DataField>Employee__Working_Center_</DataField>
-        </Field>
-        <Field Name="Total">
-          <DataField>Total</DataField>
-        </Field>
-        <Field Name="TotalFormat">
-          <DataField>TotalFormat</DataField>
-        </Field>
-        <Field Name="Centro_de_Trabajo_Caption">
-          <DataField>Centro_de_Trabajo_Caption</DataField>
-        </Field>
-        <Field Name="Pago_N_minas_en_efectivoCaption">
-          <DataField>Pago_N_minas_en_efectivoCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="V1Caption">
-          <DataField>V1Caption</DataField>
-        </Field>
-        <Field Name="DOCCaption">
-          <DataField>DOCCaption</DataField>
-        </Field>
-        <Field Name="NameCaption">
-          <DataField>NameCaption</DataField>
-        </Field>
-        <Field Name="AmountCaption">
-          <DataField>AmountCaption</DataField>
-        </Field>
-        <Field Name="Income_detailCaption">
-          <DataField>Income_detailCaption</DataField>
-        </Field>
-        <Field Name="Importe_TOTALCaption">
-          <DataField>Importe_TOTALCaption</DataField>
-        </Field>
-        <Field Name="Employee_No_">
-          <DataField>Employee_No_</DataField>
-        </Field>
-        <Field Name="Employee__Document_ID_">
-          <DataField>Employee__Document_ID_</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Total_Ingresos___Total_deducciones_">
-          <DataField>Total_Ingresos___Total_deducciones_</DataField>
-        </Field>
-        <Field Name="Total_Ingresos___Total_deducciones_Format">
-          <DataField>Total_Ingresos___Total_deducciones_Format</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_No__empleado">
-          <DataField>Historico_Cab__nomina_No__empleado</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Ano">
-          <DataField>Historico_Cab__nomina_Ano</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Periodo">
-          <DataField>Historico_Cab__nomina_Periodo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
-          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
-        </Field>
-        <Field Name="COMPANYNAME_Control76">
-          <DataField>COMPANYNAME_Control76</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo___C_P___Control79">
-          <DataField>Centros_de_Trabajo___C_P___Control79</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo___Poblaci_n__Control80">
-          <DataField>Centros_de_Trabajo___Poblaci_n__Control80</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4__Control81">
-          <DataField>FORMAT_TODAY_0_4__Control81</DataField>
-        </Field>
-        <Field Name="USERID_Control82">
-          <DataField>USERID_Control82</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO_Control84">
-          <DataField>CurrReport_PAGENO_Control84</DataField>
-        </Field>
-        <Field Name="Centros_de_Trabajo___Centro_de_trabajo_">
-          <DataField>Centros_de_Trabajo___Centro_de_trabajo_</DataField>
-        </Field>
-        <Field Name="monedas_1_1_">
-          <DataField>monedas_1_1_</DataField>
-        </Field>
-        <Field Name="monedas_1_1_Format">
-          <DataField>monedas_1_1_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_1_">
-          <DataField>monedas_2_1_</DataField>
-        </Field>
-        <Field Name="monedas_2_1_Format">
-          <DataField>monedas_2_1_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_1__monedas_2_1_">
-          <DataField>monedas_1_1__monedas_2_1_</DataField>
-        </Field>
-        <Field Name="monedas_1_1__monedas_2_1_Format">
-          <DataField>monedas_1_1__monedas_2_1_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_2_">
-          <DataField>monedas_1_2_</DataField>
-        </Field>
-        <Field Name="monedas_1_2_Format">
-          <DataField>monedas_1_2_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_2_">
-          <DataField>monedas_2_2_</DataField>
-        </Field>
-        <Field Name="monedas_2_2_Format">
-          <DataField>monedas_2_2_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_2__monedas_2_2_">
-          <DataField>monedas_1_2__monedas_2_2_</DataField>
-        </Field>
-        <Field Name="monedas_1_2__monedas_2_2_Format">
-          <DataField>monedas_1_2__monedas_2_2_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_3_">
-          <DataField>monedas_1_3_</DataField>
-        </Field>
-        <Field Name="monedas_1_3_Format">
-          <DataField>monedas_1_3_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_3_">
-          <DataField>monedas_2_3_</DataField>
-        </Field>
-        <Field Name="monedas_2_3_Format">
-          <DataField>monedas_2_3_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_3__monedas_2_3_">
-          <DataField>monedas_1_3__monedas_2_3_</DataField>
-        </Field>
-        <Field Name="monedas_1_3__monedas_2_3_Format">
-          <DataField>monedas_1_3__monedas_2_3_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_4_">
-          <DataField>monedas_1_4_</DataField>
-        </Field>
-        <Field Name="monedas_1_4_Format">
-          <DataField>monedas_1_4_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_4_">
-          <DataField>monedas_2_4_</DataField>
-        </Field>
-        <Field Name="monedas_2_4_Format">
-          <DataField>monedas_2_4_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_4__monedas_2_4_">
-          <DataField>monedas_1_4__monedas_2_4_</DataField>
-        </Field>
-        <Field Name="monedas_1_4__monedas_2_4_Format">
-          <DataField>monedas_1_4__monedas_2_4_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_5_">
-          <DataField>monedas_1_5_</DataField>
-        </Field>
-        <Field Name="monedas_1_5_Format">
-          <DataField>monedas_1_5_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_5_">
-          <DataField>monedas_2_5_</DataField>
-        </Field>
-        <Field Name="monedas_2_5_Format">
-          <DataField>monedas_2_5_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_5__monedas_2_5_">
-          <DataField>monedas_1_5__monedas_2_5_</DataField>
-        </Field>
-        <Field Name="monedas_1_5__monedas_2_5_Format">
-          <DataField>monedas_1_5__monedas_2_5_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_6_">
-          <DataField>monedas_1_6_</DataField>
-        </Field>
-        <Field Name="monedas_1_6_Format">
-          <DataField>monedas_1_6_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_6_">
-          <DataField>monedas_2_6_</DataField>
-        </Field>
-        <Field Name="monedas_2_6_Format">
-          <DataField>monedas_2_6_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_6__monedas_2_6_">
-          <DataField>monedas_1_6__monedas_2_6_</DataField>
-        </Field>
-        <Field Name="monedas_1_6__monedas_2_6_Format">
-          <DataField>monedas_1_6__monedas_2_6_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_7_">
-          <DataField>monedas_1_7_</DataField>
-        </Field>
-        <Field Name="monedas_1_7_Format">
-          <DataField>monedas_1_7_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_7_">
-          <DataField>monedas_2_7_</DataField>
-        </Field>
-        <Field Name="monedas_2_7_Format">
-          <DataField>monedas_2_7_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_7__monedas_2_7_">
-          <DataField>monedas_1_7__monedas_2_7_</DataField>
-        </Field>
-        <Field Name="monedas_1_7__monedas_2_7_Format">
-          <DataField>monedas_1_7__monedas_2_7_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_8_">
-          <DataField>monedas_1_8_</DataField>
-        </Field>
-        <Field Name="monedas_1_8_Format">
-          <DataField>monedas_1_8_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_8_">
-          <DataField>monedas_2_8_</DataField>
-        </Field>
-        <Field Name="monedas_2_8_Format">
-          <DataField>monedas_2_8_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_8__monedas_2_8_">
-          <DataField>monedas_1_8__monedas_2_8_</DataField>
-        </Field>
-        <Field Name="monedas_1_8__monedas_2_8_Format">
-          <DataField>monedas_1_8__monedas_2_8_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_9_">
-          <DataField>monedas_1_9_</DataField>
-        </Field>
-        <Field Name="monedas_1_9_Format">
-          <DataField>monedas_1_9_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_9_">
-          <DataField>monedas_2_9_</DataField>
-        </Field>
-        <Field Name="monedas_2_9_Format">
-          <DataField>monedas_2_9_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_9__monedas_2_9_">
-          <DataField>monedas_1_9__monedas_2_9_</DataField>
-        </Field>
-        <Field Name="monedas_1_9__monedas_2_9_Format">
-          <DataField>monedas_1_9__monedas_2_9_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_10_">
-          <DataField>monedas_1_10_</DataField>
-        </Field>
-        <Field Name="monedas_1_10_Format">
-          <DataField>monedas_1_10_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_10_">
-          <DataField>monedas_2_10_</DataField>
-        </Field>
-        <Field Name="monedas_2_10_Format">
-          <DataField>monedas_2_10_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_10__monedas_2_10_">
-          <DataField>monedas_1_10__monedas_2_10_</DataField>
-        </Field>
-        <Field Name="monedas_1_10__monedas_2_10_Format">
-          <DataField>monedas_1_10__monedas_2_10_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_11_">
-          <DataField>monedas_1_11_</DataField>
-        </Field>
-        <Field Name="monedas_1_11_Format">
-          <DataField>monedas_1_11_Format</DataField>
-        </Field>
-        <Field Name="monedas_2_11_">
-          <DataField>monedas_2_11_</DataField>
-        </Field>
-        <Field Name="monedas_2_11_Format">
-          <DataField>monedas_2_11_Format</DataField>
-        </Field>
-        <Field Name="monedas_1_11__monedas_2_11_">
-          <DataField>monedas_1_11__monedas_2_11_</DataField>
-        </Field>
-        <Field Name="monedas_1_11__monedas_2_11_Format">
-          <DataField>monedas_1_11__monedas_2_11_Format</DataField>
-        </Field>
-        <Field Name="Total_monedas_">
-          <DataField>Total_monedas_</DataField>
-        </Field>
-        <Field Name="Total_monedas_Format">
-          <DataField>Total_monedas_Format</DataField>
-        </Field>
-        <Field Name="Centro_de_Trabajo_Caption_Control74">
-          <DataField>Centro_de_Trabajo_Caption_Control74</DataField>
-        </Field>
-        <Field Name="Pago_N_minas_en_efectivoCaption_Control77">
-          <DataField>Pago_N_minas_en_efectivoCaption_Control77</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO_Control84Caption">
-          <DataField>CurrReport_PAGENO_Control84Caption</DataField>
-        </Field>
-        <Field Name="V2Caption">
-          <DataField>V2Caption</DataField>
-        </Field>
-        <Field Name="Valor_Monedas_BilletesCaption">
-          <DataField>Valor_Monedas_BilletesCaption</DataField>
-        </Field>
-        <Field Name="CantidadCaption">
-          <DataField>CantidadCaption</DataField>
-        </Field>
-        <Field Name="Desglose_de_monedasCaption">
-          <DataField>Desglose_de_monedasCaption</DataField>
-        </Field>
-        <Field Name="ImporteCaption">
-          <DataField>ImporteCaption</DataField>
-        </Field>
-        <Field Name="Counter2_Number">
-          <DataField>Counter2_Number</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -8452,4 +8092,359 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>6369c8f0-8621-4478-bade-e9ec0d94fc54</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Empresas_Cotizacion_Empresa_cotizacion">
+          <DataField>Empresas_Cotizacion_Empresa_cotizacion</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo_Empresa_cotizacion">
+          <DataField>Centros_de_Trabajo_Empresa_cotizacion</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo_Centro_de_trabajo">
+          <DataField>Centros_de_Trabajo_Centro_de_trabajo</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo___C_P__">
+          <DataField>Centros_de_Trabajo___C_P__</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo___Poblaci_n_">
+          <DataField>Centros_de_Trabajo___Poblaci_n_</DataField>
+        </Field>
+        <Field Name="Empresas_Cotizaci_n__Provincia">
+          <DataField>Empresas_Cotizaci_n__Provincia</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="Employee__Working_Center_">
+          <DataField>Employee__Working_Center_</DataField>
+        </Field>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TotalFormat">
+          <DataField>TotalFormat</DataField>
+        </Field>
+        <Field Name="Centro_de_Trabajo_Caption">
+          <DataField>Centro_de_Trabajo_Caption</DataField>
+        </Field>
+        <Field Name="Pago_N_minas_en_efectivoCaption">
+          <DataField>Pago_N_minas_en_efectivoCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="V1Caption">
+          <DataField>V1Caption</DataField>
+        </Field>
+        <Field Name="DOCCaption">
+          <DataField>DOCCaption</DataField>
+        </Field>
+        <Field Name="NameCaption">
+          <DataField>NameCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="Income_detailCaption">
+          <DataField>Income_detailCaption</DataField>
+        </Field>
+        <Field Name="Importe_TOTALCaption">
+          <DataField>Importe_TOTALCaption</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="Employee__Document_ID_">
+          <DataField>Employee__Document_ID_</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Total_Ingresos___Total_deducciones_">
+          <DataField>Total_Ingresos___Total_deducciones_</DataField>
+        </Field>
+        <Field Name="Total_Ingresos___Total_deducciones_Format">
+          <DataField>Total_Ingresos___Total_deducciones_Format</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_No__empleado">
+          <DataField>Historico_Cab__nomina_No__empleado</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Periodo">
+          <DataField>Historico_Cab__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+        <Field Name="COMPANYNAME_Control76">
+          <DataField>COMPANYNAME_Control76</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo___C_P___Control79">
+          <DataField>Centros_de_Trabajo___C_P___Control79</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo___Poblaci_n__Control80">
+          <DataField>Centros_de_Trabajo___Poblaci_n__Control80</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4__Control81">
+          <DataField>FORMAT_TODAY_0_4__Control81</DataField>
+        </Field>
+        <Field Name="USERID_Control82">
+          <DataField>USERID_Control82</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO_Control84">
+          <DataField>CurrReport_PAGENO_Control84</DataField>
+        </Field>
+        <Field Name="Centros_de_Trabajo___Centro_de_trabajo_">
+          <DataField>Centros_de_Trabajo___Centro_de_trabajo_</DataField>
+        </Field>
+        <Field Name="monedas_1_1_">
+          <DataField>monedas_1_1_</DataField>
+        </Field>
+        <Field Name="monedas_1_1_Format">
+          <DataField>monedas_1_1_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_1_">
+          <DataField>monedas_2_1_</DataField>
+        </Field>
+        <Field Name="monedas_2_1_Format">
+          <DataField>monedas_2_1_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_1__monedas_2_1_">
+          <DataField>monedas_1_1__monedas_2_1_</DataField>
+        </Field>
+        <Field Name="monedas_1_1__monedas_2_1_Format">
+          <DataField>monedas_1_1__monedas_2_1_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_2_">
+          <DataField>monedas_1_2_</DataField>
+        </Field>
+        <Field Name="monedas_1_2_Format">
+          <DataField>monedas_1_2_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_2_">
+          <DataField>monedas_2_2_</DataField>
+        </Field>
+        <Field Name="monedas_2_2_Format">
+          <DataField>monedas_2_2_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_2__monedas_2_2_">
+          <DataField>monedas_1_2__monedas_2_2_</DataField>
+        </Field>
+        <Field Name="monedas_1_2__monedas_2_2_Format">
+          <DataField>monedas_1_2__monedas_2_2_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_3_">
+          <DataField>monedas_1_3_</DataField>
+        </Field>
+        <Field Name="monedas_1_3_Format">
+          <DataField>monedas_1_3_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_3_">
+          <DataField>monedas_2_3_</DataField>
+        </Field>
+        <Field Name="monedas_2_3_Format">
+          <DataField>monedas_2_3_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_3__monedas_2_3_">
+          <DataField>monedas_1_3__monedas_2_3_</DataField>
+        </Field>
+        <Field Name="monedas_1_3__monedas_2_3_Format">
+          <DataField>monedas_1_3__monedas_2_3_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_4_">
+          <DataField>monedas_1_4_</DataField>
+        </Field>
+        <Field Name="monedas_1_4_Format">
+          <DataField>monedas_1_4_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_4_">
+          <DataField>monedas_2_4_</DataField>
+        </Field>
+        <Field Name="monedas_2_4_Format">
+          <DataField>monedas_2_4_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_4__monedas_2_4_">
+          <DataField>monedas_1_4__monedas_2_4_</DataField>
+        </Field>
+        <Field Name="monedas_1_4__monedas_2_4_Format">
+          <DataField>monedas_1_4__monedas_2_4_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_5_">
+          <DataField>monedas_1_5_</DataField>
+        </Field>
+        <Field Name="monedas_1_5_Format">
+          <DataField>monedas_1_5_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_5_">
+          <DataField>monedas_2_5_</DataField>
+        </Field>
+        <Field Name="monedas_2_5_Format">
+          <DataField>monedas_2_5_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_5__monedas_2_5_">
+          <DataField>monedas_1_5__monedas_2_5_</DataField>
+        </Field>
+        <Field Name="monedas_1_5__monedas_2_5_Format">
+          <DataField>monedas_1_5__monedas_2_5_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_6_">
+          <DataField>monedas_1_6_</DataField>
+        </Field>
+        <Field Name="monedas_1_6_Format">
+          <DataField>monedas_1_6_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_6_">
+          <DataField>monedas_2_6_</DataField>
+        </Field>
+        <Field Name="monedas_2_6_Format">
+          <DataField>monedas_2_6_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_6__monedas_2_6_">
+          <DataField>monedas_1_6__monedas_2_6_</DataField>
+        </Field>
+        <Field Name="monedas_1_6__monedas_2_6_Format">
+          <DataField>monedas_1_6__monedas_2_6_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_7_">
+          <DataField>monedas_1_7_</DataField>
+        </Field>
+        <Field Name="monedas_1_7_Format">
+          <DataField>monedas_1_7_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_7_">
+          <DataField>monedas_2_7_</DataField>
+        </Field>
+        <Field Name="monedas_2_7_Format">
+          <DataField>monedas_2_7_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_7__monedas_2_7_">
+          <DataField>monedas_1_7__monedas_2_7_</DataField>
+        </Field>
+        <Field Name="monedas_1_7__monedas_2_7_Format">
+          <DataField>monedas_1_7__monedas_2_7_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_8_">
+          <DataField>monedas_1_8_</DataField>
+        </Field>
+        <Field Name="monedas_1_8_Format">
+          <DataField>monedas_1_8_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_8_">
+          <DataField>monedas_2_8_</DataField>
+        </Field>
+        <Field Name="monedas_2_8_Format">
+          <DataField>monedas_2_8_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_8__monedas_2_8_">
+          <DataField>monedas_1_8__monedas_2_8_</DataField>
+        </Field>
+        <Field Name="monedas_1_8__monedas_2_8_Format">
+          <DataField>monedas_1_8__monedas_2_8_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_9_">
+          <DataField>monedas_1_9_</DataField>
+        </Field>
+        <Field Name="monedas_1_9_Format">
+          <DataField>monedas_1_9_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_9_">
+          <DataField>monedas_2_9_</DataField>
+        </Field>
+        <Field Name="monedas_2_9_Format">
+          <DataField>monedas_2_9_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_9__monedas_2_9_">
+          <DataField>monedas_1_9__monedas_2_9_</DataField>
+        </Field>
+        <Field Name="monedas_1_9__monedas_2_9_Format">
+          <DataField>monedas_1_9__monedas_2_9_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_10_">
+          <DataField>monedas_1_10_</DataField>
+        </Field>
+        <Field Name="monedas_1_10_Format">
+          <DataField>monedas_1_10_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_10_">
+          <DataField>monedas_2_10_</DataField>
+        </Field>
+        <Field Name="monedas_2_10_Format">
+          <DataField>monedas_2_10_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_10__monedas_2_10_">
+          <DataField>monedas_1_10__monedas_2_10_</DataField>
+        </Field>
+        <Field Name="monedas_1_10__monedas_2_10_Format">
+          <DataField>monedas_1_10__monedas_2_10_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_11_">
+          <DataField>monedas_1_11_</DataField>
+        </Field>
+        <Field Name="monedas_1_11_Format">
+          <DataField>monedas_1_11_Format</DataField>
+        </Field>
+        <Field Name="monedas_2_11_">
+          <DataField>monedas_2_11_</DataField>
+        </Field>
+        <Field Name="monedas_2_11_Format">
+          <DataField>monedas_2_11_Format</DataField>
+        </Field>
+        <Field Name="monedas_1_11__monedas_2_11_">
+          <DataField>monedas_1_11__monedas_2_11_</DataField>
+        </Field>
+        <Field Name="monedas_1_11__monedas_2_11_Format">
+          <DataField>monedas_1_11__monedas_2_11_Format</DataField>
+        </Field>
+        <Field Name="Total_monedas_">
+          <DataField>Total_monedas_</DataField>
+        </Field>
+        <Field Name="Total_monedas_Format">
+          <DataField>Total_monedas_Format</DataField>
+        </Field>
+        <Field Name="Centro_de_Trabajo_Caption_Control74">
+          <DataField>Centro_de_Trabajo_Caption_Control74</DataField>
+        </Field>
+        <Field Name="Pago_N_minas_en_efectivoCaption_Control77">
+          <DataField>Pago_N_minas_en_efectivoCaption_Control77</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO_Control84Caption">
+          <DataField>CurrReport_PAGENO_Control84Caption</DataField>
+        </Field>
+        <Field Name="V2Caption">
+          <DataField>V2Caption</DataField>
+        </Field>
+        <Field Name="Valor_Monedas_BilletesCaption">
+          <DataField>Valor_Monedas_BilletesCaption</DataField>
+        </Field>
+        <Field Name="CantidadCaption">
+          <DataField>CantidadCaption</DataField>
+        </Field>
+        <Field Name="Desglose_de_monedasCaption">
+          <DataField>Desglose_de_monedasCaption</DataField>
+        </Field>
+        <Field Name="ImporteCaption">
+          <DataField>ImporteCaption</DataField>
+        </Field>
+        <Field Name="Counter2_Number">
+          <DataField>Counter2_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

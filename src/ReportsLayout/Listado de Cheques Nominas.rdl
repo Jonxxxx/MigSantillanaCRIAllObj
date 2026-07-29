@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,138 +11,6 @@
       <rd:DataSourceID>43555a04-e1f9-4fba-b5d2-4f5220961383</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__No__empleado_">
-          <DataField>Historico_Cab__nomina__No__empleado_</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Nombre">
-          <DataField>Historico_Cab__nomina_Nombre</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Tipo_operac__">
-          <DataField>Historico_Cab__nomina__Tipo_operac__</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Periodo">
-          <DataField>Historico_Cab__nomina_Periodo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_1_Code_">
-          <DataField>Historico_Cab__nomina__Shortcut_Dimension_1_Code_</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_2_Code_">
-          <DataField>Historico_Cab__nomina__Shortcut_Dimension_2_Code_</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Cargo">
-          <DataField>Historico_Cab__nomina_Cargo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_Ingresos_">
-          <DataField>Historico_Cab__nomina__Total_Ingresos_</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_Ingresos_Format">
-          <DataField>Historico_Cab__nomina__Total_Ingresos_Format</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_deducciones_">
-          <DataField>Historico_Cab__nomina__Total_deducciones_</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_deducciones_Format">
-          <DataField>Historico_Cab__nomina__Total_deducciones_Format</DataField>
-        </Field>
-        <Field Name="Total_Ingresos_____Total_deducciones_">
-          <DataField>Total_Ingresos_____Total_deducciones_</DataField>
-        </Field>
-        <Field Name="Total_Ingresos_____Total_deducciones_Format">
-          <DataField>Total_Ingresos_____Total_deducciones_Format</DataField>
-        </Field>
-        <Field Name="Total_Ingresos_____Total_deducciones__Control1000000007">
-          <DataField>Total_Ingresos_____Total_deducciones__Control1000000007</DataField>
-        </Field>
-        <Field Name="Total_Ingresos_____Total_deducciones__Control1000000007Format">
-          <DataField>Total_Ingresos_____Total_deducciones__Control1000000007Format</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_Ingresos__Control1000000010">
-          <DataField>Historico_Cab__nomina__Total_Ingresos__Control1000000010</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_Ingresos__Control1000000010Format">
-          <DataField>Historico_Cab__nomina__Total_Ingresos__Control1000000010Format</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_deducciones__Control1000000013">
-          <DataField>Historico_Cab__nomina__Total_deducciones__Control1000000013</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_deducciones__Control1000000013Format">
-          <DataField>Historico_Cab__nomina__Total_deducciones__Control1000000013Format</DataField>
-        </Field>
-        <Field Name="Report_of_payment_with_check_to_employeeCaption">
-          <DataField>Report_of_payment_with_check_to_employeeCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__No__empleado_Caption">
-          <DataField>Historico_Cab__nomina__No__empleado_Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_NombreCaption">
-          <DataField>Historico_Cab__nomina_NombreCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Tipo_operac__Caption">
-          <DataField>Historico_Cab__nomina__Tipo_operac__Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_PeriodoCaption">
-          <DataField>Historico_Cab__nomina_PeriodoCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_1_Code_Caption">
-          <DataField>Historico_Cab__nomina__Shortcut_Dimension_1_Code_Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_2_Code_Caption">
-          <DataField>Historico_Cab__nomina__Shortcut_Dimension_2_Code_Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_CargoCaption">
-          <DataField>Historico_Cab__nomina_CargoCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_Ingresos_Caption">
-          <DataField>Historico_Cab__nomina__Total_Ingresos_Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Total_deducciones_Caption">
-          <DataField>Historico_Cab__nomina__Total_deducciones_Caption</DataField>
-        </Field>
-        <Field Name="Total_Ingresos_____Total_deducciones_Caption">
-          <DataField>Total_Ingresos_____Total_deducciones_Caption</DataField>
-        </Field>
-        <Field Name="TotalCaption">
-          <DataField>TotalCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Ano">
-          <DataField>Historico_Cab__nomina_Ano</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
-          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1588,4 +1456,131 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>0227376e-f41a-4a0c-bf08-61f87f29c930</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__No__empleado_">
+          <DataField>Historico_Cab__nomina__No__empleado_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Nombre">
+          <DataField>Historico_Cab__nomina_Nombre</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Tipo_operac__">
+          <DataField>Historico_Cab__nomina__Tipo_operac__</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Periodo">
+          <DataField>Historico_Cab__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_1_Code_">
+          <DataField>Historico_Cab__nomina__Shortcut_Dimension_1_Code_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_2_Code_">
+          <DataField>Historico_Cab__nomina__Shortcut_Dimension_2_Code_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Cargo">
+          <DataField>Historico_Cab__nomina_Cargo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_Ingresos_">
+          <DataField>Historico_Cab__nomina__Total_Ingresos_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_Ingresos_Format">
+          <DataField>Historico_Cab__nomina__Total_Ingresos_Format</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_deducciones_">
+          <DataField>Historico_Cab__nomina__Total_deducciones_</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_deducciones_Format">
+          <DataField>Historico_Cab__nomina__Total_deducciones_Format</DataField>
+        </Field>
+        <Field Name="Total_Ingresos_____Total_deducciones_">
+          <DataField>Total_Ingresos_____Total_deducciones_</DataField>
+        </Field>
+        <Field Name="Total_Ingresos_____Total_deducciones_Format">
+          <DataField>Total_Ingresos_____Total_deducciones_Format</DataField>
+        </Field>
+        <Field Name="Total_Ingresos_____Total_deducciones__Control1000000007">
+          <DataField>Total_Ingresos_____Total_deducciones__Control1000000007</DataField>
+        </Field>
+        <Field Name="Total_Ingresos_____Total_deducciones__Control1000000007Format">
+          <DataField>Total_Ingresos_____Total_deducciones__Control1000000007Format</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_Ingresos__Control1000000010">
+          <DataField>Historico_Cab__nomina__Total_Ingresos__Control1000000010</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_Ingresos__Control1000000010Format">
+          <DataField>Historico_Cab__nomina__Total_Ingresos__Control1000000010Format</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_deducciones__Control1000000013">
+          <DataField>Historico_Cab__nomina__Total_deducciones__Control1000000013</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_deducciones__Control1000000013Format">
+          <DataField>Historico_Cab__nomina__Total_deducciones__Control1000000013Format</DataField>
+        </Field>
+        <Field Name="Report_of_payment_with_check_to_employeeCaption">
+          <DataField>Report_of_payment_with_check_to_employeeCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__No__empleado_Caption">
+          <DataField>Historico_Cab__nomina__No__empleado_Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_NombreCaption">
+          <DataField>Historico_Cab__nomina_NombreCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Tipo_operac__Caption">
+          <DataField>Historico_Cab__nomina__Tipo_operac__Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_PeriodoCaption">
+          <DataField>Historico_Cab__nomina_PeriodoCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_1_Code_Caption">
+          <DataField>Historico_Cab__nomina__Shortcut_Dimension_1_Code_Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Shortcut_Dimension_2_Code_Caption">
+          <DataField>Historico_Cab__nomina__Shortcut_Dimension_2_Code_Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_CargoCaption">
+          <DataField>Historico_Cab__nomina_CargoCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_Ingresos_Caption">
+          <DataField>Historico_Cab__nomina__Total_Ingresos_Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Total_deducciones_Caption">
+          <DataField>Historico_Cab__nomina__Total_deducciones_Caption</DataField>
+        </Field>
+        <Field Name="Total_Ingresos_____Total_deducciones_Caption">
+          <DataField>Total_Ingresos_____Total_deducciones_Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

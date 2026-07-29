@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,369 +11,6 @@
       <rd:DataSourceID>0669b2b3-264e-464c-895f-eef9b7b01ba6</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
-          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
-          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_city_">
-          <DataField>Sales_Invoice_Header__Bill_to_city_</DataField>
-        </Field>
-        <Field Name="Ruc_Cliente">
-          <DataField>Ruc_Cliente</DataField>
-        </Field>
-        <Field Name="NoFactFiscal">
-          <DataField>NoFactFiscal</DataField>
-        </Field>
-        <Field Name="CiudadEmision">
-          <DataField>CiudadEmision</DataField>
-        </Field>
-        <Field Name="C__Piloto____Tel___Fax____Fax">
-          <DataField>C__Piloto____Tel___Fax____Fax</DataField>
-        </Field>
-        <Field Name="Bill_to_Address_________Bill_to_Address_2________Bill_to_City_">
-          <DataField>Bill_to_Address_________Bill_to_Address_2________Bill_to_City_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Due_Date_">
-          <DataField>Sales_Invoice_Header__Due_Date_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_1_">
-          <DataField>CodProd_Arr_1_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_1_">
-          <DataField>Cantidad_Arr_1_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_1_">
-          <DataField>Desc_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_">
-          <DataField>PrecUnit_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_Format">
-          <DataField>PrecUnit_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_1_">
-          <DataField>Imp_Arr_1_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_1_Format">
-          <DataField>Imp_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_2_">
-          <DataField>CodProd_Arr_2_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_2_">
-          <DataField>Cantidad_Arr_2_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_2_">
-          <DataField>Desc_Arr_2_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2_">
-          <DataField>PrecUnit_Arr_2_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2_Format">
-          <DataField>PrecUnit_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_2_">
-          <DataField>Imp_Arr_2_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_2_Format">
-          <DataField>Imp_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_3_">
-          <DataField>CodProd_Arr_3_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_3_">
-          <DataField>Cantidad_Arr_3_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_3_">
-          <DataField>Desc_Arr_3_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3_">
-          <DataField>PrecUnit_Arr_3_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3_Format">
-          <DataField>PrecUnit_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_3_">
-          <DataField>Imp_Arr_3_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_3_Format">
-          <DataField>Imp_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_4_">
-          <DataField>CodProd_Arr_4_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_4_">
-          <DataField>Cantidad_Arr_4_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_4_">
-          <DataField>Desc_Arr_4_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4_">
-          <DataField>PrecUnit_Arr_4_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4_Format">
-          <DataField>PrecUnit_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_4_">
-          <DataField>Imp_Arr_4_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_4_Format">
-          <DataField>Imp_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_5_">
-          <DataField>CodProd_Arr_5_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_5_">
-          <DataField>Cantidad_Arr_5_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_5_">
-          <DataField>Desc_Arr_5_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5_">
-          <DataField>PrecUnit_Arr_5_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5_Format">
-          <DataField>PrecUnit_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_5_">
-          <DataField>Imp_Arr_5_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_5_Format">
-          <DataField>Imp_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_6_">
-          <DataField>CodProd_Arr_6_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_6_">
-          <DataField>Cantidad_Arr_6_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_6_">
-          <DataField>Desc_Arr_6_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6_">
-          <DataField>PrecUnit_Arr_6_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6_Format">
-          <DataField>PrecUnit_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_6_">
-          <DataField>Imp_Arr_6_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_6_Format">
-          <DataField>Imp_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_7_">
-          <DataField>CodProd_Arr_7_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_7_">
-          <DataField>Cantidad_Arr_7_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_7_">
-          <DataField>Desc_Arr_7_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7_">
-          <DataField>PrecUnit_Arr_7_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7_Format">
-          <DataField>PrecUnit_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_7_">
-          <DataField>Imp_Arr_7_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_7_Format">
-          <DataField>Imp_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_8_">
-          <DataField>CodProd_Arr_8_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_8_">
-          <DataField>Cantidad_Arr_8_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_8_">
-          <DataField>Desc_Arr_8_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8_">
-          <DataField>PrecUnit_Arr_8_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8_Format">
-          <DataField>PrecUnit_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_8_">
-          <DataField>Imp_Arr_8_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_8_Format">
-          <DataField>Imp_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_9_">
-          <DataField>CodProd_Arr_9_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_9_">
-          <DataField>Cantidad_Arr_9_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_9_">
-          <DataField>Desc_Arr_9_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9_">
-          <DataField>PrecUnit_Arr_9_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9_Format">
-          <DataField>PrecUnit_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_9_">
-          <DataField>Imp_Arr_9_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_9_Format">
-          <DataField>Imp_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_10_">
-          <DataField>CodProd_Arr_10_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_10_">
-          <DataField>Cantidad_Arr_10_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_10_">
-          <DataField>Desc_Arr_10_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10_">
-          <DataField>PrecUnit_Arr_10_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10_Format">
-          <DataField>PrecUnit_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_10_">
-          <DataField>Imp_Arr_10_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_10_Format">
-          <DataField>Imp_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_11_">
-          <DataField>CodProd_Arr_11_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_11_">
-          <DataField>Cantidad_Arr_11_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_11_">
-          <DataField>Desc_Arr_11_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_11_">
-          <DataField>PrecUnit_Arr_11_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_11_Format">
-          <DataField>PrecUnit_Arr_11_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_11_">
-          <DataField>Imp_Arr_11_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_11_Format">
-          <DataField>Imp_Arr_11_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_12_">
-          <DataField>CodProd_Arr_12_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_12_">
-          <DataField>Cantidad_Arr_12_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_12_">
-          <DataField>Desc_Arr_12_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_12_">
-          <DataField>PrecUnit_Arr_12_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_12_Format">
-          <DataField>PrecUnit_Arr_12_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_12_">
-          <DataField>Imp_Arr_12_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_12_Format">
-          <DataField>Imp_Arr_12_Format</DataField>
-        </Field>
-        <Field Name="NombreVendedor">
-          <DataField>NombreVendedor</DataField>
-        </Field>
-        <Field Name="TotalDescuento">
-          <DataField>TotalDescuento</DataField>
-        </Field>
-        <Field Name="TotalDescuentoFormat">
-          <DataField>TotalDescuentoFormat</DataField>
-        </Field>
-        <Field Name="ImporteBruto">
-          <DataField>ImporteBruto</DataField>
-        </Field>
-        <Field Name="ImporteBrutoFormat">
-          <DataField>ImporteBrutoFormat</DataField>
-        </Field>
-        <Field Name="DescriptionLine_1_____________CurrName">
-          <DataField>DescriptionLine_1_____________CurrName</DataField>
-        </Field>
-        <Field Name="Serie_Factura_________No__Comprobante_Fiscal_">
-          <DataField>Serie_Factura_________No__Comprobante_Fiscal_</DataField>
-        </Field>
-        <Field Name="ImporteTotal">
-          <DataField>ImporteTotal</DataField>
-        </Field>
-        <Field Name="ImporteTotalFormat">
-          <DataField>ImporteTotalFormat</DataField>
-        </Field>
-        <Field Name="Vcto_Caption">
-          <DataField>Vcto_Caption</DataField>
-        </Field>
-        <Field Name="Tasa_Cero___Sin_Derecho_a_Credito_Fiscal_Caption">
-          <DataField>Tasa_Cero___Sin_Derecho_a_Credito_Fiscal_Caption</DataField>
-        </Field>
-        <Field Name="Ley_No__366__del_Libro_y_la_LecturaCaption">
-          <DataField>Ley_No__366__del_Libro_y_la_LecturaCaption</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header_No_">
-          <DataField>Sales_Invoice_Header_No_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line__No__">
-          <DataField>Sales_Invoice_Line__No__</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line_Description">
-          <DataField>Sales_Invoice_Line_Description</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line__Amount_Including_VAT_">
-          <DataField>Sales_Invoice_Line__Amount_Including_VAT_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line__Amount_Including_VAT_Format">
-          <DataField>Sales_Invoice_Line__Amount_Including_VAT_Format</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line__Unit_Price_">
-          <DataField>Sales_Invoice_Line__Unit_Price_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line__Unit_Price_Format">
-          <DataField>Sales_Invoice_Line__Unit_Price_Format</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line_Quantity">
-          <DataField>Sales_Invoice_Line_Quantity</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line_QuantityFormat">
-          <DataField>Sales_Invoice_Line_QuantityFormat</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line_Document_No_">
-          <DataField>Sales_Invoice_Line_Document_No_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Line_Line_No_">
-          <DataField>Sales_Invoice_Line_Line_No_</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3056,4 +2693,362 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>4be231af-6188-4150-a559-2f349cac6df1</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
+          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
+          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_city_">
+          <DataField>Sales_Invoice_Header__Bill_to_city_</DataField>
+        </Field>
+        <Field Name="Ruc_Cliente">
+          <DataField>Ruc_Cliente</DataField>
+        </Field>
+        <Field Name="NoFactFiscal">
+          <DataField>NoFactFiscal</DataField>
+        </Field>
+        <Field Name="CiudadEmision">
+          <DataField>CiudadEmision</DataField>
+        </Field>
+        <Field Name="C__Piloto____Tel___Fax____Fax">
+          <DataField>C__Piloto____Tel___Fax____Fax</DataField>
+        </Field>
+        <Field Name="Bill_to_Address_________Bill_to_Address_2________Bill_to_City_">
+          <DataField>Bill_to_Address_________Bill_to_Address_2________Bill_to_City_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Due_Date_">
+          <DataField>Sales_Invoice_Header__Due_Date_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_1_">
+          <DataField>CodProd_Arr_1_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_1_">
+          <DataField>Cantidad_Arr_1_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_1_">
+          <DataField>Desc_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_">
+          <DataField>PrecUnit_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_Format">
+          <DataField>PrecUnit_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_1_">
+          <DataField>Imp_Arr_1_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_1_Format">
+          <DataField>Imp_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_2_">
+          <DataField>CodProd_Arr_2_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_2_">
+          <DataField>Cantidad_Arr_2_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_2_">
+          <DataField>Desc_Arr_2_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2_">
+          <DataField>PrecUnit_Arr_2_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2_Format">
+          <DataField>PrecUnit_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_2_">
+          <DataField>Imp_Arr_2_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_2_Format">
+          <DataField>Imp_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_3_">
+          <DataField>CodProd_Arr_3_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_3_">
+          <DataField>Cantidad_Arr_3_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_3_">
+          <DataField>Desc_Arr_3_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3_">
+          <DataField>PrecUnit_Arr_3_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3_Format">
+          <DataField>PrecUnit_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_3_">
+          <DataField>Imp_Arr_3_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_3_Format">
+          <DataField>Imp_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_4_">
+          <DataField>CodProd_Arr_4_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_4_">
+          <DataField>Cantidad_Arr_4_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_4_">
+          <DataField>Desc_Arr_4_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4_">
+          <DataField>PrecUnit_Arr_4_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4_Format">
+          <DataField>PrecUnit_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_4_">
+          <DataField>Imp_Arr_4_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_4_Format">
+          <DataField>Imp_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_5_">
+          <DataField>CodProd_Arr_5_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_5_">
+          <DataField>Cantidad_Arr_5_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_5_">
+          <DataField>Desc_Arr_5_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5_">
+          <DataField>PrecUnit_Arr_5_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5_Format">
+          <DataField>PrecUnit_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_5_">
+          <DataField>Imp_Arr_5_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_5_Format">
+          <DataField>Imp_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_6_">
+          <DataField>CodProd_Arr_6_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_6_">
+          <DataField>Cantidad_Arr_6_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_6_">
+          <DataField>Desc_Arr_6_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6_">
+          <DataField>PrecUnit_Arr_6_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6_Format">
+          <DataField>PrecUnit_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_6_">
+          <DataField>Imp_Arr_6_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_6_Format">
+          <DataField>Imp_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_7_">
+          <DataField>CodProd_Arr_7_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_7_">
+          <DataField>Cantidad_Arr_7_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_7_">
+          <DataField>Desc_Arr_7_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7_">
+          <DataField>PrecUnit_Arr_7_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7_Format">
+          <DataField>PrecUnit_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_7_">
+          <DataField>Imp_Arr_7_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_7_Format">
+          <DataField>Imp_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_8_">
+          <DataField>CodProd_Arr_8_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_8_">
+          <DataField>Cantidad_Arr_8_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_8_">
+          <DataField>Desc_Arr_8_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8_">
+          <DataField>PrecUnit_Arr_8_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8_Format">
+          <DataField>PrecUnit_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_8_">
+          <DataField>Imp_Arr_8_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_8_Format">
+          <DataField>Imp_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_9_">
+          <DataField>CodProd_Arr_9_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_9_">
+          <DataField>Cantidad_Arr_9_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_9_">
+          <DataField>Desc_Arr_9_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9_">
+          <DataField>PrecUnit_Arr_9_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9_Format">
+          <DataField>PrecUnit_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_9_">
+          <DataField>Imp_Arr_9_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_9_Format">
+          <DataField>Imp_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_10_">
+          <DataField>CodProd_Arr_10_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_10_">
+          <DataField>Cantidad_Arr_10_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_10_">
+          <DataField>Desc_Arr_10_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10_">
+          <DataField>PrecUnit_Arr_10_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10_Format">
+          <DataField>PrecUnit_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_10_">
+          <DataField>Imp_Arr_10_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_10_Format">
+          <DataField>Imp_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_11_">
+          <DataField>CodProd_Arr_11_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_11_">
+          <DataField>Cantidad_Arr_11_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_11_">
+          <DataField>Desc_Arr_11_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_11_">
+          <DataField>PrecUnit_Arr_11_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_11_Format">
+          <DataField>PrecUnit_Arr_11_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_11_">
+          <DataField>Imp_Arr_11_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_11_Format">
+          <DataField>Imp_Arr_11_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_12_">
+          <DataField>CodProd_Arr_12_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_12_">
+          <DataField>Cantidad_Arr_12_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_12_">
+          <DataField>Desc_Arr_12_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_12_">
+          <DataField>PrecUnit_Arr_12_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_12_Format">
+          <DataField>PrecUnit_Arr_12_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_12_">
+          <DataField>Imp_Arr_12_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_12_Format">
+          <DataField>Imp_Arr_12_Format</DataField>
+        </Field>
+        <Field Name="NombreVendedor">
+          <DataField>NombreVendedor</DataField>
+        </Field>
+        <Field Name="TotalDescuento">
+          <DataField>TotalDescuento</DataField>
+        </Field>
+        <Field Name="TotalDescuentoFormat">
+          <DataField>TotalDescuentoFormat</DataField>
+        </Field>
+        <Field Name="ImporteBruto">
+          <DataField>ImporteBruto</DataField>
+        </Field>
+        <Field Name="ImporteBrutoFormat">
+          <DataField>ImporteBrutoFormat</DataField>
+        </Field>
+        <Field Name="DescriptionLine_1_____________CurrName">
+          <DataField>DescriptionLine_1_____________CurrName</DataField>
+        </Field>
+        <Field Name="Serie_Factura_________No__Comprobante_Fiscal_">
+          <DataField>Serie_Factura_________No__Comprobante_Fiscal_</DataField>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+        </Field>
+        <Field Name="ImporteTotalFormat">
+          <DataField>ImporteTotalFormat</DataField>
+        </Field>
+        <Field Name="Vcto_Caption">
+          <DataField>Vcto_Caption</DataField>
+        </Field>
+        <Field Name="Tasa_Cero___Sin_Derecho_a_Credito_Fiscal_Caption">
+          <DataField>Tasa_Cero___Sin_Derecho_a_Credito_Fiscal_Caption</DataField>
+        </Field>
+        <Field Name="Ley_No__366__del_Libro_y_la_LecturaCaption">
+          <DataField>Ley_No__366__del_Libro_y_la_LecturaCaption</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header_No_">
+          <DataField>Sales_Invoice_Header_No_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line__No__">
+          <DataField>Sales_Invoice_Line__No__</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line_Description">
+          <DataField>Sales_Invoice_Line_Description</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line__Amount_Including_VAT_">
+          <DataField>Sales_Invoice_Line__Amount_Including_VAT_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line__Amount_Including_VAT_Format">
+          <DataField>Sales_Invoice_Line__Amount_Including_VAT_Format</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line__Unit_Price_">
+          <DataField>Sales_Invoice_Line__Unit_Price_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line__Unit_Price_Format">
+          <DataField>Sales_Invoice_Line__Unit_Price_Format</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line_Quantity">
+          <DataField>Sales_Invoice_Line_Quantity</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line_QuantityFormat">
+          <DataField>Sales_Invoice_Line_QuantityFormat</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line_Document_No_">
+          <DataField>Sales_Invoice_Line_Document_No_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Line_Line_No_">
+          <DataField>Sales_Invoice_Line_Line_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

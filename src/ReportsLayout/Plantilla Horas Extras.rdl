@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,108 +10,6 @@
       <rd:DataSourceID>8328e4c0-5484-4ccd-88fc-3ed61b80c745</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Employee_Salario">
-          <DataField>Employee_Salario</DataField>
-        </Field>
-        <Field Name="Employee_SalarioFormat">
-          <DataField>Employee_SalarioFormat</DataField>
-        </Field>
-        <Field Name="Template_Over_TimeCaption">
-          <DataField>Template_Over_TimeCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Employee__No__Caption">
-          <DataField>Employee__No__Caption</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_Caption">
-          <DataField>Employee__Full_Name_Caption</DataField>
-        </Field>
-        <Field Name="Employee_SalarioCaption">
-          <DataField>Employee_SalarioCaption</DataField>
-        </Field>
-        <Field Name="V1Caption">
-          <DataField>V1Caption</DataField>
-        </Field>
-        <Field Name="V2Caption">
-          <DataField>V2Caption</DataField>
-        </Field>
-        <Field Name="V3Caption">
-          <DataField>V3Caption</DataField>
-        </Field>
-        <Field Name="V4Caption">
-          <DataField>V4Caption</DataField>
-        </Field>
-        <Field Name="V5Caption">
-          <DataField>V5Caption</DataField>
-        </Field>
-        <Field Name="V6Caption">
-          <DataField>V6Caption</DataField>
-        </Field>
-        <Field Name="V7Caption">
-          <DataField>V7Caption</DataField>
-        </Field>
-        <Field Name="V8Caption">
-          <DataField>V8Caption</DataField>
-        </Field>
-        <Field Name="V9Caption">
-          <DataField>V9Caption</DataField>
-        </Field>
-        <Field Name="V10Caption">
-          <DataField>V10Caption</DataField>
-        </Field>
-        <Field Name="V11Caption">
-          <DataField>V11Caption</DataField>
-        </Field>
-        <Field Name="V12Caption">
-          <DataField>V12Caption</DataField>
-        </Field>
-        <Field Name="V13Caption">
-          <DataField>V13Caption</DataField>
-        </Field>
-        <Field Name="V14Caption">
-          <DataField>V14Caption</DataField>
-        </Field>
-        <Field Name="V15Caption">
-          <DataField>V15Caption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1854,4 +1752,101 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>720b038d-9173-437c-8473-dd4a81a79108</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Employee_Salario">
+          <DataField>Employee_Salario</DataField>
+        </Field>
+        <Field Name="Employee_SalarioFormat">
+          <DataField>Employee_SalarioFormat</DataField>
+        </Field>
+        <Field Name="Template_Over_TimeCaption">
+          <DataField>Template_Over_TimeCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Employee__No__Caption">
+          <DataField>Employee__No__Caption</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_Caption">
+          <DataField>Employee__Full_Name_Caption</DataField>
+        </Field>
+        <Field Name="Employee_SalarioCaption">
+          <DataField>Employee_SalarioCaption</DataField>
+        </Field>
+        <Field Name="V1Caption">
+          <DataField>V1Caption</DataField>
+        </Field>
+        <Field Name="V2Caption">
+          <DataField>V2Caption</DataField>
+        </Field>
+        <Field Name="V3Caption">
+          <DataField>V3Caption</DataField>
+        </Field>
+        <Field Name="V4Caption">
+          <DataField>V4Caption</DataField>
+        </Field>
+        <Field Name="V5Caption">
+          <DataField>V5Caption</DataField>
+        </Field>
+        <Field Name="V6Caption">
+          <DataField>V6Caption</DataField>
+        </Field>
+        <Field Name="V7Caption">
+          <DataField>V7Caption</DataField>
+        </Field>
+        <Field Name="V8Caption">
+          <DataField>V8Caption</DataField>
+        </Field>
+        <Field Name="V9Caption">
+          <DataField>V9Caption</DataField>
+        </Field>
+        <Field Name="V10Caption">
+          <DataField>V10Caption</DataField>
+        </Field>
+        <Field Name="V11Caption">
+          <DataField>V11Caption</DataField>
+        </Field>
+        <Field Name="V12Caption">
+          <DataField>V12Caption</DataField>
+        </Field>
+        <Field Name="V13Caption">
+          <DataField>V13Caption</DataField>
+        </Field>
+        <Field Name="V14Caption">
+          <DataField>V14Caption</DataField>
+        </Field>
+        <Field Name="V15Caption">
+          <DataField>V15Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

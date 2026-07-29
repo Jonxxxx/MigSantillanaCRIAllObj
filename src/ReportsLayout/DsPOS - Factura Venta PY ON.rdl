@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,1053 +11,6 @@
       <rd:DataSourceID>da7b2637-203e-4fa1-a06f-58d7179c1458</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Sales_Invoice_Header__Bill_to_Customer_No__">
-          <DataField>Sales_Invoice_Header__Bill_to_Customer_No__</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Posting_Date_">
-          <DataField>Sales_Invoice_Header__Posting_Date_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
-          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
-          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
-        </Field>
-        <Field Name="FechaVencimiento">
-          <DataField>FechaVencimiento</DataField>
-        </Field>
-        <Field Name="TelCliente">
-          <DataField>TelCliente</DataField>
-        </Field>
-        <Field Name="Ruc_Cliente">
-          <DataField>Ruc_Cliente</DataField>
-        </Field>
-        <Field Name="rCliente__No_Factura">
-          <DataField>rCliente__No_Factura</DataField>
-        </Field>
-        <Field Name="rCliente__No_Cliente">
-          <DataField>rCliente__No_Cliente</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_1">
-          <DataField>CodProd_Arr_1</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_1">
-          <DataField>Cantidad_Arr_1</DataField>
-        </Field>
-        <Field Name="Desc_Arr_1">
-          <DataField>Desc_Arr_1</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1">
-          <DataField>PrecUnit_Arr_1</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1Format">
-          <DataField>PrecUnit_Arr_1Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_1">
-          <DataField>PorcDto_Arr_1</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_1Format">
-          <DataField>PorcDto_Arr_1Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_1">
-          <DataField>ImpDesc_Arr_1</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_1Format">
-          <DataField>ImpDesc_Arr_1Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_1">
-          <DataField>BaseExe_Arr_1</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_1Format">
-          <DataField>BaseExe_Arr_1Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_1">
-          <DataField>Iva1_Arr_1</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_1Format">
-          <DataField>Iva1_Arr_1Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_1">
-          <DataField>Iva2_Arr_1</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_1Format">
-          <DataField>Iva2_Arr_1Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_2">
-          <DataField>Iva2_Arr_2</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_2Format">
-          <DataField>Iva2_Arr_2Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_2">
-          <DataField>Iva1_Arr_2</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_2Format">
-          <DataField>Iva1_Arr_2Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_2">
-          <DataField>BaseExe_Arr_2</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_2Format">
-          <DataField>BaseExe_Arr_2Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_2">
-          <DataField>ImpDesc_Arr_2</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_2Format">
-          <DataField>ImpDesc_Arr_2Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_2">
-          <DataField>PorcDto_Arr_2</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_2Format">
-          <DataField>PorcDto_Arr_2Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2">
-          <DataField>PrecUnit_Arr_2</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2Format">
-          <DataField>PrecUnit_Arr_2Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_2">
-          <DataField>Desc_Arr_2</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_2">
-          <DataField>Cantidad_Arr_2</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_2">
-          <DataField>CodProd_Arr_2</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_3">
-          <DataField>Iva2_Arr_3</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_3Format">
-          <DataField>Iva2_Arr_3Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_3">
-          <DataField>Iva1_Arr_3</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_3Format">
-          <DataField>Iva1_Arr_3Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_3">
-          <DataField>BaseExe_Arr_3</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_3Format">
-          <DataField>BaseExe_Arr_3Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_3">
-          <DataField>ImpDesc_Arr_3</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_3Format">
-          <DataField>ImpDesc_Arr_3Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_3">
-          <DataField>PorcDto_Arr_3</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_3Format">
-          <DataField>PorcDto_Arr_3Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3">
-          <DataField>PrecUnit_Arr_3</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3Format">
-          <DataField>PrecUnit_Arr_3Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_3">
-          <DataField>Desc_Arr_3</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_3">
-          <DataField>Cantidad_Arr_3</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_3">
-          <DataField>CodProd_Arr_3</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_4">
-          <DataField>CodProd_Arr_4</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_4">
-          <DataField>Cantidad_Arr_4</DataField>
-        </Field>
-        <Field Name="Desc_Arr_4">
-          <DataField>Desc_Arr_4</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4">
-          <DataField>PrecUnit_Arr_4</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4Format">
-          <DataField>PrecUnit_Arr_4Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_4">
-          <DataField>PorcDto_Arr_4</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_4Format">
-          <DataField>PorcDto_Arr_4Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_4">
-          <DataField>ImpDesc_Arr_4</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_4Format">
-          <DataField>ImpDesc_Arr_4Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_4">
-          <DataField>BaseExe_Arr_4</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_4Format">
-          <DataField>BaseExe_Arr_4Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_4">
-          <DataField>Iva1_Arr_4</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_4Format">
-          <DataField>Iva1_Arr_4Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_4">
-          <DataField>Iva2_Arr_4</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_4Format">
-          <DataField>Iva2_Arr_4Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_5">
-          <DataField>Iva2_Arr_5</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_5Format">
-          <DataField>Iva2_Arr_5Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_5">
-          <DataField>Iva1_Arr_5</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_5Format">
-          <DataField>Iva1_Arr_5Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_5">
-          <DataField>BaseExe_Arr_5</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_5Format">
-          <DataField>BaseExe_Arr_5Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_5">
-          <DataField>ImpDesc_Arr_5</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_5Format">
-          <DataField>ImpDesc_Arr_5Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_5">
-          <DataField>PorcDto_Arr_5</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_5Format">
-          <DataField>PorcDto_Arr_5Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5">
-          <DataField>PrecUnit_Arr_5</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5Format">
-          <DataField>PrecUnit_Arr_5Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_5">
-          <DataField>Desc_Arr_5</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_5">
-          <DataField>Cantidad_Arr_5</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_5">
-          <DataField>CodProd_Arr_5</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_6">
-          <DataField>Iva2_Arr_6</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_6Format">
-          <DataField>Iva2_Arr_6Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_6">
-          <DataField>Iva1_Arr_6</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_6Format">
-          <DataField>Iva1_Arr_6Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_6">
-          <DataField>BaseExe_Arr_6</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_6Format">
-          <DataField>BaseExe_Arr_6Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_6">
-          <DataField>ImpDesc_Arr_6</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_6Format">
-          <DataField>ImpDesc_Arr_6Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_6">
-          <DataField>PorcDto_Arr_6</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_6Format">
-          <DataField>PorcDto_Arr_6Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6">
-          <DataField>PrecUnit_Arr_6</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6Format">
-          <DataField>PrecUnit_Arr_6Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_6">
-          <DataField>Desc_Arr_6</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_6">
-          <DataField>Cantidad_Arr_6</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_6">
-          <DataField>CodProd_Arr_6</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_7">
-          <DataField>CodProd_Arr_7</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_7">
-          <DataField>Cantidad_Arr_7</DataField>
-        </Field>
-        <Field Name="Desc_Arr_7">
-          <DataField>Desc_Arr_7</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7">
-          <DataField>PrecUnit_Arr_7</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7Format">
-          <DataField>PrecUnit_Arr_7Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_7">
-          <DataField>PorcDto_Arr_7</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_7Format">
-          <DataField>PorcDto_Arr_7Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_7">
-          <DataField>ImpDesc_Arr_7</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_7Format">
-          <DataField>ImpDesc_Arr_7Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_7">
-          <DataField>BaseExe_Arr_7</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_7Format">
-          <DataField>BaseExe_Arr_7Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_7">
-          <DataField>Iva1_Arr_7</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_7Format">
-          <DataField>Iva1_Arr_7Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_7">
-          <DataField>Iva2_Arr_7</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_7Format">
-          <DataField>Iva2_Arr_7Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_8">
-          <DataField>Iva2_Arr_8</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_8Format">
-          <DataField>Iva2_Arr_8Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_8">
-          <DataField>Iva1_Arr_8</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_8Format">
-          <DataField>Iva1_Arr_8Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_8">
-          <DataField>BaseExe_Arr_8</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_8Format">
-          <DataField>BaseExe_Arr_8Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_8">
-          <DataField>ImpDesc_Arr_8</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_8Format">
-          <DataField>ImpDesc_Arr_8Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_8">
-          <DataField>PorcDto_Arr_8</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_8Format">
-          <DataField>PorcDto_Arr_8Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8">
-          <DataField>PrecUnit_Arr_8</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8Format">
-          <DataField>PrecUnit_Arr_8Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_8">
-          <DataField>Desc_Arr_8</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_8">
-          <DataField>Cantidad_Arr_8</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_8">
-          <DataField>CodProd_Arr_8</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_9">
-          <DataField>Iva2_Arr_9</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_9Format">
-          <DataField>Iva2_Arr_9Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_9">
-          <DataField>Iva1_Arr_9</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_9Format">
-          <DataField>Iva1_Arr_9Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_9">
-          <DataField>BaseExe_Arr_9</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_9Format">
-          <DataField>BaseExe_Arr_9Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_9">
-          <DataField>ImpDesc_Arr_9</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_9Format">
-          <DataField>ImpDesc_Arr_9Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_9">
-          <DataField>PorcDto_Arr_9</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_9Format">
-          <DataField>PorcDto_Arr_9Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9">
-          <DataField>PrecUnit_Arr_9</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9Format">
-          <DataField>PrecUnit_Arr_9Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_9">
-          <DataField>Desc_Arr_9</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_9">
-          <DataField>Cantidad_Arr_9</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_9">
-          <DataField>CodProd_Arr_9</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_10">
-          <DataField>CodProd_Arr_10</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_10">
-          <DataField>Cantidad_Arr_10</DataField>
-        </Field>
-        <Field Name="Desc_Arr_10">
-          <DataField>Desc_Arr_10</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10">
-          <DataField>PrecUnit_Arr_10</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10Format">
-          <DataField>PrecUnit_Arr_10Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_10">
-          <DataField>PorcDto_Arr_10</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_10Format">
-          <DataField>PorcDto_Arr_10Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_10">
-          <DataField>ImpDesc_Arr_10</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_10Format">
-          <DataField>ImpDesc_Arr_10Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_10">
-          <DataField>BaseExe_Arr_10</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_10Format">
-          <DataField>BaseExe_Arr_10Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_10">
-          <DataField>Iva1_Arr_10</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_10Format">
-          <DataField>Iva1_Arr_10Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_10">
-          <DataField>Iva2_Arr_10</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_10Format">
-          <DataField>Iva2_Arr_10Format</DataField>
-        </Field>
-        <Field Name="TotalEx">
-          <DataField>TotalEx</DataField>
-        </Field>
-        <Field Name="TotalExFormat">
-          <DataField>TotalExFormat</DataField>
-        </Field>
-        <Field Name="TotalDescuento">
-          <DataField>TotalDescuento</DataField>
-        </Field>
-        <Field Name="TotalDescuentoFormat">
-          <DataField>TotalDescuentoFormat</DataField>
-        </Field>
-        <Field Name="DescriptionLine_1_____________CurrName">
-          <DataField>DescriptionLine_1_____________CurrName</DataField>
-        </Field>
-        <Field Name="Iva1_Total">
-          <DataField>Iva1_Total</DataField>
-        </Field>
-        <Field Name="Iva1_TotalFormat">
-          <DataField>Iva1_TotalFormat</DataField>
-        </Field>
-        <Field Name="Iva2_Total">
-          <DataField>Iva2_Total</DataField>
-        </Field>
-        <Field Name="Iva2_TotalFormat">
-          <DataField>Iva2_TotalFormat</DataField>
-        </Field>
-        <Field Name="ImporteFinal">
-          <DataField>ImporteFinal</DataField>
-        </Field>
-        <Field Name="ImporteFinalFormat">
-          <DataField>ImporteFinalFormat</DataField>
-        </Field>
-        <Field Name="ImporteIVaTotal">
-          <DataField>ImporteIVaTotal</DataField>
-        </Field>
-        <Field Name="ImporteIVaTotalFormat">
-          <DataField>ImporteIVaTotalFormat</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__No__">
-          <DataField>Sales_Invoice_Header__No__</DataField>
-        </Field>
-        <Field Name="rCliente__No__">
-          <DataField>rCliente__No__</DataField>
-        </Field>
-        <Field Name="FORMAT__Posting_Date__">
-          <DataField>FORMAT__Posting_Date__</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_Name__Control1000000103">
-          <DataField>Sales_Invoice_Header__Bill_to_Name__Control1000000103</DataField>
-        </Field>
-        <Field Name="Bill_to_Address__________Bill_to_City________Bill_to_County_">
-          <DataField>Bill_to_Address__________Bill_to_City________Bill_to_County_</DataField>
-        </Field>
-        <Field Name="FORMAT__Due_Date__">
-          <DataField>FORMAT__Due_Date__</DataField>
-        </Field>
-        <Field Name="Tel">
-          <DataField>Tel</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__VAT_Registration_No__">
-          <DataField>Sales_Invoice_Header__VAT_Registration_No__</DataField>
-        </Field>
-        <Field Name="DELCHR__Bill_to_Customer_No________">
-          <DataField>DELCHR__Bill_to_Customer_No________</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_1_">
-          <DataField>CodProd_Arr_1_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_1_">
-          <DataField>Cantidad_Arr_1_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_1_">
-          <DataField>Desc_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_">
-          <DataField>PrecUnit_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_Format">
-          <DataField>PrecUnit_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_1_">
-          <DataField>PorcDto_Arr_1_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_1_Format">
-          <DataField>PorcDto_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_1_">
-          <DataField>ImpDesc_Arr_1_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_1_Format">
-          <DataField>ImpDesc_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_1_">
-          <DataField>BaseExe_Arr_1_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_1_Format">
-          <DataField>BaseExe_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_2_">
-          <DataField>BaseExe_Arr_2_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_2_Format">
-          <DataField>BaseExe_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_2_">
-          <DataField>ImpDesc_Arr_2_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_2_Format">
-          <DataField>ImpDesc_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_2_">
-          <DataField>PorcDto_Arr_2_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_2_Format">
-          <DataField>PorcDto_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2_">
-          <DataField>PrecUnit_Arr_2_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_2_Format">
-          <DataField>PrecUnit_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_2_">
-          <DataField>Desc_Arr_2_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_2_">
-          <DataField>Cantidad_Arr_2_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_2_">
-          <DataField>CodProd_Arr_2_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_1_">
-          <DataField>Iva1_Arr_1_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_1_Format">
-          <DataField>Iva1_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_2_">
-          <DataField>Iva1_Arr_2_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_2_Format">
-          <DataField>Iva1_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_3_">
-          <DataField>Iva1_Arr_3_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_3_Format">
-          <DataField>Iva1_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_3_">
-          <DataField>BaseExe_Arr_3_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_3_Format">
-          <DataField>BaseExe_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_3_">
-          <DataField>ImpDesc_Arr_3_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_3_Format">
-          <DataField>ImpDesc_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_3_">
-          <DataField>PorcDto_Arr_3_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_3_Format">
-          <DataField>PorcDto_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3_">
-          <DataField>PrecUnit_Arr_3_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_3_Format">
-          <DataField>PrecUnit_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_3_">
-          <DataField>Desc_Arr_3_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_3_">
-          <DataField>Cantidad_Arr_3_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_3_">
-          <DataField>CodProd_Arr_3_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_4_">
-          <DataField>CodProd_Arr_4_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_4_">
-          <DataField>Cantidad_Arr_4_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_4_">
-          <DataField>Desc_Arr_4_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4_">
-          <DataField>PrecUnit_Arr_4_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_4_Format">
-          <DataField>PrecUnit_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_4_">
-          <DataField>PorcDto_Arr_4_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_4_Format">
-          <DataField>PorcDto_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_4_">
-          <DataField>ImpDesc_Arr_4_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_4_Format">
-          <DataField>ImpDesc_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_4_">
-          <DataField>BaseExe_Arr_4_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_4_Format">
-          <DataField>BaseExe_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_4_">
-          <DataField>Iva1_Arr_4_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_4_Format">
-          <DataField>Iva1_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_5_">
-          <DataField>Iva1_Arr_5_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_5_Format">
-          <DataField>Iva1_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_5_">
-          <DataField>BaseExe_Arr_5_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_5_Format">
-          <DataField>BaseExe_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_5_">
-          <DataField>ImpDesc_Arr_5_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_5_Format">
-          <DataField>ImpDesc_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_5_">
-          <DataField>PorcDto_Arr_5_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_5_Format">
-          <DataField>PorcDto_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5_">
-          <DataField>PrecUnit_Arr_5_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_5_Format">
-          <DataField>PrecUnit_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_5_">
-          <DataField>Desc_Arr_5_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_5_">
-          <DataField>Cantidad_Arr_5_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_5_">
-          <DataField>CodProd_Arr_5_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_6_">
-          <DataField>Iva1_Arr_6_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_6_Format">
-          <DataField>Iva1_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_6_">
-          <DataField>BaseExe_Arr_6_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_6_Format">
-          <DataField>BaseExe_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_6_">
-          <DataField>ImpDesc_Arr_6_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_6_Format">
-          <DataField>ImpDesc_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_6_">
-          <DataField>PorcDto_Arr_6_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_6_Format">
-          <DataField>PorcDto_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6_">
-          <DataField>PrecUnit_Arr_6_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_6_Format">
-          <DataField>PrecUnit_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_6_">
-          <DataField>Desc_Arr_6_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_6_">
-          <DataField>Cantidad_Arr_6_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_6_">
-          <DataField>CodProd_Arr_6_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_1_">
-          <DataField>Iva2_Arr_1_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_1_Format">
-          <DataField>Iva2_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_2_">
-          <DataField>Iva2_Arr_2_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_2_Format">
-          <DataField>Iva2_Arr_2_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_3_">
-          <DataField>Iva2_Arr_3_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_3_Format">
-          <DataField>Iva2_Arr_3_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_4_">
-          <DataField>Iva2_Arr_4_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_4_Format">
-          <DataField>Iva2_Arr_4_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_5_">
-          <DataField>Iva2_Arr_5_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_5_Format">
-          <DataField>Iva2_Arr_5_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_6_">
-          <DataField>Iva2_Arr_6_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_6_Format">
-          <DataField>Iva2_Arr_6_Format</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_7_">
-          <DataField>CodProd_Arr_7_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_7_">
-          <DataField>Cantidad_Arr_7_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_7_">
-          <DataField>Desc_Arr_7_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7_">
-          <DataField>PrecUnit_Arr_7_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_7_Format">
-          <DataField>PrecUnit_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_7_">
-          <DataField>PorcDto_Arr_7_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_7_Format">
-          <DataField>PorcDto_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_7_">
-          <DataField>ImpDesc_Arr_7_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_7_Format">
-          <DataField>ImpDesc_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_7_">
-          <DataField>BaseExe_Arr_7_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_7_Format">
-          <DataField>BaseExe_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_7_">
-          <DataField>Iva1_Arr_7_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_7_Format">
-          <DataField>Iva1_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_7_">
-          <DataField>Iva2_Arr_7_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_7_Format">
-          <DataField>Iva2_Arr_7_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_8_">
-          <DataField>Iva2_Arr_8_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_8_Format">
-          <DataField>Iva2_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_8_">
-          <DataField>Iva1_Arr_8_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_8_Format">
-          <DataField>Iva1_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_8_">
-          <DataField>BaseExe_Arr_8_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_8_Format">
-          <DataField>BaseExe_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_8_">
-          <DataField>ImpDesc_Arr_8_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_8_Format">
-          <DataField>ImpDesc_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_8_">
-          <DataField>PorcDto_Arr_8_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_8_Format">
-          <DataField>PorcDto_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8_">
-          <DataField>PrecUnit_Arr_8_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_8_Format">
-          <DataField>PrecUnit_Arr_8_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_8_">
-          <DataField>Desc_Arr_8_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_8_">
-          <DataField>Cantidad_Arr_8_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_8_">
-          <DataField>CodProd_Arr_8_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_9_">
-          <DataField>Iva2_Arr_9_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_9_Format">
-          <DataField>Iva2_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_9_">
-          <DataField>Iva1_Arr_9_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_9_Format">
-          <DataField>Iva1_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_9_">
-          <DataField>BaseExe_Arr_9_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_9_Format">
-          <DataField>BaseExe_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_9_">
-          <DataField>ImpDesc_Arr_9_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_9_Format">
-          <DataField>ImpDesc_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_9_">
-          <DataField>PorcDto_Arr_9_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_9_Format">
-          <DataField>PorcDto_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9_">
-          <DataField>PrecUnit_Arr_9_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_9_Format">
-          <DataField>PrecUnit_Arr_9_Format</DataField>
-        </Field>
-        <Field Name="Desc_Arr_9_">
-          <DataField>Desc_Arr_9_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_9_">
-          <DataField>Cantidad_Arr_9_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_9_">
-          <DataField>CodProd_Arr_9_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_10_">
-          <DataField>CodProd_Arr_10_</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_10_">
-          <DataField>Cantidad_Arr_10_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_10_">
-          <DataField>Desc_Arr_10_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10_">
-          <DataField>PrecUnit_Arr_10_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_10_Format">
-          <DataField>PrecUnit_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_10_">
-          <DataField>PorcDto_Arr_10_</DataField>
-        </Field>
-        <Field Name="PorcDto_Arr_10_Format">
-          <DataField>PorcDto_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_10_">
-          <DataField>ImpDesc_Arr_10_</DataField>
-        </Field>
-        <Field Name="ImpDesc_Arr_10_Format">
-          <DataField>ImpDesc_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_10_">
-          <DataField>BaseExe_Arr_10_</DataField>
-        </Field>
-        <Field Name="BaseExe_Arr_10_Format">
-          <DataField>BaseExe_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_10_">
-          <DataField>Iva1_Arr_10_</DataField>
-        </Field>
-        <Field Name="Iva1_Arr_10_Format">
-          <DataField>Iva1_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_10_">
-          <DataField>Iva2_Arr_10_</DataField>
-        </Field>
-        <Field Name="Iva2_Arr_10_Format">
-          <DataField>Iva2_Arr_10_Format</DataField>
-        </Field>
-        <Field Name="wtotalEx">
-          <DataField>wtotalEx</DataField>
-        </Field>
-        <Field Name="wtotalExFormat">
-          <DataField>wtotalExFormat</DataField>
-        </Field>
-        <Field Name="wTotalDescuento">
-          <DataField>wTotalDescuento</DataField>
-        </Field>
-        <Field Name="wTotalDescuentoFormat">
-          <DataField>wTotalDescuentoFormat</DataField>
-        </Field>
-        <Field Name="DescriptionLine_1__________">
-          <DataField>DescriptionLine_1__________</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Amount_Including_VAT_">
-          <DataField>Sales_Invoice_Header__Amount_Including_VAT_</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Amount_Including_VAT_Format">
-          <DataField>Sales_Invoice_Header__Amount_Including_VAT_Format</DataField>
-        </Field>
-        <Field Name="Columna1IVA">
-          <DataField>Columna1IVA</DataField>
-        </Field>
-        <Field Name="Columna1IVAFormat">
-          <DataField>Columna1IVAFormat</DataField>
-        </Field>
-        <Field Name="Columna2Iva">
-          <DataField>Columna2Iva</DataField>
-        </Field>
-        <Field Name="Columna2IvaFormat">
-          <DataField>Columna2IvaFormat</DataField>
-        </Field>
-        <Field Name="Amount_Including_VAT____Amount">
-          <DataField>Amount_Including_VAT____Amount</DataField>
-        </Field>
-        <Field Name="Amount_Including_VAT____AmountFormat">
-          <DataField>Amount_Including_VAT____AmountFormat</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -15724,4 +14677,1046 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>256b390c-6d85-4b9b-8328-22d9a6a03c24</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Sales_Invoice_Header__Bill_to_Customer_No__">
+          <DataField>Sales_Invoice_Header__Bill_to_Customer_No__</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Posting_Date_">
+          <DataField>Sales_Invoice_Header__Posting_Date_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
+          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
+          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
+        </Field>
+        <Field Name="FechaVencimiento">
+          <DataField>FechaVencimiento</DataField>
+        </Field>
+        <Field Name="TelCliente">
+          <DataField>TelCliente</DataField>
+        </Field>
+        <Field Name="Ruc_Cliente">
+          <DataField>Ruc_Cliente</DataField>
+        </Field>
+        <Field Name="rCliente__No_Factura">
+          <DataField>rCliente__No_Factura</DataField>
+        </Field>
+        <Field Name="rCliente__No_Cliente">
+          <DataField>rCliente__No_Cliente</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_1">
+          <DataField>CodProd_Arr_1</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_1">
+          <DataField>Cantidad_Arr_1</DataField>
+        </Field>
+        <Field Name="Desc_Arr_1">
+          <DataField>Desc_Arr_1</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1">
+          <DataField>PrecUnit_Arr_1</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1Format">
+          <DataField>PrecUnit_Arr_1Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_1">
+          <DataField>PorcDto_Arr_1</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_1Format">
+          <DataField>PorcDto_Arr_1Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_1">
+          <DataField>ImpDesc_Arr_1</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_1Format">
+          <DataField>ImpDesc_Arr_1Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_1">
+          <DataField>BaseExe_Arr_1</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_1Format">
+          <DataField>BaseExe_Arr_1Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_1">
+          <DataField>Iva1_Arr_1</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_1Format">
+          <DataField>Iva1_Arr_1Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_1">
+          <DataField>Iva2_Arr_1</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_1Format">
+          <DataField>Iva2_Arr_1Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_2">
+          <DataField>Iva2_Arr_2</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_2Format">
+          <DataField>Iva2_Arr_2Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_2">
+          <DataField>Iva1_Arr_2</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_2Format">
+          <DataField>Iva1_Arr_2Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_2">
+          <DataField>BaseExe_Arr_2</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_2Format">
+          <DataField>BaseExe_Arr_2Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_2">
+          <DataField>ImpDesc_Arr_2</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_2Format">
+          <DataField>ImpDesc_Arr_2Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_2">
+          <DataField>PorcDto_Arr_2</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_2Format">
+          <DataField>PorcDto_Arr_2Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2">
+          <DataField>PrecUnit_Arr_2</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2Format">
+          <DataField>PrecUnit_Arr_2Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_2">
+          <DataField>Desc_Arr_2</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_2">
+          <DataField>Cantidad_Arr_2</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_2">
+          <DataField>CodProd_Arr_2</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_3">
+          <DataField>Iva2_Arr_3</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_3Format">
+          <DataField>Iva2_Arr_3Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_3">
+          <DataField>Iva1_Arr_3</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_3Format">
+          <DataField>Iva1_Arr_3Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_3">
+          <DataField>BaseExe_Arr_3</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_3Format">
+          <DataField>BaseExe_Arr_3Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_3">
+          <DataField>ImpDesc_Arr_3</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_3Format">
+          <DataField>ImpDesc_Arr_3Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_3">
+          <DataField>PorcDto_Arr_3</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_3Format">
+          <DataField>PorcDto_Arr_3Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3">
+          <DataField>PrecUnit_Arr_3</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3Format">
+          <DataField>PrecUnit_Arr_3Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_3">
+          <DataField>Desc_Arr_3</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_3">
+          <DataField>Cantidad_Arr_3</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_3">
+          <DataField>CodProd_Arr_3</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_4">
+          <DataField>CodProd_Arr_4</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_4">
+          <DataField>Cantidad_Arr_4</DataField>
+        </Field>
+        <Field Name="Desc_Arr_4">
+          <DataField>Desc_Arr_4</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4">
+          <DataField>PrecUnit_Arr_4</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4Format">
+          <DataField>PrecUnit_Arr_4Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_4">
+          <DataField>PorcDto_Arr_4</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_4Format">
+          <DataField>PorcDto_Arr_4Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_4">
+          <DataField>ImpDesc_Arr_4</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_4Format">
+          <DataField>ImpDesc_Arr_4Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_4">
+          <DataField>BaseExe_Arr_4</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_4Format">
+          <DataField>BaseExe_Arr_4Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_4">
+          <DataField>Iva1_Arr_4</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_4Format">
+          <DataField>Iva1_Arr_4Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_4">
+          <DataField>Iva2_Arr_4</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_4Format">
+          <DataField>Iva2_Arr_4Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_5">
+          <DataField>Iva2_Arr_5</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_5Format">
+          <DataField>Iva2_Arr_5Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_5">
+          <DataField>Iva1_Arr_5</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_5Format">
+          <DataField>Iva1_Arr_5Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_5">
+          <DataField>BaseExe_Arr_5</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_5Format">
+          <DataField>BaseExe_Arr_5Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_5">
+          <DataField>ImpDesc_Arr_5</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_5Format">
+          <DataField>ImpDesc_Arr_5Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_5">
+          <DataField>PorcDto_Arr_5</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_5Format">
+          <DataField>PorcDto_Arr_5Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5">
+          <DataField>PrecUnit_Arr_5</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5Format">
+          <DataField>PrecUnit_Arr_5Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_5">
+          <DataField>Desc_Arr_5</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_5">
+          <DataField>Cantidad_Arr_5</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_5">
+          <DataField>CodProd_Arr_5</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_6">
+          <DataField>Iva2_Arr_6</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_6Format">
+          <DataField>Iva2_Arr_6Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_6">
+          <DataField>Iva1_Arr_6</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_6Format">
+          <DataField>Iva1_Arr_6Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_6">
+          <DataField>BaseExe_Arr_6</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_6Format">
+          <DataField>BaseExe_Arr_6Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_6">
+          <DataField>ImpDesc_Arr_6</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_6Format">
+          <DataField>ImpDesc_Arr_6Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_6">
+          <DataField>PorcDto_Arr_6</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_6Format">
+          <DataField>PorcDto_Arr_6Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6">
+          <DataField>PrecUnit_Arr_6</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6Format">
+          <DataField>PrecUnit_Arr_6Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_6">
+          <DataField>Desc_Arr_6</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_6">
+          <DataField>Cantidad_Arr_6</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_6">
+          <DataField>CodProd_Arr_6</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_7">
+          <DataField>CodProd_Arr_7</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_7">
+          <DataField>Cantidad_Arr_7</DataField>
+        </Field>
+        <Field Name="Desc_Arr_7">
+          <DataField>Desc_Arr_7</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7">
+          <DataField>PrecUnit_Arr_7</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7Format">
+          <DataField>PrecUnit_Arr_7Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_7">
+          <DataField>PorcDto_Arr_7</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_7Format">
+          <DataField>PorcDto_Arr_7Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_7">
+          <DataField>ImpDesc_Arr_7</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_7Format">
+          <DataField>ImpDesc_Arr_7Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_7">
+          <DataField>BaseExe_Arr_7</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_7Format">
+          <DataField>BaseExe_Arr_7Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_7">
+          <DataField>Iva1_Arr_7</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_7Format">
+          <DataField>Iva1_Arr_7Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_7">
+          <DataField>Iva2_Arr_7</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_7Format">
+          <DataField>Iva2_Arr_7Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_8">
+          <DataField>Iva2_Arr_8</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_8Format">
+          <DataField>Iva2_Arr_8Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_8">
+          <DataField>Iva1_Arr_8</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_8Format">
+          <DataField>Iva1_Arr_8Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_8">
+          <DataField>BaseExe_Arr_8</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_8Format">
+          <DataField>BaseExe_Arr_8Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_8">
+          <DataField>ImpDesc_Arr_8</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_8Format">
+          <DataField>ImpDesc_Arr_8Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_8">
+          <DataField>PorcDto_Arr_8</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_8Format">
+          <DataField>PorcDto_Arr_8Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8">
+          <DataField>PrecUnit_Arr_8</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8Format">
+          <DataField>PrecUnit_Arr_8Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_8">
+          <DataField>Desc_Arr_8</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_8">
+          <DataField>Cantidad_Arr_8</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_8">
+          <DataField>CodProd_Arr_8</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_9">
+          <DataField>Iva2_Arr_9</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_9Format">
+          <DataField>Iva2_Arr_9Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_9">
+          <DataField>Iva1_Arr_9</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_9Format">
+          <DataField>Iva1_Arr_9Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_9">
+          <DataField>BaseExe_Arr_9</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_9Format">
+          <DataField>BaseExe_Arr_9Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_9">
+          <DataField>ImpDesc_Arr_9</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_9Format">
+          <DataField>ImpDesc_Arr_9Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_9">
+          <DataField>PorcDto_Arr_9</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_9Format">
+          <DataField>PorcDto_Arr_9Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9">
+          <DataField>PrecUnit_Arr_9</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9Format">
+          <DataField>PrecUnit_Arr_9Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_9">
+          <DataField>Desc_Arr_9</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_9">
+          <DataField>Cantidad_Arr_9</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_9">
+          <DataField>CodProd_Arr_9</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_10">
+          <DataField>CodProd_Arr_10</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_10">
+          <DataField>Cantidad_Arr_10</DataField>
+        </Field>
+        <Field Name="Desc_Arr_10">
+          <DataField>Desc_Arr_10</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10">
+          <DataField>PrecUnit_Arr_10</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10Format">
+          <DataField>PrecUnit_Arr_10Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_10">
+          <DataField>PorcDto_Arr_10</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_10Format">
+          <DataField>PorcDto_Arr_10Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_10">
+          <DataField>ImpDesc_Arr_10</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_10Format">
+          <DataField>ImpDesc_Arr_10Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_10">
+          <DataField>BaseExe_Arr_10</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_10Format">
+          <DataField>BaseExe_Arr_10Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_10">
+          <DataField>Iva1_Arr_10</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_10Format">
+          <DataField>Iva1_Arr_10Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_10">
+          <DataField>Iva2_Arr_10</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_10Format">
+          <DataField>Iva2_Arr_10Format</DataField>
+        </Field>
+        <Field Name="TotalEx">
+          <DataField>TotalEx</DataField>
+        </Field>
+        <Field Name="TotalExFormat">
+          <DataField>TotalExFormat</DataField>
+        </Field>
+        <Field Name="TotalDescuento">
+          <DataField>TotalDescuento</DataField>
+        </Field>
+        <Field Name="TotalDescuentoFormat">
+          <DataField>TotalDescuentoFormat</DataField>
+        </Field>
+        <Field Name="DescriptionLine_1_____________CurrName">
+          <DataField>DescriptionLine_1_____________CurrName</DataField>
+        </Field>
+        <Field Name="Iva1_Total">
+          <DataField>Iva1_Total</DataField>
+        </Field>
+        <Field Name="Iva1_TotalFormat">
+          <DataField>Iva1_TotalFormat</DataField>
+        </Field>
+        <Field Name="Iva2_Total">
+          <DataField>Iva2_Total</DataField>
+        </Field>
+        <Field Name="Iva2_TotalFormat">
+          <DataField>Iva2_TotalFormat</DataField>
+        </Field>
+        <Field Name="ImporteFinal">
+          <DataField>ImporteFinal</DataField>
+        </Field>
+        <Field Name="ImporteFinalFormat">
+          <DataField>ImporteFinalFormat</DataField>
+        </Field>
+        <Field Name="ImporteIVaTotal">
+          <DataField>ImporteIVaTotal</DataField>
+        </Field>
+        <Field Name="ImporteIVaTotalFormat">
+          <DataField>ImporteIVaTotalFormat</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__No__">
+          <DataField>Sales_Invoice_Header__No__</DataField>
+        </Field>
+        <Field Name="rCliente__No__">
+          <DataField>rCliente__No__</DataField>
+        </Field>
+        <Field Name="FORMAT__Posting_Date__">
+          <DataField>FORMAT__Posting_Date__</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_Name__Control1000000103">
+          <DataField>Sales_Invoice_Header__Bill_to_Name__Control1000000103</DataField>
+        </Field>
+        <Field Name="Bill_to_Address__________Bill_to_City________Bill_to_County_">
+          <DataField>Bill_to_Address__________Bill_to_City________Bill_to_County_</DataField>
+        </Field>
+        <Field Name="FORMAT__Due_Date__">
+          <DataField>FORMAT__Due_Date__</DataField>
+        </Field>
+        <Field Name="Tel">
+          <DataField>Tel</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__VAT_Registration_No__">
+          <DataField>Sales_Invoice_Header__VAT_Registration_No__</DataField>
+        </Field>
+        <Field Name="DELCHR__Bill_to_Customer_No________">
+          <DataField>DELCHR__Bill_to_Customer_No________</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_1_">
+          <DataField>CodProd_Arr_1_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_1_">
+          <DataField>Cantidad_Arr_1_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_1_">
+          <DataField>Desc_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_">
+          <DataField>PrecUnit_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_Format">
+          <DataField>PrecUnit_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_1_">
+          <DataField>PorcDto_Arr_1_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_1_Format">
+          <DataField>PorcDto_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_1_">
+          <DataField>ImpDesc_Arr_1_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_1_Format">
+          <DataField>ImpDesc_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_1_">
+          <DataField>BaseExe_Arr_1_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_1_Format">
+          <DataField>BaseExe_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_2_">
+          <DataField>BaseExe_Arr_2_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_2_Format">
+          <DataField>BaseExe_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_2_">
+          <DataField>ImpDesc_Arr_2_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_2_Format">
+          <DataField>ImpDesc_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_2_">
+          <DataField>PorcDto_Arr_2_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_2_Format">
+          <DataField>PorcDto_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2_">
+          <DataField>PrecUnit_Arr_2_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_2_Format">
+          <DataField>PrecUnit_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_2_">
+          <DataField>Desc_Arr_2_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_2_">
+          <DataField>Cantidad_Arr_2_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_2_">
+          <DataField>CodProd_Arr_2_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_1_">
+          <DataField>Iva1_Arr_1_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_1_Format">
+          <DataField>Iva1_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_2_">
+          <DataField>Iva1_Arr_2_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_2_Format">
+          <DataField>Iva1_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_3_">
+          <DataField>Iva1_Arr_3_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_3_Format">
+          <DataField>Iva1_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_3_">
+          <DataField>BaseExe_Arr_3_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_3_Format">
+          <DataField>BaseExe_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_3_">
+          <DataField>ImpDesc_Arr_3_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_3_Format">
+          <DataField>ImpDesc_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_3_">
+          <DataField>PorcDto_Arr_3_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_3_Format">
+          <DataField>PorcDto_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3_">
+          <DataField>PrecUnit_Arr_3_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_3_Format">
+          <DataField>PrecUnit_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_3_">
+          <DataField>Desc_Arr_3_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_3_">
+          <DataField>Cantidad_Arr_3_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_3_">
+          <DataField>CodProd_Arr_3_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_4_">
+          <DataField>CodProd_Arr_4_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_4_">
+          <DataField>Cantidad_Arr_4_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_4_">
+          <DataField>Desc_Arr_4_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4_">
+          <DataField>PrecUnit_Arr_4_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_4_Format">
+          <DataField>PrecUnit_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_4_">
+          <DataField>PorcDto_Arr_4_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_4_Format">
+          <DataField>PorcDto_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_4_">
+          <DataField>ImpDesc_Arr_4_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_4_Format">
+          <DataField>ImpDesc_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_4_">
+          <DataField>BaseExe_Arr_4_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_4_Format">
+          <DataField>BaseExe_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_4_">
+          <DataField>Iva1_Arr_4_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_4_Format">
+          <DataField>Iva1_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_5_">
+          <DataField>Iva1_Arr_5_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_5_Format">
+          <DataField>Iva1_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_5_">
+          <DataField>BaseExe_Arr_5_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_5_Format">
+          <DataField>BaseExe_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_5_">
+          <DataField>ImpDesc_Arr_5_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_5_Format">
+          <DataField>ImpDesc_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_5_">
+          <DataField>PorcDto_Arr_5_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_5_Format">
+          <DataField>PorcDto_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5_">
+          <DataField>PrecUnit_Arr_5_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_5_Format">
+          <DataField>PrecUnit_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_5_">
+          <DataField>Desc_Arr_5_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_5_">
+          <DataField>Cantidad_Arr_5_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_5_">
+          <DataField>CodProd_Arr_5_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_6_">
+          <DataField>Iva1_Arr_6_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_6_Format">
+          <DataField>Iva1_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_6_">
+          <DataField>BaseExe_Arr_6_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_6_Format">
+          <DataField>BaseExe_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_6_">
+          <DataField>ImpDesc_Arr_6_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_6_Format">
+          <DataField>ImpDesc_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_6_">
+          <DataField>PorcDto_Arr_6_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_6_Format">
+          <DataField>PorcDto_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6_">
+          <DataField>PrecUnit_Arr_6_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_6_Format">
+          <DataField>PrecUnit_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_6_">
+          <DataField>Desc_Arr_6_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_6_">
+          <DataField>Cantidad_Arr_6_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_6_">
+          <DataField>CodProd_Arr_6_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_1_">
+          <DataField>Iva2_Arr_1_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_1_Format">
+          <DataField>Iva2_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_2_">
+          <DataField>Iva2_Arr_2_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_2_Format">
+          <DataField>Iva2_Arr_2_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_3_">
+          <DataField>Iva2_Arr_3_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_3_Format">
+          <DataField>Iva2_Arr_3_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_4_">
+          <DataField>Iva2_Arr_4_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_4_Format">
+          <DataField>Iva2_Arr_4_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_5_">
+          <DataField>Iva2_Arr_5_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_5_Format">
+          <DataField>Iva2_Arr_5_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_6_">
+          <DataField>Iva2_Arr_6_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_6_Format">
+          <DataField>Iva2_Arr_6_Format</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_7_">
+          <DataField>CodProd_Arr_7_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_7_">
+          <DataField>Cantidad_Arr_7_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_7_">
+          <DataField>Desc_Arr_7_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7_">
+          <DataField>PrecUnit_Arr_7_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_7_Format">
+          <DataField>PrecUnit_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_7_">
+          <DataField>PorcDto_Arr_7_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_7_Format">
+          <DataField>PorcDto_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_7_">
+          <DataField>ImpDesc_Arr_7_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_7_Format">
+          <DataField>ImpDesc_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_7_">
+          <DataField>BaseExe_Arr_7_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_7_Format">
+          <DataField>BaseExe_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_7_">
+          <DataField>Iva1_Arr_7_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_7_Format">
+          <DataField>Iva1_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_7_">
+          <DataField>Iva2_Arr_7_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_7_Format">
+          <DataField>Iva2_Arr_7_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_8_">
+          <DataField>Iva2_Arr_8_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_8_Format">
+          <DataField>Iva2_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_8_">
+          <DataField>Iva1_Arr_8_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_8_Format">
+          <DataField>Iva1_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_8_">
+          <DataField>BaseExe_Arr_8_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_8_Format">
+          <DataField>BaseExe_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_8_">
+          <DataField>ImpDesc_Arr_8_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_8_Format">
+          <DataField>ImpDesc_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_8_">
+          <DataField>PorcDto_Arr_8_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_8_Format">
+          <DataField>PorcDto_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8_">
+          <DataField>PrecUnit_Arr_8_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_8_Format">
+          <DataField>PrecUnit_Arr_8_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_8_">
+          <DataField>Desc_Arr_8_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_8_">
+          <DataField>Cantidad_Arr_8_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_8_">
+          <DataField>CodProd_Arr_8_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_9_">
+          <DataField>Iva2_Arr_9_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_9_Format">
+          <DataField>Iva2_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_9_">
+          <DataField>Iva1_Arr_9_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_9_Format">
+          <DataField>Iva1_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_9_">
+          <DataField>BaseExe_Arr_9_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_9_Format">
+          <DataField>BaseExe_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_9_">
+          <DataField>ImpDesc_Arr_9_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_9_Format">
+          <DataField>ImpDesc_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_9_">
+          <DataField>PorcDto_Arr_9_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_9_Format">
+          <DataField>PorcDto_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9_">
+          <DataField>PrecUnit_Arr_9_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_9_Format">
+          <DataField>PrecUnit_Arr_9_Format</DataField>
+        </Field>
+        <Field Name="Desc_Arr_9_">
+          <DataField>Desc_Arr_9_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_9_">
+          <DataField>Cantidad_Arr_9_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_9_">
+          <DataField>CodProd_Arr_9_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_10_">
+          <DataField>CodProd_Arr_10_</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_10_">
+          <DataField>Cantidad_Arr_10_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_10_">
+          <DataField>Desc_Arr_10_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10_">
+          <DataField>PrecUnit_Arr_10_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_10_Format">
+          <DataField>PrecUnit_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_10_">
+          <DataField>PorcDto_Arr_10_</DataField>
+        </Field>
+        <Field Name="PorcDto_Arr_10_Format">
+          <DataField>PorcDto_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_10_">
+          <DataField>ImpDesc_Arr_10_</DataField>
+        </Field>
+        <Field Name="ImpDesc_Arr_10_Format">
+          <DataField>ImpDesc_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_10_">
+          <DataField>BaseExe_Arr_10_</DataField>
+        </Field>
+        <Field Name="BaseExe_Arr_10_Format">
+          <DataField>BaseExe_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_10_">
+          <DataField>Iva1_Arr_10_</DataField>
+        </Field>
+        <Field Name="Iva1_Arr_10_Format">
+          <DataField>Iva1_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_10_">
+          <DataField>Iva2_Arr_10_</DataField>
+        </Field>
+        <Field Name="Iva2_Arr_10_Format">
+          <DataField>Iva2_Arr_10_Format</DataField>
+        </Field>
+        <Field Name="wtotalEx">
+          <DataField>wtotalEx</DataField>
+        </Field>
+        <Field Name="wtotalExFormat">
+          <DataField>wtotalExFormat</DataField>
+        </Field>
+        <Field Name="wTotalDescuento">
+          <DataField>wTotalDescuento</DataField>
+        </Field>
+        <Field Name="wTotalDescuentoFormat">
+          <DataField>wTotalDescuentoFormat</DataField>
+        </Field>
+        <Field Name="DescriptionLine_1__________">
+          <DataField>DescriptionLine_1__________</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Amount_Including_VAT_">
+          <DataField>Sales_Invoice_Header__Amount_Including_VAT_</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Amount_Including_VAT_Format">
+          <DataField>Sales_Invoice_Header__Amount_Including_VAT_Format</DataField>
+        </Field>
+        <Field Name="Columna1IVA">
+          <DataField>Columna1IVA</DataField>
+        </Field>
+        <Field Name="Columna1IVAFormat">
+          <DataField>Columna1IVAFormat</DataField>
+        </Field>
+        <Field Name="Columna2Iva">
+          <DataField>Columna2Iva</DataField>
+        </Field>
+        <Field Name="Columna2IvaFormat">
+          <DataField>Columna2IvaFormat</DataField>
+        </Field>
+        <Field Name="Amount_Including_VAT____Amount">
+          <DataField>Amount_Including_VAT____Amount</DataField>
+        </Field>
+        <Field Name="Amount_Including_VAT____AmountFormat">
+          <DataField>Amount_Including_VAT____AmountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

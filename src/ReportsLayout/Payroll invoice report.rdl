@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,153 +11,6 @@
       <rd:DataSourceID>b9fde8ae-f63a-44f6-8ad3-707860ea5fb2</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="Empl__No__">
-          <DataField>Empl__No__</DataField>
-        </Field>
-        <Field Name="Empl__Document_ID_">
-          <DataField>Empl__Document_ID_</DataField>
-        </Field>
-        <Field Name="Empl__Full_Name_">
-          <DataField>Empl__Full_Name_</DataField>
-        </Field>
-        <Field Name="PuestoTrab_Descripcion">
-          <DataField>PuestoTrab_Descripcion</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Fecha_Entrada_">
-          <DataField>Historico_Cab__nomina__Fecha_Entrada_</DataField>
-        </Field>
-        <Field Name="EmpresaCot_Imagen">
-          <DataField>EmpresaCot_Imagen</DataField>
-        </Field>
-        <Field Name="UPPERCASE_txtPeriodo_">
-          <DataField>UPPERCASE_txtPeriodo_</DataField>
-        </Field>
-        <Field Name="EmpresaCot_Municipio">
-          <DataField>EmpresaCot_Municipio</DataField>
-        </Field>
-        <Field Name="EmpresaCot_Direccion">
-          <DataField>EmpresaCot_Direccion</DataField>
-        </Field>
-        <Field Name="EmpresaCot__RNC_CED_">
-          <DataField>EmpresaCot__RNC_CED_</DataField>
-        </Field>
-        <Field Name="Document_ID_Caption">
-          <DataField>Document_ID_Caption</DataField>
-        </Field>
-        <Field Name="EMPLOYEECaption">
-          <DataField>EMPLOYEECaption</DataField>
-        </Field>
-        <Field Name="CargoCaption">
-          <DataField>CargoCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina__Fecha_Entrada_Caption">
-          <DataField>Historico_Cab__nomina__Fecha_Entrada_Caption</DataField>
-        </Field>
-        <Field Name="DESCRIPTIONCaption">
-          <DataField>DESCRIPTIONCaption</DataField>
-        </Field>
-        <Field Name="QUANTITYCaption">
-          <DataField>QUANTITYCaption</DataField>
-        </Field>
-        <Field Name="AMOUNTCaption">
-          <DataField>AMOUNTCaption</DataField>
-        </Field>
-        <Field Name="YTDCaption">
-          <DataField>YTDCaption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_No__empleado">
-          <DataField>Historico_Cab__nomina_No__empleado</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Ano">
-          <DataField>Historico_Cab__nomina_Ano</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Per_odo">
-          <DataField>Historico_Cab__nomina_Per_odo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
-          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_No__Documento">
-          <DataField>Historico_Cab__nomina_No__Documento</DataField>
-        </Field>
-        <Field Name="Ingresos_Descripcion">
-          <DataField>Ingresos_Descripcion</DataField>
-        </Field>
-        <Field Name="Ingresos_Cantidad">
-          <DataField>Ingresos_Cantidad</DataField>
-        </Field>
-        <Field Name="Ingresos_CantidadFormat">
-          <DataField>Ingresos_CantidadFormat</DataField>
-        </Field>
-        <Field Name="Ingresos_Total">
-          <DataField>Ingresos_Total</DataField>
-        </Field>
-        <Field Name="Ingresos_TotalFormat">
-          <DataField>Ingresos_TotalFormat</DataField>
-        </Field>
-        <Field Name="Acumulado_Total">
-          <DataField>Acumulado_Total</DataField>
-        </Field>
-        <Field Name="Acumulado_TotalFormat">
-          <DataField>Acumulado_TotalFormat</DataField>
-        </Field>
-        <Field Name="Ingresos_Total_Control1000000041">
-          <DataField>Ingresos_Total_Control1000000041</DataField>
-        </Field>
-        <Field Name="Ingresos_Total_Control1000000041Format">
-          <DataField>Ingresos_Total_Control1000000041Format</DataField>
-        </Field>
-        <Field Name="Text001___FORMAT__Tipo_concepto__">
-          <DataField>Text001___FORMAT__Tipo_concepto__</DataField>
-        </Field>
-        <Field Name="Ingresos_Total_Control1000000042">
-          <DataField>Ingresos_Total_Control1000000042</DataField>
-        </Field>
-        <Field Name="Ingresos_Total_Control1000000042Format">
-          <DataField>Ingresos_Total_Control1000000042Format</DataField>
-        </Field>
-        <Field Name="I__EARNINGSCaption">
-          <DataField>I__EARNINGSCaption</DataField>
-        </Field>
-        <Field Name="II__DEDUCTIONSCaption">
-          <DataField>II__DEDUCTIONSCaption</DataField>
-        </Field>
-        <Field Name="NET_AMOUNTCaption">
-          <DataField>NET_AMOUNTCaption</DataField>
-        </Field>
-        <Field Name="Ingresos_No__empleado">
-          <DataField>Ingresos_No__empleado</DataField>
-        </Field>
-        <Field Name="Ingresos_Tipo_nomina">
-          <DataField>Ingresos_Tipo_nomina</DataField>
-        </Field>
-        <Field Name="Ingresos_Periodo">
-          <DataField>Ingresos_Periodo</DataField>
-        </Field>
-        <Field Name="Ingresos_No__Orden">
-          <DataField>Ingresos_No__Orden</DataField>
-        </Field>
-        <Field Name="Ingresos_Tipo_concepto">
-          <DataField>Ingresos_Tipo_concepto</DataField>
-        </Field>
-        <Field Name="Ingresos_No__Documento">
-          <DataField>Ingresos_No__Documento</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1556,4 +1409,146 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>e6c51e30-aaec-42cb-a190-89ee35cd6cf0</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Empl__No__">
+          <DataField>Empl__No__</DataField>
+        </Field>
+        <Field Name="Empl__Document_ID_">
+          <DataField>Empl__Document_ID_</DataField>
+        </Field>
+        <Field Name="Empl__Full_Name_">
+          <DataField>Empl__Full_Name_</DataField>
+        </Field>
+        <Field Name="PuestoTrab_Descripcion">
+          <DataField>PuestoTrab_Descripcion</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Fecha_Entrada_">
+          <DataField>Historico_Cab__nomina__Fecha_Entrada_</DataField>
+        </Field>
+        <Field Name="EmpresaCot_Imagen">
+          <DataField>EmpresaCot_Imagen</DataField>
+        </Field>
+        <Field Name="UPPERCASE_txtPeriodo_">
+          <DataField>UPPERCASE_txtPeriodo_</DataField>
+        </Field>
+        <Field Name="EmpresaCot_Municipio">
+          <DataField>EmpresaCot_Municipio</DataField>
+        </Field>
+        <Field Name="EmpresaCot_Direccion">
+          <DataField>EmpresaCot_Direccion</DataField>
+        </Field>
+        <Field Name="EmpresaCot__RNC_CED_">
+          <DataField>EmpresaCot__RNC_CED_</DataField>
+        </Field>
+        <Field Name="Document_ID_Caption">
+          <DataField>Document_ID_Caption</DataField>
+        </Field>
+        <Field Name="EMPLOYEECaption">
+          <DataField>EMPLOYEECaption</DataField>
+        </Field>
+        <Field Name="CargoCaption">
+          <DataField>CargoCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina__Fecha_Entrada_Caption">
+          <DataField>Historico_Cab__nomina__Fecha_Entrada_Caption</DataField>
+        </Field>
+        <Field Name="DESCRIPTIONCaption">
+          <DataField>DESCRIPTIONCaption</DataField>
+        </Field>
+        <Field Name="QUANTITYCaption">
+          <DataField>QUANTITYCaption</DataField>
+        </Field>
+        <Field Name="AMOUNTCaption">
+          <DataField>AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="YTDCaption">
+          <DataField>YTDCaption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_No__empleado">
+          <DataField>Historico_Cab__nomina_No__empleado</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Per_odo">
+          <DataField>Historico_Cab__nomina_Per_odo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_No__Documento">
+          <DataField>Historico_Cab__nomina_No__Documento</DataField>
+        </Field>
+        <Field Name="Ingresos_Descripcion">
+          <DataField>Ingresos_Descripcion</DataField>
+        </Field>
+        <Field Name="Ingresos_Cantidad">
+          <DataField>Ingresos_Cantidad</DataField>
+        </Field>
+        <Field Name="Ingresos_CantidadFormat">
+          <DataField>Ingresos_CantidadFormat</DataField>
+        </Field>
+        <Field Name="Ingresos_Total">
+          <DataField>Ingresos_Total</DataField>
+        </Field>
+        <Field Name="Ingresos_TotalFormat">
+          <DataField>Ingresos_TotalFormat</DataField>
+        </Field>
+        <Field Name="Acumulado_Total">
+          <DataField>Acumulado_Total</DataField>
+        </Field>
+        <Field Name="Acumulado_TotalFormat">
+          <DataField>Acumulado_TotalFormat</DataField>
+        </Field>
+        <Field Name="Ingresos_Total_Control1000000041">
+          <DataField>Ingresos_Total_Control1000000041</DataField>
+        </Field>
+        <Field Name="Ingresos_Total_Control1000000041Format">
+          <DataField>Ingresos_Total_Control1000000041Format</DataField>
+        </Field>
+        <Field Name="Text001___FORMAT__Tipo_concepto__">
+          <DataField>Text001___FORMAT__Tipo_concepto__</DataField>
+        </Field>
+        <Field Name="Ingresos_Total_Control1000000042">
+          <DataField>Ingresos_Total_Control1000000042</DataField>
+        </Field>
+        <Field Name="Ingresos_Total_Control1000000042Format">
+          <DataField>Ingresos_Total_Control1000000042Format</DataField>
+        </Field>
+        <Field Name="I__EARNINGSCaption">
+          <DataField>I__EARNINGSCaption</DataField>
+        </Field>
+        <Field Name="II__DEDUCTIONSCaption">
+          <DataField>II__DEDUCTIONSCaption</DataField>
+        </Field>
+        <Field Name="NET_AMOUNTCaption">
+          <DataField>NET_AMOUNTCaption</DataField>
+        </Field>
+        <Field Name="Ingresos_No__empleado">
+          <DataField>Ingresos_No__empleado</DataField>
+        </Field>
+        <Field Name="Ingresos_Tipo_nomina">
+          <DataField>Ingresos_Tipo_nomina</DataField>
+        </Field>
+        <Field Name="Ingresos_Periodo">
+          <DataField>Ingresos_Periodo</DataField>
+        </Field>
+        <Field Name="Ingresos_No__Orden">
+          <DataField>Ingresos_No__Orden</DataField>
+        </Field>
+        <Field Name="Ingresos_Tipo_concepto">
+          <DataField>Ingresos_Tipo_concepto</DataField>
+        </Field>
+        <Field Name="Ingresos_No__Documento">
+          <DataField>Ingresos_No__Documento</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

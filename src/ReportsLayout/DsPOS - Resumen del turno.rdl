@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,159 +10,6 @@
       <rd:DataSourceID>19c3db0f-c5b9-4313-95f6-01d06526d5cd</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="NombreInformeCaption">
-          <DataField>NombreInformeCaption</DataField>
-        </Field>
-        <Field Name="PaginaCaption">
-          <DataField>PaginaCaption</DataField>
-        </Field>
-        <Field Name="NombreTienda">
-          <DataField>NombreTienda</DataField>
-        </Field>
-        <Field Name="NombreTPV">
-          <DataField>NombreTPV</DataField>
-        </Field>
-        <Field Name="Fecha">
-          <DataField>Fecha</DataField>
-        </Field>
-        <Field Name="NoTurno">
-          <DataField>NoTurno</DataField>
-        </Field>
-        <Field Name="AperturaCaption">
-          <DataField>AperturaCaption</DataField>
-        </Field>
-        <Field Name="CierreCaption">
-          <DataField>CierreCaption</DataField>
-        </Field>
-        <Field Name="HoraApertura">
-          <DataField>HoraApertura</DataField>
-        </Field>
-        <Field Name="HoraCierre">
-          <DataField>HoraCierre</DataField>
-        </Field>
-        <Field Name="UsuarioApertura">
-          <DataField>UsuarioApertura</DataField>
-        </Field>
-        <Field Name="UsuarioCierre">
-          <DataField>UsuarioCierre</DataField>
-        </Field>
-        <Field Name="NC_Lbl">
-          <DataField>NC_Lbl</DataField>
-        </Field>
-        <Field Name="Anul_lbl">
-          <DataField>Anul_lbl</DataField>
-        </Field>
-        <Field Name="Pedidos_lbl">
-          <DataField>Pedidos_lbl</DataField>
-        </Field>
-        <Field Name="VTAS_lbl">
-          <DataField>VTAS_lbl</DataField>
-        </Field>
-        <Field Name="Ped_Filtro">
-          <DataField>Ped_Filtro</DataField>
-        </Field>
-        <Field Name="Ped_ClienteCaption">
-          <DataField>Ped_ClienteCaption</DataField>
-        </Field>
-        <Field Name="Ped_NombreClienteCaption">
-          <DataField>Ped_NombreClienteCaption</DataField>
-        </Field>
-        <Field Name="Ped_Cliente">
-          <DataField>Ped_Cliente</DataField>
-        </Field>
-        <Field Name="Ped_NombreCliente">
-          <DataField>Ped_NombreCliente</DataField>
-        </Field>
-        <Field Name="Ped_NoDocumento">
-          <DataField>Ped_NoDocumento</DataField>
-        </Field>
-        <Field Name="Ped_ImporteIVAInc">
-          <DataField>Ped_ImporteIVAInc</DataField>
-        </Field>
-        <Field Name="Ped_ImporteIVAIncFormat">
-          <DataField>Ped_ImporteIVAIncFormat</DataField>
-        </Field>
-        <Field Name="Ped_Hora">
-          <DataField>Ped_Hora</DataField>
-        </Field>
-        <Field Name="Ped_NCF">
-          <DataField>Ped_NCF</DataField>
-        </Field>
-        <Field Name="NC_Filtro">
-          <DataField>NC_Filtro</DataField>
-        </Field>
-        <Field Name="NC_ClienteCaption">
-          <DataField>NC_ClienteCaption</DataField>
-        </Field>
-        <Field Name="NC_NombreClienteCaption">
-          <DataField>NC_NombreClienteCaption</DataField>
-        </Field>
-        <Field Name="NC_Cliente">
-          <DataField>NC_Cliente</DataField>
-        </Field>
-        <Field Name="NC_NombreCliente">
-          <DataField>NC_NombreCliente</DataField>
-        </Field>
-        <Field Name="NC_NoDocumento">
-          <DataField>NC_NoDocumento</DataField>
-        </Field>
-        <Field Name="NC_Importe">
-          <DataField>NC_Importe</DataField>
-        </Field>
-        <Field Name="NC_ImporteFormat">
-          <DataField>NC_ImporteFormat</DataField>
-        </Field>
-        <Field Name="NC_Hora">
-          <DataField>NC_Hora</DataField>
-        </Field>
-        <Field Name="NC_NCF">
-          <DataField>NC_NCF</DataField>
-        </Field>
-        <Field Name="Anul_Filtro">
-          <DataField>Anul_Filtro</DataField>
-        </Field>
-        <Field Name="Anul_ClienteCaption">
-          <DataField>Anul_ClienteCaption</DataField>
-        </Field>
-        <Field Name="Anul_NombreCliente">
-          <DataField>Anul_NombreCliente</DataField>
-        </Field>
-        <Field Name="Anul_NoDocumento">
-          <DataField>Anul_NoDocumento</DataField>
-        </Field>
-        <Field Name="Anul_Importe">
-          <DataField>Anul_Importe</DataField>
-        </Field>
-        <Field Name="Anul_ImporteFormat">
-          <DataField>Anul_ImporteFormat</DataField>
-        </Field>
-        <Field Name="Anul_Hora">
-          <DataField>Anul_Hora</DataField>
-        </Field>
-        <Field Name="Anul_NCF">
-          <DataField>Anul_NCF</DataField>
-        </Field>
-        <Field Name="Anul_Cliente">
-          <DataField>Anul_Cliente</DataField>
-        </Field>
-        <Field Name="Anul_NombreClienteCaption">
-          <DataField>Anul_NombreClienteCaption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -3580,4 +3427,143 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="NombreInformeCaption">
+          <DataField>NombreInformeCaption</DataField>
+        </Field>
+        <Field Name="PaginaCaption">
+          <DataField>PaginaCaption</DataField>
+        </Field>
+        <Field Name="NombreTienda">
+          <DataField>NombreTienda</DataField>
+        </Field>
+        <Field Name="NombreTPV">
+          <DataField>NombreTPV</DataField>
+        </Field>
+        <Field Name="Fecha">
+          <DataField>Fecha</DataField>
+        </Field>
+        <Field Name="NoTurno">
+          <DataField>NoTurno</DataField>
+        </Field>
+        <Field Name="AperturaCaption">
+          <DataField>AperturaCaption</DataField>
+        </Field>
+        <Field Name="CierreCaption">
+          <DataField>CierreCaption</DataField>
+        </Field>
+        <Field Name="HoraApertura">
+          <DataField>HoraApertura</DataField>
+        </Field>
+        <Field Name="HoraCierre">
+          <DataField>HoraCierre</DataField>
+        </Field>
+        <Field Name="UsuarioApertura">
+          <DataField>UsuarioApertura</DataField>
+        </Field>
+        <Field Name="UsuarioCierre">
+          <DataField>UsuarioCierre</DataField>
+        </Field>
+        <Field Name="NC_Lbl">
+          <DataField>NC_Lbl</DataField>
+        </Field>
+        <Field Name="Anul_lbl">
+          <DataField>Anul_lbl</DataField>
+        </Field>
+        <Field Name="Pedidos_lbl">
+          <DataField>Pedidos_lbl</DataField>
+        </Field>
+        <Field Name="VTAS_lbl">
+          <DataField>VTAS_lbl</DataField>
+        </Field>
+        <Field Name="Ped_Filtro">
+          <DataField>Ped_Filtro</DataField>
+        </Field>
+        <Field Name="Ped_ClienteCaption">
+          <DataField>Ped_ClienteCaption</DataField>
+        </Field>
+        <Field Name="Ped_NombreClienteCaption">
+          <DataField>Ped_NombreClienteCaption</DataField>
+        </Field>
+        <Field Name="Ped_Cliente">
+          <DataField>Ped_Cliente</DataField>
+        </Field>
+        <Field Name="Ped_NombreCliente">
+          <DataField>Ped_NombreCliente</DataField>
+        </Field>
+        <Field Name="Ped_NoDocumento">
+          <DataField>Ped_NoDocumento</DataField>
+        </Field>
+        <Field Name="Ped_ImporteIVAInc">
+          <DataField>Ped_ImporteIVAInc</DataField>
+        </Field>
+        <Field Name="Ped_ImporteIVAIncFormat">
+          <DataField>Ped_ImporteIVAIncFormat</DataField>
+        </Field>
+        <Field Name="Ped_Hora">
+          <DataField>Ped_Hora</DataField>
+        </Field>
+        <Field Name="NC_Filtro">
+          <DataField>NC_Filtro</DataField>
+        </Field>
+        <Field Name="NC_ClienteCaption">
+          <DataField>NC_ClienteCaption</DataField>
+        </Field>
+        <Field Name="NC_NombreClienteCaption">
+          <DataField>NC_NombreClienteCaption</DataField>
+        </Field>
+        <Field Name="NC_Cliente">
+          <DataField>NC_Cliente</DataField>
+        </Field>
+        <Field Name="NC_NombreCliente">
+          <DataField>NC_NombreCliente</DataField>
+        </Field>
+        <Field Name="NC_NoDocumento">
+          <DataField>NC_NoDocumento</DataField>
+        </Field>
+        <Field Name="NC_Importe">
+          <DataField>NC_Importe</DataField>
+        </Field>
+        <Field Name="NC_ImporteFormat">
+          <DataField>NC_ImporteFormat</DataField>
+        </Field>
+        <Field Name="NC_Hora">
+          <DataField>NC_Hora</DataField>
+        </Field>
+        <Field Name="Anul_Filtro">
+          <DataField>Anul_Filtro</DataField>
+        </Field>
+        <Field Name="Anul_ClienteCaption">
+          <DataField>Anul_ClienteCaption</DataField>
+        </Field>
+        <Field Name="Anul_NombreCliente">
+          <DataField>Anul_NombreCliente</DataField>
+        </Field>
+        <Field Name="Anul_NoDocumento">
+          <DataField>Anul_NoDocumento</DataField>
+        </Field>
+        <Field Name="Anul_Importe">
+          <DataField>Anul_Importe</DataField>
+        </Field>
+        <Field Name="Anul_ImporteFormat">
+          <DataField>Anul_ImporteFormat</DataField>
+        </Field>
+        <Field Name="Anul_Hora">
+          <DataField>Anul_Hora</DataField>
+        </Field>
+        <Field Name="Anul_Cliente">
+          <DataField>Anul_Cliente</DataField>
+        </Field>
+        <Field Name="Anul_NombreClienteCaption">
+          <DataField>Anul_NombreClienteCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

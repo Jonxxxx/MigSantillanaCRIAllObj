@@ -1,7 +1,7 @@
 report 34002153 "Carta a quien pueda interesar"
 {
     RDLCLayout = 'src/ReportsLayout/Carta a quien pueda interesar.rdl';
-    WordLayout = './Carta a quien pueda interesar.docx';
+    WordLayout = 'src/ReportsLayout/Carta a quien pueda interesar.docx';
     Caption = 'Letter to whom it may concern';
     DefaultLayout = Word;
 

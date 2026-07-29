@@ -1,7 +1,7 @@
 report 34003009 "Notificacion de pago"
 {
     RDLCLayout = 'src/ReportsLayout/Notificacion de pago.rdl';
-    WordLayout = './Notificacion de pago.docx';
+    WordLayout = 'src/ReportsLayout/Notificacion de pago.docx';
     Caption = 'Notification of payment';
     DefaultLayout = Word;
 

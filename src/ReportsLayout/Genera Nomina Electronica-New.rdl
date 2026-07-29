@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,138 +11,6 @@
       <rd:DataSourceID>9116d335-4ef9-4396-89cf-98eb2a71e83a</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Total">
-          <DataField>Total</DataField>
-        </Field>
-        <Field Name="TotalFormat">
-          <DataField>TotalFormat</DataField>
-        </Field>
-        <Field Name="Contador">
-          <DataField>Contador</DataField>
-        </Field>
-        <Field Name="Total_EmpleadosCaption">
-          <DataField>Total_EmpleadosCaption</DataField>
-        </Field>
-        <Field Name="Employee_No_">
-          <DataField>Employee_No_</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CURRENTDATETIME">
-          <DataField>CURRENTDATETIME</DataField>
-        </Field>
-        <Field Name="TODAY">
-          <DataField>TODAY</DataField>
-        </Field>
-        <Field Name="fechatrans">
-          <DataField>fechatrans</DataField>
-        </Field>
-        <Field Name="Empresa__Nombre_Empresa_cotizacion_">
-          <DataField>Empresa__Nombre_Empresa_cotizacion_</DataField>
-        </Field>
-        <Field Name="Xbancos__Nombre_banco_">
-          <DataField>Xbancos__Nombre_banco_</DataField>
-        </Field>
-        <Field Name="Empresa__ID__Volante_Pago_">
-          <DataField>Empresa__ID__Volante_Pago_</DataField>
-        </Field>
-        <Field Name="Empresa_Direccion_________Empresa_nomero">
-          <DataField>Empresa_Direccion_________Empresa_nomero</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Fin">
-          <DataField>Historico_Cab__nomina_Fin</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Inicio">
-          <DataField>Historico_Cab__nomina_Inicio</DataField>
-        </Field>
-        <Field Name="Employee__Document_ID_">
-          <DataField>Employee__Document_ID_</DataField>
-        </Field>
-        <Field Name="Distrib__Ingreso_Pagos_Elect____Numero_Cuenta_">
-          <DataField>Distrib__Ingreso_Pagos_Elect____Numero_Cuenta_</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Total_Ingresos___Total_deducciones_">
-          <DataField>Total_Ingresos___Total_deducciones_</DataField>
-        </Field>
-        <Field Name="Total_Ingresos___Total_deducciones_Format">
-          <DataField>Total_Ingresos___Total_deducciones_Format</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Bank_s_electronic_payroll_paymentCaption">
-          <DataField>Bank_s_electronic_payroll_paymentCaption</DataField>
-        </Field>
-        <Field Name="Fecha_de_envioCaption">
-          <DataField>Fecha_de_envioCaption</DataField>
-        </Field>
-        <Field Name="Fecha_de_TransferenciaCaption">
-          <DataField>Fecha_de_TransferenciaCaption</DataField>
-        </Field>
-        <Field Name="EmpresaCaption">
-          <DataField>EmpresaCaption</DataField>
-        </Field>
-        <Field Name="Cedula___PasaporteCaption">
-          <DataField>Cedula___PasaporteCaption</DataField>
-        </Field>
-        <Field Name="NombreCaption">
-          <DataField>NombreCaption</DataField>
-        </Field>
-        <Field Name="ImporteCaption">
-          <DataField>ImporteCaption</DataField>
-        </Field>
-        <Field Name="Al__Caption">
-          <DataField>Al__Caption</DataField>
-        </Field>
-        <Field Name="Periodo_de_nomina_del_Caption">
-          <DataField>Periodo_de_nomina_del_Caption</DataField>
-        </Field>
-        <Field Name="CuentaCaption">
-          <DataField>CuentaCaption</DataField>
-        </Field>
-        <Field Name="Employee__No__Caption">
-          <DataField>Employee__No__Caption</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_No__empleado">
-          <DataField>Historico_Cab__nomina_No__empleado</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Ano">
-          <DataField>Historico_Cab__nomina_Ano</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Periodo">
-          <DataField>Historico_Cab__nomina_Periodo</DataField>
-        </Field>
-        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
-          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -980,12 +848,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -1025,4 +887,131 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>cd26ec24-7627-419b-97b1-a89d912241de</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Total">
+          <DataField>Total</DataField>
+        </Field>
+        <Field Name="TotalFormat">
+          <DataField>TotalFormat</DataField>
+        </Field>
+        <Field Name="Contador">
+          <DataField>Contador</DataField>
+        </Field>
+        <Field Name="Total_EmpleadosCaption">
+          <DataField>Total_EmpleadosCaption</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CURRENTDATETIME">
+          <DataField>CURRENTDATETIME</DataField>
+        </Field>
+        <Field Name="TODAY">
+          <DataField>TODAY</DataField>
+        </Field>
+        <Field Name="fechatrans">
+          <DataField>fechatrans</DataField>
+        </Field>
+        <Field Name="Empresa__Nombre_Empresa_cotizacion_">
+          <DataField>Empresa__Nombre_Empresa_cotizacion_</DataField>
+        </Field>
+        <Field Name="Xbancos__Nombre_banco_">
+          <DataField>Xbancos__Nombre_banco_</DataField>
+        </Field>
+        <Field Name="Empresa__ID__Volante_Pago_">
+          <DataField>Empresa__ID__Volante_Pago_</DataField>
+        </Field>
+        <Field Name="Empresa_Direccion_________Empresa_nomero">
+          <DataField>Empresa_Direccion_________Empresa_nomero</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Fin">
+          <DataField>Historico_Cab__nomina_Fin</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Inicio">
+          <DataField>Historico_Cab__nomina_Inicio</DataField>
+        </Field>
+        <Field Name="Employee__Document_ID_">
+          <DataField>Employee__Document_ID_</DataField>
+        </Field>
+        <Field Name="Distrib__Ingreso_Pagos_Elect____Numero_Cuenta_">
+          <DataField>Distrib__Ingreso_Pagos_Elect____Numero_Cuenta_</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Total_Ingresos___Total_deducciones_">
+          <DataField>Total_Ingresos___Total_deducciones_</DataField>
+        </Field>
+        <Field Name="Total_Ingresos___Total_deducciones_Format">
+          <DataField>Total_Ingresos___Total_deducciones_Format</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Bank_s_electronic_payroll_paymentCaption">
+          <DataField>Bank_s_electronic_payroll_paymentCaption</DataField>
+        </Field>
+        <Field Name="Fecha_de_envioCaption">
+          <DataField>Fecha_de_envioCaption</DataField>
+        </Field>
+        <Field Name="Fecha_de_TransferenciaCaption">
+          <DataField>Fecha_de_TransferenciaCaption</DataField>
+        </Field>
+        <Field Name="EmpresaCaption">
+          <DataField>EmpresaCaption</DataField>
+        </Field>
+        <Field Name="Cedula___PasaporteCaption">
+          <DataField>Cedula___PasaporteCaption</DataField>
+        </Field>
+        <Field Name="NombreCaption">
+          <DataField>NombreCaption</DataField>
+        </Field>
+        <Field Name="ImporteCaption">
+          <DataField>ImporteCaption</DataField>
+        </Field>
+        <Field Name="Al__Caption">
+          <DataField>Al__Caption</DataField>
+        </Field>
+        <Field Name="Periodo_de_nomina_del_Caption">
+          <DataField>Periodo_de_nomina_del_Caption</DataField>
+        </Field>
+        <Field Name="CuentaCaption">
+          <DataField>CuentaCaption</DataField>
+        </Field>
+        <Field Name="Employee__No__Caption">
+          <DataField>Employee__No__Caption</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_No__empleado">
+          <DataField>Historico_Cab__nomina_No__empleado</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Ano">
+          <DataField>Historico_Cab__nomina_Ano</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Periodo">
+          <DataField>Historico_Cab__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Cab__nomina_Tipo_Nomina">
+          <DataField>Historico_Cab__nomina_Tipo_Nomina</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

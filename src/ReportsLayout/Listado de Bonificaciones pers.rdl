@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,114 +11,6 @@
       <rd:DataSourceID>88ff1396-b69d-411c-80ab-019fafaaaf95</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="TIME">
-          <DataField>TIME</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Employee__Employment_Date_">
-          <DataField>Employee__Employment_Date_</DataField>
-        </Field>
-        <Field Name="Employee_Departamento">
-          <DataField>Employee_Departamento</DataField>
-        </Field>
-        <Field Name="MontoVacaciones">
-          <DataField>MontoVacaciones</DataField>
-        </Field>
-        <Field Name="MontoVacacionesFormat">
-          <DataField>MontoVacacionesFormat</DataField>
-        </Field>
-        <Field Name="Employee_Salario">
-          <DataField>Employee_Salario</DataField>
-        </Field>
-        <Field Name="Employee_SalarioFormat">
-          <DataField>Employee_SalarioFormat</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control1000000001">
-          <DataField>MontoVacaciones_Control1000000001</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control1000000001Format">
-          <DataField>MontoVacaciones_Control1000000001Format</DataField>
-        </Field>
-        <Field Name="CantEmpl">
-          <DataField>CantEmpl</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control22">
-          <DataField>MontoVacaciones_Control22</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control22Format">
-          <DataField>MontoVacaciones_Control22Format</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control1000000005">
-          <DataField>MontoVacaciones_Control1000000005</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control1000000005Format">
-          <DataField>MontoVacaciones_Control1000000005Format</DataField>
-        </Field>
-        <Field Name="Employee_Bonification_s_ReportCaption">
-          <DataField>Employee_Bonification_s_ReportCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Employee__No__Caption">
-          <DataField>Employee__No__Caption</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_Caption">
-          <DataField>Employee__Full_Name_Caption</DataField>
-        </Field>
-        <Field Name="Employee__Employment_Date_Caption">
-          <DataField>Employee__Employment_Date_Caption</DataField>
-        </Field>
-        <Field Name="Employee_DepartamentoCaption">
-          <DataField>Employee_DepartamentoCaption</DataField>
-        </Field>
-        <Field Name="MontoVacacionesCaption">
-          <DataField>MontoVacacionesCaption</DataField>
-        </Field>
-        <Field Name="Employee_SalarioCaption">
-          <DataField>Employee_SalarioCaption</DataField>
-        </Field>
-        <Field Name="MontoVacaciones_Control1000000001Caption">
-          <DataField>MontoVacaciones_Control1000000001Caption</DataField>
-        </Field>
-        <Field Name="Total_de_empleadosCaption">
-          <DataField>Total_de_empleadosCaption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1276,4 +1168,107 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>ee19eb02-0fd4-44c4-8848-8f0b56239fc2</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Employee__Employment_Date_">
+          <DataField>Employee__Employment_Date_</DataField>
+        </Field>
+        <Field Name="Employee_Departamento">
+          <DataField>Employee_Departamento</DataField>
+        </Field>
+        <Field Name="MontoVacaciones">
+          <DataField>MontoVacaciones</DataField>
+        </Field>
+        <Field Name="MontoVacacionesFormat">
+          <DataField>MontoVacacionesFormat</DataField>
+        </Field>
+        <Field Name="Employee_Salario">
+          <DataField>Employee_Salario</DataField>
+        </Field>
+        <Field Name="Employee_SalarioFormat">
+          <DataField>Employee_SalarioFormat</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control1000000001">
+          <DataField>MontoVacaciones_Control1000000001</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control1000000001Format">
+          <DataField>MontoVacaciones_Control1000000001Format</DataField>
+        </Field>
+        <Field Name="CantEmpl">
+          <DataField>CantEmpl</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control22">
+          <DataField>MontoVacaciones_Control22</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control22Format">
+          <DataField>MontoVacaciones_Control22Format</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control1000000005">
+          <DataField>MontoVacaciones_Control1000000005</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control1000000005Format">
+          <DataField>MontoVacaciones_Control1000000005Format</DataField>
+        </Field>
+        <Field Name="Employee_Bonification_s_ReportCaption">
+          <DataField>Employee_Bonification_s_ReportCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Employee__No__Caption">
+          <DataField>Employee__No__Caption</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_Caption">
+          <DataField>Employee__Full_Name_Caption</DataField>
+        </Field>
+        <Field Name="Employee__Employment_Date_Caption">
+          <DataField>Employee__Employment_Date_Caption</DataField>
+        </Field>
+        <Field Name="Employee_DepartamentoCaption">
+          <DataField>Employee_DepartamentoCaption</DataField>
+        </Field>
+        <Field Name="MontoVacacionesCaption">
+          <DataField>MontoVacacionesCaption</DataField>
+        </Field>
+        <Field Name="Employee_SalarioCaption">
+          <DataField>Employee_SalarioCaption</DataField>
+        </Field>
+        <Field Name="MontoVacaciones_Control1000000001Caption">
+          <DataField>MontoVacaciones_Control1000000001Caption</DataField>
+        </Field>
+        <Field Name="Total_de_empleadosCaption">
+          <DataField>Total_de_empleadosCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,69 +11,6 @@
       <rd:DataSourceID>a0610dec-7c74-43ae-a8b9-defeb6cb5a98</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="NCFRelacionado">
-          <DataField>NCFRelacionado</DataField>
-        </Field>
-        <Field Name="FechaRegistro">
-          <DataField>FechaRegistro</DataField>
-        </Field>
-        <Field Name="RazonAnulNCF">
-          <DataField>RazonAnulNCF</DataField>
-        </Field>
-        <Field Name="NoNCF">
-          <DataField>NoNCF</DataField>
-        </Field>
-        <Field Name="NoFactura">
-          <DataField>NoFactura</DataField>
-        </Field>
-        <Field Name="DirEmpresa1">
-          <DataField>DirEmpresa1</DataField>
-        </Field>
-        <Field Name="DirEmpresa2">
-          <DataField>DirEmpresa2</DataField>
-        </Field>
-        <Field Name="DirEmpresa3">
-          <DataField>DirEmpresa3</DataField>
-        </Field>
-        <Field Name="NCFRelacionadoF">
-          <DataField>NCFRelacionadoF</DataField>
-        </Field>
-        <Field Name="FechaRegistroF">
-          <DataField>FechaRegistroF</DataField>
-        </Field>
-        <Field Name="RazonAnulNCFF">
-          <DataField>RazonAnulNCFF</DataField>
-        </Field>
-        <Field Name="NoNCFF">
-          <DataField>NoNCFF</DataField>
-        </Field>
-        <Field Name="NoFacturaF">
-          <DataField>NoFacturaF</DataField>
-        </Field>
-        <Field Name="DirEmpresa1F">
-          <DataField>DirEmpresa1F</DataField>
-        </Field>
-        <Field Name="DirEmpresa2F">
-          <DataField>DirEmpresa2F</DataField>
-        </Field>
-        <Field Name="DirEmpresa3F">
-          <DataField>DirEmpresa3F</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -696,12 +633,6 @@
       </Page>
     </ReportSection>
   </ReportSections>
-  <ReportParametersLayout>
-    <GridLayoutDefinition>
-      <NumberOfColumns>4</NumberOfColumns>
-      <NumberOfRows>2</NumberOfRows>
-    </GridLayoutDefinition>
-  </ReportParametersLayout>
   <Code>Public Function BlankZero(ByVal Value As Decimal)
     if Value = 0 then
         Return ""
@@ -741,4 +672,62 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="NCFRelacionado">
+          <DataField>NCFRelacionado</DataField>
+        </Field>
+        <Field Name="FechaRegistro">
+          <DataField>FechaRegistro</DataField>
+        </Field>
+        <Field Name="RazonAnulNCF">
+          <DataField>RazonAnulNCF</DataField>
+        </Field>
+        <Field Name="NoNCF">
+          <DataField>NoNCF</DataField>
+        </Field>
+        <Field Name="NoFactura">
+          <DataField>NoFactura</DataField>
+        </Field>
+        <Field Name="DirEmpresa1">
+          <DataField>DirEmpresa1</DataField>
+        </Field>
+        <Field Name="DirEmpresa2">
+          <DataField>DirEmpresa2</DataField>
+        </Field>
+        <Field Name="DirEmpresa3">
+          <DataField>DirEmpresa3</DataField>
+        </Field>
+        <Field Name="NCFRelacionadoF">
+          <DataField>NCFRelacionadoF</DataField>
+        </Field>
+        <Field Name="FechaRegistroF">
+          <DataField>FechaRegistroF</DataField>
+        </Field>
+        <Field Name="RazonAnulNCFF">
+          <DataField>RazonAnulNCFF</DataField>
+        </Field>
+        <Field Name="NoNCFF">
+          <DataField>NoNCFF</DataField>
+        </Field>
+        <Field Name="NoFacturaF">
+          <DataField>NoFacturaF</DataField>
+        </Field>
+        <Field Name="DirEmpresa1F">
+          <DataField>DirEmpresa1F</DataField>
+        </Field>
+        <Field Name="DirEmpresa2F">
+          <DataField>DirEmpresa2F</DataField>
+        </Field>
+        <Field Name="DirEmpresa3F">
+          <DataField>DirEmpresa3F</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

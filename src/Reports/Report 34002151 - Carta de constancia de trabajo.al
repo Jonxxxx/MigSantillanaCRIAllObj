@@ -1,7 +1,7 @@
 report 34002151 "Carta de constancia de trabajo"
 {
     RDLCLayout = 'src/ReportsLayout/Carta de constancia de trabajo.rdl';
-    WordLayout = './Carta de constancia de trabajo.docx';
+    WordLayout = 'src/ReportsLayout/Carta de constancia de trabajo.docx';
     Caption = 'Proof of employment letter';
     DefaultLayout = Word;
 

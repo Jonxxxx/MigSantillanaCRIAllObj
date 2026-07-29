@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,138 +11,6 @@
       <rd:DataSourceID>379a5ec7-acdf-4f82-a08c-c13294678e4f</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
-          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
-        </Field>
-        <Field Name="NoFactFiscal">
-          <DataField>NoFactFiscal</DataField>
-        </Field>
-        <Field Name="C__Piloto____Tel___Fax____Fax">
-          <DataField>C__Piloto____Tel___Fax____Fax</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_city_">
-          <DataField>Sales_Invoice_Header__Bill_to_city_</DataField>
-        </Field>
-        <Field Name="CiudadEmision">
-          <DataField>CiudadEmision</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
-          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
-        </Field>
-        <Field Name="Ruc_Cliente">
-          <DataField>Ruc_Cliente</DataField>
-        </Field>
-        <Field Name="Sales_Invoice_Header__Due_Date_">
-          <DataField>Sales_Invoice_Header__Due_Date_</DataField>
-        </Field>
-        <Field Name="NoFiscalFactura">
-          <DataField>NoFiscalFactura</DataField>
-        </Field>
-        <Field Name="NoAutFac">
-          <DataField>NoAutFac</DataField>
-        </Field>
-        <Field Name="Sales_Cr_Memo_Header__No__">
-          <DataField>Sales_Cr_Memo_Header__No__</DataField>
-        </Field>
-        <Field Name="ImpDesc">
-          <DataField>ImpDesc</DataField>
-        </Field>
-        <Field Name="ImpDescFormat">
-          <DataField>ImpDescFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotal">
-          <DataField>ImporteTotal</DataField>
-        </Field>
-        <Field Name="ImporteTotalFormat">
-          <DataField>ImporteTotalFormat</DataField>
-        </Field>
-        <Field Name="DescriptionLine_1_____________CurrName">
-          <DataField>DescriptionLine_1_____________CurrName</DataField>
-        </Field>
-        <Field Name="Serie_Factura_________No__Comprobante_Fiscal_">
-          <DataField>Serie_Factura_________No__Comprobante_Fiscal_</DataField>
-        </Field>
-        <Field Name="DescuentoCaption_Control1000000138">
-          <DataField>DescuentoCaption_Control1000000138</DataField>
-        </Field>
-        <Field Name="Cantidad_Fact_Arr_I_">
-          <DataField>Cantidad_Fact_Arr_I_</DataField>
-        </Field>
-        <Field Name="CodUndMed_Fact_Arr_1_">
-          <DataField>CodUndMed_Fact_Arr_1_</DataField>
-        </Field>
-        <Field Name="Desc_Fact_Arr_1_">
-          <DataField>Desc_Fact_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Fact_Arr_1_">
-          <DataField>PrecUnit_Fact_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Fact_Arr_1_Format">
-          <DataField>PrecUnit_Fact_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="Imp_Fact_Arr_1_">
-          <DataField>Imp_Fact_Arr_1_</DataField>
-        </Field>
-        <Field Name="Imp_Fact_Arr_1_Format">
-          <DataField>Imp_Fact_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="ImpDescFact">
-          <DataField>ImpDescFact</DataField>
-        </Field>
-        <Field Name="ImpDescFactFormat">
-          <DataField>ImpDescFactFormat</DataField>
-        </Field>
-        <Field Name="ImporteTotalFact">
-          <DataField>ImporteTotalFact</DataField>
-        </Field>
-        <Field Name="ImporteTotalFactFormat">
-          <DataField>ImporteTotalFactFormat</DataField>
-        </Field>
-        <Field Name="DescuentoCaption">
-          <DataField>DescuentoCaption</DataField>
-        </Field>
-        <Field Name="LineaBloque1_Number">
-          <DataField>LineaBloque1_Number</DataField>
-        </Field>
-        <Field Name="Cantidad_Arr_1_">
-          <DataField>Cantidad_Arr_1_</DataField>
-        </Field>
-        <Field Name="CodProd_Arr_1_">
-          <DataField>CodProd_Arr_1_</DataField>
-        </Field>
-        <Field Name="Desc_Arr_1_">
-          <DataField>Desc_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_">
-          <DataField>PrecUnit_Arr_1_</DataField>
-        </Field>
-        <Field Name="PrecUnit_Arr_1_Format">
-          <DataField>PrecUnit_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="Imp_Arr_1_">
-          <DataField>Imp_Arr_1_</DataField>
-        </Field>
-        <Field Name="Imp_Arr_1_Format">
-          <DataField>Imp_Arr_1_Format</DataField>
-        </Field>
-        <Field Name="LineaBloque2_Number">
-          <DataField>LineaBloque2_Number</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2083,4 +1951,131 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>3ba7fa6e-c1fd-48d4-b1f6-5dd4172d2fba</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Sales_Invoice_Header__Bill_to_Address_">
+          <DataField>Sales_Invoice_Header__Bill_to_Address_</DataField>
+        </Field>
+        <Field Name="NoFactFiscal">
+          <DataField>NoFactFiscal</DataField>
+        </Field>
+        <Field Name="C__Piloto____Tel___Fax____Fax">
+          <DataField>C__Piloto____Tel___Fax____Fax</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_city_">
+          <DataField>Sales_Invoice_Header__Bill_to_city_</DataField>
+        </Field>
+        <Field Name="CiudadEmision">
+          <DataField>CiudadEmision</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Bill_to_Name_">
+          <DataField>Sales_Invoice_Header__Bill_to_Name_</DataField>
+        </Field>
+        <Field Name="Ruc_Cliente">
+          <DataField>Ruc_Cliente</DataField>
+        </Field>
+        <Field Name="Sales_Invoice_Header__Due_Date_">
+          <DataField>Sales_Invoice_Header__Due_Date_</DataField>
+        </Field>
+        <Field Name="NoFiscalFactura">
+          <DataField>NoFiscalFactura</DataField>
+        </Field>
+        <Field Name="NoAutFac">
+          <DataField>NoAutFac</DataField>
+        </Field>
+        <Field Name="Sales_Cr_Memo_Header__No__">
+          <DataField>Sales_Cr_Memo_Header__No__</DataField>
+        </Field>
+        <Field Name="ImpDesc">
+          <DataField>ImpDesc</DataField>
+        </Field>
+        <Field Name="ImpDescFormat">
+          <DataField>ImpDescFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+        </Field>
+        <Field Name="ImporteTotalFormat">
+          <DataField>ImporteTotalFormat</DataField>
+        </Field>
+        <Field Name="DescriptionLine_1_____________CurrName">
+          <DataField>DescriptionLine_1_____________CurrName</DataField>
+        </Field>
+        <Field Name="Serie_Factura_________No__Comprobante_Fiscal_">
+          <DataField>Serie_Factura_________No__Comprobante_Fiscal_</DataField>
+        </Field>
+        <Field Name="DescuentoCaption_Control1000000138">
+          <DataField>DescuentoCaption_Control1000000138</DataField>
+        </Field>
+        <Field Name="Cantidad_Fact_Arr_I_">
+          <DataField>Cantidad_Fact_Arr_I_</DataField>
+        </Field>
+        <Field Name="CodUndMed_Fact_Arr_1_">
+          <DataField>CodUndMed_Fact_Arr_1_</DataField>
+        </Field>
+        <Field Name="Desc_Fact_Arr_1_">
+          <DataField>Desc_Fact_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Fact_Arr_1_">
+          <DataField>PrecUnit_Fact_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Fact_Arr_1_Format">
+          <DataField>PrecUnit_Fact_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="Imp_Fact_Arr_1_">
+          <DataField>Imp_Fact_Arr_1_</DataField>
+        </Field>
+        <Field Name="Imp_Fact_Arr_1_Format">
+          <DataField>Imp_Fact_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="ImpDescFact">
+          <DataField>ImpDescFact</DataField>
+        </Field>
+        <Field Name="ImpDescFactFormat">
+          <DataField>ImpDescFactFormat</DataField>
+        </Field>
+        <Field Name="ImporteTotalFact">
+          <DataField>ImporteTotalFact</DataField>
+        </Field>
+        <Field Name="ImporteTotalFactFormat">
+          <DataField>ImporteTotalFactFormat</DataField>
+        </Field>
+        <Field Name="DescuentoCaption">
+          <DataField>DescuentoCaption</DataField>
+        </Field>
+        <Field Name="LineaBloque1_Number">
+          <DataField>LineaBloque1_Number</DataField>
+        </Field>
+        <Field Name="Cantidad_Arr_1_">
+          <DataField>Cantidad_Arr_1_</DataField>
+        </Field>
+        <Field Name="CodProd_Arr_1_">
+          <DataField>CodProd_Arr_1_</DataField>
+        </Field>
+        <Field Name="Desc_Arr_1_">
+          <DataField>Desc_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_">
+          <DataField>PrecUnit_Arr_1_</DataField>
+        </Field>
+        <Field Name="PrecUnit_Arr_1_Format">
+          <DataField>PrecUnit_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="Imp_Arr_1_">
+          <DataField>Imp_Arr_1_</DataField>
+        </Field>
+        <Field Name="Imp_Arr_1_Format">
+          <DataField>Imp_Arr_1_Format</DataField>
+        </Field>
+        <Field Name="LineaBloque2_Number">
+          <DataField>LineaBloque2_Number</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

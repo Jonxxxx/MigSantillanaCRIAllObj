@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,237 +11,6 @@
       <rd:DataSourceID>ae4c578b-2bbd-40c6-9614-25b4580f6fd2</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="NombCompany">
-          <DataField>NombCompany</DataField>
-        </Field>
-        <Field Name="No_">
-          <DataField>No_</DataField>
-        </Field>
-        <Field Name="Tipo_accion">
-          <DataField>Tipo_accion</DataField>
-        </Field>
-        <Field Name="TAct">
-          <DataField>TAct</DataField>
-        </Field>
-        <Field Name="Cod_Accion">
-          <DataField>Cod_Accion</DataField>
-        </Field>
-        <Field Name="No_Empleado">
-          <DataField>No_Empleado</DataField>
-        </Field>
-        <Field Name="First_Name">
-          <DataField>First_Name</DataField>
-        </Field>
-        <Field Name="Middle_Name">
-          <DataField>Middle_Name</DataField>
-        </Field>
-        <Field Name="Last_Name">
-          <DataField>Last_Name</DataField>
-        </Field>
-        <Field Name="Second_L_Name">
-          <DataField>Second_L_Name</DataField>
-        </Field>
-        <Field Name="Nombre_">
-          <DataField>Nombre_</DataField>
-        </Field>
-        <Field Name="IDDocumento_">
-          <DataField>IDDocumento_</DataField>
-        </Field>
-        <Field Name="Fecha_Nac">
-          <DataField>Fecha_Nac</DataField>
-        </Field>
-        <Field Name="Phone_No">
-          <DataField>Phone_No</DataField>
-        </Field>
-        <Field Name="E_Mail">
-          <DataField>E_Mail</DataField>
-        </Field>
-        <Field Name="Gender_">
-          <DataField>Gender_</DataField>
-        </Field>
-        <Field Name="Estado_Civil">
-          <DataField>Estado_Civil</DataField>
-        </Field>
-        <Field Name="Nacionalidad_">
-          <DataField>Nacionalidad_</DataField>
-        </Field>
-        <Field Name="Emp_Direccion">
-          <DataField>Emp_Direccion</DataField>
-        </Field>
-        <Field Name="Emp_Direccion_2">
-          <DataField>Emp_Direccion_2</DataField>
-        </Field>
-        <Field Name="Emp_Ciudad">
-          <DataField>Emp_Ciudad</DataField>
-        </Field>
-        <Field Name="Emp_FContrato">
-          <DataField>Emp_FContrato</DataField>
-        </Field>
-        <Field Name="Emp_Lugar_Nac">
-          <DataField>Emp_Lugar_Nac</DataField>
-        </Field>
-        <Field Name="Emp_Cell">
-          <DataField>Emp_Cell</DataField>
-        </Field>
-        <Field Name="Emp_Nacionalidad">
-          <DataField>Emp_Nacionalidad</DataField>
-        </Field>
-        <Field Name="Edad_">
-          <DataField>Edad_</DataField>
-        </Field>
-        <Field Name="Cost_Centre">
-          <DataField>Cost_Centre</DataField>
-        </Field>
-        <Field Name="Desc_Accion">
-          <DataField>Desc_Accion</DataField>
-        </Field>
-        <Field Name="Fecha_accion">
-          <DataField>Fecha_accion</DataField>
-        </Field>
-        <Field Name="Fecha_efectividad">
-          <DataField>Fecha_efectividad</DataField>
-        </Field>
-        <Field Name="Comentario_1">
-          <DataField>Comentario_1</DataField>
-        </Field>
-        <Field Name="Cargo_actual">
-          <DataField>Cargo_actual</DataField>
-        </Field>
-        <Field Name="Desc_Cargo_actual">
-          <DataField>Desc_Cargo_actual</DataField>
-        </Field>
-        <Field Name="Cargo_Nuevo">
-          <DataField>Cargo_Nuevo</DataField>
-        </Field>
-        <Field Name="Desc_Cargo_Nuevo">
-          <DataField>Desc_Cargo_Nuevo</DataField>
-        </Field>
-        <Field Name="Sdo_Actual">
-          <DataField>Sdo_Actual</DataField>
-        </Field>
-        <Field Name="Sdo_ActualFormat">
-          <DataField>Sdo_ActualFormat</DataField>
-        </Field>
-        <Field Name="Sdo_Nuevo">
-          <DataField>Sdo_Nuevo</DataField>
-        </Field>
-        <Field Name="Sdo_NuevoFormat">
-          <DataField>Sdo_NuevoFormat</DataField>
-        </Field>
-        <Field Name="Depto_Actual">
-          <DataField>Depto_Actual</DataField>
-        </Field>
-        <Field Name="Desc_Depto_Actual">
-          <DataField>Desc_Depto_Actual</DataField>
-        </Field>
-        <Field Name="Dpto_Nuevo">
-          <DataField>Dpto_Nuevo</DataField>
-        </Field>
-        <Field Name="Desc_Depto_Nuevo">
-          <DataField>Desc_Depto_Nuevo</DataField>
-        </Field>
-        <Field Name="Ubic_Actual">
-          <DataField>Ubic_Actual</DataField>
-        </Field>
-        <Field Name="Ubic_Nueva">
-          <DataField>Ubic_Nueva</DataField>
-        </Field>
-        <Field Name="ToEmpresa_">
-          <DataField>ToEmpresa_</DataField>
-        </Field>
-        <Field Name="Nro_Cta_actual">
-          <DataField>Nro_Cta_actual</DataField>
-        </Field>
-        <Field Name="Nro_Cta_nueva">
-          <DataField>Nro_Cta_nueva</DataField>
-        </Field>
-        <Field Name="Nro_Cta_tarjeta">
-          <DataField>Nro_Cta_tarjeta</DataField>
-        </Field>
-        <Field Name="Fecha_Exp">
-          <DataField>Fecha_Exp</DataField>
-        </Field>
-        <Field Name="Importe_Tarj">
-          <DataField>Importe_Tarj</DataField>
-        </Field>
-        <Field Name="Importe_TarjFormat">
-          <DataField>Importe_TarjFormat</DataField>
-        </Field>
-        <Field Name="Nivel_actual">
-          <DataField>Nivel_actual</DataField>
-        </Field>
-        <Field Name="Nivel_Nuevo">
-          <DataField>Nivel_Nuevo</DataField>
-        </Field>
-        <Field Name="Tipo_Contrato">
-          <DataField>Tipo_Contrato</DataField>
-        </Field>
-        <Field Name="Preparado_por">
-          <DataField>Preparado_por</DataField>
-        </Field>
-        <Field Name="Revisado_por">
-          <DataField>Revisado_por</DataField>
-        </Field>
-        <Field Name="Autorizado_por">
-          <DataField>Autorizado_por</DataField>
-        </Field>
-        <Field Name="Tipo_Documento">
-          <DataField>Tipo_Documento</DataField>
-        </Field>
-        <Field Name="Logo_">
-          <DataField>Logo_</DataField>
-        </Field>
-        <Field Name="Nuevo_Cost_Centre">
-          <DataField>Nuevo_Cost_Centre</DataField>
-        </Field>
-        <Field Name="Comentario_2">
-          <DataField>Comentario_2</DataField>
-        </Field>
-        <Field Name="Marca_Cargo">
-          <DataField>Marca_Cargo</DataField>
-        </Field>
-        <Field Name="Marca_Sueldo_Mensual">
-          <DataField>Marca_Sueldo_Mensual</DataField>
-        </Field>
-        <Field Name="Marca_Numero_Cuenta">
-          <DataField>Marca_Numero_Cuenta</DataField>
-        </Field>
-        <Field Name="Marca_Depto">
-          <DataField>Marca_Depto</DataField>
-        </Field>
-        <Field Name="tipoContrato">
-          <DataField>tipoContrato</DataField>
-        </Field>
-        <Field Name="FechaIngreso">
-          <DataField>FechaIngreso</DataField>
-        </Field>
-        <Field Name="Hora">
-          <DataField>Hora</DataField>
-        </Field>
-        <Field Name="Pais_">
-          <DataField>Pais_</DataField>
-        </Field>
-        <Field Name="Hasta_">
-          <DataField>Hasta_</DataField>
-        </Field>
-        <Field Name="Supervisor">
-          <DataField>Supervisor</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -5231,4 +5000,230 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="NombCompany">
+          <DataField>NombCompany</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Tipo_accion">
+          <DataField>Tipo_accion</DataField>
+        </Field>
+        <Field Name="TAct">
+          <DataField>TAct</DataField>
+        </Field>
+        <Field Name="Cod_Accion">
+          <DataField>Cod_Accion</DataField>
+        </Field>
+        <Field Name="No_Empleado">
+          <DataField>No_Empleado</DataField>
+        </Field>
+        <Field Name="First_Name">
+          <DataField>First_Name</DataField>
+        </Field>
+        <Field Name="Middle_Name">
+          <DataField>Middle_Name</DataField>
+        </Field>
+        <Field Name="Last_Name">
+          <DataField>Last_Name</DataField>
+        </Field>
+        <Field Name="Second_L_Name">
+          <DataField>Second_L_Name</DataField>
+        </Field>
+        <Field Name="Nombre_">
+          <DataField>Nombre_</DataField>
+        </Field>
+        <Field Name="IDDocumento_">
+          <DataField>IDDocumento_</DataField>
+        </Field>
+        <Field Name="Fecha_Nac">
+          <DataField>Fecha_Nac</DataField>
+        </Field>
+        <Field Name="Phone_No">
+          <DataField>Phone_No</DataField>
+        </Field>
+        <Field Name="E_Mail">
+          <DataField>E_Mail</DataField>
+        </Field>
+        <Field Name="Gender_">
+          <DataField>Gender_</DataField>
+        </Field>
+        <Field Name="Estado_Civil">
+          <DataField>Estado_Civil</DataField>
+        </Field>
+        <Field Name="Nacionalidad_">
+          <DataField>Nacionalidad_</DataField>
+        </Field>
+        <Field Name="Emp_Direccion">
+          <DataField>Emp_Direccion</DataField>
+        </Field>
+        <Field Name="Emp_Direccion_2">
+          <DataField>Emp_Direccion_2</DataField>
+        </Field>
+        <Field Name="Emp_Ciudad">
+          <DataField>Emp_Ciudad</DataField>
+        </Field>
+        <Field Name="Emp_FContrato">
+          <DataField>Emp_FContrato</DataField>
+        </Field>
+        <Field Name="Emp_Lugar_Nac">
+          <DataField>Emp_Lugar_Nac</DataField>
+        </Field>
+        <Field Name="Emp_Cell">
+          <DataField>Emp_Cell</DataField>
+        </Field>
+        <Field Name="Emp_Nacionalidad">
+          <DataField>Emp_Nacionalidad</DataField>
+        </Field>
+        <Field Name="Edad_">
+          <DataField>Edad_</DataField>
+        </Field>
+        <Field Name="Cost_Centre">
+          <DataField>Cost_Centre</DataField>
+        </Field>
+        <Field Name="Desc_Accion">
+          <DataField>Desc_Accion</DataField>
+        </Field>
+        <Field Name="Fecha_accion">
+          <DataField>Fecha_accion</DataField>
+        </Field>
+        <Field Name="Fecha_efectividad">
+          <DataField>Fecha_efectividad</DataField>
+        </Field>
+        <Field Name="Comentario_1">
+          <DataField>Comentario_1</DataField>
+        </Field>
+        <Field Name="Cargo_actual">
+          <DataField>Cargo_actual</DataField>
+        </Field>
+        <Field Name="Desc_Cargo_actual">
+          <DataField>Desc_Cargo_actual</DataField>
+        </Field>
+        <Field Name="Cargo_Nuevo">
+          <DataField>Cargo_Nuevo</DataField>
+        </Field>
+        <Field Name="Desc_Cargo_Nuevo">
+          <DataField>Desc_Cargo_Nuevo</DataField>
+        </Field>
+        <Field Name="Sdo_Actual">
+          <DataField>Sdo_Actual</DataField>
+        </Field>
+        <Field Name="Sdo_ActualFormat">
+          <DataField>Sdo_ActualFormat</DataField>
+        </Field>
+        <Field Name="Sdo_Nuevo">
+          <DataField>Sdo_Nuevo</DataField>
+        </Field>
+        <Field Name="Sdo_NuevoFormat">
+          <DataField>Sdo_NuevoFormat</DataField>
+        </Field>
+        <Field Name="Depto_Actual">
+          <DataField>Depto_Actual</DataField>
+        </Field>
+        <Field Name="Desc_Depto_Actual">
+          <DataField>Desc_Depto_Actual</DataField>
+        </Field>
+        <Field Name="Dpto_Nuevo">
+          <DataField>Dpto_Nuevo</DataField>
+        </Field>
+        <Field Name="Desc_Depto_Nuevo">
+          <DataField>Desc_Depto_Nuevo</DataField>
+        </Field>
+        <Field Name="Ubic_Actual">
+          <DataField>Ubic_Actual</DataField>
+        </Field>
+        <Field Name="Ubic_Nueva">
+          <DataField>Ubic_Nueva</DataField>
+        </Field>
+        <Field Name="ToEmpresa_">
+          <DataField>ToEmpresa_</DataField>
+        </Field>
+        <Field Name="Nro_Cta_actual">
+          <DataField>Nro_Cta_actual</DataField>
+        </Field>
+        <Field Name="Nro_Cta_nueva">
+          <DataField>Nro_Cta_nueva</DataField>
+        </Field>
+        <Field Name="Nro_Cta_tarjeta">
+          <DataField>Nro_Cta_tarjeta</DataField>
+        </Field>
+        <Field Name="Fecha_Exp">
+          <DataField>Fecha_Exp</DataField>
+        </Field>
+        <Field Name="Importe_Tarj">
+          <DataField>Importe_Tarj</DataField>
+        </Field>
+        <Field Name="Importe_TarjFormat">
+          <DataField>Importe_TarjFormat</DataField>
+        </Field>
+        <Field Name="Nivel_actual">
+          <DataField>Nivel_actual</DataField>
+        </Field>
+        <Field Name="Nivel_Nuevo">
+          <DataField>Nivel_Nuevo</DataField>
+        </Field>
+        <Field Name="Tipo_Contrato">
+          <DataField>Tipo_Contrato</DataField>
+        </Field>
+        <Field Name="Preparado_por">
+          <DataField>Preparado_por</DataField>
+        </Field>
+        <Field Name="Revisado_por">
+          <DataField>Revisado_por</DataField>
+        </Field>
+        <Field Name="Autorizado_por">
+          <DataField>Autorizado_por</DataField>
+        </Field>
+        <Field Name="Tipo_Documento">
+          <DataField>Tipo_Documento</DataField>
+        </Field>
+        <Field Name="Logo_">
+          <DataField>Logo_</DataField>
+        </Field>
+        <Field Name="Nuevo_Cost_Centre">
+          <DataField>Nuevo_Cost_Centre</DataField>
+        </Field>
+        <Field Name="Comentario_2">
+          <DataField>Comentario_2</DataField>
+        </Field>
+        <Field Name="Marca_Cargo">
+          <DataField>Marca_Cargo</DataField>
+        </Field>
+        <Field Name="Marca_Sueldo_Mensual">
+          <DataField>Marca_Sueldo_Mensual</DataField>
+        </Field>
+        <Field Name="Marca_Numero_Cuenta">
+          <DataField>Marca_Numero_Cuenta</DataField>
+        </Field>
+        <Field Name="Marca_Depto">
+          <DataField>Marca_Depto</DataField>
+        </Field>
+        <Field Name="tipoContrato">
+          <DataField>tipoContrato</DataField>
+        </Field>
+        <Field Name="FechaIngreso">
+          <DataField>FechaIngreso</DataField>
+        </Field>
+        <Field Name="Hora">
+          <DataField>Hora</DataField>
+        </Field>
+        <Field Name="Pais_">
+          <DataField>Pais_</DataField>
+        </Field>
+        <Field Name="Hasta_">
+          <DataField>Hasta_</DataField>
+        </Field>
+        <Field Name="Supervisor">
+          <DataField>Supervisor</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

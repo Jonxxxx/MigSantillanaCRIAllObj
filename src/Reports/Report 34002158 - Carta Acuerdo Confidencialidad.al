@@ -1,7 +1,7 @@
 report 34002158 "Carta Acuerdo Confidencialidad"
 {
     RDLCLayout = 'src/ReportsLayout/Carta Acuerdo Confidencialidad.rdl';
-    WordLayout = './Carta Acuerdo Confidencialidad.docx';
+    WordLayout = 'src/ReportsLayout/Carta Acuerdo Confidencialidad.docx';
     Caption = 'Letter Agreement Confidentiality';
     DefaultLayout = Word;
 

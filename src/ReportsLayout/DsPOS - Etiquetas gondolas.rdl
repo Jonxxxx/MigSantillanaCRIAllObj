@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,54 +11,6 @@
       <rd:DataSourceID>dae1347f-2bcc-4bd0-9ab2-ab6bdcc1565a</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="Addr_1__1_">
-          <DataField>Addr_1__1_</DataField>
-        </Field>
-        <Field Name="Addr_1__2_">
-          <DataField>Addr_1__2_</DataField>
-        </Field>
-        <Field Name="Addr_2__1_">
-          <DataField>Addr_2__1_</DataField>
-        </Field>
-        <Field Name="Addr_2__2_">
-          <DataField>Addr_2__2_</DataField>
-        </Field>
-        <Field Name="Addr_3__1_">
-          <DataField>Addr_3__1_</DataField>
-        </Field>
-        <Field Name="Addr_3__2_">
-          <DataField>Addr_3__2_</DataField>
-        </Field>
-        <Field Name="Addr_1__3_">
-          <DataField>Addr_1__3_</DataField>
-        </Field>
-        <Field Name="Addr_2__3_">
-          <DataField>Addr_2__3_</DataField>
-        </Field>
-        <Field Name="Addr_3__3_">
-          <DataField>Addr_3__3_</DataField>
-        </Field>
-        <Field Name="ColumnNo">
-          <DataField>ColumnNo</DataField>
-        </Field>
-        <Field Name="Item_No_">
-          <DataField>Item_No_</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -697,4 +649,47 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>d21c040d-2d5d-4e9f-9d71-262bcb6a7ccc</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Addr_1__1_">
+          <DataField>Addr_1__1_</DataField>
+        </Field>
+        <Field Name="Addr_1__2_">
+          <DataField>Addr_1__2_</DataField>
+        </Field>
+        <Field Name="Addr_2__1_">
+          <DataField>Addr_2__1_</DataField>
+        </Field>
+        <Field Name="Addr_2__2_">
+          <DataField>Addr_2__2_</DataField>
+        </Field>
+        <Field Name="Addr_3__1_">
+          <DataField>Addr_3__1_</DataField>
+        </Field>
+        <Field Name="Addr_3__2_">
+          <DataField>Addr_3__2_</DataField>
+        </Field>
+        <Field Name="Addr_1__3_">
+          <DataField>Addr_1__3_</DataField>
+        </Field>
+        <Field Name="Addr_2__3_">
+          <DataField>Addr_2__3_</DataField>
+        </Field>
+        <Field Name="Addr_3__3_">
+          <DataField>Addr_3__3_</DataField>
+        </Field>
+        <Field Name="ColumnNo">
+          <DataField>ColumnNo</DataField>
+        </Field>
+        <Field Name="Item_No_">
+          <DataField>Item_No_</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

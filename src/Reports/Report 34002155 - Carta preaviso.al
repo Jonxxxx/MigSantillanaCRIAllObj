@@ -1,7 +1,7 @@
 report 34002155 "Carta preaviso"
 {
     RDLCLayout = 'src/ReportsLayout/Carta preaviso.rdl';
-    WordLayout = './Carta preaviso.docx';
+    WordLayout = 'src/ReportsLayout/Carta preaviso.docx';
     Caption = 'Charter notice';
     DefaultLayout = Word;
 

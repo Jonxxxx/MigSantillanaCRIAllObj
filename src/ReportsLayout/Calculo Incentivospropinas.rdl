@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,135 +11,6 @@
       <rd:DataSourceID>0d6bf1fa-55d3-4d4b-9adb-091f3ffc63fb</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="PrecioPto__Monto_a_Distribuir_">
-          <DataField>PrecioPto__Monto_a_Distribuir_</DataField>
-        </Field>
-        <Field Name="PrecioPto__Monto_a_Distribuir_Format">
-          <DataField>PrecioPto__Monto_a_Distribuir_Format</DataField>
-        </Field>
-        <Field Name="PrecioPto__Fecha_Ult__Corte_">
-          <DataField>PrecioPto__Fecha_Ult__Corte_</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Employee__Incentivos_Puntos_">
-          <DataField>Employee__Incentivos_Puntos_</DataField>
-        </Field>
-        <Field Name="Employee__Incentivos_Puntos_Format">
-          <DataField>Employee__Incentivos_Puntos_Format</DataField>
-        </Field>
-        <Field Name="LinPerfSal_Importe">
-          <DataField>LinPerfSal_Importe</DataField>
-        </Field>
-        <Field Name="LinPerfSal_ImporteFormat">
-          <DataField>LinPerfSal_ImporteFormat</DataField>
-        </Field>
-        <Field Name="DiasTrabajados">
-          <DataField>DiasTrabajados</DataField>
-        </Field>
-        <Field Name="Employee__Fecha_salida_empresa_">
-          <DataField>Employee__Fecha_salida_empresa_</DataField>
-        </Field>
-        <Field Name="FechaIniAusencia">
-          <DataField>FechaIniAusencia</DataField>
-        </Field>
-        <Field Name="FechaFinAusencia">
-          <DataField>FechaFinAusencia</DataField>
-        </Field>
-        <Field Name="blnMostrar">
-          <DataField>blnMostrar</DataField>
-        </Field>
-        <Field Name="Employee__Incentivos_Puntos__Control7">
-          <DataField>Employee__Incentivos_Puntos__Control7</DataField>
-        </Field>
-        <Field Name="Employee__Incentivos_Puntos__Control7Format">
-          <DataField>Employee__Incentivos_Puntos__Control7Format</DataField>
-        </Field>
-        <Field Name="LinPerfSal_Importe_Control15">
-          <DataField>LinPerfSal_Importe_Control15</DataField>
-        </Field>
-        <Field Name="LinPerfSal_Importe_Control15Format">
-          <DataField>LinPerfSal_Importe_Control15Format</DataField>
-        </Field>
-        <Field Name="Diferencia">
-          <DataField>Diferencia</DataField>
-        </Field>
-        <Field Name="DiferenciaFormat">
-          <DataField>DiferenciaFormat</DataField>
-        </Field>
-        <Field Name="Employee__No__Caption">
-          <DataField>Employee__No__Caption</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_Caption">
-          <DataField>Employee__Full_Name_Caption</DataField>
-        </Field>
-        <Field Name="Employee__Incentivos_Puntos_Caption">
-          <DataField>Employee__Incentivos_Puntos_Caption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Incentive_Tips_DistributionCaption">
-          <DataField>Incentive_Tips_DistributionCaption</DataField>
-        </Field>
-        <Field Name="Importe_a_Distribuir_Caption">
-          <DataField>Importe_a_Distribuir_Caption</DataField>
-        </Field>
-        <Field Name="ImporteCaption">
-          <DataField>ImporteCaption</DataField>
-        </Field>
-        <Field Name="DiasTrabajadosCaption">
-          <DataField>DiasTrabajadosCaption</DataField>
-        </Field>
-        <Field Name="Fecha_de_Cancelaci_nCaption">
-          <DataField>Fecha_de_Cancelaci_nCaption</DataField>
-        </Field>
-        <Field Name="Fecha_Ult__CorteCaption">
-          <DataField>Fecha_Ult__CorteCaption</DataField>
-        </Field>
-        <Field Name="FechaIniAusenciaCaption">
-          <DataField>FechaIniAusenciaCaption</DataField>
-        </Field>
-        <Field Name="FechaFinAusenciaCaption">
-          <DataField>FechaFinAusenciaCaption</DataField>
-        </Field>
-        <Field Name="TotalCaption">
-          <DataField>TotalCaption</DataField>
-        </Field>
-        <Field Name="Diferencia_Caption">
-          <DataField>Diferencia_Caption</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2212,4 +2083,128 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>1534e955-5c4a-40e7-9ebb-36d0b0ecd299</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="PrecioPto__Monto_a_Distribuir_">
+          <DataField>PrecioPto__Monto_a_Distribuir_</DataField>
+        </Field>
+        <Field Name="PrecioPto__Monto_a_Distribuir_Format">
+          <DataField>PrecioPto__Monto_a_Distribuir_Format</DataField>
+        </Field>
+        <Field Name="PrecioPto__Fecha_Ult__Corte_">
+          <DataField>PrecioPto__Fecha_Ult__Corte_</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Employee__Incentivos_Puntos_">
+          <DataField>Employee__Incentivos_Puntos_</DataField>
+        </Field>
+        <Field Name="Employee__Incentivos_Puntos_Format">
+          <DataField>Employee__Incentivos_Puntos_Format</DataField>
+        </Field>
+        <Field Name="LinPerfSal_Importe">
+          <DataField>LinPerfSal_Importe</DataField>
+        </Field>
+        <Field Name="LinPerfSal_ImporteFormat">
+          <DataField>LinPerfSal_ImporteFormat</DataField>
+        </Field>
+        <Field Name="DiasTrabajados">
+          <DataField>DiasTrabajados</DataField>
+        </Field>
+        <Field Name="Employee__Fecha_salida_empresa_">
+          <DataField>Employee__Fecha_salida_empresa_</DataField>
+        </Field>
+        <Field Name="FechaIniAusencia">
+          <DataField>FechaIniAusencia</DataField>
+        </Field>
+        <Field Name="FechaFinAusencia">
+          <DataField>FechaFinAusencia</DataField>
+        </Field>
+        <Field Name="blnMostrar">
+          <DataField>blnMostrar</DataField>
+        </Field>
+        <Field Name="Employee__Incentivos_Puntos__Control7">
+          <DataField>Employee__Incentivos_Puntos__Control7</DataField>
+        </Field>
+        <Field Name="Employee__Incentivos_Puntos__Control7Format">
+          <DataField>Employee__Incentivos_Puntos__Control7Format</DataField>
+        </Field>
+        <Field Name="LinPerfSal_Importe_Control15">
+          <DataField>LinPerfSal_Importe_Control15</DataField>
+        </Field>
+        <Field Name="LinPerfSal_Importe_Control15Format">
+          <DataField>LinPerfSal_Importe_Control15Format</DataField>
+        </Field>
+        <Field Name="Diferencia">
+          <DataField>Diferencia</DataField>
+        </Field>
+        <Field Name="DiferenciaFormat">
+          <DataField>DiferenciaFormat</DataField>
+        </Field>
+        <Field Name="Employee__No__Caption">
+          <DataField>Employee__No__Caption</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_Caption">
+          <DataField>Employee__Full_Name_Caption</DataField>
+        </Field>
+        <Field Name="Employee__Incentivos_Puntos_Caption">
+          <DataField>Employee__Incentivos_Puntos_Caption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Incentive_Tips_DistributionCaption">
+          <DataField>Incentive_Tips_DistributionCaption</DataField>
+        </Field>
+        <Field Name="Importe_a_Distribuir_Caption">
+          <DataField>Importe_a_Distribuir_Caption</DataField>
+        </Field>
+        <Field Name="ImporteCaption">
+          <DataField>ImporteCaption</DataField>
+        </Field>
+        <Field Name="DiasTrabajadosCaption">
+          <DataField>DiasTrabajadosCaption</DataField>
+        </Field>
+        <Field Name="Fecha_de_Cancelaci_nCaption">
+          <DataField>Fecha_de_Cancelaci_nCaption</DataField>
+        </Field>
+        <Field Name="Fecha_Ult__CorteCaption">
+          <DataField>Fecha_Ult__CorteCaption</DataField>
+        </Field>
+        <Field Name="FechaIniAusenciaCaption">
+          <DataField>FechaIniAusenciaCaption</DataField>
+        </Field>
+        <Field Name="FechaFinAusenciaCaption">
+          <DataField>FechaFinAusenciaCaption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Diferencia_Caption">
+          <DataField>Diferencia_Caption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

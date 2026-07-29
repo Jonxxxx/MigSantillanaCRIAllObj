@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,342 +11,6 @@
       <rd:DataSourceID>6b5462ee-ec29-4fbb-a5cc-ede42e072c49</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="MontoCesantia">
-          <DataField>MontoCesantia</DataField>
-        </Field>
-        <Field Name="MontoCesantiaFormat">
-          <DataField>MontoCesantiaFormat</DataField>
-        </Field>
-        <Field Name="DiasCesantia">
-          <DataField>DiasCesantia</DataField>
-        </Field>
-        <Field Name="MontoPreaviso">
-          <DataField>MontoPreaviso</DataField>
-        </Field>
-        <Field Name="MontoPreavisoFormat">
-          <DataField>MontoPreavisoFormat</DataField>
-        </Field>
-        <Field Name="DiasPreaviso">
-          <DataField>DiasPreaviso</DataField>
-        </Field>
-        <Field Name="Importe_SFS">
-          <DataField>Importe_SFS</DataField>
-        </Field>
-        <Field Name="Importe_SFSFormat">
-          <DataField>Importe_SFSFormat</DataField>
-        </Field>
-        <Field Name="Importe_AFP">
-          <DataField>Importe_AFP</DataField>
-        </Field>
-        <Field Name="Importe_AFPFormat">
-          <DataField>Importe_AFPFormat</DataField>
-        </Field>
-        <Field Name="Employee__Global_Dimension_2_Code_">
-          <DataField>Employee__Global_Dimension_2_Code_</DataField>
-        </Field>
-        <Field Name="Employee_Employee__Full_Name_">
-          <DataField>Employee_Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="RegRegUdadCotiz__Nombre_Empresa_cotizaci_n_">
-          <DataField>RegRegUdadCotiz__Nombre_Empresa_cotizaci_n_</DataField>
-        </Field>
-        <Field Name="MontoRegalia">
-          <DataField>MontoRegalia</DataField>
-        </Field>
-        <Field Name="MontoRegaliaFormat">
-          <DataField>MontoRegaliaFormat</DataField>
-        </Field>
-        <Field Name="AcumuladoRegalia">
-          <DataField>AcumuladoRegalia</DataField>
-        </Field>
-        <Field Name="AcumuladoRegaliaFormat">
-          <DataField>AcumuladoRegaliaFormat</DataField>
-        </Field>
-        <Field Name="MontoVacaciones">
-          <DataField>MontoVacaciones</DataField>
-        </Field>
-        <Field Name="MontoVacacionesFormat">
-          <DataField>MontoVacacionesFormat</DataField>
-        </Field>
-        <Field Name="DiasVacaciones">
-          <DataField>DiasVacaciones</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante">
-          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestanteFormat">
-          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestanteFormat</DataField>
-        </Field>
-        <Field Name="Categor__Descripci_n_">
-          <DataField>Categor__Descripci_n_</DataField>
-        </Field>
-        <Field Name="Employee__Employment_Date_">
-          <DataField>Employee__Employment_Date_</DataField>
-        </Field>
-        <Field Name="Employee__Termination_Date_">
-          <DataField>Employee__Termination_Date_</DataField>
-        </Field>
-        <Field Name="Document_Type">
-          <DataField>Document_Type</DataField>
-        </Field>
-        <Field Name="Document_ID">
-          <DataField>Document_ID</DataField>
-        </Field>
-        <Field Name="Causa_Salida">
-          <DataField>Causa_Salida</DataField>
-        </Field>
-        <Field Name="FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_">
-          <DataField>FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_</DataField>
-        </Field>
-        <Field Name="PromedioSalarioAnual">
-          <DataField>PromedioSalarioAnual</DataField>
-        </Field>
-        <Field Name="PromedioSalarioAnualFormat">
-          <DataField>PromedioSalarioAnualFormat</DataField>
-        </Field>
-        <Field Name="PromedioSalarioMensual">
-          <DataField>PromedioSalarioMensual</DataField>
-        </Field>
-        <Field Name="PromedioSalarioMensualFormat">
-          <DataField>PromedioSalarioMensualFormat</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiario">
-          <DataField>PromedioSalarioDiario</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiarioFormat">
-          <DataField>PromedioSalarioDiarioFormat</DataField>
-        </Field>
-        <Field Name="Employee_Salario">
-          <DataField>Employee_Salario</DataField>
-        </Field>
-        <Field Name="Employee_SalarioFormat">
-          <DataField>Employee_SalarioFormat</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiario_Control83">
-          <DataField>PromedioSalarioDiario_Control83</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiario_Control83Format">
-          <DataField>PromedioSalarioDiario_Control83Format</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiario_Control88">
-          <DataField>PromedioSalarioDiario_Control88</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiario_Control88Format">
-          <DataField>PromedioSalarioDiario_Control88Format</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiarioVac">
-          <DataField>PromedioSalarioDiarioVac</DataField>
-        </Field>
-        <Field Name="PromedioSalarioDiarioVacFormat">
-          <DataField>PromedioSalarioDiarioVacFormat</DataField>
-        </Field>
-        <Field Name="DMY2DATE_1_DATE2DMY__Termination_Date__2__DATE2DMY__Termination_Date__3__">
-          <DataField>DMY2DATE_1_DATE2DMY__Termination_Date__2__DATE2DMY__Termination_Date__3__</DataField>
-        </Field>
-        <Field Name="Employee__Termination_Date__Control104">
-          <DataField>Employee__Termination_Date__Control104</DataField>
-        </Field>
-        <Field Name="Monto_Restante">
-          <DataField>Monto_Restante</DataField>
-        </Field>
-        <Field Name="Monto_RestanteFormat">
-          <DataField>Monto_RestanteFormat</DataField>
-        </Field>
-        <Field Name="AvanceSalario">
-          <DataField>AvanceSalario</DataField>
-        </Field>
-        <Field Name="AvanceSalarioFormat">
-          <DataField>AvanceSalarioFormat</DataField>
-        </Field>
-        <Field Name="MontoaDeducir">
-          <DataField>MontoaDeducir</DataField>
-        </Field>
-        <Field Name="MontoaDeducirFormat">
-          <DataField>MontoaDeducirFormat</DataField>
-        </Field>
-        <Field Name="AvanceSalario___MontoaDeducir">
-          <DataField>AvanceSalario___MontoaDeducir</DataField>
-        </Field>
-        <Field Name="AvanceSalario___MontoaDeducirFormat">
-          <DataField>AvanceSalario___MontoaDeducirFormat</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__">
-          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__Format">
-          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__Format</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreaviso">
-          <DataField>MontoCesantia___MontoPreaviso</DataField>
-        </Field>
-        <Field Name="MontoCesantia___MontoPreavisoFormat">
-          <DataField>MontoCesantia___MontoPreavisoFormat</DataField>
-        </Field>
-        <Field Name="Devolucion_ISR">
-          <DataField>Devolucion_ISR</DataField>
-        </Field>
-        <Field Name="Devolucion_ISRFormat">
-          <DataField>Devolucion_ISRFormat</DataField>
-        </Field>
-        <Field Name="Otras_Deducciones">
-          <DataField>Otras_Deducciones</DataField>
-        </Field>
-        <Field Name="Otras_DeduccionesFormat">
-          <DataField>Otras_DeduccionesFormat</DataField>
-        </Field>
-        <Field Name="II__CESANTIACaption">
-          <DataField>II__CESANTIACaption</DataField>
-        </Field>
-        <Field Name="RD_Caption">
-          <DataField>RD_Caption</DataField>
-        </Field>
-        <Field Name="D_asCaption">
-          <DataField>D_asCaption</DataField>
-        </Field>
-        <Field Name="I__PREAVISOCaption">
-          <DataField>I__PREAVISOCaption</DataField>
-        </Field>
-        <Field Name="Nombres_y_ApellidosCaption">
-          <DataField>Nombres_y_ApellidosCaption</DataField>
-        </Field>
-        <Field Name="V__REGALIACaption">
-          <DataField>V__REGALIACaption</DataField>
-        </Field>
-        <Field Name="III__VACACIONESCaption">
-          <DataField>III__VACACIONESCaption</DataField>
-        </Field>
-        <Field Name="Gerencia_de_Recursos_HumanosCaption">
-          <DataField>Gerencia_de_Recursos_HumanosCaption</DataField>
-        </Field>
-        <Field Name="LIQUIDACION_DE_PRESTACIONES_LABORALESCaption">
-          <DataField>LIQUIDACION_DE_PRESTACIONES_LABORALESCaption</DataField>
-        </Field>
-        <Field Name="DepartamentoCaption">
-          <DataField>DepartamentoCaption</DataField>
-        </Field>
-        <Field Name="CargoCaption">
-          <DataField>CargoCaption</DataField>
-        </Field>
-        <Field Name="Fecha_de_IngresoCaption">
-          <DataField>Fecha_de_IngresoCaption</DataField>
-        </Field>
-        <Field Name="Fecha_de_SalidaCaption">
-          <DataField>Fecha_de_SalidaCaption</DataField>
-        </Field>
-        <Field Name="Tiempo_TrabajadoCaption">
-          <DataField>Tiempo_TrabajadoCaption</DataField>
-        </Field>
-        <Field Name="Sueldo_devengado_en_el__ltimo_a_oCaption">
-          <DataField>Sueldo_devengado_en_el__ltimo_a_oCaption</DataField>
-        </Field>
-        <Field Name="Promedio_Mensual_RD_Caption">
-          <DataField>Promedio_Mensual_RD_Caption</DataField>
-        </Field>
-        <Field Name="Promedio_DiarioCaption">
-          <DataField>Promedio_DiarioCaption</DataField>
-        </Field>
-        <Field Name="Ultimo_Sueldo_Mensual_RD_Caption">
-          <DataField>Ultimo_Sueldo_Mensual_RD_Caption</DataField>
-        </Field>
-        <Field Name="DETALLES_DE_LIQUIDACION_DE_PRESTACIONES_LABORALESCaption">
-          <DataField>DETALLES_DE_LIQUIDACION_DE_PRESTACIONES_LABORALESCaption</DataField>
-        </Field>
-        <Field Name="SFS_Caption">
-          <DataField>SFS_Caption</DataField>
-        </Field>
-        <Field Name="AFP_Caption">
-          <DataField>AFP_Caption</DataField>
-        </Field>
-        <Field Name="D_asCaption_Control86">
-          <DataField>D_asCaption_Control86</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control89">
-          <DataField>RD_Caption_Control89</DataField>
-        </Field>
-        <Field Name="D_asCaption_Control90">
-          <DataField>D_asCaption_Control90</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control95">
-          <DataField>RD_Caption_Control95</DataField>
-        </Field>
-        <Field Name="TOTAL_LIQUIDACION_PRESTACIONES_LABORALESCaption">
-          <DataField>TOTAL_LIQUIDACION_PRESTACIONES_LABORALESCaption</DataField>
-        </Field>
-        <Field Name="IV__Salario_devengado_del_Caption">
-          <DataField>IV__Salario_devengado_del_Caption</DataField>
-        </Field>
-        <Field Name="alCaption">
-          <DataField>alCaption</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control105">
-          <DataField>RD_Caption_Control105</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control109">
-          <DataField>RD_Caption_Control109</DataField>
-        </Field>
-        <Field Name="TOTAL_DE_PAGOSCaption">
-          <DataField>TOTAL_DE_PAGOSCaption</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control113">
-          <DataField>RD_Caption_Control113</DataField>
-        </Field>
-        <Field Name="Otras_DeduccionesCaption">
-          <DataField>Otras_DeduccionesCaption</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control117">
-          <DataField>RD_Caption_Control117</DataField>
-        </Field>
-        <Field Name="Avance_SalariosCaption">
-          <DataField>Avance_SalariosCaption</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control121">
-          <DataField>RD_Caption_Control121</DataField>
-        </Field>
-        <Field Name="TOTAL_DEDUCCIONESCaption">
-          <DataField>TOTAL_DEDUCCIONESCaption</DataField>
-        </Field>
-        <Field Name="NETO_A_PAGARCaption">
-          <DataField>NETO_A_PAGARCaption</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control127">
-          <DataField>RD_Caption_Control127</DataField>
-        </Field>
-        <Field Name="RD_Caption_Control128">
-          <DataField>RD_Caption_Control128</DataField>
-        </Field>
-        <Field Name="Aprobado_porCaption">
-          <DataField>Aprobado_porCaption</DataField>
-        </Field>
-        <Field Name="FechaCaption">
-          <DataField>FechaCaption</DataField>
-        </Field>
-        <Field Name="MENOS__Caption">
-          <DataField>MENOS__Caption</DataField>
-        </Field>
-        <Field Name="Recibido_ConformeCaption">
-          <DataField>Recibido_ConformeCaption</DataField>
-        </Field>
-        <Field Name="Employee_No_">
-          <DataField>Employee_No_</DataField>
-        </Field>
-        <Field Name="Pago_Dias_Adci_Captionlbl">
-          <DataField>Pago_Dias_Adci_Captionlbl</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -9713,4 +9377,335 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>a155720b-5eec-401c-8b91-95437c2b3d5a</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="MontoCesantia">
+          <DataField>MontoCesantia</DataField>
+        </Field>
+        <Field Name="MontoCesantiaFormat">
+          <DataField>MontoCesantiaFormat</DataField>
+        </Field>
+        <Field Name="DiasCesantia">
+          <DataField>DiasCesantia</DataField>
+        </Field>
+        <Field Name="MontoPreaviso">
+          <DataField>MontoPreaviso</DataField>
+        </Field>
+        <Field Name="MontoPreavisoFormat">
+          <DataField>MontoPreavisoFormat</DataField>
+        </Field>
+        <Field Name="DiasPreaviso">
+          <DataField>DiasPreaviso</DataField>
+        </Field>
+        <Field Name="Importe_SFS">
+          <DataField>Importe_SFS</DataField>
+        </Field>
+        <Field Name="Importe_SFSFormat">
+          <DataField>Importe_SFSFormat</DataField>
+        </Field>
+        <Field Name="Importe_AFP">
+          <DataField>Importe_AFP</DataField>
+        </Field>
+        <Field Name="Importe_AFPFormat">
+          <DataField>Importe_AFPFormat</DataField>
+        </Field>
+        <Field Name="Employee__Global_Dimension_2_Code_">
+          <DataField>Employee__Global_Dimension_2_Code_</DataField>
+        </Field>
+        <Field Name="Employee_Employee__Full_Name_">
+          <DataField>Employee_Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="RegRegUdadCotiz__Nombre_Empresa_cotizaci_n_">
+          <DataField>RegRegUdadCotiz__Nombre_Empresa_cotizaci_n_</DataField>
+        </Field>
+        <Field Name="MontoRegalia">
+          <DataField>MontoRegalia</DataField>
+        </Field>
+        <Field Name="MontoRegaliaFormat">
+          <DataField>MontoRegaliaFormat</DataField>
+        </Field>
+        <Field Name="AcumuladoRegalia">
+          <DataField>AcumuladoRegalia</DataField>
+        </Field>
+        <Field Name="AcumuladoRegaliaFormat">
+          <DataField>AcumuladoRegaliaFormat</DataField>
+        </Field>
+        <Field Name="MontoVacaciones">
+          <DataField>MontoVacaciones</DataField>
+        </Field>
+        <Field Name="MontoVacacionesFormat">
+          <DataField>MontoVacacionesFormat</DataField>
+        </Field>
+        <Field Name="DiasVacaciones">
+          <DataField>DiasVacaciones</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante">
+          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestanteFormat">
+          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestanteFormat</DataField>
+        </Field>
+        <Field Name="Categor__Descripci_n_">
+          <DataField>Categor__Descripci_n_</DataField>
+        </Field>
+        <Field Name="Employee__Employment_Date_">
+          <DataField>Employee__Employment_Date_</DataField>
+        </Field>
+        <Field Name="Employee__Termination_Date_">
+          <DataField>Employee__Termination_Date_</DataField>
+        </Field>
+        <Field Name="Document_Type">
+          <DataField>Document_Type</DataField>
+        </Field>
+        <Field Name="Document_ID">
+          <DataField>Document_ID</DataField>
+        </Field>
+        <Field Name="Causa_Salida">
+          <DataField>Causa_Salida</DataField>
+        </Field>
+        <Field Name="FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_">
+          <DataField>FORMAT_GAno______A_os_______FORMAT_GMes______Meses______FORMAT__GD_a_______D_as_</DataField>
+        </Field>
+        <Field Name="PromedioSalarioAnual">
+          <DataField>PromedioSalarioAnual</DataField>
+        </Field>
+        <Field Name="PromedioSalarioAnualFormat">
+          <DataField>PromedioSalarioAnualFormat</DataField>
+        </Field>
+        <Field Name="PromedioSalarioMensual">
+          <DataField>PromedioSalarioMensual</DataField>
+        </Field>
+        <Field Name="PromedioSalarioMensualFormat">
+          <DataField>PromedioSalarioMensualFormat</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiario">
+          <DataField>PromedioSalarioDiario</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiarioFormat">
+          <DataField>PromedioSalarioDiarioFormat</DataField>
+        </Field>
+        <Field Name="Employee_Salario">
+          <DataField>Employee_Salario</DataField>
+        </Field>
+        <Field Name="Employee_SalarioFormat">
+          <DataField>Employee_SalarioFormat</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiario_Control83">
+          <DataField>PromedioSalarioDiario_Control83</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiario_Control83Format">
+          <DataField>PromedioSalarioDiario_Control83Format</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiario_Control88">
+          <DataField>PromedioSalarioDiario_Control88</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiario_Control88Format">
+          <DataField>PromedioSalarioDiario_Control88Format</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiarioVac">
+          <DataField>PromedioSalarioDiarioVac</DataField>
+        </Field>
+        <Field Name="PromedioSalarioDiarioVacFormat">
+          <DataField>PromedioSalarioDiarioVacFormat</DataField>
+        </Field>
+        <Field Name="DMY2DATE_1_DATE2DMY__Termination_Date__2__DATE2DMY__Termination_Date__3__">
+          <DataField>DMY2DATE_1_DATE2DMY__Termination_Date__2__DATE2DMY__Termination_Date__3__</DataField>
+        </Field>
+        <Field Name="Employee__Termination_Date__Control104">
+          <DataField>Employee__Termination_Date__Control104</DataField>
+        </Field>
+        <Field Name="Monto_Restante">
+          <DataField>Monto_Restante</DataField>
+        </Field>
+        <Field Name="Monto_RestanteFormat">
+          <DataField>Monto_RestanteFormat</DataField>
+        </Field>
+        <Field Name="AvanceSalario">
+          <DataField>AvanceSalario</DataField>
+        </Field>
+        <Field Name="AvanceSalarioFormat">
+          <DataField>AvanceSalarioFormat</DataField>
+        </Field>
+        <Field Name="MontoaDeducir">
+          <DataField>MontoaDeducir</DataField>
+        </Field>
+        <Field Name="MontoaDeducirFormat">
+          <DataField>MontoaDeducirFormat</DataField>
+        </Field>
+        <Field Name="AvanceSalario___MontoaDeducir">
+          <DataField>AvanceSalario___MontoaDeducir</DataField>
+        </Field>
+        <Field Name="AvanceSalario___MontoaDeducirFormat">
+          <DataField>AvanceSalario___MontoaDeducirFormat</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__">
+          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__Format">
+          <DataField>MontoCesantia___MontoPreaviso____MontoRegalia___MontoVacaciones___MontoRestante_____AvanceSalario___MontoaDeducir__Format</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreaviso">
+          <DataField>MontoCesantia___MontoPreaviso</DataField>
+        </Field>
+        <Field Name="MontoCesantia___MontoPreavisoFormat">
+          <DataField>MontoCesantia___MontoPreavisoFormat</DataField>
+        </Field>
+        <Field Name="Devolucion_ISR">
+          <DataField>Devolucion_ISR</DataField>
+        </Field>
+        <Field Name="Devolucion_ISRFormat">
+          <DataField>Devolucion_ISRFormat</DataField>
+        </Field>
+        <Field Name="Otras_Deducciones">
+          <DataField>Otras_Deducciones</DataField>
+        </Field>
+        <Field Name="Otras_DeduccionesFormat">
+          <DataField>Otras_DeduccionesFormat</DataField>
+        </Field>
+        <Field Name="II__CESANTIACaption">
+          <DataField>II__CESANTIACaption</DataField>
+        </Field>
+        <Field Name="RD_Caption">
+          <DataField>RD_Caption</DataField>
+        </Field>
+        <Field Name="D_asCaption">
+          <DataField>D_asCaption</DataField>
+        </Field>
+        <Field Name="I__PREAVISOCaption">
+          <DataField>I__PREAVISOCaption</DataField>
+        </Field>
+        <Field Name="Nombres_y_ApellidosCaption">
+          <DataField>Nombres_y_ApellidosCaption</DataField>
+        </Field>
+        <Field Name="V__REGALIACaption">
+          <DataField>V__REGALIACaption</DataField>
+        </Field>
+        <Field Name="III__VACACIONESCaption">
+          <DataField>III__VACACIONESCaption</DataField>
+        </Field>
+        <Field Name="Gerencia_de_Recursos_HumanosCaption">
+          <DataField>Gerencia_de_Recursos_HumanosCaption</DataField>
+        </Field>
+        <Field Name="LIQUIDACION_DE_PRESTACIONES_LABORALESCaption">
+          <DataField>LIQUIDACION_DE_PRESTACIONES_LABORALESCaption</DataField>
+        </Field>
+        <Field Name="DepartamentoCaption">
+          <DataField>DepartamentoCaption</DataField>
+        </Field>
+        <Field Name="CargoCaption">
+          <DataField>CargoCaption</DataField>
+        </Field>
+        <Field Name="Fecha_de_IngresoCaption">
+          <DataField>Fecha_de_IngresoCaption</DataField>
+        </Field>
+        <Field Name="Fecha_de_SalidaCaption">
+          <DataField>Fecha_de_SalidaCaption</DataField>
+        </Field>
+        <Field Name="Tiempo_TrabajadoCaption">
+          <DataField>Tiempo_TrabajadoCaption</DataField>
+        </Field>
+        <Field Name="Sueldo_devengado_en_el__ltimo_a_oCaption">
+          <DataField>Sueldo_devengado_en_el__ltimo_a_oCaption</DataField>
+        </Field>
+        <Field Name="Promedio_Mensual_RD_Caption">
+          <DataField>Promedio_Mensual_RD_Caption</DataField>
+        </Field>
+        <Field Name="Promedio_DiarioCaption">
+          <DataField>Promedio_DiarioCaption</DataField>
+        </Field>
+        <Field Name="Ultimo_Sueldo_Mensual_RD_Caption">
+          <DataField>Ultimo_Sueldo_Mensual_RD_Caption</DataField>
+        </Field>
+        <Field Name="DETALLES_DE_LIQUIDACION_DE_PRESTACIONES_LABORALESCaption">
+          <DataField>DETALLES_DE_LIQUIDACION_DE_PRESTACIONES_LABORALESCaption</DataField>
+        </Field>
+        <Field Name="SFS_Caption">
+          <DataField>SFS_Caption</DataField>
+        </Field>
+        <Field Name="AFP_Caption">
+          <DataField>AFP_Caption</DataField>
+        </Field>
+        <Field Name="D_asCaption_Control86">
+          <DataField>D_asCaption_Control86</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control89">
+          <DataField>RD_Caption_Control89</DataField>
+        </Field>
+        <Field Name="D_asCaption_Control90">
+          <DataField>D_asCaption_Control90</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control95">
+          <DataField>RD_Caption_Control95</DataField>
+        </Field>
+        <Field Name="TOTAL_LIQUIDACION_PRESTACIONES_LABORALESCaption">
+          <DataField>TOTAL_LIQUIDACION_PRESTACIONES_LABORALESCaption</DataField>
+        </Field>
+        <Field Name="IV__Salario_devengado_del_Caption">
+          <DataField>IV__Salario_devengado_del_Caption</DataField>
+        </Field>
+        <Field Name="alCaption">
+          <DataField>alCaption</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control105">
+          <DataField>RD_Caption_Control105</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control109">
+          <DataField>RD_Caption_Control109</DataField>
+        </Field>
+        <Field Name="TOTAL_DE_PAGOSCaption">
+          <DataField>TOTAL_DE_PAGOSCaption</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control113">
+          <DataField>RD_Caption_Control113</DataField>
+        </Field>
+        <Field Name="Otras_DeduccionesCaption">
+          <DataField>Otras_DeduccionesCaption</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control117">
+          <DataField>RD_Caption_Control117</DataField>
+        </Field>
+        <Field Name="Avance_SalariosCaption">
+          <DataField>Avance_SalariosCaption</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control121">
+          <DataField>RD_Caption_Control121</DataField>
+        </Field>
+        <Field Name="TOTAL_DEDUCCIONESCaption">
+          <DataField>TOTAL_DEDUCCIONESCaption</DataField>
+        </Field>
+        <Field Name="NETO_A_PAGARCaption">
+          <DataField>NETO_A_PAGARCaption</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control127">
+          <DataField>RD_Caption_Control127</DataField>
+        </Field>
+        <Field Name="RD_Caption_Control128">
+          <DataField>RD_Caption_Control128</DataField>
+        </Field>
+        <Field Name="Aprobado_porCaption">
+          <DataField>Aprobado_porCaption</DataField>
+        </Field>
+        <Field Name="FechaCaption">
+          <DataField>FechaCaption</DataField>
+        </Field>
+        <Field Name="MENOS__Caption">
+          <DataField>MENOS__Caption</DataField>
+        </Field>
+        <Field Name="Recibido_ConformeCaption">
+          <DataField>Recibido_ConformeCaption</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="Pago_Dias_Adci_Captionlbl">
+          <DataField>Pago_Dias_Adci_Captionlbl</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

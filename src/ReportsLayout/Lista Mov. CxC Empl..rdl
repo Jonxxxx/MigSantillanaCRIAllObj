@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,165 +11,6 @@
       <rd:DataSourceID>fb8e4d5d-d67d-4e61-b4f9-e7d16e7fa305</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="TIME">
-          <DataField>TIME</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__C_digo_Empleado_">
-          <DataField>Hist_rico_Cab__Pr_stamo__C_digo_Empleado_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Documento_">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Documento_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format</DataField>
-        </Field>
-        <Field Name="Emp__Full_Name_">
-          <DataField>Emp__Full_Name_</DataField>
-        </Field>
-        <Field Name="Detallado">
-          <DataField>Detallado</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_">
-          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_Format">
-          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_Format</DataField>
-        </Field>
-        <Field Name="Movs__CxC_EmpleadosCaption">
-          <DataField>Movs__CxC_EmpleadosCaption</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__C_digo_Empleado_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__C_digo_Empleado_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__No__Documento_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__No__Documento_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption">
-          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo_ImporteCaption">
-          <DataField>Hist_rico_L_n__Pr_stamo_ImporteCaption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_Caption">
-          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_Caption">
-          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_Caption">
-          <DataField>Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__No__Cuota_Caption">
-          <DataField>Hist_rico_L_n__Pr_stamo__No__Cuota_Caption</DataField>
-        </Field>
-        <Field Name="Emp__Full_Name_Caption">
-          <DataField>Emp__Full_Name_Caption</DataField>
-        </Field>
-        <Field Name="TotalCaption">
-          <DataField>TotalCaption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo_Importe">
-          <DataField>Hist_rico_L_n__Pr_stamo_Importe</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo_ImporteFormat">
-          <DataField>Hist_rico_L_n__Pr_stamo_ImporteFormat</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_">
-          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_Format">
-          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_">
-          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_Format">
-          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__No__Cuota_">
-          <DataField>Hist_rico_L_n__Pr_stamo__No__Cuota_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_">
-          <DataField>Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_</DataField>
-        </Field>
-        <Field Name="Historico_Lin__Pr´Š¢stamo_No__Pr´Š¢stamo">
-          <DataField>Historico_Lin__Pr´Š¢stamo_No__Pr´Š¢stamo</DataField>
-        </Field>
-        <Field Name="Historico_Lin__Pr´Š¢stamo_No__Linea">
-          <DataField>Historico_Lin__Pr´Š¢stamo_No__Linea</DataField>
-        </Field>
-        <Field Name="Historico_Lin__Pr´Š¢stamo_Codigo_Empleado">
-          <DataField>Historico_Lin__Pr´Š¢stamo_Codigo_Empleado</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2193,4 +2034,158 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>0e1fd055-a2c3-447c-bfe3-7248f679ea11</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="TIME">
+          <DataField>TIME</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__C_digo_Empleado_">
+          <DataField>Hist_rico_Cab__Pr_stamo__C_digo_Empleado_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Documento_">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Documento_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Format</DataField>
+        </Field>
+        <Field Name="Emp__Full_Name_">
+          <DataField>Emp__Full_Name_</DataField>
+        </Field>
+        <Field Name="Detallado">
+          <DataField>Detallado</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Pendiente_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_">
+          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_Format">
+          <DataField>Hist_rico_Cab__Pr_stamo__Hist_rico_Cab__Pr_stamo___Importe_Original_Format</DataField>
+        </Field>
+        <Field Name="Movs__CxC_EmpleadosCaption">
+          <DataField>Movs__CxC_EmpleadosCaption</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Pr_stamo_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__C_digo_Empleado_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__C_digo_Empleado_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Fecha_Registro_CxC_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Cuota_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__No__Documento_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__No__Documento_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Original_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Original_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption">
+          <DataField>Hist_rico_Cab__Pr_stamo__Importe_Pendiente_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo_ImporteCaption">
+          <DataField>Hist_rico_L_n__Pr_stamo_ImporteCaption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_Caption">
+          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_Caption">
+          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_Caption">
+          <DataField>Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__No__Cuota_Caption">
+          <DataField>Hist_rico_L_n__Pr_stamo__No__Cuota_Caption</DataField>
+        </Field>
+        <Field Name="Emp__Full_Name_Caption">
+          <DataField>Emp__Full_Name_Caption</DataField>
+        </Field>
+        <Field Name="TotalCaption">
+          <DataField>TotalCaption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo_Importe">
+          <DataField>Hist_rico_L_n__Pr_stamo_Importe</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo_ImporteFormat">
+          <DataField>Hist_rico_L_n__Pr_stamo_ImporteFormat</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_">
+          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__D_bito_Format">
+          <DataField>Hist_rico_L_n__Pr_stamo__D_bito_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_">
+          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__Cr_dito_Format">
+          <DataField>Hist_rico_L_n__Pr_stamo__Cr_dito_Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__No__Cuota_">
+          <DataField>Hist_rico_L_n__Pr_stamo__No__Cuota_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_">
+          <DataField>Hist_rico_L_n__Pr_stamo__Fecha_Transacci_n_</DataField>
+        </Field>
+        <Field Name="Historico_Lin__Prestamo_No__Prestamo">
+          <DataField>Historico_Lin__Prestamo_No__Prestamo</DataField>
+        </Field>
+        <Field Name="Historico_Lin__Prestamo_No__Linea">
+          <DataField>Historico_Lin__Prestamo_No__Linea</DataField>
+        </Field>
+        <Field Name="Historico_Lin__Prestamo_Codigo_Empleado">
+          <DataField>Historico_Lin__Prestamo_Codigo_Empleado</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

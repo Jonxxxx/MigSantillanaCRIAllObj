@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -11,186 +11,6 @@
       <rd:DataSourceID>ddfc15a3-4fd4-48cb-bbd8-1712318a8bdf</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="FORMAT_TODAY_0_4_">
-          <DataField>FORMAT_TODAY_0_4_</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENO">
-          <DataField>CurrReport_PAGENO</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="NombreReporte">
-          <DataField>NombreReporte</DataField>
-        </Field>
-        <Field Name="ImporteTotal">
-          <DataField>ImporteTotal</DataField>
-        </Field>
-        <Field Name="ImporteTotalFormat">
-          <DataField>ImporteTotalFormat</DataField>
-        </Field>
-        <Field Name="CantGral">
-          <DataField>CantGral</DataField>
-        </Field>
-        <Field Name="CantGralFormat">
-          <DataField>CantGralFormat</DataField>
-        </Field>
-        <Field Name="CantEmplGral">
-          <DataField>CantEmplGral</DataField>
-        </Field>
-        <Field Name="CantEmplGralFormat">
-          <DataField>CantEmplGralFormat</DataField>
-        </Field>
-        <Field Name="CurrReport_PAGENOCaption">
-          <DataField>CurrReport_PAGENOCaption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina__No__empleado_Caption">
-          <DataField>Hist_rico_L_n__n_mina__No__empleado_Caption</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_Caption">
-          <DataField>Employee__Full_Name_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_Caption">
-          <DataField>Hist_rico_L_n__n_mina__Importe_Base_Caption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_CantidadCaption">
-          <DataField>Hist_rico_L_n__n_mina_CantidadCaption</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_TotalCaption">
-          <DataField>Hist_rico_L_n__n_mina_TotalCaption</DataField>
-        </Field>
-        <Field Name="Grand_TotalCaption">
-          <DataField>Grand_TotalCaption</DataField>
-        </Field>
-        <Field Name="Departamentos_Codigo">
-          <DataField>Departamentos_Codigo</DataField>
-        </Field>
-        <Field Name="Sub_Departamentos_Cod__Departamento">
-          <DataField>Sub_Departamentos_Cod__Departamento</DataField>
-        </Field>
-        <Field Name="Sub_Departamentos_Codigo">
-          <DataField>Sub_Departamentos_Codigo</DataField>
-        </Field>
-        <Field Name="Employee_No_">
-          <DataField>Employee_No_</DataField>
-        </Field>
-        <Field Name="Employee_Departamento">
-          <DataField>Employee_Departamento</DataField>
-        </Field>
-        <Field Name="Employee_Sub_Departamento">
-          <DataField>Employee_Sub_Departamento</DataField>
-        </Field>
-        <Field Name="FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion">
-          <DataField>FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion</DataField>
-        </Field>
-        <Field Name="FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion">
-          <DataField>FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_">
-          <DataField>Hist_rico_L_n__n_mina__Importe_Base_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_Format">
-          <DataField>Hist_rico_L_n__n_mina__Importe_Base_Format</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina__No__empleado_">
-          <DataField>Hist_rico_L_n__n_mina__No__empleado_</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Cantidad">
-          <DataField>Hist_rico_L_n__n_mina_Cantidad</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_CantidadFormat">
-          <DataField>Hist_rico_L_n__n_mina_CantidadFormat</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Total">
-          <DataField>Hist_rico_L_n__n_mina_Total</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_TotalFormat">
-          <DataField>Hist_rico_L_n__n_mina_TotalFormat</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000016">
-          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000016</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000016Format">
-          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000016Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000017">
-          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000017</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000017Format">
-          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000017Format</DataField>
-        </Field>
-        <Field Name="Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion">
-          <DataField>Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion</DataField>
-        </Field>
-        <Field Name="CantEmpl">
-          <DataField>CantEmpl</DataField>
-        </Field>
-        <Field Name="CantEmplFormat">
-          <DataField>CantEmplFormat</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000008">
-          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000008</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000008Format">
-          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000008Format</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000009">
-          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000009</DataField>
-        </Field>
-        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000009Format">
-          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000009Format</DataField>
-        </Field>
-        <Field Name="Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion">
-          <DataField>Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion</DataField>
-        </Field>
-        <Field Name="CantEmpl_Control1000000020">
-          <DataField>CantEmpl_Control1000000020</DataField>
-        </Field>
-        <Field Name="CantEmpl_Control1000000020Format">
-          <DataField>CantEmpl_Control1000000020Format</DataField>
-        </Field>
-        <Field Name="V1Caption">
-          <DataField>V1Caption</DataField>
-        </Field>
-        <Field Name="Historico_Lin__nomina_Tipo_nomina">
-          <DataField>Historico_Lin__nomina_Tipo_nomina</DataField>
-        </Field>
-        <Field Name="Historico_Lin__nomina_Periodo">
-          <DataField>Historico_Lin__nomina_Periodo</DataField>
-        </Field>
-        <Field Name="Historico_Lin__nomina_No__Orden">
-          <DataField>Historico_Lin__nomina_No__Orden</DataField>
-        </Field>
-        <Field Name="Historico_Lin__nomina_Departamento">
-          <DataField>Historico_Lin__nomina_Departamento</DataField>
-        </Field>
-        <Field Name="Historico_Lin__nomina_Sub_Departamento">
-          <DataField>Historico_Lin__nomina_Sub_Departamento</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1654,4 +1474,179 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Invalid</rd:ReportUnitType>
   <rd:ReportID>de7f693b-d0de-4ff2-a04b-6d62cc3dc6a0</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="FORMAT_TODAY_0_4_">
+          <DataField>FORMAT_TODAY_0_4_</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENO">
+          <DataField>CurrReport_PAGENO</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="NombreReporte">
+          <DataField>NombreReporte</DataField>
+        </Field>
+        <Field Name="ImporteTotal">
+          <DataField>ImporteTotal</DataField>
+        </Field>
+        <Field Name="ImporteTotalFormat">
+          <DataField>ImporteTotalFormat</DataField>
+        </Field>
+        <Field Name="CantGral">
+          <DataField>CantGral</DataField>
+        </Field>
+        <Field Name="CantGralFormat">
+          <DataField>CantGralFormat</DataField>
+        </Field>
+        <Field Name="CantEmplGral">
+          <DataField>CantEmplGral</DataField>
+        </Field>
+        <Field Name="CantEmplGralFormat">
+          <DataField>CantEmplGralFormat</DataField>
+        </Field>
+        <Field Name="CurrReport_PAGENOCaption">
+          <DataField>CurrReport_PAGENOCaption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina__No__empleado_Caption">
+          <DataField>Hist_rico_L_n__n_mina__No__empleado_Caption</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_Caption">
+          <DataField>Employee__Full_Name_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_Caption">
+          <DataField>Hist_rico_L_n__n_mina__Importe_Base_Caption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_CantidadCaption">
+          <DataField>Hist_rico_L_n__n_mina_CantidadCaption</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_TotalCaption">
+          <DataField>Hist_rico_L_n__n_mina_TotalCaption</DataField>
+        </Field>
+        <Field Name="Grand_TotalCaption">
+          <DataField>Grand_TotalCaption</DataField>
+        </Field>
+        <Field Name="Departamentos_Codigo">
+          <DataField>Departamentos_Codigo</DataField>
+        </Field>
+        <Field Name="Sub_Departamentos_Cod__Departamento">
+          <DataField>Sub_Departamentos_Cod__Departamento</DataField>
+        </Field>
+        <Field Name="Sub_Departamentos_Codigo">
+          <DataField>Sub_Departamentos_Codigo</DataField>
+        </Field>
+        <Field Name="Employee_No_">
+          <DataField>Employee_No_</DataField>
+        </Field>
+        <Field Name="Employee_Departamento">
+          <DataField>Employee_Departamento</DataField>
+        </Field>
+        <Field Name="Employee_Sub_Departamento">
+          <DataField>Employee_Sub_Departamento</DataField>
+        </Field>
+        <Field Name="FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion">
+          <DataField>FIELDCAPTION_Departamento____________Departamento_________Departamentos_Descripcion</DataField>
+        </Field>
+        <Field Name="FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion">
+          <DataField>FIELDCAPTION__Sub_Departamento_____________Sub_Departamento_____________Sub_Departamentos__Descripcion</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_">
+          <DataField>Hist_rico_L_n__n_mina__Importe_Base_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina__Importe_Base_Format">
+          <DataField>Hist_rico_L_n__n_mina__Importe_Base_Format</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina__No__empleado_">
+          <DataField>Hist_rico_L_n__n_mina__No__empleado_</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Cantidad">
+          <DataField>Hist_rico_L_n__n_mina_Cantidad</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_CantidadFormat">
+          <DataField>Hist_rico_L_n__n_mina_CantidadFormat</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Total">
+          <DataField>Hist_rico_L_n__n_mina_Total</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_TotalFormat">
+          <DataField>Hist_rico_L_n__n_mina_TotalFormat</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000016">
+          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000016</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000016Format">
+          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000016Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000017">
+          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000017</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000017Format">
+          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000017Format</DataField>
+        </Field>
+        <Field Name="Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion">
+          <DataField>Text002___FIELDCAPTION__Sub_Departamento______________Sub_Departamentos__Descripcion</DataField>
+        </Field>
+        <Field Name="CantEmpl">
+          <DataField>CantEmpl</DataField>
+        </Field>
+        <Field Name="CantEmplFormat">
+          <DataField>CantEmplFormat</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000008">
+          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000008</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Total_Control1000000008Format">
+          <DataField>Hist_rico_L_n__n_mina_Total_Control1000000008Format</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000009">
+          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000009</DataField>
+        </Field>
+        <Field Name="Hist_rico_L_n__n_mina_Cantidad_Control1000000009Format">
+          <DataField>Hist_rico_L_n__n_mina_Cantidad_Control1000000009Format</DataField>
+        </Field>
+        <Field Name="Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion">
+          <DataField>Text002___FIELDCAPTION_Departamento____________Departamentos_Descripcion</DataField>
+        </Field>
+        <Field Name="CantEmpl_Control1000000020">
+          <DataField>CantEmpl_Control1000000020</DataField>
+        </Field>
+        <Field Name="CantEmpl_Control1000000020Format">
+          <DataField>CantEmpl_Control1000000020Format</DataField>
+        </Field>
+        <Field Name="V1Caption">
+          <DataField>V1Caption</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Tipo_nomina">
+          <DataField>Historico_Lin__nomina_Tipo_nomina</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Periodo">
+          <DataField>Historico_Lin__nomina_Periodo</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_No__Orden">
+          <DataField>Historico_Lin__nomina_No__Orden</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Departamento">
+          <DataField>Historico_Lin__nomina_Departamento</DataField>
+        </Field>
+        <Field Name="Historico_Lin__nomina_Sub_Departamento">
+          <DataField>Historico_Lin__nomina_Sub_Departamento</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>

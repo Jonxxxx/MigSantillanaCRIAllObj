@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
@@ -10,126 +10,6 @@
       <rd:DataSourceID>c9df4c70-fb54-4ce6-842c-0677cf2fd937</rd:DataSourceID>
     </DataSource>
   </DataSources>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-      <Fields>
-        <Field Name="TrabajosEmplporproyectosCaptionLbl">
-          <DataField>TrabajosEmplporproyectosCaptionLbl</DataField>
-        </Field>
-        <Field Name="COMPANYNAME">
-          <DataField>COMPANYNAME</DataField>
-        </Field>
-        <Field Name="USERID">
-          <DataField>USERID</DataField>
-        </Field>
-        <Field Name="GETFILTERS">
-          <DataField>GETFILTERS</DataField>
-        </Field>
-        <Field Name="Employee__No__">
-          <DataField>Employee__No__</DataField>
-        </Field>
-        <Field Name="Employee__Full_Name_">
-          <DataField>Employee__Full_Name_</DataField>
-        </Field>
-        <Field Name="Resource_No_Caption">
-          <DataField>Resource_No_Caption</DataField>
-        </Field>
-        <Field Name="Resource_No_">
-          <DataField>Resource_No_</DataField>
-        </Field>
-        <Field Name="TotalGralCaptionLbl">
-          <DataField>TotalGralCaptionLbl</DataField>
-        </Field>
-        <Field Name="Total_Qty">
-          <DataField>Total_Qty</DataField>
-        </Field>
-        <Field Name="Total_QtyFormat">
-          <DataField>Total_QtyFormat</DataField>
-        </Field>
-        <Field Name="Total_Amt">
-          <DataField>Total_Amt</DataField>
-        </Field>
-        <Field Name="Total_AmtFormat">
-          <DataField>Total_AmtFormat</DataField>
-        </Field>
-        <Field Name="Posting_DateCaption">
-          <DataField>Posting_DateCaption</DataField>
-        </Field>
-        <Field Name="Posting_Date">
-          <DataField>Posting_Date</DataField>
-        </Field>
-        <Field Name="Job_No_Caption">
-          <DataField>Job_No_Caption</DataField>
-        </Field>
-        <Field Name="Job_No_">
-          <DataField>Job_No_</DataField>
-        </Field>
-        <Field Name="Job_Task_No_Caption">
-          <DataField>Job_Task_No_Caption</DataField>
-        </Field>
-        <Field Name="Job_Task_No_">
-          <DataField>Job_Task_No_</DataField>
-        </Field>
-        <Field Name="Unit_of_Measure_CodeCaption">
-          <DataField>Unit_of_Measure_CodeCaption</DataField>
-        </Field>
-        <Field Name="Unit_of_Measure_Code">
-          <DataField>Unit_of_Measure_Code</DataField>
-        </Field>
-        <Field Name="Work_Type_CodeCaption">
-          <DataField>Work_Type_CodeCaption</DataField>
-        </Field>
-        <Field Name="Work_Type_Code">
-          <DataField>Work_Type_Code</DataField>
-        </Field>
-        <Field Name="Concepto_salarialCaption">
-          <DataField>Concepto_salarialCaption</DataField>
-        </Field>
-        <Field Name="Concepto_salarial">
-          <DataField>Concepto_salarial</DataField>
-        </Field>
-        <Field Name="Precio_TarifaCaption">
-          <DataField>Precio_TarifaCaption</DataField>
-        </Field>
-        <Field Name="Precio_Tarifa">
-          <DataField>Precio_Tarifa</DataField>
-        </Field>
-        <Field Name="Precio_TarifaFormat">
-          <DataField>Precio_TarifaFormat</DataField>
-        </Field>
-        <Field Name="qtyCaption">
-          <DataField>qtyCaption</DataField>
-        </Field>
-        <Field Name="qty">
-          <DataField>qty</DataField>
-        </Field>
-        <Field Name="qtyFormat">
-          <DataField>qtyFormat</DataField>
-        </Field>
-        <Field Name="amtCaption">
-          <DataField>amtCaption</DataField>
-        </Field>
-        <Field Name="amt">
-          <DataField>amt</DataField>
-        </Field>
-        <Field Name="amtFormat">
-          <DataField>amtFormat</DataField>
-        </Field>
-        <Field Name="TotalParaCaptionLbl">
-          <DataField>TotalParaCaptionLbl</DataField>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSet</rd:DataSetName>
-        <rd:SchemaPath>Report.xsd</rd:SchemaPath>
-        <rd:TableName>Result</rd:TableName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -1671,4 +1551,119 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Inch</rd:ReportUnitType>
   <rd:ReportID>625375a0-ecc6-4682-ace6-927523801b6a</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="TrabajosEmplporproyectosCaptionLbl">
+          <DataField>TrabajosEmplporproyectosCaptionLbl</DataField>
+        </Field>
+        <Field Name="COMPANYNAME">
+          <DataField>COMPANYNAME</DataField>
+        </Field>
+        <Field Name="USERID">
+          <DataField>USERID</DataField>
+        </Field>
+        <Field Name="GETFILTERS">
+          <DataField>GETFILTERS</DataField>
+        </Field>
+        <Field Name="Employee__No__">
+          <DataField>Employee__No__</DataField>
+        </Field>
+        <Field Name="Employee__Full_Name_">
+          <DataField>Employee__Full_Name_</DataField>
+        </Field>
+        <Field Name="Resource_No_Caption">
+          <DataField>Resource_No_Caption</DataField>
+        </Field>
+        <Field Name="Resource_No_">
+          <DataField>Resource_No_</DataField>
+        </Field>
+        <Field Name="TotalGralCaptionLbl">
+          <DataField>TotalGralCaptionLbl</DataField>
+        </Field>
+        <Field Name="Total_Qty">
+          <DataField>Total_Qty</DataField>
+        </Field>
+        <Field Name="Total_QtyFormat">
+          <DataField>Total_QtyFormat</DataField>
+        </Field>
+        <Field Name="Total_Amt">
+          <DataField>Total_Amt</DataField>
+        </Field>
+        <Field Name="Total_AmtFormat">
+          <DataField>Total_AmtFormat</DataField>
+        </Field>
+        <Field Name="Posting_DateCaption">
+          <DataField>Posting_DateCaption</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="Job_No_Caption">
+          <DataField>Job_No_Caption</DataField>
+        </Field>
+        <Field Name="Job_No_">
+          <DataField>Job_No_</DataField>
+        </Field>
+        <Field Name="Job_Task_No_Caption">
+          <DataField>Job_Task_No_Caption</DataField>
+        </Field>
+        <Field Name="Job_Task_No_">
+          <DataField>Job_Task_No_</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_CodeCaption">
+          <DataField>Unit_of_Measure_CodeCaption</DataField>
+        </Field>
+        <Field Name="Unit_of_Measure_Code">
+          <DataField>Unit_of_Measure_Code</DataField>
+        </Field>
+        <Field Name="Work_Type_CodeCaption">
+          <DataField>Work_Type_CodeCaption</DataField>
+        </Field>
+        <Field Name="Work_Type_Code">
+          <DataField>Work_Type_Code</DataField>
+        </Field>
+        <Field Name="Concepto_salarialCaption">
+          <DataField>Concepto_salarialCaption</DataField>
+        </Field>
+        <Field Name="Concepto_salarial">
+          <DataField>Concepto_salarial</DataField>
+        </Field>
+        <Field Name="Precio_TarifaCaption">
+          <DataField>Precio_TarifaCaption</DataField>
+        </Field>
+        <Field Name="Precio_Tarifa">
+          <DataField>Precio_Tarifa</DataField>
+        </Field>
+        <Field Name="Precio_TarifaFormat">
+          <DataField>Precio_TarifaFormat</DataField>
+        </Field>
+        <Field Name="qtyCaption">
+          <DataField>qtyCaption</DataField>
+        </Field>
+        <Field Name="qty">
+          <DataField>qty</DataField>
+        </Field>
+        <Field Name="qtyFormat">
+          <DataField>qtyFormat</DataField>
+        </Field>
+        <Field Name="amtCaption">
+          <DataField>amtCaption</DataField>
+        </Field>
+        <Field Name="amt">
+          <DataField>amt</DataField>
+        </Field>
+        <Field Name="amtFormat">
+          <DataField>amtFormat</DataField>
+        </Field>
+        <Field Name="TotalParaCaptionLbl">
+          <DataField>TotalParaCaptionLbl</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
 </Report>
