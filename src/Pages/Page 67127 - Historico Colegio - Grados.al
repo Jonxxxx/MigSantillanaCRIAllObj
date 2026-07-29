@@ -15,47 +15,75 @@ page 67127 "Historico Colegio - Grados"
         {
             repeater(Group)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field(Seccion; Seccion)
+                field(Seccion; Rec.Seccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seccion';
                 }
-                field("Cantidad Secciones"; "Cantidad Secciones")
+                field("Cantidad Secciones"; Rec."Cantidad Secciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Secciones';
                 }
-                field("Cantidad Alumnos"; "Cantidad Alumnos")
+                field("Cantidad Alumnos"; Rec."Cantidad Alumnos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Alumnos';
                 }
-                field("Cantidad Docentes"; "Cantidad Docentes")
+                field("Cantidad Docentes"; Rec."Cantidad Docentes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Docentes';
                 }
-                field("Lista Utiles"; "Lista Utiles")
+                field("Lista Utiles"; Rec."Lista Utiles")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lista Utiles';
                 }
-                field("Lista Competencia"; "Lista Competencia")
+                field("Lista Competencia"; Rec."Lista Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lista Competencia';
                 }
-                field("Horas Ingles"; "Horas Ingles")
+                field("Horas Ingles"; Rec."Horas Ingles")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas Ingles';
                 }
-                field("Fecha Decision"; "Fecha Decision")
+                field("Fecha Decision"; Rec."Fecha Decision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Decision';
                 }
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
             }
         }

@@ -10,41 +10,65 @@ page 34002217 "Ficha Miembros Coop."
             group(General)
             {
                 Editable = editar;
-                field("Tipo de miembro"; "Tipo de miembro")
+                field("Tipo de miembro"; Rec."Tipo de miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de miembro';
                 }
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("Fecha inscripcion"; "Fecha inscripcion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                 }
-                field("Tipo de aporte"; "Tipo de aporte")
+                field("Tipo de aporte"; Rec."Tipo de aporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de aporte';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
-                field("Ahorro acumulado"; "Ahorro acumulado")
+                field("Ahorro acumulado"; Rec."Ahorro acumulado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ahorro acumulado';
                 }
-                field("Prestamos pendientes"; "Prestamos pendientes")
+                field("Prestamos pendientes"; Rec."Prestamos pendientes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prestamos pendientes';
                 }
-                field("Importe pendiente"; "Importe pendiente")
+                field("Importe pendiente"; Rec."Importe pendiente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe pendiente';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Editable = false;
                 }
             }

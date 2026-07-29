@@ -9,11 +9,15 @@ page 67124 "Solicitud - Especialidad"
         {
             repeater(Group)
             {
-                field("Cod. Especialidad"; "Cod. Especialidad")
+                field("Cod. Especialidad"; Rec."Cod. Especialidad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Especialidad';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

@@ -10,69 +10,103 @@ page 34002115 "Ficha Acciones de personal"
         {
             group(General)
             {
-                field("Tipo de accion"; "Tipo de accion")
+                field("Tipo de accion"; Rec."Tipo de accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de accion';
 
                     trigger OnValidate()
                     begin
                         EnableFields;
                     end;
                 }
-                field("Cod. accion"; "Cod. accion")
+                field("Cod. accion"; Rec."Cod. accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. accion';
 
                     trigger OnValidate()
                     begin
                         EnableFields;
                     end;
                 }
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Proximo no. empleado"; "Proximo no. empleado")
+                field("Proximo no. empleado"; Rec."Proximo no. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Proximo no. empleado';
                     Visible = ProxNoEmpVisible;
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field("Nombre completo"; "Nombre completo")
+                field("Nombre completo"; Rec."Nombre completo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre completo';
                     Editable = false;
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                 }
-                field("ID Documento"; "ID Documento")
+                field("ID Documento"; Rec."ID Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Documento';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Descripcion accion"; "Descripcion accion")
+                field("Descripcion accion"; Rec."Descripcion accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion accion';
                 }
-                field("Fecha accion"; "Fecha accion")
+                field("Fecha accion"; Rec."Fecha accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha accion';
                 }
-                field("Fecha efectividad"; "Fecha efectividad")
+                field("Fecha efectividad"; Rec."Fecha efectividad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha efectividad';
                 }
-                field("Cause of Inactivity Code"; "Cause of Inactivity Code")
+                field("Cause of Inactivity Code"; Rec."Cause of Inactivity Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cause of Inactivity Code';
                     Editable = EditaInactividad;
                 }
-                field("Fecha final"; "Fecha final")
+                field("Fecha final"; Rec."Fecha final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha final';
                     Editable = EditaInactividad;
                 }
                 grid(Grid)
@@ -82,12 +116,16 @@ page 34002115 "Ficha Acciones de personal"
                     {
                         //The GridLayout property is only supported on controls of type Grid
                         //GridLayout = Rows;
-                        field(Comentario; Comentario)
+                        field(Comentario; Rec.Comentario)
                         {
+                            ApplicationArea = All;
+                            ToolTip = 'Comentario';
                             MultiLine = true;
                         }
-                        field("Comentario 2"; "Comentario 2")
+                        field("Comentario 2"; Rec."Comentario 2")
                         {
+                            ApplicationArea = All;
+                            ToolTip = 'Comentario 2';
                             MultiLine = true;
                         }
                     }
@@ -96,83 +134,133 @@ page 34002115 "Ficha Acciones de personal"
             group(Changes)
             {
                 Caption = 'Changes';
-                field("Departamento actual"; "Departamento actual")
+                field("Departamento actual"; Rec."Departamento actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Departamento actual';
                 }
-                field("Nombre  depto. actual"; "Nombre  depto. actual")
+                field("Nombre  depto. actual"; Rec."Nombre  depto. actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre  depto. actual';
                 }
-                field("Departamento nuevo"; "Departamento nuevo")
+                field("Departamento nuevo"; Rec."Departamento nuevo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Departamento nuevo';
                 }
-                field("Nombre depto. nuevo"; "Nombre depto. nuevo")
+                field("Nombre depto. nuevo"; Rec."Nombre depto. nuevo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre depto. nuevo';
                 }
-                field("Cargo actual"; "Cargo actual")
+                field("Cargo actual"; Rec."Cargo actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cargo actual';
                 }
-                field("Descripcion cargo actual"; "Descripcion cargo actual")
+                field("Descripcion cargo actual"; Rec."Descripcion cargo actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion cargo actual';
                 }
-                field("Nuevo cargo"; "Nuevo cargo")
+                field("Nuevo cargo"; Rec."Nuevo cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nuevo cargo';
                 }
-                field("Descripcion cargo nuevo"; "Descripcion cargo nuevo")
+                field("Descripcion cargo nuevo"; Rec."Descripcion cargo nuevo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion cargo nuevo';
                 }
-                field("Cod. Supervisor"; "Cod. Supervisor")
+                field("Cod. Supervisor"; Rec."Cod. Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Supervisor';
                 }
-                field("Nombre Supervisor"; "Nombre Supervisor")
+                field("Nombre Supervisor"; Rec."Nombre Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Supervisor';
                     Editable = false;
                 }
-                field("Sueldo actual"; "Sueldo actual")
+                field("Sueldo actual"; Rec."Sueldo actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sueldo actual';
                 }
-                field("Sueldo Nuevo"; "Sueldo Nuevo")
+                field("Sueldo Nuevo"; Rec."Sueldo Nuevo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sueldo Nuevo';
                     Editable = EditaSalario;
                 }
-                field("Ubicacion actual"; "Ubicacion actual")
+                field("Ubicacion actual"; Rec."Ubicacion actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ubicacion actual';
                 }
-                field("Ubicacion nueva"; "Ubicacion nueva")
+                field("Ubicacion nueva"; Rec."Ubicacion nueva")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ubicacion nueva';
                 }
-                field("Empresa nueva"; "Empresa nueva")
+                field("Empresa nueva"; Rec."Empresa nueva")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa nueva';
                     Editable = editaempresa;
                 }
-                field("Numero cuenta actual"; "Numero cuenta actual")
+                field("Numero cuenta actual"; Rec."Numero cuenta actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero cuenta actual';
                 }
-                field("Nivel actual"; "Nivel actual")
+                field("Nivel actual"; Rec."Nivel actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel actual';
                 }
-                field("Nivel nuevo"; "Nivel nuevo")
+                field("Nivel nuevo"; Rec."Nivel nuevo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel nuevo';
                 }
-                field("Cod. Banco"; "Cod. Banco")
+                field("Cod. Banco"; Rec."Cod. Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Banco';
                 }
-                field("Numero cuenta nueva"; "Numero cuenta nueva")
+                field("Numero cuenta nueva"; Rec."Numero cuenta nueva")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero cuenta nueva';
                 }
-                field("Banco tarjeta"; "Banco tarjeta")
+                field("Banco tarjeta"; Rec."Banco tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Banco tarjeta';
                 }
-                field("Numero tarjeta"; "Numero tarjeta")
+                field("Numero tarjeta"; Rec."Numero tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero tarjeta';
                 }
-                field("Fecha expiracion"; "Fecha expiracion")
+                field("Fecha expiracion"; Rec."Fecha expiracion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha expiracion';
                 }
-                field("Importe tarjeta"; "Importe tarjeta")
+                field("Importe tarjeta"; Rec."Importe tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe tarjeta';
                 }
-                field("Tipo de contrato"; "Tipo de contrato")
+                field("Tipo de contrato"; Rec."Tipo de contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de contrato';
 
                     trigger OnValidate()
                     begin
@@ -181,16 +269,22 @@ page 34002115 "Ficha Acciones de personal"
                             TipoContrato := NOT EmploymentContract.Undefined;
                     end;
                 }
-                field("Fecha de inicio"; "Fecha de inicio")
+                field("Fecha de inicio"; Rec."Fecha de inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de inicio';
                     Editable = TipoContrato;
                 }
-                field(FF; "Fecha final")
+                field(FF; Rec."Fecha final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha final';
                     Editable = TipoContrato;
                 }
-                field("Duracion contrato"; "Duracion contrato")
+                field("Duracion contrato"; Rec."Duracion contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Duracion contrato';
                     Editable = TipoContrato;
                 }
             }
@@ -207,36 +301,54 @@ page 34002115 "Ficha Acciones de personal"
             {
                 Caption = 'Cooperative';
                 Visible = CoopVisible;
-                field("Tipo de miembro"; "Tipo de miembro")
+                field("Tipo de miembro"; Rec."Tipo de miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de miembro';
                 }
-                field("Fecha inscripcion"; "Fecha inscripcion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                 }
-                field("Tipo de aporte"; "Tipo de aporte")
+                field("Tipo de aporte"; Rec."Tipo de aporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de aporte';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
             }
             group(Benefits)
             {
                 Caption = 'Benefits';
-                field(Preaviso; Preaviso)
+                field(Preaviso; Rec.Preaviso)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Preaviso';
                 }
-                field(Cesantia; Cesantia)
+                field(Cesantia; Rec.Cesantia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cesantia';
                 }
-                field(Regalia; Regalia)
+                field(Regalia; Rec.Regalia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Regalia';
                 }
             }
             group(Authorizations1)
@@ -244,14 +356,20 @@ page 34002115 "Ficha Acciones de personal"
                 Caption = 'Authorizations';
                 //The GridLayout property is only supported on controls of type Grid
                 //GridLayout = Columns;
-                field("Preparado por"; "Preparado por")
+                field("Preparado por"; Rec."Preparado por")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Preparado por';
                 }
-                field("Revisado por"; "Revisado por")
+                field("Revisado por"; Rec."Revisado por")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Revisado por';
                 }
-                field("Autorizado por"; "Autorizado por")
+                field("Autorizado por"; Rec."Autorizado por")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Autorizado por';
                 }
             }
         }

@@ -15,11 +15,15 @@ page 75014 "Filtro Valor Campo"
         {
             repeater(Group)
             {
-                field(Value; Value)
+                field(Value; Rec.Value)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Value';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
             }
         }

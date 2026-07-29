@@ -14,20 +14,30 @@ page 34002127 "Historico Cab. Impuestos"
             {
                 Caption = 'General';
                 Editable = false;
-                field("Tipo Nomina"; "Tipo Nomina")
+                field("Tipo Nomina"; Rec."Tipo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Nomina';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field("Unidad cotizacion"; "Unidad cotizacion")
+                field("Unidad cotizacion"; Rec."Unidad cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unidad cotizacion';
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                 }
-                field("No. Contabilizacion"; "No. Contabilizacion")
+                field("No. Contabilizacion"; Rec."No. Contabilizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Contabilizacion';
                 }
             }
             part(HistLinNom; 34002128)

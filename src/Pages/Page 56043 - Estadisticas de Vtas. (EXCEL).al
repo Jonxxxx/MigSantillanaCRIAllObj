@@ -26,57 +26,69 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
         {
             field(wDetallado; wDetallado)
             {
+                ApplicationArea = All;
                 Caption = 'Detallado';
             }
             field(wCodNumDev; wCodNumDev)
             {
+                ApplicationArea = All;
                 Caption = 'Nº Devolucion';
             }
             field(wFechaIni; wFechaIni)
             {
+                ApplicationArea = All;
                 Caption = 'Fecha Inicio';
             }
             field(wFechaFin; wFechaFin)
             {
+                ApplicationArea = All;
                 Caption = 'Fecha Fin';
             }
             field(wCliente; wCliente)
             {
+                ApplicationArea = All;
                 Caption = 'Cliente';
                 TableRelation = Customer;
             }
             field(wProducto; wProducto)
             {
+                ApplicationArea = All;
                 Caption = 'From Item:';
                 TableRelation = Item;
             }
             field(wProducto2; wProducto2)
             {
+                ApplicationArea = All;
                 Caption = 'To Item:';
                 TableRelation = Item;
             }
             field(wTipoDocumento; wTipoDocumento)
             {
+                ApplicationArea = All;
                 Caption = 'Tipo Documento';
                 OptionCaption = ' ,Sales Shipment,Sales Invoice,Sales Return Receipt,Sales Credit Memo,Purchase Receipt,Purchase Invoice,Purchase Return Shipment,Purchase Credit Memo,Transfer Shipment,Transfer Receipt,Service Shipment,Service Invoice,Service Credit Memo,Posted Assembly';
             }
             field(wTipoCliente; wTipoCliente)
             {
+                ApplicationArea = All;
                 Caption = 'Tipo Cliente';
                 TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(2));
             }
             field(wGCN; wGCN)
             {
+                ApplicationArea = All;
                 Caption = 'Grupo contable negocio';
                 TableRelation = "Gen. Business Posting Group";
             }
             field(wLineaNegocio; wLineaNegocio)
             {
+                ApplicationArea = All;
                 Caption = 'Tipo Cliente';
                 TableRelation = "Dimension Value".Code WHERE("Global Dimension No." = CONST(1));
             }
             field(wCategoriaPedido; wCategoriaPedido)
             {
+                ApplicationArea = All;
                 Caption = 'Categoria pedido';
 
                 trigger OnLookup(var Text: Text): Boolean
@@ -96,6 +108,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
             }
             field(wCanalVenta; wCanalVenta)
             {
+                ApplicationArea = All;
                 Caption = 'Canal de Venta';
                 HideValue = false;
                 Visible = true;

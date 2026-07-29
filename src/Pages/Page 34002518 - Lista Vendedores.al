@@ -13,14 +13,20 @@ page 34002518 "Lista Vendedores"
         {
             repeater(Group)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
             }
         }

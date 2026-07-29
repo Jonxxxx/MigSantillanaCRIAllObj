@@ -10,7 +10,7 @@ page 34002242 "DSNOM HR Chart"
         {
             field(StatusText; StatusText)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Status Text';
                 Editable = false;
                 ShowCaption = false;

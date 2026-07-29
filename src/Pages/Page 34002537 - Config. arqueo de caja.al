@@ -9,14 +9,20 @@ page 34002537 "Config. arqueo de caja"
         {
             repeater(Group)
             {
-                field("Cod. divisa"; "Cod. divisa")
+                field("Cod. divisa"; Rec."Cod. divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. divisa';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
             }
         }

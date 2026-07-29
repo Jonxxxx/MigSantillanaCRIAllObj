@@ -10,28 +10,40 @@ page 34002164 "Seleccion beneficios"
         {
             repeater(GeneralRep)
             {
-                field(Seleccionar; Seleccionar)
+                field(Seleccionar; Rec.Seleccionar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seleccionar';
                 }
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Beneficio"; "Tipo Beneficio")
+                field("Tipo Beneficio"; Rec."Tipo Beneficio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Beneficio';
                     Editable = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                     Editable = EditaImporte;
                 }
             }

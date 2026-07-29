@@ -34,8 +34,10 @@ page 67074 "Cab. Muestras"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
 
                     trigger OnAssistEdit()
@@ -44,8 +46,10 @@ page 67074 "Cab. Muestras"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Transfer-to Code"; "Transfer-to Code")
+                field("Transfer-to Code"; Rec."Transfer-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Code';
                     Editable = false;
 
                     trigger OnValidate()
@@ -57,54 +61,73 @@ page 67074 "Cab. Muestras"
                         //006
                     end;
                 }
-                field("Transfer-from Code"; "Transfer-from Code")
+                field("Transfer-from Code"; Rec."Transfer-from Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Code';
                     Editable = false;
                 }
-                field("Cod. Ubicacion Alm. Origen"; "Cod. Ubicacion Alm. Origen")
+                field("Cod. Ubicacion Alm. Origen"; Rec."Cod. Ubicacion Alm. Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ubicacion Alm. Origen';
                     Editable = false;
                 }
-                field("Desc. Ubic. Alm. Origen"; "Desc. Ubic. Alm. Origen")
+                field("Desc. Ubic. Alm. Origen"; Rec."Desc. Ubic. Alm. Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Ubic. Alm. Origen';
                     Editable = false;
                 }
-                field("Cod. Ubicacion Alm. Destino"; "Cod. Ubicacion Alm. Destino")
+                field("Cod. Ubicacion Alm. Destino"; Rec."Cod. Ubicacion Alm. Destino")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ubicacion Alm. Destino';
                     Editable = false;
                 }
-                field("Desc. Ubic. Alm. Destino"; "Desc. Ubic. Alm. Destino")
+                field("Desc. Ubic. Alm. Destino"; Rec."Desc. Ubic. Alm. Destino")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Ubic. Alm. Destino';
                     Editable = false;
                 }
                 field(ClienteName; Cliente.Name)
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre';
                     Editable = false;
                 }
                 field(ClienteAddress;
                 Cliente.Address)
                 {
+                    ApplicationArea = All;
                     Caption = 'Direccion';
                     Editable = false;
                 }
                 field(ClienteCity;
                 Cliente.City)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ciudad';
                     Editable = false;
                 }
-                field("Saldo Cliente"; "Saldo Cliente")
+                field("Saldo Cliente"; Rec."Saldo Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Saldo Cliente';
                     Editable = false;
                 }
-                field("Importe Consignacion Orginal"; "Importe Consignacion Orginal")
+                field("Importe Consignacion Orginal"; Rec."Importe Consignacion Orginal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Consignacion Orginal';
                     Editable = false;
                     MultiLine = true;
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                     Editable = false;
 
                     trigger OnValidate()
@@ -112,42 +135,59 @@ page 67074 "Cab. Muestras"
                         PostingDateOnAfterValidate;
                     end;
                 }
-                field("External Document No."; "External Document No.")
+                field("External Document No."; Rec."External Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External Document No.';
                 }
-                field("In-Transit Code"; "In-Transit Code")
+                field("In-Transit Code"; Rec."In-Transit Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'In-Transit Code';
                     Editable = false;
                 }
-                field("Assigned User ID"; "Assigned User ID")
+                field("Assigned User ID"; Rec."Assigned User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Assigned User ID';
                     Editable = false;
                 }
-                field("Importe Consignacion"; "Importe Consignacion")
+                field("Importe Consignacion"; Rec."Importe Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Consignacion';
                     Caption = 'Importe PVA';
                     Editable = false;
                 }
-                field("Cod. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; Rec."Cod. Vendedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Vendedor';
                     Editable = false;
                 }
-                field("Pedido Consignacion"; "Pedido Consignacion")
+                field("Pedido Consignacion"; Rec."Pedido Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pedido Consignacion';
                     Editable = false;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Enabled = false;
                 }
-                field("Limite de credito cliente"; "Limite de credito cliente")
+                field("Limite de credito cliente"; Rec."Limite de credito cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Limite de credito cliente';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
                 field("Saldo Cliente 2"; "Importe Consignacion Orginal" + "Saldo Cliente" + "Importe Consignacion Orginal")
                 {
+                    ApplicationArea = All;
                     Caption = 'Saldo estimado';
                     Editable = false;
                     Style = Strong;
@@ -155,6 +195,7 @@ page 67074 "Cab. Muestras"
                 }
                 field(CREstimado; "Limite de credito cliente" - ("Saldo Cliente" + "Importe Consignacion Orginal"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Credito Estimado';
                     Editable = false;
                     Style = Strong;
@@ -170,117 +211,167 @@ page 67074 "Cab. Muestras"
             {
                 Caption = 'Transfer-from';
                 Editable = false;
-                field("Transfer-from Name"; "Transfer-from Name")
+                field("Transfer-from Name"; Rec."Transfer-from Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Name';
                 }
-                field("Transfer-from Name 2"; "Transfer-from Name 2")
+                field("Transfer-from Name 2"; Rec."Transfer-from Name 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Name 2';
                 }
-                field("Transfer-from Address"; "Transfer-from Address")
+                field("Transfer-from Address"; Rec."Transfer-from Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Address';
                 }
-                field("Transfer-from Address 2"; "Transfer-from Address 2")
+                field("Transfer-from Address 2"; Rec."Transfer-from Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Address 2';
                 }
-                field("Transfer-from City"; "Transfer-from City")
+                field("Transfer-from City"; Rec."Transfer-from City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from City';
                 }
-                field("Transfer-from County"; "Transfer-from County")
+                field("Transfer-from County"; Rec."Transfer-from County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from County';
                     Caption = 'Transfer-from State / ZIP Code';
                 }
-                field("Transfer-from Post Code"; "Transfer-from Post Code")
+                field("Transfer-from Post Code"; Rec."Transfer-from Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Post Code';
                 }
-                field("Transfer-from Contact"; "Transfer-from Contact")
+                field("Transfer-from Contact"; Rec."Transfer-from Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Contact';
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
 
                     trigger OnValidate()
                     begin
                         ShipmentDateOnAfterValidate;
                     end;
                 }
-                field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
+                field("Outbound Whse. Handling Time"; Rec."Outbound Whse. Handling Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Outbound Whse. Handling Time';
 
                     trigger OnValidate()
                     begin
                         OutboundWhseHandlingTimeOnAfte;
                     end;
                 }
-                field("Shipment Method Code"; "Shipment Method Code")
+                field("Shipment Method Code"; Rec."Shipment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Method Code';
                 }
-                field("Shipping Agent Code"; "Shipping Agent Code")
+                field("Shipping Agent Code"; Rec."Shipping Agent Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Agent Code';
 
                     trigger OnValidate()
                     begin
                         ShippingAgentCodeOnAfterValida;
                     end;
                 }
-                field("Shipping Agent Service Code"; "Shipping Agent Service Code")
+                field("Shipping Agent Service Code"; Rec."Shipping Agent Service Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Agent Service Code';
 
                     trigger OnValidate()
                     begin
                         ShippingAgentServiceCodeOnAfte;
                     end;
                 }
-                field("Shipping Time"; "Shipping Time")
+                field("Shipping Time"; Rec."Shipping Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Time';
 
                     trigger OnValidate()
                     begin
                         ShippingTimeOnAfterValidate;
                     end;
                 }
-                field("Shipping Advice"; "Shipping Advice")
+                field("Shipping Advice"; Rec."Shipping Advice")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Advice';
                 }
             }
             group("Transfer-to")
             {
                 Caption = 'Transfer-to';
                 Editable = false;
-                field("Transfer-to Name"; "Transfer-to Name")
+                field("Transfer-to Name"; Rec."Transfer-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Name';
                 }
-                field("Transfer-to Name 2"; "Transfer-to Name 2")
+                field("Transfer-to Name 2"; Rec."Transfer-to Name 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Name 2';
                 }
-                field("Transfer-to Address"; "Transfer-to Address")
+                field("Transfer-to Address"; Rec."Transfer-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Address';
                 }
-                field("Transfer-to Address 2"; "Transfer-to Address 2")
+                field("Transfer-to Address 2"; Rec."Transfer-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Address 2';
                 }
-                field("Transfer-to City"; "Transfer-to City")
+                field("Transfer-to City"; Rec."Transfer-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to City';
                 }
-                field("Transfer-to County"; "Transfer-to County")
+                field("Transfer-to County"; Rec."Transfer-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to County';
                     Caption = 'Transfer-to State / ZIP Code';
                 }
-                field("Transfer-to Post Code"; "Transfer-to Post Code")
+                field("Transfer-to Post Code"; Rec."Transfer-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Post Code';
                 }
-                field("Transfer-to Contact"; "Transfer-to Contact")
+                field("Transfer-to Contact"; Rec."Transfer-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Contact';
                 }
-                field("Receipt Date"; "Receipt Date")
+                field("Receipt Date"; Rec."Receipt Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Receipt Date';
 
                     trigger OnValidate()
                     begin
                         ReceiptDateOnAfterValidate;
                     end;
                 }
-                field("Inbound Whse. Handling Time"; "Inbound Whse. Handling Time")
+                field("Inbound Whse. Handling Time"; Rec."Inbound Whse. Handling Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inbound Whse. Handling Time';
 
                     trigger OnValidate()
                     begin
@@ -292,20 +383,30 @@ page 67074 "Cab. Muestras"
             {
                 Caption = 'Foreign Trade';
                 Editable = false;
-                field("Transaction Type"; "Transaction Type")
+                field("Transaction Type"; Rec."Transaction Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Type';
                 }
-                field("Transaction Specification"; "Transaction Specification")
+                field("Transaction Specification"; Rec."Transaction Specification")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Specification';
                 }
-                field("Transport Method"; "Transport Method")
+                field("Transport Method"; Rec."Transport Method")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transport Method';
                 }
-                field("Area"; "Area")
+                field("Area"; Rec."Area")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area';
                 }
-                field("Entry/Exit Point"; "Entry/Exit Point")
+                field("Entry/Exit Point"; Rec."Entry/Exit Point")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entry/Exit Point';
                 }
             }
         }

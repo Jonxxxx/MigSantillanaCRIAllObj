@@ -13,31 +13,45 @@ page 67079 "Promotores - Lista de Colegios"
             repeater(General)
             {
                 IndentationControls = "Cod. Colegio";
-                field(Seleccionar; Seleccionar)
+                field(Seleccionar; Rec.Seleccionar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seleccionar';
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                 }
-                field("Cod. Ruta"; "Cod. Ruta")
+                field("Cod. Ruta"; Rec."Cod. Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ruta';
                     Editable = false;
                 }
-                field("Nombre Ruta"; "Nombre Ruta")
+                field("Nombre Ruta"; Rec."Nombre Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Ruta';
                     Editable = false;
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
             }

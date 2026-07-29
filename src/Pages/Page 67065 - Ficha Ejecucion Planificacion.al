@@ -15,29 +15,41 @@ page 67065 "Ficha Ejecucion Planificacion"
             {
                 Caption = 'General';
                 Editable = page_editable;
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Local"; "Local")
+                field("Local"; Rec."Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Local';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Editable = false;
                 }
             }
@@ -45,14 +57,20 @@ page 67065 "Ficha Ejecucion Planificacion"
             {
                 Caption = 'Visit';
                 Editable = page_editable;
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field(Nivel; Nivel)
+                field(Nivel; Rec.Nivel)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
 
                     trigger OnValidate()
                     begin
@@ -64,48 +82,74 @@ page 67065 "Ficha Ejecucion Planificacion"
                         END;
                     end;
                 }
-                field("Persona atendio"; "Persona atendio")
+                field("Persona atendio"; Rec."Persona atendio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Persona atendio';
                     Editable = TipoCDS;
                 }
-                field("Nombre persona atendio"; "Nombre persona atendio")
+                field("Nombre persona atendio"; Rec."Nombre persona atendio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre persona atendio';
                     Editable = TipoCDS_2;
                 }
-                field(Cargo; Cargo)
+                field(Cargo; Rec.Cargo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cargo';
                 }
-                field("Descripcion Cargo"; "Descripcion Cargo")
+                field("Descripcion Cargo"; Rec."Descripcion Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cargo';
                     Editable = false;
                 }
-                field(Objetivo; Objetivo)
+                field(Objetivo; Rec.Objetivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo';
                 }
-                field("Descripcion Objetivo"; "Descripcion Objetivo")
+                field("Descripcion Objetivo"; Rec."Descripcion Objetivo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Objetivo';
                     Editable = false;
                 }
-                field("Fecha Visita"; "Fecha Visita")
+                field("Fecha Visita"; Rec."Fecha Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Visita';
                 }
-                field("Hora Inicial Visita"; "Hora Inicial Visita")
+                field("Hora Inicial Visita"; Rec."Hora Inicial Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Inicial Visita';
                 }
-                field("Hora Final Visita"; "Hora Final Visita")
+                field("Hora Final Visita"; Rec."Hora Final Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Final Visita';
                 }
-                field("Fecha Proxima Visita"; "Fecha Proxima Visita")
+                field("Fecha Proxima Visita"; Rec."Fecha Proxima Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Proxima Visita';
                 }
-                field(Calificacion; Calificacion)
+                field(Calificacion; Rec.Calificacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Calificacion';
                 }
-                field("Estado Colegio"; "Estado Colegio")
+                field("Estado Colegio"; Rec."Estado Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Colegio';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                     MultiLine = true;
                     StyleExpr = TRUE;
                 }

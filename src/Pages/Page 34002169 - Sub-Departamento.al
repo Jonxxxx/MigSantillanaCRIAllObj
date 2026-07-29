@@ -10,18 +10,26 @@ page 34002169 "Sub-Departamento"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Departamento"; "Cod. Departamento")
+                field("Cod. Departamento"; Rec."Cod. Departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Departamento';
                     Visible = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Total Empleados"; "Total Empleados")
+                field("Total Empleados"; Rec."Total Empleados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Empleados';
                 }
             }
         }

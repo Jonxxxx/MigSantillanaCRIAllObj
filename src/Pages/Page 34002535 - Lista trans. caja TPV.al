@@ -10,50 +10,80 @@ page 34002535 "Lista trans. caja TPV"
         {
             repeater(Group)
             {
-                field("Cod. tienda"; "Cod. tienda")
+                field("Cod. tienda"; Rec."Cod. tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. tienda';
                 }
-                field("Cod. TPV"; "Cod. TPV")
+                field("Cod. TPV"; Rec."Cod. TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. TPV';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("No. turno"; "No. turno")
+                field("No. turno"; Rec."No. turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. turno';
                 }
-                field("No. transaccion"; "No. transaccion")
+                field("No. transaccion"; Rec."No. transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. transaccion';
                 }
-                field("Tipo transaccion"; "Tipo transaccion")
+                field("Tipo transaccion"; Rec."Tipo transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo transaccion';
                 }
-                field("No. Registrado"; "No. Registrado")
+                field("No. Registrado"; Rec."No. Registrado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Registrado';
                 }
-                field("Id. cajero"; "Id. cajero")
+                field("Id. cajero"; Rec."Id. cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id. cajero';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field("Forma de pago"; "Forma de pago")
+                field("Forma de pago"; Rec."Forma de pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de pago';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Importe (DL)"; "Importe (DL)")
+                field("Importe (DL)"; Rec."Importe (DL)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe (DL)';
                 }
-                field("Cod. divisa"; "Cod. divisa")
+                field("Cod. divisa"; Rec."Cod. divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. divisa';
                 }
-                field("Factor divisa"; "Factor divisa")
+                field("Factor divisa"; Rec."Factor divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Factor divisa';
                 }
-                field(Cambio; Cambio)
+                field(Cambio; Rec.Cambio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cambio';
                 }
             }
         }

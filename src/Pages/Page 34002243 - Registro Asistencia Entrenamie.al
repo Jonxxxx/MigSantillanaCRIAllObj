@@ -10,68 +10,100 @@ page 34002243 "Registro Asistencia Entrenamie"
         {
             repeater(General)
             {
-                field("Cod. Instructor"; "Cod. Instructor")
+                field("Cod. Instructor"; Rec."Cod. Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Instructor';
                     Editable = false;
                 }
-                field("Nombre Instructor"; "Nombre Instructor")
+                field("Nombre Instructor"; Rec."Nombre Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Instructor';
                     Editable = false;
                 }
-                field("No. entrenamiento"; "No. entrenamiento")
+                field("No. entrenamiento"; Rec."No. entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. entrenamiento';
                     Editable = false;
                 }
-                field("Titulo entrenamiento"; "Titulo entrenamiento")
+                field("Titulo entrenamiento"; Rec."Titulo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Titulo entrenamiento';
                     Editable = false;
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                     Editable = false;
                 }
-                field(Disponible; Disponible)
+                field(Disponible; Rec.Disponible)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Disponible';
                     Editable = false;
                 }
-                field(Sala; Sala)
+                field(Sala; Rec.Sala)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sala';
                     Editable = false;
                 }
-                field("Fecha Inicio"; "Fecha Inicio")
+                field("Fecha Inicio"; Rec."Fecha Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio';
                     Editable = false;
                 }
-                field("Numero de sesiones"; "Numero de sesiones")
+                field("Numero de sesiones"; Rec."Numero de sesiones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de sesiones';
                     Editable = false;
                 }
-                field(Lunes; Lunes)
+                field(Lunes; Rec.Lunes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lunes';
                     Editable = false;
                 }
-                field(Martes; Martes)
+                field(Martes; Rec.Martes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Martes';
                     Editable = false;
                 }
-                field(Miercoles; Miercoles)
+                field(Miercoles; Rec.Miercoles)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miercoles';
                     Editable = false;
                 }
-                field(Jueves; Jueves)
+                field(Jueves; Rec.Jueves)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Jueves';
                     Editable = false;
                 }
-                field(Viernes; Viernes)
+                field(Viernes; Rec.Viernes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Viernes';
                     Editable = false;
                 }
-                field(Sabados; Sabados)
+                field(Sabados; Rec.Sabados)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sabados';
                     Editable = false;
                 }
-                field(Domingos; Domingos)
+                field(Domingos; Rec.Domingos)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Domingos';
                     Editable = false;
                 }
             }

@@ -11,84 +11,136 @@ page 34002110 "Conceptos salariales"
         {
             repeater(GeneralRep)
             {
-                field("Shortcut Dimension"; "Shortcut Dimension")
+                field("Shortcut Dimension"; Rec."Shortcut Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension';
                     Visible = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Sujeto Cotizacion"; "Sujeto Cotizacion")
+                field("Sujeto Cotizacion"; Rec."Sujeto Cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sujeto Cotizacion';
                 }
-                field("Cotiza ISR"; "Cotiza ISR")
+                field("Cotiza ISR"; Rec."Cotiza ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza ISR';
                 }
-                field("Cotiza AFP"; "Cotiza AFP")
+                field("Cotiza AFP"; Rec."Cotiza AFP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza AFP';
                 }
-                field("Cotiza SFS"; "Cotiza SFS")
+                field("Cotiza SFS"; Rec."Cotiza SFS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SFS';
                 }
-                field("Cotiza SRL"; "Cotiza SRL")
+                field("Cotiza SRL"; Rec."Cotiza SRL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SRL';
                 }
-                field("Cotiza INFOTEP"; "Cotiza INFOTEP")
+                field("Cotiza INFOTEP"; Rec."Cotiza INFOTEP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza INFOTEP';
                 }
-                field("Aplica para Regalia"; "Aplica para Regalia")
+                field("Aplica para Regalia"; Rec."Aplica para Regalia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica para Regalia';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                 }
-                field("Salario Base"; "Salario Base")
+                field("Salario Base"; Rec."Salario Base")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario Base';
                 }
-                field(Provisionar; Provisionar)
+                field(Provisionar; Rec.Provisionar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provisionar';
                 }
-                field("Validar Contrapartida CO"; "Validar Contrapartida CO")
+                field("Validar Contrapartida CO"; Rec."Validar Contrapartida CO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Validar Contrapartida CO';
                 }
-                field("Validar Contrapartida CP"; "Validar Contrapartida CP")
+                field("Validar Contrapartida CP"; Rec."Validar Contrapartida CP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Validar Contrapartida CP';
                 }
-                field("Tipo Cuenta Cuota Obrera"; "Tipo Cuenta Cuota Obrera")
+                field("Tipo Cuenta Cuota Obrera"; Rec."Tipo Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Obrera';
                 }
-                field("No. Cuenta Cuota Obrera"; "No. Cuenta Cuota Obrera")
+                field("No. Cuenta Cuota Obrera"; Rec."No. Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Obrera';
                 }
-                field("Tipo Cuenta Contrapartida CO"; "Tipo Cuenta Contrapartida CO")
+                field("Tipo Cuenta Contrapartida CO"; Rec."Tipo Cuenta Contrapartida CO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Contrapartida CO';
                 }
-                field("No. Cuenta Contrapartida CO"; "No. Cuenta Contrapartida CO")
+                field("No. Cuenta Contrapartida CO"; Rec."No. Cuenta Contrapartida CO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Contrapartida CO';
                 }
-                field("Tipo Cuenta Cuota Patronal"; "Tipo Cuenta Cuota Patronal")
+                field("Tipo Cuenta Cuota Patronal"; Rec."Tipo Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Patronal';
                 }
-                field("No. Cuenta Cuota Patronal"; "No. Cuenta Cuota Patronal")
+                field("No. Cuenta Cuota Patronal"; Rec."No. Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Patronal';
                 }
-                field("Tipo Cuenta Contrapartida CP"; "Tipo Cuenta Contrapartida CP")
+                field("Tipo Cuenta Contrapartida CP"; Rec."Tipo Cuenta Contrapartida CP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Contrapartida CP';
                 }
-                field("No. Cuenta Contrapartida CP"; "No. Cuenta Contrapartida CP")
+                field("No. Cuenta Contrapartida CP"; Rec."No. Cuenta Contrapartida CP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Contrapartida CP';
                 }
-                field("Contabilizacion Resumida"; "Contabilizacion Resumida")
+                field("Contabilizacion Resumida"; Rec."Contabilizacion Resumida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contabilizacion Resumida';
                 }
-                field("Contabilizacion x Dimension"; "Contabilizacion x Dimension")
+                field("Contabilizacion x Dimension"; Rec."Contabilizacion x Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contabilizacion x Dimension';
                 }
-                field("Tipo de nomina"; "Tipo de nomina")
+                field("Tipo de nomina"; Rec."Tipo de nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de nomina';
                     Visible = false;
                 }
             }

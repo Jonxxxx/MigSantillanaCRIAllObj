@@ -13,20 +13,28 @@ page 67136 "Colegio - Work Flow Objetivos"
         {
             repeater(Group)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field(Detalle; Detalle)
+                field(Detalle; Rec.Detalle)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detalle';
                     Editable = false;
                 }
-                field(Mantenimiento; Mantenimiento)
+                field(Mantenimiento; Rec.Mantenimiento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mantenimiento';
                 }
-                field(Conquista; Conquista)
+                field(Conquista; Rec.Conquista)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Conquista';
                 }
             }
         }

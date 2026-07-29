@@ -28,57 +28,91 @@ page 34002553 "Facturas Venta Regis POS"
         {
             repeater(GeneralRep)
             {
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                     Visible = true;
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("No. Fiscal TPV"; "No. Fiscal TPV")
+                field("No. Fiscal TPV"; Rec."No. Fiscal TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Fiscal TPV';
                 }
-                field("Document Date"; "Document Date")
+                field("Document Date"; Rec."Document Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Date';
                 }
-                field("External Document No."; "External Document No.")
+                field("External Document No."; Rec."External Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External Document No.';
                 }
-                field(Liquidado; "Liquidado TPV")
+                field(Liquidado; Rec."Liquidado TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Liquidado TPV';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                 }
-                field("ID Cajero"; "ID Cajero")
+                field("ID Cajero"; Rec."ID Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Cajero';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field("Hora creacion"; "Hora creacion")
+                field("Hora creacion"; Rec."Hora creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora creacion';
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                 }
-                field("Currency Code"; "Currency Code")
+                field("Currency Code"; Rec."Currency Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Currency Code';
                 }
-                field(Amount; Amount)
+                field(Amount; Rec.Amount)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount';
 
                     trigger OnDrillDown()
                     begin
@@ -86,8 +120,10 @@ page 34002553 "Facturas Venta Regis POS"
                         PAGE.RUNMODAL(PAGE::"Posted Sales Invoice", Rec)
                     end;
                 }
-                field("Amount Including VAT"; "Amount Including VAT")
+                field("Amount Including VAT"; Rec."Amount Including VAT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount Including VAT';
 
                     trigger OnDrillDown()
                     begin
@@ -95,15 +131,21 @@ page 34002553 "Facturas Venta Regis POS"
                         PAGE.RUNMODAL(PAGE::"Posted Sales Invoice", Rec)
                     end;
                 }
-                field("VAT Registration No."; "VAT Registration No.")
+                field("VAT Registration No."; Rec."VAT Registration No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'VAT Registration No.';
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Visible = true;
                 }
-                field("No. Documento SIC"; "No. Documento SIC")
+                field("No. Documento SIC"; Rec."No. Documento SIC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento SIC';
                 }
             }
         }

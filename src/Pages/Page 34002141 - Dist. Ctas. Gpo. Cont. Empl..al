@@ -9,48 +9,74 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
         {
             repeater(GeneralRep)
             {
-                field("Shortcut Dimension"; "Shortcut Dimension")
+                field("Shortcut Dimension"; Rec."Shortcut Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension';
                     Visible = false;
                 }
-                field("Codigo Concepto Salarial"; "Codigo Concepto Salarial")
+                field("Codigo Concepto Salarial"; Rec."Codigo Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Concepto Salarial';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                     Visible = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                     Visible = false;
                 }
-                field("% a Distribuir"; "% a Distribuir")
+                field("% a Distribuir"; Rec."% a Distribuir")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% a Distribuir';
                 }
-                field("Tipo Cuenta Cuota Obrera"; "Tipo Cuenta Cuota Obrera")
+                field("Tipo Cuenta Cuota Obrera"; Rec."Tipo Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Obrera';
                 }
-                field("No. Cuenta Cuota Obrera"; "No. Cuenta Cuota Obrera")
+                field("No. Cuenta Cuota Obrera"; Rec."No. Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Obrera';
                 }
-                field("Tipo Cuenta Contrapartida CO"; "Tipo Cuenta Contrapartida CO")
+                field("Tipo Cuenta Contrapartida CO"; Rec."Tipo Cuenta Contrapartida CO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Contrapartida CO';
                 }
-                field("No. Cuenta Contrapartida CO"; "No. Cuenta Contrapartida CO")
+                field("No. Cuenta Contrapartida CO"; Rec."No. Cuenta Contrapartida CO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Contrapartida CO';
                 }
-                field("Tipo Cuenta Cuota Patronal"; "Tipo Cuenta Cuota Patronal")
+                field("Tipo Cuenta Cuota Patronal"; Rec."Tipo Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Patronal';
                 }
-                field("No. Cuenta Cuota Patronal"; "No. Cuenta Cuota Patronal")
+                field("No. Cuenta Cuota Patronal"; Rec."No. Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Patronal';
                 }
-                field("Tipo Cuenta Contrapartida CP"; "Tipo Cuenta Contrapartida CP")
+                field("Tipo Cuenta Contrapartida CP"; Rec."Tipo Cuenta Contrapartida CP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Contrapartida CP';
                 }
-                field("No. Cuenta Contrapartida CP"; "No. Cuenta Contrapartida CP")
+                field("No. Cuenta Contrapartida CP"; Rec."No. Cuenta Contrapartida CP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Contrapartida CP';
                 }
             }
         }

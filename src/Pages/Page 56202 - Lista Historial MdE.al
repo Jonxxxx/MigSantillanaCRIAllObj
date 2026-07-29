@@ -17,163 +17,261 @@ page 56202 "Lista Historial MdE"
         {
             repeater(Group)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("No. Mov."; "No. Mov.")
+                field("No. Mov."; Rec."No. Mov.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mov.';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Tipo envio"; "Tipo envio")
+                field("Tipo envio"; Rec."Tipo envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo envio';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Fecha y hora recepcion"; "Fecha y hora recepcion")
+                field("Fecha y hora recepcion"; Rec."Fecha y hora recepcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha y hora recepcion';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Fecha efectiva"; "Fecha efectiva")
+                field("Fecha efectiva"; Rec."Fecha efectiva")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha efectiva';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field(Aplicado; Aplicado)
+                field(Aplicado; Rec.Aplicado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicado';
                 }
-                field("Fecha y hora aplicado"; "Fecha y hora aplicado")
+                field("Fecha y hora aplicado"; Rec."Fecha y hora aplicado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha y hora aplicado';
                     Visible = false;
                 }
-                field("Aplicado por usuario"; "Aplicado por usuario")
+                field("Aplicado por usuario"; Rec."Aplicado por usuario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicado por usuario';
                     Visible = false;
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field(Initials; Initials)
+                field(Initials; Rec.Initials)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initials';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                 }
-                field("Social Security No."; "Social Security No.")
+                field("Social Security No."; Rec."Social Security No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Social Security No.';
                 }
-                field(Gender; Gender)
+                field(Gender; Rec.Gender)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gender';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Emplymt. Contract Code"; "Emplymt. Contract Code")
+                field("Emplymt. Contract Code"; Rec."Emplymt. Contract Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Emplymt. Contract Code';
                 }
-                field("Statistics Group Code"; "Statistics Group Code")
+                field("Statistics Group Code"; Rec."Statistics Group Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Statistics Group Code';
                 }
-                field("Employment Date"; "Employment Date")
+                field("Employment Date"; Rec."Employment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employment Date';
                 }
-                field("Inactive Date"; "Inactive Date")
+                field("Inactive Date"; Rec."Inactive Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactive Date';
                 }
-                field("Cause of Inactivity Code"; "Cause of Inactivity Code")
+                field("Cause of Inactivity Code"; Rec."Cause of Inactivity Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cause of Inactivity Code';
                 }
-                field("Termination Date"; "Termination Date")
+                field("Termination Date"; Rec."Termination Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Termination Date';
                 }
-                field("Grounds for Term. Code"; "Grounds for Term. Code")
+                field("Grounds for Term. Code"; Rec."Grounds for Term. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grounds for Term. Code';
                 }
-                field(_Categoria; _Categoria)
+                field(_Categoria; Rec._Categoria)
                 {
+                    ApplicationArea = All;
+                    ToolTip = '_Categoria';
                 }
-                field("Numero de persona"; "Numero de persona")
+                field("Numero de persona"; Rec."Numero de persona")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de persona';
                 }
-                field("Cod. Dimension"; "Cod. Dimension")
+                field("Cod. Dimension"; Rec."Cod. Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Dimension';
                 }
-                field("Valor Dimension"; "Valor Dimension")
+                field("Valor Dimension"; Rec."Valor Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor Dimension';
                 }
-                field(Company; Company)
+                field(Company; Rec.Company)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company';
                 }
-                field("Working Center"; "Working Center")
+                field("Working Center"; Rec."Working Center")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Working Center';
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                 }
-                field("Job Type Code"; "Job Type Code")
+                field("Job Type Code"; Rec."Job Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Type Code';
                 }
-                field("Alta contrato"; "Alta contrato")
+                field("Alta contrato"; Rec."Alta contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alta contrato';
                 }
-                field("Fin contrato"; "Fin contrato")
+                field("Fin contrato"; Rec."Fin contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fin contrato';
                 }
-                field(_Nacionalidad; _Nacionalidad)
+                field(_Nacionalidad; Rec._Nacionalidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = '_Nacionalidad';
                 }
-                field("Lugar nacimiento"; "Lugar nacimiento")
+                field("Lugar nacimiento"; Rec."Lugar nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lugar nacimiento';
                 }
-                field("Estado civil"; "Estado civil")
+                field("Estado civil"; Rec."Estado civil")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado civil';
                 }
-                field("Mes Nacimiento"; "Mes Nacimiento")
+                field("Mes Nacimiento"; Rec."Mes Nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes Nacimiento';
                 }
-                field(_Departamento; _Departamento)
+                field(_Departamento; Rec._Departamento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = '_Departamento';
                 }
-                field("Error proceso"; "Error proceso")
+                field("Error proceso"; Rec."Error proceso")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Error proceso';
                     Visible = ShowError;
                 }
-                field("Descripcion error"; "Descripcion error")
+                field("Descripcion error"; Rec."Descripcion error")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion error';
                     Visible = ShowError;
                 }
             }

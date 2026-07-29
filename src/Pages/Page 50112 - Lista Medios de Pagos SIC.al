@@ -10,41 +10,65 @@ page 50112 "Lista Medios de Pagos SIC"
         {
             repeater(Group)
             {
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("No. documento Pos"; "No. documento Pos")
+                field("No. documento Pos"; Rec."No. documento Pos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento Pos';
                 }
-                field("No. linea"; "No. linea")
+                field("No. linea"; Rec."No. linea")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. linea';
                 }
-                field("Cod. medio de pago"; "Cod. medio de pago")
+                field("Cod. medio de pago"; Rec."Cod. medio de pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. medio de pago';
                 }
-                field("Cod. cliente"; "Cod. cliente")
+                field("Cod. cliente"; Rec."Cod. cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. cliente';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Cod. divisa"; "Cod. divisa")
+                field("Cod. divisa"; Rec."Cod. divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. divisa';
                 }
-                field("Tasa de cambio"; "Tasa de cambio")
+                field("Tasa de cambio"; Rec."Tasa de cambio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tasa de cambio';
                 }
-                field("Source Counter"; "Source Counter")
+                field("Source Counter"; Rec."Source Counter")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Source Counter';
                 }
-                field(Transferido; Transferido)
+                field(Transferido; Rec.Transferido)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transferido';
                 }
             }
         }

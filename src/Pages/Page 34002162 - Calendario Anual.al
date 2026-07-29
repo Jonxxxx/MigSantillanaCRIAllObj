@@ -10,32 +10,50 @@ page 34002162 "Calendario Anual"
             repeater(GeneralRep)
             {
                 Editable = true;
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field(Texto; Texto)
+                field(Texto; Rec.Texto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto';
                 }
-                field("No laborable"; "No laborable")
+                field("No laborable"; Rec."No laborable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No laborable';
                 }
-                field(Semana; Semana)
+                field(Semana; Rec.Semana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Semana';
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                 }
-                field(Ano; Ano)
+                field(Ano; Rec.Ano)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano';
                 }
-                field(Mes; Mes)
+                field(Mes; Rec.Mes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes';
                 }
-                field("Dia de la semana"; "Dia de la semana")
+                field("Dia de la semana"; Rec."Dia de la semana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia de la semana';
                 }
-                field(Generado; Generado)
+                field(Generado; Rec.Generado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Generado';
                     Visible = false;
                 }
             }

@@ -15,17 +15,25 @@ page 75013 "Filtro Campo"
         {
             repeater(Group)
             {
-                field("Table Id"; "Table Id")
+                field("Table Id"; Rec."Table Id")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Table Id';
                 }
-                field("Field No"; "Field No")
+                field("Field No"; Rec."Field No")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Field No';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field(Caption; Caption)
+                field(Caption; Rec.Caption)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Caption';
                 }
             }
         }

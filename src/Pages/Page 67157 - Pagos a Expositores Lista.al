@@ -13,23 +13,35 @@ page 67157 "Pagos a Expositores Lista"
         {
             repeater(Group)
             {
-                field("ID Pago"; "ID Pago")
+                field("ID Pago"; Rec."ID Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Pago';
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field("Estado Pago"; "Estado Pago")
+                field("Estado Pago"; Rec."Estado Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Pago';
                 }
             }
         }

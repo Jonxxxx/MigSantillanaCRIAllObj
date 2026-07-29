@@ -10,20 +10,30 @@ page 67132 "Solicitud - Proposicion Fechas"
         {
             repeater(Group)
             {
-                field("Fecha propuesta"; "Fecha propuesta")
+                field("Fecha propuesta"; Rec."Fecha propuesta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha propuesta';
                 }
-                field("Hora Inicio"; "Hora Inicio")
+                field("Hora Inicio"; Rec."Hora Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Inicio';
                 }
-                field("Hora Fin"; "Hora Fin")
+                field("Hora Fin"; Rec."Hora Fin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Fin';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field("No. asistentes"; "No. asistentes")
+                field("No. asistentes"; Rec."No. asistentes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. asistentes';
                 }
             }
         }

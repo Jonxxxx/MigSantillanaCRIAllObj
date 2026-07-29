@@ -14,7 +14,7 @@ page 34002260 "Headline RC Payroll"
                 Visible = UserGreetingVisible;
                 field(GreetingText; GreetingText)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Greeting headline';
                     Editable = false;
                     Visible = UserGreetingVisible;
@@ -25,7 +25,7 @@ page 34002260 "Headline RC Payroll"
                 Visible = DefaultFieldsVisible;
                 field(NewsText; NewsText)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'News headline';
                     DrillDown = true;
                     Editable = false;
@@ -50,7 +50,7 @@ page 34002260 "Headline RC Payroll"
                 Visible = DefaultFieldsVisible;
                 field(DocumentationText; DocumentationText)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Documentation headline';
                     DrillDown = true;
                     Editable = false;

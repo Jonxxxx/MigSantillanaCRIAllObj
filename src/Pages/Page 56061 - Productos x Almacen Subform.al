@@ -11,11 +11,15 @@ page 56061 "Productos x Almacen Subform"
         {
             repeater(Group)
             {
-                field(Almacen; Almacen)
+                field(Almacen; Rec.Almacen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Almacen';
                 }
-                field("Nombre Almacen"; "Nombre Almacen")
+                field("Nombre Almacen"; Rec."Nombre Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Almacen';
                 }
             }
         }

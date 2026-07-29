@@ -10,6 +10,7 @@ page 67118 "Inventarios Colegios ListPart"
         {
             field(FuncAPSColCalcInvMuestrasNo; FuncAPS.ColCalcInvMuestras(Rec."No."))
             {
+                ApplicationArea = All;
                 Caption = 'Sample Inventory';
 
                 trigger OnLookup(var Text: Text): Boolean

@@ -9,35 +9,55 @@ page 56040 "Desglose Ajuste Divisa"
         {
             repeater(Group)
             {
-                field("Cod. Divisa"; "Cod. Divisa")
+                field("Cod. Divisa"; Rec."Cod. Divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Divisa';
                 }
-                field("Grupo Contable"; "Grupo Contable")
+                field("Grupo Contable"; Rec."Grupo Contable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Contable';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
-                field("Dimension SET ID"; "Dimension SET ID")
+                field("Dimension SET ID"; Rec."Dimension SET ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension SET ID';
                 }
-                field("No. Mov. Detallado Prov"; "No. Mov. Detallado Prov")
+                field("No. Mov. Detallado Prov"; Rec."No. Mov. Detallado Prov")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mov. Detallado Prov';
                 }
-                field("No. Mov. Proveedor"; "No. Mov. Proveedor")
+                field("No. Mov. Proveedor"; Rec."No. Mov. Proveedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mov. Proveedor';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Tipo Movimiento"; "Tipo Movimiento")
+                field("Tipo Movimiento"; Rec."Tipo Movimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Movimiento';
                 }
             }
         }

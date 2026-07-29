@@ -9,18 +9,26 @@ page 34002500 "Configuracion General DSPoS"
         {
             group(General)
             {
-                field("Nombre libro diario"; "Nombre libro diario")
+                field("Nombre libro diario"; Rec."Nombre libro diario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre libro diario';
                 }
-                field("Nombre seccion diario"; "Nombre seccion diario")
+                field("Nombre seccion diario"; Rec."Nombre seccion diario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre seccion diario';
                 }
-                field(Pais; Pais)
+                field(Pais; Rec.Pais)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pais';
                     BlankZero = true;
                 }
-                field("Nombre Divisa Local"; "Nombre Divisa Local")
+                field("Nombre Divisa Local"; Rec."Nombre Divisa Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Divisa Local';
                 }
             }
             part(PartPage; 50114)

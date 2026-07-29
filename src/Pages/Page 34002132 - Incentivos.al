@@ -9,20 +9,30 @@ page 34002132 Incentivos
         {
             repeater(GeneralRep)
             {
-                field("Concepto Salarial"; "Concepto Salarial")
+                field("Concepto Salarial"; Rec."Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Salarial';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Fecha de Corte"; "Fecha de Corte")
+                field("Fecha de Corte"; Rec."Fecha de Corte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de Corte';
                 }
-                field("Monto a Distribuir"; "Monto a Distribuir")
+                field("Monto a Distribuir"; Rec."Monto a Distribuir")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto a Distribuir';
                 }
-                field("Fecha Ult. Corte"; "Fecha Ult. Corte")
+                field("Fecha Ult. Corte"; Rec."Fecha Ult. Corte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Ult. Corte';
                 }
             }
         }

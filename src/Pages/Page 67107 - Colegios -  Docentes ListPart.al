@@ -10,24 +10,36 @@ page 67107 "Colegios -  Docentes ListPart"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre colegio"; "Nombre colegio")
+                field("Nombre colegio"; Rec."Nombre colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre colegio';
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Visible = false;
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                 }
             }
         }

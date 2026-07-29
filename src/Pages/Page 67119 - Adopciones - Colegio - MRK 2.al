@@ -14,34 +14,52 @@ page 67119 "Adopciones - Colegio - MRK 2"
         {
             repeater(General)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                     Editable = false;
                 }
-                field("Descripcion producto"; "Descripcion producto")
+                field("Descripcion producto"; Rec."Descripcion producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion producto';
                     Editable = false;
                 }
-                field("Edicion Coleccion"; "Edicion Coleccion")
+                field("Edicion Coleccion"; Rec."Edicion Coleccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Edicion Coleccion';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field(Alumnado; Alumnado)
+                field(Alumnado; Rec.Alumnado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alumnado';
                 }
-                field(Adopcion; Adopcion)
+                field(Adopcion; Rec.Adopcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion';
                 }
-                field(CDS; CDS)
+                field(CDS; Rec.CDS)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'CDS';
                 }
             }
         }

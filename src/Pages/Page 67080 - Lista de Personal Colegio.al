@@ -12,37 +12,55 @@ page 67080 "Lista de Personal Colegio"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Visible = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Visible = false;
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                     Visible = false;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                     Visible = false;
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                     Visible = false;
                 }
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("Nombre Empleado"; "Nombre Empleado")
+                field("Nombre Empleado"; Rec."Nombre Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Empleado';
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                 }
-                field("Descripcion Cargo"; "Descripcion Cargo")
+                field("Descripcion Cargo"; Rec."Descripcion Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cargo';
                 }
             }
         }

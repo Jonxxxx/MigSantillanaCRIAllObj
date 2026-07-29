@@ -10,14 +10,20 @@ page 34002190 "Estadistica Ingresos-Descuento"
         {
             repeater(Group)
             {
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Importe Acumulado"; "Importe Acumulado")
+                field("Importe Acumulado"; Rec."Importe Acumulado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Acumulado';
                 }
             }
         }

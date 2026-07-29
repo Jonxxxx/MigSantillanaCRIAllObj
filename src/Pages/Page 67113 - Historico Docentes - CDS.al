@@ -12,24 +12,36 @@ page 67113 "Historico Docentes - CDS"
         {
             repeater(Group)
             {
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                     Visible = false;
                 }
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Pertenece al CDS"; "Pertenece al CDS")
+                field("Pertenece al CDS"; Rec."Pertenece al CDS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pertenece al CDS';
                 }
-                field("Cod. CDS"; "Cod. CDS")
+                field("Cod. CDS"; Rec."Cod. CDS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. CDS';
                 }
-                field("Ult. fecha activacion"; "Ult. fecha activacion")
+                field("Ult. fecha activacion"; Rec."Ult. fecha activacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ult. fecha activacion';
                 }
             }
         }

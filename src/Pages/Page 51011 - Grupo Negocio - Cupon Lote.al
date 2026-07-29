@@ -9,8 +9,10 @@ page 51011 "Grupo Negocio - Cupon Lote"
         {
             repeater(Group)
             {
-                field("Grupo Negocio"; "Grupo Negocio")
+                field("Grupo Negocio"; Rec."Grupo Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Negocio';
                 }
             }
         }

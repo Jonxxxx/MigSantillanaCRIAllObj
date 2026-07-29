@@ -12,44 +12,70 @@ page 34002222 "Lista Hist. Prest. Cooperativa"
         {
             repeater(Group)
             {
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
                 }
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                 }
-                field("Tipo de miembro"; "Tipo de miembro")
+                field("Tipo de miembro"; Rec."Tipo de miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de miembro';
                 }
-                field("Tipo prestamo"; "Tipo prestamo")
+                field("Tipo prestamo"; Rec."Tipo prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo prestamo';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("% Interes"; "% Interes")
+                field("% Interes"; Rec."% Interes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Interes';
                 }
-                field("Cantidad de Cuotas"; "Cantidad de Cuotas")
+                field("Cantidad de Cuotas"; Rec."Cantidad de Cuotas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Cuotas';
                 }
-                field("Fecha Inicio Deduccion"; "Fecha Inicio Deduccion")
+                field("Fecha Inicio Deduccion"; Rec."Fecha Inicio Deduccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio Deduccion';
                 }
-                field("Motivo Prestamo"; "Motivo Prestamo")
+                field("Motivo Prestamo"; Rec."Motivo Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo Prestamo';
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("Concepto Salarial"; "Concepto Salarial")
+                field("Concepto Salarial"; Rec."Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Salarial';
                 }
-                field("Importe Pendiente"; "Importe Pendiente")
+                field("Importe Pendiente"; Rec."Importe Pendiente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Pendiente';
                 }
-                field("Motivo de cierre"; "Motivo de cierre")
+                field("Motivo de cierre"; Rec."Motivo de cierre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo de cierre';
                 }
             }
         }

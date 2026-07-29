@@ -12,11 +12,15 @@ page 56130 "Maestro de Rutas"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field("Nombre de Ruta"; "Nombre de Ruta")
+                field("Nombre de Ruta"; Rec."Nombre de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre de Ruta';
                 }
             }
         }

@@ -11,17 +11,24 @@ page 75008 "Conf.Filtros Tipologias MdM"
             repeater(Group)
             {
                 Editable = wEditable;
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field("Valor Id"; "Valor Id")
+                field("Valor Id"; Rec."Valor Id")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor Id';
                 }
                 field(GetIdName; GetIdName)
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre';
                 }
             }

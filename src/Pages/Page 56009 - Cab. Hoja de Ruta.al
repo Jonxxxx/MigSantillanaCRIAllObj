@@ -12,34 +12,52 @@ page 56009 "Cab. Hoja de Ruta"
         {
             group(General)
             {
-                field("No. Hoja Ruta"; "No. Hoja Ruta")
+                field("No. Hoja Ruta"; Rec."No. Hoja Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja Ruta';
                 }
-                field("Cod. Transportista"; "Cod. Transportista")
+                field("Cod. Transportista"; Rec."Cod. Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Transportista';
                 }
-                field("Nombre Transportista"; "Nombre Transportista")
+                field("Nombre Transportista"; Rec."Nombre Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Transportista';
                     Editable = false;
                 }
-                field(Chofer; Chofer)
+                field(Chofer; Rec.Chofer)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Chofer';
                 }
-                field("Nombre Chofer"; "Nombre Chofer")
+                field("Nombre Chofer"; Rec."Nombre Chofer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Chofer';
                     Editable = false;
                 }
-                field("Fecha Planificacion Transporte"; "Fecha Planificacion Transporte")
+                field("Fecha Planificacion Transporte"; Rec."Fecha Planificacion Transporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Planificacion Transporte';
                 }
-                field(Placa; Placa)
+                field(Placa; Rec.Placa)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Placa';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
-                field("No. Ruta Distribucion"; "No. Ruta Distribucion")
+                field("No. Ruta Distribucion"; Rec."No. Ruta Distribucion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Ruta Distribucion';
                     Caption = 'No. Ruta Distribucion';
 
                     trigger OnValidate()
@@ -47,8 +65,10 @@ page 56009 "Cab. Hoja de Ruta"
                         CurrPage.UPDATE(TRUE);    //#29576
                     end;
                 }
-                field("Nombre de Ruta"; "Nombre de Ruta")
+                field("Nombre de Ruta"; Rec."Nombre de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre de Ruta';
                     Editable = false;
                 }
             }

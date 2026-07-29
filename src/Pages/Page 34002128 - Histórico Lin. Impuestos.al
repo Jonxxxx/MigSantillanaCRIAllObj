@@ -13,42 +13,62 @@ page 34002128 "Historico Lin. Impuestos"
         {
             repeater(GeneralRep)
             {
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                     Visible = false;
                 }
-                field("Empresa cotizacion"; "Empresa cotizacion")
+                field("Empresa cotizacion"; Rec."Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa cotizacion';
                     Visible = false;
                 }
-                field("No. Empleado"; "No. Empleado")
+                field("No. Empleado"; Rec."No. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Empleado';
                 }
-                field("Apellidos y Nombre"; "Apellidos y Nombre")
+                field("Apellidos y Nombre"; Rec."Apellidos y Nombre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Apellidos y Nombre';
                     Editable = false;
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                     Visible = false;
                 }
-                field("Concepto Salarial"; "Concepto Salarial")
+                field("Concepto Salarial"; Rec."Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Salarial';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field("% Cotizable"; "% Cotizable")
+                field("% Cotizable"; Rec."% Cotizable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Cotizable';
                     Editable = false;
                 }
-                field("Base Imponible"; "Base Imponible")
+                field("Base Imponible"; Rec."Base Imponible")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Base Imponible';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
             }
         }

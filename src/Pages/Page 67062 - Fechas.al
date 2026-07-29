@@ -11,18 +11,25 @@ page 67062 Fechas
         {
             repeater(General)
             {
-                field("Period Type"; "Period Type")
+                field("Period Type"; Rec."Period Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Period Type';
                 }
-                field("Period Start"; "Period Start")
+                field("Period Start"; Rec."Period Start")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Period Start';
                 }
                 field("Period End"; NORMALDATE(Rec."Period End"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Period End';
                 }
-                field("Period No."; "Period No.")
+                field("Period No."; Rec."Period No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Period No.';
                 }
             }
         }

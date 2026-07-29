@@ -10,48 +10,76 @@ page 67036 "Colegio - Nivel"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Visible = false;
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field("Categoria colegio"; "Categoria colegio")
+                field("Categoria colegio"; Rec."Categoria colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Categoria colegio';
                 }
-                field(Ruta; Ruta)
+                field(Ruta; Rec.Ruta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ruta';
                 }
-                field("Dto. Ticket Colegio"; "Dto. Ticket Colegio")
+                field("Dto. Ticket Colegio"; Rec."Dto. Ticket Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Ticket Colegio';
                 }
-                field("Dto. Ticket Padres"; "Dto. Ticket Padres")
+                field("Dto. Ticket Padres"; Rec."Dto. Ticket Padres")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Ticket Padres';
                 }
-                field("Dto. Feria Colegio"; "Dto. Feria Colegio")
+                field("Dto. Feria Colegio"; Rec."Dto. Feria Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Feria Colegio';
                 }
-                field("Dto. Feria Padres"; "Dto. Feria Padres")
+                field("Dto. Feria Padres"; Rec."Dto. Feria Padres")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Feria Padres';
                 }
-                field("Dto. Docente"; "Dto. Docente")
+                field("Dto. Docente"; Rec."Dto. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Docente';
                 }
-                field(Adoptado; Adoptado)
+                field(Adoptado; Rec.Adoptado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adoptado';
                 }
-                field("Estatus observado"; "Estatus observado")
+                field("Estatus observado"; Rec."Estatus observado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estatus observado';
                 }
-                field(Correspondencia; Correspondencia)
+                field(Correspondencia; Rec.Correspondencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Correspondencia';
                 }
             }
         }

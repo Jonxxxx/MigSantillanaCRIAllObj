@@ -12,16 +12,22 @@ page 34002538 "Arqueo de caja"
         {
             repeater(Group)
             {
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                     Editable = false;
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                     Editable = false;
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                     Style = Strong;
                     StyleExpr = TRUE;
 
@@ -31,12 +37,15 @@ page 34002538 "Arqueo de caja"
                         CurrPage.UPDATE;
                     end;
                 }
-                field(Total; Total)
+                field(Total; Rec.Total)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total';
                     Editable = false;
                 }
                 field("Descripcion"; TraerDescripcion)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
             }
@@ -45,6 +54,7 @@ page 34002538 "Arqueo de caja"
                 Caption = 'Total en caja';
                 field("Total contado"; TraerTotalContado)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

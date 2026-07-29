@@ -14,41 +14,62 @@ page 75017 "Lista Imp.Mdm Tabla"
         {
             repeater(Group)
             {
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                     Visible = false;
                 }
-                field(Operacion; Operacion)
+                field(Operacion; Rec.Operacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Operacion';
                     Visible = false;
                 }
-                field("Id Tabla"; "Id Tabla")
+                field("Id Tabla"; Rec."Id Tabla")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Tabla';
                 }
                 field(Campo; cFumImp.GetTableCaption(Rec."Id Tabla"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Tabla';
                 }
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field("Code MdM"; "Code MdM")
+                field("Code MdM"; Rec."Code MdM")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code MdM';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field("Nombre Elemento"; "Nombre Elemento")
+                field("Nombre Elemento"; Rec."Nombre Elemento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Elemento';
                 }
-                field(Visible; Visible)
+                field(Visible; Rec.Visible)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Visible';
                 }
-                field(Procesado; Procesado)
+                field(Procesado; Rec.Procesado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Procesado';
                 }
             }
         }

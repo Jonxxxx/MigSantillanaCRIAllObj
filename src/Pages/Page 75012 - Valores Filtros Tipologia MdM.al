@@ -11,11 +11,15 @@ page 75012 "Valores Filtros Tipologia MdM"
         {
             repeater(Group)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
             }
         }

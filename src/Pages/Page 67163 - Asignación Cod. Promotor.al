@@ -11,12 +11,16 @@ page 67163 "Asignacion Cod. Promotor"
         {
             repeater(Group)
             {
-                field("User ID"; "User ID")
+                field("User ID"; Rec."User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'User ID';
                     Editable = false;
                 }
-                field("Salespers./Purch. Code"; "Salespers./Purch. Code")
+                field("Salespers./Purch. Code"; Rec."Salespers./Purch. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salespers./Purch. Code';
                 }
             }
         }

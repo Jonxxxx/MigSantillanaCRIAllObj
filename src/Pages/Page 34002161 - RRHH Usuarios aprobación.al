@@ -10,31 +10,45 @@ page 34002161 "RRHH Usuarios aprobacion"
         {
             repeater(GeneralRep)
             {
-                field("User ID"; "User ID")
+                field("User ID"; Rec."User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'User ID';
 
                     trigger OnValidate()
                     begin
                         CALCFIELDS("Full name");
                     end;
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Revisado por"; "Revisado por")
+                field("Revisado por"; Rec."Revisado por")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Revisado por';
                 }
-                field("Autorizado por"; "Autorizado por")
+                field("Autorizado por"; Rec."Autorizado por")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Autorizado por';
                 }
-                field("Visualiza salario"; "Visualiza salario")
+                field("Visualiza salario"; Rec."Visualiza salario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Visualiza salario';
                 }
-                field("Visualiza Calc. Nomina"; "Visualiza Calc. Nomina")
+                field("Visualiza Calc. Nomina"; Rec."Visualiza Calc. Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Visualiza Calc. Nomina';
                 }
             }
         }

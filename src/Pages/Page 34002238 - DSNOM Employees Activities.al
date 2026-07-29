@@ -11,17 +11,23 @@ page 34002238 "DSNOM Employees Activities"
             cuegroup(Employees)
             {
                 Caption = 'Employees';
-                field(Cumple; "Birthday of the month")
+                field(Cumple; Rec."Birthday of the month")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birthday of the month';
                     Caption = 'Current month birthdays';
                     Image = calendar;
                 }
-                field("Male Employees"; "Male Employees")
+                field("Male Employees"; Rec."Male Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Male Employees';
                     Image = Person;
                 }
-                field("Female Employees"; "Female Employees")
+                field("Female Employees"; Rec."Female Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Female Employees';
                     Image = Person;
                 }
             }

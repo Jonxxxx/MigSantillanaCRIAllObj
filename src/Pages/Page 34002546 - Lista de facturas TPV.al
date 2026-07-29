@@ -14,140 +14,186 @@ page 34002546 "Lista de facturas TPV"
         {
             repeater(GeneralRep)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = ESACC_F3_Editable;
                     HideValue = ESACC_F3_HideValue;
                     Visible = ESACC_F3_Visible;
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                     Editable = ESACC_F20_Editable;
                     HideValue = ESACC_F20_HideValue;
                     Visible = false;
                 }
-                field("Venta TPV"; "Venta TPV")
+                field("Venta TPV"; Rec."Venta TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Venta TPV';
                     Editable = ESACC_F34002502_Editable;
                     HideValue = ESACC_F34002502_HideValue;
                     Visible = ESACC_F34002502_Visible;
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                     Editable = ESACC_F34002504_Editable;
                     HideValue = ESACC_F34002504_HideValue;
                     Visible = ESACC_F34002504_Visible;
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                     Editable = ESACC_F34002503_Editable;
                     HideValue = ESACC_F34002503_HideValue;
                     Visible = ESACC_F34002503_Visible;
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                     Editable = ESACC_F34002512_Editable;
                     HideValue = ESACC_F34002512_HideValue;
                     Visible = ESACC_F34002512_Visible;
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                     Editable = ESACC_F2_Editable;
                     HideValue = ESACC_F2_HideValue;
                     Visible = ESACC_F2_Visible;
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                     Editable = ESACC_F79_Editable;
                     HideValue = ESACC_F79_HideValue;
                     Visible = ESACC_F79_Visible;
                 }
-                field("Sell-to Post Code"; "Sell-to Post Code")
+                field("Sell-to Post Code"; Rec."Sell-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Post Code';
                     Editable = ESACC_F88_Editable;
                     HideValue = ESACC_F88_HideValue;
                     Visible = false;
                 }
-                field("Sell-to Country/Region Code"; "Sell-to Country/Region Code")
+                field("Sell-to Country/Region Code"; Rec."Sell-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Country/Region Code';
                     Editable = ESACC_F90_Editable;
                     HideValue = ESACC_F90_HideValue;
                     Visible = false;
                 }
-                field("Sell-to Contact"; "Sell-to Contact")
+                field("Sell-to Contact"; Rec."Sell-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact';
                     Editable = ESACC_F84_Editable;
                     HideValue = ESACC_F84_HideValue;
                     Visible = false;
                 }
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Customer No.';
                     Editable = ESACC_F4_Editable;
                     HideValue = ESACC_F4_HideValue;
                     Visible = false;
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                     Editable = ESACC_F5_Editable;
                     HideValue = ESACC_F5_HideValue;
                     Visible = false;
                 }
-                field("Bill-to Post Code"; "Bill-to Post Code")
+                field("Bill-to Post Code"; Rec."Bill-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Post Code';
                     Editable = ESACC_F85_Editable;
                     HideValue = ESACC_F85_HideValue;
                     Visible = false;
                 }
-                field("Bill-to Country/Region Code"; "Bill-to Country/Region Code")
+                field("Bill-to Country/Region Code"; Rec."Bill-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Country/Region Code';
                     Editable = ESACC_F87_Editable;
                     HideValue = ESACC_F87_HideValue;
                     Visible = false;
                 }
-                field("Bill-to Contact"; "Bill-to Contact")
+                field("Bill-to Contact"; Rec."Bill-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact';
                     Editable = ESACC_F10_Editable;
                     HideValue = ESACC_F10_HideValue;
                     Visible = false;
                 }
-                field("Ship-to Code"; "Ship-to Code")
+                field("Ship-to Code"; Rec."Ship-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Code';
                     Editable = ESACC_F12_Editable;
                     HideValue = ESACC_F12_HideValue;
                     Visible = false;
                 }
-                field("Ship-to Name"; "Ship-to Name")
+                field("Ship-to Name"; Rec."Ship-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Name';
                     Editable = ESACC_F13_Editable;
                     HideValue = ESACC_F13_HideValue;
                     Visible = false;
                 }
-                field("Ship-to Post Code"; "Ship-to Post Code")
+                field("Ship-to Post Code"; Rec."Ship-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Post Code';
                     Editable = ESACC_F91_Editable;
                     HideValue = ESACC_F91_HideValue;
                     Visible = false;
                 }
-                field("Ship-to Country/Region Code"; "Ship-to Country/Region Code")
+                field("Ship-to Country/Region Code"; Rec."Ship-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Country/Region Code';
                     Editable = ESACC_F93_Editable;
                     HideValue = ESACC_F93_HideValue;
                     Visible = false;
                 }
-                field("Ship-to Contact"; "Ship-to Contact")
+                field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Contact';
                     Editable = ESACC_F18_Editable;
                     HideValue = ESACC_F18_HideValue;
                     Visible = false;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Editable = ESACC_F28_Editable;
                     HideValue = ESACC_F28_HideValue;
                     Visible = true;
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
                     Editable = ESACC_F43_Editable;
                     HideValue = ESACC_F43_HideValue;
                     Visible = false;

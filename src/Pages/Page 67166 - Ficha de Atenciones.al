@@ -10,90 +10,144 @@ page 67166 "Ficha de Atenciones"
             group(General)
             {
                 Editable = wMod;
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("Id. Usuario"; "Id. Usuario")
+                field("Id. Usuario"; Rec."Id. Usuario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id. Usuario';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field(Documento; Documento)
+                field(Documento; Rec.Documento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Documento';
                 }
-                field("Fecha Recepcion Documento"; "Fecha Recepcion Documento")
+                field("Fecha Recepcion Documento"; Rec."Fecha Recepcion Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Recepcion Documento';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field(Distritos; Distritos)
+                field(Distritos; Rec.Distritos)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distritos';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field(Objetivo; Objetivo)
+                field(Objetivo; Rec.Objetivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo';
                 }
-                field("Descripcion Objetivo"; "Descripcion Objetivo")
+                field("Descripcion Objetivo"; Rec."Descripcion Objetivo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Objetivo';
                 }
             }
             group("Entrega Atenciones")
             {
                 Editable = wMod;
-                field("Area Responsable"; "Area Responsable")
+                field("Area Responsable"; Rec."Area Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area Responsable';
                 }
-                field("Cod. Responsable"; "Cod. Responsable")
+                field("Cod. Responsable"; Rec."Cod. Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Responsable';
                 }
-                field("Nombre responsable"; "Nombre responsable")
+                field("Nombre responsable"; Rec."Nombre responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre responsable';
                 }
-                field("Fecha de entrega"; "Fecha de entrega")
+                field("Fecha de entrega"; Rec."Fecha de entrega")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de entrega';
                 }
-                field("Comentarios Entrega"; "Comentarios Entrega")
+                field("Comentarios Entrega"; Rec."Comentarios Entrega")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentarios Entrega';
                 }
-                field("Comentarios Cancelacion"; "Comentarios Cancelacion")
+                field("Comentarios Cancelacion"; Rec."Comentarios Cancelacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentarios Cancelacion';
                 }
             }
             part(PagePart; 67168)

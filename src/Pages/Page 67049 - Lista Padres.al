@@ -15,77 +15,125 @@ page 67049 "Lista Padres"
         {
             repeater(General)
             {
-                field(DNI; DNI)
+                field(DNI; Rec.DNI)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'DNI';
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field(Sex; Sex)
+                field(Sex; Rec.Sex)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sex';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Territory Code"; "Territory Code")
+                field("Territory Code"; Rec."Territory Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Territory Code';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field("Home Phone No."; "Home Phone No.")
+                field("Home Phone No."; Rec."Home Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Home Phone No.';
                 }
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("Dia Nacimiento"; "Dia Nacimiento")
+                field("Dia Nacimiento"; Rec."Dia Nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia Nacimiento';
                 }
-                field("Mes Nacimiento"; "Mes Nacimiento")
+                field("Mes Nacimiento"; Rec."Mes Nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes Nacimiento';
                 }
-                field("Ano Nacimiento"; "Ano Nacimiento")
+                field("Ano Nacimiento"; Rec."Ano Nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano Nacimiento';
                 }
-                field("Home Page"; "Home Page")
+                field("Home Page"; Rec."Home Page")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Home Page';
                 }
-                field(Twitter; Twitter)
+                field(Twitter; Rec.Twitter)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Twitter';
                 }
-                field(Facebook; Facebook)
+                field(Facebook; Rec.Facebook)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Facebook';
                 }
-                field("BB Pin"; "BB Pin")
+                field("BB Pin"; Rec."BB Pin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'BB Pin';
                 }
-                field("Cantidad Hijos INI"; "Cantidad Hijos INI")
+                field("Cantidad Hijos INI"; Rec."Cantidad Hijos INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Hijos INI';
                 }
-                field("Cantidad Hijos PRI"; "Cantidad Hijos PRI")
+                field("Cantidad Hijos PRI"; Rec."Cantidad Hijos PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Hijos PRI';
                 }
             }
         }

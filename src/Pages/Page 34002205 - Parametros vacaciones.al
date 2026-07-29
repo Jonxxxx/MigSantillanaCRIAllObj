@@ -10,11 +10,15 @@ page 34002205 "Parametros vacaciones"
         {
             repeater(Group)
             {
-                field(Desde; Desde)
+                field(Desde; Rec.Desde)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desde';
                 }
-                field("Cantidad de dias"; "Cantidad de dias")
+                field("Cantidad de dias"; Rec."Cantidad de dias")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de dias';
                 }
             }
         }

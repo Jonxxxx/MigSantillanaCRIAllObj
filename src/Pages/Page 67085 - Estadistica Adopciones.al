@@ -11,81 +11,131 @@ page 67085 "Estadistica Adopciones"
         {
             repeater(General)
             {
-                field("Sub Familia"; "Sub Familia")
+                field("Sub Familia"; Rec."Sub Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub Familia';
                     Caption = 'Value';
                 }
-                field("Adopcion - 2INI"; "Adopcion - 2INI")
+                field("Adopcion - 2INI"; Rec."Adopcion - 2INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 2INI';
                 }
-                field("Adopcion - 3INI"; "Adopcion - 3INI")
+                field("Adopcion - 3INI"; Rec."Adopcion - 3INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 3INI';
                 }
-                field("Adopcion - 4INI"; "Adopcion - 4INI")
+                field("Adopcion - 4INI"; Rec."Adopcion - 4INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 4INI';
                 }
-                field("Adopcion - 5INI"; "Adopcion - 5INI")
+                field("Adopcion - 5INI"; Rec."Adopcion - 5INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 5INI';
                 }
-                field("Adopcion - 1PRI"; "Adopcion - 1PRI")
+                field("Adopcion - 1PRI"; Rec."Adopcion - 1PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 1PRI';
                 }
-                field("Adopcion - 2PRI"; "Adopcion - 2PRI")
+                field("Adopcion - 2PRI"; Rec."Adopcion - 2PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 2PRI';
                 }
-                field("Adopcion - 3PRI"; "Adopcion - 3PRI")
+                field("Adopcion - 3PRI"; Rec."Adopcion - 3PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 3PRI';
                 }
-                field("Adopcion - 4PRI"; "Adopcion - 4PRI")
+                field("Adopcion - 4PRI"; Rec."Adopcion - 4PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 4PRI';
                 }
-                field("Adopcion - 5PRI"; "Adopcion - 5PRI")
+                field("Adopcion - 5PRI"; Rec."Adopcion - 5PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 5PRI';
                 }
-                field("Adopcion - 6PRI"; "Adopcion - 6PRI")
+                field("Adopcion - 6PRI"; Rec."Adopcion - 6PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 6PRI';
                 }
-                field("Adopcion - 1SEC"; "Adopcion - 1SEC")
+                field("Adopcion - 1SEC"; Rec."Adopcion - 1SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 1SEC';
                 }
-                field("Adopcion - 2SEC"; "Adopcion - 2SEC")
+                field("Adopcion - 2SEC"; Rec."Adopcion - 2SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 2SEC';
                 }
-                field("Adopcion - 3SEC"; "Adopcion - 3SEC")
+                field("Adopcion - 3SEC"; Rec."Adopcion - 3SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 3SEC';
                 }
-                field("Adopcion - 4SEC"; "Adopcion - 4SEC")
+                field("Adopcion - 4SEC"; Rec."Adopcion - 4SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 4SEC';
                 }
-                field("Adopcion - 5SEC"; "Adopcion - 5SEC")
+                field("Adopcion - 5SEC"; Rec."Adopcion - 5SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 5SEC';
                 }
-                field("Adopcion - 1SEI"; "Adopcion - 1SEI")
+                field("Adopcion - 1SEI"; Rec."Adopcion - 1SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 1SEI';
                 }
-                field("Adopcion - 2SEI"; "Adopcion - 2SEI")
+                field("Adopcion - 2SEI"; Rec."Adopcion - 2SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 2SEI';
                 }
-                field("Adopcion - 3SEI"; "Adopcion - 3SEI")
+                field("Adopcion - 3SEI"; Rec."Adopcion - 3SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 3SEI';
                 }
-                field("Adopcion - 4SEI"; "Adopcion - 4SEI")
+                field("Adopcion - 4SEI"; Rec."Adopcion - 4SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 4SEI';
                 }
-                field("Adopcion - 1VA"; "Adopcion - 1VA")
+                field("Adopcion - 1VA"; Rec."Adopcion - 1VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 1VA';
                 }
-                field("Adopcion - 2VA"; "Adopcion - 2VA")
+                field("Adopcion - 2VA"; Rec."Adopcion - 2VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 2VA';
                 }
-                field("Adopcion - 3VA"; "Adopcion - 3VA")
+                field("Adopcion - 3VA"; Rec."Adopcion - 3VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 3VA';
                 }
-                field("Adopcion - 4VA"; "Adopcion - 4VA")
+                field("Adopcion - 4VA"; Rec."Adopcion - 4VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 4VA';
                 }
-                field("Adopcion - 5VA"; "Adopcion - 5VA")
+                field("Adopcion - 5VA"; Rec."Adopcion - 5VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion - 5VA';
                 }
             }
         }

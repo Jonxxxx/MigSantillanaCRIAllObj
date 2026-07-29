@@ -11,11 +11,15 @@ page 34002560 "Dimensiones POS"
         {
             repeater(Group)
             {
-                field(Dimension; Dimension)
+                field(Dimension; Rec.Dimension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension';
                 }
-                field("Valor dimension"; "Valor dimension")
+                field("Valor dimension"; Rec."Valor dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor dimension';
                 }
             }
         }

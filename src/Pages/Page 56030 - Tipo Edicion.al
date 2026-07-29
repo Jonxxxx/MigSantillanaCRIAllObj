@@ -10,11 +10,15 @@ page 56030 "Tipo Edicion"
         {
             repeater(Group)
             {
-                field("Cod. Tipo Edicion"; "Cod. Tipo Edicion")
+                field("Cod. Tipo Edicion"; Rec."Cod. Tipo Edicion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Tipo Edicion';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

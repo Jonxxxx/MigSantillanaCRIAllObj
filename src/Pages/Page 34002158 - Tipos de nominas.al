@@ -13,47 +13,75 @@ page 34002158 "Tipos de nominas"
         {
             repeater(GeneralRep)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Frecuencia de pago"; "Frecuencia de pago")
+                field("Frecuencia de pago"; Rec."Frecuencia de pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Frecuencia de pago';
                 }
-                field("Validar contrato"; "Validar contrato")
+                field("Validar contrato"; Rec."Validar contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Validar contrato';
                 }
-                field("Tipo de nomina"; "Tipo de nomina")
+                field("Tipo de nomina"; Rec."Tipo de nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de nomina';
                 }
-                field("Incluir salario"; "Incluir salario")
+                field("Incluir salario"; Rec."Incluir salario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Incluir salario';
                 }
-                field("Cotiza ISR"; "Cotiza ISR")
+                field("Cotiza ISR"; Rec."Cotiza ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza ISR';
                 }
-                field("Cotiza AFP"; "Cotiza AFP")
+                field("Cotiza AFP"; Rec."Cotiza AFP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza AFP';
                 }
-                field("Cotiza SFS"; "Cotiza SFS")
+                field("Cotiza SFS"; Rec."Cotiza SFS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SFS';
                 }
-                field("Cotiza INFOTEP"; "Cotiza INFOTEP")
+                field("Cotiza INFOTEP"; Rec."Cotiza INFOTEP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza INFOTEP';
                 }
-                field("Cotiza SRL"; "Cotiza SRL")
+                field("Cotiza SRL"; Rec."Cotiza SRL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SRL';
                 }
-                field("Dia inicio 1ra"; "Dia inicio 1ra")
+                field("Dia inicio 1ra"; Rec."Dia inicio 1ra")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia inicio 1ra';
                 }
-                field("Dia inicio 2da"; "Dia inicio 2da")
+                field("Dia inicio 2da"; Rec."Dia inicio 2da")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia inicio 2da';
                 }
-                field("Calcular ISR Mes en Bonific"; "Calcular ISR Mes en Bonific")
+                field("Calcular ISR Mes en Bonific"; Rec."Calcular ISR Mes en Bonific")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Calcular ISR Mes en Bonific';
                 }
             }
         }

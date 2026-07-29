@@ -13,13 +13,17 @@ page 67134 "Colegio - Work Flow Programado"
         {
             repeater(Group)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field(Programado; Programado)
+                field(Programado; Rec.Programado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Programado';
                 }
             }
         }

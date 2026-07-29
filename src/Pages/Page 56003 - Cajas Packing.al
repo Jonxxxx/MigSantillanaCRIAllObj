@@ -22,31 +22,45 @@ page 56003 "Cajas Packing"
         {
             repeater(Group)
             {
-                field("Cod. Barras"; "Cod. Barras")
+                field("Cod. Barras"; Rec."Cod. Barras")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Barras';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("No. Linea Picking"; "No. Linea Picking")
+                field("No. Linea Picking"; Rec."No. Linea Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Linea Picking';
                     Enabled = TieneGestionAlmacen;
                     Visible = TieneGestionAlmacen;
                 }
-                field("No. Linea Pedido"; "No. Linea Pedido")
+                field("No. Linea Pedido"; Rec."No. Linea Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Linea Pedido';
                     Enabled = NOT TieneGestionAlmacen;
                     Visible = NOT TieneGestionAlmacen;
                 }
-                field("No. Producto"; "No. Producto")
+                field("No. Producto"; Rec."No. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Producto';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Unidad de Medida"; "Cod. Unidad de Medida")
+                field("Cod. Unidad de Medida"; Rec."Cod. Unidad de Medida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Unidad de Medida';
                 }
             }
         }

@@ -10,6 +10,7 @@ page 56031 "Actualiza NIT"
         {
             field(NuevoNit; NuevoNit)
             {
+                ApplicationArea = All;
                 Caption = 'Nuevo NIT';
             }
         }

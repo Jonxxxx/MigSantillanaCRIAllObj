@@ -12,8 +12,10 @@ page 34002181 "Temporary Employee Card OJO"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
 
                     trigger OnAssistEdit()
                     begin
@@ -22,67 +24,107 @@ page 34002181 "Temporary Employee Card OJO"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                     Caption = 'Middle Name/Initials';
                 }
-                field(Initials; Initials)
+                field(Initials; Rec.Initials)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initials';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                     Caption = 'State/ZIP Code';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field(Gender; Gender)
+                field(Gender; Rec.Gender)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gender';
                 }
-                field("Last Date Modified"; "Last Date Modified")
+                field("Last Date Modified"; Rec."Last Date Modified")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Date Modified';
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                 }
-                field(Departamento; Departamento)
+                field(Departamento; Rec.Departamento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Departamento';
                 }
-                field("Sub-Departamento"; "Sub-Departamento")
+                field("Sub-Departamento"; Rec."Sub-Departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub-Departamento';
                 }
-                field("Calcular Nomina"; "Calcular Nomina")
+                field("Calcular Nomina"; Rec."Calcular Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Calcular Nomina';
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
             }
             group(EmpInfoPanel)
@@ -90,14 +132,17 @@ page 34002181 "Temporary Employee Card OJO"
                 Caption = 'Employee Information';
                 field(JXPersonnelActionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaNovedades(Rec)))
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
                 field(JXQualificationsCount; STRSUBSTNO('(%1)', CUNomina.BuscaCualificaciones("No.")))
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
                 field(JXDimensionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaDimensiones("No.")))
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
             }
@@ -106,129 +151,200 @@ page 34002181 "Temporary Employee Card OJO"
                 Caption = 'Payroll Information';
                 field(JXPayrollCount; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
             }
             group(Communication)
             {
                 Caption = 'Communication';
-                field(Extension; Extension)
+                field(Extension; Rec.Extension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Extension';
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                 }
-                field(Pager; Pager)
+                field(Pager; Rec.Pager)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pager';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Company E-Mail"; "Company E-Mail")
+                field("Company E-Mail"; Rec."Company E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company E-Mail';
                 }
-                field("Alt. Address Code"; "Alt. Address Code")
+                field("Alt. Address Code"; Rec."Alt. Address Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alt. Address Code';
                 }
-                field("Alt. Address Start Date"; "Alt. Address Start Date")
+                field("Alt. Address Start Date"; Rec."Alt. Address Start Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alt. Address Start Date';
                 }
-                field("Alt. Address End Date"; "Alt. Address End Date")
+                field("Alt. Address End Date"; Rec."Alt. Address End Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alt. Address End Date';
                 }
             }
             group(Administration)
             {
                 Caption = 'Administration';
-                field("Employment Date"; "Employment Date")
+                field("Employment Date"; Rec."Employment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employment Date';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Inactive Date"; "Inactive Date")
+                field("Inactive Date"; Rec."Inactive Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactive Date';
                 }
-                field("Cause of Inactivity Code"; "Cause of Inactivity Code")
+                field("Cause of Inactivity Code"; Rec."Cause of Inactivity Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cause of Inactivity Code';
                 }
-                field("Termination Date"; "Termination Date")
+                field("Termination Date"; Rec."Termination Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Termination Date';
                 }
-                field("Grounds for Term. Code"; "Grounds for Term. Code")
+                field("Grounds for Term. Code"; Rec."Grounds for Term. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grounds for Term. Code';
                 }
-                field("Job Type Code"; "Job Type Code")
+                field("Job Type Code"; Rec."Job Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Type Code';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field("Agente de Retencion ISR"; "Agente de Retencion ISR")
+                field("Agente de Retencion ISR"; Rec."Agente de Retencion ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Agente de Retencion ISR';
                 }
-                field("RNC Agente de Retencion ISR"; "RNC Agente de Retencion ISR")
+                field("RNC Agente de Retencion ISR"; Rec."RNC Agente de Retencion ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC Agente de Retencion ISR';
                     Editable = false;
                 }
-                field("Emplymt. Contract Code"; "Emplymt. Contract Code")
+                field("Emplymt. Contract Code"; Rec."Emplymt. Contract Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Emplymt. Contract Code';
                 }
-                field("Statistics Group Code"; "Statistics Group Code")
+                field("Statistics Group Code"; Rec."Statistics Group Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Statistics Group Code';
                 }
-                field("Resource No."; "Resource No.")
+                field("Resource No."; Rec."Resource No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resource No.';
                 }
-                field("Salespers./Purch. Code"; "Salespers./Purch. Code")
+                field("Salespers./Purch. Code"; Rec."Salespers./Purch. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salespers./Purch. Code';
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                 }
             }
             group(Personal)
             {
                 Caption = 'Personal';
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                 }
-                field("Social Security No."; "Social Security No.")
+                field("Social Security No."; Rec."Social Security No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Social Security No.';
                 }
-                field("Union Code"; "Union Code")
+                field("Union Code"; Rec."Union Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Union Code';
                 }
-                field("Union Membership No."; "Union Membership No.")
+                field("Union Membership No."; Rec."Union Membership No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Union Membership No.';
                 }
-                field("Disponible 1"; "Disponible 1")
+                field("Disponible 1"; Rec."Disponible 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Disponible 1';
                 }
-                field("Disponible 2"; "Disponible 2")
+                field("Disponible 2"; Rec."Disponible 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Disponible 2';
                 }
-                field(Cuenta; Cuenta)
+                field(Cuenta; Rec.Cuenta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuenta';
                 }
-                field("Forma de Cobro"; "Forma de Cobro")
+                field("Forma de Cobro"; Rec."Forma de Cobro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de Cobro';
                 }
             }
             group(Affiliations)
             {
                 Caption = 'Affiliations';
-                field("Dia nacimiento"; "Dia nacimiento")
+                field("Dia nacimiento"; Rec."Dia nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia nacimiento';
                 }
-                field("Cod. ARS"; "Cod. ARS")
+                field("Cod. ARS"; Rec."Cod. ARS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. ARS';
                 }
-                field("Cod. AFP"; "Cod. AFP")
+                field("Cod. AFP"; Rec."Cod. AFP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. AFP';
                 }
             }
         }

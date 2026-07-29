@@ -11,38 +11,56 @@ page 56052 "Lin. Consignacion a Facturar"
         {
             repeater(Group)
             {
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     Editable = false;
                 }
-                field(Type; Type)
+                field(Type; Rec.Type)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Type';
                     Editable = false;
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Line Discount %"; "Line Discount %")
+                field("Line Discount %"; Rec."Line Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount %';
                 }
-                field("Unit of Measure"; "Unit of Measure")
+                field("Unit of Measure"; Rec."Unit of Measure")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Cantidad a Facturar"; "Cantidad a Facturar")
+                field("Cantidad a Facturar"; Rec."Cantidad a Facturar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Facturar';
                 }
-                field(Marcada; Marcada)
+                field(Marcada; Rec.Marcada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marcada';
                 }
             }
         }

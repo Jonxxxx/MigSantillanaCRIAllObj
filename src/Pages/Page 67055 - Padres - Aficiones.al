@@ -9,17 +9,25 @@ page 67055 "Padres - Aficiones"
         {
             repeater(General)
             {
-                field("Cod. Padre"; "Cod. Padre")
+                field("Cod. Padre"; Rec."Cod. Padre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Padre';
                 }
-                field("Nombre Padre"; "Nombre Padre")
+                field("Nombre Padre"; Rec."Nombre Padre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Padre';
                 }
-                field("Cod. aficion"; "Cod. aficion")
+                field("Cod. aficion"; Rec."Cod. aficion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. aficion';
                 }
-                field("Descripcion aficion"; "Descripcion aficion")
+                field("Descripcion aficion"; Rec."Descripcion aficion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion aficion';
                 }
             }
         }

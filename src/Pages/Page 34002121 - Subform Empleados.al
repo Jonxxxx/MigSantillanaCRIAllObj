@@ -10,22 +10,32 @@ page 34002121 "Subform Empleados"
             repeater(GeneralRep)
             {
                 Editable = false;
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Caption = 'Nº empleado';
                 }
-                field("Full Name"; "Full Name")
+                field("Full Name"; Rec."Full Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full Name';
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                     Visible = false;
                 }
-                field("Fecha salida empresa"; "Fecha salida empresa")
+                field("Fecha salida empresa"; Rec."Fecha salida empresa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha salida empresa';
                     Visible = false;
                 }
             }

@@ -9,14 +9,20 @@ page 34002517 "Ficha Vendedor"
         {
             group(General)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
             }
         }

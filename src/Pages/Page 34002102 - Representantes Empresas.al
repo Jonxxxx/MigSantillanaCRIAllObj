@@ -11,32 +11,50 @@ page 34002102 "Representantes Empresas"
         {
             repeater(GeneralRep)
             {
-                field(Figurar; Figurar)
+                field(Figurar; Rec.Figurar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Figurar';
                 }
-                field("RNC/CED"; "RNC/CED")
+                field("RNC/CED"; Rec."RNC/CED")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC/CED';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("C.P."; "C.P.")
+                field("C.P."; Rec."C.P.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'C.P.';
                 }
-                field(Poblacion; Poblacion)
+                field(Poblacion; Rec.Poblacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Poblacion';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field(Teléfono; Teléfono)
+                field(Teléfono; Rec.Teléfono)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Teléfono';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
             }
         }

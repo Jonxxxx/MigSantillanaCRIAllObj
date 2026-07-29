@@ -9,15 +9,21 @@ page 34002125 "Estadisticas Empleados"
     {
         area(content)
         {
-            field("Full Name"; "Full Name")
+            field("Full Name"; Rec."Full Name")
             {
+                ApplicationArea = All;
+                ToolTip = 'Full Name';
                 Editable = false;
             }
-            field("Date Filter"; "Date Filter")
+            field("Date Filter"; Rec."Date Filter")
             {
+                ApplicationArea = All;
+                ToolTip = 'Date Filter';
             }
-            field("Dias Vacaciones"; "Dias Vacaciones")
+            field("Dias Vacaciones"; Rec."Dias Vacaciones")
             {
+                ApplicationArea = All;
+                ToolTip = 'Dias Vacaciones';
                 Editable = false;
             }
             group(General)

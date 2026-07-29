@@ -15,50 +15,79 @@ page 56063 "Seguimiento Ped. Transferencia"
         {
             repeater(Group)
             {
-                field("Transfer-from Code"; "Transfer-from Code")
+                field("Transfer-from Code"; Rec."Transfer-from Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Code';
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("No. Envio de Almacen"; "No. Envio de Almacen")
+                field("No. Envio de Almacen"; Rec."No. Envio de Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio de Almacen';
                 }
-                field("No. Hoja de Ruta"; "No. Hoja de Ruta")
+                field("No. Hoja de Ruta"; Rec."No. Hoja de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja de Ruta';
                 }
-                field("No. Hoja de Ruta Reg."; "No. Hoja de Ruta Reg.")
+                field("No. Hoja de Ruta Reg."; Rec."No. Hoja de Ruta Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja de Ruta Reg.';
                 }
-                field("No. Picking"; "No. Picking")
+                field("No. Picking"; Rec."No. Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking';
                 }
-                field("No. Picking Reg."; "No. Picking Reg.")
+                field("No. Picking Reg."; Rec."No. Picking Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking Reg.';
                 }
-                field("No. Packing"; "No. Packing")
+                field("No. Packing"; Rec."No. Packing")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing';
                 }
                 field("TSHNo."; TSH."No.")
                 {
+                    ApplicationArea = All;
                 }
-                field("No. Envio"; "No. Envio")
+                field("No. Envio"; Rec."No. Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio';
                 }
-                field("Transfer-to Code"; "Transfer-to Code")
+                field("Transfer-to Code"; Rec."Transfer-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Code';
                 }
-                field("Transfer-to Name"; "Transfer-to Name")
+                field("Transfer-to Name"; Rec."Transfer-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Name';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Assigned User ID"; "Assigned User ID")
+                field("Assigned User ID"; Rec."Assigned User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Assigned User ID';
                 }
             }
         }

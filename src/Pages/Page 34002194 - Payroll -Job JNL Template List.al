@@ -11,38 +11,56 @@ page 34002194 "Payroll -Job JNL Template List"
         {
             repeater(GeneralRep)
             {
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field("Test Report ID"; "Test Report ID")
+                field("Test Report ID"; Rec."Test Report ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Test Report ID';
                     Visible = false;
                 }
-                field("Page ID"; "Page ID")
+                field("Page ID"; Rec."Page ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Page ID';
                     Visible = false;
                 }
-                field("Posting Report ID"; "Posting Report ID")
+                field("Posting Report ID"; Rec."Posting Report ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Report ID';
                     Visible = false;
                 }
-                field("Force Posting Report"; "Force Posting Report")
+                field("Force Posting Report"; Rec."Force Posting Report")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Force Posting Report';
                     Visible = false;
                 }
-                field("Test Report Caption"; "Test Report Caption")
+                field("Test Report Caption"; Rec."Test Report Caption")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Test Report Caption';
                     Visible = false;
                 }
-                field("Page Caption"; "Page Caption")
+                field("Page Caption"; Rec."Page Caption")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Page Caption';
                     Visible = false;
                 }
-                field("Posting Report Caption"; "Posting Report Caption")
+                field("Posting Report Caption"; Rec."Posting Report Caption")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Report Caption';
                     Visible = false;
                 }
             }

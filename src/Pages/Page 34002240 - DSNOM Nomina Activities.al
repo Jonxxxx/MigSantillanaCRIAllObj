@@ -11,16 +11,22 @@ page 34002240 "DSNOM Nomina Activities"
             cuegroup(Payroll)
             {
                 Caption = 'Payroll';
-                field("Employees with wire transfer"; "Employees with wire transfer")
+                field("Employees with wire transfer"; Rec."Employees with wire transfer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employees with wire transfer';
                     Image = Receipt;
                 }
-                field("Employees with check"; "Employees with check")
+                field("Employees with check"; Rec."Employees with check")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employees with check';
                     Image = Receipt;
                 }
-                field(Loans; Loans)
+                field(Loans; Rec.Loans)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Loans';
                     Image = Receipt;
                 }
             }

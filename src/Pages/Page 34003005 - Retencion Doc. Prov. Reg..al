@@ -10,44 +10,70 @@ page 34003005 "Retencion Doc. Prov. Reg."
         {
             repeater(Group)
             {
-                field("Cod. Proveedor"; "Cod. Proveedor")
+                field("Cod. Proveedor"; Rec."Cod. Proveedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Proveedor';
                 }
-                field("Codigo Retencion"; "Codigo Retencion")
+                field("Codigo Retencion"; Rec."Codigo Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Retencion';
                 }
-                field("Cta. Contable"; "Cta. Contable")
+                field("Cta. Contable"; Rec."Cta. Contable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cta. Contable';
                 }
-                field("Base Calculo"; "Base Calculo")
+                field("Base Calculo"; Rec."Base Calculo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Base Calculo';
                 }
-                field(Devengo; Devengo)
+                field(Devengo; Rec.Devengo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Devengo';
                 }
-                field("Importe Retencion"; "Importe Retencion")
+                field("Importe Retencion"; Rec."Importe Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Retencion';
                 }
-                field("Tipo Retencion"; "Tipo Retencion")
+                field("Tipo Retencion"; Rec."Tipo Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Retencion';
                 }
-                field("Aplica Productos"; "Aplica Productos")
+                field("Aplica Productos"; Rec."Aplica Productos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Productos';
                 }
-                field("Aplica Servicios"; "Aplica Servicios")
+                field("Aplica Servicios"; Rec."Aplica Servicios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Servicios';
                 }
-                field("Retencion ITBIS"; "Retencion ITBIS")
+                field("Retencion ITBIS"; Rec."Retencion ITBIS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Retencion ITBIS';
                 }
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("Importe Retenido"; "Importe Retenido")
+                field("Importe Retenido"; Rec."Importe Retenido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Retenido';
                 }
             }
         }

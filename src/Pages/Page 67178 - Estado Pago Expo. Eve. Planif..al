@@ -13,57 +13,81 @@ page 67178 "Estado Pago Expo. Eve. Planif."
         {
             repeater(Group)
             {
-                field(Expositor; Expositor)
+                field(Expositor; Rec.Expositor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Expositor';
                     Editable = false;
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                     Editable = false;
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                 }
-                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                 }
                 field(wTextCostos; wTextCostos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Centro Costos';
                     Editable = false;
                 }
                 field(wImporte; wImporte)
                 {
+                    ApplicationArea = All;
                     Caption = 'Importe estimado s/ tarifa';
                     Editable = false;
                 }
-                field(Pagado; Pagado)
+                field(Pagado; Rec.Pagado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagado';
                     Editable = false;
                 }
-                field("Tipo Documento Pago"; "Tipo Documento Pago")
+                field("Tipo Documento Pago"; Rec."Tipo Documento Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento Pago';
                     Editable = false;
                 }
-                field("No. Documento Pago"; "No. Documento Pago")
+                field("No. Documento Pago"; Rec."No. Documento Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento Pago';
                     Editable = false;
                 }
-                field("Importe pago"; "Importe pago")
+                field("Importe pago"; Rec."Importe pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe pago';
                     Editable = false;
                 }
             }

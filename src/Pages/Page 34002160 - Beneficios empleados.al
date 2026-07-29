@@ -10,21 +10,31 @@ page 34002160 "Beneficios empleados"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                     Visible = false;
                 }
-                field("Tipo Beneficio"; "Tipo Beneficio")
+                field("Tipo Beneficio"; Rec."Tipo Beneficio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Beneficio';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
             }
         }

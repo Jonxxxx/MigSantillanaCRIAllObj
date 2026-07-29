@@ -12,17 +12,25 @@ page 51008 "Año Escolar"
         {
             repeater(General)
             {
-                field("Cod. Ano"; "Cod. Ano")
+                field("Cod. Ano"; Rec."Cod. Ano")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ano';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Fecha Desde"; "Fecha Desde")
+                field("Fecha Desde"; Rec."Fecha Desde")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Desde';
                 }
-                field("Fecha Hasta"; "Fecha Hasta")
+                field("Fecha Hasta"; Rec."Fecha Hasta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Hasta';
                 }
             }
         }

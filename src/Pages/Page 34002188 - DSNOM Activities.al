@@ -10,34 +10,50 @@ page 34002188 "DSNOM Activities"
             cuegroup("Human Resource")
             {
                 Caption = 'Human Resource';
-                field("Active Employees"; "Active Employees")
+                field("Active Employees"; Rec."Active Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Active Employees';
                 }
-                field("Inactives Employees"; "Inactives Employees")
+                field("Inactives Employees"; Rec."Inactives Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactives Employees';
                 }
-                field("New hires"; "New hires")
+                field("New hires"; Rec."New hires")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'New hires';
                 }
-                field("Employee departures"; "Employee departures")
+                field("Employee departures"; Rec."Employee departures")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee departures';
                 }
-                field("Contract to expire"; "Contract to expire")
+                field("Contract to expire"; Rec."Contract to expire")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contract to expire';
                 }
             }
             cuegroup(Employees)
             {
                 Caption = 'Employees';
-                field(Cumple; "Birthday of the month")
+                field(Cumple; Rec."Birthday of the month")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birthday of the month';
                     Caption = 'Current month birthdays';
                 }
-                field("Male Employees"; "Male Employees")
+                field("Male Employees"; Rec."Male Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Male Employees';
                 }
-                field("Female Employees"; "Female Employees")
+                field("Female Employees"; Rec."Female Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Female Employees';
                 }
             }
             cuegroup(Vacation)
@@ -46,6 +62,7 @@ page 34002188 "DSNOM Activities"
                 field(FuncionesNomVacacionesporVencer;
                 FuncionesNom.VacacionesporVencer)
                 {
+                    ApplicationArea = All;
                     Caption = 'vacation to expire';
                     DecimalPlaces = 0 : 2;
                     Image = Calendar;
@@ -55,42 +72,60 @@ page 34002188 "DSNOM Activities"
                         FuncionesNom.MuestraVacporVencer;
                     end;
                 }
-                field("Vacation to start"; "Vacation to start")
+                field("Vacation to start"; Rec."Vacation to start")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Vacation to start';
                     Image = Calendar;
                 }
-                field("Vacation to finish"; "Vacation to finish")
+                field("Vacation to finish"; Rec."Vacation to finish")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Vacation to finish';
                     Image = Calendar;
                 }
             }
             cuegroup(Payroll)
             {
                 Caption = 'Payroll';
-                field("Employees with wire transfer"; "Employees with wire transfer")
+                field("Employees with wire transfer"; Rec."Employees with wire transfer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employees with wire transfer';
                 }
-                field("Employees with check"; "Employees with check")
+                field("Employees with check"; Rec."Employees with check")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employees with check';
                 }
-                field(Loans; Loans)
+                field(Loans; Rec.Loans)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Loans';
                 }
             }
             cuegroup(Cooperative)
             {
                 Caption = 'Cooperative';
-                field("Afiliados cooperativa"; "Afiliados cooperativa")
+                field("Afiliados cooperativa"; Rec."Afiliados cooperativa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Afiliados cooperativa';
                 }
-                field("Miembros activos"; "Miembros activos")
+                field("Miembros activos"; Rec."Miembros activos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miembros activos';
                 }
-                field("Miembros inactivos"; "Miembros inactivos")
+                field("Miembros inactivos"; Rec."Miembros inactivos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miembros inactivos';
                 }
-                field("Prestamos activos"; "Prestamos activos")
+                field("Prestamos activos"; Rec."Prestamos activos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prestamos activos';
                 }
             }
         }

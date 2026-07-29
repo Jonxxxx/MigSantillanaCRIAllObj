@@ -11,23 +11,35 @@ page 67009 "Rutas - Distribucion Geo."
         {
             repeater(General)
             {
-                field("Cod. Ruta"; "Cod. Ruta")
+                field("Cod. Ruta"; Rec."Cod. Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ruta';
                 }
-                field("Name of route"; "Name of route")
+                field("Name of route"; Rec."Name of route")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name of route';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
             }
         }

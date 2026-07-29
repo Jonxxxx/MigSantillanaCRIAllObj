@@ -7,6 +7,7 @@ page 56038 "Captura Cantidad"
         {
             field(wCant;wCant)
             {
+                ApplicationArea = All;
             }
         }
     }

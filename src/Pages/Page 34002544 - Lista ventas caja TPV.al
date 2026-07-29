@@ -10,42 +10,66 @@ page 34002544 "Lista ventas caja TPV"
         {
             repeater(Group)
             {
-                field("Cod. tienda"; "Cod. tienda")
+                field("Cod. tienda"; Rec."Cod. tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. tienda';
                 }
-                field("Cod. TPV"; "Cod. TPV")
+                field("Cod. TPV"; Rec."Cod. TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. TPV';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("No. turno"; "No. turno")
+                field("No. turno"; Rec."No. turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. turno';
                 }
-                field("No. Transaccion"; "No. Transaccion")
+                field("No. Transaccion"; Rec."No. Transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Transaccion';
                 }
-                field("Tipo Transaccion"; "Tipo Transaccion")
+                field("Tipo Transaccion"; Rec."Tipo Transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Transaccion';
                 }
-                field("Id. cajero"; "Id. cajero")
+                field("Id. cajero"; Rec."Id. cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id. cajero';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Importe IVA inc."; "Importe IVA inc.")
+                field("Importe IVA inc."; Rec."Importe IVA inc.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe IVA inc.';
                 }
-                field("No. Borrador"; "No. Borrador")
+                field("No. Borrador"; Rec."No. Borrador")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Borrador';
                     Caption = 'No. Borrador';
                 }
-                field("No. Registrado"; "No. Registrado")
+                field("No. Registrado"; Rec."No. Registrado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Registrado';
                     Caption = 'No. Registrado';
                 }
             }

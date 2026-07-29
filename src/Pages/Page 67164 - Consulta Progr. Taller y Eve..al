@@ -13,18 +13,25 @@ page 67164 "Consulta Progr. Taller y Eve."
         {
             repeater(Group)
             {
-                field("Fecha programacion"; "Fecha programacion")
+                field("Fecha programacion"; Rec."Fecha programacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programacion';
                 }
                 field(FechaInicioFinal; FORMAT("Hora de Inicio") + ' - ' + FORMAT("Hora Final"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Horario';
                 }
-                field("Horas dictadas"; "Horas dictadas")
+                field("Horas dictadas"; Rec."Horas dictadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas dictadas';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
             }
         }

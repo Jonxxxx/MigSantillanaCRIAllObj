@@ -13,53 +13,81 @@ page 67116 "Hist Colegio - Docentes"
         {
             repeater(General)
             {
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Nombre colegio"; "Nombre colegio")
+                field("Nombre colegio"; Rec."Nombre colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre colegio';
                     Editable = false;
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                 }
-                field("Nombre docente"; "Nombre docente")
+                field("Nombre docente"; Rec."Nombre docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre docente';
                     Editable = false;
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                     DrillDownPageID = "Lista Puestos";
                 }
-                field("Nombre Cargo"; "Nombre Cargo")
+                field("Nombre Cargo"; Rec."Nombre Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Cargo';
                     Editable = false;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                     Editable = false;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Nivel decision"; "Nivel decision")
+                field("Nivel decision"; Rec."Nivel decision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel decision';
                 }
-                field(Principal; Principal)
+                field(Principal; Rec.Principal)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Principal';
                 }
             }
         }

@@ -11,17 +11,25 @@ page 34002507 "Ficha Grupo Cajeros"
         {
             group(General)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(Grupo; Grupo)
+                field(Grupo; Rec.Grupo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cliente al contado"; "Cliente al contado")
+                field("Cliente al contado"; Rec."Cliente al contado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cliente al contado';
                 }
             }
         }

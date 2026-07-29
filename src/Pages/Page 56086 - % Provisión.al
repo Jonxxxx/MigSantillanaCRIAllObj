@@ -13,14 +13,20 @@ page 56086 "% Provision"
         {
             repeater(Group)
             {
-                field("Desde dia"; "Desde dia")
+                field("Desde dia"; Rec."Desde dia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desde dia';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("% Provision"; "% Provision")
+                field("% Provision"; Rec."% Provision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Provision';
                 }
             }
         }

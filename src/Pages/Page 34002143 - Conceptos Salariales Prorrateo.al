@@ -10,29 +10,43 @@ page 34002143 "Conceptos Salariales Prorrateo"
         {
             repeater(GeneralRep)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo provision"; "Tipo provision")
+                field("Tipo provision"; Rec."Tipo provision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo provision';
                 }
-                field("Gpo. Contable Empleado"; "Gpo. Contable Empleado")
+                field("Gpo. Contable Empleado"; Rec."Gpo. Contable Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gpo. Contable Empleado';
                     Visible = false;
                 }
-                field("Formula Calculo"; "Formula Calculo")
+                field("Formula Calculo"; Rec."Formula Calculo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Formula Calculo';
                 }
-                field("No. Cuenta"; "No. Cuenta")
+                field("No. Cuenta"; Rec."No. Cuenta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta';
                 }
-                field("No. Cuenta Contrapartida"; "No. Cuenta Contrapartida")
+                field("No. Cuenta Contrapartida"; Rec."No. Cuenta Contrapartida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Contrapartida';
                 }
-                field("Validar Contrapartida"; "Validar Contrapartida")
+                field("Validar Contrapartida"; Rec."Validar Contrapartida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Validar Contrapartida';
                 }
             }
         }

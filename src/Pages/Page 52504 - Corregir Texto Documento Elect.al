@@ -9,12 +9,15 @@ page 52504 "Corregir Texto Documento Elect"
         {
             field(Nombre; Nombre)
             {
+                ApplicationArea = All;
             }
             field(Cedula; Cedula)
             {
+                ApplicationArea = All;
             }
             field(Correo; Correo)
             {
+                ApplicationArea = All;
             }
         }
     }

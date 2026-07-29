@@ -11,12 +11,16 @@ page 34002253 "DSNOM Training Activities"
             cuegroup(Trainings)
             {
                 Caption = 'Trainings';
-                field("Entrenamientos activos"; "Entrenamientos activos")
+                field("Entrenamientos activos"; Rec."Entrenamientos activos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entrenamientos activos';
                     Image = People;
                 }
-                field("Entrenamientos del mes"; "Entrenamientos del mes")
+                field("Entrenamientos del mes"; Rec."Entrenamientos del mes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entrenamientos del mes';
                     Image = Person;
                 }
             }

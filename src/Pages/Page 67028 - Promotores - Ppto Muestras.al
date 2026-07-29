@@ -11,26 +11,38 @@ page 67028 "Promotores - Ppto Muestras"
         {
             repeater(General)
             {
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Visible = false;
                 }
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Item Description"; "Item Description")
+                field("Item Description"; Rec."Item Description")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item Description';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field("Extended Quantity"; "Extended Quantity")
+                field("Extended Quantity"; Rec."Extended Quantity")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Extended Quantity';
                 }
             }
         }

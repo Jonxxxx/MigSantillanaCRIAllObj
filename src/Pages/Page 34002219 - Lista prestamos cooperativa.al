@@ -12,44 +12,70 @@ page 34002219 "Lista prestamos cooperativa"
         {
             repeater(Group)
             {
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
                 }
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                 }
-                field("No. afiliado"; "No. afiliado")
+                field("No. afiliado"; Rec."No. afiliado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. afiliado';
                 }
-                field("Tipo de miembro"; "Tipo de miembro")
+                field("Tipo de miembro"; Rec."Tipo de miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de miembro';
                 }
-                field("Tipo prestamo"; "Tipo prestamo")
+                field("Tipo prestamo"; Rec."Tipo prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo prestamo';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("% Interes"; "% Interes")
+                field("% Interes"; Rec."% Interes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Interes';
                 }
-                field("Cantidad de Cuotas"; "Cantidad de Cuotas")
+                field("Cantidad de Cuotas"; Rec."Cantidad de Cuotas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Cuotas';
                 }
-                field("Fecha Inicio Deduccion"; "Fecha Inicio Deduccion")
+                field("Fecha Inicio Deduccion"; Rec."Fecha Inicio Deduccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio Deduccion';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
-                field("Motivo Prestamo"; "Motivo Prestamo")
+                field("Motivo Prestamo"; Rec."Motivo Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo Prestamo';
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
             }
         }

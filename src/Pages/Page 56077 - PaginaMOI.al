@@ -14,6 +14,7 @@ page 56077 PaginaMOI
         {
             field(TipoObjeto;goTipo)
             {
+                ApplicationArea = All;
                 Caption = 'Indique el tipo del objeto';
                 Editable = isVisibleTipo;
                 Enabled = isVisibleTipo;
@@ -41,6 +42,7 @@ page 56077 PaginaMOI
             }
             field(NumeroObjeto;giID)
             {
+                ApplicationArea = All;
                 Caption = 'Indique el numero del objeto';
                 Editable = isVisibleID;
                 Enabled = isVisibleID;

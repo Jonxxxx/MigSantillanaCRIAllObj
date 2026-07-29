@@ -10,35 +10,51 @@ page 67089 "Equipos Talleres y Eventos"
         {
             repeater(Group)
             {
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Codigo Equipo"; "Codigo Equipo")
+                field("Codigo Equipo"; Rec."Codigo Equipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Equipo';
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                     Visible = false;
                 }
-                field("Descripcion Equipo"; "Descripcion Equipo")
+                field("Descripcion Equipo"; Rec."Descripcion Equipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Equipo';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Costo Unitario"; "Costo Unitario")
+                field("Costo Unitario"; Rec."Costo Unitario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Costo Unitario';
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                     Visible = false;
                 }

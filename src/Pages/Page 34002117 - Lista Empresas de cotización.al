@@ -9,29 +9,45 @@ page 34002117 "Lista Empresas de cotizacion"
         {
             repeater(GeneralRep)
             {
-                field("Empresa cotizacion"; "Empresa cotizacion")
+                field("Empresa cotizacion"; Rec."Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa cotizacion';
                 }
-                field("Nombre Empresa cotizacion"; "Nombre Empresa cotizacion")
+                field("Nombre Empresa cotizacion"; Rec."Nombre Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Empresa cotizacion';
                 }
-                field("Esquema percepcion"; "Esquema percepcion")
+                field("Esquema percepcion"; Rec."Esquema percepcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Esquema percepcion';
                 }
-                field(Fax; Fax)
+                field(Fax; Rec.Fax)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fax';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("ID RNL"; "ID RNL")
+                field("ID RNL"; Rec."ID RNL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID RNL';
                 }
-                field("ID TSS"; "ID TSS")
+                field("ID TSS"; Rec."ID TSS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID TSS';
                 }
-                field("Tipo Empresa de Trabajo"; "Tipo Empresa de Trabajo")
+                field("Tipo Empresa de Trabajo"; Rec."Tipo Empresa de Trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Empresa de Trabajo';
                 }
             }
         }

@@ -11,44 +11,54 @@ page 52501 "Recepcion Documento Elect"
         {
             field(Clave; Clave)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             field(NumeroCedulaEmisor; NumeroCedulaEmisor)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             field(FechaEmisionDoc; FechaEmisionDoc)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             field(Mensaje; Mensaje)
             {
+                ApplicationArea = All;
             }
             field(DetalleMensaje; DetalleMensaje)
             {
+                ApplicationArea = All;
                 MultiLine = true;
             }
             field(NumeroCedulaReceptor; NumeroCedulaReceptor)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             field(NumConsecutivoReceptor; NumConsecutivoReceptor)
             {
+                ApplicationArea = All;
                 Editable = false;
                 Visible = false;
             }
             field(MontoTotalImpuesto; MontoTotalImpuesto)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             field(CodigoActividad; CodigoActividad)
             {
+                ApplicationArea = All;
                 Caption = 'CodigoActividad';
                 Editable = true;
                 Enabled = true;
             }
             field(TotalFactura; TotalFactura)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
         }

@@ -11,21 +11,31 @@ page 67096 "Estadistica Ranking Nivel"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Visible = false;
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Categoria colegio"; "Categoria colegio")
+                field("Categoria colegio"; Rec."Categoria colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Categoria colegio';
                 }
-                field(Porciento; Porciento)
+                field(Porciento; Rec.Porciento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Porciento';
                 }
             }
         }

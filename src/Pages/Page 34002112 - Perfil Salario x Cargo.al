@@ -11,23 +11,35 @@ page 34002112 "Perfil Salario x Cargo"
         {
             repeater(GeneralRep)
             {
-                field("Puesto de Trabajo"; "Puesto de Trabajo")
+                field("Puesto de Trabajo"; Rec."Puesto de Trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Puesto de Trabajo';
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
             }
         }

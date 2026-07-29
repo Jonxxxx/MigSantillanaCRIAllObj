@@ -10,26 +10,38 @@ page 34002215 "Distribucion ED Empleados"
         {
             repeater(Group)
             {
-                field("Employee no."; "Employee no.")
+                field("Employee no."; Rec."Employee no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee no.';
                     Visible = false;
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                     Visible = false;
                 }
-                field("Dimension Code"; "Dimension Code")
+                field("Dimension Code"; Rec."Dimension Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Code';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field("% a distribuir"; "% a distribuir")
+                field("% a distribuir"; Rec."% a distribuir")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% a distribuir';
                 }
             }
         }

@@ -13,14 +13,20 @@ page 75007 "Conversion NAV MdM"
         {
             repeater(Group)
             {
-                field("Tipo Registro"; "Tipo Registro")
+                field("Tipo Registro"; Rec."Tipo Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Registro';
                 }
-                field("Codigo MdM"; "Codigo MdM")
+                field("Codigo MdM"; Rec."Codigo MdM")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo MdM';
                 }
-                field("Codigo NAV"; "Codigo NAV")
+                field("Codigo NAV"; Rec."Codigo NAV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo NAV';
                 }
             }
         }

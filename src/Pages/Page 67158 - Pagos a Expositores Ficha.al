@@ -10,24 +10,36 @@ page 67158 "Pagos a Expositores Ficha"
             group(General)
             {
                 Editable = wEdit;
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                     Editable = false;
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("Tipo Documento"; "Tipo Documento")
+                field("Tipo Documento"; Rec."Tipo Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field("Estado Pago"; "Estado Pago")
+                field("Estado Pago"; Rec."Estado Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Pago';
                 }
             }
             part(Subform; 67159)

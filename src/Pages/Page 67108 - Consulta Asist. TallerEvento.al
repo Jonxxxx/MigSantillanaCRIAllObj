@@ -11,83 +11,114 @@ page 67108 "Consulta Asist. Taller/Evento"
         {
             repeater(General)
             {
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Tipo evento"; "Description Tipo evento")
+                field("Description Tipo evento"; Rec."Description Tipo evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Tipo evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Nombre Promotor"; "Nombre Promotor")
-                {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Fecha inscripcion"; "Fecha inscripcion")
-                {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha del Evento"; "Fecha del Evento")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha de realizacion"; "Fecha de realizacion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Fecha del Evento"; Rec."Fecha del Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha del Evento';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Fecha de realizacion"; Rec."Fecha de realizacion")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de realizacion';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Cod. Docente"; Rec."Cod. Docente")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                     Editable = false;
                     TableRelation = Docentes WHERE("Pertenece al CDS" = CONST(true));
                     Visible = false;
                 }
-                field("Nombre Docente"; "Nombre Docente")
+                field("Nombre Docente"; Rec."Nombre Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Docente';
                     Editable = false;
                     Visible = false;
                 }
                 field(Confirmado; texConfirmado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Confirmado';
                     Style = Strong;
                     StyleExpr = TRUE;
@@ -102,6 +133,7 @@ page 67108 "Consulta Asist. Taller/Evento"
                 }
                 field(Asistio; texAsistio)
                 {
+                    ApplicationArea = All;
                     Caption = 'Attended';
                     Style = Strong;
                     StyleExpr = TRUE;

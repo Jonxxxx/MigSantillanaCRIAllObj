@@ -10,137 +10,219 @@ page 34003004 "Archivo Transferencia ITBIS"
         {
             repeater(Group)
             {
-                field("Codigo reporte"; "Codigo reporte")
+                field("Codigo reporte"; Rec."Codigo reporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo reporte';
                 }
-                field(Apellidos; Apellidos)
+                field(Apellidos; Rec.Apellidos)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Apellidos';
                     Visible = false;
                 }
-                field(Nombres; Nombres)
+                field(Nombres; Rec.Nombres)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombres';
                     Visible = false;
                 }
-                field("Razon Social"; "Razon Social")
+                field("Razon Social"; Rec."Razon Social")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Razon Social';
                     Visible = false;
                 }
-                field("Nombre Comercial"; "Nombre Comercial")
+                field("Nombre Comercial"; Rec."Nombre Comercial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Comercial';
                 }
-                field(RNC; RNC)
+                field(RNC; Rec.RNC)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC';
                     Visible = false;
                 }
-                field("Clasific. Gastos y Costos NCF"; "Clasific. Gastos y Costos NCF")
+                field("Clasific. Gastos y Costos NCF"; Rec."Clasific. Gastos y Costos NCF")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clasific. Gastos y Costos NCF';
                 }
-                field("Tipo Identificacion"; "Tipo Identificacion")
+                field("Tipo Identificacion"; Rec."Tipo Identificacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Identificacion';
                 }
-                field(Cedula; Cedula)
+                field(Cedula; Rec.Cedula)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cedula';
                     Visible = false;
                 }
-                field("RNC/Cedula"; "RNC/Cedula")
+                field("RNC/Cedula"; Rec."RNC/Cedula")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC/Cedula';
                 }
-                field(NCF; NCF)
+                field(NCF; Rec.NCF)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'NCF';
                 }
-                field("NCF Relacionado"; "NCF Relacionado")
+                field("NCF Relacionado"; Rec."NCF Relacionado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'NCF Relacionado';
                 }
-                field("Tipo de ingreso"; "Tipo de ingreso")
+                field("Tipo de ingreso"; Rec."Tipo de ingreso")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de ingreso';
                 }
-                field("Fecha Documento"; "Fecha Documento")
+                field("Fecha Documento"; Rec."Fecha Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Documento';
                 }
-                field("Fecha Pago"; "Fecha Pago")
+                field("Fecha Pago"; Rec."Fecha Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Pago';
                 }
-                field("Monto Bienes"; "Monto Bienes")
+                field("Monto Bienes"; Rec."Monto Bienes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Bienes';
                 }
-                field("Monto Servicios"; "Monto Servicios")
+                field("Monto Servicios"; Rec."Monto Servicios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Servicios';
                 }
-                field("Numero Documento"; "Numero Documento")
+                field("Numero Documento"; Rec."Numero Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero Documento';
                     Visible = false;
                 }
-                field("Total Documento"; "Total Documento")
+                field("Total Documento"; Rec."Total Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Documento';
                 }
-                field("ITBIS Pagado"; "ITBIS Pagado")
+                field("ITBIS Pagado"; Rec."ITBIS Pagado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ITBIS Pagado';
                 }
-                field("ITBIS Retenido"; "ITBIS Retenido")
+                field("ITBIS Retenido"; Rec."ITBIS Retenido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ITBIS Retenido';
                 }
-                field("ITBIS llevado al costo"; "ITBIS llevado al costo")
+                field("ITBIS llevado al costo"; Rec."ITBIS llevado al costo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ITBIS llevado al costo';
                 }
-                field("ISR Retenido"; "ISR Retenido")
+                field("ISR Retenido"; Rec."ISR Retenido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ISR Retenido';
                 }
-                field("Tipo retencion ISR"; "Tipo retencion ISR")
+                field("Tipo retencion ISR"; Rec."Tipo retencion ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo retencion ISR';
                 }
-                field("Monto Selectivo"; "Monto Selectivo")
+                field("Monto Selectivo"; Rec."Monto Selectivo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Selectivo';
                 }
-                field("Monto otros"; "Monto otros")
+                field("Monto otros"; Rec."Monto otros")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto otros';
                 }
-                field("Monto Propina"; "Monto Propina")
+                field("Monto Propina"; Rec."Monto Propina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Propina';
                 }
-                field("Forma de pago DGII"; "Forma de pago DGII")
+                field("Forma de pago DGII"; Rec."Forma de pago DGII")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de pago DGII';
                 }
-                field("Monto Efectivo"; "Monto Efectivo")
+                field("Monto Efectivo"; Rec."Monto Efectivo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Efectivo';
                 }
-                field("Monto Cheque"; "Monto Cheque")
+                field("Monto Cheque"; Rec."Monto Cheque")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Cheque';
                 }
-                field("Monto tarjetas"; "Monto tarjetas")
+                field("Monto tarjetas"; Rec."Monto tarjetas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto tarjetas';
                 }
-                field("Venta a credito"; "Venta a credito")
+                field("Venta a credito"; Rec."Venta a credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Venta a credito';
                 }
-                field("Venta bonos"; "Venta bonos")
+                field("Venta bonos"; Rec."Venta bonos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Venta bonos';
                 }
-                field("Venta Permuta"; "Venta Permuta")
+                field("Venta Permuta"; Rec."Venta Permuta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Venta Permuta';
                 }
-                field("Codigo Informacion"; "Codigo Informacion")
+                field("Codigo Informacion"; Rec."Codigo Informacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Informacion';
                 }
-                field("Cod. Proveedor"; "Cod. Proveedor")
+                field("Cod. Proveedor"; Rec."Cod. Proveedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Proveedor';
                     Visible = false;
                 }
-                field("fecha registro"; "fecha registro")
+                field("fecha registro"; Rec."fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'fecha registro';
                 }
-                field(Dia; Dia)
+                field(Dia; Rec.Dia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia';
                     Visible = false;
                 }
-                field("Razon Anulacion"; "Razon Anulacion")
+                field("Razon Anulacion"; Rec."Razon Anulacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Razon Anulacion';
                 }
-                field("Dia Pago"; "Dia Pago")
+                field("Dia Pago"; Rec."Dia Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia Pago';
                     Visible = false;
                 }
-                field("No. Mov."; "No. Mov.")
+                field("No. Mov."; Rec."No. Mov.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mov.';
                     Visible = false;
                 }
             }

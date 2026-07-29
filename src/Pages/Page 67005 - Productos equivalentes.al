@@ -11,18 +11,26 @@ page 67005 "Productos equivalentes"
         {
             repeater(General)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field("Nombre Producto"; "Nombre Producto")
+                field("Nombre Producto"; Rec."Nombre Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Producto';
                     Editable = false;
                 }
-                field("Cod. Producto Anterior"; "Cod. Producto Anterior")
+                field("Cod. Producto Anterior"; Rec."Cod. Producto Anterior")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto Anterior';
                 }
-                field("Nombre Producto Anterior"; "Nombre Producto Anterior")
+                field("Nombre Producto Anterior"; Rec."Nombre Producto Anterior")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Producto Anterior';
                     Editable = false;
                 }
             }

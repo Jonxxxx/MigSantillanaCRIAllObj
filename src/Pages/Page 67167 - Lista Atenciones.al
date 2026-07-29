@@ -12,14 +12,20 @@ page 67167 "Lista Atenciones"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Costo Unitario"; "Costo Unitario")
+                field("Costo Unitario"; Rec."Costo Unitario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Costo Unitario';
                 }
             }
         }

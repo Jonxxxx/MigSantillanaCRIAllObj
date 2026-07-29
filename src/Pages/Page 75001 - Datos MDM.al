@@ -15,6 +15,7 @@ page 75001 "Datos MDM"
                 Caption = 'Tipo';
                 field(pTtipo; wTipo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Tipo';
                     Editable = wEditable;
                     Importance = Promoted;
@@ -29,23 +30,33 @@ page 75001 "Datos MDM"
             repeater(Group)
             {
                 Editable = wEditable;
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                     OptionCaption = '';
                     Visible = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Codigo Relacionado"; "Codigo Relacionado")
+                field("Codigo Relacionado"; Rec."Codigo Relacionado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Relacionado';
                     Visible = false;
                 }
-                field(Bloqueado; Bloqueado)
+                field(Bloqueado; Rec.Bloqueado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bloqueado';
                 }
             }
         }

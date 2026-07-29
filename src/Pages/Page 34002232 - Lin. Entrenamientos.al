@@ -10,71 +10,111 @@ page 34002232 "Lin. Entrenamientos"
         {
             repeater(Group)
             {
-                field("No. entrenamiento"; "No. entrenamiento")
+                field("No. entrenamiento"; Rec."No. entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. entrenamiento';
                     Visible = false;
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                     Visible = false;
                 }
-                field(Disponible; Disponible)
+                field(Disponible; Rec.Disponible)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Disponible';
                     Visible = false;
                 }
-                field("Tipo de Instructor"; "Tipo de Instructor")
+                field("Tipo de Instructor"; Rec."Tipo de Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Instructor';
                     Visible = false;
                 }
-                field("Cod. Instructor"; "Cod. Instructor")
+                field("Cod. Instructor"; Rec."Cod. Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Instructor';
                     Visible = false;
                 }
-                field("Nombre Instructor"; "Nombre Instructor")
+                field("Nombre Instructor"; Rec."Nombre Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Instructor';
                     Visible = false;
                 }
-                field(Avisado; Avisado)
+                field(Avisado; Rec.Avisado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Avisado';
                 }
-                field("Fecha inscripcion"; "Fecha inscripcion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                 }
-                field("Fecha programacion"; "Fecha programacion")
+                field("Fecha programacion"; Rec."Fecha programacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programacion';
                 }
-                field("Nro. De asistentes reales"; "Nro. De asistentes reales")
+                field("Nro. De asistentes reales"; Rec."Nro. De asistentes reales")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nro. De asistentes reales';
                 }
-                field(Observacion; Observacion)
+                field(Observacion; Rec.Observacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observacion';
                 }
-                field(Objetivo; Objetivo)
+                field(Objetivo; Rec.Objetivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo';
                 }
-                field("Descripcion observacion"; "Descripcion observacion")
+                field("Descripcion observacion"; Rec."Descripcion observacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion observacion';
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field("Hora de Inicio"; "Hora de Inicio")
+                field("Hora de Inicio"; Rec."Hora de Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora de Inicio';
                 }
-                field("Hora Final"; "Hora Final")
+                field("Hora Final"; Rec."Hora Final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Final';
                 }
-                field("Area Curricular"; "Area Curricular")
+                field("Area Curricular"; Rec."Area Curricular")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area Curricular';
                 }
-                field(Sala; Sala)
+                field(Sala; Rec.Sala)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sala';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
             }
         }

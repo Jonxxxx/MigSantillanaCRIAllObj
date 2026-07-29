@@ -8,6 +8,7 @@ page 34002545 "FactBox permisos Usuario"
         {
             field(texTipo; texTipo)
             {
+                ApplicationArea = All;
                 Importance = Promoted;
                 ShowCaption = false;
                 StyleExpr = texPermisos;

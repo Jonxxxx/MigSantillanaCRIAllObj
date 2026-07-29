@@ -10,24 +10,36 @@ page 34002505 "Ficha Cajero"
         {
             group(General)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(ID; ID)
+                field(ID; Rec.ID)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Grupo Cajero"; "Grupo Cajero")
+                field("Grupo Cajero"; Rec."Grupo Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Cajero';
                 }
-                field(Contrasena; Contrasena)
+                field(Contrasena; Rec.Contrasena)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contrasena';
                     ExtendedDatatype = Masked;
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
             }
         }

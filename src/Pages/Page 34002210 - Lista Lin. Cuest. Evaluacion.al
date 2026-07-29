@@ -14,39 +14,39 @@ page 34002210 "Lista Lin. Cuest. Evaluacion"
         {
             repeater(GeneralRep)
             {
-                field("Line No."; "Line No.")
+                field("Line No."; Rec."Line No.")
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the number of the profile questionnaire line. This field is used internally by the program.';
+                    ToolTip = 'Line No.';
                 }
                 field(Question; Question)
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Question';
                     ToolTip = 'Specifies the question in the profile questionnaire.';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Caption = 'Answer';
-                    ToolTip = 'Specifies the profile question or answer.';
                 }
-                field("From Value"; "From Value")
+                field("From Value"; Rec."From Value")
                 {
-                    ApplicationArea = Advanced;
-                    ToolTip = 'Specifies the value from which the automatic classification of your contacts starts.';
+                    ApplicationArea = All;
+                    ToolTip = 'From Value';
                     Visible = false;
                 }
-                field("To Value"; "To Value")
+                field("To Value"; Rec."To Value")
                 {
-                    ApplicationArea = Advanced;
-                    ToolTip = 'Specifies the value that the automatic classification of your contacts stops at.';
+                    ApplicationArea = All;
+                    ToolTip = 'To Value';
                     Visible = false;
                 }
-                field("No. of Employee"; "No. of Employee")
+                field("No. of Employee"; Rec."No. of Employee")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies the number of contacts that have given this answer.';
+                    ApplicationArea = All;
+                    ToolTip = 'No. of Employee';
                 }
             }
         }

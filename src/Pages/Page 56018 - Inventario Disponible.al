@@ -10,29 +10,45 @@ page 56018 "Inventario Disponible"
         {
             repeater(Group)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Almancen"; "Cod. Almancen")
+                field("Cod. Almancen"; Rec."Cod. Almancen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Almancen';
                 }
-                field(Inventario; Inventario)
+                field(Inventario; Rec.Inventario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inventario';
                 }
-                field("Fecha Ult. Actualizacion"; "Fecha Ult. Actualizacion")
+                field("Fecha Ult. Actualizacion"; Rec."Fecha Ult. Actualizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Ult. Actualizacion';
                 }
-                field("Linea de Negocio"; "Linea de Negocio")
+                field("Linea de Negocio"; Rec."Linea de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Linea de Negocio';
                 }
-                field("Cod. Categoria Producto"; "Cod. Categoria Producto")
+                field("Cod. Categoria Producto"; Rec."Cod. Categoria Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Categoria Producto';
                 }
-                field("Nombre Categoria Producto"; "Nombre Categoria Producto")
+                field("Nombre Categoria Producto"; Rec."Nombre Categoria Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Categoria Producto';
                 }
             }
         }

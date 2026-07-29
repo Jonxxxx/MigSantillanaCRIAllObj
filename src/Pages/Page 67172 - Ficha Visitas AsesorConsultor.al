@@ -10,132 +10,202 @@ page 67172 "Ficha Visitas Asesor/Consultor"
             group(General)
             {
                 Editable = wMod;
-                field("No. Visita Asesor/Consultor"; "No. Visita Asesor/Consultor")
+                field("No. Visita Asesor/Consultor"; Rec."No. Visita Asesor/Consultor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Visita Asesor/Consultor';
                     Caption = 'No. Visita';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
-                field("Hora Registro"; "Hora Registro")
+                field("Hora Registro"; Rec."Hora Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Registro';
                 }
-                field("Usuario Registro"; "Usuario Registro")
+                field("Usuario Registro"; Rec."Usuario Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario Registro';
                 }
-                field("Cod. Asesor/Consultor"; "Cod. Asesor/Consultor")
+                field("Cod. Asesor/Consultor"; Rec."Cod. Asesor/Consultor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Asesor/Consultor';
                 }
-                field("Nombre Asesor/Consultor"; "Nombre Asesor/Consultor")
+                field("Nombre Asesor/Consultor"; Rec."Nombre Asesor/Consultor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Asesor/Consultor';
                 }
-                field("Tipo Visita"; "Tipo Visita")
+                field("Tipo Visita"; Rec."Tipo Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Visita';
 
                     trigger OnValidate()
                     begin
                         ControlesTipoVisita;
                     end;
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                     Editable = wEditSolicitud;
                 }
-                field("Grupo Negocio"; "Grupo Negocio")
+                field("Grupo Negocio"; Rec."Grupo Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Negocio';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Direccion Colegio"; "Direccion Colegio")
+                field("Direccion Colegio"; Rec."Direccion Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion Colegio';
                 }
-                field("Distrito Colegio"; "Distrito Colegio")
+                field("Distrito Colegio"; Rec."Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distrito Colegio';
                 }
-                field("Telefono 1 Colegio"; "Telefono 1 Colegio")
+                field("Telefono 1 Colegio"; Rec."Telefono 1 Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 1 Colegio';
                 }
-                field("Telefono 2 Colegio"; "Telefono 2 Colegio")
+                field("Telefono 2 Colegio"; Rec."Telefono 2 Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 2 Colegio';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Cod. promotor"; "Cod. promotor")
+                field("Cod. promotor"; Rec."Cod. promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. promotor';
                 }
-                field("Nombre promotor"; "Nombre promotor")
+                field("Nombre promotor"; Rec."Nombre promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre promotor';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("No. Asistentes Esperados"; "No. Asistentes Esperados")
+                field("No. Asistentes Esperados"; Rec."No. Asistentes Esperados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Asistentes Esperados';
                 }
-                field("No. Asistentes Reales"; "No. Asistentes Reales")
+                field("No. Asistentes Reales"; Rec."No. Asistentes Reales")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Asistentes Reales';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field("Fecha Proxima Visita"; "Fecha Proxima Visita")
+                field("Fecha Proxima Visita"; Rec."Fecha Proxima Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Proxima Visita';
                 }
-                field("Cod. Objetivo Visita"; "Cod. Objetivo Visita")
+                field("Cod. Objetivo Visita"; Rec."Cod. Objetivo Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Objetivo Visita';
                 }
-                field("Desc. Objetivo Visita"; "Desc. Objetivo Visita")
+                field("Desc. Objetivo Visita"; Rec."Desc. Objetivo Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Objetivo Visita';
                 }
-                field("Comentarios Visita"; "Comentarios Visita")
+                field("Comentarios Visita"; Rec."Comentarios Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentarios Visita';
                 }
             }
             group("Datos Contacto")
             {
                 Caption = 'Datos Contacto';
                 Editable = wMod;
-                field("Tipo Persona Contacto"; "Tipo Persona Contacto")
+                field("Tipo Persona Contacto"; Rec."Tipo Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Persona Contacto';
 
                     trigger OnValidate()
                     begin
                         ControlesCDS;
                     end;
                 }
-                field("Cod. Persona Contacto"; "Cod. Persona Contacto")
+                field("Cod. Persona Contacto"; Rec."Cod. Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Persona Contacto';
                     Editable = wCDS;
                 }
-                field("Nombre Persona Contacto"; "Nombre Persona Contacto")
+                field("Nombre Persona Contacto"; Rec."Nombre Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Persona Contacto';
                     Editable = NOT wCDS;
                 }
-                field("Cod. Cargo Persona Contacto"; "Cod. Cargo Persona Contacto")
+                field("Cod. Cargo Persona Contacto"; Rec."Cod. Cargo Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo Persona Contacto';
                     Editable = NOT wCDS;
                 }
-                field("Desc. Cargo Persona Contacto"; "Desc. Cargo Persona Contacto")
+                field("Desc. Cargo Persona Contacto"; Rec."Desc. Cargo Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Cargo Persona Contacto';
                 }
-                field("Telefono 1 Persona Contacto"; "Telefono 1 Persona Contacto")
+                field("Telefono 1 Persona Contacto"; Rec."Telefono 1 Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 1 Persona Contacto';
                     Editable = NOT wCDS;
                 }
-                field("Telefono 2 Persona Contacto"; "Telefono 2 Persona Contacto")
+                field("Telefono 2 Persona Contacto"; Rec."Telefono 2 Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 2 Persona Contacto';
                     Editable = NOT wCDS;
                 }
-                field("E-mail Persona Contacto"; "E-mail Persona Contacto")
+                field("E-mail Persona Contacto"; Rec."E-mail Persona Contacto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-mail Persona Contacto';
                     Editable = NOT wCDS;
                 }
             }

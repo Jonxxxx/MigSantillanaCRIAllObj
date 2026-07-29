@@ -10,23 +10,35 @@ page 51004 "Lin. Cupon"
         {
             repeater(Group)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Precio Venta"; "Precio Venta")
+                field("Precio Venta"; Rec."Precio Venta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio Venta';
                 }
-                field("% Descuento"; "% Descuento")
+                field("% Descuento"; Rec."% Descuento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Descuento';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Cantidad Pendiente"; "Cantidad Pendiente")
+                field("Cantidad Pendiente"; Rec."Cantidad Pendiente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Pendiente';
                 }
             }
         }

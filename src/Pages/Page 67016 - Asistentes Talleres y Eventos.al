@@ -13,96 +13,136 @@ page 67016 "Asistentes Talleres y Eventos"
         {
             repeater(General)
             {
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Tipo evento"; "Description Tipo evento")
+                field("Description Tipo evento"; Rec."Description Tipo evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Tipo evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                     Visible = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha inscripcion"; "Fecha inscripcion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha del Evento"; "Fecha del Evento")
+                field("Fecha del Evento"; Rec."Fecha del Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha del Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha de realizacion"; "Fecha de realizacion")
+                field("Fecha de realizacion"; Rec."Fecha de realizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de realizacion';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha programacion"; "Fecha programacion")
+                field("Fecha programacion"; Rec."Fecha programacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programacion';
                     Editable = false;
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                     Editable = false;
                     TableRelation = Docentes WHERE("Pertenece al CDS" = CONST(true));
                 }
-                field("Nombre Docente"; "Nombre Docente")
+                field("Nombre Docente"; Rec."Nombre Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Docente';
                     Editable = false;
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                     Editable = false;
                 }
-                field(Inscrito; Inscrito)
+                field(Inscrito; Rec.Inscrito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inscrito';
                 }
-                field(Confirmado; Confirmado)
+                field(Confirmado; Rec.Confirmado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Confirmado';
                 }
-                field(Asistio; Asistio)
+                field(Asistio; Rec.Asistio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistio';
 
                     trigger OnValidate()
                     begin
@@ -118,16 +158,19 @@ page 67016 "Asistentes Talleres y Eventos"
                 Caption = 'Assistants';
                 field(TotDocentes; TotDocentes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Total Capacity';
                     Editable = false;
                 }
                 field(COUNT; COUNT)
                 {
+                    ApplicationArea = All;
                     Caption = 'Selected Teachers';
                     Editable = false;
                 }
                 field(wAsistentesAsistieron; wAsistentesAsistieron)
                 {
+                    ApplicationArea = All;
                     Caption = 'Docentes Asistieron';
                     Editable = false;
                 }

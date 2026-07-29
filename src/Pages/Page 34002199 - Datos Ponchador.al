@@ -10,35 +10,55 @@ page 34002199 "Datos Ponchador"
         {
             repeater(Group)
             {
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("Hora registro"; "Hora registro")
+                field("Hora registro"; Rec."Hora registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora registro';
                 }
-                field("No. tarjeta"; "No. tarjeta")
+                field("No. tarjeta"; Rec."No. tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. tarjeta';
                 }
-                field("ID Equipo"; "ID Equipo")
+                field("ID Equipo"; Rec."ID Equipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Equipo';
                 }
-                field(Procesado; Procesado)
+                field(Procesado; Rec.Procesado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Procesado';
                 }
-                field("Job No."; "Job No.")
+                field("Job No."; Rec."Job No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job No.';
                 }
-                field("Job Task No."; "Job Task No.")
+                field("Job Task No."; Rec."Job Task No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task No.';
                 }
             }
         }

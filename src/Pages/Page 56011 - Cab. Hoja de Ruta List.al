@@ -13,26 +13,40 @@ page 56011 "Cab. Hoja de Ruta List"
         {
             repeater(Group)
             {
-                field("No. Hoja Ruta"; "No. Hoja Ruta")
+                field("No. Hoja Ruta"; Rec."No. Hoja Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja Ruta';
                 }
-                field("Cod. Transportista"; "Cod. Transportista")
+                field("Cod. Transportista"; Rec."Cod. Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Transportista';
                 }
-                field("Nombre Transportista"; "Nombre Transportista")
+                field("Nombre Transportista"; Rec."Nombre Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Transportista';
                 }
-                field("Fecha Planificacion Transporte"; "Fecha Planificacion Transporte")
+                field("Fecha Planificacion Transporte"; Rec."Fecha Planificacion Transporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Planificacion Transporte';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
             }
         }

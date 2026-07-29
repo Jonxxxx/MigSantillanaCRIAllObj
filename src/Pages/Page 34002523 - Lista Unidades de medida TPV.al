@@ -9,14 +9,20 @@ page 34002523 "Lista Unidades de medida TPV"
         {
             repeater(Group)
             {
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                 }
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field("Qty. per Unit of Measure"; "Qty. per Unit of Measure")
+                field("Qty. per Unit of Measure"; Rec."Qty. per Unit of Measure")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Qty. per Unit of Measure';
                 }
             }
         }

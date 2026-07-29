@@ -11,25 +11,37 @@ page 34003028 "Listado RNC DGII"
         {
             repeater(Group)
             {
-                field("VAT Registration No."; "VAT Registration No.")
+                field("VAT Registration No."; Rec."VAT Registration No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'VAT Registration No.';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field("Campo 4"; "Campo 4")
+                field("Campo 4"; Rec."Campo 4")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campo 4';
                     Caption = 'Description';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Editable = false;
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                     Editable = false;
                 }
             }

@@ -19,8 +19,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
             group(General)
             {
                 Caption = 'General';
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
 
                     trigger OnAssistEdit()
                     begin
@@ -28,8 +30,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Cod. promotor"; "Cod. promotor")
+                field("Cod. promotor"; Rec."Cod. promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. promotor';
 
                     trigger OnLookup(var Text: Text): Boolean
                     var
@@ -57,21 +61,31 @@ page 67064 "Solicitud asistencia Tec - Ped"
                             TESTFIELD("Cod. promotor", UserSetup."Salespers./Purch. Code");
                     end;
                 }
-                field("Nombre promotor"; "Nombre promotor")
+                field("Nombre promotor"; Rec."Nombre promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre promotor';
                     Editable = false;
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                 }
-                field("Tipo de Evento"; "Tipo de Evento")
+                field("Tipo de Evento"; Rec."Tipo de Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Evento';
                 }
-                field("Existe evento"; "Existe evento")
+                field("Existe evento"; Rec."Existe evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Existe evento';
                     Editable = wEditExisteEvento;
 
                     trigger OnValidate()
@@ -79,8 +93,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
                         ExisteEvento;
                     end;
                 }
-                field("Cod. evento"; "Cod. evento")
+                field("Cod. evento"; Rec."Cod. evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento';
                     Editable = wExisteEv;
 
                     trigger OnValidate()
@@ -95,149 +111,215 @@ page 67064 "Solicitud asistencia Tec - Ped"
                         END;
                     end;
                 }
-                field("Descripcion evento"; "Descripcion evento")
+                field("Descripcion evento"; Rec."Descripcion evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento';
                     Editable = NOT wExisteEv;
                 }
-                field("Evento dictado por (tipo)"; "Evento dictado por (tipo)")
+                field("Evento dictado por (tipo)"; Rec."Evento dictado por (tipo)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (tipo)';
                     Editable = false;
                     Visible = false;
                 }
-                field("Evento dictado por (codigo)"; "Evento dictado por (codigo)")
+                field("Evento dictado por (codigo)"; Rec."Evento dictado por (codigo)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (codigo)';
                     Editable = false;
                 }
-                field("Evento dictado por (nombre)"; "Evento dictado por (nombre)")
+                field("Evento dictado por (nombre)"; Rec."Evento dictado por (nombre)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (nombre)';
                     Editable = false;
                 }
-                field("Fecha Solicitud"; "Fecha Solicitud")
+                field("Fecha Solicitud"; Rec."Fecha Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Solicitud';
                 }
-                field("Cod. evento programado"; "Cod. evento programado")
+                field("Cod. evento programado"; Rec."Cod. evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento programado';
                     Enabled = (NOT userPromotor) AND wEvProg;
                 }
-                field("Descripcion evento programado"; "Descripcion evento programado")
+                field("Descripcion evento programado"; Rec."Descripcion evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento programado';
                     Enabled = NOT userPromotor;
                 }
-                field("Avisado al expositor"; "Avisado al expositor")
+                field("Avisado al expositor"; Rec."Avisado al expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Avisado al expositor';
                     Editable = wEvProg;
                     Enabled = NOT userPromotor;
                 }
-                field("Tipo de Expositor"; "Tipo de Expositor")
+                field("Tipo de Expositor"; Rec."Tipo de Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Expositor';
                     Editable = false;
                     Enabled = NOT userPromotor;
                     Visible = false;
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                     Editable = false;
                     Enabled = NOT userPromotor;
                 }
-                field("Nombre expositor"; "Nombre expositor")
+                field("Nombre expositor"; Rec."Nombre expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre expositor';
                     Editable = false;
                     Enabled = NOT userPromotor;
                 }
-                field("Seleccion Editorial"; "Seleccion Editorial")
+                field("Seleccion Editorial"; Rec."Seleccion Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seleccion Editorial';
 
                     trigger OnValidate()
                     begin
                         Editorial;
                     end;
                 }
-                field("Desc.  Competencia"; "Desc.  Competencia")
+                field("Desc.  Competencia"; Rec."Desc.  Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc.  Competencia';
                     Editable = wCompetencia;
                 }
-                field("Grupo de Colegios"; "Grupo de Colegios")
+                field("Grupo de Colegios"; Rec."Grupo de Colegios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Colegios';
 
                     trigger OnValidate()
                     begin
                         GrupoColegios;
                     end;
                 }
-                field("Asociacion/Grupo"; "Asociacion/Grupo")
+                field("Asociacion/Grupo"; Rec."Asociacion/Grupo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asociacion/Grupo';
                     Enabled = wAsocGrupo;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Enabled = NOT wAsocGrupo;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                 }
-                field("Direccion Colegio"; "Direccion Colegio")
+                field("Direccion Colegio"; Rec."Direccion Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion Colegio';
                     Editable = false;
                 }
-                field("Codigo Distrito Colegio"; "Codigo Distrito Colegio")
+                field("Codigo Distrito Colegio"; Rec."Codigo Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Distrito Colegio';
                     Editable = false;
                 }
-                field("Nombre Distrito Colegio"; "Nombre Distrito Colegio")
+                field("Nombre Distrito Colegio"; Rec."Nombre Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Distrito Colegio';
                     Editable = false;
                 }
-                field("Telefono 1 Colegio"; "Telefono 1 Colegio")
+                field("Telefono 1 Colegio"; Rec."Telefono 1 Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 1 Colegio';
                     Editable = false;
                 }
-                field("Telefono 2 Colegio"; "Telefono 2 Colegio")
+                field("Telefono 2 Colegio"; Rec."Telefono 2 Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 2 Colegio';
                     Editable = false;
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                     Importance = Additional;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field("Comentario Aprobado"; "Comentario Aprobado")
+                field("Comentario Aprobado"; Rec."Comentario Aprobado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Aprobado';
                     Visible = wApro;
                 }
-                field("Comentario Programado"; "Comentario Programado")
+                field("Comentario Programado"; Rec."Comentario Programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Programado';
                     Visible = wProg;
                 }
-                field("Comentario Rechazado"; "Comentario Rechazado")
+                field("Comentario Rechazado"; Rec."Comentario Rechazado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Rechazado';
                     Visible = wRech;
                 }
-                field("Comentario Cancelado"; "Comentario Cancelado")
+                field("Comentario Cancelado"; Rec."Comentario Cancelado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Cancelado';
                     Visible = wCanc;
                 }
-                field(Referencia; Referencia)
+                field(Referencia; Rec.Referencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Editable = false;
                 }
-                field("Usuario creacion"; "Usuario creacion")
+                field("Usuario creacion"; Rec."Usuario creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario creacion';
                 }
             }
             group("Aditional Information")
             {
                 Caption = 'Aditional Information';
-                field("Tipo Responsable"; "Tipo Responsable")
+                field("Tipo Responsable"; Rec."Tipo Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Responsable';
                     Caption = 'Type of contact';
                     OptionCaption = 'CDS,Other';
 
@@ -253,135 +335,198 @@ page 67064 "Solicitud asistencia Tec - Ped"
                         END;
                     end;
                 }
-                field("Cod. Docente responsable"; "Cod. Docente responsable")
+                field("Cod. Docente responsable"; Rec."Cod. Docente responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente responsable';
                     Editable = EditaDocente;
                 }
-                field("Nombre responsable"; "Nombre responsable")
+                field("Nombre responsable"; Rec."Nombre responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre responsable';
                     Editable = NoPertenecealCDS;
                 }
-                field("Cod. Cargo Responsable"; "Cod. Cargo Responsable")
+                field("Cod. Cargo Responsable"; Rec."Cod. Cargo Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo Responsable';
                     Editable = NoPertenecealCDS;
                 }
-                field("Descripcion Cargo Responsable"; "Descripcion Cargo Responsable")
+                field("Descripcion Cargo Responsable"; Rec."Descripcion Cargo Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cargo Responsable';
                     Editable = NoPertenecealCDS;
                 }
-                field("Telefono Responsable"; "Telefono Responsable")
+                field("Telefono Responsable"; Rec."Telefono Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono Responsable';
                 }
-                field("No. celular responsable"; "No. celular responsable")
+                field("No. celular responsable"; Rec."No. celular responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. celular responsable';
                 }
-                field("E-Mail Docente Responsable"; "E-Mail Docente Responsable")
+                field("E-Mail Docente Responsable"; Rec."E-Mail Docente Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail Docente Responsable';
                 }
-                field("Col. tiene equipo MM"; "Col. tiene equipo MM")
+                field("Col. tiene equipo MM"; Rec."Col. tiene equipo MM")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Col. tiene equipo MM';
                     Caption = 'Colegio tiene equipo Multimedia';
                 }
-                field(Refrigerio; Refrigerio)
+                field(Refrigerio; Rec.Refrigerio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Refrigerio';
                     Caption = 'Se requiere Refrigerio';
                     Editable = wSeReq;
                 }
-                field(Material; Material)
+                field(Material; Rec.Material)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Material';
                     Caption = 'Se requiere Material';
                     Editable = wSeReq;
                 }
-                field(Merchandising; Merchandising)
+                field(Merchandising; Rec.Merchandising)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Merchandising';
                     Caption = 'Se requiere Merchandising';
                     Editable = wSeReq;
                 }
-                field("Cod. objetivo promotor"; "Cod. objetivo promotor")
+                field("Cod. objetivo promotor"; Rec."Cod. objetivo promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. objetivo promotor';
                 }
-                field("Objetivo promotor"; "Objetivo promotor")
+                field("Objetivo promotor"; Rec."Objetivo promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo promotor';
                     Editable = false;
                 }
-                field(Observaciones; Observaciones)
+                field(Observaciones; Rec.Observaciones)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observaciones';
                     Caption = 'Observaciones promotor';
                 }
             }
             group(Asistentes)
             {
                 Caption = 'Asistentes';
-                field("Asistencia promotor"; "Asistencia promotor")
+                field("Asistencia promotor"; Rec."Asistencia promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistencia promotor';
                 }
-                field("Material para revision"; "Material para revision")
+                field("Material para revision"; Rec."Material para revision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Material para revision';
                 }
-                field("Asistentes Esperados"; "Asistentes Esperados")
+                field("Asistentes Esperados"; Rec."Asistentes Esperados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes Esperados';
                 }
-                field("Asistentes Reales"; "Asistentes Reales")
+                field("Asistentes Reales"; Rec."Asistentes Reales")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes Reales';
                     Editable = wEditAsisReal;
                 }
-                field("Nivel Asistente"; "Nivel Asistente")
+                field("Nivel Asistente"; Rec."Nivel Asistente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel Asistente';
                     Editable = false;
                 }
-                field("Grado Asistente"; "Grado Asistente")
+                field("Grado Asistente"; Rec."Grado Asistente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grado Asistente';
                     Editable = false;
                 }
-                field("Especialidad Asistente"; "Especialidad Asistente")
+                field("Especialidad Asistente"; Rec."Especialidad Asistente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Especialidad Asistente';
                     Editable = false;
                 }
                 group(CDS)
                 {
                     Caption = 'CDS';
-                    field(INI; INI)
+                    field(INI; Rec.INI)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'INI';
                         Editable = false;
                     }
-                    field(PRI; PRI)
+                    field(PRI; Rec.PRI)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'PRI';
                         Editable = false;
                     }
-                    field(SEC; SEC)
+                    field(SEC; Rec.SEC)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'SEC';
                         Editable = false;
                     }
-                    field(ING; ING)
+                    field(ING; Rec.ING)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'ING';
                         Editable = false;
                     }
-                    field(PLA; PLA)
+                    field(PLA; Rec.PLA)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'PLA';
                         Editable = false;
                     }
-                    field(ESI; ESI)
+                    field(ESI; Rec.ESI)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'ESI';
                         Editable = false;
                     }
-                    field(GEN; GEN)
+                    field(GEN; Rec.GEN)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'GEN';
                         Editable = false;
                     }
-                    field(IPR; IPR)
+                    field(IPR; Rec.IPR)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'IPR';
                         Editable = false;
                     }
-                    field(IPS; IPS)
+                    field(IPS; Rec.IPS)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'IPS';
                         Editable = false;
                     }
-                    field(PSE; PSE)
+                    field(PSE; Rec.PSE)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'PSE';
                         Editable = false;
                     }
                     field(TOTAL_CDS; INI + PRI + SEC + ING + PLA + ESI + GEN + IPR + IPS + PSE)
                     {
+                        ApplicationArea = All;
                         Caption = 'TOTAL CDS';
                         Editable = false;
                         Style = Strong;
@@ -397,22 +542,30 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 {
                     Caption = 'Grupo Santillana';
                     Visible = false;
-                    field("Articulo Grupo Santillana"; "Articulo Grupo Santillana")
+                    field("Articulo Grupo Santillana"; Rec."Articulo Grupo Santillana")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Articulo Grupo Santillana';
                         Editable = wGS;
                         Visible = false;
                     }
-                    field("Desc. Articulo Grupo Santillan"; "Desc. Articulo Grupo Santillan")
+                    field("Desc. Articulo Grupo Santillan"; Rec."Desc. Articulo Grupo Santillan")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Desc. Articulo Grupo Santillan';
                         Editable = false;
                         Visible = false;
                     }
-                    field("Horas por semana"; "Horas por semana")
+                    field("Horas por semana"; Rec."Horas por semana")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Horas por semana';
                         Editable = wGS;
                     }
-                    field("Año Adopcion"; "Ano Adopcion")
+                    field("Año Adopcion"; Rec."Ano Adopcion")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Ano Adopcion';
                         Editable = false;
                         Visible = false;
                     }
@@ -422,23 +575,31 @@ page 67064 "Solicitud asistencia Tec - Ped"
                     Caption = 'Competencia';
                     Visible = false;
                 }
-                field("Editorial Competencia"; "Editorial Competencia")
+                field("Editorial Competencia"; Rec."Editorial Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Editorial Competencia';
                     Editable = wCompetencia;
                     Visible = false;
                 }
-                field("Nombre Editorial Competencia"; "Nombre Editorial Competencia")
+                field("Nombre Editorial Competencia"; Rec."Nombre Editorial Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Editorial Competencia';
                     Editable = false;
                     Visible = false;
                 }
-                field("Articulo Competencia"; "Articulo Competencia")
+                field("Articulo Competencia"; Rec."Articulo Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Articulo Competencia';
                     Editable = wCompetencia;
                     Visible = false;
                 }
-                field(DC; "Desc.  Competencia")
+                field(DC; Rec."Desc.  Competencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc.  Competencia';
                     Editable = false;
                     Visible = false;
                 }

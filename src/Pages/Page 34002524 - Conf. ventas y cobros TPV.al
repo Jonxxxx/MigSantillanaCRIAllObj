@@ -9,14 +9,20 @@ page 34002524 "Conf. ventas y cobros TPV"
         {
             group(General)
             {
-                field("Credit Memo Nos."; "Credit Memo Nos.")
+                field("Credit Memo Nos."; Rec."Credit Memo Nos.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Credit Memo Nos.';
                 }
-                field("Posted Credit Memo Nos."; "Posted Credit Memo Nos.")
+                field("Posted Credit Memo Nos."; Rec."Posted Credit Memo Nos.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posted Credit Memo Nos.';
                 }
-                field("Posted Shipment Nos."; "Posted Shipment Nos.")
+                field("Posted Shipment Nos."; Rec."Posted Shipment Nos.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posted Shipment Nos.';
                 }
             }
         }

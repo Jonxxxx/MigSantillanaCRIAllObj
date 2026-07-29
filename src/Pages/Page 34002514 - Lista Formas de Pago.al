@@ -11,14 +11,20 @@ page 34002514 "Lista Formas de Pago"
         {
             repeater(Group)
             {
-                field("ID Pago"; "ID Pago")
+                field("ID Pago"; Rec."ID Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Pago';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Icono Nav"; "Icono Nav")
+                field("Icono Nav"; Rec."Icono Nav")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Icono Nav';
                 }
             }
         }

@@ -10,19 +10,27 @@ page 67050 "Promotor - Niveles"
         {
             repeater(General)
             {
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Visible = false;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                     Editable = false;
                 }
             }

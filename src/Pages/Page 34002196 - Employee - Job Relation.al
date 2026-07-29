@@ -9,36 +9,52 @@ page 34002196 "Employee - Job Relation"
         {
             repeater(Group)
             {
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                     Visible = false;
                 }
-                field("Job No."; "Job No.")
+                field("Job No."; Rec."Job No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job No.';
                 }
-                field("Job Task No."; "Job Task No.")
+                field("Job Task No."; Rec."Job Task No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task No.';
                 }
-                field("Job Line Type"; "Job Line Type")
+                field("Job Line Type"; Rec."Job Line Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Line Type';
                 }
-                field("Job Unit Price"; "Job Unit Price")
+                field("Job Unit Price"; Rec."Job Unit Price")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Unit Price';
                     Visible = false;
                 }
-                field("Job Description"; "Job Description")
+                field("Job Description"; Rec."Job Description")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Description';
                     Editable = false;
                     Visible = false;
                 }
-                field("Job Task Name"; "Job Task Name")
+                field("Job Task Name"; Rec."Job Task Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task Name';
                     Caption = 'Job Task Name';
                     Editable = false;
                     Visible = false;
                 }
-                field("% to distribute"; "% to distribute")
+                field("% to distribute"; Rec."% to distribute")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% to distribute';
                 }
             }
         }

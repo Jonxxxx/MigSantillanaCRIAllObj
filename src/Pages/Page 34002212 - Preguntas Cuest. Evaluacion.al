@@ -15,7 +15,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
         {
             field(CurrentQuestionsChecklistCode; CurrentQuestionsChecklistCode)
             {
-                ApplicationArea = RelationshipMgmt;
+                ApplicationArea = All;
                 Caption = 'Profile Questionnaire Code';
                 ToolTip = 'Specifies the profile questionnaire.';
 
@@ -36,31 +36,31 @@ page 34002212 "Preguntas Cuest. Evaluacion"
             {
                 IndentationColumn = DescriptionIndent;
                 IndentationControls = Description;
-                field(Type; Type)
+                field(Type; Rec.Type)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Type';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = StyleIsStrong;
-                    ToolTip = 'Specifies whether the entry is a question or an answer.';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = StyleIsStrong;
-                    ToolTip = 'Specifies the profile question or answer.';
                 }
-                field("No. of Employee"; "No. of Employee")
+                field("No. of Employee"; Rec."No. of Employee")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies the number of contacts that have given this answer.';
+                    ApplicationArea = All;
+                    ToolTip = 'No. of Employee';
                     Visible = false;
                 }
                 field(Set; Set)
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Set';
                     ToolTip = 'Specifies the answer to the question.';
 

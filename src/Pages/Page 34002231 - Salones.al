@@ -12,11 +12,15 @@ page 34002231 Salones
         {
             repeater(Group)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

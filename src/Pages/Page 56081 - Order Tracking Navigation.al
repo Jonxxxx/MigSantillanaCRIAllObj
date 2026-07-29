@@ -22,6 +22,7 @@ page 56081 "Order Tracking Navigation"
                 Caption = 'General';
                 field(DocType; DocType)
                 {
+                    ApplicationArea = All;
                     Caption = 'Document Type';
                     OptionCaption = ' ,Sales Order,Sales Shipment,Sales Invoice';
 
@@ -32,6 +33,7 @@ page 56081 "Order Tracking Navigation"
                 }
                 field(DocNo; DocNo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Document No.';
 
                     trigger OnValidate()
@@ -44,20 +46,28 @@ page 56081 "Order Tracking Navigation"
             {
                 Editable = false;
                 IndentationColumn = Indentation;
-                field("Entry no."; "Entry no.")
+                field("Entry no."; Rec."Entry no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entry no.';
                     Visible = false;
                 }
-                field("Table ID"; "Table ID")
+                field("Table ID"; Rec."Table ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Table ID';
                     Visible = false;
                 }
-                field("Table Name"; "Table Name")
+                field("Table Name"; Rec."Table Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Table Name';
                     Editable = false;
                 }
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     DrillDown = true;
 
                     trigger OnDrillDown()
@@ -65,8 +75,10 @@ page 56081 "Order Tracking Navigation"
                         ShowRecords;
                     end;
                 }
-                field(Reference; Reference)
+                field(Reference; Rec.Reference)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Reference';
                 }
             }
         }

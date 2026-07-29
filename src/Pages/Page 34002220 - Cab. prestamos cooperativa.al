@@ -10,8 +10,10 @@ page 34002220 "Cab. prestamos cooperativa"
         {
             group(General)
             {
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
 
                     trigger OnAssistEdit()
                     begin
@@ -19,46 +21,72 @@ page 34002220 "Cab. prestamos cooperativa"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                     TableRelation = Employee;
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("No. afiliado"; "No. afiliado")
+                field("No. afiliado"; Rec."No. afiliado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. afiliado';
                 }
-                field("Tipo de miembro"; "Tipo de miembro")
+                field("Tipo de miembro"; Rec."Tipo de miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de miembro';
                     Editable = false;
                 }
-                field("Tipo prestamo"; "Tipo prestamo")
+                field("Tipo prestamo"; Rec."Tipo prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo prestamo';
                 }
-                field("% Interes"; "% Interes")
+                field("% Interes"; Rec."% Interes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Interes';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Cantidad de Cuotas"; "Cantidad de Cuotas")
+                field("Cantidad de Cuotas"; Rec."Cantidad de Cuotas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Cuotas';
                 }
-                field("Fecha Inicio Deduccion"; "Fecha Inicio Deduccion")
+                field("Fecha Inicio Deduccion"; Rec."Fecha Inicio Deduccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio Deduccion';
                 }
-                field("Concepto Salarial"; "Concepto Salarial")
+                field("Concepto Salarial"; Rec."Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Salarial';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
-                field("Motivo Prestamo"; "Motivo Prestamo")
+                field("Motivo Prestamo"; Rec."Motivo Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo Prestamo';
                 }
             }
             part(PartPage; 34002221)

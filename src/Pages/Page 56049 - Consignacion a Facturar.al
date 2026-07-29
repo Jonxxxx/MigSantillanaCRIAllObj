@@ -12,47 +12,69 @@ page 56049 "Consignacion a Facturar"
         {
             repeater(Group)
             {
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     Editable = false;
                 }
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Unit of Measure Code"; "Unit of Measure Code")
+                field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure Code';
                     Editable = false;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                     Editable = false;
                 }
-                field("Precio Venta Consignacion"; "Precio Venta Consignacion")
+                field("Precio Venta Consignacion"; Rec."Precio Venta Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio Venta Consignacion';
                     Editable = false;
                 }
-                field("Descuento % Consignacion"; "Descuento % Consignacion")
+                field("Descuento % Consignacion"; Rec."Descuento % Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento % Consignacion';
                     Editable = false;
                 }
-                field("Importe Consignacion"; "Importe Consignacion")
+                field("Importe Consignacion"; Rec."Importe Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Consignacion';
                     Editable = false;
                 }
-                field("No. Pedido Consignacion"; "No. Pedido Consignacion")
+                field("No. Pedido Consignacion"; Rec."No. Pedido Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pedido Consignacion';
                     Editable = false;
                 }
-                field(Marcada; Marcada)
+                field(Marcada; Rec.Marcada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marcada';
                 }
             }
         }

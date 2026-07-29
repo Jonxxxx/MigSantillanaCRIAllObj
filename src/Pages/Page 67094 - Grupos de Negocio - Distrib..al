@@ -12,14 +12,20 @@ page 67094 "Grupos de Negocio - Distrib."
         {
             repeater(General)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Porcentaje; Porcentaje)
+                field(Porcentaje; Rec.Porcentaje)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Porcentaje';
                     Caption = '%';
                 }
             }

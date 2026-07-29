@@ -13,35 +13,50 @@ page 67161 "Sel. Eventos Planif. - Expo"
         {
             repeater(Group)
             {
-                field(Expositor; Expositor)
+                field(Expositor; Rec.Expositor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Expositor';
                     Editable = false;
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                     Editable = false;
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                 }
-                field("Cod. Taller-Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller-Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                 }
                 field(wTextCostos; wTextCostos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Centro Costos';
                     Editable = false;
                 }

@@ -14,8 +14,10 @@ page 51003 "Ficha Cupon"
             group(General)
             {
                 Caption = 'General';
-                field("No. Cupon"; "No. Cupon")
+                field("No. Cupon"; Rec."No. Cupon")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cupon';
 
                     trigger OnAssistEdit()
                     begin
@@ -23,66 +25,100 @@ page 51003 "Ficha Cupon"
                         //    CurrPage.UPDATE;
                     end;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Caption = 'School Name';
                 }
-                field("Descuento a Padres de Familia"; "Descuento a Padres de Familia")
+                field("Descuento a Padres de Familia"; Rec."Descuento a Padres de Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento a Padres de Familia';
                     Caption = 'Family Discount';
                 }
-                field("Ano Escolar"; "Ano Escolar")
+                field("Ano Escolar"; Rec."Ano Escolar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano Escolar';
                 }
-                field("Cod. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; Rec."Cod. Vendedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Vendedor';
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field("Nombre Cliente"; "Nombre Cliente")
+                field("Nombre Cliente"; Rec."Nombre Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Cliente';
                 }
-                field("Fecha Creacion"; "Fecha Creacion")
+                field("Fecha Creacion"; Rec."Fecha Creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Creacion';
                     Editable = false;
                 }
-                field("Hora Creacion"; "Hora Creacion")
+                field("Hora Creacion"; Rec."Hora Creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Creacion';
                     Editable = false;
                 }
-                field(Impreso; Impreso)
+                field(Impreso; Rec.Impreso)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Impreso';
                     Editable = false;
                 }
-                field("Valido Desde"; "Valido Desde")
+                field("Valido Desde"; Rec."Valido Desde")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Desde';
                     Editable = false;
                 }
-                field("Valido Hasta"; "Valido Hasta")
+                field("Valido Hasta"; Rec."Valido Hasta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Hasta';
                     Editable = false;
                 }
-                field(Pendiente; Pendiente)
+                field(Pendiente; Rec.Pendiente)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pendiente';
                     Editable = false;
                 }
-                field(Anulado; Anulado)
+                field(Anulado; Rec.Anulado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anulado';
                     Editable = false;
                 }
-                field("No. Lote"; "No. Lote")
+                field("No. Lote"; Rec."No. Lote")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Lote';
                     Editable = false;
                 }
-                field("Cantidad Limite"; "Cantidad Limite")
+                field("Cantidad Limite"; Rec."Cantidad Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Limite';
                 }
-                field("Importe Dto. Limite"; "Importe Dto. Limite")
+                field("Importe Dto. Limite"; Rec."Importe Dto. Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Dto. Limite';
                 }
             }
             part(PagePartLinCupon; 51004)

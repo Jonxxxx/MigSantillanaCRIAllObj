@@ -20,39 +20,59 @@ page 56014 "Cab. Packing Reg. List"
         {
             repeater(Group)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("No. Mesa"; "No. Mesa")
+                field("No. Mesa"; Rec."No. Mesa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mesa';
                 }
-                field("Picking No."; "Picking No.")
+                field("Picking No."; Rec."Picking No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Picking No.';
                     Enabled = TieneGestionAlmacen;
                     Visible = TieneGestionAlmacen;
                 }
-                field("Tipo pedido"; "Tipo pedido")
+                field("Tipo pedido"; Rec."Tipo pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo pedido';
                 }
-                field("No. Pedido"; "No. Pedido")
+                field("No. Pedido"; Rec."No. Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pedido';
                     Enabled = NOT TieneGestionAlmacen;
                     Visible = NOT TieneGestionAlmacen;
                 }
-                field("Fecha Apertura"; "Fecha Apertura")
+                field("Fecha Apertura"; Rec."Fecha Apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Apertura';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
-                field("No. Packing Origen"; "No. Packing Origen")
+                field("No. Packing Origen"; Rec."No. Packing Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing Origen';
                 }
-                field("Total de Productos"; "Total de Productos")
+                field("Total de Productos"; Rec."Total de Productos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total de Productos';
                 }
             }
         }

@@ -10,30 +10,46 @@ page 67047 "Ficha Colegio - Delegaciones"
             group(General)
             {
                 Caption = 'General';
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field("Descripcion Grado"; "Descripcion Grado")
+                field("Descripcion Grado"; Rec."Descripcion Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Grado';
                     Caption = 'State / ZIP Code';
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
             }
         }

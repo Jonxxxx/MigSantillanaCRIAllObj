@@ -14,26 +14,40 @@ page 50001 "License Permisions"
                     ApplicationArea = All;
                     ToolTip = 'Object Type';
                 }
-                field("Object Number"; "Object Number")
+                field("Object Number"; Rec."Object Number")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Object Number';
                 }
-                field("Read Permission"; "Read Permission")
+                field("Read Permission"; Rec."Read Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Read Permission';
                 }
-                field("Insert Permission"; "Insert Permission")
+                field("Insert Permission"; Rec."Insert Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Insert Permission';
                 }
-                field("Modify Permission"; "Modify Permission")
+                field("Modify Permission"; Rec."Modify Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Modify Permission';
                 }
-                field("Delete Permission"; "Delete Permission")
+                field("Delete Permission"; Rec."Delete Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delete Permission';
                 }
-                field("Execute Permission"; "Execute Permission")
+                field("Execute Permission"; Rec."Execute Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Execute Permission';
                 }
-                field("Limited Usage Permission"; "Limited Usage Permission")
+                field("Limited Usage Permission"; Rec."Limited Usage Permission")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Limited Usage Permission';
                 }
             }
         }

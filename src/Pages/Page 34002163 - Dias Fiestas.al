@@ -13,20 +13,30 @@ page 34002163 "Dias Fiestas"
         {
             repeater(GeneralRep)
             {
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("Dia Semana"; "Dia Semana")
+                field("Dia Semana"; Rec."Dia Semana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dia Semana';
                 }
-                field(Texto; Texto)
+                field(Texto; Rec.Texto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto';
                 }
-                field(Mes; Mes)
+                field(Mes; Rec.Mes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes';
                 }
-                field("Fecha original"; "Fecha original")
+                field("Fecha original"; Rec."Fecha original")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha original';
                 }
             }
         }

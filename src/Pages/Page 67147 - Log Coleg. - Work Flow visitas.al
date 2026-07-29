@@ -13,35 +13,55 @@ page 67147 "Log Coleg. - Work Flow visitas"
         {
             repeater(Group)
             {
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                 }
-                field(Resultado; Resultado)
+                field(Resultado; Rec.Resultado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resultado';
                 }
-                field(Programado; Programado)
+                field(Programado; Rec.Programado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Programado';
                 }
-                field(Paso; Paso)
+                field(Paso; Rec.Paso)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Paso';
                 }
-                field(Detalle; Detalle)
+                field(Detalle; Rec.Detalle)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detalle';
                 }
-                field(Mantenimiento; Mantenimiento)
+                field(Mantenimiento; Rec.Mantenimiento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mantenimiento';
                 }
-                field(Conquista; Conquista)
+                field(Conquista; Rec.Conquista)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Conquista';
                 }
-                field("Area"; "Area")
+                field("Area"; Rec."Area")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area';
                 }
             }
         }

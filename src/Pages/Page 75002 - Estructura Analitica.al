@@ -13,17 +13,25 @@ page 75002 "Estructura Analitica"
             repeater(Group)
             {
                 Editable = wEditable;
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Nivel; Nivel)
+                field(Nivel; Rec.Nivel)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Blocked; Blocked)
+                field(Blocked; Rec.Blocked)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Blocked';
                 }
             }
         }

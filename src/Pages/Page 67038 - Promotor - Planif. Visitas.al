@@ -9,44 +9,65 @@ page 67038 "Promotor - Planif. Visitas"
         {
             repeater(General)
             {
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Visible = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Editable = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Editable = false;
                     Visible = false;
                 }
-                field("Fecha Visita"; "Fecha Visita")
+                field("Fecha Visita"; Rec."Fecha Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Visita';
                 }
-                field("Hora Inicial Visita"; "Hora Inicial Visita")
+                field("Hora Inicial Visita"; Rec."Hora Inicial Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Inicial Visita';
                 }
-                field("Hora Final Visita"; "Hora Final Visita")
+                field("Hora Final Visita"; Rec."Hora Final Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Final Visita';
                 }
-                field("Fecha Proxima Visita"; "Fecha Proxima Visita")
+                field("Fecha Proxima Visita"; Rec."Fecha Proxima Visita")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Proxima Visita';
                 }
                 field(SampleInventory; FuncAPS.ColCalcInvMuestras(Rec."Cod. Colegio"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Sample Inventory';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
             }
         }

@@ -13,20 +13,30 @@ page 34002148 "Saldos a favor ISR"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("Full Name"; "Full Name")
+                field("Full Name"; Rec."Full Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full Name';
                 }
-                field(Ano; Ano)
+                field(Ano; Rec.Ano)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano';
                 }
-                field("Saldo a favor"; "Saldo a favor")
+                field("Saldo a favor"; Rec."Saldo a favor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Saldo a favor';
                 }
-                field("Importe Pendiente"; "Importe Pendiente")
+                field("Importe Pendiente"; Rec."Importe Pendiente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Pendiente';
                 }
             }
         }

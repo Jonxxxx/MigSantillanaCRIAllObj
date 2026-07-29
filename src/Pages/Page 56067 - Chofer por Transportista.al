@@ -12,20 +12,30 @@ page 56067 "Chofer por Transportista"
         {
             repeater(Group)
             {
-                field("Cod. Chofer"; "Cod. Chofer")
+                field("Cod. Chofer"; Rec."Cod. Chofer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Chofer';
                 }
-                field("Nombre Chofer"; "Nombre Chofer")
+                field("Nombre Chofer"; Rec."Nombre Chofer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Chofer';
                 }
-                field("No. Licencia"; "No. Licencia")
+                field("No. Licencia"; Rec."No. Licencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Licencia';
                 }
-                field("Chofer activo"; "Chofer activo")
+                field("Chofer activo"; Rec."Chofer activo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Chofer activo';
                 }
-                field("Observaciones chofer"; "Observaciones chofer")
+                field("Observaciones chofer"; Rec."Observaciones chofer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observaciones chofer';
                 }
             }
         }

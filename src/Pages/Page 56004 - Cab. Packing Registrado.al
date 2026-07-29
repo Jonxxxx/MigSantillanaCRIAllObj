@@ -24,39 +24,59 @@ page 56004 "Cab. Packing Registrado"
         {
             group(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("No. Mesa"; "No. Mesa")
+                field("No. Mesa"; Rec."No. Mesa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mesa';
                 }
-                field("Picking No."; "Picking No.")
+                field("Picking No."; Rec."Picking No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Picking No.';
                     Enabled = TieneGestionAlmacen;
                     Visible = TieneGestionAlmacen;
                 }
-                field("No. Packing Origen"; "No. Packing Origen")
+                field("No. Packing Origen"; Rec."No. Packing Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing Origen';
                 }
-                field("Tipo pedido"; "Tipo pedido")
+                field("Tipo pedido"; Rec."Tipo pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo pedido';
                 }
-                field("No. Pedido"; "No. Pedido")
+                field("No. Pedido"; Rec."No. Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pedido';
                     Enabled = NOT TieneGestionAlmacen;
                     Visible = NOT TieneGestionAlmacen;
                 }
-                field("Fecha Apertura"; "Fecha Apertura")
+                field("Fecha Apertura"; Rec."Fecha Apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Apertura';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
-                field("Hora Finalizacion"; "Hora Finalizacion")
+                field("Hora Finalizacion"; Rec."Hora Finalizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Finalizacion';
                 }
             }
             part(PageLin; 56005)

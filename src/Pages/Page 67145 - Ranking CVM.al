@@ -11,32 +11,46 @@ page 67145 "Ranking CVM"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Visible = false;
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                     Editable = false;
                 }
-                field("CVM GN"; "CVM GN")
+                field("CVM GN"; Rec."CVM GN")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'CVM GN';
                     Editable = false;
                 }
-                field(INI; INI)
+                field(INI; Rec.INI)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'INI';
                     Editable = false;
                 }
-                field(PRI; PRI)
+                field(PRI; Rec.PRI)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'PRI';
                     Editable = false;
                 }
-                field(SEC; SEC)
+                field(SEC; Rec.SEC)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'SEC';
                     Editable = false;
                 }
-                field("% Compra"; "% Compra")
+                field("% Compra"; Rec."% Compra")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Compra';
                     Editable = false;
                 }
             }

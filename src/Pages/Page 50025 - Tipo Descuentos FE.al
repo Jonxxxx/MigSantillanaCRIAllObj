@@ -15,20 +15,23 @@ page 50025 "Tipo Descuentos FE"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                     Caption = 'Discount Code';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field("Descuento Asumido Fabrica"; "Descuento Asumido Fabrica")
+                field("Descuento Asumido Fabrica"; Rec."Descuento Asumido Fabrica")
                 {
-                    ToolTip = 'Complete this field only if the issuer (manufacturer/publisher) is assuming the VAT according to tax regulations.';
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento Asumido Fabrica';
                 }
             }
         }

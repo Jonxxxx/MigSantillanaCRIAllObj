@@ -12,33 +12,49 @@ page 67014 "Materiales Talleres y Eventos"
         {
             repeater(General)
             {
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                     Visible = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("Tipo de Material"; "Tipo de Material")
+                field("Tipo de Material"; Rec."Tipo de Material")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Material';
                 }
-                field("Codigo Material"; "Codigo Material")
+                field("Codigo Material"; Rec."Codigo Material")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Material';
                 }
-                field("Description Material"; "Description Material")
+                field("Description Material"; Rec."Description Material")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Material';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Costo Unitario"; "Costo Unitario")
+                field("Costo Unitario"; Rec."Costo Unitario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Costo Unitario';
                 }
             }
         }

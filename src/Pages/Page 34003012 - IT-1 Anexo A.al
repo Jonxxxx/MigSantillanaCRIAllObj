@@ -13,121 +13,183 @@ page 34003012 "IT-1 Anexo A"
         {
             group("TIPO NCF")
             {
-                field("Cant B01 y E31 IT-1"; "Cant B01 y E31 IT-1")
+                field("Cant B01 y E31 IT-1"; Rec."Cant B01 y E31 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B01 y E31 IT-1';
                 }
-                field("Cant B02 y E32 IT-1"; "Cant B02 y E32 IT-1")
+                field("Cant B02 y E32 IT-1"; Rec."Cant B02 y E32 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B02 y E32 IT-1';
                 }
-                field("Cant B03 y E33 IT-1"; "Cant B03 y E33 IT-1")
+                field("Cant B03 y E33 IT-1"; Rec."Cant B03 y E33 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B03 y E33 IT-1';
                 }
-                field("Cant B04 y E34 IT-1"; "Cant B04 y E34 IT-1")
+                field("Cant B04 y E34 IT-1"; Rec."Cant B04 y E34 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B04 y E34 IT-1';
                 }
-                field("Cant B12 IT-1"; "Cant B12 IT-1")
+                field("Cant B12 IT-1"; Rec."Cant B12 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B12 IT-1';
                 }
-                field("Cant B14 y E44 IT-1"; "Cant B14 y E44 IT-1")
+                field("Cant B14 y E44 IT-1"; Rec."Cant B14 y E44 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B14 y E44 IT-1';
                 }
-                field("Cant B15 y E45 IT-1"; "Cant B15 y E45 IT-1")
+                field("Cant B15 y E45 IT-1"; Rec."Cant B15 y E45 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B15 y E45 IT-1';
                 }
-                field("Cant B16 y E46 IT-1"; "Cant B16 y E46 IT-1")
+                field("Cant B16 y E46 IT-1"; Rec."Cant B16 y E46 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cant B16 y E46 IT-1';
                 }
                 field(CantOtrasPositiva; CantOtrasPositiva)
                 {
+                    ApplicationArea = All;
                     Caption = 'Otras Operaciones (Positiva) Cantidad';
                 }
                 field(CantOtrasNegativas; CantOtrasNegativas)
                 {
+                    ApplicationArea = All;
                     Caption = 'Otras Operaciones (Negativas) Cantidad';
                 }
-                field("Monto B01 y E31 IT-1"; "Monto B01 y E31 IT-1")
+                field("Monto B01 y E31 IT-1"; Rec."Monto B01 y E31 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B01 y E31 IT-1';
                 }
-                field("Monto B02 y E32 IT-1"; "Monto B02 y E32 IT-1")
+                field("Monto B02 y E32 IT-1"; Rec."Monto B02 y E32 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B02 y E32 IT-1';
                 }
-                field("Monto B03 y E33 IT-1"; "Monto B03 y E33 IT-1")
+                field("Monto B03 y E33 IT-1"; Rec."Monto B03 y E33 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B03 y E33 IT-1';
                 }
-                field("Monto B04 y E34 IT-1"; "Monto B04 y E34 IT-1")
+                field("Monto B04 y E34 IT-1"; Rec."Monto B04 y E34 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B04 y E34 IT-1';
                 }
-                field("Monto B12 IT-1"; "Monto B12 IT-1")
+                field("Monto B12 IT-1"; Rec."Monto B12 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B12 IT-1';
                 }
-                field("Monto B14 y E44 IT-1"; "Monto B14 y E44 IT-1")
+                field("Monto B14 y E44 IT-1"; Rec."Monto B14 y E44 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B14 y E44 IT-1';
                 }
-                field("Monto B15 y E45 IT-1"; "Monto B15 y E45 IT-1")
+                field("Monto B15 y E45 IT-1"; Rec."Monto B15 y E45 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B15 y E45 IT-1';
                 }
-                field("Monto B16 y E46 IT-1"; "Monto B16 y E46 IT-1")
+                field("Monto B16 y E46 IT-1"; Rec."Monto B16 y E46 IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto B16 y E46 IT-1';
                 }
                 field(MontoOtrasPositiva; MontoOtrasPositiva)
                 {
+                    ApplicationArea = All;
                     Caption = 'Otras Operaciones (Positiva Monto';
                 }
                 field(MontoOtrasNegativas; MontoOtrasNegativas)
                 {
+                    ApplicationArea = All;
                     Caption = 'Otras Operaciones (Negativas) Monto';
                 }
             }
             group("TIPO DE VENTAS")
             {
-                field("MontoEfectivo IT-1"; "MontoEfectivo IT-1")
+                field("MontoEfectivo IT-1"; Rec."MontoEfectivo IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoEfectivo IT-1';
                 }
-                field("MontoChequeTransferencia IT-1"; "MontoChequeTransferencia IT-1")
+                field("MontoChequeTransferencia IT-1"; Rec."MontoChequeTransferencia IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoChequeTransferencia IT-1';
                 }
-                field("MontoTarjeta IT-1"; "MontoTarjeta IT-1")
+                field("MontoTarjeta IT-1"; Rec."MontoTarjeta IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoTarjeta IT-1';
                 }
-                field("MontoCredito IT-1"; "MontoCredito IT-1")
+                field("MontoCredito IT-1"; Rec."MontoCredito IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoCredito IT-1';
                 }
-                field("MontoBonosCertificado IT-1"; "MontoBonosCertificado IT-1")
+                field("MontoBonosCertificado IT-1"; Rec."MontoBonosCertificado IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoBonosCertificado IT-1';
                 }
-                field("MontoPermuta IT-1"; "MontoPermuta IT-1")
+                field("MontoPermuta IT-1"; Rec."MontoPermuta IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoPermuta IT-1';
                 }
                 field(MontoOtrasFormasDeVenta; MontoOtrasFormasDeVenta)
                 {
+                    ApplicationArea = All;
                     Caption = 'Otras Formas de Venta';
                 }
             }
             group("TIPO DE INGRESOS")
             {
-                field("Monto Operacional IT-1"; "Monto Operacional IT-1")
+                field("Monto Operacional IT-1"; Rec."Monto Operacional IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Operacional IT-1';
                 }
-                field("Monto Financiero IT-1"; "Monto Financiero IT-1")
+                field("Monto Financiero IT-1"; Rec."Monto Financiero IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Financiero IT-1';
                 }
-                field("Monto Extraordinarios IT-1"; "Monto Extraordinarios IT-1")
+                field("Monto Extraordinarios IT-1"; Rec."Monto Extraordinarios IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Extraordinarios IT-1';
                 }
-                field("Monto Arrendamiento IT-1"; "Monto Arrendamiento IT-1")
+                field("Monto Arrendamiento IT-1"; Rec."Monto Arrendamiento IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto Arrendamiento IT-1';
                 }
-                field("Monto VentaActivo IT-1"; "Monto VentaActivo IT-1")
+                field("Monto VentaActivo IT-1"; Rec."Monto VentaActivo IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto VentaActivo IT-1';
                 }
-                field("Monto IngresoOtros IT-1"; "Monto IngresoOtros IT-1")
+                field("Monto IngresoOtros IT-1"; Rec."Monto IngresoOtros IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto IngresoOtros IT-1';
                 }
             }
             group("DATOS INFORMATIVOS")
             {
                 field(MontoNC30Factura; MontoNC30Factura)
                 {
+                    ApplicationArea = All;
                     Caption = 'Total Notas de Credito Emitidas con mas de Trenta(30) Dias desde la Facturacion';
 
                     trigger OnDrillDown()
@@ -158,8 +220,10 @@ page 34003012 "IT-1 Anexo A"
                         PAGE.RUNMODAL(34003004, ArchivoTransferenciaITBIS);
                     end;
                 }
-                field("MontoEspecial IT-1"; "MontoEspecial IT-1")
+                field("MontoEspecial IT-1"; Rec."MontoEspecial IT-1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoEspecial IT-1';
                 }
             }
         }

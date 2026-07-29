@@ -16,36 +16,56 @@ page 34002123 "Lista historico nominas"
         {
             repeater(GeneralRep)
             {
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Empresa cotizacion"; "Empresa cotizacion")
+                field("Empresa cotizacion"; Rec."Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa cotizacion';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
-                field(Cargo; Cargo)
+                field(Cargo; Rec.Cargo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cargo';
                 }
-                field("Tipo de nomina"; "Tipo de nomina")
+                field("Tipo de nomina"; Rec."Tipo de nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de nomina';
                 }
-                field("Tipo Nomina"; "Tipo Nomina")
+                field("Tipo Nomina"; Rec."Tipo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Nomina';
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                 }
-                field(Fin; Fin)
+                field(Fin; Rec.Fin)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fin';
                     Visible = false;
                 }
-                field("Total Ingresos"; "Total Ingresos")
+                field("Total Ingresos"; Rec."Total Ingresos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Ingresos';
                 }
-                field("Total deducciones"; "Total deducciones")
+                field("Total deducciones"; Rec."Total deducciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total deducciones';
                 }
             }
         }

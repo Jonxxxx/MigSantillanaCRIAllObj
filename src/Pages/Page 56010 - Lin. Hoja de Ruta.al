@@ -18,59 +18,93 @@ page 56010 "Lin. Hoja de Ruta"
         {
             repeater(Group)
             {
-                field("Tipo Envio"; "Tipo Envio")
+                field("Tipo Envio"; Rec."Tipo Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Envio';
                 }
-                field("No. Conduce"; "No. Conduce")
+                field("No. Conduce"; Rec."No. Conduce")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Conduce';
                 }
-                field("No. Pedido"; "No. Pedido")
+                field("No. Pedido"; Rec."No. Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pedido';
                 }
-                field("No. Guia"; "No. Guia")
+                field("No. Guia"; Rec."No. Guia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Guia';
                     Enabled = false;
                 }
-                field("No. Factura"; "No. Factura")
+                field("No. Factura"; Rec."No. Factura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Factura';
                 }
-                field("Ruta De Distribucion"; "Ruta De Distribucion")
+                field("Ruta De Distribucion"; Rec."Ruta De Distribucion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ruta De Distribucion';
                     Visible = false;
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                     Editable = false;
                 }
-                field("Nombre Cliente"; "Nombre Cliente")
+                field("Nombre Cliente"; Rec."Nombre Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Cliente';
                 }
-                field("Cantidad de Bultos"; "Cantidad de Bultos")
+                field("Cantidad de Bultos"; Rec."Cantidad de Bultos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Bultos';
                 }
-                field(Peso; Peso)
+                field(Peso; Rec.Peso)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Peso';
                 }
-                field("Unidad Medida"; "Unidad Medida")
+                field("Unidad Medida"; Rec."Unidad Medida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unidad Medida';
                 }
-                field(Valor; Valor)
+                field(Valor; Rec.Valor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor';
                 }
-                field(Comentarios; Comentarios)
+                field(Comentarios; Rec.Comentarios)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentarios';
                 }
-                field("Fecha Entrega Requerida"; "Fecha Entrega Requerida")
+                field("Fecha Entrega Requerida"; Rec."Fecha Entrega Requerida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Entrega Requerida';
                 }
-                field("Condiciones de Envio"; "Condiciones de Envio")
+                field("Condiciones de Envio"; Rec."Condiciones de Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Condiciones de Envio';
                 }
-                field("Fecha Pedido"; "Fecha Pedido")
+                field("Fecha Pedido"; Rec."Fecha Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Pedido';
                 }
-                field("No Entregado"; "No Entregado")
+                field("No Entregado"; Rec."No Entregado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No Entregado';
 
                     trigger OnValidate()
                     begin
@@ -78,18 +112,24 @@ page 56010 "Lin. Hoja de Ruta"
                         gbCausaEditable := "No Entregado";
                     end;
                 }
-                field("Fecha Entrega"; "Fecha Entrega")
+                field("Fecha Entrega"; Rec."Fecha Entrega")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Entrega';
                     Editable = gbFechaEditable;
                     Enabled = gbFechaEditable;
                 }
-                field("Causa No Entrega"; "Causa No Entrega")
+                field("Causa No Entrega"; Rec."Causa No Entrega")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Causa No Entrega';
                     Editable = gbCausaEditable;
                     Enabled = gbCausaEditable;
                 }
-                field("No Orden"; "No Orden")
+                field("No Orden"; Rec."No Orden")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No Orden';
                 }
             }
         }

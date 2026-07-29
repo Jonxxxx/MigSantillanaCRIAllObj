@@ -15,137 +15,225 @@ page 50110 "List Cab Vtas SIC"
         {
             repeater(Group)
             {
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("Cod. Almacen"; "Cod. Almacen")
+                field("Cod. Almacen"; Rec."Cod. Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Almacen';
                 }
-                field("Cod. Moneda"; "Cod. Moneda")
+                field("Cod. Moneda"; Rec."Cod. Moneda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Moneda';
                 }
-                field(RNC; RNC)
+                field(RNC; Rec.RNC)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC';
                 }
-                field("Nombre Cliente"; "Nombre Cliente")
+                field("Nombre Cliente"; Rec."Nombre Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Cliente';
                 }
-                field("No. comprobante"; "No. comprobante")
+                field("No. comprobante"; Rec."No. comprobante")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. comprobante';
                 }
-                field("Fecha Venc. NCF"; "Fecha Venc. NCF")
+                field("Fecha Venc. NCF"; Rec."Fecha Venc. NCF")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Venc. NCF';
                 }
-                field("NCF Afectado"; "NCF Afectado")
+                field("NCF Afectado"; Rec."NCF Afectado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'NCF Afectado';
                 }
-                field("Cod. Cajero"; "Cod. Cajero")
+                field("Cod. Cajero"; Rec."Cod. Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cajero';
                 }
-                field("Tasa de cambio"; "Tasa de cambio")
+                field("Tasa de cambio"; Rec."Tasa de cambio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tasa de cambio';
                 }
-                field("Nombre asegurado"; "Nombre asegurado")
+                field("Nombre asegurado"; Rec."Nombre asegurado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre asegurado';
                 }
-                field("No. poliza"; "No. poliza")
+                field("No. poliza"; Rec."No. poliza")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. poliza';
                 }
-                field("No. orden"; "No. orden")
+                field("No. orden"; Rec."No. orden")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. orden';
                 }
-                field(Aseguradora; Aseguradora)
+                field(Aseguradora; Rec.Aseguradora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aseguradora';
                 }
-                field("RNC Aseguradora"; "RNC Aseguradora")
+                field("RNC Aseguradora"; Rec."RNC Aseguradora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC Aseguradora';
                 }
-                field("Cod. supervisor"; "Cod. supervisor")
+                field("Cod. supervisor"; Rec."Cod. supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. supervisor';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field("Source Counter"; "Source Counter")
+                field("Source Counter"; Rec."Source Counter")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Source Counter';
                 }
-                field(Transferido; Transferido)
+                field(Transferido; Rec.Transferido)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transferido';
                 }
-                field(Errores; Errores)
+                field(Errores; Rec.Errores)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Errores';
                 }
-                field(ErroresLineas; ErroresLineas)
+                field(ErroresLineas; Rec.ErroresLineas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ErroresLineas';
                 }
-                field(Monto; Monto)
+                field(Monto; Rec.Monto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto';
                 }
-                field(ITBIS; ITBIS)
+                field(ITBIS; Rec.ITBIS)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ITBIS';
                 }
-                field(SubTotal; SubTotal)
+                field(SubTotal; Rec.SubTotal)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'SubTotal';
                 }
-                field(Descuento; Descuento)
+                field(Descuento; Rec.Descuento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento';
                 }
-                field(Observacion; Observacion)
+                field(Observacion; Rec.Observacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observacion';
                 }
-                field(Origen; Origen)
+                field(Origen; Rec.Origen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Origen';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field(Clave; Clave)
+                field(Clave; Rec.Clave)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clave';
                 }
-                field(Consecutivo; Consecutivo)
+                field(Consecutivo; Rec.Consecutivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Consecutivo';
                 }
-                field(Colegio; Colegio)
+                field(Colegio; Rec.Colegio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Colegio';
                 }
-                field(Caja; Caja)
+                field(Caja; Rec.Caja)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Caja';
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field("No. documento SIC"; "No. documento SIC")
+                field("No. documento SIC"; Rec."No. documento SIC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento SIC';
                 }
-                field(Establecimiento; Establecimiento)
+                field(Establecimiento; Rec.Establecimiento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Establecimiento';
                 }
-                field(PuntoEmision; PuntoEmision)
+                field(PuntoEmision; Rec.PuntoEmision)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'PuntoEmision';
                 }
-                field("Tipo Documento Identidad"; "Tipo Documento Identidad")
+                field("Tipo Documento Identidad"; Rec."Tipo Documento Identidad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento Identidad';
                 }
-                field("No. Telefono"; "No. Telefono")
+                field("No. Telefono"; Rec."No. Telefono")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Telefono';
                 }
-                field("Correo Electronico"; "Correo Electronico")
+                field("Correo Electronico"; Rec."Correo Electronico")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Correo Electronico';
                 }
-                field("Serie Documento"; "Serie Documento")
+                field("Serie Documento"; Rec."Serie Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Serie Documento';
                 }
-                field("Cod. Banco"; "Cod. Banco")
+                field("Cod. Banco"; Rec."Cod. Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Banco';
                 }
             }
         }

@@ -12,18 +12,24 @@ page 67137 "Colegio - Work Flow Pasos"
         {
             repeater(Group)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field(Detalle; Detalle)
+                field(Detalle; Rec.Detalle)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detalle';
                     Caption = 'Step';
                     Editable = false;
                 }
-                field(Resultado; Resultado)
+                field(Resultado; Rec.Resultado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resultado';
 
                     trigger OnValidate()
                     var

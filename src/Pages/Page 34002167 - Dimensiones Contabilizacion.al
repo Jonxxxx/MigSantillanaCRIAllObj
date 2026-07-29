@@ -9,20 +9,30 @@ page 34002167 "Dimensiones Contabilizacion"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Dimension"; "Cod. Dimension")
+                field("Cod. Dimension"; Rec."Cod. Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Dimension';
                 }
-                field(Orden; Orden)
+                field(Orden; Rec.Orden)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Orden';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Requerida; Requerida)
+                field(Requerida; Rec.Requerida)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requerida';
                 }
-                field("Validar en"; "Validar en")
+                field("Validar en"; Rec."Validar en")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Validar en';
                 }
             }
         }

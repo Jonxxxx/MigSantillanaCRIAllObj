@@ -15,35 +15,55 @@ page 67128 "Historico Promotor - Ppto Vtas"
         {
             repeater(Group)
             {
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                 }
-                field("Item Description"; "Item Description")
+                field("Item Description"; Rec."Item Description")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item Description';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field("Cantidad camp. anterior"; "Cantidad camp. anterior")
+                field("Cantidad camp. anterior"; Rec."Cantidad camp. anterior")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad camp. anterior';
                 }
-                field("Cod. producto equivalente"; "Cod. producto equivalente")
+                field("Cod. producto equivalente"; Rec."Cod. producto equivalente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. producto equivalente';
                 }
-                field(Adopcion; Adopcion)
+                field(Adopcion; Rec.Adopcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion';
                 }
-                field("Adopcion anterior"; "Adopcion anterior")
+                field("Adopcion anterior"; Rec."Adopcion anterior")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion anterior';
                 }
-                field(Campaña; Campana)
+                field(Campaña; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
             }
         }

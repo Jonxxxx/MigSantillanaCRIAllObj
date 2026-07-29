@@ -11,11 +11,15 @@ page 67091 "Carga Bitmap flags"
         {
             repeater(Group)
             {
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field(Bitmap; Bitmap)
+                field(Bitmap; Rec.Bitmap)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bitmap';
                 }
             }
         }

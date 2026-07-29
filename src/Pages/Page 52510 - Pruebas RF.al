@@ -9,14 +9,20 @@ page 52510 "Pruebas RF"
         {
             group(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
             }
         }

@@ -15,6 +15,7 @@ page 67105 "Lista Seleccion eventos"
             {
                 field(Seleccionado; Seleccionado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Select';
 
                     trigger OnValidate()
@@ -54,68 +55,104 @@ page 67105 "Lista Seleccion eventos"
                         END
                     end;
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                     Editable = false;
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                     Editable = false;
                 }
-                field(Expositor; Expositor)
+                field(Expositor; Rec.Expositor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Expositor';
                     Editable = false;
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                     Editable = false;
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                     Editable = false;
                 }
-                field("Fecha Inicio"; "Fecha Inicio")
+                field("Fecha Inicio"; Rec."Fecha Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio';
                 }
-                field("Numero de sesiones"; "Numero de sesiones")
+                field("Numero de sesiones"; Rec."Numero de sesiones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de sesiones';
                 }
-                field("Fecha Programada"; "Fecha Programada")
+                field("Fecha Programada"; Rec."Fecha Programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Programada';
                 }
-                field("Fecha Realizada"; "Fecha Realizada")
+                field("Fecha Realizada"; Rec."Fecha Realizada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Realizada';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Description Tipo evento"; "Description Tipo evento")
+                field("Description Tipo evento"; Rec."Description Tipo evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Tipo evento';
                     Editable = false;
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                     Editable = false;
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                     Editable = false;
                 }
-                field("Asistentes esperados"; "Asistentes esperados")
+                field("Asistentes esperados"; Rec."Asistentes esperados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes esperados';
                     Editable = false;
                 }
-                field("Total registrados"; "Total registrados")
+                field("Total registrados"; Rec."Total registrados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total registrados';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Descripcion Delegacion"; "Descripcion Delegacion")
+                field("Descripcion Delegacion"; Rec."Descripcion Delegacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Delegacion';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
             }
         }

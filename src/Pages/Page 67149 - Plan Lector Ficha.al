@@ -9,36 +9,56 @@ page 67149 "Plan Lector Ficha"
         {
             group(General)
             {
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Descripcion Local"; "Descripcion Local")
+                field("Descripcion Local"; Rec."Descripcion Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Local';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field("Descripcion Turno"; "Descripcion Turno")
+                field("Descripcion Turno"; Rec."Descripcion Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Turno';
                 }
-                field(Distrito; Distrito)
+                field(Distrito; Rec.Distrito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distrito';
                 }
-                field("Cod. Delegacion"; "Cod. Delegacion")
+                field("Cod. Delegacion"; Rec."Cod. Delegacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Delegacion';
                     Editable = false;
                 }
-                field("Descripcion Delegacion"; "Descripcion Delegacion")
+                field("Descripcion Delegacion"; Rec."Descripcion Delegacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Delegacion';
                     Editable = false;
                 }
             }

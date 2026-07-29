@@ -11,41 +11,58 @@ page 34002185 "Payroll Letters"
         {
             repeater(Group)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                     Visible = false;
                 }
-                field("Report ID"; "Report ID")
+                field("Report ID"; Rec."Report ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Report ID';
                     Visible = false;
                 }
-                field("Report Name"; "Report Name")
+                field("Report Name"; Rec."Report Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Report Name';
                 }
-                field("Company Name"; "Company Name")
+                field("Company Name"; Rec."Company Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company Name';
                     Visible = false;
                 }
-                field(Type; Type)
+                field(Type; Rec.Type)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Type';
                     Editable = false;
                     Visible = false;
                 }
-                field("Last Modified"; "Last Modified")
+                field("Last Modified"; Rec."Last Modified")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Modified';
                     Visible = false;
                 }
-                field("Last Modified by User"; "Last Modified by User")
+                field("Last Modified by User"; Rec."Last Modified by User")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Modified by User';
                     Visible = false;
                 }
                 field(Email; Email)
                 {
+                    ApplicationArea = All;
                     Caption = 'E-Mail responsable';
                     Editable = false;
                 }
-                field(Publish; Publish)
+                field(Publish; Rec.Publish)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Publish';
                     Visible = false;
                 }
             }

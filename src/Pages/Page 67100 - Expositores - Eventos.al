@@ -9,27 +9,41 @@ page 67100 "Expositores - Eventos"
         {
             repeater(Group)
             {
-                field("Tipo de Expositor"; "Tipo de Expositor")
+                field("Tipo de Expositor"; Rec."Tipo de Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Expositor';
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
-                field("Tipo de Evento"; "Tipo de Evento")
+                field("Tipo de Evento"; Rec."Tipo de Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Evento';
                     Visible = false;
                 }
-                field("Cod. Evento"; "Cod. Evento")
+                field("Cod. Evento"; Rec."Cod. Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Evento';
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                 }
-                field("Descripcion Evento"; "Descripcion Evento")
+                field("Descripcion Evento"; Rec."Descripcion Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Evento';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
             }
         }

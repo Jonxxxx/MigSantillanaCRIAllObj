@@ -11,35 +11,55 @@ page 34002139 "Lista Cxc Empleados"
         {
             repeater(Group)
             {
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
                 }
-                field("Codigo Empleado"; "Codigo Empleado")
+                field("Codigo Empleado"; Rec."Codigo Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Empleado';
                 }
-                field("Fecha Registro CxC"; "Fecha Registro CxC")
+                field("Fecha Registro CxC"; Rec."Fecha Registro CxC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro CxC';
                 }
-                field("Tipo CxC"; "Tipo CxC")
+                field("Tipo CxC"; Rec."Tipo CxC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo CxC';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field(Cuotas; Cuotas)
+                field(Cuotas; Rec.Cuotas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuotas';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field(Pendiente; Pendiente)
+                field(Pendiente; Rec.Pendiente)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pendiente';
                 }
-                field("Tipo Contrapartida"; "Tipo Contrapartida")
+                field("Tipo Contrapartida"; Rec."Tipo Contrapartida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Contrapartida';
                 }
-                field("Cta. Contrapartida"; "Cta. Contrapartida")
+                field("Cta. Contrapartida"; Rec."Cta. Contrapartida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cta. Contrapartida';
                 }
             }
         }

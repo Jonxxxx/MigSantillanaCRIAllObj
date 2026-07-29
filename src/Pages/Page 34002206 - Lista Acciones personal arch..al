@@ -14,32 +14,50 @@ page 34002206 "Lista Acciones personal arch."
         {
             repeater(Group)
             {
-                field("Tipo de accion"; "Tipo de accion")
+                field("Tipo de accion"; Rec."Tipo de accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de accion';
                 }
-                field("Cod. accion"; "Cod. accion")
+                field("Cod. accion"; Rec."Cod. accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. accion';
                 }
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Nombre completo"; "Nombre completo")
+                field("Nombre completo"; Rec."Nombre completo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre completo';
                 }
-                field("ID Documento"; "ID Documento")
+                field("ID Documento"; Rec."ID Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Documento';
                 }
-                field("Descripcion accion"; "Descripcion accion")
+                field("Descripcion accion"; Rec."Descripcion accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion accion';
                 }
-                field("Fecha accion"; "Fecha accion")
+                field("Fecha accion"; Rec."Fecha accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha accion';
                 }
-                field("Fecha efectividad"; "Fecha efectividad")
+                field("Fecha efectividad"; Rec."Fecha efectividad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha efectividad';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
             }
         }

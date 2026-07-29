@@ -13,17 +13,25 @@ page 67008 Rutas
         {
             repeater(General)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Descripcion delegacion"; "Descripcion delegacion")
+                field("Descripcion delegacion"; Rec."Descripcion delegacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion delegacion';
                 }
             }
         }

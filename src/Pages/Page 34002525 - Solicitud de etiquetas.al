@@ -9,32 +9,49 @@ page 34002525 "Solicitud de etiquetas"
         {
             repeater(Group)
             {
-                field("ID Reporte"; "ID Reporte")
+                field("ID Reporte"; Rec."ID Reporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte';
                 }
-                field("Nombre reporte"; "Nombre reporte")
+                field("Nombre reporte"; Rec."Nombre reporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre reporte';
                 }
-                field(Confirmada; Confirmada)
+                field(Confirmada; Rec.Confirmada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Confirmada';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Cod. barra"; "Cod. barra")
+                field("Cod. barra"; Rec."Cod. barra")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. barra';
                 }
-                field("No. producto"; "No. producto")
+                field("No. producto"; Rec."No. producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. producto';
                 }
-                field("Descripcion producto"; "Descripcion producto")
+                field("Descripcion producto"; Rec."Descripcion producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion producto';
                 }
-                field("Fecha solicitud"; "Fecha solicitud")
+                field("Fecha solicitud"; Rec."Fecha solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha solicitud';
                 }
                 field(g; '')
                 {
+                    ApplicationArea = All;
                 }
             }
         }

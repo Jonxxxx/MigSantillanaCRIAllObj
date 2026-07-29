@@ -11,11 +11,15 @@ page 56034 "Sello/Marca"
         {
             repeater(Group)
             {
-                field("Cod. Sello/Marca"; "Cod. Sello/Marca")
+                field("Cod. Sello/Marca"; Rec."Cod. Sello/Marca")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Sello/Marca';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

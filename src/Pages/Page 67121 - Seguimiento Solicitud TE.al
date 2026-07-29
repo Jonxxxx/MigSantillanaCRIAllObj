@@ -15,23 +15,34 @@ page 67121 "Seguimiento Solicitud TE"
         {
             repeater(Group)
             {
-                field("No. Cambio"; "No. Cambio")
+                field("No. Cambio"; Rec."No. Cambio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cambio';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field(Usuario; Usuario)
+                field(Usuario; Rec.Usuario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario';
                 }
                 field(wComentario; wComentario)
                 {
+                    ApplicationArea = All;
                     Caption = 'Comentario';
                 }
             }

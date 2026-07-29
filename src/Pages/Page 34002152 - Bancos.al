@@ -9,17 +9,25 @@ page 34002152 Bancos
         {
             repeater(GeneralRep)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field("Nombre banco"; "Nombre banco")
+                field("Nombre banco"; Rec."Nombre banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre banco';
                 }
-                field("ID Banco"; "ID Banco")
+                field("ID Banco"; Rec."ID Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Banco';
                 }
-                field(Formato; Formato)
+                field(Formato; Rec.Formato)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Formato';
                 }
             }
         }

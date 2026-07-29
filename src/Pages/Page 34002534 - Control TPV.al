@@ -23,12 +23,14 @@ page 34002534 "Control TPV"
                 //GridLayout = Columns;
                 field(WORKDATE; WORKDATE)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha de Trabajo';
                     Editable = false;
                     Importance = Promoted;
                 }
                 field(Tienda; codTienda)
                 {
+                    ApplicationArea = All;
                     TableRelation = Tiendas;
 
                     trigger OnValidate()
@@ -38,6 +40,7 @@ page 34002534 "Control TPV"
                 }
                 field(TPV; codTPV)
                 {
+                    ApplicationArea = All;
                     TableRelation = "Configuracion TPV"."Id TPV";
 
                     trigger OnValidate()
@@ -47,60 +50,84 @@ page 34002534 "Control TPV"
                 }
                 field(NombreTienda; TraerNombreTienda)
                 {
+                    ApplicationArea = All;
                     Caption = 'Descripcion Tienda';
                 }
                 field(NombreTPV; TraerNombreTPV)
                 {
+                    ApplicationArea = All;
                     Caption = 'Descripcion TPV';
                 }
             }
             repeater(Group)
             {
                 Editable = false;
-                field("No. tienda"; "No. tienda")
+                field("No. tienda"; Rec."No. tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. tienda';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("No. TPV"; "No. TPV")
+                field("No. TPV"; Rec."No. TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. TPV';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Hora apertura"; "Hora apertura")
+                field("Hora apertura"; Rec."Hora apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora apertura';
                     Caption = 'Hora apertura';
                 }
-                field("Usuario apertura"; "Usuario apertura")
+                field("Usuario apertura"; Rec."Usuario apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario apertura';
                 }
-                field("Hora cierre"; "Hora cierre")
+                field("Hora cierre"; Rec."Hora cierre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora cierre';
                     AutoFormatType = 1;
                 }
-                field("Usuario cierre"; "Usuario cierre")
+                field("Usuario cierre"; Rec."Usuario cierre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario cierre';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Caption = 'Estado';
                     StyleExpr = texEstilo;
                 }
-                field("Usuario reapertura"; "Usuario reapertura")
+                field("Usuario reapertura"; Rec."Usuario reapertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario reapertura';
                     Visible = false;
                 }
-                field("Hora reapertura"; "Hora reapertura")
+                field("Hora reapertura"; Rec."Hora reapertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora reapertura';
                     Visible = false;
                 }
-                field("Motivo reapertura"; "Motivo reapertura")
+                field("Motivo reapertura"; Rec."Motivo reapertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo reapertura';
                 }
             }
             part(Turnos; 34002536)

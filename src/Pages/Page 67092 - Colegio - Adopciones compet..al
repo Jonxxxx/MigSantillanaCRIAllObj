@@ -10,32 +10,46 @@ page 67092 "Colegio - Adopciones compet."
         {
             repeater(General)
             {
-                field("Cod. Editorial"; "Cod. Editorial")
+                field("Cod. Editorial"; Rec."Cod. Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Editorial';
                 }
-                field("Cod. Producto Editora"; "Cod. Producto Editora")
+                field("Cod. Producto Editora"; Rec."Cod. Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto Editora';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                     Editable = false;
                     Visible = false;
                 }
-                field("Nombre Editorial"; "Nombre Editorial")
+                field("Nombre Editorial"; Rec."Nombre Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Editorial';
                     Editable = false;
                     Visible = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                 }
-                field("Descripcion producto"; "Descripcion producto")
+                field("Descripcion producto"; Rec."Descripcion producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion producto';
                     Editable = false;
                 }
-                field("Nombre Producto Editora"; "Nombre Producto Editora")
+                field("Nombre Producto Editora"; Rec."Nombre Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Producto Editora';
                     Editable = false;
                 }
             }

@@ -13,29 +13,45 @@ page 67011 "Lista Eventos"
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Tipo de Evento"; "Tipo de Evento")
+                field("Tipo de Evento"; Rec."Tipo de Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Evento';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Fecha creacion"; "Fecha creacion")
+                field("Fecha creacion"; Rec."Fecha creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha creacion';
                 }
-                field("Capacidad de vacantes"; "Capacidad de vacantes")
+                field("Capacidad de vacantes"; Rec."Capacidad de vacantes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Capacidad de vacantes';
                 }
-                field("Horas programadas"; "Horas programadas")
+                field("Horas programadas"; Rec."Horas programadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas programadas';
                 }
             }
         }

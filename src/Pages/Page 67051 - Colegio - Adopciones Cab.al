@@ -12,29 +12,38 @@ page 67051 "Colegio - Adopciones Cab"
             group(Adoption)
             {
                 Caption = 'Adoption';
-                field("Cod. Editorial"; "Cod. Editorial")
+                field("Cod. Editorial"; Rec."Cod. Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Editorial';
                     Caption = 'Editor code, name';
                     Visible = false;
                 }
-                field("Nombre editorial"; "Nombre editorial")
+                field("Nombre editorial"; Rec."Nombre editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre editorial';
                     Editable = false;
                     Visible = false;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Caption = 'School code, name';
                     Editable = false;
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                     Importance = Promoted;
                 }
                 field(SampleInventoryJX;
                     FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Sample Inventory';
                     Editable = false;
 
@@ -55,17 +64,23 @@ page 67051 "Colegio - Adopciones Cab"
                         END;
                     end;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Filtro Grupo de Negocio"; "Filtro Grupo de Negocio")
+                field("Filtro Grupo de Negocio"; Rec."Filtro Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtro Grupo de Negocio';
 
                     trigger OnValidate()
                     begin
@@ -73,8 +88,10 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
-                field("Filtro Linea de negocio"; "Filtro Linea de negocio")
+                field("Filtro Linea de negocio"; Rec."Filtro Linea de negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtro Linea de negocio';
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
@@ -106,6 +123,7 @@ page 67051 "Colegio - Adopciones Cab"
                 }
                 field("Filtro Nivel"; Filtro)
                 {
+                    ApplicationArea = All;
                     Caption = 'Level Filter';
                     TableRelation = "Nivel Educativo APS";
 
@@ -116,8 +134,10 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
-                field("Filtro Sub Familia"; "Filtro Sub Familia")
+                field("Filtro Sub Familia"; Rec."Filtro Sub Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtro Sub Familia';
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
@@ -145,8 +165,10 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
-                field("Filtro Serie"; "Filtro Serie")
+                field("Filtro Serie"; Rec."Filtro Serie")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtro Serie';
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
@@ -174,11 +196,15 @@ page 67051 "Colegio - Adopciones Cab"
                                                                  "Filtro Serie", "Filtro Sub Familia");
                     end;
                 }
-                field("Filtro fecha"; "Filtro fecha")
+                field("Filtro fecha"; Rec."Filtro fecha")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtro fecha';
                 }
-                field("% Dto. Padres"; "% Dto. Padres")
+                field("% Dto. Padres"; Rec."% Dto. Padres")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Padres';
                     Importance = Additional;
 
                     trigger OnValidate()
@@ -186,8 +212,10 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.UpdForm;
                     end;
                 }
-                field("% Dto. Colegio"; "% Dto. Colegio")
+                field("% Dto. Colegio"; Rec."% Dto. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Colegio';
                     Importance = Additional;
 
                     trigger OnValidate()
@@ -195,8 +223,10 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.UpdForm;
                     end;
                 }
-                field("% Dto. Docente"; "% Dto. Docente")
+                field("% Dto. Docente"; Rec."% Dto. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Docente';
                     Importance = Additional;
 
                     trigger OnValidate()
@@ -204,8 +234,10 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.UpdForm;
                     end;
                 }
-                field("% Dto. Feria Padres"; "% Dto. Feria Padres")
+                field("% Dto. Feria Padres"; Rec."% Dto. Feria Padres")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Feria Padres';
                     Importance = Additional;
 
                     trigger OnValidate()
@@ -213,8 +245,10 @@ page 67051 "Colegio - Adopciones Cab"
                         CurrPage.TmpAdopciones.PAGE.UpdForm;
                     end;
                 }
-                field("% Dto. Feria Colegio"; "% Dto. Feria Colegio")
+                field("% Dto. Feria Colegio"; Rec."% Dto. Feria Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Feria Colegio';
                     Importance = Additional;
 
                     trigger OnValidate()

@@ -11,27 +11,41 @@ page 75009 "Conf. Estructura Analitica"
         {
             repeater(Group)
             {
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                     Visible = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Nivel; Nivel)
+                field(Nivel; Rec.Nivel)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Id Field"; "Id Field")
+                field("Id Field"; Rec."Id Field")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Field';
                 }
-                field(FieldName; FieldName)
+                field(FieldName; Rec.FieldName)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'FieldName';
                 }
-                field(Valor; Valor)
+                field(Valor; Rec.Valor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor';
                 }
             }
         }

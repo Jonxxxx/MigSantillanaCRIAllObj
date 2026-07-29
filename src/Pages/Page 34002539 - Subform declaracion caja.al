@@ -15,28 +15,40 @@ page 34002539 "Subform declaracion caja"
         {
             repeater(Group)
             {
-                field("Forma de pago"; "Forma de pago")
+                field("Forma de pago"; Rec."Forma de pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de pago';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field("Cod. divisa"; "Cod. divisa")
+                field("Cod. divisa"; Rec."Cod. divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. divisa';
                     Editable = false;
                 }
-                field("Requiere recueto"; "Requiere recueto")
+                field("Requiere recueto"; Rec."Requiere recueto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requiere recueto';
                     Editable = false;
                 }
-                field("Importe calculado"; "Importe calculado")
+                field("Importe calculado"; Rec."Importe calculado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe calculado';
                     Editable = false;
                 }
-                field("Importe contado"; "Importe contado")
+                field("Importe contado"; Rec."Importe contado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe contado';
                     Style = Strong;
                     StyleExpr = TRUE;
 
@@ -53,19 +65,25 @@ page 34002539 "Subform declaracion caja"
                 }
                 field(Diferencia; TraerDiferencia)
                 {
+                    ApplicationArea = All;
                     Caption = 'Descuadre';
                     Editable = false;
                     StyleExpr = texEstiloTexto;
                 }
-                field("Importe calculado (DL)"; "Importe calculado (DL)")
+                field("Importe calculado (DL)"; Rec."Importe calculado (DL)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe calculado (DL)';
                     Editable = false;
                 }
-                field("Importe contado (DL)"; "Importe contado (DL)")
+                field("Importe contado (DL)"; Rec."Importe contado (DL)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe contado (DL)';
                 }
                 field(DiferenciaDL; TraerDiferenciaDL)
                 {
+                    ApplicationArea = All;
                     Caption = 'Descuadre (DL)';
                     Editable = false;
                     StyleExpr = texEstiloTexto;

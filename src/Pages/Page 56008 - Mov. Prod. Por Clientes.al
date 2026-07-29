@@ -12,29 +12,45 @@ page 56008 "Mov. Prod. Por Clientes"
         {
             repeater(Group)
             {
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("Source No."; "Source No.")
+                field("Source No."; Rec."Source No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Source No.';
                 }
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field("Sales Amount (Actual)"; "Sales Amount (Actual)")
+                field("Sales Amount (Actual)"; Rec."Sales Amount (Actual)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sales Amount (Actual)';
                 }
             }
         }

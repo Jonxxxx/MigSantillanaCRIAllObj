@@ -24,6 +24,7 @@ page 67075 "Seleccionar Productos Muestras"
             {
                 field(Seleccionar; Seleccionar)
                 {
+                    ApplicationArea = All;
                     Caption = 'Select';
 
                     trigger OnValidate()
@@ -31,14 +32,20 @@ page 67075 "Seleccionar Productos Muestras"
                         MARK(Seleccionar);
                     end;
                 }
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                 }
-                field("Item Description"; "Item Description")
+                field("Item Description"; Rec."Item Description")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item Description';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
             }
         }

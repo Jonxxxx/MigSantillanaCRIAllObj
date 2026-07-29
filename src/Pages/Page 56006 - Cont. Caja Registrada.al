@@ -13,26 +13,40 @@ page 56006 "Cont. Caja Registrada"
         {
             repeater(Group)
             {
-                field("No. Producto"; "No. Producto")
+                field("No. Producto"; Rec."No. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Producto';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Barras"; "Cod. Barras")
+                field("Cod. Barras"; Rec."Cod. Barras")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Barras';
                 }
-                field("Cod. Unidad de Medida"; "Cod. Unidad de Medida")
+                field("Cod. Unidad de Medida"; Rec."Cod. Unidad de Medida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Unidad de Medida';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("No. Picking"; "No. Picking")
+                field("No. Picking"; Rec."No. Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking';
                 }
-                field("No. Linea Picking"; "No. Linea Picking")
+                field("No. Linea Picking"; Rec."No. Linea Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Linea Picking';
                 }
             }
         }

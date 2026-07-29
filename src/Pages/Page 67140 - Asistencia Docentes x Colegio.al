@@ -16,40 +16,62 @@ page 67140 "Asistencia Docentes x Colegio"
         {
             repeater(General)
             {
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Codigo Distrito Colegio"; "Codigo Distrito Colegio")
+                field("Codigo Distrito Colegio"; Rec."Codigo Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Distrito Colegio';
                 }
-                field("Nombre Distrito Colegio"; "Nombre Distrito Colegio")
+                field("Nombre Distrito Colegio"; Rec."Nombre Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Distrito Colegio';
                 }
-                field("KPI Status"; "KPI Status")
+                field("KPI Status"; Rec."KPI Status")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'KPI Status';
                     Style = Attention;
                     StyleExpr = TRUE;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Cod. evento programado"; "Cod. evento programado")
+                field("Cod. evento programado"; Rec."Cod. evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento programado';
                 }
-                field("Descripcion evento programado"; "Descripcion evento programado")
+                field("Descripcion evento programado"; Rec."Descripcion evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento programado';
                 }
             }
         }

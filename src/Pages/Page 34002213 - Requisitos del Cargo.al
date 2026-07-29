@@ -10,18 +10,26 @@ page 34002213 "Requisitos del Cargo"
         {
             repeater(Group)
             {
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                     Visible = false;
                 }
-                field("Cod. requisito"; "Cod. requisito")
+                field("Cod. requisito"; Rec."Cod. requisito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. requisito';
                 }
-                field("Cualificacion requerida"; "Cualificacion requerida")
+                field("Cualificacion requerida"; Rec."Cualificacion requerida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cualificacion requerida';
                 }
-                field(Requerido; Requerido)
+                field(Requerido; Rec.Requerido)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requerido';
                 }
             }
         }

@@ -9,24 +9,36 @@ page 34003007 "Config. Split CC"
         {
             repeater(Group)
             {
-                field("Cta. Contable"; "Cta. Contable")
+                field("Cta. Contable"; Rec."Cta. Contable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cta. Contable';
                     Visible = false;
                 }
-                field("Descripcion Cta. Contable"; "Descripcion Cta. Contable")
+                field("Descripcion Cta. Contable"; Rec."Descripcion Cta. Contable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cta. Contable';
                 }
-                field("Dimension Code"; "Dimension Code")
+                field("Dimension Code"; Rec."Dimension Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Code';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("% a distribuir"; "% a distribuir")
+                field("% a distribuir"; Rec."% a distribuir")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% a distribuir';
                 }
             }
         }

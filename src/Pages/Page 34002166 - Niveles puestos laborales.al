@@ -11,20 +11,30 @@ page 34002166 "Niveles puestos laborales"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Importe minimo"; "Importe minimo")
+                field("Importe minimo"; Rec."Importe minimo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe minimo';
                 }
-                field("Importe Medio"; "Importe Medio")
+                field("Importe Medio"; Rec."Importe Medio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Medio';
                 }
-                field("Importe Maximo"; "Importe Maximo")
+                field("Importe Maximo"; Rec."Importe Maximo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Maximo';
                 }
             }
         }

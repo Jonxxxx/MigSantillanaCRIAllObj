@@ -13,14 +13,20 @@ page 67162 "Consulta Distrib. Centro Costo"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Porcentaje; Porcentaje)
+                field(Porcentaje; Rec.Porcentaje)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Porcentaje';
                 }
             }
         }

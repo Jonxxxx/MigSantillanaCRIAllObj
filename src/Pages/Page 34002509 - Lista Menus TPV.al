@@ -13,17 +13,25 @@ page 34002509 "Lista Menus TPV"
         {
             repeater(Group)
             {
-                field("Menu ID"; "Menu ID")
+                field("Menu ID"; Rec."Menu ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Menu ID';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cantidad de botones"; "Cantidad de botones")
+                field("Cantidad de botones"; Rec."Cantidad de botones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de botones';
                 }
-                field("Tipo Menu"; "Tipo Menu")
+                field("Tipo Menu"; Rec."Tipo Menu")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Menu';
                     BlankZero = true;
                 }
             }

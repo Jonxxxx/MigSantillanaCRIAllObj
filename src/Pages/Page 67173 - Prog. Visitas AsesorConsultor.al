@@ -10,17 +10,25 @@ page 67173 "Prog. Visitas Asesor/Consultor"
         {
             repeater(Group)
             {
-                field("Fecha Programada"; "Fecha Programada")
+                field("Fecha Programada"; Rec."Fecha Programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Programada';
                 }
-                field("Hora Inicio Programada"; "Hora Inicio Programada")
+                field("Hora Inicio Programada"; Rec."Hora Inicio Programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Inicio Programada';
                 }
-                field("Hora Fin Programada"; "Hora Fin Programada")
+                field("Hora Fin Programada"; Rec."Hora Fin Programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Fin Programada';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
             }
         }

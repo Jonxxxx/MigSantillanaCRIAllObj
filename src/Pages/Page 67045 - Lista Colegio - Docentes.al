@@ -12,81 +12,125 @@ page 67045 "Lista Colegio - Docentes"
         {
             repeater(General)
             {
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                     Visible = false;
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                     Editable = false;
                 }
-                field("Distrito colegio"; "Distrito colegio")
+                field("Distrito colegio"; Rec."Distrito colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distrito colegio';
                     Editable = false;
                 }
-                field("Nombre colegio"; "Nombre colegio")
+                field("Nombre colegio"; Rec."Nombre colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre colegio';
                     Editable = false;
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                 }
-                field("Nombre docente"; "Nombre docente")
+                field("Nombre docente"; Rec."Nombre docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre docente';
                     Editable = false;
                 }
-                field("Pertenece al CDS"; "Pertenece al CDS")
+                field("Pertenece al CDS"; Rec."Pertenece al CDS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pertenece al CDS';
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                     DrillDownPageID = "Lista Puestos";
                 }
-                field("Descripcion Cargo"; "Descripcion Cargo")
+                field("Descripcion Cargo"; Rec."Descripcion Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cargo';
                     Editable = false;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                     Editable = false;
                 }
-                field("Docente - Phone No."; "Docente - Phone No.")
+                field("Docente - Phone No."; Rec."Docente - Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Phone No.';
                 }
-                field("Docente - Tipo documento"; "Docente - Tipo documento")
+                field("Docente - Tipo documento"; Rec."Docente - Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Tipo documento';
                     Caption = 'Tipo documento';
                 }
-                field("Docente - Document ID"; "Docente - Document ID")
+                field("Docente - Document ID"; Rec."Docente - Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Document ID';
                 }
-                field("Docente - E-Mail"; "Docente - E-Mail")
+                field("Docente - E-Mail"; Rec."Docente - E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - E-Mail';
                 }
-                field("Docente - Mobile Phone No."; "Docente - Mobile Phone No.")
+                field("Docente - Mobile Phone No."; Rec."Docente - Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Mobile Phone No.';
                 }
                 field("Docente - E-Mail 2"; Rec."Docente - E-Mail 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - E-Mail 2';
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Nivel decision"; "Nivel decision")
+                field("Nivel decision"; Rec."Nivel decision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel decision';
                 }
-                field(Principal; Principal)
+                field(Principal; Rec.Principal)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Principal';
                 }
             }
         }

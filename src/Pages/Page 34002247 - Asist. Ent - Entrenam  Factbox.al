@@ -11,19 +11,27 @@ page 34002247 "Asist. Ent - Entrenam  Factbox"
         {
             repeater(GeneralRep)
             {
-                field("Titulo entrenamiento"; "Titulo entrenamiento")
+                field("Titulo entrenamiento"; Rec."Titulo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Titulo entrenamiento';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Fecha programacion"; "Fecha programacion")
+                field("Fecha programacion"; Rec."Fecha programacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programacion';
                 }
-                field("No. entrenamiento"; "No. entrenamiento")
+                field("No. entrenamiento"; Rec."No. entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. entrenamiento';
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                 }
             }
         }

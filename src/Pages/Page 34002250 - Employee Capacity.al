@@ -20,7 +20,7 @@ page 34002250 "Employee Capacity"
                 Caption = 'Matrix Options';
                 field(PeriodType; PeriodType)
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = 'View by';
                     OptionCaption = 'Day,Week,Month,Quarter,Year,Accounting Period';
                     ToolTip = 'Specifies by which period amounts are displayed.';
@@ -33,7 +33,7 @@ page 34002250 "Employee Capacity"
                 }
                 field(QtyType; QtyType)
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = 'View as';
                     OptionCaption = 'Net Change,Balance at Date';
                     ToolTip = 'Specifies how amounts are displayed. Net Change: The net change in the balance for the selected period. Balance at Date: The balance as of the last day in the selected period.';

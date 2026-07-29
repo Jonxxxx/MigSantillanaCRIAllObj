@@ -19,6 +19,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 //GridLayout = Rows;
                 field(MdEEquivalenceJX; GetMdEEquiv)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                     Enabled = false;
                     Importance = Promoted;
@@ -27,16 +28,21 @@ page 56200 "Equiv. conceptos NAV-MdE"
             repeater(Group)
             {
                 FreezeColumn = "Descripcion";
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                     Editable = false;
                 }
-                field(Descripcion; "Descripcion")
+                field(Descripcion; Rec."Descripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
                 field(Concept01JX; BooleanArray[1])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[1];
                     Visible = NoColumns > 0;
 
@@ -47,6 +53,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept02JX; BooleanArray[2])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[2];
                     Visible = NoColumns > 1;
 
@@ -57,6 +64,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept03JX; BooleanArray[3])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[3];
                     Visible = NoColumns > 2;
 
@@ -67,6 +75,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept04JX; BooleanArray[4])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[4];
                     Visible = NoColumns > 3;
 
@@ -77,6 +86,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept05JX; BooleanArray[5])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[5];
                     Visible = NoColumns > 4;
 
@@ -87,6 +97,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept06JX; BooleanArray[6])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[6];
                     Visible = NoColumns > 5;
 
@@ -97,6 +108,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept07JX; BooleanArray[7])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[7];
                     Visible = NoColumns > 6;
 
@@ -107,6 +119,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept08JX; BooleanArray[8])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[8];
                     Visible = NoColumns > 7;
 
@@ -117,6 +130,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept09JX; BooleanArray[9])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[9];
                     Visible = NoColumns > 8;
 
@@ -127,6 +141,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept10JX; BooleanArray[10])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[10];
                     Visible = NoColumns > 9;
 
@@ -137,6 +152,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept11JX; BooleanArray[11])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[11];
                     Visible = NoColumns > 10;
 
@@ -147,6 +163,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept12JX; BooleanArray[12])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[12];
                     Visible = NoColumns > 11;
 
@@ -157,6 +174,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept13JX; BooleanArray[13])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[13];
                     Visible = NoColumns > 12;
 
@@ -167,6 +185,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept14JX; BooleanArray[14])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[14];
                     Visible = NoColumns > 13;
 
@@ -177,6 +196,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept15JX; BooleanArray[15])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[15];
                     Visible = NoColumns > 14;
 
@@ -187,6 +207,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept16JX; BooleanArray[16])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[16];
                     Visible = NoColumns > 15;
 
@@ -197,6 +218,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept17JX; BooleanArray[17])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[17];
                     Visible = NoColumns > 16;
 
@@ -207,6 +229,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept18JX; BooleanArray[18])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[18];
                     Visible = NoColumns > 17;
 
@@ -217,6 +240,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept19JX; BooleanArray[19])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[19];
                     Visible = NoColumns > 18;
 
@@ -227,6 +251,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
                 }
                 field(Concept20JX; BooleanArray[20])
                 {
+                    ApplicationArea = All;
                     CaptionClass = ColumnNameArray[20];
                     Visible = NoColumns > 19;
 

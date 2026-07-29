@@ -12,6 +12,7 @@ page 34002510 "Ficha Menu TPV"
                 Visible = wPagos;
                 field(wText; wText)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                     MultiLine = false;
                     Style = Attention;
@@ -20,14 +21,20 @@ page 34002510 "Ficha Menu TPV"
             }
             group("Confguracion :")
             {
-                field("Menu ID"; "Menu ID")
+                field("Menu ID"; Rec."Menu ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Menu ID';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Tipo Menu"; "Tipo Menu")
+                field("Tipo Menu"; Rec."Tipo Menu")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Menu';
                     BlankZero = true;
 
                     trigger OnValidate()
@@ -35,8 +42,10 @@ page 34002510 "Ficha Menu TPV"
                         CurrPage.UPDATE;
                     end;
                 }
-                field("Cantidad de botones"; "Cantidad de botones")
+                field("Cantidad de botones"; Rec."Cantidad de botones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de botones';
                     BlankZero = true;
                     Editable = false;
                 }

@@ -14,20 +14,30 @@ page 56005 "Lin. Packing Registrada"
         {
             repeater(Group)
             {
-                field("No. Caja"; "No. Caja")
+                field("No. Caja"; Rec."No. Caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Caja';
                 }
-                field("Fecha Apertura Caja"; "Fecha Apertura Caja")
+                field("Fecha Apertura Caja"; Rec."Fecha Apertura Caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Apertura Caja';
                 }
-                field("Fecha Cierre Caja"; "Fecha Cierre Caja")
+                field("Fecha Cierre Caja"; Rec."Fecha Cierre Caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Cierre Caja';
                 }
-                field("Estado Caja"; "Estado Caja")
+                field("Estado Caja"; Rec."Estado Caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Caja';
                 }
-                field("No. Palet"; "No. Palet")
+                field("No. Palet"; Rec."No. Palet")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Palet';
                     Editable = false;
                 }
             }

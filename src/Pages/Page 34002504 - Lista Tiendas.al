@@ -13,14 +13,20 @@ page 34002504 "Lista Tiendas"
         {
             repeater(Group)
             {
-                field("Cod. Tienda"; "Cod. Tienda")
+                field("Cod. Tienda"; Rec."Cod. Tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Tienda';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Registro En Linea"; "Registro En Linea")
+                field("Registro En Linea"; Rec."Registro En Linea")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Registro En Linea';
                 }
             }
         }

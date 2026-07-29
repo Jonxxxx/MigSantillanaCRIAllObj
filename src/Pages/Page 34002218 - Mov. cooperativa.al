@@ -11,32 +11,50 @@ page 34002218 "Mov. cooperativa"
         {
             repeater(Group)
             {
-                field("No. Movimiento"; "No. Movimiento")
+                field("No. Movimiento"; Rec."No. Movimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Movimiento';
                 }
-                field("Tipo miembro"; "Tipo miembro")
+                field("Tipo miembro"; Rec."Tipo miembro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo miembro';
                 }
-                field("Employee No."; "Employee No.")
+                field("Employee No."; Rec."Employee No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee No.';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("Tipo transaccion"; "Tipo transaccion")
+                field("Tipo transaccion"; Rec."Tipo transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo transaccion';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
             }
         }

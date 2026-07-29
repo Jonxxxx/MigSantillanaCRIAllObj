@@ -9,23 +9,35 @@ page 67168 "Detalle Atenciones"
         {
             repeater(Group)
             {
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Precio Unitario"; "Precio Unitario")
+                field("Precio Unitario"; Rec."Precio Unitario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio Unitario';
                 }
-                field("Monto total"; "Monto total")
+                field("Monto total"; Rec."Monto total")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto total';
                 }
             }
         }

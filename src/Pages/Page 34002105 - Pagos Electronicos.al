@@ -10,30 +10,46 @@ page 34002105 "Pagos Electronicos"
         {
             repeater(GeneralRep)
             {
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                     Visible = false;
                 }
-                field("Cod. Banco"; "Cod. Banco")
+                field("Cod. Banco"; Rec."Cod. Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Banco';
                 }
-                field("Tipo Cuenta"; "Tipo Cuenta")
+                field("Tipo Cuenta"; Rec."Tipo Cuenta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta';
                 }
-                field("Numero Cuenta"; "Numero Cuenta")
+                field("Numero Cuenta"; Rec."Numero Cuenta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero Cuenta';
                 }
-                field("Nro. tarjeta"; "Nro. tarjeta")
+                field("Nro. tarjeta"; Rec."Nro. tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nro. tarjeta';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Fecha vencimiento"; "Fecha vencimiento")
+                field("Fecha vencimiento"; Rec."Fecha vencimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha vencimiento';
                 }
-                field("Tipo Importe"; "Tipo Importe")
+                field("Tipo Importe"; Rec."Tipo Importe")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Importe';
                 }
             }
         }

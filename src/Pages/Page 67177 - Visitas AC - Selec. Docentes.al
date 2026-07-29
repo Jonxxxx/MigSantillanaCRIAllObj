@@ -14,6 +14,7 @@ page 67177 "Visitas A/C - Selec. Docentes"
             {
                 field(Seleccionar; Seleccionar)
                 {
+                    ApplicationArea = All;
                     Caption = 'Select';
 
                     trigger OnValidate()
@@ -38,36 +39,56 @@ page 67177 "Visitas A/C - Selec. Docentes"
                         END;
                     end;
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                 }
-                field("Nombre docente"; "Nombre docente")
+                field("Nombre docente"; Rec."Nombre docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre docente';
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                 }
-                field("Docente - Phone No."; "Docente - Phone No.")
+                field("Docente - Phone No."; Rec."Docente - Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Phone No.';
                 }
-                field("Docente - Document ID"; "Docente - Document ID")
+                field("Docente - Document ID"; Rec."Docente - Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - Document ID';
                 }
-                field("Docente - E-Mail"; "Docente - E-Mail")
+                field("Docente - E-Mail"; Rec."Docente - E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Docente - E-Mail';
                 }
-                field("Pertenece al CDS"; "Pertenece al CDS")
+                field("Pertenece al CDS"; Rec."Pertenece al CDS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pertenece al CDS';
                     Editable = false;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                 }
             }
         }

@@ -13,17 +13,25 @@ page 34002502 "Lista TPVs"
         {
             repeater(Group)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field("Id TPV"; "Id TPV")
+                field("Id TPV"; Rec."Id TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id TPV';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Usuario windows"; "Usuario windows")
+                field("Usuario windows"; Rec."Usuario windows")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario windows';
                 }
             }
         }

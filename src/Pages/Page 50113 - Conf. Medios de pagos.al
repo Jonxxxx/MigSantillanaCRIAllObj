@@ -9,26 +9,40 @@ page 50113 "Conf. Medios de pagos"
         {
             repeater(Group)
             {
-                field("Cod. med. pago"; "Cod. med. pago")
+                field("Cod. med. pago"; Rec."Cod. med. pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. med. pago';
                 }
-                field(Credito; Credito)
+                field(Credito; Rec.Credito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Credito';
                 }
-                field("Account Type"; "Account Type")
+                field("Account Type"; Rec."Account Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Account Type';
                 }
-                field("Account No."; "Account No.")
+                field("Account No."; Rec."Account No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Account No.';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Forma Pago"; "Cod. Forma Pago")
+                field("Cod. Forma Pago"; Rec."Cod. Forma Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Forma Pago';
                 }
-                field("ID Agrupacion"; "ID Agrupacion")
+                field("ID Agrupacion"; Rec."ID Agrupacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Agrupacion';
                 }
             }
         }

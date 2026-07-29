@@ -11,92 +11,150 @@ page 67141 "Colegio - Textos que utilizan"
         {
             repeater(General)
             {
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Editorial"; "Cod. Editorial")
+                field("Cod. Editorial"; Rec."Cod. Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Editorial';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field(Seccion; Seccion)
+                field(Seccion; Rec.Seccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seccion';
                 }
-                field("Cod. Equiv. Santillana"; "Cod. Equiv. Santillana")
+                field("Cod. Equiv. Santillana"; Rec."Cod. Equiv. Santillana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Equiv. Santillana';
                 }
-                field("Descripcion Equiv. Santillana"; "Descripcion Equiv. Santillana")
+                field("Descripcion Equiv. Santillana"; Rec."Descripcion Equiv. Santillana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Equiv. Santillana';
                 }
-                field("Nombre Editorial"; "Nombre Editorial")
+                field("Nombre Editorial"; Rec."Nombre Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Editorial';
                 }
-                field("Cod. producto"; "Cod. producto")
+                field("Cod. producto"; Rec."Cod. producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. producto';
                 }
-                field("Cod. Producto Editora"; "Cod. Producto Editora")
+                field("Cod. Producto Editora"; Rec."Cod. Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto Editora';
                 }
-                field("Nombre Producto Editora"; "Nombre Producto Editora")
+                field("Nombre Producto Editora"; Rec."Nombre Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Producto Editora';
                 }
-                field("Nombre Libro"; "Nombre Libro")
+                field("Nombre Libro"; Rec."Nombre Libro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Libro';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                 }
-                field("Descripcion Grado"; "Descripcion Grado")
+                field("Descripcion Grado"; Rec."Descripcion Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Grado';
                 }
-                field("Fecha Adopcion"; "Fecha Adopcion")
+                field("Fecha Adopcion"; Rec."Fecha Adopcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Adopcion';
                 }
-                field("Cantidad Alumnos"; "Cantidad Alumnos")
+                field("Cantidad Alumnos"; Rec."Cantidad Alumnos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Alumnos';
                 }
-                field("Linea de negocio"; "Linea de negocio")
+                field("Linea de negocio"; Rec."Linea de negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Linea de negocio';
                 }
-                field(Familia; Familia)
+                field(Familia; Rec.Familia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Familia';
                 }
-                field("Sub Familia"; "Sub Familia")
+                field("Sub Familia"; Rec."Sub Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub Familia';
                 }
-                field(Adopcion; Adopcion)
+                field(Adopcion; Rec.Adopcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion';
                 }
-                field("% Dto. Padres de familia"; "% Dto. Padres de familia")
+                field("% Dto. Padres de familia"; Rec."% Dto. Padres de familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Padres de familia';
                 }
-                field("% Dto. Colegio"; "% Dto. Colegio")
+                field("% Dto. Colegio"; Rec."% Dto. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Colegio';
                 }
-                field("% Dto. Docente"; "% Dto. Docente")
+                field("% Dto. Docente"; Rec."% Dto. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Docente';
                 }
-                field("% Dto. Feria Padres de familia"; "% Dto. Feria Padres de familia")
+                field("% Dto. Feria Padres de familia"; Rec."% Dto. Feria Padres de familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Feria Padres de familia';
                 }
             }
         }

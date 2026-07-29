@@ -10,8 +10,10 @@ page 51012 "Grupo Negocio Reg."
         {
             repeater(Group)
             {
-                field("Grupo Negocio"; "Grupo Negocio")
+                field("Grupo Negocio"; Rec."Grupo Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Negocio';
                 }
             }
         }

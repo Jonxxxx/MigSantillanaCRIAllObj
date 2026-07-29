@@ -15,37 +15,57 @@ page 56028 "Lista clas. devoluciones cer."
             repeater(General)
             {
                 Editable = false;
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Customer no."; "Customer no.")
+                field("Customer no."; Rec."Customer no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer no.';
                 }
-                field("Customer name"; "Customer name")
+                field("Customer name"; Rec."Customer name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer name';
                 }
-                field("Receipt date"; "Receipt date")
+                field("Receipt date"; Rec."Receipt date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Receipt date';
                 }
-                field(Procesada; Procesada)
+                field(Procesada; Rec.Procesada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Procesada';
                 }
-                field("Usuario clasificacion"; "Usuario clasificacion")
+                field("Usuario clasificacion"; Rec."Usuario clasificacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario clasificacion';
                 }
-                field("Fecha hora clasificacion"; "Fecha hora clasificacion")
+                field("Fecha hora clasificacion"; Rec."Fecha hora clasificacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha hora clasificacion';
                 }
-                field("Dev. ventas generadas"; "Dev. ventas generadas")
+                field("Dev. ventas generadas"; Rec."Dev. ventas generadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dev. ventas generadas';
                     DrillDown = false;
                 }
-                field("Dev. Trans. generadas"; "Dev. Trans. generadas")
+                field("Dev. Trans. generadas"; Rec."Dev. Trans. generadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dev. Trans. generadas';
                     DrillDown = false;
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
             }
         }

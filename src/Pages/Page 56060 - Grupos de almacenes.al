@@ -11,11 +11,15 @@ page 56060 "Grupos de almacenes"
         {
             repeater(Group)
             {
-                field(Grupo; Grupo)
+                field(Grupo; Rec.Grupo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
             part(AlmacenesRelacionados; 56061)

@@ -9,11 +9,15 @@ page 34003026 "Lin. Dimensiones Requeridas"
         {
             repeater(Group)
             {
-                field("Cod. Dimension"; "Cod. Dimension")
+                field("Cod. Dimension"; Rec."Cod. Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Dimension';
                 }
-                field("Registro valor"; "Registro valor")
+                field("Registro valor"; Rec."Registro valor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Registro valor';
                 }
             }
         }

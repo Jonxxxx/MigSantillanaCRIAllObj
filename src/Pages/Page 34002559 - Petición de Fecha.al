@@ -8,6 +8,7 @@ page 34002559 "Peticion de Fecha"
         {
             field(Fecha; wFecha)
             {
+                ApplicationArea = All;
             }
         }
     }

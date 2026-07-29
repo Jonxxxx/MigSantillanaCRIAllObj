@@ -13,29 +13,41 @@ page 75010 "Conf. Campos Relacionados"
         {
             repeater(Group)
             {
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                     Visible = false;
                 }
-                field("Id Fld Origen"; "Id Fld Origen")
+                field("Id Fld Origen"; Rec."Id Fld Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Fld Origen';
                 }
                 field(GetNomCampoN; GetNomCampo(0))
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Campo Origen';
                 }
-                field("Valor Origen"; "Valor Origen")
+                field("Valor Origen"; Rec."Valor Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor Origen';
                 }
-                field("Id Fld Destino"; "Id Fld Destino")
+                field("Id Fld Destino"; Rec."Id Fld Destino")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Fld Destino';
                 }
                 field(GetNomCampoN1; GetNomCampo(1))
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Campo Destino';
                 }
-                field("Valor Destino"; "Valor Destino")
+                field("Valor Destino"; Rec."Valor Destino")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor Destino';
                 }
             }
         }

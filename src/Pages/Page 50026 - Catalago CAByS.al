@@ -12,20 +12,30 @@ page 50026 "Catalago CAByS"
         {
             repeater(Group)
             {
-                field("Codigo CABYS"; "Codigo CABYS")
+                field("Codigo CABYS"; Rec."Codigo CABYS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo CABYS';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Tipo CABYS"; "Tipo CABYS")
+                field("Tipo CABYS"; Rec."Tipo CABYS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo CABYS';
                 }
-                field("Tarifa IVA"; "Tarifa IVA")
+                field("Tarifa IVA"; Rec."Tarifa IVA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tarifa IVA';
                 }
-                field("Tipo Impuesto"; "Tipo Impuesto")
+                field("Tipo Impuesto"; Rec."Tipo Impuesto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Impuesto';
                 }
             }
         }

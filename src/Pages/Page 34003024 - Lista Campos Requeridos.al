@@ -13,14 +13,20 @@ page 34003024 "Lista Campos Requeridos"
         {
             repeater(Group)
             {
-                field("No. Tabla"; "No. Tabla")
+                field("No. Tabla"; Rec."No. Tabla")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Tabla';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
-                field(Activo; Activo)
+                field(Activo; Rec.Activo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Activo';
                     Editable = false;
                 }
             }

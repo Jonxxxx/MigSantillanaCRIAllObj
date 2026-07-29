@@ -11,47 +11,71 @@ page 56027 "Subform clas. devoluciones"
         {
             repeater(General)
             {
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                 }
-                field("Item Description"; "Item Description")
+                field("Item Description"; Rec."Item Description")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item Description';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Unit of Measure Code"; "Unit of Measure Code")
+                field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure Code';
                     Editable = false;
                 }
-                field("Con defecto"; "Con defecto")
+                field("Con defecto"; Rec."Con defecto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Con defecto';
                 }
-                field(Recuperable; Recuperable)
+                field(Recuperable; Rec.Recuperable)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Recuperable';
                 }
-                field("Cross-Reference No."; "Cross-Reference No.")
+                field("Cross-Reference No."; Rec."Cross-Reference No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cross-Reference No.';
                     Editable = false;
                 }
-                field("Variant Code"; "Variant Code")
+                field("Variant Code"; Rec."Variant Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Variant Code';
                     Editable = false;
                 }
-                field(Inventory; Inventory)
+                field(Inventory; Rec.Inventory)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inventory';
                     Editable = false;
                 }
-                field("Inventario en Consignacion"; "Inventario en Consignacion")
+                field("Inventario en Consignacion"; Rec."Inventario en Consignacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inventario en Consignacion';
                     Editable = false;
                 }
-                field("Receiving date"; "Receiving date")
+                field("Receiving date"; Rec."Receiving date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Receiving date';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
             }
         }

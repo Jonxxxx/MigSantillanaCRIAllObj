@@ -11,62 +11,100 @@ page 34002116 "Historico lineas nominas"
             repeater(GeneralRep)
             {
                 Editable = false;
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Importe Base"; "Importe Base")
+                field("Importe Base"; Rec."Importe Base")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Base';
                 }
-                field(Total; Total)
+                field(Total; Rec.Total)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total';
                 }
-                field("% Cotizable"; "% Cotizable")
+                field("% Cotizable"; Rec."% Cotizable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Cotizable';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                 }
-                field("Salario Base"; "Salario Base")
+                field("Salario Base"; Rec."Salario Base")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario Base';
                 }
-                field("Sujeto Cotizacion"; "Sujeto Cotizacion")
+                field("Sujeto Cotizacion"; Rec."Sujeto Cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sujeto Cotizacion';
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                 }
-                field("Cotiza ISR"; "Cotiza ISR")
+                field("Cotiza ISR"; Rec."Cotiza ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza ISR';
                 }
-                field("Cotiza SFS"; "Cotiza SFS")
+                field("Cotiza SFS"; Rec."Cotiza SFS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SFS';
                 }
-                field("Cotiza AFP"; "Cotiza AFP")
+                field("Cotiza AFP"; Rec."Cotiza AFP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza AFP';
                 }
-                field(Formula; Formula)
+                field(Formula; Rec.Formula)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Formula';
                 }
-                field("Texto Informativo"; "Texto Informativo")
+                field("Texto Informativo"; Rec."Texto Informativo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto Informativo';
                 }
-                field("Cotiza SRL"; "Cotiza SRL")
+                field("Cotiza SRL"; Rec."Cotiza SRL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza SRL';
                 }
-                field("Cotiza Infotep"; "Cotiza Infotep")
+                field("Cotiza Infotep"; Rec."Cotiza Infotep")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza Infotep';
                 }
-                field("Aplica para Regalia"; "Aplica para Regalia")
+                field("Aplica para Regalia"; Rec."Aplica para Regalia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica para Regalia';
                 }
             }
         }

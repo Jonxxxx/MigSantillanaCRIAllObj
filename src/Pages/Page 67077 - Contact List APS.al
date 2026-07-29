@@ -17,51 +17,77 @@ page 67077 "Contact List APS"
             {
                 IndentationColumn = NameIndent;
                 IndentationControls = Name;
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field("Company Name"; "Company Name")
+                field("Company Name"; Rec."Company Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company Name';
                     Visible = false;
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                     Visible = false;
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                     Visible = false;
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                     Visible = false;
                 }
-                field("Fax No."; "Fax No.")
+                field("Fax No."; Rec."Fax No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fax No.';
                     Visible = false;
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
                 }
-                field("Territory Code"; "Territory Code")
+                field("Territory Code"; Rec."Territory Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Territory Code';
                 }
-                field("Currency Code"; "Currency Code")
+                field("Currency Code"; Rec."Currency Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Currency Code';
                     Visible = false;
                 }
-                field("Language Code"; "Language Code")
+                field("Language Code"; Rec."Language Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Language Code';
                     Visible = false;
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
             }
         }

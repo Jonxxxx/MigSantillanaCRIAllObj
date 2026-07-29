@@ -12,20 +12,30 @@ page 67181 "Seguim.Visita Asesor/Consultor"
         {
             repeater(Group)
             {
-                field("No. Cambio"; "No. Cambio")
+                field("No. Cambio"; Rec."No. Cambio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cambio';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field(Usuario; Usuario)
+                field(Usuario; Rec.Usuario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
             }
         }

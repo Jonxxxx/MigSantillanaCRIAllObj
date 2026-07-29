@@ -10,29 +10,43 @@ page 67067 "Colegio - Personal J. subform"
         {
             repeater(General)
             {
-                field("Nombre colegio"; "Nombre colegio")
+                field("Nombre colegio"; Rec."Nombre colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre colegio';
                     Visible = false;
                 }
-                field("Aplica Jerarquia Puestos"; "Aplica Jerarquia Puestos")
+                field("Aplica Jerarquia Puestos"; Rec."Aplica Jerarquia Puestos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Jerarquia Puestos';
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                 }
-                field("Nombre docente"; "Nombre docente")
+                field("Nombre docente"; Rec."Nombre docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre docente';
                     Editable = false;
                 }
-                field("Cod. Cargo"; "Cod. Cargo")
+                field("Cod. Cargo"; Rec."Cod. Cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cargo';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                     Editable = false;
                 }
-                field("Descripcion Nivel"; "Descripcion Nivel")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
                 }
             }
         }

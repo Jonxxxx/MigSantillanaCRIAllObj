@@ -11,24 +11,36 @@ page 34002129 "Lista Cab Impuestos"
         {
             repeater(GeneralRep)
             {
-                field("Tipo de nomina"; "Tipo de nomina")
+                field("Tipo de nomina"; Rec."Tipo de nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de nomina';
                 }
-                field("Tipo Nomina"; "Tipo Nomina")
+                field("Tipo Nomina"; Rec."Tipo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Nomina';
                     Visible = false;
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field("Unidad cotizacion"; "Unidad cotizacion")
+                field("Unidad cotizacion"; Rec."Unidad cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unidad cotizacion';
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                 }
-                field("No. Contabilizacion"; "No. Contabilizacion")
+                field("No. Contabilizacion"; Rec."No. Contabilizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Contabilizacion';
                 }
             }
         }

@@ -11,29 +11,45 @@ page 56131 "Distribuccion de Rutas"
         {
             repeater(Group)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field("Nombre de Ruta"; "Nombre de Ruta")
+                field("Nombre de Ruta"; Rec."Nombre de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre de Ruta';
                 }
-                field(CP; CP)
+                field(CP; Rec.CP)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'CP';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Region Code"; "Region Code")
+                field("Region Code"; Rec."Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Region Code';
                 }
-                field(Country; Country)
+                field(Country; Rec.Country)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country';
                 }
-                field(Colonia; Colonia)
+                field(Colonia; Rec.Colonia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Colonia';
                 }
-                field("Tiempo de Envio"; "Tiempo de Envio")
+                field("Tiempo de Envio"; Rec."Tiempo de Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tiempo de Envio';
                 }
             }
         }

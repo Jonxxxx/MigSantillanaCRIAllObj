@@ -19,40 +19,58 @@ page 56000 Packing
         {
             group(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                     Editable = false;
                 }
-                field("No. Mesa"; "No. Mesa")
+                field("No. Mesa"; Rec."No. Mesa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Mesa';
                 }
-                field("Picking No."; "Picking No.")
+                field("Picking No."; Rec."Picking No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Picking No.';
                     Enabled = TieneGestionAlmacen;
                     Visible = TieneGestionAlmacen;
                 }
-                field("Fecha Apertura"; "Fecha Apertura")
+                field("Fecha Apertura"; Rec."Fecha Apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Apertura';
                 }
-                field("Tipo pedido"; "Tipo pedido")
+                field("Tipo pedido"; Rec."Tipo pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo pedido';
                     Caption = 'Tipo de Pedido';
                     Enabled = NOT TieneGestionAlmacen;
                     Visible = NOT TieneGestionAlmacen;
                 }
-                field("No. Pedido"; "No. Pedido")
+                field("No. Pedido"; Rec."No. Pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pedido';
                     Enabled = NOT TieneGestionAlmacen;
                     Visible = NOT TieneGestionAlmacen;
                 }
-                field("Total de Productos"; "Total de Productos")
+                field("Total de Productos"; Rec."Total de Productos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total de Productos';
                 }
-                field("No. Palet Abierto"; "No. Palet Abierto")
+                field("No. Palet Abierto"; Rec."No. Palet Abierto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Palet Abierto';
                     Editable = false;
                 }
             }

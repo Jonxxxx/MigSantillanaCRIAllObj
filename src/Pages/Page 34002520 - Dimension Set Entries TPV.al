@@ -14,18 +14,26 @@ page 34002520 "Dimension Set Entries TPV"
         {
             repeater(GeneralRep)
             {
-                field("Dimension Code"; "Dimension Code")
+                field("Dimension Code"; Rec."Dimension Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Code';
                 }
-                field("Dimension Name"; "Dimension Name")
+                field("Dimension Name"; Rec."Dimension Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Name';
                     Visible = false;
                 }
-                field(DimensionValueCode; "Dimension Value Code")
+                field(DimensionValueCode; Rec."Dimension Value Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Value Code';
                 }
-                field("Dimension Value Name"; "Dimension Value Name")
+                field("Dimension Value Name"; Rec."Dimension Value Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dimension Value Name';
                 }
             }
         }

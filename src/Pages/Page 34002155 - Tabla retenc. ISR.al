@@ -14,20 +14,30 @@ page 34002155 "Tabla retenc. ISR"
         {
             repeater(GeneralRep)
             {
-                field(Ano; Ano)
+                field(Ano; Rec.Ano)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano';
                 }
-                field("No. orden"; "No. orden")
+                field("No. orden"; Rec."No. orden")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. orden';
                 }
-                field("Importe Maximo"; "Importe Maximo")
+                field("Importe Maximo"; Rec."Importe Maximo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Maximo';
                 }
-                field("Importe retencion"; "Importe retencion")
+                field("Importe retencion"; Rec."Importe retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe retencion';
                 }
-                field("% Retencion"; "% Retencion")
+                field("% Retencion"; Rec."% Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Retencion';
                 }
             }
         }

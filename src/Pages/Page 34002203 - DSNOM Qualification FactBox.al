@@ -15,9 +15,12 @@ page 34002203 "DSNOM Qualification FactBox"
                 //GridLayout = Columns;
                 field(Description; FORMAT(Description))
                 {
+                    ApplicationArea = All;
                 }
-                field("Expiration Date"; "Expiration Date")
+                field("Expiration Date"; Rec."Expiration Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Expiration Date';
                 }
             }
         }

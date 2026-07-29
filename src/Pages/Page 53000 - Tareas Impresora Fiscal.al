@@ -12,12 +12,15 @@ page 53000 "Tareas Impresora Fiscal"
                 Visible = false;
                 field(FechaDesde; FechaDesde)
                 {
+                    ApplicationArea = All;
                 }
                 field(FechaHasta; FechaHasta)
                 {
+                    ApplicationArea = All;
                 }
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Detallado';
                 }
             }

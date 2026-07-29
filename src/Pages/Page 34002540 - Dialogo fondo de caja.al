@@ -8,6 +8,7 @@ page 34002540 "Dialogo fondo de caja"
         {
             field("Fondo de caja";decFondo)
             {
+                ApplicationArea = All;
             }
         }
     }

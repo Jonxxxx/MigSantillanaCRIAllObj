@@ -9,11 +9,15 @@ page 67142 "Grupo de Colegios"
         {
             repeater(Group)
             {
-                field("Cod. Grupo"; "Cod. Grupo")
+                field("Cod. Grupo"; Rec."Cod. Grupo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grupo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

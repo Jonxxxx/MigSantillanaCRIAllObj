@@ -10,7 +10,7 @@ page 34002249 "Payroll Charts"
         {
             field(StatusText; StatusText)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Enabled = false;
                 ShowCaption = false;
                 Style = StrongAccent;

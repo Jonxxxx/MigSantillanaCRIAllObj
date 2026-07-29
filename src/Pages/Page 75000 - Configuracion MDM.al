@@ -15,129 +15,177 @@ page 75000 "Configuracion MDM"
                 group(GeneralB)
                 {
                     Caption = 'General';
-                    field("Bloquea Datos MDM"; "Bloquea Datos MDM")
+                    field("Bloquea Datos MDM"; Rec."Bloquea Datos MDM")
                     {
-                        ToolTip = ' Bloquea los valores MdM para que no sean editables';
+                        ApplicationArea = All;
+                        ToolTip = 'Bloquea Datos MDM';
                     }
-                    field("Obliga Campos MdM"; "Obliga Campos MdM")
+                    field("Obliga Campos MdM"; Rec."Obliga Campos MdM")
                     {
-                        ToolTip = 'Genera error si no rellenan debidamente todos los campos MdM';
+                        ApplicationArea = All;
+                        ToolTip = 'Obliga Campos MdM';
                         Visible = false;
                     }
-                    field("URL Async Reply"; "URL Async Reply")
+                    field("URL Async Reply"; Rec."URL Async Reply")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'URL Async Reply';
                     }
-                    field("URL Notif.MdM"; "URL Notif.MdM")
+                    field("URL Notif.MdM"; Rec."URL Notif.MdM")
                     {
-                        ToolTip = 'Url del Web Service donde notificar a MdM los cambios en productos';
+                        ApplicationArea = All;
+                        ToolTip = 'URL Notif.MdM';
                     }
-                    field("Notifica a MdM"; "Notifica a MdM")
+                    field("Notifica a MdM"; Rec."Notifica a MdM")
                     {
-                        ToolTip = 'Notifica cambios de productos a MdM';
+                        ApplicationArea = All;
+                        ToolTip = 'Notifica a MdM';
                     }
-                    field("Dias Borrado Historico"; "Dias Borrado Historico")
+                    field("Dias Borrado Historico"; Rec."Dias Borrado Historico")
                     {
-                        ToolTip = 'Indica con cuantos dias tiene que borrarse el historico.0 No se borra nunca';
+                        ApplicationArea = All;
+                        ToolTip = 'Dias Borrado Historico';
                     }
-                    field("Sistema Origen"; "Sistema Origen")
+                    field("Sistema Origen"; Rec."Sistema Origen")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Sistema Origen';
                     }
-                    field("Estado Inactivo"; "Estado Inactivo")
+                    field("Estado Inactivo"; Rec."Estado Inactivo")
                     {
-                        ToolTip = 'Codigo Estado que provocará que el producto se marque como "Inactivo"';
+                        ApplicationArea = All;
+                        ToolTip = 'Estado Inactivo';
                     }
                 }
                 group("Precios Venta")
                 {
                     Caption = 'Precios Venta';
-                    field("Grupo Precio PVP"; "Grupo Precio PVP")
+                    field("Grupo Precio PVP"; Rec."Grupo Precio PVP")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Grupo Precio PVP';
                         Visible = false;
                     }
-                    field("Grupo Precio PROM"; "Grupo Precio PROM")
+                    field("Grupo Precio PROM"; Rec."Grupo Precio PROM")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Grupo Precio PROM';
                         Visible = false;
                     }
-                    field("Tipo Precio Venta"; "Tipo Precio Venta")
+                    field("Tipo Precio Venta"; Rec."Tipo Precio Venta")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Tipo Precio Venta';
 
                         trigger OnValidate()
                         begin
                             SeTEnabled;
                         end;
                     }
-                    field("Grupo Precio Cliente"; "Grupo Precio Cliente")
+                    field("Grupo Precio Cliente"; Rec."Grupo Precio Cliente")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Grupo Precio Cliente';
                         Enabled = wEnblGrpClient;
                     }
-                    field("VAT Bus. Posting Group"; "VAT Bus. Posting Group")
+                    field("VAT Bus. Posting Group"; Rec."VAT Bus. Posting Group")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'VAT Bus. Posting Group';
                     }
                 }
                 group("Datos Auxiliares Impt.")
                 {
                     Caption = 'Datos Auxiliares Impt.';
-                    field("Serie Producto"; "Serie Producto")
+                    field("Serie Producto"; Rec."Serie Producto")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Serie Producto';
                     }
-                    field("Control ISBN"; "Control ISBN")
+                    field("Control ISBN"; Rec."Control ISBN")
                     {
-                        ToolTip = 'Determina si debe de comprobarse el algoritmo IBN13';
+                        ApplicationArea = All;
+                        ToolTip = 'Control ISBN';
                     }
-                    field("Base Unit of Measure"; "Base Unit of Measure")
+                    field("Base Unit of Measure"; Rec."Base Unit of Measure")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Base Unit of Measure';
                     }
-                    field("Divisa Local MdM"; "Divisa Local MdM")
+                    field("Divisa Local MdM"; Rec."Divisa Local MdM")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Divisa Local MdM';
                     }
                 }
                 group("Cola De Proyecto")
                 {
                     Caption = 'Cola De Proyecto';
-                    field("Activar Cola Proy. Auto."; "Activar Cola Proy. Auto.")
+                    field("Activar Cola Proy. Auto."; Rec."Activar Cola Proy. Auto.")
                     {
-                        ToolTip = 'Si se activa, la cola de proyecto se activara automaticamente y el mov se activara y desactivara también automaticamente';
+                        ApplicationArea = All;
+                        ToolTip = 'Activar Cola Proy. Auto.';
                     }
-                    field("Cola proyecto"; "Cola proyecto")
+                    field("Cola proyecto"; Rec."Cola proyecto")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Cola proyecto';
                         Visible = false;
                     }
-                    field("Mov. cola proyecto"; "Mov. cola proyecto")
+                    field("Mov. cola proyecto"; Rec."Mov. cola proyecto")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Mov. cola proyecto';
                     }
-                    field("Job Queue Category"; "Job Queue Category")
+                    field("Job Queue Category"; Rec."Job Queue Category")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Job Queue Category';
                     }
                 }
             }
             group(Dimensiones)
             {
-                field("Dim Serie/Metodo"; "Dim Serie/Metodo")
+                field("Dim Serie/Metodo"; Rec."Dim Serie/Metodo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Serie/Metodo';
                     Caption = 'Serie/Metodo';
                 }
-                field("Dim Destino"; "Dim Destino")
+                field("Dim Destino"; Rec."Dim Destino")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Destino';
                     Caption = 'Destino';
                 }
-                field("Dim Cuenta"; "Dim Cuenta")
+                field("Dim Cuenta"; Rec."Dim Cuenta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Cuenta';
                     Caption = 'Cuenta';
                 }
-                field("Dim Tipo Texto"; "Dim Tipo Texto")
+                field("Dim Tipo Texto"; Rec."Dim Tipo Texto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Tipo Texto';
                     Caption = 'Tipo Texto';
                 }
-                field("Dim Materia"; "Dim Materia")
+                field("Dim Materia"; Rec."Dim Materia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Materia';
                     Caption = 'Materia';
                 }
-                field("Dim Carga Horaria"; "Dim Carga Horaria")
+                field("Dim Carga Horaria"; Rec."Dim Carga Horaria")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Carga Horaria';
                     Caption = 'Carga Horaria';
                 }
-                field("Dim Origen"; "Dim Origen")
+                field("Dim Origen"; Rec."Dim Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dim Origen';
                     Caption = 'Origen';
                 }
             }

@@ -10,34 +10,52 @@ page 34002513 "Ficha Formas de Pago"
         {
             group(General)
             {
-                field("ID Pago"; "ID Pago")
+                field("ID Pago"; Rec."ID Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Pago';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Efectivo Local"; "Efectivo Local")
+                field("Efectivo Local"; Rec."Efectivo Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Efectivo Local';
                     Caption = 'Cash in Local Currency';
                 }
-                field("Abre cajon"; "Abre cajon")
+                field("Abre cajon"; Rec."Abre cajon")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Abre cajon';
                 }
-                field("Cod. divisa"; "Cod. divisa")
+                field("Cod. divisa"; Rec."Cod. divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. divisa';
                 }
-                field("Tipo Tarjeta"; "Tipo Tarjeta")
+                field("Tipo Tarjeta"; Rec."Tipo Tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Tarjeta';
                 }
-                field("Realizar recuento"; "Realizar recuento")
+                field("Realizar recuento"; Rec."Realizar recuento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Realizar recuento';
                 }
-                field("Icono Nav"; "Icono Nav")
+                field("Icono Nav"; Rec."Icono Nav")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Icono Nav';
                     Caption = 'Icono';
                 }
-                field("Tipo Compensacion NC"; "Tipo Compensacion NC")
+                field("Tipo Compensacion NC"; Rec."Tipo Compensacion NC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Compensacion NC';
                     Visible = false;
                 }
             }

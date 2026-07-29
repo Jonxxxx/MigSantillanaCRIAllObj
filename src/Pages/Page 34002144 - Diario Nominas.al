@@ -13,6 +13,7 @@ page 34002144 "Diario Nominas"
         {
             field(GETFILTERS; GETFILTERS)
             {
+                ApplicationArea = All;
                 Editable = false;
             }
             group(ListEmpl)
@@ -24,49 +25,71 @@ page 34002144 "Diario Nominas"
                 {
                     Editable = false;
                     FreezeColumn = "Full Name";
-                    field("No."; "No.")
+                    field("No."; Rec."No.")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'No.';
                         Editable = false;
                         Importance = Promoted;
                     }
-                    field("Full Name"; "Full Name")
+                    field("Full Name"; Rec."Full Name")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Full Name';
                         Importance = Promoted;
                     }
-                    field("Document ID"; "Document ID")
+                    field("Document ID"; Rec."Document ID")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Document ID';
                         Editable = false;
                     }
-                    field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                    field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Global Dimension 1 Code';
                         Editable = false;
                     }
-                    field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                    field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Global Dimension 2 Code';
                         Editable = false;
                     }
-                    field("Employment Date"; "Employment Date")
+                    field("Employment Date"; Rec."Employment Date")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Employment Date';
                         Editable = false;
                     }
-                    field("Job Type Code"; "Job Type Code")
+                    field("Job Type Code"; Rec."Job Type Code")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Job Type Code';
                         Editable = false;
                     }
-                    field("Job Title"; "Job Title")
+                    field("Job Title"; Rec."Job Title")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Job Title';
                         Editable = false;
                     }
-                    field("Calcular Nomina"; "Calcular Nomina")
+                    field("Calcular Nomina"; Rec."Calcular Nomina")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Calcular Nomina';
                         Editable = false;
                     }
-                    field(Departamento; Departamento)
+                    field(Departamento; Rec.Departamento)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Departamento';
                         Editable = false;
                     }
-                    field("Desc. Departamento"; "Desc. Departamento")
+                    field("Desc. Departamento"; Rec."Desc. Departamento")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Desc. Departamento';
                         Editable = false;
                     }
                 }

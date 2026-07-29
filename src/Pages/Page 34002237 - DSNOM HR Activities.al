@@ -11,17 +11,22 @@ page 34002237 "DSNOM HR Activities"
             cuegroup("Human Resource")
             {
                 Caption = 'Human Resource';
-                field("Active Employees"; "Active Employees")
+                field("Active Employees"; Rec."Active Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Active Employees';
                     Image = People;
                 }
-                field("Inactives Employees"; "Inactives Employees")
+                field("Inactives Employees"; Rec."Inactives Employees")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactives Employees';
                     Image = People;
                 }
                 field(FuncionesNomAniversarioEmpleados;
                     FuncionesNom.AniversarioEmpleados)
                 {
+                    ApplicationArea = All;
                     Caption = 'Empl. anniversary';
                     DecimalPlaces = 0 : 2;
                     Image = Time;
@@ -33,16 +38,22 @@ page 34002237 "DSNOM HR Activities"
                         FuncionesNom.MuestraAniversarioEmpl;
                     end;
                 }
-                field("New hires"; "New hires")
+                field("New hires"; Rec."New hires")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'New hires';
                     Image = People;
                 }
-                field("Employee departures"; "Employee departures")
+                field("Employee departures"; Rec."Employee departures")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee departures';
                     Image = People;
                 }
-                field("Contract to expire"; "Contract to expire")
+                field("Contract to expire"; Rec."Contract to expire")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contract to expire';
                     Enabled = false;
                     Image = People;
                     Visible = false;

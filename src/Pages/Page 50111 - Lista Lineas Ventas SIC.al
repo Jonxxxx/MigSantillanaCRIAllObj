@@ -13,62 +13,100 @@ page 50111 "Lista Lineas Ventas SIC"
         {
             repeater(Group)
             {
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("No. linea"; "No. linea")
+                field("No. linea"; Rec."No. linea")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. linea';
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field("Cod. Moneda"; "Cod. Moneda")
+                field("Cod. Moneda"; Rec."Cod. Moneda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Moneda';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Importe descuento"; "Importe descuento")
+                field("Importe descuento"; Rec."Importe descuento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe descuento';
                 }
-                field("Precio de venta"; "Precio de venta")
+                field("Precio de venta"; Rec."Precio de venta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio de venta';
                 }
-                field("Unidad de medida"; "Unidad de medida")
+                field("Unidad de medida"; Rec."Unidad de medida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unidad de medida';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("Importe ITBIS Incluido"; "Importe ITBIS Incluido")
+                field("Importe ITBIS Incluido"; Rec."Importe ITBIS Incluido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe ITBIS Incluido';
                 }
-                field(codproducto; codproducto)
+                field(codproducto; Rec.codproducto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'codproducto';
                 }
-                field(Transferido; Transferido)
+                field(Transferido; Rec.Transferido)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transferido';
                 }
-                field(ITBIS; ITBIS)
+                field(ITBIS; Rec.ITBIS)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ITBIS';
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field(Origen; Origen)
+                field(Origen; Rec.Origen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Origen';
                 }
-                field(Cupon; Cupon)
+                field(Cupon; Rec.Cupon)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cupon';
                 }
-                field("No. documento SIC"; "No. documento SIC")
+                field("No. documento SIC"; Rec."No. documento SIC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento SIC';
                 }
             }
         }

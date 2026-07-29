@@ -15,23 +15,30 @@ page 56037 "Captura Productos"
             {
                 field(EXCCRIMark; MARK)
                 {
+                    ApplicationArea = All;
                     Caption = 'Marked';
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
                 field(AvailabilityJX;
                     SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location))
                 {
+                    ApplicationArea = All;
                     Caption = 'Disponibilidad';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
                 field("Macado Manualmente"; Marcado)
                 {
+                    ApplicationArea = All;
 
                     trigger OnValidate()
                     begin

@@ -14,59 +14,95 @@ page 67040 "Lista de Docentes"
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("No. 2"; "No. 2")
+                field("No. 2"; Rec."No. 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. 2';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field("Full Name"; "Full Name")
+                field("Full Name"; Rec."Full Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full Name';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field("Pertenece al CDS"; "Pertenece al CDS")
+                field("Pertenece al CDS"; Rec."Pertenece al CDS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pertenece al CDS';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field(Twitter; Twitter)
+                field(Twitter; Rec.Twitter)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Twitter';
                 }
-                field(Facebook; Facebook)
+                field(Facebook; Rec.Facebook)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Facebook';
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
                 }
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                 }
-                field("Usuario creacion"; "Usuario creacion")
+                field("Usuario creacion"; Rec."Usuario creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario creacion';
                 }
             }
         }

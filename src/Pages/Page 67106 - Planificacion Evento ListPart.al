@@ -8,11 +8,15 @@ page 67106 "Planificacion Evento ListPart"
     {
         area(content)
         {
-            field("Asistentes esperados"; "Asistentes esperados")
+            field("Asistentes esperados"; Rec."Asistentes esperados")
             {
+                ApplicationArea = All;
+                ToolTip = 'Asistentes esperados';
             }
-            field("Total registrados"; "Total registrados")
+            field("Total registrados"; Rec."Total registrados")
             {
+                ApplicationArea = All;
+                ToolTip = 'Total registrados';
             }
         }
     }

@@ -13,8 +13,10 @@ page 56036 "Sales Order Call Center"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Importance = Promoted;
 
                     trigger OnAssistEdit()
@@ -23,8 +25,10 @@ page 56036 "Sales Order Call Center"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                     Importance = Promoted;
 
                     trigger OnValidate()
@@ -32,109 +36,163 @@ page 56036 "Sales Order Call Center"
                         SelltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Sell-to Contact No."; "Sell-to Contact No.")
+                field("Sell-to Contact No."; Rec."Sell-to Contact No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact No.';
                     Importance = Additional;
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                 }
-                field("Sell-to Address"; "Sell-to Address")
+                field("Sell-to Address"; Rec."Sell-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Address';
                     Importance = Additional;
                 }
-                field("Sell-to Address 2"; "Sell-to Address 2")
+                field("Sell-to Address 2"; Rec."Sell-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Address 2';
                     Importance = Additional;
                 }
-                field("Sell-to City"; "Sell-to City")
+                field("Sell-to City"; Rec."Sell-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to City';
                 }
-                field("Sell-to County"; "Sell-to County")
+                field("Sell-to County"; Rec."Sell-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to County';
                     Caption = 'Sell-to State / ZIP Code';
                 }
-                field("Sell-to Post Code"; "Sell-to Post Code")
+                field("Sell-to Post Code"; Rec."Sell-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Post Code';
                     Importance = Additional;
                 }
-                field("Sell-to Contact"; "Sell-to Contact")
+                field("Sell-to Contact"; Rec."Sell-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact';
                     Importance = Additional;
                 }
-                field("No. of Archived Versions"; "No. of Archived Versions")
+                field("No. of Archived Versions"; Rec."No. of Archived Versions")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. of Archived Versions';
                     Importance = Additional;
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("Order Date"; "Order Date")
+                field("Order Date"; Rec."Order Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Order Date';
                     Importance = Promoted;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                 }
-                field("Document Date"; "Document Date")
+                field("Document Date"; Rec."Document Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Date';
                 }
-                field("Requested Delivery Date"; "Requested Delivery Date")
+                field("Requested Delivery Date"; Rec."Requested Delivery Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requested Delivery Date';
                 }
-                field("Promised Delivery Date"; "Promised Delivery Date")
+                field("Promised Delivery Date"; Rec."Promised Delivery Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Promised Delivery Date';
                     Importance = Additional;
                 }
-                field("Quote No."; "Quote No.")
+                field("Quote No."; Rec."Quote No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quote No.';
                     Importance = Additional;
                 }
-                field("External Document No."; "External Document No.")
+                field("External Document No."; Rec."External Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External Document No.';
                     Importance = Promoted;
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
 
                     trigger OnValidate()
                     begin
                         SalespersonCodeOnAfterValidate;
                     end;
                 }
-                field("Campaign No."; "Campaign No.")
+                field("Campaign No."; Rec."Campaign No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campaign No.';
                     Importance = Additional;
                 }
-                field("Opportunity No."; "Opportunity No.")
+                field("Opportunity No."; Rec."Opportunity No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Opportunity No.';
                     Importance = Additional;
                 }
-                field("Responsibility Center"; "Responsibility Center")
+                field("Responsibility Center"; Rec."Responsibility Center")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Responsibility Center';
                     Importance = Additional;
                 }
-                field("Assigned User ID"; "Assigned User ID")
+                field("Assigned User ID"; Rec."Assigned User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Assigned User ID';
                     Importance = Additional;
                 }
-                field("Tipo pedido"; "Tipo pedido")
+                field("Tipo pedido"; Rec."Tipo pedido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo pedido';
                     Editable = false;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Importance = Promoted;
                 }
-                field("No. Comprobante Fiscal"; "No. Comprobante Fiscal")
+                field("No. Comprobante Fiscal"; Rec."No. Comprobante Fiscal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Comprobante Fiscal';
                     Editable = false;
                 }
-                field("No. Serie NCF Facturas"; "No. Serie NCF Facturas")
+                field("No. Serie NCF Facturas"; Rec."No. Serie NCF Facturas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Serie NCF Facturas';
                 }
-                field("VAT Registration No."; "VAT Registration No.")
+                field("VAT Registration No."; Rec."VAT Registration No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'VAT Registration No.';
                 }
             }
             part(SalesLines; 46)
@@ -144,8 +202,10 @@ page 56036 "Sales Order Call Center"
             group(Invoicing)
             {
                 Caption = 'Invoicing';
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Customer No.';
                     Importance = Promoted;
 
                     trigger OnValidate()
@@ -153,154 +213,230 @@ page 56036 "Sales Order Call Center"
                         BilltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field("Bill-to Contact No."; "Bill-to Contact No.")
+                field("Bill-to Contact No."; Rec."Bill-to Contact No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact No.';
                     Importance = Additional;
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                 }
-                field("Bill-to Address"; "Bill-to Address")
+                field("Bill-to Address"; Rec."Bill-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Address';
                     Importance = Additional;
                 }
-                field("Bill-to Address 2"; "Bill-to Address 2")
+                field("Bill-to Address 2"; Rec."Bill-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Address 2';
                     Importance = Additional;
                 }
-                field("Bill-to City"; "Bill-to City")
+                field("Bill-to City"; Rec."Bill-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to City';
                 }
-                field("Bill-to County"; "Bill-to County")
+                field("Bill-to County"; Rec."Bill-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to County';
                     Caption = 'State / ZIP Code';
                 }
-                field("Bill-to Post Code"; "Bill-to Post Code")
+                field("Bill-to Post Code"; Rec."Bill-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Post Code';
                     Importance = Additional;
                 }
-                field("Bill-to Contact"; "Bill-to Contact")
+                field("Bill-to Contact"; Rec."Bill-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact';
                     Importance = Additional;
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
 
                     trigger OnValidate()
                     begin
                         ShortcutDimension1CodeOnAfterV;
                     end;
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
 
                     trigger OnValidate()
                     begin
                         ShortcutDimension2CodeOnAfterV;
                     end;
                 }
-                field("Payment Terms Code"; "Payment Terms Code")
+                field("Payment Terms Code"; Rec."Payment Terms Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Terms Code';
                     Importance = Promoted;
                 }
-                field("Due Date"; "Due Date")
+                field("Due Date"; Rec."Due Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Due Date';
                     Importance = Promoted;
                 }
-                field("Prices Including VAT"; "Prices Including VAT")
+                field("Prices Including VAT"; Rec."Prices Including VAT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prices Including VAT';
                 }
-                field("Payment Discount %"; "Payment Discount %")
+                field("Payment Discount %"; Rec."Payment Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Discount %';
                 }
-                field("Pmt. Discount Date"; "Pmt. Discount Date")
+                field("Pmt. Discount Date"; Rec."Pmt. Discount Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pmt. Discount Date';
                 }
-                field("Payment Method Code"; "Payment Method Code")
+                field("Payment Method Code"; Rec."Payment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Method Code';
                 }
-                field("Tax Liable"; "Tax Liable")
+                field("Tax Liable"; Rec."Tax Liable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tax Liable';
                     Importance = Promoted;
                 }
-                field("Tax Area Code"; "Tax Area Code")
+                field("Tax Area Code"; Rec."Tax Area Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tax Area Code';
                     Importance = Promoted;
                 }
-                field("Aprobado cobros"; "Aprobado cobros")
+                field("Aprobado cobros"; Rec."Aprobado cobros")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aprobado cobros';
                 }
-                field("Pago recibido"; "Pago recibido")
+                field("Pago recibido"; Rec."Pago recibido")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pago recibido';
                 }
             }
             group(Shipping)
             {
                 Caption = 'Shipping';
-                field("Ship-to Code"; "Ship-to Code")
+                field("Ship-to Code"; Rec."Ship-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Code';
                     Importance = Promoted;
                 }
-                field("Ship-to Name"; "Ship-to Name")
+                field("Ship-to Name"; Rec."Ship-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Name';
                 }
-                field("Ship-to Address"; "Ship-to Address")
+                field("Ship-to Address"; Rec."Ship-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Address';
                     Importance = Additional;
                 }
-                field("Ship-to Address 2"; "Ship-to Address 2")
+                field("Ship-to Address 2"; Rec."Ship-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Address 2';
                     Importance = Additional;
                 }
-                field("Ship-to City"; "Ship-to City")
+                field("Ship-to City"; Rec."Ship-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to City';
                 }
-                field("Ship-to County"; "Ship-to County")
+                field("Ship-to County"; Rec."Ship-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to County';
                     Caption = 'Ship-to State / ZIP Code';
                 }
-                field("Ship-to Post Code"; "Ship-to Post Code")
+                field("Ship-to Post Code"; Rec."Ship-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Post Code';
                     Importance = Promoted;
                 }
-                field("Ship-to Contact"; "Ship-to Contact")
+                field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Contact';
                     Importance = Additional;
                 }
                 field("Ship-to UPS Zone"; Rec."Ship-to UPS Zone")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to UPS Zone';
                 }
-                field("Outbound Whse. Handling Time"; "Outbound Whse. Handling Time")
+                field("Outbound Whse. Handling Time"; Rec."Outbound Whse. Handling Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Outbound Whse. Handling Time';
                     Importance = Additional;
                 }
-                field("Shipment Method Code"; "Shipment Method Code")
+                field("Shipment Method Code"; Rec."Shipment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Method Code';
                 }
-                field("Shipping Agent Code"; "Shipping Agent Code")
+                field("Shipping Agent Code"; Rec."Shipping Agent Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Agent Code';
                     Importance = Additional;
                 }
-                field("Shipping Agent Service Code"; "Shipping Agent Service Code")
+                field("Shipping Agent Service Code"; Rec."Shipping Agent Service Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Agent Service Code';
                     Importance = Additional;
                 }
-                field("Shipping Time"; "Shipping Time")
+                field("Shipping Time"; Rec."Shipping Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Time';
                 }
-                field("Late Order Shipping"; "Late Order Shipping")
+                field("Late Order Shipping"; Rec."Late Order Shipping")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Late Order Shipping';
                     Importance = Additional;
                 }
-                field("Package Tracking No."; "Package Tracking No.")
+                field("Package Tracking No."; Rec."Package Tracking No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Package Tracking No.';
                     Importance = Additional;
                 }
-                field("Shipping Advice"; "Shipping Advice")
+                field("Shipping Advice"; Rec."Shipping Advice")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Advice';
                     Importance = Promoted;
                 }
             }
@@ -308,8 +444,10 @@ page 56036 "Sales Order Call Center"
             {
                 Caption = 'Foreign Trade';
                 Visible = false;
-                field("Currency Code"; "Currency Code")
+                field("Currency Code"; Rec."Currency Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Currency Code';
                     Importance = Promoted;
 
                     trigger OnAssistEdit()
@@ -328,31 +466,45 @@ page 56036 "Sales Order Call Center"
                         CurrencyCodeOnAfterValidate;
                     end;
                 }
-                field("EU 3-Party Trade"; "EU 3-Party Trade")
+                field("EU 3-Party Trade"; Rec."EU 3-Party Trade")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'EU 3-Party Trade';
                 }
-                field("Transaction Type"; "Transaction Type")
+                field("Transaction Type"; Rec."Transaction Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Type';
                 }
-                field("Transaction Specification"; "Transaction Specification")
+                field("Transaction Specification"; Rec."Transaction Specification")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Specification';
                 }
-                field("Transport Method"; "Transport Method")
+                field("Transport Method"; Rec."Transport Method")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transport Method';
                 }
-                field("Exit Point"; "Exit Point")
+                field("Exit Point"; Rec."Exit Point")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Exit Point';
                 }
-                field("Area"; "Area")
+                field("Area"; Rec."Area")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area';
                 }
             }
             group(Prepayment)
             {
                 Caption = 'Prepayment';
                 Visible = false;
-                field("Prepayment %"; "Prepayment %")
+                field("Prepayment %"; Rec."Prepayment %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepayment %';
                     Importance = Promoted;
 
                     trigger OnValidate()
@@ -360,24 +512,36 @@ page 56036 "Sales Order Call Center"
                         Prepayment37OnAfterValidate;
                     end;
                 }
-                field("Compress Prepayment"; "Compress Prepayment")
+                field("Compress Prepayment"; Rec."Compress Prepayment")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Compress Prepayment';
                 }
-                field("Prepmt. Payment Terms Code"; "Prepmt. Payment Terms Code")
+                field("Prepmt. Payment Terms Code"; Rec."Prepmt. Payment Terms Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepmt. Payment Terms Code';
                 }
-                field("Prepayment Due Date"; "Prepayment Due Date")
+                field("Prepayment Due Date"; Rec."Prepayment Due Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepayment Due Date';
                     Importance = Promoted;
                 }
-                field("Prepmt. Payment Discount %"; "Prepmt. Payment Discount %")
+                field("Prepmt. Payment Discount %"; Rec."Prepmt. Payment Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepmt. Payment Discount %';
                 }
-                field("Prepmt. Pmt. Discount Date"; "Prepmt. Pmt. Discount Date")
+                field("Prepmt. Pmt. Discount Date"; Rec."Prepmt. Pmt. Discount Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepmt. Pmt. Discount Date';
                 }
                 field("Prepmt. Include Tax"; Rec."Prepmt. Include Tax")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prepmt. Include Tax';
                 }
             }
         }

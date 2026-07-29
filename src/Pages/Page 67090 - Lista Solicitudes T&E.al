@@ -14,100 +14,160 @@ page 67090 "Lista Solicitudes T&E"
         {
             repeater(General)
             {
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Cod. promotor"; "Cod. promotor")
+                field("Cod. promotor"; Rec."Cod. promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. promotor';
                 }
-                field("Nombre promotor"; "Nombre promotor")
+                field("Nombre promotor"; Rec."Nombre promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre promotor';
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Tipo de Evento"; "Tipo de Evento")
+                field("Tipo de Evento"; Rec."Tipo de Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Evento';
                 }
-                field("Existe evento"; "Existe evento")
+                field("Existe evento"; Rec."Existe evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Existe evento';
                 }
-                field("Cod. evento"; "Cod. evento")
+                field("Cod. evento"; Rec."Cod. evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento';
                     Editable = false;
                 }
-                field("Descripcion evento"; "Descripcion evento")
+                field("Descripcion evento"; Rec."Descripcion evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento';
                 }
-                field("Evento dictado por (tipo)"; "Evento dictado por (tipo)")
+                field("Evento dictado por (tipo)"; Rec."Evento dictado por (tipo)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (tipo)';
                 }
-                field("Evento dictado por (codigo)"; "Evento dictado por (codigo)")
+                field("Evento dictado por (codigo)"; Rec."Evento dictado por (codigo)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (codigo)';
                 }
-                field("Evento dictado por (nombre)"; "Evento dictado por (nombre)")
+                field("Evento dictado por (nombre)"; Rec."Evento dictado por (nombre)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento dictado por (nombre)';
                 }
-                field("Grupo de Colegios"; "Grupo de Colegios")
+                field("Grupo de Colegios"; Rec."Grupo de Colegios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Colegios';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Direccion Colegio"; "Direccion Colegio")
+                field("Direccion Colegio"; Rec."Direccion Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion Colegio';
                 }
-                field(Referencia; Referencia)
+                field(Referencia; Rec.Referencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia';
                 }
-                field("Codigo Distrito Colegio"; "Codigo Distrito Colegio")
+                field("Codigo Distrito Colegio"; Rec."Codigo Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Distrito Colegio';
                 }
-                field("Nombre Distrito Colegio"; "Nombre Distrito Colegio")
+                field("Nombre Distrito Colegio"; Rec."Nombre Distrito Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Distrito Colegio';
                 }
-                field("KPI Status"; "KPI Status")
+                field("KPI Status"; Rec."KPI Status")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'KPI Status';
                     Style = Attention;
                     StyleExpr = TRUE;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Fecha Solicitud"; "Fecha Solicitud")
+                field("Fecha Solicitud"; Rec."Fecha Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Solicitud';
                 }
-                field("Fecha Propuesta"; "Fecha Propuesta")
+                field("Fecha Propuesta"; Rec."Fecha Propuesta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Propuesta';
                     Caption = 'Fecha Propuesta';
                 }
-                field("Fecha programada"; "Fecha programada")
+                field("Fecha programada"; Rec."Fecha programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programada';
                     Caption = 'Fecha Programada';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Cod. evento programado"; "Cod. evento programado")
+                field("Cod. evento programado"; Rec."Cod. evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento programado';
                 }
-                field("Descripcion evento programado"; "Descripcion evento programado")
+                field("Descripcion evento programado"; Rec."Descripcion evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento programado';
                 }
-                field("Tipo de Expositor"; "Tipo de Expositor")
+                field("Tipo de Expositor"; Rec."Tipo de Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Expositor';
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
-                field("Nombre expositor"; "Nombre expositor")
+                field("Nombre expositor"; Rec."Nombre expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre expositor';
                 }
             }
         }

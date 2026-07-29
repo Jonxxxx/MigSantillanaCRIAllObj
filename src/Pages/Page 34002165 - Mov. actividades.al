@@ -11,65 +11,105 @@ page 34002165 "Mov. actividades"
         {
             repeater(GeneralRep)
             {
-                field("Entry No."; "Entry No.")
+                field("Entry No."; Rec."Entry No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entry No.';
                 }
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("Puesto trabajo"; "Puesto trabajo")
+                field("Puesto trabajo"; Rec."Puesto trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Puesto trabajo';
                 }
-                field("Apellidos y Nombre"; "Apellidos y Nombre")
+                field("Apellidos y Nombre"; Rec."Apellidos y Nombre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Apellidos y Nombre';
                 }
-                field("Job No."; "Job No.")
+                field("Job No."; Rec."Job No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job No.';
                 }
-                field("Job Task No."; "Job Task No.")
+                field("Job Task No."; Rec."Job Task No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task No.';
                 }
-                field("Resource No."; "Resource No.")
+                field("Resource No."; Rec."Resource No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resource No.';
                 }
-                field("Unit of Measure Code"; "Unit of Measure Code")
+                field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure Code';
                 }
-                field("Qty. per Unit of Measure"; "Qty. per Unit of Measure")
+                field("Qty. per Unit of Measure"; Rec."Qty. per Unit of Measure")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Qty. per Unit of Measure';
                 }
-                field("Job Task Name"; "Job Task Name")
+                field("Job Task Name"; Rec."Job Task Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task Name';
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field(Amount; Amount)
+                field(Amount; Rec.Amount)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount';
                 }
-                field("Tipo Tarifa"; "Tipo Tarifa")
+                field("Tipo Tarifa"; Rec."Tipo Tarifa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Tarifa';
                 }
-                field("Precio Tarifa"; "Precio Tarifa")
+                field("Precio Tarifa"; Rec."Precio Tarifa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio Tarifa';
                 }
-                field("Inicio Periodo"; "Inicio Periodo")
+                field("Inicio Periodo"; Rec."Inicio Periodo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inicio Periodo';
                 }
-                field("Fin Periodo"; "Fin Periodo")
+                field("Fin Periodo"; Rec."Fin Periodo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fin Periodo';
                 }
-                field("Work Type Code"; "Work Type Code")
+                field("Work Type Code"; Rec."Work Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Work Type Code';
                 }
             }
         }

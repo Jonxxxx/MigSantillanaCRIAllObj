@@ -12,39 +12,55 @@ page 34002187 "Page Lin. Esq. Ingresos"
         {
             repeater(GeneralRep)
             {
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                     Editable = false;
                     Visible = false;
                 }
-                field("Tipo Nomina"; "Tipo Nomina")
+                field("Tipo Nomina"; Rec."Tipo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Nomina';
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                     Editable = false;
                     Enabled = true;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                     Visible = CantidadVisible;
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                     Editable = ImporteEditable;
                     Visible = ImporteVisible;
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                     Editable = false;
                     Visible = false;
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                     Editable = false;
                     Visible = false;
                 }

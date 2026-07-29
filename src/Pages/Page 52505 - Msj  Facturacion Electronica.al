@@ -16,29 +16,45 @@ page 52505 "Msj  Facturacion Electronica"
         {
             repeater(Group)
             {
-                field("Tipo Documento"; "Tipo Documento")
+                field("Tipo Documento"; Rec."Tipo Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento';
                 }
-                field(NoDocumento; NoDocumento)
+                field(NoDocumento; Rec.NoDocumento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'NoDocumento';
                 }
-                field("Fecha Doc"; "Fecha Doc")
+                field("Fecha Doc"; Rec."Fecha Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Doc';
                 }
-                field("Clave Doc"; "Clave Doc")
+                field("Clave Doc"; Rec."Clave Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clave Doc';
                 }
-                field("Consecutivo Doc"; "Consecutivo Doc")
+                field("Consecutivo Doc"; Rec."Consecutivo Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Consecutivo Doc';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field(Mensaje; Mensaje)
+                field(Mensaje; Rec.Mensaje)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mensaje';
                 }
-                field(Usuario; Usuario)
+                field(Usuario; Rec.Usuario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario';
                 }
             }
         }

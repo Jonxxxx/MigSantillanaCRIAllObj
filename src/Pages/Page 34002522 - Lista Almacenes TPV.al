@@ -12,11 +12,15 @@ page 34002522 "Lista Almacenes TPV"
         {
             repeater(GeneralRep)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
             }
         }

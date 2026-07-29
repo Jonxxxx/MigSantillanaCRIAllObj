@@ -19,14 +19,20 @@ page 52506 "Categoria Pedido Venta"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Filtrar Cod. Compartir"; "Filtrar Cod. Compartir")
+                field("Filtrar Cod. Compartir"; Rec."Filtrar Cod. Compartir")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Filtrar Cod. Compartir';
                 }
             }
         }

@@ -9,14 +9,20 @@ page 50029 "Condiciones de la venta"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field("Condicion de la Venta"; "Condicion de la Venta")
+                field("Condicion de la Venta"; Rec."Condicion de la Venta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Condicion de la Venta';
                 }
-                field(Inactivo; Inactivo)
+                field(Inactivo; Rec.Inactivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactivo';
                 }
             }
         }

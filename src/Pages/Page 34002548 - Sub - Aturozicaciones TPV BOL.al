@@ -12,27 +12,39 @@ page 34002548 "Sub - Aturozicaciones TPV BOL"
         {
             repeater(Group)
             {
-                field(Autorizacion; Autorizacion)
+                field(Autorizacion; Rec.Autorizacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Autorizacion';
                 }
-                field("Fecha Inicial"; "Fecha Inicial")
+                field("Fecha Inicial"; Rec."Fecha Inicial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicial';
                     Enabled = false;
                 }
-                field("Fecha Final"; "Fecha Final")
+                field("Fecha Final"; Rec."Fecha Final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Final';
                     Editable = false;
                 }
-                field("No. Inicial"; "No. Inicial")
+                field("No. Inicial"; Rec."No. Inicial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Inicial';
                     Editable = false;
                 }
-                field("No Final"; "No Final")
+                field("No Final"; Rec."No Final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No Final';
                     Editable = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Editable = false;
                 }
             }

@@ -13,20 +13,30 @@ page 34002506 "Lista Cajeros"
         {
             repeater(Group)
             {
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(ID; ID)
+                field(ID; Rec.ID)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Grupo Cajero"; "Grupo Cajero")
+                field("Grupo Cajero"; Rec."Grupo Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Cajero';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
             }
         }

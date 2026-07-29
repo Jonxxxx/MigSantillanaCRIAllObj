@@ -13,62 +13,87 @@ page 34002114 "Historico Cab. Nominas"
         {
             field(Filtros; '')
             {
+                ApplicationArea = All;
                 CaptionClass = FORMAT('Filtros : ' + GETFILTERS);
                 Editable = false;
             }
             group(General)
             {
                 Caption = 'General';
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Centro trabajo"; "Centro trabajo")
+                field("Centro trabajo"; Rec."Centro trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Centro trabajo';
                     Editable = false;
                 }
-                field(Inicio; Inicio)
+                field(Inicio; Rec.Inicio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inicio';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field(Fin; Fin)
+                field(Fin; Rec.Fin)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fin';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Tipo Empleado"; "Tipo Empleado")
+                field("Tipo Empleado"; Rec."Tipo Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Empleado';
                     Editable = false;
                 }
-                field("Tipo de nomina"; "Tipo de nomina")
+                field("Tipo de nomina"; Rec."Tipo de nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de nomina';
                     Editable = false;
                 }
-                field("Tipo Nomina"; "Tipo Nomina")
+                field("Tipo Nomina"; Rec."Tipo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Nomina';
                     Editable = false;
                 }
-                field("Fecha Entrada"; "Fecha Entrada")
+                field("Fecha Entrada"; Rec."Fecha Entrada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Entrada';
                     Editable = false;
                 }
-                field("Fecha Salida"; "Fecha Salida")
+                field("Fecha Salida"; Rec."Fecha Salida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Salida';
                     Editable = false;
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                     Editable = false;
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                     Editable = false;
                 }
             }
@@ -81,30 +106,42 @@ page 34002114 "Historico Cab. Nominas"
             group(Bases)
             {
                 Caption = 'Bases';
-                field("Base ISR"; "Base ISR")
+                field("Base ISR"; Rec."Base ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Base ISR';
                     Caption = 'Base ISR';
                     Editable = false;
                 }
-                field("Total Ingresos"; "Total Ingresos")
+                field("Total Ingresos"; Rec."Total Ingresos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Ingresos';
                     Caption = 'Total Ingresos';
                     Editable = false;
                 }
-                field("Total deducciones"; "Total deducciones")
+                field("Total deducciones"; Rec."Total deducciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total deducciones';
                     Editable = false;
                 }
-                field("Forma de Cobro"; "Forma de Cobro")
+                field("Forma de Cobro"; Rec."Forma de Cobro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de Cobro';
                     Editable = false;
                 }
-                field("Tipo Cuenta"; "Tipo Cuenta")
+                field("Tipo Cuenta"; Rec."Tipo Cuenta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta';
                     Editable = false;
                 }
-                field(Cuenta; Cuenta)
+                field(Cuenta; Rec.Cuenta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuenta';
                     Editable = false;
                 }
             }

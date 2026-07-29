@@ -18,58 +18,79 @@ page 34002536 "Subform turnos TPV"
             repeater(Group)
             {
                 Editable = false;
-                field("No. tienda"; "No. tienda")
+                field("No. tienda"; Rec."No. tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. tienda';
                     Caption = 'Store No.';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("No. TPV"; "No. TPV")
+                field("No. TPV"; Rec."No. TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. TPV';
                     Caption = 'POS Terminal No.';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Caption = 'Receipt No.';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("No. turno"; "No. turno")
+                field("No. turno"; Rec."No. turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. turno';
                     Caption = 'Receipt No.';
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Hora apertura"; "Hora apertura")
+                field("Hora apertura"; Rec."Hora apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora apertura';
                     Caption = 'Hora apertura';
                 }
-                field("Usuario apertura"; "Usuario apertura")
+                field("Usuario apertura"; Rec."Usuario apertura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario apertura';
                     Caption = 'Usuario apertura';
                 }
-                field("Hora cierre"; "Hora cierre")
+                field("Hora cierre"; Rec."Hora cierre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora cierre';
                     AutoFormatType = 1;
                     Caption = 'Hora cierre';
                 }
-                field("Usuario cierre"; "Usuario cierre")
+                field("Usuario cierre"; Rec."Usuario cierre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Usuario cierre';
                     Caption = 'Usuario cierre';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Caption = 'Estado';
                     StyleExpr = texEstiloEstado;
                 }
-                field("Fondo de caja"; "Fondo de caja")
+                field("Fondo de caja"; Rec."Fondo de caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fondo de caja';
                     Caption = 'Fondo de caja';
                 }
                 field(Descuadre; TraerDescuadreTurno)
                 {
+                    ApplicationArea = All;
                     Caption = 'Descuadre';
                     StyleExpr = texEstiloDescuadre;
                 }

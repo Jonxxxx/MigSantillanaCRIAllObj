@@ -9,41 +9,63 @@ page 34002224 "Lin. Hist. prest. cooperativa"
         {
             repeater(Group)
             {
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
                     Visible = false;
                 }
-                field("Codigo Empleado"; "Codigo Empleado")
+                field("Codigo Empleado"; Rec."Codigo Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Empleado';
                     Visible = false;
                 }
-                field("No. Cuota"; "No. Cuota")
+                field("No. Cuota"; Rec."No. Cuota")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuota';
                 }
-                field("Fecha Transaccion"; "Fecha Transaccion")
+                field("Fecha Transaccion"; Rec."Fecha Transaccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Transaccion';
                 }
-                field("Saldo inicial"; "Saldo inicial")
+                field("Saldo inicial"; Rec."Saldo inicial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Saldo inicial';
                 }
-                field(Interes; Interes)
+                field(Interes; Rec.Interes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Interes';
                 }
-                field("Importe cuota"; "Importe cuota")
+                field("Importe cuota"; Rec."Importe cuota")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe cuota';
                 }
-                field(Amortizacion; Amortizacion)
+                field(Amortizacion; Rec.Amortizacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amortizacion';
                 }
-                field("Saldo final"; "Saldo final")
+                field("Saldo final"; Rec."Saldo final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Saldo final';
                 }
-                field("Importe mora"; "Importe mora")
+                field("Importe mora"; Rec."Importe mora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe mora';
                     Visible = false;
                 }
-                field("Fecha mora"; "Fecha mora")
+                field("Fecha mora"; Rec."Fecha mora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha mora';
                     Visible = false;
                 }
             }

@@ -11,23 +11,35 @@ page 67007 Asignaturas
         {
             repeater(General)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field(Nivel; Nivel)
+                field(Nivel; Rec.Nivel)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field(Grado; Grado)
+                field(Grado; Rec.Grado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grado';
                 }
-                field("Carga horaria"; "Carga horaria")
+                field("Carga horaria"; Rec."Carga horaria")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Carga horaria';
                 }
             }
         }

@@ -10,6 +10,7 @@ page 34002176 "Payroll Information FactBox"
         {
             field(JXPayrollCount; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
             {
+                ApplicationArea = All;
                 Caption = 'Payroll';
                 Editable = false;
 
@@ -20,6 +21,7 @@ page 34002176 "Payroll Information FactBox"
             }
             field(JXTaxBalance; STRSUBSTNO('(%1)', CUNomina.BuscaSaldoISRFavor(Rec)))
             {
+                ApplicationArea = All;
                 Caption = 'Tax balance';
 
                 trigger OnDrillDown()

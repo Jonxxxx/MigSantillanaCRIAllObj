@@ -9,41 +9,65 @@ page 34003000 "Config. Retencion Proveedores"
         {
             repeater(Group)
             {
-                field("Codigo Retencion"; "Codigo Retencion")
+                field("Codigo Retencion"; Rec."Codigo Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Retencion';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cta. Contable"; "Cta. Contable")
+                field("Cta. Contable"; Rec."Cta. Contable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cta. Contable';
                 }
-                field("Base Calculo"; "Base Calculo")
+                field("Base Calculo"; Rec."Base Calculo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Base Calculo';
                 }
-                field(Devengo; Devengo)
+                field(Devengo; Rec.Devengo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Devengo';
                 }
-                field("Importe Retencion"; "Importe Retencion")
+                field("Importe Retencion"; Rec."Importe Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Retencion';
                 }
-                field("Tipo Retencion"; "Tipo Retencion")
+                field("Tipo Retencion"; Rec."Tipo Retencion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Retencion';
                 }
-                field("Aplica Productos"; "Aplica Productos")
+                field("Aplica Productos"; Rec."Aplica Productos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Productos';
                 }
-                field("Aplica Servicios"; "Aplica Servicios")
+                field("Aplica Servicios"; Rec."Aplica Servicios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Servicios';
                 }
-                field("Retencion ITBIS"; "Retencion ITBIS")
+                field("Retencion ITBIS"; Rec."Retencion ITBIS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Retencion ITBIS';
                 }
-                field("Retencion Defecto Sub-Cont."; "Retencion Defecto Sub-Cont.")
+                field("Retencion Defecto Sub-Cont."; Rec."Retencion Defecto Sub-Cont.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Retencion Defecto Sub-Cont.';
                 }
-                field("Tipo retencion ISR"; "Tipo retencion ISR")
+                field("Tipo retencion ISR"; Rec."Tipo retencion ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo retencion ISR';
                 }
             }
         }

@@ -9,17 +9,25 @@ page 67078 "Promotores - Docentes"
         {
             repeater(General)
             {
-                field("Codigo Docente"; "Codigo Docente")
+                field("Codigo Docente"; Rec."Codigo Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Docente';
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Nombre Docente"; "Nombre Docente")
+                field("Nombre Docente"; Rec."Nombre Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Docente';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                 }
             }
         }

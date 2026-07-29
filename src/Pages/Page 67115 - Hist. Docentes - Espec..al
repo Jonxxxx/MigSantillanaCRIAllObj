@@ -15,28 +15,42 @@ page 67115 "Hist. Docentes - Espec."
         {
             repeater(General)
             {
-                field(Campana; Campana)
+                field(Campana; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Docente"; "Cod. Docente")
+                field("Cod. Docente"; Rec."Cod. Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Docente';
                     Visible = false;
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Especialidad"; "Cod. Especialidad")
+                field("Cod. Especialidad"; Rec."Cod. Especialidad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Especialidad';
                 }
-                field("Descripcion especialidad"; "Descripcion especialidad")
+                field("Descripcion especialidad"; Rec."Descripcion especialidad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion especialidad';
                     Editable = false;
                 }
-                field("Cod. grado"; "Cod. grado")
+                field("Cod. grado"; Rec."Cod. grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. grado';
                 }
-                field("Nombre Docente"; "Nombre Docente")
+                field("Nombre Docente"; Rec."Nombre Docente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Docente';
                     Editable = false;
                 }
             }

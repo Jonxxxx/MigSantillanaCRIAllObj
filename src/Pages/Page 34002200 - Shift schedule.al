@@ -9,21 +9,31 @@ page 34002200 "Shift schedule"
         {
             repeater(Group)
             {
-                field("Codigo turno"; "Codigo turno")
+                field("Codigo turno"; Rec."Codigo turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo turno';
                     Visible = false;
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Hora Inicio"; "Hora Inicio")
+                field("Hora Inicio"; Rec."Hora Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Inicio';
                 }
-                field("Hora Fin"; "Hora Fin")
+                field("Hora Fin"; Rec."Hora Fin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Fin';
                 }
-                field("Hora almuerzo"; "Hora almuerzo")
+                field("Hora almuerzo"; Rec."Hora almuerzo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora almuerzo';
                 }
             }
         }

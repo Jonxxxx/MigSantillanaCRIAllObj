@@ -12,39 +12,57 @@ page 56050 "Lin. Cons. a Fact. Movil."
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field("Description 2"; "Description 2")
+                field("Description 2"; Rec."Description 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description 2';
                     Editable = false;
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Unit of Measure"; "Unit of Measure")
+                field("Unit of Measure"; Rec."Unit of Measure")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure';
                     Editable = false;
                 }
-                field("Line Discount %"; "Line Discount %")
+                field("Line Discount %"; Rec."Line Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount %';
                     Editable = false;
                 }
-                field("Line Discount Amount"; "Line Discount Amount")
+                field("Line Discount Amount"; Rec."Line Discount Amount")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount Amount';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Cantidad a Facturar"; "Cantidad a Facturar")
+                field("Cantidad a Facturar"; Rec."Cantidad a Facturar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Facturar';
                 }
             }
         }

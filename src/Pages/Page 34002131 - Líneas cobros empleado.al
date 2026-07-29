@@ -10,15 +10,20 @@ page 34002131 "Lineas cobros empleado"
             repeater(GeneralRep)
             {
                 Editable = false;
-                field("Period Start"; "Period Start")
+                field("Period Start"; Rec."Period Start")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Period Start';
                 }
-                field("Period Name"; "Period Name")
+                field("Period Name"; Rec."Period Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Period Name';
                 }
                 field("TrabTotal ingresos";
                 Trab."Total ingresos")
                 {
+                    ApplicationArea = All;
                     Caption = 'Total Income';
                     DrillDown = true;
 
@@ -30,6 +35,7 @@ page 34002131 "Lineas cobros empleado"
                 field("TrabTotal deducciones";
                 Trab."Total deducciones")
                 {
+                    ApplicationArea = All;
                     Caption = 'Retenciones ISR';
                     DrillDown = true;
 

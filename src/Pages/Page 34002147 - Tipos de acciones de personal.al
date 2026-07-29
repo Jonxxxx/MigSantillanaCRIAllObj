@@ -10,35 +10,53 @@ page 34002147 "Tipos de acciones de personal"
         {
             repeater(GeneralRep)
             {
-                field("Tipo de accion"; "Tipo de accion")
+                field("Tipo de accion"; Rec."Tipo de accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de accion';
                     Editable = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Editar salario"; "Editar salario")
+                field("Editar salario"; Rec."Editar salario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Editar salario';
                 }
-                field("Editar cargo"; "Editar cargo")
+                field("Editar cargo"; Rec."Editar cargo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Editar cargo';
                 }
-                field("Emitir documento"; "Emitir documento")
+                field("Emitir documento"; Rec."Emitir documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Emitir documento';
                     Editable = false;
                 }
-                field("Transferir entre empresas"; "Transferir entre empresas")
+                field("Transferir entre empresas"; Rec."Transferir entre empresas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transferir entre empresas';
                 }
-                field("ID Documento"; "ID Documento")
+                field("ID Documento"; Rec."ID Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Documento';
                     Visible = false;
                 }
-                field(Suspension; Suspension)
+                field(Suspension; Rec.Suspension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Suspension';
                 }
             }
         }

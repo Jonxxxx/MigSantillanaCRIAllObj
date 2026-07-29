@@ -13,36 +13,56 @@ page 34002109 "Puestos laborares"
         {
             repeater(GeneralRep)
             {
-                field("Cod. departamento"; "Cod. departamento")
+                field("Cod. departamento"; Rec."Cod. departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. departamento';
                     Visible = false;
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. nivel"; "Cod. nivel")
+                field("Cod. nivel"; Rec."Cod. nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. nivel';
                 }
-                field("Cod. Supervisor"; "Cod. Supervisor")
+                field("Cod. Supervisor"; Rec."Cod. Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Supervisor';
                 }
-                field("Nombre Completo"; "Nombre Completo")
+                field("Nombre Completo"; Rec."Nombre Completo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Completo';
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                 }
-                field("Maximo de posiciones"; "Maximo de posiciones")
+                field("Maximo de posiciones"; Rec."Maximo de posiciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Maximo de posiciones';
                 }
-                field("Total Empleados"; "Total Empleados")
+                field("Total Empleados"; Rec."Total Empleados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Empleados';
                 }
             }
         }

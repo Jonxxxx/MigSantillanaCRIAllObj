@@ -19,8 +19,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = ESACC_F3_Editable;
                     HideValue = ESACC_F3_HideValue;
                     Importance = Promoted;
@@ -32,8 +34,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                     Editable = ESACC_F2_Editable;
                     HideValue = ESACC_F2_HideValue;
                     Importance = Promoted;
@@ -44,8 +48,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         SelltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Sell-to Contact No."; "Sell-to Contact No.")
+                field("Sell-to Contact No."; Rec."Sell-to Contact No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact No.';
                     Editable = ESACC_F5052_Editable;
                     Enabled = ESACC_F5052_Editable;
                     HideValue = ESACC_F5052_HideValue;
@@ -58,92 +64,120 @@ page 34002556 "Ficha Facturas Pdtes POS"
                                 SETRANGE("Sell-to Contact No.");
                     end;
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                     Editable = ESACC_F79_Editable;
                     HideValue = ESACC_F79_HideValue;
                     Visible = true;
                 }
-                field("VAT Registration No."; "VAT Registration No.")
+                field("VAT Registration No."; Rec."VAT Registration No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'VAT Registration No.';
                     Editable = ESACC_F70_Editable;
                     HideValue = ESACC_F70_HideValue;
                     Visible = true;
                 }
-                field("Sell-to Address"; "Sell-to Address")
+                field("Sell-to Address"; Rec."Sell-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Address';
                     Editable = ESACC_F81_Editable;
                     HideValue = ESACC_F81_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Sell-to Address 2"; "Sell-to Address 2")
+                field("Sell-to Address 2"; Rec."Sell-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Address 2';
                     Editable = ESACC_F82_Editable;
                     HideValue = ESACC_F82_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Sell-to City"; "Sell-to City")
+                field("Sell-to City"; Rec."Sell-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to City';
                     Editable = ESACC_F83_Editable;
                     HideValue = ESACC_F83_HideValue;
                     Visible = true;
                 }
-                field("Sell-to County"; "Sell-to County")
+                field("Sell-to County"; Rec."Sell-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to County';
                     Caption = 'Sell-to State / ZIP Code';
                     Editable = ESACC_F89_Editable;
                     HideValue = ESACC_F89_HideValue;
                     Visible = true;
                 }
-                field("Sell-to Post Code"; "Sell-to Post Code")
+                field("Sell-to Post Code"; Rec."Sell-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Post Code';
                     Editable = ESACC_F88_Editable;
                     HideValue = ESACC_F88_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Sell-to Contact"; "Sell-to Contact")
+                field("Sell-to Contact"; Rec."Sell-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact';
                     Editable = ESACC_F84_Editable;
                     HideValue = ESACC_F84_HideValue;
                     Visible = true;
                 }
-                field("Tipo de Venta"; "Tipo de Venta")
+                field("Tipo de Venta"; Rec."Tipo de Venta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Venta';
                     Editable = ESACC_F50010_Editable;
                     HideValue = ESACC_F50010_HideValue;
                     Visible = true;
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                     Editable = ESACC_F20_Editable;
                     HideValue = ESACC_F20_HideValue;
                     Importance = Promoted;
                     Visible = true;
                 }
-                field("Document Date"; "Document Date")
+                field("Document Date"; Rec."Document Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Date';
                     Editable = ESACC_F99_Editable;
                     HideValue = ESACC_F99_HideValue;
                     Visible = true;
                 }
-                field("Incoming Document Entry No."; "Incoming Document Entry No.")
+                field("Incoming Document Entry No."; Rec."Incoming Document Entry No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Incoming Document Entry No.';
                     Editable = ESACC_F165_Editable;
                     HideValue = ESACC_F165_HideValue;
                     Visible = true;
                 }
-                field("External Document No."; "External Document No.")
+                field("External Document No."; Rec."External Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External Document No.';
                     Editable = ESACC_F100_Editable;
                     HideValue = ESACC_F100_HideValue;
                     Importance = Promoted;
                     Visible = true;
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
                     Editable = ESACC_F43_Editable;
                     HideValue = ESACC_F43_HideValue;
                     Visible = true;
@@ -153,59 +187,79 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         SalespersonCodeOnAfterValidate;
                     end;
                 }
-                field("No. Comprobante Fiscal"; "No. Comprobante Fiscal")
+                field("No. Comprobante Fiscal"; Rec."No. Comprobante Fiscal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Comprobante Fiscal';
                     Editable = ESACC_F34003002_Editable;
                     HideValue = ESACC_F34003002_HideValue;
                     Visible = true;
                 }
-                field("Campaign No."; "Campaign No.")
+                field("Campaign No."; Rec."Campaign No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campaign No.';
                     Editable = ESACC_F5050_Editable;
                     HideValue = ESACC_F5050_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Responsibility Center"; "Responsibility Center")
+                field("Responsibility Center"; Rec."Responsibility Center")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Responsibility Center';
                     Editable = ESACC_F5700_Editable;
                     HideValue = ESACC_F5700_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Assigned User ID"; "Assigned User ID")
+                field("Assigned User ID"; Rec."Assigned User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Assigned User ID';
                     Editable = ESACC_F9000_Editable;
                     HideValue = ESACC_F9000_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Job Queue Status"; "Job Queue Status")
+                field("Job Queue Status"; Rec."Job Queue Status")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Queue Status';
                     Editable = ESACC_F160_Editable;
                     Enabled = ESACC_F160_Editable;
                     HideValue = ESACC_F160_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Editable = ESACC_F120_Editable;
                     HideValue = ESACC_F120_HideValue;
                     Importance = Promoted;
                     Visible = true;
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Sell-to E-Mail"; "Sell-to E-Mail")
+                field("Sell-to E-Mail"; Rec."Sell-to E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to E-Mail';
                 }
-                field("E-Mail-FE"; "E-Mail-FE")
+                field("E-Mail-FE"; Rec."E-Mail-FE")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail-FE';
                 }
-                field(Correction; Correction)
+                field(Correction; Rec.Correction)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Correction';
                     Editable = ESACC_F98_Editable;
                     HideValue = ESACC_F98_HideValue;
                     Visible = true;
@@ -219,74 +273,100 @@ page 34002556 "Ficha Facturas Pdtes POS"
             {
                 Caption = 'DsPOS';
                 Editable = true;
-                field("Venta TPV"; "Venta TPV")
+                field("Venta TPV"; Rec."Venta TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Venta TPV';
                     Editable = ESACC_F34002502_Editable;
                     HideValue = ESACC_F34002502_HideValue;
                     Visible = true;
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                     Editable = ESACC_F34002504_Editable;
                     HideValue = ESACC_F34002504_HideValue;
                     Visible = true;
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                     Editable = ESACC_F34002503_Editable;
                     HideValue = ESACC_F34002503_HideValue;
                     Visible = true;
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                     Editable = ESACC_F34002512_Editable;
                     HideValue = ESACC_F34002512_HideValue;
                     Visible = true;
                 }
-                field("ID Cajero"; "ID Cajero")
+                field("ID Cajero"; Rec."ID Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Cajero';
                     Editable = true;
                     HideValue = ESACC_F34002500_HideValue;
                     Visible = ESACC_F34002500_Visible;
                 }
-                field("Hora creacion"; "Hora creacion")
+                field("Hora creacion"; Rec."Hora creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora creacion';
                     Editable = ESACC_F34002501_Editable;
                     HideValue = ESACC_F34002501_HideValue;
                     Visible = true;
                 }
-                field("Anulado TPV"; "Anulado TPV")
+                field("Anulado TPV"; Rec."Anulado TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anulado TPV';
                     Editable = ESACC_F34002510_Editable;
                     HideValue = ESACC_F34002510_HideValue;
                     Visible = true;
                 }
-                field("Anulado por Documento"; "Anulado por Documento")
+                field("Anulado por Documento"; Rec."Anulado por Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anulado por Documento';
                     Editable = ESACC_F34002513_Editable;
                     HideValue = ESACC_F34002513_HideValue;
                     Visible = true;
                 }
-                field("No. Documento SIC"; "No. Documento SIC")
+                field("No. Documento SIC"; Rec."No. Documento SIC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento SIC';
                 }
-                field("Payment Method Code"; "Payment Method Code")
+                field("Payment Method Code"; Rec."Payment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Method Code';
                 }
             }
             group(Invoicing)
             {
                 Caption = 'Invoicing';
-                field(Clave; Clave)
+                field(Clave; Rec.Clave)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clave';
                     Editable = false;
                 }
-                field(Consecutivo; Consecutivo)
+                field(Consecutivo; Rec.Consecutivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Consecutivo';
                     Enabled = false;
                 }
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Customer No.';
                     Editable = ESACC_F4_Editable;
                     HideValue = ESACC_F4_HideValue;
                     Importance = Promoted;
@@ -297,62 +377,80 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         BilltoCustomerNoOnAfterValidat;
                     end;
                 }
-                field("Bill-to Contact No."; "Bill-to Contact No.")
+                field("Bill-to Contact No."; Rec."Bill-to Contact No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact No.';
                     Editable = ESACC_F5053_Editable;
                     Enabled = ESACC_F5053_Editable;
                     HideValue = ESACC_F5053_HideValue;
                     Visible = true;
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                     Editable = ESACC_F5_Editable;
                     HideValue = ESACC_F5_HideValue;
                     Visible = true;
                 }
-                field("Bill-to Address"; "Bill-to Address")
+                field("Bill-to Address"; Rec."Bill-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Address';
                     Editable = ESACC_F7_Editable;
                     HideValue = ESACC_F7_HideValue;
                     Importance = Additional;
                     Visible = true;
                 }
-                field("Bill-to Address 2"; "Bill-to Address 2")
+                field("Bill-to Address 2"; Rec."Bill-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Address 2';
                     Editable = ESACC_F8_Editable;
                     HideValue = ESACC_F8_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F8_Visible;
                 }
-                field("Bill-to City"; "Bill-to City")
+                field("Bill-to City"; Rec."Bill-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to City';
                     Editable = ESACC_F9_Editable;
                     HideValue = ESACC_F9_HideValue;
                     Visible = ESACC_F9_Visible;
                 }
-                field("Bill-to County"; "Bill-to County")
+                field("Bill-to County"; Rec."Bill-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to County';
                     Caption = 'State / ZIP Code';
                     Editable = ESACC_F86_Editable;
                     HideValue = ESACC_F86_HideValue;
                     Visible = ESACC_F86_Visible;
                 }
-                field("Bill-to Post Code"; "Bill-to Post Code")
+                field("Bill-to Post Code"; Rec."Bill-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Post Code';
                     Editable = ESACC_F85_Editable;
                     HideValue = ESACC_F85_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F85_Visible;
                 }
-                field("Bill-to Contact"; "Bill-to Contact")
+                field("Bill-to Contact"; Rec."Bill-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact';
                     Editable = ESACC_F10_Editable;
                     HideValue = ESACC_F10_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F10_Visible;
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                     Editable = ESACC_F29_Editable;
                     HideValue = ESACC_F29_HideValue;
                     Visible = ESACC_F29_Visible;
@@ -362,8 +460,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         ShortcutDimension1CodeOnAfterV;
                     end;
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                     Editable = ESACC_F30_Editable;
                     HideValue = ESACC_F30_HideValue;
                     Visible = ESACC_F30_Visible;
@@ -373,49 +473,63 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         ShortcutDimension2CodeOnAfterV;
                     end;
                 }
-                field("Payment Terms Code"; "Payment Terms Code")
+                field("Payment Terms Code"; Rec."Payment Terms Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Terms Code';
                     Editable = ESACC_F23_Editable;
                     HideValue = ESACC_F23_HideValue;
                     Importance = Promoted;
                     Visible = ESACC_F23_Visible;
                 }
-                field("Due Date"; "Due Date")
+                field("Due Date"; Rec."Due Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Due Date';
                     Editable = ESACC_F24_Editable;
                     HideValue = ESACC_F24_HideValue;
                     Importance = Promoted;
                     Visible = ESACC_F24_Visible;
                 }
-                field("Payment Discount %"; "Payment Discount %")
+                field("Payment Discount %"; Rec."Payment Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Discount %';
                     Editable = ESACC_F25_Editable;
                     HideValue = ESACC_F25_HideValue;
                     Visible = ESACC_F25_Visible;
                 }
-                field("Pmt. Discount Date"; "Pmt. Discount Date")
+                field("Pmt. Discount Date"; Rec."Pmt. Discount Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pmt. Discount Date';
                     Editable = ESACC_F26_Editable;
                     HideValue = ESACC_F26_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F26_Visible;
                 }
-                field("Tax Liable"; "Tax Liable")
+                field("Tax Liable"; Rec."Tax Liable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tax Liable';
                     Editable = ESACC_F115_Editable;
                     HideValue = ESACC_F115_HideValue;
                     Importance = Promoted;
                     Visible = ESACC_F115_Visible;
                 }
-                field("Tax Area Code"; "Tax Area Code")
+                field("Tax Area Code"; Rec."Tax Area Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tax Area Code';
                     Editable = ESACC_F114_Editable;
                     HideValue = ESACC_F114_HideValue;
                     Importance = Promoted;
                     Visible = ESACC_F114_Visible;
                 }
-                field("Direct Debit Mandate ID"; "Direct Debit Mandate ID")
+                field("Direct Debit Mandate ID"; Rec."Direct Debit Mandate ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direct Debit Mandate ID';
                     Editable = ESACC_F1200_Editable;
                     HideValue = ESACC_F1200_HideValue;
                     Visible = ESACC_F1200_Visible;
@@ -424,93 +538,121 @@ page 34002556 "Ficha Facturas Pdtes POS"
             group(Shipping)
             {
                 Caption = 'Shipping';
-                field("Ship-to Code"; "Ship-to Code")
+                field("Ship-to Code"; Rec."Ship-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Code';
                     Editable = ESACC_F12_Editable;
                     HideValue = ESACC_F12_HideValue;
                     Importance = Promoted;
                     Visible = true;
                 }
-                field("Ship-to Name"; "Ship-to Name")
+                field("Ship-to Name"; Rec."Ship-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Name';
                     Editable = ESACC_F13_Editable;
                     HideValue = ESACC_F13_HideValue;
                     Visible = true;
                 }
-                field("Ship-to Address"; "Ship-to Address")
+                field("Ship-to Address"; Rec."Ship-to Address")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Address';
                     Editable = ESACC_F15_Editable;
                     HideValue = ESACC_F15_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F15_Visible;
                 }
-                field("Ship-to Address 2"; "Ship-to Address 2")
+                field("Ship-to Address 2"; Rec."Ship-to Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Address 2';
                     Editable = ESACC_F16_Editable;
                     HideValue = ESACC_F16_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F16_Visible;
                 }
-                field("Ship-to City"; "Ship-to City")
+                field("Ship-to City"; Rec."Ship-to City")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to City';
                     Editable = ESACC_F17_Editable;
                     HideValue = ESACC_F17_HideValue;
                     Visible = ESACC_F17_Visible;
                 }
-                field("Ship-to County"; "Ship-to County")
+                field("Ship-to County"; Rec."Ship-to County")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to County';
                     Caption = 'Ship-to State / ZIP Code';
                     Editable = ESACC_F92_Editable;
                     HideValue = ESACC_F92_HideValue;
                     Visible = ESACC_F92_Visible;
                 }
-                field("Ship-to Post Code"; "Ship-to Post Code")
+                field("Ship-to Post Code"; Rec."Ship-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Post Code';
                     Editable = ESACC_F91_Editable;
                     HideValue = ESACC_F91_HideValue;
                     Importance = Promoted;
                     Visible = ESACC_F91_Visible;
                 }
-                field("Ship-to Contact"; "Ship-to Contact")
+                field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Contact';
                     Editable = ESACC_F18_Editable;
                     HideValue = ESACC_F18_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F18_Visible;
                 }
-                field("Ship-to UPS Zone"; "Ship-to UPS Zone")
+                field("Ship-to UPS Zone"; Rec."Ship-to UPS Zone")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to UPS Zone';
                     Editable = ESACC_F10005_Editable;
                     HideValue = ESACC_F10005_HideValue;
                     Visible = ESACC_F10005_Visible;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Editable = ESACC_F28_Editable;
                     HideValue = ESACC_F28_HideValue;
                     Visible = true;
                 }
-                field("Shipment Method Code"; "Shipment Method Code")
+                field("Shipment Method Code"; Rec."Shipment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Method Code';
                     Editable = ESACC_F27_Editable;
                     HideValue = ESACC_F27_HideValue;
                     Visible = ESACC_F27_Visible;
                 }
-                field("Shipping Agent Code"; "Shipping Agent Code")
+                field("Shipping Agent Code"; Rec."Shipping Agent Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipping Agent Code';
                     Editable = ESACC_F105_Editable;
                     HideValue = ESACC_F105_HideValue;
                     Visible = ESACC_F105_Visible;
                 }
-                field("Package Tracking No."; "Package Tracking No.")
+                field("Package Tracking No."; Rec."Package Tracking No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Package Tracking No.';
                     Editable = ESACC_F106_Editable;
                     HideValue = ESACC_F106_HideValue;
                     Importance = Additional;
                     Visible = ESACC_F106_Visible;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                     Editable = ESACC_F21_Editable;
                     HideValue = ESACC_F21_HideValue;
                     Importance = Promoted;
@@ -520,8 +662,10 @@ page 34002556 "Ficha Facturas Pdtes POS"
             group("Foreign Trade")
             {
                 Caption = 'Foreign Trade';
-                field("Currency Code"; "Currency Code")
+                field("Currency Code"; Rec."Currency Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Currency Code';
                     Editable = ESACC_F32_Editable;
                     HideValue = ESACC_F32_HideValue;
                     Importance = Promoted;
@@ -541,38 +685,50 @@ page 34002556 "Ficha Facturas Pdtes POS"
                         CLEAR(ChangeExchangeRate);
                     end;
                 }
-                field("EU 3-Party Trade"; "EU 3-Party Trade")
+                field("EU 3-Party Trade"; Rec."EU 3-Party Trade")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'EU 3-Party Trade';
                     Editable = ESACC_F75_Editable;
                     HideValue = ESACC_F75_HideValue;
                     Visible = ESACC_F75_Visible;
                 }
-                field("Transaction Type"; "Transaction Type")
+                field("Transaction Type"; Rec."Transaction Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Type';
                     Editable = ESACC_F76_Editable;
                     HideValue = ESACC_F76_HideValue;
                     Visible = ESACC_F76_Visible;
                 }
-                field("Transaction Specification"; "Transaction Specification")
+                field("Transaction Specification"; Rec."Transaction Specification")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transaction Specification';
                     Editable = ESACC_F102_Editable;
                     HideValue = ESACC_F102_HideValue;
                     Visible = ESACC_F102_Visible;
                 }
-                field("Transport Method"; "Transport Method")
+                field("Transport Method"; Rec."Transport Method")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transport Method';
                     Editable = ESACC_F77_Editable;
                     HideValue = ESACC_F77_HideValue;
                     Visible = ESACC_F77_Visible;
                 }
-                field("Exit Point"; "Exit Point")
+                field("Exit Point"; Rec."Exit Point")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Exit Point';
                     Editable = ESACC_F97_Editable;
                     HideValue = ESACC_F97_HideValue;
                     Visible = ESACC_F97_Visible;
                 }
-                field("Area"; Area)
+                field("Area"; Rec.Area)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area';
                     Editable = ESACC_F101_Editable;
                     HideValue = ESACC_F101_HideValue;
                     Visible = ESACC_F101_Visible;

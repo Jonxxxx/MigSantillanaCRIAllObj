@@ -15,59 +15,79 @@ page 34002533 "Declaracion de caja"
         {
             group(General)
             {
-                field("No. tienda"; "No. tienda")
+                field("No. tienda"; Rec."No. tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. tienda';
                     Caption = 'Store No.';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("No. TPV"; "No. TPV")
+                field("No. TPV"; Rec."No. TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. TPV';
                     Caption = 'POS Terminal No.';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Caption = 'Fecha';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("No. turno"; "No. turno")
+                field("No. turno"; Rec."No. turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. turno';
                     Caption = 'Receipt No.';
                     Editable = false;
                     Importance = Promoted;
                 }
                 group(Apertura)
                 {
-                    field("Hora apertura"; "Hora apertura")
+                    field("Hora apertura"; Rec."Hora apertura")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Hora apertura';
                         Editable = false;
                     }
-                    field("Usuario apertura"; "Usuario apertura")
+                    field("Usuario apertura"; Rec."Usuario apertura")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Usuario apertura';
                         Editable = false;
                     }
-                    field(FondoCaja; "Fondo de caja")
+                    field(FondoCaja; Rec."Fondo de caja")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Fondo de caja';
                         Caption = 'Fondo de caja';
                         Editable = false;
                     }
                 }
                 group(Cierre)
                 {
-                    field("Hora cierre"; "Hora cierre")
+                    field("Hora cierre"; Rec."Hora cierre")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Hora cierre';
                         Editable = false;
                     }
-                    field("Usuario cierre"; "Usuario cierre")
+                    field("Usuario cierre"; Rec."Usuario cierre")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Usuario cierre';
                         Editable = false;
                     }
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Editable = false;
                 }
             }

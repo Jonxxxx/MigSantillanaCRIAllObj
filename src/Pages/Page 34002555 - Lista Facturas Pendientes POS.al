@@ -29,122 +29,188 @@ page 34002555 "Lista Facturas Pendientes POS"
         {
             repeater(GeneralRep)
             {
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                     Visible = true;
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                 }
-                field("ID Cajero"; "ID Cajero")
+                field("ID Cajero"; Rec."ID Cajero")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Cajero';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field("Hora creacion"; "Hora creacion")
+                field("Hora creacion"; Rec."Hora creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora creacion';
                 }
-                field("No. Fiscal TPV"; "No. Fiscal TPV")
+                field("No. Fiscal TPV"; Rec."No. Fiscal TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Fiscal TPV';
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Posting No."; "Posting No.")
+                field("Posting No."; Rec."Posting No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting No.';
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                 }
-                field("External Document No."; "External Document No.")
+                field("External Document No."; Rec."External Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External Document No.';
                 }
-                field("Payment Method Code"; "Payment Method Code")
+                field("Payment Method Code"; Rec."Payment Method Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Payment Method Code';
                 }
-                field("Sell-to Post Code"; "Sell-to Post Code")
+                field("Sell-to Post Code"; Rec."Sell-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Post Code';
                     Visible = false;
                 }
-                field("Sell-to Country/Region Code"; "Sell-to Country/Region Code")
+                field("Sell-to Country/Region Code"; Rec."Sell-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Country/Region Code';
                     Visible = false;
                 }
-                field("Sell-to Contact"; "Sell-to Contact")
+                field("Sell-to Contact"; Rec."Sell-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Contact';
                     Visible = false;
                 }
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Customer No.';
                     Visible = false;
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                     Visible = false;
                 }
-                field("Bill-to Post Code"; "Bill-to Post Code")
+                field("Bill-to Post Code"; Rec."Bill-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Post Code';
                     Visible = false;
                 }
-                field("Bill-to Country/Region Code"; "Bill-to Country/Region Code")
+                field("Bill-to Country/Region Code"; Rec."Bill-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Country/Region Code';
                     Visible = false;
                 }
-                field("Bill-to Contact"; "Bill-to Contact")
+                field("Bill-to Contact"; Rec."Bill-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Contact';
                     Visible = false;
                 }
-                field("Ship-to Code"; "Ship-to Code")
+                field("Ship-to Code"; Rec."Ship-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Code';
                     Visible = false;
                 }
-                field("Ship-to Name"; "Ship-to Name")
+                field("Ship-to Name"; Rec."Ship-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Name';
                     Visible = false;
                 }
-                field("Ship-to Post Code"; "Ship-to Post Code")
+                field("Ship-to Post Code"; Rec."Ship-to Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Post Code';
                     Visible = false;
                 }
-                field("Ship-to Country/Region Code"; "Ship-to Country/Region Code")
+                field("Ship-to Country/Region Code"; Rec."Ship-to Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Country/Region Code';
                     Visible = false;
                 }
-                field("Ship-to Contact"; "Ship-to Contact")
+                field("Ship-to Contact"; Rec."Ship-to Contact")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship-to Contact';
                     Visible = false;
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                     Visible = false;
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                     Visible = false;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Visible = true;
                 }
-                field("Customer Posting Group"; "Customer Posting Group")
+                field("Customer Posting Group"; Rec."Customer Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer Posting Group';
                     Visible = false;
                 }
-                field("Error Registro"; "Error Registro")
+                field("Error Registro"; Rec."Error Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Error Registro';
                 }
-                field("Applies-to Doc. No."; "Applies-to Doc. No.")
+                field("Applies-to Doc. No."; Rec."Applies-to Doc. No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Applies-to Doc. No.';
                 }
-                field("No. Documento SIC"; "No. Documento SIC")
+                field("No. Documento SIC"; Rec."No. Documento SIC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento SIC';
                 }
             }
         }

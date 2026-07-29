@@ -10,6 +10,7 @@ page 34002183 "Informacion de nominas"
         {
             field(Novedades; STRSUBSTNO('(%1)', CUNomina.BuscaNominas(Rec)))
             {
+                ApplicationArea = All;
                 Caption = 'Customer No.';
             }
         }

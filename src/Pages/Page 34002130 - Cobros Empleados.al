@@ -13,6 +13,7 @@ page 34002130 "Cobros Empleados"
             }
             field(TipoPeriodo; TipoPeriodo)
             {
+                ApplicationArea = All;
                 OptionCaption = 'Dia,Semana,Mes,Trimestre,Año,Periodo';
                 ToolTip = 'Dia';
 
@@ -34,6 +35,7 @@ page 34002130 "Cobros Empleados"
             }
             field(TipImporte; TipImporte)
             {
+                ApplicationArea = All;
                 OptionCaption = 'Saldo en el periodo,Saldo acumulado a la fecha';
                 ToolTip = 'Saldo periodo';
 

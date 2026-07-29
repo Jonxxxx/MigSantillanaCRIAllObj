@@ -12,23 +12,35 @@ page 67125 "Categorias CVM"
         {
             repeater(Group)
             {
-                field(Campaña; Campana)
+                field(Campaña; Rec.Campana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Campana';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Grupo Negocio"; "Grupo Negocio")
+                field("Grupo Negocio"; Rec."Grupo Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo Negocio';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Categoria; Categoria)
+                field(Categoria; Rec.Categoria)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Categoria';
                 }
             }
         }

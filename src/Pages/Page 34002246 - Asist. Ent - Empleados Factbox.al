@@ -11,11 +11,15 @@ page 34002246 "Asist. Ent - Empleados Factbox"
         {
             repeater(GeneralRep)
             {
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Nombre completo"; "Nombre completo")
+                field("Nombre completo"; Rec."Nombre completo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre completo';
                 }
             }
         }

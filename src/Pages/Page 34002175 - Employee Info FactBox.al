@@ -10,6 +10,7 @@ page 34002175 "Employee Info FactBox"
         {
             field("Busca Nov"; STRSUBSTNO('(%1)', CUNomina.BuscaNovedades(Rec)))
             {
+                ApplicationArea = All;
                 Caption = 'Personnel actions';
                 Editable = false;
 
@@ -20,6 +21,7 @@ page 34002175 "Employee Info FactBox"
             }
             field(JXQualificationsCount; STRSUBSTNO('(%1)', CUNomina.BuscaCualificaciones("No.")))
             {
+                ApplicationArea = All;
                 Caption = 'Qualifications';
                 Editable = false;
 
@@ -30,6 +32,7 @@ page 34002175 "Employee Info FactBox"
             }
             field(JXDimensionsCount; STRSUBSTNO('(%1)', CUNomina.BuscaDimensiones("No.")))
             {
+                ApplicationArea = All;
                 Caption = 'Dimensions';
                 Editable = false;
 
@@ -40,6 +43,7 @@ page 34002175 "Employee Info FactBox"
             }
             field(JXJobEntriesCount; STRSUBSTNO('(%1)', CUNomina.BuscaActividades(Rec, GETRANGEMIN("Date Filter"), GETRANGEMAX("Date Filter"))))
             {
+                ApplicationArea = All;
                 Caption = 'Job entries';
                 Editable = false;
 
@@ -50,6 +54,7 @@ page 34002175 "Employee Info FactBox"
             }
             field(JXSalaryHistoryCount; STRSUBSTNO('(%1)', CUNomina.BuscaHistSalario(Rec)))
             {
+                ApplicationArea = All;
                 Caption = 'Salary History';
                 Editable = false;
 

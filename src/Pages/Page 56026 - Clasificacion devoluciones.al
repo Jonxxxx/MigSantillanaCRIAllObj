@@ -13,8 +13,10 @@ page 56026 "Clasificacion devoluciones"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
 
                     trigger OnAssistEdit()
@@ -23,21 +25,28 @@ page 56026 "Clasificacion devoluciones"
                             CurrPage.UPDATE;
                     end;
                 }
-                field(CustNo; "Customer no.")
+                field(CustNo; Rec."Customer no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer no.';
                     Caption = 'Customer no.';
                     TableRelation = Customer;
                 }
-                field("Customer name"; "Customer name")
+                field("Customer name"; Rec."Customer name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer name';
                     Editable = false;
                 }
-                field("External document no."; "External document no.")
+                field("External document no."; Rec."External document no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External document no.';
                     Caption = 'External Doc. Number';
                 }
                 field(barcode; Barcode)
                 {
+                    ApplicationArea = All;
                     Caption = 'EAN';
                     TableRelation = "Item Reference"."Reference No.";
 
@@ -59,6 +68,7 @@ page 56026 "Clasificacion devoluciones"
                 }
                 field(ItemNo; ItemNo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Item no.';
                     TableRelation = Item;
 
@@ -71,22 +81,28 @@ page 56026 "Clasificacion devoluciones"
                 }
                 field(Desc; Desc)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
                 field(Iuom; Iuom)
                 {
+                    ApplicationArea = All;
                     Caption = 'Unit of measure';
                     TableRelation = "Item Unit of Measure";
                 }
                 field(Cant; Cant)
                 {
+                    ApplicationArea = All;
                     Caption = 'Quantity';
                 }
                 field("Comentario producto"; ComentarioProd)
                 {
+                    ApplicationArea = All;
                 }
-                field("Cod. Almacen"; "Cod. Almacen")
+                field("Cod. Almacen"; Rec."Cod. Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Almacen';
                 }
             }
             part(Detalle; 56027)

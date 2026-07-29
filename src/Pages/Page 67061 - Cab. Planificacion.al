@@ -11,31 +11,45 @@ page 67061 "Cab. Planificacion"
             group(General)
             {
                 Caption = 'General';
-                field(CodPromotor; "Cod. Promotor")
+                field(CodPromotor; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = PromEditable;
                 }
-                field("Nombre promotor"; "Nombre promotor")
+                field("Nombre promotor"; Rec."Nombre promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre promotor';
                     Editable = false;
                 }
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                     Editable = false;
                 }
-                field(Semana; Semana)
+                field(Semana; Rec.Semana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Semana';
                 }
-                field("Fecha Inicial"; "Fecha Inicial")
+                field("Fecha Inicial"; Rec."Fecha Inicial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicial';
                     Editable = false;
                 }
-                field("Fecha Final"; "Fecha Final")
+                field("Fecha Final"; Rec."Fecha Final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Final';
                     Editable = false;
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Editable = false;
                 }
             }

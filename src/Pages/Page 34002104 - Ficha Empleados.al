@@ -12,8 +12,10 @@ page 34002104 "Ficha Empleados"
             group(Personales)
             {
                 Caption = 'General';
-                field("No"; "No.")
+                field("No"; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     AssistEdit = true;
                     Importance = Promoted;
                     StyleExpr = TRUE;
@@ -24,126 +26,188 @@ page 34002104 "Ficha Empleados"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                     Importance = Promoted;
                     ShowMandatory = true;
                     StyleExpr = TRUE;
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                     StyleExpr = TRUE;
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                     Importance = Promoted;
                     ShowMandatory = true;
                     StyleExpr = TRUE;
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                     Caption = 'Tipo + Documento';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                     Importance = Promoted;
                     ShowMandatory = true;
                 }
-                field(Salario; Salario)
+                field(Salario; Rec.Salario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario';
                     Editable = false;
                     Visible = SueldoVisible;
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                     Caption = 'Direccion';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                     Caption = 'State/ZIP Code';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("CodigoCliente"; "Codigo Cliente")
+                field("CodigoCliente"; Rec."Codigo Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Cliente';
                 }
-                field("Salespers./Purch. Code"; "Salespers./Purch. Code")
+                field("Salespers./Purch. Code"; Rec."Salespers./Purch. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salespers./Purch. Code';
                     Importance = Additional;
                 }
-                field("Resource No."; "Resource No.")
+                field("Resource No."; Rec."Resource No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resource No.';
                     Importance = Additional;
                 }
-                field(Departamento; Departamento)
+                field(Departamento; Rec.Departamento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Departamento';
                     Editable = BloqueaCamposAccP;
                     ShowMandatory = true;
                 }
-                field("Desc. Departamento"; "Desc. Departamento")
+                field("Desc. Departamento"; Rec."Desc. Departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Departamento';
                 }
-                field("Sub-Departamento"; "Sub-Departamento")
+                field("Sub-Departamento"; Rec."Sub-Departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub-Departamento';
                 }
-                field("Calcular Nomina"; "Calcular Nomina")
+                field("Calcular Nomina"; Rec."Calcular Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Calcular Nomina';
                     Visible = CalcNomVisible;
                 }
-                field(Categoria; Categoria)
+                field(Categoria; Rec.Categoria)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Categoria';
                 }
-                field("Tipo Empleado"; "Tipo Empleado")
+                field("Tipo Empleado"; Rec."Tipo Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Empleado';
                     Editable = false;
                 }
-                field("Tipo pago"; "Tipo pago")
+                field("Tipo pago"; Rec."Tipo pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo pago';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Employee Level"; "Employee Level")
+                field("Employee Level"; Rec."Employee Level")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employee Level';
                     Editable = false;
                     Importance = Additional;
                 }
-                field(Pensionado; Pensionado)
+                field(Pensionado; Rec.Pensionado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pensionado';
                     Importance = Additional;
                 }
-                field("Gastos Proyectados Anualmente"; "Gastos Proyectados Anualmente")
+                field("Gastos Proyectados Anualmente"; Rec."Gastos Proyectados Anualmente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gastos Proyectados Anualmente';
                     Importance = Additional;
                     Visible = DatosBol;
                 }
-                field("Incentivos/Puntos"; "Incentivos/Puntos")
+                field("Incentivos/Puntos"; Rec."Incentivos/Puntos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Incentivos/Puntos';
                     Importance = Additional;
                 }
-                field("Importe de Anticipo"; "Importe de Anticipo")
+                field("Importe de Anticipo"; Rec."Importe de Anticipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe de Anticipo';
                     Importance = Additional;
                     Visible = DatosBol;
                 }
-                field("Dias Vacaciones"; "Dias Vacaciones")
+                field("Dias Vacaciones"; Rec."Dias Vacaciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias Vacaciones';
                 }
-                field("Distribuir salario en proyecto"; "Distribuir salario en proyecto")
+                field("Distribuir salario en proyecto"; Rec."Distribuir salario en proyecto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distribuir salario en proyecto';
                 }
             }
             part(PerfSal; 34002119)
@@ -154,148 +218,224 @@ page 34002104 "Ficha Empleados"
             group(Contract)
             {
                 Caption = 'Contract';
-                field("Employment Date"; "Employment Date")
+                field("Employment Date"; Rec."Employment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Employment Date';
                     Caption = 'Fecha de Ingreso';
                     Importance = Promoted;
                     ShowMandatory = true;
                 }
-                field(Company; Company)
+                field(Company; Rec.Company)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company';
                     ShowMandatory = true;
                 }
-                field("Working Center"; "Working Center")
+                field("Working Center"; Rec."Working Center")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Working Center';
                 }
-                field("Working Center Name"; "Working Center Name")
+                field("Working Center Name"; Rec."Working Center Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Working Center Name';
                 }
-                field("Job Type Code"; "Job Type Code")
+                field("Job Type Code"; Rec."Job Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Type Code';
                     Editable = BloqueaCamposAccP;
                     ShowMandatory = true;
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                     Editable = false;
                     Importance = Promoted;
                 }
-                field("Cod. Supervisor"; "Cod. Supervisor")
+                field("Cod. Supervisor"; Rec."Cod. Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Supervisor';
                 }
-                field("Nombre Supervisor"; "Nombre Supervisor")
+                field("Nombre Supervisor"; Rec."Nombre Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Supervisor';
                 }
-                field("ID Control de asistencia"; "ID Control de asistencia")
+                field("ID Control de asistencia"; Rec."ID Control de asistencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Control de asistencia';
                 }
-                field(Shift; Shift)
+                field(Shift; Rec.Shift)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shift';
                 }
-                field("Posting Group"; "Posting Group")
+                field("Posting Group"; Rec."Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Group';
                     Importance = Additional;
                 }
-                field("Emplymt. Contract Code"; "Emplymt. Contract Code")
+                field("Emplymt. Contract Code"; Rec."Emplymt. Contract Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Emplymt. Contract Code';
                     Editable = BloqueaCamposAccP;
                     ShowMandatory = true;
                 }
-                field("Alta contrato"; "Alta contrato")
+                field("Alta contrato"; Rec."Alta contrato")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Alta contrato';
                 }
-                field("Termination Date"; "Termination Date")
+                field("Termination Date"; Rec."Termination Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Termination Date';
                     Editable = false;
                 }
-                field("Grounds for Term. Code"; "Grounds for Term. Code")
+                field("Grounds for Term. Code"; Rec."Grounds for Term. Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grounds for Term. Code';
                     Importance = Additional;
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                 }
-                field("Fecha despues quinquenios"; "Fecha despues quinquenios")
+                field("Fecha despues quinquenios"; Rec."Fecha despues quinquenios")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha despues quinquenios';
                     Importance = Additional;
                     Visible = DatosBol;
                 }
-                field("Excluir Calc. Imp. en Comision"; "Excluir Calc. Imp. en Comision")
+                field("Excluir Calc. Imp. en Comision"; Rec."Excluir Calc. Imp. en Comision")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Excluir Calc. Imp. en Comision';
                 }
             }
             group("Contact/Others")
             {
                 Caption = 'Contact/Others';
-                field(Gender; Gender)
+                field(Gender; Rec.Gender)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gender';
                     Importance = Promoted;
                 }
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                     Importance = Promoted;
                 }
-                field("Tipo de Sangre"; "Tipo de Sangre")
+                field("Tipo de Sangre"; Rec."Tipo de Sangre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Sangre';
                 }
-                field("Lugar nacimiento"; "Lugar nacimiento")
+                field("Lugar nacimiento"; Rec."Lugar nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lugar nacimiento';
                 }
-                field("Estado civil"; "Estado civil")
+                field("Estado civil"; Rec."Estado civil")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado civil';
                     Importance = Promoted;
                 }
-                field("Contacto en caso de Emergencia"; "Contacto en caso de Emergencia")
+                field("Contacto en caso de Emergencia"; Rec."Contacto en caso de Emergencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Contacto en caso de Emergencia';
                 }
-                field("Telefono contacto Emergencia"; "Telefono contacto Emergencia")
+                field("Telefono contacto Emergencia"; Rec."Telefono contacto Emergencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono contacto Emergencia';
                 }
-                field("Parentesco caso de Emergencia"; "Parentesco caso de Emergencia")
+                field("Parentesco caso de Emergencia"; Rec."Parentesco caso de Emergencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Parentesco caso de Emergencia';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                     ExtendedDatatype = EMail;
                 }
-                field("Company E-Mail"; "Company E-Mail")
+                field("Company E-Mail"; Rec."Company E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company E-Mail';
                     ExtendedDatatype = EMail;
                 }
-                field("Fax No."; "Fax No.")
+                field("Fax No."; Rec."Fax No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fax No.';
                     ExtendedDatatype = PhoneNo;
                     Importance = Additional;
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                     ExtendedDatatype = PhoneNo;
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                     ExtendedDatatype = PhoneNo;
                 }
-                field(Pager; Pager)
+                field(Pager; Rec.Pager)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pager';
                 }
-                field("Categoria de licencia"; "Categoria de licencia")
+                field("Categoria de licencia"; Rec."Categoria de licencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Categoria de licencia';
                 }
-                field("No. Pasaporte"; "No. Pasaporte")
+                field("No. Pasaporte"; Rec."No. Pasaporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Pasaporte';
                 }
-                field("Visa americana"; "Visa americana")
+                field("Visa americana"; Rec."Visa americana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Visa americana';
                 }
-                field("Salario Empresas Externas"; "Salario Empresas Externas")
+                field("Salario Empresas Externas"; Rec."Salario Empresas Externas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario Empresas Externas';
                     Importance = Additional;
                 }
-                field("Language Code"; "Language Code")
+                field("Language Code"; Rec."Language Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Language Code';
                     Importance = Additional;
                 }
             }
@@ -305,12 +445,16 @@ page 34002104 "Ficha Empleados"
                 group(BANCO)
                 {
                     Caption = 'BANCO';
-                    field("Forma de Cobro"; "Forma de Cobro")
+                    field("Forma de Cobro"; Rec."Forma de Cobro")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Forma de Cobro';
                         Importance = Promoted;
                     }
-                    field(Cuenta; Cuenta)
+                    field(Cuenta; Rec.Cuenta)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Cuenta';
                         Caption = 'Nº  Cuenta';
                         Importance = Promoted;
                     }
@@ -318,30 +462,44 @@ page 34002104 "Ficha Empleados"
                 group("Social Security")
                 {
                     Caption = 'Social Security';
-                    field("Social Security No."; "Social Security No.")
+                    field("Social Security No."; Rec."Social Security No.")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Social Security No.';
                     }
-                    field("Cod. AFP"; "Cod. AFP")
+                    field("Cod. AFP"; Rec."Cod. AFP")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Cod. AFP';
                     }
-                    field("Cod. ARS"; "Cod. ARS")
+                    field("Cod. ARS"; Rec."Cod. ARS")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Cod. ARS';
                     }
-                    field("Agente de Retencion ISR"; "Agente de Retencion ISR")
+                    field("Agente de Retencion ISR"; Rec."Agente de Retencion ISR")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Agente de Retencion ISR';
                         Importance = Additional;
                     }
-                    field("RNC Agente de Retencion ISR"; "RNC Agente de Retencion ISR")
+                    field("RNC Agente de Retencion ISR"; Rec."RNC Agente de Retencion ISR")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'RNC Agente de Retencion ISR';
                         Editable = false;
                         Importance = Additional;
                     }
-                    field("Excluido Cotizacion TSS"; "Excluido Cotizacion TSS")
+                    field("Excluido Cotizacion TSS"; Rec."Excluido Cotizacion TSS")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Excluido Cotizacion TSS';
                         Importance = Additional;
                     }
-                    field("Excluido Cotizacion ISR"; "Excluido Cotizacion ISR")
+                    field("Excluido Cotizacion ISR"; Rec."Excluido Cotizacion ISR")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Excluido Cotizacion ISR';
                         Importance = Additional;
                     }
                 }
@@ -349,41 +507,65 @@ page 34002104 "Ficha Empleados"
             group("MT Data")
             {
                 Caption = 'MT Data';
-                field("Permiso Trabajo MT"; "Permiso Trabajo MT")
+                field("Permiso Trabajo MT"; Rec."Permiso Trabajo MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Permiso Trabajo MT';
                 }
-                field("Lugar Nacimiento MT"; "Lugar Nacimiento MT")
+                field("Lugar Nacimiento MT"; Rec."Lugar Nacimiento MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lugar Nacimiento MT';
                 }
-                field("Etnia MT"; "Etnia MT")
+                field("Etnia MT"; Rec."Etnia MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Etnia MT';
                 }
-                field("Idioma MT"; "Idioma MT")
+                field("Idioma MT"; Rec."Idioma MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Idioma MT';
                 }
-                field("Numero de Hijos MT"; "Numero de Hijos MT")
+                field("Numero de Hijos MT"; Rec."Numero de Hijos MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de Hijos MT';
                 }
-                field("Nivel Academico MT"; "Nivel Academico MT")
+                field("Nivel Academico MT"; Rec."Nivel Academico MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel Academico MT';
                 }
-                field("Desc. Nivel Academico"; "Desc. Nivel Academico")
+                field("Desc. Nivel Academico"; Rec."Desc. Nivel Academico")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desc. Nivel Academico';
                 }
-                field(Profesion; Profesion)
+                field(Profesion; Rec.Profesion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Profesion';
                 }
-                field("Cod. Puesto MT"; "Cod. Puesto MT")
+                field("Cod. Puesto MT"; Rec."Cod. Puesto MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Puesto MT';
                 }
-                field("Puesto MT"; "Puesto MT")
+                field("Puesto MT"; Rec."Puesto MT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Puesto MT';
                 }
-                field(Nacionalidad; Nacionalidad)
+                field(Nacionalidad; Rec.Nacionalidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nacionalidad';
                 }
-                field(Discapacidad; Discapacidad)
+                field(Discapacidad; Rec.Discapacidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Discapacidad';
                 }
             }
         }

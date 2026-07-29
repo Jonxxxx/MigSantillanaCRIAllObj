@@ -14,14 +14,20 @@ page 67033 "Lista Puestos"
         {
             repeater(General)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Aplica Jerarquia Colegio"; "Aplica Jerarquia Colegio")
+                field("Aplica Jerarquia Colegio"; Rec."Aplica Jerarquia Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplica Jerarquia Colegio';
                     Visible = false;
                 }
             }

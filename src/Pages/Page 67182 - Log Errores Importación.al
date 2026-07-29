@@ -12,8 +12,10 @@ page 67182 "Log Errores Importacion"
         {
             repeater(Group)
             {
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

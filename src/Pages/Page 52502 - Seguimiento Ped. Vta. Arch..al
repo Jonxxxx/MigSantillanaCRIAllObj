@@ -16,53 +16,85 @@ page 52502 "Seguimiento Ped. Vta. Arch."
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("Bill-to Customer No."; "Bill-to Customer No.")
+                field("Bill-to Customer No."; Rec."Bill-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Customer No.';
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                 }
-                field("Requested Delivery Date"; "Requested Delivery Date")
+                field("Requested Delivery Date"; Rec."Requested Delivery Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requested Delivery Date';
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field("No. Envio de Almacen"; "No. Envio de Almacen")
+                field("No. Envio de Almacen"; Rec."No. Envio de Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio de Almacen';
                 }
-                field("No. Picking"; "No. Picking")
+                field("No. Picking"; Rec."No. Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking';
                 }
-                field("No. Picking Reg."; "No. Picking Reg.")
+                field("No. Picking Reg."; Rec."No. Picking Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking Reg.';
                 }
-                field("No. Packing"; "No. Packing")
+                field("No. Packing"; Rec."No. Packing")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing';
                 }
-                field("No. Packing Reg."; "No. Packing Reg.")
+                field("No. Packing Reg."; Rec."No. Packing Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing Reg.';
                 }
-                field("No. Envio"; "No. Envio")
+                field("No. Envio"; Rec."No. Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio';
                 }
-                field("No. Hoja Ruta"; "No. Hoja Ruta")
+                field("No. Hoja Ruta"; Rec."No. Hoja Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja Ruta';
                 }
-                field("No. Factura"; "No. Factura")
+                field("No. Factura"; Rec."No. Factura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Factura';
                 }
-                field("Order Date"; "Order Date")
+                field("Order Date"; Rec."Order Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Order Date';
                 }
-                field("Amount Including VAT"; "Amount Including VAT")
+                field("Amount Including VAT"; Rec."Amount Including VAT")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount Including VAT';
                 }
             }
         }

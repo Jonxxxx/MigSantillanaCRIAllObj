@@ -12,14 +12,20 @@ page 67184 "Seleccion Tipo Eventos"
         {
             group(General)
             {
-                field(Seleccionar; Seleccionar)
+                field(Seleccionar; Rec.Seleccionar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seleccionar';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

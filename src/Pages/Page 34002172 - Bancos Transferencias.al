@@ -10,20 +10,30 @@ page 34002172 "Bancos Transferencias"
         {
             repeater(GeneralRep)
             {
-                field("Cod. Banco"; "Cod. Banco")
+                field("Cod. Banco"; Rec."Cod. Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Banco';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Institucion Financiera"; "Cod. Institucion Financiera")
+                field("Cod. Institucion Financiera"; Rec."Cod. Institucion Financiera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Institucion Financiera';
                 }
-                field("ACH Reservas"; "ACH Reservas")
+                field("ACH Reservas"; Rec."ACH Reservas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ACH Reservas';
                 }
-                field("Digito Chequeo"; "Digito Chequeo")
+                field("Digito Chequeo"; Rec."Digito Chequeo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Digito Chequeo';
                 }
             }
         }

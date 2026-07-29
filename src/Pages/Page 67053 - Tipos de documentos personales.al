@@ -11,17 +11,25 @@ page 67053 "Tipos de documentos personales"
         {
             repeater(General)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Tipo Factura"; "Tipo Factura")
+                field("Tipo Factura"; Rec."Tipo Factura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Factura';
                 }
-                field("Tax Identification Type"; "Tax Identification Type")
+                field("Tax Identification Type"; Rec."Tax Identification Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tax Identification Type';
                 }
             }
         }

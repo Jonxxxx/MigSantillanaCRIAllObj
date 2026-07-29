@@ -14,6 +14,7 @@ page 34002239 "DSNOM Vacaciones Activities"
                 field(FuncionesNomVacacionesporVencer;
                     FuncionesNom.VacacionesporVencer)
                 {
+                    ApplicationArea = All;
                     Caption = 'vacation to expire';
                     DecimalPlaces = 0 : 2;
                     Image = Calendar;
@@ -23,12 +24,16 @@ page 34002239 "DSNOM Vacaciones Activities"
                         FuncionesNom.MuestraVacporVencer;
                     end;
                 }
-                field("Vacation to start"; "Vacation to start")
+                field("Vacation to start"; Rec."Vacation to start")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Vacation to start';
                     Image = Calendar;
                 }
-                field("Vacation to finish"; "Vacation to finish")
+                field("Vacation to finish"; Rec."Vacation to finish")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Vacation to finish';
                     Image = Calendar;
                 }
             }

@@ -9,11 +9,15 @@ page 34002519 "Dimension Defecto Almacen"
         {
             repeater(Group)
             {
-                field("Codigo Dimension"; "Codigo Dimension")
+                field("Codigo Dimension"; Rec."Codigo Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Dimension';
                 }
-                field("Valor Dimension"; "Valor Dimension")
+                field("Valor Dimension"; Rec."Valor Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valor Dimension';
                 }
             }
         }

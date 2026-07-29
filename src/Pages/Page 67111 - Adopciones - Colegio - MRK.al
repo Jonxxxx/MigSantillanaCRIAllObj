@@ -12,19 +12,26 @@ page 67111 "Adopciones - Colegio - MRK"
         {
             repeater(General)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                     Editable = false;
                 }
-                field("Descripcion producto"; "Descripcion producto")
+                field("Descripcion producto"; Rec."Descripcion producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion producto';
                     Editable = false;
                 }
-                field("Edicion Coleccion"; "Edicion Coleccion")
+                field("Edicion Coleccion"; Rec."Edicion Coleccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Edicion Coleccion';
                 }
                 field(t2INI; t2INI)
                 {
+                    ApplicationArea = All;
                     AssistEdit = true;
                     Caption = '2INI';
                     Editable = false;
@@ -37,12 +44,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 2INI" := "Adopcion - 2INI";
                     end;
                 }
-                field("Marca Adopcion - 2INI"; "Marca Adopcion - 2INI")
+                field("Marca Adopcion - 2INI"; Rec."Marca Adopcion - 2INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 2INI';
                     Editable = false;
                 }
                 field(t3INI; t3INI)
                 {
+                    ApplicationArea = All;
                     Caption = '3INI';
                     Editable = false;
 
@@ -54,12 +64,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 3INI" := "Adopcion - 3INI";
                     end;
                 }
-                field("Marca Adopcion - 3INI"; "Marca Adopcion - 3INI")
+                field("Marca Adopcion - 3INI"; Rec."Marca Adopcion - 3INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 3INI';
                     Editable = false;
                 }
                 field(t4INI; t4INI)
                 {
+                    ApplicationArea = All;
                     Caption = '4INI';
                     Editable = false;
                     // TODO: Manual review - OptionCaption cannot be applied to the Text variable t4INI; the displayed adoption caption must be defined by a verified option-backed source.
@@ -73,12 +86,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 4INI" := "Adopcion - 4INI";
                     end;
                 }
-                field("Marca Adopcion - 4INI"; "Marca Adopcion - 4INI")
+                field("Marca Adopcion - 4INI"; Rec."Marca Adopcion - 4INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 4INI';
                     Editable = false;
                 }
                 field(t5INI; t5INI)
                 {
+                    ApplicationArea = All;
                     Caption = '5INI';
                     Editable = false;
 
@@ -90,12 +106,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 5INI" := "Adopcion - 5INI";
                     end;
                 }
-                field("Marca Adopcion - 5INI"; "Marca Adopcion - 5INI")
+                field("Marca Adopcion - 5INI"; Rec."Marca Adopcion - 5INI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 5INI';
                     Editable = false;
                 }
                 field(t1PRI; t1PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '1PRI';
                     Editable = false;
 
@@ -107,12 +126,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 1PRI" := "Adopcion - 1PRI";
                     end;
                 }
-                field("Marca Adopcion - 1PRI"; "Marca Adopcion - 1PRI")
+                field("Marca Adopcion - 1PRI"; Rec."Marca Adopcion - 1PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 1PRI';
                     Editable = false;
                 }
                 field(t2PRI; t2PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '2PRI';
                     Editable = false;
 
@@ -124,12 +146,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 2PRI" := "Adopcion - 2PRI";
                     end;
                 }
-                field("Marca Adopcion - 2PRI"; "Marca Adopcion - 2PRI")
+                field("Marca Adopcion - 2PRI"; Rec."Marca Adopcion - 2PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 2PRI';
                     Editable = false;
                 }
                 field(t3PRI; t3PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '3PRI';
                     Editable = false;
 
@@ -141,8 +166,10 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 3PRI" := "Adopcion - 3PRI";
                     end;
                 }
-                field("Marca Adopcion - 3PRI"; "Marca Adopcion - 3PRI")
+                field("Marca Adopcion - 3PRI"; Rec."Marca Adopcion - 3PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 3PRI';
                     Editable = false;
 
                     trigger OnAssistEdit()
@@ -155,6 +182,7 @@ page 67111 "Adopciones - Colegio - MRK"
                 }
                 field(t4PRI; t4PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '4PRI';
                     Editable = false;
 
@@ -166,12 +194,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 4PRI" := "Adopcion - 4PRI";
                     end;
                 }
-                field("Marca Adopcion - 4PRI"; "Marca Adopcion - 4PRI")
+                field("Marca Adopcion - 4PRI"; Rec."Marca Adopcion - 4PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 4PRI';
                     Editable = false;
                 }
                 field(t5PRI; t5PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '5PRI';
                     Editable = false;
 
@@ -183,12 +214,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 5PRI" := "Adopcion - 5PRI";
                     end;
                 }
-                field("Marca Adopcion - 5PRI"; "Marca Adopcion - 5PRI")
+                field("Marca Adopcion - 5PRI"; Rec."Marca Adopcion - 5PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 5PRI';
                     Editable = false;
                 }
                 field(t6PRI; t6PRI)
                 {
+                    ApplicationArea = All;
                     Caption = '6PRI';
                     Editable = false;
 
@@ -200,12 +234,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 6PRI" := "Adopcion - 6PRI";
                     end;
                 }
-                field("Marca Adopcion - 6PRI"; "Marca Adopcion - 6PRI")
+                field("Marca Adopcion - 6PRI"; Rec."Marca Adopcion - 6PRI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 6PRI';
                     Editable = false;
                 }
                 field(t1SEC; t1SEC)
                 {
+                    ApplicationArea = All;
                     Caption = '1SEC';
                     Editable = false;
 
@@ -217,12 +254,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 1SEC" := "Adopcion - 1SEC";
                     end;
                 }
-                field("Marca Adopcion - 1SEC"; "Marca Adopcion - 1SEC")
+                field("Marca Adopcion - 1SEC"; Rec."Marca Adopcion - 1SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 1SEC';
                     Editable = false;
                 }
                 field(t2SEC; t2SEC)
                 {
+                    ApplicationArea = All;
                     Caption = '2SEC';
                     Editable = false;
 
@@ -234,12 +274,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 2SEC" := "Adopcion - 2SEC";
                     end;
                 }
-                field("Marca Adopcion - 2SEC"; "Marca Adopcion - 2SEC")
+                field("Marca Adopcion - 2SEC"; Rec."Marca Adopcion - 2SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 2SEC';
                     Editable = false;
                 }
                 field(t3SEC; t3SEC)
                 {
+                    ApplicationArea = All;
                     Caption = '3SEC';
                     Editable = false;
 
@@ -251,12 +294,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 3SEC" := "Adopcion - 3SEC";
                     end;
                 }
-                field("Marca Adopcion - 3SEC"; "Marca Adopcion - 3SEC")
+                field("Marca Adopcion - 3SEC"; Rec."Marca Adopcion - 3SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 3SEC';
                     Editable = false;
                 }
                 field(t4SEC; t4SEC)
                 {
+                    ApplicationArea = All;
                     Caption = '4SEC';
                     Editable = false;
 
@@ -268,12 +314,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 4SEC" := "Adopcion - 4SEC";
                     end;
                 }
-                field("Marca Adopcion - 4SEC"; "Marca Adopcion - 4SEC")
+                field("Marca Adopcion - 4SEC"; Rec."Marca Adopcion - 4SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 4SEC';
                     Editable = false;
                 }
                 field(t5SEC; t5SEC)
                 {
+                    ApplicationArea = All;
                     Caption = '5SEC';
                     Editable = false;
 
@@ -285,12 +334,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 5SEC" := "Adopcion - 5SEC";
                     end;
                 }
-                field("Marca Adopcion - 5SEC"; "Marca Adopcion - 5SEC")
+                field("Marca Adopcion - 5SEC"; Rec."Marca Adopcion - 5SEC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 5SEC';
                     Editable = false;
                 }
                 field(t1SEI; t1SEI)
                 {
+                    ApplicationArea = All;
                     Caption = '1SEI';
                     Editable = false;
 
@@ -302,12 +354,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 1SEI" := "Adopcion - 1SEI";
                     end;
                 }
-                field("Marca Adopcion - 1SEI"; "Marca Adopcion - 1SEI")
+                field("Marca Adopcion - 1SEI"; Rec."Marca Adopcion - 1SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 1SEI';
                     Editable = false;
                 }
                 field(t2SEI; t2SEI)
                 {
+                    ApplicationArea = All;
                     Caption = '2SEI';
                     Editable = false;
 
@@ -319,12 +374,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 2SEI" := "Adopcion - 2SEI";
                     end;
                 }
-                field("Marca Adopcion - 2SEI"; "Marca Adopcion - 2SEI")
+                field("Marca Adopcion - 2SEI"; Rec."Marca Adopcion - 2SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 2SEI';
                     Editable = false;
                 }
                 field(t3SEI; t3SEI)
                 {
+                    ApplicationArea = All;
                     Caption = '3SEI';
                     Editable = false;
 
@@ -336,12 +394,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 3SEI" := "Adopcion - 3SEI";
                     end;
                 }
-                field("Marca Adopcion - 3SEI"; "Marca Adopcion - 3SEI")
+                field("Marca Adopcion - 3SEI"; Rec."Marca Adopcion - 3SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 3SEI';
                     Editable = false;
                 }
                 field(t4SEI; t4SEI)
                 {
+                    ApplicationArea = All;
                     Caption = '4SEI';
                     Editable = false;
 
@@ -353,12 +414,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 4SEI" := "Adopcion - 4SEI";
                     end;
                 }
-                field("Marca Adopcion - 4SEI"; "Marca Adopcion - 4SEI")
+                field("Marca Adopcion - 4SEI"; Rec."Marca Adopcion - 4SEI")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 4SEI';
                     Editable = false;
                 }
                 field(t1VA; t1VA)
                 {
+                    ApplicationArea = All;
                     Caption = '1VA';
                     Editable = false;
 
@@ -370,12 +434,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 1VA" := "Adopcion - 1VA";
                     end;
                 }
-                field("Marca Adopcion - 1VA"; "Marca Adopcion - 1VA")
+                field("Marca Adopcion - 1VA"; Rec."Marca Adopcion - 1VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 1VA';
                     Editable = false;
                 }
                 field(t2VA; t2VA)
                 {
+                    ApplicationArea = All;
                     Caption = '2VA';
                     Editable = false;
 
@@ -387,12 +454,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 2VA" := "Adopcion - 2VA";
                     end;
                 }
-                field("Marca Adopcion - 2VA"; "Marca Adopcion - 2VA")
+                field("Marca Adopcion - 2VA"; Rec."Marca Adopcion - 2VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 2VA';
                     Editable = false;
                 }
                 field(t3VA; t3VA)
                 {
+                    ApplicationArea = All;
                     Caption = '3VA';
                     Editable = false;
 
@@ -404,12 +474,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 3VA" := "Adopcion - 3VA";
                     end;
                 }
-                field("Marca Adopcion - 3VA"; "Marca Adopcion - 3VA")
+                field("Marca Adopcion - 3VA"; Rec."Marca Adopcion - 3VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 3VA';
                     Editable = false;
                 }
                 field(t4VA; t4VA)
                 {
+                    ApplicationArea = All;
                     Caption = '4VA';
                     Editable = false;
 
@@ -421,12 +494,15 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 4VA" := "Adopcion - 4VA";
                     end;
                 }
-                field("Marca Adopcion - 4VA"; "Marca Adopcion - 4VA")
+                field("Marca Adopcion - 4VA"; Rec."Marca Adopcion - 4VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 4VA';
                     Editable = false;
                 }
                 field(t5VA; t5VA)
                 {
+                    ApplicationArea = All;
                     Caption = '5VA';
                     Editable = false;
 
@@ -438,8 +514,10 @@ page 67111 "Adopciones - Colegio - MRK"
                             "Marca Adopcion - 5VA" := "Adopcion - 5VA";
                     end;
                 }
-                field("Marca Adopcion - 5VA"; "Marca Adopcion - 5VA")
+                field("Marca Adopcion - 5VA"; Rec."Marca Adopcion - 5VA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Marca Adopcion - 5VA';
                     Editable = false;
                 }
             }

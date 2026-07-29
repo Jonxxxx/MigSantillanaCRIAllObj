@@ -21,114 +21,176 @@ page 34002100 "Empresas de cotizacion"
             group(General)
             {
                 Caption = 'General';
-                field("Empresa cotizacion"; "Empresa cotizacion")
+                field("Empresa cotizacion"; Rec."Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa cotizacion';
                 }
-                field("Nombre Empresa cotizacion"; "Nombre Empresa cotizacion")
+                field("Nombre Empresa cotizacion"; Rec."Nombre Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Empresa cotizacion';
                 }
-                field(Direccion; Direccion)
+                field(Direccion; Rec.Direccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion';
                     Caption = 'Direccion';
                 }
-                field(Numero; Numero)
+                field(Numero; Rec.Numero)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero';
                     Caption = 'Apartamento';
                 }
-                field(Municipio; Municipio)
+                field(Municipio; Rec.Municipio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Municipio';
                 }
-                field(Provincia; Provincia)
+                field(Provincia; Rec.Provincia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provincia';
                 }
-                field("Cod. pais"; "Cod. pais")
+                field("Cod. pais"; Rec."Cod. pais")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. pais';
                 }
-                field("Codigo Postal"; "Codigo Postal")
+                field("Codigo Postal"; Rec."Codigo Postal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Postal';
                     Caption = 'C.P + Poblacion';
                 }
-                field("Domicilio fiscal"; "Domicilio fiscal")
+                field("Domicilio fiscal"; Rec."Domicilio fiscal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Domicilio fiscal';
                 }
-                field("Tipo de documento"; "Tipo de documento")
+                field("Tipo de documento"; Rec."Tipo de documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de documento';
                 }
-                field("RNC/CED"; "RNC/CED")
+                field("RNC/CED"; Rec."RNC/CED")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC/CED';
                 }
-                field(Imagen; Imagen)
+                field(Imagen; Rec.Imagen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Imagen';
                 }
-                field(Teléfono; Teléfono)
+                field(Teléfono; Rec.Teléfono)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Teléfono';
                 }
-                field(Fax; Fax)
+                field(Fax; Rec.Fax)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fax';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Esquema percepcion"; "Esquema percepcion")
+                field("Esquema percepcion"; Rec."Esquema percepcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Esquema percepcion';
                 }
-                field("Tasa de Riesgo (%)"; "Tasa de Riesgo (%)")
+                field("Tasa de Riesgo (%)"; Rec."Tasa de Riesgo (%)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tasa de Riesgo (%)';
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                 }
-                field("Tipo Empresa de Trabajo"; "Tipo Empresa de Trabajo")
+                field("Tipo Empresa de Trabajo"; Rec."Tipo Empresa de Trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Empresa de Trabajo';
                 }
             }
             group(Taxes)
             {
                 Caption = 'Taxes';
-                field("ID RNL"; "ID RNL")
+                field("ID RNL"; Rec."ID RNL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID RNL';
                 }
-                field("ID TSS"; "ID TSS")
+                field("ID TSS"; Rec."ID TSS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID TSS';
                 }
             }
             group(Payments)
             {
                 Caption = 'Payments';
-                field("ID  Volante Pago"; "ID  Volante Pago")
+                field("ID  Volante Pago"; Rec."ID  Volante Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID  Volante Pago';
                 }
-                field("Forma de Pago"; "Forma de Pago")
+                field("Forma de Pago"; Rec."Forma de Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma de Pago';
                 }
-                field(Banco; Banco)
+                field(Banco; Rec.Banco)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Banco';
                 }
-                field(Cuenta; Cuenta)
+                field(Cuenta; Rec.Cuenta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuenta';
                 }
-                field("Tipo Pago Nomina"; "Tipo Pago Nomina")
+                field("Tipo Pago Nomina"; Rec."Tipo Pago Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Pago Nomina';
                 }
-                field("Identificador Empresa"; "Identificador Empresa")
+                field("Identificador Empresa"; Rec."Identificador Empresa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Identificador Empresa';
                 }
-                field("Path archivo Nomina"; "Path archivo Nomina")
+                field("Path archivo Nomina"; Rec."Path archivo Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Path archivo Nomina';
                 }
-                field("Email Envia Boleta de Pago"; "Email Envia Boleta de Pago")
+                field("Email Envia Boleta de Pago"; Rec."Email Envia Boleta de Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Email Envia Boleta de Pago';
 
                     trigger OnValidate()
                     begin
                         //001
                     end;
                 }
-                field("Password Email Boleta Pago"; "Password Email Boleta Pago")
+                field("Password Email Boleta Pago"; Rec."Password Email Boleta Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Password Email Boleta Pago';
                     ExtendedDatatype = Masked;
 
                     trigger OnValidate()

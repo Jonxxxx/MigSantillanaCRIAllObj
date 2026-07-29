@@ -11,15 +11,15 @@ page 34002209 "Lista Cuestionario Evaluacion"
         {
             repeater(GeneralRep)
             {
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the code of the profile questionnaire.';
+                    ToolTip = 'Code';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
-                    ToolTip = 'Specifies the description of the profile questionnaire.';
+                    ToolTip = 'Description';
                 }
             }
         }

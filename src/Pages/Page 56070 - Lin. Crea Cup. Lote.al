@@ -9,17 +9,25 @@ page 56070 "Lin. Crea Cup. Lote"
         {
             repeater(Group)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("% Descuento"; "% Descuento")
+                field("% Descuento"; Rec."% Descuento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Descuento';
                 }
             }
         }

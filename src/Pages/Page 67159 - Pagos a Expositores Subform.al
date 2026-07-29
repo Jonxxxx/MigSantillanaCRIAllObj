@@ -9,24 +9,36 @@ page 67159 "Pagos a Expositores Subform"
         {
             repeater(Group)
             {
-                field("Cod. Evento"; "Cod. Evento")
+                field("Cod. Evento"; Rec."Cod. Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Evento';
                 }
-                field("Descripcion Evento"; "Descripcion Evento")
+                field("Descripcion Evento"; Rec."Descripcion Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Evento';
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                     Editable = false;
                 }
-                field("Monto a Pagar"; "Monto a Pagar")
+                field("Monto a Pagar"; Rec."Monto a Pagar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Monto a Pagar';
                 }
             }
         }

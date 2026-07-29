@@ -10,37 +10,56 @@ page 34002113 "Lista de conceptos salariales"
         {
             repeater(GeneralRep)
             {
-                field("Shortcut Dimension"; "Shortcut Dimension")
+                field("Shortcut Dimension"; Rec."Shortcut Dimension")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Tipo Cuenta Cuota Obrera"; "Tipo Cuenta Cuota Obrera")
+                field("Tipo Cuenta Cuota Obrera"; Rec."Tipo Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Obrera';
                 }
-                field("No. Cuenta Cuota Obrera"; "No. Cuenta Cuota Obrera")
+                field("No. Cuenta Cuota Obrera"; Rec."No. Cuenta Cuota Obrera")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Obrera';
                 }
-                field("Tipo Cuenta Cuota Patronal"; "Tipo Cuenta Cuota Patronal")
+                field("Tipo Cuenta Cuota Patronal"; Rec."Tipo Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Cuenta Cuota Patronal';
                 }
-                field("No. Cuenta Cuota Patronal"; "No. Cuenta Cuota Patronal")
+                field("No. Cuenta Cuota Patronal"; Rec."No. Cuenta Cuota Patronal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cuenta Cuota Patronal';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                     Visible = false;
                 }
                 field("Imprimir descripcion"; "Imprimir descripcion")
                 {
+                    ApplicationArea = All;
                     Visible = false;
                 }
-                field(Provisionar; Provisionar)
+                field(Provisionar; Rec.Provisionar)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provisionar';
                     Visible = false;
                 }
             }

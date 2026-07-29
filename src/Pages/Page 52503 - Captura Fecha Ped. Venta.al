@@ -8,9 +8,11 @@ page 52503 "Captura Fecha Ped. Venta"
         {
             field("Fecha Desde";FechaDesde)
             {
+                ApplicationArea = All;
             }
             field("Fecha Hasta";FechaHasta)
             {
+                ApplicationArea = All;
             }
         }
     }

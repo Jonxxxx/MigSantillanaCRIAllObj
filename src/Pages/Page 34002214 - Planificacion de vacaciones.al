@@ -10,23 +10,35 @@ page 34002214 "Planificacion de vacaciones"
         {
             repeater(Group)
             {
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Fecha inicio planificada"; "Fecha inicio planificada")
+                field("Fecha inicio planificada"; Rec."Fecha inicio planificada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inicio planificada';
                 }
-                field("Fecha fin planificada"; "Fecha fin planificada")
+                field("Fecha fin planificada"; Rec."Fecha fin planificada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha fin planificada';
                 }
-                field("Dias acumulados actual"; "Dias acumulados actual")
+                field("Dias acumulados actual"; Rec."Dias acumulados actual")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias acumulados actual';
                 }
-                field("Dias acumulados estimados"; "Dias acumulados estimados")
+                field("Dias acumulados estimados"; Rec."Dias acumulados estimados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias acumulados estimados';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Editable = false;
                 }
             }

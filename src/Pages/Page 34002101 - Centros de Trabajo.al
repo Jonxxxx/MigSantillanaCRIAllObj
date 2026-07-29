@@ -9,29 +9,45 @@ page 34002101 "Centros de Trabajo"
         {
             repeater(GeneralRep)
             {
-                field("Centro de trabajo"; "Centro de trabajo")
+                field("Centro de trabajo"; Rec."Centro de trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Centro de trabajo';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
-                field("Empresa cotizacion"; "Empresa cotizacion")
+                field("Empresa cotizacion"; Rec."Empresa cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa cotizacion';
                 }
-                field(Direccion; Direccion)
+                field(Direccion; Rec.Direccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion';
                 }
-                field("C.P."; "C.P.")
+                field("C.P."; Rec."C.P.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'C.P.';
                 }
-                field(Poblacion; Poblacion)
+                field(Poblacion; Rec.Poblacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Poblacion';
                 }
-                field(Provincia; Provincia)
+                field(Provincia; Rec.Provincia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provincia';
                 }
-                field("Fecha de Cierre Nomina"; "Fecha de Cierre Nomina")
+                field("Fecha de Cierre Nomina"; Rec."Fecha de Cierre Nomina")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de Cierre Nomina';
                 }
             }
         }

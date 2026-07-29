@@ -9,29 +9,45 @@ page 67070 "Clientes relacionados"
         {
             repeater(General)
             {
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field("Cod. Cliente Relacionado"; "Cod. Cliente Relacionado")
+                field("Cod. Cliente Relacionado"; Rec."Cod. Cliente Relacionado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente Relacionado';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Descripcion Cte. Relacionado"; "Descripcion Cte. Relacionado")
+                field("Descripcion Cte. Relacionado"; Rec."Descripcion Cte. Relacionado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Cte. Relacionado';
                 }
-                field(Balance; Balance)
+                field(Balance; Rec.Balance)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Balance';
                 }
-                field("Balance (LCY)"; "Balance (LCY)")
+                field("Balance (LCY)"; Rec."Balance (LCY)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Balance (LCY)';
                 }
-                field("Global Dimension 1 Code"; "Global Dimension 1 Code")
+                field("Global Dimension 1 Code"; Rec."Global Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Code';
                 }
-                field("Global Dimension 2 Code"; "Global Dimension 2 Code")
+                field("Global Dimension 2 Code"; Rec."Global Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Code';
                 }
             }
         }

@@ -9,17 +9,25 @@ page 67130 "Solicitud - Libros a Presentar"
         {
             repeater(Group)
             {
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field("Descripcion Producto"; "Descripcion Producto")
+                field("Descripcion Producto"; Rec."Descripcion Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Producto';
                 }
-                field("Horas por semana"; "Horas por semana")
+                field("Horas por semana"; Rec."Horas por semana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas por semana';
                 }
-                field("Año adopcion"; "Ano adopcion")
+                field("Año adopcion"; Rec."Ano adopcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano adopcion';
                 }
             }
         }

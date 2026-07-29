@@ -13,8 +13,10 @@ page 34002136 "Diario aumentos generales"
             group(General1)
             {
                 Caption = 'General';
-                field("Tipo Aumento"; "Tipo Aumento")
+                field("Tipo Aumento"; Rec."Tipo Aumento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Aumento';
 
                     trigger OnValidate()
                     begin
@@ -44,29 +46,40 @@ page 34002136 "Diario aumentos generales"
                 }
                 field(RedondeoEntero; RedondeoEntero)
                 {
+                    ApplicationArea = All;
                     Caption = 'Redondear a Entero';
                 }
             }
             repeater(Detail)
             {
                 Caption = 'Detail';
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                     Visible = "Codigo EmpleadoVisible";
                 }
-                field("Fecha Efectividad"; "Fecha Efectividad")
+                field("Fecha Efectividad"; Rec."Fecha Efectividad")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Efectividad';
                 }
-                field("% Aumento"; "% Aumento")
+                field("% Aumento"; Rec."% Aumento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Aumento';
                     Visible = "% AumentoVisible";
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                     Visible = ImporteVisible;
                 }
-                field("Tope Salario"; "Tope Salario")
+                field("Tope Salario"; Rec."Tope Salario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tope Salario';
                     Visible = "Tope SalarioVisible";
                 }
             }

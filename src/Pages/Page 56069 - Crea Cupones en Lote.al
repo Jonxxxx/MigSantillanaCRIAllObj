@@ -14,67 +14,100 @@ page 56069 "Crea Cupones en Lote"
         {
             group(General)
             {
-                field("Año Escolar"; "Ano Escolar")
+                field("Año Escolar"; Rec."Ano Escolar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano Escolar';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Cliente"; "Nombre Cliente")
+                field("Nombre Cliente"; Rec."Nombre Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Cliente';
                 }
-                field("Grado del Alumno"; "Grado Alumno")
+                field("Grado del Alumno"; Rec."Grado Alumno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grado Alumno';
                     Caption = 'Grado del Alumno';
                     TableRelation = Grado;
                 }
-                field("Descuento a colegio"; "Dto Colegio")
+                field("Descuento a colegio"; Rec."Dto Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto Colegio';
                     Caption = 'Nombre Vendedor';
                 }
-                field("Descuento a padre"; "Dto Padre")
+                field("Descuento a padre"; Rec."Dto Padre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto Padre';
                     Caption = 'Descuento a padre';
                 }
-                field("Dto. Aplica a Lineas"; "Dto. Aplica a Lineas")
+                field("Dto. Aplica a Lineas"; Rec."Dto. Aplica a Lineas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Aplica a Lineas';
                 }
-                field("Nombre Maestro"; "Nombre Maestro")
+                field("Nombre Maestro"; Rec."Nombre Maestro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Maestro';
                 }
-                field("Dto. Maestro"; "Dto. Maestro")
+                field("Dto. Maestro"; Rec."Dto. Maestro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dto. Maestro';
                 }
-                field("Descripcion"; Descripcion)
+                field("Descripcion"; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Caption = 'Description';
                 }
-                field("Válido desde:"; "Valido Desde")
+                field("Válido desde:"; Rec."Valido Desde")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Desde';
                     Caption = 'Valid From';
                 }
-                field("Válido Hasta:"; "Valido Hasta")
+                field("Válido Hasta:"; Rec."Valido Hasta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Hasta';
                     Caption = 'Valid To:';
                 }
-                field("Cod. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; Rec."Cod. Vendedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Vendedor';
                     Caption = 'Salesperson Code';
                     TableRelation = "Salesperson/Purchaser";
                 }
                 field("Nombre vendedor"; NombreVendedor("Cod. Vendedor"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre vendedor';
                     Editable = false;
                 }
-                field("Cantidad Limite"; "Cantidad Limite")
+                field("Cantidad Limite"; Rec."Cantidad Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Limite';
                 }
-                field("Importe Dto. Limite"; "Importe Dto. Limite")
+                field("Importe Dto. Limite"; Rec."Importe Dto. Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Dto. Limite';
                 }
-                field("Cantidad de Cupones"; "Cantidad Cupones")
+                field("Cantidad de Cupones"; Rec."Cantidad Cupones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Cupones';
                     Caption = 'Coupons Qty.';
                 }
             }

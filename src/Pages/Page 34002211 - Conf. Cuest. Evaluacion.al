@@ -13,7 +13,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
         {
             field(ProfileQuestionnaireCodeName; CurrentQuestionsChecklistCode)
             {
-                ApplicationArea = RelationshipMgmt;
+                ApplicationArea = All;
                 Caption = 'Profile Questionnaire Code';
                 ToolTip = 'Specifies the profile questionnaire.';
                 Visible = ProfileQuestionnaireCodeNameVi;
@@ -40,51 +40,51 @@ page 34002211 "Conf. Cuest. Evaluacion"
             {
                 IndentationColumn = DescriptionIndent;
                 IndentationControls = Description;
-                field(Type; Type)
+                field(Type; Rec.Type)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Type';
                     Style = Strong;
                     StyleExpr = StyleIsStrong;
-                    ToolTip = 'Specifies whether the entry is a question or an answer.';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
+                    ToolTip = 'Description';
                     Style = Strong;
                     StyleExpr = StyleIsStrong;
-                    ToolTip = 'Specifies the profile question or answer.';
                 }
-                field("Multiple Answers"; "Multiple Answers")
+                field("Multiple Answers"; Rec."Multiple Answers")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies that the question has more than one possible answer.';
+                    ApplicationArea = All;
+                    ToolTip = 'Multiple Answers';
                 }
-                field(Priority; Priority)
+                field(Priority; Rec.Priority)
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
+                    ToolTip = 'Priority';
                     HideValue = PriorityHideValue;
-                    ToolTip = 'Specifies the priority you give to the answer and where it should be displayed on the lines of the Contact Card. There are five options:';
                 }
-                field("Auto Employee Classification"; "Auto Employee Classification")
+                field("Auto Employee Classification"; Rec."Auto Employee Classification")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
+                    ToolTip = 'Auto Employee Classification';
                     Editable = false;
-                    ToolTip = 'Specifies that the question is automatically answered when you run the Update Contact Classification batch job.';
                 }
-                field("From Value"; "From Value")
+                field("From Value"; Rec."From Value")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies the value from which the automatic classification of your contacts starts.';
+                    ApplicationArea = All;
+                    ToolTip = 'From Value';
                 }
-                field("To Value"; "To Value")
+                field("To Value"; Rec."To Value")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies the value that the automatic classification of your contacts stops at.';
+                    ApplicationArea = All;
+                    ToolTip = 'To Value';
                 }
-                field("No. of Employee"; "No. of Employee")
+                field("No. of Employee"; Rec."No. of Employee")
                 {
-                    ApplicationArea = RelationshipMgmt;
-                    ToolTip = 'Specifies the number of contacts that have given this answer.';
+                    ApplicationArea = All;
+                    ToolTip = 'No. of Employee';
                 }
             }
         }

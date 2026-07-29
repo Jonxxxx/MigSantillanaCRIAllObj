@@ -13,11 +13,15 @@ page 34002195 "Payroll - Job Journal Batches"
         {
             repeater(GeneralRep)
             {
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
             }
         }

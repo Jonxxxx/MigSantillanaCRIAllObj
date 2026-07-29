@@ -11,128 +11,210 @@ page 34002191 "Lista de elegibles"
         {
             repeater(Group)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field(Initials; Initials)
+                field(Initials; Rec.Initials)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initials';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                 }
-                field("Social Security No."; "Social Security No.")
+                field("Social Security No."; Rec."Social Security No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Social Security No.';
                 }
-                field(Gender; Gender)
+                field(Gender; Rec.Gender)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gender';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field(Comment; Comment)
+                field(Comment; Rec.Comment)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comment';
                 }
-                field("Last Date Modified"; "Last Date Modified")
+                field("Last Date Modified"; Rec."Last Date Modified")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Date Modified';
                 }
-                field("Global Dimension 1 Filter"; "Global Dimension 1 Filter")
+                field("Global Dimension 1 Filter"; Rec."Global Dimension 1 Filter")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 1 Filter';
                 }
-                field("Global Dimension 2 Filter"; "Global Dimension 2 Filter")
+                field("Global Dimension 2 Filter"; Rec."Global Dimension 2 Filter")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Global Dimension 2 Filter';
                 }
-                field(Extension; Extension)
+                field(Extension; Rec.Extension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Extension';
                 }
-                field("URL Linkedin"; "URL Linkedin")
+                field("URL Linkedin"; Rec."URL Linkedin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'URL Linkedin';
                 }
-                field("URL Facebook"; "URL Facebook")
+                field("URL Facebook"; Rec."URL Facebook")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'URL Facebook';
                 }
-                field("Company E-Mail"; "Company E-Mail")
+                field("Company E-Mail"; Rec."Company E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Company E-Mail';
                 }
-                field(Title; Title)
+                field(Title; Rec.Title)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Title';
                 }
-                field("No. Series"; "No. Series")
+                field("No. Series"; Rec."No. Series")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Series';
                 }
-                field("Full Name"; "Full Name")
+                field("Full Name"; Rec."Full Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full Name';
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                 }
-                field(Nacionalidad; Nacionalidad)
+                field(Nacionalidad; Rec.Nacionalidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nacionalidad';
                 }
-                field("Lugar nacimiento"; "Lugar nacimiento")
+                field("Lugar nacimiento"; Rec."Lugar nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lugar nacimiento';
                 }
-                field("Estado civil"; "Estado civil")
+                field("Estado civil"; Rec."Estado civil")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado civil';
                 }
-                field("No. Seguridad Social"; "No. Seguridad Social")
+                field("No. Seguridad Social"; Rec."No. Seguridad Social")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Seguridad Social';
                 }
-                field("Experiencia 1"; "Experiencia 1")
+                field("Experiencia 1"; Rec."Experiencia 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Experiencia 1';
                 }
-                field("Experiencia 2"; "Experiencia 2")
+                field("Experiencia 2"; Rec."Experiencia 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Experiencia 2';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Job Type Code"; "Job Type Code")
+                field("Job Type Code"; Rec."Job Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Type Code';
                 }
             }
         }

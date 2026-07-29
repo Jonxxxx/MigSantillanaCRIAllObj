@@ -12,26 +12,40 @@ page 34002197 "Config. reloj control asist."
         {
             repeater(Group)
             {
-                field("Clock ID"; "Clock ID")
+                field("Clock ID"; Rec."Clock ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clock ID';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field(Provider; Provider)
+                field(Provider; Rec.Provider)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provider';
                 }
-                field("Data Source"; "Data Source")
+                field("Data Source"; Rec."Data Source")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Data Source';
                 }
-                field("Initial Catalog"; "Initial Catalog")
+                field("Initial Catalog"; Rec."Initial Catalog")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initial Catalog';
                 }
-                field(User; User)
+                field(User; Rec.User)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'User';
                 }
-                field(Password; Password)
+                field(Password; Rec.Password)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Password';
                     ExtendedDatatype = Masked;
                 }
             }

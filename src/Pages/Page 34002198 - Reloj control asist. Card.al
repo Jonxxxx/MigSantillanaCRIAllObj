@@ -9,52 +9,80 @@ page 34002198 "Reloj control asist. Card"
             group("Database information")
             {
                 Caption = 'Database information';
-                field("Clock ID"; "Clock ID")
+                field("Clock ID"; Rec."Clock ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clock ID';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field(Provider; Provider)
+                field(Provider; Rec.Provider)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Provider';
                 }
-                field("Data Source"; "Data Source")
+                field("Data Source"; Rec."Data Source")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Data Source';
                 }
-                field("Initial Catalog"; "Initial Catalog")
+                field("Initial Catalog"; Rec."Initial Catalog")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initial Catalog';
                 }
-                field(User; User)
+                field(User; Rec.User)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'User';
                 }
-                field(Password; Password)
+                field(Password; Rec.Password)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Password';
                     ExtendedDatatype = Masked;
                 }
             }
             group("Table fields information")
             {
                 Caption = 'Table fields information';
-                field("Nombre tabla ponchador"; "Nombre tabla ponchador")
+                field("Nombre tabla ponchador"; Rec."Nombre tabla ponchador")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre tabla ponchador';
                 }
-                field("ID Campo Cod. Empleado"; "ID Campo Cod. Empleado")
+                field("ID Campo Cod. Empleado"; Rec."ID Campo Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Campo Cod. Empleado';
                 }
-                field("ID Campo Cod. tarjeta"; "ID Campo Cod. tarjeta")
+                field("ID Campo Cod. tarjeta"; Rec."ID Campo Cod. tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Campo Cod. tarjeta';
                 }
-                field("ID Campo Fecha registro"; "ID Campo Fecha registro")
+                field("ID Campo Fecha registro"; Rec."ID Campo Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Campo Fecha registro';
                 }
-                field("ID Campo Hora registro"; "ID Campo Hora registro")
+                field("ID Campo Hora registro"; Rec."ID Campo Hora registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Campo Hora registro';
                 }
-                field("ID Campo ID Equipo"; "ID Campo ID Equipo")
+                field("ID Campo ID Equipo"; Rec."ID Campo ID Equipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Campo ID Equipo';
                 }
-                field("Nombre campo filtro de fecha"; "Nombre campo filtro de fecha")
+                field("Nombre campo filtro de fecha"; Rec."Nombre campo filtro de fecha")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre campo filtro de fecha';
                 }
             }
         }

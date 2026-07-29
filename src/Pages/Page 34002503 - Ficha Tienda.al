@@ -13,100 +13,160 @@ page 34002503 "Ficha Tienda"
         {
             group(General)
             {
-                field("Cod. Tienda"; "Cod. Tienda")
+                field("Cod. Tienda"; Rec."Cod. Tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Tienda';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Cod. Almacen"; "Cod. Almacen")
+                field("Cod. Almacen"; Rec."Cod. Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Almacen';
                 }
-                field(Direccion; Direccion)
+                field(Direccion; Rec.Direccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion';
                 }
-                field("Direccion 2"; "Direccion 2")
+                field("Direccion 2"; Rec."Direccion 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion 2';
                 }
-                field(Telefono; Telefono)
+                field(Telefono; Rec.Telefono)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono';
                 }
-                field(Fax; Fax)
+                field(Fax; Rec.Fax)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fax';
                 }
-                field("Pagina web"; "Pagina web")
+                field("Pagina web"; Rec."Pagina web")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagina web';
                 }
-                field("e-mail"; "e-mail")
+                field("e-mail"; Rec."e-mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'e-mail';
                 }
-                field("Telefono 2"; "Telefono 2")
+                field("Telefono 2"; Rec."Telefono 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Telefono 2';
                 }
-                field("No. Identificacion Fiscal"; "No. Identificacion Fiscal")
+                field("No. Identificacion Fiscal"; Rec."No. Identificacion Fiscal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Identificacion Fiscal';
                 }
-                field("Cod. Pais"; "Cod. Pais")
+                field("Cod. Pais"; Rec."Cod. Pais")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Pais';
                 }
-                field("Nombre Pais"; "Nombre Pais")
+                field("Nombre Pais"; Rec."Nombre Pais")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Pais';
                 }
-                field(Ciudad; Ciudad)
+                field(Ciudad; Rec.Ciudad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ciudad';
                 }
-                field("Informacion zona"; "Informacion zona")
+                field("Informacion zona"; Rec."Informacion zona")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Informacion zona';
                 }
-                field("Codigo Postal"; "Codigo Postal")
+                field("Codigo Postal"; Rec."Codigo Postal")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Postal';
                 }
-                field("Nombre Empresa 1"; "Nombre Empresa 1")
+                field("Nombre Empresa 1"; Rec."Nombre Empresa 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Empresa 1';
                     Visible = wGuatemala;
                 }
             }
             group(Funcionalidad)
             {
-                field("Instancia Completa SQL"; "Instancia Completa SQL")
+                field("Instancia Completa SQL"; Rec."Instancia Completa SQL")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Instancia Completa SQL';
                 }
-                field("Descuadre maximo en caja"; "Descuadre maximo en caja")
+                field("Descuadre maximo en caja"; Rec."Descuadre maximo en caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuadre maximo en caja';
                 }
-                field("Imp. Minimo Sol. Datos Cliente"; "Imp. Minimo Sol. Datos Cliente")
+                field("Imp. Minimo Sol. Datos Cliente"; Rec."Imp. Minimo Sol. Datos Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Imp. Minimo Sol. Datos Cliente';
                 }
-                field("Permite Anulaciones en POS"; "Permite Anulaciones en POS")
+                field("Permite Anulaciones en POS"; Rec."Permite Anulaciones en POS")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Permite Anulaciones en POS';
                 }
-                field("Permite NC en otro TPV"; "Permite NC en otro TPV")
+                field("Permite NC en otro TPV"; Rec."Permite NC en otro TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Permite NC en otro TPV';
                 }
-                field("Permite NC en otro Turno"; "Permite NC en otro Turno")
+                field("Permite NC en otro Turno"; Rec."Permite NC en otro Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Permite NC en otro Turno';
                 }
-                field("Registro En Linea"; "Registro En Linea")
+                field("Registro En Linea"; Rec."Registro En Linea")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Registro En Linea';
                 }
-                field("Control de caja"; "Control de caja")
+                field("Control de caja"; Rec."Control de caja")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Control de caja';
                 }
-                field("Arqueo de caja obligatorio"; "Arqueo de caja obligatorio")
+                field("Arqueo de caja obligatorio"; Rec."Arqueo de caja obligatorio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Arqueo de caja obligatorio';
                 }
-                field("Agrupar Lineas"; "Agrupar Lineas")
+                field("Agrupar Lineas"; Rec."Agrupar Lineas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Agrupar Lineas';
                 }
-                field("No. Maximo de Lineas"; "No. Maximo de Lineas")
+                field("No. Maximo de Lineas"; Rec."No. Maximo de Lineas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Maximo de Lineas';
                     Caption = 'Nº Maximo de Lineas';
                 }
-                field("No. Reaperturas Permitidas"; "No. Reaperturas Permitidas")
+                field("No. Reaperturas Permitidas"; Rec."No. Reaperturas Permitidas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Reaperturas Permitidas';
                 }
-                field("Cuenta Excencion IVA"; "Cuenta Excencion IVA")
+                field("Cuenta Excencion IVA"; Rec."Cuenta Excencion IVA")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuenta Excencion IVA';
                 }
             }
             part(Bancos; 34002532)
@@ -116,49 +176,75 @@ page 34002503 "Ficha Tienda"
             }
             group(Informes)
             {
-                field("ID Reporte contado"; "ID Reporte contado")
+                field("ID Reporte contado"; Rec."ID Reporte contado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte contado';
                 }
-                field("ID Reporte nota credito"; "ID Reporte nota credito")
+                field("ID Reporte nota credito"; Rec."ID Reporte nota credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte nota credito';
                 }
-                field("ID Reporte venta a credito"; "ID Reporte venta a credito")
+                field("ID Reporte venta a credito"; Rec."ID Reporte venta a credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte venta a credito';
                 }
-                field("ID Reporte cuadre"; "ID Reporte cuadre")
+                field("ID Reporte cuadre"; Rec."ID Reporte cuadre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte cuadre';
                 }
-                field("ID Reporte contado FE"; "ID Reporte contado FE")
+                field("ID Reporte contado FE"; Rec."ID Reporte contado FE")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte contado FE';
                 }
-                field("ID Reporte nota credito FE"; "ID Reporte nota credito FE")
+                field("ID Reporte nota credito FE"; Rec."ID Reporte nota credito FE")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Reporte nota credito FE';
                 }
-                field("Cantidad de Copias Contado"; "Cantidad de Copias Contado")
+                field("Cantidad de Copias Contado"; Rec."Cantidad de Copias Contado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Copias Contado';
                     Caption = 'Cantidad de Impresiones Contado';
                 }
-                field("Cantidad copias nota credito"; "Cantidad copias nota credito")
+                field("Cantidad copias nota credito"; Rec."Cantidad copias nota credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad copias nota credito';
                 }
-                field("Cantidad de Copias Credito"; "Cantidad de Copias Credito")
+                field("Cantidad de Copias Credito"; Rec."Cantidad de Copias Credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad de Copias Credito';
                     Caption = 'Cantidad de Impresiones Credito';
                 }
             }
             group("Recibo TPV")
             {
-                field("Descripcion recibo TPV"; "Descripcion recibo TPV")
+                field("Descripcion recibo TPV"; Rec."Descripcion recibo TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion recibo TPV';
                 }
-                field("Descripcion recibo TPV 2"; "Descripcion recibo TPV 2")
+                field("Descripcion recibo TPV 2"; Rec."Descripcion recibo TPV 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion recibo TPV 2';
                 }
-                field("Descripcion recibo TPV 3"; "Descripcion recibo TPV 3")
+                field("Descripcion recibo TPV 3"; Rec."Descripcion recibo TPV 3")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion recibo TPV 3';
                 }
-                field("Descripcion recibo TPV 4"; "Descripcion recibo TPV 4")
+                field("Descripcion recibo TPV 4"; Rec."Descripcion recibo TPV 4")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion recibo TPV 4';
                 }
             }
             part(Autorizaciones; 34002548)

@@ -13,77 +13,125 @@ page 67165 "Lista de Atenciones"
         {
             repeater(Group)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field("Id. Usuario"; "Id. Usuario")
+                field("Id. Usuario"; Rec."Id. Usuario")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id. Usuario';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("Tipo documento"; "Tipo documento")
+                field("Tipo documento"; Rec."Tipo documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo documento';
                 }
-                field(Documento; Documento)
+                field(Documento; Rec.Documento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Documento';
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Turno; Turno)
+                field(Turno; Rec.Turno)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Turno';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field(Distritos; Distritos)
+                field(Distritos; Rec.Distritos)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Distritos';
                 }
-                field(Objetivo; Objetivo)
+                field(Objetivo; Rec.Objetivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo';
                 }
-                field("Area Responsable"; "Area Responsable")
+                field("Area Responsable"; Rec."Area Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area Responsable';
                 }
-                field("Cod. Responsable"; "Cod. Responsable")
+                field("Cod. Responsable"; Rec."Cod. Responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Responsable';
                 }
-                field("Nombre responsable"; "Nombre responsable")
+                field("Nombre responsable"; Rec."Nombre responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre responsable';
                 }
-                field("Fecha Recepcion Documento"; "Fecha Recepcion Documento")
+                field("Fecha Recepcion Documento"; Rec."Fecha Recepcion Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Recepcion Documento';
                 }
             }
         }

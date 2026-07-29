@@ -9,11 +9,15 @@ page 34003021 "Lin. Campos Requeridos"
         {
             repeater(Group)
             {
-                field("No. Campo"; "No. Campo")
+                field("No. Campo"; Rec."No. Campo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Campo';
                 }
-                field("Nombre Campo"; "Nombre Campo")
+                field("Nombre Campo"; Rec."Nombre Campo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Campo';
                 }
             }
         }

@@ -11,16 +11,22 @@ page 34002137 "Historico de Salarios"
             repeater(GeneralRep)
             {
                 Editable = false;
-                field("Fecha Desde"; "Fecha Desde")
+                field("Fecha Desde"; Rec."Fecha Desde")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Desde';
                     Caption = 'Desde';
                 }
-                field("Fecha Hasta"; "Fecha Hasta")
+                field("Fecha Hasta"; Rec."Fecha Hasta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Hasta';
                     Caption = 'Hasta';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
             }
         }

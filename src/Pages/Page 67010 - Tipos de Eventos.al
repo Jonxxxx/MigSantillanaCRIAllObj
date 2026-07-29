@@ -11,17 +11,25 @@ page 67010 "Tipos de Eventos"
         {
             repeater(General)
             {
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Ingresar grados"; "Ingresar grados")
+                field("Ingresar grados"; Rec."Ingresar grados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ingresar grados';
                 }
-                field("Ingresar libros a presentar"; "Ingresar libros a presentar")
+                field("Ingresar libros a presentar"; Rec."Ingresar libros a presentar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ingresar libros a presentar';
                 }
             }
         }

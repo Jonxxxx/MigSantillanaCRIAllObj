@@ -14,50 +14,80 @@ page 51005 "Lista Cupon"
         {
             repeater(General)
             {
-                field("No. Cupon"; "No. Cupon")
+                field("No. Cupon"; Rec."No. Cupon")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Cupon';
                 }
-                field(Pendiente; Pendiente)
+                field(Pendiente; Rec.Pendiente)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pendiente';
                 }
-                field("Cod. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; Rec."Cod. Vendedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Vendedor';
                 }
-                field("Valido Desde"; "Valido Desde")
+                field("Valido Desde"; Rec."Valido Desde")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Desde';
                 }
-                field("Valido Hasta"; "Valido Hasta")
+                field("Valido Hasta"; Rec."Valido Hasta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Valido Hasta';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Descuento a Padres de Familia"; "Descuento a Padres de Familia")
+                field("Descuento a Padres de Familia"; Rec."Descuento a Padres de Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento a Padres de Familia';
                 }
-                field("Cantidad Limite"; "Cantidad Limite")
+                field("Cantidad Limite"; Rec."Cantidad Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Limite';
                 }
-                field("Importe Dto. Limite"; "Importe Dto. Limite")
+                field("Importe Dto. Limite"; Rec."Importe Dto. Limite")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Dto. Limite';
                 }
-                field("No. Lote"; "No. Lote")
+                field("No. Lote"; Rec."No. Lote")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Lote';
                 }
-                field("Fecha Creacion"; "Fecha Creacion")
+                field("Fecha Creacion"; Rec."Fecha Creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Creacion';
                 }
-                field("Hora Creacion"; "Hora Creacion")
+                field("Hora Creacion"; Rec."Hora Creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Creacion';
                 }
-                field(Impreso; Impreso)
+                field(Impreso; Rec.Impreso)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Impreso';
                 }
-                field(Anulado; Anulado)
+                field(Anulado; Rec.Anulado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anulado';
                 }
             }
         }

@@ -11,8 +11,10 @@ page 34002192 "Eligible Card"
             group(General)
             {
                 Caption = 'General';
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Importance = Promoted;
 
                     trigger OnAssistEdit()
@@ -21,119 +23,179 @@ page 34002192 "Eligible Card"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                     Importance = Promoted;
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                     Caption = 'Middle Name/Initials';
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                 }
-                field("Second Last Name"; "Second Last Name")
+                field("Second Last Name"; Rec."Second Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Second Last Name';
                 }
-                field(Initials; Initials)
+                field(Initials; Rec.Initials)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initials';
                 }
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                 }
-                field("Job Type Code"; "Job Type Code")
+                field("Job Type Code"; Rec."Job Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Type Code';
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                     Importance = Promoted;
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                     Caption = 'State/ZIP Code';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field(Gender; Gender)
+                field(Gender; Rec.Gender)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gender';
                 }
-                field("Last Date Modified"; "Last Date Modified")
+                field("Last Date Modified"; Rec."Last Date Modified")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Date Modified';
                     Importance = Promoted;
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                     Importance = Promoted;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
             }
             group(Communication)
             {
                 Caption = 'Communication';
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                     Importance = Promoted;
                 }
-                field("Phone No.2"; "Phone No.")
+                field("Phone No.2"; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field(Extension; Extension)
+                field(Extension; Rec.Extension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Extension';
                     Importance = Promoted;
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                     Importance = Promoted;
                 }
-                field("URL Linkedin"; "URL Linkedin")
+                field("URL Linkedin"; Rec."URL Linkedin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'URL Linkedin';
                 }
-                field("URL Facebook"; "URL Facebook")
+                field("URL Facebook"; Rec."URL Facebook")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'URL Facebook';
                 }
             }
             group(Personal)
             {
                 Caption = 'Personal';
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                     Importance = Promoted;
                 }
-                field("Social Security No."; "Social Security No.")
+                field("Social Security No."; Rec."Social Security No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Social Security No.';
                     Importance = Promoted;
                 }
             }
             group(Experience)
             {
                 Caption = 'Experience';
-                field("Experiencia 1"; "Experiencia 1")
+                field("Experiencia 1"; Rec."Experiencia 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Experiencia 1';
                     MultiLine = true;
                 }
-                field("Experiencia 2"; "Experiencia 2")
+                field("Experiencia 2"; Rec."Experiencia 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Experiencia 2';
                     MultiLine = true;
                 }
             }

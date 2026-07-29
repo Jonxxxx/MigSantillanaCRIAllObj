@@ -16,6 +16,7 @@ page 34002552 "Lista Tiendas Simple"
             {
                 field(text001; text001)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                     MultiLine = false;
                     Style = Attention;
@@ -24,11 +25,15 @@ page 34002552 "Lista Tiendas Simple"
             }
             repeater(Group)
             {
-                field("Cod. Tienda"; "Cod. Tienda")
+                field("Cod. Tienda"; Rec."Cod. Tienda")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Tienda';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

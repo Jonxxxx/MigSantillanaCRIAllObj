@@ -10,33 +10,49 @@ page 34002103 "Config. acciones personal"
         {
             repeater(GeneralRep)
             {
-                field("Tipo de accion"; "Tipo de accion")
+                field("Tipo de accion"; Rec."Tipo de accion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de accion';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("Emitir documento"; "Emitir documento")
+                field("Emitir documento"; Rec."Emitir documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Emitir documento';
                     Visible = false;
                 }
-                field("ID Documento"; "ID Documento")
+                field("ID Documento"; Rec."ID Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Documento';
                     Visible = false;
                 }
-                field("Pagar preaviso"; "Pagar preaviso")
+                field("Pagar preaviso"; Rec."Pagar preaviso")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagar preaviso';
                     Visible = false;
                 }
-                field("Pagar cesantia"; "Pagar cesantia")
+                field("Pagar cesantia"; Rec."Pagar cesantia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagar cesantia';
                     Visible = false;
                 }
-                field("Pagar regalia"; "Pagar regalia")
+                field("Pagar regalia"; Rec."Pagar regalia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagar regalia';
                     Caption = 'Staff actions Setup';
                     Visible = false;
                 }

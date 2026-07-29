@@ -9,6 +9,7 @@ page 34002542 "Dialogo motivo"
         {
             field(Motivo;texMotivo)
             {
+                ApplicationArea = All;
                 Caption = 'Indique el motivo de la reapertura';
             }
         }

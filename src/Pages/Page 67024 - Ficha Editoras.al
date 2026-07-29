@@ -10,54 +10,84 @@ page 67024 "Ficha Editoras"
             group(General)
             {
                 Caption = 'General';
-                field(Code; Code)
+                field(Code; Rec.Code)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Code';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field(Address; Address)
+                field(Address; Rec.Address)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address';
                 }
-                field("Address 2"; "Address 2")
+                field("Address 2"; Rec."Address 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Address 2';
                 }
-                field(City; City)
+                field(City; Rec.City)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'City';
                 }
-                field("Territory Code"; "Territory Code")
+                field("Territory Code"; Rec."Territory Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Territory Code';
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                 }
-                field(County; County)
+                field(County; Rec.County)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'County';
                 }
-                field(Santillana; Santillana)
+                field(Santillana; Rec.Santillana)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Santillana';
                 }
             }
             group(Communication)
             {
                 Caption = 'Communication';
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                 }
-                field("Home Page"; "Home Page")
+                field("Home Page"; Rec."Home Page")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Home Page';
                 }
-                field(Twitter; Twitter)
+                field(Twitter; Rec.Twitter)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Twitter';
                 }
-                field(Facebook; Facebook)
+                field(Facebook; Rec.Facebook)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Facebook';
                 }
             }
         }

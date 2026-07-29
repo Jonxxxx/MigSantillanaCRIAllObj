@@ -11,8 +11,10 @@ page 34002229 "Ficha entrenamientos - Disponi"
             group(General)
             {
                 Caption = 'General';
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
 
                     trigger OnAssistEdit()
                     begin
@@ -20,23 +22,35 @@ page 34002229 "Ficha entrenamientos - Disponi"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field("Fecha creacion"; "Fecha creacion")
+                field("Fecha creacion"; Rec."Fecha creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha creacion';
                 }
-                field("Horas estimadas"; "Horas estimadas")
+                field("Horas estimadas"; Rec."Horas estimadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas estimadas';
                 }
-                field("Capacidad de asistentes"; "Capacidad de asistentes")
+                field("Capacidad de asistentes"; Rec."Capacidad de asistentes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Capacidad de asistentes';
                 }
             }
         }

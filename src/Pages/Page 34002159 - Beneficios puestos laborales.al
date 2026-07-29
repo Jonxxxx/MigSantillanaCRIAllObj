@@ -10,14 +10,20 @@ page 34002159 "Beneficios puestos laborales"
         {
             repeater(GeneralRep)
             {
-                field("Tipo Beneficio"; "Tipo Beneficio")
+                field("Tipo Beneficio"; Rec."Tipo Beneficio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Beneficio';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
             }
         }

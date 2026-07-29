@@ -9,14 +9,20 @@ page 67123 "Solicitud - Grado Asistentes"
         {
             repeater(Group)
             {
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("No. Asistentes"; "No. Asistentes")
+                field("No. Asistentes"; Rec."No. Asistentes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Asistentes';
                 }
             }
         }

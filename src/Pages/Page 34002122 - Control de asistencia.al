@@ -11,6 +11,7 @@ page 34002122 "Control de asistencia"
         {
             field(filtroempleado; FiltroEmpleado)
             {
+                ApplicationArea = All;
                 Caption = 'Employee code filter';
 
                 trigger OnValidate()
@@ -20,6 +21,7 @@ page 34002122 "Control de asistencia"
             }
             field(filtrofechadesde; FiltroFechaDesde)
             {
+                ApplicationArea = All;
                 Caption = 'From date filter';
 
                 trigger OnValidate()
@@ -29,6 +31,7 @@ page 34002122 "Control de asistencia"
             }
             field(filtrofechaHasta; FiltroFechaHasta)
             {
+                ApplicationArea = All;
                 Caption = 'To date filter';
 
                 trigger OnValidate()
@@ -38,43 +41,65 @@ page 34002122 "Control de asistencia"
             }
             repeater(GeneralRep)
             {
-                field("Cod. Empleado"; "Cod. Empleado")
+                field("Cod. Empleado"; Rec."Cod. Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Empleado';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("Nombre dia"; "Nombre dia")
+                field("Nombre dia"; Rec."Nombre dia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre dia';
                     Editable = false;
                     StyleExpr = StyleTxt;
                 }
-                field("Hora registro"; "Hora registro")
+                field("Hora registro"; Rec."Hora registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora registro';
                 }
-                field("No. tarjeta"; "No. tarjeta")
+                field("No. tarjeta"; Rec."No. tarjeta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. tarjeta';
                     Visible = false;
                 }
-                field("ID Equipo"; "ID Equipo")
+                field("ID Equipo"; Rec."ID Equipo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ID Equipo';
                     Visible = false;
                 }
-                field("Full name"; "Full name")
+                field("Full name"; Rec."Full name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Full name';
                     StyleExpr = Styletxt;
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field("Fecha Entrada"; "Fecha Entrada")
+                field("Fecha Entrada"; Rec."Fecha Entrada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Entrada';
                 }
-                field("Fecha Salida"; "Fecha Salida")
+                field("Fecha Salida"; Rec."Fecha Salida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Salida';
                 }
-                field("1ra entrada"; "1ra entrada")
+                field("1ra entrada"; Rec."1ra entrada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra entrada';
 
                     trigger OnValidate()
                     begin
@@ -82,8 +107,10 @@ page 34002122 "Control de asistencia"
                             "Metodo registro" := "Metodo registro"::"Completado manualmente";
                     end;
                 }
-                field("1ra salida"; "1ra salida")
+                field("1ra salida"; Rec."1ra salida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra salida';
 
                     trigger OnValidate()
                     begin
@@ -91,8 +118,10 @@ page 34002122 "Control de asistencia"
                             "Metodo registro" := "Metodo registro"::"Completado manualmente";
                     end;
                 }
-                field("2da entrada"; "2da entrada")
+                field("2da entrada"; Rec."2da entrada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da entrada';
 
                     trigger OnValidate()
                     begin
@@ -100,8 +129,10 @@ page 34002122 "Control de asistencia"
                             "Metodo registro" := "Metodo registro"::"Completado manualmente";
                     end;
                 }
-                field("2da salida"; "2da salida")
+                field("2da salida"; Rec."2da salida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da salida';
 
                     trigger OnValidate()
                     begin
@@ -109,35 +140,51 @@ page 34002122 "Control de asistencia"
                             "Metodo registro" := "Metodo registro"::"Completado manualmente";
                     end;
                 }
-                field("Total Horas"; "Total Horas")
+                field("Total Horas"; Rec."Total Horas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total Horas';
                 }
-                field("Horas receso"; "Horas receso")
+                field("Horas receso"; Rec."Horas receso")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas receso';
                 }
-                field("Horas laboradas"; "Horas laboradas")
+                field("Horas laboradas"; Rec."Horas laboradas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas laboradas';
                 }
-                field("Horas regulares"; "Horas regulares")
+                field("Horas regulares"; Rec."Horas regulares")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas regulares';
                     Editable = false;
                     Visible = HorasVisibles;
                 }
-                field("Horas nocturnas"; "Horas nocturnas")
+                field("Horas nocturnas"; Rec."Horas nocturnas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas nocturnas';
                 }
-                field("Horas extras al 35"; "Horas extras al 35")
+                field("Horas extras al 35"; Rec."Horas extras al 35")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas extras al 35';
                     Editable = false;
                     Visible = HorasVisibles;
                 }
-                field("Horas extras 100"; "Horas extras 100")
+                field("Horas extras 100"; Rec."Horas extras 100")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas extras 100';
                     Editable = false;
                     Visible = HorasVisibles;
                 }
-                field("Dias feriados"; "Dias feriados")
+                field("Dias feriados"; Rec."Dias feriados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias feriados';
                     Editable = false;
                     Visible = HorasVisibles;
                 }
@@ -151,6 +198,7 @@ page 34002122 "Control de asistencia"
                         Caption = 'Worked hours total';
                         field(TotalHorasLab; TotalHorasLab)
                         {
+                            ApplicationArea = All;
                         }
                     }
                     group("Rest hours total")
@@ -158,6 +206,7 @@ page 34002122 "Control de asistencia"
                         Caption = 'Rest hours total';
                         field(TotalHorasRec; TotalHorasRec)
                         {
+                            ApplicationArea = All;
                             Caption = 'Total Hours recess';
                             Editable = false;
                         }
@@ -167,6 +216,7 @@ page 34002122 "Control de asistencia"
                         Caption = 'Regular hours total';
                         field(TotalHorReg; TotalHorReg)
                         {
+                            ApplicationArea = All;
                             Caption = 'Regular hours total';
                             Editable = false;
                         }
@@ -176,6 +226,7 @@ page 34002122 "Control de asistencia"
                         Caption = '35% Hours total';
                         field(TotalHorE35; TotalHorE35)
                         {
+                            ApplicationArea = All;
                             AutoFormatType = 1;
                             Caption = '35% hours total';
                             Editable = false;
@@ -186,6 +237,7 @@ page 34002122 "Control de asistencia"
                         Caption = 'Holliday hours total';
                         field(TotalHorFer; TotalHorFer)
                         {
+                            ApplicationArea = All;
                             Caption = 'Total Holliday hours';
                             Editable = false;
                         }
@@ -195,6 +247,7 @@ page 34002122 "Control de asistencia"
                         Caption = '100% hours total';
                         field(TotalHorE100; TotalHorE100)
                         {
+                            ApplicationArea = All;
                             Editable = false;
                         }
                     }
@@ -203,6 +256,7 @@ page 34002122 "Control de asistencia"
                         Caption = 'Night hour total';
                         field(TotalHorNoc; TotalHorNoc)
                         {
+                            ApplicationArea = All;
                             Editable = false;
                         }
                     }

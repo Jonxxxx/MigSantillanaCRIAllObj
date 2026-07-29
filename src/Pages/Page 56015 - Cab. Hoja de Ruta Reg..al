@@ -13,35 +13,55 @@ page 56015 "Cab. Hoja de Ruta Reg."
         {
             group(General)
             {
-                field("No. Hoja Ruta"; "No. Hoja Ruta")
+                field("No. Hoja Ruta"; Rec."No. Hoja Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja Ruta';
                 }
-                field("Cod. Transportista"; "Cod. Transportista")
+                field("Cod. Transportista"; Rec."Cod. Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Transportista';
                 }
-                field("Nombre Transportista"; "Nombre Transportista")
+                field("Nombre Transportista"; Rec."Nombre Transportista")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Transportista';
                 }
-                field("Fecha Planificacion Transporte"; "Fecha Planificacion Transporte")
+                field("Fecha Planificacion Transporte"; Rec."Fecha Planificacion Transporte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Planificacion Transporte';
                 }
-                field(Placa; Placa)
+                field(Placa; Rec.Placa)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Placa';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
-                field("Fecha Registro"; "Fecha Registro")
+                field("Fecha Registro"; Rec."Fecha Registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro';
                 }
-                field(Anulada; Anulada)
+                field(Anulada; Rec.Anulada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anulada';
                 }
-                field("Hoja de Ruta Origen"; "Hoja de Ruta Origen")
+                field("Hoja de Ruta Origen"; Rec."Hoja de Ruta Origen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hoja de Ruta Origen';
                 }
             }
             part(PageLin; 56016)

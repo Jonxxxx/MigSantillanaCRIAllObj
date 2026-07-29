@@ -10,11 +10,15 @@ page 34003022 Campos
         {
             repeater(Group)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Field Caption"; "Field Caption")
+                field("Field Caption"; Rec."Field Caption")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Field Caption';
                 }
             }
         }

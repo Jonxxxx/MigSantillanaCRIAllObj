@@ -24,29 +24,45 @@ page 52500 "Log Facturacion Electronica CR"
         {
             repeater(Group)
             {
-                field("Tipo Documento"; "Tipo Documento")
+                field("Tipo Documento"; Rec."Tipo Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento';
                 }
-                field("Estado Interfaz"; "Estado Interfaz")
+                field("Estado Interfaz"; Rec."Estado Interfaz")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Interfaz';
                 }
-                field(NoDocumento; NoDocumento)
+                field(NoDocumento; Rec.NoDocumento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'NoDocumento';
                 }
-                field("Fecha Doc"; "Fecha Doc")
+                field("Fecha Doc"; Rec."Fecha Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Doc';
                 }
-                field("Clave Doc"; "Clave Doc")
+                field("Clave Doc"; Rec."Clave Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Clave Doc';
                 }
-                field("Consecutivo Doc"; "Consecutivo Doc")
+                field("Consecutivo Doc"; Rec."Consecutivo Doc")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Consecutivo Doc';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field(Mensaje; Mensaje)
+                field(Mensaje; Rec.Mensaje)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mensaje';
                 }
             }
         }

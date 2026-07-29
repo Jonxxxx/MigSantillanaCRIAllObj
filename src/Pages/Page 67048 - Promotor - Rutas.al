@@ -11,39 +11,59 @@ page 67048 "Promotor - Rutas"
         {
             repeater(General)
             {
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                 }
-                field("Nombre Promotor"; "Nombre Promotor")
+                field("Nombre Promotor"; Rec."Nombre Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
                     Editable = false;
                 }
-                field("Cod. Ruta"; "Cod. Ruta")
+                field("Cod. Ruta"; Rec."Cod. Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Ruta';
                 }
-                field("Descripcion Ruta"; "Descripcion Ruta")
+                field("Descripcion Ruta"; Rec."Descripcion Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Ruta';
                     Editable = false;
                 }
-                field("Cod. Zona"; "Cod. Zona")
+                field("Cod. Zona"; Rec."Cod. Zona")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Zona';
                 }
-                field("Descripcion zona"; "Descripcion zona")
+                field("Descripcion zona"; Rec."Descripcion zona")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion zona';
                     Editable = false;
                 }
-                field("Cod. Supervisor"; "Cod. Supervisor")
+                field("Cod. Supervisor"; Rec."Cod. Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Supervisor';
                 }
-                field("Nombre Supervisor"; "Nombre Supervisor")
+                field("Nombre Supervisor"; Rec."Nombre Supervisor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Supervisor';
                     Editable = false;
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field("Descripcion Delegacion"; "Descripcion Delegacion")
+                field("Descripcion Delegacion"; Rec."Descripcion Delegacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Delegacion';
                 }
             }
         }

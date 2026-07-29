@@ -10,21 +10,31 @@ page 67117 "Exposit. - Eventos  ListPart"
         {
             repeater(General)
             {
-                field("Cod. Evento"; "Cod. Evento")
+                field("Cod. Evento"; Rec."Cod. Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Evento';
                     Visible = false;
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
-                field("Tipo de Expositor"; "Tipo de Expositor")
+                field("Tipo de Expositor"; Rec."Tipo de Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Expositor';
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
             }
         }

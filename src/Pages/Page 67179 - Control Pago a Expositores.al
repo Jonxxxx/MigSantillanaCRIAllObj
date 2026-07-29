@@ -9,17 +9,25 @@ page 67179 "Control Pago a Expositores"
         {
             repeater(Group)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field(Name; Name)
+                field(Name; Rec.Name)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Name';
                 }
-                field("Eventos Planif. Pendiente Pago"; "Eventos Planif. Pendiente Pago")
+                field("Eventos Planif. Pendiente Pago"; Rec."Eventos Planif. Pendiente Pago")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Eventos Planif. Pendiente Pago';
                 }
-                field("Eventos Planif. Pagados"; "Eventos Planif. Pagados")
+                field("Eventos Planif. Pagados"; Rec."Eventos Planif. Pagados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Eventos Planif. Pagados';
                 }
             }
         }

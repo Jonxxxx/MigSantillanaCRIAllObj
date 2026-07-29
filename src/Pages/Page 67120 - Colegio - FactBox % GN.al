@@ -12,12 +12,15 @@ page 67120 "Colegio - FactBox % GN"
         {
             repeater(General)
             {
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                     Caption = 'Grupo de negocio';
                 }
                 field(TEXCCRIraerPorcentaje; TraerPorcentaje)
                 {
+                    ApplicationArea = All;
                     Caption = '%';
                 }
             }

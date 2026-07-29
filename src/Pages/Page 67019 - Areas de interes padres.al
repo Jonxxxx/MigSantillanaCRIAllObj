@@ -9,19 +9,27 @@ page 67019 "Areas de interes padres"
         {
             repeater(General)
             {
-                field("DNI Padre"; "DNI Padre")
+                field("DNI Padre"; Rec."DNI Padre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'DNI Padre';
                     Visible = false;
                 }
-                field("Cod. Area Interes"; "Cod. Area Interes")
+                field("Cod. Area Interes"; Rec."Cod. Area Interes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Area Interes';
                 }
-                field("Nombre Padre"; "Nombre Padre")
+                field("Nombre Padre"; Rec."Nombre Padre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Padre';
                     Editable = false;
                 }
-                field("Descripcion Area Interes"; "Descripcion Area Interes")
+                field("Descripcion Area Interes"; Rec."Descripcion Area Interes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Area Interes';
                     Editable = false;
                 }
             }

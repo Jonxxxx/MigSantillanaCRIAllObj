@@ -9,128 +9,198 @@ page 67052 "Colegio - Adopciones Detalles"
         {
             repeater(General)
             {
-                field("Cod. Editorial"; "Cod. Editorial")
+                field("Cod. Editorial"; Rec."Cod. Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Editorial';
                     Visible = false;
                 }
-                field("Cod. Producto Editora"; "Cod. Producto Editora")
+                field("Cod. Producto Editora"; Rec."Cod. Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto Editora';
                 }
-                field("Nombre Producto Editora"; "Nombre Producto Editora")
+                field("Nombre Producto Editora"; Rec."Nombre Producto Editora")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Producto Editora';
                     Editable = false;
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                     Editable = false;
                 }
-                field("Cod. Promotor"; "Cod. Promotor")
+                field("Cod. Promotor"; Rec."Cod. Promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Promotor';
                     Editable = false;
                 }
-                field("Descripcion producto"; "Descripcion producto")
+                field("Descripcion producto"; Rec."Descripcion producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion producto';
                     Editable = false;
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                     Editable = false;
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                 }
-                field("Grupo de Negocio"; "Grupo de Negocio")
+                field("Grupo de Negocio"; Rec."Grupo de Negocio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Grupo de Negocio';
                     Editable = false;
                 }
-                field("Cod. Producto"; "Cod. Producto")
+                field("Cod. Producto"; Rec."Cod. Producto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Producto';
                 }
-                field(Seccion; Seccion)
+                field(Seccion; Rec.Seccion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Seccion';
                 }
-                field("Fecha Adopcion"; "Fecha Adopcion")
+                field("Fecha Adopcion"; Rec."Fecha Adopcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Adopcion';
                 }
-                field("Fecha de entrega acordada"; "Fecha de entrega acordada")
+                field("Fecha de entrega acordada"; Rec."Fecha de entrega acordada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha de entrega acordada';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Descripcion Nivel"; "Descripcion Nivel")
-                {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Adopcion anterior"; "Adopcion anterior")
-                {
-                    Editable = false;
-                }
-                field(Adopcion; Adopcion)
-                {
-                }
-                field("Mes de Lectura"; "Mes de Lectura")
-                {
-                }
-                field("Cantidad Alumnos"; "Cantidad Alumnos")
-                {
-                    Editable = false;
-                }
-                field("Adopcion Real"; "Adopcion Real")
-                {
-                }
-                field("% Dto. Padres"; "% Dto. Padres")
-                {
-                }
-                field("Nombre Promotor"; "Nombre Promotor")
-                {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                     Editable = false;
                     Visible = false;
                 }
-                field("% Dto. Colegio"; "% Dto. Colegio")
+                field("Descripcion Nivel"; Rec."Descripcion Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion Nivel';
+                    Editable = false;
+                    Visible = false;
                 }
-                field("% Dto. Docente"; "% Dto. Docente")
+                field("Adopcion anterior"; Rec."Adopcion anterior")
                 {
-                }
-                field("% Dto. Feria Padres"; "% Dto. Feria Padres")
-                {
-                }
-                field("% Dto. Feria Colegio"; "% Dto. Feria Colegio")
-                {
-                }
-                field("Cod. Motivo perdida adopcion"; "Cod. Motivo perdida adopcion")
-                {
-                }
-                field("Linea de negocio"; "Linea de negocio")
-                {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion anterior';
                     Editable = false;
                 }
-                field("Sub Familia"; "Sub Familia")
+                field(Adopcion; Rec.Adopcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion';
+                }
+                field("Mes de Lectura"; Rec."Mes de Lectura")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes de Lectura';
+                }
+                field("Cantidad Alumnos"; Rec."Cantidad Alumnos")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Alumnos';
                     Editable = false;
                 }
-                field(Serie; Serie)
+                field("Adopcion Real"; Rec."Adopcion Real")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Adopcion Real';
+                }
+                field("% Dto. Padres"; Rec."% Dto. Padres")
+                {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Padres';
+                }
+                field("Nombre Promotor"; Rec."Nombre Promotor")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Promotor';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("% Dto. Colegio"; Rec."% Dto. Colegio")
+                {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Colegio';
+                }
+                field("% Dto. Docente"; Rec."% Dto. Docente")
+                {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Docente';
+                }
+                field("% Dto. Feria Padres"; Rec."% Dto. Feria Padres")
+                {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Feria Padres';
+                }
+                field("% Dto. Feria Colegio"; Rec."% Dto. Feria Colegio")
+                {
+                    ApplicationArea = All;
+                    ToolTip = '% Dto. Feria Colegio';
+                }
+                field("Cod. Motivo perdida adopcion"; Rec."Cod. Motivo perdida adopcion")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Motivo perdida adopcion';
+                }
+                field("Linea de negocio"; Rec."Linea de negocio")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Linea de negocio';
                     Editable = false;
                 }
-                field(Inventory; Inventory)
+                field("Sub Familia"; Rec."Sub Familia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub Familia';
+                    Editable = false;
                 }
-                field("Unit Price"; "Unit Price")
+                field(Serie; Rec.Serie)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Serie';
+                    Editable = false;
                 }
-                field("Cantidad anterior"; "Cantidad anterior")
+                field(Inventory; Rec.Inventory)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inventory';
                 }
-                field("Motivo perdida adopcion"; "Motivo perdida adopcion")
+                field("Unit Price"; Rec."Unit Price")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit Price';
+                }
+                field("Cantidad anterior"; Rec."Cantidad anterior")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad anterior';
+                }
+                field("Motivo perdida adopcion"; Rec."Motivo perdida adopcion")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo perdida adopcion';
                     Editable = false;
                 }
             }

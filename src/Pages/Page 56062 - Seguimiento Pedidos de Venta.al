@@ -18,66 +18,105 @@ page 56062 "Seguimiento Pedidos de Venta"
         {
             repeater(Group)
             {
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("No. Envio de Almacen"; "No. Envio de Almacen")
+                field("No. Envio de Almacen"; Rec."No. Envio de Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio de Almacen';
                 }
-                field("Bill-to Name"; "Bill-to Name")
+                field("Bill-to Name"; Rec."Bill-to Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Bill-to Name';
                 }
-                field("No. Picking"; "No. Picking")
+                field("No. Picking"; Rec."No. Picking")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking';
                 }
-                field("No. Picking Reg."; "No. Picking Reg.")
+                field("No. Picking Reg."; Rec."No. Picking Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Picking Reg.';
                 }
-                field("No. Packing"; "No. Packing")
+                field("No. Packing"; Rec."No. Packing")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing';
                 }
-                field("No. Packing Reg."; "No. Packing Reg.")
+                field("No. Packing Reg."; Rec."No. Packing Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Packing Reg.';
                 }
-                field("No. Envio"; "No. Envio")
+                field("No. Envio"; Rec."No. Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Envio';
                 }
-                field("No. Hoja de Ruta"; "No. Hoja de Ruta")
+                field("No. Hoja de Ruta"; Rec."No. Hoja de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja de Ruta';
                 }
-                field("No. Hoja de Ruta Reg."; "No. Hoja de Ruta Reg.")
+                field("No. Hoja de Ruta Reg."; Rec."No. Hoja de Ruta Reg.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Hoja de Ruta Reg.';
                 }
-                field("No. Factura"; "No. Factura")
+                field("No. Factura"; Rec."No. Factura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Factura';
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                 }
-                field("En Hoja de Ruta"; "En Hoja de Ruta")
+                field("En Hoja de Ruta"; Rec."En Hoja de Ruta")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'En Hoja de Ruta';
                 }
-                field("Sell-to Customer Name"; "Sell-to Customer Name")
+                field("Sell-to Customer Name"; Rec."Sell-to Customer Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer Name';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field("Assigned User ID"; "Assigned User ID")
+                field("Assigned User ID"; Rec."Assigned User ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Assigned User ID';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                     Editable = false;
                 }
                 field(ContacName; Contac.Name)
                 {
+                    ApplicationArea = All;
                     Caption = 'School Name';
                     Editable = false;
                 }

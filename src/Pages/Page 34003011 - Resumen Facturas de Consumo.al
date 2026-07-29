@@ -14,47 +14,73 @@ page 34003011 "Resumen Facturas de Consumo"
         {
             group(GENERAL)
             {
-                field(CantidadNCF; CantidadNCF)
+                field(CantidadNCF; Rec.CantidadNCF)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'CantidadNCF';
                 }
-                field(TotalMontoFacturado; TotalMontoFacturado)
+                field(TotalMontoFacturado; Rec.TotalMontoFacturado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TotalMontoFacturado';
                 }
-                field(TotalITBISFacturado; TotalITBISFacturado)
+                field(TotalITBISFacturado; Rec.TotalITBISFacturado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TotalITBISFacturado';
                 }
-                field(ImpuestoSelectivoAlConsumo; ImpuestoSelectivoAlConsumo)
+                field(ImpuestoSelectivoAlConsumo; Rec.ImpuestoSelectivoAlConsumo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ImpuestoSelectivoAlConsumo';
                 }
-                field(TotalOtrosImpuestosTasas; TotalOtrosImpuestosTasas)
+                field(TotalOtrosImpuestosTasas; Rec.TotalOtrosImpuestosTasas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TotalOtrosImpuestosTasas';
                 }
-                field(TotalMontoPropinaLegal; TotalMontoPropinaLegal)
+                field(TotalMontoPropinaLegal; Rec.TotalMontoPropinaLegal)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TotalMontoPropinaLegal';
                 }
             }
             group("TIPO DE VENTAS")
             {
-                field(MontoEfectivo; MontoEfectivo)
+                field(MontoEfectivo; Rec.MontoEfectivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoEfectivo';
                 }
-                field(MontoChequeTransDeposito; MontoChequeTransDeposito)
+                field(MontoChequeTransDeposito; Rec.MontoChequeTransDeposito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoChequeTransDeposito';
                 }
-                field(MontoTarjeta; MontoTarjeta)
+                field(MontoTarjeta; Rec.MontoTarjeta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoTarjeta';
                 }
-                field(MontoCredito; MontoCredito)
+                field(MontoCredito; Rec.MontoCredito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoCredito';
                 }
-                field(MontoBonosCertificados; MontoBonosCertificados)
+                field(MontoBonosCertificados; Rec.MontoBonosCertificados)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoBonosCertificados';
                 }
-                field(MontoPermuta; MontoPermuta)
+                field(MontoPermuta; Rec.MontoPermuta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoPermuta';
                 }
-                field(MontoOtrasFormaVentas; MontoOtrasFormaVentas)
+                field(MontoOtrasFormaVentas; Rec.MontoOtrasFormaVentas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MontoOtrasFormaVentas';
                 }
             }
         }

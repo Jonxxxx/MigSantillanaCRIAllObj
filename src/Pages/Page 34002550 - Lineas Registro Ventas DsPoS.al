@@ -20,38 +20,60 @@ page 34002550 "Lineas Registro Ventas DsPoS"
         {
             repeater(GeneralRep)
             {
-                field("Fecha Documento"; "Fecha Documento")
+                field("Fecha Documento"; Rec."Fecha Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Documento';
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                 }
-                field("Tipo Documento"; "Tipo Documento")
+                field("Tipo Documento"; Rec."Tipo Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento';
                 }
-                field("No. Documento"; "No. Documento")
+                field("No. Documento"; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field(Texto; Texto)
+                field(Texto; Rec.Texto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto';
                 }
-                field(Error; Error)
+                field(Error; Rec.Error)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Error';
                 }
-                field(Registrado; Registrado)
+                field(Registrado; Rec.Registrado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Registrado';
                 }
-                field(Liquidado; Liquidado)
+                field(Liquidado; Rec.Liquidado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Liquidado';
                 }
-                field(Firmado; Firmado)
+                field(Firmado; Rec.Firmado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Firmado';
                 }
-                field("No. documento NAV"; "No. documento NAV")
+                field("No. documento NAV"; Rec."No. documento NAV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento NAV';
                 }
             }
         }

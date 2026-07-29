@@ -13,40 +13,59 @@ page 75005 "Imp.MdM Campos"
         {
             repeater(Group)
             {
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                     Visible = false;
                 }
-                field("Id Rel"; "Id Rel")
+                field("Id Rel"; Rec."Id Rel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Rel';
                     Visible = false;
                 }
-                field("Id Cab."; "Id Cab.")
+                field("Id Cab."; Rec."Id Cab.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Cab.';
                     Visible = false;
                 }
-                field("Table Id"; "Table Id")
+                field("Table Id"; Rec."Table Id")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Table Id';
                     Visible = false;
                 }
-                field("Id Field"; "Id Field")
+                field("Id Field"; Rec."Id Field")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id Field';
                 }
                 field(FieldCaption; cFumImp.GetFieldCaption(Rec."Table Id", Rec."Id Field"))
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Campo';
                 }
-                field(Value; Value)
+                field(Value; Rec.Value)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Value';
                 }
-                field("MdM Value"; "MdM Value")
+                field("MdM Value"; Rec."MdM Value")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'MdM Value';
                 }
-                field(Orden; Orden)
+                field(Orden; Rec.Orden)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Orden';
                 }
-                field("Nombre Elemento"; "Nombre Elemento")
+                field("Nombre Elemento"; Rec."Nombre Elemento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Elemento';
                 }
             }
         }

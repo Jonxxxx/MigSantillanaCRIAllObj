@@ -15,35 +15,55 @@ page 34002521 "Lista Pagos TPV"
         {
             repeater(Group)
             {
-                field(Fecha; Fecha)
+                field(Fecha; Rec.Fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha';
                 }
-                field(Tienda; Tienda)
+                field(Tienda; Rec.Tienda)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tienda';
                 }
-                field(TPV; TPV)
+                field(TPV; Rec.TPV)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'TPV';
                 }
-                field(Cajero; Cajero)
+                field(Cajero; Rec.Cajero)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cajero';
                 }
-                field("Forma pago TPV"; "Forma pago TPV")
+                field("Forma pago TPV"; Rec."Forma pago TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Forma pago TPV';
                 }
-                field("No. Borrador"; "No. Borrador")
+                field("No. Borrador"; Rec."No. Borrador")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Borrador';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field("No. Factura"; "No. Factura")
+                field("No. Factura"; Rec."No. Factura")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Factura';
                 }
-                field("No. Nota Credito"; "No. Nota Credito")
+                field("No. Nota Credito"; Rec."No. Nota Credito")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Nota Credito';
                 }
-                field(Hora; Hora)
+                field(Hora; Rec.Hora)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora';
                 }
             }
         }

@@ -23,28 +23,40 @@ page 50037 ListaDescuentoProntoPago
         {
             repeater(Group)
             {
-                field("Customer No."; "Customer No.")
+                field("Customer No."; Rec."Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer No.';
                 }
-                field("Salesperson Code"; "Salesperson Code")
+                field("Salesperson Code"; Rec."Salesperson Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salesperson Code';
                 }
                 field("Posting Date"; DetailedCustLedgEntry."Posting Date")
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha Registro';
                 }
                 field("Document No."; DetailedCustLedgEntry."Document No.")
                 {
+                    ApplicationArea = All;
                     Caption = 'Documento DPP';
                 }
-                field("Pmt. Disc. Given (LCY)"; "Pmt. Disc. Given (LCY)")
+                field("Pmt. Disc. Given (LCY)"; Rec."Pmt. Disc. Given (LCY)")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pmt. Disc. Given (LCY)';
                 }
-                field("No. Comprobante Fiscal DPP"; "No. Comprobante Fiscal DPP")
+                field("No. Comprobante Fiscal DPP"; Rec."No. Comprobante Fiscal DPP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Comprobante Fiscal DPP';
                 }
-                field("Fecha vencimiento NCF DPP"; "Fecha vencimiento NCF DPP")
+                field("Fecha vencimiento NCF DPP"; Rec."Fecha vencimiento NCF DPP")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha vencimiento NCF DPP';
                 }
             }
         }

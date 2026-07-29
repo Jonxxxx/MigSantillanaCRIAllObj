@@ -12,98 +12,151 @@ page 34002202 "Employee List - Payroll"
         {
             repeater(GeneralRep)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
                 field(FullName; FullName)
                 {
+                    ApplicationArea = All;
                     Caption = 'Full Name';
                 }
-                field("First Name"; "First Name")
+                field("First Name"; Rec."First Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'First Name';
                     Visible = false;
                 }
-                field("Middle Name"; "Middle Name")
+                field("Middle Name"; Rec."Middle Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Middle Name';
                     Visible = false;
                 }
-                field("Last Name"; "Last Name")
+                field("Last Name"; Rec."Last Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Last Name';
                     Visible = false;
                 }
-                field(Initials; Initials)
+                field(Initials; Rec.Initials)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Initials';
                     Visible = false;
                 }
-                field("Job Title"; "Job Title")
+                field("Job Title"; Rec."Job Title")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Title';
                 }
-                field("Post Code"; "Post Code")
+                field("Post Code"; Rec."Post Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Post Code';
                     Visible = false;
                 }
-                field("Country/Region Code"; "Country/Region Code")
+                field("Country/Region Code"; Rec."Country/Region Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Country/Region Code';
                     Visible = false;
                 }
-                field(Extension; Extension)
+                field(Extension; Rec.Extension)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Extension';
                 }
-                field("Phone No."; "Phone No.")
+                field("Phone No."; Rec."Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Phone No.';
                     Visible = false;
                 }
-                field("Mobile Phone No."; "Mobile Phone No.")
+                field("Mobile Phone No."; Rec."Mobile Phone No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mobile Phone No.';
                     Visible = false;
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                     Visible = false;
                 }
-                field("Birth Date"; "Birth Date")
+                field("Birth Date"; Rec."Birth Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Birth Date';
                 }
-                field("Mes Nacimiento"; "Mes Nacimiento")
+                field("Mes Nacimiento"; Rec."Mes Nacimiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes Nacimiento';
                 }
-                field("Statistics Group Code"; "Statistics Group Code")
+                field("Statistics Group Code"; Rec."Statistics Group Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Statistics Group Code';
                     Visible = false;
                 }
-                field("Resource No."; "Resource No.")
+                field("Resource No."; Rec."Resource No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Resource No.';
                     Visible = false;
                 }
-                field("Search Name"; "Search Name")
+                field("Search Name"; Rec."Search Name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Search Name';
                 }
-                field("Incentivos/Puntos"; "Incentivos/Puntos")
+                field("Incentivos/Puntos"; Rec."Incentivos/Puntos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Incentivos/Puntos';
                 }
-                field(Departamento; Departamento)
+                field(Departamento; Rec.Departamento)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Departamento';
                 }
-                field("Sub-Departamento"; "Sub-Departamento")
+                field("Sub-Departamento"; Rec."Sub-Departamento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sub-Departamento';
                 }
-                field("Fecha salida empresa"; "Fecha salida empresa")
+                field("Fecha salida empresa"; Rec."Fecha salida empresa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha salida empresa';
                 }
-                field(Salario; Salario)
+                field(Salario; Rec.Salario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario';
                 }
-                field("Total ingresos"; "Total ingresos")
+                field("Total ingresos"; Rec."Total ingresos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total ingresos';
                 }
-                field("Total deducciones"; "Total deducciones")
+                field("Total deducciones"; Rec."Total deducciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total deducciones';
                 }
-                field(Cuenta; Cuenta)
+                field(Cuenta; Rec.Cuenta)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuenta';
                 }
-                field(Comment; Comment)
+                field(Comment; Rec.Comment)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comment';
                 }
             }
         }

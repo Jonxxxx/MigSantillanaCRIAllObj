@@ -10,8 +10,10 @@ page 34002208 "Cab. Planif. Entrenamiento"
         {
             group(General)
             {
-                field("No. entrenamiento"; "No. entrenamiento")
+                field("No. entrenamiento"; Rec."No. entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. entrenamiento';
 
                     trigger OnAssistEdit()
                     begin
@@ -19,81 +21,129 @@ page 34002208 "Cab. Planif. Entrenamiento"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                 }
-                field("Titulo entrenamiento"; "Titulo entrenamiento")
+                field("Titulo entrenamiento"; Rec."Titulo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Titulo entrenamiento';
                 }
-                field("Tipo de Instructor"; "Tipo de Instructor")
+                field("Tipo de Instructor"; Rec."Tipo de Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Instructor';
                 }
-                field("Cod. Instructor"; "Cod. Instructor")
+                field("Cod. Instructor"; Rec."Cod. Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Instructor';
                 }
-                field("Nombre Instructor"; "Nombre Instructor")
+                field("Nombre Instructor"; Rec."Nombre Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Instructor';
                 }
-                field("Numero de sesiones"; "Numero de sesiones")
+                field("Numero de sesiones"; Rec."Numero de sesiones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de sesiones';
                 }
-                field("Fecha Inicio"; "Fecha Inicio")
+                field("Fecha Inicio"; Rec."Fecha Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio';
                 }
-                field("Hora de Inicio"; "Hora de Inicio")
+                field("Hora de Inicio"; Rec."Hora de Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora de Inicio';
                 }
-                field("Horas entrenamiento"; "Horas entrenamiento")
+                field("Horas entrenamiento"; Rec."Horas entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas entrenamiento';
                 }
-                field("Hora Final"; "Hora Final")
+                field("Hora Final"; Rec."Hora Final")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Hora Final';
                 }
-                field("Asistentes esperados"; "Asistentes esperados")
+                field("Asistentes esperados"; Rec."Asistentes esperados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes esperados';
                 }
-                field("Total registrados"; "Total registrados")
+                field("Total registrados"; Rec."Total registrados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total registrados';
                 }
-                field("Asistentes reales"; "Asistentes reales")
+                field("Asistentes reales"; Rec."Asistentes reales")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes reales';
                 }
-                field("Area Curricular"; "Area Curricular")
+                field("Area Curricular"; Rec."Area Curricular")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Area Curricular';
                 }
-                field(Sala; Sala)
+                field(Sala; Rec.Sala)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sala';
                 }
-                field(Tipo; Tipo)
+                field(Tipo; Rec.Tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                     Editable = false;
                 }
                 group(Schedule)
                 {
                     Caption = 'Schedule';
-                    field(Lunes; Lunes)
+                    field(Lunes; Rec.Lunes)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Lunes';
                     }
-                    field(Martes; Martes)
+                    field(Martes; Rec.Martes)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Martes';
                     }
-                    field(Miercoles; Miercoles)
+                    field(Miercoles; Rec.Miercoles)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Miercoles';
                     }
-                    field(Jueves; Jueves)
+                    field(Jueves; Rec.Jueves)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Jueves';
                     }
-                    field(Viernes; Viernes)
+                    field(Viernes; Rec.Viernes)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Viernes';
                     }
-                    field(Sabados; Sabados)
+                    field(Sabados; Rec.Sabados)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Sabados';
                     }
-                    field(Domingos; Domingos)
+                    field(Domingos; Rec.Domingos)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Domingos';
                     }
                 }
             }
@@ -104,17 +154,25 @@ page 34002208 "Cab. Planif. Entrenamiento"
             }
             group(GeneralGroup)
             {
-                field("Importe Gastos Entrenador"; "Importe Gastos Entrenador")
+                field("Importe Gastos Entrenador"; Rec."Importe Gastos Entrenador")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Gastos Entrenador';
                 }
-                field("Importe Gastos Impresion"; "Importe Gastos Impresion")
+                field("Importe Gastos Impresion"; Rec."Importe Gastos Impresion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Gastos Impresion';
                 }
-                field("Importe Atenciones"; "Importe Atenciones")
+                field("Importe Atenciones"; Rec."Importe Atenciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Atenciones';
                 }
-                field("Otros Importes"; "Otros Importes")
+                field("Otros Importes"; Rec."Otros Importes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Otros Importes';
                 }
             }
         }

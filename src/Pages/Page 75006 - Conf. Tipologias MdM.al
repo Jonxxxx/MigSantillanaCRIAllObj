@@ -14,8 +14,10 @@ page 75006 "Conf. Tipologias MdM"
             repeater(Group)
             {
                 Editable = wEditable;
-                field(Tipologia; Tipologia)
+                field(Tipologia; Rec.Tipologia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipologia';
                     Style = StandardAccent;
                     StyleExpr = TRUE;
 
@@ -34,72 +36,98 @@ page 75006 "Conf. Tipologias MdM"
                         END;
                     end;
                 }
-                field("Referencia 1"; "Referencia 1")
+                field("Referencia 1"; Rec."Referencia 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 1';
                     Editable = wRefEnbl1;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl1;
                 }
-                field("Referencia 2"; "Referencia 2")
+                field("Referencia 2"; Rec."Referencia 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 2';
                     Editable = wRefEnbl2;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl2;
                 }
-                field("Referencia 3"; "Referencia 3")
+                field("Referencia 3"; Rec."Referencia 3")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 3';
                     Editable = wRefEnbl3;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl3;
                 }
-                field("Referencia 4"; "Referencia 4")
+                field("Referencia 4"; Rec."Referencia 4")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 4';
                     Editable = wRefEnbl4;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl4;
                 }
-                field("Referencia 5"; "Referencia 5")
+                field("Referencia 5"; Rec."Referencia 5")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 5';
                     Editable = wRefEnbl5;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl5;
                 }
-                field("Referencia 6"; "Referencia 6")
+                field("Referencia 6"; Rec."Referencia 6")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 6';
                     Editable = wRefEnbl6;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl6;
                 }
-                field("Referencia 7"; "Referencia 7")
+                field("Referencia 7"; Rec."Referencia 7")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Referencia 7';
                     Editable = wRefEnbl7;
                     Style = StandardAccent;
                     StyleExpr = TRUE;
                     Visible = wRefEnbl7;
                 }
-                field("Gen. Prod. Posting Group"; "Gen. Prod. Posting Group")
+                field("Gen. Prod. Posting Group"; Rec."Gen. Prod. Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gen. Prod. Posting Group';
                 }
-                field("Inventory Posting Group"; "Inventory Posting Group")
+                field("Inventory Posting Group"; Rec."Inventory Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inventory Posting Group';
                 }
-                field("VAT Prod. Posting Group"; "VAT Prod. Posting Group")
+                field("VAT Prod. Posting Group"; Rec."VAT Prod. Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'VAT Prod. Posting Group';
                 }
-                field("Costing Method"; "Costing Method")
+                field("Costing Method"; Rec."Costing Method")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Costing Method';
                 }
-                field("Item Disc. Group"; "Item Disc. Group")
+                field("Item Disc. Group"; Rec."Item Disc. Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item Disc. Group';
                 }
-                field("No. Series"; "No. Series")
+                field("No. Series"; Rec."No. Series")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Series';
                 }
             }
         }

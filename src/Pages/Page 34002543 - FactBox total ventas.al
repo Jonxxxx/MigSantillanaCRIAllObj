@@ -9,17 +9,23 @@ page 34002543 "FactBox total ventas"
         {
             repeater(GeneralRep)
             {
-                field("Id TPV"; "Id TPV")
+                field("Id TPV"; Rec."Id TPV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id TPV';
                     Caption = 'TPV';
                     Importance = Promoted;
                 }
-                field("Importe ventas"; "Importe ventas")
+                field("Importe ventas"; Rec."Importe ventas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe ventas';
                     Caption = 'Ventas';
                 }
-                field("Importe cobros"; "Importe cobros")
+                field("Importe cobros"; Rec."Importe cobros")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe cobros';
                     Caption = 'Cobros';
                 }
             }
@@ -27,16 +33,22 @@ page 34002543 "FactBox total ventas"
             {
                 group(GeneralGroup)
                 {
-                    field(Tienda; Tienda)
+                    field(Tienda; Rec.Tienda)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Tienda';
                         Caption = 'Store';
                     }
-                    field("Importe ventas tienda"; "Importe ventas Tienda")
+                    field("Importe ventas tienda"; Rec."Importe ventas Tienda")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Importe ventas Tienda';
                         Caption = 'Ventas';
                     }
-                    field("Importe cobros tienda"; "Importe cobros Tienda")
+                    field("Importe cobros tienda"; Rec."Importe cobros Tienda")
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Importe cobros Tienda';
                         Caption = 'Cobros';
                     }
                 }

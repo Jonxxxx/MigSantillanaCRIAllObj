@@ -13,23 +13,35 @@ page 56201 "Async NAV WS Process Queue"
         {
             repeater(Group)
             {
-                field("Process Code"; "Process Code")
+                field("Process Code"; Rec."Process Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Process Code';
                 }
-                field("Process Status"; "Process Status")
+                field("Process Status"; Rec."Process Status")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Process Status';
                 }
-                field("Process End Date & Time"; "Process End Date & Time")
+                field("Process End Date & Time"; Rec."Process End Date & Time")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Process End Date & Time';
                 }
-                field("Process User Id"; "Process User Id")
+                field("Process User Id"; Rec."Process User Id")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Process User Id';
                 }
-                field("URL Web Service"; "URL Web Service")
+                field("URL Web Service"; Rec."URL Web Service")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'URL Web Service';
                 }
-                field("Soap Action"; "Soap Action")
+                field("Soap Action"; Rec."Soap Action")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Soap Action';
                 }
             }
         }

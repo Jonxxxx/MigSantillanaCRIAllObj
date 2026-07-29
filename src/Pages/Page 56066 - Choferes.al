@@ -11,20 +11,30 @@ page 56066 Choferes
         {
             repeater(Group)
             {
-                field("Cod. Chofer"; "Cod. Chofer")
+                field("Cod. Chofer"; Rec."Cod. Chofer")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Chofer';
                 }
-                field(Nombre; Nombre)
+                field(Nombre; Rec.Nombre)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre';
                 }
-                field("No. Licencia"; "No. Licencia")
+                field("No. Licencia"; Rec."No. Licencia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Licencia';
                 }
-                field(Activo; Activo)
+                field(Activo; Rec.Activo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Activo';
                 }
-                field(Observaciones; Observaciones)
+                field(Observaciones; Rec.Observaciones)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observaciones';
                 }
             }
         }

@@ -9,10 +9,12 @@ page 34002541 "Dialogo Login"
         {
             field(Usuario;codUser)
             {
+                ApplicationArea = All;
                 Caption = 'Usuario';
             }
             field("Contraseña";texPass)
             {
+                ApplicationArea = All;
                 Caption = 'Contraseña';
                 ExtendedDatatype = Masked;
             }

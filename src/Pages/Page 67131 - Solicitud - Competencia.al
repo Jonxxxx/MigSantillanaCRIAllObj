@@ -9,32 +9,48 @@ page 67131 "Solicitud - Competencia"
         {
             repeater(Group)
             {
-                field("Cod. Editorial"; "Cod. Editorial")
+                field("Cod. Editorial"; Rec."Cod. Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Editorial';
                 }
-                field("Cod. Libro"; "Cod. Libro")
+                field("Cod. Libro"; Rec."Cod. Libro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Libro';
                 }
-                field(Nivel; Nivel)
+                field(Nivel; Rec.Nivel)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nivel';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Cod. Grado"; "Cod. Grado")
+                field("Cod. Grado"; Rec."Cod. Grado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Grado';
                     Editable = false;
                 }
-                field("Nombre Editorial"; "Nombre Editorial")
+                field("Nombre Editorial"; Rec."Nombre Editorial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Editorial';
                     Editable = false;
                 }
-                field("Horas a la semana"; "Horas a la semana")
+                field("Horas a la semana"; Rec."Horas a la semana")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas a la semana';
                 }
-                field("Año adopcion"; "Ano adopcion")
+                field("Año adopcion"; Rec."Ano adopcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano adopcion';
                 }
             }
         }

@@ -28,64 +28,93 @@ page 56059 "BackOrders Sin Disp. Transfer."
         {
             repeater(Group)
             {
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     Editable = false;
                 }
-                field("Item No."; "Item No.")
+                field("Item No."; Rec."Item No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Item No.';
                     Editable = false;
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                     Editable = false;
                 }
-                field("Transfer-from Code"; "Transfer-from Code")
+                field("Transfer-from Code"; Rec."Transfer-from Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-from Code';
                 }
-                field("Transfer-to Code"; "Transfer-to Code")
+                field("Transfer-to Code"; Rec."Transfer-to Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Transfer-to Code';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Cantidad Solicitada"; "Cantidad Solicitada")
+                field("Cantidad Solicitada"; Rec."Cantidad Solicitada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Solicitada';
                     Editable = false;
                 }
-                field("Cantidad Anulada"; "Cantidad Anulada")
+                field("Cantidad Anulada"; Rec."Cantidad Anulada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Anulada';
                     Editable = false;
                 }
-                field("Cantidad Aprobada"; "Cantidad Aprobada")
+                field("Cantidad Aprobada"; Rec."Cantidad Aprobada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Aprobada';
                     Editable = false;
                 }
-                field("Cantidad pendiente BO"; "Cantidad pendiente BO")
+                field("Cantidad pendiente BO"; Rec."Cantidad pendiente BO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad pendiente BO';
                     Editable = false;
                 }
                 field(AvailableQtyJX;
                     SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
+                    ApplicationArea = All;
                     Caption = 'Available Qty.';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Cantidad a Anular"; "Cantidad a Anular")
+                field("Cantidad a Anular"; Rec."Cantidad a Anular")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Anular';
                 }
-                field("Cantidad a Ajustar"; "Cantidad a Ajustar")
+                field("Cantidad a Ajustar"; Rec."Cantidad a Ajustar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Ajustar';
                     Editable = false;
                     Style = Favorable;
                     StyleExpr = TRUE;

@@ -12,19 +12,19 @@ page 34002251 "Employee Capacity Matrix"
         {
             repeater(GeneralRep)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
-                    ApplicationArea = Jobs;
-                    ToolTip = 'Specifies the number of the involved entry or record, according to the specified number series.';
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                 }
-                field("Full Name"; "Full Name")
+                field("Full Name"; Rec."Full Name")
                 {
-                    ApplicationArea = Jobs;
-                    ToolTip = 'Specifies a description of the resource.';
+                    ApplicationArea = All;
+                    ToolTip = 'Full Name';
                 }
                 field(Field1; MATRIX_CellData[1])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[1];
 
                     trigger OnDrillDown()
@@ -39,7 +39,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field2; MATRIX_CellData[2])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[2];
 
                     trigger OnDrillDown()
@@ -54,7 +54,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field3; MATRIX_CellData[3])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[3];
 
                     trigger OnDrillDown()
@@ -69,7 +69,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field4; MATRIX_CellData[4])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[4];
 
                     trigger OnDrillDown()
@@ -84,7 +84,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field5; MATRIX_CellData[5])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[5];
 
                     trigger OnDrillDown()
@@ -99,7 +99,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field6; MATRIX_CellData[6])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[6];
 
                     trigger OnDrillDown()
@@ -114,7 +114,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field7; MATRIX_CellData[7])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[7];
 
                     trigger OnDrillDown()
@@ -129,7 +129,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field8; MATRIX_CellData[8])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[8];
 
                     trigger OnDrillDown()
@@ -144,7 +144,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field9; MATRIX_CellData[9])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[9];
 
                     trigger OnDrillDown()
@@ -159,7 +159,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field10; MATRIX_CellData[10])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[10];
 
                     trigger OnDrillDown()
@@ -174,7 +174,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field11; MATRIX_CellData[11])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[11];
 
                     trigger OnDrillDown()
@@ -189,7 +189,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field12; MATRIX_CellData[12])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[12];
 
                     trigger OnDrillDown()
@@ -204,7 +204,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field13; MATRIX_CellData[13])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[1];
 
                     trigger OnDrillDown()
@@ -219,7 +219,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field14; MATRIX_CellData[14])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[2];
 
                     trigger OnDrillDown()
@@ -234,7 +234,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field15; MATRIX_CellData[15])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[3];
 
                     trigger OnDrillDown()
@@ -249,7 +249,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field16; MATRIX_CellData[16])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[4];
 
                     trigger OnDrillDown()
@@ -264,7 +264,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field17; MATRIX_CellData[17])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[5];
 
                     trigger OnDrillDown()
@@ -279,7 +279,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field18; MATRIX_CellData[18])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[6];
 
                     trigger OnDrillDown()
@@ -294,7 +294,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field19; MATRIX_CellData[19])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[7];
 
                     trigger OnDrillDown()
@@ -309,7 +309,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field20; MATRIX_CellData[20])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[8];
 
                     trigger OnDrillDown()
@@ -324,7 +324,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field21; MATRIX_CellData[21])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[9];
 
                     trigger OnDrillDown()
@@ -339,7 +339,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field22; MATRIX_CellData[22])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[10];
 
                     trigger OnDrillDown()
@@ -354,7 +354,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field23; MATRIX_CellData[23])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[11];
 
                     trigger OnDrillDown()
@@ -369,7 +369,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field24; MATRIX_CellData[24])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[12];
 
                     trigger OnDrillDown()
@@ -384,7 +384,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field25; MATRIX_CellData[25])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[6];
 
                     trigger OnDrillDown()
@@ -399,7 +399,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field26; MATRIX_CellData[26])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[7];
 
                     trigger OnDrillDown()
@@ -414,7 +414,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field27; MATRIX_CellData[27])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[8];
 
                     trigger OnDrillDown()
@@ -429,7 +429,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field28; MATRIX_CellData[28])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[9];
 
                     trigger OnDrillDown()
@@ -444,7 +444,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field29; MATRIX_CellData[29])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[10];
 
                     trigger OnDrillDown()
@@ -459,7 +459,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field30; MATRIX_CellData[30])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[11];
 
                     trigger OnDrillDown()
@@ -474,7 +474,7 @@ page 34002251 "Employee Capacity Matrix"
                 }
                 field(Field31; MATRIX_CellData[31])
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     CaptionClass = '3,' + MATRIX_ColumnCaption[12];
 
                     trigger OnDrillDown()

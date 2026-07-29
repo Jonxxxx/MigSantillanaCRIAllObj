@@ -7,6 +7,7 @@ page 56053 "Actualiza Descuento"
         {
             field(PorcDesc; PorcDesc)
             {
+                ApplicationArea = All;
                 Caption = 'Discount %';
             }
         }

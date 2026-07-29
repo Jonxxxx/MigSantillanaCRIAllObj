@@ -12,58 +12,92 @@ page 75003 "Imp.MdM Cabecera"
         {
             group(General)
             {
-                field(Id; Id)
+                field(Id; Rec.Id)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Id';
                 }
-                field(Operacion; Operacion)
+                field(Operacion; Rec.Operacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Operacion';
                 }
-                field("Fecha Creacion"; "Fecha Creacion")
+                field("Fecha Creacion"; Rec."Fecha Creacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Creacion';
                 }
-                field(id_mensaje; id_mensaje)
+                field(id_mensaje; Rec.id_mensaje)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'id_mensaje';
                 }
-                field(sistema_origen; sistema_origen)
+                field(sistema_origen; Rec.sistema_origen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'sistema_origen';
                 }
-                field(pais_origen; pais_origen)
+                field(pais_origen; Rec.pais_origen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'pais_origen';
                 }
-                field(fecha_origen; fecha_origen)
+                field(fecha_origen; Rec.fecha_origen)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'fecha_origen';
                 }
-                field(fecha; fecha)
+                field(fecha; Rec.fecha)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'fecha';
                 }
-                field(tipo; tipo)
+                field(tipo; Rec.tipo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'tipo';
                 }
-                field(Entrada; Entrada)
+                field(Entrada; Rec.Entrada)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Entrada';
                 }
-                field(Traspasado; Traspasado)
+                field(Traspasado; Rec.Traspasado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Traspasado';
                 }
-                field(Estado; Estado)
+                field(Estado; Rec.Estado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado';
                 }
-                field("Estado Envio"; "Estado Envio")
+                field("Estado Envio"; Rec."Estado Envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Estado Envio';
                 }
-                field(Attempt; Attempt)
+                field(Attempt; Rec.Attempt)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Attempt';
                 }
-                field("Texto Error"; "Texto Error")
+                field("Texto Error"; Rec."Texto Error")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto Error';
                     ColumnSpan = 2;
                     RowSpan = 2;
                 }
-                field("No Tablas"; "No Tablas")
+                field("No Tablas"; Rec."No Tablas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No Tablas';
                 }
-                field("No Tablas Procesadas"; "No Tablas Procesadas")
+                field("No Tablas Procesadas"; Rec."No Tablas Procesadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No Tablas Procesadas';
                 }
             }
             part(PagePart; 75017)

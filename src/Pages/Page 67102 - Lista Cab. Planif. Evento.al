@@ -13,64 +13,102 @@ page 67102 "Lista Cab. Planif. Evento"
         {
             repeater(General)
             {
-                field(Expositor; Expositor)
+                field(Expositor; Rec.Expositor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Expositor';
                 }
-                field("Nombre Expositor"; "Nombre Expositor")
+                field("Nombre Expositor"; Rec."Nombre Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Expositor';
                 }
-                field("Cod. Taller - Evento"; "Cod. Taller - Evento")
+                field("Cod. Taller - Evento"; Rec."Cod. Taller - Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Taller - Evento';
                 }
-                field("Description Taller"; "Description Taller")
+                field("Description Taller"; Rec."Description Taller")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Taller';
                 }
-                field("Tipo Evento"; "Tipo Evento")
+                field("Tipo Evento"; Rec."Tipo Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Evento';
                 }
-                field("Description Tipo evento"; "Description Tipo evento")
+                field("Description Tipo evento"; Rec."Description Tipo evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description Tipo evento';
                 }
-                field(Secuencia; Secuencia)
+                field(Secuencia; Rec.Secuencia)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Secuencia';
                 }
-                field("Fecha Programada"; "Fecha Programada")
+                field("Fecha Programada"; Rec."Fecha Programada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Programada';
                     Editable = false;
                 }
-                field("Fecha Realizada"; "Fecha Realizada")
+                field("Fecha Realizada"; Rec."Fecha Realizada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Realizada';
                     Editable = false;
                 }
-                field("Fecha Inicio"; "Fecha Inicio")
+                field("Fecha Inicio"; Rec."Fecha Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio';
                 }
-                field("Numero de sesiones"; "Numero de sesiones")
+                field("Numero de sesiones"; Rec."Numero de sesiones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Numero de sesiones';
                 }
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
                 }
-                field(Lunes; Lunes)
+                field(Lunes; Rec.Lunes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Lunes';
                 }
-                field(Martes; Martes)
+                field(Martes; Rec.Martes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Martes';
                 }
-                field(Miercoles; Miercoles)
+                field(Miercoles; Rec.Miercoles)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miercoles';
                 }
-                field(Jueves; Jueves)
+                field(Jueves; Rec.Jueves)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Jueves';
                 }
-                field(Viernes; Viernes)
+                field(Viernes; Rec.Viernes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Viernes';
                 }
-                field(Sabados; Sabados)
+                field(Sabados; Rec.Sabados)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sabados';
                 }
-                field(Domingos; Domingos)
+                field(Domingos; Rec.Domingos)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Domingos';
                 }
             }
         }

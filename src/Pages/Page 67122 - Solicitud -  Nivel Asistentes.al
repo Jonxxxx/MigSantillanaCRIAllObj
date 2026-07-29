@@ -9,14 +9,20 @@ page 67122 "Solicitud -  Nivel Asistentes"
         {
             repeater(Group)
             {
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field("No. Asistentes"; "No. Asistentes")
+                field("No. Asistentes"; Rec."No. Asistentes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Asistentes';
                 }
             }
         }

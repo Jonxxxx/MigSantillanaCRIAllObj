@@ -14,8 +14,10 @@ page 56025 "Lista clas. devoluciones"
         {
             repeater(General)
             {
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
 
                     trigger OnAssistEdit()
                     begin
@@ -23,23 +25,35 @@ page 56025 "Lista clas. devoluciones"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Customer no."; "Customer no.")
+                field("Customer no."; Rec."Customer no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer no.';
                 }
-                field("Customer name"; "Customer name")
+                field("Customer name"; Rec."Customer name")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Customer name';
                 }
-                field("External document no."; "External document no.")
+                field("External document no."; Rec."External document no.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'External document no.';
                 }
-                field("Cod. Almacen"; "Cod. Almacen")
+                field("Cod. Almacen"; Rec."Cod. Almacen")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Almacen';
                 }
-                field("Receipt date"; "Receipt date")
+                field("Receipt date"; Rec."Receipt date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Receipt date';
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                     Editable = false;
                 }
             }

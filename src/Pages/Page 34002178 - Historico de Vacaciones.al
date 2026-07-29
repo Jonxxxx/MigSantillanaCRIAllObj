@@ -11,21 +11,31 @@ page 34002178 "Historico de Vacaciones"
         {
             repeater(Group)
             {
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                     Visible = false;
                 }
-                field("Fecha Inicio"; "Fecha Inicio")
+                field("Fecha Inicio"; Rec."Fecha Inicio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio';
                 }
-                field("Fecha Fin"; "Fecha Fin")
+                field("Fecha Fin"; Rec."Fecha Fin")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Fin';
                 }
-                field(Dias; Dias)
+                field(Dias; Rec.Dias)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias';
                 }
-                field("Tipo calculo"; "Tipo calculo")
+                field("Tipo calculo"; Rec."Tipo calculo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo calculo';
                     Visible = false;
                 }
             }

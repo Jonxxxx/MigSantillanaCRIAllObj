@@ -11,63 +11,95 @@ page 34002233 "Asistentes entrenamientos"
         {
             repeater(Group)
             {
-                field("No. entrenamiento"; "No. entrenamiento")
+                field("No. entrenamiento"; Rec."No. entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. entrenamiento';
                     Visible = false;
                 }
-                field("Tipo entrenamiento"; "Tipo entrenamiento")
+                field("Tipo entrenamiento"; Rec."Tipo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo entrenamiento';
                     Visible = false;
                 }
-                field("Fecha programacion"; "Fecha programacion")
+                field("Fecha programacion"; Rec."Fecha programacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha programacion';
                     Editable = false;
                     Visible = false;
                 }
-                field("Titulo entrenamiento"; "Titulo entrenamiento")
+                field("Titulo entrenamiento"; Rec."Titulo entrenamiento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Titulo entrenamiento';
                     Visible = false;
                 }
-                field("Tipo de Instructor"; "Tipo de Instructor")
+                field("Tipo de Instructor"; Rec."Tipo de Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Instructor';
                     Visible = false;
                 }
-                field("Cod. Instructor"; "Cod. Instructor")
+                field("Cod. Instructor"; Rec."Cod. Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Instructor';
                     Visible = false;
                 }
-                field("Nombre Instructor"; "Nombre Instructor")
+                field("Nombre Instructor"; Rec."Nombre Instructor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Instructor';
                     Editable = false;
                     Visible = false;
                 }
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Nombre completo"; "Nombre completo")
+                field("Nombre completo"; Rec."Nombre completo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre completo';
                 }
-                field("Document ID"; "Document ID")
+                field("Document ID"; Rec."Document ID")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document ID';
                     Editable = false;
                 }
-                field("Fecha inscripcion"; "Fecha inscripcion")
+                field("Fecha inscripcion"; Rec."Fecha inscripcion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inscripcion';
                 }
-                field(Inscrito; Inscrito)
+                field(Inscrito; Rec.Inscrito)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inscrito';
                 }
-                field(Notificado; Notificado)
+                field(Notificado; Rec.Notificado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Notificado';
                 }
-                field(Confirmado; Confirmado)
+                field(Confirmado; Rec.Confirmado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Confirmado';
                 }
-                field(Asistio; Asistio)
+                field(Asistio; Rec.Asistio)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistio';
                 }
-                field(Calificacion; Calificacion)
+                field(Calificacion; Rec.Calificacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Calificacion';
                 }
             }
             group(Assistants)
@@ -75,16 +107,19 @@ page 34002233 "Asistentes entrenamientos"
                 Caption = 'Assistants';
                 field(TotalInscritos; TotalInscritos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Total Enrolled';
                     Editable = false;
                 }
                 field(TotalAsistentes; TotalAsistentes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Total Attendees';
                     Editable = false;
                 }
                 field(Capacidad; Capacidad)
                 {
+                    ApplicationArea = All;
                     Caption = 'Maximum capacity';
                     Editable = false;
                 }

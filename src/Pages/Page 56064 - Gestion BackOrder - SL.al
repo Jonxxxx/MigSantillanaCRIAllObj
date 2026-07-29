@@ -32,82 +32,119 @@ page 56064 "Gestion BackOrder - SL"
         {
             repeater(Group)
             {
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                     Editable = false;
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                     Editable = false;
                 }
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     Editable = false;
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Editable = false;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                     Editable = false;
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Line Discount %"; "Line Discount %")
+                field("Line Discount %"; Rec."Line Discount %")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount %';
                     Editable = false;
                 }
-                field("Line Discount Amount"; "Line Discount Amount")
+                field("Line Discount Amount"; Rec."Line Discount Amount")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount Amount';
                     Editable = false;
                 }
-                field("Unit of Measure Code"; "Unit of Measure Code")
+                field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure Code';
                     Editable = false;
                 }
-                field("Cantidad Aprobada"; "Cantidad Aprobada")
+                field("Cantidad Aprobada"; Rec."Cantidad Aprobada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Aprobada';
                     Editable = false;
                 }
-                field("Cantidad Anulada"; "Cantidad Anulada")
+                field("Cantidad Anulada"; Rec."Cantidad Anulada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Anulada';
                     Editable = false;
                 }
-                field("Cantidad pendiente BO"; "Cantidad pendiente BO")
+                field("Cantidad pendiente BO"; Rec."Cantidad pendiente BO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad pendiente BO';
                     Editable = false;
                 }
                 field(QtyAvailableJX;
                     SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
+                    ApplicationArea = All;
                     Caption = 'Qty. Available';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Cantidad Solicitada"; "Cantidad Solicitada")
+                field("Cantidad Solicitada"; Rec."Cantidad Solicitada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Solicitada';
                     Editable = false;
                 }
-                field("Cantidad a Ajustar"; "Cantidad a Ajustar")
+                field("Cantidad a Ajustar"; Rec."Cantidad a Ajustar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Ajustar';
                 }
-                field("Cantidad a Anular"; "Cantidad a Anular")
+                field("Cantidad a Anular"; Rec."Cantidad a Anular")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Anular';
                 }
-                field("Requested Delivery Date"; "Requested Delivery Date")
+                field("Requested Delivery Date"; Rec."Requested Delivery Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requested Delivery Date';
                 }
             }
         }

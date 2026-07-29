@@ -11,61 +11,97 @@ page 34002124 "Historico lineas nomina"
         {
             repeater(GeneralRep)
             {
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                 }
-                field("Salario Base"; "Salario Base")
+                field("Salario Base"; Rec."Salario Base")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Salario Base';
                 }
-                field(Periodo; Periodo)
+                field(Periodo; Rec.Periodo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                     Visible = false;
                 }
-                field("Cotiza ISR"; "Cotiza ISR")
+                field("Cotiza ISR"; Rec."Cotiza ISR")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cotiza ISR';
                 }
-                field("Sujeto Cotizacion"; "Sujeto Cotizacion")
+                field("Sujeto Cotizacion"; Rec."Sujeto Cotizacion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sujeto Cotizacion';
                 }
-                field("Texto Informativo"; "Texto Informativo")
+                field("Texto Informativo"; Rec."Texto Informativo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Texto Informativo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Cantidad; Cantidad)
+                field(Cantidad; Rec.Cantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad';
                 }
-                field("Currency Code"; "Currency Code")
+                field("Currency Code"; Rec."Currency Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Currency Code';
                 }
-                field("Importe Base"; "Importe Base")
+                field("Importe Base"; Rec."Importe Base")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Base';
                 }
-                field(Total; Total)
+                field(Total; Rec.Total)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Total';
                 }
-                field("% Cotizable"; "% Cotizable")
+                field("% Cotizable"; Rec."% Cotizable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Cotizable';
                 }
-                field("% Pago Empleado"; "% Pago Empleado")
+                field("% Pago Empleado"; Rec."% Pago Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '% Pago Empleado';
                 }
-                field(Formula; Formula)
+                field(Formula; Rec.Formula)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Formula';
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                     Visible = false;
                 }
-                field(Comentario; Comentario)
+                field(Comentario; Rec.Comentario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario';
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                     Visible = false;
                 }
             }

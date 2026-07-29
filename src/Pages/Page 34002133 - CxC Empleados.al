@@ -10,8 +10,10 @@ page 34002133 "CxC Empleados"
             group(General)
             {
                 Caption = 'General';
-                field("No. Prestamo"; "No. Prestamo")
+                field("No. Prestamo"; Rec."No. Prestamo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Prestamo';
 
                     trigger OnAssistEdit()
                     begin
@@ -19,47 +21,75 @@ page 34002133 "CxC Empleados"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Codigo Empleado"; "Codigo Empleado")
+                field("Codigo Empleado"; Rec."Codigo Empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo Empleado';
                 }
-                field("Tipo CxC"; "Tipo CxC")
+                field("Tipo CxC"; Rec."Tipo CxC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo CxC';
                 }
-                field("Motivo Prestamos"; "Motivo Prestamos")
+                field("Motivo Prestamos"; Rec."Motivo Prestamos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Motivo Prestamos';
                 }
-                field("Fecha Registro CxC"; "Fecha Registro CxC")
+                field("Fecha Registro CxC"; Rec."Fecha Registro CxC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Registro CxC';
                 }
-                field(Importe; Importe)
+                field(Importe; Rec.Importe)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe';
                 }
-                field(Documento; "No. Documento")
+                field(Documento; Rec."No. Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Documento';
                 }
-                field(Cuotas; Cuotas)
+                field(Cuotas; Rec.Cuotas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cuotas';
                 }
-                field("Importe Cuota"; "Importe Cuota")
+                field("Importe Cuota"; Rec."Importe Cuota")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Cuota';
                 }
-                field("Nro. Solicitud CK"; "Nro. Solicitud CK")
+                field("Nro. Solicitud CK"; Rec."Nro. Solicitud CK")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nro. Solicitud CK';
                 }
-                field("Cta. Contrapartida"; "Cta. Contrapartida")
+                field("Cta. Contrapartida"; Rec."Cta. Contrapartida")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cta. Contrapartida';
                 }
-                field("Fecha Inicio Deduccion"; "Fecha Inicio Deduccion")
+                field("Fecha Inicio Deduccion"; Rec."Fecha Inicio Deduccion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Inicio Deduccion';
                 }
-                field("Concepto Salarial"; "Concepto Salarial")
+                field("Concepto Salarial"; Rec."Concepto Salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Salarial';
                 }
-                field("1ra Quincena"; "1ra Quincena")
+                field("1ra Quincena"; Rec."1ra Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '1ra Quincena';
                 }
-                field("2da Quincena"; "2da Quincena")
+                field("2da Quincena"; Rec."2da Quincena")
                 {
+                    ApplicationArea = All;
+                    ToolTip = '2da Quincena';
                 }
             }
         }

@@ -12,20 +12,30 @@ page 50030 "Catalogo Parametros FE-DGT"
         {
             repeater(Group)
             {
-                field("Tipo Parametro"; "Tipo Parametro")
+                field("Tipo Parametro"; Rec."Tipo Parametro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Parametro';
                 }
-                field(Codigo; Codigo)
+                field(Codigo; Rec.Codigo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Codigo';
                 }
-                field(Descripcion; Descripcion)
+                field(Descripcion; Rec.Descripcion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion';
                 }
-                field(Inactivo; Inactivo)
+                field(Inactivo; Rec.Inactivo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inactivo';
                 }
-                field("Descuento Asumido Fabrica"; "Descuento Asumido Fabrica")
+                field("Descuento Asumido Fabrica"; Rec."Descuento Asumido Fabrica")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descuento Asumido Fabrica';
                 }
             }
         }

@@ -14,8 +14,10 @@ page 67071 "Lista Programacion de eventos"
             group(General)
             {
                 Caption = 'General';
-                field("No. Solicitud"; "No. Solicitud")
+                field("No. Solicitud"; Rec."No. Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Solicitud';
 
                     trigger OnAssistEdit()
                     begin
@@ -23,106 +25,168 @@ page 67071 "Lista Programacion de eventos"
                             CurrPage.UPDATE;
                     end;
                 }
-                field("Cod. promotor"; "Cod. promotor")
+                field("Cod. promotor"; Rec."Cod. promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. promotor';
                     Editable = "Cod. promotorEditable";
                 }
-                field("Nombre promotor"; "Nombre promotor")
+                field("Nombre promotor"; Rec."Nombre promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre promotor';
                     Editable = false;
                 }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
                 }
-                field("Tipo de Evento"; "Tipo de Evento")
+                field("Tipo de Evento"; Rec."Tipo de Evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo de Evento';
                 }
-                field("Cod. evento"; "Cod. evento")
+                field("Cod. evento"; Rec."Cod. evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. evento';
                 }
-                field("Descripcion evento"; "Descripcion evento")
+                field("Descripcion evento"; Rec."Descripcion evento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Descripcion evento';
                 }
-                field(Delegacion; Delegacion)
+                field(Delegacion; Rec.Delegacion)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Delegacion';
                 }
-                field(Observaciones; Observaciones)
+                field(Observaciones; Rec.Observaciones)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Observaciones';
                     MultiLine = true;
                 }
-                field("Fecha Solicitud"; "Fecha Solicitud")
+                field("Fecha Solicitud"; Rec."Fecha Solicitud")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Solicitud';
                 }
-                field("Cod. Colegio"; "Cod. Colegio")
+                field("Cod. Colegio"; Rec."Cod. Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Colegio';
                 }
-                field("Nombre Colegio"; "Nombre Colegio")
+                field("Nombre Colegio"; Rec."Nombre Colegio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Colegio';
                 }
-                field("Cod. Local"; "Cod. Local")
+                field("Cod. Local"; Rec."Cod. Local")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Local';
                 }
-                field("Cod. Nivel"; "Cod. Nivel")
+                field("Cod. Nivel"; Rec."Cod. Nivel")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Nivel';
                 }
-                field("Cod. Turno"; "Cod. Turno")
+                field("Cod. Turno"; Rec."Cod. Turno")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Turno';
                 }
-                field("Evento programado"; "Evento programado")
+                field("Evento programado"; Rec."Evento programado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Evento programado';
                 }
-                field(Status; Status)
+                field(Status; Rec.Status)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Status';
                     Editable = false;
                 }
-                field("Asistentes Esperados"; "Asistentes Esperados")
+                field("Asistentes Esperados"; Rec."Asistentes Esperados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes Esperados';
                 }
             }
             group("Event")
             {
                 Caption = 'Event';
-                field(Sala; Sala)
+                field(Sala; Rec.Sala)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sala';
                 }
-                field("Horas programadas"; "Horas programadas")
+                field("Horas programadas"; Rec."Horas programadas")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Horas programadas';
                 }
-                field("Asistentes Reales"; "Asistentes Reales")
+                field("Asistentes Reales"; Rec."Asistentes Reales")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Asistentes Reales';
                 }
-                field("Eventos programados"; "Eventos programados")
+                field("Eventos programados"; Rec."Eventos programados")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Eventos programados';
                 }
-                field("Importe Gasto Expositor"; "Importe Gasto Expositor")
+                field("Importe Gasto Expositor"; Rec."Importe Gasto Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Gasto Expositor';
                 }
-                field("Importe Gasto mensajeria"; "Importe Gasto mensajeria")
+                field("Importe Gasto mensajeria"; Rec."Importe Gasto mensajeria")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Gasto mensajeria';
                 }
-                field("ImporteGastos Impresion"; "ImporteGastos Impresion")
+                field("ImporteGastos Impresion"; Rec."ImporteGastos Impresion")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ImporteGastos Impresion';
                 }
-                field("Importe Utiles"; "Importe Utiles")
+                field("Importe Utiles"; Rec."Importe Utiles")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Utiles';
                 }
-                field("Importe Atenciones"; "Importe Atenciones")
+                field("Importe Atenciones"; Rec."Importe Atenciones")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Importe Atenciones';
                 }
-                field("Otros Importes"; "Otros Importes")
+                field("Otros Importes"; Rec."Otros Importes")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Otros Importes';
                 }
-                field("Nombre responsable"; "Nombre responsable")
+                field("Nombre responsable"; Rec."Nombre responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre responsable';
                 }
-                field("No. celular responsable"; "No. celular responsable")
+                field("No. celular responsable"; Rec."No. celular responsable")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. celular responsable';
                 }
-                field("Objetivo promotor"; "Objetivo promotor")
+                field("Objetivo promotor"; Rec."Objetivo promotor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Objetivo promotor';
                 }
-                field("Cod. Expositor"; "Cod. Expositor")
+                field("Cod. Expositor"; Rec."Cod. Expositor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Expositor';
                 }
             }
         }

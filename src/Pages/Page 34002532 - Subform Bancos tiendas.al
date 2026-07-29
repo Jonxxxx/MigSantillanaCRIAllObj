@@ -9,14 +9,20 @@ page 34002532 "Subform Bancos tiendas"
         {
             repeater(Group)
             {
-                field("Cod. Divisa"; "Cod. Divisa")
+                field("Cod. Divisa"; Rec."Cod. Divisa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Divisa';
                 }
-                field("Cod. Banco"; "Cod. Banco")
+                field("Cod. Banco"; Rec."Cod. Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Banco';
                 }
-                field("Nombre Banco"; "Nombre Banco")
+                field("Nombre Banco"; Rec."Nombre Banco")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Nombre Banco';
                 }
             }
         }

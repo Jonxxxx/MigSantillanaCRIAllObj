@@ -12,78 +12,126 @@ page 56090 "Lista Pedidos Ecommerce"
         {
             repeater(Group)
             {
-                field("No. documento"; "No. documento")
+                field("No. documento"; Rec."No. documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento';
                 }
-                field("Cod. Cliente"; "Cod. Cliente")
+                field("Cod. Cliente"; Rec."Cod. Cliente")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cliente';
                 }
-                field("Fecha registro"; "Fecha registro")
+                field("Fecha registro"; Rec."Fecha registro")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha registro';
                 }
-                field("Cod. Vendedor"; "Cod. Vendedor")
+                field("Cod. Vendedor"; Rec."Cod. Vendedor")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Vendedor';
                 }
-                field("Tasa de cambio"; "Tasa de cambio")
+                field("Tasa de cambio"; Rec."Tasa de cambio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tasa de cambio';
                 }
-                field("Metodo de Envio Ecommerce"; "Metodo de Envio Ecommerce")
+                field("Metodo de Envio Ecommerce"; Rec."Metodo de Envio Ecommerce")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Metodo de Envio Ecommerce';
                 }
-                field("Direccion 1"; "Direccion 1")
+                field("Direccion 1"; Rec."Direccion 1")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion 1';
                 }
-                field("Direccion 2"; "Direccion 2")
+                field("Direccion 2"; Rec."Direccion 2")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Direccion 2';
                 }
-                field(Procesado; Procesado)
+                field(Procesado; Rec.Procesado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Procesado';
                 }
-                field(Error; Error)
+                field(Error; Rec.Error)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Error';
                 }
-                field("E-Mail"; "E-Mail")
+                field("E-Mail"; Rec."E-Mail")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'E-Mail';
                 }
-                field("RNC/Cedula"; "RNC/Cedula")
+                field("RNC/Cedula"; Rec."RNC/Cedula")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'RNC/Cedula';
                 }
-                field("Tipo Documento"; "Tipo Documento")
+                field("Tipo Documento"; Rec."Tipo Documento")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Documento';
                 }
-                field("Cod. Direccion de envio"; "Cod. Direccion de envio")
+                field("Cod. Direccion de envio"; Rec."Cod. Direccion de envio")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Direccion de envio';
                 }
-                field("Tipo Comprobante"; "Tipo Comprobante")
+                field("Tipo Comprobante"; Rec."Tipo Comprobante")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Comprobante';
                 }
-                field("No. Factura NCr"; "No. Factura NCr")
+                field("No. Factura NCr"; Rec."No. Factura NCr")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. Factura NCr';
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                 }
-                field(Ship_date; Ship_date)
+                field(Ship_date; Rec.Ship_date)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ship_date';
                 }
-                field("Comentario Svr Cte"; "Comentario Svr Cte")
+                field("Comentario Svr Cte"; Rec."Comentario Svr Cte")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Svr Cte';
                     Caption = 'Cod. Colegio';
                 }
-                field("Comentario CC"; "Comentario CC")
+                field("Comentario CC"; Rec."Comentario CC")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario CC';
                 }
-                field("Comentario Alm"; "Comentario Alm")
+                field("Comentario Alm"; Rec."Comentario Alm")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Comentario Alm';
                 }
-                field("No. documento NAV"; "No. documento NAV")
+                field("No. documento NAV"; Rec."No. documento NAV")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. documento NAV';
                 }
-                field("Pedido via telefonica"; "Pedido via telefonica")
+                field("Pedido via telefonica"; Rec."Pedido via telefonica")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pedido via telefonica';
                 }
-                field("Cod. Cupon"; "Cod. Cupon")
+                field("Cod. Cupon"; Rec."Cod. Cupon")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cod. Cupon';
                 }
             }
         }

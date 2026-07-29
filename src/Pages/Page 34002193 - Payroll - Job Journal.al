@@ -14,6 +14,7 @@ page 34002193 "Payroll - Job Journal"
         {
             field(CurrentJnlBatchName; CurrentJnlBatchName)
             {
+                ApplicationArea = All;
                 Caption = 'Batch Name';
                 Lookup = true;
 
@@ -26,31 +27,47 @@ page 34002193 "Payroll - Job Journal"
             }
             repeater(GeneralRep)
             {
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                 }
-                field("No. empleado"; "No. empleado")
+                field("No. empleado"; Rec."No. empleado")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No. empleado';
                 }
-                field("Puesto trabajo"; "Puesto trabajo")
+                field("Puesto trabajo"; Rec."Puesto trabajo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Puesto trabajo';
                 }
-                field("Apellidos y Nombre"; "Apellidos y Nombre")
+                field("Apellidos y Nombre"; Rec."Apellidos y Nombre")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Apellidos y Nombre';
                 }
-                field("Tipo concepto"; "Tipo concepto")
+                field("Tipo concepto"; Rec."Tipo concepto")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo concepto';
                     Visible = false;
                 }
-                field("Concepto salarial"; "Concepto salarial")
+                field("Concepto salarial"; Rec."Concepto salarial")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                     Visible = false;
                 }
-                field("Posting Date"; "Posting Date")
+                field("Posting Date"; Rec."Posting Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Posting Date';
                 }
-                field("Job No."; "Job No.")
+                field("Job No."; Rec."Job No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job No.';
 
                     trigger OnValidate()
                     begin
@@ -58,33 +75,51 @@ page 34002193 "Payroll - Job Journal"
                         //ShowShortcutDimCode(ShortcutDimCode);
                     end;
                 }
-                field("Job Task No."; "Job Task No.")
+                field("Job Task No."; Rec."Job Task No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Job Task No.';
                 }
-                field("Work Type Code"; "Work Type Code")
+                field("Work Type Code"; Rec."Work Type Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Work Type Code';
                 }
-                field("Unit of Measure Code"; "Unit of Measure Code")
+                field("Unit of Measure Code"; Rec."Unit of Measure Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure Code';
                     Visible = false;
                 }
-                field("Tipo Tarifa"; "Tipo Tarifa")
+                field("Tipo Tarifa"; Rec."Tipo Tarifa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Tarifa';
                 }
-                field("Precio Costo"; "Precio Costo")
+                field("Precio Costo"; Rec."Precio Costo")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Precio Costo';
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                 }
-                field(Amount; Amount)
+                field(Amount; Rec.Amount)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount';
                 }
-                field("Gen. Bus. Posting Group"; "Gen. Bus. Posting Group")
+                field("Gen. Bus. Posting Group"; Rec."Gen. Bus. Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gen. Bus. Posting Group';
                 }
-                field("Gen. Prod. Posting Group"; "Gen. Prod. Posting Group")
+                field("Gen. Prod. Posting Group"; Rec."Gen. Prod. Posting Group")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Gen. Prod. Posting Group';
                 }
             }
             group(GeneralGroup)
@@ -96,6 +131,7 @@ page 34002193 "Payroll - Job Journal"
                         Caption = 'Job Description';
                         field(JobDescription; JobDescription)
                         {
+                            ApplicationArea = All;
                             Editable = false;
                         }
                     }
@@ -104,6 +140,7 @@ page 34002193 "Payroll - Job Journal"
                         Caption = 'Account Name';
                         field(AccName; AccName)
                         {
+                            ApplicationArea = All;
                             Caption = 'Account Name';
                             Editable = false;
                         }

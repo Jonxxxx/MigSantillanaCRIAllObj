@@ -29,125 +29,178 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
         {
             repeater(Group)
             {
-                field("Document Type"; "Document Type")
+                field("Document Type"; Rec."Document Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document Type';
                     Editable = false;
                 }
-                field("Sell-to Customer No."; "Sell-to Customer No.")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Sell-to Customer No.';
                 }
                 field("Nombre Cliente"; salesheader."Bill-to Name")
                 {
+                    ApplicationArea = All;
                     Caption = 'Nombre Cliente';
                 }
-                field("Document No."; "Document No.")
+                field("Document No."; Rec."Document No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Document No.';
                     Editable = false;
                 }
-                field("No."; "No.")
+                field("No."; Rec."No.")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'No.';
                     Editable = false;
                 }
-                field("Location Code"; "Location Code")
+                field("Location Code"; Rec."Location Code")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Location Code';
                     Editable = false;
                 }
-                field("Shipment Date"; "Shipment Date")
+                field("Shipment Date"; Rec."Shipment Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Shipment Date';
                     Editable = false;
                 }
-                field(Description; Description)
+                field(Description; Rec.Description)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Description';
                     Editable = false;
                 }
-                field("Unit of Measure"; "Unit of Measure")
+                field("Unit of Measure"; Rec."Unit of Measure")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Unit of Measure';
                     Editable = false;
                 }
-                field(Quantity; Quantity)
+                field(Quantity; Rec.Quantity)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Quantity';
                     Editable = false;
                 }
-                field("Line Discount %"; "Line Discount %")
+                field("Line Discount %"; Rec."Line Discount %")
                 {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Line Discount Amount"; "Line Discount Amount")
-                {
-                    Editable = false;
-                    Visible = false;
-                }
-                field(Amount; Amount)
-                {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Amount Including VAT"; "Amount Including VAT")
-                {
-                    Editable = false;
-                    Visible = false;
-                }
-                field("Shortcut Dimension 1 Code"; "Shortcut Dimension 1 Code")
-                {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount %';
                     Editable = false;
                     Visible = false;
                 }
-                field("Shortcut Dimension 2 Code"; "Shortcut Dimension 2 Code")
+                field("Line Discount Amount"; Rec."Line Discount Amount")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Line Discount Amount';
+                    Editable = false;
+                    Visible = false;
+                }
+                field(Amount; Rec.Amount)
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Amount Including VAT"; Rec."Amount Including VAT")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Amount Including VAT';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Shortcut Dimension 1 Code"; Rec."Shortcut Dimension 1 Code")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 1 Code';
+                    Editable = false;
+                    Visible = false;
+                }
+                field("Shortcut Dimension 2 Code"; Rec."Shortcut Dimension 2 Code")
+                {
+                    ApplicationArea = All;
+                    ToolTip = 'Shortcut Dimension 2 Code';
                     Editable = false;
                 }
                 field(EstatusPed; EstatusPed)
                 {
+                    ApplicationArea = All;
                     Editable = false;
                 }
-                field("Cantidad Solicitada"; "Cantidad Solicitada")
+                field("Cantidad Solicitada"; Rec."Cantidad Solicitada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Solicitada';
                     Editable = false;
                 }
-                field("Cantidad Anulada"; "Cantidad Anulada")
+                field("Cantidad Anulada"; Rec."Cantidad Anulada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Anulada';
                     Editable = false;
                 }
-                field("Porcentaje Cant. Aprobada"; "Porcentaje Cant. Aprobada")
+                field("Porcentaje Cant. Aprobada"; Rec."Porcentaje Cant. Aprobada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Porcentaje Cant. Aprobada';
                     Editable = false;
                 }
-                field("Cantidad Aprobada"; "Cantidad Aprobada")
+                field("Cantidad Aprobada"; Rec."Cantidad Aprobada")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad Aprobada';
                     Editable = false;
                 }
-                field("Cantidad pendiente BO"; "Cantidad pendiente BO")
+                field("Cantidad pendiente BO"; Rec."Cantidad pendiente BO")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad pendiente BO';
                     Editable = false;
                 }
                 field(QtyAvailableJX;
                     SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
+                    ApplicationArea = All;
                     Caption = 'Qty. Available';
                     Editable = false;
                     Style = Strong;
                     StyleExpr = TRUE;
                 }
-                field("Cantidad a Anular"; "Cantidad a Anular")
+                field("Cantidad a Anular"; Rec."Cantidad a Anular")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Anular';
                 }
-                field("Cantidad a Ajustar"; "Cantidad a Ajustar")
+                field("Cantidad a Ajustar"; Rec."Cantidad a Ajustar")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Cantidad a Ajustar';
                     Editable = false;
                     Importance = Additional;
                     Style = Favorable;
                     StyleExpr = TRUE;
                 }
-                field("Requested Delivery Date"; "Requested Delivery Date")
+                field("Requested Delivery Date"; Rec."Requested Delivery Date")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Requested Delivery Date';
                 }
-                field(ISBN; ISBN)
+                field(ISBN; Rec.ISBN)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'ISBN';
                     Editable = false;
                 }
-                field(EAN; EAN)
+                field(EAN; Rec.EAN)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'EAN';
                 }
             }
         }

@@ -11,20 +11,28 @@ page 34002241 "DSNOM Cooperativa Activities"
             cuegroup(Cooperative)
             {
                 Caption = 'Cooperative';
-                field("Afiliados cooperativa"; "Afiliados cooperativa")
+                field("Afiliados cooperativa"; Rec."Afiliados cooperativa")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Afiliados cooperativa';
                     Image = People;
                 }
-                field("Miembros activos"; "Miembros activos")
+                field("Miembros activos"; Rec."Miembros activos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miembros activos';
                     Image = Person;
                 }
-                field("Miembros inactivos"; "Miembros inactivos")
+                field("Miembros inactivos"; Rec."Miembros inactivos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Miembros inactivos';
                     Image = Person;
                 }
-                field("Prestamos activos"; "Prestamos activos")
+                field("Prestamos activos"; Rec."Prestamos activos")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Prestamos activos';
                     Image = Cash;
                 }
             }
