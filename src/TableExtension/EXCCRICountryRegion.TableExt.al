@@ -5,7 +5,7 @@ tableextension 50003 EXCCRICountryRegion extends "Country/Region"
         field(75000; Bloqueado; Boolean)
         {
             Caption = 'Blocked';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

@@ -10,12 +10,12 @@ tableextension 50017 EXCCRIPurchaseLine extends "Purchase Line"
         {
             TableRelation =
                 if (Type = const(" ")) "Standard Text"
-                else if (Type = const("G/L Account"), "System-Created Entry" = const(false)) "G/L Account" where("Direct Posting" = const(true), "Account Type" = const(Posting), Blocked = const(false))
-                else if (Type = const("G/L Account"), "System-Created Entry" = const(true)) "G/L Account"
-                else if (Type = const("Fixed Asset")) "Fixed Asset" where(Inactive = const(false))
-                else if (Type = const("Charge (Item)")) "Item Charge"
-                else if (Type = const(Item), "Document Type" = filter(<>"Credit Memo"&<>"Return Order")) Item where(Inactivo = const(false))
-                else if (Type = const(Item), "Document Type" = filter("Credit Memo"|"Return Order")) Item where(Inactivo = const(false));
+            else if (Type = const("G/L Account"), "System-Created Entry" = const(false)) "G/L Account" where("Direct Posting" = const(true), "Account Type" = const(Posting), Blocked = const(false))
+            else if (Type = const("G/L Account"), "System-Created Entry" = const(true)) "G/L Account"
+            else if (Type = const("Fixed Asset")) "Fixed Asset" where(Inactive = const(false))
+            else if (Type = const("Charge (Item)")) "Item Charge"
+            else if (Type = const(Item), "Document Type" = filter(<> "Credit Memo" & <> "Return Order")) Item where(Inactivo = const(false))
+            else if (Type = const(Item), "Document Type" = filter("Credit Memo" | "Return Order")) Item where(Inactivo = const(false));
         }
         modify("Location Code")
         {
@@ -34,12 +34,12 @@ tableextension 50017 EXCCRIPurchaseLine extends "Purchase Line"
         field(67002; "Cod. Colegio"; Code[20])
         {
             Caption = 'School Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Contact where(Type = filter(Company));
         }
         field(67003; "Cod. Vendedor"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
 
             trigger OnValidate()
@@ -86,7 +86,7 @@ tableextension 50017 EXCCRIPurchaseLine extends "Purchase Line"
         }
         field(67004; "Cod. Taller"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Talleres.Codigo;
         }
     }

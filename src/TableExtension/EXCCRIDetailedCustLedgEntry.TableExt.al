@@ -12,7 +12,7 @@ tableextension 50057 EXCCRIDetailedCustLedgEntry extends "Detailed Cust. Ledg. E
         field(50001; "Act. Ledger Entry Amount"; Boolean)
         {
             Caption = 'Ledger Entry Amount Updated', Comment = 'ESP=Act. Ledger Entry Amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

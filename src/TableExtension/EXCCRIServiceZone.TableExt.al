@@ -5,7 +5,7 @@ tableextension 50100 EXCCRIServiceZone extends "Service Zone"
         field(50000; "Cod. Cobrador"; Code[20])
         {
             Caption = 'Collector Code', Comment = 'ESP=Cod. Cobrador';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser".Code where(Collector = const(true));
 
             trigger OnValidate()
@@ -21,7 +21,7 @@ tableextension 50100 EXCCRIServiceZone extends "Service Zone"
         field(50001; "Nombre Cobrador"; Text[200])
         {
             Caption = 'Collector Name', Comment = 'ESP=Nombre Cobrador';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

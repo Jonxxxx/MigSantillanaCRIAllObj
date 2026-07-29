@@ -12,12 +12,12 @@ tableextension 50077 EXCCRIEmployeeAbsence extends "Employee Absence"
 
         field(34002100; "Closed"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002101; "% To deduct"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002102; "Full name"; Text[60])

@@ -4,37 +4,37 @@ tableextension 50005 EXCCRILocation extends Location
     {
         field(50000; "Cod. Cliente"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Customer;
         }
         field(50001; "Cod. Sucursal"; Code[10])
         {
             Caption = 'Establishment Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50003; "ID Interface SIC"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; "Packing requerido"; Boolean)
         {
             Caption = 'Packing Required';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56001; "Cant. Lineas a Man. Por dia"; Integer)
         {
             Caption = 'Qty. of lines to handle by day';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56002; "Aviso cuando resten"; Integer)
         {
             Caption = 'Notice when remain';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56012; Inactivo; Boolean)
         {
             Caption = 'Inactive';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var

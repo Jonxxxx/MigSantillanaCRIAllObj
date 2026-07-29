@@ -10,7 +10,7 @@ tableextension 50092 EXCCRIWarehouseRequest extends "Warehouse Request"
 
         field(50010; "Tipo de Venta"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Factura","Consignacion","Muestras","Donaciones","Canal 3","Exportacion";
         }
 
@@ -28,7 +28,7 @@ tableextension 50092 EXCCRIWarehouseRequest extends "Warehouse Request"
 
         field(56005; "Pendiente"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56006; "Cantidades Pend. Ped. Compra"; Decimal)

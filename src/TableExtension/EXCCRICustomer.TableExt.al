@@ -63,7 +63,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         }
         field(50004; "Cod. Almacen Consignacion"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Location;
 
             trigger OnValidate()
@@ -73,13 +73,13 @@ tableextension 50008 EXCCRICustomer extends Customer
         }
         field(50005; "Prioridad entrega consignacion"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = Baja,Media,Alta;
             OptionCaption = 'Low,Medium,High';
         }
         field(50006; "Precios en Conduce de envio"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50007; "Balance en Consignacion Act."; Decimal)
         {
@@ -94,37 +94,37 @@ tableextension 50008 EXCCRICustomer extends Customer
         }
         field(50010; "Tipo de Venta"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = Factura,Consignacion," ";
         }
         field(50011; "Admite Pendientes en Pedidos"; Boolean)
         {
             Caption = 'Permit Remaining Qty. in Sales Orders';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50014; "PO Box address"; Text[50])
         {
             Caption = 'PO Box address';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50100; "No_ Cliente SIC"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52000; GIRO; Text[50])
         {
             Caption = 'GIRO';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52001; NRC; Code[10])
         {
             Caption = 'NRC';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53000; "Permite venta a credito (OBS)"; Boolean)
         {
             Caption = 'Credit Sales Allowed';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53001; "Enviado no fact. en Consig."; Decimal)
         {
@@ -133,34 +133,34 @@ tableextension 50008 EXCCRICustomer extends Customer
         }
         field(54000; "Cod. Actividad Cliente"; Code[6])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; "Collector Code"; Code[10])
         {
             Caption = 'Collector Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
         field(56001; "Permite Refacturar"; Boolean)
         {
             Caption = 'Allow Reinvoice';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56002; "Packing requerido"; Option)
         {
             Caption = 'Packing Required';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","No Verificable","Verificable Siempre",Verificable;
             OptionCaption = ' ,Not Verifiable,Always Verifiable,Verifiable';
         }
         field(56003; APS; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56004; Inactivo; Boolean)
         {
             Caption = 'Inactive';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -177,7 +177,7 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(56007; "Cod. Colegio"; Code[20])
         {
             Caption = 'Contact No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Contact;
         }
         field(56008; "Nombre Colegio"; Text[150])
@@ -190,12 +190,12 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(56010; "Zona de cobro"; Code[20])
         {
             Caption = 'Collection Zone';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Zonas de cobro";
         }
         field(56026; "Exento Provision"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56027; "Saldo provision"; Decimal)
         {
@@ -205,11 +205,11 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(56028; "Ruta Distribucion"; Code[10])
         {
             Caption = 'Distribution Route';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56029; "Tipos de colegios"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Tipos de colegios"));
         }
         field(56030; "E-Mail 2"; Text[100])
@@ -220,11 +220,11 @@ tableextension 50008 EXCCRICustomer extends Customer
         field(34002500; "Permite venta a credito"; Boolean)
         {
             Caption = 'Credit Sales Allowed';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002501; "Colegio por defecto POS"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Contact;
         }
     }

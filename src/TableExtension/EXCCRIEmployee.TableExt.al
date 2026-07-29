@@ -84,34 +84,34 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(50000; "Categoria old"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","01-Personal Directivo","02-Mandos Intermedios","03-Personal Tecnico Calificado","04-Operadores";
         }
 
         field(50001; "Tiempo old"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(50002; "Numero de persona"; Text[32])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(55002; "Importe de Anticipo"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002100; "Company"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Empresas Cotizacion";
         }
 
         field(34002101; "Second Last Name"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -121,13 +121,13 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002102; "Working Center"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Centros de Trabajo"."Centro de trabajo" where("Empresa cotizacion" = field(Company));
         }
 
         field(34002103; "Full Name"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -144,7 +144,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002104; "Document Type"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Cédula","Pasaporte","Tarj.residen.comunitario","Perm.Trabajo"," ","N.I.Extranjero","N.I.F.";
 
             trigger OnValidate()
@@ -156,7 +156,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002105; "Document ID"; Text[15])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -166,20 +166,20 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002106; "Employee Level"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Nivel Cargo"."Cod. Nivel";
             Editable = false;
         }
 
         field(34002107; "Posting Group"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Grupos Contables Empleados";
         }
 
         field(34002108; "Job Type Code"; Code[15])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Puestos laborales".Codigo where("Cod. departamento" = field(Departamento));
 
             trigger OnValidate()
@@ -190,53 +190,53 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002109; "Alta contrato"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
 
         field(34002110; "Fin contrato"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
 
         field(34002111; "Estado Contrato"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Sin contrato","Indefinido","Finalizado","No finalizado";
             Editable = false;
         }
 
         field(34002112; "Pensionado"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002113; "Calcular Nomina"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             InitValue = true;
         }
 
         field(34002114; "Fecha salida empresa"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002115; "Telefono caso emergencia"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002116; "Nacionalidad"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Country/Region";
         }
 
         field(34002117; "Incentivos/Puntos"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -246,24 +246,24 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002118; "Lugar nacimiento"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002119; "Estado civil"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
 
         field(34002120; "Disponible 1"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Bancos;
         }
 
         field(34002121; "Disponible 2"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Ahorro","Corriente";
         }
 
@@ -276,7 +276,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002123; "Forma de Cobro"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Efectivo","Cheque","Transferencia Banc.";
         }
 
@@ -296,7 +296,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002126; "Mes Nacimiento"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
 
@@ -308,7 +308,7 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002128; "Tipo Empleado"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Fijo","Temporal","Otro";
         }
 
@@ -326,53 +326,53 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002131; "Codigo Cliente"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Customer."No.";
         }
 
         field(34002132; "Excluido Cotizacion TSS"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             InitValue = false;
         }
 
         field(34002133; "Excluido Cotizacion ISR"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002134; "Dia nacimiento"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002135; "Cod. ARS"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = ARS;
         }
 
         field(34002136; "Cod. AFP"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = AFP;
         }
 
         field(34002137; "Departamento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Departamentos where(Inhabilitado = const(false));
         }
 
         field(34002138; "Sub-Departamento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Sub-Departamentos".Codigo where("Cod. Departamento" = field(Departamento));
         }
 
         field(34002139; "Agente de Retencion ISR"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Company;
 
             trigger OnValidate()
@@ -383,12 +383,12 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002140; "RNC Agente de Retencion ISR"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002141; "Cod. Supervisor"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Employee;
         }
 
@@ -401,23 +401,23 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002143; "Shift"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Shift;
         }
 
         field(34002144; "Salario Empresas Externas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002145; "Aporte Voluntario Income Tax"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002146; "Language Code"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Language;
         }
 
@@ -437,44 +437,44 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002149; "Contacto en caso de Emergencia"; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002150; "Telefono contacto Emergencia"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002151; "Parentesco caso de Emergencia"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002152; "Distribuir salario en proyecto"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002153; "Tipo de Sangre"; Code[3])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Tipo de Sangre"));
         }
 
         field(34002154; "Nivel de riesgo"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Critico","No critico";
         }
 
         field(34002155; "ID Control de asistencia"; Code[6])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002156; "Cod. empleado a quien sustituy"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Employee;
         }
 
@@ -486,43 +486,43 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002158; "No. Pasaporte"; Code[15])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002159; "Visa americana"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002160; "ID TSS"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002161; "Fecha reactivacion"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002162; "Hobby"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002163; "Excluir Calc. Imp. en Comision"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002164; "Categoria"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria"));
         }
 
         field(34002165; "Nivel Academico MT"; Code[5])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Niveles-Grados"));
         }
 
@@ -535,13 +535,13 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002167; "Discapacidad"; Code[5])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Discapacidades"));
         }
 
         field(34002168; "Tipo pago"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Sueldo fijo","Por hora";
         }
 
@@ -554,42 +554,42 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002170; "Permiso Trabajo MT"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002171; "Lugar Nacimiento MT"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002172; "Etnia MT"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002173; "Idioma MT"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002174; "Numero de Hijos MT"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002175; "Profesion"; Text[80])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002176; "Puesto MT"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002177; "Cod. Puesto MT"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -599,42 +599,42 @@ tableextension 50074 EXCCRIEmployee extends Employee
 
         field(34002178; "Importe Facturas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002179; "Fecha despues quinquenios"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002180; "Gastos Proyectados Anualmente"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002181; "Acumula Fondo Reserva"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002182; "Numero de dependientes"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002183; "Aplica para CHOFERIL"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002184; "Empleado Exento"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002185; "Categoria de licencia"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria de Licencia"));
         }
     }

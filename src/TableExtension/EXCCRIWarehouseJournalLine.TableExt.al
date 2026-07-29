@@ -14,7 +14,7 @@ tableextension 50107 EXCCRIWarehouseJournalLine extends "Warehouse Journal Line"
         field(34002500; Barcode; Code[22])
         {
             Caption = 'Barcode', Comment = 'ESP=Cod. Barras';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var

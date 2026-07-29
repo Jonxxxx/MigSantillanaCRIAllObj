@@ -4,18 +4,18 @@ tableextension 50009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
     {
         field(50013; "Forma de Pago"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
         field(52500; "Fecha Recepcion Documento"; Date)
         {
             Caption = 'Document Reception Date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
         field(56026; "Importe provisionado"; Decimal)
@@ -26,28 +26,28 @@ tableextension 50009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
         }
         field(56027; "Fecha ult. provision"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(56028; "Provisionado por insolvencia"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(34003001; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003002; "No. Comprobante Fiscal DPP"; Code[19])
         {
             Caption = 'Fiscal Document No. DPP';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003007; "Fecha vencimiento NCF DPP"; Date)
         {
             Caption = 'NCF Due date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

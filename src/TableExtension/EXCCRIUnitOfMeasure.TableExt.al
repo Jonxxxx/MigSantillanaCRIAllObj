@@ -4,11 +4,11 @@ tableextension 50036 EXCCRIUnitOfMeasure extends "Unit of Measure"
     {
         field(50000; "Permite fraccionar UOM"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50001; "Unidad medida base"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

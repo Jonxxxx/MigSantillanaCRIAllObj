@@ -4,7 +4,7 @@ tableextension 50090 EXCCRITransferReceiptHeader extends "Transfer Receipt Heade
     {
         field(50000; "Devolucion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(50001; "Importe Consignacion"; Decimal)
@@ -15,17 +15,17 @@ tableextension 50090 EXCCRITransferReceiptHeader extends "Transfer Receipt Heade
 
         field(50002; "Saldo Cliente"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(50003; "Limite de credito cliente"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(50004; "Prioridad entrega consignacion"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = "Baja","Media","Alta";
         }
 
@@ -37,117 +37,117 @@ tableextension 50090 EXCCRITransferReceiptHeader extends "Transfer Receipt Heade
 
         field(50006; "Cod. Vendedor"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
         }
 
         field(50007; "Estado distribucion"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho","Entregado";
         }
 
         field(50008; "No. Copias impresas"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(50009; "No. Copias imp. Recep."; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(52500; "Observaciones"; Text[250])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56001; "Pedido Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56002; "Devolucion Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56003; "No. Bultos"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56013; "Cod. Ubicacion Alm. Origen"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Bin.Code where("Location Code" = field("Transfer-from Code"));
         }
 
         field(56014; "Cod. Ubicacion Alm. Destino"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Bin.Code where("Location Code" = field("Transfer-to Code"));
         }
 
         field(56015; "Desc. Ubic. Alm. Origen"; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56016; "Desc. Ubic. Alm. Destino"; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56017; "Consignacion Muestras"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56062; "Cantidad de Bultos"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56070; "No. Envio de Almacen"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56071; "No. Picking"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56072; "No. Picking Reg."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56073; "No. Packing"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56074; "No. Packing Reg."; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(56075; "No. Envio"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34003001; "No. Serie NCF Facturas"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
 
         field(34003002; "No. Comprobante Fiscal"; Code[19])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

@@ -64,17 +64,17 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(50000; "No. Paginas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             DecimalPlaces = 0 : 0;
         }
         field(50001; "Componentes Producto"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
         field(50002; ISBN; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50003; "Qty. on Pre Sales Order"; Decimal)
         {
@@ -87,38 +87,38 @@ tableextension 50012 EXCCRIItem extends Item
         field(50005; "Nivel Escolar (Grado)"; Code[20])
         {
             Caption = 'Course';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Grado), Bloqueado = const(false));
         }
         field(50007; "Carga horaria"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             // Ver TableRelation = 62031;
         }
         field(50008; "Tipo Ingles"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
         field(50009; Catalogo; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50010; Formato; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = Libro,Cuaderno,Guia,Otros;
         }
         field(50110; "Tipo de Peso"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Weight,Pre-weight';
             OptionMembers = " ",Pesado,"Pre-pesado";
         }
         field(50111; "Source counter"; BigInteger)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -148,38 +148,38 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(50112; Descripcion; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50113; "Venta por internet"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50114; "Fecha SC"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50115; "Hora SC"; Time)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50116; "linea-impresora"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50117; EspecificacionSIC; Text[255])
         {
             Caption = 'Specification';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53000; "Id. reporte etiqueta"; Integer)
         {
             Caption = 'Label report Id.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
         field(55000; Materia; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const(Materia));
 
             trigger OnValidate()
@@ -195,7 +195,7 @@ tableextension 50012 EXCCRIItem extends Item
         field(56000; Inactivo; Boolean)
         {
             Caption = 'Inactive';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -223,23 +223,23 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(56005; "Nivel Educativo APS"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Nivel Educativo APS";
         }
         field(56006; Tipos; Code[20])
         {
             Caption = 'Type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Tipos;
         }
         field(56007; Edicion; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Edicion), Bloqueado = const(false));
         }
         field(56008; Estado; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Estado), Bloqueado = const(false));
 
             trigger OnValidate()
@@ -250,47 +250,47 @@ tableextension 50012 EXCCRIItem extends Item
         field(56009; Obra; Text[50])
         {
             Caption = 'Play';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56010; Sello; Code[20])
         {
             Caption = 'Seal/Brand';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Sello), Bloqueado = const(false));
         }
         field(56011; "Tipo Edicion"; Code[20])
         {
             Caption = 'Type Edition';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Tipo Edicion";
         }
         field(56012; Titulo; Code[20])
         {
             Caption = 'Title';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56013; Idioma; Code[20])
         {
             Caption = 'Language';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Language where(Bloqueado = const(false));
         }
         field(56014; "Activo Fijo Prototipo"; Code[20])
         {
             Caption = 'Fixed Asset Prototype';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Fixed Asset";
         }
         field(56015; Autor; Code[20])
         {
             Caption = 'Author';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Autor), Bloqueado = const(false));
         }
         field(56016; "Sub Familia"; Code[20])
         {
             Caption = 'Sub Family';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnLookup()
             var
@@ -315,26 +315,26 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(56017; "Derecho de autor"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56018; "% Castigo Mantenimiento"; Decimal)
         {
             Caption = 'Penalty % Keeping';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56019; "% Castigo Conquista"; Decimal)
         {
             Caption = 'Penalty % Conquest';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56020; "% Castigo Perdida"; Decimal)
         {
             Caption = 'Penalty % Loosing';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56022; "Grupo de Negocio"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Grupo de Negocio"));
 
             trigger OnValidate()
@@ -371,49 +371,49 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(56026; Calidad; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56027; "Gramaje Hoja"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56028; "Gramaje Portada"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56029; "Formato Dimension"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56030; Produccion; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56031; "No. Deposito Legal"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56032; Encuadernacion; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56033; "Peso Portada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56034; "Peso Hoja"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56035; CABYS; Code[20])
         {
             Caption = 'CABYS';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56036; Compartir; Option)
         {
             Caption = 'Cod. Compartir';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Libros,Servicios,Aulas';
             OptionMembers = " ",Libros,Servicios,Aulas;
         }
@@ -428,50 +428,50 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(75000; "Gestionado MdM"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(75001; "Tipo Producto"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const("Tipo Producto"), Bloqueado = const(false));
         }
         field(75002; Soporte; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Soporte), Bloqueado = const(false));
         }
         field(75003; "Empresa Editora"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Editora), Bloqueado = const(false));
         }
         field(75004; Linea; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Linea), Bloqueado = const(false));
         }
         field(75005; Sociedad; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Editora), Bloqueado = const(false));
         }
         field(75006; "Plan Editorial"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const("Plan Editorial"), Bloqueado = const(false));
         }
         field(75007; "Estructura Analitica"; Code[21])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Estructura Analitica".Codigo where(Blocked = const(false));
         }
         field(75008; "Fecha Almacen"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(75009; "Fecha Comercializacion"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -501,13 +501,13 @@ tableextension 50012 EXCCRIItem extends Item
         }
         field(75010; Asignatura; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Asignatura), Bloqueado = const(false));
         }
         field(75011; Campana; Code[10])
         {
             Caption = 'Campaign';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             // Ver TableRelation = "Datos MDM".Codigo where(Tipo = const(Campaña), Bloqueado = const(false));
         }
         field(75012; EAN; Code[20])

@@ -172,18 +172,18 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(50000; "Estado distribucion"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho",Entregado;
         }
         field(50008; "No. copias Picking"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'No. Printed Picking';
             Editable = false;
         }
         field(50009; "Nota de Credito"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -194,7 +194,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(50010; "Tipo de Venta"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations,Channel 3,Exports,Scholarships,Royalties';
             OptionMembers = Factura,Consignacion,Muestras,Donaciones,"Canal 3",Exportacion,Becas,"Regalias";
 
@@ -274,11 +274,11 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(50011; "No. Bultos"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50012; "Cantidad para devolucion"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50013; "Cantidad en lineas"; Decimal)
         {
@@ -287,64 +287,64 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(50014; "PO Box address"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'PO Box address';
         }
         field(50110; "No. Documento SIC"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50111; "Source counter"; BigInteger)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50112; "Cod. Cajero"; Code[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50113; "Cod. Supervisor"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50114; "Error Registro"; Text[350])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52500; Clave; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52501; Consecutivo; Text[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52502; Estado; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52503; Mensaje; Text[140])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52504; "Fecha Doc Electronico"; DateTime)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(52505; "E-Mail-FE"; Text[80])
         {
             ExtendedDatatype = EMail;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'E-Mail FE';
         }
         field(52506; "Tipo Doc Electronico"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Tipo Documento Electronico';
             OptionMembers = Factura,Tiquete;
         }
         field(52508; "Tipo Doc. Ref."; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Tipo Doc. Ref.';
             OptionCaption = ' ,Comprobante por Contingencia,Sustituye Comprobante';
             OptionMembers = " ","Comprobante por Contingencia","Sustituye Comprobante";
@@ -357,7 +357,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(52509; "Numero Referencia FE"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Numero Referencia FE';
 
             trigger OnValidate()
@@ -368,20 +368,20 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(52510; "Tipo Doc. Ref NC"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Factura Electronica,Tiquete Electronico,Sustituye Factura de Exportacion';
             OptionMembers = " ","Factura Electronica","Tiquete Electronico","Sustituye Factura de Exportacion";
         }
         field(52511; "Codigo Referencia"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Devolucion Total,Devolucion Parcial';
             OptionMembers = " ","Devolucion Total","Devolucion Parcial";
         }
         field(52512; "No. Doc Historico"; Code[20])
         {
             TableRelation = "Sales Invoice Header";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'No. Doc Historico';
 
             trigger OnValidate()
@@ -392,29 +392,29 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(52513; "Categoria Pedido Venta"; Code[20])
         {
             TableRelation = "Categoria Pedido Venta";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Order Category';
         }
         field(53000; "ID Cajero (Obsoleto)"; Code[1])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Cashier ID';
         }
         field(53001; "Hora creacion (Obsoleto)"; Time)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Creation time';
         }
         field(53002; "Tipo pedido"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Order type';
             OptionCaption = ' ,TPV,Mobile';
             OptionMembers = " ",TPV,Movilidad;
         }
         field(53004; "Factura comprimida"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Compressed invoice';
         }
         field(53005; "Importe ITBIS Incl."; Decimal)
@@ -424,16 +424,16 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(53006; "Venta a credito (Obsoleto)"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53007; "Importe a liquidar"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53008; "Tienda (Obsoleto)"; Code[1])
         {
             TableRelation = "Bancos tienda";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53009; "Factura en Historico"; Boolean)
         {
@@ -443,7 +443,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(56000; "Pedido Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -494,21 +494,21 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(56001; "Collector Code"; Code[10])
         {
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Collector code';
         }
         field(56002; "Pre pedido"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Pre Order';
         }
         field(56003; "Devolucion Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56004; "Cod. Cupon"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Coupon Code';
         }
         field(56005; "Siguiente No."; Code[20])
@@ -519,7 +519,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(56006; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact where(Type = filter(Company));
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'School Code';
 
             trigger OnValidate()
@@ -530,81 +530,81 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(56007; "Nombre Colegio"; Text[60])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'School Name';
         }
         field(56008; "Re facturacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56020; "No aplica Derechos de Autor"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Apply Author Copyright';
         }
         field(56021; Promocion; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Promotion';
         }
         field(56062; "Cantidad de Bultos"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Package Qty.';
         }
         field(56063; "No. Hoja de Ruta"; Code[14])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56064; "No. Hoja de Ruta Reg."; Code[14])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56070; "No. Envio de Almacen"; Code[20])
         {
             TableRelation = "Warehouse Shipment Header";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Warehouse Shipment No.';
         }
         field(56071; "No. Picking"; Code[20])
         {
             TableRelation = "Warehouse Activity Header";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Pciking No.';
         }
         field(56072; "No. Picking Reg."; Code[20])
         {
             TableRelation = "Registered Whse. Activity Hdr."."No.";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Posted Picking No.';
         }
         field(56073; "No. Packing"; Code[20])
         {
             TableRelation = "Cab. Packing";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Packing No.';
         }
         field(56074; "No. Packing Reg."; Code[20])
         {
             TableRelation = "Cab. Packing Registrado"."No.";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Posted Packing No.';
         }
         field(56075; "No. Factura"; Code[20])
         {
             TableRelation = "Sales Invoice Header";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Invoice No.';
         }
         field(56076; "No. Envio"; Code[20])
         {
             TableRelation = "Sales Shipment Header"."No.";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Shippment No.';
         }
         field(56077; "% de aprobacion"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Approval %';
             DecimalPlaces = 0 : 2;
 
@@ -656,38 +656,38 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(56121; "Estado packing"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = 'Pendiente,Listo,Completo';
             OptionMembers = Pendiente,Listo,Completo;
         }
         field(56300; "Venta Call Center"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56301; "Pago recibido"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56302; "Aprobado cobros"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(56303; "Ruta de Distribucion"; Code[10])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Ruta de Distribucion';
         }
         field(56310; Origen; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = 'Standard,E-Commerce';
             OptionMembers = Estandar,"E-Commerce";
         }
         field(56311; "Estado E-Commerce"; Option)
         {
             InitValue = "Listo para entrega";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = 'Processing,Ready to deliver,Delivered';
             OptionMembers = "En Proceso","Listo para entrega",Entregado;
         }
@@ -701,7 +701,7 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         }
         field(56313; "Metodo de Envio E-Commerce"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Metodo de Envio E-Commerce';
             OptionCaption = ' ,Terrestre,Recogida';
             OptionMembers = " ",Terrestre,Recogida;
@@ -709,108 +709,108 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(34002500; "ID Cajero"; Code[20])
         {
             TableRelation = Cajeros.ID where(Tienda = field(Tienda));
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Cashier ID';
         }
         field(34002501; "Hora creacion"; Time)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Creation time';
         }
         field(34002502; "Venta TPV"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'POS Sales';
         }
         field(34002503; TPV; Code[20])
         {
             TableRelation = "Configuracion TPV"."Id TPV" where(Tienda = field(Tienda));
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'POS';
         }
         field(34002504; Tienda; Code[20])
         {
             TableRelation = Tiendas."Cod. Tienda";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Shop';
         }
         field(34002505; "Venta a credito"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Venta a credito';
         }
         field(34002509; "Registrado TPV"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Registrado TPV';
         }
         field(34002510; "Anulado TPV"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Anulado TPV';
         }
         field(34002511; "No. Fiscal TPV"; Code[40])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'No. Fiscal TPV';
         }
         field(34002512; Turno; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Turno';
         }
         field(34002513; "Anulado por Documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Anulado por Documento';
         }
         field(34002514; "Anula a Documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Anula a Documento';
         }
         field(34002515; Devolucion; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Devolucion';
         }
         field(34002516; "No. Telefono"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'No. Telefono';
         }
         field(34002517; "Replicado POS"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Replicado POS';
         }
         field(34002518; "E-Mail"; Text[49])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002519; Aparcado; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002521; "Tipo venta TPV"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ","Consumidor final","Credito fiscal";
         }
         field(34003001; "No. Serie NCF Facturas"; Code[10])
         {
             TableRelation = "No. Series" where("Descripcion NCF" = filter(<> ''));
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'NCF Invoice Series No.';
         }
         field(34003002; "No. Comprobante Fiscal"; Code[19])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Fiscal Document No.';
         }
         field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Rel. Fiscal Document No.';
 
             trigger OnValidate()
@@ -823,30 +823,30 @@ tableextension 50014 EXCCRISalesHeader extends "Sales Header"
         field(34003004; "Razon anulacion NCF"; Code[20])
         {
             TableRelation = "Razones Anulacion NCF";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'NCF Void Reason';
         }
         field(34003005; "No. Serie NCF Abonos"; Code[10])
         {
             TableRelation = "No. Series";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Abonos';
         }
         field(34003006; "Cod. Clasificacion Gasto"; Code[2])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Expense Clasification Code';
         }
         field(34003007; "Fecha vencimiento NCF"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'NCF Due date';
         }
         field(34003008; "Tipo de ingreso"; Code[2])
         {
             InitValue = '01';
             TableRelation = "Tipos de ingresos";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Income type';
         }
     }

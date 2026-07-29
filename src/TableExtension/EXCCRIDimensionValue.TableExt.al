@@ -5,17 +5,17 @@ tableextension 50055 EXCCRIDimensionValue extends "Dimension Value"
         field(51000; "Fecha desde recep. devol."; Date)
         {
             Caption = 'From date to receive returns', Comment = 'ESP=Fecha desde recepcion de devoluciones';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(51001; "Fecha hasta recep. devol."; Date)
         {
             Caption = 'To date to receive returns', Comment = 'ESP=Fecha hasta recepcion de devoluciones';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; "Fecha creacion"; Date)
         {
             Caption = 'Creation Date', Comment = 'ESP=Fecha creacion';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

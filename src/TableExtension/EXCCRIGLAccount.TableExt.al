@@ -5,23 +5,23 @@ tableextension 50006 EXCCRIGLAccount extends "G/L Account"
         field(56035; CABYS; Code[20])
         {
             Caption = 'CABYS';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003001; "NCF Obligatorio"; Boolean)
         {
             Caption = 'NCF Requested';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Classification Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
         field(34003008; "Tipo ingreso admitido"; Code[2])
         {
             Caption = 'Type of admitted income';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Tipos de ingresos";
         }
     }

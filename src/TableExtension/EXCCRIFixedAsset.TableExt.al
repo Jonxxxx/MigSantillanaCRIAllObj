@@ -69,12 +69,12 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
         field(50000; Producto; Code[20])
         {
             Caption = 'Item';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Item;
         }
         field(50001; "No. Placa"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50002; "Total Costo"; Decimal)
         {
@@ -91,7 +91,7 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
         field(50005; "Nombre Responsable"; Text[60])
         {
             Caption = 'Responsible Name';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50006; "Fecha Inicio Amortizacion"; Date)
         {

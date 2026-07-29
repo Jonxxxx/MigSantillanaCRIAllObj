@@ -37,104 +37,104 @@ tableextension 50019 EXCCRIItemJournalLine extends "Item Journal Line"
 
         field(50000; "No. Paginas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50001; "Componentes Producto"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
         field(50002; ISBN; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50003; "Cod. Procedencia"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
         field(50004; "Cod. Edicion"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Edicion;
         }
         field(50005; Areas; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Nivel Educativo";
         }
         field(50007; Cursos; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
         field(50008; "Precio Unitario Cons. Inicial"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50009; "Descuento % Cons. Inicial"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50010; "Importe Cons. bruto Inicial"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50011; "Importe Cons Neto Inicial"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50014; "Pedido Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50015; "Devolucion Consignacion"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50016; "Precio Unitario Cons. Act."; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50017; "Descuento % Cons. Actualizado"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50018; "Importe Cons. bruto Act."; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50019; "Importe Cons. Neto Actualizado"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56020; "No aplica Derechos de Autor"; Boolean)
         {
             Caption = 'Apply Author Copyright';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56021; Promocion; Boolean)
         {
             Caption = 'Promotion';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56022; "Cod. Colegio"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Contact;
         }
         field(34002500; Barcode; Code[22])
         {
             Caption = 'Barcode';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var

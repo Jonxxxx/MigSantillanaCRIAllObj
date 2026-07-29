@@ -4,7 +4,7 @@ tableextension 50104 EXCCRISalesPrice extends "Sales Price"
     {
         field(50000; "Source counter"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -31,18 +31,18 @@ tableextension 50104 EXCCRISalesPrice extends "Sales Price"
         }
         field(75000; IdJobQueueEntry; Guid)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002504; Location; Code[20])
         {
             Caption = 'Location', Comment = 'ESP=Almacén';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Location;
         }
         field(34002505; "Precio manual"; Boolean)
         {
             Caption = 'Manual price', Comment = 'ESP=Precio manual';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

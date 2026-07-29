@@ -64,12 +64,12 @@ tableextension 50010 EXCCRIVendor extends Vendor
         }
         field(54000; "Cod. Actividad Proveedor"; Code[6])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; Inactivo; Boolean)
         {
             Caption = 'Inactive';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -85,21 +85,21 @@ tableextension 50010 EXCCRIVendor extends Vendor
         }
         field(34002803; "Cod. Vendedor"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
         }
         field(34002804; Rappel; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002805; Taller; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Class Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
     }

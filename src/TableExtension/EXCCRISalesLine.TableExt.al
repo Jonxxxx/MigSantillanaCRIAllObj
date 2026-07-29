@@ -137,48 +137,48 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         field(50000; "Cod. Procedencia"; Code[20])
         {
             TableRelation = Procedencia;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50001; "Cod. Edicion"; Code[20])
         {
             // Ver TableRelation = 50131;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50002; Areas; Code[20])
         {
             // Ver TableRelation = 50132;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50003; "No. Paginas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50004; ISBN; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50005; "Componentes Prod."; Code[20])
         {
             TableRelation = "Componentes Prod.";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
             TableRelation = "Nivel Educativo APS";
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50007; Cursos; Code[20])
         {
             TableRelation = Cursos;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50008; "Cantidad Inv. en Consignacion"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50009; "Cantidad Consignacion Devuelta"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             begin
@@ -187,33 +187,33 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50010; "No. Pedido Consignacion"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50011; "No. Linea Pedido Consignacion"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50013; "No. Estante"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50014; "Cod. Cupon"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Coupon Code';
         }
         field(50015; "No. Linea Cupon"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Coupon Line No.';
         }
         field(50016; "Cantidad Aprobada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Approved Qty.';
 
             trigger OnValidate()
@@ -274,12 +274,12 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50017; "Cantidad pendiente BO"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'BO Pending Qty.';
         }
         field(50018; "Cantidad a Anular"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Qty. to Void';
 
             trigger OnValidate()
@@ -293,7 +293,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50019; "Cantidad Solicitada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Requested Qty.';
 
             trigger OnValidate()
@@ -312,12 +312,12 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50020; Temporal; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Temp';
         }
         field(50022; "Cantidad Anulada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Qty. Canceled';
         }
         field(50023; EAN; Code[20])
@@ -327,7 +327,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50040; "Cantidad a Ajustar"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Qty. To Adjust';
 
             trigger OnValidate()
@@ -341,7 +341,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50041; "Porcentaje Cant. Aprobada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
@@ -368,16 +368,16 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(50110; SIC; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(55500; "Linea Copiada"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Copied Line';
         }
         field(56001; "Disponible BackOrder"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Available';
         }
         field(56005; "Nombre Cliente"; Text[200])
@@ -400,12 +400,12 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(56008; "Bin Ranking"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Bin Ranking';
         }
         field(56009; Compartir; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Libros,Servicios,Aulas';
             OptionMembers = " ",Libros,Servicios,Aulas;
         }
@@ -413,67 +413,67 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         {
             TableRelation = "Tipo Descuentos DGT";
             ValidateTableRelation = true;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002500; "Anulada en TPV"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'POS Void';
         }
         field(34002501; "Precio anulacion TPV"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Void POS Price';
         }
         field(34002502; "Cantidad anulacion TPV"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Void POS Qty.';
         }
         field(34002503; "Cantidad agregada"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002504; "Cod. Vendedor"; Code[10])
         {
             TableRelation = Vendedores.Codigo;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Caption = 'Salesperson Code';
         }
         field(34002505; Devuelto; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002506; "Devuelto en Documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002507; "Devuelto en Linea Documento"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002508; "Devuelve a Documento"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002509; "Devuelve a Linea Documento"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34002511; "Registrado TPV"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(34002800; "Cantidad Alumnos"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             DecimalPlaces = 0 : 0;
             Editable = false;
         }
         field(34002801; Adopcion; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
             Editable = false;
@@ -481,7 +481,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         field(34002802; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact;
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
 
             trigger OnValidate()
@@ -501,7 +501,7 @@ tableextension 50015 EXCCRISalesLine extends "Sales Line"
         }
         field(34002803; Presupuesto; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
     }

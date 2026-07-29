@@ -17,6 +17,16 @@
             "id": "AA0005",
             "action": "Hidden",
             "justification": "Not need solve"
+        },
+        {
+            "id": "AS0011",
+            "action": "Hidden",
+            "justification": "Not need solve"
+        },
+        {
+            "id": "AA0215",
+            "action": "Hidden",
+            "justification": "Not need solve"
         }
     ]
 }

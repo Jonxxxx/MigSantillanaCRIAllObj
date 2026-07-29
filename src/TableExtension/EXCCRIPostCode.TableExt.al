@@ -4,7 +4,7 @@ tableextension 50037 EXCCRIPostCode extends "Post Code"
     {
         field(52500; Colonia; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 

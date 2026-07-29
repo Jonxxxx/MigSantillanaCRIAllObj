@@ -5,7 +5,7 @@ tableextension 50054 EXCCRIDimension extends Dimension
         field(75000; "Tipo MdM"; Option)
         {
             Caption = 'MdM Type', Comment = 'ESP=Tipo MdM';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionCaption = 'None,Series/Method,Destination,Account,Text Type,Subject,Workload,Origin', Comment = 'ESP=Ninguno,Serie/Metodo,Destino,Cuenta,Tipo Texto,Materia,Carga Horaria,Origen';
             OptionMembers = Ninguno,"Serie/Metodo",Destino,Cuenta,"Tipo Texto",Materia,"Carga Horaria",Origen;
 

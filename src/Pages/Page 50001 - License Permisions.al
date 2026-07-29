@@ -9,8 +9,10 @@ page 50001 "License Permisions"
         {
             repeater(Group)
             {
-                field("Object Type"; "Object Type")
+                field("Object Type"; Rec."Object Type")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Object Type';
                 }
                 field("Object Number"; "Object Number")
                 {

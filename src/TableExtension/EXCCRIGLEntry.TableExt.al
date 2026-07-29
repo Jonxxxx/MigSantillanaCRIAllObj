@@ -4,33 +4,33 @@ tableextension 50007 EXCCRIGLEntry extends "G/L Entry"
     {
         field(56045; "No. Mov. cliente provisionado"; Integer)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             Editable = false;
         }
         field(34003001; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Classification Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
         field(34003008; RNC; Code[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003010; "Fecha vencimiento NCF"; Date)
         {
             Caption = 'NCF Due Date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003011; "Tipo de ingreso"; Code[2])
         {
             Caption = 'Income Type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             InitValue = '02';
             TableRelation = "Tipos de ingresos";
         }

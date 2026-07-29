@@ -1,98 +1,268 @@
-# Jonxsoft Business Central Development Rules
+## Page field control normalization
 
-## Project context
+* Preserve page IDs, page names, page types, source tables, captions, layouts, actions, parts, triggers, procedures, variables, visibility, editability, permissions, and existing business logic.
+* Do not convert pages to page extensions.
+* Do not modify page extensions as part of this task.
+* Do not rename controls or source-table fields.
+* Do not modify field data types, table fields, table relations, filters, validations, calculations, actions, or page behavior.
+* Do not perform unrelated formatting or refactoring.
 
-- This repository contains a migration from Dynamics NAV / Business Central 14 C/AL to Business Central SaaS v27 AL.
-- Preserve existing business logic unless the task explicitly requests a functional change.
-- Prefer minimal and safe modifications.
-- Avoid unnecessary refactoring.
-- All code must be compatible with Business Central SaaS.
-- Do not use DotNet, Automation, File system paths, direct SQL access, or OnPrem-only APIs.
-- Do not invent Microsoft object IDs, object names, fields, methods, events, or APIs.
+### Direct SourceTable fields
 
-## Naming
+For every `field(ControlName; SourceExpression)` control in a `page` object under `src/pages`, determine whether `SourceExpression` is a direct field of the page `SourceTable`.
 
-- Use the existing object names and IDs unless explicitly requested otherwise.
-- New custom objects, variables, procedures, and fields must follow the project naming convention.
-- Use the JX prefix for genuinely new custom objects unless the surrounding project uses a more specific approved prefix.
-- Do not use spaces in new AL identifiers.
-- All code comments must be written in English.
+When the source expression is a direct field of `Rec`, normalize it to:
 
-## Business logic
+```al
+field("<Field Name>"; Rec."<Field Name>")
+{
+    ApplicationArea = All;
+    ToolTip = '<Field Name>';
+}
+```
 
-- Preserve validations, filters, posting behavior, dimensions, permissions, and transaction boundaries.
-- Do not remove COMMIT statements unless explicitly instructed.
-- Do not replace custom fields or objects with standard objects without confirming semantic equivalence.
-- Do not alter document posting, numbering, inventory, tax, or financial behavior without highlighting the risk.
+Example:
 
-## TODO review workflow
+```al
+field("Object Type"; "Object Type")
+{
+}
+```
 
-When processing comments matching `//TODO: Ver`:
+must become:
 
-1. Inspect the complete object and surrounding logic.
-2. Determine whether the TODO is:
-   - A deterministic AL syntax issue.
-   - An obsolete Business Central API.
-   - A renamed standard object, field, enum, or method.
-   - An OnPrem-only dependency.
-   - A functional ambiguity requiring manual review.
-3. Use AL symbol search before assuming that a standard object or method was removed.
-4. Modify only deterministic cases.
-5. Do not remove a TODO unless the issue was resolved and the project compiles.
-6. For unresolved cases, replace it with:
-   `// TODO: Manual review - <specific reason>`
-7. Do not create placeholder logic merely to make the project compile.
-8. Do not suppress compiler warnings without explaining why.
+```al
+field("Object Type"; Rec."Object Type")
+{
+    ApplicationArea = All;
+    ToolTip = 'Object Type';
+}
+```
 
-## TODO processing
+Example with an unquoted field identifier:
 
-- `TODO-Pages-Audit.md` is an initial inventory, not an authoritative final
-  classification.
-- Re-evaluate every TODO against the current source and dependency symbols.
-- A TODO initially classified as Custom dependency or Missing page property may
-  be resolved automatically when all referenced symbols and fields are
-  verified.
-- Skip ambiguous TODOs and continue processing later candidates.
-- A single ambiguous TODO must never stop the complete batch.
-- Treat adjacent TODO comments that form one AL statement or block as one
-  logical correction.
-- Deduplicate audit entries that refer to the same file, line, and TODO marker.
-Count the actual current source occurrences, not duplicated audit entries.
+```al
+field(Code; Code)
+{
+}
+```
 
-## Pages
+must become:
 
-- Preserve page type, source table, layout structure, actions, visibility, editability, and business logic.
-- Add `ApplicationArea = All;` to fields and actions when missing and appropriate.
-- Add an English `ToolTip` only when its purpose can be inferred safely.
-- Do not invent captions, permissions, RunObject targets, RunPageLink filters, or SubPageLink values.
-- Do not convert a page to a page extension unless explicitly requested.
-- Do not change UsageCategory without reviewing how the page is opened.
+```al
+field(Code; Rec.Code)
+{
+    ApplicationArea = All;
+    ToolTip = 'Code';
+}
+```
 
-## Validation
+### Rec qualification
 
-After every batch:
+* Add the `Rec.` qualifier only when the source expression is a direct field of the page `SourceTable`.
+* Use `Rec."<Field Name>"` for quoted field identifiers.
+* Use `Rec.FieldName` for valid unquoted field identifiers.
+* Do not add a second qualifier when the source expression already begins with `Rec.`.
+* Do not change an existing correct `Rec.` qualification.
+* Do not qualify a field with `Rec.` solely because the control name matches the source expression.
+* Verify the field against the page `SourceTable` or available AL symbols before changing it.
 
-1. Compile the modified AL project.
-2. Review all new errors and warnings caused by the changes.
-3. Fix only issues introduced by the batch.
-4. Do not modify unrelated objects.
-5. Report:
-   - Files changed.
-   - TODOs resolved.
-   - TODOs requiring manual review.
-   - Compilation errors remaining.
-   - Assumptions made.
+Do not add `Rec.` to:
 
-## Continuous TODO batch processing
+* Variables.
+* Procedure calls.
+* Expressions.
+* `Format(...)`.
+* `StrSubstNo(...)`.
+* Boolean expressions.
+* Totals or calculated controls.
+* Fields belonging to another record variable.
+* Temporary records other than the page `Rec`.
+* `xRec`.
+* Enum expressions.
+* Option expressions.
+* Control add-ins.
+* Parts.
+* Groups.
+* Labels.
+* User controls.
 
-For page TODO migration tasks, this section overrides any object-per-task limit
-defined in the repository root `AGENTS.md`.
+Examples that must remain unchanged:
 
-- Process a maximum of 10 AL objects per compilation batch, with no total object limit for the complete task.
-- After every successful compilation batch, continue automatically with the next batch without waiting for user confirmation.
-- Process all remaining `//TODO: Ver` comments regardless of their original High, Medium, or Low confidence classification.
-- Re-evaluate every TODO against the current repository, dependency symbols, object definitions, procedure signatures, and compiler results.
-- Safely resolvable TODOs must be corrected and removed.
-- TODOs that cannot be resolved without inventing business logic or unsupported semantics must be converted to `// TODO: Manual review - <specific reason>`.
-- One unresolved, ambiguous, missing, obsolete, or SaaS-incompatible candidate must never stop the complete task.
-- Stop only when no `//TODO: Ver` remains under `src/Pages`; every original marker must have been either safely resolved or explicitly converted to manual review.
+```al
+field(TotalAmount; TotalAmount)
+{
+}
+```
+
+when `TotalAmount` is a page variable and not a SourceTable field.
+
+```al
+field(DisplayText; Format(Rec.Amount))
+{
+}
+```
+
+```al
+field(CustomerName; Customer.Name)
+{
+}
+```
+
+```al
+field(IsEditable; CanEditRecord)
+{
+}
+```
+
+### ApplicationArea
+
+* Every page field control must contain exactly one:
+
+```al
+ApplicationArea = All;
+```
+
+* Add it when missing.
+* Replace another existing `ApplicationArea` value with `All`.
+* Do not create duplicate `ApplicationArea` properties.
+* Apply this rule to:
+
+  * Direct SourceTable fields.
+  * Variable-backed fields.
+  * Expression-backed fields.
+  * FlowFields displayed on pages.
+  * FlowFilters displayed on pages.
+* Do not add `ApplicationArea` to groups, repeaters, areas, parts, labels, or user controls unless explicitly requested by another task.
+
+### ToolTip
+
+For direct SourceTable fields:
+
+* Every field control must contain exactly one English `ToolTip`.
+* The ToolTip must be the exact source-table field identifier without:
+
+  * The `Rec.` prefix.
+  * Surrounding double quotes.
+* Preserve capitalization, spaces, accents, punctuation, abbreviations, and spelling exactly as defined by the field identifier.
+* Do not translate, improve, reinterpret, or correct the field name.
+* Escape apostrophes inside the AL string by doubling them.
+* Replace an existing ToolTip value with the exact field name.
+* Preserve an existing ToolTip `Comment` property unchanged.
+* Do not create duplicate ToolTip properties.
+
+Examples:
+
+```al
+field("Read Permission"; Rec."Read Permission")
+{
+    ApplicationArea = All;
+    ToolTip = 'Read Permission';
+}
+```
+
+```al
+field("Cod. empleado"; Rec."Cod. empleado")
+{
+    ApplicationArea = All;
+    ToolTip = 'Cod. empleado';
+}
+```
+
+```al
+field("Employee's Code"; Rec."Employee's Code")
+{
+    ApplicationArea = All;
+    ToolTip = 'Employee''s Code';
+}
+```
+
+For variable-backed or expression-backed fields:
+
+* Add `ApplicationArea = All;`.
+* Preserve an existing ToolTip unchanged.
+* Do not invent a ToolTip from the control name when the functional purpose cannot be inferred safely.
+* Add a ToolTip only when the source expression or surrounding logic makes its purpose unambiguous.
+
+### Existing field properties and triggers
+
+Preserve all existing properties and triggers, including:
+
+* Caption.
+* CaptionClass.
+* Comment.
+* Editable.
+* Enabled.
+* Visible.
+* Style.
+* StyleExpr.
+* BlankZero.
+* DecimalPlaces.
+* ShowMandatory.
+* Importance.
+* QuickEntry.
+* AssistEdit.
+* DrillDown.
+* Lookup.
+* MultiLine.
+* ExtendedDatatype.
+* AutoFormatType.
+* AutoFormatExpression.
+* ValuesAllowed.
+* Obsolete properties.
+* `OnValidate`.
+* `OnLookup`.
+* `OnDrillDown`.
+* `OnAssistEdit`.
+* `OnControlAddIn`.
+
+The only authorized changes are:
+
+* Qualifying direct SourceTable field expressions with `Rec.`.
+* Adding or normalizing `ApplicationArea = All;`.
+* Adding or normalizing exact-field-name ToolTips for direct SourceTable fields.
+
+### Object scope
+
+* Process only objects declared as `page` under `src/pages`.
+* Do not modify:
+
+  * `pageextension`.
+  * `table`.
+  * `tableextension`.
+  * `report`.
+  * `codeunit`.
+  * `query`.
+  * `xmlport`.
+  * `enum`.
+  * `interface`.
+* Leave files containing other object types unchanged and record them as skipped.
+
+### Compilation batches
+
+* Process no more than 10 page objects per compilation batch.
+* The 10-page limit applies per batch, not to the complete task.
+* After every successful batch, continue automatically with the next batch.
+* Do not wait for user confirmation.
+* Do not stop after one batch.
+* Record the baseline compilation diagnostics before the first modification.
+* Pre-existing errors outside the modified pages do not block this task.
+* A batch is successful when it introduces no new compilation errors.
+* Run `al_compile` after every batch.
+* Use scoped diagnostics for the changed page files when available.
+* Fix only errors introduced by the current task.
+* Do not correct unrelated warnings.
+* Do not build, publish, commit, push, or create a pull request.
+
+### Completion condition
+
+Stop only when:
+
+* Every `page` object under `src/pages` has been inspected.
+* Every page field control contains exactly one `ApplicationArea = All;`.
+* Every direct SourceTable field expression is correctly qualified with `Rec.`.
+* Every direct SourceTable field has exactly one ToolTip matching the exact field identifier.
+* No variable or expression was incorrectly qualified with `Rec.`.
+* No duplicate ApplicationArea or ToolTip properties exist.
+* No page extension or other object type was modified.
+* The task introduces no new compilation errors compared with the baseline.

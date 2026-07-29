@@ -5,7 +5,7 @@ tableextension 50002 EXCCRILanguage extends Language
         field(75000; Bloqueado; Boolean)
         {
             Caption = 'Blocked';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }

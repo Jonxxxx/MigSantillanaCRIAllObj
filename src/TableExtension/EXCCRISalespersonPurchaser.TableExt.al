@@ -4,40 +4,40 @@ tableextension 50004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
     {
         field(50001; "No vendedor SIC"; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; Collector; Boolean)
         {
             Caption = 'Collector';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62000; "Home Page"; Text[150])
         {
             Caption = 'Home Page';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62001; Twitter; Text[30])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62002; Facebook; Text[150])
         {
             Caption = 'Facebook';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62003; "BB Pin"; Code[10])
         {
             Caption = 'BB Pin';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62004; Vehicle; Code[20])
         {
             Caption = 'Vehicle';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(62005; Tipo; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = Vendedor,Cobrador,Supervisor;
             OptionCaption = 'Sales Person,Collector,Supervisor';
         }
@@ -49,12 +49,12 @@ tableextension 50004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
         field(67000; "Location code"; Code[20])
         {
             Caption = 'Location Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Location;
         }
         field(67001; Status; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ",Inactivo;
             OptionCaption = ' ,Inactive';
 

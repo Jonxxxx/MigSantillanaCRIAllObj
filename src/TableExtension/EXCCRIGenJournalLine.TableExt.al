@@ -67,136 +67,136 @@ tableextension 50018 EXCCRIGenJournalLine extends "Gen. Journal Line"
 
         field(50000; "No. Paginas"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50001; "Componentes Producto"; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
         field(50002; ISBN; Text[50])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50003; "Cod. Procedencia"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
         field(50004; "Cod. Edicion"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             // Ver TableRelation = 50131;
         }
         field(50005; Areas; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             // Ver TableRelation = 50132;
         }
         field(50006; "Nivel Educativo"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             // Ver TableRelation = 50133;
         }
         field(50007; Cursos; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
         field(50009; "No. Talonario"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50010; "No. Serie Talonario"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50011; Aprobado; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50012; "Fecha Talonario"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50013; "Forma de Pago"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
         field(50014; "No. Recibo a depositar"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50015; "No. Talonario a depositar"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(50016; "Tipo Ingreso"; Option)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ",Recibo,Deposito;
         }
         field(53000; "Tipo pedido"; Option)
         {
             Caption = 'Order type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             OptionMembers = " ",TPV;
         }
         field(53001; "Importe a liquidar"; Decimal)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(53002; "Venta a credito"; Boolean)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(56000; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
         field(56022; "Cod. Colegio"; Code[20])
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = Contact;
         }
         field(34003001; "Importe Retenido"; Decimal)
         {
             Caption = 'Retained Amount';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003002; "Retencion ITBIS"; Boolean)
         {
             Caption = 'VAT Retention';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003003; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003007; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Classification Code';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
         field(34003008; Beneficiario; Text[100])
         {
             Caption = 'Beneficiary';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003010; "Fecha vencimiento NCF"; Date)
         {
             Caption = 'NCF Due date';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
         field(34003011; "Tipo de ingreso"; Code[2])
         {
             Caption = 'Income type';
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
             InitValue = '02';
             TableRelation = "Tipos de ingresos";
         }

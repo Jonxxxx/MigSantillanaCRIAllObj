@@ -4,12 +4,12 @@ tableextension 50072 EXCCRICampaignStatus extends "Campaign Status"
     {
         field(34002800; "Fecha Inicio"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
 
         field(34002801; "Fecha Fin"; Date)
         {
-            DataClassification = ToBeClassified;
+            DataClassification = CustomerContent;
         }
     }
 }
