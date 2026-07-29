@@ -673,7 +673,9 @@ page 34002526 "Facturas comprimidas"
                 Image = Invoice;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Enabled = ESACC_C59_Enabled;
                     Image = Statistics;
                     Promoted = true;
@@ -693,7 +695,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Enabled = ESACC_C116_Enabled;
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
@@ -707,7 +711,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action(Customer)
                 {
+                    ApplicationArea = All;
                     Caption = 'Customer';
+                    ToolTip = 'Customer';
                     Enabled = ESACC_C60_Enabled;
                     Image = Customer;
                     RunObject = Page 21;
@@ -717,7 +723,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action(Approvals)
                 {
+                    ApplicationArea = All;
                     Caption = 'Approvals';
+                    ToolTip = 'Approvals';
                     Enabled = ESACC_C162_Enabled;
                     Image = Approvals;
                     Visible = ESACC_C162_Visible;
@@ -733,7 +741,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Enabled = ESACC_C61_Enabled;
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
@@ -750,7 +760,9 @@ page 34002526 "Facturas comprimidas"
                 Image = CreditCardLog;
                 action("Credit Cards Transaction Lo&g Entries")
                 {
+                    ApplicationArea = All;
                     Caption = 'Credit Cards Transaction Lo&g Entries';
+                    ToolTip = 'Credit Cards Transaction Lo&g Entries';
                     Enabled = ESACC_C172_Enabled;
                     Image = CreditCardLog;
                     // TODO: Manual review - Standard page 829 is unavailable and no semantically equivalent current page was verified.
@@ -767,7 +779,9 @@ page 34002526 "Facturas comprimidas"
                 Image = ReleaseDoc;
                 action(Release1)
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Enabled = ESACC_C123_Enabled;
                     Image = ReleaseDoc;
                     Promoted = true;
@@ -784,7 +798,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Re&open")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Enabled = ESACC_C124_Enabled;
                     Image = ReOpen;
                     Visible = ESACC_C124_Visible;
@@ -804,7 +820,9 @@ page 34002526 "Facturas comprimidas"
                 Image = "Action";
                 action("Calculate &Invoice Discount")
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate &Invoice Discount';
+                    ToolTip = 'Calculate &Invoice Discount';
                     Enabled = ESACC_C63_Enabled;
                     Image = CalculateInvoiceDiscount;
                     Visible = ESACC_C63_Visible;
@@ -817,7 +835,9 @@ page 34002526 "Facturas comprimidas"
 
                 action("Get St&d. Cust. Sales Codes")
                 {
+                    ApplicationArea = All;
                     Caption = 'Get St&d. Cust. Sales Codes';
+                    ToolTip = 'Get St&d. Cust. Sales Codes';
                     Ellipsis = true;
                     Enabled = ESACC_C134_Enabled;
                     Image = CustomerCode;
@@ -833,7 +853,9 @@ page 34002526 "Facturas comprimidas"
 
                 action("Copy Document")
                 {
+                    ApplicationArea = All;
                     Caption = 'Copy Document';
+                    ToolTip = 'Copy Document';
                     Ellipsis = true;
                     Enabled = ESACC_C64_Enabled;
                     Image = CopyDocument;
@@ -850,7 +872,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Move Negative Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'Move Negative Lines';
+                    ToolTip = 'Move Negative Lines';
                     Ellipsis = true;
                     Enabled = ESACC_C115_Enabled;
                     Image = MoveNegativeLines;
@@ -867,7 +891,9 @@ page 34002526 "Facturas comprimidas"
 
                 action("Send A&pproval Request")
                 {
+                    ApplicationArea = All;
                     Caption = 'Send A&pproval Request';
+                    ToolTip = 'Send A&pproval Request';
                     Enabled = ESACC_C159_Enabled;
                     Image = SendApprovalRequest;
                     Visible = ESACC_C159_Visible;
@@ -881,7 +907,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Cancel Approval Re&quest")
                 {
+                    ApplicationArea = All;
                     Caption = 'Cancel Approval Re&quest';
+                    ToolTip = 'Cancel Approval Re&quest';
                     Enabled = ESACC_C160_Enabled;
                     Image = Cancel;
                     Visible = ESACC_C160_Visible;
@@ -901,7 +929,9 @@ page 34002526 "Facturas comprimidas"
                 Image = AuthorizeCreditCard;
                 action(Authorize)
                 {
+                    ApplicationArea = All;
                     Caption = 'Authorize';
+                    ToolTip = 'Authorize';
                     Enabled = ESACC_C169_Enabled;
                     Image = AuthorizeCreditCard;
                     Visible = ESACC_C169_Visible;
@@ -913,7 +943,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Void A&uthorize")
                 {
+                    ApplicationArea = All;
                     Caption = 'Void A&uthorize';
+                    ToolTip = 'Void A&uthorize';
                     Enabled = ESACC_C170_Enabled;
                     Image = VoidCreditCard;
                     Visible = ESACC_C170_Visible;
@@ -930,7 +962,9 @@ page 34002526 "Facturas comprimidas"
                 Image = Post;
                 action(Post1)
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Enabled = ESACC_C71_Enabled;
                     Image = PostOrder;
                     Promoted = true;
@@ -946,7 +980,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Enabled = ESACC_C70_Enabled;
                     Image = TestReport;
@@ -959,7 +995,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Enabled = ESACC_C72_Enabled;
                     Image = PostPrint;
                     Promoted = true;
@@ -975,7 +1013,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Post &Batch")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post &Batch';
+                    ToolTip = 'Post &Batch';
                     Ellipsis = true;
                     Enabled = ESACC_C73_Enabled;
                     Image = PostBatch;
@@ -989,7 +1029,9 @@ page 34002526 "Facturas comprimidas"
                 }
                 action("Remove From Job Queue")
                 {
+                    ApplicationArea = All;
                     Caption = 'Remove From Job Queue';
+                    ToolTip = 'Remove From Job Queue';
                     Enabled = ESACC_C3_Enabled;
                     Image = RemoveLine;
                     Visible = JobQueueVisible;

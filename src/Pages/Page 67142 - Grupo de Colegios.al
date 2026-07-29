@@ -29,7 +29,9 @@ page 67142 "Grupo de Colegios"
         {
             action("Asociar Colegios")
             {
+                ApplicationArea = All;
                 Caption = 'Asociar Colegios';
+                ToolTip = 'Asociar Colegios';
                 Promoted = true;
                 PromotedIsBig = true;
                 RunObject = Page 67143;

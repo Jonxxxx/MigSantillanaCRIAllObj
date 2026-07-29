@@ -94,6 +94,9 @@ page 56004 "Cab. Packing Registrado"
         {
             action("Imprimir etiquetas")
             {
+                ApplicationArea = All;
+                Caption = 'Imprimir etiquetas';
+                ToolTip = 'Imprimir etiquetas';
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";

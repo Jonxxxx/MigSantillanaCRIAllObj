@@ -85,13 +85,18 @@ page 75017 "Lista Imp.Mdm Tabla"
                 Image = "Table";
                 action(Ver)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ver';
+                    ToolTip = 'Ver';
                     Image = View;
                     RunObject = Page 75004;
                     RunPageOnRec = true;
                 }
                 action(Ficha)
                 {
+                    ApplicationArea = All;
+                    Caption = 'Ficha';
+                    ToolTip = 'Ficha';
                     Image = Form;
 
                     trigger OnAction()
@@ -104,6 +109,9 @@ page 75017 "Lista Imp.Mdm Tabla"
             action("Solo Pendientes")
             {
 
+                ApplicationArea = All;
+                Caption = 'Solo Pendientes';
+                ToolTip = 'Solo Pendientes';
                 trigger OnAction()
                 begin
                     SETRANGE(Procesado, FALSE);

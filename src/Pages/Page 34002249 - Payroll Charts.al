@@ -43,10 +43,10 @@ page 34002249 "Payroll Charts"
         {
             action(SelectChart)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Select Chart';
+                ToolTip = 'Select Chart';
                 Image = SelectChart;
-                ToolTip = 'Select the analysis report that the chart will be based on.';
 
                 trigger OnAction()
                 begin
@@ -63,10 +63,10 @@ page 34002249 "Payroll Charts"
                 Image = Period;
                 action(Day)
                 {
-                    ApplicationArea = Basic, Suite;
-                    Caption = 'Day';
-                    ToolTip = 'Each stack covers one day.';
 
+                    ApplicationArea = All;
+                    Caption = 'Day';
+                    ToolTip = 'Day';
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Day);
@@ -76,10 +76,10 @@ page 34002249 "Payroll Charts"
                 }
                 action(Week)
                 {
-                    ApplicationArea = Basic, Suite;
-                    Caption = 'Week';
-                    ToolTip = 'Each stack except for the last stack covers one week. The last stack contains data from the start of the week until the date that is defined by the Show option.';
 
+                    ApplicationArea = All;
+                    Caption = 'Week';
+                    ToolTip = 'Week';
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Week);
@@ -89,10 +89,10 @@ page 34002249 "Payroll Charts"
                 }
                 action(Month)
                 {
-                    ApplicationArea = Basic, Suite;
-                    Caption = 'Month';
-                    ToolTip = 'Each stack except for the last stack covers one month. The last stack contains data from the start of the month until the date that is defined by the Show option.';
 
+                    ApplicationArea = All;
+                    Caption = 'Month';
+                    ToolTip = 'Month';
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Month);
@@ -102,10 +102,10 @@ page 34002249 "Payroll Charts"
                 }
                 action(Quarter)
                 {
-                    ApplicationArea = Basic, Suite;
-                    Caption = 'Quarter';
-                    ToolTip = 'Each stack except for the last stack covers one quarter. The last stack contains data from the start of the quarter until the date that is defined by the Show option.';
 
+                    ApplicationArea = All;
+                    Caption = 'Quarter';
+                    ToolTip = 'Quarter';
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Quarter);
@@ -115,10 +115,10 @@ page 34002249 "Payroll Charts"
                 }
                 action(Year)
                 {
-                    ApplicationArea = Basic, Suite;
-                    Caption = 'Year';
-                    ToolTip = 'Each stack except for the last stack covers one year. The last stack contains data from the start of the year until the date that is defined by the Show option.';
 
+                    ApplicationArea = All;
+                    Caption = 'Year';
+                    ToolTip = 'Year';
                     trigger OnAction()
                     begin
                         AnalysisReportChartSetup.SetPeriodLength(AnalysisReportChartSetup."Period Length"::Year);
@@ -129,10 +129,10 @@ page 34002249 "Payroll Charts"
             }
             action(PreviousPeriod)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Previous';
+                ToolTip = 'Previous';
                 Image = PreviousRecord;
-                ToolTip = 'Show the information based on the previous period. If you set the View by field to Day, the date filter changes to the day before.';
 
                 trigger OnAction()
                 begin
@@ -142,10 +142,10 @@ page 34002249 "Payroll Charts"
             }
             action(NextPeriod)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Next';
+                ToolTip = 'Next';
                 Image = NextRecord;
-                ToolTip = 'Show the information based on the next period.';
 
                 trigger OnAction()
                 begin

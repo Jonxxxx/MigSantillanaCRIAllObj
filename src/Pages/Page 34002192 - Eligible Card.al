@@ -212,7 +212,9 @@ page 34002192 "Eligible Card"
                 Image = Employee;
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5222;
                     RunPageLink = "Table Name" = CONST(Employee),
@@ -221,7 +223,9 @@ page 34002192 "Eligible Card"
 
                 action("Online Map")
                 {
+                    ApplicationArea = All;
                     Caption = 'Online Map';
+                    ToolTip = 'Online Map';
                     Image = Map;
 
                     trigger OnAction()

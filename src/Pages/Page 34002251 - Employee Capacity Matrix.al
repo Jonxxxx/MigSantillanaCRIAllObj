@@ -501,34 +501,34 @@ page 34002251 "Employee Capacity Matrix"
                 Image = Resource;
                 action(Card)
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     RunObject = Page 34002104;
                     RunPageLink = "No." = FIELD("No.");
                     ShortCutKey = 'Shift+F7';
-                    ToolTip = 'View or change detailed information about the record on the document or journal line.';
                 }
                 action("Co&mments")
                 {
-                    ApplicationArea = Advanced;
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 124;
                     RunPageLink = "Table Name" = CONST(Resource),
                                   "No." = FIELD("No.");
-                    ToolTip = 'View or add comments for the record.';
                 }
                 action(Dimensions)
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     RunObject = Page "Default Dimensions";
                     RunPageLink = "Table ID" = CONST(156),
                                   "No." = FIELD("No.");
                     ShortCutKey = 'Shift+Ctrl+D';
-                    ToolTip = 'View or edit dimensions, such as area, project, or department, that you can assign to sales and purchase documents to distribute costs and analyze transaction history.';
                 }
             }
             group("Plan&ning")
@@ -537,19 +537,19 @@ page 34002251 "Employee Capacity Matrix"
                 Image = Planning;
                 action("&Set Capacity")
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = '&Set Capacity';
+                    ToolTip = '&Set Capacity';
                     RunObject = Page 6013;
                     RunPageLink = "No." = FIELD("No.");
-                    ToolTip = 'Change the capacity of the resource, such as a technician.';
                 }
                 action("Resource A&vailability")
                 {
-                    ApplicationArea = Jobs;
+                    ApplicationArea = All;
                     Caption = 'Resource A&vailability';
+                    ToolTip = 'Resource A&vailability';
                     Image = Calendar;
                     RunObject = Page 225;
-                    ToolTip = 'View a summary of resource capacities, the quantity of resource hours allocated to jobs on order, the quantity allocated to service orders, the capacity assigned to jobs on quote, and the resource availability.';
                 }
             }
         }

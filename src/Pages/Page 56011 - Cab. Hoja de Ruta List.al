@@ -67,8 +67,10 @@ page 56011 "Cab. Hoja de Ruta List"
         {
             action("&Imp. Resumido")
             {
-                Caption = '&Imp. Resumido';
 
+                ApplicationArea = All;
+                Caption = '&Imp. Resumido';
+                ToolTip = '&Imp. Resumido';
                 trigger OnAction()
                 var
                     rCHRL: Record 56020;

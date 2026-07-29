@@ -118,13 +118,17 @@ page 67056 "Ficha de Alumnos"
                 Caption = '&Student';
                 action("&Fathers")
                 {
+                    ApplicationArea = All;
                     Caption = '&Fathers';
+                    ToolTip = '&Fathers';
                     RunObject = Page 67049;
                     RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")
                 {
+                    ApplicationArea = All;
                     Caption = '&School';
+                    ToolTip = '&School';
                     RunObject = Page 5050;
                     RunPageLink = "No." = FIELD("Cod. Colegio");
                 }

@@ -102,7 +102,9 @@ page 67024 "Ficha Editoras"
                 Caption = 'Editor';
                 action(books)
                 {
+                    ApplicationArea = All;
                     Caption = 'books';
+                    ToolTip = 'books';
                     Image = ItemRegisters;
                     Promoted = true;
                     PromotedCategory = Process;

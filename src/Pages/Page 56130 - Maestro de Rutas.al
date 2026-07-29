@@ -32,7 +32,9 @@ page 56130 "Maestro de Rutas"
         {
             action("Detalles de Ruta")
             {
+                ApplicationArea = All;
                 Caption = 'Detalles de Ruta';
+                ToolTip = 'Detalles de Ruta';
                 RunObject = Page 56131;
                 RunPageLink = Code = FIELD(FILTER(Codigo));
                 RunPageOnRec = false;

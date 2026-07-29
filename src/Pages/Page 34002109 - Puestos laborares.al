@@ -77,7 +77,9 @@ page 34002109 "Puestos laborares"
                 Caption = 'Position';
                 action("&Perfil Salarial")
                 {
+                    ApplicationArea = All;
                     Caption = '&Perfil Salarial';
+                    ToolTip = '&Perfil Salarial';
                     Image = SetupList;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -89,7 +91,9 @@ page 34002109 "Puestos laborares"
 
                 action(Niveles)
                 {
+                    ApplicationArea = All;
                     Caption = 'Levels';
+                    ToolTip = 'Levels';
                     Image = BOMLevel;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -98,7 +102,9 @@ page 34002109 "Puestos laborares"
                 }
                 action(Requisitos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Job position profile';
+                    ToolTip = 'Job position profile';
                     Image = SetupList;
                     Promoted = true;
                     PromotedCategory = Process;

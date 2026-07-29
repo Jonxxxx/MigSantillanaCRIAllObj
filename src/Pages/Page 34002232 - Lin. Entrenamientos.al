@@ -130,7 +130,9 @@ page 34002232 "Lin. Entrenamientos"
                 Image = Line;
                 action(Asistentes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Attendees';
+                    ToolTip = 'Attendees';
                     Image = ContactPerson;
                     Promoted = true;
                     PromotedCategory = Process;

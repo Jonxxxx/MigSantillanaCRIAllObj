@@ -182,7 +182,9 @@ page 67090 "Lista Solicitudes T&E"
                 Caption = '&Request';
                 action("&Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Card';
+                    ToolTip = '&Card';
                     Image = EditLines;
                     RunObject = Page 67064;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");

@@ -201,8 +201,10 @@ page 67071 "Lista Programacion de eventos"
                 Caption = '&Event';
                 action("&Send request")
                 {
-                    Caption = '&Send request';
 
+                    ApplicationArea = All;
+                    Caption = '&Send request';
+                    ToolTip = '&Send request';
                     trigger OnAction()
                     begin
                         Status := 1;

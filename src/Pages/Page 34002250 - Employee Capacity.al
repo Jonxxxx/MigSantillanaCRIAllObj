@@ -57,13 +57,13 @@ page 34002250 "Employee Capacity"
         {
             action("Previous Set")
             {
-                ApplicationArea = Jobs;
+                ApplicationArea = All;
                 Caption = 'Previous Set';
+                ToolTip = 'Previous Set';
                 Image = PreviousSet;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                ToolTip = 'Go to the previous set of data.';
 
                 trigger OnAction()
                 begin
@@ -73,13 +73,13 @@ page 34002250 "Employee Capacity"
             }
             action("Previous Column")
             {
-                ApplicationArea = Jobs;
+                ApplicationArea = All;
                 Caption = 'Previous Column';
+                ToolTip = 'Previous Column';
                 Image = PreviousRecord;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                ToolTip = 'Go to the previous column.';
 
                 trigger OnAction()
                 begin
@@ -89,13 +89,13 @@ page 34002250 "Employee Capacity"
             }
             action("Next Column")
             {
-                ApplicationArea = Jobs;
+                ApplicationArea = All;
                 Caption = 'Next Column';
+                ToolTip = 'Next Column';
                 Image = NextRecord;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                ToolTip = 'Go to the next column.';
 
                 trigger OnAction()
                 begin
@@ -105,13 +105,13 @@ page 34002250 "Employee Capacity"
             }
             action("Next Set")
             {
-                ApplicationArea = Jobs;
+                ApplicationArea = All;
                 Caption = 'Next Set';
+                ToolTip = 'Next Set';
                 Image = NextSet;
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                ToolTip = 'Go to the next set of data.';
 
                 trigger OnAction()
                 begin

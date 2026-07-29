@@ -172,7 +172,9 @@ page 34002553 "Facturas Venta Regis POS"
                 Image = Invoice;
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     ShortCutKey = 'Shift+F7';
 
@@ -183,7 +185,9 @@ page 34002553 "Facturas Venta Regis POS"
                 }
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -199,7 +203,9 @@ page 34002553 "Facturas Venta Regis POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = CONST("Posted Invoice"),
@@ -207,7 +213,9 @@ page 34002553 "Facturas Venta Regis POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -222,6 +230,9 @@ page 34002553 "Facturas Venta Regis POS"
         {
             action("Liquidar Contra Pagos TPV")
             {
+                ApplicationArea = All;
+                Caption = 'Liquidar Contra Pagos TPV';
+                ToolTip = 'Liquidar Contra Pagos TPV';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

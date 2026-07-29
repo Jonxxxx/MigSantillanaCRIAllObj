@@ -118,7 +118,9 @@ page 56026 "Clasificacion devoluciones"
         {
             action("&Insert")
             {
+                ApplicationArea = All;
                 Caption = '&Insert';
+                ToolTip = '&Insert';
                 InFooterBar = true;
                 Promoted = true;
                 PromotedCategory = New;
@@ -164,7 +166,9 @@ page 56026 "Clasificacion devoluciones"
             }
             action("<Action1000000021>")
             {
+                ApplicationArea = All;
                 Caption = 'Cerrar recepcion';
+                ToolTip = 'Cerrar recepcion';
                 Image = Approve;
                 Promoted = true;
                 PromotedCategory = Process;

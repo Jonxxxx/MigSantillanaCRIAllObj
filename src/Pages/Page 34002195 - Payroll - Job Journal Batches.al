@@ -44,7 +44,9 @@ page 34002195 "Payroll - Job Journal Batches"
         {
             action("Edit Journal")
             {
+                ApplicationArea = All;
                 Caption = 'Edit Journal';
+                ToolTip = 'Edit Journal';
                 Image = OpenJournal;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -62,7 +64,9 @@ page 34002195 "Payroll - Job Journal Batches"
                 Image = Post;
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Image = TestReport;
 
                     trigger OnAction()
@@ -72,7 +76,9 @@ page 34002195 "Payroll - Job Journal Batches"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Image = PostOrder;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -82,7 +88,9 @@ page 34002195 "Payroll - Job Journal Batches"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Image = PostPrint;
                     Promoted = true;
                     PromotedCategory = Process;

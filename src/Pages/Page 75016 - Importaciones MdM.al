@@ -108,6 +108,9 @@ page 75016 "Importaciones MdM"
                     Image = Excel;
                     action("Selecc Hoja")
                     {
+                        ApplicationArea = All;
+                        Caption = 'Selecc Hoja';
+                        ToolTip = 'Selecc Hoja';
                         Image = ImportExcel;
 
                         trigger OnAction()
@@ -118,6 +121,9 @@ page 75016 "Importaciones MdM"
                     }
                     action("Todas las Hojas")
                     {
+                        ApplicationArea = All;
+                        Caption = 'Todas las Hojas';
+                        ToolTip = 'Todas las Hojas';
                         Image = ImportExcel;
 
                         trigger OnAction()
@@ -133,7 +139,9 @@ page 75016 "Importaciones MdM"
                     Image = XMLFile;
                     action(Exportar)
                     {
+                        ApplicationArea = All;
                         Caption = 'Exportar';
+                        ToolTip = 'Exportar';
                         Image = CreateXMLFile;
                         RunObject = XMLport 75004;
                     }
@@ -144,7 +152,9 @@ page 75016 "Importaciones MdM"
                     Image = Save;
                     action(Entrada)
                     {
+                        ApplicationArea = All;
                         Caption = 'Entrada';
+                        ToolTip = 'Entrada';
                         Enabled = wBlobEnabled1;
                         Image = Save;
 
@@ -161,7 +171,9 @@ page 75016 "Importaciones MdM"
                     }
                     action(Salida)
                     {
+                        ApplicationArea = All;
                         Caption = 'Salida';
+                        ToolTip = 'Salida';
                         Enabled = wBlobEnabled2;
                         Image = Save;
                         trigger OnAction()
@@ -177,7 +189,9 @@ page 75016 "Importaciones MdM"
                     }
                     action("Resp. Salida")
                     {
+                        ApplicationArea = All;
                         Caption = 'Resp. Salida';
+                        ToolTip = 'Resp. Salida';
                         Enabled = wBlobEnabled3;
                         Image = Save;
                         trigger OnAction()
@@ -194,7 +208,9 @@ page 75016 "Importaciones MdM"
                 }
                 action(Traspasar)
                 {
+                    ApplicationArea = All;
                     Caption = 'Traspasar';
+                    ToolTip = 'Traspasar';
                     Image = Open;
 
                     trigger OnAction()

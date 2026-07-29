@@ -49,7 +49,9 @@ page 34002155 "Tabla retenc. ISR"
         {
             action("&Copy")
             {
+                ApplicationArea = All;
                 Caption = '&Copy';
+                ToolTip = '&Copy';
                 Image = Copy;
                 Promoted = true;
                 PromotedCategory = Process;

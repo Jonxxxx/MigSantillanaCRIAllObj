@@ -617,7 +617,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 action("<Action1000000104>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Proponer fechas';
+                    ToolTip = '&Proponer fechas';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -639,7 +641,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Equipments")
                 {
+                    ApplicationArea = All;
                     Caption = '&Equipments';
+                    ToolTip = '&Equipments';
                     Image = FileContract;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -649,7 +653,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Schedule")
                 {
+                    ApplicationArea = All;
                     Caption = '&Schedule';
+                    ToolTip = '&Schedule';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -681,7 +687,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Assistance")
                 {
+                    ApplicationArea = All;
                     Caption = '&Assistance';
+                    ToolTip = '&Assistance';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -718,7 +726,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Seguimiento")
                 {
+                    ApplicationArea = All;
                     Caption = '&Seguimiento';
+                    ToolTip = '&Seguimiento';
                     Image = Trace;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -727,7 +737,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Libros a Presentar")
                 {
+                    ApplicationArea = All;
                     Caption = '&Libros a Presentar';
+                    ToolTip = '&Libros a Presentar';
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67130;
@@ -735,7 +747,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Competencia")
                 {
+                    ApplicationArea = All;
                     Caption = '&Competencia';
+                    ToolTip = '&Competencia';
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67131;
@@ -744,7 +758,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 action("Distribution per Cost Centre")
                 {
+                    ApplicationArea = All;
                     Caption = 'Distribution per Cost Centre';
+                    ToolTip = 'Distribution per Cost Centre';
                     Image = GLAccountBalance;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -773,7 +789,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action(Ranking)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ranking';
+                    ToolTip = 'Ranking';
                     Image = ResourcePrice;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -792,7 +810,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
 
                 action("<Action1000000035>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Nivel Asistente';
+                    ToolTip = 'Nivel Asistente';
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67122;
@@ -800,7 +820,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("<Action1000000036>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Grado Asistente';
+                    ToolTip = 'Grado Asistente';
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67123;
@@ -808,7 +830,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("<Action1000000037>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Especialidad Asistente';
+                    ToolTip = 'Especialidad Asistente';
                     Promoted = true;
                     PromotedCategory = Category4;
                     RunObject = Page 67124;
@@ -816,7 +840,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 }
                 action("&Textos que utilizan")
                 {
+                    ApplicationArea = All;
                     Caption = '&Textos que utilizan';
+                    ToolTip = '&Textos que utilizan';
                     Image = Edit;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -847,7 +873,9 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 Caption = '&Post';
                 action("&Post")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post';
+                    ToolTip = '&Post';
                     Image = PostDocument;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -928,8 +956,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
         {
             action("<Action1000000024>")
             {
-                Caption = 'Generar Solicitud de Asistencia Técnica Pedagogica (Word)';
 
+                ApplicationArea = All;
+                Caption = 'Generar Solicitud de Asistencia Técnica Pedagogica (Word)';
+                ToolTip = 'Generar Solicitud de Asistencia Técnica Pedagogica (Word)';
                 trigger OnAction()
                 var
                     // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
@@ -940,8 +970,10 @@ page 67064 "Solicitud asistencia Tec - Ped"
             }
             action("<Action1000000045>")
             {
-                Caption = 'Generar Ficha de PP.FF. (Word)';
 
+                ApplicationArea = All;
+                Caption = 'Generar Ficha de PP.FF. (Word)';
+                ToolTip = 'Generar Ficha de PP.FF. (Word)';
                 trigger OnAction()
                 var
                     // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.

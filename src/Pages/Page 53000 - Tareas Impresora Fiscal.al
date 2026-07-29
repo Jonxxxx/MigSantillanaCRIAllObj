@@ -33,7 +33,9 @@ page 53000 "Tareas Impresora Fiscal"
         {
             action("<Action1000000004>")
             {
+                ApplicationArea = All;
                 Caption = '&Printed';
+                ToolTip = '&Printed';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -48,7 +50,9 @@ page 53000 "Tareas Impresora Fiscal"
             }
             action("&Cierre X")
             {
+                ApplicationArea = All;
                 Caption = '&Cierre X';
+                ToolTip = '&Cierre X';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -64,7 +68,9 @@ page 53000 "Tareas Impresora Fiscal"
 
             action("<Action1000000005>")
             {
+                ApplicationArea = All;
                 Caption = '&Daily Close by date';
+                ToolTip = '&Daily Close by date';
                 Promoted = true;
                 PromotedCategory = Process;
                 Visible = false;

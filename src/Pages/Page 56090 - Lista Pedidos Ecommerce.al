@@ -143,6 +143,9 @@ page 56090 "Lista Pedidos Ecommerce"
         {
             action("Modificar Pedidos")
             {
+                ApplicationArea = All;
+                Caption = 'Modificar Pedidos';
+                ToolTip = 'Modificar Pedidos';
                 Image = "Report";
 
                 trigger OnAction()

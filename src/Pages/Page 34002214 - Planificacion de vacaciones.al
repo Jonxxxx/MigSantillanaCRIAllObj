@@ -54,7 +54,9 @@ page 34002214 "Planificacion de vacaciones"
                 Caption = '&Calendar';
                 action("Suggest vacation")
                 {
+                    ApplicationArea = All;
                     Caption = 'Suggest vacation';
+                    ToolTip = 'Suggest vacation';
                     Image = AbsenceCalendar;
                     Promoted = true;
                     PromotedCategory = Process;

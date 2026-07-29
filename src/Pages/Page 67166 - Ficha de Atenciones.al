@@ -164,7 +164,9 @@ page 67166 "Ficha de Atenciones"
         {
             action(Rechazar)
             {
+                ApplicationArea = All;
                 Caption = 'Rechazar';
+                ToolTip = 'Rechazar';
                 Image = Cancel;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -182,7 +184,9 @@ page 67166 "Ficha de Atenciones"
             }
             action(Realizar)
             {
+                ApplicationArea = All;
                 Caption = 'Realizar';
+                ToolTip = 'Realizar';
                 Image = ReleaseDoc;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -204,7 +208,9 @@ page 67166 "Ficha de Atenciones"
             }
             action("<Action1000000029>")
             {
+                ApplicationArea = All;
                 Caption = 'Cargar Ped. Venta';
+                ToolTip = 'Cargar Ped. Venta';
                 Image = CopyDocument;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -247,7 +253,9 @@ page 67166 "Ficha de Atenciones"
             }
             action("<Action1000000030>")
             {
+                ApplicationArea = All;
                 Caption = 'Cargar Ped. Transferencia';
+                ToolTip = 'Cargar Ped. Transferencia';
                 Image = CopyDocument;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -289,7 +297,9 @@ page 67166 "Ficha de Atenciones"
             }
             action("&Estadistica")
             {
+                ApplicationArea = All;
                 Caption = '&Estadistica';
+                ToolTip = '&Estadistica';
                 Image = Statistics;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -303,7 +313,9 @@ page 67166 "Ficha de Atenciones"
             }
             action("Distribuc. por Centro de costos")
             {
+                ApplicationArea = All;
                 Caption = 'Distribuc. por Centro de costos';
+                ToolTip = 'Distribuc. por Centro de costos';
                 Image = GLAccountBalance;
                 Promoted = true;
                 PromotedCategory = Process;

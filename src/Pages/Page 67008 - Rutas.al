@@ -46,13 +46,17 @@ page 67008 Rutas
                 Caption = 'Route';
                 action("&Districts")
                 {
+                    ApplicationArea = All;
                     Caption = '&Districts';
+                    ToolTip = '&Districts';
                     RunObject = Page 67009;
                     RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }
                 action("&Salesrep")
                 {
+                    ApplicationArea = All;
                     Caption = '&Salesrep';
+                    ToolTip = '&Salesrep';
                     RunObject = Page 67048;
                     RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }

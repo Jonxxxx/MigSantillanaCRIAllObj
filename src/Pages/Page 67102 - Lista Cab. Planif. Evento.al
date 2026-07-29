@@ -123,7 +123,9 @@ page 67102 "Lista Cab. Planif. Evento"
                 Caption = '&Event';
                 action("<Action1000000039>")
                 {
+                    ApplicationArea = All;
                     Caption = 'New';
+                    ToolTip = 'New';
                     Image = NewDocument;
                     Promoted = true;
                     PromotedCategory = New;
@@ -159,7 +161,9 @@ page 67102 "Lista Cab. Planif. Evento"
 
                 action(Edit)
                 {
+                    ApplicationArea = All;
                     Caption = 'Edit';
+                    ToolTip = 'Edit';
                     Image = Edit;
                     Promoted = true;
                     PromotedIsBig = true;

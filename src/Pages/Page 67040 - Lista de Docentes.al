@@ -130,7 +130,9 @@ page 67040 "Lista de Docentes"
                 Caption = '&Teacher';
                 action("&Schools")
                 {
+                    ApplicationArea = All;
                     Caption = '&Schools';
+                    ToolTip = '&Schools';
                     Image = AddToHome;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -140,7 +142,9 @@ page 67040 "Lista de Docentes"
                 }
                 action(Hobbies)
                 {
+                    ApplicationArea = All;
                     Caption = 'Hobbies';
+                    ToolTip = 'Hobbies';
                     Image = BusinessRelation;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -151,7 +155,9 @@ page 67040 "Lista de Docentes"
 
                 action("&Specialities")
                 {
+                    ApplicationArea = All;
                     Caption = '&Specialities';
+                    ToolTip = '&Specialities';
                     Image = Certificate;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -161,7 +167,9 @@ page 67040 "Lista de Docentes"
                 }
                 action("Workshop - Event")
                 {
+                    ApplicationArea = All;
                     Caption = 'Workshop - Event';
+                    ToolTip = 'Workshop - Event';
                     Image = Workdays;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -172,7 +180,9 @@ page 67040 "Lista de Docentes"
             }
             action("&Exponent")
             {
+                ApplicationArea = All;
                 Caption = '&Exponent';
+                ToolTip = '&Exponent';
                 Image = ContactReference;
                 RunObject = Page 67100;
                 RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
@@ -182,7 +192,9 @@ page 67040 "Lista de Docentes"
                 Caption = '&Historics';
                 action("CDS History")
                 {
+                    ApplicationArea = All;
                     Caption = 'CDS History';
+                    ToolTip = 'CDS History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -191,7 +203,9 @@ page 67040 "Lista de Docentes"
                 }
                 action("Teacher - Hobbies History")
                 {
+                    ApplicationArea = All;
                     Caption = 'Teacher - Hobbies History';
+                    ToolTip = 'Teacher - Hobbies History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -200,7 +214,9 @@ page 67040 "Lista de Docentes"
                 }
                 action("Teacher - Specialties History")
                 {
+                    ApplicationArea = All;
                     Caption = 'Teacher - Specialties History';
+                    ToolTip = 'Teacher - Specialties History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -209,7 +225,9 @@ page 67040 "Lista de Docentes"
                 }
                 action("School - Teacher History")
                 {
+                    ApplicationArea = All;
                     Caption = 'School - Teacher History';
+                    ToolTip = 'School - Teacher History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;

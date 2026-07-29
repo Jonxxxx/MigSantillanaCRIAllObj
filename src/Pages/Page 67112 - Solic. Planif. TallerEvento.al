@@ -73,7 +73,9 @@ page 67112 "Solic. Planif. Taller/Evento"
                 Caption = 'Workshop - Event';
                 action("<Action1000000047>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Assistance';
+                    ToolTip = 'Assistance';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;

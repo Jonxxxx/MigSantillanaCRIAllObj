@@ -63,10 +63,10 @@ page 34002242 "DSNOM HR Chart"
                 Image = View;
                 action(AllOrders)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'All Orders';
+                    ToolTip = 'All Orders';
                     Enabled = AllOrdersEnabled;
-                    ToolTip = 'View all not fully posted sales orders, including sales orders with document dates in the future because of long delivery times, delays, or other reasons.';
 
                     trigger OnAction()
                     begin
@@ -76,10 +76,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(OrdersUntilToday)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Orders Until Today';
+                    ToolTip = 'Orders Until Today';
                     Enabled = OrdersUntilTodayEnabled;
-                    ToolTip = 'View not fully posted sales orders with document dates up until today''s date.';
 
                     trigger OnAction()
                     begin
@@ -89,10 +89,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(DelayedOrders)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Delayed Orders';
+                    ToolTip = 'Delayed Orders';
                     Enabled = DelayedOrdersEnabled;
-                    ToolTip = 'View not fully posted sales orders with shipment dates that are before today''s date.';
 
                     trigger OnAction()
                     begin
@@ -107,10 +107,10 @@ page 34002242 "DSNOM HR Chart"
                 Image = Period;
                 action(Day)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Day';
+                    ToolTip = 'Day';
                     Enabled = DayEnabled;
-                    ToolTip = 'Each stack covers one day.';
 
                     trigger OnAction()
                     begin
@@ -120,10 +120,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(Week)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Week';
+                    ToolTip = 'Week';
                     Enabled = WeekEnabled;
-                    ToolTip = 'Each stack except for the last stack covers one week. The last stack contains data from the start of the week until the date that is defined by the Show option.';
 
                     trigger OnAction()
                     begin
@@ -133,10 +133,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(Month)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Month';
+                    ToolTip = 'Month';
                     Enabled = MonthEnabled;
-                    ToolTip = 'Each stack except for the last stack covers one month. The last stack contains data from the start of the month until the date that is defined by the Show option.';
 
                     trigger OnAction()
                     begin
@@ -146,10 +146,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(Quarter)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Quarter';
+                    ToolTip = 'Quarter';
                     Enabled = QuarterEnabled;
-                    ToolTip = 'Each stack except for the last stack covers one quarter. The last stack contains data from the start of the quarter until the date that is defined by the Show option.';
 
                     trigger OnAction()
                     begin
@@ -159,10 +159,10 @@ page 34002242 "DSNOM HR Chart"
                 }
                 action(Year)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Year';
+                    ToolTip = 'Year';
                     Enabled = YearEnabled;
-                    ToolTip = 'Each stack except for the last stack covers one year. The last stack contains data from the start of the year until the date that is defined by the Show option.';
 
                     trigger OnAction()
                     begin
@@ -181,10 +181,10 @@ page 34002242 "DSNOM HR Chart"
                     Image = Calculate;
                     action(Amount)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Amount';
+                        ToolTip = 'Amount';
                         Enabled = AmountEnabled;
-                        ToolTip = 'The Y-axis shows the totaled $ amount of the orders.';
 
                         trigger OnAction()
                         begin
@@ -194,10 +194,10 @@ page 34002242 "DSNOM HR Chart"
                     }
                     action(NoofOrders)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'No. of Orders';
+                        ToolTip = 'No. of Orders';
                         Enabled = NoOfOrdersEnabled;
-                        ToolTip = 'The Y-axis shows the number of orders.';
 
                         trigger OnAction()
                         begin
@@ -212,10 +212,10 @@ page 34002242 "DSNOM HR Chart"
                     Image = BarChart;
                     action(StackedArea)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Stacked Area';
+                        ToolTip = 'Stacked Area';
                         Enabled = StackedAreaEnabled;
-                        ToolTip = 'View the data in area layout.';
 
                         trigger OnAction()
                         begin
@@ -225,10 +225,10 @@ page 34002242 "DSNOM HR Chart"
                     }
                     action(StackedAreaPct)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Stacked Area (%)';
+                        ToolTip = 'Stacked Area (%)';
                         Enabled = StackedAreaPctEnabled;
-                        ToolTip = 'view the percentage distribution of the four order statuses in area layout.';
 
                         trigger OnAction()
                         begin
@@ -238,10 +238,10 @@ page 34002242 "DSNOM HR Chart"
                     }
                     action(StackedColumn)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Stacked Column';
+                        ToolTip = 'Stacked Column';
                         Enabled = StackedColumnEnabled;
-                        ToolTip = 'view the data in column layout.';
 
                         trigger OnAction()
                         begin
@@ -251,10 +251,10 @@ page 34002242 "DSNOM HR Chart"
                     }
                     action(StackedColumnPct)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Stacked Column (%)';
+                        ToolTip = 'Stacked Column (%)';
                         Enabled = StackedColumnPctEnabled;
-                        ToolTip = 'view the percentage distribution of the four order statuses in column layout.';
 
                         trigger OnAction()
                         begin
@@ -267,10 +267,10 @@ page 34002242 "DSNOM HR Chart"
 
             action(Setup)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Setup';
+                ToolTip = 'Setup';
                 Image = Setup;
-                ToolTip = 'Specify if the chart will be based on a work date other than today''s date. This is mainly relevant in demonstration databases with fictitious sales orders.';
 
                 trigger OnAction()
                 begin

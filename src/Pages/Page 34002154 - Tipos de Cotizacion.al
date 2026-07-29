@@ -89,7 +89,9 @@ page 34002154 "Tipos de Cotizacion"
         {
             action("&Copy")
             {
+                ApplicationArea = All;
                 Caption = '&Copy';
+                ToolTip = '&Copy';
                 Image = Copy;
                 Promoted = true;
                 PromotedCategory = Process;

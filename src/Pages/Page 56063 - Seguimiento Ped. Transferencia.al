@@ -102,7 +102,9 @@ page 56063 "Seguimiento Ped. Transferencia"
                 Caption = 'Acci&ones';
                 action("<Action1000000009>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Seguimiento de pedido';
+                    ToolTip = 'Seguimiento de pedido';
                     Image = Navigate;
                     Promoted = true;
                     PromotedCategory = Process;

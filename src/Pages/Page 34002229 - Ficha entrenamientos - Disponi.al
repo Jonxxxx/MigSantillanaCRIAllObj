@@ -65,7 +65,9 @@ page 34002229 "Ficha entrenamientos - Disponi"
                 Caption = 'Schedule';
                 action(Schedule2)
                 {
+                    ApplicationArea = All;
                     Caption = 'Schedule';
+                    ToolTip = 'Schedule';
                     Image = Timesheet;
                     Promoted = true;
                     PromotedCategory = Process;

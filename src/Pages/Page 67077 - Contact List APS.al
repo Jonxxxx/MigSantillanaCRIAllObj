@@ -102,7 +102,9 @@ page 67077 "Contact List APS"
                 Caption = 'C&ontact';
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     RunObject = Page 5050;
                     RunPageLink = "No." = FIELD("No.");
@@ -110,7 +112,9 @@ page 67077 "Contact List APS"
                 }
                 action("Relate&d Contacts")
                 {
+                    ApplicationArea = All;
                     Caption = 'Relate&d Contacts';
+                    ToolTip = 'Relate&d Contacts';
                     RunObject = Page 5052;
                     RunPageLink = "Company No." = FIELD("Company No.");
                 }
@@ -119,19 +123,25 @@ page 67077 "Contact List APS"
                     Caption = 'Comp&any';
                     action("Business Relations")
                     {
+                        ApplicationArea = All;
                         Caption = 'Business Relations';
+                        ToolTip = 'Business Relations';
                         RunObject = Page 5061;
                         RunPageLink = "Contact No." = FIELD("Company No.");
                     }
                     action("Industry Groups")
                     {
+                        ApplicationArea = All;
                         Caption = 'Industry Groups';
+                        ToolTip = 'Industry Groups';
                         RunObject = Page 5067;
                         RunPageLink = "Contact No." = FIELD("Company No.");
                     }
                     action("Web Sources")
                     {
+                        ApplicationArea = All;
                         Caption = 'Web Sources';
+                        ToolTip = 'Web Sources';
                         RunObject = Page 5070;
                         RunPageLink = "Contact No." = FIELD("Company No.");
                     }
@@ -141,8 +151,10 @@ page 67077 "Contact List APS"
                     Caption = 'P&erson';
                     action("Job Responsibilities")
                     {
-                        Caption = 'Job Responsibilities';
 
+                        ApplicationArea = All;
+                        Caption = 'Job Responsibilities';
+                        ToolTip = 'Job Responsibilities';
                         trigger OnAction()
                         var
                             ContJobResp: Record 5067;
@@ -155,14 +167,18 @@ page 67077 "Contact List APS"
                 }
                 action("Mailing &Groups")
                 {
+                    ApplicationArea = All;
                     Caption = 'Mailing &Groups';
+                    ToolTip = 'Mailing &Groups';
                     RunObject = Page 5064;
                     RunPageLink = "Contact No." = FIELD("No.");
                 }
                 action("Pro&files")
                 {
-                    Caption = 'Pro&files';
 
+                    ApplicationArea = All;
+                    Caption = 'Pro&files';
+                    ToolTip = 'Pro&files';
                     trigger OnAction()
                     var
                         ProfileManagement: Codeunit 5059;
@@ -172,7 +188,9 @@ page 67077 "Contact List APS"
                 }
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -182,13 +200,17 @@ page 67077 "Contact List APS"
                 }
                 action("&Picture")
                 {
+                    ApplicationArea = All;
                     Caption = '&Picture';
+                    ToolTip = '&Picture';
                     RunObject = Page 5104;
                     RunPageLink = "No." = FIELD("No.");
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5072;
                     RunPageLink = "Table Name" = CONST(Contact),
@@ -200,14 +222,18 @@ page 67077 "Contact List APS"
                     Caption = 'Alternati&ve Address';
                     action(EXCCRICard)
                     {
+                        ApplicationArea = All;
                         Caption = 'Card';
+                        ToolTip = 'Card';
                         Image = EditLines;
                         RunObject = Page 5056;
                         RunPageLink = "Contact No." = FIELD("No.");
                     }
                     action("Date Ranges")
                     {
+                        ApplicationArea = All;
                         Caption = 'Date Ranges';
+                        ToolTip = 'Date Ranges';
                         RunObject = Page 5059;
                         RunPageLink = "Contact No." = FIELD("No.");
                     }
@@ -215,7 +241,9 @@ page 67077 "Contact List APS"
 
                 action("Interaction Log E&ntries")
                 {
+                    ApplicationArea = All;
                     Caption = 'Interaction Log E&ntries';
+                    ToolTip = 'Interaction Log E&ntries';
                     RunObject = Page 5076;
                     RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
@@ -225,7 +253,9 @@ page 67077 "Contact List APS"
                 }
                 action("Postponed &Interactions")
                 {
+                    ApplicationArea = All;
                     Caption = 'Postponed &Interactions';
+                    ToolTip = 'Postponed &Interactions';
                     RunObject = Page 5082;
                     RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FILTER(<> ''),
@@ -234,7 +264,9 @@ page 67077 "Contact List APS"
                 }
                 action("T&o-dos")
                 {
+                    ApplicationArea = All;
                     Caption = 'T&o-dos';
+                    ToolTip = 'T&o-dos';
                     RunObject = Page 5096;
                     RunPageLink = "Contact Company No." = FIELD("Company No."),
                                   "Contact No." = FIELD(FILTER("Lookup Contact No.")),
@@ -246,7 +278,9 @@ page 67077 "Contact List APS"
                     Caption = 'Oppo&rtunities';
                     action(List)
                     {
+                        ApplicationArea = All;
                         Caption = 'List';
+                        ToolTip = 'List';
                         RunObject = Page 5123;
                         RunPageLink = "Contact Company No." = FIELD("Company No."),
                                       "Contact No." = FILTER(<> ''),
@@ -256,7 +290,9 @@ page 67077 "Contact List APS"
                 }
                 action("Segmen&ts")
                 {
+                    ApplicationArea = All;
                     Caption = 'Segmen&ts';
+                    ToolTip = 'Segmen&ts';
                     Image = Segment;
                     RunObject = Page 5150;
                     RunPageLink = "Contact Company No." = FIELD("Company No."),
@@ -267,7 +303,9 @@ page 67077 "Contact List APS"
 
                 action("Sales &Quotes")
                 {
+                    ApplicationArea = All;
                     Caption = 'Sales &Quotes';
+                    ToolTip = 'Sales &Quotes';
                     Image = Quote;
                     RunObject = Page "Sales Quote";
                     RunPageLink = "Sell-to Contact No." = FIELD("No.");
@@ -276,8 +314,10 @@ page 67077 "Contact List APS"
 
                 action("C&ustomer/Vendor/Bank Acc.")
                 {
-                    Caption = 'C&ustomer/Vendor/Bank Acc.';
 
+                    ApplicationArea = All;
+                    Caption = 'C&ustomer/Vendor/Bank Acc.';
+                    ToolTip = 'C&ustomer/Vendor/Bank Acc.';
                     trigger OnAction()
                     begin
                         // TODO: Manual review - ShowCustVendBank is no longer a public Contact or Contact List method, and the intended related-record selection UI has no verified replacement.
@@ -292,7 +332,9 @@ page 67077 "Contact List APS"
                 Image = Departments;
                 action("<Action1000000002>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Teachers';
+                    ToolTip = '&Teachers';
                     Image = EditCustomer;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -302,7 +344,9 @@ page 67077 "Contact List APS"
                 }
                 action("<Action1000000000>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Grades';
+                    ToolTip = '&Grades';
                     Image = GetLines;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -311,7 +355,9 @@ page 67077 "Contact List APS"
                 }
                 action("<Action1000000003>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Levels';
+                    ToolTip = '&Levels';
                     Image = Allocations;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -328,7 +374,9 @@ page 67077 "Contact List APS"
                 }
                 action("<Action1000000040>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Rank by Level';
+                    ToolTip = 'Rank by Level';
                     Image = CustomerRating;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -345,7 +393,9 @@ page 67077 "Contact List APS"
                 }
                 action("<Action1000000004>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Adoptions';
+                    ToolTip = '&Adoptions';
                     Image = BankAccountRec;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -355,7 +405,9 @@ page 67077 "Contact List APS"
 
                 action(Atenciones)
                 {
+                    ApplicationArea = All;
                     Caption = '&Gift';
+                    ToolTip = '&Gift';
                     Image = CreateWarehousePick;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -364,7 +416,9 @@ page 67077 "Contact List APS"
                 }
                 action(Asistencia)
                 {
+                    ApplicationArea = All;
                     Caption = '&Solicitud de Asistencia Técnica';
+                    ToolTip = '&Solicitud de Asistencia Técnica';
                     Image = ProfileCalendar;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -373,14 +427,18 @@ page 67077 "Contact List APS"
                 }
                 action("<Action1000000036>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Events';
+                    ToolTip = '&Events';
                     Image = "Event";
                     Promoted = true;
                     PromotedCategory = Category5;
                 }
                 action("<Action1000000047>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Training';
+                    ToolTip = '&Training';
                     Image = "Event";
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Category5;
@@ -388,7 +446,9 @@ page 67077 "Contact List APS"
 
                 action("<Action1000000006>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Estructura de puestos';
+                    ToolTip = '&Estructura de puestos';
                     Image = Hierarchy;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -404,8 +464,10 @@ page 67077 "Contact List APS"
                 Caption = 'F&unctions';
                 action("Make &Phone Call")
                 {
-                    Caption = 'Make &Phone Call';
 
+                    ApplicationArea = All;
+                    Caption = 'Make &Phone Call';
+                    ToolTip = 'Make &Phone Call';
                     trigger OnAction()
                     var
                         TAPIManagement: Codeunit 5053;
@@ -415,8 +477,10 @@ page 67077 "Contact List APS"
                 }
                 action("Launch &Web Source")
                 {
-                    Caption = 'Launch &Web Source';
 
+                    ApplicationArea = All;
+                    Caption = 'Launch &Web Source';
+                    ToolTip = 'Launch &Web Source';
                     trigger OnAction()
                     var
                         ContactWebSource: Record 5060;
@@ -428,8 +492,10 @@ page 67077 "Contact List APS"
                 }
                 action("Print Cover &Sheet")
                 {
-                    Caption = 'Print Cover &Sheet';
 
+                    ApplicationArea = All;
+                    Caption = 'Print Cover &Sheet';
+                    ToolTip = 'Print Cover &Sheet';
                     trigger OnAction()
                     var
                         Cont: Record 5050;
@@ -444,8 +510,10 @@ page 67077 "Contact List APS"
                     Caption = 'Create as';
                     action(EXCCRICustomer)
                     {
-                        Caption = 'Customer';
 
+                        ApplicationArea = All;
+                        Caption = 'Customer';
+                        ToolTip = 'Customer';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - ChooseCustomerTemplate is unavailable; replacing the original template-selection flow with parameterless CreateCustomer is not verified as semantically equivalent.
@@ -454,8 +522,10 @@ page 67077 "Contact List APS"
                     }
                     action(EXCCRIVendor)
                     {
-                        Caption = 'Vendor';
 
+                        ApplicationArea = All;
+                        Caption = 'Vendor';
+                        ToolTip = 'Vendor';
                         trigger OnAction()
                         begin
                             CreateVendor;
@@ -463,8 +533,10 @@ page 67077 "Contact List APS"
                     }
                     action(EXCCRIBank)
                     {
-                        Caption = 'Bank';
 
+                        ApplicationArea = All;
+                        Caption = 'Bank';
+                        ToolTip = 'Bank';
                         trigger OnAction()
                         begin
                             CreateBankAccount;
@@ -476,8 +548,10 @@ page 67077 "Contact List APS"
                     Caption = 'Link with existing';
                     action(Customer)
                     {
-                        Caption = 'Customer';
 
+                        ApplicationArea = All;
+                        Caption = 'Customer';
+                        ToolTip = 'Customer';
                         trigger OnAction()
                         begin
                             CreateCustomerLink;
@@ -485,8 +559,10 @@ page 67077 "Contact List APS"
                     }
                     action(Vendor)
                     {
-                        Caption = 'Vendor';
 
+                        ApplicationArea = All;
+                        Caption = 'Vendor';
+                        ToolTip = 'Vendor';
                         trigger OnAction()
                         begin
                             CreateVendorLink;
@@ -494,8 +570,10 @@ page 67077 "Contact List APS"
                     }
                     action(Bank)
                     {
-                        Caption = 'Bank';
 
+                        ApplicationArea = All;
+                        Caption = 'Bank';
+                        ToolTip = 'Bank';
                         trigger OnAction()
                         begin
                             CreateBankAccountLink;
@@ -505,7 +583,9 @@ page 67077 "Contact List APS"
             }
             action("Create &Interact")
             {
+                ApplicationArea = All;
                 Caption = 'Create &Interact';
+                ToolTip = 'Create &Interact';
                 Image = CreateInteraction;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -520,7 +600,9 @@ page 67077 "Contact List APS"
         {
             action("New Sales Quote")
             {
+                ApplicationArea = All;
                 Caption = 'New Sales Quote';
+                ToolTip = 'New Sales Quote';
                 Image = Quote;
                 Promoted = true;
                 PromotedCategory = New;
@@ -533,7 +615,9 @@ page 67077 "Contact List APS"
         {
             action("Contact Cover Sheet")
             {
+                ApplicationArea = All;
                 Caption = 'Contact Cover Sheet';
+                ToolTip = 'Contact Cover Sheet';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
@@ -548,7 +632,9 @@ page 67077 "Contact List APS"
             }
             action("Contact Company Summary")
             {
+                ApplicationArea = All;
                 Caption = 'Contact Company Summary';
+                ToolTip = 'Contact Company Summary';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
@@ -557,7 +643,9 @@ page 67077 "Contact List APS"
             }
             action("Contact Labels")
             {
+                ApplicationArea = All;
                 Caption = 'Contact Labels';
+                ToolTip = 'Contact Labels';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
@@ -567,7 +655,9 @@ page 67077 "Contact List APS"
             }
             action("Questionnaire Handout")
             {
+                ApplicationArea = All;
                 Caption = 'Questionnaire Handout';
+                ToolTip = 'Questionnaire Handout';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
@@ -577,7 +667,9 @@ page 67077 "Contact List APS"
             }
             action("Sales Cycle Analysis")
             {
+                ApplicationArea = All;
                 Caption = 'Sales Cycle Analysis';
+                ToolTip = 'Sales Cycle Analysis';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";

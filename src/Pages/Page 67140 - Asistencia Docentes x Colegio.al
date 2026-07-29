@@ -86,7 +86,9 @@ page 67140 "Asistencia Docentes x Colegio"
                 Caption = '&Request';
                 action("<Action1000000025>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Asistencia';
+                    ToolTip = '&Asistencia';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;

@@ -421,7 +421,9 @@ page 67074 "Cab. Muestras"
                 Caption = 'O&rder';
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -431,7 +433,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5750;
                     RunPageLink = "Document Type" = CONST("Transfer Order"),
@@ -439,20 +443,26 @@ page 67074 "Cab. Muestras"
                 }
                 action("S&hipments")
                 {
+                    ApplicationArea = All;
                     Caption = 'S&hipments';
+                    ToolTip = 'S&hipments';
                     RunObject = Page 5752;
                     RunPageLink = "Transfer Order No." = FIELD("No.");
                 }
                 action("Re&ceipts")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&ceipts';
+                    ToolTip = 'Re&ceipts';
                     Image = PostedReceipts;
                     RunObject = Page 5753;
                     RunPageLink = "Transfer Order No." = FIELD("No.");
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -464,7 +474,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("Whse. Shi&pments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Whse. Shi&pments';
+                    ToolTip = 'Whse. Shi&pments';
                     RunObject = Page 7341;
                     RunPageLink = "Source Type" = CONST(5741),
                                   "Source Subtype" = CONST(0),
@@ -473,7 +485,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("&Whse. Receipts")
                 {
+                    ApplicationArea = All;
                     Caption = '&Whse. Receipts';
+                    ToolTip = '&Whse. Receipts';
                     RunObject = Page 7342;
                     RunPageLink = "Source Type" = CONST(5741),
                                   "Source Subtype" = CONST(1),
@@ -482,7 +496,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'In&vt. Put-away/Pick Lines';
+                    ToolTip = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page 5774;
                     RunPageLink = "Source Document" = FILTER('Inbound Transfer' | 'Outbound Transfer'),
                                   "Source No." = FIELD("No.");
@@ -497,8 +513,10 @@ page 67074 "Cab. Muestras"
                     Caption = 'Item Availability by';
                     action(Period)
                     {
-                        Caption = 'Period';
 
+                        ApplicationArea = All;
+                        Caption = 'Period';
+                        ToolTip = 'Period';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide period availability.
@@ -507,8 +525,10 @@ page 67074 "Cab. Muestras"
                     }
                     action(Variant)
                     {
-                        Caption = 'Variant';
 
+                        ApplicationArea = All;
+                        Caption = 'Variant';
+                        ToolTip = 'Variant';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide variant availability.
@@ -517,8 +537,10 @@ page 67074 "Cab. Muestras"
                     }
                     action(Location)
                     {
-                        Caption = 'Location';
 
+                        ApplicationArea = All;
+                        Caption = 'Location';
+                        ToolTip = 'Location';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - The custom subpage ItemAvailability procedure is empty, so restoring this call would not provide location availability.
@@ -528,7 +550,9 @@ page 67074 "Cab. Muestras"
                 }
                 action(EXCCRIDimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -542,8 +566,10 @@ page 67074 "Cab. Muestras"
                     Caption = 'Item &Tracking Lines';
                     action(Shipment)
                     {
-                        Caption = 'Shipment';
 
+                        ApplicationArea = All;
+                        Caption = 'Shipment';
+                        ToolTip = 'Shipment';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - The custom subpage OpenItemTrackingLines procedure recursively calls itself and must be corrected before this action can be restored.
@@ -552,8 +578,10 @@ page 67074 "Cab. Muestras"
                     }
                     action(Receipt)
                     {
-                        Caption = 'Receipt';
 
+                        ApplicationArea = All;
+                        Caption = 'Receipt';
+                        ToolTip = 'Receipt';
                         trigger OnAction()
                         begin
                             // TODO: Manual review - The custom subpage OpenItemTrackingLines procedure recursively calls itself and must be corrected before this action can be restored.
@@ -567,8 +595,10 @@ page 67074 "Cab. Muestras"
                 Caption = 'Imprimir';
                 action(Imprimir)
                 {
-                    Caption = 'Imprimir';
 
+                    ApplicationArea = All;
+                    Caption = 'Imprimir';
+                    ToolTip = 'Imprimir';
                     trigger OnAction()
                     var
                         DocPrint: Codeunit 229;
@@ -585,8 +615,10 @@ page 67074 "Cab. Muestras"
                 Caption = 'F&unctions';
                 action("&Reserve")
                 {
-                    Caption = '&Reserve';
 
+                    ApplicationArea = All;
+                    Caption = '&Reserve';
+                    ToolTip = '&Reserve';
                     trigger OnAction()
                     begin
                         CurrPage.TransferLines.PAGE.ShowReservation;
@@ -594,8 +626,10 @@ page 67074 "Cab. Muestras"
                 }
                 action("Create &Whse. Receipt")
                 {
-                    Caption = 'Create &Whse. Receipt';
 
+                    ApplicationArea = All;
+                    Caption = 'Create &Whse. Receipt';
+                    ToolTip = 'Create &Whse. Receipt';
                     trigger OnAction()
                     var
                         GetSourceDocInbound: Codeunit 5751;
@@ -605,8 +639,10 @@ page 67074 "Cab. Muestras"
                 }
                 action("Create Whse. S&hipment")
                 {
-                    Caption = 'Create Whse. S&hipment';
 
+                    ApplicationArea = All;
+                    Caption = 'Create Whse. S&hipment';
+                    ToolTip = 'Create Whse. S&hipment';
                     trigger OnAction()
                     var
                         GetSourceDocOutbound: Codeunit 5752;
@@ -616,7 +652,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("Create Inventor&y Put-away / Pick")
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Inventor&y Put-away / Pick';
+                    ToolTip = 'Create Inventor&y Put-away / Pick';
                     Ellipsis = true;
                     Image = CreateInventoryPickup;
 
@@ -627,7 +665,9 @@ page 67074 "Cab. Muestras"
                 }
                 action("Get Bin Content")
                 {
+                    ApplicationArea = All;
                     Caption = 'Get Bin Content';
+                    ToolTip = 'Get Bin Content';
                     Ellipsis = true;
                     Image = GetBinContent;
 
@@ -644,14 +684,18 @@ page 67074 "Cab. Muestras"
                 }
                 action("Re&lease")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Image = ReleaseDoc;
                     RunObject = Codeunit 5708;
                     ShortCutKey = 'Ctrl+F9';
                 }
                 action("Reo&pen")
                 {
+                    ApplicationArea = All;
                     Caption = 'Reo&pen';
+                    ToolTip = 'Reo&pen';
                     Image = ReOpen;
 
                     trigger OnAction()
@@ -664,7 +708,9 @@ page 67074 "Cab. Muestras"
 
                 action("Select &Samples")
                 {
+                    ApplicationArea = All;
                     Caption = 'Select &Samples';
+                    ToolTip = 'Select &Samples';
                     Image = EntriesList;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -688,8 +734,10 @@ page 67074 "Cab. Muestras"
 
                 action("Enviar Pedido por E-mail")
                 {
-                    Caption = 'Enviar Pedido por E-mail';
 
+                    ApplicationArea = All;
+                    Caption = 'Enviar Pedido por E-mail';
+                    ToolTip = 'Enviar Pedido por E-mail';
                     trigger OnAction()
                     begin
                         //002
@@ -707,7 +755,9 @@ page 67074 "Cab. Muestras"
                 Caption = 'P&osting';
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Ellipsis = true;
                     Image = Post;
                     Promoted = true;
@@ -739,7 +789,9 @@ page 67074 "Cab. Muestras"
             }
             action("Pro&ductos")
             {
+                ApplicationArea = All;
                 Caption = 'Pro&ductos';
+                ToolTip = 'Pro&ductos';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -753,7 +805,9 @@ page 67074 "Cab. Muestras"
             }
             action("&Print")
             {
+                ApplicationArea = All;
                 Caption = '&Print';
+                ToolTip = '&Print';
                 Ellipsis = true;
                 Image = Print;
                 Promoted = true;

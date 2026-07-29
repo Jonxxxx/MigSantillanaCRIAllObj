@@ -53,7 +53,9 @@ page 56201 "Async NAV WS Process Queue"
         {
             action("Ver XML recibido")
             {
+                ApplicationArea = All;
                 Caption = 'Ver XML recibido';
+                ToolTip = 'Ver XML recibido';
                 Image = XMLFile;
 
                 trigger OnAction()
@@ -64,7 +66,9 @@ page 56201 "Async NAV WS Process Queue"
             }
             action("Ver XML enviado")
             {
+                ApplicationArea = All;
                 Caption = 'Ver XML enviado';
+                ToolTip = 'Ver XML enviado';
                 Image = XMLFile;
 
                 trigger OnAction()
@@ -75,7 +79,9 @@ page 56201 "Async NAV WS Process Queue"
             }
             action("Ver respuesta recibida")
             {
+                ApplicationArea = All;
                 Caption = 'Ver respuesta recibida';
+                ToolTip = 'Ver respuesta recibida';
                 Image = XMLFile;
 
                 trigger OnAction()

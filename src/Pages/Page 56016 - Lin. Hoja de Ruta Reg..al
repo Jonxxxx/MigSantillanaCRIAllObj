@@ -130,8 +130,10 @@ page 56016 "Lin. Hoja de Ruta Reg."
                 Caption = 'Actions';
                 action("<Action1000000018>")
                 {
-                    Caption = '&Void Line';
 
+                    ApplicationArea = All;
+                    Caption = '&Void Line';
+                    ToolTip = '&Void Line';
                     trigger OnAction()
                     begin
                         "No entregado" := TRUE;

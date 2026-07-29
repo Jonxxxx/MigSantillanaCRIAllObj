@@ -29,7 +29,9 @@ page 34002140 "Gpo. Contable Empleados"
         {
             action("&Setup")
             {
+                ApplicationArea = All;
                 Caption = '&Setup';
+                ToolTip = '&Setup';
                 Image = Setup;
                 Promoted = true;
                 PromotedCategory = Process;

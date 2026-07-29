@@ -169,7 +169,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                     Caption = '&Samples';
                     action(Delivery)
                     {
+                        ApplicationArea = All;
                         Caption = 'Delivery';
+                        ToolTip = 'Delivery';
                         Image = NewWarehouseShipment;
                         Promoted = true;
                         PromotedCategory = Category4;
@@ -183,7 +185,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                     }
                     action(Return)
                     {
+                        ApplicationArea = All;
                         Caption = 'Return';
+                        ToolTip = 'Return';
                         Image = NewWarehouseReceipt;
                         Promoted = true;
                         PromotedCategory = Category4;
@@ -198,7 +202,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                 }
                 action("&Post")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post';
+                    ToolTip = '&Post';
                     Enabled = Page_Editable;
                     Image = Post;
                     Promoted = true;
@@ -248,7 +254,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                 }
                 action(Programmed)
                 {
+                    ApplicationArea = All;
                     Caption = 'Programmed';
+                    ToolTip = 'Programmed';
                     Image = Replan;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -292,7 +300,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                 }
                 action(Objectives)
                 {
+                    ApplicationArea = All;
                     Caption = 'Objectives';
+                    ToolTip = 'Objectives';
                     Image = AdjustEntries;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -304,7 +314,9 @@ page 67065 "Ficha Ejecucion Planificacion"
                 }
                 action(Steps)
                 {
+                    ApplicationArea = All;
                     Caption = 'Steps';
+                    ToolTip = 'Steps';
                     Image = ImplementPriceChange;
                     Promoted = true;
                     PromotedCategory = Category5;

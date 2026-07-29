@@ -156,7 +156,9 @@ page 56064 "Gestion BackOrder - SL"
         {
             action(Documento)
             {
+                ApplicationArea = All;
                 Caption = '&Document';
+                ToolTip = '&Document';
                 Image = DocumentEdit;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -177,7 +179,9 @@ page 56064 "Gestion BackOrder - SL"
                 Caption = 'F&unctions';
                 action(ActualizarBO)
                 {
+                    ApplicationArea = All;
                     Caption = '&Update BO';
+                    ToolTip = '&Update BO';
                     Image = RefreshPlanningLine;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -242,7 +246,9 @@ page 56064 "Gestion BackOrder - SL"
 
                 action("<Action1000000025>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Sugerir Cantidades';
+                    ToolTip = '&Sugerir Cantidades';
                     Image = SuggestLines;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -277,7 +283,9 @@ page 56064 "Gestion BackOrder - SL"
                 }
                 action("<Action1000000033>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Borrar Pedidos enviados';
+                    ToolTip = '&Borrar Pedidos enviados';
                     Image = Delete;
 
                     trigger OnAction()

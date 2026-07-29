@@ -270,6 +270,9 @@ page 56200 "Equiv. conceptos NAV-MdE"
         {
             action("Informacion Real Mensual")
             {
+                ApplicationArea = All;
+                Caption = 'Informacion Real Mensual';
+                ToolTip = 'Informacion Real Mensual';
                 Enabled = MdEDataType = 1;
                 Image = CompleteLine;
                 Promoted = true;
@@ -284,6 +287,9 @@ page 56200 "Equiv. conceptos NAV-MdE"
             }
             action("Compensacion Teorica")
             {
+                ApplicationArea = All;
+                Caption = 'Compensacion Teorica';
+                ToolTip = 'Compensacion Teorica';
                 Enabled = MdEDataType = 0;
                 Image = CompleteLine;
                 Promoted = true;

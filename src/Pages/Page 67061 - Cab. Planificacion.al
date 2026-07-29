@@ -71,7 +71,9 @@ page 67061 "Cab. Planificacion"
                 Caption = '&Planning';
                 action("Seleccionar Colegios")
                 {
+                    ApplicationArea = All;
                     Caption = 'Seleccionar Colegios';
+                    ToolTip = 'Seleccionar Colegios';
                     Image = AddToHome;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -90,7 +92,9 @@ page 67061 "Cab. Planificacion"
                 }
                 action("&Post")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post';
+                    ToolTip = '&Post';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;

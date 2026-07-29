@@ -69,7 +69,9 @@ page 34002103 "Config. acciones personal"
                 Caption = 'Authorizations';
                 action(Config)
                 {
+                    ApplicationArea = All;
                     Caption = 'Setup Actions';
+                    ToolTip = 'Setup Actions';
                     Image = Setup;
                     Promoted = true;
                     PromotedCategory = Process;

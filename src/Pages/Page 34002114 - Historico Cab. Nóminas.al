@@ -157,7 +157,9 @@ page 34002114 "Historico Cab. Nominas"
                 Caption = '&Payroll';
                 action(Statistic)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistic';
+                    ToolTip = 'Statistic';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -171,7 +173,9 @@ page 34002114 "Historico Cab. Nominas"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
 
                     trigger OnAction()
@@ -182,7 +186,9 @@ page 34002114 "Historico Cab. Nominas"
 
                 action("<Action83>$")
                 {
+                    ApplicationArea = All;
                     Caption = 'Batch voids';
+                    ToolTip = 'Batch voids';
                     Image = Cancel;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -198,6 +204,9 @@ page 34002114 "Historico Cab. Nominas"
 
             action(editar)
             {
+                ApplicationArea = All;
+                Caption = 'editar';
+                ToolTip = 'editar';
                 Enabled = false;
                 Visible = false;
 
@@ -211,7 +220,9 @@ page 34002114 "Historico Cab. Nominas"
         {
             action("P&rint")
             {
+                ApplicationArea = All;
                 Caption = 'P&rint';
+                ToolTip = 'P&rint';
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";

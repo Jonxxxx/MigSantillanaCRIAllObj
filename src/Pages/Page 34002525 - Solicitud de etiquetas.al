@@ -63,7 +63,9 @@ page 34002525 "Solicitud de etiquetas"
         {
             action("Ejecutar impresion")
             {
+                ApplicationArea = All;
                 Caption = 'Ejecutar impresion';
+                ToolTip = 'Ejecutar impresion';
             }
         }
     }

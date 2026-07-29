@@ -67,7 +67,9 @@ page 67079 "Promotores - Lista de Colegios"
                 Caption = '&Actions';
                 action("&Update School List")
                 {
+                    ApplicationArea = All;
                     Caption = '&Update School List';
+                    ToolTip = '&Update School List';
                     Image = CalculateLines;
                     Promoted = true;
                     PromotedCategory = Process;

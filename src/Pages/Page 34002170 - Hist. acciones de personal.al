@@ -315,7 +315,9 @@ page 34002170 "Hist. acciones de personal"
                 Caption = '&Actions';
                 action(Print)
                 {
+                    ApplicationArea = All;
                     Caption = 'Print';
+                    ToolTip = 'Print';
                     Image = Print;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -334,6 +336,9 @@ page 34002170 "Hist. acciones de personal"
 
                 action(corregir)
                 {
+                    ApplicationArea = All;
+                    Caption = 'corregir';
+                    ToolTip = 'corregir';
                     Image = VoidRegister;
                     Promoted = true;
                     PromotedCategory = Process;

@@ -69,8 +69,10 @@ page 56025 "Lista clas. devoluciones"
                 Caption = 'F&unctions';
                 action("&Insert")
                 {
-                    Caption = '&Insert';
 
+                    ApplicationArea = All;
+                    Caption = '&Insert';
+                    ToolTip = '&Insert';
                     trigger OnAction()
                     var
                         CPD: Record 56025;
@@ -83,7 +85,9 @@ page 56025 "Lista clas. devoluciones"
                 }
                 action("&Get Items")
                 {
+                    ApplicationArea = All;
                     Caption = '&Get Items';
+                    ToolTip = '&Get Items';
                     RunObject = Page 56026;
                     RunPageOnRec = true;
                     ShortCutKey = 'Shift+F7';

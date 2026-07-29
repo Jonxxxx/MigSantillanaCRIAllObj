@@ -98,6 +98,9 @@ page 34002539 "Subform declaracion caja"
         {
             action("Recuento de caja")
             {
+                ApplicationArea = All;
+                Caption = 'Recuento de caja';
+                ToolTip = 'Recuento de caja';
                 Image = InsertCurrency;
 
                 trigger OnAction()

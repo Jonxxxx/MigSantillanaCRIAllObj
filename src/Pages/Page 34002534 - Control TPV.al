@@ -164,7 +164,9 @@ page 34002534 "Control TPV"
         {
             action("Abrir Dia")
             {
+                ApplicationArea = All;
                 Caption = 'Abrir dia';
+                ToolTip = 'Abrir dia';
                 Image = Open;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -186,7 +188,9 @@ page 34002534 "Control TPV"
             }
             action("Cerrar Dia")
             {
+                ApplicationArea = All;
                 Caption = 'Cerrar dia';
+                ToolTip = 'Cerrar dia';
                 Image = Close;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -207,7 +211,9 @@ page 34002534 "Control TPV"
         {
             action("Resumen del dia")
             {
+                ApplicationArea = All;
                 Caption = 'Resumen del dia';
+                ToolTip = 'Resumen del dia';
                 Ellipsis = true;
                 Image = Sales;
                 Promoted = true;

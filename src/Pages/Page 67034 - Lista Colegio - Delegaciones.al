@@ -66,7 +66,9 @@ page 67034 "Lista Colegio - Delegaciones"
                 Caption = '&Branch';
                 action("&Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Card';
+                    ToolTip = '&Card';
                     Image = EditLines;
                     RunObject = Page 67047;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");

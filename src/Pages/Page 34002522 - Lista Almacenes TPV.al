@@ -47,7 +47,9 @@ page 34002522 "Lista Almacenes TPV"
                 Image = Warehouse;
                 action("Dimensiones Defecto ")
                 {
+                    ApplicationArea = All;
                     Caption = '&Dimensiones Defecto';
+                    ToolTip = '&Dimensiones Defecto';
                     Promoted = true;
                     PromotedIsBig = true;
                     RunObject = Page 34002519;
@@ -56,14 +58,18 @@ page 34002522 "Lista Almacenes TPV"
 
                 action("&Zones")
                 {
+                    ApplicationArea = All;
                     Caption = '&Zones';
+                    ToolTip = '&Zones';
                     Image = Zones;
                     RunObject = Page 7300;
                     RunPageLink = "Location Code" = FIELD(Code);
                 }
                 action("&Bins")
                 {
+                    ApplicationArea = All;
                     Caption = '&Bins';
+                    ToolTip = '&Bins';
                     Image = Bins;
                     RunObject = Page 7302;
                     RunPageLink = "Location Code" = FIELD(Code);
@@ -74,7 +80,9 @@ page 34002522 "Lista Almacenes TPV"
         {
             action("Create Warehouse location")
             {
+                ApplicationArea = All;
                 Caption = 'Create Warehouse location';
+                ToolTip = 'Create Warehouse location';
                 Image = NewWarehouse;
                 Promoted = true;
                 PromotedCategory = Process;

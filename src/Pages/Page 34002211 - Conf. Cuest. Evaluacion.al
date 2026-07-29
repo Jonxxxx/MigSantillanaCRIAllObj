@@ -111,13 +111,13 @@ page 34002211 "Conf. Cuest. Evaluacion"
                 Image = Line;
                 action("Question Details")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Question Details';
+                    ToolTip = 'Question Details';
                     Image = Questionaire;
                     Promoted = true;
                     Scope = Repeater;
                     ShortCutKey = 'Shift+F7';
-                    ToolTip = 'View detailed information about the questions within the questionnaire.';
 
                     trigger OnAction()
                     begin
@@ -131,10 +131,10 @@ page 34002211 "Conf. Cuest. Evaluacion"
                 }
                 action("Answer Where-Used")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Answer Where-Used';
+                    ToolTip = 'Answer Where-Used';
                     Image = Trace;
-                    ToolTip = 'View which questions the current answer is based on with the number of points given.';
 
                     trigger OnAction()
                     var
@@ -163,10 +163,10 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                 action("Update &Classification")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Update &Classification';
+                    ToolTip = 'Update &Classification';
                     Image = Refresh;
-                    ToolTip = 'Update automatic classification of your contacts. This batch job updates all the answers to the profile questions that are automatically answered by the program, based on customer, vendor or contact data.';
 
                     trigger OnAction()
                     var
@@ -181,12 +181,12 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                 action("Move &Up")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Move &Up';
+                    ToolTip = 'Move &Up';
                     Image = MoveUp;
                     Promoted = true;
                     Scope = Repeater;
-                    ToolTip = 'Change the sorting order of the lines.';
 
                     trigger OnAction()
                     begin
@@ -195,12 +195,12 @@ page 34002211 "Conf. Cuest. Evaluacion"
                 }
                 action("Move &Down")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Move &Down';
+                    ToolTip = 'Move &Down';
                     Image = MoveDown;
                     Promoted = true;
                     Scope = Repeater;
-                    ToolTip = 'Change the sorting order of the lines.';
 
                     trigger OnAction()
                     begin
@@ -210,10 +210,10 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                 action(Print)
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Print';
+                    ToolTip = 'Print';
                     Image = Print;
-                    ToolTip = 'Print the information in the window. A print request window opens where you can specify what to include on the print-out.';
 
                     trigger OnAction()
                     var
@@ -226,10 +226,10 @@ page 34002211 "Conf. Cuest. Evaluacion"
                 }
                 action("Test Report")
                 {
-                    ApplicationArea = RelationshipMgmt;
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Image = TestReport;
-                    ToolTip = 'View a test report so that you can find and correct any errors before you perform the actual posting of the journal or document.';
 
                     trigger OnAction()
                     var

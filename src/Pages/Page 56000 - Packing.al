@@ -92,7 +92,9 @@ page 56000 Packing
         {
             action("<Action1000000016>")
             {
+                ApplicationArea = All;
                 Caption = '&Abrir Palet';
+                ToolTip = '&Abrir Palet';
                 Image = Bins;
                 Promoted = true;
                 PromotedIsBig = true;
@@ -106,7 +108,9 @@ page 56000 Packing
             }
             action("&Close Palet")
             {
+                ApplicationArea = All;
                 Caption = '&Close Palet';
+                ToolTip = '&Close Palet';
                 Image = BinLedger;
                 Promoted = true;
                 PromotedIsBig = true;
@@ -120,7 +124,9 @@ page 56000 Packing
             }
             action("<Action1000000011>")
             {
+                ApplicationArea = All;
                 Caption = '&Crear Caja';
+                ToolTip = '&Crear Caja';
                 Image = ReceiveLoaner;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -141,7 +147,9 @@ page 56000 Packing
                 Caption = '&Post';
                 action("<Action1000000012>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Registrar';
+                    ToolTip = '&Registrar';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -159,7 +167,9 @@ page 56000 Packing
                 }
                 action("&Post & Print")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post & Print';
+                    ToolTip = '&Post & Print';
                     Image = PostPrint;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -167,8 +177,10 @@ page 56000 Packing
                 }
                 action("<Action1000000014>")
                 {
-                    Caption = '&Print Packing';
 
+                    ApplicationArea = All;
+                    Caption = '&Print Packing';
+                    ToolTip = '&Print Packing';
                     trigger OnAction()
                     begin
 

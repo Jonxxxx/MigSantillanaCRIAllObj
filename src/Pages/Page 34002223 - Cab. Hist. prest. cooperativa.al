@@ -114,7 +114,9 @@ page 34002223 "Cab. Hist. prest. cooperativa"
                 Caption = 'Loan';
                 action("Pause fee")
                 {
+                    ApplicationArea = All;
                     Caption = 'Pause fee';
+                    ToolTip = 'Pause fee';
                     Image = Pause;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -136,7 +138,9 @@ page 34002223 "Cab. Hist. prest. cooperativa"
                 }
                 action("Activate fee")
                 {
+                    ApplicationArea = All;
                     Caption = 'Activate fee';
+                    ToolTip = 'Activate fee';
                     Image = ActivateDiscounts;
                     Promoted = true;
                     PromotedCategory = Process;

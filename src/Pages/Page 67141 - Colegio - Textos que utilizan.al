@@ -169,7 +169,9 @@ page 67141 "Colegio - Textos que utilizan"
                 Caption = 'Textos';
                 action("<Action1000000020>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ver Solo Adopciones';
+                    ToolTip = 'Ver Solo Adopciones';
                     Promoted = true;
                     PromotedIsBig = true;
 
@@ -180,7 +182,9 @@ page 67141 "Colegio - Textos que utilizan"
                 }
                 action("<Action1000000022>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ver Solo Competencias';
+                    ToolTip = 'Ver Solo Competencias';
                     Promoted = true;
                     PromotedIsBig = true;
 

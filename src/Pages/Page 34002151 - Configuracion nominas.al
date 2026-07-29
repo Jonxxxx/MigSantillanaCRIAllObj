@@ -480,7 +480,9 @@ page 34002151 "Configuracion nominas"
                 Caption = '&Calendar';
                 action("Vacation parameters")
                 {
+                    ApplicationArea = All;
                     Caption = 'Vacation parameters';
+                    ToolTip = 'Vacation parameters';
                     Image = NumberSetup;
                     Promoted = true;
                     PromotedCategory = Process;

@@ -180,7 +180,9 @@ page 34002119 "Lin. conceptos salariales Emp."
                 Caption = '&Payroll';
                 action("Dist. by Dimension")
                 {
+                    ApplicationArea = All;
                     Caption = 'Dist. by Dimension';
+                    ToolTip = 'Dist. by Dimension';
                     Image = CalculateHierarchy;
                     RunObject = Page 34002215;
                     RunPageLink = "Employee no." = FIELD("No. empleado"),
@@ -189,7 +191,9 @@ page 34002119 "Lin. conceptos salariales Emp."
 
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
 
                     trigger OnAction()

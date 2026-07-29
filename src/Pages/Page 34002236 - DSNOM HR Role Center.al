@@ -39,129 +39,143 @@ page 34002236 "DSNOM HR Role Center"
             ToolTip = 'Manage human resource processes, view';
             action(EmpleadosActivos)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Active employees';
+                ToolTip = 'Active employees';
                 Image = "Order";
                 RunObject = Page 5201;
                 RunPageView = WHERE(Status = CONST(Active));
-                ToolTip = 'Visualize Employees with Active status';
             }
             action(EmpleadosInactivos)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Inactive Employees';
+                ToolTip = 'Inactive Employees';
                 RunObject = Page 5201;
                 RunPageView = WHERE(Status = CONST(Inactive));
-                ToolTip = 'View sales documents that are shipped but not yet invoiced.';
             }
             action(Empleados)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 Caption = 'Employees';
+                ToolTip = 'Employees';
                 Image = Item;
                 RunObject = Page 5201;
-                ToolTip = 'View or edit detailed information for the emplolyees.';
             }
         }
         area(reporting)
         {
             action("Employee - Labels")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Labels';
+                ToolTip = 'Employee - Labels';
                 Image = "Report";
                 RunObject = Report 5200;
-                ToolTip = 'View a list of employees'' mailing labels.';
             }
             action("Employee - List")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - List';
+                ToolTip = 'Employee - List';
                 Image = "Report";
                 RunObject = Report 5201;
-                ToolTip = 'View a list of all employees.';
             }
             action("Employee - Misc. Article Info.")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Misc. Article Info.';
+                ToolTip = 'Employee - Misc. Article Info.';
                 Image = "Report";
                 RunObject = Report 5202;
-                ToolTip = 'View a list of employees'' miscellaneous articles.';
             }
             action("Employee - Confidential Info.")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Confidential Info.';
+                ToolTip = 'Employee - Confidential Info.';
                 Image = "Report";
                 RunObject = Report 5203;
-                ToolTip = 'View a list of employees'' confidential information.';
             }
             action("Employee - Staff Absences")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Staff Absences';
+                ToolTip = 'Employee - Staff Absences';
                 Image = "Report";
                 RunObject = Report 5204;
-                ToolTip = 'View a list of employee absences by date. The list includes the cause of each employee absence.';
             }
             action("Employee - Absences by Causes")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Absences by Causes';
+                ToolTip = 'Employee - Absences by Causes';
                 Image = "Report";
                 RunObject = Report 5205;
-                ToolTip = 'View a list of all employees'' absences categorized by absence code.';
             }
             action("Employee - Qualifications")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Qualifications';
+                ToolTip = 'Employee - Qualifications';
                 Image = "Report";
                 RunObject = Report 5206;
-                ToolTip = 'View a list of employees'' qualifications.';
             }
             action("Employee - Addresses")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Addresses';
+                ToolTip = 'Employee - Addresses';
                 Image = "Report";
                 RunObject = Report 5207;
-                ToolTip = 'View a list of employees'' addresses.';
             }
             action("Employee - Relatives")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Relatives';
+                ToolTip = 'Employee - Relatives';
                 Image = "Report";
                 RunObject = Report 5208;
-                ToolTip = 'View a list of employees'' relatives.';
             }
             action("Employee - Birthdays")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Birthdays';
+                ToolTip = 'Employee - Birthdays';
                 Image = "Report";
                 RunObject = Report 5209;
-                ToolTip = 'View a list of employees'' birthdays.';
             }
             action("Employee - Phone Nos.")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Phone Nos.';
+                ToolTip = 'Employee - Phone Nos.';
                 Image = "Report";
                 RunObject = Report 5210;
-                ToolTip = 'View a list of employees'' phone numbers.';
             }
             action("Employee - Unions")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Unions';
+                ToolTip = 'Employee - Unions';
                 Image = "Report";
                 RunObject = Report 5211;
-                ToolTip = 'View a list of employees'' union memberships.';
             }
             action("Employee - Contracts")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Contracts';
+                ToolTip = 'Employee - Contracts';
                 Image = "Report";
                 RunObject = Report 5212;
-                ToolTip = 'View all employee contracts.';
             }
             action("Employee - Alt. Addresses")
             {
+                ApplicationArea = All;
                 Caption = 'Employee - Alt. Addresses';
+                ToolTip = 'Employee - Alt. Addresses';
                 Image = "Report";
                 RunObject = Report 5213;
-                ToolTip = 'View a list of employees'' alternate addresses.';
             }
         }
         area(sections)
@@ -172,71 +186,82 @@ page 34002236 "DSNOM HR Role Center"
                 Image = HumanResources;
                 action("Human Resources Unit of Measure")
                 {
+                    ApplicationArea = All;
                     Caption = 'Human Resources Unit of Measure';
+                    ToolTip = 'Human Resources Unit of Measure';
                     RunObject = Page 5236;
-                    ToolTip = 'View or edit the Units in which you measure human resources'' work, such as Hours.';
                 }
                 action("Vend. Causes of Absence")
                 {
+                    ApplicationArea = All;
                     Caption = 'Vend. Causes of Absence';
+                    ToolTip = 'Vend. Causes of Absence';
                     RunObject = Page 5210;
-                    ToolTip = 'View or edit causes of absence for your vendor resources. These codes can be used to indicate various reasons for employee absences, such as sickness, vacation, personal days, personal emergencies, and so on.';
                 }
                 action("Causes of Inactivity")
                 {
+                    ApplicationArea = All;
                     Caption = 'Causes of Inactivity';
+                    ToolTip = 'Causes of Inactivity';
                     RunObject = Page 5214;
-                    ToolTip = 'Register causes of inactivity codes for your employees. These codes can be used for various reasons causing employee inactiveness, such as maternity leave, long-term illness, sabbatical, and so on.';
                 }
                 action("Grounds for Termination")
                 {
+                    ApplicationArea = All;
                     Caption = 'Grounds for Termination';
+                    ToolTip = 'Grounds for Termination';
                     RunObject = Page 5215;
-                    ToolTip = 'View or edit grounds for termination codes for your employees. These codes can be used for various reasons for employee termination, such as dismissal, retirement, resignation, and so on.';
                 }
                 action(Unions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Unions';
+                    ToolTip = 'Unions';
                     RunObject = Page 5213;
-                    ToolTip = 'View a list of labor and trade unions. For each union, the report shows the employees who are members of the union.';
                 }
                 action("Employment Contracts")
                 {
+                    ApplicationArea = All;
                     Caption = 'Employment Contracts';
+                    ToolTip = 'Employment Contracts';
                     RunObject = Page 5217;
-                    ToolTip = 'View or edit employment contracts.';
                 }
                 action(Relatives)
                 {
+                    ApplicationArea = All;
                     Caption = 'Relatives';
+                    ToolTip = 'Relatives';
                     Image = Relatives;
                     RunObject = Page 5208;
-                    ToolTip = 'View a list of employees'' relatives for selected employees. For each employee, the report shows basic information about the employee''s relatives such as name and date of birth.';
                 }
                 action("Misc. Articles")
                 {
+                    ApplicationArea = All;
                     Caption = 'Misc. Articles';
+                    ToolTip = 'Misc. Articles';
                     RunObject = Page 5218;
-                    ToolTip = 'View the benefits that your employees receive and other articles that are in your employees'' possession (keys, computers, company cars, memberships in company clubs, and so on).';
                 }
                 action(Confidential)
                 {
+                    ApplicationArea = All;
                     Caption = 'Confidential';
+                    ToolTip = 'Confidential';
                     RunObject = Page 5220;
-                    ToolTip = 'Register confidential information related to your employees such as salaries, stock option plans, pensions, and so on.';
                 }
                 action(Qualifications)
                 {
+                    ApplicationArea = All;
                     Caption = 'Qualifications';
+                    ToolTip = 'Qualifications';
                     Image = Certificate;
                     RunObject = Page 5205;
-                    ToolTip = 'View or register qualification codes for your employees. These codes can be used for various employee qualifications: job titles, employee computer skills, education, courses, and so on.';
                 }
                 action("Employee Statistics Groups")
                 {
+                    ApplicationArea = All;
                     Caption = 'Employee Statistics Groups';
+                    ToolTip = 'Employee Statistics Groups';
                     RunObject = Page 5216;
-                    ToolTip = 'View or edit the grouping of employees for statistical purposes.';
                 }
             }
         }
@@ -249,9 +274,10 @@ page 34002236 "DSNOM HR Role Center"
             }
             action("Human Resources Setup")
             {
+                ApplicationArea = All;
                 Caption = 'Human Resources Setup';
+                ToolTip = 'Human Resources Setup';
                 RunObject = Page 5233;
-                ToolTip = 'Set up number series for creating new employee cards and define if employment time is measured by days or hours.';
             }
         }
     }

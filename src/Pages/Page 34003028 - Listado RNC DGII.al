@@ -54,7 +54,9 @@ page 34003028 "Listado RNC DGII"
         {
             action("RNC New Dowload")
             {
+                ApplicationArea = All;
                 Caption = 'RNC New Dowload';
+                ToolTip = 'RNC New Dowload';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

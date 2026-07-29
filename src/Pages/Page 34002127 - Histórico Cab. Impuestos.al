@@ -57,7 +57,9 @@ page 34002127 "Historico Cab. Impuestos"
                 Caption = '&Cotizaciones';
                 action("&List")
                 {
+                    ApplicationArea = All;
                     Caption = '&List';
+                    ToolTip = '&List';
                     RunObject = Page 34002129;
                     ShortCutKey = 'Shift+Ctrl+L';
                 }

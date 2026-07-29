@@ -269,7 +269,9 @@ page 34002501 "Ficha TPV"
         {
             action(Desvincular)
             {
+                ApplicationArea = All;
                 Caption = 'Statistics';
+                ToolTip = 'Statistics';
                 Image = UserSetup;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -285,7 +287,9 @@ page 34002501 "Ficha TPV"
             }
             action(Vincular)
             {
+                ApplicationArea = All;
                 Caption = '&Asignar Usuario';
+                ToolTip = '&Asignar Usuario';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

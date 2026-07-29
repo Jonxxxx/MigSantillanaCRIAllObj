@@ -84,7 +84,9 @@ page 34002217 "Ficha Miembros Coop."
                 Caption = '&Calendar';
                 action(Activate)
                 {
+                    ApplicationArea = All;
                     Caption = 'Activate';
+                    ToolTip = 'Activate';
                     Enabled = not BtActivo;
                     Image = Post;
                     Promoted = true;
@@ -141,7 +143,9 @@ page 34002217 "Ficha Miembros Coop."
                 }
                 action(Inactivate)
                 {
+                    ApplicationArea = All;
                     Caption = 'Inactivate';
+                    ToolTip = 'Inactivate';
                     Enabled = BtActivo;
                     Image = CancelLine;
                     Promoted = true;
@@ -174,7 +178,9 @@ page 34002217 "Ficha Miembros Coop."
                 }
                 action(Retire)
                 {
+                    ApplicationArea = All;
                     Caption = 'Retire';
+                    ToolTip = 'Retire';
                     Enabled = BtActivo;
                     Image = Archive;
                     Promoted = true;

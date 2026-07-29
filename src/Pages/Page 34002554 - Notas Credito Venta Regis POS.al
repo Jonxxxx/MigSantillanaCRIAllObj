@@ -207,7 +207,9 @@ page 34002554 "Notas Credito Venta Regis POS"
                 Image = CreditMemo;
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     ShortCutKey = 'Shift+F7';
 
@@ -218,7 +220,9 @@ page 34002554 "Notas Credito Venta Regis POS"
                 }
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -234,7 +238,9 @@ page 34002554 "Notas Credito Venta Regis POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = CONST("Posted Credit Memo"),
@@ -242,7 +248,9 @@ page 34002554 "Notas Credito Venta Regis POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -257,6 +265,9 @@ page 34002554 "Notas Credito Venta Regis POS"
         {
             action("Liquidar contra Pagos TPV")
             {
+                ApplicationArea = All;
+                Caption = 'Liquidar contra Pagos TPV';
+                ToolTip = 'Liquidar contra Pagos TPV';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

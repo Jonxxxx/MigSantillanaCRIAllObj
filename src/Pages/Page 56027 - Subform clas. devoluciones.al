@@ -90,8 +90,10 @@ page 56027 "Subform clas. devoluciones"
                 Caption = 'F&unctions';
                 action("Update Line")
                 {
-                    Caption = 'Update Line';
 
+                    ApplicationArea = All;
+                    Caption = 'Update Line';
+                    ToolTip = 'Update Line';
                     trigger OnAction()
                     begin
                         //This functionality was copied from page #56026. Unsupported part was commented. Please check it.

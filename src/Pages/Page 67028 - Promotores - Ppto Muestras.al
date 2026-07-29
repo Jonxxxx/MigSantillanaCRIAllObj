@@ -57,22 +57,28 @@ page 67028 "Promotores - Ppto Muestras"
                 Caption = '&Item';
                 action("&Item card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Item card';
+                    ToolTip = '&Item card';
                     RunObject = Page 30;
                     RunPageLink = "No." = FIELD("Cod. Producto");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("&Equivalent Item card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Equivalent Item card';
+                    ToolTip = '&Equivalent Item card';
                     RunObject = Page 30;
                     RunPageLink = "No." = FIELD("Cod. producto equivalente");
                 }
 
                 action("&Insert Items")
                 {
-                    Caption = '&Insert Items';
 
+                    ApplicationArea = All;
+                    Caption = '&Insert Items';
+                    ToolTip = '&Insert Items';
                     trigger OnAction()
                     begin
                         CopiaProducto.RecibeDatos(Rec."Cod. Promotor", 1);
@@ -81,7 +87,9 @@ page 67028 "Promotores - Ppto Muestras"
                 }
                 action("I&mport Budget")
                 {
+                    ApplicationArea = All;
                     Caption = 'I&mport Budget';
+                    ToolTip = 'I&mport Budget';
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = Process;

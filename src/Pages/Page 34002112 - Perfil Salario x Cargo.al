@@ -51,7 +51,9 @@ page 34002112 "Perfil Salario x Cargo"
         {
             action("Copy All")
             {
+                ApplicationArea = All;
                 Caption = 'Copy All';
+                ToolTip = 'Copy All';
                 Image = CopyBOM;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -69,6 +69,9 @@ page 56040 "Desglose Ajuste Divisa"
         {
             action(Ejecutar)
             {
+                ApplicationArea = All;
+                Caption = 'Ejecutar';
+                ToolTip = 'Ejecutar';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

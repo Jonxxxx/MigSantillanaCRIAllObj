@@ -214,7 +214,9 @@ page 34003015 "Pre Sales List"
                 Image = Line;
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -251,7 +253,9 @@ page 34003015 "Pre Sales List"
         {
             action("Sales Reservation Avail.")
             {
+                ApplicationArea = All;
                 Caption = 'Sales Reservation Avail.';
+                ToolTip = 'Sales Reservation Avail.';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'

@@ -133,7 +133,9 @@ page 67020 "Alumnos - Hijos"
                 Caption = '&Student';
                 action("&Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Card';
+                    ToolTip = '&Card';
                     Image = EditLines;
                     RunObject = Page 67056;
                     RunPageLink = Code = FIELD("Code");
@@ -141,13 +143,17 @@ page 67020 "Alumnos - Hijos"
                 }
                 action("&Fathers")
                 {
+                    ApplicationArea = All;
                     Caption = '&Fathers';
+                    ToolTip = '&Fathers';
                     RunObject = Page 67049;
                     RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")
                 {
+                    ApplicationArea = All;
                     Caption = '&School';
+                    ToolTip = '&School';
                     RunObject = Page "Contact Card";
                     RunPageLink = "No." = FIELD("Cod. Colegio");
                 }

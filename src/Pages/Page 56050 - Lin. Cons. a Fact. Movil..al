@@ -74,7 +74,9 @@ page 56050 "Lin. Cons. a Fact. Movil."
         {
             action("&OK")
             {
+                ApplicationArea = All;
                 Caption = '&OK';
+                ToolTip = '&OK';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -128,7 +130,9 @@ page 56050 "Lin. Cons. a Fact. Movil."
             }
             action("&Cancel")
             {
+                ApplicationArea = All;
                 Caption = '&Cancel';
+                ToolTip = '&Cancel';
                 Promoted = true;
                 PromotedCategory = Process;
 

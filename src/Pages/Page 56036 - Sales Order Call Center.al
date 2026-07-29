@@ -621,7 +621,9 @@ page 56036 "Sales Order Call Center"
                 Caption = 'O&rder';
                 action("Fast Screen")
                 {
+                    ApplicationArea = All;
                     Caption = 'Fast Screen';
+                    ToolTip = 'Fast Screen';
                     Image = GetStandardJournal;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -634,7 +636,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -654,7 +658,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     RunObject = Page "Customer Card";
                     RunPageLink = "No." = FIELD("Sell-to Customer No.");
@@ -662,7 +668,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"),
@@ -671,14 +679,18 @@ page 56036 "Sales Order Call Center"
                 }
                 action("S&hipments")
                 {
+                    ApplicationArea = All;
                     Caption = 'S&hipments';
+                    ToolTip = 'S&hipments';
                     RunObject = Page 142;
                     RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING("Order No.");
                 }
                 action(Invoices)
                 {
+                    ApplicationArea = All;
                     Caption = 'Invoices';
+                    ToolTip = 'Invoices';
                     Image = Invoice;
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
@@ -686,21 +698,27 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Prepa&yment Invoices")
                 {
+                    ApplicationArea = All;
                     Caption = 'Prepa&yment Invoices';
+                    ToolTip = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action("Prepayment Credi&t Memos")
                 {
+                    ApplicationArea = All;
                     Caption = 'Prepayment Credi&t Memos';
+                    ToolTip = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos";
                     RunPageLink = "Prepayment Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
 
                     trigger OnAction()
@@ -710,7 +728,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("A&pprovals")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&pprovals';
+                    ToolTip = 'A&pprovals';
                     Image = Approvals;
 
                     trigger OnAction()
@@ -724,7 +744,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Whse. Shipment Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'Whse. Shipment Lines';
+                    ToolTip = 'Whse. Shipment Lines';
                     RunObject = Page "Whse. Shipment Lines";
                     RunPageLink = "Source Type" = CONST(37),
                                   "Source Subtype" = FIELD("Document Type"),
@@ -733,7 +755,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'In&vt. Put-away/Pick Lines';
+                    ToolTip = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page "Warehouse Activity List";
                     RunPageLink = "Source Document" = CONST("Sales Order"),
                                   "Source No." = FIELD("No.");
@@ -742,8 +766,10 @@ page 56036 "Sales Order Call Center"
 
                 action("Pla&nning")
                 {
-                    Caption = 'Pla&nning';
 
+                    ApplicationArea = All;
+                    Caption = 'Pla&nning';
+                    ToolTip = 'Pla&nning';
                     trigger OnAction()
                     var
                         SalesPlanPage: Page 99000883;
@@ -754,8 +780,10 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Order &Promising")
                 {
-                    Caption = 'Order &Promising';
 
+                    ApplicationArea = All;
+                    Caption = 'Order &Promising';
+                    ToolTip = 'Order &Promising';
                     trigger OnAction()
                     var
                         OrderPromisingLine: Record 99000880 temporary;
@@ -768,7 +796,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Credit Cards Transaction Lo&g Entries")
                 {
+                    ApplicationArea = All;
                     Caption = 'Credit Cards Transaction Lo&g Entries';
+                    ToolTip = 'Credit Cards Transaction Lo&g Entries';
                     // TODO: Manual review - Standard page 829 is unavailable and no semantically equivalent current page was verified.
                     // Original code: RunObject = Page 829;
                 }
@@ -781,7 +811,9 @@ page 56036 "Sales Order Call Center"
                 Caption = 'F&unctions';
                 action("Calculate &Invoice Discount")
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate &Invoice Discount';
+                    ToolTip = 'Calculate &Invoice Discount';
                     Image = CalculateInvoiceDiscount;
 
                     trigger OnAction()
@@ -792,7 +824,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Get St&d. Cust. Sales Codes")
                 {
+                    ApplicationArea = All;
                     Caption = 'Get St&d. Cust. Sales Codes';
+                    ToolTip = 'Get St&d. Cust. Sales Codes';
                     Ellipsis = true;
 
                     trigger OnAction()
@@ -805,7 +839,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Copy Document")
                 {
+                    ApplicationArea = All;
                     Caption = 'Copy Document';
+                    ToolTip = 'Copy Document';
                     Ellipsis = true;
                     Image = CopyDocument;
                     Promoted = true;
@@ -820,8 +856,10 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Archi&ve Document")
                 {
-                    Caption = 'Archi&ve Document';
 
+                    ApplicationArea = All;
+                    Caption = 'Archi&ve Document';
+                    ToolTip = 'Archi&ve Document';
                     trigger OnAction()
                     begin
                         ArchiveManagement.ArchiveSalesDocument(Rec);
@@ -830,7 +868,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Move Negative Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'Move Negative Lines';
+                    ToolTip = 'Move Negative Lines';
                     Ellipsis = true;
 
                     trigger OnAction()
@@ -844,8 +884,10 @@ page 56036 "Sales Order Call Center"
 
                 action("Create &Whse. Shipment")
                 {
-                    Caption = 'Create &Whse. Shipment';
 
+                    ApplicationArea = All;
+                    Caption = 'Create &Whse. Shipment';
+                    ToolTip = 'Create &Whse. Shipment';
                     trigger OnAction()
                     var
                         GetSourceDocOutbound: Codeunit 5752;
@@ -858,7 +900,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Create Inventor&y Put-away / Pick")
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Inventor&y Put-away / Pick';
+                    ToolTip = 'Create Inventor&y Put-away / Pick';
                     Ellipsis = true;
                     Image = CreateInventoryPickup;
                     Promoted = true;
@@ -875,7 +919,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Send A&pproval Request")
                 {
+                    ApplicationArea = All;
                     Caption = 'Send A&pproval Request';
+                    ToolTip = 'Send A&pproval Request';
                     Image = SendApprovalRequest;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -891,8 +937,10 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Cancel Approval Re&quest")
                 {
-                    Caption = 'Cancel Approval Re&quest';
 
+                    ApplicationArea = All;
+                    Caption = 'Cancel Approval Re&quest';
+                    ToolTip = 'Cancel Approval Re&quest';
                     trigger OnAction()
                     var
                         ApprovalMgt: Codeunit "Approvals Mgmt.";
@@ -904,7 +952,9 @@ page 56036 "Sales Order Call Center"
 
                 action("Re&lease")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Image = ReleaseDoc;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -919,7 +969,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Re&open")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Image = ReOpen;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -934,8 +986,10 @@ page 56036 "Sales Order Call Center"
 
                 action("Send IC Sales Order Cnfmn.")
                 {
-                    Caption = 'Send IC Sales Order Cnfmn.';
 
+                    ApplicationArea = All;
+                    Caption = 'Send IC Sales Order Cnfmn.';
+                    ToolTip = 'Send IC Sales Order Cnfmn.';
                     trigger OnAction()
                     var
                         ICInOutboxMgt: Codeunit 427;
@@ -952,8 +1006,10 @@ page 56036 "Sales Order Call Center"
 
                 action(Authorize)
                 {
-                    Caption = 'Authorize';
 
+                    ApplicationArea = All;
+                    Caption = 'Authorize';
+                    ToolTip = 'Authorize';
                     trigger OnAction()
                     begin
                         //fes mig Authorize;
@@ -961,8 +1017,10 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Void A&uthorize")
                 {
-                    Caption = 'Void A&uthorize';
 
+                    ApplicationArea = All;
+                    Caption = 'Void A&uthorize';
+                    ToolTip = 'Void A&uthorize';
                     trigger OnAction()
                     begin
                         //fes mig Void;
@@ -975,7 +1033,9 @@ page 56036 "Sales Order Call Center"
                 Caption = 'P&osting';
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Image = TestReport;
 
@@ -986,7 +1046,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Ellipsis = true;
                     Image = Post;
                     Promoted = true;
@@ -1016,7 +1078,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Ellipsis = true;
                     Image = PostPrint;
                     Promoted = true;
@@ -1046,7 +1110,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Post &Batch")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post &Batch';
+                    ToolTip = 'Post &Batch';
                     Ellipsis = true;
                     Image = PostBatch;
 
@@ -1062,7 +1128,9 @@ page 56036 "Sales Order Call Center"
                     Caption = 'Prepa&yment';
                     action("Prepayment &Test Report")
                     {
+                        ApplicationArea = All;
                         Caption = 'Prepayment &Test Report';
+                        ToolTip = 'Prepayment &Test Report';
                         Ellipsis = true;
 
                         trigger OnAction()
@@ -1072,7 +1140,9 @@ page 56036 "Sales Order Call Center"
                     }
                     action("Post Prepayment &Invoice")
                     {
+                        ApplicationArea = All;
                         Caption = 'Post Prepayment &Invoice';
+                        ToolTip = 'Post Prepayment &Invoice';
                         Ellipsis = true;
 
                         trigger OnAction()
@@ -1089,7 +1159,9 @@ page 56036 "Sales Order Call Center"
                     }
                     action("Post and Print Prepmt. Invoic&e")
                     {
+                        ApplicationArea = All;
                         Caption = 'Post and Print Prepmt. Invoic&e';
+                        ToolTip = 'Post and Print Prepmt. Invoic&e';
                         Ellipsis = true;
 
                         trigger OnAction()
@@ -1106,7 +1178,9 @@ page 56036 "Sales Order Call Center"
                     }
                     action("Post Prepayment &Credit Memo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Post Prepayment &Credit Memo';
+                        ToolTip = 'Post Prepayment &Credit Memo';
                         Ellipsis = true;
 
                         trigger OnAction()
@@ -1123,7 +1197,9 @@ page 56036 "Sales Order Call Center"
                     }
                     action("Post and Print Prepmt. Cr. Mem&o")
                     {
+                        ApplicationArea = All;
                         Caption = 'Post and Print Prepmt. Cr. Mem&o';
+                        ToolTip = 'Post and Print Prepmt. Cr. Mem&o';
                         Ellipsis = true;
 
                         trigger OnAction()
@@ -1145,7 +1221,9 @@ page 56036 "Sales Order Call Center"
                 Caption = '&Print';
                 action("Order Confirmation")
                 {
+                    ApplicationArea = All;
                     Caption = 'Order Confirmation';
+                    ToolTip = 'Order Confirmation';
                     Ellipsis = true;
                     Image = Print;
 
@@ -1156,7 +1234,9 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Work Order")
                 {
+                    ApplicationArea = All;
                     Caption = 'Work Order';
+                    ToolTip = 'Work Order';
                     Ellipsis = true;
                     Image = Print;
 
@@ -1167,8 +1247,10 @@ page 56036 "Sales Order Call Center"
                 }
                 action("Pick Ticket")
                 {
-                    Caption = 'Pick Ticket';
 
+                    ApplicationArea = All;
+                    Caption = 'Pick Ticket';
+                    ToolTip = 'Pick Ticket';
                     trigger OnAction()
                     begin
                         DocPrint.PrintSalesOrder(Rec, Usage::"Pick Ticket");
@@ -1180,7 +1262,9 @@ page 56036 "Sales Order Call Center"
         {
             action("Drop Shipment Status")
             {
+                ApplicationArea = All;
                 Caption = 'Drop Shipment Status';
+                ToolTip = 'Drop Shipment Status';
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                 //PromotedCategory = "Report";
@@ -1188,7 +1272,9 @@ page 56036 "Sales Order Call Center"
             }
             action("Picking List by Order")
             {
+                ApplicationArea = All;
                 Caption = 'Picking List by Order';
+                ToolTip = 'Picking List by Order';
                 Promoted = true;
                 PromotedCategory = "Report";
                 RunObject = Report "Picking List by Order";

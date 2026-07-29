@@ -87,7 +87,9 @@ page 56009 "Cab. Hoja de Ruta"
         {
             action("&Generate Guide Number")
             {
+                ApplicationArea = All;
                 Caption = '&Generate Guide Number';
+                ToolTip = '&Generate Guide Number';
                 Promoted = true;
                 PromotedCategory = Process;
             }
@@ -96,7 +98,9 @@ page 56009 "Cab. Hoja de Ruta"
                 Caption = '&Post';
                 action("<Action1000000010>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Registrar';
+                    ToolTip = '&Registrar';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -110,7 +114,9 @@ page 56009 "Cab. Hoja de Ruta"
                 }
                 action("&Post And Print")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post And Print';
+                    ToolTip = '&Post And Print';
                     Image = PostPrint;
                     InFooterBar = true;
                     Promoted = true;
@@ -125,7 +131,9 @@ page 56009 "Cab. Hoja de Ruta"
                 }
                 action("Actualizar Lineas")
                 {
+                    ApplicationArea = All;
                     Caption = 'Actualizar Lineas';
+                    ToolTip = 'Actualizar Lineas';
                     Ellipsis = true;
                     Promoted = true;
 

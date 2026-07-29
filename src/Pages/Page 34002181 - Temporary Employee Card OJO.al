@@ -359,7 +359,9 @@ page 34002181 "Temporary Employee Card OJO"
                 Caption = 'E&mployee';
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5222;
                     RunPageLink = "Table Name" = CONST(Employee),
@@ -367,7 +369,9 @@ page 34002181 "Temporary Employee Card OJO"
                 }
                 action(DimensionsA)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     RunObject = Page "Default Dimensions";
                     RunPageLink = "Table ID" = CONST(5200),
@@ -376,49 +380,65 @@ page 34002181 "Temporary Employee Card OJO"
                 }
                 action("&Picture")
                 {
+                    ApplicationArea = All;
                     Caption = '&Picture';
+                    ToolTip = '&Picture';
                     RunObject = Page 5202;
                     RunPageLink = "No." = FIELD("No.");
                 }
                 action("&Alternative Addresses")
                 {
+                    ApplicationArea = All;
                     Caption = '&Alternative Addresses';
+                    ToolTip = '&Alternative Addresses';
                     RunObject = Page 5203;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Relati&ves")
                 {
+                    ApplicationArea = All;
                     Caption = 'Relati&ves';
+                    ToolTip = 'Relati&ves';
                     RunObject = Page 5209;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Mi&sc. Article Information")
                 {
+                    ApplicationArea = All;
                     Caption = 'Mi&sc. Article Information';
+                    ToolTip = 'Mi&sc. Article Information';
                     RunObject = Page 5219;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Con&fidential Information")
                 {
+                    ApplicationArea = All;
                     Caption = 'Con&fidential Information';
+                    ToolTip = 'Con&fidential Information';
                     RunObject = Page 5221;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Q&ualifications")
                 {
+                    ApplicationArea = All;
                     Caption = 'Q&ualifications';
+                    ToolTip = 'Q&ualifications';
                     RunObject = Page 5206;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("A&bsences")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&bsences';
+                    ToolTip = 'A&bsences';
                     RunObject = Page 5211;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("&Related Companies")
                 {
+                    ApplicationArea = All;
                     Caption = '&Related Companies';
+                    ToolTip = '&Related Companies';
                     // TODO: Manual review - Custom page 34002157 is unavailable; the current object with this ID is a table.
                     // Original code preserved below.
                     // RunObject = Page 34002157;
@@ -427,26 +447,34 @@ page 34002181 "Temporary Employee Card OJO"
 
                 action("Absences b&y Categories")
                 {
+                    ApplicationArea = All;
                     Caption = 'Absences b&y Categories';
+                    ToolTip = 'Absences b&y Categories';
                     RunObject = Page 5226;
                     RunPageLink = "No." = FIELD("No."),
                                   "Employee No. Filter" = FIELD("No.");
                 }
                 action("Misc. Articles &Overview")
                 {
+                    ApplicationArea = All;
                     Caption = 'Misc. Articles &Overview';
+                    ToolTip = 'Misc. Articles &Overview';
                     RunObject = Page 5228;
                 }
                 action("Confidential Info. Overvie&w")
                 {
+                    ApplicationArea = All;
                     Caption = 'Confidential Info. Overvie&w';
+                    ToolTip = 'Confidential Info. Overvie&w';
                     RunObject = Page 5229;
                 }
 
                 action("Online Map")
                 {
-                    Caption = 'Online Map';
 
+                    ApplicationArea = All;
+                    Caption = 'Online Map';
+                    ToolTip = 'Online Map';
                     trigger OnAction()
                     begin
                         DisplayMap;
@@ -458,13 +486,17 @@ page 34002181 "Temporary Employee Card OJO"
                 Caption = '&Payroll';
                 action("&Wedge profile")
                 {
+                    ApplicationArea = All;
                     Caption = '&Wedge profile';
+                    ToolTip = '&Wedge profile';
                     RunObject = Page 34002119;
                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
                 action("&Contract")
                 {
+                    ApplicationArea = All;
                     Caption = '&Contract';
+                    ToolTip = '&Contract';
                     RunObject = Page 34002106;
                     RunPageLink = "Empresa cotizacion" = FIELD(Company),
                                   "No. empleado" = FIELD("No.");
@@ -472,7 +504,9 @@ page 34002181 "Temporary Employee Card OJO"
 
                 action("&History")
                 {
+                    ApplicationArea = All;
                     Caption = '&History';
+                    ToolTip = '&History';
                     RunObject = Page 34002123;
                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
@@ -482,7 +516,9 @@ page 34002181 "Temporary Employee Card OJO"
         {
             action(Payroll)
             {
+                ApplicationArea = All;
                 Caption = 'Payroll';
+                ToolTip = 'Payroll';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -493,7 +529,9 @@ page 34002181 "Temporary Employee Card OJO"
             }
             action(Dimensions)
             {
+                ApplicationArea = All;
                 Caption = 'Dimensions';
+                ToolTip = 'Dimensions';
                 Image = Dimensions;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -505,7 +543,9 @@ page 34002181 "Temporary Employee Card OJO"
             }
             action(Qualifications)
             {
+                ApplicationArea = All;
                 Caption = 'Qualifications';
+                ToolTip = 'Qualifications';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -516,7 +556,9 @@ page 34002181 "Temporary Employee Card OJO"
             }
             action(Absenses)
             {
+                ApplicationArea = All;
                 Caption = 'Absenses';
+                ToolTip = 'Absenses';
                 Promoted = true;
                 PromotedCategory = Process;
 

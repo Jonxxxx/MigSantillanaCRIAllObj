@@ -290,7 +290,9 @@ page 56035 "Sales Order Call Center  List"
                 Caption = 'O&rder';
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -305,7 +307,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"),
@@ -314,14 +318,18 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("S&hipments")
                 {
+                    ApplicationArea = All;
                     Caption = 'S&hipments';
+                    ToolTip = 'S&hipments';
                     RunObject = Page "Posted Sales Shipments";
                     RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING("Order No.");
                 }
                 action(Invoices)
                 {
+                    ApplicationArea = All;
                     Caption = 'Invoices';
+                    ToolTip = 'Invoices';
                     Image = Invoice;
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
@@ -329,21 +337,27 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Prepa&yment Invoices")
                 {
+                    ApplicationArea = All;
                     Caption = 'Prepa&yment Invoices';
+                    ToolTip = 'Prepa&yment Invoices';
                     RunObject = Page "Posted Sales Invoices";
                     RunPageLink = "Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action("Prepayment Credi&t Memos")
                 {
+                    ApplicationArea = All;
                     Caption = 'Prepayment Credi&t Memos';
+                    ToolTip = 'Prepayment Credi&t Memos';
                     RunObject = Page "Posted Sales Credit Memos";
                     RunPageLink = "Prepayment Order No." = FIELD("No.");
                     RunPageView = SORTING("Prepayment Order No.");
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
 
                     trigger OnAction()
@@ -353,7 +367,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("A&pprovals")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&pprovals';
+                    ToolTip = 'A&pprovals';
                     Image = Approvals;
 
                     trigger OnAction()
@@ -382,7 +398,9 @@ page 56035 "Sales Order Call Center  List"
 
                 action("Whse. Shipment Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'Whse. Shipment Lines';
+                    ToolTip = 'Whse. Shipment Lines';
                     RunObject = Page "Whse. Shipment Lines";
                     RunPageLink = "Source Type" = CONST(37),
                                   "Source Subtype" = FIELD("Document Type"),
@@ -391,7 +409,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("In&vt. Put-away/Pick Lines")
                 {
+                    ApplicationArea = All;
                     Caption = 'In&vt. Put-away/Pick Lines';
+                    ToolTip = 'In&vt. Put-away/Pick Lines';
                     RunObject = Page "Warehouse Activity List";
                     RunPageLink = "Source Document" = CONST("Sales Order"),
                                   "Source No." = FIELD("No.");
@@ -400,8 +420,10 @@ page 56035 "Sales Order Call Center  List"
 
                 action("Pla&nning")
                 {
-                    Caption = 'Pla&nning';
 
+                    ApplicationArea = All;
+                    Caption = 'Pla&nning';
+                    ToolTip = 'Pla&nning';
                     trigger OnAction()
                     var
                         SalesPlanPage: Page "Sales Order Planning";
@@ -412,8 +434,10 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Order &Promising")
                 {
-                    Caption = 'Order &Promising';
 
+                    ApplicationArea = All;
+                    Caption = 'Order &Promising';
+                    ToolTip = 'Order &Promising';
                     trigger OnAction()
                     var
                         OrderPromisingLine: Record 99000880 temporary;
@@ -432,8 +456,10 @@ page 56035 "Sales Order Call Center  List"
                 Caption = 'F&unctions';
                 action("Create &Whse. Shipment")
                 {
-                    Caption = 'Create &Whse. Shipment';
 
+                    ApplicationArea = All;
+                    Caption = 'Create &Whse. Shipment';
+                    ToolTip = 'Create &Whse. Shipment';
                     trigger OnAction()
                     var
                         GetSourceDocOutbound: Codeunit 5752;
@@ -446,7 +472,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Create Inventor&y Put-away/Pick")
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Inventor&y Put-away/Pick';
+                    ToolTip = 'Create Inventor&y Put-away/Pick';
                     Ellipsis = true;
 
                     trigger OnAction()
@@ -460,7 +488,9 @@ page 56035 "Sales Order Call Center  List"
 
                 action("Send A&pproval Request")
                 {
+                    ApplicationArea = All;
                     Caption = 'Send A&pproval Request';
+                    ToolTip = 'Send A&pproval Request';
                     Image = SendApprovalRequest;
 
                     trigger OnAction()
@@ -473,8 +503,10 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Cancel Approval Re&quest")
                 {
-                    Caption = 'Cancel Approval Re&quest';
 
+                    ApplicationArea = All;
+                    Caption = 'Cancel Approval Re&quest';
+                    ToolTip = 'Cancel Approval Re&quest';
                     trigger OnAction()
                     var
                     //ApprovalMgt: Codeunit "Approvals Mgmt.";
@@ -486,7 +518,9 @@ page 56035 "Sales Order Call Center  List"
 
                 action("Re&lease")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Image = ReleaseDoc;
                     ShortCutKey = 'Ctrl+F9';
 
@@ -499,7 +533,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Re&open")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Image = ReOpen;
 
                     trigger OnAction()
@@ -512,8 +548,10 @@ page 56035 "Sales Order Call Center  List"
 
                 action("Send IC Sales Order Cnfmn.")
                 {
-                    Caption = 'Send IC Sales Order Cnfmn.';
 
+                    ApplicationArea = All;
+                    Caption = 'Send IC Sales Order Cnfmn.';
+                    ToolTip = 'Send IC Sales Order Cnfmn.';
                     trigger OnAction()
                     var
                         // TODO: Manual review - These declarations belong exclusively to a disabled intercompany approval block and cannot restore behavior independently.
@@ -531,7 +569,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("<Action1000000000>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Customer Statement';
+                    ToolTip = '&Customer Statement';
                     Promoted = true;
                     PromotedCategory = "Report";
 
@@ -555,7 +595,9 @@ page 56035 "Sales Order Call Center  List"
                 Caption = 'P&osting';
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Image = TestReport;
 
@@ -566,7 +608,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Ellipsis = true;
                     Image = Post;
                     Promoted = true;
@@ -597,7 +641,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Ellipsis = true;
                     Image = PostPrint;
                     Promoted = true;
@@ -628,7 +674,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Post &Batch")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post &Batch';
+                    ToolTip = 'Post &Batch';
                     Ellipsis = true;
                     Image = PostBatch;
                     Promoted = true;
@@ -646,7 +694,9 @@ page 56035 "Sales Order Call Center  List"
                 Caption = '&Print';
                 action("Order Confirmation")
                 {
+                    ApplicationArea = All;
                     Caption = 'Order Confirmation';
+                    ToolTip = 'Order Confirmation';
                     Ellipsis = true;
                     Image = Print;
                     Promoted = true;
@@ -659,7 +709,9 @@ page 56035 "Sales Order Call Center  List"
                 }
                 action("Work Order")
                 {
+                    ApplicationArea = All;
                     Caption = 'Work Order';
+                    ToolTip = 'Work Order';
                     Ellipsis = true;
                     Image = Print;
 
@@ -674,7 +726,9 @@ page 56035 "Sales Order Call Center  List"
         {
             action("Sales Reservation Avail.")
             {
+                ApplicationArea = All;
                 Caption = 'Sales Reservation Avail.';
+                ToolTip = 'Sales Reservation Avail.';
                 Promoted = true;
                 PromotedCategory = "Report";
                 RunObject = Report "Sales Reservation Avail.";

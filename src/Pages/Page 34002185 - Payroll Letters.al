@@ -86,7 +86,9 @@ page 34002185 "Payroll Letters"
         {
             action(RunReport)
             {
+                ApplicationArea = All;
                 Caption = 'Run Report';
+                ToolTip = 'Run Report';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = Process;
@@ -100,6 +102,9 @@ page 34002185 "Payroll Letters"
             }
             action(Configurar)
             {
+                ApplicationArea = All;
+                Caption = 'Configurar';
+                ToolTip = 'Configurar';
                 Image = Setup;
                 Promoted = true;
                 PromotedCategory = Process;

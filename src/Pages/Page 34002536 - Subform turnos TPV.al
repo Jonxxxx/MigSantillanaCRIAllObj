@@ -104,7 +104,9 @@ page 34002536 "Subform turnos TPV"
         {
             action("Abrir turno")
             {
+                ApplicationArea = All;
                 Caption = 'Abrir turno';
+                ToolTip = 'Abrir turno';
                 Image = Open;
 
                 trigger OnAction()
@@ -116,7 +118,9 @@ page 34002536 "Subform turnos TPV"
             }
             action("Cerrar Turno")
             {
+                ApplicationArea = All;
                 Caption = 'Cerrar Turno';
+                ToolTip = 'Cerrar Turno';
                 Image = Close;
 
                 trigger OnAction()
@@ -133,7 +137,9 @@ page 34002536 "Subform turnos TPV"
             }
             action("Declaracion de caja")
             {
+                ApplicationArea = All;
                 Caption = 'Declaracion de caja';
+                ToolTip = 'Declaracion de caja';
                 Image = InsertCurrency;
 
                 trigger OnAction()
@@ -153,7 +159,9 @@ page 34002536 "Subform turnos TPV"
             }
             action("Informe resumen del turno")
             {
+                ApplicationArea = All;
                 Caption = 'Informe resumen del turno';
+                ToolTip = 'Informe resumen del turno';
                 Image = Sales;
 
                 trigger OnAction()

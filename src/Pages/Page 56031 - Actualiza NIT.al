@@ -22,7 +22,9 @@ page 56031 "Actualiza NIT"
         {
             action(Aceptar)
             {
+                ApplicationArea = All;
                 Caption = 'Aceptar';
+                ToolTip = 'Aceptar';
                 Promoted = true;
                 PromotedCategory = Process;
 
@@ -44,7 +46,9 @@ page 56031 "Actualiza NIT"
             }
             action("&Cancelar")
             {
+                ApplicationArea = All;
                 Caption = '&Cancelar';
+                ToolTip = '&Cancelar';
                 Promoted = true;
                 PromotedCategory = Process;
 

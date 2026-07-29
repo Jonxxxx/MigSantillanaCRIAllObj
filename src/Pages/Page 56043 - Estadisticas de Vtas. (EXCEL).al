@@ -144,6 +144,9 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
         {
             action("Generar Excel")
             {
+                ApplicationArea = All;
+                Caption = 'Generar Excel';
+                ToolTip = 'Generar Excel';
                 Image = "Action";
                 Promoted = true;
                 PromotedCategory = "Report";

@@ -805,7 +805,9 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 Image = Invoice;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Enabled = ESACC_C59_Enabled;
                     Image = Statistics;
                     Promoted = true;
@@ -825,7 +827,9 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Enabled = ESACC_C116_Enabled;
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
@@ -839,7 +843,9 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 }
                 action(Customer)
                 {
+                    ApplicationArea = All;
                     Caption = 'Customer';
+                    ToolTip = 'Customer';
                     Enabled = ESACC_C60_Enabled;
                     Image = Customer;
                     RunObject = Page 21;
@@ -849,7 +855,9 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Enabled = ESACC_C61_Enabled;
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
@@ -865,15 +873,15 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 Image = ReleaseDoc;
                 action(Release1)
                 {
-                    ApplicationArea = Suite;
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Image = ReleaseDoc;
                     Promoted = true;
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
                     PromotedOnly = true;
                     ShortCutKey = 'Ctrl+F9';
-                    ToolTip = 'Release the document to the next stage of processing. When a document is released, it will be included in all availability calculations from the expected receipt date of the items. You must reopen the document before you can make changes to it.';
 
                     trigger OnAction()
                     var
@@ -884,14 +892,14 @@ page 34002556 "Ficha Facturas Pdtes POS"
                 }
                 action(Reopen)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Enabled = Status <> Status::Open;
                     Image = ReOpen;
                     Promoted = true;
                     PromotedCategory = Category5;
                     PromotedOnly = true;
-                    ToolTip = 'Reopen the document to change it after it has been approved. Approved documents have the Released status and must be opened before they can be changed.';
 
                     trigger OnAction()
                     var

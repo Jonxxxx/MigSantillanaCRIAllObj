@@ -212,7 +212,9 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
         {
             action("<Action1000000021>")
             {
+                ApplicationArea = All;
                 Caption = '&Abrir Documento';
+                ToolTip = '&Abrir Documento';
                 Image = View;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -232,7 +234,9 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                 Caption = 'F&unctions';
                 action("<Action1000000025>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Sugerir Cantidad a Anular';
+                    ToolTip = '&Sugerir Cantidad a Anular';
                     Image = SuggestLines;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -250,7 +254,9 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                 }
                 action("<Action1000000027>")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&ctualizar BO';
+                    ToolTip = 'A&ctualizar BO';
                     Image = RefreshPlanningLine;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -313,7 +319,9 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                 }
                 action("<Action1000000033>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Borrar Pedidos enviados';
+                    ToolTip = '&Borrar Pedidos enviados';
                     Image = Delete;
 
                     trigger OnAction()

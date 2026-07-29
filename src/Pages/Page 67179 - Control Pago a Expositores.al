@@ -42,7 +42,9 @@ page 67179 "Control Pago a Expositores"
                 Caption = 'Filters';
                 action("pendiente pago")
                 {
+                    ApplicationArea = All;
                     Caption = 'Filtrar los expositores con eventos Pendientes de Pago';
+                    ToolTip = 'Filtrar los expositores con eventos Pendientes de Pago';
                     Image = "Filter";
                     Promoted = true;
                     PromotedCategory = Process;
@@ -54,7 +56,9 @@ page 67179 "Control Pago a Expositores"
                 }
                 action(todos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Eliminar Filtro de expositores con eventos Pendientes de Pago';
+                    ToolTip = 'Eliminar Filtro de expositores con eventos Pendientes de Pago';
                     Image = "Filter";
                     Promoted = true;
                     PromotedCategory = Process;
@@ -66,7 +70,9 @@ page 67179 "Control Pago a Expositores"
                 }
                 action(pagosptes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ver lista de los pagos pendientes de todos los expositores';
+                    ToolTip = 'Ver lista de los pagos pendientes de todos los expositores';
                     Image = VendorLedger;
                     Promoted = true;
                     PromotedCategory = Process;

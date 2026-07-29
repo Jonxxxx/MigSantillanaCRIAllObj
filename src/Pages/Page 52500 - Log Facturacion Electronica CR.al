@@ -78,7 +78,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento Sin Firma")
             {
+                ApplicationArea = All;
                 Caption = '&Documento Sin Firma';
+                ToolTip = '&Documento Sin Firma';
                 Ellipsis = true;
                 Image = XMLFile;
                 Promoted = true;
@@ -102,7 +104,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento  Firmado")
             {
+                ApplicationArea = All;
                 Caption = '&Documento  Firmado';
+                ToolTip = '&Documento  Firmado';
                 Ellipsis = true;
                 Image = XMLFile;
                 Promoted = true;
@@ -126,7 +130,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento Json Enviado")
             {
+                ApplicationArea = All;
                 Caption = '&Documento Json Enviado';
+                ToolTip = '&Documento Json Enviado';
                 Ellipsis = true;
                 Image = TestFile;
                 Promoted = true;
@@ -150,7 +156,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento Json Recibido")
             {
+                ApplicationArea = All;
                 Caption = '&Documento Json Recibido';
+                ToolTip = '&Documento Json Recibido';
                 Ellipsis = true;
                 Image = TestFile;
                 Promoted = true;
@@ -174,7 +182,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento Xml Respuesta")
             {
+                ApplicationArea = All;
                 Caption = '&Documento Xml Respuesta';
+                ToolTip = '&Documento Xml Respuesta';
                 Ellipsis = true;
                 Image = XMLFile;
                 Promoted = true;
@@ -198,7 +208,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Documento PDF Generado")
             {
+                ApplicationArea = All;
                 Caption = '&Documento PDF Generado';
+                ToolTip = '&Documento PDF Generado';
                 Ellipsis = true;
                 Image = Document;
                 Promoted = true;
@@ -222,7 +234,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Comprobar Documento Electronico")
             {
+                ApplicationArea = All;
                 Caption = '<&Comprobar Documento  Electronico>';
+                ToolTip = '<&Comprobar Documento  Electronico>';
                 Ellipsis = true;
                 Image = ElectronicNumber;
                 Promoted = true;
@@ -260,7 +274,9 @@ page 52500 "Log Facturacion Electronica CR"
             }
             action("Enviar Documentos Elect. lotes")
             {
+                ApplicationArea = All;
                 Caption = '&Enviar Documentos Elect. lotes';
+                ToolTip = '&Enviar Documentos Elect. lotes';
                 Image = Change;
 
                 trigger OnAction()

@@ -91,7 +91,9 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
                 Caption = '&Action';
                 action("&Copy all")
                 {
+                    ApplicationArea = All;
                     Caption = '&Copy all';
+                    ToolTip = '&Copy all';
                     Image = CopyFromChartOfAccounts;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -119,7 +121,9 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
 
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimentions';
+                    ToolTip = 'Dimentions';
                     Image = Dimensions;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -136,7 +140,9 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
         {
             action("&Prorrated Wedges")
             {
+                ApplicationArea = All;
                 Caption = '&Prorrated Wedges';
+                ToolTip = '&Prorrated Wedges';
                 Image = SetupPayment;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -188,7 +188,9 @@ page 34002208 "Cab. Planif. Entrenamiento"
                 Image = DateRange;
                 action(Agenda)
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Schedule';
+                    ToolTip = 'Create Schedule';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;

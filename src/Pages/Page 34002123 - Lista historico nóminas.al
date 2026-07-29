@@ -80,7 +80,9 @@ page 34002123 "Lista historico nominas"
                 Caption = '&Nomina';
                 action("Calculate payroll")
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate payroll';
+                    ToolTip = 'Calculate payroll';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -95,7 +97,9 @@ page 34002123 "Lista historico nominas"
                 }
                 action("Post to Journal")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post to Journal';
+                    ToolTip = 'Post to Journal';
                     Ellipsis = true;
                     Image = PostInventoryToGL;
                     Promoted = true;
@@ -107,7 +111,9 @@ page 34002123 "Lista historico nominas"
 
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -125,7 +131,9 @@ page 34002123 "Lista historico nominas"
         {
             action(Print)
             {
+                ApplicationArea = All;
                 Caption = 'Print';
+                ToolTip = 'Print';
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";

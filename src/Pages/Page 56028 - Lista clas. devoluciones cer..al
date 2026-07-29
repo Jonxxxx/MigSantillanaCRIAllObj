@@ -77,7 +77,9 @@ page 56028 "Lista clas. devoluciones cer."
         {
             action("<Action1000000009>")
             {
+                ApplicationArea = All;
                 Caption = '&Create documents';
+                ToolTip = '&Create documents';
                 Ellipsis = true;
                 Image = Post;
                 Promoted = true;
@@ -94,7 +96,9 @@ page 56028 "Lista clas. devoluciones cer."
             }
             action("<Action1000000010>")
             {
+                ApplicationArea = All;
                 Caption = '&Print';
+                ToolTip = '&Print';
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";
@@ -110,7 +114,9 @@ page 56028 "Lista clas. devoluciones cer."
             }
             action("Imprimir documentos generados")
             {
+                ApplicationArea = All;
                 Caption = 'Imprimir documentos generados';
+                ToolTip = 'Imprimir documentos generados';
                 Image = PrintChecklistReport;
                 Promoted = true;
                 PromotedCategory = "Report";

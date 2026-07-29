@@ -397,7 +397,9 @@ page 34002115 "Ficha Acciones de personal"
                 Caption = 'Authorizations';
                 action(Revisado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Reviewed';
+                    ToolTip = 'Reviewed';
                     Image = Approve;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -434,7 +436,9 @@ page 34002115 "Ficha Acciones de personal"
                 }
                 action(Autorizado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Authorize';
+                    ToolTip = 'Authorize';
                     Image = Approve;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -454,7 +458,9 @@ page 34002115 "Ficha Acciones de personal"
                 }
                 action(Print)
                 {
+                    ApplicationArea = All;
                     Caption = 'Print';
+                    ToolTip = 'Print';
                     Image = Print;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -473,7 +479,9 @@ page 34002115 "Ficha Acciones de personal"
                 }
                 action(archivar)
                 {
+                    ApplicationArea = All;
                     Caption = 'Void';
+                    ToolTip = 'Void';
                     Image = VoidRegister;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;

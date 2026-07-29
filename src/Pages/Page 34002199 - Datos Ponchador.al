@@ -74,7 +74,9 @@ page 34002199 "Datos Ponchador"
                 Image = LinesFromTimeSheet;
                 action("Import data from T&A Clock")
                 {
+                    ApplicationArea = All;
                     Caption = 'Import data from T&A Clock';
+                    ToolTip = 'Import data from T&A Clock';
                     Image = LinesFromTimesheet;
                     Promoted = true;
                     PromotedCategory = Process;

@@ -140,7 +140,9 @@ page 51003 "Ficha Cupon"
             }
             action("G&rupo Negocio")
             {
+                ApplicationArea = All;
                 Caption = 'Business Group';
+                ToolTip = 'Business Group';
                 Image = BreakRulesList;
                 Promoted = true;
                 PromotedCategory = Process;

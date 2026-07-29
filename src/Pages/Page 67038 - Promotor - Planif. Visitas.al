@@ -82,7 +82,9 @@ page 67038 "Promotor - Planif. Visitas"
                 Caption = 'F&unctions';
                 action("<Action1905623604>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Edit Line';
+                    ToolTip = '&Edit Line';
                     Ellipsis = true;
                     Promoted = true;
                     PromotedCategory = Process;

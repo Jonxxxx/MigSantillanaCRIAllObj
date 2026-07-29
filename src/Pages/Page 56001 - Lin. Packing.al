@@ -61,8 +61,10 @@ page 56001 "Lin. Packing"
         {
             action("<Action1000000008>")
             {
-                Caption = '&Eliminar Caja';
 
+                ApplicationArea = All;
+                Caption = '&Eliminar Caja';
+                ToolTip = '&Eliminar Caja';
                 trigger OnAction()
                 begin
                     IF CONFIRM(txt0001, FALSE) THEN BEGIN
@@ -73,7 +75,9 @@ page 56001 "Lin. Packing"
 
             action("<Action1000000011>")
             {
+                ApplicationArea = All;
                 Caption = '&Box Content';
+                ToolTip = '&Box Content';
                 InFooterBar = true;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -93,8 +97,10 @@ page 56001 "Lin. Packing"
                 Caption = '&Imprimir';
                 action("<Action1000000006>")
                 {
-                    Caption = '&Print Box Tag';
 
+                    ApplicationArea = All;
+                    Caption = '&Print Box Tag';
+                    ToolTip = '&Print Box Tag';
                     trigger OnAction()
                     begin
                         ConfSant.GET;
@@ -106,7 +112,9 @@ page 56001 "Lin. Packing"
             }
             action("<Action1000000012>")
             {
+                ApplicationArea = All;
                 Caption = '&Reabrir Caja';
+                ToolTip = '&Reabrir Caja';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

@@ -136,7 +136,9 @@ page 34002233 "Asistentes entrenamientos"
                 Caption = '&Empleado';
                 action(Notify)
                 {
+                    ApplicationArea = All;
                     Caption = 'Notify';
+                    ToolTip = 'Notify';
                     Image = SendConfirmation;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -151,7 +153,9 @@ page 34002233 "Asistentes entrenamientos"
 
                 action("Mark confirmation")
                 {
+                    ApplicationArea = All;
                     Caption = 'Mark confirmation';
+                    ToolTip = 'Mark confirmation';
                     Image = Confirm;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -159,7 +163,9 @@ page 34002233 "Asistentes entrenamientos"
 
                 action("Mark attendance")
                 {
+                    ApplicationArea = All;
                     Caption = 'Mark attendance';
+                    ToolTip = 'Mark attendance';
                     Image = Approve;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;

@@ -218,7 +218,9 @@ page 67052 "Colegio - Adopciones Detalles"
                 Visible = false;
                 action(FProd)
                 {
+                    ApplicationArea = All;
                     Caption = '&Item Card';
+                    ToolTip = '&Item Card';
                     Image = Edit;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -233,7 +235,9 @@ page 67052 "Colegio - Adopciones Detalles"
 
                 action(AdopComp)
                 {
+                    ApplicationArea = All;
                     Caption = 'Competency Items';
+                    ToolTip = 'Competency Items';
                     Image = BulletList;
                     Promoted = true;
                     PromotedCategory = Process;

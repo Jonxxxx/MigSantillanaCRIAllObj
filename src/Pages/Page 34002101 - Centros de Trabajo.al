@@ -59,7 +59,9 @@ page 34002101 "Centros de Trabajo"
         {
             action("&Libro matricula")
             {
+                ApplicationArea = All;
                 Caption = '&Libro matricula';
+                ToolTip = '&Libro matricula';
                 Promoted = true;
                 PromotedCategory = Process;
                 //TODO Ver 

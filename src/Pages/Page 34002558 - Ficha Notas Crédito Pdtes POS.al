@@ -656,7 +656,9 @@ page 34002558 "Ficha Notas Credito Pdtes POS"
                 Image = CreditMemo;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Enabled = ESACC_C51_Enabled;
                     Image = Statistics;
                     Promoted = true;
@@ -676,7 +678,9 @@ page 34002558 "Ficha Notas Credito Pdtes POS"
                 }
                 action(Customer)
                 {
+                    ApplicationArea = All;
                     Caption = 'Customer';
+                    ToolTip = 'Customer';
                     Enabled = ESACC_C52_Enabled;
                     Image = EditLines;
                     RunObject = Page 21;
@@ -686,7 +690,9 @@ page 34002558 "Ficha Notas Credito Pdtes POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Enabled = ESACC_C53_Enabled;
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
@@ -697,7 +703,9 @@ page 34002558 "Ficha Notas Credito Pdtes POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Enabled = ESACC_C105_Enabled;
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
@@ -711,7 +719,9 @@ page 34002558 "Ficha Notas Credito Pdtes POS"
                 }
                 action(Approvals)
                 {
+                    ApplicationArea = All;
                     Caption = 'Approvals';
+                    ToolTip = 'Approvals';
                     Enabled = ESACC_C121_Enabled;
                     Image = Approvals;
                     Visible = ESACC_C121_Visible;

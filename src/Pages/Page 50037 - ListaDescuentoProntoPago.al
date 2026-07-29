@@ -68,7 +68,9 @@ page 50037 ListaDescuentoProntoPago
         {
             action("Print Credit Memo (Discount Soon Payment) v2")
             {
+                ApplicationArea = All;
                 Caption = 'Print Credit Memo (Discount Soon Payment) v2';
+                ToolTip = 'Print Credit Memo (Discount Soon Payment) v2';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
@@ -87,7 +89,9 @@ page 50037 ListaDescuentoProntoPago
             }
             action("Discount Soon Payment by customer v2")
             {
+                ApplicationArea = All;
                 Caption = 'Discount Soon Payment by customer v2';
+                ToolTip = 'Discount Soon Payment by customer v2';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";

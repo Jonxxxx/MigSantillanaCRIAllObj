@@ -140,7 +140,9 @@ page 67109 "Registrar Asistencias"
                 Caption = '&Event';
                 action("<Action1000000022>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Edit';
+                    ToolTip = 'Edit';
                     Image = Edit;
                     Promoted = true;
                     PromotedIsBig = true;
@@ -152,7 +154,9 @@ page 67109 "Registrar Asistencias"
                 }
                 action("Register Assistants")
                 {
+                    ApplicationArea = All;
                     Caption = 'Register Assistants';
+                    ToolTip = 'Register Assistants';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedIsBig = true;

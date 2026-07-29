@@ -109,7 +109,9 @@ page 52502 "Seguimiento Ped. Vta. Arch."
                 Caption = '&Line';
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     ShortCutKey = 'Shift+F5';
 

@@ -46,21 +46,27 @@ page 67005 "Productos equivalentes"
                 Caption = '&Item';
                 action("&Item card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Item card';
+                    ToolTip = '&Item card';
                     RunObject = Page 30;
                     RunPageLink = "No." = FIELD("Cod. Producto");
                     ShortCutKey = 'Shift+F5';
                 }
                 action("&Equivalent Item card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Equivalent Item card';
+                    ToolTip = '&Equivalent Item card';
                     RunObject = Page 30;
                     RunPageLink = "No." = FIELD("Cod. Producto Anterior");
                 }
 
                 action("&Import Items")
                 {
+                    ApplicationArea = All;
                     Caption = '&Import Items';
+                    ToolTip = '&Import Items';
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = Process;

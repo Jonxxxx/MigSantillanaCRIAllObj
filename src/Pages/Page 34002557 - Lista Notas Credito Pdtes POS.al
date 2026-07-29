@@ -281,7 +281,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 Image = CreditMemo;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Enabled = ESACC_C1102601021_Enabled;
                     Image = Statistics;
                     Promoted = true;
@@ -301,7 +303,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Enabled = ESACC_C1102601023_Enabled;
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
@@ -312,7 +316,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Enabled = ESACC_C1102601024_Enabled;
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
@@ -325,7 +331,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action(Approvals)
                 {
+                    ApplicationArea = All;
                     Caption = 'Approvals';
+                    ToolTip = 'Approvals';
                     Enabled = ESACC_C1102601025_Enabled;
                     Image = Approvals;
                     Visible = ESACC_C1102601025_Visible;
@@ -341,7 +349,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Log de Documentos Electronicos")
                 {
+                    ApplicationArea = All;
                     Caption = '&Log de Documentos Electronicos';
+                    ToolTip = '&Log de Documentos Electronicos';
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -359,7 +369,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 Image = ReleaseDoc;
                 action("Re&lease")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Enabled = ESACC_C1102601017_Enabled;
                     Image = ReleaseDoc;
                     ShortCutKey = 'Ctrl+F9';
@@ -374,7 +386,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Re&open")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Enabled = ESACC_C1102601018_Enabled;
                     Image = ReOpen;
                     Visible = ESACC_C1102601018_Visible;
@@ -393,7 +407,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 Image = "Action";
                 action("Send A&pproval Request")
                 {
+                    ApplicationArea = All;
                     Caption = 'Send A&pproval Request';
+                    ToolTip = 'Send A&pproval Request';
                     Enabled = ESACC_C1102601014_Enabled;
                     Image = SendApprovalRequest;
                     Visible = ESACC_C1102601014_Visible;
@@ -407,7 +423,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Cancel Approval Re&quest")
                 {
+                    ApplicationArea = All;
                     Caption = 'Cancel Approval Re&quest';
+                    ToolTip = 'Cancel Approval Re&quest';
                     Enabled = ESACC_C1102601015_Enabled;
                     Image = Cancel;
                     Visible = ESACC_C1102601015_Visible;
@@ -427,7 +445,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 Image = Post;
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Enabled = ESACC_C51_Enabled;
                     Image = TestReport;
@@ -440,7 +460,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Enabled = ESACC_C52_Enabled;
                     Image = PostOrder;
                     Promoted = true;
@@ -456,7 +478,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Enabled = ESACC_C53_Enabled;
                     Image = PostPrint;
                     Promoted = true;
@@ -472,7 +496,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Post &Batch")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post &Batch';
+                    ToolTip = 'Post &Batch';
                     Ellipsis = true;
                     Enabled = ESACC_C54_Enabled;
                     Image = PostBatch;
@@ -489,7 +515,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Remove From Job Queue")
                 {
+                    ApplicationArea = All;
                     Caption = 'Remove From Job Queue';
+                    ToolTip = 'Remove From Job Queue';
                     Enabled = ESACC_C3_Enabled;
                     Image = RemoveLine;
                     Visible = JobQueueActive;
@@ -505,7 +533,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 Caption = 'Gestion SICPOS';
                 action("Registrar Ventas en Lote DSPOS")
                 {
-                    ApplicationArea = Suite, Basic;
+                    ApplicationArea = All;
+                    Caption = 'Registrar Ventas en Lote DSPOS';
+                    ToolTip = 'Registrar Ventas en Lote DSPOS';
                     Image = Process;
 
                     trigger OnAction()
@@ -515,7 +545,9 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                 }
                 action("Convertir Pedidos DSPOS")
                 {
-                    ApplicationArea = Suite, Basic;
+                    ApplicationArea = All;
+                    Caption = 'Convertir Pedidos DSPOS';
+                    ToolTip = 'Convertir Pedidos DSPOS';
                     Image = Process;
 
                     trigger OnAction()

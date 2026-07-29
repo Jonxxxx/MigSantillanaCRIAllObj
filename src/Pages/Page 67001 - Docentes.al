@@ -321,7 +321,9 @@ page 67001 Docentes
                 Caption = '&Teacher';
                 action("&Customer's Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Customer''s Card';
+                    ToolTip = '&Customer''s Card';
                     Image = EditCustomer;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -331,7 +333,9 @@ page 67001 Docentes
                 }
                 action("&Vendor Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Vendor Card';
+                    ToolTip = '&Vendor Card';
                     Image = Vendor;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -342,7 +346,9 @@ page 67001 Docentes
 
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -354,7 +360,9 @@ page 67001 Docentes
 
                 action("&Schools")
                 {
+                    ApplicationArea = All;
                     Caption = '&Schools';
+                    ToolTip = '&Schools';
                     Image = AddToHome;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -364,7 +372,9 @@ page 67001 Docentes
                 }
                 action(Hobbies)
                 {
+                    ApplicationArea = All;
                     Caption = 'Hobbies';
+                    ToolTip = 'Hobbies';
                     Image = BusinessRelation;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -375,7 +385,9 @@ page 67001 Docentes
 
                 action("&Specialities")
                 {
+                    ApplicationArea = All;
                     Caption = '&Specialities';
+                    ToolTip = '&Specialities';
                     Image = Certificate;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -385,7 +397,9 @@ page 67001 Docentes
                 }
                 action("Workshop - Event")
                 {
+                    ApplicationArea = All;
                     Caption = 'Workshop - Event';
+                    ToolTip = 'Workshop - Event';
                     Image = Workdays;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -396,7 +410,9 @@ page 67001 Docentes
             }
             action("&Exponent")
             {
+                ApplicationArea = All;
                 Caption = '&Exponent';
+                ToolTip = '&Exponent';
                 Image = ContactReference;
                 RunObject = Page 67100;
                 RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
@@ -406,7 +422,9 @@ page 67001 Docentes
                 Caption = '&Historics';
                 action("CDS History")
                 {
+                    ApplicationArea = All;
                     Caption = 'CDS History';
+                    ToolTip = 'CDS History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -415,7 +433,9 @@ page 67001 Docentes
                 }
                 action("Teacher - Hobbies History")
                 {
+                    ApplicationArea = All;
                     Caption = 'Teacher - Hobbies History';
+                    ToolTip = 'Teacher - Hobbies History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -424,7 +444,9 @@ page 67001 Docentes
                 }
                 action("Teacher - Specialties History")
                 {
+                    ApplicationArea = All;
                     Caption = 'Teacher - Specialties History';
+                    ToolTip = 'Teacher - Specialties History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -433,7 +455,9 @@ page 67001 Docentes
                 }
                 action("School - Teacher History")
                 {
+                    ApplicationArea = All;
                     Caption = 'School - Teacher History';
+                    ToolTip = 'School - Teacher History';
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -448,7 +472,9 @@ page 67001 Docentes
                 Caption = '&Actions';
                 action("&Create as Customer")
                 {
+                    ApplicationArea = All;
                     Caption = '&Create as Customer';
+                    ToolTip = '&Create as Customer';
                     Image = AddContacts;
                     Promoted = true;
                     PromotedCategory = Process;

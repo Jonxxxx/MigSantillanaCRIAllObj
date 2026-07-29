@@ -158,8 +158,10 @@ page 67015 "Programac. Talleres y Eventos"
         {
             action(Asistentes)
             {
-                Caption = 'Asistentes';
 
+                ApplicationArea = All;
+                Caption = 'Asistentes';
+                ToolTip = 'Asistentes';
                 trigger OnAction()
                 begin
 

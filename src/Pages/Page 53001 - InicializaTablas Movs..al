@@ -18,7 +18,9 @@ page 53001 "InicializaTablas Movs."
         {
             action("<Action1000000003>")
             {
+                ApplicationArea = All;
                 Caption = 'Initialize Entries';
+                ToolTip = 'Initialize Entries';
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;

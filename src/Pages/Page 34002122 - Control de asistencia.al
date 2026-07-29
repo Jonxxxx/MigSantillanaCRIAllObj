@@ -275,7 +275,9 @@ page 34002122 "Control de asistencia"
                 Image = HumanResources;
                 action(ImportDataManually)
                 {
+                    ApplicationArea = All;
                     Caption = 'Import data manually';
+                    ToolTip = 'Import data manually';
                     Image = ImportDatabase;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -288,7 +290,9 @@ page 34002122 "Control de asistencia"
                 }
                 action(ImportAuto)
                 {
+                    ApplicationArea = All;
                     Caption = 'Import data from T&A Clock';
+                    ToolTip = 'Import data from T&A Clock';
                     Image = LinesFromTimesheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -305,7 +309,9 @@ page 34002122 "Control de asistencia"
                 }
                 action("Page Distrib. Control de asis. ")
                 {
+                    ApplicationArea = All;
                     Caption = 'Distrib. Job attendance control';
+                    ToolTip = 'Distrib. Job attendance control';
                     Image = Splitlines;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -332,7 +338,9 @@ page 34002122 "Control de asistencia"
                 }
                 action("Page Datos Ponchador")
                 {
+                    ApplicationArea = All;
                     Caption = 'View Time attendance';
+                    ToolTip = 'View Time attendance';
                     Image = ViewWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -343,7 +351,9 @@ page 34002122 "Control de asistencia"
                 }
                 action(GenerarCalculo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calc payroll payment';
+                    ToolTip = 'Calc payroll payment';
                     Image = CalculateRemainingUsage;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -360,7 +370,9 @@ page 34002122 "Control de asistencia"
                 }
                 action(ProcesarDatosPonchador)
                 {
+                    ApplicationArea = All;
                     Caption = 'Process batch punch';
+                    ToolTip = 'Process batch punch';
                     Image = ExecuteAndPostBatch;
                     Promoted = true;
                     PromotedCategory = Process;

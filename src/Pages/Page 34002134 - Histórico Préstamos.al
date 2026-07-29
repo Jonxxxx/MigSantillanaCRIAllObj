@@ -139,7 +139,9 @@ page 34002134 "Historico Prestamos"
         {
             action("&Imprimir")
             {
+                ApplicationArea = All;
                 Caption = '&Imprimir';
+                ToolTip = '&Imprimir';
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";

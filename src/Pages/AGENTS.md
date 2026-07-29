@@ -1,30 +1,100 @@
-## Page field control normalization
+## Pages
 
-* Preserve page IDs, page names, page types, source tables, captions, layouts, actions, parts, triggers, procedures, variables, visibility, editability, permissions, and existing business logic.
+* Preserve page IDs, page names, page types, source tables, source-table temporary behavior, captions, layouts, actions, parts, triggers, procedures, variables, permissions, visibility, editability, and existing business logic.
 * Do not convert pages to page extensions.
-* Do not modify page extensions as part of this task.
-* Do not rename controls or source-table fields.
-* Do not modify field data types, table fields, table relations, filters, validations, calculations, actions, or page behavior.
+* Do not modify page extensions unless explicitly requested.
+* Do not rename controls, fields, groups, actions, or variables.
+* Do not modify page IDs, object names, `PageType`, `SourceTable`, `SourceTableTemporary`, `UsageCategory`, `CardPageId`, `Editable`, `InsertAllowed`, `ModifyAllowed`, or `DeleteAllowed`.
 * Do not perform unrelated formatting or refactoring.
+* Preserve all existing comments and version markers unless they are duplicates created by the current task.
+* All new code comments must be written in English.
 
-### Direct SourceTable fields
+## Page action normalization
 
-For every `field(ControlName; SourceExpression)` control in a `page` object under `src/pages`, determine whether `SourceExpression` is a direct field of the page `SourceTable`.
-
-When the source expression is a direct field of `Rec`, normalize it to:
+Process every control declared as:
 
 ```al
-field("<Field Name>"; Rec."<Field Name>")
+action(ActionName)
 {
-    ApplicationArea = All;
-    ToolTip = '<Field Name>';
 }
 ```
+
+inside the `actions` section of a `page` object under `src/pages`.
+
+Do not process:
+
+* `actionref(...)`.
+* Action groups.
+* Action areas.
+* Separators.
+* Fields.
+* Parts.
+* User controls.
+* `pageextension` objects.
+* Actions outside a `page` object.
+
+Every page action must contain exactly:
+
+```al
+ApplicationArea = All;
+Caption = '<Resolved action text>';
+ToolTip = '<Resolved action text>';
+```
+
+The Caption and ToolTip must contain the same resolved text.
+
+## Action text resolution
+
+Determine the action text using this exact priority:
+
+### 1. Existing static Caption
+
+When the action already has a static Caption:
+
+```al
+Caption = 'Create Invoice';
+```
+
+use that exact text for both Caption and ToolTip:
+
+```al
+ApplicationArea = All;
+Caption = 'Create Invoice';
+ToolTip = 'Create Invoice';
+```
+
+Preserve the existing Caption unchanged.
+
+Replace an existing different ToolTip with the Caption text.
+
+### 2. Existing static ToolTip and no Caption
+
+When the action does not have a Caption but has a static ToolTip:
+
+```al
+ToolTip = '&Gift';
+```
+
+use the exact ToolTip text as the new Caption and preserve it as ToolTip:
+
+```al
+ApplicationArea = All;
+Caption = '&Gift';
+ToolTip = '&Gift';
+```
+
+Do not remove ampersands, punctuation, capitalization, accents, abbreviations,
+or spelling mistakes.
+
+### 3. No Caption and no ToolTip
+
+When the action has neither Caption nor ToolTip, derive both values from the
+exact action identifier.
 
 Example:
 
 ```al
-field("Object Type"; "Object Type")
+action(PrintDocument)
 {
 }
 ```
@@ -32,17 +102,18 @@ field("Object Type"; "Object Type")
 must become:
 
 ```al
-field("Object Type"; Rec."Object Type")
+action(PrintDocument)
 {
     ApplicationArea = All;
-    ToolTip = 'Object Type';
+    Caption = 'PrintDocument';
+    ToolTip = 'PrintDocument';
 }
 ```
 
-Example with an unquoted field identifier:
+Example with a quoted action identifier:
 
 ```al
-field(Code; Code)
+action("Print Document")
 {
 }
 ```
@@ -50,187 +121,227 @@ field(Code; Code)
 must become:
 
 ```al
-field(Code; Rec.Code)
+action("Print Document")
 {
     ApplicationArea = All;
-    ToolTip = 'Code';
+    Caption = 'Print Document';
+    ToolTip = 'Print Document';
 }
 ```
 
-### Rec qualification
+Remove only the surrounding double quotes from the identifier.
 
-* Add the `Rec.` qualifier only when the source expression is a direct field of the page `SourceTable`.
-* Use `Rec."<Field Name>"` for quoted field identifiers.
-* Use `Rec.FieldName` for valid unquoted field identifiers.
-* Do not add a second qualifier when the source expression already begins with `Rec.`.
-* Do not change an existing correct `Rec.` qualification.
-* Do not qualify a field with `Rec.` solely because the control name matches the source expression.
-* Verify the field against the page `SourceTable` or available AL symbols before changing it.
+Do not split PascalCase identifiers into words.
 
-Do not add `Rec.` to:
-
-* Variables.
-* Procedure calls.
-* Expressions.
-* `Format(...)`.
-* `StrSubstNo(...)`.
-* Boolean expressions.
-* Totals or calculated controls.
-* Fields belonging to another record variable.
-* Temporary records other than the page `Rec`.
-* `xRec`.
-* Enum expressions.
-* Option expressions.
-* Control add-ins.
-* Parts.
-* Groups.
-* Labels.
-* User controls.
-
-Examples that must remain unchanged:
+For example:
 
 ```al
-field(TotalAmount; TotalAmount)
-{
-}
+action(CreateSalesInvoice)
 ```
 
-when `TotalAmount` is a page variable and not a SourceTable field.
+must use:
 
 ```al
-field(DisplayText; Format(Rec.Amount))
-{
-}
+Caption = 'CreateSalesInvoice';
+ToolTip = 'CreateSalesInvoice';
 ```
+
+Do not change it to `Create Sales Invoice`.
+
+## Exact-text preservation
+
+When deriving or copying Caption and ToolTip text:
+
+* Preserve exact capitalization.
+* Preserve spaces.
+* Preserve accents.
+* Preserve punctuation.
+* Preserve ampersands.
+* Preserve abbreviations.
+* Preserve spelling mistakes.
+* Do not translate.
+* Do not improve or reinterpret the text.
+* Escape apostrophes by doubling them inside AL string literals.
+
+Example:
 
 ```al
-field(CustomerName; Customer.Name)
-{
-}
+ToolTip = 'Customer''s Documents';
 ```
+
+must produce:
 
 ```al
-field(IsEditable; CanEditRecord)
-{
-}
+Caption = 'Customer''s Documents';
+ToolTip = 'Customer''s Documents';
 ```
 
-### ApplicationArea
+## Caption and ToolTip comments
 
-* Every page field control must contain exactly one:
+Preserve existing `Comment` properties.
+
+Example:
+
+```al
+Caption = 'Create Invoice', Comment = 'ESP=Crear factura';
+```
+
+must remain unchanged.
+
+The ToolTip must become:
+
+```al
+ToolTip = 'Create Invoice';
+```
+
+Do not automatically copy the Caption Comment to a newly created ToolTip.
+
+When an existing ToolTip has a Comment:
+
+```al
+ToolTip = 'Old tooltip', Comment = 'ESP=Crear factura';
+```
+
+and the resolved action text is `Create Invoice`, normalize it to:
+
+```al
+ToolTip = 'Create Invoice', Comment = 'ESP=Crear factura';
+```
+
+Preserve the existing ToolTip Comment unchanged.
+
+## ApplicationArea
+
+Every page action must contain exactly:
 
 ```al
 ApplicationArea = All;
 ```
 
+Rules:
+
 * Add it when missing.
 * Replace another existing `ApplicationArea` value with `All`.
 * Do not create duplicate `ApplicationArea` properties.
-* Apply this rule to:
+* Do not add `ApplicationArea` to action groups, action areas, separators, or `actionref` controls during this task.
 
-  * Direct SourceTable fields.
-  * Variable-backed fields.
-  * Expression-backed fields.
-  * FlowFields displayed on pages.
-  * FlowFilters displayed on pages.
-* Do not add `ApplicationArea` to groups, repeaters, areas, parts, labels, or user controls unless explicitly requested by another task.
+## Existing action properties
 
-### ToolTip
+Preserve every existing action property, including:
 
-For direct SourceTable fields:
+* `Image`.
+* `Promoted`.
+* `PromotedCategory`.
+* `PromotedIsBig`.
+* `PromotedOnly`.
+* `Visible`.
+* `Enabled`.
+* `InFooterBar`.
+* `Ellipsis`.
+* `Gesture`.
+* `ShortcutKey`.
+* `RunObject`.
+* `RunPageLink`.
+* `RunPageView`.
+* `RunPageMode`.
+* `RunObject`.
+* `RunPageOnRec`.
+* `Scope`.
+* `AboutTitle`.
+* `AboutText`.
+* `ObsoleteState`.
+* `ObsoleteReason`.
+* `ObsoleteTag`.
 
-* Every field control must contain exactly one English `ToolTip`.
-* The ToolTip must be the exact source-table field identifier without:
+Do not change existing property values.
 
-  * The `Rec.` prefix.
-  * Surrounding double quotes.
-* Preserve capitalization, spaces, accents, punctuation, abbreviations, and spelling exactly as defined by the field identifier.
-* Do not translate, improve, reinterpret, or correct the field name.
-* Escape apostrophes inside the AL string by doubling them.
-* Replace an existing ToolTip value with the exact field name.
-* Preserve an existing ToolTip `Comment` property unchanged.
-* Do not create duplicate ToolTip properties.
+Do not change:
 
-Examples:
+* `OnAction`.
+* `OnBeforeAction`.
+* Procedure calls.
+* Record filters.
+* `RunObject` targets.
+* `RunPageLink` filters.
+* `RunPageView`.
+* `CurrPage` calls.
+* Confirmations.
+* Error handling.
+* Posting logic.
+* External integrations.
+* Transaction behavior.
+
+The only authorized action changes are:
+
+1. Add or normalize `ApplicationArea = All;`.
+2. Add or normalize Caption using the action-text resolution rules.
+3. Add or normalize ToolTip using the same resolved action text.
+
+## Property order
+
+Use this preferred order for the targeted properties:
 
 ```al
-field("Read Permission"; Rec."Read Permission")
+ApplicationArea = All;
+Caption = '<Resolved action text>';
+ToolTip = '<Resolved action text>';
+```
+
+Place these properties before other existing action properties when possible.
+
+Example:
+
+```al
+action(Atenciones)
 {
     ApplicationArea = All;
-    ToolTip = 'Read Permission';
+    Caption = '&Gift';
+    ToolTip = '&Gift';
+    Image = CreateWarehousePick;
+    Promoted = true;
+    PromotedCategory = Category5;
+    RunObject = Page 67165;
+    RunPageLink = "Cod. Colegio" = FIELD("No.");
 }
 ```
 
-```al
-field("Cod. empleado"; Rec."Cod. empleado")
-{
-    ApplicationArea = All;
-    ToolTip = 'Cod. empleado';
-}
-```
+Do not reorder unrelated properties relative to each other.
 
-```al
-field("Employee's Code"; Rec."Employee's Code")
-{
-    ApplicationArea = All;
-    ToolTip = 'Employee''s Code';
-}
-```
+## Dynamic or non-static text
 
-For variable-backed or expression-backed fields:
+When Caption or ToolTip does not contain a static AL string literal:
 
-* Add `ApplicationArea = All;`.
-* Preserve an existing ToolTip unchanged.
-* Do not invent a ToolTip from the control name when the functional purpose cannot be inferred safely.
-* Add a ToolTip only when the source expression or surrounding logic makes its purpose unambiguous.
+* Preserve the existing dynamic property unchanged.
+* Do not attempt to evaluate a Label variable, expression, or `CaptionClass`.
+* Use the static Caption when one exists.
+* Otherwise use the static ToolTip when one exists.
+* When neither static value exists, derive the missing property from the exact action identifier.
+* Do not replace a dynamic Caption solely to make Caption and ToolTip textually equal.
+* Record the action in the progress file as requiring preserved dynamic text.
 
-### Existing field properties and triggers
+Dynamic text must not stop processing of later actions or pages.
 
-Preserve all existing properties and triggers, including:
+## Duplicate properties
 
-* Caption.
-* CaptionClass.
-* Comment.
-* Editable.
-* Enabled.
-* Visible.
-* Style.
-* StyleExpr.
-* BlankZero.
-* DecimalPlaces.
-* ShowMandatory.
-* Importance.
-* QuickEntry.
-* AssistEdit.
-* DrillDown.
-* Lookup.
-* MultiLine.
-* ExtendedDatatype.
-* AutoFormatType.
-* AutoFormatExpression.
-* ValuesAllowed.
-* Obsolete properties.
-* `OnValidate`.
-* `OnLookup`.
-* `OnDrillDown`.
-* `OnAssistEdit`.
-* `OnControlAddIn`.
+For every action:
 
-The only authorized changes are:
+* Ensure exactly one `ApplicationArea`.
+* Ensure at most one `Caption`.
+* Ensure at most one `ToolTip`.
+* Remove only duplicates created by migration or normalization.
+* Preserve the property that follows the resolved action-text rule.
+* Do not remove unrelated properties.
 
-* Qualifying direct SourceTable field expressions with `Rec.`.
-* Adding or normalizing `ApplicationArea = All;`.
-* Adding or normalizing exact-field-name ToolTips for direct SourceTable fields.
+## Object scope
 
-### Object scope
-
-* Process only objects declared as `page` under `src/pages`.
+* Process only AL objects declared as `page` under `src/pages`.
 * Do not modify:
 
   * `pageextension`.
+  * `report`.
+  * `reportextension`.
   * `table`.
   * `tableextension`.
-  * `report`.
   * `codeunit`.
   * `query`.
   * `xmlport`.
@@ -238,31 +349,33 @@ The only authorized changes are:
   * `interface`.
 * Leave files containing other object types unchanged and record them as skipped.
 
-### Compilation batches
+## Compilation and diagnostics
 
+* Record baseline compilation diagnostics before modifying the first page.
+* Pre-existing compilation errors do not block this task.
 * Process no more than 10 page objects per compilation batch.
 * The 10-page limit applies per batch, not to the complete task.
-* After every successful batch, continue automatically with the next batch.
+* After each batch, run `al_compile`.
+* Compare diagnostics with the baseline and the previous successful batch.
+* Use scoped diagnostics for modified page files when available.
+* A batch is successful when it introduces no new compilation errors.
+* Fix only errors introduced by the current action normalization.
+* Do not modify objects outside `src/pages` to fix pre-existing errors.
+* Do not correct unrelated warnings.
+* Continue automatically after every successful batch.
 * Do not wait for user confirmation.
 * Do not stop after one batch.
-* Record the baseline compilation diagnostics before the first modification.
-* Pre-existing errors outside the modified pages do not block this task.
-* A batch is successful when it introduces no new compilation errors.
-* Run `al_compile` after every batch.
-* Use scoped diagnostics for the changed page files when available.
-* Fix only errors introduced by the current task.
-* Do not correct unrelated warnings.
-* Do not build, publish, commit, push, or create a pull request.
 
-### Completion condition
+## Completion condition
 
 Stop only when:
 
 * Every `page` object under `src/pages` has been inspected.
-* Every page field control contains exactly one `ApplicationArea = All;`.
-* Every direct SourceTable field expression is correctly qualified with `Rec.`.
-* Every direct SourceTable field has exactly one ToolTip matching the exact field identifier.
-* No variable or expression was incorrectly qualified with `Rec.`.
-* No duplicate ApplicationArea or ToolTip properties exist.
-* No page extension or other object type was modified.
-* The task introduces no new compilation errors compared with the baseline.
+* Every `action(...)` has exactly one `ApplicationArea = All;`.
+* Every action has a Caption resolved according to these rules.
+* Every action has a ToolTip resolved according to these rules.
+* Every static Caption and ToolTip contains the same resolved text.
+* No duplicate targeted properties exist.
+* No `actionref`, action group, action area, or page extension was modified.
+* No action behavior or business logic was changed.
+* The task introduced no new compilation errors compared with the baseline.

@@ -91,7 +91,9 @@ page 56015 "Cab. Hoja de Ruta Reg."
                 Caption = 'Imprimir';
                 action("<Action1000000013>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Resumido';
+                    ToolTip = '&Resumido';
                     Promoted = true;
                     PromotedCategory = "Report";
                     PromotedIsBig = true;
@@ -104,7 +106,9 @@ page 56015 "Cab. Hoja de Ruta Reg."
                 }
                 action("<Action1000000015>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Detallado';
+                    ToolTip = '&Detallado';
                     Promoted = true;
                     PromotedCategory = "Report";
                     PromotedIsBig = true;
@@ -121,7 +125,9 @@ page 56015 "Cab. Hoja de Ruta Reg."
                 Caption = '&Acciones';
                 action("<Action1000000018>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Void';
+                    ToolTip = '&Void';
                     Image = VoidCheck;
                     Promoted = true;
                     PromotedCategory = Process;

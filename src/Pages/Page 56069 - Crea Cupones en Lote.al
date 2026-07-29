@@ -126,7 +126,9 @@ page 56069 "Crea Cupones en Lote"
         {
             action("G&rupo Negocio")
             {
+                ApplicationArea = All;
                 Caption = 'Business Group';
+                ToolTip = 'Business Group';
                 Image = BreakRulesList;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -138,7 +140,9 @@ page 56069 "Crea Cupones en Lote"
             }
             action("&Generar")
             {
+                ApplicationArea = All;
                 Caption = '&Generate';
+                ToolTip = '&Generate';
                 Image = Post;
                 Promoted = true;
                 PromotedCategory = Process;

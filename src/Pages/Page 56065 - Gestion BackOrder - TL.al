@@ -124,7 +124,9 @@ page 56065 "Gestion BackOrder - TL"
         {
             action(Documento)
             {
+                ApplicationArea = All;
                 Caption = '&Document';
+                ToolTip = '&Document';
                 Image = DocumentEdit;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -144,7 +146,9 @@ page 56065 "Gestion BackOrder - TL"
                 Caption = 'F&unctions';
                 action(ActualizarBO)
                 {
+                    ApplicationArea = All;
                     Caption = '&Update BO';
+                    ToolTip = '&Update BO';
                     Image = RefreshPlanningLine;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -210,7 +214,9 @@ page 56065 "Gestion BackOrder - TL"
 
                 action("<Action1000000025>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Sugerir Cantidades';
+                    ToolTip = '&Sugerir Cantidades';
                     Image = SuggestLines;
                     Promoted = true;
                     PromotedCategory = Process;

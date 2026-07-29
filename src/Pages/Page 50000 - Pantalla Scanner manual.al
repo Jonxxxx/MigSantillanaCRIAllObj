@@ -56,7 +56,9 @@ page 50000 "Pantalla Scanner manual"
         {
             action(Intro)
             {
+                ApplicationArea = All;
                 Caption = 'Aceptar';
+                ToolTip = 'Aceptar';
                 Promoted = true;
                 PromotedCategory = Process;
 

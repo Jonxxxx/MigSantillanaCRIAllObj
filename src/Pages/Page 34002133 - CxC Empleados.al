@@ -104,7 +104,9 @@ page 34002133 "CxC Empleados"
                 Caption = '&Empleado';
                 action("&Movimientos CxC Empleados")
                 {
+                    ApplicationArea = All;
                     Caption = '&Movimientos CxC Empleados';
+                    ToolTip = '&Movimientos CxC Empleados';
                     // TODO: Manual review - Page 58100 and its destination field Field1 cannot be verified.
                     // Original code preserved below.
                     // RunObject = Page 58100;
@@ -117,7 +119,9 @@ page 34002133 "CxC Empleados"
                 Caption = '&Registro';
                 action(Post)
                 {
+                    ApplicationArea = All;
                     Caption = 'Post';
+                    ToolTip = 'Post';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -177,7 +181,9 @@ page 34002133 "CxC Empleados"
         {
             action("Calculate fees")
             {
+                ApplicationArea = All;
                 Caption = 'Calculate fees';
+                ToolTip = 'Calculate fees';
                 Image = CalculateDiscount;
                 Promoted = true;
                 PromotedCategory = Process;

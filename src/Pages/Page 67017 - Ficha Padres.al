@@ -208,7 +208,9 @@ page 67017 "Ficha Padres"
                 Caption = '&Father';
                 action("&Interest area")
                 {
+                    ApplicationArea = All;
                     Caption = '&Interest area';
+                    ToolTip = '&Interest area';
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
@@ -217,7 +219,9 @@ page 67017 "Ficha Padres"
                 }
                 action("&Children")
                 {
+                    ApplicationArea = All;
                     Caption = '&Children';
+                    ToolTip = '&Children';
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;

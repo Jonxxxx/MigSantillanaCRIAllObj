@@ -69,7 +69,9 @@ page 34002162 "Calendario Anual"
                 Caption = '&Calendar';
                 action("Generate calendar")
                 {
+                    ApplicationArea = All;
                     Caption = 'Generate calendar';
+                    ToolTip = 'Generate calendar';
                     Image = CalculateCalendar;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -79,7 +81,9 @@ page 34002162 "Calendario Anual"
                 }
                 action(Hollydays)
                 {
+                    ApplicationArea = All;
                     Caption = 'Hollydays';
+                    ToolTip = 'Hollydays';
                     Image = Calendar;
                     Promoted = true;
                     PromotedCategory = Process;

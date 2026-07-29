@@ -129,7 +129,9 @@ page 56059 "BackOrders Sin Disp. Transfer."
         {
             action("<Action1000000017>")
             {
+                ApplicationArea = All;
                 Caption = '&Abrir Documento';
+                ToolTip = '&Abrir Documento';
                 Image = View;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -149,7 +151,9 @@ page 56059 "BackOrders Sin Disp. Transfer."
                 Caption = 'F&unctions';
                 action("<Action1000000025>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Sugerir Cantidad a Anular';
+                    ToolTip = '&Sugerir Cantidad a Anular';
                     Image = SuggestLines;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -167,7 +171,9 @@ page 56059 "BackOrders Sin Disp. Transfer."
                 }
                 action("<Action1000000027>")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&ctualizar BO';
+                    ToolTip = 'A&ctualizar BO';
                     Image = RefreshPlanningLine;
                     Promoted = true;
                     PromotedCategory = Process;

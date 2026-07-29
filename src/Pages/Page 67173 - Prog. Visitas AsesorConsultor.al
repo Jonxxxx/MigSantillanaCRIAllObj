@@ -43,7 +43,9 @@ page 67173 "Prog. Visitas Asesor/Consultor"
                 Caption = 'Programacion';
                 action(Asistencia)
                 {
+                    ApplicationArea = All;
                     Caption = 'Asistencia';
+                    ToolTip = 'Asistencia';
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;

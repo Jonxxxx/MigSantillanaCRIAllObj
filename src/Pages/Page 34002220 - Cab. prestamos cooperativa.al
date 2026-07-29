@@ -106,7 +106,9 @@ page 34002220 "Cab. prestamos cooperativa"
                 Caption = 'Calculate fee';
                 action("Calculate fee2")
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate fee';
+                    ToolTip = 'Calculate fee';
                     Image = Calculate;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -121,7 +123,9 @@ page 34002220 "Cab. prestamos cooperativa"
 
                 action(Post)
                 {
+                    ApplicationArea = All;
                     Caption = 'Post';
+                    ToolTip = 'Post';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;

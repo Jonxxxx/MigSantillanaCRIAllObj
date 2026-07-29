@@ -156,7 +156,9 @@ page 34002110 "Conceptos salariales"
                 Caption = '&Action';
                 action("&Copy All")
                 {
+                    ApplicationArea = All;
                     Caption = '&Copy All';
+                    ToolTip = '&Copy All';
                     Image = Copy;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -179,7 +181,9 @@ page 34002110 "Conceptos salariales"
 
                 action("A&ssign to employees")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&ssign to employees';
+                    ToolTip = 'A&ssign to employees';
                     Image = CopyWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -259,7 +263,9 @@ page 34002110 "Conceptos salariales"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimentions';
+                    ToolTip = 'Dimentions';
                     Image = Dimensions;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -274,7 +280,9 @@ page 34002110 "Conceptos salariales"
         {
             action("&Prorrated Wedges")
             {
+                ApplicationArea = All;
                 Caption = '&Prorrated Wedges';
+                ToolTip = '&Prorrated Wedges';
                 Image = SetupPayment;
                 Promoted = true;
                 PromotedCategory = Process;

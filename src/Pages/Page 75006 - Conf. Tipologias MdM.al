@@ -139,6 +139,9 @@ page 75006 "Conf. Tipologias MdM"
         {
             action("Configuracion Campos")
             {
+                ApplicationArea = All;
+                Caption = 'Configuracion Campos';
+                ToolTip = 'Configuracion Campos';
                 Image = SetupList;
                 RunObject = Page 75008;
             }

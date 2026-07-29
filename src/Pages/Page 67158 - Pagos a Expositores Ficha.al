@@ -61,7 +61,9 @@ page 67158 "Pagos a Expositores Ficha"
                 Caption = 'Pagos';
                 action("<Action1000000010>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Pagar';
+                    ToolTip = '&Pagar';
                     Enabled = wPendiente;
                     Image = SuggestVendorPayments;
                     Promoted = true;
@@ -90,7 +92,9 @@ page 67158 "Pagos a Expositores Ficha"
                 }
                 action("<Action1000000012>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Retroceder Pagado';
+                    ToolTip = '&Retroceder Pagado';
                     Enabled = NOT wPendiente;
                     Image = ReOpen;
                     Promoted = true;
@@ -111,7 +115,9 @@ page 67158 "Pagos a Expositores Ficha"
                 }
                 action(Estadisticas)
                 {
+                    ApplicationArea = All;
                     Caption = 'Estadisticas';
+                    ToolTip = 'Estadisticas';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;

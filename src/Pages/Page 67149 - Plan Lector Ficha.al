@@ -79,7 +79,9 @@ page 67149 "Plan Lector Ficha"
         {
             action("<Action1000000011>")
             {
+                ApplicationArea = All;
                 Caption = 'Cargar';
+                ToolTip = 'Cargar';
                 Image = Import;
                 Promoted = true;
                 PromotedCategory = Process;

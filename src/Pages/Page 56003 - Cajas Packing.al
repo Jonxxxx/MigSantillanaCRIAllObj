@@ -72,7 +72,9 @@ page 56003 "Cajas Packing"
         {
             action("&Close Box")
             {
+                ApplicationArea = All;
                 Caption = '&Close Box';
+                ToolTip = '&Close Box';
                 Image = Approve;
                 Promoted = true;
                 PromotedCategory = Process;

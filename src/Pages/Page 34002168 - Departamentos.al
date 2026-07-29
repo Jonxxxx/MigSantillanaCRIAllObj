@@ -46,7 +46,9 @@ page 34002168 Departamentos
                 Caption = '&Department';
                 action("Sub Department")
                 {
+                    ApplicationArea = All;
                     Caption = 'Sub Department';
+                    ToolTip = 'Sub Department';
                     Image = Departments;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -55,6 +57,9 @@ page 34002168 Departamentos
                 }
                 action(Puestos)
                 {
+                    ApplicationArea = All;
+                    Caption = 'Puestos';
+                    ToolTip = 'Puestos';
                     Image = Position;
                     Promoted = true;
                     PromotedCategory = Process;

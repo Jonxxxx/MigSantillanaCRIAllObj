@@ -82,7 +82,9 @@ page 67012 "Ficha Talleres - Eventos"
                 Caption = '&Event';
                 action("&Expositores")
                 {
+                    ApplicationArea = All;
                     Caption = '&Expositores';
+                    ToolTip = '&Expositores';
                     Image = NewResource;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -92,7 +94,9 @@ page 67012 "Ficha Talleres - Eventos"
                 }
                 action("<Action1000000039>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Materiales';
+                    ToolTip = 'Materiales';
                     Image = CalculateInventory;
                     Promoted = true;
                     PromotedCategory = Process;

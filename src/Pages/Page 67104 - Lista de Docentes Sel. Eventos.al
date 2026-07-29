@@ -88,7 +88,9 @@ page 67104 "Lista de Docentes Sel. Eventos"
                 Caption = '&Event';
                 action("<Action1000000039>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Associate Events';
+                    ToolTip = 'Associate Events';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;

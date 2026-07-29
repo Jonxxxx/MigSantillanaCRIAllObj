@@ -32,7 +32,9 @@ page 34002177 Shift
                 Caption = 'Shift';
                 action(Calendar)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calendar';
+                    ToolTip = 'Calendar';
                     Image = ProfileCalendar;
                     Promoted = true;
                     PromotedCategory = Process;

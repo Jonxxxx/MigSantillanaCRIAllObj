@@ -89,7 +89,9 @@ page 67139 "Solicitud -Cab. Planif. Evento"
                 Caption = '&Event';
                 action("<Action1000000039>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Materiales';
+                    ToolTip = 'Materiales';
                     Image = CalculateInventory;
                     Promoted = true;
                     PromotedCategory = Process;

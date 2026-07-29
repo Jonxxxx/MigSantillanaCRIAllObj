@@ -135,7 +135,9 @@ page 67101 "Cab. Planif. Evento"
                 Caption = '&Event';
                 action("Create Schedule")
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Schedule';
+                    ToolTip = 'Create Schedule';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -201,7 +203,9 @@ page 67101 "Cab. Planif. Evento"
                 }
                 action(Materiales)
                 {
+                    ApplicationArea = All;
                     Caption = 'Materiales';
+                    ToolTip = 'Materiales';
                     Image = CalculateInventory;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -249,7 +253,9 @@ page 67101 "Cab. Planif. Evento"
                 }
                 action(Asistentes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Asistentes';
+                    ToolTip = 'Asistentes';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -263,7 +269,9 @@ page 67101 "Cab. Planif. Evento"
                 }
                 action("Distribution per Cost Centre")
                 {
+                    ApplicationArea = All;
                     Caption = 'Distribution per Cost Centre';
+                    ToolTip = 'Distribution per Cost Centre';
                     Image = GLAccountBalance;
                     Promoted = true;
                     PromotedCategory = Process;

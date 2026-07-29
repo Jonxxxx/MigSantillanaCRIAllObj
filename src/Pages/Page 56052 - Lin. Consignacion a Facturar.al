@@ -72,7 +72,9 @@ page 56052 "Lin. Consignacion a Facturar"
         {
             action("Import Excel Document")
             {
+                ApplicationArea = All;
                 Caption = 'Import Excel Document';
+                ToolTip = 'Import Excel Document';
                 Image = ImportExport;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -88,7 +90,9 @@ page 56052 "Lin. Consignacion a Facturar"
 
             action("Update Discounts")
             {
+                ApplicationArea = All;
                 Caption = 'Update Discounts';
+                ToolTip = 'Update Discounts';
                 Image = GetSourceDoc;
                 Promoted = true;
                 PromotedCategory = Process;

@@ -61,7 +61,9 @@ page 56037 "Captura Productos"
                 Caption = 'Linea De Negocio';
                 action("<Action1000000006>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Texto';
+                    ToolTip = 'Texto';
                     Promoted = true;
                     PromotedCategory = Category4;
 
@@ -72,7 +74,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000007>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Idiomas';
+                    ToolTip = 'Idiomas';
                     Promoted = true;
                     PromotedCategory = Category4;
 
@@ -84,7 +88,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000008>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Generales';
+                    ToolTip = 'Generales';
                     Promoted = true;
                     PromotedCategory = Category4;
 
@@ -95,7 +101,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000009>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Formacion';
+                    ToolTip = 'Formacion';
                     Promoted = true;
                     PromotedCategory = Category4;
 
@@ -107,7 +115,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000010>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Otros';
+                    ToolTip = 'Otros';
                     Promoted = true;
                     PromotedCategory = Category4;
 
@@ -122,7 +132,9 @@ page 56037 "Captura Productos"
                 Caption = 'Formato';
                 action("<Action1000000015>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Libro';
+                    ToolTip = 'Libro';
                     Promoted = true;
                     PromotedCategory = Category5;
 
@@ -133,7 +145,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000014>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Cuaderno';
+                    ToolTip = 'Cuaderno';
                     Promoted = true;
                     PromotedCategory = Category5;
 
@@ -144,7 +158,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000013>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Guia';
+                    ToolTip = 'Guia';
                     Promoted = true;
                     PromotedCategory = Category5;
 
@@ -155,7 +171,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000012>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Otros';
+                    ToolTip = 'Otros';
                     Promoted = true;
                     PromotedCategory = Category5;
 
@@ -170,7 +188,9 @@ page 56037 "Captura Productos"
                 Caption = 'Varios';
                 action("<Action1000000019>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Catalogo';
+                    ToolTip = 'Catalogo';
                     Promoted = true;
                     PromotedCategory = Category6;
 
@@ -187,7 +207,9 @@ page 56037 "Captura Productos"
                 }
                 action("<Action1000000018>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Precio Venta 0';
+                    ToolTip = 'Precio Venta 0';
                     Promoted = true;
                     PromotedCategory = Category6;
 
@@ -208,7 +230,9 @@ page 56037 "Captura Productos"
                 Caption = 'Acciones';
                 action("<Action1000000017>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Capturar Producto';
+                    ToolTip = 'Capturar Producto';
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
@@ -221,7 +245,9 @@ page 56037 "Captura Productos"
                 }
                 action(Mark)
                 {
+                    ApplicationArea = All;
                     Caption = 'Mark';
+                    ToolTip = 'Mark';
                     Image = CarryOutActionMessage;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -241,7 +267,9 @@ page 56037 "Captura Productos"
                 }
                 action("&Only Marked")
                 {
+                    ApplicationArea = All;
                     Caption = '&Only Marked';
+                    ToolTip = '&Only Marked';
                     Image = ChangeDates;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -255,7 +283,9 @@ page 56037 "Captura Productos"
                 }
                 action("&Clear Mark")
                 {
+                    ApplicationArea = All;
                     Caption = '&Clear Mark';
+                    ToolTip = '&Clear Mark';
                     Image = ClearFilter;
                     Promoted = true;
                     PromotedCategory = Process;

@@ -212,7 +212,9 @@ page 34002100 "Empresas de cotizacion"
                 Visible = true;
                 action("Employee list")
                 {
+                    ApplicationArea = All;
                     Caption = 'Employee list';
+                    ToolTip = 'Employee list';
                     Image = List;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -223,7 +225,9 @@ page 34002100 "Empresas de cotizacion"
                 }
                 action("Copy from Company Setup")
                 {
+                    ApplicationArea = All;
                     Caption = 'Copy from Company Setup';
+                    ToolTip = 'Copy from Company Setup';
                     Image = Copy;
 
                     trigger OnAction()
@@ -251,7 +255,9 @@ page 34002100 "Empresas de cotizacion"
                 }
                 action(Comments)
                 {
+                    ApplicationArea = All;
                     Caption = 'Comments';
+                    ToolTip = 'Comments';
                     Image = ViewComments;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -267,7 +273,9 @@ page 34002100 "Empresas de cotizacion"
                 Caption = '&Otros datos';
                 action("Work Centers")
                 {
+                    ApplicationArea = All;
                     Caption = 'Work Centers';
+                    ToolTip = 'Work Centers';
                     Image = WorkCenter;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -278,7 +286,9 @@ page 34002100 "Empresas de cotizacion"
                 }
                 action("Legal representatives")
                 {
+                    ApplicationArea = All;
                     Caption = 'Legal representatives';
+                    ToolTip = 'Legal representatives';
                     Image = ContactPerson;
                     Promoted = true;
                     PromotedCategory = Process;

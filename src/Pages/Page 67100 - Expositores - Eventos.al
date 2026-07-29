@@ -58,7 +58,9 @@ page 67100 "Expositores - Eventos"
                 Caption = 'Workshop - Event';
                 action("<Action1000000047>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Schedule';
+                    ToolTip = 'Schedule';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;

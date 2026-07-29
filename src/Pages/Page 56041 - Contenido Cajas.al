@@ -49,8 +49,10 @@ page 56041 "Contenido Cajas"
         {
             action("&Cerrar Caja")
             {
-                Caption = '&Cerrar Caja';
 
+                ApplicationArea = All;
+                Caption = '&Cerrar Caja';
+                ToolTip = '&Cerrar Caja';
                 trigger OnAction()
                 begin
 

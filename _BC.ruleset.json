@@ -27,6 +27,11 @@
             "id": "AA0215",
             "action": "Hidden",
             "justification": "Not need solve"
+        },
+        {
+            "id": "PTE001",
+            "action": "Hidden",
+            "justification": "Not need solve"
         }
     ]
 }

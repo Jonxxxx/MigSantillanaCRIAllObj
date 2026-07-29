@@ -101,7 +101,9 @@ page 67023 "Lista Editoras"
                 Caption = '&Editor';
                 action("&Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Card';
+                    ToolTip = '&Card';
                     Image = EditLines;
                     RunObject = Page 67024;
                     RunPageLink = Code = FIELD("Code");

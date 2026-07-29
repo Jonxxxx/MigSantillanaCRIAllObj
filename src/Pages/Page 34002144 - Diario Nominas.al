@@ -110,7 +110,9 @@ page 34002144 "Diario Nominas"
                 Caption = '&Procesos';
                 action("Init Wedges")
                 {
+                    ApplicationArea = All;
                     Caption = 'Init Wedges';
+                    ToolTip = 'Init Wedges';
                     Image = ApplyEntries;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -124,7 +126,9 @@ page 34002144 "Diario Nominas"
 
                 action("Import employee data")
                 {
+                    ApplicationArea = All;
                     Caption = 'Import employee data';
+                    ToolTip = 'Import employee data';
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -134,7 +138,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("Import Expenses from G/L")
                 {
+                    ApplicationArea = All;
                     Caption = 'Import Expenses from G/L';
+                    ToolTip = 'Import Expenses from G/L';
                     Image = ReceiveLoaner;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -144,7 +150,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("Calculate payroll")
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate payroll';
+                    ToolTip = 'Calculate payroll';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -154,7 +162,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("Init Wedge")
                 {
+                    ApplicationArea = All;
                     Caption = 'Init Wedge';
+                    ToolTip = 'Init Wedge';
                     Image = ApplyEntries;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -164,7 +174,9 @@ page 34002144 "Diario Nominas"
 
                 action(CalculoIncentivoProy)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate operator incentive';
+                    ToolTip = 'Calculate operator incentive';
                     Image = CalculateRemainingUsage;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -177,7 +189,9 @@ page 34002144 "Diario Nominas"
                 }
                 action(exporttoexcel)
                 {
+                    ApplicationArea = All;
                     Caption = 'Export Payroll To Excel';
+                    ToolTip = 'Export Payroll To Excel';
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = "Report";
@@ -186,7 +200,9 @@ page 34002144 "Diario Nominas"
                 }
                 action(Prestamos)
                 {
+                    ApplicationArea = All;
                     Caption = 'Employee loans report';
+                    ToolTip = 'Employee loans report';
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
@@ -195,7 +211,9 @@ page 34002144 "Diario Nominas"
                 }
                 action(Vacaciones)
                 {
+                    ApplicationArea = All;
                     Caption = 'Employee vacation report';
+                    ToolTip = 'Employee vacation report';
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
@@ -204,7 +222,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("ListNomxDepto8.5")
                 {
+                    ApplicationArea = All;
                     Caption = 'Payroll report';
+                    ToolTip = 'Payroll report';
                     Image = "report";
                     Promoted = true;
                     PromotedCategory = "Report";
@@ -222,7 +242,9 @@ page 34002144 "Diario Nominas"
                 Caption = '&Empleado';
                 action("Employee Card")
                 {
+                    ApplicationArea = All;
                     Caption = 'Employee Card';
+                    ToolTip = 'Employee Card';
                     Image = Employee;
                     RunObject = Page 34002104;
                     RunPageLink = Company = FIELD(Company),
@@ -230,7 +252,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("Posted Payrolls")
                 {
+                    ApplicationArea = All;
                     Caption = 'Posted Payrolls';
+                    ToolTip = 'Posted Payrolls';
                     Image = Documents;
 
                     trigger OnAction()
@@ -250,7 +274,9 @@ page 34002144 "Diario Nominas"
                 }
                 action("Absence Registration")
                 {
+                    ApplicationArea = All;
                     Caption = 'Absence Registration';
+                    ToolTip = 'Absence Registration';
                     Image = Absence;
                     // TODO: Manual review - The current Employee Absence table has no Closed field, so the complete page link cannot be preserved.
                     // Original code preserved below.

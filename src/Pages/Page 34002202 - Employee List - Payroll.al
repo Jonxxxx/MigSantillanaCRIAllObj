@@ -182,7 +182,9 @@ page 34002202 "Employee List - Payroll"
                 Caption = 'E&mployee';
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page 5222;
                     RunPageLink = "Table Name" = CONST(Employee),
@@ -193,7 +195,9 @@ page 34002202 "Employee List - Payroll"
                     Caption = 'Dimensions';
                     action("Dimensions-Single")
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimensions-Single';
+                        ToolTip = 'Dimensions-Single';
                         RunObject = Page "Default Dimensions";
                         RunPageLink = "Table ID" = CONST(5200),
                                       "No." = FIELD("No.");
@@ -201,8 +205,10 @@ page 34002202 "Employee List - Payroll"
                     }
                     action("Dimensions-&Multiple")
                     {
-                        Caption = 'Dimensions-&Multiple';
 
+                        ApplicationArea = All;
+                        Caption = 'Dimensions-&Multiple';
+                        ToolTip = 'Dimensions-&Multiple';
                         trigger OnAction()
                         var
                             Employee: Record 5200;
@@ -216,62 +222,82 @@ page 34002202 "Employee List - Payroll"
                 }
                 action("&Picture")
                 {
+                    ApplicationArea = All;
                     Caption = '&Picture';
+                    ToolTip = '&Picture';
                     RunObject = Page 5202;
                     RunPageLink = "No." = FIELD("No.");
                 }
                 action("&Alternative Addresses")
                 {
+                    ApplicationArea = All;
                     Caption = '&Alternative Addresses';
+                    ToolTip = '&Alternative Addresses';
                     RunObject = Page 5204;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Relati&ves")
                 {
+                    ApplicationArea = All;
                     Caption = 'Relati&ves';
+                    ToolTip = 'Relati&ves';
                     RunObject = Page 5209;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Mi&sc. Article Information")
                 {
+                    ApplicationArea = All;
                     Caption = 'Mi&sc. Article Information';
+                    ToolTip = 'Mi&sc. Article Information';
                     RunObject = Page 5219;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Con&fidential Information")
                 {
+                    ApplicationArea = All;
                     Caption = 'Con&fidential Information';
+                    ToolTip = 'Con&fidential Information';
                     RunObject = Page 5221;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Q&ualifications")
                 {
+                    ApplicationArea = All;
                     Caption = 'Q&ualifications';
+                    ToolTip = 'Q&ualifications';
                     RunObject = Page 5206;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("A&bsences")
                 {
+                    ApplicationArea = All;
                     Caption = 'A&bsences';
+                    ToolTip = 'A&bsences';
                     RunObject = Page 5211;
                     RunPageLink = "Employee No." = FIELD("No.");
                 }
 
                 action("Absences b&y Categories")
                 {
+                    ApplicationArea = All;
                     Caption = 'Absences b&y Categories';
+                    ToolTip = 'Absences b&y Categories';
                     RunObject = Page 5226;
                     RunPageLink = "No." = FIELD("No."),
                                   "Employee No. Filter" = FIELD("No.");
                 }
                 action("Misc. Articles &Overview")
                 {
+                    ApplicationArea = All;
                     Caption = 'Misc. Articles &Overview';
+                    ToolTip = 'Misc. Articles &Overview';
                     RunObject = Page 5228;
                 }
                 action("Confidential Info. Overvie&w")
                 {
+                    ApplicationArea = All;
                     Caption = 'Confidential Info. Overvie&w';
+                    ToolTip = 'Confidential Info. Overvie&w';
                     RunObject = Page 5229;
                 }
             }

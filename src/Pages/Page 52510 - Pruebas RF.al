@@ -34,6 +34,9 @@ page 52510 "Pruebas RF"
         {
             action("Boton 1")
             {
+                ApplicationArea = All;
+                Caption = 'Boton 1';
+                ToolTip = 'Boton 1';
                 Image = AddAction;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -47,6 +50,9 @@ page 52510 "Pruebas RF"
             }
             action("Boton 2")
             {
+                ApplicationArea = All;
+                Caption = 'Boton 2';
+                ToolTip = 'Boton 2';
                 Image = AddAction;
                 Promoted = true;
                 PromotedCategory = Process;

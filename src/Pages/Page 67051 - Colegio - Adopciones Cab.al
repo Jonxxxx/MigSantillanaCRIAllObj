@@ -279,7 +279,9 @@ page 67051 "Colegio - Adopciones Cab"
                 Caption = '&School';
                 action(FProm)
                 {
+                    ApplicationArea = All;
                     Caption = 'Salesperson Card';
+                    ToolTip = 'Salesperson Card';
                     Image = TeamSales;
                     Promoted = true;
                     PromotedCategory = Category4;
@@ -290,7 +292,9 @@ page 67051 "Colegio - Adopciones Cab"
                 }
                 action(FCol)
                 {
+                    ApplicationArea = All;
                     Caption = '&School Card';
+                    ToolTip = '&School Card';
                     Image = Edit;
                     Promoted = true;
                     PromotedCategory = Category4;
@@ -301,7 +305,9 @@ page 67051 "Colegio - Adopciones Cab"
 
                 action(Estad)
                 {
+                    ApplicationArea = All;
                     Caption = '&Statistic';
+                    ToolTip = '&Statistic';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -319,7 +325,9 @@ page 67051 "Colegio - Adopciones Cab"
                 }
                 action(Refresh)
                 {
+                    ApplicationArea = All;
                     Caption = 'Refresh';
+                    ToolTip = 'Refresh';
                     Image = Refresh;
                     Promoted = true;
                     PromotedCategory = Process;

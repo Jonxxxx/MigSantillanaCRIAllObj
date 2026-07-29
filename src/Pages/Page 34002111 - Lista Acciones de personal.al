@@ -175,13 +175,17 @@ page 34002111 "Lista Acciones de personal"
                 Caption = '&Convenio';
                 action(Ficha)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ficha';
+                    ToolTip = 'Ficha';
                     RunObject = Page 34002140;
                     ShortCutKey = 'Shift+F7';
                 }
                 action("C&omentarios")
                 {
+                    ApplicationArea = All;
                     Caption = 'C&omentarios';
+                    ToolTip = 'C&omentarios';
                     // TODO: Manual review - Custom page 34002156 cannot be verified in the current repository or dependency symbols.
                     // Original code: RunObject = Page 34002156;
                 }

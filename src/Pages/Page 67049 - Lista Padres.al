@@ -148,13 +148,17 @@ page 67049 "Lista Padres"
                 Caption = '&Father';
                 action("&Interest area")
                 {
+                    ApplicationArea = All;
                     Caption = '&Interest area';
+                    ToolTip = '&Interest area';
                     RunObject = Page 67019;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
                 action("&Children")
                 {
+                    ApplicationArea = All;
                     Caption = '&Children';
+                    ToolTip = '&Children';
                     RunObject = Page 67020;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }

@@ -83,7 +83,9 @@ page 34002128 "Historico Lin. Impuestos"
                 Caption = '&Line';
                 action(Dimensiones)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensiones';
+                    ToolTip = 'Dimensiones';
                     ShortCutKey = 'Shift+Ctrl+D';
 
                     trigger OnAction()

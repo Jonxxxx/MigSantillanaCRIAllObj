@@ -89,7 +89,9 @@ page 34002228 "Lista Inscripcion Entrenamient"
                 Caption = '&Event';
                 action("<Action1000000039>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Sign up for training';
+                    ToolTip = 'Sign up for training';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -104,7 +106,9 @@ page 34002228 "Lista Inscripcion Entrenamient"
                 }
                 action("<Action1000000019>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Employee Card';
+                    ToolTip = '&Employee Card';
                     Image = Employee;
                     Promoted = true;
                     PromotedCategory = Process;

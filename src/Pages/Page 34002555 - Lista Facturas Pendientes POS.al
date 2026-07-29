@@ -247,7 +247,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 Image = Invoice;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -265,7 +267,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = FIELD("Document Type"),
@@ -274,7 +278,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -285,7 +291,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action("Log de Documentos Electronicos")
                 {
+                    ApplicationArea = All;
                     Caption = '&Log de Documentos Electronicos';
+                    ToolTip = '&Log de Documentos Electronicos';
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -295,6 +303,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action("Completar Lineas")
                 {
+                    ApplicationArea = All;
+                    Caption = 'Completar Lineas';
+                    ToolTip = 'Completar Lineas';
                     Visible = false;
 
                     trigger OnAction()
@@ -314,14 +325,14 @@ page 34002555 "Lista Facturas Pendientes POS"
                 Image = ReleaseDoc;
                 action(Release1)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Image = ReleaseDoc;
                     Promoted = true;
                     PromotedCategory = Category6;
                     PromotedOnly = true;
                     ShortCutKey = 'Ctrl+F9';
-                    ToolTip = 'Release the document to the next stage of processing. When a document is released, it will be included in all availability calculations from the expected receipt date of the items. You must reopen the document before you can make changes to it.';
 
                     trigger OnAction()
                     var
@@ -332,13 +343,13 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action(Reopen)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Image = ReOpen;
                     Promoted = true;
                     PromotedCategory = Category6;
                     PromotedOnly = true;
-                    ToolTip = 'Reopen the document to change it after it has been approved. Approved documents have the Released status and must be opened before they can be changed.';
 
                     trigger OnAction()
                     var
@@ -349,7 +360,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action("Registrar Ventas en Lote DSPOS")
                 {
-                    ApplicationArea = Suite, Basic;
+                    ApplicationArea = All;
+                    Caption = 'Registrar Ventas en Lote DSPOS';
+                    ToolTip = 'Registrar Ventas en Lote DSPOS';
                     Image = Process;
 
                     trigger OnAction()
@@ -359,7 +372,9 @@ page 34002555 "Lista Facturas Pendientes POS"
                 }
                 action("Convertir Pedidos DSPOS")
                 {
-                    ApplicationArea = Suite, Basic;
+                    ApplicationArea = All;
+                    Caption = 'Convertir Pedidos DSPOS';
+                    ToolTip = 'Convertir Pedidos DSPOS';
                     Image = Process;
 
                     trigger OnAction()

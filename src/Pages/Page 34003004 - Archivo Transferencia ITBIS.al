@@ -239,7 +239,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 Image = ElectronicDoc;
                 action("<Action1000000028>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Generate 606 text file';
+                    ToolTip = 'Generate 606 text file';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -253,7 +255,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("2014 Archivo Compras formato 606")
                 {
+                    ApplicationArea = All;
                     Caption = '2014 Archivo Compras formato 606';
+                    ToolTip = '2014 Archivo Compras formato 606';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -267,7 +271,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("<Action1000000029>")
                 {
+                    ApplicationArea = All;
                     Caption = 'Archivo Ventas formato 607';
+                    ToolTip = 'Archivo Ventas formato 607';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -281,7 +287,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("NCF anulados formato 608A")
                 {
+                    ApplicationArea = All;
                     Caption = 'NCF anulados formato 608';
+                    ToolTip = 'NCF anulados formato 608';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -295,7 +303,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("Pagos Exterior Formato 609")
                 {
+                    ApplicationArea = All;
                     Caption = 'Pagos Exterior Formato 609';
+                    ToolTip = 'Pagos Exterior Formato 609';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -309,7 +319,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("NCF Compras Formato 610")
                 {
+                    ApplicationArea = All;
                     Caption = 'NCF Compras Formato 610';
+                    ToolTip = 'NCF Compras Formato 610';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -323,7 +335,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("NCF compra de divisas 612")
                 {
+                    ApplicationArea = All;
                     Caption = 'NCF compra de divisas 612';
+                    ToolTip = 'NCF compra de divisas 612';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -344,7 +358,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 Image = ElectronicDoc;
                 action("Generate new 606 text file")
                 {
+                    ApplicationArea = All;
                     Caption = 'Generate new 606 text file';
+                    ToolTip = 'Generate new 606 text file';
                     Image = ExportElectronicDocument;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -357,7 +373,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("Generate new 607 text file")
                 {
+                    ApplicationArea = All;
                     Caption = 'Generate new 607 text file';
+                    ToolTip = 'Generate new 607 text file';
                     Image = ExportElectronicDocument;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -370,7 +388,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("NCF anulados formato 608")
                 {
+                    ApplicationArea = All;
                     Caption = 'NCF anulados formato 608';
+                    ToolTip = 'NCF anulados formato 608';
                     Image = ExportElectronicDocument;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -391,7 +411,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 Caption = 'Process';
                 action("Pagos al exterior")
                 {
+                    ApplicationArea = All;
                     Caption = 'Payments abroad';
+                    ToolTip = 'Payments abroad';
                     Image = ExportElectronicDocument;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -401,7 +423,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("Fill 606 Format")
                 {
+                    ApplicationArea = All;
                     Caption = 'Fill 606 Format';
+                    ToolTip = 'Fill 606 Format';
                     Image = ExportToExcel;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
@@ -412,7 +436,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action(AbrirDocumento)
                 {
+                    ApplicationArea = All;
                     Caption = 'Open document';
+                    ToolTip = 'Open document';
                     Image = Document;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -456,7 +482,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("Stadisticas Comprobante Consumo")
                 {
+                    ApplicationArea = All;
                     Caption = 'Resumen Facturas de Consumo';
+                    ToolTip = 'Resumen Facturas de Consumo';
                     Image = StatisticsDocument;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -476,7 +504,9 @@ page 34003004 "Archivo Transferencia ITBIS"
                 }
                 action("Resumen IT-1 Anexo A")
                 {
+                    ApplicationArea = All;
                     Caption = 'Resumen IT-1 Anexo A';
+                    ToolTip = 'Resumen IT-1 Anexo A';
                     Image = StatisticsDocument;
                     Promoted = true;
                     PromotedCategory = Process;

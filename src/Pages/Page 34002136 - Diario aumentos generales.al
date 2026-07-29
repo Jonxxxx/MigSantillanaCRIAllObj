@@ -95,7 +95,9 @@ page 34002136 "Diario aumentos generales"
                 Caption = 'Registrar';
                 action(Registrar1)
                 {
+                    ApplicationArea = All;
                     Caption = 'Registrar';
+                    ToolTip = 'Registrar';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;

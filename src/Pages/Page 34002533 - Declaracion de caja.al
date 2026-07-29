@@ -109,7 +109,9 @@ page 34002533 "Declaracion de caja"
         {
             action("Cerrar Turno")
             {
+                ApplicationArea = All;
                 Caption = 'Cerrar Turno';
+                ToolTip = 'Cerrar Turno';
                 Image = Close;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -129,7 +131,9 @@ page 34002533 "Declaracion de caja"
             }
             action("Introducir fondo de caja")
             {
+                ApplicationArea = All;
                 Caption = 'Introducir fondo de caja';
+                ToolTip = 'Introducir fondo de caja';
                 Image = Bin;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -157,7 +161,9 @@ page 34002533 "Declaracion de caja"
         {
             action("Cuadre de caja")
             {
+                ApplicationArea = All;
                 Caption = 'Cuadre de caja';
+                ToolTip = 'Cuadre de caja';
                 Ellipsis = true;
                 Image = CashFlow;
                 Promoted = true;

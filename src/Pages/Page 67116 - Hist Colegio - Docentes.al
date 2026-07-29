@@ -102,7 +102,9 @@ page 67116 "Hist Colegio - Docentes"
                 Caption = '&School';
                 action("&School Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&School Card';
+                    ToolTip = '&School Card';
                     Image = AddToHome;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -117,7 +119,9 @@ page 67116 "Hist Colegio - Docentes"
                 Caption = '&Teacher';
                 action("&Teacher Card")
                 {
+                    ApplicationArea = All;
                     Caption = '&Teacher Card';
+                    ToolTip = '&Teacher Card';
                     Image = CustomerLedger;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -126,7 +130,9 @@ page 67116 "Hist Colegio - Docentes"
                 }
                 action(Adoption)
                 {
+                    ApplicationArea = All;
                     Caption = 'Adoption';
+                    ToolTip = 'Adoption';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -145,7 +151,9 @@ page 67116 "Hist Colegio - Docentes"
 
                 action("Ranking por CVM")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ranking por CVM';
+                    ToolTip = 'Ranking por CVM';
                     Image = AdjustEntries;
                     Promoted = true;
                     PromotedCategory = Process;

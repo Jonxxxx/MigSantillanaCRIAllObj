@@ -233,7 +233,9 @@ page 34002546 "Lista de facturas TPV"
                 Image = Invoice;
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Enabled = ESACC_C1102601021_Enabled;
                     Image = Statistics;
                     Promoted = true;
@@ -253,7 +255,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Enabled = ESACC_C1102601023_Enabled;
                     Image = ViewComments;
                     RunObject = Page 67;
@@ -264,7 +268,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Enabled = ESACC_C1102601024_Enabled;
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
@@ -277,7 +283,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action(Approvals)
                 {
+                    ApplicationArea = All;
                     Caption = 'Approvals';
+                    ToolTip = 'Approvals';
                     Enabled = ESACC_C1102601025_Enabled;
                     Image = Approvals;
                     Visible = ESACC_C1102601025_Visible;
@@ -301,7 +309,9 @@ page 34002546 "Lista de facturas TPV"
                 Image = ReleaseDoc;
                 action("Re&lease")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&lease';
+                    ToolTip = 'Re&lease';
                     Enabled = ESACC_C1102601017_Enabled;
                     Image = ReleaseDoc;
                     ShortCutKey = 'Ctrl+F9';
@@ -316,7 +326,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Re&open")
                 {
+                    ApplicationArea = All;
                     Caption = 'Re&open';
+                    ToolTip = 'Re&open';
                     Enabled = ESACC_C1102601018_Enabled;
                     Image = ReOpen;
                     Visible = ESACC_C1102601018_Visible;
@@ -335,7 +347,9 @@ page 34002546 "Lista de facturas TPV"
                 Image = "Action";
                 action("Send A&pproval Request")
                 {
+                    ApplicationArea = All;
                     Caption = 'Send A&pproval Request';
+                    ToolTip = 'Send A&pproval Request';
                     Enabled = ESACC_C1102601014_Enabled;
                     Image = SendApprovalRequest;
                     Visible = ESACC_C1102601014_Visible;
@@ -349,7 +363,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Cancel Approval Re&quest")
                 {
+                    ApplicationArea = All;
                     Caption = 'Cancel Approval Re&quest';
+                    ToolTip = 'Cancel Approval Re&quest';
                     Enabled = ESACC_C1102601015_Enabled;
                     Image = Cancel;
                     Visible = ESACC_C1102601015_Visible;
@@ -369,7 +385,9 @@ page 34002546 "Lista de facturas TPV"
                 Image = Post;
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Enabled = ESACC_C53_Enabled;
                     Image = TestReport;
@@ -382,7 +400,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Enabled = ESACC_C51_Enabled;
                     Image = PostOrder;
                     Promoted = true;
@@ -398,7 +418,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Enabled = ESACC_C52_Enabled;
                     Image = PostPrint;
                     Promoted = true;
@@ -414,7 +436,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Post &Batch")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post &Batch';
+                    ToolTip = 'Post &Batch';
                     Ellipsis = true;
                     Enabled = ESACC_C50_Enabled;
                     Image = PostBatch;
@@ -430,7 +454,9 @@ page 34002546 "Lista de facturas TPV"
                 }
                 action("Remove From Job Queue")
                 {
+                    ApplicationArea = All;
                     Caption = 'Remove From Job Queue';
+                    ToolTip = 'Remove From Job Queue';
                     Enabled = ESACC_C5_Enabled;
                     Image = RemoveLine;
                     Visible = JobQueueActive;

@@ -50,7 +50,9 @@ page 56005 "Lin. Packing Registrada"
         {
             action("<Action1000000007>")
             {
+                ApplicationArea = All;
                 Caption = '&Box Content';
+                ToolTip = '&Box Content';
                 RunObject = Page 56006;
                 RunPageLink = "No. Packing" = FIELD("No."),
                               "No. Caja" = FIELD("No. Caja");
@@ -59,8 +61,10 @@ page 56005 "Lin. Packing Registrada"
             }
             action("Imprimir Etiqueta")
             {
-                Caption = '&Print Label';
 
+                ApplicationArea = All;
+                Caption = '&Print Label';
+                ToolTip = '&Print Label';
                 trigger OnAction()
                 begin
                     ImprimeEtiquetaCaja;

@@ -69,7 +69,9 @@ page 67072 "Cab. Planificacion Reg."
                 Caption = '&Planning';
                 action("&Post")
                 {
+                    ApplicationArea = All;
                     Caption = '&Post';
+                    ToolTip = '&Post';
                     Image = Post;
                     Promoted = true;
                     PromotedCategory = Process;

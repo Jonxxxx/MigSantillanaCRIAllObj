@@ -187,7 +187,9 @@ page 67016 "Asistentes Talleres y Eventos"
                 Caption = '&Exhibitor';
                 action("<Action1000000040>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Select Teachers';
+                    ToolTip = '&Select Teachers';
                     Image = EditList;
                     Promoted = true;
                     PromotedCategory = Process;

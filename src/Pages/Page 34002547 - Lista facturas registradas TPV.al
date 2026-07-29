@@ -280,7 +280,9 @@ page 34002547 "Lista facturas registradas TPV"
                 Image = Invoice;
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = EditLines;
                     ShortCutKey = 'Shift+F7';
 
@@ -291,7 +293,9 @@ page 34002547 "Lista facturas registradas TPV"
                 }
                 action(Statistics)
                 {
+                    ApplicationArea = All;
                     Caption = 'Statistics';
+                    ToolTip = 'Statistics';
                     Image = Statistics;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -307,7 +311,9 @@ page 34002547 "Lista facturas registradas TPV"
                 }
                 action("Co&mments")
                 {
+                    ApplicationArea = All;
                     Caption = 'Co&mments';
+                    ToolTip = 'Co&mments';
                     Image = ViewComments;
                     RunObject = Page "Sales Comment Sheet";
                     RunPageLink = "Document Type" = CONST("Posted Invoice"),
@@ -315,7 +321,9 @@ page 34002547 "Lista facturas registradas TPV"
                 }
                 action(Dimensions)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dimensions';
+                    ToolTip = 'Dimensions';
                     Image = Dimensions;
                     ShortCutKey = 'Shift+Ctrl+D';
 
@@ -333,7 +341,9 @@ page 34002547 "Lista facturas registradas TPV"
                 Caption = '&Electronic Document';
                 action("S&end")
                 {
+                    ApplicationArea = All;
                     Caption = 'S&end';
+                    ToolTip = 'S&end';
                     Ellipsis = true;
                     Image = SendTo;
 
@@ -344,7 +354,9 @@ page 34002547 "Lista facturas registradas TPV"
                 }
                 action("Export E-Document as &XML")
                 {
+                    ApplicationArea = All;
                     Caption = 'Export E-Document as &XML';
+                    ToolTip = 'Export E-Document as &XML';
                     Image = ExportElectronicDocument;
 
                     trigger OnAction()
@@ -354,7 +366,9 @@ page 34002547 "Lista facturas registradas TPV"
                 }
                 action("&Cancel")
                 {
+                    ApplicationArea = All;
                     Caption = '&Cancel';
+                    ToolTip = '&Cancel';
                     Image = Cancel;
 
                     trigger OnAction()
@@ -365,7 +379,9 @@ page 34002547 "Lista facturas registradas TPV"
             }
             action("&Print")
             {
+                ApplicationArea = All;
                 Caption = '&Print';
+                ToolTip = '&Print';
                 Ellipsis = true;
                 Image = Print;
                 Promoted = true;
@@ -381,7 +397,9 @@ page 34002547 "Lista facturas registradas TPV"
             }
             action("&Navigate")
             {
+                ApplicationArea = All;
                 Caption = '&Navigate';
+                ToolTip = '&Navigate';
                 Image = Navigate;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -393,7 +411,9 @@ page 34002547 "Lista facturas registradas TPV"
             }
             action("Sales - Invoice")
             {
+                ApplicationArea = All;
                 Caption = 'Sales - Invoice';
+                ToolTip = 'Sales - Invoice';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
@@ -406,7 +426,9 @@ page 34002547 "Lista facturas registradas TPV"
         {
             action("Outstanding Sales Order Aging")
             {
+                ApplicationArea = All;
                 Caption = 'Outstanding Sales Order Aging';
+                ToolTip = 'Outstanding Sales Order Aging';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
@@ -415,7 +437,9 @@ page 34002547 "Lista facturas registradas TPV"
             }
             action("Outstanding Sales Order Status")
             {
+                ApplicationArea = All;
                 Caption = 'Outstanding Sales Order Status';
+                ToolTip = 'Outstanding Sales Order Status';
                 Image = "Report";
                 Promoted = true;
                 PromotedCategory = "Report";
@@ -423,7 +447,9 @@ page 34002547 "Lista facturas registradas TPV"
             }
             action("Daily Invoicing Report")
             {
+                ApplicationArea = All;
                 Caption = 'Daily Invoicing Report';
+                ToolTip = 'Daily Invoicing Report';
                 Image = "Report";
                 Promoted = false;
                 //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'

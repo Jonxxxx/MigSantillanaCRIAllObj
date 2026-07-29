@@ -94,7 +94,9 @@ page 67036 "Colegio - Nivel"
                 Caption = '&Level';
                 action("&Adoption")
                 {
+                    ApplicationArea = All;
                     Caption = '&Adoption';
+                    ToolTip = '&Adoption';
                     Image = EditList;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -116,7 +118,9 @@ page 67036 "Colegio - Nivel"
 
                 action("<Action1000000000>")
                 {
+                    ApplicationArea = All;
                     Caption = '&Grades';
+                    ToolTip = '&Grades';
                     Image = GetLines;
                     Promoted = true;
                     PromotedCategory = Process;

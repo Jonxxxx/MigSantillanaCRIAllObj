@@ -284,7 +284,9 @@ page 56202 "Lista Historial MdE"
         {
             action("Aplicar cambio")
             {
+                ApplicationArea = All;
                 Caption = 'Aplicar cambio';
+                ToolTip = 'Aplicar cambio';
                 Enabled = NOT Aplicado;
                 Image = Apply;
                 Promoted = true;

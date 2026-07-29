@@ -134,7 +134,9 @@ page 34002138 "Lista Mov. CxC Empleados"
                 Caption = '&Employee';
                 action("Close Loan")
                 {
+                    ApplicationArea = All;
                     Caption = 'Close Loan';
+                    ToolTip = 'Close Loan';
                     Image = AdjustItemCost;
                     Promoted = true;
                     PromotedCategory = Process;

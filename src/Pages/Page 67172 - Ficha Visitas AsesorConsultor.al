@@ -221,7 +221,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 Caption = 'Visita';
                 action("Registrar fecha y horarios")
                 {
+                    ApplicationArea = All;
                     Caption = 'Registrar fecha y horarios';
+                    ToolTip = 'Registrar fecha y horarios';
                     Image = CalendarChanged;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -231,7 +233,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("&Assistance")
                 {
+                    ApplicationArea = All;
                     Caption = '&Assistance';
+                    ToolTip = '&Assistance';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -257,7 +261,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("Distribution per Cost Centre")
                 {
+                    ApplicationArea = All;
                     Caption = 'Distribution per Cost Centre';
+                    ToolTip = 'Distribution per Cost Centre';
                     Image = GLAccountBalance;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -275,7 +281,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("Nivel Asistente")
                 {
+                    ApplicationArea = All;
                     Caption = 'Nivel Asistente';
+                    ToolTip = 'Nivel Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
@@ -284,7 +292,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("Grado Asistente")
                 {
+                    ApplicationArea = All;
                     Caption = 'Grado Asistente';
+                    ToolTip = 'Grado Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
@@ -293,7 +303,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("Especialidad Asistente")
                 {
+                    ApplicationArea = All;
                     Caption = 'Especialidad Asistente';
+                    ToolTip = 'Especialidad Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
                     RunObject = Page 67175;
@@ -302,7 +314,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action(Ranking)
                 {
+                    ApplicationArea = All;
                     Caption = 'Ranking';
+                    ToolTip = 'Ranking';
                     Image = ResourcePrice;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -320,7 +334,9 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                 }
                 action("Ejecutar Visita")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ejecutar Visita';
+                    ToolTip = 'Ejecutar Visita';
                     Image = ReleaseDoc;
                     Promoted = true;
                     PromotedCategory = Process;

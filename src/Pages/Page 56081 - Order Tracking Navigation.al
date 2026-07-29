@@ -90,7 +90,9 @@ page 56081 "Order Tracking Navigation"
         {
             action("Fi&nd")
             {
+                ApplicationArea = All;
                 Caption = 'Fi&nd';
+                ToolTip = 'Fi&nd';
                 Image = Find;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -103,7 +105,9 @@ page 56081 "Order Tracking Navigation"
             }
             action(Show)
             {
+                ApplicationArea = All;
                 Caption = '&Show';
+                ToolTip = '&Show';
                 Enabled = ShowEnable;
                 Image = View;
                 Promoted = true;

@@ -72,7 +72,9 @@ page 34002113 "Lista de conceptos salariales"
         {
             action("&Alta/modificacion")
             {
+                ApplicationArea = All;
                 Caption = '&Alta/modificacion';
+                ToolTip = '&Alta/modificacion';
                 Enabled = false;
                 Promoted = true;
                 PromotedCategory = Process;
@@ -83,7 +85,9 @@ page 34002113 "Lista de conceptos salariales"
             }
             action("&Listado")
             {
+                ApplicationArea = All;
                 Caption = '&Listado';
+                ToolTip = '&Listado';
                 Ellipsis = true;
                 Enabled = false;
                 Promoted = true;

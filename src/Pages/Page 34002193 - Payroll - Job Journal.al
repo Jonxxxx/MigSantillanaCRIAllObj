@@ -171,7 +171,9 @@ page 34002193 "Payroll - Job Journal"
                 Image = Job;
                 action(Card1)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = Job;
                     Promoted = true;
                     PromotedCategory = Category4;
@@ -182,7 +184,9 @@ page 34002193 "Payroll - Job Journal"
                 }
                 action("Ledger E&ntries1")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ledger E&ntries';
+                    ToolTip = 'Ledger E&ntries';
                     Image = CustomerLedger;
                     Promoted = true;
                     PromotedCategory = Category4;
@@ -198,7 +202,9 @@ page 34002193 "Payroll - Job Journal"
                 Image = Resource;
                 action(Card2)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = Resource;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -209,7 +215,9 @@ page 34002193 "Payroll - Job Journal"
                 }
                 action("Ledger E&ntries")
                 {
+                    ApplicationArea = All;
                     Caption = 'Ledger E&ntries';
+                    ToolTip = 'Ledger E&ntries';
                     Image = ResourceLedger;
                     Promoted = true;
                     PromotedCategory = Category5;
@@ -224,7 +232,9 @@ page 34002193 "Payroll - Job Journal"
                 Image = Employee;
                 action(Card)
                 {
+                    ApplicationArea = All;
                     Caption = 'Card';
+                    ToolTip = 'Card';
                     Image = Employee;
                     Promoted = true;
                     PromotedCategory = Category6;
@@ -242,7 +252,9 @@ page 34002193 "Payroll - Job Journal"
                 Image = "Action";
                 action(CalcRemainingUsage)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calc. Remaining Usage';
+                    ToolTip = 'Calc. Remaining Usage';
                     Ellipsis = true;
                     Image = CalculateRemainingUsage;
                     Promoted = true;
@@ -268,7 +280,9 @@ page 34002193 "Payroll - Job Journal"
                 Image = Post;
                 action("Test Report")
                 {
+                    ApplicationArea = All;
                     Caption = 'Test Report';
+                    ToolTip = 'Test Report';
                     Ellipsis = true;
                     Image = TestReport;
 
@@ -287,7 +301,9 @@ page 34002193 "Payroll - Job Journal"
                 }
                 action("P&ost")
                 {
+                    ApplicationArea = All;
                     Caption = 'P&ost';
+                    ToolTip = 'P&ost';
                     Image = PostOrder;
                     Promoted = true;
                     PromotedCategory = Process;
@@ -302,7 +318,9 @@ page 34002193 "Payroll - Job Journal"
                 }
                 action("Post and &Print")
                 {
+                    ApplicationArea = All;
                     Caption = 'Post and &Print';
+                    ToolTip = 'Post and &Print';
                     Image = PostPrint;
                     Promoted = true;
                     PromotedCategory = Process;

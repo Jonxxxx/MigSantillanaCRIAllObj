@@ -131,7 +131,9 @@ page 34002243 "Registro Asistencia Entrenamie"
                 Caption = '&Event';
                 action("Register Assistants")
                 {
+                    ApplicationArea = All;
                     Caption = 'Register Assistants';
+                    ToolTip = 'Register Assistants';
                     Image = OpenWorksheet;
                     Promoted = true;
                     PromotedIsBig = true;

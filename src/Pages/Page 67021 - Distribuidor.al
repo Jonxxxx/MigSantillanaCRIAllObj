@@ -123,7 +123,9 @@ page 67021 Distribuidor
 
                 action("E&vents")
                 {
+                    ApplicationArea = All;
                     Caption = 'E&vents';
+                    ToolTip = 'E&vents';
                     Image = EditList;
                     Promoted = true;
                     PromotedCategory = Process;
