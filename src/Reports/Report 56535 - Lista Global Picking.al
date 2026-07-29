@@ -471,17 +471,23 @@ report 56535 "Lista Global Picking"
                     Caption = 'Options';
                     field(Breakbulk; BreakbulkFilter)
                     {
+                        ApplicationArea = All;
                         Caption = 'Set Breakbulk Filter';
+                        ToolTip = 'Set Breakbulk Filter';
                         Editable = BreakbulkEditable;
                     }
                     field(SumUpLines; SumUpLines)
                     {
+                        ApplicationArea = All;
                         Caption = 'Sum up Lines';
+                        ToolTip = 'Sum up Lines';
                         Editable = SumUpLinesEditable;
                     }
                     field(LotSerialNo; ShowLotSN)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show Serial/Lot Number';
+                        ToolTip = 'Show Serial/Lot Number';
                     }
                 }
             }

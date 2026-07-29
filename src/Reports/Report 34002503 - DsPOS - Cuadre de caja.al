@@ -267,7 +267,9 @@ report 34002503 "DsPOS - Cuadre de caja"
                 {
                     field(blnDetallado; blnDetallado)
                     {
+                        ApplicationArea = All;
                         Caption = 'Mostrar detalle';
+                        ToolTip = 'Mostrar detalle';
                     }
                 }
             }

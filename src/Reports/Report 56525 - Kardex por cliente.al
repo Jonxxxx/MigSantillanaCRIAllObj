@@ -274,11 +274,15 @@ report 56525 "Kardex por cliente"
                     Caption = 'Options';
                     field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
+                        ApplicationArea = All;
                         Caption = 'New Page per Customer';
+                        ToolTip = 'New Page per Customer';
                     }
                     field(ExcludeBalanceOnly; ExcludeBalanceOnly)
                     {
+                        ApplicationArea = All;
                         Caption = 'Exclude Customers That Have a Balance Only';
+                        ToolTip = 'Exclude Customers That Have a Balance Only';
                         MultiLine = true;
                     }
                 }

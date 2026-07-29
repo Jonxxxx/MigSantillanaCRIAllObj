@@ -191,12 +191,16 @@ report 56123 "Seguimiento Ordenes de Compra"
             {
                 field(DimInvProt; DimInvProt)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dim Inv. Prototipos';
+                    ToolTip = 'Dim Inv. Prototipos';
                     TableRelation = Dimension;
                 }
                 field(DimProt; DimProt)
                 {
+                    ApplicationArea = All;
                     Caption = 'Dim Prototipos';
+                    ToolTip = 'Dim Prototipos';
                     TableRelation = Dimension;
                 }
             }

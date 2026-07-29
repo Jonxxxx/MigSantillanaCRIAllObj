@@ -157,7 +157,9 @@ report 56100 "Registro transf inventario"
                     Caption = 'Options';
                     field(PrintItemDescriptions; PrintItemDescriptions)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print Item Descriptions';
+                        ToolTip = 'Print Item Descriptions';
                     }
                 }
             }

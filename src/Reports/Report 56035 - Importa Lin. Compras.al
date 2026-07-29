@@ -39,7 +39,7 @@ report 56035 "Importa Lin. Compras"
                         {
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
-                            ToolTip = 'Specifies the Excel workbook to import.';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -55,7 +55,7 @@ report 56035 "Importa Lin. Compras"
                         {
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
-                            ToolTip = 'Specifies the worksheet to import.';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -71,7 +71,7 @@ report 56035 "Importa Lin. Compras"
                             ApplicationArea = All;
                             Caption = 'Vendor Dim. Code';
                             TableRelation = Dimension;
-                            ToolTip = 'Specifies the dimension code used for the vendor value imported from Excel.';
+                            ToolTip = 'Vendor Dim. Code';
                         }
                     }
                     group("Data Columns")
@@ -81,31 +81,31 @@ report 56035 "Importa Lin. Compras"
                         {
                             ApplicationArea = All;
                             Caption = 'Item/G/L Account Code Cell';
-                            ToolTip = 'Specifies the first cell containing the item or G/L account code.';
+                            ToolTip = 'Item/G/L Account Code Cell';
                         }
                         field(Cell_2; Cell2)
                         {
                             ApplicationArea = All;
                             Caption = 'Quantity Cell';
-                            ToolTip = 'Specifies the first cell containing the quantity.';
+                            ToolTip = 'Quantity Cell';
                         }
                         field(Cell_3; Cell3)
                         {
                             ApplicationArea = All;
                             Caption = 'Direct Unit cost Cell';
-                            ToolTip = 'Specifies the first cell containing the direct unit cost.';
+                            ToolTip = 'Direct Unit cost Cell';
                         }
                         field(Cell_4; Cell4)
                         {
                             ApplicationArea = All;
                             Caption = 'Employee Cell';
-                            ToolTip = 'Specifies the first cell containing the employee code.';
+                            ToolTip = 'Employee Cell';
                         }
                         field(Cell_5; Cell5)
                         {
                             ApplicationArea = All;
                             Caption = 'Vendor Cell';
-                            ToolTip = 'Specifies the first cell containing the vendor dimension value.';
+                            ToolTip = 'Vendor Cell';
                         }
                     }
                 }

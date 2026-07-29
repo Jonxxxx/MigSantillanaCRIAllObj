@@ -291,7 +291,9 @@ report 52544 "Nota de Credito CR Electronica"
                     Caption = 'Options';
                     field(Order; Order)
                     {
+                        ApplicationArea = All;
                         Caption = 'Line Order';
+                        ToolTip = 'Line Order';
                         OptionCaption = 'Normal,Bin Ranking';
                     }
                 }

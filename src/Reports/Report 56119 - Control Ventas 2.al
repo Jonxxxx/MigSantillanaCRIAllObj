@@ -128,6 +128,8 @@ report 56119 "Control Ventas 2"
             {
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detallado';
                 }
             }
         }

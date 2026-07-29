@@ -477,15 +477,21 @@ report 56128 "Antiguedad Saldo Proveedor"
             {
                 field(wDetallado; wDetallado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Detallado';
+                    ToolTip = 'Detallado';
                 }
                 field(wFechaInicio; wFechaInicio)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha';
+                    ToolTip = 'Fecha';
                 }
                 field(wLongitudPeriodo; wLongitudPeriodo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Longitud periodo';
+                    ToolTip = 'Longitud periodo';
                 }
             }
         }

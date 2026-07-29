@@ -68,7 +68,9 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
                 {
                     field(PerNomina; PerNomina)
                     {
+                        ApplicationArea = All;
                         Caption = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
+                        ToolTip = 'Daily,Weekly,Bi-Weekly,Half Month,Monthly,Yearly';
                     }
                 }
             }

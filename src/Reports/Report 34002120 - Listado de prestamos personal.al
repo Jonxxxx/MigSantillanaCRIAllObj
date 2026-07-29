@@ -224,6 +224,8 @@ report 34002120 "Listado de prestamos personal"
                 field("Fecha inicio"; FechaInicio)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inicio';
                     trigger OnValidate()
                     var
                         Fecha: Record 2000000007;
@@ -263,14 +265,20 @@ report 34002120 "Listado de prestamos personal"
                 }
                 field("Fecha fin"; FechaFin)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha fin';
                     Editable = false;
                 }
                 field("Antes de nomina"; AntesDespuesNomina)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Antes de nomina';
                 }
                 field("Aplicar a nomina"; AplicaaNomina)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicar a nomina';
                     trigger OnValidate()
                     begin
                         IF AplicaaNomina AND (AntesDespuesNomina = 1) THEN

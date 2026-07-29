@@ -110,15 +110,21 @@ report 56120 "Venta y Saldo x Vendedor"
             {
                 field(FechaIni; FechaIni)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha inicial';
+                    ToolTip = 'Fecha inicial';
                 }
                 field(FechaFin; FechaFin)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha Final';
+                    ToolTip = 'Fecha Final';
                 }
                 field(IdiomaOffice; IdiomaOffice)
                 {
+                    ApplicationArea = All;
                     Caption = 'Idioma Office';
+                    ToolTip = 'Idioma Office';
                 }
             }
         }

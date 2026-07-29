@@ -58,7 +58,9 @@ report 56200 "Enviar IRM"
                     Caption = 'Envio';
                     field(Envio; Envio)
                     {
+                        ApplicationArea = All;
                         Caption = 'Tipo';
+                        ToolTip = 'Tipo';
                     }
                 }
                 group(Periodo)
@@ -66,7 +68,9 @@ report 56200 "Enviar IRM"
                     Caption = 'Periodo';
                     field(FechaIni; FechaIni)
                     {
+                        ApplicationArea = All;
                         Caption = 'Fecha inicio';
+                        ToolTip = 'Fecha inicio';
 
                         trigger OnValidate()
                         begin
@@ -76,7 +80,9 @@ report 56200 "Enviar IRM"
                     }
                     field(FechaFin; FechaFin)
                     {
+                        ApplicationArea = All;
                         Caption = 'Fecha fin';
+                        ToolTip = 'Fecha fin';
                     }
                 }
             }

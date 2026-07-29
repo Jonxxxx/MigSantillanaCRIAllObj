@@ -274,11 +274,15 @@ report 56526 "Kardex por proveedor"
                     Caption = 'Options';
                     field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
+                        ApplicationArea = All;
                         Caption = 'New Page per Vendor';
+                        ToolTip = 'New Page per Vendor';
                     }
                     field(ExcludeBalanceOnly; ExcludeBalanceOnly)
                     {
+                        ApplicationArea = All;
                         Caption = 'Exclude Vendors That Have a Balance Only';
+                        ToolTip = 'Exclude Vendors That Have a Balance Only';
                         MultiLine = true;
                     }
                 }

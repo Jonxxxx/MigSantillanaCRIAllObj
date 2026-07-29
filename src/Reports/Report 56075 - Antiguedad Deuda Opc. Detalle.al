@@ -269,11 +269,15 @@ report 56075 "Antiguedad Deuda Opc. Detalle"
             {
                 field(StartDate; StartDate)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha incial';
+                    ToolTip = 'Fecha incial';
                 }
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Detallado';
+                    ToolTip = 'Detallado';
                 }
             }
         }

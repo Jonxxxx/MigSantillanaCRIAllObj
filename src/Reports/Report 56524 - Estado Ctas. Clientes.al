@@ -368,7 +368,9 @@ report 56524 "Estado Ctas. Clientes"
             {
                 field("<Control1000000001>"; ToDate)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha final';
+                    ToolTip = 'Fecha final';
                 }
             }
         }

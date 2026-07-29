@@ -527,15 +527,21 @@ report 34002522 "DsPOS - Factura Venta GT ON"
                     Caption = 'Options';
                     field(NoOfCopies; NoOfCopies)
                     {
+                        ApplicationArea = All;
                         Caption = 'No. of Copies';
+                        ToolTip = 'No. of Copies';
                     }
                     field(ShowInternalInfo; ShowInternalInfo)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show Internal Information';
+                        ToolTip = 'Show Internal Information';
                     }
                     field(LogInteraction; LogInteraction)
                     {
+                        ApplicationArea = All;
                         Caption = 'Log Interaction';
+                        ToolTip = 'Log Interaction';
                         Enabled = LogInteractionEnable;
                     }
                 }

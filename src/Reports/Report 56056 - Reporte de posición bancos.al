@@ -232,9 +232,13 @@ report 56056 "Reporte de posicion bancos"
             {
                 field("Fecha Balance"; wFechaBalance)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Balance';
                 }
                 field(Moneda; wDivisa)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Moneda';
                     TableRelation = Currency.Code;
                 }
             }

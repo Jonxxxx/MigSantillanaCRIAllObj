@@ -957,17 +957,23 @@ report 34003013 "Compra B-S 2018 (606)"
             {
                 field(CtasRetencionITBIS; CtasRetencionITBIS)
                 {
+                    ApplicationArea = All;
                     Caption = 'ITBIS Retention Account';
+                    ToolTip = 'ITBIS Retention Account';
                     TableRelation = "G/L Account";
                 }
                 field(CtasRetencionISR; CtasRetencionISR)
                 {
+                    ApplicationArea = All;
                     Caption = 'ISR Retention Account';
+                    ToolTip = 'ISR Retention Account';
                     TableRelation = "G/L Account";
                 }
                 field(DivAd; DivAd)
                 {
+                    ApplicationArea = All;
                     Caption = 'Currency';
+                    ToolTip = 'Currency';
                 }
             }
         }

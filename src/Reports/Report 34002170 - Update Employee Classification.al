@@ -95,9 +95,9 @@ report 34002170 "Update Employee Classification"
                     Caption = 'Options';
                     field(Date; Date)
                     {
-                        ApplicationArea = RelationshipMgmt;
+                        ApplicationArea = All;
                         Caption = 'Date';
-                        ToolTip = 'Specifies the date on which you update the contact classification.';
+                        ToolTip = 'Date';
                     }
                 }
             }

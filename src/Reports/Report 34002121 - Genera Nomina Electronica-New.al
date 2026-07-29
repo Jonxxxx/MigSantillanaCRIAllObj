@@ -192,7 +192,9 @@ report 34002121 "Genera Nomina Electronica-New"
             {
                 field(fechatrans; fechatrans)
                 {
+                    ApplicationArea = All;
                     Caption = 'Efective Date';
+                    ToolTip = 'Efective Date';
                 }
             }
         }

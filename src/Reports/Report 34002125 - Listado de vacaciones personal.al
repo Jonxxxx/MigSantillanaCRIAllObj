@@ -255,7 +255,9 @@ report 34002125 "Listado de vacaciones personal"
             {
                 field("Ano a generar"; AnoTrabajo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Year to calculate';
+                    ToolTip = 'Year to calculate';
 
                     trigger OnValidate()
                     begin
@@ -265,7 +267,9 @@ report 34002125 "Listado de vacaciones personal"
                 }
                 field("Mes a generar"; Mes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Month to calculate';
+                    ToolTip = 'Month to calculate';
 
                     trigger OnValidate()
                     begin
@@ -285,6 +289,8 @@ report 34002125 "Listado de vacaciones personal"
                 }
                 field("Aplicar a nomina"; AplicaaNomina)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicar a nomina';
                 }
             }
         }

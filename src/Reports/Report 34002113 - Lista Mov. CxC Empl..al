@@ -160,6 +160,8 @@ report 34002113 "Lista Mov. CxC Empl."
             {
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detallado';
                 }
             }
         }

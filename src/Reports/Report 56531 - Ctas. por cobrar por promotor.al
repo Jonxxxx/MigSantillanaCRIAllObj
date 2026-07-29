@@ -204,7 +204,9 @@ report 56531 "Ctas. por cobrar por promotor"
             {
                 field("<Control1000000001>"; ToDate)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha final';
+                    ToolTip = 'Fecha final';
                 }
             }
         }

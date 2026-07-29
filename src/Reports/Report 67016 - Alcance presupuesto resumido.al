@@ -149,6 +149,8 @@ report 67016 "Alcance presupuesto resumido"
             {
                 field(Promotor; codPromotor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Promotor';
                     TableRelation = "Salesperson/Purchaser";
                 }
             }

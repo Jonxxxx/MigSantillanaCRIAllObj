@@ -36,15 +36,21 @@ report 34002105 "Parametros ciclos nominas"
             {
                 field("Tipo Calculo"; FrecuenciaPago)
                 {
+                    ApplicationArea = All;
                     Caption = ' Payment frequency';
+                    ToolTip = ' Payment frequency';
                 }
                 field(Inicio; Inicio)
                 {
+                    ApplicationArea = All;
                     Caption = 'Starting';
+                    ToolTip = 'Starting';
                 }
                 field(Cantidad; Cantidad)
                 {
+                    ApplicationArea = All;
                     Caption = 'Quantity';
+                    ToolTip = 'Quantity';
                 }
             }
         }

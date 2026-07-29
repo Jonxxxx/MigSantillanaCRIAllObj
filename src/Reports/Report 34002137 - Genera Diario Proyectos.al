@@ -195,7 +195,9 @@ report 34002137 "Genera Diario Proyectos"
             {
                 field("Aplicar a nomina"; ApplyPayroll)
                 {
+                    ApplicationArea = All;
                     Caption = 'Apply to payroll';
+                    ToolTip = 'Apply to payroll';
                 }
             }
         }

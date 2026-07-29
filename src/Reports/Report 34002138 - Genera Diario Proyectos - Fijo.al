@@ -172,11 +172,15 @@ report 34002138 "Genera Diario Proyectos - Fijo"
             {
                 field(GenerarDiario; GenerateJournal)
                 {
+                    ApplicationArea = All;
                     Caption = 'Generate Journal';
+                    ToolTip = 'Generate Journal';
                 }
                 field(NoDocumento; DocNo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Document no.';
+                    ToolTip = 'Document no.';
                 }
             }
         }

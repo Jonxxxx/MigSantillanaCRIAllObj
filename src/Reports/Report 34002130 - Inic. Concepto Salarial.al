@@ -39,14 +39,20 @@ report 34002130 "Inic. Concepto Salarial"
             {
                 field("concepto salarial"; Concepto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'concepto salarial';
                     TableRelation = "Conceptos salariales";
                 }
                 field("Inicializa cantidad"; InicCantidad)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Inicializa cantidad';
                 }
                 field("Inicializa importes"; InicImporte)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Inicializa importes';
                     trigger OnValidate()
                     begin
                         IF Concepto = '' THEN

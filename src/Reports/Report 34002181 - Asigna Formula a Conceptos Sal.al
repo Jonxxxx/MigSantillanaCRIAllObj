@@ -52,16 +52,22 @@ report 34002181 "Asigna Formula a Conceptos Sal"
                 {
                     field(ConceptoSal; ConceptoSal)
                     {
+                        ApplicationArea = All;
                         Caption = 'Wedge';
+                        ToolTip = 'Wedge';
                         TableRelation = "Conceptos salariales";
                     }
                     field(Formula; Formula)
                     {
+                        ApplicationArea = All;
                         Caption = 'Formula';
+                        ToolTip = 'Formula';
                     }
                     field("Tipo sueldo"; "Tipo sueldo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Income type';
+                        ToolTip = 'Income type';
                         OptionCaption = 'Fix,Hour';
                     }
                 }

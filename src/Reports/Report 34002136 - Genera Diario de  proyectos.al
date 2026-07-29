@@ -193,11 +193,15 @@ report 34002136 "Genera Diario de  proyectos"
             {
                 field("Aplicar a nomina"; ApplyPayroll)
                 {
+                    ApplicationArea = All;
                     Caption = 'Apply to payroll';
+                    ToolTip = 'Apply to payroll';
                 }
                 field(CreateJobJournal; CreateJobJournal)
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Job Journal';
+                    ToolTip = 'Create Job Journal';
                 }
             }
         }

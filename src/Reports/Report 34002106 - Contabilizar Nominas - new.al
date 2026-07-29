@@ -1071,11 +1071,15 @@ report 34002106 "Contabilizar Nominas - new"
             {
                 field("Libro Diario"; "Repetir Contabiliz.")
                 {
+                    ApplicationArea = All;
                     Caption = 'Repeat Journal Post';
+                    ToolTip = 'Repeat Journal Post';
                 }
                 field(CodSeccion; CodSeccion)
                 {
+                    ApplicationArea = All;
                     Caption = 'Batch Journal name';
+                    ToolTip = 'Batch Journal name';
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
@@ -1090,11 +1094,15 @@ report 34002106 "Contabilizar Nominas - new"
                 }
                 field(FechaRegistro; FechaRegistro)
                 {
+                    ApplicationArea = All;
                     Caption = 'Posting Date';
+                    ToolTip = 'Posting Date';
                 }
                 field(CodDivisa; CodDivisa)
                 {
+                    ApplicationArea = All;
                     Caption = 'Currency code';
+                    ToolTip = 'Currency code';
                     TableRelation = Currency;
                 }
             }

@@ -87,12 +87,16 @@ report 34002140 "Proceso Gtos. Nomina"
                 {
                     field(Dimension; CodDimension)
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimension Code';
+                        ToolTip = 'Dimension Code';
                         TableRelation = Dimension;
                     }
                     field("Valor dimension"; CodValorDim)
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimension Value Code';
+                        ToolTip = 'Dimension Value Code';
 
                         trigger OnLookup(var Text: Text): Boolean
                         var
@@ -119,7 +123,9 @@ report 34002140 "Proceso Gtos. Nomina"
                     }
                     field(Banco; CodigoBanco)
                     {
+                        ApplicationArea = All;
                         Caption = 'Bank Account';
+                        ToolTip = 'Bank Account';
                         TableRelation = "Bank Account";
                     }
                 }

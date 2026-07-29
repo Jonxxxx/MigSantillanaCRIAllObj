@@ -563,22 +563,22 @@ report 56004 "Post Inventory Cost to G/L-TN"
                     Caption = 'Options';
                     field(PostMethod; PostMethod)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Posting Method';
                         OptionCaption = 'Per Posting Group,Per Entry';
-                        ToolTip = 'Specifies if the batch job tests the posting of inventory value to the general ledger per inventory posting group or per posted value entry. If you post per entry, you achieve a detailed specification of how the inventory affects the general ledger.';
+                        ToolTip = 'Posting Method';
                     }
                     field(DocumentNo; DocNo)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Document No.';
-                        ToolTip = 'Specifies the number of the document that is processed by the report or batch job.';
+                        ToolTip = 'Document No.';
                     }
                     field(Post; Post)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Post';
-                        ToolTip = 'Specifies that the inventory value will be posted to the general ledger when you run the batch job.';
+                        ToolTip = 'Post';
                     }
                 }
             }

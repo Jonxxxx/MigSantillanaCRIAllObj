@@ -324,16 +324,24 @@ report 34002119 "Lista acumulado Regalia"
             {
                 field("Ano a generar"; Anotrabajo)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano a generar';
                 }
                 field("Aplicar a nomina"; AplicarNomina)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicar a nomina';
                 }
                 field("Proyecto salario 12"; "Proyectar salario 12")
                 {
+                    ApplicationArea = All;
                     Caption = 'Estimate 12th salary';
+                    ToolTip = 'Estimate 12th salary';
                 }
                 field("Concepto Regalia"; ConfNominas."Concepto Regalia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto Regalia';
                     TableRelation = "Conceptos salariales";
                 }
             }

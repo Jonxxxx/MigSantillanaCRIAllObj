@@ -262,11 +262,15 @@ report 56527 "Ctas. por cobrar x dias vdos."
                     Caption = 'Options';
                     field(StartDate; StartDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Starting Date';
+                        ToolTip = 'Starting Date';
                     }
                     field(PrintCustomers; PrintCustomers)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print customers';
+                        ToolTip = 'Print customers';
                     }
                 }
             }

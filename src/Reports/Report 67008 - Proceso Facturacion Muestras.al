@@ -92,11 +92,15 @@ report 67008 "Proceso Facturacion Muestras"
                 {
                     field(TipoFacturacion; TipoFacturacion)
                     {
+                        ApplicationArea = All;
                         Caption = 'Invoice type';
+                        ToolTip = 'Invoice type';
                     }
                     field(TipoAdopcion; TipoAdopcion)
                     {
+                        ApplicationArea = All;
                         Caption = 'Adoption type';
+                        ToolTip = 'Adoption type';
                     }
                 }
             }

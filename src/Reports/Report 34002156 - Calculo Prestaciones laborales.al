@@ -469,28 +469,42 @@ report 34002156 "Calculo Prestaciones laborales"
             {
                 field("Vacaciones pagadas"; VacacionesPagadas)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Vacaciones pagadas';
                 }
                 field(CalcularPreaviso; CalcularPreaviso)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate Notificacion';
+                    ToolTip = 'Calculate Notificacion';
                 }
                 field(CalcularCesantia; CalcularCesantia)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculate Censantea';
+                    ToolTip = 'Calculate Censantea';
                 }
                 field("Pagar Regalia"; "Pagar Regalia")
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Pagar Regalia';
                 }
                 field(Calculoenbaseultimosalario; Calculoenbaseultimosalario)
                 {
+                    ApplicationArea = All;
                     Caption = 'Calculation based on last salary';
+                    ToolTip = 'Calculation based on last salary';
                 }
                 field(IncluirFechaSalida; IncluirFechaSalida)
                 {
+                    ApplicationArea = All;
                     Caption = 'Include end date in calculation';
+                    ToolTip = 'Include end date in calculation';
                 }
                 field("Dias diferencia salario"; DiasSalario)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Dias diferencia salario';
                 }
             }
         }

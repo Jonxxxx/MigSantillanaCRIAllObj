@@ -413,15 +413,21 @@ report 50002 "Customer - Detail Trial"
                     Caption = 'Options';
                     field(ShowAmountsInLCY; PrintAmountsInLCY)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show Amounts in $';
+                        ToolTip = 'Show Amounts in $';
                     }
                     field(NewPageperCustomer; PrintOnlyOnePerPage)
                     {
+                        ApplicationArea = All;
                         Caption = 'New Page per Customer';
+                        ToolTip = 'New Page per Customer';
                     }
                     field(ExcludeCustHaveaBalanceOnly; ExcludeBalanceOnly)
                     {
+                        ApplicationArea = All;
                         Caption = 'Exclude Customers That Have a Balance Only';
+                        ToolTip = 'Exclude Customers That Have a Balance Only';
                         MultiLine = true;
                     }
                 }

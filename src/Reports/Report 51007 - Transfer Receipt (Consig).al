@@ -399,11 +399,15 @@ report 51007 "Transfer Receipt (Consig)"
                     Caption = 'Options';
                     field(NoOfCopies; NoOfCopies)
                     {
+                        ApplicationArea = All;
                         Caption = 'No. of Copies';
+                        ToolTip = 'No. of Copies';
                     }
                     field(ShowInternalInfo; ShowInternalInfo)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show Internal Information';
+                        ToolTip = 'Show Internal Information';
                     }
                 }
             }

@@ -170,7 +170,9 @@ report 34002116 "Listado de Cheques Nominas"
             {
                 field(Mes; GenerarCK)
                 {
+                    ApplicationArea = All;
                     Caption = 'Request Check';
+                    ToolTip = 'Request Check';
                 }
             }
         }

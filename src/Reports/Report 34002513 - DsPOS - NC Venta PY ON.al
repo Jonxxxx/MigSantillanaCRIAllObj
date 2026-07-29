@@ -711,19 +711,26 @@ report 34002513 "DsPOS - NC Venta PY ON"
                     Caption = 'Options';
                     field("Nuevo NCF"; NuevoNCF)
                     {
-                        ToolTip = 'Si pone el nuevo NCF, a los documentos con NCF reimpresos se les asignar´Š¢ el nuevo nomero (si se reimprime m´Š¢s de un documento, se incrementar´Š¢ autom´Š¢ticamente la numeracion)';
+                        ApplicationArea = All;
+                        ToolTip = 'Nuevo NCF';
                     }
                     field(NoCopies; NoCopies)
                     {
+                        ApplicationArea = All;
                         Caption = 'Number of Copies';
+                        ToolTip = 'Number of Copies';
                     }
                     field(PrintCompany; PrintCompany)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print Company Address';
+                        ToolTip = 'Print Company Address';
                     }
                     field(LogInteraction; LogInteraction)
                     {
+                        ApplicationArea = All;
                         Caption = 'Log Interaction';
+                        ToolTip = 'Log Interaction';
                         Enabled = LogInteractionEnable;
                     }
                 }

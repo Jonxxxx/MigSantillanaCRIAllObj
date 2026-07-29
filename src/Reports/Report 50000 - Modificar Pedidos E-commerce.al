@@ -48,11 +48,15 @@ report 50000 "Modificar Pedidos E-commerce"
                     Caption = 'Nuevos Datos';
                     field("Nueva Cedula"; NuevaCedula)
                     {
+                        ApplicationArea = All;
                         Caption = 'Nueva Cedula';
+                        ToolTip = 'Nueva Cedula';
                     }
                     field("Nuevo Correo"; NuevoCorreo)
                     {
+                        ApplicationArea = All;
                         Caption = 'Nuevo Correo';
+                        ToolTip = 'Nuevo Correo';
                     }
                 }
             }

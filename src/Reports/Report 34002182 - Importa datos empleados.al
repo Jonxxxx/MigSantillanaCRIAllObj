@@ -38,7 +38,7 @@ report 34002182 "Importa datos empleados"
                             ApplicationArea = All;
                             Caption = 'Wedge''s Concept';
                             TableRelation = "Conceptos salariales";
-                            ToolTip = 'Specifies the salary concept whose employee values will be updated.';
+                            ToolTip = 'Wedge''s Concept';
                         }
 
                         field(FileName; FileName)
@@ -46,7 +46,7 @@ report 34002182 "Importa datos empleados"
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
                             Editable = false;
-                            ToolTip = 'Specifies the Excel workbook containing the employee data.';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -59,7 +59,7 @@ report 34002182 "Importa datos empleados"
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
                             Editable = false;
-                            ToolTip = 'Specifies the worksheet containing the employee data.';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -79,21 +79,21 @@ report 34002182 "Importa datos empleados"
                             {
                                 ApplicationArea = All;
                                 Caption = 'Employee code cell';
-                                ToolTip = 'Specifies the first cell containing the employee code.';
+                                ToolTip = 'Employee code cell';
                             }
 
                             field(Cell1; Cell1)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Quantity Cell';
-                                ToolTip = 'Specifies the first cell containing the quantity.';
+                                ToolTip = 'Quantity Cell';
                             }
 
                             field(Cell2; Cell2)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Amount Cell';
-                                ToolTip = 'Specifies the first cell containing the amount.';
+                                ToolTip = 'Amount Cell';
                             }
                         }
                     }

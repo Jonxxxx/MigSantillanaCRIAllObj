@@ -175,11 +175,15 @@ report 56186 "Provision de insolvencias"
                     Caption = 'Options';
                     field(PostingDate; PostingDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Posting Date';
+                        ToolTip = 'Posting Date';
                     }
                     field(JournalTemplate; JournalTemplate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Journal Template';
+                        ToolTip = 'Journal Template';
                         TableRelation = "Gen. Journal Batch".Name;
 
                         trigger OnLookup(var Text: Text): Boolean
@@ -201,7 +205,9 @@ report 56186 "Provision de insolvencias"
                     }
                     field(BatchName; BatchName)
                     {
+                        ApplicationArea = All;
                         Caption = 'Batch Name';
+                        ToolTip = 'Batch Name';
                         TableRelation = "Gen. Journal Batch".Name;
 
                         trigger OnLookup(var Text: Text): Boolean

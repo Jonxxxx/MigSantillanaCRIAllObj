@@ -196,19 +196,27 @@ report 50048 "Formato DPP x Clientes v2"
             {
                 field(NumberOfCopies; NoCopies)
                 {
+                    ApplicationArea = All;
                     Caption = 'Number of Copies';
+                    ToolTip = 'Number of Copies';
                 }
                 field(FechaDesde; FechaDesde)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha Desde';
+                    ToolTip = 'Fecha Desde';
                 }
                 field(FechaHasta; FechaHasta)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha Hasta';
+                    ToolTip = 'Fecha Hasta';
                 }
                 field(VendedorCode; VendedorCode)
                 {
+                    ApplicationArea = All;
                     Caption = 'Vendedor';
+                    ToolTip = 'Vendedor';
                     TableRelation = "Salesperson/Purchaser".Code;
                 }
             }

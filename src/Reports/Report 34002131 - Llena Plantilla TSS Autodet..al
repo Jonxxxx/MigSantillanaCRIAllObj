@@ -336,10 +336,14 @@ report 34002131 "Llena Plantilla TSS Autodet."
             {
                 field(Ano; Ano)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano';
                 }
                 field(Mes; Mes)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Mes';
                     trigger OnValidate()
                     begin
                         Fecha.SETRANGE("Period Type", Fecha."Period Type"::Month);
@@ -352,11 +356,15 @@ report 34002131 "Llena Plantilla TSS Autodet."
                 }
                 field(ClaveNomina; ClaveNomina)
                 {
+                    ApplicationArea = All;
                     Caption = 'Payroll ID TSS';
+                    ToolTip = 'Payroll ID TSS';
                 }
                 field(TipoSalida; TipoSalida)
                 {
+                    ApplicationArea = All;
                     Caption = 'File format';
+                    ToolTip = 'File format';
                     OptionCaption = 'Txt,Excel';
 
                     trigger OnValidate()
@@ -372,7 +380,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                     Caption = 'Workbook File Name';
                     Editable = false;
                     Enabled = EditaDatos;
-                    ToolTip = 'Specifies the Excel template workbook that will be completed and downloaded.';
+                    ToolTip = 'Workbook File Name';
 
                     trigger OnAssistEdit()
                     begin
@@ -385,7 +393,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
                     Caption = 'Worksheet Name';
                     Editable = false;
                     Enabled = EditaDatos;
-                    ToolTip = 'Specifies the worksheet in the uploaded Excel template.';
+                    ToolTip = 'Worksheet Name';
 
                     trigger OnAssistEdit()
                     begin

@@ -1173,7 +1173,9 @@ report 50045 "Cheque Santillana BPD"
                     Caption = 'Options';
                     field("No."; BankAcc2."No.")
                     {
+                        ApplicationArea = All;
                         Caption = 'Bank Account';
+                        ToolTip = 'Bank Account';
                         TableRelation = "Bank Account";
 
                         trigger OnValidate()
@@ -1187,28 +1189,40 @@ report 50045 "Cheque Santillana BPD"
                     }
                     field(UseCheckNo; UseCheckNo)
                     {
+                        ApplicationArea = All;
                         Caption = 'Last Check No.';
+                        ToolTip = 'Last Check No.';
                     }
                     field(OneCheckPrVendor; OneCheckPrVendor)
                     {
+                        ApplicationArea = All;
                         Caption = 'One Check per Vendor per Document No.';
+                        ToolTip = 'One Check per Vendor per Document No.';
                         MultiLine = true;
                     }
                     field(ReprintChecks; ReprintChecks)
                     {
+                        ApplicationArea = All;
                         Caption = 'Reprint Checks';
+                        ToolTip = 'Reprint Checks';
                     }
                     field(TestPrint; TestPrint)
                     {
+                        ApplicationArea = All;
                         Caption = 'Test Print';
+                        ToolTip = 'Test Print';
                     }
                     field(PreprintedStub; PreprintedStub)
                     {
+                        ApplicationArea = All;
                         Caption = 'Preprinted Stub';
+                        ToolTip = 'Preprinted Stub';
                     }
                     field(CommitEachCheck; CommitEachCheck)
                     {
+                        ApplicationArea = All;
                         Caption = 'Commit Each Check';
+                        ToolTip = 'Commit Each Check';
                     }
                 }
             }

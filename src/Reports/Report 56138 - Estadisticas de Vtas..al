@@ -808,15 +808,21 @@ report 56138 "Estadisticas de Vtas."
                     Caption = 'Opciones';
                     field(PrintToExcel; PrintToExcel)
                     {
+                        ApplicationArea = All;
                         Caption = 'Export to excel';
+                        ToolTip = 'Export to excel';
                     }
                     field(Detallado; Detallado)
                     {
+                        ApplicationArea = All;
                         Caption = 'Detallado';
+                        ToolTip = 'Detallado';
                     }
                     field(codNumDev; codNumDev)
                     {
+                        ApplicationArea = All;
                         Caption = 'Nº Devolucion';
+                        ToolTip = 'Nº Devolucion';
                         Visible = true;
                     }
                 }

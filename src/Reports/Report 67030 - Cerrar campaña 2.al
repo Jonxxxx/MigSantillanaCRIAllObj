@@ -46,7 +46,9 @@ report 67030 "Cerrar campaña 2"
                     Caption = 'Opciones';
                     field(codCampaña; codCampaña)
                     {
+                        ApplicationArea = All;
                         Caption = 'Campaña a cerrar';
+                        ToolTip = 'Campaña a cerrar';
                         TableRelation = Campaign;
                     }
                 }

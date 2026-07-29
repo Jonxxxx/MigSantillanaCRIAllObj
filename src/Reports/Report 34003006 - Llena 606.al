@@ -45,7 +45,7 @@ report 34003006 "Llena 606"
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
                             Editable = false;
-                            ToolTip = 'Specifies the Excel workbook used to fill the 606 template.';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -58,7 +58,7 @@ report 34003006 "Llena 606"
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
                             Editable = false;
-                            ToolTip = 'Specifies the worksheet used to fill the 606 template.';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin

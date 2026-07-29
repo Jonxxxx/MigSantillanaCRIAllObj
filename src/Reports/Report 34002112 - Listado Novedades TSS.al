@@ -206,25 +206,25 @@ report 34002112 "Listado Novedades TSS"
                 {
                     ApplicationArea = All;
                     Caption = 'Mes';
-                    ToolTip = 'Especifica el mes que se utilizará para generar el listado de novedades TSS.';
+                    ToolTip = 'Mes';
                 }
                 field(Ano; Ano)
                 {
                     ApplicationArea = All;
                     Caption = 'Año';
-                    ToolTip = 'Especifica el año que se utilizará para generar el listado de novedades TSS.';
+                    ToolTip = 'Año';
                 }
                 field("Nombre archivo"; FileName)
                 {
                     ApplicationArea = All;
                     Caption = 'Nombre archivo';
-                    ToolTip = 'Especifica el nombre del archivo TXT que se descargará. La carpeta de descarga es administrada por el navegador.';
+                    ToolTip = 'Nombre archivo';
                 }
                 field("Genera archivo"; GenerarArchivo)
                 {
                     ApplicationArea = All;
                     Caption = 'Generar archivo';
-                    ToolTip = 'Especifica si se debe generar y descargar el archivo TXT de novedades TSS.';
+                    ToolTip = 'Generar archivo';
                 }
             }
         }

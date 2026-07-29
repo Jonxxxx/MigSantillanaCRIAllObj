@@ -40,12 +40,16 @@ report 34002143 "Cambia tipo nomina a conceptos"
             {
                 field(concep; Concepto)
                 {
+                    ApplicationArea = All;
                     Caption = 'Wage';
+                    ToolTip = 'Wage';
                     TableRelation = "Conceptos salariales";
                 }
                 field(Nvotiponom; TipoNom)
                 {
+                    ApplicationArea = All;
                     Caption = 'New payroll type';
+                    ToolTip = 'New payroll type';
                     TableRelation = "Tipos de nominas";
                 }
             }

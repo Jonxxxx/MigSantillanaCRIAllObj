@@ -330,33 +330,53 @@ report 34002109 "Listado Pagos Efectivo"
             {
                 field("Fecha Pago"; fechatrans)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Pago';
                 }
                 field("Desglose Moneda 1"; monedas[1, 1])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 1';
                 }
                 field("Desglose Moneda 2"; monedas[1, 2])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 2';
                 }
                 field("Desglose Moneda 3"; monedas[1, 3])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 3';
                 }
                 field("Desglose Moneda 4"; monedas[1, 4])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 4';
                 }
                 field("Desglose Moneda 5"; monedas[1, 5])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 5';
                 }
                 field("Desglose Moneda 6"; monedas[1, 6])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 6';
                 }
                 field("Desglose Moneda 7"; monedas[1, 7])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 7';
                 }
                 field("Desglose Moneda 8"; monedas[1, 8])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 8';
                 }
                 field("Desglose Moneda 9"; monedas[1, 9])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Desglose Moneda 9';
                 }
             }
         }

@@ -285,7 +285,9 @@ report 56112 "Customer-Summary (Santillana)"
                     Caption = 'Options';
                     field(StartDate; StartDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Starting Date';
+                        ToolTip = 'Starting Date';
                     }
                 }
             }

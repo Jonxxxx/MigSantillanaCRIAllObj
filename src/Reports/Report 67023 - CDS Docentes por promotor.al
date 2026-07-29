@@ -180,10 +180,14 @@ report 67023 "CDS Docentes por promotor"
             {
                 field(Orden; optOrden)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Orden';
                     OptionCaption = 'Por nombre docente,Por codigo colegio,Por distrito';
                 }
                 field(Promotor; codPromotor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Promotor';
                     TableRelation = "Salesperson/Purchaser";
                 }
             }

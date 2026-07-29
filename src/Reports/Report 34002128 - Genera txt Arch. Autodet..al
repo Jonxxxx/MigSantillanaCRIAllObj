@@ -37,15 +37,21 @@ report 34002128 "Genera txt Arch. Autodet."
             {
                 field(Ano; Ano)
                 {
+                    ApplicationArea = All;
                     Caption = 'Year';
+                    ToolTip = 'Year';
                 }
                 field(Mes; Mes)
                 {
+                    ApplicationArea = All;
                     Caption = 'Month';
+                    ToolTip = 'Month';
                 }
                 field(ClaveNom; ClaveNom)
                 {
+                    ApplicationArea = All;
                     Caption = 'TSS payroll key';
+                    ToolTip = 'TSS payroll key';
                 }
             }
         }

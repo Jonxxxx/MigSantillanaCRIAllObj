@@ -188,12 +188,16 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     Caption = 'Options';
                     field(CodDiario; CodDiario)
                     {
+                        ApplicationArea = All;
                         Caption = 'Phys. Inventory Journal';
+                        ToolTip = 'Phys. Inventory Journal';
                         TableRelation = "Warehouse Journal Batch";
                     }
                     field(CodSeccion1; CodSeccion1)
                     {
+                        ApplicationArea = All;
                         Caption = 'Batch name 1';
+                        ToolTip = 'Batch name 1';
 
                         trigger OnLookup(var Text: Text): Boolean
                         begin
@@ -213,7 +217,9 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     }
                     field(CodSeccion2; CodSeccion2)
                     {
+                        ApplicationArea = All;
                         Caption = 'Batch name 2';
+                        ToolTip = 'Batch name 2';
 
                         trigger OnLookup(var Text: Text): Boolean
                         begin
@@ -233,7 +239,9 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     }
                     field(Traspasar; Traspasar)
                     {
+                        ApplicationArea = All;
                         Caption = 'Transfer differences';
+                        ToolTip = 'Transfer differences';
 
                         trigger OnValidate()
                         begin
@@ -243,7 +251,9 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     }
                     field(Consolidar; Consolidar)
                     {
+                        ApplicationArea = All;
                         Caption = 'Consolidate';
+                        ToolTip = 'Consolidate';
 
                         trigger OnValidate()
                         begin
@@ -253,7 +263,9 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     }
                     field(CodSeccion3; CodSeccion3)
                     {
+                        ApplicationArea = All;
                         Caption = 'Difference Batch name';
+                        ToolTip = 'Difference Batch name';
 
                         trigger OnLookup(var Text: Text): Boolean
                         begin
@@ -273,7 +285,9 @@ report 56032 "Listado Dif. Inv. Fisico Alm."
                     }
                     field(CodSeccion4; CodSeccion4)
                     {
+                        ApplicationArea = All;
                         Caption = 'Consolidate Batch name';
+                        ToolTip = 'Consolidate Batch name';
 
                         trigger OnLookup(var Text: Text): Boolean
                         begin

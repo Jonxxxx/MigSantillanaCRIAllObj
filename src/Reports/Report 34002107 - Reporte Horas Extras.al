@@ -195,6 +195,8 @@ report 34002107 "Reporte Horas Extras"
             {
                 field("Concepto salarial"; Concepto)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                     TableRelation = "Conceptos salariales".Codigo;
                 }
             }

@@ -69,13 +69,17 @@ report 34002139 "Proceso Carga Gtos. a Nomina"
                 {
                     field(Dimension; CodDimension)
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimension Code';
+                        ToolTip = 'Dimension Code';
 
                         TableRelation = Dimension;
                     }
                     field("Valor Dimension"; CodValorDim)
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimension Value code';
+                        ToolTip = 'Dimension Value code';
 
                         trigger OnLookup(var Text: Text): Boolean
                         var
@@ -108,7 +112,9 @@ report 34002139 "Proceso Carga Gtos. a Nomina"
                     }
                     field("Concepto Salarial"; ConceptoSalarial)
                     {
+                        ApplicationArea = All;
                         Caption = 'Payroll concept';
+                        ToolTip = 'Payroll concept';
                         TableRelation = "Conceptos salariales";
                     }
                 }

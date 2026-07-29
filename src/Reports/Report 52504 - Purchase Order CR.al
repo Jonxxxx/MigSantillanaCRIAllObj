@@ -495,22 +495,22 @@ report 52504 "Purchase Order CR"
                     Caption = 'Options';
                     field(NumberOfCopies; NoCopies)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Number of Copies';
-                        ToolTip = 'Specifies the number of copies of each blanket purchase order, in addition to the original, that you want to print.';
+                        ToolTip = 'Number of Copies';
                     }
                     field(PrintCompanyAddress; PrintCompany)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Print Company Address';
-                        ToolTip = 'Specifies if you are printing on plain paper or if your company address is not pre-printed on your forms. If you do not select this field, the report will omit your company''s address.';
+                        ToolTip = 'Print Company Address';
                     }
                     field(ArchiveDocument; ArchiveDocument)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Archive Document';
                         Enabled = ArchiveDocumentEnable;
-                        ToolTip = 'Specifies if the document is archived when you run the report.';
+                        ToolTip = 'Archive Document';
 
                         trigger OnValidate()
                         begin
@@ -520,10 +520,10 @@ report 52504 "Purchase Order CR"
                     }
                     field(LogInteraction; LogInteraction)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Log Interaction';
                         Enabled = LogInteractionEnable;
-                        ToolTip = 'Specifies if the interaction with the vendor is logged when ,you run the report.';
+                        ToolTip = 'Log Interaction';
 
                         trigger OnValidate()
                         begin

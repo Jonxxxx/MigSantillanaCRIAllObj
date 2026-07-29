@@ -40,6 +40,7 @@ report 67001 "Importa Productos Equivalentes"
                         {
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -56,6 +57,7 @@ report 67001 "Importa Productos Equivalentes"
                         {
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -76,12 +78,14 @@ report 67001 "Importa Productos Equivalentes"
                         {
                             ApplicationArea = All;
                             Caption = 'Item Code Cell';
+                            ToolTip = 'Item Code Cell';
                         }
 
                         field(Cell_2; Cell2)
                         {
                             ApplicationArea = All;
                             Caption = 'Equivalent Item Code Cell';
+                            ToolTip = 'Equivalent Item Code Cell';
                         }
                     }
                 }

@@ -43,7 +43,7 @@ report 34002141 "Crea ED Empleados"
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
                             Editable = false;
-                            ToolTip = 'Specifies the Excel workbook that contains the employee data to import.';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -56,7 +56,7 @@ report 34002141 "Crea ED Empleados"
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
                             Editable = false;
-                            ToolTip = 'Specifies the worksheet that contains the employee data to import.';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -72,42 +72,42 @@ report 34002141 "Crea ED Empleados"
                             {
                                 ApplicationArea = All;
                                 Caption = 'Employee code Cell';
-                                ToolTip = 'Specifies the first cell containing an employee code.';
+                                ToolTip = 'Employee code Cell';
                             }
 
                             field(Cell2; Cell2)
                             {
                                 ApplicationArea = All;
                                 Caption = 'G/L Account Cell';
-                                ToolTip = 'Specifies the first cell containing a G/L account.';
+                                ToolTip = 'G/L Account Cell';
                             }
 
                             field(Cell3; Cell3)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Amount Cell';
-                                ToolTip = 'Specifies the first cell containing an amount.';
+                                ToolTip = 'Amount Cell';
                             }
 
                             field(Cell4; Cell4)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Dimension Code Cell';
-                                ToolTip = 'Specifies the first cell containing a dimension code.';
+                                ToolTip = 'Dimension Code Cell';
                             }
 
                             field(Cell5; Cell5)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Dimension Value Cell';
-                                ToolTip = 'Specifies the first cell containing a dimension value code.';
+                                ToolTip = 'Dimension Value Cell';
                             }
 
                             field(Cell6; Cell6)
                             {
                                 ApplicationArea = All;
                                 Caption = 'Balance Account';
-                                ToolTip = 'Specifies the first cell containing the balancing account.';
+                                ToolTip = 'Balance Account';
                             }
                         }
                     }

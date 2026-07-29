@@ -93,6 +93,8 @@ report 56007 "Lista Inventario Consignacion"
             {
                 field("Mostrar solo almacén con balance"; SoloBalance)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mostrar solo almacén con balance';
                 }
             }
         }

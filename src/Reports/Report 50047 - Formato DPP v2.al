@@ -176,7 +176,9 @@ report 50047 "Formato DPP v2"
             {
                 field(NumberOfCopies; NoCopies)
                 {
+                    ApplicationArea = All;
                     Caption = 'Number of Copies';
+                    ToolTip = 'Number of Copies';
                 }
             }
         }

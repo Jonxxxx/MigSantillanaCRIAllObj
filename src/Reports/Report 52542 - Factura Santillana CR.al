@@ -285,7 +285,9 @@ report 52542 "Factura Santillana CR"
                     Caption = 'Options';
                     field(Order; Order)
                     {
+                        ApplicationArea = All;
                         Caption = 'Line Order';
+                        ToolTip = 'Line Order';
                         OptionCaption = 'Normal,Bin Ranking';
                     }
                 }

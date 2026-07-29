@@ -40,6 +40,7 @@ report 67002 "Importa Presupuestos Comercial"
                         {
                             ApplicationArea = All;
                             Caption = 'Workbook File Name';
+                            ToolTip = 'Workbook File Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -56,6 +57,7 @@ report 67002 "Importa Presupuestos Comercial"
                         {
                             ApplicationArea = All;
                             Caption = 'Worksheet Name';
+                            ToolTip = 'Worksheet Name';
 
                             trigger OnAssistEdit()
                             begin
@@ -76,18 +78,21 @@ report 67002 "Importa Presupuestos Comercial"
                         {
                             ApplicationArea = All;
                             Caption = 'Salesperson Code Cell';
+                            ToolTip = 'Salesperson Code Cell';
                         }
 
                         field(Cell2; Cell2)
                         {
                             ApplicationArea = All;
                             Caption = 'Item Code Cell';
+                            ToolTip = 'Item Code Cell';
                         }
 
                         field(Cell3; Cell3)
                         {
                             ApplicationArea = All;
                             Caption = 'Quantity Cell';
+                            ToolTip = 'Quantity Cell';
                         }
                     }
                 }

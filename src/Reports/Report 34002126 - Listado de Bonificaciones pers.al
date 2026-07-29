@@ -143,6 +143,8 @@ report 34002126 "Listado de Bonificaciones pers"
                 field("Ano a generar"; AnoTrabajo)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Ano a generar';
                     trigger OnValidate()
                     begin
                         IF (AnoTrabajo = 0) OR (AnoTrabajo < 1900) THEN
@@ -151,10 +153,14 @@ report 34002126 "Listado de Bonificaciones pers"
                 }
                 field("Concepto salarial bonifacion"; ConceptoVac)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial bonifacion';
                     TableRelation = "Conceptos salariales".Codigo;
                 }
                 field("Aplicar a nomina"; AplicaaNomina)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Aplicar a nomina';
                 }
             }
         }

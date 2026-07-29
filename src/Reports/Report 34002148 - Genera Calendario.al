@@ -50,11 +50,15 @@ report 34002148 "Genera Calendario"
             {
                 field(Ano; Ano)
                 {
+                    ApplicationArea = All;
                     Caption = 'Year to generate';
+                    ToolTip = 'Year to generate';
                 }
                 field(SabadosNoLaborables; SabadosNoLaborables)
                 {
+                    ApplicationArea = All;
                     Caption = 'Saturdays are not working days';
+                    ToolTip = 'Saturdays are not working days';
                 }
             }
         }

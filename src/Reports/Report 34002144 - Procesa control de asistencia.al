@@ -225,11 +225,15 @@ report 34002144 "Procesa control de asistencia"
             {
                 field("Aplicar a nomina"; ApplyPayroll)
                 {
+                    ApplicationArea = All;
                     Caption = 'Apply to payroll';
+                    ToolTip = 'Apply to payroll';
                 }
                 field(CreateJobJournal; CreateJobJournal)
                 {
+                    ApplicationArea = All;
                     Caption = 'Create Job Journal';
+                    ToolTip = 'Create Job Journal';
                 }
             }
         }

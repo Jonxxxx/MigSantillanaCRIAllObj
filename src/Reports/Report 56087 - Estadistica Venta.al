@@ -438,9 +438,13 @@ report 56087 "Estadistica Venta"
             {
                 field("Fecha inicial"; PeriodStartDate[2])
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inicial';
                 }
                 field(Periodo; PeriodLength)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Periodo';
                 }
             }
         }

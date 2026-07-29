@@ -791,37 +791,53 @@ report 56111 "Aged Accounts Receivable-365D"
                     Caption = 'Opciones';
                     field(EndingDate; EndingDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Vencido desde';
+                        ToolTip = 'Vencido desde';
                     }
                     field(AgingBy; AgingBy)
                     {
+                        ApplicationArea = All;
                         Caption = 'Vencido por';
+                        ToolTip = 'Vencido por';
                         OptionCaption = 'Fecha vencimiento,Fecha registro,Fecha emision documento';
                     }
                     field(PeriodLength; PeriodLength)
                     {
+                        ApplicationArea = All;
                         Caption = 'Long. periodos antigüedad';
+                        ToolTip = 'Long. periodos antigüedad';
                     }
                     field(PrintAmountInLCY; PrintAmountInLCY)
                     {
+                        ApplicationArea = All;
                         Caption = 'Imprimir importes en DL';
+                        ToolTip = 'Imprimir importes en DL';
                     }
                     field(PrintDetails; PrintDetails)
                     {
+                        ApplicationArea = All;
                         Caption = 'Imprimir detalles';
+                        ToolTip = 'Imprimir detalles';
                     }
                     field(HeadingType; HeadingType)
                     {
+                        ApplicationArea = All;
                         Caption = 'Tipo cabecera';
+                        ToolTip = 'Tipo cabecera';
                         OptionCaption = 'Date Interval,Number of Days';
                     }
                     field(NewPagePercustomer; NewPagePercustomer)
                     {
+                        ApplicationArea = All;
                         Caption = 'Página nueva por cliente';
+                        ToolTip = 'Página nueva por cliente';
                     }
                     field(PrintToExcel; PrintToExcel)
                     {
+                        ApplicationArea = All;
                         Caption = 'Imprimir en excel';
+                        ToolTip = 'Imprimir en excel';
                     }
                 }
             }

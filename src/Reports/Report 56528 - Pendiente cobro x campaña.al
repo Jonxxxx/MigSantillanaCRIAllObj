@@ -170,7 +170,9 @@ report 56528 "Pendiente cobro x campaña"
                     Caption = 'Options';
                     field(StartDate; StartDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Campaign Starting Date';
+                        ToolTip = 'Campaign Starting Date';
                     }
                 }
             }

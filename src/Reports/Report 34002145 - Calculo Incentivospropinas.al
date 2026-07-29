@@ -320,11 +320,15 @@ report 34002145 "Calculo Incentivos/propinas"
             {
                 field("Concepto salarial"; ConceptoSalarial)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Concepto salarial';
                     TableRelation = "Conceptos salariales".Codigo;
                 }
                 field("Fecha inicio"; FechaIni)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha inicio';
                     trigger OnValidate()
                     begin
                         Dia := DATE2DMY(FechaIni, 1);
@@ -346,6 +350,8 @@ report 34002145 "Calculo Incentivos/propinas"
                 }
                 field("Fecha final"; FechaFin)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha final';
                     Editable = false;
                 }
             }

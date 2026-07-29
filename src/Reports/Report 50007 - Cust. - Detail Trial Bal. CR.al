@@ -307,22 +307,22 @@ report 50007 "Cust. - Detail Trial Bal. CR"
                     Caption = 'Options';
                     field(ShowAmountsInLCY; PrintAmountsInLCY)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Show Amounts in $';
-                        ToolTip = 'Specifies if the reported amounts are shown in the local currency.';
+                        ToolTip = 'Show Amounts in $';
                     }
                     field(NewPageperCustomer; PrintOnlyOnePerPage)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'New Page per Customer';
-                        ToolTip = 'Specifies if each customer''s information is printed on a new page if you have chosen two or more customers to be included in the report.';
+                        ToolTip = 'New Page per Customer';
                     }
                     field(ExcludeCustHaveaBalanceOnly; ExcludeBalanceOnly)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Exclude Customers That Have a Balance Only';
                         MultiLine = true;
-                        ToolTip = 'Specifies if you do not want the report to include entries for customers that have a balance but do not have a net change during the selected time period.';
+                        ToolTip = 'Exclude Customers That Have a Balance Only';
                     }
                 }
             }

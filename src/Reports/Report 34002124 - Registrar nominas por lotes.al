@@ -71,7 +71,9 @@ report 34002124 "Registrar nominas por lotes"
             {
                 field(TipoNom; TipoNom)
                 {
+                    ApplicationArea = All;
                     Caption = 'Payroll type';
+                    ToolTip = 'Payroll type';
                     TableRelation = "Tipos de nominas";
 
                     trigger OnValidate()
@@ -87,6 +89,8 @@ report 34002124 "Registrar nominas por lotes"
                 field("Tipo Calculo"; TipoCalculo)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Tipo Calculo';
                     trigger OnValidate()
                     begin
                         ActualizarControles;
@@ -100,6 +104,8 @@ report 34002124 "Registrar nominas por lotes"
                     field(Semana; Semana)
                     {
 
+                        ApplicationArea = All;
+                        ToolTip = 'Semana';
                         trigger OnValidate()
                         begin
                             ValidaFecha;
@@ -107,7 +113,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(Inicio; IntroLinPerfSal."Inicio Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Start:';
+                        ToolTip = 'Start:';
                         Editable = false;
 
                         trigger OnValidate()
@@ -140,7 +148,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(Fin; IntroLinPerfSal."Fin Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'End:';
+                        ToolTip = 'End:';
                         Editable = false;
                     }
                 }
@@ -149,7 +159,9 @@ report 34002124 "Registrar nominas por lotes"
                     Visible = blnbiSemanalVisible;
                     field(boInicio; IntroLinPerfSal."Inicio Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Start:';
+                        ToolTip = 'Start:';
                         Editable = false;
 
                         trigger OnValidate()
@@ -183,7 +195,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(biFin; IntroLinPerfSal."Fin Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'End:';
+                        ToolTip = 'End:';
                         Editable = false;
                     }
                 }
@@ -192,6 +206,8 @@ report 34002124 "Registrar nominas por lotes"
                     Visible = blnMensualVisible;
                     field(Mes; IntroLinPerfSal.Mes)
                     {
+                        ApplicationArea = All;
+                        ToolTip = 'Mes';
                         MaxValue = 12;
                         MinValue = 1;
 
@@ -203,6 +219,8 @@ report 34002124 "Registrar nominas por lotes"
                     field(Ano; Ano)
                     {
 
+                        ApplicationArea = All;
+                        ToolTip = 'Ano';
                         trigger OnValidate()
                         begin
                             IF IntroLinPerfSal.Mes = 0 THEN
@@ -220,7 +238,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(InicioMes; IntroLinPerfSal."Inicio Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Start:';
+                        ToolTip = 'Start:';
                         Editable = false;
 
                         trigger OnValidate()
@@ -257,7 +277,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(FinMes; IntroLinPerfSal."Fin Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'End:';
+                        ToolTip = 'End:';
                         Editable = false;
                     }
                 }
@@ -266,7 +288,9 @@ report 34002124 "Registrar nominas por lotes"
                     Visible = blnQuincenalVisible;
                     field(qInicio; IntroLinPerfSal."Inicio Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Start:';
+                        ToolTip = 'Start:';
 
                         trigger OnValidate()
                         begin
@@ -275,7 +299,9 @@ report 34002124 "Registrar nominas por lotes"
                     }
                     field(qFin; IntroLinPerfSal."Fin Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'End:';
+                        ToolTip = 'End:';
                         Editable = false;
                     }
                 }
@@ -284,7 +310,9 @@ report 34002124 "Registrar nominas por lotes"
                     Visible = blnDiariolVisible;
                     field(dInicio; IntroLinPerfSal."Inicio Periodo")
                     {
+                        ApplicationArea = All;
                         Caption = 'Start:';
+                        ToolTip = 'Start:';
 
                         trigger OnValidate()
                         begin
@@ -297,7 +325,9 @@ report 34002124 "Registrar nominas por lotes"
                     Visible = blnAnualVisible;
                     field(Ano2; Ano)
                     {
+                        ApplicationArea = All;
                         Caption = 'Year';
+                        ToolTip = 'Year';
 
                         trigger OnValidate()
                         begin

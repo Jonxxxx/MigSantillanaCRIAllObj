@@ -188,7 +188,9 @@ report 52501 "Antiguedad deuda linea negocio"
                     Caption = 'Options';
                     field(StartingDate; StartDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Starting Date';
+                        ToolTip = 'Starting Date';
                     }
                 }
             }

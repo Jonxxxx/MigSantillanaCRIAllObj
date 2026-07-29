@@ -318,11 +318,15 @@ report 56533 "Obligaciones pendientes"
                     Caption = 'Options';
                     field(ToDate; ToDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Ending Date';
+                        ToolTip = 'Ending Date';
                     }
                     field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
+                        ApplicationArea = All;
                         Caption = 'New Page per Vendor';
+                        ToolTip = 'New Page per Vendor';
                     }
                 }
             }

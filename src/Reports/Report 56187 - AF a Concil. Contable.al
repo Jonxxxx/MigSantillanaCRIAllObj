@@ -101,6 +101,8 @@ report 56187 "AF a Concil. Contable"
                 field("Fecha Conciliacion"; gdtFechaConciliacion)
                 {
 
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Conciliacion';
                     trigger OnValidate()
                     begin
                         IF gdtFechaConciliacion = 0D THEN

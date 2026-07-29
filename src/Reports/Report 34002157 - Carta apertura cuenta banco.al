@@ -130,7 +130,9 @@ report 34002157 "Carta apertura cuenta banco"
             {
                 field(Banco; CodBanco)
                 {
+                    ApplicationArea = All;
                     Caption = 'Bank';
+                    ToolTip = 'Bank';
                     TableRelation = "Bank Account";
                 }
             }

@@ -661,15 +661,21 @@ report 56092 "Antiguedad Saldo Cliente"
             {
                 field(wDetallado; wDetallado)
                 {
+                    ApplicationArea = All;
                     Caption = 'Detallado';
+                    ToolTip = 'Detallado';
                 }
                 field(wFechaInicio; wFechaInicio)
                 {
+                    ApplicationArea = All;
                     Caption = 'Fecha';
+                    ToolTip = 'Fecha';
                 }
                 field(wLongitudPeriodo; wLongitudPeriodo)
                 {
+                    ApplicationArea = All;
                     Caption = 'Longitud Periodo';
+                    ToolTip = 'Longitud Periodo';
                 }
             }
         }

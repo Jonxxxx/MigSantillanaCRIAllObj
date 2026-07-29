@@ -273,7 +273,9 @@ report 56532 "Pago a proveedores"
                     Caption = 'Options';
                     field(PrintOnlyOnePerPage; PrintOnlyOnePerPage)
                     {
+                        ApplicationArea = All;
                         Caption = 'New Page per Vendor';
+                        ToolTip = 'New Page per Vendor';
                     }
                 }
             }

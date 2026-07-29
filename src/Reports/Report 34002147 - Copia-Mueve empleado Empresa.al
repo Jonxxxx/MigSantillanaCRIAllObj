@@ -44,11 +44,15 @@ report 34002147 "Copia-Mueve empleado Empresa"
             {
                 field(Empresa; Empresa)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Empresa';
                     TableRelation = Company;
                 }
                 field(accion; Accion)
                 {
+                    ApplicationArea = All;
                     Caption = 'Action';
+                    ToolTip = 'Action';
                     OptionCaption = 'Copy,Move';
                 }
             }

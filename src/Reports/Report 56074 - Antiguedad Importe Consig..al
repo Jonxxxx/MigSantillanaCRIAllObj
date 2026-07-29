@@ -285,9 +285,13 @@ report 56074 "Antiguedad Importe Consig."
             {
                 field("Fecha Desde"; FechaDesde)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Fecha Desde';
                 }
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detallado';
                 }
             }
         }

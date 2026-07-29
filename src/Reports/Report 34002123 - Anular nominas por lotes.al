@@ -168,6 +168,8 @@ report 34002123 "Anular nominas por lotes"
             {
                 field("Anular los ya contabilizados"; AnulaContabilizados)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Anular los ya contabilizados';
                 }
             }
         }

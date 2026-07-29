@@ -269,24 +269,34 @@ report 56030 "Sales Dashboard RT"
                     Caption = 'Microsoft Dynamics NAV 2009 Sales Dashboard';
                     field(included; 'included')
                     {
+                        ApplicationArea = All;
                         Caption = 'TOP 8 Customers';
+                        ToolTip = 'TOP 8 Customers';
                         Editable = false;
                     }
                     field(included2; 'included')
                     {
+                        ApplicationArea = All;
                         Caption = 'TOP 8 Items';
+                        ToolTip = 'TOP 8 Items';
                     }
                     field(included3; 'included')
                     {
+                        ApplicationArea = All;
                         Caption = 'Balance vs Country/Region';
+                        ToolTip = 'Balance vs Country/Region';
                     }
                     field(included4; 'included')
                     {
+                        ApplicationArea = All;
                         Caption = 'Item Purchase/Sales';
+                        ToolTip = 'Item Purchase/Sales';
                     }
                     field(included5; 'included')
                     {
+                        ApplicationArea = All;
                         Caption = 'Opportunities';
+                        ToolTip = 'Opportunities';
                     }
                 }
             }

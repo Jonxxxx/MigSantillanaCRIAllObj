@@ -46,15 +46,21 @@ report 34002160 "Llena Plantilla DGT3-4"
             {
                 field(Ano; Ano)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Ano';
                 }
                 field(Mes; Mes)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Mes';
                     MaxValue = 12;
                     MinValue = 1;
                 }
                 field(tipoplant; TipoPlantilla)
                 {
+                    ApplicationArea = All;
                     Caption = 'Template type';
+                    ToolTip = 'Template type';
                 }
             }
         }

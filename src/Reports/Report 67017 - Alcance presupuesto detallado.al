@@ -143,6 +143,8 @@ report 67017 "Alcance presupuesto detallado"
             {
                 field(Promotor; codPromotor)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Promotor';
                     TableRelation = "Salesperson/Purchaser";
                 }
             }

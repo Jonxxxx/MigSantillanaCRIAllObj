@@ -220,7 +220,9 @@ report 34002149 "Carta DGII empleado"
             {
                 field(Fecha; Fecha)
                 {
+                    ApplicationArea = All;
                     Caption = 'Document date';
+                    ToolTip = 'Document date';
                     TableRelation = "Bank Account";
                 }
             }

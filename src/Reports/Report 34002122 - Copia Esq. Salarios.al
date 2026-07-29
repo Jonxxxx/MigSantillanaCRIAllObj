@@ -36,6 +36,8 @@ report 34002122 "Copia Esq. Salarios"
             {
                 field("A empleado"; AEmpl)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'A empleado';
                 }
             }
         }

@@ -40,7 +40,7 @@ report 67025 "Imp.Asist. Tallares x Lote"
                 {
                     ApplicationArea = All;
                     Caption = 'Nombre Fichero';
-                    ToolTip = 'Specifies the Excel workbook to import.';
+                    ToolTip = 'Nombre Fichero';
 
                     trigger OnAssistEdit()
                     begin
@@ -57,7 +57,7 @@ report 67025 "Imp.Asist. Tallares x Lote"
                 {
                     ApplicationArea = All;
                     Caption = 'Nombre Hoja';
-                    ToolTip = 'Specifies the worksheet to import.';
+                    ToolTip = 'Nombre Hoja';
 
                     trigger OnAssistEdit()
                     begin

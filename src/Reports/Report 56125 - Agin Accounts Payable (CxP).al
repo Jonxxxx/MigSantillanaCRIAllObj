@@ -658,7 +658,9 @@ report 56125 "Agin Accounts Payable (CxP)"
                     Caption = 'Options';
                     field(PeriodEndingDate1; PeriodEndingDate[1])
                     {
+                        ApplicationArea = All;
                         Caption = 'Aged as of';
+                        ToolTip = 'Aged as of';
 
                         trigger OnValidate()
                         begin
@@ -667,12 +669,16 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(AgingMethod; AgingMethod)
                     {
+                        ApplicationArea = All;
                         Caption = 'Aging Method';
+                        ToolTip = 'Aging Method';
                         OptionCaption = 'Due Date,Trans Date,Document Date';
                     }
                     field(PeriodCalculation; PeriodCalculation)
                     {
+                        ApplicationArea = All;
                         Caption = 'Length of Aging Periods';
+                        ToolTip = 'Length of Aging Periods';
 
                         trigger OnValidate()
                         begin
@@ -683,7 +689,9 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(ShowOnlyOverDueBy; ShowOnlyOverDueBy)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show If Overdue By';
+                        ToolTip = 'Show If Overdue By';
                         DateFormula = true;
 
                         trigger OnValidate()
@@ -695,12 +703,16 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(DimDepto; DimDepto)
                     {
+                        ApplicationArea = All;
                         Caption = 'Dimension';
+                        ToolTip = 'Dimension';
                         TableRelation = Dimension;
                     }
                     field(ShowAllForOverdue; ShowAllForOverdue)
                     {
+                        ApplicationArea = All;
                         Caption = 'Show All for Overdue By Vendor';
+                        ToolTip = 'Show All for Overdue By Vendor';
 
                         trigger OnValidate()
                         begin
@@ -712,7 +724,9 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(PrintAmountsInLocal; PrintAmountsInLocal)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print Amounts in Vendor''s Currency';
+                        ToolTip = 'Print Amounts in Vendor''s Currency';
                         MultiLine = true;
 
                         trigger OnValidate()
@@ -723,15 +737,21 @@ report 56125 "Agin Accounts Payable (CxP)"
                     }
                     field(PrintDetail; PrintDetail)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print Detail';
+                        ToolTip = 'Print Detail';
                     }
                     field(UseExternalDocNo; UseExternalDocNo)
                     {
+                        ApplicationArea = All;
                         Caption = 'Use External Doc. No.';
+                        ToolTip = 'Use External Doc. No.';
                     }
                     field(PrintToExcel; PrintToExcel)
                     {
+                        ApplicationArea = All;
                         Caption = 'Print to Excel';
+                        ToolTip = 'Print to Excel';
                     }
                 }
             }

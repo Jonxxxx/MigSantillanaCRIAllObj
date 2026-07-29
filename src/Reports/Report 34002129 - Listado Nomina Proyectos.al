@@ -189,7 +189,9 @@ report 34002129 "Listado Nomina Proyectos"
             {
                 field("Aplicar a nomina"; ApplyPayroll)
                 {
+                    ApplicationArea = All;
                     Caption = 'Apply to payroll';
+                    ToolTip = 'Apply to payroll';
                 }
             }
         }

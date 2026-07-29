@@ -746,22 +746,22 @@ report 52548 "Sales Quote Status Report"
                     Caption = 'Options';
                     field(NoCopies; NoCopies)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Number of Copies';
-                        ToolTip = 'Specifies the number of copies of each document (in addition to the original) that you want to print.';
+                        ToolTip = 'Number of Copies';
                     }
                     field(PrintCompanyAddress; PrintCompany)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Print Company Address';
-                        ToolTip = 'Specifies if your company address is printed at the top of the sheet, because you do not use pre-printed paper. Leave this check box blank to omit your company''s address.';
+                        ToolTip = 'Print Company Address';
                     }
                     field(ArchiveDocument; ArchiveDocument)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Archive Document';
                         Enabled = ArchiveDocumentEnable;
-                        ToolTip = 'Specifies if the document is archived after you preview or print it.';
+                        ToolTip = 'Archive Document';
 
                         trigger OnValidate()
                         begin
@@ -771,10 +771,10 @@ report 52548 "Sales Quote Status Report"
                     }
                     field(LogInteraction; LogInteraction)
                     {
-                        ApplicationArea = Basic, Suite;
+                        ApplicationArea = All;
                         Caption = 'Log Interaction';
                         Enabled = LogInteractionEnable;
-                        ToolTip = 'Specifies if you want to record the related interactions with the involved contact person in the Interaction Log Entry table.';
+                        ToolTip = 'Log Interaction';
 
                         trigger OnValidate()
                         begin

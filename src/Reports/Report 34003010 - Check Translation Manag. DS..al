@@ -116,22 +116,30 @@ report 34003010 "Check Translation Manag. DS."
                     Caption = 'Options';
                     field(TestOption; TestOption)
                     {
+                        ApplicationArea = All;
                         Caption = 'Test Option';
+                        ToolTip = 'Test Option';
                         OptionCaption = 'Both Amounts and Dates,Amounts Only,Dates Only';
                     }
                     field(TestLanguage; TestLanguage)
                     {
+                        ApplicationArea = All;
                         Caption = 'Test Language';
+                        ToolTip = 'Test Language';
                         OptionCaption = 'ENU,ENC,FRC,ESM';
                     }
                     field(TestCurrencyCode; TestCurrencyCode)
                     {
+                        ApplicationArea = All;
                         Caption = 'Test Currency Code';
+                        ToolTip = 'Test Currency Code';
                         TableRelation = Currency;
                     }
                     field(TestDate; TestDate)
                     {
+                        ApplicationArea = All;
                         Caption = 'Date to Test';
+                        ToolTip = 'Date to Test';
                     }
                 }
             }

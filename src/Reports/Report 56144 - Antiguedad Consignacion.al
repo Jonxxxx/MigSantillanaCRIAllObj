@@ -342,6 +342,8 @@ report 56144 "Antiguedad Consignacion"
             {
                 field(Detallado; Detallado)
                 {
+                    ApplicationArea = All;
+                    ToolTip = 'Detallado';
                 }
             }
         }
