@@ -8,8 +8,11 @@
             "environmentType": "Sandbox",
             //"environmentName": "DevLocLATAM",
             //"tenant": "67b3258e-324b-43ec-a4d5-5e63000db68e",            
-            "environmentName": "Production_Back_20260720",
-            "tenant": "ef9a3158-16fd-4dee-993b-2097919917c3",
+            //"environmentName": "Production_Back_20260720",
+            //"tenant": "ef9a3158-16fd-4dee-993b-2097919917c3",
+            //Santillana Costa Rica
+            "environmentName": "Santillana_Costa_Rica",
+            "tenant": "7516bb18-282c-4e63-b1ec-795805f1e8fd",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": true,
