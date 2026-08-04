@@ -324,7 +324,9 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
             LockTables;
 
             SourceCodeSetup.GET;
-            //TODO: revisar por que no compila SrcCode := SourceCodeSetup.Sales;
+            //DONE: Descomentado by APR - 2026 08 04
+            SrcCode := SourceCodeSetup.Sales;
+
             ServItemMgt.DeleteServItemOnSaleCreditMemo(SalesHeader);
 
             // Insert invoice header or credit memo header
@@ -3177,9 +3179,10 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
             CLEAR(ReturnRcptHeader);
             SalesSetup.GET;
 
+            //DONE: Revisado by APR - 2026 08 04
             SourceCodeSetup.Get();
-            //Revisar por que no compila SourceCodeSetup.TestField("Deleted Document");
-            //Revisar por que no compila SourceCode.Get(SourceCodeSetup."Deleted Document");
+            SourceCodeSetup.TestField("Deleted Document");
+            SourceCode.Get(SourceCodeSetup."Deleted Document");
 
             IF ("Shipping No. Series" <> '') AND ("Shipping No." <> '') THEN BEGIN
                 SalesShptHeader.TRANSFERFIELDS(SalesHeader);

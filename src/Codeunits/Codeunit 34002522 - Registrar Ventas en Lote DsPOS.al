@@ -777,11 +777,10 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure Registro_Localizado(pSalesH: Record 36)
     var
-        lcGuatEduca: Codeunit 34002512;
         lcCostaRica: Codeunit 34002511;
     begin
         //TODO: Revisar 
-        /*
+        //DONE: Descomentado by APR - 2026 08 04
         CASE cfComunes.Pais() OF
             //+#126073
             //... Se realiza un tratamiento de gestion de los posibles errores en el proceso de firma.            
@@ -797,8 +796,8 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
                 END;
         //-#217374
-        
-        END;*/
+
+        END;
     end;
 
     procedure marcarCupones(pSalesHeader: Record 36)
@@ -994,13 +993,13 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     begin
         //+76946
         //TODO: Revisar 
-        /*
-        CASE cfComunes.Pais() OF            
+        //DONE: Descomentado by APR - 2026 08 04
+        CASE cfComunes.Pais() OF
             9:
                 lcCostaRica.FinalProcesoRegistro(wNumLog);
         //-#217374
-        
-    END;*/
+
+        END;
     end;
 
     procedure TestRegistroViable(lrCV: Record 36): Boolean
@@ -1009,15 +1008,6 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     begin
         //+#75918
         lResult := TRUE;
-        //TODO: Revisar 
-        /*
-        CASE cfComunes.Pais() OF
-            2:
-                BEGIN
-                    lcBolivia.Parametros(wNumLog);
-                    lResult := lcBolivia.TestRegistroViable(lrCV, 1, 0);
-                END;
-        END;*/
 
         EXIT(lResult);
     end;

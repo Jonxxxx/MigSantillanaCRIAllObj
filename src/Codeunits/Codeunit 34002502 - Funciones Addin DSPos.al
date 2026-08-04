@@ -1,6 +1,6 @@
 codeunit 34002502 "Funciones Addin DSPos"
 {   //TODO: Revisar codigo completo
-    /*    
+    //DONE: Revisado y adaptado by APR - 2026 08 04
     trigger OnRun()
     var
         lcFuncComunes: Codeunit 34002503;
@@ -14,16 +14,9 @@ codeunit 34002502 "Funciones Addin DSPos"
     end;
 
     var
-        cDominicana: Codeunit 34002504;
-        cBolivia: Codeunit 34002505;
-        cEcuador: Codeunit 34002507;
-        cParaguay: Codeunit 34002506;
-        cGuatemala: Codeunit 34002508;
-        cSalvador: Codeunit 34002509;
-        cHonduras: Codeunit 34002510;
         cCostaRica: Codeunit 34002511;
-        w_Evento: DotNet ;
-        w_Resultado: DotNet ;
+        w_Evento: Record "DsPOS Event Buffer" temporary;
+        w_Resultado: Record "DsPOS Event Buffer" temporary;
         w_OkRegistro: Boolean;
 
     procedure Comprobaciones_Iniciales()
@@ -31,22 +24,14 @@ codeunit 34002502 "Funciones Addin DSPos"
         rConfGeneral: Record 34002500;
         rTiendas: Record 34002503;
         rConfTPV: Record 34002501;
-        [RunOnClient]
-        dsFunciones: DotNet ;
-        Respuesta: Text;
-        Resultado: Integer;
         rMenu: Record 34002509;
         Error001: Label 'No existe Configuración General DSPoS.';
-        Error002: Label 'Proceso cancelado a petición del usuario.';
         Error003: Label 'Debe Asignar un TPV a este equipo.\Imposible Continuar';
         Error005: Label 'Debe Especificar País en Configuración General DSPoS';
-        Error006: Label 'Debe Registrar el Addin (Importarlo desde navision)';
         Error007: Label 'El día abierto para el TPV es %1\Debe cerrarlo o cambiar la fecha de trabajo del sistema';
-        Text001: Label 'Es la primera vez que ejecuta DSPoS con este usuario\Debe seleccionar un TPV\A continuación se mostrará una lista de TPVs\\¿Continuar?';
         cControl: Codeunit 34002521;
     begin
 
-        RegistrarAddin;
         CrearAcciones;
 
         IF NOT rConfGeneral.GET() THEN
@@ -56,23 +41,9 @@ codeunit 34002502 "Funciones Addin DSPos"
 
         rConfTPV.RESET;
         rConfTPV.SETCURRENTKEY("Usuario windows");
-        rConfTPV.SETRANGE("Usuario windows", TraerUsuarioWindows);
-        IF NOT rConfTPV.FINDSET THEN BEGIN
-            IF NOT CONFIRM(Text001, FALSE) THEN
-                ERROR(Error002);
-
-            IF ISNULL(dsFunciones) THEN
-                dsFunciones := dsFunciones.Funciones;
-
-            dsFunciones.RecibirDatosBD(ServidorBBDD(1), ServidorBBDD(0), COMPANYNAME);
-            Respuesta := dsFunciones.SeleccionTPV();
-
-            IF Respuesta = '' THEN
-                ERROR(Error003);
-
-            LeerRespuesta(Respuesta);
-            CLEAR(dsFunciones);
-        END;
+        rConfTPV.SETRANGE("Usuario windows", TraerUsuarioWindows());
+        IF NOT rConfTPV.FINDFIRST THEN
+            ERROR(Error003);
 
         rTiendas.GET(TiendaActual);
         rTiendas.TESTFIELD("Cod. Almacen");
@@ -101,10 +72,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         Comprobar_Minimos(rConfTPV."Menu de acciones");
         Comprobar_Bancos(rConfTPV);
 
-        CASE rConfGeneral.Pais OF
-            rConfGeneral.Pais::"Costa Rica":
-                cCostaRica.Comprobaciones_Iniciales(TiendaActual, TpvActual);  //+#148807
-        END;
+        cCostaRica.Comprobaciones_Iniciales(TiendaActual(), TpvActual());
 
         IF cControl.DiaAbierto(rTiendas."Cod. Tienda", rConfTPV."Id TPV") <> WORKDATE THEN
             ERROR(Error007, cControl.DiaAbierto(rTiendas."Cod. Tienda", rConfTPV."Id TPV"));
@@ -140,8 +108,7 @@ codeunit 34002502 "Funciones Addin DSPos"
 
         //+#116527
         lComprobarIdPago := FALSE;
-        IF lrConf.FINDFIRST THEN
-            lComprobarIdPago := (lrConf.Pais = lrConf.Pais::Honduras) OR (lrConf.Pais = lrConf.Pais::Guatemala);
+        lComprobarIdPago := FALSE;
         //-#116527
 
         rFormPago.RESET;
@@ -264,47 +231,14 @@ codeunit 34002502 "Funciones Addin DSPos"
     end;
 
     procedure ServidorBBDD(pOpcion: Integer): Text[100]
-    var
-        rDataBase: Record 2000000048;
-        rServer: Record 2000000112;
-        rSession: Record 2000000110;
-        rConfTPV: Record 34002501;
-        rTiendas: Record 34002503;
     begin
-
-
-        CASE pOpcion OF
-            0:
-                BEGIN
-
-                    rConfTPV.RESET;
-                    rConfTPV.SETCURRENTKEY("Usuario windows");
-                    rConfTPV.SETRANGE("Usuario windows", TraerUsuarioWindows);
-                    IF rConfTPV.FINDSET() THEN BEGIN
-                        rTiendas.GET(rConfTPV.Tienda);
-                        IF rTiendas."Instancia Completa SQL" <> '' THEN
-                            EXIT(rTiendas."Instancia Completa SQL")
-                    END;
-
-                    rServer.RESET;
-                    rServer.FINDFIRST;
-                    EXIT(rServer."Server Computer Name");
-
-                END;
-            1:
-                BEGIN
-                    rDataBase.RESET;
-                    rDataBase.SETRANGE("My Database", TRUE);
-                    rDataBase.FINDFIRST;
-                    EXIT(rDataBase."Database Name");
-                END;
-        END;
+        // En SaaS no se expone el servidor SQL ni el nombre físico de la base.
+        exit('');
     end;
 
     procedure LeerRespuesta(pRespuesta: Text) Resultado: Text
     var
-        ConstructorEventos: DotNet ;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         cFuncComunes: Codeunit 34002503;
         lcAnular: Codeunit 34002521;
         TextL001: Label 'No se ha podido realizar la anulación. Salga de la pantalla de anulación e intentélo en unos segundos';
@@ -318,10 +252,7 @@ codeunit 34002502 "Funciones Addin DSPos"
 
         //MESSAGE(pRespuesta);
 
-        IF ISNULL(ConstructorEventos) THEN
-            ConstructorEventos := ConstructorEventos.Evento();
-
-        Evento := ConstructorEventos.deXML(pRespuesta);
+        Evento.LoadFromXml(pRespuesta);
 
         CASE Evento.TipoEvento OF
             0:
@@ -424,8 +355,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rConf: Record 34002500;
         Error001: Label 'El Cajero %1 no existe para la tienda %2';
         Error002: Label 'La clave es incorrecta para el Cajero %1';
-        ConstructorEventos: DotNet ;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         NumError: Integer;
         Error003: Label 'El Cajero %1 no tiene configurado un Grupo de Cajero';
         rGrupoCaj: Record 34002507;
@@ -433,7 +363,6 @@ codeunit 34002502 "Funciones Addin DSPos"
         Error005: Label 'Defina un Cliente al Contado para el Grupo de Cajeros %1';
         cControl: Codeunit 34002521;
         cfComunes: Codeunit 34002503;
-        lcGuatemala: Codeunit 34002508;
     begin
 
         NumError := 0;
@@ -449,9 +378,6 @@ codeunit 34002502 "Funciones Addin DSPos"
             (rGrupoCaj."Cliente al contado" = '') AND (NumError = 0):
                 NumError := 5;
         END;
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         Evento.TipoEvento := 2;
         IF NumError <> 0 THEN
@@ -501,9 +427,6 @@ codeunit 34002502 "Funciones Addin DSPos"
     var
         rConf: Record 34002500;
         rTiendas: Record 34002503;
-        [RunOnClient]
-        dsWindows: DotNet ;
-        Equipo: Text;
         rTPV: Record 34002501;
     begin
 
@@ -548,7 +471,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion1, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion1, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Acción Línea";
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Accion Linea";
         rAcciones."Necesita Datos" := TRUE;
         rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Numerico;
         rAcciones."Literal Pedir Datos" := Text001;
@@ -559,7 +482,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion2, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion2, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Acción Línea";
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Accion Linea";
         rAcciones."Necesita Datos" := TRUE;
         rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Numerico;
         rAcciones."Literal Pedir Datos" := Text002;
@@ -570,7 +493,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion3, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion3, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Accion;
         rAcciones."Necesita Datos" := TRUE;
         rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Numerico;
         rAcciones."Literal Pedir Datos" := Text003;
@@ -581,7 +504,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion4, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion4, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Acción Línea";
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Accion Linea";
         IF rAcciones.INSERT THEN;
 
         Pos := STRPOS(accion5, '|');
@@ -597,7 +520,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion6, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion6, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Accion;
         IF rAcciones.INSERT THEN;
 
         Pos := STRPOS(accion7, '|');
@@ -613,7 +536,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion8, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion8, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Acción Línea";
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::"Accion Linea";
         rAcciones."Necesita Datos" := TRUE;
         rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Numerico;
         rAcciones."Literal Pedir Datos" := Text003;
@@ -632,70 +555,35 @@ codeunit 34002502 "Funciones Addin DSPos"
         rAcciones.INIT;
         rAcciones."ID Accion" := COPYSTR(accion12, 1, Pos - 1);
         rAcciones.Descripcion := COPYSTR(accion12, Pos + 1);
-        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Accion;
         IF rAcciones.INSERT THEN;
 
-        CASE rConf.Pais OF
-            rConf.Pais::Bolivia,
-            rConf.Pais::Guatemala,
-            rConf.Pais::Salvador:
-                BEGIN
+        Pos := STRPOS(accion9, '|');
+        rAcciones.RESET;
+        rAcciones.INIT;
+        rAcciones."ID Accion" := COPYSTR(accion9, 1, Pos - 1);
+        rAcciones.Descripcion := COPYSTR(accion9, Pos + 1);
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Accion;
+        rAcciones."Necesita Datos" := TRUE;
+        rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Texto;
+        rAcciones."Literal Pedir Datos" := text004;
+        IF rAcciones.INSERT THEN;
 
-                    Pos := STRPOS(accion9, '|');
-                    rAcciones.RESET;
-                    rAcciones.INIT;
-                    rAcciones."ID Accion" := COPYSTR(accion9, 1, Pos - 1);
-                    rAcciones.Descripcion := COPYSTR(accion9, Pos + 1);
-                    rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
-                    rAcciones."Necesita Datos" := TRUE;
-                    rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Texto;
-                    rAcciones."Literal Pedir Datos" := text004;
-                    IF rAcciones.INSERT THEN;
-
-                    Pos := STRPOS(accion11, '|');
-                    rAcciones.RESET;
-                    rAcciones.INIT;
-                    rAcciones."ID Accion" := COPYSTR(accion11, 1, Pos - 1);
-                    rAcciones.Descripcion := COPYSTR(accion11, Pos + 1);
-                    rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
-                    rAcciones."Necesita Datos" := TRUE;
-                    rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Texto;
-                    rAcciones."Literal Pedir Datos" := text005;
-                    IF rAcciones.INSERT THEN;
-
-                    //+#232158
-                    IF rConf.Pais = rConf.Pais::Guatemala THEN BEGIN
-
-                        Pos := STRPOS(accion13, '|');
-                        rAcciones.RESET;
-                        rAcciones.INIT;
-                        rAcciones."ID Accion" := COPYSTR(accion13, 1, Pos - 1);
-                        rAcciones.Descripcion := COPYSTR(accion13, Pos + 1);
-                        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Acción;
-                        rAcciones."Necesita Datos" := TRUE;
-                        rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Texto;
-                        rAcciones."Literal Pedir Datos" := text006;
-                        IF rAcciones.INSERT THEN;
-
-                    END;
-                    //-#232158
-
-                END;
-        END;
+        Pos := STRPOS(accion11, '|');
+        rAcciones.RESET;
+        rAcciones.INIT;
+        rAcciones."ID Accion" := COPYSTR(accion11, 1, Pos - 1);
+        rAcciones.Descripcion := COPYSTR(accion11, Pos + 1);
+        rAcciones."Tipo Accion" := rAcciones."Tipo Accion"::Accion;
+        rAcciones."Necesita Datos" := TRUE;
+        rAcciones."Tipo Datos" := rAcciones."Tipo Datos"::Texto;
+        rAcciones."Literal Pedir Datos" := text005;
+        IF rAcciones.INSERT THEN;
     end;
 
     procedure TraerUsuarioWindows(): Text[64]
-    var
-        recSesion: Record 2000000110;
     begin
-
-        recSesion.RESET;
-        //CPMCR-CEC+
-        //recSesion.SETRANGE("My Session", TRUE);
-        recSesion.SETRANGE("User ID", USERID);
-        //CPMCR-CEC-
-        recSesion.FINDFIRST;
-        EXIT(recSesion."User ID");
+        exit(CopyStr(UserId(), 1, 64));
     end;
 
     procedure Comprobar_Estado(recPrmTPV: Record 34002501)
@@ -706,33 +594,18 @@ codeunit 34002502 "Funciones Addin DSPos"
     end;
 
     procedure RegistrarAddin()
-    var
-        rAddin: Record 2000000069;
-        text001: Label 'Se ha registrado el ADD-in por favor reinicie el servicio';
     begin
-
-        WITH rAddin DO BEGIN
-            SETFILTER("Add-in Name", 'DSPoS');
-            IF NOT FINDFIRST THEN BEGIN
-                "Add-in Name" := 'DSPoS';
-                "Public Key Token" := 'b16b5ef9ed5820f6';
-                Description := 'DynaSoft DSPoS';
-                INSERT(TRUE);
-                COMMIT;
-            END;
-        END;
+        // SaaS no permite registrar ensamblados cliente/.NET.
     end;
 
     procedure ComprobarSupervisor(pPassword: Text[30]): Text
     var
         Error001: Label 'La contraseña introducida no es correcta.';
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rCaj: Record 34002505;
     begin
 
         // Inicializar Objeto Navision
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         // Tipo Evento .NET
         Evento.TipoEvento := 19;
@@ -753,20 +626,19 @@ codeunit 34002502 "Funciones Addin DSPos"
         EXIT(Evento.aXml());
     end;
 
-    procedure SetParameters(p_Evento: DotNet ; p_Resultado: DotNet )
+    procedure SetParameters(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Resultado: Record "DsPOS Event Buffer" temporary)
     begin
         //+#121213
         w_Evento := p_Evento;
         w_Resultado := p_Resultado;
     end;
 
-    procedure GetParameters(var v_Evento: DotNet ; var v_Resultado: DotNet ; var v_OkRegistro: Boolean)
+    procedure GetParameters(var v_Evento: Record "DsPOS Event Buffer" temporary; var v_Resultado: Record "DsPOS Event Buffer" temporary; var v_OkRegistro: Boolean)
     begin
         //+#121213
         v_Evento := w_Evento;
         v_Resultado := w_Resultado;
         v_OkRegistro := w_OkRegistro;
     end;
-    */
-}
 
+}

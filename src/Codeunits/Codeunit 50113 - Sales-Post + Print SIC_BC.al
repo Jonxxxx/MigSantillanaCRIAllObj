@@ -268,19 +268,23 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
            (SalesHeader."Document Type" = SalesHeader."Document Type"::Invoice) THEN BEGIN
             IF rSIH.GET(SalesHeader."Last Posting No.") THEN;
 
-            // TODO: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
-            // Original code preserved below.
-            // IF rSIH."Tipo Doc Electronico" = rSIH."Tipo Doc Electronico"::Tiquete THEN
-            // cuFE.TiqueteElectronico_vCentral(rSIH."No.");
+            //DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
+            //Original code preserved below.
+            //APR - 2026 08 03
+            IF rSIH."Tipo Doc Electronico" = rSIH."Tipo Doc Electronico"::Tiquete THEN
+                cuFE.TiqueteElectronico_vCentral(rSIH."No.");
+            //APR - 2026 08 03 END
         END;
 
         IF ((SalesHeader."Document Type" = SalesHeader."Document Type"::"Credit Memo") OR
           (SalesHeader."Document Type" = SalesHeader."Document Type"::"Return Order")) AND
             (NOT SalesHeader.Correction) THEN BEGIN
-            // TODO: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
+            // DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
             // Original code preserved below.
-            // IF rSCMH.GET(SalesHeader."Last Posting No.") THEN
-            // cuFE.TiqueteElectronicoNCR_vCentral(rSCMH."No.");
+            //APR - 2026 08 03
+            IF rSCMH.GET(SalesHeader."Last Posting No.") THEN
+                cuFE.TiqueteElectronicoNCR_vCentral(rSCMH."No.");
+            //APR - 2026 08 03 END
         END;
 
         // -- 001-YFC

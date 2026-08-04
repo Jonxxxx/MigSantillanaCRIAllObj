@@ -1,7 +1,6 @@
 codeunit 34002503 "Funciones DsPOS - Comunes"
 {
-    //TODO: Revisar codigo completo
-    /*
+    // MIGRACION BC27 SAAS V1: Costa Rica únicamente; Evento DotNet sustituido por buffer temporal AL.
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,
                   TableData 34002508 = rimd;
@@ -11,26 +10,19 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     var
         optTipoDoc: Option " ",Payment,Invoice,"Credit Memo","Finance Charge Memo",Reminder,Refund;
     begin
-        CASE Accion OF
+        CASE Rec.Accion OF
             //+#65232
             //Accion::LiquidarFactura     : LiquidaFacturaTPV(Documento);
             //Accion::LiquidarNotaCredito : LiquidaNotaCreditoTPV(Documento);
-            Accion::LiquidarFactura:
-                LiquidaDocumentoTPV(Documento, optTipoDoc::Invoice);
-            Accion::LiquidarNotaCredito:
-                LiquidaDocumentoTPV(Documento, optTipoDoc::"Credit Memo");
+            Rec.Accion::LiquidarFactura:
+                LiquidaDocumentoTPV(Rec.Documento, optTipoDoc::Invoice);
+            Rec.Accion::LiquidarNotaCredito:
+                LiquidaDocumentoTPV(Rec.Documento, optTipoDoc::"Credit Memo");
         //-#65232
         END;
     end;
 
     var
-        cDominicana: Codeunit 34002504;
-        cBolivia: Codeunit 34002505;
-        cParaguay: Codeunit 34002506;
-        cEcuador: Codeunit 34002507;
-        cGuatemala: Codeunit 34002508;
-        cSalvador: Codeunit 34002509;
-        cHonduras: Codeunit 34002510;
         cCostaRica: Codeunit 34002511;
         Text010: Label 'No se pudo realizar el envio electrónico del documento %1';
         wCupon4Log: Code[20];
@@ -57,7 +49,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rAlmacen: Record 14;
         rTienda: Record 34002503;
         rTPV: Record 34002501;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         recTmpDimEntry: Record 480 temporary;
         cDimManag: Codeunit 408;
         Error001: Label 'No se ha podido crear el pedido de venta';
@@ -65,7 +57,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         cControl: Codeunit 34002521;
         recControlTPV: Record 34002524;
         rDimEntry: Record 480;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         lNumLog: Integer;
         TextL002: Label 'Esta clave ya ha sido utilizada anteriormente. Hay que revisar la configuración de las series';
         lTextoError: Text[150];
@@ -139,29 +131,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rSalesHeader.VALIDATE("Location Code", rTienda."Cod. Almacen");
         rSalesHeader.VALIDATE("Currency Code", '');
 
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
-
         Evento.TipoEvento := 6;
-
-        CASE Pais OF
-            1:
-                Evento.TextoDato7 := cDominicana.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader); // Dominicana
-            2:
-                cBolivia.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);                         // Bolivia
-            3:
-                Evento.TextoDato7 := cParaguay.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);   // Paraguay
-            4:
-                Evento.TextoDato7 := cEcuador.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);     // Ecuador
-            5:
-                Evento.TextoDato7 := cGuatemala.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);   // Guatemala
-            6:
-                Evento.TextoDato7 := cSalvador.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);    // Salvador
-            7:
-                Evento.TextoDato7 := cHonduras.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);    // Honduras
-            9:
-                Evento.TextoDato7 := cCostaRica.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);   // Costa Rica
-        END;
+        Evento.TextoDato7 := cCostaRica.Nueva_Venta(p_Tienda, p_IdTPV, p_Cajero, rSalesHeader);   // Costa Rica
 
         IF rSalesHeader.INSERT(FALSE) THEN BEGIN
             Evento.TextoDato := rSalesHeader."No.";
@@ -224,7 +195,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure Buscar_Producto(var p_Producto: Code[20]; var p_Medida: Code[10])
     var
-        rItemCrossRef: Record 5717;
+        rItemCrossRef: Record "Item Reference";
         rItem: Record 27;
         rItemIdentifier: Record 7704;
     begin
@@ -234,9 +205,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         // 3 - Codigo producto
 
         rItemCrossRef.RESET;
-        rItemCrossRef.SETCURRENTKEY("Cross-Reference No.");
-        rItemCrossRef.SETRANGE("Cross-Reference No.", p_Producto);
-        rItemCrossRef.SETRANGE("Cross-Reference Type", rItemCrossRef."Cross-Reference Type"::"Bar Code");
+        rItemCrossRef.SETCURRENTKEY("Reference No.");
+        rItemCrossRef.SETRANGE("Reference No.", p_Producto);
+        rItemCrossRef.SETRANGE("Reference Type", rItemCrossRef."Reference Type"::"Bar Code");
 
         IF rItemCrossRef.FINDFIRST THEN BEGIN
             p_Producto := rItemCrossRef."Item No.";
@@ -275,7 +246,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         CodProd: Code[20];
         uMedida: Code[10];
         NuevaLinea: Boolean;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'Imposible Modificar Línea de Pedido';
         Error002: Label 'El Producto %1 No Tiene Precio Configurado';
         Error003: Label 'Imposible Insertar Línea de Pedido';
@@ -302,9 +273,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         CodProd := p_Producto;
 
         Buscar_Producto(CodProd, uMedida);
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         Evento.TipoEvento := 7;
         IF (CodProd = '') THEN BEGIN
@@ -375,9 +343,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Ejecutar_Accion(p_Evento: DotNet ): Text
+    procedure Ejecutar_Accion(p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rAccion: Record 34002512;
         rLinPed: Record 37;
         Error: Boolean;
@@ -405,9 +373,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lrCV: Record 36;
         Error006: Label 'Esta línea de pedido corresponde a un pedido registrado y no deberá visualizarse. Por favor, salga de la pantalla de ventas y vuelva a entrar.';
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
 
         Evento.TipoEvento := p_Evento.TipoEvento;
 
@@ -587,24 +552,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 'CUPON':
                     BEGIN
 
-                        CASE Pais OF
-                            1:
-                                cDominicana.Ejecutar_Accion(p_Evento, Evento);
-                            2:
-                                cBolivia.Ejecutar_Accion(p_Evento, Evento);
-                            3:
-                                cParaguay.Ejecutar_Accion(p_Evento, Evento);
-                            4:
-                                cEcuador.Ejecutar_Accion(p_Evento, Evento);
-                            5:
-                                cGuatemala.Ejecutar_Accion(p_Evento, Evento);
-                            6:
-                                cSalvador.Ejecutar_Accion(p_Evento, Evento);
-                            7:
-                                cHonduras.Ejecutar_Accion(p_Evento, Evento);
-                            9:
-                                cCostaRica.Ejecutar_Accion(p_Evento, Evento);  //+#148807
-                        END;
+                        cCostaRica.Ejecutar_Accion(p_Evento, Evento);
 
                         Error := (Evento.TextoRespuesta = 'ERROR');
                         Mensaje[1] := Evento.TextoRespuesta;
@@ -616,24 +564,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 'ELIMINARCUPON':
                     BEGIN
 
-                        CASE Pais OF
-                            1:
-                                cDominicana.Ejecutar_Accion(p_Evento, Evento);
-                            2:
-                                cBolivia.Ejecutar_Accion(p_Evento, Evento);
-                            3:
-                                cParaguay.Ejecutar_Accion(p_Evento, Evento);
-                            4:
-                                cEcuador.Ejecutar_Accion(p_Evento, Evento);
-                            5:
-                                cGuatemala.Ejecutar_Accion(p_Evento, Evento);
-                            6:
-                                cSalvador.Ejecutar_Accion(p_Evento, Evento);
-                            7:
-                                cHonduras.Ejecutar_Accion(p_Evento, Evento);
-                            9:
-                                cCostaRica.Ejecutar_Accion(p_Evento, Evento);  //+#148807
-                        END;
+                        cCostaRica.Ejecutar_Accion(p_Evento, Evento);
 
                         Error := (Evento.TextoRespuesta = 'ERROR');
                         Mensaje[1] := Evento.TextoRespuesta;
@@ -674,24 +605,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                             rCabFac.Aparcado := TRUE;
                             rCabFac.MODIFY(FALSE);
 
-                            CASE Pais OF
-                                1:
-                                    cDominicana.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                2:
-                                    cBolivia.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                3:
-                                    cParaguay.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                4:
-                                    cEcuador.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                5:
-                                    cGuatemala.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                6:
-                                    cSalvador.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                7:
-                                    cHonduras.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
-                                9:
-                                    cCostaRica.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);  //+#148807
-                            END;
+                            cCostaRica.Guardar_Datos_Aparcados(p_Evento.TextoDato3, p_Evento);
 
                             Mensaje[1] := Text006;
                             Mensaje[2] := 'Nueva_Venta';
@@ -719,9 +633,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Insertar_Pago(var p_Evento: DotNet ): Text
+    procedure Insertar_Pago(var p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rPagos: Record 34002521;
         rfPago: Record 34002513;
         Text001: Label 'Linea de Pago insertada Correctamente';
@@ -733,13 +647,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         exacto: Boolean;
         Documento: Code[20];
         lPais: Integer;
-        lcDominicana: Codeunit 34002504;
         lDocNCRPago: Code[20];
         lrFP: Record 34002513;
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
 
         Evento.TipoEvento := p_Evento.TipoEvento;
         Documento := p_Evento.TextoDato3;
@@ -748,7 +658,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         //... En los parametros debemos poder obtener el NCR de pago. He visto que TextoData7 estaba libre.
         lDocNCRPago := '';
         IF lrFP.GET(p_Evento.TextoDato4) THEN
-            IF lrFP."Tipo Compensacion NC" = lrFP."Tipo Compensacion NC"::Sí THEN
+            IF lrFP."Tipo Compensacion NC" = lrFP."Tipo Compensacion NC"::Si THEN
                 IF p_Evento.TextoDato8 <> '' THEN
                     lDocNCRPago := p_Evento.TextoDato7;
         lPais := Pais;
@@ -821,9 +731,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
                     //+#70132
                     CASE lPais OF
-                        //Dominicana
-                        1:
-                            lcDominicana.ActDatosPagoPorCompensacion(lDocNCRPago, rPagos);
+                    //Dominicana
                     END;
                     //-#70132
 
@@ -844,9 +752,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
                 //+#70132
                 CASE lPais OF
-                    //Dominicana
-                    1:
-                        lcDominicana.ActDatosPagoPorCompensacion(lDocNCRPago, rPagos);
+                //Dominicana
                 END;
                 //-#70132
 
@@ -865,18 +771,15 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Eliminar_Pago(var p_Evento: DotNet ): Text
+    procedure Eliminar_Pago(var p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rPagosTPV: Record 34002521;
         Text001: Label 'Pago %1 Eliminado Correctamente';
         Text002: Label 'Pago %1 NO Encontrado';
         EsDevolucion: Boolean;
         rCab: Record 36;
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
 
         Evento.TipoEvento := p_Evento.TipoEvento;
 
@@ -897,7 +800,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Registrar(var p_Evento: DotNet ; var p_Resultado: DotNet ): Boolean
+    procedure Registrar(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Resultado: Record "DsPOS Event Buffer" temporary): Boolean
     var
         recTienda: Record 34002503;
         rCab: Record 34002500;
@@ -925,7 +828,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lNumLog: Integer;
         lTextoAviso: Text[1024];
         lMensajeError: Text[1024];
-        lcGuatemala: Codeunit 34002508;
     begin
         //+#90735
         ControlDeAcceso(p_Evento.TextoDato, TRUE);
@@ -986,7 +888,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 EXIT(FALSE);
             END;
 
-            ComprobarCambioCliente(rSalesH, p_Evento.TextoPais.GetValue(7));
+            ComprobarCambioCliente(rSalesH, p_Evento.GetTextoPaisValue(7));
             "Venta a credito" := Es_Vta_Credito(rSalesH);
 
             rCust.GET("Sell-to Customer No.");
@@ -1011,8 +913,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             Ship := FALSE;
             Invoice := TRUE;
 
-            "Cod. Colegio" := p_Evento.TextoPais.GetValue(8);
-            "Nombre Colegio" := COPYSTR(p_Evento.TextoPais.GetValue(9), 1, MAXSTRLEN("Nombre Colegio"));
+            "Cod. Colegio" := p_Evento.GetTextoPaisValue(8);
+            "Nombre Colegio" := COPYSTR(p_Evento.GetTextoPaisValue(9), 1, MAXSTRLEN("Nombre Colegio"));
 
 
             IF NOT MODIFY(FALSE) THEN BEGIN
@@ -1022,7 +924,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 EXIT(FALSE);
             END;
 
-            /
             //+#144756
             //... Actualizaciones El Salvador.
             Actualiza_Venta_Contacto_2(rSalesH);
@@ -1217,10 +1118,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
                     //... Guatemala. Llamada a la funcion para FE 2.0. Como novedad, si hay algun error no puede concluir la venta.
                     lTextoAviso := '';
-                    CASE Pais OF
-                        5:
-                            lTextoAviso := lcGuatemala.FacturacionElectronica(rSalesH, FALSE, TRUE);
-                    END;
+                    // Eliminado: lógica exclusiva de otros países.
 
                     IF lTextoAviso <> '' THEN BEGIN
                         //... Si no devolvemos un ERROR, el campo Registrado TPV y otros valores indican que la venta ha ido OK. Por ello, hay que hacer ROLLBACK
@@ -1265,27 +1163,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     end;
 
-    procedure RegistrarPorPais(var p_SalesH: Record 36; var p_Evento: DotNet ) Respuesta: Text
+    procedure RegistrarPorPais(var p_SalesH: Record 36; var p_Evento: Record "DsPOS Event Buffer" temporary) Respuesta: Text
     begin
         //+#65232
-        CASE Pais OF
-            1:
-                Respuesta := cDominicana.Registrar(p_SalesH, p_Evento); // Dominicana
-            2:
-                Respuesta := cBolivia.Registrar(p_SalesH, p_Evento);    // Bolivia
-            3:
-                Respuesta := cParaguay.Registrar(p_SalesH, p_Evento);   // Paraguay
-            4:
-                Respuesta := cEcuador.Registrar(p_SalesH, p_Evento);    // Ecuador
-            5:
-                Respuesta := cGuatemala.Registrar(p_SalesH, p_Evento);  // Guatemala
-            6:
-                Respuesta := cSalvador.Registrar(p_SalesH, p_Evento);   // Salvador
-            7:
-                Respuesta := cHonduras.Registrar(p_SalesH, p_Evento);   // Honduras
-            9:
-                Respuesta := cCostaRica.Registrar(p_SalesH, p_Evento);   // Costa Rica /#148807
-        END;
+        Respuesta := cCostaRica.Registrar(p_SalesH, p_Evento);
 
         IF (Respuesta = '') AND (p_SalesH."No. Fiscal TPV" = '') THEN
             p_SalesH."No. Fiscal TPV" := p_SalesH."Posting No.";
@@ -1309,7 +1190,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistrarAsignaPostingNo(var p_SalesH: Record 36; p_recTPV: Record 34002501)
     var
-        cduNoSeries: Codeunit 396;
+        cduNoSeries: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Text003: Label 'Factura TPV %1';
         Text004: Label 'Devolución TPV %1';
     begin
@@ -1331,9 +1212,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         END;
     end;
 
-    procedure Crear_Devolucion(p_Evento: DotNet ): Text
+    procedure Crear_Devolucion(p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rSalesH: Record 36;
         rSalesInvH: Record 112;
         rSalesLin: Record 37;
@@ -1345,17 +1226,13 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         NoLin: Integer;
         i: Integer;
         ArrayNav: array[60] of Integer;
-        varArray: DotNet Array;
         wDateTime: DateTime;
     begin
 
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
-
         Evento.TipoEvento := 16;
         i := 1;
-        WHILE i < (p_Evento.ArrayEnteros.Length + 1) DO BEGIN
-            ArrayNav[i] := p_Evento.ArrayEnteros.GetValue(i - 1);
+        WHILE i <= p_Evento.GetIntegerArrayCount() DO BEGIN
+            ArrayNav[i] := p_Evento.GetIntegerArrayValue(i - 1);
             i += 1;
         END;
 
@@ -1454,20 +1331,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         END;
 
         // Para obtener el siguiente nº de notas de credito
-        CASE Pais OF
-            3:
-                Evento.TextoDato7 := cParaguay.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);   // Paraguay
-            4:
-                Evento.TextoDato7 := cEcuador.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);     // Ecuador
-            5:
-                Evento.TextoDato7 := cGuatemala.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);     // Guatemala
-            6:
-                Evento.TextoDato7 := cSalvador.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);     // Salvador
-            7:
-                Evento.TextoDato7 := cHonduras.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);     // Honduras
-            9:
-                Evento.TextoDato7 := cCostaRica.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);     // Costa Rica  /#148807
-        END;
+        Evento.TextoDato7 := cCostaRica.Nueva_Venta(rCabDevol.Tienda, rCabDevol.TPV, rCabDevol."ID Cajero", rCabDevol);
 
         Evento.TextoDato := rCabDevol."No.";
         Evento.TextoDato2 := STRSUBSTNO('%1', rCabDevol."Posting Date");
@@ -1483,22 +1347,17 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Actualizar_Totales(p_Venta: Code[20]; var p_Evento: DotNet ; EsNueva: Boolean; Devolucion: Boolean)
+    procedure Actualizar_Totales(p_Venta: Code[20]; var p_Evento: Record "DsPOS Event Buffer" temporary; EsNueva: Boolean; Devolucion: Boolean)
     var
-        varArray: DotNet Array;
-        [RunOnClient]
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rSalesH: Record 36;
         decDummy: Decimal;
         i: Integer;
         decImportes: array[10] of Decimal;
     begin
 
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
-
         i := 1;
-        varArray := varArray.CreateInstance(Evento.GetTypeOfDecimal(), 10);
+        p_Evento.ClearDecimalArray();
 
         IF NOT (EsNueva) THEN BEGIN
             CASE Devolucion OF
@@ -1516,12 +1375,11 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
             ActValoresTPV(rSalesH, decImportes[1], decImportes[2], decImportes[3], decImportes[4], decImportes[5], decImportes[6], decImportes[7]);
             WHILE i <= 7 DO BEGIN
-                varArray.SetValue(decImportes[i], i);
+                p_Evento.SetDecimalArrayValue(i, decImportes[i]);
                 i += 1;
             END;
         END;
 
-        p_Evento.ArrayTotales := varArray;
     end;
 
     procedure ActValoresTPV(recPrmCabVta: Record 36; var decPrmTotal: Decimal; var decPrmPago: Decimal; var decPrmDescuentos: Decimal; var decPrmCambio: Decimal; var decPrmBalance: Decimal; var decPrmTotalProds: Decimal; var decPrImpuestos: Decimal)
@@ -1694,7 +1552,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recPagosTPV: Record 34002521;
         recFormPagosTPV: Record 34002513;
         TextL001: Label 'REG_CAMBIO';
-        lcDominicana: Codeunit 34002504;
     begin
 
         recPagosTPV.RESET;
@@ -1725,10 +1582,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 recPagosTPV.Cambio := TRUE;
 
                 //+#70132
-                CASE Pais OF
-                    1:
-                        lcDominicana.ActDatosPagoPorCompensacion(TextL001, recPagosTPV);
-                END;
                 //-#70132
 
                 recPagosTPV.INSERT;
@@ -1743,131 +1596,70 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recCabVta: Record 36;
         recTienda: Record 34002503;
         i: Integer;
-        Evento: DotNet ;
-        Text001: Label 'Las facturas Manuales no se pueden imprimir';
-        lResult: Integer;
-        lTextoError: Text[1024];
-        lPais: Integer;
     begin
-        lResult := 1; //+#232158
-        lPais := Pais; //+232158
+        IF NOT recTienda.GET(codPrmTienda) THEN
+            EXIT('');
 
-        CASE lPais OF
-            2:
-                BEGIN
-                    IF NOT cBolivia.Imprimir(codPrmTienda, codPrmDoc) THEN BEGIN
-                        IF ISNULL(Evento) THEN
-                            Evento := Evento.Evento();
-                        Evento.TipoEvento := 17;
-                        Evento.TextoRespuesta := Text001;
-                        Evento.AccionRespuesta := 'ERROR';
-                        EXIT(Evento.aXml());
-                    END;
+        IF recTienda."Registro En Linea" THEN BEGIN
+            recCabFac.RESET;
+            recCabFac.SETRANGE("No.", codPrmDoc);
+            IF recCabFac.FINDFIRST THEN BEGIN
+                recTienda.TESTFIELD("ID Reporte contado");
+                WHILE i < recTienda."Cantidad de Copias Contado" DO BEGIN
+                    i += 1;
+                    IF TestFE_Factura(recCabFac) AND (recTienda."ID Reporte contado FE" > 0) THEN
+                        REPORT.RUN(recTienda."ID Reporte contado FE", FALSE, FALSE, recCabFac)
+                    ELSE
+                        REPORT.RUN(recTienda."ID Reporte contado", FALSE, FALSE, recCabFac);
                 END;
+                EXIT('');
+            END;
 
-            //+#232158
-            5:
-                BEGIN
-                    lResult := cGuatemala.Imprimir(codPrmTienda, codPrmDoc, lTextoError);
-                    COMMIT;
-                    IF lResult < 0 THEN BEGIN
-                        IF ISNULL(Evento) THEN
-                            Evento := Evento.Evento();
-                        Evento.TipoEvento := 17;
-                        Evento.TextoRespuesta := lTextoError;
-                        Evento.AccionRespuesta := 'ERROR';
-                        EXIT(Evento.aXml());
-                    END;
+            recCabNC.RESET;
+            recCabNC.SETRANGE("No.", codPrmDoc);
+            IF recCabNC.FINDFIRST THEN BEGIN
+                recTienda.TESTFIELD("ID Reporte nota credito");
+                WHILE i < recTienda."Cantidad copias nota credito" DO BEGIN
+                    i += 1;
+                    IF TestFE_NCR(recCabNC) AND (recTienda."ID Reporte nota credito FE" > 0) THEN
+                        REPORT.RUN(recTienda."ID Reporte nota credito FE", FALSE, FALSE, recCabNC)
+                    ELSE
+                        REPORT.RUN(recTienda."ID Reporte nota credito", FALSE, FALSE, recCabNC);
                 END;
-        //-#232158
+            END;
+            EXIT('');
         END;
 
-        IF lResult = 1 THEN BEGIN
-            IF recTienda.GET(codPrmTienda) THEN
-                IF recTienda."Registro En Linea" THEN BEGIN
-                    recCabFac.RESET;
-                    recCabFac.SETRANGE("No.", codPrmDoc);
-                    IF recCabFac.FINDFIRST THEN BEGIN
-                        recTienda.TESTFIELD("ID Reporte contado");
-                        WHILE i < recTienda."Cantidad de Copias Contado" DO BEGIN
-                            i += 1;
-                            //+#76946
-                            IF TestFE_Factura(recCabFac) AND (recTienda."ID Reporte contado FE" > 0) THEN BEGIN
-                                //+#232158
-                                //REPORT.RUN(recTienda."ID Reporte contado FE",FALSE,FALSE,recCabFac);
-                                IF lPais = 5 THEN
-                                    cGuatemala.ImprimirPDF(codPrmDoc)
-                                ELSE
-                                    REPORT.RUN(recTienda."ID Reporte contado FE", FALSE, FALSE, recCabFac);
-                                //-#232158
-                            END
-                            ELSE
-                                //-#76946
-                                REPORT.RUN(recTienda."ID Reporte contado", FALSE, FALSE, recCabFac);
-                        END;
-                    END
-                    ELSE BEGIN
-                        recCabNC.RESET;
-                        recCabNC.SETRANGE("No.", codPrmDoc);
-                        IF recCabNC.FINDFIRST THEN BEGIN
-                            recTienda.TESTFIELD("ID Reporte nota credito");
-                            WHILE i < recTienda."Cantidad copias nota credito" DO BEGIN
-                                i += 1;
-                                //+#76946
-                                IF TestFE_NCR(recCabNC) AND (recTienda."ID Reporte nota credito FE" > 0) THEN BEGIN
-                                    //+#232158
-                                    //REPORT.RUN(recTienda."ID Reporte nota credito FE",FALSE,FALSE,recCabNC)
-                                    IF lPais = 5 THEN
-                                        cGuatemala.ImprimirPDF(codPrmDoc)
-                                    ELSE
-                                        REPORT.RUN(recTienda."ID Reporte nota credito FE", FALSE, FALSE, recCabNC)
-                                    //-#232158
-                                END
-                                ELSE
-                                    //-#76946
-                                    REPORT.RUN(recTienda."ID Reporte nota credito", TRUE, TRUE, recCabNC);
-                            END;
-                        END;
-                    END;
-
-                END
-                ELSE BEGIN
-                    recCabVta.RESET;
-                    recCabVta.SETRANGE("Document Type", recCabVta."Document Type"::Invoice);
-                    recCabVta.SETRANGE("No.", codPrmDoc);
-                    IF recCabVta.FINDFIRST THEN BEGIN
-                        recTienda.TESTFIELD("ID Reporte contado");
-                        WHILE i < recTienda."Cantidad de Copias Contado" DO BEGIN
-                            i += 1;
-                            //+#76946
-                            IF TestFE(recCabVta) AND (recTienda."ID Reporte contado FE" > 0) THEN
-                                //MDM    REPORT.RUN(recTienda."ID Reporte contado FE",FALSE,FALSE,recCabVta)
-                                cGuatemala.ImprimirPDF(codPrmDoc)
-                            ELSE
-                                //-#76946
-                                REPORT.RUN(recTienda."ID Reporte contado", FALSE, FALSE, recCabVta);
-                        END;
-                    END
-                    ELSE BEGIN
-                        recCabVta.RESET;
-                        recCabVta.SETRANGE("Document Type", recCabVta."Document Type"::"Credit Memo");
-                        recCabVta.SETRANGE("No.", codPrmDoc);
-                        IF recCabVta.FINDFIRST THEN BEGIN
-                            recTienda.TESTFIELD("ID Reporte nota credito");
-                            WHILE i < recTienda."Cantidad copias nota credito" DO BEGIN
-                                i += 1;
-                                //+#76946
-                                IF TestFE(recCabVta) AND (recTienda."ID Reporte nota credito FE" > 0) THEN
-                                    //MDM    REPORT.RUN(recTienda."ID Reporte nota credito FE",FALSE,FALSE,recCabVta)
-                                    cGuatemala.ImprimirPDF(codPrmDoc)
-                                ELSE
-                                    //-#76946
-                                    REPORT.RUN(recTienda."ID Reporte nota credito", FALSE, FALSE, recCabVta);
-                            END;
-                        END;
-                    END;
-                END;
+        recCabVta.RESET;
+        recCabVta.SETRANGE("Document Type", recCabVta."Document Type"::Invoice);
+        recCabVta.SETRANGE("No.", codPrmDoc);
+        IF recCabVta.FINDFIRST THEN BEGIN
+            recTienda.TESTFIELD("ID Reporte contado");
+            WHILE i < recTienda."Cantidad de Copias Contado" DO BEGIN
+                i += 1;
+                IF TestFE(recCabVta) AND (recTienda."ID Reporte contado FE" > 0) THEN
+                    REPORT.RUN(recTienda."ID Reporte contado FE", FALSE, FALSE, recCabVta)
+                ELSE
+                    REPORT.RUN(recTienda."ID Reporte contado", FALSE, FALSE, recCabVta);
+            END;
+            EXIT('');
         END;
+
+        recCabVta.RESET;
+        recCabVta.SETRANGE("Document Type", recCabVta."Document Type"::"Credit Memo");
+        recCabVta.SETRANGE("No.", codPrmDoc);
+        IF recCabVta.FINDFIRST THEN BEGIN
+            recTienda.TESTFIELD("ID Reporte nota credito");
+            WHILE i < recTienda."Cantidad copias nota credito" DO BEGIN
+                i += 1;
+                IF TestFE(recCabVta) AND (recTienda."ID Reporte nota credito FE" > 0) THEN
+                    REPORT.RUN(recTienda."ID Reporte nota credito FE", FALSE, FALSE, recCabVta)
+                ELSE
+                    REPORT.RUN(recTienda."ID Reporte nota credito", FALSE, FALSE, recCabVta);
+            END;
+        END;
+
+        EXIT('');
     end;
 
     procedure AnularFactura(codPrmTienda: Code[20]; codPrmTPV: Code[20]; codPrmCajero: Code[20]; codPrmDoc: Code[20]): Text
@@ -1879,20 +1671,19 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recCabFac: Record 112;
         recLinFac: Record 113;
         recTPV: Record 34002501;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'La factura %1 ya está anulada.';
         Error002: Label 'No se ha podido insertar la nota de Credito.';
         Text002: Label 'Factura anulada correctamente.';
         recCabNC: Record 114;
         rPagos: Record 34002521;
         rPagosNC: Record 34002521;
-        cduNoSeries: Codeunit 396;
+        cduNoSeries: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Text003: Label 'Anula a Fact. TPV %1';
         cRegistro: Codeunit 34002522;
         lNumLog: Integer;
         lOk: Boolean;
         lTextoAviso: Text[1024];
-        lcGuatemala: Codeunit 34002508;
     begin
         //#88460
         ControlDeAcceso(codPrmTienda, TRUE);
@@ -1901,9 +1692,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         //+88460
         lNumLog := IniciarLog(2, codPrmTienda, codPrmTPV);
         //-88460
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         Evento.TipoEvento := 10;
         recTPV.GET(codPrmTienda, codPrmTPV);
@@ -2001,22 +1789,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                                 Evento.TextoRespuesta);
             //-88460
 
-            CASE Pais OF
-                1:
-                    Evento.TextoRespuesta := cDominicana.AnularFactura(recCabVta);
-                3:
-                    Evento.TextoRespuesta := cParaguay.AnularFactura(recCabVta); // Paraguay
-                4:
-                    Evento.TextoRespuesta := cEcuador.AnularFactura(recCabVta); // Ecuador
-                5:
-                    Evento.TextoRespuesta := cGuatemala.AnularFactura(recCabVta); // Guatemala
-                6:
-                    Evento.TextoRespuesta := cSalvador.AnularFactura(recCabVta); // Salvador
-                7:
-                    Evento.TextoRespuesta := cHonduras.AnularFactura(recCabVta); // Honduras
-                9:
-                    Evento.TextoRespuesta := cCostaRica.AnularFactura(recCabVta); // Costa Rica  / #148807
-            END;
+            Evento.TextoRespuesta := cCostaRica.AnularFactura(recCabVta); // Costa Rica / #148807
 
             IF Evento.TextoRespuesta <> '' THEN BEGIN
                 Evento.AccionRespuesta := 'ERROR';
@@ -2211,20 +1984,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             //-88460
 
             Evento.TextoRespuesta := '';
-            CASE Pais OF
-                3:
-                    Evento.TextoRespuesta := cParaguay.AnularFactura(recCabVta); // Paraguay
-                4:
-                    Evento.TextoRespuesta := cEcuador.AnularFactura(recCabVta); // Ecuador
-                5:
-                    Evento.TextoRespuesta := cGuatemala.AnularFactura(recCabVta); // Guatemala
-                6:
-                    Evento.TextoRespuesta := cSalvador.AnularFactura(recCabVta); // Salvador
-                7:
-                    Evento.TextoRespuesta := cHonduras.AnularFactura(recCabVta); // Honduras
-                9:
-                    Evento.TextoRespuesta := cCostaRica.AnularFactura(recCabVta); // Costa Rica / #148807
-            END;
+            Evento.TextoRespuesta := cCostaRica.AnularFactura(recCabVta); // Costa Rica / #148807
 
             IF Evento.TextoRespuesta <> '' THEN BEGIN
                 Evento.AccionRespuesta := 'ERROR';
@@ -2278,13 +2038,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             //+#232158
             lOk := TRUE;
             //... Adaptacion a FE 2.0
-            
+
             //... Guatemala. Llamada a la funcion para FE 2.0. Como novedad, si hay algun error no puede concluir la venta.
             lTextoAviso := '';
-            CASE Pais OF
-                5:
-                    lTextoAviso := lcGuatemala.FacturacionElectronica(recCabVta, FALSE, TRUE);
-            END;
+            // Eliminado: lógica exclusiva de otros países.
 
             IF lTextoAviso <> '' THEN BEGIN
                 //... Si no devolvemos un ERROR, el campo Registrado TPV y otros valores indican que la venta ha ido OK. Por ello, hay que hacer ROLLBACK
@@ -2315,21 +2072,17 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     end;
 
-    procedure PrecioDisponibilidad(p_Evento: DotNet ): Text
+    procedure PrecioDisponibilidad(p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rCabVta: Record 36;
         rLinVtaTMP: Record 37 temporary;
         Umed: Code[10];
         CodProd: Code[20];
         rTiendas: Record 34002503;
         rItem: Record 27;
-        varArray: DotNet Array;
         rSalesH: Record 36;
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         Evento.TipoEvento := 15;
 
@@ -2358,12 +2111,11 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rItem.SETFILTER("Location Filter", rTiendas."Cod. Almacen");
         rItem.CALCFIELDS(Inventory);
 
-        varArray := varArray.CreateInstance(Evento.GetTypeOfDecimal(), 10);
-        varArray.SetValue(rLinVtaTMP."Unit Price", 1);
-        varArray.SetValue(rItem.Inventory, 2);
+        Evento.ClearDecimalArray();
+        Evento.SetDecimalArrayValue(1, rLinVtaTMP."Unit Price");
+        Evento.SetDecimalArrayValue(2, rItem.Inventory);
 
         Evento.AccionRespuesta := 'OK';
-        Evento.ArrayTotales := varArray;
 
         EXIT(Evento.aXml());
     end;
@@ -2622,7 +2374,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             IF pNCR <> '' THEN
                 IF lrNCR.GET(pNCR) THEN
                     IF lrFP.GET(CodFormaPago) THEN
-                        IF lrFP."Tipo Compensacion NC" = lrFP."Tipo Compensacion NC"::Sí THEN
+                        IF lrFP."Tipo Compensacion NC" = lrFP."Tipo Compensacion NC"::Si THEN
                             lFormaPagoCompensacionNC := TRUE;
             //-#70132
 
@@ -2631,22 +2383,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             "External Document No." := ExtDocumentNo;
             VALIDATE("Currency Code", codDivisa);
 
-            //+#124085
-            //... Por si acaso......, la siguiente acción sòlo se realizará (al menos de momento) para El Salvador.
-            IF Pais = 6 THEN BEGIN
-                //+#78451
-                recFormaPago.GET(CodFormaPago);
-                IF recFormaPago."Forma pago" <> '' THEN
-                    recLinDiaGen."Payment Method Code" := recFormaPago."Forma pago";
-                recLinDiaGen."VAT Registration No." := VatNo;
-
-                CASE Pais OF
-                    6:
-                        cSalvador.DiarioGeneralPago(recLinDiaGen, CodFormaPago, CustName, NoFiscal); //+#82483
-                END;
-                //-#78451
-            END;
-            //-#124085
 
             //Comprobamos si tiene exención de IVA
             IF codDivisa = '' THEN BEGIN
@@ -2703,7 +2439,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recTienda: Record 34002503;
     begin
         //+#65232: Función obsoleta
-       
+
 
     end;
 
@@ -2720,7 +2456,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lwImporteEX: Decimal;
     begin
         //+#65232: Función obsoleta
-       
+
     end;
 
     procedure LiquidaNotaCreditoTPV_Obsoleto(codPrmDoc: Code[20])
@@ -2728,7 +2464,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recCabNC: Record 114;
         recPagosTPV: Record 34002521;
     begin
-       
+
     end;
 
     procedure RegistrarPagoNotaCredito_Obsoleto(recPrmCabNC: Record 114; recPrmPagoTPV: Record 34002521)
@@ -2743,7 +2479,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rPagosTPV: Record 34002521;
         lwImporteEX: Decimal;
     begin
-       
+
     end;
 
     procedure AnulaPagoFacturaTPV(codPrmFac: Code[20]; codPrmHNC: Code[20])
@@ -3004,7 +2740,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure InsertarTransaccionCaja(recPrmVentaTPV: Record 34002530; recPrmPago: Record 34002521; PrmNumReg: Code[20])
     var
         recTrans: Record 34002523;
-        cduControlTPV: Codeunit 34002505;
     begin
 
         WITH recPrmVentaTPV DO BEGIN
@@ -3113,7 +2848,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure ActualizarDivisas(pTienda: Code[20]; pTPV: Code[20]): Text
     var
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         rConf: Record 34002501;
         rBotones: Record 34002511;
         rFPago: Record 34002513;
@@ -3132,9 +2867,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rDivPos.SETRANGE(TPV, pTPV);
         IF rDivPos.FINDSET THEN
             rDivPos.DELETEALL(FALSE);
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
 
         Evento.TipoEvento := 14;
 
@@ -3273,7 +3005,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             IF Cust.GET(NuevoClie) THEN
                 WITH pSalesH DO BEGIN
                     pSalesH."Sell-to Customer No." := NuevoClie;
-                    "Sell-to Customer Template Code" := '';
                     "Sell-to Customer Name" := COPYSTR(Cust.Name, 1, MAXSTRLEN("Sell-to Customer Name"));
                     "Sell-to Customer Name 2" := COPYSTR(Cust."Name 2", 1, MAXSTRLEN("Sell-to Customer Name 2"));
                     "Sell-to Address" := COPYSTR(Cust.Address, 1, MAXSTRLEN("Sell-to Address"));
@@ -3324,7 +3055,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Cust.GET(pSalesH."Sell-to Customer No.");
         WITH pSalesH DO BEGIN
             "Bill-to Customer No." := Cust."Bill-to Customer No.";
-            "Bill-to Customer Template Code" := '';
             "Bill-to Name" := COPYSTR(Cust.Name, 1, MAXSTRLEN("Bill-to Name"));
             "Bill-to Name 2" := COPYSTR(Cust."Name 2", 1, MAXSTRLEN("Bill-to Name 2"));
             "Bill-to Address" := COPYSTR(Cust.Address, 1, MAXSTRLEN("Bill-to Address"));
@@ -3355,7 +3085,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             "Combine Shipments" := Cust."Combine Shipments";
             Reserve := Cust.Reserve;
 
-
             IF cfComunes.RegistroEnLinea(pSalesH.Tienda) THEN BEGIN
 
                 pSalesH.SetHideValidationDialog(TRUE);
@@ -3366,39 +3095,47 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
                 VALIDATE("Currency Code");
                 VALIDATE("Prepayment %");
 
-                CreateDim(
-                  DATABASE::Customer, "Bill-to Customer No.",
-                  DATABASE::"Salesperson/Purchaser", "Salesperson Code",
-                  DATABASE::Campaign, "Campaign No.",
-                  DATABASE::"Responsibility Center", "Responsibility Center",
-                  DATABASE::"Customer Template", "Bill-to Customer Template Code");
-
+                CreateSalesHeaderDimensions(pSalesH);
             END;
-
         END;
+    end;
+
+    local procedure CreateSalesHeaderDimensions(var SalesHeader: Record "Sales Header")
+    var
+        DefaultDimSources: List of [Dictionary of [Integer, Code[20]]];
+        DefaultDimSource: Dictionary of [Integer, Code[20]];
+    begin
+        if SalesHeader."Bill-to Customer No." <> '' then begin
+            Clear(DefaultDimSource);
+            DefaultDimSource.Add(Database::Customer, SalesHeader."Bill-to Customer No.");
+            DefaultDimSources.Add(DefaultDimSource);
+        end;
+
+        if SalesHeader."Salesperson Code" <> '' then begin
+            Clear(DefaultDimSource);
+            DefaultDimSource.Add(Database::"Salesperson/Purchaser", SalesHeader."Salesperson Code");
+            DefaultDimSources.Add(DefaultDimSource);
+        end;
+
+        if SalesHeader."Campaign No." <> '' then begin
+            Clear(DefaultDimSource);
+            DefaultDimSource.Add(Database::Campaign, SalesHeader."Campaign No.");
+            DefaultDimSources.Add(DefaultDimSource);
+        end;
+
+        if SalesHeader."Responsibility Center" <> '' then begin
+            Clear(DefaultDimSource);
+            DefaultDimSource.Add(Database::"Responsibility Center", SalesHeader."Responsibility Center");
+            DefaultDimSources.Add(DefaultDimSource);
+        end;
+
+        SalesHeader.CreateDim(DefaultDimSources);
     end;
 
     procedure RelacionaAnulacion(var pSalesH: Record 36; CodTienda: Code[20])
     begin
 
-        CASE Pais OF
-            1:
-                cDominicana.RelacionaAnulacion(pSalesH, CodTienda);
-            2:
-                cBolivia.RelacionaAnulacion(pSalesH, CodTienda); // Bolivia;
-            3:
-                cParaguay.RelacionaAnulacion(pSalesH, CodTienda); // Paraguay;
-            4:
-                cEcuador.RelacionaAnulacion(pSalesH, CodTienda);  // Ecuador;
-            5:
-                cGuatemala.RelacionaAnulacion(pSalesH, CodTienda);  // Guatemala;
-            6:
-                cSalvador.RelacionaAnulacion(pSalesH, CodTienda);  // Salvador;
-            7:
-                cHonduras.RelacionaAnulacion(pSalesH, CodTienda);  // Honduras;
-            9:
-                cCostaRica.RelacionaAnulacion(pSalesH, CodTienda);  // Costa Rica /#148807
-        END;
+        cCostaRica.RelacionaAnulacion(pSalesH, CodTienda); // Costa Rica / #148807
 
         IF pSalesH.MODIFY THEN;
     end;
@@ -3461,18 +3198,11 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure ValidaIDCliente(ID: Code[20]; TipoID: Integer): Text
     var
         Mensaje: Text;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento();
 
         Evento.TipoEvento := 18;
 
-        CASE Pais OF
-            4:
-                Mensaje := cEcuador.ValidaIDCliente(ID, TipoID);
-        END;
 
         IF Mensaje <> '' THEN BEGIN
             Evento.TextoRespuesta := Mensaje;
@@ -3484,17 +3214,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure Devolver_Datos_Localizados(pEvento: DotNet ): Text
+    procedure Devolver_Datos_Localizados(pEvento: Record "DsPOS Event Buffer" temporary): Text
     begin
 
-        CASE Pais OF
-            1:
-                EXIT(cDominicana.Devolver_Datos_Localizados(pEvento.IntDato1, pEvento.TextoDato, pEvento.TextoDato2, pEvento.IntDato2));
-            5:
-                EXIT(cGuatemala.DevolverSiguienteNum(pEvento.TextoDato, pEvento.TextoDato2, pEvento.TextoDato6, pEvento.IntDato2));  //+#232158
-            ELSE
-                EXIT(DevolverSiguienteNum(pEvento.TextoDato, pEvento.TextoDato2, pEvento.TextoDato6, pEvento.IntDato2));
-        END;
+        EXIT(DevolverSiguienteNum(pEvento.TextoDato, pEvento.TextoDato2, pEvento.TextoDato6, pEvento.IntDato2));
     end;
 
     procedure Devolver_NCF(prTrans: Record 34002530): Code[40]
@@ -3554,13 +3277,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Desaparcar_Pedido(p_NumVenta: Code[20]): Text
     var
         rCabFac: Record 36;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'El pedido aparcado nº %1 se ha recuperado correctamente.';
         Error002: Label 'El pedido aparcado nº %1 no se ha encontrado en la tabla Sales Header';
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         rCabFac.RESET;
 
@@ -3675,15 +3395,12 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure DevolverSiguienteNum(pTienda: Code[20]; pTPV: Code[20]; pSerie: Text; pAnul: Integer): Text
     var
-        Evento: DotNet ;
-        NoSeriesManagement: Codeunit 396;
+        Evento: Record "DsPOS Event Buffer" temporary;
+        NoSeriesManagement: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         text001: Label 'NCF Actualizado CORRECTAMENTE';
         rConfTPV: Record 34002501;
         Serie: Code[20];
     begin
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
 
         COMMIT;
         Evento.TipoEvento := 20;
@@ -3705,7 +3422,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         ELSE
             Serie := pSerie;
 
-        Evento.TextoDato := NoSeriesManagement.TryGetNextNo(Serie, WORKDATE);
+        Evento.TextoDato := NoSeriesManagement.GetNextNo(Serie, WORKDATE, FALSE);
         Evento.TextoDato2 := Serie;
 
         Evento.TextoRespuesta := text001;
@@ -3716,16 +3433,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Linea_LocalizadaOFF(var prOrigen: Record 37; var prDestino: Record 37)
     begin
 
-        CASE Pais OF
-            5:
-                cGuatemala.Linea_LocalizadaOFF(prOrigen, prDestino);
-            6:
-                cSalvador.Linea_LocalizadaOFF(prOrigen, prDestino);
-            7:
-                cHonduras.Linea_LocalizadaOFF(prOrigen, prDestino);
-            9:
-                cCostaRica.Linea_LocalizadaOFF(prOrigen, prDestino);  //#148807
-        END;
+        cCostaRica.Linea_LocalizadaOFF(prOrigen, prDestino);
     end;
 
     procedure Actualiza_Venta_Contacto(par_Doc: Code[20]; par_Contacto: Code[20]): Text
@@ -3733,7 +3441,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rSalesH: Record 36;
         rSalesLin: Record 37;
         rContact: Record 5050;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'No existe el Colegio %1';
         Text001: Label 'Colegio Actualizado Correctamente';
         rTienda: Record 34002503;
@@ -3768,18 +3476,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lNumLog := IniciarLog(6, lTienda, lTPV);
         //-144756
 
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
-
         Evento.TipoEvento := 23;
 
-        CASE Pais OF
-            1, 2, 3, 4, 5, 7, 8, 9:
-                BEGIN
-                    Evento.AccionRespuesta := 'OK';
-                    EXIT(Evento.aXml());
-                END;
-        END;
+        Evento.AccionRespuesta := 'OK';
+        EXIT(Evento.aXml());
 
         //+#144756
         ModificarDatosLog(lNumLog, 2, lrVentas."Document Type", par_Doc, lrVentas."Posting No.", lrVentas."No. Fiscal TPV", lrVentas."No. Comprobante Fiscal", par_Contacto);
@@ -4035,7 +3735,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure FE_Por_Pais(lrCabVenta: Record 36; pRegistroEnLinea: Boolean): Boolean
     var
         lResult: Boolean;
-        lcGuatemala: Codeunit 34002508;
         lrCfgSant: Record 56001;
         lTipo: Integer;
     begin
@@ -4047,169 +3746,81 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         //...
 
         lResult := TRUE;
-
-        CASE Pais OF
-            5:
-                BEGIN
-                    //IF lrCfgSant.FINDFIRST THEN BEGIN  //+#336189
-                    //  IF lrCfgSant."Funcionalidad FE Activa" THEN BEGIN //+#336189
-                    COMMIT;
-                    lcGuatemala.Parametros(lrCabVenta, pRegistroEnLinea);
-                    IF NOT lcGuatemala.RUN THEN
-                        lResult := FALSE;
-                END;
-        //END; //+#336189
-        //END; //+#336189
-        END;
+        // Eliminado: lógica exclusiva de otros países.
 
         EXIT(lResult);
     end;
+
 
     procedure GrabarTextoAvisoFE(pTienda: Code[20]; pTPV: Code[20]; pMensaje: Text[1024])
     var
-        lrTPV: Record 34002501;
+        TPVSetup: Record 34002501;
     begin
-        //+#76946
-        lrTPV.RESET;
-        lrTPV.LOCKTABLE;
-        lrTPV.GET(pTienda, pTPV);
-        lrTPV."Texto aviso FE" := COPYSTR(pMensaje, 1, 250);
-        lrTPV.MODIFY;
+        TPVSetup.LockTable();
+        TPVSetup.Get(pTienda, pTPV);
+        TPVSetup."Texto aviso FE" := CopyStr(pMensaje, 1, MaxStrLen(TPVSetup."Texto aviso FE"));
+        TPVSetup.Modify();
     end;
 
-    procedure TestFE(lrCabVenta: Record 36): Boolean
-    var
-        lrNoSeriesLine: Record 309;
-        lResult: Boolean;
-        lOk: Boolean;
-        lcGuatemala: Codeunit 34002508;
+    procedure TestFE(SalesHeader: Record 36): Boolean
     begin
-        //+#76946
-        lResult := FALSE;
-        lOk := FALSE;
-
-        //... Sólo se realizará la comprobación si el pais es guatemala, sino habrá que activarlo explicitamente.
-        IF Pais = 5 THEN BEGIN
-            //+#232158
-            //... Todas las ventas son electrónicas.
-            lResult := TRUE;
-        END;
-
-        EXIT(lResult);
+        // Costa Rica: los documentos TPV se procesan como documentos electrónicos.
+        exit(true);
     end;
 
-    procedure TestFE_Factura(lrSIH: Record 112): Boolean
-    var
-        lrNoSeriesLine: Record 309;
-        lResult: Boolean;
-        lrCfgSanti: Record 56001;
+    procedure TestFE_Factura(SalesInvoiceHeader: Record 112): Boolean
     begin
-        //+#76946
-        lResult := FALSE;
-
-        //... Sólo se realizará la comprobación si el pais es guatemala, sino habrá que activarlo explicitamente.
-        IF Pais = 5 THEN BEGIN
-
-            //+#232158
-            //... Todas las ventas son electrónicas.
-            lResult := TRUE;
-            //-#232158
-
-        END;
-
-        EXIT(lResult);
+        // Costa Rica: las facturas TPV registradas se procesan como documentos electrónicos.
+        exit(true);
     end;
 
-    procedure TestFE_NCR(lrSCMH: Record 114): Boolean
-    var
-        lrNoSeriesLine: Record 309;
-        lResult: Boolean;
-        lrCfgSanti: Record 56001;
+    procedure TestFE_NCR(SalesCrMemoHeader: Record 114): Boolean
     begin
-        //+#76946
-        lResult := FALSE;
-
-        //... Sólo se realizará la comprobación si el pais es guatemala, sino habrá que activarlo explicitamente.
-        IF Pais = 5 THEN BEGIN
-
-            //+#232158
-            //... Todas las ventas son electrónicas.
-            lResult := TRUE;
-            //-#232158
-
-        END;
-
-        EXIT(lResult);
+        // Costa Rica: las notas de crédito TPV registradas se procesan como documentos electrónicos.
+        exit(true);
     end;
 
-    procedure ObtenerSerieFiscal(lrConfigTPV: Record 34002501; pTipoDocumento: Option Factura,NCR): Code[20]
-    var
-        lrCfgEmpresa: Record 56001;
-        lResult: Code[20];
+    procedure ObtenerSerieFiscal(ConfigTPV: Record 34002501; TipoDocumento: Option Factura,NCR): Code[20]
     begin
-        //+116527
-        CASE pTipoDocumento OF
-            pTipoDocumento::Factura:
-                lResult := lrConfigTPV."NCF Credito fiscal";
-            pTipoDocumento::NCR:
-                lResult := lrConfigTPV."NCF Credito fiscal NCR";
-        END;
-
-        EXIT(lResult);
-
+        case TipoDocumento of
+            TipoDocumento::Factura:
+                exit(ConfigTPV."NCF Credito fiscal");
+            TipoDocumento::NCR:
+                exit(ConfigTPV."NCF Credito fiscal NCR");
+        end;
     end;
 
-    procedure Post_Registrar(var rSalesH: Record 36; pRegistroEnLinea: Boolean; recTPV: Record 34002501)
-    var
-        lcParaguay: Codeunit 34002506;
-        lcDominicana: Codeunit 34002504;
+    procedure Post_Registrar(var SalesHeader: Record 36; RegistroEnLinea: Boolean; ConfigTPV: Record 34002501)
     begin
-        //+#120811
-        //... Una vez que se ha efectuado el registro del documento, interesará cambiar una serie de valores.
-        //... El caso concreto ha ocurrido en Paraguay, para el registro en Linea, donde hay que asignar las series NCF
-        CASE Pais OF
-            1:
-                lcDominicana.Post_Registrar(rSalesH, pRegistroEnLinea, recTPV); //+#103585
-            3:
-                lcParaguay.Post_Registrar(rSalesH, pRegistroEnLinea, recTPV);
-        END;
-        //-#120811
+        // En el objeto original este procedimiento solo ejecutaba ajustes de Dominicana y Paraguay.
+        // Para Costa Rica no existe una actualización posterior específica.
     end;
 
-    procedure TestIDYaUtilizado(rSalesHeader: Record 36; pNotificar: Boolean; var vNotificacion: Text[1024]): Boolean
+    procedure TestIDYaUtilizado(SalesHeader: Record 36; Notificar: Boolean; var Notificacion: Text[1024]): Boolean
     var
-        lrSalesLine: Record 37;
-        lrPagosTPV: Record 34002521;
-        TextL001: Label 'Ya había lineas de venta con este mismo código. Hay que revisar la configuración de series.';
-        TextL002: Label 'Ya había lineas de pago con este mismo código. Hay que revisar la configuración de series.';
-        lResult: Boolean;
+        SalesLine: Record 37;
+        PagoTPV: Record 34002521;
+        LineasExistentesMsg: Label 'Ya había líneas de venta con este mismo código. Hay que revisar la configuración de series.';
+        PagosExistentesMsg: Label 'Ya había líneas de pago con este mismo código. Hay que revisar la configuración de series.';
     begin
-        //+#12123
-        //... He visto que se puede llegar a utilizar un ID venta ya usado.
-        //... Se commprueban lineas de venta y lineas de pago, aunque se podrían revisar también las tablas "Transacciones Caja TPV" y "Transacciones TPV"
-        lResult := FALSE;
+        SalesLine.SetRange("Document Type", SalesHeader."Document Type");
+        SalesLine.SetRange("Document No.", SalesHeader."No.");
+        if not SalesLine.IsEmpty() then begin
+            Notificacion := LineasExistentesMsg;
+            if Notificar then
+                Message(Notificacion);
+            exit(true);
+        end;
 
-        lrSalesLine.RESET;
-        lrSalesLine.SETRANGE("Document Type", rSalesHeader."Document Type");
-        lrSalesLine.SETRANGE("Document No.", rSalesHeader."No.");
-        IF lrSalesLine.FINDFIRST THEN BEGIN
-            lResult := TRUE;
-            vNotificacion := TextL001;
-        END;
+        PagoTPV.SetRange("No. Borrador", SalesHeader."No.");
+        if not PagoTPV.IsEmpty() then begin
+            Notificacion := PagosExistentesMsg;
+            if Notificar then
+                Message(Notificacion);
+            exit(true);
+        end;
 
-        IF NOT lResult THEN BEGIN
-            lrPagosTPV.RESET;
-            lrPagosTPV.SETRANGE("No. Borrador", rSalesHeader."No.");
-            IF lrPagosTPV.FINDFIRST THEN BEGIN
-                lResult := TRUE;
-                vNotificacion := TextL002;
-            END;
-        END;
-
-        IF lResult AND pNotificar THEN
-            MESSAGE(vNotificacion);
-
-        EXIT(lResult);
+        exit(false);
     end;
 
     procedure Actualiza_Venta_Contacto_2(var rSalesH: Record 36): Text
@@ -4322,12 +3933,12 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
         lResult := TRUE;
 
-       
+
         EXIT(lResult);
 
     end;
 
-    procedure ImportePropuestoPagoNCR(p_Evento: DotNet ): Text
+    procedure ImportePropuestoPagoNCR(p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
         lrNCR: Record 114;
         lrSH: Record 36;
@@ -4338,7 +3949,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lDocVenta: Code[20];
         lImportePendiente: Decimal;
         lImporteTotal: Decimal;
-        Evento: DotNet ;
+        Evento: Record "DsPOS Event Buffer" temporary;
         TextL001: Label 'No se ha podido determinar ningún importe aplicable para este NCR';
         TextL002: Label 'En el NCR %1 se ha indicado el  cliente %2 para liquidar la venta con cliente %3';
         TextL003: Label 'No se ha encontrado el NCR indicado %1';
@@ -4358,10 +3969,6 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         IF NOT lrNCR.GET(lNCR) THEN
             lSeguir := FALSE;
 
-
-        IF ISNULL(Evento) THEN
-            Evento := Evento.Evento;
-
         Evento.TipoEvento := p_Evento.TipoEvento;
 
         IF NOT lSeguir THEN BEGIN
@@ -4370,7 +3977,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             EXIT(Evento.aXml());
         END;
 
-      
+
 
         IF lResult = 0 THEN BEGIN
             Evento.AccionRespuesta := 'ERROR';
@@ -4388,11 +3995,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure AntesDeImprimir(pCodVenta: Code[20])
     begin
         //+#184407
-        CASE Pais OF
-            //... Antes de imprimir debe llamarse a las funciones FE de envio eletrónico.
-            9:
-                cCostaRica.AntesDeImprimir(pCodVenta);
-        END;
+        cCostaRica.AntesDeImprimir(pCodVenta);
     end;
 
     procedure ActualizarEstadoRegistro(lrSH: Record 36)
@@ -4426,8 +4029,5 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         //#328529
         wCupon4Log := pCupon;
     end;
-    */
+
 }
-
-
-

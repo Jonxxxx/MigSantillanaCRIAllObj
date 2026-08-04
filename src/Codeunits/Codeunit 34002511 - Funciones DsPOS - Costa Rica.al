@@ -1,7 +1,8 @@
 codeunit 34002511 "Funciones DsPOS - Costa Rica"
 {
-    //TODO: Revisar codigo completo
-    /*
+    // MIGRACION BC27 SAAS V2: estructura original conservada.
+    // MIGRACION BC27 SAAS V1: DotNet Evento sustituido por buffer temporal AL y No. Series actualizado.
+
     Permissions = TableData 112 = rm,
                   TableData 114 = rm;
 
@@ -51,7 +52,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
     procedure Nueva_Venta(p_Tienda: Code[20]; p_IdTPV: Code[20]; p_Cajero: Code[20]; var p_SalesHeader: Record 36): Code[20]
     var
         rTPV: Record 34002501;
-        NoSeriesManagement: Codeunit 396;
+        NoSeriesManagement: Codeunit "No. Series";
     begin
 
         WITH p_SalesHeader DO BEGIN
@@ -60,20 +61,20 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
             COMMIT;
             CASE "Document Type" OF
                 "Document Type"::Invoice:
-                    EXIT(NoSeriesManagement.TryGetNextNo(rTPV."No. serie facturas Reg.", p_SalesHeader."Posting Date"));
+                    EXIT(NoSeriesManagement.GetNextNo(rTPV."No. serie facturas Reg.", p_SalesHeader."Posting Date", FALSE));
                 "Document Type"::"Credit Memo":
-                    EXIT(NoSeriesManagement.TryGetNextNo(rTPV."No. serie notas credito reg.", p_SalesHeader."Posting Date"));
+                    EXIT(NoSeriesManagement.GetNextNo(rTPV."No. serie notas credito reg.", p_SalesHeader."Posting Date", FALSE));
             END;
         END;
     end;
 
-    procedure Registrar(var p_SalesH: Record 36; var p_Evento: DotNet ): Text
+    procedure Registrar(var p_SalesH: Record 36; var p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
         Cust: Record 18;
         CustPostGroup: Record 92;
         Error001: Label 'Debe Espeficiar "Grupo contable cliente" para el cliente %1';
         Error002: Label 'No Existe Grupo Contable Cliente %1';
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         Error003: Label 'Imposible Modificar Cab. Venta';
         rClientesTPV: Record 34002537;
         rConfTPV: Record 34002501;
@@ -83,7 +84,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         intNoInicioSerie: Integer;
         intNoFinalSerie: Integer;
         intFactura: Integer;
-        TextoNet: array[10] of DotNet String;
+        TextoNet: array[10] of Text[250];
         i: Integer;
         cfComunes: Codeunit 34002503;
         rCab: Record 36;
@@ -93,10 +94,8 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
     begin
 
         i := 1;
-        WHILE i <= (p_Evento.TextoPais.Length - 1) DO BEGIN
-            TextoNet[i] := p_Evento.TextoPais.GetValue(i);
-            IF ISNULL(TextoNet[i]) THEN
-                TextoNet[i] := '';
+        WHILE i <= p_Evento.GetTextoPaisCount() DO BEGIN
+            TextoNet[i] := p_Evento.GetTextoPaisValue(i);
             i += 1;
         END;
 
@@ -119,14 +118,14 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
             IF NOT (Devolucion) THEN BEGIN
 
                 // Guardamos la Cédula Para Fututos Casos
-                IF rClientesTPV.GET(TextoNet[1].ToString()) THEN
+                IF rClientesTPV.GET(TextoNet[1]) THEN
                     rClientesTPV.DELETE;
 
                 rClientesTPV.INIT;
-                rClientesTPV.Identificacion := TextoNet[1].ToString();
-                rClientesTPV.Direccion := TextoNet[2].ToString();
-                rClientesTPV.Nombre := TextoNet[3].ToString();
-                rClientesTPV.Telefono := TextoNet[4].ToString();
+                rClientesTPV.Identificacion := TextoNet[1];
+                rClientesTPV.Direccion := TextoNet[2];
+                rClientesTPV.Nombre := TextoNet[3];
+                rClientesTPV.Telefono := TextoNet[4];
                 rClientesTPV.INSERT(FALSE);
 
                 "VAT Registration No." := rClientesTPV.Identificacion;
@@ -165,7 +164,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         END;
     end;
 
-    procedure Ejecutar_Accion(var p_Evento: DotNet ; var p_EventoRespuesta: DotNet )
+    procedure Ejecutar_Accion(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_EventoRespuesta: Record "DsPOS Event Buffer" temporary)
     begin
 
         CASE p_Evento.TextoDato4 OF
@@ -195,7 +194,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
     procedure AnularFactura(var pSalesH: Record 36): Text
     var
         rConfTPV: Record 34002501;
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit "No. Series";
         NoSeriesLine: Record 309;
         Error004: Label 'La Serie NCF No contiene mas numeros';
         Error005: Label 'Nº de Autoriación no puede ser blanco para serie %1';
@@ -258,19 +257,17 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         END;
     end;
 
-    procedure Guardar_Datos_Aparcados(prmNumVenta: Code[20]; p_Evento: DotNet )
+    procedure Guardar_Datos_Aparcados(prmNumVenta: Code[20]; p_Evento: Record "DsPOS Event Buffer" temporary)
     var
         rPedidosAparcados: Record 34002535;
-        TextoNet: array[10] of DotNet String;
+        TextoNet: array[10] of Text[250];
         i: Integer;
     begin
 
         // Almacenamos los datos recibidos
         i := 1;
-        WHILE i <= (p_Evento.TextoPais.Length - 1) DO BEGIN
-            TextoNet[i] := p_Evento.TextoPais.GetValue(i);
-            IF ISNULL(TextoNet[i]) THEN
-                TextoNet[i] := '';
+        WHILE i <= p_Evento.GetTextoPaisCount() DO BEGIN
+            TextoNet[i] := p_Evento.GetTextoPaisValue(i);
             i += 1;
         END;
 
@@ -282,19 +279,19 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         // Guardamos los datos en la tabla
         rPedidosAparcados.INIT;
         rPedidosAparcados."No." := prmNumVenta;
-        rPedidosAparcados."Numero Cliente" := TextoNet[7].ToString();
-        rPedidosAparcados."Numero Colegio" := TextoNet[8].ToString();
-        rPedidosAparcados."Nombre Colegio" := TextoNet[9].ToString();
-        rPedidosAparcados."Tipo Documento" := TextoNet[6].ToString();
-        rPedidosAparcados.Identificacion := TextoNet[1].ToString();
-        rPedidosAparcados.Nombre := TextoNet[3].ToString();
-        rPedidosAparcados.Direccion := TextoNet[2].ToString();
-        rPedidosAparcados."E-Mail" := TextoNet[5].ToString();
-        rPedidosAparcados.Telefono := TextoNet[4].ToString();
+        rPedidosAparcados."Numero Cliente" := TextoNet[7];
+        rPedidosAparcados."Numero Colegio" := TextoNet[8];
+        rPedidosAparcados."Nombre Colegio" := TextoNet[9];
+        rPedidosAparcados."Tipo Documento" := TextoNet[6];
+        rPedidosAparcados.Identificacion := TextoNet[1];
+        rPedidosAparcados.Nombre := TextoNet[3];
+        rPedidosAparcados.Direccion := TextoNet[2];
+        rPedidosAparcados."E-Mail" := TextoNet[5];
+        rPedidosAparcados.Telefono := TextoNet[4];
         rPedidosAparcados.INSERT(FALSE);
     end;
 
-    procedure EliminaCupon(var p_Evento: DotNet ; var p_Evento_Respuesta: DotNet )
+    procedure EliminaCupon(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Evento_Respuesta: Record "DsPOS Event Buffer" temporary)
     var
         rSalesLines: Record 37;
         error001: Label 'El cupón %1 esta en estado de error : no impreso, anulado ó caducado';
@@ -385,7 +382,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         END;
     end;
 
-    procedure AplicaCupon(var p_Evento: DotNet ; var p_Evento_Respuesta: DotNet )
+    procedure AplicaCupon(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Evento_Respuesta: Record "DsPOS Event Buffer" temporary)
     var
         rCabCupon: Record 51009;
         rCabCupon2: Record 51009;
@@ -667,7 +664,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         //#217374
 
         lFechaReferencia := TODAY;
-       
+
         SLEEP(3000);  //Intentar que de tiempo a comprobar.
 
         lrSIH.RESET;
@@ -704,7 +701,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
                 ELSE
                     lcCostaRica.LogFirmaEnCentral(lrSalesH, COPYSTR(GETLASTERRORTEXT, 1, 1024));
 
-       
+
             UNTIL lrSIH.NEXT = 0;
 
         END;
@@ -745,7 +742,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
                 ELSE
                     lcCostaRica.LogFirmaEnCentral(lrSalesH, COPYSTR(GETLASTERRORTEXT, 1, 1024));
 
-  
+
             UNTIL lrSCMH.NEXT = 0;
 
         END;
@@ -799,6 +796,5 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         END;
         //-#308268
     end;
-    */
-}
 
+}

@@ -1,5 +1,6 @@
 codeunit 52504 "Facturacion  Electronica NAV"
 {
+    // MIGRACION BC27 SAAS: Temp Blob, XML nativo, PDF en stream y adaptador de Procesa.
     // #217374, RRT, 09.09.2019: Tiquete electronico firmado en central. Nuevas funciones.
     // 
     // --------------------------------------
@@ -38,7 +39,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         SalesInvoiceHeader: Record 112;
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
     begin
         //
         //   SH.GET(SH."Document Type"::Invoice,'VF-000126') ;
@@ -59,7 +60,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
           //QR Code
             QRCodeInput    :='https://www.google.com.do/';
             CreateQRCode(QRCodeInput,TempBlob);
-            SalesInvoiceHeader."QR Code FE" := TempBlob.Blob;
+            TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+            SalesInvoiceHeader."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+            CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
           //QR Code
            SalesInvoiceHeader.MODIFY;
         */
@@ -68,7 +73,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
           //QR Code
             QRCodeInput    :='https://www.google.com.do/';
             CreateQRCode(QRCodeInput,TempBlob);
-            ConfigEmpresa."QR Code FE" := TempBlob.Blob;
+            TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+            ConfigEmpresa."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+            CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
           //QR Code
            ConfigEmpresa.MODIFY;
         */
@@ -114,17 +123,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Error02: Label 'La cuenta %1 debe tener valor en el campo CABYS';
         FunSant: Codeunit 56000;
         IsExento: Boolean;
+        SaaSPdfTempBlob: Codeunit "Temp Blob";
+        SaaSPdfOutStream: OutStream;
+        SaaSTempBlobInStream: InStream;
+        SaaSTempBlobOutStream: OutStream;
+        XmlDocumentBuffer: Dictionary of [Text, Text];
+        PdfGenerationErr: Label 'No se pudo generar el PDF en memoria. Nombre lógico: %1';
+        XmlBufferNotFoundErr: Label 'No se encontró el XML %1 en el buffer SaaS.';
 
     procedure FacturaElectronica(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         ReportFE: Report 52543;
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
     begin
@@ -139,16 +155,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
             //CreaXmlFacturaV4_4_Compartir(NoDocumento,DirectorioTemp);
 
             CreaXmlFacturaV4_4(NoDocumento, DirectorioTemp); //013+-
-
-        xmlFactura := xmlFactura.XmlDocument();
-        xmlFactura.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlFactura);
 
         //Pendiente
         LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, SIH.Clave, SIH.Consecutivo, SIH.Estado, SIH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0), SIH."E-Mail-FE", SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_FE', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
 
         iProcesa.EnviaFactura(xmlFactura, ConfSant."Es Prueba",
@@ -160,17 +175,17 @@ codeunit 52504 "Facturacion  Electronica NAV"
                             GetValueByName(0, 'ARCHIVO_FE', 0));
 
         //SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
                                     GetValueByNameWithType(0, 'DIRECTORIOTEMP', 0),
                                     GetValueByName(0, 'ARCHIVO_FE', 0));
 
-        SIH.Consecutivo := iProcesa.txtConsecutivo;
-        SIH.Clave := iProcesa.txtClave;
-        SIH.Estado := iProcesa.estadoFactura;
-        SIH.Mensaje := iProcesa.mensajeRespuesta;
+        SIH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        SIH.Clave := iProcesa.GetTxtClave();
+        SIH.Estado := iProcesa.GetEstadoFactura();
+        SIH.Mensaje := iProcesa.GetMensajeRespuesta();
         SIH."Fecha Doc Electronico" := CURRENTDATETIME;
 
         // MIGRACION COSTA RICA - YFC
@@ -178,7 +193,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
           //QR Code
             QRCodeInput    :='https://www.google.com.do/';
             CreateQRCode(QRCodeInput,TempBlob);
-            SIH."QR Code FE" := TempBlob.Blob;
+            TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+            SIH."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+            CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
           //QR Code
         */
         /*ConfigEmpresa.GET; // YFC
@@ -193,10 +212,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         SIH.SETRANGE("No.", SIH."No.");
         IF SIH.FINDFIRST THEN BEGIN
             ReportFE.SETTABLEVIEW(SIH);
-            ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0) + 'FE-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0) + 'FE-' + iProcesa.GetTxtClave() + '.pdf');
         END;
         //Completado
-        LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta,
+        LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(),
         GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0), SIH."E-Mail-FE", SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_FE', 0), 2);
         //Completado
 
@@ -207,23 +229,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlFactura(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -242,14 +265,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:vc', 'http://www.w3.org/2007/XMLSchema-versioning');
@@ -325,7 +347,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                 END
                 ELSE BEGIN
                     // -- 004-YFC
-                    XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                    XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                     XmlDomMgnt.AddElement(XmlNode2, 'Numero', SIH."VAT Registration No.", '', XmlNode3);
                 END
             END;
@@ -665,21 +687,20 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode1,'NumeroResolucion','DGT-R-48-2016','',XmlNode2);
             XmlDomMgnt.AddElement(XmlNode1,'FechaResolucion','07-10-2016 08:00:00','',XmlNode2);
         */
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure FacturaElectronicaExportacion(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         ReportFE: Report 52543;
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
     begin
@@ -689,16 +710,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF SIH.GET(NoDocumento) THEN
             //CreaXmlFacturaExportacion(NoDocumento,DirectorioTemp);   //YFC
             CreaXmlFacturaExportacionV4_4(NoDocumento, DirectorioTemp); //013+-
-
-        xmlFactura := xmlFactura.XmlDocument();
-        xmlFactura.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlFactura);
 
         //Pendiente
         LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, SIH.Clave, SIH.Consecutivo, SIH.Estado, SIH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0), SIH."E-Mail-FE", SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_FE', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
 
         iProcesa.EnviaFactura(xmlFactura, ConfSant."Es Prueba",
@@ -710,17 +730,17 @@ codeunit 52504 "Facturacion  Electronica NAV"
                             GetValueByName(0, 'ARCHIVO_FE', 0));
 
         //SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
                                     GetValueByNameWithType(0, 'DIRECTORIOTEMP', 0),
                                     GetValueByName(0, 'ARCHIVO_FE', 0));
 
-        SIH.Consecutivo := iProcesa.txtConsecutivo;
-        SIH.Clave := iProcesa.txtClave;
-        SIH.Estado := iProcesa.estadoFactura;
-        SIH.Mensaje := iProcesa.mensajeRespuesta;
+        SIH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        SIH.Clave := iProcesa.GetTxtClave();
+        SIH.Estado := iProcesa.GetEstadoFactura();
+        SIH.Mensaje := iProcesa.GetMensajeRespuesta();
         SIH."Fecha Doc Electronico" := CURRENTDATETIME;
 
         // MIGRACION COSTA RICA - YFC
@@ -728,7 +748,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
           //QR Code
             QRCodeInput    :='https://www.google.com.do/';
             CreateQRCode(QRCodeInput,TempBlob);
-            SIH."QR Code FE" := TempBlob.Blob;
+            TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+            SIH."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+            CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
           //QR Code
           */
         /*ConfigEmpresa.GET; // YFC
@@ -746,10 +770,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         SIH.SETRANGE("No.", SIH."No.");
         IF SIH.FINDFIRST THEN BEGIN
             ReportFE.SETTABLEVIEW(SIH);
-            ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0) + 'FE-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0) + 'FE-' + iProcesa.GetTxtClave() + '.pdf');
         END;
         //Completado
-        LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta,
+        LogFacturaElectronica(0, SIH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(),
         GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 0), SIH."E-Mail-FE", SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_FE', 0), 2);
         //Completado
 
@@ -760,23 +787,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlFacturaExportacion(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -790,14 +818,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronicaExportacion');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronicaExportacion');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:vc', 'http://www.w3.org/2007/XMLSchema-versioning');
@@ -844,7 +871,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             // --009-YFC
             IF (SIH."VAT Registration No." <> '.') AND (SIH."VAT Registration No." <> '') THEN BEGIN
                 XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 XmlDomMgnt.AddElement(XmlNode2, 'Numero', SIH."VAT Registration No.", '', XmlNode3);
             END
         END; //009-YFC
@@ -1055,17 +1082,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode1,'NumeroResolucion','DGT-R-48-2016','',XmlNode2);
             XmlDomMgnt.AddElement(XmlNode1,'FechaResolucion','07-10-2016 08:00:00','',XmlNode2);
         */
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure NotaCreditoElectronica(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlNotaCredito: DotNet XmlDocument;
-        xmlNotaCreditoFirmado: DotNet XmlDocument;
-        xmlNotaCreditoRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlNotaCredito: XmlDocument;
+        xmlNotaCreditoFirmado: XmlDocument;
+        xmlNotaCreditoRespuesta: XmlDocument;
         CMH: Record 114;
         ReportFE: Report 52544;
         ReportFE_Pos: Report 34002531;
@@ -1094,17 +1120,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
             ELSE
                 //014-
                 CreaXmlNotaCreditoV4_4(NoDocumento, DirectorioTemp);//012+- //Aquí envalúa las condiciones si es de POS o no.
-
-
-        xmlNotaCredito := xmlNotaCredito.XmlDocument();
-        xmlNotaCredito.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlNotaCredito);
 
         //Pendiente
         LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, CMH.Clave, CMH.Consecutivo, CMH.Estado, CMH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1), CMH."E-Mail-FE", CMH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_NC', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
         iProcesa.EnviaFactura(xmlNotaCredito, ConfSant."Es Prueba",
                            GetValueByName(0, 'CERTIFICADO', 0),
@@ -1113,19 +1137,19 @@ codeunit 52504 "Facturacion  Electronica NAV"
                            GetValueByName(0, 'PASS', 0),
                            GetValueByNameWithType(0, 'DIRECTORIOTEMP', 1),
                            GetValueByName(0, 'ARCHIVO_NC', 0));
-        //MESSAGE(FORMAT(iProcesa.estadoFactura));
+        //MESSAGE(FORMAT(iProcesa.GetEstadoFactura()));
         //SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
                                     GetValueByNameWithType(0, 'DIRECTORIOTEMP', 1),
                                     GetValueByName(0, 'ARCHIVO_NC', 0));
 
-        CMH.Consecutivo := iProcesa.txtConsecutivo;
-        CMH.Clave := iProcesa.txtClave;
-        CMH.Estado := iProcesa.estadoFactura;
-        CMH.Mensaje := iProcesa.mensajeRespuesta;
+        CMH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        CMH.Clave := iProcesa.GetTxtClave();
+        CMH.Estado := iProcesa.GetEstadoFactura();
+        CMH.Mensaje := iProcesa.GetMensajeRespuesta();
         CMH."Fecha Doc Electronico" := CURRENTDATETIME;
         //011+
         CreaQRFE(CMH."No.");
@@ -1137,25 +1161,34 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF CMH.FINDFIRST THEN BEGIN
             //+#217374
             //ReportFE.SETTABLEVIEW(CMH);
-            //ReportFE.SAVEASPDF(GetValueByNameWithType(0,'DIRECTORIOTEMP_NAV',1)+'NC-'+iProcesa.txtClave+'.pdf');
+            //Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            //if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+            //Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.GetTxtClave() + '.pdf');
             IF wVieneDePos THEN BEGIN
                 ReportFE_Pos.SETTABLEVIEW(CMH);
-                ReportFE_Pos.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.txtClave + '.pdf');
+                Clear(SaaSPdfTempBlob);
+                SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+                if not ReportFE_Pos.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                    Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.GetTxtClave() + '.pdf');
             END
             ELSE BEGIN
                 ReportFE.SETTABLEVIEW(CMH);
-                ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.txtClave + '.pdf');
+                Clear(SaaSPdfTempBlob);
+                SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+                if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                    Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.GetTxtClave() + '.pdf');
             END;
             //-#217374
 
         END;
 
-        LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta,
+        LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(),
         GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1), CMH."E-Mail-FE", CMH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_NC', 0), 2);
-        // MESSAGE('Consecutivo:' + iProcesa.txtConsecutivo);
-        // MESSAGE('Clave: ' + iProcesa.txtClave);
-        // MESSAGE('Estado: ' + iProcesa.estadoFactura);
-        // MESSAGE('Mensaje: ' + iProcesa.mensajeRespuesta);
+        // MESSAGE('Consecutivo:' + iProcesa.GetTxtConsecutivo());
+        // MESSAGE('Clave: ' + iProcesa.GetTxtClave());
+        // MESSAGE('Estado: ' + iProcesa.GetEstadoFactura());
+        // MESSAGE('Mensaje: ' + iProcesa.GetMensajeRespuesta());
         // MESSAGE('Nota de Credito Electronica Generada con exito');
 
     end;
@@ -1163,23 +1196,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlNotaCredito(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         CMH: Record 114;
         CML: Record 115;
@@ -1198,14 +1232,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('NotaCreditoElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('NotaCreditoElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         //XmlDomMgnt.AddAttribute(XmlNode,'xmlns:xs','http://www.w3.org/2001/XMLSchema');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -1281,7 +1314,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                 END
                 ELSE BEGIN
                     // -- 004-YFC
-                    XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                    XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                     XmlDomMgnt.AddElement(XmlNode2, 'Numero', Cust."VAT Registration No.", '', XmlNode3);
                 END;
             END;
@@ -1657,17 +1690,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode1,'NumeroResolucion','DGT-R-48-2016','',XmlNode2);
             XmlDomMgnt.AddElement(XmlNode1,'FechaResolucion','07-10-2016 08:00:00','',XmlNode2);
         */
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure TiqueteElectronica(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 36;
         ReportFE: Report 34002519;
         DirectorioTemp: Text[100];
@@ -1679,16 +1711,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF SIH.GET(SIH."Document Type"::Invoice, NoDocumento) THEN   //002-YFC
             CreaXmlTiquete(NoDocumento, DirectorioTemp);
         // SIH.GET(NoDocumento);   //002-YFC
-
-        xmlFactura := xmlFactura.XmlDocument();
-        xmlFactura.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlFactura);
 
         //Pendiente
         LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, SIH.Clave, SIH.Consecutivo, SIH.Estado, SIH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '', SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_TE', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
 
         iProcesa.EnviaFactura(xmlFactura, ConfSant."Es Prueba",
@@ -1700,17 +1731,17 @@ codeunit 52504 "Facturacion  Electronica NAV"
                            GetValueByName(0, 'ARCHIVO_TE', 0));
 
         SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
                                     GetValueByNameWithType(0, 'DIRECTORIOTEMP', 3),
                                     GetValueByName(0, 'ARCHIVO_TE', 0));
 
-        SIH.Consecutivo := iProcesa.txtConsecutivo;
-        SIH.Clave := iProcesa.txtClave;
-        SIH.Estado := iProcesa.estadoFactura;
-        SIH.Mensaje := iProcesa.mensajeRespuesta;
+        SIH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        SIH.Clave := iProcesa.GetTxtClave();
+        SIH.Estado := iProcesa.GetEstadoFactura();
+        SIH.Mensaje := iProcesa.GetMensajeRespuesta();
         SIH."Fecha Doc Electronico" := CURRENTDATETIME;
         SIH.MODIFY;
 
@@ -1718,38 +1749,42 @@ codeunit 52504 "Facturacion  Electronica NAV"
         SIH.SETRANGE("No.", SIH."No.");
         IF SIH.FINDFIRST THEN BEGIN
             ReportFE.SETTABLEVIEW(SIH);
-            ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3) + 'TE-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3) + 'TE-' + iProcesa.GetTxtClave() + '.pdf');
         END;
 
-        LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '',
+        LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(), GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '',
         SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_TE', 0), 2);
-        // MESSAGE('Consecutivo:' + iProcesa.txtConsecutivo);
-        // MESSAGE('Clave: ' + iProcesa.txtClave);
-        // MESSAGE('Estado: ' + iProcesa.estadoFactura);
-        // MESSAGE('Mensaje: ' + iProcesa.mensajeRespuesta);
+        // MESSAGE('Consecutivo:' + iProcesa.GetTxtConsecutivo());
+        // MESSAGE('Clave: ' + iProcesa.GetTxtClave());
+        // MESSAGE('Estado: ' + iProcesa.GetEstadoFactura());
+        // MESSAGE('Mensaje: ' + iProcesa.GetMensajeRespuesta());
         // MESSAGE('Tiquete Generado con exito');
     end;
 
     procedure CreaXmlTiquete(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 36;
         SIL: Record 37;
@@ -1759,14 +1794,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('TiqueteElectronico');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('TiqueteElectronico');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
 
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:vc', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -1893,15 +1927,14 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
 
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
     end;
 
     procedure GetClave(Fecha: Date; var Consecutivo: Text[20]; Tipo: Code[2]) Return: Text
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Seguridad: Integer;
         lStrValorRandom: Text[10];
     begin
@@ -1963,7 +1996,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
         //Config
         //"Tipo","Relacion","Campo","Tipo de Documento"
@@ -1986,7 +2019,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Config.SETRANGE(Campo, Tipo);
         IF Config.FINDFIRST THEN BEGIN
 
-            NoSeriesMgt.InitSeries(Config.Relacion, Config.Relacion, TODAY, Num, Config.Relacion);
+            Num := NoSeriesMgt.GetNextNo(Config.Relacion, TODAY, FALSE);
             //Num := NoSeriesMgt.GetNextNo(Config.Relacion,TODAY,TRUE);
 
             Return += Num;
@@ -1999,7 +2032,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
         //Config
         //"Tipo","Relacion","Campo","Tipo de Documento"
@@ -2012,7 +2045,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
         //Config
         //"Tipo","Relacion","Campo","Tipo de Documento"
@@ -2026,7 +2059,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
         //Config
         //"Tipo","Relacion","Campo","Tipo de Documento"
@@ -2039,7 +2072,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     var
         Config: Record 52501;
         Num: Code[20];
-        NoSeriesMgt: Codeunit 396;
+        NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
         //Config
         //"Tipo","Relacion","Campo","Tipo de Documento"
@@ -2051,7 +2084,6 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure FormatDateTime(Fecha: Date; Hora: Time) TxtFecha: Text[50]
     var
         DT: DateTime;
-        Convert: DotNet Convert;
     begin
         DT := CREATEDATETIME(Fecha, Hora);
         //DT       := Convert.ToDateTime(DT);
@@ -2068,21 +2100,26 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure LogFacturaElectronica(Tipo: Integer; NoDocumento: Code[20]; Fecha: DateTime; Clave: Text[60]; Consecutivo: Text[20]; Estado: Text[30]; Mensaje: Text[200]; Directorio: Text[150]; Correo: Text[100]; Cliente: Text[100]; Archivo: Text[100]; EstadoInterfaz: Integer)
     var
         LogFE: Record 52502;
-        FileManagment: Codeunit 419;
-        TempBlob: Record 99008535 temporary;
+        XmlDoc: XmlDocument;
+        XmlText: Text;
+        XmlInStream: InStream;
+        PdfInStream: InStream;
+        BlobOutStream: OutStream;
         XmlFirmado: InStream;
+        XmlRespuesta: InStream;
+        IsNewLog: Boolean;
         Text001: Label '%1  Santillana';
         Text002: Label ' %1  Santillana  %2';
-        TextBody: Label '<p><strong>Estimado (a)</strong> <strong> %1 </strong> <br />Adjunto al correo encontrará su %2 en formato PDF y XML. Para garantizar la seguridad y confidencialidad de sus datos, esta dirección de e-mail será utilizada únicamente para enviar la información solicitada, por lo tanto, le agradecemos no responder los correos enviados, ni utilizar esta vía de comunicación para realizar consultas personales referentes a su %2 .</p>
-    <p><br />Si presenta algún inconveniente por favor comunicarse al correo electrónico: msanchezv@santillana.com con la señorita Melissa Sanchez de Facturación. <br />Gracias <br /><strong>Santillana S.A. </strong></p>';
-        TextBody2: Label '<p>Estimado (a) %1 </p>
-    <p>Le informamos que su %2 número<strong> %3 </strong> ha sido %4 por la administración tributaria.</p>
-    <p>Se adjunta el documento de respuesta enviado por la administración tributaria.</p>';
-        XmlRespuesta: InStream;
+        TextBody: Label '<p><strong>Estimado (a)</strong> <strong> %1 </strong> <br />Adjunto al correo encontrará su %2 en formato PDF y XML. Para garantizar la seguridad y confidencialidad de sus datos, esta dirección de e-mail será utilizada únicamente para enviar la información solicitada, por lo tanto, le agradecemos no responder los correos enviados, ni utilizar esta vía de comunicación para realizar consultas personales referentes a su %2 .</p><p><br />Si presenta algún inconveniente por favor comunicarse al correo electrónico: msanchezv@santillana.com con la señorita Melissa Sanchez de Facturación. <br />Gracias <br /><strong>Santillana S.A. </strong></p>';
+        TextBody2: Label '<p>Estimado (a) %1 </p><p>Le informamos que su %2 número<strong> %3 </strong> ha sido %4 por la administración tributaria.</p><p>Se adjunta el documento de respuesta enviado por la administración tributaria.</p>';
     begin
-        LogFE.INIT;
-        LogFE."Tipo Documento" := Tipo;
-        LogFE.NoDocumento := NoDocumento;
+        IsNewLog := NOT LogFE.GET(Tipo, NoDocumento);
+        IF IsNewLog THEN BEGIN
+            LogFE.INIT;
+            LogFE."Tipo Documento" := Tipo;
+            LogFE.NoDocumento := NoDocumento;
+        END;
+
         LogFE."Fecha Doc" := Fecha;
         LogFE."Clave Doc" := Clave;
         LogFE."Consecutivo Doc" := Consecutivo;
@@ -2092,111 +2129,57 @@ codeunit 52504 "Facturacion  Electronica NAV"
         LogFE.Usuario := USERID;
 
         IF EstadoInterfaz = 1 THEN BEGIN
-            //SF
-            CLEAR(TempBlob);
-            FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '.xml');
-            LogFE."Doc SF  XML" := TempBlob.Blob;
-            //SF
+            LoadXmlDocumentFromBuffer(Directorio + Archivo + '.xml', XmlDoc);
+            XmlDoc.WriteTo(XmlText);
+            CLEAR(LogFE."Doc SF  XML");
+            LogFE."Doc SF  XML".CREATEOUTSTREAM(BlobOutStream, TextEncoding::UTF8);
+            BlobOutStream.WRITETEXT(XmlText);
             CLEAR(LogFE."Clave Doc");
             CLEAR(LogFE."Consecutivo Doc");
             CLEAR(LogFE.Estado);
             CLEAR(LogFE.Mensaje);
-
-            IF NOT LogFE.INSERT THEN
-                LogFE.MODIFY;
-
         END;
 
+        IF EstadoInterfaz = 2 THEN BEGIN
+            IF SaaSPdfTempBlob.HasValue() THEN BEGIN
+                SaaSPdfTempBlob.CreateInStream(PdfInStream);
+                CLEAR(LogFE."Doc Pdf Generado");
+                LogFE."Doc Pdf Generado".CREATEOUTSTREAM(BlobOutStream);
+                CopyStream(BlobOutStream, PdfInStream);
+            END;
+        END;
+
+        IF IsNewLog THEN
+            LogFE.INSERT
+        ELSE
+            LogFE.MODIFY;
 
         IF EstadoInterfaz = 2 THEN BEGIN
-            //SF
-            CLEAR(TempBlob);
-            FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '_01_SF.xml');
-            LogFE."Doc SF  XML" := TempBlob.Blob;
-            //SF
-
-            //Firmado
-            CLEAR(TempBlob);
-            FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '_02_Firmado.xml');
-            LogFE."Doc Firmado  XML" := TempBlob.Blob;
-            //Firmado
-
-            //Json Envio
-            CLEAR(TempBlob);
-            FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '_03_jsonEnvio.txt');
-            LogFE."Doc Json envio  XML" := TempBlob.Blob;
-            //Json Envio
-
-            //Json Respuesta
-            CLEAR(TempBlob);
-            FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '_04_jsonRespuesta.txt');
-            LogFE."Doc Json Respuesta  XML" := TempBlob.Blob;
-            //json Respuesta
-
-            //Respuesta
-            CLEAR(TempBlob);
-            IF EXISTS(Directorio + Archivo + '_05_RESP.xml') THEN BEGIN
-                FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + Archivo + '_05_RESP.xml');
-                LogFE."Doc Respuesta  XML" := TempBlob.Blob;
-            END;
-            IF NOT LogFE.INSERT THEN
-                LogFE.MODIFY;
-
-
-
-
-            //Respuesta
-            IF Clave <> '' THEN
-                //+#217374
-                //IF  LogFE."Tipo Documento" IN [LogFE."Tipo Documento"::FE ,LogFE."Tipo Documento"::NC,LogFE."Tipo Documento"::ND] THEN
-                IF LogFE."Tipo Documento" IN [LogFE."Tipo Documento"::FE, LogFE."Tipo Documento"::NC, LogFE."Tipo Documento"::ND, LogFE."Tipo Documento"::TE, LogFE."Tipo Documento"::FEC] THEN //015-
-                                                                                                                                                                                                //-#217374
-              BEGIN
-                    //Pdf
-                    CLEAR(TempBlob);
-                    FileManagment.BLOBImportFromServerFile(TempBlob, Directorio + FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.pdf');
-                    LogFE."Doc Pdf Generado" := TempBlob.Blob;
-                    //Pdf
-                END;
-
-            //Calculate Documents
             LogFE.CALCFIELDS("Doc Firmado  XML", "Doc Respuesta  XML");
+            IF LogFE."Doc Firmado  XML".HASVALUE THEN
+                LogFE."Doc Firmado  XML".CREATEINSTREAM(XmlFirmado);
+            IF LogFE."Doc Respuesta  XML".HASVALUE THEN
+                LogFE."Doc Respuesta  XML".CREATEINSTREAM(XmlRespuesta);
 
-            //Documents
-            LogFE."Doc Firmado  XML".CREATEINSTREAM(XmlFirmado);
-            LogFE."Doc Respuesta  XML".CREATEINSTREAM(XmlRespuesta);
-            //Documents
-            IF NOT LogFE.INSERT THEN
-                LogFE.MODIFY;
-
-            //LDP-011+- Se comenta Codigo de envio de correo por peticion Mariela hasta solventar caso correo.
-            //{011+- Se decomenta error correo solucionado.
-            //SENT EMAIL
-
-            //012+
             IF Correo <> '' THEN
                 ValidaCorreoElect(Correo, NoDocumento);
-            //012-
+
             IF Clave <> '' THEN
                 IF (Correo <> '') AND (Estado = 'aceptado') THEN BEGIN
-                    SendEmail(Correo, STRSUBSTNO(Text001, GetDocumentName(LogFE), LogFE."Consecutivo Doc"), STRSUBSTNO(TextBody, Cliente, GetDocumentName(LogFE))
-                    , FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.xml', Directorio + FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.pdf', TRUE, XmlFirmado);
-
-                    SendEmail(Correo, STRSUBSTNO(Text002, GetDocumentName(LogFE), LogFE.Estado), STRSUBSTNO(TextBody2, Cliente, GetDocumentName(LogFE), LogFE."Consecutivo Doc", LogFE.Estado)
-                    , FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.xml', Directorio + FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.pdf', FALSE, XmlRespuesta);
+                    IF LogFE."Doc Firmado  XML".HASVALUE THEN
+                        SendEmail(Correo, STRSUBSTNO(Text001, GetDocumentName(LogFE), LogFE."Consecutivo Doc"), STRSUBSTNO(TextBody, Cliente, GetDocumentName(LogFE)), FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.xml', FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.pdf', TRUE, XmlFirmado);
+                    IF LogFE."Doc Respuesta  XML".HASVALUE THEN
+                        SendEmail(Correo, STRSUBSTNO(Text002, GetDocumentName(LogFE), LogFE.Estado), STRSUBSTNO(TextBody2, Cliente, GetDocumentName(LogFE), LogFE."Consecutivo Doc", LogFE.Estado), FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.xml', FORMAT(LogFE."Tipo Documento") + '-' + Clave + '.pdf', FALSE, XmlRespuesta);
                 END;
-            //SENT EMAIL
-            //}011+- Se decomenta error correo solucionado.
-            //LDP-011+- Se comenta Codigo de envio de correo por peticion Mariela hasta solventar caso correo.
         END;
     end;
 
     procedure ComprobarDocumentoElectronico(NoDocument: Code[20]; Clave: Text[100]; Tipo: Integer)
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         CMH: Record 114;
         ConfSant: Record 56001;
@@ -2205,7 +2188,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
         ConfSant.GET;
         //Comprobar el comprobante electronico
         // Clave := '50604101800310114588000100001010000000099188888888';
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
         iProcesa.ConsultaComprobante(Clave,
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
@@ -2214,16 +2198,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                     GetValueByName(0, 'ARCHIVO_FE', 0));
         //Factura
         IF SIH.GET(NoDocument) THEN BEGIN
-            SIH.Estado := iProcesa.estadoFactura;
-            SIH.Mensaje := iProcesa.mensajeRespuesta;
+            SIH.Estado := iProcesa.GetEstadoFactura();
+            SIH.Mensaje := iProcesa.GetMensajeRespuesta();
             SIH."Fecha Doc Electronico" := CURRENTDATETIME;
             SIH.MODIFY;
         END;
 
         //Nota de Credito
         IF CMH.GET(NoDocument) THEN BEGIN
-            CMH.Estado := iProcesa.estadoFactura;
-            CMH.Mensaje := iProcesa.mensajeRespuesta;
+            CMH.Estado := iProcesa.GetEstadoFactura();
+            CMH.Mensaje := iProcesa.GetMensajeRespuesta();
             CMH."Fecha Doc Electronico" := CURRENTDATETIME;
             CMH.MODIFY;
         END;
@@ -2231,8 +2215,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //Factura de Compra
         //013+
         IF PIH.GET(NoDocument) THEN BEGIN
-            PIH.Estado := iProcesa.estadoFactura;
-            PIH.Mensaje := iProcesa.mensajeRespuesta;
+            PIH.Estado := iProcesa.GetEstadoFactura();
+            PIH.Mensaje := iProcesa.GetMensajeRespuesta();
             PIH."Fecha Doc Electronico" := CURRENTDATETIME;
             PIH.MODIFY;
         END;
@@ -2243,10 +2227,10 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure NotaCreditoElectronicaTipo(NoDocumento: Code[20]; Tipo: Code[2])
     var
-        iProcesa: DotNet Procesa;
-        xmlNotaCredito: DotNet XmlDocument;
-        xmlNotaCreditoFirmado: DotNet XmlDocument;
-        xmlNotaCreditoRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlNotaCredito: XmlDocument;
+        xmlNotaCreditoFirmado: XmlDocument;
+        xmlNotaCreditoRespuesta: XmlDocument;
         CMH: Record 112;
         ReportFE: Report 52544;
         DirectorioTemp: Text[100];
@@ -2257,16 +2241,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
         DirectorioTemp := GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + GetValueByName(0, 'ARCHIVO_NC', 0) + '.xml';
         IF CMH.GET(NoDocumento) THEN
             CreaXmlNotaCreditoTipo(NoDocumento, DirectorioTemp, Tipo);
-
-        xmlNotaCredito := xmlNotaCredito.XmlDocument();
-        xmlNotaCredito.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlNotaCredito);
 
         //Pendiente
         LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, CMH.Clave, CMH.Consecutivo, CMH.Estado, CMH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1), CMH."E-Mail-FE", CMH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_NC', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
         iProcesa.EnviaFactura(xmlNotaCredito,
                            ConfSant."Es Prueba",
@@ -2279,7 +2262,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
 
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
@@ -2287,10 +2270,10 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                     GetValueByName(0, 'ARCHIVO_NC', 0));
 
 
-        CMH.Consecutivo := iProcesa.txtConsecutivo;
-        CMH.Clave := iProcesa.txtClave;
-        CMH.Estado := iProcesa.estadoFactura;
-        CMH.Mensaje := iProcesa.mensajeRespuesta;
+        CMH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        CMH.Clave := iProcesa.GetTxtClave();
+        CMH.Estado := iProcesa.GetEstadoFactura();
+        CMH.Mensaje := iProcesa.GetMensajeRespuesta();
         CMH."Fecha Doc Electronico" := CURRENTDATETIME;
         CMH.MODIFY;
 
@@ -2298,38 +2281,42 @@ codeunit 52504 "Facturacion  Electronica NAV"
         CMH.SETRANGE("No.", CMH."No.");
         IF CMH.FINDFIRST THEN BEGIN
             ReportFE.SETTABLEVIEW(CMH);
-            ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1) + 'NC-' + iProcesa.GetTxtClave() + '.pdf');
         END;
 
-        LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1), CMH."E-Mail-FE",
+        LogFacturaElectronica(1, CMH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(), GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 1), CMH."E-Mail-FE",
         CMH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_NC', 0), 2);
-        // MESSAGE('Consecutivo:' + iProcesa.txtConsecutivo);
-        // MESSAGE('Clave: ' + iProcesa.txtClave);
-        // MESSAGE('Estado: ' + iProcesa.estadoFactura);
-        // MESSAGE('Mensaje: ' + iProcesa.mensajeRespuesta);
+        // MESSAGE('Consecutivo:' + iProcesa.GetTxtConsecutivo());
+        // MESSAGE('Clave: ' + iProcesa.GetTxtClave());
+        // MESSAGE('Estado: ' + iProcesa.GetEstadoFactura());
+        // MESSAGE('Mensaje: ' + iProcesa.GetMensajeRespuesta());
         // MESSAGE('Nota de Credito Electronica Generada con exito');
     end;
 
     procedure CreaXmlNotaCreditoTipo(NoDocumento: Code[20]; DirectorioTemp: Text[100]; Tipo: Code[2])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         CMH: Record 112;
         CML: Record 113;
@@ -2340,14 +2327,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('NotaCreditoElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('NotaCreditoElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         //XmlDomMgnt.AddAttribute(XmlNode,'xmlns:xs','http://www.w3.org/2001/XMLSchema');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -2393,7 +2379,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         ELSE BEGIN
             // --009-YFC
             XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
             XmlDomMgnt.AddElement(XmlNode2, 'Numero', Cust."VAT Registration No.", '', XmlNode3);
         END; //009-YFC
 
@@ -2502,23 +2488,23 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
 
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
     end;
 
     procedure MensajeElectronico(Tipo: Integer; NoDocumento: Code[20]; DirectorioTemp: Text[500])
     var
-        iProcesa: DotNet Procesa;
-        xmlDoc: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlDoc: XmlDocument;
         ConfSant: Record 56001;
     begin
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
         ConfSant.GET;
         // CreaXmlMensaje(NoDocumento,DirectorioTemp);
-        xmlDoc := xmlDoc.XmlDocument();
-        xmlDoc.Load(DirectorioTemp);
+        Clear(xmlDoc);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlDoc);
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
         iProcesa.EnviaFactura(xmlDoc,
                            ConfSant."Es Prueba",
@@ -2531,7 +2517,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
         // SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
                                     GetValueByName(0, 'PASS', 0),
@@ -2539,40 +2525,42 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                     GetValueByName(0, 'ARCHIVO_MJ', 0));
 
 
-        LogFacturaElectronica(Tipo, NoDocumento, CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', Tipo), '', '', GetValueByName(0, 'ARCHIVO_MJ', 0), 2);
+        LogFacturaElectronica(Tipo, NoDocumento, CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(), GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', Tipo), '', '', GetValueByName(0, 'ARCHIVO_MJ', 0), 2);
         MESSAGE('Mensaje Generado con exito');
     end;
 
     procedure CreaXmlMensaje(Clave: Code[80]; NumeroCedulaEmisor: Text[12]; FechaEmisionDoc: Text[40]; Mensaje: Integer; DetalleMensaje: Text[150]; MontoTotalImpuesto: Text[30]; CodigoActividad: Text[6]; TotalFactura: Text[30]; NumeroCedulaReceptor: Text[12]; var NumConsecutivoReceptor: Text[20]; DirectorioTemp: Text[250])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
     begin
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('MensajeReceptor');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('MensajeReceptor');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsd', 'http://www.w3.org/2001/XMLSchema');
@@ -2604,98 +2592,67 @@ codeunit 52504 "Facturacion  Electronica NAV"
         XmlDomMgnt.AddElement(XmlNode, 'NumeroConsecutivoReceptor', NumConsecutivoReceptor, '', XmlNode1);
         //Campos
 
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
     end;
 
     procedure UploadDocumentoElectronico(var Retorno: array[10] of Text)
     var
-        FileManagetment: Codeunit 419;
-        Directorio: Text;
-        iProcesa: DotNet Procesa;
-        xmlDoc: DotNet XmlDocument;
-        XMLNode: DotNet XmlNode;
-        XMLNodeList: DotNet XmlNodeList;
+        NombreArchivo: Text;
+        XmlInStream: InStream;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlDoc: XmlDocument;
+        XMLNode: XmlNode;
+        XMLNodeList: XmlNodeList;
         i: Integer;
     begin
 
-        Directorio := FileManagetment.UploadFileWithFilter('Recepcion de Documento Eletronico', '', 'XML Files (*.xml)|*.xml', '*.*');
-
-        IF Directorio <> '' THEN BEGIN
-            xmlDoc := xmlDoc.XmlDocument();
-            xmlDoc.Load(Directorio);
+        IF UploadIntoStream('Recepcion de Documento Eletronico', '', 'XML Files (*.xml)|*.xml', NombreArchivo, XmlInStream) THEN BEGIN
+            Clear(xmlDoc);
+            XmlDocument.ReadFrom(XmlInStream, xmlDoc);
 
             // ++ Buscar en el xml el CodigoActividad        YFC
-            XMLNodeList := xmlDoc.GetElementsByTagName('CodigoActividad');
+            xmlDoc.SelectNodes('//CodigoActividad', XMLNodeList);
 
-            FOR i := 0 TO XMLNodeList.Count - 1 DO BEGIN
-                XMLNode := XMLNodeList.Item(i);
-                Retorno[8] := XMLNode.InnerText;
+            FOR i := 1 TO XMLNodeList.Count DO BEGIN
+                XMLNodeList.Get(i, XMLNode);
+                Retorno[8] := XMLNode.AsXmlElement().InnerText;
             END;
             // --     YFC
 
-            iProcesa := iProcesa.Procesa();
+            Clear(iProcesa);
+            iProcesa.Initialize();
             iProcesa.CargaDatosXML_CR(xmlDoc);
 
-            Retorno[1] := iProcesa.txtClave;
-            //Retorno[2] := iProcesa.txtEmisorTipo;
-            Retorno[2] := iProcesa.txtEmisorNumero;
-            Retorno[3] := iProcesa.txtFecha;
-            Retorno[4] := iProcesa.txtTotalImpuesto;
-            Retorno[5] := iProcesa.txtTotalDocumento;
-            Retorno[6] := iProcesa.txtReceptorNumero;
+            Retorno[1] := iProcesa.GetTxtClave();
+            //Retorno[2] := iProcesa.GetTxtEmisorTipo();
+            Retorno[2] := iProcesa.GetTxtEmisorNumero();
+            Retorno[3] := iProcesa.GetTxtFecha();
+            Retorno[4] := iProcesa.GetTxtTotalImpuesto();
+            Retorno[5] := iProcesa.GetTxtTotalDocumento();
+            Retorno[6] := iProcesa.GetTxtReceptorNumero();
             // Retorno[7] := GetConsecutivo('05');
 
 
 
 
-            Retorno[10] := Directorio;
+            Retorno[10] := NombreArchivo;
 
         END;
     end;
 
-    local procedure CreateQRCode(QRCodeInput: Text[95]; var TempBLOB: Record 99008535)
-    var
-        QRCodeFileName: Text[1024];
+    local procedure CreateQRCode(QRCodeInput: Text[95]; var TempBLOB: Codeunit "Temp Blob")
     begin
-        CLEAR(TempBLOB);
-        QRCodeFileName := GetQRCode(QRCodeInput);
-        UploadFileBLOBImportandDeleteServerFile(TempBLOB, QRCodeFileName);
-    end;
-
-    procedure UploadFileBLOBImportandDeleteServerFile(var TempBlob: Record 99008535; FileName: Text[1024])
-    var
-        FileManagement: Codeunit 419;
-    begin
-        FileName := FileManagement.UploadFileSilent(FileName);
-        FileManagement.BLOBImportFromServerFile(TempBlob, FileName);
-        DeleteServerFile(FileName);
-    end;
-
-    local procedure GetQRCode(QRCodeInput: Text[95]) QRCodeFileName: Text[1024]
-    var
-        EInvoiceObjectFactory: Codeunit 10147;
-        IBarCodeProvider: DotNet IBarcodeProvider;
-    begin
-        EInvoiceObjectFactory.GetBarCodeProvider(IBarCodeProvider);
-        QRCodeFileName := IBarCodeProvider.GetBarcode(QRCodeInput);
-    end;
-
-    local procedure DeleteServerFile(ServerFileName: Text)
-    begin
-        IF ERASE(ServerFileName) THEN;
+        FunSant.CreateQRCodeV2(QRCodeInput, TempBLOB);
     end;
 
     procedure SendEmail(SendToAddress: Text[1024]; Subject: Text[200]; MessageBody: Text[1024]; FilePathEDoc: Text[1024]; PDFFilePath: Text[1024]; SendPDF: Boolean; XMLInstream: InStream)
     var
-        SMTPMail: Codeunit 400;
-        SendOK: Boolean;
+        Email: Codeunit Email;
+        EmailMessage: Codeunit "Email Message";
         GLSetup: Record 98;
-        CompanyInfo: Record 79;
-        SMTP_ERROR: Label 'Error : %1';
+        PDFAttachmentInStream: InStream;
     begin
         GLSetup.GET;
-        CompanyInfo.GET;
         IF GLSetup."Sim. Send" THEN
             EXIT;
 
@@ -2704,43 +2661,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
             EXIT;
         //-#217374
 
-        //Subject := Convert.Ascii2Ansi(Subject);
-        //Subject := Convert.Ansi2Ascii(Subject);
+        EmailMessage.Create(SendToAddress, Subject, MessageBody, TRUE);
+        EmailMessage.AddAttachment(FilePathEDoc, 'application/xml', XMLInstream);
 
-
-        SMTPMail.CreateMessage(CompanyInfo.Name, CompanyInfo."E-Mail", SendToAddress, Subject, MessageBody, TRUE);
-        SMTPMail.AddAttachmentStream(XMLInstream, FilePathEDoc);
-
-        IF SendPDF THEN
-            SMTPMail.AddAttachment(PDFFilePath, '');   //fes mig adicione ''
-
-
-
-        SendOK := SMTPMail.TrySend;
-
-        IF SendPDF THEN
-            DeleteServerFile(PDFFilePath);
-
-        IF NOT SendOK THEN
-           //ERROR(STRSUBSTNO(SMTP_ERROR,SMTPMail.GetLastSendMailErrorText));
-           BEGIN
-            ERROR(STRSUBSTNO(SMTP_ERROR, SMTPMail.GetLastSendMailErrorText + ' Correo: ' + SendToAddress)); //007-YFC
-                                                                                                            //ERROR(STRSUBSTNO(SMTP_ERROR,SMTPMail.GetLastSendMailErrorText));
-                                                                                                            /*
-                                                                                                            // ++ 007-YFC
-                                                                                                              ConfSant.GET;
-                                                                                                              SMTPMail.CreateMessage(CompanyInfo.Name,CompanyInfo."E-Mail",ConfigEmpresa."Email GD Local",Subject,STRSUBSTNO(SMTP_ERROR,SMTPMail.GetLastSendMailErrorText + ' Correo: '+SendToAddress),TRUE);
-                                                                                                              SMTPMail.AddAttachmentStream(XMLInstream,FilePathEDoc);
-
-                                                                                                              IF SendPDF THEN
-                                                                                                                  BEGIN
-                                                                                                                    SMTPMail.AddAttachment(PDFFilePath,'');
-                                                                                                                    DeleteServerFile(PDFFilePath);
-                                                                                                                  END
-                                                                                                           // -- 007-YFC
-                                                                                                           */
+        IF SendPDF AND SaaSPdfTempBlob.HasValue() THEN BEGIN
+            SaaSPdfTempBlob.CreateInStream(PDFAttachmentInStream);
+            EmailMessage.AddAttachment(PDFFilePath, 'application/pdf', PDFAttachmentInStream);
         END;
 
+        Email.Send(EmailMessage, Enum::"Email Scenario"::Default);
     end;
 
     procedure GetDocumentName(var Log: Record 52502) DocumentName: Text
@@ -2763,16 +2692,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure ComprobarDocumentoElectronicoLOG(Logs: Record 52502)
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         CMH: Record 114;
         ConfSant: Record 56001;
         SH: Record 36;
-        FileManagment: Codeunit 419;
-        TempBlob: Record 99008535 temporary;
+        TempBlob: Codeunit "Temp Blob";
         XmlFirmado: InStream;
         XmlRespuesta: InStream;
         ArchivoPDF: Text;
@@ -2787,7 +2715,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //Comprobar el comprobante electronico
         // Clave := '50604101800310114588000100001010000000099188888888';
         Log.GET(Logs."Tipo Documento", Logs.NoDocumento);
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
         iProcesa.ConsultaComprobante(Log."Clave Doc",
                                     ConfSant."Es Prueba",
                                     GetValueByName(0, 'API', 0),
@@ -2797,22 +2726,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
         //Respuesta
-        CLEAR(TempBlob);
-        IF EXISTS(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', Log."Tipo Documento") + GetValueByName(0, 'ARCHIVO_' + FORMAT(Log."Tipo Documento"), 0) + '_05_RESP.xml') THEN BEGIN
-            FileManagment.BLOBImportFromServerFile(TempBlob, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', Log."Tipo Documento") + GetValueByName(0, 'ARCHIVO_' + FORMAT(Log."Tipo Documento"), 0) + '_05_RESP.xml');
-            Log."Doc Respuesta  XML" := TempBlob.Blob;
-            Log.Estado := iProcesa.estadoFactura;
-            Log.Mensaje := iProcesa.mensajeRespuesta;
-            Log.MODIFY;
-        END;
+        //Respuesta almacenada por el servicio SaaS en el BLOB del log.
 
         //Respuesta
 
         ArchivoPDF := GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', Log."Tipo Documento") + FORMAT(Log."Tipo Documento") + '-' + Log."Clave Doc" + '.pdf';
         // Factura
         IF SIH.GET(Log.NoDocumento) THEN BEGIN
-            SIH.Estado := iProcesa.estadoFactura;
-            SIH.Mensaje := iProcesa.mensajeRespuesta;
+            SIH.Estado := iProcesa.GetEstadoFactura();
+            SIH.Mensaje := iProcesa.GetMensajeRespuesta();
             SIH."Fecha Doc Electronico" := CURRENTDATETIME;
             SIH.MODIFY;
 
@@ -2826,12 +2748,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
             //Documents
 
             //CREAR PDF
-            IF NOT EXISTS(ArchivoPDF) THEN BEGIN
+            IF NOT Log."Doc Pdf Generado".HASVALUE THEN BEGIN
                 SIH.RESET;
                 SIH.SETRANGE("No.", SIH."No.");
                 IF SIH.FINDFIRST THEN BEGIN
                     ReportFE.SETTABLEVIEW(SIH);
-                    ReportFE.SAVEASPDF(ArchivoPDF);
+                    Clear(SaaSPdfTempBlob);
+                    SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+                    if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                        Error(PdfGenerationErr, ArchivoPDF);
                 END;
             END;
             //CREAR PDF
@@ -2858,8 +2783,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
         //Nota de Credito
         IF CMH.GET(Log.NoDocumento) THEN BEGIN
-            CMH.Estado := iProcesa.estadoFactura;
-            CMH.Mensaje := iProcesa.mensajeRespuesta;
+            CMH.Estado := iProcesa.GetEstadoFactura();
+            CMH.Mensaje := iProcesa.GetMensajeRespuesta();
             CMH."Fecha Doc Electronico" := CURRENTDATETIME;
             CMH.MODIFY;
             // ++ 005-YFC
@@ -2874,13 +2799,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
             // -- 005-YFC
 
             //CREAR PDF
-            IF NOT EXISTS(ArchivoPDF) THEN BEGIN
+            IF NOT Log."Doc Pdf Generado".HASVALUE THEN BEGIN
                 CMH.RESET;
                 // CMH.SETRANGE("No.",SIH."No.");  // 006-YFC
                 CMH.SETRANGE("No.", Log.NoDocumento);  // 006-YFC
                 IF CMH.FINDFIRST THEN BEGIN
                     ReportNC.SETTABLEVIEW(CMH);
-                    ReportNC.SAVEASPDF(ArchivoPDF);
+                    Clear(SaaSPdfTempBlob);
+                    SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+                    if not ReportNC.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                        Error(PdfGenerationErr, ArchivoPDF);
                 END;
             END;
             //CREAR PDF
@@ -2916,8 +2844,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //014+
         IF PIH.GET(Log.NoDocumento) THEN BEGIN
             IF DPIExt.GET(Log.NoDocumento) THEN;
-            DPIExt.Estado := iProcesa.estadoFactura;
-            DPIExt.Mensaje := iProcesa.mensajeRespuesta;
+            DPIExt.Estado := iProcesa.GetEstadoFactura();
+            DPIExt.Mensaje := iProcesa.GetMensajeRespuesta();
             DPIExt."Fecha Doc Electronico" := CURRENTDATETIME;
             DPIExt.MODIFY;
 
@@ -2931,12 +2859,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
             //CREAR PDF
 
-            IF NOT EXISTS(ArchivoPDF) THEN BEGIN
+            IF NOT Log."Doc Pdf Generado".HASVALUE THEN BEGIN
                 PIH.RESET;
                 PIH.SETRANGE("No.", PIH."No.");
                 IF PIH.FINDFIRST THEN BEGIN
                     ReportFEC.SETTABLEVIEW(PIH);
-                    ReportFEC.SAVEASPDF(ArchivoPDF);
+                    Clear(SaaSPdfTempBlob);
+                    SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+                    if not ReportFEC.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                        Error(PdfGenerationErr, ArchivoPDF);
                 END;
             END;
 
@@ -2959,8 +2890,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
         /*
           IF PIH.GET(Log.NoDocumento) THEN
            BEGIN
-            PIH.Estado      := iProcesa.estadoFactura;
-            PIH.Mensaje     := iProcesa.mensajeRespuesta;
+            PIH.Estado      := iProcesa.GetEstadoFactura();
+            PIH.Mensaje     := iProcesa.GetMensajeRespuesta();
             PIH."Fecha Doc Electronico"  := CURRENTDATETIME;
             PIH.MODIFY;
         
@@ -2974,14 +2905,17 @@ codeunit 52504 "Facturacion  Electronica NAV"
         
              //CREAR PDF
         
-              IF NOT EXISTS(ArchivoPDF) THEN
+              IF NOT Log."Doc Pdf Generado".HASVALUE THEN
                  BEGIN
                     PIH.RESET;
                     PIH.SETRANGE("No.",PIH."No.");
                  IF PIH.FINDFIRST THEN
                     BEGIN
                       ReportFEC.SETTABLEVIEW(PIH);
-                      ReportFEC.SAVEASPDF(ArchivoPDF);
+                      Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFEC.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, ArchivoPDF);
                     END;
                  END;
         
@@ -3007,14 +2941,14 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
         //Tiquete
         IF SH.GET(SH."Document Type"::Invoice, Log.NoDocumento) THEN BEGIN
-            SH.Estado := iProcesa.estadoFactura;
-            SH.Mensaje := iProcesa.mensajeRespuesta;
+            SH.Estado := iProcesa.GetEstadoFactura();
+            SH.Mensaje := iProcesa.GetMensajeRespuesta();
             SH."Fecha Doc Electronico" := CURRENTDATETIME;
             IF SH.MODIFY THEN;
         END;
 
-        Log.Estado := iProcesa.estadoFactura;
-        Log.Mensaje := iProcesa.mensajeRespuesta;
+        Log.Estado := iProcesa.GetEstadoFactura();
+        Log.Mensaje := iProcesa.GetMensajeRespuesta();
         Log."Fecha Doc" := CURRENTDATETIME;
         IF Log.MODIFY THEN
             COMMIT;
@@ -3030,7 +2964,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Logs.SETCURRENTKEY(Estado);
         Logs.SETFILTER(Estado, ' %1|%2', '', 'procesando');
         //Logs.SETRANGE(NoDocumento,'VFR-100028');
-        Logs.SETFILTER("Fecha Doc", '>%1', CREATEDATETIME(031323D, 0T)); //010-YFC PRUEBAS
+        Logs.SETFILTER("Fecha Doc", '>%1', CREATEDATETIME(20230313D, 0T)); //010-YFC PRUEBAS
 
         //Logs.SETRANGE("Fecha Doc",CREATEDATETIME(03132023D, 140357360T)); //010-YFC PRUEBAS
         //Logs.FINDFIRST;
@@ -3054,16 +2988,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure TiqueteElectronico_vCentral(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         ReportFE: Report 34002530;
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
     begin
         //+#217374
 
@@ -3079,16 +3013,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
         //CreaXmlTiquete_vCentral(NoDocumento,DirectorioTemp);
         CreaXmlTiquete_vCentralV4_4(NoDocumento, DirectorioTemp); //013+-
-
-        xmlFactura := xmlFactura.XmlDocument();
-        xmlFactura.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlFactura);
 
         //Pendiente
         LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, SIH.Clave, SIH.Consecutivo, SIH.Estado, SIH.Mensaje, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '', SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_TE', 0), 1);
         //Pendiente
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
 
         iProcesa.EnviaFactura(xmlFactura, ConfSant."Es Prueba",
@@ -3099,17 +3032,17 @@ codeunit 52504 "Facturacion  Electronica NAV"
                               GetValueByNameWithType(0, 'DIRECTORIOTEMP', 3),
                               GetValueByName(0, 'ARCHIVO_TE', 0));
         SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                      ConfSant."Es Prueba",
                                      GetValueByName(0, 'API', 0),
                                      GetValueByName(0, 'PASS', 0),
                                      GetValueByNameWithType(0, 'DIRECTORIOTEMP', 3),
                                      GetValueByName(0, 'ARCHIVO_TE', 0));
 
-        SIH.Consecutivo := iProcesa.txtConsecutivo;
-        SIH.Clave := iProcesa.txtClave;
-        SIH.Estado := iProcesa.estadoFactura;
-        SIH.Mensaje := iProcesa.mensajeRespuesta;
+        SIH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        SIH.Clave := iProcesa.GetTxtClave();
+        SIH.Estado := iProcesa.GetEstadoFactura();
+        SIH.Mensaje := iProcesa.GetMensajeRespuesta();
         SIH."Fecha Doc Electronico" := CURRENTDATETIME;
 
         //MIGRACION COSTA RICA - YFC
@@ -3119,7 +3052,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //QR Code
         QRCodeInput    :='https://www.google.com.do/';
         CreateQRCode(QRCodeInput,TempBlob);
-        SIH."QR Code FE" := TempBlob.Blob;
+        TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+        SIH."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+        CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
         //QR Code
         //-#217374
         */
@@ -3135,10 +3072,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         SIH.SETRANGE("No.", SIH."No.");
         IF SIH.FINDFIRST THEN BEGIN
             ReportFE.SETTABLEVIEW(SIH);
-            ReportFE.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3) + 'TE-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFE.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3) + 'TE-' + iProcesa.GetTxtClave() + '.pdf');
         END;
 
-        LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '',
+        LogFacturaElectronica(3, SIH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(), GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 3), '',
         SIH."Sell-to Customer Name", GetValueByName(0, 'ARCHIVO_TE', 0), 2);
 
         wVieneDePos := FALSE;
@@ -3151,23 +3091,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlTiquete_vCentral(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        lString: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        lString: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         lrSIH: Record 112;
         lrSIL: Record 113;
@@ -3194,14 +3135,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //+#217374
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('TiqueteElectronico');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('TiqueteElectronico');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns', 'https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -3522,8 +3462,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         ELSE
             XmlDomMgnt.AddElement(XmlNode1, 'TotalComprobante', FORMAT(lrSIH."Amount Including VAT", 0, '<Precision,5:5><Standard Format,9>'), '', XmlNode2);
 
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
@@ -3572,23 +3511,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlNotaCreditoPos(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         CMH: Record 114;
         CML: Record 115;
@@ -3606,14 +3546,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
 
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('NotaCreditoElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('NotaCreditoElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         //XmlDomMgnt.AddAttribute(XmlNode,'xmlns:xs','http://www.w3.org/2001/XMLSchema');
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xsi', 'http://www.w3.org/2001/XMLSchema-instance');
@@ -3674,7 +3613,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             // --009-YFC
             IF (Cust."VAT Registration No." <> '.') AND (Cust."VAT Registration No." <> '') THEN BEGIN
                 XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 XmlDomMgnt.AddElement(XmlNode2, 'Numero', Cust."VAT Registration No.", '', XmlNode3);
             END;
         END; //009-YFC
@@ -3995,31 +3934,31 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END;
 
 
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure CreaXmlTiquete_vCentral2(DocNum: Code[20])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        lString: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        lString: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         lrSIH: Record 112;
         lrSIL: Record 113;
@@ -4041,14 +3980,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //+#217374
         /*
         ConfSant.GET;
-        
-        XmlDoc := XmlDoc.XmlDocument;
-        
-        xmlProcessingInst:= XmlDoc.CreateProcessingInstruction('xml','version="1.0" encoding="UTF-8"');
-        
-                    XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-                    XmlNode := XmlDoc.CreateElement('TiqueteElectronico');
-                    XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('TiqueteElectronico');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
         
         XmlDomMgnt.AddAttribute(XmlNode,'xmlns','https://cdn.comprobanteselectronicos.go.cr/xml-schemas/v4.3/tiqueteElectronico');
         XmlDomMgnt.AddAttribute(XmlNode,'xmlns:xsi','http://www.w3.org/2001/XMLSchema-instance');
@@ -4269,8 +4207,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         ELSE
           XmlDomMgnt.AddElement(XmlNode1,'TotalComprobante',FORMAT(lrSIH."Amount Including VAT",0,'<Precision,5:5><Standard Format,9>'),'',XmlNode2);
         
-        IF  XmlDoc.HasChildNodes  THEN
-          XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
           */
 
     end;
@@ -4382,7 +4319,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
     local procedure CreateQrCodeFe()
     var
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
         SalesInvoiceHeader: Record 112;
     begin
 
@@ -4390,7 +4327,11 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //QR Code
         QRCodeInput := SalesInvoiceHeader."No.";
         CreateQRCode(QRCodeInput, TempBlob);
-        SalesInvoiceHeader."QR Code FE" := TempBlob.Blob;
+        TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+        SalesInvoiceHeader."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+        CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
         //QR Code
         SalesInvoiceHeader.MODIFY;
     end;
@@ -4398,23 +4339,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlTiquete_vCentralV4_4(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -4448,13 +4390,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('TiqueteElectronico');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('TiqueteElectronico');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -4534,7 +4476,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         XmlDomMgnt.AddElement(XmlNode, 'DetalleServicio', '', '', XmlNode1);
 
         // Process lines
@@ -4620,7 +4562,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                 CatalogoCaByS."Tipo Impuesto"::Gravado:
                                     TotalServGravado += MontoTotal;
                             END;
-                        CatalogoCaByS."Tipo CABYS"::Mercancía:
+                        CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                             CASE CatalogoCaByS."Tipo Impuesto" OF
                                 CatalogoCaByS."Tipo Impuesto"::Exento:
                                     TotalMercExento += MontoTotal;
@@ -4798,7 +4740,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                             TotalServExento += MontoTotal
                         ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
                             TotalServGravado += MontoTotal;
-                    CatalogoCaByS."Tipo CABYS"::Mercancía:
+                    CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                         IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Exento THEN
                             TotalMercExento += MontoTotal
                         ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
@@ -4989,31 +4931,31 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END;
         */
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure CreaXmlFacturaV4_4(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -5052,13 +4994,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -5116,7 +5058,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             // Identificación del receptor según versión 4.4
             IF (SIH."VAT Registration No." <> '.') AND (SIH."VAT Registration No." <> '') THEN BEGIN
                 XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 /*VatRegNo := SIH."VAT Registration No.";
                   IF STRLEN(VatRegNo) < 12 THEN BEGIN
                         VatRegNo := COPYSTR('000000000000' + VatRegNo, STRLEN(VatRegNo) + 1, 12);
@@ -5147,7 +5089,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         XmlDomMgnt.AddElement(XmlNode, 'DetalleServicio', '', '', XmlNode1);
 
         // Process lines
@@ -5233,7 +5175,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                 CatalogoCaByS."Tipo Impuesto"::Gravado:
                                     TotalServGravado += MontoTotal;
                             END;
-                        CatalogoCaByS."Tipo CABYS"::Mercancía:
+                        CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                             CASE CatalogoCaByS."Tipo Impuesto" OF
                                 CatalogoCaByS."Tipo Impuesto"::Exento:
                                     TotalMercExento += MontoTotal;
@@ -5464,7 +5406,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                       TotalServExento += MontoTotal
                     ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
                       TotalServGravado += MontoTotal;
-                  CatalogoCaByS."Tipo CABYS"::Mercancía:
+                  CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                     IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Exento THEN
                       TotalMercExento += MontoTotal
                     ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
@@ -5479,7 +5421,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                         ELSE
                             TotalServGravado += MontoTotal;
 
-                    CatalogoCaByS."Tipo CABYS"::Mercancía:
+                    CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                         IF IsExento THEN
                             TotalMercExento += MontoTotal
                         ELSE
@@ -5677,31 +5619,31 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END;
 
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure CreaXmlNotaCreditoV4_4(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         Cust: Record 18;
         CMH: Record 114;
@@ -5733,13 +5675,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('NotaCreditoElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('NotaCreditoElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -5815,7 +5757,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                 XmlDomMgnt.AddElement(XmlNode2, 'Numero', CMH."VAT Registration No.", '', XmlNode3);
             END ELSE BEGIN
                 // -- 004-YFC
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 XmlDomMgnt.AddElement(XmlNode2, 'Numero', Cust."VAT Registration No.", '', XmlNode3);
             END;
         END;
@@ -5849,7 +5791,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         XmlDomMgnt.AddElement(XmlNode, 'DetalleServicio', '', '', XmlNode1);
 
         // Process lines
@@ -5928,7 +5870,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                 CatalogoCaByS."Tipo Impuesto"::Gravado:
                                     TotalServGravado += MontoTotal;
                             END;
-                        CatalogoCaByS."Tipo CABYS"::Mercancía:
+                        CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                             CASE CatalogoCaByS."Tipo Impuesto" OF
                                 CatalogoCaByS."Tipo Impuesto"::Exento:
                                     TotalMercExento += MontoTotal;
@@ -6103,7 +6045,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                             TotalServExento += MontoTotal
                         ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
                             TotalServGravado += MontoTotal;
-                    CatalogoCaByS."Tipo CABYS"::Mercancía:
+                    CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                         IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Exento THEN
                             TotalMercExento += MontoTotal
                         ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
@@ -6298,31 +6240,31 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //END;
 
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure CreaXmlFacturaExportacionV4_4(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -6359,13 +6301,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
         //GenLedSetup.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronicaExportacion');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronicaExportacion');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -6416,14 +6358,14 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF Cust."Tax Identification Type" = Cust."Tax Identification Type"::"Extranjero No Domiciliado" THEN BEGIN
             //XmlDomMgnt.AddElement(XmlNode1,'IdentificacionExtranjero',SIH."VAT Registration No.",'',XmlNode2)
             XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
             XmlDomMgnt.AddElement(XmlNode2, 'Numero', SIH."VAT Registration No.", '', XmlNode3);
         END ELSE BEGIN
             // --009-YFC
             // Identificación del receptor según versión 4.4
             IF (SIH."VAT Registration No." <> '.') AND (SIH."VAT Registration No." <> '') THEN BEGIN
                 XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 /*VatRegNo := SIH."VAT Registration No.";
                   IF STRLEN(VatRegNo) < 12 THEN BEGIN
                         VatRegNo := COPYSTR('000000000000' + VatRegNo, STRLEN(VatRegNo) + 1, 12);
@@ -6454,7 +6396,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio;
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         XmlDomMgnt.AddElement(XmlNode, 'DetalleServicio', '', '', XmlNode1);
 
         // Process lines
@@ -6551,7 +6493,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                 CatalogoCaByS."Tipo Impuesto"::Gravado:
                                     TotalServGravado += MontoTotal;
                             END;
-                        CatalogoCaByS."Tipo CABYS"::Mercancía:
+                        CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                             CASE CatalogoCaByS."Tipo Impuesto" OF
                                 CatalogoCaByS."Tipo Impuesto"::Exento:
                                     TotalMercExento += MontoTotal;
@@ -6701,24 +6643,22 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END;
 
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
     procedure FacturaElectronicaCompra(NoDocumento: Code[20])
     var
-        iProcesa: DotNet Procesa;
-        xmlFactura: DotNet XmlDocument;
-        xmlFacturaFirmado: DotNet XmlDocument;
-        xmlFacturaRespuesta: DotNet XmlDocument;
+        iProcesa: Codeunit "FE Procesa SaaS";
+        xmlFactura: XmlDocument;
+        xmlFacturaFirmado: XmlDocument;
+        xmlFacturaRespuesta: XmlDocument;
         PIH: Record 122;
         ReportFE: Report 52543;
         QRCodeInput: Text;
-        TempBlob: Record 99008535;
+        TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
-        DSNPurchInvExt: Record 50028;
         ReportFEC: Report 10121;
     begin
         // HttpWebRequestMgt.AddSecurityProtocolTls12();
@@ -6729,32 +6669,18 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF PIH.GET(NoDocumento) THEN
             CreaXmlFacturaCompraV4_4(NoDocumento, DirectorioTemp); //013+-
                                                                    //CreaXmlFacturaV4_4_VI(NoDocumento,DirectorioTemp); //013+-
-        xmlFactura := xmlFactura.XmlDocument();
-        xmlFactura.Load(DirectorioTemp);
+        LoadXmlDocumentFromBuffer(DirectorioTemp, xmlFactura);
 
         //015+
-        IF NOT DSNPurchInvExt.GET(NoDocumento) THEN BEGIN
-            DSNPurchInvExt.INIT;
-            DSNPurchInvExt."No." := NoDocumento;
-            DSNPurchInvExt."Buy-from Vendor No." := PIH."Buy-from Vendor No.";
-            DSNPurchInvExt."Buy-from Vendor Name" := PIH."Buy-from Vendor Name";
-            DSNPurchInvExt."E-Mail-FE" := PIH."E-Mail-FE";
-            DSNPurchInvExt.INSERT;
-        END;
-
         //Pendiente
-        LogFacturaElectronica(7, DSNPurchInvExt."No.", CURRENTDATETIME, DSNPurchInvExt.Clave, DSNPurchInvExt.Consecutivo, DSNPurchInvExt.Estado, DSNPurchInvExt.Mensaje,
-        GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7), DSNPurchInvExt."E-Mail-FE", DSNPurchInvExt."Buy-from Vendor Name", GetValueByName(0, 'ARCHIVO_FEC', 0), 1);
+        LogFacturaElectronica(7, PIH."No.", CURRENTDATETIME, PIH.Clave, PIH.Consecutivo, PIH.Estado, PIH.Mensaje,
+        GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7), PIH."E-Mail-FE", PIH."Buy-from Vendor Name", GetValueByName(0, 'ARCHIVO_FEC', 0), 1);
         //Pendiente
-
-        /*//Pendiente
-        LogFacturaElectronica(7,PIH."No.",CURRENTDATETIME,PIH.Clave,PIH.Consecutivo,PIH.Estado,PIH.Mensaje,
-        GetValueByNameWithType(0,'DIRECTORIOTEMP_NAV',7),PIH."E-Mail-FE",PIH."Buy-from Vendor Name",GetValueByName(0,'ARCHIVO_FEC',0),1);
-        //Pendiente*/
         //015-
 
 
-        iProcesa := iProcesa.Procesa();
+        Clear(iProcesa);
+        iProcesa.Initialize();
 
 
         iProcesa.EnviaFactura(xmlFactura, ConfSant."Es Prueba",
@@ -6766,7 +6692,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                             GetValueByName(0, 'ARCHIVO_FEC', 0));
 
         //SLEEP(10000);
-        iProcesa.ConsultaComprobante(iProcesa.txtClave,
+        iProcesa.ConsultaComprobante(iProcesa.GetTxtClave(),
                                      ConfSant."Es Prueba",
                                      GetValueByName(0, 'API', 0),
                                      GetValueByName(0, 'PASS', 0),
@@ -6774,34 +6700,23 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                      GetValueByName(0, 'ARCHIVO_FEC', 0));
 
         //015+
-        DSNPurchInvExt.Consecutivo := iProcesa.txtConsecutivo;
-        DSNPurchInvExt.Clave := iProcesa.txtClave;
-        DSNPurchInvExt.Estado := iProcesa.estadoFactura;
-        DSNPurchInvExt.Mensaje := iProcesa.mensajeRespuesta;
-        DSNPurchInvExt."Fecha Doc Electronico" := CURRENTDATETIME;
-
-        DSNPurchInvExt."E-Mail-FE" := PIH."E-Mail-FE";
-        DSNPurchInvExt."Codigo Referencia" := PIH."Codigo Referencia";
-        DSNPurchInvExt."Tipo Doc Electronico" := PIH."Tipo Doc Electronico";
-        DSNPurchInvExt."Tipo Doc. Ref." := PIH."Tipo Doc. Ref.";
-        DSNPurchInvExt."Numero Referencia FE" := PIH."Numero Referencia FE";
-        DSNPurchInvExt."Tipo Doc. Ref NC" := PIH."Tipo Doc. Ref NC";
-        DSNPurchInvExt."Codigo Referencia" := PIH."Codigo Referencia";
-        DSNPurchInvExt.MODIFY;
-        //PIH.MODIFY;//014+-
-
-        /*PIH.Consecutivo := iProcesa.txtConsecutivo;
-        PIH.Clave       := iProcesa.txtClave;
-        PIH.Estado      := iProcesa.estadoFactura;
-        PIH.Mensaje     := iProcesa.mensajeRespuesta;
-        PIH."Fecha Doc Electronico"  := CURRENTDATETIME;*/
+        PIH.Consecutivo := iProcesa.GetTxtConsecutivo();
+        PIH.Clave := iProcesa.GetTxtClave();
+        PIH.Estado := iProcesa.GetEstadoFactura();
+        PIH.Mensaje := iProcesa.GetMensajeRespuesta();
+        PIH."Fecha Doc Electronico" := CURRENTDATETIME;
+        PIH.MODIFY;
         //015-
 
         //QR Code
         /*
          QRCodeInput    :=SIH."No.";
          CreateQRCode(QRCodeInput,TempBlob);
-         SIH."QR Code FE" := TempBlob.Blob;
+         TempBlob.CreateInStream(SaaSTempBlobInStream);
+
+         SIH."QR Code FE".CreateOutStream(SaaSTempBlobOutStream);
+
+         CopyStream(SaaSTempBlobOutStream, SaaSTempBlobInStream);
          */
         //QR Code
         //011-
@@ -6811,16 +6726,15 @@ codeunit 52504 "Facturacion  Electronica NAV"
         PIH.SETRANGE("No.", PIH."No.");
         IF PIH.FINDFIRST THEN BEGIN
             ReportFEC.SETTABLEVIEW(PIH);
-            ReportFEC.SAVEASPDF(GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7) + 'FEC-' + iProcesa.txtClave + '.pdf');
+            Clear(SaaSPdfTempBlob);
+            SaaSPdfTempBlob.CreateOutStream(SaaSPdfOutStream);
+            if not ReportFEC.SaveAs('', ReportFormat::Pdf, SaaSPdfOutStream) then
+                Error(PdfGenerationErr, GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7) + 'FEC-' + iProcesa.GetTxtClave() + '.pdf');
         END; //Comentado porque NoDocumento hay reportes Parametros esto aun
              //015+
 
-        LogFacturaElectronica(7, DSNPurchInvExt."No.", CURRENTDATETIME, iProcesa.txtClave, iProcesa.txtConsecutivo, iProcesa.estadoFactura, iProcesa.mensajeRespuesta,
-        GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7), DSNPurchInvExt."E-Mail-FE", DSNPurchInvExt."Buy-from Vendor Name", GetValueByName(0, 'ARCHIVO_FEC', 0), 2);
-        /*//Completado
-        LogFacturaElectronica(7,PIH."No.",CURRENTDATETIME,iProcesa.txtClave,iProcesa.txtConsecutivo,iProcesa.estadoFactura,iProcesa.mensajeRespuesta,
-        GetValueByNameWithType(0,'DIRECTORIOTEMP_NAV',7),PIH."E-Mail-FE",PIH."Buy-from Vendor Name",GetValueByName(0,'ARCHIVO_FEC',0),2);
-        //Completado*/
+        LogFacturaElectronica(7, PIH."No.", CURRENTDATETIME, iProcesa.GetTxtClave(), iProcesa.GetTxtConsecutivo(), iProcesa.GetEstadoFactura(), iProcesa.GetMensajeRespuesta(),
+        GetValueByNameWithType(0, 'DIRECTORIOTEMP_NAV', 7), PIH."E-Mail-FE", PIH."Buy-from Vendor Name", GetValueByName(0, 'ARCHIVO_FEC', 0), 2);
         //015-
 
         //MESSAGE('Factura Generada con exito');
@@ -6830,23 +6744,24 @@ codeunit 52504 "Facturacion  Electronica NAV"
     procedure CreaXmlFacturaCompraV4_4(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         PIH: Record 122;
         PIL: Record 123;
@@ -6878,7 +6793,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         MontoTotalLinea: Decimal;
         GLAccount: Record 15;
         CodCaByS: Code[13];
-        Error01: ;
+        //Error01: ;
         TipoCaByS: Option Servicio,Producto;
         PaymentTerms: Record 3;
         CatParamFEDGT: Record 50030;
@@ -6887,13 +6802,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronicaCompra');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronicaCompra');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -6929,7 +6844,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         // Identificación del receptor según versión 4.4
         IF (PIH."VAT Registration No." <> '.') AND (PIH."VAT Registration No." <> '') THEN BEGIN
             XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Vendor."Tax Identification Type"), 0), '', XmlNode3);
+            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Vendor."Tax Identification Type"), '', XmlNode3);
             XmlDomMgnt.AddElement(XmlNode2, 'Numero', TextSinGuiones, '', XmlNode3);
         END;
 
@@ -6986,7 +6901,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         TotalServGravado := 0;
         TotalMercGravado := 0;
         TotalServExento := 0;
@@ -7072,7 +6987,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                           CatalogoCaByS."Tipo Impuesto"::Gravado:
                             TotalServGravado += MontoTotal;
                         END;
-                      CatalogoCaByS."Tipo CABYS"::Mercancía:
+                      CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                         CASE CatalogoCaByS."Tipo Impuesto" OF
                           CatalogoCaByS."Tipo Impuesto"::Exento:
                             TotalMercExento += MontoTotal;
@@ -7311,8 +7226,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
 
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
 
@@ -7330,7 +7244,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
         IF SalesCrMemoHeader.GET(NoDocumento) THEN BEGIN
             IF SalesInvoiceHeader.GET(SalesCrMemoHeader."No. Doc Historico") THEN BEGIN
-                IF SalesInvoiceHeader."Posting Date" >= 090125D THEN
+                IF SalesInvoiceHeader."Posting Date" >= 20250901D THEN
                     Version4_4 := TRUE;
             END;
         END;
@@ -7340,64 +7254,33 @@ codeunit 52504 "Facturacion  Electronica NAV"
     end;
 
     procedure CreaQRFE(No: Code[20])
-    var
-        CompanyInformation: Record 79;
-        TempBlob: Record 99008535;
-        QRCodeInput: Text[1024];
-        QRCodeFileName: Text[1024];
-        SIH: Record 112;
-        SCrMH: Record 114;
     begin
         //016+
-        CompanyInformation.GET;
-
-        IF SIH.GET(No) THEN BEGIN
-            QRCodeInput := SIH."No.";
-            CLEAR(TempBlob);
-            CLEAR(QRCodeFileName);
-            QRCodeFileName := FunSant.GetQRCodeV2(QRCodeInput);
-            FunSant.UplFileBLOBImpndDelServerFileV2(TempBlob, QRCodeFileName);
-            SIH."QR Code FE" := TempBlob.Blob;
-            //SIH.MODIFY;
-            IF NOT ISSERVICETIER THEN
-                IF EXISTS(QRCodeFileName) THEN
-                    ERASE(QRCodeFileName);
-        END ELSE
-            IF SCrMH.GET(No) THEN BEGIN
-                QRCodeInput := SCrMH."No.";
-                CLEAR(TempBlob);
-                CLEAR(QRCodeFileName);
-                QRCodeFileName := FunSant.GetQRCodeV2(QRCodeInput);
-                FunSant.UplFileBLOBImpndDelServerFileV2(TempBlob, QRCodeFileName);
-                SCrMH."QR Code FE" := TempBlob.Blob;
-                //SCrMH.MODIFY;
-                IF NOT ISSERVICETIER THEN
-                    IF EXISTS(QRCodeFileName) THEN
-                        ERASE(QRCodeFileName);
-            END;
+        FunSant.CreaQRFE(No);
         //016-
     end;
 
     procedure CreaXmlFacturaV4_4_Compartir(NoDocumento: Code[20]; DirectorioTemp: Text[100])
     var
         XmlDomMgnt: Codeunit 6224;
-        XmlNsMgr: DotNet XmlNamespaceManager;
-        XmlDoc: DotNet XmlDocument;
-        XmlNode: DotNet XmlNode;
-        XmlNode1: DotNet XmlNode;
-        XmlNode2: DotNet XmlNode;
-        XmlNode3: DotNet XmlNode;
-        XmlNode4: DotNet XmlNode;
-        XmlNode5: DotNet XmlNode;
-        XmlNode6: DotNet XmlNode;
-        XmlNode7: DotNet XmlNode;
-        XmlNode8: DotNet XmlNode;
-        String: DotNet String;
+        XmlNsMgr: XmlNamespaceManager;
+        XmlDoc: XmlDocument;
+        XmlNode: XmlNode;
+        XmlNode1: XmlNode;
+        XmlNode2: XmlNode;
+        XmlNode3: XmlNode;
+        XmlNode4: XmlNode;
+        XmlNode5: XmlNode;
+        XmlNode6: XmlNode;
+        XmlNode7: XmlNode;
+        XmlNode8: XmlNode;
+        String: Text;
         MyDT: DateTime;
         i: Integer;
-        NS: ;
+        //NS: ;
         ConfSant: Record 56001;
-        xmlProcessingInst: DotNet XmlProcessingInstruction;
+        xmlProcessingInst: XmlDeclaration;
+        XmlRootElement: XmlElement;
         Consecutivo: Text[20];
         SIH: Record 112;
         SIL: Record 113;
@@ -7437,13 +7320,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
     begin
         //*******************************CABECERA XML FACTURA************************************
         ConfSant.GET;
-
-        XmlDoc := XmlDoc.XmlDocument;
-
-        xmlProcessingInst := XmlDoc.CreateProcessingInstruction('xml', 'version="1.0" encoding="UTF-8"');
-        XmlNode := XmlDoc.AppendChild(xmlProcessingInst);
-        XmlNode := XmlDoc.CreateElement('FacturaElectronica');
-        XmlNode := XmlDoc.AppendChild(XmlNode);
+        Clear(XmlDoc);
+        XmlDoc := XmlDocument.Create();
+        xmlProcessingInst := XmlDeclaration.Create('1.0', 'UTF-8', '');
+        XmlDoc.SetDeclaration(xmlProcessingInst);
+        XmlRootElement := XmlElement.Create('FacturaElectronica');
+        XmlDoc.Add(XmlRootElement);
+        XmlNode := XmlRootElement.AsXmlNode();
 
         // Add required namespaces
         XmlDomMgnt.AddAttribute(XmlNode, 'xmlns:xs', 'http://www.w3.org/2001/XMLSchema');
@@ -7498,14 +7381,14 @@ codeunit 52504 "Facturacion  Electronica NAV"
         IF Cust."Tax Identification Type" = Cust."Tax Identification Type"::"Extranjero No Domiciliado" THEN BEGIN
             //XmlDomMgnt.AddElement(XmlNode1,'IdentificacionExtranjero',SIH."VAT Registration No.",'',XmlNode2)
             XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+            XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
             XmlDomMgnt.AddElement(XmlNode2, 'Numero', SIH."VAT Registration No.", '', XmlNode3);
         END ELSE BEGIN
             // --009-YFC
             // Identificación del receptor según versión 4.4
             IF (SIH."VAT Registration No." <> '.') AND (SIH."VAT Registration No." <> '') THEN BEGIN
                 XmlDomMgnt.AddElement(XmlNode1, 'Identificacion', '', '', XmlNode2);
-                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetValueByName(2, FORMAT(Cust."Tax Identification Type"), 0), '', XmlNode3);
+                XmlDomMgnt.AddElement(XmlNode2, 'Tipo', GetTaxIdentificationTypeValue(Cust."Tax Identification Type"), '', XmlNode3);
                 /*VatRegNo := SIH."VAT Registration No.";
                   IF STRLEN(VatRegNo) < 12 THEN BEGIN
                         VatRegNo := COPYSTR('000000000000' + VatRegNo, STRLEN(VatRegNo) + 1, 12);
@@ -7536,7 +7419,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
             XmlDomMgnt.AddElement(XmlNode, 'CondicionVenta', '01', '', XmlNode1); // Campo obligatorio
 
         //*******************************DETALLES DE SERVICIOS - LINEAS DE VENTA************************************
-        // Cambiado a Detalle según versión 4.4 (puede ser servicio o mercancía)
+        // Cambiado a Detalle según versión 4.4 (puede ser servicio o "Mercanc a")
         XmlDomMgnt.AddElement(XmlNode, 'DetalleServicio', '', '', XmlNode1);
 
         // Process lines
@@ -7622,7 +7505,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                                 CatalogoCaByS."Tipo Impuesto"::Gravado:
                                     TotalServGravado += MontoTotal;
                             END;
-                        CatalogoCaByS."Tipo CABYS"::Mercancía:
+                        CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                             CASE CatalogoCaByS."Tipo Impuesto" OF
                                 CatalogoCaByS."Tipo Impuesto"::Exento:
                                     TotalMercExento += MontoTotal;
@@ -7855,7 +7738,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                         ELSE
                             TotalServGravado += MontoTotal;
 
-                    CatalogoCaByS."Tipo CABYS"::Mercancía:
+                    CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                         IF IsExento THEN
                             TotalMercExento += MontoTotal
                         ELSE
@@ -7879,7 +7762,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
                       TotalServExento += MontoTotal
                     ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
                       TotalServGravado += MontoTotal;
-                  CatalogoCaByS."Tipo CABYS"::Mercancía:
+                  CatalogoCaByS."Tipo CABYS"::"Mercanc a":
                     IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Exento THEN
                       TotalMercExento += MontoTotal
                     ELSE IF CatalogoCaByS."Tipo Impuesto" = CatalogoCaByS."Tipo Impuesto"::Gravado THEN
@@ -8077,9 +7960,52 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END;
 
         // Save the XML document
-        IF XmlDoc.HasChildNodes THEN
-            XmlDoc.Save(DirectorioTemp);
+        SaveXmlDocumentToBuffer(XmlDoc, DirectorioTemp);
 
     end;
-}
 
+    local procedure SaveXmlDocumentToBuffer(XmlDoc: XmlDocument; LogicalPath: Text)
+    var
+        XmlText: Text;
+    begin
+        XmlDoc.WriteTo(XmlText);
+        if XmlDocumentBuffer.ContainsKey(LogicalPath) then
+            XmlDocumentBuffer.Set(LogicalPath, XmlText)
+        else
+            XmlDocumentBuffer.Add(LogicalPath, XmlText);
+    end;
+
+    local procedure LoadXmlDocumentFromBuffer(LogicalPath: Text; var XmlDoc: XmlDocument)
+    var
+        XmlText: Text;
+    begin
+        if not XmlDocumentBuffer.Get(LogicalPath, XmlText) then
+            Error(XmlBufferNotFoundErr, LogicalPath);
+        XmlDocument.ReadFrom(XmlText, XmlDoc);
+    end;
+
+    local procedure GetTaxIdentificationTypeValue(TaxIdentificationType: Enum "Tax Identification Type"): Text
+    begin
+        CASE TaxIdentificationType OF
+            TaxIdentificationType::"Legal Entity":
+                EXIT(GetValueByName(2, 'Persona jurídica', 0));
+
+            TaxIdentificationType::"Natural Person":
+                EXIT(GetValueByName(2, 'Persona física', 0));
+
+            TaxIdentificationType::DIMEX:
+                EXIT(GetValueByName(2, 'DIMEX', 0));
+
+            TaxIdentificationType::NITE:
+                EXIT(GetValueByName(2, 'NITE', 0));
+
+            TaxIdentificationType::"Extranjero No Domiciliado":
+                EXIT(GetValueByName(2, 'Extranjero No Domiciliado', 0));
+
+            TaxIdentificationType::"No Contribuyente":
+                EXIT(GetValueByName(2, 'No Contribuyente', 0));
+        END;
+
+        EXIT('');
+    end;
+}

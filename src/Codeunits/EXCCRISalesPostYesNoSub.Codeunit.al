@@ -121,8 +121,8 @@ codeunit 61005 EXCCRISalesPostYesNoSub
         if SalesInvHdrNo <> '' then begin
             SalesInvoiceHeader.Get(SalesInvHdrNo);
 
-            // TODO: Manual review - Codeunit 52504 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch.
-            /*
+            // DONE: Manual review - Codeunit 52504 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch.
+            //APR - 2026 08 04
             if
                 SalesInvoiceHeader."Tipo de Venta" =
                 SalesInvoiceHeader."Tipo de Venta"::Exportacion
@@ -141,7 +141,8 @@ codeunit 61005 EXCCRISalesPostYesNoSub
                 else
                     EXCCRICostaRicaElectronicInvoice.
                         TiqueteElectronico_vCentral(
-                            SalesInvoiceHeader."No.");*/
+                            SalesInvoiceHeader."No.");
+            //APR - 2026 08 04 END
         end;
 
         if
@@ -149,11 +150,13 @@ codeunit 61005 EXCCRISalesPostYesNoSub
             not SalesHeader.Correction
         then begin
             SalesCrMemoHeader.Get(SalesCrMemoHdrNo);
-            // TODO: Manual review - Codeunit 52504 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number.
+            // DONE: Manual review - Codeunit 52504 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number.
             // Original code preserved below.
-            // EXCCRICostaRicaElectronicInvoice.
-            //     NotaCreditoElectronica(
-            //         SalesCrMemoHeader."No.");
+            //APR - 2026 08 04
+            EXCCRICostaRicaElectronicInvoice.
+                NotaCreditoElectronica(
+                    SalesCrMemoHeader."No.");
+            //APR - 2026 08 04 END
         end;
     end;
 

@@ -1,6 +1,5 @@
 table 52502 "Log Facturacion Electronica CR"
 {
-
     fields
     {
         field(1; NoDocumento; Code[20])
@@ -101,45 +100,48 @@ table 52502 "Log Facturacion Electronica CR"
         InStr: InStream;
         ReadPart: Text;
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
         CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
+        IF NOT "Doc SF  XML".HASVALUE THEN
+            EXIT('');
+
+        "Doc SF  XML".CREATEINSTREAM(InStr, TextEncoding::UTF8);
+        WHILE NOT InStr.EOS DO BEGIN
+            InStr.READTEXT(ReadPart);
             ProcessData += ReadPart;
+        END;
     end;
 
-    //TODO: Ver
-    /*
-    procedure SetDocSF(ArchivoDir: Text)
+    procedure SetDocSF(ProcessData: Text)
     var
         OutStr: OutStream;
-        xmlDomDoc: DotNet XmlDocument;
     begin
         CLEAR("Doc SF  XML");
-        xmlDomDoc := xmlDomDoc.XmlDocument;
-        xmlDomDoc.Load(ArchivoDir);
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
-        xmlDomDoc.Save(OutStr);
-    end;*/
+        "Doc SF  XML".CREATEOUTSTREAM(OutStr, TextEncoding::UTF8);
+        OutStr.WRITETEXT(ProcessData);
+    end;
 
     procedure GetDocFirmado() ProcessData: Text
     var
         InStr: InStream;
         ReadPart: Text;
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
-        CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
+        CALCFIELDS("Doc Firmado  XML");
+        IF NOT "Doc Firmado  XML".HASVALUE THEN
+            EXIT('');
+
+        "Doc Firmado  XML".CREATEINSTREAM(InStr, TextEncoding::UTF8);
+        WHILE NOT InStr.EOS DO BEGIN
+            InStr.READTEXT(ReadPart);
             ProcessData += ReadPart;
+        END;
     end;
 
     procedure SetDocFirmado(ProcessData: Text)
     var
         OutStr: OutStream;
     begin
-        CLEAR("Doc SF  XML");
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
+        CLEAR("Doc Firmado  XML");
+        "Doc Firmado  XML".CREATEOUTSTREAM(OutStr, TextEncoding::UTF8);
         OutStr.WRITETEXT(ProcessData);
     end;
 
@@ -148,19 +150,23 @@ table 52502 "Log Facturacion Electronica CR"
         InStr: InStream;
         ReadPart: Text;
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
-        CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
+        CALCFIELDS("Doc Json envio  XML");
+        IF NOT "Doc Json envio  XML".HASVALUE THEN
+            EXIT('');
+
+        "Doc Json envio  XML".CREATEINSTREAM(InStr, TextEncoding::UTF8);
+        WHILE NOT InStr.EOS DO BEGIN
+            InStr.READTEXT(ReadPart);
             ProcessData += ReadPart;
+        END;
     end;
 
     procedure SetJsonEnviado(ProcessData: Text)
     var
         OutStr: OutStream;
     begin
-        CLEAR("Doc SF  XML");
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
+        CLEAR("Doc Json envio  XML");
+        "Doc Json envio  XML".CREATEOUTSTREAM(OutStr, TextEncoding::UTF8);
         OutStr.WRITETEXT(ProcessData);
     end;
 
@@ -169,19 +175,23 @@ table 52502 "Log Facturacion Electronica CR"
         InStr: InStream;
         ReadPart: Text;
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
-        CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
+        CALCFIELDS("Doc Json Respuesta  XML");
+        IF NOT "Doc Json Respuesta  XML".HASVALUE THEN
+            EXIT('');
+
+        "Doc Json Respuesta  XML".CREATEINSTREAM(InStr, TextEncoding::UTF8);
+        WHILE NOT InStr.EOS DO BEGIN
+            InStr.READTEXT(ReadPart);
             ProcessData += ReadPart;
+        END;
     end;
 
     procedure SetJsonRespuesta(ProcessData: Text)
     var
         OutStr: OutStream;
     begin
-        CLEAR("Doc SF  XML");
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
+        CLEAR("Doc Json Respuesta  XML");
+        "Doc Json Respuesta  XML".CREATEOUTSTREAM(OutStr, TextEncoding::UTF8);
         OutStr.WRITETEXT(ProcessData);
     end;
 
@@ -190,41 +200,42 @@ table 52502 "Log Facturacion Electronica CR"
         InStr: InStream;
         ReadPart: Text;
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
-        CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
+        CALCFIELDS("Doc Respuesta  XML");
+        IF NOT "Doc Respuesta  XML".HASVALUE THEN
+            EXIT('');
+
+        "Doc Respuesta  XML".CREATEINSTREAM(InStr, TextEncoding::UTF8);
+        WHILE NOT InStr.EOS DO BEGIN
+            InStr.READTEXT(ReadPart);
             ProcessData += ReadPart;
+        END;
     end;
 
     procedure SetXmlRespuesta(ProcessData: Text)
     var
         OutStr: OutStream;
     begin
-        CLEAR("Doc SF  XML");
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
+        CLEAR("Doc Respuesta  XML");
+        "Doc Respuesta  XML".CREATEOUTSTREAM(OutStr, TextEncoding::UTF8);
         OutStr.WRITETEXT(ProcessData);
     end;
 
-    procedure GetPDFGenerado() ProcessData: Text
-    var
-        InStr: InStream;
-        ReadPart: Text;
+    procedure GetPDFGenerado(var PdfInStream: InStream): Boolean
     begin
-        IF NOT "Doc SF  XML".HASVALUE THEN EXIT('');
-        CALCFIELDS("Doc SF  XML");
-        "Doc SF  XML".CREATEINSTREAM(InStr);
-        WHILE InStr.READTEXT(ReadPart) > 0 DO
-            ProcessData += ReadPart;
+        CALCFIELDS("Doc Pdf Generado");
+        IF NOT "Doc Pdf Generado".HASVALUE THEN
+            EXIT(FALSE);
+
+        "Doc Pdf Generado".CREATEINSTREAM(PdfInStream);
+        EXIT(TRUE);
     end;
 
-    procedure SetPDFGenerado(ProcessData: Text)
+    procedure SetPDFGenerado(PdfInStream: InStream)
     var
-        OutStr: OutStream;
+        PdfOutStream: OutStream;
     begin
-        CLEAR("Doc SF  XML");
-        "Doc SF  XML".CREATEOUTSTREAM(OutStr);
-        OutStr.WRITETEXT(ProcessData);
+        CLEAR("Doc Pdf Generado");
+        "Doc Pdf Generado".CREATEOUTSTREAM(PdfOutStream);
+        COPYSTREAM(PdfOutStream, PdfInStream);
     end;
 }
-
