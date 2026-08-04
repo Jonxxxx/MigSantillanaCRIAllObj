@@ -1,4 +1,4 @@
-pageextension 50032 EXCCRISalesQuoteSubform extends "Sales Quote Subform"
+pageextension 55032 EXCCRISalesQuoteSubform extends "Sales Quote Subform"
 {
     layout
     {

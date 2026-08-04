@@ -1,18 +1,18 @@
-tableextension 50109 EXCCRIWarehouseShipmentHdr extends "Warehouse Shipment Header"
+tableextension 55109 EXCCRIWarehouseShipmentHdr extends "Warehouse Shipment Header"
 {
     fields
     {
-        field(51000; "Boxes Quatity"; Decimal)
+        field(55161; "Boxes Quatity"; Decimal)
         {
             Caption = 'Boxes Quatity', Comment = 'ESP=Cantidad de Cajas';
             DataClassification = CustomerContent;
         }
-        field(51001; "Bags Quantity"; Decimal)
+        field(55162; "Bags Quantity"; Decimal)
         {
             Caption = 'Bags Quantity', Comment = 'ESP=Cantidad de paquetes';
             DataClassification = CustomerContent;
         }
-        field(51002; "Driver Code"; Code[10])
+        field(55163; "Driver Code"; Code[10])
         {
             Caption = 'Driver Code', Comment = 'ESP=Cod. chofer';
             DataClassification = CustomerContent;
@@ -20,13 +20,13 @@ tableextension 50109 EXCCRIWarehouseShipmentHdr extends "Warehouse Shipment Head
 
             trigger OnValidate()
             var
-                EXCCRIDriver: Record 51001;
+                EXCCRIDriver: Record 55162;
             begin
                 EXCCRIDriver.Get("Driver Code");
                 "Driver Name" := EXCCRIDriver."Nombre Completo";
             end;
         }
-        field(51003; "Driver Name"; Text[30])
+        field(55164; "Driver Name"; Text[30])
         {
             Caption = 'Driver Name', Comment = 'ESP=Nombre Chofer';
             DataClassification = CustomerContent;

@@ -395,7 +395,7 @@ table 75007 "Conversion NAV MdM"
                     CASE prField."Id Field" OF
                         1, 2:
                             pwTipo := "Tipo Registro"::"Codigo Producto";
-                        50002:
+                        55227:
                             pwTipo := "Tipo Registro"::ISBN;
                         //"Tipo Registro"::"ISBN Tramitado";
                         -499 .. -400:
@@ -423,7 +423,7 @@ table 75007 "Conversion NAV MdM"
 
                         56015:
                             pwTipo := "Tipo Registro"::Autor;
-                        50005:
+                        55230:
                             pwTipo := "Tipo Registro"::"Nivel Escolar";
 
                         //"Tipo Registro"::"Formato Digital";

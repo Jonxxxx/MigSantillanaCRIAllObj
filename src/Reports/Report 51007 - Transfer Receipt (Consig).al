@@ -1,4 +1,4 @@
-report 51007 "Transfer Receipt (Consig)"
+report 55168 "Transfer Receipt (Consig)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Transfer Receipt (Consig).rdl';

@@ -1,4 +1,4 @@
-pageextension 50110 EXCCRILocationCard extends "Location Card"
+pageextension 55110 EXCCRILocationCard extends "Location Card"
 {
     layout
     {

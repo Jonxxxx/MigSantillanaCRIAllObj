@@ -294,7 +294,7 @@
 
 ### Batch 12
 
-- Reports inspected: 10 (34003015, 34003016, 50000, 50001, 50002, 50003, 50004, 50006, 50007, 50016)
+- Reports inspected: 10 (34003015, 34003016, 55225, 55226, 55227, 55228, 55229, 55231, 55232, 55241)
 - Reports modified: 3
 - Reports with request pages: 9
 - Reports without request pages: 1
@@ -312,12 +312,12 @@
 - New errors introduced: 0
 - Remaining reports: 161
 - Remaining noncompliant request-page fields: 163
-- Last processed report: 50016
+- Last processed report: 55241
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 13
 
-- Reports inspected: 10 (50045, 50047, 50048, 51006, 51007, 51009, 51020, 52500, 52501, 52502)
+- Reports inspected: 10 (55045, 55047, 55048, 55167, 55168, 55170, 55180, 55199, 55200, 55201)
 - Reports modified: 7
 - Reports with request pages: 9
 - Reports without request pages: 1
@@ -335,12 +335,12 @@
 - New errors introduced: 0
 - Remaining reports: 151
 - Remaining noncompliant request-page fields: 140
-- Last processed report: 52502
+- Last processed report: 55201
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 14
 
-- Reports inspected: 10 (52503, 52504, 52505, 52542, 52543, 52544, 52545, 52546, 52548, 52549)
+- Reports inspected: 10 (55212, 55202, 55203, 55213, 55214, 55215, 55216, 55217, 55218, 55219)
 - Reports modified: 8
 - Reports with request pages: 10
 - Reports without request pages: 0
@@ -358,12 +358,12 @@
 - New errors introduced: 0
 - Remaining reports: 141
 - Remaining noncompliant request-page fields: 119
-- Last processed report: 52549
+- Last processed report: 55219
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 15
 
-- Reports inspected: 10 (54010, 55020, 56000, 56001, 56002, 56004, 56006, 56007, 56008, 56010)
+- Reports inspected: 10 (55224, 55245, 56000, 56001, 56002, 56004, 56006, 56007, 56008, 56010)
 - Reports modified: 2
 - Reports with request pages: 10
 - Reports without request pages: 0

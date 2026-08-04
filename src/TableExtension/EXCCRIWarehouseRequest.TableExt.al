@@ -1,14 +1,14 @@
-tableextension 50092 EXCCRIWarehouseRequest extends "Warehouse Request"
+tableextension 55092 EXCCRIWarehouseRequest extends "Warehouse Request"
 {
     fields
     {
-        field(50000; "Comentario Doc. Origen"; Boolean)
+        field(55225; "Comentario Doc. Origen"; Boolean)
         {
             FieldClass = FlowField;
             CalcFormula = exist("Sales Header" where("Document Type" = field("Source Document"), Comment = const(true), "No." = field("Source No.")));
         }
 
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Factura","Consignacion","Muestras","Donaciones","Canal 3","Exportacion";

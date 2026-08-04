@@ -1,10 +1,10 @@
-enumextension 50025 EXCCRIGenJournalAccountType extends "Gen. Journal Account Type"
+enumextension 55250 EXCCRIGenJournalAccountType extends "Gen. Journal Account Type"
 {
-    value(50000; EXCCRIProvisionInsolvencies)
+    value(55225; EXCCRIProvisionInsolvencies)
     {
         Caption = 'Provision Insolvencias';
     }
-    value(50001; EXCCRICancelProvisionInsolvencies)
+    value(55226; EXCCRICancelProvisionInsolvencies)
     {
         Caption = 'Cancelar Prov. Insol.';
     }

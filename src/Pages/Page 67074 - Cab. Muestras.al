@@ -799,7 +799,7 @@ page 67074 "Cab. Muestras"
                 begin
                     //003
                     //cuManejaParametros.Recibe_Consig_PantallaVend("No.",0,0);
-                    PAGE.RUNMODAL(50011);
+                    PAGE.RUNMODAL(55236);
                     //003
                 end;
             }

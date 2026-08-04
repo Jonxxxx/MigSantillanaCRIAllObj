@@ -1,4 +1,4 @@
-pageextension 50104 EXCCRIAbsenceRegistration extends "Absence Registration"
+pageextension 55104 EXCCRIAbsenceRegistration extends "Absence Registration"
 {
     layout
     {

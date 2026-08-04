@@ -1,4 +1,4 @@
-table 50800 Prueba
+table 55159 Prueba
 {
 
     fields

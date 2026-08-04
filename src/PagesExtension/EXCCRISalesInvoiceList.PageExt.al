@@ -1,4 +1,4 @@
-pageextension 50151 EXCCRISalesInvoiceList extends "Sales Invoice List"
+pageextension 55150 EXCCRISalesInvoiceList extends "Sales Invoice List"
 {
     trigger OnOpenPage()
     var

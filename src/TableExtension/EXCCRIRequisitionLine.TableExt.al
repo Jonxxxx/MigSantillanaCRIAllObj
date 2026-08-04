@@ -1,4 +1,4 @@
-tableextension 50039 EXCCRIRequisitionLine extends "Requisition Line"
+tableextension 55039 EXCCRIRequisitionLine extends "Requisition Line"
 {
     fields
     {
@@ -6,8 +6,8 @@ tableextension 50039 EXCCRIRequisitionLine extends "Requisition Line"
         {
             TableRelation =
                 if (Type = const("G/L Account")) "G/L Account"
-                else if (Type = const(Item), "Worksheet Template Name" = filter(<> ''), "Journal Batch Name" = filter(<> '')) Item where(Type = const(Inventory), Inactivo = const(false))
-                else if (Type = const(Item), "Worksheet Template Name" = const(''), "Journal Batch Name" = const('')) Item;
+            else if (Type = const(Item), "Worksheet Template Name" = filter(<> ''), "Journal Batch Name" = filter(<> '')) Item where(Type = const(Inventory), Inactivo = const(false))
+            else if (Type = const(Item), "Worksheet Template Name" = const(''), "Journal Batch Name" = const('')) Item;
         }
         modify("Vendor No.")
         {

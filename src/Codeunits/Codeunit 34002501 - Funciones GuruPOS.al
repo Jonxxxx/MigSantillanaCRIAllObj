@@ -308,11 +308,11 @@ codeunit 34002501 "Funciones GuruPOS"
 
     procedure AplicaCupon(NoPedido: Code[20]; NoCupon: Code[20])
     var
-        rCabCupon: Record 51009;
-        rLinCupon: Record 51010;
+        rCabCupon: Record 55170;
+        rLinCupon: Record 55171;
         Loc_Error001: Label 'Coupon No. %1 not found';
         Loc_Error002: Label 'The Coupon %1 is not asociated to with customer no. %2';
-        rLinCupon2: Record 51010;
+        rLinCupon2: Record 55171;
         loc_rSalesLine: Record 37;
     begin
         IF rGlobalSalesHeader.GET(1, NoPedido) THEN BEGIN
@@ -352,11 +352,11 @@ codeunit 34002501 "Funciones GuruPOS"
 
     procedure AplicaCuponSinCliente(NoPedido: Code[20]; NoCupon: Code[20])
     var
-        rCabCupon: Record 51009;
-        rLinCupon: Record 51010;
+        rCabCupon: Record 55170;
+        rLinCupon: Record 55171;
         Loc_Error001: Label 'Coupon No. %1 not found';
         Loc_Error002: Label 'The Coupon %1 is not asociated to with customer no. %2';
-        rLinCupon2: Record 51010;
+        rLinCupon2: Record 55171;
         loc_rSalesLine: Record 37;
     begin
 
@@ -400,7 +400,7 @@ codeunit 34002501 "Funciones GuruPOS"
 
     procedure ActualizaCupon(rSalesHeader_Loc: Record 36)
     var
-        rLinCupon: Record 51010;
+        rLinCupon: Record 55171;
         CantidadPendiente: Integer;
     begin
         rSalesLines.RESET;

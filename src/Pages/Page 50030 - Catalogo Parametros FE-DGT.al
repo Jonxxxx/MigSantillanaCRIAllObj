@@ -1,9 +1,9 @@
-page 50030 "Catalogo Parametros FE-DGT"
+page 55030 "Catalogo Parametros FE-DGT"
 {
     Caption = 'Catalogo Parametros FE-DGT';
     PageType = List;
     QueryCategory = '#Basic,#Suite';
-    SourceTable = 50030;
+    SourceTable = 55030;
     UsageCategory = Lists;
 
     layout

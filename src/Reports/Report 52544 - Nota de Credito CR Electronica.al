@@ -1,4 +1,4 @@
-report 52544 "Nota de Credito CR Electronica"
+report 55215 "Nota de Credito CR Electronica"
 {
     // #4186   30/09/2014      PLB           Se ha creado la opcion de poder imprimir las lineas por el ranking de ubicacion
     // 
@@ -345,6 +345,6 @@ report 52544 "Nota de Credito CR Electronica"
         ComentarioCaptionLbl: Label 'Comentarios: ';
         //TODO: no existe Referencia: Record 5717;
         ConfSant: Record 56001;
-        CategoriaPedidoVenta: Record 52503;
+        CategoriaPedidoVenta: Record 55212;
 }
 

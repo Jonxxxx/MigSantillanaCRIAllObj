@@ -61,7 +61,7 @@ table 34003000 "Config. Retencion Proveedores"
             DataClassification = CustomerContent;
             Caption = 'Retencion ITBIS';
         }
-        field(50200; "Retencion Defecto Sub-Cont."; Boolean)
+        field(55154; "Retencion Defecto Sub-Cont."; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Retencion Defecto Sub-Cont.';

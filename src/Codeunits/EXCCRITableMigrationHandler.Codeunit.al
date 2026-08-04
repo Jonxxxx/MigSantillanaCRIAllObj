@@ -61,7 +61,7 @@ codeunit 61000 EXCCRIEventSubscriber
     [EventSubscriber(ObjectType::Table, Database::"Job Queue Entry", 'OnAfterFinalizeRun', '', false, false)]
     local procedure OnAfterFinalizeRun(JobQueueEntry: Record "Job Queue Entry")
     var
-        EXCCRINotifyError: Codeunit 50300;
+        EXCCRINotifyError: Codeunit 55156;
     begin
         if JobQueueEntry.Status <> JobQueueEntry.Status::Error then
             exit;

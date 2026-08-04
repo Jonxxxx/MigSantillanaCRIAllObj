@@ -1,4 +1,4 @@
-report 51020 "Transfer Shipment (Consig)"
+report 55180 "Transfer Shipment (Consig)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Transfer Shipment (Consig).rdl';

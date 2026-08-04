@@ -1,4 +1,4 @@
-enumextension 52504 EXCCRITaxIdentificationType extends "Tax Identification Type"
+enumextension 55202 EXCCRITaxIdentificationType extends "Tax Identification Type"
 {
     value(2; DIMEX)
     {

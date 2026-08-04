@@ -1,4 +1,4 @@
-tableextension 50043 EXCCRICheckLedgerEntry extends "Check Ledger Entry"
+tableextension 55043 EXCCRICheckLedgerEntry extends "Check Ledger Entry"
 {
     fields
     {

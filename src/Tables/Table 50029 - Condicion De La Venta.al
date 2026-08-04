@@ -1,19 +1,19 @@
-table 50029 "Condicion De La Venta"
+table 55029 "Condicion De La Venta"
 {
 
     fields
     {
-        field(1;Codigo;Code[10])
+        field(1; Codigo; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;"Condicion de la Venta";Text[150])
+        field(2; "Condicion de la Venta"; Text[150])
         {
             DataClassification = CustomerContent;
             Caption = 'Condicion de la Venta';
         }
-        field(3;Inactivo;Boolean)
+        field(3; Inactivo; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Inactivo';
@@ -22,7 +22,7 @@ table 50029 "Condicion De La Venta"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

@@ -1,4 +1,4 @@
-pageextension 50042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Memo"
+pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Memo"
 {
     layout
     {
@@ -212,7 +212,7 @@ pageextension 50042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                     ApplicationArea = All;
                     Caption = 'Electronic Document Log';
                     Image = Log;
-                    RunObject = page 52500;
+                    RunObject = page 55199;
                     RunPageLink = NoDocumento = field("No.");
                     ToolTip = 'Opens the electronic document log related to the posted sales credit memo.';
                 }

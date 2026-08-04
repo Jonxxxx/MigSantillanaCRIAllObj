@@ -1,4 +1,4 @@
-tableextension 50060 EXCCRIICInboxTransaction extends "IC Inbox Transaction"
+tableextension 55060 EXCCRIICInboxTransaction extends "IC Inbox Transaction"
 {
     fields
     {

@@ -1,4 +1,4 @@
-tableextension 50068 EXCCRIAssemblyHeader extends "Assembly Header"
+tableextension 55068 EXCCRIAssemblyHeader extends "Assembly Header"
 {
     fields
     {

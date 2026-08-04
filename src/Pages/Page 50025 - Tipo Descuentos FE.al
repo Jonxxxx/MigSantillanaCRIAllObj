@@ -1,12 +1,12 @@
-page 50025 "Tipo Descuentos FE"
+page 55250 "Tipo Descuentos FE"
 {
-    AccessByPermission = Codeunit 52504 = X;
+    AccessByPermission = Codeunit 55202 = X;
     ApplicationArea = BASIC, SUITE;
     Caption = 'Discount Type FE';
     Editable = true;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = 50025;
+    SourceTable = 55250;
     UsageCategory = Lists;
 
     layout

@@ -662,7 +662,7 @@ Skipped TODO markers: **20**
   Comment Sheet link. Final classifications: standard symbol and missing page
   properties, High confidence.
 - Pages 34002553 and 34002554: restored verified posted invoice/credit memo
-  statistics and comment links plus codeunit 50116 declarations and matching
+  statistics and comment links plus codeunit 55115 declarations and matching
   settlement calls. Final classifications: standard symbols, missing page
   properties, and custom dependencies, High confidence.
 
@@ -748,13 +748,13 @@ Skipped TODO markers: **20**
 
 ### Files inspected
 
-- `src/Pages/Page 50000 - Pantalla Scanner manual.al`
-- `src/Pages/Page 50037 - ListaDescuentoProntoPago.al`
-- `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
-- `src/Pages/Page 52501 - Recepcion Documento Elect.al`
-- `src/Pages/Page 52505 - Msj  Facturacion Electronica.al`
-- `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
-- `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- `src/Pages/Page 55225 - Pantalla Scanner manual.al`
+- `src/Pages/Page 55037 - ListaDescuentoProntoPago.al`
+- `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
+- `src/Pages/Page 55200 - Recepcion Documento Elect.al`
+- `src/Pages/Page 55203 - Msj  Facturacion Electronica.al`
+- `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
+- `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - `src/Pages/Page 56000 - Packing.al`
 
 ### Files modified
@@ -767,15 +767,15 @@ Resolved TODO markers: **0**
 
 ### TODOs skipped
 
-- Page 50000 contains a structurally incomplete scanner layout and procedure
+- Page 55225 contains a structurally incomplete scanner layout and procedure
   block.
-- Page 50037 could not be changed because dependency symbol verification for
+- Page 55037 could not be changed because dependency symbol verification for
   every standard filter field did not complete.
-- Pages 52500, 52501, and 52505 depend on obsolete TempBlob/File Management
+- Pages 55199, 55200, and 55203 depend on obsolete TempBlob/File Management
   patterns or unavailable electronic-invoicing procedures.
-- Page 53000 is a fiscal-printer hardware integration and is not
+- Page 55221 is a fiscal-printer hardware integration and is not
   SaaS-compatible.
-- Report 53007 referenced by page 53001 is unavailable.
+- Report 53007 referenced by page 55222 is unavailable.
 - Page 56000 references public codeunit 56000 procedures, but the posting
   procedure itself still has an unresolved number-series TODO and cannot be
   safely re-enabled.
@@ -998,7 +998,7 @@ Resolved TODO markers: **31**
   the flagged `GestBackOrd` method exists only on custom page 56036; changing
   the page type would be a functional decision.
 - Page 56090: the commented report variable is unused because the action
-  already invokes report 50000 directly.
+  already invokes report 55225 directly.
 - Page 56200: the two markers guard a large, structurally disabled matrix
   control set and cannot be restored as isolated lines.
 
@@ -1538,7 +1538,7 @@ Skipped TODO markers: **4**
 
 - `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
-- `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
 - `src/Pages/Page 56035 - Sales Order Call Center  List.al`
 
@@ -1570,7 +1570,7 @@ Resolved TODO markers: **1**
 - Page 34003015: the legacy Mini Pages Mapping table is absent from current
   dependencies; its only use is also inside a disabled block classified as
   functional ambiguity.
-- Page 53001: custom report 53007 is absent. The duplicated marker on the same
+- Page 55222: custom report 53007 is absent. The duplicated marker on the same
   RunObject line was treated as one logical correction and both physical
   occurrences were inspected.
 - Page 56024: the Application Temp and Approvals Mgmt. declarations have no
@@ -1947,7 +1947,7 @@ Assumptions made: none.
 
 - `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
-- `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
 - `src/Pages/Page 56035 - Sales Order Call Center  List.al`
 - `src/Pages/Page 56036 - Sales Order Call Center.al`
@@ -1961,8 +1961,8 @@ Assumptions made: none.
 
 ### TODOs converted to manual review
 
-- Pages 34003004 and 53001: preserved RunObject references to missing custom
-  reports 34003006 and 53007. The duplicated markers on the Page 53001 line
+- Pages 34003004 and 55222: preserved RunObject references to missing custom
+  reports 34003006 and 53007. The duplicated markers on the Page 55222 line
   were treated as one logical correction.
 - Page 34003015: preserved the Mini Pages Mapping declaration because that
   standard table is unavailable and its related code remains disabled.
@@ -2199,10 +2199,10 @@ remains under `src/Pages`.
 ## Batch 7
 
 - AL objects inspected and modified: Pages 34002556, 34002557, 34002558,
-  34003015, 50000, 50037, 52500, 52501, 52505, and 53000.
+  34003015, 55225, 55037, 55199, 55200, 55203, and 55221.
 - TODOs safely resolved: 2. Migrated the legacy approval-entry filter on Page
   34002558 to the verified `SetRecordFilters` signature and restored the
-  verified customer-ledger `SourceTableView` on Page 50037.
+  verified customer-ledger `SourceTableView` on Page 55037.
 - TODO markers converted to manual review: 46 markers represented by 27
   deduplicated manual-review comments.
 - Existing manual-review comments resolved: 0.
@@ -2222,7 +2222,7 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 76.
 - Total `// TODO: Manual review`: 185.
 - Last successfully processed file:
-  `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`.
+  `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`.
 
 ## Batch 8
 
@@ -2261,7 +2261,7 @@ remains under `src/Pages`.
 - AL objects inspected and modified: Pages 56065, 56090, 56200, 67051,
   67064, 67074, 67076, 67077, 67100, and 67111.
 - TODOs safely resolved: 15. Restored transfer back-order availability,
-  symbolic execution of Report 50000, the complete 20-column MdE matrix,
+  symbolic execution of Report 55225, the complete 20-column MdE matrix,
   sample inventory and three verified dimension lookups, the educational
   level filter, six shortcut-dimension controls, and the verified event-page
   parameter call.
@@ -2277,7 +2277,7 @@ remains under `src/Pages`.
   subpage methods, removed Contact UI helpers, an invalid text OptionCaption,
   and an indeterminate duplicate CASE branch.
 - Verification: complete current-object inspection; repository verification
-  of Reports 50000, Codeunits 61025, 67000, and 67001, Pages 67076 and 67102,
+  of Reports 55225, Codeunits 61025, 67000, and 67001, Pages 67076 and 67102,
   and all relevant public signatures; and `al_symbolsearch` for Bin Content,
   Bin Contents, Dimension Value, Transfer Line shortcut-dimension methods,
   and Contact/Contact List creation and related-record methods.

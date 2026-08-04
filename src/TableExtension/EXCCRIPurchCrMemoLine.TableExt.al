@@ -1,4 +1,4 @@
-tableextension 50035 EXCCRIPurchCrMemoLine extends "Purch. Cr. Memo Line"
+tableextension 55035 EXCCRIPurchCrMemoLine extends "Purch. Cr. Memo Line"
 {
     fields
     {

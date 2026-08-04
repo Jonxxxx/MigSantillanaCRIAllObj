@@ -1,4 +1,4 @@
-tableextension 50095 EXCCRIRegisteredWhseActHdr extends "Registered Whse. Activity Hdr."
+tableextension 55095 EXCCRIRegisteredWhseActHdr extends "Registered Whse. Activity Hdr."
 {
     fieldgroups
     {

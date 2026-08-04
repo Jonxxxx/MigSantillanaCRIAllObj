@@ -1,39 +1,39 @@
-table 50009 "Facturas POS no liquidadas"
+table 55234 "Facturas POS no liquidadas"
 {
 
     fields
     {
-        field(1;"No.";Code[20])
+        field(1; "No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No.';
         }
-        field(2;"Fecha registro";Date)
+        field(2; "Fecha registro"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha registro';
         }
-        field(10;"Importe total";Decimal)
+        field(10; "Importe total"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe total';
         }
-        field(11;"Importe Pendiente";Decimal)
+        field(11; "Importe Pendiente"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Pendiente';
         }
-        field(12;Diferencia;Decimal)
+        field(12; Diferencia; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Diferencia';
         }
-        field(13;"No. registrado antes";Code[20])
+        field(13; "No. registrado antes"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. registrado antes';
         }
-        field(14;Procesado;Boolean)
+        field(14; Procesado; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Procesado';
@@ -42,7 +42,7 @@ table 50009 "Facturas POS no liquidadas"
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }

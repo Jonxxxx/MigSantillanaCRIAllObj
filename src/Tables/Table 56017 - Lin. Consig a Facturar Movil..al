@@ -151,7 +151,7 @@ table 56017 "Lin. Consig a Facturar Movil."
             begin
             end;
         }
-        field(50000; "Cantidad a Facturar"; Integer)
+        field(55225; "Cantidad a Facturar"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad a Facturar';
@@ -162,7 +162,7 @@ table 56017 "Lin. Consig a Facturar Movil."
                     ERROR(Error001);
             end;
         }
-        field(50001; "Fecha Inventario"; Date)
+        field(55226; "Fecha Inventario"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Inventario';

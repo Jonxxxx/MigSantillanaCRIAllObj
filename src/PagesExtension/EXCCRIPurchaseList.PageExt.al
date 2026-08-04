@@ -1,4 +1,4 @@
-pageextension 50029 EXCCRIPurchaseList extends "Purchase List"
+pageextension 55029 EXCCRIPurchaseList extends "Purchase List"
 {
     layout
     {

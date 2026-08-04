@@ -1,4 +1,4 @@
-tableextension 50062 EXCCRIICOutboxSalesHeader extends "IC Outbox Sales Header"
+tableextension 55062 EXCCRIICOutboxSalesHeader extends "IC Outbox Sales Header"
 {
     fields
     {

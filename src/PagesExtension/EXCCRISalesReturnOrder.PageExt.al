@@ -1,4 +1,4 @@
-pageextension 50132 EXCCRISalesReturnOrder extends "Sales Return Order"
+pageextension 55131 EXCCRISalesReturnOrder extends "Sales Return Order"
 {
     layout
     {

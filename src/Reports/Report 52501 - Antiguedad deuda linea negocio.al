@@ -1,4 +1,4 @@
-report 52501 "Antiguedad deuda linea negocio"
+report 55200 "Antiguedad deuda linea negocio"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad deuda linea negocio.rdl';

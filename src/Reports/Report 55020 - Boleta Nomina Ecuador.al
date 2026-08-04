@@ -1,4 +1,4 @@
-report 55020 "Boleta Nomina Ecuador"
+report 55245 "Boleta Nomina Ecuador"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Boleta Nomina Ecuador.rdl';

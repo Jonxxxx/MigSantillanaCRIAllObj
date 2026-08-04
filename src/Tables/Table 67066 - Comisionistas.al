@@ -687,7 +687,7 @@ table 67066 Comisionistas
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(50000; "% Descuento Cupon"; Decimal)
+        field(55225; "% Descuento Cupon"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = '% Descuento Cupon';

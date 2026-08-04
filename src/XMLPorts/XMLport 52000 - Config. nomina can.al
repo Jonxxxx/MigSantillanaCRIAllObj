@@ -1,4 +1,4 @@
-xmlport 52000 "Config. nomina can"
+xmlport 55181 "Config. nomina can"
 {
     Direction = Import;
     Format = VariableText;

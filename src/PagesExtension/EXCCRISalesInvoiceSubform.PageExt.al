@@ -1,4 +1,4 @@
-pageextension 50025 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
+pageextension 55250 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
 {
     layout
     {

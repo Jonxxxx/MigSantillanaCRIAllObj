@@ -1,24 +1,24 @@
-table 50025 "Tipo Descuentos DGT"
+table 55250 "Tipo Descuentos DGT"
 {
     Caption = 'Tipo Descuentos DGT';
-    DataCaptionFields = Codigo,Descripcion;
-    DrillDownPageID = 50025;
-    LookupPageID = 50025;
-    Permissions = TableData 50025=rimd;
+    DataCaptionFields = Codigo, Descripcion;
+    DrillDownPageID = 55250;
+    LookupPageID = 55250;
+    Permissions = TableData 55250 = rimd;
 
     fields
     {
-        field(1;Codigo;Code[2])
+        field(1; Codigo; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;Descripcion;Text[50])
+        field(2; Descripcion; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
-        field(3;"Descuento Asumido Fabrica";Boolean)
+        field(3; "Descuento Asumido Fabrica"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Descuento Asumido Fabrica';
@@ -27,7 +27,7 @@ table 50025 "Tipo Descuentos DGT"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

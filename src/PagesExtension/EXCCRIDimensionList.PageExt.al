@@ -1,4 +1,4 @@
-pageextension 50082 EXCCRIDimensionList extends "Dimension List"
+pageextension 55082 EXCCRIDimensionList extends "Dimension List"
 {
     layout
     {

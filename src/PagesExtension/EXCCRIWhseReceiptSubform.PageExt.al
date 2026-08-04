@@ -1,4 +1,4 @@
-pageextension 50122 EXCCRIWhseReceiptSubform extends "Whse. Receipt Subform"
+pageextension 55121 EXCCRIWhseReceiptSubform extends "Whse. Receipt Subform"
 {
     layout
     {

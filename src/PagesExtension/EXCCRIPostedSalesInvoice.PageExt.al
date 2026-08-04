@@ -1,4 +1,4 @@
-pageextension 50040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
+pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 {
     layout
     {
@@ -259,7 +259,7 @@ pageextension 50040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 50011;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
                         begin
                             EXCCRIUpdateECommerceStatus.EnProceso(Rec);
                         end;
@@ -275,7 +275,7 @@ pageextension 50040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 50011;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
                         begin
                             EXCCRIUpdateECommerceStatus.ListoParaEntrega(Rec);
                         end;
@@ -291,7 +291,7 @@ pageextension 50040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 50011;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
                         begin
                             EXCCRIUpdateECommerceStatus.Entregado(Rec);
                         end;

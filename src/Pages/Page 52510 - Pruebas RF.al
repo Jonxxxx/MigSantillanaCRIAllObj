@@ -1,4 +1,4 @@
-page 52510 "Pruebas RF"
+page 55208 "Pruebas RF"
 {
     PageType = Card;
     SourceTable = 5050;

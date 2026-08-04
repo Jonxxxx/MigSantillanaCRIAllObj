@@ -1,4 +1,4 @@
-tableextension 50098 EXCCRIServiceHeader extends "Service Header"
+tableextension 55098 EXCCRIServiceHeader extends "Service Header"
 {
     fields
     {

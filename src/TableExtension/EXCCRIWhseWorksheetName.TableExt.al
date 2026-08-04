@@ -1,4 +1,4 @@
-tableextension 50112 EXCCRIWhseWorksheetName extends "Whse. Worksheet Name"
+tableextension 55111 EXCCRIWhseWorksheetName extends "Whse. Worksheet Name"
 {
     fields
     {

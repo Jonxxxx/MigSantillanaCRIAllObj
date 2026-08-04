@@ -90,7 +90,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         rCab: Record 36;
         rHistCab: Record 112;
         Error004: Label 'La Serie NCF No tiene más numeros';
-        lcFE: Codeunit 52504;
+        lcFE: Codeunit 55202;
     begin
 
         i := 1;
@@ -228,7 +228,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure ActualizaCupon(pSalesH: Record 36)
     var
-        rLinCupon: Record 51010;
+        rLinCupon: Record 55171;
         CantidadPendiente: Integer;
         rSalesLines: Record 37;
     begin
@@ -323,7 +323,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
     var
         rLinFac: Record 113;
         rLin: Record 37;
-        rLinCupon: Record 51010;
+        rLinCupon: Record 55171;
         rCab: Record 36;
         rLinOrigen: Record 37;
         rCabFac: Record 112;
@@ -384,9 +384,9 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure AplicaCupon(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Evento_Respuesta: Record "DsPOS Event Buffer" temporary)
     var
-        rCabCupon: Record 51009;
-        rCabCupon2: Record 51009;
-        rLinCupon: Record 51010;
+        rCabCupon: Record 55170;
+        rCabCupon2: Record 55170;
+        rLinCupon: Record 55171;
         rSalesLine: Record 37;
         NoLinea: Integer;
         error001: Label 'El cupón %1 esta en estado de error : no impreso, anulado ó caducado';
@@ -502,7 +502,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure AntesDeImprimir(pCodVenta: Code[20])
     var
-        lcFE_CR: Codeunit 52504;
+        lcFE_CR: Codeunit 55202;
     begin
         //+#184407
 
@@ -516,10 +516,10 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure FE(pSalesHeader: Record 36)
     var
-        lcFE: Codeunit 52504;
+        lcFE: Codeunit 55202;
         lrSIH: Record 112;
         lrSCMH: Record 114;
-        lrLog: Record 52502;
+        lrLog: Record 55201;
         lOk: Boolean;
     begin
         //+#217374
@@ -757,8 +757,8 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         lClave: Text[60];
         lConsecutivo: Text[20];
         lTipo: Code[2];
-        lcFE: Codeunit 52504;
-        lrLog: Record 52502;
+        lcFE: Codeunit 55202;
+        lrLog: Record 55201;
     begin
         //+#217374
         lTipo := '04';

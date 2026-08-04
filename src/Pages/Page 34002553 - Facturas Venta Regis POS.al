@@ -271,6 +271,6 @@ page 34002553 "Facturas Venta Regis POS"
         gtCAE: Text[160];
         gtCAEC: Text[160];
         gtRespuesta: Text[100];
-        RegistrarCobrosDsPos: Codeunit 50116;
+        RegistrarCobrosDsPos: Codeunit 55115;
 }
 

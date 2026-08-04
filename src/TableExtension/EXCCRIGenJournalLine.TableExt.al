@@ -1,4 +1,4 @@
-tableextension 50018 EXCCRIGenJournalLine extends "Gen. Journal Line"
+tableextension 55243 EXCCRIGenJournalLine extends "Gen. Journal Line"
 {
     fields
     {
@@ -65,89 +65,89 @@ tableextension 50018 EXCCRIGenJournalLine extends "Gen. Journal Line"
             end;
         }
 
-        field(50000; "No. Paginas"; Decimal)
+        field(55225; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50001; "Componentes Producto"; Text[50])
+        field(55226; "Componentes Producto"; Text[50])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(50002; ISBN; Text[50])
+        field(55227; ISBN; Text[50])
         {
             DataClassification = CustomerContent;
         }
-        field(50003; "Cod. Procedencia"; Code[20])
+        field(55228; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
-        field(50004; "Cod. Edicion"; Code[20])
+        field(55229; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50131;
+            // Ver TableRelation = 55130;
         }
-        field(50005; Areas; Code[20])
+        field(55230; Areas; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50132;
+            // Ver TableRelation = 55131;
         }
-        field(50006; "Nivel Educativo"; Code[20])
+        field(55231; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50133;
+            // Ver TableRelation = 55132;
         }
-        field(50007; Cursos; Code[20])
+        field(55232; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
-        field(50009; "No. Talonario"; Code[20])
+        field(55234; "No. Talonario"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50010; "No. Serie Talonario"; Code[20])
+        field(55235; "No. Serie Talonario"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50011; Aprobado; Boolean)
+        field(55236; Aprobado; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50012; "Fecha Talonario"; Date)
+        field(55237; "Fecha Talonario"; Date)
         {
             DataClassification = CustomerContent;
         }
-        field(50013; "Forma de Pago"; Code[20])
+        field(55238; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
-        field(50014; "No. Recibo a depositar"; Code[20])
+        field(55239; "No. Recibo a depositar"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50015; "No. Talonario a depositar"; Code[20])
+        field(55240; "No. Talonario a depositar"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50016; "Tipo Ingreso"; Option)
+        field(55241; "Tipo Ingreso"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ",Recibo,Deposito;
         }
-        field(53000; "Tipo pedido"; Option)
+        field(55221; "Tipo pedido"; Option)
         {
             Caption = 'Order type';
             DataClassification = CustomerContent;
             OptionMembers = " ",TPV;
         }
-        field(53001; "Importe a liquidar"; Decimal)
+        field(55222; "Importe a liquidar"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(53002; "Venta a credito"; Boolean)
+        field(55223; "Venta a credito"; Boolean)
         {
             DataClassification = CustomerContent;
         }

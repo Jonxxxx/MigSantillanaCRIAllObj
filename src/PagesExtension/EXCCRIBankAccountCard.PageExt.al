@@ -1,4 +1,4 @@
-pageextension 50063 EXCCRIBankAccountCard extends "Bank Account Card"
+pageextension 55063 EXCCRIBankAccountCard extends "Bank Account Card"
 {
     layout
     {

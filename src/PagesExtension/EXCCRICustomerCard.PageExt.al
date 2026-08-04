@@ -1,4 +1,4 @@
-pageextension 50007 EXCCRICustomerCard extends "Customer Card"
+pageextension 55232 EXCCRICustomerCard extends "Customer Card"
 {
     layout
     {

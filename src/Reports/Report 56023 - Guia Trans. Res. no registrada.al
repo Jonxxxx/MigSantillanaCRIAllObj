@@ -214,6 +214,6 @@ report 56023 "Guia Trans. Res. no registrada"
         SalesHeader: Record 36;
         SIH: Record 112;
         Direccion: Code[100];
-        CabNop: Record 50100;
+        CabNop: Record 55100;
 }
 

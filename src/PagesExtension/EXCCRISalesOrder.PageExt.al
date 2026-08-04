@@ -1,4 +1,4 @@
-pageextension 50020 EXCCRISalesOrder extends "Sales Order"
+pageextension 55245 EXCCRISalesOrder extends "Sales Order"
 {
     layout
     {
@@ -268,7 +268,7 @@ pageextension 50020 EXCCRISalesOrder extends "Sales Order"
                         EXCCRISantillanaFunctions: Codeunit 56000;
                     begin
                         EXCCRISantillanaFunctions.RecibeNoDoc(Rec."No.");
-                        Report.RunModal(51006);
+                        Report.RunModal(55167);
                         CurrPage.Update(false);
                     end;
                 }
@@ -336,7 +336,7 @@ pageextension 50020 EXCCRISalesOrder extends "Sales Order"
 
     local procedure EXCCRIValidateSharingCode()
     var
-        EXCCRISalesOrderCategory: Record 52503;
+        EXCCRISalesOrderCategory: Record 55212;
         EXCCRISalesLine: Record "Sales Line";
     begin
         if Rec."Categoria Pedido Venta" = '' then

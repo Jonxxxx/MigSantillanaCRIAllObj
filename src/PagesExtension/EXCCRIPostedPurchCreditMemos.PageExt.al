@@ -1,4 +1,4 @@
-pageextension 50052 EXCCRIPostedPurchCreditMemos extends "Posted Purchase Credit Memos"
+pageextension 55052 EXCCRIPostedPurchCreditMemos extends "Posted Purchase Credit Memos"
 {
     layout
     {

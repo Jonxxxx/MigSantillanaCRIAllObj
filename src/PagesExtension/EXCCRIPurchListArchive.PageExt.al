@@ -1,4 +1,4 @@
-pageextension 50098 EXCCRIPurchListArchive extends "Purchase List Archive"
+pageextension 55098 EXCCRIPurchListArchive extends "Purchase List Archive"
 {
     layout
     {

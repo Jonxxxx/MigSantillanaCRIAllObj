@@ -1,4 +1,4 @@
-table 50100 "Cab. Venta NopCommerce"
+table 55100 "Cab. Venta NopCommerce"
 {
     //  Proyecto: Implementacion Microsoft Dynamics Nav
     // 

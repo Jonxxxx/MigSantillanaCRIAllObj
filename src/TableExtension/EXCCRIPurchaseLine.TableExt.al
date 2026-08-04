@@ -1,4 +1,4 @@
-tableextension 50017 EXCCRIPurchaseLine extends "Purchase Line"
+tableextension 55242 EXCCRIPurchaseLine extends "Purchase Line"
 {
     fields
     {
@@ -26,7 +26,7 @@ tableextension 50017 EXCCRIPurchaseLine extends "Purchase Line"
             TableRelation = Vendor where(Inactivo = const(false));
         }
 
-        field(50000; ISBN; Code[20])
+        field(55225; ISBN; Code[20])
         {
             CalcFormula = lookup(Item.ISBN where("No." = field("No.")));
             FieldClass = FlowField;

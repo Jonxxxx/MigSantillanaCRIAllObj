@@ -1,4 +1,4 @@
-tableextension 50059 EXCCRIICOutboxTransaction extends "IC Outbox Transaction"
+tableextension 55059 EXCCRIICOutboxTransaction extends "IC Outbox Transaction"
 {
     fields
     {

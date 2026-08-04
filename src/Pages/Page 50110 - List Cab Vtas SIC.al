@@ -1,4 +1,4 @@
-page 50110 "List Cab Vtas SIC"
+page 55110 "List Cab Vtas SIC"
 {
     Caption = 'List Cab Vtas SIC';
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 50110 "List Cab Vtas SIC"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 50111;
+    SourceTable = 55198;
     SourceTableView = SORTING(Transferido, Fecha);
 
     layout

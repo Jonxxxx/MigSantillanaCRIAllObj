@@ -144,7 +144,7 @@ report 56029 "Etiqueta Cajas"
         TransferShipmentHeader: Record "Transfer Shipment Header";
         TransferHeader: Record "Transfer Header";
         PostCode: Record "Post Code";
-        EcommerceHeader: Record 50100;
+        EcommerceHeader: Record 55100;
         SalesInvoiceHeader: Record "Sales Invoice Header";
         TempBlob: Codeunit "Temp Blob";
         ZplOutStream: OutStream;

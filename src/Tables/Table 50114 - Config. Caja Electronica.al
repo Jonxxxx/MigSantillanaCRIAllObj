@@ -1,4 +1,4 @@
-table 50114 "Config. Caja Electronica"
+table 55113 "Config. Caja Electronica"
 {
 
     fields

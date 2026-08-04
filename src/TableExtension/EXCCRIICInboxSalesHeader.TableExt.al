@@ -1,4 +1,4 @@
-tableextension 50064 EXCCRIICInboxSalesHeader extends "IC Inbox Sales Header"
+tableextension 55064 EXCCRIICInboxSalesHeader extends "IC Inbox Sales Header"
 {
     fields
     {

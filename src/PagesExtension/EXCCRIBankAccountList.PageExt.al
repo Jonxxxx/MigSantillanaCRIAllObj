@@ -1,4 +1,4 @@
-pageextension 50064 EXCCRIBankAccountList extends "Bank Account List"
+pageextension 55064 EXCCRIBankAccountList extends "Bank Account List"
 {
     layout
     {

@@ -1,4 +1,4 @@
-report 52545 "Nota de Abono"
+report 55216 "Nota de Abono"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Nota de Abono.rdl';

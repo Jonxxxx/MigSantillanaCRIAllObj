@@ -1,4 +1,4 @@
-pageextension 50001 EXCCRICountriesRegions extends "Countries/Regions"
+pageextension 55226 EXCCRICountriesRegions extends "Countries/Regions"
 {
     layout
     {

@@ -20,7 +20,7 @@
 
 - Result: Failed because of pre-existing errors outside `src/tables`.
 - First reported errors: syntax errors in report objects under `src/Reports`.
-- Table-related warnings observed before the diagnostic limit: existing `AL0603` warnings in table 51003 and an existing `AL0667` warning in table 34002185.
+- Table-related warnings observed before the diagnostic limit: existing `AL0603` warnings in table 55164 and an existing `AL0667` warning in table 34002185.
 - No source files had been modified when this baseline was captured.
 
 ## Batches
@@ -95,9 +95,9 @@
 
 ### Baseline errors under `src/tables`
 
-- `src\Tables\Table 52502 - Log Facturacion Electronica CR.al:84:20` — `AL0185`: DotNet 'XmlDocument' is missing
-- `src\Tables\Table 50001 - Presupuesto (Flash de ventas).al:12:83` — `AL0186`: Reference 'Dimension Code' in application object 'Dimension Value' does not exist
-- `src\Tables\Table 50001 - Presupuesto (Flash de ventas).al:12:58` — `AL0204`: Field type Code is not convertible to field type Option.
+- `src\Tables\Table 55201 - Log Facturacion Electronica CR.al:84:20` — `AL0185`: DotNet 'XmlDocument' is missing
+- `src\Tables\Table 55226 - Presupuesto (Flash de ventas).al:12:83` — `AL0186`: Reference 'Dimension Code' in application object 'Dimension Value' does not exist
+- `src\Tables\Table 55226 - Presupuesto (Flash de ventas).al:12:58` — `AL0204`: Field type Code is not convertible to field type Option.
 - `src\Tables\Table 34002192 - Employee Profile Answer.al:125:13` — `AL0118`: The name 'UpdateEmpClassification' does not exist in the current context.
 
 ### Baseline errors outside `src/tables`
@@ -368,7 +368,7 @@
 - `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:263:23` — `AL0185`: Codeunit '34002504' is missing
 - `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:155:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:199:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0297`: The application object identifier '0' is not valid. It must be within the allowed ranges '[50000..70200028]'.
+- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0297`: The application object identifier '0' is not valid. It must be within the allowed ranges '[55225..70200028]'.
 - `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0197`: An application object of type 'Report' with name 'Check' is already declared by the extension 'Base Application by Microsoft (28.2.50931.52528)'
 - `src\Codeunits\Codeunit 34002114 - Registrar nomina HN.al:420:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
 - `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:777:40` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
@@ -385,7 +385,7 @@
 - `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1851:24` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
 - `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1934:34` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
 - `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:2191:21` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 50300 - Notificar Errores Colas.al:47:9` — `AL0118`: The name 'CompanyInfo' does not exist in the current context.
+- `src\Codeunits\Codeunit 55156 - Notificar Errores Colas.al:47:9` — `AL0118`: The name 'CompanyInfo' does not exist in the current context.
 - `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:73` — `AL0118`: The name 'F' does not exist in the current context.
 - `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:84` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
 - `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:514:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
@@ -825,7 +825,7 @@
 
 ### Batch 20
 
-- Tables inspected: 10 (50000, 50001, 50002, 50003, 50004, 50005, 50006, 50007, 50008, 50009)
+- Tables inspected: 10 (55225, 55226, 55227, 55228, 55229, 55230, 55231, 55232, 55233, 55234)
 - Tables modified: 10
 - Normal fields inspected: 163
 - FlowFields inspected: 0
@@ -841,11 +841,11 @@
 - Remaining table objects: 312
 - Remaining noncompliant Normal fields: 6342
 - Remaining fields without exact-name Captions: 4212
-- Last processed table: 50009 "Facturas POS no liquidadas"
+- Last processed table: 55234 "Facturas POS no liquidadas"
 
 ### Batch 21
 
-- Tables inspected: 10 (50010, 50012, 50015, 50016, 50017, 50018, 50019, 50025, 50026, 50027)
+- Tables inspected: 10 (55235, 55237, 55240, 55241, 55242, 55243, 55244, 55250, 55026, 55027)
 - Tables modified: 10
 - Normal fields inspected: 252
 - FlowFields inspected: 3
@@ -861,11 +861,11 @@
 - Remaining table objects: 302
 - Remaining noncompliant Normal fields: 6090
 - Remaining fields without exact-name Captions: 4159
-- Last processed table: 50027 TempImpuestoFE
+- Last processed table: 55027 TempImpuestoFE
 
 ### Batch 22
 
-- Tables inspected: 10 (50028, 50029, 50030, 50040, 50041, 50050, 50100, 50101, 50109, 50110)
+- Tables inspected: 10 (55028, 55029, 55030, 55040, 55041, 55050, 55100, 55101, 55109, 55110)
 - Tables modified: 10
 - Normal fields inspected: 225
 - FlowFields inspected: 3
@@ -881,11 +881,11 @@
 - Remaining table objects: 292
 - Remaining noncompliant Normal fields: 5865
 - Remaining fields without exact-name Captions: 4046
-- Last processed table: 50110 "Conf. Medios de pagos"
+- Last processed table: 55110 "Conf. Medios de pagos"
 
 ### Batch 23
 
-- Tables inspected: 10 (50111, 50112, 50113, 50114, 50130, 50134, 50135, 50136, 50137, 50500)
+- Tables inspected: 10 (55198, 55111, 55112, 55113, 55129, 55133, 55134, 55135, 55136, 55157)
 - Tables modified: 10
 - Normal fields inspected: 142
 - FlowFields inspected: 0
@@ -901,11 +901,11 @@
 - Remaining table objects: 282
 - Remaining noncompliant Normal fields: 5723
 - Remaining fields without exact-name Captions: 3905
-- Last processed table: 50500 "Ubicaciones que no existen"
+- Last processed table: 55157 "Ubicaciones que no existen"
 
 ### Batch 24
 
-- Tables inspected: 10 (50800, 50900, 51001, 51003, 51009, 51010, 51011, 51012, 51013, 51014)
+- Tables inspected: 10 (55159, 55160, 55162, 55164, 55170, 55171, 55172, 55173, 55174, 55175)
 - Tables modified: 10
 - Normal fields inspected: 234
 - FlowFields inspected: 7
@@ -921,11 +921,11 @@
 - Remaining table objects: 272
 - Remaining noncompliant Normal fields: 5489
 - Remaining fields without exact-name Captions: 3807
-- Last processed table: 51014 "Vendedores por Colegio"
+- Last processed table: 55175 "Vendedores por Colegio"
 
 ### Batch 25
 
-- Tables inspected: 10 (51015, 51016, 51017, 52500, 52501, 52502, 52503, 56000, 56001, 56002)
+- Tables inspected: 10 (55176, 55177, 55178, 55199, 55200, 55201, 55212, 56000, 56001, 56002)
 - Tables modified: 10
 - Normal fields inspected: 233
 - FlowFields inspected: 1

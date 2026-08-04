@@ -1,4 +1,4 @@
-pageextension 50008 EXCCRICustomerList extends "Customer List"
+pageextension 55233 EXCCRICustomerList extends "Customer List"
 {
     layout
     {

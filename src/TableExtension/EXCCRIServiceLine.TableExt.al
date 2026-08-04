@@ -1,4 +1,4 @@
-tableextension 50099 EXCCRIServiceLine extends "Service Line"
+tableextension 55099 EXCCRIServiceLine extends "Service Line"
 {
     fields
     {

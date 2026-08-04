@@ -1,4 +1,4 @@
-pageextension 50144 EXCCRIWhseShipmentSub extends "Whse. Shipment Subform"
+pageextension 55143 EXCCRIWhseShipmentSub extends "Whse. Shipment Subform"
 {
     layout
     {

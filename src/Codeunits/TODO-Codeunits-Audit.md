@@ -66,14 +66,14 @@ block during processing.
 | Codeunit 34002523 - Notas Credito Regis POS.al | 1 |
 | Codeunit 34002524 - Facturas Pendientes POS.al | 1 |
 | Codeunit 34002525 - Notas Credito Pdtes POS.al | 1 |
-| Codeunit 50010 - CI_AnularFacturas.al | 2 |
-| Codeunit 50112 - Registra Pedidos Vta. SIC_BC.al | 1 |
-| Codeunit 50113 - Sales-Post + Print SIC_BC.al | 4 |
-| Codeunit 50300 - Notificar Errores Colas.al | 5 |
-| Codeunit 52502 - Utilitario para corregir cosas.al | 10 |
-| Codeunit 52504 - Facturacion Electronica NAV.al | 1 |
-| Codeunit 52506 - Registro de costo.al | 1 |
-| Codeunit 55002 - Export Payments Formato EC.al | 6 |
+| Codeunit 55235 - CI_AnularFacturas.al | 2 |
+| Codeunit 55111 - Registra Pedidos Vta. SIC_BC.al | 1 |
+| Codeunit 55112 - Sales-Post + Print SIC_BC.al | 4 |
+| Codeunit 55156 - Notificar Errores Colas.al | 5 |
+| Codeunit 55201 - Utilitario para corregir cosas.al | 10 |
+| Codeunit 55202 - Facturacion Electronica NAV.al | 1 |
+| Codeunit 55204 - Registro de costo.al | 1 |
+| Codeunit 55227 - Export Payments Formato EC.al | 6 |
 | Codeunit 56000 - Funciones Santillana.al | 2 |
 | Codeunit 56003 - Factura Electronica.al | 1 |
 | Codeunit 56008 - Registro de costos.al | 1 |

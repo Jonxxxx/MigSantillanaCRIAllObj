@@ -1,4 +1,4 @@
-tableextension 50023 EXCCRIVendorPostingGroup extends "Vendor Posting Group"
+tableextension 55248 EXCCRIVendorPostingGroup extends "Vendor Posting Group"
 {
     fields
     {

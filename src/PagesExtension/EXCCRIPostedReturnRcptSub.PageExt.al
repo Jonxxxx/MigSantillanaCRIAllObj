@@ -1,4 +1,4 @@
-pageextension 50136 EXCCRIPostedReturnRcptSub extends "Posted Return Receipt Subform"
+pageextension 55135 EXCCRIPostedReturnRcptSub extends "Posted Return Receipt Subform"
 {
     layout
     {

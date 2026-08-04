@@ -1,4 +1,4 @@
-pageextension 50084 EXCCRIDtlCustLedgEntries extends "Detailed Cust. Ledg. Entries"
+pageextension 55084 EXCCRIDtlCustLedgEntries extends "Detailed Cust. Ledg. Entries"
 {
     layout
     {

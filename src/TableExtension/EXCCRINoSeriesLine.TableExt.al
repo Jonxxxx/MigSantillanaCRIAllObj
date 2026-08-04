@@ -1,4 +1,4 @@
-tableextension 50048 EXCCRINoSeriesLine extends "No. Series Line"
+tableextension 55048 EXCCRINoSeriesLine extends "No. Series Line"
 {
     fields
     {

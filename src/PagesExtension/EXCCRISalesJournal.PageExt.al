@@ -1,4 +1,4 @@
-pageextension 50058 EXCCRISalesJournal extends "Sales Journal"
+pageextension 55058 EXCCRISalesJournal extends "Sales Journal"
 {
     layout
     {

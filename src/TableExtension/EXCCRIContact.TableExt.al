@@ -1,13 +1,13 @@
-tableextension 50071 EXCCRIContact extends Contact
+tableextension 55071 EXCCRIContact extends Contact
 {
     fields
     {
-        field(50000; "% Descuento Cupon (Obsoleto)"; Decimal)
+        field(55225; "% Descuento Cupon (Obsoleto)"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50009; "Cod. Almacen"; Code[20])
+        field(55234; "Cod. Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Location where("Use As In-Transit" = const(false));
@@ -23,66 +23,66 @@ tableextension 50071 EXCCRIContact extends Contact
             end;
         }
 
-        field(50013; "Departamento"; Text[30])
+        field(55238; "Departamento"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50014; "Distritos"; Text[30])
+        field(55239; "Distritos"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50015; "Provincia"; Text[30])
+        field(55240; "Provincia"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50016; "Pais"; Text[30])
+        field(55241; "Pais"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50017; "Nombre Almacen"; Text[120])
+        field(55242; "Nombre Almacen"; Text[120])
         {
             DataClassification = CustomerContent;
         }
 
-        field(51000; "Canal de compra"; Code[10])
+        field(55161; "Canal de compra"; Code[10])
         {
             DataClassification = CustomerContent;
         }
 
-        field(51001; "Nombre canal"; Text[30])
+        field(55162; "Nombre canal"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(51002; "Microempresario"; Code[10])
+        field(55163; "Microempresario"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Micro empresario";
         }
 
-        field(51003; "Comisionista"; Code[10])
+        field(55164; "Comisionista"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = Comisionistas;
         }
 
-        field(51004; "Orden religiosa"; Code[20])
+        field(55165; "Orden religiosa"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Orden religiosa"));
         }
 
-        field(51005; "Asociacion Educativa"; Code[20])
+        field(55166; "Asociacion Educativa"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Asociacion educativa"));
         }
 
-        field(53000; "% Descuento Cupon"; Decimal)
+        field(55221; "% Descuento Cupon"; Decimal)
         {
             DataClassification = CustomerContent;
         }

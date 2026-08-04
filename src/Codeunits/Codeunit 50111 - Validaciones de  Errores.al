@@ -1,4 +1,4 @@
-codeunit 50111 "Validaciones de  Errores"
+codeunit 55198 "Validaciones de  Errores"
 {
 
     trigger OnRun()
@@ -16,7 +16,7 @@ codeunit 50111 "Validaciones de  Errores"
         ValidarMedPag: Boolean;
         Errores: Text[250];
         Text01: Label 'Campos en blanco: ';
-        CabVentasSIC: Record 50111;
+        CabVentasSIC: Record 55198;
         SH: Record 36;
 
     procedure ValidacionesCabecera(): Boolean
@@ -130,7 +130,7 @@ codeunit 50111 "Validaciones de  Errores"
 
     end;
 
-    procedure ValidacionesCabeceraSIC(CabVentasSIC: Record 50111): Boolean
+    procedure ValidacionesCabeceraSIC(CabVentasSIC: Record 55198): Boolean
     begin
 
         WITH CabVentasSIC DO BEGIN

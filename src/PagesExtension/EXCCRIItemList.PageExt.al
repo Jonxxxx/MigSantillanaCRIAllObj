@@ -1,4 +1,4 @@
-pageextension 50014 EXCCRIItemList extends "Item List"
+pageextension 55239 EXCCRIItemList extends "Item List"
 {
     layout
     {
@@ -227,7 +227,7 @@ pageextension 50014 EXCCRIItemList extends "Item List"
 
                 trigger OnAction()
                 var
-                    EXCCRIImportCABYSXmlPort: XmlPort 50001;
+                    EXCCRIImportCABYSXmlPort: XmlPort 55226;
                 begin
                     EXCCRIImportCABYSXmlPort.Run();
                 end;

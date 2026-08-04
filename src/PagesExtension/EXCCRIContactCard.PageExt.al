@@ -1,4 +1,4 @@
-pageextension 50092 EXCCRIContactCard extends "Contact Card"
+pageextension 55092 EXCCRIContactCard extends "Contact Card"
 {
     layout
     {
@@ -244,7 +244,7 @@ pageextension 50092 EXCCRIContactCard extends "Contact Card"
                     ApplicationArea = All;
                     Caption = 'Salespersons';
                     Image = SalesPerson;
-                    RunObject = Page 51010;
+                    RunObject = Page 55171;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the salespersons associated with the school.';
                 }

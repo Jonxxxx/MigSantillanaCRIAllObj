@@ -1,4 +1,4 @@
-report 54010 "Recibo form.fact. Dom. BO"
+report 55224 "Recibo form.fact. Dom. BO"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo form.fact. Dom. BO.rdl';

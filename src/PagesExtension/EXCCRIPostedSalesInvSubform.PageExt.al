@@ -1,4 +1,4 @@
-pageextension 50041 EXCCRIPostedSalesInvSubform extends "Posted Sales Invoice Subform"
+pageextension 55041 EXCCRIPostedSalesInvSubform extends "Posted Sales Invoice Subform"
 {
     layout
     {

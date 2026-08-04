@@ -1,4 +1,4 @@
-pageextension 50138 EXCCRISalesPrices extends "Sales Prices"
+pageextension 55137 EXCCRISalesPrices extends "Sales Prices"
 {
     trigger OnOpenPage()
     var

@@ -1,4 +1,4 @@
-xmlport 50502 "Importa Lista de Precios PR"
+xmlport 55158 "Importa Lista de Precios PR"
 {
     Caption = 'Importa Lista de Precios';
     Format = VariableText;

@@ -1,4 +1,4 @@
-pageextension 50076 EXCCRIVATBusPostingGroups extends "VAT Business Posting Groups"
+pageextension 55076 EXCCRIVATBusPostingGroups extends "VAT Business Posting Groups"
 {
     layout
     {

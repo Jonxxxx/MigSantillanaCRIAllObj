@@ -1,4 +1,4 @@
-pageextension 50030 EXCCRIPurchaseOrderSubform extends "Purchase Order Subform"
+pageextension 55030 EXCCRIPurchaseOrderSubform extends "Purchase Order Subform"
 {
     layout
     {

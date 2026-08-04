@@ -568,12 +568,12 @@ table 80001 "Tmp Sales Invoice Line"
             DataClassification = CustomerContent;
             Caption = 'Build Kit';
         }
-        field(50014; "Cod. Cupon"; Code[20])
+        field(55239; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cupon';
         }
-        field(50015; "No. Linea Cupon"; Integer)
+        field(55240; "No. Linea Cupon"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Linea Cupon';

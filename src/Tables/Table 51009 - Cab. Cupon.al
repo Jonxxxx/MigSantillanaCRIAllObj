@@ -1,9 +1,9 @@
-table 51009 "Cab. Cupon"
+table 55170 "Cab. Cupon"
 {
     // MOI - 24/04/2015 (#17899): Se amplia el tama o del campo 22 de 20 a 50.
 
     Caption = 'Coupon Header';
-    LookupPageID = 51005;
+    LookupPageID = 55166;
 
     fields
     {
@@ -172,13 +172,13 @@ table 51009 "Cab. Cupon"
             DataClassification = CustomerContent;
             Caption = 'Creado por Usuario';
         }
-        field(50000; "Cantidad Limite"; Integer)
+        field(55225; "Cantidad Limite"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
-        field(50001; "Importe Dto. Limite"; Decimal)
+        field(55226; "Importe Dto. Limite"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Dto. Limite';
@@ -244,15 +244,15 @@ table 51009 "Cab. Cupon"
         NoSeriesMgt: Codeunit 310;
         rCliente: Record 18;
         rContacto: Record 5050;
-        rAnoEscolar: Record 51013;
-        rLinCupon: Record 51010;
+        rAnoEscolar: Record 55174;
+        rLinCupon: Record 55171;
         rUserSetup: Record 91;
 
 
 
-    procedure AssistEdit(OldCabCupon: Record 51009): Boolean
+    procedure AssistEdit(OldCabCupon: Record 55170): Boolean
     var
-        rCabCupon: Record 51009;
+        rCabCupon: Record 55170;
     begin
         rCabCupon := Rec;
 

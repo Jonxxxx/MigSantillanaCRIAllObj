@@ -95,7 +95,7 @@ report 56080 "Limite Credito Clientes"
     }
 
     var
-        rConfSantillana: Record 50003;
+        rConfSantillana: Record 55228;
         CustomerCaptionLbl: Label 'Customer';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
 }

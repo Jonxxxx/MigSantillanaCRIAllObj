@@ -1,4 +1,4 @@
-pageextension 50033 EXCCRISalesCrMemoSubform extends "Sales Cr. Memo Subform"
+pageextension 55033 EXCCRISalesCrMemoSubform extends "Sales Cr. Memo Subform"
 {
     layout
     {

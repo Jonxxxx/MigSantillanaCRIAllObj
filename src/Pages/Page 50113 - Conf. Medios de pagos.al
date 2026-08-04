@@ -1,7 +1,7 @@
-page 50113 "Conf. Medios de pagos"
+page 55112 "Conf. Medios de pagos"
 {
     PageType = List;
-    SourceTable = 50110;
+    SourceTable = 55110;
 
     layout
     {

@@ -1,4 +1,4 @@
-pageextension 50023 EXCCRISalesList extends "Sales List"
+pageextension 55248 EXCCRISalesList extends "Sales List"
 {
     layout
     {

@@ -1,4 +1,4 @@
-codeunit 50001 "Funciones varias"
+codeunit 55226 "Funciones varias"
 {
     // Proyecto: Implementacion Microsoft Business Central
     // 
@@ -63,7 +63,7 @@ codeunit 50001 "Funciones varias"
 
     local procedure ActualizaCategoriaProducto()
     var
-        Utility: Record 50019;
+        Utility: Record 55244;
         ItemCategory: Record 5722;
     begin
         Utility.RESET;
@@ -87,7 +87,7 @@ codeunit 50001 "Funciones varias"
     local procedure Facturas_ActualizarCodeColegioPos()
     var
         SalesInvoiceHeader: Record 112;
-        CabVentasSIC: Record 50111;
+        CabVentasSIC: Record 55198;
         SIH: Record 112;
         Contact: Record 5050;
     begin
@@ -129,7 +129,7 @@ codeunit 50001 "Funciones varias"
     local procedure NCR_ActualizarCodeColegioPos()
     var
         SalesCrMemoHeader: Record 114;
-        CabVentasSIC: Record 50111;
+        CabVentasSIC: Record 55198;
         CRMH: Record 114;
         Contact: Record 5050;
     begin
@@ -173,7 +173,7 @@ codeunit 50001 "Funciones varias"
     local procedure SH_ActualizarCodeColegioPos()
     var
         SalesHeader: Record 36;
-        CabVentasSIC: Record 50111;
+        CabVentasSIC: Record 55198;
         SH: Record 36;
         Contact: Record 5050;
     begin

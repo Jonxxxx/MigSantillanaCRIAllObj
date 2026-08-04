@@ -1,4 +1,4 @@
-tableextension 50010 EXCCRIVendor extends Vendor
+tableextension 55235 EXCCRIVendor extends Vendor
 {
     fields
     {

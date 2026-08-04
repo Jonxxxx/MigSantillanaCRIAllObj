@@ -1,4 +1,4 @@
-page 50000 "Pantalla Scanner manual"
+page 55225 "Pantalla Scanner manual"
 {
     PageType = Card;
 

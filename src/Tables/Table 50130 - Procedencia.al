@@ -1,7 +1,7 @@
-table 50130 Procedencia
+table 55129 Procedencia
 {
-    //IGNORAR: Page no existe DrillDownPageID = 50031;
-    //IGNORAR: Page no existe LookupPageID = 50031;
+    //IGNORAR: Page no existe DrillDownPageID = 55031;
+    //IGNORAR: Page no existe LookupPageID = 55031;
 
     fields
     {

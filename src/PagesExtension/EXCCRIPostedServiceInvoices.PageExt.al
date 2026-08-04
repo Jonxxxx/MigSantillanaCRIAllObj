@@ -1,4 +1,4 @@
-pageextension 50129 EXCCRIPostedServiceInvoices extends "Posted Service Invoices"
+pageextension 55128 EXCCRIPostedServiceInvoices extends "Posted Service Invoices"
 {
     layout
     {

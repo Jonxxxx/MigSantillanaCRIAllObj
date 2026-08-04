@@ -1,4 +1,4 @@
-pageextension 50016 EXCCRIItemLedgerEntries extends "Item Ledger Entries"
+pageextension 55241 EXCCRIItemLedgerEntries extends "Item Ledger Entries"
 {
     layout
     {

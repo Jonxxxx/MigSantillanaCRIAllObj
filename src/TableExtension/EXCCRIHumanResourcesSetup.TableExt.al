@@ -1,4 +1,4 @@
-tableextension 50079 EXCCRIHumanResourcesSetup extends "Human Resources Setup"
+tableextension 55079 EXCCRIHumanResourcesSetup extends "Human Resources Setup"
 {
     fields
     {

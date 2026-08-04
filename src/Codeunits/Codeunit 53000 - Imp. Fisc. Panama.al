@@ -1,4 +1,4 @@
-codeunit 53000 "Imp. Fisc. Panama"
+codeunit 55221 "Imp. Fisc. Panama"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

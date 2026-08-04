@@ -89,7 +89,7 @@
 ## Batch 3
 
 - Codeunits inspected and modified: 34002522, 34002523, 34002524,
-  34002525, 50010, 50112, 50113, 50300, 52502, and 52504.
+  34002525, 55235, 55111, 55112, 55156, 55201, and 55202.
 - TODOs safely resolved: 2. Migrated two calls from removed
   `CreateCreditMemoCopyDocument2` to the verified v27
   `CreateCreditMemoCopyDocument` method with matching `var` record types.
@@ -105,7 +105,7 @@
   dependency, undefined Email scenario, and removed virtual/deposit objects.
 - Verification performed: complete current-codeunit and procedure inspection;
   repository searches for CduPOS, cfComunes, cuFE, corrective-posting callers,
-  and Codeunit 52504; `al_symbolsearch` for every Correct Posted Sales Invoice
+  and Codeunit 55202; `al_symbolsearch` for every Correct Posted Sales Invoice
   method, CreateSalesInvoice methods, and Dimension Management.
 - Public callers reviewed: no public signature changed; the restored standard
   calls use the existing local variables and exact record types.
@@ -122,11 +122,11 @@
 - Remaining `//TODO: Ver`: 87.
 - Total `// TODO: Manual review`: 166.
 - Last successfully processed file:
-  `src/Codeunits/Codeunit 52504 - Facturacion  Electronica NAV.al`.
+  `src/Codeunits/Codeunit 55202 - Facturacion  Electronica NAV.al`.
 
 ## Batch 4
 
-- Codeunits inspected and modified: 52506, 55002, 56000, 56003, 56008,
+- Codeunits inspected and modified: 55204, 55227, 56000, 56003, 56008,
   56050, 56051, 56200, 56201, and 56202.
 - TODOs safely resolved: 2. Restored the verified custom
   `EXCCRIReleaseSalesDocSub.SetIgnorarControles` state setter before running
@@ -140,10 +140,10 @@
   confidence levels.
 - Final classification: verified custom release-state and XMLport calls, or
   unsupported server-file workflows, removed payment/email fields, unavailable
-  Report 51003, absent implementations, an unverified reservation direction,
+  Report 55164, absent implementations, an unverified reservation direction,
   inaccessible XMLport procedures, and DotNet HTTP/XML redesign.
 - Verification performed: complete codeunit/procedure inspection; repository
-  searches for Report 51003, XMLports 56200/56201 and their procedures, and
+  searches for Report 55164, XMLports 56200/56201 and their procedures, and
   `EXCCRIReleaseSalesDocSub`; `al_symbolsearch` for `FilterReservFor`,
   Reservation Management, and all Sales Line-Reserve methods.
 - Public callers reviewed: no public procedure signature was changed; custom
@@ -222,7 +222,7 @@
   notification codeunit whose email implementation remains disabled.
 - Verification performed: complete codeunit and procedure inspection;
   repository searches for the insolvency enum extension, all usages of both
-  insolvency values, Codeunits 56003, 52504, and 50300; `al_symbolsearch` for
+  insolvency values, Codeunits 56003, 55202, and 55156; `al_symbolsearch` for
   OnBeforePostGenJnlLine, OnAfterPostGenJnlLine, OnAfterPostSalesDoc, and
   OnBeforeConfirmSalesPost, plus the Item Reference symbols verified in
   Batch 5.
@@ -302,7 +302,7 @@
 
 ## Manual-review batch 1
 
-- Codeunits inspected and modified: 34002108, 34002145, 50300, 52506,
+- Codeunits inspected and modified: 34002108, 34002145, 55156, 55204,
   56008, 56202, 56206, 56300, 75002, and 75009.
 - Manual reviews resolved: 19.
 - Email migrations: 4 complete synchronous Email/Email Message flows,
@@ -363,10 +363,10 @@
 
 ## Manual-review batch 3
 
-- Codeunits inspected: 52502, 55002, 34002199,
+- Codeunits inspected: 55201, 55227, 34002199,
   EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 34002118,
   56000, 75001, and 56200.
-- Codeunits modified: 52502, 34002522, 75001, and 56200.
+- Codeunits modified: 55201, 34002522, 75001, and 56200.
 - Manual reviews resolved: 6.
 - Email migrations: 0.
 - Report-output migrations: 0.
@@ -382,14 +382,14 @@
   POS header and line dimension signatures.
 - Event subscriber migrations: 0.
 - Manual reviews retained for missing custom objects/procedures: electronic
-  invoicing codeunits are empty, payment codeunits and report 51003 are
+  invoicing codeunits are empty, payment codeunits and report 55164 are
   absent, MdE XMLport methods are absent, and the compiled POS helper
   codeunits do not expose `TraerUsuarioWindows` or `Pais`.
 - Manual reviews retained for missing custom fields/options: legacy deposit
   table 10144, payroll option 6, `Tipo pago OLD`, and country-specific bank
   metadata remain unavailable.
 - Manual reviews retained for external contracts: the disabled bank
-  transmission contract in codeunit 55002 remains unavailable.
+  transmission contract in codeunit 55227 remains unavailable.
 - Manual reviews retained for genuine functional ambiguity: insolvency
   posting remains tied to a disabled report outside `src/Codeunits`.
 - Compilation: the first validation found four introduced errors. The two
@@ -402,13 +402,13 @@
 
 ## Manual-review batch 4
 
-- Codeunits inspected: 75007, 50113, 50112,
+- Codeunits inspected: 75007, 55112, 55111,
   EXCCRITableMigrationHandler, 56051, 75002, 75006, 75005, 56201, and
   67001.
-- Codeunits modified: 75007, 50112, EXCCRITableMigrationHandler, and 56051.
+- Codeunits modified: 75007, 55111, EXCCRITableMigrationHandler, and 56051.
 - Manual reviews resolved: 5.
 - Email migrations: the Job Queue `OnAfterFinalizeRun` subscriber was restored
-  to run codeunit 50300, whose Email/Email Message implementation was
+  to run codeunit 55156, whose Email/Email Message implementation was
   completed in batch 1.
 - Report-output migrations: 0.
 - File-upload migrations: 0.
@@ -420,7 +420,7 @@
   `Sales Line-Reserve.FilterReservFor` call.
 - Event subscriber migrations: 1.
 - Manual reviews retained for missing custom objects/procedures: electronic
-  invoicing codeunit 52504, MdM sender codeunit 75006, and complementary MdE
+  invoicing codeunit 55202, MdM sender codeunit 75006, and complementary MdE
   codeunit 56201 do not implement the required contracts.
 - Manual reviews retained for missing custom fields: 0.
 - Manual reviews retained for external contracts: the asynchronous MdM
@@ -466,9 +466,9 @@
 
 ## Manual-review batch 6
 
-- Codeunits inspected: 50010, 52504, 56003, plus dependency-reopened or
-  retained-review entries in 34002522, 55002, 34002126, 34002199, and 52502.
-- Codeunits modified: 50010, 34002522, 55002, 34002126, 34002199, and 52502.
+- Codeunits inspected: 55235, 55202, 56003, plus dependency-reopened or
+  retained-review entries in 34002522, 55227, 34002126, 34002199, and 55201.
+- Codeunits modified: 55235, 34002522, 55227, 34002126, 34002199, and 55201.
 - Manual reviews resolved or deduplicated: 9.
 - Email migrations: 0.
 - Report/file migrations: 0.
@@ -478,7 +478,7 @@
   posted-credit-memo correction call; the POS TPV filter now uses `UserId`.
 - Event subscriber migrations: 0.
 - Manual reviews retained for missing custom objects/procedures: codeunits
-  52504 and 56003 are empty and provide no electronic-invoicing procedures;
+  55202 and 56003 are empty and provide no electronic-invoicing procedures;
   codeunit 34002503 does not expose `Pais`; table 10144 and virtual table
   2000000071 are unavailable.
 - Manual reviews retained for external contracts: both empty electronic
@@ -540,19 +540,19 @@ Every remaining source comment was re-evaluated against the current repository, 
 | `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:38` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
 | `src\Codeunits\Codeunit 34002522 - Registrar Ventas en Lote DsPOS.al:1073` | Missing custom object / field / procedure | Codeunit 34002503 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected. |
 | `src\Codeunits\Codeunit 34002521 - Control TPV.al:19` | External contract / SaaS redesign | The invoice-cancellation call targets disabled legacy POS integration behavior and its external transaction contract is unavailable. |
-| `src\Codeunits\Codeunit 52504 - Facturacion  Electronica NAV.al:3` | External contract / SaaS redesign | The complete electronic-invoicing implementation is absent and requires an external integration contract; no executable replacement exists in the repository. |
-| `src\Codeunits\Codeunit 52506 - Registro de costo.al:46` | Undefined background destination | This codeunit runs as a timed background process, but no SaaS-compatible storage or delivery destination is defined for the generated cost-report PDF or its duplicate-prevention state. |
-| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
-| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:32` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
-| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:48` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
-| `src\Codeunits\Codeunit 52502 - Utilitario para corregir cosas.al:77` | Missing custom object / field / procedure | Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored. |
-| `src\Codeunits\Codeunit 50113 - Sales-Post + Print SIC_BC.al:271` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored. |
-| `src\Codeunits\Codeunit 50113 - Sales-Post + Print SIC_BC.al:280` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored. |
+| `src\Codeunits\Codeunit 55202 - Facturacion  Electronica NAV.al:3` | External contract / SaaS redesign | The complete electronic-invoicing implementation is absent and requires an external integration contract; no executable replacement exists in the repository. |
+| `src\Codeunits\Codeunit 55204 - Registro de costo.al:46` | Undefined background destination | This codeunit runs as a timed background process, but no SaaS-compatible storage or delivery destination is defined for the generated cost-report PDF or its duplicate-prevention state. |
+| `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
+| `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:32` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
+| `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:48` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
+| `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:77` | Missing custom object / field / procedure | Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored. |
+| `src\Codeunits\Codeunit 55112 - Sales-Post + Print SIC_BC.al:271` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored. |
+| `src\Codeunits\Codeunit 55112 - Sales-Post + Print SIC_BC.al:280` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored. |
 | `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:580` | Missing custom object / field / procedure | The current Config. Usuarios Empresa table does not contain the email opt-in, recipient, or address fields required by this confirmation workflow. |
-| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:816` | Missing custom object / field / procedure | Report 51003 is not present in the current repository, so the original POS sales registration cannot be restored. |
+| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:816` | Missing custom object / field / procedure | Report 55164 is not present in the current repository, so the original POS sales registration cannot be restored. |
 | `src\Codeunits\Codeunit 56003 - Factura Electronica.al:3` | External contract / SaaS redesign | The complete legacy electronic-invoicing implementation is absent and cannot be reconstructed from this empty codeunit. |
-| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:83` | Missing custom object / field / procedure | The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable. |
-| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:383` | Missing custom object / field / procedure | Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table. |
+| `src\Codeunits\Codeunit 55227 - Export Payments Formato EC.al:83` | Missing custom object / field / procedure | The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable. |
+| `src\Codeunits\Codeunit 55227 - Export Payments Formato EC.al:383` | Missing custom object / field / procedure | Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table. |
 | `src\Codeunits\Codeunit 56008 - Registro de costos.al:60` | Undefined background destination | This timed background process has no SaaS-compatible storage or delivery destination for the generated cost-report PDF. |
 | `src\Codeunits\Codeunit 56200 - Web Service MdE.al:21` | Missing custom object / field / procedure | XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object. |
 | `src\Codeunits\Codeunit 56201 - Informacion Complementaria MDE.al:3` | External contract / SaaS redesign | The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit. |
@@ -565,8 +565,8 @@ Every remaining source comment was re-evaluated against the current repository, 
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:159` | Genuine functional ambiguity | Enabling recognition of the custom insolvency account types would activate high-risk financial posting while its journal source remains disabled and unvalidated. |
 | `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:95` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose Factura for the posted sales-invoice record. |
 | `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:104` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose NotaCR for the posted sales-credit-memo record. |
-| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:124` | Missing custom object / field / procedure | Codeunit 52504 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch. |
-| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:152` | Missing custom object / field / procedure | Codeunit 52504 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:124` | Missing custom object / field / procedure | Codeunit 55202 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:152` | Missing custom object / field / procedure | Codeunit 55202 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number. |
 
 # Manual-review re-evaluation completion
 

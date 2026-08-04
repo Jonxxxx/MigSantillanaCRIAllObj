@@ -1,4 +1,4 @@
-tableextension 50034 EXCCRIPurchCrMemoHdr extends "Purch. Cr. Memo Hdr."
+tableextension 55034 EXCCRIPurchCrMemoHdr extends "Purch. Cr. Memo Hdr."
 {
     fields
     {

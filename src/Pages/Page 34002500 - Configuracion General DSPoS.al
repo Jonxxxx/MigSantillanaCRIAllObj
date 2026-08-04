@@ -31,10 +31,10 @@ page 34002500 "Configuracion General DSPoS"
                     ToolTip = 'Nombre Divisa Local';
                 }
             }
-            part(PartPage; 50114)
+            part(PartPage; 55113)
             {
             }
-            part(PartPage1; 50113)
+            part(PartPage1; 55112)
             {
             }
         }
@@ -46,8 +46,8 @@ page 34002500 "Configuracion General DSPoS"
 
     trigger OnInit()
     var
-        // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
-        // Original code: cfComunes: Codeunit 34002503;
+    // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
+    // Original code: cfComunes: Codeunit 34002503;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.

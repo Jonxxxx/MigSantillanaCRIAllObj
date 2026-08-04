@@ -1,11 +1,11 @@
-page 51005 "Lista Cupon"
+page 55166 "Lista Cupon"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Coupon List';
     CardPageID = "Ficha Cupon";
     Editable = false;
     PageType = List;
-    SourceTable = 51009;
+    SourceTable = 55170;
     UsageCategory = Lists;
 
     layout

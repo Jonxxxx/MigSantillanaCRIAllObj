@@ -1,4 +1,4 @@
-pageextension 50134 EXCCRIPurchaseReturnOrder extends "Purchase Return Order"
+pageextension 55133 EXCCRIPurchaseReturnOrder extends "Purchase Return Order"
 {
     layout
     {

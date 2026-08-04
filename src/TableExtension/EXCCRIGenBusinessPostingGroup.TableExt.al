@@ -1,4 +1,4 @@
-tableextension 50040 EXCCRIGenBusinessPostingGroup extends "Gen. Business Posting Group"
+tableextension 55040 EXCCRIGenBusinessPostingGroup extends "Gen. Business Posting Group"
 {
     fields
     {

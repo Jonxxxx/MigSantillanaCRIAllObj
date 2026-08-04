@@ -1,4 +1,4 @@
-pageextension 50135 EXCCRIPurchReturnOrderSub extends "Purchase Return Order Subform"
+pageextension 55134 EXCCRIPurchReturnOrderSub extends "Purchase Return Order Subform"
 {
     layout
     {

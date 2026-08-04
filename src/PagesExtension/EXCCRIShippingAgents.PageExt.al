@@ -1,4 +1,4 @@
-pageextension 50072 EXCCRIShippingAgents extends "Shipping Agents"
+pageextension 55072 EXCCRIShippingAgents extends "Shipping Agents"
 {
     layout
     {

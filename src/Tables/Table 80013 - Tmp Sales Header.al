@@ -1017,41 +1017,41 @@ table 80013 "Tmp Sales Header"
             DataClassification = CustomerContent;
             Caption = 'Prepmt. Include Tax';
         }
-        field(50000; "Estado distribucion"; Option)
+        field(55225; "Estado distribucion"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Estado distribucion';
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho",Entregado;
         }
-        field(50008; "No. copias Picking"; Integer)
+        field(55233; "No. copias Picking"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. copias Picking';
             Editable = false;
         }
-        field(50009; "Nota de Credito"; Boolean)
+        field(55234; "Nota de Credito"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Nota de Credito';
         }
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo de Venta';
             OptionCaption = 'Invoice,Consignation,Sample';
             OptionMembers = Factura,Consignacion,Muestra;
         }
-        field(50011; "No. Bultos"; Integer)
+        field(55236; "No. Bultos"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Bultos';
         }
-        field(50012; "Cantidad para devolucion"; Decimal)
+        field(55237; "Cantidad para devolucion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad para devolucion';
         }
-        field(50013; "Cantidad en lineas"; Decimal)
+        field(55238; "Cantidad en lineas"; Decimal)
         {
             Caption = 'Cantidad en lineas';
             CalcFormula = Sum("Sales Line".Quantity WHERE("Document Type" = FIELD("Document Type"),
@@ -1059,22 +1059,22 @@ table 80013 "Tmp Sales Header"
                                                            "Type" = FILTER(Item)));
             FieldClass = FlowField;
         }
-        field(50014; "PO Box address"; Text[50])
+        field(55239; "PO Box address"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'PO Box address';
         }
-        field(53000; "ID Cajero"; Code[20])
+        field(55221; "ID Cajero"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'ID Cajero';
         }
-        field(53001; "Hora creacion"; Time)
+        field(55222; "Hora creacion"; Time)
         {
             DataClassification = CustomerContent;
             Caption = 'Hora creacion';
         }
-        field(53002; "Tipo pedido"; Option)
+        field(55223; "Tipo pedido"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo pedido';

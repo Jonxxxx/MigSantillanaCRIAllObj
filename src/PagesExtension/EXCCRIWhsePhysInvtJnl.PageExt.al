@@ -1,4 +1,4 @@
-pageextension 50142 EXCCRIWhsePhysInvtJnl extends "Whse. Phys. Invt. Journal"
+pageextension 55141 EXCCRIWhsePhysInvtJnl extends "Whse. Phys. Invt. Journal"
 {
     actions
     {

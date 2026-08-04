@@ -1,4 +1,4 @@
-pageextension 50079 EXCCRIDimensions extends Dimensions
+pageextension 55079 EXCCRIDimensions extends Dimensions
 {
     layout
     {

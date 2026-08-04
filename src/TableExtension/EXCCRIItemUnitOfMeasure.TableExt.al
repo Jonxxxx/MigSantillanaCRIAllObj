@@ -1,4 +1,4 @@
-tableextension 50080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
+tableextension 55080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
 {
     // Ver
     /*

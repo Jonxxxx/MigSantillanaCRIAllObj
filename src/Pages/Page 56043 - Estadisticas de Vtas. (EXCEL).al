@@ -93,8 +93,8 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    CategoriaPedidoVenta: Record 52503;
-                    CategoriaPedidoVentaPage: Page 52506;
+                    CategoriaPedidoVenta: Record 55212;
+                    CategoriaPedidoVentaPage: Page 55204;
                 begin
                     CLEAR(CategoriaPedidoVentaPage);
                     CLEAR(CategoriaPedidoVenta);

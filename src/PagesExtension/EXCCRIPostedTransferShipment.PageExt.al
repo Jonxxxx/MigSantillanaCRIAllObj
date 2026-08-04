@@ -1,4 +1,4 @@
-pageextension 50117 EXCCRIPostedTransferShipment extends "Posted Transfer Shipment"
+pageextension 55116 EXCCRIPostedTransferShipment extends "Posted Transfer Shipment"
 {
     layout
     {
@@ -72,7 +72,7 @@ pageextension 50117 EXCCRIPostedTransferShipment extends "Posted Transfer Shipme
                             EXCCRITransferShptHeader.Reset();
                             EXCCRITransferShptHeader.SetRange("No.", Rec."No.");
                             Report.RunModal(
-                                50036,
+                                55036,
                                 false,
                                 true,
                                 EXCCRITransferShptHeader);

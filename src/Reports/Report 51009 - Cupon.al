@@ -1,4 +1,4 @@
-report 51009 Cupon
+report 55170 Cupon
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Cupon.rdl';
@@ -8,7 +8,7 @@ report 51009 Cupon
 
     dataset
     {
-        dataitem("Cab. Cupon"; 51009)
+        dataitem("Cab. Cupon"; 55170)
         {
             DataItemTableView = SORTING("No. Cupon");
             RequestFilterFields = "No. Cupon";
@@ -203,11 +203,11 @@ report 51009 Cupon
         CodLibro: array[7] of Code[20];
         txtDescripcion: array[7] of Text[100];
         wDescuento: array[7] of Decimal;
-        rLinCupon: Record 51010;
+        rLinCupon: Record 55171;
         I: Integer;
         rConfSantillana: Record 56001;
         GradoAlum: Text[100];
-        rGrado: Record 51012;
+        rGrado: Record 55173;
         Grado_CaptionLbl: Label 'Grado:';
         NO__CUPON_CaptionLbl: Label 'NO. CUPON:';
         ASESOR_CaptionLbl: Label 'ASESOR:';

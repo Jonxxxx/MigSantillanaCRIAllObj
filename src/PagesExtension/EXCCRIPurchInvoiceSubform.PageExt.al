@@ -1,4 +1,4 @@
-pageextension 50031 EXCCRIPurchInvoiceSubform extends "Purch. Invoice Subform"
+pageextension 55031 EXCCRIPurchInvoiceSubform extends "Purch. Invoice Subform"
 {
     layout
     {

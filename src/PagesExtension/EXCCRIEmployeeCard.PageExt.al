@@ -1,4 +1,4 @@
-pageextension 50099 EXCCRIEmployeeCard extends "Employee Card"
+pageextension 55099 EXCCRIEmployeeCard extends "Employee Card"
 {
     layout
     {

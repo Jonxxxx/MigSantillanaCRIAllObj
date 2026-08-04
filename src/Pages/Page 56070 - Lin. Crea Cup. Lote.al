@@ -1,7 +1,7 @@
 page 56070 "Lin. Crea Cup. Lote"
 {
     PageType = ListPart;
-    SourceTable = 51011;
+    SourceTable = 55172;
 
     layout
     {

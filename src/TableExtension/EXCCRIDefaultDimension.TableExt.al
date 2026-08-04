@@ -1,4 +1,4 @@
-tableextension 50056 EXCCRIDefaultDimension extends "Default Dimension"
+tableextension 55056 EXCCRIDefaultDimension extends "Default Dimension"
 {
     trigger OnAfterInsert()
     var

@@ -1,4 +1,4 @@
-tableextension 50107 EXCCRIWarehouseJournalLine extends "Warehouse Journal Line"
+tableextension 55107 EXCCRIWarehouseJournalLine extends "Warehouse Journal Line"
 {
     fields
     {

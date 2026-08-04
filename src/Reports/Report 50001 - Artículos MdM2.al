@@ -1,4 +1,4 @@
-report 50001 "Articulos MdM2"
+report 55226 "Articulos MdM2"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Articulos MdM2.rdl';

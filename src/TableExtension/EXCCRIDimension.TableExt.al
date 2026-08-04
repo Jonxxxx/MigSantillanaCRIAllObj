@@ -1,4 +1,4 @@
-tableextension 50054 EXCCRIDimension extends Dimension
+tableextension 55054 EXCCRIDimension extends Dimension
 {
     fields
     {

@@ -1,4 +1,4 @@
-pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoices"
+pageextension 55051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoices"
 {
     layout
     {
@@ -81,7 +81,7 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
                         EXCCRIVendor: Record Vendor;
                     begin
                         EXCCRIVendor.Get(Rec."Buy-from Vendor No.");
@@ -109,8 +109,8 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
-                        EXCCRIElectronicLog: Record 52502;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
+                        EXCCRIElectronicLog: Record 55201;
                     begin
                         if not EXCCRIElectronicLog.Get(7, Rec."No.") then
                             Error(EXCCRIElectronicLogMissingErr, Rec."No.");
@@ -132,7 +132,7 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = page 52500;
+                    RunObject = page 55199;
                     RunPageLink = NoDocumento = field("No.");
                     ToolTip = 'Opens the electronic document log related to the posted purchase invoice.';
                 }
@@ -149,7 +149,7 @@ pageextension 50051 EXCCRIPostedPurchaseInvoices extends "Posted Purchase Invoic
     end;
 
     var
-        EXCCRIDsnPurchInvExt: Record 50028;
+        EXCCRIDsnPurchInvExt: Record 55028;
         EXCCRIElectronicLogMissingErr: Label 'No electronic invoicing log information was found for document %1.';
         EXCCRIInvalidVendorTaxIdErr: Label 'To issue the electronic purchase invoice, the vendor tax identification type must be Foreign Non-Resident. The current value is %1.';
 }

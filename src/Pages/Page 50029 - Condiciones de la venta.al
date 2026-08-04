@@ -1,7 +1,7 @@
-page 50029 "Condiciones de la venta"
+page 55029 "Condiciones de la venta"
 {
     PageType = List;
-    SourceTable = 50029;
+    SourceTable = 55029;
 
     layout
     {

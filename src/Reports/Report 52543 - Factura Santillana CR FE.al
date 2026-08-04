@@ -1,4 +1,4 @@
-report 52543 "Factura Santillana CR FE"
+report 55214 "Factura Santillana CR FE"
 {
     // #4186   30/09/2014      PLB           Se ha creado la opcion de poder imprimir las lineas por el ranking de ubicacion
     // 
@@ -342,7 +342,7 @@ report 52543 "Factura Santillana CR FE"
             trigger OnAfterGetRecord()
             var
                 QRCodeInput: Code[20];
-                FE: Codeunit 52504;
+                FE: Codeunit 55202;
                 TempBlob: Codeunit "Temp Blob";
             begin
                 IF NOT "QR Code FE".HASVALUE THEN
@@ -543,14 +543,14 @@ report 52543 "Factura Santillana CR FE"
         ComentarioCaptionLbl: Label 'Comentarios: ';
         //TODO: no existe Referencia: Record 5717;
         TotalMuestra: Decimal;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         Number: Integer;
         DocNum: Code[20];
         Contador: Integer;
         Codigo: Code[20];
         Descripcion: Text;
         ConfSant: Record 56001;
-        CategoriaPedidoVenta: Record 52503;
+        CategoriaPedidoVenta: Record 55212;
         SIL: Record 113;
         CodCategoria: array[3] of Code[20];
         DescCategoria: array[3] of Text[100];

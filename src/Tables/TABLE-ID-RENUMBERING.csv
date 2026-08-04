@@ -1,0 +1,515 @@
+ObjectType,OldID,NewID,ObjectName,FilePath,Status
+Table,50000,55000,"Flash ventas (TMP)","src/tables/Table 50000 - Flash ventas (TMP).al",Renumbered
+Table,50001,55001,"Presupuesto (Flash de ventas)","src/tables/Table 50001 - Presupuesto (Flash de ventas).al",Renumbered
+Table,50002,55002,"Flash ventas (Cantidades)","src/tables/Table 50002 - Flash ventas (Cantidades).al",Renumbered
+Table,50003,55003,"Conf. Editorial Santillana","src/tables/Table 50003 - Conf. Editorial Santillana.al",Renumbered
+Table,50004,55004,"Dimension Value-Vendores","src/tables/Table 50004 - Dimension Value-Vendores.al",Renumbered
+Table,50005,55005,"TMP: Ventas x Vend. - Zona","src/tables/Table 50005 - TMP Ventas x Vend. - Zona.al",Renumbered
+Table,50006,55006,"Conf. PRISA","src/tables/Table 50006 - Conf. PRISA.al",Renumbered
+Table,50007,55007,"Datos PRISA","src/tables/Table 50007 - Datos PRISA.al",Renumbered
+Table,50008,55008,"Colegio - Adopciones Detalle2","src/tables/Table 50008 - Colegio - Adopciones Detalle2.al",Renumbered
+Table,50009,55009,"Facturas POS no liquidadas","src/tables/Table 50009 - Facturas POS no liquidadas.al",Renumbered
+Table,50010,55010,"Valores dimension TMP","src/tables/Table 50010 - Valores dimension TMP.al",Renumbered
+Table,50012,55011,"Productos - Ventas por cliente","src/tables/Table 50012 - Productos - Ventas por cliente.al",Renumbered
+Table,50015,55012,"Razones anulacion factura","src/tables/Table 50015 - Razones anulacion factura.al",Renumbered
+Table,50016,55013,"Abonos - Facturas afectadas","src/tables/Table 50016 - Abonos - Facturas afectadas.al",Renumbered
+Table,50017,55014,"Sales Invoice Header (TMP)","src/tables/Table 50017 - Sales Invoice Header (TMP).al",Renumbered
+Table,50018,55015,"Sales Invoice Line (TMP)","src/tables/Table 50018 - Sales Invoice Line (TMP).al",Renumbered
+Table,50019,55016,"Utility - fes","src/tables/Table 50019 - Utility - fes.al",Renumbered
+Table,50025,55017,"Tipo Descuentos DGT","src/tables/Table 50025 - Tipo Descuentos DGT.al",Renumbered
+Table,50026,55018,"Catalogo CaByS","src/tables/Table 50026 - Catalogo CaByS.al",Renumbered
+Table,50027,55019,"TempImpuestoFE","src/tables/Table 50027 - TempImpuestoFE.al",Renumbered
+Table,50028,55020,"DSN Purch. Inv. Ext","src/tables/Table 50028 - DSN Purch. Inv. Ext.al",Renumbered
+Table,50029,55021,"Condicion De La Venta","src/tables/Table 50029 - Condicion De La Venta.al",Renumbered
+Table,50030,55022,"Catalogo Parametros FE-DGT","src/tables/Table 50030 - Catalogo Parametros FE-DGT.al",Renumbered
+Table,50040,55023,"TmpGUASalesBook","src/tables/Table 50040 - TmpGUASalesBook.al",Renumbered
+Table,50041,55024,"TmpGUAPurchasesBook","src/tables/Table 50041 - TmpGUAPurchasesBook.al",Renumbered
+Table,50050,55025,"Sales Invoice Header1","src/tables/Table 50050 - Sales Invoice Header1.al",Renumbered
+Table,50100,55026,"Cab. Venta NopCommerce","src/tables/Table 50100 - Cab. Venta NopCommerce.al",Renumbered
+Table,50101,55027,"Lin. Venta NopCommerce","src/tables/Table 50101 - Lin. Venta NopCommerce.al",Renumbered
+Table,50109,55028,"DatosPonchador","src/tables/Table 50109 - DatosPonchador.al",Renumbered
+Table,50110,55029,"Conf. Medios de pagos","src/tables/Table 50110 - Conf. Medios de pagos.al",Renumbered
+Table,50111,55030,"Cab. Ventas SIC","src/tables/Table 50111 - Cab. Ventas SIC.al",Renumbered
+Table,50112,55031,"Lineas Ventas SIC","src/tables/Table 50112 - Lineas Ventas SIC.al",Renumbered
+Table,50113,55032,"Medios de Pago SIC","src/tables/Table 50113 - Medios de Pago SIC.al",Renumbered
+Table,50114,55033,"Config. Caja Electronica","src/tables/Table 50114 - Config. Caja Electronica.al",Renumbered
+Table,50130,55034,"Procedencia","src/tables/Table 50130 - Procedencia.al",Renumbered
+Table,50134,55035,"Cursos","src/tables/Table 50134 - Cursos.al",Renumbered
+Table,50135,55036,"Componentes Prod.","src/tables/Table 50135 - Componentes Prod..al",Renumbered
+Table,50136,55037,"Conceptos de Cobros y Pagos","src/tables/Table 50136 - Conceptos de Cobros y Pagos.al",Renumbered
+Table,50137,55038,"TMP: Ventas Liquidas","src/tables/Table 50137 - TMP Ventas Liquidas.al",Renumbered
+Table,50500,55039,"Ubicaciones que no existen","src/tables/Table 50500 - Ubicaciones que no existen.al",Renumbered
+Table,50800,55040,"Prueba","src/tables/Table 50800 - Prueba.al",Renumbered
+Table,50900,55041,"Temp Inventario x Almacen","src/tables/Table 50900 - Temp Inventario x Almacen.al",Renumbered
+Table,51001,55042,"Lista de Choferes","src/tables/Table 51001 - Lista de Choferes.al",Renumbered
+Table,51003,55043,"Sales Line Buffer","src/tables/Table 51003 - Sales Line Buffer.al",Renumbered
+Table,51009,55044,"Cab. Cupon","src/tables/Table 51009 - Cab. Cupon.al",Renumbered
+Table,51010,55045,"Lin. Cupon","src/tables/Table 51010 - Lin. Cupon.al",Renumbered
+Table,51011,55046,"Lin Cupon por Lote","src/tables/Table 51011 - Lin Cupon por Lote.al",Renumbered
+Table,51012,55047,"Grado","src/tables/Table 51012 - Grado.al",Renumbered
+Table,51013,55048,"Ano Escolar","src/tables/Table 51013 - Ano Escolar.al",Renumbered
+Table,51014,55049,"Vendedores por Colegio","src/tables/Table 51014 - Vendedores por Colegio.al",Renumbered
+Table,51015,55050,"Cab. Cupon Lote","src/tables/Table 51015 - Cab. Cupon Lote.al",Renumbered
+Table,51016,55051,"Grupo Negocio - Cupon Lote","src/tables/Table 51016 - Grupo Negocio - Cupon Lote.al",Renumbered
+Table,51017,55052,"Grupo Negocio - Cupon Lote reg","src/tables/Table 51017 - Grupo Negocio - Cupon Lote reg.al",Renumbered
+Table,52500,55053,"NASEstatus","src/tables/Table 52500 - NASEstatus.al",Renumbered
+Table,52501,55054,"Config.Facturacion Electronica","src/tables/Table 52501 - Config.Facturacion Electronica.al",Renumbered
+Table,52502,55055,"Log Facturacion Electronica CR","src/tables/Table 52502 - Log Facturacion Electronica CR.al",Renumbered
+Table,52503,55056,"Categoria Pedido Venta","src/tables/Table 52503 - Categoria Pedido Venta.al",Renumbered
+Table,52507,55057,"Registro PDF Costos","src/tables/Table 52507 - Registro PDF Costos.al",Renumbered
+Table,56000,55058,"Config. Usuarios Empresa","src/tables/Table 56000 - Config. Usuarios Empresa.al",Renumbered
+Table,56001,55059,"Config. Empresa","src/tables/Table 56001 - Config. Empresa.al",Renumbered
+Table,56002,55060,"Config. Max. Lineas Reportes","src/tables/Table 56002 - Config. Max. Lineas Reportes.al",Renumbered
+Table,56003,55061,"Sello/Marca","src/tables/Table 56003 - SelloMarca.al",Renumbered
+Table,56004,55062,"Tipo Edicion","src/tables/Table 56004 - Tipo Edicion.al",Renumbered
+Table,56005,55063,"Nivel Educativo","src/tables/Table 56005 - Nivel Educativo.al",Renumbered
+Table,56006,55064,"Tipos","src/tables/Table 56006 - Tipos.al",Renumbered
+Table,56007,55065,"Edicion","src/tables/Table 56007 - Edicion.al",Renumbered
+Table,56008,55066,"Estado productos","src/tables/Table 56008 - Estado productos.al",Renumbered
+Table,56009,55067,"Tmp Cust. Payment terms","src/tables/Table 56009 - Tmp Cust. Payment terms.al",Renumbered
+Table,56010,55068,"Agregar productos a Cupon","src/tables/Table 56010 - Agregar productos a Cupon.al",Renumbered
+Table,56011,55069,"Lin. Consignacion a Facturar","src/tables/Table 56011 - Lin. Consignacion a Facturar.al",Renumbered
+Table,56012,55070,"Lin. Consig. Dev.Transfer Line","src/tables/Table 56012 - Lin. Consig. Dev.Transfer Line.al",Renumbered
+Table,56013,55071,"Docs. clas. devoluciones","src/tables/Table 56013 - Docs. clas. devoluciones.al",Renumbered
+Table,56014,55072,"Reportes","src/tables/Table 56014 - Reportes.al",Renumbered
+Table,56015,55073,"Cab. Identificaci n Devoluci n","src/tables/Table 56015 - Cab. Identificaci n Devoluci n.al",Renumbered
+Table,56016,55074,"Lin. Identificaci n Devoluci n","src/tables/Table 56016 - Lin. Identificaci n Devoluci n.al",Renumbered
+Table,56017,55075,"Lin. Consig a Facturar Movil.","src/tables/Table 56017 - Lin. Consig a Facturar Movil..al",Renumbered
+Table,56018,55076,"Cab. Ident. Devoluci n Reg.","src/tables/Table 56018 - Cab. Ident. Devoluci n Reg..al",Renumbered
+Table,56019,55077,"Lin. Ident. Devoluci n Reg.","src/tables/Table 56019 - Lin. Ident. Devoluci n Reg..al",Renumbered
+Table,56020,55078,"Cab. Hoja de Ruta","src/tables/Table 56020 - Cab. Hoja de Ruta.al",Renumbered
+Table,56021,55079,"Lin. Hoja de Ruta","src/tables/Table 56021 - Lin. Hoja de Ruta.al",Renumbered
+Table,56022,55080,"Cab. Hoja de Ruta Reg.","src/tables/Table 56022 - Cab. Hoja de Ruta Reg..al",Renumbered
+Table,56023,55081,"Lin. Hoja de Ruta Reg.","src/tables/Table 56023 - Lin. Hoja de Ruta Reg..al",Renumbered
+Table,56024,55082,"Inventario Disp. Movil.","src/tables/Table 56024 - Inventario Disp. Movil..al",Renumbered
+Table,56025,55083,"Cab. clas. devolucion","src/tables/Table 56025 - Cab. clas. devolucion.al",Renumbered
+Table,56026,55084,"Lin. clas. devoluciones","src/tables/Table 56026 - Lin. clas. devoluciones.al",Renumbered
+Table,56027,55085,"Doc. pendientes Cliente Movil.","src/tables/Table 56027 - Doc. pendientes Cliente Movil..al",Renumbered
+Table,56028,55086,"Clas. dev. Comment Line","src/tables/Table 56028 - Clas. dev. Comment Line.al",Renumbered
+Table,56029,55087,"Zonas de cobro","src/tables/Table 56029 - Zonas de cobro.al",Renumbered
+Table,56030,55088,"Cab. Packing","src/tables/Table 56030 - Cab. Packing.al",Renumbered
+Table,56031,55089,"Lin. Packing","src/tables/Table 56031 - Lin. Packing.al",Renumbered
+Table,56032,55090,"Contenido Cajas Packing","src/tables/Table 56032 - Contenido Cajas Packing.al",Renumbered
+Table,56033,55091,"Cab. Packing Registrado","src/tables/Table 56033 - Cab. Packing Registrado.al",Renumbered
+Table,56034,55092,"Lin. Packing Registrada","src/tables/Table 56034 - Lin. Packing Registrada.al",Renumbered
+Table,56035,55093,"Contenido Cajas Packing Reg.","src/tables/Table 56035 - Contenido Cajas Packing Reg..al",Renumbered
+Table,56036,55094,"Puestos de Pcking","src/tables/Table 56036 - Puestos de Pcking.al",Renumbered
+Table,56037,55095,"Sales Header Movil.","src/tables/Table 56037 - Sales Header Movil..al",Renumbered
+Table,56038,55096,"Sales Line Movil.","src/tables/Table 56038 - Sales Line Movil..al",Renumbered
+Table,56041,55097,"Choferes","src/tables/Table 56041 - Choferes.al",Renumbered
+Table,56042,55098,"Choferes por Transportista","src/tables/Table 56042 - Choferes por Transportista.al",Renumbered
+Table,56050,55099,"Crear Cupon por Lote.","src/tables/Table 56050 - Crear Cupon por Lote..al",Renumbered
+Table,56053,55100,"Order Tracking buffer","src/tables/Table 56053 - Order Tracking buffer.al",Renumbered
+Table,56058,55101,"Grupos de almacenes","src/tables/Table 56058 - Grupos de almacenes.al",Renumbered
+Table,56059,55102,"Almacenes x Grupo","src/tables/Table 56059 - Almacenes x Grupo.al",Renumbered
+Table,56060,55103,"Ajuste Divisa","src/tables/Table 56060 - Ajuste Divisa.al",Renumbered
+Table,56070,55104,"Maestro de Rutas","src/tables/Table 56070 - Maestro de Rutas.al",Renumbered
+Table,56071,55105,"Rutas de Hojas de Rutas","src/tables/Table 56071 - Rutas de Hojas de Rutas.al",Renumbered
+Table,56086,55106,"% Provision","src/tables/Table 56086 - % Provisi n.al",Renumbered
+Table,56090,55107,"Texto Configurable","src/tables/Table 56090 - Texto Configurable.al",Renumbered
+Table,56100,55108,"Provisiones nominas","src/tables/Table 56100 - Provisiones nominas.al",Renumbered
+Table,56101,55109,"Contratos Bck","src/tables/Table 56101 - Contratos Bck.al",Renumbered
+Table,56102,55110,"Log errores revision contratos","src/tables/Table 56102 - Log errores revision contratos.al",Renumbered
+Table,56200,55111,"Async NAV WS Process Queue","src/tables/Table 56200 - Async NAV WS Process Queue.al",Renumbered
+Table,56201,55112,"Equiv. conceptos NAV-MdE","src/tables/Table 56201 - Equiv. conceptos NAV-MdE.al",Renumbered
+Table,56202,55113,"Historial MdE","src/tables/Table 56202 - Historial MdE.al",Renumbered
+Table,59000,55114,"hist rico de ventas","src/tables/Table 59000 - hist rico de ventas.al",Renumbered
+Table,59001,55115,"tmp ctas","src/tables/Table 59001 - tmp ctas.al",Renumbered
+Table,59002,55116,"tmp Def Dim","src/tables/Table 59002 - tmp Def Dim.al",Renumbered
+Table,59003,55117,"Facuras RHM","src/tables/Table 59003 - Facuras RHM.al",Renumbered
+Table,59004,55118,"Facuras RHM - detalle","src/tables/Table 59004 - Facuras RHM - detalle.al",Renumbered
+Table,64822,55119,"Specification","src/tables/Table 64822 - Specification.al",Renumbered
+Table,64823,55120,"EXCCRIDatabase","src/tables/Table 64823 - Database.al",Renumbered
+Table,64824,55121,"Replicator Group","src/tables/Table 64824 - Replicator Group.al",Renumbered
+Table,64825,55122,"Field List","src/tables/Table 64825 - Field List.al",Renumbered
+Table,64826,55123,"ToDo","src/tables/Table 64826 - ToDo.al",Renumbered
+Table,64827,55124,"Activity Register","src/tables/Table 64827 - Activity Register.al",Renumbered
+Table,64828,55125,"Database Table","src/tables/Table 64828 - Database Table.al",Renumbered
+Table,64829,55126,"Database Field","src/tables/Table 64829 - Database Field.al",Renumbered
+Table,64830,55127,"Database Company","src/tables/Table 64830 - Database Company.al",Renumbered
+Table,64831,55128,"Database Key","src/tables/Table 64831 - Database Key.al",Renumbered
+Table,64832,55129,"Action","src/tables/Table 64832 - Action.al",Renumbered
+Table,64833,55130,"Scheduler","src/tables/Table 64833 - Scheduler.al",Renumbered
+Table,64834,55131,"Scheduler Tag","src/tables/Table 64834 - Scheduler Tag.al",Renumbered
+Table,64835,55132,"Replicator Setup","src/tables/Table 64835 - Replicator Setup.al",Renumbered
+Table,64836,55133,"Field Filter","src/tables/Table 64836 - Field Filter.al",Renumbered
+Table,64837,55134,"Linked Table Filter","src/tables/Table 64837 - Linked Table Filter.al",Renumbered
+Table,64838,55135,"Change Register","src/tables/Table 64838 - Change Register.al",Renumbered
+Table,64839,55136,"Replicator Report List","src/tables/Table 64839 - Replicator Report List.al",Renumbered
+Table,64840,55137,"Last SourceCounter Numbers","src/tables/Table 64840 - Last SourceCounter Numbers.al",Renumbered
+Table,67000,55138,"Commercial Setup","src/tables/Table 67000 - Commercial Setup.al",Renumbered
+Table,67001,55139,"Docentes","src/tables/Table 67001 - Docentes.al",Renumbered
+Table,67002,55140,"Datos auxiliares","src/tables/Table 67002 - Datos auxiliares.al",Renumbered
+Table,67003,55141,"Clientes Relacionados","src/tables/Table 67003 - Clientes Relacionados.al",Renumbered
+Table,67004,55142,"Promotor - Docentes","src/tables/Table 67004 - Promotor - Docentes.al",Renumbered
+Table,67005,55143,"Productos Equivalentes","src/tables/Table 67005 - Productos Equivalentes.al",Renumbered
+Table,67006,55144,"Promotor - Lista de Colegios","src/tables/Table 67006 - Promotor - Lista de Colegios.al",Renumbered
+Table,67007,55145,"Asignaturas","src/tables/Table 67007 - Asignaturas.al",Renumbered
+Table,67008,55146,"Docente - Expos - Especialidad","src/tables/Table 67008 - Docente - Expos - Especialidad.al",Renumbered
+Table,67009,55147,"Rutas - CP","src/tables/Table 67009 - Rutas - CP.al",Renumbered
+Table,67010,55148,"Tipos de Eventos","src/tables/Table 67010 - Tipos de Eventos.al",Renumbered
+Table,67011,55149,"Eventos","src/tables/Table 67011 - Eventos.al",Renumbered
+Table,67012,55150,"Talleres","src/tables/Table 67012 - Talleres.al",Renumbered
+Table,67013,55151,"Temp Estadistica APS","src/tables/Table 67013 - Temp Estadistica APS.al",Renumbered
+Table,67014,55152,"Materiales Talleres y Eventos","src/tables/Table 67014 - Materiales Talleres y Eventos.al",Renumbered
+Table,67015,55153,"Programac. Talleres y Eventos","src/tables/Table 67015 - Programac. Talleres y Eventos.al",Renumbered
+Table,67016,55154,"Asistentes Talleres y Eventos","src/tables/Table 67016 - Asistentes Talleres y Eventos.al",Renumbered
+Table,67017,55155,"Padres","src/tables/Table 67017 - Padres.al",Renumbered
+Table,67018,55156,"Docente - Especialidad","src/tables/Table 67018 - Docente - Especialidad.al",Renumbered
+Table,67019,55157,"Areas de interes padres","src/tables/Table 67019 - Areas de interes padres.al",Renumbered
+Table,67020,55158,"Alumnos - Hijos","src/tables/Table 67020 - Alumnos - Hijos.al",Renumbered
+Table,67021,55159,"Expositores - aps","src/tables/Table 67021 - Expositores - aps.al",Renumbered
+Table,67022,55160,"Nivel Educativo APS","src/tables/Table 67022 - Nivel Educativo APS.al",Renumbered
+Table,67023,55161,"Cab. Planificacion","src/tables/Table 67023 - Cab. Planificacion.al",Renumbered
+Table,67024,55162,"Editoras","src/tables/Table 67024 - Editoras.al",Renumbered
+Table,67025,55163,"Libros Competencia","src/tables/Table 67025 - Libros Competencia.al",Renumbered
+Table,67026,55164,"Colegio - Log - Adopciones","src/tables/Table 67026 - Colegio - Log - Adopciones.al",Renumbered
+Table,67027,55165,"Promotor - Ppto Vtas","src/tables/Table 67027 - Promotor - Ppto Vtas.al",Renumbered
+Table,67028,55166,"Promotor - Ppto Muestras","src/tables/Table 67028 - Promotor - Ppto Muestras.al",Renumbered
+Table,67029,55167,"Hist. Promotor - Ppto Muestras","src/tables/Table 67029 - Hist. Promotor - Ppto Muestras.al",Renumbered
+Table,67030,55168,"Colegio - Atenciones","src/tables/Table 67030 - Colegio - Atenciones.al",Renumbered
+Table,67031,55169,"Carga Horaria","src/tables/Table 67031 - Carga Horaria.al",Renumbered
+Table,67032,55170,"FlagsInRepeater Bitmaps","src/tables/Table 67032 - FlagsInRepeater Bitmaps.al",Renumbered
+Table,67033,55171,"Colegio - Adopciones compet.","src/tables/Table 67033 - Colegio - Adopciones compet..al",Renumbered
+Table,67034,55172,"Talleres y Eventos - Grados","src/tables/Table 67034 - Talleres y Eventos - Grados.al",Renumbered
+Table,67035,55173,"Historico Adopciones","src/tables/Table 67035 - Historico Adopciones.al",Renumbered
+Table,67036,55174,"Colegio - Nivel","src/tables/Table 67036 - Colegio - Nivel.al",Renumbered
+Table,67037,55175,"Colegio - Grados","src/tables/Table 67037 - Colegio - Grados.al",Renumbered
+Table,67038,55176,"Promotor - Planif. Visita","src/tables/Table 67038 - Promotor - Planif. Visita.al",Renumbered
+Table,67039,55177,"Promotor - Entrega Muestras","src/tables/Table 67039 - Promotor - Entrega Muestras.al",Renumbered
+Table,67040,55178,"Promotor - Niveles","src/tables/Table 67040 - Promotor - Niveles.al",Renumbered
+Table,67041,55179,"Estadistica Ranking Colegio","src/tables/Table 67041 - Estadistica Ranking Colegio.al",Renumbered
+Table,67042,55180,"Datos Colegio - Asignatura","src/tables/Table 67042 - Datos Colegio - Asignatura.al",Renumbered
+Table,67043,55181,"Colegio - Docentes","src/tables/Table 67043 - Colegio - Docentes.al",Renumbered
+Table,67044,55182,"Promotor - Rutas","src/tables/Table 67044 - Promotor - Rutas.al",Renumbered
+Table,67045,55183,"Tipos de documentos personales","src/tables/Table 67045 - Tipos de documentos personales.al",Renumbered
+Table,67046,55184,"Colegio - Ranking - Nivel","src/tables/Table 67046 - Colegio - Ranking - Nivel.al",Renumbered
+Table,67047,55185,"Docente - Materia","src/tables/Table 67047 - Docente - Materia.al",Renumbered
+Table,67048,55186,"Docente - Aficiones","src/tables/Table 67048 - Docente - Aficiones.al",Renumbered
+Table,67049,55187,"Padres - Aficiones","src/tables/Table 67049 - Padres - Aficiones.al",Renumbered
+Table,67050,55188,"Expositores - Eventos","src/tables/Table 67050 - Expositores - Eventos.al",Renumbered
+Table,67051,55189,"Cab. Planif. Evento","src/tables/Table 67051 - Cab. Planif. Evento.al",Renumbered
+Table,67052,55190,"Colegio - Adopciones Cab","src/tables/Table 67052 - Colegio - Adopciones Cab.al",Renumbered
+Table,67053,55191,"Colegio - Adopciones Detalle","src/tables/Table 67053 - Colegio - Adopciones Detalle.al",Renumbered
+Table,67054,55192,"TMP Reportes APS","src/tables/Table 67054 - TMP Reportes APS.al",Renumbered
+Table,67055,55193,"Solicitud de Taller - Evento","src/tables/Table 67055 - Solicitud de Taller - Evento.al",Renumbered
+Table,67056,55194,"Colegio - Cab. Jerarquia puest","src/tables/Table 67056 - Colegio - Cab. Jerarquia puest.al",Renumbered
+Table,67057,55195,"Colegio - Lin. Jerarquia puest","src/tables/Table 67057 - Colegio - Lin. Jerarquia puest.al",Renumbered
+Table,67058,55196,"Ranking CVM","src/tables/Table 67058 - Ranking CVM.al",Renumbered
+Table,67059,55197,"Equipos Talleres y Eventos","src/tables/Table 67059 - Equipos Talleres y Eventos.al",Renumbered
+Table,67060,55198,"Temp Reportes APS","src/tables/Table 67060 - Temp Reportes APS.al",Renumbered
+Table,67061,55199,"Cab. Atenciones","src/tables/Table 67061 - Cab. Atenciones.al",Renumbered
+Table,67062,55200,"Colegio - Work Flow visitas","src/tables/Table 67062 - Colegio - Work Flow visitas.al",Renumbered
+Table,67063,55201,"Plan Lector Cab.","src/tables/Table 67063 - Plan Lector Cab..al",Renumbered
+Table,67064,55202,"Plan Lector Det.","src/tables/Table 67064 - Plan Lector Det..al",Renumbered
+Table,67065,55203,"Micro empresario","src/tables/Table 67065 - Micro empresario.al",Renumbered
+Table,67066,55204,"Comisionistas","src/tables/Table 67066 - Comisionistas.al",Renumbered
+Table,67067,55205,"Historico Colegio - Nivel","src/tables/Table 67067 - Historico Colegio - Nivel.al",Renumbered
+Table,67068,55206,"Tarifas - Tipos de Eventos","src/tables/Table 67068 - Tarifas - Tipos de Eventos.al",Renumbered
+Table,67069,55207,"Historico Colegio - Grados","src/tables/Table 67069 - Historico Colegio - Grados.al",Renumbered
+Table,67070,55208,"Historico Promotor - Ppto Vtas","src/tables/Table 67070 - Historico Promotor - Ppto Vtas.al",Renumbered
+Table,67071,55209,"Historico Promotor - Ppto Mt","src/tables/Table 67071 - Historico Promotor - Ppto Mt.al",Renumbered
+Table,67072,55210,"Historico Docentes - CDS","src/tables/Table 67072 - Historico Docentes - CDS.al",Renumbered
+Table,67073,55211,"Hist. Docente - Expos - Espec.","src/tables/Table 67073 - Hist. Docente - Expos - Espec..al",Renumbered
+Table,67074,55212,"Hist. Docente - Especialidad","src/tables/Table 67074 - Hist. Docente - Especialidad.al",Renumbered
+Table,67075,55213,"Hist. Docente - Aficiones","src/tables/Table 67075 - Hist. Docente - Aficiones.al",Renumbered
+Table,67076,55214,"Hist. Colegio - Docentes","src/tables/Table 67076 - Hist. Colegio - Docentes.al",Renumbered
+Table,67077,55215,"Hist. Docente - Materia","src/tables/Table 67077 - Hist. Docente - Materia.al",Renumbered
+Table,67078,55216,"Ranking CVM vertical","src/tables/Table 67078 - Ranking CVM vertical.al",Renumbered
+Table,67079,55217,"Seguimiento Solicitud TE","src/tables/Table 67079 - Seguimiento Solicitud TE.al",Renumbered
+Table,67080,55218,"Solicitud -  Nivel Asistente","src/tables/Table 67080 - Solicitud -  Nivel Asistente.al",Renumbered
+Table,67081,55219,"Solicitud -  Grado Asistente","src/tables/Table 67081 - Solicitud -  Grado Asistente.al",Renumbered
+Table,67082,55220,"Solicitud -  Especialidad Asi.","src/tables/Table 67082 - Solicitud -  Especialidad Asi..al",Renumbered
+Table,67083,55221,"Log Coleg. - Work Flow visitas","src/tables/Table 67083 - Log Coleg. - Work Flow visitas.al",Renumbered
+Table,67084,55222,"Hist. Colegio - Adopciones Cab","src/tables/Table 67084 - Hist. Colegio - Adopciones Cab.al",Renumbered
+Table,67085,55223,"Solicitud - Libros presentar","src/tables/Table 67085 - Solicitud - Libros presentar.al",Renumbered
+Table,67086,55224,"Dis. Centros Costo","src/tables/Table 67086 - Dis. Centros Costo.al",Renumbered
+Table,67087,55225,"Solicitud - Competencia","src/tables/Table 67087 - Solicitud - Competencia.al",Renumbered
+Table,67088,55226,"Solicitud - Proposici n Fechas","src/tables/Table 67088 - Solicitud - Proposici n Fechas.al",Renumbered
+Table,67089,55227,"Grupo de Colegios","src/tables/Table 67089 - Grupo de Colegios.al",Renumbered
+Table,67090,55228,"Grupo - Colegios","src/tables/Table 67090 - Grupo - Colegios.al",Renumbered
+Table,67091,55229,"Categorias CVM","src/tables/Table 67091 - Categorias CVM.al",Renumbered
+Table,67092,55230,"Ranking CVM Colegio","src/tables/Table 67092 - Ranking CVM Colegio.al",Renumbered
+Table,67093,55231,"Hist rico Categorias CVM","src/tables/Table 67093 - Hist rico Categorias CVM.al",Renumbered
+Table,67094,55232,"Tabla trabajo Ranking","src/tables/Table 67094 - Tabla trabajo Ranking.al",Renumbered
+Table,67095,55233,"Historico Plan Lector Cab.","src/tables/Table 67095 - Historico Plan Lector Cab..al",Renumbered
+Table,67096,55234,"Historico Plan Lector Det.","src/tables/Table 67096 - Historico Plan Lector Det..al",Renumbered
+Table,67097,55235,"Historico Ranking CVM vertical","src/tables/Table 67097 - Historico Ranking CVM vertical.al",Renumbered
+Table,67098,55236,"Pago a Expositores","src/tables/Table 67098 - Pago a Expositores.al",Renumbered
+Table,67099,55237,"Detalle Pago Expositores","src/tables/Table 67099 - Detalle Pago Expositores.al",Renumbered
+Table,67100,55238,"Detalle Atenciones","src/tables/Table 67100 - Detalle Atenciones.al",Renumbered
+Table,67101,55239,"Atenciones -Dis. Centros Costo","src/tables/Table 67101 - Atenciones -Dis. Centros Costo.al",Renumbered
+Table,67102,55240,"Cab. Visita Asesor/Consultor","src/tables/Table 67102 - Cab. Visita AsesorConsultor.al",Renumbered
+Table,67103,55241,"Prog. Visitas Asesor/Consultor","src/tables/Table 67103 - Prog. Visitas AsesorConsultor.al",Renumbered
+Table,67104,55242,"Visitas A/C-Dis. Centros Costo","src/tables/Table 67104 - Visitas AC-Dis. Centros Costo.al",Renumbered
+Table,67105,55243,"Visitas A/C - Descr. Asistente","src/tables/Table 67105 - Visitas AC - Descr. Asistente.al",Renumbered
+Table,67106,55244,"Asis. Visitas Asesor/Consultor","src/tables/Table 67106 - Asis. Visitas AsesorConsultor.al",Renumbered
+Table,67107,55245,"Seguim.Visita Asesor/Consultor","src/tables/Table 67107 - Seguim.Visita AsesorConsultor.al",Renumbered
+Table,67108,55246,"Log Importaci n","src/tables/Table 67108 - Log Importaci n.al",Renumbered
+Table,67109,55247,"Lineas de Corte","src/tables/Table 67109 - Lineas de Corte.al",Renumbered
+Table,67110,55248,"Clasificacion Categorias","src/tables/Table 67110 - Clasificaci n Categor as.al",Renumbered
+Table,67111,55249,"Textos Principales","src/tables/Table 67111 - Textos Principales.al",Renumbered
+Table,67112,55250,"Tabla trabajo Calculo CVM","src/tables/Table 67112 - Tabla trabajo Calculo CVM.al",Renumbered
+Table,67113,55251,"Hist.Lineas de Corte","src/tables/Table 67113 - Hist.Lineas de Corte.al",Renumbered
+Table,67114,55252,"Hist. Clasificacion Categorias","src/tables/Table 67114 - Hist. Clasificaci n Categor as.al",Renumbered
+Table,67115,55253,"Hist. Textos Principales","src/tables/Table 67115 - Hist. Textos Principales.al",Renumbered
+Table,67116,55254,"APS Cue","src/tables/Table 67116 - APS Cue.al",Renumbered
+Table,67117,55255,"Productos Equiv. - Muestras","src/tables/Table 67117 - Productos Equiv. - Muestras.al",Renumbered
+Table,67118,55256,"Hist.Tabla trabajo Calculo CVM","src/tables/Table 67118 - Hist.Tabla trabajo Calculo CVM.al",Renumbered
+Table,67119,55257,"Poblaci n","src/tables/Table 67119 - Poblaci n.al",Renumbered
+Table,67120,55258,"Encuesta TIC","src/tables/Table 67120 - Encuesta TIC.al",Renumbered
+Table,70000,55259,"Plantilla Queen Mat. Comerc.","src/tables/Table 70000 - Plantilla Queen Mat. Comerc..al",Renumbered
+Table,70001,55260,"Autor comercial GL024","src/tables/Table 70001 - Autor comercial GL024.al",Renumbered
+Table,70002,55261,"Codigos de Sellos GL003","src/tables/Table 70002 - C digos de Sellos GL003.al",Renumbered
+Table,70003,55262,"Codigos de L neas GL004","src/tables/Table 70003 - C digos de L neas GL004.al",Renumbered
+Table,70004,55263,"Tipos Encuadernacion GL023","src/tables/Table 70004 - Tipos encuadernaci n GL023.al",Renumbered
+Table,70005,55264,"Idiomas GL100","src/tables/Table 70005 - Idiomas GL100.al",Renumbered
+Table,70006,55265,"Estados GL101","src/tables/Table 70006 - Estados GL101.al",Renumbered
+Table,70007,55266,"Plantilla Queen Lista Mater.","src/tables/Table 70007 - Plantilla Queen Lista Mater..al",Renumbered
+Table,70008,55267,"Articulos Utilizar en Random","src/tables/Table 70008 - Articulos Utilizar en Random.al",Renumbered
+Table,70009,55268,"Plantilla Queen Rel. Mat. BIC","src/tables/Table 70009 - Plantilla Queen Rel. Mat. BIC.al",Renumbered
+Table,70010,55269,"Relacion Material Ambito","src/tables/Table 70010 - Relacion Material Ambito.al",Renumbered
+Table,70020,55270,"Plantilla Queen Mat. Comerc.1","src/tables/Table 70020 - Plantilla Queen Mat. Comerc.1.al",Renumbered
+Table,70500,55271,"MCliente01","src/tables/Table 70500 - MCliente01.al",Renumbered
+Table,70501,55272,"GL017","src/tables/Table 70501 - GL017.al",Renumbered
+Table,70502,55273,"TL004","src/tables/Table 70502 - TL004.al",Renumbered
+Table,70503,55274,"TL007","src/tables/Table 70503 - TL007.al",Renumbered
+Table,70504,55275,"TL009","src/tables/Table 70504 - TL009.al",Renumbered
+Table,70505,55276,"GL014","src/tables/Table 70505 - GL014.al",Renumbered
+Table,70506,55277,"GL018","src/tables/Table 70506 - GL018.al",Renumbered
+Table,70507,55278,"TL013","src/tables/Table 70507 - TL013.al",Renumbered
+Table,70508,55279,"MCliente03","src/tables/Table 70508 - MCliente03.al",Renumbered
+Table,70509,55280,"GL004","src/tables/Table 70509 - GL004.al",Renumbered
+Table,70510,55281,"TL010","src/tables/Table 70510 - TL010.al",Renumbered
+Table,70511,55282,"GL019","src/tables/Table 70511 - GL019.al",Renumbered
+Table,70512,55283,"Precios por Cliente_Producto","src/tables/Table 70512 - Precios por Cliente_Producto.al",Renumbered
+Table,70513,55284,"Grupo Precio Cliente","src/tables/Table 70513 - Grupo Precio Cliente.al",Renumbered
+Table,70514,55285,"Clientes Ofisys","src/tables/Table 70514 - Clientes Ofisys.al",Renumbered
+Table,70515,55286,"Producto-Cod. Descuento","src/tables/Table 70515 - Producto-Cod. Descuento.al",Renumbered
+Table,75000,55287,"Configuracion MDM","src/tables/Table 75000 - Configuracion MDM.al",Renumbered
+Table,75001,55288,"Datos MDM","src/tables/Table 75001 - Datos MDM.al",Renumbered
+Table,75002,55289,"Estructura Analitica","src/tables/Table 75002 - Estructura Analitica.al",Renumbered
+Table,75003,55290,"Imp.MdM Cabecera","src/tables/Table 75003 - Imp.MdM Cabecera.al",Renumbered
+Table,75004,55291,"Imp.MdM Tabla","src/tables/Table 75004 - Imp.MdM Tabla.al",Renumbered
+Table,75005,55292,"Imp.MdM Campos","src/tables/Table 75005 - Imp.MdM Campos.al",Renumbered
+Table,75006,55293,"Conf. Tipologias MdM","src/tables/Table 75006 - Conf. Tipologias MdM.al",Renumbered
+Table,75007,55294,"Conversion NAV MdM","src/tables/Table 75007 - Conversion NAV MdM.al",Renumbered
+Table,75008,55295,"Conf.Filtros Tipologias MdM","src/tables/Table 75008 - Conf.Filtros Tipologias MdM.al",Renumbered
+Table,75009,55296,"Conf. Estructura Analitica","src/tables/Table 75009 - Conf. Estructura Analitica.al",Renumbered
+Table,75010,55297,"Conf. Campos Relacionados","src/tables/Table 75010 - Conf. Campos Relacionados.al",Renumbered
+Table,75011,55298,"Precios Futuro","src/tables/Table 75011 - Precios Futuro.al",Renumbered
+Table,75012,55299,"Valores Filtros Tipologia MdM","src/tables/Table 75012 - Valores Filtros Tipologia MdM.al",Renumbered
+Table,75013,55300,"Filtro Campo Buffer","src/tables/Table 75013 - Filtro Campo Buffer.al",Renumbered
+Table,75014,55301,"Filtro Valor Campo Buffer","src/tables/Table 75014 - Filtro Valor Campo Buffer.al",Renumbered
+Table,75015,55302,"Tipo Filtros Tipo. MdM Buffer","src/tables/Table 75015 - Tipo Filtros Tipo. MdM Buffer.al",Renumbered
+Table,75016,55303,"Fechas Productos MdM Buffer","src/tables/Table 75016 - Fechas Productos MdM Buffer.al",Renumbered
+Table,80000,55304,"Tmp Sales Invoice Header","src/tables/Table 80000 - Tmp Sales Invoice Header.al",Renumbered
+Table,80001,55305,"Tmp Sales Invoice Line","src/tables/Table 80001 - Tmp Sales Invoice Line.al",Renumbered
+Table,80002,55306,"Tmp Posted Document Dimension","src/tables/Table 80002 - Tmp Posted Document Dimension.al",Renumbered
+Table,80003,55307,"Tmp Sales Cr.Memo Header","src/tables/Table 80003 - Tmp Sales Cr.Memo Header.al",Renumbered
+Table,80004,55308,"Tmp Sales Cr.Memo Line","src/tables/Table 80004 - Tmp Sales Cr.Memo Line.al",Renumbered
+Table,80005,55309,"Tmp Purch. Inv. Header","src/tables/Table 80005 - Tmp Purch. Inv. Header.al",Renumbered
+Table,80006,55310,"Tmp Purch. Inv. Line","src/tables/Table 80006 - Tmp Purch. Inv. Line.al",Renumbered
+Table,80007,55311,"Tmp Purch. Cr. Memo Hdr.","src/tables/Table 80007 - Tmp Purch. Cr. Memo Hdr..al",Renumbered
+Table,80008,55312,"Tmp Purch. Cr. Memo Line","src/tables/Table 80008 - Tmp Purch. Cr. Memo Line.al",Renumbered
+Table,80009,55313,"Tmp Posted Deposit Header","src/tables/Table 80009 - Tmp Posted Deposit Header.al",Renumbered
+Table,80010,55314,"Tmp Posted Deposit Line","src/tables/Table 80010 - Tmp Posted Deposit Line.al",Renumbered
+Table,80011,55315,"Tmp Check Ledger Entry","src/tables/Table 80011 - Tmp Check Ledger Entry.al",Renumbered
+Table,80012,55316,"Tmp Documentos cheques","src/tables/Table 80012 - Tmp Documentos cheques.al",Renumbered
+Table,80013,55317,"Tmp Sales Header","src/tables/Table 80013 - Tmp Sales Header.al",Renumbered
+Table,80014,55318,"Tmp Sales Line","src/tables/Table 80014 - Tmp Sales Line.al",Renumbered
+Table,80015,55319,"Tmp Document Dimension","src/tables/Table 80015 - Tmp Document Dimension.al",Renumbered
+Table,86000,55320,"Tmp productos a devolver","src/tables/Table 86000 - Tmp productos a devolver.al",Renumbered
+Table,86001,55321,"Tmp facturas a liquidar","src/tables/Table 86001 - Tmp facturas a liquidar.al",Renumbered
+Table,90000,55322,"G/L Account2","src/tables/Table 90000 - GL Account2.al",Renumbered
+Table,104025,55323,"UPG Posting Exch. Column Def","src/tables/Table 104025 - UPG Posting Exch. Column Def.al",Renumbered
+Table,104026,55324,"UPG Sales Header","src/tables/Table 104026 - UPG Sales Header.al",Renumbered
+Table,104027,55325,"UPG Service Password","src/tables/Table 104027 - UPG Service Password.al",Renumbered
+Table,104054,55326,"UPG Approval Setup","src/tables/Table 104054 - UPG Approval Setup.al",Renumbered
+Table,104055,55327,"UPG Approval Templates","src/tables/Table 104055 - UPG Approval Templates.al",Renumbered
+Table,104056,55328,"UPG Additional Approvers","src/tables/Table 104056 - UPG Additional Approvers.al",Renumbered
+Table,104065,55329,"UPG Direct Debit Col. Entry","src/tables/Table 104065 - UPG Direct Debit Col. Entry.al",Renumbered
+Table,104067,55330,"UPG Item","src/tables/Table 104067 - UPG Item.al",Renumbered
+Table,104068,55331,"UPG Stockkeeping Unit","src/tables/Table 104068 - UPG Stockkeeping Unit.al",Renumbered
+Table,104069,55332,"UPG Phys. Invt. Item Selection","src/tables/Table 104069 - UPG Phys. Invt. Item Selection.al",Renumbered
+Table,104073,55333,"UPG Nonstock Item","src/tables/Table 104073 - UPG Nonstock Item.al",Renumbered
+Table,104074,55334,"UPG Product Group","src/tables/Table 104074 - UPG Product Group.al",Renumbered
+Table,104077,55335,"UPG Approval Entry","src/tables/Table 104077 - UPG Approval Entry.al",Renumbered
+Table,104080,55336,"UPG Posted Approval Entry","src/tables/Table 104080 - UPG Posted Approval Entry.al",Renumbered
+Table,104082,55337,"UPG SMTP Mail Setup","src/tables/Table 104082 - UPG SMTP Mail Setup.al",Renumbered
+Table,104093,55338,"UPG Job","src/tables/Table 104093 - UPG Job.al",Renumbered
+Table,104094,55339,"UPG Sales Invoice Header","src/tables/Table 104094 - UPG Sales Invoice Header.al",Renumbered
+Table,104095,55340,"UPG Sales Cr.Memo Header","src/tables/Table 104095 - UPG Sales Cr.Memo Header.al",Renumbered
+Table,104096,55341,"UPG Purch. Inv. Header","src/tables/Table 104096 - UPG Purch. Inv. Header.al",Renumbered
+Table,104097,55342,"UPG Purch. Cr. Memo Hdr.","src/tables/Table 104097 - UPG Purch. Cr. Memo Hdr..al",Renumbered
+Table,104098,55343,"UPG Item Category","src/tables/Table 104098 - UPG Item Category.al",Renumbered
+Table,34002100,55344,"Empresas Cotizacion","src/tables/Table 34002100 - Empresas Cotización.al",Renumbered
+Table,34002101,55345,"Centros de Trabajo","src/tables/Table 34002101 - Centros de Trabajo.al",Renumbered
+Table,34002102,55346,"Representantes Empresa","src/tables/Table 34002102 - Representantes Empresa.al",Renumbered
+Table,34002103,55347,"Configuracion nominas","src/tables/Table 34002103 - Configuracion nominas.al",Renumbered
+Table,34002104,55348,"Grupos Contables Empleados","src/tables/Table 34002104 - Grupos Contables Empleados.al",Renumbered
+Table,34002105,55349,"Dist. Ctas. Gpo. Cont. Empl.","src/tables/Table 34002105 - Dist. Ctas. Gpo. Cont. Empl..al",Renumbered
+Table,34002106,55350,"Param. Inic. Conceptos Sal.","src/tables/Table 34002106 - Param. Inic. Conceptos Sal..al",Renumbered
+Table,34002107,55351,"Parametros Calculo Dias","src/tables/Table 34002107 - Parametros Calculo Dias.al",Renumbered
+Table,34002108,55352,"Distrib. Ingreso Pagos Elect.","src/tables/Table 34002108 - Distrib. Ingreso Pagos Elect..al",Renumbered
+Table,34002109,55353,"Contratos","src/tables/Table 34002109 - Contratos.al",Renumbered
+Table,34002110,55354,"Puestos laborales","src/tables/Table 34002110 - Puestos laborales.al",Renumbered
+Table,34002111,55355,"Conceptos salariales","src/tables/Table 34002111 - Conceptos salariales.al",Renumbered
+Table,34002112,55356,"Configuracion Listados","src/tables/Table 34002112 - Configuracion Listados.al",Renumbered
+Table,34002113,55357,"Perfil Salario x Cargo","src/tables/Table 34002113 - Perfil Salario x Cargo.al",Renumbered
+Table,34002114,55358,"Tipos de acciones personal","src/tables/Table 34002114 - Tipos de acciones personal.al",Renumbered
+Table,34002115,55359,"Perfil Salarial","src/tables/Table 34002115 - Perfil Salarial.al",Renumbered
+Table,34002116,55360,"Income tax Employee parameters","src/tables/Table 34002116 - Income tax Employee parameters.al",Renumbered
+Table,34002117,55361,"Historico Cab. nomina","src/tables/Table 34002117 - Historico Cab. nomina.al",Renumbered
+Table,34002118,55362,"Historico Lin. nomina","src/tables/Table 34002118 - Historico Lin. nomina.al",Renumbered
+Table,34002119,55363,"Conceptos Salariales Provision","src/tables/Table 34002119 - Conceptos Salariales Provision.al",Renumbered
+Table,34002120,55364,"Nivel Cargo","src/tables/Table 34002120 - Nivel Cargo.al",Renumbered
+Table,34002121,55365,"Cab. Aportes Empresas","src/tables/Table 34002121 - Cab. Aportes Empresas.al",Renumbered
+Table,34002122,55366,"Lin. Aportes Empresas","src/tables/Table 34002122 - Lin. Aportes Empresas.al",Renumbered
+Table,34002123,55367,"Temp Contabilizacion Nom.","src/tables/Table 34002123 - Temp Contabilizacion Nom..al",Renumbered
+Table,34002124,55368,"Parametros ciclos nominas","src/tables/Table 34002124 - Parametros ciclos nominas.al",Renumbered
+Table,34002125,55369,"Motivos acciones personal","src/tables/Table 34002125 - Motivos acciones personal.al",Renumbered
+Table,34002126,55370,"Incentivos/Propinas","src/tables/Table 34002126 - IncentivosPropinas.al",Renumbered
+Table,34002127,55371,"Historico Puntos Propina","src/tables/Table 34002127 - Histórico Puntos Propina.al",Renumbered
+Table,34002128,55372,"Saldos a favor ISR","src/tables/Table 34002128 - Saldos a favor ISR.al",Renumbered
+Table,34002129,55373,"Tipos de Cotizacion","src/tables/Table 34002129 - Tipos de Cotización.al",Renumbered
+Table,34002130,55374,"BK Saldos a favor ISR","src/tables/Table 34002130 - BK Saldos a favor ISR.al",Renumbered
+Table,34002131,55375,"Tabla retencion ISR","src/tables/Table 34002131 - Tabla retencion ISR.al",Renumbered
+Table,34002132,55376,"Dimensiones Contabilizacion","src/tables/Table 34002132 - Dimensiones Contabilizacion.al",Renumbered
+Table,34002133,55377,"Acciones de personal","src/tables/Table 34002133 - Acciones de personal.al",Renumbered
+Table,34002134,55378,"Calendario","src/tables/Table 34002134 - Calendario.al",Renumbered
+Table,34002135,55379,"Departamentos","src/tables/Table 34002135 - Departamentos.al",Renumbered
+Table,34002136,55380,"Sub-Departamentos","src/tables/Table 34002136 - Sub-Departamentos.al",Renumbered
+Table,34002137,55381,"Distribucion Importes TSS","src/tables/Table 34002137 - Distribucion Importes TSS.al",Renumbered
+Table,34002138,55382,"Dist. Ctas. Gpo. Cont. x Dim.","src/tables/Table 34002138 - Dist. Ctas. Gpo. Cont. x Dim..al",Renumbered
+Table,34002139,55383,"Bancos","src/tables/Table 34002139 - Bancos.al",Renumbered
+Table,34002140,55384,"Comentarios nomina","src/tables/Table 34002140 - Comentarios nómina.al",Renumbered
+Table,34002141,55385,"Historico Vacaciones","src/tables/Table 34002141 - Historico Vacaciones.al",Renumbered
+Table,34002142,55386,"Tokens","src/tables/Table 34002142 - Tokens.al",Renumbered
+Table,34002143,55387,"Polaca","src/tables/Table 34002143 - Polaca.al",Renumbered
+Table,34002144,55388,"Conceptos formula","src/tables/Table 34002144 - Conceptos formula.al",Renumbered
+Table,34002145,55389,"CxC Empleados","src/tables/Table 34002145 - CxC Empleados.al",Renumbered
+Table,34002146,55390,"Historico Cab. Prestamo","src/tables/Table 34002146 - Histórico Cab. Préstamo.al",Renumbered
+Table,34002147,55391,"Historico Lin. Prestamo","src/tables/Table 34002147 - Histórico Lín. Préstamo.al",Renumbered
+Table,34002148,55392,"Diario de aumentos generales","src/tables/Table 34002148 - Diario de aumentos generales.al",Renumbered
+Table,34002149,55393,"Acumulado Salarios","src/tables/Table 34002149 - Acumulado Salarios.al",Renumbered
+Table,34002150,55394,"Relacion Empresas Empleados","src/tables/Table 34002150 - Relacion Empresas Empleados.al",Renumbered
+Table,34002151,55395,"Datos adicionales RRHH","src/tables/Table 34002151 - Datos adicionales RRHH.al",Renumbered
+Table,34002152,55396,"Beneficios laborales","src/tables/Table 34002152 - Beneficios laborales.al",Renumbered
+Table,34002153,55397,"Beneficios empleados","src/tables/Table 34002153 - Beneficios empleados.al",Renumbered
+Table,34002154,55398,"Seguridad Usuarios RH","src/tables/Table 34002154 - Seguridad Usuarios RH.al",Renumbered
+Table,34002155,55399,"Dias Festivos","src/tables/Table 34002155 - Dias Festivos.al",Renumbered
+Table,34002156,55400,"Seleccion beneficios","src/tables/Table 34002156 - Seleccion beneficios.al",Renumbered
+Table,34002157,55401,"Mov. actividades OJO","src/tables/Table 34002157 - Mov. actividades OJO.al",Renumbered
+Table,34002158,55402,"Tipos de nominas","src/tables/Table 34002158 - Tipos de nominas.al",Renumbered
+Table,34002159,55403,"Hist. Acciones de personal","src/tables/Table 34002159 - Hist. Acciones de personal.al",Renumbered
+Table,34002160,55404,"Control de asistencia","src/tables/Table 34002160 - Control de asistencia.al",Renumbered
+Table,34002161,55405,"Shift","src/tables/Table 34002161 - Shift.al",Renumbered
+Table,34002162,55406,"Requisitos del Cargo","src/tables/Table 34002162 - Requisitos del Cargo.al",Renumbered
+Table,34002163,55407,"Distrib. Control de asis. Proy","src/tables/Table 34002163 - Distrib. Control de asis. Proy.al",Renumbered
+Table,34002164,55408,"Elegibles","src/tables/Table 34002164 - Elegibles.al",Renumbered
+Table,34002165,55409,"ARS","src/tables/Table 34002165 - ARS.al",Renumbered
+Table,34002166,55410,"AFP","src/tables/Table 34002166 - AFP.al",Renumbered
+Table,34002167,55411,"Bancos ACH Nomina","src/tables/Table 34002167 - Bancos ACH Nomina.al",Renumbered
+Table,34002168,55412,"Descuentos pendientes","src/tables/Table 34002168 - Descuentos pendientes.al",Renumbered
+Table,34002169,55413,"DSPayroll Cue","src/tables/Table 34002169 - DSPayroll Cue.al",Renumbered
+Table,34002170,55414,"Exemption types","src/tables/Table 34002170 - Exemption types.al",Renumbered
+Table,34002171,55415,"Relacion Empleados - Proyectos","src/tables/Table 34002171 - Relacion Empleados - Proyectos.al",Renumbered
+Table,34002172,55416,"Payroll - Job Journal Line","src/tables/Table 34002172 - Payroll - Job Journal Line.al",Renumbered
+Table,34002173,55417,"Payroll - Job Journal Batch","src/tables/Table 34002173 - Payroll - Job Journal Batch.al",Renumbered
+Table,34002174,55418,"Payroll - Job Journal Template","src/tables/Table 34002174 - Payroll - Job Journal Template.al",Renumbered
+Table,34002175,55419,"Relacion Puestos - Proyectos","src/tables/Table 34002175 - Relacion Puestos - Proyectos.al",Renumbered
+Table,34002176,55420,"Payroll Letters","src/tables/Table 34002176 - Payroll Letters.al",Renumbered
+Table,34002177,55421,"Punch log","src/tables/Table 34002177 - Punch log.al",Renumbered
+Table,34002178,55422,"Arch. Acciones de personal","src/tables/Table 34002178 - Arch. Acciones de personal.al",Renumbered
+Table,34002179,55423,"Parametros Reloj Control Asist","src/tables/Table 34002179 - Parametros Reloj Control Asist.al",Renumbered
+Table,34002180,55424,"Shift schedule","src/tables/Table 34002180 - Shift schedule.al",Renumbered
+Table,34002181,55425,"Employee Shift schedule","src/tables/Table 34002181 - Employee Shift schedule.al",Renumbered
+Table,34002182,55426,"Numeradores globales","src/tables/Table 34002182 - Numeradores globales.al",Renumbered
+Table,34002183,55427,"Cab. Eval. desempeno","src/tables/Table 34002183 - Cab. Eval. desempeno.al",Renumbered
+Table,34002184,55428,"Cab. Cuestionario Evaluacion","src/tables/Table 34002184 - Cab. Cuestionario Evaluacion.al",Renumbered
+Table,34002185,55429,"Lin. Cuestionario Evaluacion","src/tables/Table 34002185 - Lin. Cuestionario Evaluacion.al",Renumbered
+Table,34002186,55430,"Rel. Empleados Evaluacion","src/tables/Table 34002186 - Rel. Empleados Evaluacion.al",Renumbered
+Table,34002187,55431,"Parametros vacaciones","src/tables/Table 34002187 - Parametros vacaciones.al",Renumbered
+Table,34002188,55432,"Rating Evaluacion","src/tables/Table 34002188 - Rating Evaluacion.al",Renumbered
+Table,34002189,55433,"Relacion Evaluacion","src/tables/Table 34002189 - Relacion Evaluacion.al",Renumbered
+Table,34002190,55434,"Distribucion ED empleados","src/tables/Table 34002190 - Distribucion ED empleados.al",Renumbered
+Table,34002191,55435,"Planificacion de vacaciones","src/tables/Table 34002191 - Planificacion de vacaciones.al",Renumbered
+Table,34002192,55436,"Employee Profile Answer","src/tables/Table 34002192 - Employee Profile Answer.al",Renumbered
+Table,34002193,55437,"Employee Value","src/tables/Table 34002193 - Employee Value.al",Renumbered
+Table,34002194,55438,"Preguntas Cuest. Evaluacion","src/tables/Table 34002194 - Preguntas Cuest. Evaluacion.al",Renumbered
+Table,34002195,55439,"Miembros cooperativa","src/tables/Table 34002195 - Miembros cooperativa.al",Renumbered
+Table,34002196,55440,"Mov. cooperativa","src/tables/Table 34002196 - Mov. cooperativa.al",Renumbered
+Table,34002197,55441,"Cab. Prestamos cooperativa","src/tables/Table 34002197 - Cab. Prestamos cooperativa.al",Renumbered
+Table,34002198,55442,"Lin. Prestamos cooperativa","src/tables/Table 34002198 - Lin. Prestamos cooperativa.al",Renumbered
+Table,34002199,55443,"Hist. Cab. Prest. cooperativa","src/tables/Table 34002199 - Hist. Cab. Prest. cooperativa.al",Renumbered
+Table,34002200,55444,"Hist. Lin. Prest. cooperativa","src/tables/Table 34002200 - Hist. Lin. Prest. cooperativa.al",Renumbered
+Table,34002201,55445,"ent - aaa - Disponible","src/tables/Table 34002201 - ent - aaa - Disponible.al",Renumbered
+Table,34002202,55446,"Programacion entrenamiento","src/tables/Table 34002202 - Programacion entrenamiento.al",Renumbered
+Table,34002203,55447,"Expositores","src/tables/Table 34002203 - Expositores.al",Renumbered
+Table,34002204,55448,"Cab. Entrenamiento","src/tables/Table 34002204 - Cab. Entrenamiento.al",Renumbered
+Table,34002205,55449,"Lin. entrenamientos","src/tables/Table 34002205 - Lin. entrenamientos.al",Renumbered
+Table,34002206,55450,"Asistentes entrenamientos","src/tables/Table 34002206 - Asistentes entrenamientos.al",Renumbered
+Table,34002208,55451,"Headline RC Payroll","src/tables/Table 34002208 - Headline RC Payroll.al",Renumbered
+Table,34002500,55452,"Configuracion General DsPOS","src/tables/Table 34002500 - Configuracion General DsPOS.al",Renumbered
+Table,34002501,55453,"Configuracion TPV","src/tables/Table 34002501 - Configuracion TPV.al",Renumbered
+Table,34002502,55454,"Usuarios TPV","src/tables/Table 34002502 - Usuarios TPV.al",Renumbered
+Table,34002503,55455,"Tiendas","src/tables/Table 34002503 - Tiendas.al",Renumbered
+Table,34002504,55456,"Bancos tienda","src/tables/Table 34002504 - Bancos tienda.al",Renumbered
+Table,34002505,55457,"Cajeros","src/tables/Table 34002505 - Cajeros.al",Renumbered
+Table,34002506,55458,"Menu ventas TPV","src/tables/Table 34002506 - Menu ventas TPV.al",Renumbered
+Table,34002507,55459,"Grupos Cajeros","src/tables/Table 34002507 - Grupos Cajeros.al",Renumbered
+Table,34002508,55460,"Log procesos TPV","src/tables/Table 34002508 - Log procesos TPV.al",Renumbered
+Table,34002509,55461,"Menus TPV","src/tables/Table 34002509 - Menus TPV.al",Renumbered
+Table,34002510,55462,"Clinetes TPV","src/tables/Table 34002510 - Clinetes TPV.al",Renumbered
+Table,34002511,55463,"Botones","src/tables/Table 34002511 - Botones.al",Renumbered
+Table,34002512,55464,"Acciones","src/tables/Table 34002512 - Acciones.al",Renumbered
+Table,34002513,55465,"Formas de Pago","src/tables/Table 34002513 - Formas de Pago.al",Renumbered
+Table,34002514,55466,"Formas de Pago TPV","src/tables/Table 34002514 - Formas de Pago TPV.al",Renumbered
+Table,34002515,55467,"Tipos de Tarjeta","src/tables/Table 34002515 - Tipos de Tarjeta.al",Renumbered
+Table,34002517,55468,"Vendedores","src/tables/Table 34002517 - Vendedores.al",Renumbered
+Table,34002518,55469,"Conf. Rutas Imp/Exp. Ventas","src/tables/Table 34002518 - Conf. Rutas ImpExp. Ventas.al",Renumbered
+Table,34002519,55470,"Dimension Defecto Almacen","src/tables/Table 34002519 - Dimension Defecto Almacen.al",Renumbered
+Table,34002520,55471,"Dimension Set Entry TPV","src/tables/Table 34002520 - Dimension Set Entry TPV.al",Renumbered
+Table,34002521,55472,"Pagos TPV","src/tables/Table 34002521 - Pagos TPV.al",Renumbered
+Table,34002522,55473,"Param. CDU DsPOS","src/tables/Table 34002522 - Param. CDU DsPOS.al",Renumbered
+Table,34002523,55474,"Transacciones Caja TPV","src/tables/Table 34002523 - Transacciones Caja TPV.al",Renumbered
+Table,34002524,55475,"Control de TPV","src/tables/Table 34002524 - Control de TPV.al",Renumbered
+Table,34002525,55476,"Solicitud de etiquetas","src/tables/Table 34002525 - Solicitud de etiquetas.al",Renumbered
+Table,34002526,55477,"Arqueo de caja","src/tables/Table 34002526 - Arqueo de caja.al",Renumbered
+Table,34002527,55478,"Billetes y Monedas Divisa","src/tables/Table 34002527 - Billetes y Monedas Divisa.al",Renumbered
+Table,34002528,55479,"Lin. declaracion caja","src/tables/Table 34002528 - Lin. declaracion caja.al",Renumbered
+Table,34002529,55480,"Turnos TPV","src/tables/Table 34002529 - Turnos TPV.al",Renumbered
+Table,34002530,55481,"Transacciones TPV","src/tables/Table 34002530 - Transacciones TPV.al",Renumbered
+Table,34002531,55482,"Divisas DsPOS","src/tables/Table 34002531 - Divisas DsPOS.al",Renumbered
+Table,34002532,55483,"Datos Auxiliares Venta","src/tables/Table 34002532 - Datos Auxiliares Venta.al",Renumbered
+Table,34002533,55484,"Cabecera Log Registro POS","src/tables/Table 34002533 - Cabecera Log Registro POS.al",Renumbered
+Table,34002534,55485,"Detalle Log Registro DsPOS","src/tables/Table 34002534 - Detalle Log Registro DsPOS.al",Renumbered
+Table,34002535,55486,"Pedidos  Aparcados","src/tables/Table 34002535 - Pedidos  Aparcados.al",Renumbered
+Table,34002536,55487,"Dimensiones  POS","src/tables/Table 34002536 - Dimensiones  POS.al",Renumbered
+Table,34002537,55488,"Clientes  TPV","src/tables/Table 34002537 - Clientes  TPV.al",Renumbered
+Table,34002550,55489,"DsPOS Event Buffer","src/tables/Table 34002550 - DsPOSEventBuffer.al",Renumbered
+Table,34003000,55490,"Config. Retencion Proveedores","src/tables/Table 34003000 - Config. Retencion Proveedores.al",Renumbered
+Table,34003001,55491,"Proveedor - Retencion","src/tables/Table 34003001 - Proveedor - Retencion.al",Renumbered
+Table,34003002,55492,"Retencion Doc. Proveedores","src/tables/Table 34003002 - Retencion Doc. Proveedores.al",Renumbered
+Table,34003003,55493,"Historico Retencion Prov.","src/tables/Table 34003003 - Historico Retencion Prov..al",Renumbered
+Table,34003004,55494,"Archivo Transferencia ITBIS","src/tables/Table 34003004 - Archivo Transferencia ITBIS.al",Renumbered
+Table,34003005,55495,"NCF liquidados","src/tables/Table 34003005 - NCF liquidados.al",Renumbered
+Table,34003006,55496,"Razones Anulacion NCF","src/tables/Table 34003006 - Razones Anulacion NCF.al",Renumbered
+Table,34003007,55497,"TEMP Default Dimension","src/tables/Table 34003007 - TEMP Default Dimension.al",Renumbered
+Table,34003008,55498,"Config. Localizacion","src/tables/Table 34003008 - Config. Localizacion.al",Renumbered
+Table,34003009,55499,"Clasificacion Gastos","src/tables/Table 34003009 - Clasificacion Gastos.al",Renumbered
+Table,34003010,55500,"Config. Distrib. CC","src/tables/Table 34003010 - Config. Distrib. CC.al",Renumbered
+Table,34003011,55501,"Parametros Loc. x Pais","src/tables/Table 34003011 - Parametros Loc. x País.al",Renumbered
+Table,34003012,55502,"NCF Anulados - GT","src/tables/Table 34003012 - NCF Anulados - GT.al",Renumbered
+Table,34003013,55503,"Tipos de ingresos","src/tables/Table 34003013 - Tipos de ingresos.al",Renumbered
+Table,34003014,55504,"Temp carta retenciones","src/tables/Table 34003014 - Temp carta retenciones.al",Renumbered
+Table,34003020,55505,"Cab. Campos Requeridos","src/tables/Table 34003020 - Cab. Campos Requeridos.al",Renumbered
+Table,34003021,55506,"Lin. Campos Req. Maestros","src/tables/Table 34003021 - Lin. Campos Req. Maestros.al",Renumbered
+Table,34003022,55507,"Cab. Dimensiones Requeridas","src/tables/Table 34003022 - Cab. Dimensiones Requeridas.al",Renumbered
+Table,34003023,55508,"Lin. Dimensiones Req.","src/tables/Table 34003023 - Lin. Dimensiones Req..al",Renumbered
+Table,34003024,55509,"RNC DGII","src/tables/Table 34003024 - RNC DGII.al",Renumbered
+Table,34003050,55510,"_Clientes TPV","src/tables/Table 34003050 - _Clientes TPV.al",Renumbered
+Table,34003051,55511,"Autorizaciones Manuales TPV","src/tables/Table 34003051 - Autorizaciones Manuales TPV.al",Renumbered
+Table,34003052,55512,"_Pedidos Aparcados","src/tables/Table 34003052 - _Pedidos Aparcados.al",Renumbered
+Table,34003053,55513,"_Dimensiones POS","src/tables/Table 34003053 - _Dimensiones POS.al",Renumbered

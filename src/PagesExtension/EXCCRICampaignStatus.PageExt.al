@@ -1,4 +1,4 @@
-pageextension 50094 EXCCRICampaignStatus extends "Campaign Status"
+pageextension 55094 EXCCRICampaignStatus extends "Campaign Status"
 {
     layout
     {

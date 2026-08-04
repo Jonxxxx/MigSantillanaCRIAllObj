@@ -1,4 +1,4 @@
-codeunit 52507 "Actualizar Consecutivo rechaza"
+codeunit 55205 "Actualizar Consecutivo rechaza"
 {
     // YFC     : Yefrecis Cruz
     // --------------------------------------------------------------------------
@@ -22,7 +22,7 @@ codeunit 52507 "Actualizar Consecutivo rechaza"
     procedure ActualizarConsecutivoFE()
     var
         SIH: Record 112;
-        FE_nav: Codeunit 52504;
+        FE_nav: Codeunit 55202;
         i: Integer;
     begin
         //002-YFC

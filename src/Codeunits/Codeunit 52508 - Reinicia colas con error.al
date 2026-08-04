@@ -1,4 +1,4 @@
-codeunit 52508 "Reinicia colas con error"
+codeunit 55206 "Reinicia colas con error"
 {
 
     trigger OnRun()

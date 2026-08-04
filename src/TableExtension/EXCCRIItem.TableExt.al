@@ -1,4 +1,4 @@
-tableextension 50012 EXCCRIItem extends Item
+tableextension 55237 EXCCRIItem extends Item
 {
     fields
     {
@@ -62,21 +62,21 @@ tableextension 50012 EXCCRIItem extends Item
                 "Gestionado MdM" := EXCCRIItemCategory.MdM;
             end;
         }
-        field(50000; "No. Paginas"; Decimal)
+        field(55225; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
             DecimalPlaces = 0 : 0;
         }
-        field(50001; "Componentes Producto"; Code[20])
+        field(55226; "Componentes Producto"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(50002; ISBN; Text[50])
+        field(55227; ISBN; Text[50])
         {
             DataClassification = CustomerContent;
         }
-        field(50003; "Qty. on Pre Sales Order"; Decimal)
+        field(55228; "Qty. on Pre Sales Order"; Decimal)
         {
             Caption = 'Qty. on Pre Sales Order';
             FieldClass = FlowField;
@@ -84,39 +84,39 @@ tableextension 50012 EXCCRIItem extends Item
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(50005; "Nivel Escolar (Grado)"; Code[20])
+        field(55230; "Nivel Escolar (Grado)"; Code[20])
         {
             Caption = 'Course';
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Grado), Bloqueado = const(false));
         }
-        field(50007; "Carga horaria"; Code[20])
+        field(55232; "Carga horaria"; Code[20])
         {
             DataClassification = CustomerContent;
             // Ver TableRelation = 62031;
         }
-        field(50008; "Tipo Ingles"; Option)
+        field(55233; "Tipo Ingles"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(50009; Catalogo; Boolean)
+        field(55234; Catalogo; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50010; Formato; Option)
+        field(55235; Formato; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Libro,Cuaderno,Guia,Otros;
         }
-        field(50110; "Tipo de Peso"; Option)
+        field(55110; "Tipo de Peso"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Weight,Pre-weight';
             OptionMembers = " ",Pesado,"Pre-pesado";
         }
-        field(50111; "Source counter"; BigInteger)
+        field(55198; "Source counter"; BigInteger)
         {
             DataClassification = CustomerContent;
 
@@ -146,38 +146,38 @@ tableextension 50012 EXCCRIItem extends Item
                 end;
             end;
         }
-        field(50112; Descripcion; Text[30])
+        field(55111; Descripcion; Text[30])
         {
             DataClassification = CustomerContent;
         }
-        field(50113; "Venta por internet"; Boolean)
+        field(55112; "Venta por internet"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50114; "Fecha SC"; Date)
+        field(55113; "Fecha SC"; Date)
         {
             DataClassification = CustomerContent;
         }
-        field(50115; "Hora SC"; Time)
+        field(55114; "Hora SC"; Time)
         {
             DataClassification = CustomerContent;
         }
-        field(50116; "linea-impresora"; Code[20])
+        field(55115; "linea-impresora"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50117; EspecificacionSIC; Text[255])
+        field(55116; EspecificacionSIC; Text[255])
         {
             Caption = 'Specification';
             DataClassification = CustomerContent;
         }
-        field(53000; "Id. reporte etiqueta"; Integer)
+        field(55221; "Id. reporte etiqueta"; Integer)
         {
             Caption = 'Label report Id.';
             DataClassification = CustomerContent;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
-        field(55000; Materia; Code[20])
+        field(55260; Materia; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const(Materia));

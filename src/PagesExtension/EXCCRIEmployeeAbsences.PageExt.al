@@ -1,4 +1,4 @@
-pageextension 50103 EXCCRIEmployeeAbsences extends "Employee Absences"
+pageextension 55103 EXCCRIEmployeeAbsences extends "Employee Absences"
 {
     layout
     {

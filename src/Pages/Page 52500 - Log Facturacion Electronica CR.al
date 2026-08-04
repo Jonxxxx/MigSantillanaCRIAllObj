@@ -1,4 +1,4 @@
-page 52500 "Log Facturacion Electronica CR"
+page 55199 "Log Facturacion Electronica CR"
 {
     // #217374, RRT, 22.09.19: Al comprobar un documento si viene de POS, no hay que enviarlo por e-mail.
     // 
@@ -15,7 +15,7 @@ page 52500 "Log Facturacion Electronica CR"
     LinksAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 52502;
+    SourceTable = 55201;
     UsageCategory = Lists;
 
     layout
@@ -245,14 +245,14 @@ page 52500 "Log Facturacion Electronica CR"
 
                 trigger OnAction()
                 var
-                    // TODO: Manual review - Electronic-invoicing codeunit 52504 is an empty migration placeholder with no callable procedures.
-                    // Original code: FE: Codeunit 52504;
+                    // TODO: Manual review - Electronic-invoicing codeunit 55202 is an empty migration placeholder with no callable procedures.
+                    // Original code: FE: Codeunit 55202;
                     lrSCMH: Record 114;
                     lrSH: Record 36;
                 begin
                     //+#217374
                     //... Si el documento viene de POS, no debe enviarse por e-mail.
-                    // TODO: Manual review - The complete electronic-document verification block depends on empty codeunit 52504 and cannot be restored.
+                    // TODO: Manual review - The complete electronic-document verification block depends on empty codeunit 55202 and cannot be restored.
                     /*
                     IF "Tipo Documento" = "Tipo Documento"::TE THEN
                         FE.Parametros(TRUE, '')
@@ -283,7 +283,7 @@ page 52500 "Log Facturacion Electronica CR"
                 begin
 
                     // ++ 001-YFC
-                    // TODO: Manual review - Codeunit 52504 is an empty placeholder and has no ComprobarDocumentosElectronicoLOG procedure.
+                    // TODO: Manual review - Codeunit 55202 is an empty placeholder and has no ComprobarDocumentosElectronicoLOG procedure.
                     // Original code: FacturacionElectronicaNAV.ComprobarDocumentosElectronicoLOG;
                     MESSAGE(Text001);
                     // -- 001-YFC
@@ -294,10 +294,10 @@ page 52500 "Log Facturacion Electronica CR"
 
     var
         FileManagment: Codeunit 419;
-        // TODO: Manual review - Temp Blob record 99008535 is removed, and electronic-invoicing codeunit 52504 is an empty placeholder.
+        // TODO: Manual review - Temp Blob record 99008535 is removed, and electronic-invoicing codeunit 55202 is an empty placeholder.
         // Original code preserved below.
         // TempBlob: Record 99008535 temporary;
-        // FacturacionElectronicaNAV: Codeunit 52504;
+        // FacturacionElectronicaNAV: Codeunit 55202;
         Text001: Label 'Ended process';
 }
 

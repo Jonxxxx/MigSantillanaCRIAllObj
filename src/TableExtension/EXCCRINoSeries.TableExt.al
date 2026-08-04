@@ -1,8 +1,8 @@
-tableextension 50047 EXCCRINoSeries extends "No. Series"
+tableextension 55047 EXCCRINoSeries extends "No. Series"
 {
     fields
     {
-        field(50000; "Tipo Documento"; Option)
+        field(55225; "Tipo Documento"; Option)
         {
             Caption = 'Document Type', Comment = 'ESP=Tipo Documento';
             DataClassification = CustomerContent;

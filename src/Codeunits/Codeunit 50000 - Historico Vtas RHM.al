@@ -1,4 +1,4 @@
-codeunit 50000 "Historico Vtas RHM"
+codeunit 55225 "Historico Vtas RHM"
 {
 
     trigger OnRun()

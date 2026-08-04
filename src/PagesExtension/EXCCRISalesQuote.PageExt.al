@@ -1,4 +1,4 @@
-pageextension 50019 EXCCRISalesQuote extends "Sales Quote"
+pageextension 55244 EXCCRISalesQuote extends "Sales Quote"
 {
     layout
     {
@@ -51,7 +51,7 @@ pageextension 50019 EXCCRISalesQuote extends "Sales Quote"
                 begin
                     EXCCRISalesHeader.SetRange("No.", Rec."No.");
                     if EXCCRISalesHeader.FindFirst() then;
-                    Report.RunModal(52546, true, false, EXCCRISalesHeader);
+                    Report.RunModal(55217, true, false, EXCCRISalesHeader);
                 end;
             }
         }

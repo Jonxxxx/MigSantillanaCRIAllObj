@@ -172,8 +172,8 @@ codeunit 56009 "Completa datos"
         I: Integer;
         N: Integer;
         adopcion1: Record 67053;
-        adopcion2: Record 50008;
-        adopcion3: Record 50008;
+        adopcion2: Record 55233;
+        adopcion3: Record 55233;
         DetailCustomer: Record 379;
 }
 

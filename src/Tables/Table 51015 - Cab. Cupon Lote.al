@@ -1,4 +1,4 @@
-table 51015 "Cab. Cupon Lote"
+table 55176 "Cab. Cupon Lote"
 {
     // #140677, RRT, 14.05.2018: Que varios usuarios puedan crear simultaneamente cupones por lote.
 
@@ -18,7 +18,7 @@ table 51015 "Cab. Cupon Lote"
 
             trigger OnValidate()
             var
-                rAo: Record 51013;
+                rAo: Record 55174;
             begin
 
                 IF rAo.GET("Ano Escolar") THEN BEGIN
@@ -130,19 +130,19 @@ table 51015 "Cab. Cupon Lote"
             Caption = 'Usuario';
             Description = '#140677';
         }
-        field(50000; "Cantidad Limite"; Integer)
+        field(55225; "Cantidad Limite"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
-        field(50001; "Importe Dto. Limite"; Decimal)
+        field(55226; "Importe Dto. Limite"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Dto. Limite';
             Description = 'NopCommerce';
         }
-        field(50002; "Cod. Cliente"; Code[20])
+        field(55227; "Cod. Cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cliente';
@@ -154,17 +154,17 @@ table 51015 "Cab. Cupon Lote"
                 "Nombre Cliente" := Cliente.Name;
             end;
         }
-        field(50004; "Nombre Cliente"; Text[100])
+        field(55229; "Nombre Cliente"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Cliente';
         }
-        field(50005; "Nombre Maestro"; Text[100])
+        field(55230; "Nombre Maestro"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Maestro';
         }
-        field(50006; "Dto. Maestro"; Decimal)
+        field(55231; "Dto. Maestro"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Dto. Maestro';
@@ -184,7 +184,7 @@ table 51015 "Cab. Cupon Lote"
 
     trigger OnDelete()
     var
-        rLin: Record 51011;
+        rLin: Record 55172;
     begin
 
         rLin.RESET;
@@ -195,7 +195,7 @@ table 51015 "Cab. Cupon Lote"
 
     trigger OnInsert()
     var
-        rCab: Record 51015;
+        rCab: Record 55176;
     begin
         rCab.RESET;
         IF rCab.FINDLAST THEN
@@ -215,7 +215,7 @@ table 51015 "Cab. Cupon Lote"
 
     procedure AplicaDto()
     var
-        rLin: Record 51011;
+        rLin: Record 55172;
     begin
 
         rLin.RESET;
@@ -226,7 +226,7 @@ table 51015 "Cab. Cupon Lote"
 
     procedure ComprobarLote(pLote: Integer)
     var
-        rLinLote: Record 51011;
+        rLinLote: Record 55172;
     begin
         TESTFIELD("Dto Padre");
 

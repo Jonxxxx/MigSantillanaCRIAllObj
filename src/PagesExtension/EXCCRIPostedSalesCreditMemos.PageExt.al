@@ -1,4 +1,4 @@
-pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Memos"
+pageextension 55049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Memos"
 {
     layout
     {
@@ -118,7 +118,7 @@ pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Me
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
                     begin
                         //if Rec."Venta TPV" then
                         //    EXCCRIElectronicInvoicing.TiqueteElectronicoNCR_vCentral(Rec."No.")
@@ -135,8 +135,8 @@ pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Me
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
-                        EXCCRIElectronicLog: Record 52502;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
+                        EXCCRIElectronicLog: Record 55201;
                     begin
                         if not EXCCRIElectronicLog.Get(1, Rec."No.") then
                             Error(EXCCRIElectronicLogMissingErr, Rec."No.");
@@ -152,7 +152,7 @@ pageextension 50049 EXCCRIPostedSalesCreditMemos extends "Posted Sales Credit Me
                     ApplicationArea = All;
                     Caption = 'Electronic Document Log';
                     Image = Log;
-                    RunObject = page 52500;
+                    RunObject = page 55199;
                     RunPageLink = NoDocumento = field("No.");
                     ToolTip = 'Opens the electronic document log related to the posted sales credit memo.';
                 }

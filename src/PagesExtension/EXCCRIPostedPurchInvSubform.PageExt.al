@@ -1,4 +1,4 @@
-pageextension 50045 EXCCRIPostedPurchInvSubform extends "Posted Purch. Invoice Subform"
+pageextension 55045 EXCCRIPostedPurchInvSubform extends "Posted Purch. Invoice Subform"
 {
     layout
     {

@@ -1,11 +1,11 @@
-page 50111 "Lista Lineas Ventas SIC"
+page 55198 "Lista Lineas Ventas SIC"
 {
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 50112;
+    SourceTable = 55111;
 
     layout
     {

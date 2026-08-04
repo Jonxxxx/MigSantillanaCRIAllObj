@@ -1,4 +1,4 @@
-codeunit 50112 "Registra Pedidos Vta. SIC_BC"
+codeunit 55111 "Registra Pedidos Vta. SIC_BC"
 {
     // Proyecto: Implementacion Microsoft Dynamic
     // 
@@ -47,7 +47,7 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
     var
         SH: Record 36;
         SSH: Record 110;
-        SalesPostPrint_WMS: Codeunit 50113;
+        SalesPostPrint_WMS: Codeunit 55112;
         SH2: Record 36;
         SalesInvHeader: Record 112;
         SalesInvHeader2: Record 112;
@@ -61,21 +61,21 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         Text002: Label 'Registrada Correctamente';
         Numlogs: Integer;
         rCabLog: Record 34002533;
-        Transfer_SIC: Codeunit 50110;
+        Transfer_SIC: Codeunit 55110;
         StarDate: Date;
         Fecha: Date;
         SH_: Record 36;
         SL_: Record 37;
-        CabVentasSIC: Record 50111;
-        MediosdePagosSIC: Record 50113;
+        CabVentasSIC: Record 55198;
+        MediosdePagosSIC: Record 55112;
         Importe: Decimal;
         wFechaProceso: Date;
         contador: Integer;
-        RegistrarCobrosDsPos: Codeunit 50116;
+        RegistrarCobrosDsPos: Codeunit 55115;
 
     procedure RegistraFactura()
     var
-        LineasVentasSIC: Record 50112;
+        LineasVentasSIC: Record 55111;
         SalesLine: Record 37;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
@@ -383,7 +383,7 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraFacturaManual()
     var
-        LineasVentasSIC: Record 50112;
+        LineasVentasSIC: Record 55111;
         SalesLine: Record 37;
         Text001_: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
@@ -457,7 +457,7 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraNotaCR()
     var
-        LineasVentasSIC: Record 50112;
+        LineasVentasSIC: Record 55111;
         SalesLine: Record 37;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
@@ -617,8 +617,8 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         NoLin: Integer;
         dImporte: Integer;
         ImporteNeto: Integer;
-        MediosdePagoMG: Record 50113;
-        ConfMediosdepagos: Record 50110;
+        MediosdePagoMG: Record 55112;
+        ConfMediosdepagos: Record 55110;
         SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
         Bancostienda: Record 34002504;
@@ -707,14 +707,14 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure CrearPago(NumDoc: Code[20]; NumRDoc: Code[20]; LCode: Code[20])
     var
-        CabVentasSIC: Record 50111;
-        LineasVentasSIC: Record 50112;
-        MPSIC: Record 50113;
-        MPSIC2: Record 50113;
-        MPSIC3: Record 50113;
+        CabVentasSIC: Record 55198;
+        LineasVentasSIC: Record 55111;
+        MPSIC: Record 55112;
+        MPSIC2: Record 55112;
+        MPSIC3: Record 55112;
         SalesHeader: Record 36;
         NumSIC: Code[20];
-        MPSIC4: Record 50113;
+        MPSIC4: Record 55112;
         Import: Decimal;
     begin
 
@@ -813,12 +813,12 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
 
     procedure RegistraFacturaVs2()
     var
-        LineasVentasSIC: Record 50112;
+        LineasVentasSIC: Record 55111;
         Text001: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         SL_: Record 37;
         propina: Decimal;
         Text002: Label 'Error en los medios de pagos  | %1  | %2  | %3';
-        MediosdePagosSIC: Record 50113;
+        MediosdePagosSIC: Record 55112;
         SH_: Record 36;
         Error001: Label 'Cant. lineas no permitidas para registro';
         Error002: Label 'Montos en tablas no coinciden';
@@ -831,7 +831,7 @@ codeunit 50112 "Registra Pedidos Vta. SIC_BC"
         Text003: Label 'El documento fue instertado correctamente Documento No. ';
         Error006: Label 'No Existe "No. Documento" = %1, en tabla intermedia "Cab. Ventas SIC';
         ConfigEmpresa: Record 56001;
-        MediosdePagoSIC: Record 50113;
+        MediosdePagoSIC: Record 55112;
         SalesLine: Record 37;
         CantidadLin: Integer;
         SalesInvoiceHeader: Record 112;

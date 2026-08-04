@@ -3661,14 +3661,14 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                             AddMstRegField(5702, Tipologia, 'Tipologia', 2);
                             AddMstRegField(3, Titulo_Catalogo, 'Titulo_Catalogo', 4);
                             AddMstRegField(5, Titulo_Corto, 'Titulo_Corto', 3);
-                            AddMstRegField(50002, ISBN, 'ISBN', 5);
+                            AddMstRegField(55227, ISBN, 'ISBN', 5);
                             AddMstRegField(-400, EAN, 'EAN', 6); // Virtual
                             AddMstRegField(75001, Tipo_Producto, 'Tipo_Producto', 7);
                             AddMstRegField(75002, Soporte_del_Producto, 'Soporte_del_Producto', 13);
                             AddMstRegField(-101, Ancho, 'Ancho', 9); // Virtual.
                             AddMstRegField(-102, Alto, 'Alto', 8); // Virtual.
                             AddMstRegField(-103, Peso, 'Peso', 11); // Virtual.
-                            AddMstRegField(50000, Paginas, 'Paginas', 10);
+                            AddMstRegField(55225, Paginas, 'Paginas', 10);
                             AddMstRegField(75003, Empresa_Editora, 'Empresa_Editora', 12);
                             AddMstRegField(75004, item_Linea, 'item_Linea', 14);
                             AddMstRegField(56010, Sello, 'Sello', 15);
@@ -4083,7 +4083,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                             AddMstRegField(-203, item_Tipo_Texto, 'item_Tipo_Texto', 14);// Virtual. Dimension.
                             AddMstRegField(75010, Asignatura, 'Asignatura', 15);
                             AddMstRegField(-204, Materia, 'Materia', 16); // Virtual. Dimension.
-                            AddMstRegField(50005, Nivel_Escolar, 'Nivel_Escolar', 17);
+                            AddMstRegField(55230, Nivel_Escolar, 'Nivel_Escolar', 17);
                             AddMstRegField(-205, Carga_Horaria, 'Carga_Horaria', 18);// Virtual. Dimension
                             AddMstRegField(-206, Origen, 'Origen', 19);  // Virtual. Dimension
                             AddMstRegField(-300, Precio_sin_Impuestos, 'Precio_sin_Impuestos', 20);  // Virtual.

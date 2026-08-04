@@ -297,7 +297,7 @@ page 34002555 "Lista Facturas Pendientes POS"
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 52500;
+                    RunObject = Page 55199;
                     RunPageLink = NoDocumento = FIELD("Posting No.");
                     Visible = wCostaRica;
                 }
@@ -310,7 +310,7 @@ page 34002555 "Lista Facturas Pendientes POS"
 
                     trigger OnAction()
                     var
-                        Utilitarioparacorregircosas: Codeunit 52502;
+                        Utilitarioparacorregircosas: Codeunit 55201;
                     begin
                         Utilitarioparacorregircosas.TransferLineaActualizada2(Rec."No. Fiscal TPV", Rec."Location Code");
                     end;
@@ -389,8 +389,8 @@ page 34002555 "Lista Facturas Pendientes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-        // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
-        // Original code: lcfComunes: Codeunit 34002503;
+    // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+    // Original code: lcfComunes: Codeunit 34002503;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;
@@ -411,7 +411,7 @@ page 34002555 "Lista Facturas Pendientes POS"
         [InDataSet]
         JobQueueActive: Boolean;
         wCostaRica: Boolean;
-        Registrar: Codeunit 50112;
-        Transfer_SIC: Codeunit 50110;
+        Registrar: Codeunit 55111;
+        Transfer_SIC: Codeunit 55110;
 }
 

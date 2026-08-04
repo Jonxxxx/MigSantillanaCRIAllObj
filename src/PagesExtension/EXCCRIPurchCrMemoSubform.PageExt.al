@@ -1,4 +1,4 @@
-pageextension 50034 EXCCRIPurchCrMemoSubform extends "Purch. Cr. Memo Subform"
+pageextension 55034 EXCCRIPurchCrMemoSubform extends "Purch. Cr. Memo Subform"
 {
     layout
     {

@@ -1,4 +1,4 @@
-codeunit 50116 "Registrar Cobros DsPos"
+codeunit 55115 "Registrar Cobros DsPos"
 {
     // Proyecto: Implementacion Business Central.
     // 
@@ -12,7 +12,7 @@ codeunit 50116 "Registrar Cobros DsPos"
 
     Permissions = TableData 112 = rim,
                   TableData 114 = rim,
-                  TableData 50113 = rim;
+                  TableData 55112 = rim;
 
     trigger OnRun()
     begin
@@ -34,13 +34,13 @@ codeunit 50116 "Registrar Cobros DsPos"
         GenJnlPostLine: Codeunit 12;
         OldCustLedgEntry: Record 21;
         NoLin: Integer;
-        MediosdePagoMG: Record 50113;
-        ConfMediosdepagos: Record 50110;
+        MediosdePagoMG: Record 55112;
+        ConfMediosdepagos: Record 55110;
         Bancostienda: Record 34002504;
         SIH: Record 112;
         SCRM: Record 114;
         MontoIva: Decimal;
-        MedPagoSIC: Record 50113;
+        MedPagoSIC: Record 55112;
         CustEntryApplyPostedEntries: Codeunit 226;
         DetailedCustLedgEntry: Record 379;
         BankAccountLedgerEntry: Record 271;
@@ -551,7 +551,7 @@ codeunit 50116 "Registrar Cobros DsPos"
         ImporteLiquidado: Decimal;
         FechaInicio: Date;
         CantidadDocs: Integer;
-        MediosdePagoSIC: Record 50113;
+        MediosdePagoSIC: Record 55112;
     begin
         //SANTINAV-7551+ //LDP //04/02/2025
         //Facturas+

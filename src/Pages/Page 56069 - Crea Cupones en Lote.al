@@ -5,7 +5,7 @@ page 56069 "Crea Cupones en Lote"
     ApplicationArea = Basic, Suite, Service;
     DelayedInsert = false;
     PageType = List;
-    SourceTable = 51015;
+    SourceTable = 55176;
     UsageCategory = Tasks;
 
     layout
@@ -133,7 +133,7 @@ page 56069 "Crea Cupones en Lote"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 51011;
+                RunObject = Page 55172;
                 RunPageLink = "No. Lote cupon" = FIELD(Lote);
                 RunPageView = SORTING("No. Lote cupon", "Grupo Negocio")
                               ORDER(Ascending);

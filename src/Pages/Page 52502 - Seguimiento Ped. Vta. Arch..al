@@ -1,4 +1,4 @@
-page 52502 "Seguimiento Ped. Vta. Arch."
+page 55201 "Seguimiento Ped. Vta. Arch."
 {
     DeleteAllowed = false;
     Editable = false;

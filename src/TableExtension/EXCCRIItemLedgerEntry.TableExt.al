@@ -1,100 +1,100 @@
-tableextension 50013 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
+tableextension 55238 EXCCRIItemLedgerEntry extends "Item Ledger Entry"
 {
     fields
     {
-        field(50000; "Cod. Procedencia"; Code[20])
+        field(55225; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edicion"; Code[20])
+        field(55226; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50131;
+            // Ver TableRelation = 55130;
         }
-        field(50002; Areas; Code[20])
+        field(55227; Areas; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50132;
+            // Ver TableRelation = 55131;
         }
-        field(50003; "No. Paginas"; Decimal)
-        {
-            DataClassification = CustomerContent;
-        }
-        field(50004; ISBN; Text[30])
+        field(55228; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50005; "Componentes Prod."; Code[20])
+        field(55229; ISBN; Text[30])
+        {
+            DataClassification = CustomerContent;
+        }
+        field(55230; "Componentes Prod."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(50006; "Nivel Educativo"; Code[20])
+        field(55231; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
-            // Ver TableRelation = 50133;
+            // Ver TableRelation = 55132;
         }
-        field(50007; Cursos; Code[20])
+        field(55232; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
-        field(50008; "Precio Unitario Cons. Inicial"; Decimal)
+        field(55233; "Precio Unitario Cons. Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50009; "Descuento % Cons. Inicial"; Decimal)
+        field(55234; "Descuento % Cons. Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50010; "Importe Cons. bruto Inicial"; Decimal)
+        field(55235; "Importe Cons. bruto Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50011; "Importe Cons. Neto Inicial"; Decimal)
+        field(55236; "Importe Cons. Neto Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50012; "Cant. Consignacion Pendiente"; Decimal)
+        field(55237; "Cant. Consignacion Pendiente"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50013; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55238; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(50014; "Pedido Consignacion"; Boolean)
+        field(55239; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50015; "Devolucion Consignacion"; Boolean)
+        field(55240; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50016; "Descripcion Producto"; Text[100])
+        field(55241; "Descripcion Producto"; Text[100])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
             Editable = false;
         }
-        field(50017; "Precio Unitario Cons. Act."; Decimal)
+        field(55242; "Precio Unitario Cons. Act."; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50018; "Descuento % Cons. Actualizado"; Decimal)
+        field(55243; "Descuento % Cons. Actualizado"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50019; "Importe Cons. bruto Act."; Decimal)
+        field(55244; "Importe Cons. bruto Act."; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50020; "Importe Cons. Neto Act."; Decimal)
+        field(55245; "Importe Cons. Neto Act."; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50021; "Ult. Fecha Act. Imp. Consig."; Date)
+        field(55246; "Ult. Fecha Act. Imp. Consig."; Date)
         {
             Caption = 'Consig. Amount Last update';
             DataClassification = CustomerContent;

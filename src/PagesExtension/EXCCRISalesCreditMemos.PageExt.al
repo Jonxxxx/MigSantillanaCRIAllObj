@@ -1,4 +1,4 @@
-pageextension 50152 EXCCRISalesCreditMemos extends "Sales Credit Memos"
+pageextension 55151 EXCCRISalesCreditMemos extends "Sales Credit Memos"
 {
     trigger OnOpenPage()
     var

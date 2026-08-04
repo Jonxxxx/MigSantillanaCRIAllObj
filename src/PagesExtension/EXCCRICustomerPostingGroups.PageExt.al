@@ -1,4 +1,4 @@
-pageextension 50035 EXCCRICustomerPostingGroups extends "Customer Posting Groups"
+pageextension 55035 EXCCRICustomerPostingGroups extends "Customer Posting Groups"
 {
     layout
     {

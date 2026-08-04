@@ -1,4 +1,4 @@
-pageextension 50037 EXCCRIGeneralLedgerSetup extends "General Ledger Setup"
+pageextension 55037 EXCCRIGeneralLedgerSetup extends "General Ledger Setup"
 {
     layout
     {

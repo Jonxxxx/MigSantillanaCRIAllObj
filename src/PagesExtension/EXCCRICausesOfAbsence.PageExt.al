@@ -1,4 +1,4 @@
-pageextension 50102 EXCCRICausesOfAbsence extends "Causes of Absence"
+pageextension 55102 EXCCRICausesOfAbsence extends "Causes of Absence"
 {
     layout
     {

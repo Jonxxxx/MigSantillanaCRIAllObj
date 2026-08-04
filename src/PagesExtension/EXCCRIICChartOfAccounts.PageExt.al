@@ -1,4 +1,4 @@
-pageextension 50086 EXCCRIICChartOfAccounts extends "IC Chart of Accounts"
+pageextension 55086 EXCCRIICChartOfAccounts extends "IC Chart of Accounts"
 {
     layout
     {

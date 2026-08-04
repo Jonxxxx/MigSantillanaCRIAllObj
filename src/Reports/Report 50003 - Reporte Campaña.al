@@ -1,4 +1,4 @@
-report 50003 "Reporte Campaña"
+report 55228 "Reporte Campaña"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte Campaña.rdl';

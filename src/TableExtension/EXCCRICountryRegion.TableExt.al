@@ -1,4 +1,4 @@
-tableextension 50003 EXCCRICountryRegion extends "Country/Region"
+tableextension 55228 EXCCRICountryRegion extends "Country/Region"
 {
     fields
     {

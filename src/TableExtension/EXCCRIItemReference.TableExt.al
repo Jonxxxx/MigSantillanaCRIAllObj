@@ -1,4 +1,4 @@
-tableextension 50084 EXCCRIItemReference extends "Item Reference"
+tableextension 55084 EXCCRIItemReference extends "Item Reference"
 {
     trigger OnBeforeInsert()
     begin

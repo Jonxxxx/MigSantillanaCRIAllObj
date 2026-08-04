@@ -1,4 +1,4 @@
-tableextension 50075 EXCCRIEmployeeQualification extends "Employee Qualification"
+tableextension 55075 EXCCRIEmployeeQualification extends "Employee Qualification"
 {
     fields
     {

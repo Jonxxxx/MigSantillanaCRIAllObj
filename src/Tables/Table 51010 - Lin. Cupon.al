@@ -1,4 +1,4 @@
-table 51010 "Lin. Cupon"
+table 55171 "Lin. Cupon"
 {
     Caption = 'Coupon Lines';
 
@@ -17,7 +17,7 @@ table 51010 "Lin. Cupon"
 
             trigger OnValidate()
             var
-                recCClote: Record 51011;
+                recCClote: Record 55172;
             begin
 
                 recCClote.SETRANGE("Cod. Producto", "Cod. Producto");
@@ -102,10 +102,10 @@ table 51010 "Lin. Cupon"
 
     var
         rProducto: Record 27;
-        rCabCupon: Record 51009;
+        rCabCupon: Record 55170;
         Error001: Label 'Printed Coupon cannot be modified';
         rConfSantillana: Record 56001;
-        rLinCupon: Record 51010;
+        rLinCupon: Record 55171;
         Error002: Label 'Lines Qty. exceed the qty. allowed for a Coupon';
         rUserSetup: Record 91;
 }

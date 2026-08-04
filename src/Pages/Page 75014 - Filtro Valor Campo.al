@@ -174,7 +174,7 @@ page 75014 "Filtro Valor Campo"
                                 CASE pwFieldNo OF
                                     56022:
                                         lwId := GeOptionValueId(lwOptionValue, 'Grupo de Negocio');// Grupo Negocio
-                                    55000:
+                                    55225:
                                         lwId := GeOptionValueId(lwOptionValue, 'Materia'); // Materia
                                 END;
                             END;
@@ -194,7 +194,7 @@ page 75014 "Filtro Valor Campo"
                         27:
                             BEGIN // Producto
                                 CASE pwFieldNo OF
-                                    50005:
+                                    55230:
                                         lwId := GeOptionValueId(lwOptionValue, 'Grado');// Nivel Escolar (Grado)
                                     56007:
                                         lwId := GeOptionValueId(lwOptionValue, 'Edicion');// Edicion

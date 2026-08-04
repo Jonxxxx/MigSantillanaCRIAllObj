@@ -1,4 +1,4 @@
-tableextension 50077 EXCCRIEmployeeAbsence extends "Employee Absence"
+tableextension 55077 EXCCRIEmployeeAbsence extends "Employee Absence"
 {
     fields
     {

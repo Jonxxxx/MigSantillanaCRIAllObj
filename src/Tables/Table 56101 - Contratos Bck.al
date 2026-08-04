@@ -142,12 +142,12 @@ table 56101 "Contratos Bck"
             MaxValue = 100;
             MinValue = 0;
         }
-        field(50000; "Fecha eliminaci n"; Date)
+        field(55225; "Fecha eliminaci n"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha eliminaci n';
         }
-        field(50001; "Usuario eliminaci n"; Code[50])
+        field(55226; "Usuario eliminaci n"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario eliminaci n';

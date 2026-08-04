@@ -1,4 +1,4 @@
-tableextension 50046 EXCCRIShippingAgent extends "Shipping Agent"
+tableextension 55046 EXCCRIShippingAgent extends "Shipping Agent"
 {
     fields
     {

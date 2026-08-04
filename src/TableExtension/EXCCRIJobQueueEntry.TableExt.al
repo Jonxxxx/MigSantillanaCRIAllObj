@@ -1,4 +1,4 @@
-tableextension 50066 EXCCRIJobQueueEntry extends "Job Queue Entry"
+tableextension 55066 EXCCRIJobQueueEntry extends "Job Queue Entry"
 {
     fields
     {

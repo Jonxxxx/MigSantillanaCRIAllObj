@@ -1,4 +1,4 @@
-table 50111 "Cab. Ventas SIC"
+table 55198 "Cab. Ventas SIC"
 {
     //  Proyecto: Implementacion Business Central
     // 

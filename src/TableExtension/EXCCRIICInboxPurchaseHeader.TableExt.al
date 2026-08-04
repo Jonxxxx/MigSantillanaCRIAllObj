@@ -1,4 +1,4 @@
-tableextension 50065 EXCCRIICInboxPurchaseHeader extends "IC Inbox Purchase Header"
+tableextension 55065 EXCCRIICInboxPurchaseHeader extends "IC Inbox Purchase Header"
 {
     fields
     {

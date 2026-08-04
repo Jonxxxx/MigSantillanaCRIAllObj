@@ -1,4 +1,4 @@
-table 52501 "Config.Facturacion Electronica"
+table 55200 "Config.Facturacion Electronica"
 {
 
     fields

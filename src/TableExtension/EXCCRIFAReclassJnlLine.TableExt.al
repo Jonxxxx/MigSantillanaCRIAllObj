@@ -1,4 +1,4 @@
-tableextension 50083 EXCCRIFAReclassJnlLine extends "FA Reclass. Journal Line"
+tableextension 55083 EXCCRIFAReclassJnlLine extends "FA Reclass. Journal Line"
 {
     fields
     {

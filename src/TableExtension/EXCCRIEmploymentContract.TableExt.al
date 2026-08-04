@@ -1,4 +1,4 @@
-tableextension 50078 EXCCRIEmploymentContract extends "Employment Contract"
+tableextension 55078 EXCCRIEmploymentContract extends "Employment Contract"
 {
     fields
     {

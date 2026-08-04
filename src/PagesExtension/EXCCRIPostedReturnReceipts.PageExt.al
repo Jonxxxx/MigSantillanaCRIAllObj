@@ -1,4 +1,4 @@
-pageextension 50137 EXCCRIPostedReturnReceipts extends "Posted Return Receipts"
+pageextension 55136 EXCCRIPostedReturnReceipts extends "Posted Return Receipts"
 {
     layout
     {

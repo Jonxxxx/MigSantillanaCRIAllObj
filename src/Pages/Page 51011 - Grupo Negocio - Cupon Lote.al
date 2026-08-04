@@ -1,7 +1,7 @@
-page 51011 "Grupo Negocio - Cupon Lote"
+page 55172 "Grupo Negocio - Cupon Lote"
 {
     PageType = List;
-    SourceTable = 51016;
+    SourceTable = 55177;
 
     layout
     {

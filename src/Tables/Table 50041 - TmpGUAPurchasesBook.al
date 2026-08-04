@@ -1,4 +1,4 @@
-table 50041 TmpGUAPurchasesBook
+table 55041 TmpGUAPurchasesBook
 {
     // YYYYMMDD Version        Sign Proj.Ref. Description
     // -------------------------------------------------------------------------

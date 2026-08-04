@@ -1,4 +1,4 @@
-xmlport 50003 "Importar Adopciones"
+xmlport 55228 "Importar Adopciones"
 {
     Direction = Import;
     Format = Xml;
@@ -126,7 +126,7 @@ xmlport 50003 "Importar Adopciones"
 
     var
         ConvertFecha: Date;
-        Adop: Record 50008;
+        Adop: Record 55233;
         ConvertDecimal: Decimal;
         TipoAdopcion: Integer;
 }

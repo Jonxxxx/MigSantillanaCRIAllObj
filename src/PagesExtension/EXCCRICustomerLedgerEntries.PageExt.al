@@ -1,4 +1,4 @@
-pageextension 50009 EXCCRICustomerLedgerEntries extends "Customer Ledger Entries"
+pageextension 55234 EXCCRICustomerLedgerEntries extends "Customer Ledger Entries"
 {
     layout
     {

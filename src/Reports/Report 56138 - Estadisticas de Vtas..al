@@ -952,7 +952,7 @@ report 56138 "Estadisticas de Vtas."
         CategoriaPedido: Code[20];
         CategoriaPedidoCaption: Label 'Order Category';
         wCategoriaPedido: Code[20];
-        Funcionesvarias: Codeunit 50001;
+        Funcionesvarias: Codeunit 55226;
         Canalventa: Code[20];
         Canalventa_Lbl: Label 'Canal de Venta';
         wCanalVenta: Code[20];

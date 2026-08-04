@@ -1,4 +1,4 @@
-codeunit 50022 "Pedidos E-Commerce"
+codeunit 55247 "Pedidos E-Commerce"
 {
     // YFC     : Yefrecis Francisco Cruz
     // SSM     : Sebastian Soto Matos
@@ -6,7 +6,7 @@ codeunit 50022 "Pedidos E-Commerce"
     // ------------------------------------------------------------------------
     // No.         Firma     Fecha            Descripcion
     // ------------------------------------------------------------------------
-    // 001         YFC      02/12/2020       Modificaciones solicitadas por Mariela/AGustin, En la CodeUnit 52504 realice la validacion de los tipos
+    // 001         YFC      02/12/2020       Modificaciones solicitadas por Mariela/AGustin, En la CodeUnit 55202 realice la validacion de los tipos
     // 002         YFC      07/01/2021       SANTINAV-1940 Ajustes portal E-Commerce
     // 003         YFC      4/2/2021         SANTINAV-2089 Agregar informacion en Estadistica Ventas (EXCEL)
     // 004         YFC      17/02/2021       SANTINAV-2130 mejoras en desarrollo para E-Commerce
@@ -31,19 +31,19 @@ codeunit 50022 "Pedidos E-Commerce"
         Length: Integer;
         ValidarError: Boolean;
         Error01: Label 'La cédula no tiene el formato correspondiente a ninguno de los tipo de identificacion: fisica, juridica, DIMEX y NITE';
-        NotificarError: Codeunit 50300;
+        NotificarError: Codeunit 55156;
         ConfEmpresa: Record 56001;
         Error02: Label 'Error en la Cola de  Pedidos E-Commerce';
         PrimerValor: Code[1];
 
     procedure CreaFacturasyNCr()
     var
-        CabVtaSFA: Record 50100;
-        CabVtaSFA2: Record 50100;
-        LinVtaSFA: Record 50101;
+        CabVtaSFA: Record 55100;
+        CabVtaSFA2: Record 55100;
+        LinVtaSFA: Record 55101;
         CabVentaOut: Record 36;
         LinVentaOut: Record 37;
-        LinVtaSFO: Record 50101;
+        LinVtaSFO: Record 55101;
         SIH: Record 112;
         Location: Record 14;
         Comments: Record 44;

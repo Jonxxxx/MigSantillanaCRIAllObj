@@ -1,4 +1,4 @@
-pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
+pageextension 55048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
 {
     layout
     {
@@ -146,7 +146,7 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
                         EXCCRILocalizationCR: Codeunit 34002511;
                     begin
                         //
@@ -173,8 +173,8 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
 
                     trigger OnAction()
                     var
-                        EXCCRIElectronicInvoicing: Codeunit 52504;
-                        EXCCRIElectronicLog: Record 52502;
+                        EXCCRIElectronicInvoicing: Codeunit 55202;
+                        EXCCRIElectronicLog: Record 55201;
                     begin
                         if Rec."Venta TPV" then begin
                             if not EXCCRIElectronicLog.Get(3, Rec."No.") then
@@ -198,7 +198,7 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
 
                     trigger OnAction()
                     var
-                        EXCCRICorrectDocumentPage: Page 52504;
+                        EXCCRICorrectDocumentPage: Page 55202;
                     begin
                         EXCCRICorrectDocumentPage.TraerDatos(
                             Rec."No.",
@@ -215,7 +215,7 @@ pageextension 50048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = page 52500;
+                    RunObject = page 55199;
                     RunPageLink = NoDocumento = field("No.");
                     ToolTip = 'Opens the electronic document log related to the posted sales invoice.';
                 }

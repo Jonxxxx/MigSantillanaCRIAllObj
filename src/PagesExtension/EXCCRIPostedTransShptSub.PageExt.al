@@ -1,4 +1,4 @@
-pageextension 50118 EXCCRIPostedTransShptSub extends "Posted Transfer Shpt. Subform"
+pageextension 55117 EXCCRIPostedTransShptSub extends "Posted Transfer Shpt. Subform"
 {
     layout
     {

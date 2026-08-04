@@ -1,4 +1,4 @@
-pageextension 50085 EXCCRIDtlVendorLedgEntries extends "Detailed Vendor Ledg. Entries"
+pageextension 55085 EXCCRIDtlVendorLedgEntries extends "Detailed Vendor Ledg. Entries"
 {
     layout
     {

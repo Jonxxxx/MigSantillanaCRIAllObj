@@ -1,9 +1,9 @@
-page 51008 "Año Escolar"
+page 55169 "Año Escolar"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'School Year';
     PageType = List;
-    SourceTable = 51013;
+    SourceTable = 55174;
     UsageCategory = Lists;
 
     layout

@@ -1,58 +1,58 @@
-tableextension 50030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
+tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
 {
     fields
     {
-        field(50014; "Cod. Cupon"; Code[20])
+        field(55239; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50015; "No. Linea Cupon"; Integer)
+        field(55240; "No. Linea Cupon"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50016; "Cantidad Aprobada"; Decimal)
+        field(55241; "Cantidad Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50017; "Cantidad pendiente BO"; Decimal)
+        field(55242; "Cantidad pendiente BO"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50018; "Cantidad a Anular"; Decimal)
+        field(55243; "Cantidad a Anular"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50019; "Cantidad Solicitada"; Decimal)
+        field(55244; "Cantidad Solicitada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50020; Temporal; Boolean)
+        field(55245; Temporal; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50021; "Requested Delivery Date"; Date)
+        field(55246; "Requested Delivery Date"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50022; "Cantidad Anulada"; Decimal)
+        field(55247; "Cantidad Anulada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50040; "Cantidad a Ajustar"; Decimal)
+        field(55040; "Cantidad a Ajustar"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50041; "Porcentaje Cant. Aprobada"; Decimal)
+        field(55041; "Porcentaje Cant. Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
         }

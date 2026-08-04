@@ -1,4 +1,4 @@
-codeunit 50110 Transfer_SIC
+codeunit 55110 Transfer_SIC
 {
     // SSM     : Sebastian Soto Matos
     // ------------------------------------------------------------------------
@@ -18,7 +18,7 @@ codeunit 50110 Transfer_SIC
     trigger OnRun()
     var
         PrueSIH: Record 112;
-        FE_nav: Codeunit 52504;
+        FE_nav: Codeunit 55202;
         intentos: Integer;
         enviados: Integer;
     begin
@@ -91,12 +91,12 @@ codeunit 50110 Transfer_SIC
     end;
 
     var
-        CabVentasSIC: Record 50111;
-        CabVentasSIC_2: Record 50111;
-        LineasVentasSIC: Record 50112;
-        LineasVentasSIC_2: Record 50112;
-        LineasVentasSIC_3: Record 50112;
-        MediosdePagoSIC: Record 50113;
+        CabVentasSIC: Record 55198;
+        CabVentasSIC_2: Record 55198;
+        LineasVentasSIC: Record 55111;
+        LineasVentasSIC_2: Record 55111;
+        LineasVentasSIC_3: Record 55111;
+        MediosdePagoSIC: Record 55112;
         SalesHeader: Record 36;
         SalesHeader2: Record 36;
         SH: Record 36;
@@ -109,7 +109,7 @@ codeunit 50110 Transfer_SIC
         SalesInvoiceHeader: Record 112;
         SalesInvoiceLine: Record 113;
         Item: Record 27;
-        EquiClienteFromHotel: Record 50006;
+        EquiClienteFromHotel: Record 55231;
         ConvertImporte: Decimal;
         ConverDimension: Code[10];
         DimensionSetEntry: Record 480;
@@ -120,7 +120,7 @@ codeunit 50110 Transfer_SIC
         ValidarCabecera_GR: Boolean;
         ValidarLineas: Boolean;
         ValidarMediosPago: Boolean;
-        ValidacionesErrores: Codeunit 50111;
+        ValidacionesErrores: Codeunit 55198;
         Customer: Record 18;
         NoEmpleadoAfiliado: Code[20];
         TipoBloqueo: Option " ",Ship,Invoice,All;
@@ -133,31 +133,31 @@ codeunit 50110 Transfer_SIC
         findline: Boolean;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
         GLAccount: Record 15;
-        ConfigEmpresa: Record 50000;
+        ConfigEmpresa: Record 55225;
         codproducto: Code[20];
         NegativeInt: Option Default,No,Yes;
         Turno: Integer;
         Nos: Label 'VNR14-000027|VNR14-000027|VNR14-000027|VNR14-000028|VNR14-000028|VNR15-000026|VNR15-000027|VNR15-000027|VNR15-000027|VNR15-000028|VNR15-000028|VNR18-000015|VNR19-000015|VNR19-000016|VNR19-000016|VNR20-000023|VNR20-000024|VNR6-000016|VNR6-000017|VNR7-000016|VNR7-000017|VNR8-000028|VNR8-000028|VNR8-000028|VNR8-000029|VNR8-000030';
         Itembloq: Boolean;
         Insertar: Boolean;
-        ConfigCajaElectronica: Record 50114;
-        RegistraPedidosVtaSIC_BC: Codeunit 50112;
+        ConfigCajaElectronica: Record 55113;
+        RegistraPedidosVtaSIC_BC: Codeunit 55111;
         ConfDSPoS: Record 56001;
         GenLedSetup: Record 98;
         Cajeros: Record 34002505;
         Contact: Record 5050;
         MediPagoSicExiste: Boolean;
-        MedPagoSic: Record 50113;
+        MedPagoSic: Record 55112;
 
     local procedure TransferCabecera()
     var
         ConvertFecha: Date;
         ConvertTasaCambio: Decimal;
         ConvertFecha1: Date;
-        MPSIC_: Record 50113;
-        ConfMedPagICG_: Record 50110;
-        ConfigCajaElectronica: Record 50114;
-        MPSIC_2: Record 50113;
+        MPSIC_: Record 55112;
+        ConfMedPagICG_: Record 55110;
+        ConfigCajaElectronica: Record 55113;
+        MPSIC_2: Record 55112;
     begin
         IF GUIALLOWED THEN BEGIN
             ConfDSPoS.GET;
@@ -488,10 +488,10 @@ codeunit 50110 Transfer_SIC
                         SalesHeader."Posting No." := SalesHeader."No.";
                         //SalesHeader."Shipping No." := SalesHeader."No.";
                         SalesHeader.VALIDATE("Location Code", CabVentasSIC."Cod. Almacen");
-                        //SalesHeader.VALIDATE("Nombre Empleado Cte.",COPYSTR(CabVentasSIC."Nombre asegurado",1,50)); //50003
-                        //SalesHeader.VALIDATE("No. Autorizacion Seguro",CabVentasSIC."No. orden");//50005 GRN Dejar asi para el seguro
+                        //SalesHeader.VALIDATE("Nombre Empleado Cte.",COPYSTR(CabVentasSIC."Nombre asegurado",1,50)); //55228
+                        //SalesHeader.VALIDATE("No. Autorizacion Seguro",CabVentasSIC."No. orden");//55230 GRN Dejar asi para el seguro
                         NoEmpleadoAfiliado := CabVentasSIC."No. poliza";
-                        //SalesHeader.VALIDATE("No. Empleado/Afiliado",NoEmpleadoAfiliado);//50002
+                        //SalesHeader.VALIDATE("No. Empleado/Afiliado",NoEmpleadoAfiliado);//55227
                         SalesHeader.VALIDATE("Cod. Cajero", CabVentasSIC."Cod. Cajero");//003+- A revisar
                         SalesHeader.VALIDATE(SalesHeader."Cod. Supervisor", CabVentasSIC."Cod. supervisor");//003+- A revisar
                         ConvertFecha1 := CabVentasSIC."Fecha Venc. NCF";//ConvertFechaFunct(CabVentasSIC."Fecha Venc. NCF"); ////////////////////////////prueba
@@ -1042,7 +1042,7 @@ codeunit 50110 Transfer_SIC
         String: Text;
         SubStr: Text;
         Pos: Integer;
-        EquiaConeptosFromHote: Record 50007;
+        EquiaConeptosFromHote: Record 55232;
     begin
 
 
@@ -1156,7 +1156,7 @@ codeunit 50110 Transfer_SIC
         SH: Record 36;
         SH2: Record 36;
         SL: Record 37;
-        EquivalenciaClienteFromHotel2: Record 50006;
+        EquivalenciaClienteFromHotel2: Record 55231;
     begin
 
 
@@ -1217,8 +1217,8 @@ codeunit 50110 Transfer_SIC
 
     procedure ActualizarMediodepago()
     var
-        MPSIC_: Record 50113;
-        ConfMedPagICG_: Record 50110;
+        MPSIC_: Record 55112;
+        ConfMedPagICG_: Record 55110;
         SL: Record 36;
         SIH: Record 112;
     begin
@@ -1375,7 +1375,7 @@ codeunit 50110 Transfer_SIC
         Fecha: Date;
         SIH_outNo: Code[20];
         SIH_outOrderNo: Code[20];
-        CabVentasSIC: Record 50112;
+        CabVentasSIC: Record 55111;
         BankALE: Record 271;
         BankALE_Out: Record 271;
         SH_: Record 36;
@@ -1635,11 +1635,11 @@ codeunit 50110 Transfer_SIC
         ImporteLinSIC: Decimal;
         ImporteMPSIC: Decimal;
         ImporteSalesLine: Decimal;
-        RecCabVentasSIC: Record 50111;
-        RecLineasVentasSIC: Record 50112;
-        RecMediosdePagoSIC: Record 50113;
+        RecCabVentasSIC: Record 55198;
+        RecLineasVentasSIC: Record 55111;
+        RecMediosdePagoSIC: Record 55112;
         RecSalesHeader: Record 36;
-        Transfer_SIC: Codeunit 50110;
+        Transfer_SIC: Codeunit 55110;
         SalesLine_: Record 37;
         DocType: Integer;
         Error002: Label 'Montos en tablas no coinciden';
@@ -1731,10 +1731,10 @@ codeunit 50110 Transfer_SIC
         ConvertPrecio: Decimal;
         CantLineas: Integer;
         NoLinea: Integer;
-        _CabVentasSIC: Record 50112;
+        _CabVentasSIC: Record 55111;
         SalesLine_: Record 37;
         _SalesHeader: Record 36;
-        LineasVentasSIC_: Record 50113;
+        LineasVentasSIC_: Record 55112;
         ConfSantillana: Record 56001;
         NoNextLinea: Integer;
         SalesHeader_: Record 36;
@@ -1749,7 +1749,7 @@ codeunit 50110 Transfer_SIC
         ConvertPrecio_: Decimal;
         I: Integer;
         ConvertFechaSalesLine: Date;
-        LinVentasSicMod: Record 50113;
+        LinVentasSicMod: Record 55112;
     begin
         GenLedSetup.GET;
 

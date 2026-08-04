@@ -1,19 +1,19 @@
-table 50136 "Conceptos de Cobros y Pagos"
+table 55135 "Conceptos de Cobros y Pagos"
 {
 
     fields
     {
-        field(1;"Codigo Concepto";Code[20])
+        field(1; "Codigo Concepto"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Concepto';
         }
-        field(2;Descripcion;Text[60])
+        field(2; Descripcion; Text[60])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
-        field(3;Tipo;Option)
+        field(3; Tipo; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo';
@@ -23,7 +23,7 @@ table 50136 "Conceptos de Cobros y Pagos"
 
     keys
     {
-        key(Key1;"Codigo Concepto")
+        key(Key1; "Codigo Concepto")
         {
         }
     }

@@ -1,4 +1,4 @@
-report 52500 "Cheque Generico Costa Rica"
+report 55199 "Cheque Generico Costa Rica"
 {
     // 001  PLB  18/09/2014  - Algunos ajustes para cuadrar el cheque
     //                       - Solo aparecia el último cheque

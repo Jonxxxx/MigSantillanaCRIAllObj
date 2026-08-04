@@ -1,16 +1,16 @@
-table 51012 Grado
+table 55173 Grado
 {
     Caption = 'Grade';
-    LookupPageID = 51007;
+    LookupPageID = 55168;
 
     fields
     {
-        field(1;"Cod. Grado";Code[20])
+        field(1; "Cod. Grado"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Grado';
         }
-        field(2;Descripcion;Text[50])
+        field(2; Descripcion; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -19,7 +19,7 @@ table 51012 Grado
 
     keys
     {
-        key(Key1;"Cod. Grado")
+        key(Key1; "Cod. Grado")
         {
         }
     }

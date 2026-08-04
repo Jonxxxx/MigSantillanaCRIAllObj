@@ -1,4 +1,4 @@
-table 50050 "Sales Invoice Header1"
+table 55050 "Sales Invoice Header1"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

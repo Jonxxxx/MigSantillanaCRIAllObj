@@ -1,4 +1,4 @@
-pageextension 50006 EXCCRIGeneralLedgerEntries extends "General Ledger Entries"
+pageextension 55231 EXCCRIGeneralLedgerEntries extends "General Ledger Entries"
 {
     layout
     {

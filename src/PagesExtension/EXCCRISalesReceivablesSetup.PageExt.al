@@ -1,4 +1,4 @@
-pageextension 50075 EXCCRISalesReceivablesSetup extends "Sales & Receivables Setup"
+pageextension 55075 EXCCRISalesReceivablesSetup extends "Sales & Receivables Setup"
 {
     layout
     {

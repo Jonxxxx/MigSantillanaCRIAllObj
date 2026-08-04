@@ -1,4 +1,4 @@
-pageextension 50112 EXCCRIItemCategories extends "Item Categories"
+pageextension 55111 EXCCRIItemCategories extends "Item Categories"
 {
     layout
     {

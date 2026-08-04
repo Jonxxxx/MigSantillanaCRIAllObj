@@ -1,4 +1,4 @@
-pageextension 50065 EXCCRIBankAccountLedgerEntries extends "Bank Account Ledger Entries"
+pageextension 55065 EXCCRIBankAccountLedgerEntries extends "Bank Account Ledger Entries"
 {
     layout
     {

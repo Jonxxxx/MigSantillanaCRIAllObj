@@ -1,4 +1,4 @@
-pageextension 50068 EXCCRISalesInvoiceStatistics extends "Sales Invoice Statistics"
+pageextension 55068 EXCCRISalesInvoiceStatistics extends "Sales Invoice Statistics"
 {
     layout
     {

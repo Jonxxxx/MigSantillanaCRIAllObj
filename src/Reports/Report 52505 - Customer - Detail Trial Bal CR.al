@@ -1,4 +1,4 @@
-report 52505 "Customer - Detail Trial Bal CR"
+report 55203 "Customer - Detail Trial Bal CR"
 {
     // #4148  PLB  25/09/2014  Se han añadido varios datos al cliente:
     //                         - Nombre institucion (Name 2)

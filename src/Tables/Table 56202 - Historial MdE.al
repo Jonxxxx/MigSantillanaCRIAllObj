@@ -238,7 +238,7 @@ table 56202 "Historial MdE"
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(50000; _Categoria; Option)
+        field(55225; _Categoria; Option)
         {
             DataClassification = CustomerContent;
             Caption = '_Categoria';
@@ -246,7 +246,7 @@ table 56202 "Historial MdE"
             OptionCaption = ' ,01-PD,02-MI,03-PTC,04-OP';
             OptionMembers = " ","01-PD","02-MI","03-PTC","04-OP";
         }
-        field(50002; "Numero de persona"; Text[32])
+        field(55227; "Numero de persona"; Text[32])
         {
             DataClassification = CustomerContent;
             Caption = 'Numero de persona';

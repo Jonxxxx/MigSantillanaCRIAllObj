@@ -1,4 +1,4 @@
-pageextension 50013 EXCCRIItemCard extends "Item Card"
+pageextension 55238 EXCCRIItemCard extends "Item Card"
 {
     layout
     {

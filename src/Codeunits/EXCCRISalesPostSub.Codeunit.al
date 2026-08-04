@@ -527,9 +527,9 @@ codeunit 61004 EXCCRISalesPostSub
     var
         EXCCRIBankStore: Record 34002504;
         EXCCRIGenJnlLine: Record "Gen. Journal Line";
-        EXCCRIPaymentLines: Record 50113;
-        EXCCRIPaymentLinesWithoutSIC: Record 50113;
-        EXCCRIPaymentSetup: Record 50110;
+        EXCCRIPaymentLines: Record 55112;
+        EXCCRIPaymentLinesWithoutSIC: Record 55112;
+        EXCCRIPaymentSetup: Record 55110;
         EXCCRISalesInvoiceHeader: Record "Sales Invoice Header";
         EXCCRISalesInvoiceHeaderCheck: Record "Sales Invoice Header";
         EXCCRISalesInvoiceLine: Record "Sales Invoice Line";

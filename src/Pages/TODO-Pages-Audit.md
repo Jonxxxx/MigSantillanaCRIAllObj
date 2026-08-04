@@ -8426,7 +8426,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    219:         gtCAEC: Text[160];
    220:         gtRespuesta: Text[100];
-   221:     //TODO: Ver RegistrarCobrosDsPos: Codeunit 50116;
+   221:     //TODO: Ver RegistrarCobrosDsPos: Codeunit 55115;
    222: }
    223: 
 ~~~
@@ -8580,7 +8580,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    239:         gtCAEC: Text[160];
    240:         gtRespuesta: Text[100];
-   241:     //TODO: Ver RegistrarCobrosDsPos: Codeunit 50116;
+   241:     //TODO: Ver RegistrarCobrosDsPos: Codeunit 55115;
    242: }
    243: 
 ~~~
@@ -8735,7 +8735,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    234:                     trigger OnAction()
    235:                     var
-   236:                     //TODO: Ver Utilitarioparacorregircosas: Codeunit 52502;
+   236:                     //TODO: Ver Utilitarioparacorregircosas: Codeunit 55201;
    237:                     begin
    238:                         //TODO: Ver Utilitarioparacorregircosas.TransferLineaActualizada2(Rec."No. Fiscal TPV", Rec."Location Code");
 ~~~
@@ -8755,7 +8755,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   236:                     //TODO: Ver Utilitarioparacorregircosas: Codeunit 52502;
+   236:                     //TODO: Ver Utilitarioparacorregircosas: Codeunit 55201;
    237:                     begin
    238:                         //TODO: Ver Utilitarioparacorregircosas.TransferLineaActualizada2(Rec."No. Fiscal TPV", Rec."Location Code");
    239:                     end;
@@ -9022,8 +9022,8 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    328:         JobQueueActive: Boolean;
    329:         wCostaRica: Boolean;
-   330:     //TODO: Ver Registrar: Codeunit 50112;
-   331:     //TODO: Ver  Transfer_SIC: Codeunit 50110;
+   330:     //TODO: Ver Registrar: Codeunit 55111;
+   331:     //TODO: Ver  Transfer_SIC: Codeunit 55110;
    332: }
 ~~~
 
@@ -9043,8 +9043,8 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    329:         wCostaRica: Boolean;
-   330:     //TODO: Ver Registrar: Codeunit 50112;
-   331:     //TODO: Ver  Transfer_SIC: Codeunit 50110;
+   330:     //TODO: Ver Registrar: Codeunit 55111;
+   331:     //TODO: Ver  Transfer_SIC: Codeunit 55110;
    332: }
    333: 
 ~~~
@@ -9662,8 +9662,8 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    701:         JobQueueActive: Boolean;
    702:         wCostaRica: Boolean;
-   703:     //TODO: Ver Registrar: Codeunit 50112;
-   704:     //TODO: Ver Transfer_SIC: Codeunit 50110;
+   703:     //TODO: Ver Registrar: Codeunit 55111;
+   704:     //TODO: Ver Transfer_SIC: Codeunit 55110;
    705: }
 ~~~
 
@@ -9683,8 +9683,8 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    702:         wCostaRica: Boolean;
-   703:     //TODO: Ver Registrar: Codeunit 50112;
-   704:     //TODO: Ver Transfer_SIC: Codeunit 50110;
+   703:     //TODO: Ver Registrar: Codeunit 55111;
+   704:     //TODO: Ver Transfer_SIC: Codeunit 55110;
    705: }
    706: 
 ~~~
@@ -9933,9 +9933,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0450
 
-- File path: `src/Pages/Page 50000 - Pantalla Scanner manual.al`
+- File path: `src/Pages/Page 55225 - Pantalla Scanner manual.al`
 - Object type: Page
-- Object ID: 50000
+- Object ID: 55225
 - Object name: `Pantalla Scanner manual`
 - Line number: 9
 - Classification: Functional ambiguity
@@ -9956,9 +9956,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0451
 
-- File path: `src/Pages/Page 50000 - Pantalla Scanner manual.al`
+- File path: `src/Pages/Page 55225 - Pantalla Scanner manual.al`
 - Object type: Page
-- Object ID: 50000
+- Object ID: 55225
 - Object name: `Pantalla Scanner manual`
 - Line number: 65
 - Classification: Functional ambiguity
@@ -9978,9 +9978,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0452
 
-- File path: `src/Pages/Page 50000 - Pantalla Scanner manual.al`
+- File path: `src/Pages/Page 55225 - Pantalla Scanner manual.al`
 - Object type: Page
-- Object ID: 50000
+- Object ID: 55225
 - Object name: `Pantalla Scanner manual`
 - Line number: 90
 - Classification: Functional ambiguity
@@ -10000,9 +10000,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0453
 
-- File path: `src/Pages/Page 50037 - ListaDescuentoProntoPago.al`
+- File path: `src/Pages/Page 55037 - ListaDescuentoProntoPago.al`
 - Object type: Page
-- Object ID: 50037
+- Object ID: 55037
 - Object name: `ListaDescuentoProntoPago`
 - Line number: 13
 - Classification: Functional ambiguity
@@ -10022,9 +10022,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0454
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 77
 - Classification: Functional ambiguity
@@ -10044,9 +10044,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0455
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 101
 - Classification: Functional ambiguity
@@ -10066,9 +10066,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0456
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 125
 - Classification: Functional ambiguity
@@ -10088,9 +10088,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0457
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 149
 - Classification: Obsolete Business Central API
@@ -10110,9 +10110,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0458
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 150
 - Classification: SaaS incompatibility
@@ -10132,9 +10132,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0459
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 151
 - Classification: Obsolete Business Central API
@@ -10154,9 +10154,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0460
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 153
 - Classification: Obsolete Business Central API
@@ -10176,9 +10176,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0461
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 171
 - Classification: Obsolete Business Central API
@@ -10198,9 +10198,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0462
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 172
 - Classification: SaaS incompatibility
@@ -10220,9 +10220,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0463
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 173
 - Classification: Obsolete Business Central API
@@ -10242,9 +10242,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0464
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 174
 - Classification: SaaS incompatibility
@@ -10264,9 +10264,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0465
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 175
 - Classification: Obsolete Business Central API
@@ -10287,9 +10287,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0466
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 193
 - Classification: Obsolete Business Central API
@@ -10309,9 +10309,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0467
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 194
 - Classification: SaaS incompatibility
@@ -10331,9 +10331,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0468
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 195
 - Classification: Obsolete Business Central API
@@ -10353,9 +10353,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0469
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 196
 - Classification: SaaS incompatibility
@@ -10375,9 +10375,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0470
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 197
 - Classification: Obsolete Business Central API
@@ -10397,9 +10397,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0471
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 212
 - Classification: Custom dependency
@@ -10412,16 +10412,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    210:                 trigger OnAction()
    211:                 var
-   212:                     //TODO: Ver FE: Codeunit 52504;
+   212:                     //TODO: Ver FE: Codeunit 55202;
    213:                     lrSCMH: Record 114;
    214:                     lrSH: Record 36;
 ~~~
 
 ## TODO 0472
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 218
 - Classification: Functional ambiguity
@@ -10441,9 +10441,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0473
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 247
 - Classification: Custom dependency
@@ -10463,9 +10463,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0474
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 257
 - Classification: Custom dependency
@@ -10479,15 +10479,15 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
    255:     var
    256:         FileManagment: Codeunit 419;
    257:         //TODO: Ver TempBlob: Record 99008535 temporary;
-   258:         //TODO: Ver FacturacionElectronicaNAV: Codeunit 52504;
+   258:         //TODO: Ver FacturacionElectronicaNAV: Codeunit 55202;
    259:         Text001: Label 'Ended process';
 ~~~
 
 ## TODO 0475
 
-- File path: `src/Pages/Page 52500 - Log Facturacion Electronica CR.al`
+- File path: `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - Object type: Page
-- Object ID: 52500
+- Object ID: 55199
 - Object name: `Log Facturacion Electronica CR`
 - Line number: 258
 - Classification: Custom dependency
@@ -10500,16 +10500,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    256:         FileManagment: Codeunit 419;
    257:         //TODO: Ver TempBlob: Record 99008535 temporary;
-   258:         //TODO: Ver FacturacionElectronicaNAV: Codeunit 52504;
+   258:         //TODO: Ver FacturacionElectronicaNAV: Codeunit 55202;
    259:         Text001: Label 'Ended process';
    260: }
 ~~~
 
 ## TODO 0476
 
-- File path: `src/Pages/Page 52501 - Recepcion Documento Elect.al`
+- File path: `src/Pages/Page 55200 - Recepcion Documento Elect.al`
 - Object type: Page
-- Object ID: 52501
+- Object ID: 55200
 - Object name: `Recepcion Documento Elect`
 - Line number: 64
 - Classification: Custom dependency
@@ -10529,9 +10529,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0477
 
-- File path: `src/Pages/Page 52501 - Recepcion Documento Elect.al`
+- File path: `src/Pages/Page 55200 - Recepcion Documento Elect.al`
 - Object type: Page
-- Object ID: 52501
+- Object ID: 55200
 - Object name: `Recepcion Documento Elect`
 - Line number: 78
 - Classification: Functional ambiguity
@@ -10551,9 +10551,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0478
 
-- File path: `src/Pages/Page 52501 - Recepcion Documento Elect.al`
+- File path: `src/Pages/Page 55200 - Recepcion Documento Elect.al`
 - Object type: Page
-- Object ID: 52501
+- Object ID: 55200
 - Object name: `Recepcion Documento Elect`
 - Line number: 96
 - Classification: Custom dependency
@@ -10566,16 +10566,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     94: 
     95:     var
-    96:         //TODO: Ver FE: Codeunit 52504;
+    96:         //TODO: Ver FE: Codeunit 55202;
     97:         Valores: array[10] of Text;
     98:         Modificado: Boolean;
 ~~~
 
 ## TODO 0479
 
-- File path: `src/Pages/Page 52505 - Msj  Facturacion Electronica.al`
+- File path: `src/Pages/Page 55203 - Msj  Facturacion Electronica.al`
 - Object type: Page
-- Object ID: 52505
+- Object ID: 55203
 - Object name: `Msj  Facturacion Electronica`
 - Line number: 47
 - Classification: Functional ambiguity
@@ -10595,9 +10595,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0480
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 39
 - Classification: SaaS incompatibility
@@ -10618,9 +10618,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0481
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 40
 - Classification: SaaS incompatibility
@@ -10640,9 +10640,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0482
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 41
 - Classification: SaaS incompatibility
@@ -10662,9 +10662,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0483
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 52
 - Classification: SaaS incompatibility
@@ -10684,9 +10684,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0484
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 53
 - Classification: SaaS incompatibility
@@ -10706,9 +10706,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0485
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 54
 - Classification: SaaS incompatibility
@@ -10728,9 +10728,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0486
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 67
 - Classification: Functional ambiguity
@@ -10750,9 +10750,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0487
 
-- File path: `src/Pages/Page 53000 - Tareas Impresora Fiscal.al`
+- File path: `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - Object type: Page
-- Object ID: 53000
+- Object ID: 55221
 - Object name: `Tareas Impresora Fiscal`
 - Line number: 89
 - Classification: Custom dependency
@@ -10765,16 +10765,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     87:         UserSetUp: Record 91;
     88:         ConfSant: Record 56001;
-    89:         //TODO: Ver cuImpFisc: Codeunit 53000;
+    89:         //TODO: Ver cuImpFisc: Codeunit 55221;
     90:         FechaDesde: Date;
     91:         FechaHasta: Date;
 ~~~
 
 ## TODO 0488
 
-- File path: `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- File path: `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - Object type: Page
-- Object ID: 53001
+- Object ID: 55222
 - Object name: `InicializaTablas Movs.`
 - Line number: 25
 - Classification: Custom dependency
@@ -10794,9 +10794,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0489
 
-- File path: `src/Pages/Page 53001 - InicializaTablas Movs..al`
+- File path: `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - Object type: Page
-- Object ID: 53001
+- Object ID: 55222
 - Object name: `InicializaTablas Movs.`
 - Line number: 25
 - Classification: Custom dependency
@@ -13434,7 +13434,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    100:                 PromotedIsBig = true;
-   101:                 RunObject = Page 51011;
+   101:                 RunObject = Page 55172;
    102:                 //TODO: Ver RunPageLink = "Lote cupon" = FIELD("Lote");
    103:                 //TODO: Ver RunPageView = SORTING("No." "Lote cupon")
    104:                 //TODO: Ver               ORDER(Ascending);
@@ -13455,7 +13455,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   101:                 RunObject = Page 51011;
+   101:                 RunObject = Page 55172;
    102:                 //TODO: Ver RunPageLink = "Lote cupon" = FIELD("Lote");
    103:                 //TODO: Ver RunPageView = SORTING("No." "Lote cupon")
    104:                 //TODO: Ver               ORDER(Ascending);
@@ -13567,8 +13567,8 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    100:                 trigger OnAction()
    101:                 var
-   102:                     //TODO: Ver ModificarPedidosEcommerce: Report 50000;
-   103:                     CabVentaNopCommerce: Record 50100;
+   102:                     //TODO: Ver ModificarPedidosEcommerce: Report 55225;
+   103:                     CabVentaNopCommerce: Record 55100;
    104:                 begin
 ~~~
 

@@ -1,4 +1,4 @@
-pageextension 50140 EXCCRIBinContentsList extends "Bin Contents List"
+pageextension 55139 EXCCRIBinContentsList extends "Bin Contents List"
 {
     layout
     {

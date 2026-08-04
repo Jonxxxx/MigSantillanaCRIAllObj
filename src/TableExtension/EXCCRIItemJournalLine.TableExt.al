@@ -1,4 +1,4 @@
-tableextension 50019 EXCCRIItemJournalLine extends "Item Journal Line"
+tableextension 55244 EXCCRIItemJournalLine extends "Item Journal Line"
 {
     fields
     {
@@ -35,84 +35,84 @@ tableextension 50019 EXCCRIItemJournalLine extends "Item Journal Line"
             end;
         }
 
-        field(50000; "No. Paginas"; Decimal)
+        field(55225; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50001; "Componentes Producto"; Text[50])
+        field(55226; "Componentes Producto"; Text[50])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(50002; ISBN; Text[50])
+        field(55227; ISBN; Text[50])
         {
             DataClassification = CustomerContent;
         }
-        field(50003; "Cod. Procedencia"; Code[20])
+        field(55228; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
-        field(50004; "Cod. Edicion"; Code[20])
+        field(55229; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Edicion;
         }
-        field(50005; Areas; Code[20])
+        field(55230; Areas; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50006; "Nivel Educativo"; Code[20])
+        field(55231; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Nivel Educativo";
         }
-        field(50007; Cursos; Code[20])
+        field(55232; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
-        field(50008; "Precio Unitario Cons. Inicial"; Decimal)
+        field(55233; "Precio Unitario Cons. Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50009; "Descuento % Cons. Inicial"; Decimal)
+        field(55234; "Descuento % Cons. Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50010; "Importe Cons. bruto Inicial"; Decimal)
+        field(55235; "Importe Cons. bruto Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50011; "Importe Cons Neto Inicial"; Decimal)
+        field(55236; "Importe Cons Neto Inicial"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(50014; "Pedido Consignacion"; Boolean)
+        field(55239; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50015; "Devolucion Consignacion"; Boolean)
+        field(55240; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50016; "Precio Unitario Cons. Act."; Decimal)
+        field(55241; "Precio Unitario Cons. Act."; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50017; "Descuento % Cons. Actualizado"; Decimal)
+        field(55242; "Descuento % Cons. Actualizado"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50018; "Importe Cons. bruto Act."; Decimal)
+        field(55243; "Importe Cons. bruto Act."; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50019; "Importe Cons. Neto Actualizado"; Decimal)
+        field(55244; "Importe Cons. Neto Actualizado"; Decimal)
         {
             DataClassification = CustomerContent;
         }

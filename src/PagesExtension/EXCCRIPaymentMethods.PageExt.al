@@ -1,4 +1,4 @@
-pageextension 50071 EXCCRIPaymentMethods extends "Payment Methods"
+pageextension 55071 EXCCRIPaymentMethods extends "Payment Methods"
 {
     layout
     {

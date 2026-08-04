@@ -1,4 +1,4 @@
-report 52548 "Sales Quote Status Report"
+report 55218 "Sales Quote Status Report"
 {
     //  Proyecto: Implementacion Microsoft Dynamics Nav
     // 
@@ -916,7 +916,7 @@ report 52548 "Sales Quote Status Report"
         TotalCaptionLbl: Label 'Total:';
         AmtSubjecttoSalesTaxCptnLbl: Label 'Amount Subject to Sales Tax';
         AmtExemptfromSalesTaxCptnLbl: Label 'Amount Exempt from Sales Tax';
-        CategoriaPedidoVenta: Record 52503;
+        CategoriaPedidoVenta: Record 55212;
         AmountXclIva: Record 36;
         ConfSant: Record 56001;
         LineDiscountCaption: Label '%';

@@ -1,4 +1,4 @@
-page 53000 "Tareas Impresora Fiscal"
+page 55221 "Tareas Impresora Fiscal"
 {
     Caption = 'Fiscal Printer Tasks';
 
@@ -99,8 +99,8 @@ page 53000 "Tareas Impresora Fiscal"
     var
         UserSetUp: Record 91;
         ConfSant: Record 56001;
-        // TODO: Manual review - Codeunit 53000 exposes printer methods whose OCX implementation was removed, so invoking them would not perform fiscal printing.
-        // Original code: cuImpFisc: Codeunit 53000;
+        // TODO: Manual review - Codeunit 55221 exposes printer methods whose OCX implementation was removed, so invoking them would not perform fiscal printing.
+        // Original code: cuImpFisc: Codeunit 55221;
         FechaDesde: Date;
         FechaHasta: Date;
         Detallado: Boolean;

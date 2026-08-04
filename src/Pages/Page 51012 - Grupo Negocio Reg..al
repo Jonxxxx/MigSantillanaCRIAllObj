@@ -1,8 +1,8 @@
-page 51012 "Grupo Negocio Reg."
+page 55173 "Grupo Negocio Reg."
 {
     Editable = false;
     PageType = List;
-    SourceTable = 51017;
+    SourceTable = 55178;
 
     layout
     {

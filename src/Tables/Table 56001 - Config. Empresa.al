@@ -719,67 +719,67 @@ table 56001 "Config. Empresa"
             DataClassification = CustomerContent;
             Caption = 'Dias Borrado Rvas. Call Center';
         }
-        field(50010; "Cliente Contado E-Commerce"; Code[20])
+        field(55235; "Cliente Contado E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cliente Contado E-Commerce';
             Description = 'NopCommerce';
             TableRelation = Customer;
         }
-        field(50011; "No. Serie Ped. E-Commerce"; Code[20])
+        field(55236; "No. Serie Ped. E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Ped. E-Commerce';
             Description = 'NopCommerce';
             TableRelation = "No. Series";
         }
-        field(50012; "No. Serie Fact. E-Commerce"; Code[20])
+        field(55237; "No. Serie Fact. E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Fact. E-Commerce';
             Description = 'NopCommerce';
             TableRelation = "No. Series";
         }
-        field(50016; "Cod. Producto Cargo Envio"; Code[20])
+        field(55241; "Cod. Producto Cargo Envio"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Producto Cargo Envio';
             Description = 'NopCommerce';
             TableRelation = Item;
         }
-        field(50017; "Almacen E-Commerce"; Code[20])
+        field(55242; "Almacen E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Almacen E-Commerce';
             Description = 'NopCommerce';
             TableRelation = Location;
         }
-        field(50018; "Cod. Precio E-commerce"; Code[20])
+        field(55243; "Cod. Precio E-commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Precio E-commerce';
             Description = 'NopCommerce';
             TableRelation = "Customer Price Group";
         }
-        field(52000; "Cod. sociedad maestros Santill"; Text[10])
+        field(55181; "Cod. sociedad maestros Santill"; Text[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. sociedad maestros Santill';
             Description = 'Santillana,MdE,MdM';
         }
-        field(52001; "Cod. pais maestros Santill"; Text[3])
+        field(55182; "Cod. pais maestros Santill"; Text[3])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. pais maestros Santill';
             Description = 'Santillana,MdE,MdM';
         }
-        field(52002; "WS Respuesta MdE"; Text[100])
+        field(55183; "WS Respuesta MdE"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'WS Respuesta MdE';
             Description = 'Santillana,MdE';
         }
-        field(52003; "Centro de coste MdE"; Option)
+        field(55184; "Centro de coste MdE"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Centro de coste MdE';
@@ -794,7 +794,7 @@ table 56001 "Config. Empresa"
                     "Dimension Centro Coste" := '';
             end;
         }
-        field(52004; "Departamento MdE"; Option)
+        field(55185; "Departamento MdE"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Departamento MdE';
@@ -809,7 +809,7 @@ table 56001 "Config. Empresa"
                     "Dimension Departamento" := '';
             end;
         }
-        field(52005; "Division MdE"; Option)
+        field(55186; "Division MdE"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Division MdE';
@@ -824,7 +824,7 @@ table 56001 "Config. Empresa"
                     "Dimension Division" := '';
             end;
         }
-        field(52006; "Area funcional MdE"; Option)
+        field(55187; "Area funcional MdE"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Area funcional MdE';
@@ -839,19 +839,19 @@ table 56001 "Config. Empresa"
                     "Dimension Area funcional" := '';
             end;
         }
-        field(52007; "MdE Activo"; Boolean)
+        field(55188; "MdE Activo"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'MdE Activo';
             Description = 'Santillana,MdE';
         }
-        field(52008; "WS Informacion Compl. MdE"; Text[100])
+        field(55189; "WS Informacion Compl. MdE"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'WS Informacion Compl. MdE';
             Description = 'Santillana,MdE';
         }
-        field(52009; "Dimension Departamento"; Code[20])
+        field(55190; "Dimension Departamento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Dimension Departamento';
@@ -863,7 +863,7 @@ table 56001 "Config. Empresa"
                 ValidaDimensionMdE("Dimension Departamento", FIELDNO("Dimension Departamento"));
             end;
         }
-        field(52010; "Dimension Division"; Code[20])
+        field(55191; "Dimension Division"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Dimension Division';
@@ -875,7 +875,7 @@ table 56001 "Config. Empresa"
                 ValidaDimensionMdE("Dimension Division", FIELDNO("Dimension Division"));
             end;
         }
-        field(52011; "Dimension Area funcional"; Code[20])
+        field(55192; "Dimension Area funcional"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Dimension Area funcional';
@@ -887,7 +887,7 @@ table 56001 "Config. Empresa"
                 ValidaDimensionMdE("Dimension Area funcional", FIELDNO("Dimension Area funcional"));
             end;
         }
-        field(52012; "Dimension Centro Coste"; Code[20])
+        field(55193; "Dimension Centro Coste"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Dimension Centro Coste';
@@ -899,13 +899,13 @@ table 56001 "Config. Empresa"
                 ValidaDimensionMdE("Dimension Centro Coste", FIELDNO("Dimension Centro Coste"));
             end;
         }
-        field(52013; "Cod. Sociedad CO maestros"; Text[10])
+        field(55194; "Cod. Sociedad CO maestros"; Text[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Sociedad CO maestros';
             Description = 'Santillana,MdE';
         }
-        field(52014; "Posicion MdE"; Option)
+        field(55195; "Posicion MdE"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Posicion MdE';
@@ -913,40 +913,40 @@ table 56001 "Config. Empresa"
             OptionCaption = 'No integrar,Puesto laboral';
             OptionMembers = "No integrar","Puesto laboral";
         }
-        field(52015; "Sistema origen"; Text[3])
+        field(55196; "Sistema origen"; Text[3])
         {
             DataClassification = CustomerContent;
             Caption = 'Sistema origen';
             Description = 'Santillana,MdE,MdM';
             InitValue = 'NAV';
         }
-        field(52016; "Usuario notificaciones MdE"; Code[50])
+        field(55197; "Usuario notificaciones MdE"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario notificaciones MdE';
             Description = 'MdE,#81969';
             TableRelation = User."User Name";
         }
-        field(52500; "Config Factura Electronica CR"; Boolean)
+        field(55199; "Config Factura Electronica CR"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Config Factura Electronica CR';
             Description = '#FE-CR';
         }
-        field(52501; "Es Prueba"; Boolean)
+        field(55200; "Es Prueba"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Es Prueba';
             Description = '#FE-CR';
         }
-        field(52502; "Categoria Pedido - E"; Code[20])
+        field(55201; "Categoria Pedido - E"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Categoria Pedido - E';
             Description = 'SANTINAV-3721';
             TableRelation = "Categoria Pedido Venta";
         }
-        field(52503; "Categoria Pedido - P"; Code[20])
+        field(55212; "Categoria Pedido - P"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Categoria Pedido - P';

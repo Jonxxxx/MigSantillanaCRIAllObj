@@ -1,8 +1,8 @@
-tableextension 50022 EXCCRICustomerPostingGroup extends "Customer Posting Group"
+tableextension 55247 EXCCRICustomerPostingGroup extends "Customer Posting Group"
 {
     fields
     {
-        field(51000; "Cliente Interno"; Boolean)
+        field(55161; "Cliente Interno"; Boolean)
         {
             Caption = 'Internal Customer';
             DataClassification = CustomerContent;

@@ -1,4 +1,4 @@
-pageextension 50077 EXCCRIVATProdPostingGroups extends "VAT Product Posting Groups"
+pageextension 55077 EXCCRIVATProdPostingGroups extends "VAT Product Posting Groups"
 {
     layout
     {

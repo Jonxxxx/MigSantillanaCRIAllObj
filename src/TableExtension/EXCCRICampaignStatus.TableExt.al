@@ -1,4 +1,4 @@
-tableextension 50072 EXCCRICampaignStatus extends "Campaign Status"
+tableextension 55072 EXCCRICampaignStatus extends "Campaign Status"
 {
     fields
     {

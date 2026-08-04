@@ -355,7 +355,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
                     Image = Log;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 52500;
+                    RunObject = Page 55199;
                     RunPageLink = NoDocumento = FIELD("Posting No.");
                     Visible = wCostaRica;
                 }
@@ -794,7 +794,7 @@ page 34002557 "Lista Notas Credito Pdtes POS"
         [InDataSet]
         JobQueueActive: Boolean;
         wCostaRica: Boolean;
-        Registrar: Codeunit 50112;
-        Transfer_SIC: Codeunit 50110;
+        Registrar: Codeunit 55111;
+        Transfer_SIC: Codeunit 55110;
 }
 

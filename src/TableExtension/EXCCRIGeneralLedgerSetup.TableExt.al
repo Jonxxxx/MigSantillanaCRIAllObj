@@ -1,8 +1,8 @@
-tableextension 50024 EXCCRIGeneralLedgerSetup extends "General Ledger Setup"
+tableextension 55249 EXCCRIGeneralLedgerSetup extends "General Ledger Setup"
 {
     fields
     {
-        field(50000; "ITBIS al costo activo"; Boolean)
+        field(55225; "ITBIS al costo activo"; Boolean)
         {
             Caption = 'VAT to cost active';
             DataClassification = CustomerContent;

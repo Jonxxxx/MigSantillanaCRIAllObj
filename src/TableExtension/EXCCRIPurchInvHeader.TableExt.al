@@ -1,53 +1,53 @@
-tableextension 50033 EXCCRIPurchInvHeader extends "Purch. Inv. Header"
+tableextension 55033 EXCCRIPurchInvHeader extends "Purch. Inv. Header"
 {
     fields
     {
-        field(52500; Clave; Text[60])
+        field(55199; Clave; Text[60])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52501; Consecutivo; Text[20])
+        field(55200; Consecutivo; Text[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52502; Estado; Text[30])
+        field(55201; Estado; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52503; Mensaje; Text[150])
+        field(55212; Mensaje; Text[150])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52504; "Fecha Doc Electronico"; DateTime)
+        field(55202; "Fecha Doc Electronico"; DateTime)
         {
             DataClassification = CustomerContent;
         }
 
-        field(52505; "E-Mail-FE"; Text[100])
+        field(55203; "E-Mail-FE"; Text[100])
         {
             Caption = 'E-Mail';
             DataClassification = CustomerContent;
             ExtendedDatatype = EMail;
         }
 
-        field(52506; "Tipo Doc Electronico"; Option)
+        field(55204; "Tipo Doc Electronico"; Option)
         {
             Caption = 'Tipo Documento Electronico';
             DataClassification = CustomerContent;
             OptionMembers = "Factura","Tiquete";
         }
 
-        field(52507; "QR Code FE"; Blob)
+        field(55205; "QR Code FE"; Blob)
         {
             DataClassification = CustomerContent;
             Subtype = UserDefined;
         }
 
-        field(52508; "Tipo Doc. Ref."; Option)
+        field(55206; "Tipo Doc. Ref."; Option)
         {
             Caption = 'Tipo Doc. Ref.';
             DataClassification = CustomerContent;
@@ -55,20 +55,20 @@ tableextension 50033 EXCCRIPurchInvHeader extends "Purch. Inv. Header"
             OptionMembers = " ","Comprobante por Contingencia","Sustituye Comprobante","Comprobante de Proveedor No Domiciliado";
         }
 
-        field(52509; "Numero Referencia FE"; Code[25])
+        field(55207; "Numero Referencia FE"; Code[25])
         {
             Caption = 'Numero Referencia FE';
             DataClassification = CustomerContent;
         }
 
-        field(52510; "Tipo Doc. Ref NC"; Option)
+        field(55208; "Tipo Doc. Ref NC"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Factura Electronica,Tiquete Electronico,Sustituye Factura de Exportacion';
             OptionMembers = " ","Factura Electronica","Tiquete Electronico","Sustituye Factura de Exportacion";
         }
 
-        field(52511; "Codigo Referencia"; Option)
+        field(55209; "Codigo Referencia"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Devolucion Total,Devolucion Parcial';

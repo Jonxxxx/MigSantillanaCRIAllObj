@@ -1,4 +1,4 @@
-report 50000 "Modificar Pedidos E-commerce"
+report 55225 "Modificar Pedidos E-commerce"
 {
     // YFC     : Yefrecis Francisco Cruz
     // ------------------------------------------------------------------------
@@ -13,7 +13,7 @@ report 50000 "Modificar Pedidos E-commerce"
 
     dataset
     {
-        dataitem("Cab. Venta NopCommerce"; 50100)
+        dataitem("Cab. Venta NopCommerce"; 55100)
         {
             RequestFilterFields = "No. documento";
 

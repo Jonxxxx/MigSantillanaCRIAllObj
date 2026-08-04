@@ -488,7 +488,7 @@ codeunit 75000 "Funciones MdM"
             8:
                 wIdField := 75010; // Asignatura
             9:
-                wIdField := 50005; // Nivel Escolar (Grado);
+                wIdField := 55230; // Nivel Escolar (Grado);
             10:
                 wIdField := 56010; // Sello
             11:
@@ -988,7 +988,7 @@ codeunit 75000 "Funciones MdM"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75010, 1); // Asignatura
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 50005, 1);  // "Nivel Escolar (Grado)"
+            lwOK := ObligaField(lwRecRef, 55230, 1);  // "Nivel Escolar (Grado)"
 
 
         // Dimensiones

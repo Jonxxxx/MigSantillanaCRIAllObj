@@ -1,4 +1,4 @@
-pageextension 50141 EXCCRIWhseItemJournal extends "Whse. Item Journal"
+pageextension 55140 EXCCRIWhseItemJournal extends "Whse. Item Journal"
 {
     layout
     {

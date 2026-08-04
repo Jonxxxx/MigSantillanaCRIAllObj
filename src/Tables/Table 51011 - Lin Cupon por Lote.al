@@ -1,4 +1,4 @@
-table 51011 "Lin Cupon por Lote"
+table 55172 "Lin Cupon por Lote"
 {
     Caption = 'Coupon Lines';
 
@@ -90,7 +90,7 @@ table 51011 "Lin Cupon por Lote"
 
     procedure AplicaDescuento()
     var
-        rCab: Record 51015;
+        rCab: Record 55176;
     begin
         rCab.RESET;
         rCab.GET(Lote);

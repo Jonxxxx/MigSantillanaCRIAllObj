@@ -1,4 +1,4 @@
-pageextension 50124 EXCCRIWarehousePick extends "Warehouse Pick"
+pageextension 55123 EXCCRIWarehousePick extends "Warehouse Pick"
 {
     actions
     {

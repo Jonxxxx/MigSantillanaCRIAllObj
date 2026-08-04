@@ -1,8 +1,8 @@
-table 51014 "Vendedores por Colegio"
+table 55175 "Vendedores por Colegio"
 {
     Caption = 'School SalesPerson';
-    DrillDownPageID = 51010;
-    LookupPageID = 51010;
+    DrillDownPageID = 55171;
+    LookupPageID = 55171;
 
     fields
     {

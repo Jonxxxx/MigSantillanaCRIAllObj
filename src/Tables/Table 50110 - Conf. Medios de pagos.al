@@ -1,7 +1,7 @@
-table 50110 "Conf. Medios de pagos"
+table 55110 "Conf. Medios de pagos"
 {
-    //IGNORAR: Page no existeDrillDownPageID = 50106;
-    //IGNORAR: Page no existe LookupPageID = 50106;
+    //IGNORAR: Page no existeDrillDownPageID = 55106;
+    //IGNORAR: Page no existe LookupPageID = 55106;
 
     fields
     {

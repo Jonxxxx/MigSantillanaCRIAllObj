@@ -1,30 +1,30 @@
-tableextension 50027 EXCCRISalesShipmentHeader extends "Sales Shipment Header"
+tableextension 55027 EXCCRISalesShipmentHeader extends "Sales Shipment Header"
 {
     fields
     {
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations';
             OptionMembers = "Factura","Consignacion","Muestras","Donaciones";
         }
 
-        field(50110; "No. Documento SIC"; Code[20])
+        field(55110; "No. Documento SIC"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50111; "Source counter"; BigInteger)
+        field(55198; "Source counter"; BigInteger)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50112; "Cod. Cajero"; Code[50])
+        field(55111; "Cod. Cajero"; Code[50])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50113; "Cod. Supervisor"; Text[30])
+        field(55112; "Cod. Supervisor"; Text[30])
         {
             DataClassification = CustomerContent;
         }

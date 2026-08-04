@@ -1,13 +1,13 @@
-tableextension 50085 EXCCRIItemCategory extends "Item Category"
+tableextension 55085 EXCCRIItemCategory extends "Item Category"
 {
     fields
     {
-        field(50000; "Interfaz web"; Boolean)
+        field(55225; "Interfaz web"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50007; "EspecificacionSIC"; Text[255])
+        field(55232; "EspecificacionSIC"; Text[255])
         {
             DataClassification = CustomerContent;
         }

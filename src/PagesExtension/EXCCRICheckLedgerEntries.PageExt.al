@@ -1,4 +1,4 @@
-pageextension 50066 EXCCRICheckLedgerEntries extends "Check Ledger Entries"
+pageextension 55066 EXCCRICheckLedgerEntries extends "Check Ledger Entries"
 {
     layout
     {

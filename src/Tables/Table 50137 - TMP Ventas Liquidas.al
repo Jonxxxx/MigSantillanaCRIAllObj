@@ -1,4 +1,4 @@
-table 50137 "TMP: Ventas Liquidas"
+table 55136 "TMP: Ventas Liquidas"
 {
 
     fields

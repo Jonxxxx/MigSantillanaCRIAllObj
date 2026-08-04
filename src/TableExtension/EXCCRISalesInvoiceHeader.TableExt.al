@@ -1,85 +1,85 @@
-tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
+tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
 {
     fields
     {
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations,Canal 3,Exports,Scholarships,Royalties';
             OptionMembers = "Factura","Consignacion","Muestras","Donaciones","Canal 3","Exportacion","Becas","Regalias";
         }
 
-        field(50110; "No. Documento SIC"; Code[20])
+        field(55110; "No. Documento SIC"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50111; "Source counter"; BigInteger)
+        field(55198; "Source counter"; BigInteger)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50112; "Cod. Cajero"; Code[50])
+        field(55111; "Cod. Cajero"; Code[50])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50113; "Cod. Supervisor"; Text[30])
+        field(55112; "Cod. Supervisor"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50114; "Error Registro"; Text[100])
+        field(55113; "Error Registro"; Text[100])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52500; Clave; Text[60])
+        field(55199; Clave; Text[60])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52501; Consecutivo; Text[20])
+        field(55200; Consecutivo; Text[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52502; Estado; Text[30])
+        field(55201; Estado; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52503; Mensaje; Text[150])
+        field(55212; Mensaje; Text[150])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52504; "Fecha Doc Electronico"; DateTime)
+        field(55202; "Fecha Doc Electronico"; DateTime)
         {
             DataClassification = CustomerContent;
         }
 
-        field(52505; "E-Mail-FE"; Text[100])
+        field(55203; "E-Mail-FE"; Text[100])
         {
             Caption = 'E-Mail';
             DataClassification = CustomerContent;
             ExtendedDatatype = EMail;
         }
 
-        field(52506; "Tipo Doc Electronico"; Option)
+        field(55204; "Tipo Doc Electronico"; Option)
         {
             Caption = 'Tipo Documento Electronico';
             DataClassification = CustomerContent;
             OptionMembers = "Factura","Tiquete";
         }
 
-        field(52507; "QR Code FE"; Blob)
+        field(55205; "QR Code FE"; Blob)
         {
             DataClassification = CustomerContent;
             Subtype = UserDefined;
         }
 
-        field(52508; "Tipo Doc. Ref."; Option)
+        field(55206; "Tipo Doc. Ref."; Option)
         {
             Caption = 'Tipo Doc. Ref.';
             DataClassification = CustomerContent;
@@ -87,27 +87,27 @@ tableextension 50029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             OptionMembers = " ","Comprobante por Contingencia","Sustituye Comprobante";
         }
 
-        field(52509; "Numero Referencia FE"; Code[25])
+        field(55207; "Numero Referencia FE"; Code[25])
         {
             Caption = 'Numero Referencia FE';
             DataClassification = CustomerContent;
         }
 
-        field(52510; "Tipo Doc. Ref NC"; Option)
+        field(55208; "Tipo Doc. Ref NC"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Factura Electronica,Tiquete Electronico,Sustituye Factura de Exportacion';
             OptionMembers = " ","Factura Electronica","Tiquete Electronico","Sustituye Factura de Exportacion";
         }
 
-        field(52511; "Codigo Referencia"; Option)
+        field(55209; "Codigo Referencia"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Devolucion Total,Devolucion Parcial';
             OptionMembers = " ","Devolucion Total","Devolucion Parcial";
         }
 
-        field(52513; "Categoria Pedido Venta"; Code[20])
+        field(55211; "Categoria Pedido Venta"; Code[20])
         {
             Caption = 'Order Category';
             DataClassification = CustomerContent;

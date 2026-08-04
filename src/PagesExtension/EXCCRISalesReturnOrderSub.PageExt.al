@@ -1,4 +1,4 @@
-pageextension 50133 EXCCRISalesReturnOrderSub extends "Sales Return Order Subform"
+pageextension 55132 EXCCRISalesReturnOrderSub extends "Sales Return Order Subform"
 {
     layout
     {

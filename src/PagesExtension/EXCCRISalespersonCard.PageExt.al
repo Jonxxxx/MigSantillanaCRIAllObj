@@ -1,4 +1,4 @@
-pageextension 50095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
+pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
 {
     layout
     {

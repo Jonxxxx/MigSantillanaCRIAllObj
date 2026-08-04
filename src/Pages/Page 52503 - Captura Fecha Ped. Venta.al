@@ -1,4 +1,4 @@
-page 52503 "Captura Fecha Ped. Venta"
+page 55212 "Captura Fecha Ped. Venta"
 {
     PageType = StandardDialog;
 
@@ -6,11 +6,11 @@ page 52503 "Captura Fecha Ped. Venta"
     {
         area(content)
         {
-            field("Fecha Desde";FechaDesde)
+            field("Fecha Desde"; FechaDesde)
             {
                 ApplicationArea = All;
             }
-            field("Fecha Hasta";FechaHasta)
+            field("Fecha Hasta"; FechaHasta)
             {
                 ApplicationArea = All;
             }
@@ -25,7 +25,7 @@ page 52503 "Captura Fecha Ped. Venta"
         FechaDesde: Date;
         FechaHasta: Date;
 
-    procedure TraerFechas(var datPrmFechaIni: Date;var datPrmFechafin: Date)
+    procedure TraerFechas(var datPrmFechaIni: Date; var datPrmFechafin: Date)
     begin
         datPrmFechaIni := FechaDesde;
         datPrmFechafin := FechaHasta;

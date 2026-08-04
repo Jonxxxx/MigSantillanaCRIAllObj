@@ -1,4 +1,4 @@
-pageextension 50087 EXCCRIApprovalEntries extends "Approval Entries"
+pageextension 55087 EXCCRIApprovalEntries extends "Approval Entries"
 {
     layout
     {

@@ -1,4 +1,4 @@
-pageextension 50054 EXCCRIVendorPostingGroupCard extends "Vendor Posting Group Card"
+pageextension 55054 EXCCRIVendorPostingGroupCard extends "Vendor Posting Group Card"
 {
     layout
     {

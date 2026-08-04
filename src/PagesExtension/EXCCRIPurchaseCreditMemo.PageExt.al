@@ -1,4 +1,4 @@
-pageextension 50028 EXCCRIPurchaseCreditMemo extends "Purchase Credit Memo"
+pageextension 55028 EXCCRIPurchaseCreditMemo extends "Purchase Credit Memo"
 {
     layout
     {

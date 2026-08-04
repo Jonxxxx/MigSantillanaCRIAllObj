@@ -1,4 +1,4 @@
-pageextension 50053 EXCCRICustomerPostingGroupCard extends "Customer Posting Group Card"
+pageextension 55053 EXCCRICustomerPostingGroupCard extends "Customer Posting Group Card"
 {
     layout
     {

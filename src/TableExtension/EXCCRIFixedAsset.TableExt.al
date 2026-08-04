@@ -1,4 +1,4 @@
-tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
+tableextension 55081 EXCCRIFixedAsset extends "Fixed Asset"
 {
     fields
     {
@@ -66,40 +66,40 @@ tableextension 50081 EXCCRIFixedAsset extends "Fixed Asset"
             end;
         }
 
-        field(50000; Producto; Code[20])
+        field(55225; Producto; Code[20])
         {
             Caption = 'Item';
             DataClassification = CustomerContent;
             TableRelation = Item;
         }
-        field(50001; "No. Placa"; Code[20])
+        field(55226; "No. Placa"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(50002; "Total Costo"; Decimal)
+        field(55227; "Total Costo"; Decimal)
         {
             CalcFormula = sum("FA Ledger Entry".Amount where("FA No." = field("No."), "FA Posting Type" = const("Acquisition Cost"), "FA Posting Date" = field("FA Posting Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(50003; "Total Amortizacion"; Decimal)
+        field(55228; "Total Amortizacion"; Decimal)
         {
             CalcFormula = sum("FA Ledger Entry".Amount where("FA No." = field("No."), "FA Posting Type" = const(Depreciation), "FA Posting Date" = field("FA Posting Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(50005; "Nombre Responsable"; Text[60])
+        field(55230; "Nombre Responsable"; Text[60])
         {
             Caption = 'Responsible Name';
             DataClassification = CustomerContent;
         }
-        field(50006; "Fecha Inicio Amortizacion"; Date)
+        field(55231; "Fecha Inicio Amortizacion"; Date)
         {
             CalcFormula = lookup("FA Depreciation Book"."Depreciation Starting Date" where("FA No." = field("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(50007; "Descripcion Producto Ref."; Text[60])
+        field(55232; "Descripcion Producto Ref."; Text[60])
         {
             CalcFormula = lookup(Item.Description where("No." = field(Producto)));
             Editable = false;

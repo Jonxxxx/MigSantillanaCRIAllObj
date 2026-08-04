@@ -1,13 +1,13 @@
-tableextension 50009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
+tableextension 55234 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
 {
     fields
     {
-        field(50013; "Forma de Pago"; Code[20])
+        field(55238; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
-        field(52500; "Fecha Recepcion Documento"; Date)
+        field(55199; "Fecha Recepcion Documento"; Date)
         {
             Caption = 'Document Reception Date';
             DataClassification = CustomerContent;

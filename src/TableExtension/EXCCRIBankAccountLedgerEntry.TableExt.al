@@ -1,8 +1,8 @@
-tableextension 50042 EXCCRIBankAccountLedgerEntry extends "Bank Account Ledger Entry"
+tableextension 55042 EXCCRIBankAccountLedgerEntry extends "Bank Account Ledger Entry"
 {
     fields
     {
-        field(50013; "Forma de Pago"; Code[20])
+        field(55238; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";

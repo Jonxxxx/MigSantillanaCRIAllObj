@@ -1,4 +1,4 @@
-pageextension 50096 EXCCRISalesOrderArchive extends "Sales Order Archive"
+pageextension 55096 EXCCRISalesOrderArchive extends "Sales Order Archive"
 {
     layout
     {

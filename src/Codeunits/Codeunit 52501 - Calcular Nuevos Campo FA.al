@@ -1,4 +1,4 @@
-codeunit 52501 "Calcular Nuevos Campo FA"
+codeunit 55200 "Calcular Nuevos Campo FA"
 {
     // #14319  FAA   20/03/2015  Calcula los datos para dos nuevos campos agregados en la page 5601 Fecha de Adquisicion y % Amortizacion
 

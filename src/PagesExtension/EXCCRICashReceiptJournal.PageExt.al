@@ -1,4 +1,4 @@
-pageextension 50059 EXCCRICashReceiptJournal extends "Cash Receipt Journal"
+pageextension 55059 EXCCRICashReceiptJournal extends "Cash Receipt Journal"
 {
     layout
     {

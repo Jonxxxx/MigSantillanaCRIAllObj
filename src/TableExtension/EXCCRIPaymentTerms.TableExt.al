@@ -1,12 +1,12 @@
-tableextension 50000 EXCCRIPaymentTerms extends "Payment Terms"
+tableextension 55225 EXCCRIPaymentTerms extends "Payment Terms"
 {
     fields
     {
-        field(50000; "Condicion Venta DGT"; Code[2])
+        field(55225; "Condicion Venta DGT"; Code[2])
         {
             DataClassification = CustomerContent;
         }
-        field(50001; "Plazo de tiempo"; Integer)
+        field(55226; "Plazo de tiempo"; Integer)
         {
             DataClassification = CustomerContent;
         }

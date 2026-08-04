@@ -1,4 +1,4 @@
-table 52502 "Log Facturacion Electronica CR"
+table 55201 "Log Facturacion Electronica CR"
 {
     fields
     {

@@ -1,4 +1,4 @@
-report 52502 "Recibo Nomina CR"
+report 55201 "Recibo Nomina CR"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Nomina CR.rdl';

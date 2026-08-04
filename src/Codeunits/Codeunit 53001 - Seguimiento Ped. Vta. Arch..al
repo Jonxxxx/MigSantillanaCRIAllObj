@@ -1,4 +1,4 @@
-codeunit 53001 "Seguimiento Ped. Vta. Arch."
+codeunit 55222 "Seguimiento Ped. Vta. Arch."
 {
 
     trigger OnRun()
@@ -12,8 +12,8 @@ codeunit 53001 "Seguimiento Ped. Vta. Arch."
     end;
 
     var
-        frmCaptura: Page 52503;
-        frmSeguimiento: Page 52502;
+        frmCaptura: Page 55212;
+        frmSeguimiento: Page 55201;
         datFechaIni: Date;
         datFechaFin: Date;
 }

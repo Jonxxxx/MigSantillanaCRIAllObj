@@ -1,7 +1,7 @@
-page 50114 "Config. Caja Electronica"
+page 55113 "Config. Caja Electronica"
 {
     PageType = ListPart;
-    SourceTable = 50114;
+    SourceTable = 55113;
     SourceTableView = ORDER(Descending);
 
     layout

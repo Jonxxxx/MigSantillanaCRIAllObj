@@ -1,4 +1,4 @@
-page 52506 "Categoria Pedido Venta"
+page 55204 "Categoria Pedido Venta"
 {
     //  Proyecto: Implementacion Business Central
     // 
@@ -11,7 +11,7 @@ page 52506 "Categoria Pedido Venta"
     ApplicationArea = Basic, Suite;
     Caption = 'Sales Order Category';
     PageType = List;
-    SourceTable = 52503;
+    SourceTable = 55212;
 
     layout
     {
@@ -46,7 +46,7 @@ page 52506 "Categoria Pedido Venta"
     procedure GetSelectionFilter(): Text
     var
         SelectionFilterManagement: Codeunit 46;
-        CategoriaPedidoVenta: Record 52503;
+        CategoriaPedidoVenta: Record 55212;
         RecordRef: RecordRef;
     begin
         CurrPage.SETSELECTIONFILTER(CategoriaPedidoVenta);

@@ -1,4 +1,4 @@
-table 50113 "Medios de Pago SIC"
+table 55112 "Medios de Pago SIC"
 {
     //  Proyecto: Implementacion Microsoft Dynamic
     // 
@@ -12,38 +12,38 @@ table 50113 "Medios de Pago SIC"
 
     fields
     {
-        field(1;"Tipo documento";Integer)
+        field(1; "Tipo documento"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo documento';
         }
-        field(2;"No. documento";Code[20])
+        field(2; "No. documento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. documento';
         }
-        field(3;"No. linea";Text[50])
+        field(3; "No. linea"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'No. linea';
         }
-        field(4;"Cod. medio de pago";Code[20])
+        field(4; "Cod. medio de pago"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. medio de pago';
             TableRelation = "Conf. Medios de pagos";
         }
-        field(5;"Cod. cliente";Code[20])
+        field(5; "Cod. cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. cliente';
         }
-        field(6;"Fecha registro";Date)
+        field(6; "Fecha registro"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha registro';
         }
-        field(7;Importe;Decimal)
+        field(7; Importe; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe';
@@ -53,56 +53,56 @@ table 50113 "Medios de Pago SIC"
                 //EVALUATE(Dec_Importe,importe);
             end;
         }
-        field(8;"Cod. divisa";Code[10])
+        field(8; "Cod. divisa"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. divisa';
         }
-        field(9;"Tasa de cambio";Decimal)
+        field(9; "Tasa de cambio"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Tasa de cambio';
         }
-        field(10;"Source Counter";Integer)
+        field(10; "Source Counter"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Source Counter';
         }
-        field(11;Transferido;Boolean)
+        field(11; Transferido; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Transferido';
         }
-        field(12;Origen;Option)
+        field(12; Origen; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Origen';
             OptionCaption = ' ,Punto de Venta,From Hotel';
             OptionMembers = " ","Punto de Venta","From Hotel";
         }
-        field(13;"No. documento Pos";Code[20])
+        field(13; "No. documento Pos"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. documento Pos';
         }
-        field(14;"No. Serie Pos";Code[20])
+        field(14; "No. Serie Pos"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Pos';
             Description = '001-LDP: SIC-JERM';
         }
-        field(15;"Location Code";Code[40])
+        field(15; "Location Code"; Code[40])
         {
             DataClassification = CustomerContent;
             Caption = 'Location Code';
             Description = '001-LDP: SIC-JERM';
         }
-        field(16;"No. documento SIC";Code[20])
+        field(16; "No. documento SIC"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. documento SIC';
         }
-        field(17;"Refencia Pago";Text[30])
+        field(17; "Refencia Pago"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Refencia Pago';
@@ -112,10 +112,10 @@ table 50113 "Medios de Pago SIC"
 
     keys
     {
-        key(Key1;"Tipo documento","No. documento","No. linea","No. documento SIC")
+        key(Key1; "Tipo documento", "No. documento", "No. linea", "No. documento SIC")
         {
         }
-        key(Key2;"No. documento SIC")
+        key(Key2; "No. documento SIC")
         {
         }
     }

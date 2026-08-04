@@ -1,106 +1,106 @@
-tableextension 50091 EXCCRITransferReceiptLine extends "Transfer Receipt Line"
+tableextension 55091 EXCCRITransferReceiptLine extends "Transfer Receipt Line"
 {
     fields
     {
-        field(50000; "Precio Venta Consignacion"; Decimal)
+        field(55225; "Precio Venta Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50001; "Descuento % Consignacion"; Decimal)
+        field(55226; "Descuento % Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50002; "Importe Consignacion"; Decimal)
+        field(55227; "Importe Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50004; "ISBN"; Text[30])
+        field(55229; "ISBN"; Text[30])
         {
             DataClassification = CustomerContent;
             TableRelation = Item.ISBN;
         }
 
-        field(50010; "No. Pedido Consignacion"; Code[20])
+        field(55235; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50011; "No. Linea Pedido Consignacion"; Integer)
+        field(55236; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50013; "Cantidad Consg. Aplicada"; Boolean)
+        field(55238; "Cantidad Consg. Aplicada"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50014; "Cantidad Devuelta"; Decimal)
+        field(55239; "Cantidad Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50015; "Grupo registro IVA prod."; Code[20])
+        field(55240; "Grupo registro IVA prod."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "VAT Product Posting Group";
         }
 
-        field(50016; "Grupo registro IVA neg."; Code[20])
+        field(55241; "Grupo registro IVA neg."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "VAT Business Posting Group";
         }
 
-        field(50017; "% IVA"; Decimal)
+        field(55242; "% IVA"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50018; "Importe IVA"; Decimal)
+        field(55243; "Importe IVA"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50020; "Cantidad Aprobada"; Decimal)
+        field(55245; "Cantidad Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50021; "Cantidad pendiente BO"; Decimal)
+        field(55246; "Cantidad pendiente BO"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50022; "Cantidad a Anular"; Decimal)
+        field(55247; "Cantidad a Anular"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50023; "Cantidad Solicitada"; Decimal)
+        field(55248; "Cantidad Solicitada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50024; "Cantidad a Ajustar"; Decimal)
+        field(55249; "Cantidad a Ajustar"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50025; "Porcentaje Cant. Aprobada"; Decimal)
+        field(55250; "Porcentaje Cant. Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50029; "Cantidad Anulada"; Decimal)
+        field(55029; "Cantidad Anulada"; Decimal)
         {
             DataClassification = CustomerContent;
         }

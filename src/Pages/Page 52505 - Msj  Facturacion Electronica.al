@@ -1,4 +1,4 @@
-page 52505 "Msj  Facturacion Electronica"
+page 55203 "Msj  Facturacion Electronica"
 {
     ApplicationArea = Basic, Suite;
     DeleteAllowed = true;
@@ -6,7 +6,7 @@ page 52505 "Msj  Facturacion Electronica"
     LinksAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 52502;
+    SourceTable = 55201;
     SourceTableView = WHERE("Tipo Documento" = FILTER(MA | MP | MR));
     UsageCategory = Lists;
 
@@ -60,7 +60,7 @@ page 52505 "Msj  Facturacion Electronica"
         }
     }
 
-    // TODO: Manual review - The complete electronic-invoicing actions block depends on empty codeunit 52504 and requires integration redesign.
+    // TODO: Manual review - The complete electronic-invoicing actions block depends on empty codeunit 55202 and requires integration redesign.
     /*
     actions
     {

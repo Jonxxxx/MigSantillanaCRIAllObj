@@ -1,4 +1,4 @@
-pageextension 50055 EXCCRISalesStatistics extends "Sales Statistics"
+pageextension 55055 EXCCRISalesStatistics extends "Sales Statistics"
 {
     layout
     {

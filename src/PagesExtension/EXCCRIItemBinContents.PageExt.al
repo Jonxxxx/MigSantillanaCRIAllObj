@@ -1,6 +1,6 @@
 // 
 /*
-pageextension 50149 EXCCRIItemBinContents extends "Item Bin Contents"
+pageextension 55148 EXCCRIItemBinContents extends "Item Bin Contents"
 {
     layout
     {

@@ -1,4 +1,4 @@
-table 52507 "Registro PDF Costos"
+table 55205 "Registro PDF Costos"
 {
     Caption = 'Registro PDF Costos';
     DataClassification = CustomerContent;

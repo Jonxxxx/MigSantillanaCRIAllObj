@@ -1,4 +1,4 @@
-table 50002 "Flash ventas (Cantidades)"
+table 55227 "Flash ventas (Cantidades)"
 {
 
     fields

@@ -1,4 +1,4 @@
-tableextension 50076 EXCCRICauseOfAbsence extends "Cause of Absence"
+tableextension 55076 EXCCRICauseOfAbsence extends "Cause of Absence"
 {
     fields
     {

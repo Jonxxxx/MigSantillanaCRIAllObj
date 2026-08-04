@@ -1,7 +1,7 @@
-table 50015 "Razones anulacion factura"
+table 55240 "Razones anulacion factura"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 50015;
-    //IGNORAR: Page no existe LookupPageID = 50015;
+    //IGNORAR: Page no existe DrillDownPageID = 55240;
+    //IGNORAR: Page no existe LookupPageID = 55240;
 
     fields
     {

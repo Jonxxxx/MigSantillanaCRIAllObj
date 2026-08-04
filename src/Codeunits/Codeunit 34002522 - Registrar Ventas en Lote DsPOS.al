@@ -803,7 +803,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     procedure marcarCupones(pSalesHeader: Record 36)
     var
         lrSalesInvoiceHeader: Record 112;
-        lrCabeceraCupon: Record 51009;
+        lrCabeceraCupon: Record 55170;
         lrSalesInvoiceLine: Record 113;
         lrSalesCrMemoLine: Record 115;
     begin

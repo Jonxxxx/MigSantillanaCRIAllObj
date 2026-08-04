@@ -1,4 +1,4 @@
-pageextension 50056 EXCCRIPurchaseStatistics extends "Purchase Statistics"
+pageextension 55056 EXCCRIPurchaseStatistics extends "Purchase Statistics"
 {
     layout
     {

@@ -1,4 +1,4 @@
-report 51006 "Importa Pedidos vta. Cons."
+report 55167 "Importa Pedidos vta. Cons."
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Import Orders vta. Cons.';
@@ -86,7 +86,7 @@ report 51006 "Importa Pedidos vta. Cons."
         rExcelBuffer: Record "Excel Buffer" temporary;
         rSalesLine: Record "Sales Line";
         rSalesLine1: Record "Sales Line";
-        rSalesLineTMP: Record 51003 temporary;
+        rSalesLineTMP: Record 55164 temporary;
         TempBlob: Codeunit "Temp Blob";
         CFuncSantillana: Codeunit 56000;
         SheetName: Text[250];

@@ -1,4 +1,4 @@
-pageextension 50106 EXCCRIHumanResourcesSetup extends "Human Resources Setup"
+pageextension 55106 EXCCRIHumanResourcesSetup extends "Human Resources Setup"
 {
     layout
     {

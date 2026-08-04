@@ -1,4 +1,4 @@
-pageextension 50024 EXCCRISalesOrderSubform extends "Sales Order Subform"
+pageextension 55249 EXCCRISalesOrderSubform extends "Sales Order Subform"
 {
     layout
     {

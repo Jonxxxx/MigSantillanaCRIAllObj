@@ -1,4 +1,4 @@
-tableextension 50006 EXCCRIGLAccount extends "G/L Account"
+tableextension 55231 EXCCRIGLAccount extends "G/L Account"
 {
     fields
     {

@@ -1,4 +1,4 @@
-tableextension 50007 EXCCRIGLEntry extends "G/L Entry"
+tableextension 55232 EXCCRIGLEntry extends "G/L Entry"
 {
     fields
     {

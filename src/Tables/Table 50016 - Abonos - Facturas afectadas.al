@@ -1,39 +1,39 @@
-table 50016 "Abonos - Facturas afectadas"
+table 55241 "Abonos - Facturas afectadas"
 {
 
     fields
     {
-        field(1;"No. Abono";Code[20])
+        field(1; "No. Abono"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Abono';
         }
-        field(2;"Fecha Abono";Date)
+        field(2; "Fecha Abono"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Abono';
         }
-        field(3;"No factura";Code[20])
+        field(3; "No factura"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No factura';
         }
-        field(4;"Fecha Factura";Date)
+        field(4; "Fecha Factura"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Factura';
         }
-        field(5;"No. Doc. Ext Abono";Code[20])
+        field(5; "No. Doc. Ext Abono"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Doc. Ext Abono';
         }
-        field(6;"Importe Abono";Decimal)
+        field(6; "Importe Abono"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Abono';
         }
-        field(7;"Importe Factura";Decimal)
+        field(7; "Importe Factura"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Factura';
@@ -42,7 +42,7 @@ table 50016 "Abonos - Facturas afectadas"
 
     keys
     {
-        key(Key1;"No. Abono","No factura")
+        key(Key1; "No. Abono", "No factura")
         {
         }
     }

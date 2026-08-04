@@ -1,4 +1,4 @@
-tableextension 50073 EXCCRISalesHeaderArchive extends "Sales Header Archive"
+tableextension 55073 EXCCRISalesHeaderArchive extends "Sales Header Archive"
 {
     fields
     {

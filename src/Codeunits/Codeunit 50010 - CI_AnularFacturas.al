@@ -1,4 +1,4 @@
-codeunit 50010 CI_AnularFacturas
+codeunit 55235 CI_AnularFacturas
 {
 
     trigger OnRun()
@@ -13,8 +13,8 @@ codeunit 50010 CI_AnularFacturas
         SalesHeader: Record 36;
         SalesHeader2: Record 36;
         SalesInvoiceHeader: Record 112;
-        NotasCRaCorregirTEMPORAL: Record 50015;
-        NotasCRaCorregirTEMPORAL2: Record 50015;
+        NotasCRaCorregirTEMPORAL: Record 55240;
+        NotasCRaCorregirTEMPORAL2: Record 55240;
         SalesCrMemoHeader: Record 114;
         SIH: Record 112;
         SCMH: Record 114;

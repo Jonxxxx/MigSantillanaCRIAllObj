@@ -1,4 +1,4 @@
-tableextension 50063 EXCCRIICOutboxPurchaseHeader extends "IC Outbox Purchase Header"
+tableextension 55063 EXCCRIICOutboxPurchaseHeader extends "IC Outbox Purchase Header"
 {
     fields
     {

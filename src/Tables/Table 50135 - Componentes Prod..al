@@ -1,4 +1,4 @@
-table 50135 "Componentes Prod."
+table 55134 "Componentes Prod."
 {
 
     fields

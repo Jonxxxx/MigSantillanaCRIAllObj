@@ -1,8 +1,8 @@
-tableextension 50004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
+tableextension 55229 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
 {
     fields
     {
-        field(50001; "No vendedor SIC"; Text[30])
+        field(55226; "No vendedor SIC"; Text[30])
         {
             DataClassification = CustomerContent;
         }

@@ -1,4 +1,4 @@
-pageextension 50145 EXCCRIWarehouseShptList extends "Warehouse Shipment List"
+pageextension 55144 EXCCRIWarehouseShptList extends "Warehouse Shipment List"
 {
     layout
     {

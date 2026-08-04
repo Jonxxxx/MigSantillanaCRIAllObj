@@ -1,4 +1,4 @@
-pageextension 50069 EXCCRIPurchInvoiceStatistics extends "Purchase Invoice Statistics"
+pageextension 55069 EXCCRIPurchInvoiceStatistics extends "Purchase Invoice Statistics"
 {
     layout
     {

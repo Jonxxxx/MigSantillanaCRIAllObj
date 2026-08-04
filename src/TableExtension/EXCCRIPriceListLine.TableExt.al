@@ -1,8 +1,8 @@
-tableextension 50105 EXCCRIPriceListLine extends "Price List Line"
+tableextension 55105 EXCCRIPriceListLine extends "Price List Line"
 {
     fields
     {
-        field(50000; "Source counter"; Integer)
+        field(55225; "Source counter"; Integer)
         {
             DataClassification = CustomerContent;
 
@@ -25,7 +25,7 @@ tableextension 50105 EXCCRIPriceListLine extends "Price List Line"
                 EXCCRIItem.Modify();
             end;
         }
-        field(50001; "Item description"; Text[100])
+        field(55226; "Item description"; Text[100])
         {
             Caption = 'Item description', Comment = 'ESP=Descripcion producto';
             FieldClass = FlowField;

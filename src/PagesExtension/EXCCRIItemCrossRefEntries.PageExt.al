@@ -1,6 +1,6 @@
 // 
 /*
-pageextension 50111 EXCCRIItemCrossRefEntries extends "Item Cross Reference Entries"
+pageextension 55198 EXCCRIItemCrossRefEntries extends "Item Cross Reference Entries"
 {
     layout
     {

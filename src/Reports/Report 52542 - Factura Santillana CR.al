@@ -1,4 +1,4 @@
-report 52542 "Factura Santillana CR"
+report 55213 "Factura Santillana CR"
 {
     // #4186   30/09/2014      PLB           Se ha creado la opcion de poder imprimir las lineas por el ranking de ubicacion
     // 

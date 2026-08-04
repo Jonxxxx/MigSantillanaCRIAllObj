@@ -1,36 +1,36 @@
-tableextension 50097 EXCCRIValueEntry extends "Value Entry"
+tableextension 55097 EXCCRIValueEntry extends "Value Entry"
 {
     fields
     {
-        field(50008; "Precio Unitario Consignacion"; Decimal)
+        field(55233; "Precio Unitario Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50009; "Descuento % Consignacion"; Decimal)
+        field(55234; "Descuento % Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50010; "Importe Consignacion bruto"; Decimal)
+        field(55235; "Importe Consignacion bruto"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50011; "Importe Consignacion Neto"; Decimal)
+        field(55236; "Importe Consignacion Neto"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50013; "Cant. Consignacion Pendiente"; Decimal)
+        field(55238; "Cant. Consignacion Pendiente"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(50014; "Pedido Consignacion"; Boolean)
+        field(55239; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50015; "Devolucion Consignacion"; Boolean)
+        field(55240; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50016; "Cod. Oferta"; Code[20])
+        field(55241; "Cod. Oferta"; Code[20])
         {
             DataClassification = CustomerContent;
         }

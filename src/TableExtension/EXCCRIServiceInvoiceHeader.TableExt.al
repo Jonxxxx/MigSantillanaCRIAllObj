@@ -1,4 +1,4 @@
-tableextension 50101 EXCCRIServiceInvoiceHeader extends "Service Invoice Header"
+tableextension 55101 EXCCRIServiceInvoiceHeader extends "Service Invoice Header"
 {
     fields
     {

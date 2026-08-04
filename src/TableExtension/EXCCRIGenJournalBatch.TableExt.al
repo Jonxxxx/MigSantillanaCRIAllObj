@@ -1,8 +1,8 @@
-tableextension 50038 EXCCRIGenJournalBatch extends "Gen. Journal Batch"
+tableextension 55038 EXCCRIGenJournalBatch extends "Gen. Journal Batch"
 {
     fields
     {
-        field(50000; "Seccion POS"; Boolean)
+        field(55225; "Seccion POS"; Boolean)
         {
             DataClassification = CustomerContent;
         }

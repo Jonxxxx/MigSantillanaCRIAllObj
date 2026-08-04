@@ -1,4 +1,4 @@
-tableextension 50070 EXCCRIPostedAssemblyLine extends "Posted Assembly Line"
+tableextension 55070 EXCCRIPostedAssemblyLine extends "Posted Assembly Line"
 {
     fields
     {

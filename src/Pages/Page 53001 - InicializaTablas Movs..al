@@ -1,4 +1,4 @@
-page 53001 "InicializaTablas Movs."
+page 55222 "InicializaTablas Movs."
 {
 
     layout

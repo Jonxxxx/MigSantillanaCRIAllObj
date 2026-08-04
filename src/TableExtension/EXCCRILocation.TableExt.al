@@ -1,18 +1,18 @@
-tableextension 50005 EXCCRILocation extends Location
+tableextension 55230 EXCCRILocation extends Location
 {
     fields
     {
-        field(50000; "Cod. Cliente"; Code[20])
+        field(55225; "Cod. Cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Customer;
         }
-        field(50001; "Cod. Sucursal"; Code[10])
+        field(55226; "Cod. Sucursal"; Code[10])
         {
             Caption = 'Establishment Code';
             DataClassification = CustomerContent;
         }
-        field(50003; "ID Interface SIC"; Integer)
+        field(55228; "ID Interface SIC"; Integer)
         {
             DataClassification = CustomerContent;
         }

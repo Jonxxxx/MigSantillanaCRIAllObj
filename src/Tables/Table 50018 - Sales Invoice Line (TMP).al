@@ -1,4 +1,4 @@
-table 50018 "Sales Invoice Line (TMP)"
+table 55243 "Sales Invoice Line (TMP)"
 {
     // 001    FES
 
@@ -579,58 +579,58 @@ table 50018 "Sales Invoice Line (TMP)"
             AutoFormatType = 1;
             Editable = true;
         }
-        field(50000; "Cod. Procedencia"; Code[20])
+        field(55225; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Procedencia';
             Description = 'A adido para la reclasificaci n de productos.';
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edicion"; Code[20])
+        field(55226; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Edicion';
             Description = 'A adido para la reclasificaci n de productos.';
         }
-        field(50002; Areas; Code[20])
+        field(55227; Areas; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Areas';
             Description = 'A adido para la reclasificaci n de productos.';
         }
-        field(50003; "No. Paginas"; Decimal)
+        field(55228; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Paginas';
             Description = 'A adido para la reclasificaci n de productos.';
         }
-        field(50004; ISBN; Text[30])
+        field(55229; ISBN; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'ISBN';
             Description = 'A adido para la reclasificaci n de productos.';
         }
-        field(50005; "Componentes Prod."; Code[20])
+        field(55230; "Componentes Prod."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Componentes Prod.';
             Description = 'A adido para la reclasificaci n de productos.';
             TableRelation = "Componentes Prod.";
         }
-        field(50006; "Nivel Educativo"; Code[20])
+        field(55231; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Nivel Educativo';
             Description = 'A adido para la reclasificaci n de productos.';
         }
-        field(50007; Cursos; Code[20])
+        field(55232; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cursos';
             Description = 'A adido para la reclasificaci n de productos.';
             TableRelation = Cursos;
         }
-        field(50008; "Tipo pedido"; Option)
+        field(55233; "Tipo pedido"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo pedido';

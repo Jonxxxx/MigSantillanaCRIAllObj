@@ -1,4 +1,4 @@
-pageextension 50036 EXCCRIVendorPostingGroups extends "Vendor Posting Groups"
+pageextension 55036 EXCCRIVendorPostingGroups extends "Vendor Posting Groups"
 {
     layout
     {

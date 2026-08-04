@@ -56,7 +56,7 @@ report 56120 "Venta y Saldo x Vendedor"
                 Window.OPEN(Text007);
             end;
         }
-        dataitem("TMP: Ventas x Vend. - Zona"; 50005)
+        dataitem("TMP: Ventas x Vend. - Zona"; 55230)
         {
             DataItemTableView = SORTING("Cod. Vendedor", "Cod. Zona", "Entry No.");
 

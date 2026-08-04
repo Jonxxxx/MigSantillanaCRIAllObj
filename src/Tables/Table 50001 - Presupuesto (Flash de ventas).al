@@ -1,4 +1,4 @@
-table 50001 "Presupuesto (Flash de ventas)"
+table 55226 "Presupuesto (Flash de ventas)"
 {
 
     fields

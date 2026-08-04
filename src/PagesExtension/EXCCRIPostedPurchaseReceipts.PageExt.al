@@ -1,4 +1,4 @@
-pageextension 50050 EXCCRIPostedPurchaseReceipts extends "Posted Purchase Receipts"
+pageextension 55050 EXCCRIPostedPurchaseReceipts extends "Posted Purchase Receipts"
 {
     layout
     {

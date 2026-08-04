@@ -1,8 +1,8 @@
-page 50112 "Lista Medios de Pagos SIC"
+page 55111 "Lista Medios de Pagos SIC"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 50113;
+    SourceTable = 55112;
 
     layout
     {

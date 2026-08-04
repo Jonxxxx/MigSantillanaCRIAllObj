@@ -1,4 +1,4 @@
-pageextension 50038 EXCCRIUserSetup extends "User Setup"
+pageextension 55038 EXCCRIUserSetup extends "User Setup"
 {
     layout
     {

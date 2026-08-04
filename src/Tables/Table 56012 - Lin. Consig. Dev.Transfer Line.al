@@ -395,42 +395,42 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
                                             "Item Filter" = FIELD("Item No."),
                                             "Variant Filter" = FIELD("Variant Code"));
         }
-        field(50000; "Precio Venta Consignacion"; Decimal)
+        field(55225; "Precio Venta Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio Venta Consignacion';
         }
-        field(50001; "Descuento % Consignacion"; Decimal)
+        field(55226; "Descuento % Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Descuento % Consignacion';
         }
-        field(50002; "Importe Consignacion"; Decimal)
+        field(55227; "Importe Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Consignacion';
         }
-        field(50003; "Importe Consignacion Original"; Decimal)
+        field(55228; "Importe Consignacion Original"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Consignacion Original';
         }
-        field(50010; "No. Pedido Consignacion"; Code[20])
+        field(55235; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Pedido Consignacion';
         }
-        field(50011; "No. Linea Pedido Consignacion"; Integer)
+        field(55236; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Linea Pedido Consignacion';
         }
-        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Mov. Prod. Cosg. a Liq.';
         }
-        field(50014; "Cantidad Devuelta"; Decimal)
+        field(55239; "Cantidad Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Devuelta';

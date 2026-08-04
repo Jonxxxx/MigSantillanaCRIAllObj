@@ -1,9 +1,9 @@
-page 50026 "Catalago CAByS"
+page 55026 "Catalago CAByS"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Catálago CAByS';
     PageType = List;
-    SourceTable = 50026;
+    SourceTable = 55026;
     UsageCategory = Administration;
 
     layout

@@ -1,4 +1,4 @@
-tableextension 50008 EXCCRICustomer extends Customer
+tableextension 55233 EXCCRICustomer extends Customer
 {
     fields
     {
@@ -51,17 +51,17 @@ tableextension 50008 EXCCRICustomer extends Customer
                     "Ruta Distribucion" := EXCCRIDistributionRoute.Code;
             end;
         }
-        field(50002; "Balance en Consignacion"; Decimal)
+        field(55227; "Balance en Consignacion"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Importe Cons. Neto Inicial" where("Location Code" = field("Cod. Almacen Consignacion"), "Posting Date" = field("Date Filter")));
         }
-        field(50003; "Inventario en Consignacion"; Decimal)
+        field(55228; "Inventario en Consignacion"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry".Quantity where("Location Code" = field("Cod. Almacen Consignacion"), "Posting Date" = field("Date Filter")));
         }
-        field(50004; "Cod. Almacen Consignacion"; Code[20])
+        field(55229; "Cod. Almacen Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Location;
@@ -71,62 +71,62 @@ tableextension 50008 EXCCRICustomer extends Customer
                 TestField("Cod. Almacen Consignacion", "No.");
             end;
         }
-        field(50005; "Prioridad entrega consignacion"; Option)
+        field(55230; "Prioridad entrega consignacion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Baja,Media,Alta;
             OptionCaption = 'Low,Medium,High';
         }
-        field(50006; "Precios en Conduce de envio"; Boolean)
+        field(55231; "Precios en Conduce de envio"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(50007; "Balance en Consignacion Act."; Decimal)
+        field(55232; "Balance en Consignacion Act."; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Importe Cons. Neto Act." where("Location Code" = field("Cod. Almacen Consignacion"), Open = filter(true), "Posting Date" = field("Date Filter")));
         }
-        field(50008; "Inventario en Consignacion Act"; Decimal)
+        field(55233; "Inventario en Consignacion Act"; Decimal)
         {
             Caption = 'Consignment Inventory Act';
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Remaining Quantity" where("Location Code" = field("Cod. Almacen Consignacion"), Open = filter(true)));
         }
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Factura,Consignacion," ";
         }
-        field(50011; "Admite Pendientes en Pedidos"; Boolean)
+        field(55236; "Admite Pendientes en Pedidos"; Boolean)
         {
             Caption = 'Permit Remaining Qty. in Sales Orders';
             DataClassification = CustomerContent;
         }
-        field(50014; "PO Box address"; Text[50])
+        field(55239; "PO Box address"; Text[50])
         {
             Caption = 'PO Box address';
             DataClassification = CustomerContent;
         }
-        field(50100; "No_ Cliente SIC"; Code[20])
+        field(55100; "No_ Cliente SIC"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(52000; GIRO; Text[50])
+        field(55181; GIRO; Text[50])
         {
             Caption = 'GIRO';
             DataClassification = CustomerContent;
         }
-        field(52001; NRC; Code[10])
+        field(55182; NRC; Code[10])
         {
             Caption = 'NRC';
             DataClassification = CustomerContent;
         }
-        field(53000; "Permite venta a credito (OBS)"; Boolean)
+        field(55221; "Permite venta a credito (OBS)"; Boolean)
         {
             Caption = 'Credit Sales Allowed';
             DataClassification = CustomerContent;
         }
-        field(53001; "Enviado no fact. en Consig."; Decimal)
+        field(55222; "Enviado no fact. en Consig."; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Transfer Line"."Qty. in Transit" where("Transfer-to Code" = field("No.")));

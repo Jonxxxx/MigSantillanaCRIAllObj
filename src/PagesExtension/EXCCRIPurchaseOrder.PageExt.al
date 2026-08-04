@@ -1,4 +1,4 @@
-pageextension 50026 EXCCRIPurchaseOrder extends "Purchase Order"
+pageextension 55026 EXCCRIPurchaseOrder extends "Purchase Order"
 {
     layout
     {

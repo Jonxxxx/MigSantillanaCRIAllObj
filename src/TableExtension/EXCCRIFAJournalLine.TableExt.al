@@ -1,4 +1,4 @@
-tableextension 50082 EXCCRIFAJournalLine extends "FA Journal Line"
+tableextension 55082 EXCCRIFAJournalLine extends "FA Journal Line"
 {
     fields
     {

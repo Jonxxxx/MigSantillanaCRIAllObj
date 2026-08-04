@@ -1,4 +1,4 @@
-table 50008 "Colegio - Adopciones Detalle2"
+table 55233 "Colegio - Adopciones Detalle2"
 {
     DrillDownPageID = 67052;
     LookupPageID = 67052;

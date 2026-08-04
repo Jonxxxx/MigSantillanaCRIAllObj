@@ -1,4 +1,4 @@
-codeunit 50113 "Sales-Post + Print SIC_BC"
+codeunit 55112 "Sales-Post + Print SIC_BC"
 {
     // YFC     : Yefrecis Francisco Cruz
     // ------------------------------------------------------------------------
@@ -198,10 +198,10 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         //             END;
         //        END;
         //        FacturaventaKettleSanchez.RUN;
-        //    // REPORT.RUNMODAL(50010,FALSE,FALSE,RecVarToPrint);
+        //    // REPORT.RUNMODAL(55235,FALSE,FALSE,RecVarToPrint);
         //      //CLEAR(FacturaventaKettleSanchez);
         //      END;
-        //    //REPORT.RUNMODAL(50032,FALSE,FALSE,RecVarToPrint);
+        //    //REPORT.RUNMODAL(55032,FALSE,FALSE,RecVarToPrint);
         //    FacturaventaKettleSVS20.RecibePedido(SalesInvHeader."No.");
         //    FacturaventaKettleSVS20.RUN;
         //  END;
@@ -253,7 +253,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
     procedure FE_CR(SalesHeader: Record 36)
     var
         "**012**": Integer;
-        cuFE: Codeunit 52504;
+        cuFE: Codeunit 55202;
         txtResp: array[7] of Text[1024];
         rSIH: Record 112;
         NoFactReg: Code[20];
@@ -268,7 +268,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
            (SalesHeader."Document Type" = SalesHeader."Document Type"::Invoice) THEN BEGIN
             IF rSIH.GET(SalesHeader."Last Posting No.") THEN;
 
-            //DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
+            //DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored.
             //Original code preserved below.
             //APR - 2026 08 03
             IF rSIH."Tipo Doc Electronico" = rSIH."Tipo Doc Electronico"::Tiquete THEN
@@ -279,7 +279,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
         IF ((SalesHeader."Document Type" = SalesHeader."Document Type"::"Credit Memo") OR
           (SalesHeader."Document Type" = SalesHeader."Document Type"::"Return Order")) AND
             (NOT SalesHeader.Correction) THEN BEGIN
-            // DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 52504, so posting-side behavior cannot be restored.
+            // DONE: Manual review - The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored.
             // Original code preserved below.
             //APR - 2026 08 03
             IF rSCMH.GET(SalesHeader."Last Posting No.") THEN
@@ -293,7 +293,7 @@ codeunit 50113 "Sales-Post + Print SIC_BC"
     procedure RegistroCobrosDsPos(SalesHeader: Record 36)
     var
         ConfiEmpresa: Record 56001;
-        RegisCobrDsPos: Codeunit 50116;
+        RegisCobrDsPos: Codeunit 55115;
         rSIH: Record 112;
         rSCMH: Record 114;
     begin

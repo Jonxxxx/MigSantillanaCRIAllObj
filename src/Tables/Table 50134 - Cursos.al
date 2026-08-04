@@ -1,7 +1,7 @@
-table 50134 Cursos
+table 55133 Cursos
 {
-    DrillDownPageID = 50030;
-    LookupPageID = 50030;
+    DrillDownPageID = 55030;
+    LookupPageID = 55030;
 
     fields
     {

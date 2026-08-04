@@ -1,4 +1,4 @@
-pageextension 50067 EXCCRIPhysInventoryJournal extends "Phys. Inventory Journal"
+pageextension 55067 EXCCRIPhysInventoryJournal extends "Phys. Inventory Journal"
 {
     actions
     {

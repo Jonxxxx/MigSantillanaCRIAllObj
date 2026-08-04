@@ -1,4 +1,4 @@
-codeunit 52504 "Facturacion  Electronica NAV"
+codeunit 55202 "Facturacion  Electronica NAV"
 {
     // MIGRACION BC27 SAAS: Temp Blob, XML nativo, PDF en stream y adaptador de Procesa.
     // #217374, RRT, 09.09.2019: Tiquete electronico firmado en central. Nuevas funciones.
@@ -31,8 +31,8 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,
-                  TableData 52501 = rimd,
-                  TableData 52502 = rimd;
+                  TableData 55200 = rimd,
+                  TableData 55201 = rimd;
     SingleInstance = false;
 
     trigger OnRun()
@@ -106,19 +106,19 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Error01: Label 'El producto %1 debe tener valor en el campo CABYS';
         HttpWebRequestMgt: Codeunit 1297;
         ConfigEmpresa: Record 56001;
-        CategoriaPedidoVenta: Record 52503;
+        CategoriaPedidoVenta: Record 55212;
         MontoTotalImpuesto: Decimal;
         ImpAsumFabrica: Boolean;
         TotalNoSujetoIVA: Decimal;
         ImpuestoNeto: Decimal;
-        CatalogoCaByS: Record 50026;
+        CatalogoCaByS: Record 55026;
         TotalServGravado: Decimal;
         TotalMercGravado: Decimal;
         TotalServExento: Decimal;
         TotalMercExento: Decimal;
-        TempImpuestoBkp: Record 50027;
+        TempImpuestoBkp: Record 55027;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
         Error02: Label 'La cuenta %1 debe tener valor en el campo CABYS';
         FunSant: Codeunit 56000;
@@ -138,7 +138,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         xmlFacturaFirmado: XmlDocument;
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
-        ReportFE: Report 52543;
+        ReportFE: Report 55214;
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
@@ -256,7 +256,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -698,7 +698,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         xmlFacturaFirmado: XmlDocument;
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
-        ReportFE: Report 52543;
+        ReportFE: Report 55214;
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
@@ -1093,7 +1093,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         xmlNotaCreditoFirmado: XmlDocument;
         xmlNotaCreditoRespuesta: XmlDocument;
         CMH: Record 114;
-        ReportFE: Report 52544;
+        ReportFE: Report 55215;
         ReportFE_Pos: Report 34002531;
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
@@ -1223,9 +1223,9 @@ codeunit 52504 "Facturacion  Electronica NAV"
         SIH: Record 112;
         NumeroLinea: Integer;
         lClave: Text;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ContarLineas: Integer;
-        View_SalesCRMLine: Query 50001;
+        View_SalesCRMLine: Query 55226;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         ImporteDescuento: Decimal;
@@ -1932,7 +1932,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetClave(Fecha: Date; var Consecutivo: Text[20]; Tipo: Code[2]) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Seguridad: Integer;
@@ -1994,7 +1994,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetConsecutivo(Tipo: Code[2]) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
@@ -2030,7 +2030,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetValueByName(_Tipo: Integer; _Name: Text; _DocTipo: Integer) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
@@ -2043,7 +2043,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetValueByNameWithType(_Tipo: Integer; _Name: Text; _DocTipo: Integer) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
@@ -2057,7 +2057,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetValueByTypeName(_Tipo: Integer; _Name: Text; _DocTipo: Integer) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
@@ -2070,7 +2070,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure GetValueByRelation(_Tipo: Integer; _Name: Text; _DocTipo: Integer) Return: Text
     var
-        Config: Record 52501;
+        Config: Record 55200;
         Num: Code[20];
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
     begin
@@ -2099,7 +2099,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure LogFacturaElectronica(Tipo: Integer; NoDocumento: Code[20]; Fecha: DateTime; Clave: Text[60]; Consecutivo: Text[20]; Estado: Text[30]; Mensaje: Text[200]; Directorio: Text[150]; Correo: Text[100]; Cliente: Text[100]; Archivo: Text[100]; EstadoInterfaz: Integer)
     var
-        LogFE: Record 52502;
+        LogFE: Record 55201;
         XmlDoc: XmlDocument;
         XmlText: Text;
         XmlInStream: InStream;
@@ -2232,7 +2232,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         xmlNotaCreditoFirmado: XmlDocument;
         xmlNotaCreditoRespuesta: XmlDocument;
         CMH: Record 112;
-        ReportFE: Report 52544;
+        ReportFE: Report 55215;
         DirectorioTemp: Text[100];
         ConfSant: Record 56001;
     begin
@@ -2672,7 +2672,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Email.Send(EmailMessage, Enum::"Email Scenario"::Default);
     end;
 
-    procedure GetDocumentName(var Log: Record 52502) DocumentName: Text
+    procedure GetDocumentName(var Log: Record 55201) DocumentName: Text
     begin
         CASE Log."Tipo Documento" OF
             Log."Tipo Documento"::FE:
@@ -2690,7 +2690,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         END
     end;
 
-    procedure ComprobarDocumentoElectronicoLOG(Logs: Record 52502)
+    procedure ComprobarDocumentoElectronicoLOG(Logs: Record 55201)
     var
         iProcesa: Codeunit "FE Procesa SaaS";
         xmlFactura: XmlDocument;
@@ -2704,12 +2704,12 @@ codeunit 52504 "Facturacion  Electronica NAV"
         XmlFirmado: InStream;
         XmlRespuesta: InStream;
         ArchivoPDF: Text;
-        ReportFE: Report 52543;
-        ReportNC: Report 52544;
+        ReportFE: Report 55214;
+        ReportNC: Report 55215;
         ReportFEC: Report 10121;
-        Log: Record 52502;
+        Log: Record 55201;
         PIH: Record 122;
-        DPIExt: Record 50028;
+        DPIExt: Record 55028;
     begin
         ConfSant.GET;
         //Comprobar el comprobante electronico
@@ -2957,7 +2957,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
 
     procedure ComprobarDocumentosElectronicoLOG()
     var
-        Logs: Record 52502;
+        Logs: Record 55201;
     begin
 
         Logs.RESET;
@@ -3125,7 +3125,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         lMontoImpuesto: Decimal;
         lTotalExento: Decimal;
         lTotalGravado: Decimal;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ContarLineas: Integer;
         TotalMuestra: Integer;
         ImporteDescuento: Decimal;
@@ -3541,7 +3541,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         lImporteDescuento: Decimal;
         lPrecioUnidad: Decimal;
         lAmount: Decimal;
-        View_SalesCRMLine: Query 50001;
+        View_SalesCRMLine: Query 55226;
         ContarLineas: Integer;
     begin
 
@@ -3975,7 +3975,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         lMontoImpuesto: Decimal;
         lTotalExento: Decimal;
         lTotalGravado: Decimal;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
     begin
         //+#217374
         /*
@@ -4366,7 +4366,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -4965,16 +4965,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 50025;
+        RecTipoDescuentosDGT: Record 55250;
         ImpLinEmisorFabrica: Decimal;
         lrSIL: Record 113;
-        TempImpuestoBkp: Record 50027;
+        TempImpuestoBkp: Record 55027;
         vCodigo: Code[2];
         vCodigoTarifaIVA: Code[2];
         Ceros: Code[10];
@@ -4986,7 +4986,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         BaseImponible: Decimal;
         MontoTotalLinea: Decimal;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
         Error03: Label 'The CABYS Code for Exempt Services is not configured. You must configure "Exempt Service CABYS Code" in order to issue the receipt.';
         Error04: Label 'The CABYS Code for Taxable Services is not configured. You must configure "Taxable Service CABYS Code" in order to issue the receipt.';
@@ -5653,13 +5653,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesCRMLine: Query 50001;
+        View_SalesCRMLine: Query 55226;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 50025;
+        RecTipoDescuentosDGT: Record 55250;
         ImpLinEmisorFabrica: Decimal;
         lClave: Text[60];
         SIH: Record 112;
@@ -5670,7 +5670,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         BaseImponible: Decimal;
         MontoTotalLinea: Decimal;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
     begin
         //*******************************CABECERA XML FACTURA************************************
@@ -6274,13 +6274,13 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 50025;
+        RecTipoDescuentosDGT: Record 55250;
         ImpLinEmisorFabrica: Decimal;
         Numero: Code[30];
         lrMontoTotal: Decimal;
@@ -6294,7 +6294,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         BaseImponible: Decimal;
         MontoTotalLinea: Decimal;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
         MontoImpuestoVat: Decimal;
     begin
@@ -6654,7 +6654,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         xmlFacturaFirmado: XmlDocument;
         xmlFacturaRespuesta: XmlDocument;
         PIH: Record 122;
-        ReportFE: Report 52543;
+        ReportFE: Report 55214;
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
@@ -6771,7 +6771,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -6779,7 +6779,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         ImpuestoAsumidoEmisorFabrica: Decimal;
         ImpLinEmisorFabrica: Decimal;
         lrSIL: Record 123;
-        TempImpuestoBkp: Record 50027;
+        TempImpuestoBkp: Record 55027;
         vCodigo: Code[2];
         vCodigoTarifaIVA: Code[2];
         TextSinGuiones: Code[100];
@@ -6796,7 +6796,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         //Error01: ;
         TipoCaByS: Option Servicio,Producto;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
     begin
 
@@ -7290,16 +7290,16 @@ codeunit 52504 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 50000;
+        View_SalesInvoiceLine: Query 55225;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 50025;
+        RecTipoDescuentosDGT: Record 55250;
         ImpLinEmisorFabrica: Decimal;
         lrSIL: Record 113;
-        TempImpuestoBkp: Record 50027;
+        TempImpuestoBkp: Record 55027;
         vCodigo: Code[2];
         vCodigoTarifaIVA: Code[2];
         Ceros: Code[10];
@@ -7311,7 +7311,7 @@ codeunit 52504 "Facturacion  Electronica NAV"
         BaseImponible: Decimal;
         MontoTotalLinea: Decimal;
         PaymentTerms: Record 3;
-        CatParamFEDGT: Record 50030;
+        CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
         IsExento: Boolean;
         CabysToUse: Code[20];

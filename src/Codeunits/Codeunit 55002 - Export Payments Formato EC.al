@@ -1,4 +1,4 @@
-codeunit 55002 "Export Payments Formato EC"
+codeunit 55227 "Export Payments Formato EC"
 {
 
     trigger OnRun()

@@ -83,12 +83,12 @@ table 56050 "Crear Cupon por Lote."
             DataClassification = CustomerContent;
             Caption = 'Cod. Grado';
         }
-        field(50005; "Nombre Maestro"; Text[100])
+        field(55230; "Nombre Maestro"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Maestro';
         }
-        field(50006; "Dto. Maestro"; Decimal)
+        field(55231; "Dto. Maestro"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Dto. Maestro';
@@ -108,7 +108,7 @@ table 56050 "Crear Cupon por Lote."
 
     var
         rProducto: Record 27;
-        rCabCupon: Record 51009;
+        rCabCupon: Record 55170;
         Error001: Label 'Printed Coupon cannot be modified';
         ColAdop: Record 67036;
 }

@@ -1,4 +1,4 @@
-pageextension 50027 EXCCRIPurchaseInvoice extends "Purchase Invoice"
+pageextension 55027 EXCCRIPurchaseInvoice extends "Purchase Invoice"
 {
     layout
     {

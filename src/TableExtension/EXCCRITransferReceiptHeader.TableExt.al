@@ -1,63 +1,63 @@
-tableextension 50090 EXCCRITransferReceiptHeader extends "Transfer Receipt Header"
+tableextension 55090 EXCCRITransferReceiptHeader extends "Transfer Receipt Header"
 {
     fields
     {
-        field(50000; "Devolucion"; Boolean)
+        field(55225; "Devolucion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50001; "Importe Consignacion"; Decimal)
+        field(55226; "Importe Consignacion"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Transfer Receipt Line"."Importe Consignacion" where("Document No." = field("No.")));
         }
 
-        field(50002; "Saldo Cliente"; Decimal)
+        field(55227; "Saldo Cliente"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50003; "Limite de credito cliente"; Decimal)
+        field(55228; "Limite de credito cliente"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50004; "Prioridad entrega consignacion"; Option)
+        field(55229; "Prioridad entrega consignacion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Baja","Media","Alta";
         }
 
-        field(50005; "Importe Consignacion Orginal"; Decimal)
+        field(55230; "Importe Consignacion Orginal"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Transfer Line"."Importe Consignacion Original" where("Document No." = field("No."), "Derived From Line No." = const(0)));
         }
 
-        field(50006; "Cod. Vendedor"; Code[20])
+        field(55231; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
         }
 
-        field(50007; "Estado distribucion"; Option)
+        field(55232; "Estado distribucion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho","Entregado";
         }
 
-        field(50008; "No. Copias impresas"; Integer)
+        field(55233; "No. Copias impresas"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50009; "No. Copias imp. Recep."; Integer)
+        field(55234; "No. Copias imp. Recep."; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(52500; "Observaciones"; Text[250])
+        field(55199; "Observaciones"; Text[250])
         {
             DataClassification = CustomerContent;
         }

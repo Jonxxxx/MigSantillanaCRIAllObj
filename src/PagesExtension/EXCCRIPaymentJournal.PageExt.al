@@ -1,4 +1,4 @@
-pageextension 50060 EXCCRIPaymentJournal extends "Payment Journal"
+pageextension 55060 EXCCRIPaymentJournal extends "Payment Journal"
 {
     layout
     {

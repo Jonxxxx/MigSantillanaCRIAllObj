@@ -1,11 +1,11 @@
-page 51003 "Ficha Cupon"
+page 55164 "Ficha Cupon"
 {
     Caption = 'Coupon Card';
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = 51009;
+    SourceTable = 55170;
 
     layout
     {
@@ -121,7 +121,7 @@ page 51003 "Ficha Cupon"
                     ToolTip = 'Importe Dto. Limite';
                 }
             }
-            part(PagePartLinCupon; 51004)
+            part(PagePartLinCupon; 55165)
             {
                 SubPageLink = "No. Cupon" = FIELD("No. Cupon");
                 SubPageView = SORTING("No. Cupon", "Cod. Producto")
@@ -147,7 +147,7 @@ page 51003 "Ficha Cupon"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 51012;
+                RunObject = Page 55173;
                 RunPageLink = "No. Cupon" = FIELD("No. Cupon");
                 RunPageView = SORTING("No. Lote cupon", "Grupo Negocio", "No. Cupon")
                               ORDER(Ascending);
@@ -156,7 +156,7 @@ page 51003 "Ficha Cupon"
     }
 
     var
-        rCabCupon: Record 51009;
+        rCabCupon: Record 55170;
         ConfSant: Record 56001;
 }
 

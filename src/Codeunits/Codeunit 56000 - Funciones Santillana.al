@@ -283,7 +283,7 @@ codeunit 56000 "Funciones Santillana"
             SalesHeader1.RESET;
             SalesHeader1.SETRANGE("Document Type",SalesHeader."Document Type");
             SalesHeader1.SETRANGE("No.",SalesHeader."No.");
-            REPORT.SAVEASHTML(50014,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html',FALSE,SalesHeader1);
+            REPORT.SAVEASHTML(55239,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html',FALSE,SalesHeader1);
             SMTP.AddAttachment(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html');
             SMTP.Send;
             ERASE(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html');
@@ -334,7 +334,7 @@ codeunit 56000 "Funciones Santillana"
             Body := '';
             SMTP.AppendBody(Body);
             TransferHeader1.GET(TransferHeader."No.");
-            REPORT.SAVEASHTML(50018,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html',FALSE,TransferHeader1);
+            REPORT.SAVEASHTML(55243,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html',FALSE,TransferHeader1);
             SMTP.AddAttachment(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html');
             SMTP.Send;
             ERASE(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html');
@@ -681,20 +681,20 @@ codeunit 56000 "Funciones Santillana"
         rSalesperson: Record 13;
         rContacto: Record 5050;
         I: Integer;
-        rCabCupon: Record 51009;
-        rLinCupon: Record 51010;
+        rCabCupon: Record 55170;
+        rLinCupon: Record 55171;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
         CounterOK: Integer;
         rConfEmpresa: Record 56001;
         cuNoSerMangm: Codeunit "No. Series";
-        rCreaCupLot: Record 51011;
-        rCabCupon1: Record 51009;
-        rAnoEscolar: Record 51013;
-        rCrearCuponPorLote: Record 51011;
+        rCreaCupLot: Record 55172;
+        rCabCupon1: Record 55170;
+        rAnoEscolar: Record 55174;
+        rCrearCuponPorLote: Record 55172;
         NoSeries: Code[20];
-        rVendPorColegio: Record 51014;
+        rVendPorColegio: Record 55175;
         Error001: Label 'You Must complete Salesperson Code';
         Error002: Label 'You must complete School Code';
         Error003: Label 'You must complete Valid From';
@@ -707,8 +707,8 @@ codeunit 56000 "Funciones Santillana"
         Error007: Label 'The Salesperson %1 is not included in School - Salespersons %2';
         txt001: Label 'Confirm that you want generate the coupons';
         Error009: Label 'Debe especificar una descripcion';
-        GrupoNegCuponReg: Record 51017;
-        GrupoNegCupon: Record 51016;
+        GrupoNegCuponReg: Record 55178;
+        GrupoNegCupon: Record 55177;
     begin
         UltimoLote := UltLoteCupon + 1;
 
@@ -801,7 +801,7 @@ codeunit 56000 "Funciones Santillana"
 
     procedure UltLoteCupon(): Integer
     var
-        rCabCupon: Record 51009;
+        rCabCupon: Record 55170;
     begin
         rCabCupon.SETCURRENTKEY("No. Lote");
         IF rCabCupon.FINDLAST THEN
@@ -813,7 +813,7 @@ codeunit 56000 "Funciones Santillana"
     procedure RegVtasTPVNas()
     begin
         SELECTLATESTVERSION;
-        // TODO: Manual review - Report 51003 is not present in the current repository, so the original POS sales registration cannot be restored.
+        // TODO: Manual review - Report 55164 is not present in the current repository, so the original POS sales registration cannot be restored.
         // Original code: REPORT.RUN(REPORT::Report51003, FALSE, FALSE);
     end;
 
@@ -849,9 +849,9 @@ codeunit 56000 "Funciones Santillana"
 
     procedure AddProdCupon(CodCuponDesde: Code[20]; CodCuponHasta: Code[20]; CodProd: Code[20])
     var
-        rCabCupon: Record 51009;
-        rLinCupon: Record 51010;
-        rCabCupon1: Record 51009;
+        rCabCupon: Record 55170;
+        rLinCupon: Record 55171;
+        rCabCupon1: Record 55170;
     begin
         Counter := 0;
         CounterTotal := 0;
@@ -1239,7 +1239,7 @@ codeunit 56000 "Funciones Santillana"
         SRS: Record 311;
         LHRR2: Record 56023;
         SIH: Record 112;
-        ActEstatusFactEcommerce: Codeunit 50011;
+        ActEstatusFactEcommerce: Codeunit 55236;
     begin
         SRS.GET;
         SRS.TESTFIELD("No. Serie Hoja de Ruta Reg.");

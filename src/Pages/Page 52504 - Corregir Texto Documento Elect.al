@@ -1,4 +1,4 @@
-page 52504 "Corregir Texto Documento Elect"
+page 55202 "Corregir Texto Documento Elect"
 {
     PageType = StandardDialog;
     Permissions = TableData 112 = rimd;

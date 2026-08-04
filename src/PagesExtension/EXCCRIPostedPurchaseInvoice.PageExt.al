@@ -1,4 +1,4 @@
-pageextension 50044 EXCCRIPostedPurchaseInvoice extends "Posted Purchase Invoice"
+pageextension 55044 EXCCRIPostedPurchaseInvoice extends "Posted Purchase Invoice"
 {
     layout
     {

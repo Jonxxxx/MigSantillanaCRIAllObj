@@ -1,4 +1,4 @@
-tableextension 50061 EXCCRIHandledICInboxTrans extends "Handled IC Inbox Trans."
+tableextension 55061 EXCCRIHandledICInboxTrans extends "Handled IC Inbox Trans."
 {
     fields
     {

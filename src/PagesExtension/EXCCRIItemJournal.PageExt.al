@@ -1,4 +1,4 @@
-pageextension 50018 EXCCRIItemJournal extends "Item Journal"
+pageextension 55243 EXCCRIItemJournal extends "Item Journal"
 {
     layout
     {

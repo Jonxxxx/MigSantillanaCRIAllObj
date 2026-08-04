@@ -1,4 +1,4 @@
-pageextension 50011 EXCCRIVendorList extends "Vendor List"
+pageextension 55236 EXCCRIVendorList extends "Vendor List"
 {
     layout
     {

@@ -1,4 +1,4 @@
-table 51003 "Sales Line Buffer"
+table 55164 "Sales Line Buffer"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -1209,90 +1209,90 @@ table 51003 "Sales Line Buffer"
             begin
             end;
         }
-        field(50000; "Cod. Procedencia"; Code[20])
+        field(55225; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Procedencia';
             TableRelation = Procedencia;
         }
-        field(50001; "Cod. Edicion"; Code[20])
+        field(55226; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Edicion';
         }
-        field(50002; Areas; Code[20])
+        field(55227; Areas; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Areas';
         }
-        field(50003; "No. Paginas"; Decimal)
+        field(55228; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Paginas';
         }
-        field(50004; ISBN; Text[30])
+        field(55229; ISBN; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'ISBN';
         }
-        field(50005; "Componentes Prod."; Code[20])
+        field(55230; "Componentes Prod."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Componentes Prod.';
             TableRelation = "Componentes Prod.";
         }
-        field(50006; "Nivel Educativo"; Code[20])
+        field(55231; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Nivel Educativo';
         }
-        field(50007; Cursos; Code[20])
+        field(55232; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cursos';
             TableRelation = Cursos;
         }
-        field(50008; "Cantidad Inv. en Consignacion"; Decimal)
+        field(55233; "Cantidad Inv. en Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Inv. en Consignacion';
         }
-        field(50009; "Cantidad Consignacion Devuelta"; Decimal)
+        field(55234; "Cantidad Consignacion Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Consignacion Devuelta';
         }
-        field(50010; "No. Pedido Consignacion"; Code[20])
+        field(55235; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Pedido Consignacion';
         }
-        field(50011; "No. Linea Pedido Consignacion"; Integer)
+        field(55236; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Linea Pedido Consignacion';
         }
-        field(50012; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Mov. Prod. Cosg. a Liq.';
         }
-        field(50013; "No. Estante"; Code[20])
+        field(55238; "No. Estante"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Estante';
         }
-        field(53000; "Anulada en TPV"; Boolean)
+        field(55221; "Anulada en TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Anulada en TPV';
         }
-        field(53001; "Precio anulacion TPV"; Decimal)
+        field(55222; "Precio anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio anulacion TPV';
         }
-        field(53002; "Cantidad anulacion TPV"; Decimal)
+        field(55223; "Cantidad anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad anulacion TPV';

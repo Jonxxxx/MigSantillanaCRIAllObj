@@ -1,4 +1,4 @@
-tableextension 50069 EXCCRIPostedAssemblyHeader extends "Posted Assembly Header"
+tableextension 55069 EXCCRIPostedAssemblyHeader extends "Posted Assembly Header"
 {
     fields
     {

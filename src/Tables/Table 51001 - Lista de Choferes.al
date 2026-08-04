@@ -1,7 +1,7 @@
-table 51001 "Lista de Choferes"
+table 55162 "Lista de Choferes"
 {
-    //TODO Ver DrillDownPageID = 51001;
-    //TODO Ver LookupPageID = 51001;
+    //TODO Ver DrillDownPageID = 55162;
+    //TODO Ver LookupPageID = 55162;
 
     fields
     {

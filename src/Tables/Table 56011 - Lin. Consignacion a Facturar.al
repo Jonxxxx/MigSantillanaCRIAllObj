@@ -176,7 +176,7 @@ table 56011 "Lin. Consignacion a Facturar"
             begin
             end;
         }
-        field(50000; "Cantidad a Facturar"; Integer)
+        field(55225; "Cantidad a Facturar"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad a Facturar';

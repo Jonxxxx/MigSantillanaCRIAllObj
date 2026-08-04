@@ -15033,6 +15033,106 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table DSPayroll Cue - Field Vacation to start - Property Caption</note>
         </trans-unit>
+        <trans-unit id="Table 1479796825 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DsPOS Event Buffer</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 1011688381 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AccionRespuesta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field AccionRespuesta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 4017374511 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ArrayEnterosJson</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field ArrayEnterosJson - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 2005118855 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ArrayTotalesJson</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field ArrayTotalesJson - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 4063074727 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DatoDecimal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field DatoDecimal - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 883711285 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Entry No.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field Entry No. - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 912766816 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IntDato1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field IntDato1 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 1550463433 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IntDato2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field IntDato2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 2069533048 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 100226498 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato2 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 3757497177 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato3 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 1375619732 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato4</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato4 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 737923115 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato5</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato5 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 2651012966 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato6</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato6 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 2013316349 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato7</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato7 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 2313194920 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato8</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato8 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 1675498303 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoDato9</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoDato9 - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 1096035835 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoPaisJson</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoPaisJson - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 590779196 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TextoRespuesta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TextoRespuesta - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 1479796825 - Field 688093227 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TipoEvento</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table DsPOS Event Buffer - Field TipoEvento - Property Caption</note>
+        </trans-unit>
         <trans-unit id="Table 1815009141 - Field 4092165491 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Codigo</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -32492,6 +32592,36 @@
           <source>Descripcion</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Table Razones Anulacion NCF - Field Descripcion - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Registro PDF Costos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Field 804481195 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nombre archivo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Field File Name - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Field 3383409438 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generado el</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Field Generated At - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Field 902661864 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Generado por</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Field Generated By - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Field 3635366949 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Contenido PDF</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Field PDF Content - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Table 2597447226 - Field 3710982960 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha registro</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Table Registro PDF Costos - Field Posting Date - Property Caption</note>
         </trans-unit>
         <trans-unit id="Table 1906451944 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
           <source>Employee Relation</source>
@@ -53433,6 +53563,166 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Export Payments Formato EC - NamedType Text1480004</note>
         </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 578242643" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El producto %1 debe tener valor en el campo CABYS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType Error01</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 2491332494" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La cuenta %1 debe tener valor en el campo CABYS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType Error02</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 1083137547" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se pudo generar el PDF en memoria. Nombre lógico: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType PdfGenerationErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1  Santillana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source> %1  Santillana  %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 2428523103" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;&lt;p&gt;&lt;strong&gt;Estimado (a)&lt;/strong&gt; &lt;strong&gt; %1 &lt;/strong&gt; &lt;br /&gt;Adjunto al correo encontrará su Factura Electrónica en formato PDF y XML. Para garantizar la seguridad y confidencialidad de sus datos, esta dirección de e-mail será utilizada únicamente para enviar la información solicitada, por lo tanto, le agradecemos no responder los correos enviados, ni utilizar esta vía de comunicación para realizar consultas personales referentes a su %2 .&lt;/p&gt;&lt;p&gt;&lt;br /&gt;Si presenta algún inconveniente por favor comunicarse al correo electrónico: galvarez@santillana.com con la señorita Grettel Alvarez de Facturación. &lt;br /&gt;Gracias &lt;br /&gt;&lt;strong&gt;Santillana S.A. &lt;/strong&gt;&lt;/p&gt;&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType TextBody</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 3602962337" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;p&gt;Estimado (a) %1 &lt;/p&gt;&lt;p&gt;Le informamos que su %2 número&lt;strong&gt; %3 &lt;/strong&gt; ha sido %4 por la administración tributaria.&lt;/p&gt;&lt;p&gt;Se adjunta el documento de respuesta enviado por la administración tributaria.&lt;/p&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType TextBody2</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - NamedType 4132569017" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encontró el XML %1 en el buffer SaaS.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - NamedType XmlBufferNotFoundErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3085306141 - NamedType 1853635877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CABYS Code for Exempt Services is not configured. You must configure "Exempt Service CABYS Code" in order to issue the receipt.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method CreaXmlFacturaV4_4 - NamedType Error03</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3085306141 - NamedType 2960120088" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CABYS Code for Taxable Services is not configured. You must configure "Taxable Service CABYS Code" in order to issue the receipt.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method CreaXmlFacturaV4_4 - NamedType Error04</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 1722909491 - NamedType 1853635877" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CABYS Code for Exempt Services is not configured. You must configure "Exempt Service CABYS Code" in order to issue the receipt.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method CreaXmlFacturaV4_4_Compartir - NamedType Error03</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 1722909491 - NamedType 2960120088" size-unit="char" translate="yes" xml:space="preserve">
+          <source>The CABYS Code for Taxable Services is not configured. You must configure "Taxable Service CABYS Code" in order to issue the receipt.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method CreaXmlFacturaV4_4_Compartir - NamedType Error04</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3483769155 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1  Santillana</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method LogFacturaElectronica - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3483769155 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source> %1  Santillana  %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method LogFacturaElectronica - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3483769155 - NamedType 2428523103" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;p&gt;&lt;strong&gt;Estimado (a)&lt;/strong&gt; &lt;strong&gt; %1 &lt;/strong&gt; &lt;br /&gt;Adjunto al correo encontrará su %2 en formato PDF y XML. Para garantizar la seguridad y confidencialidad de sus datos, esta dirección de e-mail será utilizada únicamente para enviar la información solicitada, por lo tanto, le agradecemos no responder los correos enviados, ni utilizar esta vía de comunicación para realizar consultas personales referentes a su %2 .&lt;/p&gt;&lt;p&gt;&lt;br /&gt;Si presenta algún inconveniente por favor comunicarse al correo electrónico: msanchezv@santillana.com con la señorita Melissa Sanchez de Facturación. &lt;br /&gt;Gracias &lt;br /&gt;&lt;strong&gt;Santillana S.A. &lt;/strong&gt;&lt;/p&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method LogFacturaElectronica - NamedType TextBody</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 3483769155 - NamedType 3602962337" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;p&gt;Estimado (a) %1 &lt;/p&gt;&lt;p&gt;Le informamos que su %2 número&lt;strong&gt; %3 &lt;/strong&gt; ha sido %4 por la administración tributaria.&lt;/p&gt;&lt;p&gt;Se adjunta el documento de respuesta enviado por la administración tributaria.&lt;/p&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method LogFacturaElectronica - NamedType TextBody2</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 484410851" size-unit="char" translate="yes" xml:space="preserve">
+          <source>abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-+</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType CaracteresPermitidos</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;%1: El campo correo electrónico no puede estar vacío&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El correo no puede exceder los 250 caracteres</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El correo electrónico debe contener el símbolo @</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: Solo se permite un símbolo @ en el correo electrónico</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: La parte antes del @ no puede estar vacía</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 3887925506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El correo no puede comenzar con el carácter "%2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 3250228889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El correo no puede terminar con el carácter "%2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 61745804" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: Carácter no permitido "%2" en la parte local del correo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 3719016483" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: No se permiten puntos consecutivos en el correo</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error009</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 1681152259" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: La parte después del @ no puede estar vacía</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 2318848876" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El dominio debe contener al menos un punto (.)</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error011</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 2956545493" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1: El dominio no puede comenzar con "%2"</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error012</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 3594242110" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;%1: El dominio no puede terminar con "%2"&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error013</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 3425333087" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;%1: El dominio es demasiado corto&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error014</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 197714817 - Method 2714496982 - NamedType 4063029704" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;%1: La extensión del dominio debe tener al menos 2 caracteres (ej: .com, .net)&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturacion  Electronica NAV - Method ValidaCorreoElect - NamedType Error015</note>
+        </trans-unit>
         <trans-unit id="Codeunit 546563346 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
           <source>Funcion Solo Disponible en Servidor Central</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -53462,6 +53752,191 @@
           <source>TODAS</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Facturas Registradas POS - NamedType txtTodas</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1780056662 - NamedType 1189673541" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pendiente migrar la DLL Procesa a un servicio compatible con SaaS. Se necesita el codigo fuente de la DLL, su contrato/API o la documentacion del proveedor.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit FE Procesa SaaS - NamedType ProcesaPendingErr</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 2759015806 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No existe Configuración General DSPoS.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobaciones_Iniciales - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 2759015806 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Asignar un TPV a este equipo.\Imposible Continuar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobaciones_Iniciales - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 2759015806 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Especificar País en Configuración General DSPoS</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobaciones_Iniciales - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 2759015806 - NamedType 3250228889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El día abierto para el TPV es %1\Debe cerrarlo o cambiar la fecha de trabajo del sistema</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobaciones_Iniciales - NamedType Error007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 198737402 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Cajero %1 no existe para la tienda %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarLogin - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 198737402 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La clave es incorrecta para el Cajero %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarLogin - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 198737402 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Cajero %1 no tiene configurado un Grupo de Cajero</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarLogin - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 198737402 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Grupo de Cajero %1 no existe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarLogin - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 198737402 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Defina un Cliente al Contado para el Grupo de Cajeros %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarLogin - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 3887634215 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La contraseña introducida no es correcta.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method ComprobarSupervisor - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 66483676 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe configurar una cuenta de banco para la tienda %1 con divisa local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_Bancos - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 66483676 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe configurar una cuenta de banco para la tienda %1 con divisa %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_Bancos - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 1912878354 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Definir una forma de Pago Cash para Divisa Local</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_FormPagos - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 1912878354 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Definir un Icono para la forma de pago %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_FormPagos - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 1912878354 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Definir un Icono para el tipo Tarjeta %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_FormPagos - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 1585037316 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La accion obligatoria %1 no se encuentra en el menu acciones %2 ó no esta marcada como Activa</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method Comprobar_Minimos - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 872172164" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CAMBCANT|Cambiar Cantidad</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion1</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 1509868781" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CAMBPREC|Cambiar Precio</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion2</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 2147565398" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DTOGENERAL|Descuento General Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion3</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 1978656375" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ANULARLINEA|Anular Linea</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion4</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 2616352992" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NUEVOPEDIDO|Nuevo Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion5</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3254049609" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ANULARPEDIDO|Anular Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion6</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3891746226" size-unit="char" translate="yes" xml:space="preserve">
+          <source>REGISTRAR|Registrar Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion7</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3722837203" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DTOLINEA|Descuento Linea</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion8</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 65566524" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CUPON|Insertar Cupon</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion9</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 25093692" size-unit="char" translate="yes" xml:space="preserve">
+          <source>APARCARPEDIDO|Aparcar pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion10</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3682364371" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ELIMINARCUPON|Eliminar Cupon</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion11</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 1300486926" size-unit="char" translate="yes" xml:space="preserve">
+          <source>REIMPRIMIR|Reimprimir Históricos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion12</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 662790309" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EXIVA|Exención de IVA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType accion13</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indique la Cantidad:</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indique el Precio:</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indique el % de Descuento:</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 569898275" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Indique el Nº de Cupón</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 1207594892" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Eliminar el cupón actual</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 847713852 - NamedType 1845291509" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Introduzca Nº Exención IVA</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method CrearAcciones - NamedType text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 2906602271 - Method 1047134088 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido realizar la anulación. Salga de la pantalla de anulación e intentélo en unos segundos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones Addin DSPos - Method LeerRespuesta - NamedType TextL001</note>
         </trans-unit>
         <trans-unit id="Codeunit 2359938958 - NamedType 4139067752" size-unit="char" translate="yes" xml:space="preserve">
           <source>Starting date can't be bigger than Ending date, %1 &gt; %2</source>
@@ -53542,6 +54017,761 @@
           <source>Retirement of accumulated savings withdrawal</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones cooperativa - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - NamedType 1664139952" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se pudo realizar el envio electrónico del documento %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - NamedType Text010</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1992106239 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIPO CAMBIO NO DEFINIDO</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method ActualizarDivisas - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1992106239 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se han definido formas de pago para el menú %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method ActualizarDivisas - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2677180557 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No existe el Colegio %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Actualiza_Venta_Contacto - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2677180557 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Colegio Actualizado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Actualiza_Venta_Contacto - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2025539446 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Nota Credito TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method AnulaPagoFacturaTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1144538253 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La factura %1 ya está anulada.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method AnularFactura - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1144538253 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido insertar la nota de Credito.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method AnularFactura - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1144538253 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura anulada correctamente.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method AnularFactura - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1144538253 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Anula a Fact. TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method AnularFactura - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 727181542 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha creado la devoluci´Š¢n %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Crear_Devolucion - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1453705185 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se va a proceder a desconfigurar de la tienda y todas sus POS asignadas la configuración de notas de Credito.\ Continuar?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method DeconfiguraAnulaciones - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 31697648 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El pedido aparcado nº %1 se ha recuperado correctamente.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Desaparcar_Pedido - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 31697648 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El pedido aparcado nº %1 no se ha encontrado en la tabla Sales Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Desaparcar_Pedido - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1224373356 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NCF Actualizado CORRECTAMENTE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method DevolverSiguienteNum - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Linea eliminada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad modificada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descuento en Linea Aplicado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Precio Modificado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descuento General Aplicado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 2008153173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Venta Correctamente Archivada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 2645849790" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Exención de IVA añadido correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No ha sido posible borrar la linea Seleccionada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra la línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra el pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra la venta a archivar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 3283546407" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Especifique cuenta de Exención de IVA para la Tienda %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Text008</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Intentelo en unos segundos</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1543692007 - NamedType 3887925506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Esta línea de pedido corresponde a un pedido registrado y no deberá visualizarse. Por favor, salga de la pantalla de ventas y vuelva a entrar.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Ejecutar_Accion - NamedType Error006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 586529657 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pago %1 Eliminado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Eliminar_Pago - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 586529657 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pago %1 NO Encontrado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Eliminar_Pago - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 691585460 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method GuardarAnulacionTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2863660408 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method GuardarVentaTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2312427845 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido determinar ningún importe aplicable para este NCR</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method ImportePropuestoPagoNCR - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2312427845 - NamedType 2471353341" size-unit="char" translate="yes" xml:space="preserve">
+          <source>En el NCR %1 se ha indicado el  cliente %2 para liquidar la venta con cliente %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method ImportePropuestoPagoNCR - NamedType TextL002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2312427845 - NamedType 3109049958" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha encontrado el NCR indicado %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method ImportePropuestoPagoNCR - NamedType TextL003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2553311415 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>REG_CAMBIO</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method InsertaCambio - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1343640606 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Linea de Pago insertada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Pago - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1343640606 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No existe %1 ni como forma de pago ni como tipo de tarjeta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Pago - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Producto %1 No Tiene Precio Configurado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Insertar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Producto %1 no existe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El n·mero Maximo de líneas (%1) para este pedido se ha superado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 3887925506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha producido un error inesperado. Se está intentando modificar una factura ya emitida por el TPV (%1). Por favor, pulse el botón de "Nueva venta".</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Error006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1333337889 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Añadido/s %1 unidad/es del producto %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Insertar_Producto - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 3430244890 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido crear el pedido de venta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Nueva_Venta - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 3430244890 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source> Nº Venta %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Nueva_Venta - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 3430244890 - NamedType 2471353341" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Esta clave ya ha sido utilizada anteriormente. Hay que revisar la configuración de las series</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Nueva_Venta - NamedType TextL002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha de registro debe ser igual a la fecha del día</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Especificar Nº de Identificación Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 3887925506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Registro</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 3250228889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La línea de Venta %1 no tiene asignado precio.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Error007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura %1 Registrada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 1812229969 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Devolucion %1 Registrada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method Registrar - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2970193607 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarAsignaPostingNo - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2970193607 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Devolución TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarAsignaPostingNo - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2510908426 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoDocumento - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2510908426 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Devolucion TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoDocumento - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2510908426 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EXIVA Doc. %1 Exen: %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoDocumento - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2510908426 - NamedType 2940140935" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. NCR %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoDocumento - NamedType TextL004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 3715327096 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoFactura_Obsoleto - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 3715327096 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EXIVA Doc. %1 Exen: %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoFactura_Obsoleto - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 4195349232 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Devolucion TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoNotaCredito_Obsoleto - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 4195349232 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EXIVA Doc. %1 Exen: %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method RegistrarPagoNotaCredito_Obsoleto - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 272377332 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>En el NCR %1M Se ha indicado el  cliente %2 para liquidar la venta con cliente %3</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestFormaPago - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 272377332 - NamedType 2471353341" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha indicado el NCR %1 para liquidar la venta. Sin embargo dicho NCR ha excedido ya su Credito.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestFormaPago - NamedType TextL002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 272377332 - NamedType 3109049958" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha encontrado el NCR %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestFormaPago - NamedType TextL003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 272377332 - NamedType 2940140935" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El NCR %1 se ha registrado con divisa %2. Faltaría adaptar los cobros en divisa para la compensación con NCR.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestFormaPago - NamedType TextL004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2564842226 - NamedType 1180461281" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ya había líneas de venta con este mismo código. Hay que revisar la configuración de series.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestIDYaUtilizado - NamedType LineasExistentesMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 578177134 - Method 2564842226 - NamedType 3991127955" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Ya había líneas de pago con este mismo código. Hay que revisar la configuración de series.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Comunes - Method TestIDYaUtilizado - NamedType PagosExistentesMsg</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1992106239 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TIPO CAMBIO NO DEFINIDO</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method ActualizarDivisas - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1992106239 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se han definido formas de pago para el menú %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method ActualizarDivisas - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 2025539446 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Nota Credito TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method AnulaPagoFacturaTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1144538253 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La factura %1 ya está anulada.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method AnularFactura - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1144538253 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido insertar la nota de Credito.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method AnularFactura - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1144538253 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura anulada correctamente.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method AnularFactura - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1144538253 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Anula a Fact. TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method AnularFactura - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 727181542 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se ha creado la devolución %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Crear_Devolucion - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1453705185 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Se va a proceder a desconfigurar de la tienda y todas sus POS asignadas la configuración de notas de Credito.\ ¿Continuar?</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method DeconfiguraAnulaciones - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 31697648 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El pedido aparcado nº %1 se ha recuperado correctamente.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Desaparcar_Pedido - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 31697648 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El pedido aparcado nº %1 no se ha encontrado en la tabla Sales Header</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Desaparcar_Pedido - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1224373356 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NCF Actualizado CORRECTAMENTE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method DevolverSiguienteNum - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Linea eliminada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cantidad modificada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descuento en Linea Aplicado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Precio Modificado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Descuento General Aplicado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 2008153173" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Venta Correctamente Archivada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Text006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No ha sido posible borrar la linea Seleccionada</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra la línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra el pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1543692007 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se encuentra la venta a archivar</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Ejecutar_Accion - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 586529657 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pago %1 Eliminado Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Eliminar_Pago - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 586529657 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pago %1 NO Encontrado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Eliminar_Pago - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 691585460 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method GuardarAnulacionTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 2863660408 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method GuardarVentaTPV - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 3440541435 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Las facturas Manuales no se pueden imprimir</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Imprimir - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1343640606 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Linea de Pago insertada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Pago - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1343640606 - NamedType 3752334001" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No existe %1 ni como forma de pago ni como tipo de tarjeta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Pago - NamedType Text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Producto %1 No Tiene Precio Configurado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Insertar Línea de Pedido</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Producto %1 no existe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El Numero Maximo de líneas (%1) para este pedido se ha superado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1333337889 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Añadido/s %1 unidad/es del producto %2</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Insertar_Producto - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 3430244890 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se ha podido crear el pedido de venta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Nueva_Venta - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 3430244890 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source> Nº Venta %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Nueva_Venta - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Fecha de registro debe ser igual a la fecha del día</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Especificar Nº de Identificación Fiscal</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ORDER WITH REMAINING AMOUNT</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 3887925506" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Registro</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error006</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 3250228889" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La línea de Venta %1 no tiene asignado precio.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Error007</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura %1 Registrada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 95063322" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Factura TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Text003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 732759939" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Devolución TPV %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Text004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 1812229969 - NamedType 1370456556" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Devolucion %1 Registrada Correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method Registrar - NamedType Text005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 900403676 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. factura TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method RegistrarPagoFactura - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 3973508717 - Method 2692604996 - NamedType 3114637384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Liq. Devolucion TPV Doc. %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - ComuneZ - Method RegistrarPagoNotaCredito - NamedType Text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - NamedType 161781133" size-unit="char" translate="yes" xml:space="preserve">
+          <source>aceptado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - NamedType ID_ACEPTADO</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - NamedType 1870845641" size-unit="char" translate="yes" xml:space="preserve">
+          <source>rechazado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - NamedType ID_RECHAZADO</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1144538253 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La Serie NCF No contiene mas numeros</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AnularFactura - NamedType Error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1144538253 - NamedType 1974835655" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Nº de Autoriación no puede ser blanco para serie %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AnularFactura - NamedType Error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 4125970251" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 esta en estado de error : no impreso, anulado ó caducado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 1744092806" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 no existe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 1106396189" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 no tiene productos pendientes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 2212880400" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 ya esta aplicado en esta venta.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 1575183783" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Aplicar cupones para diferentes colegios en la misma venta.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType error005</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 820803555 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cupón %1 aplicado correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method AplicaCupon - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 4125970251" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 esta en estado de error : no impreso, anulado ó caducado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 1744092806" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 no existe</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 1106396189" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 no tiene productos pendientes.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 2212880400" size-unit="char" translate="yes" xml:space="preserve">
+          <source>El cupón %1 no se ha podido borrar.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType error004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 2951775720" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cupón %1 aplicado correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType text001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 2622142360 - NamedType 3589472337" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cupón %1 eliminado correctamente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method EliminaCupon - NamedType text002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 194273962 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>&lt;Firmando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2&gt;</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method FirmarRegistrados - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 4216595991 - NamedType 1833656724" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Obtención certificado digital sin error para %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method LogFirmaEnCentral - NamedType TextL001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 4216595991 - NamedType 2471353341" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Error: %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method LogFirmaEnCentral - NamedType TextL002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 4216595991 - NamedType 3109049958" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No se configuió firmar %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method LogFirmaEnCentral - NamedType TextL003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 4216595991 - NamedType 2940140935" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Pendiente de comprobar la firma para %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method LogFirmaEnCentral - NamedType TextL004</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1812229969 - NamedType 230654827" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debe Espeficiar "Grupo contable cliente" para el cliente %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method Registrar - NamedType Error001</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1812229969 - NamedType 2143744678" size-unit="char" translate="yes" xml:space="preserve">
+          <source>No Existe Grupo Contable Cliente %1</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method Registrar - NamedType Error002</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1812229969 - NamedType 1506048061" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Imposible Modificar Cab. Venta</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method Registrar - NamedType Error003</note>
+        </trans-unit>
+        <trans-unit id="Codeunit 1104243351 - Method 1812229969 - NamedType 2612532272" size-unit="char" translate="yes" xml:space="preserve">
+          <source>La Serie NCF No tiene más numeros</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Codeunit Funciones DsPOS - Costa Rica - Method Registrar - NamedType Error004</note>
         </trans-unit>
         <trans-unit id="Codeunit 2526806412 - NamedType 1902164874" size-unit="char" translate="yes" xml:space="preserve">
           <source>The net amount of your payment has already been transferred to your bank account.If you have any questions about your payment, please contact the person in charge of payroll.</source>
@@ -133632,6 +134862,26 @@
           <source>Provision Insolvencias</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXCCRIGenJournalAccountType - EnumValue EXCCRIProvisionInsolvencies - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3087108035 - EnumValue 1255446759 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 424458961">
+          <source>DIMEX</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXCCRITaxIdentificationType - EnumValue DIMEX - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3087108035 - EnumValue 3847709367 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 424458961">
+          <source>Extranjero No Domiciliado</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXCCRITaxIdentificationType - EnumValue Extranjero No Domiciliado - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3087108035 - EnumValue 824056818 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 424458961">
+          <source>NITE</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXCCRITaxIdentificationType - EnumValue NITE - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="EnumExtension 3087108035 - EnumValue 1568146924 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Enum 424458961">
+          <source>No Contribuyente</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">EnumExtension EXCCRITaxIdentificationType - EnumValue No Contribuyente - Property Caption</note>
         </trans-unit>
       </group>
     </body>

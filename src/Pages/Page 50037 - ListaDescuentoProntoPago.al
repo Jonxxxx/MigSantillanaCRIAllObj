@@ -1,4 +1,4 @@
-page 50037 ListaDescuentoProntoPago
+page 55037 ListaDescuentoProntoPago
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Posted Credit Memos (Discount Soon Payment)';
@@ -13,8 +13,8 @@ page 50037 ListaDescuentoProntoPago
     SourceTableView = SORTING("Closed by Entry No.")
                       ORDER(Descending)
                       WHERE("Open" = CONST(false),
-                            "Pmt. Disc. Given (LCY)"=FILTER(>0),
-                            "No. Comprobante Fiscal DPP"=FILTER(<>''));
+                            "Pmt. Disc. Given (LCY)" = FILTER(> 0),
+                            "No. Comprobante Fiscal DPP" = FILTER(<> ''));
     UsageCategory = Lists;
 
     layout
@@ -118,8 +118,8 @@ page 50037 ListaDescuentoProntoPago
 
     var
         DetailedCustLedgEntry: Record 379;
-        ReporteDPPv2: Report 50047;
-        ReporteDPPXclientev2: Report 50048;
+        ReporteDPPv2: Report 55047;
+        ReporteDPPXclientev2: Report 55048;
         CustLedgEntry: Record 21;
 }
 

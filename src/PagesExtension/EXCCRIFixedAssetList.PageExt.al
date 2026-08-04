@@ -1,4 +1,4 @@
-pageextension 50109 EXCCRIFixedAssetList extends "Fixed Asset List"
+pageextension 55109 EXCCRIFixedAssetList extends "Fixed Asset List"
 {
     layout
     {
@@ -62,7 +62,7 @@ pageextension 50109 EXCCRIFixedAssetList extends "Fixed Asset List"
     end;
 
     var
-        EXCCRIFACalculation: Codeunit 52501;
+        EXCCRIFACalculation: Codeunit 55200;
         EXCCRIAcquisitionDate: Date;
         EXCCRIDepreciationPercent: Decimal;
 }

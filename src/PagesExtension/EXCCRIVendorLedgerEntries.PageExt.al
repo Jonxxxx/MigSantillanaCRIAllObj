@@ -1,4 +1,4 @@
-pageextension 50012 EXCCRIVendorLedgerEntries extends "Vendor Ledger Entries"
+pageextension 55237 EXCCRIVendorLedgerEntries extends "Vendor Ledger Entries"
 {
     layout
     {

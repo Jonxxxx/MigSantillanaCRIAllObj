@@ -1,4 +1,4 @@
-pageextension 50128 EXCCRIGLItemLedgerRelation extends "G/L - Item Ledger Relation"
+pageextension 55127 EXCCRIGLItemLedgerRelation extends "G/L - Item Ledger Relation"
 {
     layout
     {

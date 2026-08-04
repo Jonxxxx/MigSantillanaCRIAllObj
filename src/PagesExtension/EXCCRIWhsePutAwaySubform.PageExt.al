@@ -1,4 +1,4 @@
-pageextension 50123 EXCCRIWhsePutAwaySubform extends "Whse. Put-away Subform"
+pageextension 55122 EXCCRIWhsePutAwaySubform extends "Whse. Put-away Subform"
 {
     layout
     {

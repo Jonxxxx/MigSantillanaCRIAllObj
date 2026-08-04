@@ -1,4 +1,4 @@
-pageextension 50107 EXCCRIItemUnitsOfMeasure extends "Item Units of Measure"
+pageextension 55107 EXCCRIItemUnitsOfMeasure extends "Item Units of Measure"
 {
     layout
     {

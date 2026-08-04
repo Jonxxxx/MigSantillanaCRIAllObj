@@ -1,93 +1,93 @@
-tableextension 50031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
+tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
 {
     fields
     {
-        field(50010; "Tipo de Venta"; Option)
+        field(55235; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations';
             OptionMembers = "Factura","Consignacion","Muestras","Donaciones";
         }
 
-        field(50110; "No. Documento SIC"; Code[20])
+        field(55110; "No. Documento SIC"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50111; "Source counter"; BigInteger)
+        field(55198; "Source counter"; BigInteger)
         {
             DataClassification = CustomerContent;
         }
 
-        field(50112; "Cod. Cajero"; Code[50])
+        field(55111; "Cod. Cajero"; Code[50])
         {
             DataClassification = CustomerContent;
         }
 
-        field(50113; "Cod. Supervisor"; Text[30])
+        field(55112; "Cod. Supervisor"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52500; Clave; Text[60])
+        field(55199; Clave; Text[60])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52501; Consecutivo; Text[20])
+        field(55200; Consecutivo; Text[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52502; Estado; Text[30])
+        field(55201; Estado; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52503; Mensaje; Text[150])
+        field(55212; Mensaje; Text[150])
         {
             DataClassification = CustomerContent;
         }
 
-        field(52504; "Fecha Doc Electronico"; DateTime)
+        field(55202; "Fecha Doc Electronico"; DateTime)
         {
             DataClassification = CustomerContent;
         }
 
-        field(52505; "E-Mail-FE"; Text[100])
+        field(55203; "E-Mail-FE"; Text[100])
         {
             Caption = 'E-Mail';
             DataClassification = CustomerContent;
             ExtendedDatatype = EMail;
         }
 
-        field(52507; "QR Code FE"; Blob)
+        field(55205; "QR Code FE"; Blob)
         {
             DataClassification = CustomerContent;
             Subtype = UserDefined;
         }
 
-        field(52509; "Numero Referencia FE"; Code[20])
+        field(55207; "Numero Referencia FE"; Code[20])
         {
             Caption = 'Numero Referencia FE';
             DataClassification = CustomerContent;
         }
 
-        field(52510; "Tipo Doc. Ref NC"; Option)
+        field(55208; "Tipo Doc. Ref NC"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Factura Electronica,Tiquete Electronico,Sustituye Factura de Exportacion';
             OptionMembers = " ","Factura Electronica","Tiquete Electronico","Sustituye Factura de Exportacion";
         }
 
-        field(52511; "Codigo Referencia"; Option)
+        field(55209; "Codigo Referencia"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Devolucion Total,Devolucion Parcial';
             OptionMembers = " ","Devolucion Total","Devolucion Parcial";
         }
 
-        field(52512; "No. Doc Historico"; Code[20])
+        field(55210; "No. Doc Historico"; Code[20])
         {
             Caption = 'No. Doc Historico';
             DataClassification = CustomerContent;
@@ -99,7 +99,7 @@ tableextension 50031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             end;
         }
 
-        field(52513; "Categoria Pedido Venta"; Code[20])
+        field(55211; "Categoria Pedido Venta"; Code[20])
         {
             Caption = 'Order Category';
             DataClassification = CustomerContent;

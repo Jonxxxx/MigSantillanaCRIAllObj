@@ -1,4 +1,4 @@
-tableextension 50102 EXCCRIServiceCrMemoHeader extends "Service Cr.Memo Header"
+tableextension 55102 EXCCRIServiceCrMemoHeader extends "Service Cr.Memo Header"
 {
     fields
     {

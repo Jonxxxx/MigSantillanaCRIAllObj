@@ -1,4 +1,4 @@
-codeunit 50300 "Notificar Errores Colas"
+codeunit 55156 "Notificar Errores Colas"
 {
     // ---------------------------------
     // YFC     : Yefrecis Francisco Cruz

@@ -1,4 +1,4 @@
-table 50026 "Catalogo CaByS"
+table 55026 "Catalogo CaByS"
 {
 
     fields

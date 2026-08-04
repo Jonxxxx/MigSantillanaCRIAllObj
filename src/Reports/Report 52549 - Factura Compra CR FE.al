@@ -1,4 +1,4 @@
-report 52549 "Factura Compra CR FE"
+report 55219 "Factura Compra CR FE"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Factura Compra CR FE.rdl';

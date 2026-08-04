@@ -1,4 +1,4 @@
-table 50109 DatosPonchador
+table 55109 DatosPonchador
 {
     Caption = 'Time attendance log';
     DataPerCompany = false;
@@ -6,44 +6,44 @@ table 50109 DatosPonchador
 
     fields
     {
-        field(1;IdUser;Code[20])
+        field(1; IdUser; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'IdUser';
             Editable = false;
             SQLDataType = Integer;
         }
-        field(2;RecordTime;DateTime)
+        field(2; RecordTime; DateTime)
         {
             DataClassification = CustomerContent;
             Caption = 'RecordTime';
             Editable = false;
         }
-        field(3;MachineNumber;Integer)
+        field(3; MachineNumber; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'MachineNumber';
             Editable = false;
         }
-        field(4;IdentificationNumber;Code[20])
+        field(4; IdentificationNumber; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'IdentificationNumber';
             Editable = false;
         }
-        field(5;Name;Text[250])
+        field(5; Name; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Name';
             Editable = false;
         }
-        field(6;ProximityCard;Code[50])
+        field(6; ProximityCard; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'ProximityCard';
             Editable = false;
         }
-        field(7;CodigoBC;Code[20])
+        field(7; CodigoBC; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'CodigoBC';
@@ -53,7 +53,7 @@ table 50109 DatosPonchador
 
     keys
     {
-        key(Key1;IdUser,RecordTime)
+        key(Key1; IdUser, RecordTime)
         {
         }
     }

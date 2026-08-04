@@ -1,26 +1,26 @@
-table 51013 "Ano Escolar"
+table 55174 "Ano Escolar"
 {
     Caption = 'School Year';
-    LookupPageID = 51008;
+    LookupPageID = 55169;
 
     fields
     {
-        field(1;"Cod. Ano";Code[20])
+        field(1; "Cod. Ano"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Ano';
         }
-        field(2;Descripcion;Text[50])
+        field(2; Descripcion; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
-        field(3;"Fecha Desde";Date)
+        field(3; "Fecha Desde"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Desde';
         }
-        field(4;"Fecha Hasta";Date)
+        field(4; "Fecha Hasta"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Hasta';
@@ -29,7 +29,7 @@ table 51013 "Ano Escolar"
 
     keys
     {
-        key(Key1;"Cod. Ano")
+        key(Key1; "Cod. Ano")
         {
         }
     }

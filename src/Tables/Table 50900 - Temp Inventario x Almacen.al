@@ -1,29 +1,29 @@
-table 50900 "Temp Inventario x Almacen"
+table 55160 "Temp Inventario x Almacen"
 {
 
     fields
     {
-        field(1;Producto;Code[20])
+        field(1; Producto; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Producto';
         }
-        field(2;Almacen;Code[20])
+        field(2; Almacen; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Almacen';
         }
-        field(3;Existencias;Decimal)
+        field(3; Existencias; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Existencias';
         }
-        field(4;Consignacion;Boolean)
+        field(4; Consignacion; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Consignacion';
         }
-        field(5;"Coste unitario";Decimal)
+        field(5; "Coste unitario"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Coste unitario';
@@ -32,7 +32,7 @@ table 50900 "Temp Inventario x Almacen"
 
     keys
     {
-        key(Key1;Producto,Almacen)
+        key(Key1; Producto, Almacen)
         {
         }
     }

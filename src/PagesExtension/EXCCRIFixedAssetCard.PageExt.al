@@ -1,4 +1,4 @@
-pageextension 50108 EXCCRIFixedAssetCard extends "Fixed Asset Card"
+pageextension 55108 EXCCRIFixedAssetCard extends "Fixed Asset Card"
 {
     layout
     {

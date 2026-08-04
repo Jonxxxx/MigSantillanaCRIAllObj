@@ -1,4 +1,4 @@
-pageextension 50150 EXCCRISalesQuotes extends "Sales Quotes"
+pageextension 55149 EXCCRISalesQuotes extends "Sales Quotes"
 {
     actions
     {
@@ -22,7 +22,7 @@ pageextension 50150 EXCCRISalesQuotes extends "Sales Quotes"
                     EXCCRISalesHeader.SetRange("No.", Rec."No.");
                     if EXCCRISalesHeader.FindFirst() then
                         Report.RunModal(
-                            52546,
+                            55217,
                             true,
                             false,
                             EXCCRISalesHeader);
@@ -40,7 +40,7 @@ pageextension 50150 EXCCRISalesQuotes extends "Sales Quotes"
 
                 trigger OnAction()
                 begin
-                    Report.RunModal(52548, true, true);
+                    Report.RunModal(55218, true, true);
                 end;
             }
         }

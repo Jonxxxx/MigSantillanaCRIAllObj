@@ -1,4 +1,4 @@
-report 50045 "Cheque Santillana BPD"
+report 55045 "Cheque Santillana BPD"
 {
     // Proyecto: Microsoft Dynamics Business Central
     // ------------------------------------------------------------------------

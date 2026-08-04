@@ -1,4 +1,4 @@
-pageextension 50047 EXCCRIPostedSalesShipments extends "Posted Sales Shipments"
+pageextension 55047 EXCCRIPostedSalesShipments extends "Posted Sales Shipments"
 {
     layout
     {

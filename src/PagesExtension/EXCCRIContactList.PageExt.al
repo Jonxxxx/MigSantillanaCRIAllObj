@@ -1,4 +1,4 @@
-pageextension 50093 EXCCRIContactList extends "Contact List"
+pageextension 55093 EXCCRIContactList extends "Contact List"
 {
     layout
     {
@@ -143,7 +143,7 @@ pageextension 50093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Salespersons';
-                    RunObject = Page 51010;
+                    RunObject = Page 55171;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the salespersons associated with the school.';
                 }

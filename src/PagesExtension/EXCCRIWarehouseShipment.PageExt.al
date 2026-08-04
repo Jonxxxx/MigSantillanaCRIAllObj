@@ -1,4 +1,4 @@
-pageextension 50143 EXCCRIWarehouseShipment extends "Warehouse Shipment"
+pageextension 55142 EXCCRIWarehouseShipment extends "Warehouse Shipment"
 {
     layout
     {

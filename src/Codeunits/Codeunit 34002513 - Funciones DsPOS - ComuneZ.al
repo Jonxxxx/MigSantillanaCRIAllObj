@@ -19,7 +19,7 @@ codeunit 34002513 "Funciones DsPOS - ComuneZ"
 
     var
         cCostaRica: Codeunit 34002511;
-        FE_CR: Codeunit 52504;
+        FE_CR: Codeunit 55202;
 
     procedure InsertarDimTemp(DimCode: Code[20]; DimValue: Code[20]; var P_recTmpDimEntry: Record 480 temporary)
     var

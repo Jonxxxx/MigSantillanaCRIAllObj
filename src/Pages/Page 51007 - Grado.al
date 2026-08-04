@@ -1,8 +1,8 @@
-page 51007 Grado
+page 55168 Grado
 {
     Caption = 'Grade';
     PageType = List;
-    SourceTable = 51012;
+    SourceTable = 55173;
 
     layout
     {

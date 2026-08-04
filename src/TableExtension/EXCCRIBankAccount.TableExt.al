@@ -1,4 +1,4 @@
-tableextension 50041 EXCCRIBankAccount extends "Bank Account"
+tableextension 55041 EXCCRIBankAccount extends "Bank Account"
 {
     fields
     {

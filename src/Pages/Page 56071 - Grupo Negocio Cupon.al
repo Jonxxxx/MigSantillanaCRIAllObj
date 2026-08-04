@@ -2,7 +2,7 @@ page 56071 "Grupo Negocio Cupon"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 51017;
+    SourceTable = 55178;
 
     layout
     {

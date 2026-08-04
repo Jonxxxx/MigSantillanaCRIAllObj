@@ -1,7 +1,7 @@
-page 51010 "Vendedores por Colegio"
+page 55171 "Vendedores por Colegio"
 {
     PageType = List;
-    SourceTable = 51014;
+    SourceTable = 55175;
 
     layout
     {

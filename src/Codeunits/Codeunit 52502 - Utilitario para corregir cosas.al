@@ -1,4 +1,4 @@
-codeunit 52502 "Utilitario para corregir cosas"
+codeunit 55201 "Utilitario para corregir cosas"
 {
     Permissions = TableData 17 = rimd,
                   TableData 21 = rimd,
@@ -37,8 +37,8 @@ codeunit 52502 "Utilitario para corregir cosas"
         SalesHeader: Record 36;
         SalesHeader2: Record 36;
         SalesInvoiceHeader: Record 112;
-        NotasCRaCorregirTEMPORAL: Record 50015;
-        NotasCRaCorregirTEMPORAL2: Record 50015;
+        NotasCRaCorregirTEMPORAL: Record 55240;
+        NotasCRaCorregirTEMPORAL2: Record 55240;
         SalesCrMemoHeader: Record 114;
         SIH: Record 112;
         SCMH: Record 114;
@@ -583,21 +583,21 @@ codeunit 52502 "Utilitario para corregir cosas"
         ConvertImporte2: Decimal;
         ConvertPrecio: Decimal;
         Totales: Integer;
-        LineasVentasSIC: Record 50112;
+        LineasVentasSIC: Record 55111;
         TotContador: Integer;
         codproducto: Code[20];
         Insertar: Boolean;
         Item: Record 27;
         SalesHeader: Record 36;
-        CabVentasSIC: Record 50111;
-        ConfigCajaElectronica: Record 50114;
+        CabVentasSIC: Record 55198;
+        ConfigCajaElectronica: Record 55113;
         findline: Boolean;
         SalesLine2: Record 37;
         SalesLine: Record 37;
         UnitofMeasure: Record 204;
         NegativeInt: Option Default,No,Yes;
         Itembloq: Boolean;
-        LineasVentasSIC_2: Record 50112;
+        LineasVentasSIC_2: Record 55111;
     begin
         // IF GUIALLOWED THEN
         //   Ventana.OPEN(Text001);
@@ -892,8 +892,8 @@ codeunit 52502 "Utilitario para corregir cosas"
         NoLin: Integer;
         dImporte: Integer;
         ImporteNeto: Integer;
-        MediosdePagoMG: Record 50113;
-        ConfMediosdepagos: Record 50110;
+        MediosdePagoMG: Record 55112;
+        ConfMediosdepagos: Record 55110;
         SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
         Bancostienda: Record 34002504;

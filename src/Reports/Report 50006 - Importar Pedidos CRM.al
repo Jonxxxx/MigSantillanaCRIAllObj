@@ -1,4 +1,4 @@
-report 50006 "Importar Pedidos CRM"
+report 55231 "Importar Pedidos CRM"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Import CRM Orders';

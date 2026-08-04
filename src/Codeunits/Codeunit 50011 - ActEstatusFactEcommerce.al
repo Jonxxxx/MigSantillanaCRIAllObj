@@ -1,4 +1,4 @@
-codeunit 50011 ActEstatusFactEcommerce
+codeunit 55236 ActEstatusFactEcommerce
 {
     Permissions = TableData 112 = rm;
 

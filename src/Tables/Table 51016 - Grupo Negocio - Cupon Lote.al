@@ -1,4 +1,4 @@
-table 51016 "Grupo Negocio - Cupon Lote"
+table 55177 "Grupo Negocio - Cupon Lote"
 {
 
     fields

@@ -3,7 +3,7 @@ page 56090 "Lista Pedidos Ecommerce"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = List;
-    SourceTable = 50100;
+    SourceTable = 55100;
     UsageCategory = Lists;
 
     layout
@@ -150,7 +150,7 @@ page 56090 "Lista Pedidos Ecommerce"
 
                 trigger OnAction()
                 var
-                    CabVentaNopCommerce: Record 50100;
+                    CabVentaNopCommerce: Record 55100;
                 begin
                     CabVentaNopCommerce := Rec;
                     CurrPage.SETSELECTIONFILTER(CabVentaNopCommerce);

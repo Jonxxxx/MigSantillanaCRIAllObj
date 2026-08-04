@@ -1,4 +1,4 @@
-pageextension 50078 EXCCRISalesLines extends "Sales Lines"
+pageextension 55078 EXCCRISalesLines extends "Sales Lines"
 {
     layout
     {

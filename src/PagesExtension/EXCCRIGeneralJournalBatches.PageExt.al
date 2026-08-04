@@ -1,4 +1,4 @@
-pageextension 50057 EXCCRIGeneralJournalBatches extends "General Journal Batches"
+pageextension 55057 EXCCRIGeneralJournalBatches extends "General Journal Batches"
 {
     layout
     {

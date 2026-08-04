@@ -1,8 +1,8 @@
-page 51004 "Lin. Cupon"
+page 55165 "Lin. Cupon"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = 51010;
+    SourceTable = 55171;
 
     layout
     {

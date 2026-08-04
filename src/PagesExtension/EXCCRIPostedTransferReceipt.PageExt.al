@@ -1,4 +1,4 @@
-pageextension 50119 EXCCRIPostedTransferReceipt extends "Posted Transfer Receipt"
+pageextension 55118 EXCCRIPostedTransferReceipt extends "Posted Transfer Receipt"
 {
     layout
     {
@@ -94,7 +94,7 @@ pageextension 50119 EXCCRIPostedTransferReceipt extends "Posted Transfer Receipt
                     begin
                         EXCCRITransferRcptHeader.SetRange("No.", Rec."No.");
                         Report.RunModal(
-                            51007,
+                            55168,
                             true,
                             true,
                             EXCCRITransferRcptHeader);

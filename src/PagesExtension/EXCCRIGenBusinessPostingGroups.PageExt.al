@@ -1,4 +1,4 @@
-pageextension 50061 EXCCRIGenBusinessPostingGroups extends "Gen. Business Posting Groups"
+pageextension 55061 EXCCRIGenBusinessPostingGroups extends "Gen. Business Posting Groups"
 {
     layout
     {
