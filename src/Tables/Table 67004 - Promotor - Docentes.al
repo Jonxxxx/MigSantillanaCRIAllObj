@@ -86,10 +86,10 @@ table 55471 "Promotor - Docentes"
     var
         DA: Record 55469;
         ColNiv: Record 67036;
-        NivelE: Record 67022;
+        NivelE: Record 55489;
         PromRuta: Record 67044;
         Promotor: Record 13;
         Docente: Record 55468;
-        Cargo: Page 67033;
+        Cargo: Page 55500;
 }
 

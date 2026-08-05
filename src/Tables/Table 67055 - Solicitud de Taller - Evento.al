@@ -735,7 +735,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ED: Record 67024;
+                ED: Record 55491;
             begin
                 "Nombre Editorial Competencia" := '';
                 IF ED.GET("Editorial Competencia") THEN
@@ -755,7 +755,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                Lib: Record 67025;
+                Lib: Record 55492;
             begin
                 "Desc.  Competencia" := '';
                 Lib.SETRANGE(Lib."Cod. Editorial", "Editorial Competencia");
@@ -774,57 +774,57 @@ table 67055 "Solicitud de Taller - Evento"
             DataClassification = CustomerContent;
             Caption = 'E-Mail Docente Responsable';
         }
-        field(67014; INI; Integer)
+        field(55481; INI; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'INI';
         }
-        field(67015; PRI; Integer)
+        field(55482; PRI; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'PRI';
         }
-        field(67016; SEC; Integer)
+        field(55483; SEC; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'SEC';
         }
-        field(67017; ING; Integer)
+        field(55484; ING; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ING';
         }
-        field(67018; PLA; Integer)
+        field(55485; PLA; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'PLA';
         }
-        field(67019; "Nivel Asistente"; Integer)
+        field(55486; "Nivel Asistente"; Integer)
         {
             Caption = 'Nivel Asistente';
             CalcFormula = Count("Solicitud -  Nivel Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67020; "Grado Asistente"; Integer)
+        field(55487; "Grado Asistente"; Integer)
         {
             Caption = 'Grado Asistente';
             CalcFormula = Count("Solicitud -  Grado Asistente" WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67021; "Especialidad Asistente"; Integer)
+        field(55488; "Especialidad Asistente"; Integer)
         {
             Caption = 'Especialidad Asistente';
             CalcFormula = Count("Solicitud -  Especialidad Asi." WHERE("No. Solicitud" = FIELD("No. Solicitud")));
             FieldClass = FlowField;
         }
-        field(67022; "Seleccion Editorial"; Option)
+        field(55489; "Seleccion Editorial"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Seleccion Editorial';
             OptionCaption = 'Santillana,Competencia';
             OptionMembers = Santillana,Competencia;
         }
-        field(67023; "Articulo Grupo Santillana"; Code[20])
+        field(55490; "Articulo Grupo Santillana"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Articulo Grupo Santillana';
@@ -848,47 +848,47 @@ table 67055 "Solicitud de Taller - Evento"
                 END;
             end;
         }
-        field(67024; "Desc. Articulo Grupo Santillan"; Text[80])
+        field(55491; "Desc. Articulo Grupo Santillan"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Desc. Articulo Grupo Santillan';
         }
-        field(67025; "Horas por semana"; Decimal)
+        field(55492; "Horas por semana"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Horas por semana';
         }
-        field(67026; "Ano Adopcion"; Code[4])
+        field(55493; "Ano Adopcion"; Code[4])
         {
             DataClassification = CustomerContent;
             Caption = 'Ano Adopcion';
         }
-        field(67027; ESI; Integer)
+        field(55494; ESI; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ESI';
         }
-        field(67028; GEN; Integer)
+        field(55495; GEN; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'GEN';
         }
-        field(67029; IPR; Integer)
+        field(55496; IPR; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'IPR';
         }
-        field(67030; IPS; Integer)
+        field(55497; IPS; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'IPS';
         }
-        field(67031; PSE; Integer)
+        field(55498; PSE; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'PSE';
         }
-        field(67032; "Tipo Responsable"; Option)
+        field(55499; "Tipo Responsable"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Responsable';
@@ -906,7 +906,7 @@ table 67055 "Solicitud de Taller - Evento"
                 "E-Mail Docente Responsable" := '';
             end;
         }
-        field(67033; "Telefono 2 Colegio"; Text[30])
+        field(55500; "Telefono 2 Colegio"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Telefono 2 Colegio';
@@ -1221,10 +1221,10 @@ table 67055 "Solicitud de Taller - Evento"
         ExpositorProv: Record 23;
         Colegio: Record 5050;
         Promotor: Record 13;
-        FRBitMap: Record 67032;
+        FRBitMap: Record 55499;
         DA: Record 55469;
         ColDocentes: Record 67043;
-        ATE: Record 67016;
+        ATE: Record 55483;
         DefDim: Record 352;
         DimVal: Record 349;
         PostCode: Record 225;
@@ -1298,7 +1298,7 @@ table 67055 "Solicitud de Taller - Evento"
         Err001: Label 'Debe asignar un evento programado.';
         Err002: Label 'El evento programado no existe.';
         Ev: Record 67051;
-        rProgramac: Record 67015;
+        rProgramac: Record 55482;
         Error004: Label 'No ha realizado la programacion de fechas.';
         Error005: Label 'En la programacion de fechas es obligatorio indicar los siguientes campos: Fecha programacion, Hora de Inicio y Hora Final.';
         rCab: Record 67051;
@@ -1460,7 +1460,7 @@ table 67055 "Solicitud de Taller - Evento"
     var
         CabPlanEvento: Record 67051;
         FechasProp: Record 67088;
-        ProgTyE: Record 67015;
+        ProgTyE: Record 55482;
     begin
 
         CabPlanEvento.RESET;
@@ -1516,7 +1516,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Valida_Realizado()
     var
-        rProgramac: Record 67015;
+        rProgramac: Record 55482;
         rCab: Record 67051;
         Error004: Label 'No ha realizado la programacion de fechas.';
         Error005: Label 'En la programacion, no se ha indicado las horas dictadas ';
@@ -1544,7 +1544,7 @@ table 67055 "Solicitud de Taller - Evento"
     procedure Actualiza_AsistEsperados()
     var
         CabPlanEvento: Record 67051;
-        ProgTyE: Record 67015;
+        ProgTyE: Record 55482;
     begin
         CabPlanEvento.RESET;
         CabPlanEvento.SETRANGE("Tipo Evento", "Tipo de Evento");
@@ -1585,7 +1585,7 @@ table 67055 "Solicitud de Taller - Evento"
     procedure GetFechaProgramada() rtnFecha: Date
     var
         recCabPlan: Record 67051;
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
     begin
         CLEAR(rtnFecha);
         recCabPlan.RESET;
@@ -1681,13 +1681,13 @@ table 67055 "Solicitud de Taller - Evento"
     procedure ActualizaPlanif(parExpEv: Record 67050) rtnSec: Integer
     var
         CabPlanEvento: Record 67051;
-        ProgTyE: Record 67015;
-        Asistentes: Record 67016;
+        ProgTyE: Record 55482;
+        Asistentes: Record 55483;
         CabPlanEventoNEW: Record 67051;
-        ProgTyENEW: Record 67015;
-        AsistentesNEW: Record 67016;
-        MatTallerEvento: Record 67014;
-        MatTallerEventoNEW: Record 67014;
+        ProgTyENEW: Record 55482;
+        AsistentesNEW: Record 55483;
+        MatTallerEvento: Record 55481;
+        MatTallerEventoNEW: Record 55481;
     begin
 
         rtnSec := 0;

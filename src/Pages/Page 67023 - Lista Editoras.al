@@ -1,9 +1,9 @@
-page 67023 "Lista Editoras"
+page 55490 "Lista Editoras"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Editoras";
     PageType = List;
-    SourceTable = 67024;
+    SourceTable = 55491;
     UsageCategory = Lists;
 
     layout
@@ -105,7 +105,7 @@ page 67023 "Lista Editoras"
                     Caption = '&Card';
                     ToolTip = '&Card';
                     Image = EditLines;
-                    RunObject = Page 67024;
+                    RunObject = Page 55491;
                     RunPageLink = Code = FIELD("Code");
                     ShortCutKey = 'Shift+F7';
                     Visible = false;

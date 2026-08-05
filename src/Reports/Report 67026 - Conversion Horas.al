@@ -1,10 +1,10 @@
-report 67026 "Conversion Horas"
+report 55493 "Conversion Horas"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Programac. Talleres y Eventos"; 67015)
+        dataitem("Programac. Talleres y Eventos"; 55482)
         {
             DataItemTableView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor, "Fecha programacion", Secuencia);
 

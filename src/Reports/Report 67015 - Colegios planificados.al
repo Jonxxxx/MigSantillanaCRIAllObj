@@ -1,4 +1,4 @@
-report 67015 "Colegios planificados"
+report 55482 "Colegios planificados"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Colegios planificados.rdl';
@@ -139,7 +139,7 @@ report 67015 "Colegios planificados"
 
     var
         recColegio: Record 5050;
-        recNivel: Record 67022;
+        recNivel: Record 55489;
         texDistrito: Text[100];
         codCategoria: Code[20];
         Text001: Label 'Del %1 al %2';

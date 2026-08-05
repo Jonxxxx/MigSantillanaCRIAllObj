@@ -2,7 +2,7 @@ page 67099 "Nivel Educativo APS"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67022;
+    SourceTable = 55489;
     UsageCategory = Administration;
 
     layout

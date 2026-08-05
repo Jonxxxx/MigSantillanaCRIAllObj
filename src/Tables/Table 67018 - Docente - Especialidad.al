@@ -1,4 +1,4 @@
-table 67018 "Docente - Especialidad"
+table 55485 "Docente - Especialidad"
 {
     Caption = 'Teacher - Speciality';
 

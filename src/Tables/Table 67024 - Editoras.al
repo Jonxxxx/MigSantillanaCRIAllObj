@@ -1,7 +1,7 @@
-table 67024 Editoras
+table 55491 Editoras
 {
-    DrillDownPageID = 67023;
-    LookupPageID = 67023;
+    DrillDownPageID = 55490;
+    LookupPageID = 55490;
 
     fields
     {

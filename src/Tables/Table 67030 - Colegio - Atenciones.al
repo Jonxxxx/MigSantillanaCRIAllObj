@@ -1,4 +1,4 @@
-table 67030 "Colegio - Atenciones"
+table 55497 "Colegio - Atenciones"
 {
 
     fields

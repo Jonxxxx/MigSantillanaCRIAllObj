@@ -163,7 +163,7 @@ page 67109 "Registrar Asistencias"
 
                     trigger OnAction()
                     var
-                        "ProgT&E": Record 67015;
+                        "ProgT&E": Record 55482;
                     begin
                         CurrPage.ConsultaPLanTyE.PAGE.AbrirPagAsistentes;
 

@@ -1,9 +1,9 @@
-page 67027 "Promotores - Ppto Vtas"
+page 55494 "Promotores - Ppto Vtas"
 {
     Caption = 'Sales budget Commercial';
     DataCaptionFields = "Cod. Promotor", "Nombre Promotor";
     PageType = Card;
-    SourceTable = 67027;
+    SourceTable = 55494;
 
     layout
     {

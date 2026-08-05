@@ -2,7 +2,7 @@ page 67092 "Colegio - Adopciones compet."
 {
     DataCaptionFields = "Cod. Colegio", "Nombre Colegio", "Cod. Nivel";
     PageType = Card;
-    SourceTable = 67033;
+    SourceTable = 55500;
 
     layout
     {

@@ -1,4 +1,4 @@
-report 67028 "Asistencias tecnica x promotor"
+report 55495 "Asistencias tecnica x promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Asistencias tecnica x promotor.rdl';
@@ -281,7 +281,7 @@ report 67028 "Asistencias tecnica x promotor"
 
     procedure TraerDescripcionNivel(): Text[100]
     var
-        recNivel: Record 67022;
+        recNivel: Record 55489;
     begin
         IF recNivel.GET(Solicitud."Cod. Nivel") THEN
             EXIT(recNivel.Descripcion);

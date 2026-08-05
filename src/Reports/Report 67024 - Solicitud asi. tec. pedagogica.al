@@ -1,4 +1,4 @@
-report 67024 "Solicitud asi. tec. pedagogica"
+report 55491 "Solicitud asi. tec. pedagogica"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Solicitud asi. tec. pedagogica.rdl';
@@ -199,7 +199,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
             column(Solicitud_DelegacionCaption; Solicitud_DelegacionCaptionLbl)
             {
             }
-            dataitem(Programacion; 67015)
+            dataitem(Programacion; 55482)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
                                "Cod. Taller - Evento" = FIELD("Cod. evento");
@@ -241,7 +241,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
                 {
                 }
             }
-            dataitem(Asistentes; 67016)
+            dataitem(Asistentes; 55483)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
                                "Cod. Taller - Evento" = FIELD("Cod. evento");
@@ -286,7 +286,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
                 {
                 }
             }
-            dataitem(Material; 67014)
+            dataitem(Material; 55481)
             {
                 DataItemLink = "Tipo Evento" = FIELD("Tipo de Evento"),
                                "Cod. Taller - Evento" = FIELD("Cod. evento");
@@ -431,7 +431,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
 
     procedure TraerDescripcionNivel(): Text[100]
     var
-        recNivel: Record 67022;
+        recNivel: Record 55489;
     begin
         IF recNivel.GET(Solicitud."Cod. Nivel") THEN
             EXIT(recNivel.Descripcion);
@@ -448,7 +448,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
     procedure TraerNivelDocente(): Text[100]
     var
         recDocente: Record 55468;
-        recNivel: Record 67022;
+        recNivel: Record 55489;
     begin
         IF recDocente.GET(Asistentes."Cod. Docente") THEN
             IF recNivel.GET(recDocente."Nivel Docente") THEN

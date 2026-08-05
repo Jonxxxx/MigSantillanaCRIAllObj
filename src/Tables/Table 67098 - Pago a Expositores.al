@@ -16,7 +16,7 @@ table 67098 "Pago a Expositores"
 
             trigger OnLookup()
             var
-                recExp: Record 67021;
+                recExp: Record 55488;
                 Err001: Label 'No puede modificar el Expositor ya que el pago contiene lineas que no pertenecen a este Expositor. ';
                 rDetalle: Record 67099;
             begin
@@ -37,7 +37,7 @@ table 67098 "Pago a Expositores"
             var
                 Err001: Label 'No puede modificar el Expositor ya que el pago contiene lineas que no pertenecen a este Expositor. ';
                 rDetalle: Record 67099;
-                rExp: Record 67021;
+                rExp: Record 55488;
             begin
 
                 "Nombre Expositor" := '';

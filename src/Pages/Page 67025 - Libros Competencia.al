@@ -1,7 +1,7 @@
-page 67025 "Libros Competencia"
+page 55492 "Libros Competencia"
 {
     PageType = List;
-    SourceTable = 67025;
+    SourceTable = 55492;
 
     layout
     {

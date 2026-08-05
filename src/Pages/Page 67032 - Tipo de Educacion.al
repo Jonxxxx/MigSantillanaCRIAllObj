@@ -1,4 +1,4 @@
-page 67032 "Tipo de Educacion"
+page 55499 "Tipo de Educacion"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Education type';

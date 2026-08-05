@@ -247,15 +247,15 @@ pageextension 55002 EXCCRISalespersonsPurchasers extends "Salespersons/Purchaser
     }
 
     var
-        EXCCRISalesBudget: Record 67027;
-        EXCCRISampleBudget: Record 67028;
+        EXCCRISalesBudget: Record 55494;
+        EXCCRISampleBudget: Record 55495;
         EXCCRILevelsRecord: Record 67040;
-        EXCCRIVisitPlanning: Record 67023;
-        EXCCRIVisitExecution: Record 67023;
+        EXCCRIVisitPlanning: Record 55490;
+        EXCCRIVisitExecution: Record 55490;
         EXCCRISampleDelivery: Record 67039;
         EXCCRIRoutesRecord: Record 67044;
-        EXCCRISalesBudgetPage: Page 67027;
-        EXCCRISampleBudgetPage: Page 67028;
+        EXCCRISalesBudgetPage: Page 55494;
+        EXCCRISampleBudgetPage: Page 55495;
         EXCCRIVisitPlanningPage: Page 67097;
         EXCCRIVisitExecutionPage: Page 67098;
         EXCCRISampleDeliveryPage: Page 67039;

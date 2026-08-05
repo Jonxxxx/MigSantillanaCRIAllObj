@@ -1,10 +1,10 @@
-page 67016 "Asistentes Talleres y Eventos"
+page 55483 "Asistentes Talleres y Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = Card;
-    SourceTable = 67016;
+    SourceTable = 55483;
     UsageCategory = Tasks;
 
     layout
@@ -270,7 +270,7 @@ page 67016 "Asistentes Talleres y Eventos"
         gSec: Integer;
         gTipoEvento: Code[20];
         gNoSolicitud: Code[20];
-        ProgEvento: Record 67015;
+        ProgEvento: Record 55482;
         gTipoExp: Option Docente,Proveedor;
         gLinProg: Integer;
         wAsistentesAsistieron: Integer;
@@ -316,7 +316,7 @@ page 67016 "Asistentes Talleres y Eventos"
 
     procedure RecibeProgEvento(lLinProg: Integer)
     var
-        gProgEvento: Record 67015;
+        gProgEvento: Record 55482;
     begin
 
         gLinProg := lLinProg;

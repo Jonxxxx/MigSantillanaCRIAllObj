@@ -399,7 +399,7 @@ page 67077 "Contact List APS"
                     Image = BankAccountRec;
                     Promoted = true;
                     PromotedCategory = Category5;
-                    RunObject = Page 67026;
+                    RunObject = Page 55493;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
 

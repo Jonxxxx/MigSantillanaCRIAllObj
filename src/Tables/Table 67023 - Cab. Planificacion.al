@@ -1,4 +1,4 @@
-table 67023 "Cab. Planificacion"
+table 55490 "Cab. Planificacion"
 {
 
     fields

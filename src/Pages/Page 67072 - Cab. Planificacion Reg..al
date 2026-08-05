@@ -3,7 +3,7 @@ page 67072 "Cab. Planificacion Reg."
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     Editable = false;
     PageType = Card;
-    SourceTable = 67023;
+    SourceTable = 55490;
     SourceTableView = SORTING("Cod. Promotor", Semana)
                       WHERE("Estado" = FILTER(> ' '));
 
@@ -106,7 +106,7 @@ page 67072 "Cab. Planificacion Reg."
     }
 
     var
-        CabPlanifReg: Record 67023;
+        CabPlanifReg: Record 55490;
         User: Record 91;
         Planif: Record 67038;
         Planif2: Record 67038;

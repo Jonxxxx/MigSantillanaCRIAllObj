@@ -5,7 +5,7 @@ page 67164 "Consulta Progr. Taller y Eve."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67015;
+    SourceTable = 55482;
 
     layout
     {

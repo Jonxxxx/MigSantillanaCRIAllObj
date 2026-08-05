@@ -114,7 +114,7 @@ page 67101 "Cab. Planif. Evento"
                     ToolTip = 'Estado';
                 }
             }
-            part(SubFormPTyE; 67015)
+            part(SubFormPTyE; 55482)
             {
                 SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                               "Tipo Evento" = FIELD("Tipo Evento"),
@@ -145,7 +145,7 @@ page 67101 "Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        ProgTyE: Record 67015;
+                        ProgTyE: Record 55482;
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin
@@ -213,9 +213,9 @@ page 67101 "Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        MatTyE: Record 67014;
-                        MatTyE2: Record 67014;
-                        PgMatTyE: Page 67014;
+                        MatTyE: Record 55481;
+                        MatTyE2: Record 55481;
+                        PgMatTyE: Page 55481;
                     begin
                         MatTyE.RESET;
                         MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
@@ -260,7 +260,7 @@ page 67101 "Cab. Planif. Evento"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67016;
+                    RunObject = Page 55483;
                     RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                   "Tipo Evento" = FIELD("Tipo Evento"),
                                   "Secuencia" = FIELD("Secuencia"),

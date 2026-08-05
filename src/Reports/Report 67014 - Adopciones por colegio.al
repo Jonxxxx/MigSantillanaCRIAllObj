@@ -1,4 +1,4 @@
-report 67014 "Adopciones por colegio"
+report 55481 "Adopciones por colegio"
 {
     // Falta como obtener precio.
     DefaultLayout = RDLC;
@@ -189,7 +189,7 @@ report 67014 "Adopciones por colegio"
 
     var
         recCfgAPS: Record 55467;
-        _recNivel: Record 67022;
+        _recNivel: Record 55489;
         codLinNeg: Code[20];
         texDescLinNeg: Text[100];
         codFamilia: Code[20];

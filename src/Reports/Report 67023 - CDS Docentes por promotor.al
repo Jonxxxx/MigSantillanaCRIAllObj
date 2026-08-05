@@ -1,4 +1,4 @@
-report 67023 "CDS Docentes por promotor"
+report 55490 "CDS Docentes por promotor"
 {
     // 0009 CAT Modifiaciones en el formato del informe
     DefaultLayout = RDLC;

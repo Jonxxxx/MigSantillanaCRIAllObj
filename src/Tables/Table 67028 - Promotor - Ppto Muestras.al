@@ -1,4 +1,4 @@
-table 67028 "Promotor - Ppto Muestras"
+table 55495 "Promotor - Ppto Muestras"
 {
 
     fields

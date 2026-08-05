@@ -324,15 +324,15 @@ pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
 
     var
         EXCCRIUserSetup: Record "User Setup";
-        EXCCRISalesBudget: Record 67027;
-        EXCCRISampleBudget: Record 67028;
+        EXCCRISalesBudget: Record 55494;
+        EXCCRISampleBudget: Record 55495;
         EXCCRILevels: Record 67040;
-        EXCCRIVisitPlanning: Record 67023;
-        EXCCRIVisitExecution: Record 67023;
+        EXCCRIVisitPlanning: Record 55490;
+        EXCCRIVisitExecution: Record 55490;
         EXCCRISampleDelivery: Record 67039;
         EXCCRIRoutes: Record 67044;
-        EXCCRISalesBudgetPage: Page 67027;
-        EXCCRISampleBudgetPage: Page 67028;
+        EXCCRISalesBudgetPage: Page 55494;
+        EXCCRISampleBudgetPage: Page 55495;
         EXCCRIVisitPlanningPage: Page 67097;
         EXCCRIVisitExecutionPage: Page 67098;
         EXCCRISampleDeliveryPage: Page 67039;

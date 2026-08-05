@@ -486,7 +486,7 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
 
             trigger OnValidate()
             var
-                ColAdop: Record 67026;
+                ColAdop: Record 55493;
             begin
                 IF ("Cod. Colegio" <> '') AND (Presupuesto = 0) THEN BEGIN
                     ColAdop.Reset();

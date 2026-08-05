@@ -137,7 +137,7 @@ report 55473 "Cerrar campaña"
                 //DELETEALL;
             end;
         }
-        dataitem(PromPptoVtas; 67027)
+        dataitem(PromPptoVtas; 55494)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Cod. Producto");
 

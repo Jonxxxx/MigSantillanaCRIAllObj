@@ -1,4 +1,4 @@
-table 67016 "Asistentes Talleres y Eventos"
+table 55483 "Asistentes Talleres y Eventos"
 {
 
     fields
@@ -268,12 +268,12 @@ table 67016 "Asistentes Talleres y Eventos"
         Prom: Record 13;
         TyE: Record 55478;
         Prof: Record 55468;
-        ProgTyE: Record 67015;
+        ProgTyE: Record 55482;
         Expos: Record 55468;
         Vend: Record 23;
-        Asist: Record 67016;
+        Asist: Record 55483;
         Err001: Label 'Teachers Total exceeds the capacity for the Event';
         Err002: Label 'Line can not be deleted because it is marked with% 1% %2';
-        rProgEv: Record 67015;
+        rProgEv: Record 55482;
 }
 

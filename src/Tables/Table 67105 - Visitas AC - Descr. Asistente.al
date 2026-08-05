@@ -18,7 +18,7 @@ table 67105 "Visitas A/C - Descr. Asistente"
 
             trigger OnValidate()
             var
-                Nivel: Record 67022;
+                Nivel: Record 55489;
                 DA: Record 55469;
             begin
 

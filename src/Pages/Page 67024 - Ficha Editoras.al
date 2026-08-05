@@ -1,7 +1,7 @@
-page 67024 "Ficha Editoras"
+page 55491 "Ficha Editoras"
 {
     PageType = Card;
-    SourceTable = 67024;
+    SourceTable = 55491;
 
     layout
     {
@@ -109,7 +109,7 @@ page 67024 "Ficha Editoras"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67025;
+                    RunObject = Page 55492;
                     RunPageLink = "Cod. Editorial" = FIELD("Code");
                 }
             }

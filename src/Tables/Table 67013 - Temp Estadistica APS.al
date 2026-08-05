@@ -1,7 +1,7 @@
 table 55480 "Temp Estadistica APS"
 {
-    DrillDownPageID = 67027;
-    LookupPageID = 67027;
+    DrillDownPageID = 55494;
+    LookupPageID = 55494;
 
     fields
     {

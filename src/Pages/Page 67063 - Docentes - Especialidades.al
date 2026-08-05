@@ -1,7 +1,7 @@
 page 67063 "Docentes - Especialidades"
 {
     PageType = Card;
-    SourceTable = 67018;
+    SourceTable = 55485;
 
     layout
     {

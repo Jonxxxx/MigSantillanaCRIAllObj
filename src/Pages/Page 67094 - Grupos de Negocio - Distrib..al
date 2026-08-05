@@ -96,7 +96,7 @@ page 67094 "Grupos de Negocio - Distrib."
 
     var
         ColAdopciones: Record 67053;
-        Editoras: Record 67024;
+        Editoras: Record 55491;
         da: Record 55469;
         TotalGen: Decimal;
         Total: Decimal;

@@ -1,8 +1,8 @@
-page 67020 "Alumnos - Hijos"
+page 55487 "Alumnos - Hijos"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = 67020;
+    SourceTable = 55487;
 
     layout
     {

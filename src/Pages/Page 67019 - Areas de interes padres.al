@@ -1,7 +1,7 @@
-page 67019 "Areas de interes padres"
+page 55486 "Areas de interes padres"
 {
     PageType = Card;
-    SourceTable = 67019;
+    SourceTable = 55486;
 
     layout
     {

@@ -1,7 +1,7 @@
-page 67031 "Carga Horaria"
+page 55498 "Carga Horaria"
 {
     PageType = Card;
-    SourceTable = 67031;
+    SourceTable = 55498;
 
     layout
     {

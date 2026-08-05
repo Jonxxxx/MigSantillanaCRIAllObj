@@ -2,7 +2,7 @@ page 67112 "Solic. Planif. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     PageType = List;
-    SourceTable = 67015;
+    SourceTable = 55482;
 
     layout
     {
@@ -80,7 +80,7 @@ page 67112 "Solic. Planif. Taller/Evento"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67016;
+                    RunObject = Page 55483;
                     RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                   "Tipo Evento" = FIELD("Tipo Evento"),
                                   "Secuencia" = FIELD("Secuencia"),
@@ -174,9 +174,9 @@ page 67112 "Solic. Planif. Taller/Evento"
 
     procedure AbrirPagAsistentes()
     var
-        ATE: Record 67016;
-        ATE2: Record 67016;
-        PagATE: Page 67016;
+        ATE: Record 55483;
+        ATE2: Record 55483;
+        PagATE: Page 55483;
     begin
         //MESSAGE('%1',Rec);
         ATE.RESET;

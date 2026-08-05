@@ -147,7 +147,7 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure InsertarTablaProgamacion(recPrmSolicitud: Record 67055)
     var
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
         intFila: Integer;
         Text001: Label 'Propuesto';
         Text002: Label 'Fecha';
@@ -299,13 +299,13 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure InsertarTablaAsistentes2(recPrmSolicitud: Record 67055)
     var
-        recAsistentes: Record 67016;
+        recAsistentes: Record 55483;
         intFila: Integer;
         Text001: Label 'Asistentes';
         Text002: Label 'Cod. docente';
         Text003: Label 'Nombre';
         Text004: Label 'Nivel';
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
         recCabPlan: Record 67051;
     begin
         //CPMCR-CEC+
@@ -368,7 +368,7 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure InsertarTablaMaterial2(recPrmSolicitud: Record 67055)
     var
-        recMaterial: Record 67014;
+        recMaterial: Record 55481;
         intFila: Integer;
         Text001: Label 'Material';
         Text002: Label 'Codigo';
@@ -413,7 +413,7 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure TraerGradoMaterial(recPrmMaterial: Record 67014): Code[20]
+    local procedure TraerGradoMaterial(recPrmMaterial: Record 55481): Code[20]
     var
         recProducto: Record 27;
     begin
@@ -440,7 +440,7 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure TraerDescripcionNivel(codPrmNivel: Code[20]): Text[100]
     var
-        recNivel: Record 67022;
+        recNivel: Record 55489;
     begin
         IF recNivel.GET(codPrmNivel) THEN
             EXIT(recNivel.Descripcion);
@@ -457,7 +457,7 @@ codeunit 55468 "Generacion Words APS"
     local procedure TraerNivelDocente(codPrmDocente: Code[20]): Text[100]
     var
         recDocente: Record 55468;
-        recNivel: Record 67022;
+        recNivel: Record 55489;
     begin
         IF recDocente.GET(codPrmDocente) THEN
             IF recNivel.GET(recDocente."Nivel Docente") THEN
@@ -522,7 +522,7 @@ codeunit 55468 "Generacion Words APS"
         Text002: Label 'El documento Word se ha generado y guardado en la ruta: ';
         tipoPlantilla: Option Solicitud,PPFF,VisitasCA;
         recCabPlan: Record 67051;
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
         textFechaProg: Text[30];
         textHoraInicio: Text[30];
         textHoraFin: Text[30];
@@ -633,13 +633,13 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure InsertarTablaAsistentes(recPrmSolicitud: Record 67055)
     var
-        recAsistentes: Record 67016;
+        recAsistentes: Record 55483;
         intFila: Integer;
         Text001: Label 'Asistentes';
         Text002: Label 'Especialidad';
         Text003: Label 'Grado';
         Text004: Label 'Nivel';
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
         recCabPlan: Record 67051;
         recNivel: Record 67080;
         recGrado: Record 67081;
@@ -1100,7 +1100,7 @@ codeunit 55468 "Generacion Words APS"
 
     local procedure InsertarTablaVisitas(var Prog: Record 67103; parCodigo: Code[20]; parNombre: Text[80]; parFecha1: Date; parFecha2: Date; var intFila: Integer; totalvis: Integer)
     var
-        recProgramacion: Record 67015;
+        recProgramacion: Record 55482;
         Text001: Label 'Propuesto';
         Text002: Label 'Fecha';
         Text003: Label 'Hora inicio';

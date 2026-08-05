@@ -106,12 +106,12 @@ table 67034 "Talleres y Eventos - Grados"
         TipoEvento: Record 55477;
         Colegio: Record 5050;
         Promotor: Record 13;
-        Expositor: Record 67021;
-        FRBitMap: Record 67032;
+        Expositor: Record 55488;
+        FRBitMap: Record 55499;
         DA: Record 55469;
         Docente: Record 55468;
         ColDocentes: Record 67043;
-        ATE: Record 67016;
+        ATE: Record 55483;
 
     procedure DisplayMap()
     var

@@ -1,4 +1,4 @@
-report 67022 "CDS Docentes por colegio"
+report 55489 "CDS Docentes por colegio"
 {
     // 0009 CAT Eliminacion de los ceros de la derecha del codigo CDS
     DefaultLayout = RDLC;

@@ -175,10 +175,10 @@ codeunit 55467 "Funciones APS"
         AdopcionesD: Record 67053;
         HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor: Record 67027;
+        PptoPromotor: Record 55494;
         GradosCol: Record 67037;
-        Editoriales: Record 67024;
-        Nivel: Record 67022;
+        Editoriales: Record 55491;
+        Nivel: Record 55489;
         DimVal: Record 349;
         DefDim: Record 352;
         Window: Dialog;

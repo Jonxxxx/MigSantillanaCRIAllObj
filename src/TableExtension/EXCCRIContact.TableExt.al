@@ -184,32 +184,32 @@ tableextension 55071 EXCCRIContact extends Contact
             DataClassification = CustomerContent;
         }
 
-        field(67014; "Pension BA"; Boolean)
+        field(55481; "Pension BA"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67015; "Importe Pension INI"; Decimal)
+        field(55482; "Importe Pension INI"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67016; "Importe Pension PRI"; Decimal)
+        field(55483; "Importe Pension PRI"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67017; "Importe Pension SEC"; Decimal)
+        field(55484; "Importe Pension SEC"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67018; "Importe Pension BA"; Decimal)
+        field(55485; "Importe Pension BA"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67019; "Delegacion"; Code[20])
+        field(55486; "Delegacion"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Dimension Value".Code;
@@ -234,7 +234,7 @@ tableextension 55071 EXCCRIContact extends Contact
             end;
         }
 
-        field(67020; "Distribucion Geografica"; Code[20])
+        field(55487; "Distribucion Geografica"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Dimension Value".Code;
@@ -259,7 +259,7 @@ tableextension 55071 EXCCRIContact extends Contact
             end;
         }
 
-        field(67021; "Codigo Postal"; Code[20])
+        field(55488; "Codigo Postal"; Code[20])
         {
             DataClassification = CustomerContent;
 
@@ -269,7 +269,7 @@ tableextension 55071 EXCCRIContact extends Contact
             end;
         }
 
-        field(67022; "Samples Location Code"; Code[20])
+        field(55489; "Samples Location Code"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Location where("Use As In-Transit" = const(false));

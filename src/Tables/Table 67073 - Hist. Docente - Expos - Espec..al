@@ -89,7 +89,7 @@ table 67073 "Hist. Docente - Expos - Espec."
 
     var
         Docente: Record 55468;
-        Expositor: Record 67021;
+        Expositor: Record 55488;
         DA: Record 55469;
 }
 

@@ -1018,23 +1018,23 @@ Skipped TODO markers: **18**
 
 ### Files inspected and modified
 
-- `src/Pages/Page 67015 - Programac. Talleres y Eventos.al`
-- `src/Pages/Page 67018 - Areas de interes.al`
-- `src/Pages/Page 67021 - Distribuidor.al`
-- `src/Pages/Page 67027 - Promotores - Ppto Vtas.al`
-- `src/Pages/Page 67028 - Promotores - Ppto Muestras.al`
+- `src/Pages/Page 55482 - Programac. Talleres y Eventos.al`
+- `src/Pages/Page 55485 - Areas de interes.al`
+- `src/Pages/Page 55488 - Distribuidor.al`
+- `src/Pages/Page 55494 - Promotores - Ppto Vtas.al`
+- `src/Pages/Page 55495 - Promotores - Ppto Muestras.al`
 - `src/Pages/Page 67038 - Promotor - Planif. Visitas.al`
 - `src/Pages/Page 67045 - Lista Colegio - Docentes.al`
 - `src/Pages/Page 67051 - Colegio - Adopciones Cab.al`
 
 ### TODOs resolved
 
-- Page 67015: restored the pedagogical-hours field using the exact repository
+- Page 55482: restored the pedagogical-hours field using the exact repository
   field name.
-- Page 67018: restored the source-table view and insert-time record type using
+- Page 55485: restored the source-table view and insert-time record type using
   the verified custom option member and key.
-- Page 67021: restored the distributor-to-event page link.
-- Pages 67027 and 67028: restored reports 55467 and 55469 and their verified
+- Page 55488: restored the distributor-to-event page link.
+- Pages 55494 and 55495: restored reports 55467 and 55469 and their verified
   public parameter procedures for sales and sample budgets.
 - Page 67038: restored the verified custom sample-inventory calculation.
 - Page 67045: restored the current `Docente - E-Mail 2` field.

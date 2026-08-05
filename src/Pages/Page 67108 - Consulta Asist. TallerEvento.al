@@ -3,7 +3,7 @@ page 67108 "Consulta Asist. Taller/Evento"
     Caption = 'View Assist. Workshop/Events';
     Editable = false;
     PageType = ListPart;
-    SourceTable = 67016;
+    SourceTable = 55483;
 
     layout
     {

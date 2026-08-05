@@ -1,4 +1,4 @@
-table 67029 "Hist. Promotor - Ppto Muestras"
+table 55496 "Hist. Promotor - Ppto Muestras"
 {
 
     fields

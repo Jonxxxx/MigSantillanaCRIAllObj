@@ -6,7 +6,7 @@ page 67098 "Lista Planificacion Ejecucion"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67023;
+    SourceTable = 55490;
     SourceTableView = SORTING("Cod. Promotor", Semana)
                       ORDER(Descending)
                       WHERE("Estado" = FILTER(> ' '));

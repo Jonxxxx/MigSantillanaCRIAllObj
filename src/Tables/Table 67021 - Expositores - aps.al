@@ -1,4 +1,4 @@
-table 67021 "Expositores - aps"
+table 55488 "Expositores - aps"
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;

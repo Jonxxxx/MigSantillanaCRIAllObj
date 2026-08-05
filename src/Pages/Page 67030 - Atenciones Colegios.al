@@ -1,7 +1,7 @@
-page 67030 "Atenciones Colegios"
+page 55497 "Atenciones Colegios"
 {
     PageType = Card;
-    SourceTable = 67030;
+    SourceTable = 55497;
 
     layout
     {

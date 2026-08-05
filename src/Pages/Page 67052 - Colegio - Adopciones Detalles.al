@@ -304,10 +304,10 @@ page 67052 "Colegio - Adopciones Detalles"
     var
         HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor: Record 67027;
-        TempAdopciones: Record 67026 temporary;
+        PptoPromotor: Record 55494;
+        TempAdopciones: Record 55493 temporary;
         GradosCol: Record 67037;
-        Editoriales: Record 67024;
+        Editoriales: Record 55491;
         SP: Record 7002;
         Cust: Record 18;
         NoMov: Integer;
@@ -363,7 +363,7 @@ page 67052 "Colegio - Adopciones Detalles"
 
     procedure AdopCompetencia()
     var
-        ColAdopCompet: Record 67033;
+        ColAdopCompet: Record 55500;
         fColAdopCompet: Page 67092;
         ColAdopDet: Record 67053;
     begin

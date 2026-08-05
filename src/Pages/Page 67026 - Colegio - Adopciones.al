@@ -1,4 +1,4 @@
-page 67026 "Colegio - Adopciones"
+page 55493 "Colegio - Adopciones"
 {
     DeleteAllowed = false;
     Editable = false;

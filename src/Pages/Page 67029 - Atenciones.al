@@ -1,7 +1,7 @@
-page 67029 Atenciones
+page 55496 Atenciones
 {
     PageType = Card;
-    SourceTable = 67029;
+    SourceTable = 55496;
 
     layout
     {

@@ -16,7 +16,7 @@ table 67087 "Solicitud - Competencia"
 
             trigger OnValidate()
             var
-                rEditoriales: Record 67024;
+                rEditoriales: Record 55491;
             begin
                 IF rEditoriales.GET("Cod. Editorial") THEN
                     "Nombre Editorial" := rEditoriales.Description;
@@ -34,7 +34,7 @@ table 67087 "Solicitud - Competencia"
 
             trigger OnValidate()
             var
-                LibComp: Record 67025;
+                LibComp: Record 55492;
                 Err001: Label 'El libro introducido no existe.';
             begin
                 IF "Cod. Libro" <> '' THEN BEGIN
@@ -134,8 +134,8 @@ table 67087 "Solicitud - Competencia"
 
     procedure Libros()
     var
-        rLib: Record 67025;
-        fLib: Page 67025;
+        rLib: Record 55492;
+        fLib: Page 55492;
     begin
 
         IF "Cod. Editorial" <> '' THEN

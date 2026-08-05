@@ -68,7 +68,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
                     StyleExpr = TRUE;
                 }
             }
-            part(SubFormPTyE; 67015)
+            part(SubFormPTyE; 55482)
             {
                 SubPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                               "Tipo Evento" = FIELD("Tipo Evento"),
@@ -99,9 +99,9 @@ page 67139 "Solicitud -Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        MatTyE: Record 67014;
-                        MatTyE2: Record 67014;
-                        PgMatTyE: Page 67014;
+                        MatTyE: Record 55481;
+                        MatTyE2: Record 55481;
+                        PgMatTyE: Page 55481;
                     begin
                         MatTyE.RESET;
                         MatTyE.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
@@ -143,7 +143,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rProg: Record 67015;
+        rProg: Record 55482;
         rSol: Record 67055;
     begin
         /*

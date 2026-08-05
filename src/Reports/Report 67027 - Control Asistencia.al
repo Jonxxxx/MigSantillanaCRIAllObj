@@ -1,4 +1,4 @@
-report 67027 "Control Asistencia"
+report 55494 "Control Asistencia"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Control Asistencia.rdl';
@@ -50,7 +50,7 @@ report 67027 "Control Asistencia"
             column(Cab__Planif__Evento_SecuenciaCaption; FIELDCAPTION(Secuencia))
             {
             }
-            dataitem("Programac. Talleres y Eventos"; 67015)
+            dataitem("Programac. Talleres y Eventos"; 55482)
             {
                 DataItemLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                Expositor = FIELD(Expositor),
@@ -95,7 +95,7 @@ report 67027 "Control Asistencia"
                 column(Programac__Talleres_y_Eventos_Secuencia; Secuencia)
                 {
                 }
-                dataitem("Asistentes Talleres y Eventos"; 67016)
+                dataitem("Asistentes Talleres y Eventos"; 55483)
                 {
                     DataItemLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                    "Cod. Expositor" = FIELD(Expositor),

@@ -1,7 +1,7 @@
 page 67056 "Ficha de Alumnos"
 {
     PageType = Card;
-    SourceTable = 67020;
+    SourceTable = 55487;
 
     layout
     {

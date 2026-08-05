@@ -176,7 +176,7 @@ codeunit 55269 "APS Paso 2"
 
     var
         T34002809: Record 55476;
-        T34002826: Record 67026;
+        T34002826: Record 55493;
         T34002835: Record 67035;
         T34002852: Record 67052;
         T34002853: Record 67053;

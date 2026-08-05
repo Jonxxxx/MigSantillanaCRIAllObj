@@ -1,4 +1,4 @@
-table 67017 Padres
+table 55484 Padres
 {
     DrillDownPageID = 67049;
     LookupPageID = 67049;

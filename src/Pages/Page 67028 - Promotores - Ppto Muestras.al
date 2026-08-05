@@ -1,9 +1,9 @@
-page 67028 "Promotores - Ppto Muestras"
+page 55495 "Promotores - Ppto Muestras"
 {
     Caption = 'Samples budget Commercial';
     DataCaptionFields = "Cod. Promotor", "Nombre Promotor";
     PageType = Card;
-    SourceTable = 67028;
+    SourceTable = 55495;
 
     layout
     {

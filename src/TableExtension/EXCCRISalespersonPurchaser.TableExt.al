@@ -82,8 +82,8 @@ tableextension 55004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
 
     procedure CheckTrans()
     var
-        EXCCRISalesBudget: Record 67027;
-        EXCCRISampleBudget: Record 67028;
+        EXCCRISalesBudget: Record 55494;
+        EXCCRISampleBudget: Record 55495;
         EXCCRIAdoption: Record 67053;
     begin
         EXCCRISalesBudget.SetRange("Cod. Promotor", Code);

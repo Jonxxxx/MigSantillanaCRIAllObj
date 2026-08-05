@@ -7,7 +7,7 @@ report 55478 "Alcance presupuesto promotor"
 
     dataset
     {
-        dataitem(Presupuesto; 67027)
+        dataitem(Presupuesto; 55494)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Cod. Producto")
                                 WHERE("Cod. Promotor" = FILTER(<> ''));
@@ -213,7 +213,7 @@ report 55478 "Alcance presupuesto promotor"
     var
         recCfgAPS: Record 55467;
         recAdopciones: Record 67053;
-        recNivel: Record 67022;
+        recNivel: Record 55489;
         codLinNeg: Code[20];
         texDescLinNeg: Text[100];
         codFamilia: Code[20];

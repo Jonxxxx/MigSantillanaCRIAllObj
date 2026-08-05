@@ -122,8 +122,8 @@ report 55469 "Importa Presupuestos Comercial"
 
     var
         ExcelBuf: Record "Excel Buffer" temporary;
-        PptoVentas: Record 67027;
-        PptoMuestras: Record 67028;
+        PptoVentas: Record 55494;
+        PptoMuestras: Record 55495;
         TempBlob: Codeunit "Temp Blob";
         Celda: Code[6];
         FileName: Text[250];

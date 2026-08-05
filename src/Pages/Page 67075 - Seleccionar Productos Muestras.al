@@ -87,7 +87,7 @@ page 67075 "Seleccionar Productos Muestras"
         TH: Record 5740;
         TL: Record 5741;
         TransLine2: Record 5741;
-        PPM: Record 67028;
+        PPM: Record 55495;
         Seleccionar: Boolean;
         NoDocumento: Code[20];
 

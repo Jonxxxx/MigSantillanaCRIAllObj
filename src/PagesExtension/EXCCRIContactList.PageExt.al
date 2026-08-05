@@ -103,7 +103,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Adoptions';
-                    RunObject = Page 67026;
+                    RunObject = Page 55493;
                     RunPageLink = "Cod. Editorial" = field("No.");
                     ToolTip = 'Opens the adoption records associated with the school.';
                 }
@@ -111,7 +111,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Gifts';
-                    RunObject = Page 67030;
+                    RunObject = Page 55497;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the gifts associated with the school.';
                 }
@@ -127,7 +127,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Students';
-                    RunObject = Page 67020;
+                    RunObject = Page 55487;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the students associated with the school.';
                 }

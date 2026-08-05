@@ -1,4 +1,4 @@
-table 67033 "Colegio - Adopciones compet."
+table 55500 "Colegio - Adopciones compet."
 {
     DrillDownPageID = 67052;
     LookupPageID = 67052;
@@ -543,28 +543,28 @@ table 67033 "Colegio - Adopciones compet."
     var
         ConfAPS: Record 55467;
         ColNiv: Record 67036;
-        Editora: Record 67024;
+        Editora: Record 55491;
         GradoCol: Record 67037;
         Item: Record 27;
         ProdEq: Record 55472;
         CabAdopciones: Record 67052;
         DA: Record 55469;
-        ColegioAdopciones: Record 67026;
-        ColegioAdopciones2Record: Record 67026;
+        ColegioAdopciones: Record 55493;
+        ColegioAdopciones2Record: Record 55493;
         DimVal: Record 349;
         //TOOD: Ver DimForm: Page 560;
         DefDim: Record 352;
-        ProdEdit: Record 67025;
+        ProdEdit: Record 55492;
 
     procedure BuscaHistorico()
     var
-        Adopciones: Record 67026;
-        Adopciones2Record: Record 67026;
+        Adopciones: Record 55493;
+        Adopciones2Record: Record 55493;
         AdopcionesD: Record 67053;
         HAdopciones: Record 67035;
-        Editoriales: Record 67024;
+        Editoriales: Record 55491;
         GradosCol: Record 67037;
-        PptoPromotor: Record 67027;
+        PptoPromotor: Record 55494;
         Camp: Integer;
     begin
         /*

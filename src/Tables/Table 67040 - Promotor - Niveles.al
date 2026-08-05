@@ -50,6 +50,6 @@ table 67040 "Promotor - Niveles"
     }
 
     var
-        Nivel: Record 67022;
+        Nivel: Record 55489;
 }
 

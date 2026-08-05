@@ -1,4 +1,4 @@
-table 67014 "Materiales Talleres y Eventos"
+table 55481 "Materiales Talleres y Eventos"
 {
 
     fields

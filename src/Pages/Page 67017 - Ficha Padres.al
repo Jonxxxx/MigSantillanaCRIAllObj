@@ -1,8 +1,8 @@
-page 67017 "Ficha Padres"
+page 55484 "Ficha Padres"
 {
     Caption = 'Father Card';
     PageType = Card;
-    SourceTable = 67017;
+    SourceTable = 55484;
 
     layout
     {
@@ -214,7 +214,7 @@ page 67017 "Ficha Padres"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67019;
+                    RunObject = Page 55486;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
                 action("&Children")
@@ -225,7 +225,7 @@ page 67017 "Ficha Padres"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67020;
+                    RunObject = Page 55487;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
 

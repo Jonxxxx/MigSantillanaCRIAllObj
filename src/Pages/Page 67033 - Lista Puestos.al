@@ -1,4 +1,4 @@
-page 67033 "Lista Puestos"
+page 55500 "Lista Puestos"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Jobs';

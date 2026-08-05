@@ -1,4 +1,4 @@
-table 67022 "Nivel Educativo APS"
+table 55489 "Nivel Educativo APS"
 {
     DrillDownPageID = 67099;
     LookupPageID = 67099;

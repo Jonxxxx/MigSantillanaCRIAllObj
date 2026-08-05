@@ -639,7 +639,7 @@
 
 ### Batch 27
 
-- Reports inspected: 10 (55480, 67014, 67015, 67016, 67017, 67018, 67019, 67020, 67021, 67022)
+- Reports inspected: 10 (55480, 55481, 55482, 55483, 55484, 55485, 55486, 55487, 55488, 55489)
 - Reports modified: 2
 - Reports with request pages: 10
 - Reports without request pages: 0
@@ -657,12 +657,12 @@
 - New errors introduced: 0
 - Remaining reports: 11
 - Remaining noncompliant request-page fields: 5
-- Last processed report: 67022
+- Last processed report: 55489
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 28
 
-- Reports inspected: 10 (67023, 67024, 67025, 67026, 67027, 67028, 67030, 67044, 70500, 75000)
+- Reports inspected: 10 (55490, 55491, 55492, 55493, 55494, 55495, 55497, 67044, 70500, 75000)
 - Reports modified: 3
 - Reports with request pages: 10
 - Reports without request pages: 0

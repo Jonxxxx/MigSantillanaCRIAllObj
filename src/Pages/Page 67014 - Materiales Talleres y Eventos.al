@@ -1,9 +1,9 @@
-page 67014 "Materiales Talleres y Eventos"
+page 55481 "Materiales Talleres y Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     AutoSplitKey = true;
     PageType = List;
-    SourceTable = 67014;
+    SourceTable = 55481;
     UsageCategory = Administration;
 
     layout

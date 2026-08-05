@@ -6,7 +6,7 @@ page 67049 "Lista Padres"
     DataCaptionFields = DNI, "First Name";
     Editable = false;
     PageType = List;
-    SourceTable = 67017;
+    SourceTable = 55484;
     UsageCategory = Lists;
 
     layout
@@ -151,7 +151,7 @@ page 67049 "Lista Padres"
                     ApplicationArea = All;
                     Caption = '&Interest area';
                     ToolTip = '&Interest area';
-                    RunObject = Page 67019;
+                    RunObject = Page 55486;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
                 action("&Children")
@@ -159,7 +159,7 @@ page 67049 "Lista Padres"
                     ApplicationArea = All;
                     Caption = '&Children';
                     ToolTip = '&Children';
-                    RunObject = Page 67020;
+                    RunObject = Page 55487;
                     RunPageLink = "DNI Padre" = FIELD("DNI");
                 }
             }

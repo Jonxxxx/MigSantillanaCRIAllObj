@@ -1,7 +1,7 @@
 table 67097 "Historico Ranking CVM vertical"
 {
-    DrillDownPageID = 67027;
-    LookupPageID = 67027;
+    DrillDownPageID = 55494;
+    LookupPageID = 55494;
 
     fields
     {

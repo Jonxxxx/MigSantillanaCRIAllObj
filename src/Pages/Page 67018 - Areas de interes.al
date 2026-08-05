@@ -1,4 +1,4 @@
-page 67018 "Areas de interes"
+page 55485 "Areas de interes"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Areas of interest';

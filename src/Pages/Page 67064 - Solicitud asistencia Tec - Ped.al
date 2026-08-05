@@ -1201,7 +1201,7 @@ page 67064 "Solicitud asistencia Tec - Ped"
     procedure Act_AsistentesReales()
     var
         CabPlanEvent: Record 67051;
-        rProg: Record 67015;
+        rProg: Record 55482;
         Asist: Integer;
     begin
 

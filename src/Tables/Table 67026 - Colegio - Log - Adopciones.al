@@ -1,4 +1,4 @@
-table 67026 "Colegio - Log - Adopciones"
+table 55493 "Colegio - Log - Adopciones"
 {
     DrillDownPageID = 67051;
     LookupPageID = 67051;
@@ -292,14 +292,14 @@ table 67026 "Colegio - Log - Adopciones"
     var
         ConfAPS: Record 55467;
         ColNiv: Record 67036;
-        Editora: Record 67024;
+        Editora: Record 55491;
         GradoCol: Record 67037;
         Item: Record 27;
         ProdEq: Record 55472;
         CabAdopciones: Record 67052;
         DA: Record 55469;
-        ColegioAdopciones: Record 67026;
-        ColegioAdopciones2Record: Record 67026;
+        ColegioAdopciones: Record 55493;
+        ColegioAdopciones2Record: Record 55493;
         DimVal: Record 349;
         //TOOD: Ver DimForm: Page 560;
         DefDim: Record 352;

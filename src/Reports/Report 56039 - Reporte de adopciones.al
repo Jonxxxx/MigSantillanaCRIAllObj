@@ -199,8 +199,8 @@ report 55264 "Reporte de adopciones"
         Text007: Label 'Reporte de adopciones CR-NAV 2021';
         Contact: Record 5050;
         SalesPrice: Record 7002;
-        NivelEducativoAPS: Record 67022;
-        Editoras: Record 67024;
+        NivelEducativoAPS: Record 55489;
+        Editoras: Record 55491;
         SalespersonPurchaser: Record 13;
         Cust: Record 18;
         Precio1: Decimal;

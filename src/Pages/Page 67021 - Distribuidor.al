@@ -1,4 +1,4 @@
-page 67021 Distribuidor
+page 55488 Distribuidor
 {
     PageType = Card;
     SourceTable = 67065;

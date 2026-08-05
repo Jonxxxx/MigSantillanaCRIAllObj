@@ -1,7 +1,7 @@
-table 67020 "Alumnos - Hijos"
+table 55487 "Alumnos - Hijos"
 {
-    DrillDownPageID = 67020;
-    LookupPageID = 67020;
+    DrillDownPageID = 55487;
+    LookupPageID = 55487;
 
     fields
     {
@@ -175,7 +175,7 @@ table 67020 "Alumnos - Hijos"
     }
 
     var
-        Father: Record 67017;
+        Father: Record 55484;
         PostCode: Record 225;
         Msg001: Label 'Do you wish to copy the address from the father?';
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';

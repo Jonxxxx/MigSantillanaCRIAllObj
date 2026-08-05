@@ -1,9 +1,9 @@
-table 67015 "Programac. Talleres y Eventos"
+table 55482 "Programac. Talleres y Eventos"
 {
     // 0009 CAT Se modifica el campo Horas dictadas por Horas Pedag gicas
 
-    DrillDownPageID = 67015;
-    LookupPageID = 67015;
+    DrillDownPageID = 55482;
+    LookupPageID = 55482;
 
     fields
     {
@@ -271,9 +271,9 @@ table 67015 "Programac. Talleres y Eventos"
 
     trigger OnInsert()
     var
-        rRec: Record 67015;
-        rAsist: Record 67016;
-        rAsist2: Record 67016;
+        rRec: Record 55482;
+        rAsist: Record 55483;
+        rAsist2: Record 55483;
     begin
         "Fecha inscripcion" := TODAY;
         "Fecha Solicitud" := TODAY;

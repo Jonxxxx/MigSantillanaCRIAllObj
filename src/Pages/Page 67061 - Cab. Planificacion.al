@@ -2,7 +2,7 @@ page 67061 "Cab. Planificacion"
 {
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     PageType = Card;
-    SourceTable = 67023;
+    SourceTable = 55490;
 
     layout
     {
@@ -163,7 +163,7 @@ page 67061 "Cab. Planificacion"
 
     var
         CommercialSetup: Record 55467;
-        CabPlanifReg: Record 67023;
+        CabPlanifReg: Record 55490;
         User: Record 91;
         Promotor: Record 13;
         Planif: Record 67038;

@@ -1,4 +1,4 @@
-report 67025 "Imp.Asist. Tallares x Lote"
+report 55492 "Imp.Asist. Tallares x Lote"
 {
     ApplicationArea = All;
     Caption = 'Import Assistance workshops by Lot';
@@ -90,7 +90,7 @@ report 67025 "Imp.Asist. Tallares x Lote"
     var
         ExcelBuf: Record "Excel Buffer" temporary;
         PlanifEvento: Record 67051;
-        "Asist_T&E": Record 67016;
+        "Asist_T&E": Record 55483;
         Docente: Record 55468;
         TempBlob: Codeunit "Temp Blob";
         FileName: Text[250];

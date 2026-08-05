@@ -357,31 +357,31 @@ table 55008 "Colegio - Adopciones Detalle2"
     var
         ConfAPS: Record 55467;
         ColNiv: Record 67036;
-        Editora: Record 67024;
+        Editora: Record 55491;
         GradoCol: Record 67037;
         Item: Record 27;
         ProdEq: Record 55472;
         CabAdopciones: Record 67052;
         DA: Record 55469;
-        ColegioAdopciones: Record 67026;
-        ColegioAdopciones2: Record 67026;
+        ColegioAdopciones: Record 55493;
+        ColegioAdopciones2: Record 55493;
         DimVal: Record 349;
         DimForm: Page "Dimension Value List";
-        LibroComp: Page 67025;
+        LibroComp: Page 55492;
         DefDim: Record 352;
-        ProdEdit: Record 67025;
-        Nivel: Record 67022;
+        ProdEdit: Record 55492;
+        Nivel: Record 55489;
         Err001: Label 'This item has Status of adopted by Santillana';
 
     procedure BuscaHistorico()
     var
-        Adopciones: Record 67026;
-        Adopciones2: Record 67026;
+        Adopciones: Record 55493;
+        Adopciones2: Record 55493;
         AdopcionesD: Record 67053;
         HAdopciones: Record 67035;
-        Editoriales: Record 67024;
+        Editoriales: Record 55491;
         GradosCol: Record 67037;
-        PptoPromotor: Record 67027;
+        PptoPromotor: Record 55494;
         Camp: Integer;
         UpdateActivo: Boolean;
     begin

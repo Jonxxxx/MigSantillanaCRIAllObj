@@ -1,4 +1,4 @@
-table 67019 "Areas de interes padres"
+table 55486 "Areas de interes padres"
 {
     Caption = 'Tandas';
 

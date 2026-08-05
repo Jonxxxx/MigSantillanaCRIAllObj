@@ -63,7 +63,7 @@ report 55266 "Reporte de Agenda CR"
     var
         ExcelBuffer: Record 370 temporary;
         PrintToExcel: Boolean;
-        CabPlanificacion: Record 67023;
+        CabPlanificacion: Record 55490;
         Text007: Label 'Reporte Agenda CR';
         SalespersonPurchaser: Record 13;
 

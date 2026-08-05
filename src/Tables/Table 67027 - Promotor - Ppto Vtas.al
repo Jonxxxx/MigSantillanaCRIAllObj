@@ -1,7 +1,7 @@
-table 67027 "Promotor - Ppto Vtas"
+table 55494 "Promotor - Ppto Vtas"
 {
-    DrillDownPageID = 67027;
-    LookupPageID = 67027;
+    DrillDownPageID = 55494;
+    LookupPageID = 55494;
 
     fields
     {

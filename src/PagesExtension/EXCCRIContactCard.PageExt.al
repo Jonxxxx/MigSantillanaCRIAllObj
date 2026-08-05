@@ -317,7 +317,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = BankAccountRec;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67026;
+                    RunObject = Page 55493;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the adoptions associated with the school.';
                 }

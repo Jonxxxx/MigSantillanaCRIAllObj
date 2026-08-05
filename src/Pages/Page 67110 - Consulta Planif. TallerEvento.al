@@ -2,7 +2,7 @@ page 67110 "Consulta Planif. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     PageType = ListPart;
-    SourceTable = 67015;
+    SourceTable = 55482;
 
     layout
     {
@@ -100,9 +100,9 @@ page 67110 "Consulta Planif. Taller/Evento"
 
     procedure AbrirPagAsistentes()
     var
-        ATE: Record 67016;
-        ATE2: Record 67016;
-        PagATE: Page 67016;
+        ATE: Record 55483;
+        ATE2: Record 55483;
+        PagATE: Page 55483;
     begin
         //MESSAGE('%1',Rec);
         ATE.RESET;

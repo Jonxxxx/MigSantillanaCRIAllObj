@@ -1,4 +1,4 @@
-report 67018 "Pedidos por cliente"
+report 55485 "Pedidos por cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pedidos por cliente.rdl';

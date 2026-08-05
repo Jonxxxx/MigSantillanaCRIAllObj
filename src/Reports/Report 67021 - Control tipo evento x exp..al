@@ -1,11 +1,11 @@
-report 67021 "Control tipo evento x exp."
+report 55488 "Control tipo evento x exp."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Control tipo evento x exp..rdl';
 
     dataset
     {
-        dataitem(Eventos; 67015)
+        dataitem(Eventos; 55482)
         {
             DataItemTableView = SORTING(Expositor, "Fecha programacion");
             RequestFilterFields = "Cod. Colegio", "Fecha programacion", "Cod. Promotor", Expositor, "Tipo Evento";

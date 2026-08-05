@@ -1,4 +1,4 @@
-table 67025 "Libros Competencia"
+table 55492 "Libros Competencia"
 {
 
     fields

@@ -101,7 +101,7 @@ page 55479 "Ficha Talleres - Eventos"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67014;
+                    RunObject = Page 55481;
                     RunPageLink = "Cod. Taller - Evento" = FIELD("No."),
                                   "Tipo Evento" = FIELD("Tipo de Evento"),
                                   "Secuencia" = CONST(0);

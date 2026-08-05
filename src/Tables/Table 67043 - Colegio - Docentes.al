@@ -272,10 +272,10 @@ table 67043 "Colegio - Docentes"
     var
         DA: Record 55469;
         ColNiv: Record 67036;
-        NivelE: Record 67022;
+        NivelE: Record 55489;
         PromRuta: Record 67044;
         Docente: Record 55468;
         recColegio: Record 5050;
-        Cargo: Page 67033;
+        Cargo: Page 55500;
 }
 

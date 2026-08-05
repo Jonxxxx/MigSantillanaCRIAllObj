@@ -318,7 +318,7 @@ table 67038 "Promotor - Planif. Visita"
 
     var
         Col: Record 5050;
-        CabPlanif: Record 67023;
+        CabPlanif: Record 55490;
         Err001: Label 'The date %1 is out of range allowed for the week %2';
         PersCol: Record 67043;
         DA: Record 55469;

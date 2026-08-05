@@ -16,7 +16,7 @@ page 67103 "Seleccionar Docentes"
 
                     trigger OnValidate()
                     var
-                        AsistEvento: Record 67016;
+                        AsistEvento: Record 55483;
                     begin
 
                         IF Seleccionar THEN BEGIN
@@ -109,7 +109,7 @@ page 67103 "Seleccionar Docentes"
 
     trigger OnAfterGetRecord()
     var
-        AsistEvento: Record 67016;
+        AsistEvento: Record 55483;
     begin
         Seleccionar := FALSE;
         AsistEvento.RESET;
@@ -129,7 +129,7 @@ page 67103 "Seleccionar Docentes"
     end;
 
     var
-        Asistentes: Record 67016;
+        Asistentes: Record 55483;
         CabPlanifEvento: Record 67051;
         gCodEvento: Code[20];
         gCodExpositor: Code[20];
@@ -147,7 +147,7 @@ page 67103 "Seleccionar Docentes"
 
     local procedure OKOnPush()
     var
-        Programacion: Record 67015;
+        Programacion: Record 55482;
     begin
         CabPlanifEvento.RESET;
         CabPlanifEvento.SETRANGE("Tipo Evento", gTipoEvento);

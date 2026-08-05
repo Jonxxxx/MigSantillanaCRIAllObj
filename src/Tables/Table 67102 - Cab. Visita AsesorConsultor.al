@@ -693,7 +693,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
     procedure TraerProgramac(parSolicitud: Code[20])
     var
         rProgVisita: Record 67103;
-        rProgSolic: Record 67015;
+        rProgSolic: Record 55482;
         rCabPlanif: Record 67051;
     begin
 

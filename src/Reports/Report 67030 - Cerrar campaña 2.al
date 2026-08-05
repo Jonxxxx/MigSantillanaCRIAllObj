@@ -1,4 +1,4 @@
-report 67030 "Cerrar campaña 2"
+report 55497 "Cerrar campaña 2"
 {
     // ------------------------------------------------------------------------
     // No.     Fecha           Firma         Descripcion

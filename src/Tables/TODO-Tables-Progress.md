@@ -1125,7 +1125,7 @@
 
 ### Batch 35
 
-- Tables inspected: 10 (55480, 67014, 67015, 67016, 67017, 67018, 67019, 67020, 67021, 67022)
+- Tables inspected: 10 (55480, 55481, 55482, 55483, 55484, 55485, 55486, 55487, 55488, 55489)
 - Tables modified: 10
 - Normal fields inspected: 235
 - FlowFields inspected: 10
@@ -1141,11 +1141,11 @@
 - Remaining table objects: 162
 - Remaining noncompliant Normal fields: 3586
 - Remaining fields without exact-name Captions: 2399
-- Last processed table: 67022 "Nivel Educativo APS"
+- Last processed table: 55489 "Nivel Educativo APS"
 
 ### Batch 36
 
-- Tables inspected: 10 (67023, 67024, 67025, 67026, 67027, 67028, 67029, 67030, 67031, 67032)
+- Tables inspected: 10 (55490, 55491, 55492, 55493, 55494, 55495, 55496, 55497, 55498, 55499)
 - Tables modified: 10
 - Normal fields inspected: 122
 - FlowFields inspected: 8
@@ -1161,11 +1161,11 @@
 - Remaining table objects: 152
 - Remaining noncompliant Normal fields: 3464
 - Remaining fields without exact-name Captions: 2280
-- Last processed table: 67032 "FlagsInRepeater Bitmaps"
+- Last processed table: 55499 "FlagsInRepeater Bitmaps"
 
 ### Batch 37
 
-- Tables inspected: 10 (67033, 67034, 67035, 67036, 67037, 67038, 67039, 67040, 67041, 67042)
+- Tables inspected: 10 (55500, 67034, 67035, 67036, 67037, 67038, 67039, 67040, 67041, 67042)
 - Tables modified: 10
 - Normal fields inspected: 187
 - FlowFields inspected: 24

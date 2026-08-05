@@ -292,9 +292,9 @@ table 67052 "Colegio - Adopciones Cab"
 
     var
         ConfAPS: Record 55467;
-        Nivel: Record 67022;
+        Nivel: Record 55489;
         ColNiv: Record 67036;
-        Editora: Record 67024;
+        Editora: Record 55491;
         GradoCol: Record 67037;
         Item: Record 27;
         ProdEq: Record 55472;

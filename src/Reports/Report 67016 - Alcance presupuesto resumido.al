@@ -1,4 +1,4 @@
-report 67016 "Alcance presupuesto resumido"
+report 55483 "Alcance presupuesto resumido"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Alcance presupuesto resumido.rdl';
@@ -240,7 +240,7 @@ report 67016 "Alcance presupuesto resumido"
     procedure CargarDatosTemp()
     var
         recTmpRep: Record 67060 temporary;
-        recPpto: Record 67027;
+        recPpto: Record 55494;
         recAdopciones: Record 67053;
         recProducto: Record 27;
         codNivel: Code[20];

@@ -1,21 +1,21 @@
-table 67031 "Carga Horaria"
+table 55498 "Carga Horaria"
 {
-    DrillDownPageID = 67031;
-    LookupPageID = 67031;
+    DrillDownPageID = 55498;
+    LookupPageID = 55498;
 
     fields
     {
-        field(1;Codigo;Code[20])
+        field(1; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;Descripcion;Text[100])
+        field(2; Descripcion; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
         }
-        field(3;"Cantidad horas";Decimal)
+        field(3; "Cantidad horas"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad horas';
@@ -24,7 +24,7 @@ table 67031 "Carga Horaria"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

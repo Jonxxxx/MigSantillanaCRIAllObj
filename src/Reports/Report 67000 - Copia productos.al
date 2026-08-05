@@ -66,8 +66,8 @@ report 55467 "Copia productos"
 
     var
         Text001: Label 'Reading item  #1########## @2@@@@@@@@@@@@@';
-        PptoVentas: Record 67027;
-        PptoMuestras: Record 67028;
+        PptoVentas: Record 55494;
+        PptoMuestras: Record 55495;
         Promotor: Code[20];
         Window: Dialog;
         CounterTotal: Integer;

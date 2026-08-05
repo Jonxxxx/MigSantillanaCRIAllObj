@@ -369,17 +369,17 @@ page 67051 "Colegio - Adopciones Cab"
     end;
 
     var
-        Adopciones: Record 67026;
-        Adopciones2Record: Record 67026;
+        Adopciones: Record 55493;
+        Adopciones2Record: Record 55493;
         AdopcionesD: Record 67053;
         HAdopciones: Record 67035;
         Item: Record 27;
-        PptoPromotor: Record 67027;
-        TempAdopciones: Record 67026 temporary;
+        PptoPromotor: Record 55494;
+        TempAdopciones: Record 55493 temporary;
         GradosCol: Record 67037;
-        Editoriales: Record 67024;
+        Editoriales: Record 55491;
         ConfAPS: Record 55467;
-        Nivel: Record 67022;
+        Nivel: Record 55489;
         DefDim: Record 352;
         DimVal: Record 349;
         FuncAPS: Codeunit 55467;
