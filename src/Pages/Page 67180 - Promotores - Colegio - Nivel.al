@@ -1,7 +1,7 @@
 page 67180 "Promotores - Colegio - Nivel"
 {
     PageType = List;
-    SourceTable = 67036;
+    SourceTable = 55503;
 
     layout
     {

@@ -5,7 +5,7 @@ report 55494 "Control Asistencia"
 
     dataset
     {
-        dataitem("Cab. Planif. Evento"; 67051)
+        dataitem("Cab. Planif. Evento"; 55518)
         {
             RequestFilterFields = "Cod. Taller - Evento", Expositor, Secuencia, "Tipo Evento";
             column(COMPANYNAME; COMPANYNAME)

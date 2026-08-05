@@ -219,7 +219,7 @@ table 55483 "Asistentes Talleres y Eventos"
     trigger OnInsert()
     var
         wAsistentesEsp: Integer;
-        rSol: Record 67055;
+        rSol: Record 55522;
     begin
         CabPlanEvent.RESET;
         CabPlanEvent.SETRANGE("Cod. Taller - Evento", "Cod. Taller - Evento");
@@ -263,7 +263,7 @@ table 55483 "Asistentes Talleres y Eventos"
     end;
 
     var
-        CabPlanEvent: Record 67051;
+        CabPlanEvent: Record 55518;
         Col: Record 5050;
         Prom: Record 13;
         TyE: Record 55478;

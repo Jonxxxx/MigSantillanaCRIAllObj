@@ -177,14 +177,14 @@ codeunit 55269 "APS Paso 2"
     var
         T34002809: Record 55476;
         T34002826: Record 55493;
-        T34002835: Record 67035;
-        T34002852: Record 67052;
-        T34002853: Record 67053;
+        T34002835: Record 55502;
+        T34002852: Record 55519;
+        T34002853: Record 55520;
         TTEMP34002809: Record 67087;
         TTEMP34002826: Record 67088;
         TTEMP34002835: Record 67089;
-        TTEMP34002852: Record 67090;
-        TTEMP34002853: Record 67091;
+        TTEMP34002852: Record 55549;
+        TTEMP34002853: Record 55550;
         rCompany: Record 2000000006;
         wCamp: Code[20];
 }

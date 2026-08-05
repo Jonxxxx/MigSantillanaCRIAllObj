@@ -1,8 +1,8 @@
-page 67053 "Tipos de documentos personales"
+page 55520 "Tipos de documentos personales"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67045;
+    SourceTable = 55512;
     UsageCategory = Administration;
 
     layout

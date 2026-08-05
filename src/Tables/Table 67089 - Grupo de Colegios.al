@@ -28,7 +28,7 @@ table 67089 "Grupo de Colegios"
 
     procedure GetColegios() rtn: Text[1024]
     var
-        ColGrupo: Record 67090;
+        ColGrupo: Record 55549;
     begin
         ColGrupo.SETRANGE(ColGrupo."Cod. grupo", "Cod. Grupo");
         IF ColGrupo.FINDSET THEN
@@ -42,7 +42,7 @@ table 67089 "Grupo de Colegios"
 
     procedure CheckGrupo()
     var
-        ColGrupo: Record 67090;
+        ColGrupo: Record 55549;
         Err001: Label 'El grupo %1 no tiene colegios asociados';
     begin
         ColGrupo.SETRANGE(ColGrupo."Cod. grupo", "Cod. Grupo");

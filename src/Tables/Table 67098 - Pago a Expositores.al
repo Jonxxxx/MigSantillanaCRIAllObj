@@ -134,7 +134,7 @@ table 67098 "Pago a Expositores"
     procedure PagoEventos()
     var
         rDet: Record 67099;
-        rPlanEv: Record 67051;
+        rPlanEv: Record 55518;
         Error001: Label 'El evento %1 con secuencia %2 ya fue pagado anteriormente.';
     begin
 
@@ -154,7 +154,7 @@ table 67098 "Pago a Expositores"
     procedure RetrocederPagoEventos()
     var
         rDet: Record 67099;
-        rPlanEv: Record 67051;
+        rPlanEv: Record 55518;
     begin
 
         rDet.SETRANGE("ID Pago", "ID Pago");

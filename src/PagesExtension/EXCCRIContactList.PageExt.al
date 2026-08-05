@@ -67,7 +67,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Teachers';
-                    RunObject = Page 67045;
+                    RunObject = Page 55512;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the teachers associated with the school.';
                 }
@@ -75,7 +75,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Grades';
-                    RunObject = Page 67037;
+                    RunObject = Page 55504;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the grades associated with the school.';
                 }
@@ -83,7 +83,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Levels';
-                    RunObject = Page 67036;
+                    RunObject = Page 55503;
                     RunPageLink =
                         "Cod. Colegio" = field("No."),
                         City = field(City),
@@ -95,7 +95,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Subjects';
-                    RunObject = Page 67046;
+                    RunObject = Page 55513;
                     RunPageLink = "Codigo Colegio" = field("No.");
                     ToolTip = 'Opens the subjects associated with the school.';
                 }
@@ -119,7 +119,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Parents';
-                    RunObject = Page 67049;
+                    RunObject = Page 55516;
                     RunPageLink = "Home Page" = field("No.");
                     ToolTip = 'Opens the parent records associated with the school.';
                 }
@@ -135,7 +135,7 @@ pageextension 55093 EXCCRIContactList extends "Contact List"
                 {
                     ApplicationArea = All;
                     Caption = 'Job Structure';
-                    RunObject = Page 67067;
+                    RunObject = Page 55534;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the job structure associated with the school.';
                 }

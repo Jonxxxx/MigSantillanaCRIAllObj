@@ -1023,9 +1023,9 @@ Skipped TODO markers: **18**
 - `src/Pages/Page 55488 - Distribuidor.al`
 - `src/Pages/Page 55494 - Promotores - Ppto Vtas.al`
 - `src/Pages/Page 55495 - Promotores - Ppto Muestras.al`
-- `src/Pages/Page 67038 - Promotor - Planif. Visitas.al`
-- `src/Pages/Page 67045 - Lista Colegio - Docentes.al`
-- `src/Pages/Page 67051 - Colegio - Adopciones Cab.al`
+- `src/Pages/Page 55505 - Promotor - Planif. Visitas.al`
+- `src/Pages/Page 55512 - Lista Colegio - Docentes.al`
+- `src/Pages/Page 55518 - Colegio - Adopciones Cab.al`
 
 ### TODOs resolved
 
@@ -1036,9 +1036,9 @@ Skipped TODO markers: **18**
 - Page 55488: restored the distributor-to-event page link.
 - Pages 55494 and 55495: restored reports 55467 and 55469 and their verified
   public parameter procedures for sales and sample budgets.
-- Page 67038: restored the verified custom sample-inventory calculation.
-- Page 67045: restored the current `Docente - E-Mail 2` field.
-- Page 67051: restored codeunit 55467 and public procedure
+- Page 55505: restored the verified custom sample-inventory calculation.
+- Page 55512: restored the current `Docente - E-Mail 2` field.
+- Page 55518: restored codeunit 55467 and public procedure
   `InsertaAdopciones`.
 
 Original classifications: Renamed custom field/option, Missing page property,
@@ -1055,7 +1055,7 @@ Resolved TODO markers: **26**
 
 ### TODOs skipped
 
-- Page 67051: five large inventory and dimension-filter lookup blocks remain
+- Page 55518: five large inventory and dimension-filter lookup blocks remain
   disabled. Each requires restoring coordinated UI behavior and configuration
   semantics, so none is safe as an isolated correction.
 
@@ -1069,44 +1069,44 @@ Skipped TODO markers: **5**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 67051 - Colegio - Adopciones Cab.al`
+  `src/Pages/Page 55518 - Colegio - Adopciones Cab.al`
 
 ## Batch 17
 
 ### Files inspected
 
-- `src/Pages/Page 67057 - Niveles de desicion.al`
-- `src/Pages/Page 67062 - Fechas.al`
-- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
-- `src/Pages/Page 67074 - Cab. Muestras.al`
-- `src/Pages/Page 67076 - Transfer Order Subform Muestra.al`
-- `src/Pages/Page 67077 - Contact List APS.al`
-- `src/Pages/Page 67079 - Promotores - Lista de Colegios.al`
+- `src/Pages/Page 55524 - Niveles de desicion.al`
+- `src/Pages/Page 55529 - Fechas.al`
+- `src/Pages/Page 55531 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 55541 - Cab. Muestras.al`
+- `src/Pages/Page 55543 - Transfer Order Subform Muestra.al`
+- `src/Pages/Page 55544 - Contact List APS.al`
+- `src/Pages/Page 55546 - Promotores - Lista de Colegios.al`
 - `src/Pages/Page 67100 - Expositores - Eventos.al`
 
 ### Files modified
 
-- `src/Pages/Page 67057 - Niveles de desicion.al`
-- `src/Pages/Page 67062 - Fechas.al`
-- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
-- `src/Pages/Page 67074 - Cab. Muestras.al`
-- `src/Pages/Page 67077 - Contact List APS.al`
-- `src/Pages/Page 67079 - Promotores - Lista de Colegios.al`
+- `src/Pages/Page 55524 - Niveles de desicion.al`
+- `src/Pages/Page 55529 - Fechas.al`
+- `src/Pages/Page 55531 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 55541 - Cab. Muestras.al`
+- `src/Pages/Page 55544 - Contact List APS.al`
+- `src/Pages/Page 55546 - Promotores - Lista de Colegios.al`
 
 ### TODOs resolved
 
-- Page 67057: restored the source-table view with the exact current custom
+- Page 55524: restored the source-table view with the exact current custom
   option member and existing table key.
-- Page 67062: restored the deterministic normalized period-end field.
-- Page 67064: restored page 67130 with its verified `No. Solicitud` link and
+- Page 55529: restored the deterministic normalized period-end field.
+- Page 55531: restored page 67130 with its verified `No. Solicitud` link and
   the verified public ranking-page procedure.
-- Page 67074: restored posted transfer shipment/receipt links with the current
+- Page 55541: restored posted transfer shipment/receipt links with the current
   standard `Transfer Order No.` field, plus verified subpage dimension,
   reservation, and update methods.
-- Page 67077: restored indentation, five Contact-related page links using the
+- Page 55544: restored indentation, five Contact-related page links using the
   current `Contact Company No.` destination field, and the verified custom
   school-level page procedure.
-- Page 67079: restored the verified custom codeunit 55467 procedure call for
+- Page 55546: restored the verified custom codeunit 55467 procedure call for
   both the explicit promoter and page-filter branches.
 
 Original classifications: Renamed standard/custom symbol, Missing page
@@ -1125,16 +1125,16 @@ Resolved TODO markers: **32**
 
 ### TODOs skipped
 
-- Page 67064: Word generation remains based on a no-op codeunit whose
+- Page 55531: Word generation remains based on a no-op codeunit whose
   implementation is commented Automation/server-file behavior; the duplicate
   `Status::Cancelada` branch is structurally ambiguous.
-- Page 67074: item-availability is a no-op, item-tracking is recursively
+- Page 55541: item-availability is a no-op, item-tracking is recursively
   implemented in the subpage, and the e-mail codeunit is commented
   server-file/SMTP behavior. The unused parameter codeunit declaration has no
   verified functional call.
-- Page 67076: the single marker guards a large structurally disabled shortcut
+- Page 55543: the single marker guards a large structurally disabled shortcut
   dimension block and is not safe to restore in isolation.
-- Page 67077: `ShowCustVendBank` is no longer a callable Contact method;
+- Page 55544: `ShowCustVendBank` is no longer a callable Contact method;
   the template-selection expression is unavailable; and the four legacy
   report names/IDs could not be verified in current dependencies.
 - Page 67100: the commented procedure call would pass an uninitialized event
@@ -1348,7 +1348,7 @@ SaaS-incompatible. No further verified High-confidence candidate remains.
 - Compilation errors: 0
 - Warnings introduced by this task: 0
 - Last successfully processed file:
-  `src/Pages/Page 67077 - Contact List APS.al`
+  `src/Pages/Page 55544 - Contact List APS.al`
 
 ## Medium Batch 1
 
@@ -1610,9 +1610,9 @@ Skipped TODO markers: **12**
 
 - `src/Pages/Page 55261 - Sales Order Call Center.al`
 - `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
-- `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
-- `src/Pages/Page 67074 - Cab. Muestras.al`
-- `src/Pages/Page 67077 - Contact List APS.al`
+- `src/Pages/Page 55531 - Solicitud asistencia Tec - Ped.al`
+- `src/Pages/Page 55541 - Cab. Muestras.al`
+- `src/Pages/Page 55544 - Contact List APS.al`
 
 ### Files modified
 
@@ -1653,13 +1653,13 @@ Resolved TODO markers: **5**
   behavior.
 - Page 55285: Application Temp is unavailable; the remaining availability
   calculations and disabled blocks are not Medium-confidence candidates.
-- Page 67064: the audit's Medium RunObject/RunPageLink pair was already
+- Page 55531: the audit's Medium RunObject/RunPageLink pair was already
   resolved in the current source. Remaining Word-generation and status entries
   are excluded integration or functional-ambiguity cases.
-- Page 67074: the audit's Medium shipment/receipt links were already resolved
+- Page 55541: the audit's Medium shipment/receipt links were already resolved
   in the current source. Remaining subpage calls and email dependencies are
   not current Medium-confidence candidates.
-- Page 67077: the legacy reports for Contact Company Summary, Contact Labels,
+- Page 55544: the legacy reports for Contact Company Summary, Contact Labels,
   Questionnaire Handout, and Sales Cycle Analysis have no exact current
   dependency symbols. No substitute was invented.
 
@@ -1680,7 +1680,7 @@ Skipped TODO markers: **9**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 67077 - Contact List APS.al`
+  `src/Pages/Page 55544 - Contact List APS.al`
 
 ## Medium-confidence pass stop
 
@@ -1952,7 +1952,7 @@ Assumptions made: none.
 - `src/Pages/Page 55260 - Sales Order Call Center  List.al`
 - `src/Pages/Page 55261 - Sales Order Call Center.al`
 - `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
-- `src/Pages/Page 67077 - Contact List APS.al`
+- `src/Pages/Page 55544 - Contact List APS.al`
 - `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
 
 ### TODOs safely resolved
@@ -1975,7 +1975,7 @@ Assumptions made: none.
   RunObject, and Application Temp declaration. The statistics page exists,
   but tax behavior requires functional validation; page 829 and Application
   Temp are unavailable.
-- Page 67077: preserved four legacy contact report RunObjects because no exact
+- Page 55544: preserved four legacy contact report RunObjects because no exact
   current dependency symbols or verified semantic replacements exist.
 - Page 75012: preserved the Product Group declaration because table 5723 is
   unavailable and Item Category is not a verified semantic replacement.
@@ -2258,8 +2258,8 @@ remains under `src/Pages`.
 
 ## Batch 9
 
-- AL objects inspected and modified: Pages 55286, 55310, 55353, 67051,
-  67064, 67074, 67076, 67077, 67100, and 67111.
+- AL objects inspected and modified: Pages 55286, 55310, 55353, 55518,
+  55531, 55541, 55543, 55544, 67100, and 67111.
 - TODOs safely resolved: 15. Restored transfer back-order availability,
   symbolic execution of Report 55000, the complete 20-column MdE matrix,
   sample inventory and three verified dimension lookups, the educational
@@ -2277,7 +2277,7 @@ remains under `src/Pages`.
   subpage methods, removed Contact UI helpers, an invalid text OptionCaption,
   and an indeterminate duplicate CASE branch.
 - Verification: complete current-object inspection; repository verification
-  of Reports 55000, Codeunits 55418, 55467, and 55468, Pages 67076 and 67102,
+  of Reports 55000, Codeunits 55418, 55467, and 55468, Pages 55543 and 67102,
   and all relevant public signatures; and `al_symbolsearch` for Bin Content,
   Bin Contents, Dimension Value, Transfer Line shortcut-dimension methods,
   and Contact/Contact List creation and related-record methods.

@@ -3,7 +3,7 @@ page 67151 "Plan Lector Lista"
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Plan Lector Ficha";
     PageType = List;
-    SourceTable = 67063;
+    SourceTable = 55530;
     UsageCategory = Lists;
 
     layout

@@ -1,4 +1,4 @@
-table 67063 "Plan Lector Cab."
+table 55530 "Plan Lector Cab."
 {
 
     fields

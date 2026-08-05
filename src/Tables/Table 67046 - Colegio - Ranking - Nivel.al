@@ -1,7 +1,7 @@
-table 67046 "Colegio - Ranking - Nivel"
+table 55513 "Colegio - Ranking - Nivel"
 {
-    DrillDownPageID = 67036;
-    LookupPageID = 67036;
+    DrillDownPageID = 55503;
+    LookupPageID = 55503;
 
     fields
     {
@@ -51,7 +51,7 @@ table 67046 "Colegio - Ranking - Nivel"
         PostCode: Record 225;
         DA: Record 55469;
         "P-LC": Record 55473;
-        "P-Ruta": Record 67044;
+        "P-Ruta": Record 55511;
         RD: Record 55476;
         Nivel: Record 55230;
         Turnos: Page 55470;

@@ -1,9 +1,9 @@
-page 67035 "Colegio - Historico adopciones"
+page 55502 "Colegio - Historico adopciones"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = List;
-    SourceTable = 67035;
+    SourceTable = 55502;
     UsageCategory = History;
 
     layout

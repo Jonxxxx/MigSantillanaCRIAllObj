@@ -1,4 +1,4 @@
-table 67055 "Solicitud de Taller - Evento"
+table 55522 "Solicitud de Taller - Evento"
 {
 
     fields
@@ -31,7 +31,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rEvExp: Record 67050;
+                rEvExp: Record 55517;
                 pEvExp: Page 67100;
             begin
 
@@ -54,8 +54,8 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ExpositorEvento: Record 67050;
-                rEvExp: Record 67050;
+                ExpositorEvento: Record 55517;
+                rEvExp: Record 55517;
                 pEvExp: Page 67100;
             begin
                 IF "Cod. evento" <> '' THEN BEGIN
@@ -183,8 +183,8 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                PromotorRutas: Record 67044;
-                ColegioNivel: Record 67036;
+                PromotorRutas: Record 55511;
+                ColegioNivel: Record 55503;
                 Docente: Record 55468;
                 wINI: Integer;
                 wPRI: Integer;
@@ -283,7 +283,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                "P-R": Record 67044;
+                "P-R": Record 55511;
             begin
                 IF "Cod. promotor" <> '' THEN BEGIN
                     Promotor.GET("Cod. promotor");
@@ -353,8 +353,8 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rColDoc: Record 67043;
-                pColDoc: Page 67045;
+                rColDoc: Record 55510;
+                pColDoc: Page 55512;
             begin
 
                 //"Colegio - Docentes"."Cod. Docente" WHERE ("Cod. Colegio"=FIELD("Cod. Colegio"),"Pertenece al CDS"=CONST(true))
@@ -373,7 +373,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ColDoc: Record 67043;
+                ColDoc: Record 55510;
             begin
                 IF ExpositorDoc.GET("Cod. Docente responsable") THEN BEGIN
                     "Nombre responsable" := ExpositorDoc."Full Name";
@@ -832,8 +832,8 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                Adop: Record 67035;
-                fAdop: Page 67035;
+                Adop: Record 55502;
+                fAdop: Page 55502;
             begin
 
                 Adop.FILTERGROUP(2);
@@ -911,12 +911,12 @@ table 67055 "Solicitud de Taller - Evento"
             DataClassification = CustomerContent;
             Caption = 'Telefono 2 Colegio';
         }
-        field(67034; "Avisado al expositor"; Boolean)
+        field(55501; "Avisado al expositor"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Avisado al expositor';
         }
-        field(67035; "Cod. Cargo Responsable"; Code[20])
+        field(55502; "Cod. Cargo Responsable"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cargo Responsable';
@@ -933,13 +933,13 @@ table 67055 "Solicitud de Taller - Evento"
                 END;
             end;
         }
-        field(67036; "Descripcion Cargo Responsable"; Text[60])
+        field(55503; "Descripcion Cargo Responsable"; Text[60])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion Cargo Responsable';
             Editable = false;
         }
-        field(67037; "Cod. evento programado"; Code[20])
+        field(55504; "Cod. evento programado"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. evento programado';
@@ -947,7 +947,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnLookup()
             var
-                rEvExp: Record 67050;
+                rEvExp: Record 55517;
                 pEvExp: Page 67100;
                 NewSecEvProg: Integer;
             begin
@@ -980,11 +980,11 @@ table 67055 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                ExpositorEvento: Record 67050;
-                rEvExp: Record 67050;
+                ExpositorEvento: Record 55517;
+                rEvExp: Record 55517;
                 pEvExp: Page 67100;
                 Err0001: Label 'No existe ning n expositor para el evento programado %1.';
-                CabPlanEvento: Record 67051;
+                CabPlanEvento: Record 55518;
                 Err002: Label 'Esta solicitud ya est  programada para el Evento: %1 Expositor: %2 (%3) Secuencia: %4';
                 NewSecEvProg: Integer;
             begin
@@ -1029,25 +1029,25 @@ table 67055 "Solicitud de Taller - Evento"
 
             end;
         }
-        field(67038; "Descripcion evento programado"; Text[100])
+        field(55505; "Descripcion evento programado"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion evento programado';
             Editable = false;
         }
-        field(67039; "Evento dictado por (codigo)"; Code[20])
+        field(55506; "Evento dictado por (codigo)"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Evento dictado por (codigo)';
             TableRelation = IF ("Evento dictado por (tipo)" = CONST(Docente)) Docentes WHERE("Expositor" = CONST(true))
             ELSE IF ("Evento dictado por (tipo)" = CONST(Proveedor)) Vendor;
         }
-        field(67040; "Evento dictado por (nombre)"; Text[80])
+        field(55507; "Evento dictado por (nombre)"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Evento dictado por (nombre)';
         }
-        field(67041; "Existe evento"; Boolean)
+        field(55508; "Existe evento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Existe evento';
@@ -1062,14 +1062,14 @@ table 67055 "Solicitud de Taller - Evento"
                 "Evento dictado por (nombre)" := '';
             end;
         }
-        field(67042; "Evento dictado por (tipo)"; Option)
+        field(55509; "Evento dictado por (tipo)"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Evento dictado por (tipo)';
             OptionCaption = 'Teacher,Vendor';
             OptionMembers = Docente,Proveedor;
         }
-        field(67043; "Grupo de Colegios"; Boolean)
+        field(55510; "Grupo de Colegios"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Grupo de Colegios';
@@ -1087,7 +1087,7 @@ table 67055 "Solicitud de Taller - Evento"
 
             end;
         }
-        field(67044; "Asociacion/Grupo"; Code[20])
+        field(55511; "Asociacion/Grupo"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Asociacion/Grupo';
@@ -1107,18 +1107,18 @@ table 67055 "Solicitud de Taller - Evento"
                 END;
             end;
         }
-        field(67045; "Usuario creacion"; Code[50])
+        field(55512; "Usuario creacion"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario creacion';
             Editable = false;
         }
-        field(67046; "Fecha Propuesta"; Date)
+        field(55513; "Fecha Propuesta"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Propuesta';
         }
-        field(67047; "Fecha programada"; Date)
+        field(55514; "Fecha programada"; Date)
         {
             Caption = 'Fecha programada';
             CalcFormula = Lookup("Programac. Talleres y Eventos"."Fecha programacion" WHERE("Cod. Taller - Evento" = FIELD("Cod. evento programado"),
@@ -1127,7 +1127,7 @@ table 67055 "Solicitud de Taller - Evento"
                                                                                              "Secuencia" = FIELD("Secuencia Cod. Evento Progr.")));
             FieldClass = FlowField;
         }
-        field(67048; "Secuencia Cod. Evento Progr."; Integer)
+        field(55515; "Secuencia Cod. Evento Progr."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Secuencia Cod. Evento Progr.';
@@ -1189,7 +1189,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     trigger OnModify()
     var
-        rCabPlan: Record 67051;
+        rCabPlan: Record 55518;
     begin
         IF FRBitMap.GET(Status) THEN BEGIN
             FRBitMap.CALCFIELDS(Bitmap);
@@ -1212,7 +1212,7 @@ table 67055 "Solicitud de Taller - Evento"
     end;
 
     var
-        SolEvento: Record 67055;
+        SolEvento: Record 55522;
         User: Record 91;
         Evento: Record 55478;
         APSSetup: Record 55467;
@@ -1223,7 +1223,7 @@ table 67055 "Solicitud de Taller - Evento"
         Promotor: Record 13;
         FRBitMap: Record 55499;
         DA: Record 55469;
-        ColDocentes: Record 67043;
+        ColDocentes: Record 55510;
         ATE: Record 55483;
         DefDim: Record 352;
         DimVal: Record 349;
@@ -1233,7 +1233,7 @@ table 67055 "Solicitud de Taller - Evento"
         Err001: Label 'The Exponent doesn''t exist either as Teacher or Vendor';
         DimForm: Page 560;
 
-    procedure AssistEdit(OldEvent: Record 67055): Boolean
+    procedure AssistEdit(OldEvent: Record 55522): Boolean
     var
         WorkShop: Record 55479;
     begin
@@ -1297,11 +1297,11 @@ table 67055 "Solicitud de Taller - Evento"
     var
         Err001: Label 'Debe asignar un evento programado.';
         Err002: Label 'El evento programado no existe.';
-        Ev: Record 67051;
+        Ev: Record 55518;
         rProgramac: Record 55482;
         Error004: Label 'No ha realizado la programacion de fechas.';
         Error005: Label 'En la programacion de fechas es obligatorio indicar los siguientes campos: Fecha programacion, Hora de Inicio y Hora Final.';
-        rCab: Record 67051;
+        rCab: Record 55518;
         rGrupo: Record 67089;
         Err003: Label 'No existe el grupo de colegio %1';
         Err006: Label 'No existe el colegio %1';
@@ -1371,8 +1371,8 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Valida_Enviado()
     var
-        rNiveles: Record 67080;
-        rGrados: Record 67081;
+        rNiveles: Record 55547;
+        rGrados: Record 55548;
         rEsp: Record 67082;
         Error001: Label 'No ha indicado los Niveles de los asistentes.';
         Error002: Label 'No ha indicado los Grados de los asistentes.';
@@ -1458,7 +1458,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Crear_Planificacion()
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
         FechasProp: Record 67088;
         ProgTyE: Record 55482;
     begin
@@ -1507,7 +1507,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Tiene_Planificacion(): Boolean
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
     begin
         CabPlanEvento.RESET;
         CabPlanEvento.SETRANGE("No. Solicitud", "No. Solicitud");
@@ -1517,7 +1517,7 @@ table 67055 "Solicitud de Taller - Evento"
     procedure Valida_Realizado()
     var
         rProgramac: Record 55482;
-        rCab: Record 67051;
+        rCab: Record 55518;
         Error004: Label 'No ha realizado la programacion de fechas.';
         Error005: Label 'En la programacion, no se ha indicado las horas dictadas ';
     begin
@@ -1543,7 +1543,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure Actualiza_AsistEsperados()
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
         ProgTyE: Record 55482;
     begin
         CabPlanEvento.RESET;
@@ -1584,7 +1584,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure GetFechaProgramada() rtnFecha: Date
     var
-        recCabPlan: Record 67051;
+        recCabPlan: Record 55518;
         recProgramacion: Record 55482;
     begin
         CLEAR(rtnFecha);
@@ -1605,7 +1605,7 @@ table 67055 "Solicitud de Taller - Evento"
     procedure CDS(FiltroColegio: Text[1024])
     var
         Docente: Record 55468;
-        ColDocentes: Record 67043;
+        ColDocentes: Record 55510;
         wINI: Integer;
         wPRI: Integer;
         wSEC: Integer;
@@ -1678,12 +1678,12 @@ table 67055 "Solicitud de Taller - Evento"
     begin
     end;
 
-    procedure ActualizaPlanif(parExpEv: Record 67050) rtnSec: Integer
+    procedure ActualizaPlanif(parExpEv: Record 55517) rtnSec: Integer
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
         ProgTyE: Record 55482;
         Asistentes: Record 55483;
-        CabPlanEventoNEW: Record 67051;
+        CabPlanEventoNEW: Record 55518;
         ProgTyENEW: Record 55482;
         AsistentesNEW: Record 55483;
         MatTallerEvento: Record 55481;

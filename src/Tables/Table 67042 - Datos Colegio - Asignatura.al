@@ -1,4 +1,4 @@
-table 67042 "Datos Colegio - Asignatura"
+table 55509 "Datos Colegio - Asignatura"
 {
 
     fields

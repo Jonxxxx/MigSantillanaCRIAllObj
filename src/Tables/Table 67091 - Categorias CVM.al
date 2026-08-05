@@ -1,4 +1,4 @@
-table 67091 "Categorias CVM"
+table 55550 "Categorias CVM"
 {
 
     fields

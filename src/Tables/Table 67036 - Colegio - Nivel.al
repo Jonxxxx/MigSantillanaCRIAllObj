@@ -1,4 +1,4 @@
-table 67036 "Colegio - Nivel"
+table 55503 "Colegio - Nivel"
 {
 
     fields
@@ -331,9 +331,9 @@ table 67036 "Colegio - Nivel"
         Col: Record 5050;
         PostCode: Record 225;
         DA: Record 55469;
-        ColAdopcion: Record 67053;
+        ColAdopcion: Record 55520;
         "P-LC": Record 55473;
-        "P-Ruta": Record 67044;
+        "P-Ruta": Record 55511;
         RD: Record 55476;
         Nivel: Record 55230;
         Rutas: Page 55476;

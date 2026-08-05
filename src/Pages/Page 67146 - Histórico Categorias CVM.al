@@ -5,7 +5,7 @@ page 67146 "Historico Categorias CVM"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67093;
+    SourceTable = 55552;
     UsageCategory = History;
 
     layout

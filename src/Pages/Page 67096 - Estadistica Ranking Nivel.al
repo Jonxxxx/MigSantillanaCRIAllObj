@@ -1,8 +1,8 @@
-page 67096 "Estadistica Ranking Nivel"
+page 55555 "Estadistica Ranking Nivel"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = 67041;
+    SourceTable = 55508;
     SourceTableTemporary = true;
 
     layout
@@ -100,8 +100,8 @@ page 67096 "Estadistica Ranking Nivel"
 
     var
         Colegio: Record 5050;
-        ColRankNiv: Record 67046;
-        ColAdopciones: Record 67053;
+        ColRankNiv: Record 55513;
+        ColAdopciones: Record 55520;
         TarifVta: Record 7002;
         Porciento: Decimal;
         Total: Decimal;

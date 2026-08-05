@@ -1,4 +1,4 @@
-table 67081 "Solicitud -  Grado Asistente"
+table 55548 "Solicitud -  Grado Asistente"
 {
 
     fields

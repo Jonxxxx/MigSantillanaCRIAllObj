@@ -130,7 +130,7 @@ page 67103 "Seleccionar Docentes"
 
     var
         Asistentes: Record 55483;
-        CabPlanifEvento: Record 67051;
+        CabPlanifEvento: Record 55518;
         gCodEvento: Code[20];
         gCodExpositor: Code[20];
         gTipoEvento: Code[20];

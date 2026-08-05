@@ -4,7 +4,7 @@ page 67165 "Lista de Atenciones"
     CardPageID = "Ficha de Atenciones";
     Editable = false;
     PageType = List;
-    SourceTable = 67061;
+    SourceTable = 55528;
     UsageCategory = Lists;
 
     layout

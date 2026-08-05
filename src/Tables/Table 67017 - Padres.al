@@ -1,7 +1,7 @@
 table 55484 Padres
 {
-    DrillDownPageID = 67049;
-    LookupPageID = 67049;
+    DrillDownPageID = 55516;
+    LookupPageID = 55516;
 
     fields
     {

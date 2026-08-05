@@ -262,7 +262,7 @@ page 55483 "Asistentes Talleres y Eventos"
     end;
 
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
         SelDoc: Page 67103;
         TotDocentes: Integer;
         gCodTaller: Code[20];

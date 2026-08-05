@@ -1,7 +1,7 @@
-page 67038 "Promotor - Planif. Visitas"
+page 55505 "Promotor - Planif. Visitas"
 {
     PageType = ListPart;
-    SourceTable = 67038;
+    SourceTable = 55505;
 
     layout
     {
@@ -114,7 +114,7 @@ page 67038 "Promotor - Planif. Visitas"
         Alm: Record 14;
         PromEM: Record 5740;
         PromEM2: Record 5740;
-        fPromEM: Page 67074;
+        fPromEM: Page 55541;
         Bins: Record 7354;
         Bins2: Record 7354;
         Colegio: Record 5050;
@@ -204,7 +204,7 @@ page 67038 "Promotor - Planif. Visitas"
         Alm: Record 14;
         PromEM: Record 5740;
         PromEM2: Record 5740;
-        fPromEM: Page 67074;
+        fPromEM: Page 55541;
         Bins: Record 7354;
         Bins2: Record 7354;
         Colegio: Record 5050;
@@ -273,8 +273,8 @@ page 67038 "Promotor - Planif. Visitas"
 
     procedure AbreVisita()
     var
-        PromPV: Record 67038;
-        fPromPV: Page 67065;
+        PromPV: Record 55505;
+        fPromPV: Page 55532;
     begin
         CurrPage.SETSELECTIONFILTER(PromPV);
         fPromPV.SETTABLEVIEW(PromPV);

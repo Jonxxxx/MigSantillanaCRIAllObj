@@ -1,4 +1,4 @@
-table 67068 "Tarifas - Tipos de Eventos"
+table 55535 "Tarifas - Tipos de Eventos"
 {
 
     fields

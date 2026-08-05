@@ -1,4 +1,4 @@
-page 67060 Especialidades
+page 55527 Especialidades
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Specialties';

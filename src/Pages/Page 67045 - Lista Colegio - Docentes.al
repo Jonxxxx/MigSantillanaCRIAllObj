@@ -1,9 +1,9 @@
-page 67045 "Lista Colegio - Docentes"
+page 55512 "Lista Colegio - Docentes"
 {
     ApplicationArea = Basic, Suite, Service;
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
     PageType = List;
-    SourceTable = 67043;
+    SourceTable = 55510;
     UsageCategory = Lists;
 
     layout

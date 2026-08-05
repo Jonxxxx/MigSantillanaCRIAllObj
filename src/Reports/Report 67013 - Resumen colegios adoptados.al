@@ -7,7 +7,7 @@ report 55480 "Resumen colegios adoptados"
 
     dataset
     {
-        dataitem(CategoriasPromotor; 67036)
+        dataitem(CategoriasPromotor; 55503)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Categoria colegio")
                                 WHERE("Cod. Promotor" = FILTER(<> ''));
@@ -180,9 +180,9 @@ report 55480 "Resumen colegios adoptados"
         Text001: Label 'Cargando datos';
         Text002: Label '##############################1\\';
         Text003: Label '@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2';
-        recNivelCol: Record 67036;
+        recNivelCol: Record 55503;
         recTmpColegio: Record 5050 temporary;
-        recAdopcion: Record 67053;
+        recAdopcion: Record 55520;
         intColegios: Integer;
         intNoAdoptados: Integer;
         intAdoptados: Integer;

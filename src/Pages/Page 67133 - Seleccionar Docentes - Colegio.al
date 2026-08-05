@@ -1,7 +1,7 @@
 page 67133 "Seleccionar Docentes - Colegio"
 {
     PageType = List;
-    SourceTable = 67043;
+    SourceTable = 55510;
     SourceTableView = WHERE("Pertenece al CDS" = CONST(true));
 
     layout
@@ -130,7 +130,7 @@ page 67133 "Seleccionar Docentes - Colegio"
 
     var
         Asistentes: Record 55483;
-        CabPlanifEvento: Record 67051;
+        CabPlanifEvento: Record 55518;
         gCodEvento: Code[20];
         gCodExpositor: Code[20];
         gTipoEvento: Code[20];

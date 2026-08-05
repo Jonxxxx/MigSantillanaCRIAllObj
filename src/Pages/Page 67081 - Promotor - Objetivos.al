@@ -1,4 +1,4 @@
-page 67081 "Promotor - Objetivos"
+page 55548 "Promotor - Objetivos"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

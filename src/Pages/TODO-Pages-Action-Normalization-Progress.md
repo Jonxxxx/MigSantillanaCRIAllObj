@@ -968,7 +968,7 @@
 - New errors introduced: 0
 - Remaining pages: 160
 - Remaining noncompliant actions: 167
-- Last processed page: 67041
+- Last processed page: 55508
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 37
@@ -994,7 +994,7 @@
 - New errors introduced: 0
 - Remaining pages: 150
 - Remaining noncompliant actions: 157
-- Last processed page: 67051
+- Last processed page: 55518
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 38
@@ -1020,7 +1020,7 @@
 - New errors introduced: 0
 - Remaining pages: 140
 - Remaining noncompliant actions: 151
-- Last processed page: 67061
+- Last processed page: 55528
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 39
@@ -1046,7 +1046,7 @@
 - New errors introduced: 0
 - Remaining pages: 130
 - Remaining noncompliant actions: 128
-- Last processed page: 67071
+- Last processed page: 55538
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 40
@@ -1072,7 +1072,7 @@
 - New errors introduced: 0
 - Remaining pages: 120
 - Remaining noncompliant actions: 54
-- Last processed page: 67081
+- Last processed page: 55548
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 41
@@ -1098,7 +1098,7 @@
 - New errors introduced: 0
 - Remaining pages: 110
 - Remaining noncompliant actions: 53
-- Last processed page: 67091
+- Last processed page: 55550
 - Preservation verification: all non-target action content remained unchanged.
 
 ### Batch 42

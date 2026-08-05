@@ -1,4 +1,4 @@
-table 67093 "Hist rico Categorias CVM"
+table 55552 "Hist rico Categorias CVM"
 {
 
     fields

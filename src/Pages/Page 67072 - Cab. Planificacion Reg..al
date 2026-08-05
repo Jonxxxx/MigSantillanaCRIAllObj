@@ -1,4 +1,4 @@
-page 67072 "Cab. Planificacion Reg."
+page 55539 "Cab. Planificacion Reg."
 {
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     Editable = false;
@@ -49,7 +49,7 @@ page 67072 "Cab. Planificacion Reg."
                     Editable = false;
                 }
             }
-            part(sfVisitas; 67038)
+            part(sfVisitas; 55505)
             {
                 Editable = false;
                 SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
@@ -108,8 +108,8 @@ page 67072 "Cab. Planificacion Reg."
     var
         CabPlanifReg: Record 55490;
         User: Record 91;
-        Planif: Record 67038;
-        Planif2: Record 67038;
+        Planif: Record 55505;
+        Planif2: Record 55505;
         Text001: Label 'The planning has been posted';
         Promotor: Code[20];
 

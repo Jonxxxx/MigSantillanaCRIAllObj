@@ -1,7 +1,7 @@
-page 67055 "Padres - Aficiones"
+page 55522 "Padres - Aficiones"
 {
     PageType = Card;
-    SourceTable = 67049;
+    SourceTable = 55516;
 
     layout
     {

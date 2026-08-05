@@ -1,7 +1,7 @@
 table 55500 "Colegio - Adopciones compet."
 {
-    DrillDownPageID = 67052;
-    LookupPageID = 67052;
+    DrillDownPageID = 55519;
+    LookupPageID = 55519;
 
     fields
     {
@@ -542,12 +542,12 @@ table 55500 "Colegio - Adopciones compet."
 
     var
         ConfAPS: Record 55467;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         Editora: Record 55491;
-        GradoCol: Record 67037;
+        GradoCol: Record 55504;
         Item: Record 27;
         ProdEq: Record 55472;
-        CabAdopciones: Record 67052;
+        CabAdopciones: Record 55519;
         DA: Record 55469;
         ColegioAdopciones: Record 55493;
         ColegioAdopciones2Record: Record 55493;
@@ -560,10 +560,10 @@ table 55500 "Colegio - Adopciones compet."
     var
         Adopciones: Record 55493;
         Adopciones2Record: Record 55493;
-        AdopcionesD: Record 67053;
-        HAdopciones: Record 67035;
+        AdopcionesD: Record 55520;
+        HAdopciones: Record 55502;
         Editoriales: Record 55491;
-        GradosCol: Record 67037;
+        GradosCol: Record 55504;
         PptoPromotor: Record 55494;
         Camp: Integer;
     begin

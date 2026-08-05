@@ -298,15 +298,15 @@ table 67084 "Hist. Colegio - Adopciones Cab"
     var
         ConfAPS: Record 55467;
         Nivel: Record 55489;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         Editora: Record 55491;
-        GradoCol: Record 67037;
+        GradoCol: Record 55504;
         Item: Record 27;
         ProdEq: Record 55472;
-        AdopcionDet: Record 67053;
+        AdopcionDet: Record 55520;
         Err001: Label 'You must delete the lines before delete this record';
         DimVal: Record 349;
-        AdopcionesD: Record 67053;
+        AdopcionesD: Record 55520;
         DimForm: Page 560;
         Msg001: Label 'There''s a change in the discount, do you wish to update the lines?';
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';

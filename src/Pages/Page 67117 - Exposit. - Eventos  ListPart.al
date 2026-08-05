@@ -2,7 +2,7 @@ page 67117 "Exposit. - Eventos  ListPart"
 {
     Caption = 'Expositors - Events';
     PageType = ListPart;
-    SourceTable = 67050;
+    SourceTable = 55517;
 
     layout
     {

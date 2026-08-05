@@ -31,7 +31,7 @@ table 67099 "Detalle Pago Expositores"
 
             trigger OnLookup()
             var
-                recCabPlanif: Record 67051;
+                recCabPlanif: Record 55518;
                 pgCabPlanif: Page 67161;
                 recCabPago: Record 67098;
             begin

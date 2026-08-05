@@ -1,9 +1,9 @@
-page 67034 "Lista Colegio - Delegaciones"
+page 55501 "Lista Colegio - Delegaciones"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = 67034;
+    SourceTable = 55501;
     UsageCategory = Lists;
 
     layout
@@ -70,7 +70,7 @@ page 67034 "Lista Colegio - Delegaciones"
                     Caption = '&Card';
                     ToolTip = '&Card';
                     Image = EditLines;
-                    RunObject = Page 67047;
+                    RunObject = Page 55514;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }

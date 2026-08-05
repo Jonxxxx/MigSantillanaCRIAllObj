@@ -1,4 +1,4 @@
-page 67057 "Niveles de desicion"
+page 55524 "Niveles de desicion"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Decision level';

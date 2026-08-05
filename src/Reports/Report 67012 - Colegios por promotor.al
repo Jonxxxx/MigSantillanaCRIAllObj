@@ -5,7 +5,7 @@ report 55479 "Colegios por promotor"
 
     dataset
     {
-        dataitem(Adopciones; 67052)
+        dataitem(Adopciones; 55519)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Cod. Colegio");
             RequestFilterFields = "Cod. Promotor", "Cod. Colegio";
@@ -247,7 +247,7 @@ report 55479 "Colegios por promotor"
 
     procedure TraerCategoria(codPrmColegio: Code[20]; codPrmNivel: Code[20]): Code[10]
     var
-        recNivel: Record 67036;
+        recNivel: Record 55503;
     begin
         recNivel.RESET;
         recNivel.SETRANGE("Cod. Colegio", codPrmColegio);
@@ -276,7 +276,7 @@ report 55479 "Colegios por promotor"
 
     procedure CargarTotalGrados()
     var
-        recDetalle: Record 67053;
+        recDetalle: Record 55520;
         i: Integer;
     begin
         FOR i := 1 TO ARRAYLEN(codGrados) DO BEGIN

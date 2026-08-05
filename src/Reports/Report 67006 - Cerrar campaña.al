@@ -20,13 +20,13 @@ report 55473 "Cerrar campaña"
 
     dataset
     {
-        dataitem(ColGrados; 67037)
+        dataitem(ColGrados; 55504)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", "Cod. Grado", Seccion);
 
             trigger OnAfterGetRecord()
             var
-                recHistGrados: Record 67069;
+                recHistGrados: Record 55536;
             begin
                 recHistGrados.INIT;
                 recHistGrados.TRANSFERFIELDS(ColGrados);
@@ -42,13 +42,13 @@ report 55473 "Cerrar campaña"
                 //DELETEALL;
             end;
         }
-        dataitem(ColDetAdopciones; 67053)
+        dataitem(ColDetAdopciones; 55520)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto");
 
             trigger OnAfterGetRecord()
             var
-                recHisAdop: Record 67035;
+                recHisAdop: Record 55502;
             begin
 
 
@@ -109,13 +109,13 @@ report 55473 "Cerrar campaña"
                 DELETEALL;
             end;
         }
-        dataitem(ColNiveles; 67036)
+        dataitem(ColNiveles; 55503)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", Turno, Ruta);
 
             trigger OnAfterGetRecord()
             var
-                recHistNivel: Record 67067;
+                recHistNivel: Record 55534;
             begin
                 recHistNivel.INIT;
                 recHistNivel.TRANSFERFIELDS(ColNiveles);
@@ -128,7 +128,7 @@ report 55473 "Cerrar campaña"
                 //DELETEALL;
             end;
         }
-        dataitem(PromRutas; 67044)
+        dataitem(PromRutas; 55511)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Cod. Ruta");
 
@@ -143,7 +143,7 @@ report 55473 "Cerrar campaña"
 
             trigger OnAfterGetRecord()
             var
-                HistPromPptoVta: Record 67070;
+                HistPromPptoVta: Record 55537;
             begin
 
                 HistPromPptoVta.INIT;
@@ -166,12 +166,12 @@ report 55473 "Cerrar campaña"
                 //DELETEALL;
             end;
         }
-        dataitem("Colegio - Docentes"; 67043)
+        dataitem("Colegio - Docentes"; 55510)
         {
 
             trigger OnAfterGetRecord()
             var
-                recHistColDoc: Record 67076;
+                recHistColDoc: Record 55543;
             begin
                 recHistColDoc.INIT;
                 recHistColDoc.TRANSFERFIELDS("Colegio - Docentes");
@@ -184,7 +184,7 @@ report 55473 "Cerrar campaña"
                 "Colegio - Docentes".MODIFY;
             end;
         }
-        dataitem("Colegio - Adopciones Cab"; 67052)
+        dataitem("Colegio - Adopciones Cab"; 55519)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Cod. Promotor", Turno);
 

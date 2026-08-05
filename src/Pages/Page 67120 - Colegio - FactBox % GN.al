@@ -41,7 +41,7 @@ page 67120 "Colegio - FactBox % GN"
 
     procedure TraerPorcentaje(): Decimal
     var
-        recDetAdop: Record 67053;
+        recDetAdop: Record 55520;
         decTotalColegio: Decimal;
         decTotalNivel: Decimal;
     begin

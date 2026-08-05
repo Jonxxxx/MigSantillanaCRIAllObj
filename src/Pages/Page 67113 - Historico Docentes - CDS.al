@@ -3,7 +3,7 @@ page 67113 "Historico Docentes - CDS"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = List;
-    SourceTable = 67072;
+    SourceTable = 55539;
     UsageCategory = History;
 
     layout

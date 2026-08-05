@@ -1,7 +1,7 @@
-page 67073 "Subform Solicitudes Eventos"
+page 55540 "Subform Solicitudes Eventos"
 {
     PageType = ListPart;
-    SourceTable = 67055;
+    SourceTable = 55522;
 
     layout
     {

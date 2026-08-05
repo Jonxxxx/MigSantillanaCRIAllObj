@@ -5,7 +5,7 @@ report 55482 "Colegios planificados"
 
     dataset
     {
-        dataitem(Planificacion; 67038)
+        dataitem(Planificacion; 55505)
         {
             CalcFields = "Nombre Promotor";
             DataItemTableView = SORTING(Delegacion, Nivel, "Cod. Promotor", Ano, Semana, "Fecha Visita")
@@ -157,7 +157,7 @@ report 55482 "Colegios planificados"
 
     procedure TraerCategoria(codPrmColegio: Code[20]; codPrmNivel: Code[20]): Code[10]
     var
-        recNivel: Record 67036;
+        recNivel: Record 55503;
     begin
         recNivel.RESET;
         recNivel.SETRANGE("Cod. Colegio", codPrmColegio);

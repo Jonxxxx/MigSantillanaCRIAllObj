@@ -1,4 +1,4 @@
-table 67049 "Padres - Aficiones"
+table 55516 "Padres - Aficiones"
 {
 
     fields

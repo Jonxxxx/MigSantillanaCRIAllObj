@@ -1,7 +1,7 @@
 page 67122 "Solicitud -  Nivel Asistentes"
 {
     PageType = List;
-    SourceTable = 67080;
+    SourceTable = 55547;
 
     layout
     {

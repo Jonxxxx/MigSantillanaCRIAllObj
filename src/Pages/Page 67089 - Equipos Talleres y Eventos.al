@@ -2,7 +2,7 @@ page 67089 "Equipos Talleres y Eventos"
 {
     AutoSplitKey = true;
     PageType = List;
-    SourceTable = 67059;
+    SourceTable = 55526;
 
     layout
     {

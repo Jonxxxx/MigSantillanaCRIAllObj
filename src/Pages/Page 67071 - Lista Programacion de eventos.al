@@ -1,9 +1,9 @@
-page 67071 "Lista Programacion de eventos"
+page 55538 "Lista Programacion de eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Solicitud de Asistencia Técnico - Pedagogica';
     PageType = Card;
-    SourceTable = 67055;
+    SourceTable = 55522;
     SourceTableView = WHERE("Status" = CONST(" "));
     UsageCategory = Lists;
 

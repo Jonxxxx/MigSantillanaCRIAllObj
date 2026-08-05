@@ -6,7 +6,7 @@ report 55266 "Reporte de Agenda CR"
 
     dataset
     {
-        dataitem("Promotor - Planif. Visita"; 67038)
+        dataitem("Promotor - Planif. Visita"; 55505)
         {
             RequestFilterFields = Fecha;
 

@@ -132,7 +132,7 @@ table 55476 "Rutas - CP"
         DA: Record 55469;
         PostCodeRec: Record 225;
         Colegio: Record 5050;
-        PromRutas: Record 67044;
+        PromRutas: Record 55511;
         PLC: Record 55473;
         Rutas: Page 55475;
         ConfAPS: Record 55467;

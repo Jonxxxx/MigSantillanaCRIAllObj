@@ -1,7 +1,7 @@
 page 67150 "Plan Lector Subpage"
 {
     PageType = List;
-    SourceTable = 67064;
+    SourceTable = 55531;
 
     layout
     {

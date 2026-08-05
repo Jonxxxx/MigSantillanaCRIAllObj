@@ -1,4 +1,4 @@
-table 67096 "Historico Plan Lector Det."
+table 55555 "Historico Plan Lector Det."
 {
 
     fields

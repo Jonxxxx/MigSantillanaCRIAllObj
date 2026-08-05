@@ -1,4 +1,4 @@
-page 67040 "Lista de Docentes"
+page 55507 "Lista de Docentes"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Teachers List';
@@ -137,7 +137,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67045;
+                    RunObject = Page 55512;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action(Hobbies)
@@ -149,7 +149,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67058;
+                    RunObject = Page 55525;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
 
@@ -162,7 +162,7 @@ page 67040 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67063;
+                    RunObject = Page 55530;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Workshop - Event")

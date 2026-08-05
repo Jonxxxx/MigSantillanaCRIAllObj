@@ -1,4 +1,4 @@
-page 67079 "Promotores - Lista de Colegios"
+page 55546 "Promotores - Lista de Colegios"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
@@ -103,7 +103,7 @@ page 67079 "Promotores - Lista de Colegios"
 
     var
         Col: Record 55473;
-        PromPlan: Record 67038;
+        PromPlan: Record 55505;
         Promotor: Code[20];
         gAno: Integer;
         Sem: Integer;

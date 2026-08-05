@@ -1,7 +1,7 @@
-page 67095 "Colegio - Ranking - Nivel"
+page 55554 "Colegio - Ranking - Nivel"
 {
     PageType = Card;
-    SourceTable = 67046;
+    SourceTable = 55513;
 
     layout
     {

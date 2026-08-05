@@ -1,7 +1,7 @@
-page 67047 "Ficha Colegio - Delegaciones"
+page 55514 "Ficha Colegio - Delegaciones"
 {
     PageType = Card;
-    SourceTable = 67034;
+    SourceTable = 55501;
 
     layout
     {

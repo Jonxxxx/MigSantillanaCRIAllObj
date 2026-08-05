@@ -3,7 +3,7 @@ page 67177 "Visitas A/C - Selec. Docentes"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 67043;
+    SourceTable = 55510;
     SourceTableView = WHERE("Pertenece al CDS" = CONST(true));
 
     layout

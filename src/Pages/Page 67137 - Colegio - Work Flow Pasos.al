@@ -3,7 +3,7 @@ page 67137 "Colegio - Work Flow Pasos"
     Caption = 'School - steps Work flow';
     DeleteAllowed = false;
     PageType = ListPlus;
-    SourceTable = 67062;
+    SourceTable = 55529;
     SourceTableView = WHERE("Paso" = CONST(true));
 
     layout
@@ -94,7 +94,7 @@ page 67137 "Colegio - Work Flow Pasos"
     end;
 
     var
-        CWF: Record 67062;
+        CWF: Record 55529;
         DatosAux: Record 55469;
         Sec: Integer;
 }

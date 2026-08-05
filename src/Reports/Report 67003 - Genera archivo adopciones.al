@@ -9,7 +9,7 @@ report 55470 "Genera archivo adopciones"
 
     dataset
     {
-        dataitem("Colegio - Adopciones Detalle"; 67053)
+        dataitem("Colegio - Adopciones Detalle"; 55520)
         {
             DataItemTableView = sorting(
                                     "Cod. Colegio",

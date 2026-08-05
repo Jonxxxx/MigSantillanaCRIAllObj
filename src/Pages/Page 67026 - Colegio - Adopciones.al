@@ -5,7 +5,7 @@ page 55493 "Colegio - Adopciones"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67035;
+    SourceTable = 55502;
 
     layout
     {

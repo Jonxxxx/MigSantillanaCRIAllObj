@@ -169,9 +169,9 @@ table 55490 "Cab. Planificacion"
         Promotor: Record 13;
         date1: Record 2000000007;
         Date2: Record 2000000007;
-        PPV: Record 67038;
-        PPV2Record: Record 67038;
-        fFechas: Page 67062;
+        PPV: Record 55505;
+        PPV2Record: Record 55505;
+        fFechas: Page 55529;
         Sem: Label 'W';
         Err001: Label '%1 can''t be %2';
         Err002: Label 'You can''t delete lines with School with completed dates';

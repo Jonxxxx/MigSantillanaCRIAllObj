@@ -6,7 +6,7 @@ report 55491 "Solicitud asi. tec. pedagogica"
 
     dataset
     {
-        dataitem(Solicitud; 67055)
+        dataitem(Solicitud; 55522)
         {
             DataItemTableView = SORTING("No. Solicitud");
             RequestFilterFields = "No. Solicitud";

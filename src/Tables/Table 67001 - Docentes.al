@@ -2,8 +2,8 @@ table 55468 Docentes
 {
     Caption = 'Teacher';
     DataCaptionFields = "No.", "Full Name";
-    DrillDownPageID = 67040;
-    LookupPageID = 67040;
+    DrillDownPageID = 55507;
+    LookupPageID = 55507;
 
     fields
     {
@@ -776,7 +776,7 @@ table 55468 Docentes
         Docente: Record 55468;
         JobType: Record 55469;
         PostCode: Record 225;
-        ColDoc: Record 67043;
+        ColDoc: Record 55510;
         RecRef: RecordRef;
         xRecRef: RecordRef;
         NoSeriesMgt: Codeunit 310;
@@ -797,7 +797,7 @@ table 55468 Docentes
         PostCodeForm: Page 367;
         formTerritory: Page 429;
         RECcOUNTRY: Record 9;
-        ColDocente: Record 67043;
+        ColDocente: Record 55510;
         Text035: Label 'There are records associated with this Teacher, review them in% 1';
 
     procedure DisplayMap()

@@ -354,7 +354,7 @@ tableextension 55012 EXCCRIItem extends Item
             trigger OnLookup()
             var
                 EXCCRIDataAuxiliary: Record 55469;
-                EXCCRIBusinessGroup: Page 67093;
+                EXCCRIBusinessGroup: Page 55552;
             begin
                 EXCCRIDataAuxiliary.Reset();
                 EXCCRIDataAuxiliary.SetRange("Tipo registro", EXCCRIDataAuxiliary."Tipo registro"::"Grupo de Negocio");

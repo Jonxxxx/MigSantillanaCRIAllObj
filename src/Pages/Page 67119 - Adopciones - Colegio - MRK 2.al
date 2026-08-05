@@ -5,7 +5,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
     Caption = 'School - Adoptions';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     PageType = Card;
-    SourceTable = 67078;
+    SourceTable = 55545;
     SourceTableView = SORTING("Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto");
 
     layout
@@ -87,7 +87,7 @@ page 67119 "Adopciones - Colegio - MRK 2"
 
     procedure RecibeParametros(CodDoc: Code[20]; CodCol: Code[20])
     var
-        ColAdopDetalle: Record 67053;
+        ColAdopDetalle: Record 55520;
         Grados: Record 55469;
     begin
         gCodColegio := CodCol;

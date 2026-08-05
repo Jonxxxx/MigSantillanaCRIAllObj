@@ -4,7 +4,7 @@ page 67102 "Lista Cab. Planif. Evento"
     Editable = false;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = 67051;
+    SourceTable = 55518;
     UsageCategory = Lists;
 
     layout
@@ -134,7 +134,7 @@ page 67102 "Lista Cab. Planif. Evento"
                     trigger OnAction()
                     var
                         Evento: Record 55478;
-                        CabPlanEvent: Record 67051;
+                        CabPlanEvent: Record 55518;
                         fCabPlanEvent: Page 67101;
                         Seq: Integer;
                         IndSkip: Boolean;
@@ -191,7 +191,7 @@ page 67102 "Lista Cab. Planif. Evento"
 
     var
         Fecha: Record 2000000007;
-        CabPlanEvent: Record 67051;
+        CabPlanEvent: Record 55518;
         gCodExpositor: Code[20];
         gTipoExpositor: Integer;
         gCodEvento: Code[20];

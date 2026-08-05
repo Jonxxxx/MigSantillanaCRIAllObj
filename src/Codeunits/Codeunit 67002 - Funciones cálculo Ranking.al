@@ -18,7 +18,7 @@ codeunit 55469 "Funciones Calculo Ranking"
         Text002: Label 'Calculando Ranking CVM ... \ Colegio #1###################';
         gFecha: Date;
 
-    procedure CalcRanking(var tTrabajo: Record 67094; parTipo: Option General,CVM; parCamp: Code[4]; parDeleg: Code[20]; parTipoReporte: Option Todos,Colegios,Nidos; parGNeg: Option General,Santillana,Richmond,"Plan Lector")
+    procedure CalcRanking(var tTrabajo: Record 55553; parTipo: Option General,CVM; parCamp: Code[4]; parDeleg: Code[20]; parTipoReporte: Option Todos,Colegios,Nidos; parGNeg: Option General,Santillana,Richmond,"Plan Lector")
     begin
 
         gTipo := parTipo;
@@ -79,8 +79,8 @@ codeunit 55469 "Funciones Calculo Ranking"
 
     procedure TieneAdopciones() rtn: Boolean
     var
-        recHistAdop: Record 67035;
-        recAdop: Record 67053;
+        recHistAdop: Record 55502;
+        recAdop: Record 55520;
     begin
 
         IF gHist THEN BEGIN
@@ -100,7 +100,7 @@ codeunit 55469 "Funciones Calculo Ranking"
         END;
     end;
 
-    procedure InsertaTemporal(var tTrabajo: Record 67094)
+    procedure InsertaTemporal(var tTrabajo: Record 55553)
     begin
 
         tTrabajo.INIT;
@@ -127,10 +127,10 @@ codeunit 55469 "Funciones Calculo Ranking"
         tTrabajo.INSERT;
     end;
 
-    procedure InsertaInfoCategorias(var tTrabajo: Record 67094)
+    procedure InsertaInfoCategorias(var tTrabajo: Record 55553)
     var
-        recCategoria: Record 67091;
-        recHistCategoria: Record 67093;
+        recCategoria: Record 55550;
+        recHistCategoria: Record 55552;
     begin
 
         IF NOT gHist THEN BEGIN
@@ -269,10 +269,10 @@ codeunit 55469 "Funciones Calculo Ranking"
         END;
     end;
 
-    procedure InsertaInfoMontoBruto(var tTrabajo: Record 67094)
+    procedure InsertaInfoMontoBruto(var tTrabajo: Record 55553)
     var
-        recHistAdop: Record 67035;
-        recAdop: Record 67053;
+        recHistAdop: Record 55502;
+        recAdop: Record 55520;
     begin
 
 
@@ -491,7 +491,7 @@ codeunit 55469 "Funciones Calculo Ranking"
 
     procedure EsCampHistorica() rtn: Boolean
     var
-        recHistAdop: Record 67035;
+        recHistAdop: Record 55502;
     begin
 
         recHistAdop.RESET;
@@ -500,7 +500,7 @@ codeunit 55469 "Funciones Calculo Ranking"
         rtn := recHistAdop.FINDFIRST;
     end;
 
-    procedure InsertaInfoMontoTotal(var tTrabajo: Record 67094)
+    procedure InsertaInfoMontoTotal(var tTrabajo: Record 55553)
     begin
 
         WITH tTrabajo DO BEGIN
@@ -512,7 +512,7 @@ codeunit 55469 "Funciones Calculo Ranking"
         END;
     end;
 
-    procedure InsertaInfoPorcxLinea(var tTrabajo: Record 67094)
+    procedure InsertaInfoPorcxLinea(var tTrabajo: Record 55553)
     begin
 
         WITH tTrabajo DO BEGIN
@@ -525,10 +525,10 @@ codeunit 55469 "Funciones Calculo Ranking"
         END;
     end;
 
-    procedure InsertaInfoColegio(var tTrabajo: Record 67094)
+    procedure InsertaInfoColegio(var tTrabajo: Record 55553)
     var
-        recColegioNivel: Record 67036;
-        recHistColegioNivel: Record 67067;
+        recColegioNivel: Record 55503;
+        recHistColegioNivel: Record 55534;
     begin
 
         tTrabajo."Cod. Colegio" := recColegio."No.";
@@ -549,7 +549,7 @@ codeunit 55469 "Funciones Calculo Ranking"
             tTrabajo.Tipo := tTrabajo.Tipo::Colegio;
     end;
 
-    procedure OrdenarTemporal(var tTrabajo: Record 67094)
+    procedure OrdenarTemporal(var tTrabajo: Record 55553)
     var
         wCont: Integer;
     begin
@@ -574,8 +574,8 @@ codeunit 55469 "Funciones Calculo Ranking"
 
     procedure ValidaTipoReporte() rtn: Boolean
     var
-        recColegioNivel: Record 67036;
-        recHistColegioNivel: Record 67067;
+        recColegioNivel: Record 55503;
+        recHistColegioNivel: Record 55534;
     begin
 
         CASE gTipoReporte OF
@@ -590,8 +590,8 @@ codeunit 55469 "Funciones Calculo Ranking"
 
     procedure EnCartera() rtn: Boolean
     var
-        recHistColNivel: Record 67067;
-        recColNivel: Record 67036;
+        recHistColNivel: Record 55534;
+        recColNivel: Record 55503;
     begin
 
         IF gHist THEN BEGIN
@@ -611,8 +611,8 @@ codeunit 55469 "Funciones Calculo Ranking"
 
     procedure EsNido() rtn: Boolean
     var
-        recColegioNivel: Record 67036;
-        recHistColegioNivel: Record 67067;
+        recColegioNivel: Record 55503;
+        recHistColegioNivel: Record 55534;
     begin
 
         rtn := FALSE;

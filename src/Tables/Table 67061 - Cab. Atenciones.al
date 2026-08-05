@@ -1,4 +1,4 @@
-table 67061 "Cab. Atenciones"
+table 55528 "Cab. Atenciones"
 {
     Caption = 'Hospitality Header';
 
@@ -334,8 +334,8 @@ table 67061 "Cab. Atenciones"
 
             trigger OnLookup()
             var
-                rSol: Record 67055;
-                fSol: Page 67090;
+                rSol: Record 55522;
+                fSol: Page 55549;
             begin
 
                 fSol.SETTABLEVIEW(rSol);
@@ -354,7 +354,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                rSol: Record 67055;
+                rSol: Record 55522;
             begin
 
                 IF rSol.GET("No. Solicitud") THEN BEGIN
@@ -404,7 +404,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnLookup()
             var
-                GpoNegocio: Page 67093;
+                GpoNegocio: Page 55552;
             begin
                 DA.RESET;
                 DA.SETRANGE("Tipo registro", DA."Tipo registro"::"Grupo de Negocio");

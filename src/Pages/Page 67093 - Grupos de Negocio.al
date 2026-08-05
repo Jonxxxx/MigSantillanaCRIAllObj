@@ -1,4 +1,4 @@
-page 67093 "Grupos de Negocio"
+page 55552 "Grupos de Negocio"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

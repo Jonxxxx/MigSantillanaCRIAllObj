@@ -2,8 +2,8 @@ table 55488 "Expositores - aps"
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;
-    DrillDownPageID = 67043;
-    LookupPageID = 67043;
+    DrillDownPageID = 55510;
+    LookupPageID = 55510;
 
     fields
     {
@@ -238,7 +238,7 @@ table 55488 "Expositores - aps"
             trigger OnLookup()
             var
                 pgCabPlanif: Page 67178;
-                rCabPlanif: Record 67051;
+                rCabPlanif: Record 55518;
             begin
 
                 rCabPlanif.SETRANGE(rCabPlanif.Expositor, "No.");
@@ -260,7 +260,7 @@ table 55488 "Expositores - aps"
             trigger OnLookup()
             var
                 pgCabPlanif: Page 67178;
-                rCabPlanif: Record 67051;
+                rCabPlanif: Record 55518;
             begin
                 rCabPlanif.SETRANGE(rCabPlanif.Expositor, "No.");
                 rCabPlanif.SETRANGE(rCabPlanif.Pagado, TRUE);

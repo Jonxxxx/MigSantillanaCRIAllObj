@@ -1,4 +1,4 @@
-page 67078 "Promotores - Docentes"
+page 55545 "Promotores - Docentes"
 {
     PageType = Card;
     SourceTable = 55471;

@@ -1,4 +1,4 @@
-table 67065 "Micro empresario"
+table 55532 "Micro empresario"
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;

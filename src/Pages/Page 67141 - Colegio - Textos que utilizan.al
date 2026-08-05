@@ -2,7 +2,7 @@ page 67141 "Colegio - Textos que utilizan"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 67035;
+    SourceTable = 55502;
     SourceTableView = SORTING("Cod. Colegio", Campana, Adopcion, "Cod. Editorial");
 
     layout

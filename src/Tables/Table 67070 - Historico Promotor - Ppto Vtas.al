@@ -1,4 +1,4 @@
-table 67070 "Historico Promotor - Ppto Vtas"
+table 55537 "Historico Promotor - Ppto Vtas"
 {
     DrillDownPageID = 55494;
     LookupPageID = 55494;

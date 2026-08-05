@@ -22,7 +22,7 @@ table 67100 "Detalle Atenciones"
             var
                 pgAte: Page 67167;
                 rAte: Record 55469;
-                rCab: Record 67061;
+                rCab: Record 55528;
             begin
                 IF Tipo = Tipo::Atencion THEN BEGIN
                     rAte.FILTERGROUP(2);

@@ -1,4 +1,4 @@
-table 67059 "Equipos Talleres y Eventos"
+table 55526 "Equipos Talleres y Eventos"
 {
     Caption = 'Equipments Workshops and Events';
 

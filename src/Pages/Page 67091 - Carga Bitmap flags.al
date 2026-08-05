@@ -1,4 +1,4 @@
-page 67091 "Carga Bitmap flags"
+page 55550 "Carga Bitmap flags"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

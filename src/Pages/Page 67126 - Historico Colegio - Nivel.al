@@ -6,7 +6,7 @@ page 67126 "Historico Colegio - Nivel"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67067;
+    SourceTable = 55534;
     UsageCategory = History;
 
     layout

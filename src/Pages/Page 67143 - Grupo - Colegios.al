@@ -1,7 +1,7 @@
 page 67143 "Grupo - Colegios"
 {
     PageType = List;
-    SourceTable = 67090;
+    SourceTable = 55549;
 
     layout
     {

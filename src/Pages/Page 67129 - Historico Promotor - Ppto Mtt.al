@@ -6,7 +6,7 @@ page 67129 "Historico Promotor - Ppto Mtt"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67071;
+    SourceTable = 55538;
     UsageCategory = History;
 
     layout

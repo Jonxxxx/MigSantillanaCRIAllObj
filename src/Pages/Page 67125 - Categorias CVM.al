@@ -4,7 +4,7 @@ page 67125 "Categorias CVM"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67091;
+    SourceTable = 55550;
 
     layout
     {

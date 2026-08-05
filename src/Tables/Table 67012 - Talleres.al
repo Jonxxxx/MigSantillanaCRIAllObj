@@ -1,7 +1,7 @@
 table 55479 Talleres
 {
-    DrillDownPageID = 67041;
-    LookupPageID = 67041;
+    DrillDownPageID = 55508;
+    LookupPageID = 55508;
 
     fields
     {

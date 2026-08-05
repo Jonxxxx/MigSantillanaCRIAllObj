@@ -1,8 +1,8 @@
-table 67092 "Ranking CVM Colegio"
+table 55551 "Ranking CVM Colegio"
 {
     Caption = 'Estadistica Ranking Colegio';
-    DrillDownPageID = 67057;
-    LookupPageID = 67057;
+    DrillDownPageID = 55524;
+    LookupPageID = 55524;
 
     fields
     {

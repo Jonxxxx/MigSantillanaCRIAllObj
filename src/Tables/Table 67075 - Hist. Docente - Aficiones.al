@@ -1,7 +1,7 @@
-table 67075 "Hist. Docente - Aficiones"
+table 55542 "Hist. Docente - Aficiones"
 {
-    DrillDownPageID = 67058;
-    LookupPageID = 67058;
+    DrillDownPageID = 55525;
+    LookupPageID = 55525;
 
     fields
     {

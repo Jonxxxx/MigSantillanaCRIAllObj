@@ -1,4 +1,4 @@
-table 67066 Comisionistas
+table 55533 Comisionistas
 {
     Caption = 'Contact';
     DataCaptionFields = "No.", Name;

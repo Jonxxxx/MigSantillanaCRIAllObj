@@ -1,4 +1,4 @@
-table 67038 "Promotor - Planif. Visita"
+table 55505 "Promotor - Planif. Visita"
 {
     // $001 02/05/14   JML   A ado la Delegacion del colegio para informes
     //                       Traigo el a o seg n la semana
@@ -320,13 +320,13 @@ table 67038 "Promotor - Planif. Visita"
         Col: Record 5050;
         CabPlanif: Record 55490;
         Err001: Label 'The date %1 is out of range allowed for the week %2';
-        PersCol: Record 67043;
+        PersCol: Record 55510;
         DA: Record 55469;
         Docente: Record 55468;
         Err002: Label 'You can''t delete lines with School with completed dates';
         Fecha1: Record 2000000007;
         Fecha2: Record 2000000007;
-        PromPlanVisit: Record 67038;
+        PromPlanVisit: Record 55505;
 
     procedure BuscaCabecera()
     begin

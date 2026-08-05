@@ -153,7 +153,7 @@ page 67085 "Estadistica Adopciones"
 
     procedure RecibeParametros(CodCol: Code[20])
     var
-        ColAdopDetalle: Record 67053;
+        ColAdopDetalle: Record 55520;
         Grados: Record 55469;
     begin
         ConfAPS.GET();

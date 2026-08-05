@@ -118,7 +118,7 @@ report 55475 "Proceso Facturacion Muestras"
     var
         SH: Record 36;
         SL: Record 37;
-        ColAdopciones: Record 67053;
+        ColAdopciones: Record 55520;
         CteRel: Record 5054;
         ProdEquiv: Record 55472;
         TipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";

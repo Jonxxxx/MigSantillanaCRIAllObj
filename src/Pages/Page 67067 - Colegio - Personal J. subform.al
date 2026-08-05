@@ -1,8 +1,8 @@
-page 67067 "Colegio - Personal J. subform"
+page 55534 "Colegio - Personal J. subform"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 67043;
+    SourceTable = 55510;
 
     layout
     {

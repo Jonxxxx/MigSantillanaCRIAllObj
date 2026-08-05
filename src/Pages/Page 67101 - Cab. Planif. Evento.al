@@ -2,7 +2,7 @@ page 67101 "Cab. Planif. Evento"
 {
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = 67051;
+    SourceTable = 55518;
 
     layout
     {
@@ -279,7 +279,7 @@ page 67101 "Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        GpoNegDistrib: Page 67094;
+                        GpoNegDistrib: Page 55553;
                     begin
 
                         TESTFIELD("Cod. Taller - Evento");

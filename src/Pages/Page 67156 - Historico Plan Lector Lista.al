@@ -7,7 +7,7 @@ page 67156 "Historico Plan Lector Lista"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67095;
+    SourceTable = 55554;
     UsageCategory = History;
 
     layout

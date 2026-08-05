@@ -102,8 +102,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                fSol: Page 67090;
-                rSol: Record 67055;
+                fSol: Page 55549;
+                rSol: Record 55522;
             begin
 
                 IF "Tipo Visita" = "Tipo Visita"::Solicitada THEN BEGIN
@@ -125,7 +125,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                rSol: Record 67055;
+                rSol: Record 55522;
                 Err001: Label 'Solo se permite ingresar el No. Solicitud en una visita de Tipo Solicitada.';
                 Err002: Label 'La solicitud seleccionada no es del cod. expositor %1.';
                 Err003: Label 'La solicitud ingresada no se encuentra en estado Programada.';
@@ -228,7 +228,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                ColNivel: Record 67036;
+                ColNivel: Record 55503;
                 pgColNivel: Page 67180;
             begin
 
@@ -273,7 +273,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                ColNivel: Record 67036;
+                ColNivel: Record 55503;
             begin
                 ColNivel.RESET;
                 ColNivel.SETRANGE("Cod. Colegio", "Cod. Colegio");
@@ -315,8 +315,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColDoc: Record 67043;
-                pColDoc: Page 67045;
+                rColDoc: Record 55510;
+                pColDoc: Page 55512;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN BEGIN
                     rColDoc.RESET;
@@ -335,7 +335,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnValidate()
             var
                 Doc: Record 55468;
-                ColDoc: Record 67043;
+                ColDoc: Record 55510;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
                     IF Doc.GET("Cod. Persona Contacto") THEN BEGIN
@@ -472,7 +472,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rEvExp: Record 67050;
+                rEvExp: Record 55517;
                 pEvExp: Page 67100;
             begin
                 rEvExp.RESET;
@@ -492,7 +492,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                rEvExp: Record 67050;
+                rEvExp: Record 55517;
                 err001: Label 'El cod. evento no est  asociado con el consultor %1.';
             begin
                 rEvExp.RESET;
@@ -643,8 +643,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     procedure TraerNGyE(parSolicitud: Code[20])
     var
-        rNivel: Record 67080;
-        rGrado: Record 67081;
+        rNivel: Record 55547;
+        rGrado: Record 55548;
         rEspec: Record 67082;
         rNGE: Record 67105;
     begin
@@ -694,7 +694,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         rProgVisita: Record 67103;
         rProgSolic: Record 55482;
-        rCabPlanif: Record 67051;
+        rCabPlanif: Record 55518;
     begin
 
         IF "No. Visita Asesor/Consultor" <> '' THEN BEGIN

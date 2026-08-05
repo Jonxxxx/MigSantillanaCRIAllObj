@@ -1,4 +1,4 @@
-table 67053 "Colegio - Adopciones Detalle"
+table 55520 "Colegio - Adopciones Detalle"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -10,8 +10,8 @@ table 67053 "Colegio - Adopciones Detalle"
     //                                         Al generar el reporte de adopciones, no se mostraba los datos de adopcion real   (VER //ORIGINAL)
     //                                         al seleccionar como adopcion las opciones de "Competencia" y "no utiliza"
 
-    DrillDownPageID = 67052;
-    LookupPageID = 67052;
+    DrillDownPageID = 55519;
+    LookupPageID = 55519;
 
     fields
     {
@@ -630,12 +630,12 @@ table 67053 "Colegio - Adopciones Detalle"
 
     var
         ConfAPS: Record 55467;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         Editora: Record 55491;
-        GradoCol: Record 67037;
+        GradoCol: Record 55504;
         Item: Record 27;
         ProdEq: Record 55472;
-        CabAdopciones: Record 67052;
+        CabAdopciones: Record 55519;
         DA: Record 55469;
         ColegioAdopciones: Record 55493;
         ColegioAdopciones2: Record 55493;
@@ -651,10 +651,10 @@ table 67053 "Colegio - Adopciones Detalle"
     var
         Adopciones: Record 55493;
         Adopciones2Record: Record 55493;
-        AdopcionesD: Record 67053;
-        HAdopciones: Record 67035;
+        AdopcionesD: Record 55520;
+        HAdopciones: Record 55502;
         Editoriales: Record 55491;
-        GradosCol: Record 67037;
+        GradosCol: Record 55504;
         PptoPromotor: Record 55494;
         Camp: Integer;
         UpdateActivo: Boolean;
@@ -737,8 +737,8 @@ table 67053 "Colegio - Adopciones Detalle"
 
     procedure ActualizaAdopcion(lItem: Record 27)
     var
-        PromRuta: Record 67044;
-        ColAdopcion: Record 67053;
+        PromRuta: Record 55511;
+        ColAdopcion: Record 55520;
     begin
         Editora.SETRANGE(Santillana, TRUE);
         Editora.FINDFIRST;

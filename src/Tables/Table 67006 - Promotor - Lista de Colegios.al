@@ -1,7 +1,7 @@
 table 55473 "Promotor - Lista de Colegios"
 {
-    DrillDownPageID = 67079;
-    LookupPageID = 67079;
+    DrillDownPageID = 55546;
+    LookupPageID = 55546;
 
     fields
     {

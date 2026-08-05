@@ -133,8 +133,8 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColDoc: Record 67043;
-                pColDoc: Page 67045;
+                rColDoc: Record 55510;
+                pColDoc: Page 55512;
                 Cab: Record 67102;
             begin
 
@@ -155,7 +155,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnValidate()
             var
-                ColegioDoc: Record 67043;
+                ColegioDoc: Record 55510;
                 Cab: Record 67102;
             begin
                 Cab.GET("No. Visita");
@@ -184,8 +184,8 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
             trigger OnLookup()
             var
-                rColGrado: Record 67037;
-                pColGrado: Page 67037;
+                rColGrado: Record 55504;
+                pColGrado: Page 55504;
             begin
 
                 /*rColGrado.FILTERGROUP(2);

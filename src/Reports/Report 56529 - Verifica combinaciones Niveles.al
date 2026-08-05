@@ -4,7 +4,7 @@ report 55428 "Verifica combinaciones Niveles"
 
     dataset
     {
-        dataitem("Colegio - Grados"; 67037)
+        dataitem("Colegio - Grados"; 55504)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Cod. Nivel", "Cod. Turno", "Cod. Grado", Seccion)
                                 WHERE("Cod. Nivel" = FILTER('INI' | 'PRI' | 'SEC'));
@@ -62,7 +62,7 @@ report 55428 "Verifica combinaciones Niveles"
     }
 
     var
-        COLNIVEL: Record 67037;
+        COLNIVEL: Record 55504;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

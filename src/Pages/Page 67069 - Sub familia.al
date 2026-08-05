@@ -1,4 +1,4 @@
-page 67069 "Sub familia"
+page 55536 "Sub familia"
 {
     PageType = Card;
     SourceTable = 55469;

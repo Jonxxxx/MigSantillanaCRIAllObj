@@ -6,7 +6,7 @@ page 67114 "Hist. Docentes - Aficiones"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67075;
+    SourceTable = 55542;
     UsageCategory = History;
 
     layout

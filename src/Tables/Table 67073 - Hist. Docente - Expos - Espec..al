@@ -1,4 +1,4 @@
-table 67073 "Hist. Docente - Expos - Espec."
+table 55540 "Hist. Docente - Expos - Espec."
 {
     Caption = 'Specialty';
 

@@ -6,7 +6,7 @@ page 67128 "Historico Promotor - Ppto Vtas"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67070;
+    SourceTable = 55537;
     UsageCategory = History;
 
     layout

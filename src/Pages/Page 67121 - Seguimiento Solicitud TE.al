@@ -7,7 +7,7 @@ page 67121 "Seguimiento Solicitud TE"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67079;
+    SourceTable = 55546;
 
     layout
     {
@@ -55,7 +55,7 @@ page 67121 "Seguimiento Solicitud TE"
 
     trigger OnAfterGetRecord()
     var
-        rSolicitud: Record 67055;
+        rSolicitud: Record 55522;
     begin
 
         CLEAR(wComentario);

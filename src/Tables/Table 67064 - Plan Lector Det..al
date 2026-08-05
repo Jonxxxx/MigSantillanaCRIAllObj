@@ -1,4 +1,4 @@
-table 67064 "Plan Lector Det."
+table 55531 "Plan Lector Det."
 {
 
     fields
@@ -173,7 +173,7 @@ table 67064 "Plan Lector Det."
 
     trigger OnDelete()
     var
-        DetPL: Record 67064;
+        DetPL: Record 55531;
     begin
         DetPL.RESET;
         DetPL.SETRANGE(Campana, Campana);

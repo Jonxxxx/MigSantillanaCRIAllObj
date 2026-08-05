@@ -1,7 +1,7 @@
 page 67123 "Solicitud - Grado Asistentes"
 {
     PageType = List;
-    SourceTable = 67081;
+    SourceTable = 55548;
 
     layout
     {

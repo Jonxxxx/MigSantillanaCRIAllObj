@@ -1,4 +1,4 @@
-page 67076 "Transfer Order Subform Muestra"
+page 55543 "Transfer Order Subform Muestra"
 {
     AutoSplitKey = true;
     Caption = 'Transfer Order Subform';
@@ -189,12 +189,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(3,ShortcutDimCode[3]);
+                        LookupShortcutDimCode(3, ShortcutDimCode[3]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(3,ShortcutDimCode[3]);
+                        ValidateShortcutDimCode(3, ShortcutDimCode[3]);
                     end;
                 }
                 field(ShortcutDimension4JX; ShortcutDimCode[4])
@@ -205,12 +205,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(4,ShortcutDimCode[4]);
+                        LookupShortcutDimCode(4, ShortcutDimCode[4]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(4,ShortcutDimCode[4]);
+                        ValidateShortcutDimCode(4, ShortcutDimCode[4]);
                     end;
                 }
                 field(ShortcutDimension5JX; ShortcutDimCode[5])
@@ -221,12 +221,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(5,ShortcutDimCode[5]);
+                        LookupShortcutDimCode(5, ShortcutDimCode[5]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(5,ShortcutDimCode[5]);
+                        ValidateShortcutDimCode(5, ShortcutDimCode[5]);
                     end;
                 }
                 field(ShortcutDimension6JX; ShortcutDimCode[6])
@@ -237,12 +237,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(6,ShortcutDimCode[6]);
+                        LookupShortcutDimCode(6, ShortcutDimCode[6]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(6,ShortcutDimCode[6]);
+                        ValidateShortcutDimCode(6, ShortcutDimCode[6]);
                     end;
                 }
                 field(ShortcutDimension7JX; ShortcutDimCode[7])
@@ -253,12 +253,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(7,ShortcutDimCode[7]);
+                        LookupShortcutDimCode(7, ShortcutDimCode[7]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(7,ShortcutDimCode[7]);
+                        ValidateShortcutDimCode(7, ShortcutDimCode[7]);
                     end;
                 }
                 field(ShortcutDimension8JX; ShortcutDimCode[8])
@@ -269,12 +269,12 @@ page 67076 "Transfer Order Subform Muestra"
 
                     trigger OnLookup(var Text: Text): Boolean
                     begin
-                        LookupShortcutDimCode(8,ShortcutDimCode[8]);
+                        LookupShortcutDimCode(8, ShortcutDimCode[8]);
                     end;
 
                     trigger OnValidate()
                     begin
-                        ValidateShortcutDimCode(8,ShortcutDimCode[8]);
+                        ValidateShortcutDimCode(8, ShortcutDimCode[8]);
                     end;
                 }
             }

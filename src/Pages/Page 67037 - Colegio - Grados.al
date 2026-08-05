@@ -1,9 +1,9 @@
-page 67037 "Colegio - Grados"
+page 55504 "Colegio - Grados"
 {
     DataCaptionFields = "Cod. Colegio";
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 67037;
+    SourceTable = 55504;
 
     layout
     {

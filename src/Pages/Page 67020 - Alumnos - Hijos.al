@@ -137,7 +137,7 @@ page 55487 "Alumnos - Hijos"
                     Caption = '&Card';
                     ToolTip = '&Card';
                     Image = EditLines;
-                    RunObject = Page 67056;
+                    RunObject = Page 55523;
                     RunPageLink = Code = FIELD("Code");
                     ShortCutKey = 'Shift+F7';
                 }
@@ -146,7 +146,7 @@ page 55487 "Alumnos - Hijos"
                     ApplicationArea = All;
                     Caption = '&Fathers';
                     ToolTip = '&Fathers';
-                    RunObject = Page 67049;
+                    RunObject = Page 55516;
                     RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")

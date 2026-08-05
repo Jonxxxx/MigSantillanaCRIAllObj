@@ -1,7 +1,7 @@
-page 67066 "Colegio - Personal Jerarquico"
+page 55533 "Colegio - Personal Jerarquico"
 {
     PageType = Card;
-    SourceTable = 67056;
+    SourceTable = 55523;
 
     layout
     {
@@ -36,7 +36,7 @@ page 67066 "Colegio - Personal Jerarquico"
                     ToolTip = 'Cod. Nivel';
                 }
             }
-            part(PagePart; 67067)
+            part(PagePart; 55534)
             {
                 SubPageLink = "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Docente" = FIELD("Cod. Local"),

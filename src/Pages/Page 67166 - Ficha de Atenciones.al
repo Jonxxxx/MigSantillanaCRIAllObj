@@ -1,7 +1,7 @@
 page 67166 "Ficha de Atenciones"
 {
     PageType = Card;
-    SourceTable = 67061;
+    SourceTable = 55528;
 
     layout
     {

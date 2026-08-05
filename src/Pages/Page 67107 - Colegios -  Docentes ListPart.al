@@ -2,7 +2,7 @@ page 67107 "Colegios -  Docentes ListPart"
 {
     Caption = 'Schoold - Teachers';
     PageType = ListPart;
-    SourceTable = 67043;
+    SourceTable = 55510;
 
     layout
     {

@@ -1,7 +1,7 @@
 page 67100 "Expositores - Eventos"
 {
     PageType = List;
-    SourceTable = 67050;
+    SourceTable = 55517;
 
     layout
     {
@@ -68,8 +68,8 @@ page 67100 "Expositores - Eventos"
 
                     trigger OnAction()
                     var
-                        CabPlanEvent: Record 67051;
-                        CabPlanEvent2Record: Record 67051;
+                        CabPlanEvent: Record 55518;
+                        CabPlanEvent2Record: Record 55518;
                         PlanEvent: Page 67102;
                     begin
                         PlanEvent.RecibeParametros("Cod. Expositor", "Tipo de Expositor", "Cod. Evento", CabPlanEvent."Tipo Evento");

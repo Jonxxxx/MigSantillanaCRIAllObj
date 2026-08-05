@@ -1,4 +1,4 @@
-table 67079 "Seguimiento Solicitud TE"
+table 55546 "Seguimiento Solicitud TE"
 {
 
     fields
@@ -50,7 +50,7 @@ table 67079 "Seguimiento Solicitud TE"
 
     trigger OnInsert()
     var
-        SegSol: Record 67079;
+        SegSol: Record 55546;
     begin
         SegSol.SETRANGE("No. Solicitud", "No. Solicitud");
         IF SegSol.FINDLAST THEN
@@ -59,7 +59,7 @@ table 67079 "Seguimiento Solicitud TE"
             "No. Cambio" := 1;
     end;
 
-    procedure InsertarSeguimiento(parSolicitud: Record 67055)
+    procedure InsertarSeguimiento(parSolicitud: Record 55522)
     begin
         "No. Solicitud" := parSolicitud."No. Solicitud";
         Status := parSolicitud.Status;

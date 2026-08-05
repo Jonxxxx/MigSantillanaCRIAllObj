@@ -1,7 +1,7 @@
-table 67040 "Promotor - Niveles"
+table 55507 "Promotor - Niveles"
 {
-    DrillDownPageID = 67050;
-    LookupPageID = 67050;
+    DrillDownPageID = 55517;
+    LookupPageID = 55517;
 
     fields
     {

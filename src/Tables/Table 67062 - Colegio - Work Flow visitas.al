@@ -1,4 +1,4 @@
-table 67062 "Colegio - Work Flow visitas"
+table 55529 "Colegio - Work Flow visitas"
 {
 
     fields
@@ -115,7 +115,7 @@ table 67062 "Colegio - Work Flow visitas"
 
     trigger OnModify()
     var
-        CWF: Record 67062;
+        CWF: Record 55529;
     begin
         //IF Paso THEN
         //   BEGIN

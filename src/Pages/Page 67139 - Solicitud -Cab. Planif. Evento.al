@@ -5,7 +5,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
     ModifyAllowed = false;
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = 67051;
+    SourceTable = 55518;
 
     layout
     {
@@ -144,7 +144,7 @@ page 67139 "Solicitud -Cab. Planif. Evento"
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
         rProg: Record 55482;
-        rSol: Record 67055;
+        rSol: Record 55522;
     begin
         /*
         IF "No. Solicitud" <> '' THEN BEGIN

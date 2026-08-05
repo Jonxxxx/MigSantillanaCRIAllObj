@@ -1,4 +1,4 @@
-table 67094 "Tabla trabajo Ranking"
+table 55553 "Tabla trabajo Ranking"
 {
 
     fields

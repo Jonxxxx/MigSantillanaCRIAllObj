@@ -1,4 +1,4 @@
-page 67068 "Area Principal"
+page 55535 "Area Principal"
 {
     Caption = 'Main area';
     PageType = Card;

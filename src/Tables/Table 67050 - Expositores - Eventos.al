@@ -1,4 +1,4 @@
-table 67050 "Expositores - Eventos"
+table 55517 "Expositores - Eventos"
 {
     Caption = 'Exhibitors - Events';
 
@@ -116,7 +116,7 @@ table 67050 "Expositores - Eventos"
         Vend: Record 23;
         Evento: Record 55478;
         DimVal: Record 349;
-        CabPlanifEven: Record 67051;
+        CabPlanifEven: Record 55518;
         Err001: Label 'Can not delete the Exhibitor because it has associated events.';
 }
 

@@ -1,4 +1,4 @@
-page 67061 "Cab. Planificacion"
+page 55528 "Cab. Planificacion"
 {
     DataCaptionFields = "Cod. Promotor", "Nombre promotor";
     PageType = Card;
@@ -53,7 +53,7 @@ page 67061 "Cab. Planificacion"
                     Editable = false;
                 }
             }
-            part(PagePromotor; 67038)
+            part(PagePromotor; 55505)
             {
                 SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
                               "Semana" = FIELD("Semana"),
@@ -81,7 +81,7 @@ page 67061 "Cab. Planificacion"
 
                     trigger OnAction()
                     var
-                        SelCol: Page 67079;
+                        SelCol: Page 55546;
                     begin
 
                         SelCol.RecibeParametros("Cod. Promotor", Ano, Semana);
@@ -166,8 +166,8 @@ page 67061 "Cab. Planificacion"
         CabPlanifReg: Record 55490;
         User: Record 91;
         Promotor: Record 13;
-        Planif: Record 67038;
-        Planif2: Record 67038;
+        Planif: Record 55505;
+        Planif2: Record 55505;
         Text001: Label 'The planning has been posted';
         [InDataSet]
         PromEditable: Boolean;

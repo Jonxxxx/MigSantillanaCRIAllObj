@@ -1,4 +1,4 @@
-table 67047 "Docente - Materia"
+table 55514 "Docente - Materia"
 {
 
     fields

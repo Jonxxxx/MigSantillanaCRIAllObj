@@ -18,7 +18,7 @@ report 55497 "Cerrar campaña 2"
 
     dataset
     {
-        dataitem("Colegio - Adopciones Cab"; 67052)
+        dataitem("Colegio - Adopciones Cab"; 55519)
         {
 
             trigger OnAfterGetRecord()

@@ -1,7 +1,7 @@
 table 55493 "Colegio - Log - Adopciones"
 {
-    DrillDownPageID = 67051;
-    LookupPageID = 67051;
+    DrillDownPageID = 55518;
+    LookupPageID = 55518;
 
     fields
     {
@@ -291,12 +291,12 @@ table 55493 "Colegio - Log - Adopciones"
 
     var
         ConfAPS: Record 55467;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         Editora: Record 55491;
-        GradoCol: Record 67037;
+        GradoCol: Record 55504;
         Item: Record 27;
         ProdEq: Record 55472;
-        CabAdopciones: Record 67052;
+        CabAdopciones: Record 55519;
         DA: Record 55469;
         ColegioAdopciones: Record 55493;
         ColegioAdopciones2Record: Record 55493;

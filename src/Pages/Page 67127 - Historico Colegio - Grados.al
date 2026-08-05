@@ -6,7 +6,7 @@ page 67127 "Historico Colegio - Grados"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67069;
+    SourceTable = 55536;
     UsageCategory = History;
 
     layout

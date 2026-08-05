@@ -212,7 +212,7 @@ report 55478 "Alcance presupuesto promotor"
 
     var
         recCfgAPS: Record 55467;
-        recAdopciones: Record 67053;
+        recAdopciones: Record 55520;
         recNivel: Record 55489;
         codLinNeg: Code[20];
         texDescLinNeg: Text[100];

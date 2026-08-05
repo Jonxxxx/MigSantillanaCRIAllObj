@@ -1,8 +1,8 @@
-page 67036 "Colegio - Nivel"
+page 55503 "Colegio - Nivel"
 {
     DelayedInsert = true;
     PageType = Card;
-    SourceTable = 67036;
+    SourceTable = 55503;
 
     layout
     {
@@ -104,7 +104,7 @@ page 67036 "Colegio - Nivel"
 
                     trigger OnAction()
                     var
-                        fAdopciones: Page 67051;
+                        fAdopciones: Page 55518;
                     begin
                         PromRuta.SETRANGE("Cod. Ruta", Ruta);
                         PromRuta.FINDFIRST;
@@ -124,7 +124,7 @@ page 67036 "Colegio - Nivel"
                     Image = GetLines;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67037;
+                    RunObject = Page 55504;
                     RunPageLink = "Cod. Colegio" = FIELD("Cod. Colegio");
                 }
             }
@@ -181,7 +181,7 @@ page 67036 "Colegio - Nivel"
     end;
 
     var
-        PromRuta: Record 67044;
+        PromRuta: Record 55511;
         gColegio: Code[30];
         gCity: Code[30];
         gCounty: Code[30];

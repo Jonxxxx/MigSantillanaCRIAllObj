@@ -2,7 +2,7 @@ page 67145 "Ranking CVM"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = 67092;
+    SourceTable = 55551;
     SourceTableTemporary = true;
 
     layout
@@ -64,16 +64,16 @@ page 67145 "Ranking CVM"
     procedure CalcularRanking(CodCol: Code[20])
     var
         Colegio: Record 5050;
-        ColCateg: Record 67091;
-        HistColAdopciones: Record 67035;
+        ColCateg: Record 55550;
+        HistColAdopciones: Record 55502;
         TarifVta: Record 7002;
         Porciento: Decimal;
         Total: Decimal;
         TotalGpoNivel: Decimal;
         wAntGpo: Code[20];
         Config: Record 55467;
-        HistColCateg: Record 67093;
-        ColAdopciones: Record 67053;
+        HistColCateg: Record 55552;
+        ColAdopciones: Record 55520;
         ultCamp: Code[20];
         Text001: Label 'Ranking CVM (calculado con datos de la temporada: %1)';
     begin

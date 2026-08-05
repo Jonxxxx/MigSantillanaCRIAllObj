@@ -1,4 +1,4 @@
-page 67070 "Clientes relacionados"
+page 55537 "Clientes relacionados"
 {
     PageType = Card;
     SourceTable = 55470;

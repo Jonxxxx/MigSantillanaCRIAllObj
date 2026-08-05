@@ -4,7 +4,7 @@ page 67116 "Hist Colegio - Docentes"
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
     Editable = false;
     PageType = List;
-    SourceTable = 67076;
+    SourceTable = 55543;
     UsageCategory = History;
 
     layout

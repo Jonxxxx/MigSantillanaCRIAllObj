@@ -6,7 +6,7 @@ page 67115 "Hist. Docentes - Espec."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67074;
+    SourceTable = 55541;
     UsageCategory = History;
 
     layout

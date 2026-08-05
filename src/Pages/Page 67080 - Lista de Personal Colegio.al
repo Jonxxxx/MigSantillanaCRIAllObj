@@ -1,9 +1,9 @@
-page 67080 "Lista de Personal Colegio"
+page 55547 "Lista de Personal Colegio"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = 67057;
+    SourceTable = 55524;
     UsageCategory = Lists;
 
     layout

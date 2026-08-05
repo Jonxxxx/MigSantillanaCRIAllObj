@@ -110,6 +110,6 @@ table 55271 "Crear Cupon por Lote."
         rProducto: Record 27;
         rCabCupon: Record 55170;
         Error001: Label 'Printed Coupon cannot be modified';
-        ColAdop: Record 67036;
+        ColAdop: Record 55503;
 }
 

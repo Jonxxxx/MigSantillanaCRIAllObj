@@ -1,4 +1,4 @@
-page 67063 "Docentes - Especialidades"
+page 55530 "Docentes - Especialidades"
 {
     PageType = Card;
     SourceTable = 55485;

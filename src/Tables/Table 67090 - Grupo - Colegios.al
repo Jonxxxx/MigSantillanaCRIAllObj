@@ -1,4 +1,4 @@
-table 67090 "Grupo - Colegios"
+table 55549 "Grupo - Colegios"
 {
 
     fields
@@ -56,7 +56,7 @@ table 67090 "Grupo - Colegios"
 
     trigger OnInsert()
     var
-        rRec: Record 67090;
+        rRec: Record 55549;
     begin
         TESTFIELD("Cod. grupo");
         TESTFIELD("Cod. Colegio");

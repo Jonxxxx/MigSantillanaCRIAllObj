@@ -5,7 +5,7 @@ report 55484 "Alcance presupuesto detallado"
 
     dataset
     {
-        dataitem(Presupuesto; 67060)
+        dataitem(Presupuesto; 55527)
         {
             CalcFields = "Descripcion nivel", "Descripcion producto";
             DataItemTableView = SORTING(Usuario, "Fecha hora", "Cod. Nivel", "Linea de negocio", Familia, "Sub Familia");
@@ -174,7 +174,7 @@ report 55484 "Alcance presupuesto detallado"
     end;
 
     var
-        recTemp: Record 67060;
+        recTemp: Record 55527;
         dlgProgreso: Dialog;
         codPromotor: Code[20];
         dtImpresion: DateTime;
@@ -230,9 +230,9 @@ report 55484 "Alcance presupuesto detallado"
 
     procedure CargarDatosTemp()
     var
-        recTmpRep: Record 67060 temporary;
+        recTmpRep: Record 55527 temporary;
         recPpto: Record 55494;
-        recAdopciones: Record 67053;
+        recAdopciones: Record 55520;
         recProducto: Record 27;
         codNivel: Code[20];
         codLinNeg: Code[20];

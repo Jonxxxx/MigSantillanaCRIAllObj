@@ -1,8 +1,8 @@
-table 67034 "Talleres y Eventos - Grados"
+table 55501 "Talleres y Eventos - Grados"
 {
     Caption = 'Branch';
-    DrillDownPageID = 67034;
-    LookupPageID = 67034;
+    DrillDownPageID = 55501;
+    LookupPageID = 55501;
 
     fields
     {
@@ -100,7 +100,7 @@ table 67034 "Talleres y Eventos - Grados"
 
     var
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
-        SolEvento: Record 67055;
+        SolEvento: Record 55522;
         Evento: Record 55478;
         APSSetup: Record 55467;
         TipoEvento: Record 55477;
@@ -110,7 +110,7 @@ table 67034 "Talleres y Eventos - Grados"
         FRBitMap: Record 55499;
         DA: Record 55469;
         Docente: Record 55468;
-        ColDocentes: Record 67043;
+        ColDocentes: Record 55510;
         ATE: Record 55483;
 
     procedure DisplayMap()

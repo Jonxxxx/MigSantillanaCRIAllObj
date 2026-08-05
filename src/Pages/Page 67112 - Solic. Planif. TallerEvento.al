@@ -88,8 +88,8 @@ page 67112 "Solic. Planif. Taller/Evento"
 
                     trigger OnAction()
                     var
-                        CabPlanEvent: Record 67051;
-                        CabPlanEvent2Record: Record 67051;
+                        CabPlanEvent: Record 55518;
+                        CabPlanEvent2Record: Record 55518;
                         PlanEvent: Page 67102;
                     begin
                         /*
@@ -150,7 +150,7 @@ page 67112 "Solic. Planif. Taller/Evento"
     end;
 
     var
-        CabPlanEvento: Record 67051;
+        CabPlanEvento: Record 55518;
         SelDoc: Page 67103;
         TotDocentes: Integer;
         TotSeleccionados: Integer;

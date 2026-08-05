@@ -1,10 +1,10 @@
-page 67090 "Lista Solicitudes T&E"
+page 55549 "Lista Solicitudes T&E"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Solicitud asistencia Tec - Ped";
     Editable = false;
     PageType = List;
-    SourceTable = 67055;
+    SourceTable = 55522;
     SourceTableView = SORTING("Fecha Propuesta");
     UsageCategory = Lists;
 
@@ -186,7 +186,7 @@ page 67090 "Lista Solicitudes T&E"
                     Caption = '&Card';
                     ToolTip = '&Card';
                     Image = EditLines;
-                    RunObject = Page 67064;
+                    RunObject = Page 55531;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }

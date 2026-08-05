@@ -24,7 +24,7 @@ table 67111 "Textos Principales"
 
             trigger OnLookup()
             var
-                GpoNegocio: Page 67093;
+                GpoNegocio: Page 55552;
             begin
             end;
         }

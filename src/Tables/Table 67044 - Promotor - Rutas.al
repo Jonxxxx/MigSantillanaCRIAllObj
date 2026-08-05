@@ -1,7 +1,7 @@
-table 67044 "Promotor - Rutas"
+table 55511 "Promotor - Rutas"
 {
-    DrillDownPageID = 67048;
-    LookupPageID = 67048;
+    DrillDownPageID = 55515;
+    LookupPageID = 55515;
 
     fields
     {

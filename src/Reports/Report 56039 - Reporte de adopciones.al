@@ -7,7 +7,7 @@ report 55264 "Reporte de adopciones"
 
     dataset
     {
-        dataitem("Colegio - Adopciones Detalle"; 67053)
+        dataitem("Colegio - Adopciones Detalle"; 55520)
         {
             RequestFilterFields = "Fecha Adopcion";
             column(CodProducto_ColegioAdopcionesDetalle; "Colegio - Adopciones Detalle"."Cod. Producto")

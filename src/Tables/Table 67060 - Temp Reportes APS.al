@@ -1,4 +1,4 @@
-table 67060 "Temp Reportes APS"
+table 55527 "Temp Reportes APS"
 {
     DrillDownPageID = 55494;
     LookupPageID = 55494;

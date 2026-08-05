@@ -1,7 +1,7 @@
-table 67051 "Cab. Planif. Evento"
+table 55518 "Cab. Planif. Evento"
 {
-    DrillDownPageID = 67059;
-    LookupPageID = 67059;
+    DrillDownPageID = 55526;
+    LookupPageID = 55526;
 
     fields
     {
@@ -365,7 +365,7 @@ table 67051 "Cab. Planif. Evento"
         Vend: Record 23;
         TyE: Record 55478;
         TipoEvent: Record 55477;
-        CabPlanEvent: Record 67051;
+        CabPlanEvent: Record 55518;
         ConfAPS: Record 55467;
         DimVal: Record 349;
         MatTallerEvento: Record 55481;
@@ -375,8 +375,8 @@ table 67051 "Cab. Planif. Evento"
 
     procedure CalculaMonto() rtnImporte: Decimal
     var
-        rTar: Record 67068;
-        rSol: Record 67055;
+        rTar: Record 55535;
+        rSol: Record 55522;
         rCol: Record 5050;
     begin
         rtnImporte := 0;

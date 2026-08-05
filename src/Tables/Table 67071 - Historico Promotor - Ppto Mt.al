@@ -1,4 +1,4 @@
-table 67071 "Historico Promotor - Ppto Mt"
+table 55538 "Historico Promotor - Ppto Mt"
 {
 
     fields

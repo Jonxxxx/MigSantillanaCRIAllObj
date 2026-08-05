@@ -57,7 +57,7 @@ page 55475 Rutas
                     ApplicationArea = All;
                     Caption = '&Salesrep';
                     ToolTip = '&Salesrep';
-                    RunObject = Page 67048;
+                    RunObject = Page 55515;
                     RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }
             }

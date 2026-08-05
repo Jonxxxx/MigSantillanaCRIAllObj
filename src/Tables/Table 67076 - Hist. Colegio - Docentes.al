@@ -1,4 +1,4 @@
-table 67076 "Hist. Colegio - Docentes"
+table 55543 "Hist. Colegio - Docentes"
 {
 
     fields
@@ -224,9 +224,9 @@ table 67076 "Hist. Colegio - Docentes"
 
     var
         DA: Record 55469;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         NivelE: Record 55489;
-        PromRuta: Record 67044;
+        PromRuta: Record 55511;
         Promotor: Record 13;
         Docente: Record 55468;
         Cargo: Page 55500;

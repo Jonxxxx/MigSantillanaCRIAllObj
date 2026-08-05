@@ -320,7 +320,7 @@ table 55482 "Programac. Talleres y Eventos"
         Col: Record 5050;
         Prom: Record 13;
         TyE: Record 55478;
-        CabPEvento: Record 67051;
+        CabPEvento: Record 55518;
         Err001: Label 'You must change the %1 to '' '' in the Header to modify this line';
 
     procedure Horas()

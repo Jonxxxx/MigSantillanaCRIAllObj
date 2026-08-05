@@ -1,7 +1,7 @@
-table 67039 "Promotor - Entrega Muestras"
+table 55506 "Promotor - Entrega Muestras"
 {
-    DrillDownPageID = 67039;
-    LookupPageID = 67039;
+    DrillDownPageID = 55506;
+    LookupPageID = 55506;
 
     fields
     {
@@ -169,7 +169,7 @@ table 67039 "Promotor - Entrega Muestras"
 
     var
         Prod: Record 27;
-        PromPlanifVisit: Record 67038;
+        PromPlanifVisit: Record 55505;
         PromPptoMuestras: Record 55495;
         Err001: Label 'The sum o the samples for this salesperson exceed the budget''s quantity';
         Err002: Label 'Item %1 is not in the budget for this Salesperson';

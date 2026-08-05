@@ -1,4 +1,4 @@
-page 67094 "Grupos de Negocio - Distrib."
+page 55553 "Grupos de Negocio - Distrib."
 {
     DeleteAllowed = false;
     InsertAllowed = false;
@@ -95,7 +95,7 @@ page 67094 "Grupos de Negocio - Distrib."
     end;
 
     var
-        ColAdopciones: Record 67053;
+        ColAdopciones: Record 55520;
         Editoras: Record 55491;
         da: Record 55469;
         TotalGen: Decimal;

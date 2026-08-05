@@ -1,4 +1,4 @@
-page 67075 "Seleccionar Productos Muestras"
+page 55542 "Seleccionar Productos Muestras"
 {
     // Esto va en OnAfterNextRecord
     // 

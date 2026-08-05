@@ -213,7 +213,7 @@ pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
 
                     trigger OnAction()
                     var
-                        EXCCRIAssistancePage: Page 67090;
+                        EXCCRIAssistancePage: Page 55549;
                     begin
                         EXCCRIAssistancePage.RecibeParam(Rec.Code);
                         EXCCRIAssistancePage.RunModal();
@@ -267,7 +267,7 @@ pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
                     Image = AddToHome;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67079;
+                    RunObject = Page 55546;
                     RunPageLink = "Cod. Promotor" = field(Code);
                     ToolTip = 'Opens the schools assigned to the salesperson.';
                 }
@@ -278,7 +278,7 @@ pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
                     Image = EditCustomer;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67078;
+                    RunObject = Page 55545;
                     RunPageLink = "Cod. Promotor" = field(Code);
                     ToolTip = 'Opens the teachers assigned to the salesperson.';
                 }
@@ -326,16 +326,16 @@ pageextension 55095 EXCCRISalespersonCard extends "Salesperson/Purchaser Card"
         EXCCRIUserSetup: Record "User Setup";
         EXCCRISalesBudget: Record 55494;
         EXCCRISampleBudget: Record 55495;
-        EXCCRILevels: Record 67040;
+        EXCCRILevels: Record 55507;
         EXCCRIVisitPlanning: Record 55490;
         EXCCRIVisitExecution: Record 55490;
-        EXCCRISampleDelivery: Record 67039;
-        EXCCRIRoutes: Record 67044;
+        EXCCRISampleDelivery: Record 55506;
+        EXCCRIRoutes: Record 55511;
         EXCCRISalesBudgetPage: Page 55494;
         EXCCRISampleBudgetPage: Page 55495;
         EXCCRIVisitPlanningPage: Page 67097;
         EXCCRIVisitExecutionPage: Page 67098;
-        EXCCRISampleDeliveryPage: Page 67039;
-        EXCCRILevelsPage: Page 67050;
-        EXCCRIRoutesPage: Page 67048;
+        EXCCRISampleDeliveryPage: Page 55506;
+        EXCCRILevelsPage: Page 55517;
+        EXCCRIRoutesPage: Page 55515;
 }

@@ -255,7 +255,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = EditCustomer;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67045;
+                    RunObject = Page 55512;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the teachers associated with the school.';
                 }
@@ -266,7 +266,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = GetLines;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67037;
+                    RunObject = Page 55504;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the grades associated with the school.';
                 }
@@ -339,7 +339,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = ProfileCalendar;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67090;
+                    RunObject = Page 55549;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the technical assistance requests associated with the school.';
                 }
@@ -350,7 +350,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = Hierarchy;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67067;
+                    RunObject = Page 55534;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the job structure associated with the school.';
                 }
@@ -359,7 +359,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
     }
 
     var
-        EXCCRILevelPage: Page 67036;
+        EXCCRILevelPage: Page 55503;
         EXCCRIRankingPage: Page 67145;
         EXCCRIRequiredFields: array[12] of Text[100];
 }

@@ -7,7 +7,7 @@ report 55490 "CDS Docentes por promotor"
 
     dataset
     {
-        dataitem("Colegio - Docentes"; 67043)
+        dataitem("Colegio - Docentes"; 55510)
         {
             CalcFields = "Nombre Promotor";
             DataItemTableView = SORTING("Pertenece al CDS", "Cod. Colegio", "Apellido paterno")

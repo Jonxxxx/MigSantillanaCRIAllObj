@@ -1,7 +1,7 @@
 page 67160 "Tarifas - Tipos de Evento"
 {
     PageType = List;
-    SourceTable = 67068;
+    SourceTable = 55535;
 
     layout
     {

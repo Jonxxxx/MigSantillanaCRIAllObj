@@ -1,8 +1,8 @@
-table 67041 "Estadistica Ranking Colegio"
+table 55508 "Estadistica Ranking Colegio"
 {
     Caption = 'Estadistica Ranking Colegio';
-    DrillDownPageID = 67057;
-    LookupPageID = 67057;
+    DrillDownPageID = 55524;
+    LookupPageID = 55524;
 
     fields
     {

@@ -20,7 +20,7 @@ codeunit 55468 "Generacion Words APS"
     procedure GeneraWordSolicitudAsistencia(codPrmSolicitud: Code[20])
     var
         recCfgAPS: Record 55467;
-        recSolicitud: Record 67055;
+        recSolicitud: Record 55522;
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
@@ -145,7 +145,7 @@ codeunit 55468 "Generacion Words APS"
         EXIT(texNombre);
     end;
 
-    local procedure InsertarTablaProgamacion(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaProgamacion(recPrmSolicitud: Record 55522)
     var
         recProgramacion: Record 55482;
         intFila: Integer;
@@ -153,7 +153,7 @@ codeunit 55468 "Generacion Words APS"
         Text002: Label 'Fecha';
         Text003: Label 'Hora inicio';
         Text004: Label 'Hora final';
-        recCabPlan: Record 67051;
+        recCabPlan: Record 55518;
         Text005: Label 'Programado';
         Text006: Label 'Solo C.C.';
         Text007: Label 'Grado';
@@ -297,7 +297,7 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaAsistentes2(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaAsistentes2(recPrmSolicitud: Record 55522)
     var
         recAsistentes: Record 55483;
         intFila: Integer;
@@ -306,7 +306,7 @@ codeunit 55468 "Generacion Words APS"
         Text003: Label 'Nombre';
         Text004: Label 'Nivel';
         recProgramacion: Record 55482;
-        recCabPlan: Record 67051;
+        recCabPlan: Record 55518;
     begin
         //CPMCR-CEC+
         /*
@@ -366,7 +366,7 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaMaterial2(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaMaterial2(recPrmSolicitud: Record 55522)
     var
         recMaterial: Record 55481;
         intFila: Integer;
@@ -507,7 +507,7 @@ codeunit 55468 "Generacion Words APS"
     procedure GeneraWordPPFF(codPrmSolicitud: Code[20])
     var
         recCfgAPS: Record 55467;
-        recSolicitud: Record 67055;
+        recSolicitud: Record 55522;
         recColegio: Record 5050;
         texDistrito: Text[100];
         texDireccion: Text[250];
@@ -521,7 +521,7 @@ codeunit 55468 "Generacion Words APS"
         texRuta: Text[1024];
         Text002: Label 'El documento Word se ha generado y guardado en la ruta: ';
         tipoPlantilla: Option Solicitud,PPFF,VisitasCA;
-        recCabPlan: Record 67051;
+        recCabPlan: Record 55518;
         recProgramacion: Record 55482;
         textFechaProg: Text[30];
         textHoraInicio: Text[30];
@@ -631,7 +631,7 @@ codeunit 55468 "Generacion Words APS"
             EXIT(recDelegacion.Name);
     end;
 
-    local procedure InsertarTablaAsistentes(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaAsistentes(recPrmSolicitud: Record 55522)
     var
         recAsistentes: Record 55483;
         intFila: Integer;
@@ -640,9 +640,9 @@ codeunit 55468 "Generacion Words APS"
         Text003: Label 'Grado';
         Text004: Label 'Nivel';
         recProgramacion: Record 55482;
-        recCabPlan: Record 67051;
-        recNivel: Record 67080;
-        recGrado: Record 67081;
+        recCabPlan: Record 55518;
+        recNivel: Record 55547;
+        recGrado: Record 55548;
         recEspec: Record 67082;
         lineas: Integer;
         nCol: Integer;
@@ -736,20 +736,20 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaTextos(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaTextos(recPrmSolicitud: Record 55522)
     var
         intFila: Integer;
         Text001: Label 'Textos que utilizan';
         Text002: Label 'Editorial';
         Text003: Label 'Cod. Articulo';
         Text004: Label 'Descripcion';
-        recAdop: Record 67035;
+        recAdop: Record 55502;
         rGrupoCOL: Record 67089;
         Text005: Label 'Grado';
         Text006: Label 'Hras. por sem.';
         nCol: Integer;
         wCount: Integer;
-        recAdop2: Record 67035;
+        recAdop2: Record 55502;
     begin
         //CPMCR-CEC+
         /*
@@ -887,7 +887,7 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaCompetencia(recPrmSolicitud: Record 67055)
+    local procedure InsertarTablaCompetencia(recPrmSolicitud: Record 55522)
     var
         intFila: Integer;
         Text001: Label 'Textos de la Competencia';
@@ -1105,7 +1105,7 @@ codeunit 55468 "Generacion Words APS"
         Text002: Label 'Fecha';
         Text003: Label 'Hora inicio';
         Text004: Label 'Hora final';
-        recCabPlan: Record 67051;
+        recCabPlan: Record 55518;
         Text005: Label 'Programado';
         Text006: Label 'Solo C.C.';
         Text007: Label 'Grado';

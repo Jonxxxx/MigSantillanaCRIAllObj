@@ -1,4 +1,4 @@
-page 67041 "Lista de Talleres - Eventos"
+page 55508 "Lista de Talleres - Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Talleres - Eventos";

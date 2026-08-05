@@ -1,7 +1,7 @@
-table 67057 "Colegio - Lin. Jerarquia puest"
+table 55524 "Colegio - Lin. Jerarquia puest"
 {
-    DrillDownPageID = 67080;
-    LookupPageID = 67080;
+    DrillDownPageID = 55547;
+    LookupPageID = 55547;
 
     fields
     {
@@ -130,7 +130,7 @@ table 67057 "Colegio - Lin. Jerarquia puest"
 
     var
         Colegio: Record 5050;
-        Nivel: Record 67036;
+        Nivel: Record 55503;
         Turno: Record 55470;
         Empleado: Record 55468;
         DA: Record 55469;

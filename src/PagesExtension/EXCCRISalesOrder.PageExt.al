@@ -238,7 +238,7 @@ pageextension 55020 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                    // EXCCRIInvoiceAdoptionsReport: Report 67044;
+                    // EXCCRIInvoiceAdoptionsReport: Report 55511;
                     begin
                         // EXCCRIInvoiceAdoptionsReport.RecibeParametros(
                         //     Rec."Document Type",

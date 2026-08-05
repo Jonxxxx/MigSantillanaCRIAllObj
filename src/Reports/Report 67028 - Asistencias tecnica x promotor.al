@@ -6,7 +6,7 @@ report 55495 "Asistencias tecnica x promotor"
 
     dataset
     {
-        dataitem(Solicitud; 67055)
+        dataitem(Solicitud; 55522)
         {
             DataItemTableView = SORTING("No. Solicitud");
             RequestFilterFields = "Cod. promotor", Status, "Fecha Solicitud", "Cod. Colegio";

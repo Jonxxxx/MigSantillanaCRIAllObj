@@ -78,8 +78,8 @@ report 55477 "Proceso Inic. Docentes -  CDS"
 
     var
         ConfAPS: Record 55467;
-        HistCDS: Record 67072;
-        ColDoc: Record 67043;
+        HistCDS: Record 55539;
+        ColDoc: Record 55510;
         CounterTotal: Integer;
         Counter: Integer;
         Window: Dialog;

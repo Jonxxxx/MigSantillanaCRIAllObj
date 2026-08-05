@@ -13,7 +13,7 @@ report 55471 "Genera archivo Colegios"
         {
             DataItemTableView = sorting("No.");
 
-            dataitem("Colegio - Nivel"; 67036)
+            dataitem("Colegio - Nivel"; 55503)
             {
                 DataItemLink = "Cod. Colegio" = field("No.");
                 DataItemTableView = sorting(
@@ -102,7 +102,7 @@ report 55471 "Genera archivo Colegios"
 
     var
         APSSetup: Record 55467;
-        SchoolRoute: Record 67044;
+        SchoolRoute: Record 55511;
         SalespersonPurchaser: Record "Salesperson/Purchaser";
         DimensionValue: Record "Dimension Value";
         TempBlob: Codeunit "Temp Blob";

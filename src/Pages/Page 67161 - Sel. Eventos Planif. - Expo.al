@@ -5,7 +5,7 @@ page 67161 "Sel. Eventos Planif. - Expo"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67051;
+    SourceTable = 55518;
 
     layout
     {

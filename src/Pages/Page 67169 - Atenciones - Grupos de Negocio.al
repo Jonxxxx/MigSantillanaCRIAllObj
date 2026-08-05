@@ -69,7 +69,7 @@ page 67169 "Atenciones - Grupos de Negocio"
     end;
 
     var
-        ColAdopciones: Record 67053;
+        ColAdopciones: Record 55520;
         Editoras: Record 55491;
         da: Record 55469;
         TotalGen: Decimal;

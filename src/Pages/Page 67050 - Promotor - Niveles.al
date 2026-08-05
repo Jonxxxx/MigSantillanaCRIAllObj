@@ -1,8 +1,8 @@
-page 67050 "Promotor - Niveles"
+page 55517 "Promotor - Niveles"
 {
     DataCaptionFields = "Cod. Promotor", "Nombre Promotor";
     PageType = Card;
-    SourceTable = 67040;
+    SourceTable = 55507;
 
     layout
     {

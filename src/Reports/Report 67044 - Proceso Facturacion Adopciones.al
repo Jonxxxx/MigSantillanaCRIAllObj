@@ -1,10 +1,10 @@
-report 67044 "Proceso Facturacion Adopciones"
+report 55511 "Proceso Facturacion Adopciones"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Colegio - Adopciones Detalle"; 67053)
+        dataitem("Colegio - Adopciones Detalle"; 55520)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto")
                                 WHERE(Adopcion = FILTER(Conquista | Mantener));
@@ -66,7 +66,7 @@ report 67044 "Proceso Facturacion Adopciones"
     var
         SH: Record 36;
         SL: Record 37;
-        ColAdopciones: Record 67053;
+        ColAdopciones: Record 55520;
         CteRel: Record 5054;
         ProdEquiv: Record 55472;
         TipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";

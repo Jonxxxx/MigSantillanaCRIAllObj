@@ -158,7 +158,7 @@ report 55474 "Estadistica Adopciones"
     }
 
     var
-        ColAdopDetalle: Record 67053;
+        ColAdopDetalle: Record 55520;
         Grados: Record 55469;
         TextoEncabezado: array[60] of Text[60];
         Valor: array[60] of Text[30];

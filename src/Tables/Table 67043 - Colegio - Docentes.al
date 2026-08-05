@@ -1,4 +1,4 @@
-table 67043 "Colegio - Docentes"
+table 55510 "Colegio - Docentes"
 {
 
     fields
@@ -271,9 +271,9 @@ table 67043 "Colegio - Docentes"
 
     var
         DA: Record 55469;
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         NivelE: Record 55489;
-        PromRuta: Record 67044;
+        PromRuta: Record 55511;
         Docente: Record 55468;
         recColegio: Record 5050;
         Cargo: Page 55500;

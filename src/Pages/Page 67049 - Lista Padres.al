@@ -1,4 +1,4 @@
-page 67049 "Lista Padres"
+page 55516 "Lista Padres"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Father''s List';

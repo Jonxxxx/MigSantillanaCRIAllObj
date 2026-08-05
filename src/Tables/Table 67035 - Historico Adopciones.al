@@ -1,4 +1,4 @@
-table 67035 "Historico Adopciones"
+table 55502 "Historico Adopciones"
 {
 
     fields
@@ -336,9 +336,9 @@ table 67035 "Historico Adopciones"
     }
 
     var
-        ColNiv: Record 67036;
+        ColNiv: Record 55503;
         Editora: Record 55491;
-        GradoCol: Record 67037;
+        GradoCol: Record 55504;
         Item: Record 27;
         ProdEq: Record 55472;
 }

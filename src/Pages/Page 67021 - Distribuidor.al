@@ -1,7 +1,7 @@
 page 55488 Distribuidor
 {
     PageType = Card;
-    SourceTable = 67065;
+    SourceTable = 55532;
 
     layout
     {

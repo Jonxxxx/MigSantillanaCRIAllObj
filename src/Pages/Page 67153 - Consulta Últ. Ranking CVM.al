@@ -6,7 +6,7 @@ page 67153 "Consulta Últ. Ranking CVM"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67094;
+    SourceTable = 55553;
     SourceTableView = SORTING(Reporte, Campana, Delegacion, "No. Orden")
                       WHERE("Reporte" = CONST(CVM));
 

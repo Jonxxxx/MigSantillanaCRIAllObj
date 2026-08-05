@@ -2,7 +2,7 @@ page 67106 "Planificacion Evento ListPart"
 {
     Caption = 'Planned Events';
     PageType = CardPart;
-    SourceTable = 67051;
+    SourceTable = 55518;
 
     layout
     {

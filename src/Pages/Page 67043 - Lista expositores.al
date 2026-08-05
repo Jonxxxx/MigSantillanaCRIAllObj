@@ -1,4 +1,4 @@
-page 67043 "Lista expositores"
+page 55510 "Lista expositores"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = Distribuidor;

@@ -38,9 +38,9 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
 
             trigger OnAfterValidate()
             var
-                EXCCRIAdoptionDetail: Record 67053;
-                EXCCRICollegeLevel: Record 67036;
-                EXCCRIPromoterRoute: Record 67044;
+                EXCCRIAdoptionDetail: Record 55520;
+                EXCCRICollegeLevel: Record 55503;
+                EXCCRIPromoterRoute: Record 55511;
                 EXCCRISalesHeader: Record "Sales Header";
                 EXCCRISalesLine: Record "Sales Line";
             begin

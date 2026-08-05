@@ -84,7 +84,7 @@ tableextension 55004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
     var
         EXCCRISalesBudget: Record 55494;
         EXCCRISampleBudget: Record 55495;
-        EXCCRIAdoption: Record 67053;
+        EXCCRIAdoption: Record 55520;
     begin
         EXCCRISalesBudget.SetRange("Cod. Promotor", Code);
         if EXCCRISalesBudget.FindFirst() then

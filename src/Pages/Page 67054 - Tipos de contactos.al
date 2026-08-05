@@ -1,4 +1,4 @@
-page 67054 "Tipos de contactos"
+page 55521 "Tipos de contactos"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Types of contacts';

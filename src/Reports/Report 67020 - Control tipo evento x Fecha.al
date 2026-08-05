@@ -214,7 +214,7 @@ report 55487 "Control tipo evento x Fecha"
 
     procedure TraerTieneEquipo(): Boolean
     var
-        recEquipo: Record 67059;
+        recEquipo: Record 55526;
     begin
         recEquipo.RESET;
         recEquipo.SETRANGE("Cod. Taller - Evento", Eventos."Cod. Taller - Evento");

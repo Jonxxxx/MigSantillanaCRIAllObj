@@ -7,7 +7,7 @@ report 55481 "Adopciones por colegio"
 
     dataset
     {
-        dataitem(Adopciones; 67053)
+        dataitem(Adopciones; 55520)
         {
             DataItemTableView = SORTING("Cod. Colegio", "Cod. Promotor", "Cod. Producto");
             RequestFilterFields = "Cod. Colegio", "Cod. Promotor";
@@ -236,7 +236,7 @@ report 55481 "Adopciones por colegio"
 
     procedure TraerCategoria(codPrmColegio: Code[20]; codPrmNivel: Code[20]): Code[10]
     var
-        recNivel: Record 67036;
+        recNivel: Record 55503;
     begin
         recNivel.RESET;
         recNivel.SETRANGE("Cod. Colegio", codPrmColegio);

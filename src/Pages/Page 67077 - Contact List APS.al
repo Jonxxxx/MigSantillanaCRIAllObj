@@ -1,4 +1,4 @@
-page 67077 "Contact List APS"
+page 55544 "Contact List APS"
 {
     Caption = 'Contact List';
     CardPageID = "Contact Card";
@@ -339,7 +339,7 @@ page 67077 "Contact List APS"
                     Promoted = true;
                     PromotedCategory = Category5;
                     PromotedIsBig = true;
-                    RunObject = Page 67045;
+                    RunObject = Page 55512;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
                 action("<Action1000000000>")
@@ -350,7 +350,7 @@ page 67077 "Contact List APS"
                     Image = GetLines;
                     Promoted = true;
                     PromotedCategory = Category5;
-                    RunObject = Page 67037;
+                    RunObject = Page 55504;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
                 action("<Action1000000003>")
@@ -422,7 +422,7 @@ page 67077 "Contact List APS"
                     Image = ProfileCalendar;
                     Promoted = true;
                     PromotedCategory = Category5;
-                    RunObject = Page 67090;
+                    RunObject = Page 55549;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
                 action("<Action1000000036>")
@@ -452,7 +452,7 @@ page 67077 "Contact List APS"
                     Image = Hierarchy;
                     Promoted = true;
                     PromotedCategory = Category5;
-                    RunObject = Page 67067;
+                    RunObject = Page 55534;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
             }
@@ -709,8 +709,8 @@ page 67077 "Contact List APS"
 
     var
         Cont: Record 5050;
-        RutaProm: Record 67044;
-        ColNivel: Record 67036;
+        RutaProm: Record 55511;
+        ColNivel: Record 55503;
         User: Record 91;
         [InDataSet]
         "No.Emphasize": Boolean;
@@ -718,7 +718,7 @@ page 67077 "Contact List APS"
         NameEmphasize: Boolean;
         [InDataSet]
         NameIndent: Integer;
-        PageColNivel: Page 67036;
+        PageColNivel: Page 55503;
 
     local procedure NoOnFormat()
     begin

@@ -1,7 +1,7 @@
-table 67069 "Historico Colegio - Grados"
+table 55536 "Historico Colegio - Grados"
 {
-    DrillDownPageID = 67037;
-    LookupPageID = 67037;
+    DrillDownPageID = 55504;
+    LookupPageID = 55504;
 
     fields
     {
@@ -127,7 +127,7 @@ table 67069 "Historico Colegio - Grados"
 
     var
         DA: Record 55469;
-        ColAdopcionD: Record 67053;
+        ColAdopcionD: Record 55520;
         Err001: Label 'This School = Grade already has Adopctions registered. You can''t delete it';
 }
 

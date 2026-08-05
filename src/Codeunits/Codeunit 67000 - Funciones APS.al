@@ -109,8 +109,8 @@ codeunit 55467 "Funciones APS"
     var
         Promotor: Record 13;
         PromListaCol: Record 55473;
-        RutaProm: Record 67044;
-        ColegioNivel: Record 67036;
+        RutaProm: Record 55511;
+        ColegioNivel: Record 55503;
         Colegio: Record 5050;
     begin
         //Primero se verifican los valores actuales por si han
@@ -172,11 +172,11 @@ codeunit 55467 "Funciones APS"
 
     procedure InsertaAdopciones(CodCol: Code[20]; CodNivel: Code[20]; CodPromotor: Code[20]; CodTurno: Code[20])
     var
-        AdopcionesD: Record 67053;
-        HAdopciones: Record 67035;
+        AdopcionesD: Record 55520;
+        HAdopciones: Record 55502;
         Item: Record 27;
         PptoPromotor: Record 55494;
-        GradosCol: Record 67037;
+        GradosCol: Record 55504;
         Editoriales: Record 55491;
         Nivel: Record 55489;
         DimVal: Record 349;

@@ -7,7 +7,7 @@ report 55476 "Proceso genera datos APS"
         dataitem(Contact; 5050)
         {
             DataItemTableView = SORTING("No.");
-            dataitem("Colegio - Adopciones Detalle"; 67053)
+            dataitem("Colegio - Adopciones Detalle"; 55520)
             {
                 DataItemLink = "Cod. Colegio" = FIELD("No.");
                 DataItemTableView = SORTING("Cod. Colegio", "Grupo de Negocio", "Cod. Grado", "Cod. Turno", "Cod. Promotor", "Cod. Producto");
@@ -96,6 +96,6 @@ report 55476 "Proceso genera datos APS"
     var
         TmpReport: Record 55480;
         Item: Record 27;
-        ColegioNivel: Record 67036;
+        ColegioNivel: Record 55503;
 }
 

@@ -1,4 +1,4 @@
-page 67092 "Colegio - Adopciones compet."
+page 55551 "Colegio - Adopciones compet."
 {
     DataCaptionFields = "Cod. Colegio", "Nombre Colegio", "Cod. Nivel";
     PageType = Card;

@@ -1,9 +1,9 @@
-page 67051 "Colegio - Adopciones Cab"
+page 55518 "Colegio - Adopciones Cab"
 {
     PageType = Document;
     PromotedActionCategories = 'New,Process,Report,Shortcuts';
     RefreshOnActivate = true;
-    SourceTable = 67052;
+    SourceTable = 55519;
 
     layout
     {
@@ -257,7 +257,7 @@ page 67051 "Colegio - Adopciones Cab"
                     end;
                 }
             }
-            part(TmpAdopciones; 67052)
+            part(TmpAdopciones; 55519)
             {
                 SubPageLink = "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Nivel" = FIELD(FILTER("Filtro Nivel")),
@@ -371,12 +371,12 @@ page 67051 "Colegio - Adopciones Cab"
     var
         Adopciones: Record 55493;
         Adopciones2Record: Record 55493;
-        AdopcionesD: Record 67053;
-        HAdopciones: Record 67035;
+        AdopcionesD: Record 55520;
+        HAdopciones: Record 55502;
         Item: Record 27;
         PptoPromotor: Record 55494;
         TempAdopciones: Record 55493 temporary;
-        GradosCol: Record 67037;
+        GradosCol: Record 55504;
         Editoriales: Record 55491;
         ConfAPS: Record 55467;
         Nivel: Record 55489;

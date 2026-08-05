@@ -1,4 +1,4 @@
-page 67044 "Lista materiales"
+page 55511 "Lista materiales"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;

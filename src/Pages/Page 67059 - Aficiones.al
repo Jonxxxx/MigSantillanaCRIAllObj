@@ -1,4 +1,4 @@
-page 67059 Aficiones
+page 55526 Aficiones
 {
     ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Hobbies';

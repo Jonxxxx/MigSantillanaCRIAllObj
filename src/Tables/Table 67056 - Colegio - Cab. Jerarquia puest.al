@@ -1,4 +1,4 @@
-table 67056 "Colegio - Cab. Jerarquia puest"
+table 55523 "Colegio - Cab. Jerarquia puest"
 {
 
     fields

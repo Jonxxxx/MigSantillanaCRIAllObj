@@ -1,4 +1,4 @@
-page 67042 "Lista de Tipos de enventos"
+page 55509 "Lista de Tipos de enventos"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;

@@ -1,4 +1,4 @@
-table 67080 "Solicitud -  Nivel Asistente"
+table 55547 "Solicitud -  Nivel Asistente"
 {
 
     fields

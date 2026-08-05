@@ -1,7 +1,7 @@
-page 67058 "Docentes - Aficiones"
+page 55525 "Docentes - Aficiones"
 {
     PageType = Card;
-    SourceTable = 67048;
+    SourceTable = 55515;
 
     layout
     {

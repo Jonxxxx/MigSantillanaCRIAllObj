@@ -1,7 +1,7 @@
-page 67052 "Colegio - Adopciones Detalles"
+page 55519 "Colegio - Adopciones Detalles"
 {
     PageType = ListPart;
-    SourceTable = 67053;
+    SourceTable = 55520;
 
     layout
     {
@@ -302,11 +302,11 @@ page 67052 "Colegio - Adopciones Detalles"
     end;
 
     var
-        HAdopciones: Record 67035;
+        HAdopciones: Record 55502;
         Item: Record 27;
         PptoPromotor: Record 55494;
         TempAdopciones: Record 55493 temporary;
-        GradosCol: Record 67037;
+        GradosCol: Record 55504;
         Editoriales: Record 55491;
         SP: Record 7002;
         Cust: Record 18;
@@ -364,8 +364,8 @@ page 67052 "Colegio - Adopciones Detalles"
     procedure AdopCompetencia()
     var
         ColAdopCompet: Record 55500;
-        fColAdopCompet: Page 67092;
-        ColAdopDet: Record 67053;
+        fColAdopCompet: Page 55551;
+        ColAdopDet: Record 55520;
     begin
         fColAdopCompet.RecibeParametros("Cod. Colegio", "Cod. Promotor", "Cod. Producto", "Cod. Nivel", "Cod. Grado");
         fColAdopCompet.RUN;

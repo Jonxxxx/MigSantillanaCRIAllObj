@@ -1,4 +1,4 @@
-page 67074 "Cab. Muestras"
+page 55541 "Cab. Muestras"
 {
     // Documentation()
     // Proyecto: Microsoft Dynamics Nav 2009
@@ -202,7 +202,7 @@ page 67074 "Cab. Muestras"
                     StyleExpr = TRUE;
                 }
             }
-            part(TransferLines; 67076)
+            part(TransferLines; 55543)
             {
                 SubPageLink = "Document No." = FIELD("No."),
                               "Derived From Line No." = CONST(0);
@@ -718,7 +718,7 @@ page 67074 "Cab. Muestras"
 
                     trigger OnAction()
                     var
-                        SelProdMuestras: Page 67075;
+                        SelProdMuestras: Page 55542;
                         Promotor: Record 13;
                     begin
                         /*Promotor.RESET;

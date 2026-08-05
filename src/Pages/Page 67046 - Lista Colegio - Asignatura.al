@@ -1,9 +1,9 @@
-page 67046 "Lista Colegio - Asignatura"
+page 55513 "Lista Colegio - Asignatura"
 {
     ApplicationArea = Basic, Suite, Service;
     DataCaptionFields = "Codigo Colegio", "Descripcion Colegio";
     PageType = Card;
-    SourceTable = 67042;
+    SourceTable = 55509;
     UsageCategory = Lists;
 
     layout

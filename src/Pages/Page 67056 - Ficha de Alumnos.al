@@ -1,4 +1,4 @@
-page 67056 "Ficha de Alumnos"
+page 55523 "Ficha de Alumnos"
 {
     PageType = Card;
     SourceTable = 55487;
@@ -121,7 +121,7 @@ page 67056 "Ficha de Alumnos"
                     ApplicationArea = All;
                     Caption = '&Fathers';
                     ToolTip = '&Fathers';
-                    RunObject = Page 67049;
+                    RunObject = Page 55516;
                     RunPageLink = DNI = FIELD("DNI Padre");
                 }
                 action("&School")

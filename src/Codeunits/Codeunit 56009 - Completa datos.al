@@ -171,7 +171,7 @@ codeunit 55234 "Completa datos"
         DSE: Record 480;
         I: Integer;
         N: Integer;
-        adopcion1: Record 67053;
+        adopcion1: Record 55520;
         adopcion2: Record 55008;
         adopcion3: Record 55008;
         DetailCustomer: Record 379;

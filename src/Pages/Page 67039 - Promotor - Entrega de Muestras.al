@@ -1,7 +1,7 @@
-page 67039 "Promotor - Entrega de Muestras"
+page 55506 "Promotor - Entrega de Muestras"
 {
     PageType = Card;
-    SourceTable = 67039;
+    SourceTable = 55506;
 
     layout
     {

@@ -185,7 +185,7 @@
   ambiguity, undefined Email and asynchronous integration contracts, and
   unsupported Windows/server-file workflows.
 - Verification performed: complete codeunit/procedure inspection; repository
-  searches for Table 67094 fields, Codeunit 75006 methods, and all affected
+  searches for Table 55553 fields, Codeunit 75006 methods, and all affected
   custom objects; `al_symbolsearch` for Item Reference, all Item Reference
   fields, Item Reference Type, and its Bar Code value.
 - Public callers reviewed: no public procedure signature changed; GetBarCode
