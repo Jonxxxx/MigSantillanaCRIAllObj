@@ -23,7 +23,7 @@ report 55497 "Cerrar campaña 2"
 
             trigger OnAfterGetRecord()
             var
-                recHistColAdop: Record 67084;
+                recHistColAdop: Record 55646;
             begin
 
                 recHistColAdop.INIT;

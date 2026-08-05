@@ -256,8 +256,8 @@ pageextension 55002 EXCCRISalespersonsPurchasers extends "Salespersons/Purchaser
         EXCCRIRoutesRecord: Record 55511;
         EXCCRISalesBudgetPage: Page 55494;
         EXCCRISampleBudgetPage: Page 55495;
-        EXCCRIVisitPlanningPage: Page 67097;
-        EXCCRIVisitExecutionPage: Page 67098;
+        EXCCRIVisitPlanningPage: Page 55556;
+        EXCCRIVisitExecutionPage: Page 55557;
         EXCCRISampleDeliveryPage: Page 55506;
         EXCCRILevelsPage: Page 55517;
         EXCCRIRoutesPage: Page 55515;

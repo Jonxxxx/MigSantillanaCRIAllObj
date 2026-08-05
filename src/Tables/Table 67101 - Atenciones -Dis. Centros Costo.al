@@ -1,4 +1,4 @@
-table 67101 "Atenciones -Dis. Centros Costo"
+table 55560 "Atenciones -Dis. Centros Costo"
 {
 
     fields

@@ -1,4 +1,4 @@
-table 67086 "Dis. Centros Costo"
+table 55648 "Dis. Centros Costo"
 {
 
     fields

@@ -1,4 +1,4 @@
-page 67082 "Promotor - Tareas"
+page 55644 "Promotor - Tareas"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

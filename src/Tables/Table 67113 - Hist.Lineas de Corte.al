@@ -1,4 +1,4 @@
-table 67113 "Hist.Lineas de Corte"
+table 55572 "Hist.Lineas de Corte"
 {
 
     fields

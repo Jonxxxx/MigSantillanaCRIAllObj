@@ -1,4 +1,4 @@
-page 67148 "Productos Muestras"
+page 55607 "Productos Muestras"
 {
     DeleteAllowed = false;
     Editable = false;

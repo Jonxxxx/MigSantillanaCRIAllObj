@@ -1,4 +1,4 @@
-page 67113 "Historico Docentes - CDS"
+page 55572 "Historico Docentes - CDS"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;

@@ -1,4 +1,4 @@
-page 67138 "Estados colegios"
+page 55597 "Estados colegios"
 {
     AdditionalSearchTerms = 'School status';
     ApplicationArea = Basic, Suite;

@@ -1,4 +1,4 @@
-page 67118 "Inventarios Colegios ListPart"
+page 55577 "Inventarios Colegios ListPart"
 {
     Caption = 'Sample Inventory';
     PageType = CardPart;

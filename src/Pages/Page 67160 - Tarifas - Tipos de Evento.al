@@ -1,4 +1,4 @@
-page 67160 "Tarifas - Tipos de Evento"
+page 55619 "Tarifas - Tipos de Evento"
 {
     PageType = List;
     SourceTable = 55535;

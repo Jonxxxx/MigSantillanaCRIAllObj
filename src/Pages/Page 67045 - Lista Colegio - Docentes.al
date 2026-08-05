@@ -183,7 +183,7 @@ page 55512 "Lista Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        Estad: Page 67119;
+                        Estad: Page 55578;
                     begin
                         Estad.RecibeParametros("Cod. Docente", "Cod. Colegio");
                         Estad.RUN;
@@ -203,7 +203,7 @@ page 55512 "Lista Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        RankingDocente: Page 67119;
+                        RankingDocente: Page 55578;
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");

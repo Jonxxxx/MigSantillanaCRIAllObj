@@ -1,4 +1,4 @@
-table 67082 "Solicitud -  Especialidad Asi."
+table 55644 "Solicitud -  Especialidad Asi."
 {
 
     fields

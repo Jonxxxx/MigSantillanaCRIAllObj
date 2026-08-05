@@ -1,4 +1,4 @@
-table 67088 "Solicitud - Proposici n Fechas"
+table 55650 "Solicitud - Proposici n Fechas"
 {
 
     fields
@@ -74,7 +74,7 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnDelete()
     var
-        rProp: Record 67088;
+        rProp: Record 55650;
         rSol: Record 55522;
     begin
 
@@ -92,8 +92,8 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnInsert()
     var
-        rRec: Record 67088;
-        rProp: Record 67088;
+        rRec: Record 55650;
+        rProp: Record 55650;
         rSol: Record 55522;
         Error001: Label 'La fecha propuesta (%1) es inferior a la fecha de solicitud (%2).';
     begin
@@ -120,7 +120,7 @@ table 67088 "Solicitud - Proposici n Fechas"
 
     trigger OnModify()
     var
-        rProp: Record 67088;
+        rProp: Record 55650;
         rSol: Record 55522;
         Error001: Label 'La fecha propuesta (%1) es inferior a la fecha de solicitud (%2).';
     begin

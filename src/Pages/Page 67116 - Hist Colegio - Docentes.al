@@ -1,4 +1,4 @@
-page 67116 "Hist Colegio - Docentes"
+page 55575 "Hist Colegio - Docentes"
 {
     ApplicationArea = Basic, Suite, Service;
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
@@ -141,7 +141,7 @@ page 67116 "Hist Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        Estad: Page 67119;
+                        Estad: Page 55578;
                     begin
                         Estad.RecibeParametros(Rec."Cod. Docente", Rec."Cod. Colegio");
                         Estad.RUN;
@@ -161,7 +161,7 @@ page 67116 "Hist Colegio - Docentes"
 
                     trigger OnAction()
                     var
-                        RankingDocente: Page 67144;
+                        RankingDocente: Page 55603;
                     begin
                         TESTFIELD("Cod. Colegio");
                         TESTFIELD("Cod. Docente");

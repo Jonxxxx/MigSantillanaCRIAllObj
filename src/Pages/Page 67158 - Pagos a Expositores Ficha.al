@@ -1,7 +1,7 @@
-page 67158 "Pagos a Expositores Ficha"
+page 55617 "Pagos a Expositores Ficha"
 {
     PageType = Card;
-    SourceTable = 67098;
+    SourceTable = 55557;
 
     layout
     {
@@ -42,7 +42,7 @@ page 67158 "Pagos a Expositores Ficha"
                     ToolTip = 'Estado Pago';
                 }
             }
-            part(Subform; 67159)
+            part(Subform; 55618)
             {
                 Caption = 'Detalle';
                 Editable = wEdit;

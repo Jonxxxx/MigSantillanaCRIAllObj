@@ -1,4 +1,4 @@
-table 67102 "Cab. Visita Asesor/Consultor"
+table 55561 "Cab. Visita Asesor/Consultor"
 {
 
     fields
@@ -229,7 +229,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 ColNivel: Record 55503;
-                pgColNivel: Page 67180;
+                pgColNivel: Page 55639;
             begin
 
                 ColNivel.RESET;
@@ -473,7 +473,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
             trigger OnLookup()
             var
                 rEvExp: Record 55517;
-                pEvExp: Page 67100;
+                pEvExp: Page 55559;
             begin
                 rEvExp.RESET;
                 IF "Tipo Evento" <> '' THEN
@@ -549,10 +549,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         Err001: Label 'No se permite eliminar visitas con estado Ejecutada.';
         Text001: Label ' Est  seguro que desea eliminar la visita?';
-        rProg: Record 67103;
-        rAsis: Record 67106;
-        rCC: Record 67104;
-        rDescAsis: Record 67105;
+        rProg: Record 55562;
+        rAsis: Record 55565;
+        rCC: Record 55563;
+        rDescAsis: Record 55564;
     begin
 
 
@@ -578,7 +578,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         APSSetup: Record 55467;
         NoSeriesMgt: Codeunit 310;
-        Seg: Record 67107;
+        Seg: Record 55566;
     begin
 
         IF "No. Visita Asesor/Consultor" = '' THEN BEGIN
@@ -598,10 +598,10 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     trigger OnModify()
     var
-        rProg: Record 67103;
+        rProg: Record 55562;
         act: Boolean;
         rDoc: Record 55468;
-        Seg: Record 67107;
+        Seg: Record 55566;
     begin
 
         rProg.SETRANGE("No. Visita", "No. Visita Asesor/Consultor");
@@ -645,8 +645,8 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         rNivel: Record 55547;
         rGrado: Record 55548;
-        rEspec: Record 67082;
-        rNGE: Record 67105;
+        rEspec: Record 55644;
+        rNGE: Record 55564;
     begin
 
         IF "No. Visita Asesor/Consultor" <> '' THEN BEGIN
@@ -692,7 +692,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     procedure TraerProgramac(parSolicitud: Code[20])
     var
-        rProgVisita: Record 67103;
+        rProgVisita: Record 55562;
         rProgSolic: Record 55482;
         rCabPlanif: Record 55518;
     begin

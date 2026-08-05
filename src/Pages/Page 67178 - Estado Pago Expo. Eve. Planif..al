@@ -1,4 +1,4 @@
-page 67178 "Estado Pago Expo. Eve. Planif."
+page 55637 "Estado Pago Expo. Eve. Planif."
 {
     DeleteAllowed = false;
     Editable = false;
@@ -94,7 +94,7 @@ page 67178 "Estado Pago Expo. Eve. Planif."
         }
         area(factboxes)
         {
-            part("Programacion"; 67164)
+            part("Programacion"; 55623)
             {
                 Caption = 'Programacion';
                 Editable = false;
@@ -113,7 +113,7 @@ page 67178 "Estado Pago Expo. Eve. Planif."
 
     trigger OnAfterGetRecord()
     var
-        recCostos: Record 67086;
+        recCostos: Record 55648;
     begin
         wTextCostos := '';
         IF "No. Solicitud" <> '' THEN BEGIN

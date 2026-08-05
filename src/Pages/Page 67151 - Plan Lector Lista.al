@@ -1,4 +1,4 @@
-page 67151 "Plan Lector Lista"
+page 55610 "Plan Lector Lista"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Plan Lector Ficha";

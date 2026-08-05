@@ -1,4 +1,4 @@
-page 67108 "Consulta Asist. Taller/Evento"
+page 55567 "Consulta Asist. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     Editable = false;
@@ -161,7 +161,7 @@ page 67108 "Consulta Asist. Taller/Evento"
 
     var
         CabPlanEvento: Record 55518;
-        SelDoc: Page 67103;
+        SelDoc: Page 55562;
         TotDocentes: Integer;
         TotSeleccionados: Integer;
         texAsistio: Text[30];

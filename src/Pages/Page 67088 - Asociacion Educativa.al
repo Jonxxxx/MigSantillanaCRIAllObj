@@ -1,4 +1,4 @@
-page 67088 "Asociacion Educativa"
+page 55650 "Asociacion Educativa"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

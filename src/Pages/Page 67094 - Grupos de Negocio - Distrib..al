@@ -4,7 +4,7 @@ page 55553 "Grupos de Negocio - Distrib."
     InsertAllowed = false;
     LinksAllowed = false;
     PageType = List;
-    SourceTable = 67086;
+    SourceTable = 55648;
 
     layout
     {
@@ -38,7 +38,7 @@ page 55553 "Grupos de Negocio - Distrib."
 
     trigger OnOpenPage()
     var
-        DistrCentros: Record 67086;
+        DistrCentros: Record 55648;
         UserSetup: Record 91;
     begin
 
@@ -72,7 +72,7 @@ page 55553 "Grupos de Negocio - Distrib."
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rDist: Record 67086;
+        rDist: Record 55648;
         wPorc: Decimal;
         Err001: Label 'El porcentaje de los centros de coste no deben ser mayores de 100.';
         Err002: Label 'El porcentaje de los centros de coste no deben ser menores de 0.';
@@ -115,7 +115,7 @@ page 55553 "Grupos de Negocio - Distrib."
 
     procedure RecibeParametros(CodCol: Code[20]; CodSol: Code[20]; CodEve: Code[20]; TipoEve: Code[20]; CodExpositor: Code[20]; Sec: Integer; Grupo: Boolean; modif: Boolean; CodGrupo: Code[20])
     var
-        rGrupoCOL: Record 67089;
+        rGrupoCOL: Record 55651;
     begin
         gCodColegio := CodCol;
         gCodSolicitud := CodSol;
@@ -137,7 +137,7 @@ page 55553 "Grupos de Negocio - Distrib."
 
     procedure Calcular()
     var
-        DistrCentros: Record 67086;
+        DistrCentros: Record 55648;
     begin
 
         //IF gCodSolicitud = '' THEN

@@ -1,4 +1,4 @@
-page 67084 "Equipos T&E"
+page 55646 "Equipos T&E"
 {
     Caption = 'Equipment Workshops and Events';
     DataCaptionExpression = FORMAT("Tipo registro");

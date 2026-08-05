@@ -1,4 +1,4 @@
-table 67116 "APS Cue"
+table 55575 "APS Cue"
 {
 
     fields

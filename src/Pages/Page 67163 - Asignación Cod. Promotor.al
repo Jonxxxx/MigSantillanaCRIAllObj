@@ -1,4 +1,4 @@
-page 67163 "Asignacion Cod. Promotor"
+page 55622 "Asignacion Cod. Promotor"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

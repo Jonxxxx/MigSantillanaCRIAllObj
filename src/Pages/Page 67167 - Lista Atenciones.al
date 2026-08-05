@@ -1,4 +1,4 @@
-page 67167 "Lista Atenciones"
+page 55626 "Lista Atenciones"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

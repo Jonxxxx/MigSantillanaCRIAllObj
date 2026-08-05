@@ -1,19 +1,19 @@
-table 67108 "Log Importaci n"
+table 55567 "Log Importaci n"
 {
 
     fields
     {
-        field(1;Usuario;Code[50])
+        field(1; Usuario; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario';
         }
-        field(4;Secuencia;Integer)
+        field(4; Secuencia; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Secuencia';
         }
-        field(5;Descripcion;Text[250])
+        field(5; Descripcion; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -22,7 +22,7 @@ table 67108 "Log Importaci n"
 
     keys
     {
-        key(Key1;Usuario,Secuencia)
+        key(Key1; Usuario, Secuencia)
         {
         }
     }

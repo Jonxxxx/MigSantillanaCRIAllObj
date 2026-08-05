@@ -1,4 +1,4 @@
-table 67111 "Textos Principales"
+table 55570 "Textos Principales"
 {
 
     fields

@@ -129,7 +129,7 @@ page 55488 Distribuidor
                     Image = EditList;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67100;
+                    RunObject = Page 55559;
                     RunPageLink = "Cod. Expositor" = FIELD("No.");
                 }
             }

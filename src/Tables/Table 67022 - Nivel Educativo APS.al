@@ -1,7 +1,7 @@
 table 55489 "Nivel Educativo APS"
 {
-    DrillDownPageID = 67099;
-    LookupPageID = 67099;
+    DrillDownPageID = 55558;
+    LookupPageID = 55558;
 
     fields
     {

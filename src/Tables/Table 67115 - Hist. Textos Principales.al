@@ -1,4 +1,4 @@
-table 67115 "Hist. Textos Principales"
+table 55574 "Hist. Textos Principales"
 {
 
     fields

@@ -1,8 +1,8 @@
-page 67132 "Solicitud - Proposicion Fechas"
+page 55591 "Solicitud - Proposicion Fechas"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 67088;
+    SourceTable = 55650;
 
     layout
     {
@@ -45,7 +45,7 @@ page 67132 "Solicitud - Proposicion Fechas"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rProp: Record 67088;
+        rProp: Record 55650;
         rSol: Record 55522;
         TieneGrado: Boolean;
         wAsis: Integer;

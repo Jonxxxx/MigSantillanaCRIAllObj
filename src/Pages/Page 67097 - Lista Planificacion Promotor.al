@@ -1,4 +1,4 @@
-page 67097 "Lista Planificacion Promotor"
+page 55556 "Lista Planificacion Promotor"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Cab. Planificacion";

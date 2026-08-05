@@ -1,4 +1,4 @@
-page 67156 "Historico Plan Lector Lista"
+page 55615 "Historico Plan Lector Lista"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Historico Plan Lector Ficha";

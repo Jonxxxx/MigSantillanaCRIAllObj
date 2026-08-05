@@ -1,4 +1,4 @@
-table 67105 "Visitas A/C - Descr. Asistente"
+table 55564 "Visitas A/C - Descr. Asistente"
 {
 
     fields

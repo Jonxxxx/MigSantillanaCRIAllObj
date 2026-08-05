@@ -11,7 +11,7 @@ table 55549 "Grupo - Colegios"
 
             trigger OnValidate()
             var
-                rGrupo: Record 67089;
+                rGrupo: Record 55651;
             begin
                 IF rGrupo.GET("Cod. grupo") THEN
                     "Nombre Grupo" := rGrupo.Descripcion;

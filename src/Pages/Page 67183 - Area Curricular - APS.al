@@ -1,4 +1,4 @@
-page 67183 "Area Curricular - APS"
+page 55642 "Area Curricular - APS"
 {
     PageType = List;
     SourceTable = 55469;

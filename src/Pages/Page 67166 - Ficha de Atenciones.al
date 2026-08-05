@@ -1,4 +1,4 @@
-page 67166 "Ficha de Atenciones"
+page 55625 "Ficha de Atenciones"
 {
     PageType = Card;
     SourceTable = 55528;
@@ -150,7 +150,7 @@ page 67166 "Ficha de Atenciones"
                     ToolTip = 'Comentarios Cancelacion';
                 }
             }
-            part(PagePart; 67168)
+            part(PagePart; 55627)
             {
                 Editable = wMod;
                 SubPageLink = "Codigo Cab. Atencion" = FIELD(Codigo);
@@ -220,7 +220,7 @@ page 67166 "Ficha de Atenciones"
                     fPed: Page 9349;
                     rPed: Record 5107;
                     rLin: Record 5108;
-                    rDetAt: Record 67100;
+                    rDetAt: Record 55559;
                 begin
                     rPed.FILTERGROUP(2);
                     rPed.SETRANGE("Document Type", rPed."Document Type"::Order);
@@ -265,7 +265,7 @@ page 67166 "Ficha de Atenciones"
                     fPed: Page 5752;
                     rPed: Record 5744;
                     rLin: Record 5745;
-                    rDetAt: Record 67100;
+                    rDetAt: Record 55559;
                     rSalesPrice: Record 7002;
                 begin
                     fPed.LOOKUPMODE(TRUE);
@@ -320,7 +320,7 @@ page 67166 "Ficha de Atenciones"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 67169;
+                RunObject = Page 55628;
                 RunPageLink = "No. Atencion" = FIELD("Codigo");
             }
         }
@@ -354,7 +354,7 @@ page 67166 "Ficha de Atenciones"
 
     procedure ValidaDistrCC()
     var
-        Distr: Record 67101;
+        Distr: Record 55560;
         Err001: Label 'Debe realizar la distribucion de los centros de costo';
         Err002: Label 'No se han realizado la distribucion de los centros de costo correctamente';
         Porc: Decimal;

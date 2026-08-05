@@ -1,4 +1,4 @@
-page 67143 "Grupo - Colegios"
+page 55602 "Grupo - Colegios"
 {
     PageType = List;
     SourceTable = 55549;

@@ -57,7 +57,7 @@ page 55478 "Lista Eventos"
         }
         area(factboxes)
         {
-            part(PageEventos; 67117)
+            part(PageEventos; 55576)
             {
                 SubPageLink = "Cod. Evento" = FIELD("No.");
             }

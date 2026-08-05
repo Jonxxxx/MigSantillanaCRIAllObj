@@ -1,4 +1,4 @@
-table 67103 "Prog. Visitas Asesor/Consultor"
+table 55562 "Prog. Visitas Asesor/Consultor"
 {
 
     fields
@@ -135,7 +135,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
             var
                 rColDoc: Record 55510;
                 pColDoc: Page 55512;
-                Cab: Record 67102;
+                Cab: Record 55561;
             begin
 
                 Cab.GET("No. Visita");
@@ -156,7 +156,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
             trigger OnValidate()
             var
                 ColegioDoc: Record 55510;
-                Cab: Record 67102;
+                Cab: Record 55561;
             begin
                 Cab.GET("No. Visita");
                 Cab.TESTFIELD("Programa Seguimiento Uno a Uno", TRUE);
@@ -222,8 +222,8 @@ table 67103 "Prog. Visitas Asesor/Consultor"
 
     trigger OnInsert()
     var
-        rRec: Record 67103;
-        rCab: Record 67102;
+        rRec: Record 55562;
+        rCab: Record 55561;
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
     begin
 
@@ -259,7 +259,7 @@ table 67103 "Prog. Visitas Asesor/Consultor"
     trigger OnModify()
     var
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
-        rCab: Record 67102;
+        rCab: Record 55561;
     begin
 
 

@@ -1,4 +1,4 @@
-page 67165 "Lista de Atenciones"
+page 55624 "Lista de Atenciones"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha de Atenciones";

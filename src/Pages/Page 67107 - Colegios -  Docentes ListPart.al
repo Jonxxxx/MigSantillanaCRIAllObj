@@ -1,4 +1,4 @@
-page 67107 "Colegios -  Docentes ListPart"
+page 55566 "Colegios -  Docentes ListPart"
 {
     Caption = 'Schoold - Teachers';
     PageType = ListPart;

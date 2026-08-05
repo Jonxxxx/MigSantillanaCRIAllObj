@@ -1,4 +1,4 @@
-table 67089 "Grupo de Colegios"
+table 55651 "Grupo de Colegios"
 {
 
     fields

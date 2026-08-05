@@ -257,7 +257,7 @@ table 55493 "Colegio - Log - Adopciones"
 
             trigger OnLookup()
             var
-                Materia: Page 67086;
+                Materia: Page 55648;
             begin
             end;
         }

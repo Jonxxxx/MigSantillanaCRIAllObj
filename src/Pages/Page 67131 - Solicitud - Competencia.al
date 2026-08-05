@@ -1,7 +1,7 @@
-page 67131 "Solicitud - Competencia"
+page 55590 "Solicitud - Competencia"
 {
     PageType = List;
-    SourceTable = 67087;
+    SourceTable = 55649;
 
     layout
     {

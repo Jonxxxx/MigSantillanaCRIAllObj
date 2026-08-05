@@ -1,10 +1,10 @@
-page 67174 "Visitas A/C - Grupos Negocio"
+page 55633 "Visitas A/C - Grupos Negocio"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     LinksAllowed = false;
     PageType = List;
-    SourceTable = 67104;
+    SourceTable = 55563;
 
     layout
     {
@@ -38,7 +38,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
 
     trigger OnOpenPage()
     var
-        DistrCentros: Record 67086;
+        DistrCentros: Record 55648;
         UserSetup: Record 91;
     begin
 
@@ -50,7 +50,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
 
     trigger OnQueryClosePage(CloseAction: Action): Boolean
     var
-        rDist: Record 67104;
+        rDist: Record 55563;
         wPorc: Decimal;
         Err001: Label 'El porcentaje de los centros de coste no deben ser mayores de 100.';
         Err002: Label 'El porcentaje de los centros de coste no deben ser menores de 0.';
@@ -76,7 +76,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
 
     procedure RecibeParametros(parVisita: Code[20]; parEditable: Boolean)
     var
-        rGrupoCOL: Record 67089;
+        rGrupoCOL: Record 55651;
     begin
 
         wEditable := parEditable;
@@ -87,7 +87,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
 
     procedure Calcular()
     var
-        DistrCentros: Record 67104;
+        DistrCentros: Record 55563;
         da: Record 55469;
         TotalGen: Decimal;
         Total: Decimal;

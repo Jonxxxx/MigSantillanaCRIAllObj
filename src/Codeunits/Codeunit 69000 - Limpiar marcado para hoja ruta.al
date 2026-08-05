@@ -1,4 +1,4 @@
-codeunit 69000 "Limpiar marcado para hoja ruta"
+codeunit 55652 "Limpiar marcado para hoja ruta"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

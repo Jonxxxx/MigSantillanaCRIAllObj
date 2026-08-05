@@ -1,4 +1,4 @@
-page 67109 "Registrar Asistencias"
+page 55568 "Registrar Asistencias"
 {
     DeleteAllowed = false;
     Editable = false;
@@ -119,7 +119,7 @@ page 67109 "Registrar Asistencias"
         }
         area(factboxes)
         {
-            part(ConsultaPLanTyE; 67110)
+            part(ConsultaPLanTyE; 55569)
             {
                 Editable = false;
                 ShowFilter = false;
@@ -146,7 +146,7 @@ page 67109 "Registrar Asistencias"
                     Image = Edit;
                     Promoted = true;
                     PromotedIsBig = true;
-                    RunObject = Page 67101;
+                    RunObject = Page 55560;
                     RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                   "Tipo Evento" = FIELD("Tipo Evento"),
                                   "Expositor" = FIELD("Expositor"),
@@ -184,7 +184,7 @@ page 67109 "Registrar Asistencias"
     end;
 
     var
-        PagAsistentes: Page 67110;
+        PagAsistentes: Page 55569;
         Fecha: Record 2000000007;
         CabPlanEvent: Record 55518;
         gCodExpositor: Code[20];

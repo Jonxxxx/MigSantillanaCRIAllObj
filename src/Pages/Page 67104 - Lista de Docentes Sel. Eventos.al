@@ -1,4 +1,4 @@
-page 67104 "Lista de Docentes Sel. Eventos"
+page 55563 "Lista de Docentes Sel. Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -68,11 +68,11 @@ page 67104 "Lista de Docentes Sel. Eventos"
         }
         area(factboxes)
         {
-            part(PlanifEventLP; 67108)
+            part(PlanifEventLP; 55567)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }
-            part(PagePar; 67107)
+            part(PagePar; 55566)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }
@@ -112,6 +112,6 @@ page 67104 "Lista de Docentes Sel. Eventos"
     }
 
     var
-        ListaSelEvent: Page 67105;
+        ListaSelEvent: Page 55564;
 }
 

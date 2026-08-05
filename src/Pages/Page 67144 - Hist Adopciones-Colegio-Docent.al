@@ -1,11 +1,11 @@
-page 67144 "Hist Adopciones-Colegio-Docent"
+page 55603 "Hist Adopciones-Colegio-Docent"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Hist Adopciones-Colegio-Docente';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     Editable = false;
     PageType = List;
-    SourceTable = 67097;
+    SourceTable = 55556;
     SourceTableView = SORTING(Campana, "Cod. Docente", "Cod. Colegio", "Cod. Local", "Cod. Producto", "Cod. Grado");
     UsageCategory = History;
 

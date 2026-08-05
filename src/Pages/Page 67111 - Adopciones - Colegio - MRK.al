@@ -1,4 +1,4 @@
-page 67111 "Adopciones - Colegio - MRK"
+page 55570 "Adopciones - Colegio - MRK"
 {
     Caption = 'School - Adoptions';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";

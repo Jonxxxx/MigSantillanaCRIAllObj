@@ -1,4 +1,4 @@
-page 67121 "Seguimiento Solicitud TE"
+page 55580 "Seguimiento Solicitud TE"
 {
     // ,
 

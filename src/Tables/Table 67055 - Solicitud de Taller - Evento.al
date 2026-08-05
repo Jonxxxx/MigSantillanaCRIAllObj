@@ -32,7 +32,7 @@ table 55522 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 rEvExp: Record 55517;
-                pEvExp: Page 67100;
+                pEvExp: Page 55559;
             begin
 
                 IF "Existe evento" THEN BEGIN
@@ -56,7 +56,7 @@ table 55522 "Solicitud de Taller - Evento"
             var
                 ExpositorEvento: Record 55517;
                 rEvExp: Record 55517;
-                pEvExp: Page 67100;
+                pEvExp: Page 55559;
             begin
                 IF "Cod. evento" <> '' THEN BEGIN
                     Evento.GET("Tipo de Evento", "Cod. evento");
@@ -196,7 +196,7 @@ table 55522 "Solicitud de Taller - Evento"
                 wPSE: Integer;
                 wIPR: Integer;
                 wIPS: Integer;
-                rGrupoCOL: Record 67089;
+                rGrupoCOL: Record 55651;
                 wFiltroColegio: Text[1024];
             begin
 
@@ -948,7 +948,7 @@ table 55522 "Solicitud de Taller - Evento"
             trigger OnLookup()
             var
                 rEvExp: Record 55517;
-                pEvExp: Page 67100;
+                pEvExp: Page 55559;
                 NewSecEvProg: Integer;
             begin
 
@@ -982,7 +982,7 @@ table 55522 "Solicitud de Taller - Evento"
             var
                 ExpositorEvento: Record 55517;
                 rEvExp: Record 55517;
-                pEvExp: Page 67100;
+                pEvExp: Page 55559;
                 Err0001: Label 'No existe ning n expositor para el evento programado %1.';
                 CabPlanEvento: Record 55518;
                 Err002: Label 'Esta solicitud ya est  programada para el Evento: %1 Expositor: %2 (%3) Secuencia: %4';
@@ -1095,7 +1095,7 @@ table 55522 "Solicitud de Taller - Evento"
 
             trigger OnValidate()
             var
-                rGrupoCOL: Record 67089;
+                rGrupoCOL: Record 55651;
                 wFiltroColegio: Text[1024];
             begin
                 //Busco los Docentes del Colegio
@@ -1302,7 +1302,7 @@ table 55522 "Solicitud de Taller - Evento"
         Error004: Label 'No ha realizado la programacion de fechas.';
         Error005: Label 'En la programacion de fechas es obligatorio indicar los siguientes campos: Fecha programacion, Hora de Inicio y Hora Final.';
         rCab: Record 55518;
-        rGrupo: Record 67089;
+        rGrupo: Record 55651;
         Err003: Label 'No existe el grupo de colegio %1';
         Err006: Label 'No existe el colegio %1';
         rCol: Record 5050;
@@ -1347,7 +1347,7 @@ table 55522 "Solicitud de Taller - Evento"
 
     procedure Valida_Aprobado()
     var
-        Distr: Record 67086;
+        Distr: Record 55648;
         Porc: Decimal;
         Err001: Label 'Debe realizar la distribuci n de los centros de costo';
         Err002: Label 'No se han realizado la distribuci n de los centros de costo correctamente';
@@ -1373,15 +1373,15 @@ table 55522 "Solicitud de Taller - Evento"
     var
         rNiveles: Record 55547;
         rGrados: Record 55548;
-        rEsp: Record 67082;
+        rEsp: Record 55644;
         Error001: Label 'No ha indicado los Niveles de los asistentes.';
         Error002: Label 'No ha indicado los Grados de los asistentes.';
         Error003: Label 'No ha indicado las especialidades de los asistentes.';
-        rFechasProp: Record 67088;
+        rFechasProp: Record 55650;
         Error004: Label 'No ha realizado la proposici n de fechas.';
         Error005: Label 'En la proposicion de fechas es obligatorio indicar los siguientes campos: fecha, hora de inicio y hora fin';
         rTipoEve: Record 55477;
-        rLibrosPres: Record 67085;
+        rLibrosPres: Record 55647;
         Error006: Label 'Es obligatorio ingresar los libros a presentar.';
         wFec: Date;
         Error007: Label 'Se ha ingresado m s de una fecha diferente. ';
@@ -1459,7 +1459,7 @@ table 55522 "Solicitud de Taller - Evento"
     procedure Crear_Planificacion()
     var
         CabPlanEvento: Record 55518;
-        FechasProp: Record 67088;
+        FechasProp: Record 55650;
         ProgTyE: Record 55482;
     begin
 
@@ -1572,7 +1572,7 @@ table 55522 "Solicitud de Taller - Evento"
 
     procedure GetFechaPropuesta() rtnFecha: Date
     var
-        PropFechas: Record 67088;
+        PropFechas: Record 55650;
     begin
 
         CLEAR(rtnFecha);

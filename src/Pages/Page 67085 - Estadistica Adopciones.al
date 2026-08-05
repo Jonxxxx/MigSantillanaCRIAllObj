@@ -1,4 +1,4 @@
-page 67085 "Estadistica Adopciones"
+page 55647 "Estadistica Adopciones"
 {
     Editable = false;
     PageType = Card;

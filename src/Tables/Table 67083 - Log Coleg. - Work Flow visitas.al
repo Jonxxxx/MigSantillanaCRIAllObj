@@ -1,4 +1,4 @@
-table 67083 "Log Coleg. - Work Flow visitas"
+table 55645 "Log Coleg. - Work Flow visitas"
 {
 
     fields

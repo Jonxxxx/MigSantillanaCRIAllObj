@@ -1,10 +1,10 @@
-page 67182 "Log Errores Importacion"
+page 55641 "Log Errores Importacion"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67108;
+    SourceTable = 55567;
 
     layout
     {

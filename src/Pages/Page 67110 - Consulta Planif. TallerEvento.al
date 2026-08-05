@@ -1,4 +1,4 @@
-page 67110 "Consulta Planif. Taller/Evento"
+page 55569 "Consulta Planif. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     PageType = ListPart;
@@ -93,7 +93,7 @@ page 67110 "Consulta Planif. Taller/Evento"
 
     var
         CabPlanEvento: Record 55518;
-        SelDoc: Page 67103;
+        SelDoc: Page 55562;
         TotDocentes: Integer;
         TotSeleccionados: Integer;
         TotReg: Integer;

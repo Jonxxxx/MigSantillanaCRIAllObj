@@ -1,4 +1,4 @@
-page 67179 "Control Pago a Expositores"
+page 55638 "Control Pago a Expositores"
 {
     PageType = List;
     SourceTable = 55488;
@@ -77,7 +77,7 @@ page 67179 "Control Pago a Expositores"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67178;
+                    RunObject = Page 55637;
                     RunPageLink = Pagado = CONST(false);
                 }
             }

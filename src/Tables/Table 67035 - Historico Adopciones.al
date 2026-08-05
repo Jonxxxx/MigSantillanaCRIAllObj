@@ -271,7 +271,7 @@ table 55502 "Historico Adopciones"
 
             trigger OnLookup()
             var
-                Materia: Page 67086;
+                Materia: Page 55648;
             begin
             end;
         }

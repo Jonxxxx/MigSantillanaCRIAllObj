@@ -383,7 +383,7 @@ page 55544 "Contact List APS"
 
                     trigger OnAction()
                     var
-                        pgRanking: Page 67145;
+                        pgRanking: Page 55604;
                     begin
                         TESTFIELD("No.");
                         pgRanking.CalcularRanking("No.");
@@ -411,7 +411,7 @@ page 55544 "Contact List APS"
                     Image = CreateWarehousePick;
                     Promoted = true;
                     PromotedCategory = Category5;
-                    RunObject = Page 67165;
+                    RunObject = Page 55624;
                     RunPageLink = "Cod. Colegio" = FIELD("No.");
                 }
                 action(Asistencia)

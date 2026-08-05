@@ -1,4 +1,4 @@
-page 67099 "Nivel Educativo APS"
+page 55558 "Nivel Educativo APS"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

@@ -488,7 +488,7 @@ table 55520 "Colegio - Adopciones Detalle"
 
             trigger OnLookup()
             var
-                Materia: Page 67086;
+                Materia: Page 55648;
             begin
             end;
         }

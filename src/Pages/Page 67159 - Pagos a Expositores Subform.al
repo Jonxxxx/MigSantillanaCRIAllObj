@@ -1,7 +1,7 @@
-page 67159 "Pagos a Expositores Subform"
+page 55618 "Pagos a Expositores Subform"
 {
     PageType = List;
-    SourceTable = 67099;
+    SourceTable = 55558;
 
     layout
     {

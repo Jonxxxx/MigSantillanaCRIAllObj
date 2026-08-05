@@ -12,7 +12,7 @@ report 55227 "Migra Ruta - Distritos"
 
     dataset
     {
-        dataitem("Solicitud - Competencia"; 67087)
+        dataitem("Solicitud - Competencia"; 55649)
         {
 
             trigger OnAfterGetRecord()

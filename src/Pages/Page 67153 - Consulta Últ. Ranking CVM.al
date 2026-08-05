@@ -1,4 +1,4 @@
-page 67153 "Consulta Últ. Ranking CVM"
+page 55612 "Consulta Últ. Ranking CVM"
 {
     Caption = 'Consulta ­lt. Ranking CVM';
     DeleteAllowed = false;

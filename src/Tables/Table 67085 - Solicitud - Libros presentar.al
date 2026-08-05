@@ -1,4 +1,4 @@
-table 67085 "Solicitud - Libros presentar"
+table 55647 "Solicitud - Libros presentar"
 {
 
     fields

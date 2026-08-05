@@ -1,4 +1,4 @@
-table 67119 "Poblaci n"
+table 55578 "Poblaci n"
 {
 
     fields

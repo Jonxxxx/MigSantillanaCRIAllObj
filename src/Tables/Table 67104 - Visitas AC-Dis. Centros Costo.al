@@ -1,4 +1,4 @@
-table 67104 "Visitas A/C-Dis. Centros Costo"
+table 55563 "Visitas A/C-Dis. Centros Costo"
 {
 
     fields

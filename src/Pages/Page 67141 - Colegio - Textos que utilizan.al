@@ -1,4 +1,4 @@
-page 67141 "Colegio - Textos que utilizan"
+page 55600 "Colegio - Textos que utilizan"
 {
     Editable = false;
     PageType = List;

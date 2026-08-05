@@ -643,7 +643,7 @@ codeunit 55468 "Generacion Words APS"
         recCabPlan: Record 55518;
         recNivel: Record 55547;
         recGrado: Record 55548;
-        recEspec: Record 67082;
+        recEspec: Record 55644;
         lineas: Integer;
         nCol: Integer;
     begin
@@ -744,7 +744,7 @@ codeunit 55468 "Generacion Words APS"
         Text003: Label 'Cod. Articulo';
         Text004: Label 'Descripcion';
         recAdop: Record 55502;
-        rGrupoCOL: Record 67089;
+        rGrupoCOL: Record 55651;
         Text005: Label 'Grado';
         Text006: Label 'Hras. por sem.';
         nCol: Integer;
@@ -897,7 +897,7 @@ codeunit 55468 "Generacion Words APS"
         Text005: Label 'Hras. por sem.';
         Text006: Label 'Año de la Comp.';
         nCol: Integer;
-        recCompetencia: Record 67087;
+        recCompetencia: Record 55649;
     begin
         //CPMCR-CEC+
         /*
@@ -983,9 +983,9 @@ codeunit 55468 "Generacion Words APS"
         texRuta: Text[1024];
         Text002: Label 'El documento Word se ha generado y guardado en la ruta: ';
         tipoPlantilla: Option Solicitud,PPFF,VisitasCA;
-        recCab: Record 67102;
+        recCab: Record 55561;
         ToFile: Text[255];
-        Prog: Record 67103;
+        Prog: Record 55562;
         wAntVisita: Code[20];
         wAntFecha: Date;
         wAntCodigo: Code[20];
@@ -1098,7 +1098,7 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    local procedure InsertarTablaVisitas(var Prog: Record 67103; parCodigo: Code[20]; parNombre: Text[80]; parFecha1: Date; parFecha2: Date; var intFila: Integer; totalvis: Integer)
+    local procedure InsertarTablaVisitas(var Prog: Record 55562; parCodigo: Code[20]; parNombre: Text[80]; parFecha1: Date; parFecha2: Date; var intFila: Integer; totalvis: Integer)
     var
         recProgramacion: Record 55482;
         Text001: Label 'Propuesto';
@@ -1229,9 +1229,9 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    procedure GetHoraFinal(parProg: Record 67103) rtnHora: Time
+    procedure GetHoraFinal(parProg: Record 55562) rtnHora: Time
     var
-        "Program": Record 67103;
+        "Program": Record 55562;
     begin
 
         CLEAR(rtnHora);
@@ -1246,7 +1246,7 @@ codeunit 55468 "Generacion Words APS"
             rtnHora := "Program"."Hora Fin Programada";
     end;
 
-    procedure TotalVisitas(var Prog: Record 67103) rtnVisitas: Integer
+    procedure TotalVisitas(var Prog: Record 55562) rtnVisitas: Integer
     var
         wAntVisita: Code[20];
         wAntFecha: Date;
@@ -1279,9 +1279,9 @@ codeunit 55468 "Generacion Words APS"
 
     end;
 
-    procedure GetTipoEvento(parProg: Record 67103) rtnTE: Code[20]
+    procedure GetTipoEvento(parProg: Record 55562) rtnTE: Code[20]
     var
-        recCab: Record 67102;
+        recCab: Record 55561;
     begin
         CLEAR(rtnTE);
         IF recCab.GET(parProg."No. Visita") THEN
@@ -1309,7 +1309,7 @@ codeunit 55468 "Generacion Words APS"
 
     procedure GetDistrito(parVisita: Code[20]) rtnValue: Text[30]
     var
-        rVisita: Record 67102;
+        rVisita: Record 55561;
     begin
 
         CLEAR(rtnValue);

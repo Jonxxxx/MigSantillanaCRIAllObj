@@ -1,4 +1,4 @@
-page 67087 "Orden Religiosa"
+page 55649 "Orden Religiosa"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;

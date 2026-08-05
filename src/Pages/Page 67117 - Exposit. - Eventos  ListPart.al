@@ -1,4 +1,4 @@
-page 67117 "Exposit. - Eventos  ListPart"
+page 55576 "Exposit. - Eventos  ListPart"
 {
     Caption = 'Expositors - Events';
     PageType = ListPart;

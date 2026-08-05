@@ -1,4 +1,4 @@
-page 67149 "Plan Lector Ficha"
+page 55608 "Plan Lector Ficha"
 {
     PageType = Card;
     SourceTable = 55530;
@@ -62,7 +62,7 @@ page 67149 "Plan Lector Ficha"
                     Editable = false;
                 }
             }
-            part(Detalle; 67150)
+            part(Detalle; 55609)
             {
                 Caption = 'Detalle';
                 SubPageLink = Campana = FIELD("Campana"),

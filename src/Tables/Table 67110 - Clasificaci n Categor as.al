@@ -1,4 +1,4 @@
-table 67110 "Clasificacion Categorias"
+table 55569 "Clasificacion Categorias"
 {
 
     fields

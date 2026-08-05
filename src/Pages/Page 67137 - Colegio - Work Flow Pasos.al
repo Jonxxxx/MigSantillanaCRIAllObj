@@ -1,4 +1,4 @@
-page 67137 "Colegio - Work Flow Pasos"
+page 55596 "Colegio - Work Flow Pasos"
 {
     Caption = 'School - steps Work flow';
     DeleteAllowed = false;

@@ -1,4 +1,4 @@
-page 67154 "Historico Plan Lector Ficha"
+page 55613 "Historico Plan Lector Ficha"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -68,7 +68,7 @@ page 67154 "Historico Plan Lector Ficha"
                     Editable = false;
                 }
             }
-            part(Detalle; 67155)
+            part(Detalle; 55614)
             {
                 Caption = 'Detalle';
                 SubPageLink = Campana = FIELD("Campana"),

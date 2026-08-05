@@ -1,4 +1,4 @@
-table 67099 "Detalle Pago Expositores"
+table 55558 "Detalle Pago Expositores"
 {
 
     fields
@@ -32,8 +32,8 @@ table 67099 "Detalle Pago Expositores"
             trigger OnLookup()
             var
                 recCabPlanif: Record 55518;
-                pgCabPlanif: Page 67161;
-                recCabPago: Record 67098;
+                pgCabPlanif: Page 55620;
+                recCabPago: Record 55557;
             begin
                 recCabPago.RESET;
                 recCabPago.SETRANGE("ID Pago", "ID Pago");
@@ -93,8 +93,8 @@ table 67099 "Detalle Pago Expositores"
 
     trigger OnInsert()
     var
-        recCabPago: Record 67098;
-        rDet: Record 67099;
+        recCabPago: Record 55557;
+        rDet: Record 55558;
     begin
         IF recCabPago.GET("ID Pago") THEN
             "Cod. Expositor" := recCabPago."Cod. Expositor";

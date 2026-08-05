@@ -1,7 +1,7 @@
-page 67124 "Solicitud - Especialidad"
+page 55583 "Solicitud - Especialidad"
 {
     PageType = List;
-    SourceTable = 67082;
+    SourceTable = 55644;
 
     layout
     {

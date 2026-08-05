@@ -1,4 +1,4 @@
-page 67155 "Historico Plan Lector Subpage"
+page 55614 "Historico Plan Lector Subpage"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;

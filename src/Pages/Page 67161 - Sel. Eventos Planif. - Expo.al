@@ -1,4 +1,4 @@
-page 67161 "Sel. Eventos Planif. - Expo"
+page 55620 "Sel. Eventos Planif. - Expo"
 {
     DeleteAllowed = false;
     Editable = false;
@@ -64,7 +64,7 @@ page 67161 "Sel. Eventos Planif. - Expo"
         }
         area(factboxes)
         {
-            part("Programacion"; 67164)
+            part("Programacion"; 55623)
             {
                 Caption = 'Programacion';
                 Editable = false;
@@ -83,7 +83,7 @@ page 67161 "Sel. Eventos Planif. - Expo"
 
     trigger OnAfterGetRecord()
     var
-        recCostos: Record 67086;
+        recCostos: Record 55648;
     begin
         wTextCostos := '';
         IF "No. Solicitud" <> '' THEN BEGIN

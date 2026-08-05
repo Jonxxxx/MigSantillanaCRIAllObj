@@ -1,4 +1,4 @@
-page 67170 "Documentos operac. comerciales"
+page 55629 "Documentos operac. comerciales"
 {
     PageType = List;
     SourceTable = 55469;

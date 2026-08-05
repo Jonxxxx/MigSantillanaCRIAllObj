@@ -1,4 +1,4 @@
-page 67184 "Seleccion Tipo Eventos"
+page 55643 "Seleccion Tipo Eventos"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

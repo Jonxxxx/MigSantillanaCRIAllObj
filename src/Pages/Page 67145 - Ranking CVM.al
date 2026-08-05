@@ -1,4 +1,4 @@
-page 67145 "Ranking CVM"
+page 55604 "Ranking CVM"
 {
     Editable = false;
     PageType = Card;

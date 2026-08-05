@@ -1,4 +1,4 @@
-page 67129 "Historico Promotor - Ppto Mtt"
+page 55588 "Historico Promotor - Ppto Mtt"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;

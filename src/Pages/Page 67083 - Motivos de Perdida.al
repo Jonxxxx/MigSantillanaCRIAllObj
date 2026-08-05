@@ -1,4 +1,4 @@
-page 67083 "Motivos de Perdida"
+page 55645 "Motivos de Perdida"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Cause of loosing';

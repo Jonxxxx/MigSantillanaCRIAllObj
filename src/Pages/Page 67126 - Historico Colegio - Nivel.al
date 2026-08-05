@@ -1,4 +1,4 @@
-page 67126 "Historico Colegio - Nivel"
+page 55585 "Historico Colegio - Nivel"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;

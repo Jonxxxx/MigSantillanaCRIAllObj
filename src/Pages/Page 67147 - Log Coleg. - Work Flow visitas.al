@@ -1,11 +1,11 @@
-page 67147 "Log Coleg. - Work Flow visitas"
+page 55606 "Log Coleg. - Work Flow visitas"
 {
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67083;
+    SourceTable = 55645;
 
     layout
     {

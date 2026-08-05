@@ -1,4 +1,4 @@
-page 67106 "Planificacion Evento ListPart"
+page 55565 "Planificacion Evento ListPart"
 {
     Caption = 'Planned Events';
     PageType = CardPart;

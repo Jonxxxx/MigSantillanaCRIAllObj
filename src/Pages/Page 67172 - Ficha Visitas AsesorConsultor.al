@@ -1,7 +1,7 @@
-page 67172 "Ficha Visitas Asesor/Consultor"
+page 55631 "Ficha Visitas Asesor/Consultor"
 {
     PageType = Card;
-    SourceTable = 67102;
+    SourceTable = 55561;
 
     layout
     {
@@ -228,7 +228,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67173;
+                    RunObject = Page 55632;
                     RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor");
                 }
                 action("&Assistance")
@@ -243,8 +243,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        pAsistentes: Page 67177;
-                        rProg: Record 67103;
+                        pAsistentes: Page 55636;
+                        rProg: Record 55562;
                         Err001: Label 'Antes de inscribir docentes, tiene que registrar las fechas y horario de la visita.';
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
@@ -271,7 +271,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        GpoNegDistrib: Page 67174;
+                        GpoNegDistrib: Page 55633;
                     begin
                         TESTFIELD("No. Visita Asesor/Consultor");
                         TESTFIELD("Cod. Colegio");
@@ -286,7 +286,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     ToolTip = 'Nivel Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67175;
+                    RunObject = Page 55634;
                     RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
                                   "Tipo" = CONST(Nivel);
                 }
@@ -297,7 +297,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     ToolTip = 'Grado Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67175;
+                    RunObject = Page 55634;
                     RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
                                   "Tipo" = CONST(Grado);
                 }
@@ -308,7 +308,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
                     ToolTip = 'Especialidad Asistente';
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67175;
+                    RunObject = Page 55634;
                     RunPageLink = "No. Visita" = FIELD("No. Visita Asesor/Consultor"),
                                   "Tipo" = CONST(Especialidad);
                 }
@@ -324,7 +324,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
                     trigger OnAction()
                     var
-                        pgRanking: Page 67145;
+                        pgRanking: Page 55604;
                     begin
                         TESTFIELD("Cod. Colegio");
                         pgRanking.CalcularRanking("Cod. Colegio");
@@ -396,7 +396,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure ValidaDistrCC()
     var
-        Distr: Record 67104;
+        Distr: Record 55563;
         Err001: Label 'Debe realizar la distribucion de los centros de costo';
         Err002: Label 'No se ha realizado la distribucion de los centros de costo correctamente';
         Porc: Decimal;
@@ -416,8 +416,8 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure ValidaFechaHorarios()
     var
-        rProg: Record 67103;
-        rProg2: Record 67103;
+        rProg: Record 55562;
+        rProg2: Record 55562;
         Err001: Label 'No se ha realizado el registro de fechas y horario de visitas.';
         Err002: Label 'Revise el registro de fechas y horario de visitas. No se permite solapamientos.';
         Err003: Label 'Revise el registro de fechas y horario de visitas. Es obligatorio ingresar la fecha, hora de inicio y hora fin.';
@@ -461,7 +461,7 @@ page 67172 "Ficha Visitas Asesor/Consultor"
 
     procedure Act_AsistentesReales()
     var
-        rAsis: Record 67106;
+        rAsis: Record 55565;
         Asist: Integer;
     begin
         /*

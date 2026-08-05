@@ -328,7 +328,7 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
                     Image = CreateWarehousePick;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67165;
+                    RunObject = Page 55624;
                     RunPageLink = "Cod. Colegio" = field("No.");
                     ToolTip = 'Opens the gifts associated with the school.';
                 }
@@ -360,6 +360,6 @@ pageextension 55092 EXCCRIContactCard extends "Contact Card"
 
     var
         EXCCRILevelPage: Page 55503;
-        EXCCRIRankingPage: Page 67145;
+        EXCCRIRankingPage: Page 55604;
         EXCCRIRequiredFields: array[12] of Text[100];
 }

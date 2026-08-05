@@ -514,7 +514,7 @@ table 55528 "Cab. Atenciones"
     trigger OnDelete()
     var
         error001: Label 'No se permite eliminar una Atencion realizada.';
-        rDet: Record 67100;
+        rDet: Record 55559;
     begin
         IF Estado = Estado::Realizada THEN
             ERROR(error001);

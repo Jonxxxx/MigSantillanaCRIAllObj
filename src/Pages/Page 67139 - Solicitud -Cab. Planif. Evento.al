@@ -1,4 +1,4 @@
-page 67139 "Solicitud -Cab. Planif. Evento"
+page 55598 "Solicitud -Cab. Planif. Evento"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

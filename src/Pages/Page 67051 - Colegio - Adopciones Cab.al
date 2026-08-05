@@ -316,7 +316,7 @@ page 55518 "Colegio - Adopciones Cab"
 
                     trigger OnAction()
                     var
-                        Estad: Page 67085;
+                        Estad: Page 55647;
                     begin
                         Estad.RecibeParametros("Cod. Colegio");
                         Estad.RUN;

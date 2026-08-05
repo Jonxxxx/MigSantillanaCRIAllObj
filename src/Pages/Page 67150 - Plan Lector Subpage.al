@@ -1,4 +1,4 @@
-page 67150 "Plan Lector Subpage"
+page 55609 "Plan Lector Subpage"
 {
     PageType = List;
     SourceTable = 55531;

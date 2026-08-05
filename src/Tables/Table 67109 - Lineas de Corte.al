@@ -1,4 +1,4 @@
-table 67109 "Lineas de Corte"
+table 55568 "Lineas de Corte"
 {
 
     fields

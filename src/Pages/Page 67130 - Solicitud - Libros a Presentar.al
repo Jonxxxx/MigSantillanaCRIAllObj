@@ -1,7 +1,7 @@
-page 67130 "Solicitud - Libros a Presentar"
+page 55589 "Solicitud - Libros a Presentar"
 {
     PageType = List;
-    SourceTable = 67085;
+    SourceTable = 55647;
 
     layout
     {

@@ -1,4 +1,4 @@
-page 67122 "Solicitud -  Nivel Asistentes"
+page 55581 "Solicitud -  Nivel Asistentes"
 {
     PageType = List;
     SourceTable = 55547;

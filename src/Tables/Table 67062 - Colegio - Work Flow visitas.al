@@ -137,7 +137,7 @@ table 55529 "Colegio - Work Flow visitas"
 
     procedure InsertLog()
     var
-        rLog: Record 67083;
+        rLog: Record 55645;
     begin
         IF NOT rLog.GET(TODAY, "Cod. Promotor", "Cod. Colegio", Secuencia) THEN BEGIN
             rLog.INIT;

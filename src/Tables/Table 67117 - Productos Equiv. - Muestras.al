@@ -1,4 +1,4 @@
-table 67117 "Productos Equiv. - Muestras"
+table 55576 "Productos Equiv. - Muestras"
 {
 
     fields

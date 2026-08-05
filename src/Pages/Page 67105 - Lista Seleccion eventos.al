@@ -1,4 +1,4 @@
-page 67105 "Lista Seleccion eventos"
+page 55564 "Lista Seleccion eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Selection of Events';

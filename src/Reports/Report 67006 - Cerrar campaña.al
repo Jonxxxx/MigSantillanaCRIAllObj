@@ -190,7 +190,7 @@ report 55473 "Cerrar campaña"
 
             trigger OnAfterGetRecord()
             var
-                recHistColAdop: Record 67084;
+                recHistColAdop: Record 55646;
             begin
                 recHistColAdop.INIT;
                 recHistColAdop.TRANSFERFIELDS("Colegio - Adopciones Cab");

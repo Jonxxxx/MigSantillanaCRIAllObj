@@ -1,4 +1,4 @@
-page 67120 "Colegio - FactBox % GN"
+page 55579 "Colegio - FactBox % GN"
 {
     Editable = false;
     PageType = ListPart;

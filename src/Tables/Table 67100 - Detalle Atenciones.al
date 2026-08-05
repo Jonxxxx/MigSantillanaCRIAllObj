@@ -1,4 +1,4 @@
-table 67100 "Detalle Atenciones"
+table 55559 "Detalle Atenciones"
 {
 
     fields
@@ -20,7 +20,7 @@ table 67100 "Detalle Atenciones"
 
             trigger OnLookup()
             var
-                pgAte: Page 67167;
+                pgAte: Page 55626;
                 rAte: Record 55469;
                 rCab: Record 55528;
             begin
@@ -97,7 +97,7 @@ table 67100 "Detalle Atenciones"
 
     trigger OnInsert()
     var
-        rDet: Record 67100;
+        rDet: Record 55559;
     begin
 
         rDet.SETRANGE("Codigo Cab. Atencion", "Codigo Cab. Atencion");

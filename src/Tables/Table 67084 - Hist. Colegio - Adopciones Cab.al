@@ -1,4 +1,4 @@
-table 67084 "Hist. Colegio - Adopciones Cab"
+table 55646 "Hist. Colegio - Adopciones Cab"
 {
 
     fields

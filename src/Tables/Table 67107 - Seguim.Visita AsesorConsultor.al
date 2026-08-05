@@ -1,4 +1,4 @@
-table 67107 "Seguim.Visita Asesor/Consultor"
+table 55566 "Seguim.Visita Asesor/Consultor"
 {
 
     fields
@@ -47,7 +47,7 @@ table 67107 "Seguim.Visita Asesor/Consultor"
     {
     }
 
-    procedure InsertarSeguimiento(parVisita: Record 67102)
+    procedure InsertarSeguimiento(parVisita: Record 55561)
     begin
         "Visita Asesor/Consultor" := parVisita."No. Visita Asesor/Consultor";
         Estado := parVisita.Estado;

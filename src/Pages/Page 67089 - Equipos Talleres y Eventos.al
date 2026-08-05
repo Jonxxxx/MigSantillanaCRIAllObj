@@ -1,4 +1,4 @@
-page 67089 "Equipos Talleres y Eventos"
+page 55651 "Equipos Talleres y Eventos"
 {
     AutoSplitKey = true;
     PageType = List;

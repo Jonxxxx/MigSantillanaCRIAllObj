@@ -1,11 +1,11 @@
-page 67162 "Consulta Distrib. Centro Costo"
+page 55621 "Consulta Distrib. Centro Costo"
 {
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67086;
+    SourceTable = 55648;
 
     layout
     {

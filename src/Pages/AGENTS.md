@@ -300,7 +300,7 @@ action(Atenciones)
     Image = CreateWarehousePick;
     Promoted = true;
     PromotedCategory = Category5;
-    RunObject = Page 67165;
+    RunObject = Page 55624;
     RunPageLink = "Cod. Colegio" = FIELD("No.");
 }
 ```

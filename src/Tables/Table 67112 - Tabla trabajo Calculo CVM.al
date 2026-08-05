@@ -1,4 +1,4 @@
-table 67112 "Tabla trabajo Calculo CVM"
+table 55571 "Tabla trabajo Calculo CVM"
 {
 
     fields

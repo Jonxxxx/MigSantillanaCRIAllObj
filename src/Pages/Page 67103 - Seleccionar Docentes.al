@@ -1,4 +1,4 @@
-page 67103 "Seleccionar Docentes"
+page 55562 "Seleccionar Docentes"
 {
     PageType = List;
     SourceTable = 55468;
@@ -95,7 +95,7 @@ page 67103 "Seleccionar Docentes"
         }
         area(factboxes)
         {
-            part(PagePart; 67107)
+            part(PagePart; 55566)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }

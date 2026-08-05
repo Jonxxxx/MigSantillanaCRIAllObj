@@ -1,4 +1,4 @@
-table 67097 "Historico Ranking CVM vertical"
+table 55556 "Historico Ranking CVM vertical"
 {
     DrillDownPageID = 55494;
     LookupPageID = 55494;

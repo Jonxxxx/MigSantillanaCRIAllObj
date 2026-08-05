@@ -180,9 +180,9 @@ codeunit 55269 "APS Paso 2"
         T34002835: Record 55502;
         T34002852: Record 55519;
         T34002853: Record 55520;
-        TTEMP34002809: Record 67087;
-        TTEMP34002826: Record 67088;
-        TTEMP34002835: Record 67089;
+        TTEMP34002809: Record 55649;
+        TTEMP34002826: Record 55650;
+        TTEMP34002835: Record 55651;
         TTEMP34002852: Record 55549;
         TTEMP34002853: Record 55550;
         rCompany: Record 2000000006;

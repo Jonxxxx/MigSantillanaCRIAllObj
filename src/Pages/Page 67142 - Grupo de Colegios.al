@@ -1,7 +1,7 @@
-page 67142 "Grupo de Colegios"
+page 55601 "Grupo de Colegios"
 {
     PageType = List;
-    SourceTable = 67089;
+    SourceTable = 55651;
 
     layout
     {
@@ -34,7 +34,7 @@ page 67142 "Grupo de Colegios"
                 ToolTip = 'Asociar Colegios';
                 Promoted = true;
                 PromotedIsBig = true;
-                RunObject = Page 67143;
+                RunObject = Page 55602;
                 RunPageLink = "Cod. grupo" = FIELD("Cod. Grupo");
             }
         }

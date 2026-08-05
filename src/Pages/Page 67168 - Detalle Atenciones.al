@@ -1,7 +1,7 @@
-page 67168 "Detalle Atenciones"
+page 55627 "Detalle Atenciones"
 {
     PageType = List;
-    SourceTable = 67100;
+    SourceTable = 55559;
 
     layout
     {

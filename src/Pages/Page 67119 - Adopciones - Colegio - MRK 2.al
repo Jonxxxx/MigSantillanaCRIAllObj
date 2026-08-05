@@ -1,6 +1,6 @@
-page 67119 "Adopciones - Colegio - MRK 2"
+page 55578 "Adopciones - Colegio - MRK 2"
 {
-    // $001 09/06/14 JML : Page basado en el 67111, pero con los grados en vertical.
+    // $001 09/06/14 JML : Page basado en el 55570, pero con los grados en vertical.
 
     Caption = 'School - Adoptions';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";

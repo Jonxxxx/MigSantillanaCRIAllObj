@@ -1,4 +1,4 @@
-page 67101 "Cab. Planif. Evento"
+page 55560 "Cab. Planif. Evento"
 {
     PageType = Document;
     RefreshOnActivate = true;

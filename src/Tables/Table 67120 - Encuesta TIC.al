@@ -1,4 +1,4 @@
-table 67120 "Encuesta TIC"
+table 55579 "Encuesta TIC"
 {
 
     fields
@@ -348,7 +348,7 @@ table 67120 "Encuesta TIC"
 
     trigger OnInsert()
     var
-        Encuesta: Record 67120;
+        Encuesta: Record 55579;
         Config: Record 55467;
     begin
         IF Encuesta.FINDLAST THEN

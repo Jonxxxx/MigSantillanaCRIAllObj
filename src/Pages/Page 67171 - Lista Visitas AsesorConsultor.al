@@ -1,9 +1,9 @@
-page 67171 "Lista Visitas Asesor/Consultor"
+page 55630 "Lista Visitas Asesor/Consultor"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Visitas Asesor/Consultor";
     PageType = List;
-    SourceTable = 67102;
+    SourceTable = 55561;
     UsageCategory = Lists;
 
     layout

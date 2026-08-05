@@ -1,4 +1,4 @@
-page 67152 "Consulta Últ. Ranking General"
+page 55611 "Consulta Últ. Ranking General"
 {
     Caption = 'Consulta ­lt. Ranking General';
     DeleteAllowed = false;

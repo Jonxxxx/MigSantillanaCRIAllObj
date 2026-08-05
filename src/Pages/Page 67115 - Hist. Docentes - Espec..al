@@ -1,4 +1,4 @@
-page 67115 "Hist. Docentes - Espec."
+page 55574 "Hist. Docentes - Espec."
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;

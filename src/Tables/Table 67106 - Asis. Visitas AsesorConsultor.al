@@ -1,4 +1,4 @@
-table 67106 "Asis. Visitas Asesor/Consultor"
+table 55565 "Asis. Visitas Asesor/Consultor"
 {
 
     fields
@@ -113,7 +113,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
     trigger OnInsert()
     var
-        rRec: Record 67106;
+        rRec: Record 55565;
         Error001: Label 'La fecha de la visita (%1) es inferior a la fecha de registro (%2).';
     begin
 

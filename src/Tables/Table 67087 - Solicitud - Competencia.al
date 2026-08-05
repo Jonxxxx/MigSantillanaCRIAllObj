@@ -1,4 +1,4 @@
-table 67087 "Solicitud - Competencia"
+table 55649 "Solicitud - Competencia"
 {
 
     fields

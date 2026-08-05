@@ -108,12 +108,12 @@ page 55507 "Lista de Docentes"
         }
         area(factboxes)
         {
-            part(PlanifEventLP; 67108)
+            part(PlanifEventLP; 55567)
             {
                 Editable = false;
                 SubPageLink = "Cod. Docente" = FIELD("No.");
             }
-            part(PageColegios; 67107)
+            part(PageColegios; 55566)
             {
                 Editable = false;
                 SubPageLink = "Cod. Docente" = FIELD("No.");
@@ -174,7 +174,7 @@ page 55507 "Lista de Docentes"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67108;
+                    RunObject = Page 55567;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
             }
@@ -184,7 +184,7 @@ page 55507 "Lista de Docentes"
                 Caption = '&Exponent';
                 ToolTip = '&Exponent';
                 Image = ContactReference;
-                RunObject = Page 67100;
+                RunObject = Page 55559;
                 RunPageLink = "Cod. Expositor" = FIELD("Cod. Proveedor");
             }
             group("<Action1000000017>")
@@ -198,7 +198,7 @@ page 55507 "Lista de Docentes"
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67113;
+                    RunObject = Page 55572;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Hobbies History")
@@ -209,7 +209,7 @@ page 55507 "Lista de Docentes"
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67114;
+                    RunObject = Page 55573;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("Teacher - Specialties History")
@@ -220,7 +220,7 @@ page 55507 "Lista de Docentes"
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67115;
+                    RunObject = Page 55574;
                     RunPageLink = "Cod. Docente" = FIELD("No.");
                 }
                 action("School - Teacher History")
@@ -231,7 +231,7 @@ page 55507 "Lista de Docentes"
                     Image = History;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67116;
+                    RunObject = Page 55575;
                 }
             }
         }

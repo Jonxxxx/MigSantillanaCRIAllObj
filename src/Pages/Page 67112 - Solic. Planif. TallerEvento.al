@@ -1,4 +1,4 @@
-page 67112 "Solic. Planif. Taller/Evento"
+page 55571 "Solic. Planif. Taller/Evento"
 {
     Caption = 'View Assist. Workshop/Events';
     PageType = List;
@@ -90,7 +90,7 @@ page 67112 "Solic. Planif. Taller/Evento"
                     var
                         CabPlanEvent: Record 55518;
                         CabPlanEvent2Record: Record 55518;
-                        PlanEvent: Page 67102;
+                        PlanEvent: Page 55561;
                     begin
                         /*
                         PlanEvent.RecibeParametros("Cod. Expositor","Tipo de Expositor","Cod. Evento",CabPlanEvent."Tipo Evento");
@@ -151,7 +151,7 @@ page 67112 "Solic. Planif. Taller/Evento"
 
     var
         CabPlanEvento: Record 55518;
-        SelDoc: Page 67103;
+        SelDoc: Page 55562;
         TotDocentes: Integer;
         TotSeleccionados: Integer;
         TotReg: Integer;

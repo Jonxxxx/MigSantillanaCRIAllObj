@@ -1,10 +1,10 @@
-page 67181 "Seguim.Visita Asesor/Consultor"
+page 55640 "Seguim.Visita Asesor/Consultor"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67107;
+    SourceTable = 55566;
 
     layout
     {

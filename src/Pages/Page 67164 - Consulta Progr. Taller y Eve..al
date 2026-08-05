@@ -1,4 +1,4 @@
-page 67164 "Consulta Progr. Taller y Eve."
+page 55623 "Consulta Progr. Taller y Eve."
 {
     DeleteAllowed = false;
     Editable = false;

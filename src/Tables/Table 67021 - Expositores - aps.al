@@ -237,7 +237,7 @@ table 55488 "Expositores - aps"
 
             trigger OnLookup()
             var
-                pgCabPlanif: Page 67178;
+                pgCabPlanif: Page 55637;
                 rCabPlanif: Record 55518;
             begin
 
@@ -259,7 +259,7 @@ table 55488 "Expositores - aps"
 
             trigger OnLookup()
             var
-                pgCabPlanif: Page 67178;
+                pgCabPlanif: Page 55637;
                 rCabPlanif: Record 55518;
             begin
                 rCabPlanif.SETRANGE(rCabPlanif.Expositor, "No.");

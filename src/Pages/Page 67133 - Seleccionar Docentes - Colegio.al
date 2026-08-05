@@ -1,4 +1,4 @@
-page 67133 "Seleccionar Docentes - Colegio"
+page 55592 "Seleccionar Docentes - Colegio"
 {
     PageType = List;
     SourceTable = 55510;
@@ -109,7 +109,7 @@ page 67133 "Seleccionar Docentes - Colegio"
 
     trigger OnOpenPage()
     var
-        rGrupoCOL: Record 67089;
+        rGrupoCOL: Record 55651;
     begin
         IF gGrupo THEN BEGIN
             rGrupoCOL.GET(gCodGrupo);

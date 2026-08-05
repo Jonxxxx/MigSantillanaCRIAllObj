@@ -1,10 +1,10 @@
-page 67157 "Pagos a Expositores Lista"
+page 55616 "Pagos a Expositores Lista"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Pagos a Expositores Ficha";
     Editable = false;
     PageType = List;
-    SourceTable = 67098;
+    SourceTable = 55557;
     UsageCategory = Lists;
 
     layout

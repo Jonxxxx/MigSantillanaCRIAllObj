@@ -1,9 +1,9 @@
-page 67176 "Asis. Visitas Consultor/Asesor"
+page 55635 "Asis. Visitas Consultor/Asesor"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 67106;
+    SourceTable = 55565;
 
     layout
     {

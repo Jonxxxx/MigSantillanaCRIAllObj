@@ -1,4 +1,4 @@
-page 67136 "Colegio - Work Flow Objetivos"
+page 55595 "Colegio - Work Flow Objetivos"
 {
     AutoSplitKey = true;
     Caption = 'School - programming Work flow';

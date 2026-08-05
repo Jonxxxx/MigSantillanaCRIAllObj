@@ -1,4 +1,4 @@
-page 67140 "Asistencia Docentes x Colegio"
+page 55599 "Asistencia Docentes x Colegio"
 {
     CardPageID = "Solicitud asistencia Tec - Ped";
     DeleteAllowed = false;
@@ -93,7 +93,7 @@ page 67140 "Asistencia Docentes x Colegio"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67101;
+                    RunObject = Page 55560;
                     RunPageLink = "No. Solicitud" = FIELD("No. Solicitud");
                     ShortCutKey = 'Shift+F5';
                 }

@@ -1,4 +1,4 @@
-page 67102 "Lista Cab. Planif. Evento"
+page 55561 "Lista Cab. Planif. Evento"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
@@ -135,7 +135,7 @@ page 67102 "Lista Cab. Planif. Evento"
                     var
                         Evento: Record 55478;
                         CabPlanEvent: Record 55518;
-                        fCabPlanEvent: Page 67101;
+                        fCabPlanEvent: Page 55560;
                         Seq: Integer;
                         IndSkip: Boolean;
                     begin
@@ -167,7 +167,7 @@ page 67102 "Lista Cab. Planif. Evento"
                     Image = Edit;
                     Promoted = true;
                     PromotedIsBig = true;
-                    RunObject = Page 67101;
+                    RunObject = Page 55560;
                     RunPageLink = "Cod. Taller - Evento" = FIELD("Cod. Taller - Evento"),
                                   "Tipo Evento" = FIELD("Tipo Evento"),
                                   "Expositor" = FIELD("Expositor"),

@@ -1,4 +1,4 @@
-page 67180 "Promotores - Colegio - Nivel"
+page 55639 "Promotores - Colegio - Nivel"
 {
     PageType = List;
     SourceTable = 55503;

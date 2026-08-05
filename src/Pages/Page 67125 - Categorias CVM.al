@@ -1,4 +1,4 @@
-page 67125 "Categorias CVM"
+page 55584 "Categorias CVM"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

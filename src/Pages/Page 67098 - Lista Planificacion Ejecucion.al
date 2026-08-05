@@ -1,4 +1,4 @@
-page 67098 "Lista Planificacion Ejecucion"
+page 55557 "Lista Planificacion Ejecucion"
 {
     CardPageID = "Cab. Planificacion Reg.";
     DeleteAllowed = false;

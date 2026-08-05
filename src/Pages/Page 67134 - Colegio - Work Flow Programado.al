@@ -1,4 +1,4 @@
-page 67134 "Colegio - Work Flow Programado"
+page 55593 "Colegio - Work Flow Programado"
 {
     AutoSplitKey = true;
     Caption = 'School - programming Work flow';

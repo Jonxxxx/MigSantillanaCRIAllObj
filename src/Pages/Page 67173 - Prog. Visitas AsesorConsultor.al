@@ -1,8 +1,8 @@
-page 67173 "Prog. Visitas Asesor/Consultor"
+page 55632 "Prog. Visitas Asesor/Consultor"
 {
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 67103;
+    SourceTable = 55562;
 
     layout
     {
@@ -49,7 +49,7 @@ page 67173 "Prog. Visitas Asesor/Consultor"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 67176;
+                    RunObject = Page 55635;
                     RunPageLink = "No. Visita" = FIELD("No. Visita"),
                                   "No. Linea Progr." = FIELD("No. Linea");
                 }
@@ -73,7 +73,7 @@ page 67173 "Prog. Visitas Asesor/Consultor"
 
     var
         wVisita: Code[20];
-        rVisita: Record 67102;
+        rVisita: Record 55561;
         Err001: Label 'No se ha definido la visita.';
 }
 

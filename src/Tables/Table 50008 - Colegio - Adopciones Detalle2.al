@@ -245,7 +245,7 @@ table 55008 "Colegio - Adopciones Detalle2"
 
             trigger OnLookup()
             var
-                Materia: Page 67086;
+                Materia: Page 55648;
             begin
             end;
         }

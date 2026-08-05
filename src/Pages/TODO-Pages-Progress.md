@@ -978,7 +978,7 @@ Skipped TODO markers: **36**
   eight verified custom page links for teacher schools, hobbies,
   specialties, events, exponent records, and history.
 - Page 55472: restored report 55468 and its modal invocation.
-- Page 55479: restored the verified `Cod. Evento` link to page 67100.
+- Page 55479: restored the verified `Cod. Evento` link to page 55559.
 
 Original classifications: Custom dependency, Missing page property,
 Renamed custom field, and Functional ambiguity.
@@ -1082,7 +1082,7 @@ Skipped TODO markers: **5**
 - `src/Pages/Page 55543 - Transfer Order Subform Muestra.al`
 - `src/Pages/Page 55544 - Contact List APS.al`
 - `src/Pages/Page 55546 - Promotores - Lista de Colegios.al`
-- `src/Pages/Page 67100 - Expositores - Eventos.al`
+- `src/Pages/Page 55559 - Expositores - Eventos.al`
 
 ### Files modified
 
@@ -1098,7 +1098,7 @@ Skipped TODO markers: **5**
 - Page 55524: restored the source-table view with the exact current custom
   option member and existing table key.
 - Page 55529: restored the deterministic normalized period-end field.
-- Page 55531: restored page 67130 with its verified `No. Solicitud` link and
+- Page 55531: restored page 55589 with its verified `No. Solicitud` link and
   the verified public ranking-page procedure.
 - Page 55541: restored posted transfer shipment/receipt links with the current
   standard `Transfer Order No.` field, plus verified subpage dimension,
@@ -1137,7 +1137,7 @@ Resolved TODO markers: **32**
 - Page 55544: `ShowCustVendBank` is no longer a callable Contact method;
   the template-selection expression is unavailable; and the four legacy
   report names/IDs could not be verified in current dependencies.
-- Page 67100: the commented procedure call would pass an uninitialized event
+- Page 55559: the commented procedure call would pass an uninitialized event
   type before the subsequent lookup, so restoring it unchanged is unsafe.
 
 Skipped TODO markers: **23**
@@ -1152,36 +1152,36 @@ Skipped TODO markers: **23**
 - Seven temporary AL0604 warnings from restored implicit record references
   were removed by qualifying only those new references with `Rec.`.
 - Last successfully processed file:
-  `src/Pages/Page 67100 - Expositores - Eventos.al`
+  `src/Pages/Page 55559 - Expositores - Eventos.al`
 
 ## Batch 18
 
 ### Files inspected
 
-- `src/Pages/Page 67111 - Adopciones - Colegio - MRK.al`
-- `src/Pages/Page 67116 - Hist Colegio - Docentes.al`
-- `src/Pages/Page 67118 - Inventarios Colegios ListPart.al`
-- `src/Pages/Page 67166 - Ficha de Atenciones.al`
-- `src/Pages/Page 67170 - Documentos operac. comerciales.al`
-- `src/Pages/Page 67183 - Area Curricular - APS.al`
+- `src/Pages/Page 55570 - Adopciones - Colegio - MRK.al`
+- `src/Pages/Page 55575 - Hist Colegio - Docentes.al`
+- `src/Pages/Page 55577 - Inventarios Colegios ListPart.al`
+- `src/Pages/Page 55625 - Ficha de Atenciones.al`
+- `src/Pages/Page 55629 - Documentos operac. comerciales.al`
+- `src/Pages/Page 55642 - Area Curricular - APS.al`
 - `src/Pages/Page 75001 - Datos MDM.al`
 - `src/Pages/Page 75002 - Estructura Analitica.al`
 
 ### Files modified
 
-- `src/Pages/Page 67116 - Hist Colegio - Docentes.al`
-- `src/Pages/Page 67118 - Inventarios Colegios ListPart.al`
-- `src/Pages/Page 67166 - Ficha de Atenciones.al`
+- `src/Pages/Page 55575 - Hist Colegio - Docentes.al`
+- `src/Pages/Page 55577 - Inventarios Colegios ListPart.al`
+- `src/Pages/Page 55625 - Ficha de Atenciones.al`
 - `src/Pages/Page 75001 - Datos MDM.al`
 - `src/Pages/Page 75002 - Estructura Analitica.al`
 
 ### TODOs resolved
 
-- Page 67116: restored the verified public `RecibeParametros` call on custom
-  page 67119 with compatible source fields.
-- Page 67118: restored the complete sample-inventory field, verified custom
+- Page 55575: restored the verified public `RecibeParametros` call on custom
+  page 55578 with compatible source fields.
+- Page 55577: restored the complete sample-inventory field, verified custom
   codeunit procedure, and Bin Content lookup.
-- Page 67166: corrected and restored the subpage link to the current custom
+- Page 55625: corrected and restored the subpage link to the current custom
   destination field `Codigo Cab. Atencion`.
 - Pages 75001 and 75002: restored custom codeunit 75000 plus the verified
   public MDM editability checks in all affected page triggers.
@@ -1201,9 +1201,9 @@ Resolved TODO markers: **14**
 
 ### TODOs skipped
 
-- Page 67111: `OptionCaption` cannot be restored on the current Text-backed
+- Page 55570: `OptionCaption` cannot be restored on the current Text-backed
   page field.
-- Pages 67170 and 67183: numeric option values 28 and 29 do not exist in the
+- Pages 55629 and 55642: numeric option values 28 and 29 do not exist in the
   current custom table 55469 option definition, and no semantic replacement
   is verifiable.
 
@@ -1707,8 +1707,8 @@ current Medium-confidence candidates were not processed in this task.
 
 ### Files inspected
 
-- `src/Pages/Page 67170 - Documentos operac. comerciales.al`
-- `src/Pages/Page 67183 - Area Curricular - APS.al`
+- `src/Pages/Page 55629 - Documentos operac. comerciales.al`
+- `src/Pages/Page 55642 - Area Curricular - APS.al`
 - `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
 
 ### Files modified
@@ -1723,7 +1723,7 @@ Resolved TODO markers: **0**
 
 ### TODOs inspected and skipped
 
-- Pages 67170 and 67183: the requested `SourceTableView` constants 28 and 29
+- Pages 55629 and 55642: the requested `SourceTableView` constants 28 and 29
   are outside the current option definition of custom table 55469, whose
   `Tipo registro` field defines values 0 through 27. No current option member
   has verified equivalent semantics.
@@ -2259,7 +2259,7 @@ remains under `src/Pages`.
 ## Batch 9
 
 - AL objects inspected and modified: Pages 55286, 55310, 55353, 55518,
-  55531, 55541, 55543, 55544, 67100, and 67111.
+  55531, 55541, 55543, 55544, 55559, and 55570.
 - TODOs safely resolved: 15. Restored transfer back-order availability,
   symbolic execution of Report 55000, the complete 20-column MdE matrix,
   sample inventory and three verified dimension lookups, the educational
@@ -2277,7 +2277,7 @@ remains under `src/Pages`.
   subpage methods, removed Contact UI helpers, an invalid text OptionCaption,
   and an indeterminate duplicate CASE branch.
 - Verification: complete current-object inspection; repository verification
-  of Reports 55000, Codeunits 55418, 55467, and 55468, Pages 55543 and 67102,
+  of Reports 55000, Codeunits 55418, 55467, and 55468, Pages 55543 and 55561,
   and all relevant public signatures; and `al_symbolsearch` for Bin Content,
   Bin Contents, Dimension Value, Transfer Line shortcut-dimension methods,
   and Contact/Contact List creation and related-record methods.
@@ -2286,7 +2286,7 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 6.
 - Total `// TODO: Manual review`: 206.
 - Last successfully processed file:
-  `src/Pages/Page 67111 - Adopciones - Colegio - MRK.al`.
+  `src/Pages/Page 55570 - Adopciones - Colegio - MRK.al`.
 
 ## Batch 10
 
