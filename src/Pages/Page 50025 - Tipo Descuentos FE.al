@@ -1,7 +1,7 @@
 page 55025 "Tipo Descuentos FE"
 {
     AccessByPermission = Codeunit 55202 = X;
-    ApplicationArea = BASIC, SUITE;
+    ApplicationArea = All;
     Caption = 'Discount Type FE';
     Editable = true;
     PageType = List;

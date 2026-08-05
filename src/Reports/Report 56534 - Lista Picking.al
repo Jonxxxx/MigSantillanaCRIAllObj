@@ -379,8 +379,8 @@ report 55432 "Lista Picking"
             dataitem("Sales Comment Line"; 44)
             {
                 DataItemTableView = SORTING("Document Type", "No.", "Document Line No.", "Line No.")
-                                    ORDER(Ascending);
-                //TODO: Ver WHERE("Print On Pick Ticket" = FILTER(Yes));
+                                    ORDER(Ascending)
+                WHERE("Print On Pick Ticket" = FILTER(true));
                 column(ComentarioVta; 'VTA')
                 {
                 }

@@ -1,6 +1,5 @@
 codeunit 55896 "Funciones Addin DSPos"
-{   //TODO: Revisar codigo completo
-    //DONE: Revisado y adaptado by APR - 2026 08 04
+{
     trigger OnRun()
     var
         lcFuncComunes: Codeunit 55897;

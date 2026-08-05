@@ -1049,13 +1049,12 @@ report 55045 "Cheque Santillana BPD"
                                     ContactText := Text006;
                                     SalesPurchPerson.GET(Cust."Salesperson Code");
                                 END;
-                                //TODO: Ver 
-                                /*
+
                                 SetCheckPrintParams(
                                   Cust."Check Date Format",
                                   Cust."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Cust."Bank Communication");*/
+                                  Cust."Bank Communication");
                             END;
                         BalancingType::Vendor:
                             BEGIN
