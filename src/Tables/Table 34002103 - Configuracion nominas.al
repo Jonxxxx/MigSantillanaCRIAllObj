@@ -1,4 +1,4 @@
-table 34002103 "Configuracion nominas"
+table 55744 "Configuracion nominas"
 {
 
     fields

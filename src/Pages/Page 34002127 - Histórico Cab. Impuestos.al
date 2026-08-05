@@ -1,10 +1,10 @@
-page 34002127 "Historico Cab. Impuestos"
+page 55768 "Historico Cab. Impuestos"
 {
     Caption = 'Historico Cuotas Patronales';
     DeleteAllowed = false;
     Editable = false;
     PageType = Document;
-    SourceTable = 34002121;
+    SourceTable = 55762;
 
     layout
     {
@@ -40,7 +40,7 @@ page 34002127 "Historico Cab. Impuestos"
                     ToolTip = 'No. Contabilizacion';
                 }
             }
-            part(HistLinNom; 34002128)
+            part(HistLinNom; 55769)
             {
                 SubPageLink = Periodo = FIELD(Periodo),
                               "Tipo de nomina" = FIELD("Tipo de nomina");
@@ -60,7 +60,7 @@ page 34002127 "Historico Cab. Impuestos"
                     ApplicationArea = All;
                     Caption = '&List';
                     ToolTip = '&List';
-                    RunObject = Page 34002129;
+                    RunObject = Page 55770;
                     ShortCutKey = 'Shift+Ctrl+L';
                 }
             }

@@ -153,7 +153,7 @@ table 34002199 "Hist. Cab. Prest. cooperativa"
     }
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         GestNoSerie: Codeunit "No. Series";
 }
 

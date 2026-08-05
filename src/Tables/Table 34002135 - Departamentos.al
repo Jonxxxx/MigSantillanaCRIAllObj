@@ -1,4 +1,4 @@
-table 34002135 Departamentos
+table 55776 Departamentos
 {
     Caption = 'Department';
     DrillDownPageID = 34002168;
@@ -68,7 +68,7 @@ table 34002135 Departamentos
     end;
 
     var
-        SubDepto: Record 34002136;
+        SubDepto: Record 55777;
         Emp: Record 5200;
         Err001: Label 'You can not delete %1 %2 because there are employees associated to it';
         Err002: Label 'You can not block %1 %2 because there are employees associated to it';

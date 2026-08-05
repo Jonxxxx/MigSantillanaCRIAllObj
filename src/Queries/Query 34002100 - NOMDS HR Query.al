@@ -1,4 +1,4 @@
-query 34002100 "NOMDS HR Query"
+query 55741 "NOMDS HR Query"
 {
     Caption = 'HR Query';
 
@@ -75,7 +75,7 @@ query 34002100 "NOMDS HR Query"
             column(Company_E_Mail; "Company E-Mail")
             {
             }
-            dataitem(Contratos; 34002109)
+            dataitem(Contratos; 55750)
             {
                 DataItemLink = "No. empleado" = Employee."No.";
                 SqlJoinType = InnerJoin;

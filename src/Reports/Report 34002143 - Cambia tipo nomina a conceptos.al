@@ -1,4 +1,4 @@
-report 34002143 "Cambia tipo nomina a conceptos"
+report 55784 "Cambia tipo nomina a conceptos"
 {
     ProcessingOnly = true;
 
@@ -65,7 +65,7 @@ report 34002143 "Cambia tipo nomina a conceptos"
     }
 
     var
-        PerfilSal: Record 34002115;
+        PerfilSal: Record 55756;
         Text001: Label 'Update already done, please check the changes';
         TipoNom: Option Regular,Christmas,Bonus,Tip,Rent;
         Concepto: Code[20];

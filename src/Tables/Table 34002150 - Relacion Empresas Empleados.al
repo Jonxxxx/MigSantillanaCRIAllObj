@@ -1,4 +1,4 @@
-table 34002150 "Relacion Empresas Empleados"
+table 55791 "Relacion Empresas Empleados"
 {
     Caption = 'Company Tax Retention';
 
@@ -59,7 +59,7 @@ table 34002150 "Relacion Empresas Empleados"
     }
 
     var
-        RetImp: Record 34002150;
+        RetImp: Record 55791;
         Err001: Label 'There can be only one company of retention';
 }
 

@@ -1,11 +1,11 @@
-report 34002113 "Lista Mov. CxC Empl."
+report 55754 "Lista Mov. CxC Empl."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Lista Mov. CxC Empl..rdl';
 
     dataset
     {
-        dataitem("Historico Cab. Prestamo"; 34002146)
+        dataitem("Historico Cab. Prestamo"; 55787)
         {
             CalcFields = "Importe Original";
             DataItemTableView = SORTING("Employee No.", "No. Prestamo")
@@ -108,7 +108,7 @@ report 34002113 "Lista Mov. CxC Empl."
             column(TotalCaption; TotalCaptionLbl)
             {
             }
-            dataitem("Historico Lin. Prestamo"; 34002147)
+            dataitem("Historico Lin. Prestamo"; 55788)
             {
                 DataItemLink = "No. Prestamo" = FIELD("No. Prestamo"),
                                "Codigo Empleado" = FIELD("Employee No.");
@@ -176,7 +176,7 @@ report 34002113 "Lista Mov. CxC Empl."
     }
 
     var
-        rMovCxC: Record 34002146;
+        rMovCxC: Record 55787;
         TotalFor: Label 'Total para ';
         Emp: Record 5200;
         Detallado: Boolean;

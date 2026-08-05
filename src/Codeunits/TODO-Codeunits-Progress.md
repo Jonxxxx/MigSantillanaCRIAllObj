@@ -11,9 +11,9 @@
 
 ## Batch 1
 
-- Codeunits inspected and modified: 55739, 34002102, 34002104,
-  34002108, 34002111, 34002112, 34002114, 34002115, 34002118, and
-  34002119.
+- Codeunits inspected and modified: 55739, 55743, 55745,
+  55749, 55752, 55753, 55755, 55756, 55759, and
+  55760.
 - TODOs safely resolved: 12 markers. Replaced six legacy two-line
   `InitSeries` calls with the verified consuming
   `No. Series.GetNextNo(NoSeriesCode, UsageDate)` API.
@@ -33,7 +33,7 @@
   patterns; `al_symbolsearch` for all Business Central v27 No. Series methods,
   OnAfterCompanyOpen, Email, and Email Message.
 - Public callers reviewed: `CalculoEntreFechaDotNet` callers in Codeunits
-  34002118, 34002119, and 34002160; No. Series changes were local procedure
+  55759, 55760, and 34002160; No. Series changes were local procedure
   statements and did not change public contracts.
 - Event publishers reviewed: Codeunit 40 OnAfterCompanyOpen was not present in
   dependency symbols.
@@ -45,12 +45,12 @@
 - Remaining `//TODO: Ver`: 324.
 - Total `// TODO: Manual review`: 11.
 - Last successfully processed file:
-  `src/Codeunits/Codeunit 34002119 - Registrar nomina RD -2.al`.
+  `src/Codeunits/Codeunit 55760 - Registrar nomina RD -2.al`.
 
 ## Batch 2
 
-- Codeunits inspected and modified: 34002124, 34002125, 34002126,
-  34002135, 34002145, 34002160, 34002199, 34002500, 34002520, and
+- Codeunits inspected and modified: 55765, 55766, 55767,
+  55776, 55786, 34002160, 34002199, 34002500, 34002520, and
   34002521.
 - TODOs safely resolved: 2 markers. Replaced the legacy payroll
   `InitSeries` call in Codeunit 34002160 with the verified consuming
@@ -302,7 +302,7 @@
 
 ## Manual-review batch 1
 
-- Codeunits inspected and modified: 34002108, 34002145, 55156, 55204,
+- Codeunits inspected and modified: 55749, 55786, 55156, 55204,
   55233, 55355, 55359, 55422, 55683, and 55690.
 - Manual reviews resolved: 19.
 - Email migrations: 4 complete synchronous Email/Email Message flows,
@@ -330,7 +330,7 @@
 
 ## Manual-review batch 2
 
-- Codeunits inspected and modified: 34002125, 34002126, and 34002135.
+- Codeunits inspected and modified: 55766, 55767, and 55776.
 - Manual-review comments resolved or deduplicated: 98.
 - Email migrations: 0.
 - Report-output migrations: 0.
@@ -359,12 +359,12 @@
   validation.
 - Remaining manual-review comments: 89.
 - Last processed file:
-  `src/Codeunits/Codeunit 34002135 - Genera formatos elect. legales.al`.
+  `src/Codeunits/Codeunit 55776 - Genera formatos elect. legales.al`.
 
 ## Manual-review batch 3
 
 - Codeunits inspected: 55201, 55002, 34002199,
-  EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 34002118,
+  EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 55759,
   55225, 55682, and 55353.
 - Codeunits modified: 55201, 34002522, 55682, and 55353.
 - Manual reviews resolved: 6.
@@ -435,9 +435,9 @@
 
 ## Manual-review batch 5
 
-- Codeunits inspected: 55739, 34002102, 34002104, 34002124, 34002500,
+- Codeunits inspected: 55739, 55743, 55745, 55765, 34002500,
   34002520, 34002521, 34002523, 34002524, and 34002525.
-- Codeunits modified: 55739, 34002102, 34002104, 34002520, 34002523,
+- Codeunits modified: 55739, 55743, 55745, 34002520, 34002523,
   34002524, and 34002525.
 - Manual reviews resolved: 8.
 - Email migrations: 0.
@@ -467,8 +467,8 @@
 ## Manual-review batch 6
 
 - Codeunits inspected: 55010, 55202, 55228, plus dependency-reopened or
-  retained-review entries in 34002522, 55002, 34002126, 34002199, and 55201.
-- Codeunits modified: 55010, 34002522, 55002, 34002126, 34002199, and 55201.
+  retained-review entries in 34002522, 55002, 55767, 34002199, and 55201.
+- Codeunits modified: 55010, 34002522, 55002, 55767, 34002199, and 55201.
 - Manual reviews resolved or deduplicated: 9.
 - Email migrations: 0.
 - Report/file migrations: 0.
@@ -506,34 +506,34 @@ Every remaining source comment was re-evaluated against the current repository, 
 
 | Source | Category | Exact retained reason |
 |---|---|---|
-| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:250` | Missing custom object / field / procedure | Payroll type option value 6 is not defined in the current source field, so the automatic-vacation branch cannot be restored without selecting or adding a business option. |
-| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:540` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the conditional salary-profile validation cannot be restored without a verified replacement field. |
-| `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:3037` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the retroactive-pay divisor rule cannot be restored without a verified replacement field and payroll decision. |
-| `src\Codeunits\Codeunit 34002124 - ADO Connection Mgmt.al:3` | External contract / SaaS redesign | The complete ADO/direct-SQL implementation is unsupported in Business Central Online and no repository API replacement exists. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:594` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:688` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:865` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:883` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:919` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the provider-export procedures also require missing payment metadata fields. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:963` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:975` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1167` | Functional ambiguity / outside scope | RenameFile has no remaining active caller that is free of missing payment-export dependencies. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1195` | Missing custom object / field / procedure | Banco Popular export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1547` | Missing custom object / field / procedure | Banco BHD export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1756` | Missing custom object / field / procedure | Banco Reservas export requires missing Bank Account field "E-Pay Export File Path" and Vendor Bank Account field "Banco RED ACH"; the destination routing cannot be produced without them. |
-| `src\Codeunits\Codeunit 34002125 - Genera Formatos  E. Nomina RD.al:1941` | Missing custom object / field / procedure | Scotiabank export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
-| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:409` | Missing custom object / field / procedure | Employee fields "Puesto Segun MT" and its related legacy position value are not present in the current repository. |
-| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:549` | Missing custom object / field / procedure | Employee field "Puesto Segun MT" is not present in the current repository. |
-| `src\Codeunits\Codeunit 34002135 - Genera formatos elect. legales.al:559` | Missing custom object / field / procedure | Employee field "Cod. Nacionalidad MT" is not present in the current repository. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:554` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:648` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:825` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:843` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:879` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the disabled provider-export procedures also require missing payment metadata fields. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:919` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:931` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:1235` | Missing custom object / field / procedure | The complete BCR provider-payment implementation is disabled and depends on removed payment metadata fields. |
-| `src\Codeunits\Codeunit 34002126 - Genera Formatos  E. Nomina CR.al:1577` | Missing custom object / field / procedure | The complete BHD provider-payment implementation is disabled and depends on removed payment metadata fields. |
+| `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:250` | Missing custom object / field / procedure | Payroll type option value 6 is not defined in the current source field, so the automatic-vacation branch cannot be restored without selecting or adding a business option. |
+| `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:540` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the conditional salary-profile validation cannot be restored without a verified replacement field. |
+| `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:3037` | Missing custom object / field / procedure | Employee field Tipo pago OLD is unavailable, so the retroactive-pay divisor rule cannot be restored without a verified replacement field and payroll decision. |
+| `src\Codeunits\Codeunit 55765 - ADO Connection Mgmt.al:3` | External contract / SaaS redesign | The complete ADO/direct-SQL implementation is unsupported in Business Central Online and no repository API replacement exists. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:594` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:688` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:865` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:883` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:919` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the provider-export procedures also require missing payment metadata fields. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:963` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:975` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:1167` | Functional ambiguity / outside scope | RenameFile has no remaining active caller that is free of missing payment-export dependencies. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:1195` | Missing custom object / field / procedure | Banco Popular export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:1547` | Missing custom object / field / procedure | Banco BHD export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:1756` | Missing custom object / field / procedure | Banco Reservas export requires missing Bank Account field "E-Pay Export File Path" and Vendor Bank Account field "Banco RED ACH"; the destination routing cannot be produced without them. |
+| `src\Codeunits\Codeunit 55766 - Genera Formatos  E. Nomina RD.al:1941` | Missing custom object / field / procedure | Scotiabank export requires missing Bank Account fields "E-Pay Export File Path", "Last Remittance Advice No.", and "Last E-Pay Export File Name", Vendor Bank Account field "Banco RED ACH", and Gen. Journal Line field "Export File Name". |
+| `src\Codeunits\Codeunit 55776 - Genera formatos elect. legales.al:409` | Missing custom object / field / procedure | Employee fields "Puesto Segun MT" and its related legacy position value are not present in the current repository. |
+| `src\Codeunits\Codeunit 55776 - Genera formatos elect. legales.al:549` | Missing custom object / field / procedure | Employee field "Puesto Segun MT" is not present in the current repository. |
+| `src\Codeunits\Codeunit 55776 - Genera formatos elect. legales.al:559` | Missing custom object / field / procedure | Employee field "Cod. Nacionalidad MT" is not present in the current repository. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:554` | Functional ambiguity / outside scope | This entire salary-change export remains disabled and still depends on legacy server-path setup and obsolete employee-field assumptions. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:648` | Functional ambiguity / outside scope | This entire variable-salary export remains disabled and its source-field and activation requirements are not defined. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:825` | Functional ambiguity / outside scope | This entire journal-bank export remains disabled and requires an activation decision before its file flow can be migrated. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:843` | Missing custom object / field / procedure | Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:879` | Missing custom object / field / procedure | Bank Account field "E-Pay Export File Path" is unavailable; the disabled provider-export procedures also require missing payment metadata fields. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:919` | Missing custom object / field / procedure | Check Ledger Entry fields "Trace No." and "Transmission File Name" and Gen. Journal Line field "Export File Name" are unavailable. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:931` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:1235` | Missing custom object / field / procedure | The complete BCR provider-payment implementation is disabled and depends on removed payment metadata fields. |
+| `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:1577` | Missing custom object / field / procedure | The complete BHD provider-payment implementation is disabled and depends on removed payment metadata fields. |
 | `src\Codeunits\Codeunit 34002500 - Lanzador DsPOS.al:12` | External contract / SaaS redesign | The DsPOS control-add-in initialization methods are disabled in the referenced codeunit and the legacy client add-in is not SaaS-compatible. |
 | `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
 | `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:31` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |

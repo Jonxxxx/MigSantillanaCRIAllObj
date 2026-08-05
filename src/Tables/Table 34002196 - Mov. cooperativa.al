@@ -61,7 +61,7 @@ table 34002196 "Mov. cooperativa"
 
             trigger OnValidate()
             var
-                ConceptosSal: Record 34002111;
+                ConceptosSal: Record 55752;
             begin
             end;
         }

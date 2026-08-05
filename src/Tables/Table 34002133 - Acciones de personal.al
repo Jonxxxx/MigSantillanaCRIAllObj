@@ -1,4 +1,4 @@
-table 34002133 "Acciones de personal"
+table 55774 "Acciones de personal"
 {
     Caption = 'Personnel activities';
     DrillDownPageID = 34002170;
@@ -702,27 +702,27 @@ table 34002133 "Acciones de personal"
 
     var
         HumanResSetup: Record 5218;
-        Contrato: Record 34002109;
+        Contrato: Record 55750;
         Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
         Emp: Record 5200;
         Cand: Record 34002164;
-        AccP: Record 34002114;
-        Cargos: Record 34002110;
-        NivelesCargos: Record 34002120;
-        Depto: Record 34002135;
+        AccP: Record 55755;
+        Cargos: Record 55751;
+        NivelesCargos: Record 55761;
+        Depto: Record 55776;
         EmpContract: Record 5211;
         Empresas: Record 2000000006;
-        Autorizacion: Record 34002154;
+        Autorizacion: Record 55795;
         Err002: Label 'Document can not be deleted';
         PostCode: Record 225;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Numeradorescomunes: Record 34002182;
-        Beneficiospuestoslaborales: Record 34002152;
-        Seleccionbeneficios: Record 34002156;
+        Beneficiospuestoslaborales: Record 55793;
+        Seleccionbeneficios: Record 55797;
         NivelCargo: Page 34002166;
         NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 55745;
         Err004: Label '$1 is invalid, please verify';
         Err005: Label 'The %1 is out of the limits for this level. %2 %3, %4 %5, do you want to continue?';
         Err006: Label 'The maximum number of vacancies for this position has already been reached. No more people can be assigned to this position.';

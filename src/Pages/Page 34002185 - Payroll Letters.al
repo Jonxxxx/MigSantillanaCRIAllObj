@@ -117,7 +117,7 @@ page 34002185 "Payroll Letters"
                     PayrollLetters.DELETEALL;
 
                     CustomReportLayout.RESET;
-                    CustomReportLayout.SETRANGE("Report ID", 34002100, 34002199);
+                    CustomReportLayout.SETRANGE("Report ID", 55741, 34002199);
                     CustomReportLayout.SETFILTER("Company Name", '<>%1', '');
                     IF CustomReportLayout.FINDSET THEN
                         REPEAT
@@ -133,7 +133,7 @@ page 34002185 "Payroll Letters"
 
                     //Si no lo encuentro con empresa lo inserto sin empresa
                     CustomReportLayout.RESET;
-                    CustomReportLayout.SETRANGE("Report ID", 34002100, 34002199);
+                    CustomReportLayout.SETRANGE("Report ID", 55741, 34002199);
                     CustomReportLayout.SETRANGE("Company Name", '');
                     IF CustomReportLayout.FINDSET THEN
                         REPEAT
@@ -179,7 +179,7 @@ page 34002185 "Payroll Letters"
     var
         CustomReportLayout: Record 9650;
         PayrollLetters: Record 34002176;
-        RepresentantesEmpresa: Record 34002102;
+        RepresentantesEmpresa: Record 55743;
         IsWindowsClient: Boolean;
         UpdateSuccesMsg: Label 'The %1 layout has been updated to use the current report design.';
         UpdateNotRequiredMsg: Label 'The %1 layout is up-to-date. No further updates are required.';

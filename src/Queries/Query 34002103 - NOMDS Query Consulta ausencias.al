@@ -1,4 +1,4 @@
-query 34002103 "NOMDS Query Consulta ausencias"
+query 55744 "NOMDS Query Consulta ausencias"
 {
     Caption = 'Absence query';
 

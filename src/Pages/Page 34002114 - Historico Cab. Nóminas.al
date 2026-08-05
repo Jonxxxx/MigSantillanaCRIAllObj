@@ -1,10 +1,10 @@
-page 34002114 "Historico Cab. Nominas"
+page 55755 "Historico Cab. Nominas"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Document;
-    SourceTable = 34002117;
+    SourceTable = 55758;
     SourceTableView = SORTING(Ano, Periodo, "No. empleado");
 
     layout
@@ -97,7 +97,7 @@ page 34002114 "Historico Cab. Nominas"
                     Editable = false;
                 }
             }
-            part(HistLinNom; 34002124)
+            part(HistLinNom; 55765)
             {
                 SubPageLink = "No. empleado" = FIELD("No. empleado"),
                               "Tipo de nomina" = FIELD("Tipo de nomina"),
@@ -164,7 +164,7 @@ page 34002114 "Historico Cab. Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002126;
+                    RunObject = Page 55767;
                     RunPageLink = "No. Documento" = FIELD("No. Documento"),
                                   "No. empleado" = FIELD("No. empleado"),
                                   "Tipo de nomina" = FIELD("Tipo de nomina"),
@@ -192,8 +192,8 @@ page 34002114 "Historico Cab. Nominas"
                     Image = Cancel;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
-                    // TODO: Manual review - Custom report 34002123 is unavailable as the required object type.
-                    // Original code: RunObject = Report 34002123;
+                    // TODO: Manual review - Custom report 55764 is unavailable as the required object type.
+                    // Original code: RunObject = Report 55764;
 
                     trigger OnAction()
                     begin
@@ -226,14 +226,14 @@ page 34002114 "Historico Cab. Nominas"
                 Image = Print;
                 Promoted = true;
                 PromotedCategory = "Report";
-                // TODO: Manual review - Custom codeunit 34002103 is unavailable as the required object type.
-                // Original code: RunObject = Codeunit 34002103;
+                // TODO: Manual review - Custom codeunit 55744 is unavailable as the required object type.
+                // Original code: RunObject = Codeunit 55744;
             }
         }
     }
 
     var
-        RegEmpCotizacion: Record 34002100;
+        RegEmpCotizacion: Record 55741;
         TipoEmpleado: Option Fijos,Temporales,Otros,Todos;
 }
 

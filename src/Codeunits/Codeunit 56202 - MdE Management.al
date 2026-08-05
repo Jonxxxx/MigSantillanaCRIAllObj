@@ -207,14 +207,14 @@ codeunit 55355 "MdE Management"
             ERROR(ErrorDelete, Employee.TABLECAPTION);
     end;
 
-    procedure Contrato_Insert(var Contrato: Record 34002109)
+    procedure Contrato_Insert(var Contrato: Record 55750)
     begin
         ConfSant.GET;
         IF ConfSant."MdE Activo" THEN
             ERROR(ErrorDelete, Contrato.TABLECAPTION);
     end;
 
-    procedure Contrato_Modify(var Rec: Record 34002109; var xRec: Record 34002109)
+    procedure Contrato_Modify(var Rec: Record 55750; var xRec: Record 55750)
     begin
         ConfSant.GET;
         IF ConfSant."MdE Activo" THEN BEGIN
@@ -245,7 +245,7 @@ codeunit 55355 "MdE Management"
         END;
     end;
 
-    procedure Contrato_Delete(var Contrato: Record 34002109)
+    procedure Contrato_Delete(var Contrato: Record 55750)
     begin
         ConfSant.GET;
         IF ConfSant."MdE Activo" THEN

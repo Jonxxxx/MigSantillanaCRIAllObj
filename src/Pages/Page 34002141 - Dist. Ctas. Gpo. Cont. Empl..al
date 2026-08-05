@@ -1,7 +1,7 @@
-page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
+page 55782 "Dist. Ctas. Gpo. Cont. Empl."
 {
     PageType = List;
-    SourceTable = 34002105;
+    SourceTable = 55746;
 
     layout
     {
@@ -147,7 +147,7 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 34002143;
+                RunObject = Page 55784;
                 RunPageLink = Codigo = FIELD("Codigo Concepto Salarial"),
                               "Gpo. Contable Empleado" = FIELD(Codigo);
             }
@@ -155,8 +155,8 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
     }
 
     var
-        ConfNominas: Record 34002103;
-        ConceptosSal: Record 34002111;
+        ConfNominas: Record 55744;
+        ConceptosSal: Record 55752;
 
     procedure Dimension()
     var
@@ -164,7 +164,7 @@ page 34002141 "Dist. Ctas. Gpo. Cont. Empl."
         DefDimension: Page 540;
     begin
         Dimension.RESET;
-        Dimension.SETRANGE("Table ID", 34002105);
+        Dimension.SETRANGE("Table ID", 55746);
         Dimension.SETRANGE("No.", Codigo + "Codigo Concepto Salarial");
         DefDimension.SETTABLEVIEW(Dimension);
         DefDimension.RUNMODAL;

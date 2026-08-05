@@ -27,9 +27,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0001
 
-- File path: `src/Pages/Page 34002104 - Ficha Empleados.al`
+- File path: `src/Pages/Page 55745 - Ficha Empleados.al`
 - Object type: Page
-- Object ID: 34002104
+- Object ID: 55745
 - Object name: `Ficha Empleados`
 - Line number: 392
 - Classification: Functional ambiguity
@@ -49,9 +49,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0002
 
-- File path: `src/Pages/Page 34002104 - Ficha Empleados.al`
+- File path: `src/Pages/Page 55745 - Ficha Empleados.al`
 - Object type: Page
-- Object ID: 34002104
+- Object ID: 55745
 - Object name: `Ficha Empleados`
 - Line number: 428
 - Classification: Functional ambiguity
@@ -71,9 +71,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0003
 
-- File path: `src/Pages/Page 34002104 - Ficha Empleados.al`
+- File path: `src/Pages/Page 55745 - Ficha Empleados.al`
 - Object type: Page
-- Object ID: 34002104
+- Object ID: 55745
 - Object name: `Ficha Empleados`
 - Line number: 873
 - Classification: Custom dependency
@@ -86,16 +86,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    871:         fecha: Date;
    872:         Mail: Codeunit 397;
-   873:         //TODO: Ver FuncionesNomina: Codeunit 34002104;
+   873:         //TODO: Ver FuncionesNomina: Codeunit 55745;
    874:         FechaIni: Date;
    875:         FechaFin: Date;
 ~~~
 
 ## TODO 0004
 
-- File path: `src/Pages/Page 34002110 - Conceptos salariales.al`
+- File path: `src/Pages/Page 55751 - Conceptos salariales.al`
 - Object type: Page
-- Object ID: 34002110
+- Object ID: 55751
 - Object name: `Conceptos salariales`
 - Line number: 215
 - Classification: Functional ambiguity
@@ -115,9 +115,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0005
 
-- File path: `src/Pages/Page 34002111 - Lista Acciones de personal.al`
+- File path: `src/Pages/Page 55752 - Lista Acciones de personal.al`
 - Object type: Page
-- Object ID: 34002111
+- Object ID: 55752
 - Object name: `Lista Acciones de personal`
 - Line number: 125
 - Classification: Custom dependency
@@ -130,16 +130,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    123:                 {
    124:                     Caption = 'C&omentarios';
-   125:                     //TODO: Ver RunObject = Page 34002156;
+   125:                     //TODO: Ver RunObject = Page 55797;
    126:                 }
    127:             }
 ~~~
 
 ## TODO 0006
 
-- File path: `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
+- File path: `src/Pages/Page 55754 - Lista de conceptos salariales.al`
 - Object type: Page
-- Object ID: 34002113
+- Object ID: 55754
 - Object name: `Lista de conceptos salariales`
 - Line number: 72
 - Classification: Custom dependency
@@ -152,16 +152,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     70:                 Promoted = true;
     71:                 PromotedCategory = Process;
-    72:                 //TODO: Ver RunObject = Report 34002102;
+    72:                 //TODO: Ver RunObject = Report 55743;
     73:                 Visible = false;
     74:             }
 ~~~
 
 ## TODO 0007
 
-- File path: `src/Pages/Page 34002114 - Historico Cab. Nóminas.al`
+- File path: `src/Pages/Page 55755 - Historico Cab. Nóminas.al`
 - Object type: Page
-- Object ID: 34002114
+- Object ID: 55755
 - Object name: `Historico Cab. Nominas`
 - Line number: 152
 - Classification: Custom dependency
@@ -174,16 +174,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    150:                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
    151:                     //PromotedCategory = Process;
-   152:                     //TODO: Ver RunObject = Report 34002123;
+   152:                     //TODO: Ver RunObject = Report 55764;
    153: 
    154:                     trigger OnAction()
 ~~~
 
 ## TODO 0008
 
-- File path: `src/Pages/Page 34002114 - Historico Cab. Nóminas.al`
+- File path: `src/Pages/Page 55755 - Historico Cab. Nóminas.al`
 - Object type: Page
-- Object ID: 34002114
+- Object ID: 55755
 - Object name: `Historico Cab. Nominas`
 - Line number: 180
 - Classification: Custom dependency
@@ -196,16 +196,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    178:                 Promoted = true;
    179:                 PromotedCategory = "Report";
-   180:                 //TODO: Ver RunObject = Codeunit 34002103;
+   180:                 //TODO: Ver RunObject = Codeunit 55744;
    181:             }
    182:         }
 ~~~
 
 ## TODO 0009
 
-- File path: `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
+- File path: `src/Pages/Page 55756 - Ficha Acciones de personal.al`
 - Object type: Page
-- Object ID: 34002115
+- Object ID: 55756
 - Object name: `Ficha Acciones de personal`
 - Line number: 352
 - Classification: Functional ambiguity
@@ -225,9 +225,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0010
 
-- File path: `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
+- File path: `src/Pages/Page 55756 - Ficha Acciones de personal.al`
 - Object type: Page
-- Object ID: 34002115
+- Object ID: 55756
 - Object name: `Ficha Acciones de personal`
 - Line number: 424
 - Classification: Custom dependency
@@ -238,18 +238,18 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   422:         Beneficiosempleados: Record 34002153;
+   422:         Beneficiosempleados: Record 55794;
    423:         Miembroscooperativa: Record 34002195;
-   424:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+   424:         //TODO: Ver FuncionesNom: Codeunit 55745;
    425:         NoSeriesMgt: Codeunit "No. Series";
    426:         [InDataSet]
 ~~~
 
 ## TODO 0011
 
-- File path: `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
+- File path: `src/Pages/Page 55756 - Ficha Acciones de personal.al`
 - Object type: Page
-- Object ID: 34002115
+- Object ID: 55756
 - Object name: `Ficha Acciones de personal`
 - Line number: 768
 - Classification: Custom dependency
@@ -269,9 +269,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0012
 
-- File path: `src/Pages/Page 34002118 - Niveles - Grados RH.al`
+- File path: `src/Pages/Page 55759 - Niveles - Grados RH.al`
 - Object type: Page
-- Object ID: 34002118
+- Object ID: 55759
 - Object name: `Niveles - Grados RH`
 - Line number: 6
 - Classification: Deterministic AL syntax issue
@@ -283,7 +283,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
      4:     PageType = List;
-     5:     SourceTable = 34002151;
+     5:     SourceTable = 55792;
      6:     //TODO: Ver SourceTableView = WHERE("Tipo registro"=CONST(Niveles-Grados));
      7: 
      8:     layout
@@ -291,9 +291,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0013
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 232
 - Classification: Custom dependency
@@ -313,9 +313,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0014
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 245
 - Classification: SaaS incompatibility
@@ -328,16 +328,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    243:                     trigger OnAction()
    244:                     var
-   245:                     //TODO: Ver AdoConn: Codeunit 34002124;
+   245:                     //TODO: Ver AdoConn: Codeunit 55765;
    246:                     begin
    247:                         //AdoConn.ReadEmp;
 ~~~
 
 ## TODO 0015
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 248
 - Classification: Custom dependency
@@ -357,9 +357,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0016
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 271
 - Classification: Custom dependency
@@ -379,9 +379,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0017
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 272
 - Classification: Custom dependency
@@ -401,9 +401,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0018
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 273
 - Classification: Functional ambiguity
@@ -423,9 +423,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0019
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 294
 - Classification: Custom dependency
@@ -438,16 +438,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    292:                     PromotedCategory = Process;
    293:                     PromotedIsBig = true;
-   294:                     //TODO: Ver RunObject = Report 34002146;
+   294:                     //TODO: Ver RunObject = Report 55787;
    295: 
    296:                     trigger OnAction()
 ~~~
 
 ## TODO 0020
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 298
 - Classification: Custom dependency
@@ -460,16 +460,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    296:                     trigger OnAction()
    297:                     var
-   298:                     //TODO: Ver FuncNom: Codeunit 34002104;
+   298:                     //TODO: Ver FuncNom: Codeunit 55745;
    299:                     begin
    300:                     end;
 ~~~
 
 ## TODO 0021
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 312
 - Classification: Custom dependency
@@ -489,9 +489,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0022
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 345
 - Classification: Custom dependency
@@ -503,17 +503,17 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    343:     var
-   344:         ConfNom: Record 34002103;
-   345:         //TODO: Ver DistribAsistencia: Page 34002107;
-   346:         //TODO: Ver FuncNominas: Codeunit 34002104;
+   344:         ConfNom: Record 55744;
+   345:         //TODO: Ver DistribAsistencia: Page 55748;
+   346:         //TODO: Ver FuncNominas: Codeunit 55745;
    347:         [InDataSet]
 ~~~
 
 ## TODO 0023
 
-- File path: `src/Pages/Page 34002122 - Control de asistencia.al`
+- File path: `src/Pages/Page 55763 - Control de asistencia.al`
 - Object type: Page
-- Object ID: 34002122
+- Object ID: 55763
 - Object name: `Control de asistencia`
 - Line number: 346
 - Classification: Custom dependency
@@ -524,18 +524,18 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   344:         ConfNom: Record 34002103;
-   345:         //TODO: Ver DistribAsistencia: Page 34002107;
-   346:         //TODO: Ver FuncNominas: Codeunit 34002104;
+   344:         ConfNom: Record 55744;
+   345:         //TODO: Ver DistribAsistencia: Page 55748;
+   346:         //TODO: Ver FuncNominas: Codeunit 55745;
    347:         [InDataSet]
    348: 
 ~~~
 
 ## TODO 0024
 
-- File path: `src/Pages/Page 34002123 - Lista historico nóminas.al`
+- File path: `src/Pages/Page 55764 - Lista historico nóminas.al`
 - Object type: Page
-- Object ID: 34002123
+- Object ID: 55764
 - Object name: `Lista historico nominas`
 - Line number: 68
 - Classification: Custom dependency
@@ -548,16 +548,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     66:                     PromotedCategory = Process;
     67:                     PromotedIsBig = true;
-    68:                     //TODO: Ver RunObject = Report 34002124;
+    68:                     //TODO: Ver RunObject = Report 55765;
     69: 
     70:                     trigger OnAction()
 ~~~
 
 ## TODO 0025
 
-- File path: `src/Pages/Page 34002123 - Lista historico nóminas.al`
+- File path: `src/Pages/Page 55764 - Lista historico nóminas.al`
 - Object type: Page
-- Object ID: 34002123
+- Object ID: 55764
 - Object name: `Lista historico nominas`
 - Line number: 83
 - Classification: Custom dependency
@@ -570,16 +570,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     81:                     PromotedCategory = Process;
     82:                     PromotedIsBig = true;
-    83:                     //TODO: Ver RunObject = Report 34002106;
+    83:                     //TODO: Ver RunObject = Report 55747;
     84:                 }
     85: 
 ~~~
 
 ## TODO 0026
 
-- File path: `src/Pages/Page 34002123 - Lista historico nóminas.al`
+- File path: `src/Pages/Page 55764 - Lista historico nóminas.al`
 - Object type: Page
-- Object ID: 34002123
+- Object ID: 55764
 - Object name: `Lista historico nominas`
 - Line number: 115
 - Classification: Custom dependency
@@ -599,9 +599,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0027
 
-- File path: `src/Pages/Page 34002123 - Lista historico nóminas.al`
+- File path: `src/Pages/Page 55764 - Lista historico nóminas.al`
 - Object type: Page
-- Object ID: 34002123
+- Object ID: 55764
 - Object name: `Lista historico nominas`
 - Line number: 129
 - Classification: Custom dependency
@@ -614,16 +614,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    127:     var
    128:         Emp: Record 5200;
-   129:     //TODO: Ver Modelorecibsalario: Codeunit 34002103;
+   129:     //TODO: Ver Modelorecibsalario: Codeunit 55744;
    130: }
    131: 
 ~~~
 
 ## TODO 0028
 
-- File path: `src/Pages/Page 34002125 - Estadisticas Empleados.al`
+- File path: `src/Pages/Page 55766 - Estadisticas Empleados.al`
 - Object type: Page
-- Object ID: 34002125
+- Object ID: 55766
 - Object name: `Estadisticas Empleados`
 - Line number: 49
 - Classification: Custom dependency
@@ -636,16 +636,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     47: 
     48:     var
-    49:     //TODO: Ver FuncNom: Codeunit 34002104;
+    49:     //TODO: Ver FuncNom: Codeunit 55745;
     50: }
     51: 
 ~~~
 
 ## TODO 0029
 
-- File path: `src/Pages/Page 34002126 - Visualizar nómina histórico.al`
+- File path: `src/Pages/Page 55767 - Visualizar nómina histórico.al`
 - Object type: Page
-- Object ID: 34002126
+- Object ID: 55767
 - Object name: `Visualizar nomina historico`
 - Line number: 13
 - Classification: Functional ambiguity
@@ -665,9 +665,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0030
 
-- File path: `src/Pages/Page 34002126 - Visualizar nómina histórico.al`
+- File path: `src/Pages/Page 55767 - Visualizar nómina histórico.al`
 - Object type: Page
-- Object ID: 34002126
+- Object ID: 55767
 - Object name: `Visualizar nomina historico`
 - Line number: 30
 - Classification: Functional ambiguity
@@ -688,9 +688,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0031
 
-- File path: `src/Pages/Page 34002126 - Visualizar nómina histórico.al`
+- File path: `src/Pages/Page 55767 - Visualizar nómina histórico.al`
 - Object type: Page
-- Object ID: 34002126
+- Object ID: 55767
 - Object name: `Visualizar nomina historico`
 - Line number: 129
 - Classification: Functional ambiguity
@@ -710,9 +710,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0032
 
-- File path: `src/Pages/Page 34002131 - Líneas cobros empleado.al`
+- File path: `src/Pages/Page 55772 - Líneas cobros empleado.al`
 - Object type: Page
-- Object ID: 34002131
+- Object ID: 55772
 - Object name: `Lineas cobros empleado`
 - Line number: 57
 - Classification: Renamed standard object, field, method, enum, or property
@@ -732,9 +732,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0033
 
-- File path: `src/Pages/Page 34002131 - Líneas cobros empleado.al`
+- File path: `src/Pages/Page 55772 - Líneas cobros empleado.al`
 - Object type: Page
-- Object ID: 34002131
+- Object ID: 55772
 - Object name: `Lineas cobros empleado`
 - Line number: 62
 - Classification: Renamed standard object, field, method, enum, or property
@@ -754,9 +754,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0034
 
-- File path: `src/Pages/Page 34002131 - Líneas cobros empleado.al`
+- File path: `src/Pages/Page 55772 - Líneas cobros empleado.al`
 - Object type: Page
-- Object ID: 34002131
+- Object ID: 55772
 - Object name: `Lineas cobros empleado`
 - Line number: 73
 - Classification: Renamed standard object, field, method, enum, or property
@@ -768,7 +768,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
     71:         Trab: Record 5200;
-    72:         LinsNom: Record 34002118;
+    72:         LinsNom: Record 55759;
     73:         //TODO: Ver GestionFormPeriodo: Codeunit 359;
     74:         LongPeriodoClie: Option "Dia",Semana,Mes,Trimestre,"Año",Periodo;
     75:         TipImporte: Option "Saldo en el periodo","Saldo acumulado a la fecha";
@@ -776,9 +776,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0035
 
-- File path: `src/Pages/Page 34002133 - CxC Empleados.al`
+- File path: `src/Pages/Page 55774 - CxC Empleados.al`
 - Object type: Page
-- Object ID: 34002133
+- Object ID: 55774
 - Object name: `CxC Empleados`
 - Line number: 78
 - Classification: Custom dependency
@@ -798,9 +798,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0036
 
-- File path: `src/Pages/Page 34002133 - CxC Empleados.al`
+- File path: `src/Pages/Page 55774 - CxC Empleados.al`
 - Object type: Page
-- Object ID: 34002133
+- Object ID: 55774
 - Object name: `CxC Empleados`
 - Line number: 79
 - Classification: Missing page property
@@ -820,9 +820,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0037
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 83
 - Classification: Custom dependency
@@ -835,16 +835,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     81:                 }
     82:             }
-    83:             //TODO: Ver part(PartPage; 34002135)
+    83:             //TODO: Ver part(PartPage; 55776)
     84:             //TODO: Ver {
     85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
 ~~~
 
 ## TODO 0038
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 84
 - Classification: Functional ambiguity
@@ -856,7 +856,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
     82:             }
-    83:             //TODO: Ver part(PartPage; 34002135)
+    83:             //TODO: Ver part(PartPage; 55776)
     84:             //TODO: Ver {
     85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
     86:             //TODO: Ver }
@@ -864,9 +864,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0039
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 85
 - Classification: Missing page property
@@ -877,7 +877,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-    83:             //TODO: Ver part(PartPage; 34002135)
+    83:             //TODO: Ver part(PartPage; 55776)
     84:             //TODO: Ver {
     85:             //TODO: Ver     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
     86:             //TODO: Ver }
@@ -886,9 +886,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0040
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 86
 - Classification: Functional ambiguity
@@ -908,9 +908,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0041
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 104
 - Classification: Functional ambiguity
@@ -930,9 +930,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0042
 
-- File path: `src/Pages/Page 34002134 - Histórico Prestamos.al`
+- File path: `src/Pages/Page 55775 - Histórico Prestamos.al`
 - Object type: Page
-- Object ID: 34002134
+- Object ID: 55775
 - Object name: `Historico Prestamos`
 - Line number: 112
 - Classification: Renamed standard object, field, method, enum, or property
@@ -944,7 +944,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    110:     var
-   111:         rPrestamo: Record 34002146;
+   111:         rPrestamo: Record 55787;
    112:     //TODO: Ver ImprInfor: Codeunit 228;
    113: }
    114: 
@@ -952,9 +952,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0043
 
-- File path: `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`
+- File path: `src/Pages/Page 55779 - Lista Mov. CxC Empleados.al`
 - Object type: Page
-- Object ID: 34002138
+- Object ID: 55779
 - Object name: `Lista Mov. CxC Empleados`
 - Line number: 103
 - Classification: Custom dependency
@@ -967,16 +967,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    101:                     trigger OnAction()
    102:                     var
-   103:                         //TODO: Ver CierraPrestamo: Report 34002142;
-   104:                         HCP: Record 34002146;
+   103:                         //TODO: Ver CierraPrestamo: Report 55783;
+   104:                         HCP: Record 55787;
    105:                     begin
 ~~~
 
 ## TODO 0044
 
-- File path: `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`
+- File path: `src/Pages/Page 55779 - Lista Mov. CxC Empleados.al`
 - Object type: Page
-- Object ID: 34002138
+- Object ID: 55779
 - Object name: `Lista Mov. CxC Empleados`
 - Line number: 107
 - Classification: Functional ambiguity
@@ -996,9 +996,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0045
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 98
 - Classification: Custom dependency
@@ -1019,9 +1019,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0046
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 109
 - Classification: Custom dependency
@@ -1041,9 +1041,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0047
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 118
 - Classification: Custom dependency
@@ -1056,16 +1056,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    116:                     PromotedCategory = Process;
    117:                     PromotedIsBig = true;
-   118:                     //TODO: Ver RunObject = Report 34002139;
+   118:                     //TODO: Ver RunObject = Report 55780;
    119:                 }
    120:                 action("Calculate payroll")
 ~~~
 
 ## TODO 0048
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 127
 - Classification: Custom dependency
@@ -1078,16 +1078,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    125:                     PromotedCategory = Process;
    126:                     PromotedIsBig = true;
-   127:                     //TODO: Ver RunObject = Report 34002124;
+   127:                     //TODO: Ver RunObject = Report 55765;
    128:                 }
    129:                 action("Init Wedge")
 ~~~
 
 ## TODO 0049
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 135
 - Classification: Custom dependency
@@ -1100,16 +1100,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    133:                     Promoted = true;
    134:                     PromotedCategory = Process;
-   135:                     //TODO: Ver RunObject = Report 34002130;
+   135:                     //TODO: Ver RunObject = Report 55771;
    136:                 }
    137: 
 ~~~
 
 ## TODO 0050
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 144
 - Classification: Custom dependency
@@ -1129,9 +1129,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0051
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 156
 - Classification: Custom dependency
@@ -1151,9 +1151,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0052
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 164
 - Classification: Custom dependency
@@ -1166,16 +1166,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    162:                     Promoted = true;
    163:                     PromotedCategory = "Report";
-   164:                     //TODO: Ver RunObject = Report 34002120;
+   164:                     //TODO: Ver RunObject = Report 55761;
    165:                 }
    166:                 action(Vacaciones)
 ~~~
 
 ## TODO 0053
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 172
 - Classification: Custom dependency
@@ -1188,16 +1188,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    170:                     Promoted = true;
    171:                     PromotedCategory = "Report";
-   172:                     //TODO: Ver RunObject = Report 34002125;
+   172:                     //TODO: Ver RunObject = Report 55766;
    173:                 }
    174:                 action("ListNomxDepto8.5")
 ~~~
 
 ## TODO 0054
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 224
 - Classification: Renamed standard object, field, method, enum, or property
@@ -1217,9 +1217,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0055
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 225
 - Classification: Missing page property
@@ -1239,9 +1239,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0056
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 226
 - Classification: Missing page property
@@ -1261,9 +1261,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0057
 
-- File path: `src/Pages/Page 34002144 - Diario Nominas.al`
+- File path: `src/Pages/Page 55785 - Diario Nominas.al`
 - Object type: Page
-- Object ID: 34002144
+- Object ID: 55785
 - Object name: `Diario Nominas`
 - Line number: 257
 - Classification: Custom dependency
@@ -1274,9 +1274,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   255:         CabHistorico: Record 34002117;
-   256:         ConfNominas: Record 34002103;
-   257:         //TODO: Ver FuncionesNomina: Codeunit 34002104;
+   255:         CabHistorico: Record 55758;
+   256:         ConfNominas: Record 55744;
+   257:         //TODO: Ver FuncionesNomina: Codeunit 55745;
    258:         StatusEmpl: Boolean;
    259:         TipoConcepto: Option Ingresos,Deducciones,Ambos;
 ~~~
@@ -1298,7 +1298,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     57:                     PromotedCategory = Process;
     58:                     PromotedIsBig = true;
-    59:                     //TODO: Ver RunObject = Report 34002147;
+    59:                     //TODO: Ver RunObject = Report 55788;
     60:                 }
     61:                 action(Hollydays)
 ~~~
@@ -1319,7 +1319,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    208:                     var
-   209:                         Acciones: Record 34002159;
+   209:                         Acciones: Record 55800;
    210:                     //TODO: Ver RepAcciones: Report 34002161;
    211:                     begin
    212:                         CurrPage.SETSELECTIONFILTER(Acciones);
@@ -1387,7 +1387,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     76: 
     77:     var
-    78:     //TODO: Ver CUNomina: Codeunit 34002104;
+    78:     //TODO: Ver CUNomina: Codeunit 55745;
     79: }
     80: 
 ~~~
@@ -1431,7 +1431,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     44: 
     45:     var
-    46:     //TODO: Ver CUNomina: Codeunit 34002104;
+    46:     //TODO: Ver CUNomina: Codeunit 55745;
     47: }
     48: 
 ~~~
@@ -1894,7 +1894,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    312:                 {
    313:                     Caption = '&Related Companies';
-   314:                     //TODO: Ver RunObject = Page 34002157;
+   314:                     //TODO: Ver RunObject = Page 55798;
    315:                     //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
    316:                 }
 ~~~
@@ -1915,7 +1915,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    313:                     Caption = '&Related Companies';
-   314:                     //TODO: Ver RunObject = Page 34002157;
+   314:                     //TODO: Ver RunObject = Page 55798;
    315:                     //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
    316:                 }
    317: 
@@ -2204,7 +2204,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
    435: 
    436:     var
    437:         //TODO: Ver Mail: Codeunit 397;
-   438:         //TODO: Ver CUNomina: Codeunit 34002104;
+   438:         //TODO: Ver CUNomina: Codeunit 55745;
    439:         FechaIni: Date;
 ~~~
 
@@ -2225,7 +2225,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    436:     var
    437:         //TODO: Ver Mail: Codeunit 397;
-   438:         //TODO: Ver CUNomina: Codeunit 34002104;
+   438:         //TODO: Ver CUNomina: Codeunit 55745;
    439:         FechaIni: Date;
    440:         FechaFin: Date;
 ~~~
@@ -2291,7 +2291,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    308:                 {
    309:                     Caption = '&Related Companies';
-   310:                     //TODO: Ver RunObject = Page 34002157;
+   310:                     //TODO: Ver RunObject = Page 55798;
    311:                     //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
    312:                 }
 ~~~
@@ -2312,7 +2312,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    309:                     Caption = '&Related Companies';
-   310:                     //TODO: Ver RunObject = Page 34002157;
+   310:                     //TODO: Ver RunObject = Page 55798;
    311:                     //TODO: Ver RunPageLink = "Cod. Empleado" = FIELD("No.");
    312:                 }
    313: 
@@ -2424,7 +2424,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    439:     var
    440:         Mail: Codeunit 397;
-   441:         //TODO: Ver CUNomina: Codeunit 34002104;
+   441:         //TODO: Ver CUNomina: Codeunit 55745;
    442:         FechaIni: Date;
    443:         FechaFin: Date;
 ~~~
@@ -2468,7 +2468,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     38: 
     39:     var
-    40:     //TODO: Ver CUNomina: Codeunit 34002104;
+    40:     //TODO: Ver CUNomina: Codeunit 55745;
     41: }
     42: 
 ~~~
@@ -2512,7 +2512,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     23: 
     24:     var
-    25:     //TODO: Ver  CUNomina: Codeunit 34002104;
+    25:     //TODO: Ver  CUNomina: Codeunit 55745;
     26: }
     27: 
 ~~~
@@ -2578,7 +2578,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    121: 
    122:     var
-   123:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+   123:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
    124:         Fecha: Record 2000000007;
    125: }
 ~~~
@@ -2600,7 +2600,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    121: 
    122:     var
-   123:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+   123:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
    124:         Fecha: Record 2000000007;
    125: }
 ~~~
@@ -2622,7 +2622,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    113:                         Caption = 'Post Payroll';
    114:                         Image = Post;
-   115:                         //TODO: Ver RunObject = Report 34002124;
+   115:                         //TODO: Ver RunObject = Report 55765;
    116:                     }
    117:                     action("Send Payroll slip")
 ~~~
@@ -2644,7 +2644,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    119:                         Caption = 'Send Payroll slip';
    120:                         Image = SendTo;
-   121:                         //TODO: Ver RunObject = Report 34002114;
+   121:                         //TODO: Ver RunObject = Report 55755;
    122:                     }
    123:                     action("Generate Bank's file")
 ~~~
@@ -2666,7 +2666,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    125:                         Caption = 'Generate Bank''s file';
    126:                         Image = TransferFunds;
-   127:                         //TODO: Ver RunObject = Report 34002121;
+   127:                         //TODO: Ver RunObject = Report 55762;
    128:                     }
    129:                     action("Post Payroll to G/L")
 ~~~
@@ -2689,7 +2689,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    131:                         Caption = 'Post Payroll to G/L';
    132:                         Image = PostInventoryToGL;
-   133:                         //TODO: Ver RunObject = Report 34002106;
+   133:                         //TODO: Ver RunObject = Report 55747;
    134:                     }
    135:                 }
 ~~~
@@ -2733,7 +2733,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    194:                         Caption = 'Payroll check''s report';
    195:                         Image = Payment;
-   196:                         //TODO: Ver RunObject = Report 34002116;
+   196:                         //TODO: Ver RunObject = Report 55757;
    197:                     }
    198:                     action(cierraprest)
 ~~~
@@ -2755,7 +2755,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    200:                         Caption = 'Finish loans';
    201:                         Image = Loaner;
-   202:                         //TODO: Ver RunObject = Report 34002142;
+   202:                         //TODO: Ver RunObject = Report 55783;
    203:                     }
    204:                     action("Envio IRM")
 ~~~
@@ -2799,7 +2799,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    222:                         Promoted = true;
    223:                         PromotedCategory = "Report";
-   224:                         //TODO: Ver RunObject = Report 34002102;
+   224:                         //TODO: Ver RunObject = Report 55743;
    225:                     }
    226:                     action(ListadoNomxDepto)
 ~~~
@@ -2821,7 +2821,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    230:                         Promoted = true;
    231:                         PromotedCategory = "Report";
-   232:                         //TODO: Ver RunObject = Report 34002103;
+   232:                         //TODO: Ver RunObject = Report 55744;
    233:                     }
    234:                     action(ValidaNom)
 ~~~
@@ -2887,7 +2887,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    248:                         Caption = 'Fill SS template';
    249:                         Image = Excel;
-   250:                         //TODO: Ver RunObject = Report 34002131;
+   250:                         //TODO: Ver RunObject = Report 55772;
    251:                     }
    252:                     action(LlenaDGT)
 ~~~
@@ -2931,7 +2931,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    264:                             Caption = 'Christmas salary report';
    265:                             Image = "Report";
-   266:                             //TODO: Ver RunObject = Report 34002119;
+   266:                             //TODO: Ver RunObject = Report 55760;
    267:                         }
    268:                         action(ListaBonif)
 ~~~
@@ -2953,7 +2953,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    270:                             Caption = 'Bonus report';
    271:                             Image = "Report";
-   272:                             //TODO: Ver RunObject = Report 34002126;
+   272:                             //TODO: Ver RunObject = Report 55767;
    273:                         }
    274:                     }
 ~~~
@@ -3306,7 +3306,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    590:                     ApplicationArea = BasicHR;
    591:                     Caption = 'Reports Configuration';
-   592:                     //TODO: Ver RunObject = Page 34002120;
+   592:                     //TODO: Ver RunObject = Page 55761;
    593:                 }
    594:                 action(DimContab)
 ~~~
@@ -3328,7 +3328,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    600:                 {
    601:                     Caption = 'Init wage concepts';
-   602:                     //TODO: Ver RunObject = Page 34002150;
+   602:                     //TODO: Ver RunObject = Page 55791;
    603:                 }
    604:                 action(ControlAsistencia)
 ~~~
@@ -3505,7 +3505,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    308: 
    309:     var
-   310:         //TODO: Ver JobJnlManagement: Codeunit 34002120;
+   310:         //TODO: Ver JobJnlManagement: Codeunit 55761;
    311:         JobDescription: Text[50];
    312:         AccName: Text[50];
 ~~~
@@ -3571,7 +3571,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    108:     var
    109:         ReportPrint: Codeunit 228;
-   110:     //TODO: Ver JobJnlMgt: Codeunit 34002120;
+   110:     //TODO: Ver JobJnlMgt: Codeunit 55761;
    111: 
    112:     local procedure DataCaption(): Text[250]
 ~~~
@@ -3593,7 +3593,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     63:                     trigger OnAction()
     64:                     var
-    65:                     //TODO: Ver AdoConn: Codeunit 34002124;
+    65:                     //TODO: Ver AdoConn: Codeunit 55765;
     66:                     begin
     67:                         //TODO: Ver AdoConn.ReadEmp
 ~~~
@@ -3613,7 +3613,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-    65:                     //TODO: Ver AdoConn: Codeunit 34002124;
+    65:                     //TODO: Ver AdoConn: Codeunit 55765;
     66:                     begin
     67:                         //TODO: Ver AdoConn.ReadEmp
     68:                     end;
@@ -3748,7 +3748,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    290:         Text000: Label 'Details only available for questions.';
    291:         ProfileQuestnHeader: Record 34002184;
-   292:         //TODO: Ver ProfileManagement: Codeunit 34002123;
+   292:         //TODO: Ver ProfileManagement: Codeunit 55764;
    293:         CurrentQuestionsChecklistCode: Code[20];
    294:         Text001: Label 'Where-Used only available for answers.';
 ~~~
@@ -3836,7 +3836,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    196:         ProfileQuestionnaireLine2: Record 34002185;
    197:         ProfileQuestLineQuestion: Record 34002185;
-   198:         //TODO: Ver ProfileManagement: Codeunit 34002122;
+   198:         //TODO: Ver ProfileManagement: Codeunit 55763;
    199:         CurrentQuestionsChecklistCode: Code[20];
    200:         EmpProfileAnswerCode: Code[20];
 ~~~
@@ -3944,7 +3944,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 - Surrounding code:
 
 ~~~al
-   163:                         PerfilSal: Record 34002115;
+   163:                         PerfilSal: Record 55756;
    164:                     begin
    165:                         //TODO: Ver Funcionescooperativa.RetirarMiembro(Rec);
    166:                     end;
@@ -3968,7 +3968,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    180:         Msg001: Label 'Successful employee activation';
    181:         Msg002: Label 'Successful employee inactivation';
-   182:         //TODO: Ver Funcionescooperativa: Codeunit 34002110;
+   182:         //TODO: Ver Funcionescooperativa: Codeunit 55751;
    183:         [InDataSet]
    184:         Editar: Boolean;
 ~~~
@@ -4035,7 +4035,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    111: 
    112:     var
-   113:     //TODO: Ver FuncCoop: Codeunit 34002110;
+   113:     //TODO: Ver FuncCoop: Codeunit 55751;
    114: }
    115: 
 ~~~
@@ -4079,7 +4079,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    156:         CabEntrenamiento: Record 34002204;
    157:         Asistentesentrenamientos: Record 34002206;
-   158:         //TODO: Ver FuncEnt: Codeunit 34002145;
+   158:         //TODO: Ver FuncEnt: Codeunit 55786;
    159:         TotalInscritos: Integer;
    160:         TotalAsistentes: Integer;
 ~~~
@@ -4189,7 +4189,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    138: 
    139:     var
-   140:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+   140:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
    141:         Fecha: Record 2000000007;
    142: }
 ~~~
@@ -4211,7 +4211,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    138: 
    139:     var
-   140:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+   140:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
    141:         Fecha: Record 2000000007;
    142: }
 ~~~
@@ -4564,7 +4564,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     76: 
     77:     var
-    78:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+    78:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
     79:         Fecha: Record 2000000007;
     80: }
 ~~~
@@ -4586,7 +4586,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     76: 
     77:     var
-    78:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 34002104;
+    78:         //TODO: Ver //TODO: Ver FuncionesNom: Codeunit 55745;
     79:         Fecha: Record 2000000007;
     80: }
 ~~~
@@ -4608,7 +4608,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     51: 
     52:     var
-    53:         //TODO: Ver  //TODO: Ver FuncionesNom: Codeunit 34002104;
+    53:         //TODO: Ver  //TODO: Ver FuncionesNom: Codeunit 55745;
     54:         Fecha: Record 2000000007;
     55: }
 ~~~
@@ -4630,7 +4630,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     51: 
     52:     var
-    53:         //TODO: Ver  //TODO: Ver FuncionesNom: Codeunit 34002104;
+    53:         //TODO: Ver  //TODO: Ver FuncionesNom: Codeunit 55745;
     54:         Fecha: Record 2000000007;
     55: }
 ~~~
@@ -4675,7 +4675,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     60: 
     61:     var
-    62:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+    62:         //TODO: Ver FuncionesNom: Codeunit 55745;
     63:         Fecha: Record 2000000007;
     64: }
 ~~~
@@ -4697,7 +4697,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     50: 
     51:     var
-    52:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+    52:         //TODO: Ver FuncionesNom: Codeunit 55745;
     53:         Fecha: Record 2000000007;
     54: }
 ~~~
@@ -4719,7 +4719,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     54: 
     55:     var
-    56:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+    56:         //TODO: Ver FuncionesNom: Codeunit 55745;
     57:         Fecha: Record 2000000007;
     58: }
 ~~~
@@ -5579,7 +5579,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     46: 
     47:     var
-    48:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+    48:         //TODO: Ver FuncionesNom: Codeunit 55745;
     49:         Fecha: Record 2000000007;
     50: }
 ~~~
@@ -5668,7 +5668,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    109:         EmplList: Page 5201;
    110:         HeadlineManagement: Codeunit 1439;
-   111:         //TODO: Ver FuncionesNom: Codeunit 34002104;
+   111:         //TODO: Ver FuncionesNom: Codeunit 55745;
    112:         DefaultFieldsVisible: Boolean;
    113:         DocumentationTxt: Label 'Want to learn more about %1?', Comment = '%1 is the NAV short product name.';
 ~~~

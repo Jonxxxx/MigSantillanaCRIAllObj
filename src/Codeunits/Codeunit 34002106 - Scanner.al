@@ -1,6 +1,6 @@
-codeunit 34002106 Scanner
+codeunit 55747 Scanner
 {
-    TableNo = 34002144;
+    TableNo = 55785;
 
     trigger OnRun()
     begin
@@ -53,10 +53,10 @@ codeunit 34002106 Scanner
         Car: Text[1];
         Token: Text[30];
         i: Integer;
-        Reg_Tokens: Record 34002142;
+        Reg_Tokens: Record 55783;
         Puntero: Integer;
-        Reconceptos: Record 34002111;
-        GlobalRec: Record 34002144;
+        Reconceptos: Record 55752;
+        GlobalRec: Record 55785;
 
     procedure Scan()
     begin

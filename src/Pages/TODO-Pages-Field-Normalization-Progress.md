@@ -35,14 +35,14 @@
 - Errors under `src/pages`: 2
 - Errors outside `src/pages`: 389
 - Diagnostics truncated: no
-- `src/pages/Page 34002134 - Histórico Préstamos.al:16:39` — `AL0118`: The name `No. Préstamo` does not exist in the current context.
-- `src/pages/Page 34002138 - Lista Mov. CxC Empleados.al:3:18` — `AL0185`: Page `Historico Prestamos` is missing.
+- `src/pages/Page 55775 - Histórico Préstamos.al:16:39` — `AL0118`: The name `No. Préstamo` does not exist in the current context.
+- `src/pages/Page 55779 - Lista Mov. CxC Empleados.al:3:18` — `AL0185`: Page `Historico Prestamos` is missing.
 
 ## Batches
 
 ### Batch 1
 
-- Pages inspected: 10 (34002100, 34002101, 34002102, 34002103, 34002104, 34002105, 34002106, 34002109, 34002110, 34002111)
+- Pages inspected: 10 (55741, 55742, 55743, 55744, 55745, 55746, 55747, 55750, 55751, 55752)
 - Pages modified: 10
 - Field controls inspected: 245
 - Direct SourceTable fields found: 245
@@ -61,12 +61,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 501
 - Remaining noncompliant controls: 5,808
-- Last processed page: 34002111
+- Last processed page: 55752
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 2
 
-- Pages inspected: 10 (34002112 through 34002122, current source order)
+- Pages inspected: 10 (55753 through 55763, current source order)
 - Pages modified: 10
 - Field controls inspected: 188
 - Direct SourceTable fields found: 176
@@ -85,12 +85,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 491
 - Remaining noncompliant controls: 5,620
-- Last processed page: 34002122
+- Last processed page: 55763
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 3
 
-- Pages inspected: 10 (34002123, 34002124, 34002125, 34002127, 34002128, 34002129, 34002130, 34002131, 34002132, 34002133)
+- Pages inspected: 10 (55764, 55765, 55766, 55768, 55769, 55770, 55771, 55772, 55773, 55774)
 - Pages modified: 10
 - Field controls inspected: 78
 - Direct SourceTable fields found: 74
@@ -109,12 +109,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 481
 - Remaining noncompliant controls: 5,542
-- Last processed page: 34002133
+- Last processed page: 55774
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 4
 
-- Pages inspected: 10 (34002134, 34002136, 34002137, 34002138, 34002139, 34002140, 34002141, 34002143, 34002144, 34002146)
+- Pages inspected: 10 (55775, 55777, 55778, 55779, 55780, 55781, 55782, 55784, 55785, 55787)
 - Pages modified: 10
 - Field controls inspected: 99
 - Direct SourceTable fields found: 97
@@ -133,12 +133,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 471
 - Remaining noncompliant controls: 5,443
-- Last processed page: 34002146
+- Last processed page: 55787
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 5
 
-- Pages inspected: 10 (34002147, 34002148, 34002151, 34002152, 34002153, 34002154, 34002155, 34002158, 34002159, 34002160)
+- Pages inspected: 10 (55788, 55789, 55792, 55793, 55794, 55795, 55796, 55799, 55800, 34002160)
 - Pages modified: 10
 - Field controls inspected: 138
 - Direct SourceTable fields found: 138

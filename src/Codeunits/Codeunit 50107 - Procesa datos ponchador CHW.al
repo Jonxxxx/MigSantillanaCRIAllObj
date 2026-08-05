@@ -35,7 +35,7 @@ codeunit 55107 "Procesa datos ponchador CHW"
         Text000: Label 'End of processing';
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         DatosPonchador: Record 55109;
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         wFecha: Date;
         wHora: Time;
         Haydatos: Boolean;

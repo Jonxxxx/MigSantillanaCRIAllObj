@@ -1,7 +1,7 @@
 table 34002200 "Hist. Lin. Prest. cooperativa"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 34002135;
-    //IGNORAR: Page no existe LookupPageID = 34002135;
+    //IGNORAR: Page no existe DrillDownPageID = 55776;
+    //IGNORAR: Page no existe LookupPageID = 55776;
 
     fields
     {
@@ -104,6 +104,6 @@ table 34002200 "Hist. Lin. Prest. cooperativa"
     }
 
     var
-        HistLinPre: Record 34002147;
+        HistLinPre: Record 55788;
 }
 

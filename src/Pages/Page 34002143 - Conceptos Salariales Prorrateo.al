@@ -1,8 +1,8 @@
-page 34002143 "Conceptos Salariales Prorrateo"
+page 55784 "Conceptos Salariales Prorrateo"
 {
     DataCaptionFields = "Codigo";
     PageType = List;
-    SourceTable = 34002119;
+    SourceTable = 55760;
 
     layout
     {
@@ -64,6 +64,6 @@ page 34002143 "Conceptos Salariales Prorrateo"
     end;
 
     var
-        ConceptoSal: Record 34002111;
+        ConceptoSal: Record 55752;
 }
 

@@ -24,7 +24,7 @@ page 34002237 "DSNOM HR Activities"
                     Image = People;
                 }
                 field(FuncionesNomAniversarioEmpleados;
-                    FuncionesNom.AniversarioEmpleados)
+                FuncionesNom.AniversarioEmpleados)
                 {
                     ApplicationArea = All;
                     Caption = 'Empl. anniversary';
@@ -84,7 +84,7 @@ page 34002237 "DSNOM HR Activities"
     end;
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         Fecha: Record 2000000007;
 }
 

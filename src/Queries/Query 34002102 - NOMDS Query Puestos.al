@@ -1,10 +1,10 @@
-query 34002102 "NOMDS Query Puestos"
+query 55743 "NOMDS Query Puestos"
 {
     Caption = 'Job position query';
 
     elements
     {
-        dataitem(Puestos_laborales; 34002110)
+        dataitem(Puestos_laborales; 55751)
         {
             column(Cod_departamento; "Cod. departamento")
             {

@@ -1,4 +1,4 @@
-report 34002111 "Payroll invoice report"
+report 55752 "Payroll invoice report"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Payroll invoice report.rdl';
@@ -6,7 +6,7 @@ report 34002111 "Payroll invoice report"
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", Ano, Periodo, "Tipo Nomina";
@@ -79,7 +79,7 @@ report 34002111 "Payroll invoice report"
             column(Historico_Cab__nomina_No__Documento; "No. Documento")
             {
             }
-            dataitem(Ingresos; 34002118)
+            dataitem(Ingresos; 55759)
             {
                 DataItemLink = "No. Documento" = FIELD("No. Documento"),
                                "No. empleado" = FIELD("No. empleado"),
@@ -187,11 +187,11 @@ report 34002111 "Payroll invoice report"
     }
 
     var
-        EmpresaCot: Record 34002100;
+        EmpresaCot: Record 55741;
         Empl: Record 5200;
-        Banco: Record 34002139;
-        PuestoTrab: Record 34002110;
-        Acumulado: Record 34002118;
+        Banco: Record 55780;
+        PuestoTrab: Record 55751;
+        Acumulado: Record 55759;
         txtPeriodo: Text[150];
         Text001: Label 'Total for ';
         Text002: Label 'Receipt for payment of %1 period %2';

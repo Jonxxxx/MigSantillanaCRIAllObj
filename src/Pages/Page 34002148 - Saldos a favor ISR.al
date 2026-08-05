@@ -1,10 +1,10 @@
-page 34002148 "Saldos a favor ISR"
+page 55789 "Saldos a favor ISR"
 {
     AdditionalSearchTerms = 'Income tax balances';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Income tax balances';
     PageType = List;
-    SourceTable = 34002128;
+    SourceTable = 55769;
     UsageCategory = Tasks;
 
     layout

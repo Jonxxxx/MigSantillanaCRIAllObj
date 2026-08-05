@@ -130,7 +130,7 @@ report 34002182 "Importa datos empleados"
 
     var
         ExcelBuf: Record "Excel Buffer" temporary;
-        PerfilSal: Record 34002115;
+        PerfilSal: Record 55756;
         ExcelFileTempBlob: Codeunit "Temp Blob";
         Celda: Code[20];
         FileName: Text[250];

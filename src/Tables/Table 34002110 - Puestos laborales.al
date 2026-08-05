@@ -1,8 +1,8 @@
-table 34002110 "Puestos laborales"
+table 55751 "Puestos laborales"
 {
     Caption = 'Job type';
-    DrillDownPageID = 34002109;
-    LookupPageID = 34002109;
+    DrillDownPageID = 55750;
+    LookupPageID = 55750;
 
     fields
     {
@@ -177,8 +177,8 @@ table 34002110 "Puestos laborales"
     var
         Emp: Record 5200;
         Err001: Label 'You can not delete %1 %2 because there are employees associated to it';
-        PerfSal: Record 34002115;
-        PerfilSalarioxCargo: Record 34002113;
+        PerfSal: Record 55756;
+        PerfilSalarioxCargo: Record 55754;
         DimMgt: Codeunit 408;
 
     local procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])

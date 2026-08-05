@@ -1,4 +1,4 @@
-report 34002147 "Copia-Mueve empleado Empresa"
+report 55788 "Copia-Mueve empleado Empresa"
 {
     ProcessingOnly = true;
 
@@ -69,25 +69,25 @@ report 34002147 "Copia-Mueve empleado Empresa"
 
     var
         Empl: Record 5200;
-        PerfilSal: Record 34002115;
-        PerfilSalTo: Record 34002115;
+        PerfilSal: Record 55756;
+        PerfilSalTo: Record 55756;
         EmpTo: Record 5200;
-        Contrato: Record 34002109;
-        ContratoTo: Record 34002109;
-        Banco: Record 34002108;
-        BancoTo: Record 34002108;
-        HistCabNom: Record 34002117;
-        HistCabNomTo: Record 34002117;
-        HistLinNom: Record 34002118;
-        HistLinNomTo: Record 34002118;
-        Vacac: Record 34002141;
-        VacacTo: Record 34002141;
-        SaldoISR: Record 34002128;
-        SaldoISRTo: Record 34002128;
-        MovAct: Record 34002157;
-        MovActTo: Record 34002157;
-        HistSal: Record 34002149;
-        HistSalTo: Record 34002149;
+        Contrato: Record 55750;
+        ContratoTo: Record 55750;
+        Banco: Record 55749;
+        BancoTo: Record 55749;
+        HistCabNom: Record 55758;
+        HistCabNomTo: Record 55758;
+        HistLinNom: Record 55759;
+        HistLinNomTo: Record 55759;
+        Vacac: Record 55782;
+        VacacTo: Record 55782;
+        SaldoISR: Record 55769;
+        SaldoISRTo: Record 55769;
+        MovAct: Record 55798;
+        MovActTo: Record 55798;
+        HistSal: Record 55790;
+        HistSalTo: Record 55790;
         AltAddr: Record 5201;
         AltAddrTo: Record 5201;
         Qualif: Record 5203;

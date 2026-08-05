@@ -1,6 +1,6 @@
-codeunit 34002118 "Registrar nomina RD"
+codeunit 55759 "Registrar nomina RD"
 {
-    TableNo = 34002115;
+    TableNo = 55756;
 
     trigger OnRun()
     begin
@@ -10,31 +10,31 @@ codeunit 34002118 "Registrar nomina RD"
     end;
 
     var
-        ConfNominas: Record 34002103;
-        gTiposNom: Record 34002158;
-        gTN: Record 34002158;
-        ConceptosSal: Record 34002111;
-        GlobalRec: Record 34002115;
+        ConfNominas: Record 55744;
+        gTiposNom: Record 55799;
+        gTN: Record 55799;
+        ConceptosSal: Record 55752;
+        GlobalRec: Record 55756;
         DfltDimension: Record 352;
-        RegEmpCotiz: Record 34002100;
-        Calendar: Record 34002134;
+        RegEmpCotiz: Record 55741;
+        Calendar: Record 55775;
         Empleado: Record 5200;
-        PerfilSal: Record 34002115;
-        PerfilSalImp: Record 34002115;
+        PerfilSal: Record 55756;
+        PerfilSalImp: Record 55756;
         Fecha: Record 2000000007;
-        CabNomina: Record 34002117;
-        LinNomina: Record 34002118;
-        Contrato: Record 34002109;
-        Ausencia: Record 34002116;
+        CabNomina: Record 55758;
+        LinNomina: Record 55759;
+        Contrato: Record 55750;
+        Ausencia: Record 55757;
         CurrExchange: Record 330;
-        CalcDias: Record 34002107;
+        CalcDias: Record 55748;
         recTmpDimEntry: Record 480 temporary;
-        Puestos: Record 34002110;
-        TipoNomina: Record 34002158;
-        HistLinNom2: Record 34002118;
+        Puestos: Record 55751;
+        TipoNomina: Record 55799;
+        HistLinNom2: Record 55759;
         Incidencias: Record 5207;
         cduDim: Codeunit 408;
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         Generar: Boolean;
         "Periodo": Integer;
         PerInici: Date;
@@ -386,10 +386,10 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CrearCabecera()
     var
-        CompanyTaxes: Record 34002121;
+        CompanyTaxes: Record 55762;
         GestNoSer: Codeunit "No. Series";
-        DPE: Record 34002108;
-        HCN: Record 34002117;
+        DPE: Record 55749;
+        HCN: Record 55758;
     begin
         HCN.RESET;
         HCN.SETRANGE("Tipo de nomina", GlobalRec."Tipo de nomina");
@@ -498,12 +498,12 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularIngresos()
     var
-        LinNominasES: Record 34002118;
+        LinNominasES: Record 55759;
         Incidencias2: Record 5207;
-        ParamCalcDias: Record 34002107;
-        EsqSal: Record 34002115;
-        HistAccionesdepersonal: Record 34002159;
-        Tiposdeaccionespersonal: Record 34002114;
+        ParamCalcDias: Record 55748;
+        EsqSal: Record 55756;
+        HistAccionesdepersonal: Record 55800;
+        Tiposdeaccionespersonal: Record 55755;
         ImporteIncid: Decimal;
         DiasIncid: Decimal;
         DiasPago: Decimal;
@@ -938,7 +938,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularDescuentos()
     var
-        HCN: Record 34002117;
+        HCN: Record 55758;
     begin
         HCN.RESET;
         HCN.SETRANGE("Tipo de nomina", GlobalRec."Tipo de nomina");
@@ -983,13 +983,13 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularDtosLegales()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        LinAportesEmpresa2: Record 34002122;
-        PerfilSalTr: Record 34002115;
-        HistCabNom: Record 34002117;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        LinAportesEmpresa2: Record 55763;
+        PerfilSalTr: Record 55756;
+        HistCabNom: Record 55758;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -1704,9 +1704,9 @@ codeunit 34002118 "Registrar nomina RD"
                     recTmpDimEntry.DELETEALL;
                     InsertarDimTempDef(5200);                                                                      //Para las Dim del empleado
                     InsertarDimTemp(ConfNominas."Dimension Conceptos Salariales", PerfilSalTr."Concepto salarial"); //Para el concepto salarial
-                    InsertarDimTempDefPS(34002115, Empleado."No." + PerfilSalTr."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
-                    InsertarDimTempDefPS(34002105, Empleado."Posting Group" + PerfilSalTr."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
-                    InsertarDimTempDefPS(34002111, PerfilSalTr."Concepto salarial");    //Para las Dim de la config. concepto salarial
+                    InsertarDimTempDefPS(55756, Empleado."No." + PerfilSalTr."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
+                    InsertarDimTempDefPS(55746, Empleado."Posting Group" + PerfilSalTr."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
+                    InsertarDimTempDefPS(55752, PerfilSalTr."Concepto salarial");    //Para las Dim de la config. concepto salarial
                     LinAportesEmpresa."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
 
                     LinAportesEmpresa.INSERT;
@@ -1717,12 +1717,12 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure ReCalcularDtosLegales()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        PerfilSalTr: Record 34002115;
-        PerfilSalTr2: Record 34002115;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        PerfilSalTr: Record 55756;
+        PerfilSalTr2: Record 55756;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -1775,20 +1775,20 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularISR()
     var
-        "RetencionISR": Record 34002131;
-        SaldoFavor: Record 34002128;
-        SaldoFavor2: Record 34002128;
-        HLNISRCompensado: Record 34002118;
-        HistLinNom: Record 34002118;
-        HistLinNomISR: Record 34002118;
-        LinAportesEmpresa: Record 34002122;
-        EmpresasRel: Record 34002150;
-        EmpresasRel2: Record 34002150;
-        LinEsqPercepISR: Record 34002115;
-        LinEsqPercepISR2: Record 34002115;
-        LinEsqPercepTSS: Record 34002115;
-        HistCabNom: Record 34002117;
-        HistLinCompany: Record 34002118;
+        "RetencionISR": Record 55772;
+        SaldoFavor: Record 55769;
+        SaldoFavor2: Record 55769;
+        HLNISRCompensado: Record 55759;
+        HistLinNom: Record 55759;
+        HistLinNomISR: Record 55759;
+        LinAportesEmpresa: Record 55763;
+        EmpresasRel: Record 55791;
+        EmpresasRel2: Record 55791;
+        LinEsqPercepISR: Record 55756;
+        LinEsqPercepISR2: Record 55756;
+        LinEsqPercepTSS: Record 55756;
+        HistCabNom: Record 55758;
+        HistLinCompany: Record 55759;
         Indice: Integer;
         Importe1: Decimal;
         Importe2: Decimal;
@@ -2368,9 +2368,9 @@ codeunit 34002118 "Registrar nomina RD"
 
                 InsertarDimTempDef(5200);                                                                       //Para las Dim del empleado
                 InsertarDimTemp(ConfNominas."Dimension Conceptos Salariales", PerfilSalImp."Concepto salarial"); //Para el concepto salarial
-                InsertarDimTempDefPS(34002115, Empleado."No." + PerfilSalImp."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
-                InsertarDimTempDefPS(34002105, Empleado."Posting Group" + PerfilSalImp."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
-                InsertarDimTempDefPS(34002111, PerfilSalImp."Concepto salarial");    //Para las Dim de la config. concepto salarial
+                InsertarDimTempDefPS(55756, Empleado."No." + PerfilSalImp."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
+                InsertarDimTempDefPS(55746, Empleado."Posting Group" + PerfilSalImp."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
+                InsertarDimTempDefPS(55752, PerfilSalImp."Concepto salarial");    //Para las Dim de la config. concepto salarial
 
                 LinAportesEmpresa."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
             END;
@@ -2385,11 +2385,11 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularPrestamos()
     var
-        LinPerfilSal: Record 34002115;
-        Prestamos: Record 34002145;
-        HistLinPrestamo: Record 34002147;
-        HistCabPrestamo: Record 34002146;
-        CheckHistLinPrestamo: Record 34002147;
+        LinPerfilSal: Record 55756;
+        Prestamos: Record 55786;
+        HistLinPrestamo: Record 55788;
+        HistCabPrestamo: Record 55787;
+        CheckHistLinPrestamo: Record 55788;
     begin
         //CalcularPrestamos
 
@@ -2433,7 +2433,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalculoBonificacion()
     var
-        linperfilsal: Record 34002115;
+        linperfilsal: Record 55756;
     begin
         // Bonificacion
         PerfilSal.RESET;
@@ -2476,7 +2476,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalculoOtras()
     var
-        PerfilSalProp: Record 34002115;
+        PerfilSalProp: Record 55756;
     begin
         // Propina
         PerfilSalProp.RESET;
@@ -2494,7 +2494,7 @@ codeunit 34002118 "Registrar nomina RD"
             UNTIL PerfilSalProp.NEXT = 0;
     end;
 
-    procedure InsertNomina(perfSalario: Record 34002115)
+    procedure InsertNomina(perfSalario: Record 55756)
     begin
         //InsertNomina
         ConceptosSal.GET(perfSalario."Concepto salarial");
@@ -2555,9 +2555,9 @@ codeunit 34002118 "Registrar nomina RD"
         recTmpDimEntry.DELETEALL;
         InsertarDimTemp(ConceptosSal."Shortcut Dimension", perfSalario."Concepto salarial");         //Para el concepto salarial
         InsertarDimTempDef(5200);                                                                   //Para las Dim del empleado
-        InsertarDimTempDefPS(34002115, Empleado."No." + perfSalario."Concepto salarial");             //Para las Dim del perfil de salario (linea del concepto salarial)
-        InsertarDimTempDefPS(34002105, Empleado."Posting Group" + perfSalario."Concepto salarial"); //Para las Dim del grupo contable (linea del concepto salarial)
-        InsertarDimTempDefPS(34002111, perfSalario."Concepto salarial");    //Para las Dim de la config. concepto salarial
+        InsertarDimTempDefPS(55756, Empleado."No." + perfSalario."Concepto salarial");             //Para las Dim del perfil de salario (linea del concepto salarial)
+        InsertarDimTempDefPS(55746, Empleado."Posting Group" + perfSalario."Concepto salarial"); //Para las Dim del grupo contable (linea del concepto salarial)
+        InsertarDimTempDefPS(55752, perfSalario."Concepto salarial");    //Para las Dim de la config. concepto salarial
         //MESSAGE('%1 %2',Empleado."Posting Group",Perfsalario."Concepto salarial");
         LinNomina."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
 
@@ -2608,7 +2608,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalculaDiasVacaciones()
     var
-        HistVac: Record 34002141;
+        HistVac: Record 55782;
         Parametrosvacaciones: Record 34002187;
         AnoCalculado: Integer;
         MesCalculado: Integer;
@@ -2797,7 +2797,7 @@ codeunit 34002118 "Registrar nomina RD"
     procedure RegistraIncidencias()
     var
         Incidencias: Record 5207;
-        MovNovedades: Record 34002114;
+        MovNovedades: Record 55755;
         CA: Record 5206;
     begin
         /*
@@ -2869,9 +2869,9 @@ codeunit 34002118 "Registrar nomina RD"
     procedure CalculaNominaProy(CodEmpleado: Code[20]; CodProy: Code[20]; FechaDesde: Date; FechaHasta: Date) CalcularNom: Boolean
     var
         DCA: Record 34002163;
-        PerfSal: Record 34002115;
+        PerfSal: Record 55756;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
-        Contrato: Record 34002109;
+        Contrato: Record 55750;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -2992,8 +2992,8 @@ codeunit 34002118 "Registrar nomina RD"
 
     local procedure VerificaRetroactivo()
     var
-        HLN: Record 34002118;
-        PerfilSalario: Record 34002115;
+        HLN: Record 55759;
+        PerfilSalario: Record 55756;
         DiasRetroactivo: Decimal;
     begin
         IF Empleado."Employment Date" < CALCDATE('-1M', PerFinal) THEN
@@ -3049,9 +3049,9 @@ codeunit 34002118 "Registrar nomina RD"
 
     local procedure CalculoPrestaciones()
     var
-        PerfilSalLiq: Record 34002115;
-        PerfilSalLiq2: Record 34002115;
-        HistLinNom: Record 34002118;
+        PerfilSalLiq: Record 55756;
+        PerfilSalLiq2: Record 55756;
+        HistLinNom: Record 55759;
         MontoRegalia: Decimal;
         MontoVacaciones: Decimal;
         CantNom: Decimal;
@@ -3482,7 +3482,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalculoRegaliaPrest(var MontoRegalia: Decimal)
     var
-        PerfilSalLiq: Record 34002115;
+        PerfilSalLiq: Record 55756;
         lFecha: Record 2000000007;
         Anos: Integer;
         Meses: Integer;
@@ -3521,7 +3521,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularDescuentosPrest()
     var
-        PerfilSalRet: Record 34002115;
+        PerfilSalRet: Record 55756;
     begin
         PerfilSalRet.RESET;
         PerfilSalRet.SETRANGE("No. empleado", GlobalRec."No. empleado");
@@ -3693,13 +3693,13 @@ codeunit 34002118 "Registrar nomina RD"
 
     procedure CalcularDtosLegalesLiq()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        LinAportesEmpresa2: Record 34002122;
-        PerfilSalTr: Record 34002115;
-        TiposNomPrest: Record 34002158;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        LinAportesEmpresa2: Record 55763;
+        PerfilSalTr: Record 55756;
+        TiposNomPrest: Record 55799;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -3893,9 +3893,9 @@ codeunit 34002118 "Registrar nomina RD"
                 recTmpDimEntry.DELETEALL;
                 InsertarDimTempDef(5200);                                                                      //Para las Dim del empleado
                 InsertarDimTemp(ConfNominas."Dimension Conceptos Salariales", PerfilSalTr."Concepto salarial"); //Para el concepto salarial
-                InsertarDimTempDefPS(34002115, Empleado."No." + PerfilSalTr."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
-                InsertarDimTempDefPS(34002105, Empleado."Posting Group" + PerfilSalTr."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
-                InsertarDimTempDefPS(34002111, PerfilSalTr."Concepto salarial");    //Para las Dim de la config. concepto salarial
+                InsertarDimTempDefPS(55756, Empleado."No." + PerfilSalTr."Concepto salarial");                 //Para las Dim del perfil de salario (linea del concepto salarial)
+                InsertarDimTempDefPS(55746, Empleado."Posting Group" + PerfilSalTr."Concepto salarial");    //Para las Dim del grupo contable (linea del concepto salarial)
+                InsertarDimTempDefPS(55752, PerfilSalTr."Concepto salarial");    //Para las Dim de la config. concepto salarial
                 LinAportesEmpresa."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
 
                 LinAportesEmpresa.INSERT;
@@ -3911,7 +3911,7 @@ codeunit 34002118 "Registrar nomina RD"
 
     local procedure ValidaDimRequeridas(DimSetID: Integer)
     var
-        DimensionesContab: Record 34002132;
+        DimensionesContab: Record 55773;
         DimSetEntry: Record 480;
     begin
         DimensionesContab.RESET;
@@ -3928,9 +3928,9 @@ codeunit 34002118 "Registrar nomina RD"
 
     local procedure ValidaVacPagadas()
     var
-        HistLinNomVac: Record 34002118;
-        HistLinNomVac2: Record 34002118;
-        TiposNomVac: Record 34002158;
+        HistLinNomVac: Record 55759;
+        HistLinNomVac2: Record 55759;
+        TiposNomVac: Record 55799;
         EmployeeAbsence: Record 5207;
         CauseofAbsence: Record 5206;
         MesVac: Integer;

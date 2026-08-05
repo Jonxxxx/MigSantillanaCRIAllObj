@@ -1,4 +1,4 @@
-query 34002106 "NOMDS Query Cause of Absence"
+query 55747 "NOMDS Query Cause of Absence"
 {
     Caption = 'Casue of absence';
 

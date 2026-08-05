@@ -1,4 +1,4 @@
-table 34002108 "Distrib. Ingreso Pagos Elect."
+table 55749 "Distrib. Ingreso Pagos Elect."
 {
 
     fields

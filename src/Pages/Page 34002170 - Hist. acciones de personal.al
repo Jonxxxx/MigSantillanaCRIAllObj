@@ -3,7 +3,7 @@ page 34002170 "Hist. acciones de personal"
     Caption = 'Historical personnel actions';
     Editable = false;
     PageType = List;
-    SourceTable = 34002159;
+    SourceTable = 55800;
 
     layout
     {
@@ -324,9 +324,9 @@ page 34002170 "Hist. acciones de personal"
 
                     trigger OnAction()
                     var
-                        Acciones: Record 34002159;
-                        // TODO: Manual review - Custom report 34002161 is unavailable as the required object type.
-                        // Original code: RepAcciones: Report 34002161;
+                        Acciones: Record 55800;
+                    // TODO: Manual review - Custom report 34002161 is unavailable as the required object type.
+                    // Original code: RepAcciones: Report 34002161;
                     begin
                         CurrPage.SETSELECTIONFILTER(Acciones);
                         // TODO: Manual review - The custom Hist Acciones de personal report is unavailable in the current repository.
@@ -347,7 +347,7 @@ page 34002170 "Hist. acciones de personal"
 
                     trigger OnAction()
                     var
-                        Accionesdepersonal: Record 34002133;
+                        Accionesdepersonal: Record 55774;
                     begin
                         Accionesdepersonal.TRANSFERFIELDS(Rec);
                         Accionesdepersonal."Tipo de accion" := Accionesdepersonal."Tipo de accion"::Cambio;

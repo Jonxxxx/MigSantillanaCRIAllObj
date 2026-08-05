@@ -1,4 +1,4 @@
-table 34002116 "Income tax Employee parameters"
+table 55757 "Income tax Employee parameters"
 {
     Caption = 'Income tax Employee parameters';
 

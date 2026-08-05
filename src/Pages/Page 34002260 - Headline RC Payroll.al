@@ -110,7 +110,7 @@ page 34002260 "Headline RC Payroll"
         Empl: Record 5200;
         EmplList: Page 5201;
         HeadlineManagement: Codeunit 1439;
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         DefaultFieldsVisible: Boolean;
         DocumentationTxt: Label 'Want to learn more about %1?', Comment = '%1 is the NAV short product name.';
         DocumentationUrlTxt: Label 'https://go.microsoft.com/fwlink/?linkid=867580', Locked = true;

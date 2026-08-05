@@ -1,4 +1,4 @@
-table 34002113 "Perfil Salario x Cargo"
+table 55754 "Perfil Salario x Cargo"
 {
 
     fields
@@ -78,20 +78,20 @@ table 34002113 "Perfil Salario x Cargo"
     }
 
     var
-        Conceptos: Record 34002111;
-        Cargos: Record 34002110;
-        RegFormula: Record 34002143;
-        Regconceptos: Record 34002144;
-        Regpolaca: Record 34002143;
+        Conceptos: Record 55752;
+        Cargos: Record 55751;
+        RegFormula: Record 55784;
+        Regconceptos: Record 55785;
+        Regpolaca: Record 55784;
         Percept: Record 5200;
-        RegLinConvenio: Record 34002113;
-        LinConvFormula: Record 34002113;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
-        ConfNominas: Record 34002103;
+        RegLinConvenio: Record 55754;
+        LinConvFormula: Record 55754;
+        Scanner: Codeunit 55747;
+        Parser: Codeunit 55746;
+        Calculadora: Codeunit 55748;
+        ConfNominas: Record 55744;
         ok: Boolean;
         Msg001: Label 'The Concept %1 was not found in the table %2, please verify';
-        FormConcSalariales: Page 34002110;
+        FormConcSalariales: Page 55751;
 }
 

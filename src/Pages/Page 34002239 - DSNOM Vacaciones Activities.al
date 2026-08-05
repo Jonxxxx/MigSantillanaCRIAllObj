@@ -12,7 +12,7 @@ page 34002239 "DSNOM Vacaciones Activities"
             {
                 Caption = 'Vacation';
                 field(FuncionesNomVacacionesporVencer;
-                    FuncionesNom.VacacionesporVencer)
+                FuncionesNom.VacacionesporVencer)
                 {
                     ApplicationArea = All;
                     Caption = 'vacation to expire';
@@ -62,7 +62,7 @@ page 34002239 "DSNOM Vacaciones Activities"
     end;
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         Fecha: Record 2000000007;
 }
 

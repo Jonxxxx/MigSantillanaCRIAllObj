@@ -1,4 +1,4 @@
-xmlport 34002103 "Conceptos salariales"
+xmlport 55744 "Conceptos salariales"
 {
     Direction = Import;
     Format = VariableText;
@@ -7,7 +7,7 @@ xmlport 34002103 "Conceptos salariales"
     {
         textelement(ConceptosSalariales)
         {
-            tableelement("Conceptos salariales"; 34002111)
+            tableelement("Conceptos salariales"; 55752)
             {
                 XmlName = 'ConceptosSalariales';
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")

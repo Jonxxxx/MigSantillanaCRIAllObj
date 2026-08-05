@@ -1,4 +1,4 @@
-table 34002148 "Diario de aumentos generales"
+table 55789 "Diario de aumentos generales"
 {
 
     fields

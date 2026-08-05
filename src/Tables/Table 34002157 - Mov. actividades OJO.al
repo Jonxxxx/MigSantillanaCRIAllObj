@@ -1,4 +1,4 @@
-table 34002157 "Mov. actividades OJO"
+table 55798 "Mov. actividades OJO"
 {
 
     fields
@@ -98,7 +98,7 @@ table 34002157 "Mov. actividades OJO"
 
             trigger OnValidate()
             var
-                ConceptoSal: Record 34002111;
+                ConceptoSal: Record 55752;
             begin
             end;
         }

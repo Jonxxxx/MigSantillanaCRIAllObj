@@ -1,4 +1,4 @@
-table 34002159 "Hist. Acciones de personal"
+table 55800 "Hist. Acciones de personal"
 {
     Caption = 'Posted Personnel activities';
     DrillDownPageID = 34002170;
@@ -445,21 +445,21 @@ table 34002159 "Hist. Acciones de personal"
 
     var
         HumanResSetup: Record 5218;
-        Contrato: Record 34002109;
+        Contrato: Record 55750;
         Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
         Emp: Record 5200;
         Cand: Record 34002164;
-        AccP: Record 34002114;
-        Cargos: Record 34002110;
-        NivelesCargos: Record 34002120;
+        AccP: Record 55755;
+        Cargos: Record 55751;
+        NivelesCargos: Record 55761;
         NivelCargo: Page 34002166;
-        Depto: Record 34002135;
+        Depto: Record 55776;
         Empresas: Record 2000000006;
-        Autorizacion: Record 34002154;
+        Autorizacion: Record 55795;
         Err002: Label 'Document can not be deleted';
         NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
-        FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 55745;
         Err004: Label '$1 is invalid, please verify';
 }
 

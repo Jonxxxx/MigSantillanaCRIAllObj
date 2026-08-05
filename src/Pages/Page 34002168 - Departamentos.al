@@ -4,7 +4,7 @@ page 34002168 Departamentos
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Department';
     PageType = List;
-    SourceTable = 34002135;
+    SourceTable = 55776;
     UsageCategory = Administration;
 
     layout
@@ -64,7 +64,7 @@ page 34002168 Departamentos
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002109;
+                    RunObject = Page 55750;
                     RunPageLink = "Cod. departamento" = FIELD(Codigo);
                 }
             }

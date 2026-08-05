@@ -1,7 +1,7 @@
-page 34002117 "Lista Empresas de cotizacion"
+page 55758 "Lista Empresas de cotizacion"
 {
     PageType = List;
-    SourceTable = 34002100;
+    SourceTable = 55741;
 
     layout
     {

@@ -1,7 +1,7 @@
-table 34002146 "Historico Cab. Prestamo"
+table 55787 "Historico Cab. Prestamo"
 {
-    DrillDownPageID = 34002138;
-    LookupPageID = 34002138;
+    DrillDownPageID = 55779;
+    LookupPageID = 55779;
 
     fields
     {
@@ -171,7 +171,7 @@ table 34002146 "Historico Cab. Prestamo"
     }
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         GestNoSerie: Codeunit "No. Series";
 }
 

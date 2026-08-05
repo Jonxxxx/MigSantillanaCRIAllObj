@@ -6,7 +6,7 @@ report 34002165 "Nominas por departamentos A4"
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "Tipo de nomina", Periodo, "No. empleado", "Forma de Cobro";
@@ -367,7 +367,7 @@ report 34002165 "Nominas por departamentos A4"
                 UNTIL rConfigListados.NEXT = 0;
             end;
         }
-        dataitem(LAE; 34002122)
+        dataitem(LAE; 55763)
         {
             DataItemTableView = SORTING(Periodo, "Tipo de nomina", "No. Empleado", "Job No.", "No. orden");
             column(LAE_CS; "Concepto Salarial")
@@ -411,11 +411,11 @@ report 34002165 "Nominas por departamentos A4"
 
     var
         Empleado: Record 5200;
-        ConfEmpresa: Record 34002100;
-        rConfigListados: Record 34002112;
-        rDepto: Record 34002135;
-        rSubDepto: Record 34002136;
-        recLinNom: Record 34002118;
+        ConfEmpresa: Record 55741;
+        rConfigListados: Record 55753;
+        rDepto: Record 55776;
+        rSubDepto: Record 55777;
+        recLinNom: Record 55759;
         TextoEncabezado: array[20] of Text[60];
         Valor: array[20] of Decimal;
         TotalIngresos: Decimal;

@@ -1,7 +1,7 @@
-table 34002131 "Tabla retencion ISR"
+table 55772 "Tabla retencion ISR"
 {
     DataPerCompany = false;
-    LookupPageID = 34002159;
+    LookupPageID = 55800;
 
     fields
     {

@@ -332,7 +332,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Empresas Cotizacion"; 34002100)
+            tableelement("Empresas Cotizacion"; 55741)
             {
                 XmlName = 'EmpresasCotizacion';
                 fieldelement(EC_EmpresaCotizacion; "Empresas Cotizacion"."Empresa cotizacion")
@@ -435,7 +435,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Centros de Trabajo"; 34002101)
+            tableelement("Centros de Trabajo"; 55742)
             {
                 XmlName = 'CentrosTabajo';
                 fieldelement(CT_EmpresaCotizacion; "Centros de Trabajo"."Empresa cotizacion")
@@ -457,7 +457,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Configuracion nominas"; 34002103)
+            tableelement("Configuracion nominas"; 55744)
             {
                 XmlName = 'ConfiguracionNominas';
                 fieldelement(CN_Codigo; "Configuracion nominas".Codigo)
@@ -644,7 +644,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Contratos; 34002109)
+            tableelement(Contratos; 55750)
             {
                 XmlName = 'Contratos';
                 fieldelement(C_EmpresaCotizacion; Contratos."Empresa cotizacion")
@@ -717,7 +717,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Puestos laborales"; 34002110)
+            tableelement("Puestos laborales"; 55751)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(PL_Codigo; "Puestos laborales"."Codigo")
@@ -745,7 +745,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Conceptos salariales"; 34002111)
+            tableelement("Conceptos salariales"; 55752)
             {
                 XmlName = 'ConceptosSalariales';
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")
@@ -863,7 +863,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Configuracion Listados"; 34002112)
+            tableelement("Configuracion Listados"; 55753)
             {
                 XmlName = 'ConfiguracionListados';
                 fieldelement(CL_IDReporte; "Configuracion Listados"."ID Reporte")
@@ -894,7 +894,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Perfil Salarial"; 34002115)
+            tableelement("Perfil Salarial"; 55756)
             {
                 XmlName = 'PerfilSalarial';
                 fieldelement("PS_EmpresaCotizacion"; "Perfil Salarial"."Empresa cotizacion")
@@ -1038,7 +1038,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Tabla retencion ISR"; 34002131)
+            tableelement("Tabla retencion ISR"; 55772)
             {
                 XmlName = 'TablaRetencionISR';
                 fieldelement(TISR_Ano; "Tabla retencion ISR".Ano)
@@ -1057,7 +1057,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Tipos de Cotizacion"; 34002129)
+            tableelement("Tipos de Cotizacion"; 55770)
             {
                 XmlName = 'TiposCotizacion';
                 fieldelement(TC_Ano; "Tipos de Cotizacion".Ano)
@@ -1197,7 +1197,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Parametros Calculo Dias"; 34002107)
+            tableelement("Parametros Calculo Dias"; 55748)
             {
                 XmlName = 'ParametrosCalculoDias';
                 fieldelement(PCD_Codigo; "Parametros Calculo Dias".Codigo)
@@ -1210,7 +1210,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement(Departamentos; 34002135)
+            tableelement(Departamentos; 55776)
             {
                 XmlName = 'Departamentos';
                 fieldelement(D_Codigo; Departamentos.Codigo)
@@ -1220,7 +1220,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Sub-Departamentos"; 34002136)
+            tableelement("Sub-Departamentos"; 55777)
             {
                 XmlName = 'Sub-Departamentos';
                 fieldelement(SD_CodDepartamento; "Sub-Departamentos"."Cod. Departamento")
@@ -1233,7 +1233,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Grupos Contables Empleados"; 34002104)
+            tableelement("Grupos Contables Empleados"; 55745)
             {
                 XmlName = 'GruposContablesEmpleados';
                 fieldelement("GCE_Codigo"; "Grupos Contables Empleados"."Codigo")
@@ -1243,7 +1243,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Dist. Ctas. Gpo. Cont. Empl."; 34002105)
+            tableelement("Dist. Ctas. Gpo. Cont. Empl."; 55746)
             {
                 XmlName = 'DistCtasGpoContEmpl';
                 fieldelement("DCGCE_Codigo"; "Dist. Ctas. Gpo. Cont. Empl."."Codigo")
@@ -1292,7 +1292,7 @@ xmlport 55436 "Carga datos nomina"
                 {
                 }
             }
-            tableelement("Distrib. Ingreso Pagos Elect."; 34002108)
+            tableelement("Distrib. Ingreso Pagos Elect."; 55749)
             {
                 XmlName = 'DistribIngresoPagosElect';
                 fieldelement(DIPE_NoEempleado; "Distrib. Ingreso Pagos Elect."."No. empleado")
@@ -1365,10 +1365,10 @@ xmlport 55436 "Carga datos nomina"
     var
         Empl: Record 5200;
 
-        esqsal: Record 34002115;
-        contra: Record 34002109;
-        CARGOS: Record 34002110;
-        Depart: Record 34002135;
-        SubDe: Record 34002136;
+        esqsal: Record 55756;
+        contra: Record 55750;
+        CARGOS: Record 55751;
+        Depart: Record 55776;
+        SubDe: Record 55777;
 }
 

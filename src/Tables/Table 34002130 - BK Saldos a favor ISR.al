@@ -1,4 +1,4 @@
-table 34002130 "BK Saldos a favor ISR"
+table 55771 "BK Saldos a favor ISR"
 {
 
     fields

@@ -67,7 +67,7 @@ table 34002175 "Relacion Puestos - Proyectos"
     }
 
     var
-        PerfilSalario: Record 34002115;
+        PerfilSalario: Record 55756;
         Err001: Label 'The top value allowed must be 100 for the %1';
 }
 

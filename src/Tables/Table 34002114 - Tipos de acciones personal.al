@@ -1,9 +1,9 @@
-table 34002114 "Tipos de acciones personal"
+table 55755 "Tipos de acciones personal"
 {
     Caption = 'Actions Human resources';
     DataPerCompany = false;
-    DrillDownPageID = 34002147;
-    LookupPageID = 34002147;
+    DrillDownPageID = 55788;
+    LookupPageID = 55788;
 
     fields
     {
@@ -87,6 +87,6 @@ table 34002114 "Tipos de acciones personal"
     }
 
     var
-        LinEsquema: Record 34002115;
+        LinEsquema: Record 55756;
 }
 

@@ -3,7 +3,7 @@ page 34002227 "Tipos de entrenamientos"
     Caption = 'Training types';
     DataCaptionFields = "Tipo registro";
     PageType = List;
-    SourceTable = 34002151;
+    SourceTable = 55792;
     SourceTableView = WHERE("Tipo registro" = CONST("Tipo Entrenamiento"));
 
     layout

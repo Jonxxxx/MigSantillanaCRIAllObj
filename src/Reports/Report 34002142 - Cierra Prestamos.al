@@ -1,11 +1,11 @@
-report 34002142 "Cierra Prestamos"
+report 55783 "Cierra Prestamos"
 {
     Caption = 'Close Loans';
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Historico Cab. Prestamo"; 34002146)
+        dataitem("Historico Cab. Prestamo"; 55787)
         {
             CalcFields = "Importe Pendiente";
             DataItemTableView = SORTING("Employee No.", "No. Prestamo")
@@ -57,8 +57,8 @@ report 34002142 "Cierra Prestamos"
     }
 
     var
-        HLP: Record 34002147;
+        HLP: Record 55788;
         Txt0001: Label 'To fix open balance';
-        HLP2: Record 34002147;
+        HLP2: Record 55788;
 }
 

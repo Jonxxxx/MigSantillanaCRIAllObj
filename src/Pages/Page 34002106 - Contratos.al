@@ -1,9 +1,9 @@
-page 34002106 Contratos
+page 55747 Contratos
 {
     AutoSplitKey = true;
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 34002109;
+    SourceTable = 55750;
 
     layout
     {
@@ -149,6 +149,6 @@ page 34002106 Contratos
     }
 
     var
-        ContratoCopiaBasica: Record 34002109;
+        ContratoCopiaBasica: Record 55750;
 }
 

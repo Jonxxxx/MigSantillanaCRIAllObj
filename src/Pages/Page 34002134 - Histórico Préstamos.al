@@ -1,9 +1,9 @@
-page 34002134 "Historico Prestamos"
+page 55775 "Historico Prestamos"
 {
     DeleteAllowed = false;
     Editable = false;
     PageType = Document;
-    SourceTable = 34002146;
+    SourceTable = 55787;
 
     layout
     {
@@ -124,9 +124,9 @@ page 34002134 "Historico Prestamos"
                     ToolTip = 'Correccion';
                 }
             }
-            // TODO: Manual review - Custom page 34002135 is unavailable, so the loan-history part and SubPageLink cannot be restored.
+            // TODO: Manual review - Custom page 55776 is unavailable, so the loan-history part and SubPageLink cannot be restored.
             // Original code preserved below.
-            // part(PartPage; 34002135)
+            // part(PartPage; 55776)
             // {
             //     SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
             // }
@@ -157,7 +157,7 @@ page 34002134 "Historico Prestamos"
     }
 
     var
-        rPrestamo: Record 34002146;
+        rPrestamo: Record 55787;
     // TODO: Manual review - The Document-Print declaration has no active caller in this page and does not restore the missing custom report.
     // Original code: ImprInfor: Codeunit 228;
 }

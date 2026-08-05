@@ -207,15 +207,15 @@ table 34002160 "Control de asistencia"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Emp: Record 5200;
         CA: Record 34002160;
         DCA: Record 34002163;
-        Calendario: Record 34002155;
+        Calendario: Record 55796;
         CalTurno: Record 34002180;
         Fecha: Record 2000000007;
-        Cargo: Record 34002110;
-        FuncionesNom: Codeunit 34002104;
+        Cargo: Record 55751;
+        FuncionesNom: Codeunit 55745;
         Horatexto: Text[60];
         Err003: Label 'The amount of %1 exceeds the daily limit of the working day';
         Err004: Label 'You can not have %1 if %2 does not have full day';

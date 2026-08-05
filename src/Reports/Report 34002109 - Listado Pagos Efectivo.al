@@ -1,17 +1,17 @@
-report 34002109 "Listado Pagos Efectivo"
+report 55750 "Listado Pagos Efectivo"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado Pagos Efectivo.rdl';
 
     dataset
     {
-        dataitem("Empresas Cotizacion"; 34002100)
+        dataitem("Empresas Cotizacion"; 55741)
         {
             DataItemTableView = SORTING("Empresa cotizacion");
             column(Empresas_Cotizacion_Empresa_cotizacion; "Empresa cotizacion")
             {
             }
-            dataitem("Centros de Trabajo"; 34002101)
+            dataitem("Centros de Trabajo"; 55742)
             {
                 DataItemLink = "Empresa cotizacion" = FIELD("Empresa cotizacion");
                 DataItemTableView = SORTING("Empresa cotizacion", "Centro de trabajo");
@@ -83,7 +83,7 @@ report 34002109 "Listado Pagos Efectivo"
                     column(Employee_No_; "No.")
                     {
                     }
-                    dataitem("Historico Cab. nomina"; 34002117)
+                    dataitem("Historico Cab. nomina"; 55758)
                     {
                         DataItemLink = "No. empleado" = FIELD("No.");
                         DataItemLinkReference = Employee;
@@ -419,7 +419,7 @@ report 34002109 "Listado Pagos Efectivo"
         Total: Decimal;
         fechatrans: Date;
         Total1: Decimal;
-        Xbancos: Record 34002139;
+        Xbancos: Record 55780;
         transac: Integer;
         Centro_de_Trabajo_CaptionLbl: Label 'Centro de Trabajo:';
         Pago_N_minas_en_efectivoCaptionLbl: Label 'Pago nominas en efectivo';

@@ -24,7 +24,7 @@ The audit is an initial classification only. Every current occurrence is being
 re-evaluated against repository objects, public custom procedures, dependency
 symbols, source and destination fields, and the current compiler result.
 
-The previously resolved TODO in page 34002118 is not counted as work performed
+The previously resolved TODO in page 55759 is not counted as work performed
 in this task.
 
 ## TODOs pending manual review
@@ -33,10 +33,10 @@ Total current occurrences pending re-evaluation or manual review: **344**
 
 ## Files modified
 
-- `src/Pages/Page 34002110 - Conceptos salariales.al`
-- `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
-- `src/Pages/Page 34002122 - Control de asistencia.al`
-- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 55751 - Conceptos salariales.al`
+- `src/Pages/Page 55756 - Ficha Acciones de personal.al`
+- `src/Pages/Page 55763 - Control de asistencia.al`
+- `src/Pages/Page 55785 - Diario Nominas.al`
 - `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
 - `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
 - `src/Pages/Page 34002188 - DSNOM Activities.al`
@@ -92,34 +92,34 @@ Total current occurrences pending re-evaluation or manual review: **344**
 
 ### Files inspected
 
-- `src/Pages/Page 34002104 - Ficha Empleados.al`
-- `src/Pages/Page 34002110 - Conceptos salariales.al`
-- `src/Pages/Page 34002111 - Lista Acciones de personal.al`
-- `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
-- `src/Pages/Page 34002114 - Historico Cab. Nóminas.al`
-- `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
-- `src/Pages/Page 34002122 - Control de asistencia.al`
-- `src/Pages/Page 34002123 - Lista historico nóminas.al`
+- `src/Pages/Page 55745 - Ficha Empleados.al`
+- `src/Pages/Page 55751 - Conceptos salariales.al`
+- `src/Pages/Page 55752 - Lista Acciones de personal.al`
+- `src/Pages/Page 55754 - Lista de conceptos salariales.al`
+- `src/Pages/Page 55755 - Historico Cab. Nóminas.al`
+- `src/Pages/Page 55756 - Ficha Acciones de personal.al`
+- `src/Pages/Page 55763 - Control de asistencia.al`
+- `src/Pages/Page 55764 - Lista historico nóminas.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002110 - Conceptos salariales.al`
-- `src/Pages/Page 34002115 - Ficha Acciones de personal.al`
-- `src/Pages/Page 34002122 - Control de asistencia.al`
+- `src/Pages/Page 55751 - Conceptos salariales.al`
+- `src/Pages/Page 55756 - Ficha Acciones de personal.al`
+- `src/Pages/Page 55763 - Control de asistencia.al`
 
 ### TODOs resolved
 
-- Page 34002110: restored the complete `Default Dimensions` `RunObject` and
+- Page 55751: restored the complete `Default Dimensions` `RunObject` and
   `RunPageLink` block. Original classification: Functional ambiguity. Final
   classification: Missing page property, High confidence. Verification:
   `al_symbolsearch` confirmed page `Default Dimensions`, table
   `Default Dimension`, and fields `Table ID` and `No.`; custom source table
-  34002111 contains field `Codigo` as `Code[20]`.
-- Page 34002115: restored the `FuncionesNom` codeunit 34002104 declaration and
+  55752 contains field `Codigo` as `Code[20]`.
+- Page 55756: restored the `FuncionesNom` codeunit 55745 declaration and
   `TraspasaEmpleados` call. Original and final classification: Custom
-  dependency; final confidence High. Verification: codeunit 34002104 and its
+  dependency; final confidence High. Verification: codeunit 55745 and its
   public procedure with matching parameter types exist.
-- Page 34002122: restored the `FuncionesNominas` codeunit 34002104 declaration
+- Page 55763: restored the `FuncionesNominas` codeunit 55745 declaration
   and three calls to the verified public procedures
   `ProcesaDatosPonchadorManual` and `ProcesaDatosPonchador`. Original and final
   classification: Custom dependency; final confidence High.
@@ -128,19 +128,19 @@ Resolved TODO markers: **7**
 
 ### TODOs skipped
 
-- Page 34002104: two large disabled layout/action blocks remain structurally
+- Page 55745: two large disabled layout/action blocks remain structurally
   ambiguous; the commented `FuncionesNomina` declaration is only used by the
   disabled action block.
-- Page 34002111: referenced page 34002156 is unavailable; object 34002156 in
+- Page 55752: referenced page 55797 is unavailable; object 55797 in
   the repository is a table, not a page.
-- Page 34002113: referenced report 34002102 is unavailable; object 34002102 is
+- Page 55754: referenced report 55743 is unavailable; object 55743 is
   present only as other object types.
-- Page 34002114: report 34002123 and codeunit 34002103 are unavailable.
-- Page 34002115: report `Acciones de personal` is unavailable.
-- Page 34002122: codeunit 34002124 is an OnPrem ADO dependency; page 34002107
-  and report 34002146 are unavailable with the required object types; the
+- Page 55755: report 55764 and codeunit 55744 are unavailable.
+- Page 55756: report `Acciones de personal` is unavailable.
+- Page 55763: codeunit 55765 is an OnPrem ADO dependency; page 55748
+  and report 55787 are unavailable with the required object types; the
   local `FuncNom` declaration has no corresponding call in its empty action.
-- Page 34002123: reports 34002124 and 34002106 and codeunit 34002103 are
+- Page 55764: reports 55765 and 55747 and codeunit 55744 are
   unavailable with the required object types.
 
 Skipped TODO markers: **19**
@@ -152,28 +152,28 @@ Skipped TODO markers: **19**
 - Errors: 0
 - Warnings: 10,026
 - Last successfully processed file:
-  `src/Pages/Page 34002123 - Lista historico nóminas.al`
+  `src/Pages/Page 55764 - Lista historico nóminas.al`
 
 ## Batch 2
 
 ### Files inspected
 
-- `src/Pages/Page 34002125 - Estadisticas Empleados.al`
-- `src/Pages/Page 34002126 - Visualizar nómina histórico.al`
-- `src/Pages/Page 34002131 - Líneas cobros empleado.al`
-- `src/Pages/Page 34002133 - CxC Empleados.al`
-- `src/Pages/Page 34002134 - Histórico Prestamos.al`
-- `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`
-- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 55766 - Estadisticas Empleados.al`
+- `src/Pages/Page 55767 - Visualizar nómina histórico.al`
+- `src/Pages/Page 55772 - Líneas cobros empleado.al`
+- `src/Pages/Page 55774 - CxC Empleados.al`
+- `src/Pages/Page 55775 - Histórico Prestamos.al`
+- `src/Pages/Page 55779 - Lista Mov. CxC Empleados.al`
+- `src/Pages/Page 55785 - Diario Nominas.al`
 - `src/Pages/Page 34002162 - Calendario Anual.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 55785 - Diario Nominas.al`
 
 ### TODOs resolved
 
-- Restored the `FuncionesNomina` codeunit 34002104 declaration and its call to
+- Restored the `FuncionesNomina` codeunit 55745 declaration and its call to
   public procedure `InicializaConceptosSalariales`. Original and final
   classification: Custom dependency; final confidence High. Verification:
   the codeunit and matching parameterless public procedure exist in the
@@ -183,23 +183,23 @@ Resolved TODO markers: **2**
 
 ### TODOs skipped
 
-- Page 34002125: the custom codeunit declaration is unused.
-- Page 34002126: three large disabled layout blocks contain duplicate control
+- Page 55766: the custom codeunit declaration is unused.
+- Page 55767: three large disabled layout blocks contain duplicate control
   names and structurally incompatible legacy layout.
-- Page 34002131: dependency symbol search found no current codeunit
+- Page 55772: dependency symbol search found no current codeunit
   `Period Form Management` or matching `FindDate`/`NextDate` methods.
-- Page 34002133: page 58100 is unavailable and destination field `Field1`
+- Page 55774: page 58100 is unavailable and destination field `Field1`
   cannot be verified.
-- Page 34002134: page 34002135 and report `Lista Mov. CxC Empl.` are
-  unavailable; object 34002135 exists as a codeunit, not a page. Codeunit 228
+- Page 55775: page 55776 and report `Lista Mov. CxC Empl.` are
+  unavailable; object 55776 exists as a codeunit, not a page. Codeunit 228
   is unused by the remaining source.
-- Page 34002138: report 34002142 / `Cierra Prestamos` is unavailable; object
-  34002142 exists as a table.
-- Page 34002144: all eight custom report IDs are unavailable with type Report.
+- Page 55779: report 55783 / `Cierra Prestamos` is unavailable; object
+  55783 exists as a table.
+- Page 55785: all eight custom report IDs are unavailable with type Report.
   `al_symbolsearch` verified page `Absence Registration` and field
   `Employee No.`, but the current `Employee Absence` table has no `Closed`
   field, so the original three-line filter block cannot be preserved.
-- Page 34002162: report 34002147 is unavailable; object 34002147 exists as a
+- Page 34002162: report 55788 is unavailable; object 55788 exists as a
   page/table, not a report.
 
 Skipped TODO markers: **29**
@@ -235,7 +235,7 @@ Skipped TODO markers: **29**
 ### TODOs resolved
 
 - Page 34002180: restored ten standard Employee navigation actions and their
-  links, plus four calls and the declaration for custom codeunit 34002104.
+  links, plus four calls and the declaration for custom codeunit 55745.
   Original classifications: renamed standard symbols, missing page properties,
   and custom dependencies. Final classifications: verified missing page
   properties and custom dependencies, High confidence. Verification:
@@ -244,11 +244,11 @@ Skipped TODO markers: **29**
   and compile against the current dependencies. Repository inspection
   confirmed all four public custom procedures and their parameter types.
 - Page 34002181: restored four calls and the declaration for custom codeunit
-  34002104. Original and final classification: Custom dependency; final
+  55745. Original and final classification: Custom dependency; final
   confidence High. The public procedures and parameter types were verified in
   the repository.
 - Page 34002188: restored the vacation cue, its `DecimalPlaces` property, the
-  codeunit 34002104 declaration, and calls to `VacacionesporVencer` and
+  codeunit 55745 declaration, and calls to `VacacionesporVencer` and
   `MuestraVacporVencer`. Original classifications: functional ambiguity,
   missing page property, and custom dependency. Final classifications:
   deterministic page syntax/property and verified custom dependency, High
@@ -263,11 +263,11 @@ Resolved TODO markers: **39**
 - Pages 34002175, 34002176, 34002182, and 34002183: disabled legacy FactBox
   field blocks require structural conversion and contain misleading captions
   or drill-down targets; their declarations are used only by those blocks.
-- Page 34002180: custom page 34002157 is unavailable as a Page; the repository
+- Page 34002180: custom page 55798 is unavailable as a Page; the repository
   object with that ID is a Table. Codeunit 802 map setup references were not
   verified in current dependencies, and the unused codeunit 397 declaration
   was not restored.
-- Page 34002181: the same unavailable custom page 34002157 link and two
+- Page 34002181: the same unavailable custom page 55798 link and two
   structurally incompatible disabled legacy field blocks remain unchanged.
 
 Skipped TODO markers: **20**
@@ -310,17 +310,17 @@ Skipped TODO markers: **20**
   existing custom dependency, High confidence. `al_symbolsearch` confirmed all
   14 report names in current dependencies; the exact numeric references
   compile, and report 55353 exists in the repository.
-- Pages 34002193 and 34002195: restored codeunit 34002120 declarations and all
+- Pages 34002193 and 34002195: restored codeunit 55761 declarations and all
   verified payroll journal management calls. Page 34002193 also restored the
-  post call to codeunit 34002140. Original and final classification: Custom
+  post call to codeunit 55781. Original and final classification: Custom
   dependency; final confidence High. Both codeunits, public procedures,
-  parameter types, and codeunit 34002140 `TableNo` were verified.
-- Page 34002212: restored codeunit 34002122 and the complete questionnaire
+  parameter types, and codeunit 55781 `TableNo` were verified.
+- Page 34002212: restored codeunit 55763 and the complete questionnaire
   lookup, validation, initialization, and filter flow. Original and final
   classification: Custom dependency; final confidence High. All public
   procedures and parameter types were verified and their implementations
   reviewed.
-- Page 34002217: restored codeunit 34002110 and the activate, inactivate, and
+- Page 34002217: restored codeunit 55751 and the activate, inactivate, and
   retire member calls. Original and final classification: Custom dependency;
   final confidence High. All public procedures and implementations were
   verified.
@@ -332,8 +332,8 @@ Resolved TODO markers: **34**
 - Page 34002189: the remaining custom report and page IDs are absent or resolve
   to the wrong object type.
 - Page 34002193: report `Valida Diario Nom. - Proyectos` is unavailable.
-- Page 34002199: codeunit 34002124 is the excluded OnPrem ADO dependency.
-- Page 34002211: codeunit 34002123 and the three custom reports are unavailable;
+- Page 34002199: codeunit 55765 is the excluded OnPrem ADO dependency.
+- Page 34002211: codeunit 55764 and the three custom reports are unavailable;
   restoring only the dependent calls would be incomplete.
 - Page 34002214: report `Proceso proponer vacaciones` is unavailable.
 
@@ -371,13 +371,13 @@ Skipped TODO markers: **28**
 
 ### TODOs resolved
 
-- Page 34002220: restored codeunit 34002110 and its loan installment and posting
+- Page 34002220: restored codeunit 55751 and its loan installment and posting
   calls. Original and final classification: Custom dependency; final
   confidence High. Both public procedures, parameters, and implementations
   were verified.
 - Pages 34002235, 34002237, and 34002239: restored the verified employee
   anniversary and vacation cues, drill-down calls, decimal formatting, and
-  codeunit 34002104 declarations. Original classifications: functional
+  codeunit 55745 declarations. Original classifications: functional
   ambiguity, missing page property, and custom dependency. Final
   classifications: deterministic page syntax/property and verified custom
   dependency, High confidence. Public procedures and sibling implementations
@@ -391,7 +391,7 @@ Resolved TODO markers: **28**
 
 ### TODOs skipped
 
-- Page 34002233: codeunit 34002145 exists, but it has no public
+- Page 34002233: codeunit 55786 exists, but it has no public
   `EnviarNotificacion` procedure.
 - Pages 34002238 and 34002240: the commented codeunit declarations have no
   corresponding calls in the complete objects.
@@ -438,7 +438,7 @@ Skipped TODO markers: **5**
   were removed because the compiler reported AL0296 at every restored call.
   Final classification: deterministic AL migration correction and verified
   custom dependency, High confidence.
-- Page 34002260: restored custom codeunit 34002104 and `GetBirthdays`; adjusted
+- Page 34002260: restored custom codeunit 55745 and `GetBirthdays`; adjusted
   the local text variable to the verified `Text[250]` `var` parameter type.
   Original and final classification: Custom dependency; final confidence High.
 
@@ -1354,11 +1354,11 @@ SaaS-incompatible. No further verified High-confidence candidate remains.
 
 ### Files inspected
 
-- `src/Pages/Page 34002111 - Lista Acciones de personal.al`
-- `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
-- `src/Pages/Page 34002122 - Control de asistencia.al`
-- `src/Pages/Page 34002133 - CxC Empleados.al`
-- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 55752 - Lista Acciones de personal.al`
+- `src/Pages/Page 55754 - Lista de conceptos salariales.al`
+- `src/Pages/Page 55763 - Control de asistencia.al`
+- `src/Pages/Page 55774 - CxC Empleados.al`
+- `src/Pages/Page 55785 - Diario Nominas.al`
 
 ### Files modified
 
@@ -1366,13 +1366,13 @@ SaaS-incompatible. No further verified High-confidence candidate remains.
 
 ### TODOs inspected and skipped
 
-- Page 34002111: page 34002156 is absent from the current repository and
+- Page 55752: page 55797 is absent from the current repository and
   dependencies.
-- Page 34002113: report 34002102 is absent.
-- Page 34002122: report 34002146 is absent.
-- Page 34002133: page 58100 and its destination `Field1` cannot be verified.
-- Page 34002144: reports 34002182, 34002139, 34002124, 34002130, 50211,
-  34002168, 34002120, and 34002125 are absent. The standard Employee Absences
+- Page 55754: report 55743 is absent.
+- Page 55763: report 55787 is absent.
+- Page 55774: page 58100 and its destination `Field1` cannot be verified.
+- Page 55785: reports 34002182, 55780, 55765, 55771, 50211,
+  34002168, 55761, and 55766 are absent. The standard Employee Absences
   page and `Employee No.` field exist, but the adjacent `Closed` filter field
   does not; the complete logical link therefore cannot be restored without
   changing behavior.
@@ -1402,7 +1402,7 @@ Skipped TODO markers: **16**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002144 - Diario Nominas.al`
+  `src/Pages/Page 55785 - Diario Nominas.al`
 
 ## Medium Batch 2
 
@@ -1434,8 +1434,8 @@ Resolved TODO markers: **3**
 
 ### TODOs inspected and skipped
 
-- Page 34002162: report 34002147 is absent.
-- Pages 34002180 and 34002181: custom page 34002157 is absent, so the
+- Page 34002162: report 55788 is absent.
+- Pages 34002180 and 34002181: custom page 55798 is absent, so the
   adjacent RunObject/RunPageLink blocks cannot be restored.
 - Page 34002189: all 18 remaining custom report/page targets are absent as
   objects of the requested type. Several IDs now identify pages or codeunits,
@@ -1792,11 +1792,11 @@ block, or high-risk business change.
 
 ### AL files inspected and modified
 
-- `src/Pages/Page 34002111 - Lista Acciones de personal.al`
-- `src/Pages/Page 34002113 - Lista de conceptos salariales.al`
-- `src/Pages/Page 34002122 - Control de asistencia.al`
-- `src/Pages/Page 34002133 - CxC Empleados.al`
-- `src/Pages/Page 34002144 - Diario Nominas.al`
+- `src/Pages/Page 55752 - Lista Acciones de personal.al`
+- `src/Pages/Page 55754 - Lista de conceptos salariales.al`
+- `src/Pages/Page 55763 - Control de asistencia.al`
+- `src/Pages/Page 55774 - CxC Empleados.al`
+- `src/Pages/Page 55785 - Diario Nominas.al`
 - `src/Pages/Page 34002162 - Calendario Anual.al`
 - `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
 - `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
@@ -1810,17 +1810,17 @@ Resolved TODO markers: **0**
 
 ### TODOs marked for manual review
 
-- Pages 34002111, 34002113, 34002122, 34002144, and 34002162: preserved
+- Pages 55752, 55754, 55763, 55785, and 34002162: preserved
   RunObject references to custom pages or reports that are absent as the
   requested object type in the current repository.
-- Page 34002133: preserved the adjacent page 58100 RunObject and Field1
+- Page 55774: preserved the adjacent page 58100 RunObject and Field1
   RunPageLink block because neither the target page nor destination field can
   be verified.
-- Page 34002144: preserved the complete Absence Registration block because
+- Page 55785: preserved the complete Absence Registration block because
   `al_symbolsearch` verified the standard pages and `Employee No.` field, but
   the current Employee Absence table has no `Closed` field.
 - Pages 34002180 and 34002181: preserved the adjacent Related Companies
-  RunObject and RunPageLink blocks because object 34002157 exists only as a
+  RunObject and RunPageLink blocks because object 55798 exists only as a
   table, not as the required page.
 
 Original classifications and confidence: Custom dependency, Missing page
@@ -2044,10 +2044,10 @@ remains under `src/Pages`.
 
 ## Batch 1
 
-- AL objects inspected and modified: Pages 34002104, 34002114, 34002115,
-  34002122, 34002123, 34002125, 34002126, 34002131, 34002134, and 34002138.
+- AL objects inspected and modified: Pages 55745, 55755, 55756,
+  55763, 55764, 55766, 55767, 55772, 55775, and 55779.
 - TODOs safely resolved: 1. Restored the verified `FuncionesNomina` codeunit
-  34002104 declaration used by existing active calls on Page 34002104.
+  55745 declaration used by existing active calls on Page 55745.
 - TODO markers converted to manual review: 30 markers represented by 25
   deduplicated manual-review comments.
 - Existing manual-review comments resolved: 0.
@@ -2059,14 +2059,14 @@ remains under `src/Pages`.
   complete disabled layout/action blocks requiring functional migration.
 - Verification: complete current-object inspection; repository searches for
   every referenced custom page, report, and codeunit; public procedure checks
-  on codeunit 34002104; and `al_symbolsearch` for Period Form Management,
+  on codeunit 55745; and `al_symbolsearch` for Period Form Management,
   FindDate, NextDate, Employee Picture, and document-attachment pages.
 - Compilation: `al_compile` succeeded with 0 errors.
 - Errors introduced and corrected: 0.
 - Remaining `//TODO: Ver`: 235.
 - Total `// TODO: Manual review`: 81.
 - Last successfully processed file:
-  `src/Pages/Page 34002138 - Lista Mov. CxC Empleados.al`.
+  `src/Pages/Page 55779 - Lista Mov. CxC Empleados.al`.
 
 ## Batch 2
 
@@ -2085,7 +2085,7 @@ remains under `src/Pages`.
   reports, ADO, removed Mail, removed Employee.Picture, and unavailable
   questionnaire APIs.
 - Verification: complete current-object inspection; repository checks for all
-  custom reports and codeunit 34002104 public procedure signatures; and
+  custom reports and codeunit 55745 public procedure signatures; and
   `al_symbolsearch` for Employee.Picture/Image, Profile
   Management.GetQuestionnaire, and current email codeunits.
 - Compilation: `al_compile` succeeded with 0 errors.

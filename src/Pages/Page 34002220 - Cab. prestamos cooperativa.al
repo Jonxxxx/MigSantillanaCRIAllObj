@@ -142,6 +142,6 @@ page 34002220 "Cab. prestamos cooperativa"
     }
 
     var
-        FuncCoop: Codeunit 34002110;
+        FuncCoop: Codeunit 55751;
 }
 

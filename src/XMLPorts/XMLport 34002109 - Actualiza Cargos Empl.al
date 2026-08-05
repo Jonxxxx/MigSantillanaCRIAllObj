@@ -1,4 +1,4 @@
-xmlport 34002109 "Actualiza Cargos Empl"
+xmlport 55750 "Actualiza Cargos Empl"
 {
     Direction = Import;
     Format = VariableText;

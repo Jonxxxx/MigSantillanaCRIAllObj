@@ -1,4 +1,4 @@
-report 34002140 "Proceso Gtos. Nomina"
+report 55781 "Proceso Gtos. Nomina"
 {
     ProcessingOnly = true;
 

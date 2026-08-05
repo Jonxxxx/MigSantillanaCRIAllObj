@@ -6,7 +6,7 @@ xmlport 55437 "Importa Puestos laborales"
     {
         textelement(ImportaPuestosLaborales)
         {
-            tableelement("Puestos laborales"; 34002110)
+            tableelement("Puestos laborales"; 55751)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(Codigo; "Puestos laborales"."Codigo")

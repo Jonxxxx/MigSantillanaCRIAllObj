@@ -1,9 +1,9 @@
-page 34002129 "Lista Cab Impuestos"
+page 55770 "Lista Cab Impuestos"
 {
     CardPageID = "Historico Cab. Impuestos";
     Editable = false;
     PageType = List;
-    SourceTable = 34002121;
+    SourceTable = 55762;
 
     layout
     {

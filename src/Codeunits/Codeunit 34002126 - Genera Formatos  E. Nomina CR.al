@@ -1,11 +1,11 @@
-codeunit 34002126 "Genera Formatos  E. Nomina CR"
+codeunit 55767 "Genera Formatos  E. Nomina CR"
 {
     Permissions = TableData 23 = rimd,
                   TableData 81 = rimd,
                   TableData 98 = rimd,
                   TableData 270 = rm,
                   TableData 5200 = rimd;
-    TableNo = 34002117;
+    TableNo = 55758;
 
     trigger OnRun()
     begin
@@ -23,9 +23,9 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
     var
         ConfContab: Record 98;
         Empl: Record 5200;
-        EC: Record 34002100;
-        GHCN: Record 34002117;
-        GHLN: Record 34002118;
+        EC: Record 55741;
+        GHCN: Record 55758;
+        GHLN: Record 55759;
         Fecha: Record 2000000007;
         BcoACH: Record 34002167;
         VLE: Record 25;
@@ -35,7 +35,7 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         CompanyInfo: Record 79;
         VendorBank: Record 288;
         Vendor: Record 23;
-        FuncNom: Codeunit 34002104;
+        FuncNom: Codeunit 55745;
         TempBlob: Codeunit "Temp Blob";
         IStream: InStream;
         StreamOut: OutStream;
@@ -63,17 +63,17 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         PrimeraVez: Boolean;
         SecuenciaTrans: Code[10];
 
-    procedure FormatoBanco(var CN: Record 34002117)
+    procedure FormatoBanco(var CN: Record 55758)
     var
-        Empresa: Record 34002100;
-        ConfNomina: Record 34002103;
-        DIPG: Record 34002108;
-        HCN: Record 34002117;
-        HCN2: Record 34002117;
-        HLN: Record 34002118;
+        Empresa: Record 55741;
+        ConfNomina: Record 55744;
+        DIPG: Record 55749;
+        HCN: Record 55758;
+        HCN2: Record 55758;
+        HLN: Record 55759;
         Banco: Record 270;
-        BcoNom: Record 34002139;
-        RepEmpresa: Record 34002102;
+        BcoNom: Record 55780;
+        RepEmpresa: Record 55743;
         NetoBanco: Decimal;
         Err001: Label 'Missing Bank''s information from Company Setup';
         RNC: Text;
@@ -487,8 +487,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
 
     procedure NovedadesCambioSueldo()
     var
-        HSalario: Record 34002149;
-        CT: Record 34002101;
+        HSalario: Record 55790;
+        CT: Record 55742;
     begin
         /*Archivo para novedades de modificacion de sueldo (Aviso de nuevo sueldo)
         o RUC de la empresa (13 digitos)
@@ -563,8 +563,8 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
 
     procedure NovedadesVarSueldo()
     var
-        HCabNomina: Record 34002117;
-        HLinNomina: Record 34002118;
+        HCabNomina: Record 55758;
+        HLinNomina: Record 55759;
         Acumulado: Decimal;
     begin
         /*Archivo para Novedades de Variacion de Sueldo (Aviso de variacion de sueldo por extras)
@@ -661,7 +661,7 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
     var
         GenJnlLine: Record 81;
         Banco: Record 270;
-        DIPG: Record 34002108;
+        DIPG: Record 55749;
         BcoACH: Record 34002167;
         FirstTime: Boolean;
         BancoAnt: Code[20];
@@ -934,7 +934,7 @@ codeunit 34002126 "Genera Formatos  E. Nomina CR"
         VendorBank: Record 288;
         Vendor: Record 23;
         UserSetup: Record 91;
-        ConfEmpresa: Record 34002100;
+        ConfEmpresa: Record 55741;
         FirstTime: Boolean;
         BancoAnt: Code[20];
         CuerpoMail: Text[1024];

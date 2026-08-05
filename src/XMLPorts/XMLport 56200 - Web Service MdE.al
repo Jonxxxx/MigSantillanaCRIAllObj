@@ -1041,7 +1041,7 @@ xmlport 55353 "Web Service MdE"
         ConfSant: Record 55226;
         Employee: Record 5200;
         MdEHistory: Record 55355;
-        EmpCotiz: Record 34002100;
+        EmpCotiz: Record 55741;
         MdEMgnt: Codeunit 55355;
         EmployeeNo: Code[20];
         DescErrorArray: array[10] of Text;
@@ -1076,7 +1076,7 @@ xmlport 55353 "Web Service MdE"
 
     local procedure CreateEmployee(FromModifyEmployee: Boolean)
     var
-        //TOOD: Ver Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 55750;
         Create: Boolean;
         NoOrden: Integer;
         Found: Boolean;
@@ -1122,7 +1122,7 @@ xmlport 55353 "Web Service MdE"
 
     local procedure ModifyEmployee()
     var
-        //TOOD: Ver Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 55750;
         Found: Boolean;
         Recontratacion: Boolean;
     begin
@@ -1170,7 +1170,7 @@ xmlport 55353 "Web Service MdE"
 
     local procedure DeleteEmployee()
     var
-        //TOOD: Ver Contrato: Record 34002109;
+        //TOOD: Ver Contrato: Record 55750;
     begin
         EmployeeNo := Numero_persona_sistema_loca;
         IF NOT Employee.GET(EmployeeNo) THEN BEGIN
@@ -1473,10 +1473,10 @@ xmlport 55353 "Web Service MdE"
         rPais: Record 9;
         rCodPostal: Record 225;
         rContrato: Record 5211;
-        rCentro: Record 34002101;
-        rPuesto: Record 34002110;
+        rCentro: Record 55742;
+        rPuesto: Record 55751;
         rMotivoBaja: Record 5217;
-        rDptos: Record 34002135;
+        rDptos: Record 55776;
         rDim: Record 348;
         rDimVal: Record 349;
     begin
@@ -1805,7 +1805,7 @@ xmlport 55353 "Web Service MdE"
                 UpdateCodeField("Valor Dimension", Area_funcional_grupo, DATABASE::"Dimension Value", 'Area_funcional_grupo', STRSUBSTNO(DimensionTxt, ConfSant."Dimension Area funcional"), MAXSTRLEN(CodeValue), ConfSant."Dimension Area funcional");
             END;
 
-            // Campos tabla 34002109 "Contratos"
+            // Campos tabla 55750 "Contratos"
             IF "M fecha inicio contrato" THEN
                 UpdateDateField("Alta contrato", Fecha_inicio_contrato, 0, 'Fecha_inicio_contrato', FIELDCAPTION("Alta contrato"));
             IF "M fecha fin contrato" THEN

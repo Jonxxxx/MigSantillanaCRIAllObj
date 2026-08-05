@@ -128,10 +128,10 @@ report 34002162 "Carta Sol. Tarj. Banco"
     }
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 10400;
-        Contrato: Record 34002109;
-        Representante: Record 34002102;
+        Contrato: Record 55750;
+        Representante: Record 55743;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

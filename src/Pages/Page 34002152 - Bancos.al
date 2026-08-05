@@ -1,7 +1,7 @@
-page 34002152 Bancos
+page 55793 Bancos
 {
     PageType = List;
-    SourceTable = 34002139;
+    SourceTable = 55780;
 
     layout
     {

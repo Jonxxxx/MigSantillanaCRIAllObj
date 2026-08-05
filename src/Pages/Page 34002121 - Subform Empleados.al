@@ -1,4 +1,4 @@
-page 34002121 "Subform Empleados"
+page 55762 "Subform Empleados"
 {
     PageType = ListPart;
     SourceTable = 5200;
@@ -67,7 +67,7 @@ page 34002121 "Subform Empleados"
 
     procedure FichaEmpleado()
     var
-        frmEmpleado: Page 34002104;
+        frmEmpleado: Page 55745;
     begin
         frmEmpleado.SETRECORD(Rec);
         frmEmpleado.RUNMODAL;

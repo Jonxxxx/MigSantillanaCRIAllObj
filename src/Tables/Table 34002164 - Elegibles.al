@@ -304,7 +304,7 @@ table 34002164 Elegibles
             OptionCaption = 'Elegible,Descartado,Contratado';
             OptionMembers = Elegible,Descartado,Contratado;
         }
-        field(34002108; "Job Type Code"; Code[15])
+        field(55749; "Job Type Code"; Code[15])
         {
             DataClassification = CustomerContent;
             Caption = 'Job Type Code';
@@ -312,7 +312,7 @@ table 34002164 Elegibles
 
             trigger OnValidate()
             var
-                Contract: Record 34002109;
+                Contract: Record 55750;
             begin
 
                 Cargo.RESET;
@@ -344,9 +344,9 @@ table 34002164 Elegibles
 
     trigger OnDelete()
     var
-        Contrato: Record 34002109;
-        PerfilSal: Record 34002115;
-        HistNom: Record 34002117;
+        Contrato: Record 55750;
+        PerfilSal: Record 55756;
+        HistNom: Record 55758;
     begin
         AlternativeAddr.SETRANGE("Employee No.", "No.");
         AlternativeAddr.DELETEALL;
@@ -407,7 +407,7 @@ table 34002164 Elegibles
     var
         HumanResSetup: Record 5218;
         Candidato: Record 34002164;
-        Cargo: Record 34002110;
+        Cargo: Record 55751;
         Res: Record 156;
         PostCode: Record 225;
         AlternativeAddr: Record 5201;
@@ -417,14 +417,14 @@ table 34002164 Elegibles
         ConfidentialInformation: Record 5216;
         HumanResComment: Record 5208;
         SalespersonPurchaser: Record 13;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Numeradorescomunes: Record 34002182;
         NoSeriesMgt: Codeunit "No. Series";
         DimMgt: Codeunit 408;
         Text000: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         Err001: Label 'This Account No. already exist for candidate %1';
         Err002: Label 'This employee has posted payroll, you can not delete it';
-        FuncNominas: Codeunit 34002104;
+        FuncNominas: Codeunit 55745;
         Err003: Label 'This %1 already exist for the candidate %2 %3';
         Err004: Label '$1 is invalid, please verify';
 

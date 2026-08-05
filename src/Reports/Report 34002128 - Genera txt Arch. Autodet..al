@@ -1,4 +1,4 @@
-report 34002128 "Genera txt Arch. Autodet."
+report 55769 "Genera txt Arch. Autodet."
 {
     Caption = 'Generate Autodetermination template';
     ProcessingOnly = true;
@@ -68,7 +68,7 @@ report 34002128 "Genera txt Arch. Autodet."
     var
         Err001: Label 'Specify month to run';
         Err002: Label 'Specify year to run';
-        FormatosLegales: Codeunit 34002135;
+        FormatosLegales: Codeunit 55776;
         Mes: Integer;
         Ano: Integer;
         ClaveNom: Code[4];

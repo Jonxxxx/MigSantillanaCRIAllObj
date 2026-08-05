@@ -1,4 +1,4 @@
-table 34002112 "Configuracion Listados"
+table 55753 "Configuracion Listados"
 {
 
     fields

@@ -1,4 +1,4 @@
-table 34002115 "Perfil Salarial"
+table 55756 "Perfil Salarial"
 {
     Caption = 'Wage Profile';
 
@@ -94,8 +94,8 @@ table 34002115 "Perfil Salarial"
 
             trigger OnValidate()
             var
-                NovAuto: Record 34002114;
-                AcumuladoSalarios: Record 34002149;
+                NovAuto: Record 55755;
+                AcumuladoSalarios: Record 55790;
                 Selection: Integer;
                 Text000: Label '&Correction,C&hange';
             begin
@@ -508,21 +508,21 @@ table 34002115 "Perfil Salarial"
     end;
 
     var
-        RegFormula: Record 34002143;
-        Regconceptos: Record 34002144;
-        Regpolaca: Record 34002143;
+        RegFormula: Record 55784;
+        Regconceptos: Record 55785;
+        Regpolaca: Record 55784;
         "Indemnizacion": Record 5200;
-        HistLinNom: Record 34002118;
-        RegLinPerSal: Record 34002115;
-        ConcepSalar: Record 34002111;
+        HistLinNom: Record 55759;
+        RegLinPerSal: Record 55756;
+        ConcepSalar: Record 55752;
         Empleado: Record 5200;
         Percept: Record 5200;
-        TiposCot: Record 34002129;
-        FormConcSalariales: Page 34002110;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
-        ConfNominas: Record 34002103;
+        TiposCot: Record 55770;
+        FormConcSalariales: Page 55751;
+        Scanner: Codeunit 55747;
+        Parser: Codeunit 55746;
+        Calculadora: Codeunit 55748;
+        ConfNominas: Record 55744;
         ok: Boolean;
         Text001: Label 'CM';
         Text002: Label 'Yo had change the amount for the Base Salary, is this a Salary change or correction?';
@@ -531,12 +531,12 @@ table 34002115 "Perfil Salarial"
         Err003: Label '%1 is already assigned to this employee';
         Err004: Label '%1 can not be deleted because is in use';
 
-    procedure "CalculoCantidad"(LinEsq: Record 34002115) "Factor cantidad": Decimal
+    procedure "CalculoCantidad"(LinEsq: Record 55756) "Factor cantidad": Decimal
     var
         "Horas semanales": Decimal;
-        RegUdadCotiz: Record 34002100;
+        RegUdadCotiz: Record 55741;
         RegPerceptores: Record 5200;
-        RegContratos: Record 34002109;
+        RegContratos: Record 55750;
     begin
         /*"Horas semanales" := 0;
         RegContratos.SETRANGE("No. empleado","No. empleado");
@@ -552,7 +552,7 @@ table 34002115 "Perfil Salarial"
 
     procedure MiraSiFormula()
     var
-        LinEsqPerFormula: Record 34002115;
+        LinEsqPerFormula: Record 55756;
     begin
         LinEsqPerFormula.SETRANGE("No. empleado", "No. empleado");
         LinEsqPerFormula.SETRANGE("Perfil salarial", "Perfil salarial");

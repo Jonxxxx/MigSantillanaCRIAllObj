@@ -1,4 +1,4 @@
-report 34002135 "Valida Diario Nom. - Proyectos"
+report 55776 "Valida Diario Nom. - Proyectos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Valida Diario Nom. - Proyectos.rdl';
@@ -294,15 +294,15 @@ report 34002135 "Valida Diario Nom. - Proyectos"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Emp: Record 5200;
         Fecha: Record 2000000007;
         TrabajosEmpl_por_proyectosCaptionLbl: Label 'Test Job payroll journal';
         Total_Para_CaptionLbl: Label 'Total for ';
         Total_Gral_CaptionLbl: Label 'Grand total';
-        MA: Record 34002157;
-        PS: Record 34002115;
-        ConceptoSal: Record 34002111;
+        MA: Record 55798;
+        PS: Record 55756;
+        ConceptoSal: Record 55752;
         TSH: Record 950;
         TSL: Record 951;
         TSD: Record 952;

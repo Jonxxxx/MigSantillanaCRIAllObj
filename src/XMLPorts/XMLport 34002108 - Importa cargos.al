@@ -1,4 +1,4 @@
-xmlport 34002108 "Importa cargos"
+xmlport 55749 "Importa cargos"
 {
     Direction = Import;
     Format = VariableText;
@@ -7,7 +7,7 @@ xmlport 34002108 "Importa cargos"
     {
         textelement(ImportaCargos)
         {
-            tableelement("Puestos laborales"; 34002110)
+            tableelement("Puestos laborales"; 55751)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(Codigo; "Puestos laborales"."Codigo")

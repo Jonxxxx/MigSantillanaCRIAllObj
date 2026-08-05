@@ -1,8 +1,8 @@
-page 34002119 "Lin. conceptos salariales Emp."
+page 55760 "Lin. conceptos salariales Emp."
 {
     Caption = 'Employee profile';
     PageType = ListPart;
-    SourceTable = 34002115;
+    SourceTable = 55756;
 
     layout
     {
@@ -226,7 +226,7 @@ page 34002119 "Lin. conceptos salariales Emp."
     end;
 
     var
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
         [InDataSet]
         ImporteEditable: Boolean;
 
@@ -236,7 +236,7 @@ page 34002119 "Lin. conceptos salariales Emp."
         DefDimension: Page 540;
     begin
         Dimension.RESET;
-        Dimension.SETRANGE("Table ID", 34002115);
+        Dimension.SETRANGE("Table ID", 55756);
         Dimension.SETRANGE("No.", "No. empleado" + "Concepto salarial");
         DefDimension.SETTABLEVIEW(Dimension);
         DefDimension.RUNMODAL;

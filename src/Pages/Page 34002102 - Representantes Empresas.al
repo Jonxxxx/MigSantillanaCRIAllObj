@@ -1,9 +1,9 @@
-page 34002102 "Representantes Empresas"
+page 55743 "Representantes Empresas"
 {
     AutoSplitKey = true;
     Caption = 'Company representatives';
     PageType = List;
-    SourceTable = 34002102;
+    SourceTable = 55743;
 
     layout
     {

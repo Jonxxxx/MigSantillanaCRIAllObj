@@ -1,4 +1,4 @@
-report 34002157 "Carta apertura cuenta banco"
+report 55798 "Carta apertura cuenta banco"
 {
     RDLCLayout = 'src/ReportsLayout/Carta apertura cuenta banco.rdl';
     WordLayout = 'src/ReportsLayout/Carta apertura cuenta banco.docx';
@@ -148,10 +148,10 @@ report 34002157 "Carta apertura cuenta banco"
     }
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 34003010;
-        Contrato: Record 34002109;
-        Representante: Record 34002102;
+        Contrato: Record 55750;
+        Representante: Record 55743;
         Bco: Record 270;
         NombreDia: Text[60];
         NombreMes: Text[60];

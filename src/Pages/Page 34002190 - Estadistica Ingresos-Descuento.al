@@ -2,7 +2,7 @@ page 34002190 "Estadistica Ingresos-Descuento"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = 34002115;
+    SourceTable = 55756;
 
     layout
     {

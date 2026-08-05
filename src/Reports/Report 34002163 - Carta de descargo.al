@@ -196,10 +196,10 @@ report 34002163 "Carta de descargo"
     var
         CompanyInformation: Record 79;
         ChkTransMgt: Report 10400;
-        HLN: Record 34002118;
-        TiposNom: Record 34002158;
-        Representante: Record 34002102;
-        FuncionesNom: Codeunit 34002104;
+        HLN: Record 55759;
+        TiposNom: Record 55799;
+        Representante: Record 55743;
+        FuncionesNom: Codeunit 55745;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

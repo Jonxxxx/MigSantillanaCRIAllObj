@@ -28,7 +28,7 @@ codeunit 55001 "Funciones varias"
 
     var
         Empleado: Record 5200;
-        Contratos: Record 34002109;
+        Contratos: Record 55750;
         CantRegistrosActualizados: Integer;
         CantRegMod: Integer;
 

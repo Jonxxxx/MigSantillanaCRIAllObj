@@ -1,8 +1,8 @@
-page 34002118 "Niveles - Grados RH"
+page 55759 "Niveles - Grados RH"
 {
     Caption = 'Level - Grades';
     PageType = List;
-    SourceTable = 34002151;
+    SourceTable = 55792;
     SourceTableView = WHERE("Tipo registro" = CONST("Niveles-Grados"));
 
     layout

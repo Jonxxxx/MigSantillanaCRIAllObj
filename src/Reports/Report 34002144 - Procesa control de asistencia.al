@@ -1,4 +1,4 @@
-report 34002144 "Procesa control de asistencia"
+report 55785 "Procesa control de asistencia"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Procesa control de asistencia.rdl';
@@ -248,14 +248,14 @@ report 34002144 "Procesa control de asistencia"
     }
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Emp: Record 5200;
         Fecha: Record 2000000007;
         TrabajosEmpl_por_proyectosCaptionLbl: Label 'List Employees work Projects';
         Total_Para_CaptionLbl: Label 'Total for ';
         Total_Gral_CaptionLbl: Label 'Grand total';
-        MA: Record 34002157;
-        PS: Record 34002115;
+        MA: Record 55798;
+        PS: Record 55756;
         LastWedge: Code[20];
         LastEmp: Code[20];
         FirstTime: Boolean;

@@ -21,6 +21,6 @@ page 34002183 "Informacion de nominas"
     }
 
     var
-        CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 55745;
 }
 

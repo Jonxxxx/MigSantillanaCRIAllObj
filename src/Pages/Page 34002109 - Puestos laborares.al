@@ -1,10 +1,10 @@
-page 34002109 "Puestos laborares"
+page 55750 "Puestos laborares"
 {
     AdditionalSearchTerms = 'Job types';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Job types';
     PageType = List;
-    SourceTable = 34002110;
+    SourceTable = 55751;
     UsageCategory = Administration;
 
     layout
@@ -85,7 +85,7 @@ page 34002109 "Puestos laborares"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     PromotedOnly = true;
-                    RunObject = Page 34002112;
+                    RunObject = Page 55753;
                     RunPageLink = "Puesto de Trabajo" = FIELD(Codigo);
                 }
 

@@ -1,4 +1,4 @@
-report 34002120 "Listado de prestamos personal"
+report 55761 "Listado de prestamos personal"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado de prestamos personal.rdl';
@@ -111,7 +111,7 @@ report 34002120 "Listado de prestamos personal"
             column(Total_de_empleadosCaption_Control40; Total_de_empleadosCaption_Control40Lbl)
             {
             }
-            dataitem("Historico Cab. Prestamo"; 34002146)
+            dataitem("Historico Cab. Prestamo"; 55787)
             {
                 DataItemLink = "Employee No." = FIELD("No.");
                 DataItemTableView = SORTING("Employee No.", Pendiente)
@@ -304,10 +304,10 @@ report 34002120 "Listado de prestamos personal"
     end;
 
     var
-        ConfNominas: Record 34002103;
-        ConfEmpresa: Record 34002100;
-        HistCabPrestamo: Record 34002146;
-        LinPerSal: Record 34002115;
+        ConfNominas: Record 55744;
+        ConfEmpresa: Record 55741;
+        HistCabPrestamo: Record 55787;
+        LinPerSal: Record 55756;
         MesTrabajo: Integer;
         AnoTrabajo: Integer;
         FechaInicio: Date;

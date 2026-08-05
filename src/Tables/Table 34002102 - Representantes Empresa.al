@@ -1,4 +1,4 @@
-table 34002102 "Representantes Empresa"
+table 55743 "Representantes Empresa"
 {
     Caption = 'Company Representatives';
 
@@ -102,7 +102,7 @@ table 34002102 "Representantes Empresa"
         Emp: Record 5200;
         CodPost: Record 225;
 
-    procedure "Recoger representantes"(var "Repres.": Record 34002102; "Unidad cotizacion": Code[10]; "Centro de trabajo": Code[10]; Figurar: Integer)
+    procedure "Recoger representantes"(var "Repres.": Record 55743; "Unidad cotizacion": Code[10]; "Centro de trabajo": Code[10]; Figurar: Integer)
     begin
         "Repres.".RESET;
         "Repres.".SETRANGE("Repres."."Empresa cotizacion", "Empresa cotizacion");

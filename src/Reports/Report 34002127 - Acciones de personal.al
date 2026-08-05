@@ -1,11 +1,11 @@
-report 34002127 "Acciones de personal"
+report 55768 "Acciones de personal"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Acciones de personal.rdl';
 
     dataset
     {
-        dataitem("Acciones de personal"; 34002133)
+        dataitem("Acciones de personal"; 55774)
         {
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "Tipo de accion", "Cod. accion", "No. empleado", "Fecha accion", "Fecha efectividad";
@@ -365,16 +365,16 @@ report 34002127 "Acciones de personal"
     }
 
     var
-        InfoEmpresa: Record 34002100;
-        Contrato: Record 34002109;
+        InfoEmpresa: Record 55741;
+        Contrato: Record 55750;
         CountryRegion: Record 9;
-        Cargo: Record 34002110;
+        Cargo: Record 55751;
         BancosACH: Record 34002167;
         User: Record 2000000120;
         EmploymentContract: Record 5211;
-        CentrosdeTrabajo: Record 34002101;
-        Seleccionbeneficios: Record 34002156;
-        FuncionesNom: Codeunit 34002104;
+        CentrosdeTrabajo: Record 55742;
+        Seleccionbeneficios: Record 55797;
+        FuncionesNom: Codeunit 55745;
         MarcaCargo: Boolean;
         MarcaSueldoMensual: Boolean;
         MarcaNumeroCuenta: Boolean;

@@ -1,7 +1,7 @@
-table 34002129 "Tipos de Cotizacion"
+table 55770 "Tipos de Cotizacion"
 {
-    DrillDownPageID = 34002146;
-    LookupPageID = 34002146;
+    DrillDownPageID = 55787;
+    LookupPageID = 55787;
 
     fields
     {
@@ -107,6 +107,6 @@ table 34002129 "Tipos de Cotizacion"
     }
 
     var
-        ConceptosSal: Record 34002111;
+        ConceptosSal: Record 55752;
 }
 

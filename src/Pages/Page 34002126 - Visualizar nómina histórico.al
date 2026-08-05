@@ -1,8 +1,8 @@
-page 34002126 "Visualizar nomina historico"
+page 55767 "Visualizar nomina historico"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = 34002117;
+    SourceTable = 55758;
 
     layout
     {
@@ -264,9 +264,9 @@ page 34002126 "Visualizar nomina historico"
     end;
 
     var
-        "Lin.nominas": Record 34002118;
+        "Lin.nominas": Record 55759;
         RegTrab: Record 5200;
-        RegEmpr: Record 34002100;
+        RegEmpr: Record 55741;
         Conceptos: array[12] of Text[40];
         ConcepDed: array[10] of Text[40];
         Importe: array[12] of Decimal;

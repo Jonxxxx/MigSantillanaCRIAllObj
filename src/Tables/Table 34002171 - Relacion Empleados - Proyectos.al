@@ -139,9 +139,9 @@ table 34002171 "Relacion Empleados - Proyectos"
     end;
 
     var
-        PerfilSalario: Record 34002115;
+        PerfilSalario: Record 55756;
         Err001: Label 'The top value allowed must be 100 for the %1';
         Employee: Record 5200;
-        ConcepSalar: Record 34002111;
+        ConcepSalar: Record 55752;
 }
 

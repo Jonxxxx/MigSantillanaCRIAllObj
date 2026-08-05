@@ -1,4 +1,4 @@
-table 34002126 "Incentivos/Propinas"
+table 55767 "Incentivos/Propinas"
 {
 
     fields
@@ -52,6 +52,6 @@ table 34002126 "Incentivos/Propinas"
     end;
 
     var
-        Incentivo: Record 34002126;
+        Incentivo: Record 55767;
 }
 

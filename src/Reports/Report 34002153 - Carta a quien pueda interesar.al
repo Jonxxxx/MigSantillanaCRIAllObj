@@ -1,4 +1,4 @@
-report 34002153 "Carta a quien pueda interesar"
+report 55794 "Carta a quien pueda interesar"
 {
     RDLCLayout = 'src/ReportsLayout/Carta a quien pueda interesar.rdl';
     WordLayout = 'src/ReportsLayout/Carta a quien pueda interesar.docx';
@@ -139,10 +139,10 @@ report 34002153 "Carta a quien pueda interesar"
     }
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 34003010;
-        Contrato: Record 34002109;
-        Representante: Record 34002102;
+        Contrato: Record 55750;
+        Representante: Record 55743;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

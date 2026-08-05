@@ -1,4 +1,4 @@
-report 34002149 "Carta DGII empleado"
+report 55790 "Carta DGII empleado"
 {
     RDLCLayout = 'src/ReportsLayout/Carta DGII empleado.rdl';
     WordLayout = 'src/ReportsLayout/Carta DGII empleado.docx';
@@ -243,14 +243,14 @@ report 34002149 "Carta DGII empleado"
     end;
 
     var
-        ConfNominas: Record 34002103;
-        FuncionesNom: Codeunit 34002104;
+        ConfNominas: Record 55744;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 34003010;
-        Contrato: Record 34002109;
-        HistoricoLinNom: Record 34002118;
-        TN: Record 34002158;
-        Representante: Record 34002102;
-        EmpresasCotizacion: Record 34002100;
+        Contrato: Record 55750;
+        HistoricoLinNom: Record 55759;
+        TN: Record 55799;
+        Representante: Record 55743;
+        EmpresasCotizacion: Record 55741;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

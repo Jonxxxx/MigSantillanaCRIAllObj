@@ -1,13 +1,13 @@
-report 34002110 "Recibo form.fact. Dom."
+report 55751 "Recibo form.fact. Dom."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo form.fact. Dom..rdl';
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", "Tipo de nomina", Periodo;
@@ -23,7 +23,7 @@ report 34002110 "Recibo form.fact. Dom."
             column(Historico_Cab__nomina_Tipo_Nomina; "Tipo Nomina")
             {
             }
-            dataitem("Historico Lin. nomina"; 34002118)
+            dataitem("Historico Lin. nomina"; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo nomina" = FIELD("Tipo Nomina"),
@@ -357,7 +357,7 @@ report 34002110 "Recibo form.fact. Dom."
                     id := 0;
                 end;
             }
-            dataitem(HLN; 34002118)
+            dataitem(HLN; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo nomina" = FIELD("Tipo Nomina"),
@@ -730,9 +730,9 @@ report 34002110 "Recibo form.fact. Dom."
     var
         rEmpresa: Record 79;
         rEmp: Record 5200;
-        rCargos: Record 34002110;
-        rDepto: Record 34002135;
-        rSubDepto: Record 34002136;
+        rCargos: Record 55751;
+        rDepto: Record 55776;
+        rSubDepto: Record 55777;
         DescIngreso: array[10] of Text[50];
         DescDeducc: array[10] of Text[50];
         Horas: array[10] of Decimal;

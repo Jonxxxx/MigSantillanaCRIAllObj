@@ -1,4 +1,4 @@
-table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
+table 55779 "Dist. Ctas. Gpo. Cont. x Dim."
 {
 
     fields
@@ -73,7 +73,7 @@ table 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
     }
 
     var
-        ConfNom: Record 34002103;
-        ConceptosSal: Record 34002111;
+        ConfNom: Record 55744;
+        ConceptosSal: Record 55752;
 }
 

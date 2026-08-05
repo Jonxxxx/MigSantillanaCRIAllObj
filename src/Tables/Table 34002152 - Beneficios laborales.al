@@ -1,8 +1,8 @@
-table 34002152 "Beneficios laborales"
+table 55793 "Beneficios laborales"
 {
     Caption = 'Beneficios cargos';
-    DrillDownPageID = 34002159;
-    LookupPageID = 34002159;
+    DrillDownPageID = 55800;
+    LookupPageID = 55800;
 
     fields
     {
@@ -59,7 +59,7 @@ table 34002152 "Beneficios laborales"
     }
 
     var
-        Conceptossalariales: Record 34002111;
-        DatosadicionalesRRHH: Record 34002151;
+        Conceptossalariales: Record 55752;
+        DatosadicionalesRRHH: Record 55792;
 }
 

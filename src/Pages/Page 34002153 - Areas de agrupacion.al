@@ -1,8 +1,8 @@
-page 34002153 "Areas de agrupacion"
+page 55794 "Areas de agrupacion"
 {
     Caption = 'Grouping area';
     PageType = List;
-    SourceTable = 34002151;
+    SourceTable = 55792;
     SourceTableView = SORTING("Tipo registro", Code)
                       WHERE("Tipo registro" = CONST("Area de agrupacion"));
 

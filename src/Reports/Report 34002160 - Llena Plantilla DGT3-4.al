@@ -86,7 +86,7 @@ report 34002160 "Llena Plantilla DGT3-4"
         Err003: Label 'Specify the payroll key';
         Err004: Label 'Month can not be greather than 12';
         Fecha: Record 2000000007;
-        FormatosLegales: Codeunit 34002135;
+        FormatosLegales: Codeunit 55776;
         Mes: Integer;
         Ano: Integer;
         TipoPlantilla: Option DGT3,DGT4;

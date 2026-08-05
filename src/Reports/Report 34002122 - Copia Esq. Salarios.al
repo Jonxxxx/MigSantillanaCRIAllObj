@@ -1,4 +1,4 @@
-report 34002122 "Copia Esq. Salarios"
+report 55763 "Copia Esq. Salarios"
 {
     ProcessingOnly = true;
 
@@ -53,8 +53,8 @@ report 34002122 "Copia Esq. Salarios"
 
     var
         Empl: Record 5200;
-        EsqSalFrom: Record 34002115;
-        EsqSalTo: Record 34002115;
+        EsqSalFrom: Record 55756;
+        EsqSalTo: Record 55756;
         AEmpl: Code[20];
 }
 

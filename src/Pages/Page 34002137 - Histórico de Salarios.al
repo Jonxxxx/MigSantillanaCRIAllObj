@@ -1,8 +1,8 @@
-page 34002137 "Historico de Salarios"
+page 55778 "Historico de Salarios"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34002149;
+    SourceTable = 55790;
 
     layout
     {

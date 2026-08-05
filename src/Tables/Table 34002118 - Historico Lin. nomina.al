@@ -1,7 +1,7 @@
-table 34002118 "Historico Lin. nomina"
+table 55759 "Historico Lin. nomina"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 34002145;
-    //IGNORAR: Page no existe LookupPageID = 34002145;
+    //IGNORAR: Page no existe DrillDownPageID = 55786;
+    //IGNORAR: Page no existe LookupPageID = 55786;
 
     fields
     {
@@ -60,7 +60,7 @@ table 34002118 "Historico Lin. nomina"
 
             trigger OnValidate()
             var
-                ConceptosSal: Record 34002111;
+                ConceptosSal: Record 55752;
             begin
                 ConceptosSal.SETRANGE(Codigo, "Concepto salarial");
                 IF ConceptosSal.FINDFIRST THEN
@@ -386,15 +386,15 @@ table 34002118 "Historico Lin. nomina"
     end;
 
     var
-        ConfNominas: Record 34002103;
-        RegFormula: Record 34002143;
-        Regconceptos: Record 34002144;
-        Regpolaca: Record 34002143;
-        RegLinPerSal: Record 34002118;
+        ConfNominas: Record 55744;
+        RegFormula: Record 55784;
+        Regconceptos: Record 55785;
+        Regpolaca: Record 55784;
+        RegLinPerSal: Record 55759;
         DimMgt: Codeunit 408;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        Calculadora: Codeunit 34002107;
+        Scanner: Codeunit 55747;
+        Parser: Codeunit 55746;
+        Calculadora: Codeunit 55748;
 
     procedure ShowDimensions()
     begin
@@ -404,7 +404,7 @@ table 34002118 "Historico Lin. nomina"
 
     local procedure RecalculaAportePatronal()
     var
-        LinAporteEmp: Record 34002122;
+        LinAporteEmp: Record 55763;
         BaseCalculo: Decimal;
     begin
         LinAporteEmp.RESET;

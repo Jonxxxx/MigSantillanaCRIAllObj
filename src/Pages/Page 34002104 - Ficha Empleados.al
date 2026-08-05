@@ -1,4 +1,4 @@
-page 34002104 "Ficha Empleados"
+page 55745 "Ficha Empleados"
 {
     Caption = 'Normal Employee Information';
     DataCaptionFields = "No.", "Full Name";
@@ -210,7 +210,7 @@ page 34002104 "Ficha Empleados"
                     ToolTip = 'Distribuir salario en proyecto';
                 }
             }
-            part(PerfSal; 34002119)
+            part(PerfSal; 55760)
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
                 Visible = SueldoVisible;
@@ -754,21 +754,21 @@ page 34002104 "Ficha Empleados"
                 {
                     Caption = '&Salary History';
                     Image = History;
-                    RunObject = Page 34002137;
+                    RunObject = Page 55778;
                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
                 action("&ISR On favor Balance")
                 {
                     Caption = '&ISR On favor Balance';
                     Image = Balance;
-                    RunObject = Page 34002148;
+                    RunObject = Page 55789;
                     RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
                 action("&Related Companies")
                 {
                     Caption = '&Related Companies';
                     Image = Zones;
-                    RunObject = Page 34002157;
+                    RunObject = Page 55798;
                     RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
@@ -815,7 +815,7 @@ page 34002104 "Ficha Empleados"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002106;
+                    RunObject = Page 55747;
                                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
                 action("Income Tax Parameters")
@@ -834,7 +834,7 @@ page 34002104 "Ficha Empleados"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002105;
+                    RunObject = Page 55746;
                                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
 
@@ -842,7 +842,7 @@ page 34002104 "Ficha Empleados"
                 {
                     Caption = 'View &Payroll';
                     Image = History;
-                    RunObject = Page 34002123;
+                    RunObject = Page 55764;
                                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
 
@@ -853,7 +853,7 @@ page 34002104 "Ficha Empleados"
 
                     trigger OnAction()
                     var
-                        CopySalaryProfile: Report 34002122;
+                        CopySalaryProfile: Report 55763;
                                                Empl: Record 5200;
                     begin
                         CurrPage.SETSELECTIONFILTER(Empl);
@@ -867,7 +867,7 @@ page 34002104 "Ficha Empleados"
                     Image = PayrollStatistics;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 34002125;
+                    RunObject = Page 55766;
                                     RunPageLink = "No." = FIELD("No."),
                                   "Date Filter" = FIELD("Date Filter");
                                     ShortCutKey = 'F7';
@@ -1047,12 +1047,12 @@ page 34002104 "Ficha Empleados"
     end;
 
     var
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
         RegPerceptores: Record 5200;
-        SeguridadUsrRH: Record 34002154;
+        SeguridadUsrRH: Record 55795;
         fecha: Date;
         Mail: Codeunit 397;
-        FuncionesNomina: Codeunit 34002104;
+        FuncionesNomina: Codeunit 55745;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

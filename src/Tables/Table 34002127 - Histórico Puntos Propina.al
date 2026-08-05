@@ -1,4 +1,4 @@
-table 34002127 "Historico Puntos Propina"
+table 55768 "Historico Puntos Propina"
 {
 
     fields

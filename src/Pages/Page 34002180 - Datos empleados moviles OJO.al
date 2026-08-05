@@ -140,7 +140,7 @@ page 34002180 "Datos empleados moviles OJO"
                     ToolTip = 'Incentivos/Puntos';
                 }
             }
-            part(Lineas; 34002119)
+            part(Lineas; 55760)
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
             }
@@ -448,9 +448,9 @@ page 34002180 "Datos empleados moviles OJO"
                     ApplicationArea = All;
                     Caption = '&Related Companies';
                     ToolTip = '&Related Companies';
-                    // TODO: Manual review - Custom page 34002157 is unavailable; the current object with this ID is a table.
+                    // TODO: Manual review - Custom page 55798 is unavailable; the current object with this ID is a table.
                     // Original code preserved below.
-                    // RunObject = Page 34002157;
+                    // RunObject = Page 55798;
                     // RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
@@ -498,7 +498,7 @@ page 34002180 "Datos empleados moviles OJO"
                     ApplicationArea = All;
                     Caption = '&Contract';
                     ToolTip = '&Contract';
-                    RunObject = Page 34002106;
+                    RunObject = Page 55747;
                     RunPageLink = "Empresa cotizacion" = FIELD(Company),
                                   "No. empleado" = FIELD("No.");
                 }
@@ -507,7 +507,7 @@ page 34002180 "Datos empleados moviles OJO"
                     ApplicationArea = All;
                     Caption = '&History';
                     ToolTip = '&History';
-                    RunObject = Page 34002123;
+                    RunObject = Page 55764;
                     RunPageLink = "No. empleado" = FIELD("No.");
                 }
             }
@@ -595,7 +595,7 @@ page 34002180 "Datos empleados moviles OJO"
     var
         // TODO: Manual review - Legacy Mail codeunit 397 is unavailable, and this declaration has no active caller to migrate to the current Email API.
         // Original code: Mail: Codeunit 397;
-        CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 55745;
         FechaIni: Date;
         FechaFin: Date;
         [InDataSet]

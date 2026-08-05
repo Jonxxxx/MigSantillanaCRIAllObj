@@ -1,9 +1,9 @@
-page 34002139 "Lista Cxc Empleados"
+page 55780 "Lista Cxc Empleados"
 {
     Caption = 'Create employee loan';
     CardPageID = "CxC Empleados";
     PageType = List;
-    SourceTable = 34002145;
+    SourceTable = 55786;
 
     layout
     {

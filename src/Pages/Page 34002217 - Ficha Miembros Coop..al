@@ -95,8 +95,8 @@ page 34002217 "Ficha Miembros Coop."
 
                     trigger OnAction()
                     var
-                        ConceptosSalariales: Record 34002111;
-                        PerfilSal: Record 34002115;
+                        ConceptosSalariales: Record 55752;
+                        PerfilSal: Record 55756;
                     begin
                         /*
                         ConfNomina.GET();
@@ -154,8 +154,8 @@ page 34002217 "Ficha Miembros Coop."
 
                     trigger OnAction()
                     var
-                        ConceptosSalariales: Record 34002111;
-                        PerfilSal: Record 34002115;
+                        ConceptosSalariales: Record 55752;
+                        PerfilSal: Record 55756;
                     begin
                         /*ConfNomina.GET();
                         ConfNomina.TESTFIELD("Concepto Cuota cooperativa");
@@ -189,8 +189,8 @@ page 34002217 "Ficha Miembros Coop."
 
                     trigger OnAction()
                     var
-                        ConceptosSalariales: Record 34002111;
-                        PerfilSal: Record 34002115;
+                        ConceptosSalariales: Record 55752;
+                        PerfilSal: Record 55756;
                     begin
                         Funcionescooperativa.RetirarMiembro(Rec);
                     end;
@@ -206,10 +206,10 @@ page 34002217 "Ficha Miembros Coop."
     end;
 
     var
-        ConfNomina: Record 34002103;
+        ConfNomina: Record 55744;
         Msg001: Label 'Successful employee activation';
         Msg002: Label 'Successful employee inactivation';
-        Funcionescooperativa: Codeunit 34002110;
+        Funcionescooperativa: Codeunit 55751;
         [InDataSet]
         Editar: Boolean;
         [InDataSet]

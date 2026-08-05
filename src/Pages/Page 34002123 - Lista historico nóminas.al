@@ -1,4 +1,4 @@
-page 34002123 "Lista historico nominas"
+page 55764 "Lista historico nominas"
 {
     CardPageID = "Historico Cab. Nominas";
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 34002123 "Lista historico nominas"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002117;
+    SourceTable = 55758;
     SourceTableView = SORTING("No. empleado", Ano, Periodo)
                       ORDER(Descending);
 
@@ -87,8 +87,8 @@ page 34002123 "Lista historico nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002124 is unavailable as the required object type.
-                    // Original code: RunObject = Report 34002124;
+                    // TODO: Manual review - Custom report 55765 is unavailable as the required object type.
+                    // Original code: RunObject = Report 55765;
 
                     trigger OnAction()
                     begin
@@ -105,8 +105,8 @@ page 34002123 "Lista historico nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002106 is unavailable as the required object type.
-                    // Original code: RunObject = Report 34002106;
+                    // TODO: Manual review - Custom report 55747 is unavailable as the required object type.
+                    // Original code: RunObject = Report 55747;
                 }
 
                 action(Statistics)
@@ -118,7 +118,7 @@ page 34002123 "Lista historico nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002126;
+                    RunObject = Page 55767;
                     RunPageLink = "No. Documento" = FIELD("No. Documento"),
                                   "No. empleado" = FIELD("No. empleado"),
                                   "Tipo de nomina" = FIELD("Tipo de nomina"),
@@ -142,7 +142,7 @@ page 34002123 "Lista historico nominas"
 
                 trigger OnAction()
                 begin
-                    // TODO: Manual review - Custom codeunit 34002103 is unavailable, so the payroll receipt execution cannot be restored.
+                    // TODO: Manual review - Custom codeunit 55744 is unavailable, so the payroll receipt execution cannot be restored.
                     // Original code: Modelorecibsalario.RUN(Rec);
                 end;
             }
@@ -157,7 +157,7 @@ page 34002123 "Lista historico nominas"
 
     var
         Emp: Record 5200;
-        // TODO: Manual review - Custom codeunit 34002103 is unavailable as the required object type.
-        // Original code: Modelorecibsalario: Codeunit 34002103;
+    // TODO: Manual review - Custom codeunit 55744 is unavailable as the required object type.
+    // Original code: Modelorecibsalario: Codeunit 55744;
 }
 

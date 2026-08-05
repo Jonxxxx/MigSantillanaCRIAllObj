@@ -5,7 +5,7 @@ report 34002168 "Export Payroll To Excel"
 
     dataset
     {
-        dataitem(HCN; 34002117)
+        dataitem(HCN; 55758)
         {
             DataItemTableView = SORTING(Ano, "No. empleado", Periodo, "Job No.", "Tipo de nomina");
             RequestFilterFields = "Tipo de nomina", Periodo, "Job No.", "No. empleado";
@@ -91,14 +91,14 @@ report 34002168 "Export Payroll To Excel"
         GLSetup: Record 98;
         DimVal: Record 349;
         TempExcelBuffer: Record 370 temporary;
-        Depto: Record 34002135;
-        Puestos: Record 34002110;
+        Depto: Record 55776;
+        Puestos: Record 55751;
         Empl: Record 5200;
         Text000: Label 'Analyzing Data...\\';
         DescDepto: Label 'Department description';
-        HLN: Record 34002118;
-        HCN2: Record 34002117;
-        HLNCP: Record 34002122;
+        HLN: Record 55759;
+        HCN2: Record 55758;
+        HLNCP: Record 55763;
         FileMgt: Codeunit 419;
         ClientFileName: Text;
         ServerFileName: Text;

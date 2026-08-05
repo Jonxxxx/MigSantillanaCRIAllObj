@@ -1,4 +1,4 @@
-report 34002103 "Nominas por departamentos"
+report 55744 "Nominas por departamentos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Nominas por departamentos.rdl';
@@ -9,7 +9,7 @@ report 34002103 "Nominas por departamentos"
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "Tipo de nomina", Periodo, "No. empleado", "Forma de Cobro";
@@ -252,18 +252,18 @@ report 34002103 "Nominas por departamentos"
                         WITH recLinNom DO BEGIN
                             //To find individuals codes
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002102);
+                            rConfigListados.SETRANGE("ID Reporte", 55743);
                             rConfigListados.SETFILTER("Concepto Salarial", '*' + "Concepto salarial" + '*');
                             IF rConfigListados.FINDFIRST THEN
                                 Valor[rConfigListados."No. Columna"] += Total;
 
                             //Generic other codes columns
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002102);
+                            rConfigListados.SETRANGE("ID Reporte", 55743);
                             rConfigListados.SETFILTER("Concepto Salarial", '*' + "Concepto salarial" + '*');
                             IF NOT rConfigListados.FINDFIRST THEN BEGIN
                                 rConfigListados.RESET;
-                                rConfigListados.SETRANGE("ID Reporte", 34002102);
+                                rConfigListados.SETRANGE("ID Reporte", 55743);
                                 CASE "Tipo concepto" OF
                                     0: //Ingresos
                                         BEGIN
@@ -281,7 +281,7 @@ report 34002103 "Nominas por departamentos"
 
                             //Total Incomes and total deductions
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002102);
+                            rConfigListados.SETRANGE("ID Reporte", 55743);
                             CASE "Tipo concepto" OF
                                 0: //Ingresos
                                     BEGIN
@@ -314,7 +314,7 @@ report 34002103 "Nominas por departamentos"
                     MuestraSalario := FALSE;
 
                 rConfigListados.RESET;
-                rConfigListados.SETRANGE("ID Reporte", 34002102);
+                rConfigListados.SETRANGE("ID Reporte", 55743);
                 rConfigListados.FIND('-');
                 REPEAT
                     TextoEncabezado[rConfigListados."No. Columna"] := rConfigListados."Titulo Columna";
@@ -341,11 +341,11 @@ report 34002103 "Nominas por departamentos"
 
     var
         Empleado: Record 5200;
-        ConfEmpresa: Record 34002100;
-        rConfigListados: Record 34002112;
-        rDepto: Record 34002135;
-        rSubDepto: Record 34002136;
-        recLinNom: Record 34002118;
+        ConfEmpresa: Record 55741;
+        rConfigListados: Record 55753;
+        rDepto: Record 55776;
+        rSubDepto: Record 55777;
+        recLinNom: Record 55759;
         TextoEncabezado: array[20] of Text[60];
         Valor: array[20] of Decimal;
         TotalIngresos: Decimal;

@@ -193,7 +193,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
         EmpProfileAnswer: Record 34002192;
         ProfileQuestionnaireLine2: Record 34002185;
         ProfileQuestLineQuestion: Record 34002185;
-        ProfileManagement: Codeunit 34002122;
+        ProfileManagement: Codeunit 55763;
         CurrentQuestionsChecklistCode: Code[20];
         EmpProfileAnswerCode: Code[20];
         EmpProfileAnswerLine: Integer;

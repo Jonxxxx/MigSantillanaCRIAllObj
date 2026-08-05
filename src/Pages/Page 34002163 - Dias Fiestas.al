@@ -4,7 +4,7 @@ page 34002163 "Dias Fiestas"
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Holidays';
     PageType = List;
-    SourceTable = 34002155;
+    SourceTable = 55796;
     UsageCategory = Administration;
 
     layout

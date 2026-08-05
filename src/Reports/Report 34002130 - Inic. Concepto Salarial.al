@@ -1,10 +1,10 @@
-report 34002130 "Inic. Concepto Salarial"
+report 55771 "Inic. Concepto Salarial"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Perfil Salarial"; 34002115)
+        dataitem("Perfil Salarial"; 55756)
         {
             DataItemTableView = SORTING("Perfil salarial", "Sujeto Cotizacion", "No. empleado");
 
@@ -80,9 +80,9 @@ report 34002130 "Inic. Concepto Salarial"
         InicCantidad: Boolean;
         InicImporte: Boolean;
         Concepto: Code[20];
-        rLinEsqPercepcion: Record 34002115;
+        rLinEsqPercepcion: Record 55756;
         Err001: Label 'This Wage concept has a Formula, it can''t be cleared';
         Err002: Label 'You must select a Wage concept';
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
 }
 

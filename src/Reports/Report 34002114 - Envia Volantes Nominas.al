@@ -1,10 +1,10 @@
-report 34002114 "Envia Volantes Nominas"
+report 55755 "Envia Volantes Nominas"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem(Reco; 34002117)
+        dataitem(Reco; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", Periodo, "Tipo de nomina";
@@ -57,9 +57,9 @@ report 34002114 "Envia Volantes Nominas"
     }
 
     var
-        ConfEmpresa: Record 34002100;
+        ConfEmpresa: Record 55741;
         Emp: Record 5200;
-        CU: Codeunit 34002108;
+        CU: Codeunit 55749;
         Text003: Label 'Processing Employee #1########## \@2@@@@@@@@@@@@@';
         Ventana: Dialog;
         Contador: Decimal;

@@ -1,4 +1,4 @@
-xmlport 34002102 "Importa Ponches"
+xmlport 55743 "Importa Ponches"
 {
     Direction = Import;
     Format = FixedText;

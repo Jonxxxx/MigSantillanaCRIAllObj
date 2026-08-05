@@ -1,4 +1,4 @@
-table 34002132 "Dimensiones Contabilizacion"
+table 55773 "Dimensiones Contabilizacion"
 {
 
     fields

@@ -4,7 +4,7 @@ page 34002187 "Page Lin. Esq. Ingresos"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = ListPart;
-    SourceTable = 34002115;
+    SourceTable = 55756;
 
     layout
     {
@@ -94,7 +94,7 @@ page 34002187 "Page Lin. Esq. Ingresos"
     end;
 
     var
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
         [InDataSet]
         CantidadVisible: Boolean;
         [InDataSet]

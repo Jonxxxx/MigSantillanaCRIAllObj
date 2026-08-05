@@ -1,4 +1,4 @@
-page 34002100 "Empresas de cotizacion"
+page 55741 "Empresas de cotizacion"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -12,7 +12,7 @@ page 34002100 "Empresas de cotizacion"
     //                                       Adicionar campos "Email Envia Errores Colas" y "Password Email Errores Cola"
 
     PageType = Card;
-    SourceTable = 34002100;
+    SourceTable = 55741;
 
     layout
     {
@@ -263,7 +263,7 @@ page 34002100 "Empresas de cotizacion"
                     //PromotedCategory = Process;
                     //TODO Ver 
                     /*
-                    RunObject = Page 34002156;
+                    RunObject = Page 55797;
                     RunPageLink = Tipo = CONST("Empresa cotizacion"),
                                   Codigo = FIELD("Empresa cotizacion");*/
                 }
@@ -281,7 +281,7 @@ page 34002100 "Empresas de cotizacion"
                     PromotedCategory = Process;
                     //TODO Ver 
                     /*
-                    RunObject = Page 34002108;
+                    RunObject = Page 55749;
                     RunPageLink = "Empresa cotizacion" = FIELD("Empresa cotizacion");*/
                 }
                 action("Legal representatives")
@@ -294,7 +294,7 @@ page 34002100 "Empresas de cotizacion"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     PromotedOnly = true;
-                    RunObject = Page 34002102;
+                    RunObject = Page 55743;
                     RunPageLink = "Empresa cotizacion" = FIELD("Empresa cotizacion");
                 }
             }

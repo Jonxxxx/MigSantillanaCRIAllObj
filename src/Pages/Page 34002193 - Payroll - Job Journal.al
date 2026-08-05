@@ -239,7 +239,7 @@ page 34002193 "Payroll - Job Journal"
                     Promoted = true;
                     PromotedCategory = Category6;
                     PromotedIsBig = true;
-                    RunObject = Page 34002104;
+                    RunObject = Page 55745;
                     RunPageLink = "No." = FIELD("No. empleado");
                 }
             }
@@ -363,7 +363,7 @@ page 34002193 "Payroll - Job Journal"
     end;
 
     var
-        JobJnlManagement: Codeunit 34002120;
+        JobJnlManagement: Codeunit 55761;
         JobDescription: Text[50];
         AccName: Text[50];
         CurrentJnlBatchName: Code[10];

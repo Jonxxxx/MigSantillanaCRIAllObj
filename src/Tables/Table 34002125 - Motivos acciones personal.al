@@ -1,4 +1,4 @@
-table 34002125 "Motivos acciones personal"
+table 55766 "Motivos acciones personal"
 {
     Caption = 'Reason personnel action';
     DataPerCompany = false;
@@ -46,6 +46,6 @@ table 34002125 "Motivos acciones personal"
     }
 
     var
-        Incentivo: Record 34002126;
+        Incentivo: Record 55767;
 }
 

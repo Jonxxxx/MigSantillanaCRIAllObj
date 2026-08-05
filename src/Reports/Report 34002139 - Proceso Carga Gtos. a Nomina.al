@@ -1,4 +1,4 @@
-report 34002139 "Proceso Carga Gtos. a Nomina"
+report 55780 "Proceso Carga Gtos. a Nomina"
 {
     ProcessingOnly = true;
 
@@ -131,9 +131,9 @@ report 34002139 "Proceso Carga Gtos. a Nomina"
     }
 
     var
-        ConfNomina: Record 34002103;
+        ConfNomina: Record 55744;
         GLE: Record 17;
-        PF: Record 34002115;
+        PF: Record 55756;
         DSE: Record 480;
         DSE2: Record 480;
         CodDimension: Code[20];

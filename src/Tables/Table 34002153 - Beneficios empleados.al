@@ -1,4 +1,4 @@
-table 34002153 "Beneficios empleados"
+table 55794 "Beneficios empleados"
 {
     Caption = 'Employee benefits';
 
@@ -64,7 +64,7 @@ table 34002153 "Beneficios empleados"
     }
 
     var
-        Datosadicionales: Page 34002146;
-        Datosadic: Record 34002151;
+        Datosadicionales: Page 55787;
+        Datosadic: Record 55792;
 }
 

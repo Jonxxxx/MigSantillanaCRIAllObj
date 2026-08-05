@@ -1,4 +1,4 @@
-codeunit 34002107 Calculadora
+codeunit 55748 Calculadora
 {
     // Calcula el valor de una formula en notacion polaca inversa del fichero POLACA
     // y lo almacena en la variable resultado del fichero CONCEPTOS
@@ -70,10 +70,10 @@ codeunit 34002107 Calculadora
     end;
 
     var
-        Reg_tokens: Record 34002142;
-        Reg_Polaca: Record 34002143;
-        Reg_Conceptos: Record 34002144;
-        Conceptossalariales: Record 34002111;
+        Reg_tokens: Record 55783;
+        Reg_Polaca: Record 55784;
+        Reg_Conceptos: Record 55785;
+        Conceptossalariales: Record 55752;
         Pila: array[10] of Decimal;
         i: Integer;
 }

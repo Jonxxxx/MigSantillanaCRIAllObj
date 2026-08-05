@@ -1,8 +1,8 @@
-page 34002115 "Ficha Acciones de personal"
+page 55756 "Ficha Acciones de personal"
 {
     DeleteAllowed = false;
     PageType = Card;
-    SourceTable = 34002133;
+    SourceTable = 55774;
 
     layout
     {
@@ -468,7 +468,7 @@ page 34002115 "Ficha Acciones de personal"
 
                     trigger OnAction()
                     var
-                        AP: Record 34002133;
+                        AP: Record 55774;
                     begin
                         COMMIT;
                         TESTFIELD("Revisado por");
@@ -520,35 +520,35 @@ page 34002115 "Ficha Acciones de personal"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         HumanResSetup: Record 5218;
         Emp: Record 5200;
         Emp2: Record 5200;
-        Usuariosautorizan: Record 34002154;
-        EmpCotiza: Record 34002100;
-        Cuentas: Record 34002108;
-        PerfSal: Record 34002115;
-        PerfSal2: Record 34002115;
-        PerfilSalarioxCargo: Record 34002113;
+        Usuariosautorizan: Record 55795;
+        EmpCotiza: Record 55741;
+        Cuentas: Record 55749;
+        PerfSal: Record 55756;
+        PerfSal2: Record 55756;
+        PerfilSalarioxCargo: Record 55754;
         Msg001: Label 'The action has been registered successfully';
         Msg002: Label 'Are you sure you want to void the %1?';
         Msg003: Label 'Action sucessfuly voided';
         Msg004: Label 'The %1 %2 does not have marked %3 and/or %4. Do you wish to continue?';
         Err001: Label 'Userid %1 does not have the permission to approbe';
         Err002: Label 'The salary profile for the %1 position must be configured before proceeding';
-        HistAccionesdepersonal: Record 34002159;
-        Cont: Record 34002109;
-        Cargos: Record 34002110;
-        Tiposdeaccionespersonal: Record 34002114;
+        HistAccionesdepersonal: Record 55800;
+        Cont: Record 55750;
+        Cargos: Record 55751;
+        Tiposdeaccionespersonal: Record 55755;
         EmploymentContract: Record 5211;
         Candidato: Record 34002164;
-        HistSalario: Record 34002149;
-        HistSalario2: Record 34002149;
+        HistSalario: Record 55790;
+        HistSalario2: Record 55790;
         Numeradorescomunes: Record 34002182;
-        Seleccionbeneficios: Record 34002156;
-        Beneficiosempleados: Record 34002153;
+        Seleccionbeneficios: Record 55797;
+        Beneficiosempleados: Record 55794;
         Miembroscooperativa: Record 34002195;
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         NoSeriesMgt: Codeunit "No. Series";
         [InDataSet]
         EditaSalario: Boolean;
@@ -568,7 +568,7 @@ page 34002115 "Ficha Acciones de personal"
 
     local procedure EnableFields()
     var
-        Tiposdeaccionespersonal: Record 34002114;
+        Tiposdeaccionespersonal: Record 55755;
     begin
         IF "Tipo de accion" = 0 THEN
             EXIT;
@@ -917,7 +917,7 @@ page 34002115 "Ficha Acciones de personal"
 
     local procedure InsertaSelBeneficios()
     var
-        BeneficiosLab: Record 34002152;
+        BeneficiosLab: Record 55793;
     begin
         Seleccionbeneficios.RESET;
         Seleccionbeneficios.SETRANGE("Cod. Empleado", "No. empleado");

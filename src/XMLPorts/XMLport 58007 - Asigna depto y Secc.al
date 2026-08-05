@@ -157,10 +157,10 @@ xmlport 55435 "Asigna depto y Secc"
     var
         Empl: Record 5200;
 
-        esqsal: Record 34002115;
-        contra: Record 34002109;
-        CARGOS: Record 34002110;
-        Depart: Record 34002135;
-        SubDe: Record 34002136;
+        esqsal: Record 55756;
+        contra: Record 55750;
+        CARGOS: Record 55751;
+        Depart: Record 55776;
+        SubDe: Record 55777;
 }
 

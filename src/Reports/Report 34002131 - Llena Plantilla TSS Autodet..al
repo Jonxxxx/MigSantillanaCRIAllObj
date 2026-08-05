@@ -1,4 +1,4 @@
-report 34002131 "Llena Plantilla TSS Autodet."
+report 55772 "Llena Plantilla TSS Autodet."
 {
     // Tipo de novedad
     //   IN = Ingreso
@@ -16,7 +16,7 @@ report 34002131 "Llena Plantilla TSS Autodet."
         dataitem(Employee; 5200)
         {
             DataItemTableView = SORTING("No.");
-            dataitem("Historico Cab. nomina"; 34002117)
+            dataitem("Historico Cab. nomina"; 55758)
             {
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado");
@@ -449,21 +449,21 @@ report 34002131 "Llena Plantilla TSS Autodet."
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Empl: Record 5200;
-        Empresa: Record 34002100;
-        CabNomina: Record 34002117;
-        LinNomina: Record 34002118;
-        EmpRel: Record 34002150;
+        Empresa: Record 55741;
+        CabNomina: Record 55758;
+        LinNomina: Record 55759;
+        EmpRel: Record 55791;
         Fecha: Record 2000000007;
         ExcelBuf: Record "Excel Buffer" temporary;
         ExcelWorkbookBuf: Record "Excel Buffer" temporary;
-        BKSaldosFavor: Record 34002130;
-        SaldosFavor: Record 34002128;
+        BKSaldosFavor: Record 55771;
+        SaldosFavor: Record 55769;
         CauseofAbsence: Record 5206;
-        Conceptossalariales: Record 34002111;
-        Tiposdenominas: Record 34002158;
-        FormatosLegales: Codeunit 34002135;
+        Conceptossalariales: Record 55752;
+        Tiposdenominas: Record 55799;
+        FormatosLegales: Codeunit 55776;
         ExcelTemplateTempBlob: Codeunit "Temp Blob";
         ExcelResultTempBlob: Codeunit "Temp Blob";
         FileName: Text[250];

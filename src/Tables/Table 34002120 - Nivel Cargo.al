@@ -1,4 +1,4 @@
-table 34002120 "Nivel Cargo"
+table 55761 "Nivel Cargo"
 {
     Caption = 'Job type levels';
     DataPerCompany = false;

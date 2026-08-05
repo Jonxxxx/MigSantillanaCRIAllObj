@@ -1,4 +1,4 @@
-report 34002138 "Genera Diario Proyectos - Fijo"
+report 55779 "Genera Diario Proyectos - Fijo"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Genera Diario Proyectos - Fijo.rdl';
@@ -195,7 +195,7 @@ report 34002138 "Genera Diario Proyectos - Fijo"
     }
 
     var
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
         Fecha: Record 2000000007;
         TrabajosEmpl_por_proyectosCaptionLbl: Label 'Generate Job Journal from employees distribution';
         Total_Para_CaptionLbl: Label 'Total for ';

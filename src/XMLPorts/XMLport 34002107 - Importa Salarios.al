@@ -1,4 +1,4 @@
-xmlport 34002107 "Importa Salarios"
+xmlport 55748 "Importa Salarios"
 {
     Direction = Import;
     Format = VariableText;
@@ -53,6 +53,6 @@ xmlport 34002107 "Importa Salarios"
 
     var
         Empl: Record 5200;
-        esqsal: Record 34002115;
+        esqsal: Record 55756;
 }
 

@@ -1,4 +1,4 @@
-report 34002148 "Genera Calendario"
+report 55789 "Genera Calendario"
 {
     ProcessingOnly = true;
 
@@ -75,7 +75,7 @@ report 34002148 "Genera Calendario"
     var
         Date: Record 2000000007;
         Date2: Record 2000000007;
-        Calend: Record 34002134;
+        Calend: Record 55775;
         Ano: Integer;
         SabadosNoLaborables: Boolean;
         Cont: Integer;

@@ -1,4 +1,4 @@
-table 34002156 "Seleccion beneficios"
+table 55797 "Seleccion beneficios"
 {
     Caption = 'Benefits selection';
 
@@ -65,6 +65,6 @@ table 34002156 "Seleccion beneficios"
     }
 
     var
-        BeneficiosLab: Record 34002152;
+        BeneficiosLab: Record 55793;
 }
 

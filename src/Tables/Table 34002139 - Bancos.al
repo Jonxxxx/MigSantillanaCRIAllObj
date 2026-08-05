@@ -1,6 +1,6 @@
-table 34002139 Bancos
+table 55780 Bancos
 {
-    LookupPageID = 34002152;
+    LookupPageID = 55793;
 
     fields
     {

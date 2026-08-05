@@ -1,7 +1,7 @@
 page 34002162 "Calendario Anual"
 {
     PageType = List;
-    SourceTable = 34002134;
+    SourceTable = 55775;
 
     layout
     {
@@ -76,8 +76,8 @@ page 34002162 "Calendario Anual"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002147 is unavailable; the current object with this ID is not a report.
-                    // Original code: RunObject = Report 34002147;
+                    // TODO: Manual review - Custom report 55788 is unavailable; the current object with this ID is not a report.
+                    // Original code: RunObject = Report 55788;
                 }
                 action(Hollydays)
                 {

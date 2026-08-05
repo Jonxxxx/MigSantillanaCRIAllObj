@@ -1,10 +1,10 @@
-page 34002111 "Lista Acciones de personal"
+page 55752 "Lista Acciones de personal"
 {
     Caption = 'Personnel activities list';
     CardPageID = "Ficha Acciones de personal";
     Editable = false;
     PageType = List;
-    SourceTable = 34002133;
+    SourceTable = 55774;
 
     layout
     {
@@ -178,7 +178,7 @@ page 34002111 "Lista Acciones de personal"
                     ApplicationArea = All;
                     Caption = 'Ficha';
                     ToolTip = 'Ficha';
-                    RunObject = Page 34002140;
+                    RunObject = Page 55781;
                     ShortCutKey = 'Shift+F7';
                 }
                 action("C&omentarios")
@@ -186,8 +186,8 @@ page 34002111 "Lista Acciones de personal"
                     ApplicationArea = All;
                     Caption = 'C&omentarios';
                     ToolTip = 'C&omentarios';
-                    // TODO: Manual review - Custom page 34002156 cannot be verified in the current repository or dependency symbols.
-                    // Original code: RunObject = Page 34002156;
+                    // TODO: Manual review - Custom page 55797 cannot be verified in the current repository or dependency symbols.
+                    // Original code: RunObject = Page 55797;
                 }
             }
         }

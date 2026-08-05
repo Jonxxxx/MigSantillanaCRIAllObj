@@ -1,4 +1,4 @@
-page 34002138 "Lista Mov. CxC Empleados"
+page 55779 "Lista Mov. CxC Empleados"
 {
     CardPageID = "Historico Prestamos";
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 34002138 "Lista Mov. CxC Empleados"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002146;
+    SourceTable = 55787;
 
     layout
     {
@@ -144,9 +144,9 @@ page 34002138 "Lista Mov. CxC Empleados"
 
                     trigger OnAction()
                     var
-                        // TODO: Manual review - Custom report 34002142 is unavailable as the required object type.
-                        // Original code: CierraPrestamo: Report 34002142;
-                        HCP: Record 34002146;
+                        // TODO: Manual review - Custom report 55783 is unavailable as the required object type.
+                        // Original code: CierraPrestamo: Report 55783;
+                        HCP: Record 55787;
                     begin
                         CurrPage.SETSELECTIONFILTER(HCP);
                         // TODO: Manual review - The custom Cierra Prestamos report is unavailable in the current repository.

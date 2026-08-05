@@ -1,4 +1,4 @@
-report 34002159 "Nominas Totales X Departamento"
+report 55800 "Nominas Totales X Departamento"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Nominas Totales X Departamento.rdl';
@@ -6,7 +6,7 @@ report 34002159 "Nominas Totales X Departamento"
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             PrintOnlyIfDetail = true;
@@ -29,7 +29,7 @@ report 34002159 "Nominas Totales X Departamento"
             column(Payroll_s_ReportCaption; Payroll_s_ReportCaptionLbl)
             {
             }
-            dataitem("Historico Lin. nomina"; 34002118)
+            dataitem("Historico Lin. nomina"; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "No. Documento" = FIELD("No. Documento"),
@@ -80,8 +80,8 @@ report 34002159 "Nominas Totales X Departamento"
     }
 
     var
-        ConfEmpresa: Record 34002100;
-        rDepto: Record 34002135;
+        ConfEmpresa: Record 55741;
+        rDepto: Record 55776;
         TextoEncabezado: array[20] of Text[60];
         Valor: array[20] of Decimal;
         TotalIngresos: Decimal;

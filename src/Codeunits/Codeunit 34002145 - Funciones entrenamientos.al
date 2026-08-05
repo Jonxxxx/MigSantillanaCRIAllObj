@@ -1,18 +1,18 @@
-codeunit 34002145 "Funciones entrenamientos"
+codeunit 55786 "Funciones entrenamientos"
 {
-    TableNo = 34002117;
+    TableNo = 55758;
 
     trigger OnRun()
     begin
     end;
 
     var
-        GlobalRec: Record 34002117;
-        Historico: Record 34002117;
+        GlobalRec: Record 55758;
+        Historico: Record 55758;
         Emp: Record 5200;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         UserSetup: Record 91;
-        RepresentantesEmpresa: Record 34002102;
+        RepresentantesEmpresa: Record 55743;
         Counter: Integer;
         Path: Text[250];
         UseAttachment: Boolean;

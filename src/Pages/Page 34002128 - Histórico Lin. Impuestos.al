@@ -1,11 +1,11 @@
-page 34002128 "Historico Lin. Impuestos"
+page 55769 "Historico Lin. Impuestos"
 {
     AutoSplitKey = true;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     PageType = ListPart;
-    SourceTable = 34002122;
+    SourceTable = 55763;
 
     layout
     {
@@ -90,7 +90,7 @@ page 34002128 "Historico Lin. Impuestos"
 
                     trigger OnAction()
                     begin
-                        //This functionality was copied from page #34002127. Unsupported part was commented. Please check it.
+                        //This functionality was copied from page #55768. Unsupported part was commented. Please check it.
                         /*CurrPage.HistLinNom.FORM.*/
                         _ShowDimensions;
 

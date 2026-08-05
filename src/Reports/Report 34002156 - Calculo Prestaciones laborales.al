@@ -1,4 +1,4 @@
-report 34002156 "Calculo Prestaciones laborales"
+report 55797 "Calculo Prestaciones laborales"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Calculo Prestaciones laborales.rdl';
@@ -294,7 +294,7 @@ report 34002156 "Calculo Prestaciones laborales"
             column(Pago_Dias_Adci_Captionlbl; PagoDiasAdi_Captionlbl)
             {
             }
-            dataitem("Perfil Salarial"; 34002115)
+            dataitem("Perfil Salarial"; 55756)
             {
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado", "Perfil salarial", "Concepto salarial", Cargo)
@@ -520,20 +520,20 @@ report 34002156 "Calculo Prestaciones laborales"
 
     var
         ConfCG: Record 98;
-        Categor: Record 34002110;
-        RegRegUdadCotiz: Record 34002100;
-        Bco: Record 34002139;
+        Categor: Record 55751;
+        RegRegUdadCotiz: Record 55741;
+        Bco: Record 55780;
         Fecha: Record 2000000007;
-        HistoricoSalarios: Record 34002149;
-        Depto: Record 34002135;
-        Contrato: Record 34002109;
-        HistCabNom: Record 34002117;
-        HistLinNom: Record 34002118;
-        PerfilSal: Record 34002115;
-        ConfNominas: Record 34002103;
-        Tiposdenominas: Record 34002158;
-        TiposdenominasReg: Record 34002158;
-        CalculoFechas: Codeunit 34002104;
+        HistoricoSalarios: Record 55790;
+        Depto: Record 55776;
+        Contrato: Record 55750;
+        HistCabNom: Record 55758;
+        HistLinNom: Record 55759;
+        PerfilSal: Record 55756;
+        ConfNominas: Record 55744;
+        Tiposdenominas: Record 55799;
+        TiposdenominasReg: Record 55799;
+        CalculoFechas: Codeunit 55745;
         Salario: Decimal;
         FechaCalculo: Date;
         GAno: Integer;
@@ -975,7 +975,7 @@ report 34002156 "Calculo Prestaciones laborales"
 
     local procedure CalcularDtosLegales()
     var
-        DeduccGob: Record 34002129;
+        DeduccGob: Record 55770;
     begin
         /*
         IF Employee."Excluido Cotizacion TSS" THEN

@@ -1,9 +1,9 @@
-table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
+table 55746 "Dist. Ctas. Gpo. Cont. Empl."
 {
     Caption = 'Distribucion Ctas. Gpo. Contable Empleados';
     DataCaptionFields = "Codigo";
-    DrillDownPageID = 34002140;
-    LookupPageID = 34002140;
+    DrillDownPageID = 55781;
+    LookupPageID = 55781;
 
     fields
     {
@@ -130,7 +130,7 @@ table 34002105 "Dist. Ctas. Gpo. Cont. Empl."
     }
 
     var
-        ConfNom: Record 34002103;
-        ConceptosSal: Record 34002111;
+        ConfNom: Record 55744;
+        ConceptosSal: Record 55752;
 }
 

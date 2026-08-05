@@ -1,13 +1,13 @@
-report 34002117 "Recibo Pago Sobres"
+report 55758 "Recibo Pago Sobres"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Pago Sobres.rdl';
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             CalcFields = "Total Ingresos";
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
@@ -117,7 +117,7 @@ report 34002117 "Recibo Pago Sobres"
             column(Historico_Cab__nomina_Tipo_Nomina; "Tipo Nomina")
             {
             }
-            dataitem(Ingresos; 34002118)
+            dataitem(Ingresos; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo nomina" = FIELD("Tipo Nomina"),
@@ -168,7 +168,7 @@ report 34002117 "Recibo Pago Sobres"
                 {
                 }
             }
-            dataitem(Deducciones; 34002118)
+            dataitem(Deducciones; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo nomina" = FIELD("Tipo Nomina"),
@@ -261,7 +261,7 @@ report 34002117 "Recibo Pago Sobres"
     var
         rEmpleado: Record 5200;
         rEmpresa: Record 79;
-        rCargos: Record 34002110;
+        rCargos: Record 55751;
         NoSobre: Integer;
         No__empleado___________NombreCaptionLbl: Label 'Employee';
         rEmpleado__Document_ID_CaptionLbl: Label 'Document';

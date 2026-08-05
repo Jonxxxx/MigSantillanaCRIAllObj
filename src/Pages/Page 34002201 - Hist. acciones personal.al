@@ -1,7 +1,7 @@
 page 34002201 "Hist. acciones personal"
 {
     PageType = List;
-    SourceTable = 34002159;
+    SourceTable = 55800;
 
     layout
     {

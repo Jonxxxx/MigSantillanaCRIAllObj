@@ -582,7 +582,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     procedure FinishWizard()
     var
         ProfileQuestionnaireLine: Record 34002185;
-        ProfileMgt: Codeunit 34002122;
+        ProfileMgt: Codeunit 55763;
         NextLineNo: Integer;
         QuestionLineNo: Integer;
     begin

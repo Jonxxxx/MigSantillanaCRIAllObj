@@ -2,12 +2,12 @@ tableextension 55078 EXCCRIEmploymentContract extends "Employment Contract"
 {
     fields
     {
-        field(34002100; "Undefined"; Boolean)
+        field(55741; "Undefined"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002101; "Duracion"; DateFormula)
+        field(55742; "Duracion"; DateFormula)
         {
             DataClassification = CustomerContent;
         }

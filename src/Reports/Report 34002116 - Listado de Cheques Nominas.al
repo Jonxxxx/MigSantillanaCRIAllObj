@@ -1,4 +1,4 @@
-report 34002116 "Listado de Cheques Nominas"
+report 55757 "Listado de Cheques Nominas"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado de Cheques Nominas.rdl';
@@ -6,7 +6,7 @@ report 34002116 "Listado de Cheques Nominas"
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             CalcFields = "Total Ingresos";
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
@@ -187,10 +187,10 @@ report 34002116 "Listado de Cheques Nominas"
     }
 
     var
-        ConfNom: Record 34002103;
-        EmpresasCot: Record 34002100;
+        ConfNom: Record 55744;
+        EmpresasCot: Record 55741;
         GenJnlLine: Record 81;
-        Tiposdenominas: Record 34002158;
+        Tiposdenominas: Record 55799;
         GenerarCK: Boolean;
         NoLin: Integer;
         Text001: Label 'Payment of %1 for period %2 - %3';

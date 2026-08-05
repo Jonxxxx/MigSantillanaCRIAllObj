@@ -4,7 +4,7 @@ report 34002180 "Asigna Puestos a Perfil Sal."
 
     dataset
     {
-        dataitem("Perfil Salario x Cargo"; 34002113)
+        dataitem("Perfil Salario x Cargo"; 55754)
         {
             DataItemTableView = SORTING("Puesto de Trabajo", "Concepto salarial", "No. de Orden")
                                 WHERE("Puesto de Trabajo" = CONST('ASIST ADM'));
@@ -44,8 +44,8 @@ report 34002180 "Asigna Puestos a Perfil Sal."
     }
 
     var
-        Cargo: Record 34002110;
-        Conceptos: Record 34002111;
-        RPerfil: Record 34002113;
+        Cargo: Record 55751;
+        Conceptos: Record 55752;
+        RPerfil: Record 55754;
 }
 

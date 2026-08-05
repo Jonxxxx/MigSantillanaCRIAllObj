@@ -1,4 +1,4 @@
-report 34002125 "Listado de vacaciones personal"
+report 55766 "Listado de vacaciones personal"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado de vacaciones personal.rdl';
@@ -311,18 +311,18 @@ report 34002125 "Listado de vacaciones personal"
     }
 
     var
-        ConfNominas: Record 34002103;
-        Contrato: Record 34002109;
+        ConfNominas: Record 55744;
+        Contrato: Record 55750;
         Fecha: Record 2000000007;
-        LinPerfSalarial: Record 34002115;
-        LinPerfSalarial2: Record 34002115;
-        HLN: Record 34002118;
+        LinPerfSalarial: Record 55756;
+        LinPerfSalarial2: Record 55756;
+        HLN: Record 55759;
         Mes: Option Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre,"Ano completo";
         ConceptoVac: Code[10];
         MesTrabajo: Integer;
         AnoTrabajo: Integer;
         FechaFin: Date;
-        CalculoFechas: Codeunit 34002104;
+        CalculoFechas: Codeunit 55745;
         Anos: Integer;
         Meses: Integer;
         Dias: Integer;

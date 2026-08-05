@@ -1,4 +1,4 @@
-codeunit 34002108 "Imprime en PDF"
+codeunit 55749 "Imprime en PDF"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -11,7 +11,7 @@ codeunit 34002108 "Imprime en PDF"
     // 001       07-03-2022    FES           SANTINAV-4392: Configuracion de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
     // 002       05-05-2023    DAC           SANTINAV-4573 Configurar mensaje de correo para envio de comprobante de nomina
 
-    TableNo = 34002117;
+    TableNo = 55758;
 
     trigger OnRun()
     begin
@@ -21,10 +21,10 @@ codeunit 34002108 "Imprime en PDF"
     end;
 
     var
-        GlobalRec: Record 34002117;
-        Historico: Record 34002117;
+        GlobalRec: Record 55758;
+        Historico: Record 55758;
         Emp: Record 5200;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Counter: Integer;
         UseAttachment: Boolean;
         _ArchivoPDF: Text[150];
@@ -37,6 +37,7 @@ codeunit 34002108 "Imprime en PDF"
         TextoBody: Text[1024];
         Pagado_Periodo: Label 'Dear contribuort % 1, by means of this email you are notified that you have made the payment of your number corresponding to the period between% 2 and% 3. Attached is the Record 34002100of payment. If you have any questions, please contact the person in charge of the payroll.';
         El_Importe: Label 'The net amount of your payment has already been transferred to your bank account.If you have any questions about your payment, please contact the person in charge of payroll.';
+
     local procedure Code()
     var
         CarriageReturn: Char;

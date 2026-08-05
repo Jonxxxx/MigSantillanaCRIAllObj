@@ -56,7 +56,7 @@ page 34002240 "DSNOM Nomina Activities"
 
     var
         // TODO: Manual review - The verified payroll codeunit declaration has no caller on this cue page.
-        // Original code: FuncionesNom: Codeunit 34002104;
+        // Original code: FuncionesNom: Codeunit 55745;
         Fecha: Record 2000000007;
 }
 

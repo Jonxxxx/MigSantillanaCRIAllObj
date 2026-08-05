@@ -1,4 +1,4 @@
-table 34002154 "Seguridad Usuarios RH"
+table 55795 "Seguridad Usuarios RH"
 {
     Caption = 'HR User permission';
     DrillDownPageID = 34002161;

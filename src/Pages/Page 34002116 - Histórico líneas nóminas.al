@@ -1,8 +1,8 @@
-page 34002116 "Historico lineas nominas"
+page 55757 "Historico lineas nominas"
 {
     Caption = 'Lines';
     PageType = ListPart;
-    SourceTable = 34002118;
+    SourceTable = 55759;
 
     layout
     {

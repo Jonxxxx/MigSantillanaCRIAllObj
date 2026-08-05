@@ -2,7 +2,7 @@ page 34002184 "Param. Income tax - Empleado"
 {
     Caption = 'Employee - Income tax exceptions';
     PageType = List;
-    SourceTable = 34002116;
+    SourceTable = 55757;
 
     layout
     {

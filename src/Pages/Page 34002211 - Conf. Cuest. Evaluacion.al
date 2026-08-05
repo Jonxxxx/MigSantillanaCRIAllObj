@@ -280,7 +280,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
             END;
         END;
 
-        // TODO: Manual review - Custom codeunit 34002123 is unavailable, and current Profile Management has no verified GetQuestionnaire replacement.
+        // TODO: Manual review - Custom codeunit 55764 is unavailable, and current Profile Management has no verified GetQuestionnaire replacement.
         // Original code preserved below.
         // IF CurrentQuestionsChecklistCode = '' THEN
         //     CurrentQuestionsChecklistCode := ProfileManagement.GetQuestionnaire;
@@ -294,8 +294,8 @@ page 34002211 "Conf. Cuest. Evaluacion"
     var
         Text000: Label 'Details only available for questions.';
         ProfileQuestnHeader: Record 34002184;
-        // TODO: Manual review - Custom codeunit 34002123 is unavailable as the required object type.
-        // Original code: ProfileManagement: Codeunit 34002123;
+        // TODO: Manual review - Custom codeunit 55764 is unavailable as the required object type.
+        // Original code: ProfileManagement: Codeunit 55764;
         CurrentQuestionsChecklistCode: Code[20];
         Text001: Label 'Where-Used only available for answers.';
         CaptionExpr: Text[100];

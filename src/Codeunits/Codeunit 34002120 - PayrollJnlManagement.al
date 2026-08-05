@@ -1,4 +1,4 @@
-codeunit 34002120 PayrollJnlManagement
+codeunit 55761 PayrollJnlManagement
 {
     Permissions = TableData 209 = imd,
                   TableData 237 = imd,

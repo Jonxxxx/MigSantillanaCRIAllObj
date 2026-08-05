@@ -1,11 +1,11 @@
-report 34002104 "Nomina preliminar"
+report 55745 "Nomina preliminar"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Nomina preliminar.rdl';
 
     dataset
     {
-        dataitem("Perfil Salarial"; 34002115)
+        dataitem("Perfil Salarial"; 55756)
         {
             DataItemTableView = SORTING("Concepto salarial");
             RequestFilterFields = "Concepto salarial", "Tipo de nomina";
@@ -194,7 +194,7 @@ report 34002104 "Nomina preliminar"
     var
         rFecha: Record 2000000007;
         rEmpleado: Record 5200;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         DiasAusencia: Decimal;
         FechaIniAusencia: Date;
         FechafinAusencia: Date;

@@ -1,7 +1,7 @@
-page 34002140 "Gpo. Contable Empleados"
+page 55781 "Gpo. Contable Empleados"
 {
     PageType = List;
-    SourceTable = 34002104;
+    SourceTable = 55745;
 
     layout
     {
@@ -35,7 +35,7 @@ page 34002140 "Gpo. Contable Empleados"
                 Image = Setup;
                 Promoted = true;
                 PromotedCategory = Process;
-                RunObject = Page 34002141;
+                RunObject = Page 55782;
                 RunPageLink = Codigo = FIELD(Codigo);
             }
         }

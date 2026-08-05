@@ -1,10 +1,10 @@
-page 34002158 "Tipos de nominas"
+page 55799 "Tipos de nominas"
 {
     AdditionalSearchTerms = 'Payroll type';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Payroll type';
     PageType = List;
-    SourceTable = 34002158;
+    SourceTable = 55799;
     UsageCategory = Administration;
 
     layout

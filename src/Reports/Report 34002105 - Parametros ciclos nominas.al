@@ -1,4 +1,4 @@
-report 34002105 "Parametros ciclos nominas"
+report 55746 "Parametros ciclos nominas"
 {
     Caption = 'Payroll cicle parameters';
     ProcessingOnly = true;
@@ -99,9 +99,9 @@ report 34002105 "Parametros ciclos nominas"
     end;
 
     var
-        ConfNomina: Record 34002103;
-        PCN: Record 34002124;
-        Calendar: Record 34002134;
+        ConfNomina: Record 55744;
+        PCN: Record 55765;
+        Calendar: Record 55775;
         Fecha: Record 2000000007;
         Ventana: Dialog;
         FrecuenciaPago: Option Diaria,Semanal,"Bi-Semanal",Quincenal,Mensual,Anual;

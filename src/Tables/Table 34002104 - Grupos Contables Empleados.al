@@ -1,8 +1,8 @@
-table 34002104 "Grupos Contables Empleados"
+table 55745 "Grupos Contables Empleados"
 {
     DataCaptionFields = "Codigo";
-    DrillDownPageID = 34002140;
-    LookupPageID = 34002140;
+    DrillDownPageID = 55781;
+    LookupPageID = 55781;
 
     fields
     {

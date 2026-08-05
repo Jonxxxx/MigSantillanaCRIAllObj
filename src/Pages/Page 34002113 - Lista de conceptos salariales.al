@@ -1,8 +1,8 @@
-page 34002113 "Lista de conceptos salariales"
+page 55754 "Lista de conceptos salariales"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34002111;
+    SourceTable = 55752;
 
     layout
     {
@@ -78,7 +78,7 @@ page 34002113 "Lista de conceptos salariales"
                 Enabled = false;
                 Promoted = true;
                 PromotedCategory = Process;
-                RunObject = Page 34002110;
+                RunObject = Page 55751;
                 RunPageLink = "Shortcut Dimension" = FIELD("Shortcut Dimension"),
                               Descripcion = FIELD(Descripcion);
                 Visible = false;
@@ -92,8 +92,8 @@ page 34002113 "Lista de conceptos salariales"
                 Enabled = false;
                 Promoted = true;
                 PromotedCategory = Process;
-                // TODO: Manual review - Custom report 34002102 is unavailable; the current object with this ID is not a report.
-                // Original code: RunObject = Report 34002102;
+                // TODO: Manual review - Custom report 55743 is unavailable; the current object with this ID is not a report.
+                // Original code: RunObject = Report 55743;
                 Visible = false;
             }
         }

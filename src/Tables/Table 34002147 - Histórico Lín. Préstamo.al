@@ -1,7 +1,7 @@
-table 34002147 "Historico Lin. Prestamo"
+table 55788 "Historico Lin. Prestamo"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 34002135;
-    //IGNORAR: Page no existe LookupPageID = 34002135;
+    //IGNORAR: Page no existe DrillDownPageID = 55776;
+    //IGNORAR: Page no existe LookupPageID = 55776;
 
     fields
     {
@@ -95,6 +95,6 @@ table 34002147 "Historico Lin. Prestamo"
     }
 
     var
-        HistLinPre: Record 34002147;
+        HistLinPre: Record 55788;
 }
 

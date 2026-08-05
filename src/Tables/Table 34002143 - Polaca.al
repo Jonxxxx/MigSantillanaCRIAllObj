@@ -1,19 +1,19 @@
-table 34002143 Polaca
+table 55784 Polaca
 {
 
     fields
     {
-        field(1;Formula;Text[80])
+        field(1; Formula; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Formula';
         }
-        field(2;Puntero;Integer)
+        field(2; Puntero; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Puntero';
         }
-        field(3;Token;Text[30])
+        field(3; Token; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Token';
@@ -22,7 +22,7 @@ table 34002143 Polaca
 
     keys
     {
-        key(Key1;Formula,Puntero)
+        key(Key1; Formula, Puntero)
         {
         }
     }

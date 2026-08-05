@@ -1,4 +1,4 @@
-report 34002155 "Carta preaviso"
+report 55796 "Carta preaviso"
 {
     RDLCLayout = 'src/ReportsLayout/Carta preaviso.rdl';
     WordLayout = 'src/ReportsLayout/Carta preaviso.docx';
@@ -111,7 +111,7 @@ report 34002155 "Carta preaviso"
 
     var
         ChkTransMgt: Report 34003010;
-        Representante: Record 34002102;
+        Representante: Record 55743;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

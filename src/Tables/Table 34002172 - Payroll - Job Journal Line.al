@@ -154,7 +154,7 @@ table 34002172 "Payroll - Job Journal Line"
 
             trigger OnValidate()
             var
-                ConceptoSal: Record 34002111;
+                ConceptoSal: Record 55752;
             begin
                 ConceptoSal.GET("Concepto salarial");
                 "Tipo concepto" := ConceptoSal."Tipo concepto";
@@ -307,7 +307,7 @@ table 34002172 "Payroll - Job Journal Line"
         Cust: Record 18;
         Res: Record 156;
         ResUnitofMeasure: Record 205;
-        Empresa: Record 34002100;
+        Empresa: Record 55741;
         Empleados: Record 5200;
         WorkType: Record 200;
         DimMgt: Codeunit 408;

@@ -78,7 +78,7 @@ page 34002189 "DSNOM Payroll Role Center"
                 ApplicationArea = All;
                 Caption = 'Create employee loan';
                 ToolTip = 'Create employee loan';
-                RunObject = Page 34002139;
+                RunObject = Page 55780;
             }
             action(Elegibles)
             {
@@ -92,7 +92,7 @@ page 34002189 "DSNOM Payroll Role Center"
                 ApplicationArea = All;
                 Caption = 'Personnel activities list';
                 ToolTip = 'Personnel activities list';
-                RunObject = Page 34002111;
+                RunObject = Page 55752;
             }
         }
         area(processing)
@@ -110,7 +110,7 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Payroll process';
                         ToolTip = 'Payroll process';
                         Image = CalculateBalanceAccount;
-                        RunObject = Page 34002144;
+                        RunObject = Page 55785;
                     }
                     action(CtrolAsist)
                     {
@@ -118,7 +118,7 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Time and attendance';
                         ToolTip = 'Time and attendance';
                         Image = Timesheet;
-                        RunObject = Page 34002122;
+                        RunObject = Page 55763;
                     }
                     action("Post Payroll")
                     {
@@ -126,8 +126,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Post Payroll';
                         ToolTip = 'Post Payroll';
                         Image = Post;
-                        // TODO: Manual review - Custom report 34002124 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002124;
+                        // TODO: Manual review - Custom report 55765 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55765;
                     }
                     action("Send Payroll slip")
                     {
@@ -135,8 +135,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Send Payroll slip';
                         ToolTip = 'Send Payroll slip';
                         Image = SendTo;
-                        // TODO: Manual review - Custom report 34002114 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002114;
+                        // TODO: Manual review - Custom report 55755 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55755;
                     }
                     action("Generate Bank's file")
                     {
@@ -144,8 +144,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Generate Bank''s file';
                         ToolTip = 'Generate Bank''s file';
                         Image = TransferFunds;
-                        // TODO: Manual review - Custom report 34002121 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002121;
+                        // TODO: Manual review - Custom report 55762 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55762;
                     }
                     action("Post Payroll to G/L")
                     {
@@ -153,8 +153,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Post Payroll to G/L';
                         ToolTip = 'Post Payroll to G/L';
                         Image = PostInventoryToGL;
-                        // TODO: Manual review - Custom report 34002106 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002106;
+                        // TODO: Manual review - Custom report 55747 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55747;
                     }
                 }
                 group(Trainings)
@@ -209,7 +209,7 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Employee''s Tax Balance';
                         ToolTip = 'Employee''s Tax Balance';
                         Image = TaxDetail;
-                        RunObject = Page 34002148;
+                        RunObject = Page 55789;
                     }
                     action(AsignarFormula)
                     {
@@ -226,7 +226,7 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'General raises';
                         ToolTip = 'General raises';
                         Image = PaymentForecast;
-                        RunObject = Page 34002136;
+                        RunObject = Page 55777;
                     }
                     action(Cheques)
                     {
@@ -234,8 +234,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Payroll check''s report';
                         ToolTip = 'Payroll check''s report';
                         Image = Payment;
-                        // TODO: Manual review - Custom report 34002116 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002116;
+                        // TODO: Manual review - Custom report 55757 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55757;
                     }
                     action(cierraprest)
                     {
@@ -243,8 +243,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Finish loans';
                         ToolTip = 'Finish loans';
                         Image = Loaner;
-                        // TODO: Manual review - Custom report 34002142 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002142;
+                        // TODO: Manual review - Custom report 55783 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55783;
                     }
                     action("Envio IRM")
                     {
@@ -271,8 +271,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Image = Print;
                         Promoted = true;
                         PromotedCategory = "Report";
-                        // TODO: Manual review - Custom report 34002102 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002102;
+                        // TODO: Manual review - Custom report 55743 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55743;
                     }
                     action(ListadoNomxDepto)
                     {
@@ -282,8 +282,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Image = Print;
                         Promoted = true;
                         PromotedCategory = "Report";
-                        // TODO: Manual review - Custom report 34002103 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002103;
+                        // TODO: Manual review - Custom report 55744 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55744;
                     }
                     action(ValidaNom)
                     {
@@ -309,8 +309,8 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Fill SS template';
                         ToolTip = 'Fill SS template';
                         Image = Excel;
-                        // TODO: Manual review - Custom report 34002131 is unavailable as the required object type.
-                        // Original code: RunObject = Report 34002131;
+                        // TODO: Manual review - Custom report 55772 is unavailable as the required object type.
+                        // Original code: RunObject = Report 55772;
                     }
                     action(LlenaDGT)
                     {
@@ -331,8 +331,8 @@ page 34002189 "DSNOM Payroll Role Center"
                             Caption = 'Christmas salary report';
                             ToolTip = 'Christmas salary report';
                             Image = "Report";
-                            // TODO: Manual review - Custom report 34002119 is unavailable as the required object type.
-                            // Original code: RunObject = Report 34002119;
+                            // TODO: Manual review - Custom report 55760 is unavailable as the required object type.
+                            // Original code: RunObject = Report 55760;
                         }
                         action(ListaBonif)
                         {
@@ -340,8 +340,8 @@ page 34002189 "DSNOM Payroll Role Center"
                             Caption = 'Bonus report';
                             ToolTip = 'Bonus report';
                             Image = "Report";
-                            // TODO: Manual review - Custom report 34002126 is unavailable as the required object type.
-                            // Original code: RunObject = Report 34002126;
+                            // TODO: Manual review - Custom report 55767 is unavailable as the required object type.
+                            // Original code: RunObject = Report 55767;
                         }
                     }
                 }
@@ -464,14 +464,14 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Payroll Setup';
                     ToolTip = 'Payroll Setup';
-                    RunObject = Page 34002151;
+                    RunObject = Page 55792;
                 }
                 action(EmpCot)
                 {
                     ApplicationArea = All;
                     Caption = 'Company Setup';
                     ToolTip = 'Company Setup';
-                    RunObject = Page 34002100;
+                    RunObject = Page 55741;
                 }
             }
         }
@@ -578,7 +578,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Job Positions';
                     ToolTip = 'Job Positions';
-                    RunObject = Page 34002109;
+                    RunObject = Page 55750;
                 }
                 action(TiposSangre)
                 {
@@ -592,7 +592,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Reason personnel action';
                     ToolTip = 'Reason personnel action';
-                    RunObject = Page 34002103;
+                    RunObject = Page 55744;
                 }
                 action(Shift)
                 {
@@ -606,7 +606,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Benefits list';
                     ToolTip = 'Benefits list';
-                    RunObject = Page 34002159;
+                    RunObject = Page 55800;
                 }
                 action(Vacaciones)
                 {
@@ -634,7 +634,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'NivelesMT';
                     ToolTip = 'NivelesMT';
-                    RunObject = Page 34002118;
+                    RunObject = Page 55759;
                 }
                 action(Dispacidades)
                 {
@@ -649,7 +649,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Grouping area';
                     ToolTip = 'Grouping area';
-                    RunObject = Page 34002153;
+                    RunObject = Page 55794;
                 }
             }
             group("<Action100000016>")
@@ -691,7 +691,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     Caption = 'Payroll types';
                     ToolTip = 'Payroll types';
                     Image = setup;
-                    RunObject = Page 34002158;
+                    RunObject = Page 55799;
                 }
                 action(Deptos)
                 {
@@ -707,14 +707,14 @@ page 34002189 "DSNOM Payroll Role Center"
                     Caption = 'Job Positions';
                     ToolTip = 'Job Positions';
                     Image = setup;
-                    RunObject = Page 34002109;
+                    RunObject = Page 55750;
                 }
                 action(GposCont)
                 {
                     ApplicationArea = All;
                     Caption = 'Employee Posting Group';
                     ToolTip = 'Employee Posting Group';
-                    RunObject = Page 34002140;
+                    RunObject = Page 55781;
                 }
                 action("Conceptos salariales")
                 {
@@ -722,15 +722,15 @@ page 34002189 "DSNOM Payroll Role Center"
                     Caption = 'Wage''s Concepts';
                     ToolTip = 'Wage''s Concepts';
                     Image = setup;
-                    RunObject = Page 34002110;
+                    RunObject = Page 55751;
                 }
                 action(ConfListados)
                 {
                     ApplicationArea = All;
                     Caption = 'Reports Configuration';
                     ToolTip = 'Reports Configuration';
-                    // TODO: Manual review - Custom page 34002120 is unavailable as the required object type.
-                    // Original code: RunObject = Page 34002120;
+                    // TODO: Manual review - Custom page 55761 is unavailable as the required object type.
+                    // Original code: RunObject = Page 55761;
                 }
                 action(DimContab)
                 {
@@ -744,8 +744,8 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Init wage concepts';
                     ToolTip = 'Init wage concepts';
-                    // TODO: Manual review - Custom page 34002150 is unavailable as the required object type.
-                    // Original code: RunObject = Page 34002150;
+                    // TODO: Manual review - Custom page 55791 is unavailable as the required object type.
+                    // Original code: RunObject = Page 55791;
                 }
                 action(ControlAsistencia)
                 {
@@ -760,7 +760,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     Caption = 'ISR Tax';
                     ToolTip = 'ISR Tax';
                     Image = setup;
-                    RunObject = Page 34002155;
+                    RunObject = Page 55796;
                 }
                 action("Tipos de Cotizacion")
                 {
@@ -768,7 +768,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     Caption = 'Tipos de Cotizacion';
                     ToolTip = 'Tipos de Cotizacion';
                     Image = setup;
-                    RunObject = Page 34002154;
+                    RunObject = Page 55795;
                 }
             }
             group(History)
@@ -780,7 +780,7 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Posted Payroll';
                     ToolTip = 'Posted Payroll';
-                    RunObject = Page 34002123;
+                    RunObject = Page 55764;
                     RunPageMode = View;
                 }
                 action(PostedSS)
@@ -788,14 +788,14 @@ page 34002189 "DSNOM Payroll Role Center"
                     ApplicationArea = All;
                     Caption = 'Posted Employer''s Taxes ';
                     ToolTip = 'Posted Employer''s Taxes ';
-                    RunObject = Page 34002129;
+                    RunObject = Page 55770;
                 }
                 action(PostedLoans)
                 {
                     ApplicationArea = All;
                     Caption = 'History of Loans';
                     ToolTip = 'History of Loans';
-                    RunObject = Page 34002138;
+                    RunObject = Page 55779;
                 }
                 action(PostedPA)
                 {

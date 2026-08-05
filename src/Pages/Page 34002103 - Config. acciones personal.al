@@ -1,8 +1,8 @@
-page 34002103 "Config. acciones personal"
+page 55744 "Config. acciones personal"
 {
     Caption = 'Reason personnel action';
     PageType = List;
-    SourceTable = 34002114;
+    SourceTable = 55755;
 
     layout
     {
@@ -76,7 +76,7 @@ page 34002103 "Config. acciones personal"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002147;
+                    RunObject = Page 55788;
                     RunPageLink = "Tipo de accion" = FIELD("Tipo de accion");
                 }
             }

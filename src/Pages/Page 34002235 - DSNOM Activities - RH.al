@@ -169,7 +169,7 @@ page 34002235 "DSNOM Activities - RH"
     end;
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         Fecha: Record 2000000007;
 }
 

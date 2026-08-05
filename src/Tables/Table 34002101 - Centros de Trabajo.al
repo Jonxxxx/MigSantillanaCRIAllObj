@@ -1,6 +1,6 @@
-table 34002101 "Centros de Trabajo"
+table 55742 "Centros de Trabajo"
 {
-    LookupPageID = 34002101;
+    LookupPageID = 55742;
 
     fields
     {
@@ -90,7 +90,7 @@ table 34002101 "Centros de Trabajo"
     }
 
     var
-        EmpCotizacion: Record 34002100;
+        EmpCotizacion: Record 55741;
         cpostal: Record 225;
 }
 

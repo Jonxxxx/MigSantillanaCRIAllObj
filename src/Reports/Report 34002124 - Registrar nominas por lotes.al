@@ -1,4 +1,4 @@
-report 34002124 "Registrar nominas por lotes"
+report 55765 "Registrar nominas por lotes"
 {
     ProcessingOnly = true;
 
@@ -372,13 +372,13 @@ report 34002124 "Registrar nominas por lotes"
     end;
 
     var
-        ConfNomina: Record 34002103;
-        Calendar: Record 34002134;
+        ConfNomina: Record 55744;
+        Calendar: Record 55775;
         ContarEmpleados: Record 5200;
-        IntroLinPerfSal: Record 34002115;
-        PerfilSalarios: Record 34002115;
-        Contrato: Record 34002109;
-        TiposNom: Record 34002158;
+        IntroLinPerfSal: Record 55756;
+        PerfilSalarios: Record 55756;
+        Contrato: Record 55750;
+        TiposNom: Record 55799;
         Fecha: Record 2000000007;
         Ventana: Dialog;
         ACalcular: Decimal;
@@ -437,7 +437,7 @@ report 34002124 "Registrar nominas por lotes"
 
     local procedure ValidaFecha()
     var
-        PCB: Record 34002124;
+        PCB: Record 55765;
     begin
         TiposNom.GET(TipoNom);
 

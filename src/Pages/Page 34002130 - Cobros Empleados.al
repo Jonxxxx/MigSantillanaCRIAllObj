@@ -1,4 +1,4 @@
-page 34002130 "Cobros Empleados"
+page 55771 "Cobros Empleados"
 {
     PageType = List;
     SaveValues = true;
@@ -8,7 +8,7 @@ page 34002130 "Cobros Empleados"
     {
         area(content)
         {
-            part(LinsCobrosTrab; 34002131)
+            part(LinsCobrosTrab; 55772)
             {
             }
             field(TipoPeriodo; TipoPeriodo)

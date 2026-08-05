@@ -3,7 +3,7 @@ page 34002179 "Mov. Novedades"
     DataCaptionFields = "Tipo de accion", "Emitir documento";
     Editable = false;
     PageType = List;
-    SourceTable = 34002114;
+    SourceTable = 55755;
 
     layout
     {

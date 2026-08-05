@@ -1,8 +1,8 @@
-page 34002147 "Tipos de acciones de personal"
+page 55788 "Tipos de acciones de personal"
 {
     Caption = 'Actions Human resources';
     PageType = List;
-    SourceTable = 34002114;
+    SourceTable = 55755;
 
     layout
     {

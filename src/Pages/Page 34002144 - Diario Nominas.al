@@ -1,4 +1,4 @@
-page 34002144 "Diario Nominas"
+page 55785 "Diario Nominas"
 {
     Caption = 'Payroll journal';
     DeleteAllowed = false;
@@ -145,8 +145,8 @@ page 34002144 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002139 is unavailable.
-                    // Original code: RunObject = Report 34002139;
+                    // TODO: Manual review - Custom report 55780 is unavailable.
+                    // Original code: RunObject = Report 55780;
                 }
                 action("Calculate payroll")
                 {
@@ -157,8 +157,8 @@ page 34002144 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002124 is unavailable.
-                    // Original code: RunObject = Report 34002124;
+                    // TODO: Manual review - Custom report 55765 is unavailable.
+                    // Original code: RunObject = Report 55765;
                 }
                 action("Init Wedge")
                 {
@@ -168,8 +168,8 @@ page 34002144 "Diario Nominas"
                     Image = ApplyEntries;
                     Promoted = true;
                     PromotedCategory = Process;
-                    // TODO: Manual review - Custom report 34002130 is unavailable.
-                    // Original code: RunObject = Report 34002130;
+                    // TODO: Manual review - Custom report 55771 is unavailable.
+                    // Original code: RunObject = Report 55771;
                 }
 
                 action(CalculoIncentivoProy)
@@ -206,8 +206,8 @@ page 34002144 "Diario Nominas"
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
-                    // TODO: Manual review - Custom report 34002120 is unavailable.
-                    // Original code: RunObject = Report 34002120;
+                    // TODO: Manual review - Custom report 55761 is unavailable.
+                    // Original code: RunObject = Report 55761;
                 }
                 action(Vacaciones)
                 {
@@ -217,8 +217,8 @@ page 34002144 "Diario Nominas"
                     Image = "Report";
                     Promoted = true;
                     PromotedCategory = "Report";
-                    // TODO: Manual review - Custom report 34002125 is unavailable.
-                    // Original code: RunObject = Report 34002125;
+                    // TODO: Manual review - Custom report 55766 is unavailable.
+                    // Original code: RunObject = Report 55766;
                 }
                 action("ListNomxDepto8.5")
                 {
@@ -246,7 +246,7 @@ page 34002144 "Diario Nominas"
                     Caption = 'Employee Card';
                     ToolTip = 'Employee Card';
                     Image = Employee;
-                    RunObject = Page 34002104;
+                    RunObject = Page 55745;
                     RunPageLink = Company = FIELD(Company),
                                   "No." = FIELD("No.");
                 }
@@ -309,11 +309,11 @@ page 34002144 "Diario Nominas"
     end;
 
     var
-        formCabNominas: Page 34002123;
+        formCabNominas: Page 55764;
         Empl: Record 5200;
-        CabHistorico: Record 34002117;
-        ConfNominas: Record 34002103;
-        FuncionesNomina: Codeunit 34002104;
+        CabHistorico: Record 55758;
+        ConfNominas: Record 55744;
+        FuncionesNomina: Codeunit 55745;
         StatusEmpl: Boolean;
         TipoConcepto: Option Ingresos,Deducciones,Ambos;
         TipoColumna: Option Cantidad,Importe,Ambos;

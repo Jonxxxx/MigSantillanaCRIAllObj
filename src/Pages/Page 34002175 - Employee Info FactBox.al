@@ -49,7 +49,7 @@ page 34002175 "Employee Info FactBox"
 
                 trigger OnDrillDown()
                 begin
-                    CUNomina.MuestraActividades(Rec,GETRANGEMIN("Date Filter"),GETRANGEMAX("Date Filter"));
+                    CUNomina.MuestraActividades(Rec, GETRANGEMIN("Date Filter"), GETRANGEMAX("Date Filter"));
                 end;
             }
             field(JXSalaryHistoryCount; STRSUBSTNO('(%1)', CUNomina.BuscaHistSalario(Rec)))
@@ -77,6 +77,6 @@ page 34002175 "Employee Info FactBox"
     end;
 
     var
-        CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 55745;
 }
 

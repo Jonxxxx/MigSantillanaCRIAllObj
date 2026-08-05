@@ -165,7 +165,7 @@ table 55355 "Historial MdE"
 
             trigger OnValidate()
             var
-                Contratos: Record 34002109;
+                Contratos: Record 55750;
             begin
                 TESTFIELD(Company);
                 Empresa.GET(Company);
@@ -469,13 +469,13 @@ table 55355 "Historial MdE"
             Description = ' #269159';
             OptionMembers = No,Si;
         }
-        field(34002100; Company; Code[10])
+        field(55741; Company; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Company';
             TableRelation = "Empresas Cotizacion";
         }
-        field(34002101; "Second Last Name"; Text[30])
+        field(55742; "Second Last Name"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Second Last Name';
@@ -485,13 +485,13 @@ table 55355 "Historial MdE"
                 VALIDATE("Full Name");
             end;
         }
-        field(34002102; "Working Center"; Code[10])
+        field(55743; "Working Center"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Working Center';
             TableRelation = "Centros de Trabajo"."Centro de trabajo" WHERE("Empresa cotizacion" = FIELD("Company"));
         }
-        field(34002103; "Full Name"; Text[150])
+        field(55744; "Full Name"; Text[150])
         {
             DataClassification = CustomerContent;
             Caption = 'Full Name';
@@ -501,19 +501,19 @@ table 55355 "Historial MdE"
                 "Full Name" := "First Name" + ' ' + "Last Name" + ' ' + "Second Last Name";
             end;
         }
-        field(34002104; "Document Type"; Option)
+        field(55745; "Document Type"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Document Type';
             OptionCaption = 'SS,Passport,Residence ID,Work Permission';
             OptionMembers = "C dula",Pasaporte,"Tarj.residen.comunitario","Perm.Trabajo",,"N.I.Extranjero","N.I.F.";
         }
-        field(34002105; "Document ID"; Text[20])
+        field(55746; "Document ID"; Text[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Document ID';
         }
-        field(34002108; "Job Type Code"; Code[15])
+        field(55749; "Job Type Code"; Code[15])
         {
             DataClassification = CustomerContent;
             Caption = 'Job Type Code';
@@ -524,28 +524,28 @@ table 55355 "Historial MdE"
                 Cargo.GET("Job Type Code");
             end;
         }
-        field(34002109; "Alta contrato"; Date)
+        field(55750; "Alta contrato"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Alta contrato';
         }
-        field(34002110; "Fin contrato"; Date)
+        field(55751; "Fin contrato"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fin contrato';
         }
-        field(34002116; _Nacionalidad; Code[10])
+        field(55757; _Nacionalidad; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = '_Nacionalidad';
             TableRelation = "Country/Region";
         }
-        field(34002118; "Lugar nacimiento"; Text[30])
+        field(55759; "Lugar nacimiento"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Lugar nacimiento';
         }
-        field(34002119; "Estado civil"; Option)
+        field(55760; "Estado civil"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Estado civil';
@@ -553,13 +553,13 @@ table 55355 "Historial MdE"
             OptionCaption = 'Single, Married, Widowed, Separated, Divorced, Free Union';
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
-        field(34002126; "Mes Nacimiento"; Integer)
+        field(55767; "Mes Nacimiento"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Mes Nacimiento';
             Editable = false;
         }
-        field(34002137; _Departamento; Code[20])
+        field(55778; _Departamento; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = '_Departamento';
@@ -612,10 +612,10 @@ table 55355 "Historial MdE"
 
     var
         PostCode: Record 225;
-        Empresa: Record 34002100;
-        Cargo: Record 34002110;
+        Empresa: Record 55741;
+        Cargo: Record 55751;
         TipoContrato: Record 5211;
-        Contrato: Record 34002109;
+        Contrato: Record 55750;
         ErrorTipoDatos: Label 'Error de datos';
         ErrorInsert: Label 'No se puede crear el %1 para el empleado %2.';
         ErrorInsertEmployee: Label ' Revise que, si est  enviando un alta nueva, el n mero de serie asignado a recursos humanos en Dynamics NAV est  correctamente configurado.';
@@ -707,7 +707,7 @@ table 55355 "Historial MdE"
             Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimension global
         END;
 
-        // Campos tabla 34002109 "Contratos"
+        // Campos tabla 55750 "Contratos"
         Contrato.SETRANGE("No. empleado", Employee."No.");
         IF Contrato.FINDLAST THEN
             NoOrden := Contrato."No. Orden" + 100
@@ -822,7 +822,7 @@ table 55355 "Historial MdE"
             Employee.FIND; // refrescamos empleado, puede haberse actualizado con una dimension global
         END;
 
-        // Campos tabla 34002109 "Contratos"
+        // Campos tabla 55750 "Contratos"
         Contrato.SETRANGE("No. empleado", Employee."No.");
         IF NOT Contrato.FIND('+') THEN BEGIN
             AddError(STRSUBSTNO(ErrorContractDoNotExist, 'Numero_persona', "Numero de persona"), ErrorTipoDatos);
@@ -1005,10 +1005,10 @@ table 55355 "Historial MdE"
             UNTIL lrHistorial.NEXT = 0;
     end;
 
-    procedure ControlContratos(lrContratoRef: Record 34002109)
+    procedure ControlContratos(lrContratoRef: Record 55750)
     var
-        lrContratos: Record 34002109;
-        lrContratosAux: Record 34002109;
+        lrContratos: Record 55750;
+        lrContratosAux: Record 55750;
         lrContratosBck: Record 55321;
     begin
         //+#269159

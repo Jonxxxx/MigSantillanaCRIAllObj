@@ -2,12 +2,12 @@ report 55224 "Recibo form.fact. Dom. BO"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo form.fact. Dom. BO.rdl';
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", "Tipo de nomina", "Periodo";
@@ -23,7 +23,7 @@ report 55224 "Recibo form.fact. Dom. BO"
             column("Historico_Cab__nomina_Tipo_Nomina"; "Tipo Nomina")
             {
             }
-            dataitem("Historico Lin. nomina"; 34002118)
+            dataitem("Historico Lin. nomina"; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo Nomina" = FIELD("Tipo Nomina"),
@@ -357,7 +357,7 @@ report 55224 "Recibo form.fact. Dom. BO"
                     id := 0;
                 end;
             }
-            dataitem(HLN; 34002118)
+            dataitem(HLN; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo Nomina" = FIELD("Tipo Nomina"),
@@ -753,13 +753,13 @@ report 55224 "Recibo form.fact. Dom. BO"
     }
 
     var
-        Empresa: Record 34002100;
+        Empresa: Record 55741;
         Emp: Record 5200;
-        Cargos: Record 34002110;
-        Depto: Record 34002135;
-        SubDepto: Record 34002136;
-        Isr: Record 34002128;
-        BKIsr: Record 34002130;
+        Cargos: Record 55751;
+        Depto: Record 55776;
+        SubDepto: Record 55777;
+        Isr: Record 55769;
+        BKIsr: Record 55771;
         DescIngreso: array[10] of Text[50];
         DescDeducc: array[10] of Text[50];
         DescriptionLine: array[2] of Text[1024];

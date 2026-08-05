@@ -119,7 +119,7 @@ page 34002195 "Payroll - Job Journal Batches"
 
     var
         ReportPrint: Codeunit 228;
-        JobJnlMgt: Codeunit 34002120;
+        JobJnlMgt: Codeunit 55761;
 
     local procedure DataCaption(): Text[250]
     var

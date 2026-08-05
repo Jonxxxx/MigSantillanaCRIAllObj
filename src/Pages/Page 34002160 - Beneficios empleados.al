@@ -2,7 +2,7 @@ page 34002160 "Beneficios empleados"
 {
     Caption = 'Employee benefits';
     PageType = List;
-    SourceTable = 34002153;
+    SourceTable = 55794;
 
     layout
     {
@@ -51,6 +51,6 @@ page 34002160 "Beneficios empleados"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
 }
 

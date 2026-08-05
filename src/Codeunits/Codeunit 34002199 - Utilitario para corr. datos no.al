@@ -41,7 +41,7 @@ codeunit 34002199 "Utilitario para corr. datos no"
         // Original unsupported object-metadata deletion preserved below.
         // Original code preserved below.
         // ObjMeta.RESET;
-        // ObjMeta.SETRANGE("Object ID", 34002117, 34002118);
+        // ObjMeta.SETRANGE("Object ID", 55758, 55759);
         // IF ObjMeta.FINDSET(TRUE, FALSE) THEN
         // ObjMeta.DELETEALL;
     end;
@@ -49,7 +49,7 @@ codeunit 34002199 "Utilitario para corr. datos no"
     procedure CorregirDatosEmpleado()
     var
         Empleado: Record 5200;
-        Contratos: Record 34002109;
+        Contratos: Record 55750;
     begin
         IF Empleado.FINDSET THEN
             REPEAT
@@ -106,21 +106,21 @@ codeunit 34002199 "Utilitario para corr. datos no"
 
     local procedure LlenaConfigNom()
     var
-        PerfilSal: Record 34002115;
+        PerfilSal: Record 55756;
         Emp: Record 5200;
         Emp2: Record 5200;
         Emp3: Record 5200;
-        Depto: Record 34002135;
-        Puestos: Record 34002110;
-        Puestos2: Record 34002110;
-        HistoricoCabnomina: Record 34002117;
-        HistoricoCabnominaOut: Record 34002117;
-        HistoricoLinnomina: Record 34002118;
-        HistoricoLinnominaOut: Record 34002118;
-        CabAportesEmpresas: Record 34002121;
-        CabAportesEmpresasOut: Record 34002121;
-        LinAportesEmpresas: Record 34002122;
-        LinAportesEmpresasOut: Record 34002122;
+        Depto: Record 55776;
+        Puestos: Record 55751;
+        Puestos2: Record 55751;
+        HistoricoCabnomina: Record 55758;
+        HistoricoCabnominaOut: Record 55758;
+        HistoricoLinnomina: Record 55759;
+        HistoricoLinnominaOut: Record 55759;
+        CabAportesEmpresas: Record 55762;
+        CabAportesEmpresasOut: Record 55762;
+        LinAportesEmpresas: Record 55763;
+        LinAportesEmpresasOut: Record 55763;
     begin
         /*
         HistoricoCabnomina.DELETEALL;
@@ -912,21 +912,21 @@ codeunit 34002199 "Utilitario para corr. datos no"
 
     local procedure LlenaConfigNomFES()
     var
-        PerfilSal: Record 34002115;
+        PerfilSal: Record 55756;
         Emp: Record 5200;
         Emp2: Record 5200;
         Emp3: Record 5200;
-        Depto: Record 34002135;
-        Puestos: Record 34002110;
-        Puestos2: Record 34002110;
-        HistoricoCabnomina: Record 34002117;
-        HistoricoCabnominaOut: Record 34002117;
-        HistoricoLinnomina: Record 34002118;
-        HistoricoLinnominaOut: Record 34002118;
-        CabAportesEmpresas: Record 34002121;
-        CabAportesEmpresasOut: Record 34002121;
-        LinAportesEmpresas: Record 34002122;
-        LinAportesEmpresasOut: Record 34002122;
+        Depto: Record 55776;
+        Puestos: Record 55751;
+        Puestos2: Record 55751;
+        HistoricoCabnomina: Record 55758;
+        HistoricoCabnominaOut: Record 55758;
+        HistoricoLinnomina: Record 55759;
+        HistoricoLinnominaOut: Record 55759;
+        CabAportesEmpresas: Record 55762;
+        CabAportesEmpresasOut: Record 55762;
+        LinAportesEmpresas: Record 55763;
+        LinAportesEmpresasOut: Record 55763;
     begin
         /*
         HistoricoCabnomina.RESET;

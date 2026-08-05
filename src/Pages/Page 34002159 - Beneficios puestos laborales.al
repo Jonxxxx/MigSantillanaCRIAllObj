@@ -1,8 +1,8 @@
-page 34002159 "Beneficios puestos laborales"
+page 55800 "Beneficios puestos laborales"
 {
     Caption = 'Benefits list';
     PageType = List;
-    SourceTable = 34002152;
+    SourceTable = 55793;
 
     layout
     {

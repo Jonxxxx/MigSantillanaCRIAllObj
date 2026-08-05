@@ -1,4 +1,4 @@
-table 34002140 "Comentarios nomina"
+table 55781 "Comentarios nomina"
 {
     LookupPageID = 34002172;
 

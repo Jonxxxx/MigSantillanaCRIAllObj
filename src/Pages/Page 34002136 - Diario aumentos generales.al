@@ -1,10 +1,10 @@
-page 34002136 "Diario aumentos generales"
+page 55777 "Diario aumentos generales"
 {
     AutoSplitKey = true;
     Caption = 'Diario aumentos generales';
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 34002148;
+    SourceTable = 55789;
 
     layout
     {
@@ -133,8 +133,8 @@ page 34002136 "Diario aumentos generales"
     end;
 
     var
-        LinEsqPercepcion: Record 34002115;
-        AcumuladoSalarios: Record 34002149;
+        LinEsqPercepcion: Record 55756;
+        AcumuladoSalarios: Record 55790;
         Perceptor: Record 5200;
         ImporteAnterior: Decimal;
         optTipoAumento: Option " ","Gral. por Rango de Salarios","Gral. por % Aumento";

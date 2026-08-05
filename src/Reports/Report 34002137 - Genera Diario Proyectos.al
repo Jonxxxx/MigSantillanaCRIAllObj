@@ -1,4 +1,4 @@
-report 34002137 "Genera Diario Proyectos"
+report 55778 "Genera Diario Proyectos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Genera Diario Proyectos.rdl';
@@ -43,7 +43,7 @@ report 34002137 "Genera Diario Proyectos"
             column(Total_Amt; TotalAmt)
             {
             }
-            dataitem("Mov. actividades OJO"; 34002157)
+            dataitem("Mov. actividades OJO"; 55798)
             {
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado", "Concepto salarial", "Posting Date");
@@ -212,15 +212,15 @@ report 34002137 "Genera Diario Proyectos"
     }
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Emp: Record 5200;
         Fecha: Record 2000000007;
         TrabajosEmpl_por_proyectosCaptionLbl: Label 'List Employees work Projects';
         Total_Para_CaptionLbl: Label 'Total for ';
         Total_Gral_CaptionLbl: Label 'Grand total';
-        MA: Record 34002157;
-        PS: Record 34002115;
-        ConceptoSal: Record 34002111;
+        MA: Record 55798;
+        PS: Record 55756;
+        ConceptoSal: Record 55752;
         ConceptoSalDesc: Text[1024];
         LastWedge: Code[20];
         LastEmp: Code[20];

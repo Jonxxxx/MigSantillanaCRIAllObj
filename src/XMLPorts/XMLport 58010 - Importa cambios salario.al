@@ -48,6 +48,6 @@ xmlport 55438 "Importa cambios salario"
 
     var
         Emp: Record 5200;
-        PerfSal: Record 34002115;
+        PerfSal: Record 55756;
 }
 

@@ -112,7 +112,7 @@ page 34002228 "Lista Inscripcion Entrenamient"
                     Image = Employee;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 34002104;
+                    RunObject = Page 55745;
                     RunPageLink = "No." = FIELD("No.");
                 }
             }

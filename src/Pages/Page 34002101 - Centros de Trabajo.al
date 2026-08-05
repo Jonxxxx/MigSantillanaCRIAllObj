@@ -1,7 +1,7 @@
-page 34002101 "Centros de Trabajo"
+page 55742 "Centros de Trabajo"
 {
     PageType = List;
-    SourceTable = 34002101;
+    SourceTable = 55742;
 
     layout
     {

@@ -1,6 +1,6 @@
-codeunit 34002112 "Registrar nomina PA"
+codeunit 55753 "Registrar nomina PA"
 {
-    TableNo = 34002115;
+    TableNo = 55756;
 
     trigger OnRun()
     begin
@@ -10,23 +10,23 @@ codeunit 34002112 "Registrar nomina PA"
     end;
 
     var
-        ConfNominas: Record 34002103;
-        ConceptosSal: Record 34002111;
-        GlobalRec: Record 34002115;
+        ConfNominas: Record 55744;
+        ConceptosSal: Record 55752;
+        GlobalRec: Record 55756;
         DfltDimension: Record 352;
-        RegEmpCotiz: Record 34002100;
-        Calendar: Record 34002134;
+        RegEmpCotiz: Record 55741;
+        Calendar: Record 55775;
         Empleado: Record 5200;
-        PerfilSal: Record 34002115;
-        PerfilSalImp: Record 34002115;
+        PerfilSal: Record 55756;
+        PerfilSalImp: Record 55756;
         Fecha: Record 2000000007;
-        CabNomina: Record 34002117;
-        LinNomina: Record 34002118;
-        Contrato: Record 34002109;
-        Ausencia: Record 34002116;
+        CabNomina: Record 55758;
+        LinNomina: Record 55759;
+        Contrato: Record 55750;
+        Ausencia: Record 55757;
         CurrExchange: Record 330;
-        CalcDias: Record 34002107;
-        Cargos: Record 34002110;
+        CalcDias: Record 55748;
+        Cargos: Record 55751;
         recTmpDimEntry: Record 480 temporary;
         cduDim: Codeunit 408;
         Generar: Boolean;
@@ -202,7 +202,7 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CrearCabecera()
     var
-        CompanyTaxes: Record 34002121;
+        CompanyTaxes: Record 55762;
         GestNoSer: Codeunit "No. Series";
     begin
         IF CabNomina."No. Documento" = '' THEN BEGIN
@@ -273,7 +273,7 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalcularIngresos()
     var
-        LinNominasES: Record 34002118;
+        LinNominasES: Record 55759;
         Incidencias: Record 5207;
         Incidencias2: Record 5207;
         ImporteIncid: Decimal;
@@ -534,12 +534,12 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalcularDtosLegales()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        LinAportesEmpresa2: Record 34002122;
-        PerfilSalTr: Record 34002115;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        LinAportesEmpresa2: Record 55763;
+        PerfilSalTr: Record 55756;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -857,12 +857,12 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure ReCalcularDtosLegales()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        PerfilSalTr: Record 34002115;
-        PerfilSalTr2: Record 34002115;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        PerfilSalTr: Record 55756;
+        PerfilSalTr2: Record 55756;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -912,18 +912,18 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalcularISR()
     var
-        "RetencionISR": Record 34002131;
-        SaldoFavor: Record 34002128;
-        SaldoFavor2: Record 34002128;
-        HistLinNom: Record 34002118;
-        HistLinNomISR: Record 34002118;
-        BKSaldoFavor: Record 34002130;
-        LinAportesEmpresa: Record 34002122;
-        EmpresasRel: Record 34002150;
-        EmpresasRel2: Record 34002150;
-        LinEsqPercepISR: Record 34002115;
-        LinEsqPercepISR2: Record 34002115;
-        HistLinCompany: Record 34002118;
+        "RetencionISR": Record 55772;
+        SaldoFavor: Record 55769;
+        SaldoFavor2: Record 55769;
+        HistLinNom: Record 55759;
+        HistLinNomISR: Record 55759;
+        BKSaldoFavor: Record 55771;
+        LinAportesEmpresa: Record 55763;
+        EmpresasRel: Record 55791;
+        EmpresasRel2: Record 55791;
+        LinEsqPercepISR: Record 55756;
+        LinEsqPercepISR2: Record 55756;
+        HistLinCompany: Record 55759;
         Indice: Integer;
         Importe1: Decimal;
         Importe2: Decimal;
@@ -1176,10 +1176,10 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalcularPrestamos()
     var
-        LinPerfilSal: Record 34002115;
-        rPrestamos: Record 34002145;
-        rHistLinPrestamo: Record 34002147;
-        rHistCabPrestamo: Record 34002146;
+        LinPerfilSal: Record 55756;
+        rPrestamos: Record 55786;
+        rHistLinPrestamo: Record 55788;
+        rHistCabPrestamo: Record 55787;
     begin
         //CalcularPrestamos
 
@@ -1217,7 +1217,7 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalculoBonificacion()
     var
-        linperfilsal: Record 34002115;
+        linperfilsal: Record 55756;
     begin
         // Bonificacion
         PerfilSal.RESET;
@@ -1256,7 +1256,7 @@ codeunit 34002112 "Registrar nomina PA"
 
     end;
 
-    procedure InsertNomina(perfSalario: Record 34002115)
+    procedure InsertNomina(perfSalario: Record 55756)
     begin
         //InsertNomina
         LinNomina."Empresa cotizacion" := perfSalario."Empresa cotizacion";
@@ -1299,7 +1299,7 @@ codeunit 34002112 "Registrar nomina PA"
         recTmpDimEntry.DELETEALL;
         InsertarDimTemp(ConceptosSal."Shortcut Dimension", perfSalario."Concepto salarial"); //Para el concepto salarial
         InsertarDimTempDef(5200);                                                           //Para las Dim del empleado
-        InsertarDimTempDef(34002115);                                                       //Para las Dim del perfil de salario (linea del concepto salarial)
+        InsertarDimTempDef(55756);                                                       //Para las Dim del perfil de salario (linea del concepto salarial)
         LinNomina."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
 
         LinNomina.INSERT;
@@ -1331,8 +1331,8 @@ codeunit 34002112 "Registrar nomina PA"
 
     procedure CalculaDiasVacaciones()
     var
-        HistVac: Record 34002141;
-        FuncNomina: Codeunit 34002104;
+        HistVac: Record 55782;
+        FuncNomina: Codeunit 55745;
         AnoCalculado: Integer;
         MesCalculado: Integer;
         DiaCalculado: Integer;

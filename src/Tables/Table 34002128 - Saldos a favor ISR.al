@@ -1,4 +1,4 @@
-table 34002128 "Saldos a favor ISR"
+table 55769 "Saldos a favor ISR"
 {
 
     fields
@@ -58,6 +58,6 @@ table 34002128 "Saldos a favor ISR"
     end;
 
     var
-        BKISR: Record 34002130;
+        BKISR: Record 55771;
 }
 

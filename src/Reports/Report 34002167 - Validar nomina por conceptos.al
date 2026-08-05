@@ -6,7 +6,7 @@ report 34002167 "Validar nomina por conceptos"
 
     dataset
     {
-        dataitem("Historico Lin. nomina"; 34002118)
+        dataitem("Historico Lin. nomina"; 55759)
         {
             DataItemTableView = SORTING("Concepto salarial");
             RequestFilterFields = "Concepto salarial", "Tipo de nomina", Periodo;
@@ -195,7 +195,7 @@ report 34002167 "Validar nomina por conceptos"
     var
         rFecha: Record 2000000007;
         rEmpleado: Record 5200;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         DiasAusencia: Decimal;
         FechaIniAusencia: Date;
         FechafinAusencia: Date;

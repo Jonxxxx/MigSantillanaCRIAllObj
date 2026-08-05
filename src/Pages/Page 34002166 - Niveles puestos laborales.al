@@ -3,7 +3,7 @@ page 34002166 "Niveles puestos laborales"
     Caption = 'Job type levels';
     DataCaptionFields = "Cod. Nivel", Descripcion;
     PageType = List;
-    SourceTable = 34002120;
+    SourceTable = 55761;
 
     layout
     {

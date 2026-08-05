@@ -1,4 +1,4 @@
-report 34002146 "Procesar datos ponchador"
+report 55787 "Procesar datos ponchador"
 {
     ProcessingOnly = true;
 
@@ -54,8 +54,8 @@ report 34002146 "Procesar datos ponchador"
     end;
 
     var
-        ConfNomina: Record 34002103;
-        FuncNom: Codeunit 34002104;
+        ConfNomina: Record 55744;
+        FuncNom: Codeunit 55745;
         FechaIni: Date;
         FechaFin: Date;
 }

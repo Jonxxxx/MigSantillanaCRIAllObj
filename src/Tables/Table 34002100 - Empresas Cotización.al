@@ -1,4 +1,4 @@
-table 34002100 "Empresas Cotizacion"
+table 55741 "Empresas Cotizacion"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -10,8 +10,8 @@ table 34002100 "Empresas Cotizacion"
     // ------------------------------------------------------------------
     // 001       07-03-2022    FES           SANTINAV-4392: Configuracion de cuentas de correo para el envio de errores de colas de proyecto y boletas de pago
 
-    DrillDownPageID = 34002117;
-    LookupPageID = 34002117;
+    DrillDownPageID = 55758;
+    LookupPageID = 55758;
 
     fields
     {
@@ -288,7 +288,7 @@ table 34002100 "Empresas Cotizacion"
         numafiliac: Code[10];
         dcafiliac: Code[2];
         result: Decimal;
-        CentroTrab: Record 34002101;
+        CentroTrab: Record 55742;
         DimMgt: Codeunit 408;
 
     procedure ValidateShortcutDimCode(FieldNumber: Integer; var ShortcutDimCode: Code[20])

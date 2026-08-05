@@ -1,4 +1,4 @@
-report 34002158 "Carta Acuerdo Confidencialidad"
+report 55799 "Carta Acuerdo Confidencialidad"
 {
     RDLCLayout = 'src/ReportsLayout/Carta Acuerdo Confidencialidad.rdl';
     WordLayout = 'src/ReportsLayout/Carta Acuerdo Confidencialidad.docx';
@@ -154,11 +154,11 @@ report 34002158 "Carta Acuerdo Confidencialidad"
     }
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 34003010;
-        Contrato: Record 34002109;
-        EmpresaCot: Record 34002100;
-        Representante: Record 34002102;
+        Contrato: Record 55750;
+        EmpresaCot: Record 55741;
+        Representante: Record 55743;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

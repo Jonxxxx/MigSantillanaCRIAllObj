@@ -37,7 +37,7 @@ page 34002182 "Informacion del empleado"
     }
 
     var
-        // TODO: Manual review - The verified payroll codeunit declaration is used only by the unresolved Employee.Picture FactBox block.
-        // Original code: CUNomina: Codeunit 34002104;
+    // TODO: Manual review - The verified payroll codeunit declaration is used only by the unresolved Employee.Picture FactBox block.
+    // Original code: CUNomina: Codeunit 55745;
 }
 

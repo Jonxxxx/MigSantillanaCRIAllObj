@@ -1,11 +1,11 @@
-report 34002134 "Genera archivo Fondos de Res."
+report 55775 "Genera archivo Fondos de Res."
 {
     Caption = 'Generates file reserve funds';
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = Periodo, "Tipo de nomina";
@@ -38,8 +38,8 @@ report 34002134 "Genera archivo Fondos de Res."
     }
 
     var
-        ConfNomina: Record 34002103;
-        Empresa: Record 34002100;
+        ConfNomina: Record 55744;
+        Empresa: Record 55741;
         Err001: Label 'Missing Bank''s information from Company Setup';
         Err002: Label 'The process will be canceled \the bank account is missing for employee %1';
         Text001: Label 'Payroll period ';

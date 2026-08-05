@@ -1,4 +1,4 @@
-table 34002145 "CxC Empleados"
+table 55786 "CxC Empleados"
 {
     //IGNORAR: Page no existe DrillDownPageID = 58102;
     //IGNORAR: Page no existe LookupPageID = 58102;
@@ -243,19 +243,19 @@ table 34002145 "CxC Empleados"
     var
         Empl: Record 5200;
         CLE: Record 21;
-        LinEsqPercep: Record 34002115;
+        LinEsqPercep: Record 55756;
         LiqMovsClientes: Page 232;
         CGCta: Record 15;
         Clie: Record 18;
         Prov: Record 23;
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         GestNoSerie: Codeunit "No. Series";
         Err001: Label 'You must specify as Balance Account a Bank or Vendor';
         Err002: Label 'You can''t do loans to this employee, %1 is already out of the company';
         Err003: Label 'You can''t specify Loan payment when Discount % is used';
         Err004: Label 'You can''t specify  Discount % when Loan paymen is used';
 
-    procedure AsistEdic(CxCEmpleadosAnt: Record 34002145): Boolean
+    procedure AsistEdic(CxCEmpleadosAnt: Record 55786): Boolean
     begin
         ConfNominas.GET;
         TestNoSerie;

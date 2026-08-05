@@ -1,4 +1,4 @@
-page 34002131 "Lineas cobros empleado"
+page 55772 "Lineas cobros empleado"
 {
     PageType = ListPart;
     SourceTable = 2000000007;
@@ -77,7 +77,7 @@ page 34002131 "Lineas cobros empleado"
 
     var
         Trab: Record 5200;
-        LinsNom: Record 34002118;
+        LinsNom: Record 55759;
         // TODO: Manual review - Standard codeunit 359 Period Form Management is unavailable and no equivalent navigation API was verified.
         // Original code: GestionFormPeriodo: Codeunit 359;
         LongPeriodoClie: Option "Dia",Semana,Mes,Trimestre,"Año",Periodo;

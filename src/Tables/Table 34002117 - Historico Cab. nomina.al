@@ -1,8 +1,8 @@
-table 34002117 "Historico Cab. nomina"
+table 55758 "Historico Cab. nomina"
 {
     DataCaptionFields = "No. empleado", Nombre, "Tipo de nomina", "Periodo";
-    DrillDownPageID = 34002123;
-    LookupPageID = 34002123;
+    DrillDownPageID = 55764;
+    LookupPageID = 55764;
 
     fields
     {
@@ -377,8 +377,8 @@ table 34002117 "Historico Cab. nomina"
 
     procedure Anular()
     var
-        LinNomina: Record 34002118;
-        LinNomina2: Record 34002118;
+        LinNomina: Record 55759;
+        LinNomina2: Record 55759;
         DimSet: Record 480;
     begin
         LinNomina.RESET;
@@ -395,7 +395,7 @@ table 34002117 "Historico Cab. nomina"
 
     procedure TraeDivisa()
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Divisa: Record 4;
     begin
         //TraeDivisa

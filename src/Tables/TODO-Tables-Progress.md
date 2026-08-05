@@ -61,7 +61,7 @@
 
 ### Batch 3
 
-- Tables inspected: 10 (55738, 34002100, 34002101, 34002102, 34002103, 34002104, 34002105, 34002106, 34002107, 34002108)
+- Tables inspected: 10 (55738, 55741, 55742, 55743, 55744, 55745, 55746, 55747, 55748, 55749)
 - Tables modified: 10
 - Fields inspected: 194
 - `DataClassification` properties added: 88
@@ -70,11 +70,11 @@
 - Existing captions normalized: 100
 - Table extensions skipped: 0
 - Other object types skipped: 0
-- Compilation result: Project compilation remains blocked by pre-existing errors. Scoped table diagnostics found one introduced `AL0223` error on FlowField `Comentario` in table 34002100.
+- Compilation result: Project compilation remains blocked by pre-existing errors. Scoped table diagnostics found one introduced `AL0223` error on FlowField `Comentario` in table 55741.
 - Errors introduced and corrected: 1; the invalid FlowField `DataClassification` addition was reverted.
 - Remaining tables: 486
 - Remaining noncompliant fields: 8,777
-- Last successfully processed table: 34002108 `"Distrib. Ingreso Pagos Elect."`
+- Last successfully processed table: 55749 `"Distrib. Ingreso Pagos Elect."`
 
 ## Structural blocker
 
@@ -102,51 +102,51 @@
 
 ### Baseline errors outside `src/tables`
 
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:24:51` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002125 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002125 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002125 - Listado de vacaciones personal.al:12:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
-- `src\Reports\Report 34002125 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:74` — `AL0183`: Unexpected character '´'. Remove the invalid character or check if a special character needs escaping.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:76` — `AL0183`: Unexpected character '¢'. Remove the invalid character or check if a special character needs escaping.
-- `src\Reports\Report 34002126 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002126 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002126 - Listado de Bonificaciones pers.al:13:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
-- `src\Reports\Report 34002126 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:94:70` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002139 - Proceso Carga Gtos. a Nomina.al:68:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
-- `src\Reports\Report 34002140 - Proceso Gtos. Nomina.al:86:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:51` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:51` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
+- `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:48` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:487:74` — `AL0183`: Unexpected character '´'. Remove the invalid character or check if a special character needs escaping.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:487:76` — `AL0183`: Unexpected character '¢'. Remove the invalid character or check if a special character needs escaping.
+- `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
+- `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:48` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:34` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:39` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:94:70` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55780 - Proceso Carga Gtos. a Nomina.al:68:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
+- `src\Reports\Report 55781 - Proceso Gtos. Nomina.al:86:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
 - `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, '=' expected
 - `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, 'field' expected
 - `src\Reports\Report 34002170 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, '=' expected
@@ -242,57 +242,57 @@
 - `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
 - `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
 - `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:80` — `AL0183`: Unexpected character '|'. Remove the invalid character or check if a special character needs escaping.
-- `src\Pages\Page 34002134 - Histórico Préstamos.al:16:39` — `AL0118`: The name 'No. Préstamo' does not exist in the current context.
-- `src\Pages\Page 34002138 - Lista Mov. CxC Empleados.al:3:18` — `AL0185`: Page 'Historico Prestamos' is missing
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
+- `src\Pages\Page 55775 - Histórico Préstamos.al:16:39` — `AL0118`: The name 'No. Préstamo' does not exist in the current context.
+- `src\Pages\Page 55779 - Lista Mov. CxC Empleados.al:3:18` — `AL0185`: Page 'Historico Prestamos' is missing
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
 - `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
 - `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
 - `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:198:55` — `AL0186`: Reference 'No' in application object 'Sales Invoice Header' does not exist
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:315:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:315:22` — `AL0185`: Codeunit '396' is missing
 - `src\Reports\Report 34002170 - Update Employee Classification.al:17:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
 - `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:67` — `AL0186`: Reference 'Puesto de Trabajo' in application object 'Perfil Salario x Cargo' does not exist
 - `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:39` — `AL0204`: Field type Code is not convertible to field type Option.
 - `src\Reports\Report 34002182 - Importa datos empleados.al:29:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
 - `src\Reports\Report 34002182 - Importa datos empleados.al:39:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
-- `src\Reports\Report 34002156 - Calculo Prestaciones laborales.al:302:67` — `AL0186`: Reference 'Salario Base' in application object 'Perfil Salarial' does not exist
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:24:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:259:62` — `AL0186`: Reference 'Prorratear' in application object 'Perfil Salarial' does not exist
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:259:43` — `AL0204`: Field type Boolean is not convertible to field type Option.
+- `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:302:67` — `AL0186`: Reference 'Salario Base' in application object 'Perfil Salarial' does not exist
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:259:62` — `AL0186`: Reference 'Prorratear' in application object 'Perfil Salarial' does not exist
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:259:43` — `AL0204`: Field type Boolean is not convertible to field type Option.
 - `src\Reports\Report 34002502 - DsPOS - Etiquetas gondolas.al:110:24` — `AL0185`: Table '5717' is missing
 - `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
 - `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
-- `src\Reports\Report 34002138 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
+- `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
 - `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:71` — `AL0383`: The option value 'Cobro' is not defined on field 'Tipo transaccion'.
 - `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:125:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF_TransCaja'
 - `src\Reports\Report 34002504 - DsPOS - Resumen del turno.al:162:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:1219:23` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002141 - Crea ED Empleados.al:36:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
-- `src\Reports\Report 34002141 - Crea ED Empleados.al:59:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:1219:23` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55782 - Crea ED Empleados.al:36:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
+- `src\Reports\Report 55782 - Crea ED Empleados.al:59:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
 - `src\Reports\Report 34002504 - DsPOS - Resumen del turno.al:210:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:118:43` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:121:50` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
-- `src\Reports\Report 34002144 - Procesa control de asistencia.al:275:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:40` — `AL0186`: Reference 'Sub' in application object 'Historico Lin. nomina' does not exist
-- `src\Reports\Report 34002107 - Reporte Horas Extras.al:93:40` — `AL0186`: Reference 'Sub' in application object 'Historico Lin. nomina' does not exist
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
+- `src\Reports\Report 55785 - Procesa control de asistencia.al:275:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:40` — `AL0186`: Reference 'Sub' in application object 'Historico Lin. nomina' does not exist
+- `src\Reports\Report 55748 - Reporte Horas Extras.al:93:40` — `AL0186`: Reference 'Sub' in application object 'Historico Lin. nomina' does not exist
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:169:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:172:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:220:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:223:47` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
 - `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:290:23` — `AL0185`: Codeunit '34002504' is missing
-- `src\Reports\Report 34002124 - Registrar nominas por lotes.al:352:24` — `AL0185`: Codeunit '34002101' is missing
-- `src\Reports\Report 34002125 - Listado de vacaciones personal.al:12:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
-- `src\Reports\Report 34002110 - Recibo form.fact. Dom..al:258:62` — `AL0118`: The name 'Histirico_Cab__nomina__NombreCaptionLbl' does not exist in the current context.
-- `src\Reports\Report 34002126 - Listado de Bonificaciones pers.al:13:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
+- `src\Reports\Report 55765 - Registrar nominas por lotes.al:352:24` — `AL0185`: Codeunit '55742' is missing
+- `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
+- `src\Reports\Report 55751 - Recibo form.fact. Dom..al:258:62` — `AL0118`: The name 'Histirico_Cab__nomina__NombreCaptionLbl' does not exist in the current context.
+- `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
 - `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
 - `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002113 - Lista Mov. CxC Empl..al:122:85` — `AL0132`: 'Record "Historico Lin. Prestamo"' does not contain a definition for 'Crédito'
-- `src\Reports\Report 34002114 - Envia Volantes Nominas.al:7:18` — `AL0155`: A member of type GlobalVariable with name 'Rec' is already defined in Report 'Envia Volantes Nominas' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
+- `src\Reports\Report 55754 - Lista Mov. CxC Empl..al:122:85` — `AL0132`: 'Record "Historico Lin. Prestamo"' does not contain a definition for 'Crédito'
+- `src\Reports\Report 55755 - Envia Volantes Nominas.al:7:18` — `AL0155`: A member of type GlobalVariable with name 'Rec' is already defined in Report 'Envia Volantes Nominas' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
 - `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:603:14` — `AL0185`: Table '5717' is missing
 - `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:607:22` — `AL0185`: Codeunit '396' is missing
 - `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
@@ -370,62 +370,62 @@
 - `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:199:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0297`: The application object identifier '0' is not valid. It must be within the allowed ranges '[55000..70200028]'.
 - `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0197`: An application object of type 'Report' with name 'Check' is already declared by the extension 'Base Application by Microsoft (28.2.50931.52528)'
-- `src\Codeunits\Codeunit 34002114 - Registrar nomina HN.al:420:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:777:40` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:780:54` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:827:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:911:36` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:914:50` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1270:101` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1270:61` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1359:109` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1359:69` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1424:113` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1424:73` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1851:24` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:1934:34` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
-- `src\Codeunits\Codeunit 34002118 - Registrar nomina RD.al:2191:21` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55755 - Registrar nomina HN.al:420:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:777:40` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:780:54` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:827:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:911:36` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:914:50` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1270:101` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1270:61` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1359:109` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1359:69` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1424:113` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1424:73` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1851:24` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:1934:34` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
+- `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:2191:21` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Paga Salario'
 - `src\Codeunits\Codeunit 55156 - Notificar Errores Colas.al:47:9` — `AL0118`: The name 'CompanyInfo' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:73` — `AL0118`: The name 'F' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:487:84` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:514:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:514:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:577:78` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:588:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:600:78` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:604:77` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:614:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:614:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:632:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:632:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:650:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:650:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:678:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002106 - Contabilizar Nominas - new.al:678:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
-- `src\Reports\Report 34002118 - Recibo Pago Sobres 2.al:698:28` — `AL0122`: Cannot implicitly convert type 'Text' to 'Date'. Use an explicit conversion or change the type.
-- `src\Reports\Report 34002108 - Calcula ISR Emp. Relacionadas.al:201:46` — `AL0132`: 'Record "Tabla retencion ISR"' does not contain a definition for 'Importe M´Š¢ximo'
-- `src\Reports\Report 34002108 - Calcula ISR Emp. Relacionadas.al:261:21` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'M´Š¢todo Calculo Paga Salario'
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:35:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:141:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002120 - Listado de prestamos personal.al:145:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:127:29` — `AL0296`: The application object or method 'Write' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:134:29` — `AL0296`: The application object or method 'Close' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:141:29` — `AL0296`: The application object or method 'WriteMode' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:142:29` — `AL0296`: The application object or method 'TextMode' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:143:29` — `AL0296`: The application object or method 'Create' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002112 - Listado Novedades TSS.al:178:29` — `AL0296`: The application object or method 'Write' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002135 - Valida Diario Nom. - Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002128 - Genera txt Arch. Autodet..al:41:21` — `AL0844`: The property 'Numeric' can only be used if the field's type is one of these values: 'Code,Text'.
-- `src\Reports\Report 34002128 - Genera txt Arch. Autodet..al:46:21` — `AL0844`: The property 'Numeric' can only be used if the field's type is one of these values: 'Code,Text'.
-- `src\Reports\Report 34002137 - Genera Diario Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002129 - Listado Nomina Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002139 - Proceso Carga Gtos. a Nomina.al:73:25` — `AL0843`: The property 'OptionCaption' can only be used if the field's type is 'Option'.
-- `src\Reports\Report 34002140 - Proceso Gtos. Nomina.al:123:25` — `AL0843`: The property 'OptionCaption' can only be used if the field's type is 'Option'.
-- `src\Reports\Report 34002141 - Crea ED Empleados.al:56:55` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002141 - Crea ED Empleados.al:155:18` — `AL0296`: The application object or method 'OpenBook' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002141 - Crea ED Empleados.al:290:37` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002156 - Calculo Prestaciones laborales.al:117:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002156 - Calculo Prestaciones laborales.al:121:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:487:73` — `AL0118`: The name 'F' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:487:84` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:514:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:514:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:577:78` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:588:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:600:78` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:604:77` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:614:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:614:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:632:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:632:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:650:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:650:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:678:61` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55747 - Contabilizar Nominas - new.al:678:82` — `AL0118`: The name '"F´Š¢rmula Calculo"' does not exist in the current context.
+- `src\Reports\Report 55759 - Recibo Pago Sobres 2.al:698:28` — `AL0122`: Cannot implicitly convert type 'Text' to 'Date'. Use an explicit conversion or change the type.
+- `src\Reports\Report 55749 - Calcula ISR Emp. Relacionadas.al:201:46` — `AL0132`: 'Record "Tabla retencion ISR"' does not contain a definition for 'Importe M´Š¢ximo'
+- `src\Reports\Report 55749 - Calcula ISR Emp. Relacionadas.al:261:21` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'M´Š¢todo Calculo Paga Salario'
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:35:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:141:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55761 - Listado de prestamos personal.al:145:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:127:29` — `AL0296`: The application object or method 'Write' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:134:29` — `AL0296`: The application object or method 'Close' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:141:29` — `AL0296`: The application object or method 'WriteMode' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:142:29` — `AL0296`: The application object or method 'TextMode' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:143:29` — `AL0296`: The application object or method 'Create' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55753 - Listado Novedades TSS.al:178:29` — `AL0296`: The application object or method 'Write' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55769 - Genera txt Arch. Autodet..al:41:21` — `AL0844`: The property 'Numeric' can only be used if the field's type is one of these values: 'Code,Text'.
+- `src\Reports\Report 55769 - Genera txt Arch. Autodet..al:46:21` — `AL0844`: The property 'Numeric' can only be used if the field's type is one of these values: 'Code,Text'.
+- `src\Reports\Report 55778 - Genera Diario Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55770 - Listado Nomina Proyectos.al:91:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55780 - Proceso Carga Gtos. a Nomina.al:73:25` — `AL0843`: The property 'OptionCaption' can only be used if the field's type is 'Option'.
+- `src\Reports\Report 55781 - Proceso Gtos. Nomina.al:123:25` — `AL0843`: The property 'OptionCaption' can only be used if the field's type is 'Option'.
+- `src\Reports\Report 55782 - Crea ED Empleados.al:56:55` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55782 - Crea ED Empleados.al:155:18` — `AL0296`: The application object or method 'OpenBook' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55782 - Crea ED Empleados.al:290:37` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:117:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:121:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
 - `src\Reports\Report 34002182 - Importa datos empleados.al:69:47` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
 - `src\Reports\Report 34002182 - Importa datos empleados.al:88:35` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
 - `src\Reports\Report 34002182 - Importa datos empleados.al:125:18` — `AL0296`: The application object or method 'OpenBook' has scope 'OnPrem' and cannot be used for 'Extension' development.
@@ -505,7 +505,7 @@
 
 ### Batch 4
 
-- Tables inspected: 10 (34002109, 34002110, 34002111, 34002112, 34002113, 34002114, 34002115, 34002116, 34002117, 34002118)
+- Tables inspected: 10 (55750, 55751, 55752, 55753, 55754, 55755, 55756, 55757, 55758, 55759)
 - Tables modified: 10
 - Normal fields inspected: 242
 - FlowFields inspected: 10
@@ -521,11 +521,11 @@
 - Remaining table objects: 472
 - Remaining noncompliant Normal fields: 8070
 - Remaining fields without exact-name Captions: 5695
-- Last processed table: 34002118 "Historico Lin. nomina"
+- Last processed table: 55759 "Historico Lin. nomina"
 
 ### Batch 5
 
-- Tables inspected: 10 (34002119, 34002120, 34002121, 34002122, 34002123, 34002124, 34002125, 34002126, 34002127, 34002128)
+- Tables inspected: 10 (55760, 55761, 55762, 55763, 55764, 55765, 55766, 55767, 55768, 55769)
 - Tables modified: 10
 - Normal fields inspected: 86
 - FlowFields inspected: 2
@@ -541,11 +541,11 @@
 - Remaining table objects: 462
 - Remaining noncompliant Normal fields: 7984
 - Remaining fields without exact-name Captions: 5611
-- Last processed table: 34002128 "Saldos a favor ISR"
+- Last processed table: 55769 "Saldos a favor ISR"
 
 ### Batch 6
 
-- Tables inspected: 10 (34002129, 34002130, 34002131, 34002132, 34002133, 34002134, 34002135, 34002136, 34002137, 34002138)
+- Tables inspected: 10 (55770, 55771, 55772, 55773, 55774, 55775, 55776, 55777, 55778, 55779)
 - Tables modified: 10
 - Normal fields inspected: 124
 - FlowFields inspected: 4
@@ -561,11 +561,11 @@
 - Remaining table objects: 452
 - Remaining noncompliant Normal fields: 7860
 - Remaining fields without exact-name Captions: 5495
-- Last processed table: 34002138 "Dist. Ctas. Gpo. Cont. x Dim."
+- Last processed table: 55779 "Dist. Ctas. Gpo. Cont. x Dim."
 
 ### Batch 7
 
-- Tables inspected: 10 (34002139, 34002140, 34002141, 34002142, 34002143, 34002144, 34002145, 34002146, 34002147, 34002148)
+- Tables inspected: 10 (55780, 55781, 55782, 55783, 55784, 55785, 55786, 55787, 55788, 55789)
 - Tables modified: 10
 - Normal fields inspected: 85
 - FlowFields inspected: 5
@@ -581,11 +581,11 @@
 - Remaining table objects: 442
 - Remaining noncompliant Normal fields: 7775
 - Remaining fields without exact-name Captions: 5407
-- Last processed table: 34002148 "Diario de aumentos generales"
+- Last processed table: 55789 "Diario de aumentos generales"
 
 ### Batch 8
 
-- Tables inspected: 10 (34002149, 34002150, 34002151, 34002152, 34002153, 34002154, 34002155, 34002156, 34002157, 34002158)
+- Tables inspected: 10 (55790, 55791, 55792, 55793, 55794, 55795, 55796, 55797, 55798, 55799)
 - Tables modified: 10
 - Normal fields inspected: 76
 - FlowFields inspected: 0
@@ -601,11 +601,11 @@
 - Remaining table objects: 432
 - Remaining noncompliant Normal fields: 7699
 - Remaining fields without exact-name Captions: 5348
-- Last processed table: 34002158 "Tipos de nominas"
+- Last processed table: 55799 "Tipos de nominas"
 
 ### Batch 9
 
-- Tables inspected: 10 (34002159, 34002160, 34002161, 34002162, 34002163, 34002164, 34002165, 34002166, 34002167, 34002168)
+- Tables inspected: 10 (55800, 34002160, 34002161, 34002162, 34002163, 34002164, 34002165, 34002166, 34002167, 34002168)
 - Tables modified: 10
 - Normal fields inspected: 167
 - FlowFields inspected: 7

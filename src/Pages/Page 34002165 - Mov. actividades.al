@@ -3,7 +3,7 @@ page 34002165 "Mov. actividades"
     Caption = 'Activiry Entry';
     Editable = false;
     PageType = List;
-    SourceTable = 34002157;
+    SourceTable = 55798;
 
     layout
     {

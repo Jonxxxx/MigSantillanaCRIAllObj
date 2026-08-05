@@ -1,4 +1,4 @@
-report 34002121 "Genera Nomina Electronica-New"
+report 55762 "Genera Nomina Electronica-New"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Genera Nomina Electronica-New.rdl';
@@ -24,7 +24,7 @@ report 34002121 "Genera Nomina Electronica-New"
             column(Employee_No_; "No.")
             {
             }
-            dataitem("Historico Cab. nomina"; 34002117)
+            dataitem("Historico Cab. nomina"; 55758)
             {
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
@@ -129,7 +129,7 @@ report 34002121 "Genera Nomina Electronica-New"
                 column(Historico_Cab__nomina_Tipo_Nomina; "Tipo Nomina")
                 {
                 }
-                dataitem("Distrib. Ingreso Pagos Elect."; 34002108)
+                dataitem("Distrib. Ingreso Pagos Elect."; 55749)
                 {
                     DataItemLink = "No. empleado" = FIELD("No. empleado");
                     DataItemTableView = SORTING("No. empleado", "Cod. Banco");
@@ -220,17 +220,17 @@ report 34002121 "Genera Nomina Electronica-New"
     end;
 
     var
-        ConfNomina: Record 34002103;
-        Empresa: Record 34002100;
+        ConfNomina: Record 55744;
+        Empresa: Record 55741;
         BancosACH: Record 34002167;
-        recLinNom: Record 34002118;
+        recLinNom: Record 55759;
         Mes: Integer;
         Concepto: Text[36];
         Libre: Text[30];
         Total: Decimal;
         fechatrans: Date;
         Total1: Decimal;
-        Xbancos: Record 34002139;
+        Xbancos: Record 55780;
         transac: Integer;
         Lin_Header: Text[500];
         Lin_Body: Text[500];

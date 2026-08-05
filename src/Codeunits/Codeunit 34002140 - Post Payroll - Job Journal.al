@@ -1,4 +1,4 @@
-codeunit 34002140 "Post Payroll - Job Journal"
+codeunit 55781 "Post Payroll - Job Journal"
 {
     TableNo = 34002172;
 
@@ -193,11 +193,11 @@ codeunit 34002140 "Post Payroll - Job Journal"
     end;
 
     var
-        ConfNom: Record 34002103;
+        ConfNom: Record 55744;
         DA: Record 34002172;
-        MA: Record 34002157;
-        MA2: Record 34002157;
-        PS: Record 34002115;
+        MA: Record 55798;
+        MA2: Record 55798;
+        PS: Record 55756;
         TSH: Record 950;
         TSL: Record 951;
         TSD: Record 952;

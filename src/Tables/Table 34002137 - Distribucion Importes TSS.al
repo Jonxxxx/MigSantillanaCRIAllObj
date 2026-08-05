@@ -1,4 +1,4 @@
-table 34002137 "Distribucion Importes TSS"
+table 55778 "Distribucion Importes TSS"
 {
 
     fields

@@ -1,4 +1,4 @@
-codeunit 34002135 "Genera formatos elect. legales"
+codeunit 55776 "Genera formatos elect. legales"
 {
 
     trigger OnRun()
@@ -8,15 +8,15 @@ codeunit 34002135 "Genera formatos elect. legales"
 
     var
         ConfContab: Record 98;
-        ConfNomina: Record 34002103;
+        ConfNomina: Record 55744;
         Empl: Record 5200;
-        EC: Record 34002100;
-        HCN: Record 34002117;
+        EC: Record 55741;
+        HCN: Record 55758;
         Fecha: Record 2000000007;
-        EmpRel: Record 34002150;
-        TipoNom: Record 34002158;
-        EmpresaCot: Record 34002100;
-        FuncNom: Codeunit 34002104;
+        EmpRel: Record 55791;
+        TipoNom: Record 55799;
+        EmpresaCot: Record 55741;
+        FuncNom: Codeunit 55745;
         TempBlob: Codeunit "Temp Blob";
         IStream: InStream;
         StreamOut: OutStream;
@@ -40,14 +40,14 @@ codeunit 34002135 "Genera formatos elect. legales"
         Err001: Label 'Payroll key must have a length of 3 positions';
         CalcFecha: Label '+1Y';
 
-    procedure RDAutodeterminacion(var HCN: Record 34002117; TSSAno: Integer; ClaveNomina: Code[3])
+    procedure RDAutodeterminacion(var HCN: Record 55758; TSSAno: Integer; ClaveNomina: Code[3])
     var
-        HLN: Record 34002118;
-        SaldosFavor: Record 34002128;
-        HistAccionesdepersonal: Record 34002159;
+        HLN: Record 55759;
+        SaldosFavor: Record 55769;
+        HistAccionesdepersonal: Record 55800;
         EmployeeAbsence: Record 5207;
         CauseofAbsence: Record 5206;
-        Conceptossalariales: Record 34002111;
+        Conceptossalariales: Record 55752;
         SalarioCotizable: Decimal;
         SalarioISR: Decimal;
         SalarioInfotep: Decimal;
@@ -442,7 +442,7 @@ codeunit 34002135 "Genera formatos elect. legales"
     procedure RDDGT4(var DGTMes: Integer; var DGTAno: Integer)
     var
         SalarioCotizable: Decimal;
-        HAP: Record 34002159;
+        HAP: Record 55800;
         HayDatos: Boolean;
     begin
         ConfNomina.GET();

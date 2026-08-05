@@ -1,4 +1,4 @@
-report 34002107 "Reporte Horas Extras"
+report 55748 "Reporte Horas Extras"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte Horas Extras.rdl';
@@ -6,7 +6,7 @@ report 34002107 "Reporte Horas Extras"
 
     dataset
     {
-        dataitem(Departamentos; 34002135)
+        dataitem(Departamentos; 55776)
         {
             DataItemTableView = SORTING(Codigo);
             column(COMPANYNAME; COMPANYNAME)
@@ -61,7 +61,7 @@ report 34002107 "Reporte Horas Extras"
             column(Departamentos_Codigo; Codigo)
             {
             }
-            dataitem("Sub-Departamentos"; 34002136)
+            dataitem("Sub-Departamentos"; 55777)
             {
                 DataItemLink = "Cod. Departamento" = FIELD(Codigo);
                 DataItemTableView = SORTING("Cod. Departamento", Codigo);
@@ -86,7 +86,7 @@ report 34002107 "Reporte Horas Extras"
                     column(Employee_Sub_Departamento; "Sub-Departamento")
                     {
                     }
-                    dataitem("Historico Lin. nomina"; 34002118)
+                    dataitem("Historico Lin. nomina"; 55759)
                     {
                         DataItemLink = "No. empleado" = FIELD("No."),
                                        Departamento = FIELD(Departamento),
@@ -223,9 +223,9 @@ report 34002107 "Reporte Horas Extras"
         Text001: Label 'Report of  ';
         NombreReporte: Text[150];
         Concepto: Code[20];
-        recConceptos: Record 34002111;
-        LinEsqPercep: Record 34002115;
-        _ConfNominas: Record 34002103;
+        recConceptos: Record 55752;
+        LinEsqPercep: Record 55756;
+        _ConfNominas: Record 55744;
         CantEmpl: Decimal;
         CantEmplGral: Decimal;
         CantGral: Decimal;

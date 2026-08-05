@@ -81,8 +81,8 @@ pageextension 55104 EXCCRIAbsenceRegistration extends "Absence Registration"
     end;
 
     var
-        EXCCRIHolidayHistory: Record 34002141;
-        EXCCRIPayrollSetup: Record 34002103;
+        EXCCRIHolidayHistory: Record 55782;
+        EXCCRIPayrollSetup: Record 55744;
         EXCCRICauseOfAbsence: Record "Cause of Absence";
         EXCCRIEmployeeAbsence: Record "Employee Absence";
         EXCCRIConfirmPostAbsenceQst: Label

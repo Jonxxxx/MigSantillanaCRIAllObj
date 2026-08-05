@@ -1,13 +1,13 @@
-report 34002118 "Recibo Pago Sobres 2"
+report 55759 "Recibo Pago Sobres 2"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Pago Sobres 2.rdl';
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", "Tipo de nomina", Periodo;
@@ -842,10 +842,10 @@ report 34002118 "Recibo Pago Sobres 2"
     var
         rEmpleado: Record 5200;
         rEmpresa: Record 79;
-        rLinNom: Record 34002118;
-        rCargos: Record 34002110;
-        rDepto: Record 34002135;
-        rSubDepto: Record 34002136;
+        rLinNom: Record 55759;
+        rCargos: Record 55751;
+        rDepto: Record 55776;
+        rSubDepto: Record 55777;
         DescIngreso: array[15] of Text[50];
         DescDeducc: array[15] of Text[50];
         ImportIngreso: array[15] of Decimal;

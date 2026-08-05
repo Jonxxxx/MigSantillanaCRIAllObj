@@ -1,4 +1,4 @@
-report 34002112 "Listado Novedades TSS"
+report 55753 "Listado Novedades TSS"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado Novedades TSS.rdl';
@@ -246,7 +246,7 @@ report 34002112 "Listado Novedades TSS"
 
     var
         rCompany: Record 79;
-        CalFecha: Codeunit 34002104;
+        CalFecha: Codeunit 55745;
         TempBlob: Codeunit "Temp Blob";
         FileOutStream: OutStream;
         TipoDoc: Code[2];

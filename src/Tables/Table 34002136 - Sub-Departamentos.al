@@ -1,4 +1,4 @@
-table 34002136 "Sub-Departamentos"
+table 55777 "Sub-Departamentos"
 {
     Caption = 'Sections';
     DataPerCompany = false;

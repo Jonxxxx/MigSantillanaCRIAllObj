@@ -2,7 +2,7 @@ page 34002161 "RRHH Usuarios aprobacion"
 {
     Caption = 'HR User authorization';
     PageType = List;
-    SourceTable = 34002154;
+    SourceTable = 55795;
 
     layout
     {

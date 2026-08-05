@@ -1,4 +1,4 @@
-codeunit 34002105 Parser
+codeunit 55746 Parser
 {
     // Analizador sintáctico basado en el algoritmo 'Descenso recursivo' con
     // generacion de codigo en polaca inversa para la gramática:
@@ -10,7 +10,7 @@ codeunit 34002105 Parser
     // F -> (E), -(E)
     // El codigo generado se almacena en la tabla POLACA
 
-    TableNo = 34002144;
+    TableNo = 55785;
 
     trigger OnRun()
     begin
@@ -33,12 +33,12 @@ codeunit 34002105 Parser
 
     var
         Puntero: Integer;
-        Regtoken: Record 34002142;
-        Regpolaca: Record 34002143;
-        Regconceptos: Record 34002144;
-        GlobalRec: Record 34002144;
+        Regtoken: Record 55783;
+        Regpolaca: Record 55784;
+        Regconceptos: Record 55785;
+        GlobalRec: Record 55785;
 
-    procedure F(Reg: Record 34002143)
+    procedure F(Reg: Record 55784)
     begin
         IF (Regtoken.Token >= 'a') AND (Regtoken.Token < 'z') OR
            (Regtoken.Token >= 'A') AND (Regtoken.Token < 'Z') OR
@@ -65,7 +65,7 @@ codeunit 34002105 Parser
         END;
     end;
 
-    procedure T(Reg: Record 34002143)
+    procedure T(Reg: Record 55784)
     begin
         F(Reg);
         WHILE (Regtoken.Token = '*') OR (Regtoken.Token = '/') DO BEGIN
@@ -76,7 +76,7 @@ codeunit 34002105 Parser
         END;
     end;
 
-    procedure E(Reg: Record 34002143)
+    procedure E(Reg: Record 55784)
     begin
         IF Regtoken.Token = '-' THEN BEGIN
             Reg.Token := '&';
@@ -94,7 +94,7 @@ codeunit 34002105 Parser
         END;
     end;
 
-    procedure Apilar(Reg: Record 34002143)
+    procedure Apilar(Reg: Record 55784)
     begin
         Puntero := Puntero + 1;
         Reg.Formula := Regtoken.Formula;

@@ -47,8 +47,8 @@ tableextension 55074 EXCCRIEmployee extends Employee
         {
             trigger OnAfterValidate()
             var
-                EXCCRICompany: Record 34002100;
-                EXCCRIContract: Record 34002109;
+                EXCCRICompany: Record 55741;
+                EXCCRIContract: Record 55750;
             begin
                 TestField(Company);
                 EXCCRICompany.Get(Company);
@@ -103,13 +103,13 @@ tableextension 55074 EXCCRIEmployee extends Employee
             DataClassification = CustomerContent;
         }
 
-        field(34002100; "Company"; Code[10])
+        field(55741; "Company"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Empresas Cotizacion";
         }
 
-        field(34002101; "Second Last Name"; Text[30])
+        field(55742; "Second Last Name"; Text[30])
         {
             DataClassification = CustomerContent;
 
@@ -119,13 +119,13 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002102; "Working Center"; Code[10])
+        field(55743; "Working Center"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Centros de Trabajo"."Centro de trabajo" where("Empresa cotizacion" = field(Company));
         }
 
-        field(34002103; "Full Name"; Text[50])
+        field(55744; "Full Name"; Text[50])
         {
             DataClassification = CustomerContent;
 
@@ -142,7 +142,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002104; "Document Type"; Option)
+        field(55745; "Document Type"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Cédula","Pasaporte","Tarj.residen.comunitario","Perm.Trabajo"," ","N.I.Extranjero","N.I.F.";
@@ -154,7 +154,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002105; "Document ID"; Text[15])
+        field(55746; "Document ID"; Text[15])
         {
             DataClassification = CustomerContent;
 
@@ -164,20 +164,20 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002106; "Employee Level"; Code[10])
+        field(55747; "Employee Level"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Nivel Cargo"."Cod. Nivel";
             Editable = false;
         }
 
-        field(34002107; "Posting Group"; Code[10])
+        field(55748; "Posting Group"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Grupos Contables Empleados";
         }
 
-        field(34002108; "Job Type Code"; Code[15])
+        field(55749; "Job Type Code"; Code[15])
         {
             DataClassification = CustomerContent;
             TableRelation = "Puestos laborales".Codigo where("Cod. departamento" = field(Departamento));
@@ -188,53 +188,53 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002109; "Alta contrato"; Date)
+        field(55750; "Alta contrato"; Date)
         {
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(34002110; "Fin contrato"; Date)
+        field(55751; "Fin contrato"; Date)
         {
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(34002111; "Estado Contrato"; Option)
+        field(55752; "Estado Contrato"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Sin contrato","Indefinido","Finalizado","No finalizado";
             Editable = false;
         }
 
-        field(34002112; "Pensionado"; Boolean)
+        field(55753; "Pensionado"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002113; "Calcular Nomina"; Boolean)
+        field(55754; "Calcular Nomina"; Boolean)
         {
             DataClassification = CustomerContent;
             InitValue = true;
         }
 
-        field(34002114; "Fecha salida empresa"; Date)
+        field(55755; "Fecha salida empresa"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002115; "Telefono caso emergencia"; Text[30])
+        field(55756; "Telefono caso emergencia"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002116; "Nacionalidad"; Code[10])
+        field(55757; "Nacionalidad"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Country/Region";
         }
 
-        field(34002117; "Incentivos/Puntos"; Decimal)
+        field(55758; "Incentivos/Puntos"; Decimal)
         {
             DataClassification = CustomerContent;
 
@@ -244,133 +244,133 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002118; "Lugar nacimiento"; Text[30])
+        field(55759; "Lugar nacimiento"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002119; "Estado civil"; Option)
+        field(55760; "Estado civil"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Soltero/a","Casado/a","Viudo/a","Separado/a","Divorciado/a","Union libre";
         }
 
-        field(34002120; "Disponible 1"; Code[20])
+        field(55761; "Disponible 1"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Bancos;
         }
 
-        field(34002121; "Disponible 2"; Option)
+        field(55762; "Disponible 2"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Ahorro","Corriente";
         }
 
-        field(34002122; "Cuenta"; Code[22])
+        field(55763; "Cuenta"; Code[22])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Distrib. Ingreso Pagos Elect."."Numero Cuenta" where("No. empleado" = field("No.")));
             Editable = false;
         }
 
-        field(34002123; "Forma de Cobro"; Option)
+        field(55764; "Forma de Cobro"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Efectivo","Cheque","Transferencia Banc.";
         }
 
-        field(34002124; "Total ingresos"; Decimal)
+        field(55765; "Total ingresos"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Tipo concepto" = const(Ingresos)));
             Editable = false;
         }
 
-        field(34002125; "Total deducciones"; Decimal)
+        field(55766; "Total deducciones"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Tipo concepto" = const(Deducciones)));
             Editable = false;
         }
 
-        field(34002126; "Mes Nacimiento"; Integer)
+        field(55767; "Mes Nacimiento"; Integer)
         {
             DataClassification = CustomerContent;
             Editable = false;
         }
 
-        field(34002127; "Total ISR"; Decimal)
+        field(55768; "Total ISR"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Concepto salarial" = const('ISR')));
         }
 
-        field(34002128; "Tipo Empleado"; Option)
+        field(55769; "Tipo Empleado"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Fijo","Temporal","Otro";
         }
 
-        field(34002129; "Salario"; Decimal)
+        field(55770; "Salario"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Perfil Salarial".Importe where("No. empleado" = field("No."), "Salario Base" = const(true)));
         }
 
-        field(34002130; "Acumulado Salario"; Decimal)
+        field(55771; "Acumulado Salario"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Historico Lin. nomina".Total where("No. empleado" = field("No."), Periodo = field("Date Filter"), "Salario Base" = const(true)));
         }
 
-        field(34002131; "Codigo Cliente"; Code[20])
+        field(55772; "Codigo Cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Customer."No.";
         }
 
-        field(34002132; "Excluido Cotizacion TSS"; Boolean)
+        field(55773; "Excluido Cotizacion TSS"; Boolean)
         {
             DataClassification = CustomerContent;
             InitValue = false;
         }
 
-        field(34002133; "Excluido Cotizacion ISR"; Boolean)
+        field(55774; "Excluido Cotizacion ISR"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002134; "Dia nacimiento"; Integer)
+        field(55775; "Dia nacimiento"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002135; "Cod. ARS"; Code[10])
+        field(55776; "Cod. ARS"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = ARS;
         }
 
-        field(34002136; "Cod. AFP"; Code[10])
+        field(55777; "Cod. AFP"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = AFP;
         }
 
-        field(34002137; "Departamento"; Code[20])
+        field(55778; "Departamento"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Departamentos where(Inhabilitado = const(false));
         }
 
-        field(34002138; "Sub-Departamento"; Code[20])
+        field(55779; "Sub-Departamento"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Sub-Departamentos".Codigo where("Cod. Departamento" = field(Departamento));
         }
 
-        field(34002139; "Agente de Retencion ISR"; Text[30])
+        field(55780; "Agente de Retencion ISR"; Text[30])
         {
             DataClassification = CustomerContent;
             TableRelation = Company;
@@ -381,115 +381,115 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002140; "RNC Agente de Retencion ISR"; Text[30])
+        field(55781; "RNC Agente de Retencion ISR"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002141; "Cod. Supervisor"; Code[20])
+        field(55782; "Cod. Supervisor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Employee;
         }
 
-        field(34002142; "Nombre Supervisor"; Text[150])
+        field(55783; "Nombre Supervisor"; Text[150])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Employee."Full Name" where("No." = field("Cod. Supervisor")));
             Editable = false;
         }
 
-        field(34002143; "Shift"; Code[10])
+        field(55784; "Shift"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = Shift;
         }
 
-        field(34002144; "Salario Empresas Externas"; Decimal)
+        field(55785; "Salario Empresas Externas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002145; "Aporte Voluntario Income Tax"; Decimal)
+        field(55786; "Aporte Voluntario Income Tax"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002146; "Language Code"; Code[10])
+        field(55787; "Language Code"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = Language;
         }
 
-        field(34002147; "Desc. Departamento"; Text[70])
+        field(55788; "Desc. Departamento"; Text[70])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Departamentos.Descripcion where(Codigo = field(Departamento)));
             Editable = false;
         }
 
-        field(34002148; "Dias Vacaciones"; Decimal)
+        field(55789; "Dias Vacaciones"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Historico Vacaciones".Dias where("No. empleado" = field("No.")));
             Editable = false;
         }
 
-        field(34002149; "Contacto en caso de Emergencia"; Text[60])
+        field(55790; "Contacto en caso de Emergencia"; Text[60])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002150; "Telefono contacto Emergencia"; Text[30])
+        field(55791; "Telefono contacto Emergencia"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002151; "Parentesco caso de Emergencia"; Text[30])
+        field(55792; "Parentesco caso de Emergencia"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002152; "Distribuir salario en proyecto"; Boolean)
+        field(55793; "Distribuir salario en proyecto"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002153; "Tipo de Sangre"; Code[3])
+        field(55794; "Tipo de Sangre"; Code[3])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Tipo de Sangre"));
         }
 
-        field(34002154; "Nivel de riesgo"; Option)
+        field(55795; "Nivel de riesgo"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Critico","No critico";
         }
 
-        field(34002155; "ID Control de asistencia"; Code[6])
+        field(55796; "ID Control de asistencia"; Code[6])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002156; "Cod. empleado a quien sustituy"; Code[20])
+        field(55797; "Cod. empleado a quien sustituy"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Employee;
         }
 
-        field(34002157; "Nombre a quien sustituye"; Text[150])
+        field(55798; "Nombre a quien sustituye"; Text[150])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Employee."Full Name" where("No." = field("Cod. empleado a quien sustituy")));
         }
 
-        field(34002158; "No. Pasaporte"; Code[15])
+        field(55799; "No. Pasaporte"; Code[15])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002159; "Visa americana"; Boolean)
+        field(55800; "Visa americana"; Boolean)
         {
             DataClassification = CustomerContent;
         }
@@ -659,7 +659,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
     trigger OnBeforeInsert()
     var
         EXCCRICommonNumber: Record 34002182;
-        EXCCRIPayrollSetup: Record 34002103;
+        EXCCRIPayrollSetup: Record 55744;
     begin
         EXCCRIPayrollSetup.Get();
 
@@ -678,10 +678,10 @@ tableextension 55074 EXCCRIEmployee extends Employee
 
     trigger OnBeforeDelete()
     var
-        EXCCRIContract: Record 34002109;
-        EXCCRIDistribution: Record 34002108;
-        EXCCRIHistoricalPayroll: Record 34002117;
-        EXCCRISalaryProfile: Record 34002115;
+        EXCCRIContract: Record 55750;
+        EXCCRIDistribution: Record 55749;
+        EXCCRIHistoricalPayroll: Record 55758;
+        EXCCRISalaryProfile: Record 55756;
     begin
         EXCCRIHistoricalPayroll.SetRange("No. empleado", "No.");
         if EXCCRIHistoricalPayroll.FindFirst() then
@@ -719,11 +719,11 @@ tableextension 55074 EXCCRIEmployee extends Employee
 
     local procedure EXCCRIApplyJobType()
     var
-        EXCCRIContract: Record 34002109;
-        EXCCRIJobPosition: Record 34002110;
-        EXCCRIPositionProfile: Record 34002113;
-        EXCCRISalaryConcept: Record 34002111;
-        EXCCRISalaryProfileLine: Record 34002115;
+        EXCCRIContract: Record 55750;
+        EXCCRIJobPosition: Record 55751;
+        EXCCRIPositionProfile: Record 55754;
+        EXCCRISalaryConcept: Record 55752;
+        EXCCRISalaryProfileLine: Record 55756;
     begin
         TestField(Departamento);
 
@@ -787,7 +787,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
 
     local procedure EXCCRIStorePreviousIncentive()
     var
-        EXCCRIProposedPointHistory: Record 34002127;
+        EXCCRIProposedPointHistory: Record 55768;
     begin
         if
             ("Incentivos/Puntos" = xRec."Incentivos/Puntos") or
@@ -819,7 +819,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
 
     local procedure EXCCRIUpdateMTJobDescription()
     var
-        EXCCRIAdditionalHRData: Record 34002151;
+        EXCCRIAdditionalHRData: Record 55792;
     begin
         if "Cod. Puesto MT" = '' then
             exit;

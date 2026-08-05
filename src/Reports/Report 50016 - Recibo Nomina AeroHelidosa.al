@@ -2,12 +2,12 @@ report 55016 "Recibo Nomina Aero/Helidosa"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Nomina AeroHelidosa.rdl';
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", "Tipo de nomina", "Periodo";
@@ -23,7 +23,7 @@ report 55016 "Recibo Nomina Aero/Helidosa"
             column(Historico_Cab__nomina_Tipo_Nomina; "Tipo Nomina")
             {
             }
-            dataitem("Historico Lin. nomina"; 34002118)
+            dataitem("Historico Lin. nomina"; 55759)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado"),
                                "Tipo Nomina" = FIELD("Tipo Nomina"),
@@ -431,9 +431,9 @@ report 55016 "Recibo Nomina Aero/Helidosa"
     var
         rEmpresa: Record 79;
         rEmp: Record 5200;
-        rCargos: Record 34002110;
-        rDepto: Record 34002135;
-        rSubDepto: Record 34002136;
+        rCargos: Record 55751;
+        rDepto: Record 55776;
+        rSubDepto: Record 55777;
         DescIngreso: array[10] of Text[50];
         DescDeducc: array[10] of Text[50];
         Horas: array[10] of Decimal;

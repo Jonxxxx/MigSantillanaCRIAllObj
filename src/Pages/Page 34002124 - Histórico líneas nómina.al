@@ -1,9 +1,9 @@
-page 34002124 "Historico lineas nomina"
+page 55765 "Historico lineas nomina"
 {
     AutoSplitKey = true;
     PageType = ListPart;
-    Permissions = TableData 34002118 = rimd;
-    SourceTable = 34002118;
+    Permissions = TableData 55759 = rimd;
+    SourceTable = 55759;
 
     layout
     {

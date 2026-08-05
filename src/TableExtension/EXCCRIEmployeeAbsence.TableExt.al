@@ -10,17 +10,17 @@ tableextension 55077 EXCCRIEmployeeAbsence extends "Employee Absence"
             end;
         }
 
-        field(34002100; "Closed"; Boolean)
+        field(55741; "Closed"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002101; "% To deduct"; Decimal)
+        field(55742; "% To deduct"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002102; "Full name"; Text[60])
+        field(55743; "Full name"; Text[60])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Employee."Full Name" where("No." = field("Employee No.")));
@@ -30,7 +30,7 @@ tableextension 55077 EXCCRIEmployeeAbsence extends "Employee Absence"
     local procedure EXCCRIValidateTime()
     var
         EXCCRIDate: Record Date;
-        EXCCRIHoliday: Record 34002155;
+        EXCCRIHoliday: Record 55796;
     begin
         if
             ("From Date" > "To Date") and

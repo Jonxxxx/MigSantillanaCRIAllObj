@@ -1,7 +1,7 @@
-page 34002151 "Configuracion nominas"
+page 55792 "Configuracion nominas"
 {
     PageType = Card;
-    SourceTable = 34002103;
+    SourceTable = 55744;
 
     layout
     {

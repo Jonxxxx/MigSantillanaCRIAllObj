@@ -505,7 +505,7 @@ page 34002251 "Employee Capacity Matrix"
                     Caption = 'Card';
                     ToolTip = 'Card';
                     Image = EditLines;
-                    RunObject = Page 34002104;
+                    RunObject = Page 55745;
                     RunPageLink = "No." = FIELD("No.");
                     ShortCutKey = 'Shift+F7';
                 }

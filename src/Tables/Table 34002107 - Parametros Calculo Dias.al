@@ -1,9 +1,9 @@
-table 34002107 "Parametros Calculo Dias"
+table 55748 "Parametros Calculo Dias"
 {
     Caption = 'Days Calculation Parameter';
     DataPerCompany = false;
-    //IGNORAR: Page no existe DrillDownPageID = 34002149;
-    //IGNORAR: Page no existe LookupPageID = 34002149;
+    //IGNORAR: Page no existe DrillDownPageID = 55790;
+    //IGNORAR: Page no existe LookupPageID = 55790;
 
     fields
     {

@@ -1,8 +1,8 @@
-page 34002105 "Pagos Electronicos"
+page 55746 "Pagos Electronicos"
 {
     Caption = 'Electronic Payment Income Distribution';
     PageType = List;
-    SourceTable = 34002108;
+    SourceTable = 55749;
 
     layout
     {

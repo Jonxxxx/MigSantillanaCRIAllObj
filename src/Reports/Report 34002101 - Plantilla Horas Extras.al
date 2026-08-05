@@ -1,4 +1,4 @@
-report 34002101 "Plantilla Horas Extras"
+report 55742 "Plantilla Horas Extras"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Plantilla Horas Extras.rdl';

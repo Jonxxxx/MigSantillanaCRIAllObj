@@ -100,7 +100,7 @@ table 34002201 "ent - aaa - Disponible"
     end;
 
     var
-        TiposEntrenamientos: Record 34002151;
+        TiposEntrenamientos: Record 55792;
         HumanResSetup: Record 5218;
         NoSeriesMgt: Codeunit "No. Series";
 

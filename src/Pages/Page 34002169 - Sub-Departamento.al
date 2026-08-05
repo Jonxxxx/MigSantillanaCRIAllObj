@@ -2,7 +2,7 @@ page 34002169 "Sub-Departamento"
 {
     Caption = 'Sub-Department';
     PageType = List;
-    SourceTable = 34002136;
+    SourceTable = 55777;
 
     layout
     {

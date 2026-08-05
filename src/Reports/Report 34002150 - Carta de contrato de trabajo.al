@@ -1,4 +1,4 @@
-report 34002150 "Carta de contrato de trabajo"
+report 55791 "Carta de contrato de trabajo"
 {
     RDLCLayout = 'src/ReportsLayout/Carta de contrato de trabajo.rdl';
     WordLayout = 'src/ReportsLayout/Carta de contrato de trabajo.docx';
@@ -151,12 +151,12 @@ report 34002150 "Carta de contrato de trabajo"
     }
 
     var
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         ChkTransMgt: Report 34003010;
-        Contrato: Record 34002109;
-        RepresentantesEmpresa: Record 34002102;
-        EmpresasCot: Record 34002100;
-        PerfilSalario: Record 34002115;
+        Contrato: Record 55750;
+        RepresentantesEmpresa: Record 55743;
+        EmpresasCot: Record 55741;
+        PerfilSalario: Record 55756;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

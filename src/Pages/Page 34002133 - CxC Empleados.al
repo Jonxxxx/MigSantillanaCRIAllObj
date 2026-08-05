@@ -1,7 +1,7 @@
-page 34002133 "CxC Empleados"
+page 55774 "CxC Empleados"
 {
     PageType = Card;
-    SourceTable = 34002145;
+    SourceTable = 55786;
 
     layout
     {
@@ -199,10 +199,10 @@ page 34002133 "CxC Empleados"
     }
 
     var
-        rCxCEmpl: Record 34002145;
+        rCxCEmpl: Record 55786;
         dCuotas: Decimal;
-        HistCabPrestamo: Record 34002146;
-        HistLinPrestamo: Record 34002147;
+        HistCabPrestamo: Record 55787;
+        HistLinPrestamo: Record 55788;
         Answer: Boolean;
         Text001: Label 'Do you watn to post the loan?';
         Err001: Label 'Th field %1 can not be empty';

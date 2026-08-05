@@ -1,4 +1,4 @@
-query 34002104 "NOMDS Query entrenamientos"
+query 55745 "NOMDS Query entrenamientos"
 {
     Caption = 'Training query';
 

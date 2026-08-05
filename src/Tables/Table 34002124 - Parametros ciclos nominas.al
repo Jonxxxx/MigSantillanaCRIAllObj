@@ -1,8 +1,8 @@
-table 34002124 "Parametros ciclos nominas"
+table 55765 "Parametros ciclos nominas"
 {
     Caption = 'Payroll cicle parameters';
-    //IGNORAR: Page no existe DrillDownPageID = 34002150;
-    //IGNORAR: Page no existe LookupPageID = 34002150;
+    //IGNORAR: Page no existe DrillDownPageID = 55791;
+    //IGNORAR: Page no existe LookupPageID = 55791;
 
     fields
     {

@@ -1316,7 +1316,7 @@ codeunit 55225 "Funciones Santillana"
 
     procedure CorrigeContrato()
     var
-        Contrato: Record 34002109;
+        Contrato: Record 55750;
         NuevaFechaInicio: Date;
     begin
         Contrato.GET('1015', 100);

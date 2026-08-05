@@ -1,10 +1,10 @@
-report 34002123 "Anular nominas por lotes"
+report 55764 "Anular nominas por lotes"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", Periodo, "Tipo de nomina";
@@ -124,7 +124,7 @@ report 34002123 "Anular nominas por lotes"
 
             trigger OnPostDataItem()
             var
-                LinNomina: Record 34002118;
+                LinNomina: Record 55759;
             begin
                 /*
                 LinNomina.RESET;
@@ -184,20 +184,20 @@ report 34002123 "Anular nominas por lotes"
     }
 
     var
-        CabHistAEmpresa: Record 34002121;
-        LinHistAEmpresa: Record 34002122;
+        CabHistAEmpresa: Record 55762;
+        LinHistAEmpresa: Record 55763;
         Incidencias: Record 5207;
         Fecha: Record 2000000007;
-        HistCabPrestamos: Record 34002146;
-        HistLinPrestamos: Record 34002147;
-        HistLinPrestamos2: Record 34002147;
-        ConfNominas: Record 34002103;
-        SaldoFavor: Record 34002128;
-        BKSaldoFavor: Record 34002130;
+        HistCabPrestamos: Record 55787;
+        HistLinPrestamos: Record 55788;
+        HistLinPrestamos2: Record 55788;
+        ConfNominas: Record 55744;
+        SaldoFavor: Record 55769;
+        BKSaldoFavor: Record 55771;
         Empl: Record 5200;
-        Cont: Record 34002109;
-        TipoNom: Record 34002158;
-        HistoricoLinnomina: Record 34002118;
+        Cont: Record 55750;
+        TipoNom: Record 55799;
+        HistoricoLinnomina: Record 55759;
         Ventana: Dialog;
         AnulaContabilizados: Boolean;
         ABorrar: Decimal;

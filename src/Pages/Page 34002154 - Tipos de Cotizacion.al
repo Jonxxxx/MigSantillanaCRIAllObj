@@ -1,11 +1,11 @@
-page 34002154 "Tipos de Cotizacion"
+page 55795 "Tipos de Cotizacion"
 {
     AdditionalSearchTerms = 'Social Security Setup';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'SS Setup';
     InstructionalText = 'Configure the values for Social Security';
     PageType = List;
-    SourceTable = 34002129;
+    SourceTable = 55770;
     UsageCategory = Administration;
 
     layout
@@ -116,7 +116,7 @@ page 34002154 "Tipos de Cotizacion"
     end;
 
     var
-        TC: Record 34002129;
-        TC2: Record 34002129;
+        TC: Record 55770;
+        TC2: Record 55770;
 }
 

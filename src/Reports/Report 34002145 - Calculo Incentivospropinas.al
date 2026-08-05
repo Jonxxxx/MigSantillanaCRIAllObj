@@ -1,4 +1,4 @@
-report 34002145 "Calculo Incentivos/propinas"
+report 55786 "Calculo Incentivos/propinas"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Calculo Incentivospropinas.rdl';
@@ -368,11 +368,11 @@ report 34002145 "Calculo Incentivos/propinas"
 
     var
         Empleado: Record 5200;
-        PrecioPto: Record 34002126;
+        PrecioPto: Record 55767;
         Ausencia: Record 5207;
-        ConfNomina: Record 34002103;
+        ConfNomina: Record 55744;
         Fecha: Record 2000000007;
-        LinPerfSal: Record 34002115;
+        LinPerfSal: Record 55756;
         ImporteTotal: Decimal;
         Ventana: Dialog;
         AModificar: Decimal;

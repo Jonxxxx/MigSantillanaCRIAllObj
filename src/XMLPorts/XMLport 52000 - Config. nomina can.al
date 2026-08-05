@@ -7,7 +7,7 @@ xmlport 55181 "Config. nomina can"
     {
         textelement(ConfigNominaCan)
         {
-            tableelement("Configuracion nominas"; 34002103)
+            tableelement("Configuracion nominas"; 55744)
             {
                 XmlName = 'ConfiguracionNominas';
                 fieldelement(CN_Codigo; "Configuracion nominas".Codigo)
@@ -176,7 +176,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Parametros Calculo Dias"; 34002107)
+            tableelement("Parametros Calculo Dias"; 55748)
             {
                 XmlName = 'ParametrosCalculoDias';
                 fieldelement(PCD_Codigo; "Parametros Calculo Dias".Codigo)
@@ -189,7 +189,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Puestos laborales"; 34002110)
+            tableelement("Puestos laborales"; 55751)
             {
                 XmlName = 'PuestosLaborales';
                 fieldelement(PL_Codigo; "Puestos laborales"."Codigo")
@@ -208,7 +208,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement(Departamentos; 34002135)
+            tableelement(Departamentos; 55776)
             {
                 XmlName = 'Departamentos';
                 fieldelement(D_Codigo; Departamentos.Codigo)
@@ -221,7 +221,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Sub-Departamentos"; 34002136)
+            tableelement("Sub-Departamentos"; 55777)
             {
                 XmlName = 'SubDepartamentos';
                 fieldelement(SD_CodDepartamento; "Sub-Departamentos"."Cod. Departamento")
@@ -234,7 +234,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Tabla retencion ISR"; 34002131)
+            tableelement("Tabla retencion ISR"; 55772)
             {
                 XmlName = 'TablaRetencionISR';
                 fieldelement(TISR_Ano; "Tabla retencion ISR".Ano)
@@ -318,7 +318,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Tipos de Cotizacion"; 34002129)
+            tableelement("Tipos de Cotizacion"; 55770)
             {
                 XmlName = 'TiposCotizacion';
                 fieldelement(TC_Ano; "Tipos de Cotizacion".Ano)
@@ -352,7 +352,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement(Calendario; 34002134)
+            tableelement(Calendario; 55775)
             {
                 XmlName = 'Calendario';
                 fieldelement(C_Fecha; Calendario.Fecha)
@@ -383,7 +383,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Perfil Salario x Cargo"; 34002113)
+            tableelement("Perfil Salario x Cargo"; 55754)
             {
                 XmlName = 'PerfilSalarioCargo';
                 fieldelement(PSC_PuestoDeTrabajo; "Perfil Salario x Cargo"."Puesto de Trabajo")
@@ -447,7 +447,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }*/
             }
-            tableelement("Distrib. Ingreso Pagos Elect."; 34002108)
+            tableelement("Distrib. Ingreso Pagos Elect."; 55749)
             {
                 XmlName = 'DistribIngresoPagosElect';
                 fieldelement(DIPE_NoEempleado; "Distrib. Ingreso Pagos Elect."."No. empleado")
@@ -482,7 +482,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Empresas Cotizacion"; 34002100)
+            tableelement("Empresas Cotizacion"; 55741)
             {
                 XmlName = 'EmpresasCotizacion';
                 fieldelement("EC_EmpresaCotizacion"; "Empresas Cotizacion"."Empresa cotizacion")
@@ -579,7 +579,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Grupos Contables Empleados"; 34002104)
+            tableelement("Grupos Contables Empleados"; 55745)
             {
                 XmlName = 'GruposContablesEmpleados';
                 fieldelement(GCE_Codigo; "Grupos Contables Empleados"."Codigo")
@@ -589,7 +589,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Dist. Ctas. Gpo. Cont. Empl."; 34002105)
+            tableelement("Dist. Ctas. Gpo. Cont. Empl."; 55746)
             {
                 XmlName = 'DistCtasGpoContEmpl';
                 fieldelement(DCGCE_Codigo; "Dist. Ctas. Gpo. Cont. Empl."."Codigo")
@@ -635,7 +635,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement(Contratos; 34002109)
+            tableelement(Contratos; 55750)
             {
                 XmlName = 'Contratos';
                 fieldelement(C_EmpresaCotizacion; Contratos."Empresa cotizacion")
@@ -1030,7 +1030,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Conceptos salariales"; 34002111)
+            tableelement("Conceptos salariales"; 55752)
             {
                 XmlName = 'ConceptosSalariales';
                 fieldelement(CS_ShortcutDimension; "Conceptos salariales"."Shortcut Dimension")
@@ -1145,7 +1145,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Perfil Salarial"; 34002115)
+            tableelement("Perfil Salarial"; 55756)
             {
                 XmlName = 'PerfilSalarial';
                 fieldelement(PS_EmpresaCotizacion; "Perfil Salarial"."Empresa cotizacion")

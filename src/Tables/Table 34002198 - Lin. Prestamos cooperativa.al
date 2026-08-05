@@ -1,7 +1,7 @@
 table 34002198 "Lin. Prestamos cooperativa"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 34002135;
-    //IGNORAR: Page no existe LookupPageID = 34002135;
+    //IGNORAR: Page no existe DrillDownPageID = 55776;
+    //IGNORAR: Page no existe LookupPageID = 55776;
 
     fields
     {

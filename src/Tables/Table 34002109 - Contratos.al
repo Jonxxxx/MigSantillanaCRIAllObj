@@ -1,10 +1,10 @@
-table 34002109 Contratos
+table 55750 Contratos
 {
     // #001  PLB  21/12/2016  Actualizar datos empleado
 
     DataCaptionFields = "No. empleado";
-    DrillDownPageID = 34002106;
-    LookupPageID = 34002106;
+    DrillDownPageID = 55747;
+    LookupPageID = 55747;
 
     fields
     {
@@ -334,7 +334,7 @@ table 34002109 Contratos
 
     trigger OnDelete()
     var
-        Contratos: Record 34002109;
+        Contratos: Record 55750;
     begin
 
         //+MdE
@@ -444,13 +444,13 @@ table 34002109 Contratos
     end;
 
     var
-        Empresa: Record 34002100;
+        Empresa: Record 55741;
         Trabajad: Record 5200;
         TipoContrato: Record 5211;
-        "Cab.nomina": Record 34002117;
-        Cont: Record 34002109;
+        "Cab.nomina": Record 55758;
+        Cont: Record 55750;
         TiempoDurac: Text[30];
-        rCfgNom: Record 34002103;
+        rCfgNom: Record 55744;
         rEmp: Record 5200;
         Err001: Label 'Can''t change starting date if there are posted payrolls';
         Err002: Label 'You must indicate starting date...';
@@ -466,7 +466,7 @@ table 34002109 Contratos
         FromMdE := New_FromMdE;
     end;
 
-    local procedure ActualizarEmpleado(Contratos: Record 34002109)
+    local procedure ActualizarEmpleado(Contratos: Record 55750)
     var
         Empleado: Record 5200;
     begin
@@ -527,7 +527,7 @@ table 34002109 Contratos
 
     local procedure EsUltimoContrato(): Boolean
     var
-        Contratos: Record 34002109;
+        Contratos: Record 55750;
     begin
 
         //+#001

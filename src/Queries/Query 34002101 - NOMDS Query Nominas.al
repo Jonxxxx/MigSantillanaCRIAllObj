@@ -1,10 +1,10 @@
-query 34002101 "NOMDS Query Nominas"
+query 55742 "NOMDS Query Nominas"
 {
     Caption = 'Payroll query';
 
     elements
     {
-        dataitem(Historico_Lin_nomina; 34002118)
+        dataitem(Historico_Lin_nomina; 55759)
         {
             column(No_empleado; "No. empleado")
             {
@@ -39,13 +39,13 @@ query 34002101 "NOMDS Query Nominas"
                 column(Company; Company)
                 {
                 }
-                dataitem(Departamentos; 34002135)
+                dataitem(Departamentos; 55776)
                 {
                     DataItemLink = Codigo = Historico_Lin_nomina.Departamento;
                     column(Depto_Descripcion; Descripcion)
                     {
                     }
-                    dataitem(Puestos_laborales; 34002110)
+                    dataitem(Puestos_laborales; 55751)
                     {
                         DataItemLink = Codigo = Employee."Job Type Code";
                         column(Cargo_Descripcion; "Descripcion")

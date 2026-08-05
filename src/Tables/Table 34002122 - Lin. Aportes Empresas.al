@@ -1,4 +1,4 @@
-table 34002122 "Lin. Aportes Empresas"
+table 55763 "Lin. Aportes Empresas"
 {
 
     fields

@@ -1,9 +1,9 @@
-page 34002110 "Conceptos salariales"
+page 55751 "Conceptos salariales"
 {
     DataCaptionFields = "Codigo";
     Editable = true;
     PageType = List;
-    SourceTable = 34002111;
+    SourceTable = 55752;
 
     layout
     {
@@ -271,7 +271,7 @@ page 34002110 "Conceptos salariales"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     RunObject = Page "Default Dimensions";
-                    RunPageLink = "Table ID" = CONST(34002111),
+                    RunPageLink = "Table ID" = CONST(55752),
                                   "No." = FIELD(Codigo);
                 }
             }
@@ -287,7 +287,7 @@ page 34002110 "Conceptos salariales"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 34002143;
+                RunObject = Page 55784;
                 RunPageLink = Codigo = FIELD(Codigo),
                               "Gpo. Contable Empleado" = CONST('');
             }
@@ -304,10 +304,10 @@ page 34002110 "Conceptos salariales"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         DimVal: Record 349;
-        PerfilCargo: Record 34002113;
-        PerfilSalarial: Record 34002115;
+        PerfilCargo: Record 55754;
+        PerfilSalarial: Record 55756;
         Text000: Label '&None,&First,&Second,Both';
         Empl: Record 5200;
         Selection: Integer;

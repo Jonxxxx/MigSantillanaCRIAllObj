@@ -1,9 +1,9 @@
-page 34002112 "Perfil Salario x Cargo"
+page 55753 "Perfil Salario x Cargo"
 {
     DataCaptionFields = "Puesto de Trabajo";
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = 34002113;
+    SourceTable = 55754;
 
     layout
     {
@@ -62,7 +62,7 @@ page 34002112 "Perfil Salario x Cargo"
 
                 trigger OnAction()
                 var
-                    ConceptosSal: Record 34002111;
+                    ConceptosSal: Record 55752;
                 begin
                     ConceptosSal.RESET;
                     ConceptosSal.FIND('-');
@@ -81,6 +81,6 @@ page 34002112 "Perfil Salario x Cargo"
     }
 
     var
-        PerfSal: Record 34002115;
+        PerfSal: Record 55756;
 }
 

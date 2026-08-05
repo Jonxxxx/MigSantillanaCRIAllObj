@@ -1,4 +1,4 @@
-table 34002121 "Cab. Aportes Empresas"
+table 55762 "Cab. Aportes Empresas"
 {
 
     fields
@@ -83,8 +83,8 @@ table 34002121 "Cab. Aportes Empresas"
 
     procedure Anular()
     var
-        Cabnomina: Record 34002117;
-        LinCP: Record 34002122;
+        Cabnomina: Record 55758;
+        LinCP: Record 55763;
         inicper: Date;
         finper: Date;
     begin

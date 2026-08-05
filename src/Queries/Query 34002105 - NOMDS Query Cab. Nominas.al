@@ -1,10 +1,10 @@
-query 34002105 "NOMDS Query Cab. Nominas"
+query 55746 "NOMDS Query Cab. Nominas"
 {
     Caption = 'Resume Payroll query';
 
     elements
     {
-        dataitem(Historico_Cab_nomina; 34002117)
+        dataitem(Historico_Cab_nomina; 55758)
         {
             column(No_empleado; "No. empleado")
             {

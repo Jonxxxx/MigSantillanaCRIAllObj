@@ -3,7 +3,7 @@ page 34002178 "Historico de Vacaciones"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 34002141;
+    SourceTable = 55782;
 
     layout
     {

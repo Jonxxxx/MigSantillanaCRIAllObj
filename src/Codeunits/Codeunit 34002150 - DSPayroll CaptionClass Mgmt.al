@@ -1,4 +1,4 @@
-codeunit 34002150 "DSPayroll CaptionClass Mgmt"
+codeunit 55791 "DSPayroll CaptionClass Mgmt"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -31,7 +31,7 @@ codeunit 34002150 "DSPayroll CaptionClass Mgmt"
 
     local procedure PayrollClassTranslate(CaptionExpr: Text): Text
     var
-        Configuracionnominas: Record 34002103;
+        Configuracionnominas: Record 55744;
         CommaPosition: Integer;
         CaptionType: Text[30];
         CaptionRef: Text;

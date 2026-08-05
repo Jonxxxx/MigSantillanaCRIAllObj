@@ -1,4 +1,4 @@
-report 34002106 "Contabilizar Nominas - new"
+report 55747 "Contabilizar Nominas - new"
 {
     AdditionalSearchTerms = 'Post Payroll';
     ApplicationArea = Basic, Suite, BasicHR;
@@ -8,11 +8,11 @@ report 34002106 "Contabilizar Nominas - new"
 
     dataset
     {
-        dataitem("Cab. nomina"; 34002117)
+        dataitem("Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "No. empleado", Periodo, "Frecuencia de pago", "Tipo de nomina";
-            dataitem("Lin. nomina"; 34002118)
+            dataitem("Lin. nomina"; 55759)
             {
                 DataItemLink = "No. Documento" = FIELD("No. Documento"),
                                "No. empleado" = FIELD("No. empleado"),
@@ -232,7 +232,7 @@ report 34002106 "Contabilizar Nominas - new"
 
                 trigger OnPostDataItem()
                 var
-                    ProvJob: Record 34002119;
+                    ProvJob: Record 55760;
                 begin
                     IF (gDCA."Cod. Empleado" = "Cab. nomina"."No. empleado") AND ("Cab. nomina"."Tipo Nomina" = "Cab. nomina"."Tipo Nomina"::Normal) THEN BEGIN
                         CalcularDtosCOTSSJob(DATE2DMY(inicial, 3), "Cab. nomina"."No. empleado"); //Para calcular TSS
@@ -252,23 +252,23 @@ report 34002106 "Contabilizar Nominas - new"
                     SETFILTER("Job No.", "Cab. nomina".GETFILTER("Job No."));
                 end;
             }
-            dataitem(Prorrata; 34002115)
+            dataitem(Prorrata; 55756)
             {
                 DataItemLink = "No. empleado" = FIELD("No. empleado");
                 DataItemTableView = SORTING("No. empleado", "Perfil salarial", "Concepto salarial", Cargo)
                                     WHERE(Prorratear = CONST(true));
-                dataitem("Conceptos Salariales Provision"; 34002119)
+                dataitem("Conceptos Salariales Provision"; 55760)
                 {
                     DataItemLink = Codigo = FIELD("Concepto salarial");
                     DataItemTableView = SORTING(Codigo, "Gpo. Contable Empleado");
 
                     trigger OnAfterGetRecord()
                     var
-                        ConceptosProrr: Record 34002119;
-                        ConceptosFormula: Record 34002144;
-                        PS: Record 34002115;
+                        ConceptosProrr: Record 55760;
+                        ConceptosFormula: Record 55785;
+                        PS: Record 55756;
                         Fecha: Record 2000000007;
-                        TempHistLinNom: Record 34002118 temporary;
+                        TempHistLinNom: Record 55759 temporary;
                         Acumulado: Decimal;
                         FechaFin: Date;
                         CantEmpl: Integer;
@@ -767,10 +767,10 @@ report 34002106 "Contabilizar Nominas - new"
 
             end;
         }
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo de nomina");
-            dataitem("Lin. Aportes Empresas"; 34002122)
+            dataitem("Lin. Aportes Empresas"; 55763)
             {
                 DataItemLink = "No. Empleado" = FIELD("No. empleado"),
                                Periodo = FIELD(Periodo),
@@ -901,7 +901,7 @@ report 34002106 "Contabilizar Nominas - new"
                 NumRecords := COUNT;
             end;
         }
-        dataitem("Temp Contabilizacion Nom."; 34002123)
+        dataitem("Temp Contabilizacion Nom."; 55764)
         {
             DataItemTableView = SORTING(Step, "No. Cuenta", "Cod. Empleado", "Valor Dim 1", "Valor Dim 2", "Valor Dim 3", "Valor Dim 4", "Valor Dim 5", "Valor Dim 6", "No. Linea", "Forma de Cobro")
                                 WHERE(Step = CONST(1));
@@ -946,7 +946,7 @@ report 34002106 "Contabilizar Nominas - new"
                 TotalCrCk := 0;
             end;
         }
-        dataitem(TempContabNom; 34002123)
+        dataitem(TempContabNom; 55764)
         {
             DataItemTableView = SORTING(Step, "No. Cuenta", "Cod. Empleado", "Valor Dim 1", "Valor Dim 2", "Valor Dim 3", "Valor Dim 4", "Valor Dim 5", "Valor Dim 6", "No. Linea", "Forma de Cobro")
                                 WHERE(Step = CONST(2));
@@ -980,7 +980,7 @@ report 34002106 "Contabilizar Nominas - new"
                 TotalDbCk := 0;
             end;
         }
-        dataitem("Temp Contabilizacion Job"; 34002123)
+        dataitem("Temp Contabilizacion Job"; 55764)
         {
             DataItemTableView = SORTING(Step, "No. Cuenta", "Cod. Empleado", "Valor Dim 1", "Valor Dim 2", "Valor Dim 3", "Valor Dim 4", "Valor Dim 5", "Valor Dim 6", "No. Linea", "Forma de Cobro")
                                 WHERE(Step = CONST(3));
@@ -1021,7 +1021,7 @@ report 34002106 "Contabilizar Nominas - new"
                 TotalCrCk := 0;
             end;
         }
-        dataitem(TempContabJob; 34002123)
+        dataitem(TempContabJob; 55764)
         {
             DataItemTableView = SORTING(Step, "No. Cuenta", "Cod. Empleado", "Valor Dim 1", "Valor Dim 2", "Valor Dim 3", "Valor Dim 4", "Valor Dim 5", "Valor Dim 6", "No. Linea", "Forma de Cobro")
                                 WHERE(Step = CONST(4));
@@ -1193,39 +1193,39 @@ report 34002106 "Contabilizar Nominas - new"
 
     var
         ConfContab: Record 98;
-        ConfNomina: Record 34002103;
+        ConfNomina: Record 55744;
         LibrosDiarios: Record 80;
         Empleado: Record 5200;
-        Empresa: Record 34002100;
-        CxCEmpl: Record 34002146;
+        Empresa: Record 55741;
+        CxCEmpl: Record 55787;
         Seccion: Record 232;
         GenJnlLine: Record 81;
-        GpoContEmpl: Record 34002104;
+        GpoContEmpl: Record 55745;
         ConfContabilidad: Record 98;
-        ConfGpoContEmpl: Record 34002105;
+        ConfGpoContEmpl: Record 55746;
         ConfCodOrigen: Record 242;
-        DC: Record 34002132;
+        DC: Record 55773;
         recDimSet: Record 480;
         TempDimSetEntry: Record 480 temporary;
-        Contrato: Record 34002109;
-        ConceptosSalariales: Record 34002111;
+        Contrato: Record 55750;
+        ConceptosSalariales: Record 55752;
         Divisa: Record 4;
-        GpoContable: Record 34002104;
+        GpoContable: Record 55745;
         DefDim: Record 352;
-        TiposCotizacion: Record 34002129;
+        TiposCotizacion: Record 55770;
         JobJNL: Record 81;
         DCA: Record 34002163;
         gDCA: Record 34002163;
         recTmpDimEntry: Record 480 temporary;
-        PerfilSal: Record 34002115;
-        tmpContab: Record 34002123 temporary;
-        ContabNom: Record 34002123;
-        HistLinNom: Record 34002118;
-        Tiposdenominas: Record 34002158;
+        PerfilSal: Record 55756;
+        tmpContab: Record 55764 temporary;
+        ContabNom: Record 55764;
+        HistLinNom: Record 55759;
+        Tiposdenominas: Record 55799;
         DistribEDEmp: Record 34002190;
         cduDim: Codeunit 408;
         GestNumSerie: Codeunit "No. Series";
-        CalculoFechas: Codeunit 34002104;
+        CalculoFechas: Codeunit 55745;
         CodOrigen: Code[20];
         inicial: Date;
         final: Date;
@@ -1541,7 +1541,7 @@ report 34002106 "Contabilizar Nominas - new"
         //Para las Dim del perfil de salario (linea del concepto salarial)
         //Para las Dim por Grupo contable
         DefDim.RESET;
-        DefDim.SETFILTER("Table ID", '%1|%2|%3', 34002105, 34002111, 34002115);
+        DefDim.SETFILTER("Table ID", '%1|%2|%3', 55746, 55752, 55756);
         IF Empleado."Posting Group" <> '' THEN
             DefDim.SETFILTER("No.", Empleado."Posting Group" + '*' + cConceptoSal + '*')
         ELSE
@@ -1766,7 +1766,7 @@ report 34002106 "Contabilizar Nominas - new"
             TempContabNom.MODIFY;
     end;
 
-    procedure InsertaLinDiario(TmpContNom: Record 34002123)
+    procedure InsertaLinDiario(TmpContNom: Record 55764)
     var
         DefDim: Record 352;
         DimMgt: Codeunit 408;
@@ -1939,7 +1939,7 @@ report 34002106 "Contabilizar Nominas - new"
     procedure InsertaProvision(ConceptoSal: Code[20]; ImportProrr: Decimal)
     var
         NoCuenta: Code[20];
-        CSP: Record 34002119;
+        CSP: Record 55760;
     begin
         //Del Diario de pagos
         ConceptosSalariales.GET(ConceptoSal);
@@ -2097,7 +2097,7 @@ report 34002106 "Contabilizar Nominas - new"
 
     end;
 
-    procedure InsertaContrapartidaCO(TmpContNomCont: Record 34002123)
+    procedure InsertaContrapartidaCO(TmpContNomCont: Record 55764)
     begin
         // GRN Graba contrapartida por el neto para pagos transferencias
         GenJnlLine.INIT;
@@ -2156,7 +2156,7 @@ report 34002106 "Contabilizar Nominas - new"
         END;
     end;
 
-    procedure InsertaContrapartidaCP(TmpContNomCont: Record 34002123)
+    procedure InsertaContrapartidaCP(TmpContNomCont: Record 55764)
     begin
         // GRN Graba contrapartida por el neto para pagos transferencias
 
@@ -2661,7 +2661,7 @@ report 34002106 "Contabilizar Nominas - new"
 
     end;
 
-    procedure insertalindiariojOB(TmpContNom: Record 34002123)
+    procedure insertalindiariojOB(TmpContNom: Record 55764)
     var
         Date: Record 2000000007;
         Date2: Record 2000000007;
@@ -2871,7 +2871,7 @@ report 34002106 "Contabilizar Nominas - new"
     procedure LlenaDatosCOjOB(cConceptoSal: Code[20]; iTipoCuenta: Integer; cCodCuenta: Code[20]; dImporte: Decimal; Contrapartida: Boolean; CodEmpleado: Code[20])
     var
         REP: Record 34002171;
-        TmpDCA: Record 34002123 temporary;
+        TmpDCA: Record 55764 temporary;
         NoCuenta: Code[20];
         ImporteTotalSalario: Decimal;
         ImporteTarea: Decimal;
@@ -3240,8 +3240,8 @@ report 34002106 "Contabilizar Nominas - new"
 
     procedure InsertaProvisionJob(ConceptoSal: Code[20]; ImportProrr: Decimal)
     var
-        CSP: Record 34002119;
-        TmpDCA: Record 34002123 temporary;
+        CSP: Record 55760;
+        TmpDCA: Record 55764 temporary;
         NoCuenta: Code[20];
         ImporteTotalSalario: Decimal;
         ImporteTarea: Decimal;
@@ -3570,7 +3570,7 @@ report 34002106 "Contabilizar Nominas - new"
         //Para las Dim del perfil de salario (linea del concepto salarial)
         //Para las Dim por Grupo contable
         DefDim.RESET;
-        DefDim.SETFILTER("Table ID", '%1|%2|%3', 34002105, 34002111, 34002115);
+        DefDim.SETFILTER("Table ID", '%1|%2|%3', 55746, 55752, 55756);
         IF Empleado."Posting Group" <> '' THEN
             DefDim.SETFILTER("No.", Empleado."Posting Group" + '*' + cConceptoSal + '*')
         ELSE
@@ -3810,7 +3810,7 @@ report 34002106 "Contabilizar Nominas - new"
         //Para las Dim del perfil de salario (linea del concepto salarial)
         //Para las Dim por Grupo contable
         DefDim.RESET;
-        DefDim.SETFILTER("Table ID", '%1|%2|%3', 34002105, 34002111, 34002115);
+        DefDim.SETFILTER("Table ID", '%1|%2|%3', 55746, 55752, 55756);
         IF Empleado."Posting Group" <> '' THEN
             DefDim.SETFILTER("No.", Empleado."Posting Group" + '*' + cConceptoSal + '*')
         ELSE
@@ -3852,7 +3852,7 @@ report 34002106 "Contabilizar Nominas - new"
             ContabNom.MODIFY;
     end;
 
-    procedure InsertaContrapartidaCOJob(TmpContNomCont: Record 34002123)
+    procedure InsertaContrapartidaCOJob(TmpContNomCont: Record 55764)
     begin
         // GRN Graba contrapartida por el neto para pagos transferencias
         TmpContNomCont."Importe Db" := ROUND(TmpContNomCont."Importe Db", Divisa."Amount Rounding Precision");
@@ -3905,7 +3905,7 @@ report 34002106 "Contabilizar Nominas - new"
         END;
     end;
 
-    procedure InsertaContrapartidaCPJob(TmpContNomCont: Record 34002123)
+    procedure InsertaContrapartidaCPJob(TmpContNomCont: Record 55764)
     begin
         // GRN Graba contrapartida por el neto para pagos transferencias
         /*
@@ -3958,13 +3958,13 @@ report 34002106 "Contabilizar Nominas - new"
 
     procedure CalcularDtosCOTSSJob(Ano: Integer; CodEmp: Code[20])
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        LinAportesEmpresa2: Record 34002122;
-        Puestos: Record 34002110;
-        TmpDCA: Record 34002123 temporary;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        LinAportesEmpresa2: Record 55763;
+        Puestos: Record 55751;
+        TmpDCA: Record 55764 temporary;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -4234,12 +4234,12 @@ report 34002106 "Contabilizar Nominas - new"
 
     procedure CalcularDtosCPTSSJob(Ano: Integer; CodEmp: Code[20])
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        Puestos: Record 34002110;
-        TmpDCA: Record 34002123 temporary;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        Puestos: Record 55751;
+        TmpDCA: Record 55764 temporary;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;
@@ -4451,8 +4451,8 @@ report 34002106 "Contabilizar Nominas - new"
 
     procedure CalcularISRJob(Ano: Integer; CodEmp: Code[20])
     var
-        LinNominasES: Record 34002118;
-        TmpDCA: Record 34002123 temporary;
+        LinNominasES: Record 55759;
+        TmpDCA: Record 55764 temporary;
         NoCuenta: Code[20];
         ImporteIngreso: Decimal;
         ImporteDto: Decimal;
@@ -4897,7 +4897,7 @@ report 34002106 "Contabilizar Nominas - new"
         //Para las Dim del perfil de salario (linea del concepto salarial)
         //Para las Dim por Grupo contable
         DefDim.RESET;
-        DefDim.SETFILTER("Table ID", '%1|%2|%3', 34002105, 34002111, 34002115);
+        DefDim.SETFILTER("Table ID", '%1|%2|%3', 55746, 55752, 55756);
         IF Empleado."Posting Group" <> '' THEN
             DefDim.SETFILTER("No.", Empleado."Posting Group" + '*' + cConceptoSal + '*')
         ELSE
@@ -4942,7 +4942,7 @@ report 34002106 "Contabilizar Nominas - new"
         //contabnom.MODIFY;
     end;
 
-    local procedure InsertaAporteCooperativa(LinNomCoop: Record 34002118)
+    local procedure InsertaAporteCooperativa(LinNomCoop: Record 55759)
     var
         Movcooperativa: Record 34002196;
         Movcooperativa2: Record 34002196;
@@ -4969,7 +4969,7 @@ report 34002106 "Contabilizar Nominas - new"
         Movcooperativa.INSERT;
     end;
 
-    local procedure InsertaDescCooperativa(LinNomCoop: Record 34002118)
+    local procedure InsertaDescCooperativa(LinNomCoop: Record 55759)
     var
         Movcooperativa: Record 34002196;
         Movcooperativa2: Record 34002196;

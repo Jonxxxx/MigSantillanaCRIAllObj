@@ -1,4 +1,4 @@
-codeunit 34002110 "Funciones cooperativa"
+codeunit 55751 "Funciones cooperativa"
 {
     // Si en A1 pones Tasa (tipo de interes del periodo)
     // en B1 el nPer (Numero de Periodos)
@@ -13,12 +13,12 @@ codeunit 34002110 "Funciones cooperativa"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         CabPrestamoscoop: Record 34002197;
         LinPrestamoscooperativa: Record 34002198;
         Miembroscooperativa: Record 34002195;
         HistCabPrestcooperativa: Record 34002199;
-        PerfilSal: Record 34002115;
+        PerfilSal: Record 55756;
         NoSeriesMgt: Codeunit "No. Series";
         Msg001: Label 'Successful employee activation';
         Msg002: Label 'Successful employee inactivation';

@@ -1,4 +1,4 @@
-codeunit 34002104 "Funciones Nomina"
+codeunit 55745 "Funciones Nomina"
 {
 
     trigger OnRun()
@@ -8,11 +8,11 @@ codeunit 34002104 "Funciones Nomina"
     end;
 
     var
-        ConfNomina: Record 34002103;
-        TiposCotiza: Record 34002129;
+        ConfNomina: Record 55744;
+        TiposCotiza: Record 55770;
         Fecha: Record 2000000007;
         Empl: Record 5200;
-        LinPerfSalarial: Record 34002115;
+        LinPerfSalarial: Record 55756;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -320,7 +320,7 @@ codeunit 34002104 "Funciones Nomina"
     procedure CalculoDiaVacacionesPR(CodEmpl: Code[20]; MesTrabajo: Integer; AnoTrabajo: Integer; MontoVacaciones: Decimal) DiasVacaciones: Integer
     var
         Err001: Label 'Missing Starting Date for  Employee %1 ';
-        HistLinNom: Record 34002118;
+        HistLinNom: Record 55759;
         FechaFin: Date;
         Anos: Integer;
         Meses: Integer;
@@ -360,7 +360,7 @@ codeunit 34002104 "Funciones Nomina"
     procedure CalculoDiaEnfermedadPR(CodEmpl: Code[20]; MesTrabajo: Integer; AnoTrabajo: Integer; MontoVacaciones: Decimal) DiasVacaciones: Integer
     var
         Err001: Label 'Missing Starting Date for  Employee %1 ';
-        HistLinNom: Record 34002118;
+        HistLinNom: Record 55759;
         FechaFin: Date;
         Anos: Integer;
         Meses: Integer;
@@ -399,8 +399,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaNovedades(Emp: Record 5200): Integer
     var
-        MNA: Record 34002114;
-        HistAccionesdepersonal: Record 34002159;
+        MNA: Record 55755;
+        HistAccionesdepersonal: Record 55800;
     begin
         /*
         MNA.SETRANGE("Tipo de accion",Emp."No.");
@@ -417,7 +417,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraNovedades(Emp: Record 5200)
     var
-        HistAccionesdepersonal: Record 34002159;
+        HistAccionesdepersonal: Record 55800;
         frmMNA: Page 34002170;
     begin
 
@@ -498,7 +498,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaNominas(Emp: Record 5200): Integer
     var
-        HCNom: Record 34002117;
+        HCNom: Record 55758;
     begin
         HCNom.SETRANGE("No. empleado", Emp."No.");
         IF Emp.GETFILTER("Date Filter") <> '' THEN
@@ -508,8 +508,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraNominas(Emp: Record 5200)
     var
-        HCNom: Record 34002117;
-        pHCNom: Page 34002123;
+        HCNom: Record 55758;
+        pHCNom: Page 55764;
     begin
         HCNom.SETRANGE("No. empleado", Emp."No.");
         IF Emp.GETFILTER("Date Filter") <> '' THEN
@@ -556,7 +556,7 @@ codeunit 34002104 "Funciones Nomina"
     var
         Empl: Record 5200;
         Err001: Label 'Missing Starting Date for  Employee %1 ';
-        LinPerfSalarial: Record 34002115;
+        LinPerfSalarial: Record 55756;
         FechaFin: Date;
         Anos: Integer;
         Meses: Integer;
@@ -601,9 +601,9 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure InicializaConceptosSalariales()
     var
-        ParamInicConceptos: Record 34002106;
-        LinEsqPercepcion: Record 34002115;
-        Contrato: Record 34002109;
+        ParamInicConceptos: Record 55747;
+        LinEsqPercepcion: Record 55756;
+        Contrato: Record 55750;
         Ventana: Dialog;
         Modifica: Boolean;
     begin
@@ -701,7 +701,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaHistSalario(Emp: Record 5200): Integer
     var
-        HSalario: Record 34002149;
+        HSalario: Record 55790;
     begin
         HSalario.SETRANGE("No. empleado", Emp."No.");
         EXIT(HSalario.COUNT);
@@ -709,8 +709,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraHistSalario(Emp: Record 5200)
     var
-        HSalario: Record 34002149;
-        frmHSalario: Page 34002137;
+        HSalario: Record 55790;
+        frmHSalario: Page 55778;
     begin
         HSalario.SETRANGE("No. empleado", Emp."No.");
         frmHSalario.SETTABLEVIEW(HSalario);
@@ -720,7 +720,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaSaldoISRFavor(Emp: Record 5200): Decimal
     var
-        SFISR: Record 34002128;
+        SFISR: Record 55769;
     begin
         SFISR.RESET;
         SFISR.SETRANGE("Cod. Empleado", Emp."No.");
@@ -731,8 +731,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraSaldoISRFavor(Emp: Record 5200)
     var
-        SFISR: Record 34002128;
-        fSFISR: Page 34002148;
+        SFISR: Record 55769;
+        fSFISR: Page 55789;
     begin
         SFISR.RESET;
         SFISR.SETRANGE("Cod. Empleado", Emp."No.");
@@ -747,8 +747,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure AcumuladoFUTA(CodEmpleado: Code[20]; FechaIni: Date; FechaFin: Date): Decimal
     var
-        HistLinNom: Record 34002118;
-        HistLinEmp: Record 34002122;
+        HistLinNom: Record 55759;
+        HistLinEmp: Record 55763;
         Acumulado: Decimal;
     begin
         ConfNomina.GET();
@@ -779,8 +779,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure AcumuladoSUTA(CodEmpleado: Code[20]; FechaIni: Date; FechaFin: Date): Decimal
     var
-        HistLinNom: Record 34002118;
-        HistLinEmp: Record 34002122;
+        HistLinNom: Record 55759;
+        HistLinEmp: Record 55763;
         Acumulado: Decimal;
     begin
         ConfNomina.GET();
@@ -809,8 +809,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure AcumuladoFICA(CodEmpleado: Code[20]; FechaIni: Date; FechaFin: Date): Decimal
     var
-        HistLinNom: Record 34002118;
-        HistLinEmp: Record 34002122;
+        HistLinNom: Record 55759;
+        HistLinEmp: Record 55763;
         Acumulado: Decimal;
     begin
         ConfNomina.GET();
@@ -841,8 +841,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure AcumuladoSINOT(CodEmpleado: Code[20]; FechaIni: Date; FechaFin: Date): Decimal
     var
-        HistLinNom: Record 34002118;
-        HistLinEmp: Record 34002122;
+        HistLinNom: Record 55759;
+        HistLinEmp: Record 55763;
         Acumulado: Decimal;
     begin
         ConfNomina.GET();
@@ -897,7 +897,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaSaldoISRFavorBO(Emp: Record 5200): Decimal
     var
-        SFISR: Record 34002128;
+        SFISR: Record 55769;
     begin
         SFISR.SETRANGE("Cod. Empleado", Emp."No.");
         IF SFISR.FINDLAST THEN
@@ -906,8 +906,8 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraSaldoISRFavorBO(Emp: Record 5200)
     var
-        SFISR: Record 34002128;
-        fSFISR: Page 34002148;
+        SFISR: Record 55769;
+        fSFISR: Page 55789;
     begin
         SFISR.RESET;
         SFISR.SETRANGE("Cod. Empleado", Emp."No.");
@@ -1013,7 +1013,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure BuscaActividades(Emp: Record 5200; FechaIni: Date; FechaFin: Date): Integer
     var
-        MovAct: Record 34002157;
+        MovAct: Record 55798;
     begin
         MovAct.SETRANGE("No. empleado", Emp."No.");
         MovAct.SETFILTER("Inicio Periodo", '>=%1', FechaIni);
@@ -1024,7 +1024,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraActividades(Emp: Record 5200; FechaIni: Date; FechaFin: Date)
     var
-        MovAct: Record 34002157;
+        MovAct: Record 55798;
         frmMovAct: Page 34002165;
     begin
         MovAct.SETRANGE("No. empleado", Emp."No.");
@@ -1378,7 +1378,7 @@ codeunit 34002104 "Funciones Nomina"
     var
         CA: Record 34002160;
         DCA: Record 34002160;
-        PerfSal: Record 34002115;
+        PerfSal: Record 55756;
         HorReg: Decimal;
         Hor35: Decimal;
         Hor100: Decimal;
@@ -1501,7 +1501,7 @@ codeunit 34002104 "Funciones Nomina"
     var
         CA: Record 34002160;
         DCA: Record 34002163;
-        PerfSal: Record 34002115;
+        PerfSal: Record 55756;
         HorReg: Decimal;
         Hor35: Decimal;
         Hor100: Decimal;
@@ -1961,28 +1961,28 @@ codeunit 34002104 "Funciones Nomina"
             EXIT(TRUE);
     end;
 
-    procedure TraspasaEmpleados(Empresa: Text[60]; Accionesdepersonal: Record 34002133)
+    procedure TraspasaEmpleados(Empresa: Text[60]; Accionesdepersonal: Record 55774)
     var
         Empl: Record 5200;
         Empto: Record 5200;
-        PerfilSal: Record 34002115;
-        PerfilSalTo: Record 34002115;
-        Contrato: Record 34002109;
-        ContratoTo: Record 34002109;
-        Banco: Record 34002108;
-        BancoTo: Record 34002108;
-        HistCabNom: Record 34002117;
-        HistCabNomTo: Record 34002117;
-        HistLinNom: Record 34002118;
-        HistLinNomTo: Record 34002118;
-        Vacac: Record 34002141;
-        VacacTo: Record 34002141;
-        SaldoISR: Record 34002128;
-        SaldoISRTo: Record 34002128;
-        MovAct: Record 34002157;
-        MovActTo: Record 34002157;
-        HistSal: Record 34002149;
-        HistSalTo: Record 34002149;
+        PerfilSal: Record 55756;
+        PerfilSalTo: Record 55756;
+        Contrato: Record 55750;
+        ContratoTo: Record 55750;
+        Banco: Record 55749;
+        BancoTo: Record 55749;
+        HistCabNom: Record 55758;
+        HistCabNomTo: Record 55758;
+        HistLinNom: Record 55759;
+        HistLinNomTo: Record 55759;
+        Vacac: Record 55782;
+        VacacTo: Record 55782;
+        SaldoISR: Record 55769;
+        SaldoISRTo: Record 55769;
+        MovAct: Record 55798;
+        MovActTo: Record 55798;
+        HistSal: Record 55790;
+        HistSalTo: Record 55790;
         AltAddr: Record 5201;
         AltAddrTo: Record 5201;
         Qualif: Record 5203;
@@ -1993,12 +1993,12 @@ codeunit 34002104 "Funciones Nomina"
         RecDivTo: Record 5214;
         InfConf: Record 5216;
         InfConfTo: Record 5216;
-        HistCabCxC: Record 34002146;
-        HistCabCxCTo: Record 34002146;
-        HistLinCxC: Record 34002147;
-        HistLinCxCTo: Record 34002147;
-        HistAccepersonal: Record 34002159;
-        HistAccepersonalTo: Record 34002159;
+        HistCabCxC: Record 55787;
+        HistCabCxCTo: Record 55787;
+        HistLinCxC: Record 55788;
+        HistLinCxCTo: Record 55788;
+        HistAccepersonal: Record 55800;
+        HistAccepersonalTo: Record 55800;
     begin
         IF Empresa = COMPANYNAME THEN
             EXIT;
@@ -2235,7 +2235,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure VacacionesporVencer() Vacaciones: Decimal
     var
-        HistoricoVacaciones: Record 34002141;
+        HistoricoVacaciones: Record 55782;
         Contar: Boolean;
     begin
         Vacaciones := 0;
@@ -2260,7 +2260,7 @@ codeunit 34002104 "Funciones Nomina"
 
     procedure MuestraVacporVencer()
     var
-        HistoricoVacaciones: Record 34002141;
+        HistoricoVacaciones: Record 55782;
         pEmployeeList: Page 5201;
     begin
         Empl.RESET;

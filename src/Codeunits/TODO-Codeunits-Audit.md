@@ -43,20 +43,20 @@ block during processing.
 | Codeunit file | Markers |
 |---|---:|
 | Codeunit 55739 - Sys. Warmup Test Runner.al | 1 |
-| Codeunit 34002102 - Anular nómina.al | 2 |
-| Codeunit 34002104 - Funciones Nomina.al | 4 |
-| Codeunit 34002108 - Imprime en PDF.al | 9 |
-| Codeunit 34002111 - Registrar nomina CR.al | 2 |
-| Codeunit 34002112 - Registrar nomina PA.al | 2 |
-| Codeunit 34002114 - Registrar nomina HN.al | 2 |
-| Codeunit 34002115 - Registrar nomina PY.al | 2 |
-| Codeunit 34002118 - Registrar nomina RD.al | 6 |
-| Codeunit 34002119 - Registrar nomina RD -2.al | 2 |
-| Codeunit 34002124 - ADO Connection Mgmt.al | 1 |
-| Codeunit 34002125 - Genera Formatos E. Nomina RD.al | 106 |
-| Codeunit 34002126 - Genera Formatos E. Nomina CR.al | 30 |
-| Codeunit 34002135 - Genera formatos elect. legales.al | 41 |
-| Codeunit 34002145 - Funciones entrenamientos.al | 7 |
+| Codeunit 55743 - Anular nómina.al | 2 |
+| Codeunit 55745 - Funciones Nomina.al | 4 |
+| Codeunit 55749 - Imprime en PDF.al | 9 |
+| Codeunit 55752 - Registrar nomina CR.al | 2 |
+| Codeunit 55753 - Registrar nomina PA.al | 2 |
+| Codeunit 55755 - Registrar nomina HN.al | 2 |
+| Codeunit 55756 - Registrar nomina PY.al | 2 |
+| Codeunit 55759 - Registrar nomina RD.al | 6 |
+| Codeunit 55760 - Registrar nomina RD -2.al | 2 |
+| Codeunit 55765 - ADO Connection Mgmt.al | 1 |
+| Codeunit 55766 - Genera Formatos E. Nomina RD.al | 106 |
+| Codeunit 55767 - Genera Formatos E. Nomina CR.al | 30 |
+| Codeunit 55776 - Genera formatos elect. legales.al | 41 |
+| Codeunit 55786 - Funciones entrenamientos.al | 7 |
 | Codeunit 34002160 - Registrar nomina CR New.al | 2 |
 | Codeunit 34002199 - Utilitario para corr. datos no.al | 7 |
 | Codeunit 34002500 - Lanzador DsPOS.al | 2 |

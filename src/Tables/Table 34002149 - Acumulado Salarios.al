@@ -1,4 +1,4 @@
-table 34002149 "Acumulado Salarios"
+table 55790 "Acumulado Salarios"
 {
 
     fields

@@ -1,4 +1,4 @@
-table 34002155 "Dias Festivos"
+table 55796 "Dias Festivos"
 {
     Caption = 'Hollydays';
     DataPerCompany = false;

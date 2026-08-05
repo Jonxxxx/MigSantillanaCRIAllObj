@@ -1,11 +1,11 @@
-page 34002155 "Tabla retenc. ISR"
+page 55796 "Tabla retenc. ISR"
 {
     AdditionalSearchTerms = 'Income Tax Setup';
     ApplicationArea = Basic, Suite, BasicHR;
     Caption = 'Income Tax Setup';
     InstructionalText = 'Configuration of parameters for the income tax scale';
     PageType = List;
-    SourceTable = 34002131;
+    SourceTable = 55772;
     UsageCategory = Administration;
 
     layout
@@ -71,7 +71,7 @@ page 34002155 "Tabla retenc. ISR"
     }
 
     var
-        ISR: Record 34002131;
-        ISR2: Record 34002131;
+        ISR: Record 55772;
+        ISR2: Record 55772;
 }
 

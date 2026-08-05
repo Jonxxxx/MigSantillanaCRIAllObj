@@ -682,8 +682,8 @@ pageextension 55100 EXCCRIEmployeeList extends "Employee List"
     end;
 
     var
-        EXCCRIHRUserSecurity: Record 34002154;
-        // EXCCRIPayrollFunctions: Codeunit 34002104;
+        EXCCRIHRUserSecurity: Record 55795;
+        // EXCCRIPayrollFunctions: Codeunit 55745;
         EXCCRIYears: Integer;
         EXCCRIMonths: Integer;
         EXCCRIDays: Integer;

@@ -1,4 +1,4 @@
-report 34002126 "Listado de Bonificaciones pers"
+report 55767 "Listado de Bonificaciones pers"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado de Bonificaciones pers.rdl';
@@ -175,15 +175,15 @@ report 34002126 "Listado de Bonificaciones pers"
     }
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Fecha: Record 2000000007;
-        LinPerfSalarial: Record 34002115;
-        LinPerfSalarial2: Record 34002115;
+        LinPerfSalarial: Record 55756;
+        LinPerfSalarial2: Record 55756;
         ConceptoVac: Code[20];
         MesTrabajo: Integer;
         AnoTrabajo: Integer;
         FechaFin: Date;
-        CalculoFechas: Codeunit 34002104;
+        CalculoFechas: Codeunit 55745;
         Anos: Integer;
         Meses: Integer;
         Dias: Integer;

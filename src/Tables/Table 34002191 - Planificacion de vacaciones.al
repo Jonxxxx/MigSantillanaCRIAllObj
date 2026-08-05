@@ -95,13 +95,13 @@ table 34002191 "Planificacion de vacaciones"
     var
         Empl: Record 5200;
         Fecha: Record 2000000007;
-        FuncNom: Codeunit 34002104;
+        FuncNom: Codeunit 55745;
         Monto: Decimal;
         Err001: Label '%1 can not be greather than %2';
 
     local procedure ValidarTiempo()
     var
-        DiasFestivos: Record 34002155;
+        DiasFestivos: Record 55796;
         Fecha: Record 2000000007;
     begin
         IF ("Fecha inicio planificada" > "Fecha fin planificada") AND ("Fecha inicio planificada" <> 0D) AND ("Fecha fin planificada" <> 0D) THEN

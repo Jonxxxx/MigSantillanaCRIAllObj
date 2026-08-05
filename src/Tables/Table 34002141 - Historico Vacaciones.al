@@ -1,4 +1,4 @@
-table 34002141 "Historico Vacaciones"
+table 55782 "Historico Vacaciones"
 {
     Caption = 'Vacation''s History';
     DrillDownPageID = 34002178;
@@ -24,7 +24,7 @@ table 34002141 "Historico Vacaciones"
 
             trigger OnValidate()
             var
-                FuncNomina: Codeunit 34002104;
+                FuncNomina: Codeunit 55745;
                 AnoCalculado: Integer;
                 MesCalculado: Integer;
                 DiaCalculado: Integer;
@@ -65,6 +65,6 @@ table 34002141 "Historico Vacaciones"
     }
 
     var
-        FuncNomina: Codeunit 34002104;
+        FuncNomina: Codeunit 55745;
 }
 

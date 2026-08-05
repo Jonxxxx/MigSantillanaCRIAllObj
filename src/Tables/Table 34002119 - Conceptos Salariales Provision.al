@@ -1,4 +1,4 @@
-table 34002119 "Conceptos Salariales Provision"
+table 55760 "Conceptos Salariales Provision"
 {
 
     fields
@@ -60,7 +60,7 @@ table 34002119 "Conceptos Salariales Provision"
 
             trigger OnLookup()
             var
-                ConcepSalar: Record 34002111;
+                ConcepSalar: Record 55752;
             begin
 
                 /*
@@ -125,11 +125,11 @@ table 34002119 "Conceptos Salariales Provision"
 
     var
         Err001: Label 'Wedge Salary code can''t be equal to Wedge base salary code';
-        RegFormula: Record 34002143 temporary;
-        Regconceptos: Record 34002144;
-        Regpolaca: Record 34002143 temporary;
-        Scanner: Codeunit 34002106;
-        Parser: Codeunit 34002105;
-        FormConcSalariales: Page 34002110;
+        RegFormula: Record 55784 temporary;
+        Regconceptos: Record 55785;
+        Regpolaca: Record 55784 temporary;
+        Scanner: Codeunit 55747;
+        Parser: Codeunit 55746;
+        FormConcSalariales: Page 55751;
 }
 

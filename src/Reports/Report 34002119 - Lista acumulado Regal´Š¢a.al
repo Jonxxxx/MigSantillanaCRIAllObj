@@ -1,4 +1,4 @@
-report 34002119 "Lista acumulado Regalia"
+report 55760 "Lista acumulado Regalia"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Lista acumulado Regalia.rdl';
@@ -357,15 +357,15 @@ report 34002119 "Lista acumulado Regalia"
     }
 
     var
-        ConfNominas: Record 34002103;
-        LinEsqSalarial: Record 34002115;
-        ConceptosSal: Record 34002111;
+        ConfNominas: Record 55744;
+        LinEsqSalarial: Record 55756;
+        ConceptosSal: Record 55752;
         Fecha: Record 2000000007;
-        Contrato: Record 34002109;
-        HistCabNom: Record 34002117;
-        HistLinNom: Record 34002118;
-        TiposNom: Record 34002158;
-        FuncionesNom: Codeunit 34002104;
+        Contrato: Record 55750;
+        HistCabNom: Record 55758;
+        HistLinNom: Record 55759;
+        TiposNom: Record 55799;
+        FuncionesNom: Codeunit 55745;
         TotImporte: Decimal;
         Anotrabajo: Integer;
         AplicarNomina: Boolean;

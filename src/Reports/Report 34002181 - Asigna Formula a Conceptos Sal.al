@@ -4,7 +4,7 @@ report 34002181 "Asigna Formula a Conceptos Sal"
 
     dataset
     {
-        dataitem("Conceptos salariales"; 34002111)
+        dataitem("Conceptos salariales"; 55752)
         {
             DataItemTableView = SORTING(Codigo);
 
@@ -85,8 +85,8 @@ report 34002181 "Asigna Formula a Conceptos Sal"
 
     var
         Emp: Record 5200;
-        PerfSal: Record 34002115;
-        PerfPuesto: Record 34002113;
+        PerfSal: Record 55756;
+        PerfPuesto: Record 55754;
         Formula: Text[80];
         Err001: Label 'Specify Wedge';
         ConceptoSal: Code[20];

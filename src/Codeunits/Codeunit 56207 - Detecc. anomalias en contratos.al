@@ -37,7 +37,7 @@ codeunit 55360 "Detecc. anomalias en contratos"
 
     procedure RevisarContratosEmpleado(pCodEmpleado: Code[15]; pExigirContinuidadContratos: Boolean; pRevisarContratoIndefinidoQueSeaUltimo: Boolean)
     var
-        lrContrato: Record 34002109;
+        lrContrato: Record 55750;
         lrAuditoria: Record 55322;
         lFechaFinalAnterior: Date;
         lModificar: Boolean;
@@ -107,9 +107,9 @@ codeunit 55360 "Detecc. anomalias en contratos"
             UNTIL lrContrato.NEXT = 0;
     end;
 
-    procedure UltimoContrato(lrContratoRef: Record 34002109): Boolean
+    procedure UltimoContrato(lrContratoRef: Record 55750): Boolean
     var
-        lrContrato: Record 34002109;
+        lrContrato: Record 55750;
     begin
         lrContrato.RESET;
         lrContrato.SETCURRENTKEY("No. empleado", "No. Orden");

@@ -1,4 +1,4 @@
-report 34002151 "Carta de constancia de trabajo"
+report 55792 "Carta de constancia de trabajo"
 {
     RDLCLayout = 'src/ReportsLayout/Carta de constancia de trabajo.rdl';
     WordLayout = 'src/ReportsLayout/Carta de constancia de trabajo.docx';
@@ -111,7 +111,7 @@ report 34002151 "Carta de constancia de trabajo"
     }
 
     var
-        Representante: Record 34002102;
+        Representante: Record 55743;
         ChkTransMgt: Report 34003010;
         NombreDia: Text[60];
         NombreMes: Text[60];

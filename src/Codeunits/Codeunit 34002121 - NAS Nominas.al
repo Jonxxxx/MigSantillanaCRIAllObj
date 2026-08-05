@@ -1,4 +1,4 @@
-codeunit 34002121 "NAS Nominas"
+codeunit 55762 "NAS Nominas"
 {
 
     trigger OnRun()

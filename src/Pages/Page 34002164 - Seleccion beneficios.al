@@ -2,7 +2,7 @@ page 34002164 "Seleccion beneficios"
 {
     Caption = 'Benefit selection';
     PageType = ListPart;
-    SourceTable = 34002156;
+    SourceTable = 55797;
 
     layout
     {

@@ -344,14 +344,14 @@ xmlport 55434 "Importa Empleados"
         Empl: Record 5200;
         //TOOD: Ver 
         /*
-        esqsal: Record 34002115;
-        contra: Record 34002109;
-        CARGOS: Record 34002110;
-        DistCta: Record 34002108;
+        esqsal: Record 55756;
+        contra: Record 55750;
+        CARGOS: Record 55751;
+        DistCta: Record 55749;
         DefDim: Record 352;
         DimVal: Record 349;
-        Departamento: Record 34002135;
-        SubDepartamento: Record 34002136;*/
+        Departamento: Record 55776;
+        SubDepartamento: Record 55777;*/
         Sucursal: Code[10];
         found: Integer;
 }

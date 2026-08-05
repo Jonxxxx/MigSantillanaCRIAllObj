@@ -1,4 +1,4 @@
-report 34002154 "Carta subsidio maternidad"
+report 55795 "Carta subsidio maternidad"
 {
     RDLCLayout = 'src/ReportsLayout/Carta subsidio maternidad.rdl';
     WordLayout = 'src/ReportsLayout/Carta subsidio maternidad.docx';
@@ -110,7 +110,7 @@ report 34002154 "Carta subsidio maternidad"
     }
 
     var
-        Representante: Record 34002102;
+        Representante: Record 55743;
         ChkTransMgt: Report 34003010;
         NombreDia: Text[60];
         NombreMes: Text[60];

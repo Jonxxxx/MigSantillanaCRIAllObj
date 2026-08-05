@@ -43,6 +43,6 @@ page 34002176 "Payroll Information FactBox"
     end;
 
     var
-        CUNomina: Codeunit 34002104;
+        CUNomina: Codeunit 55745;
 }
 

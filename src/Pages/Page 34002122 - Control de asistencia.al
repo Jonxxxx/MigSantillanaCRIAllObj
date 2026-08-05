@@ -1,4 +1,4 @@
-page 34002122 "Control de asistencia"
+page 55763 "Control de asistencia"
 {
     Caption = 'Time and attendance';
     PageType = Worksheet;
@@ -300,8 +300,8 @@ page 34002122 "Control de asistencia"
 
                     trigger OnAction()
                     var
-                        // TODO: Manual review - Codeunit 34002124 implements legacy ADO access that is incompatible with Business Central SaaS.
-                        // Original code: AdoConn: Codeunit 34002124;
+                    // TODO: Manual review - Codeunit 55765 implements legacy ADO access that is incompatible with Business Central SaaS.
+                    // Original code: AdoConn: Codeunit 55765;
                     begin
                         //AdoConn.ReadEmp;
                         FuncNominas.ProcesaDatosPonchador;
@@ -329,7 +329,7 @@ page 34002122 "Control de asistencia"
                         DCA.SETRANGE("Cod. Empleado", "Cod. Empleado");
                         DCA.SETRANGE("Fecha registro", "Fecha registro");
                         DCA.SETRANGE("Hora registro", "Hora registro");
-                        // TODO: Manual review - Custom page 34002107 is unavailable, so its table view and modal execution cannot be restored.
+                        // TODO: Manual review - Custom page 55748 is unavailable, so its table view and modal execution cannot be restored.
                         // Original code preserved below.
                         // DistribAsistencia.SETTABLEVIEW(DCA);
                         // DistribAsistencia.RUNMODAL();
@@ -358,13 +358,13 @@ page 34002122 "Control de asistencia"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002146 is unavailable; the current object with this ID is not a report.
-                    // Original code: RunObject = Report 34002146;
+                    // TODO: Manual review - Custom report 55787 is unavailable; the current object with this ID is not a report.
+                    // Original code: RunObject = Report 55787;
 
                     trigger OnAction()
                     var
-                        // TODO: Manual review - The verified payroll codeunit declaration has no call in this empty action, so restoring it would not restore any behavior.
-                        // Original code: FuncNom: Codeunit 34002104;
+                    // TODO: Manual review - The verified payroll codeunit declaration has no call in this empty action, so restoring it would not restore any behavior.
+                    // Original code: FuncNom: Codeunit 55745;
                     begin
                     end;
                 }
@@ -412,10 +412,10 @@ page 34002122 "Control de asistencia"
     end;
 
     var
-        ConfNom: Record 34002103;
-        // TODO: Manual review - Custom page 34002107 is unavailable as the required object type.
-        // Original code: DistribAsistencia: Page 34002107;
-        FuncNominas: Codeunit 34002104;
+        ConfNom: Record 55744;
+        // TODO: Manual review - Custom page 55748 is unavailable as the required object type.
+        // Original code: DistribAsistencia: Page 55748;
+        FuncNominas: Codeunit 55745;
         [InDataSet]
 
         HorasVisibles: Boolean;

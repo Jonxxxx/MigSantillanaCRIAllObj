@@ -5,7 +5,7 @@ report 34002161 "Hist Acciones de personal"
 
     dataset
     {
-        dataitem("Hist. Acciones de personal"; 34002159)
+        dataitem("Hist. Acciones de personal"; 55800)
         {
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "Tipo de accion", "Cod. accion", "No. empleado", "Fecha accion", "Fecha efectividad";
@@ -336,13 +336,13 @@ report 34002161 "Hist Acciones de personal"
     }
 
     var
-        InfoEmpresa: Record 34002100;
-        Contrato: Record 34002109;
+        InfoEmpresa: Record 55741;
+        Contrato: Record 55750;
         CountryRegion: Record 9;
-        Cargo: Record 34002110;
+        Cargo: Record 55751;
         BancosACH: Record 34002167;
         User: Record 2000000120;
-        FuncionesNom: Codeunit 34002104;
+        FuncionesNom: Codeunit 55745;
         MarcaCargo: Boolean;
         MarcaSueldoMensual: Boolean;
         MarcaNumeroCuenta: Boolean;

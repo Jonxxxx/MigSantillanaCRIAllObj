@@ -1,9 +1,9 @@
-table 34002111 "Conceptos salariales"
+table 55752 "Conceptos salariales"
 {
     // MdE 02/07/2016 PLB: Borramos la relacion entre los conceptos NAV y MdE al borrar un concepto NAV
 
-    DrillDownPageID = 34002110;
-    LookupPageID = 34002110;
+    DrillDownPageID = 55751;
+    LookupPageID = 55751;
 
     fields
     {
@@ -433,18 +433,18 @@ table 34002111 "Conceptos salariales"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         DimValue: Record 349;
-        ConceptosSal: Record 34002111;
+        ConceptosSal: Record 55752;
         Err001: Label 'This value it''s only allowed once';
         Err002: Label 'This account is selected direct from the employee''s card for %1 %2';
         Err003: Label 'Thsi Wedge has been use in payrolls, it can not be deleted';
         Text000: Label 'There are Posted Payroll with this Wedge, do you want to update the parameters?';
         Text001: Label 'Do you want to update the parameter for the Wedges schemas?';
         Text002: Label 'Updating  #1########## @2@@@@@@@@@@@@@';
-        DistCtaGpoCont: Record 34002105;
-        PS: Record 34002115;
-        HLN: Record 34002118;
+        DistCtaGpoCont: Record 55746;
+        PS: Record 55756;
+        HLN: Record 55759;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -455,7 +455,7 @@ table 34002111 "Conceptos salariales"
     procedure SpecialRelation("Nº de campo": Integer)
     begin
         /*IF FIELDNO("Cotiz.adicional") = 4 THEN BEGIN
-          FORM.RUNMODAL(34002157"Tipos Cotizacion");
+          FORM.RUNMODAL(55798"Tipos Cotizacion");
           "Cotiz.adicional":="Tipos Cotizacion".Codigo;
         END;
         */
@@ -464,7 +464,7 @@ table 34002111 "Conceptos salariales"
 
     procedure ValidaHistorico(Procedencia: Integer)
     var
-        HLN: Record 34002118;
+        HLN: Record 55759;
     begin
         HLN.RESET;
         HLN.SETRANGE("Concepto salarial", Codigo);
@@ -510,8 +510,8 @@ table 34002111 "Conceptos salariales"
 
     procedure ValidaPerfiles(Procedencia: Integer)
     var
-        PSxC: Record 34002113;
-        LPS: Record 34002115;
+        PSxC: Record 55754;
+        LPS: Record 55756;
     begin
         /*
         PSxC.RESET;

@@ -1,11 +1,11 @@
-report 34002108 "Calcula ISR Emp. Relacionadas"
+report 55749 "Calcula ISR Emp. Relacionadas"
 {
     Caption = 'Calculate TAX Related Companies';
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Historico Cab. nomina"; 34002117)
+        dataitem("Historico Cab. nomina"; 55758)
         {
             DataItemTableView = SORTING("No. empleado", Ano, Periodo, "Tipo Nomina");
             RequestFilterFields = "Tipo Nomina", Periodo, "No. empleado";
@@ -91,16 +91,16 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
     end;
 
     var
-        ConfNominas: Record 34002103;
+        ConfNominas: Record 55744;
         Empleado: Record 5200;
-        GlobalRec: Record 34002115;
-        Contrato: Record 34002109;
-        ConceptosSal: Record 34002111;
-        PerfilSalImp: Record 34002115;
-        EmpresasRel: Record 34002150;
+        GlobalRec: Record 55756;
+        Contrato: Record 55750;
+        ConceptosSal: Record 55752;
+        PerfilSalImp: Record 55756;
+        EmpresasRel: Record 55791;
         DfltDimension: Record 352;
-        HistLinNom: Record 34002118;
-        Puestos: Record 34002110;
+        HistLinNom: Record 55759;
+        Puestos: Record 55751;
         recTmpDimEntry: Record 480 temporary;
         cduDim: Codeunit 408;
         TotalISR: array[3, 3] of Decimal;
@@ -122,15 +122,15 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
 
     procedure CalcularISR()
     var
-        RetencionISR: Record 34002131;
-        SaldoFavor: Record 34002128;
-        SaldoFavor2: Record 34002128;
-        HistLinNomISR: Record 34002118;
-        BKSaldoFavor: Record 34002130;
-        LinAportesEmpresa: Record 34002122;
-        EmpresasRel2: Record 34002150;
-        LinEsqPercepISR: Record 34002115;
-        HistLinCompany: Record 34002118;
+        RetencionISR: Record 55772;
+        SaldoFavor: Record 55769;
+        SaldoFavor2: Record 55769;
+        HistLinNomISR: Record 55759;
+        BKSaldoFavor: Record 55771;
+        LinAportesEmpresa: Record 55763;
+        EmpresasRel2: Record 55791;
+        LinEsqPercepISR: Record 55756;
+        HistLinCompany: Record 55759;
         Indice: Integer;
         Importe1: Decimal;
         Importe2: Decimal;
@@ -341,9 +341,9 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
         END;
     end;
 
-    procedure InsertaISR(perfSalario: Record 34002115)
+    procedure InsertaISR(perfSalario: Record 55756)
     var
-        LinNomina: Record 34002118;
+        LinNomina: Record 55759;
     begin
         //GRN Busco Ult. No. de LInea
         HistLinNom.RESET;
@@ -390,7 +390,7 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
         recTmpDimEntry.DELETEALL;
         InsertarDimTemp(ConceptosSal."Shortcut Dimension", perfSalario."Concepto salarial"); //Para el concepto salarial
         InsertarDimTempDef(5200);                                                           //Para las Dim del empleado
-        InsertarDimTempDefPS(34002115, perfSalario."Concepto salarial");                     //Para las Dim del perfil de salario (linea del concepto salarial)
+        InsertarDimTempDefPS(55756, perfSalario."Concepto salarial");                     //Para las Dim del perfil de salario (linea del concepto salarial)
         LinNomina."Dimension Set ID" := cduDim.GetDimensionSetID(recTmpDimEntry);
     end;
 
@@ -437,13 +437,13 @@ report 34002108 "Calcula ISR Emp. Relacionadas"
 
     procedure ReCalcularTSSDistribuido()
     var
-        LinNominasES: Record 34002118;
-        DeduccGob: Record 34002129;
-        CabAportesEmpresa: Record 34002121;
-        LinAportesEmpresa: Record 34002122;
-        PerfilSalTr: Record 34002115;
-        PerfilSalTr2: Record 34002115;
-        LinEsqPercepISR2: Record 34002115;
+        LinNominasES: Record 55759;
+        DeduccGob: Record 55770;
+        CabAportesEmpresa: Record 55762;
+        LinAportesEmpresa: Record 55763;
+        PerfilSalTr: Record 55756;
+        PerfilSalTr2: Record 55756;
+        LinEsqPercepISR2: Record 55756;
         NoLin: Integer;
         MontoAplicar: Decimal;
         IndSkip: Boolean;

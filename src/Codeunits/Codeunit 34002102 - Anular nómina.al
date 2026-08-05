@@ -1,8 +1,8 @@
-codeunit 34002102 "Anular nomina"
+codeunit 55743 "Anular nomina"
 {
-    Permissions = TableData 34002117 = rimd,
-                  TableData 34002118 = rimd;
-    TableNo = 34002117;
+    Permissions = TableData 55758 = rimd,
+                  TableData 55759 = rimd;
+    TableNo = 55758;
 
     trigger OnRun()
     begin
@@ -23,10 +23,10 @@ codeunit 34002102 "Anular nomina"
 
     var
         ok: Boolean;
-        RegCooncep: Record 34002111;
-        "Lin.nomina": Record 34002118;
-        "Lin.esquema": Record 34002115;
-        "Cab.esquema": Record 34002114;
+        RegCooncep: Record 55752;
+        "Lin.nomina": Record 55759;
+        "Lin.esquema": Record 55756;
+        "Cab.esquema": Record 55755;
         diascotiz: Integer;
         RegTrab: Record 5200;
         PagaExtra: Decimal;
@@ -37,13 +37,13 @@ codeunit 34002102 "Anular nomina"
         "diasAño": Integer;
         copiar: Boolean;
         "hayLin": Boolean;
-        GlobalRec: Record 34002117;
+        GlobalRec: Record 55758;
         Window: Dialog;
 
     procedure CODIGO()
     var
-        CabAporteEmp: Record 34002121;
-        LinAporteEmp: Record 34002122;
+        CabAporteEmp: Record 55762;
+        LinAporteEmp: Record 55763;
     begin
         WITH GlobalRec DO BEGIN
             Window.OPEN(

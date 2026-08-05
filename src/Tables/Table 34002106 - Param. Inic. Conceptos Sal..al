@@ -1,8 +1,8 @@
-table 34002106 "Param. Inic. Conceptos Sal."
+table 55747 "Param. Inic. Conceptos Sal."
 {
     Caption = 'Clear Wedges';
-    //IGNORAR: Page no existe DrillDownPageID = 34002150;
-    //IGNORAR: Page no existe LookupPageID = 34002150;
+    //IGNORAR: Page no existe DrillDownPageID = 55791;
+    //IGNORAR: Page no existe LookupPageID = 55791;
 
     fields
     {
@@ -14,7 +14,7 @@ table 34002106 "Param. Inic. Conceptos Sal."
 
             trigger OnValidate()
             var
-                ConfNom: Record 34002103;
+                ConfNom: Record 55744;
             begin
                 ConfNom.GET();
                 rConceptoSalarial.GET(Codigo);
@@ -69,8 +69,8 @@ table 34002106 "Param. Inic. Conceptos Sal."
     }
 
     var
-        rConceptoSalarial: Record 34002111;
-        rLinPerfilSal: Record 34002115;
+        rConceptoSalarial: Record 55752;
+        rLinPerfilSal: Record 55756;
         Err001: Label 'This wedge''s concept has formula, amount can''t be cleared';
 }
 
